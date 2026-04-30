@@ -278,6 +278,18 @@
         ViewPageButton: "_2IfJlTSfJ9B2O7GrLSHZEu",
         Description: "_3OaR0S3fMP3IqzGQkLo2LL",
         OtherYearLink: "e2J3CJVLkCcWuogJlnJqA",
+        BackgroundAnimation: "_14OuUh1QjZE3TsW4NZNR2T",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34-QNskZMB7mEWsqhnZP6b",
+        "ItemFocusAnim-darkerGrey": "_2mYgNS2XvBpQoFx7GpbaE8",
+        "ItemFocusAnim-darkGreySettings": "_2A4pb12mtvU-l5nClt2fv-",
+        "ItemFocusAnim-darkGrey": "_2wJw5tkwjDagaHTwWVdn1u",
+        "ItemFocusAnim-grey": "_1flpMlWbeXKOl-WYA3Xem3",
+        "ItemFocusAnim-translucent-white-10": "_2Du1mKAGG_7kB5hkqpPOqX",
+        "ItemFocusAnim-translucent-white-20": "_1mHlVprPR_Qin9oSqFmQwX",
+        "ItemFocusAnimBorder-darkGrey": "_1dQDG_S6sUmSjy1GFP6ybp",
+        "ItemFocusAnim-green": "_1X5ahFc-n3nVkWAsUpG49I",
+        focusAnimation: "_1ddfD3xnl7ZxtZ7TYShOPs",
+        hoverAnimation: "_2A0Chr-r6KVC7bWMKjWlOP",
       };
     },
     62324: (e) => {
@@ -361,34 +373,46 @@
         ViewPageButton: "_3Jien5Efkr3B0IQgbOMC0u",
         Description: "_30TBldURmofivWIf4LDybD",
         OtherYearLink: "LDdWtcd3cqcEwlnIqnp0m",
+        BackgroundAnimation: "Uwk2oDOlH9H45uB6SckjX",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1HzbepuV2ne3fOiiw4M6L2",
+        "ItemFocusAnim-darkerGrey": "_3jhvEXbsQ8rwLbzgIG2YKY",
+        "ItemFocusAnim-darkGreySettings": "_22jVwj2EIKxChqvLWQbXuN",
+        "ItemFocusAnim-darkGrey": "_3E-Kmphz35Z5zxRRLBBv__",
+        "ItemFocusAnim-grey": "_1MX1VV5l2Txw56HFd3WETD",
+        "ItemFocusAnim-translucent-white-10": "_6H60CwBcO9kk4y1pOFm21",
+        "ItemFocusAnim-translucent-white-20": "_31Gmo3sGiGSz9BuXbnqa54",
+        "ItemFocusAnimBorder-darkGrey": "_2BlrdTd8j7eGp87-nNi7Md",
+        "ItemFocusAnim-green": "_3TnQtlMvVkjLUwNdMvKkKA",
+        focusAnimation: "_3xy4OMg8IMNU-GS54X-fou",
+        hoverAnimation: "_3TsGkEqTE3pjbkbIFVAmfi",
       };
     },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => k, KM: () => A, KT: () => v });
+      t.d(a, { B3: () => v, KM: () => A, KT: () => k });
       var o = t(41735),
         n = t.n(o),
         r = t(58632),
         c = t.n(r),
-        s = t(90626),
-        _ = t(80902),
-        i = t(75233),
+        i = t(90626),
+        s = t(80902),
+        _ = t(75233),
         l = t(17720),
-        d = t(68797),
-        m = t(78327),
+        m = t(68797),
+        d = t(78327),
         p = t(56545),
-        C = t(37735),
-        g = t(23809);
+        g = t(37735),
+        C = t(23809);
       const u = "nicknames";
       function A(e) {
-        const a = (0, g.KV)(),
-          { data: t, isLoading: o } = (0, _.I)({
+        const a = (0, C.KV)(),
+          { data: t, isLoading: o } = (0, s.I)({
             queryKey: [u],
             queryFn: async () => {
               const e = new Map();
-              if (m.iA.logged_in) {
-                const t = p.w.Init(C.dN),
-                  o = (await C.xt.GetNicknameList(a, t)).Body().toObject();
+              if (d.iA.logged_in) {
+                const t = p.w.Init(g.dN),
+                  o = (await g.xt.GetNicknameList(a, t)).Body().toObject();
                 o?.nicknames &&
                   o.nicknames.length > 0 &&
                   o.nicknames.forEach((a) => {
@@ -400,14 +424,14 @@
           });
         return t ? t.get(e) : null;
       }
-      const f = new (c())(
+      const h = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const a =
-                "community" == (0, m.yK)()
-                  ? m.TS.COMMUNITY_BASE_URL
-                  : m.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const t = { accountid: e[0], origin: self.origin },
                   o = await n().get(`${a}actions/ajaxgetavatarpersona`, {
@@ -419,7 +443,7 @@
                   1 != o.data?.success ||
                   !o.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(o).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(o).strErrorMsg}`;
                 return [o.data.userinfo];
               }
               {
@@ -433,7 +457,7 @@
                   1 != o.data?.success ||
                   !o.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(o).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(o).strErrorMsg}`;
                 const r = new Map();
                 return (
                   o.data.userinfos.forEach((e) =>
@@ -445,23 +469,23 @@
             })(e),
           { cache: !1 },
         ),
-        h = "avatarandpersonas";
-      function v(e) {
-        const { data: a, isLoading: t } = (0, _.I)({
-          queryKey: [h, e],
-          queryFn: () => f.load(e),
+        f = "avatarandpersonas";
+      function k(e) {
+        const { data: a, isLoading: t } = (0, s.I)({
+          queryKey: [f, e],
+          queryFn: () => h.load(e),
         });
         return [a, t];
       }
-      function k(e) {
-        const a = (0, i.jE)(),
-          { data: t, isLoading: o } = (0, _.I)({
-            queryKey: [h, e],
+      function v(e) {
+        const a = (0, _.jE)(),
+          { data: t, isLoading: o } = (0, s.I)({
+            queryKey: [f, e],
             queryFn: async () => {
-              const t = await f.loadMany(e);
+              const t = await h.loadMany(e);
               return (
                 t.forEach((e) => {
-                  const t = [h, new l.b(e.steamid).GetAccountID()];
+                  const t = [f, new l.b(e.steamid).GetAccountID()];
                   a.setQueryData(t, e);
                 }),
                 t
@@ -469,7 +493,7 @@
             },
             enabled: e?.length > 0,
           }),
-          n = (0, s.useMemo)(() => {
+          n = (0, i.useMemo)(() => {
             const e = new Array();
             return (
               t?.forEach((a) => {
@@ -488,53 +512,53 @@
         n = t(80620),
         r = t(54926),
         c = t(76217),
-        s = t(27144),
-        _ = t(61859),
-        i = t(78327),
+        i = t(27144),
+        s = t(61859),
+        _ = t(78327),
         l = t(32077),
-        d = t(37220),
-        m = t(52038);
+        m = t(37220),
+        d = t(52038);
       function p(e) {
-        const a = (0, d.b)(e.year),
-          t = v();
+        const a = (0, m.b)(e.year),
+          t = k();
         return (0, o.jsxs)("div", {
-          className: (0, m.A)(l.MMFrame, a.MMFrame, a.MMOverride),
+          className: (0, d.A)(l.MMFrame, a.MMFrame, a.MMOverride),
           onClick: t,
           children: [
             (0, o.jsxs)("div", {
               className: l.HeaderCtn,
               children: [
                 (0, o.jsx)(A, {
-                  baseClass: (0, m.A)(l.ReplayLogo, a.ReplayLogo),
-                  accentClass: (0, m.A)(l.ReplayLogoAccent, a.ReplayLogoAccent),
+                  baseClass: (0, d.A)(l.ReplayLogo, a.ReplayLogo),
+                  accentClass: (0, d.A)(l.ReplayLogoAccent, a.ReplayLogoAccent),
                 }),
-                (0, o.jsx)(f, { year: e.year, theme: a }),
+                (0, o.jsx)(h, { year: e.year, theme: a }),
               ],
             }),
-            (0, o.jsx)(u, { className: (0, m.A)(l.SteamLogo, a.SteamLogo) }),
-            (0, o.jsx)(h, { theme: a }),
+            (0, o.jsx)(u, { className: (0, d.A)(l.SteamLogo, a.SteamLogo) }),
+            (0, o.jsx)(f, { theme: a }),
             (0, o.jsxs)("div", {
-              className: (0, m.A)(l.Content, a.Content),
+              className: (0, d.A)(l.Content, a.Content),
               children: [
-                (0, o.jsx)(C, { theme: a }),
-                (0, o.jsx)("div", {
-                  className: (0, m.A)(l.Description, a.Description),
-                  children: (0, _.we)("#YIR_MM_Generic_Desc"),
-                }),
                 (0, o.jsx)(g, { theme: a }),
+                (0, o.jsx)("div", {
+                  className: (0, d.A)(l.Description, a.Description),
+                  children: (0, s.we)("#YIR_MM_Generic_Desc"),
+                }),
+                (0, o.jsx)(C, { theme: a }),
               ],
             }),
           ],
         });
       }
-      function C(e) {
+      function g(e) {
         const { theme: a } = e,
-          [t] = (0, s.KT)(i.iA.accountid);
+          [t] = (0, i.KT)(_.iA.accountid);
         return t
           ? (0, o.jsxs)(o.Fragment, {
               children: [
                 (0, o.jsx)("div", {
-                  className: (0, m.A)(l.Avatar, a.Avatar),
+                  className: (0, d.A)(l.Avatar, a.Avatar),
                   children:
                     t &&
                     t.avatar_url &&
@@ -543,9 +567,9 @@
                     }),
                 }),
                 (0, o.jsx)("div", {
-                  className: (0, m.A)(l.DataBlock, a.DataBlock),
+                  className: (0, d.A)(l.DataBlock, a.DataBlock),
                   children: (0, o.jsx)("div", {
-                    className: (0, m.A)(l.PersonaName, a.PersonaName),
+                    className: (0, d.A)(l.PersonaName, a.PersonaName),
                     children: t ? t.persona_name : "",
                   }),
                 }),
@@ -553,13 +577,13 @@
             })
           : null;
       }
-      function g(e) {
+      function C(e) {
         const { theme: a } = e,
-          t = v();
+          t = k();
         return (0, o.jsx)(c.Z, {
-          className: (0, m.A)(l.ViewPageButton, a.ViewPageButton),
+          className: (0, d.A)(l.ViewPageButton, a.ViewPageButton),
           onActivate: t,
-          children: (0, _.we)("#YIR_MM_Generic_Action"),
+          children: (0, s.we)("#YIR_MM_Generic_Action"),
         });
       }
       function u(e) {
@@ -614,34 +638,34 @@
           ],
         });
       }
-      function f(e) {
+      function h(e) {
         const { year: a, theme: t } = e;
         return (0, o.jsx)("div", {
-          className: (0, m.A)(l.Header, t.Header),
-          children: (0, _.PP)(
+          className: (0, d.A)(l.Header, t.Header),
+          children: (0, s.PP)(
             "#YIR_MM_Header",
             (0, o.jsx)("br", {}),
             (0, o.jsx)("div", {
-              className: (0, m.A)(l.YearSubtitle, t.YearSubtitle),
-              children: (0, _.we)("#date_year", a),
+              className: (0, d.A)(l.YearSubtitle, t.YearSubtitle),
+              children: (0, s.we)("#date_year", a),
             }),
           ),
         });
       }
-      function h(e) {
+      function f(e) {
         return (0, o.jsx)("div", {
-          className: (0, m.A)(l.Hashtag, e.theme.Hashtag),
-          children: (0, _.we)("#YIR_MM_HashTag"),
+          className: (0, d.A)(l.Hashtag, e.theme.Hashtag),
+          children: (0, s.we)("#YIR_MM_HashTag"),
         });
       }
-      function v() {
+      function k() {
         const e = (0, r.J)().GetTemplateVars();
         return (0, n.WN)(e.linkurl, 1);
       }
     },
     37220: (e, a, t) => {
       "use strict";
-      t.d(a, { b: () => s });
+      t.d(a, { b: () => i });
       var o = t(90626);
       const n = {
           2022: t(47277),
@@ -651,7 +675,7 @@
         },
         r = Object.values(n).reduce((e, a) => ({ ...e, ...a }), {}),
         c = 2022;
-      function s(e) {
+      function i(e) {
         const [a, t] = (0, o.useState)({});
         return (
           (0, o.useEffect)(() => {

@@ -548,27 +548,25 @@
         _ = /rgba\(([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+)\)/gi,
         _ = /var\((--[a-zA-Z0-9-_]+),? ?([a-zA-Z0-9 ()%#.,-]+)?\)/,
         _ = (_) => {
-          const [_, __webpack_require__] = _(_);
+          const [_, _] = _(_);
           if (!_ || _()) return _;
           const _ = window
             .getComputedStyle(document.documentElement)
             .getPropertyValue(_);
           if (_) return _.trim();
-          if (__webpack_require__ && __webpack_require__.startsWith("--")) {
+          if (_ && __webpack_require__.startsWith("--")) {
             const _ = window
               .getComputedStyle(document.documentElement)
-              .getPropertyValue(__webpack_require__);
+              .getPropertyValue(_);
             return _ || _;
           }
-          return __webpack_require__ && _.test(__webpack_require__)
-            ? _(__webpack_require__)
-            : __webpack_require__ || _;
+          return _ && _.test(_) ? _(_) : _ || _;
         },
         _ = (_) => {
           const _ = _.exec(_);
           if (!_) return [,];
-          const [, __webpack_require__, _] = _;
-          return [__webpack_require__, _];
+          const [, _, _] = _;
+          return [_, _];
         },
         _ = (_, _, _, _, _) =>
           `rgba(${Math.round(_)}, ${Math.round(_)}, ${Math.round(_)}, ${_})`,
@@ -661,10 +659,10 @@
         _ = (_) => _ && _[_],
         _ = (_, _) => {
           return (
-            (__webpack_require__ = _),
             (_ = _),
             (_ = _),
-            Object.defineProperty(__webpack_require__, _, {
+            (_ = _),
+            Object.defineProperty(_, _, {
               value: _,
               writable: !0,
               configurable: !0,
@@ -1033,25 +1031,18 @@
         };
       function _(
         _,
-        {
-          key: _,
-          props: __webpack_require__,
-          defaultProps: _,
-          state: _,
-          actions: _,
-        },
+        { key: _, props: _, defaultProps: _, state: _, actions: _ },
       ) {
         return new Promise((_, _) => {
           let _,
             _,
-            _ = _(__webpack_require__.cancel ?? _?.cancel, _);
+            _ = _(_.cancel ?? _?.cancel, _);
           if (_) _();
           else {
-            _.und(__webpack_require__.pause) ||
-              (_.paused = _(__webpack_require__.pause, _));
+            _.und(_.pause) || (_.paused = _(_.pause, _));
             let _ = _?.pause;
             !0 !== _ && (_ = _.paused || _(_, _)),
-              (_ = _(__webpack_require__.delay || 0, _)),
+              (_ = _(_.delay || 0, _)),
               _ ? (_.resumeQueue.add(_), _.pause()) : (_.resume(), _());
           }
           function _() {
@@ -1076,7 +1067,7 @@
             try {
               _.start(
                 {
-                  ...__webpack_require__,
+                  ..._,
                   callId: _,
                   cancel: _,
                 },
@@ -1105,10 +1096,10 @@
           finished: !0,
           cancelled: !1,
         }),
-        _ = (_, _, __webpack_require__ = !1) => ({
+        _ = (_, _, _ = !1) => ({
           value: _,
           finished: _,
-          cancelled: __webpack_require__,
+          cancelled: _,
         }),
         _ = (_) => ({
           value: _,
@@ -1494,35 +1485,29 @@
           }
           _prepareNode(_) {
             const _ = this.key || "";
-            let { _: __webpack_require__, from: _ } = _;
-            (__webpack_require__ = _.obj(__webpack_require__)
-              ? __webpack_require__[_]
-              : __webpack_require__),
-              (null == __webpack_require__ || _(__webpack_require__)) &&
-                (__webpack_require__ = void 0),
+            let { _: _, from: _ } = _;
+            (_ = _.obj(_) ? _[_] : _),
+              (null == _ || _(_)) && (_ = void 0),
               (_ = _.obj(_) ? _[_] : _),
               null == _ && (_ = void 0);
             const _ = {
-              _: __webpack_require__,
+              _: _,
               from: _,
             };
             return (
               _(this) ||
-                (_.reverse &&
-                  ([__webpack_require__, _] = [_, __webpack_require__]),
+                (_.reverse && ([_, _] = [_, _]),
                 (_ = _(_)),
-                _.und(_)
-                  ? _(this) || this._set(__webpack_require__)
-                  : this._set(_)),
+                _.und(_) ? _(this) || this._set(_) : this._set(_)),
               _
             );
           }
           _update({ ..._ }, _) {
-            const { key: __webpack_require__, defaultProps: _ } = this;
+            const { key: _, defaultProps: _ } = this;
             _.default &&
               Object.assign(
                 _,
-                _(_, (_, _) => (/^on/.test(_) ? _(_, __webpack_require__) : _)),
+                _(_, (_, _) => (/^on/.test(_) ? _(_, _) : _)),
               ),
               _(this, _, "onProps"),
               _(this, "onProps", _, this);
@@ -1533,7 +1518,7 @@
               );
             const _ = this._state;
             return _(++this._lastCallId, {
-              key: __webpack_require__,
+              key: _,
               props: _,
               defaultProps: _,
               state: _,
@@ -1757,7 +1742,7 @@
         const _ = _(_);
         return _(_(_.get()), _);
       }
-      function _(_, _ = _.loop, __webpack_require__ = _._) {
+      function _(_, _ = _.loop, _ = _._) {
         const _ = _(_);
         if (_) {
           const _ = !0 !== _ && _(_),
@@ -1768,7 +1753,7 @@
             loop: _,
             default: !1,
             pause: void 0,
-            _: !_ || _(__webpack_require__) ? __webpack_require__ : void 0,
+            _: !_ || _(_) ? _ : void 0,
             from: _ ? _.from : void 0,
             reset: _,
             ..._,
@@ -1776,11 +1761,11 @@
         }
       }
       function _(_) {
-        const { _: _, from: __webpack_require__ } = (_ = _(_)),
+        const { _: _, from: _ } = (_ = _(_)),
           _ = new Set();
         return (
           _.obj(_) && _(_, _),
-          _.obj(__webpack_require__) && _(__webpack_require__, _),
+          _.obj(_) && _(_, _),
           (_.keys = _.size ? Array.from(_) : null),
           _
         );
@@ -1796,9 +1781,8 @@
       function _(_, _, _) {
         _.animation[_] = _[_] !== _(_, _) ? _(_[_], _.key) : void 0;
       }
-      function _(_, _, ...__webpack_require__) {
-        _.animation[_]?.(...__webpack_require__),
-          _.defaultProps[_]?.(...__webpack_require__);
+      function _(_, _, ..._) {
+        _.animation[_]?.(..._), _.defaultProps[_]?.(..._);
       }
       var _ = ["onStart", "onChange", "onRest"],
         _ = 1,
@@ -1898,11 +1882,7 @@
             _(this.springs, _);
           }
           _onFrame() {
-            const {
-                onStart: _,
-                onChange: _,
-                onRest: __webpack_require__,
-              } = this._events,
+            const { onStart: _, onChange: _, onRest: _ } = this._events,
               _ = this._active.size > 0,
               _ = this._changed.size > 0;
             ((_ && !this._started) || (_ && !this._started)) &&
@@ -1911,7 +1891,7 @@
                 (_.value = this.get()), _(_, this, this._item);
               }));
             const _ = !_ && this._started,
-              _ = _ || (_ && __webpack_require__.size) ? this.get() : null;
+              _ = _ || (_ && _.size) ? this.get() : null;
             _ &&
               _.size &&
               _(_, ([_, _]) => {
@@ -1919,7 +1899,7 @@
               }),
               _ &&
                 ((this._started = !1),
-                _(__webpack_require__, ([_, _]) => {
+                _(_, ([_, _]) => {
                   (_.value = _), _(_, this, this._item);
                 }));
           }
@@ -2349,11 +2329,11 @@
               ? _ === _
               : parseFloat(_) === _,
         _ = class extends _ {
-          constructor({ _: _, _: _, _: __webpack_require__, ..._ }) {
+          constructor({ _: _, _: _, _: _, ..._ }) {
             const _ = [],
               _ = [];
-            (_ || _ || __webpack_require__) &&
-              (_.push([_ || 0, _ || 0, __webpack_require__ || 0]),
+            (_ || _ || _) &&
+              (_.push([_ || 0, _ || 0, _ || 0]),
               _.push((_) => [
                 `translate3d(${_.map((_) => _(_, "px")).join(",")})`,
                 _(_, 0),
@@ -2576,13 +2556,13 @@
           _,
           {
             applyAnimatedValues: _ = () => !1,
-            createAnimatedStyle: __webpack_require__ = (_) => new _(_),
+            createAnimatedStyle: _ = (_) => new _(_),
             getComponentProps: _ = (_) => _,
           } = {},
         ) => {
           const _ = {
               applyAnimatedValues: _,
-              createAnimatedStyle: __webpack_require__,
+              createAnimatedStyle: _,
               getComponentProps: _,
             },
             _ = (_) => {
@@ -2778,11 +2758,7 @@
                 void 0 !== _ && _.setAttribute("viewBox", _);
             },
             createAnimatedStyle: (_) => new _(_),
-            getComponentProps: ({
-              scrollTop: _,
-              scrollLeft: _,
-              ...__webpack_require__
-            }) => __webpack_require__,
+            getComponentProps: ({ scrollTop: _, scrollLeft: _, ..._ }) => _,
           },
         ),
         _ = _.animated;

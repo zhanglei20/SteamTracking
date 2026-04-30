@@ -95,6 +95,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -203,6 +204,18 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     chunkid: (module) => {
@@ -367,7 +380,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1);
+        const [_, _] = (0, _.useState)(!1);
         return (
           (0, _.useEffect)(() => {
             !_ &&
@@ -380,9 +393,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(() =>
-          _.Get().GetPartnerInfo(_),
-        );
+        const [_, _] = _.useState(() => _.Get().GetPartnerInfo(_));
         return (
           _.useEffect(() => {
             !_.Get().BHasPartnerInfoLoad(_) && _ > 0
@@ -445,7 +456,7 @@
       };
       function _() {
         const _ = _(9),
-          [_, __webpack_require__] = (0, _._)("query", ""),
+          [_, _] = (0, _._)("query", ""),
           _ = (0, _.useMemo)(
             () =>
               Array.from(
@@ -587,7 +598,7 @@
       }
       function _(_) {
         const { deadline: _ } = _,
-          [__webpack_require__] = (0, _._)(_.data.store_item_id, _),
+          [_] = (0, _._)(_.data.store_item_id, _),
           [_] = (0, _._)(_.data.partnerid),
           _ = (0, _._)(_.data.store_item_id),
           _ = _?.find((_) => _.milestone_id == Number.parseInt(_.data.gid));
@@ -766,8 +777,8 @@
         });
       }
       function _(_) {
-        const { actionID: _, rgDeadlines: __webpack_require__ } = _;
-        return __webpack_require__.length
+        const { actionID: _, rgDeadlines: _ } = _;
+        return _.length
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("tr", {
@@ -814,7 +825,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState((9).toString()),
+        const [_, _] = _.useState((9).toString()),
           _ = [
             {
               label: "Season Pass Milestone",
@@ -950,7 +961,7 @@
         _ = -1;
       function _(_) {
         const { requirement: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(""),
+          [_, _] = (0, _.useState)(""),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(async () => {
             if ((_(""), !_.deadline?.data?.partnerid))
@@ -975,10 +986,10 @@
         else if (_ != _.index) return null;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            !!__webpack_require__ &&
+            !!_ &&
               (0, _.jsx)("div", {
                 className: _().InterviewError,
-                children: __webpack_require__,
+                children: _,
               }),
             (0, _.jsx)(_._, {
               disabled: _,
@@ -2475,7 +2486,7 @@
           [_] = (0, _.useState)(
             parseInt((0, _._)("action_id", "application_config")),
           ),
-          [__webpack_require__] = (0, _.useState)(
+          [_] = (0, _.useState)(
             parseInt((0, _._)("publisher_id", "application_config")),
           ),
           [_] = (0, _.useState)(
@@ -2484,14 +2495,10 @@
           [_] = (0, _.useState)(
             parseInt((0, _._)("publisher_onboarded", "application_config")),
           );
-        return [_, _, _, __webpack_require__, _];
+        return [_, _, _, _, _];
       }
       function _(_) {
-        const {
-            closeModal: _,
-            subject: __webpack_require__,
-            publisherid: _,
-          } = _,
+        const { closeModal: _, subject: _, publisherid: _ } = _,
           [_, _] = _.useState(""),
           [_, _] = _.useState("");
         return (0, _.jsx)(_._, {
@@ -2505,7 +2512,7 @@
                 const _ = new FormData();
                 _.append("sessionid", _._.SESSIONID),
                   _.append("publisherid", "" + _),
-                  _.append("subject", __webpack_require__),
+                  _.append("subject", _),
                   _.append("message", _);
                 const _ = `${_._.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
                   _ = await _().post(_, _);
@@ -2541,7 +2548,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__, _, _, _] = _(),
+        const [_, _, _, _, _] = _(),
           [_, _] = (function () {
             const [_] = (0, _.useState)(
                 (0, _._)("testpage", "application_config"),
@@ -2601,7 +2608,7 @@
                         "Steamworks Document Communication",
                         (0, _.jsx)("div", {
                           className: _().PartnerName,
-                          children: __webpack_require__,
+                          children: _,
                         }),
                       ],
                     }),
@@ -2704,7 +2711,7 @@
       }
       function _(_) {
         const { strTemplate: _ } = _,
-          [__webpack_require__, _] = _.useState(_ || "Renewal-W8-Initial"),
+          [_, _] = _.useState(_ || "Renewal-W8-Initial"),
           [_, _] = _.useState(!0),
           _ = _.map((_) => ({
             label: _,
@@ -2716,7 +2723,7 @@
         return (
           (_.data = {}),
           (_.data.due_date = _ / 1e3 + 14 * _._.PerDay),
-          (_.data.description_jsondata = `{ "TemplateName": "${__webpack_require__}", "CreatedOn": "${_}" }`),
+          (_.data.description_jsondata = `{ "TemplateName": "${_}", "CreatedOn": "${_}" }`),
           (0, _.jsxs)("div", {
             children: [
               (0, _.jsxs)("div", {
@@ -2727,7 +2734,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     rgOptions: _,
-                    selectedOption: __webpack_require__,
+                    selectedOption: _,
                     onChange: (_) => {
                       _(_.data);
                     },
@@ -2982,10 +2989,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { size: _, color: __webpack_require__, trackColor: _ } = _,
+        const { size: _, color: _, trackColor: _ } = _,
           _ = {
             borderColor: _,
-            borderLeftColor: __webpack_require__,
+            borderLeftColor: _,
           };
         if ("number" == typeof _) {
           const _ = `${_}px`;

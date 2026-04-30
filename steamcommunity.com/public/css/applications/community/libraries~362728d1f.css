@@ -147,7 +147,7 @@
   cursor: default;
 }
 .monaco-text-button .codicon {
-  margin: 0 .2em;
+  margin: 0 0.2em;
   color: inherit !important;
 }
 .monaco-text-button.monaco-text-button-with-short-label {
@@ -231,7 +231,7 @@
 }
 .monaco-description-button .monaco-button-label > .codicon,
 .monaco-description-button .monaco-button-description > .codicon {
-  margin: 0 .2em;
+  margin: 0 0.2em;
   color: inherit !important;
 }
 .monaco-button.default-colors,
@@ -862,8 +862,8 @@
   display: block;
   border-bottom: 1px solid #bbb;
   padding-top: 1px;
-  margin-left: .8em;
-  margin-right: .8em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
 }
 .monaco-action-bar .action-item .action-label.separator {
   width: 1px;
@@ -1270,8 +1270,8 @@
   height: 100%;
 }
 .mtkcontrol {
-  color: #fff !important;
-  background: #960000 !important;
+  color: rgb(255, 255, 255) !important;
+  background: rgb(150, 0, 0) !important;
 }
 .mtkoverflow {
   background-color: var(
@@ -1328,7 +1328,7 @@
 .monaco-editor .lines-decorations {
   position: absolute;
   top: 0;
-  background: #fff;
+  background: white;
 }
 .monaco-editor .margin-view-overlays .cldr {
   position: absolute;
@@ -1378,7 +1378,7 @@
 }
 .minimap.autohide {
   opacity: 0;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 .minimap.autohide:hover {
   opacity: 1;
@@ -1506,13 +1506,13 @@
   }
 }
 .cursor-smooth {
-  animation: monaco-cursor-smooth .5s ease-in-out 0s 20 alternate;
+  animation: monaco-cursor-smooth 0.5s ease-in-out 0s 20 alternate;
 }
 .cursor-phase {
-  animation: monaco-cursor-phase .5s ease-in-out 0s 20 alternate;
+  animation: monaco-cursor-phase 0.5s ease-in-out 0s 20 alternate;
 }
 .cursor-expand > .cursor {
-  animation: monaco-cursor-expand .5s ease-in-out 0s 20 alternate;
+  animation: monaco-cursor-expand 0.5s ease-in-out 0s 20 alternate;
 }
 .monaco-editor .mwh {
   position: absolute;
@@ -1528,7 +1528,8 @@
   font-size: var(--vscode-editorCodeLens-fontSize);
   padding-right: calc(var(--vscode-editorCodeLens-fontSize) * 0.5);
   font-feature-settings: var(--vscode-editorCodeLens-fontFeatureSettings);
-  font-family: var(--vscode-editorCodeLens-fontFamily),
+  font-family:
+    var(--vscode-editorCodeLens-fontFamily),
     var(--vscode-editorCodeLens-fontFamilyDefault);
 }
 .monaco-editor .codelens-decoration > span,
@@ -1568,7 +1569,7 @@
   }
 }
 .monaco-editor .codelens-decoration.fadein {
-  animation: fadein .1s linear;
+  animation: fadein 0.1s linear;
 }
 .colorpicker-widget {
   height: 190px;
@@ -1577,18 +1578,18 @@
 }
 .colorpicker-color-decoration,
 .hc-light .colorpicker-color-decoration {
-  border: solid .1em #000;
+  border: solid 0.1em #000;
   box-sizing: border-box;
-  margin: .1em .2em 0 .2em;
-  width: .8em;
-  height: .8em;
-  line-height: .8em;
+  margin: 0.1em 0.2em 0 0.2em;
+  width: 0.8em;
+  height: 0.8em;
+  line-height: 0.8em;
   display: inline-block;
   cursor: pointer;
 }
 .hc-black .colorpicker-color-decoration,
 .vs-dark .colorpicker-color-decoration {
-  border: solid .1em #eee;
+  border: solid 0.1em #eee;
 }
 .colorpicker-header {
   display: flex;
@@ -1605,7 +1606,7 @@
   justify-content: center;
   line-height: 24px;
   cursor: pointer;
-  color: #fff;
+  color: white;
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -1620,7 +1621,7 @@
   font-size: 14px;
 }
 .colorpicker-header .picked-color.light {
-  color: #000;
+  color: black;
 }
 .colorpicker-header .original-color {
   width: 74px;
@@ -1671,7 +1672,7 @@
   width: 9px;
   height: 9px;
   margin: -5px 0 0 -5px;
-  border: 1px solid #fff;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 100%;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -1986,7 +1987,7 @@
   background: transparent;
 }
 .monaco-workbench:not(.reduce-motion) .monaco-sash:before {
-  transition: background-color .1s ease-out;
+  transition: background-color 0.1s ease-out;
 }
 .monaco-sash.hover:before,
 .monaco-sash.active:before {
@@ -2004,7 +2005,7 @@
   pointer-events: none !important;
 }
 .monaco-sash.debug {
-  background: aqua;
+  background: cyan;
 }
 .monaco-sash.debug.disabled {
   background: rgba(0, 255, 255, 0.2);
@@ -2095,7 +2096,7 @@
 }
 .monaco-hover code {
   border-radius: 3px;
-  padding: 0 .4em;
+  padding: 0 0.4em;
 }
 .monaco-hover .monaco-tokenized-source {
   white-space: var(--vscode-hover-sourceWhiteSpace, pre-wrap);
@@ -2189,8 +2190,8 @@
   cursor: pointer;
 }
 .monaco-editor .peekview-widget .head .peekview-title .dirname:not(:empty) {
-  font-size: .9em;
-  margin-left: .5em;
+  font-size: 0.9em;
+  margin-left: 0.5em;
 }
 .monaco-editor .peekview-widget .head .peekview-title .meta {
   white-space: nowrap;
@@ -2213,7 +2214,7 @@
   .peekview-title
   .meta:not(:empty)::before {
   content: "-";
-  padding: 0 .3em;
+  padding: 0 0.3em;
 }
 .monaco-editor .peekview-widget .head .peekview-actions {
   flex: 1;
@@ -2375,7 +2376,7 @@
   .monaco-table
   > .monaco-split-view2
   .monaco-sash.vertical::before {
-  transition: border-color .2s ease-out;
+  transition: border-color 0.2s ease-out;
 }
 .monaco-custom-toggle {
   margin-left: 2px;
@@ -2500,7 +2501,7 @@
   text-align: left;
   width: 100%;
   box-sizing: border-box;
-  padding: .4em;
+  padding: 0.4em;
   font-size: 12px;
   line-height: 17px;
   margin-top: -1px;
@@ -2611,7 +2612,7 @@
   border-left: 1px solid transparent;
 }
 .monaco-workbench:not(.reduce-motion) .monaco-tl-indent > .indent-guide {
-  transition: border-color .1s linear;
+  transition: border-color 0.1s linear;
 }
 .monaco-tl-twistie,
 .monaco-tl-contents {
@@ -2654,7 +2655,7 @@
   border-bottom-right-radius: 4px;
 }
 .monaco-workbench:not(.reduce-motion) .monaco-tree-type-filter {
-  transition: top .3s;
+  transition: top 0.3s;
 }
 .monaco-tree-type-filter.disabled {
   top: -40px !important;
@@ -2906,8 +2907,8 @@
   > .monaco-icon-description-container
   > .label-description {
   opacity: 0.7;
-  margin-left: .5em;
-  font-size: .9em;
+  margin-left: 0.5em;
+  font-size: 0.9em;
   white-space: pre;
 }
 .monaco-icon-label.nowrap
@@ -3034,7 +3035,7 @@
 }
 .monaco-editor .diff-hidden-lines .top,
 .monaco-editor .diff-hidden-lines .bottom {
-  transition: background-color .1s ease-out;
+  transition: background-color 0.1s ease-out;
   height: 4px;
   background-color: transparent;
   background-clip: padding-box;
@@ -3080,9 +3081,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   height: 24px;
-  box-shadow: inset 0 -5px 5px -7px
-    var(--vscode-diffEditor-unchangedRegionShadow), inset 0 5px 5px -7px
-    var(--vscode-diffEditor-unchangedRegionShadow);
+  box-shadow:
+    inset 0 -5px 5px -7px var(--vscode-diffEditor-unchangedRegionShadow),
+    inset 0 5px 5px -7px var(--vscode-diffEditor-unchangedRegionShadow);
 }
 .monaco-editor .diff-hidden-lines .center span.codicon {
   vertical-align: middle;
@@ -3312,12 +3313,12 @@
   background-image: linear-gradient(
     -45deg,
     var(--vscode-diffEditor-diagonalFill) 12.5%,
-    #0000 12.5%,
-    #0000 50%,
+    rgba(0, 0, 0, 0) 12.5%,
+    rgba(0, 0, 0, 0) 50%,
     var(--vscode-diffEditor-diagonalFill) 50%,
     var(--vscode-diffEditor-diagonalFill) 62.5%,
-    #0000 62.5%,
-    #0000 100%
+    rgba(0, 0, 0, 0) 62.5%,
+    rgba(0, 0, 0, 0) 100%
   );
   background-size: 8px 8px;
 }
@@ -3326,104 +3327,82 @@
   overflow: hidden;
   flex-shrink: 0;
   flex-grow: 0;
-}
-.monaco-diff-editor .gutter > div {
-  position: absolute;
-}
-.monaco-diff-editor .gutter .gutterItem {
-  opacity: 0;
-  transition: opacity .7s;
-}
-.monaco-diff-editor .gutter .gutterItem.showAlways {
-  opacity: 1;
-  transition: none;
-}
-.monaco-diff-editor .gutter .gutterItem.noTransition {
-  transition: none;
-}
-.monaco-diff-editor .gutter:hover .gutterItem {
-  opacity: 1;
-  transition: opacity .1s ease-in-out;
-}
-.monaco-diff-editor .gutter .gutterItem .background {
-  position: absolute;
-  height: 100%;
-  left: 50%;
-  width: 1px;
-  border-left: 2px var(--vscode-menu-border) solid;
-}
-.monaco-diff-editor .gutter .gutterItem .buttons {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.monaco-diff-editor .gutter .gutterItem .buttons .monaco-toolbar {
-  height: fit-content;
-}
-.monaco-diff-editor
-  .gutter
-  .gutterItem
-  .buttons
-  .monaco-toolbar
-  .monaco-action-bar {
-  line-height: 1;
-}
-.monaco-diff-editor
-  .gutter
-  .gutterItem
-  .buttons
-  .monaco-toolbar
-  .monaco-action-bar
-  .actions-container {
-  width: fit-content;
-  border-radius: 4px;
-  background: var(--vscode-editorGutter-commentRangeForeground);
-}
-.monaco-diff-editor
-  .gutter
-  .gutterItem
-  .buttons
-  .monaco-toolbar
-  .monaco-action-bar
-  .actions-container
-  .action-item:hover {
-  background: var(--vscode-toolbar-hoverBackground);
-}
-.monaco-diff-editor
-  .gutter
-  .gutterItem
-  .buttons
-  .monaco-toolbar
-  .monaco-action-bar
-  .actions-container
-  .action-item
-  .action-label {
-  padding: 1px 2px;
+  & > div {
+    position: absolute;
+  }
+  .gutterItem {
+    opacity: 0;
+    transition: opacity 0.7s;
+    &.showAlways {
+      opacity: 1;
+      transition: none;
+    }
+    &.noTransition {
+      transition: none;
+    }
+  }
+  &:hover .gutterItem {
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+  }
+  .gutterItem {
+    .background {
+      position: absolute;
+      height: 100%;
+      left: 50%;
+      width: 1px;
+      border-left: 2px var(--vscode-menu-border) solid;
+    }
+    .buttons {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .monaco-toolbar {
+        height: fit-content;
+        .monaco-action-bar {
+          line-height: 1;
+          .actions-container {
+            width: fit-content;
+            border-radius: 4px;
+            background: var(--vscode-editorGutter-commentRangeForeground);
+            .action-item {
+              &:hover {
+                background: var(--vscode-toolbar-hoverBackground);
+              }
+              .action-label {
+                padding: 1px 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .monaco-diff-editor .diff-hidden-lines-compact {
   display: flex;
   height: 11px;
-}
-.monaco-diff-editor .diff-hidden-lines-compact .line-left,
-.monaco-diff-editor .diff-hidden-lines-compact .line-right {
-  height: 1px;
-  border-top: 1px solid;
-  border-color: var(--vscode-editorCodeLens-foreground);
-  opacity: 0.5;
-  margin: auto;
-  width: 100%;
-}
-.monaco-diff-editor .diff-hidden-lines-compact .line-left {
-  width: 20px;
-}
-.monaco-diff-editor .diff-hidden-lines-compact .text {
-  color: var(--vscode-editorCodeLens-foreground);
-  text-wrap: nowrap;
-  font-size: 11px;
-  line-height: 11px;
-  margin: 0 4px;
+  .line-left,
+  .line-right {
+    height: 1px;
+    border-top: 1px solid;
+    border-color: var(--vscode-editorCodeLens-foreground);
+    opacity: 0.5;
+    margin: auto;
+    width: 100%;
+  }
+  .line-left {
+    width: 20px;
+  }
+  .text {
+    color: var(--vscode-editorCodeLens-foreground);
+    text-wrap: nowrap;
+    font-size: 11px;
+    line-height: 11px;
+    margin: 0 4px;
+  }
 }
 .monaco-component.diff-review {
   user-select: none;
@@ -3481,8 +3460,8 @@
 }
 .monaco-editor.vs .dnd-target,
 .monaco-editor.hc-light .dnd-target {
-  border-right: 2px dotted #000;
-  color: #fff;
+  border-right: 2px dotted black;
+  color: white;
 }
 .monaco-editor.vs-dark .dnd-target {
   border-right: 2px dotted #aeafad;
@@ -3770,7 +3749,7 @@
 .monaco-editor .margin-view-overlays .codicon-folding-collapsed {
   cursor: pointer;
   opacity: 0;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3803,7 +3782,7 @@
 }
 .monaco-editor .inline-folded:after {
   color: var(--vscode-editor-foldPlaceholderForeground);
-  margin: .1em .2em 0 .2em;
+  margin: 0.1em 0.2em 0 0.2em;
   content: "⋯";
   display: inline;
   line-height: 1em;
@@ -3977,7 +3956,10 @@
     --vscode-editor-snippetTabstopHighlightBackground,
     transparent
   );
-  outline-color: var(--vscode-editor-snippetTabstopHighlightBorder, transparent);
+  outline-color: var(
+    --vscode-editor-snippetTabstopHighlightBorder,
+    transparent
+  );
 }
 .monaco-editor .finish-snippet-placeholder {
   outline-style: solid;
@@ -4053,7 +4035,7 @@
   .action-item:not(:last-of-type)
   .action-label::after {
   content: ", ";
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 .monaco-editor
   .suggest-widget.with-status-bar
@@ -4498,10 +4480,10 @@
   .monaco-list-row
   .icon.customcolor
   .colorspan {
-  margin: 0 0 0 .3em;
-  border: .1em solid #000;
-  width: .7em;
-  height: .7em;
+  margin: 0 0 0 0.3em;
+  border: 0.1em solid #000;
+  width: 0.7em;
+  height: 0.7em;
   display: inline-block;
 }
 .monaco-editor .suggest-details-container {
@@ -4643,7 +4625,7 @@
 }
 .monaco-editor .suggest-details code {
   border-radius: 3px;
-  padding: 0 .4em;
+  padding: 0 0.4em;
 }
 .monaco-editor .suggest-details ul {
   padding-left: 20px;
@@ -4710,49 +4692,43 @@
 }
 .monaco-editor div.inline-edits-widget {
   --widget-color: var(--vscode-notifications-background);
-}
-.monaco-editor div.inline-edits-widget .promptEditor .monaco-editor {
-  --vscode-editor-placeholder-foreground: var(
-    --vscode-editorGhostText-foreground
-  );
-}
-.monaco-editor div.inline-edits-widget .toolbar,
-.monaco-editor div.inline-edits-widget .promptEditor {
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-}
-.monaco-editor div.inline-edits-widget:hover .toolbar,
-.monaco-editor div.inline-edits-widget:hover .promptEditor,
-.monaco-editor div.inline-edits-widget.focused .toolbar,
-.monaco-editor div.inline-edits-widget.focused .promptEditor {
-  opacity: 1;
-}
-.monaco-editor div.inline-edits-widget .preview .monaco-editor {
-  --vscode-editor-background: var(--widget-color);
-}
-.monaco-editor div.inline-edits-widget .preview .monaco-editor .mtk1 {
-  color: var(--vscode-editorGhostText-foreground);
-}
-.monaco-editor
-  div.inline-edits-widget
-  .preview
-  .monaco-editor
-  .view-overlays
-  .current-line-exact {
-  border: none;
-}
-.monaco-editor
-  div.inline-edits-widget
-  .preview
-  .monaco-editor
-  .current-line-margin {
-  border: none;
-}
-.monaco-editor div.inline-edits-widget svg .gradient-start {
-  stop-color: var(--vscode-editor-background);
-}
-.monaco-editor div.inline-edits-widget svg .gradient-stop {
-  stop-color: var(--widget-color);
+  .promptEditor .monaco-editor {
+    --vscode-editor-placeholder-foreground: var(
+      --vscode-editorGhostText-foreground
+    );
+  }
+  .toolbar,
+  .promptEditor {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  &:hover,
+  &.focused {
+    .toolbar,
+    .promptEditor {
+      opacity: 1;
+    }
+  }
+  .preview .monaco-editor {
+    .mtk1 {
+      color: var(--vscode-editorGhostText-foreground);
+    }
+    .view-overlays .current-line-exact {
+      border: none;
+    }
+    .current-line-margin {
+      border: none;
+    }
+    --vscode-editor-background: var(--widget-color);
+  }
+  svg {
+    .gradient-start {
+      stop-color: var(--vscode-editor-background);
+    }
+    .gradient-stop {
+      stop-color: var(--widget-color);
+    }
+  }
 }
 .monaco-editor .tokens-inspect-widget {
   z-index: 50;
@@ -4896,7 +4872,8 @@
   border-bottom: 1px solid var(--vscode-editorHoverWidget-border);
 }
 .monaco-editor .parameter-hints-widget .code {
-  font-family: var(--vscode-parameterHintsWidget-editorFontFamily),
+  font-family:
+    var(--vscode-parameterHintsWidget-editorFontFamily),
     var(--vscode-parameterHintsWidget-editorFontFamilyDefault);
 }
 .monaco-editor .parameter-hints-widget .docs {
@@ -4919,7 +4896,7 @@
 .monaco-editor .parameter-hints-widget .docs code {
   font-family: var(--monaco-monospace-font);
   border-radius: 3px;
-  padding: 0 .4em;
+  padding: 0 0.4em;
   background-color: var(--vscode-textCodeBlock-background);
 }
 .monaco-editor .parameter-hints-widget .docs .monaco-tokenized-source,
@@ -4958,21 +4935,21 @@
 }
 .monaco-editor .parameter-hints-widget .documentation-parameter > .parameter {
   font-weight: bold;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 .monaco-editor {
   --vscode-editor-placeholder-foreground: var(
     --vscode-editorGhostText-foreground
   );
-}
-.monaco-editor .editorPlaceholder {
-  top: 0px;
-  position: absolute;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-wrap: nowrap;
-  pointer-events: none;
-  color: var(--vscode-editor-placeholder-foreground);
+  .editorPlaceholder {
+    top: 0px;
+    position: absolute;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    pointer-events: none;
+    color: var(--vscode-editor-placeholder-foreground);
+  }
 }
 .monaco-editor .rename-box {
   z-index: 100;
@@ -5151,10 +5128,12 @@
   color: var(--vscode-textLink-activeForeground);
 }
 .monaco-editor {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI",
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI",
     "HelveticaNeue-Light", system-ui, "Ubuntu", "Droid Sans", sans-serif;
-  --monaco-monospace-font: "SF Mono", Monaco, Menlo, Consolas, "Ubuntu Mono",
-    "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+  --monaco-monospace-font:
+    "SF Mono", Monaco, Menlo, Consolas, "Ubuntu Mono", "Liberation Mono",
+    "DejaVu Sans Mono", "Courier New", monospace;
 }
 .monaco-menu
   .monaco-action-bar.vertical
@@ -5387,7 +5366,7 @@
 }
 .hc-black .monaco-keybinding > .monaco-keybinding-key {
   background-color: transparent;
-  border: solid 1px #6fc3df;
+  border: solid 1px rgb(111, 195, 223);
   box-shadow: none;
   color: #fff;
 }
@@ -5518,7 +5497,7 @@
   overflow-wrap: break-word;
 }
 .quick-input-message > .codicon {
-  margin: 0 .2em;
+  margin: 0 0.2em;
   vertical-align: text-bottom;
 }
 .quick-input-message a {
@@ -5774,117 +5753,88 @@
   height: 100%;
   width: 100%;
   overflow-y: hidden;
-}
-.monaco-component.multiDiffEditor > div {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-}
-.monaco-component.multiDiffEditor > div.placeholder {
-  visibility: hidden;
-  display: grid;
-  place-items: center;
-  place-content: center;
-}
-.monaco-component.multiDiffEditor > div.placeholder.visible {
-  visibility: visible;
-}
-.monaco-component.multiDiffEditor .active {
-  --vscode-multiDiffEditor-border: var(--vscode-focusBorder);
-}
-.monaco-component.multiDiffEditor .multiDiffEntry {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow: hidden;
-}
-.monaco-component.multiDiffEditor .multiDiffEntry .collapse-button {
-  margin: 0 5px;
-  cursor: pointer;
-}
-.monaco-component.multiDiffEditor .multiDiffEntry .collapse-button a {
-  display: block;
-}
-.monaco-component.multiDiffEditor .multiDiffEntry .header {
-  z-index: 1000;
-  background: var(--vscode-editor-background);
-}
-.monaco-component.multiDiffEditor
-  .multiDiffEntry
-  .header:not(.collapsed)
-  .header-content {
-  border-bottom: 1px solid var(--vscode-sideBarSectionHeader-border);
-}
-.monaco-component.multiDiffEditor .multiDiffEntry .header .header-content {
-  margin: 8px 0px 0px 0px;
-  padding: 4px 5px;
-  border-top: 1px solid var(--vscode-multiDiffEditor-border);
-  display: flex;
-  align-items: center;
-  color: var(--vscode-foreground);
-  background: var(--vscode-multiDiffEditor-headerBackground);
-}
-.monaco-component.multiDiffEditor
-  .multiDiffEntry
-  .header
-  .header-content.shadow {
-  box-shadow: var(--vscode-scrollbar-shadow) 0px 6px 6px -6px;
-}
-.monaco-component.multiDiffEditor
-  .multiDiffEntry
-  .header
-  .header-content
-  .file-path {
-  display: flex;
-  flex: 1;
-  min-width: 0;
-}
-.monaco-component.multiDiffEditor
-  .multiDiffEntry
-  .header
-  .header-content
-  .file-path
-  .title {
-  font-size: 14px;
-  line-height: 22px;
-}
-.monaco-component.multiDiffEditor
-  .multiDiffEntry
-  .header
-  .header-content
-  .file-path
-  .title.original {
-  flex: 1;
-  min-width: 0;
-  text-overflow: ellipsis;
-}
-.monaco-component.multiDiffEditor
-  .multiDiffEntry
-  .header
-  .header-content
-  .file-path
-  .status {
-  font-weight: 600;
-  opacity: 0.75;
-  margin: 0px 10px;
-  line-height: 22px;
-}
-.monaco-component.multiDiffEditor
-  .multiDiffEntry
-  .header
-  .header-content
-  .actions {
-  padding: 0 8px;
-}
-.monaco-component.multiDiffEditor .multiDiffEntry .editorParent {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid var(--vscode-multiDiffEditor-border);
-  overflow: hidden;
-}
-.monaco-component.multiDiffEditor .multiDiffEntry .editorContainer {
-  flex: 1;
+  > div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    &.placeholder {
+      visibility: hidden;
+      &.visible {
+        visibility: visible;
+      }
+      display: grid;
+      place-items: center;
+      place-content: center;
+    }
+  }
+  .active {
+    --vscode-multiDiffEditor-border: var(--vscode-focusBorder);
+  }
+  .multiDiffEntry {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    .collapse-button {
+      margin: 0 5px;
+      cursor: pointer;
+      a {
+        display: block;
+      }
+    }
+    .header {
+      z-index: 1000;
+      background: var(--vscode-editor-background);
+      &:not(.collapsed) .header-content {
+        border-bottom: 1px solid var(--vscode-sideBarSectionHeader-border);
+      }
+      .header-content {
+        margin: 8px 0px 0px 0px;
+        padding: 4px 5px;
+        border-top: 1px solid var(--vscode-multiDiffEditor-border);
+        display: flex;
+        align-items: center;
+        color: var(--vscode-foreground);
+        background: var(--vscode-multiDiffEditor-headerBackground);
+        &.shadow {
+          box-shadow: var(--vscode-scrollbar-shadow) 0px 6px 6px -6px;
+        }
+        .file-path {
+          display: flex;
+          flex: 1;
+          min-width: 0;
+          .title {
+            font-size: 14px;
+            line-height: 22px;
+            &.original {
+              flex: 1;
+              min-width: 0;
+              text-overflow: ellipsis;
+            }
+          }
+          .status {
+            font-weight: 600;
+            opacity: 0.75;
+            margin: 0px 10px;
+            line-height: 22px;
+          }
+        }
+        .actions {
+          padding: 0 8px;
+        }
+      }
+    }
+    .editorParent {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--vscode-multiDiffEditor-border);
+      overflow: hidden;
+    }
+    .editorContainer {
+      flex: 1;
+    }
+  }
 }

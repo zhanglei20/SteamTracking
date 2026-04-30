@@ -229,7 +229,7 @@
             rgAcceptableTypes: o,
           },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: n },
-          spotlight_art_hero: { width: 374, height: 448, rgAcceptableTypes: o },
+          spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: o },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: n },
           marketingmessage_art: {
             width: 570,
@@ -267,7 +267,7 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: n },
+          takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: n },
           takeunder_mobile_art: {
             width: 500,
             height: 160,

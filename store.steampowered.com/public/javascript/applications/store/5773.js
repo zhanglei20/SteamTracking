@@ -85,7 +85,7 @@
     },
     77700: (e) => {
       e.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
@@ -1219,8 +1219,8 @@
         V = n(78327);
       var Q = n(26505),
         K = n(14336),
-        Z = n(60155),
-        W = n(48079),
+        W = n(60155),
+        Z = n(48079),
         J = n(22797),
         X = n(32754),
         q = n(99312),
@@ -2467,7 +2467,7 @@
                     className: "DialogLabel",
                     children: (0, O.we)("#Button_Preview"),
                   }),
-                  (0, s.jsx)(W.$k, {
+                  (0, s.jsx)(Z.$k, {
                     company: a,
                     name: t,
                     title: r,
@@ -2492,7 +2492,7 @@
       function Le(e) {
         const { steamid: t, setSteamID: n } = e,
           { data: r } = (0, K.js)(t);
-        return (0, s.jsx)(Z.kt, {
+        return (0, s.jsx)(W.kt, {
           onSelected: () => n(new p.b(t)),
           children: (0, s.jsxs)("div", {
             style: { display: "flex", alignItems: "center" },

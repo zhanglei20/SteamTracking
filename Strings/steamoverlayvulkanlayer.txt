@@ -1,9 +1,13 @@
   what():
  [clone
+ _Complex
+ _Imaginary
  __vector(
+ class
  const
  for
  noexcept
+ requires
  restrict
  throw
  transaction_safe
@@ -14,9 +18,11 @@ $ORIGIN
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN26CVulkanAsyncReadbackThread4InitEP10VkDevice_TEUlvE_EEEEEE
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
--0123456789
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGstd::exception
+/dev/random
+/dev/urandom
 0123456789
 17CPooledBufferData
 18CVulkanSharedImage
@@ -26,28 +32,17 @@ $ORIGIN
 @entryPointOutput
 @entryPointOutput.vPositionPs
 @entryPointOutput.vTexCoord
-AKST
-ASCII
-ASCII//TRANSLIT
-April
-August
-CH\f1
+CLcx
 Constants
-Dcc<
-December
-February
-FoCLcx
-Friday
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
-GLIBC_2.0
-GLIBC_2.1
-GLIBC_2.1.3
-GLIBC_2.2
-GLIBC_2.2.4
+Enable multithreading to use std::thread
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
+GLIBCXX_TUNABLES
+GLIBC_2.14
+GLIBC_2.17
+GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
-GLIBC_2.3.4
 GLIBC_2.4
 GLSL.std.450
 GL_ARB_separate_shader_objects
@@ -56,110 +51,39 @@ GameOverlayRenderer.dll
 GameOverlayRenderer64.dll
 HDRParams
 JArray
-January
-July
-June
-March
-Monday
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
-N10__cxxabiv121__vmi_class_type_infoE
-N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
-N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt3_V214error_categoryE
-NSt6locale5facetE
 NSt6thread6_StateE
-NSt8ios_base7failureE
 NitsToPQ(vf3;
-November
-October
 SRGBToLinear(f1;
 SRGBToLinear4(vf4;
 STEAM_OVERLAY_VULKAN_LAYER_FORCE_COMPUTE
 STEAM_VKOVERLAY_FORCE_YCBCR_SUPPORT
-Saturday
-September
-St10ctype_base
-St10money_base
-St10moneypunctIcLb0EE
-St10moneypunctIcLb1EE
-St10moneypunctIwLb0EE
-St10moneypunctIwLb1EE
-St11__timepunctIcE
-St11__timepunctIwE
+St10bad_typeid
 St11logic_error
-St12codecvt_base
+St11range_error
+St12domain_error
 St12length_error
 St12out_of_range
 St12system_error
 St13bad_exception
-St13basic_istreamIwSt11char_traitsIwEE
-St13basic_ostreamIwSt11char_traitsIwEE
-St13messages_base
 St13runtime_error
-St15basic_streambufIcSt11char_traitsIcEE
-St15basic_streambufIwSt11char_traitsIwEE
-St16__numpunct_cacheIcE
-St16__numpunct_cacheIwE
-St17__timepunct_cacheIcE
-St17__timepunct_cacheIwE
-St18__moneypunct_cacheIcLb0EE
-St18__moneypunct_cacheIcLb1EE
-St18__moneypunct_cacheIwLb0EE
-St18__moneypunct_cacheIwLb1EE
+St14overflow_error
+St15underflow_error
+St16invalid_argument
 St20bad_array_new_length
-St21__ctype_abstract_baseIwE
-St23__codecvt_abstract_baseIDiDu11__mbstate_tE
-St23__codecvt_abstract_baseIDic11__mbstate_tE
-St23__codecvt_abstract_baseIDsDu11__mbstate_tE
-St23__codecvt_abstract_baseIDsc11__mbstate_tE
-St23__codecvt_abstract_baseIcc11__mbstate_tE
-St23__codecvt_abstract_baseIwc11__mbstate_tE
-St5ctypeIcE
-St5ctypeIwE
-St7codecvtIDiDu11__mbstate_tE
-St7codecvtIDic11__mbstate_tE
-St7codecvtIDsDu11__mbstate_tE
-St7codecvtIDsc11__mbstate_tE
-St7codecvtIcc11__mbstate_tE
-St7codecvtIwc11__mbstate_tE
-St7collateIcE
-St7collateIwE
-St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St8bad_cast
-St8ios_base
-St8messagesIcE
-St8messagesIwE
-St8numpunctIcE
-St8numpunctIwE
-St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9bad_alloc
-St9basic_iosIcSt11char_traitsIcEE
-St9basic_iosIwSt11char_traitsIwEE
 St9exception
-St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St9time_base
 St9type_info
-Sunday
 TLS init function for
 TLS wrapper function for
-Thursday
-Tuesday
-UTF-8
 Ucoeff
 Uoffset
 VK_KHR_bind_memory2
@@ -175,104 +99,89 @@ VulkanSteamOverlayDeleteTexture(int)
 VulkanSteamOverlayDrawTexturedRect
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlaySetWindowType
 VulkanSteamOverlayStartCaptureFrame
 VulkanSteamOverlayStopRendering
 VulkanSteamOverlayTextureExists
 VulkanSteamOverlayUpdateTexture
-Wednesday
 Ycoeff
 Yoffset
 [abi:
-_Accum
-_Fract
+[friend]
+_Float
 _GLOBAL_
 _ITM_RU1
-_ITM_RU4
+_ITM_RU8
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat
-___tls_get_addr
-__ctype_get_mb_cur_max
 __cxa_atexit
 __cxa_finalize
-__duplocale
+__cxa_pure_virtual
 __errno_location
 __float128
-__freelocale
-__fxstat64
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__iswctype_l
-__newlocale
-__nl_langinfo_l
 __pthread_key_create
-__sprintf_chk
 __stack_chk_fail
-__strcoll_l
-__strftime_l
-__strtod_l
-__strtof_l
-__strxfrm_l
-__towlower_l
-__towupper_l
-__uselocale
-__wcscoll_l
-__wcsftime_l
-__wcsxfrm_l
-__wctype_l
-_fini
-_init
+__test_and_acquire(long*)
+__tls_get_addr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 abort
 alignof
 allocator
-alnum
-alpha
 auto
 auto:
 bCompositeCursor
-basic_ios::clear
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
 basic_string::_M_replace_aux
 basic_string::_S_construct null not valid
 basic_string::_S_create
 basic_string::append
 basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
 basic_string::copy
 basic_string::erase
+basic_string::insert
+basic_string::replace
 basic_string::resize
-bind_textdomain_codeset
-bindtextdomain
-blank
+basic_string::substr
+basic_string_view::substr
 bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 boolean
-btowc
 byte
 cannot create std::deque larger than max_size()
-ceilf
 char
 char16_t
 char32_t
 char8_t
-cntrl
+close
+co_await
 color
 colorX
 colorY
 color_in
-complex
 compositeDesc
 const_cast
 construction vtable for
@@ -283,10 +192,9 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
+default
 delete
 delete[]
-dgettext
-digit
 dispatchThreadId
 dl_iterate_phdr
 dlopen
@@ -296,10 +204,6 @@ dynamic_cast
 eInputType
 eOutputType
 false
-fclose
-fdopen
-fflush
-fileno
 flCursorOffsetX
 flCursorOffsetY
 flCursorScaleX
@@ -307,13 +211,9 @@ flCursorScaleY
 flSDRAdjust
 flTonemapFactor
 float
-fopen64
 fputc
 fputs
-fread
 free
-fseeko64
-ftello64
 fwrite
 g_flPad0
 g_flPad1
@@ -327,65 +227,56 @@ g_tCursor
 g_tTexture
 generic
 get_nprocs
-getc
+getentropy
 getenv
-gettext
-getwc
 gl_Position
+glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
-graph
 guard variable for
 half
+hardware
 hidden alias for
 i.nVertexIndex
 i.vTexCoord
-iconv
-iconv_close
-iconv_open
-imaginary
 inConstants
 inLayerTex0
+initializer for module
 ioctl
 java Class for
 java resource
-ld-linux.so.2
+ld-linux-x86-64.so.2
 libc.so.6
 libdl.so.2
-libm.so.6
 libpthread.so.0
-locale::facet::_S_create_c_locale name not valid
 long
 long double
 long long
-lower
-lseek64
 main
 malloc
-mbrtowc
-mbsnrtowcs
-mbsrtowcs
 memchr
 memcmp
 memcpy
 memmove
 memset
-mold 1.10.1 (compatible with GNU ld)
+mold 2.36.0 (compatible with GNU ld)
+mt19937
 nanosleep
 new
 new[]
 nits
+noexcept
 non-transaction clone for
 non-virtual thunk to
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
+obj_count
+obj_size
+open
 operator
 operator""
 outHeight
 outImage
 outWidth
 param
-poll
-print
 pthread_cond_broadcast
 pthread_cond_destroy
 pthread_cond_signal
@@ -401,52 +292,58 @@ pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pthread_setspecific
-punct
-pure virtual method called\n
-putc
-putwc
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
 read
 realloc
 reference temporary #
 reinterpret_cast
 sampler0
-setlocale
-setvbuf
+secure_getenv
 short
 signed char
 sizeof
 sizeof...
-space
+sprintf
 static_cast
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
 std::bad_cast
 std::bad_exception
+std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
+std::bfloat16_t
 std::iostream
 std::istream
 std::ostream
 std::string
 stderr
-stdin
-stdout
 strcasecmp
+strchr
 strcmp
-strdup
-strerror
+strcpy
+strerror_r
 string literal
+string::string
 strlen
 strncmp
 strtol
-strtold_l
+strtoul
 syscall
 system
+template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -455,7 +352,7 @@ this
 throw
 transaction clone for
 transaction clone for operator delete(void*)
-transaction clone for operator new[](unsigned int)
+transaction clone for operator new[](unsigned long)
 true
 typeinfo fn for
 typeinfo for
@@ -463,7 +360,6 @@ typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
@@ -472,13 +368,11 @@ typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+typename
 uFragColor
-ungetc
-ungetwc
 unsigned
 unsigned __int128
 unsigned char
@@ -486,12 +380,11 @@ unsigned int
 unsigned long
 unsigned long long
 unsigned short
-upper
 uvScale
 uv_in
 vOutputResolution
 vector::_M_default_append
-vector::_M_realloc_insert
+vector::_M_realloc_append
 virtual thunk to
 vkAcquireDrmDisplayEXT
 vkAcquireNextImage2KHR
@@ -805,6 +698,7 @@ vkCreateSwapchainKHR
 vkCreateValidationCacheEXT
 vkCreateVideoSessionKHR
 vkCreateVideoSessionParametersKHR
+vkCreateWaylandSurfaceKHR
 vkCreateXcbSurfaceKHR
 vkCreateXlibSurfaceKHR
 vkDebugMarkerSetObjectNameEXT
@@ -994,6 +888,7 @@ vkGetPhysicalDeviceToolProperties
 vkGetPhysicalDeviceToolPropertiesEXT
 vkGetPhysicalDeviceVideoCapabilitiesKHR
 vkGetPhysicalDeviceVideoFormatPropertiesKHR
+vkGetPhysicalDeviceWaylandPresentationSupportKHR
 vkGetPhysicalDeviceXcbPresentationSupportKHR
 vkGetPhysicalDeviceXlibPresentationSupportKHR
 vkGetPipelineCacheData
@@ -1084,31 +979,16 @@ vkWriteAccelerationStructuresPropertiesKHR
 vkWriteMicromapsPropertiesEXT
 vk_layerGetPhysicalDeviceProcAddr
 void
-vsnprintf
 vtable for
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 wchar_t
-wcrtomb
-wcscmp
-wcslen
-wcsnrtombs
-wctob
-wmemchr
-wmemcmp
-wmemcpy
-wmemmove
-wmemset
-write
-writev
-xdigit
 {default arg#
-{lambda(
+{lambda
 {parm#
 {unnamed type#

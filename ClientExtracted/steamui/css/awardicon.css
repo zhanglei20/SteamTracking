@@ -6,13 +6,13 @@
   margin: 0 2px;
   background-color: rgba(0, 0, 0, 0.2);
   transition: background-color;
-  transition-duration: .13s;
+  transition-duration: 0.13s;
 }
 ._1ShXayKQrFaUxECMORaNmM {
   cursor: pointer;
 }
 ._1ShXayKQrFaUxECMORaNmM:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: hsla(0, 0%, 100%, 0.2);
 }
 ._20mER4KVFt1wYBaOFlnjvL {
   cursor: unset;

@@ -58,15 +58,15 @@
 ._2LyGIHuQ8SFKb5T262YUvg {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
   margin-bottom: 10px;
   padding: 12px;
-  transition: height .5s;
-  background-color: #0e141b;
+  transition: height 0.5s;
+  background-color: #23262e;
+  border-radius: 2px;
 }
 ._2LyGIHuQ8SFKb5T262YUvg.GamepadMode,
 .GamepadMode ._2LyGIHuQ8SFKb5T262YUvg {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: hsla(0, 0%, 100%, 0.15);
 }
 ._2LyGIHuQ8SFKb5T262YUvg._3TgL3aJ2hUdLP2stFZ2wZv {
   cursor: pointer;
@@ -91,7 +91,7 @@
   fill: #fff;
   padding: 10px;
   justify-content: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   color: #fff;
   height: 24px;
   width: 24px;
@@ -106,13 +106,13 @@
   background-color: #1a9fff;
 }
 ._3Qa1urRRWR4tjkBSNaO8Wi._3Qa1urRRWR4tjkBSNaO8Wi svg {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   height: 18px;
   margin-top: 4px;
 }
 ._3Qa1urRRWR4tjkBSNaO8Wi._3Qa1urRRWR4tjkBSNaO8Wi.r0ToHd0tmv46GM00Lr0a_ svg {
   transform: rotateZ(180deg);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 ._1xIt8XUBQEbK-xSRQhbtW0 {
   background-color: rgba(0, 0, 0, 0.2);

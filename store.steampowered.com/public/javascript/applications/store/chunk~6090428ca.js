@@ -4,11 +4,12 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [261],
   {
-    36837: (e, t, n) => {
-      n.d(t, { f: () => s });
-      var a = n(78327);
-      class s {
-        m_HomeView;
+    62734: (e, t, n) => {
+      n.d(t, { f: () => i });
+      var a = n(81393);
+      var s = n(78327);
+      class i {
+        m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -17,19 +18,22 @@
         }
         static s_globalSingletonStore;
         static Get() {
+          var e;
           return (
-            s.s_globalSingletonStore ||
-              ((s.s_globalSingletonStore = new s()),
-              "dev" == a.TS.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = s.s_globalSingletonStore)),
-            s.s_globalSingletonStore
+            i.s_globalSingletonStore ||
+              ((e = "CHomeViewStore.s_globalSingletonStore"),
+              (0, a.wT)(!0, "Unexpected code running in SSR Server: " + e),
+              (i.s_globalSingletonStore = new i()),
+              "dev" == s.TS.WEB_UNIVERSE &&
+                (window.g_HomeViewSetting = i.s_globalSingletonStore)),
+            i.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === a.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
-          const e = (0, a.Tc)("home_view_setting", "application_config");
+          "dev" === s.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          const e = (0, s.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-          const t = (0, a.Tc)(
+          const t = (0, s.Tc)(
             "home_view_setting_override",
             "application_config",
           );
@@ -54,16 +58,18 @@
           );
         }
         SetHomeViewSettingOverride(e) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ...e?.all,
-            ...e?.maincap,
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ...e?.all,
+                ...e?.maincap,
+              })
+            : (this.m_HomeView = { home: { ...e?.all, ...e?.maincap } });
         }
       }
     },
     95886: (e, t, n) => {
-      n.d(t, { Zr: () => b, dP: () => H, v0: () => F });
+      n.d(t, { Zr: () => T, dP: () => F, v0: () => H });
       var a = n(34629),
         s = n(41735),
         i = n.n(s),
@@ -809,8 +815,8 @@
       (0, a.Cg)([r.EW.struct], D.prototype, "viewFilteredEvents", null),
         (0, a.Cg)([r.EW.struct], D.prototype, "filteredAndCheckedEvents", null);
       const k = r.sH.box(null),
-        T = new Map();
-      function b(e, t) {
+        b = new Map();
+      function T(e, t) {
         let n = "";
         return (
           e.appids &&
@@ -834,17 +840,17 @@
               e.category_or_language +
               "_" +
               e.tag_name),
-          k.get() !== n && (k.set(n), T.has(n) || T.set(n, new B(e, t))),
+          k.get() !== n && (k.set(n), b.has(n) || b.set(n, new B(e, t))),
           n
         );
       }
-      function F() {
-        return null == k.get() && b({}), T.get(k.get());
-      }
       function H() {
+        return null == k.get() && T({}), b.get(k.get());
+      }
+      function F() {
         return null !== k.get();
       }
-      window.g_EventCalendarMap = T;
+      window.g_EventCalendarMap = b;
     },
     67540: (e, t, n) => {
       n.d(t, { d: () => l, g: () => a });
@@ -1270,7 +1276,7 @@
       y = (0, a.Cg)([o.PA], y);
     },
     35685: (e, t, n) => {
-      n.d(t, { kH: () => z, rN: () => U, uY: () => W, zA: () => q });
+      n.d(t, { kH: () => $, rN: () => O, uY: () => z, zA: () => q });
       var a = n(7850),
         s = n(22837),
         i = n(41735),
@@ -1298,19 +1304,20 @@
         B = n(52038),
         D = n(61859),
         k = n(78327),
-        T = n(84811),
-        b = n(22797),
+        b = n(84811),
+        T = n(3088),
+        H = n(22797),
         F = n(33924),
-        H = n.n(F),
-        N = n(706),
-        M = n(18654),
-        x = n.n(M),
-        R = n(84518),
-        j = n(38535),
-        L = n(39777),
+        N = n.n(F),
+        M = n(706),
+        x = n(18654),
+        R = n.n(x),
+        j = n(84518),
+        L = n(38535),
+        V = n(39777),
         P = n(35380),
-        V = n(42834);
-      const U = (0, o.PA)((e) => {
+        U = n(42834);
+      const O = (0, o.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: n,
@@ -1350,7 +1357,8 @@
                     G.fW(e);
                     const t = e
                       .slice(0, 3)
-                      .map((e) => s.GetClanEventFromAnnouncementGID(e));
+                      .map((e) => s.GetClanEventFromAnnouncementGID(e))
+                      .filter((e) => !!e);
                     if ((g(t), f(!1), i)) {
                       let e = v.KN.Get().GetTracker(),
                         a = !1;
@@ -1389,12 +1397,12 @@
             ),
             I)
           )
-            return (0, a.jsx)(b.t, { position: "center", size: "medium" });
+            return (0, a.jsx)(H.t, { position: "center", size: "medium" });
           if (0 == h.length) return (0, a.jsx)("div", {});
           const A = _.ac.GetClanInfoByClanAccountID(t);
-          return (0, a.jsx)(T.tH, {
+          return (0, a.jsx)(b.tH, {
             children: (0, a.jsxs)("div", {
-              className: (0, B.A)(H().OtherEventsCtn, "OtherEventsCtn"),
+              className: (0, B.A)(N().OtherEventsCtn, "OtherEventsCtn"),
               children: [
                 (0, a.jsxs)("div", {
                   className: E().EventSectionTitleCtn,
@@ -1428,11 +1436,11 @@
                   ],
                 }),
                 (0, a.jsx)(c.Z, {
-                  className: H().OtherEvents,
+                  className: N().OtherEvents,
                   "flow-children": "column",
                   navEntryPreferPosition: m.iU.PREFERRED_CHILD,
                   children: h.map((e) =>
-                    (0, a.jsx)(W, { event: e }, e.AnnouncementGID),
+                    (0, a.jsx)(z, { event: e }, e.AnnouncementGID),
                   ),
                 }),
                 Boolean(w) &&
@@ -1447,8 +1455,8 @@
             }),
           });
         }),
-        O = 30;
-      function W(e) {
+        W = 30;
+      function z(e) {
         const {
             event: t,
             imageURLOverride: n,
@@ -1458,7 +1466,7 @@
             eEventRount: c,
             bHidePrices: m,
           } = e,
-          u = (0, j.Zj)(t.appid),
+          u = (0, L.Zj)(t.appid),
           [_, v, S, I, E, f] = (0, l.q3)(() => {
             const e = r || (0, s.sf)(k.TS.LANGUAGE),
               a = Boolean(void 0 !== n)
@@ -1476,25 +1484,28 @@
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [y, A] = (0, d.useState)(void 0),
-          G =
-            !y || (_ !== y && E !== y)
-              ? { src: _, onLoad: () => A(_), onError: () => A(E) }
-              : { src: y };
+          y = (0, P.$5)(t.appid),
+          { data: A } = (0, V.lv)(y),
+          G = [
+            _,
+            E !== _ ? E : void 0,
+            A && (0, U.b0)(A, "main_capsule"),
+          ].filter(Boolean),
+          [D, b] = (0, d.useState)(_);
         if (!t)
-          return (0, a.jsx)("div", { className: H().OtherEvents_EventCtn });
-        const D = (0, g.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          T = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let b = f;
+          return (0, a.jsx)("div", { className: N().OtherEvents_EventCtn });
+        const H = (0, g.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          F = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        let M = f;
         return (
-          f && (f.length > O || v.length > O) && (b = void 0),
+          f && (f.length > W || v.length > W) && (M = void 0),
           (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)(C.tj, {
                 className: (0, B.A)(
-                  H().OtherEvents_EventCtn,
+                  N().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
-                  H().HoversEnabled,
+                  N().HoversEnabled,
                 ),
                 eventModel: t,
                 route: c || C.PH.k_eView,
@@ -1502,55 +1513,58 @@
                 preferredFocus: !0,
                 children: [
                   (0, a.jsxs)("div", {
-                    className: H().EventSummaryContainer,
+                    className: N().EventSummaryContainer,
                     children: [
                       (0, a.jsx)("div", {
-                        className: H().EventSummaryType,
+                        className: N().EventSummaryType,
                         children: S,
                       }),
                       (0, a.jsx)("div", {
-                        className: H().EventSummaryText,
+                        className: N().EventSummaryText,
                         children: I,
                       }),
                     ],
                   }),
                   (0, a.jsx)("div", {
-                    className: H().OtherEvents_BGImage,
+                    className: N().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
-                      backgroundImage: y ? `url(${(0, p.j3)(y)})` : "none",
+                      backgroundImage: D ? `url(${(0, p.j3)(D)})` : "none",
                     },
                   }),
                   (0, a.jsxs)("div", {
-                    className: H().OtherEvents_ContentCtn,
+                    className: N().OtherEvents_ContentCtn,
                     children: [
                       (0, a.jsx)("div", {
                         className: (0, B.A)(
-                          H().OtherEvents_MainImageCtn,
-                          u && H().MaskImages,
+                          N().OtherEvents_MainImageCtn,
+                          u && N().MaskImages,
                         ),
-                        children: (0, a.jsx)("img", {
-                          ...G,
-                          className: H().OtherEvents_MainImage,
+                        children: (0, a.jsx)(T.c, {
+                          rgSources: G,
+                          onIncrementalError: (e, t, n) => {
+                            n >= G.length && b(void 0), b(G[n + 1]);
+                          },
+                          className: N().OtherEvents_MainImage,
                           alt: "",
                         }),
                       }),
                       (0, a.jsxs)("div", {
-                        className: H().OtherEvents_TextCtn,
+                        className: N().OtherEvents_TextCtn,
                         children: [
                           (0, a.jsx)("div", {
-                            className: H().OtherEvents_TextTitle,
+                            className: N().OtherEvents_TextTitle,
                             children: v,
                           }),
-                          Boolean(b) &&
+                          Boolean(M) &&
                             (0, a.jsx)("div", {
-                              className: H().OtherEvents_SubTitle,
-                              children: b,
+                              className: N().OtherEvents_SubTitle,
+                              children: M,
                             }),
-                          Boolean(T > D)
+                          Boolean(F > H)
                             ? (0, a.jsx)("div", {
                                 className: (0, B.A)(
-                                  H().UpcomingCtn,
+                                  N().UpcomingCtn,
                                   "UpcomingCtn",
                                 ),
                                 children: (0, a.jsx)(w.K4, {
@@ -1579,52 +1593,52 @@
       function q(e) {
         const { appid: t, bHidePrice: n } = e,
           s = (0, P.$5)(t),
-          { data: i } = (0, L.J$)(s),
-          { data: r } = (0, L.lv)(s),
-          { data: o } = (0, L.Q_)(s),
+          { data: i } = (0, V.J$)(s),
+          { data: r } = (0, V.lv)(s),
+          { data: o } = (0, V.Q_)(s),
           l = (0, A.n9)(),
           d = (0, k.Qn)();
         if (!r || !i) return null;
         const m = o && o.hide_discount_pct_for_compliance;
-        return (0, a.jsx)(R.A, {
+        return (0, a.jsx)(j.A, {
           appID: t,
           children: (0, a.jsxs)(c.Z, {
-            className: (0, B.A)(H().AppCapsuleCtn, "AppCapsuleCtn"),
+            className: (0, B.A)(N().AppCapsuleCtn, "AppCapsuleCtn"),
             ...(0, f.S)(i, l, d, !1),
             children: [
-              (0, a.jsx)(N.Q, {
+              (0, a.jsx)(M.Q, {
                 id: s,
                 hoverProps: {
                   direction: "overlay",
                   style: { minWidth: "320px" },
                 },
                 children: (0, a.jsx)("img", {
-                  className: (0, B.A)(H().AppCapsuleImage, H().CapsuleShadow),
-                  src: (0, V.b0)(r, "small_capsule"),
+                  className: (0, B.A)(N().AppCapsuleImage, N().CapsuleShadow),
+                  src: (0, U.b0)(r, "small_capsule"),
                   alt: i.name,
                 }),
               }),
               Boolean(!n && !i.is_free) &&
                 (0, a.jsxs)("span", {
                   className: (0, B.A)(
-                    H().AppCapsulePrice,
-                    Boolean(o?.discount_pct) ? x().Discounted : "",
+                    N().AppCapsulePrice,
+                    Boolean(o?.discount_pct) ? R().Discounted : "",
                   ),
                   children: [
                     Boolean(o?.discount_pct && m) &&
                       (0, a.jsx)("div", {
-                        className: x().DiscountIconCtn,
+                        className: R().DiscountIconCtn,
                         children: (0, a.jsx)(y.XH_, {}),
                       }),
                     Boolean(o?.discount_pct && !m) &&
                       (0, a.jsx)("span", {
-                        className: x().StoreSaleDiscountBox,
+                        className: R().StoreSaleDiscountBox,
                         children: `-${o?.discount_pct}%`,
                       }),
                     o &&
                       o.final_price_in_cents &&
                       (0, a.jsx)("span", {
-                        className: x().StoreSalePriceBox,
+                        className: R().StoreSalePriceBox,
                         children: o.formatted_final_price,
                       }),
                   ],
@@ -1633,71 +1647,86 @@
           }),
         });
       }
-      function z(e) {
+      function $(e) {
         const { event: t, imageURLOverride: n, onClick: i } = e,
-          r = (0, j.Zj)(t.appid),
-          o = (0, s.sf)(k.TS.LANGUAGE),
-          [d, c, m] = (0, l.q3)(() =>
+          r = (0, L.Zj)(t.appid),
+          o = (0, P.$5)(t.appid),
+          { data: d } = (0, V.lv)(o),
+          c = (0, s.sf)(k.TS.LANGUAGE),
+          [m, p, u, _, g] = (0, l.q3)(() =>
             t
               ? [
                   void 0 !== n
                     ? n
                     : t.GetImageURLWithFallback(
                         "capsule",
-                        o,
+                        c,
                         h.wI.capsule_main,
                       ),
-                  t.GetNameWithFallback(o),
+                  t.GetNameWithFallback(c),
                   t.GetCategoryAsString(),
+                  t.GetSubTitleWithLanguageFallback(c),
+                  t.GetSummaryWithFallback(c),
                 ]
-              : [void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0, void 0],
           );
-        return t
-          ? (0, a.jsxs)(C.tj, {
-              className: H().OtherEvents_EventCtn + " " + H().HorizontalEvent,
-              eventModel: t,
-              route: C.PH.k_eView,
-              onClick: i,
-              children: [
-                (0, a.jsx)("div", {
-                  className: H().OtherEvents_ContentCtn,
-                  children: (0, a.jsx)("div", {
-                    className: (0, B.A)(
-                      H().OtherEvents_MainImageCtn,
-                      r && H().MaskImages,
-                    ),
-                    children: (0, a.jsx)("img", {
-                      src: d,
-                      className: H().OtherEvents_MainImage,
-                      alt: "",
-                    }),
-                  }),
+        if (!t)
+          return (0, a.jsx)("div", { className: N().OtherEvents_EventCtn });
+        const v = [m, d && (0, U.b0)(d, "main_capsule")].filter(Boolean);
+        return (0, a.jsxs)(C.tj, {
+          className: N().OtherEvents_EventCtn + " " + N().HorizontalEvent,
+          eventModel: t,
+          route: C.PH.k_eView,
+          onClick: i,
+          children: [
+            (0, a.jsx)("div", {
+              className: N().OtherEvents_ContentCtn,
+              children: (0, a.jsx)("div", {
+                className: (0, B.A)(
+                  N().OtherEvents_MainImageCtn,
+                  r && N().MaskImages,
+                ),
+                children: (0, a.jsx)(T.c, {
+                  rgSources: v,
+                  className: N().OtherEvents_MainImage,
+                  alt: "",
                 }),
+              }),
+            }),
+            (0, a.jsxs)("div", {
+              className: N().OtherEvents_TextCtn,
+              children: [
                 (0, a.jsxs)("div", {
-                  className: H().OtherEvents_TextCtn,
+                  className: N().HorizontalDescriptionCtn,
                   children: [
-                    (0, a.jsxs)("div", {
-                      className: H().HorizontalDescriptionCtn,
-                      children: [
-                        (0, a.jsx)("div", {
-                          className: H().HorizontalDescription,
-                          children: m,
-                        }),
-                        (0, a.jsx)(w.K4, {
-                          bSingleLine: !0,
-                          dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
-                        }),
-                      ],
-                    }),
                     (0, a.jsx)("div", {
-                      className: H().HorizontalTitle,
-                      children: c,
+                      className: N().HorizontalDescription,
+                      children: u,
+                    }),
+                    (0, a.jsx)(w.K4, {
+                      bSingleLine: !0,
+                      dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
                     }),
                   ],
                 }),
+                (0, a.jsx)("div", {
+                  className: N().HorizontalTitle,
+                  children: p,
+                }),
+                _ &&
+                  (0, a.jsx)("div", {
+                    className: N().HorizontalSubTitle,
+                    children: _,
+                  }),
+                g &&
+                  (0, a.jsx)("div", {
+                    className: N().HorizontalSummary,
+                    children: g,
+                  }),
               ],
-            })
-          : (0, a.jsx)("div", { className: H().OtherEvents_EventCtn });
+            }),
+          ],
+        });
       }
     },
     99032: (e, t, n) => {
@@ -1718,7 +1747,7 @@
         r = n(30894),
         o = n(16021),
         l = n(78327),
-        d = n(36837),
+        d = n(62734),
         c = n(81393);
       function m(e) {
         return o.A.Get().BIsStoreItemMissing(e.id, (0, s.SW)(e.type));

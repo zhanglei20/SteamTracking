@@ -302,28 +302,61 @@
           return _(_, _);
         });
       }
+      function _(_) {
+        return Object.keys(_).concat(
+          (function (_) {
+            return Object.getOwnPropertySymbols
+              ? Object.getOwnPropertySymbols(_).filter(function (_) {
+                  return Object.propertyIsEnumerable.call(_, _);
+                })
+              : [];
+          })(_),
+        );
+      }
+      function _(_, _) {
+        try {
+          return _ in _;
+        } catch (_) {
+          return !1;
+        }
+      }
+      function _(_, _, _) {
+        var _ = {};
+        return (
+          __webpack_require__.isMergeableObject(_) &&
+            _(_).forEach(function (_) {
+              _[_] = _(_[_], _);
+            }),
+          _(_).forEach(function (_) {
+            (function (_, _) {
+              return (
+                _(_, _) &&
+                !(
+                  Object.hasOwnProperty.call(_, _) &&
+                  Object.propertyIsEnumerable.call(_, _)
+                )
+              );
+            })(_, _) ||
+              (_(_, _) && __webpack_require__.isMergeableObject(_[_])
+                ? (_[_] = (function (_, _) {
+                    if (!_.customMerge) return _;
+                    var _ = _.customMerge(_);
+                    return "function" == typeof _ ? _ : _;
+                  })(_, _)(_[_], _[_], _))
+                : (_[_] = _(_[_], _)));
+          }),
+          _
+        );
+      }
       function _(_, _, _) {
         ((_ = _ || {}).arrayMerge = _.arrayMerge || _),
-          (_.isMergeableObject = _.isMergeableObject || _);
+          (_.isMergeableObject = _.isMergeableObject || _),
+          (_.cloneUnlessOtherwiseSpecified = _);
         var _ = Array.isArray(_);
         return _ === Array.isArray(_)
           ? _
             ? __webpack_require__.arrayMerge(_, _, _)
-            : (function (_, _, _) {
-                var _ = {};
-                return (
-                  __webpack_require__.isMergeableObject(_) &&
-                    Object.keys(_).forEach(function (_) {
-                      _[_] = _(_[_], _);
-                    }),
-                  Object.keys(_).forEach(function (_) {
-                    __webpack_require__.isMergeableObject(_[_]) && _[_]
-                      ? (_[_] = _(_[_], _[_], _))
-                      : (_[_] = _(_[_], _));
-                  }),
-                  _
-                );
-              })(_, _, _)
+            : _(_, _, _)
           : _(_, _);
       }
       function _(_) {
@@ -375,7 +408,10 @@
                   key: "render",
                   value: function () {
                     var _ = this,
-                      _ = _(this.state, this.props);
+                      _ = this.props,
+                      _ = _.children,
+                      _ = _(_, _),
+                      _ = _(this.state, _, _);
                     return _.createElement(
                       _,
                       _(
@@ -401,7 +437,7 @@
                           },
                         },
                       ),
-                      this.props.children,
+                      _,
                     );
                   },
                 },
@@ -496,6 +532,24 @@
             _ = _.max,
             _ = _._;
           return Math.min(_, Math.max(_, _));
+        },
+        _ = {
+          arrayMerge: function (_, _) {
+            return _;
+          },
+          clone: !1,
+          customMerge: function (_) {
+            if (
+              "$$typeof" === _ ||
+              "_owner" === _ ||
+              "_store" === _ ||
+              "ref" === _ ||
+              "key" === _
+            )
+              return function (_, _) {
+                return _;
+              };
+          },
         },
         _ = "buttonBack___1mlaL",
         _ = [
@@ -757,7 +811,7 @@
         _ = (function () {
           function _(_) {
             _(this, _),
-              (this.state = _(_(_, _))),
+              (this.state = _(_(_, _, _))),
               (this.subscriptions = []),
               (this.masterSpinnerSubscriptions = {}),
               (this.setStoreState = this.setStoreState.bind(this)),
@@ -780,13 +834,14 @@
               {
                 key: "setStoreState",
                 value: function (_, _) {
-                  (this.state = _(_(this.state, _))), this.updateSubscribers(_);
+                  (this.state = _(_(this.state, _, _))),
+                    this.updateSubscribers(_);
                 },
               },
               {
                 key: "getStoreState",
                 value: function () {
-                  return _({}, this.state);
+                  return _({}, this.state, _);
                 },
               },
               {
@@ -1126,6 +1181,7 @@
         _,
         _,
         _,
+        _ = ["children"],
         _ = _(_, function (_) {
           return {
             currentSlide: _.currentSlide,

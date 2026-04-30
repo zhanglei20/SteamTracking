@@ -199,7 +199,7 @@ button._3VW3jphjSrFsWyh8CQ7qkl._3VW3jphjSrFsWyh8CQ7qkl:disabled:hover {
 ._1s2UZCHSCadxdeXsd6fbj6 ._2q-TdYLM1Zgn9tPZ3_1wCx {
   background-color: #20aaeb;
   height: 100%;
-  transition: width .4s ease-out;
+  transition: width 0.4s ease-out;
 }
 ._1MsSLkJk0mX4ITyxy8mpEJ,
 ._28hYlCdWipXh9xN8jgf8ZT {
@@ -454,7 +454,7 @@ button._22iwdea7XXbiuZrrLZUU11._22iwdea7XXbiuZrrLZUU11:disabled:hover {
   background: #1f2126;
 }
 select {
-  color: #fff;
+  color: white;
   background: #32373f;
   border: 1px solid rgba(50, 55, 63, 0);
   padding: 8px;
@@ -503,7 +503,7 @@ select option {
   text-align: center;
   padding-top: 8px;
   opacity: 0.8;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 .youtube_play:hover {
   cursor: pointer;
@@ -643,17 +643,19 @@ strong {
   gap: 10px;
   color: #acb2b8;
   font-size: 15px;
+}
+._1gabCN13JTZzv2A2fXqGve ._1d5GXYH4AY9WFkoszJVzsQ {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+._1gabCN13JTZzv2A2fXqGve {
   animation-name: _2kGhkRiew8we__yyM1878e, _2oAIIbl5uoREv1Es4TZkUQ;
   animation-duration: 200ms, 200ms;
   animation-timing-function: ease, ease;
   animation-delay: 0ms, 2800ms;
   animation-fill-mode: forwards, forwards;
   will-change: opacity, transform;
-}
-._1gabCN13JTZzv2A2fXqGve ._1d5GXYH4AY9WFkoszJVzsQ {
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
 }
 @keyframes _2kGhkRiew8we__yyM1878e {
   from {

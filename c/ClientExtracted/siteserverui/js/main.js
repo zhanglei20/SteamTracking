@@ -99,12 +99,12 @@
       "use strict";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         console.assert
-          ? 0 == __webpack_require__.length
+          ? 0 == _.length
             ? console.assert(!!_, _)
-            : console.assert(!!_, _, ...__webpack_require__)
-          : _ || console.warn(_, ...__webpack_require__);
+            : console.assert(!!_, _, ..._)
+          : _ || console.warn(_, ..._);
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -621,17 +621,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(
             _.IN_CLIENT &&
@@ -686,17 +682,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {
@@ -997,34 +989,30 @@
         _ = _.BinaryWriter.prototype;
       function _(_) {
         const _ = {},
-          { fields: __webpack_require__ } = _;
-        for (const _ in __webpack_require__) {
-          const _ = __webpack_require__[_];
+          { fields: _ } = _;
+        for (const _ in _) {
+          const _ = _[_];
           _[_._] = _;
         }
         return _;
       }
       function _(_, _) {
-        const { proto: __webpack_require__, fields: _ } = _,
-          _ = new __webpack_require__();
+        const { proto: _, fields: _ } = _,
+          _ = new _();
         if (null == _) return _;
         for (const _ in _) {
-          const { _: __webpack_require__, _: _, _: _, _: _, _: _ } = _[_];
+          const { _: _, _: _, _: _, _: _, _: _ } = _[_];
           if (!Object.prototype.hasOwnProperty.call(_, _)) continue;
           const _ = _[_];
           _
             ? _
               ? _.Message.setRepeatedWrapperField(
                   _,
-                  __webpack_require__,
+                  _,
                   Array.isArray(_) ? _.map((_) => _.fromObject(_)) : [],
                 )
-              : _.Message.setWrapperField(
-                  _,
-                  __webpack_require__,
-                  _.fromObject(_),
-                )
-            : _.Message.setField(_, __webpack_require__, _);
+              : _.Message.setWrapperField(_, _, _.fromObject(_))
+            : _.Message.setField(_, _, _);
         }
         return _;
       }
@@ -1145,13 +1133,8 @@
         };
       }
       function _(_, _) {
-        return function (__webpack_require__ = !0) {
-          return _.Message.getWrapperField(
-            this,
-            _,
-            _,
-            __webpack_require__ ? 1 : 0,
-          );
+        return function (_ = !0) {
+          return _.Message.getWrapperField(this, _, _, _ ? 1 : 0);
         };
       }
       function _(_, _) {
@@ -3959,16 +3942,8 @@
             };
           if ("english" !== _) {
             const [_, _] = await Promise.all([
-                __webpack_require__
-                  ._("chunkid")
-                  .then(
-                    __webpack_require__._.bind(__webpack_require__, 3800, 19),
-                  ),
-                __webpack_require__
-                  ._("chunkid")
-                  .then(
-                    __webpack_require__._.bind(__webpack_require__, 8876, 19),
-                  ),
+                __webpack_require__._("chunkid").then(_._.bind(_, 3800, 19)),
+                __webpack_require__._("chunkid").then(_._.bind(_, 8876, 19)),
               ]),
               _ = {
                 ..._.default,
@@ -3981,16 +3956,8 @@
             _,
           );
           const [_, _] = await Promise.all([
-              __webpack_require__
-                ._("chunkid")
-                .then(
-                  __webpack_require__._.bind(__webpack_require__, 3800, 19),
-                ),
-              __webpack_require__
-                ._("chunkid")
-                .then(
-                  __webpack_require__._.bind(__webpack_require__, 8876, 19),
-                ),
+              __webpack_require__._("chunkid").then(_._.bind(_, 3800, 19)),
+              __webpack_require__._("chunkid").then(_._.bind(_, 8876, 19)),
             ]),
             _ = {
               ..._.default,
@@ -4866,13 +4833,9 @@
           });
         }
         render() {
-          const {
-              children: _,
-              fallback: _,
-              errorKey: __webpack_require__,
-            } = this.props,
+          const { children: _, fallback: _, errorKey: _ } = this.props,
             { error: _, identifierHash: _, lastErrorKey: _ } = this.state;
-          return _ && __webpack_require__ == _
+          return _ && _ == _
             ? void 0 !== _
               ? "function" == typeof _
                 ? _(_.error)
@@ -4922,12 +4885,7 @@
           });
         },
         _ = (_) => {
-          const {
-              error: _,
-              onRefresh: __webpack_require__,
-              identifierHash: _,
-              store: _,
-            } = _,
+          const { error: _, onRefresh: _, identifierHash: _, store: _ } = _,
             _ = (_.error && _.error.message) || "unknown error",
             _ = `${_.product}_${_.version}_${_}`;
           return (0, _.jsxs)(_, {
@@ -4940,7 +4898,7 @@
                       textDecoration: "underline",
                       cursor: "pointer",
                     },
-                    onClick: __webpack_require__,
+                    onClick: _,
                     children: "Refresh",
                   }),
                 ],
@@ -5022,8 +4980,7 @@
           const _ = _.Init(_),
             _ = await _.GetClientStatus(_);
           if (1 != _.Hdr().eresult()) return;
-          const { clients: __webpack_require__ = [], payments: _ = [] } =
-              _.Body().toObject(),
+          const { clients: _ = [], payments: _ = [] } = _.Body().toObject(),
             _ = __webpack_require__.map((_) => ({
               _: this.renderIP(_._),
               hostname: _.hostname,

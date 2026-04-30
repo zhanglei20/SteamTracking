@@ -301,15 +301,15 @@
         return [_, _];
       }
       function _(_) {
-        const { closeModal: _, rgImageURL: __webpack_require__ } = _,
+        const { closeModal: _, rgImageURL: _ } = _,
           [_, _] = _.useState(0),
-          _ = __webpack_require__?.length ?? 0,
+          _ = _?.length ?? 0,
           _ = _.useCallback(() => {
             _(0 == _ ? _ - 1 : _ - 1);
           }, [_, _]),
           _ = _.useCallback(() => {
-            _(__webpack_require__ && _ + 1 >= _ ? 0 : _ + 1);
-          }, [_, __webpack_require__, _]);
+            _(_ && _ + 1 >= _ ? 0 : _ + 1);
+          }, [_, _, _]);
         return (0, _.jsxs)(_._, {
           title: (0, _._)("#SaleTech_Screenshot_Viewer"),
           bAllowFullSize: !0,
@@ -320,7 +320,7 @@
           children: [
             (0, _.jsx)(_, {
               index: _,
-              numElements: __webpack_require__?.length || 0,
+              numElements: _?.length || 0,
               fnForward: _,
               fnBackwards: _,
               fnClose: _,
@@ -330,7 +330,7 @@
               className: _().PopupScreenshotContainer,
               children: (0, _.jsx)("img", {
                 className: _().PopupScreenshot,
-                src: __webpack_require__?.[_],
+                src: _?.[_],
               }),
             }),
           ],
@@ -339,7 +339,7 @@
       function _(_) {
         const {
           index: _,
-          numElements: __webpack_require__,
+          numElements: _,
           fnForward: _,
           fnBackwards: _,
           fnClose: _,
@@ -351,7 +351,7 @@
           (0, _._)("Right", () => _?.(), !0, !0),
           (0, _._)("Escape", () => _ && _(), !0, !0),
           (0, _._)("Esc", () => _ && _(), !0, !0);
-        let _ = __webpack_require__ > 1;
+        let _ = _ > 1;
         return (0, _.jsxs)("div", {
           className: _().ButtonCtn,
           children: [
@@ -371,7 +371,7 @@
                   (0, _.jsx)("div", {
                     className: (0, _._)(
                       _().ButtonIcon,
-                      _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
+                      _ !== _ - 1 || _ ? null : _().Disabled,
                     ),
                     onClick: _,
                     children: (0, _.jsx)(_.V5W, {
@@ -403,28 +403,27 @@
       function _(_) {
         const {
             className: _,
-            srcs: __webpack_require__,
+            srcs: _,
             lazyLoad: _,
             width: _,
             height: _,
             alt: _,
             crossOrigin: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__.length),
+          [_, _] = _.useState(_.length),
           [_, _] = _.useState(0);
         _.useEffect(() => {
-          _ != __webpack_require__.length &&
-            (_(__webpack_require__.length), _(0));
-        }, [_, __webpack_require__.length]);
+          _ != _.length && (_(_.length), _(0));
+        }, [_, _.length]);
         const _ = _.useCallback(() => {
           _.onImageError && _.onImageError(_.srcs[_]),
             _ + 1 < _.srcs.length && _(_ + 1);
         }, [_, _]);
-        return 0 == __webpack_require__.length
+        return 0 == _.length
           ? null
           : (0, _.jsx)("img", {
               className: _,
-              src: __webpack_require__[_],
+              src: _[_],
               crossOrigin: _,
               onError: _,
               loading: _ ? "lazy" : void 0,
@@ -434,7 +433,7 @@
             });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           {
             className: _,
             src: _,
@@ -489,7 +488,7 @@
         _ = 3,
         _ = 256;
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
@@ -537,13 +536,13 @@
                   if (!_.currentTarget.closest("a") && !(0, _._)()) {
                     const {
                       naturalWidth: _,
-                      naturalHeight: __webpack_require__,
+                      naturalHeight: _,
                       width: _,
                       height: _,
                     } = _.currentTarget;
                     _({
                       naturalWidth: _,
-                      naturalHeight: __webpack_require__,
+                      naturalHeight: _,
                       displayWidth: _,
                       displayHeight: _,
                     });

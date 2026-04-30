@@ -5726,7 +5726,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const [__webpack_require__] = (0, _.useState)(() =>
+        const [_] = (0, _.useState)(() =>
           (function () {
             const _ = (0, _._)(
               "promotion_operation_token",
@@ -5744,16 +5744,13 @@
         return (0, _._)({
           queryKey: ["usePromotionPlanBySalePage", _],
           queryFn: async () => {
-            if (!__webpack_require__) return null;
+            if (!_) return null;
             const _ = _._.Init(_),
               _ = new _();
             _.set_clan_account_id(_),
               _.set_gid_clan_event(_),
               _.Body().add_request_list(_);
-            const _ = await _.GetPromotionPlanForSalePages(
-              __webpack_require__,
-              _,
-            );
+            const _ = await _.GetPromotionPlanForSalePages(_, _);
             if (1 != _.GetEResult())
               throw new Error(
                 `Error from PromotionPlanBySalePage: ${_.GetEResult()}`,
@@ -5763,7 +5760,7 @@
               .map((_) => _.promotion_id());
           },
           placeholderData: null,
-          enabled: Boolean(__webpack_require__),
+          enabled: Boolean(_),
         }).data;
       }
       var _ = __webpack_require__("chunkid"),
@@ -6021,7 +6018,7 @@
       const _ = "Answered as: ";
       function _(_) {
         const { eventModel: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _._)();
         if (
           ((0, _.useEffect)(() => {
@@ -6029,7 +6026,7 @@
               .LoadDoorData()
               .then(() => _(!0));
           }, []),
-          !__webpack_require__)
+          !_)
         )
           return null;
         const _ = _.GetSaleSectionsByType("quiz"),
@@ -6165,7 +6162,7 @@
       function _(_) {
         const {
             eventModel: _,
-            partnerEventStore: __webpack_require__,
+            partnerEventStore: _,
             addtionalAdminButtons: _,
             fnOnUpdateSaleDayIndex: _,
             bSupportsSticky: _ = !1,
@@ -6208,7 +6205,7 @@
               (0, _.jsx)(_, {
                 eventModel: _,
                 onDeleteSuccessAndCloseDialog: () => _(!0),
-                partnerEventStore: __webpack_require__,
+                partnerEventStore: _,
               }),
               (0, _._)(_),
             );
@@ -6276,9 +6273,7 @@
                           ? (0, _._)("#EventEditor_Edit_Page")
                           : (0, _._)("#EventEditor_Edit"),
                       }),
-                      Boolean(
-                        __webpack_require__ && "community" == (0, _._)(),
-                      ) &&
+                      Boolean(_ && "community" == (0, _._)()) &&
                         (0, _.jsx)("span", {
                           className: _.Button + " " + _.AdminButton,
                           onClick: _,
@@ -6560,8 +6555,8 @@
         });
       }
       function _(_) {
-        const { clanAccountID: _, gidClanEvent: __webpack_require__ } = _,
-          _ = _(_, __webpack_require__);
+        const { clanAccountID: _, gidClanEvent: _ } = _,
+          _ = _(_, _);
         return _
           ? (0, _.jsx)(_.Fragment, {
               children: _.map((_) =>
@@ -6587,14 +6582,31 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (!_ || !_.BIsClanAccount()) return !1;
         const _ = _._.Get().GetPartnerEventPermissions(_);
         return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+      }
+      function _(_) {
+        const { clanSteamID: _, _: _ } = _;
+        return _(_, _.requireAdmin)
+          ? (0, _.jsx)("div", {
+              _: _,
+              className: (0, _._)(
+                _.className,
+                _.requireAdmin
+                  ? _.ValveOnlyAdminBackground
+                  : _.ValveOnlyBackground,
+              ),
+              children: _.children,
+            })
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

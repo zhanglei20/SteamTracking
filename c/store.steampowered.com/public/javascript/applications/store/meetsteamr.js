@@ -77,7 +77,7 @@
       const _ = "nicknames";
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_],
             queryFn: async () => {
               const _ = new Map();
@@ -93,7 +93,7 @@
               return _;
             },
           });
-        return __webpack_require__ ? __webpack_require__.get(_) : null;
+        return _ ? __webpack_require__.get(_) : null;
       }
       const _ = new (_())(
           (_) =>
@@ -150,15 +150,15 @@
         ),
         _ = "avatarandpersonas";
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: [_, _],
           queryFn: () => _.load(_),
         });
-        return [_, __webpack_require__];
+        return [_, _];
       }
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
             queryFn: async () => {
               const _ = await _.loadMany(_);
@@ -180,7 +180,7 @@
               }),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ ? null : _;
       }
     },
@@ -198,7 +198,7 @@
       function _(_) {
         const {
             accountID: _,
-            bHideWhenNotAvailable: __webpack_require__,
+            bHideWhenNotAvailable: _,
             bHideName: _,
             bLink: _ = !0,
           } = _,
@@ -211,7 +211,7 @@
           children: Boolean(!_)
             ? (0, _.jsx)(_.Fragment, {
                 children:
-                  Boolean(!__webpack_require__) &&
+                  Boolean(!_) &&
                   (0, _.jsx)("span", {
                     children: _,
                   }),
@@ -252,7 +252,7 @@
       function _(_) {
         const {
             title: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             getMinimized: _,
             toggleMinimized: _,
             className: _,
@@ -277,9 +277,9 @@
                   ),
                   children: [
                     _,
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                       (0, _.jsx)(_._, {
-                        tooltip: __webpack_require__,
+                        tooltip: _,
                       }),
                   ],
                 }),
@@ -303,7 +303,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
+        const [_, _] = _.useState(Boolean(_.bStartMinimized));
         return (0, _.jsx)(_, {
           ..._,
           getMinimized: () => _,
@@ -312,11 +312,11 @@
         });
       }
       function _(_) {
-        const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
+        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, _.jsx)(_._, {
           "data-tooltip-text": (0, _._)(_),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _.bIsMinimized
             ? (0, _.jsx)(_.hz4, {})
             : (0, _.jsx)(_.Xjb, {}),
@@ -347,13 +347,13 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { gid: _ } = (0, _._)(),
-          [__webpack_require__, _] = (0, _.useState)(!0);
+          [_, _] = (0, _.useState)(!0);
         if (
           (_.useEffect(() => {
-            __webpack_require__ &&
+            _ &&
               (_._.Init(), Promise.all([_._.InitGlobal()]).then(() => _(!1)));
-          }, [__webpack_require__]),
-          __webpack_require__)
+          }, [_]),
+          _)
         )
           return (0, _.jsx)(_._, {
             string: (0, _._)("#Loading"),
@@ -568,18 +568,16 @@
       function _(_) {
         const {
           eventModel: _,
-          rgUserRegs: __webpack_require__,
+          rgUserRegs: _,
           bHideIfEmpty: _,
           strTitle: _,
         } = _;
-        return 0 == __webpack_require__.length && _
+        return 0 == _.length && _
           ? null
           : (0, _.jsx)(_._, {
-              title: `${_} (${__webpack_require__.length})`,
+              title: `${_} (${_.length})`,
               bStartMinimized: _,
-              children: Boolean(
-                !__webpack_require__ || 0 == __webpack_require__.length,
-              )
+              children: Boolean(!_ || 0 == _.length)
                 ? (0, _.jsx)("div", {
                     children: _ ? "" : "No registrations",
                   })
@@ -601,12 +599,12 @@
       }
       function _(_) {
         const { desc: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(() => _((_) => !_), []);
         return (0, _.jsx)("div", {
           className: (0, _._)({
             [_().DescriptionWrapper]: !0,
-            [_().Expanded]: __webpack_require__,
+            [_().Expanded]: _,
           }),
           onClick: _,
           onMouseEnter: () => _(!0),
@@ -615,7 +613,7 @@
         });
       }
       function _(_) {
-        const { reg: _, eventModel: __webpack_require__ } = _,
+        const { reg: _, eventModel: _ } = _,
           _ = new _._(_.steamid).GetAccountID(),
           [_] = (0, _._)(_.userReg.accountid),
           [_, _] = (0, _.useState)(!0),
@@ -623,13 +621,13 @@
           [_, _] = (0, _.useState)(!1),
           _ = _.userReg,
           { group: _, session: _ } = _(
-            __webpack_require__.jsondata.meet_steam_groups,
+            _.jsondata.meet_steam_groups,
             _.group_id,
             _.session_id,
           ),
           [_, _, _] = (0, _._)(),
           _ =
-            ((_ = __webpack_require__.GID),
+            ((_ = _.GID),
             (_ = _),
             (_ = _.group_id),
             (_ = _.session_id),
@@ -763,7 +761,7 @@
       function _(_) {
         const {
             closeModal: _,
-            bIncludeSelf: __webpack_require__,
+            bIncludeSelf: _,
             rgGuestsAttending: _,
             fnMarkAttendance: _,
             fnOnSuccess: _,
@@ -782,7 +780,7 @@
               onOK: async () => {
                 _.fnSetLoading(!0),
                   _.mutateAsync({
-                    bIncludeSelf: __webpack_require__,
+                    bIncludeSelf: _,
                     rgGuests: _,
                   })
                     .then((_) => {
@@ -805,7 +803,7 @@
             });
       }
       function _(_) {
-        const { session: _, group: __webpack_require__ } = _,
+        const { session: _, group: _ } = _,
           {
             sDisplayTimeZone: _,
             rtime_start: _,
@@ -813,13 +811,13 @@
           } = (0, _._)(_.session),
           _ = (0, _._)(_, _),
           _ = (0, _._)(_, _, _);
-        return _ && __webpack_require__
+        return _ && _
           ? (0, _.jsxs)("div", {
               className: _().SessionInfo,
               children: [
                 (0, _.jsx)("div", {
                   className: _().SessionName,
-                  children: __webpack_require__.localized_session_title[0],
+                  children: _.localized_session_title[0],
                 }),
                 (0, _.jsxs)("div", {
                   className: _().SessionTime,
@@ -833,7 +831,7 @@
                 }),
                 (0, _.jsx)("div", {
                   children: (0, _.jsx)(_, {
-                    desc: `Description: ${__webpack_require__.localized_session_description[0] || ""}`,
+                    desc: `Description: ${_.localized_session_description[0] || ""}`,
                   }),
                 }),
                 "dev" == _._.WEB_UNIVERSE &&
@@ -903,8 +901,8 @@
             });
       }
       function _(_) {
-        const { eventModel: _, strSearch: __webpack_require__ } = _,
-          _ = _(_, __webpack_require__),
+        const { eventModel: _, strSearch: _ } = _,
+          _ = _(_, _),
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useMemo)(() => {
             const _ = new Map();
@@ -923,7 +921,7 @@
         return (
           _.useEffect(() => {
             _(null);
-          }, [__webpack_require__]),
+          }, [_]),
           (0, _.jsxs)("div", {
             children: [
               (0, _.jsx)("h3", {
@@ -933,14 +931,11 @@
                 ? (0, _.jsx)(_, {
                     eventModel: _,
                     rgSelected: _,
-                    strSearch: __webpack_require__,
+                    strSearch: _,
                     onCleanSelection: () => _(null),
                   })
                 : (0, _.jsx)(_.Fragment, {
-                    children: _.filter(
-                      (_) =>
-                        !__webpack_require__ || _.includes(__webpack_require__),
-                    ).map((_) =>
+                    children: _.filter((_) => !_ || _.includes(_)).map((_) =>
                       (0, _.jsx)(
                         "div",
                         {
@@ -961,12 +956,12 @@
       function _(_) {
         const {
             eventModel: _,
-            rgSelected: __webpack_require__,
+            rgSelected: _,
             strSearch: _,
             onCleanSelection: _,
           } = _,
           _ = (0, _._)(),
-          _ = _(__webpack_require__, _);
+          _ = _(_, _);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("div", {
@@ -1085,7 +1080,7 @@
       function _(_) {
         const {
           eventModel: _,
-          date: __webpack_require__,
+          date: _,
           sessionsAndGroups: _,
           rgRegistrationInfo: _,
           isToday: _,
@@ -1095,7 +1090,7 @@
           children: [
             (0, _.jsx)("div", {
               className: _().DateName,
-              children: (0, _._)(__webpack_require__),
+              children: (0, _._)(_),
             }),
             (0, _.jsx)("div", {
               className: _().DisplayDaySessionsRow,
@@ -1104,7 +1099,7 @@
                   _,
                   {
                     eventModel: _,
-                    date: __webpack_require__,
+                    date: _,
                     registrations:
                       _.get(`${_.group.group_id}_${_.session._}`) ?? [],
                     group: _.group,
@@ -1120,7 +1115,7 @@
       function _(_) {
         const {
             eventModel: _,
-            date: __webpack_require__,
+            date: _,
             group: _,
             session: _,
             registrations: _,
@@ -1187,7 +1182,7 @@
               nCount: _,
               nCapacity: _.max_capacity,
             }),
-            _(__webpack_require__) >= _(_) &&
+            _(_) >= _(_) &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)(_._, {
@@ -1214,7 +1209,7 @@
       function _(_) {
         const {
             closeModal: _,
-            nCapacity: __webpack_require__,
+            nCapacity: _,
             fnUpdateCapacity: _,
             fnOnSuccess: _,
           } = _,
@@ -1262,15 +1257,15 @@
             });
       }
       function _(_) {
-        const { title: _, nCount: __webpack_require__, nCapacity: _ } = _,
-          _ = __webpack_require__ >= _,
-          _ = Math.min((__webpack_require__ / _) * 100, 100),
-          _ = __webpack_require__ > 0 ? `${_}%` : "0%";
+        const { title: _, nCount: _, nCapacity: _ } = _,
+          _ = _ >= _,
+          _ = Math.min((_ / _) * 100, 100),
+          _ = _ > 0 ? `${_}%` : "0%";
         return (0, _.jsxs)("div", {
           className: _().CapacityCtn,
           children: [
             (0, _.jsxs)("span", {
-              children: [_, " ", __webpack_require__, " / ", _],
+              children: [_, " ", _, " / ", _],
             }),
             (0, _.jsx)("div", {
               className: _().CapacityBarMax,

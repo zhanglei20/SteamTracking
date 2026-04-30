@@ -56,6 +56,7 @@
         m_strInternalName;
         m_rgLinks;
         m_userFilterFailure;
+        m_strFullDescriptionBBCode;
         constructor(_, _) {
           (this.m_eItemType = _.item_type()),
             (this.m_unID = _._()),
@@ -148,7 +149,11 @@
             _.apply_user_filters &&
               !this.m_userFilterFailure &&
               ((this.m_userFilterFailure = _.user_filter_failure()?.toObject()),
-              (this.m_DataRequested.apply_user_filters = !0));
+              (this.m_DataRequested.apply_user_filters = !0)),
+            _.include_full_description &&
+              !this.m_strFullDescriptionBBCode &&
+              ((this.m_strFullDescriptionBBCode = _.full_description_bbcode()),
+              (this.m_DataRequested.include_full_description = !0));
         }
         static BDataRequestContainsOtherDataRequest(_, _) {
           return Boolean(
@@ -168,6 +173,7 @@
               (!_.include_basic_info || _.include_basic_info) &&
               (!_.include_supported_languages ||
                 _.include_supported_languages) &&
+              (!_.include_full_description || _.include_full_description) &&
               (!_.include_links || _.include_links),
           );
         }
@@ -353,6 +359,14 @@
               include_reviews: !0,
             }),
             this.m_ReviewInfo?.summary_language_specific
+          );
+        }
+        GetFullDescriptionBBCode() {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_full_description: !0,
+            }),
+            this.m_strFullDescriptionBBCode
           );
         }
         GetShortDescription() {

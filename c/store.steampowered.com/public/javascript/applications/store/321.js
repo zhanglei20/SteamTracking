@@ -18,11 +18,23 @@
         FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
         FilterInput: "_2l4z-U60lABvd9XWArGjAf",
         AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
+        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
+        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
+        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
+        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
+        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
+        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
+        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
+        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
+        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
+        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -62,7 +74,7 @@
         OnEmoticonClick(_) {
           const {
             emoticonStore: _,
-            strFlairGroupID: __webpack_require__,
+            strFlairGroupID: _,
             SetUIDisplayPref: _,
             contextOptions: _,
             bShowChatAddons: _,
@@ -79,9 +91,7 @@
                   onRoomEffectSelected: this.props.onRoomEffectSelected,
                   onStickerSelected: this.props.onStickerSelected,
                 })
-              : __webpack_require__ &&
-                  _.flair_list &&
-                  _.GetFlairListByGroupID(__webpack_require__)?.length > 0
+              : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
                 ? (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
@@ -121,24 +131,19 @@
           return !_ || _ < _ || (_ && (!_ || _ < _));
         }
         render() {
-          const {
-            disabled: _,
-            className: _,
-            ttip: __webpack_require__,
-            useImg: _,
-          } = this.props;
+          const { disabled: _, className: _, ttip: _, useImg: _ } = this.props;
           let _ = [_],
             _ = !1;
           return (
             _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
-            __webpack_require__ && _.push("ttip"),
+            _ && _.push("ttip"),
             _
               ? (0, _.jsx)(_._, {
                   onClick: this.OnEmoticonClick,
                   onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
                   focusable: !0,
                   children: (0, _.jsx)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: (0, _.jsx)("img", {
                       src: this.props.useImg,
                       className: (0, _._)(..._),
@@ -158,7 +163,7 @@
                     this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
                   disabled: _,
                   children: (0, _.jsxs)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: [
                       this.props.buttonIcon || (0, _.jsx)(_._, {}),
                       _ && (0, _.jsx)(_._, {}),
@@ -190,8 +195,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = !1) {
-        return `${_}economy/sticker${__webpack_require__ ? "static" : ""}/${encodeURIComponent(_)}`;
+      function _(_, _, _ = !1) {
+        return `${_}economy/sticker${_ ? "static" : ""}/${encodeURIComponent(_)}`;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -269,21 +274,21 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__, onClick: _ } = _;
+        const { active: _, children: _, onClick: _ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_.Tab, _ && _.Active),
           focusClassName: _.Focus,
           onActivate: _,
           children: (0, _.jsx)("div", {
             className: (0, _._)(_.TabContent, _ && _.Active),
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
       function _(_) {
         const {
           items: _,
-          renderItem: __webpack_require__,
+          renderItem: _,
           onItemSelect: _,
           keyExtractor: _,
           renderEmpty: _,
@@ -311,13 +316,7 @@
         );
       }
       function _(_) {
-        const {
-          title: _,
-          onFilterChange: __webpack_require__,
-          filter: _,
-          onSubmit: _,
-          ..._
-        } = _;
+        const { title: _, onFilterChange: _, filter: _, onSubmit: _, ..._ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -330,19 +329,14 @@
             }),
             (0, _.jsx)(_, {
               value: _,
-              onChange: __webpack_require__,
+              onChange: _,
               onSubmit: _,
             }),
           ],
         });
       }
       function _(_) {
-        const {
-          onFilterChange: _,
-          filter: __webpack_require__,
-          sections: _,
-          title: _,
-        } = _;
+        const { onFilterChange: _, filter: _, sections: _, title: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_, {
@@ -367,7 +361,7 @@
               ],
             }),
             (0, _.jsx)(_, {
-              value: __webpack_require__,
+              value: _,
               onChange: _,
             }),
           ],
@@ -389,7 +383,7 @@
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__, onSubmit: _ } = _;
+        const { value: _, onChange: _, onSubmit: _ } = _;
         return (0, _.jsx)("div", {
           className: _.FilterInputContainer,
           children: (0, _.jsx)(_._, {
@@ -403,10 +397,10 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_, _.AddonPickerMessage),
-          ...__webpack_require__,
+          ..._,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -425,14 +419,14 @@
       const _ = (0, _._)((_) => {
         const {
           emoticonStore: _,
-          roomEffectSettings: __webpack_require__,
+          roomEffectSettings: _,
           strFlairGroupID: _,
           onEmoticonSelected: _,
           onRoomEffectSelected: _,
           onStickerSelected: _,
         } = _;
         !(function (_) {
-          const [_, __webpack_require__] = (0, _.useState)(_.is_initialized);
+          const [_, _] = (0, _.useState)(_.is_initialized);
           (0, _.useEffect)(() => {
             if (!_.is_initialized) {
               _.UpdateEmoticonList();
@@ -508,7 +502,7 @@
                   renderContent: () =>
                     (0, _.jsx)(_, {
                       store: _,
-                      effectSettings: __webpack_require__,
+                      effectSettings: _,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
@@ -539,7 +533,7 @@
           const {
               emoticonStore: _,
               onEmoticonSelected: _,
-              onStickerSelected: __webpack_require__,
+              onStickerSelected: _,
               strFlairGroupID: _,
             } = this.props,
             _ = [];
@@ -692,7 +686,7 @@
           const {
               store: _,
               onEmoticonSelect: _,
-              onStickerSelect: __webpack_require__,
+              onStickerSelect: _,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -721,7 +715,7 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentStickers"),
                 items: _._.FilterStickers(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
                     sticker: _,
@@ -753,16 +747,9 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
-            _ =
-              !_ && __webpack_require__
-                ? _.GetFlairListByGroupID(__webpack_require__)
-                : _.emoticon_list,
+            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
           return (0, _.jsx)(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
@@ -821,8 +808,8 @@
         };
         render() {
           const { store: _, onItemSelect: _ } = this.props,
-            { filter: __webpack_require__ } = this.state,
-            _ = _._.FilterStickers(_.GetStickerList(), __webpack_require__);
+            { filter: _ } = this.state,
+            _ = _._.FilterStickers(_.GetStickerList(), _);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_StickerHeading"),
             items: _,
@@ -836,10 +823,10 @@
               this.setState({
                 filter: _,
               }),
-            filter: __webpack_require__,
+            filter: _,
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
-              __webpack_require__
+              _
                 ? (0, _.jsx)(_, {
                     children: (0, _._)("#AddonPicker_NoResults"),
                   })
@@ -872,17 +859,13 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              effectSettings: _,
-              onItemSelect: __webpack_require__,
-            } = this.props,
+          const { store: _, effectSettings: _, onItemSelect: _ } = this.props,
             { filter: _ } = this.state,
             _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_EffectHeading"),
             items: _,
-            onItemSelect: __webpack_require__,
+            onItemSelect: _,
             renderItem: (_) =>
               (0, _.jsx)(_, {
                 effect: _,
@@ -929,11 +912,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
             _ = [];
           return (
@@ -992,11 +971,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state;
           return (0, _.jsx)(_, {
             onFilterChange: (_) =>
@@ -1007,10 +982,7 @@
             sections: [
               {
                 title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(
-                  _.GetFlairListByGroupID(__webpack_require__),
-                  _,
-                ),
+                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
@@ -1030,14 +1002,14 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (_) => {
-        const { emoticon: _, large: __webpack_require__ } = _,
+        const { emoticon: _, large: _ } = _,
           _ = !_.last_used && _.time_received;
         return (0, _.jsxs)("div", {
           className: _().EmoticonItem,
           children: [
             (0, _.jsx)(_._, {
               emoticon: _.name,
-              large: __webpack_require__,
+              large: _,
             }),
             _ && (0, _.jsx)(_, {}),
           ],
@@ -1049,11 +1021,7 @@
         };
         m_ref = _.createRef();
         render() {
-          const {
-              sticker: _,
-              className: _,
-              ...__webpack_require__
-            } = this.props,
+          const { sticker: _, className: _, ..._ } = this.props,
             _ = _(_._.COMMUNITY_CDN_URL, _.name);
           return (0, _.jsxs)("div", {
             ref: this.m_ref,
@@ -1074,7 +1042,7 @@
               this.setState({
                 showHover: !1,
               }),
-            ...__webpack_require__,
+            ..._,
             children: [
               (0, _.jsx)("img", {
                 style: {
@@ -1094,15 +1062,15 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            sticker: { name: __webpack_require__, appid: _ },
+            sticker: { name: _, appid: _ },
           } = _,
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("img", {
-            src: _(_._.COMMUNITY_CDN_URL, __webpack_require__),
+            src: _(_._.COMMUNITY_CDN_URL, _),
             className: _().StickerHoverSticker,
           }),
         });
@@ -1116,7 +1084,7 @@
           const {
               effect: _,
               roomEffectSettings: _,
-              className: __webpack_require__,
+              className: _,
               ..._
             } = this.props,
             _ = _[_.name];
@@ -1138,7 +1106,7 @@
               this.setState({
                 showHover: !1,
               }),
-            className: (0, _._)(__webpack_require__, _().EffectButton),
+            className: (0, _._)(_, _().EffectButton),
             ..._,
             children: [
               _.renderEffectIcon(),
@@ -1155,14 +1123,14 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            effect: { name: __webpack_require__, appid: _ },
+            effect: { name: _, appid: _ },
             roomEffectSettings: _,
           } = _,
-          _ = _[__webpack_require__],
+          _ = _[_],
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("div", {
             className: _().EffectHoverEffect,
@@ -1261,7 +1229,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
           version: "1.1",
@@ -1270,7 +1238,7 @@
           width: "20px",
           height: "20px",
           viewBox: "0 0 24 24",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("path", {
             _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           }),

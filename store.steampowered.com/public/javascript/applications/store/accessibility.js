@@ -5,6 +5,7 @@
   {
     63404: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         Details: "_8DSX9d1ihrMSeZUFC9elD",
         Summary: "_1FCh_hPFNuwj9vrVDMOvMC",
         FeatureList: "TwihVkmmqI5XLg6P4fpwF",

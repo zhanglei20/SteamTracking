@@ -2812,6 +2812,11 @@ html, body { height:100%; }
 
 .drag_and_drop .must_select_type {
 	border: 1px solid red;
+	background: repeating-linear-gradient(-45deg,#7d3b3b 0 20px,#a33939 0 40px);
+}
+
+.drag_and_drop .must_select_type select:first-of-type {
+	color: #e5cf23;
 }
 
 .drag_and_drop.screenshot_loc_drag_drop

@@ -20,16 +20,6 @@ enum by
 	by_play_wish = 3;
 }
 
-enum Calibrati
-{
-	CalibrationPrompt = 0;
-	CalibrationCountDown = 1;
-	CalibratingAccelerometerTolerances = 2;
-	CalibratingGyroDriftCorrection = 3;
-	CalibrationComplete_Success = 4;
-	CalibrationComplete_Failure = 5;
-}
-
 enum CM_EDITFLAG
 {
 	CM_EDITFLAG_NONE = 0;
@@ -87,6 +77,10 @@ enum Display
 	k_DisplayBetaPastStart = 4;
 	k_DisplayGift = 5;
 	k_DisplayAprrovedForPublishing = 6;
+	k_DisplayActiveAndUpcoming = 0;
+	k_DisplayActive = 1;
+	k_DisplayUpcoming = 2;
+	k_DisplayExpired = 3;
 }
 
 enum DOTA_ACCESS_TOURNAMENT
@@ -469,6 +463,7 @@ enum EGameIDType
 	k_EGameIDTypeApp = 0;
 	k_EGameIDTypeGameMod = 1;
 	k_EGameIDTypeShortcut = 2;
+	k_EGameIDTypeP2P = 3;
 }
 
 enum eGamepadButtonBitMask
@@ -947,6 +942,13 @@ enum ETradingCardActivity
 	k_ETradingCardActivity_BadgeCraft = 3;
 }
 
+enum ETrailerGrowAmount
+{
+	k_ETrailerGrowAmount_None = 0;
+	k_ETrailerGrowAmount_Small = 1;
+	k_ETrailerGrowAmount_Medium = 2;
+}
+
 enum ETwoFactorTokenSteamguardScheme
 {
 	k_ETwoFactorTokenSteamguardScheme_None = 0;
@@ -1067,6 +1069,38 @@ enum ITEM_OPTIONS
 	ITEM_OPTIONS_NOT_EARLY_LATE = 5;
 }
 
+enum kPFIFlag
+{
+	kPFIFlag_MicroTransactionFile = 1;
+	kPFIFlag_Incompatible = 2;
+	kPFIFlag_RevenueSplitsFinalized = 4;
+	kPFIFlag_AcceptedForUse = 8;
+	kPFIFlag_CollectionShowSubscribeAll = 16;
+	kPFIFlag_ItemInProgress = 32;
+	kPFIFlag_GamePlayable = 64;
+	kPFIFlag_AwaitingModeration = 128;
+	kPFIFlag_PendingApproval = 256;
+	kPFIFlag_FixedStats = 1536;
+	kPFIFlag_LatestWorkshopTermsNotAccepted = 2048;
+	kPFIFlag_DepotContent = 4096;
+	kPFIFlag_CollectionAllOwnerItems = 8192;
+	kPFIFlag_CollectionIsASet = 16384;
+	kPFIFlag_Subscribable = 32768;
+	kPFIFlag_ForceUnbanned = 65536;
+	kPFIFlag_ForceInappropriate = 131072;
+	kPFIFlag_ForceAppropriate = 262144;
+	kPFIFlag_RequireVerification = 524288;
+	kPFIFlag_HasApprovedSteamChinaContent = 1048576;
+	kPFIFlag_HasApprovedContent = 2097152;
+	kPFIFlag_IgnoreTextContentCheckFlag = 4194304;
+	kPFIFlag_DisableComments = 8388608;
+	kPFIFlag_NeedsContentCheck = 16777216;
+	kPFIFlag_SteamChinaCreated = 33554432;
+	kPFIFlag_RejectedLatestContent = 67108864;
+	kPFIFlag_ManagedContentDescriptors = 134217728;
+	kPFIFlag_HasAuthorSnapshots = 268435456;
+}
+
 enum kTRAA
 {
 	kTRAA_RegisterTeam = 0;
@@ -1161,13 +1195,6 @@ enum Preview
 	k_PreviewGamepad = 3;
 }
 
-enum Show
-{
-	ShowIncludedItems = 0;
-	ShowAllItems = 1;
-	ShowFilteredOutItems = 2;
-}
-
 enum ShowGripButtons
 {
 	k_ShowGripButtons_None = 0;
@@ -1198,18 +1225,6 @@ enum Store
 	k_StoreComingSoon = 3;
 	k_StoreEarlyAccess = 4;
 	k_StoreGeneralAvailability = 5;
-}
-
-enum SystemKey
-{
-	SystemKey0 = 0;
-	SystemKey1 = 1;
-}
-
-enum TemplateFAQDisplay
-{
-	TemplateFAQDisplayColumn = 1;
-	TemplateFAQDisplaySimpleRow = 2;
 }
 
 enum UnnamedEnum001b037885a2ecde
@@ -1245,6 +1260,15 @@ enum UnnamedEnum01e0af9000abb618
 	Error = 2;
 }
 
+enum UnnamedEnum02030f1614c8d317
+{
+	None = 0;
+	MouseDragging = 1;
+	TouchStart = 2;
+	TouchDragging = 3;
+	DPad = 4;
+}
+
 enum UnnamedEnum042d5c64b27947e9
 {
 	INVALID = 0;
@@ -1260,6 +1284,13 @@ enum UnnamedEnum042d5c64b27947e9
 	GROUP_D = 10;
 	PLACEMENT = 11;
 	ELIMINATION = 12;
+}
+
+enum UnnamedEnum04da6fa4f4b56484
+{
+	Invalid = 0;
+	SceneApp = 1;
+	Panel = 2;
 }
 
 enum UnnamedEnum0529e22c307fa21f
@@ -1283,6 +1314,15 @@ enum UnnamedEnum0558827179236bf8
 	UNKNOWN = 1;
 	BLOCKED = 2;
 	UNBLOCKED = 3;
+}
+
+enum UnnamedEnum06e490ccab486317
+{
+	Constant = 0;
+	Nearest = 1;
+	Linear = 2;
+	SmoothStep = 3;
+	SmootherStep = 4;
 }
 
 enum UnnamedEnum0731ad10e9d10396
@@ -1387,6 +1427,14 @@ enum UnnamedEnum0f5dedf55f59c3be
 	Fantasy = 2;
 }
 
+enum UnnamedEnum0f5e4f08b84a55be
+{
+	Invalid = 0;
+	System = 1;
+	SteamInput = 2;
+	VRInput = 3;
+}
+
 enum UnnamedEnum0f68df7c8c884057
 {
 	API = 0;
@@ -1400,6 +1448,14 @@ enum UnnamedEnum0fd8aa29d83fb708
 	StandaloneKeyboard = 2;
 	ControllerConfigurator = 3;
 	Overlay = 4;
+}
+
+enum UnnamedEnum1037f75deceabbd5
+{
+	None = 0;
+	ThirdPartyClient = 1;
+	SteamVRClientUnified = 2;
+	SteamVRClientLegacyDual = 3;
 }
 
 enum UnnamedEnum103c46b6e6314ec9
@@ -1424,6 +1480,12 @@ enum UnnamedEnum10fca4e49733d28f
 	k_EIsNotChild = 1;
 	k_EInvalidCartType = 2;
 	k_ENonGiftableItemPresent = 3;
+}
+
+enum UnnamedEnum11b0fa7d9ee589b2
+{
+	TemplateFAQDisplayColumn = 1;
+	TemplateFAQDisplaySimpleRow = 2;
 }
 
 enum UnnamedEnum12487a88f7459bbf
@@ -1867,6 +1929,18 @@ enum UnnamedEnum22d3fe70562864f4
 	INTERNATIONAL_2025 = 24;
 }
 
+enum UnnamedEnum24802583f68845ce
+{
+	Error = -1;
+	Welcome = 0;
+	UpdatePuck = 1;
+	UpdateNereid = 2;
+	PlugInController = 3;
+	UpdateController = 4;
+	PuckIntro = 5;
+	BigPictureIntro = 6;
+}
+
 enum UnnamedEnum24822a7e69ba9ab7
 {
 	k_EPending = 0;
@@ -2087,6 +2161,16 @@ enum UnnamedEnum3864c06f550e20d6
 	Ok = 2;
 	Good = 3;
 	Excellent = 4;
+}
+
+enum UnnamedEnum38d08ba2abd77269
+{
+	Invalid = 0;
+	RecenterCountdown = 1;
+	FloorAdjustExisting = 2;
+	RoomSetupFloor = 3;
+	ClearRoomSetup = 4;
+	RoomSetupFull = 5;
 }
 
 enum UnnamedEnum39f674ba4e63a642
@@ -2539,6 +2623,14 @@ enum UnnamedEnum55a9e12958fe69d4
 	Days = 86400000;
 }
 
+enum UnnamedEnum55cd587fa9d2b6e4
+{
+	ViewFromBack = 0;
+	ViewFromTop = 1;
+	ViewFromRight = 2;
+	ViewFromLeft = 3;
+}
+
 enum UnnamedEnum56fdca98a5fc5dc5
 {
 	NOT_TRACKING_ = -1;
@@ -2808,6 +2900,16 @@ enum UnnamedEnum71e1e8884d5da508
 	Blocks = 2;
 }
 
+enum UnnamedEnum721622f4f4fd0213
+{
+	CalibrationPrompt = 0;
+	CalibrationCountDown = 1;
+	CalibratingAccelerometerTolerances = 2;
+	CalibratingGyroDriftCorrection = 3;
+	CalibrationComplete_Success = 4;
+	CalibrationComplete_Failure = 5;
+}
+
 enum UnnamedEnum7282757b17cca874
 {
 	Loading = 1;
@@ -2827,6 +2929,14 @@ enum UnnamedEnum749b0879535720e9
 	Text = 0;
 	Read = 1;
 	Write = 2;
+}
+
+enum UnnamedEnum77eda7ea77305d07
+{
+	Near = 0;
+	Middle = 1;
+	Far = 2;
+	VRGamepadUI = 3;
 }
 
 enum UnnamedEnum798f930648f1159b
@@ -2871,6 +2981,207 @@ enum UnnamedEnum80fde622b7ffb8a2
 {
 	Timeline = 1;
 	Minimap = 2;
+}
+
+enum UnnamedEnum811840f78e9ed8f1
+{
+	Invalid = 0;
+	TrackingSystemName_String = 1000;
+	ModelNumber_String = 1001;
+	SerialNumber_String = 1002;
+	RenderModelName_String = 1003;
+	WillDriftInYaw_Bool = 1004;
+	ManufacturerName_String = 1005;
+	TrackingFirmwareVersion_String = 1006;
+	HardwareRevision_String = 1007;
+	AllWirelessDongleDescriptions_String = 1008;
+	ConnectedWirelessDongle_String = 1009;
+	DeviceIsWireless_Bool = 1010;
+	DeviceIsCharging_Bool = 1011;
+	DeviceBatteryPercentage_Float = 1012;
+	StatusDisplayTransform_Matrix34 = 1013;
+	Firmware_UpdateAvailable_Bool = 1014;
+	Firmware_ManualUpdate_Bool = 1015;
+	Firmware_ManualUpdateURL_String = 1016;
+	HardwareRevision_Uint64 = 1017;
+	FirmwareVersion_Uint64 = 1018;
+	FPGAVersion_Uint64 = 1019;
+	VRCVersion_Uint64 = 1020;
+	RadioVersion_Uint64 = 1021;
+	DongleVersion_Uint64 = 1022;
+	BlockServerShutdown_Bool = 1023;
+	CanUnifyCoordinateSystemWithHmd_Bool = 1024;
+	ContainsProximitySensor_Bool = 1025;
+	DeviceProvidesBatteryStatus_Bool = 1026;
+	DeviceCanPowerOff_Bool = 1027;
+	Firmware_ProgrammingTarget_String = 1028;
+	DeviceClass_Int32 = 1029;
+	HasCamera_Bool = 1030;
+	DriverVersion_String = 1031;
+	Firmware_ForceUpdateRequired_Bool = 1032;
+	ViveSystemButtonFixRequired_Bool = 1033;
+	ParentDriver_Uint64 = 1034;
+	ResourceRoot_String = 1035;
+	RegisteredDeviceType_String = 1036;
+	InputProfilePath_String = 1037;
+	NeverTracked_Bool = 1038;
+	NumCameras_Int32 = 1039;
+	CameraFrameLayout_Int32 = 1040;
+	CameraStreamFormat_Int32 = 1041;
+	AdditionalDeviceSettingsPath_String = 1042;
+	DevicePowerUsage_Float = 1052;
+	ActualTrackingSystemName_String = 1054;
+	AllowCameraToggle_Bool = 1055;
+	AllowLightSourceFrequency_Bool = 1056;
+	IsDedicatedVRHeadset_Bool = 1058;
+	HasEyeTracker_Bool = 1060;
+	ReportsTimeSinceVSync_Bool = 2000;
+	SecondsFromVsyncToPhotons_Float = 2001;
+	DisplayFrequency_Float = 2002;
+	UserIpdMeters_Float = 2003;
+	CurrentUniverseId_Uint64 = 2004;
+	PreviousUniverseId_Uint64 = 2005;
+	DisplayFirmwareVersion_Uint64 = 2006;
+	IsOnDesktop_Bool = 2007;
+	DisplayMCType_Int32 = 2008;
+	DisplayMCOffset_Float = 2009;
+	DisplayMCScale_Float = 2010;
+	EdidVendorID_Int32 = 2011;
+	DisplayMCImageLeft_String = 2012;
+	DisplayMCImageRight_String = 2013;
+	DisplayGCBlackClamp_Float = 2014;
+	EdidProductID_Int32 = 2015;
+	CameraToHeadTransform_Matrix34 = 2016;
+	DisplayGCType_Int32 = 2017;
+	DisplayGCOffset_Float = 2018;
+	DisplayGCScale_Float = 2019;
+	DisplayGCPrescale_Float = 2020;
+	DisplayGCImage_String = 2021;
+	LensCenterLeftU_Float = 2022;
+	LensCenterLeftV_Float = 2023;
+	LensCenterRightU_Float = 2024;
+	LensCenterRightV_Float = 2025;
+	UserHeadToEyeDepthMeters_Float = 2026;
+	CameraFirmwareVersion_Uint64 = 2027;
+	CameraFirmwareDescription_String = 2028;
+	DisplayFPGAVersion_Uint64 = 2029;
+	DisplayBootloaderVersion_Uint64 = 2030;
+	DisplayHardwareVersion_Uint64 = 2031;
+	AudioFirmwareVersion_Uint64 = 2032;
+	CameraCompatibilityMode_Int32 = 2033;
+	ScreenshotHorizontalFieldOfViewDegrees_Float = 2034;
+	ScreenshotVerticalFieldOfViewDegrees_Float = 2035;
+	DisplaySuppressed_Bool = 2036;
+	DisplayAllowNightMode_Bool = 2037;
+	DisplayMCImageWidth_Int32 = 2038;
+	DisplayMCImageHeight_Int32 = 2039;
+	DisplayMCImageNumChannels_Int32 = 2040;
+	DisplayMCImageData_Binary = 2041;
+	SecondsFromPhotonsToVblank_Float = 2042;
+	DriverDirectModeSendsVsyncEvents_Bool = 2043;
+	DisplayDebugMode_Bool = 2044;
+	GraphicsAdapterLuid_Uint64 = 2045;
+	DriverProvidedChaperonePath_String = 2048;
+	ExpectedTrackingReferenceCount_Int32 = 2049;
+	ExpectedControllerCount_Int32 = 2050;
+	NamedIconPathControllerLeftDeviceOff_String = 2051;
+	NamedIconPathControllerRightDeviceOff_String = 2052;
+	NamedIconPathTrackingReferenceDeviceOff_String = 2053;
+	DoNotApplyPrediction_Bool = 2054;
+	CameraToHeadTransforms_Matrix34_Array = 2055;
+	DistortionMeshResolution_Int32 = 2056;
+	DriverIsDrawingControllers_Bool = 2057;
+	DriverRequestsApplicationPause_Bool = 2058;
+	DriverRequestsReducedRendering_Bool = 2059;
+	MinimumIpdStepMeters_Float = 2060;
+	AudioBridgeFirmwareVersion_Uint64 = 2061;
+	ImageBridgeFirmwareVersion_Uint64 = 2062;
+	ImuToHeadTransform_Matrix34 = 2063;
+	ImuFactoryGyroBias_Vector3 = 2064;
+	ImuFactoryGyroScale_Vector3 = 2065;
+	ImuFactoryAccelerometerBias_Vector3 = 2066;
+	ImuFactoryAccelerometerScale_Vector3 = 2067;
+	ConfigurationIncludesLighthouse20Features_Bool = 2069;
+	Prop_AdditionalRadioFeatures_Uint64 = 2070;
+	Prop_CameraWhiteBalance_Vector4_Array = 2071;
+	Prop_CameraDistortionFunction_Int32_Array = 2072;
+	Prop_CameraDistortionCoefficients_Float_Array = 2073;
+	Prop_ExpectedControllerType_String = 2074;
+	HmdTrackingStyle_Int32 = 2075;
+	DriverProvidedChaperoneVisibility_Bool = 2076;
+	HmdColumnCorrectionSettingPrefix_String = 2077;
+	CameraSupportsCompatibilityModes_Bool = 2078;
+	SupportsRoomViewDepthProjection_Bool = 2079;
+	DisplayAvailableFrameRates_Float_Array = 2080;
+	DisplaySupportsRuntimeFramerateChange_Bool = 2084;
+	DisplaySupportsAnalogGain_Bool = 2085;
+	DisplayMinAnalogGain_Float = 2086;
+	DisplayMaxAnalogGain_Float = 2087;
+	DashboardLinkSupport_Int32 = 2097;
+	DisplayMinUIAnalogGain_Float = 2098;
+	DashboardScale_Float = 2091;
+	IpdUIRangeMinMeters_Float = 2100;
+	IpdUIRangeMaxMeters_Float = 2101;
+	Hmd_SupportsHDCP14LegacyCompat_Bool = 2102;
+	Hmd_SupportsMicMonitoring_Bool = 2103;
+	Hmd_SupportsDisplayPortTrainingMode_Bool = 2104;
+	Hmd_SupportsRoomViewDirect_Bool = 2105;
+	Hmd_SupportsAppThrottling_Bool = 2106;
+	Hmd_SupportsGpuBusMonitoring_Bool = 2107;
+	DriverProvidedIPDVisibility_Bool = 2108;
+	Prop_Hmd_SupportsVRGamepadFocus_Bool = 2117;
+	DriverRequestedMuraCorrectionMode_Int32 = 2200;
+	DriverRequestedMuraFeather_InnerLeft_Int32 = 2201;
+	DriverRequestedMuraFeather_InnerRight_Int32 = 2202;
+	DriverRequestedMuraFeather_InnerTop_Int32 = 2203;
+	DriverRequestedMuraFeather_InnerBottom_Int32 = 2204;
+	DriverRequestedMuraFeather_OuterLeft_Int32 = 2205;
+	DriverRequestedMuraFeather_OuterRight_Int32 = 2206;
+	DriverRequestedMuraFeather_OuterTop_Int32 = 2207;
+	DriverRequestedMuraFeather_OuterBottom_Int32 = 2208;
+	Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303;
+	AttachedDeviceId_String = 3000;
+	SupportedButtons_Uint64 = 3001;
+	Axis0Type_Int32 = 3002;
+	Axis1Type_Int32 = 3003;
+	Axis2Type_Int32 = 3004;
+	Axis3Type_Int32 = 3005;
+	Axis4Type_Int32 = 3006;
+	ControllerRoleHint_Int32 = 3007;
+	FieldOfViewLeftDegrees_Float = 4000;
+	FieldOfViewRightDegrees_Float = 4001;
+	FieldOfViewTopDegrees_Float = 4002;
+	FieldOfViewBottomDegrees_Float = 4003;
+	TrackingRangeMinimumMeters_Float = 4004;
+	TrackingRangeMaximumMeters_Float = 4005;
+	ModeLabel_String = 4006;
+	IconPathName_String = 5000;
+	NamedIconPathDeviceOff_String = 5001;
+	NamedIconPathDeviceSearching_String = 5002;
+	NamedIconPathDeviceSearchingAlert_String = 5003;
+	NamedIconPathDeviceReady_String = 5004;
+	NamedIconPathDeviceReadyAlert_String = 5005;
+	NamedIconPathDeviceNotReady_String = 5006;
+	NamedIconPathDeviceStandby_String = 5007;
+	NamedIconPathDeviceAlertLow_String = 5008;
+	DisplayHiddenArea_Binary_Start = 5100;
+	DisplayHiddenArea_Binary_End = 5150;
+	ParentContainer = 5151;
+	UserConfigPath_String = 6000;
+	InstallPath_String = 6001;
+	HasDisplayComponent_Bool = 6002;
+	HasControllerComponent_Bool = 6003;
+	HasCameraComponent_Bool = 6004;
+	HasDriverDirectModeComponent_Bool = 6005;
+	HasVirtualDisplayComponent_Bool = 6006;
+	HasSpatialAnchorsSupport_Bool = 6007;
+	ControllerType_String = 7000;
+	LegacyInputProfile_String = 7001;
+	VendorSpecific_Reserved_Start = 10000;
+	VendorSpecific_Reserved_End = 10999;
+	SupportsInHMDRoomSetup_Bool = 11003;
+	VRLinkClientHMDSupportsRoomSetupRequests_Bool = 11004;
+	TrackedDeviceProperty_Max = 1000000;
 }
 
 enum UnnamedEnum814cba7b873843ae
@@ -3375,6 +3686,36 @@ enum UnnamedEnum8ff352285a57e444
 	Suggest = 2;
 }
 
+enum UnnamedEnum904a3ce99bfd1fb9
+{
+	None = 0;
+	Minimized = 1;
+	Hidden = 2;
+	TooltipHint = 4;
+	NoTaskbarIcon = 8;
+	Resizable = 16;
+	NoScalePosition = 32;
+	NoScaleSize = 64;
+	Maximized = 128;
+	Composited = 256;
+	NotFocusable = 512;
+	FullScreen = 1024;
+	Fullscreen_Exclusive = 2048;
+	ApplyBrowserScaleToDimensions = 4096;
+	AlwaysOnTop = 8192;
+	NoWindowShadow = 16384;
+	NoMinimize = 32768;
+	PopUpMenuHint = 65536;
+	IgnoreSavedSize = 131072;
+	NoRoundedCorners = 262144;
+	ForceRoundedCorners = 524288;
+	OverrideRedirect = 1048576;
+	IgnoreSteamDisplayScale = 2097152;
+	TransparentParentWindow = 4194304;
+	DisableDPIScale = 8388608;
+	ForceBrowserVisible = 16777216;
+}
+
 enum UnnamedEnum940ff890eb1bf26e
 {
 	POPULAR = 1;
@@ -3526,6 +3867,17 @@ enum UnnamedEnum9d93397a59dbdedb
 	Solid = 5;
 }
 
+enum UnnamedEnuma3ebe80957217775
+{
+	__LocalSteamVR = 0;
+	__LocalSteam = 1;
+	__RemoteSteamVR = 2;
+	__RemoteSteam = 3;
+	MutualLocal = 4;
+	MutualSteamVR = 5;
+	MutualSteam = 6;
+}
+
 enum UnnamedEnuma566a501eb426d94
 {
 	EXACT = 0;
@@ -3602,6 +3954,13 @@ enum UnnamedEnuma8a8b1f6cea505e4
 	LibraryHome = 2;
 }
 
+enum UnnamedEnuma8be968d191e67f1
+{
+	ShowIncludedItems = 0;
+	ShowAllItems = 1;
+	ShowFilteredOutItems = 2;
+}
+
 enum UnnamedEnuma9dc642d225a4850
 {
 	Large = 3;
@@ -3623,6 +3982,12 @@ enum UnnamedEnumac9ccfed4f769533
 	k_Suggested = 1;
 	k_Required = 2;
 	k_Requested = 3;
+}
+
+enum UnnamedEnumacc9a67b80433cd5
+{
+	TheaterFast = 0;
+	TheaterSlow = 1;
 }
 
 enum UnnamedEnumad5f244ec47c479c
@@ -3886,13 +4251,6 @@ enum UnnamedEnumc2b67199254beacd
 	NOTSCORED_SUSPICIOUS = 69;
 }
 
-enum UnnamedEnumc37198b75e93a002
-{
-	Bound = 0;
-	Unbound = 1;
-	Manage = 2;
-}
-
 enum UnnamedEnumc3c06b9797acb457
 {
 	k_eMouseKBOnly = 0;
@@ -4050,6 +4408,16 @@ enum UnnamedEnumd2a1463c68084b87
 	Matchups = 2;
 }
 
+enum UnnamedEnumd2b4522526c2b206
+{
+	Dashboard = 1;
+	LeftHand = 2;
+	RightHand = 3;
+	World = 4;
+	Theater = 5;
+	Boot = 6;
+}
+
 enum UnnamedEnumd2f296f4cc236e47
 {
 	None = 0;
@@ -4091,6 +4459,12 @@ enum UnnamedEnumd4f313929840b090
 	Working = 1;
 	Finished = 2;
 	Failed = 3;
+}
+
+enum UnnamedEnumd50fa8195a8af7b9
+{
+	SystemKey0 = 0;
+	SystemKey1 = 1;
 }
 
 enum UnnamedEnumd5afec5988542538
@@ -4171,17 +4545,10 @@ enum UnnamedEnumdb303c21506dd3e7
 	TouchDragging = 3;
 }
 
-enum UnnamedEnumdd1b4ee475c337fd
+enum UnnamedEnumddaf0ae83b825a44
 {
-	AnyController = 0;
-	XboxController = 1;
-	Ps3Controller = 2;
-	Ps4Controller = 3;
-	Ps5Controller = 4;
-	SwitchController = 5;
-	SteamController = 6;
-	SteamDeckNeptune = 7;
-	SteamDeckGalileo = 8;
+	Finished = 0;
+	Dismissed = 1;
 }
 
 enum UnnamedEnumddf21b2888ecc060
@@ -4534,14 +4901,6 @@ enum UnnamedEnumfffa6d846ba9b8ac
 	NONE = 0;
 	MOUSE_HOVER = 1;
 	ACTIVE_ITEM = 2;
-}
-
-enum ViewFrom
-{
-	ViewFromBack = 0;
-	ViewFromTop = 1;
-	ViewFromRight = 2;
-	ViewFromLeft = 3;
 }
 
 enum VRInitError

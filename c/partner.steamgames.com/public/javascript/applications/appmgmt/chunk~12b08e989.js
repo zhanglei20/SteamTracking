@@ -5598,6 +5598,11 @@
                     _: !0,
                     _: !0,
                   },
+                  schema_version: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -5687,6 +5692,21 @@
                     _: 7,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  internal_key: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  min_progress: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  max_progress: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -10759,7 +10779,7 @@
       (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
       const _ = new _();
       function _(_ = 1) {
-        const [_, __webpack_require__] = _.useState(() => _()),
+        const [_, _] = _.useState(() => _()),
           _ = (0, _._)("useTimeNowWithOverride"),
           _ = _.useCallback(() => {
             _.token.reason || __webpack_require__(_());

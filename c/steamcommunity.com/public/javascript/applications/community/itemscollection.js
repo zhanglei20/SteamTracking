@@ -135,16 +135,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _({
-        nPercent: _,
-        indeterminate: _,
-        animate: __webpack_require__,
-        className: _,
-      }) {
+      function _({ nPercent: _, indeterminate: _, animate: _, className: _ }) {
         return (0, _.jsx)("div", {
           className: (0, _._)(
             _.ProgressBar,
-            __webpack_require__ && _.AnimateProgress,
+            _ && _.AnimateProgress,
             _ && _.Indeterminate,
             _,
           ),
@@ -153,12 +148,8 @@
           },
         });
       }
-      const _ = ({
-        nPercent: _,
-        size: _ = 120,
-        strokeWidth: __webpack_require__ = 20,
-      }) => {
-        const _ = (_ - __webpack_require__) / 2,
+      const _ = ({ nPercent: _, size: _ = 120, strokeWidth: _ = 20 }) => {
+        const _ = (_ - _) / 2,
           _ = 2 * Math._ * _,
           _ = _ - (_ / 100) * _,
           _ = 100 == _;
@@ -179,7 +170,7 @@
                 _: _ / 2,
                 _: _,
                 stroke: "#0c131d",
-                strokeWidth: __webpack_require__,
+                strokeWidth: _,
                 fill: "none",
               }),
               (0, _.jsx)("circle", {
@@ -187,7 +178,7 @@
                 _: _ / 2,
                 _: _,
                 stroke: "#1a9fff",
-                strokeWidth: __webpack_require__,
+                strokeWidth: _,
                 fill: "none",
                 strokeDasharray: _,
                 strokeDashoffset: _,
@@ -210,7 +201,7 @@
       function _(_) {
         const {
             oRewardDefinition: _,
-            rgRewardItems: __webpack_require__,
+            rgRewardItems: _,
             rgUserItemRewarded: _,
             rgCommunityItemDefs: _,
             bViewingOwnProfile: _,
@@ -250,7 +241,7 @@
                 }),
               _
             );
-          }, [__webpack_require__, _, _]);
+          }, [_, _, _]);
         return (0, _.jsxs)(_._, {
           navEntryPreferPosition: _._.LAST,
           preferredFocus: !0,
@@ -307,7 +298,7 @@
       function _(_) {
         const {
             rgItems: _,
-            itemClass: __webpack_require__,
+            itemClass: _,
             nAppID: _,
             bViewingOwnProfile: _,
           } = _,
@@ -329,9 +320,7 @@
               children: [
                 (0, _.jsx)(_._, {
                   className: _().CategoryName,
-                  children: (0, _._)(
-                    "#Sale_Section_PointShop_class_" + __webpack_require__,
-                  ),
+                  children: (0, _._)("#Sale_Section_PointShop_class_" + _),
                 }),
                 (0, _.jsx)("div", {
                   className: _().SectionLine,
@@ -382,7 +371,7 @@
         });
       }
       function _(_) {
-        const { itemClass: _, nAppID: __webpack_require__ } = _;
+        const { itemClass: _, nAppID: _ } = _;
         return 2 !== _
           ? null
           : (0, _.jsx)(_._, {
@@ -393,28 +382,28 @@
       function _(_) {
         const {
           itemClass: _,
-          nAppID: __webpack_require__,
+          nAppID: _,
           bViewingOwnProfile: _,
           bHideItemStore: _,
         } = _;
         return 2 == _ && _
           ? (0, _.jsx)(_._, {
-              href: `${_._.COMMUNITY_BASE_URL}my/gamecards/${__webpack_require__}`,
+              href: `${_._.COMMUNITY_BASE_URL}my/gamecards/${_}`,
               className: _().PointShopLink,
               children: (0, _._)("#ItemCollection_Visit_Badge"),
             })
           : _
             ? null
             : (0, _.jsx)(_._, {
-                href: `${_._.STORE_BASE_URL}points/shop/app/${__webpack_require__}`,
+                href: `${_._.STORE_BASE_URL}points/shop/app/${_}`,
                 className: _().PointShopLink,
                 children: (0, _._)("#ItemCollection_Visit"),
               });
       }
       function _(_) {
         const { item: _ } = _,
-          [__webpack_require__, _] = (0, _._)(),
-          _ = _.user_has_item || __webpack_require__,
+          [_, _] = (0, _._)(),
+          _ = _.user_has_item || _,
           _ = !_,
           _ =
             (!_ && 2 != _.item_class && 8 != _.item_class) || 4 == _.item_class
@@ -446,8 +435,8 @@
       };
       function _(_) {
         const { nAppID: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _);
-        return __webpack_require__
+          [_] = (0, _._)(_, _);
+        return _
           ? (0, _.jsx)(_._, {
               className: _().AppHeaderCtn,
               children: (0, _.jsxs)(_._, {
@@ -476,7 +465,7 @@
       const _ = function (_) {
         const {
             strProfileName: _,
-            strSteamId: __webpack_require__,
+            strSteamId: _,
             bViewingOwnProfile: _,
             rgCommunityItemDefs: _,
             rgUserCommunityItems: _,
@@ -674,7 +663,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
+        const { children: _, navTreeRef: _, ..._ } = _,
           _ = _.useRef(void 0),
           _ = (0, _._)(_, _),
           _ = (0, _._)(),
@@ -688,7 +677,7 @@
           historyMode: "navigationapi",
           children: (0, _.jsx)(_._, {
             disableFocusRing: !_,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       });
@@ -704,13 +693,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            appID: _,
-            feature: __webpack_require__,
-            depth: _,
-            children: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__, _),
+        const { appID: _, feature: _, depth: _, children: _ } = _,
+          _ = (0, _._)(_, _),
           _ = (0, _._)(),
           [_, _] = _.useState(void 0),
           _ = _.useCallback(
@@ -922,7 +906,7 @@
       function _(_) {
         const {
           appid: _,
-          item_image_small: __webpack_require__,
+          item_image_small: _,
           item_image_large: _,
           item_movie_mp4: _,
           item_movie_webm: _,
@@ -932,7 +916,7 @@
           (null == _ ? void 0 : _.length) > 0 &&
           (null == _ ? void 0 : _.length) > 0
         ) {
-          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${__webpack_require__}`,
+          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
             _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
             _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
           return (0, _.jsx)(_.Fragment, {
@@ -959,7 +943,7 @@
           });
         }
         {
-          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${__webpack_require__ || _}`;
+          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_ || _}`;
           return (0, _.jsx)("img", {
             className: _.className,
             src: _,
@@ -968,12 +952,8 @@
         }
       }
       function _(_) {
-        const {
-            appid: _,
-            community_item_type: __webpack_require__,
-            bForEdit: _,
-          } = _,
-          _ = (0, _._)(_, __webpack_require__, _),
+        const { appid: _, community_item_type: _, bForEdit: _ } = _,
+          _ = (0, _._)(_, _, _),
           _ =
             _ && !_.active
               ? (0, _.jsx)("div", {
@@ -998,11 +978,8 @@
             });
       }
       function _(_) {
-        const { section: _, rewardDef: __webpack_require__, language: _ } = _,
-          _ = (0, _._)(
-            __webpack_require__.appid,
-            __webpack_require__.community_item_type,
-          ),
+        const { section: _, rewardDef: _, language: _ } = _,
+          _ = (0, _._)(_.appid, _.community_item_type),
           [_] = (0, _._)(() => {
             var _;
             return [
@@ -1014,7 +991,7 @@
             ];
           });
         let _;
-        switch (__webpack_require__.community_class) {
+        switch (_.community_class) {
           case 14:
           case 15:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/avatar`;
@@ -1036,14 +1013,8 @@
           href: _,
           children: [
             (0, _.jsx)(_, {
-              appid:
-                null == __webpack_require__
-                  ? void 0
-                  : __webpack_require__.appid,
-              community_item_type:
-                null == __webpack_require__
-                  ? void 0
-                  : __webpack_require__.community_item_type,
+              appid: null == _ ? void 0 : _.appid,
+              community_item_type: null == _ ? void 0 : _.community_item_type,
             }),
             Boolean(_) &&
               (0, _.jsx)("span", {
@@ -1071,17 +1042,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(0, _._)();
         return (
@@ -1123,17 +1090,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {

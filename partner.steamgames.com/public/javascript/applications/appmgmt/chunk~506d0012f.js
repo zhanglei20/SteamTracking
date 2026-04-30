@@ -52,6 +52,7 @@
           );
         return (0, r.jsx)(f.Z, {
           ref: n ? t.measureElement : void 0,
+          navKey: `VirtualizedListIndex-${o}`,
           "data-index": o,
           fnScrollIntoViewHandler: s,
           scrollIntoViewWhenChildFocused: "force",
@@ -323,7 +324,7 @@
             initialColumnPinning: H,
             initialColumnVisibility: I,
             onGroupingChange: T,
-            onVisibleRowsChange: V,
+            onVisibleRowsChange: F,
             renderGroup: k,
             virtualizeType: O = "element",
           } = e,
@@ -335,7 +336,7 @@
               ? { ...e, filterFn: M[e.accessorKey] ?? e.filterFn }
               : e,
           ),
-          _ = $.map((e) => {
+          L = $.map((e) => {
             let t = N[e.id];
             return (
               void 0 === t && "accessorKey" in e && (t = N[e.accessorKey]),
@@ -343,9 +344,9 @@
               { ...e, size: t }
             );
           }),
-          B = (0, i.N4)({
+          _ = (0, i.N4)({
             data: n,
-            columns: _,
+            columns: L,
             defaultColumn: { minSize: 60, maxSize: 800 },
             initialState: {
               sorting: w,
@@ -361,17 +362,17 @@
             getGroupedRowModel: (0, l.cU)(),
             columnResizeMode: "onChange",
           }),
-          { rows: L, flatRows: A } = B.getRowModel(),
-          W = L.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
-          K = B.getState().grouping;
+          { rows: B, flatRows: A } = _.getRowModel(),
+          K = B.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
+          W = _.getState().grouping;
         (0, u.useEffect)(() => {
-          T?.(K);
-        }, [T, K]),
+          T?.(W);
+        }, [T, W]),
           (0, u.useEffect)(() => {
-            V?.(W);
-          }, [V, W.length]);
+            F?.(K);
+          }, [F, K.length]);
         const X = (0, s.Te)({
-            count: W.length,
+            count: K.length,
             scrollMargin: g,
             getScrollElement: u.useCallback(
               () => ("element" === O ? ee.current : window),
@@ -385,13 +386,13 @@
             observeElementOffset: S,
             observeElementRect: (e, t) => ("window" === O ? R(e, t) : E(e, t)),
             getItemKey(e) {
-              const t = W[e];
+              const t = K[e];
               return `${t.parentId ?? ""}${x(e, t.original)}`;
             },
           }),
           Z = (0, u.useRef)(0),
           q = u.useMemo(() => {
-            const e = B.getFlatHeaders(),
+            const e = _.getFlatHeaders(),
               t = {};
             for (let n = 0; n < e.length; n++) {
               const r = e[n];
@@ -399,7 +400,7 @@
                 (t[`--col-${r.column.id}-size`] = `${r.column.getSize()}px`);
             }
             return (Z.current += 1), t;
-          }, [B.getState().columnSizingInfo, B.getState().columnSizing, o]);
+          }, [_.getState().columnSizingInfo, _.getState().columnSizing, o]);
         u.useEffect(() => {
           (0, u.startTransition)(() => {
             X.measure();
@@ -410,8 +411,8 @@
           Q = X.getTotalSize(),
           J = (0, s.Te)({
             estimateSize: (e) =>
-              W[0]?.getVisibleCells()[e].column.getSize() ?? 0,
-            count: W[0]?.getVisibleCells().length ?? 0,
+              K[0]?.getVisibleCells()[e].column.getSize() ?? 0,
+            count: K[0]?.getVisibleCells().length ?? 0,
             overscan: 6,
             horizontal: !0,
             getScrollElement: u.useCallback(
@@ -421,7 +422,7 @@
             scrollToFn: (e, t, n) =>
               "window" === O ? (0, a.e8)(e, t, n) : (0, a.Ox)(e, t, n),
             rangeExtractor(e) {
-              const t = W[0]?.getVisibleCells() ?? [],
+              const t = K[0]?.getVisibleCells() ?? [],
                 n = new Set((0, a.vp)(e));
               return (
                 t.forEach((e, t) => {
@@ -440,12 +441,12 @@
             t,
             () => ({
               getData: () => A.map((e) => e.original),
-              getVisibleRows: () => W,
-              getState: B.getState,
-              getColumns: B.getAllColumns,
+              getVisibleRows: () => K,
+              getState: _.getState,
+              getColumns: _.getAllColumns,
               getColumnDefs: () => $,
-              setColumnFilters: B.setColumnFilters,
-              resetColumnFilters: B.resetColumnFilters,
+              setColumnFilters: _.setColumnFilters,
+              resetColumnFilters: _.resetColumnFilters,
               setColumnFilterFnOverride: G,
               getColumnFilterFnOverride: () => M,
               getContainerElement: () => ee.current,
@@ -456,11 +457,11 @@
             }),
             [
               A,
-              W,
-              B.setColumnFilters,
-              B.resetColumnFilters,
-              B.getState,
-              B.getAllColumns,
+              K,
+              _.setColumnFilters,
+              _.resetColumnFilters,
+              _.getState,
+              _.getAllColumns,
               M,
               $,
               J,
@@ -469,7 +470,7 @@
         const ee = (0, u.useRef)(null),
           te = v ? (h ?? 0) : 0;
         let ne = 0;
-        const re = W[0]?.getVisibleCells(),
+        const re = K[0]?.getVisibleCells(),
           oe = J.getVirtualItems(),
           ie = oe[oe.length - 1]?.end;
         for (const e of oe) {
@@ -477,7 +478,7 @@
           t?.column.getIsPinned() && (ne += e.size);
         }
         return (0, r.jsx)(y, {
-          table: B,
+          table: _,
           setColumnSizeOverride: P,
           children: (0, r.jsx)("div", {
             className: c,
@@ -495,23 +496,23 @@
               "aria-rowcount": n.length,
               style: {
                 minHeight: Q,
-                width: B.getTotalSize(),
+                width: _.getTotalSize(),
                 "--virtualPos": `${Y}px`,
                 ...q,
               },
               children: [
-                B.getHeaderGroups().map((e) =>
+                _.getHeaderGroups().map((e) =>
                   (0, r.jsx)(
-                    j,
+                    V,
                     { group: e, sticky: v, nHeaderHeight: h },
                     e.id,
                   ),
                 ),
                 U.map((e) =>
                   (0, r.jsx)(
-                    F,
+                    j,
                     {
-                      row: W[e.index],
+                      row: K[e.index],
                       size: e.size,
                       rowVirtualizer: J,
                       index: e.index,
@@ -547,7 +548,7 @@
           zIndex: t ? 1 : 0,
         };
       }
-      function j(e) {
+      function V(e) {
         const { group: t, sticky: n, nHeaderHeight: o } = e;
         return (0, r.jsx)("div", {
           role: "row",
@@ -587,7 +588,7 @@
           }),
         });
       }
-      const F = u.memo(function (e) {
+      const j = u.memo(function (e) {
         const {
           row: t,
           size: n,
@@ -610,7 +611,7 @@
           "data-even": l % 2 == 0,
           "data-index": l,
           ref: i,
-          children: (0, r.jsx)(V, {
+          children: (0, r.jsx)(F, {
             row: t,
             rowVirtualizer: o,
             nItemHeight: s,
@@ -618,7 +619,7 @@
           }),
         });
       });
-      function V(e) {
+      function F(e) {
         const { row: t, rowVirtualizer: n, renderGroup: o } = e;
         if (t.getCanExpand()) {
           const e = o ?? (() => t.groupingValue);

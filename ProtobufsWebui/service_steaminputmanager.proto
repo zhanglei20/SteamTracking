@@ -56,6 +56,12 @@ message CSteamInputService_ControllerAxesStateChange_Notification {
 	optional float trigger_right = 10;
 }
 
+message CSteamInputService_ControllerBatteryState_Notification {
+	optional uint32 controller_index = 1;
+	optional uint32 battery_level = 2;
+	optional bool charging = 3;
+}
+
 message CSteamInputService_ControllerButtonStateChanged_Notification {
 	optional uint32 controller_index = 1;
 	optional bool dpad_up = 2;
@@ -319,6 +325,9 @@ message CSteamInputService_ShouldTritonPairInOobe_Response {
 	optional uint32 dongle_index = 3;
 }
 
+message CSteamInputService_SteamDonglesChanged_Notification {
+}
+
 message CSteamInputService_TritonDonglesChanged_Notification {
 }
 
@@ -384,6 +393,8 @@ service SteamInputManager {
 	// ePrivilege=1, eClientExecutionSite=2
 	rpc NotifyButtonStateChanged (.CSteamInputService_ControllerButtonStateChanged_Notification) returns (.NoResponse);
 	// ePrivilege=1, eClientExecutionSite=2
+	rpc NotifyControllerBatteryState (.CSteamInputService_ControllerBatteryState_Notification) returns (.NoResponse);
+	// ePrivilege=1, eClientExecutionSite=2
 	rpc NotifyControllerDisconnected (.CSteamInputService_ControllerDisconnected_Notification) returns (.NoResponse);
 	// ePrivilege=1, eClientExecutionSite=2
 	rpc NotifyControllerListChanged (.CSteamInputService_ControllerListChanged_Notification) returns (.NoResponse);
@@ -401,6 +412,8 @@ service SteamInputManager {
 	rpc NotifyGyroQuaternionStateChanged (.CSteamInputService_GyroQuaternionChanged_Notification) returns (.NoResponse);
 	// ePrivilege=1, eClientExecutionSite=2
 	rpc NotifyGyroSpeedStateChanged (.CSteamInputService_GyroSpeedChanged_Notification) returns (.NoResponse);
+	// ePrivilege=1, eClientExecutionSite=2
+	rpc NotifySteamDonglesChanged (.CSteamInputService_SteamDonglesChanged_Notification) returns (.NoResponse);
 	// ePrivilege=1, eClientExecutionSite=2
 	rpc NotifyTritonDonglesChanged (.CSteamInputService_TritonDonglesChanged_Notification) returns (.NoResponse);
 	// ePrivilege=1, eClientExecutionSite=2

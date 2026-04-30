@@ -347,7 +347,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(null),
+        const [_, _] = (0, _.useState)(null),
           { fnAddProductID: _ } = _();
         return (0, _.jsxs)("div", {
           children: [
@@ -360,7 +360,7 @@
             }),
             (0, _.jsx)(_, {
               selected: _,
-              setSelected: __webpack_require__,
+              setSelected: _,
             }),
             (0, _.jsxs)(_._, {
               disabled: !_,
@@ -373,7 +373,7 @@
         });
       }
       function _(_) {
-        const { selected: _, setSelected: __webpack_require__ } = _,
+        const { selected: _, setSelected: _ } = _,
           _ = (0, _.useRef)(void 0),
           _ = (function () {
             const [_] = (0, _.useState)(() => _);
@@ -436,9 +436,8 @@
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
       }
       function _(_) {
-        const { strToken: _, rtEstimatedNotifcationDate: __webpack_require__ } =
-            _,
-          _ = new Date(1e3 * __webpack_require__),
+        const { strToken: _, rtEstimatedNotifcationDate: _ } = _,
+          _ = new Date(1e3 * _),
           _ = _.getMonth() + 1;
         let _ = "",
           _ = "",
@@ -482,7 +481,7 @@
           case "#Sale_Reservation_RelativeWeekly":
             {
               const _ = _._.GetTimeNowWithOverride(),
-                _ = Math.floor((__webpack_require__ - _) / 86400);
+                _ = Math.floor((_ - _) / 86400);
               _ < 7 ||
                 (_ < 28
                   ? ((_ = "#Sale_Reservation_RelativeWeekly_Plural"),
@@ -684,24 +683,17 @@
         });
       }
       function _(_) {
-        const {
-            productID: _,
-            existingPositionMsg: __webpack_require__,
-            closeModal: _,
-          } = _,
+        const { productID: _, existingPositionMsg: _, closeModal: _ } = _,
           { fnSetPositionMessages: _ } = _(),
           _ = Math.floor(Date.now() / 1e3),
+          [_, _] = (0, _.useState)(_?.start_queue_position || 0),
           [_, _] = (0, _.useState)(
-            __webpack_require__?.start_queue_position || 0,
+            _?.rtime_estimated_notification || _ + 86400,
           ),
           [_, _] = (0, _.useState)(
-            __webpack_require__?.rtime_estimated_notification || _ + 86400,
+            _?.localization_token || "#Sale_Reservation_MonthYear",
           ),
-          [_, _] = (0, _.useState)(
-            __webpack_require__?.localization_token ||
-              "#Sale_Reservation_MonthYear",
-          ),
-          _ = __webpack_require__ ? "Update Queue Range" : "Create Queue Range",
+          _ = _ ? "Update Queue Range" : "Create Queue Range",
           _ = (0, _._)();
         return _.bLoading
           ? (0, _.jsx)(_._, {
@@ -771,7 +763,7 @@
             });
       }
       function _(_) {
-        const { positionMsg: _, closeModal: __webpack_require__ } = _,
+        const { positionMsg: _, closeModal: _ } = _,
           { fnDeletePositionMessage: _ } = _(),
           _ = `Delete Queue Position ${(0, _._)(_.start_queue_position)}`,
           _ = (0, _._)();
@@ -779,12 +771,12 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: _,
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: _,
               strDescription: "Are you sure, this action is no undo'able?",
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: () => {
                 _.fnSetLoading(!0),
                   _(_).then((_) => {
@@ -801,12 +793,12 @@
       }
       function _(_) {
         const { closeModal: _ } = _,
-          { fnReloadReservationPositionMessages: __webpack_require__ } = _(),
+          { fnReloadReservationPositionMessages: _ } = _(),
           [_, _] = (0, _.useState)(!1);
         return (
           (0, _.useEffect)(() => {
             __webpack_require__().then(() => _(!0));
-          }, [__webpack_require__]),
+          }, [_]),
           (0, _.jsx)(_._, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
@@ -830,11 +822,7 @@
         "#Sale_Reservation_RelativeWeekly",
       ];
       function _(_) {
-        const {
-            strToken: _,
-            fnSetToken: __webpack_require__,
-            rtEstimateDate: _,
-          } = _,
+        const { strToken: _, fnSetToken: _, rtEstimateDate: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               _.map((_) => ({
@@ -972,7 +960,7 @@
       const _ = "nicknames";
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_],
             queryFn: async () => {
               const _ = new Map();
@@ -988,7 +976,7 @@
               return _;
             },
           });
-        return __webpack_require__ ? __webpack_require__.get(_) : null;
+        return _ ? __webpack_require__.get(_) : null;
       }
       const _ = new (_())(
           (_) =>
@@ -1045,15 +1033,15 @@
         ),
         _ = "avatarandpersonas";
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: [_, _],
           queryFn: () => _.load(_),
         });
-        return [_, __webpack_require__];
+        return [_, _];
       }
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
             queryFn: async () => {
               const _ = await _.loadMany(_);
@@ -1075,7 +1063,7 @@
               }),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ ? null : _;
       }
       function _(_) {
@@ -1107,7 +1095,7 @@
       function _(_) {
         const {
           nLatestTime: _,
-          nEarliestTime: __webpack_require__,
+          nEarliestTime: _,
           fnGetTimeToUpdate: _,
           onError: _,
           strAlsoShowTimeZone: _,
@@ -1155,13 +1143,8 @@
           })(_, _, _, _, _),
           _ = !_ && _;
         let _, _;
-        if (
-          _ &&
-          __webpack_require__ &&
-          _ == __webpack_require__ &&
-          __webpack_require__ > _._.GetTimeNowWithOverride()
-        ) {
-          const _ = _().unix(__webpack_require__);
+        if (_ && _ && _ == _ && _ > _._.GetTimeNowWithOverride()) {
+          const _ = _().unix(_);
           (_ = {
             hours: {
               max: _.hour(),
@@ -1186,7 +1169,7 @@
           }),
             (_ = _);
         }
-        _ || !__webpack_require__ || _ || (_ = _().unix(__webpack_require__));
+        _ || !_ || _ || (_ = _().unix(_));
         const _ = _()._.guess(),
           _ = _().unix(_)._(_),
           _ = !!_ && _ != _ && _().unix(_)._(_),
@@ -1291,7 +1274,7 @@
                             ((0 != _.weekday() && 6 != _.weekday()) ||
                               (_ = !1));
                           return _;
-                        })(__webpack_require__, _, _, _),
+                        })(_, _, _, _),
                       initialValue: _,
                       inputProps: {
                         placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
@@ -1416,7 +1399,7 @@
       function _(_) {
         const {
             accountID: _,
-            bHideWhenNotAvailable: __webpack_require__,
+            bHideWhenNotAvailable: _,
             bHideName: _,
             bLink: _ = !0,
           } = _,
@@ -1429,7 +1412,7 @@
           children: Boolean(!_)
             ? (0, _.jsx)(_.Fragment, {
                 children:
-                  Boolean(!__webpack_require__) &&
+                  Boolean(!_) &&
                   (0, _.jsx)("span", {
                     children: _,
                   }),
@@ -1472,7 +1455,7 @@
       function _(_) {
         const {
             title: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             getMinimized: _,
             toggleMinimized: _,
             className: _,
@@ -1497,9 +1480,9 @@
                   ),
                   children: [
                     _,
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                       (0, _.jsx)(_._, {
-                        tooltip: __webpack_require__,
+                        tooltip: _,
                       }),
                   ],
                 }),
@@ -1523,7 +1506,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
+        const [_, _] = _.useState(Boolean(_.bStartMinimized));
         return (0, _.jsx)(_, {
           ..._,
           getMinimized: () => _,
@@ -1532,11 +1515,11 @@
         });
       }
       function _(_) {
-        const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
+        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, _.jsx)(_._, {
           "data-tooltip-text": (0, _._)(_),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _.bIsMinimized
             ? (0, _.jsx)(_.hz4, {})
             : (0, _.jsx)(_.Xjb, {}),

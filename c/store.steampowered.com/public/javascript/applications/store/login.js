@@ -128,7 +128,7 @@
           );
         return [_, _];
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const _ = new URLSearchParams(_.location.search.substring(1));
         for (const _ in _)
           if (_.hasOwnProperty(_)) {
@@ -163,17 +163,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(0, _._)();
         return (
@@ -215,17 +211,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {

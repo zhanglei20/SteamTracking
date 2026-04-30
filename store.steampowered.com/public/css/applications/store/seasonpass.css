@@ -7,7 +7,7 @@
 ._2SxhiHrQSCtBnKf3oKdon2 ._3cBgZqhPaJpdeZl8hARr1o {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
   background-color: #313c4a;
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 ._2SxhiHrQSCtBnKf3oKdon2 ._3cBgZqhPaJpdeZl8hARr1o:hover {
   background-color: #435164;
@@ -122,5 +122,5 @@
   height: 24px;
   opacity: 0.5;
   margin-left: 4px;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }

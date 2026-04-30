@@ -136,8 +136,8 @@
         w = i(49946),
         A = i.n(w),
         x = i(41230),
-        S = i(28987),
-        _ = i(89193),
+        _ = i(28987),
+        S = i(89193),
         M = i(53833),
         D = i(93960),
         y = i(90039);
@@ -184,15 +184,15 @@
           );
         }
         constructor() {
-          (0, _.Gn)(this);
+          (0, S.Gn)(this);
         }
       }
-      (0, s.Cg)([_.sH], b.prototype, "m_eCurLang", void 0),
-        (0, s.Cg)([_.sH], b.prototype, "m_rgHasData", void 0),
-        (0, s.Cg)([_.sH], b.prototype, "m_bHasLocalizationContext", void 0),
+      (0, s.Cg)([S.sH], b.prototype, "m_eCurLang", void 0),
+        (0, s.Cg)([S.sH], b.prototype, "m_rgHasData", void 0),
+        (0, s.Cg)([S.sH], b.prototype, "m_bHasLocalizationContext", void 0),
         (0, s.Cg)([D.o], b.prototype, "GetCurEditLanguage", null),
         (0, s.Cg)([D.o], b.prototype, "SetCurEditLanguage", null),
-        (0, s.Cg)([_.XI.bound], b.prototype, "SetHasLanguage", null),
+        (0, s.Cg)([S.XI.bound], b.prototype, "SetHasLanguage", null),
         (0, s.Cg)([D.o], b.prototype, "BHasLanguageData", null);
       var v = i(11010);
       let f = class extends a.Component {
@@ -213,7 +213,7 @@
               ),
             );
           let r = new Array();
-          const c = this.props.realms || [S.TU.k_ESteamRealmGlobal];
+          const c = this.props.realms || [_.TU.k_ESteamRealmGlobal];
           for (const e of p.A0.GetLanguageListForRealms(c)) {
             if (t && !t(e)) continue;
             const i = (0, o.Lg)(e),
@@ -312,7 +312,7 @@
         F = i(79769);
       class Y {
         constructor() {
-          (0, _.Gn)(this),
+          (0, S.Gn)(this),
             "dev" == d.TS.WEB_UNIVERSE && (window.g_ClanImageStore = this);
         }
         m_mapClanToImages = new Map();
@@ -384,7 +384,7 @@
               t)
             ) {
               for (let e of t.data.images) e.clanAccountID = s;
-              (0, _.h5)(() => {
+              (0, S.h5)(() => {
                 this.m_mapClanImageLoadState.set(s, { loaded: !0 }),
                   this.m_mapClanToImages.set(s, t.data.images),
                   this.GetImageListCallbackForClanAccountIDInternal(s).Dispatch(
@@ -467,8 +467,8 @@
           return this.DeleteClanImageByID(e, t.imageid);
         }
       }
-      (0, s.Cg)([_.sH], Y.prototype, "m_mapClanToImages", void 0),
-        (0, s.Cg)([_.sH], Y.prototype, "m_mapClanImageLoadState", void 0);
+      (0, s.Cg)([S.sH], Y.prototype, "m_mapClanToImages", void 0),
+        (0, s.Cg)([S.sH], Y.prototype, "m_mapClanImageLoadState", void 0);
       const Q = new Y();
       var V = i(7372),
         Z = i(98592),
@@ -927,10 +927,11 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: Ce,
           },
-          spotlight_art: {
-            width: [306, 374],
-            height: [260, 448],
-            rgAcceptableTypes: Ie,
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: Ie },
+          spotlight_art_hero: {
+            width: 374,
+            height: 448,
+            rgAcceptableTypes: Ce,
           },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: Ie },
           marketingmessage_art: {
@@ -969,7 +970,7 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: Ie },
+          takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: Ie },
           takeunder_mobile_art: {
             width: 500,
             height: 160,
@@ -1022,10 +1023,10 @@
         } else if (t < s.height) return !1;
         return !0;
       }
-      function Se(e, t) {
-        return t.filter((t) => _e(e, t));
-      }
       function _e(e, t) {
+        return t.filter((t) => Se(e, t));
+      }
+      function Se(e, t) {
         return Te[t].rgAcceptableTypes.includes(e);
       }
       var Me = i(29381),
@@ -1376,7 +1377,7 @@
         uploadTime;
         fileType;
         constructor(e, t, i, s, n) {
-          (0, _.Gn)(this),
+          (0, S.Gn)(this),
             (this.file = e),
             (this.filename = t),
             (this.fileType = (0, Re.yh)(t) ?? 0),
@@ -1396,18 +1397,18 @@
         }
         GetImageOptionLabel() {}
       }
-      (0, s.Cg)([_.sH], Ue.prototype, "dataUrl", void 0),
-        (0, s.Cg)([_.sH], Ue.prototype, "width", void 0),
-        (0, s.Cg)([_.sH], Ue.prototype, "height", void 0),
-        (0, s.Cg)([_.sH], Ue.prototype, "status", void 0),
-        (0, s.Cg)([_.sH.ref], Ue.prototype, "message", void 0),
-        (0, s.Cg)([_.sH], Ue.prototype, "language", void 0);
+      (0, s.Cg)([S.sH], Ue.prototype, "dataUrl", void 0),
+        (0, s.Cg)([S.sH], Ue.prototype, "width", void 0),
+        (0, s.Cg)([S.sH], Ue.prototype, "height", void 0),
+        (0, s.Cg)([S.sH], Ue.prototype, "status", void 0),
+        (0, s.Cg)([S.sH.ref], Ue.prototype, "message", void 0),
+        (0, s.Cg)([S.sH], Ue.prototype, "language", void 0);
       class Pe extends Ue {
         m_rgImageOptions;
         m_currentImageOption = void 0;
         m_currentImageOptionKey = void 0;
         constructor(e, t, i, s, n, a) {
-          super(e, t, i, n, a), (0, _.Gn)(this), (this.m_rgImageOptions = s);
+          super(e, t, i, n, a), (0, S.Gn)(this), (this.m_rgImageOptions = s);
         }
         IsValidAssetType(e, t) {
           let i = 0,
@@ -1433,7 +1434,7 @@
             c =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
               0 ==
-                Se(
+                _e(
                   this.fileType,
                   this.m_rgImageOptions?.map((e) => e.artworkType) || [],
                 ).length,
@@ -1490,7 +1491,7 @@
         ComputeDefaultImageOption() {
           if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
             return;
-          const e = Se(
+          const e = _e(
             this.fileType,
             this.m_rgImageOptions?.map((e) => e.artworkType),
           );
@@ -1520,15 +1521,15 @@
             (this.m_currentImageOptionKey = e?.sKey);
         }
       }
-      (0, s.Cg)([_.sH], Pe.prototype, "m_currentImageOption", void 0),
-        (0, s.Cg)([_.sH], Pe.prototype, "m_currentImageOptionKey", void 0);
+      (0, s.Cg)([S.sH], Pe.prototype, "m_currentImageOption", void 0),
+        (0, s.Cg)([S.sH], Pe.prototype, "m_currentImageOptionKey", void 0);
       class Ge extends Pe {
         bCropped = !1;
         localizedImageGroupPrimaryImage;
         media;
         constructor(e, t, i, s, n, a, o, r) {
           super(e, t, i, s, n, a),
-            (0, _.Gn)(this),
+            (0, S.Gn)(this),
             (this.media = o),
             (this.localizedImageGroupPrimaryImage = r);
         }
@@ -1549,7 +1550,7 @@
           );
         }
         FileTypeMatchesImageTypes(e) {
-          return _e(this.fileType, e.artworkType);
+          return Se(this.fileType, e.artworkType);
         }
         BIsVideo() {
           return Le.includes(this.fileType);
@@ -1579,7 +1580,7 @@
             if (s ? xe(e, t, n) : Ae(e, t, n)) return n;
           }
       }
-      (0, s.Cg)([_.sH], Ge.prototype, "bCropped", void 0);
+      (0, s.Cg)([S.sH], Ge.prototype, "bCropped", void 0);
       class ze {}
       function Fe(e, t, i) {
         const s = e.filter((e) => {
@@ -1683,8 +1684,8 @@
         };
       }
       class Ze extends Qe {
-        m_filesToUpload = _.sH.array();
-        m_filesCompleted = _.sH.array();
+        m_filesToUpload = S.sH.array();
+        m_filesCompleted = S.sH.array();
         m_clanImagesV2;
         m_clanSteamID;
         m_rgImageOptions;
@@ -1693,7 +1694,7 @@
         constructor(e, t, i, s) {
           var n;
           super(),
-            (0, _.Gn)(this),
+            (0, S.Gn)(this),
             (this.m_clanSteamID = e),
             (this.m_rgImageOptions =
               ((n = t),
@@ -1787,7 +1788,7 @@
           t >= 0 && this.DeleteUploadImageByIndex(t);
         }
         ClearImages() {
-          this.m_filesToUpload = _.sH.array();
+          this.m_filesToUpload = S.sH.array();
         }
         GetFilesUploaded() {
           return this.m_filesCompleted;
@@ -1884,9 +1885,9 @@
           );
         }
       }
-      (0, s.Cg)([_.sH], Ze.prototype, "m_filesToUpload", void 0),
-        (0, s.Cg)([_.sH], Ze.prototype, "m_filesCompleted", void 0),
-        (0, s.Cg)([_.sH], Ze.prototype, "m_lastError", void 0),
+      (0, s.Cg)([S.sH], Ze.prototype, "m_filesToUpload", void 0),
+        (0, s.Cg)([S.sH], Ze.prototype, "m_filesCompleted", void 0),
+        (0, s.Cg)([S.sH], Ze.prototype, "m_lastError", void 0),
         (0, s.Cg)([D.o], Ze.prototype, "AddImage", null),
         (0, s.Cg)([D.o], Ze.prototype, "AddExistingClanImage", null),
         (0, s.Cg)([D.o], Ze.prototype, "DeleteUploadImageByIndex", null),

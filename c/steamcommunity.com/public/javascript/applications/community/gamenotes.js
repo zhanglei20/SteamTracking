@@ -63,6 +63,18 @@
         EditorInput: "_1Ve4VFO2EEkeNZdel_Asky",
         NewNoteButton: "_3Sjbkvk647UKKVLX6J7gsW",
         CloseWindowButton: "vKXl-xWkUZL5iNvaT5mzW",
+        BackgroundAnimation: "K5kB32gMVsnDCBwxYDm4r",
+        "ItemFocusAnim-darkerGrey-nocolor": "_39HD17cQ23IvuK35ytuPef",
+        "ItemFocusAnim-darkerGrey": "_1UnKhkmcATwZcT0qX1VO-I",
+        "ItemFocusAnim-darkGreySettings": "_3pEtHMkdw57n0C8DKxtXPb",
+        "ItemFocusAnim-darkGrey": "bif353VzxtsbctKKtWLUm",
+        "ItemFocusAnim-grey": "_1lXo0Q4biCUQ5CPs1x9v8z",
+        "ItemFocusAnim-translucent-white-10": "_3jeaGvKmUWZNHnBKV71gwe",
+        "ItemFocusAnim-translucent-white-20": "_1S31mEHMzu94gIf5W00vQ5",
+        "ItemFocusAnimBorder-darkGrey": "_3qGIi9phn_i9vlXbBfE2N4",
+        "ItemFocusAnim-green": "PKY6xp7_WNHMI65Uc8yJ_",
+        focusAnimation: "_1AiJFdtfIMUo0maxXZuGYY",
+        hoverAnimation: "_2FZZ9Hxx9YxFh9K9vrhe9t",
       };
     },
     chunkid: (module) => {
@@ -4611,7 +4623,7 @@
         }
         async GetGamesWithNotes() {
           let _ = [];
-          for (const [_, __webpack_require__] of await this.GetFiles()) {
+          for (const [_, _] of await this.GetFiles()) {
             const _ = this.ParseNotesFileName(_);
             if (!_) continue;
             let _;
@@ -4625,7 +4637,7 @@
                   }),
               _.push({
                 ..._,
-                last_modified: __webpack_require__.rtLastModified,
+                last_modified: _.rtLastModified,
               });
           }
           return _;
@@ -4771,7 +4783,7 @@
       function _(_) {
         const {
             mode: _,
-            store: __webpack_require__,
+            store: _,
             closePopup: _,
             bPinnedView: _,
             onClickURL: _,
@@ -4782,14 +4794,14 @@
           _ = _.useMemo(
             () => ({
               mode: _,
-              store: __webpack_require__,
+              store: _,
               closePopup: _,
               bPinnedView: _,
               onClickURL: _,
               bSpellcheckEnabled: _,
               setSpellcheckEnabled: _,
             }),
-            [_, __webpack_require__, _, _, _, _, _],
+            [_, _, _, _, _, _, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -4900,7 +4912,7 @@
       function _(_) {
         const {
             schema: _,
-            view: __webpack_require__,
+            view: _,
             refUpdateToolbar: _,
             className: _,
             bSpellcheckEnabled: _,
@@ -4909,7 +4921,7 @@
           [_, _] = (0, _._)("FormattingToolbar_Expanded", !1);
         return (0, _.jsx)(_._, {
           refUpdateToolbar: _,
-          view: __webpack_require__,
+          view: _,
           children: (0, _.jsxs)("div", {
             className: (0, _._)(_.Toolbar, _),
             children: [
@@ -4971,7 +4983,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { deleteNote: _, hidden: __webpack_require__, pmState: _ } = _,
+        const { deleteNote: _, hidden: _, pmState: _ } = _,
           [_, _] = _.useState(),
           _ = _.useRef(void 0),
           _ =
@@ -4989,11 +5001,11 @@
         return (
           _.useEffect(() => {
             _ &&
-              !__webpack_require__ &&
+              !_ &&
               ((!_._.IN_CLIENT &&
                 window.matchMedia(`(max-width: ${_.narrowWidth})`).matches) ||
                 _.focus());
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           (0, _.jsxs)(_.Fragment, {
             children: [
               !_ &&
@@ -5052,7 +5064,7 @@
         });
       });
       function _(_) {
-        const { src: _, selected: __webpack_require__ } = _,
+        const { src: _, selected: _ } = _,
           [_, _] = _.useState(),
           _ = _();
         return (
@@ -5069,10 +5081,7 @@
           }, [_, _]),
           _
             ? (0, _.jsx)("img", {
-                className: _()(
-                  _().Image,
-                  __webpack_require__ && "ProseMirror-selectednode",
-                ),
+                className: _()(_().Image, _ && "ProseMirror-selectednode"),
                 src: _,
               })
             : null
@@ -5086,7 +5095,7 @@
         _ = __webpack_require__("chunkid");
       const _ = 10;
       function _(_) {
-        const { note: _, hidden: __webpack_require__ = !1 } = _,
+        const { note: _, hidden: _ = !1 } = _,
           [_, _] = _.useState(void 0),
           _ = _.useRef(!1),
           _ = (0, _._)(),
@@ -5187,8 +5196,8 @@
             _._.ReportTrackedAction("/GameNotes/NoteModified"));
         }, [_]),
           _.useEffect(() => {
-            __webpack_require__ && _ && _.CommitChanges();
-          }, [__webpack_require__, _]);
+            _ && _ && _.CommitChanges();
+          }, [_, _]);
         const _ = (0, _._)().ownerWindow;
         (0, _._)(
           _.document,
@@ -5240,7 +5249,7 @@
               }),
               (0, _.jsx)(_, {
                 deleteNote: _.mutate,
-                hidden: __webpack_require__,
+                hidden: _,
                 pmState: _,
               }),
               !_ &&
@@ -5253,7 +5262,7 @@
         });
       }
       function _(_) {
-        const { error: _, dismissError: __webpack_require__ } = _;
+        const { error: _, dismissError: _ } = _;
         return _
           ? (0, _.jsx)(_._, {
               active: !0,
@@ -5261,20 +5270,20 @@
                 bAlertDialog: !0,
                 strTitle: (0, _._)("#Error_Generic"),
                 strDescription: (0, _._)("#UserGameNotes_ErrorSavingNotes", _),
-                closeModal: __webpack_require__,
+                closeModal: _,
               }),
             })
           : null;
       }
       function _(_) {
-        const { note: _, bDirty: __webpack_require__ } = _,
+        const { note: _, bDirty: _ } = _,
           [_, _, _] = (0, _._)(!1),
           _ = "single" == _.useContext(_).mode,
           _ = _(),
           { mutate: _, isPending: _ } = _(_, _),
           _ = _.useCallback(() => {
-            !__webpack_require__ && _.not_persisted ? _() : _();
-          }, [__webpack_require__, _, _, _]);
+            !_ && _.not_persisted ? _() : _();
+          }, [_, _, _, _]);
         return (0, _.jsxs)("div", {
           className: _.NoteActions,
           children: [
@@ -5295,7 +5304,7 @@
             }),
             _ &&
               (0, _.jsx)(_, {
-                bDirty: __webpack_require__,
+                bDirty: _,
               }),
           ],
         });
@@ -5316,12 +5325,7 @@
             });
       }
       function _(_) {
-        const {
-          note: _,
-          closeModal: __webpack_require__,
-          deleteNote: _,
-          deletePending: _,
-        } = _;
+        const { note: _, closeModal: _, deleteNote: _, deletePending: _ } = _;
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)(_._, {
@@ -5330,7 +5334,7 @@
             onOK: () => _(),
             bOKDisabled: _,
             strOKButtonText: (0, _._)("#Button_Delete"),
-            closeModal: __webpack_require__,
+            closeModal: _,
           }),
         });
       }
@@ -5473,7 +5477,7 @@
       function _(_) {
         const {
             noteParent: _,
-            notes: __webpack_require__,
+            notes: _,
             activeNoteID: _,
             actions: _,
             bStandalonePage: _,
@@ -5540,7 +5544,7 @@
         );
       }
       function _(_) {
-        const { noteParent: _, note: __webpack_require__ } = _,
+        const { noteParent: _, note: _ } = _,
           _ = _._(),
           _ = _(),
           _ = _.useCallback(() => _(_), [_, _]),
@@ -5552,7 +5556,7 @@
                 onActivate: _,
               }),
             (0, _.jsx)(_, {
-              note: __webpack_require__,
+              note: _,
               hidden: !_,
             }),
           ],
@@ -5622,16 +5626,16 @@
         return (0, _.jsx)("li", {
           children: (0, _.jsx)(_._, {
             _:
-              ((__webpack_require__ = _.appid
+              ((_ = _.appid
                 ? {
                     appid: _.appid,
                   }
                 : {
                     shortcut: _.shortcut_name,
                   }),
-              "appid" in __webpack_require__
-                ? _.AppNotes(__webpack_require__.appid, _)
-                : _.ShortcutNotes(__webpack_require__.shortcut, _)),
+              "appid" in _
+                ? _.AppNotes(_.appid, _)
+                : _.ShortcutNotes(_.shortcut, _)),
             children: _.appid
               ? (0, _.jsx)(_, {
                   appid: _.appid,
@@ -5646,8 +5650,8 @@
           _ = _(_);
         return null == _ ? void 0 : _.name;
       }
-      function _(_, _, __webpack_require__ = {}) {
-        const { bIsPublic: _ = !0 } = __webpack_require__,
+      function _(_, _, _ = {}) {
+        const { bIsPublic: _ = !0 } = _,
           _ = {
             unAppID: _,
             strMachineName: _,
@@ -5809,7 +5813,7 @@
             : (this.m_dictComponents = new Map(Object.entries(_))),
             (this.m_fnAccumulatorFactory = _);
         }
-        Parse(_, _, __webpack_require__ = !0) {
+        Parse(_, _, _ = !0) {
           const _ = (function (_, _) {
             var _, _, _;
             const _ = [];
@@ -5875,7 +5879,7 @@
                     text: null !== (_ = _.text) && void 0 !== _ ? _ : "",
                   }));
             return _;
-          })(_ || "", __webpack_require__);
+          })(_ || "", _);
           return this.Parse_BuildElements(_, _);
         }
         Parse_BuildElements(_, _) {
@@ -5999,7 +6003,7 @@
       function _(_) {
         return _.replace(/(\\|\[)/g, "\\$1");
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const { type: _, text: _ = "" } = _;
         if (2 == _) {
           let _ = _.indexOf("=");
@@ -6136,7 +6140,7 @@
         ];
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
+        const [_, _] = _.useState(!1);
         return [
           {
             onDragEnter: _.useCallback((_) => {

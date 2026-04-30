@@ -117,7 +117,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
@@ -216,8 +216,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-          const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
-              _,
+          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
             [_, _] = (0, _.useState)(""),
             _ = (0, _._)(_.clanSteamID.GetAccountID()),
             _ = () => _.closeModal && _.closeModal(),
@@ -290,13 +289,9 @@
           });
         },
         _ = (_) => {
-          const {
-            clanImage: _,
-            searchStringHilight: __webpack_require__,
-            fnImageClick: _,
-          } = _;
+          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
           let _ = _.file_name ? _.file_name : "",
-            _ = _(__webpack_require__, _, String(_.imageid), _.Hilight);
+            _ = _(_, _, String(_.imageid), _.Hilight);
           return (0, _.jsxs)("div", {
             className: _.ImageContainer,
             children: [
@@ -391,7 +386,7 @@
           let _ = [];
           const {
             fnFilterLanguage: _,
-            fnLangHasData: __webpack_require__,
+            fnLangHasData: _,
             fnLastUpdateRTime: _,
             fnIsLangSupported: _,
           } = this.props;
@@ -481,20 +476,15 @@
           return _;
         }
         OnLanguageChange(_) {
-          const { fnOnLanguageChanged: _, selectedLang: __webpack_require__ } =
-            this.props;
+          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
           let _ = Number.parseInt(_.currentTarget.value);
-          _ != __webpack_require__ && _ && _(_);
+          _ != _ && _ && _(_);
         }
         render() {
-          const {
-            selectedLang: _,
-            bDisabled: _,
-            strTooltip: __webpack_require__,
-          } = this.props;
+          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
           let _ = this.GenerateLanguageOptions();
           return (0, _.jsx)(_._, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             children: (0, _.jsx)("select", {
               value: _,
               onChange: this.OnLanguageChange,
@@ -538,7 +528,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const _ = _.createRef(),
-          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(""),
           _ = _.createRef();
         return (0, _.jsxs)("div", {
           children: [
@@ -590,7 +580,7 @@
             (0, _.jsx)("div", {
               ref: _,
               className: _().ClipboardText,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
@@ -617,7 +607,7 @@
           const {
             eventLink: _,
             sharePageUrls: _,
-            appid: __webpack_require__,
+            appid: _,
             closeModal: _,
             emoticonStore: _,
             partnerEventStore: _,
@@ -635,7 +625,7 @@
             : this.state.bShareOnSteamDialog
               ? (0, _.jsx)(_._, {
                   eventLink: _,
-                  appid: __webpack_require__,
+                  appid: _,
                   emoticonStore: _,
                   partnerEventStore: _,
                   closeModal: _,
@@ -659,7 +649,7 @@
       const _ = (_) => {
         const {
             eventLink: _,
-            sharePageUrls: __webpack_require__,
+            sharePageUrls: _,
             fnShareOnSteamActivityFeed: _,
           } = _,
           _ = (0, _._)(),
@@ -728,7 +718,7 @@
                           "#EventDisplay_Share_OnFaceBook",
                         ),
                         children: (0, _.jsx)(_._, {
-                          href: __webpack_require__.strFacebookUrl,
+                          href: _.strFacebookUrl,
                           className: _().ShareBtn,
                           children: (0, _.jsx)("img", {
                             className: (0, _._)(_().Button),
@@ -741,7 +731,7 @@
                           "#EventDisplay_Share_OnTwitter",
                         ),
                         children: (0, _.jsx)(_._, {
-                          href: __webpack_require__.strTwitterUrl,
+                          href: _.strTwitterUrl,
                           className: _().ShareBtn,
                           children: (0, _.jsx)("img", {
                             className: (0, _._)(_().Button),
@@ -754,7 +744,7 @@
                           "#EventDisplay_Share_OnReddit",
                         ),
                         children: (0, _.jsx)(_._, {
-                          href: __webpack_require__.strRedditUrl,
+                          href: _.strRedditUrl,
                           className: _().ShareBtn,
                           children: (0, _.jsx)("img", {
                             className: (0, _._)(_().Button),
@@ -1275,7 +1265,7 @@
           let _,
             {
               emoticonStore: _,
-              supportBBCodes: __webpack_require__,
+              supportBBCodes: _,
               fnSetText: _,
               ..._
             } = this.props;
@@ -1291,7 +1281,7 @@
               break;
             case "BBCode":
               _ = (0, _.jsx)(_, {
-                supportBBCodes: __webpack_require__,
+                supportBBCodes: _,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnBBCodeSuggestionSelected,
@@ -1349,7 +1339,7 @@
       const _ = (0, _._)((_) => {
         const {
             clanSteamID: _,
-            inputClanImage: __webpack_require__,
+            inputClanImage: _,
             nWidth: _,
             nHeight: _,
             setImage: _,
@@ -1362,7 +1352,7 @@
             [_, _],
           ),
           [_, _] = _.useState(void 0),
-          [_, _] = _.useState(Boolean(__webpack_require__)),
+          [_, _] = _.useState(Boolean(_)),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
@@ -1375,17 +1365,16 @@
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
                 0 != _.error.length ||
                   _.needsCrop ||
-                  (__webpack_require__ &&
-                    __webpack_require__.image_hash == _.image_hash) ||
+                  (_ && _.image_hash == _.image_hash) ||
                   _(_);
               }
               _(!1);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           );
         _.useEffect(() => {
-          _(__webpack_require__);
-        }, [_, __webpack_require__]);
+          _(_);
+        }, [_, _]);
         let _,
           _ = "",
           _ = !1;
@@ -1886,7 +1875,7 @@
           const {
             showFormatHelp: _,
             bEmbeddedInDialog: _,
-            bSupportHTMLImport: __webpack_require__,
+            bSupportHTMLImport: _,
             pathToImages: _,
           } = this.props;
           let _;
@@ -2035,7 +2024,7 @@
                     tooltip: (0, _._)("#EventEditor_AddSpeaker"),
                     imgURL: this.props.pathToImages + "/insert_img.png",
                   }),
-                Boolean(__webpack_require__ && !_) &&
+                Boolean(_ && !_) &&
                   (0, _.jsx)(_, {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
                     className: _().ActionImportHTML,
@@ -2495,7 +2484,7 @@
         (0, _._)([_._], _.prototype, "OnAnchorURLChange", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) => {
-        const [_, __webpack_require__] = _.useState(""),
+        const [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
@@ -2673,7 +2662,7 @@
         });
       };
       function _(_) {
-        const { friends: _, setSteamID: __webpack_require__ } = _;
+        const { friends: _, setSteamID: _ } = _;
         return (0, _.jsx)("div", {
           className: _().DropDownScroll,
           children: _.map((_) =>
@@ -2681,7 +2670,7 @@
               _,
               {
                 steamid: _,
-                setSteamID: __webpack_require__,
+                setSteamID: _,
               },
               _,
             ),
@@ -2689,7 +2678,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, setSteamID: __webpack_require__ } = _,
+        const { steamid: _, setSteamID: _ } = _,
           { data: _ } = (0, _._)(_);
         return (0, _.jsx)(_._, {
           onSelected: () => __webpack_require__(new _._(_)),
@@ -2907,7 +2896,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-        const { appid: _, eventLink: __webpack_require__ } = _,
+        const { appid: _, eventLink: _ } = _,
           _ = _.useRef(null),
           { data: _ } = (0, _._)(_._.steamid),
           [_, _] = _.useState(""),
@@ -2928,7 +2917,7 @@
             const _ = _().CancelToken.source();
             (_.current = _.cancel), _(!0);
             let _ = _;
-            0 != _.trim().length && (_ += "\n\n"), (_ += __webpack_require__);
+            0 != _.trim().length && (_ += "\n\n"), (_ += _);
             const _ =
               _._.COMMUNITY_BASE_URL +
               "profiles/" +
@@ -3068,7 +3057,7 @@
                       (0, _.jsx)("div", {
                         className: _().ShareLink,
                         children: (0, _.jsx)(_._, {
-                          text: __webpack_require__,
+                          text: _,
                           event: null,
                           partnerEventStore: _.partnerEventStore,
                         }),

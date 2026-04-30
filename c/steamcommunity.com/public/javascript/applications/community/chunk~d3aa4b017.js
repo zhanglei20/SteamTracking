@@ -13,6 +13,206 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        var _ = Object.create(null);
+        return (
+          _ &&
+            _.Children.map(_, function (_) {
+              return _;
+            }).forEach(function (_) {
+              _[_.key] = (function (_) {
+                return _ && (0, _.isValidElement)(_) ? _(_) : _;
+              })(_);
+            }),
+          _
+        );
+      }
+      function _(_, _, _) {
+        return null != _[_] ? _[_] : _.props[_];
+      }
+      function _(_, _, _) {
+        var _ = _(_.children),
+          _ = (function (_, _) {
+            function _(_) {
+              return _ in _ ? _[_] : _[_];
+            }
+            (_ = _ || {}), (_ = _ || {});
+            var _,
+              _ = Object.create(null),
+              _ = [];
+            for (var _ in _)
+              _ in _ ? _.length && ((_[_] = _), (_ = [])) : _.push(_);
+            var _ = {};
+            for (var _ in _) {
+              if (_[_])
+                for (_ = 0; _ < _[_].length; _++) {
+                  var _ = _[_][_];
+                  _[_[_][_]] = __webpack_require__(_);
+                }
+              _[_] = __webpack_require__(_);
+            }
+            for (_ = 0; _ < _.length; _++) _[_[_]] = __webpack_require__(_[_]);
+            return _;
+          })(_, _);
+        return (
+          Object.keys(_).forEach(function (_) {
+            var _ = _[_];
+            if ((0, _.isValidElement)(_)) {
+              var _ = _ in _,
+                _ = _ in _,
+                _ = _[_],
+                _ = (0, _.isValidElement)(_) && !_.props._;
+              !_ || (_ && !_)
+                ? _ || !_ || _
+                  ? _ &&
+                    _ &&
+                    (0, _.isValidElement)(_) &&
+                    (_[_] = (0, _.cloneElement)(_, {
+                      onExited: __webpack_require__.bind(null, _),
+                      _: _.props._,
+                      exit: _(_, "exit", _),
+                      enter: _(_, "enter", _),
+                    }))
+                  : (_[_] = (0, _.cloneElement)(_, {
+                      _: !1,
+                    }))
+                : (_[_] = (0, _.cloneElement)(_, {
+                    onExited: __webpack_require__.bind(null, _),
+                    _: !0,
+                    exit: _(_, "exit", _),
+                    enter: _(_, "enter", _),
+                  }));
+            }
+          }),
+          _
+        );
+      }
+      var _ =
+          Object.values ||
+          function (_) {
+            return Object.keys(_).map(function (_) {
+              return _[_];
+            });
+          },
+        _ = (function (_) {
+          function _(_, _) {
+            var _,
+              _ = (_ = _.call(this, _, _) || this).handleExited.bind(
+                (0, _._)(_),
+              );
+            return (
+              (_.state = {
+                contextValue: {
+                  isMounting: !0,
+                },
+                handleExited: _,
+                firstRender: !0,
+              }),
+              _
+            );
+          }
+          (0, _._)(_, _);
+          var _ = _.prototype;
+          return (
+            (_.componentDidMount = function () {
+              (this.mounted = !0),
+                this.setState({
+                  contextValue: {
+                    isMounting: !1,
+                  },
+                });
+            }),
+            (_.componentWillUnmount = function () {
+              this.mounted = !1;
+            }),
+            (_.getDerivedStateFromProps = function (_, _) {
+              var _,
+                _,
+                _ = _.children,
+                _ = _.handleExited;
+              return {
+                children: _.firstRender
+                  ? ((_ = _),
+                    (_ = _),
+                    _(_.children, function (_) {
+                      return (0, _.cloneElement)(_, {
+                        onExited: _.bind(null, _),
+                        _: !0,
+                        appear: _(_, "appear", _),
+                        enter: _(_, "enter", _),
+                        exit: _(_, "exit", _),
+                      });
+                    }))
+                  : _(_, _, _),
+                firstRender: !1,
+              };
+            }),
+            (_.handleExited = function (_, _) {
+              var _ = _(this.props.children);
+              _.key in _ ||
+                (_.props.onExited && _.props.onExited(_),
+                this.mounted &&
+                  this.setState(function (_) {
+                    var _ = (0, _._)({}, _.children);
+                    return (
+                      delete _[_.key],
+                      {
+                        children: _,
+                      }
+                    );
+                  }));
+            }),
+            (_.render = function () {
+              var _ = this.props,
+                _ = _.component,
+                _ = _.childFactory,
+                _ = (0, _._)(_, ["component", "childFactory"]),
+                _ = this.state.contextValue,
+                _ = _(this.state.children).map(_);
+              return (
+                delete _.appear,
+                delete _.enter,
+                delete _.exit,
+                null === _
+                  ? _.createElement(
+                      _._.Provider,
+                      {
+                        value: _,
+                      },
+                      _,
+                    )
+                  : _.createElement(
+                      _._.Provider,
+                      {
+                        value: _,
+                      },
+                      _.createElement(_, _, _),
+                    )
+              );
+            }),
+            _
+          );
+        })(_.Component);
+      (_.propTypes = {}),
+        (_.defaultProps = {
+          component: "div",
+          childFactory: function (_) {
+            return _;
+          },
+        });
+      const _ = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           BroadcastEmbeddablePopoutHeader: () => _,
@@ -221,12 +421,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { steamid: _, closeModal: __webpack_require__ } = _;
+        const { steamid: _, closeModal: _ } = _;
         return (0, _.jsxs)(_._, {
           strDescription: "",
           strTitle: (0, _._)("#Button_Share"),
-          onCancel: __webpack_require__,
-          onOK: __webpack_require__,
+          onCancel: _,
+          onOK: _,
           bAlertDialog: !0,
           modalClassName: "EventDisplay_Share_Dialog",
           children: [
@@ -590,11 +790,11 @@
             this.MarkBroadcastSeen();
             let _ = "show" === _._.Get().GetChatVisibility();
             const {
-              event: __webpack_require__,
+              event: _,
               language: _,
               fnRenderBroadcastContext: _,
             } = this.props;
-            __webpack_require__ &&
+            _ &&
               (_ = {
                 ..._,
                 left_panel: __webpack_require__.GetImageURL(
@@ -629,7 +829,7 @@
                   (0, _.jsxs)("div", {
                     className: (0, _._)({
                       [_().bordered_container]: !0,
-                      [_().Event]: Boolean(__webpack_require__),
+                      [_().Event]: Boolean(_),
                       broadcast_brd_ctn_trgt: !0,
                     }),
                     children: [
@@ -723,12 +923,10 @@
                     ],
                   }),
                   Boolean(
-                    __webpack_require__ &&
-                      __webpack_require__.jsondata &&
-                      __webpack_require__.jsondata.broadcast_item_drops_enabled,
+                    _ && _.jsondata && _.jsondata.broadcast_item_drops_enabled,
                   ) &&
                     (0, _.jsx)(_, {
-                      event: __webpack_require__,
+                      event: _,
                     }),
                   (0, _.jsx)("div", {
                     className: _().clear_div,
@@ -826,8 +1024,8 @@
       }
       function _(_) {
         const { stream: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.steamid]),
-          _ = _._.GetOrCreateBroadcastInfo(__webpack_require__).m_nAppID,
+          [_] = (0, _._)(() => [_.steamid]),
+          _ = _._.GetOrCreateBroadcastInfo(_).m_nAppID,
           _ = _.list.find(
             (_) =>
               _.appid == _ &&
@@ -849,8 +1047,7 @@
           );
         }
         {
-          const _ =
-            _._.COMMUNITY_BASE_URL + "broadcast/watch/" + __webpack_require__;
+          const _ = _._.COMMUNITY_BASE_URL + "broadcast/watch/" + _;
           return (0, _.jsx)(_._, {
             toolTipContent: (0, _._)("#BroadcastWatch_View_Broadcast_Page"),
             children: (0, _.jsx)("a", {
@@ -1043,7 +1240,7 @@
       function _(_) {
         const {
             curStream: _,
-            onStreamSelect: __webpack_require__,
+            onStreamSelect: _,
             fnFilterStreams: _,
             bShowCapsuleArt: _,
             broadcastEmbedContext: _,
@@ -1094,7 +1291,7 @@
                   {
                     stream: _,
                     bSelected: _.accountid == _.accountid,
-                    onStreamSelect: __webpack_require__,
+                    onStreamSelect: _,
                     bShowCapsuleArt: _,
                   },
                   null !== (_ = _.accountid) && void 0 !== _ ? _ : _.steamid,
@@ -1107,7 +1304,7 @@
       function _(_) {
         const {
           onStreamSelect: _,
-          bSelected: __webpack_require__,
+          bSelected: _,
           stream: _,
           bShowCapsuleArt: _,
         } = _;
@@ -1137,13 +1334,13 @@
               children: (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _().stream_icon_container,
-                  __webpack_require__ && _().stream_selected,
+                  _ && _().stream_selected,
                 ),
                 onClick: () => _ && _(_),
                 rootMargin: "100px 0px 100px 0px",
                 children: (0, _.jsx)(_, {
                   strThumbnail: _.thumbnail_http_address,
-                  bSelected: __webpack_require__,
+                  bSelected: _,
                   strCapsuleArtURL: _,
                 }),
               }),
@@ -1166,11 +1363,7 @@
         });
       }
       function _(_) {
-        const {
-            strCapsuleArtURL: _,
-            strThumbnail: __webpack_require__,
-            bSelected: _,
-          } = _,
+        const { strCapsuleArtURL: _, strThumbnail: _, bSelected: _ } = _,
           _ = _ ? _().stream_icon_selected : _().stream_icon;
         if (_) {
           const _ = [_];
@@ -1189,12 +1382,12 @@
         }
         return (0, _.jsx)("img", {
           className: _,
-          src: __webpack_require__,
+          src: _,
         });
       }
       function _(_) {
-        const { stream: _, orientation: __webpack_require__ } = _,
-          _ = "below" == __webpack_require__,
+        const { stream: _, orientation: _ } = _,
+          _ = "below" == _,
           [_, _] = (0, _._)(() => {
             var _;
             return [
@@ -1257,6 +1450,19 @@
       });
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (void 0 === _)
+          throw new ReferenceError(
+            "this hasn't been initialised - super() hasn't been called",
+          );
+        return _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
   },
 ]);

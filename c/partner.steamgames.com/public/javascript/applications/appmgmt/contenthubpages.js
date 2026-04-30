@@ -26,6 +26,8 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
       };
@@ -71,6 +73,25 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         _: "_2LxgdMcpWJRjkxZKbmeEEb",
         SubText: "vg0EOhKTLB3tLvshHMr7l",
         AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
@@ -109,18 +130,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
-      }
-      function _(_, _, _, _) {
-        return _(_ || _, _, _);
-      }
-      var _ = __webpack_require__("chunkid");
       const _ = Object.assign(
         function (_) {
-          const { render: _, ...__webpack_require__ } = _;
-          return _(
+          const { render: _, ..._ } = _;
+          return (0, _._)(
             _,
             (0, _.jsx)(_._, {
               radius: "sm",
@@ -129,7 +145,7 @@
             }),
             {
               role: "listbox",
-              ...__webpack_require__,
+              ..._,
             },
           );
         },
@@ -137,17 +153,20 @@
           Option: function (_) {
             const {
                 selected: _,
-                focused: __webpack_require__,
+                focused: _,
                 label: _ = null,
                 render: _,
                 disabled: _,
                 ..._
               } = _,
               _ = _ ? "true" : "false",
-              _ = __webpack_require__ ? "true" : void 0;
-            return _(
+              _ = _ ? "true" : void 0;
+            return (0, _._)(
               _,
               (0, _.jsx)(_._, {
+                navProps: {
+                  focusable: !0,
+                },
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,
@@ -161,7 +180,7 @@
               },
               {
                 selected: _,
-                focused: __webpack_require__,
+                focused: _,
                 disabled: _,
               },
             );
@@ -169,33 +188,31 @@
         },
       );
       var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      __webpack_require__("chunkid");
       (0, _.createContext)(null);
       function _(_) {
-        const { gutter: _ = 0, placement: __webpack_require__ } = _,
+        const { gutter: _ = 0, placement: _ } = _,
           _ = [],
-          _ = __webpack_require__ && "object" == typeof __webpack_require__;
+          _ = _ && "object" == typeof _;
         return (
-          _ && __webpack_require__.offset
-            ? _.push((0, _._)(__webpack_require__.offset))
-            : (_ && void 0 !== __webpack_require__.offset) ||
-              _.push((0, _._)(2)),
-          _ && __webpack_require__.flip
-            ? _.push((0, _._)(__webpack_require__.flip))
-            : (_ && void 0 !== __webpack_require__.flip) || _.push((0, _._)()),
-          _ && __webpack_require__.shift
-            ? _.push((0, _._)(__webpack_require__.shift))
-            : (_ && void 0 !== __webpack_require__.shift) || _.push((0, _._)()),
+          _ && _.offset
+            ? _.push((0, _._)(_.offset))
+            : (_ && void 0 !== _.offset) || _.push((0, _._)(2)),
+          _ && _.flip
+            ? _.push((0, _._)(_.flip))
+            : (_ && void 0 !== _.flip) || _.push((0, _._)()),
+          _ && _.shift
+            ? _.push((0, _._)(_.shift))
+            : (_ && void 0 !== _.shift) || _.push((0, _._)()),
           _.push(
             (0, _._)({
               apply: (_) => {
                 const { rects: _, elements: _, availableHeight: _ } = _,
-                  _ =
-                    "number" == typeof _
-                      ? _ - _ + "px"
-                      : `calc( ${_}px - var(--spacing-${_}) )`,
                   _ = {
-                    maxHeight: _,
                     boxSizing: "border-box",
                     zIndex: "1",
                   };
@@ -216,9 +233,25 @@
                   (_.width = _.width({
                     unContentWidth: _.floating.width,
                     unTargetWidth: _.reference.width,
-                  })),
+                  }));
+                const _ =
+                  "number" == typeof _ ? `${_}px` : `var(--spacing-${_})`;
+                "function" == typeof _.maxHeight
+                  ? (_.maxHeight = _.maxHeight({
+                      unAvailableHeight: _,
+                      gutter: _,
+                    }))
+                  : "number" == typeof _.maxHeight
+                    ? (_.maxHeight = `min( calc( ${_}px - ${_} ), ${_.maxHeight}px )`)
+                    : (_.maxHeight =
+                        "number" == typeof _
+                          ? _ - _ + "px"
+                          : `calc( ${_}px - var(--spacing-${_}) )`),
                   Object.assign(_.floating.style, _),
-                  _.floating.style.setProperty("--popover-max-height", _);
+                  _.floating.style.setProperty(
+                    "--popover-max-height",
+                    _.maxHeight,
+                  );
               },
             }),
           ),
@@ -226,10 +259,42 @@
         );
       }
       const _ = (0, _.createContext)(null);
+      function _(_) {
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+            });
+      }
+      function _(_) {
+        const { state: _, children: _ } = _,
+          _ = _.useRef(void 0);
+        return (
+          (0, _._)(_, !!_.current, !1),
+          (0, _.jsx)(_._, {
+            navID: "PopoverList",
+            onCancelButton: () => _.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: _,
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const { state: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          context: _.floating.context,
+          initialFocus: _.initialFocus,
+          returnFocus: !1,
+          children: _,
+        });
+      }
       const _ = function (_) {
-          const { children: _, state: __webpack_require__ } = _;
+          const { children: _, state: _ } = _;
           return (0, _.jsx)(_.Provider, {
-            value: __webpack_require__,
+            value: _,
             children: _,
           });
         },
@@ -253,7 +318,7 @@
           });
         },
         _ = function (_) {
-          const { children: _, render: __webpack_require__, ref: _ } = _,
+          const { children: _, render: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
             _ = (0, _._)([_, _?.floating.refs.setFloating]),
             _ = (0, _._)();
@@ -261,15 +326,13 @@
             ? _.open
               ? (0, _.jsx)(_._, {
                   root: _?.targetElement,
-                  children: (0, _.jsx)(_._, {
-                    context: _.floating.context,
-                    initialFocus: _.initialFocus,
-                    returnFocus: !1,
+                  children: (0, _.jsx)(_, {
+                    state: _,
                     children: (0, _.jsx)(_, {
                       ref: _,
                       style: _.floating.floatingStyles,
                       ..._.getFloatingProps(),
-                      render: __webpack_require__,
+                      render: _,
                       children: (0, _.jsx)(_._, {
                         elementsRef: _.elementsRef,
                         labelsRef: _.labelsRef,
@@ -287,7 +350,7 @@
         _ = function (_) {
           const {
               children: _,
-              label: __webpack_require__,
+              label: _,
               selected: _,
               onSelect: _,
               ref: _,
@@ -296,7 +359,7 @@
             } = _,
             _ = (0, _.useContext)(_),
             { ref: _, index: _ } = (0, _._)({
-              label: __webpack_require__,
+              label: _,
             }),
             _ = (0, _._)([_, _]);
           if (!_)
@@ -313,7 +376,7 @@
             selected: _,
             focused: _,
             role: "option",
-            tabIndex: _ ? 0 : -1,
+            tabIndex: 0,
             ..._.getItemProps({
               onClick: _ ? void 0 : _,
               onKeyDown: (_) => {
@@ -339,7 +402,7 @@
       function _(_) {
         const {
             children: _,
-            beforeContent: __webpack_require__,
+            beforeContent: _,
             afterContent: _,
             hasValue: _,
             ..._
@@ -347,7 +410,7 @@
           _ = (function (_) {
             const {
                 variant: _ = "default",
-                size: __webpack_require__ = "2",
+                size: _ = "2",
                 radius: _,
                 focusable: _ = !0,
                 hoverable: _ = !0,
@@ -368,7 +431,7 @@
                   _ && !_ && _.Clickable,
                   _ && _.Disabled,
                   _[`Variant-${_}`],
-                  _[`Size-${__webpack_require__}`],
+                  _[`Size-${_}`],
                   _,
                 ),
               },
@@ -380,10 +443,10 @@
           align: "center",
           "data-has-value": !!_,
           children: [
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)(_._, {
                 paddingRight: "2",
-                children: __webpack_require__,
+                children: _,
               }),
             (0, _.jsx)(_._, {
               flexGrow: "1",
@@ -400,14 +463,14 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
-          _ = __webpack_require__.size ? void 0 : _.IconSizeDefault;
+        const { viewBoxSize: _ = 20, ..._ } = _,
+          _ = _.size ? void 0 : _.IconSizeDefault;
         return (0, _.jsx)("svg", {
           viewBox: `0 0 ${_} ${_}`,
           ...(0, _._)(
             {
               className: _,
-              ...__webpack_require__,
+              ..._,
             },
             _,
           ),
@@ -478,30 +541,35 @@
       function _(_) {
         const {
             checked: _,
-            onChange: __webpack_require__,
+            onChange: _,
             disabled: _,
             children: _,
             ref: _,
             variant: _ = "default",
+            color: _,
             ..._
           } = _,
           _ = "indeterminate" === _,
           _ = _ ? _ : _,
           _ = () => {
-            __webpack_require__ && __webpack_require__(!!_ || !_);
+            _ || (_ && __webpack_require__(!!_ || !_));
           };
         return (0, _.jsxs)(_._, {
+          align: "center",
           ref: _,
           role: "checkbox",
           "aria-checked": _ ? "mixed" : _,
           "data-state": _(_),
-          className: _()(_.Root, _[`Variant-${_}`]),
+          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
           onClick: _,
           tabIndex: 0,
           onKeyDown: (_) => {
-            " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
+            _ ||
+              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
           },
           cursor: "default",
+          "aria-disabled": _,
+          "data-accent-color": _,
           ..._,
           children: [
             (0, _.jsx)("div", {
@@ -531,17 +599,13 @@
         });
       }
       function _(_, _) {
-        const {
-            onSelectionChange: __webpack_require__,
-            selectedValue: _,
-            ..._
-          } = _,
+        const { onSelectionChange: _, selectedValue: _, ..._ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(
             (_) => {
               __webpack_require__(_), _ || _(!1);
             },
-            [__webpack_require__, _],
+            [_, _],
           ),
           _ = (0, _.useCallback)(
             (_) => {
@@ -575,40 +639,32 @@
         Root: function (_) {
           const {
               children: _,
-              state: __webpack_require__,
+              state: _,
               placement: _ = "bottom-end",
               popoverWidth: _ = "dropdown",
+              popoverMaxHeight: _,
               ..._
             } = _,
             [_, _] = (0, _.useState)(null),
             [_, _] = (0, _.useState)(null),
             _ = (0, _.useMemo)(
               () =>
-                __webpack_require__.rgOptions.findIndex((_) =>
-                  __webpack_require__.multiselect
-                    ? __webpack_require__.selectedValue.includes(_)
-                    : _ === __webpack_require__.selectedValue,
+                _.rgOptions.findIndex((_) =>
+                  _.multiselect
+                    ? _.selectedValue.includes(_)
+                    : _ === _.selectedValue,
                 ),
-              [
-                __webpack_require__.selectedValue,
-                __webpack_require__.rgOptions,
-                __webpack_require__.multiselect,
-              ],
+              [_.selectedValue, _.rgOptions, _.multiselect],
             ),
             _ = (0, _.useRef)(null),
             _ = {
-              ...__webpack_require__,
+              ..._,
               ..._,
               focusedValue: _,
               onFocusChange: _,
               refPopover: _,
               setOpen: (_) => {
-                _ &&
-                  _(
-                    __webpack_require__.multiselect
-                      ? __webpack_require__.selectedValue[0]
-                      : __webpack_require__.selectedValue,
-                  ),
+                _ && _(_.multiselect ? _.selectedValue[0] : _.selectedValue),
                   __webpack_require__.setOpen(_);
               },
               focusedIndex: _,
@@ -617,7 +673,7 @@
             _ = (function (_) {
               const {
                 open: _,
-                onOpenChange: __webpack_require__,
+                onOpenChange: _,
                 activeIndex: _,
                 setActiveIndex: _,
                 selectedIndex: _,
@@ -629,7 +685,7 @@
               let _ = _;
               const _ = (0, _._)({
                   open: _,
-                  onOpenChange: __webpack_require__,
+                  onOpenChange: _,
                   middleware: _(_),
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
@@ -684,15 +740,14 @@
                 initialFocus: _.virtualItemFocus ? -1 : void 0,
               };
             })({
-              open: __webpack_require__.bOpen,
-              onOpenChange: __webpack_require__.setOpen,
+              open: _.bOpen,
+              onOpenChange: _.setOpen,
               width: _,
+              maxHeight: _,
               placement: _,
               selectedIndex: _,
               setSelectedIndex: (_) =>
-                __webpack_require__.onItemSelectionChange(
-                  __webpack_require__.rgOptions[_],
-                ),
+                __webpack_require__.onItemSelectionChange(_.rgOptions[_]),
               activeIndex: _,
               setActiveIndex: _,
               gutter: "4",
@@ -712,7 +767,7 @@
           });
         },
         Option: function (_) {
-          const { value: _, children: __webpack_require__, disabled: _ } = _,
+          const { value: _, children: _, disabled: _, ..._ } = _,
             {
               onItemSelectionChange: _,
               multiselect: _,
@@ -725,6 +780,7 @@
             onSelect: () => _(_),
             selected: _,
             disabled: _,
+            ..._,
             children: [
               _ &&
                 (0, _.jsxs)(_._, {
@@ -735,10 +791,10 @@
                       checked: _,
                       variant: "dark",
                     }),
-                    __webpack_require__,
+                    _,
                   ],
                 }),
-              !_ && __webpack_require__,
+              !_ && _,
             ],
           });
         },
@@ -750,7 +806,7 @@
           });
         },
         Trigger: function (_) {
-          const { children: _, render: __webpack_require__ } = _,
+          const { children: _, render: _ } = _,
             {
               bOpen: _,
               setOpen: _,
@@ -787,20 +843,16 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_, {}),
-            _ = _(
-              __webpack_require__,
-              (0, _.jsx)(_, {
-                afterContent: _,
-                variant: _,
-                size: _,
-                radius: _,
-                hasValue: _,
-                tabIndex: 0,
-                ..._,
-              }),
-              _,
-              void 0,
-            );
+            _ = (0, _.jsx)(_, {
+              afterContent: _,
+              variant: _,
+              size: _,
+              radius: _,
+              hasValue: _,
+              tabIndex: 0,
+              ..._,
+            }),
+            _ = (0, _._)(_, _, _, void 0);
           return (0, _.jsx)(_, {
             children: _,
           });
@@ -835,7 +887,7 @@
       const _ = Object.assign(function (_) {
         const {
             selectedValue: _,
-            onSelectionChange: __webpack_require__,
+            onSelectionChange: _,
             options: _,
             placeholder: _,
             getOptionLabel: _ = _,
@@ -844,7 +896,7 @@
           _ = (function (_) {
             return _(_, !1);
           })({
-            onSelectionChange: __webpack_require__,
+            onSelectionChange: _,
             selectedValue: _,
             rgOptions: _,
             placeholder: _,
@@ -868,14 +920,14 @@
               ],
             }),
             (0, _.jsx)(_.Options, {
-              children: _.rgOptions.map((_) =>
+              children: _.rgOptions.map((_, _) =>
                 (0, _.jsx)(
                   _.Option,
                   {
                     value: _,
                     children: _(_),
                   },
-                  _(_),
+                  _,
                 ),
               ),
             }),
@@ -886,7 +938,7 @@
       const _ = Object.assign(function (_) {
           const {
               selectedValue: _,
-              onSelectionChange: __webpack_require__,
+              onSelectionChange: _,
               options: _,
               placeholder: _,
               getOptionLabel: _ = _,
@@ -895,7 +947,7 @@
             _ = (function (_) {
               return _(_, !0);
             })({
-              onSelectionChange: __webpack_require__,
+              onSelectionChange: _,
               selectedValue: _,
               rgOptions: _,
               placeholder: _,
@@ -928,14 +980,14 @@
                 ],
               }),
               (0, _.jsx)(_.Options, {
-                children: _.rgOptions.map((_) =>
+                children: _.rgOptions.map((_, _) =>
                   (0, _.jsx)(
                     _.Option,
                     {
                       value: _,
                       children: _(_),
                     },
-                    _(_),
+                    _,
                   ),
                 ),
               }),
@@ -970,7 +1022,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function () {
         const [_, _] = _.useState(),
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
         _.useEffect(() => {
@@ -981,7 +1033,7 @@
         const _ = _.useCallback((_) => {
           _(_), _(!0);
         }, []);
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)("div", {
               className: _().AdminPageCtn,
               children: [
@@ -1062,7 +1114,7 @@
             });
       });
       function _(_) {
-        const { categories: _, onUpdate: __webpack_require__ } = _,
+        const { categories: _, onUpdate: _ } = _,
           { rgTags: _ } = (0, _._)(),
           [_] = (0, _._)("edit");
         if (!_)
@@ -1114,7 +1166,7 @@
         });
       }
       function _(_) {
-        const { rgTags: _, replacesTags: __webpack_require__ } = _,
+        const { rgTags: _, replacesTags: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               __webpack_require__
@@ -1123,7 +1175,7 @@
                   return (_?.name || "Unknown tag") + " (" + String(_._) + ")";
                 })
                 .join(", "),
-            [__webpack_require__, _],
+            [_, _],
           );
         return _
           ? (0, _.jsx)("span", {
@@ -1132,12 +1184,7 @@
           : (0, _.jsx)("span", {});
       }
       function _(_) {
-        const {
-            item: _,
-            rgTags: __webpack_require__,
-            fnSaveCategory: _,
-            bOpenEditor: _,
-          } = _,
+        const { item: _, rgTags: _, fnSaveCategory: _, bOpenEditor: _ } = _,
           [_, _, _] = (0, _._)(_);
         return (0, _.jsx)("div", {
           className: _().CategoryCtn,
@@ -1175,7 +1222,7 @@
               (0, _.jsx)("div", {
                 className: _().ReplacesTags,
                 children: (0, _.jsx)(_, {
-                  rgTags: __webpack_require__,
+                  rgTags: _,
                   replacesTags: _.replaces_tags,
                 }),
               }),
@@ -1192,7 +1239,7 @@
         });
       }
       function _(_) {
-        const { fnSaveCategory: _, closeModal: __webpack_require__ } = _,
+        const { fnSaveCategory: _, closeModal: _ } = _,
           [_, _] = _.useState(_.category),
           _ = _.useMemo(
             () => [
@@ -1222,8 +1269,8 @@
         return (0, _.jsxs)(_._, {
           title: `Edit Category (ID ${_._})`,
           bAllowFullSize: !0,
-          onCancel: __webpack_require__,
-          closeModal: __webpack_require__,
+          onCancel: _,
+          closeModal: _,
           children: [
             (0, _.jsx)(_._, {
               children: (0, _.jsxs)("div", {
@@ -1331,7 +1378,7 @@
             }),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
-                onCancel: __webpack_require__,
+                onCancel: _,
                 onOK: () => {
                   _(_), __webpack_require__();
                 },
@@ -1342,16 +1389,13 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-            rgContentDescriptors: _,
-            setContentDescriptors: __webpack_require__,
-          } = _,
+        const { rgContentDescriptors: _, setContentDescriptors: _ } = _,
           _ = _.useMemo(() => [2, 1, 4, 3], []);
         return (0, _.jsx)(_._, {
           label: "Content Descriptors",
           children: (0, _.jsx)(_, {
             selectedValue: _,
-            onSelectionChange: __webpack_require__,
+            onSelectionChange: _,
             options: _,
             getOptionLabel: (_) =>
               (function (_) {
@@ -1381,7 +1425,7 @@
         });
       });
       function _(_) {
-        const { category: _, setCategory: __webpack_require__ } = _,
+        const { category: _, setCategory: _ } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(0);
         return (0, _.jsxs)(_.Fragment, {
@@ -1394,19 +1438,19 @@
                   children: [
                     (0, _.jsx)(_, {
                       category: _,
-                      setCategory: __webpack_require__,
+                      setCategory: _,
                       list: "must",
                       title: "Must have all of these tags",
                     }),
                     (0, _.jsx)(_, {
                       category: _,
-                      setCategory: __webpack_require__,
+                      setCategory: _,
                       list: "any",
                       title: "Must have one of these tags",
                     }),
                     (0, _.jsx)(_, {
                       category: _,
-                      setCategory: __webpack_require__,
+                      setCategory: _,
                       list: "mustnot",
                       title: "Must not have any of these tags",
                     }),
@@ -1421,7 +1465,7 @@
                 children: [
                   (0, _.jsx)(_, {
                     category: _,
-                    setCategory: __webpack_require__,
+                    setCategory: _,
                     list: "replaces_tags",
                     title:
                       "The following Tags should redirect to this category page",
@@ -1545,12 +1589,7 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-            category: _,
-            setCategory: __webpack_require__,
-            list: _,
-            title: _,
-          } = _,
+        const { category: _, setCategory: _, list: _, title: _ } = _,
           { rgTags: _, rgCategories: _ } = (0, _._)(),
           _ = (_) => {
             __webpack_require__((_) => ({
@@ -1663,14 +1702,14 @@
         });
       });
       function _(_) {
-        const { categories: _, onSave: __webpack_require__, closeModal: _ } = _,
+        const { categories: _, onSave: _, closeModal: _ } = _,
           [_, _] = _.useState();
         return (
           _.useEffect(() => {
             (0, _._)(_).then((_) => {
               _ ? _(_.strErrorMsg) : (__webpack_require__(), _ && _());
             });
-          }, [_, _, __webpack_require__]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             strTitle: "Saving",
             bAlertDialog: !0,
@@ -1689,18 +1728,16 @@
         );
       }
       function _(_) {
-        const { onPublish: _, closeModal: __webpack_require__ } = _,
+        const { onPublish: _, closeModal: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState();
         return (
           _.useEffect(() => {
             _ &&
               (0, _._)().then((_) => {
-                _
-                  ? _(_.strErrorMsg)
-                  : (_(), _(!1), __webpack_require__ && __webpack_require__());
+                _ ? _(_.strErrorMsg) : (_(), _(!1), _ && __webpack_require__());
               });
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             strTitle: _ ? "Publishing" : "Really Publish?",
             strDescription:
@@ -1710,10 +1747,10 @@
             bDisableBackgroundDismiss: _,
             bHideCloseIcon: _,
             onOK: () => {
-              _ ? __webpack_require__ && __webpack_require__() : _(!0);
+              _ ? _ && __webpack_require__() : _(!0);
             },
             onCancel: () => {
-              __webpack_require__ && __webpack_require__();
+              _ && __webpack_require__();
             },
             children:
               _ &&
@@ -1759,134 +1796,92 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 8476, 19))),
-        (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 99574, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 43789, 19))),
-        (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 815, 19))),
-        (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4289, 19))),
-        (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 54978, 19))),
-        (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 33800, 19))),
-        (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3907, 19))),
-        (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45040, 19))),
-        (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94750, 19))),
-        (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69668, 19))),
-        (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45233, 19))),
-        (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 90200, 19))),
-        (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31864, 19))),
-        (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7263, 19))),
-        (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 30295, 19))),
-        (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 50559, 19))),
-        (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 86512, 19))),
-        (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 52889, 19))),
-        (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72269, 19))),
-        (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 34419, 19))),
-        (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75777, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 23723, 19))),
-        (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 85436, 19))),
-        (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 76736, 19))),
-        (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94625, 19))),
-        (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15191, 19))),
-        (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4230, 19))),
-        (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 34792, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27246, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 59863, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
+      function _(_, _, _) {
+        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
+      }
+      function _(_, _, _, _) {
+        return _(_ || _, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "span", ref: _, className: _, ..._ } = _,
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: _,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_, _.contrast ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_.color ?? "text-body", _),
+            ],
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ..._,
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`TextSize-${_}`],
+          },
+        ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

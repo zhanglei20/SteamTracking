@@ -40,12 +40,9 @@
                 (0, _.jsx)(_._, {
                   config: {
                     "qanda-root": () => {
-                      const {
-                        vanity_str: _,
-                        session_gid: __webpack_require__,
-                      } = _.match.params;
+                      const { vanity_str: _, session_gid: _ } = _.match.params;
                       return (0, _.jsx)(_._, {
-                        gidSession: __webpack_require__,
+                        gidSession: _,
                       });
                     },
                   },

@@ -25,6 +25,18 @@
         VideoLargeContainer: "_3mzKCP4FLx7fUVeKrhZ1nn",
         VideoPopupContainers: "_2LqAoKcZgpOtpoj5_URVNJ",
         VideoLarge: "_3zPl6O67BYIiFOlq7FxlJP",
+        BackgroundAnimation: "TqTKL7i3GSFlH_ZgPVf1z",
+        "ItemFocusAnim-darkerGrey-nocolor": "cm_5koVmrBLuCZgPBCMie",
+        "ItemFocusAnim-darkerGrey": "PnVMlqvX5SCAvSN6U3hb9",
+        "ItemFocusAnim-darkGreySettings": "_3WN-nRn7q-FIwR4QBoVI_u",
+        "ItemFocusAnim-darkGrey": "_3y6HrP9DK-Ttsri2UnKeJ4",
+        "ItemFocusAnim-grey": "_3adXp5-v5skt9f-KA1WB_8",
+        "ItemFocusAnim-translucent-white-10": "_1981I-jlGsaAi65IqAxEdm",
+        "ItemFocusAnim-translucent-white-20": "_1ukTwVbofcJj1v0AVkiuc3",
+        "ItemFocusAnimBorder-darkGrey": "_2LVjWAaAuOqf5tKQMJ99XC",
+        "ItemFocusAnim-green": "_1VtcP5LWUyNvo0_5bYQYEx",
+        focusAnimation: "n40ksCk7VHLZG8f1e517V",
+        hoverAnimation: "YiXS6irpqMezE03xkO2Un",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -62,27 +74,20 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
-            if (!__webpack_require__) return [];
+            if (!_) return [];
             const _ =
-              __webpack_require__.categories?.supported_player_categoryids?.slice(
-                0,
-                1,
-              ) || [];
+              _.categories?.supported_player_categoryids?.slice(0, 1) || [];
             return (
-              __webpack_require__.categories?.feature_categoryids?.forEach(
-                (_) => _.push(_),
-              ),
-              __webpack_require__.categories?.controller_categoryids?.forEach(
-                (_) => _.push(_),
-              ),
-              __webpack_require__.categories?.supported_player_categoryids
+              _.categories?.feature_categoryids?.forEach((_) => _.push(_)),
+              _.categories?.controller_categoryids?.forEach((_) => _.push(_)),
+              _.categories?.supported_player_categoryids
                 ?.slice(1)
                 .forEach((_) => _.push(_)),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ && 0 != _.length
           ? (0, _.jsx)("div", {
               className: (0, _._)(_().SaleTagBlockCtn, "SaleTagBlockCtn"),
@@ -138,7 +143,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, bPopOutTrailerPlayback: __webpack_require__ } = _,
+        const { _: _, bPopOutTrailerPlayback: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -148,8 +153,8 @@
           _ = _?.highlights?.filter((_) => !_ || _.all_ages),
           _ = _ && _?.length > 0 ? _[0] : void 0,
           _ = _.useCallback(() => {
-            _ && (__webpack_require__ ? _(!0) : _((_) => !_));
-          }, [_, __webpack_require__]);
+            _ && (_ ? _(!0) : _((_) => !_));
+          }, [_, _]);
         if (!_)
           return (0, _.jsx)("div", {
             className: (0, _._)(_().HilightGrid, _().MediaContainer),
@@ -176,7 +181,7 @@
                   _: _,
                   name: _.name || "",
                 }),
-                Boolean(__webpack_require__)
+                Boolean(_)
                   ? (0, _.jsx)(_, {
                       _: _,
                       bShowModal: _,
@@ -196,7 +201,7 @@
       function _(_) {
         const {
             _: _,
-            fnOnClickButton: __webpack_require__,
+            fnOnClickButton: _,
             bLowBandwidthMode: _,
             bUseAssetWithoutOverride: _,
           } = _,
@@ -212,7 +217,7 @@
                 elFeaturedInCenter: (0, _.jsx)(_, {
                   _: _,
                   bUseAssetWithoutOverride: Boolean(_),
-                  fnOnClickButton: __webpack_require__,
+                  fnOnClickButton: _,
                 }),
                 trailer: _ && _.length > 0 ? _[0] : void 0,
                 storeItemScreenshots: _,
@@ -232,7 +237,7 @@
       function _(_) {
         const {
             elFeaturedInCenter: _,
-            _: __webpack_require__,
+            _: _,
             name: _,
             trailer: _,
             storeItemScreenshots: _,
@@ -245,7 +250,7 @@
           _ = (0, _._)(),
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)(0);
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         const _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
           _ = new Array(),
           _ = new Array();
@@ -289,7 +294,7 @@
           (_?.forEach((_, _) => {
             if ((_ || _ > 0) && _.length < 3) {
               const _ = (0, _._)(_, "thumb"),
-                _ = (0, _._)(_, "full"),
+                _ = (0, _._)(_, "600x338"),
                 _ = _.length;
               _.push(
                 (0, _.jsx)(
@@ -365,7 +370,7 @@
                       {
                         className: _().ThumbnailCtn,
                       },
-                      `app_${(0, _._)(__webpack_require__)}_${_}`,
+                      `app_${(0, _._)(_)}_${_}`,
                     ),
                   ),
                 ],
@@ -376,7 +381,7 @@
       function _(_) {
         const {
           ref: _,
-          name: __webpack_require__,
+          name: _,
           trailer: _,
           bControls: _,
           bPlayVideo: _,
@@ -407,7 +412,7 @@
           onClick: _,
           children: [
             (0, _.jsx)(_._, {
-              name: __webpack_require__,
+              name: _,
               trailerCategory: _.trailer_category,
               trailerDisplay: 1,
               mouseOver: !1,
@@ -443,12 +448,7 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            bShowModal: __webpack_require__,
-            trailerBaseID: _,
-            hideModal: _,
-          } = _,
+        const { _: _, bShowModal: _, trailerBaseID: _, hideModal: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
@@ -467,7 +467,7 @@
         return 0 == _?.length
           ? null
           : (0, _.jsx)(_._, {
-              active: __webpack_require__,
+              active: _,
               children: (0, _.jsxs)(_._, {
                 "aria-labelledby": (0, _._)(_, _),
                 bAllowFullSize: !0,
@@ -505,7 +505,7 @@
       function _(_) {
         const {
           trailer: _,
-          fnTogglePlayTrailer: __webpack_require__,
+          fnTogglePlayTrailer: _,
           bPlayVideo: _,
           onMouseEnter: _,
           onMouseLeave: _,
@@ -516,7 +516,7 @@
             [_().videoPlaying]: _,
             [_().ThumbnailCtn]: !0,
           }),
-          onClick: __webpack_require__,
+          onClick: _,
           onMouseEnter: _,
           onMouseLeave: _,
           children: [
@@ -531,11 +531,7 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            fnOnClickButton: __webpack_require__,
-            bUseAssetWithoutOverride: _,
-          } = _,
+        const { _: _, fnOnClickButton: _, bUseAssetWithoutOverride: _ } = _,
           [_, _] = (0, _._)(),
           { data: _ } = (0, _._)(_, _),
           { data: _ } = (0, _._)(_),
@@ -548,7 +544,7 @@
           noFocusRing: !0,
           className: _().MainCapsuleWithHover,
           ..._,
-          onActivate: __webpack_require__,
+          onActivate: _,
           children: [
             (0, _.jsx)("img", {
               className: _().MainCapsule,

@@ -3,15 +3,15 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [716],
   {
+    2108: (e) => {
+      e.exports = { BreadContainer: "YaL4BAoqywnKnb5jbU_il" };
+    },
     33380: (e) => {
       e.exports = {
         VideoReviewCtn: "V6zz2NPPxfnGjAchCe56r",
         YouTubePreviewImage: "_3joL1ZVcmC-6lCOLfjuIq7",
         TwitchPlayer: "_1Q0Ym9jG7UCFeD3c9LbOSy",
       };
-    },
-    66272: (e) => {
-      e.exports = { BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG" };
     },
     70758: (e) => {
       e.exports = {
@@ -51,6 +51,18 @@
         FullReviewLink: "_3_8G-9J9Ck495Bbx1AtzXb",
         FullReviewAnchor: "_3pWCNXNZaWp_KqFU6n38sy",
         FullReviewDomain: "_2R37NZqjmxkImiPnoElHtm",
+        BackgroundAnimation: "_3mJ9erLLVEMyDp_3pY3KTp",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1ulNFI0sHkRk8TBa3fDFoS",
+        "ItemFocusAnim-darkerGrey": "OAwSuqlAeZPXQNLFz_zLx",
+        "ItemFocusAnim-darkGreySettings": "_1vwA5-HGmaz4WDUPfeIMXw",
+        "ItemFocusAnim-darkGrey": "_16cDR36DBbspxGZ8MxxB4Z",
+        "ItemFocusAnim-grey": "oS4oWYqe5S8U6CukOBsBi",
+        "ItemFocusAnim-translucent-white-10": "_1jj4yrDY55YFShmQZ8VANk",
+        "ItemFocusAnim-translucent-white-20": "TqUMJDChgbfs4XXKTa2UZ",
+        "ItemFocusAnimBorder-darkGrey": "_35LQt0hozt0Fu6IHh1i9gW",
+        "ItemFocusAnim-green": "_2cU5wBvJhWpmq45gjPgBx_",
+        focusAnimation: "XfHabgjmzuwMo5SRyzbkv",
+        hoverAnimation: "_2qskIW3iRVBxrrqQ3Sel07",
       };
     },
     22584: (e) => {
@@ -146,9 +158,9 @@
           b = e.location,
           v = e.sensitive,
           A = e.strict,
-          j = e.style,
-          S = e.to,
-          w = e.innerRef,
+          S = e.style,
+          w = e.to,
+          j = e.innerRef,
           G = (0, l.A)(e, [
             "aria-current",
             "activeClassName",
@@ -166,10 +178,10 @@
         return s.createElement(n.XZ.Consumer, null, function (e) {
           e || (0, c.A)(!1);
           var a = b || e.location,
-            o = d(u(S, a), a),
+            o = d(u(w, a), a),
             l = o.pathname,
             C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-            R = C
+            x = C
               ? (0, n.B6)(a.pathname, {
                   path: C,
                   exact: y,
@@ -177,10 +189,10 @@
                   strict: A,
                 })
               : null,
-            x = !!(I ? I(R, a) : R),
-            D = "function" == typeof _ ? _(x) : _,
-            B = "function" == typeof j ? j(x) : j;
-          x &&
+            R = !!(I ? I(x, a) : x),
+            D = "function" == typeof _ ? _(R) : _,
+            B = "function" == typeof S ? S(R) : S;
+          R &&
             ((D = (function () {
               for (
                 var e = arguments.length, t = new Array(e), a = 0;
@@ -195,15 +207,104 @@
                 .join(" ");
             })(D, m)),
             (B = (0, i.A)({}, B, p)));
-          var L = (0, i.A)(
-            { "aria-current": (x && r) || null, className: D, style: B, to: o },
+          var k = (0, i.A)(
+            { "aria-current": (R && r) || null, className: D, style: B, to: o },
             G,
           );
           return (
-            h !== g ? (L.ref = t || w) : (L.innerRef = w), s.createElement(f, L)
+            h !== g ? (k.ref = t || j) : (k.innerRef = j), s.createElement(f, k)
           );
         });
       });
+    },
+    81886: (e, t, a) => {
+      "use strict";
+      function n(e) {
+        return (
+          !!e &&
+          ("game" === e ||
+            "dlc" === e ||
+            "software" === e ||
+            "music" === e ||
+            "application" === e ||
+            "demo" === e ||
+            "hardware" === e ||
+            "mod" === e ||
+            "video" == e ||
+            "beta" === e ||
+            "advertising" === e)
+        );
+      }
+      function r(e) {
+        return (
+          null != e &&
+          (0 == e ||
+            4 == e ||
+            6 == e ||
+            11 == e ||
+            1 == e ||
+            10 == e ||
+            2 == e ||
+            7 == e ||
+            12 == e ||
+            14 == e)
+        );
+      }
+      a.d(t, { fp: () => n, vm: () => r });
+    },
+    85693: (e, t, a) => {
+      "use strict";
+      a.d(t, { r: () => c });
+      var n = a(7850),
+        r = a(45699),
+        s = a(76217),
+        o = a(17083),
+        i = a(52038),
+        l = a(2108);
+      function c(e) {
+        const { crumbs: t, className: a, bHideLastArrow: c } = e;
+        return t && 0 != t.length
+          ? (0, n.jsxs)("div", {
+              className: (0, i.A)(l.BreadContainer, a),
+              children: [
+                (0, n.jsx)(s.Z, {
+                  className: "blockbg",
+                  "flow-children": "row",
+                  children: t.map((e, a) => {
+                    const s = new Array();
+                    return (
+                      e.url.startsWith("http")
+                        ? s.push(
+                            (0, n.jsx)(
+                              r.Ii,
+                              { href: e.url, children: e.name },
+                              "anchor_" + e.name,
+                            ),
+                          )
+                        : s.push(
+                            (0, n.jsx)(
+                              o.N_,
+                              { to: e.url, children: e.name },
+                              "link_" + e.name,
+                            ),
+                          ),
+                      (!c || a < t.length - 1) &&
+                        s.push(
+                          (0, n.jsx)(
+                            "span",
+                            { children: " > " },
+                            e.name + "span",
+                          ),
+                        ),
+                      s
+                    );
+                  }),
+                }),
+                (0, n.jsx)("div", { style: { clear: "left" } }),
+              ],
+            })
+          : null;
+      }
     },
     57876: (e, t, a) => {
       "use strict";
@@ -325,13 +426,17 @@
           )
             return o.by.k_RejectWrongPlatform;
         }
-        return !t.prepurchase && e.BIsComingSoon()
-          ? o.by.k_RejectNoComingSoon
-          : !t.virtual_reality && e.GetPlatforms()?.vr_support.vrhmd_only
-            ? o.by.k_RejectNoVR
-            : e.GetAllCreatorClanIDs()?.some((e) => a.BIsIgnoringCurator(e))
-              ? o.by.k_RejectCreatorClan
-              : o.by.k_NotRejected;
+        if (!t.prepurchase && e.BIsComingSoon())
+          return o.by.k_RejectNoComingSoon;
+        const n = e.GetPlatforms();
+        return !t.virtual_reality &&
+          n &&
+          n.vr_support &&
+          n.vr_support.vrhmd_only
+          ? o.by.k_RejectNoVR
+          : e.GetAllCreatorClanIDs()?.some((e) => a.BIsIgnoringCurator(e))
+            ? o.by.k_RejectCreatorClan
+            : o.by.k_NotRejected;
       }
       function _(e, t) {
         if (t.localized) {
@@ -354,33 +459,32 @@
         if (!t.early_access && l.BIsEarlyAccess())
           return o.by.k_RejectEarlyAccess;
         const d = l.GetAppType();
-        return t.software || 6 != d
-          ? t.games_already_in_library && u.BIsGameOwned(e)
+        if (!t.software && 6 == d) return o.by.k_RejectSoftware;
+        if (t.games_already_in_library && u.BIsGameOwned(e))
+          return o.by.k_RejectInLibrary;
+        if (t.games_not_in_library && !u.BIsGameOwned(e))
+          return o.by.k_RejectNotInLibrary;
+        if (!t.video && [7, 8, 9].includes(d)) return o.by.k_RejectVideo;
+        if (t.has_discount) {
+          const e = l.GetBestPurchaseOption();
+          if (!e || !e.discount_pct) return o.by.k_RejectNoDiscount;
+        }
+        return "adultonly" != a &&
+          t.no_ao_content &&
+          (l.HasContentDescriptorID(3) || l.HasContentDescriptorID(4))
+          ? o.by.k_RejectAO
+          : 1 == d &&
+              t.games_already_in_library &&
+              u.BIsGameOwned(l.GetParentAppID() || 0)
             ? o.by.k_RejectInLibrary
-            : t.games_not_in_library && !u.BIsGameOwned(e)
-              ? o.by.k_RejectNotInLibrary
-              : !t.video && [7, 8, 9].includes(d)
-                ? o.by.k_RejectVideo
-                : t.has_discount && !l.GetBestPurchaseOption().discount_pct
-                  ? o.by.k_RejectNoDiscount
-                  : "adultonly" != a &&
-                      t.no_ao_content &&
-                      (l.HasContentDescriptorID(3) ||
-                        l.HasContentDescriptorID(4))
-                    ? o.by.k_RejectAO
-                    : 1 == d &&
-                        t.games_already_in_library &&
-                        u.BIsGameOwned(l.GetParentAppID())
-                      ? o.by.k_RejectInLibrary
-                      : i
-                        ? (1 == d && n.BHasAppID(l.GetParentAppID())) ||
-                          n.BHasAppID(e)
-                          ? o.by.k_RejectAlreadyDisplayed
-                          : t.has_trailer && !l.BHasTrailers(!1)
-                            ? o.by.k_RejectNoTrailer
-                            : _(l, t)
-                        : o.by.k_NotRejected
-          : o.by.k_RejectSoftware;
+            : i
+              ? (1 == d && n.BHasAppID(l.GetParentAppID() || 0)) ||
+                n.BHasAppID(e)
+                ? o.by.k_RejectAlreadyDisplayed
+                : t.has_trailer && !l.BHasTrailers(!1)
+                  ? o.by.k_RejectNoTrailer
+                  : _(l, t)
+              : o.by.k_NotRejected;
       }
       function h(e, t) {
         const a = r.Fm.Get();
@@ -468,12 +572,13 @@
         return { strVideoID: t, nStartSeconds: n };
       }
     },
-    36837: (e, t, a) => {
+    62734: (e, t, a) => {
       "use strict";
-      a.d(t, { f: () => r });
-      var n = a(78327);
-      class r {
-        m_HomeView;
+      a.d(t, { f: () => s });
+      var n = a(81393);
+      var r = a(78327);
+      class s {
+        m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -482,19 +587,22 @@
         }
         static s_globalSingletonStore;
         static Get() {
+          var e;
           return (
-            r.s_globalSingletonStore ||
-              ((r.s_globalSingletonStore = new r()),
-              "dev" == n.TS.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = r.s_globalSingletonStore)),
-            r.s_globalSingletonStore
+            s.s_globalSingletonStore ||
+              ((e = "CHomeViewStore.s_globalSingletonStore"),
+              (0, n.wT)(!0, "Unexpected code running in SSR Server: " + e),
+              (s.s_globalSingletonStore = new s()),
+              "dev" == r.TS.WEB_UNIVERSE &&
+                (window.g_HomeViewSetting = s.s_globalSingletonStore)),
+            s.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === n.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
-          const e = (0, n.Tc)("home_view_setting", "application_config");
+          "dev" === r.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          const e = (0, r.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-          const t = (0, n.Tc)(
+          const t = (0, r.Tc)(
             "home_view_setting_override",
             "application_config",
           );
@@ -519,11 +627,13 @@
           );
         }
         SetHomeViewSettingOverride(e) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ...e?.all,
-            ...e?.maincap,
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ...e?.all,
+                ...e?.maincap,
+              })
+            : (this.m_HomeView = { home: { ...e?.all, ...e?.maincap } });
         }
       }
     },
@@ -533,9 +643,9 @@
         F6: () => I,
         ME: () => A,
         RA: () => v,
-        cc: () => S,
-        fq: () => w,
-        m1: () => j,
+        cc: () => w,
+        fq: () => j,
+        m1: () => S,
       });
       var n = a(34629),
         r = a(41735),
@@ -770,7 +880,7 @@
           v.Get().GetListDetails(t)
         );
       }
-      function j(e) {
+      function S(e) {
         const t = e && c.ac.GetClanInfoByClanAccountID(e),
           [a, n] = (0, i.useState)(!!t);
         return (
@@ -785,16 +895,16 @@
           t
         );
       }
-      function S(e) {
+      function w(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
-      function w(e) {
+      function j(e) {
         const t = (0, h.CH)(),
-          a = S(e) ? e.sale_clan_event_gid : null,
+          a = w(e) ? e.sale_clan_event_gid : null,
           n = a && d.O3.GetClanEventModel(a);
         return (
           (0, i.useEffect)(() => {
-            if (n || !S(e)) return;
+            if (n || !w(e)) return;
             const r = s().CancelToken.source();
             return (
               (async () => {
@@ -813,59 +923,6 @@
         );
       }
       (0, n.Cg)([o.sH], v.prototype, "m_mapList", void 0);
-    },
-    22305: (e, t, a) => {
-      "use strict";
-      a.d(t, { r: () => c });
-      var n = a(7850),
-        r = a(66272),
-        s = a(52038),
-        o = a(17083),
-        i = a(45699),
-        l = a(76217);
-      function c(e) {
-        const { crumbs: t, className: a } = e;
-        return t && 0 != t.length
-          ? (0, n.jsxs)("div", {
-              className: (0, s.A)(r.BreadContainer, a),
-              children: [
-                (0, n.jsx)(l.Z, {
-                  className: "blockbg",
-                  "flow-children": "row",
-                  children: t.map((e) => {
-                    const t = new Array();
-                    return (
-                      e.url.startsWith("http")
-                        ? t.push(
-                            (0, n.jsx)(
-                              i.Ii,
-                              { href: e.url, children: e.name },
-                              "anchor_" + e.name,
-                            ),
-                          )
-                        : t.push(
-                            (0, n.jsx)(
-                              o.N_,
-                              { to: e.url, children: e.name },
-                              "link_" + e.name,
-                            ),
-                          ),
-                      t.push(
-                        (0, n.jsx)(
-                          "span",
-                          { children: " > " },
-                          e.name + "span",
-                        ),
-                      ),
-                      t
-                    );
-                  }),
-                }),
-                (0, n.jsx)("div", { style: { clear: "left" } }),
-              ],
-            })
-          : null;
-      }
     },
     99032: (e, t, a) => {
       "use strict";
@@ -886,7 +943,7 @@
         o = a(30894),
         i = a(16021),
         l = a(78327),
-        c = a(36837),
+        c = a(62734),
         u = a(81393);
       function d(e) {
         return i.A.Get().BIsStoreItemMissing(e.id, (0, r.SW)(e.type));
@@ -1212,21 +1269,21 @@
       }
       var v = a(6626),
         A = a(30894),
-        j = a(16021),
-        S = a(62792),
-        w = a(55263),
+        S = a(16021),
+        w = a(62792),
+        j = a(55263),
         G = a(39020),
         C = a(39777),
-        R = a(33380),
-        x = a.n(R),
+        x = a(33380),
+        R = a.n(x),
         D = a(12155),
         B = a(52038),
-        L = a(70758);
-      const k = new RegExp(
+        k = a(70758);
+      const L = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
       function N(e) {
-        const t = k.exec(e);
+        const t = L.exec(e);
         return t && t.length > 1 ? t[1] : null;
       }
       function T(e) {
@@ -1246,7 +1303,7 @@
           return (0, n.jsxs)("div", {
             className: (0, B.A)(
               "YoutubePreviewContainer",
-              L.YoutubePreviewImage,
+              k.YoutubePreviewImage,
               e.imageClassnames,
             ),
             onClick: () => m(!1),
@@ -1254,7 +1311,7 @@
               (0, n.jsx)("img", {
                 className: (0, B.A)(
                   "YoutubePreviewImage",
-                  L.YoutubePreviewImage,
+                  k.YoutubePreviewImage,
                 ),
                 src:
                   t ||
@@ -1283,12 +1340,12 @@
               return `${t}h${a}m${(e -= a * e)}s`;
             })(l)}`),
           (0, n.jsxs)("div", {
-            className: (0, B.A)("YoutubePlayer", x().TwitchPlayer),
+            className: (0, B.A)("YoutubePlayer", R().TwitchPlayer),
             children: [
               (0, n.jsx)("img", {
                 className: (0, B.A)(
                   "YoutubePreviewContainer",
-                  L.YoutubePreviewImage,
+                  k.YoutubePreviewImage,
                   e.imageClassnames,
                 ),
                 src:
@@ -1307,8 +1364,8 @@
         );
       }
       var E = a(706),
-        P = a(99032),
-        F = a(75152),
+        F = a(99032),
+        P = a(75152),
         H = a(22687),
         V = a(22797),
         O = a(10224),
@@ -1317,9 +1374,9 @@
         U = a(61336),
         W = a(62014),
         z = a.n(W),
-        K = a(22305),
-        q = a(22584);
-      function Z(e) {
+        q = a(85693),
+        Z = a(22584);
+      function K(e) {
         const { clanInfo: t } = e,
           { curator_link: a, curator_medium_avatar: r } = (0, y.Tc)(
             "curator_header",
@@ -1348,8 +1405,8 @@
                 (0, n.jsxs)("div", {
                   className: "curator_details",
                   children: [
-                    (0, n.jsx)(K.r, {
-                      className: q.BreadContainer,
+                    (0, n.jsx)(q.r, {
+                      className: Z.BreadContainer,
                       crumbs: (0, y.Tc)("breadcrumbs", "application_config"),
                     }),
                     (0, n.jsx)(l.Ii, {
@@ -1367,9 +1424,9 @@
           }),
         });
       }
-      var $ = a(32630),
-        X = a(35380),
-        Q = a(42834);
+      var X = a(32630),
+        Q = a(35380),
+        $ = a(42834);
       const J = function (e) {
         return (0, n.jsx)(c.u, {
           navID: "StoreCuratorPageRoot",
@@ -1385,10 +1442,10 @@
         return (
           (0, G.vb)(y.TS.LANGUAGE),
           r
-            ? (0, n.jsxs)($.Ay, {
+            ? (0, n.jsxs)(X.Ay, {
                 feature: "curatorlistcapsule",
                 children: [
-                  (0, n.jsx)(Z, { clanInfo: a }),
+                  (0, n.jsx)(K, { clanInfo: a }),
                   (0, n.jsx)("div", {
                     className: "page_content_ctn grayscale",
                     children: (0, n.jsx)("div", {
@@ -1468,15 +1525,15 @@
                 .HintLoad()
                 .then(() => {
                   const e = a.map((e) => e.recommended_app.appid);
-                  j.A.Get()
-                    .QueueMultipleAppRequests(e, P.jy)
+                  S.A.Get()
+                    .QueueMultipleAppRequests(e, F.jy)
                     .then(() => {
                       d.token.reason ||
                         c(
                           a.filter(
                             (e) =>
-                              !(0, P.Li)(
-                                j.A.Get().GetApp(e.recommended_app.appid),
+                              !(0, F.Li)(
+                                S.A.Get().GetApp(e.recommended_app.appid),
                               ),
                           ),
                         );
@@ -1590,18 +1647,18 @@
         const { item: t, listDetails: a, bAutoFocus: r } = e,
           o = parseInt((0, y.Tc)("curator_account_id", "application_config")),
           i = (0, v.m1)(o),
-          [l] = (0, w.t7)(t?.recommended_app?.appid, {
+          [l] = (0, j.t7)(t?.recommended_app?.appid, {
             include_assets: !0,
             include_release: !0,
           }),
           c = (0, s.useMemo)(
             () => ({
               id: l?.GetID(),
-              type: (0, S._4)(l?.GetStoreItemType(), l?.GetAppType()),
+              type: (0, w._4)(l?.GetStoreItemType(), l?.GetAppType()),
             }),
             [l],
           ),
-          m = (0, X.rt)(c);
+          m = (0, Q.rt)(c);
         if (!i || !l) return null;
         const {
             appid: p,
@@ -1613,11 +1670,11 @@
           I = i.is_creator_home && !i.is_ogg,
           b = a.list_jsondata.app_data?.[p],
           A = _ && (0, d.XU)(_),
-          j = _ && N(_),
+          S = _ && N(_),
           G = f != v.F6 && f,
           C = l.BHasDemo(),
-          R = b?.img_url,
-          x = `curator_clanid=${i.clanAccountID}&curator_listid=${a.listid}`,
+          x = b?.img_url,
+          R = `curator_clanid=${i.clanAccountID}&curator_listid=${a.listid}`,
           D = l.GetStorePageURL() + "/?curator_clanid=" + i.clanAccountID;
         return (0, n.jsxs)(u.Z, {
           className: z().CuratorReview,
@@ -1625,21 +1682,21 @@
           children: [
             (0, n.jsx)("div", {
               className: z().CapsuleCtn,
-              children: Boolean(A || j)
+              children: Boolean(A || S)
                 ? (0, n.jsx)(se, {
-                    strVideoID: A?.strVideoID || j,
+                    strVideoID: A?.strVideoID || S,
                     nStartSeconds: A?.nStartSeconds,
                     id: m,
-                    strImgOverrideUrl: R,
+                    strImgOverrideUrl: x,
                     bShowDemoButton: C,
-                    strExtraParams: x,
-                    bTwitchVideo: Boolean(j),
+                    strExtraParams: R,
+                    bTwitchVideo: Boolean(S),
                   })
                 : (0, n.jsx)(H.W, {
                     imageType: "header",
                     capsule: c,
                     bShowDemoButton: C,
-                    strExtraParams: x,
+                    strExtraParams: R,
                     bPreferAssetWithoutOverride: !1,
                   }),
             }),
@@ -1697,7 +1754,7 @@
               children: l
                 ? (0, n.jsx)(T, {
                     videoid: t,
-                    posterURL: c ? (0, Q.b0)(c, "header") : void 0,
+                    posterURL: c ? (0, $.b0)(c, "header") : void 0,
                     imageClassnames: z().YouTubePreviewImage,
                     autoplay: !0,
                   })
@@ -1730,11 +1787,11 @@
                     },
                     children: (0, n.jsx)("img", {
                       className: z().GameImage,
-                      src: c ? (0, Q.b0)(c, "library_capsule") : void 0,
+                      src: c ? (0, $.b0)(c, "library_capsule") : void 0,
                     }),
                   }),
                 }),
-                (0, n.jsx)(F.q, { id: r, strClassName: z().FullWidth }),
+                (0, n.jsx)(P.q, { id: r, strClassName: z().FullWidth }),
               ],
             }),
           ],

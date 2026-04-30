@@ -48,6 +48,18 @@
         ReviewScorePercentage: "_2jmj3hWBpHbR2XUcZaAXFp",
         ReviewScoreLabel: "uEsfJ0VAuX37ItihZkK2J",
         GameHoverCreatorFollowButtonCtn: "_1RMWITT8PsJOgR4SoIR3Sw",
+        BackgroundAnimation: "_2-NF7UzSGK3WLmqugAW3EM",
+        "ItemFocusAnim-darkerGrey-nocolor": "bfQTK-Cop8MYUAa9j7rQb",
+        "ItemFocusAnim-darkerGrey": "_1_wN_hVuLwcfYlTDIE-HTs",
+        "ItemFocusAnim-darkGreySettings": "YO_BEpx_0vuXWdgMFEjkL",
+        "ItemFocusAnim-darkGrey": "_32cDe-nAMlG7JYrA6niEGN",
+        "ItemFocusAnim-grey": "_2LnPTi1cPqqxqvII8cqnlh",
+        "ItemFocusAnim-translucent-white-10": "-jNJst4AtmAMI-o6ETEiC",
+        "ItemFocusAnim-translucent-white-20": "_1dwebsW8iZHHqsEF46LGhs",
+        "ItemFocusAnimBorder-darkGrey": "wiEMwKtkhMy1kSbxfOR43",
+        "ItemFocusAnim-green": "PJqmv3PnTw0P2SQBGF3nn",
+        focusAnimation: "_2mMG8YO1MWnzaegzgcISk2",
+        hoverAnimation: "_2aCSOFWsYITdHt3aWn3-vu",
       };
     },
     chunkid: (module) => {
@@ -56,6 +68,18 @@
         IgnoreButton: "_2TD7UsjzdR3Zr5ZOZ09n1J",
         IgnoreButtonText: "_2L6vwdfaFPRJ1zesEu6_Bf",
         IgnoreLoadingText: "uh8VGMa5zc623SZkB_hEQ",
+        BackgroundAnimation: "_10sTNSs7WhNZPw6GdPTOJX",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1MdU34KFhJRKlGMaHngbls",
+        "ItemFocusAnim-darkerGrey": "G_fmZBeNGKwyXP6EjOOZ_",
+        "ItemFocusAnim-darkGreySettings": "_3n4qtxFhgpKOJlGlGVcI1H",
+        "ItemFocusAnim-darkGrey": "_20-FW4mkUJEpsgtwPjoMD6",
+        "ItemFocusAnim-grey": "_1QVohJAkrDR6QXMK3fZLMu",
+        "ItemFocusAnim-translucent-white-10": "_2vttABcjIJHbd-xXLvTfgb",
+        "ItemFocusAnim-translucent-white-20": "_2uyItrki6ohcX2MO3FPcKx",
+        "ItemFocusAnimBorder-darkGrey": "_8sJgPArY-c3-X6w3X3la9",
+        "ItemFocusAnim-green": "_3ZGmJEBxcg9Rgo7ObB8qJ0",
+        focusAnimation: "_23SWPBJXy3Zmgp6Guu_3nw",
+        hoverAnimation: "_3BrzCFDf-VVWJEnHMnE5xt",
       };
     },
     chunkid: (module) => {
@@ -96,7 +120,8 @@
     chunkid: (module) => {
       module.exports = {
         CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
-        GrowOnHover: "_3vM0bLXsqCpCxuhpyYYpcJ",
+        GrowOnHoverSmall: "YoLbM_PjSF7Lk-_QYDToT",
+        GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
       };
     },
     chunkid: (module) => {
@@ -157,6 +182,18 @@
         CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
         CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
+        BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
+        "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
+        "ItemFocusAnim-darkGreySettings": "_1rM6kybplpPqKeO6oRkrNQ",
+        "ItemFocusAnim-darkGrey": "_2FbbkQw3hYI7YAtytr5IDn",
+        "ItemFocusAnim-grey": "_2suu44WFaHB4fkFfIvCI7U",
+        "ItemFocusAnim-translucent-white-10": "_2j1TKoZjmYdt4yBTKkRCgR",
+        "ItemFocusAnim-translucent-white-20": "_1qTgWOW3x6-b_CW5qQoSSo",
+        "ItemFocusAnimBorder-darkGrey": "_1Lxbh0NQsK7RWCdF8QEIej",
+        "ItemFocusAnim-green": "_1ZB1uzf3hgyFkekpi0xZg5",
+        focusAnimation: "WewegkENW7QZMuoX3r_v8",
+        hoverAnimation: "NCIvCtzfGkBvu5KDz_CE1",
       };
     },
     chunkid: (module) => {
@@ -198,6 +235,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -306,6 +344,18 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     chunkid: (module) => {
@@ -370,6 +420,18 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
+        BackgroundAnimation: "_1iEXo2C5dYh1sLdEds2zo_",
+        "ItemFocusAnim-darkerGrey-nocolor": "_6ALY2cB6oP10XwjHy38XP",
+        "ItemFocusAnim-darkerGrey": "_15R1kTQu4fktTozfpKwx_x",
+        "ItemFocusAnim-darkGreySettings": "_25-J06c8AyBhzEbrxt0OlL",
+        "ItemFocusAnim-darkGrey": "_3yxHI8TA-jq3Ka361SNOoS",
+        "ItemFocusAnim-grey": "HdE5j3QJ5wzLUrUd8A9S6",
+        "ItemFocusAnim-translucent-white-10": "_3Pg_mdzZKHlcgBMGWoeuM-",
+        "ItemFocusAnim-translucent-white-20": "OZ_TTGcJc45o9tMuXjaVs",
+        "ItemFocusAnimBorder-darkGrey": "_36t4Gu0DFfDO9-hIb82st6",
+        "ItemFocusAnim-green": "_30VQHyiQ7SgMZgv2Q9RwMo",
+        focusAnimation: "_1bLCgV4sZsGIHim8xs3go9",
+        hoverAnimation: "_3--MfPAMg27VUuOckksz2m",
       };
     },
     chunkid: (module) => {
@@ -502,6 +564,18 @@
         CapsuleName: "_31P1R5vTMyJ5RwWAfVoKYG",
         DiscountIconCtn: "_3Qt9S4lxTBuJqoY2PidC5h",
         MaxActionButtonWidth: "_3GOwBXz8cR_9njnfMGlp7b",
+        BackgroundAnimation: "_1k6sq680iiVKySIMXNcHkL",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34Tp7N_mW2y7TOcBFxCQVo",
+        "ItemFocusAnim-darkerGrey": "WQW1YbFeZjtPKckWVFjzB",
+        "ItemFocusAnim-darkGreySettings": "_2hTOwEn75PZ0XqJLLH6Yzc",
+        "ItemFocusAnim-darkGrey": "_3T33tEqMtzz3ijG8DkMXYZ",
+        "ItemFocusAnim-grey": "_1VqQfVz7N0T1g4AHmuCQu8",
+        "ItemFocusAnim-translucent-white-10": "jiBNibpWxZkJeyBzbrB5j",
+        "ItemFocusAnim-translucent-white-20": "_1y2_IkearpG-2NoiPwZu0U",
+        "ItemFocusAnimBorder-darkGrey": "_1LiqE1tXtbXey4AKzgFJfX",
+        "ItemFocusAnim-green": "_34pf2FqL7CWP6V9VNzPEIS",
+        focusAnimation: "_1wLvhANps-c7yKLact-7v8",
+        hoverAnimation: "_2FuCM99jbjgMa0JFZoisSA",
       };
     },
     chunkid: (module) => {
@@ -538,6 +612,8 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
+        GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
         VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
@@ -661,135 +737,725 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+          [_._.k_ECurrencyCodeInvalid]: {},
+          [_._.k_ECurrencyCodeUSD]: {
+            strSymbol: "$",
+          },
+          [_._.k_ECurrencyCodeGBP]: {
+            strSymbol: "£",
+          },
+          [_._.k_ECurrencyCodeEUR]: {
+            strSymbol: "€",
+          },
+          [_._.k_ECurrencyCodeCHF]: {
+            strSymbol: "CHF",
+          },
+          [_._.k_ECurrencyCodeRUB]: {
+            strSymbol: "руб.",
+            bSuffixSymbol: !0,
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: "",
+          },
+          [_._.k_ECurrencyCodePLN]: {
+            strSymbol: "zł",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeBRL]: {
+            strSymbol: "R$",
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeJPY]: {
+            strSymbol: "¥",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeNOK]: {
+            strSymbol: "kr",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeIDR]: {
+            strSymbol: "Rp",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ".",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeMYR]: {
+            strSymbol: "RM",
+          },
+          [_._.k_ECurrencyCodePHP]: {
+            strSymbol: "P",
+          },
+          [_._.k_ECurrencyCodeSGD]: {
+            strSymbol: "S$",
+          },
+          [_._.k_ECurrencyCodeTHB]: {
+            strSymbol: "฿",
+          },
+          [_._.k_ECurrencyCodeVND]: {
+            strSymbol: "₫",
+            bWholeUnitsOnly: !0,
+            bSuffixSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeKRW]: {
+            strSymbol: "₩",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeTRY]: {
+            strSymbol: "TL",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeUAH]: {
+            strSymbol: "₴",
+            bSuffixSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeMXN]: {
+            strSymbol: "Mex$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCAD]: {
+            strSymbol: "CDN$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeAUD]: {
+            strSymbol: "A$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeNZD]: {
+            strSymbol: "NZ$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCNY]: {
+            strSymbol: "¥",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeINR]: {
+            strSymbol: "₹",
+            bSpaceForSymbol: !0,
+            bWholeUnitsOnly: !0,
+          },
+          [_._.k_ECurrencyCodeCLP]: {
+            strSymbol: "CLP$",
+            bSpaceForSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodePEN]: {
+            strSymbol: "S/.",
+          },
+          [_._.k_ECurrencyCodeCOP]: {
+            strSymbol: "COL$",
+            bSpaceForSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeZAR]: {
+            strSymbol: "R",
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ".",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeHKD]: {
+            strSymbol: "HK$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeTWD]: {
+            strSymbol: "NT$",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeSAR]: {
+            strSymbol: "SR",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeAED]: {
+            strSymbol: "AED",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeSEK]: {
+            strSymbol: "kr",
+            bSpaceForSymbol: !0,
+            bSuffixSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeARS]: {
+            strSymbol: "ARS$",
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeILS]: {
+            strSymbol: "₪",
+          },
+          [_._.k_ECurrencyCodeBYN]: {
+            strSymbol: "Br",
+          },
+          [_._.k_ECurrencyCodeKZT]: {
+            strSymbol: "₸",
+            bSuffixSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeKWD]: {
+            strSymbol: "KD",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeQAR]: {
+            strSymbol: "QR",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCRC]: {
+            strSymbol: "₡",
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeUYU]: {
+            strSymbol: "$U",
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeBGN]: {
+            strSymbol: "лв",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeHRK]: {
+            strSymbol: "kn",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCZK]: {
+            strSymbol: "Kč",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeDKK]: {
+            strSymbol: "kr.",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeHUF]: {
+            strSymbol: "Ft",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeRON]: {
+            strSymbol: "lei",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeMax]: {},
+        },
+        _ = {
+          strSymbol: "",
+          bSuffixSymbol: !1,
+          bSpaceForSymbol: !1,
+          bWholeUnitsOnly: !1,
+          eCurrency: _._.k_ECurrencyCodeInvalid,
+          strDecimalSymbol: ".",
+          strThousandsSeparator: ",",
+        };
+      function _(_) {
+        return {
+          ..._,
+          ..._[_],
+          eCurrency: _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _(_, (0, _._)(_));
+      }
+      function _(_, _) {
+        const {
+            strSymbol: _,
+            bSuffixSymbol: _,
+            bSpaceForSymbol: _,
+            bWholeUnitsOnly: _,
+            strDecimalSymbol: _,
+            strThousandsSeparator: _,
+          } = _,
+          _ = _ < 0,
+          _ = _ && _ % 100 == 0;
+        _ && (_ = -_);
+        const _ = [];
+        for (let _ = 0; _ < 2; _++)
+          _ || _.push(_ % 10), (_ = Math.floor(_ / 10));
+        !_ && _ && _.push(_);
+        let _ = 0;
+        do {
+          _++ % 3 == 0 && _ > 2 && _ && _.push(_),
+            _.push(_ % 10),
+            (_ = Math.floor(_ / 10));
+        } while (_ > 0);
+        const _ = _.reverse().join(""),
+          _ = _ ? " " : "",
+          _ = _ ? "-" : "";
+        return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        switch (_?.toUpperCase()) {
+          case "AE":
+            return _._.k_ECurrencyCodeAED;
+          case "AU":
+            return _._.k_ECurrencyCodeAUD;
+          case "BR":
+            return _._.k_ECurrencyCodeBRL;
+          case "CA":
+            return _._.k_ECurrencyCodeCAD;
+          case "CH":
+          case "LI":
+            return _._.k_ECurrencyCodeCHF;
+          case "CL":
+            return _._.k_ECurrencyCodeCLP;
+          case "CN":
+          case "XC":
+            return _._.k_ECurrencyCodeCNY;
+          case "CO":
+            return _._.k_ECurrencyCodeCOP;
+          case "CR":
+            return _._.k_ECurrencyCodeCRC;
+          case "AD":
+          case "AL":
+          case "AT":
+          case "AX":
+          case "BA":
+          case "BE":
+          case "BG":
+          case "CY":
+          case "CZ":
+          case "DE":
+          case "DK":
+          case "EE":
+          case "ES":
+          case "FI":
+          case "FO":
+          case "FR":
+          case "GF":
+          case "GI":
+          case "GP":
+          case "GR":
+          case "HR":
+          case "HU":
+          case "IE":
+          case "IT":
+          case "LT":
+          case "LU":
+          case "LV":
+          case "MC":
+          case "ME":
+          case "MK":
+          case "MQ":
+          case "MT":
+          case "NC":
+          case "NL":
+          case "PF":
+          case "PT":
+          case "RE":
+          case "RO":
+          case "RS":
+          case "SE":
+          case "SI":
+          case "SJ":
+          case "SK":
+          case "SM":
+          case "VA":
+            return _._.k_ECurrencyCodeEUR;
+          case "GB":
+          case "GG":
+          case "GS":
+          case "IM":
+          case "JE":
+            return _._.k_ECurrencyCodeGBP;
+          case "HK":
+            return _._.k_ECurrencyCodeHKD;
+          case "ID":
+            return _._.k_ECurrencyCodeIDR;
+          case "IL":
+            return _._.k_ECurrencyCodeILS;
+          case "IN":
+            return _._.k_ECurrencyCodeINR;
+          case "JP":
+            return _._.k_ECurrencyCodeJPY;
+          case "KR":
+            return _._.k_ECurrencyCodeKRW;
+          case "KW":
+            return _._.k_ECurrencyCodeKWD;
+          case "KZ":
+            return _._.k_ECurrencyCodeKZT;
+          case "MX":
+            return _._.k_ECurrencyCodeMXN;
+          case "MY":
+            return _._.k_ECurrencyCodeMYR;
+          case "NO":
+            return _._.k_ECurrencyCodeNOK;
+          case "NZ":
+            return _._.k_ECurrencyCodeNZD;
+          case "PE":
+            return _._.k_ECurrencyCodePEN;
+          case "PH":
+            return _._.k_ECurrencyCodePHP;
+          case "PL":
+            return _._.k_ECurrencyCodePLN;
+          case "QA":
+            return _._.k_ECurrencyCodeQAR;
+          case "RU":
+            return _._.k_ECurrencyCodeRUB;
+          case "SA":
+            return _._.k_ECurrencyCodeSAR;
+          case "SG":
+            return _._.k_ECurrencyCodeSGD;
+          case "TH":
+            return _._.k_ECurrencyCodeTHB;
+          case "TW":
+            return _._.k_ECurrencyCodeTWD;
+          case "UA":
+            return _._.k_ECurrencyCodeUAH;
+          case "AF":
+          case "AG":
+          case "AI":
+          case "AM":
+          case "AN":
+          case "AO":
+          case "AQ":
+          case "AR":
+          case "AS":
+          case "AW":
+          case "AZ":
+          case "BB":
+          case "BD":
+          case "BF":
+          case "BH":
+          case "BI":
+          case "BJ":
+          case "BM":
+          case "BN":
+          case "BO":
+          case "BS":
+          case "BT":
+          case "BV":
+          case "BW":
+          case "BY":
+          case "BZ":
+          case "CC":
+          case "CD":
+          case "CF":
+          case "CG":
+          case "CI":
+          case "CK":
+          case "CM":
+          case "CV":
+          case "CX":
+          case "DJ":
+          case "DM":
+          case "DO":
+          case "DZ":
+          case "EC":
+          case "EG":
+          case "EH":
+          case "ER":
+          case "ET":
+          case "FJ":
+          case "FK":
+          case "FM":
+          case "GA":
+          case "GD":
+          case "GE":
+          case "GH":
+          case "GL":
+          case "GM":
+          case "GN":
+          case "GQ":
+          case "GT":
+          case "GU":
+          case "GW":
+          case "GY":
+          case "HM":
+          case "HN":
+          case "HT":
+          case "IO":
+          case "IQ":
+          case "IS":
+          case "JM":
+          case "JO":
+          case "KE":
+          case "KG":
+          case "KH":
+          case "KI":
+          case "KM":
+          case "KN":
+          case "KY":
+          case "LA":
+          case "LB":
+          case "LC":
+          case "LK":
+          case "LR":
+          case "LS":
+          case "LY":
+          case "MA":
+          case "MD":
+          case "MG":
+          case "MH":
+          case "ML":
+          case "MM":
+          case "MN":
+          case "MO":
+          case "MP":
+          case "MR":
+          case "MS":
+          case "MU":
+          case "MV":
+          case "MW":
+          case "MZ":
+          case "NA":
+          case "NE":
+          case "NF":
+          case "NG":
+          case "NI":
+          case "NP":
+          case "NR":
+          case "NU":
+          case "OM":
+          case "PA":
+          case "PG":
+          case "PK":
+          case "PM":
+          case "PN":
+          case "PR":
+          case "PS":
+          case "PW":
+          case "PY":
+          case "RW":
+          case "SB":
+          case "SC":
+          case "SD":
+          case "SH":
+          case "SL":
+          case "SN":
+          case "SO":
+          case "SR":
+          case "ST":
+          case "SV":
+          case "SY":
+          case "SZ":
+          case "TC":
+          case "TD":
+          case "TF":
+          case "TG":
+          case "TJ":
+          case "TK":
+          case "TL":
+          case "TM":
+          case "TN":
+          case "TO":
+          case "TR":
+          case "TT":
+          case "TV":
+          case "TZ":
+          case "UG":
+          case "UM":
+          case "US":
+          case "UZ":
+          case "VC":
+          case "VE":
+          case "VG":
+          case "VI":
+          case "VU":
+          case "WF":
+          case "WS":
+          case "YE":
+          case "YT":
+          case "ZM":
+          case "ZW":
+            return _._.k_ECurrencyCodeUSD;
+          case "UY":
+            return _._.k_ECurrencyCodeUYU;
+          case "VN":
+            return _._.k_ECurrencyCodeVND;
+          case "ZA":
+            return _._.k_ECurrencyCodeZAR;
+          default:
+            return (
+              console.assert(!1, `Unhandled country code: ${_}`),
+              _._.k_ECurrencyCodeUSD
+            );
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
+            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
+            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
+            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
+            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
+            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
+            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
+            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
+            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
+            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
+            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
+            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
+            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
+            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
+            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
+            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
+            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
+            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
+            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
+            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
+            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
+            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
+            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
+            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
+            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
+            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
+            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
+            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
+            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
+            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
+            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
+            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
+            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
+            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
+            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
+            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
+            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
+            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
+            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
+            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
+            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
+            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
+            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
+            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
+            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
+            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
+            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
+            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
+            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
+        })(_ || (_ = {}));
+      _.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 6696, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 6696, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 58906, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 58906, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53473, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 53473, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83899, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83899, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84925, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84925, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69902, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69902, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 80716, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 80716, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 81663, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 81663, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48484, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 48484, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66810, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 66810, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 13744, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 13744, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 62101, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 62101, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 68948, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 68948, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 2916, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 2916, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 40195, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40195, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84259, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84259, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24475, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 24475, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 36884, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 36884, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15269, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 15269, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96865, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 96865, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 71391, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71391, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 64933, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 64933, 19))),
         (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27503, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27503, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44768, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 44768, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 20876, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 20876, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75181, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75181, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89779, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89779, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98970, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98970, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 87996, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 87996, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 47306, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 47306, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72539, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 72539, 19)));
       const _ = (0, __webpack_require__("chunkid")._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -806,7 +1472,7 @@
       }
       function _(_, _) {
         const {
-            fullmonthname: __webpack_require__ = !1,
+            fullmonthname: _ = !1,
             bUseRelativeNames: _ = !0,
             bIncludeDayName: _ = !1,
           } = _ ?? {},
@@ -814,7 +1480,7 @@
           _ = new Date(1e3 * _);
         if (_.getFullYear() != _.getFullYear())
           return _(_, {
-            month: __webpack_require__ ? "long" : "short",
+            month: _ ? "long" : "short",
           });
         const _ = new Date();
         if ((_.setHours(0, 0, 0, 0), _))
@@ -826,7 +1492,7 @@
           } else if ((_.setDate(_.getDate() - 1), _ >= _))
             return _.Localize("#Time_Yesterday");
         const _ = {
-          month: __webpack_require__ ? "long" : "short",
+          month: _ ? "long" : "short",
           day: "numeric",
         };
         return _ && (_.weekday = "long"), _.toLocaleDateString((0, _._)(), _);
@@ -908,12 +1574,12 @@
         });
       }
       function _() {
-        const [_, _, __webpack_require__] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return {
           elDialogElement: (0, _.jsx)(_._, {
             active: _,
             children: (0, _.jsx)(_, {
-              closeModal: __webpack_require__,
+              closeModal: _,
             }),
           }),
           fnShowLogonDialog: _,
@@ -952,7 +1618,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, snr: __webpack_require__, classOverride: _ } = _,
+        const { _: _, snr: _, classOverride: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverIgnoreButton"),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
@@ -993,7 +1659,7 @@
                 (0, _._)();
               },
             });
-          })(_, !_, __webpack_require__),
+          })(_, !_, _),
           _ = _ && "appid" in _ && _._.Get().BIsGameIgnored(_.appid);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().IgnoreButton, _),
@@ -1097,31 +1763,27 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        if (
-          !__webpack_require__ ||
-          __webpack_require__.unvailable_for_country_restriction ||
-          !__webpack_require__.visible
-        )
+          { data: _ } = (0, _._)(_);
+        if (!_ || _.unvailable_for_country_restriction || !_.visible)
           return (0, _.jsx)("div", {
             className: _().TrailerCtn,
             children: (0, _.jsx)(_, {}, "default"),
           });
-        const _ = __webpack_require__.item_type,
-          _ = __webpack_require__.type;
+        const _ = _.item_type,
+          _ = _.type;
         return 2 == _ || 1 == _
           ? (0, _.jsx)(_, {
-              includeAppIDs: __webpack_require__.included_appids,
+              includeAppIDs: _.included_appids,
             })
           : (1 == _ || 12 == _) &&
-              __webpack_require__.related_items &&
-              __webpack_require__.related_items.parent_appid
+              _.related_items &&
+              _.related_items.parent_appid
             ? (0, _.jsx)(_, {
-                demoItemDefaultInfo: __webpack_require__,
-                parentAppID: __webpack_require__.related_items.parent_appid,
+                demoItemDefaultInfo: _,
+                parentAppID: _.related_items.parent_appid,
               })
             : (0, _.jsx)(_, {
-                storeItemDefaultData: __webpack_require__,
+                storeItemDefaultData: _,
               });
       }
       function _(_) {
@@ -1160,7 +1822,7 @@
         });
       }
       function _(_) {
-        const { demoItemDefaultInfo: _, parentAppID: __webpack_require__ } = _,
+        const { demoItemDefaultInfo: _, parentAppID: _ } = _,
           _ = (0, _._)(_);
         return (0, _._)(_)
           ? (0, _.jsx)(_, {
@@ -1169,17 +1831,13 @@
           : (0, _.jsx)(_, {
               demoID: _,
               demoItemDefaultInfo: _,
-              parentAppID: __webpack_require__,
+              parentAppID: _,
             });
       }
       function _(_) {
-        const {
-            parentAppID: _,
-            demoID: __webpack_require__,
-            demoItemDefaultInfo: _,
-          } = _,
+        const { parentAppID: _, demoID: _, demoItemDefaultInfo: _ } = _,
           _ = (0, _._)(_),
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(
@@ -1199,8 +1857,8 @@
                     ),
                   _
                 );
-              })(__webpack_require__, _, _, _, _, _),
-            [__webpack_require__, _, _, _, _, _],
+              })(_, _, _, _, _, _),
+            [_, _, _, _, _, _],
           );
         return (0, _.jsx)(_, {
           rgTrailerAndImages: _,
@@ -1278,6 +1936,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1285,7 +1944,7 @@
       function _(_) {
         const {
             hoverContent: _,
-            hoverProps: __webpack_require__,
+            hoverProps: _,
             nDelayShowMs: _,
             nWidthMultiplier: _,
             children: _,
@@ -1317,7 +1976,7 @@
                 target: _,
                 nDelayShowMs: _,
                 nWidthMultiplier: _,
-                hoverProps: __webpack_require__,
+                hoverProps: _,
                 children: _,
               }),
             (0, _.jsx)(_._, {
@@ -1329,7 +1988,7 @@
       function _(_) {
         const {
             hoverProps: _,
-            nDelayShowMs: __webpack_require__ = _,
+            nDelayShowMs: _ = _,
             nWidthMultiplier: _ = 1.15,
             target: _,
             visible: _,
@@ -1340,12 +1999,12 @@
         if (
           (_.useEffect(() => {
             if (_) {
-              if (__webpack_require__) {
-                const _ = window.setTimeout(() => _(!0), __webpack_require__);
+              if (_) {
+                const _ = window.setTimeout(() => _(!0), _);
                 return () => window.clearTimeout(_);
               }
               _(!0);
-            } else _(!1);
+            } else (0, _._)() || _(!1);
           }, [_]),
           _.useEffect(() => {
             if (!_) return;
@@ -1394,7 +2053,7 @@
           : null;
       }
       function _(_) {
-        const { hoverProps: _, children: __webpack_require__ } = _,
+        const { hoverProps: _, children: _ } = _,
           _ = _.useCallback((_) => _?.focus(), []);
         return (0, _.jsx)(_._, {
           ..._,
@@ -1411,7 +2070,7 @@
                 ref: (0, _._)(_, _),
                 className: _().HoverContentTransition,
                 tabIndex: -1,
-                children: __webpack_require__,
+                children: _,
               }),
           }),
         });
@@ -1431,8 +2090,8 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__
+          { data: _ } = (0, _._)(_);
+        return _
           ? (0, _.jsx)("div", {
               className: _().TagRow,
               children: (0, _.jsx)("div", {
@@ -1457,7 +2116,7 @@
       function _(_) {
         const {
             _: _,
-            displayID: __webpack_require__,
+            displayID: _,
             name: _,
             strStoreUrl: _,
             elElementToAppend: _,
@@ -1473,7 +2132,7 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(""),
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(__webpack_require__),
+          { data: _ } = (0, _._)(_),
           _ = !_ && !_ && !_,
           _ = _ && 0 == _.item_type;
         return (0, _.jsxs)("div", {
@@ -1591,9 +2250,9 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        if (!__webpack_require__) return null;
-        const _ = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(_);
         return (0, _.jsx)("div", {
           className: _().ReleaseDate,
           children: _,
@@ -1601,18 +2260,18 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__
+          { data: _ } = (0, _._)(_);
+        return _
           ? (0, _.jsx)("div", {
               className: _().ShortDescription,
-              children: __webpack_require__?.short_description,
+              children: _?.short_description,
             })
           : null;
       }
       function _(_) {
         const {
             _: _,
-            displayID: __webpack_require__,
+            displayID: _,
             strStoreUrl: _,
             bHideBottomHalf: _,
             bShowDeckCompatibilityDialog: _,
@@ -1636,12 +2295,12 @@
                   children: [
                     Boolean(_ && !_) &&
                       (0, _.jsx)(_._, {
-                        _: __webpack_require__,
+                        _: _,
                         snr: _.strSNR,
                       }),
                     Boolean(_ && !_) &&
                       (0, _.jsx)(_, {
-                        _: __webpack_require__,
+                        _: _,
                         snr: _.strSNR,
                       }),
                     _ &&
@@ -1659,7 +2318,7 @@
       function _(_) {
         const {
             _: _,
-            name: __webpack_require__,
+            name: _,
             bPreventNavigation: _,
             elElementToAppend: _,
             bShowDemoButton: _,
@@ -1679,7 +2338,7 @@
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           { strStoreURL: _, snr: _ } = (0, _._)(_, _);
-        if ((!_ && !__webpack_require__) || _)
+        if ((!_ && !_) || _)
           return (0, _.jsx)(_.Fragment, {
             children: _,
           });
@@ -1694,7 +2353,7 @@
           _ = {
             _: _,
             displayID: _,
-            name: __webpack_require__,
+            name: _,
             bPreventNavigation: _,
             strStoreUrl: _,
             elElementToAppend: _,
@@ -1807,7 +2466,7 @@
             if (_) {
               const {
                 success: _,
-                err_msg: __webpack_require__,
+                err_msg: _,
                 warning: _,
                 warning_msg: _,
                 ..._
@@ -1842,7 +2501,7 @@
       function _(_) {
         const {
             nCreatorAccountID: _,
-            classOverride: __webpack_require__,
+            classOverride: _,
             styleOverride: _,
             followType: _,
           } = _,
@@ -1850,10 +2509,7 @@
           { data: _ } = _(_);
         return _ && _
           ? (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().GameHoverCreatorFollowButtonCtn,
-                __webpack_require__,
-              ),
+              className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
               style: _,
               children: [
                 (0, _.jsx)("a", {
@@ -1890,15 +2546,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _,
-            bTruncateTotalReviews: __webpack_require__,
-            bShowTooltip: _,
-          } = _,
+        const { _: _, bTruncateTotalReviews: _, bShowTooltip: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(_),
@@ -1908,7 +2560,7 @@
         let _ = _.summary_unfiltered || _.summary_filtered,
           _ = "#ReviewScore_UserReviewScoreAria",
           _ = !1;
-        const _ = (0, _._)("#Language_" + _._.LANGUAGE);
+        const _ = _._.Localize("#Language_" + _._.LANGUAGE);
         if (
           (_._.Get().BShowFilteredUserReviewScores() &&
             (_.summary_language_specific
@@ -1932,36 +2584,36 @@
             children: [
               (0, _.jsx)("div", {
                 className: _().ReviewScoreLabel,
-                "aria-label": (0, _._)(_, _.review_score_label, _),
+                "aria-label": _._.Localize(_, _.review_score_label, _),
                 children: _.review_score_label,
               }),
               (0, _.jsxs)("div", {
                 className: _().ReviewScoreCount,
-                "aria-label": (0, _._)(
+                "aria-label": _._.Localize(
                   "#GameHover_UserReviewCount",
                   _.review_count.toLocaleString((0, _._)()),
                 ),
                 children: [
                   "(",
-                  __webpack_require__
+                  _
                     ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
                     : _
-                      ? (0, _._)(
+                      ? _._.Localize(
                           "#GameHover_UserReviewCount_Lang",
                           _.review_count.toLocaleString((0, _._)()),
                           _,
                         )
-                      : (0, _._)(
+                      : _._.Localize(
                           "#GameHover_UserReviewCount",
                           _.review_count.toLocaleString((0, _._)()),
                         ),
                   ")",
                 ],
               }),
-              !__webpack_require__ &&
+              !_ &&
                 (0, _.jsxs)("div", {
                   className: _().ReviewScoreHeader,
-                  children: [" ", (0, _._)("#GameHover_UserReviewsHeader")],
+                  children: [" ", _._.Localize("#GameHover_UserReviewsHeader")],
                 }),
             ],
           });
@@ -1991,7 +2643,7 @@
             Boolean(_)
               ? (0, _.jsx)(_._, {
                   bTopmost: !0,
-                  toolTipContent: (0, _._)(
+                  toolTipContent: _._.Localize(
                     _,
                     _.percent_positive,
                     _.review_count,
@@ -2021,15 +2673,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _,
-            snr: __webpack_require__,
-            classOverride: _,
-            styleOverride: _,
-          } = _,
+        const { _: _, snr: _, classOverride: _, styleOverride: _ } = _,
           { data: _ } = (0, _._)(_),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() =>
@@ -2044,7 +2691,7 @@
           { bIsOwned: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverWishlistButton"),
-          { mutateAsync: _ } = (0, _._)(_, !_, __webpack_require__);
+          { mutateAsync: _ } = (0, _._)(_, !_, _);
         (0, _.useEffect)(() => {
           _ &&
             "appid" in _ &&
@@ -2073,7 +2720,7 @@
                     _ && _().WishlistLoadingText,
                     "WishlistButtonText",
                   ),
-                  children: (0, _._)(
+                  children: _._.Localize(
                     _ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
                   ),
                 }),
@@ -2090,125 +2737,65 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 93695, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 93695, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 41091, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 41091, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89180, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89180, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21514, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21514, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45598, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 45598, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 55971, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 55971, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67217, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67217, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27686, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27686, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7623, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 7623, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97757, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97757, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 46345, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46345, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 5600, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 5600, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51163, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51163, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 71913, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71913, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 79872, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 79872, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 12322, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94954, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48341, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97890, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97890, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21810, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21810, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75500, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75500, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72268, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 72268, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 85951, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 85951, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 28265, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 28265, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 82248, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 82248, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 62020, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 62020, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67841, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67841, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94921, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94921, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 11667, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 11667, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 74528, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 74528, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -2226,24 +2813,24 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _;
+        const { children: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           className: _.GreenButton,
           type: "button",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("span", {
             children: _,
           }),
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2262,22 +2849,22 @@
         bDisablePopTop: !0,
       };
       function _(_) {
-        const { setRemoteClientID: _, rgSessions: __webpack_require__ } = _,
+        const { setRemoteClientID: _, rgSessions: _ } = _,
           _ = (0, _.useCallback)(
             (_) => {
-              __webpack_require__?.length &&
+              _?.length &&
                 (0, _._)(
                   (0, _.jsx)(_, {
-                    sessions: __webpack_require__,
+                    sessions: _,
                     setRemoteDownloadClientId: _,
                   }),
                   _,
                   _,
                 );
             },
-            [_, __webpack_require__],
+            [_, _],
           );
-        return __webpack_require__?.length
+        return _?.length
           ? (0, _.jsx)("button", {
               onClick: _,
               className: _().ClientSelectDropdown,
@@ -2452,11 +3039,7 @@
         return null;
       }
       function _(_) {
-        const {
-          rgAcceptableSession: _,
-          session: __webpack_require__,
-          setSessionIndex: _,
-        } = _;
+        const { rgAcceptableSession: _, session: _, setSessionIndex: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -2467,7 +3050,7 @@
               children: [
                 (0, _.jsx)("span", {
                   className: _().ClientName,
-                  children: __webpack_require__.machine_name,
+                  children: _.machine_name,
                 }),
                 (0, _.jsx)(_, {
                   rgSessions: _,
@@ -2496,12 +3079,8 @@
         });
       }
       function _(_) {
-        const {
-            appid: _,
-            session: __webpack_require__,
-            setRemoteDownloadRequested: _,
-          } = _,
-          _ = (0, _._)(_, __webpack_require__.client_instanceid);
+        const { appid: _, session: _, setRemoteDownloadRequested: _ } = _,
+          _ = (0, _._)(_, _.client_instanceid);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_, {
@@ -2524,8 +3103,9 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, className: __webpack_require__ } = _,
+        const { _: _, className: _ } = _,
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ =
@@ -2535,15 +3115,15 @@
           _ = _.length > 0,
           _ = _ || 1 === _.type,
           _ = _
-            ? (0, _._)("#Sale_InstallDemo_ttip", _.name || "")
+            ? _._.Localize("#Sale_InstallDemo_ttip", _.name || "")
             : _
-              ? (0, _._)("#Sale_CannotInstallDemo_ttip", _.name || "")
-              : (0, _._)("#Loading");
+              ? _._.Localize("#Sale_CannotInstallDemo_ttip", _.name || "")
+              : _._.Localize("#Loading");
         if ((0, _._)()) {
           if (_ && _) {
             const _ = 1 === _.type ? _.appid : _[0];
             return (0, _.jsx)("div", {
-              className: __webpack_require__,
+              className: _,
               children: (0, _.jsx)(_, {
                 appid: _,
               }),
@@ -2554,7 +3134,7 @@
         return !_ && _ && _.is_free
           ? (0, _.jsx)(_._, {
               _: _,
-              className: __webpack_require__,
+              className: _,
             })
           : (0, _.jsx)(_._, {
               toolTipContent: _,
@@ -2563,14 +3143,10 @@
                   _.stopPropagation(),
                   _ && (0, _._)(1 === _.type ? _.appid : _[0], _.name);
               },
-              className: (0, _._)(
-                __webpack_require__,
-                _().DemoButton,
-                !_ && _().DisabledButton,
-              ),
+              className: (0, _._)(_, _().DemoButton, !_ && _().DisabledButton),
               children: _
-                ? (0, _._)("#Sale_InstallDemo")
-                : (0, _._)("#Sale_DemoNotFound"),
+                ? _._.Localize("#Sale_InstallDemo")
+                : _._.Localize("#Sale_DemoNotFound"),
             });
       }
     },
@@ -2588,11 +3164,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _,
-            strClassName: __webpack_require__,
-            bMinimizePlatforms: _,
-          } = _,
+        const { _: _, strClassName: _, bMinimizePlatforms: _ } = _,
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         if (_) {
@@ -2622,14 +3194,14 @@
                 })),
             _
               ? (0, _.jsx)("span", {
-                  className: (0, _._)(_().CapsulePlatform, __webpack_require__),
+                  className: (0, _._)(_().CapsulePlatform, _),
                   children: _,
                 })
               : null
           );
         }
         return (0, _.jsxs)("span", {
-          className: (0, _._)(_().CapsulePlatform, __webpack_require__),
+          className: (0, _._)(_().CapsulePlatform, _),
           children: [
             _.windows &&
               (0, _.jsx)("span", {
@@ -2679,20 +3251,27 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             bSingleLineMode: _,
-            _: __webpack_require__,
+            _: _,
             onlyOneDiscountPct: _,
             bHidePrePurchase: _,
             bHideReleaseDate: _,
             bHideIfDemo: _,
+            strContainerClassName: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
+            bPreferWholeNumbers: _,
           } = _,
           _ = _._.NOW,
-          { data: _ } = (0, _._)(__webpack_require__),
-          { data: _ } = (0, _._)(__webpack_require__),
-          { data: _ } = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = (0, _._)(_, _),
           _ = (0, _._)({
@@ -2700,6 +3279,7 @@
             [_().SingleLineMode]: _,
             StoreSalePriceWidgetContainer: !0,
             [_().NewItem]: _,
+            [_ ?? ""]: !!_,
           });
         if (_.bShowInLibrary)
           return (0, _.jsx)("div", {
@@ -2777,6 +3357,14 @@
         let _ = _.discount_pct || 0,
           _ = _ || 2 != _.item_type ? 0 : _.bundle_discount_pct || 0,
           _ = _.formatted_final_price;
+        if (_) {
+          const _ = (0, _._)(_._.country_code.toUpperCase()),
+            _ = {
+              ...(0, _._)(_),
+              bWholeUnitsOnly: !0,
+            };
+          _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
+        }
         const _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
           bSingleLineMode: Boolean(_),
@@ -2793,12 +3381,14 @@
           ),
           bShowNewFlag: _,
           bHidePrePurchase: Boolean(_),
+          strDiscountAndPriceClassName: _,
+          strPriceFormattedClassName: _,
         });
       }
       function _(_) {
         const {
             bSingleLineMode: _,
-            nDiscountPercentage: __webpack_require__,
+            nDiscountPercentage: _,
             bIsPrePurchase: _,
             nBaseDiscountPercentage: _,
             strBestPurchaseOriginalPriceFormatted: _,
@@ -2806,28 +3396,26 @@
             bHideDiscountPercentForCompliance: _,
             bShowNewFlag: _,
             bHidePrePurchase: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
           } = _,
           _ = _;
         let _;
         return (
-          __webpack_require__ &&
+          _ &&
             (_ = _
               ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
-              : _._.Localize(
-                  "#Discount_ARIA_Label",
-                  __webpack_require__,
-                  _,
-                  _,
-                )),
+              : _._.Localize("#Discount_ARIA_Label", _, _, _)),
           (0, _.jsxs)("div", {
             className: (0, _._)({
               [_().StoreSalePriceWidgetContainer]: !0,
               [_().SingleLineMode]: _,
               StoreSalePriceWidgetContainer: !0,
-              [_().Discounted]: Boolean(__webpack_require__),
-              Discounted: Boolean(__webpack_require__),
+              [_().Discounted]: Boolean(_),
+              Discounted: Boolean(_),
               [_().PrePurchase]: Boolean(_),
               [_().NewItem]: Boolean(_),
+              [_ ?? ""]: !!_,
             }),
             "aria-label": _,
             children: [
@@ -2857,7 +3445,7 @@
                         children: `-${_}%`,
                       }),
                     }),
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("span", {
@@ -2869,24 +3457,24 @@
                             ),
                             children: (0, _.jsx)("span", {
                               className: (0, _._)(_().StoreSaleDiscountBox),
-                              children: `-${__webpack_require__}%`,
+                              children: `-${_}%`,
                             }),
                           }),
                         ],
                       }),
                   ],
                 }),
-              Boolean(!_ && __webpack_require__ && !_) &&
+              Boolean(!_ && _ && !_) &&
                 (0, _.jsx)("div", {
                   className: _().StoreSaleDiscountBox,
-                  children: `-${__webpack_require__}%`,
+                  children: `-${_}%`,
                 }),
               Boolean(_) &&
                 (0, _.jsx)("div", {
                   className: _().DiscountIconCtn,
                   children: (0, _.jsx)(_.XH_, {}),
                 }),
-              Boolean((__webpack_require__ || _) && _ && !_)
+              Boolean((_ || _) && _ && !_)
                 ? (0, _.jsxs)("div", {
                     className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
                     children: [
@@ -2901,13 +3489,17 @@
                         className: (0, _._)({
                           [_().StoreSalePriceBox]: !0,
                           [_().SingleLineMode]: _,
+                          [_ ?? ""]: !!_,
                         }),
                         children: _,
                       }),
                     ],
                   })
                 : (0, _.jsx)("div", {
-                    className: _().StoreSalePriceBox,
+                    className: (0, _._)({
+                      [_().StoreSalePriceBox]: !0,
+                      [_ ?? ""]: !!_,
+                    }),
                     children: _,
                   }),
             ],
@@ -2933,12 +3525,12 @@
       function _(_) {
         const {
           rgTagIDs: _,
-          bShowEvenIfNoTags: __webpack_require__,
+          bShowEvenIfNoTags: _,
           bHideTitle: _,
           bLargeText: _,
           bNoStoreLinks: _,
         } = _;
-        return _?.length > 0 || __webpack_require__
+        return _?.length > 0 || _
           ? (0, _.jsxs)("div", {
               className: (0, _._)(
                 _().SaleTagBlockCtn,
@@ -2949,7 +3541,7 @@
                 Boolean(!_) &&
                   (0, _.jsx)("div", {
                     className: (0, _._)(_().TagTitle, "WidgetTagTitle"),
-                    children: (0, _._)("#GameHover_Tags"),
+                    children: _._.Localize("#GameHover_Tags"),
                   }),
                 Boolean(_?.length > 0)
                   ? (0, _.jsx)("div", {
@@ -2966,42 +3558,38 @@
                       ),
                     })
                   : (0, _.jsx)("div", {
-                      children: (0, _._)("#Broadcast_None"),
+                      children: _._.Localize("#Broadcast_None"),
                     }),
               ],
             })
           : null;
       }
       function _(_) {
-        const { tagid: _, className: __webpack_require__ } = _,
+        const { tagid: _, className: _ } = _,
           _ = (0, _._)(_, _._.LANGUAGE);
         if (!_) return null;
         const _ = (0, _._)((0, _._)(_._.LANGUAGE)),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return (0, _.jsx)(_._, {
           url: _,
-          className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+          className: (0, _._)(_().Tag, "WidgetTag", _),
           children: _,
         });
       }
       function _(_) {
-        const {
-            tagid: _,
-            className: __webpack_require__,
-            bNoStoreLinks: _,
-          } = _,
+        const { tagid: _, className: _, bNoStoreLinks: _ } = _,
           _ = (0, _._)((0, _._)(_._.LANGUAGE)),
           _ = (0, _._)(_, _._.LANGUAGE),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return _
           ? _
             ? (0, _.jsx)("div", {
-                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+                className: (0, _._)(_().Tag, "WidgetTag", _),
                 children: _,
               })
             : (0, _.jsx)(_._, {
                 url: _,
-                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+                className: (0, _._)(_().Tag, "WidgetTag", _),
                 children: _,
               })
           : null;
@@ -3023,7 +3611,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, bIsMuted: __webpack_require__ } = _,
+        const { appid: _, bIsMuted: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -3033,7 +3621,7 @@
           },
           _ = (0, _._)(
             _().CapsuleBottomBar,
-            __webpack_require__ && _().Muted,
+            _ && _().Muted,
             _ ? _().PlayNowButton : _().AddToLibraryButton,
           );
         return (0, _.jsx)("div", {
@@ -3067,141 +3655,6 @@
           strStoreURL: (0, _._)(_, _, _),
         };
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 8476, 19))),
-        (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 99574, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 43789, 19))),
-        (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 815, 19))),
-        (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4289, 19))),
-        (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 54978, 19))),
-        (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 33800, 19))),
-        (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3907, 19))),
-        (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45040, 19))),
-        (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94750, 19))),
-        (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69668, 19))),
-        (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45233, 19))),
-        (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 90200, 19))),
-        (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31864, 19))),
-        (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7263, 19))),
-        (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 30295, 19))),
-        (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 50559, 19))),
-        (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 86512, 19))),
-        (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 52889, 19))),
-        (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72269, 19))),
-        (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 34419, 19))),
-        (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75777, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 23723, 19))),
-        (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 85436, 19))),
-        (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 76736, 19))),
-        (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94625, 19))),
-        (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15191, 19))),
-        (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4230, 19))),
-        (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 34792, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27246, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 59863, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3263,8 +3716,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3274,22 +3729,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            _: _,
-            active: __webpack_require__,
-            bIsHoverMode: _,
-            bGrowOnHover: _,
-          } = _,
+        const { _: _, active: _, bIsHoverMode: _, eGrowOnHover: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = _.useRef(0),
           _ = _.useRef(null);
         _.useLayoutEffect(() => {
-          __webpack_require__ &&
-            _.current &&
-            (_.current.currentTime = _.current);
-        }, [__webpack_require__]);
-        const _ = (0, _._)(__webpack_require__ ? _ : void 0);
-        if ((_ && _._.IN_MOBILE) || !__webpack_require__) return null;
+          _ && _.current && (_.current.currentTime = _.current);
+        }, [_]);
+        const _ = (0, _._)(_ ? _ : void 0);
+        if ((_ && _._.IN_MOBILE) || !_) return null;
         if (!_ || !_.visible || !_) return null;
         const _ = _.filter((_) => _.microtrailer && _.microtrailer.length > 0);
         if (0 === _.length)
@@ -3303,9 +3751,17 @@
                 },
               })
             : null;
+        let _;
+        switch (_) {
+          case _.k_ETrailerGrowAmount_Small:
+            _ = _().GrowOnHoverSmall;
+            break;
+          case _.k_ETrailerGrowAmount_Medium:
+            _ = _().GrowOnHoverMedium;
+        }
         const _ = _[0];
         return (0, _.jsx)("video", {
-          className: _()(_().CapsuleMicroTrailer, _ && _().GrowOnHover),
+          className: _()(_().CapsuleMicroTrailer, _),
           loop: !0,
           muted: !0,
           controls: !1,
@@ -3328,6 +3784,13 @@
           ),
         });
       }
+      !(function (_) {
+        (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
+          (_[(_.k_ETrailerGrowAmount_Small = 1)] =
+            "k_ETrailerGrowAmount_Small"),
+          (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
+            "k_ETrailerGrowAmount_Medium");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3356,10 +3819,74 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _?.is_coming_soon
+          ? (function (_, _, _) {
+              switch (_) {
+                case "date_full":
+                  return _(_);
+                case "date_month":
+                  return _(new Date(1e3 * _));
+                case "date_quarter":
+                  return (function (_) {
+                    switch (_.getUTCMonth()) {
+                      case 0:
+                      case 1:
+                      case 2:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q1",
+                          _.getUTCFullYear(),
+                        );
+                      case 3:
+                      case 4:
+                      case 5:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q2",
+                          _.getUTCFullYear(),
+                        );
+                      case 6:
+                      case 7:
+                      case 8:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q3",
+                          _.getUTCFullYear(),
+                        );
+                      default:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q4",
+                          _.getUTCFullYear(),
+                        );
+                    }
+                  })(new Date(1e3 * _));
+                case "date_year":
+                  return new Date(1e3 * _).toLocaleDateString((0, _._)(), {
+                    year: "numeric",
+                  });
+                case "text_comingsoon":
+                  return _ || _._.Localize("#Store_ComingSoon_ComingSoon");
+                case "text_tba":
+                  return _ || _._.Localize("#Store_ComingSoon_TBA");
+                default:
+                  return "";
+              }
+            })(
+              _.coming_soon_display,
+              _.steam_release_date,
+              _.custom_release_date_message,
+            )
+          : _?.steam_release_date
+            ? _(_.steam_release_date)
+            : "";
+      }
+      function _(_) {
+        return new Date(1e3 * _).toLocaleDateString((0, _._)());
+      }
       function _(_) {
         return _.toLocaleDateString((0, _._)(), {
           month: "long",
@@ -3654,11 +4181,11 @@
       }
       function _(_) {
         const { data: _ } = (0, _._)(_ && "appid" in _ ? void 0 : _),
-          { data: __webpack_require__ } = _();
+          { data: _ } = _();
         let _;
         return (
           _ && "appid" in _ ? (_ = [_.appid]) : _ && (_ = _.included_appids),
-          void 0 === _ || void 0 === __webpack_require__ || 0 == _.length
+          void 0 === _ || void 0 === _ || 0 == _.length
             ? {
                 bIsOwned: void 0,
                 unAppID: void 0,
@@ -3942,16 +4469,10 @@
         );
       }
       const _ = (_) => {
-        const {
-          url: _,
-          event: __webpack_require__,
-          className: _,
-          style: _,
-        } = _;
+        const { url: _, event: _, className: _, style: _ } = _;
         let _,
           _ = (0, _._)(_);
-        (_ = _(_, __webpack_require__)),
-          (0, _._)(_) && (_ = "noopener nofollow");
+        (_ = _(_, _)), (0, _._)(_) && (_ = "noopener nofollow");
         const _ =
           "string" == typeof _.children &&
           _.children.length > 0 &&
@@ -3984,7 +4505,31 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.useMemo)(() => _(_), [_?._, _?.type]);
+        return (0, _.useMemo)(
+          () =>
+            (function (_) {
+              if (!_ || !_._) return;
+              if (!_.type)
+                return {
+                  appid: _._,
+                };
+              switch (_.type) {
+                case "sub":
+                  return {
+                    packageid: _._,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _._,
+                  };
+                default:
+                  return {
+                    appid: _._,
+                  };
+              }
+            })(_),
+          [_?._, _?.type],
+        );
       }
       function _(_, _) {
         return (0, _.useMemo)(
@@ -4009,32 +4554,18 @@
         );
       }
       function _(_) {
-        if (_ && _._) {
-          if (!_.type)
+        return (0, _.useMemo)(() => {
+          if (null != _ && _ != _._)
             return {
-              appid: _._,
+              appid: _,
             };
-          switch (_.type) {
-            case "sub":
-              return {
-                packageid: _._,
-              };
-            case "bundle":
-              return {
-                bundleid: _._,
-              };
-            default:
-              return {
-                appid: _._,
-              };
-          }
-        }
+        }, [_]);
       }
       function _(_) {
         return (0, _.useMemo)(() => {
           if (null != _ && _ != _._)
             return {
-              appid: _,
+              packageid: _,
             };
         }, [_]);
       }
@@ -4366,11 +4897,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = _.useRef(null);
         return (0, _.jsx)(_._, {
           nodeRef: _,
-          ...__webpack_require__,
+          ..._,
           children: _.children(_),
         });
       }
@@ -4509,11 +5040,10 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           [_, _, _] = (0, _._)();
-        if (!__webpack_require__ || !_ || 0 !== __webpack_require__.item_type)
-          return null;
+        if (!_ || !_ || 0 !== _.item_type) return null;
         const _ = _.steam_deck_compat_category || 0;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().LearnMoreCtn, "LearnMoreCtn"),
@@ -4533,7 +5063,7 @@
             (0, _.jsx)(_._, {
               active: _,
               children: (0, _.jsx)(_, {
-                nAppID: __webpack_require__.appid,
+                nAppID: _.appid,
                 closeModal: _,
               }),
             }),
@@ -4543,12 +5073,12 @@
       function _(_) {
         const {
           url: _,
-          containerClass: __webpack_require__,
+          containerClass: _,
           bIncludeIcon: _,
           onOpenBlogPost: _,
         } = _;
         return (0, _.jsxs)(_._, {
-          className: __webpack_require__,
+          className: _,
           onClick: () => {
             _ ? _() : _ && (window.location.href = _);
           },
@@ -4569,13 +5099,11 @@
         });
       }
       function _(_) {
-        const { nAppID: _, closeModal: __webpack_require__ } = _,
+        const { nAppID: _, closeModal: _ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = _.useState(
-              _.Get().GetCompatabilityResultForApp(_),
-            );
+            const [_, _] = _.useState(_.Get().GetCompatabilityResultForApp(_));
             return (
-              (0, _._)(_.Get().GetCallbackForAppList(_), __webpack_require__),
+              (0, _._)(_.Get().GetCallbackForAppList(_), _),
               _.useEffect(() => {
                 _.Get().BHasCompatabilityResultForApp(_) ||
                   _.Get()
@@ -4593,8 +5121,8 @@
         return (0, _.jsx)(_._, {
           "aria-labelledby": _,
           modalClassName: "DeckVerifiedModalDialog",
-          closeModal: __webpack_require__,
-          onCancel: __webpack_require__,
+          closeModal: _,
+          onCancel: _,
           children: (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
               focusable: !1,
@@ -4661,13 +5189,8 @@
         return null;
       }
       function _(_) {
-        const {
-          _: _,
-          category: __webpack_require__,
-          appName: _,
-          descriptionToken: _,
-        } = _;
-        if (0 == __webpack_require__)
+        const { _: _, category: _, appName: _, descriptionToken: _ } = _;
+        if (0 == _)
           return (0, _.jsx)("div", {
             _: _,
             className: _().CompatibilityDetailRatingSummary,
@@ -4682,7 +5205,7 @@
           });
         let _ = "",
           _ = null;
-        switch (__webpack_require__) {
+        switch (_) {
           case 3:
             (_ = "#SteamDeckVerified_DescriptionHeader_Verified"),
               (_ = _().Verified);
@@ -4697,7 +5220,7 @@
         }
         const _ = (0, _.jsx)("span", {
             className: _,
-            children: (0, _._)(_(__webpack_require__)),
+            children: (0, _._)(_(_)),
           }),
           _ = (0, _.jsx)("span", {
             className: _().CompatibilityDetailRatingSummary,
@@ -4720,13 +5243,8 @@
         });
       }
       function _(_) {
-        const {
-          _: _,
-          category: __webpack_require__,
-          appName: _,
-          descriptionToken: _,
-        } = _;
-        if (0 == __webpack_require__)
+        const { _: _, category: _, appName: _, descriptionToken: _ } = _;
+        if (0 == _)
           return (0, _.jsx)("div", {
             className: _().CompatibilityDetailRatingSummary,
             children: _
@@ -4740,7 +5258,7 @@
           });
         let _ = "",
           _ = null;
-        switch (__webpack_require__) {
+        switch (_) {
           case 2:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
               (_ = _().Compatible);
@@ -4751,7 +5269,7 @@
         }
         const _ = (0, _.jsx)("span", {
             className: _,
-            children: (0, _._)(_(__webpack_require__)),
+            children: (0, _._)(_(_)),
           }),
           _ = (0, _.jsx)("span", {
             className: _().CompatibilityDetailRatingSummary,
@@ -4968,12 +5486,12 @@
       };
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)({
             queryKey: [
-              __webpack_require__?._ || _._,
-              __webpack_require__?.type || "invalid",
-              __webpack_require__?.item_type || "invalid",
+              _?._ || _._,
+              _?.type || "invalid",
+              _?.item_type || "invalid",
             ],
             queryFn: () =>
               (async function (_, _) {
@@ -4993,10 +5511,8 @@
                     ))
                   );
                 return _.Body().toObject();
-              })(__webpack_require__, _),
-            enabled: Boolean(
-              __webpack_require__ && 10 === __webpack_require__.type,
-            ),
+              })(_, _),
+            enabled: Boolean(_ && 10 === _.type),
           });
         return _.isLoading ? null : _.data;
       }
@@ -5005,10 +5521,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, className: __webpack_require__ } = _,
+        const { _: _, className: _ } = _,
           _ = (0, _._)(),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -5039,9 +5555,9 @@
               });
             if (!_.inventory_available)
               return (0, _.jsx)("div", {
-                className: (0, _._)(_().ActionOutOfStock, __webpack_require__),
+                className: (0, _._)(_().ActionOutOfStock, _),
                 children: (0, _.jsxs)("span", {
-                  children: [" ", (0, _._)("#Sale_ReserveExhausted")],
+                  children: [" ", _._.Localize("#Sale_ReserveExhausted")],
                 }),
               });
           } else if (_ && _.included_appids && _.included_appids.length > 1)
@@ -5054,9 +5570,11 @@
               const _ = `${_._.IN_CLIENT ? "steam://openurl/" : ""}${_}`;
               return (0, _.jsx)("div", {
                 onClick: (_) => (0, _._)(_, _),
-                className: (0, _._)(_().Action, __webpack_require__),
+                className: (0, _._)(_().Action, _),
                 children: (0, _.jsx)("span", {
-                  children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
+                  children: _._.Localize(
+                    "#EventDisplay_CallToAction_VisitStore",
+                  ),
                 }),
               });
             }
@@ -5080,9 +5598,9 @@
                     value: _._.SESSIONID,
                   }),
                   (0, _.jsx)("button", {
-                    className: (0, _._)(_().Action, __webpack_require__),
+                    className: (0, _._)(_().Action, _),
                     type: "submit",
-                    children: (0, _._)(
+                    children: _._.Localize(
                       "#EventDisplay_CallToAction_AddToAccount",
                     ),
                   }),
@@ -5091,14 +5609,14 @@
             }
           }
           if ((_ || _) && !_.is_coming_soon) {
-            let _ = (0, _._)("#EventDisplay_CallToAction_PlayNowForFree");
+            let _ = _._.Localize("#EventDisplay_CallToAction_PlayNowForFree");
             return (
               _
-                ? (_ = (0, _._)("#EventDisplay_CallToAction_PlayNow"))
+                ? (_ = _._.Localize("#EventDisplay_CallToAction_PlayNow"))
                 : _.is_free_temporarily &&
-                  (_ = (0, _._)("#EventDisplay_CallToAction_AddToAccount")),
+                  (_ = _._.Localize("#EventDisplay_CallToAction_AddToAccount")),
               (0, _.jsx)("div", {
-                className: (0, _._)(_().Action, __webpack_require__),
+                className: (0, _._)(_().Action, _),
                 onClick: _,
                 children: (0, _.jsx)("span", {
                   children: _,
@@ -5109,12 +5627,12 @@
           if ("" == _.formatted_final_price)
             return (0, _.jsx)("a", {
               href: _,
-              className: (0, _._)(_().Action, __webpack_require__),
-              children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
+              className: (0, _._)(_().Action, _),
+              children: _._.Localize("#EventDisplay_CallToAction_VisitStore"),
             });
         }
         return (0, _.jsx)(_, {
-          className: __webpack_require__,
+          className: _,
           storeItemBestPurchaseOption: _,
           storeItemDefaultData: _,
         });
@@ -5122,21 +5640,16 @@
       function _(_) {
         const {
             className: _,
-            storeItemBestPurchaseOption: __webpack_require__,
+            storeItemBestPurchaseOption: _,
             storeItemDefaultData: _,
           } = _,
           _ = (0, _._)(),
-          { mutate: _ } = (0, _._)(
-            __webpack_require__?.packageid,
-            __webpack_require__?.bundleid,
-            !1,
-            _.feature,
-          );
+          { mutate: _ } = (0, _._)(_?.packageid, _?.bundleid, !1, _.feature);
         return (0, _.jsx)("div", {
           className: (0, _._)(_().Action, _),
           onClick: () => _(),
           children: (0, _.jsx)("span", {
-            children: (0, _._)("#Store_AddToCart"),
+            children: _._.Localize("#Store_AddToCart"),
           }),
         });
       }
@@ -5183,7 +5696,7 @@
       const _ = (_) => {
         const {
             className: _,
-            bIgnored: __webpack_require__,
+            bIgnored: _,
             bApplyingFollowing: _,
             bFollowing: _,
             onFollowClick: _,
@@ -5209,7 +5722,7 @@
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
-                  toolTipContent: __webpack_require__ || _ ? void 0 : _,
+                  toolTipContent: _ || _ ? void 0 : _,
                   children: (0, _.jsxs)(_._, {
                     className: (0, _._)(
                       _.Button,
@@ -5226,14 +5739,14 @@
                         (0, _.jsx)(_._, {
                           size: 15,
                         }),
-                      !_ && (_ || __webpack_require__) && (0, _.jsx)(_.Jlk, {}),
+                      !_ && (_ || _) && (0, _.jsx)(_.Jlk, {}),
                       (0, _.jsx)("div", {
                         className: (0, _._)(_.FollowBtnText, "FollowBtnText"),
                         children:
                           !_ &&
                           (_
                             ? (0, _._)("#Button_Followed")
-                            : __webpack_require__
+                            : _
                               ? (0, _._)("#Button_Ignored")
                               : (0, _._)("#Button_Follow")),
                       }),
@@ -5248,7 +5761,7 @@
       function _(_) {
         const {
             followType: _,
-            fnSuccessCallback: __webpack_require__,
+            fnSuccessCallback: _,
             clanAccountID: _,
             className: _,
           } = _,
@@ -5362,12 +5875,8 @@
           })(_, _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(async () => {
-            null != _ &&
-              (_(!0),
-              await _(),
-              _(!1),
-              __webpack_require__ && __webpack_require__(_));
-          }, [_, __webpack_require__, _]);
+            null != _ && (_(!0), await _(), _(!1), _ && __webpack_require__(_));
+          }, [_, _, _]);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -5391,7 +5900,7 @@
         });
       }
       function _(_) {
-        const { appid: _, className: __webpack_require__ } = _,
+        const { appid: _, className: _ } = _,
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
@@ -5403,7 +5912,7 @@
             _(!0), await _(), _(!1);
           }, [_, _]);
         return (0, _.jsx)(_, {
-          className: __webpack_require__,
+          className: _,
           bIgnored: Boolean(_),
           bFollowing: Boolean(_),
           bApplyingFollowing: _,
@@ -5458,21 +5967,18 @@
       function _(_) {
         const {
             className: _,
-            url: __webpack_require__,
+            url: _,
             style: _,
             children: _,
             bSkipForcingStoreLink: _,
+            bOpenInline: _,
           } = _,
-          _ = _
-            ? __webpack_require__
-            : __webpack_require__
-              ? (0, _._)(__webpack_require__, _._.STORE_BASE_URL)
-              : void 0,
+          _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
           _ = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               href: _,
-              target: _._.IN_CLIENT ? void 0 : "_blank",
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
               className: _,
               style: _,
               rel: "noopener noreferrer",
@@ -6925,10 +7431,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { size: _, color: __webpack_require__, trackColor: _ } = _,
+        const { size: _, color: _, trackColor: _ } = _,
           _ = {
             borderColor: _,
-            borderLeftColor: __webpack_require__,
+            borderLeftColor: _,
           };
         if ("number" == typeof _) {
           const _ = `${_}px`;
@@ -7178,7 +7684,7 @@
       function _(_) {
         const {
           results: _,
-          titleId: __webpack_require__,
+          titleId: _,
           descriptionId: _,
           appName: _,
           buttonProps: _,
@@ -7238,7 +7744,7 @@
             ..._,
             children: [
               (0, _.jsxs)("div", {
-                _: __webpack_require__,
+                _: _,
                 className: _().DialogHeader,
                 children: [
                   (0, _.jsx)("div", {
@@ -7313,7 +7819,7 @@
       function _(_) {
         const {
             titleId: _,
-            title: __webpack_require__,
+            title: _,
             autoFocus: _,
             buttonProps: _,
             ratingIcon: _,
@@ -7346,7 +7852,7 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().DialogTitle,
-                        children: __webpack_require__,
+                        children: _,
                       }),
                       (0, _.jsx)("div", {
                         className: _().AppTitleCategory,
@@ -7375,18 +7881,13 @@
         );
       }
       function _(_) {
-        const {
-            titleId: _,
-            descriptionId: __webpack_require__,
-            results: _,
-            appName: _,
-          } = _,
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
           _ =
             _.steamos_resolved_items &&
             -1 !==
               _.steamos_resolved_items?.findIndex((_) => 1 == _.display_type),
           _ = (0, _.jsx)(_._, {
-            _: __webpack_require__,
+            _: _,
             category: _.steamos_resolved_category ?? 0,
             appName: _,
           }),
@@ -7456,15 +7957,10 @@
         });
       }
       function _(_) {
-        const {
-            titleId: _,
-            descriptionId: __webpack_require__,
-            results: _,
-            appName: _,
-          } = _,
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
           _ = -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type),
           _ = (0, _.jsx)(_._, {
-            _: __webpack_require__,
+            _: _,
             category: _.resolved_category,
             appName: _,
           }),
@@ -7531,12 +8027,12 @@
         });
       }
       function _(_) {
-        const { blogURL: _, eHWCompatibiltyDisplay: __webpack_require__ } = _,
+        const { blogURL: _, eHWCompatibiltyDisplay: _ } = _,
           _ = (0, _._)();
         if (!_) return null;
         if (_) {
           const _ =
-            2 == __webpack_require__
+            2 == _
               ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog")
               : (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
           return (0, _.jsxs)("div", {
@@ -7554,7 +8050,7 @@
           });
         }
         const _ =
-          2 == __webpack_require__
+          2 == _
             ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
             : (0, _._)(
                 "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
@@ -7641,71 +8137,63 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          activeTab: "",
-        };
-        componentDidMount() {
-          this.props.startingTab
-            ? this.setState({
-                activeTab: this.props.startingTab,
-              })
-            : !this.props.bDisableRouting &&
-              this.props.location &&
-              this.setState({
-                activeTab: (0, _._)(this.props.location, "tab"),
-              });
-        }
-        componentDidUpdate(_) {
-          !this.props.bDisableRouting &&
-            this.props.location &&
-            this.props.location.key !== _.location.key &&
-            this.setState({
-              activeTab: (0, _._)(this.props.location, "tab"),
-            });
-        }
-        OnTabClick(_) {
-          this.setState({
-            activeTab: _.key,
-          }),
-            !this.props.bDisableRouting &&
-              this.props.history &&
-              (0, _._)(this.props.history, "tab", _.key),
-            _.onClick && _.onClick(_);
-        }
-        render() {
-          const _ = this.props.tabs.filter((_) => !_.hidden);
-          if (!_.length) return null;
-          const _ = _.find((_) => _.key === this.state.activeTab) || _[0],
-            _ = this.props.preferredFocus
-              ? (this.props.startingTab ?? _[0].key)
-              : void 0;
-          return (0, _.jsxs)(_.Fragment, {
+      function _(_) {
+        const {
+            tabs: _,
+            bDisableRouting: _,
+            startingTab: _,
+            classNameCtn: _,
+            classNameTab: _,
+            classNameTabContent: _,
+            preferredFocus: _,
+            bVerticalTabs: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(
+            () =>
+              _ || (!_ && (0, _._)(_, "tab") ? ((0, _._)(_, "tab") ?? "") : ""),
+          );
+        (0, _.useEffect)(() => {
+          if (!_.bDisableRouting && _) {
+            const _ = (0, _._)(_, "tab");
+            _ && _(_);
+          }
+        }, [_, _.key, _.bDisableRouting, _]);
+        const _ = _.useCallback(
+            (_) => {
+              _(_.key),
+                _ || (0, _._)(_, "tab", _.key),
+                _.onClick && _.onClick(_);
+            },
+            [_, _],
+          ),
+          _ = _.filter((_) => !_.hidden);
+        if (!_.length) return null;
+        const _ = _.find((_) => _.key === _) || _[0],
+          _ = _ ? (_ ?? _[0].key) : void 0,
+          _ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _().GraphicalAssetsTabs,
-                  this.props.classNameCtn,
+                  _ && _().GraphicalAssetsTabsVertical,
+                  _,
                 ),
-                navEntryPreferPosition: this.props.preferredFocus
-                  ? _._.PREFERRED_CHILD
-                  : _._.FIRST,
+                navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
                 children: _.map((_, _) =>
                   (0, _.jsx)(
                     _,
                     {
                       tab: _,
-                      OnTabClick: this.OnTabClick,
-                      classNameTab: this.props.classNameTab,
+                      OnTabClick: _,
+                      classNameTab: _,
                       active: _.key === _.key,
                       preferredFocus: _ === _.key,
                     },
@@ -7715,54 +8203,57 @@
               }),
               _ &&
                 (0, _.jsx)(_._, {
-                  className: this.props.classNameTabContent,
+                  className: _,
                   children: _.contents,
                 }),
             ],
           });
-        }
+        return _
+          ? (0, _.jsx)(_._, {
+              className: (0, _._)(_().GraphicalAssetsTabsLayoutVertical),
+              children: _,
+            })
+          : _;
       }
-      (0, _._)([_._], _.prototype, "OnTabClick", null);
-      const _ = (0, _._)(function (_) {
-          const {
-            tab: _,
-            OnTabClick: __webpack_require__,
-            classNameTab: _,
-            active: _,
-            preferredFocus: _,
-          } = _;
-          return (0, _.jsx)(_._, {
-            condition: Boolean(_.statusToolTip || _.tooltip),
-            wrap: (_) =>
-              (0, _.jsx)(_._, {
-                toolTipContent: _.statusToolTip || _.tooltip,
-                children: _,
-              }),
-            children: (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                _().GraphicalAssetsTab,
-                _ && _().Active,
-                _ && "ActiveTab",
-                _,
-              ),
-              onActivate: () => __webpack_require__(_),
-              preferredFocus: _,
-              children: [
-                Boolean(_.vo_warning) &&
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _.vo_warning,
-                    children: (0, _.jsx)("div", {
-                      className: _().VOWarning,
-                      children: (0, _._)("#EventEditor_VOWarning"),
-                    }),
-                  }),
-                _.status,
-                _.name,
-              ],
+      function _(_) {
+        const {
+          tab: _,
+          OnTabClick: _,
+          classNameTab: _,
+          active: _,
+          preferredFocus: _,
+        } = _;
+        return (0, _.jsx)(_._, {
+          condition: Boolean(_.statusToolTip || _.tooltip),
+          wrap: (_) =>
+            (0, _.jsx)(_._, {
+              toolTipContent: _.statusToolTip || _.tooltip,
+              children: _,
             }),
-          });
-        }),
-        _ = (0, _._)(_);
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _().GraphicalAssetsTab,
+              _ && _().Active,
+              _ && "ActiveTab",
+              _,
+            ),
+            onActivate: () => __webpack_require__(_),
+            preferredFocus: _,
+            children: [
+              Boolean(_.vo_warning) &&
+                (0, _.jsx)(_._, {
+                  toolTipContent: _.vo_warning,
+                  children: (0, _.jsx)("div", {
+                    className: _().VOWarning,
+                    children: (0, _._)("#EventEditor_VOWarning"),
+                  }),
+                }),
+              _.status,
+              _.name,
+            ],
+          }),
+        });
+      }
     },
   },
 ]);

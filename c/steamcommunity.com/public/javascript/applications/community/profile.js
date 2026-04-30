@@ -115,6 +115,18 @@
         grey_bevel: "TyiecoVJmS6-thhLSt8g3",
         ProfileEditLine: "_58Mghr8vhm_-IZP3Mkcb_",
         BackToProfileCtn: "_1YOt2792y012GM8bOQs0kh",
+        BackgroundAnimation: "_2KBoHhvcLeo2vQwWuj0IRb",
+        "ItemFocusAnim-darkerGrey-nocolor": "tmP6KcnuW7UY3GT67_yjy",
+        "ItemFocusAnim-darkerGrey": "_2z9xuC0Na9M0VX4xEFjoSR",
+        "ItemFocusAnim-darkGreySettings": "_2AOpRetkacszHSv5tq9OQa",
+        "ItemFocusAnim-darkGrey": "_1X0OQa5fPKjWOsHz5d-xAO",
+        "ItemFocusAnim-grey": "X_zua7jreE_f2rGbT4l-O",
+        "ItemFocusAnim-translucent-white-10": "_3PmOIuJLR5U9VhCcOub_Uz",
+        "ItemFocusAnim-translucent-white-20": "YMb3o1HrEEjr7vA9uSIUi",
+        "ItemFocusAnimBorder-darkGrey": "_1zSKntJJ3QOyql8hDShLJz",
+        "ItemFocusAnim-green": "_1fvU-7Mr4_64KzW_eUa87u",
+        focusAnimation: "_1gK9ZDrO_OJkKiiO1p7daU",
+        hoverAnimation: "MK_YH9374l4-TSjBSAaxv",
       };
     },
     chunkid: (module) => {
@@ -169,6 +181,18 @@
         formattingButton: "LhNoIaEKN1cIpOrnt59wq",
         summaryTextArea: "_2ipSt29jAqoPXf-_iTAL0-",
         summaryContainer: "_3sH5hzWvrCU2QOKpNxfq3m",
+        BackgroundAnimation: "iQhnWyYlwgFi5YWYBMwJ4",
+        "ItemFocusAnim-darkerGrey-nocolor": "_12rtn7LW8NeHZuOZRYrQUr",
+        "ItemFocusAnim-darkerGrey": "_3ASpBDSwq0FQWK7k3PCaCE",
+        "ItemFocusAnim-darkGreySettings": "_2imfEHKAKkMI4e0U6blAKg",
+        "ItemFocusAnim-darkGrey": "_2eY89CR3ALmqkaa5c8qJnd",
+        "ItemFocusAnim-grey": "mGBoBubSOBDji6ZhWGlSk",
+        "ItemFocusAnim-translucent-white-10": "jQ_HCKVuc3Rbnyna4TT6k",
+        "ItemFocusAnim-translucent-white-20": "_31vG8GURxLO6NzzoGFspfp",
+        "ItemFocusAnimBorder-darkGrey": "_3y-gKQtRDkvMB_jhfgrSpC",
+        "ItemFocusAnim-green": "_2CI6zPlogHCygbXcFwfdub",
+        focusAnimation: "_3JagW-WJua436yyI1Rep86",
+        hoverAnimation: "TNBcq_UtYAx1mhBY2fZD9",
       };
     },
     chunkid: (module) => {
@@ -483,8 +507,8 @@
       };
       function _(_) {
         var _;
-        const { appID: __webpack_require__ } = _,
-          [_] = (0, _._)(__webpack_require__, {
+        const { appID: _ } = _,
+          [_] = (0, _._)(_, {
             include_assets_without_overrides: !0,
           }),
           _ =
@@ -551,7 +575,7 @@
           const {
             className: _,
             persona: _,
-            data_loader: __webpack_require__,
+            data_loader: _,
             community_data_override: _,
             nickname: _,
             is_friend: _,
@@ -564,7 +588,7 @@
             bottom_section_additional: _,
             ..._
           } = this.props;
-          let _ = __webpack_require__.community_data;
+          let _ = _.community_data;
           _ &&
             (_ = {
               ..._,
@@ -766,8 +790,8 @@
       _ = (0, _._)([_._], _);
       const _ = ({ community_data: _, persona: _ }) => {
           if (_ && _.profile_background) {
-            const { image: _, ...__webpack_require__ } = _.profile_background;
-            if (Object.keys(__webpack_require__).length)
+            const { image: _, ..._ } = _.profile_background;
+            if (Object.keys(_).length)
               return (0, _.jsx)(
                 "div",
                 {
@@ -779,11 +803,11 @@
                     autoPlay: !0,
                     loop: !0,
                     poster: _,
-                    children: Object.keys(__webpack_require__).map((_) =>
+                    children: Object.keys(_).map((_) =>
                       (0, _.jsx)(
                         "source",
                         {
-                          src: __webpack_require__[_],
+                          src: _[_],
                           type: _,
                         },
                         _,
@@ -791,9 +815,7 @@
                     ),
                   }),
                 },
-                __webpack_require__["video/webm"] ||
-                  __webpack_require__["video/mp4"] ||
-                  "image",
+                _["video/webm"] || _["video/mp4"] || "image",
               );
             if (_)
               return (0, _.jsx)("div", {
@@ -813,20 +835,15 @@
           });
         },
         _ = (_) => {
-          const {
-              persona: _,
-              community_data: __webpack_require__,
-              size: _,
-              ..._
-            } = _,
+          const { persona: _, community_data: _, size: _, ..._ } = _,
             _ =
-              __webpack_require__ &&
-              __webpack_require__.avatar_frame &&
+              _ &&
+              _.avatar_frame &&
               (0, _.jsx)("img", {
-                src: __webpack_require__.avatar_frame,
+                src: _.avatar_frame,
                 className: _().Frame,
               }),
-            _ = __webpack_require__ && __webpack_require__.animated_avatar,
+            _ = _ && _.animated_avatar,
             _ = {
               size: _ || "X-Large",
               statusPosition: "bottom",
@@ -1484,8 +1501,8 @@
                 _,
               ));
           }
-          const [__webpack_require__, _] = await Promise.all([_, _]);
-          return __webpack_require__ && 1 != __webpack_require__.GetEResult()
+          const [_, _] = await Promise.all([_, _]);
+          return _ && 1 != __webpack_require__.GetEResult()
             ? __webpack_require__.GetEResult()
             : _ && 1 != _.GetEResult()
               ? _.GetEResult()
@@ -2243,14 +2260,14 @@
           const {
             LocationData: {
               locCountry: _,
-              locCountryCode: __webpack_require__,
+              locCountryCode: _,
               locState: _,
               locStateCode: _,
               locCity: _,
               locCityCode: _,
             },
           } = _;
-          (this.m_Location = new _(_, __webpack_require__, _, _, _, _)),
+          (this.m_Location = new _(_, _, _, _, _, _)),
             (this.m_GroupList = new _(_.PrimaryGroup));
           const _ = new _._(_._.steamid);
           (this.m_MiniProfileData = new _(_.GetAccountID())),
@@ -2462,7 +2479,7 @@
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      const _ = ({ title: _, className: _, children: __webpack_require__ }) =>
+      const _ = ({ title: _, className: _, children: _ }) =>
           (0, _.jsxs)("div", {
             className: (0, _._)(_.ProfileBox, _),
             children: [
@@ -2473,19 +2490,19 @@
               (0, _.jsx)("div", {
                 className: _.ProfileBoxContent,
                 children: (0, _.jsx)(_._, {
-                  children: __webpack_require__,
+                  children: _,
                 }),
               }),
             ],
           }),
-        _ = ({ onSave: _, onCancel: _, disabled: __webpack_require__ }) =>
+        _ = ({ onSave: _, onCancel: _, disabled: _ }) =>
           (0, _.jsxs)(_._, {
             className: _.SaveCancelButtons,
             "flow-children": "row-reverse",
             children: [
               (0, _.jsx)(_._, {
                 onClick: _,
-                disabled: __webpack_require__,
+                disabled: _,
                 children: (0, _._)("#Button_Save"),
               }),
               (0, _.jsx)(_._, {
@@ -2534,13 +2551,13 @@
           const {
               strDialogTitle: _,
               ActiveItem: _,
-              className: __webpack_require__,
+              className: _,
               fnRenderPreview: _,
               ..._
             } = this.props,
             { activeItem: _, bSaving: _ } = this.state;
           return (0, _.jsxs)(_._, {
-            className: (0, _._)(_.PickerPreviewDialog, __webpack_require__),
+            className: (0, _._)(_.PickerPreviewDialog, _),
             children: [
               (0, _.jsx)(_._, {
                 when: !_.fnIsSameItem(_, this.props.ActiveItem),
@@ -2601,7 +2618,7 @@
             const {
                 getItems: _,
                 getSearchFields: _,
-                onItemSelected: __webpack_require__,
+                onItemSelected: _,
               } = this.props,
               _ = await _();
             this.m_fnSearchFieldsDisposer = (0, _._)(() => {
@@ -2667,7 +2684,7 @@
           const {
               ItemComponent: _,
               RenderDefaultComponent: _,
-              getSearchFields: __webpack_require__,
+              getSearchFields: _,
               activeItem: _,
               fnIsSameItem: _,
               classNameItemPicker: _,
@@ -2693,7 +2710,7 @@
             style: _,
             "flow-children": "column",
             children: [
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)("div", {
                   className: _.ItemPickeFilter,
                   children: (0, _.jsx)(_._, {
@@ -2760,7 +2777,7 @@
         _ = ({
           strCooldownLabel: _,
           rtCooldownEnd: _,
-          strCooldownDescHTML: __webpack_require__,
+          strCooldownDescHTML: _,
           children: _,
         }) => {
           if (!_)
@@ -2788,7 +2805,7 @@
                   }),
                   (0, _.jsx)("div", {
                     dangerouslySetInnerHTML: {
-                      __html: __webpack_require__,
+                      __html: _,
                     },
                   }),
                 ],
@@ -2801,7 +2818,7 @@
           });
         };
       function _(_) {
-        const { image: _, onSelected: __webpack_require__, className: _ } = _,
+        const { image: _, onSelected: _, className: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
         return (0, _.jsx)(_._, {
@@ -2882,7 +2899,7 @@
           const {
             bExpanded: _,
             fnOnExpand: _,
-            OGGAvatars: __webpack_require__,
+            OGGAvatars: _,
             AvatarHistory: _,
             fnOnCollapse: _,
           } = this.props;
@@ -2895,7 +2912,7 @@
                 }),
                 (0, _.jsx)(_, {
                   rgAnimatedAvatars: this.m_rgAvatars,
-                  OGGAvatars: __webpack_require__,
+                  OGGAvatars: _,
                   AvatarHistory: _,
                   onSelectAnimatedAvatar: this.SelectAnimatedAvatar,
                   onSelectOGGAvatar: this.SelectOGGAvatar,
@@ -2996,24 +3013,20 @@
             }),
           });
       function _(_) {
-        const { avatar: _, onSelected: __webpack_require__, large: _ } = _;
+        const { avatar: _, onSelected: _, large: _ } = _;
         return (0, _.jsx)(_, {
           image: _,
-          onSelected: __webpack_require__,
+          onSelected: _,
           className: (0, _._)(_.AvatarPreview, _.Animated, _ && _.Large),
         });
       }
-      const _ = ({ hash: _, onSelected: _, large: __webpack_require__ }) =>
+      const _ = ({ hash: _, onSelected: _, large: _ }) =>
           (0, _.jsx)(_._, {
-            className: (0, _._)(
-              _.AvatarPreview,
-              _.Static,
-              __webpack_require__ && _.Large,
-            ),
+            className: (0, _._)(_.AvatarPreview, _.Static, _ && _.Large),
             onClick: () => _(_),
             onActivate: () => _(_),
             children: (0, _.jsx)("img", {
-              src: (0, _._)(_, __webpack_require__ ? "full" : "medium"),
+              src: (0, _._)(_, _ ? "full" : "medium"),
               loading: "lazy",
             }),
           }),
@@ -3021,7 +3034,7 @@
           ({
             rgAnimatedAvatars: _,
             OGGAvatars: _,
-            AvatarHistory: __webpack_require__,
+            AvatarHistory: _,
             onSelectAnimatedAvatar: _,
             onSelectOGGAvatar: _,
             onSelectPreviousAvatar: _,
@@ -3111,12 +3124,7 @@
             : null,
         );
       function _(_) {
-        const {
-          rgAvatars: _,
-          OGGAvatars: __webpack_require__,
-          onSelected: _,
-          title: _,
-        } = _;
+        const { rgAvatars: _, OGGAvatars: _, onSelected: _, title: _ } = _;
         return _.length
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_.CollectionGroup, _.Primary),
@@ -3129,7 +3137,7 @@
                   (0, _.jsx)(
                     _,
                     {
-                      OGGAvatars: __webpack_require__,
+                      OGGAvatars: _,
                       game: _,
                       onSelected: _,
                     },
@@ -3141,7 +3149,7 @@
           : null;
       }
       function _(_) {
-        const { game: _, onSelected: __webpack_require__, OGGAvatars: _ } = _,
+        const { game: _, onSelected: _, OGGAvatars: _ } = _,
           [_, _] = _.useState(!1),
           { isLoading: _, data: _ } = (function (_, _, _) {
             return (0, _._)({
@@ -3180,7 +3188,7 @@
                     _,
                     {
                       hash: _.avatar_hash,
-                      onSelected: __webpack_require__,
+                      onSelected: _,
                     },
                     _.avatar_hash,
                   ),
@@ -3226,7 +3234,7 @@
           const {
             bExpanded: _,
             ProfileItems: _,
-            fnOnExpand: __webpack_require__,
+            fnOnExpand: _,
             fnOnCollapse: _,
           } = this.props;
           if (_)
@@ -3299,7 +3307,7 @@
                   (0, _.jsx)("div", {
                     className: _.ExpandButtonContainer,
                     children: (0, _.jsx)(_._, {
-                      onClick: __webpack_require__,
+                      onClick: _,
                       children: (0, _._)("#Profile_Edit_Avatar_SeeAll"),
                     }),
                   }),
@@ -3309,49 +3317,40 @@
         }
       }
       function _(_) {
-        const { frame: _, onSelected: __webpack_require__, large: _ } = _;
+        const { frame: _, onSelected: _, large: _ } = _;
         return (0, _.jsx)(_, {
           image: _,
-          onSelected: __webpack_require__,
+          onSelected: _,
           className: (0, _._)(_.FramePreview, _ && _.Large),
         });
       }
       (0, _._)([_._], _.prototype, "SelectFrame", null);
-      const _ = (0, _._)(
-          ({ onSelected: _, ProfileItems: _, large: __webpack_require__ }) => {
-            let _ = _.GetProfileModifierAvatarFrameURL();
-            return _
-              ? (0, _.jsx)(_._, {
-                  className: (0, _._)(
-                    _.FramePreview,
-                    __webpack_require__ && _.Large,
-                  ),
-                  onActivate: () => _(null),
-                  children: (0, _.jsx)("img", {
-                    src: _,
-                  }),
-                })
-              : (0, _.jsx)(_._, {
-                  className: (0, _._)(
-                    _.FramePreview,
-                    __webpack_require__ && _.Large,
-                    _.DefaultAvatarFramePreview,
-                  ),
-                  onActivate: () => _(null),
+      const _ = (0, _._)(({ onSelected: _, ProfileItems: _, large: _ }) => {
+          let _ = _.GetProfileModifierAvatarFrameURL();
+          return _
+            ? (0, _.jsx)(_._, {
+                className: (0, _._)(_.FramePreview, _ && _.Large),
+                onActivate: () => _(null),
+                children: (0, _.jsx)("img", {
+                  src: _,
+                }),
+              })
+            : (0, _.jsx)(_._, {
+                className: (0, _._)(
+                  _.FramePreview,
+                  _ && _.Large,
+                  _.DefaultAvatarFramePreview,
+                ),
+                onActivate: () => _(null),
+                children: (0, _.jsx)("div", {
+                  className: _.DefaultAvatarFrame,
                   children: (0, _.jsx)("div", {
-                    className: _.DefaultAvatarFrame,
-                    children: (0, _.jsx)("div", {
-                      className: _.DefaultAvatarFrameContent,
-                    }),
+                    className: _.DefaultAvatarFrameContent,
                   }),
-                });
-          },
-        ),
-        _ = ({
-          rgFrames: _,
-          ProfileItems: _,
-          onSelected: __webpack_require__,
-        }) =>
+                }),
+              });
+        }),
+        _ = ({ rgFrames: _, ProfileItems: _, onSelected: _ }) =>
           (0, _.jsxs)("div", {
             className: (0, _._)(_.CollectionGroup, _.Primary),
             children: [
@@ -3364,7 +3363,7 @@
                 "flow-children": "grid",
                 children: [
                   (0, _.jsx)(_, {
-                    onSelected: __webpack_require__,
+                    onSelected: _,
                     ProfileItems: _,
                   }),
                   _.map((_) =>
@@ -3372,7 +3371,7 @@
                       _,
                       {
                         frame: _,
-                        onSelected: __webpack_require__,
+                        onSelected: _,
                       },
                       _.communityitemid,
                     ),
@@ -3495,11 +3494,7 @@
         }
         async SaveUpload() {
           var _;
-          const {
-              Profile: _,
-              ProfileItems: __webpack_require__,
-              AvatarHistory: _,
-            } = this.props,
+          const { Profile: _, ProfileItems: _, AvatarHistory: _ } = this.props,
             _ = await _.UploadAvatar(
               await (null === (_ = this.cropRef.current) || void 0 === _
                 ? void 0
@@ -3525,7 +3520,7 @@
           const {
               Profile: _,
               ProfileItems: _,
-              OGGAvatars: __webpack_require__,
+              OGGAvatars: _,
               AvatarHistory: _,
             } = this.props,
             [_, _, _] = await Promise.all([
@@ -3549,7 +3544,7 @@
           const {
               Profile: _,
               ProfileItems: _,
-              OGGAvatars: __webpack_require__,
+              OGGAvatars: _,
               AvatarHistory: _,
             } = this.props,
             {
@@ -3561,7 +3556,7 @@
             _ = {
               Profile: _,
               ProfileItems: _,
-              OGGAvatars: __webpack_require__,
+              OGGAvatars: _,
               AvatarHistory: _,
               fnOnCollapse: this.Reset,
             };
@@ -3723,7 +3718,7 @@
         _ = ({
           sizeClassName: _,
           sizePx: _,
-          avatarURL: __webpack_require__,
+          avatarURL: _,
           frameURL: _,
           isGolden: _,
         }) =>
@@ -3748,7 +3743,7 @@
                       className: "goldenAvatarOverlay",
                     }),
                   (0, _.jsx)("img", {
-                    src: __webpack_require__,
+                    src: _,
                   }),
                 ],
               }),
@@ -3759,11 +3754,7 @@
             ],
           });
       function _(_) {
-        const {
-            OnAvatarSelected: _,
-            disabled: __webpack_require__,
-            strError: _,
-          } = _,
+        const { OnAvatarSelected: _, disabled: _, strError: _ } = _,
           _ = _.useRef(void 0),
           _ = _.useCallback(() => {
             var _;
@@ -3791,7 +3782,7 @@
               }),
             (0, _.jsx)(_._, {
               onClick: () => _.current.click(),
-              disabled: __webpack_require__,
+              disabled: _,
               children: (0, _._)("#Profile_UploadAvatar"),
             }),
           ],
@@ -3866,7 +3857,7 @@
       }
       function _(_) {
         const { LocationStore: _ } = _,
-          { CountryCode: __webpack_require__, Country: _ } = _,
+          { CountryCode: _, Country: _ } = _,
           [_, _] = _.useState(),
           _ = (0, _._)({
             queryKey: ["CountryEdit"],
@@ -3922,7 +3913,7 @@
             (0, _.jsx)("input", {
               type: "hidden",
               name: "country",
-              value: __webpack_require__ || "",
+              value: _ || "",
             }),
             (0, _.jsx)(_._, {
               contextMenuPositionOptions: {
@@ -3942,7 +3933,7 @@
       }
       function _(_) {
         const { LocationStore: _ } = _,
-          { StateCode: __webpack_require__, State: _ } = _,
+          { StateCode: _, State: _ } = _,
           [_, _] = _.useState(),
           [_, _] = (0, _._)(() => [
             _.BIsStateSelectionAvailable(),
@@ -4003,7 +3994,7 @@
             (0, _.jsx)("input", {
               type: "hidden",
               name: "state",
-              value: __webpack_require__ || "",
+              value: _ || "",
             }),
             _ &&
               (0, _.jsx)(_._, {
@@ -4024,7 +4015,7 @@
       }
       function _(_) {
         const { LocationStore: _ } = _,
-          { CityCode: __webpack_require__, City: _ } = _,
+          { CityCode: _, City: _ } = _,
           [_, _] = _.useState(),
           [_, _, _] = (0, _._)(() => [
             _.BIsCitySelectionAvailable(),
@@ -4087,7 +4078,7 @@
             (0, _.jsx)("input", {
               type: "hidden",
               name: "city",
-              value: __webpack_require__ || "",
+              value: _ || "",
             }),
             _ &&
               (0, _.jsx)(_._, {
@@ -4151,7 +4142,7 @@
         }
         render() {
           const { EmoticonStore: _, Profile: _ } = this.props,
-            { strSummary: __webpack_require__ } = this.state;
+            { strSummary: _ } = this.state;
           return (0, _.jsx)(_, {
             Profile: _,
             children: (0, _.jsxs)("div", {
@@ -4164,7 +4155,7 @@
                   cols: 40,
                   onChange: this.OnChange,
                   className: _.summaryTextArea,
-                  value: __webpack_require__,
+                  value: _,
                   ref: this.m_refTextInput,
                 }),
                 (0, _.jsx)("div", {
@@ -4239,7 +4230,7 @@
         }
         render() {
           const { Profile: _, EmoticonStore: _ } = this.props,
-            { bSaving: __webpack_require__, strHTMLError: _ } = this.state;
+            { bSaving: _, strHTMLError: _ } = this.state;
           return (0, _.jsx)(_._, {
             "flow-children": "column",
             navEntryPreferPosition: _._.MAINTAIN_Y,
@@ -4333,7 +4324,7 @@
                   }),
                 (0, _.jsx)(_, {
                   onCancel: this.RevertChanges,
-                  disabled: __webpack_require__,
+                  disabled: _,
                 }),
               ],
             }),
@@ -4572,7 +4563,7 @@
         }
         render() {
           const { Badges: _ } = this.props,
-            { bSaving: _, strHTMLError: __webpack_require__ } = this.state;
+            { bSaving: _, strHTMLError: _ } = this.state;
           let _ = _.FavoriteBadge;
           return (0, _.jsx)(_._, {
             children: (0, _.jsxs)(_._, {
@@ -4589,7 +4580,7 @@
                   children: (0, _._)("#Profile_Edit_Badge_Instructions"),
                 }),
                 (0, _.jsx)(_, {
-                  strHTMLError: __webpack_require__,
+                  strHTMLError: _,
                 }),
                 _ &&
                   (0, _.jsx)(_, {
@@ -4735,7 +4726,7 @@
         }
         render() {
           const { Profile: _ } = this.props,
-            { bSaving: _, strHTMLError: __webpack_require__ } = this.state,
+            { bSaving: _, strHTMLError: _ } = this.state,
             _ = _.GroupList,
             _ = _.PrimaryGroup;
           return (0, _.jsxs)(_._, {
@@ -4752,7 +4743,7 @@
                 children: (0, _._)("#Profile_Edit_Group_Instructions"),
               }),
               (0, _.jsx)(_, {
-                strHTMLError: __webpack_require__,
+                strHTMLError: _,
               }),
               _ &&
                 (0, _.jsx)(_, {
@@ -4843,13 +4834,13 @@
                 ),
               });
         },
-        _ = ({ Background: _, className: _, small: __webpack_require__ }) =>
+        _ = ({ Background: _, className: _, small: _ }) =>
           _
             ? (0, _.jsx)("div", {
                 className: _,
                 children: (0, _.jsx)(_, {
                   Item: _,
-                  small: __webpack_require__,
+                  small: _,
                 }),
               })
             : null;
@@ -4871,11 +4862,7 @@
         }
         render() {
           const { ProfileEdit: _ } = this.props,
-            {
-              Profile: _,
-              ProfileItems: __webpack_require__,
-              MiniProfileOverrideData: _,
-            } = _,
+            { Profile: _, ProfileItems: _, MiniProfileOverrideData: _ } = _,
             { MiniProfileData: _, PersonaState: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -4886,7 +4873,7 @@
                 children: (0, _._)("#Profile_Edit_MiniProfile_Instructions"),
               }),
               (0, _.jsx)(_, {
-                ProfileItems: __webpack_require__,
+                ProfileItems: _,
                 Profile: _,
                 MiniProfileOverrideData: _,
                 onDismiss: this.RevertChanges,
@@ -4902,7 +4889,7 @@
           ({
             Profile: _,
             ProfileItems: _,
-            MiniProfileOverrideData: __webpack_require__,
+            MiniProfileOverrideData: _,
             onDismiss: _,
           }) => {
             let _ = _.GetEquippedProfileModifier();
@@ -4930,7 +4917,7 @@
                     MiniProfileBackground: _,
                     Profile: _,
                     ProfileItems: _,
-                    MiniProfileOverrideData: __webpack_require__,
+                    MiniProfileOverrideData: _,
                   }),
               })
             );
@@ -4939,10 +4926,10 @@
         _ = ({
           MiniProfileBackground: _,
           MiniProfileOverrideData: _,
-          Profile: __webpack_require__,
+          Profile: _,
           ProfileItems: _,
         }) => {
-          const { MiniProfileData: _, PersonaState: _ } = __webpack_require__;
+          const { MiniProfileData: _, PersonaState: _ } = _;
           let _;
           if (_) {
             _ = _(_);
@@ -4968,12 +4955,7 @@
             }),
           });
         },
-        _ = ({
-          Item: _,
-          onSelected: _,
-          children: __webpack_require__,
-          active: _,
-        }) => {
+        _ = ({ Item: _, onSelected: _, children: _, active: _ }) => {
           let _ = _(_),
             _ = Object.keys(_).length > 0;
           return (0, _.jsxs)(_._, {
@@ -5016,18 +4998,13 @@
                       }),
                     ],
                   }),
-                  __webpack_require__,
+                  _,
                 ],
               }),
             ],
           });
         },
-        _ = ({
-          Modifier: _,
-          onSelected: _,
-          children: __webpack_require__,
-          active: _,
-        }) =>
+        _ = ({ Modifier: _, onSelected: _, children: _, active: _ }) =>
           _
             ? (0, _.jsx)(_, {
                 Item: _,
@@ -5065,7 +5042,7 @@
                           }),
                         ],
                       }),
-                      __webpack_require__,
+                      _,
                     ],
                   }),
                 ],
@@ -5252,7 +5229,7 @@
       const _ = (0, _._)(function (_) {
         const {
             PrivacyStore: _,
-            PrivacyKey: __webpack_require__,
+            PrivacyKey: _,
             LimitPrivacyKey: _,
             children: _,
           } = _,
@@ -5261,11 +5238,11 @@
           }, [_, _]),
           _ = _.useCallback(
             (_) => {
-              _.ChangePrivacySetting(__webpack_require__, _);
+              _.ChangePrivacySetting(_, _);
             },
-            [_, __webpack_require__],
+            [_, _],
           );
-        let _ = _.GetPrivacySetting(__webpack_require__);
+        let _ = _.GetPrivacySetting(_);
         _(_);
         const _ = (function (_) {
           const _ = [
@@ -5295,7 +5272,7 @@
               selectedOption: _,
             }),
             (0, _.jsx)(_, {
-              eSaveState: _.GetSaveState(__webpack_require__),
+              eSaveState: _.GetSaveState(_),
             }),
           ],
         });
@@ -5324,18 +5301,18 @@
       function _(_) {
         const {
             PrivacyStore: _,
-            PrivacyKey: __webpack_require__,
+            PrivacyKey: _,
             LimitPrivacyKey: _,
             children: _,
           } = _,
           _ = _.useCallback(
             (_) => {
               let _ = _.currentTarget.checked ? 1 : 3;
-              _.ChangePrivacySetting(__webpack_require__, _, _);
+              _.ChangePrivacySetting(_, _, _);
             },
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
-        let _ = 1 == (0, _._)(() => _.GetPrivacySetting(__webpack_require__));
+        let _ = 1 == (0, _._)(() => _.GetPrivacySetting(_));
         return (0, _.jsx)("div", {
           className: "ProfilePrivacyCheckbox",
           children: (0, _.jsxs)("label", {
@@ -5377,14 +5354,7 @@
                 return (0, _._)("#Privacy_Private");
               default:
             }
-          })(
-            ((__webpack_require__ = _),
-            1 == (_ = _)
-              ? 2
-              : 2 == _ && 1 == __webpack_require__
-                ? 0
-                : __webpack_require__),
-          );
+          })(((_ = _), 1 == (_ = _) ? 2 : 2 == _ && 1 == _ ? 0 : _));
           var _, _;
           const _ = (function (_) {
             const _ = [
@@ -5434,18 +5404,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = ({
-          className: _,
-          width: _,
-          height: __webpack_require__,
-          theme: _,
-        }) => {
+      const _ = ({ className: _, width: _, height: _, theme: _ }) => {
           _ || (_ = "Default"), (_ += "Theme");
           const [_, _] = (0, _._)(),
             [_, _] = (0, _._)();
           return (0, _.jsxs)("svg", {
             width: _ || "401",
-            height: __webpack_require__ || "399",
+            height: _ || "399",
             viewBox: "0 0 401 399",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -5812,60 +5777,58 @@
             ],
           });
         },
-        _ = (0, _._)(
-          ({ ProfileItems: _, Background: _, theme: __webpack_require__ }) => {
-            void 0 === _ && (_ = _.GetEquippedBackground());
-            let _ = _ && _.movie_webm,
-              _ = _ && _.tiled,
-              _ = _ ? _(_) : _(null);
-            const _ = _ && !_ && 1 == _.GetEquippedBackgroundFlags();
-            let _ = null;
-            return (
-              _ &&
-                (_ = {
-                  backgroundImage: `url( ${_} )`,
-                  backgroundRepeat: "repeat",
-                  backgroundSize: "125px 125px",
-                }),
-              (0, _.jsxs)("div", {
-                style: _,
-                className: _.ProfilePagePreviewCtn,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.BackgroundPosition,
-                    children: (0, _.jsxs)("div", {
-                      className: (0, _._)(_.Background, _ && _.FullScreen),
-                      children: [
+        _ = (0, _._)(({ ProfileItems: _, Background: _, theme: _ }) => {
+          void 0 === _ && (_ = _.GetEquippedBackground());
+          let _ = _ && _.movie_webm,
+            _ = _ && _.tiled,
+            _ = _ ? _(_) : _(null);
+          const _ = _ && !_ && 1 == _.GetEquippedBackgroundFlags();
+          let _ = null;
+          return (
+            _ &&
+              (_ = {
+                backgroundImage: `url( ${_} )`,
+                backgroundRepeat: "repeat",
+                backgroundSize: "125px 125px",
+              }),
+            (0, _.jsxs)("div", {
+              style: _,
+              className: _.ProfilePagePreviewCtn,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.BackgroundPosition,
+                  children: (0, _.jsxs)("div", {
+                    className: (0, _._)(_.Background, _ && _.FullScreen),
+                    children: [
+                      !_ &&
                         !_ &&
-                          !_ &&
-                          (0, _.jsx)("img", {
-                            src: _,
-                          }),
-                        _ &&
-                          (0, _.jsx)(_, {
-                            Background: _,
-                            className: "",
-                          }),
-                      ],
+                        (0, _.jsx)("img", {
+                          src: _,
+                        }),
+                      _ &&
+                        (0, _.jsx)(_, {
+                          Background: _,
+                          className: "",
+                        }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ProfilePreviewPosition,
+                  children: (0, _.jsx)("div", {
+                    className: _.ProfilePreviewCtn,
+                    children: (0, _.jsx)(_, {
+                      className: _.ProfilePreview,
+                      width: "50%",
+                      height: "auto",
+                      theme: _,
                     }),
                   }),
-                  (0, _.jsx)("div", {
-                    className: _.ProfilePreviewPosition,
-                    children: (0, _.jsx)("div", {
-                      className: _.ProfilePreviewCtn,
-                      children: (0, _.jsx)(_, {
-                        className: _.ProfilePreview,
-                        width: "50%",
-                        height: "auto",
-                        theme: __webpack_require__,
-                      }),
-                    }),
-                  }),
-                ],
-              })
-            );
-          },
-        );
+                }),
+              ],
+            })
+          );
+        });
       let _ = class extends _.Component {
         constructor() {
           super(...arguments),
@@ -5931,19 +5894,14 @@
         (0, _._)([_._], _.prototype, "RevertChanges", null),
         (_ = (0, _._)([_._], _));
       const _ = _,
-        _ = ({
-          label: _,
-          currentFlag: _,
-          flag: __webpack_require__,
-          onSelect: _,
-        }) =>
+        _ = ({ label: _, currentFlag: _, flag: _, onSelect: _ }) =>
           (0, _.jsx)("div", {
             className: _.ProfileBackgroundEquipOption,
             children: (0, _.jsx)(_._, {
-              checked: _ == __webpack_require__,
-              disabled: _ == __webpack_require__,
+              checked: _ == _,
+              disabled: _ == _,
               onChange: (_) => {
-                _ && _(__webpack_require__);
+                _ && _(_);
               },
               label: _,
             }),
@@ -5978,25 +5936,24 @@
         }
       };
       (0, _._)([_._], _.prototype, "OnChange", null), (_ = (0, _._)([_._], _));
-      const _ = (0, _._)(
-          ({ Background: _, ProfileItems: _, theme: __webpack_require__ }) =>
-            (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsx)(
-                  _,
-                  {
-                    Background: _,
-                    ProfileItems: _,
-                    theme: __webpack_require__,
-                  },
-                  _ && _.communityitemid,
-                ),
-                (0, _.jsx)(_, {
-                  ProfileItems: _,
+      const _ = (0, _._)(({ Background: _, ProfileItems: _, theme: _ }) =>
+          (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)(
+                _,
+                {
                   Background: _,
-                }),
-              ],
-            }),
+                  ProfileItems: _,
+                  theme: _,
+                },
+                _ && _.communityitemid,
+              ),
+              (0, _.jsx)(_, {
+                ProfileItems: _,
+                Background: _,
+              }),
+            ],
+          }),
         ),
         _ = ({ Background: _, children: _ }) =>
           (0, _.jsxs)("div", {
@@ -6019,18 +5976,13 @@
               _,
             ],
           }),
-        _ = ({
-          Item: _,
-          onSelected: _,
-          active: __webpack_require__,
-          children: _,
-        }) => {
+        _ = ({ Item: _, onSelected: _, active: _, children: _ }) => {
           let _ = !!_.movie_webm;
           return (0, _.jsxs)(_._, {
             className: (0, _._)(
               _.BackgroundOption,
               _ && _.WithVideo,
-              __webpack_require__ && _.Active,
+              _ && _.Active,
             ),
             onClick: _,
             onActivate: _,
@@ -6059,23 +6011,15 @@
             ],
           });
         },
-        _ = ({
-          onSelected: _,
-          Modifier: _,
-          active: __webpack_require__,
-          children: _,
-        }) =>
+        _ = ({ onSelected: _, Modifier: _, active: _, children: _ }) =>
           _
             ? (0, _.jsx)(_, {
                 Item: _,
                 onSelected: _,
-                active: __webpack_require__,
+                active: _,
               })
             : (0, _.jsxs)("div", {
-                className: (0, _._)(
-                  _.BackgroundOption,
-                  __webpack_require__ && _.Active,
-                ),
+                className: (0, _._)(_.BackgroundOption, _ && _.Active),
                 onClick: _,
                 children: [
                   (0, _.jsx)("div", {
@@ -6092,26 +6036,22 @@
               });
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          children: _,
-          name: __webpack_require__ = "GamepadWebRoot",
-          ..._
-        } = _;
+        const { children: _, name: _ = "GamepadWebRoot", ..._ } = _;
         return (0, _.jsx)(_._, {
           ..._,
-          navID: __webpack_require__,
+          navID: _,
           children: _,
         });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { navigate: _, onClick: __webpack_require__, ..._ } = _,
+        const { navigate: _, onClick: _, ..._ } = _,
           { target: _ } = _;
         return (0, _.jsx)(_._, {
           ..._,
           onClick: (_) => {
             try {
-              __webpack_require__ && __webpack_require__(_);
+              _ && __webpack_require__(_);
             } catch (_) {
               throw (_.preventDefault(), _);
             }
@@ -6133,12 +6073,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          root: _,
-          currentPath: __webpack_require__,
-          linksAvailable: _,
-          children: _,
-        } = _;
+        const { root: _, currentPath: _, linksAvailable: _, children: _ } = _;
         return (0, _.jsx)(_, {
           name: "ProfileEditShell",
           children: (0, _.jsx)(_._, {
@@ -6149,7 +6084,7 @@
               children: [
                 (0, _.jsx)(_, {
                   root: _,
-                  currentPath: __webpack_require__,
+                  currentPath: _,
                   linksAvailable: _,
                 }),
                 (0, _.jsx)("div", {
@@ -6163,11 +6098,7 @@
           }),
         });
       }
-      const _ = ({
-          root: _,
-          currentPath: _,
-          linksAvailable: __webpack_require__,
-        }) => {
+      const _ = ({ root: _, currentPath: _, linksAvailable: _ }) => {
           const _ = {
               root: _,
               currentPath: _,
@@ -6216,26 +6147,26 @@
               (0, _.jsx)(_, {
                 ..._,
                 _: _.ProfileModifier(),
-                fnVisible: __webpack_require__.ProfileModifierAvailable,
+                fnVisible: _.ProfileModifierAvailable,
                 children: (0, _._)("#Profile_Edit_ProfileModifier"),
               }),
               (0, _.jsx)(_, {
                 ..._,
                 _: _.FavoriteBadge(),
-                fnVisible: __webpack_require__.BadgesAvailable,
+                fnVisible: _.BadgesAvailable,
                 children: (0, _._)("#Profile_Edit_FavoriteBadge"),
               }),
               (0, _.jsx)(_, {
                 ..._,
                 _: _.FavoriteGroup(),
-                fnVisible: __webpack_require__.GroupsAvailable,
+                fnVisible: _.GroupsAvailable,
                 children: (0, _._)("#Profile_Edit_FavoriteGroup"),
               }),
               !_ &&
                 (0, _.jsx)(_, {
                   ..._,
                   _: _.Showcases(),
-                  fnVisible: __webpack_require__.ShowcasesAvailable,
+                  fnVisible: _.ShowcasesAvailable,
                   children: (0, _._)("#Profile_Edit_FeaturedShowcase"),
                 }),
               (0, _.jsx)("div", {
@@ -6261,12 +6192,12 @@
           ({
             root: _,
             currentPath: _,
-            _: __webpack_require__,
+            _: _,
             fnVisible: _,
             fnDisabled: _,
             children: _,
           }) => {
-            const _ = `${_}${__webpack_require__}`,
+            const _ = `${_}${_}`,
               _ = _ == _;
             if (!_ && _ && !_()) return null;
             const _ = _ && _(),
@@ -6398,12 +6329,7 @@
         }
       };
       (0, _._)([_._], _.prototype, "OnDismiss", null), (_ = (0, _._)([_._], _));
-      const _ = ({
-          Item: _,
-          onSelected: _,
-          children: __webpack_require__,
-          active: _,
-        }) =>
+      const _ = ({ Item: _, onSelected: _, children: _, active: _ }) =>
           (0, _.jsxs)(_._, {
             className: (0, _._)(_.ProfileModifierOption, _ && _.Active),
             onActivate: _,
@@ -6430,17 +6356,14 @@
                       }),
                     ],
                   }),
-                  __webpack_require__,
+                  _,
                 ],
               }),
             ],
           }),
-        _ = ({ onSelected: _, children: _, active: __webpack_require__ }) =>
+        _ = ({ onSelected: _, children: _, active: _ }) =>
           (0, _.jsxs)(_._, {
-            className: (0, _._)(
-              _.ProfileModifierOption,
-              __webpack_require__ && _.Active,
-            ),
+            className: (0, _._)(_.ProfileModifierOption, _ && _.Active),
             onActivate: _,
             children: [
               (0, _.jsx)("div", {
@@ -6566,19 +6489,14 @@
           }),
         ),
         _ = (_, _) => (_ && _.theme_id) === (_ && _.theme_id),
-        _ = ({
-          Item: _,
-          onSelected: _,
-          active: __webpack_require__,
-          children: _,
-        }) => {
+        _ = ({ Item: _, onSelected: _, active: _, children: _ }) => {
           const _ = _.theme_id + "Theme",
             _ = `ThemeOption${_}`;
           return (0, _.jsxs)(_._, {
             className: (0, _._)(
               _.ProfileTheme,
               _ && _.Option,
-              __webpack_require__ && _.Active,
+              _ && _.Active,
               _[_],
             ),
             onActivate: _,
@@ -6722,9 +6640,9 @@
         }
         render() {
           const { bSaving: _, strHTMLError: _ } = this.state,
-            { ProfileTheme: __webpack_require__ } = this.props;
+            { ProfileTheme: _ } = this.props;
           return (0, _.jsx)(_, {
-            Theme: __webpack_require__.ActiveTheme,
+            Theme: _.ActiveTheme,
             children: (0, _.jsxs)("form", {
               onSubmit: this.OnSubmit,
               children: [
@@ -6756,7 +6674,7 @@
       }
       let _, _, _;
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)();
         if (
           (_.useEffect(() => {
@@ -6981,7 +6899,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
+        const { children: _, navTreeRef: _, ..._ } = _,
           _ = _.useRef(void 0),
           _ = (0, _._)(_, _),
           _ = (0, _._)(),
@@ -6995,7 +6913,7 @@
           historyMode: "navigationapi",
           children: (0, _.jsx)(_._, {
             disableFocusRing: !_,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       });

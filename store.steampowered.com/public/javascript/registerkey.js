@@ -134,7 +134,7 @@ function GetGameNameForFailure( receipt )
 
 function OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 {
-	var sErrorMessage = 'An unexpected error has occurred.  Your product code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/en/wizard/HelpWithCDKey">Steam Support</a> for further assistance.';
+	var sErrorMessage = 'An unexpected error has occurred.  Your product code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithCDKey">Steam Support</a> for further assistance.';
 	var strGameName = GetGameNameForFailure( receipt );
 
 	switch ( ePurchaseResult )
@@ -183,7 +183,7 @@ function OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 
 		case 4:
 		default:
-			sErrorMessage = 'An unexpected error has occurred.  Your product code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/en/wizard/HelpWithCDKey">Steam Support</a> for further assistance.';
+			sErrorMessage = 'An unexpected error has occurred.  Your product code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithCDKey">Steam Support</a> for further assistance.';
 			break;
 	}
 

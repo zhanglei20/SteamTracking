@@ -3824,20 +3824,20 @@ a.pulldown_mobile {
 
 }
 
-	html.responsive.gamepad .leftcol,
-	html.responsive.gamepad .rightcol {
+	html.responsive.GamepadMode .leftcol,
+	html.responsive.GamepadMode .rightcol {
 		float: none;
 		width: auto;
 		margin-left: 0;
 	}
 
-	html.responsive.gamepad .tab_item_cap_img {
+	html.responsive.GamepadMode .tab_item_cap_img {
 		width: 100%;
 		height: auto;
 		vertical-align: middle;
 	}
 
-	html.responsive.gamepad .carousel_container .arrow {
+	html.responsive.GamepadMode .carousel_container .arrow {
 		bottom: 0px;
 		top: auto;
 		height: 0px;
@@ -3847,7 +3847,7 @@ a.pulldown_mobile {
 		background: none;
 	}
 
-	html.responsive.gamepad .carousel_container .arrow > div {
+	html.responsive.GamepadMode .carousel_container .arrow > div {
 		width: 13px;
 		height: 20px;
 		background-size: cover;
@@ -3855,34 +3855,34 @@ a.pulldown_mobile {
 		margin: 0 10px;
 	}
 
-	html.responsive.gamepad .carousel_container .arrow.left {
+	html.responsive.GamepadMode .carousel_container .arrow.left {
 		left: 0;
 	}
 
-	html.responsive.gamepad .carousel_container .arrow.left > div {
+	html.responsive.GamepadMode .carousel_container .arrow.left > div {
 		background-position-x: 13px;
 	}
 
-	html.responsive.gamepad .carousel_container .arrow.right {
+	html.responsive.GamepadMode .carousel_container .arrow.right {
 		right: 0;
 		text-align: right;
 	}
 
-	html.responsive.gamepad .carousel_container .carousel_items > * {
+	html.responsive.GamepadMode .carousel_container .carousel_items > * {
 		position: relative;
 		top: auto;
 		left: auto;
 		opacity: 1;
 	}
 
-	html.responsive.gamepad .specials_under10_content,
-	html.responsive.gamepad .live_streams_ctn {
+	html.responsive.GamepadMode .specials_under10_content,
+	html.responsive.GamepadMode .live_streams_ctn {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
 
-	html.responsive.gamepad .carousel_container .carousel_items:not(.no_paging),
-	html.responsive.gamepad .carousel_container.maincap .carousel_items:not(.no_paging) {
+	html.responsive.GamepadMode .carousel_container .carousel_items:not(.no_paging),
+	html.responsive.GamepadMode .carousel_container.maincap .carousel_items:not(.no_paging) {
 		overflow-x: scroll;
 		overflow-y: hidden;
 		box-sizing:content-box;
@@ -3897,7 +3897,7 @@ a.pulldown_mobile {
 		padding-bottom: 21px;
 	}
 
-	html.responsive.gamepad .carousel_container .carousel_items > * {
+	html.responsive.GamepadMode .carousel_container .carousel_items > * {
 		pointer-events: auto;
 		flex-shrink: 0;
 	}
@@ -4742,7 +4742,7 @@ html:not(.rn_mobile_app) body.v7menu .game_page_background:not(.bundle) {
 	padding-top: var( --store-menu-overlap-height, 46px );
 }
 
-html.gamepad body.v7menu .game_page_background {
+html.GamepadMode body.v7menu .game_page_background {
 	/* menu doesn't "float" but we always want the spacing */
 	padding-top: 46px;
 }

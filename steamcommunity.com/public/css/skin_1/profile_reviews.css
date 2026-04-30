@@ -170,7 +170,6 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	clear: left;	/* in responsive mode, will drop below the game logo */
 }
 
-
 .review_box .content.failed_content_check {
 	font-style: italic;
 }
@@ -188,10 +187,13 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 .review_box .control_block {
-	padding: 8px;
-	line-height: 22px;
-	font-size: 12px;
+	align-items: center;
 	color: #8f98a0;
+	display: flex;
+	font-size: 12px;
+	gap: 3.5px;
+	line-height: 22px;
+	padding: 8px;
 }
 
 .review_box .control_block .text {
@@ -205,6 +207,10 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	margin-left: 8px;
 }
 
+.review_box .reviewer_hardware_container {
+	margin-top: 10px;
+	margin-left: 8px;
+}
 
 #rightContents
 {
@@ -290,94 +296,74 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 /* dynamic select */
-.review_box .control_block .dselect_container {
-	color: #b0aeac;
-	text-shadow: 1px 1px 0px #000;
-	font-size: 12px;
-}
-
-.review_box .control_block .dselect_container {
+.dselect_container {
 	display: inline-block;
-	position: relative;
-
 }
 
-.dselect_container a, .dselect_container a:hover, .dselect_container a:active, .dselect_container a:visited
-{
-	font-size: 12px;
-	line-height: 22px;
-	text-decoration: none;
-	font-weight: normal;
-}
-
-a.trigger, a.activetrigger {
-	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
-	border-right: 7px solid #000; /* HAAAAAX! */
-	display:inline-block;
-	vertical-align: middle;
-
-	color: #B0AEAC;
-	height: 22px;
-	padding-left:8px;
-	padding-right: 20px;
-	overflow: hidden;
-
-
-	background-color: #000;
-	border-radius: 3px;
-	color: #e1e1e1;
-
-}
-
-.dropcontainer ul {
-	background-color: #000;
-	border-radius: 3px;
-	border-top-right-radius: 0;
-	border-top-left-radius: 0;
-	list-style-type:none;
-	margin:0;
-	padding:5px 5px;
-
-	position:absolute;
-	line-height: 22px;
-	z-index: 999999;
-
-	overflow: auto;
-	overflow-x: hidden;
-
-	white-space: nowrap;
+.dselect_container .dropcontainer ul {
+	background-color: #000000;
+	border-radius: 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
+	list-style-type: none;
+	margin: 0;
 	max-height: 306px;
+	overflow: hidden auto;
+	padding: 5px;
+	position: absolute;
+	white-space: nowrap;
+	z-index: 2000;
 }
 
-.dropdownhidden{
+html.GamepadMode .dselect_container .dropcontainer ul {
+	border-radius: 3px;
+	padding: 0;
+}
+
+.dselect_container .dropcontainer ul.dropdownhidden {
 	display: none;
 }
-.dropdownvisible{
-	top:-4px;
+
+.dselect_container .dropcontainer ul li a {
+	color: #e1e1e1;
 	display: block;
 }
-.dropcontainer ul li {
-	padding: 0px;
-	margin: 0px;
-	list-style-type: none;
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	font-size: 12px;
+	line-height: 22px;
+	padding-inline: 2px;
 }
 
-.dropcontainer ul a {
-	padding-left:2px;
-	padding-right:2px;
-	display:block;
-	text-decoration:none;
-	color:#e1e1e1;
-	line-height: 22px;
-	height: 22px;
-}
-.dropcontainer a.highlighted_selection {
-	background:#3196FF;
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
+	background: #3196FF;
 	color: #FFFFFF;
-	text-decoration: none;
 }
-.dropcontainer{
-	position:relative;
+
+.dselect_container .trigger {
+	background-color: #000000;
+	border: 0 solid #000000;
+	border-radius: 3px;
+	color: #e1e1e1;
+	font-size: 12px;
+	line-height: 22px;
+	overflow: hidden;
+	padding-left: 8px;
+	padding-right: 26px !important;
+	position: relative;
+	vertical-align: middle;
+}
+
+html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
+	border-radius: 3px 3px 0 0;
+}
+
+.dselect_container .trigger::after {
+	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat left center;
+	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 16px;
 }
 
 @media screen and (max-width: 910px)
@@ -391,7 +377,7 @@ a.trigger, a.activetrigger {
 
 }
 
-	html.responsive.gamepad .review_list #rightContents {
+	html.responsive.GamepadMode .review_list #rightContents {
 		float: none;
 		width: auto;
 	}

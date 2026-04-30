@@ -7,8 +7,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
-        m_HomeView;
+        m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -17,9 +18,12 @@
         }
         static s_globalSingletonStore;
         static Get() {
+          var _;
           return (
             _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
+              ((_ = "CHomeViewStore.s_globalSingletonStore"),
+              (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
+              (_.s_globalSingletonStore = new _()),
               "dev" == _._.WEB_UNIVERSE &&
                 (window.g_HomeViewSetting = _.s_globalSingletonStore)),
             _.s_globalSingletonStore
@@ -54,11 +58,18 @@
           );
         }
         SetHomeViewSettingOverride(_) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ..._?.all,
-            ..._?.maincap,
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ..._?.all,
+                ..._?.maincap,
+              })
+            : (this.m_HomeView = {
+                home: {
+                  ..._?.all,
+                  ..._?.maincap,
+                },
+              });
         }
       }
     },
@@ -1209,12 +1220,12 @@
           const {
             appid: _,
             clanSteamID: _,
-            announcementGID: __webpack_require__,
+            announcementGID: _,
             partnerEventStore: _,
             additionalParams: _,
           } = this.props;
           _.LoadAdjacentPartnerEventsByAnnouncement(
-            __webpack_require__,
+            _,
             _,
             _,
             0,
@@ -1259,7 +1270,7 @@
         }
         render() {
           const { bShowOnlyInitialEvent: _ } = this.props,
-            { bLoading: _, eventModel: __webpack_require__ } = this.state;
+            { bLoading: _, eventModel: _ } = this.state;
           if (_)
             return (0, _.jsx)(_._, {
               active: !0,
@@ -1284,16 +1295,12 @@
           } = this.props;
           let _;
           _._.IN_CLIENT &&
-            __webpack_require__?.appid &&
+            _?.appid &&
             (_._.Get().HintLoad(),
-            _._.Get().BOwnsApp(__webpack_require__.appid) &&
-              (_ = (_) =>
-                (0, _._)(
-                  _,
-                  "steam://nav/games/details/" + __webpack_require__.appid,
-                )));
+            _._.Get().BOwnsApp(_.appid) &&
+              (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
           const _ = (0, _.jsx)(_._, {
-            initialEvent: __webpack_require__,
+            initialEvent: _,
             appid: _,
             clanSteamID: _,
             partnerEventStore: _,
@@ -1355,6 +1362,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1367,7 +1375,7 @@
       const _ = (0, _._)((_) => {
           const {
               clanAccountID: _,
-              gidAnnouncement: __webpack_require__,
+              gidAnnouncement: _,
               partnerEventStore: _,
               trackingLocation: _,
               bViewAllShowInfiniteScroll: _,
@@ -1388,7 +1396,7 @@
                   const _ = _._.InitFromClanID(_);
                   await _._.LoadClanInfoForClanSteamID(_);
                   let _ = await _.LoadAdjacentPartnerEventsByAnnouncement(
-                    __webpack_require__,
+                    _,
                     _,
                     null,
                     4,
@@ -1400,21 +1408,18 @@
                   );
                   if (!_.token.reason) {
                     _ = _ || [];
-                    let _ = _.filter(
-                      (_) => _.GetAnnouncementGID() != __webpack_require__,
-                    ).map((_) => _.AnnouncementGID);
-                    _._(_);
-                    const _ = _.slice(0, 3).map((_) =>
-                      _.GetClanEventFromAnnouncementGID(_),
+                    let _ = _.filter((_) => _.GetAnnouncementGID() != _).map(
+                      (_) => _.AnnouncementGID,
                     );
+                    _._(_);
+                    const _ = _.slice(0, 3)
+                      .map((_) => _.GetClanEventFromAnnouncementGID(_))
+                      .filter((_) => !!_);
                     if ((_(_), _(!1), _)) {
                       let _ = _._.Get().GetTracker(),
                         _ = !1;
-                      if (_.BHasClanAnnouncementGID(__webpack_require__)) {
-                        let _ =
-                          _.GetClanEventFromAnnouncementGID(
-                            __webpack_require__,
-                          );
+                      if (_.BHasClanAnnouncementGID(_)) {
+                        let _ = _.GetClanEventFromAnnouncementGID(_);
                         _ &&
                           _.BIsPartnerEvent() &&
                           _.BIsVisibleEvent() &&
@@ -1442,7 +1447,7 @@
                   _.current && _.current("PartnerEventRow: unmounting");
                 }
               ),
-              [_, __webpack_require__, _, _],
+              [_, _, _, _],
             ),
             _)
           )
@@ -1517,7 +1522,7 @@
       function _(_) {
         const {
             event: _,
-            imageURLOverride: __webpack_require__,
+            imageURLOverride: _,
             bShowAssociatedApp: _,
             langOverride: _,
             onClick: _,
@@ -1527,11 +1532,11 @@
           _ = (0, _._)(_.appid),
           [_, _, _, _, _, _] = (0, _._)(() => {
             const _ = _ || (0, _._)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.full);
             return [
               _,
@@ -1542,17 +1547,14 @@
               _.GetSubTitleWithLanguageFallback(_) || "",
             ];
           }),
-          [_, _] = (0, _.useState)(void 0),
-          _ =
-            !_ || (_ !== _ && _ !== _)
-              ? {
-                  src: _,
-                  onLoad: () => _(_),
-                  onError: () => _(_),
-                }
-              : {
-                  src: _,
-                };
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          _ = [
+            _,
+            _ !== _ ? _ : void 0,
+            _ && (0, _._)(_, "main_capsule"),
+          ].filter(Boolean),
+          [_, _] = (0, _.useState)(_);
         if (!_)
           return (0, _.jsx)("div", {
             className: _().OtherEvents_EventCtn,
@@ -1603,8 +1605,11 @@
                           _().OtherEvents_MainImageCtn,
                           _ && _().MaskImages,
                         ),
-                        children: (0, _.jsx)("img", {
-                          ..._,
+                        children: (0, _.jsx)(_._, {
+                          rgSources: _,
+                          onIncrementalError: (_, _, _) => {
+                            _ >= _.length && _(void 0), _(_[_ + 1]);
+                          },
                           className: _().OtherEvents_MainImage,
                           alt: "",
                         }),
@@ -1654,7 +1659,7 @@
         );
       }
       function _(_) {
-        const { appid: _, bHidePrice: __webpack_require__ } = _,
+        const { appid: _, bHidePrice: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -1683,7 +1688,7 @@
                   alt: _.name,
                 }),
               }),
-              Boolean(!__webpack_require__ && !_.is_free) &&
+              Boolean(!_ && !_.is_free) &&
                 (0, _.jsxs)("span", {
                   className: (0, _._)(
                     _().AppCapsulePrice,
@@ -1713,72 +1718,83 @@
         });
       }
       function _(_) {
-        const {
-            event: _,
-            imageURLOverride: __webpack_require__,
-            onClick: _,
-          } = _,
+        const { event: _, imageURLOverride: _, onClick: _ } = _,
           _ = (0, _._)(_.appid),
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_._.LANGUAGE),
-          [_, _, _] = (0, _._)(() =>
+          [_, _, _, _, _] = (0, _._)(() =>
             _
               ? [
-                  void 0 !== __webpack_require__
-                    ? __webpack_require__
+                  void 0 !== _
+                    ? _
                     : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
                   _.GetNameWithFallback(_),
                   _.GetCategoryAsString(),
+                  _.GetSubTitleWithLanguageFallback(_),
+                  _.GetSummaryWithFallback(_),
                 ]
-              : [void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0, void 0],
           );
-        return _
-          ? (0, _.jsxs)(_._, {
-              className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
-              eventModel: _,
-              route: _._.k_eView,
-              onClick: _,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().OtherEvents_ContentCtn,
-                  children: (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _().OtherEvents_MainImageCtn,
-                      _ && _().MaskImages,
-                    ),
-                    children: (0, _.jsx)("img", {
-                      src: _,
-                      className: _().OtherEvents_MainImage,
-                      alt: "",
-                    }),
-                  }),
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _().OtherEvents_EventCtn,
+          });
+        const _ = [_, _ && (0, _._)(_, "main_capsule")].filter(Boolean);
+        return (0, _.jsxs)(_._, {
+          className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
+          eventModel: _,
+          route: _._.k_eView,
+          onClick: _,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().OtherEvents_ContentCtn,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().OtherEvents_MainImageCtn,
+                  _ && _().MaskImages,
+                ),
+                children: (0, _.jsx)(_._, {
+                  rgSources: _,
+                  className: _().OtherEvents_MainImage,
+                  alt: "",
                 }),
+              }),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().OtherEvents_TextCtn,
+              children: [
                 (0, _.jsxs)("div", {
-                  className: _().OtherEvents_TextCtn,
+                  className: _().HorizontalDescriptionCtn,
                   children: [
-                    (0, _.jsxs)("div", {
-                      className: _().HorizontalDescriptionCtn,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().HorizontalDescription,
-                          children: _,
-                        }),
-                        (0, _.jsx)(_._, {
-                          bSingleLine: !0,
-                          dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
-                        }),
-                      ],
-                    }),
                     (0, _.jsx)("div", {
-                      className: _().HorizontalTitle,
+                      className: _().HorizontalDescription,
                       children: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      bSingleLine: !0,
+                      dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
                     }),
                   ],
                 }),
+                (0, _.jsx)("div", {
+                  className: _().HorizontalTitle,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().HorizontalSubTitle,
+                    children: _,
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().HorizontalSummary,
+                    children: _,
+                  }),
               ],
-            })
-          : (0, _.jsx)("div", {
-              className: _().OtherEvents_EventCtn,
-            });
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

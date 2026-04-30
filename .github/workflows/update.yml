@@ -2,7 +2,10 @@ name: Track Steam Updates
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 9,12,15,18,21 * * MON-FRI'
+      timezone: "America/Los_Angeles"
+    - cron: '0 0,12 * * SAT,SUN'
+      timezone: "America/Los_Angeles"
   workflow_dispatch:
     inputs:
       force:
@@ -17,6 +20,7 @@ concurrency:
 
 permissions:
   contents: write
+  statuses: write
 
 jobs:
   update:
@@ -62,16 +66,20 @@ jobs:
 
       - name: Restore cache
         uses: actions/cache/restore@v5
+        if: inputs.force != true
         with:
           path: |
             .support
             store.steampowered.com/ssr
+            partner.steamgames.com/ssr
+            steamcommunity.com/ssr
           key: cache-
           restore-keys: |
             cache-
 
       - name: Restore etags cache
         uses: actions/cache/restore@v5
+        if: inputs.force != true
         with:
           path: .support/etags.json
           key: etags-
@@ -91,6 +99,27 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Set commit status
+        if: always() && steps.update.outputs.changed == 'true'
+        shell: bash
+        run: |
+          NEW_SHA=$(git rev-parse HEAD)
+
+          if [[ "${{ job.status }}" == "success" ]]; then
+            STATE="success"
+          else
+            STATE="failure"
+          fi
+
+          gh api "repos/${{ github.repository }}/statuses/$NEW_SHA" \
+            -f state="$STATE" \
+            -f target_url="$GITHUB_SERVER_URL/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            -f description="SteamTracking" \
+            -f context="SteamTracking"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+
       - name: Save etags cache
         uses: actions/cache/save@v5
         with:
@@ -103,10 +132,12 @@ jobs:
           path: |
             .support
             store.steampowered.com/ssr
-          key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**') }}
+            partner.steamgames.com/ssr
+            steamcommunity.com/ssr
+          key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**', 'partner.steamgames.com/ssr/**', 'steamcommunity.com/ssr/**') }}
 
       - name: Dispatch to ValveProtobufs
-        if: steps.update.outputs.changed == 'true'
+        if: steps.update.outputs.changed == 'true' && env.GH_TOKEN != ''
         run: gh api repos/SteamTracking/Protobufs/dispatches -f event_type=sync
         env:
           GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}

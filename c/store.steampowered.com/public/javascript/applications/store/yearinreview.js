@@ -13,6 +13,18 @@
         RareAchievementNoAnimation: "_1a4bwiE4yUR3XXBKI6mKqt",
         RareAchievementIconGlow: "_1Z2eJs9-zNTKcWKy4M-oDE",
         HiddenLabel: "_1ABm6sfuqiZZDSL9z8mW1a",
+        BackgroundAnimation: "_2jC4Eqt8IrbRbM81zvxlnW",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3jGCeVy7OzY5pw0Rpx0z8-",
+        "ItemFocusAnim-darkerGrey": "_2Jqi29kzJtRTafvIOPyvAW",
+        "ItemFocusAnim-darkGreySettings": "_2tg8Ji5QTXXXSzn1Q0HRa2",
+        "ItemFocusAnim-darkGrey": "T-2rsbY05mXhgaIQkf73x",
+        "ItemFocusAnim-grey": "_1WGat3-0-TCDKEtg7LEoB5",
+        "ItemFocusAnim-translucent-white-10": "RkktEhJT7jnAfvbEiNBBH",
+        "ItemFocusAnim-translucent-white-20": "_30c3lgfOmK8HMV6u21SQ42",
+        "ItemFocusAnimBorder-darkGrey": "_1vYqEdzDmOIRAIgDNUHfBt",
+        "ItemFocusAnim-green": "CrI_goODkSlbs2jjXglfz",
+        focusAnimation: "_3xzftt0SCqsMfNLxtA825Q",
+        hoverAnimation: "_10Y0xofBXAPurniv6K3_YV",
       };
     },
     chunkid: (module) => {
@@ -32,6 +44,18 @@
         FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
         FilterInput: "_2l4z-U60lABvd9XWArGjAf",
         AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
+        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
+        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
+        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
+        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
+        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
+        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
+        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
+        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
+        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
+        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
       };
     },
     chunkid: (module) => {
@@ -74,7 +98,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -172,7 +196,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
@@ -209,7 +233,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         MonthGridOverallCtn: "_2xKPi7RhodSVa0iEsscEfN",
         MonthGroupCtn: "DMCZIDNqrSb2BeQ4d5kAj",
         FirstPlayCtn: "rjWoTavA51H_s5xhADpI_",
@@ -220,7 +243,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         ImagesCtn: "_1qcMwZqiAwD0aa-bpPRDPD",
         AllImagesCtn: "_3mYNn3Asuzn5ilIQ-_jjEu",
         AllImages: "RxFaOYvEjQF0lVUfJj_zJ",
@@ -415,7 +437,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         YearInReviewContainer: "_1FBH84bAF1zr-VjJo8y2YI",
         YearInReviewContent: "_2Mj4nu3kK3ic2TFv5uwGTw",
         TopAreaSizer: "_3kunV-qalJTBLAvNB9lUDg",
@@ -557,7 +578,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         ShareOptions: "_1GTNKoqExpB4ypMhkppYXI",
         ShareTitle: "_3vsN5FX9Q4iAxSRJi52ii6",
         ShareColumns: "_17-suJNiK6Qevk_3Uw1027",
@@ -637,7 +657,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         Section: "_3Q6xYLon3xp6vd3Bt-DtpC",
         Windows: "_1vF9utiJ4zPDJltOokxCPu",
         Linux: "_2sto6qgDyyfXZSaNXVLH2S",
@@ -933,6 +952,18 @@
         ViewPageButton: "_2IfJlTSfJ9B2O7GrLSHZEu",
         Description: "_3OaR0S3fMP3IqzGQkLo2LL",
         OtherYearLink: "e2J3CJVLkCcWuogJlnJqA",
+        BackgroundAnimation: "_14OuUh1QjZE3TsW4NZNR2T",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34-QNskZMB7mEWsqhnZP6b",
+        "ItemFocusAnim-darkerGrey": "_2mYgNS2XvBpQoFx7GpbaE8",
+        "ItemFocusAnim-darkGreySettings": "_2A4pb12mtvU-l5nClt2fv-",
+        "ItemFocusAnim-darkGrey": "_2wJw5tkwjDagaHTwWVdn1u",
+        "ItemFocusAnim-grey": "_1flpMlWbeXKOl-WYA3Xem3",
+        "ItemFocusAnim-translucent-white-10": "_2Du1mKAGG_7kB5hkqpPOqX",
+        "ItemFocusAnim-translucent-white-20": "_1mHlVprPR_Qin9oSqFmQwX",
+        "ItemFocusAnimBorder-darkGrey": "_1dQDG_S6sUmSjy1GFP6ybp",
+        "ItemFocusAnim-green": "_1X5ahFc-n3nVkWAsUpG49I",
+        focusAnimation: "_1ddfD3xnl7ZxtZ7TYShOPs",
+        hoverAnimation: "_2A0Chr-r6KVC7bWMKjWlOP",
       };
     },
     chunkid: (module) => {
@@ -1016,6 +1047,18 @@
         ViewPageButton: "_3Jien5Efkr3B0IQgbOMC0u",
         Description: "_30TBldURmofivWIf4LDybD",
         OtherYearLink: "LDdWtcd3cqcEwlnIqnp0m",
+        BackgroundAnimation: "Uwk2oDOlH9H45uB6SckjX",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1HzbepuV2ne3fOiiw4M6L2",
+        "ItemFocusAnim-darkerGrey": "_3jhvEXbsQ8rwLbzgIG2YKY",
+        "ItemFocusAnim-darkGreySettings": "_22jVwj2EIKxChqvLWQbXuN",
+        "ItemFocusAnim-darkGrey": "_3E-Kmphz35Z5zxRRLBBv__",
+        "ItemFocusAnim-grey": "_1MX1VV5l2Txw56HFd3WETD",
+        "ItemFocusAnim-translucent-white-10": "_6H60CwBcO9kk4y1pOFm21",
+        "ItemFocusAnim-translucent-white-20": "_31Gmo3sGiGSz9BuXbnqa54",
+        "ItemFocusAnimBorder-darkGrey": "_2BlrdTd8j7eGp87-nNi7Md",
+        "ItemFocusAnim-green": "_3TnQtlMvVkjLUwNdMvKkKA",
+        focusAnimation: "_3xy4OMg8IMNU-GS54X-fou",
+        hoverAnimation: "_3TsGkEqTE3pjbkbIFVAmfi",
       };
     },
     chunkid: (module) => {
@@ -1149,7 +1192,7 @@
       const _ = "nicknames";
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_],
             queryFn: async () => {
               const _ = new Map();
@@ -1165,7 +1208,7 @@
               return _;
             },
           });
-        return __webpack_require__ ? __webpack_require__.get(_) : null;
+        return _ ? __webpack_require__.get(_) : null;
       }
       const _ = new (_())(
           (_) =>
@@ -1222,15 +1265,15 @@
         ),
         _ = "avatarandpersonas";
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: [_, _],
           queryFn: () => _.load(_),
         });
-        return [_, __webpack_require__];
+        return [_, _];
       }
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
             queryFn: async () => {
               const _ = await _.loadMany(_);
@@ -1252,7 +1295,7 @@
               }),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ ? null : _;
       }
     },
@@ -1281,7 +1324,7 @@
         OnEmoticonClick(_) {
           const {
             emoticonStore: _,
-            strFlairGroupID: __webpack_require__,
+            strFlairGroupID: _,
             SetUIDisplayPref: _,
             contextOptions: _,
             bShowChatAddons: _,
@@ -1298,9 +1341,7 @@
                   onRoomEffectSelected: this.props.onRoomEffectSelected,
                   onStickerSelected: this.props.onStickerSelected,
                 })
-              : __webpack_require__ &&
-                  _.flair_list &&
-                  _.GetFlairListByGroupID(__webpack_require__)?.length > 0
+              : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
                 ? (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
@@ -1340,24 +1381,19 @@
           return !_ || _ < _ || (_ && (!_ || _ < _));
         }
         render() {
-          const {
-            disabled: _,
-            className: _,
-            ttip: __webpack_require__,
-            useImg: _,
-          } = this.props;
+          const { disabled: _, className: _, ttip: _, useImg: _ } = this.props;
           let _ = [_],
             _ = !1;
           return (
             _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
-            __webpack_require__ && _.push("ttip"),
+            _ && _.push("ttip"),
             _
               ? (0, _.jsx)(_._, {
                   onClick: this.OnEmoticonClick,
                   onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
                   focusable: !0,
                   children: (0, _.jsx)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: (0, _.jsx)("img", {
                       src: this.props.useImg,
                       className: (0, _._)(..._),
@@ -1377,7 +1413,7 @@
                     this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
                   disabled: _,
                   children: (0, _.jsxs)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: [
                       this.props.buttonIcon || (0, _.jsx)(_._, {}),
                       _ && (0, _.jsx)(_._, {}),
@@ -1409,8 +1445,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = !1) {
-        return `${_}economy/sticker${__webpack_require__ ? "static" : ""}/${encodeURIComponent(_)}`;
+      function _(_, _, _ = !1) {
+        return `${_}economy/sticker${_ ? "static" : ""}/${encodeURIComponent(_)}`;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1488,21 +1524,21 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__, onClick: _ } = _;
+        const { active: _, children: _, onClick: _ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_.Tab, _ && _.Active),
           focusClassName: _.Focus,
           onActivate: _,
           children: (0, _.jsx)("div", {
             className: (0, _._)(_.TabContent, _ && _.Active),
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
       function _(_) {
         const {
           items: _,
-          renderItem: __webpack_require__,
+          renderItem: _,
           onItemSelect: _,
           keyExtractor: _,
           renderEmpty: _,
@@ -1530,13 +1566,7 @@
         );
       }
       function _(_) {
-        const {
-          title: _,
-          onFilterChange: __webpack_require__,
-          filter: _,
-          onSubmit: _,
-          ..._
-        } = _;
+        const { title: _, onFilterChange: _, filter: _, onSubmit: _, ..._ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -1549,19 +1579,14 @@
             }),
             (0, _.jsx)(_, {
               value: _,
-              onChange: __webpack_require__,
+              onChange: _,
               onSubmit: _,
             }),
           ],
         });
       }
       function _(_) {
-        const {
-          onFilterChange: _,
-          filter: __webpack_require__,
-          sections: _,
-          title: _,
-        } = _;
+        const { onFilterChange: _, filter: _, sections: _, title: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_, {
@@ -1586,7 +1611,7 @@
               ],
             }),
             (0, _.jsx)(_, {
-              value: __webpack_require__,
+              value: _,
               onChange: _,
             }),
           ],
@@ -1608,7 +1633,7 @@
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__, onSubmit: _ } = _;
+        const { value: _, onChange: _, onSubmit: _ } = _;
         return (0, _.jsx)("div", {
           className: _.FilterInputContainer,
           children: (0, _.jsx)(_._, {
@@ -1622,10 +1647,10 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_, _.AddonPickerMessage),
-          ...__webpack_require__,
+          ..._,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -1644,14 +1669,14 @@
       const _ = (0, _._)((_) => {
         const {
           emoticonStore: _,
-          roomEffectSettings: __webpack_require__,
+          roomEffectSettings: _,
           strFlairGroupID: _,
           onEmoticonSelected: _,
           onRoomEffectSelected: _,
           onStickerSelected: _,
         } = _;
         !(function (_) {
-          const [_, __webpack_require__] = (0, _.useState)(_.is_initialized);
+          const [_, _] = (0, _.useState)(_.is_initialized);
           (0, _.useEffect)(() => {
             if (!_.is_initialized) {
               _.UpdateEmoticonList();
@@ -1727,7 +1752,7 @@
                   renderContent: () =>
                     (0, _.jsx)(_, {
                       store: _,
-                      effectSettings: __webpack_require__,
+                      effectSettings: _,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
@@ -1758,7 +1783,7 @@
           const {
               emoticonStore: _,
               onEmoticonSelected: _,
-              onStickerSelected: __webpack_require__,
+              onStickerSelected: _,
               strFlairGroupID: _,
             } = this.props,
             _ = [];
@@ -1911,7 +1936,7 @@
           const {
               store: _,
               onEmoticonSelect: _,
-              onStickerSelect: __webpack_require__,
+              onStickerSelect: _,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -1940,7 +1965,7 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentStickers"),
                 items: _._.FilterStickers(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
                     sticker: _,
@@ -1972,16 +1997,9 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
-            _ =
-              !_ && __webpack_require__
-                ? _.GetFlairListByGroupID(__webpack_require__)
-                : _.emoticon_list,
+            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
           return (0, _.jsx)(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
@@ -2040,8 +2058,8 @@
         };
         render() {
           const { store: _, onItemSelect: _ } = this.props,
-            { filter: __webpack_require__ } = this.state,
-            _ = _._.FilterStickers(_.GetStickerList(), __webpack_require__);
+            { filter: _ } = this.state,
+            _ = _._.FilterStickers(_.GetStickerList(), _);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_StickerHeading"),
             items: _,
@@ -2055,10 +2073,10 @@
               this.setState({
                 filter: _,
               }),
-            filter: __webpack_require__,
+            filter: _,
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
-              __webpack_require__
+              _
                 ? (0, _.jsx)(_, {
                     children: (0, _._)("#AddonPicker_NoResults"),
                   })
@@ -2091,17 +2109,13 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              effectSettings: _,
-              onItemSelect: __webpack_require__,
-            } = this.props,
+          const { store: _, effectSettings: _, onItemSelect: _ } = this.props,
             { filter: _ } = this.state,
             _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_EffectHeading"),
             items: _,
-            onItemSelect: __webpack_require__,
+            onItemSelect: _,
             renderItem: (_) =>
               (0, _.jsx)(_, {
                 effect: _,
@@ -2148,11 +2162,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
             _ = [];
           return (
@@ -2211,11 +2221,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state;
           return (0, _.jsx)(_, {
             onFilterChange: (_) =>
@@ -2226,10 +2232,7 @@
             sections: [
               {
                 title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(
-                  _.GetFlairListByGroupID(__webpack_require__),
-                  _,
-                ),
+                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
@@ -2249,14 +2252,14 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (_) => {
-        const { emoticon: _, large: __webpack_require__ } = _,
+        const { emoticon: _, large: _ } = _,
           _ = !_.last_used && _.time_received;
         return (0, _.jsxs)("div", {
           className: _().EmoticonItem,
           children: [
             (0, _.jsx)(_._, {
               emoticon: _.name,
-              large: __webpack_require__,
+              large: _,
             }),
             _ && (0, _.jsx)(_, {}),
           ],
@@ -2268,11 +2271,7 @@
         };
         m_ref = _.createRef();
         render() {
-          const {
-              sticker: _,
-              className: _,
-              ...__webpack_require__
-            } = this.props,
+          const { sticker: _, className: _, ..._ } = this.props,
             _ = _(_._.COMMUNITY_CDN_URL, _.name);
           return (0, _.jsxs)("div", {
             ref: this.m_ref,
@@ -2293,7 +2292,7 @@
               this.setState({
                 showHover: !1,
               }),
-            ...__webpack_require__,
+            ..._,
             children: [
               (0, _.jsx)("img", {
                 style: {
@@ -2313,15 +2312,15 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            sticker: { name: __webpack_require__, appid: _ },
+            sticker: { name: _, appid: _ },
           } = _,
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("img", {
-            src: _(_._.COMMUNITY_CDN_URL, __webpack_require__),
+            src: _(_._.COMMUNITY_CDN_URL, _),
             className: _().StickerHoverSticker,
           }),
         });
@@ -2335,7 +2334,7 @@
           const {
               effect: _,
               roomEffectSettings: _,
-              className: __webpack_require__,
+              className: _,
               ..._
             } = this.props,
             _ = _[_.name];
@@ -2357,7 +2356,7 @@
               this.setState({
                 showHover: !1,
               }),
-            className: (0, _._)(__webpack_require__, _().EffectButton),
+            className: (0, _._)(_, _().EffectButton),
             ..._,
             children: [
               _.renderEffectIcon(),
@@ -2374,14 +2373,14 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            effect: { name: __webpack_require__, appid: _ },
+            effect: { name: _, appid: _ },
             roomEffectSettings: _,
           } = _,
-          _ = _[__webpack_require__],
+          _ = _[_],
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("div", {
             className: _().EffectHoverEffect,
@@ -2480,7 +2479,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
           version: "1.1",
@@ -2489,7 +2488,7 @@
           width: "20px",
           height: "20px",
           viewBox: "0 0 24 24",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("path", {
             _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           }),
@@ -2512,8 +2511,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-          const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
-              _,
+          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
             [_, _] = (0, _.useState)(""),
             _ = (0, _._)(_.clanSteamID.GetAccountID()),
             _ = () => _.closeModal && _.closeModal(),
@@ -2586,13 +2584,9 @@
           });
         },
         _ = (_) => {
-          const {
-            clanImage: _,
-            searchStringHilight: __webpack_require__,
-            fnImageClick: _,
-          } = _;
+          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
           let _ = _.file_name ? _.file_name : "",
-            _ = _(__webpack_require__, _, String(_.imageid), _.Hilight);
+            _ = _(_, _, String(_.imageid), _.Hilight);
           return (0, _.jsxs)("div", {
             className: _.ImageContainer,
             children: [
@@ -2687,7 +2681,7 @@
           let _ = [];
           const {
             fnFilterLanguage: _,
-            fnLangHasData: __webpack_require__,
+            fnLangHasData: _,
             fnLastUpdateRTime: _,
             fnIsLangSupported: _,
           } = this.props;
@@ -2777,20 +2771,15 @@
           return _;
         }
         OnLanguageChange(_) {
-          const { fnOnLanguageChanged: _, selectedLang: __webpack_require__ } =
-            this.props;
+          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
           let _ = Number.parseInt(_.currentTarget.value);
-          _ != __webpack_require__ && _ && _(_);
+          _ != _ && _ && _(_);
         }
         render() {
-          const {
-            selectedLang: _,
-            bDisabled: _,
-            strTooltip: __webpack_require__,
-          } = this.props;
+          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
           let _ = this.GenerateLanguageOptions();
           return (0, _.jsx)(_._, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             children: (0, _.jsx)("select", {
               value: _,
               onChange: this.OnLanguageChange,
@@ -3302,7 +3291,7 @@
           let _,
             {
               emoticonStore: _,
-              supportBBCodes: __webpack_require__,
+              supportBBCodes: _,
               fnSetText: _,
               ..._
             } = this.props;
@@ -3318,7 +3307,7 @@
               break;
             case "BBCode":
               _ = (0, _.jsx)(_, {
-                supportBBCodes: __webpack_require__,
+                supportBBCodes: _,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnBBCodeSuggestionSelected,
@@ -3376,7 +3365,7 @@
       const _ = (0, _._)((_) => {
         const {
             clanSteamID: _,
-            inputClanImage: __webpack_require__,
+            inputClanImage: _,
             nWidth: _,
             nHeight: _,
             setImage: _,
@@ -3389,7 +3378,7 @@
             [_, _],
           ),
           [_, _] = _.useState(void 0),
-          [_, _] = _.useState(Boolean(__webpack_require__)),
+          [_, _] = _.useState(Boolean(_)),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
@@ -3402,17 +3391,16 @@
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
                 0 != _.error.length ||
                   _.needsCrop ||
-                  (__webpack_require__ &&
-                    __webpack_require__.image_hash == _.image_hash) ||
+                  (_ && _.image_hash == _.image_hash) ||
                   _(_);
               }
               _(!1);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           );
         _.useEffect(() => {
-          _(__webpack_require__);
-        }, [_, __webpack_require__]);
+          _(_);
+        }, [_, _]);
         let _,
           _ = "",
           _ = !1;
@@ -3913,7 +3901,7 @@
           const {
             showFormatHelp: _,
             bEmbeddedInDialog: _,
-            bSupportHTMLImport: __webpack_require__,
+            bSupportHTMLImport: _,
             pathToImages: _,
           } = this.props;
           let _;
@@ -4062,7 +4050,7 @@
                     tooltip: (0, _._)("#EventEditor_AddSpeaker"),
                     imgURL: this.props.pathToImages + "/insert_img.png",
                   }),
-                Boolean(__webpack_require__ && !_) &&
+                Boolean(_ && !_) &&
                   (0, _.jsx)(_, {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
                     className: _().ActionImportHTML,
@@ -4522,7 +4510,7 @@
         (0, _._)([_._], _.prototype, "OnAnchorURLChange", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) => {
-        const [_, __webpack_require__] = _.useState(""),
+        const [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
@@ -4700,7 +4688,7 @@
         });
       };
       function _(_) {
-        const { friends: _, setSteamID: __webpack_require__ } = _;
+        const { friends: _, setSteamID: _ } = _;
         return (0, _.jsx)("div", {
           className: _().DropDownScroll,
           children: _.map((_) =>
@@ -4708,7 +4696,7 @@
               _,
               {
                 steamid: _,
-                setSteamID: __webpack_require__,
+                setSteamID: _,
               },
               _,
             ),
@@ -4716,7 +4704,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, setSteamID: __webpack_require__ } = _,
+        const { steamid: _, setSteamID: _ } = _,
           { data: _ } = (0, _._)(_);
         return (0, _.jsx)(_._, {
           onSelected: () => __webpack_require__(new _._(_)),
@@ -4934,7 +4922,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-        const { appid: _, eventLink: __webpack_require__ } = _,
+        const { appid: _, eventLink: _ } = _,
           _ = _.useRef(null),
           { data: _ } = (0, _._)(_._.steamid),
           [_, _] = _.useState(""),
@@ -4955,7 +4943,7 @@
             const _ = _().CancelToken.source();
             (_.current = _.cancel), _(!0);
             let _ = _;
-            0 != _.trim().length && (_ += "\n\n"), (_ += __webpack_require__);
+            0 != _.trim().length && (_ += "\n\n"), (_ += _);
             const _ =
               _._.COMMUNITY_BASE_URL +
               "profiles/" +
@@ -5095,7 +5083,7 @@
                       (0, _.jsx)("div", {
                         className: _().ShareLink,
                         children: (0, _.jsx)(_._, {
-                          text: __webpack_require__,
+                          text: _,
                           event: null,
                           partnerEventStore: _.partnerEventStore,
                         }),
@@ -5121,7 +5109,7 @@
       function _(_) {
         const {
             accountID: _,
-            bHideWhenNotAvailable: __webpack_require__,
+            bHideWhenNotAvailable: _,
             bHideName: _,
             bLink: _ = !0,
           } = _,
@@ -5134,7 +5122,7 @@
           children: Boolean(!_)
             ? (0, _.jsx)(_.Fragment, {
                 children:
-                  Boolean(!__webpack_require__) &&
+                  Boolean(!_) &&
                   (0, _.jsx)("span", {
                     children: _,
                   }),
@@ -6729,7 +6717,7 @@
         }
       }
       function _() {
-        const [_, _, __webpack_require__] = (0, _._)(() => {
+        const [_, _, _] = (0, _._)(() => {
           const _ = _.Get().GetGameList();
           return [
             _.appids.length > _.index ? _.appids[_.index] : null,
@@ -6740,7 +6728,7 @@
         return {
           unAppID: _,
           length: _,
-          index: __webpack_require__,
+          index: _,
         };
       }
       function _(_, _) {
@@ -6800,7 +6788,7 @@
       }
       function _(_) {
         const _ = (0, _.useContext)(_).Screenshots,
-          { data: __webpack_require__ } = (0, _._)({
+          { data: _ } = (0, _._)({
             queryKey: [
               "yirscreenshots",
               _.steamid.ConvertTo64BitString(),
@@ -6809,7 +6797,7 @@
             ],
             queryFn: () => _.GetScreenshots(_),
           });
-        return __webpack_require__;
+        return _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6983,17 +6971,13 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            className: _,
-            children: __webpack_require__,
-            strClassOnFirstVisible: _,
-          } = _,
+        const { className: _, children: _, strClassOnFirstVisible: _ } = _,
           [_, _] = (0, _.useState)(!1);
         return (0, _.jsx)(_._, {
           trigger: "once",
           onVisibilityChange: _,
           className: (0, _._)(_, _ ? _ || "NowVisible" : void 0),
-          children: __webpack_require__,
+          children: _,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -7005,7 +6989,7 @@
       function _(_) {
         const {
             category: _,
-            userYearInReview: __webpack_require__,
+            userYearInReview: _,
             strClassName: _,
             bgImageURL: _,
             title: _,
@@ -7020,8 +7004,8 @@
             nTotalPercentage: _,
           } = (0, _.useMemo)(() => _(_, _), [_, _]),
           { rgResults: _, nTotalResultCount: _ } = (0, _.useMemo)(
-            () => _(__webpack_require__, _, 5, _),
-            [__webpack_require__, _, _, 5],
+            () => _(_, _, 5, _),
+            [_, _, _, 5],
           ),
           _ = (0, _.useMemo)(
             () => _.map((_) => _.parent_appid || _.appid),
@@ -7136,9 +7120,9 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _._)();
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         const _ = __webpack_require__.GetScreenshots("blocked" == _);
         if (!_.length) return null;
         const _ = _[1],
@@ -7152,14 +7136,10 @@
         });
       }
       function _(_) {
-        const {
-            rgGamePercentages: _,
-            category: __webpack_require__,
-            fnOnHoverApp: _,
-          } = _,
+        const { rgGamePercentages: _, category: _, fnOnHoverApp: _ } = _,
           _ = _.map((_) => _.appid);
         let _;
-        switch (__webpack_require__) {
+        switch (_) {
           case "demo":
             _ = 1;
             break;
@@ -7182,7 +7162,7 @@
                 rgAppIDs: _,
                 fnOnMouseEvent: () => _ && _(_.appid),
               },
-              __webpack_require__ + "_" + _.appid,
+              _ + "_" + _.appid,
             ),
           ),
         });
@@ -7190,7 +7170,7 @@
       function _(_) {
         const {
             appid: _,
-            strInfo: __webpack_require__,
+            strInfo: _,
             rgAppIDs: _,
             index: _,
             loading: _,
@@ -7245,10 +7225,10 @@
               : (0, _.jsx)(_, {
                   item: _,
                 }),
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsx)("div", {
                 className: _().TimePlayed,
-                children: __webpack_require__,
+                children: _,
               }),
           ],
         });
@@ -7270,9 +7250,9 @@
         });
       }
       function _(_) {
-        const { percentVal: _, subToken: __webpack_require__ } = _,
+        const { percentVal: _, subToken: _ } = _,
           _ = _(_),
-          _ = `${__webpack_require__}_Percent`;
+          _ = `${_}_Percent`;
         return (0, _.jsxs)("div", {
           className: _().StatBlock,
           children: [
@@ -7295,7 +7275,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { userYearInReview: _, nYear: __webpack_require__ } = _,
+        const { userYearInReview: _, nYear: _ } = _,
           _ = _(),
           _ = (0, _.useMemo)(() => {
             const _ = new Set();
@@ -7321,7 +7301,7 @@
                   className: _.MonthGridOverallCtn,
                   children: (0, _.jsx)(_, {
                     userYearInReview: _,
-                    nYear: __webpack_require__,
+                    nYear: _,
                   }),
                 }),
               }),
@@ -7333,7 +7313,7 @@
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   userYearInReview: _,
-                  nYear: __webpack_require__,
+                  nYear: _,
                 }),
               }),
               onClick: _,
@@ -7374,7 +7354,7 @@
             });
       }
       function _(_) {
-        const { nYear: _, userYearInReview: __webpack_require__ } = _,
+        const { nYear: _, userYearInReview: _ } = _,
           _ = __webpack_require__.GetPlayTimeStats().game_summary,
           _ = _(),
           [_, _] = _.useState(!1),
@@ -7426,7 +7406,7 @@
         });
       }
       function _(_) {
-        const { nYear: _, userYearInReview: __webpack_require__ } = _,
+        const { nYear: _, userYearInReview: _ } = _,
           _ = __webpack_require__.GetRawStats().playtime_stats.months;
         return (0, _.jsx)(_.Fragment, {
           children: _.filter((_) => _.stats.total_sessions > 0).map((_) =>
@@ -7434,7 +7414,7 @@
               _,
               {
                 month: _,
-                userYearInReview: __webpack_require__,
+                userYearInReview: _,
                 nYear: _,
               },
               "outermonth" + _.rtime_month,
@@ -7443,7 +7423,7 @@
         });
       }
       function _(_) {
-        const { nYear: _, userYearInReview: __webpack_require__, month: _ } = _,
+        const { nYear: _, userYearInReview: _, month: _ } = _,
           _ = _(),
           [_, _] = _.useState(!1),
           { bShouldShowMore: _, rgGameStats: _ } = (0, _.useMemo)(() => {
@@ -7479,7 +7459,7 @@
               bShouldShowMore: _,
               rgGameStats: _ ? _.slice(0, 8) : _,
             };
-          }, [_.game_summary, _.rtime_month, _, __webpack_require__]);
+          }, [_.game_summary, _.rtime_month, _, _]);
         if (0 == _.length) return null;
         const _ = new Date(1e3 * (_.rtime_month + 86400));
         return (0, _.jsxs)(
@@ -7516,11 +7496,7 @@
         );
       }
       function _(_) {
-        const {
-          nYear: _,
-          rgGamesInOrderOfPlaytime: __webpack_require__,
-          strTooltip: _,
-        } = _;
+        const { nYear: _, rgGamesInOrderOfPlaytime: _, strTooltip: _ } = _;
         let _ = __webpack_require__.filter((_) =>
           _._.Get().BHasApp(_.nParentAppID || _.appid),
         );
@@ -7550,7 +7526,7 @@
       function _(_) {
         const {
             nYear: _,
-            appid: __webpack_require__,
+            appid: _,
             bNewThisYear: _,
             fnOnClick: _,
             strPercentage: _,
@@ -7558,7 +7534,7 @@
             bIsDemo: _,
             bIsPlayTest: _,
           } = _,
-          [_] = (0, _._)(__webpack_require__, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _._)(),
           _ = _();
         if (!_ || !_.BIsVisible()) return null;
@@ -7634,7 +7610,7 @@
         _ = 1,
         _ = 50;
       function _(_) {
-        const { userYearInReview: _, children: __webpack_require__ } = _,
+        const { userYearInReview: _, children: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               _.GetPlayTimeStats()
@@ -7646,21 +7622,21 @@
           );
         if (!_ || 0 == _.length)
           return (0, _.jsx)(_, {
-            children: __webpack_require__,
+            children: _,
           });
         const _ = _[0].total_playtime_percentagex100;
         return _.GetPlayTimeStats().game_summary.length < _ || _ >= _
           ? (0, _.jsx)(_, {
               appid: _[0].parent_appid || _[0].appid,
-              children: __webpack_require__,
+              children: _,
             })
           : (0, _.jsx)(_, {
               userYearInReview: _,
-              children: __webpack_require__,
+              children: _,
             });
       }
       function _(_) {
-        const { userYearInReview: _, children: __webpack_require__ } = _,
+        const { userYearInReview: _, children: _ } = _,
           _ = _(),
           _ = (0, _.useMemo)(
             () =>
@@ -7747,16 +7723,16 @@
                       }),
                     }),
                   }),
-                  __webpack_require__,
+                  _,
                 ],
               })
             : (0, _.jsx)(_, {
-                children: __webpack_require__,
+                children: _,
               })
         );
       }
       function _(_) {
-        const { appid: _, children: __webpack_require__ } = _,
+        const { appid: _, children: _ } = _,
           [_] = (0, _._)(_, _),
           _ = _();
         return _
@@ -7774,11 +7750,11 @@
                     }),
                   }),
                 }),
-                __webpack_require__,
+                _,
               ],
             })
           : (0, _.jsx)(_, {
-              children: __webpack_require__,
+              children: _,
             });
       }
       function _(_) {
@@ -7801,7 +7777,7 @@
       const _ = ({
         spaceAroundCount: _,
         endValue: _,
-        maxValue: __webpack_require__,
+        maxValue: _,
         duration: _ = 1e3,
         startAnimation: _ = !1,
         stopAnimation: _ = !1,
@@ -7822,7 +7798,7 @@
                 _ =
                   (_ = _) < 0.5 ? 4 * _ ** 3 : 1 - Math.pow(-2 * _ + 2, 3) / 2;
               var _;
-              const _ = Math.round((__webpack_require__ ?? _) * _);
+              const _ = Math.round((_ ?? _) * _);
               _ <= _ ? (_(_), (_.current = requestAnimationFrame(_))) : _(_);
             };
             return (
@@ -7837,7 +7813,7 @@
                 _.current && cancelAnimationFrame(_.current), _ && _ && _();
               }
             );
-          }, [_, _, _, _, _, _, _, __webpack_require__]),
+          }, [_, _, _, _, _, _, _, _]),
           _
             ? (0, _.jsxs)(_.Fragment, {
                 children: [" ", (0, _._)(_), " "],
@@ -8134,7 +8110,7 @@
       function _(_) {
         let {
           progressLabel: _,
-          steamAverage: __webpack_require__,
+          steamAverage: _,
           progressIcon: _,
           userPercent: _,
         } = _;
@@ -8193,12 +8169,12 @@
                   (0, _.jsx)("div", {
                     className: _().ProgressLabelsCnt,
                     children:
-                      __webpack_require__ &&
+                      _ &&
                       (0, _.jsx)("div", {
                         className: _().ProgressSteamAvgLabel,
                         children: (0, _._)(
                           "#YIR_Compare_PlayerProgress_Steam_Avg",
-                          __webpack_require__,
+                          _,
                         ),
                       }),
                   }),
@@ -8536,21 +8512,21 @@
         });
       }
       function _(_) {
-        const { payload: _, _: __webpack_require__, ..._ } = _,
+        const { payload: _, _: _, ..._ } = _,
           _ = (0, _._)(),
           _ = window.innerWidth <= 300;
         return _ || _
           ? (0, _.jsx)("text", {
-              _: __webpack_require__,
+              _: _,
               ..._,
               children: (0, _.jsx)("tspan", {
-                _: __webpack_require__,
+                _: _,
                 _: "20px",
                 children: _.index + 1,
               }),
             })
           : (0, _.jsx)("svg", {
-              _: __webpack_require__ - 85,
+              _: _ - 85,
               ..._,
               width: "170px",
               height: "100%",
@@ -8619,13 +8595,10 @@
         });
       }
       function _(_) {
-        let { label: _, value: __webpack_require__ } = _,
-          _ = __webpack_require__ ? (0, _._)(__webpack_require__) : "-";
+        let { label: _, value: _ } = _,
+          _ = _ ? (0, _._)(_) : "-";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().NumbersRow,
-            0 == __webpack_require__ && _().Disabled,
-          ),
+          className: (0, _._)(_().NumbersRow, 0 == _ && _().Disabled),
           children: [
             (0, _.jsx)("div", {
               className: _().NumbersLabel,
@@ -8695,7 +8668,7 @@
           : null;
       }
       function _(_) {
-        const { accountID: _, year: __webpack_require__ } = _,
+        const { accountID: _, year: _ } = _,
           _ = (0, _.useMemo)(
             () => _._.InitFromAccountID(_).ConvertTo64BitString(),
             [_],
@@ -8723,7 +8696,7 @@
                       _,
                       {
                         strSteamid: _.ConvertTo64BitString(),
-                        year: __webpack_require__,
+                        year: _,
                         ePrivacy: 3,
                         bPrivacyOverride: !1,
                       },
@@ -8736,17 +8709,17 @@
       }
       const _ = 50;
       function _(_) {
-        const { accountID: _, year: __webpack_require__ } = _,
+        const { accountID: _, year: _ } = _,
           { isLoading: _, rgFriendAccounts: _ } = (function (_, _) {
-            const { data: __webpack_require__, isLoading: _ } = (0, _._)({
+            const { data: _, isLoading: _ } = (0, _._)({
               queryKey: ["SharedFriendYearInReviews", _, _],
               queryFn: () => _.Get().LoadFriendsSharedYearInReview(_, _),
             });
             return {
-              rgFriendAccounts: _ ? null : __webpack_require__,
+              rgFriendAccounts: _ ? null : _,
               isLoading: _,
             };
-          })(_, __webpack_require__),
+          })(_, _),
           _ = (0, _.useMemo)(
             () =>
               _?.length > 0
@@ -8784,10 +8757,10 @@
                     {
                       strSteamid: _.steamid,
                       ePrivacy: _.privacy_state,
-                      year: __webpack_require__,
+                      year: _,
                       bPrivacyOverride: _.privacy_override,
                     },
-                    "friendshare_" + _.steamid + "_" + __webpack_require__,
+                    "friendshare_" + _.steamid + "_" + _,
                   ),
                 ),
               }),
@@ -8801,11 +8774,11 @@
         );
       }
       function _(_) {
-        const { strSteamid: _, year: __webpack_require__, ePrivacy: _ } = _,
+        const { strSteamid: _, year: _, ePrivacy: _ } = _,
           _ = new _._(_),
           _ = _();
         return (0, _.jsx)(_._, {
-          href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${__webpack_require__}`,
+          href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${_}`,
           className: (0, _._)({
             [_.IsPrivate]: 1 == _,
             [_.FriendCtn]: !0,
@@ -9014,12 +8987,12 @@
         });
       }
       function _(_) {
-        const { active: _, payload: __webpack_require__ } = _;
-        if (_ && __webpack_require__ && __webpack_require__.length) {
-          const _ = __webpack_require__[0].value;
+        const { active: _, payload: _ } = _;
+        if (_ && _ && _.length) {
+          const _ = _[0].value;
           return (0, _.jsxs)(_._, {
             children: [
-              __webpack_require__[0].name,
+              _[0].name,
               ": ",
               (0, _._)("#YIR_Percent_Playtime", _(_)),
             ],
@@ -9028,10 +9001,10 @@
         return null;
       }
       function _(_) {
-        const { active: _, payload: __webpack_require__ } = _;
-        if (_ && __webpack_require__ && __webpack_require__.length) {
-          const _ = __webpack_require__[0].value,
-            _ = __webpack_require__[0].name;
+        const { active: _, payload: _ } = _;
+        if (_ && _ && _.length) {
+          const _ = _[0].value,
+            _ = _[0].name;
           return (0, _.jsx)(_._, {
             children: (0, _._)(
               "#YIR_Platfrom_gamesplays_tooltip",
@@ -9065,11 +9038,7 @@
         });
       }
       function _(_) {
-        const {
-            userYearInReview: _,
-            strClassName: __webpack_require__,
-            nYear: _,
-          } = _,
+        const { userYearInReview: _, strClassName: _, nYear: _ } = _,
           _ = _.GetRawStats(),
           _ = _(),
           _ = void 0,
@@ -9115,11 +9084,7 @@
         return (
           (0, _._)(_),
           (0, _.jsxs)("div", {
-            className: (0, _._)(
-              __webpack_require__,
-              _().PlatformContentsCtn,
-              _().DeckContainer,
-            ),
+            className: (0, _._)(_, _().PlatformContentsCtn, _().DeckContainer),
             ref: _,
             children: [
               (0, _.jsx)("div", {
@@ -9554,11 +9519,11 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { steamId: _, year: __webpack_require__ } = _,
+        const { steamId: _, year: _ } = _,
           _ = _(),
           _ =
             ((_ = _),
-            (_ = __webpack_require__),
+            (_ = _),
             _.useMemo(() => {
               const _ = "yearinreview_otheryears_" + _.GetAccountID() + "_" + _;
               return (0, _._)(_, "application_config");
@@ -9639,11 +9604,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            userYearInReview: _,
-            steamId: __webpack_require__,
-            nYear: _,
-          } = _,
+        const { userYearInReview: _, steamId: _, nYear: _ } = _,
           _ = _(),
           _ = _();
         if (!_._.logged_in) return null;
@@ -9658,7 +9619,7 @@
           children: [
             (0, _.jsx)(_, {
               userYearInReview: _,
-              steamId: __webpack_require__,
+              steamId: _,
               nYear: _,
             }),
             (0, _.jsxs)(_._, {
@@ -9667,7 +9628,7 @@
                 (0, _._)(
                   (0, _.jsx)(_, {
                     userYearInReview: _,
-                    steamId: __webpack_require__,
+                    steamId: _,
                     nYear: _,
                   }),
                   window,
@@ -9690,11 +9651,7 @@
         });
       }
       function _(_) {
-        const {
-            userYearInReview: _,
-            steamId: __webpack_require__,
-            nYear: _,
-          } = _,
+        const { userYearInReview: _, steamId: _, nYear: _ } = _,
           [_, _] = (0, _.useState)(""),
           _ = (0, _._)(() => _.GetPrivacyState()),
           _ = (0, _._)(() => _.GetPrivacyState()),
@@ -9751,12 +9708,7 @@
       }
       const _ = "l";
       function _(_) {
-        const {
-            closeModal: _,
-            userYearInReview: __webpack_require__,
-            steamId: _,
-            nYear: _,
-          } = _,
+        const { closeModal: _, userYearInReview: _, steamId: _, nYear: _ } = _,
           [_, _] = (0, _.useState)(),
           _ = (0, _._)(() => __webpack_require__.GetPrivacyState()),
           _ = (0, _.useMemo)(() => 3 === _ || 2 === _, [_]),
@@ -9809,7 +9761,7 @@
                     className: _.FooterCtn,
                     children: [
                       (0, _.jsx)(_, {
-                        userYearInReview: __webpack_require__,
+                        userYearInReview: _,
                         steamId: _,
                         nYear: _,
                       }),
@@ -9837,12 +9789,7 @@
             });
       }
       function _(_) {
-        const {
-            language: _,
-            steamId: __webpack_require__,
-            nYear: _,
-            shareUrl: _,
-          } = _,
+        const { language: _, steamId: _, nYear: _, shareUrl: _ } = _,
           [_, _] = (0, _.useState)(0),
           [_, _] = (0, _.useState)(!1),
           { isLoading: _, data: _ } = (function (_, _, _) {
@@ -10004,7 +9951,7 @@
       function _(_) {
         const {
           carouselIndex: _,
-          maxIndex: __webpack_require__,
+          maxIndex: _,
           onMoveLeft: _,
           onMoveRight: _,
           endPreviewImage: _,
@@ -10041,7 +9988,7 @@
                     className: (0, _._)(
                       _.Arrow,
                       _.Right,
-                      _ === __webpack_require__ && _.ArrowDisabled,
+                      _ === _ && _.ArrowDisabled,
                     ),
                     onClick: _,
                     children: (0, _.jsx)(_.V5W, {
@@ -10086,7 +10033,7 @@
         });
       }
       function _(_) {
-        const { imageUrl: _, shareUrl: __webpack_require__ } = _;
+        const { imageUrl: _, shareUrl: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.InteractButton,
           onClick: () => {
@@ -10097,7 +10044,7 @@
                 link: _,
                 url: _,
                 subject: (0, _._)("#YIR_ShareModal_MobileSubject"),
-                message: __webpack_require__,
+                message: _,
                 title: (0, _._)("#YIR_ShareModal_MobileMessage"),
               };
               return void _.postMessage(JSON.stringify(_));
@@ -10117,7 +10064,7 @@
       function _(_) {
         const {
             bCanShare: _,
-            shareUrl: __webpack_require__,
+            shareUrl: _,
             shortAccountCode: _,
             language: _,
             nYear: _,
@@ -10135,12 +10082,12 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _.ShareShortUrl,
-                  children: __webpack_require__,
+                  children: _,
                 }),
                 (0, _.jsxs)("div", {
                   className: (0, _._)(_.ShareLinkButton),
                   onClick: () => {
-                    navigator.clipboard.writeText(__webpack_require__), _(!0);
+                    navigator.clipboard.writeText(_), _(!0);
                   },
                   children: [
                     (0, _.jsx)(_.SYj, {
@@ -10195,11 +10142,7 @@
         });
       }
       function _(_) {
-        const {
-          bCanShare: _,
-          shareUrl: __webpack_require__,
-          shareOnSteamActivityFeed: _,
-        } = _;
+        const { bCanShare: _, shareUrl: _, shareOnSteamActivityFeed: _ } = _;
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)("div", {
             className: _.MobileCtn,
@@ -10211,8 +10154,8 @@
                   if (_?.postMessage) {
                     const _ = {
                       event_name: "share",
-                      link: __webpack_require__,
-                      url: __webpack_require__,
+                      link: _,
+                      url: _,
                       subject: (0, _._)("#YIR_ShareModal_MobileSubject"),
                       message: (0, _._)("#YIR_ShareModal_MobileMessage"),
                       title: (0, _._)("#YIR_ShareModal_MobileMessage"),
@@ -10330,55 +10273,26 @@
         });
       }
       function _(_) {
-        let {
-          statFillers: _,
-          gameFillers: __webpack_require__,
-          overview: _,
-        } = _;
-        return __webpack_require__.length > 2 && _.length > 1
+        let { statFillers: _, gameFillers: _, overview: _ } = _;
+        return _.length > 2 && _.length > 1
           ? (0, _.jsx)("div", {
               className: _().SummaryGridStandard,
-              children: [
-                _,
-                _[0],
-                _[1],
-                __webpack_require__[0],
-                __webpack_require__[1],
-                __webpack_require__[2],
-              ],
+              children: [_, _[0], _[1], _[0], _[1], _[2]],
             })
-          : __webpack_require__.length > 1 && _.length > 2
+          : _.length > 1 && _.length > 2
             ? (0, _.jsx)("div", {
                 className: _().SummaryGridStandard,
-                children: [
-                  _,
-                  _[1],
-                  _[2],
-                  _[0],
-                  __webpack_require__[0],
-                  __webpack_require__[1],
-                ],
+                children: [_, _[1], _[2], _[0], _[0], _[1]],
               })
-            : 1 == _.length && __webpack_require__.length > 3
+            : 1 == _.length && _.length > 3
               ? (0, _.jsx)("div", {
                   className: _().SummaryGridStandard,
-                  children: [
-                    _,
-                    _[0],
-                    __webpack_require__[0],
-                    __webpack_require__[1],
-                    __webpack_require__[2],
-                    __webpack_require__[3],
-                  ],
+                  children: [_, _[0], _[0], _[1], _[2], _[3]],
                 })
-              : __webpack_require__.length > 1
+              : _.length > 1
                 ? (0, _.jsx)("div", {
                     className: _().SummaryGridSparse,
-                    children: [
-                      _,
-                      __webpack_require__[0],
-                      __webpack_require__[1],
-                    ],
+                    children: [_, _[0], _[1]],
                   })
                 : null;
       }
@@ -10434,7 +10348,7 @@
       function _(_) {
         const {
             rgGamesLength: _,
-            nNewGames: __webpack_require__,
+            nNewGames: _,
             totalAchievementUnlocked: _,
             nTotalPlaytimeSeconds: _,
             nTotalPercentagePlaytimex100: _,
@@ -10443,19 +10357,17 @@
         let _;
         return (
           (_ =
-            __webpack_require__ > 50 && _ > 100
+            _ > 50 && _ > 100
               ? _("#YIR_YourSummary_GamesTonNewAchievements")
-              : __webpack_require__ > 20 && _ > 100
+              : _ > 20 && _ > 100
                 ? _("#YIR_YourSummary_GamesNewAchievements")
-                : __webpack_require__ > 20 && _ > 36e4
+                : _ > 20 && _ > 36e4
                   ? _("#YIR_YourSummary_GamesNew")
-                  : _ > 10 && __webpack_require__ < 5
+                  : _ > 10 && _ < 5
                     ? _("#YIR_YourSummary_GamesManyTriedNew")
                     : _ > 10
                       ? _("#YIR_YourSummary_GamesMany")
-                      : __webpack_require__ > 1 &&
-                          __webpack_require__ < 5 &&
-                          (_ > 36e4 || (0 == _ && _ > 5e3))
+                      : _ > 1 && _ < 5 && (_ > 36e4 || (0 == _ && _ > 5e3))
                         ? _("#YIR_YourSummary_HoursManyTriedNew")
                         : _ < 2 && _ > 36e4
                           ? _("#YIR_YourSummary_HoursManySingleGame")
@@ -10475,7 +10387,7 @@
       function _(_) {
         const _ = (0, _.useContext)(_).persona_name,
           {
-            rgGamesLength: __webpack_require__,
+            rgGamesLength: _,
             nNewGames: _,
             nDemoPlayed: _,
             nPlaytestPlayed: _,
@@ -10486,9 +10398,7 @@
           _ = `${_._.IMG_URL}yearinreview/bg_2023.svg`;
         let _ = _().NormalNumbers;
         return (
-          __webpack_require__ > 99999
-            ? (_ = _().SixNumbers)
-            : __webpack_require__ > 99 && (_ = _().ThreeNumbers),
+          _ > 99999 ? (_ = _().SixNumbers) : _ > 99 && (_ = _().ThreeNumbers),
           (0, _.jsx)("div", {
             className: (0, _._)(_().SummaryCtnShadow, _.SummaryCtnShadow),
             children: (0, _.jsxs)("div", {
@@ -10534,18 +10444,15 @@
                       children: [
                         (0, _.jsx)("div", {
                           className: (0, _._)(_().BigNum, _),
-                          children: (0, _._)(__webpack_require__),
+                          children: (0, _._)(_),
                         }),
                         (0, _.jsx)("div", {
                           className: _().SmallText,
-                          children: (0, _._)(
-                            "#YIR_YourSummary_Games",
-                            __webpack_require__,
-                          ),
+                          children: (0, _._)("#YIR_YourSummary_Games", _),
                         }),
                         (0, _.jsx)(_, {
                           strTokenPrefix: "#YIR_YourSummary_PrevYear_Game",
-                          nCurValue: __webpack_require__,
+                          nCurValue: _,
                           nPrevValue: _,
                         }),
                       ],
@@ -10608,15 +10515,11 @@
         );
       }
       function _(_) {
-        const {
-          strTokenPrefix: _,
-          nCurValue: __webpack_require__,
-          nPrevValue: _,
-        } = _;
-        if (null != _ && 0 !== _ && 0 !== __webpack_require__)
-          return __webpack_require__ == _
+        const { strTokenPrefix: _, nCurValue: _, nPrevValue: _ } = _;
+        if (null != _ && 0 !== _ && 0 !== _)
+          return _ == _
             ? null
-            : __webpack_require__ < _
+            : _ < _
               ? (0, _.jsxs)("div", {
                   className: _().CompareCtn,
                   children: [
@@ -10625,11 +10528,7 @@
                     }),
                     (0, _.jsx)("div", {
                       className: _().CompareText,
-                      children: (0, _._)(
-                        _ + "Less",
-                        _ - __webpack_require__,
-                        (0, _._)(_ - __webpack_require__),
-                      ),
+                      children: (0, _._)(_ + "Less", _ - _, (0, _._)(_ - _)),
                     }),
                   ],
                 })
@@ -10641,11 +10540,7 @@
                     }),
                     (0, _.jsx)("div", {
                       className: _().CompareText,
-                      children: (0, _._)(
-                        _ + "More",
-                        __webpack_require__ - _,
-                        (0, _._)(__webpack_require__ - _),
-                      ),
+                      children: (0, _._)(_ + "More", _ - _, (0, _._)(_ - _)),
                     }),
                   ],
                 });
@@ -10754,11 +10649,7 @@
         );
       }
       function _(_) {
-        const {
-            oLongestStreak: _,
-            nYear: __webpack_require__,
-            nPrevLongestStreamDays: _,
-          } = _,
+        const { oLongestStreak: _, nYear: _, nPrevLongestStreamDays: _ } = _,
           _ = !0,
           _ = (0, _._)(_.rtime_start, _),
           _ = (0, _._)(
@@ -10845,7 +10736,7 @@
         });
       }
       function _(_) {
-        const { oTotalStats: _, nYear: __webpack_require__ } = _,
+        const { oTotalStats: _, nYear: _ } = _,
           _ = _(
             _.total_playtime_percentagex100 -
               _.controller_playtime_percentagex100 -
@@ -10938,7 +10829,7 @@
         );
       }
       function _(_) {
-        const { gameStat: _, gridClass: __webpack_require__ } = _,
+        const { gameStat: _, gridClass: _ } = _,
           { appid: _ } = _,
           [_] = (0, _._)(_, _),
           _ = _(0, [_]),
@@ -10953,9 +10844,9 @@
               _().SummaryCtn,
               _().GridItem,
               _.GridItem,
-              _()[__webpack_require__],
+              _()[_],
               _.SummaryCtn,
-              _[__webpack_require__],
+              _[_],
             ),
             onClick: _,
             children: [
@@ -11003,13 +10894,9 @@
         });
       }
       function _(_) {
-        const {
-            percentVal: _,
-            subToken: __webpack_require__,
-            className: _,
-          } = _,
+        const { percentVal: _, subToken: _, className: _ } = _,
           _ = _(_),
-          _ = `${__webpack_require__}_Percent`;
+          _ = `${_}_Percent`;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().StatBox, _),
           children: [
@@ -11032,7 +10919,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo((_) => {
-          const { data: _, topMonthlyAppsAndRanks: __webpack_require__ } = _,
+          const { data: _, topMonthlyAppsAndRanks: _ } = _,
             _ = _(),
             _ = (0, _.useCallback)(
               (_, _) => (_[_]?.date ? (0, _._)(_[_].date) : ""),
@@ -11112,27 +10999,15 @@
         }),
         _ = 7;
       function _(_) {
-        const {
-            active: _,
-            payload: __webpack_require__,
-            hoveredBarIDRef: _,
-          } = _,
+        const { active: _, payload: _, hoveredBarIDRef: _ } = _,
           _ = _(),
           _ = _();
-        if (_ && __webpack_require__ && __webpack_require__.length) {
-          const _ = __webpack_require__[0].payload.date.getMonth(),
+        if (_ && _ && _.length) {
+          const _ = _[0].payload.date.getMonth(),
             _ = (0, _._)(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`),
-            _ =
-              __webpack_require__[0].payload.topPlayedPercentBreakdownPerMonth[
-                _
-              ],
-            _ = Object.keys(
-              __webpack_require__[0].payload
-                .otherPlayedPercentBreakdownForMonth,
-            ),
-            _ =
-              __webpack_require__[0].payload
-                .topPlayedRelativePercentBreakdownForMonth,
+            _ = _[0].payload.topPlayedPercentBreakdownPerMonth[_],
+            _ = Object.keys(_[0].payload.otherPlayedPercentBreakdownForMonth),
+            _ = _[0].payload.topPlayedRelativePercentBreakdownForMonth,
             _ = __webpack_require__.find((_) => _.name === _.current),
             _ = _?.name,
             _ = _ === _,
@@ -11141,7 +11016,7 @@
                 const _ = _.name,
                   _ = _[_.name];
                 if (_ === _) {
-                  const _ = _ && 1 == __webpack_require__.length;
+                  const _ = _ && 1 == _.length;
                   return (0, _.jsxs)(
                     _.Fragment,
                     {
@@ -11277,8 +11152,8 @@
         });
       }
       function _({ appId: _, style: _ }) {
-        const [__webpack_require__] = (0, _._)(parseInt(_), _);
-        if (!__webpack_require__) return null;
+        const [_] = (0, _._)(parseInt(_), _);
+        if (!_) return null;
         const _ =
           __webpack_require__
             .GetAssetsWithoutOverrides()
@@ -11290,8 +11165,8 @@
         });
       }
       function _({ appId: _, className: _ }) {
-        const [__webpack_require__] = (0, _._)(parseInt(_), _);
-        return __webpack_require__
+        const [_] = (0, _._)(parseInt(_), _);
+        return _
           ? (0, _.jsx)(
               "div",
               {
@@ -11303,18 +11178,13 @@
           : null;
       }
       function _(_) {
-        const {
-            appId: _,
-            className: __webpack_require__,
-            value: _,
-            date: _,
-          } = _,
+        const { appId: _, className: _, value: _, date: _ } = _,
           [_] = (0, _._)(parseInt(_), _);
         return _
           ? (0, _.jsx)(
               "div",
               {
-                className: __webpack_require__,
+                className: _,
                 children: _(
                   _,
                   _,
@@ -11329,7 +11199,7 @@
           : null;
       }
       const _ = _.memo((_) => {
-        const { data: _, name: __webpack_require__, color: _ } = _,
+        const { data: _, name: _, color: _ } = _,
           _ = _(),
           _ = (0, _.useCallback)(
             (_, _) => (_[_]?.date ? (0, _._)(_[_].date) : ""),
@@ -11358,7 +11228,7 @@
                 },
                 isAnimationActive: !1,
                 content: (0, _.jsx)(_, {
-                  name: __webpack_require__,
+                  name: _,
                 }),
               }),
               (0, _.jsx)(_._, {
@@ -11388,10 +11258,10 @@
         });
       });
       function _(_) {
-        const { _: _, _: __webpack_require__, payload: _ } = _,
+        const { _: _, _: _, payload: _ } = _,
           _ = _.tickFormatter(_.value, _.index);
         return (0, _.jsx)("g", {
-          transform: `translate(${_},${__webpack_require__})`,
+          transform: `translate(${_},${_})`,
           children: (0, _.jsx)("text", {
             _: 0,
             _: 0,
@@ -11404,17 +11274,12 @@
         });
       }
       function _(_) {
-        const { active: _, payload: __webpack_require__, name: _ } = _,
+        const { active: _, payload: _, name: _ } = _,
           _ = _();
-        if (
-          _ &&
-          __webpack_require__ &&
-          __webpack_require__.length &&
-          __webpack_require__[0].value
-        ) {
-          const _ = __webpack_require__[0].payload.date.getMonth(),
+        if (_ && _ && _.length && _[0].value) {
+          const _ = _[0].payload.date.getMonth(),
             _ = (0, _._)(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`),
-            _ = __webpack_require__[0].value,
+            _ = _[0].value,
             _ = "#YIR_MonthlyCharts_TopPlayedGameTooltip_Percent";
           return (0, _.jsx)(_._, {
             style: {
@@ -11569,9 +11434,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-            _.Get().GetAchievements(_),
-          ),
+        const [_, _] = (0, _.useState)(_.Get().GetAchievements(_)),
           [_, _] = (0, _.useState)(_);
         return (
           (0, _.useEffect)(() => {
@@ -11582,7 +11445,7 @@
                   __webpack_require__(_), _(_);
                 });
           }, [_, _, _]),
-          (0, _._)(_.Get().GetAchievementLoadChange(_), __webpack_require__),
+          (0, _._)(_.Get().GetAchievementLoadChange(_), _),
           _
         );
       }
@@ -11616,7 +11479,7 @@
       function _(_) {
         const {
             imgURL: _,
-            glow: __webpack_require__,
+            glow: _,
             pauseAnimation: _,
             hidden: _,
             alt: _,
@@ -11630,7 +11493,7 @@
             ..._,
             children: "?",
           });
-        const _ = _ && __webpack_require__;
+        const _ = _ && _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(
             _().AchievementIconWrapper,
@@ -11663,7 +11526,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, userYearInReview: __webpack_require__ } = _,
+        const { appid: _, userYearInReview: _ } = _,
           _ = _(
             __webpack_require__.GetYear(),
             __webpack_require__.GetAccountID(),
@@ -11682,7 +11545,7 @@
       function _(_) {
         const {
             appid: _,
-            userYearInReview: __webpack_require__,
+            userYearInReview: _,
             bBlurContent: _,
             userUnlockedAchievements: _,
           } = _,
@@ -11810,8 +11673,8 @@
       }
       const _ = 10;
       function _(_) {
-        const { display: _, appid: __webpack_require__ } = _,
-          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/apps/${__webpack_require__}/${_.icon}`,
+        const { display: _, appid: _ } = _,
+          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/apps/${_}/${_.icon}`,
           _ = Number.parseFloat("" + _.player_percent_unlocked) < _;
         return (0, _.jsx)(_._, {
           toolTipContent: (0, _.jsx)(_, {
@@ -11862,7 +11725,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, bBlurContent: __webpack_require__, nYear: _ } = _,
+        const { appid: _, bBlurContent: _, nYear: _ } = _,
           _ = _(_),
           [_, _] = (0, _._)(),
           _ = _();
@@ -11882,7 +11745,7 @@
                       _,
                       {
                         nYear: _,
-                        bBlurContent: __webpack_require__,
+                        bBlurContent: _,
                         screenshot: _,
                         fnSetExpandScreenShot: () => {
                           const _ = [..._.map((_) => _.image_url)];
@@ -11903,7 +11766,7 @@
       function _(_) {
         const {
             screenshot: _,
-            fnSetExpandScreenShot: __webpack_require__,
+            fnSetExpandScreenShot: _,
             bBlurContent: _,
             nYear: _,
           } = _,
@@ -11977,11 +11840,7 @@
         });
       }
       function _(_) {
-        const {
-            gameSummary: _,
-            index: __webpack_require__,
-            userYearInReview: _,
-          } = _,
+        const { gameSummary: _, index: _, userYearInReview: _ } = _,
           _ = _(),
           _ = _.appid,
           _ = _.GetYear();
@@ -12016,16 +11875,16 @@
       }
       function _(_) {
         let { userYearInReview: _ } = _,
-          { unAppID: __webpack_require__, length: _, index: _ } = _(),
+          { unAppID: _, length: _, index: _ } = _(),
           [_, _] = (function (_) {
-            let [_, __webpack_require__] = _.useState(!1),
+            let [_, _] = _.useState(!1),
               _ = _.useRef(null),
               _ = _.current;
             const _ = _();
             _.useEffect(() => {
               null !== _ && _ != _ && __webpack_require__(!0),
                 null === _ && _ && __webpack_require__(!1);
-            }, [__webpack_require__, _, _, _]),
+            }, [_, _, _, _]),
               (_.current = _);
             let _ = _.useRef(void 0),
               _ = _.useCallback(() => {
@@ -12045,7 +11904,7 @@
               ),
               [_, _]
             );
-          })(__webpack_require__),
+          })(_),
           _ = (function (_) {
             return _.useCallback(
               (_) => {
@@ -12057,7 +11916,7 @@
         const _ = _(_ + 1),
           _ = _(_ - 1),
           _ = (0, _._)();
-        if (null == __webpack_require__ && !_) return null;
+        if (null == _ && !_) return null;
         let _ = (0, _._)(_.GameDetailsPopup, _ && _.Visible, _ && _.GamepadUI),
           _ = (0, _.jsx)("div", {
             className: _,
@@ -12068,7 +11927,7 @@
                 (0, _.jsx)("div", {
                   className: _.GameWrapper,
                   children: (0, _.jsx)(_, {
-                    unAppID: __webpack_require__,
+                    unAppID: _,
                     userYearInReview: _,
                     index: 1,
                   }),
@@ -12086,11 +11945,7 @@
         return _.createPortal(_, document.body);
       }
       const _ = _.memo((_) => {
-        const {
-            unAppID: _,
-            userYearInReview: __webpack_require__,
-            index: _,
-          } = _,
+        const { unAppID: _, userYearInReview: _, index: _ } = _,
           _ = __webpack_require__.GetGameStats(_),
           _ = Math.trunc(_?.playtime_streak?.longest_consecutive_days || 1),
           _ = __webpack_require__.GetGameSummaryForApp(_),
@@ -12110,7 +11965,7 @@
           _ = (0, _._)(),
           { gameChartData: _, rank: _ } = (0, _.useMemo)(
             () => __webpack_require__.GetChartMonthlyDataForApp(_),
-            [_, __webpack_require__],
+            [_, _],
           );
         if (1 === _)
           return (0, _.jsx)("div", {
@@ -12213,7 +12068,7 @@
                           }),
                           (0, _.jsx)(_, {
                             gameSummary: _,
-                            userYearInReview: __webpack_require__,
+                            userYearInReview: _,
                             index: _,
                           }),
                           (0, _.jsxs)("div", {
@@ -12352,7 +12207,7 @@
               }),
               (0, _.jsx)(_, {
                 appid: _,
-                userYearInReview: __webpack_require__,
+                userYearInReview: _,
                 oStoreItem: _,
               }),
             ],
@@ -12389,18 +12244,14 @@
         });
       }
       function _(_) {
-        const {
-            appid: _,
-            userYearInReview: __webpack_require__,
-            oStoreItem: _,
-          } = _,
+        const { appid: _, userYearInReview: _, oStoreItem: _ } = _,
           _ = _(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
               bBlurContent: _,
               appid: _,
-              userYearInReview: __webpack_require__,
+              userYearInReview: _,
             }),
             (0, _.jsx)(_, {
               bBlurContent: _,
@@ -12463,28 +12314,27 @@
         });
       }
       function _(_) {
-        let { steamID: _, year: __webpack_require__ } = _;
+        let { steamID: _, year: _ } = _;
         const [_, _] = (0, _._)(_.GetAccountID()),
           { userYearInReview: _, isLoading: _ } = (function (_, _) {
-            let { data: __webpack_require__, isLoading: _ } = (0, _._)({
+            let { data: _, isLoading: _ } = (0, _._)({
                 queryKey: ["YearInReview", "Get", _, _],
                 queryFn: () => _.Get().GetLoadYearInReview(_, _),
               }),
               { data: _, isLoading: _ } = (0, _._)({
                 queryKey: ["YearInReview_AppDataLoading"],
-                queryFn: () =>
-                  _.Get().PreloadStoreItemCache(__webpack_require__),
-                enabled: !!__webpack_require__,
+                queryFn: () => _.Get().PreloadStoreItemCache(_),
+                enabled: !!_,
               }),
               _ = _ || _;
             return (
-              _ || _ || (__webpack_require__ = null),
+              _ || _ || (_ = null),
               {
-                userYearInReview: __webpack_require__,
+                userYearInReview: _,
                 isLoading: _,
               }
             );
-          })(_.ConvertTo64BitString(), __webpack_require__);
+          })(_.ConvertTo64BitString(), _);
         if (_ || _)
           return (0, _.jsx)(_._, {
             string: (0, _._)("#Loading"),
@@ -12529,7 +12379,7 @@
       function _(_) {
         const {
             viewAsUser: _,
-            avatarAndPersona: __webpack_require__,
+            avatarAndPersona: _,
             userYearInReview: _,
             themeYear: _,
             children: _,
@@ -12546,11 +12396,11 @@
           _ = _.useMemo(
             () => ({
               bIsUser: _,
-              persona_name: __webpack_require__.persona_name,
+              persona_name: _.persona_name,
               Screenshots: _,
               themeStyle: _,
             }),
-            [_, __webpack_require__.persona_name, _, _],
+            [_, _.persona_name, _, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -12561,8 +12411,7 @@
         });
       }
       function _(_) {
-        const { userYearInReview: _, avatarAndPersona: __webpack_require__ } =
-            _,
+        const { userYearInReview: _, avatarAndPersona: _ } = _,
           _ = _.GetSteamID(),
           _ = _.GetYear(),
           _ = _(),
@@ -12576,14 +12425,14 @@
                 .then(_);
           }, [_, _, _]);
         })(_, _.GetAccountID(), _);
-        const _ = _._.logged_in && _._.steamid === __webpack_require__.steamid,
+        const _ = _._.logged_in && _._.steamid === _.steamid,
           [_, _] = (0, _.useState)(_),
           [_, _] = (0, _.useState)(_),
           _ = _.GetPlayTimeStats().game_summary?.length;
         return (0, _.jsxs)(_, {
           viewAsUser: _,
           userYearInReview: _,
-          avatarAndPersona: __webpack_require__,
+          avatarAndPersona: _,
           themeYear: _,
           children: [
             (0, _.jsx)(_, {
@@ -12593,7 +12442,7 @@
               setThemeYear: _,
             }),
             (0, _.jsx)(_, {
-              avatarAndPersona: __webpack_require__,
+              avatarAndPersona: _,
               userYearInReview: _,
             }),
             (0, _.jsx)(_._, {
@@ -12659,7 +12508,7 @@
                   (0, _.jsx)(_, {
                     userYearInReview: _,
                     children: (0, _.jsx)(_, {
-                      playerName: __webpack_require__.persona_name,
+                      playerName: _.persona_name,
                       userYearInReview: _,
                     }),
                   }),
@@ -12768,7 +12617,7 @@
         });
       }
       function _(_) {
-        let { avatarAndPersona: _, userYearInReview: __webpack_require__ } = _;
+        let { avatarAndPersona: _, userYearInReview: _ } = _;
         const _ = __webpack_require__.GetSteamID(),
           _ = __webpack_require__.GetYear();
         return (0, _.jsx)("div", {
@@ -12793,7 +12642,7 @@
                     className: (0, _._)(_().ShareArea),
                     children: (0, _.jsx)(_._, {
                       children: (0, _.jsx)(_, {
-                        userYearInReview: __webpack_require__,
+                        userYearInReview: _,
                         steamId: _,
                         nYear: _,
                       }),
@@ -12807,7 +12656,7 @@
       function _(_) {
         const {
             viewAsUser: _,
-            setViewAsUser: __webpack_require__,
+            setViewAsUser: _,
             themeYear: _,
             setThemeYear: _,
           } = _,
@@ -12832,7 +12681,7 @@
                     children: "Debug Only: Toggle First Person View",
                   }),
                   (0, _.jsx)(_._, {
-                    onChange: __webpack_require__,
+                    onChange: _,
                     checked: _,
                   }),
                   (0, _.jsx)("div", {
@@ -13104,7 +12953,7 @@
         ),
         _ = 2022;
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)({});
+        const [_, _] = (0, _.useState)({});
         return (
           (0, _.useEffect)(() => {
             let _ = _[_];

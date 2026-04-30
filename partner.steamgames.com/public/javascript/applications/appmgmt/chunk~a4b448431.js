@@ -52,6 +52,7 @@
         m_strInternalName;
         m_rgLinks;
         m_userFilterFailure;
+        m_strFullDescriptionBBCode;
         constructor(e, t) {
           (this.m_eItemType = e.item_type()),
             (this.m_unID = e.id()),
@@ -144,7 +145,11 @@
             t.apply_user_filters &&
               !this.m_userFilterFailure &&
               ((this.m_userFilterFailure = e.user_filter_failure()?.toObject()),
-              (this.m_DataRequested.apply_user_filters = !0));
+              (this.m_DataRequested.apply_user_filters = !0)),
+            t.include_full_description &&
+              !this.m_strFullDescriptionBBCode &&
+              ((this.m_strFullDescriptionBBCode = e.full_description_bbcode()),
+              (this.m_DataRequested.include_full_description = !0));
         }
         static BDataRequestContainsOtherDataRequest(e, t) {
           return Boolean(
@@ -164,6 +169,7 @@
               (!t.include_basic_info || e.include_basic_info) &&
               (!t.include_supported_languages ||
                 e.include_supported_languages) &&
+              (!t.include_full_description || e.include_full_description) &&
               (!t.include_links || e.include_links),
           );
         }
@@ -343,6 +349,12 @@
           return (
             this.BCheckDataRequestIncluded({ include_reviews: !0 }),
             this.m_ReviewInfo?.summary_language_specific
+          );
+        }
+        GetFullDescriptionBBCode() {
+          return (
+            this.BCheckDataRequestIncluded({ include_full_description: !0 }),
+            this.m_strFullDescriptionBBCode
           );
         }
         GetShortDescription() {
@@ -1180,10 +1192,10 @@
               ? "bundle"
               : null;
       }
-      function y(e) {
+      function D(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function D(e) {
+      function y(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
       r.d(t, {
@@ -1194,7 +1206,7 @@
         M9: () => g,
         Rz: () => n,
         SW: () => o,
-        Si: () => D,
+        Si: () => y,
         TM: () => u,
         TV: () => C,
         _P: () => R,
@@ -1203,7 +1215,7 @@
         hh: () => c,
         lY: () => S,
         pk: () => a,
-        s9: () => y,
+        s9: () => D,
         vo: () => h,
         wD: () => m,
         wR: () => _,

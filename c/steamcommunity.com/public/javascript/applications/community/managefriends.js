@@ -24,6 +24,18 @@
         Success: "zNkywkFbUJio86FBwBWwx",
         FriendCodeSelector: "_3nmSpgo_T_V0-Er7h8J2Ar",
         SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
+        BackgroundAnimation: "_3yBb7Zq-JsZsUC7j0xfwNs",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3mEJMPBWqIai6TZ5Asmwzc",
+        "ItemFocusAnim-darkerGrey": "_1bq8dQKi1_Y3Cx4SqKPEbe",
+        "ItemFocusAnim-darkGreySettings": "_3HZYqGe5_hsFFJcgBTMMSW",
+        "ItemFocusAnim-darkGrey": "qqYMXWoOu5it3a3atTegO",
+        "ItemFocusAnim-grey": "ULAazkgE1qcpwKYFDQ6cA",
+        "ItemFocusAnim-translucent-white-10": "_2_8edxNWb8zuaY6iv3wJSx",
+        "ItemFocusAnim-translucent-white-20": "_1TV5evTLXXGDV16o8ltkb7",
+        "ItemFocusAnimBorder-darkGrey": "_2N1KfmpWvdxv64J5Rs82CX",
+        "ItemFocusAnim-green": "_3UU3hyYWsBPGsxljxX3hbB",
+        focusAnimation: "_2u4UlTYeTMTUGVGicBx0My",
+        hoverAnimation: "_16_WHz1Oh5Jy0J3qvG4rto",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -506,7 +518,7 @@
       const _ = (_) => {
         const {
             searchResult: _,
-            invite_status: __webpack_require__,
+            invite_status: _,
             bShowStatus: _,
             children: _,
           } = _,
@@ -591,13 +603,13 @@
                         }),
                       }),
                     _ &&
-                      "failure" === __webpack_require__ &&
+                      "failure" === _ &&
                       (0, _.jsx)("div", {
                         className: _().Failure,
                         children: (0, _._)("#ManageFriends_InviteFailure"),
                       }),
                     _ &&
-                      "success" === __webpack_require__ &&
+                      "success" === _ &&
                       (0, _.jsx)("div", {
                         className: _().Success,
                         children: (0, _._)(

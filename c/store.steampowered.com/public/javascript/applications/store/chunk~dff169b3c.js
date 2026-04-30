@@ -1570,6 +1570,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  market_name_inside_group: {
+                    _: 38,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m

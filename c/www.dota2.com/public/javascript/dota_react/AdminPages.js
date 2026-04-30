@@ -215,81 +215,65 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(""),
+          const [_, _] = (0, _.useState)(""),
             _ = (0, _._)();
           if (_.isLoading)
-            return _.createElement(
-              "div",
-              {
-                className: _().HeroPicker,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Loading,
-                },
-                "Loading...",
-              ),
-            );
+            return (0, _.jsx)("div", {
+              className: _().HeroPicker,
+              children: (0, _.jsx)("div", {
+                className: _().Loading,
+                children: "Loading...",
+              }),
+            });
           if (!_.data) return null;
           const _ = _.data;
-          return _.createElement(
-            "div",
-            {
-              className: _().HeroPickerPopupBackground,
-              onClick: () => _.fnSetSelectedHero(-1),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().HeroPickerPopup,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _().HeroPickerPopupBackground,
+            onClick: () => _.fnSetSelectedHero(-1),
+            children: (0, _.jsxs)("div", {
+              className: _().HeroPickerPopup,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().Title,
-                },
-                "Select Hero",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "Select Hero",
+                }),
+                (0, _.jsx)("div", {
                   className: _().Grid,
-                },
-                _.heroes.map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: _._,
-                      className: _().HeroSelector,
-                      onClick: (_) => {
-                        _.fnSetSelectedHero(_._),
-                          __webpack_require__.stopPropagation();
-                      },
-                    },
-                    _.createElement("div", {
-                      className: _().Portrait,
-                      style: {
-                        backgroundImage: `url( ${_._.IMG_URL}heroes/${_.name.replace("npc_dota_hero_", "")}.png`,
-                      },
-                    }),
-                    _.createElement(
+                  children: _.heroes.map((_) =>
+                    (0, _.jsxs)(
                       "div",
                       {
-                        className: _().Name,
+                        className: _().HeroSelector,
+                        onClick: (_) => {
+                          _.fnSetSelectedHero(_._),
+                            __webpack_require__.stopPropagation();
+                        },
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().Portrait,
+                            style: {
+                              backgroundImage: `url( ${_._.IMG_URL}heroes/${_.name.replace("npc_dota_hero_", "")}.png`,
+                            },
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().Name,
+                            children: (0, _._)(_.name_loc),
+                          }),
+                        ],
                       },
-                      (0, _._)(_.name_loc),
+                      _._,
                     ),
                   ),
-                ),
-              ),
-            ),
-          );
+                }),
+              ],
+            }),
+          });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const [_, _] = _.useState(!1),
             _ = (0, _._)(),
             _ = (0, _._)(_.nHeroID),
             _ = (0, _._)(_.nHeroID),
@@ -332,28 +316,21 @@
               _ = "Gray";
           }
           const _ = _.document?.body;
-          return _.createElement(
-            "div",
-            {
-              className: _().HeroOption,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().HeroOption,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().Name,
-              },
-              _.bShowName ? (0, _._)(_?.name_loc) : _.strLabel,
-            ),
-            _.createElement("div", {
-              className: _().Portrait,
-              style: {
-                backgroundImage: `url( ${_._.IMG_URL}heroes/${_?.name.replace("npc_dota_hero_", "")}.png`,
-              },
-              onClick: () => __webpack_require__(!0),
-            }),
-            _.createElement(
-              "div",
-              {
+                children: _.bShowName ? (0, _._)(_?.name_loc) : _.strLabel,
+              }),
+              (0, _.jsx)("div", {
+                className: _().Portrait,
+                style: {
+                  backgroundImage: `url( ${_._.IMG_URL}heroes/${_?.name.replace("npc_dota_hero_", "")}.png`,
+                },
+                onClick: () => __webpack_require__(!0),
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().Facet,
                   _()[`FacetColor${_}${_?.gradient_id}`],
@@ -370,178 +347,151 @@
                       }
                     }
                   })(),
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().BackgroundTexture,
-                },
-                _ >= 0 ? _?.facets[_]?.title_loc : "invalid",
-              ),
-            ),
-            _ &&
-              _.createPortal(
-                _.createElement(_, {
-                  fnSetSelectedHero: (_) => {
-                    __webpack_require__(!1), -1 != _ && _.fnSetSelectedHero(_);
-                  },
+                  children: _ >= 0 ? _?.facets[_]?.title_loc : "invalid",
                 }),
-                _,
-              ),
-          );
+              }),
+              _ &&
+                _.createPortal(
+                  (0, _.jsx)(_, {
+                    fnSetSelectedHero: (_) => {
+                      __webpack_require__(!1),
+                        -1 != _ && _.fnSetSelectedHero(_);
+                    },
+                  }),
+                  _,
+                ),
+            ],
+          });
         },
         _ = (_) => {
           const _ = (0, _._)(_.nAbilityID).data;
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: _?.name_loc,
-              direction: "top",
-              strTooltipClassname: _().ToolTip,
-            },
-            _.createElement("div", {
+          return (0, _.jsx)(_._, {
+            toolTipContent: _?.name_loc,
+            direction: "top",
+            strTooltipClassname: _().ToolTip,
+            children: (0, _.jsx)("div", {
               className: _().AbilityIcon,
               style: {
                 backgroundImage: `url( ${_._.IMG_URL}abilities/${_?.name?.replace("ability_", "")}.png`,
               },
             }),
-          );
+          });
         },
         _ = (_) => {
           const _ = (0, _._)(_.nItemID).data;
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: _?.name_loc,
-              direction: "top",
-              strTooltipClassname: _().ToolTip,
-            },
-            _.createElement("div", {
+          return (0, _.jsx)(_._, {
+            toolTipContent: _?.name_loc,
+            direction: "top",
+            strTooltipClassname: _().ToolTip,
+            children: (0, _.jsx)("div", {
               className: _().ItemIcon,
               style: {
                 backgroundImage: `url( ${_._.IMG_URL}items/${_?.name?.replace("item_", "").replace("recipe_", "")}.png`,
               },
             }),
-          );
+          });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(""),
+          const [_, _] = (0, _.useState)(""),
             _ = (0, _._)();
           if (_.isLoading)
-            return _.createElement(
-              "div",
-              {
-                className: _().ItemPickerPopupBackground,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().ItemPickerPopup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Loading,
-                  },
-                  "Loading...",
-                ),
-              ),
-            );
+            return (0, _.jsx)("div", {
+              className: _().ItemPickerPopupBackground,
+              children: (0, _.jsx)("div", {
+                className: _().ItemPickerPopup,
+                children: (0, _.jsx)("div", {
+                  className: _().Loading,
+                  children: "Loading...",
+                }),
+              }),
+            });
           if (!_.data) return null;
           let _ = _.data.itemabilities
             .filter(
               (_) => !_.name_loc.includes("Recipe") && _.name_loc.length > 0,
             )
             .sort((_, _) => (_.name_loc < _.name_loc ? -1 : 1));
-          return _.createElement(
-            "div",
-            {
-              className: _().ItemPickerPopupBackground,
-              onClick: () => _.fnSetSelectedItem(-1),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ItemPickerPopup,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _().ItemPickerPopupBackground,
+            onClick: () => _.fnSetSelectedItem(-1),
+            children: (0, _.jsxs)("div", {
+              className: _().ItemPickerPopup,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().Title,
-                },
-                "Select Item",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "Select Item",
+                }),
+                (0, _.jsxs)("div", {
                   className: _().Grid,
-                },
-                _.bAllowEmpty &&
-                  _.createElement(
-                    "div",
-                    {
-                      key: 0,
-                      className: _().ItemSelector,
-                      onClick: (_) => {
-                        _.fnSetSelectedItem(0), _.stopPropagation();
-                      },
-                    },
-                    _.createElement("div", {
-                      className: _().Icon,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Name,
-                      },
-                      "Clear",
+                  children: [
+                    _.bAllowEmpty &&
+                      (0, _.jsxs)(
+                        "div",
+                        {
+                          className: _().ItemSelector,
+                          onClick: (_) => {
+                            _.fnSetSelectedItem(0), _.stopPropagation();
+                          },
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().Icon,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().Name,
+                              children: "Clear",
+                            }),
+                          ],
+                        },
+                        0,
+                      ),
+                    _.filter(
+                      (_) =>
+                        _.eItemFilter == _.ITEM_OPTIONS_ALL ||
+                        !(
+                          !_.is_lategame_suggested ||
+                          (_.eItemFilter != _.ITEM_OPTIONS_LATE &&
+                            !_.ITEM_OPTIONS_EARLY_LATE)
+                        ) ||
+                          !(
+                            !_.is_earlygame_suggested ||
+                            (_.eItemFilter != _.ITEM_OPTIONS_EARLY &&
+                              !_.ITEM_OPTIONS_EARLY_LATE)
+                          ) ||
+                        (!_.is_earlygame_suggested &&
+                          !_.is_lategame_suggested &&
+                          _.eItemFilter == _.ITEM_OPTIONS_NOT_EARLY_LATE),
+                    ).map((_) =>
+                      (0, _.jsxs)(
+                        "div",
+                        {
+                          className: _().ItemSelector,
+                          onClick: (_) => {
+                            _.fnSetSelectedItem(_._),
+                              __webpack_require__.stopPropagation();
+                          },
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().Icon,
+                              style: {
+                                backgroundImage: `url( ${_._.IMG_URL}items/${_.name.replace("item_", "")}.png`,
+                              },
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().Name,
+                              children: (0, _._)(_.name_loc),
+                            }),
+                          ],
+                        },
+                        _._,
+                      ),
                     ),
-                  ),
-                _.filter(
-                  (_) =>
-                    _.eItemFilter == _.ITEM_OPTIONS_ALL ||
-                    !(
-                      !_.is_lategame_suggested ||
-                      (_.eItemFilter != _.ITEM_OPTIONS_LATE &&
-                        !_.ITEM_OPTIONS_EARLY_LATE)
-                    ) ||
-                      !(
-                        !_.is_earlygame_suggested ||
-                        (_.eItemFilter != _.ITEM_OPTIONS_EARLY &&
-                          !_.ITEM_OPTIONS_EARLY_LATE)
-                      ) ||
-                    (!_.is_earlygame_suggested &&
-                      !_.is_lategame_suggested &&
-                      _.eItemFilter == _.ITEM_OPTIONS_NOT_EARLY_LATE),
-                ).map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: _._,
-                      className: _().ItemSelector,
-                      onClick: (_) => {
-                        _.fnSetSelectedItem(_._),
-                          __webpack_require__.stopPropagation();
-                      },
-                    },
-                    _.createElement("div", {
-                      className: _().Icon,
-                      style: {
-                        backgroundImage: `url( ${_._.IMG_URL}items/${_.name.replace("item_", "")}.png`,
-                      },
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Name,
-                      },
-                      (0, _._)(_.name_loc),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
+                  ],
+                }),
+              ],
+            }),
+          });
         };
       var _;
       !(function (_) {
@@ -553,198 +503,145 @@
             "ITEM_OPTIONS_NOT_EARLY_LATE");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const [_, _] = _.useState(!1),
             _ = (0, _._)(_.nItemID),
             _ = (0, _._)().ownerWindow,
             _ = _.data,
             _ = _.document?.body;
-          return _.createElement(
-            "div",
-            {
-              className: _().ItemOption,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().ItemOption,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().Name,
-              },
-              _.bShowName ? (0, _._)(_?.name_loc) : _.strLabel,
-            ),
-            _.createElement("div", {
-              className: _().Icon,
-              style: {
-                backgroundImage: `url( ${_._.IMG_URL}items/${_?.name?.replace("item_", "")}.png`,
-              },
-              onClick: () => __webpack_require__(!0),
-            }),
-            _ &&
-              _.createPortal(
-                _.createElement(_, {
-                  fnSetSelectedItem: (_) => {
-                    __webpack_require__(!1), -1 != _ && _.fnSetSelectedItem(_);
-                  },
-                  bAllowEmpty: _.bAllowEmpty,
-                  eItemFilter: _.eItemFilter,
-                }),
-                _,
-              ),
-          );
+                children: _.bShowName ? (0, _._)(_?.name_loc) : _.strLabel,
+              }),
+              (0, _.jsx)("div", {
+                className: _().Icon,
+                style: {
+                  backgroundImage: `url( ${_._.IMG_URL}items/${_?.name?.replace("item_", "")}.png`,
+                },
+                onClick: () => __webpack_require__(!0),
+              }),
+              _ &&
+                _.createPortal(
+                  (0, _.jsx)(_, {
+                    fnSetSelectedItem: (_) => {
+                      __webpack_require__(!1),
+                        -1 != _ && _.fnSetSelectedItem(_);
+                    },
+                    bAllowEmpty: _.bAllowEmpty,
+                    eItemFilter: _.eItemFilter,
+                  }),
+                  _,
+                ),
+            ],
+          });
         },
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().Option,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: _().Option,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().Name,
-              },
-              "Position",
-            ),
-            _.createElement(
-              "select",
-              {
+                children: "Position",
+              }),
+              (0, _.jsxs)("select", {
                 className: _().PositionSelector,
                 value: _.nPosition,
                 onChange: (_) => _.fnSetPosition(parseInt(_.target.value)),
-              },
-              _.createElement(
-                "option",
-                {
-                  value: 1,
-                },
-                "Safe",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 2,
-                },
-                "Off",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 4,
-                },
-                "Mid",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 8,
-                },
-                "Support",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 16,
-                },
-                "Hard Support",
-              ),
-            ),
-          ),
+                children: [
+                  (0, _.jsx)("option", {
+                    value: 1,
+                    children: "Safe",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 2,
+                    children: "Off",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 4,
+                    children: "Mid",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 8,
+                    children: "Support",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 16,
+                    children: "Hard Support",
+                  }),
+                ],
+              }),
+            ],
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().Option,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: _().Option,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().Name,
-              },
-              "Game Mode",
-            ),
-            _.createElement(
-              "select",
-              {
+                children: "Game Mode",
+              }),
+              (0, _.jsxs)("select", {
                 className: _().GameModeSelector,
                 value: _.nGameMode,
                 onChange: (_) => _.fnSetGameMode(parseInt(_.target.value)),
-              },
-              _.createElement(
-                "option",
-                {
-                  value: 22,
-                },
-                "All Draft",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 1,
-                },
-                "All Pick",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 23,
-                },
-                "Turbo",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 2,
-                },
-                "Captains Mode",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 16,
-                },
-                "Captains Draft",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 4,
-                },
-                "Single Draft",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 13,
-                },
-                "Hero Pool",
-              ),
-            ),
-          ),
+                children: [
+                  (0, _.jsx)("option", {
+                    value: 22,
+                    children: "All Draft",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 1,
+                    children: "All Pick",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 23,
+                    children: "Turbo",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 2,
+                    children: "Captains Mode",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 16,
+                    children: "Captains Draft",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 4,
+                    children: "Single Draft",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 13,
+                    children: "Hero Pool",
+                  }),
+                ],
+              }),
+            ],
+          }),
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.strMMR);
+          const [_, _] = _.useState(_.strMMR);
           return (
             _.useEffect(() => {
               if (_.strMMR == _) return () => {};
               const _ = setTimeout(() => _.fnSetMMR(_), 400);
               return () => clearTimeout(_);
             }, [_, _]),
-            _.createElement(
-              "div",
-              {
-                className: _().Option,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _().Option,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().Name,
-                },
-                "MMR",
-              ),
-              _.createElement("input", {
-                type: "text",
-                className: _().AverageMMRInput,
-                value: _,
-                onChange: (_) => __webpack_require__(_.target.value),
-              }),
-            )
+                  children: "MMR",
+                }),
+                (0, _.jsx)("input", {
+                  type: "text",
+                  className: _().AverageMMRInput,
+                  value: _,
+                  onChange: (_) => __webpack_require__(_.target.value),
+                }),
+              ],
+            })
           );
         };
       function _(_) {
@@ -835,165 +732,148 @@
                     _
                   ],
               });
-          return _.createElement(
-            "div",
-            {
-              className: _().DotaPlusTesterSubPage,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Content,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _().DotaPlusTesterSubPage,
+            children: (0, _.jsxs)("div", {
+              className: _().Content,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().HeroList,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().YourHero,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Your Hero",
-                    nHeroID: _,
-                    nFacet: _,
-                    fnSetSelectedHero: (_) => {
-                      return (_ = _), console.log("1"), (_ = _), void _();
-                      var _;
-                    },
-                    fnSetSelectedFacet: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Allies,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Ally #1",
-                    nHeroID: _[0],
-                    nFacet: _[0],
-                    fnSetSelectedHero: (_) => _(0, _),
-                    fnSetSelectedFacet: (_) => _(0, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #2",
-                    nHeroID: _[1],
-                    nFacet: _[1],
-                    fnSetSelectedHero: (_) => _(1, _),
-                    fnSetSelectedFacet: (_) => _(1, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #3",
-                    nHeroID: _[2],
-                    nFacet: _[2],
-                    fnSetSelectedHero: (_) => _(2, _),
-                    fnSetSelectedFacet: (_) => _(2, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #4",
-                    nHeroID: _[3],
-                    nFacet: _[3],
-                    fnSetSelectedHero: (_) => _(3, _),
-                    fnSetSelectedFacet: (_) => _(3, _),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Enemies,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Enemy #1",
-                    nHeroID: _[0],
-                    nFacet: _[0],
-                    fnSetSelectedHero: (_) => _(0, _),
-                    fnSetSelectedFacet: (_) => _(0, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #2",
-                    nHeroID: _[1],
-                    nFacet: _[1],
-                    fnSetSelectedHero: (_) => _(1, _),
-                    fnSetSelectedFacet: (_) => _(1, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #3",
-                    nHeroID: _[2],
-                    nFacet: _[2],
-                    fnSetSelectedHero: (_) => _(2, _),
-                    fnSetSelectedFacet: (_) => _(2, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #4",
-                    nHeroID: _[3],
-                    nFacet: _[3],
-                    fnSetSelectedHero: (_) => _(3, _),
-                    fnSetSelectedFacet: (_) => _(3, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #5",
-                    nHeroID: _[4],
-                    nFacet: _[4],
-                    fnSetSelectedHero: (_) => _(4, _),
-                    fnSetSelectedFacet: (_) => _(4, _),
-                  }),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().YourHero,
+                      children: (0, _.jsx)(_, {
+                        strLabel: "Your Hero",
+                        nHeroID: _,
+                        nFacet: _,
+                        fnSetSelectedHero: (_) => {
+                          return (_ = _), console.log("1"), (_ = _), void _();
+                          var _;
+                        },
+                        fnSetSelectedFacet: (_) => _(_),
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Allies,
+                      children: [
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #1",
+                          nHeroID: _[0],
+                          nFacet: _[0],
+                          fnSetSelectedHero: (_) => _(0, _),
+                          fnSetSelectedFacet: (_) => _(0, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #2",
+                          nHeroID: _[1],
+                          nFacet: _[1],
+                          fnSetSelectedHero: (_) => _(1, _),
+                          fnSetSelectedFacet: (_) => _(1, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #3",
+                          nHeroID: _[2],
+                          nFacet: _[2],
+                          fnSetSelectedHero: (_) => _(2, _),
+                          fnSetSelectedFacet: (_) => _(2, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #4",
+                          nHeroID: _[3],
+                          nFacet: _[3],
+                          fnSetSelectedHero: (_) => _(3, _),
+                          fnSetSelectedFacet: (_) => _(3, _),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Enemies,
+                      children: [
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #1",
+                          nHeroID: _[0],
+                          nFacet: _[0],
+                          fnSetSelectedHero: (_) => _(0, _),
+                          fnSetSelectedFacet: (_) => _(0, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #2",
+                          nHeroID: _[1],
+                          nFacet: _[1],
+                          fnSetSelectedHero: (_) => _(1, _),
+                          fnSetSelectedFacet: (_) => _(1, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #3",
+                          nHeroID: _[2],
+                          nFacet: _[2],
+                          fnSetSelectedHero: (_) => _(2, _),
+                          fnSetSelectedFacet: (_) => _(2, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #4",
+                          nHeroID: _[3],
+                          nFacet: _[3],
+                          fnSetSelectedHero: (_) => _(3, _),
+                          fnSetSelectedFacet: (_) => _(3, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #5",
+                          nHeroID: _[4],
+                          nFacet: _[4],
+                          fnSetSelectedHero: (_) => _(4, _),
+                          fnSetSelectedFacet: (_) => _(4, _),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsxs)("div", {
                   className: _().MiscInfo,
-                },
-                _.createElement(_, {
-                  nPosition: _,
-                  fnSetPosition: (_) => {
-                    console.log("3"), (_ = _), _();
-                  },
+                  children: [
+                    (0, _.jsx)(_, {
+                      nPosition: _,
+                      fnSetPosition: (_) => {
+                        console.log("3"), (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      nGameMode: _,
+                      fnSetGameMode: (_) => {
+                        console.log("9"), (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      strMMR: _,
+                      fnSetMMR: (_) => {
+                        console.log("8"), (_ = _), _();
+                      },
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  nGameMode: _,
-                  fnSetGameMode: (_) => {
-                    console.log("9"), (_ = _), _();
-                  },
+                (0, _.jsx)("div", {
+                  className: _().Separator,
                 }),
-                _.createElement(_, {
-                  strMMR: _,
-                  fnSetMMR: (_) => {
-                    console.log("8"), (_ = _), _();
-                  },
-                }),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsx)("div", {
                   className: _().Level,
-                },
-                `Level ${_.indexOf(0) + 1} `,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: `Level ${_.indexOf(0) + 1} `,
+                }),
+                (0, _.jsx)("div", {
                   className: _().SkilledAbilityList,
-                },
-                _.map((_, _) =>
-                  _.createElement(_, {
-                    nAbilityID: _,
-                    key: `${_}_${_}`,
-                  }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        nAbilityID: _,
+                      },
+                      `${_}_${_}`,
+                    ),
+                  ),
+                }),
+                (0, _.jsx)("div", {
                   className: _().ClearSkilledAbilities,
                   onClick: () => (
                     console.log("11"),
@@ -1003,55 +883,48 @@
                     ]),
                     void _()
                   ),
-                },
-                "Clear",
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
+                  children: "Clear",
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsx)("div", {
                   className: _().AbilitySuggestions,
-                },
-                _.map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Ability,
-                      key: _.nAbilityID,
-                      onClick: () => {
-                        return (
-                          (_ = _.nAbilityID),
-                          console.log("10"),
-                          (_[_.indexOf(0)] = _),
-                          void _()
-                        );
-                        var _;
-                      },
-                    },
-                    _.createElement(_, {
-                      nAbilityID: _.nAbilityID,
-                    }),
-                    _.createElement(
+                  children: _.map((_) =>
+                    (0, _.jsxs)(
                       "div",
                       {
-                        className: _()._,
+                        className: _().Ability,
+                        onClick: () => {
+                          return (
+                            (_ = _.nAbilityID),
+                            console.log("10"),
+                            (_[_.indexOf(0)] = _),
+                            void _()
+                          );
+                          var _;
+                        },
+                        children: [
+                          (0, _.jsx)(_, {
+                            nAbilityID: _.nAbilityID,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _()._,
+                            children: _.nAbilityID,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().Weight,
+                            children: `${(100 * _.fWeight).toFixed(2)}%`,
+                          }),
+                        ],
                       },
                       _.nAbilityID,
                     ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Weight,
-                      },
-                      `${(100 * _.fWeight).toFixed(2)}%`,
-                    ),
                   ),
-                ),
-              ),
-            ),
-          );
+                }),
+              ],
+            }),
+          });
         },
         _ = (_) => {
           const _ = new URLSearchParams(_.strConfig),
@@ -1122,168 +995,151 @@
             _ = (0, _._)(),
             _ = (0, _._)();
           return _.data && _.data
-            ? _.createElement(
-                "div",
-                {
-                  className: _().DotaPlusTesterSubPage,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Content,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+            ? (0, _.jsx)("div", {
+                className: _().DotaPlusTesterSubPage,
+                children: (0, _.jsxs)("div", {
+                  className: _().Content,
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().HeroList,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().YourHero,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Your Hero",
-                        nHeroID: _,
-                        nFacet: _,
-                        fnSetSelectedHero: (_) => ((_ = _), void _()),
-                        fnSetSelectedFacet: (_) => _(_),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Allies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Ally #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Enemies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Enemy #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #5",
-                        nHeroID: _[4],
-                        nFacet: _[4],
-                        fnSetSelectedHero: (_) => _(4, _),
-                        fnSetSelectedFacet: (_) => _(4, _),
-                      }),
-                    ),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().MiscInfo,
-                    },
-                    _.createElement(_, {
-                      nPosition: _,
-                      fnSetPosition: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      nGameMode: _,
-                      fnSetGameMode: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      strMMR: _,
-                      fnSetMMR: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Results,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ItemList,
-                        },
-                        _.map((_, _) =>
-                          _.createElement(_, {
-                            nItemID: _,
-                            key: `InferenceReuslt_Item_${_}`,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().YourHero,
+                          children: (0, _.jsx)(_, {
+                            strLabel: "Your Hero",
+                            nHeroID: _,
+                            nFacet: _,
+                            fnSetSelectedHero: (_) => ((_ = _), void _()),
+                            fnSetSelectedFacet: (_) => _(_),
                           }),
-                        ),
-                      ),
-                    ),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().Loading,
-                },
-                "Loading hero and item data...",
-              );
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().Allies,
+                          children: [
+                            (0, _.jsx)(_, {
+                              strLabel: "Ally #1",
+                              nHeroID: _[0],
+                              nFacet: _[0],
+                              fnSetSelectedHero: (_) => _(0, _),
+                              fnSetSelectedFacet: (_) => _(0, _),
+                            }),
+                            (0, _.jsx)(_, {
+                              strLabel: "Ally #2",
+                              nHeroID: _[1],
+                              nFacet: _[1],
+                              fnSetSelectedHero: (_) => _(1, _),
+                              fnSetSelectedFacet: (_) => _(1, _),
+                            }),
+                            (0, _.jsx)(_, {
+                              strLabel: "Ally #3",
+                              nHeroID: _[2],
+                              nFacet: _[2],
+                              fnSetSelectedHero: (_) => _(2, _),
+                              fnSetSelectedFacet: (_) => _(2, _),
+                            }),
+                            (0, _.jsx)(_, {
+                              strLabel: "Ally #4",
+                              nHeroID: _[3],
+                              nFacet: _[3],
+                              fnSetSelectedHero: (_) => _(3, _),
+                              fnSetSelectedFacet: (_) => _(3, _),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().Enemies,
+                          children: [
+                            (0, _.jsx)(_, {
+                              strLabel: "Enemy #1",
+                              nHeroID: _[0],
+                              nFacet: _[0],
+                              fnSetSelectedHero: (_) => _(0, _),
+                              fnSetSelectedFacet: (_) => _(0, _),
+                            }),
+                            (0, _.jsx)(_, {
+                              strLabel: "Enemy #2",
+                              nHeroID: _[1],
+                              nFacet: _[1],
+                              fnSetSelectedHero: (_) => _(1, _),
+                              fnSetSelectedFacet: (_) => _(1, _),
+                            }),
+                            (0, _.jsx)(_, {
+                              strLabel: "Enemy #3",
+                              nHeroID: _[2],
+                              nFacet: _[2],
+                              fnSetSelectedHero: (_) => _(2, _),
+                              fnSetSelectedFacet: (_) => _(2, _),
+                            }),
+                            (0, _.jsx)(_, {
+                              strLabel: "Enemy #4",
+                              nHeroID: _[3],
+                              nFacet: _[3],
+                              fnSetSelectedHero: (_) => _(3, _),
+                              fnSetSelectedFacet: (_) => _(3, _),
+                            }),
+                            (0, _.jsx)(_, {
+                              strLabel: "Enemy #5",
+                              nHeroID: _[4],
+                              nFacet: _[4],
+                              fnSetSelectedHero: (_) => _(4, _),
+                              fnSetSelectedFacet: (_) => _(4, _),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().Separator,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().MiscInfo,
+                      children: [
+                        (0, _.jsx)(_, {
+                          nPosition: _,
+                          fnSetPosition: (_) => {
+                            (_ = _), _();
+                          },
+                        }),
+                        (0, _.jsx)(_, {
+                          nGameMode: _,
+                          fnSetGameMode: (_) => {
+                            (_ = _), _();
+                          },
+                        }),
+                        (0, _.jsx)(_, {
+                          strMMR: _,
+                          fnSetMMR: (_) => {
+                            (_ = _), _();
+                          },
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().Separator,
+                    }),
+                    _.length > 0 &&
+                      (0, _.jsx)("div", {
+                        className: _().Results,
+                        children: (0, _.jsx)("div", {
+                          className: _().ItemList,
+                          children: _.map((_, _) =>
+                            (0, _.jsx)(
+                              _,
+                              {
+                                nItemID: _,
+                              },
+                              `InferenceReuslt_Item_${_}`,
+                            ),
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+              })
+            : (0, _.jsx)("div", {
+                className: _().Loading,
+                children: "Loading hero and item data...",
+              });
         };
       const _ = (_) => {
           const _ = new URLSearchParams(_.strConfig),
@@ -1427,326 +1283,277 @@
               (_[_] = _), _();
             };
           if (!_.data || !_.data)
-            return _.createElement(
-              "div",
-              {
-                className: _().Loading,
-              },
-              "Loading hero and item data...",
-            );
+            return (0, _.jsx)("div", {
+              className: _().Loading,
+              children: "Loading hero and item data...",
+            });
           const _ = (function (_, _) {
             const _ = [];
             for (let _ = 0; _ < _.length; _ += _)
               __webpack_require__.push(_.slice(_, _ + _));
             return _;
           })(_, 5);
-          return _.createElement(
-            "div",
-            {
-              className: _().DotaPlusTesterSubPage,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Content,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _().DotaPlusTesterSubPage,
+            children: (0, _.jsxs)("div", {
+              className: _().Content,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().HeroList,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().YourHero,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Your Hero",
-                    nHeroID: _,
-                    nFacet: _,
-                    fnSetSelectedHero: (_) => ((_ = _), void _()),
-                    fnSetSelectedFacet: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Allies,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Ally #1",
-                    nHeroID: _[0],
-                    nFacet: _[0],
-                    fnSetSelectedHero: (_) => _(0, _),
-                    fnSetSelectedFacet: (_) => _(0, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #2",
-                    nHeroID: _[1],
-                    nFacet: _[1],
-                    fnSetSelectedHero: (_) => _(1, _),
-                    fnSetSelectedFacet: (_) => _(1, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #3",
-                    nHeroID: _[2],
-                    nFacet: _[2],
-                    fnSetSelectedHero: (_) => _(2, _),
-                    fnSetSelectedFacet: (_) => _(2, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #4",
-                    nHeroID: _[3],
-                    nFacet: _[3],
-                    fnSetSelectedHero: (_) => _(3, _),
-                    fnSetSelectedFacet: (_) => _(3, _),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Enemies,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Enemy #1",
-                    nHeroID: _[0],
-                    nFacet: _[0],
-                    fnSetSelectedHero: (_) => _(0, _),
-                    fnSetSelectedFacet: (_) => _(0, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #2",
-                    nHeroID: _[1],
-                    nFacet: _[1],
-                    fnSetSelectedHero: (_) => _(1, _),
-                    fnSetSelectedFacet: (_) => _(1, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #3",
-                    nHeroID: _[2],
-                    nFacet: _[2],
-                    fnSetSelectedHero: (_) => _(2, _),
-                    fnSetSelectedFacet: (_) => _(2, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #4",
-                    nHeroID: _[3],
-                    nFacet: _[3],
-                    fnSetSelectedHero: (_) => _(3, _),
-                    fnSetSelectedFacet: (_) => _(3, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #5",
-                    nHeroID: _[4],
-                    nFacet: _[4],
-                    fnSetSelectedHero: (_) => _(4, _),
-                    fnSetSelectedFacet: (_) => _(4, _),
-                  }),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().MiscInfo,
-                },
-                _.createElement(_, {
-                  nPosition: _,
-                  fnSetPosition: (_) => {
-                    (_ = _), _();
-                  },
-                }),
-                _.createElement(_, {
-                  nGameMode: _,
-                  fnSetGameMode: (_) => {
-                    (_ = _), _();
-                  },
-                }),
-                _.createElement(_, {
-                  strMMR: _,
-                  fnSetMMR: (_) => {
-                    (_ = _), _();
-                  },
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Option,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Name,
-                    },
-                    "Repeat Weight",
-                  ),
-                  _.createElement(
-                    "select",
-                    {
-                      className: _().WeightSelector,
-                      value: _,
-                      onChange: (_) => {
-                        return (
-                          (_ = parseFloat(_.target.value)), (_ = _), void _()
-                        );
-                        var _;
-                      },
-                    },
-                    _.createElement(
-                      "option",
-                      {
-                        value: 1,
-                      },
-                      "1.0",
-                    ),
-                    _.createElement(
-                      "option",
-                      {
-                        value: 0.8,
-                      },
-                      "0.8",
-                    ),
-                    _.createElement(
-                      "option",
-                      {
-                        value: 0.6,
-                      },
-                      "0.6",
-                    ),
-                    _.createElement(
-                      "option",
-                      {
-                        value: 0.4,
-                      },
-                      "0.4",
-                    ),
-                    _.createElement(
-                      "option",
-                      {
-                        value: 0.2,
-                      },
-                      "0.2",
-                    ),
-                    _.createElement(
-                      "option",
-                      {
-                        value: 0,
-                      },
-                      "0.0",
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().IncludExcludeItemOption,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ItemOptionTitle,
-                  },
-                  "Preferred Items",
-                ),
-                _.createElement(_, {
-                  nItemID: _[0],
-                  fnSetSelectedItem: (_) => _(0, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-                _.createElement(_, {
-                  nItemID: _[1],
-                  fnSetSelectedItem: (_) => _(1, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-                _.createElement(_, {
-                  nItemID: _[2],
-                  fnSetSelectedItem: (_) => _(2, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-                _.createElement(_, {
-                  nItemID: _[3],
-                  fnSetSelectedItem: (_) => _(3, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().IncludExcludeItemOption,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ItemOptionTitle,
-                  },
-                  "Disliked Items",
-                ),
-                _.createElement(_, {
-                  nItemID: _[0],
-                  fnSetSelectedItem: (_) => _(0, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-                _.createElement(_, {
-                  nItemID: _[1],
-                  fnSetSelectedItem: (_) => _(1, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-                _.createElement(_, {
-                  nItemID: _[2],
-                  fnSetSelectedItem: (_) => _(2, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-                _.createElement(_, {
-                  nItemID: _[3],
-                  fnSetSelectedItem: (_) => _(3, _),
-                  bShowName: !1,
-                  bAllowEmpty: !0,
-                  eItemFilter: _.ITEM_OPTIONS_ALL,
-                }),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().PurchasedItemList,
-                },
-                _.map((_, _) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: `${_}_${_}`,
-                      onClick: () => {
-                        _.splice(_, 1), _.push(0), _();
-                      },
-                    },
-                    _.createElement(_, {
-                      nItemID: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().YourHero,
+                      children: (0, _.jsx)(_, {
+                        strLabel: "Your Hero",
+                        nHeroID: _,
+                        nFacet: _,
+                        fnSetSelectedHero: (_) => ((_ = _), void _()),
+                        fnSetSelectedFacet: (_) => _(_),
+                      }),
                     }),
+                    (0, _.jsxs)("div", {
+                      className: _().Allies,
+                      children: [
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #1",
+                          nHeroID: _[0],
+                          nFacet: _[0],
+                          fnSetSelectedHero: (_) => _(0, _),
+                          fnSetSelectedFacet: (_) => _(0, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #2",
+                          nHeroID: _[1],
+                          nFacet: _[1],
+                          fnSetSelectedHero: (_) => _(1, _),
+                          fnSetSelectedFacet: (_) => _(1, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #3",
+                          nHeroID: _[2],
+                          nFacet: _[2],
+                          fnSetSelectedHero: (_) => _(2, _),
+                          fnSetSelectedFacet: (_) => _(2, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #4",
+                          nHeroID: _[3],
+                          nFacet: _[3],
+                          fnSetSelectedHero: (_) => _(3, _),
+                          fnSetSelectedFacet: (_) => _(3, _),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Enemies,
+                      children: [
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #1",
+                          nHeroID: _[0],
+                          nFacet: _[0],
+                          fnSetSelectedHero: (_) => _(0, _),
+                          fnSetSelectedFacet: (_) => _(0, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #2",
+                          nHeroID: _[1],
+                          nFacet: _[1],
+                          fnSetSelectedHero: (_) => _(1, _),
+                          fnSetSelectedFacet: (_) => _(1, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #3",
+                          nHeroID: _[2],
+                          nFacet: _[2],
+                          fnSetSelectedHero: (_) => _(2, _),
+                          fnSetSelectedFacet: (_) => _(2, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #4",
+                          nHeroID: _[3],
+                          nFacet: _[3],
+                          fnSetSelectedHero: (_) => _(3, _),
+                          fnSetSelectedFacet: (_) => _(3, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #5",
+                          nHeroID: _[4],
+                          nFacet: _[4],
+                          fnSetSelectedHero: (_) => _(4, _),
+                          fnSetSelectedFacet: (_) => _(4, _),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().MiscInfo,
+                  children: [
+                    (0, _.jsx)(_, {
+                      nPosition: _,
+                      fnSetPosition: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      nGameMode: _,
+                      fnSetGameMode: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      strMMR: _,
+                      fnSetMMR: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Option,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().Name,
+                          children: "Repeat Weight",
+                        }),
+                        (0, _.jsxs)("select", {
+                          className: _().WeightSelector,
+                          value: _,
+                          onChange: (_) => {
+                            return (
+                              (_ = parseFloat(_.target.value)),
+                              (_ = _),
+                              void _()
+                            );
+                            var _;
+                          },
+                          children: [
+                            (0, _.jsx)("option", {
+                              value: 1,
+                              children: "1.0",
+                            }),
+                            (0, _.jsx)("option", {
+                              value: 0.8,
+                              children: "0.8",
+                            }),
+                            (0, _.jsx)("option", {
+                              value: 0.6,
+                              children: "0.6",
+                            }),
+                            (0, _.jsx)("option", {
+                              value: 0.4,
+                              children: "0.4",
+                            }),
+                            (0, _.jsx)("option", {
+                              value: 0.2,
+                              children: "0.2",
+                            }),
+                            (0, _.jsx)("option", {
+                              value: 0,
+                              children: "0.0",
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().IncludExcludeItemOption,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().ItemOptionTitle,
+                      children: "Preferred Items",
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[0],
+                      fnSetSelectedItem: (_) => _(0, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[1],
+                      fnSetSelectedItem: (_) => _(1, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[2],
+                      fnSetSelectedItem: (_) => _(2, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[3],
+                      fnSetSelectedItem: (_) => _(3, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().IncludExcludeItemOption,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().ItemOptionTitle,
+                      children: "Disliked Items",
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[0],
+                      fnSetSelectedItem: (_) => _(0, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[1],
+                      fnSetSelectedItem: (_) => _(1, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[2],
+                      fnSetSelectedItem: (_) => _(2, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                    (0, _.jsx)(_, {
+                      nItemID: _[3],
+                      fnSetSelectedItem: (_) => _(3, _),
+                      bShowName: !1,
+                      bAllowEmpty: !0,
+                      eItemFilter: _.ITEM_OPTIONS_ALL,
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().PurchasedItemList,
+                  children: _.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        onClick: () => {
+                          _.splice(_, 1), _.push(0), _();
+                        },
+                        children: (0, _.jsx)(_, {
+                          nItemID: _,
+                        }),
+                      },
+                      `${_}_${_}`,
+                    ),
                   ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                }),
+                (0, _.jsx)("div", {
                   className: _().ClearSkilledAbilities,
                   onClick: () => (
                     (_ = [
@@ -1755,162 +1562,137 @@
                     ]),
                     void _()
                   ),
-                },
-                "Clear",
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
+                  children: "Clear",
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsx)("div", {
                   className: _().Header,
-                },
-                "Recommended Build Sequence",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "Recommended Build Sequence",
+                }),
+                (0, _.jsx)("div", {
                   className: _().ItemList,
-                },
-                _.map((_, _) =>
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Item,
-                      onClick: () => _(_.nItemID),
-                      key: `${_.nItemID}_${_}`,
-                    },
-                    _.createElement(_, {
-                      nItemID: _.nItemID,
-                    }),
-                    _.fScore > 0 &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().Weight,
-                        },
-                        `${(100 * _.fScore).toFixed(2)}%`,
-                      ),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().Header,
-                },
-                "Variant 1",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ItemList,
-                },
-                [].map((_, _) =>
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Item,
-                      onClick: () => _(_.nItemID),
-                      key: `${_.nItemID}_${_}`,
-                    },
-                    _.createElement(_, {
-                      nItemID: _.nItemID,
-                    }),
-                    _.fScore > 0 &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().Weight,
-                        },
-                        `${(100 * _.fScore).toFixed(2)}%`,
-                      ),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().Header,
-                },
-                "Variant 2",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ItemList,
-                },
-                [].map((_, _) =>
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Item,
-                      onClick: () => _(_.nItemID),
-                      key: `${_.nItemID}_${_}`,
-                    },
-                    _.createElement(_, {
-                      nItemID: _.nItemID,
-                    }),
-                    _.fScore > 0 &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().Weight,
-                        },
-                        `${(100 * _.fScore).toFixed(2)}%`,
-                      ),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().Header,
-                },
-                "Next Item Options",
-              ),
-              _.map((_, _) =>
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ItemList,
-                    key: `Step_${_}`,
-                  },
-                  _.map((_, _) =>
-                    _.createElement(
+                  children: _.map((_, _) =>
+                    (0, _.jsxs)(
                       "div",
                       {
                         className: _().Item,
                         onClick: () => _(_.nItemID),
-                        key: `${_.nItemID}_${_}`,
+                        children: [
+                          (0, _.jsx)(_, {
+                            nItemID: _.nItemID,
+                          }),
+                          _.fScore > 0 &&
+                            (0, _.jsx)("div", {
+                              className: _().Weight,
+                              children: `${(100 * _.fScore).toFixed(2)}%`,
+                            }),
+                        ],
                       },
-                      _.createElement(_, {
-                        nItemID: _.nItemID,
-                      }),
-                      _.fScore > 0 &&
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().Weight,
-                          },
-                          `${(100 * _.fScore).toFixed(2)}%`,
-                        ),
+                      `${_.nItemID}_${_}`,
                     ),
                   ),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Header,
+                  children: "Variant 1",
+                }),
+                (0, _.jsx)("div", {
+                  className: _().ItemList,
+                  children: [].map((_, _) =>
+                    (0, _.jsxs)(
+                      "div",
+                      {
+                        className: _().Item,
+                        onClick: () => _(_.nItemID),
+                        children: [
+                          (0, _.jsx)(_, {
+                            nItemID: _.nItemID,
+                          }),
+                          _.fScore > 0 &&
+                            (0, _.jsx)("div", {
+                              className: _().Weight,
+                              children: `${(100 * _.fScore).toFixed(2)}%`,
+                            }),
+                        ],
+                      },
+                      `${_.nItemID}_${_}`,
+                    ),
+                  ),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Header,
+                  children: "Variant 2",
+                }),
+                (0, _.jsx)("div", {
+                  className: _().ItemList,
+                  children: [].map((_, _) =>
+                    (0, _.jsxs)(
+                      "div",
+                      {
+                        className: _().Item,
+                        onClick: () => _(_.nItemID),
+                        children: [
+                          (0, _.jsx)(_, {
+                            nItemID: _.nItemID,
+                          }),
+                          _.fScore > 0 &&
+                            (0, _.jsx)("div", {
+                              className: _().Weight,
+                              children: `${(100 * _.fScore).toFixed(2)}%`,
+                            }),
+                        ],
+                      },
+                      `${_.nItemID}_${_}`,
+                    ),
+                  ),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Header,
+                  children: "Next Item Options",
+                }),
+                _.map((_, _) =>
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: _().ItemList,
+                      children: _.map((_, _) =>
+                        (0, _.jsxs)(
+                          "div",
+                          {
+                            className: _().Item,
+                            onClick: () => _(_.nItemID),
+                            children: [
+                              (0, _.jsx)(_, {
+                                nItemID: _.nItemID,
+                              }),
+                              _.fScore > 0 &&
+                                (0, _.jsx)("div", {
+                                  className: _().Weight,
+                                  children: `${(100 * _.fScore).toFixed(2)}%`,
+                                }),
+                            ],
+                          },
+                          `${_.nItemID}_${_}`,
+                        ),
+                      ),
+                    },
+                    `Step_${_}`,
+                  ),
                 ),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         },
         _ = () => {
           const _ = (0, _._)(),
@@ -1918,79 +1700,68 @@
           let _;
           switch (_.strFeature) {
             case _:
-              _ = _.createElement(_, {
+              _ = (0, _.jsx)(_, {
                 strFeature: _.strFeature,
                 strConfig: _.strConfig,
               });
               break;
             case _:
-              _ = _.createElement(_, {
+              _ = (0, _.jsx)(_, {
                 strFeature: _.strFeature,
                 strConfig: _.strConfig,
               });
               break;
             case _:
-              _ = _.createElement(_, {
+              _ = (0, _.jsx)(_, {
                 strFeature: _.strFeature,
                 strConfig: _.strConfig,
               });
           }
           if (null == _)
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               _: _._.dotaplustester(_),
             });
           const _ = (_) => {
             _.push(_._.dotaplustester(_, _.strConfig));
           };
-          return _.createElement(
-            "div",
-            {
-              className: _().DotaPlusTesterPage,
-            },
-            _.createElement(_._, {
-              bOverlapping: !1,
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().DotaPlusTesterPage,
+            children: [
+              (0, _.jsx)(_._, {
+                bOverlapping: !1,
+              }),
+              (0, _.jsxs)("div", {
                 className: _().SelectionHeader,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().Option,
-                    _.strFeature == _ && _().Selected,
-                  ),
-                  onClick: () => _(_),
-                },
-                "Abilities",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().Option,
-                    _.strFeature == _ && _().Selected,
-                  ),
-                  onClick: () => _(_),
-                },
-                "Pregame Items",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().Option,
-                    _.strFeature == _ && _().Selected,
-                  ),
-                  onClick: () => _(_),
-                },
-                "Main Game Items",
-              ),
-            ),
-            _,
-          );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().Option,
+                      _.strFeature == _ && _().Selected,
+                    ),
+                    onClick: () => _(_),
+                    children: "Abilities",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().Option,
+                      _.strFeature == _ && _().Selected,
+                    ),
+                    onClick: () => _(_),
+                    children: "Pregame Items",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().Option,
+                      _.strFeature == _ && _().Selected,
+                    ),
+                    onClick: () => _(_),
+                    children: "Main Game Items",
+                  }),
+                ],
+              }),
+              _,
+            ],
+          });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2000,6 +1771,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2190,7 +1962,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "red",
         _ = "orange",
         _ = "goldenrod",
@@ -2243,28 +2016,20 @@
               const _ = `${_}${_?.guild?.guild_id}`,
                 _ = _?.guild?.guild_name || "";
               return _ && _
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                        target: "_blank",
-                        rel: "noopener",
-                      },
-                      _,
-                    ),
-                  )
-                : _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: _,
-                      },
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("a", {
+                      href: _,
+                      target: "_blank",
+                      rel: "noopener",
+                      children: _,
+                    }),
+                  })
+                : (0, _.jsx)("span", {
+                    style: {
+                      color: _,
                     },
-                    "No Guild",
-                  );
+                    children: "No Guild",
+                  });
             },
           },
         ],
@@ -2274,47 +2039,42 @@
             secondaryKey: "comprankuncertainty",
             tertiaryKey: "compranktier",
             displayName: "Ranked",
-            formatFunction: (_, _, __webpack_require__ = 0) =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "span",
-                  {
+            formatFunction: (_, _, _ = 0) =>
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("span", {
                     className: _().RankNumber,
-                  },
-                  `${_}`,
-                ),
-                _.createElement(
-                  "span",
-                  {
-                    className: _().RankedUncertainty,
-                  },
-                  `+/- ${_}`,
-                  _.createElement("img", {
-                    className: _().RankedBadgeIcon,
-                    src: `${_._.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(__webpack_require__ / 10)}.png`,
+                    children: `${_}`,
                   }),
-                ),
-              ),
+                  (0, _.jsxs)("span", {
+                    className: _().RankedUncertainty,
+                    children: [
+                      `+/- ${_}`,
+                      (0, _.jsx)("img", {
+                        className: _().RankedBadgeIcon,
+                        src: `${_._.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(_ / 10)}.png`,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
           },
           {
             key: "rank",
             secondaryKey: "rankuncertainty",
             displayName: "Unranked",
             formatFunction: (_, _) =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "span",
-                  {
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("span", {
                     className: _().RankNumber,
-                  },
-                  `${_}`,
-                ),
-                _.createElement("span", null, `+/- ${_}`),
-              ),
+                    children: `${_}`,
+                  }),
+                  (0, _.jsx)("span", {
+                    children: `+/- ${_}`,
+                  }),
+                ],
+              }),
           },
         ],
         _ = [
@@ -2332,41 +2092,34 @@
                   __webpack_require__.push(`${_(_._.BATTLECUP)}${_}`),
                 (_ & _._.BAN_WARNING) > 0 &&
                   __webpack_require__.push(
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
+                    (0, _.jsx)("span", {
+                      style: {
+                        color: _,
                       },
-                      `${_(_._.BAN_WARNING)}${_}`,
-                    ),
+                      children: `${_(_._.BAN_WARNING)}${_}`,
+                    }),
                   ),
                 (_ & _._.RETURNING_PLAYER) > 0 &&
                   __webpack_require__.push(
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
+                    (0, _.jsx)("span", {
+                      style: {
+                        color: _,
                       },
-                      `${_(_._.RETURNING_PLAYER)}${_}`,
-                    ),
+                      children: `${_(_._.RETURNING_PLAYER)}${_}`,
+                    }),
                   ),
                 (_ & _._.COMMS_DISRUPTIVE) > 0 &&
                   __webpack_require__.push(
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
+                    (0, _.jsx)("span", {
+                      style: {
+                        color: _,
                       },
-                      `${_(_._.COMMS_DISRUPTIVE)}${_}`,
-                    ),
+                      children: `${_(_._.COMMS_DISRUPTIVE)}${_}`,
+                    }),
                   ),
-                _.createElement("div", null, _)
+                (0, _.jsx)("div", {
+                  children: _,
+                })
               );
             },
           },
@@ -2375,7 +2128,7 @@
             secondaryKey: "commscore",
             tertiaryKey: "trustscore",
             displayName: "Behav, Comms, Trust",
-            formatFunction: (_ = 8e3, _ = -1, __webpack_require__ = -1) => {
+            formatFunction: (_ = 8e3, _ = -1, _ = -1) => {
               let _ = _;
               _ < 0
                 ? (_ = _)
@@ -2393,37 +2146,28 @@
                     : _ <= 4e3
                       ? (_ = _)
                       : _ <= 6e3 && (_ = _),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "span",
-                    {
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("span", {
                       style: {
                         color: _,
                       },
-                    },
-                    `${_}, `,
-                  ),
-                  _.createElement(
-                    "span",
-                    {
+                      children: `${_}, `,
+                    }),
+                    (0, _.jsx)("span", {
                       style: {
                         color: _,
                       },
-                    },
-                    `${_}, `,
-                  ),
-                  _.createElement(
-                    "span",
-                    {
+                      children: `${_}, `,
+                    }),
+                    (0, _.jsx)("span", {
                       style: {
                         color: _,
                       },
-                    },
-                    `${__webpack_require__}`,
-                  ),
-                )
+                      children: `${_}`,
+                    }),
+                  ],
+                })
               );
             },
           },
@@ -2432,19 +2176,14 @@
             displayName: "Steam Account 64",
             formatFunction: (_) =>
               _
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                        target: "_blank",
-                        rel: "noopener",
-                      },
-                      _.split("/").pop(),
-                    ),
-                  )
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("a", {
+                      href: _,
+                      target: "_blank",
+                      rel: "noopener",
+                      children: _.split("/").pop(),
+                    }),
+                  })
                 : "",
           },
           {
@@ -2465,19 +2204,14 @@
                   break;
                 }
               return _
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: `${_}${_}`,
-                        target: "_blank",
-                        rel: "noopener",
-                      },
-                      _,
-                    ),
-                  )
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("a", {
+                      href: `${_}${_}`,
+                      target: "_blank",
+                      rel: "noopener",
+                      children: _,
+                    }),
+                  })
                 : "";
             },
           },
@@ -2486,19 +2220,14 @@
             displayName: "Persona V1",
             formatFunction: (_) =>
               _
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                        target: "_blank",
-                        rel: "noopener",
-                      },
-                      "Persona V1",
-                    ),
-                  )
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("a", {
+                      href: _,
+                      target: "_blank",
+                      rel: "noopener",
+                      children: "Persona V1",
+                    }),
+                  })
                 : "",
           },
         ],
@@ -2509,53 +2238,40 @@
             formatFunction: (_) => {
               switch (_) {
                 case _._.VERY_LIKELY:
-                  return _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: _,
-                      },
+                  return (0, _.jsx)("span", {
+                    style: {
+                      color: _,
                     },
-                    _(_._.VERY_LIKELY),
-                  );
+                    children: _(_._.VERY_LIKELY),
+                  });
                 case _._.SOMEWHAT_LIKELY:
-                  return _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: _,
-                      },
+                  return (0, _.jsx)("span", {
+                    style: {
+                      color: _,
                     },
-                    _(_._.SOMEWHAT_LIKELY),
-                  );
+                    children: _(_._.SOMEWHAT_LIKELY),
+                  });
                 case _._.UNCLEAR:
-                  return _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: _,
-                      },
+                  return (0, _.jsx)("span", {
+                    style: {
+                      color: _,
                     },
-                    _(_._.UNCLEAR),
-                  );
+                    children: _(_._.UNCLEAR),
+                  });
                 case _._.SOMEWHAT_UNLIKELY:
-                  return _.createElement(
-                    "span",
-                    {
-                      style: {},
-                    },
-                    _(_._.SOMEWHAT_UNLIKELY),
-                  );
+                  return (0, _.jsx)("span", {
+                    style: {},
+                    children: _(_._.SOMEWHAT_UNLIKELY),
+                  });
                 case _._.VERY_UNLIKELY:
-                  return _.createElement(
-                    "span",
-                    {
-                      style: {},
-                    },
-                    _(_._.VERY_UNLIKELY),
-                  );
+                  return (0, _.jsx)("span", {
+                    style: {},
+                    children: _(_._.VERY_UNLIKELY),
+                  });
                 default:
-                  return _.createElement("span", null, _(_._.INVALID));
+                  return (0, _.jsx)("span", {
+                    children: _(_._.INVALID),
+                  });
               }
             },
           },
@@ -2564,22 +2280,22 @@
             displayName: "Plus Subscriber",
             formatFunction: (_ = 0) =>
               _
-                ? _.createElement(
-                    "div",
-                    {
-                      style: {
-                        color: _,
-                      },
+                ? (0, _.jsx)("div", {
+                    style: {
+                      color: _,
                     },
-                    "YES",
-                  )
+                    children: "YES",
+                  })
                 : "NO",
           },
           {
             key: "wins",
             secondaryKey: "losses",
             displayName: "Total Games Played",
-            formatFunction: (_, _) => _.createElement("div", null, _ + _ || 0),
+            formatFunction: (_, _) =>
+              (0, _.jsx)("div", {
+                children: _ + _ || 0,
+              }),
           },
           {
             key: "wins",
@@ -2587,49 +2303,44 @@
             displayName: "Win Rate",
             formatFunction: (_, _) => {
               const _ = _ + _ || 0;
-              if (!_) return _.createElement("div", null, "");
+              if (!_)
+                return (0, _.jsx)("div", {
+                  children: "",
+                });
               const _ = Math.round((_ / _) * 1e4) / 100;
               let _ = "none";
               return (
                 _ >= 70 || _ <= 30 ? (_ = _) : (_ >= 60 || _ <= 40) && (_ = _),
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "span",
-                    {
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsxs)("span", {
                       className: _().MarginRightSmall,
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
-                      },
-                      `${_}`,
-                    ),
-                    _.createElement("span", null, " - "),
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
-                      },
-                      `${_}`,
-                    ),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
+                      children: [
+                        (0, _.jsx)("span", {
+                          style: {
+                            color: _,
+                          },
+                          children: `${_}`,
+                        }),
+                        (0, _.jsx)("span", {
+                          children: " - ",
+                        }),
+                        (0, _.jsx)("span", {
+                          style: {
+                            color: _,
+                          },
+                          children: `${_}`,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("span", {
                       style: {
                         color: _,
                       },
-                    },
-                    `(${_}%)`,
-                  ),
-                )
+                      children: `(${_}%)`,
+                    }),
+                  ],
+                })
               );
             },
           },
@@ -2639,49 +2350,44 @@
             displayName: "Win Rate (Recent)",
             formatFunction: (_, _) => {
               const _ = _ + _ || 0;
-              if (!_) return _.createElement("div", null, "");
+              if (!_)
+                return (0, _.jsx)("div", {
+                  children: "",
+                });
               const _ = Math.round((_ / _) * 1e4) / 100;
               let _ = "none";
               return (
                 _ >= 70 || _ <= 30 ? (_ = _) : (_ >= 60 || _ <= 40) && (_ = _),
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "span",
-                    {
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsxs)("span", {
                       className: _().MarginRightSmall,
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
-                      },
-                      `${_}`,
-                    ),
-                    _.createElement("span", null, " - "),
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
-                      },
-                      `${_}`,
-                    ),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
+                      children: [
+                        (0, _.jsx)("span", {
+                          style: {
+                            color: _,
+                          },
+                          children: `${_}`,
+                        }),
+                        (0, _.jsx)("span", {
+                          children: " - ",
+                        }),
+                        (0, _.jsx)("span", {
+                          style: {
+                            color: _,
+                          },
+                          children: `${_}`,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("span", {
                       style: {
                         color: _,
                       },
-                    },
-                    `(${_}%)`,
-                  ),
-                )
+                      children: `(${_}%)`,
+                    }),
+                  ],
+                })
               );
             },
           },
@@ -2698,15 +2404,12 @@
               let _ = _;
               return (
                 _ > 20 ? (_ = _) : _ > 10 ? (_ = _) : _ > 5 && (_ = _),
-                _.createElement(
-                  "span",
-                  {
-                    style: {
-                      color: _,
-                    },
+                (0, _.jsx)("span", {
+                  style: {
+                    color: _,
                   },
-                  `${_} / 32 games`,
-                )
+                  children: `${_} / 32 games`,
+                })
               );
             },
           },
@@ -2729,53 +2432,51 @@
                         !!_[_][0] && /<\/?[a-z][\s\S]*>/i.test("" + _[_][0]),
                       _ = "string" == typeof _[_][0] ? _[_][0] : "";
                     _.push(
-                      _.createElement(
+                      (0, _.jsxs)(
                         _.Fragment,
                         {
-                          key: `${_}-${_}`,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().TextCapitalize,
+                              children: `${0 == _ ? __webpack_require__.replace(/_/g, " ") : ""}`,
+                            }),
+                            _ &&
+                              (0, _.jsx)("div", {
+                                dangerouslySetInnerHTML: {
+                                  __html: _,
+                                },
+                              }),
+                            !_ &&
+                              (0, _.jsx)("div", {
+                                children: `${_[_][0]}`,
+                              }),
+                            (0, _.jsx)("div", {
+                              style: {
+                                color: _,
+                              },
+                              children: `(${_[_][1]} / ${_})`,
+                            }),
+                          ],
                         },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().TextCapitalize,
-                          },
-                          `${0 == _ ? __webpack_require__.replace(/_/g, " ") : ""}`,
-                        ),
-                        _ &&
-                          _.createElement("div", {
-                            dangerouslySetInnerHTML: {
-                              __html: _,
-                            },
-                          }),
-                        !_ && _.createElement("div", null, `${_[_][0]}`),
-                        _.createElement(
-                          "div",
-                          {
-                            style: {
-                              color: _,
-                            },
-                          },
-                          `(${_[_][1]} / ${_})`,
-                        ),
+                        `${_}-${_}`,
                       ),
                     );
                   }
                 else
                   _.push(
-                    _.createElement(
+                    (0, _.jsxs)(
                       _.Fragment,
                       {
-                        key: _,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().TextCapitalize,
+                            children: __webpack_require__.replace(/_/g, " "),
+                          }),
+                          (0, _.jsx)("div", {}),
+                          (0, _.jsx)("div", {}),
+                        ],
                       },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().TextCapitalize,
-                        },
-                        __webpack_require__.replace(/_/g, " "),
-                      ),
-                      _.createElement("div", null),
-                      _.createElement("div", null),
+                      _,
                     ),
                   );
               }
@@ -2789,19 +2490,14 @@
             displayName: "Reports",
             formatFunction: (_) =>
               _
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                        target: "_blank",
-                        rel: "noopener",
-                      },
-                      "Reports",
-                    ),
-                  )
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("a", {
+                      href: _,
+                      target: "_blank",
+                      rel: "noopener",
+                      children: "Reports",
+                    }),
+                  })
                 : "",
           },
           {
@@ -2809,19 +2505,14 @@
             displayName: "Associates",
             formatFunction: (_) =>
               _
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                        target: "_blank",
-                        rel: "noopener",
-                      },
-                      "Associates",
-                    ),
-                  )
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("a", {
+                      href: _,
+                      target: "_blank",
+                      rel: "noopener",
+                      children: "Associates",
+                    }),
+                  })
                 : "",
           },
         ],
@@ -2831,15 +2522,12 @@
             displayName: _(_._.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (_ = 0) =>
               _ & _._.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? _.createElement(
-                    "div",
-                    {
-                      style: {
-                        color: _,
-                      },
+                ? (0, _.jsx)("div", {
+                    style: {
+                      color: _,
                     },
-                    "YES",
-                  )
+                    children: "YES",
+                  })
                 : "NO",
           },
           {
@@ -2847,15 +2535,12 @@
             displayName: _(_._.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (_ = 0) =>
               _ & _._.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? _.createElement(
-                    "div",
-                    {
-                      style: {
-                        color: _,
-                      },
+                ? (0, _.jsx)("div", {
+                    style: {
+                      color: _,
                     },
-                    "YES",
-                  )
+                    children: "YES",
+                  })
                 : "NO",
           },
         ],
@@ -2868,19 +2553,20 @@
               for (let _ in _) {
                 const _ = _[_];
                 _.push(
-                  _.createElement(
+                  (0, _.jsxs)(
                     _.Fragment,
                     {
-                      key: _,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().TextCapitalize,
+                          children: `VAC ${__webpack_require__.replace(/_/g, " ")}`,
+                        }),
+                        (0, _.jsx)("div", {
+                          children: _,
+                        }),
+                      ],
                     },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().TextCapitalize,
-                      },
-                      `VAC ${__webpack_require__.replace(/_/g, " ")}`,
-                    ),
-                    _.createElement("div", null, _),
+                    _,
                   ),
                 );
               }
@@ -2922,32 +2608,24 @@
             formatFunction: (_ = 0, _ = "") => {
               if (!_ || !_) return "";
               const _ = `${_}${_}`;
-              return _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "a",
-                  {
-                    href: _,
-                    target: "_blank",
-                    rel: "noopener",
-                  },
-                  _,
-                ),
-              );
+              return (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsx)("a", {
+                  href: _,
+                  target: "_blank",
+                  rel: "noopener",
+                  children: _,
+                }),
+              });
             },
           },
           {
             key: "country",
             displayName: "Country",
             formatFunction: (_) =>
-              _.createElement(
-                "span",
-                {
-                  className: _().TextUppercase,
-                },
-                _,
-              ),
+              (0, _.jsx)("span", {
+                className: _().TextUppercase,
+                children: _,
+              }),
           },
           {
             key: "sponsor",
@@ -2978,34 +2656,30 @@
                   _ = _.team_name,
                   _ = _.team_tag;
                 __webpack_require__.push(
-                  _.createElement(
+                  (0, _.jsxs)(
                     _.Fragment,
                     {
-                      key: _,
+                      children: [
+                        (0, _.jsxs)("div", {
+                          children: [
+                            `${_} `,
+                            (0, _.jsx)("span", {
+                              style: {
+                                color: _,
+                              },
+                              children: `[${_}]`,
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)("a", {
+                          href: _,
+                          target: "_blank",
+                          rel: "noopener",
+                          children: _,
+                        }),
+                      ],
                     },
-                    _.createElement(
-                      "div",
-                      null,
-                      `${_} `,
-                      _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: _,
-                          },
-                        },
-                        `[${_}]`,
-                      ),
-                    ),
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                        target: "_blank",
-                        rel: "noopener",
-                      },
-                      _,
-                    ),
+                    _,
                   ),
                 );
               }
@@ -3027,13 +2701,19 @@
                   _ = _[_]?.points_per_level || 1e3,
                   _ = Math.floor(_.event_points / _);
                 _.unshift(
-                  _.createElement(
+                  (0, _.jsxs)(
                     _.Fragment,
                     {
-                      key: _,
+                      children: [
+                        (0, _.jsx)("div", {
+                          children: _,
+                        }),
+                        (0, _.jsx)("div", {
+                          children: _,
+                        }),
+                      ],
                     },
-                    _.createElement("div", null, _),
-                    _.createElement("div", null, _),
+                    _,
                   ),
                 );
               }
@@ -3042,20 +2722,19 @@
           },
         ],
         _ = () =>
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "span",
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("span", {
                 style: {
                   color: _,
                 },
-              },
-              "YES",
-            ),
-            _.createElement("span", null, " (check V1 Link for details)"),
-          ),
+                children: "YES",
+              }),
+              (0, _.jsx)("span", {
+                children: " (check V1 Link for details)",
+              }),
+            ],
+          }),
         _ = [
           {
             key: "exploiter_data",
@@ -3089,19 +2768,14 @@
           },
         ],
         _ = (_) =>
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "span",
-              {
-                style: {
-                  color: _,
-                },
+          (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsx)("span", {
+              style: {
+                color: _,
               },
-              _()(1e3 * _).format("MMMM Do YYYY, h:mm:ss a"),
-            ),
-          ),
+              children: _()(1e3 * _).format("MMMM Do YYYY, h:mm:ss a"),
+            }),
+          }),
         _ = [
           {
             key: "matchdisableduntil",
@@ -3129,44 +2803,49 @@
           _ = _.slice(0, 5);
           return _.map((_) => {
             const _ = "Admin Permanent" == _.bantype;
-            return _.createElement(
+            return (0, _.jsxs)(
               "tr",
               {
-                key: `${_.bantype} - ${_.starttime}`,
                 style: {
                   color: _ ? _ : "",
                 },
+                children: [
+                  (0, _.jsx)("td", {
+                    children: _.bantype,
+                  }),
+                  (0, _.jsx)("td", {
+                    children: _()(1e3 * _.starttime).format(
+                      "MMMM Do YYYY, h:mm:ss a",
+                    ),
+                  }),
+                  (0, _.jsx)("td", {
+                    children: _()(1e3 * (_.starttime + _.duration)).format(
+                      "MMMM Do YYYY, h:mm:ss a",
+                    ),
+                  }),
+                  (0, _.jsx)("td", {
+                    children: _
+                      ? "Permanent"
+                      : ((_ = _.duration),
+                        _
+                          ? _ < 60
+                            ? `${_().duration(_, "seconds").asSeconds()} seconds`
+                            : _ < 3600
+                              ? `${_().duration(_, "seconds").asMinutes()} min`
+                              : _ < 864e3
+                                ? `${_().duration(_, "seconds").asHours()} hours`
+                                : `${_().duration(_, "seconds").asDays()} days`
+                          : ""),
+                  }),
+                  (0, _.jsx)("td", {
+                    children: _.admin ? "ADMIN" : "Automated",
+                  }),
+                  (0, _.jsx)("td", {
+                    children: _.comment,
+                  }),
+                ],
               },
-              _.createElement("td", null, _.bantype),
-              _.createElement(
-                "td",
-                null,
-                _()(1e3 * _.starttime).format("MMMM Do YYYY, h:mm:ss a"),
-              ),
-              _.createElement(
-                "td",
-                null,
-                _()(1e3 * (_.starttime + _.duration)).format(
-                  "MMMM Do YYYY, h:mm:ss a",
-                ),
-              ),
-              _.createElement(
-                "td",
-                null,
-                _
-                  ? "Permanent"
-                  : (__webpack_require__ = _.duration)
-                    ? __webpack_require__ < 60
-                      ? `${_().duration(__webpack_require__, "seconds").asSeconds()} seconds`
-                      : __webpack_require__ < 3600
-                        ? `${_().duration(__webpack_require__, "seconds").asMinutes()} min`
-                        : __webpack_require__ < 864e3
-                          ? `${_().duration(__webpack_require__, "seconds").asHours()} hours`
-                          : `${_().duration(__webpack_require__, "seconds").asDays()} days`
-                    : "",
-              ),
-              _.createElement("td", null, _.admin ? "ADMIN" : "Automated"),
-              _.createElement("td", null, _.comment),
+              `${_.bantype} - ${_.starttime}`,
             );
             var _;
           });
@@ -3278,35 +2957,28 @@
               : (_ = "Must pass in an account ID."),
             _)
           )
-            return _.createElement(
-              "div",
-              {
-                className: _().PersonaDetails,
-              },
-              _.createElement(_._, {
-                bOverlapping: !1,
-              }),
-              _.createElement(
-                _._,
-                null,
-                _.createElement("title", null, "Dota 2 - Persona Details"),
-              ),
-              _.createElement(_._, null),
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)("div", {
+              className: _().PersonaDetails,
+              children: [
+                (0, _.jsx)(_._, {
+                  bOverlapping: !1,
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)("title", {
+                    children: "Dota 2 - Persona Details",
+                  }),
+                }),
+                (0, _.jsx)(_._, {}),
+                (0, _.jsx)("div", {
                   className: _().ContentFrame,
-                },
-                _.createElement(
-                  "h2",
-                  {
+                  children: (0, _.jsx)("h2", {
                     className: _().Header,
-                  },
-                  _,
-                ),
-              ),
-              _.createElement(_._, null),
-            );
+                    children: _,
+                  }),
+                }),
+                (0, _.jsx)(_._, {}),
+              ],
+            });
           const _ = [
             {
               dataKey: "date",
@@ -3321,13 +2993,13 @@
               widthRelative: 10,
               cellRenderer: (_) =>
                 ((_, _, _ = "") =>
-                  _.createElement(
+                  (0, _.jsx)(
                     "a",
                     {
-                      key: _,
                       href: `${_._.BASE_URL}matches/match/${_}?u=${_(_._.DOTA_APP_ID)}&appid=${_._.DOTA_APP_ID}&highlight=${_}`,
+                      children: _ || _,
                     },
-                    _ || _,
+                    _,
                   ))(_.cellData, _.columnData.strAccountId),
             },
             {
@@ -3338,12 +3010,12 @@
                 const _ = _?.heroes.find((_) => _._ == _.cellData),
                   _ = _?.name?.replace("npc_dota_hero_", "");
                 return _
-                  ? _.createElement("img", {
+                  ? (0, _.jsx)("img", {
                       className: _().HeroImage,
                       src: `${_._.IMG_URL}heroes/wide/${_}.png`,
                       alt: _.cellData,
                     })
-                  : _.createElement("img", {
+                  : (0, _.jsx)("img", {
                       className: _().HeroImage,
                       src: `${_._.IMG_URL}heroes/wide/unknown.png`,
                     });
@@ -3355,15 +3027,12 @@
               widthRelative: 7,
               cellRenderer: (_) => {
                 if (_.rowData?.lobbytype == _._.PRACTICE)
-                  return _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: _,
-                      },
+                  return (0, _.jsx)("span", {
+                    style: {
+                      color: _,
                     },
-                    _(_._.PRACTICE),
-                  );
+                    children: _(_._.PRACTICE),
+                  });
                 let _ = _.cellData;
                 if ((_ in _._ || (_ = 0), _ <= 0)) return _(_._.UNKNOWN);
                 const _ = _?.rowData?.teamnumber + 2;
@@ -3371,15 +3040,12 @@
                 if (_ < 2 || _ > 3) {
                   const _ = _.cellData;
                   return _ in _._
-                    ? _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: _,
-                          },
+                    ? (0, _.jsx)("span", {
+                        style: {
+                          color: _,
                         },
-                        _(_),
-                      )
+                        children: _(_),
+                      })
                     : _(_._.UNKNOWN);
                 }
                 {
@@ -3389,53 +3055,53 @@
                   let _ = _ ? (_ >= 35 ? "#68c529" : _) : _ <= -35 ? _ : _;
                   return (
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         "span",
                         {
-                          key: "W-L",
                           style: {
                             color: _,
                           },
+                          children: _ ? "W" : "L",
                         },
-                        _ ? "W" : "L",
+                        "W-L",
                       ),
                     ),
                     _
                       ? _.push(
-                          _.createElement(
+                          (0, _.jsx)(
                             "span",
                             {
-                              key: "rankChange",
                               style: {
                                 color: _,
                               },
+                              children: ` (+${_})`,
                             },
-                            ` (+${_})`,
+                            "rankChange",
                           ),
                         )
                       : _ < 0
                         ? _.push(
-                            _.createElement(
+                            (0, _.jsx)(
                               "span",
                               {
-                                key: "rankChange",
                                 style: {
                                   color: _,
                                 },
+                                children: ` (${_})`,
                               },
-                              ` (${_})`,
+                              "rankChange",
                             ),
                           )
                         : _.push(
-                            _.createElement(
+                            (0, _.jsx)(
                               "span",
                               {
-                                key: "rankChange",
                                 style: {
                                   color: _,
                                 },
+                                children: ` (-${_})`,
                               },
-                              ` (-${_})`,
+                              "rankChange",
                             ),
                           ),
                     _
@@ -3458,15 +3124,15 @@
                 let _ = "";
                 return (
                   _ >= 300 ? (_ = _) : _ >= 175 ? (_ = _) : _ >= 100 && (_ = _),
-                  _.createElement(
+                  (0, _.jsx)(
                     "span",
                     {
-                      key: "op",
                       style: {
                         color: _,
                       },
+                      children: `${_}`,
                     },
-                    `${_}`,
+                    "op",
                   )
                 );
               },
@@ -3501,78 +3167,61 @@
                   _ == _._.CASUAL_MATCH
                     ? (_ = _)
                     : _ == _._.COMPETITIVE_MATCH && (_ = _),
-                  _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: _,
-                      },
+                  (0, _.jsx)("span", {
+                    style: {
+                      color: _,
                     },
-                    _(_),
-                  )
+                    children: _(_),
+                  })
                 );
               },
               headerRenderer: (_) =>
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().CheckBox,
-                    },
-                    _.createElement("input", {
-                      type: "checkbox",
-                      name: "ranked",
-                      _: "ranked",
-                      onChange: () => _(!_),
-                      checked: _,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          name: "ranked",
+                          _: "ranked",
+                          onChange: () => _(!_),
+                          checked: _,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: "ranked",
+                          children: (0, _.jsx)("span", {
+                            style: {
+                              color: _,
+                            },
+                            children: "Ranked",
+                          }),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "label",
-                      {
-                        htmlFor: "ranked",
-                      },
-                      _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: _,
-                          },
-                        },
-                        "Ranked",
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
+                    (0, _.jsxs)("div", {
                       className: _().CheckBox,
-                    },
-                    _.createElement("input", {
-                      type: "checkbox",
-                      name: "unranked",
-                      _: "unranked",
-                      onChange: () => _(!_),
-                      checked: _,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          name: "unranked",
+                          _: "unranked",
+                          onChange: () => _(!_),
+                          checked: _,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: "unranked",
+                          children: (0, _.jsx)("span", {
+                            style: {
+                              color: _,
+                            },
+                            children: "Unranked",
+                          }),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "label",
-                      {
-                        htmlFor: "unranked",
-                      },
-                      _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: _,
-                          },
-                        },
-                        "Unranked",
-                      ),
-                    ),
-                  ),
-                ),
+                  ],
+                }),
             },
             {
               dataKey: "rankwassolo",
@@ -3580,85 +3229,65 @@
               widthRelative: 6,
               cellRenderer: (_) =>
                 _.cellData && _?.rowData?.lobbytype != _._.WEEKEND_TOURNEY
-                  ? _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
+                  ? (0, _.jsx)("span", {
+                      style: {
+                        color: _,
                       },
-                      "Solo",
-                    )
-                  : _.createElement(
-                      "span",
-                      {
-                        style: {
-                          color: _,
-                        },
+                      children: "Solo",
+                    })
+                  : (0, _.jsx)("span", {
+                      style: {
+                        color: _,
                       },
-                      "Party",
-                    ),
+                      children: "Party",
+                    }),
               headerRenderer: (_) =>
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().CheckBox,
-                    },
-                    _.createElement("input", {
-                      type: "checkbox",
-                      name: "solo",
-                      _: "solo",
-                      onChange: () => _(!_),
-                      checked: _,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          name: "solo",
+                          _: "solo",
+                          onChange: () => _(!_),
+                          checked: _,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: "solo",
+                          children: (0, _.jsx)("span", {
+                            style: {
+                              color: _,
+                            },
+                            children: "Solo",
+                          }),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "label",
-                      {
-                        htmlFor: "solo",
-                      },
-                      _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: _,
-                          },
-                        },
-                        "Solo",
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
+                    (0, _.jsxs)("div", {
                       className: _().CheckBox,
-                    },
-                    _.createElement("input", {
-                      type: "checkbox",
-                      name: "party",
-                      _: "party",
-                      onChange: () => _(!_),
-                      checked: _,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          name: "party",
+                          _: "party",
+                          onChange: () => _(!_),
+                          checked: _,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: "party",
+                          children: (0, _.jsx)("span", {
+                            style: {
+                              color: _,
+                            },
+                            children: "Party",
+                          }),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "label",
-                      {
-                        htmlFor: "party",
-                      },
-                      _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: _,
-                          },
-                        },
-                        "Party",
-                      ),
-                    ),
-                  ),
-                ),
+                  ],
+                }),
             },
             {
               dataKey: "gamemode",
@@ -3666,15 +3295,12 @@
               widthRelative: 6,
               cellRenderer: (_) => {
                 if (_?.rowData?.searchdata?.partylowpri)
-                  return _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: _,
-                      },
+                  return (0, _.jsx)("span", {
+                    style: {
+                      color: _,
                     },
-                    "SD (LP)",
-                  );
+                    children: "SD (LP)",
+                  });
                 const _ = `DOTA_GAMEMODE_${_.cellData}`;
                 return _ in _._ ? _(_._[_]) : _(_._.DOTA_GAMEMODE_NONE);
               },
@@ -3698,15 +3324,12 @@
                 let _ = _.cellData + _?.rowData?.gold;
                 return (
                   isNaN(_) && (_ = "-"),
-                  _.createElement(
-                    "span",
-                    {
-                      style: {
-                        color: "darkgoldenrod",
-                      },
+                  (0, _.jsx)("span", {
+                    style: {
+                      color: "darkgoldenrod",
                     },
-                    `${_}`,
-                  )
+                    children: `${_}`,
+                  })
                 );
               },
             },
@@ -3723,22 +3346,21 @@
                   let _ = _?.name.replace("item_", "");
                   (_ && _) || (_ = "emptyitembg"),
                     _.push(
-                      _.createElement("img", {
-                        key: `${_.rowIndex}_item${_}`,
-                        className: _().ItemIcon,
-                        src: `${_._.IMG_URL}items/${_}.png`,
-                        alt: _.cellData,
-                      }),
+                      (0, _.jsx)(
+                        "img",
+                        {
+                          className: _().ItemIcon,
+                          src: `${_._.IMG_URL}items/${_}.png`,
+                          alt: _.cellData,
+                        },
+                        `${_.rowIndex}_item${_}`,
+                      ),
                     );
                 }
-                return _.createElement(
-                  "div",
-                  {
-                    className: _().ItemContainer,
-                  },
-                  _,
-                  " ",
-                );
+                return (0, _.jsxs)("div", {
+                  className: _().ItemContainer,
+                  children: [_, " "],
+                });
               },
             },
             {
@@ -3782,218 +3404,185 @@
                 if (
                   (_.length &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         _._,
                         {
-                          key: "leaverTooltip",
-                          toolTipContent: _.createElement(
-                            "table",
-                            {
-                              style: {
-                                borderSpacing: "5px",
-                              },
+                          toolTipContent: (0, _.jsxs)("table", {
+                            style: {
+                              borderSpacing: "5px",
                             },
-                            _.createElement(
-                              "thead",
-                              null,
-                              _.createElement(
-                                "tr",
-                                null,
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Date",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Leaver Status",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "State Flags",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Game State",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Lobby State",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Actions",
-                                ),
-                              ),
-                            ),
-                            _.createElement(
-                              "tbody",
-                              null,
-                              __webpack_require__.map((_) =>
-                                _.createElement(
-                                  "tr",
-                                  {
-                                    key: `${_.time}`,
-                                  },
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _.time
-                                      ? _()(1e3 * _.time).format(
-                                          "MMMM Do YYYY, h:mm:ss a",
-                                        )
-                                      : "-",
-                                  ),
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _.leaverstatusname,
-                                  ),
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _.flagnames &&
-                                      Object.values(_.flagnames).length
-                                      ? Object.values(_.flagnames).join(", ")
-                                      : "-",
-                                  ),
-                                  _.createElement("td", null, _.gamestatename),
-                                  _.createElement("td", null, _.lobbystatename),
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _.actionnames &&
-                                      Object.values(_.actionnames).length
-                                      ? Object.values(_.actionnames).join(", ")
-                                      : "-",
+                            children: [
+                              (0, _.jsx)("thead", {
+                                children: (0, _.jsxs)("tr", {
+                                  children: [
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Date",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Leaver Status",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "State Flags",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Game State",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Lobby State",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Actions",
+                                    }),
+                                  ],
+                                }),
+                              }),
+                              (0, _.jsx)("tbody", {
+                                children: __webpack_require__.map((_) =>
+                                  (0, _.jsxs)(
+                                    "tr",
+                                    {
+                                      children: [
+                                        (0, _.jsx)("td", {
+                                          children: _.time
+                                            ? _()(1e3 * _.time).format(
+                                                "MMMM Do YYYY, h:mm:ss a",
+                                              )
+                                            : "-",
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _.leaverstatusname,
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children:
+                                            _.flagnames &&
+                                            Object.values(_.flagnames).length
+                                              ? Object.values(_.flagnames).join(
+                                                  ", ",
+                                                )
+                                              : "-",
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _.gamestatename,
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _.lobbystatename,
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children:
+                                            _.actionnames &&
+                                            Object.values(_.actionnames).length
+                                              ? Object.values(
+                                                  _.actionnames,
+                                                ).join(", ")
+                                              : "-",
+                                        }),
+                                      ],
+                                    },
+                                    `${_.time}`,
                                   ),
                                 ),
-                              ),
-                            ),
-                          ),
+                              }),
+                            ],
+                          }),
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: _().PlayerReportTooltip,
-                        },
-                        _.createElement(
-                          "span",
-                          {
+                          children: (0, _.jsx)("span", {
                             style: {
                               color: _,
                             },
-                          },
-                          "[Lvr] ",
-                        ),
+                            children: "[Lvr] ",
+                          }),
+                        },
+                        "leaverTooltip",
                       ),
                     ),
                   _.length &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         _._,
                         {
-                          key: "commendTooltip",
-                          toolTipContent: _.createElement(
-                            "table",
-                            {
-                              style: {
-                                borderSpacing: "12px",
-                              },
+                          toolTipContent: (0, _.jsxs)("table", {
+                            style: {
+                              borderSpacing: "12px",
                             },
-                            _.createElement(
-                              "thead",
-                              null,
-                              _.createElement(
-                                "tr",
-                                null,
-                                _.createElement("th", {
-                                  align: "left",
+                            children: [
+                              (0, _.jsx)("thead", {
+                                children: (0, _.jsxs)("tr", {
+                                  children: [
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Commend",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Player",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Comment",
+                                    }),
+                                  ],
                                 }),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Commend",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Player",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Comment",
-                                ),
-                              ),
-                            ),
-                            _.createElement(
-                              "tbody",
-                              null,
-                              _.map((_) => {
-                                const _ = _(_.reportreason),
-                                  _ = _(_.reportreason);
-                                return _.createElement(
-                                  "tr",
-                                  {
-                                    key: `${_.reporteraccountid}`,
-                                  },
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _ &&
-                                      _.createElement("img", {
-                                        src: _,
-                                      }),
-                                  ),
-                                  _.createElement("td", null, _),
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _.reporteraccountid,
-                                  ),
-                                  _.createElement("td", null, _.comment || ""),
-                                );
                               }),
-                            ),
-                          ),
+                              (0, _.jsx)("tbody", {
+                                children: _.map((_) => {
+                                  const _ = _(_.reportreason),
+                                    _ = _(_.reportreason);
+                                  return (0, _.jsxs)(
+                                    "tr",
+                                    {
+                                      children: [
+                                        (0, _.jsx)("td", {
+                                          children:
+                                            _ &&
+                                            (0, _.jsx)("img", {
+                                              src: _,
+                                            }),
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _,
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _.reporteraccountid,
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _.comment || "",
+                                        }),
+                                      ],
+                                    },
+                                    `${_.reporteraccountid}`,
+                                  );
+                                }),
+                              }),
+                            ],
+                          }),
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: _().PlayerReportTooltip,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            key: "playerCommends",
-                            style: {
-                              color: _,
+                          children: (0, _.jsx)(
+                            "span",
+                            {
+                              style: {
+                                color: _,
+                              },
+                              children: `[${_.length}] `,
                             },
-                          },
-                          `[${_.length}] `,
-                        ),
+                            "playerCommends",
+                          ),
+                        },
+                        "commendTooltip",
                       ),
                     ),
                   _.length)
@@ -4008,360 +3597,328 @@
                     _ &&
                       _ != _.reporteraccountid &&
                       _.push(
-                        _.createElement(
+                        (0, _.jsx)(
                           "tr",
                           {
-                            key: `${_}-separator`,
-                          },
-                          _.createElement(
-                            "td",
-                            {
+                            children: (0, _.jsx)("td", {
                               colSpan: 3,
-                            },
-                            _.createElement("hr", null),
-                          ),
+                              children: (0, _.jsx)("hr", {}),
+                            }),
+                          },
+                          `${_}-separator`,
                         ),
                       ),
                       _.push(
-                        _.createElement(
+                        (0, _.jsxs)(
                           "tr",
                           {
-                            key: `${_.reporteraccountid}-${_.reportreason}`,
-                          },
-                          _.createElement(
-                            "td",
-                            null,
-                            _ &&
-                              _.createElement("img", {
-                                src: _,
+                            children: [
+                              (0, _.jsx)("td", {
+                                children:
+                                  _ &&
+                                  (0, _.jsx)("img", {
+                                    src: _,
+                                  }),
                               }),
-                          ),
-                          _.createElement("td", null, _),
-                          _.createElement("td", null, _.reporteraccountid),
+                              (0, _.jsx)("td", {
+                                children: _,
+                              }),
+                              (0, _.jsx)("td", {
+                                children: _.reporteraccountid,
+                              }),
+                            ],
+                          },
+                          `${_.reporteraccountid}-${_.reportreason}`,
                         ),
                       ),
                       (_ = _.reporteraccountid);
                   }
                   _.push(
-                    _.createElement(
+                    (0, _.jsx)(
                       _._,
                       {
-                        key: "reportTooltip",
-                        toolTipContent: _.createElement(
-                          "table",
-                          {
-                            style: {
-                              borderSpacing: "12px",
-                            },
+                        toolTipContent: (0, _.jsxs)("table", {
+                          style: {
+                            borderSpacing: "12px",
                           },
-                          _.createElement(
-                            "thead",
-                            null,
-                            _.createElement(
-                              "tr",
-                              null,
-                              _.createElement("th", {
-                                align: "left",
+                          children: [
+                            (0, _.jsx)("thead", {
+                              children: (0, _.jsxs)("tr", {
+                                children: [
+                                  (0, _.jsx)("th", {
+                                    align: "left",
+                                  }),
+                                  (0, _.jsx)("th", {
+                                    align: "left",
+                                    children: "Reason",
+                                  }),
+                                  (0, _.jsx)("th", {
+                                    align: "left",
+                                    children: "Reporter",
+                                  }),
+                                ],
                               }),
-                              _.createElement(
-                                "th",
-                                {
-                                  align: "left",
-                                },
-                                "Reason",
-                              ),
-                              _.createElement(
-                                "th",
-                                {
-                                  align: "left",
-                                },
-                                "Reporter",
-                              ),
-                            ),
-                          ),
-                          _.createElement("tbody", null, _),
-                        ),
+                            }),
+                            (0, _.jsx)("tbody", {
+                              children: _,
+                            }),
+                          ],
+                        }),
                         direction: "left",
                         nBodyAlignment: 1,
                         nAllowOffscreenPx: 1200,
                         strTooltipClassname: _().PlayerReportTooltip,
-                      },
-                      _.createElement(
-                        "span",
-                        {
-                          key: "playerReports",
-                          style: {
-                            color: _,
+                        children: (0, _.jsx)(
+                          "span",
+                          {
+                            style: {
+                              color: _,
+                            },
+                            children: `[${_.length}]`,
                           },
-                        },
-                        `[${_.length}]`,
-                      ),
+                          "playerReports",
+                        ),
+                      },
+                      "reportTooltip",
                     ),
                   );
                 }
                 return (
                   _.length &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         _._,
                         {
-                          key: "detectionsTooltip",
-                          toolTipContent: _.createElement(
-                            "table",
-                            {
-                              style: {
-                                borderSpacing: "12px",
-                              },
+                          toolTipContent: (0, _.jsxs)("table", {
+                            style: {
+                              borderSpacing: "12px",
                             },
-                            _.createElement(
-                              "thead",
-                              null,
-                              _.createElement(
-                                "tr",
-                                null,
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Suspicion (Enum)",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Game Time",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Data 1",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Data 2",
-                                ),
-                              ),
-                            ),
-                            _.createElement(
-                              "tbody",
-                              null,
-                              _.map((_, _) =>
-                                _.createElement(
-                                  "tr",
-                                  {
-                                    key: `${_.matchid}-${_}`,
-                                  },
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    `${_.suspicionname} (${_.suspicion})`,
+                            children: [
+                              (0, _.jsx)("thead", {
+                                children: (0, _.jsxs)("tr", {
+                                  children: [
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Suspicion (Enum)",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Game Time",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Data 1",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Data 2",
+                                    }),
+                                  ],
+                                }),
+                              }),
+                              (0, _.jsx)("tbody", {
+                                children: _.map((_, _) =>
+                                  (0, _.jsxs)(
+                                    "tr",
+                                    {
+                                      children: [
+                                        (0, _.jsx)("td", {
+                                          children: `${_.suspicionname} (${_.suspicion})`,
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _()
+                                            .utc(
+                                              _()
+                                                .duration(_.gametime, "seconds")
+                                                .asMilliseconds(),
+                                            )
+                                            .format("mm:ss"),
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _.data1 || "",
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children: _.data2 || "",
+                                        }),
+                                      ],
+                                    },
+                                    `${_.matchid}-${_}`,
                                   ),
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _()
-                                      .utc(
-                                        _()
-                                          .duration(_.gametime, "seconds")
-                                          .asMilliseconds(),
-                                      )
-                                      .format("mm:ss"),
-                                  ),
-                                  _.createElement("td", null, _.data1 || ""),
-                                  _.createElement("td", null, _.data2 || ""),
                                 ),
-                              ),
-                            ),
-                          ),
+                              }),
+                            ],
+                          }),
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: _().PlayerReportTooltip,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            key: "playerReports",
-                            style: {
-                              color: _,
+                          children: (0, _.jsx)(
+                            "span",
+                            {
+                              style: {
+                                color: _,
+                              },
+                              children: "[SUS]",
                             },
-                          },
-                          "[SUS]",
-                        ),
+                            "playerReports",
+                          ),
+                        },
+                        "detectionsTooltip",
                       ),
                     ),
                   _.length &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         _._,
                         {
-                          key: "lowPriTooltip",
-                          toolTipContent: _.createElement(
-                            "table",
+                          toolTipContent: (0, _.jsxs)("table", {
+                            style: {
+                              borderSpacing: "12px",
+                            },
+                            children: [
+                              (0, _.jsx)("thead", {
+                                children: (0, _.jsxs)("tr", {
+                                  children: [
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Ban Type",
+                                    }),
+                                    (0, _.jsx)("th", {
+                                      align: "left",
+                                      children: "Games",
+                                    }),
+                                  ],
+                                }),
+                              }),
+                              (0, _.jsx)("tbody", {
+                                children: _.map((_, _) =>
+                                  (0, _.jsxs)(
+                                    "tr",
+                                    {
+                                      children: [
+                                        (0, _.jsx)("td", {
+                                          children: _.bantypename || "",
+                                        }),
+                                        (0, _.jsx)("td", {
+                                          children:
+                                            _.penaltylowprigamesapplied || "0",
+                                        }),
+                                      ],
+                                    },
+                                    `lp-${_}`,
+                                  ),
+                                ),
+                              }),
+                            ],
+                          }),
+                          direction: "left",
+                          nBodyAlignment: 1,
+                          nAllowOffscreenPx: 1200,
+                          strTooltipClassname: _().PlayerReportTooltip,
+                          children: (0, _.jsx)(
+                            "span",
                             {
                               style: {
-                                borderSpacing: "12px",
+                                color: _,
                               },
+                              children: "[LP]",
                             },
-                            _.createElement(
-                              "thead",
-                              null,
-                              _.createElement(
-                                "tr",
-                                null,
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Ban Type",
-                                ),
-                                _.createElement(
-                                  "th",
-                                  {
-                                    align: "left",
-                                  },
-                                  "Games",
-                                ),
-                              ),
-                            ),
-                            _.createElement(
-                              "tbody",
-                              null,
-                              _.map((_, _) =>
-                                _.createElement(
-                                  "tr",
-                                  {
-                                    key: `lp-${_}`,
-                                  },
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _.bantypename || "",
-                                  ),
-                                  _.createElement(
-                                    "td",
-                                    null,
-                                    _.penaltylowprigamesapplied || "0",
-                                  ),
-                                ),
-                              ),
-                            ),
+                            "playerReports",
                           ),
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: _().PlayerReportTooltip,
                         },
-                        _.createElement(
-                          "span",
-                          {
-                            key: "playerReports",
-                            style: {
-                              color: _,
-                            },
-                          },
-                          "[LP]",
-                        ),
+                        "lowPriTooltip",
                       ),
                     ),
                   _ &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         _._,
                         {
-                          key: "langchange",
                           toolTipContent: _,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: _().PlayerReportTooltip,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            key: "langChange",
-                            style: {
-                              color: _,
+                          children: (0, _.jsx)(
+                            "span",
+                            {
+                              style: {
+                                color: _,
+                              },
+                              children: `[${_.slice(-2)}]`,
                             },
-                          },
-                          `[${_.slice(-2)}]`,
-                        ),
+                            "langChange",
+                          ),
+                        },
+                        "langchange",
                       ),
                     ),
                   _ &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         _._,
                         {
-                          key: "geochange",
                           toolTipContent: _,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: _().PlayerReportTooltip,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            key: "geoChange",
-                            style: {
-                              color: _,
+                          children: (0, _.jsx)(
+                            "span",
+                            {
+                              style: {
+                                color: _,
+                              },
+                              children: "[GEO]",
                             },
-                          },
-                          "[GEO]",
-                        ),
+                            "geoChange",
+                          ),
+                        },
+                        "geochange",
                       ),
                     ),
                   _ &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsx)(
                         _._,
                         {
-                          key: "hwchange",
                           toolTipContent: _,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: _().PlayerReportTooltip,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            key: "hwidChange",
-                            style: {
-                              color: _,
+                          children: (0, _.jsx)(
+                            "span",
+                            {
+                              style: {
+                                color: _,
+                              },
+                              children: "[HW]",
                             },
-                          },
-                          "[HW]",
-                        ),
+                            "hwidChange",
+                          ),
+                        },
+                        "hwchange",
                       ),
                     ),
                   _ &&
                     _.push(
-                      _.createElement("div", {
-                        key: "hwidChange",
-                        dangerouslySetInnerHTML: {
-                          __html: _,
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          dangerouslySetInnerHTML: {
+                            __html: _,
+                          },
                         },
-                      }),
+                        "hwidChange",
+                      ),
                     ),
                   0 == _.length
                     ? ""
-                    : _.createElement(
-                        "div",
-                        {
-                          className: _().ReportRowElement,
-                        },
-                        _,
-                      )
+                    : (0, _.jsx)("div", {
+                        className: _().ReportRowElement,
+                        children: _,
+                      })
                 );
               },
             },
@@ -4406,903 +3963,812 @@
               }
             }
           const _ = _?.persona?.personaname || "";
-          return _.createElement(
-            "div",
-            {
-              className: _().PersonaDetails,
-            },
-            _.createElement(_._, {
-              bOverlapping: !1,
-            }),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "title",
-                null,
-                "Dota 2 Player" + (_ ? " - " + _ : ""),
-              ),
-            ),
-            _.createElement(_._, null),
-            _.createElement("br", null),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().PersonaDetails,
+            children: [
+              (0, _.jsx)(_._, {
+                bOverlapping: !1,
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)("title", {
+                  children: "Dota 2 Player" + (_ ? " - " + _ : ""),
+                }),
+              }),
+              (0, _.jsx)(_._, {}),
+              (0, _.jsx)("br", {}),
+              (0, _.jsxs)("div", {
                 className: _().ContentFrame,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().TopContent,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TopContentLeft,
-                  },
-                  _.createElement(
-                    "h1",
-                    {
-                      className: (0, _._)(_().Header, _().HeaderFixedHeight),
-                    },
-                    `${_}`,
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().GeneralInfoGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-generalInfo-row`,
-                        },
-                        _.createElement("div", null, _.displayName || _.key),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().RankInfoGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-rankInfo-row`,
-                        },
-                        _.createElement("div", null, _.displayName || _.key),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                                _?.persona[_.tertiaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SupportInfoTopGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-supportInfo-row`,
-                        },
-                        _.createElement("div", null, _.displayName || _.key),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                                _?.persona[_.tertiaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SmurfInfoGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-smurfInfo-row`,
-                        },
-                        _.createElement("div", null, _.displayName || _.key),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement("div", {
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().TopContent,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _().TopContentLeft,
+                        children: [
+                          (0, _.jsx)("h1", {
+                            className: (0, _._)(
+                              _().Header,
+                              _().HeaderFixedHeight,
+                            ),
+                            children: `${_}`,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().GeneralInfoGrid,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: _.displayName || _.key,
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: _.formatFunction
+                                        ? _.formatFunction.call(
+                                            null,
+                                            _?.persona[_.key],
+                                            _?.persona[_.secondaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            _?.persona[_.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  ],
+                                },
+                                `${_.key}-${_.displayName}-generalInfo-row`,
+                              ),
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().RankInfoGrid,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: _.displayName || _.key,
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: _.formatFunction
+                                        ? _.formatFunction.call(
+                                            null,
+                                            _?.persona[_.key],
+                                            _?.persona[_.secondaryKey],
+                                            _?.persona[_.tertiaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            _?.persona[_.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  ],
+                                },
+                                `${_.key}-${_.displayName}-rankInfo-row`,
+                              ),
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().SupportInfoTopGrid,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: _.displayName || _.key,
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: _.formatFunction
+                                        ? _.formatFunction.call(
+                                            null,
+                                            _?.persona[_.key],
+                                            _?.persona[_.secondaryKey],
+                                            _?.persona[_.tertiaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            _?.persona[_.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  ],
+                                },
+                                `${_.key}-${_.displayName}-supportInfo-row`,
+                              ),
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().SmurfInfoGrid,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: _.displayName || _.key,
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: _.formatFunction
+                                        ? _.formatFunction.call(
+                                            null,
+                                            _?.persona[_.key],
+                                            _?.persona[_.secondaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            _?.persona[_.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  ],
+                                },
+                                `${_.key}-${_.displayName}-smurfInfo-row`,
+                              ),
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().SmoothLine,
+                          }),
+                          (0, _.jsx)("h2", {
+                            className: _().Header,
+                            children: "Recent (Last 32 games)",
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().DetailedInfoOuterGrid,
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                _.Fragment,
+                                {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().DetailedInfoInnerGrid,
+                                    children: _.formatFunction
+                                      ? _.formatFunction.call(
+                                          null,
+                                          _?.persona[_.key],
+                                          _?.persona[_.secondaryKey],
+                                        )
+                                      : JSON.stringify(
+                                          _?.persona[_.key] || "",
+                                          null,
+                                          2,
+                                        ).replace(/['"]+/g, ""),
+                                  }),
+                                },
+                                `${_.key}-${_.displayName}-vacInfo-row`,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().TopContentRight,
+                        children: (0, _.jsxs)("div", {
+                          className: _().ChartContainer,
+                          children: [
+                            _ &&
+                              (0, _.jsx)("div", {
+                                className: _().ChartTitle,
+                                children: `Last ${_.length} games`,
+                              }),
+                            (0, _.jsx)(_._, {
+                              width: "99%",
+                              aspect: 1.9,
+                              children: (0, _.jsxs)(_._, {
+                                data: _,
+                                margin: {
+                                  top: 5,
+                                  right: 30,
+                                  left: 20,
+                                  bottom: 5,
+                                },
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    strokeDasharray: "12 8",
+                                    stroke: "#424242",
+                                    fillOpacity: 0.2,
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    stroke: "#808080",
+                                    dataKey: "time",
+                                    type: "number",
+                                    tickFormatter: (_) =>
+                                      _()(1e3 * _).format("MM/DD/YY"),
+                                    domain: [
+                                      "dataMin - 86400",
+                                      "dataMax + 43200",
+                                    ],
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    stroke: "#808080",
+                                    domain: ["auto", "auto"],
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    cursor: !1,
+                                    labelFormatter: (_) =>
+                                      _()(1e3 * Number(_)).format(
+                                        "MM/DD/YY HH:mm:ss",
+                                      ),
+                                    contentStyle: {
+                                      backgroundColor: "#0c1414",
+                                    },
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    layout: "vertical",
+                                    verticalAlign: "middle",
+                                    align: "right",
+                                    wrapperStyle: {
+                                      paddingLeft: "10px",
+                                    },
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    type: "monotone",
+                                    dataKey: "ranked",
+                                    name: "Ranked",
+                                    dot: {
+                                      fill: _,
+                                      strokeWidth: 1,
+                                      _: 3,
+                                    },
+                                    stroke: "#888fd8",
+                                    strokeWidth: 2,
+                                    connectNulls: !0,
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    type: "monotone",
+                                    dataKey: "casual",
+                                    name: "Unranked",
+                                    dot: {
+                                      fill: _,
+                                      strokeWidth: 1,
+                                      _: 3,
+                                    },
+                                    stroke: "#82ca9d",
+                                    strokeWidth: 2,
+                                    connectNulls: !0,
+                                  }),
+                                ],
+                              }),
+                            }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("div", {
                     className: _().SmoothLine,
                   }),
-                  _.createElement(
-                    "h2",
-                    {
-                      className: _().Header,
-                    },
-                    "Recent (Last 32 games)",
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DetailedInfoOuterGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-vacInfo-row`,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().DetailedInfoInnerGrid,
-                          },
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().SupportGrid,
+                      _ && _().SupportGridHidden,
+                    ),
+                    children: (0, _.jsx)("div", {
+                      className: _().SupportColumn,
+                      onClick: () => _(!0),
+                      children: (0, _.jsxs)("h2", {
+                        className: (0, _._)(
+                          _().HeaderNoMargin,
+                          _().HeaderClickable,
                         ),
-                      ),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TopContentRight,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ChartContainer,
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ChartTitle,
-                        },
-                        `Last ${_.length} games`,
-                      ),
-                    _.createElement(
-                      _._,
-                      {
-                        width: "99%",
-                        aspect: 1.9,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          data: _,
-                          margin: {
-                            top: 5,
-                            right: 30,
-                            left: 20,
-                            bottom: 5,
-                          },
-                        },
-                        _.createElement(_._, {
-                          strokeDasharray: "12 8",
-                          stroke: "#424242",
-                          fillOpacity: 0.2,
-                        }),
-                        _.createElement(_._, {
-                          stroke: "#808080",
-                          dataKey: "time",
-                          type: "number",
-                          tickFormatter: (_) => _()(1e3 * _).format("MM/DD/YY"),
-                          domain: ["dataMin - 86400", "dataMax + 43200"],
-                        }),
-                        _.createElement(_._, {
-                          stroke: "#808080",
-                          domain: ["auto", "auto"],
-                        }),
-                        _.createElement(_._, {
-                          cursor: !1,
-                          labelFormatter: (_) =>
-                            _()(1e3 * Number(_)).format("MM/DD/YY HH:mm:ss"),
-                          contentStyle: {
-                            backgroundColor: "#0c1414",
-                          },
-                        }),
-                        _.createElement(_._, {
-                          layout: "vertical",
-                          verticalAlign: "middle",
-                          align: "right",
-                          wrapperStyle: {
-                            paddingLeft: "10px",
-                          },
-                        }),
-                        _.createElement(_._, {
-                          type: "monotone",
-                          dataKey: "ranked",
-                          name: "Ranked",
-                          dot: {
-                            fill: _,
-                            strokeWidth: 1,
-                            _: 3,
-                          },
-                          stroke: "#888fd8",
-                          strokeWidth: 2,
-                          connectNulls: !0,
-                        }),
-                        _.createElement(_._, {
-                          type: "monotone",
-                          dataKey: "casual",
-                          name: "Unranked",
-                          dot: {
-                            fill: _,
-                            strokeWidth: 1,
-                            _: 3,
-                          },
-                          stroke: "#82ca9d",
-                          strokeWidth: 2,
-                          connectNulls: !0,
-                        }),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement("br", null),
-              _.createElement("div", {
-                className: _().SmoothLine,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().SupportGrid,
-                    _ && _().SupportGridHidden,
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SupportColumn,
-                    onClick: () => _(!0),
-                  },
-                  _.createElement(
-                    "h2",
-                    {
-                      className: (0, _._)(
-                        _().HeaderNoMargin,
-                        _().HeaderClickable,
-                      ),
-                    },
-                    "Support, Bans, & Other Info",
-                    _.createElement("img", {
-                      className: (0, _._)(_().ArrowIcon, _().ArrowIconRight),
-                      src: `${_._.IMG_URL}arrow_solid_right.png`,
+                        children: [
+                          "Support, Bans, & Other Info",
+                          (0, _.jsx)("img", {
+                            className: (0, _._)(
+                              _().ArrowIcon,
+                              _().ArrowIconRight,
+                            ),
+                            src: `${_._.IMG_URL}arrow_solid_right.png`,
+                          }),
+                        ],
+                      }),
                     }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().SupportGrid,
-                    !_ && _().SupportGridHidden,
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SupportColumn,
-                  },
-                  _.createElement(
-                    "h2",
-                    {
-                      className: (0, _._)(_().Header, _().HeaderClickable),
-                      onClick: () => _(!1),
-                    },
-                    "Support, Bans, & Other Info",
-                    _.createElement("img", {
-                      className: (0, _._)(_().ArrowIcon, _().ArrowIconDown),
-                      src: `${_._.IMG_URL}arrow_over.png`,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SupportInfoGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-supportInfo-row`,
-                        },
-                        _.createElement("div", null, _.displayName || _.key),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement("br", null),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().AccessFlagsGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-accountFlagGenericInfo-row`,
-                        },
-                        _.createElement("div", null, _.displayName || _.key),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                  !_ && _.createElement("br", null),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().WarningsGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-warningsInfo-row`,
-                        },
-                        !!_?.persona[_.key] &&
-                          _.createElement("div", null, _.displayName || _.key),
-                        !!_?.persona[_.key] &&
-                          _.createElement(
-                            "div",
-                            null,
-                            _.formatFunction
-                              ? _.formatFunction.call(
-                                  null,
-                                  _?.persona[_.key],
-                                  _?.persona[_.secondaryKey],
-                                )
-                              : JSON.stringify(
-                                  _?.persona[_.key] || "",
-                                  null,
-                                  2,
-                                ).replace(/['"]+/g, ""),
-                          ),
-                      ),
-                    ),
-                  ),
-                  _.createElement("br", null),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().BansGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-bansInfo-row`,
-                        },
-                        !!_?.persona[_.key] &&
-                          _()(1e3 * _?.persona[_.key]).isAfter() &&
-                          _.createElement("div", null, _.displayName || _.key),
-                        !!_?.persona[_.key] &&
-                          _()(1e3 * _?.persona[_.key]).isAfter() &&
-                          _.createElement(
-                            "div",
-                            null,
-                            _.formatFunction
-                              ? _.formatFunction.call(
-                                  null,
-                                  _?.persona[_.key],
-                                  _?.persona[_.secondaryKey],
-                                )
-                              : JSON.stringify(
-                                  _?.persona[_.key] || "",
-                                  null,
-                                  2,
-                                ).replace(/['"]+/g, ""),
-                          ),
-                      ),
-                    ),
-                    _ > 0 &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        !_ && _.createElement("div", null, "Main Account"),
-                        _ && _.createElement("div", null, "Streamer"),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.createElement(
-                            "a",
-                            {
-                              target: "_blank",
-                              rel: "noopener noreferrer",
-                              href: `${_._.BASE_URL}${_._.personadetails(_).substr(1)}`,
-                            },
-                            _,
-                          ),
-                        ),
-                      ),
-                  ),
-                  _.createElement("br", null),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().VacInfoOuterGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-vacInfo-row`,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().VacInfoOuterGrid,
-                          },
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _?.persona[_.key],
-                                _?.persona[_.secondaryKey],
-                              )
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().OfficialInfoColumn,
-                  },
-                  _.createElement(
-                    "h2",
-                    {
-                      className: _().Header,
-                    },
-                    "Official Profile",
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().OfficialProfileOuterGrid,
-                    },
-                    _?.persona?.official_profile &&
-                      _.map((_) =>
-                        _.createElement(
-                          _.Fragment,
-                          {
-                            key: `${_.key}-${_.displayName}-officialProfileInfo-row`,
-                          },
-                          _.createElement("div", null, _.displayName || _.key),
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().OfficialProfileInnerGrid,
-                            },
-                            _.formatFunction
-                              ? _.formatFunction.call(
-                                  null,
-                                  _?.persona?.official_profile[_.key],
-                                  _?.persona[_.secondaryKey],
-                                )
-                              : JSON.stringify(
-                                  _?.persona?.official_profile[_.key] || "",
-                                  null,
-                                  2,
-                                ).replace(/['"]+/g, ""),
-                          ),
-                        ),
-                      ),
-                    !_?.persona?.official_profile &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "span",
-                          {
-                            style: {
-                              color: _,
-                            },
-                          },
-                          "(None)",
-                        ),
-                      ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TeamsInfoInfoOuterGrid,
-                    },
-                    _.createElement("br", null),
-                    _.createElement(
-                      "h2",
-                      {
-                        className: _().Header,
-                      },
-                      "Teams",
-                    ),
-                    _?.persona?.teams &&
-                      _.map((_) =>
-                        _.createElement(
-                          _.Fragment,
-                          {
-                            key: `${_.key}-${_.displayName}-teamsInfo-row`,
-                          },
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().TeamsInfoInnerGrid,
-                            },
-                            _.formatFunction
-                              ? _.formatFunction.call(
-                                  null,
-                                  _?.persona[_.key],
-                                  _?.persona[_.secondaryKey],
-                                )
-                              : JSON.stringify(
-                                  _?.persona[_.key] || "",
-                                  null,
-                                  2,
-                                ).replace(/['"]+/g, ""),
-                          ),
-                        ),
-                      ),
-                    !_?.persona?.teams &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "span",
-                          {
-                            style: {
-                              color: _,
-                            },
-                          },
-                          "(None)",
-                        ),
-                      ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventColumn,
-                  },
-                  _.createElement(
-                    "h2",
-                    {
-                      className: _().Header,
-                    },
-                    "Event Information",
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EventInfoOuterGrid,
-                    },
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: `${_.key}-${_.displayName}-eventInfo-row`,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().EventInfoInnerGrid,
-                          },
-                          _.formatFunction
-                            ? _.formatFunction.call(null, _?.persona[_.key])
-                            : JSON.stringify(
-                                _?.persona[_.key] || "",
-                                null,
-                                2,
-                              ).replace(/['"]+/g, ""),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(!_ && _().SupportGridHidden),
-                },
-                _.createElement("div", {
-                  className: _().SmoothLine,
-                }),
-                _.createElement(
-                  "table",
-                  {
-                    className: _().BanHistoryTable,
-                  },
-                  _.createElement(
-                    "thead",
-                    null,
-                    _.createElement(
-                      "tr",
-                      null,
-                      _.createElement(
-                        "th",
-                        {
-                          align: "left",
-                        },
-                        _.createElement(
-                          "h3",
-                          {
-                            className: _().HeaderNoMargin,
-                          },
-                          "Ban Type",
-                        ),
-                      ),
-                      _.createElement(
-                        "th",
-                        {
-                          align: "left",
-                        },
-                        _.createElement(
-                          "h3",
-                          {
-                            className: _().HeaderNoMargin,
-                          },
-                          "Ban Start",
-                        ),
-                      ),
-                      _.createElement(
-                        "th",
-                        {
-                          align: "left",
-                        },
-                        _.createElement(
-                          "h3",
-                          {
-                            className: _().HeaderNoMargin,
-                          },
-                          "Ban End",
-                        ),
-                      ),
-                      _.createElement(
-                        "th",
-                        {
-                          align: "left",
-                        },
-                        _.createElement(
-                          "h3",
-                          {
-                            className: _().HeaderNoMargin,
-                          },
-                          "Duration",
-                        ),
-                      ),
-                      _.createElement(
-                        "th",
-                        {
-                          align: "left",
-                        },
-                        _.createElement(
-                          "h3",
-                          {
-                            className: _().HeaderNoMargin,
-                          },
-                          "Admin",
-                        ),
-                      ),
-                      _.createElement(
-                        "th",
-                        {
-                          align: "left",
-                        },
-                        _.createElement(
-                          "h3",
-                          {
-                            className: _().HeaderNoMargin,
-                          },
-                          "Comment",
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "tbody",
-                    null,
-                    _.createElement("tr", null, _.createElement("td", null)),
-                    _(_?.persona?.banhistory),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().SmoothLine,
-              }),
-              _ &&
-                _.length &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().OtherModesCheckBox,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    name: "othermode",
-                    _: "othermode",
-                    onChange: () => _(!_),
-                    checked: _,
                   }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "othermode",
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      "Include custom games, practice games, and uncommon game modes",
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().SupportGrid,
+                      !_ && _().SupportGridHidden,
                     ),
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().MatchHistoryOuterContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().MatchHistoryInnerContainer,
-                  },
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _().SupportColumn,
+                        children: [
+                          (0, _.jsxs)("h2", {
+                            className: (0, _._)(
+                              _().Header,
+                              _().HeaderClickable,
+                            ),
+                            onClick: () => _(!1),
+                            children: [
+                              "Support, Bans, & Other Info",
+                              (0, _.jsx)("img", {
+                                className: (0, _._)(
+                                  _().ArrowIcon,
+                                  _().ArrowIconDown,
+                                ),
+                                src: `${_._.IMG_URL}arrow_over.png`,
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().SupportInfoGrid,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: _.displayName || _.key,
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: _.formatFunction
+                                        ? _.formatFunction.call(
+                                            null,
+                                            _?.persona[_.key],
+                                            _?.persona[_.secondaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            _?.persona[_.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  ],
+                                },
+                                `${_.key}-${_.displayName}-supportInfo-row`,
+                              ),
+                            ),
+                          }),
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsx)("div", {
+                            className: _().AccessFlagsGrid,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: _.displayName || _.key,
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: _.formatFunction
+                                        ? _.formatFunction.call(
+                                            null,
+                                            _?.persona[_.key],
+                                            _?.persona[_.secondaryKey],
+                                          )
+                                        : JSON.stringify(
+                                            _?.persona[_.key] || "",
+                                            null,
+                                            2,
+                                          ).replace(/['"]+/g, ""),
+                                    }),
+                                  ],
+                                },
+                                `${_.key}-${_.displayName}-accountFlagGenericInfo-row`,
+                              ),
+                            ),
+                          }),
+                          !_ && (0, _.jsx)("br", {}),
+                          (0, _.jsx)("div", {
+                            className: _().WarningsGrid,
+                            children: _.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    !!_?.persona[_.key] &&
+                                      (0, _.jsx)("div", {
+                                        children: _.displayName || _.key,
+                                      }),
+                                    !!_?.persona[_.key] &&
+                                      (0, _.jsx)("div", {
+                                        children: _.formatFunction
+                                          ? _.formatFunction.call(
+                                              null,
+                                              _?.persona[_.key],
+                                              _?.persona[_.secondaryKey],
+                                            )
+                                          : JSON.stringify(
+                                              _?.persona[_.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      }),
+                                  ],
+                                },
+                                `${_.key}-${_.displayName}-warningsInfo-row`,
+                              ),
+                            ),
+                          }),
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsxs)("div", {
+                            className: _().BansGrid,
+                            children: [
+                              _.map((_) =>
+                                (0, _.jsxs)(
+                                  _.Fragment,
+                                  {
+                                    children: [
+                                      !!_?.persona[_.key] &&
+                                        _()(
+                                          1e3 * _?.persona[_.key],
+                                        ).isAfter() &&
+                                        (0, _.jsx)("div", {
+                                          children: _.displayName || _.key,
+                                        }),
+                                      !!_?.persona[_.key] &&
+                                        _()(
+                                          1e3 * _?.persona[_.key],
+                                        ).isAfter() &&
+                                        (0, _.jsx)("div", {
+                                          children: _.formatFunction
+                                            ? _.formatFunction.call(
+                                                null,
+                                                _?.persona[_.key],
+                                                _?.persona[_.secondaryKey],
+                                              )
+                                            : JSON.stringify(
+                                                _?.persona[_.key] || "",
+                                                null,
+                                                2,
+                                              ).replace(/['"]+/g, ""),
+                                        }),
+                                    ],
+                                  },
+                                  `${_.key}-${_.displayName}-bansInfo-row`,
+                                ),
+                              ),
+                              _ > 0 &&
+                                (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    !_ &&
+                                      (0, _.jsx)("div", {
+                                        children: "Main Account",
+                                      }),
+                                    _ &&
+                                      (0, _.jsx)("div", {
+                                        children: "Streamer",
+                                      }),
+                                    (0, _.jsx)("div", {
+                                      children: (0, _.jsx)("a", {
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                        href: `${_._.BASE_URL}${_._.personadetails(_).substr(1)}`,
+                                        children: _,
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                            ],
+                          }),
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsx)("div", {
+                            className: _().VacInfoOuterGrid,
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                _.Fragment,
+                                {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().VacInfoOuterGrid,
+                                    children: _.formatFunction
+                                      ? _.formatFunction.call(
+                                          null,
+                                          _?.persona[_.key],
+                                          _?.persona[_.secondaryKey],
+                                        )
+                                      : JSON.stringify(
+                                          _?.persona[_.key] || "",
+                                          null,
+                                          2,
+                                        ).replace(/['"]+/g, ""),
+                                  }),
+                                },
+                                `${_.key}-${_.displayName}-vacInfo-row`,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().OfficialInfoColumn,
+                        children: [
+                          (0, _.jsx)("h2", {
+                            className: _().Header,
+                            children: "Official Profile",
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().OfficialProfileOuterGrid,
+                            children: [
+                              _?.persona?.official_profile &&
+                                _.map((_) =>
+                                  (0, _.jsxs)(
+                                    _.Fragment,
+                                    {
+                                      children: [
+                                        (0, _.jsx)("div", {
+                                          children: _.displayName || _.key,
+                                        }),
+                                        (0, _.jsx)("div", {
+                                          className:
+                                            _().OfficialProfileInnerGrid,
+                                          children: _.formatFunction
+                                            ? _.formatFunction.call(
+                                                null,
+                                                _?.persona?.official_profile[
+                                                  _.key
+                                                ],
+                                                _?.persona[_.secondaryKey],
+                                              )
+                                            : JSON.stringify(
+                                                _?.persona?.official_profile[
+                                                  _.key
+                                                ] || "",
+                                                null,
+                                                2,
+                                              ).replace(/['"]+/g, ""),
+                                        }),
+                                      ],
+                                    },
+                                    `${_.key}-${_.displayName}-officialProfileInfo-row`,
+                                  ),
+                                ),
+                              !_?.persona?.official_profile &&
+                                (0, _.jsx)(_.Fragment, {
+                                  children: (0, _.jsx)("span", {
+                                    style: {
+                                      color: _,
+                                    },
+                                    children: "(None)",
+                                  }),
+                                }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().TeamsInfoInfoOuterGrid,
+                            children: [
+                              (0, _.jsx)("br", {}),
+                              (0, _.jsx)("h2", {
+                                className: _().Header,
+                                children: "Teams",
+                              }),
+                              _?.persona?.teams &&
+                                _.map((_) =>
+                                  (0, _.jsx)(
+                                    _.Fragment,
+                                    {
+                                      children: (0, _.jsx)("div", {
+                                        className: _().TeamsInfoInnerGrid,
+                                        children: _.formatFunction
+                                          ? _.formatFunction.call(
+                                              null,
+                                              _?.persona[_.key],
+                                              _?.persona[_.secondaryKey],
+                                            )
+                                          : JSON.stringify(
+                                              _?.persona[_.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      }),
+                                    },
+                                    `${_.key}-${_.displayName}-teamsInfo-row`,
+                                  ),
+                                ),
+                              !_?.persona?.teams &&
+                                (0, _.jsx)(_.Fragment, {
+                                  children: (0, _.jsx)("span", {
+                                    style: {
+                                      color: _,
+                                    },
+                                    children: "(None)",
+                                  }),
+                                }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().EventColumn,
+                        children: [
+                          (0, _.jsx)("h2", {
+                            className: _().Header,
+                            children: "Event Information",
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().EventInfoOuterGrid,
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                _.Fragment,
+                                {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().EventInfoInnerGrid,
+                                    children: _.formatFunction
+                                      ? _.formatFunction.call(
+                                          null,
+                                          _?.persona[_.key],
+                                        )
+                                      : JSON.stringify(
+                                          _?.persona[_.key] || "",
+                                          null,
+                                          2,
+                                        ).replace(/['"]+/g, ""),
+                                  }),
+                                },
+                                `${_.key}-${_.displayName}-eventInfo-row`,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(!_ && _().SupportGridHidden),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().SmoothLine,
+                      }),
+                      (0, _.jsxs)("table", {
+                        className: _().BanHistoryTable,
+                        children: [
+                          (0, _.jsx)("thead", {
+                            children: (0, _.jsxs)("tr", {
+                              children: [
+                                (0, _.jsx)("th", {
+                                  align: "left",
+                                  children: (0, _.jsx)("h3", {
+                                    className: _().HeaderNoMargin,
+                                    children: "Ban Type",
+                                  }),
+                                }),
+                                (0, _.jsx)("th", {
+                                  align: "left",
+                                  children: (0, _.jsx)("h3", {
+                                    className: _().HeaderNoMargin,
+                                    children: "Ban Start",
+                                  }),
+                                }),
+                                (0, _.jsx)("th", {
+                                  align: "left",
+                                  children: (0, _.jsx)("h3", {
+                                    className: _().HeaderNoMargin,
+                                    children: "Ban End",
+                                  }),
+                                }),
+                                (0, _.jsx)("th", {
+                                  align: "left",
+                                  children: (0, _.jsx)("h3", {
+                                    className: _().HeaderNoMargin,
+                                    children: "Duration",
+                                  }),
+                                }),
+                                (0, _.jsx)("th", {
+                                  align: "left",
+                                  children: (0, _.jsx)("h3", {
+                                    className: _().HeaderNoMargin,
+                                    children: "Admin",
+                                  }),
+                                }),
+                                (0, _.jsx)("th", {
+                                  align: "left",
+                                  children: (0, _.jsx)("h3", {
+                                    className: _().HeaderNoMargin,
+                                    children: "Comment",
+                                  }),
+                                }),
+                              ],
+                            }),
+                          }),
+                          (0, _.jsxs)("tbody", {
+                            children: [
+                              (0, _.jsx)("tr", {
+                                children: (0, _.jsx)("td", {}),
+                              }),
+                              _(_?.persona?.banhistory),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SmoothLine,
+                  }),
                   _ &&
                     _.length &&
-                    _.createElement(_._, null, ({ width: _, height: _ }) =>
-                      _.createElement(
-                        _._,
-                        {
-                          headerHeight: 70,
-                          height: _,
-                          width: _,
-                          rowHeight: 33.33,
-                          rowCount: _.length,
-                          rowGetter: ({ index: _ }) => _[_],
-                          rowClassName: ({ index: _ }) =>
-                            -1 != _
-                              ? _ % 2
-                                ? _().MatchRowEven
-                                : _().MatchRowOdd
-                              : "",
-                          overscanRowCount: 50,
-                          noRowsRenderer: () =>
-                            _.createElement(
-                              "h3",
-                              null,
-                              "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
-                            ),
-                        },
-                        _.map((_) =>
-                          _.createElement(_._, {
-                            key: _.dataKey,
-                            label: _.label,
-                            dataKey: _.dataKey,
-                            width: _ * _.widthRelative,
-                            cellRenderer: _.cellRenderer,
-                            columnData: {
-                              strAccountId: _,
-                            },
-                            headerRenderer: _.headerRenderer,
+                    (0, _.jsxs)("div", {
+                      className: _().OtherModesCheckBox,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          name: "othermode",
+                          _: "othermode",
+                          onChange: () => _(!_),
+                          checked: _,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: "othermode",
+                          children: (0, _.jsx)("span", {
+                            children:
+                              "Include custom games, practice games, and uncommon game modes",
                           }),
-                        ),
-                      ),
-                    ),
-                  (!_ || !_.length) &&
-                    _.createElement("div", null, "No matches"),
-                ),
-              ),
-            ),
-            _.createElement(_._, null),
-          );
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _().MatchHistoryOuterContainer,
+                    children: (0, _.jsxs)("div", {
+                      className: _().MatchHistoryInnerContainer,
+                      children: [
+                        _ &&
+                          _.length &&
+                          (0, _.jsx)(_._, {
+                            children: ({ width: _, height: _ }) =>
+                              (0, _.jsx)(_._, {
+                                headerHeight: 70,
+                                height: _,
+                                width: _,
+                                rowHeight: 33.33,
+                                rowCount: _.length,
+                                rowGetter: ({ index: _ }) => _[_],
+                                rowClassName: ({ index: _ }) =>
+                                  -1 != _
+                                    ? _ % 2
+                                      ? _().MatchRowEven
+                                      : _().MatchRowOdd
+                                    : "",
+                                overscanRowCount: 50,
+                                noRowsRenderer: () =>
+                                  (0, _.jsx)("h3", {
+                                    children:
+                                      "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
+                                  }),
+                                children: _.map((_) =>
+                                  (0, _.jsx)(
+                                    _._,
+                                    {
+                                      label: _.label,
+                                      dataKey: _.dataKey,
+                                      width: _ * _.widthRelative,
+                                      cellRenderer: _.cellRenderer
+                                        ? _.cellRenderer
+                                        : _._,
+                                      columnData: {
+                                        strAccountId: _,
+                                      },
+                                      headerRenderer: _.headerRenderer
+                                        ? _.headerRenderer
+                                        : _._,
+                                      cellDataGetter: _._,
+                                      flexGrow: 0,
+                                      flexShrink: 1,
+                                    },
+                                    _.dataKey,
+                                  ),
+                                ),
+                              }),
+                          }),
+                        (!_ || !_.length) &&
+                          (0, _.jsx)("div", {
+                            children: "No matches",
+                          }),
+                      ],
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {}),
+            ],
+          });
         };
       class _ extends _.Component {
         render() {
-          return _.createElement(_, null);
+          return (0, _.jsx)(_, {});
         }
       }
     },
@@ -5313,6 +4779,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5329,13 +4796,10 @@
       const _ = "public",
         _ = 5e3,
         _ = (_) =>
-          _.createElement(
-            "a",
-            {
-              href: `${_._.BASE_URL}personadetails/${_}?u=${_}&appid=${_._.DOTA_APP_ID}`,
-            },
-            _,
-          );
+          (0, _.jsx)("a", {
+            href: `${_._.BASE_URL}personadetails/${_}?u=${_}&appid=${_._.DOTA_APP_ID}`,
+            children: _,
+          });
       var _;
       !(function (_) {
         (_[(_.kTRAA_RegisterTeam = 0)] = "kTRAA_RegisterTeam"),
@@ -5386,64 +4850,76 @@
           {
             enum: _.kTRAA_InvitePlayer,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                "Invited a new/legacy player ",
-                _.createElement("b", null, `${_}`),
-                ".",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  "Invited a new/legacy player ",
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  ".",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_RemovePlayer,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                "Removed a legacy player ",
-                _.createElement("b", null, `${_}`),
-                ".",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  "Removed a legacy player ",
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  ".",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_CancelInvite,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, `${_}`),
-                " cancelled an issued invite.",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  " cancelled an issued invite.",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_RegisterPlayer,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, `${_}`),
-                " registered a new player.",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  " registered a new player.",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_AcceptInvite,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, `${_}`),
-                " accepted an invite.",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  " accepted an invite.",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_RejectInvite,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, `${_}`),
-                " rejected an invite.",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  " rejected an invite.",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_UnregisterTeam,
@@ -5457,75 +4933,89 @@
           {
             enum: _.kTRAA_TransferTeamAdmin,
             formatFunction: (_ = "", _ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                "Manager transferred management to a new manager ",
-                _.createElement("b", null, `${_}`, "."),
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  "Manager transferred management to a new manager ",
+                  (0, _.jsxs)("b", {
+                    children: [`${_}`, "."],
+                  }),
+                ],
+              }),
           },
           {
             enum: _.kTRAA_InviteCoach,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                "Invited a coach ",
-                _.createElement("b", null, `${_}`),
-                ".",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  "Invited a coach ",
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  ".",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_RemoveCoach,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                "Removed a coach ",
-                _.createElement("b", null, `${_}`),
-                ".",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  "Removed a coach ",
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  ".",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_CancelInviteCoach,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, `${_}`),
-                " cancelled an issued coach invite.",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  " cancelled an issued coach invite.",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_AcceptCoachInvite,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, `${_}`),
-                " (coach) accepted an invite.",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  " (coach) accepted an invite.",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_RejectCoachInvite,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, `${_}`),
-                " (coach) rejected an invite.",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  " (coach) rejected an invite.",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_ValveUpdateName,
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                "Valve fixed a name for player ",
-                _.createElement("b", null, `${_}`),
-                ".",
-              ),
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  "Valve fixed a name for player ",
+                  (0, _.jsx)("b", {
+                    children: `${_}`,
+                  }),
+                  ".",
+                ],
+              }),
           },
           {
             enum: _.kTRAA_ValveUpdateTeamName,
@@ -5568,17 +5058,12 @@
             displayName: "URL",
             formatFunction: (_) =>
               _
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                      },
-                      _,
-                    ),
-                  )
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("a", {
+                      href: _,
+                      children: _,
+                    }),
+                  })
                 : "",
           },
           {
@@ -5615,32 +5100,26 @@
             key: "kick_link",
             displayName: "KICK",
             formatFunction: (_, _) =>
-              _.createElement(
-                "div",
-                {
-                  className: _().Link,
-                  onClick: async () => {
-                    await _().get(`${_}`), setTimeout(() => _(), 1e3);
-                  },
+              (0, _.jsx)("div", {
+                className: _().Link,
+                onClick: async () => {
+                  await _().get(`${_}`), setTimeout(() => _(), 1e3);
                 },
-                "KICK",
-              ),
+                children: "KICK",
+              }),
           },
           {
             key: "make_admin_link",
             displayName: "MAKE ADMIN",
             formatFunction: (_, _) =>
               !!_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().Link,
-                  onClick: async () => {
-                    await _().get(`${_}`), setTimeout(() => _(), 1e3);
-                  },
+              (0, _.jsx)("div", {
+                className: _().Link,
+                onClick: async () => {
+                  await _().get(`${_}`), setTimeout(() => _(), 1e3);
                 },
-                "MAKE ADMIN",
-              ),
+                children: "MAKE ADMIN",
+              }),
           },
         ],
         _ = [
@@ -5659,69 +5138,63 @@
             key: "color_primary",
             displayName: "Color (Primary)",
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _ &&
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("span", {
-                      className: _().ColorBox,
-                      style: {
-                        backgroundColor: _,
-                      },
-                    }),
-                    " ",
-                    _,
-                  ),
-              ),
+              (0, _.jsx)(_.Fragment, {
+                children:
+                  _ &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _().ColorBox,
+                        style: {
+                          backgroundColor: _,
+                        },
+                      }),
+                      " ",
+                      _,
+                    ],
+                  }),
+              }),
           },
           {
             key: "color_secondary",
             displayName: "Color (Secondary)",
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _ &&
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("span", {
-                      className: _().ColorBox,
-                      style: {
-                        backgroundColor: _,
-                      },
-                    }),
-                    " ",
-                    _,
-                  ),
-              ),
+              (0, _.jsx)(_.Fragment, {
+                children:
+                  _ &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _().ColorBox,
+                        style: {
+                          backgroundColor: _,
+                        },
+                      }),
+                      " ",
+                      _,
+                    ],
+                  }),
+              }),
           },
           {
             key: "url_logo",
             displayName: "DPC Logo",
             formatFunction: (_ = "", _ = 0) =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _ &&
+              (0, _.jsx)(_.Fragment, {
+                children:
                   _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DPCLogoContainer,
-                    },
-                    _.createElement("img", {
+                  _ &&
+                  (0, _.jsx)("div", {
+                    className: _().DPCLogoContainer,
+                    children: (0, _.jsx)("img", {
                       onError: ({ currentTarget: _ }) => {
                         (_.onerror = null),
                           (_.src = `${_._.IMG_URL}teams_override/team_unknown_web.png`);
                       },
                       src: `${_._.CDN_URL}apps/dota2/teamlogos/${_}.png`,
                     }),
-                  ),
-              ),
+                  }),
+              }),
           },
         ],
         _ = [
@@ -5729,77 +5202,61 @@
             key: "ugc_logo_url",
             displayName: "Logo",
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().URLLogoContainer,
-                  },
-                  _ &&
-                    _.createElement("img", {
+              (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsx)("div", {
+                  className: _().URLLogoContainer,
+                  children:
+                    _ &&
+                    (0, _.jsx)("img", {
                       src: _,
                     }),
-                ),
-              ),
+                }),
+              }),
           },
           {
             key: "ugc_base_logo_url",
             displayName: "Base Logo",
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().URLLogoContainer,
-                  },
-                  _ &&
-                    _.createElement("img", {
+              (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsx)("div", {
+                  className: _().URLLogoContainer,
+                  children:
+                    _ &&
+                    (0, _.jsx)("img", {
                       src: _,
                     }),
-                ),
-              ),
+                }),
+              }),
           },
           {
             key: "ugc_banner_logo_url",
             displayName: "Banner Logo",
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().URLLogoContainer,
-                  },
-                  _ &&
-                    _.createElement("img", {
+              (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsx)("div", {
+                  className: _().URLLogoContainer,
+                  children:
+                    _ &&
+                    (0, _.jsx)("img", {
                       src: _,
                     }),
-                ),
-              ),
+                }),
+              }),
           },
           {
             key: "ugc_sponsor_logo_url",
             displayName: "Sponsor Logo",
             formatFunction: (_ = "") =>
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().URLLogoContainer,
-                  },
-                  _ &&
-                    _.createElement("img", {
+              (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsx)("div", {
+                  className: _().URLLogoContainer,
+                  children:
+                    _ &&
+                    (0, _.jsx)("img", {
                       src: _,
                     }),
-                ),
-              ),
+                }),
+              }),
           },
         ],
         _ = [
@@ -5824,12 +5281,8 @@
           {
             key: "action",
             displayName: "Audit Action",
-            formatFunction: (_, _ = "", __webpack_require__ = "") =>
-              _.find((_) => _.enum === _).formatFunction.call(
-                null,
-                _,
-                __webpack_require__,
-              ),
+            formatFunction: (_, _ = "", _ = "") =>
+              _.find((_) => _.enum === _).formatFunction.call(null, _, _),
           },
         ],
         _ = [
@@ -5892,23 +5345,20 @@
             key: "outcome",
             displayName: "Outcome",
             formatFunction: (_) =>
-              _.createElement(
-                "div",
-                {
-                  style: {
-                    color:
-                      "" +
-                      ("Win" === _
-                        ? "green"
-                        : "Loss" === _
-                          ? "red"
-                          : "Tie" === _
-                            ? "yellow"
-                            : "skyblue"),
-                  },
+              (0, _.jsx)("div", {
+                style: {
+                  color:
+                    "" +
+                    ("Win" === _
+                      ? "green"
+                      : "Loss" === _
+                        ? "red"
+                        : "Tie" === _
+                          ? "yellow"
+                          : "skyblue"),
                 },
-                _,
-              ),
+                children: _,
+              }),
           },
           {
             key: "score",
@@ -5918,20 +5368,17 @@
             key: "opponent_team_id",
             displayName: "Opponent",
             formatFunction: (_, _) => {
-              return _.createElement(
-                _.Fragment,
-                null,
-                `${_} ( `,
-                ((__webpack_require__ = _),
-                _.createElement(
-                  "a",
-                  {
-                    href: `${_._.BASE_URL}${_._.teamdetails(__webpack_require__).substr(1)}`,
-                  },
-                  __webpack_require__,
-                )),
-                " )",
-              );
+              return (0, _.jsxs)(_.Fragment, {
+                children: [
+                  `${_} ( `,
+                  ((_ = _),
+                  (0, _.jsx)("a", {
+                    href: `${_._.BASE_URL}${_._.teamdetails(_).substr(1)}`,
+                    children: _,
+                  })),
+                  " )",
+                ],
+              });
               var _;
             },
           },
@@ -5945,20 +5392,20 @@
                   _.map((_) => {
                     return [
                       ((_ = _.match_id),
-                      _.createElement(
+                      (0, _.jsx)(
                         "a",
                         {
-                          key: _,
                           href: `${_._.BASE_URL}matches/match/${_}?u=${_}&appid=${_._.DOTA_APP_ID}`,
+                          children: _,
                         },
                         _,
                       )),
-                      _.createElement(
+                      (0, _.jsx)(
                         "span",
                         {
-                          key: `${_.match_id}-tab`,
+                          children: " ",
                         },
-                        " ",
+                        `${_.match_id}-tab`,
                       ),
                     ];
                     var _;
@@ -5971,7 +5418,7 @@
         ],
         _ = (_) => {
           const _ = (0, _._)()._,
-            [__webpack_require__, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)({}),
@@ -6248,46 +5695,41 @@
           const _ = __webpack_require__.find((_) => _.team_id == _) || {};
           let _;
           if (
-            ((_ && _) || (_ = _.createElement("div", null, "Loading...")),
+            ((_ && _) ||
+              (_ = (0, _.jsx)("div", {
+                children: "Loading...",
+              })),
             _ &&
-              (0 == __webpack_require__.length || _) &&
-              (_ = _.createElement(
-                "div",
-                null,
-                "Error loading registered teams...",
-              )),
+              (0 == _.length || _) &&
+              (_ = (0, _.jsx)("div", {
+                children: "Error loading registered teams...",
+              })),
             _ &&
               (0 == Object.keys(_).length || _) &&
-              (_ = _.createElement(
-                "div",
-                null,
-                `Error loading single team info for teamId ${_} `,
-              )),
+              (_ = (0, _.jsx)("div", {
+                children: `Error loading single team info for teamId ${_} `,
+              })),
             _)
           )
-            return _.createElement(
-              "div",
-              {
-                className: _().TeamDetails,
-              },
-              _.createElement(_._, {
-                bOverlapping: !1,
-              }),
-              _.createElement(
-                _._,
-                null,
-                _.createElement("title", null, "Dota 2 - Team Details"),
-              ),
-              _.createElement(_._, null),
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)("div", {
+              className: _().TeamDetails,
+              children: [
+                (0, _.jsx)(_._, {
+                  bOverlapping: !1,
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)("title", {
+                    children: "Dota 2 - Team Details",
+                  }),
+                }),
+                (0, _.jsx)(_._, {}),
+                (0, _.jsx)("div", {
                   className: _().ContentFrame,
-                },
-                _,
-              ),
-              _.createElement(_._, null),
-            );
+                  children: _,
+                }),
+                (0, _.jsx)(_._, {}),
+              ],
+            });
           const _ = _.members || [];
           _.forEach((_) => {
             (_.kick_link = `${_._.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${_}&appid=${_._.DOTA_APP_ID}&team_id=${_}&account_id=${_.account_id}`),
@@ -6299,681 +5741,651 @@
             const _ = __webpack_require__.find((_) => _.team_id == _);
             return _ ? _.team_name : "";
           };
-          return _.createElement(
-            "div",
-            {
-              className: _().TeamDetails,
-            },
-            _.createElement(_._, {
-              bOverlapping: !1,
-            }),
-            _.createElement(
-              _._,
-              null,
-              _.createElement("title", null, "Dota 2 - Team Details"),
-            ),
-            _.createElement(_._, null),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().TeamDetails,
+            children: [
+              (0, _.jsx)(_._, {
+                bOverlapping: !1,
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)("title", {
+                  children: "Dota 2 - Team Details",
+                }),
+              }),
+              (0, _.jsx)(_._, {}),
+              (0, _.jsxs)("div", {
                 className: _().ContentFrame,
-              },
-              _.createElement(
-                "h1",
-                {
-                  className: _().Header,
-                },
-                `Team Details for ${_?.name} (${_.team_id})`,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().MiscInfoGrid,
-                },
-                _.map((_) =>
-                  _.createElement(
-                    _.Fragment,
-                    {
-                      key: `${_.key}-misc-row`,
-                    },
-                    _.createElement("div", null, _.displayName || _.key),
-                    _.createElement(
-                      "div",
-                      null,
-                      _.formatFunction
-                        ? _.formatFunction.call(null, _[_.key])
-                        : JSON.stringify(_[_.key] || "", null, 2).replace(
-                            /['"]+/g,
-                            "",
-                          ),
-                    ),
-                  ),
-                ),
-                !_ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Link,
-                        onClick: () => _(!0),
-                      },
-                      "Update Info / Add Member",
-                    ),
-                    _.createElement("div", null),
-                  ),
-              ),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement("div", {
-                    className: _().SmoothLine,
+                children: [
+                  (0, _.jsx)("h1", {
+                    className: _().Header,
+                    children: `Team Details for ${_?.name} (${_.team_id})`,
                   }),
-                  _.createElement(
-                    ({ strTeamId: _ }) => {
-                      const [_, __webpack_require__] = (0, _.useState)(""),
-                        [_, _] = (0, _.useState)(""),
-                        [_, _] = (0, _.useState)(""),
-                        [_, _] = (0, _.useState)(!1);
-                      return _.createElement(
-                        "form",
-                        {
-                          onSubmit: async (_) => {
-                            if (
-                              (__webpack_require__.preventDefault(),
-                              !_ && !_ && !_)
-                            )
-                              return;
-                            _(!0);
-                            const _ = {
-                              team_id: _,
-                              team_name: _,
-                              team_tag: _,
-                              team_abbreviation: _,
-                            };
-                            await _().get(
-                              `${_._.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
-                              {
-                                params: _,
-                              },
-                            );
-                            _(), setTimeout(() => _(!1), _);
-                          },
-                        },
-                        _.createElement(
-                          "h2",
-                          {
-                            className: _().Header,
-                          },
-                          "Update Team Information",
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().EditInfoGrid,
-                          },
-                          _.createElement("div", null, "Team Name"),
-                          _.createElement("input", {
-                            className: _().MediumTextField,
-                            type: "text",
-                            name: "teamName",
-                            maxLength: 32,
-                            onChange: (_) =>
-                              __webpack_require__(_.target.value),
-                          }),
-                          _.createElement("div", null, "Tag"),
-                          _.createElement("input", {
-                            className: _().SmallTextField,
-                            type: "text",
-                            name: "teamTag",
-                            maxLength: 8,
-                            onChange: (_) => _(_.target.value),
-                          }),
-                          _.createElement("div", null, "Abbreviation"),
-                          _.createElement("input", {
-                            className: _().SmallTextField,
-                            type: "text",
-                            name: "teamAbbreviation",
-                            maxLength: 4,
-                            onChange: (_) => _(_.target.value),
-                          }),
-                          _.createElement(
-                            "div",
-                            null,
-                            _.createElement(
-                              "button",
-                              {
-                                className: _().SubmitButton,
-                                disabled: _,
-                              },
-                              _ ? "Updating..." : "Update",
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                    {
-                      strTeamId: _,
-                    },
-                  ),
-                  _.createElement("div", {
-                    className: _().SmoothLine,
-                  }),
-                  _.createElement(
-                    ({ strTeamId: _ }) => {
-                      const [_, __webpack_require__] = (0, _.useState)(""),
-                        [_, _] = (0, _.useState)(!1);
-                      return _.createElement(
-                        "form",
-                        {
-                          onSubmit: async (_) => {
-                            if ((__webpack_require__.preventDefault(), !_))
-                              return;
-                            _(!0);
-                            const _ = {
-                              team_id: _,
-                              account_id: _,
-                            };
-                            await _().get(
-                              `${_._.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
-                              {
-                                params: _,
-                              },
-                            );
-                            _(), setTimeout(() => _(!1), _);
-                          },
-                        },
-                        _.createElement(
-                          "h2",
-                          {
-                            className: _().Header,
-                          },
-                          "Add Team Member",
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().EditInfoGrid,
-                          },
-                          _.createElement("div", null, "Account ID"),
-                          _.createElement("input", {
-                            className: _().MediumTextField,
-                            type: "text",
-                            name: "accountId",
-                            maxLength: 20,
-                            onChange: (_) =>
-                              __webpack_require__(_.target.value),
-                          }),
-                          _.createElement(
-                            "div",
-                            null,
-                            _.createElement(
-                              "button",
-                              {
-                                className: _().SubmitButton,
-                                disabled: _,
-                              },
-                              _ ? "Adding..." : "Add Account",
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                    {
-                      strTeamId: _,
-                    },
-                  ),
-                ),
-              _.createElement("div", {
-                className: _().SmoothLine,
-              }),
-              _.createElement(
-                "h2",
-                {
-                  className: _().Header,
-                },
-                "Members",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().MembersGrid,
-                  style: {
-                    gridTemplateColumns: `250px repeat(${_.length - 1}, auto)`,
-                  },
-                },
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: `${_.key}-members-grid-header}`,
-                      },
-                      _.createElement("b", null, _.displayName || _.key),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  !!_.length &&
-                    _.map((_) =>
+                  (0, _.jsxs)("div", {
+                    className: _().MiscInfoGrid,
+                    children: [
                       _.map((_) =>
-                        _.createElement(
-                          "div",
+                        (0, _.jsxs)(
+                          _.Fragment,
                           {
-                            key: `${_.key}-member-row-${_.account_id}`,
-                          },
-                          _.formatFunction
-                            ? _.formatFunction.call(null, _[_.key], _)
-                            : JSON.stringify(_[_.key] || "", null, 2).replace(
-                                /['"]+/g,
-                                "",
-                              ),
-                        ),
-                      ),
-                    ),
-                  !_.length && _.createElement("div", null, "No team members."),
-                ),
-              ),
-              _.createElement("br", null),
-              _.createElement(
-                "div",
-                {
-                  className: _().ManagerGrid,
-                  style: {
-                    gridTemplateColumns: `250px repeat(${_.length - 1}, auto)`,
-                  },
-                },
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: `${_.key}-manager-grid-header}`,
-                      },
-                      _.createElement("b", null, _.displayName || _.key),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.map((_) =>
-                    _.createElement(
-                      _.Fragment,
-                      {
-                        key: `${_.key}-manager-row`,
-                      },
-                      _.createElement(
-                        "div",
-                        null,
-                        _.formatFunction
-                          ? _.formatFunction.call(null, _[_.key])
-                          : JSON.stringify(_[_.key] || "", null, 2).replace(
-                              /['"]+/g,
-                              "",
-                            ),
-                      ),
-                    ),
-                  ),
-                  !_.length && _.createElement("div", null, "No manager."),
-                ),
-              ),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement("div", {
-                    className: _().SmoothLine,
-                  }),
-                  _.createElement(
-                    ({ strTeamId: _ }) => {
-                      const [_, __webpack_require__] = (0, _.useState)(""),
-                        [_, _] = (0, _.useState)(""),
-                        [_, _] = (0, _.useState)(!1);
-                      return _.createElement(
-                        "form",
-                        {
-                          onSubmit: async (_) => {
-                            if ((_.preventDefault(), !_ || !_)) return;
-                            _(!0);
-                            const _ = {
-                              admin_account_id: parseInt(_),
-                              admin_email: _,
-                              registration_period:
-                                _._.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                            };
-                            await _().post(
-                              `${_._.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${_}&appid=${_._.DOTA_APP_ID}`,
-                              {
-                                params: _,
-                              },
-                            );
-                            _(), setTimeout(() => _(!1), _);
-                          },
-                        },
-                        _.createElement(
-                          "h2",
-                          {
-                            className: _().Header,
-                          },
-                          "Update Manager Email",
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().EditInfoGrid,
-                          },
-                          _.createElement("div", null, "Manager Account ID"),
-                          _.createElement("input", {
-                            className: _().MediumTextField,
-                            type: "text",
-                            name: "adminAccountId",
-                            maxLength: 20,
-                            onChange: (_) =>
-                              __webpack_require__(_.target.value),
-                          }),
-                          _.createElement("div", null, "Manager Email"),
-                          _.createElement("input", {
-                            className: _().MediumTextField,
-                            type: "email",
-                            name: "adminEmail",
-                            maxLength: 255,
-                            onChange: (_) => _(_.target.value),
-                          }),
-                          _.createElement(
-                            "div",
-                            null,
-                            _.createElement(
-                              "button",
-                              {
-                                className: _().SubmitButton,
-                                disabled: _,
-                              },
-                              _ ? "Updating..." : "Update Manager Email",
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                    {
-                      strTeamId: _,
-                    },
-                  ),
-                ),
-              _.createElement("div", {
-                className: _().SmoothLine,
-              }),
-              _.createElement(
-                "h2",
-                {
-                  className: _().Header,
-                },
-                "Logos & Colors",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().LogoAndColorsGrid,
-                },
-                _.map((_) =>
-                  _.createElement(
-                    _.Fragment,
-                    {
-                      key: `${_.key}-logo-colors-row`,
-                    },
-                    _.createElement("div", null, _.displayName || _.key),
-                    _.createElement(
-                      "div",
-                      null,
-                      _.formatFunction
-                        ? _.formatFunction.call(null, _[_.key], _.team_id)
-                        : JSON.stringify(_[_.key] || "", null, 2).replace(
-                            /['"]+/g,
-                            "",
-                          ),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement("br", null),
-              _.createElement(
-                "div",
-                {
-                  className: _().UGCLogosGrid,
-                  style: {
-                    gridTemplateColumns: `repeat(${_.length}, auto)`,
-                  },
-                },
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: `${_.key}-ugc-grid-header}`,
-                      },
-                      _.createElement("b", null, _.displayName || _.key),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: `${_.key}-ugc-logo`,
-                      },
-                      _.formatFunction
-                        ? _.formatFunction.call(null, _[_.key])
-                        : JSON.stringify(_[_.key] || "", null, 2).replace(
-                            /['"]+/g,
-                            "",
-                          ),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().SmoothLine,
-              }),
-              _.createElement(
-                "h2",
-                {
-                  className: _().Header,
-                },
-                "Audit Action History",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().AuditActionsGrid,
-                  style: {
-                    gridTemplateColumns: `repeat(${_.length}, auto)`,
-                  },
-                },
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: `${_.key}-${_.displayName}-audit-action-grid-header`,
-                      },
-                      _.createElement("b", null, _.displayName || _.key),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  !!_.length &&
-                    _.map((_) =>
-                      _.map((_) =>
-                        _.createElement(
-                          "div",
-                          {
-                            key: `${_.key}-${_.displayName}-${_.timestamp}`,
-                          },
-                          _.formatFunction
-                            ? _.formatFunction.call(
-                                null,
-                                _[_.key],
-                                _.player_name,
-                                _.target_manager_name,
-                              )
-                            : JSON.stringify(_[_.key] || "", null, 2).replace(
-                                /['"]+/g,
-                                "",
-                              ),
-                        ),
-                      ),
-                    ),
-                  !_.length &&
-                    _.createElement("div", null, "No audit actions."),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().SmoothLine,
-              }),
-              _.createElement(
-                "h2",
-                {
-                  className: _().Header,
-                },
-                "Supporters Club / Workshop Status",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().WorkshopStatusGrid,
-                },
-                _.map((_) =>
-                  _.createElement(
-                    _.Fragment,
-                    {
-                      key: `${_.key}-workshop-status-row`,
-                    },
-                    _.createElement("div", null, _.displayName || _.key),
-                    _.createElement(
-                      "div",
-                      null,
-                      _.formatFunction
-                        ? _.formatFunction.call(null, _[_.key])
-                        : JSON.stringify(_[_.key] || "", null, 2).replace(
-                            /['"]+/g,
-                            "",
-                          ),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().SmoothLine,
-              }),
-              _.createElement(
-                "h2",
-                {
-                  className: (0, _._)(_().Header, _().SeasonMatchHeader),
-                },
-                `Season ${_._.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().MatchesGrid,
-                  style: {
-                    gridTemplateColumns: `repeat(${_.length}, auto)`,
-                  },
-                },
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  (() => {
-                    const _ = [];
-                    return (
-                      Object.keys(_).forEach((_, _) => {
-                        _.push(
-                          _.createElement(
-                            "h3",
-                            {
-                              key: `league-name-row-${_}`,
-                              style: {
-                                gridColumn: `span ${_.length}`,
-                              },
-                            },
-                            _.createElement("b", null, _),
-                          ),
-                        ),
-                          _.push(
-                            _.map((_) =>
-                              _.createElement(
-                                "div",
-                                {
-                                  key: `${_.key}-${_.displayName}-matches-grid-header-league-${_}`,
-                                },
-                                _.createElement(
-                                  "b",
-                                  null,
-                                  _.displayName || _.key,
-                                ),
-                              ),
-                            ),
-                          );
-                        for (let _ of _[_])
-                          _.push(
-                            _.map((_) =>
-                              _.createElement(
-                                "div",
-                                {
-                                  key: `${_.key}-${_.displayName}-${_.series_id}`,
-                                },
-                                _.formatFunction
-                                  ? _.formatFunction.call(
-                                      null,
-                                      _[_.key],
-                                      _(_.opponent_team_id),
-                                    )
+                            children: [
+                              (0, _.jsx)("div", {
+                                children: _.displayName || _.key,
+                              }),
+                              (0, _.jsx)("div", {
+                                children: _.formatFunction
+                                  ? _.formatFunction.call(null, _[_.key])
                                   : JSON.stringify(
                                       _[_.key] || "",
                                       null,
                                       2,
                                     ).replace(/['"]+/g, ""),
+                              }),
+                            ],
+                          },
+                          `${_.key}-misc-row`,
+                        ),
+                      ),
+                      !_ &&
+                        (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().Link,
+                              onClick: () => _(!0),
+                              children: "Update Info / Add Member",
+                            }),
+                            (0, _.jsx)("div", {}),
+                          ],
+                        }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().SmoothLine,
+                        }),
+                        (0, _.jsx)(
+                          ({ strTeamId: _ }) => {
+                            const [_, _] = (0, _.useState)(""),
+                              [_, _] = (0, _.useState)(""),
+                              [_, _] = (0, _.useState)(""),
+                              [_, _] = (0, _.useState)(!1);
+                            return (0, _.jsxs)("form", {
+                              onSubmit: async (_) => {
+                                if (
+                                  (__webpack_require__.preventDefault(),
+                                  !_ && !_ && !_)
+                                )
+                                  return;
+                                _(!0);
+                                const _ = {
+                                  team_id: _,
+                                  team_name: _,
+                                  team_tag: _,
+                                  team_abbreviation: _,
+                                };
+                                await _().get(
+                                  `${_._.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
+                                  {
+                                    params: _,
+                                  },
+                                );
+                                _(), setTimeout(() => _(!1), _);
+                              },
+                              children: [
+                                (0, _.jsx)("h2", {
+                                  className: _().Header,
+                                  children: "Update Team Information",
+                                }),
+                                (0, _.jsxs)("div", {
+                                  className: _().EditInfoGrid,
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: "Team Name",
+                                    }),
+                                    (0, _.jsx)("input", {
+                                      className: _().MediumTextField,
+                                      type: "text",
+                                      name: "teamName",
+                                      maxLength: 32,
+                                      onChange: (_) =>
+                                        __webpack_require__(_.target.value),
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: "Tag",
+                                    }),
+                                    (0, _.jsx)("input", {
+                                      className: _().SmallTextField,
+                                      type: "text",
+                                      name: "teamTag",
+                                      maxLength: 8,
+                                      onChange: (_) => _(_.target.value),
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: "Abbreviation",
+                                    }),
+                                    (0, _.jsx)("input", {
+                                      className: _().SmallTextField,
+                                      type: "text",
+                                      name: "teamAbbreviation",
+                                      maxLength: 4,
+                                      onChange: (_) => _(_.target.value),
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: (0, _.jsx)("button", {
+                                        className: _().SubmitButton,
+                                        disabled: _,
+                                        children: _ ? "Updating..." : "Update",
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            });
+                          },
+                          {
+                            strTeamId: _,
+                          },
+                        ),
+                        (0, _.jsx)("div", {
+                          className: _().SmoothLine,
+                        }),
+                        (0, _.jsx)(
+                          ({ strTeamId: _ }) => {
+                            const [_, _] = (0, _.useState)(""),
+                              [_, _] = (0, _.useState)(!1);
+                            return (0, _.jsxs)("form", {
+                              onSubmit: async (_) => {
+                                if ((__webpack_require__.preventDefault(), !_))
+                                  return;
+                                _(!0);
+                                const _ = {
+                                  team_id: _,
+                                  account_id: _,
+                                };
+                                await _().get(
+                                  `${_._.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
+                                  {
+                                    params: _,
+                                  },
+                                );
+                                _(), setTimeout(() => _(!1), _);
+                              },
+                              children: [
+                                (0, _.jsx)("h2", {
+                                  className: _().Header,
+                                  children: "Add Team Member",
+                                }),
+                                (0, _.jsxs)("div", {
+                                  className: _().EditInfoGrid,
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: "Account ID",
+                                    }),
+                                    (0, _.jsx)("input", {
+                                      className: _().MediumTextField,
+                                      type: "text",
+                                      name: "accountId",
+                                      maxLength: 20,
+                                      onChange: (_) =>
+                                        __webpack_require__(_.target.value),
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: (0, _.jsx)("button", {
+                                        className: _().SubmitButton,
+                                        disabled: _,
+                                        children: _
+                                          ? "Adding..."
+                                          : "Add Account",
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            });
+                          },
+                          {
+                            strTeamId: _,
+                          },
+                        ),
+                      ],
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _().SmoothLine,
+                  }),
+                  (0, _.jsx)("h2", {
+                    className: _().Header,
+                    children: "Members",
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().MembersGrid,
+                    style: {
+                      gridTemplateColumns: `250px repeat(${_.length - 1}, auto)`,
+                    },
+                    children: [
+                      (0, _.jsx)(_.Fragment, {
+                        children: _.map((_) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              children: (0, _.jsx)("b", {
+                                children: _.displayName || _.key,
+                              }),
+                            },
+                            `${_.key}-members-grid-header}`,
+                          ),
+                        ),
+                      }),
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          !!_.length &&
+                            _.map((_) =>
+                              _.map((_) =>
+                                (0, _.jsx)(
+                                  "div",
+                                  {
+                                    children: _.formatFunction
+                                      ? _.formatFunction.call(null, _[_.key], _)
+                                      : JSON.stringify(
+                                          _[_.key] || "",
+                                          null,
+                                          2,
+                                        ).replace(/['"]+/g, ""),
+                                  },
+                                  `${_.key}-member-row-${_.account_id}`,
+                                ),
                               ),
                             ),
-                          );
+                          !_.length &&
+                            (0, _.jsx)("div", {
+                              children: "No team members.",
+                            }),
+                        ],
                       }),
-                      _
-                    );
-                  })(),
-                  !Object.keys(_).length &&
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement("br", null),
-                      "No league matches.",
+                    ],
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsxs)("div", {
+                    className: _().ManagerGrid,
+                    style: {
+                      gridTemplateColumns: `250px repeat(${_.length - 1}, auto)`,
+                    },
+                    children: [
+                      (0, _.jsx)(_.Fragment, {
+                        children: _.map((_) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              children: (0, _.jsx)("b", {
+                                children: _.displayName || _.key,
+                              }),
+                            },
+                            `${_.key}-manager-grid-header}`,
+                          ),
+                        ),
+                      }),
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          _.map((_) =>
+                            (0, _.jsx)(
+                              _.Fragment,
+                              {
+                                children: (0, _.jsx)("div", {
+                                  children: _.formatFunction
+                                    ? _.formatFunction.call(null, _[_.key])
+                                    : JSON.stringify(
+                                        _[_.key] || "",
+                                        null,
+                                        2,
+                                      ).replace(/['"]+/g, ""),
+                                }),
+                              },
+                              `${_.key}-manager-row`,
+                            ),
+                          ),
+                          !_.length &&
+                            (0, _.jsx)("div", {
+                              children: "No manager.",
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().SmoothLine,
+                        }),
+                        (0, _.jsx)(
+                          ({ strTeamId: _ }) => {
+                            const [_, _] = (0, _.useState)(""),
+                              [_, _] = (0, _.useState)(""),
+                              [_, _] = (0, _.useState)(!1);
+                            return (0, _.jsxs)("form", {
+                              onSubmit: async (_) => {
+                                if ((_.preventDefault(), !_ || !_)) return;
+                                _(!0);
+                                const _ = {
+                                  admin_account_id: parseInt(_),
+                                  admin_email: _,
+                                  registration_period:
+                                    _._.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                                };
+                                await _().post(
+                                  `${_._.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${_}&appid=${_._.DOTA_APP_ID}`,
+                                  {
+                                    params: _,
+                                  },
+                                );
+                                _(), setTimeout(() => _(!1), _);
+                              },
+                              children: [
+                                (0, _.jsx)("h2", {
+                                  className: _().Header,
+                                  children: "Update Manager Email",
+                                }),
+                                (0, _.jsxs)("div", {
+                                  className: _().EditInfoGrid,
+                                  children: [
+                                    (0, _.jsx)("div", {
+                                      children: "Manager Account ID",
+                                    }),
+                                    (0, _.jsx)("input", {
+                                      className: _().MediumTextField,
+                                      type: "text",
+                                      name: "adminAccountId",
+                                      maxLength: 20,
+                                      onChange: (_) =>
+                                        __webpack_require__(_.target.value),
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: "Manager Email",
+                                    }),
+                                    (0, _.jsx)("input", {
+                                      className: _().MediumTextField,
+                                      type: "email",
+                                      name: "adminEmail",
+                                      maxLength: 255,
+                                      onChange: (_) => _(_.target.value),
+                                    }),
+                                    (0, _.jsx)("div", {
+                                      children: (0, _.jsx)("button", {
+                                        className: _().SubmitButton,
+                                        disabled: _,
+                                        children: _
+                                          ? "Updating..."
+                                          : "Update Manager Email",
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            });
+                          },
+                          {
+                            strTeamId: _,
+                          },
+                        ),
+                      ],
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _().SmoothLine,
+                  }),
+                  (0, _.jsx)("h2", {
+                    className: _().Header,
+                    children: "Logos & Colors",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().LogoAndColorsGrid,
+                    children: _.map((_) =>
+                      (0, _.jsxs)(
+                        _.Fragment,
+                        {
+                          children: [
+                            (0, _.jsx)("div", {
+                              children: _.displayName || _.key,
+                            }),
+                            (0, _.jsx)("div", {
+                              children: _.formatFunction
+                                ? _.formatFunction.call(
+                                    null,
+                                    _[_.key],
+                                    _.team_id,
+                                  )
+                                : JSON.stringify(
+                                    _[_.key] || "",
+                                    null,
+                                    2,
+                                  ).replace(/['"]+/g, ""),
+                            }),
+                          ],
+                        },
+                        `${_.key}-logo-colors-row`,
+                      ),
                     ),
-                ),
-              ),
-              _.createElement("br", null),
-            ),
-            _.createElement(_._, null),
-          );
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsxs)("div", {
+                    className: _().UGCLogosGrid,
+                    style: {
+                      gridTemplateColumns: `repeat(${_.length}, auto)`,
+                    },
+                    children: [
+                      (0, _.jsx)(_.Fragment, {
+                        children: _.map((_) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              children: (0, _.jsx)("b", {
+                                children: _.displayName || _.key,
+                              }),
+                            },
+                            `${_.key}-ugc-grid-header}`,
+                          ),
+                        ),
+                      }),
+                      (0, _.jsx)(_.Fragment, {
+                        children: _.map((_) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              children: _.formatFunction
+                                ? _.formatFunction.call(null, _[_.key])
+                                : JSON.stringify(
+                                    _[_.key] || "",
+                                    null,
+                                    2,
+                                  ).replace(/['"]+/g, ""),
+                            },
+                            `${_.key}-ugc-logo`,
+                          ),
+                        ),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SmoothLine,
+                  }),
+                  (0, _.jsx)("h2", {
+                    className: _().Header,
+                    children: "Audit Action History",
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().AuditActionsGrid,
+                    style: {
+                      gridTemplateColumns: `repeat(${_.length}, auto)`,
+                    },
+                    children: [
+                      (0, _.jsx)(_.Fragment, {
+                        children: _.map((_) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              children: (0, _.jsx)("b", {
+                                children: _.displayName || _.key,
+                              }),
+                            },
+                            `${_.key}-${_.displayName}-audit-action-grid-header`,
+                          ),
+                        ),
+                      }),
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          !!_.length &&
+                            _.map((_) =>
+                              _.map((_) =>
+                                (0, _.jsx)(
+                                  "div",
+                                  {
+                                    children: _.formatFunction
+                                      ? _.formatFunction.call(
+                                          null,
+                                          _[_.key],
+                                          _.player_name,
+                                          _.target_manager_name,
+                                        )
+                                      : JSON.stringify(
+                                          _[_.key] || "",
+                                          null,
+                                          2,
+                                        ).replace(/['"]+/g, ""),
+                                  },
+                                  `${_.key}-${_.displayName}-${_.timestamp}`,
+                                ),
+                              ),
+                            ),
+                          !_.length &&
+                            (0, _.jsx)("div", {
+                              children: "No audit actions.",
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SmoothLine,
+                  }),
+                  (0, _.jsx)("h2", {
+                    className: _().Header,
+                    children: "Supporters Club / Workshop Status",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().WorkshopStatusGrid,
+                    children: _.map((_) =>
+                      (0, _.jsxs)(
+                        _.Fragment,
+                        {
+                          children: [
+                            (0, _.jsx)("div", {
+                              children: _.displayName || _.key,
+                            }),
+                            (0, _.jsx)("div", {
+                              children: _.formatFunction
+                                ? _.formatFunction.call(null, _[_.key])
+                                : JSON.stringify(
+                                    _[_.key] || "",
+                                    null,
+                                    2,
+                                  ).replace(/['"]+/g, ""),
+                            }),
+                          ],
+                        },
+                        `${_.key}-workshop-status-row`,
+                      ),
+                    ),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SmoothLine,
+                  }),
+                  (0, _.jsx)("h2", {
+                    className: (0, _._)(_().Header, _().SeasonMatchHeader),
+                    children: `Season ${_._.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().MatchesGrid,
+                    style: {
+                      gridTemplateColumns: `repeat(${_.length}, auto)`,
+                    },
+                    children: (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (() => {
+                          const _ = [];
+                          return (
+                            Object.keys(_).forEach((_, _) => {
+                              _.push(
+                                (0, _.jsx)(
+                                  "h3",
+                                  {
+                                    style: {
+                                      gridColumn: `span ${_.length}`,
+                                    },
+                                    children: (0, _.jsx)("b", {
+                                      children: _,
+                                    }),
+                                  },
+                                  `league-name-row-${_}`,
+                                ),
+                              ),
+                                _.push(
+                                  _.map((_) =>
+                                    (0, _.jsx)(
+                                      "div",
+                                      {
+                                        children: (0, _.jsx)("b", {
+                                          children: _.displayName || _.key,
+                                        }),
+                                      },
+                                      `${_.key}-${_.displayName}-matches-grid-header-league-${_}`,
+                                    ),
+                                  ),
+                                );
+                              for (let _ of _[_])
+                                _.push(
+                                  _.map((_) =>
+                                    (0, _.jsx)(
+                                      "div",
+                                      {
+                                        children: _.formatFunction
+                                          ? _.formatFunction.call(
+                                              null,
+                                              _[_.key],
+                                              _(_.opponent_team_id),
+                                            )
+                                          : JSON.stringify(
+                                              _[_.key] || "",
+                                              null,
+                                              2,
+                                            ).replace(/['"]+/g, ""),
+                                      },
+                                      `${_.key}-${_.displayName}-${_.series_id}`,
+                                    ),
+                                  ),
+                                );
+                            }),
+                            _
+                          );
+                        })(),
+                        !Object.keys(_).length &&
+                          (0, _.jsxs)("div", {
+                            children: [
+                              (0, _.jsx)("br", {}),
+                              "No league matches.",
+                            ],
+                          }),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)("br", {}),
+                ],
+              }),
+              (0, _.jsx)(_._, {}),
+            ],
+          });
         };
       class _ extends _.Component {
         render() {
-          return _.createElement(_, null);
+          return (0, _.jsx)(_, {});
         }
       }
     },

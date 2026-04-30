@@ -65,6 +65,18 @@
         EditorInput: "_1Ve4VFO2EEkeNZdel_Asky",
         NewNoteButton: "_3Sjbkvk647UKKVLX6J7gsW",
         CloseWindowButton: "vKXl-xWkUZL5iNvaT5mzW",
+        BackgroundAnimation: "K5kB32gMVsnDCBwxYDm4r",
+        "ItemFocusAnim-darkerGrey-nocolor": "_39HD17cQ23IvuK35ytuPef",
+        "ItemFocusAnim-darkerGrey": "_1UnKhkmcATwZcT0qX1VO-I",
+        "ItemFocusAnim-darkGreySettings": "_3pEtHMkdw57n0C8DKxtXPb",
+        "ItemFocusAnim-darkGrey": "bif353VzxtsbctKKtWLUm",
+        "ItemFocusAnim-grey": "_1lXo0Q4biCUQ5CPs1x9v8z",
+        "ItemFocusAnim-translucent-white-10": "_3jeaGvKmUWZNHnBKV71gwe",
+        "ItemFocusAnim-translucent-white-20": "_1S31mEHMzu94gIf5W00vQ5",
+        "ItemFocusAnimBorder-darkGrey": "_3qGIi9phn_i9vlXbBfE2N4",
+        "ItemFocusAnim-green": "PKY6xp7_WNHMI65Uc8yJ_",
+        focusAnimation: "_1AiJFdtfIMUo0maxXZuGYY",
+        hoverAnimation: "_2FZZ9Hxx9YxFh9K9vrhe9t",
       };
     },
     5310: (e) => {
@@ -1484,56 +1496,56 @@
           return "CCloud_GetClientEncryptionKey_Request";
         }
       }
-      class E extends p.Message {
+      class A extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            E.prototype.key || b.Sg(E.M()),
+            A.prototype.key || b.Sg(A.M()),
             p.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   key: { n: 1, br: b.qM.readBytes, bw: b.gp.writeBytes },
                   crc: { n: 2, br: b.qM.readInt32, bw: b.gp.writeInt32 },
                 },
               }),
-            E.sm_m
+            A.sm_m
           );
         }
         static MBF() {
-          return E.sm_mbf || (E.sm_mbf = b.w0(E.M())), E.sm_mbf;
+          return A.sm_mbf || (A.sm_mbf = b.w0(A.M())), A.sm_mbf;
         }
         toObject(e = !1) {
-          return E.toObject(e, this);
+          return A.toObject(e, this);
         }
         static toObject(e, t) {
-          return b.BT(E.M(), e, t);
+          return b.BT(A.M(), e, t);
         }
         static fromObject(e) {
-          return b.Uq(E.M(), e);
+          return b.Uq(A.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (B().BinaryReader)(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return b.zj(E.MBF(), e, t);
+          return b.zj(A.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (B().BinaryWriter)();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          b.i0(E.M(), e, t);
+          b.i0(A.M(), e, t);
         }
         serializeBase64String() {
           var e = new (B().BinaryWriter)();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_GetClientEncryptionKey_Response";
@@ -1615,18 +1627,18 @@
           return "CCloud_CDNReport_Notification";
         }
       }
-      class A extends p.Message {
+      class E extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            A.prototype.host || b.Sg(A.M()),
+            E.prototype.host || b.Sg(E.M()),
             p.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
                 fields: {
                   host: { n: 1, br: b.qM.readString, bw: b.gp.writeString },
                   path: { n: 2, br: b.qM.readString, bw: b.gp.writeString },
@@ -1678,39 +1690,39 @@
                   },
                 },
               }),
-            A.sm_m
+            E.sm_m
           );
         }
         static MBF() {
-          return A.sm_mbf || (A.sm_mbf = b.w0(A.M())), A.sm_mbf;
+          return E.sm_mbf || (E.sm_mbf = b.w0(E.M())), E.sm_mbf;
         }
         toObject(e = !1) {
-          return A.toObject(e, this);
+          return E.toObject(e, this);
         }
         static toObject(e, t) {
-          return b.BT(A.M(), e, t);
+          return b.BT(E.M(), e, t);
         }
         static fromObject(e) {
-          return b.Uq(A.M(), e);
+          return b.Uq(E.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (B().BinaryReader)(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
+            r = new E();
+          return E.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return b.zj(A.MBF(), e, t);
+          return b.zj(E.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (B().BinaryWriter)();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          b.i0(A.M(), e, t);
+          b.i0(E.M(), e, t);
         }
         serializeBase64String() {
           var e = new (B().BinaryWriter)();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_ExternalStorageTransferReport_Notification";
@@ -1845,18 +1857,18 @@
           return "CCloud_AppLaunchIntent_Response";
         }
       }
-      class L extends p.Message {
+      class D extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            L.prototype.appid || b.Sg(L.M()),
+            D.prototype.appid || b.Sg(D.M()),
             p.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
                 fields: {
                   appid: { n: 1, br: b.qM.readUint32, bw: b.gp.writeUint32 },
                   client_id: {
@@ -1874,60 +1886,6 @@
                     br: b.qM.readBool,
                     bw: b.gp.writeBool,
                   },
-                },
-              }),
-            L.sm_m
-          );
-        }
-        static MBF() {
-          return L.sm_mbf || (L.sm_mbf = b.w0(L.M())), L.sm_mbf;
-        }
-        toObject(e = !1) {
-          return L.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return b.BT(L.M(), e, t);
-        }
-        static fromObject(e) {
-          return b.Uq(L.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (B().BinaryReader)(e),
-            r = new L();
-          return L.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return b.zj(L.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (B().BinaryWriter)();
-          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          b.i0(L.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (B().BinaryWriter)();
-          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloud_AppExitSyncDone_Notification";
-        }
-      }
-      class D extends p.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            D.prototype.appid || b.Sg(D.M()),
-            p.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
-                fields: {
-                  appid: { n: 1, br: b.qM.readUint32, bw: b.gp.writeUint32 },
                 },
               }),
             D.sm_m
@@ -1963,6 +1921,60 @@
         serializeBase64String() {
           var e = new (B().BinaryWriter)();
           return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCloud_AppExitSyncDone_Notification";
+        }
+      }
+      class L extends p.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            L.prototype.appid || b.Sg(L.M()),
+            p.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            L.sm_m ||
+              (L.sm_m = {
+                proto: L,
+                fields: {
+                  appid: { n: 1, br: b.qM.readUint32, bw: b.gp.writeUint32 },
+                },
+              }),
+            L.sm_m
+          );
+        }
+        static MBF() {
+          return L.sm_mbf || (L.sm_mbf = b.w0(L.M())), L.sm_mbf;
+        }
+        toObject(e = !1) {
+          return L.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return b.BT(L.M(), e, t);
+        }
+        static fromObject(e) {
+          return b.Uq(L.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (B().BinaryReader)(e),
+            r = new L();
+          return L.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return b.zj(L.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (B().BinaryWriter)();
+          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          b.i0(L.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (B().BinaryWriter)();
+          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_ClientGetAppQuotaUsage_Request";
@@ -2130,71 +2142,12 @@
           return "CCloud_AppFileInfo";
         }
       }
-      class Q extends p.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Q.prototype.appid || b.Sg(Q.M()),
-            p.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Q.sm_m ||
-              (Q.sm_m = {
-                proto: Q,
-                fields: {
-                  appid: { n: 1, br: b.qM.readUint32, bw: b.gp.writeUint32 },
-                  synced_change_number: {
-                    n: 2,
-                    br: b.qM.readUint64String,
-                    bw: b.gp.writeUint64String,
-                  },
-                },
-              }),
-            Q.sm_m
-          );
-        }
-        static MBF() {
-          return Q.sm_mbf || (Q.sm_mbf = b.w0(Q.M())), Q.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Q.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return b.BT(Q.M(), e, t);
-        }
-        static fromObject(e) {
-          return b.Uq(Q.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (B().BinaryReader)(e),
-            r = new Q();
-          return Q.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return b.zj(Q.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (B().BinaryWriter)();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          b.i0(Q.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (B().BinaryWriter)();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloud_GetAppFileChangelist_Request";
-        }
-      }
       class K extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            K.prototype.current_change_number || b.Sg(K.M()),
-            p.Message.initialize(this, e, 0, -1, [2, 4, 5], null);
+            K.prototype.appid || b.Sg(K.M()),
+            p.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -2202,33 +2155,9 @@
               (K.sm_m = {
                 proto: K,
                 fields: {
-                  current_change_number: {
-                    n: 1,
-                    br: b.qM.readUint64String,
-                    bw: b.gp.writeUint64String,
-                  },
-                  files: { n: 2, c: H, r: !0, q: !0 },
-                  is_only_delta: {
-                    n: 3,
-                    br: b.qM.readBool,
-                    bw: b.gp.writeBool,
-                  },
-                  path_prefixes: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: b.qM.readString,
-                    bw: b.gp.writeRepeatedString,
-                  },
-                  machine_names: {
-                    n: 5,
-                    r: !0,
-                    q: !0,
-                    br: b.qM.readString,
-                    bw: b.gp.writeRepeatedString,
-                  },
-                  app_buildid_hwm: {
-                    n: 6,
+                  appid: { n: 1, br: b.qM.readUint32, bw: b.gp.writeUint32 },
+                  synced_change_number: {
+                    n: 2,
                     br: b.qM.readUint64String,
                     bw: b.gp.writeUint64String,
                   },
@@ -2267,6 +2196,89 @@
         serializeBase64String() {
           var e = new (B().BinaryWriter)();
           return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCloud_GetAppFileChangelist_Request";
+        }
+      }
+      class Q extends p.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Q.prototype.current_change_number || b.Sg(Q.M()),
+            p.Message.initialize(this, e, 0, -1, [2, 4, 5], null);
+        }
+        static M() {
+          return (
+            Q.sm_m ||
+              (Q.sm_m = {
+                proto: Q,
+                fields: {
+                  current_change_number: {
+                    n: 1,
+                    br: b.qM.readUint64String,
+                    bw: b.gp.writeUint64String,
+                  },
+                  files: { n: 2, c: H, r: !0, q: !0 },
+                  is_only_delta: {
+                    n: 3,
+                    br: b.qM.readBool,
+                    bw: b.gp.writeBool,
+                  },
+                  path_prefixes: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: b.qM.readString,
+                    bw: b.gp.writeRepeatedString,
+                  },
+                  machine_names: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: b.qM.readString,
+                    bw: b.gp.writeRepeatedString,
+                  },
+                  app_buildid_hwm: {
+                    n: 6,
+                    br: b.qM.readUint64String,
+                    bw: b.gp.writeUint64String,
+                  },
+                },
+              }),
+            Q.sm_m
+          );
+        }
+        static MBF() {
+          return Q.sm_mbf || (Q.sm_mbf = b.w0(Q.M())), Q.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Q.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return b.BT(Q.M(), e, t);
+        }
+        static fromObject(e) {
+          return b.Uq(Q.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (B().BinaryReader)(e),
+            r = new Q();
+          return Q.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return b.zj(Q.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (B().BinaryWriter)();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          b.i0(Q.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (B().BinaryWriter)();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_GetAppFileChangelist_Response";
@@ -3959,7 +3971,7 @@
             return e.SendMsg(
               "Cloud.GetClientEncryptionKey#1",
               (0, g.I8)(N, t),
-              E,
+              A,
               { ePrivilege: 1 },
             );
           }),
@@ -3971,7 +3983,7 @@
           (e.ExternalStorageTransferReport = function (e, t) {
             return e.SendNotification(
               "Cloud.ExternalStorageTransferReport#1",
-              (0, g.I8)(A, t),
+              (0, g.I8)(E, t),
               { ePrivilege: 1 },
             );
           }),
@@ -4037,8 +4049,8 @@
           (e.GetAppFileChangelist = function (e, t) {
             return e.SendMsg(
               "Cloud.GetAppFileChangelist#1",
-              (0, g.I8)(Q, t),
-              K,
+              (0, g.I8)(K, t),
+              Q,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -4066,14 +4078,14 @@
           (e.SignalAppExitSyncDone = function (e, t) {
             return e.SendNotification(
               "Cloud.SignalAppExitSyncDone#1",
-              (0, g.I8)(L, t),
+              (0, g.I8)(D, t),
               { ePrivilege: 1 },
             );
           }),
           (e.ClientGetAppQuotaUsage = function (e, t) {
             return e.SendMsg(
               "Cloud.ClientGetAppQuotaUsage#1",
-              (0, g.I8)(D, t),
+              (0, g.I8)(L, t),
               $,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -4319,11 +4331,11 @@
       function Ne() {
         return a.useContext(Oe).store;
       }
-      function Ee() {
+      function Ae() {
         return a.useContext(Oe).bPinnedView;
       }
       var Pe = r(61859);
-      const Ae = new he.wd("GameNotesCloudStore").Debug;
+      const Ee = new he.wd("GameNotesCloudStore").Debug;
       function Ge(e) {
         return "appid" in e
           ? ["GameNotes", "NotesByAppID", e.appid]
@@ -4339,7 +4351,7 @@
           structuralSharing: !0,
         };
       }
-      function Le(e, t) {
+      function De(e, t) {
         const r = (0, Te.jE)(),
           i = Ne(),
           n = ve(e);
@@ -4356,7 +4368,7 @@
           },
         });
       }
-      function De(e, t, r) {
+      function Le(e, t, r) {
         e.setQueryData(Ge(t), (e) => e && r(e));
       }
       function $e(e, t) {
@@ -4373,20 +4385,20 @@
         );
       }
       var He = r(90286),
-        Qe = r(26555),
-        Ke = r(55608),
+        Ke = r(26555),
+        Qe = r(55608),
         Ve = r(79497);
-      const Xe = Ke.DQ.nodes.image,
+      const Xe = Qe.DQ.nodes.image,
         Ye = {
           nodes: {
-            ...Ke.DQ.nodes,
+            ...Qe.DQ.nodes,
             cloudimage: {
               ...Xe,
               parseDOM: [],
               bbCode: { ...Xe.bbCode, tag: "cloudimg" },
             },
           },
-          marks: { ...Ke.DQ.marks },
+          marks: { ...Qe.DQ.marks },
         },
         Je = new Ve.W(Ye);
       var Ze = r(33645),
@@ -4588,7 +4600,7 @@
               },
               mutationFn: async (t) => {
                 const { title: a, bbcode: s } = t;
-                Ae(`Saving note ${a}`);
+                Ee(`Saving note ${a}`);
                 const o = await r.fetchQuery(ke(i, n));
                 if (!o) throw `Failed to load notes for ${JSON.stringify(n)}`;
                 const l = o.find((t) => t.id == e.id),
@@ -4607,7 +4619,7 @@
               },
               onMutate(t) {
                 const i = { ...e, title: t.title, content: t.bbcode };
-                return De(r, n, (e) => e.map((e) => (e.id == i.id ? i : e))), i;
+                return Le(r, n, (e) => e.map((e) => (e.id == i.id ? i : e))), i;
               },
               onSuccess(e, t, i) {
                 r.setQueryData(Ge(n), e);
@@ -4651,7 +4663,7 @@
               d(e);
           }
         }, [c, t.content]);
-        const { bDirty: m } = (0, Qe.i)(u, { msAutosaveTimeout: 1e3 * Ut });
+        const { bDirty: m } = (0, Ke.i)(u, { msAutosaveTimeout: 1e3 * Ut });
         a.useEffect(() => {
           m &&
             !o.current &&
@@ -4694,7 +4706,7 @@
             );
           })(t.appid, Je.pm_schema),
           B = xe(),
-          b = Le(t, B);
+          b = De(t, B);
         return (0, i.jsx)(at.Xv, {
           ProcessFileUpload: p,
           bAllowImageHotLinking: !0,
@@ -4730,7 +4742,7 @@
           [n, s, o] = (0, Rt.uD)(!1),
           l = "single" == a.useContext(Oe).mode,
           c = xe(),
-          { mutate: u, isPending: d } = Le(t, c),
+          { mutate: u, isPending: d } = De(t, c),
           m = a.useCallback(() => {
             !r && t.not_persisted ? u() : s();
           }, [r, t, u, s]);
@@ -4800,16 +4812,16 @@
       var It = r(58632),
         xt = r.n(It),
         Nt = r(37403),
-        Et = r(30470);
+        At = r(30470);
       let Pt;
-      const At = 864e5;
+      const Et = 864e5;
       function Gt(e) {
-        return `appinfo_${e}_${Et.TS.LANGUAGE}`;
+        return `appinfo_${e}_${At.TS.LANGUAGE}`;
       }
       function kt(e) {
-        return Boolean(e && Date.now() - e.timeCached < At);
+        return Boolean(e && Date.now() - e.timeCached < Et);
       }
-      function Lt(e) {
+      function Dt(e) {
         const t = (0, o.KV)(),
           r = (0, o.rX)();
         return (0, Fe.I)({
@@ -4827,7 +4839,7 @@
                       const a = r.slice().filter((e) => !i.has(e));
                       if (a.length) {
                         const r = g.w.Init(Nt._z);
-                        r.Body().set_language((0, n.sf)(Et.TS.LANGUAGE)),
+                        r.Body().set_language((0, n.sf)(At.TS.LANGUAGE)),
                           r.Body().set_appids(a);
                         const s = await Nt.BE.GetApps(e, r);
                         if (1 != s.GetEResult()) throw s.GetErrorMessage();
@@ -4848,25 +4860,25 @@
                 Pt
               );
             })(t, r).load(e),
-          staleTime: At,
+          staleTime: Et,
           enabled: !!e,
         }).data;
       }
-      function Dt(e) {
+      function Lt(e) {
         const { bStandalonePage: t } = e,
           r = (0, s.W5)(),
           n = $e(
             "appid" in r.params && Number(r.params.appid),
             "shortcut_name" in r.params && r.params.shortcut_name,
           ),
-          o = Kt(),
+          o = Qt(),
           l = (function (e) {
             const t = (0, Te.jE)(),
               r = Ne();
             return a.useCallback(() => {
               const i = (0, Pe.we)("#UserGameNotes_UntitledNote_Title"),
                 n = r.NewNote(e, i);
-              return De(t, e, (e) => [...e, n]), n.id;
+              return Le(t, e, (e) => [...e, n]), n.id;
             }, [t, r, e]);
           })(n),
           c = a.useRef(void 0),
@@ -4921,7 +4933,7 @@
             bStandalonePage: l,
           } = e,
           [c, u] = (0, pt.SP)("NotesListCollapsed", !1),
-          d = Ee(),
+          d = Ae(),
           m = (0, ot.Qn)(),
           g = (0, s.W5)(),
           p = (0, zt.vn)(g.params.noteid || d ? "ActivePage" : "PageList"),
@@ -4933,12 +4945,12 @@
                   ? e.title
                   : (0, Pe.we)("#UserGameNotes_Untitled"),
               identifier: e.id,
-              content: (0, i.jsx)(Qt, { noteParent: t, note: e }),
+              content: (0, i.jsx)(Kt, { noteParent: t, note: e }),
               pageClassName: bt.NotePage,
               hideTitle: !0,
             };
           }),
-          b = Kt(),
+          b = Qt(),
           M = a.useCallback((e) => b(t, e), [b, t]),
           w = ot.TS.IN_STEAMUI
             ? (0, Pe.we)("#UserGameNotes_NotesList")
@@ -4975,7 +4987,7 @@
       }
       function Ht(e) {
         const { noteParent: t } = e,
-          r = Lt("appid" in t ? t.appid : void 0);
+          r = Dt("appid" in t ? t.appid : void 0);
         let n;
         return (
           (n = "appid" in t ? (null == r ? void 0 : r.name) : t.shortcut),
@@ -4984,12 +4996,12 @@
           })
         );
       }
-      function Qt(e) {
+      function Kt(e) {
         const { noteParent: t, note: r } = e,
           n = zt.v$(),
-          s = Kt(),
+          s = Qt(),
           o = a.useCallback(() => s(t), [s, t]),
-          l = Ee();
+          l = Ae();
         return (0, i.jsxs)(i.Fragment, {
           children: [
             !l && (0, i.jsx)(zt._Z, { onActivate: o }),
@@ -4997,7 +5009,7 @@
           ],
         });
       }
-      function Kt(e = !1) {
+      function Qt(e = !1) {
         const t = (0, ot.Qn)(),
           r = (0, s.W6)(),
           i = e || t;
@@ -5066,7 +5078,7 @@
       }
       function Zt(e) {
         const { appid: t } = e,
-          r = Lt(t);
+          r = Dt(t);
         return null == r ? void 0 : r.name;
       }
       function er(e, t, r = {}) {
@@ -5190,7 +5202,7 @@
               }),
               (0, i.jsx)(s.qh, {
                 path: l.AppNotes(":appid", ":noteid?"),
-                children: (0, i.jsx)(Dt, {}),
+                children: (0, i.jsx)(Lt, {}),
               }),
               (0, i.jsx)(s.qh, {
                 children: (0, i.jsx)(s.rd, { to: `${l.List()}` }),

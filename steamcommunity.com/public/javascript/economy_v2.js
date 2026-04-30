@@ -233,7 +233,10 @@ function OnLocationChange ( elIgnored, hash )
 	else
 	{
 		var inventoryDefault = UserYou.GetDefaultInventoryId();
-		ShowItemInventory( inventoryDefault.appid, inventoryDefault.contextid );
+		if ( inventoryDefault )
+		{
+			ShowItemInventory( inventoryDefault.appid, inventoryDefault.contextid );
+		}
 	}
 }
 
@@ -252,13 +255,26 @@ function InventoryPreviousPage()
 	g_ActiveInventory.PreviousPage();
 }
 
+function ToggleTagFilters()
+{
+	var elTagHolder = $( 'filter_options' );
+	if( elTagHolder && elTagHolder.hasClassName( 'filter_expanded' ) )
+	{
+		HideTagFilters();
+	}
+	else
+	{
+		ShowTagFilters();
+	}
+}
+
 function ShowTagFilters()
 {
 	if( g_ActiveInventory )
 		g_ActiveInventory.ShowTags();
 
-	$( 'filter_tag_show' ).hide();
-	$( 'filter_tag_hide' ).show();
+	$J( '#filter_tag_show' ).css( 'visibility', 'hidden' );
+	$J( '#filter_tag_hide' ).css( 'visibility', 'visible' );
 
 	var elTagHolder = $( 'filter_options' );
 	if( elTagHolder )
@@ -277,8 +293,8 @@ function HideTagFilters()
 
 	if( g_ActiveInventory && g_ActiveInventory.getTagContainer() )
 	{
-		$( 'filter_tag_show' ).show();
-		$( 'filter_tag_hide' ).hide();
+		$J( '#filter_tag_show' ).css( 'visibility', 'visible' );
+		$J( '#filter_tag_hide' ).css( 'visibility', 'hidden' );
 		Filter.UpdateTagFiltering( {} );
 	}
 
@@ -755,8 +771,7 @@ CInventory.prototype.AddInventoryData = function( data )
 						description.tags.push( kStandardTag_Unmarketable );
 				}
 
-				 
-          }
+				          }
 					
 				description.use_count = 0;
 
@@ -2985,10 +3000,13 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			var elTab = $('inventory_link_' + appid );
 			$J( '.games_list_tab.active' ).removeClass( 'active' );
 
-			var $ResponsiveSelect = $J('#responsive_inventory_select');
-			var $Opt = $ResponsiveSelect.children('[data-appid=' + parseInt(appid) + ']');
+			var $ResponsiveSelect = $J('#responsive_inventory_select_droplist');
+			var $Opt = $ResponsiveSelect.find('#' + appid);
 			if ( $Opt.length )
-				$ResponsiveSelect.val( $Opt.attr('value') );
+			{
+				$J('#responsive_inventory_select').val( appid );
+				$J('#responsive_inventory_select_trigger').html( $Opt.html() );
+			}
 
 			var elPendingGift = $('pending_gift_link' );
 			if ( elPendingGift )

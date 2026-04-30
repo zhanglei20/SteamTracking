@@ -4784,7 +4784,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_WindowsCompat_Description" "Windows hiện đang chạy Steam trong chế độ tương thích Windows. Điều này có thể gây ra vấn đề với một số tính năng Steam và với việc chạy trò chơi. Xin vui lòng theo hướng dẫn sau để bỏ chế độ tương thích."
 "Steam_WindowsCompat_DoNotShowAgain" "Không hiện lại"
 "Steam_WindowsCompat_SupportLinkDesc" "Tôi phải làm sao để tắt chế độ tương thích?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Đóng Steam"
 "Steam_WindowsCompat_RestartSteam" "Khởi động lại"
 "Steam_WindowsCompat_Continue" "Tiếp tục"
@@ -4865,11 +4864,12 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "RescueDialog_ExitSteam" "Thoát Steam"
 
 "TransportDialog_Title" "Lỗi truyền tải không mong muốn"
-"TransportDialog_Explanation" "Steam gặp lỗi không mong muốn trong khi khởi động (0x%errorCount%). Nhấp <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/7516-B23C-D572-5B0E>vào đây</a> để biết thêm thông tin."
+"TransportDialog_Explanation" "Steam gặp lỗi không mong muốn trong khi khởi động (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Chọn một trong những tùy chọn sau đây:"
 "TransportDialog_RestartSteam" "Khởi động lại Steam"
 "TransportDialog_RestartSteamWebHelper" "Khởi động lại steamwebhelper"
 "TransportDialog_ContinueAnyway" "Chỉ cho Valve: Cứ tiếp tục"
+"TransportDialog_SupportLinkDesc" "Xem thêm thông tin"
 "TransportDialog_ExitSteam" "Thoát Steam"
 
 "DownloadRegion_default"				 "Không rõ"

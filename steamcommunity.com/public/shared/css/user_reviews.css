@@ -31,7 +31,7 @@ select {
 	#rightContents .panel {
 		background: rgba(27,27,27,.36);
 		border-radius: 4px;
-		padding: 10px 10px 10px 11px;
+		padding: 10px;
 		margin: 0 0 10px 0;
 		border: 1px solid #1f1f20;
 		box-shadow: 1px 1px 0 0 #39393a;
@@ -485,7 +485,7 @@ select {
 
 }
 
-	html.responsive.gamepad .gameLogoHolder_default img {
+	html.responsive.GamepadMode .gameLogoHolder_default img {
 		width: 100%;
 		padding: 0;
 	}
@@ -525,7 +525,7 @@ select {
 }
 
 .setting_ctn {
-	padding-left: 8px;
+	padding-inline: 8px;
 }
 
 .review_comments_disabled {
@@ -557,4 +557,19 @@ select {
 }
 .saved_hardware:hover {
 	color: #66C0F4;
+}
+
+.reviewer_hardware_container
+{
+	padding: 4px;
+	margin: 0px 8px 8px 0px;
+	color: #AFDEFF;
+	background-color: #486582;
+}
+.reviewer_hardware_container .reviewer_hardware
+{
+	font-weight: bold;
+}
+.review_area .reviewer_hardware_container {
+	margin-top: 10px;
 }

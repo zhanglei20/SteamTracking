@@ -18,44 +18,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_) {
-        return (
-          !!_ &&
-          ("game" === _ ||
-            "dlc" === _ ||
-            "software" === _ ||
-            "music" === _ ||
-            "application" === _ ||
-            "demo" === _ ||
-            "hardware" === _ ||
-            "mod" === _ ||
-            "video" == _ ||
-            "beta" === _ ||
-            "advertising" === _)
-        );
-      }
-      function _(_) {
-        return (
-          null != _ &&
-          (0 == _ ||
-            4 == _ ||
-            6 == _ ||
-            11 == _ ||
-            1 == _ ||
-            10 == _ ||
-            2 == _ ||
-            7 == _ ||
-            12 == _ ||
-            14 == _)
-        );
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -68,20 +30,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            _: _,
-            imageType: __webpack_require__,
-            bPreferAssetWithoutOverride: _,
-          } = _,
-          { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(
-            _,
-            __webpack_require__,
-            _,
-          );
-        if (
-          "library" === __webpack_require__ ||
-          "vertical" == __webpack_require__
-        )
+        const { _: _, imageType: _, bPreferAssetWithoutOverride: _ } = _,
+          { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(_, _, _);
+        if ("library" === _ || "vertical" == _)
           return (0, _.jsx)(_._, {
             _: _,
             bPreferAssetWithoutOverride: _,
@@ -89,7 +40,7 @@
         let _,
           _,
           _ = "";
-        if ("main" === __webpack_require__)
+        if ("main" === _)
           (_ = _().mainCapsuleImgWidth),
             (_ = _().mainCapsuleImgHeight),
             (_ = _().MainCapsuleImageContainer);
@@ -102,7 +53,7 @@
             className: (0, _._)(_, "CapsuleImageCtn"),
           });
         if (null == _) return null;
-        let _ = (0, _._)(_, "header" === __webpack_require__);
+        let _ = (0, _._)(_, "header" === _);
         return (0, _.jsx)("div", {
           className: (0, _._)(_, "CapsuleImageCtn"),
           children: (0, _.jsx)(_._, {
@@ -128,9 +79,10 @@
         return (
           _ &&
             (function (_, _, _) {
-              _
-                ? _.push((0, _._)(_, "header"), (0, _._)(_, "main_capsule"))
-                : _.push((0, _._)(_, "main_capsule"), (0, _._)(_, "header"));
+              const _ = (0, _._)(_, "header_2x") ?? (0, _._)(_, "header"),
+                _ =
+                  (0, _._)(_, "main_capsule_2x") ?? (0, _._)(_, "main_capsule");
+              _ ? _.push(_, _) : _.push(_, _);
             })(_, _, _),
           __webpack_require__.filter((_) => !!_)
         );
@@ -159,11 +111,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            _: _,
-            bPreferLibrary: __webpack_require__,
-            bPreferAssetWithoutOverride: _,
-          } = _,
+        const { _: _, bPreferLibrary: _, bPreferAssetWithoutOverride: _ } = _,
           { storeItemDefaultInfo: _, storeItemAsset: _ } = (0, _._)(
             _,
             "vertical",
@@ -178,7 +126,7 @@
           _,
           _,
         );
-        if (_ && (!__webpack_require__ || !_))
+        if (_ && (!_ || !_))
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _().HeroCapsuleImageContainer,
@@ -203,7 +151,7 @@
             className: (0, _._)(
               _().LibraryFallbackAssetImageContainer,
               _().VerticalCapsule,
-              __webpack_require__ ? _().ForceLibrarySizing : "",
+              _ ? _().ForceLibrarySizing : "",
             ),
             children: [
               (0, _.jsx)("div", {
@@ -300,18 +248,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            appids: _,
-            hide_status_banners: __webpack_require__,
-            show_early_access: _,
-          } = _,
+        const { appids: _, hide_status_banners: _, show_early_access: _ } = _,
           { data: _ } = (0, _._)(),
           { data: _ } = (0, _._)(),
           _ = _.length > 0 && _.every((_) => _ && _.has(_)),
           _ = _.length > 0 && _.every((_) => _ && _.has(_)),
           _ = (function (_) {
             const { data: _ } = _(),
-              [__webpack_require__, _] = (0, _.useState)(!1),
+              [_, _] = (0, _.useState)(!1),
               _ = (0, _._)(),
               _ = (0, _._)();
             return (
@@ -319,7 +263,7 @@
                 if (!_ || 0 == _.length || !_) return _(!1);
                 (async () => {
                   const _ = await Promise.all(
-                    _.map((_) =>
+                    _.filter((_) => !!_).map((_) =>
                       _.fetchQuery(
                         (0, _._)(_, {
                           appid: _,
@@ -337,12 +281,12 @@
                   );
                 })();
               }, [_, _, _, _]),
-              __webpack_require__
+              _
             );
           })(_),
-          _ = _ && !__webpack_require__,
-          _ = _ && !__webpack_require__,
-          _ = !__webpack_require__ && _;
+          _ = _ && !_,
+          _ = _ && !_,
+          _ = !_ && _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().CapsuleDecorators, "CapsuleDecorators"),
           children: [
@@ -418,9 +362,9 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_, __webpack_require__);
+          { data: _ } = (0, _._)(_, _);
         let _;
         _ &&
           1 == _.included_appids?.length &&
@@ -444,7 +388,7 @@
             appid: _.included_appids[0],
           });
         const { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_, __webpack_require__),
+          { data: _ } = (0, _._)(_, _),
           _ = _?.visible ? _ : _;
         return {
           storeItemAsset: _?.visible ? _ : _,
@@ -578,18 +522,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "bundle" == _
-          ? "bundle"
-          : "sub" == _
-            ? "sub"
-            : ((0, _._)(_), "app");
-      }
       function _(_) {
         return 2 == _ ? "bundle" : 1 == _ ? "sub" : "app";
       }
@@ -627,8 +562,8 @@
           : null;
       }
       function _(_) {
-        const { className: _, _: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__),
+        const { className: _, _: _ } = _,
+          _ = (0, _._)(_),
           [_, _] = (0, _._)();
         let _ = "unknown";
         if (2 == _)

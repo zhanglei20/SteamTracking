@@ -2718,7 +2718,7 @@
           );
         return [_, _];
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const _ = new URLSearchParams(_.location.search.substring(1));
         for (const _ in _)
           if (_.hasOwnProperty(_)) {

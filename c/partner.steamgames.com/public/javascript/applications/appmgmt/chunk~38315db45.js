@@ -5,6 +5,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -113,6 +114,18 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

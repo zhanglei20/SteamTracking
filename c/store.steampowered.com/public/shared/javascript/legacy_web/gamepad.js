@@ -336,7 +336,7 @@
       function _(_) {
         const {
             onOKActionDescription: _,
-            onCancelActionDescription: __webpack_require__,
+            onCancelActionDescription: _,
             onSecondaryActionDescription: _,
             onOptionsActionDescription: _,
             onMenuActionDescription: _,
@@ -347,8 +347,7 @@
           };
         return (
           void 0 !== _ && (_[_._._] = _),
-          void 0 !== __webpack_require__ &&
-            (_[_._.CANCEL] = __webpack_require__),
+          void 0 !== _ && (_[_._.CANCEL] = _),
           void 0 !== _ && (_[_._.SECONDARY] = _),
           void 0 !== _ && (_[_._.OPTIONS] = _),
           void 0 !== _ && (_[_._.START] = _),
@@ -1158,12 +1157,12 @@
         _: "y",
         _: "x",
       };
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         console.assert
-          ? 0 == __webpack_require__.length
+          ? 0 == _.length
             ? console.assert(!!_, _)
-            : console.assert(!!_, _, ...__webpack_require__)
-          : _ || console.warn(_, ...__webpack_require__);
+            : console.assert(!!_, _, ..._)
+          : _ || console.warn(_, ..._);
       }
       const _ = new _("FocusHistory"),
         _ = _.Debug;
@@ -1172,25 +1171,19 @@
         constructor(_) {
           this.m_root = _;
         }
-        static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavState(_, _ = !0, _ = !0) {
           return {
-            root: _.SerializeNavNode(_, _, __webpack_require__),
+            root: _.SerializeNavNode(_, _, _),
             bHadFocus: _.BFocusWithin() && _.Tree.BIsActiveWithinContext(),
           };
         }
-        static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavNode(_, _ = !0, _ = !0) {
           let _;
           const [_, _] = _.GetChildren();
           _.length &&
             -1 != _ &&
             _ &&
-            (_ = _.map((_, _) =>
-              _.SerializeNavNode(
-                _,
-                _ == _ || __webpack_require__,
-                __webpack_require__,
-              ),
-            ));
+            (_ = _.map((_, _) => _.SerializeNavNode(_, _ == _ || _, _)));
           const _ = {
             rgChildren: _,
           };
@@ -1200,15 +1193,14 @@
             _
           );
         }
-        static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavState(_, _, _ = 0) {
           const { root: _, bHadFocus: _ } = _;
           _.Tree.Controller.RestoreHistoryTransaction(() => {
             _.RestoreSerializedNavNode(_, _),
-              (1 == __webpack_require__ || (0 == __webpack_require__ && _)) &&
-                _.BTakeFocus(_.APPLICATION);
+              (1 == _ || (0 == _ && _)) && _.BTakeFocus(_.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavNode(_, _, _ = 0) {
           const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
           _ && _(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
@@ -1217,7 +1209,7 @@
                 let _ = "";
                 for (let _ = 0; _ < _; _++) _ += "*";
                 return (_ += " "), _;
-              })(__webpack_require__)}`
+              })(_)}`
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
@@ -1257,8 +1249,8 @@
       function _(_) {
         return _.SerializeNavState(_, !0, !1);
       }
-      function _(_, _, __webpack_require__ = 0) {
-        return _.RestoreSerializedNavState(_, _, __webpack_require__);
+      function _(_, _, _ = 0) {
+        return _.RestoreSerializedNavState(_, _, _);
       }
       class _ extends _ {
         m_rgHistory = [];
@@ -1937,10 +1929,10 @@
         }
       }
       function _(_, _) {
-        const { top: __webpack_require__, left: _, behavior: _ } = _,
+        const { top: _, left: _, behavior: _ } = _,
           _ = _(_);
         _.scrollTo({
-          top: _.scrollTop + (__webpack_require__ ?? 0),
+          top: _.scrollTop + (_ ?? 0),
           left: _.scrollLeft + (_ ?? 0),
           behavior: _,
         });
@@ -2150,16 +2142,15 @@
         }
         SetProperties(_) {
           const _ =
-            ((__webpack_require__ = this.m_Properties?.actionDescriptionMap),
+            ((_ = this.m_Properties?.actionDescriptionMap),
             (_ = _?.actionDescriptionMap),
-            !(null == __webpack_require__ || null == _
-              ? __webpack_require__ === _
-              : "object" == typeof __webpack_require__ &&
+            !(null == _ || null == _
+              ? _ === _
+              : "object" == typeof _ &&
                 "object" == typeof _ &&
-                Object.keys(__webpack_require__).length ===
-                  Object.keys(_).length &&
-                Object.keys(__webpack_require__).every(
-                  (_) => _.hasOwnProperty(_) && __webpack_require__[_] === _[_],
+                Object.keys(_).length === Object.keys(_).length &&
+                Object.keys(_).every(
+                  (_) => _.hasOwnProperty(_) && _[_] === _[_],
                 )));
           var _, _;
           const _ = this.m_Properties?.focusableIfEmpty,
@@ -2437,16 +2428,15 @@
           const {
             focusable: _,
             focusableIfEmpty: _,
-            childFocusDisabled: __webpack_require__,
+            childFocusDisabled: _,
             fnCanTakeFocus: _,
           } = this.m_Properties;
           return this.m_bMounted
             ? _ && !_(this)
               ? "none"
-              : _ ||
-                  (_ && (__webpack_require__ || 0 == this.m_rgChildren.length))
+              : _ || (_ && (_ || 0 == this.m_rgChildren.length))
                 ? "self"
-                : !__webpack_require__ && this.m_rgChildren.length
+                : !_ && this.m_rgChildren.length
                   ? "children"
                   : "none"
             : "none";
@@ -2594,7 +2584,7 @@
           if (this.BTryInternalNavigation(_, _.detail.is_repeat ?? !1))
             return !0;
           const {
-            onMoveUp: __webpack_require__,
+            onMoveUp: _,
             onMoveRight: _,
             onMoveDown: _,
             onMoveLeft: _,
@@ -2602,7 +2592,7 @@
           let _ = !1;
           switch (_) {
             case _._.DIR_UP:
-              __webpack_require__ && (_ = __webpack_require__(_.detail, this));
+              _ && (_ = __webpack_require__(_.detail, this));
               break;
             case _._.DIR_RIGHT:
               _ && (_ = _(_.detail, this));
@@ -3139,15 +3129,33 @@
       const _ = new _("FocusHistory").Debug;
       function _(_) {
         const _ = (_) => {
-            _(`preserving state and suppressing focus for tree ${_._}`);
-            const _ = "replace" == _.navigationType ? void 0 : _(_.Root);
-            window.navigation.updateCurrentEntry({
-              state: {
-                ...window.navigation.currentEntry?.getState(),
-                [_(_)]: _,
-              },
-            }),
-              _.DeferredFocus.SuppressFocus();
+            _(
+              `preserving state and suppressing focus for tree ${_._} for navigation type ${_.navigationType}`,
+            );
+            const _ = window.navigation.currentEntry?.getState() ?? {};
+            if ("replace" != _.navigationType) {
+              const _ = _(_.Root);
+              window.navigation.updateCurrentEntry({
+                state: {
+                  ..._,
+                  [_(_)]: _,
+                },
+              });
+            } else
+              _[_] &&
+                _.intercept({
+                  async handler() {
+                    const _ = window.navigation.currentEntry?.getState() ?? {};
+                    window.navigation.updateCurrentEntry({
+                      state: {
+                        ..._,
+                        [_]: !0,
+                      },
+                    });
+                  },
+                  focusReset: "manual",
+                });
+            _.DeferredFocus.SuppressFocus();
           },
           _ = (_) => {
             _(_)
@@ -3202,8 +3210,9 @@
                   `Wait for page enabled, suppressing focus in ${_._} until we hear that page is ready`,
                 ),
                   _.DeferredFocus.SuppressFocus();
-                const _ = () => {
-                    _(_)
+                const _ = _(_),
+                  _ = () => {
+                    _(_, _)
                       ? _.DeferredFocus.Reset()
                       : _.DeferredFocus.ExecuteQueuedFocus();
                   },
@@ -3214,11 +3223,8 @@
           _.GetUnregisterFunc()
         );
       }
-      function _(_) {
-        const _ = (function (_) {
-          const _ = window.navigation.currentEntry?.getState();
-          return _?.[_(_)];
-        })(_);
+      function _(_, _) {
+        const _ = _ ?? _(_);
         return (
           _(
             `Restoring focus state for ${_._}, ${_ ? "history available" : "no history"}`,
@@ -3228,6 +3234,10 @@
       }
       function _(_) {
         return `FocusHistory_${_._}`;
+      }
+      function _(_) {
+        const _ = window.navigation.currentEntry?.getState();
+        return _?.[_(_)];
       }
       let _;
       const _ = "FocusHistoryWaitForPage";
@@ -3455,9 +3465,9 @@
         }
         UpdateRootActionDescriptionMap() {
           const _ = {};
-          for (const { button: _, description: __webpack_require__ } of this
+          for (const { button: _, description: _ } of this
             .m_rgGlobalButtonHandlers)
-            __webpack_require__ && (_[_] = __webpack_require__);
+            _ && (_[_] = _);
           this.m_Root.SetProperties({
             ...this.m_Root.m_Properties,
             actionDescriptionMap: _,
@@ -3476,7 +3486,7 @@
           return this.HandleButtonDownEventAsLogicalEvent(_);
         }
         TryRootButtonListeners(_) {
-          for (const { button: _, fnCallback: __webpack_require__ } of this
+          for (const { button: _, fnCallback: _ } of this
             .m_rgGlobalButtonHandlers)
             if (_ == _.detail.button && !1 !== __webpack_require__(_))
               return !1;
@@ -3485,26 +3495,25 @@
           return !0;
         }
         HandleButtonDownEventAsLogicalEvent(_) {
-          let { bUnhandled: _, bHadLogicalEventMapping: __webpack_require__ } =
-            (function (_) {
-              const _ = [_._.DIR_UP, _._.DIR_DOWN, _._.DIR_LEFT, _._.DIR_RIGHT];
-              let _ = !0,
-                _ = !1,
-                _ = _[_.detail.button];
-              return (
-                _
-                  ? ((_ = !0), (_ = _(_.target, _, _.detail)))
-                  : -1 !== _.indexOf(_.detail.button) &&
-                    ((_ = !0), (_ = _(_.target, "vgp_ondirection", _.detail))),
-                {
-                  bUnhandled: _,
-                  bHadLogicalEventMapping: _,
-                }
-              );
-            })(_);
+          let { bUnhandled: _, bHadLogicalEventMapping: _ } = (function (_) {
+            const _ = [_._.DIR_UP, _._.DIR_DOWN, _._.DIR_LEFT, _._.DIR_RIGHT];
+            let _ = !0,
+              _ = !1,
+              _ = _[_.detail.button];
+            return (
+              _
+                ? ((_ = !0), (_ = _(_.target, _, _.detail)))
+                : -1 !== _.indexOf(_.detail.button) &&
+                  ((_ = !0), (_ = _(_.target, "vgp_ondirection", _.detail))),
+              {
+                bUnhandled: _,
+                bHadLogicalEventMapping: _,
+              }
+            );
+          })(_);
           return (
             _(
-              `Logical gamepad Event fired: ${_._[_.detail.button]}, had logical event: ${__webpack_require__}, was handled: ${!_}`,
+              `Logical gamepad Event fired: ${_._[_.detail.button]}, had logical event: ${_}, was handled: ${!_}`,
             ),
             _ && (_ = this.TryRootButtonListeners(_)),
             _ && (_ = this.m_Controller.FireUnhandledGamepadEventCallbacks(_)),
@@ -3662,7 +3671,8 @@
               _
                 ? _.BChildTakeFocus(_.AUTOFOCUS) ||
                   this.m_tree.TransferFocus(_.AUTOFOCUS, _)
-                : _.BTakeFocus(_.AUTOFOCUS);
+                : _.BTakeFocus(_.AUTOFOCUS) ||
+                  this.m_tree.TakeFocus(_.AUTOFOCUS);
           }
         }
       }
@@ -3679,12 +3689,15 @@
         m_bMounted = !0;
         m_schDeferredActivate = new _();
         m_FocusChangedCallbacks = new _._();
+        m_NavTreeActivatedOrReactivatedCallbacks = new _._();
         m_bIsGamepadInputSuppressed = !1;
-        constructor(_, _, _) {
+        m_bVR = !1;
+        constructor(_, _, _, _) {
           (this.m_controller = _),
             (this.m_rootWindow = _),
             (this.m_activeWindow = _),
-            (this.m_bIsGamepadInputSuppressed = _);
+            (this.m_bIsGamepadInputSuppressed = _),
+            (this.m_bVR = _);
         }
         get RootWindow() {
           return this.m_rootWindow;
@@ -3702,6 +3715,16 @@
             if (_.Window?.document.hasFocus()) return _;
           }
         }
+        FindNavTreeInWindow(_, _ = !0) {
+          for (
+            let _ = this.m_rgGamepadNavigationTrees.length - 1;
+            _ >= 0;
+            _--
+          ) {
+            const _ = this.m_rgGamepadNavigationTrees[_];
+            if ((!_ || _.BIsEnabled()) && _.Window == _) return _;
+          }
+        }
         OnMount(_) {
           _ == this.m_rootWindow && (this.m_bMounted = !0);
         }
@@ -3714,12 +3737,16 @@
               this.m_controller.DestroyContext(this))
             : _(`${this.LogName(_)} Child window destroyed`);
         }
-        SetActive(_, _, __webpack_require__ = void 0) {
+        SetActive(_, _, _ = void 0) {
           this.m_controller.BatchedUpdate(() => {
+            if (_ && !this.m_controller.BCanActivateContext(this))
+              return void _(
+                `${this.LogName(_)} Skipping context activation due to CFocusNavWindowContext`,
+              );
             const _ = this.m_valueIsActive.Value != _;
             _
               ? ((this.m_activeWindow = _),
-                (this.m_activeBrowserView = __webpack_require__),
+                (this.m_activeBrowserView = _),
                 this.m_controller.OnContextActivated(this))
               : ((this.m_activeBrowserView = void 0),
                 this.m_controller.OnContextDeactivated(this, !1)),
@@ -3759,6 +3786,9 @@
         BIsGamepadInputSuppressed() {
           return this.m_bIsGamepadInputSuppressed;
         }
+        BIsVR() {
+          return this.m_bVR;
+        }
         BIsActive() {
           return this.m_valueIsActive.Value;
         }
@@ -3785,7 +3815,10 @@
           }
         }
         SetActiveNavTree(_, _ = !1) {
-          if (_ && this.m_LastActiveNavTree == _) return;
+          if (_ && this.m_LastActiveNavTree == _)
+            return void this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(
+              _,
+            );
           const _ = this.m_LastActiveNavTree;
           _ && _._(this.m_rgGamepadNavigationTrees, _),
             _ || (_ = this.FindNavTreeToActivate());
@@ -3802,7 +3835,8 @@
               _ ||
                 !_ ||
                 _.DeferredFocus.BHasQueuedFocusNode() ||
-                _.DeferredFocus.RequestFocus(_.Root)),
+                _.DeferredFocus.RequestFocus(_.Root),
+              this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(_)),
             _ &&
               _ != this.m_LastActiveFocusNavTree &&
               __webpack_require__.OnDeactivate(_),
@@ -3829,6 +3863,9 @@
         get FocusChangedCallbacks() {
           return this.m_FocusChangedCallbacks;
         }
+        get NavTreeActivatedOrReactivatedCallbacks() {
+          return this.m_NavTreeActivatedOrReactivatedCallbacks;
+        }
         m_iFocusChangeStack = 0;
         m_ActiveFocusChange;
         OnFocusChangeStart(_, _, _, _) {
@@ -3853,12 +3890,8 @@
             _(_ == this.m_iFocusChangeStack, "out of order focus pop"),
             0 == this.m_iFocusChangeStack)
           ) {
-            const {
-              source: _,
-              from: _,
-              _: __webpack_require__,
-            } = this.m_ActiveFocusChange ?? {};
-            this.m_FocusChangedCallbacks.Dispatch(_, _, __webpack_require__);
+            const { source: _, from: _, _: _ } = this.m_ActiveFocusChange ?? {};
+            this.m_FocusChangedCallbacks.Dispatch(_, _, _);
           }
         }
         get NavigationSourceGlyphInfo() {
@@ -3881,6 +3914,7 @@
         m_rgAllContexts = [];
         m_ActiveContext;
         m_LastActiveContext;
+        m_ContextSetChangedCallbacks = new _._();
         m_fnCatchAllGamepadInput = null;
         m_UnhandledButtonEventsCallbacks = new _._();
         m_navigationSource = _(
@@ -3912,29 +3946,45 @@
         Init() {
           this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(_));
         }
-        CreateContext(_, _) {
-          const _ = new _(this, _, _);
-          return this.m_rgAllContexts.push(_), _;
+        CreateContext(_, _, _) {
+          const _ = new _(this, _, _, _);
+          return (
+            this.m_rgAllContexts.push(_),
+            this.m_ContextSetChangedCallbacks.Dispatch(),
+            _
+          );
         }
         DestroyContext(_) {
-          _._(this.m_rgAllContexts, _);
+          _._(this.m_rgAllContexts, _),
+            this.m_ContextSetChangedCallbacks.Dispatch();
         }
         GetDefaultContext() {
           return (
             this.m_DefaultContext ||
-              (this.m_DefaultContext = this.CreateContext(window, !1)),
+              (this.m_DefaultContext = this.CreateContext(window, !1, !1)),
             this.m_DefaultContext
           );
         }
         GetActiveContext() {
           return this.m_ActiveContext;
         }
+        BHasVRGamepadNavigationContext() {
+          return this.m_rgAllContexts?.some(
+            (_) => _.BIsVR() && !_.BIsGamepadInputSuppressed(),
+          );
+        }
+        FindContextForRootWindow(_) {
+          return this.m_rgAllContexts?.find((_) => _.RootWindow == _);
+        }
+        BCanActivateContext(_) {
+          return !!_ && !(this.BHasVRGamepadNavigationContext() && !_.BIsVR());
+        }
         FindAnActiveContext() {
           if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const _ of this.m_rgAllContexts) {
               const _ = _.FindNavTreeInFocusedWindow();
-              if (_) {
+              if (_ && this.BCanActivateContext(_)) {
                 _(
                   `${_.LogName(_.Window)} Found a focused window; setting this context as active.`,
                 ),
@@ -3947,6 +3997,7 @@
           return (
             !this.m_ActiveContext &&
               this.m_LastActiveContext &&
+              this.BCanActivateContext(this.m_LastActiveContext) &&
               (_(
                 `Failed to find an active context, will fall back to ${this.m_LastActiveContext.LogName()}`,
               ),
@@ -4049,9 +4100,9 @@
             _ === _._.CANCEL
           );
         }
-        GetEventTarget(_, _, __webpack_require__ = !1) {
+        GetEventTarget(_, _, _ = !1) {
           let _ = this.GetActiveContext();
-          !_ && __webpack_require__ && (_ = this.FindAnActiveContext());
+          !_ && _ && (_ = this.FindAnActiveContext());
           let _ = _?.ActiveWindow?.document.activeElement;
           if (_?.m_LastActiveNavTree) {
             if (
@@ -4060,10 +4111,9 @@
                 _.m_LastActiveNavTree.GetLastFocusedNode() ||
                 (_ != _._.GAMEPAD && _ != _._.KEYBOARD_SIMULATOR) ||
                 (_(
-                  `GetEventTarget: Context ${_.LogName()} tree ${_.m_LastActiveNavTree._} has no focused node, ${__webpack_require__ ? "finding one" : "will not find one"}`,
+                  `GetEventTarget: Context ${_.LogName()} tree ${_.m_LastActiveNavTree._} has no focused node, ${_ ? "finding one" : "will not find one"}`,
                 ),
-                __webpack_require__ &&
-                  _.m_LastActiveNavTree.TakeFocus(_.GAMEPAD, !0),
+                _ && _.m_LastActiveNavTree.TakeFocus(_.GAMEPAD, !0),
                 this.BGlobalGamepadButton(_))
               ))
             )
@@ -4145,7 +4195,7 @@
         OnNavigationTypeChange(_) {
           if (
             this.ChangeNavigationSource(_, -1) &&
-            document.hasFocus() &&
+            (document.hasFocus() || this.m_LastActiveContext?.BIsVR()) &&
             (_ == _._.MOUSE || _ == _._.TOUCH) &&
             this.m_ActiveContext?.m_LastActiveNavTree
           ) {
@@ -4202,7 +4252,8 @@
           return (
             !_.Parent &&
               _.BIsEnabled() &&
-              ((this.m_LastActiveContext = this.m_ActiveContext = _),
+              (this.BCanActivateContext(_) &&
+                (this.m_LastActiveContext = this.m_ActiveContext = _),
               __webpack_require__.SetActiveNavTree(_, !0)),
             () => {
               __webpack_require__
@@ -4214,7 +4265,7 @@
         OnGamepadNavigationTreeActivated(_, _ = !1) {
           _.WindowContext.SetActiveNavTree(_, _);
         }
-        OnGamepadNavigationTreeFocused(_, _, __webpack_require__ = !1) {
+        OnGamepadNavigationTreeFocused(_, _, _ = !1) {
           const _ = _.WindowContext;
           _ != this.m_ActiveContext &&
             _(`(${_.LogName(_.Window)}) Focus event in inactive window`),
@@ -4254,6 +4305,9 @@
         }
         RegisterForUnhandledButtonDownEvents(_) {
           return this.m_UnhandledButtonEventsCallbacks.Register(_);
+        }
+        get ContextSetChangedCallbacks() {
+          return this.m_ContextSetChangedCallbacks;
         }
         FireUnhandledGamepadEventCallbacks(_) {
           return (
@@ -4313,8 +4367,8 @@
             return _.GEOMETRIC;
           default:
             return (
-              (function (_, _, ...__webpack_require__) {
-                _(!1, _, ...__webpack_require__);
+              (function (_, _, ..._) {
+                _(!1, _, ..._);
               })(0, `Unhandled flow-children: ${_}`),
               _.NONE
             );
@@ -4534,7 +4588,11 @@
           : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
       }
       function _(_) {
-        return _ ? Function("event", _) : null;
+        if (_) {
+          const _ = Function("event", _);
+          return (_) => _.apply(_.currentTarget, [_]);
+        }
+        return null;
       }
       function _() {
         return !0;

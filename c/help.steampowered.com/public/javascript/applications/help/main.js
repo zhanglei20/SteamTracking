@@ -373,6 +373,18 @@
         ForceDesktop: "_3qIuY9S_vXm3IQS-uE9SRS",
         PopoutSubMenu: "Baq37ml_4RsqEDikF0aIo",
         PopoutSubMenuItems: "_2fZ_eG4hoUgJoNBzVAW8wq",
+        BackgroundAnimation: "_3mu2U32Y_2WuSVGodurd6a",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1oGSmxXXFpN5G7Jn9ZvEQS",
+        "ItemFocusAnim-darkerGrey": "_3lg1LMj3mXezJ7ascb4yGV",
+        "ItemFocusAnim-darkGreySettings": "_1uSUbmC-8W1-FADNfUsSBP",
+        "ItemFocusAnim-darkGrey": "_2wO0UJLCBVNzypL_1QtVVs",
+        "ItemFocusAnim-grey": "_7GGFchhgqc71nZ8eL_lya",
+        "ItemFocusAnim-translucent-white-10": "_3ZLBhyvDidB4Rfz45C_SYe",
+        "ItemFocusAnim-translucent-white-20": "_3tuAQj0tTIvILlQs8SVJ6O",
+        "ItemFocusAnimBorder-darkGrey": "_2ndsTZA8rKNYYxX6q4X62O",
+        "ItemFocusAnim-green": "_3dGZBujqGTb6MvSpwfXt-u",
+        focusAnimation: "_1eQxz4PDgw0-4zeOxZc9zb",
+        hoverAnimation: "uLTwa30_-yxoQKi5qqCAw",
       };
     },
     chunkid: (module) => {
@@ -404,16 +416,19 @@
         NoMinWidth: "R7OZbuJa9H3NPk-5gy3Is",
         ActiveAndUnfocused: "_28cXJKe4jqDnSsP9HO7yYm",
         StandaloneFieldSeparator: "_1vcky98a3hG0ulFCdee4kd",
+        InlineWrapShiftsChildrenBelow: "_3LCXhoVmpvqbOW8fsItdTl",
+        Background: "_2CCdODv0vfzOMrEBUzZwfI",
+        Classic: "_2QgNsvFPYTZ5yRiTm7mUyu",
         StandardPadding: "xIITXDcM70faUNqssgUyx",
         CompactPadding: "_3hgIZByMuZIEiFspMRGFBw",
-        WithDescription: "_3tB2lyT2Pfvfv-jyuVgUOg",
         WithBottomSeparatorStandard: "GxgIyq8R5xTOeu4ftGrgX",
         WithBottomSeparatorThick: "_39x36zDuDr8Z0Z_UnJkY4S",
         HighlightOnFocus: "_2HFrmMgB38Ike5w4rVxzEX",
+        "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
+        "ItemFocusAnim-darkGreySettings": "_2wp31uHPEwPmxifWYeIBl7",
         Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
         Disabled: "aIeh3X5T2M074RLW1qn6_",
         WithBottomSeparator: "_3YKpU6T7dSIjGegCiQgg3h",
-        "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
         "ItemFocusAnim-darkGrey": "_2NVMbdV4wBIACWgwBU2kyz",
         FieldChildrenWithIcon: "_1aw7cA3mAZfWt8idAlVJWi",
         FieldChildrenInner: "_2o2fXzn99OddeqZMjbDuxQ",
@@ -421,14 +436,14 @@
         FieldIcon: "_2DM37juowId1V_DScp3l4",
         Front: "_2sj0iYB2llhya3q15q0xiX",
         BeforeChildren: "_1mbHaypn3SksXyYjPLVuX1",
+        FieldLeftColumn: "_2tALpM7z8naXJ35Pp5fNAG",
+        WithChildrenBelow: "_37xzVt6arvEzyNdW5GxK8f",
+        ChildrenWidthGrow: "Jgod1QRim6eNfvia2_3Ac",
+        FieldRightColumn: "PSZtxj2h3MlyYv-c9dgke",
         FieldLabelRow: "_2VcTlXFC64Jtg9gvtT6cmY",
         VerticalAlignCenter: "_16vVnDqpbNs-zIH-EdV6Vz",
-        InlineWrapShiftsChildrenBelow: "_3LCXhoVmpvqbOW8fsItdTl",
         ExtraPaddingOnChildrenBelow: "_3nLNLFMUMSt4jvxIayuPV3",
         ChildrenWidthFixed: "ljcbLhG2-njpG2eCdWOyu",
-        ChildrenWidthGrow: "Jgod1QRim6eNfvia2_3Ac",
-        WithFirstRow: "_2bDqk4Jeoyk1wZd7ttBNAR",
-        WithChildrenBelow: "_37xzVt6arvEzyNdW5GxK8f",
         FieldLabel: "_3jMlJm4PQCA8SfNlUR99Fo",
         FieldLabelValue: "KGS2r2ext4jvDYa-MAFLD",
         FieldDescription: "_1W1to_azoBRG95oNAFpf9Q",
@@ -478,6 +493,18 @@
       module.exports = {
         "duration-app-launch": "800ms",
         DropDownControlButton: "v8oJcDOQF6xmlVTw4VhOr",
+        BackgroundAnimation: "_39ftBgrwHL79vzBWzTUNIg",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1uRxKXzp4hyFG853DRpRmG",
+        "ItemFocusAnim-darkerGrey": "gmgYjyVXiyoE4dXuiyvRe",
+        "ItemFocusAnim-darkGreySettings": "BHeZLoGSQeMbyP_u3BOyv",
+        "ItemFocusAnim-darkGrey": "_wAkIFq95RDIO0BaFscJ-",
+        "ItemFocusAnim-grey": "_2EU0bFj-iDnGzS3y22Pm1n",
+        "ItemFocusAnim-translucent-white-10": "zCo-rS_8G4PFjVNj2HddR",
+        "ItemFocusAnim-translucent-white-20": "_3dLS4qNfRaL3VlHxF0assn",
+        "ItemFocusAnimBorder-darkGrey": "_2qWT6FmefGsz6vW4GyAN1d",
+        "ItemFocusAnim-green": "VJdx426NYwPhzacwDjqUy",
+        focusAnimation: "_1VSndovYnDm2jbIx6FU3Nq",
+        hoverAnimation: "_2tJDT6WmelyKdUlLq2gtna",
       };
     },
     chunkid: (module) => {
@@ -501,10 +528,9 @@
         PagedSettingsDialog_PageList_ShowTitle: "_3UfINfoarLdX2Cbx22cWNf",
         PageSettingsDialog_PageList_NoHeaderPadding: "_2EiZ3BiLOqNY5BfgsBnUda",
         PagedSettingsDialog_PageListItem: "_2mL2HfT5AkDXRi1YBnRWKa",
-        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
+        ScaledChildren: "_3oALQTKb_fq_yVJAuTkwdb",
         Active: "_1ELdDY5kb5jxjXe-FpWBo5",
-        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
-        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
+        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
         PageListItem_Icon: "_3f2IOwoVFEcJNNmmRXIMK8",
         PageListItem_Title: "_4niDTAfIpKQoRx-CR_3K",
         Separator: "_3sUwukdeKdKRTojXu4I3ga",
@@ -518,6 +544,9 @@
         Down: "_1C1JjI4inJUtodtSWKAPoE",
         BackgroundAnimation: "_5VEJ9ppWFMtmQZUIl5QGM",
         "ItemFocusAnim-darkerGrey-nocolor": "gmWXVs6ySMfR95uy-dzLj",
+        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
+        "ItemFocusAnim-darkGreySettings": "BvE4zAUWrioZv0MShImce",
+        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
         "ItemFocusAnim-grey": "_2_WUbDOZ71hKkEf-CD41hr",
         "ItemFocusAnim-translucent-white-10": "_3JK1VosnPSCLdf_lSz1exG",
         "ItemFocusAnim-translucent-white-20": "_2PDwQBU5MzHQ75ycEVpwK3",
@@ -568,6 +597,7 @@
         ErrorShake: "_1Fa-zp9wEmgbJm3YkQA2pN",
         "error-shake": "_1LFdeSuH6SCeGkW45tXeoo",
         CompoundSlider: "_2hwF2eVaZdtuE6Wjt9abSp",
+        CompoundSliderContainer: "_2wBZ7aE2Em8DBhLh0Pr8EX",
         CompoundSliderSubSlider: "uOFmzX5QDJ7-4tKNOFuqN",
         Right: "_3GOpBMvB0XixIzfe8Xz0AB",
         CompoundSliderSubSliderLabelContainer: "_2iD1mdJ-bbl3eteXK1vrpf",
@@ -579,12 +609,15 @@
         BackgroundAnimation: "_34goutNBSou3YR_kTuPeXo",
         "ItemFocusAnim-darkerGrey-nocolor": "_3uBtlQHaoF-Fdvf-44fdfj",
         "ItemFocusAnim-darkerGrey": "_1so9RRpNCSzFaLUuFaAoTQ",
+        "ItemFocusAnim-darkGreySettings": "_3xDgicGGM7zf4FDtrZTsrg",
         "ItemFocusAnim-darkGrey": "_3rHHM0QPQeBnxSX9SsyTAv",
         "ItemFocusAnim-grey": "_3bS2YJzXbd_HJcslwwJonb",
         "ItemFocusAnim-translucent-white-10": "_1eyjVbw17bPbJY8cd6MyX2",
         "ItemFocusAnim-translucent-white-20": "_1iqNj4v83-vYdxWouoYIbw",
         "ItemFocusAnimBorder-darkGrey": "_2Pzyj6rGS2MYa48LGSbRdv",
         "ItemFocusAnim-green": "_2C-5CyKHqs57xJb0nU1LnG",
+        focusAnimation: "_3aA7B5vDTJc5xq6IfXhQ2H",
+        hoverAnimation: "_12ndx-pa_lUGfXXWOFQVSY",
       };
     },
     chunkid: (module) => {
@@ -613,15 +646,27 @@
         Transparent: "_1ahzMoQaAT-POqYjqcQSCt",
         HidePageListButton: "_3LLH_F43MTu6UtG4Z3kudv",
         ReturnToPageListButton: "_1cWmu5TUWFAVHlv1EVaF8e",
+        BackgroundAnimation: "_31dp93HtW4YaAIrv5kQNht",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34v5-JW2L6fQ4YmSbk9AaR",
+        "ItemFocusAnim-darkerGrey": "_2hiPwZ5sHjd1palQvy9OrL",
+        "ItemFocusAnim-darkGreySettings": "_1Er_w8LQhe6MyIC6NfUM3V",
+        "ItemFocusAnim-darkGrey": "_8LuF4KlRbCw_drO7e2TC7",
+        "ItemFocusAnim-grey": "_2xSXLf_M9pyhcs0Up0YB3t",
+        "ItemFocusAnim-translucent-white-10": "_3XpUY5O65d5iC8QOTibOTo",
+        "ItemFocusAnim-translucent-white-20": "TtpwXKTKHcg8dU-yHafz8",
+        "ItemFocusAnimBorder-darkGrey": "_1XsIqwGv6cpC9wDe_vUw01",
+        "ItemFocusAnim-green": "Sv4pIC9tV5_-yNVWid_iZ",
+        focusAnimation: "W2aVTuNiYbD-L-tBboMKB",
+        hoverAnimation: "_2L5cxouAMAylE7_T3HQoRf",
       };
     },
     chunkid: (module) => {
       module.exports = {
         Group: "_1ml4SNc3LIyBDHIf8ekVSw",
         CenteredPill: "L2J24Sa_dQql2exoKoBMi",
+        Active: "_3-_jME_xsuvgT3Dvq4bw_q",
         Button: "HijmccPB1BKyhOwhX1EVl",
         Disabled: "_3hmGW9wIxNIoPPu1aS7rFm",
-        Active: "_3-_jME_xsuvgT3Dvq4bw_q",
       };
     },
     chunkid: (module) => {
@@ -722,6 +767,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -830,6 +876,18 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     chunkid: (module) => {
@@ -1010,6 +1068,18 @@
         SteamTVSteam: "_1GjVGP2qdwSOEBKimtRG0k",
         SteamTVTV: "_12AVA1wr7SWXg9INaLfBzD",
         FlipInRTL: "AMU5Zvf1pJLZGVqbpGcUC",
+        BackgroundAnimation: "amz8jVfJ2MOIPnaUYMOgI",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3pY66EiNnfad09UHGMqtd4",
+        "ItemFocusAnim-darkerGrey": "_2JoqRmzZpoTtL_KIVWXd0a",
+        "ItemFocusAnim-darkGreySettings": "_1a5-ibcS0HyYhRO2QR7x_f",
+        "ItemFocusAnim-darkGrey": "NmpWlMoGlon2VMO2kUZxr",
+        "ItemFocusAnim-grey": "_1uq0bG0F5JVFzWlPHYMXB7",
+        "ItemFocusAnim-translucent-white-10": "_3xDNjaNkQ-uP0-lcJ8G7gP",
+        "ItemFocusAnim-translucent-white-20": "vYKrwRtlsPCKPnSf3CU-7",
+        "ItemFocusAnimBorder-darkGrey": "_3h8yQpj5B4lqfo4rvQXD4p",
+        "ItemFocusAnim-green": "_2JSjyAe00zqEy25fUVQS5H",
+        focusAnimation: "_19xVMCOSnHPfsYR_llwrJD",
+        hoverAnimation: "_26wdGOzkKTLjBLc0bu8-gV",
       };
     },
     chunkid: (module) => {
@@ -6124,9 +6194,12 @@
             (function (_, _, _) {
               _.setQueryData(_(_, "include_all_purchase_options"), {
                 purchase_options: _.purchase_options,
-                invalid_purchase_options: _.invalid_purchase_options,
-                accessories: _.accessories,
+                package_groups: _.package_groups,
               });
+            })(_, _, _),
+          _.include_full_description &&
+            (function (_, _, _) {
+              _(_, _, _, "include_full_description", "full_description_bbcode");
             })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -6148,16 +6221,16 @@
         "reviews",
         "game_rating",
         "purchase_options",
-        "accessories",
-        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
+        "full_description_bbcode",
         "assets_without_overrides",
         "user_filter_failure",
         "links",
         "platforms",
         "release",
+        "package_groups",
       ];
       function _(_) {
         const _ = {
@@ -6170,7 +6243,7 @@
       function _(_) {
         const {
             context: _,
-            msDelayBatch: __webpack_require__,
+            msDelayBatch: _,
             serviceTransportOverride: _,
             legacyCacheStoreItemData: _,
             children: _,
@@ -6194,7 +6267,7 @@
             [_, _, _],
           ),
           _ = _.useMemo(() => {
-            const _ = __webpack_require__
+            const _ = _
               ? (function (_) {
                   let _ = 0;
                   return (_) => {
@@ -6205,7 +6278,7 @@
                         (_ = performance.now()), __webpack_require__();
                       }, _);
                   };
-                })(__webpack_require__)
+                })(_)
               : void 0;
             return _(
               _,
@@ -6216,7 +6289,7 @@
               },
               _,
             );
-          }, [_, _, _, __webpack_require__]),
+          }, [_, _, _, _]),
           _ = _.useMemo(
             () => ({
               dataLoader: _,
@@ -6233,7 +6306,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { msDelayBatch: _, children: __webpack_require__ } = _,
+        const { msDelayBatch: _, children: _ } = _,
           _ = (0, _._)(),
           _ = _.useMemo(
             () => ({
@@ -6248,7 +6321,7 @@
             context: _,
             msDelayBatch: _,
             legacyCacheStoreItemData: _._.Get().ReadItem,
-            children: __webpack_require__,
+            children: _,
           })
         );
       }
@@ -6392,79 +6465,10 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-      var _ = __webpack_require__("chunkid");
-      new Set([
-        "sc_schinese",
-        "schinese",
-        "tchinese",
-        "japanese",
-        "koreana",
-        "thai",
-        "arabic",
-        "bulgarian",
-        "czech",
-        "danish",
-        "german",
-        "english",
-        "spanish",
-        "latam",
-        "greek",
-        "french",
-        "italian",
-        "indonesian",
-        "hungarian",
-        "dutch",
-        "norwegian",
-        "polish",
-        "portuguese",
-        "brazilian",
-        "romanian",
-        "russian",
-        "finnish",
-        "swedish",
-        "turkish",
-        "vietnamese",
-        "ukrainian",
-      ]);
-      const _ = new Map([
-        ["en", "english"],
-        ["de", "german"],
-        ["fr", "french"],
-        ["it", "italian"],
-        ["ko", "koreana"],
-        ["es-419", "latam"],
-        ["es", "spanish"],
-        ["zh", "schinese"],
-        ["zh-cn", "schinese"],
-        ["zh-tw", "tchinese"],
-        ["ru", "russian"],
-        ["ar", "arabic"],
-        ["th", "thai"],
-        ["ja", "japanese"],
-        ["pt-br", "brazilian"],
-        ["pt", "portuguese"],
-        ["pl", "polish"],
-        ["da", "danish"],
-        ["nl", "dutch"],
-        ["fi", "finnish"],
-        ["nb", "norwegian"],
-        ["no", "norwegian"],
-        ["sv", "swedish"],
-        ["hu", "hungarian"],
-        ["cs", "czech"],
-        ["ro", "romanian"],
-        ["tr", "turkish"],
-        ["bg", "bulgarian"],
-        ["el", "greek"],
-        ["uk", "ukrainian"],
-        ["vn", "vietnamese"],
-        ["vi", "vietnamese"],
-        ["id", "indonesian"],
-      ]);
-      const _ = new Map();
-      for (const [module, module_exports] of _.entries())
-        _.set(module_exports, module);
-      var _, _;
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -6519,39 +6523,37 @@
             );
         }
       }
-      _.set("sc_schinese", _.get("schinese")),
-        _.set("korean", _.get("koreana")),
-        (function (_) {
-          (_[(_.None = 0)] = "None"),
-            (_[(_.Minimized = 1)] = "Minimized"),
-            (_[(_.Hidden = 2)] = "Hidden"),
-            (_[(_.TooltipHint = 4)] = "TooltipHint"),
-            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-            (_[(_.Resizable = 16)] = "Resizable"),
-            (_[(_.ScalePosition = 32)] = "ScalePosition"),
-            (_[(_.ScaleSize = 64)] = "ScaleSize"),
-            (_[(_.Maximized = 128)] = "Maximized"),
-            (_[(_.Composited = 256)] = "Composited"),
-            (_[(_.NotFocusable = 512)] = "NotFocusable"),
-            (_[(_.FullScreen = 1024)] = "FullScreen"),
-            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-              "ApplyBrowserScaleToDimensions"),
-            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-              "IgnoreSteamDisplayScale"),
-            (_[(_.TransparentParentWindow = 4194304)] =
-              "TransparentParentWindow"),
-            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-            (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-        })(_ || (_ = {})),
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Minimized = 1)] = "Minimized"),
+          (_[(_.Hidden = 2)] = "Hidden"),
+          (_[(_.TooltipHint = 4)] = "TooltipHint"),
+          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+          (_[(_.Resizable = 16)] = "Resizable"),
+          (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
+          (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
+          (_[(_.Maximized = 128)] = "Maximized"),
+          (_[(_.Composited = 256)] = "Composited"),
+          (_[(_.NotFocusable = 512)] = "NotFocusable"),
+          (_[(_.FullScreen = 1024)] = "FullScreen"),
+          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+            "ApplyBrowserScaleToDimensions"),
+          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+            "IgnoreSteamDisplayScale"),
+          (_[(_.TransparentParentWindow = 4194304)] =
+            "TransparentParentWindow"),
+          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+      })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -6564,7 +6566,7 @@
         }),
         _ = () => _.useContext(_);
       function _(_) {
-        const { ownerWindow: _, children: __webpack_require__ } = _,
+        const { ownerWindow: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               ownerWindow: _,
@@ -6576,7 +6578,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       class _ {
@@ -6597,7 +6599,7 @@
               "Name is required.  This is an internal name, different from title.",
             ),
             (this.m_strName = _);
-          const { title: __webpack_require__, eCreationFlags: _, ..._ } = _;
+          const { title: _, eCreationFlags: _, ..._ } = _;
           (this.m_rgParams = {
             ..._,
             eCreationFlags: _ ?? 0,
@@ -6608,7 +6610,7 @@
             (this.m_bCreateHidden = !!(
               this.m_rgParams.eCreationFlags & _.Hidden
             )),
-            (this.m_strTitle = __webpack_require__);
+            (this.m_strTitle = _);
         }
         UpdateParamsBeforeShow(_) {
           return _;
@@ -6711,7 +6713,7 @@
                   "lang",
                   (0, _._)() ?? "",
                 ),
-                "arabic" === _._.LANGUAGE &&
+                (0, _._)(_._.LANGUAGE) &&
                   _.document.documentElement.setAttribute("dir", "rtl")),
               (this.m_popup = _),
               (this.m_element = _),
@@ -7068,6 +7070,12 @@
           for (const _ of this.m_mapPopups.values())
             if (_.window === _) return _;
         }
+        GetPopupForVROverlayKey(_) {
+          if (_)
+            return Array.from(this.m_mapPopups.values()).find(
+              (_) => _.params.strVROverlayKey == _,
+            );
+        }
         ClosePopupsOwnedByBrowser(_) {
           this.m_mapPopups.forEach((_) => {
             _.browser_info &&
@@ -7240,7 +7248,7 @@
       function _(_) {
         const {
             refContextMenuManager: _,
-            bRegisterMenuManager: __webpack_require__ = !0,
+            bRegisterMenuManager: _ = !0,
             children: _,
           } = _,
           _ = _(),
@@ -7249,12 +7257,12 @@
         return (
           _.current || (_.current = new _._()),
           _.useLayoutEffect(() => {
-            if (__webpack_require__)
+            if (_)
               return (
                 _._.SetMenuManager(_, _.current),
                 () => _._.SetMenuManager(_, void 0)
               );
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _.useLayoutEffect(
             () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
             [_],
@@ -7361,10 +7369,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            managerOverride: _,
-            bSuppressMouseOverlay: __webpack_require__,
-          } = _,
+        const { managerOverride: _, bSuppressMouseOverlay: _ } = _,
           _ = (0, _._)(),
           _ = (function () {
             const { ownerWindow: _ } = _(),
@@ -7374,7 +7379,7 @@
           _ = _.useContext(_),
           _ = _ ?? _;
         (0, _._)(_.OnMenusChanged, _);
-        const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
+        const _ = !_ && _.BShouldRenderMouseOverlay(),
           _ = _.GetAllMenus();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -7395,11 +7400,7 @@
         });
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _(),
           _ = _().ownerWindow,
           _ = _.useRef(void 0);
@@ -7421,7 +7422,7 @@
           children: _.current
             ? (0, _.jsx)(_, {
                 instance: _,
-                browserInfo: __webpack_require__,
+                browserInfo: _,
                 children: _,
               })
             : (0, _.jsx)(_, {
@@ -7431,26 +7432,22 @@
         });
       }
       function _(_) {
-        const { instance: _, children: __webpack_require__ } = _;
+        const { instance: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           ..._.position,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _.useRef(null),
           _ = _().ownerWindow,
           _ = _.SteamClient.Browser.GetBrowserID(),
           _ = _.useCallback(
             (_) => {
-              const { options: __webpack_require__, position: _ } = _,
+              const { options: _, position: _ } = _,
                 _ = _.element;
-              if (__webpack_require__.bScreenCoordinates)
+              if (_.bScreenCoordinates)
                 _.dimensions = {
                   left: _.clientX,
                   top: _.clientY,
@@ -7492,7 +7489,7 @@
               "ContextMenuPopupBody",
             ),
             replace_existing_popup: !1,
-            target_browser: __webpack_require__,
+            target_browser: _,
             window_opener_id: _,
             bHideOnClose: !0,
             eCreationFlags: _,
@@ -7541,7 +7538,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0);
+        const [_, _] = (0, _.useState)(!0);
         return (
           (0, _.useEffect)(() => {
             (0, _.startTransition)(() => {
@@ -7554,9 +7551,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { popup: _, onMaximize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMaximize: _, bOSX: _ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = _.useState(!1),
+            const [_, _] = _.useState(!1),
               _ = _.useCallback(() => {
                 (0, _._)(_, "Window.IsWindowMaximized")
                   ? _.SteamClient.Window.IsWindowMaximized().then((_) => {
@@ -7576,11 +7573,11 @@
             );
           })(_),
           _ = _.useCallback(() => {
-            __webpack_require__
+            _
               ? __webpack_require__()
               : (0, _._)(_, "Window.ToggleMaximize") &&
                 _.SteamClient.Window.ToggleMaximize();
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return (0, _.jsx)(_, {
           className: (0, _._)(
             _ ? "restoreButton" : "maximizeButton",
@@ -7591,18 +7588,18 @@
         });
       }
       function _(_) {
-        const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMinimize: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _.SteamClient.Window.Minimize();
           }, [_]);
         return (0, _.jsx)(_, {
           className: "minimizeButton windowControlButton",
-          onClick: __webpack_require__ ?? _,
+          onClick: _ ?? _,
           children: !_ && (0, _.jsx)(_.Xjb, {}),
         });
       }
       function _(_) {
-        const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onClose: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _ &&
               ((0, _._)(_, "Window.Close")
@@ -7611,18 +7608,17 @@
           }, [_]);
         return (0, _.jsx)(_, {
           className: "closeButton windowControlButton",
-          onClick: __webpack_require__ ?? _,
+          onClick: _ ?? _,
           children: !_ && (0, _.jsx)(_.sED, {}),
         });
       }
       function _(_) {
-        const { className: _, onClick: __webpack_require__, children: _ } = _,
+        const { className: _, onClick: _, children: _ } = _,
           _ = _.useCallback(
             (_) => {
-              __webpack_require__ &&
-                (_.stopPropagation(), __webpack_require__(_));
+              _ && (_.stopPropagation(), __webpack_require__(_));
             },
-            [__webpack_require__],
+            [_],
           );
         return (0, _.jsx)("div", {
           className: (0, _._)("title-area-icon", _),
@@ -7636,7 +7632,7 @@
       function _(_) {
         const {
             className: _,
-            style: __webpack_require__,
+            style: _,
             hideActions: _,
             hideClose: _,
             hideMin: _,
@@ -7651,7 +7647,7 @@
             children: _,
           } = _,
           _ = (function (_, _ = 100) {
-            const [__webpack_require__, _] = _.useState(!1),
+            const [_, _] = _.useState(!1),
               _ = _.useCallback(() => _(!0), [_]),
               _ = _.useCallback(() => _(!1), [_]);
             return (
@@ -7667,7 +7663,7 @@
                     : void 0,
                 [_, _, _],
               ),
-              (0, _._)(__webpack_require__, _)
+              (0, _._)(_, _)
             );
           })(_);
         return (0, _.jsxs)("div", {
@@ -7678,7 +7674,7 @@
             (_ || _) && "WindowFocus",
             _,
           ),
-          style: __webpack_require__,
+          style: _,
           children: [
             (0, _.jsx)("div", {
               className: "title-area-highlight",
@@ -7725,10 +7721,10 @@
       }
       function _(_) {
         const { Modal: _ } = _,
-          { name: __webpack_require__, modalProps: _, options: _ } = _,
+          { name: _, modalProps: _, options: _ } = _,
           _ = _().ownerWindow,
           { popup: _, element: _ } = _(
-            __webpack_require__,
+            _,
             {
               title: _.strTitle,
               html_class:
@@ -7816,9 +7812,8 @@
       }
       function _(_) {
         const { ModalManager: _ } = _,
-          [__webpack_require__, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
           [_, _] = _.useState(!0),
-          _ = _.useRef(0),
           _ = _.useCallback(() => {
             _.startTransition(() => {
               _(!0);
@@ -7826,30 +7821,29 @@
           }, []);
         _.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
           _.useLayoutEffect(() => {
-            __webpack_require__ ||
+            _ ||
               _.startTransition(() => {
                 _(_.TakeMeasureModalRequest()), _(!1);
               });
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         const _ = _.useCallback((_) => {
-          _.current++,
-            _.startTransition(() => {
-              _((_) => (_ === _ ? void 0 : _));
-            });
+          _.startTransition(() => {
+            _((_) => (_ === _ ? void 0 : _));
+          });
         }, []);
-        return __webpack_require__
+        return _
           ? (0, _.jsx)(
               _,
               {
                 onMeasureComplete: _,
-                request: __webpack_require__,
+                request: _,
               },
-              _.current,
+              _._,
             )
           : null;
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           _ = _().ownerWindow;
         return (
           _.useLayoutEffect(() => {
@@ -7877,11 +7871,7 @@
         );
       }
       function _(_) {
-        const {
-          elContainer: _,
-          onMeasureComplete: __webpack_require__,
-          request: _,
-        } = _;
+        const { elContainer: _, onMeasureComplete: _, request: _ } = _;
         return (
           _.useEffect(() => {
             let _ = !1;
@@ -7903,7 +7893,7 @@
               })(_, _.promiseContentReady).then(_),
               () => _(void 0)
             );
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             children: _.rctToMeasure,
           })
@@ -7978,6 +7968,7 @@
         m_OnModalHiddenCallbacks = new _._();
         m_cMountedOverlays = 0;
         m_rgMeasureModalRequests = [];
+        m_nMeasureRequestID = 0;
         m_OnMeasureModal = new _._();
         m_rgLegacyPopupModals = [];
         m_OnLegacyPopupModalCountChanged = new _._();
@@ -8048,10 +8039,6 @@
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(_) {
-          (0, _._)(
-            !this.m_bOnlyPopups,
-            "Attempting to show modal in popup-only modal manager; will not display.",
-          );
           const _ = new _(_);
           this.m_rgModals.push(_);
           const _ = {
@@ -8114,6 +8101,7 @@
         }
         RequestModalMeasure(_, _, _) {
           this.m_rgMeasureModalRequests.push({
+            _: this.m_nMeasureRequestID++,
             rctToMeasure: _,
             fnResults: _,
             promiseContentReady: _,
@@ -8202,392 +8190,7 @@
         return _.GetModalManager(_);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            target: _,
-            visibilityObserver: __webpack_require__,
-            className: _,
-            style: _,
-            bEnablePointerEvents: _,
-            direction: _ = "right",
-            nBodyAlignment: _ = 0.5,
-            nBodyDistance: _ = 8,
-            nAllowOffscreenPx: _ = 10,
-            nMaxLateralMoveOnScreen: _,
-            onNoSpace: _,
-            bTopmost: _,
-            children: _,
-            ..._
-          } = _,
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(null),
-          _ = _.useCallback(() => {
-            let _ = _;
-            if (!_ || !_) return;
-            if (_ && __webpack_require__ && !__webpack_require__.visible)
-              return;
-            let _ = _.ownerDocument.defaultView;
-            if (!_ || _.closed) return;
-            const _ = _.querySelector(".hover_arrow.left"),
-              _ = _.querySelector(".hover_arrow.right"),
-              _ = _.querySelector(".hover_arrow.top"),
-              _ = _.querySelector(".hover_arrow.bottom"),
-              _ = _.getBoundingClientRect(),
-              _ = _.getBoundingClientRect(),
-              _ = "overlay" == _ || "overlay-center" == _;
-            _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;");
-            let _ = _;
-            _.matches(":dir(rtl)") &&
-              ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
-            let {
-                nLeft: _,
-                nTop: _,
-                nOverflow: _,
-                nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight),
-              _ = _;
-            if (_ > (_ ?? 10) && !_) {
-              const _ = (function (_) {
-                  switch (_) {
-                    case "right":
-                      return "left";
-                    case "left":
-                      return "right";
-                    case "bottom":
-                      return "top";
-                    case "top":
-                      return "bottom";
-                    case "overlay":
-                      return "overlay";
-                    case "overlay-center":
-                      return "overlay-center";
-                  }
-                })(_),
-                {
-                  nLeft: _,
-                  nTop: __webpack_require__,
-                  nOverflow: _,
-                  nLateralOverflow: _,
-                } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
-              if (
-                (_ < _ &&
-                  ((_ = _),
-                  (_ = _),
-                  (_ = __webpack_require__),
-                  (_ = _),
-                  (_ = _)),
-                _ > (_ ?? 10))
-              )
-                return (
-                  console.log(
-                    "Not showing hover because it didn't fit in the main or alt direction",
-                  ),
-                  _.setAttribute("style", "display: none;"),
-                  _(!0),
-                  void _?.()
-                );
-            }
-            0 === _ ||
-              _ ||
-              ([_, _] = (function (_, _, _, _, _) {
-                let _ = Math.max(_[0], _[1]);
-                void 0 !== _ && (_ = Math.min(_, _));
-                _ = Math.max(0, _);
-                const _ = _[0] > _[1] ? _ : -_;
-                "left" === _ || "right" === _ ? (_ += _) : (_ += _);
-                return [_, _];
-              })(_, _, _, _, _));
-            let _ = null;
-            switch (_) {
-              case "left":
-                _ = _;
-                break;
-              case "right":
-                _ = _;
-                break;
-              case "top":
-                _ = _;
-                break;
-              case "bottom":
-                _ = _;
-            }
-            _ && _.setAttribute("style", ""),
-              _ != _ && _(_),
-              _ != _ && _(_),
-              _ || _(!0);
-          }, [_, _, _, __webpack_require__, _, _, _, _, _, _, _, _]);
-        _.useEffect(() => _(), [_]);
-        let _ = Object.assign(
-            {
-              left: _,
-              top: _,
-            },
-            _,
-          ),
-          _ = !__webpack_require__ || __webpack_require__.visible;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
-          children: (0, _.jsx)("div", {
-            ..._,
-            className: (0, _._)(
-              _().HoverPosition,
-              _ && _ && _().Ready,
-              _ && _().NoSpace,
-              _ && _().EnablePointerEvents,
-              _,
-            ),
-            style: _,
-            ref: _,
-            children: _,
-          }),
-        });
-      }
-      function _(_, _, _, _, _, _, _) {
-        const _ = _,
-          _ = _;
-        let _, _, _, _;
-        switch (_) {
-          case "right":
-            (_ = _.right + _),
-              (_ = _(_.top, _.height, _.height, _)),
-              (_ = Math.max(0, _ + _.width - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
-            break;
-          case "left":
-            (_ = _.left - _ - _.width),
-              (_ = _(_.top, _.height, _.height, _)),
-              (_ = Math.max(0, 0 - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
-            break;
-          case "bottom":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.bottom + _),
-              (_ = Math.max(0, _ + _.height - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
-            break;
-          case "top":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.top - _ - _.height),
-              (_ = Math.max(0, 0 - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
-            break;
-          case "overlay":
-            (_ = _.left), (_ = _.top), (_ = 0), (_ = [0, 0]);
-            break;
-          case "overlay-center":
-            (_ = _.left + 0.5 * _.width - 0.5 * _.width),
-              (_ = _.top + 0.5 * _.height - 0.5 * _.height),
-              (_ = 0),
-              (_ = [0, 0]);
-        }
-        return {
-          nLeft: _,
-          nTop: _,
-          nOverflow: _,
-          nLateralOverflow: _,
-        };
-      }
-      function _(_, _, _, _) {
-        return Math.max(0, Math.min(1, _)) * (_ - _) + _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.createContext({});
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(null),
-          _ = _.useMemo(
-            () => ({
-              targetElement: _,
-            }),
-            [_],
-          );
-        return (0, _.jsxs)(_.Provider, {
-          value: _,
-          children: [
-            (0, _.jsx)("div", {
-              ref: __webpack_require__,
-            }),
-            _.children,
-          ],
-        });
-      }
-      function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _({
-          ..._,
-          toolTipContent: _.toolTipContent
-            ? (0, _.jsx)(_, {
-                children: _(_.toolTipContent),
-              })
-            : null,
-        });
-        return (0, _.jsxs)(_._, {
-          className: "tool-tip-source",
-          noFocusRing: !0,
-          focusable: _.bNavStop ?? !!_.onClick,
-          ..._,
-          children: [
-            (0, _.jsx)(_, {
-              ...__webpack_require__,
-            }),
-            _.children,
-          ],
-        });
-      }
-      function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _(_);
-        return (0, _.jsxs)(_._, {
-          className: "tool-tip-source",
-          noFocusRing: !0,
-          focusable: _.bNavStop ?? !!_.onClick,
-          ..._,
-          children: [
-            (0, _.jsx)(_, {
-              ...__webpack_require__,
-            }),
-            _.children,
-          ],
-        });
-      }
-      function _(_) {
-        const { children: _ } = _,
-          { divProps: __webpack_require__, tooltipProps: _ } = _({
-            ..._,
-            toolTipContent: _.toolTipContent
-              ? (0, _.jsx)(_, {
-                  children: _(_.toolTipContent),
-                })
-              : null,
-          });
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _.cloneElement(_, {
-              ...__webpack_require__,
-              ..._.props,
-            }),
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            toolTipContent: _,
-            nDelayShowMS: __webpack_require__ = 300,
-            bDisabled: _,
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
-            nMaxLateralMoveOnScreen: _,
-            strTooltipClassname: _,
-            bNavStop: _,
-            bTopmost: _,
-            usePointerEvents: _,
-            children: _,
-            onMouseLeave: _,
-            ..._
-          } = _,
-          _ = {
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
-            nMaxLateralMoveOnScreen: _,
-            className: _,
-            bTopmost: _,
-          },
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(),
-          _ = _.useCallback(
-            (_) => {
-              (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
-                (_(!0), _(_.currentTarget));
-            },
-            [_],
-          ),
-          _ = _.useCallback(() => {
-            _(!1);
-          }, []);
-        _.useEffect(() => {
-          _ && _ && _(!1);
-        }, [_, _]);
-        const _ = {
-          active: _ && !_,
-          target: _,
-          nDelayShowMS: __webpack_require__,
-          hoverPositionProps: _,
-          children: _,
-        };
-        let _ = {
-          ..._,
-        };
-        return (
-          _
-            ? ((_.onPointerEnter = _), (_.onPointerLeave = _))
-            : ((_.onMouseEnter = _), (_.onMouseLeave = _)),
-          {
-            divProps: _,
-            stateHandlers: {
-              setTarget: _,
-              setHovered: _,
-            },
-            tooltipProps: _,
-          }
-        );
-      }
-      function _(_) {
-        return "string" == typeof _ ? _._.LocalizeIfToken(_, !0) : _;
-      }
-      function _(_) {
-        return (0, _.jsx)("div", {
-          ..._,
-          className: (0, _._)(_().TextToolTip, _.className),
-        });
-      }
-      function _(_) {
-        const {
-            active: _,
-            target: __webpack_require__,
-            nDelayShowMS: _ = 300,
-            hoverPositionProps: _,
-            children: _,
-          } = _,
-          [_, _] = _.useState(_),
-          _ = _.useContext(_);
-        if (
-          (_.useEffect(() => {
-            if (_) {
-              if (_) {
-                const _ = window.setTimeout(() => _(!0), _);
-                return () => window.clearTimeout(_);
-              }
-              _(!0);
-            } else _(!1);
-          }, [_]),
-          !_)
-        )
-          return null;
-        if (!_ || !__webpack_require__) return null;
-        const { targetElement: _ } = _;
-        return _.createPortal(
-          (0, _.jsx)(_, {
-            target: __webpack_require__,
-            ..._,
-            children: _,
-          }),
-          _ ?? __webpack_require__.ownerDocument.body,
-        );
-      }
+        _ = __webpack_require__("chunkid");
       function _(_) {
         _.useEffect(() => {
           if (_)
@@ -8600,7 +8203,7 @@
       function _(_) {
         let {
           ModalManager: _,
-          bRegisterModalManager: __webpack_require__ = !0,
+          bRegisterModalManager: _ = !0,
           DialogWrapper: _,
           rctActiveContextMenus: _,
           bUseDialogElement: _ = !0,
@@ -8632,7 +8235,7 @@
             },
             [_],
           );
-        })(_, __webpack_require__);
+        })(_, _);
         let _ = null,
           _ = !_;
         return (
@@ -8697,7 +8300,7 @@
       function _(_) {
         const {
           modal: _,
-          rctActiveContextMenus: __webpack_require__,
+          rctActiveContextMenus: _,
           active: _,
           bUseDialogElement: _,
         } = _;
@@ -8719,7 +8322,7 @@
               ),
               ref: _.RefModalElement,
             }),
-            __webpack_require__,
+            _,
           ],
         });
         return _
@@ -8732,7 +8335,7 @@
       function _(_) {
         const {
             modal: _,
-            active: __webpack_require__,
+            active: _,
             rctActiveContextMenus: _,
             Component: _,
           } = _,
@@ -8743,9 +8346,9 @@
             children: (0, _.jsxs)(_, {
               className: (0, _._)(
                 "ModalOverlayContent",
-                __webpack_require__ ? "active" : "inactive",
+                _ ? "active" : "inactive",
               ),
-              active: __webpack_require__,
+              active: _,
               modalKey: _.key,
               children: [_, _.element],
             }),
@@ -8753,10 +8356,10 @@
         );
       }
       function _(_) {
-        const { className: _, active: __webpack_require__, children: _ } = _;
+        const { className: _, active: _, children: _ } = _;
         return (0, _.jsx)(_, {
-          active: __webpack_require__,
-          children: (0, _.jsx)(_, {
+          active: _,
+          children: (0, _.jsx)(_._, {
             children: (0, _.jsx)("div", {
               className: _,
               tabIndex: -1,
@@ -8766,7 +8369,7 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
+        const { active: _, children: _ } = _,
           _ = _.useRef(null),
           [_, _] = _.useState(!1);
         return (
@@ -8781,7 +8384,7 @@
             className: _.ModalDialog,
             onClose: () => _(!1),
             onCancel: (_) => _.preventDefault(),
-            children: __webpack_require__,
+            children: _,
           })
         );
       }
@@ -8807,7 +8410,7 @@
         _ = _.memo(function (_) {
           const {
               children: _,
-              bRenderOverlayAtRoot: __webpack_require__,
+              bRenderOverlayAtRoot: _,
               refModalManager: _,
               DialogWrapper: _,
               bUseDialogElement: _ = !0,
@@ -8880,7 +8483,7 @@
         });
       }
       function _(_) {
-        const { featureName: _, render: __webpack_require__ } = _,
+        const { featureName: _, render: _ } = _,
           _ = _.useMemo(
             () =>
               Array.from(
@@ -8896,7 +8499,7 @@
                   {
                     featureName: _,
                     elem: _,
-                    render: __webpack_require__,
+                    render: _,
                   },
                   _,
                 ),
@@ -8905,7 +8508,7 @@
           : null;
       }
       function _(_) {
-        const { featureName: _, render: __webpack_require__ } = _,
+        const { featureName: _, render: _ } = _,
           _ = (0, _._)(),
           _ = _.useRef([]),
           _ = _.useRef(0);
@@ -8953,7 +8556,7 @@
                 {
                   elem: _,
                   featureName: _,
-                  render: __webpack_require__,
+                  render: _,
                 },
                 _,
               ),
@@ -8962,7 +8565,7 @@
         );
       }
       function _(_) {
-        const { featureName: _, elem: __webpack_require__, render: _ } = _,
+        const { featureName: _, elem: _, render: _ } = _,
           _ = _.useMemo(
             () =>
               (function (_, _) {
@@ -8983,13 +8586,13 @@
                   );
                 }
               })(__webpack_require__.getAttribute("data-props"), _),
-            [__webpack_require__, _],
+            [_, _],
           );
         return (0, _.createPortal)(
           (0, _.jsx)(_._, {
             children: _(_),
           }),
-          __webpack_require__,
+          _,
         );
       }
       function _(_, _) {
@@ -9013,21 +8616,21 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { queryClient: _ = _, steamUI: __webpack_require__ } = _;
+        const { queryClient: _ = _, steamUI: _ } = _;
         _.useEffect(() => {
           _ == _ &&
             _.setDefaultOptions({
               ..._,
               queries: {
                 ..._.queries,
-                networkMode: __webpack_require__ ? "offlineFirst" : void 0,
+                networkMode: _ ? "offlineFirst" : void 0,
               },
               mutations: {
                 ..._.mutations,
-                networkMode: __webpack_require__ ? "offlineFirst" : void 0,
+                networkMode: _ ? "offlineFirst" : void 0,
               },
             });
-        }, [_, __webpack_require__]);
+        }, [_, _]);
         let _ = _.children;
         return (
           _.debug &&
@@ -9070,6 +8673,7 @@
         }, [_, _, _, _]);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -9135,12 +8739,12 @@
       function _(_) {
         const {
             customTooltip: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             className: _,
             icon: _,
             small: _,
           } = _,
-          _ = _ ? _ : _;
+          _ = _ ? _._ : _._;
         let _ = _;
         return (
           (_ ??= _ ? (0, _.jsx)(_.Jru, {}) : void 0),
@@ -9148,7 +8752,7 @@
             children: [" ", (0, _.jsx)(_._VW, {})],
           })),
           (0, _.jsx)(_, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             className: (0, _._)(
               _.HelperTooltip,
               "HelperTooltip",
@@ -9173,10 +8777,10 @@
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
+        const { value: _, onChange: _, disabled: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().Toggle, _ && _().Disabled),
-          onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          onClick: () => !_ && _ && __webpack_require__(!_),
           children: [
             (0, _.jsx)("div", {
               className: _().ToggleRail,
@@ -9205,11 +8809,11 @@
       }
       const _ = _.createContext(null),
         _ = _.forwardRef(function (_, _) {
-          const { _: __webpack_require__, className: _, ..._ } = _,
+          const { _: _, className: _, ..._ } = _,
             _ = _.useContext(_),
             _ = _?.setHeaderId,
             _ = _.useId(),
-            _ = __webpack_require__ || _;
+            _ = _ || _;
           return (
             _.useEffect(() => {
               _ && _(_);
@@ -9250,17 +8854,12 @@
         });
       }
       function _(_) {
-        let {
-            children: _,
-            bCenterVertically: __webpack_require__,
-            refElem: _,
-            ..._
-          } = _,
+        let { children: _, bCenterVertically: _, refElem: _, ..._ } = _,
           _ =
             "DialogContent _DialogLayout" +
             (_.className ? " " + _.className : "");
         return (
-          __webpack_require__ && (_ += " _DialogCenterVertically"),
+          _ && (_ += " _DialogCenterVertically"),
           (0, _.jsx)("div", {
             ..._,
             ref: _,
@@ -9286,26 +8885,17 @@
         }
       }
       function _(_) {
-        const {
-          classNameContent: _,
-          bCenterVertically: __webpack_require__,
-          ..._
-        } = _;
+        const { classNameContent: _, bCenterVertically: _, ..._ } = _;
         return (0, _.jsx)(_, {
           className: _,
-          bCenterVertically: __webpack_require__,
+          bCenterVertically: _,
           children: (0, _.jsx)(_, {
             ..._,
           }),
         });
       }
       function _(_) {
-        const {
-          label: _,
-          tooltip: __webpack_require__,
-          className: _,
-          children: _,
-        } = _;
+        const { label: _, tooltip: _, className: _, children: _ } = _;
         return (0, _.jsxs)("label", {
           className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
           children: [
@@ -9314,9 +8904,9 @@
                 children: [
                   _,
                   " ",
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)(_, {
-                      tooltip: __webpack_require__,
+                      tooltip: _,
                     }),
                   " ",
                 ],
@@ -9504,7 +9094,7 @@
           const {
             onChange: _,
             checked: _,
-            label: __webpack_require__,
+            label: _,
             description: _,
             tabIndex: _,
             disabled: _,
@@ -9985,7 +9575,7 @@
           const {
             label: _,
             description: _,
-            requiredLabel: __webpack_require__,
+            requiredLabel: _,
             bShowCopyAction: _,
             bShowClearAction: _,
             bAlwaysShowClearAction: _,
@@ -10170,7 +9760,7 @@
           const {
             label: _,
             description: _,
-            requiredLabel: __webpack_require__,
+            requiredLabel: _,
             bShowCopyAction: _,
             bShowClearAction: _,
             bAlwaysShowClearAction: _,
@@ -10481,14 +10071,14 @@
       function _(_) {
         const {
           label: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           strClassName: _,
           dropDownControlRef: _,
           ..._
         } = _;
         return (0, _.jsx)(_, {
           label: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           className: _,
           children: (0, _.jsx)(_, {
             menuLabel: _,
@@ -10733,7 +10323,7 @@
       function _(_) {
         const {
             rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             selectedValue: _,
           } = _,
@@ -10754,7 +10344,7 @@
           onKeyDown: _,
           children: (0, _.jsx)(_, {
             rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
@@ -10762,7 +10352,7 @@
         });
       }
       function _(_) {
-        const { rgOptions: _, ...__webpack_require__ } = _;
+        const { rgOptions: _, ..._ } = _;
         return _.map((_, _) =>
           _(_)
             ? (0, _.jsx)(
@@ -10779,7 +10369,7 @@
               ? (0, _.jsx)(
                   _,
                   {
-                    ...__webpack_require__,
+                    ..._,
                     rgOptions: _.options,
                   },
                   _,
@@ -10787,7 +10377,7 @@
               : (0, _.jsx)(
                   _,
                   {
-                    ...__webpack_require__,
+                    ..._,
                     option: _,
                   },
                   _,
@@ -10797,7 +10387,7 @@
       function _(_) {
         const {
             option: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
@@ -10811,7 +10401,7 @@
           type: "button",
           className: (0, _._)(
             _().DialogDropDownMenu_Item,
-            __webpack_require__,
+            _,
             _.strOptionClass,
             _ && "ContextMenuAutoFocus",
           ),
@@ -10821,7 +10411,7 @@
           role: "option",
           "aria-selected": _,
           children: Boolean(_.tooltip)
-            ? (0, _.jsx)(_, {
+            ? (0, _.jsx)(_._, {
                 toolTipContent: _.tooltip,
                 bTopmost: !0,
                 className: "TooltipContainer",
@@ -10848,20 +10438,20 @@
           const {
             fnLoadOptions: _,
             strInitialDisplay: _,
-            initialValue: __webpack_require__,
+            initialValue: _,
             ..._
           } = this.props;
           let { rgOptions: _ } = this.state;
           return (
             void 0 === _ &&
-              (_ || __webpack_require__
+              (_ || _
                 ? ((_ = [
                     {
                       label: _,
-                      data: __webpack_require__,
+                      data: _,
                     },
                   ]),
-                  (_.selectedOption = __webpack_require__))
+                  (_.selectedOption = _))
                 : (_ = [])),
             (0, _.jsx)(_, {
               ..._,
@@ -11237,7 +10827,7 @@
         }
         ProcessDragMove(_) {
           _("ProcessDragMove", _, this.props.data);
-          const [_, __webpack_require__] = (function (_) {
+          const [_, _] = (function (_) {
             if ("touches" in _) {
               let _ = _;
               return [_.touches[0].clientX, _.touches[0].clientY];
@@ -11245,25 +10835,17 @@
             return [_.clientX, _.clientY];
           })(_);
           if (this.m_DragInfo.bStarted) {
-            if (
-              this.props.bEnableHTMLDrag &&
-              0 == _ &&
-              0 == __webpack_require__
-            )
-              return;
-            this.props.coordinator.OnDrag(this, _, __webpack_require__);
+            if (this.props.bEnableHTMLDrag && 0 == _ && 0 == _) return;
+            this.props.coordinator.OnDrag(this, _, _);
           } else
             Math.pow(_ - (this.m_DragInfo.startClientX ?? 0), 2) +
-              Math.pow(
-                __webpack_require__ - (this.m_DragInfo.startClientY ?? 0),
-                2,
-              ) >=
+              Math.pow(_ - (this.m_DragInfo.startClientY ?? 0), 2) >=
               25 &&
               ((this.m_DragInfo.bStarted = !0),
               this.forceUpdate(),
               this.props.fnOnDragStart && this.props.fnOnDragStart(),
               this.props.coordinator.OnDragStart(this),
-              this.props.coordinator.OnDrag(this, _, __webpack_require__));
+              this.props.coordinator.OnDrag(this, _, _));
         }
         OnMouseDown(_) {
           this.m_DragInfo.bStarted ||
@@ -11372,7 +10954,7 @@
           const {
             coordinator: _,
             data: _,
-            bEnableHTMLDrag: __webpack_require__,
+            bEnableHTMLDrag: _,
             strHTMLDragData: _,
             fnOnDragStart: _,
             fnOnDragEnd: _,
@@ -11388,11 +10970,11 @@
           return (
             this.m_DragInfo.bStarted
               ? ((_ = (0, _._)(_, _ || "DraggedOut")),
-                __webpack_require__ &&
+                _ &&
                   (_ = {
                     onDragEnd: this.OnHTMLDragEnd,
                   }))
-              : (_ = __webpack_require__
+              : (_ = _
                   ? {
                       onDragStart: this.OnHTMLDragStart,
                     }
@@ -11405,7 +10987,7 @@
               className: _,
               ..._,
               ..._,
-              draggable: __webpack_require__,
+              draggable: _,
               children: _,
             })
           );
@@ -11576,7 +11158,7 @@
           const {
               coordinator: _,
               fnBAcceptDraggable: _,
-              fnOnDrop: __webpack_require__,
+              fnOnDrop: _,
               fnOnDragEnter: _,
               fnOnDragLeave: _,
               className: _,
@@ -11639,7 +11221,7 @@
       function _(_) {
         const {
             stylesheet: _,
-            pages: __webpack_require__,
+            pages: _,
             iActivePage: _,
             onPageSelected: _,
             PageListItemComponent: _ = _,
@@ -11649,8 +11231,8 @@
         return __webpack_require__
           .filter((_, _) => {
             if (_ === _ || _ === _) {
-              for (let _ = _ + 1; _ < __webpack_require__.length; _++) {
-                const _ = __webpack_require__[_];
+              for (let _ = _ + 1; _ < _.length; _++) {
+                const _ = _[_];
                 if (_ !== _ && _ !== _ && _.visible) return !0;
               }
               return !1;
@@ -11706,7 +11288,7 @@
       function _(_) {
         const {
           title: _,
-          icon: __webpack_require__,
+          icon: _,
           active: _,
           className: _,
           onClick: _,
@@ -11717,10 +11299,10 @@
           onClick: _,
           ..._,
           children: [
-            __webpack_require__
+            _
               ? (0, _.jsx)("div", {
                   className: _().PageListItem_Icon,
-                  children: __webpack_require__,
+                  children: _,
                 })
               : null,
             (0, _.jsx)("div", {
@@ -11733,221 +11315,211 @@
       }
       (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
       const _ = _.forwardRef(function (_, _) {
-        const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
+        const { activePage: _, style: _, stylesheet: _ } = _,
           _ = _.useContext(_),
-          _ = __webpack_require__?.padding ?? "standard";
+          _ = _?.padding ?? "standard";
         return (0, _.jsxs)(_, {
           style: _,
           className: (0, _._)(
             _?.PagedSettingsDialog_PageContent,
-            __webpack_require__?.pageClassName,
+            _?.pageClassName,
             "none" == _ && _?.NoPadding,
           ),
           refElem: _,
           role: "tabpanel",
-          "aria-labelledby": _ + __webpack_require__?.identifier,
-          _: _ + __webpack_require__?.identifier + "_Content",
+          "aria-labelledby": _ + _?.identifier,
+          _: _ + _?.identifier + "_Content",
           children: [
-            __webpack_require__?.header,
-            !__webpack_require__?.hideTitle &&
+            _?.header,
+            !_?.hideTitle &&
               (0, _.jsx)(_, {
-                children: __webpack_require__?.title,
+                children: _?.title,
               }),
             (0, _.jsx)(_._, {
-              children: __webpack_require__?.content,
+              children: _?.content,
             }),
           ],
         });
       });
       function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
+        const { bTransparent: _, className: _, ..._ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(__webpack_require__, _().PageListSeparator, {
+          className: (0, _._)(_, _().PageListSeparator, {
             [_().Transparent]: _,
           }),
           ..._,
         });
       }
-      const _ = _.createContext(void 0),
-        _ = _.forwardRef(function (_, _) {
-          const {
-              stylesheet: __webpack_require__ = _(),
-              pages: _,
-              onPageRequested: _,
-            } = _,
-            _ = _.useId(),
-            _ = null == _.page,
-            [_, _] = _.useState(() =>
-              void 0 === _.startingPage
-                ? -1
-                : _.findIndex(
-                    (_) =>
-                      "object" == typeof _ && _.identifier === _.startingPage,
-                  ),
-            );
-          let _ = _;
-          _ ||
-            (_ = _.findIndex(
-              (_) => "object" == typeof _ && _.identifier === _.page,
-            )),
-            (_ < 0 || _ >= _.length) && (_ = 0);
-          let _ = null;
-          "object" == typeof _[_] && (_ = _[_]);
-          const _ = _.useRef(null),
-            _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
-            [_, _] = _.useState(!1),
-            _ = _ ? _ : void 0,
-            _ = _.useCallback((_) => {
-              _ && _(!0);
-            }, []),
-            _ = _.useCallback(
-              (_, _) => {
-                _(!0),
-                  _._.PlayNavSound(_._.PagedNavigation),
-                  _ && _(_.identifier),
-                  _.click ? _.click() : _ && _(_);
-              },
-              [_, _],
+      const _ = _.createContext(void 0);
+      _.forwardRef(function (_, _) {
+        const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
+          _ = _.useId(),
+          _ = null == _.page,
+          [_, _] = _.useState(() =>
+            void 0 === _.startingPage
+              ? -1
+              : _.findIndex(
+                  (_) =>
+                    "object" == typeof _ && _.identifier === _.startingPage,
+                ),
+          );
+        let _ = _;
+        _ ||
+          (_ = _.findIndex(
+            (_) => "object" == typeof _ && _.identifier === _.page,
+          )),
+          (_ < 0 || _ >= _.length) && (_ = 0);
+        let _ = null;
+        "object" == typeof _[_] && (_ = _[_]);
+        const _ = _.useRef(null),
+          _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
+          [_, _] = _.useState(!1),
+          _ = _ ? _ : void 0,
+          _ = _.useCallback((_) => {
+            _ && _(!0);
+          }, []),
+          _ = _.useCallback(
+            (_, _) => {
+              _(!0),
+                _._.PlayNavSound(_._.PagedNavigation),
+                _ && _(_.identifier),
+                _.click ? _.click() : _ && _(_);
+            },
+            [_, _],
+          ),
+          _ = _.useRef(null),
+          _ = _.showTitle ?? !0,
+          _ = (0, _._)(
+            "DialogContentTransition",
+            _.PagedSettingDialog_ContentColumn,
+          );
+        _.useEffect(() => {
+          _.bAutoFocusPageContent && _.current?.TakeFocus();
+        }, []);
+        const { refForPageList: _, refForPage: _ } = (function () {
+          const _ = _.useMemo(() => new _(), []);
+          _.useEffect(
+            () => (
+              _.Get().m_setPagedSettingsInstances.add(_),
+              () => {
+                _.Get().m_setPagedSettingsInstances.delete(_);
+              }
             ),
-            _ = _.useRef(null),
-            _ = _.showTitle ?? !0,
-            _ = (0, _._)(
-              "DialogContentTransition",
-              __webpack_require__.PagedSettingDialog_ContentColumn,
-            );
-          _.useEffect(() => {
-            _.bAutoFocusPageContent && _.current?.TakeFocus();
-          }, []);
-          const { refForPageList: _, refForPage: _ } = (function () {
-            const _ = _.useMemo(() => new _(), []);
-            _.useEffect(
-              () => (
-                _.Get().m_setPagedSettingsInstances.add(_),
-                () => {
-                  _.Get().m_setPagedSettingsInstances.delete(_);
-                }
-              ),
+            [_],
+          );
+          const _ = _.useCallback(
+              (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
               [_],
-            );
-            const _ = _.useCallback(
-                (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = (0, _._)("scroll", _),
-              _ = (0, _._)("scroll", _),
-              _ = _.useCallback(
-                (_) => {
-                  _.m_flPageListScrollTop = _?.scrollTop ?? 0;
+            ),
+            _ = _.useCallback(
+              (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
+              [_],
+            ),
+            _ = (0, _._)("scroll", _),
+            _ = (0, _._)("scroll", _),
+            _ = _.useCallback(
+              (_) => {
+                _.m_flPageListScrollTop = _?.scrollTop ?? 0;
+              },
+              [_],
+            ),
+            _ = _.useCallback(
+              (_) => {
+                _.m_flPageScrollTop = _?.scrollTop ?? 0;
+              },
+              [_],
+            ),
+            _ = (0, _._)(_, _),
+            _ = (0, _._)(_, _);
+          return {
+            refForPageList: _,
+            refForPage: _,
+          };
+        })();
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_.PagedSettingsDialog, _.className),
+            ref: _,
+            children: [
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  _.PagedSettingsDialog_PageListColumn,
+                  _.hideList && _().Hidden,
+                  "PageListColumn",
+                ),
+                navRef: _,
+                onButtonDown: (_) => {
+                  _.detail.button == _._._ &&
+                    _.current?.TakeFocus(_.detail.button);
                 },
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => {
-                  _.m_flPageScrollTop = _?.scrollTop ?? 0;
-                },
-                [_],
-              ),
-              _ = (0, _._)(_, _),
-              _ = (0, _._)(_, _);
-            return {
-              refForPageList: _,
-              refForPage: _,
-            };
-          })();
-          return (0, _.jsx)(_.Provider, {
-            value: _,
-            children: (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                __webpack_require__.PagedSettingsDialog,
-                _.className,
-              ),
-              ref: _,
-              children: [
-                (0, _.jsxs)(_._, {
-                  className: (0, _._)(
-                    __webpack_require__.PagedSettingsDialog_PageListColumn,
-                    _.hideList && _().Hidden,
-                    "PageListColumn",
-                  ),
-                  navRef: _,
-                  onButtonDown: (_) => {
-                    _.detail.button == _._._ &&
-                      _.current?.TakeFocus(_.detail.button);
-                  },
-                  onFocusWithin: _,
-                  children: [
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className:
-                          __webpack_require__.PagedSettingsDialog_Title,
-                        children: _.title,
-                      }),
-                    _.topControls &&
-                      (0, _.jsx)("div", {
-                        children: _.topControls,
-                      }),
-                    (0, _.jsx)(_._, {
-                      className: (0, _._)(
-                        __webpack_require__.PagedSettingsDialog_PageList,
-                        _.disablePageListScrolling &&
-                          __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
-                        _ &&
-                          __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
-                        _.bNoHeaderPadding &&
-                          __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
-                      ),
-                      role: "tablist",
-                      "aria-orientation": "vertical",
-                      navEntryPreferPosition: _._.PREFERRED_CHILD,
-                      ref: _,
-                      children: (0, _.jsx)(_, {
-                        stylesheet: __webpack_require__,
-                        pages: _,
-                        iActivePage: _,
-                        onPageSelected: _,
-                        PageListItemComponent: _.PageListItemComponent,
-                        PageListSeparatorComponent:
-                          _.PageListSeparatorComponent,
-                      }),
+                onFocusWithin: _,
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.PagedSettingsDialog_Title,
+                      children: _.title,
                     }),
-                    _.bottomControls &&
-                      (0, _.jsx)("div", {
-                        children: _.bottomControls,
+                  _.topControls &&
+                    (0, _.jsx)("div", {
+                      children: _.topControls,
+                    }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(
+                      _.PagedSettingsDialog_PageList,
+                      _.disablePageListScrolling &&
+                        _.PagedSettingsDialog_PageList_DisableScrolling,
+                      _ && _.PagedSettingsDialog_PageList_ShowTitle,
+                      _.bNoHeaderPadding &&
+                        _.PageSettingsDialog_PageList_NoHeaderPadding,
+                    ),
+                    role: "tablist",
+                    "aria-orientation": "vertical",
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    ref: _,
+                    children: (0, _.jsx)(_, {
+                      stylesheet: _,
+                      pages: _,
+                      iActivePage: _,
+                      onPageSelected: _,
+                      PageListItemComponent: _.PageListItemComponent,
+                      PageListSeparatorComponent: _.PageListSeparatorComponent,
+                    }),
+                  }),
+                  _.bottomControls &&
+                    (0, _.jsx)("div", {
+                      children: _.bottomControls,
+                    }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                className: _,
+                onCancelButton: _,
+                navRef: _,
+                children: [
+                  _.toggleHideList &&
+                    (0, _.jsx)(_, {
+                      hideList: _.hideList,
+                      toggleHideList: _.toggleHideList,
+                    }),
+                  _.renderPageContent
+                    ? _.renderPageContent(_, _, _)
+                    : (0, _.jsx)(_, {
+                        ref: _,
+                        activePage: _,
+                        stylesheet: _,
                       }),
-                  ],
-                }),
-                (0, _.jsxs)(_._, {
-                  className: _,
-                  onCancelButton: _,
-                  navRef: _,
-                  children: [
-                    _.toggleHideList &&
-                      (0, _.jsx)(_, {
-                        hideList: _.hideList,
-                        toggleHideList: _.toggleHideList,
-                      }),
-                    _.renderPageContent
-                      ? _.renderPageContent(_, _, _)
-                      : (0, _.jsx)(_, {
-                          ref: _,
-                          activePage: _,
-                          stylesheet: __webpack_require__,
-                        }),
-                  ],
-                }),
-              ],
-            }),
-          });
+                ],
+              }),
+            ],
+          }),
         });
+      });
       const _ = _.createContext(!1);
       _.memo(function (_) {
         const {
             isActive: _,
-            refForPage: __webpack_require__,
+            refForPage: _,
             page: _,
             PageComponent: _,
             stylesheet: _,
@@ -11964,7 +11536,7 @@
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: (0, _.jsx)(_, {
-            ref: __webpack_require__,
+            ref: _,
             style: _,
             activePage: _,
             stylesheet: _,
@@ -11975,10 +11547,10 @@
         });
       });
       function _(_) {
-        const { hideList: _, toggleHideList: __webpack_require__ } = _;
+        const { hideList: _, toggleHideList: _ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _
             ? (0, _.jsx)(_.b8_, {
                 direction: "right",
@@ -12068,13 +11640,9 @@
               this.InternalOnInput();
         }
         render() {
-          const {
-            nMinHeight: _,
-            nMaxHeight: _,
-            ...__webpack_require__
-          } = this.props;
+          const { nMinHeight: _, nMaxHeight: _, ..._ } = this.props;
           return (0, _.jsx)(_._, {
-            ...__webpack_require__,
+            ..._,
             ref: this.m_refTextArea,
             onKeyUp: this.OnKeyUp,
             onBlur: this.OnBlur,
@@ -12246,7 +11814,7 @@
       function _(_) {
         const {
             className: _,
-            modalClassName: __webpack_require__,
+            modalClassName: _,
             onCancel: _,
             closeModal: _,
             bOKDisabled: _,
@@ -12263,7 +11831,7 @@
           _ = (0, _._)();
         (0, _._)(
           _ || _,
-          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_} ${__webpack_require__}`,
+          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_} ${_}`,
         );
         const _ = _.useCallback(() => {
             (_ && _()) || (_ && _());
@@ -12273,7 +11841,7 @@
           }, [_, _, _, _]);
         return (0, _.jsx)(_, {
           onEscKeypress: _,
-          className: __webpack_require__,
+          className: _,
           bDestructiveWarning: _,
           bDisableBackgroundDismiss: _,
           bHideCloseIcon: _,
@@ -12294,12 +11862,7 @@
         });
       }
       function _(_) {
-        const {
-            title: _,
-            titleClassName: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { title: _, titleClassName: _, children: _, ..._ } = _,
           _ = _.useId();
         return (0, _.jsxs)(_, {
           "aria-labelledby": _ ? _ : "",
@@ -12308,7 +11871,7 @@
             _ &&
               (0, _.jsx)(_, {
                 _: _,
-                className: __webpack_require__,
+                className: _,
                 children: _,
               }),
             _,
@@ -12322,7 +11885,7 @@
           };
         }
         const {
-            strTitle: __webpack_require__,
+            strTitle: _,
             strDescription: _,
             strOKButtonText: _,
             strCancelButtonText: _,
@@ -12367,7 +11930,7 @@
         return (0, _.jsx)(_, {
           ..._,
           title:
-            __webpack_require__ ||
+            _ ||
             (0, _.jsx)(_.Fragment, {
               children: " ",
             }),
@@ -12432,15 +11995,15 @@
         return _ ? _ + "_Description" : void 0;
       }
       function _(_, _) {
-        const { label: __webpack_require__, description: _ } = _;
+        const { label: _, description: _ } = _;
         return {
-          "aria-labelledby": __webpack_require__ ? _(_) : void 0,
+          "aria-labelledby": _ ? _(_) : void 0,
           "aria-describedby": _ ? _(_) : void 0,
         };
       }
-      const _ = _.forwardRef(function (_, _) {
+      function _(_, _) {
         const {
-            accessibilityId: __webpack_require__,
+            accessibilityId: _,
             label: _,
             description: _,
             icon: _,
@@ -12460,18 +12023,22 @@
             tooltip: _,
             explainer: _,
             explainerTitle: _,
+            transparentBackground: _,
             ..._
           } = _,
-          _ = (0, _._)(),
+          _ = (function () {
+            let _ = _();
+            return !!_ && _.bClassicMode;
+          })(),
           _ = _ ?? "inline",
           _ = _ ?? "front",
           _ = "front" == _ && !!_,
           _ = "before-children" == _ && !!_,
           _ = "inline" == _ && !!_,
           _ = "below" == _ && !!_,
-          _ = _ ?? (_ ? "shift-children-below" : "keep-inline"),
+          _ = _ ?? "keep-inline",
           _ = !!(_.onClick || _.onActivate || _.focusable),
-          _ = (null != _ && _) || null != _ || (_ && null != _),
+          _ = (_ && !!_) || !!_,
           _ = _ ?? "min",
           _ = _ ?? "standard",
           _ = _ ?? "standard",
@@ -12479,6 +12046,7 @@
           _ = _ ?? !0,
           _ = _ ?? 0,
           _ = _ ?? "center",
+          _ = !_ && !_,
           _ = (function (_, _) {
             const _ = _(),
               _ = _.useCallback(() => {
@@ -12509,6 +12077,20 @@
             },
             [_],
           );
+        let _ = (0, _.jsxs)("div", {
+          className: _().FieldChildrenWithIcon,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().FieldIcon, _().BeforeChildren),
+                children: _,
+              }),
+            (0, _.jsx)("div", {
+              className: _().FieldChildrenInner,
+              children: _,
+            }),
+          ],
+        });
         return (0, _.jsxs)(_._, {
           focusable: _,
           noFocusRing: !0,
@@ -12522,13 +12104,12 @@
           className: (0, _._)(
             _,
             _().Field,
+            _ && _().Classic,
             _ && _().Disabled,
-            _ && _().WithFirstRow,
             _ && _().WithChildrenInline,
             _ && _().WithChildrenBelow,
             "center" == _ && _().VerticalAlignCenter,
             "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
-            !!_ && _().WithDescription,
             "standard" == _ && _().WithBottomSeparatorStandard,
             "thick" == _ && _().WithBottomSeparatorThick,
             "fixed" == _ && _().ChildrenWidthFixed,
@@ -12538,75 +12119,59 @@
             "compact" == _ && _().CompactPadding,
             _ && _().Clickable,
             _ && _().HighlightOnFocus,
+            _ && _().Background,
           ),
           style: {
             "--indent-level": _,
           },
           children: [
-            _ &&
-              (0, _.jsxs)("div", {
-                className: _().FieldLabelRow,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _().FieldLabel,
-                    _: _(__webpack_require__),
-                    children: [
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().FieldIcon, _().Front),
-                          children: _,
-                        }),
-                      _,
-                      _ &&
-                        (0, _.jsx)(_, {
-                          tooltip: _,
-                        }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: _().FieldChildrenWithIcon,
+            (0, _.jsxs)("div", {
+              className: _().FieldLeftColumn,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().FieldLabelRow,
+                    children: (0, _.jsxs)("div", {
+                      className: _().FieldLabel,
+                      _: _(_),
                       children: [
                         _ &&
                           (0, _.jsx)("div", {
-                            className: (0, _._)(
-                              _().FieldIcon,
-                              _().BeforeChildren,
-                            ),
+                            className: (0, _._)(_().FieldIcon, _().Front),
                             children: _,
                           }),
-                        (0, _.jsx)("div", {
-                          className: _().FieldChildrenInner,
-                          children: _,
-                        }),
+                        _,
+                        _ &&
+                          (0, _.jsx)(_, {
+                            tooltip: _,
+                          }),
                       ],
                     }),
-                ],
-              }),
-            _ &&
-              (0, _.jsxs)("div", {
-                className: _().FieldChildrenWithIcon,
-                children: [
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                      children: _,
-                    }),
-                  (0, _.jsx)("div", {
-                    className: _().FieldChildrenInner,
+                  }),
+                _ && _,
+                _ &&
+                  (0, _.jsx)(_, {
+                    accessibilityId: _(_),
                     children: _,
                   }),
-                ],
-              }),
+              ],
+            }),
             _ &&
               (0, _.jsx)("div", {
-                className: _().FieldDescription,
-                _: _(__webpack_require__),
+                className: _().FieldRightColumn,
                 children: _,
               }),
           ],
         });
-      });
+      }
+      function _(_) {
+        const { accessibilityId: _, className: _, children: _ } = _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().FieldDescription, _),
+          _: _(_),
+          children: _,
+        });
+      }
       _.forwardRef(function (_, _) {
         return (0, _.jsx)(_, {
           ref: _,
@@ -12616,7 +12181,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            label: _,
             description: _,
             explainer: _,
             icon: _,
@@ -12629,6 +12194,7 @@
             childrenContainerWidth: _,
             padding: _,
             inlineWrap: _,
+            transparentBackground: _,
             fieldClassName: _,
             fieldChildren: _,
             accessibilityNameOrder: _,
@@ -12638,7 +12204,7 @@
           _ = _.useId();
         return (0, _.jsxs)(_, {
           accessibilityId: _,
-          label: __webpack_require__,
+          label: _,
           indentLevel: _,
           description: _,
           icon: _,
@@ -12654,6 +12220,7 @@
           explainer: _,
           className: _,
           disabled: _,
+          transparentBackground: _,
           onActivate: _ ? _ : void 0,
           children: [
             (0, _.jsx)(_, {
@@ -12667,7 +12234,7 @@
       });
       const _ = _.forwardRef(function (_, _) {
           const {
-              accessibilityId: __webpack_require__,
+              accessibilityId: _,
               label: _,
               description: _,
               explainer: _,
@@ -12686,7 +12253,7 @@
               accessibilityNameOrder: _,
               ..._
             } = _,
-            _ = (function (_, _, __webpack_require__ = ["label", "button"]) {
+            _ = (function (_, _, _ = ["label", "button"]) {
               const _ = _.useId(),
                 _ = _(_, _),
                 _ = {
@@ -12700,7 +12267,7 @@
                 (_["aria-describedby"] = _["aria-describedby"]),
                 _
               );
-            })(__webpack_require__, _, _);
+            })(_, _, _);
           return (0, _.jsx)(_, {
             ..._,
             ..._,
@@ -12710,7 +12277,7 @@
         }),
         _ = _.forwardRef(function (_, _) {
           const {
-              label: __webpack_require__,
+              label: _,
               description: _,
               icon: _,
               layout: _,
@@ -12722,7 +12289,7 @@
             _ = _.useId();
           return (0, _.jsx)(_, {
             accessibilityId: _,
-            label: __webpack_require__,
+            label: _,
             description: _,
             icon: _,
             bottomSeparator: _,
@@ -12739,134 +12306,8 @@
             }),
           });
         });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            childrenKey: _,
-            childrenClasses: __webpack_require__,
-            children: _,
-            directionClass: _,
-            animate: _ = !0,
-            sizeClass: _,
-          } = _,
-          _ = (0, _._)(_().TransitionGroup, _);
-        return (0, _.jsx)(_._, {
-          className: _,
-          appear: !1,
-          enter: _,
-          exit: _,
-          children: (0, _.jsx)(
-            _,
-            {
-              childrenClasses: __webpack_require__,
-              sizeClass: _,
-              children: _,
-            },
-            _,
-          ),
-        });
-      }
-      function _(_) {
-        const {
-            sizeClass: _,
-            children: __webpack_require__,
-            childrenClasses: _,
-            navKey: _,
-            ..._
-          } = _,
-          [_, _, _, _] = (function () {
-            let _ = _.useRef(null),
-              _ = _.useRef(void 0);
-            _.useLayoutEffect(() => {
-              let _ = _.current;
-              if (!_ || _.current) return;
-              _.current = {
-                element: _,
-                activeProps: new Set(),
-                bExiting: !1,
-                fnDone: null,
-              };
-              let _ = _.current,
-                _ = (_) => {
-                  _.target == _ && _.activeProps.add(_.propertyName);
-                };
-              __webpack_require__.addEventListener("transitionrun", _, !1);
-              let _ = (_) => {
-                _.target == _ &&
-                  (_.activeProps.delete(_.propertyName),
-                  _.fnDone &&
-                    0 == _.activeProps.size &&
-                    _.bExiting &&
-                    _.fnDone());
-              };
-              __webpack_require__.addEventListener("transitionend", _, !1),
-                __webpack_require__.addEventListener("transitioncancel", _, !1);
-            }, []);
-            let _ = _.useCallback(
-                (_) => {
-                  _.current ? (_.current.fnDone = _) : _();
-                },
-                [_],
-              ),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !1);
-              }, [_]),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !0);
-              }, [_]);
-            return [_, _, _, _];
-          })(),
-          _ = _.useRef(!0),
-          _ = _.useCallback(() => _.current, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !0), _();
-          }, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !1), _();
-          }, [_]),
-          _ = _.childrenClasses,
-          _ = {
-            enter: _.enterStart,
-            enterActive: _.enterEnd,
-            exit: _.exitStart,
-            exitActive: _.exitEnd,
-          };
-        return _.current && !_.current.ownerDocument.defaultView
-          ? null
-          : (0, _.jsx)(_._, {
-              nodeRef: _,
-              classNames: _,
-              _: !0,
-              timeout: 1e4,
-              addEndListener: _,
-              onEntering: _,
-              onExiting: _,
-              ..._,
-              children: (0, _.jsx)("div", {
-                ref: _,
-                className: (0, _._)(_().ContentWrapper, _.base),
-                children: (0, _.jsx)(_._, {
-                  className: _,
-                  fnCanTakeFocus: _,
-                  navKey: _,
-                  children: _.children,
-                }),
-              }),
-            });
-      }
-      function _(_, _) {
-        return {
-          base: _,
-          enterStart: _.Enter,
-          enterEnd: _.EnterActive,
-          exitStart: _.Exit,
-          exitEnd: _.ExitActive,
-        };
-      }
+      var _;
+      __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.None = 0)] = "None"),
           (_[(_.Left = 1)] = "Left"),
@@ -12874,151 +12315,13 @@
           (_[(_._ = 3)] = "Up"),
           (_[(_.Down = 4)] = "Down");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.createContext(null);
-      function _(_) {
-        const _ = _.useContext(_),
-          _ = (0, _._)().IN_VR,
-          { title: _, icon: _, active: _, ..._ } = _;
-        return (0, _.jsxs)(_._, {
-          preferredFocus: _,
-          navRef: _ && _ ? _ : void 0,
-          noFocusRing: !0,
-          onActivate: _ ? void 0 : _.onClick,
-          onFocus: _ ? void 0 : _.onClick,
-          ..._,
-          children: [
-            _ &&
-              (0, _.jsx)("div", {
-                className: _().PageListItem_Icon,
-                children: _,
-              }),
-            (0, _.jsx)("div", {
-              className: _().PageListItem_Title,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(__webpack_require__, _().Separator),
-          ..._,
-        });
-      }
-      _.forwardRef(function (_, _) {
-        const {
-            page: __webpack_require__,
-            bAutoFocusPageContent: _,
-            showTitle: _ = !1,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useRef(!0);
-        _.useEffect(() => {
-          (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
-        }, [__webpack_require__, _]);
-        return (0, _.jsx)(_.Provider, {
-          value: _,
-          children: (0, _.jsx)(_, {
-            ..._,
-            stylesheet: _(),
-            showTitle: _,
-            PageListItemComponent: _,
-            PageListSeparatorComponent: _,
-            renderPageContent:
-              _.renderPageContent ||
-              ((_, _, _) =>
-                (0, _.jsx)(_, {
-                  pages: _.pages,
-                  activePage: _,
-                  refForPage: _,
-                  PageComponent: _,
-                })),
-          }),
-        });
-      });
-      function _(_) {
-        const {
-            pages: _,
-            activePage: __webpack_require__,
-            refForPage: _,
-            PageComponent: _,
-          } = _,
-          _ = (function (_) {
-            let _ = _.useRef(_),
-              _ = _.useRef(_.None),
-              _ = _.current;
-            if (_ == _) return _.current;
-            let _ = _.None;
-            _ < _ ? (_ = _.Down) : _ > _ && (_ = _._);
-            return (_.current = _), (_.current = _), _;
-          })(
-            _.useMemo(
-              () => _.findIndex((_) => _ == __webpack_require__),
-              [_, __webpack_require__],
-            ),
-          ),
-          _ = (function (_, _) {
-            const _ = _.useMemo(() => new Map(), []),
-              _ = _.useRef(_);
-            _.current = _;
-            const _ = _.useRef(_);
-            _.current = _;
-            const _ = _.useCallback(
-              (_) => (_) => {
-                __webpack_require__.set(_, _),
-                  _ === _.current && (0, _._)(_.current, _);
-              },
-              [_],
-            );
-            return (
-              _.useEffect(
-                () => (
-                  (0, _._)(_, _ && __webpack_require__.get(_)),
-                  () => (0, _._)(_, void 0)
-                ),
-                [_, _, _],
-              ),
-              _
-            );
-          })(__webpack_require__?.identifier, _);
-        let _ =
-          ((_ = _()),
-          (_ = _) == _.Left
-            ? _.Left
-            : _ == _.Right
-              ? _.Right
-              : _ == _._
-                ? _._
-                : _ == _.Down
-                  ? _.Down
-                  : "");
-        var _, _;
-        return (0, _.jsx)(_, {
-          childrenKey: __webpack_require__?.identifier,
-          childrenClasses: _(_(), _().ContentTransition),
-          directionClass: _,
-          animate: _ != _.None,
-          children:
-            __webpack_require__ &&
-            (0, _.jsx)(
-              _,
-              {
-                ref: _(__webpack_require__.identifier),
-                stylesheet: _(),
-                activePage: __webpack_require__,
-              },
-              __webpack_require__.identifier,
-            ),
-        });
-      }
+      __webpack_require__("chunkid");
+      _.createContext(null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       _.forwardRef(function (_, _) {
         const {
-            className: __webpack_require__,
+            className: _,
             opened: _,
             arrowClassName: _,
             "aria-label": _,
@@ -13031,10 +12334,7 @@
           children: [
             (0, _.jsx)(_, {
               _: _,
-              className: (0, _._)(
-                _().DropDownControlButton,
-                __webpack_require__,
-              ),
+              className: (0, _._)(_().DropDownControlButton, _),
               "aria-labelledby": _ || _,
               ..._,
               ref: _,
@@ -13064,7 +12364,7 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, ..._ } = _;
+        const { className: _, ..._ } = _;
         let _ = _.useRef(void 0),
           _ = (0, _._)(_, _);
         const [_, _] = _.useState(!1),
@@ -13072,7 +12372,7 @@
             _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
           }, []);
         return (0, _.jsx)(_._, {
-          className: __webpack_require__,
+          className: _,
           onOptionsButton: _,
           onOptionsActionDescription: (0, _._)(
             _ ? "#Login_HidePassword" : "#Login_ShowPassword",
@@ -13096,7 +12396,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            label: _,
             className: _,
             description: _,
             icon: _,
@@ -13108,7 +12408,7 @@
         return (0, _.jsx)(_, {
           accessibilityId: _,
           className: _,
-          label: __webpack_require__,
+          label: _,
           description: _,
           icon: _,
           bottomSeparator: _,
@@ -13122,7 +12422,7 @@
         });
       });
       _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, value: _, ..._ } = _,
+        const { className: _, value: _, ..._ } = _,
           _ = _ ?? "";
         return (0, _.jsx)(_, {
           autoComplete: "off",
@@ -13284,218 +12584,10 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = new _._("FocusNavigation").Debug;
-      function _(_) {
-        const { children: _, disableFocusRing: __webpack_require__, ..._ } = _,
-          [_, _] = _.useState({
-            bFocusWithin: !1,
-            navTarget: null,
-            prevTarget: null,
-          }),
-          _ = _.useRef(null),
-          _ = _.useMemo(
-            () => ({
-              OnBlur: (_, _, _) => {
-                _({
-                  bFocusWithin: !1,
-                  navTarget: null,
-                  prevTarget: null,
-                });
-              },
-              OnFocus: (_, _, _) => {
-                _({
-                  bFocusWithin: !0,
-                  navTarget: _,
-                  prevTarget: null,
-                });
-              },
-              OnFocusChange: (_, _, _) => {
-                _({
-                  bFocusWithin: !0,
-                  navTarget: _,
-                  prevTarget: _,
-                });
-              },
-              OnForceMeasureFocusRing: () => {
-                _.current?.MeasureElementAndUpdate();
-              },
-            }),
-            [_],
-          );
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            !__webpack_require__ &&
-              (0, _.jsx)(_, {
-                ..._,
-                ..._,
-                refMeasure: _,
-              }),
-            (0, _.jsx)(_._.Provider, {
-              value: _,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            rootClassName: _,
-            className: __webpack_require__,
-            bFocusWithin: _,
-            navTarget: _,
-            refMeasure: _,
-          } = _,
-          [_, _] = _.useState(null),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(!1);
-        return _ || _
-          ? (0, _.jsx)("div", {
-              className: _()(_().FocusRingRoot, _),
-              ref: _,
-              children: (0, _.jsx)(_, {
-                refMeasure: _,
-                className: _()(__webpack_require__, _ && _().DebugFocusRing),
-                bFocusWithin: _ && (_ || _),
-                navTarget: _,
-                elContainer: _,
-                bDebug: _,
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const {
-            className: _,
-            bFocusWithin: __webpack_require__,
-            navTarget: _,
-            elContainer: _,
-            bDebug: _,
-            refMeasure: _,
-          } = _,
-          [_, _] = _.useState(null),
-          [_, _] = _.useReducer((_) => _ + 1, 0),
-          [_, _] = _.useReducer((_) => _ + 1, 0);
-        (0, _._)(
-          _,
-          _.useMemo(
-            () => ({
-              MeasureElementAndUpdate: _,
-            }),
-            [],
-          ),
-        );
-        const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
-          _ = _ && !_,
-          _ = (function (_, _) {
-            const [__webpack_require__, _] = _.useState(!1);
-            return (
-              (0, _.useEffect)(() => {
-                if (_ && _) {
-                  let _ = _.GetBoundingRect(),
-                    _ = _.Element;
-                  const _ = _.ownerDocument.defaultView,
-                    _ = (_) =>
-                      "none" == _.getComputedStyle(_).display ||
-                      (0 == _?.width && 0 == _.height && 0 == _._ && 0 == _._);
-                  for (; _(_) && _?.parentElement; )
-                    (_ = _.parentElement),
-                      (_ = __webpack_require__.getBoundingClientRect());
-                  let _ = _.Element != _;
-                  _(
-                    (_) => (
-                      _ &&
-                        _ != _ &&
-                        _(
-                          "Focused on hidden item: ",
-                          _.Element,
-                          ". Closest visible ancestor: ",
-                          _,
-                        ),
-                      _
-                    ),
-                  );
-                }
-              }, [_, _]),
-              __webpack_require__
-            );
-          })(_, _),
-          _ = _.useCallback(() => {
-            if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
-            let _ = _.GetBoundingRect();
-            const _ = _.getBoundingClientRect(),
-              _ = {
-                left: _._ - _._,
-                top: _._ - _._,
-                height: _.height,
-                width: _.width,
-              };
-            _((_) =>
-              _ &&
-              _.left == _.left &&
-              _.top == _.top &&
-              _.height == _.height &&
-              _.width == _.width
-                ? _
-                : _,
-            );
-          }, [_, _, _]);
-        _.useLayoutEffect(() => _(), [_]),
-          _.useLayoutEffect(() => {
-            _();
-          }, [_]);
-        let _ = __webpack_require__;
-        return (
-          _ && _ && (_.BWantsFocusRing() || (_ = !1)),
-          _.useEffect(() => {
-            if (!_) return;
-            const _ = performance.now();
-            let _;
-            const _ = () => {
-              _(),
-                performance.now() - _ <= 500 && (_ = requestAnimationFrame(_));
-            };
-            return __webpack_require__(), () => cancelAnimationFrame(_);
-          }, [_, _, _, _]),
-          _ && _
-            ? (0, _.createElement)(_, {
-                ..._,
-                key: _,
-                className: _()(_, _ && _().FocusRingOnHiddenItem),
-                target: _,
-              })
-            : null
-        );
-      }
-      function _(_) {
-        const {
-            className: _,
-            left: __webpack_require__,
-            top: _,
-            height: _,
-            width: _,
-            target: _,
-          } = _,
-          _ = {
-            left: (__webpack_require__ ?? 0) - 0 + "px",
-            top: (_ ?? 0) - 0 + "px",
-            height: _ + "px",
-            width: _ + "px",
-          };
-        return (0, _.jsx)("div", {
-          className: _()(_().FocusRing, _),
-          style: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.forwardRef(function (_, _) {
           const {
-            scrollDirection: __webpack_require__,
+            scrollDirection: _,
             scrollPaddingTop: _,
             scrollPaddingRight: _,
             scrollPaddingBottom: _,
@@ -13506,7 +12598,7 @@
             ..._
           } = _;
           let _;
-          switch (__webpack_require__) {
+          switch (_) {
             case "x":
               _ = _().ScrollX;
               break;
@@ -13548,22 +12640,18 @@
             className: _()(_, _().ScrollPanel, _),
             ref: _,
             navRef: _,
-            children: (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
               children: _,
             }),
           });
         }),
         _ = _.forwardRef(function (_, _) {
-          const {
-              scrollStepPercent: __webpack_require__,
-              scrollBehavior: _,
-              ..._
-            } = _,
+          const { scrollStepPercent: _, scrollBehavior: _, ..._ } = _,
             _ = _.useRef(null),
             _ = _(
               _,
               _,
-              __webpack_require__,
+              _,
               _.useCallback((_) => _.currentTarget != _.target, []),
             ),
             _ = (0, _._)(_, _);
@@ -13575,14 +12663,9 @@
           });
         });
       _.forwardRef(function (_, _) {
-        const {
-          name: __webpack_require__,
-          msScrollRestoreDelay: _,
-          onScroll: _,
-          ..._
-        } = _;
+        const { name: _, msScrollRestoreDelay: _, onScroll: _, ..._ } = _;
         return (0, _.jsx)(_, {
-          name: __webpack_require__,
+          name: _,
           msScrollRestoreDelay: _,
           parentOnScroll: _,
           refDiv: _,
@@ -13595,14 +12678,9 @@
         });
       }),
         _.forwardRef(function (_, _) {
-          const {
-            name: __webpack_require__,
-            msScrollRestoreDelay: _,
-            onScroll: _,
-            ..._
-          } = _;
+          const { name: _, msScrollRestoreDelay: _, onScroll: _, ..._ } = _;
           return (0, _.jsx)(_, {
-            name: __webpack_require__,
+            name: _,
             msScrollRestoreDelay: _,
             parentOnScroll: _,
             refDiv: _,
@@ -13617,7 +12695,7 @@
       function _(_) {
         const {
             name: _,
-            msScrollRestoreDelay: __webpack_require__,
+            msScrollRestoreDelay: _,
             parentOnScroll: _,
             refDiv: _,
             children: _,
@@ -13629,13 +12707,8 @@
           _ = _.useRef(void 0);
         let _ = _.useCallback(
           (_) => {
-            const { scrollTop: _, scrollLeft: __webpack_require__ } =
-              _.currentTarget;
-            _(_),
-              (_.current = _),
-              _(__webpack_require__),
-              (_.current = __webpack_require__),
-              _ && _(_);
+            const { scrollTop: _, scrollLeft: _ } = _.currentTarget;
+            _(_), (_.current = _), _(_), (_.current = _), _ && _(_);
           },
           [_, _, _],
         );
@@ -13657,16 +12730,14 @@
               _.current.dispatchEvent(new UIEvent("scroll")));
           };
           (_ == _.current && _ == _.current) ||
-            (__webpack_require__
-              ? window.setTimeout(_, __webpack_require__)
-              : _());
-        }, [_, _, __webpack_require__]);
+            (_ ? window.setTimeout(_, _) : _());
+        }, [_, _, _]);
         const _ = (0, _._)(_, _);
         return _.useMemo(() => _(_, _), [_, _, _]);
       }
       const _ = _.forwardRef(function (_, _) {
         const {
-            onExplicitFocusLevelChanged: __webpack_require__,
+            onExplicitFocusLevelChanged: _,
             onOKButton: _,
             onCancelButton: _,
             navRef: _,
@@ -13678,7 +12749,7 @@
             navRefPanel: _,
             onOKButton: _,
             onCancelButton: _,
-            onExplicitFocusLevelChanged: __webpack_require__,
+            onExplicitFocusLevelChanged: _,
           }),
           _ = (0, _._)(_, _);
         return (0, _.jsx)(_._, {
@@ -13692,7 +12763,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            onOKButton: __webpack_require__,
+            onOKButton: _,
             onCancelButton: _,
             navRef: _,
             focusable: _,
@@ -13703,7 +12774,7 @@
           _ = _.useCallback((_, _) => _.FocusVisibleChild(), []),
           { fnOnOKButton: _, fnOnCancelButton: _ } = _({
             navRefPanel: _,
-            onOKButton: __webpack_require__,
+            onOKButton: _,
             onCancelButton: _,
             fnFocusChildren: _,
           }),
@@ -13721,7 +12792,7 @@
       function _(_) {
         let {
           navRefPanel: _,
-          onOKButton: __webpack_require__,
+          onOKButton: _,
           onCancelButton: _,
           onExplicitFocusLevelChanged: _,
           fnFocusChildren: _,
@@ -13732,9 +12803,9 @@
               const _ = _.current;
               return _?.BHasFocus() && _(_, _.detail.button)
                 ? (_ && _(!0), !0)
-                : !!__webpack_require__ && __webpack_require__(_);
+                : !!_ && __webpack_require__(_);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -13760,7 +12831,7 @@
       function _(_, _) {
         return _.ChildTakeFocus(_);
       }
-      var _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.TrackingSystemName_String = 1e3)] =
@@ -13826,8 +12897,12 @@
           (_[(_.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
           (_[(_.ActualTrackingSystemName_String = 1054)] =
             "ActualTrackingSystemName_String"),
+          (_[(_.AllowCameraToggle_Bool = 1055)] = "AllowCameraToggle_Bool"),
+          (_[(_.AllowLightSourceFrequency_Bool = 1056)] =
+            "AllowLightSourceFrequency_Bool"),
           (_[(_.IsDedicatedVRHeadset_Bool = 1058)] =
             "IsDedicatedVRHeadset_Bool"),
+          (_[(_.HasEyeTracker_Bool = 1060)] = "HasEyeTracker_Bool"),
           (_[(_.ReportsTimeSinceVSync_Bool = 2e3)] =
             "ReportsTimeSinceVSync_Bool"),
           (_[(_.SecondsFromVsyncToPhotons_Float = 2001)] =
@@ -13994,8 +13069,8 @@
             "Hmd_SupportsGpuBusMonitoring_Bool"),
           (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
             "DriverProvidedIPDVisibility_Bool"),
-          (_[(_.Prop_Driver_Reserved_01 = 2109)] = "Prop_Driver_Reserved_01"),
-          (_[(_.Prop_Driver_Reserved_03 = 2111)] = "Prop_Driver_Reserved_03"),
+          (_[(_.Prop_Hmd_SupportsVRGamepadFocus_Bool = 2117)] =
+            "Prop_Hmd_SupportsVRGamepadFocus_Bool"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -14078,6 +13153,10 @@
             "VendorSpecific_Reserved_Start"),
           (_[(_.VendorSpecific_Reserved_End = 10999)] =
             "VendorSpecific_Reserved_End"),
+          (_[(_.SupportsInHMDRoomSetup_Bool = 11003)] =
+            "SupportsInHMDRoomSetup_Bool"),
+          (_[(_.VRLinkClientHMDSupportsRoomSetupRequests_Bool = 11004)] =
+            "VRLinkClientHMDSupportsRoomSetupRequests_Bool"),
           (_[(_.TrackedDeviceProperty_Max = 1e6)] =
             "TrackedDeviceProperty_Max");
       })(_ || (_ = {})),
@@ -14146,6 +13225,65 @@
             (_[(_.Notification_BeginInteraction = 602)] =
               "Notification_BeginInteraction"),
             (_[(_.Notification_Destroyed = 603)] = "Notification_Destroyed");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.TheaterFast = 0)] = "TheaterFast"),
+            (_[(_.TheaterSlow = 1)] = "TheaterSlow");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Constant = 0)] = "Constant"),
+            (_[(_.Nearest = 1)] = "Nearest"),
+            (_[(_.Linear = 2)] = "Linear"),
+            (_[(_.SmoothStep = 3)] = "SmoothStep"),
+            (_[(_.SmootherStep = 4)] = "SmootherStep");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
+            (_[(_.FloorAdjustExisting = 2)] = "FloorAdjustExisting"),
+            (_[(_.RoomSetupFloor = 3)] = "RoomSetupFloor"),
+            (_[(_.ClearRoomSetup = 4)] = "ClearRoomSetup"),
+            (_[(_.RoomSetupFull = 5)] = "RoomSetupFull");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Near = 0)] = "Near"),
+            (_[(_.Middle = 1)] = "Middle"),
+            (_[(_.Far = 2)] = "Far"),
+            (_[(_.VRGamepadUI = 3)] = "VRGamepadUI");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.__LocalSteamVR = 0)] = "__LocalSteamVR"),
+            (_[(_.__LocalSteam = 1)] = "__LocalSteam"),
+            (_[(_.__RemoteSteamVR = 2)] = "__RemoteSteamVR"),
+            (_[(_.__RemoteSteam = 3)] = "__RemoteSteam"),
+            (_[(_.MutualLocal = 4)] = "MutualLocal"),
+            (_[(_.MutualSteamVR = 5)] = "MutualSteamVR"),
+            (_[(_.MutualSteam = 6)] = "MutualSteam");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Dashboard = 1)] = "Dashboard"),
+            (_[(_.LeftHand = 2)] = "LeftHand"),
+            (_[(_.RightHand = 3)] = "RightHand"),
+            (_[(_.World = 4)] = "World"),
+            (_[(_.Theater = 5)] = "Theater"),
+            (_[(_.Boot = 6)] = "Boot");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.System = 1)] = "System"),
+            (_[(_.SteamInput = 2)] = "SteamInput"),
+            (_[(_.VRInput = 3)] = "VRInput");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.SceneApp = 1)] = "SceneApp"),
+            (_[(_.Panel = 2)] = "Panel");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.ThirdPartyClient = 1)] = "ThirdPartyClient"),
+            (_[(_.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
+            (_[(_.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
         })(_ || (_ = {}));
       !(function (_) {
         if ("string" != typeof _) return NaN;
@@ -14168,7 +13306,8 @@
         (_[(_.None = 0)] = "None"),
           (_[(_.MouseDragging = 1)] = "MouseDragging"),
           (_[(_.TouchStart = 2)] = "TouchStart"),
-          (_[(_.TouchDragging = 3)] = "TouchDragging");
+          (_[(_.TouchDragging = 3)] = "TouchDragging"),
+          (_[(_.DPad = 4)] = "DPad");
       })(_ || (_ = {}));
       class _ extends _.Component {
         m_refSlider = _.createRef();
@@ -14242,6 +13381,8 @@
             case _.TouchDragging:
             case _.TouchStart:
               return 0;
+            case _.DPad:
+              return 2;
             case _.None:
               return;
           }
@@ -14262,13 +13403,15 @@
           if (_ != this.m_eDragMode) {
             switch (
               ((this.m_eDragMode = _),
-              this.props.onChangeStart &&
+              _ != _.None &&
+                this.props.onChangeStart &&
                 this.props.onChangeStart(this.SliderChangeSource),
               _)
             ) {
               case _.MouseDragging:
               case _.TouchDragging:
               case _.TouchStart:
+              case _.DPad:
                 this.RecomputeSliderBounds(),
                   (this.m_fStartValue = this.props.value),
                   (this.m_fLatestUserValue = this.props.value);
@@ -14342,6 +13485,7 @@
             )),
             _ != this.props.value)
           ) {
+            this.m_eDragMode == _.None && this.SetDragMode(_.DPad);
             const _ = _ > this.m_fLatestUserValue;
             _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
               (this.m_fLatestUserValue = _),
@@ -14522,7 +13666,9 @@
         }
         OnInnerSliderBlur() {
           (this.m_bInnerSliderHasFocus = !1),
-            this.m_fStartValue != this.m_fLatestUserValue && this.Complete();
+            (this.m_fStartValue == this.m_fLatestUserValue &&
+              this.m_eDragMode == _.None) ||
+              this.Complete();
         }
         ResetToDefault() {
           if (!this.CanResetToDefault || this.m_eDragMode != _.None) return;
@@ -14552,7 +13698,7 @@
           const {
               min: _,
               max: _,
-              value: __webpack_require__,
+              value: _,
               clampMax: _,
               clampMin: _,
               className: _,
@@ -14626,7 +13772,7 @@
                 "leftparen" == _ ? _().Left : _().Right,
                 "SliderHandleContainer",
               )));
-          const _ = _(__webpack_require__);
+          const _ = _(_);
           return (0, _.jsx)(_, {
             noFocusRing: !0,
             className: (0, _._)(
@@ -14654,7 +13800,7 @@
             "aria-label": _["aria-label"],
             children: (0, _.jsxs)(_._, {
               role: "slider",
-              "aria-valuenow": __webpack_require__,
+              "aria-valuenow": _,
               "aria-valuetext": _,
               ..._,
               className: (0, _._)(
@@ -14714,8 +13860,8 @@
                         }),
                       }),
                     this.validRange &&
-                      null != __webpack_require__ &&
-                      !isNaN(__webpack_require__) &&
+                      null != _ &&
+                      !isNaN(_) &&
                       this.showHandle &&
                       (0, _.jsx)("div", {
                         className: _,
@@ -14745,16 +13891,16 @@
       function _(_) {
         let {
             sliderValue: _,
-            notchCount: __webpack_require__,
+            notchCount: _,
             notchLabels: _,
             notchTicksVisible: _,
             renderNotch: _,
           } = _,
           _ = _ ?? [];
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         let _ = !1,
           _ = [];
-        for (let _ = 0; _ < __webpack_require__; ++_) {
+        for (let _ = 0; _ < _; ++_) {
           let _ = _.find((_) => _.notchIndex == _);
           _ && (_ = !0),
             _.push(
@@ -14764,7 +13910,7 @@
                   notchIndex: _,
                   sliderValue: _,
                   notchLabel: _,
-                  notchCount: __webpack_require__,
+                  notchCount: _,
                   notchTicksVisible: _,
                   renderNotch: _,
                 },
@@ -14798,11 +13944,7 @@
         });
       }
       function _(_) {
-        const {
-          alignLeftEnd: _,
-          alignRightEnd: __webpack_require__,
-          active: _,
-        } = _;
+        const { alignLeftEnd: _, alignRightEnd: _, active: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _.notchTicksVisible &&
@@ -14814,7 +13956,7 @@
                 className: (0, _._)(
                   _().SliderNotchLabel,
                   _ && _().AlignToLeft,
-                  __webpack_require__ && _().AlignToRight,
+                  _ && _().AlignToRight,
                 ),
                 children: _.notchLabel?.label,
               }),
@@ -14839,7 +13981,7 @@
         (0, _._)([_._], _.prototype, "OnContextMenu", null);
       _.forwardRef(function (_, _) {
         const {
-          label: __webpack_require__,
+          label: _,
           labelIndex: _,
           xOffset: _,
           onResize: _,
@@ -14867,31 +14009,34 @@
           },
           children: (0, _.jsx)("div", {
             className: _().CompoundSliderSubSliderLabelInternal,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       });
+      var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
-          value: __webpack_require__,
+          value: _,
           onChange: _,
           disabled: _,
           className: _,
           focusable: _,
           children: _,
           navRef: _,
+          autoFocus: _,
           ..._
         } = _;
         return (0, _.jsxs)(_._, {
           ..._,
+          autoFocus: _,
           noFocusRing: !0,
           className: (0, _._)(_, _().Toggle, {
             [_().Disabled]: !!_,
-            [_()._]: !!__webpack_require__,
+            [_()._]: !!_,
           }),
           onClick: () => {
             if (!_ && _) {
-              const _ = !__webpack_require__;
+              const _ = !_;
               _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
             }
           },
@@ -14899,7 +14044,7 @@
           navRef: _,
           focusable: _,
           role: "checkbox",
-          "aria-checked": !!__webpack_require__,
+          "aria-checked": !!_,
           children: [
             (0, _.jsx)("div", {
               className: _().ToggleRail,
@@ -14913,10 +14058,9 @@
       });
       function _(_) {
         const _ = !!_.disabled,
-          { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
-          _._)(_),
+          { actionDescriptions: _, gamepadEvents: _ } = (0, _._)(_),
           _ = _.useId(),
-          { "aria-expanded": _, "aria-controls": _ } = _;
+          { autoFocus: _, "aria-expanded": _, "aria-controls": _ } = _;
         return (0, _.jsx)(_, {
           accessibilityId: _,
           className: _.className,
@@ -14931,11 +14075,12 @@
           highlightOnFocus: _.highlightOnFocus,
           inlineWrap: "keep-inline",
           onContextMenu: _.onContextMenu,
-          actionDescriptionMap: __webpack_require__,
+          actionDescriptionMap: _,
           onClick: _.onClick,
           indentLevel: _.indentLevel,
           ..._,
           children: (0, _.jsx)(_, {
+            autoFocus: _,
             "aria-expanded": _,
             "aria-controls": _,
             ..._(_, _),
@@ -14947,7 +14092,7 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
+        const { active: _, children: _ } = _,
           _ = _() || _(window),
           _ = _.useContext(_).DialogWrapper,
           [_, _] = _.useState(null),
@@ -14974,8 +14119,8 @@
           !_ || !_)
         )
           return null;
-        let _ = (0, _.jsx)(_, {
-          children: __webpack_require__,
+        let _ = (0, _.jsx)(_._, {
+          children: _,
         });
         return (
           _ &&
@@ -15007,15 +14152,15 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { closeModal: _, rgImageURL: __webpack_require__ } = _,
+        const { closeModal: _, rgImageURL: _ } = _,
           [_, _] = _.useState(0),
-          _ = __webpack_require__?.length ?? 0,
+          _ = _?.length ?? 0,
           _ = _.useCallback(() => {
             _(0 == _ ? _ - 1 : _ - 1);
           }, [_, _]),
           _ = _.useCallback(() => {
-            _(__webpack_require__ && _ + 1 >= _ ? 0 : _ + 1);
-          }, [_, __webpack_require__, _]);
+            _(_ && _ + 1 >= _ ? 0 : _ + 1);
+          }, [_, _, _]);
         return (0, _.jsxs)(_, {
           title: (0, _._)("#SaleTech_Screenshot_Viewer"),
           bAllowFullSize: !0,
@@ -15026,7 +14171,7 @@
           children: [
             (0, _.jsx)(_, {
               index: _,
-              numElements: __webpack_require__?.length || 0,
+              numElements: _?.length || 0,
               fnForward: _,
               fnBackwards: _,
               fnClose: _,
@@ -15036,7 +14181,7 @@
               className: _().PopupScreenshotContainer,
               children: (0, _.jsx)("img", {
                 className: _().PopupScreenshot,
-                src: __webpack_require__?.[_],
+                src: _?.[_],
               }),
             }),
           ],
@@ -15045,7 +14190,7 @@
       function _(_) {
         const {
           index: _,
-          numElements: __webpack_require__,
+          numElements: _,
           fnForward: _,
           fnBackwards: _,
           fnClose: _,
@@ -15057,7 +14202,7 @@
           _("Right", () => _?.(), !0, !0),
           _("Escape", () => _ && _(), !0, !0),
           _("Esc", () => _ && _(), !0, !0);
-        let _ = __webpack_require__ > 1;
+        let _ = _ > 1;
         return (0, _.jsxs)("div", {
           className: _().ButtonCtn,
           children: [
@@ -15077,7 +14222,7 @@
                   (0, _.jsx)("div", {
                     className: (0, _._)(
                       _().ButtonIcon,
-                      _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
+                      _ !== _ - 1 || _ ? null : _().Disabled,
                     ),
                     onClick: _,
                     children: (0, _.jsx)(_.V5W, {
@@ -15098,7 +14243,7 @@
         _ = __webpack_require__._(_);
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
@@ -15162,13 +14307,13 @@
                   ) {
                     const {
                       naturalWidth: _,
-                      naturalHeight: __webpack_require__,
+                      naturalHeight: _,
                       width: _,
                       height: _,
                     } = _.currentTarget;
                     _({
                       naturalWidth: _,
-                      naturalHeight: __webpack_require__,
+                      naturalHeight: _,
                       displayWidth: _,
                       displayHeight: _,
                     });
@@ -15178,7 +14323,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           {
             className: _,
             src: _,
@@ -15216,82 +14361,66 @@
               alt: _,
             });
       }
-      class _ extends _.Component {
-        m_refImage = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              nImage: 0,
-              nPropChangeCounter: 0,
-            });
-        }
-        componentDidUpdate(_, _) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
-            this.setState({
-              nImage: 0,
-              nPropChangeCounter: _.nPropChangeCounter + 1,
-            });
-        }
-        get src() {
-          let _ = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (_ = this.props.rgSources[this.state.nImage]),
-            _ ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (_ =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            _
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(_) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              _,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
+      function _(_) {
+        const {
+            rgSources: _,
+            onIncrementalError: _,
+            onError: _,
+            strAltText: _,
+            ref: _,
+            ..._
+          } = _,
+          _ = _.useRef(null),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0);
+        _.useImperativeHandle(
+          _,
+          () => ({
+            imgRef: _,
+            nSourceIndex: _,
+            nSourceLength: _.length,
+          }),
+          [_, _, _],
+        );
+        const _ = _.useMemo(() => JSON.stringify(_), [_]);
+        _.useEffect(() => {
+          _(0), _((_) => _ + 1);
+        }, [_]);
+        const _ = _.useMemo(() => {
+            let _ = "";
+            return (
+              _ && _.length > _ && (_ = _[_]),
+              _ ||
+                (console.warn(
+                  "MultiSourceImage created with no image src",
+                  _,
+                  _,
+                ),
+                (_ =
+                  "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+              _
             );
-          let _ = this.state.nImage + 1;
-          _ >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(_),
-            _ < this.props.rgSources.length &&
-              this.setState({
-                nImage: _,
-              });
-        }
-        render() {
-          const {
-              rgSources: _,
-              onIncrementalError: _,
-              onError: __webpack_require__,
-              strAltText: _,
-              ..._
-            } = this.props,
-            _ = this.src,
-            _ = this.state.nPropChangeCounter;
-          return (0, _.jsx)(
-            "img",
-            {
-              ref: this.m_refImage,
-              ..._,
-              src: _,
-              onError: this.OnImageError,
-              alt: _,
+          }, [_, _, _]),
+          _ = _.useCallback(
+            (_) => {
+              __webpack_require__?.(_, _[_], _);
+              const _ = _ + 1;
+              _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            _,
+            [_, _, _, _],
           );
-        }
+        return (0, _.jsx)(
+          "img",
+          {
+            ref: _,
+            ..._,
+            src: _,
+            onError: _,
+            alt: _,
+          },
+          _,
+        );
       }
-      (0, _._)([_._], _.prototype, "OnImageError", null);
       class _ {
         reactNodes = [];
         AppendText(_, _ = !1) {
@@ -15364,7 +14493,7 @@
             : (this.m_dictComponents = new Map(Object.entries(_))),
             (this.m_fnAccumulatorFactory = _);
         }
-        Parse(_, _, __webpack_require__ = !0) {
+        Parse(_, _, _ = !0) {
           const _ = (function (_, _) {
             const _ = [];
             let _ = {
@@ -15423,7 +14552,7 @@
                     text: _.text ?? "",
                   }));
             return _;
-          })(_ || "", __webpack_require__);
+          })(_ || "", _);
           return this.Parse_BuildElements(_, _);
         }
         Parse_BuildElements(_, _) {
@@ -15514,7 +14643,7 @@
           return __webpack_require__.GetElements();
         }
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const { type: _, text: _ = "" } = _;
         if (2 == _) {
           let _ = _.indexOf("=");
@@ -15616,7 +14745,7 @@
         UpdateOverrideLanguage(_) {
           this.m_renderingLanguage = _;
         }
-        ParseBBCode(_, _, __webpack_require__ = !0) {
+        ParseBBCode(_, _, _ = !0) {
           let _ = 0;
           const _ = this.Parse(
             _,
@@ -15631,7 +14760,7 @@
                 },
                 ..._,
               ),
-            __webpack_require__,
+            _,
           );
           return _.length > 1
             ? _.createElement(_.Fragment, null, ..._)
@@ -15640,218 +14769,247 @@
               : null;
         }
       }
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.full = ""),
-          (_.background_main = "_960x311"),
-          (_.background_mini = "_480x156"),
-          (_.capsule_main = "_400x225"),
-          (_.spotlight_main = "_1054x230");
-      })(_ || (_ = {}));
-      const _ = [
-        "localized_image_group",
-        "link_capsule",
-        "product_mobile_banner_override",
-        "product_banner_override",
-        "sale_section_title",
-        "schedule_track_art",
-        "localized_background_art",
-      ];
-      const _ = "{STEAM_CLAN_IMAGE}",
-        _ = "{STEAM_CLAN_LOC_IMAGE}";
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
-        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
-        ReplacementTokenToClanImageURL(_) {
-          return (_ = _.replace(_, this.GetBaseURL())).replace(
-            "http://",
-            "https://",
-          );
-        },
-        ExtractHashFromBBCodeURL(_) {
-          const _ =
-            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
-              _,
-            );
-          return _?.groups
-            ? [_.groups.filename, parseInt(_.groups.clanid)]
-            : [void 0, void 0];
-        },
-        GetExtensionString: (_) =>
-          (null != _.file_type
-            ? (function (_) {
-                switch (_) {
-                  case 1:
-                    return ".jpg";
-                  case 2:
-                    return ".gif";
-                  case 3:
-                    return ".png";
-                  case 5:
-                    return ".webm";
-                  case 4:
-                    return ".mp4";
-                  case 7:
-                    return ".srt";
-                  case 6:
-                    return ".vtt";
-                  case 10:
-                    return ".webp";
-                }
-              })(_.file_type)
-            : null) ?? ".jpg",
-        GetHashAndExt(_) {
-          return _ ? _.image_hash + this.GetExtensionString(_) : null;
-        },
-        GetThumbHashAndExt(_) {
-          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
-        },
-        GetHashFromHashAndExt(_) {
-          let _ = _.substring(_.lastIndexOf("."));
-          return _.substring(0, _.length - _.length);
-        },
-        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _.full) {
-          return this.GenerateURLFromHashAndExtAndLang(
-            _,
-            _,
-            __webpack_require__,
-            -1,
-            void 0,
-          );
-        },
-        GenerateURLFromHashAndExtAndLang(
-          _,
-          _,
-          __webpack_require__ = _.full,
-          _,
-          _,
-        ) {
-          _ instanceof _._ && (_ = _.GetAccountID());
-          let _ = this.GetBaseURL();
-          const _ = null != _ && -1 != _;
-          if (__webpack_require__ != _.full || _) {
-            let _ = _.substring(_.lastIndexOf(".")),
-              _ = _.substring(0, _.length - _.length);
-            return _ && 0 != _ && "localized_image_group" == _
-              ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
-              : _ + _ + "/" + _ + __webpack_require__ + _;
-          }
-          return _ + _ + "/" + _;
-        },
-        GetHashAndExtFromURL(_) {
-          let _ = this.GetBaseURL();
-          return _?.startsWith(_)
-            ? -1 == (_ = _.substring(_.length)).indexOf("/")
-              ? null
-              : (_ = _.substring(_.indexOf("/") + 1))
-            : null;
-        },
-        GenerateEditableURLFromHashAndExt(_, _, _) {
-          let _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.ConvertTo64BitString() +
-            "/showclanimage/?image_hash_and_ext=" +
-            _;
-          return _ && (_ += "&lang=" + _), _;
-        },
-        GetMimeType: (_) =>
-          (function (_) {
-            const _ = _.toLowerCase();
-            return _.endsWith(".jpg") || _.endsWith(".jpeg")
-              ? "image/jpeg"
-              : _.endsWith(".png")
-                ? "image/png"
-                : _.endsWith(".gif")
-                  ? "image/gif"
-                  : _.endsWith(".mp4")
-                    ? "video/mp4"
-                    : _.endsWith(".webm")
-                      ? "video/webm"
-                      : _.endsWith(".srt")
-                        ? "text/srt"
-                        : _.endsWith(".vtt")
-                          ? "text/vtt"
-                          : _.endsWith(".webp")
-                            ? "image/webp"
-                            : void 0;
-          })(_),
-        async AsyncGetImageResolution(_, _, _, _, _) {
-          const _ =
-              _ +
-              this.GetExtensionString({
-                file_type: _,
-              }),
-            _ = this.GenerateEditableURLFromHashAndExt(_, _);
-          return await this.AsyncGetImageResolutionInternal(_, _, _);
-        },
-        async AsyncGetImageResolutionInternal(_, _, _) {
-          const _ = (function () {
-            let _, _;
-            return {
-              promise: new Promise((_, _) => {
-                (_ = _), (_ = _);
-              }),
-              resolve: _,
-              reject: _,
-            };
-          })();
-          let _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              const _ = {
-                success: 2,
-              };
-              _ ||
-                ((_.err_msg =
-                  "Load fail on url " +
-                  _ +
-                  " with error: " +
-                  (0, _._)(_).strErrorMsg),
-                console.error(_.err_msg)),
-                (_.success = 2),
-                _.resolve(_);
-            }),
-            (_.onload = () => {
-              const _ = {
-                success: 2,
-              };
-              (_.width = _.width),
-                (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
+      class _ {
+        m_bUserHasVolumePreference = !1;
+        m_flVolumePreference = 0;
+        BUserHasVolumePreference() {
+          return this.m_bUserHasVolumePreference;
+        }
+        SetVolumePreference(_) {
+          (this.m_flVolumePreference = _),
+            (this.m_bUserHasVolumePreference = !0);
+        }
+        GetVolumePreference() {
+          return this.m_flVolumePreference;
+        }
+        BVolumePreferenceMuted() {
+          return this.m_flVolumePreference < 0.001;
+        }
+        static s_Singleton;
+        static Get() {
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+        }
+      }
+      (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
+        (0, _._)([_._], _.prototype, "SetVolumePreference", null);
+      const _ = (0, _.forwardRef)(function (_, _) {
+        const {
+            video: _,
+            bAutoPlay: _,
+            bControls: _,
+            bLoop: _,
+            bMuted: _,
+            className: _,
+            mediaScale: _,
+            onClick: _,
+            altText: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () =>
+              Boolean(
+                _.rgVideoTracks?.some(
+                  (_) => "subtitles" == _.sKind || "captions" == _.sKind,
                 ),
-                (_.success = 1),
-                _.resolve(_);
+              ),
+            [_.rgVideoTracks],
+          ),
+          [_, _] = _.useState(!1);
+        if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
+        const _ = (function (_) {
+          return !(
+            !(0, _._)(_.sPoster) ||
+            (_.rgVideoSources &&
+              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
+          );
+        })(_);
+        let _;
+        (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
+        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+          _ = _.sPoster ? _(_.sPoster) : "";
+        return (0, _.jsxs)("video", {
+          width: "100%",
+          height: "auto",
+          autoPlay: _,
+          muted: _,
+          playsInline: !0,
+          controls: _,
+          poster: _,
+          loop: _,
+          crossOrigin: _,
+          onVolumeChange: (_) => {
+            const _ = _.target,
+              _ = _.muted ? 0 : _.volume;
+            _ && _.Get().SetVolumePreference(_);
+          },
+          onPlay: (_) => {
+            const _ = _.target,
+              _ = 0 == _.currentTime,
+              _ = _.Get().BUserHasVolumePreference();
+            if ((_(!0), _))
+              if (_ || _)
+                _ &&
+                  ((_.volume = _.Get().GetVolumePreference()),
+                  (_.muted = _.Get().BVolumePreferenceMuted()));
+              else {
+                const _ = _.muted ? 0 : _.volume;
+                _.Get().SetVolumePreference(_);
+              }
+          },
+          ref: _,
+          className: _,
+          onClick: _,
+          "aria-label": _,
+          style: {
+            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+          },
+          children: [
+            (0, _.jsx)(_, {
+              rgVideoSources: _.rgVideoSources,
             }),
-            (_.src = _),
-            _.token.promise.catch(() => {
-              const _ = {
-                success: 2,
-              };
-              return (_.onload = () => {}), (_.success = 52), _;
-            });
-          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
-          let _;
+            (0, _.jsx)(_, {
+              rgVideoTracks: _.rgVideoTracks,
+            }),
+          ],
+        });
+      });
+      function _(_) {
+        if (_)
           try {
-            _ = await Promise.race([_, _.promise]);
+            const _ = new URL(_);
+            return (
+              (_.search =
+                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
+              _.toString()
+            );
           } catch {
-            _ = {
-              success: 16,
-              err_msg: "We timed out processing images",
-            };
+            return _;
           }
-          return _;
-        },
-        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
-      };
+      }
+      function _(_) {
+        const { rgVideoSources: _ } = _;
+        return _.filter((_) => Boolean(_.sURL)).map((_) =>
+          (0, _.jsx)(
+            "source",
+            {
+              src: _(_.sURL),
+              type: _.sFormat,
+            },
+            _.sURL,
+          ),
+        );
+      }
+      function _(_) {
+        const { rgVideoTracks: _ } = _;
+        return _
+          ? _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  track: _,
+                  rgVideoTracks: _,
+                },
+                _,
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        const { track: _, rgVideoTracks: _ } = _;
+        let _ = _.eLanguage;
+        if ((0, _._)())
+          if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
+            _ = _._.GetELanguageFallback(_);
+          else {
+            if (6 !== _) return null;
+            if (
+              __webpack_require__.find(
+                (_) => _._.GetELanguageFallback(_.eLanguage) === _,
+              )
+            )
+              return null;
+          }
+        else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
+          return null;
+        return (0, _.jsx)("track", {
+          src: _(_.sURL),
+          kind: _.sKind,
+          default: _.bDefault,
+          srcLang: (0, _._)(_),
+          label: (0, _._)("#language_selection_" + (0, _._)(_)),
+        });
+      }
+      function _(_) {
+        let _ = _(_, "poster");
+        _ && (_ = (0, _._)(_));
+        const _ = new Array();
+        {
+          const _ = _(_, "mp4");
+          _ &&
+            __webpack_require__.push({
+              sURL: (0, _._)(_),
+              sFormat: "video/mp4",
+            });
+          const _ = _(_, "webm");
+          _ &&
+            __webpack_require__.push({
+              sURL: (0, _._)(_),
+              sFormat: "video/webm",
+            });
+        }
+        const _ = (0, _._)(_._.LANGUAGE),
+          _ = 0 != _,
+          _ = new Array();
+        for (let _ = 0; _ < 31; _++) {
+          const _ = _(_, "sub_" + (0, _._)(_));
+          _ &&
+            _.push({
+              sURL: (0, _._)(_),
+              eLanguage: _,
+              sKind: "subtitles",
+              bDefault: _ && _ == _,
+            });
+          const _ = _(_, "cap_" + (0, _._)(_));
+          _ &&
+            _.push({
+              sURL: (0, _._)(_),
+              eLanguage: _,
+              sKind: "captions",
+              bDefault: _ && _ == _,
+            });
+        }
+        return {
+          sPoster: _,
+          rgVideoSources: _,
+          rgVideoTracks: _,
+        };
+      }
+      function _(_) {
+        const _ = _(_.args),
+          _ = _.children ? _.children.toString() : void 0;
+        _ &&
+          __webpack_require__.startsWith("http") &&
+          _.rgVideoSources.push({
+            sURL: (0, _._)(_),
+            sFormat: "video/webm",
+          });
+        const _ = _(_.args, "autoplay"),
+          _ = "0" !== _ && "off" !== _ && "false" !== _,
+          _ = _(_.args, "controls"),
+          _ = "0" !== _ && "off" !== _ && "false" !== _,
+          _ = _(_.args, "loop"),
+          _ = "0" !== _ && "off" !== _ && "false" !== _;
+        return (0, _.jsx)(_, {
+          video: _,
+          bAutoPlay: _,
+          bControls: _,
+          bLoop: _ ? _ : _,
+        });
+      }
       class _ {
         constructor() {
           (0, _._)(this);
@@ -15945,17 +15103,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !_();
         return (
@@ -15997,17 +15151,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {
@@ -16762,20 +15912,8 @@
           );
         };
       })(_ || (_ = {}));
-      const _ = {
-          name: "cookieSettings",
-          options: {
-            secure: !0,
-            httpOnly: !1,
-            path: "/",
-            sameSite: "none",
-            maxAge: 31536e6,
-          },
-          preferenceControls: {
-            isTechnicallyNecessary: !0,
-          },
-        },
-        _ = JSON.parse(`{
+      var _ = __webpack_require__("chunkid");
+      const _ = JSON.parse(`{
 	"h": {
 		"countries": {
 			"AF": "Afghanistan",
@@ -17122,6 +16260,7 @@
 		}
 	}
 }`)._;
+      var _ = __webpack_require__("chunkid");
       async function _(_) {
         if ((0, _._)(_._.EREALM))
           return {
@@ -17135,11 +16274,7 @@
           if (_ && void 0 !== _.version && 0 != _.version) return _;
         }
         try {
-          const _ = (function (_) {
-            if (!document.cookie) return;
-            const _ = document.cookie.match("(^|; )" + _.name + "=([^;]*)");
-            return _ && _[2] ? decodeURIComponent(_[2]) : void 0;
-          })(_);
+          const _ = (0, _._)(_._);
           if (_) {
             const _ = JSON.parse(_);
             if (_ && void 0 !== _.version && 0 != _.version) return _;
@@ -17220,12 +16355,7 @@
         }, _);
       }
       const _ = _.forwardRef(function (_, _) {
-        const {
-            onLeave: __webpack_require__,
-            onEnter: _,
-            options: _,
-            ..._
-          } = _,
+        const { onLeave: _, onEnter: _, options: _, ..._ } = _,
           _ = _(_, _.options),
           _ = (0, _._)(_, _);
         return (0, _.jsx)("div", {
@@ -17418,9 +16548,9 @@
         }
       }
       function _(_) {
-        const { video: _, children: __webpack_require__ } = _;
+        const { video: _, children: _ } = _;
         return _("youtube")
-          ? __webpack_require__
+          ? _
           : (0, _.jsx)("a", {
               href: `https://www.youtube.com/watch?v=${_}`,
               children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),
@@ -17439,13 +16569,13 @@
       function _(_) {
         const {
             videoID: _,
-            bShowVideoImmediately: __webpack_require__,
+            bShowVideoImmediately: _,
             bAutoPlay: _,
             nStartSeconds: _,
             classNameSize: _,
             classNameAlign: _,
           } = _,
-          [_, _] = (0, _.useState)(!__webpack_require__),
+          [_, _] = (0, _.useState)(!_),
           [_, _] = (0, _.useState)(!1),
           _ = _("YouTubeInlineSnippet"),
           [_, _] = (0, _.useState)({
@@ -17472,7 +16602,7 @@
             (0, _.useEffect)(() => {
               _ && _ && _();
             }, [_, _]);
-          })(__webpack_require__ && !0),
+          })(_ && !0),
           _)
         ) {
           const _ = _.title,
@@ -17593,6 +16723,16 @@
               classNameSize: _.sizeFull,
               bShowVideoImmediately: !1,
             })
+          : _;
+      }
+      function _(_) {
+        if (!_) return _;
+        const _ = _.trim(),
+          _ = _.toLowerCase();
+        return __webpack_require__.startsWith("javascript:") ||
+          __webpack_require__.startsWith("data:") ||
+          __webpack_require__.startsWith("vbscript:")
+          ? ""
           : _;
       }
       !(function (_) {
@@ -17749,9 +16889,9 @@
           ? _.map((_) => ("*" == _ ? "\\*" : _)).join("|")
           : (_ || (_ = _(_)), _);
       }
-      function _(_, _ = null, __webpack_require__ = "") {
+      function _(_, _ = null, _ = "") {
         const _ = "\\[\\/?(?:" + _(_) + "){1,}.*?]";
-        return _.replace(new RegExp(_, "gi"), __webpack_require__);
+        return _.replace(new RegExp(_, "gi"), _);
       }
       const _ = {
         bBroadcastEnabled: !1,
@@ -17761,6 +16901,202 @@
         localized_broadcast_left_image: new Array(31),
         localized_broadcast_right_image: new Array(31),
         broadcast_whitelist: [],
+      };
+      var _,
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.full = ""),
+          (_.background_main = "_960x311"),
+          (_.background_mini = "_480x156"),
+          (_.capsule_main = "_400x225"),
+          (_.spotlight_main = "_1054x230");
+      })(_ || (_ = {}));
+      const _ = [
+        "localized_image_group",
+        "link_capsule",
+        "product_mobile_banner_override",
+        "product_banner_override",
+        "sale_section_title",
+        "schedule_track_art",
+        "localized_background_art",
+      ];
+      const _ = "{STEAM_CLAN_IMAGE}",
+        _ = "{STEAM_CLAN_LOC_IMAGE}";
+      const _ = {
+        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
+        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
+        ReplacementTokenToClanImageURL(_) {
+          return (_ = _.replace(_, this.GetBaseURL())).replace(
+            "http://",
+            "https://",
+          );
+        },
+        ExtractHashFromBBCodeURL(_) {
+          const _ =
+            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
+              _,
+            );
+          return _?.groups
+            ? [_.groups.filename, parseInt(_.groups.clanid)]
+            : [void 0, void 0];
+        },
+        GetExtensionString: (_) =>
+          (null != _.file_type
+            ? (function (_) {
+                switch (_) {
+                  case 1:
+                    return ".jpg";
+                  case 2:
+                    return ".gif";
+                  case 3:
+                    return ".png";
+                  case 5:
+                    return ".webm";
+                  case 4:
+                    return ".mp4";
+                  case 7:
+                    return ".srt";
+                  case 6:
+                    return ".vtt";
+                  case 10:
+                    return ".webp";
+                }
+              })(_.file_type)
+            : null) ?? ".jpg",
+        GetHashAndExt(_) {
+          return _ ? _.image_hash + this.GetExtensionString(_) : null;
+        },
+        GetThumbHashAndExt(_) {
+          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
+        },
+        GetHashFromHashAndExt(_) {
+          let _ = _.substring(_.lastIndexOf("."));
+          return _.substring(0, _.length - _.length);
+        },
+        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+        GenerateURLFromHashAndExt(_, _, _ = _.full) {
+          return this.GenerateURLFromHashAndExtAndLang(_, _, _, -1, void 0);
+        },
+        GenerateURLFromHashAndExtAndLang(_, _, _ = _.full, _, _) {
+          _ instanceof _._ && (_ = _.GetAccountID());
+          let _ = this.GetBaseURL();
+          const _ = null != _ && -1 != _;
+          if (_ != _.full || _) {
+            let _ = _.substring(_.lastIndexOf(".")),
+              _ = _.substring(0, _.length - _.length);
+            return _ && 0 != _ && "localized_image_group" == _
+              ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
+              : _ + _ + "/" + _ + _ + _;
+          }
+          return _ + _ + "/" + _;
+        },
+        GetHashAndExtFromURL(_) {
+          let _ = this.GetBaseURL();
+          return _?.startsWith(_)
+            ? -1 == (_ = _.substring(_.length)).indexOf("/")
+              ? null
+              : (_ = _.substring(_.indexOf("/") + 1))
+            : null;
+        },
+        GenerateEditableURLFromHashAndExt(_, _, _) {
+          let _ =
+            _._.COMMUNITY_BASE_URL +
+            "gid/" +
+            _.ConvertTo64BitString() +
+            "/showclanimage/?image_hash_and_ext=" +
+            _;
+          return _ && (_ += "&lang=" + _), _;
+        },
+        GetMimeType: (_) =>
+          (function (_) {
+            const _ = _.toLowerCase();
+            return _.endsWith(".jpg") || _.endsWith(".jpeg")
+              ? "image/jpeg"
+              : _.endsWith(".png")
+                ? "image/png"
+                : _.endsWith(".gif")
+                  ? "image/gif"
+                  : _.endsWith(".mp4")
+                    ? "video/mp4"
+                    : _.endsWith(".webm")
+                      ? "video/webm"
+                      : _.endsWith(".srt")
+                        ? "text/srt"
+                        : _.endsWith(".vtt")
+                          ? "text/vtt"
+                          : _.endsWith(".webp")
+                            ? "image/webp"
+                            : void 0;
+          })(_),
+        async AsyncGetImageResolution(_, _, _, _, _) {
+          const _ =
+              _ +
+              this.GetExtensionString({
+                file_type: _,
+              }),
+            _ = this.GenerateEditableURLFromHashAndExt(_, _);
+          return await this.AsyncGetImageResolutionInternal(_, _, _);
+        },
+        async AsyncGetImageResolutionInternal(_, _, _) {
+          const _ = (function () {
+            let _, _;
+            return {
+              promise: new Promise((_, _) => {
+                (_ = _), (_ = _);
+              }),
+              resolve: _,
+              reject: _,
+            };
+          })();
+          let _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              const _ = {
+                success: 2,
+              };
+              _ ||
+                ((_.err_msg =
+                  "Load fail on url " +
+                  _ +
+                  " with error: " +
+                  (0, _._)(_).strErrorMsg),
+                console.error(_.err_msg)),
+                (_.success = 2),
+                _.resolve(_);
+            }),
+            (_.onload = () => {
+              const _ = {
+                success: 2,
+              };
+              (_.width = _.width),
+                (_.height = _.height),
+                (0, _._)(
+                  _.width > 0 && _.height > 0,
+                  "unexpected image resolution discovered for strURL: " + _,
+                ),
+                (_.success = 1),
+                _.resolve(_);
+            }),
+            (_.src = _),
+            _.token.promise.catch(() => {
+              const _ = {
+                success: 2,
+              };
+              return (_.onload = () => {}), (_.success = 52), _;
+            });
+          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+          let _;
+          try {
+            _ = await Promise.race([_, _.promise]);
+          } catch {
+            _ = {
+              success: 16,
+              err_msg: "We timed out processing images",
+            };
+          }
+          return _;
+        },
+        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
       };
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -18104,6 +17440,7 @@
         name = new Map();
         description = new Map();
         timestamp_loc_updated = new Map();
+        createTime = void 0;
         startTime = void 0;
         endTime = void 0;
         visibilityStartTime = void 0;
@@ -18212,6 +17549,7 @@
             this.timestamp_loc_updated.forEach((_, _) => {
               _.timestamp_loc_updated.set(_, _);
             }),
+            (_.createTime = Math.floor(Date.now() / 1e3)),
             (_.startTime = this.startTime),
             (_.endTime = this.endTime),
             (_.visibilityStartTime = this.visibilityStartTime),
@@ -18355,17 +17693,13 @@
                                   .localized_store_app_spotlight_mobile);
           return _;
         }
-        GetImageURL(_, _ = 0, __webpack_require__ = _.full) {
+        GetImageURL(_, _ = 0, _ = _.full) {
           const _ = this.GetImgArray(_),
             _ = _ && _.length > _ && null != _[_];
           return _ && _[_]?.startsWith("http")
             ? _[_]
             : _
-              ? _.GenerateURLFromHashAndExt(
-                  this.clanSteamID,
-                  _[_] ?? "",
-                  __webpack_require__,
-                )
+              ? _.GenerateURLFromHashAndExt(this.clanSteamID, _[_] ?? "", _)
               : void 0;
         }
         GetImageHash(_, _ = 0) {
@@ -18474,12 +17808,12 @@
             ? this.appid
             : this.jsondata?.referenced_appids?.[0];
         }
-        GetImageURLWithFallback(_, _, __webpack_require__ = _.full, _ = !0) {
-          const _ = this.GetImageURL(_, _, __webpack_require__);
+        GetImageURLWithFallback(_, _, _ = _.full, _ = !0) {
+          const _ = this.GetImageURL(_, _, _);
           if (_ && _.trim().length > 0) return _;
           const _ = _._.GetELanguageFallback(_);
           if (_ != _) {
-            const _ = this.GetImageURL(_, _, __webpack_require__);
+            const _ = this.GetImageURL(_, _, _);
             if (_ && _.trim().length > 0) return _;
           }
           const _ = _._.GetClanInfoByClanAccountID(
@@ -18497,8 +17831,15 @@
                 return _.avatar_full_url;
               _ = this.jsondata.referenced_appids[0];
             }
+            _._.Get().QueueAppRequest(_, {
+              include_assets: !0,
+            });
             const _ = _._.Get().GetApp(_);
-            return _ && _.GetAssets()
+            return _ &&
+              _.BContainDataRequest({
+                include_assets: !0,
+              }) &&
+              _.GetAssets()
               ? _.GetAssets()?.GetMainCapsuleURL()
               : _?.avatar_full_url
                 ? _.avatar_full_url
@@ -18656,12 +17997,12 @@
         static GenerateSummaryFromText(_, _) {
           return _ && 0 != _.trim().length
             ? ((_ = _(
-                (_ = (function (_, _ = null, __webpack_require__ = " ") {
+                (_ = (function (_, _ = null, _ = " ") {
                   const _ = new RegExp(
                     "\\[(" + _(_) + ")\\b[^\\]]*\\].*?\\[/\\1\\]",
                     "gi",
                   );
-                  return _.replace(_, __webpack_require__);
+                  return _.replace(_, _);
                 })(_, [
                   "img",
                   "h1",
@@ -19207,6 +18548,8 @@
             background_gradient_top: "#0000006b",
             background_gradient_bottom: "#0000006b",
             facet_sort_order: 1,
+            cap_item_count: 24,
+            show_more_count: 48,
             facet_auto_generate_options: {
               only_facets: [
                 {
@@ -19494,6 +18837,7 @@
               (_.GID = _(_)),
               (_.bOldAnnouncement = _(_)),
               (_.appid = _.appid ?? 0),
+              (_.createTime = _.rtime_created),
               (_.startTime = _.rtime32_start_time),
               (_.endTime = _.rtime32_end_time),
               (_.visibilityStartTime = _.rtime32_visibility_start),
@@ -19930,19 +19274,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(
-          _,
-          _,
-          __webpack_require__ = 0,
-          _ = 0,
-          _,
-        ) {
+        async LoadPartnerEventsPageable(_, _, _ = 0, _ = 0, _) {
           let _ = new Array(),
             _ = _._.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
               clan_accountid: _ ? _.GetAccountID() : void 0,
               appid: _,
-              offset: __webpack_require__,
+              offset: _,
               count: _,
               _: _._.LANGUAGE,
               origin: self.origin,
@@ -20200,11 +19538,12 @@
             _,
           );
         }
-        async LoadPartnerEventFromAnnoucementGID(_, _, _) {
+        async LoadPartnerEventFromAnnoucementGID(_, _, _, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             _,
             void 0,
+            _,
             _,
             _,
           );
@@ -20219,12 +19558,13 @@
             _,
           );
         }
-        async LoadPartnerEventFromClanEventGID(_, _, _) {
+        async LoadPartnerEventFromClanEventGID(_, _, _, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             _,
             _,
             void 0,
+            _,
             _,
           );
         }
@@ -20946,7 +20286,7 @@
             children: [
               _.format("LT"),
               _
-                ? (0, _.jsx)(_, {
+                ? (0, _.jsx)(_._, {
                     toolTipContent: _.format("Z") + ", " + _,
                     children: (0, _.jsxs)("span", {
                       children: [" ", _.zoneAbbr()],
@@ -20960,7 +20300,7 @@
       const _ = (0, _._)((_) => {
           const {
               dateAndTime: _,
-              bSingleLine: __webpack_require__,
+              bSingleLine: _,
               bOnlyTime: _,
               bOnlyDate: _,
             } = _,
@@ -20973,7 +20313,7 @@
                   ..._.stylesmodule,
                 }
               : _();
-          return __webpack_require__
+          return _
             ? (0, _.jsxs)("span", {
                 className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
                 children: [
@@ -21021,7 +20361,7 @@
               stylesmodule: _.stylesmodule,
             }),
           });
-          return (0, _.jsx)(_, {
+          return (0, _.jsx)(_._, {
             toolTipContent: _,
             direction: "top",
             className: _.className,
@@ -21140,7 +20480,7 @@
           const {
               startDateAndTime: _,
               endDateAndTime: _,
-              bHideEndTime: __webpack_require__,
+              bHideEndTime: _,
             } = this.props,
             _ = this.props.stylesmodule
               ? {
@@ -21199,7 +20539,7 @@
                   ),
                 }),
               })),
-            __webpack_require__ || null == _ || _ < 1)
+            _ || null == _ || _ < 1)
           )
             return _;
           const _ = _ <= _ && _ <= _;
@@ -21488,7 +20828,7 @@
       function _(_) {
         const {
           length: _,
-          value: __webpack_require__,
+          value: _,
           onChange: _,
           onPaste: _,
           tone: _,
@@ -21572,7 +20912,7 @@
                 onClick: (_) => _.stopPropagation(),
                 onKeyDown: _,
                 onPaste: _,
-                value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
+                value: _[_] ? _[_][0] : "",
                 autoComplete: "none",
                 autoFocus: 0 === _ && _,
                 disabled: _ || _,
@@ -27589,11 +26929,11 @@
               );
           }
         }
-        SetFailureState(_, _, __webpack_require__ = "") {
+        SetFailureState(_, _, _ = "") {
           (this.m_eStatus = 15),
             (this.m_eFailureState = _),
             (this.m_strErrorReference = _),
-            (this.m_strExtendedErrorMessage = __webpack_require__);
+            (this.m_strExtendedErrorMessage = _);
         }
         onAuthComplete = (_) => {
           this.m_eStatus = _.bSuccess ? 14 : 15;
@@ -27650,7 +26990,7 @@
       function _(_) {
         let {
           quality: _ = _._,
-          children: __webpack_require__,
+          children: _,
           className: _,
           activeBitColor: _ = [33, 35, 40],
           inactiveBitColor: _ = [255, 255, 255],
@@ -27658,20 +26998,20 @@
           typeNumber: _ = 6,
         } = _;
         const _ = (function (_, _ = {}) {
-          const { typeNumber: __webpack_require__, errorCorrectLevel: _ } = _,
+          const { typeNumber: _, errorCorrectLevel: _ } = _,
             [_, _] = (0, _.useState)();
           return (
             (0, _.useEffect)(() => {
               _(
                 _()(_, {
-                  typeNumber: __webpack_require__,
+                  typeNumber: _,
                   errorCorrectLevel: _,
                 }).modules,
               );
-            }, [_, __webpack_require__, _]),
+            }, [_, _, _]),
             _
           );
-        })(__webpack_require__, {
+        })(_, {
           typeNumber: _,
           errorCorrectLevel: _,
         });
@@ -27851,7 +27191,7 @@
       function _(_) {
         const {
             transport: _,
-            onComplete: __webpack_require__,
+            onComplete: _,
             onStatusChange: _,
             platform: _,
             deckStyling: _,
@@ -27865,7 +27205,7 @@
             reset: _,
             setTokenToRevoke: _,
           } = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(new _(_));
+            const [_, _] = (0, _.useState)(new _(_));
             return (
               (0, _.useEffect)(
                 () => (
@@ -27888,7 +27228,7 @@
             );
           })({
             transport: _,
-            onComplete: __webpack_require__,
+            onComplete: _,
             onDeviceDetails: _,
           });
         (0, _.useEffect)(() => _ && _(_), [_, _]);
@@ -28036,7 +27376,7 @@
         return (function (_) {
           const _ = (0, _.useRef)(_);
           _.current = _;
-          const [__webpack_require__, _] = (0, _.useState)(!0),
+          const [_, _] = (0, _.useState)(!0),
             _ = (0, _._)();
           return (
             (0, _.useEffect)(() => {
@@ -28073,7 +27413,7 @@
                       })
                   : _(!1);
             }, [_, _.search]),
-            __webpack_require__
+            _
           );
         })(_.redirectUrl)
           ? null
@@ -28081,8 +27421,8 @@
               ..._,
               creationRedirectUrl: _.redirectUrl,
               onSuccess: (_) => {
-                const { strRefreshToken: __webpack_require__ } = _;
-                _(__webpack_require__).then(
+                const { strRefreshToken: _ } = _;
+                _(_).then(
                   (_) => _.onComplete(_),
                   () => _.onComplete(_.k_PrimaryDomainFail),
                 );
@@ -28091,7 +27431,7 @@
             });
       }
       function _(_) {
-        const { embedded: _, children: __webpack_require__, ..._ } = _;
+        const { embedded: _, children: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)(_.Provider, {
             value: _,
@@ -28101,7 +27441,7 @@
                 (0, _.jsx)(_, {
                   ..._,
                 }),
-                __webpack_require__,
+                _,
               ],
             }),
           }),
@@ -28121,7 +27461,7 @@
             });
       }
       function _(_) {
-        const { variant: _, redirectUrl: __webpack_require__ } = _;
+        const { variant: _, redirectUrl: _ } = _;
         if ("function" == typeof _)
           return (0, _.jsx)(_, {
             inline: !0,
@@ -28129,9 +27469,7 @@
             children: (0, _._)("#Login_CreateAccount"),
           });
         {
-          const _ = __webpack_require__
-            ? `?redir=${encodeURIComponent(__webpack_require__)}`
-            : "";
+          const _ = _ ? `?redir=${encodeURIComponent(_)}` : "";
           switch (_ ?? "normal") {
             default:
             case "normal":
@@ -28152,16 +27490,12 @@
         }
       }
       function _(_) {
-        const {
-          launcherType: _,
-          variant: __webpack_require__,
-          redirectUrl: _,
-        } = _;
+        const { launcherType: _, variant: _, redirectUrl: _ } = _;
         if (8 === _) return null;
-        if ("none" == __webpack_require__) return null;
+        if ("none" == _) return null;
         const _ = void 0 !== _;
         let _;
-        switch (__webpack_require__ ?? "normal") {
+        switch (_ ?? "normal") {
           default:
           case "normal":
             _ = "#Login_NoSteamAccount";
@@ -28177,14 +27511,14 @@
               children: (0, _._)(_),
             }),
             (0, _.jsx)(_, {
-              variant: __webpack_require__,
+              variant: _,
               redirectUrl: _,
             }),
           ],
         });
       }
       async function _() {
-        const [_, _, __webpack_require__, _] = await Promise.all([
+        const [_, _, _, _] = await Promise.all([
           SteamClient.System.GetOSType(),
           SteamClient.System.GetSystemInfo(),
           SteamClient?.Auth?.GetLocalHostname?.() ?? "",
@@ -28192,7 +27526,7 @@
         ]);
         return {
           os_type: _,
-          device_friendly_name: __webpack_require__,
+          device_friendly_name: _,
           machine_id: _,
           platform_type: 1,
           gaming_device_type: _.eGamingDeviceType,
@@ -28207,20 +27541,20 @@
       function _(_) {
         const {
             onSuccess: _,
-            secureComputer: __webpack_require__ = !0,
+            secureComputer: _ = !0,
             isProbablySharedPC: _ = !1,
           } = _,
           _ = (0, _.useCallback)(
             ({
               bSuccess: _,
-              strRefreshToken: __webpack_require__,
+              strRefreshToken: _,
               strAccessToken: _,
               strAccountName: _,
               strNewGuardData: _,
             }) => {
               _ &&
                 _({
-                  strRefreshToken: __webpack_require__,
+                  strRefreshToken: _,
                   strAccessToken: _,
                   strAccountName: _,
                   strNewGuardData: _,
@@ -28229,7 +27563,7 @@
             [_],
           ),
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(new _(_));
+            const [_, _] = (0, _.useState)(new _(_));
             return (
               (0, _.useEffect)(() => {
                 _?.SetOnLoginComplete(_.onComplete);
@@ -28271,9 +27605,7 @@
             _.refreshInfo?.account_name ?? _.defaultAccountName ?? "",
           ),
           [_, _] = (0, _.useState)(""),
-          [_, _] = (0, _.useState)(
-            __webpack_require__ && !_ && "0" != localStorage?.getItem(_),
-          ),
+          [_, _] = (0, _.useState)(_ && !_ && "0" != localStorage?.getItem(_)),
           _ = !(0 === _.eStatus || 1 === _.eStatus || 2 === _.eStatus);
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id &&
@@ -28305,7 +27637,7 @@
       function _(_) {
         const {
             transport: _,
-            onSuccess: __webpack_require__,
+            onSuccess: _,
             platform: _,
             autoFocus: _,
             refreshInfo: _,
@@ -28329,7 +27661,7 @@
           _ = _({
             transport: _,
             platform: _,
-            onSuccess: __webpack_require__,
+            onSuccess: _,
             refreshInfo: _,
             onDeviceDetails: _,
             onGetMachineAuth: _,
@@ -28559,7 +27891,7 @@
       function _(_) {
         const {
             onSubmit: _,
-            status: __webpack_require__,
+            status: _,
             autoFocus: _,
             refreshInfo: _,
             strAccountName: _,
@@ -28584,8 +27916,8 @@
               (0, _.useCallback)(() => _.current, [_])
             );
           })(),
-          _ = 1 === __webpack_require__ || 13 === __webpack_require__,
-          _ = 2 === __webpack_require__ && !_,
+          _ = 1 === _ || 13 === _,
+          _ = 2 === _ && !_,
           _ = _
             ? (0, _.jsx)(_, {
                 children: (0, _._)("#Login_CheckCredentials"),
@@ -28630,7 +27962,7 @@
               autoFocus: _,
             }),
             _
-              ? (0, _.jsx)(_, {
+              ? (0, _.jsx)(_._, {
                   toolTipContent: "#Login_RememberMe_Tooltip",
                   direction: "bottom",
                   children: (0, _.jsx)(_, {
@@ -28722,15 +28054,15 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1);
+        const [_, _] = (0, _.useState)(!1);
         return _
           ? (0, _.jsx)(_, {
               ..._,
               bShowHideButton: !0,
-              setShowQR: __webpack_require__,
+              setShowQR: _,
             })
           : (0, _.jsx)(_, {
-              setShowQR: __webpack_require__,
+              setShowQR: _,
             });
       }
       function _(_) {
@@ -28764,7 +28096,7 @@
       function _(_) {
         const {
           onQRStatusChange: _,
-          transport: __webpack_require__,
+          transport: _,
           onComplete: _,
           platform: _,
           refreshInfo: _,
@@ -28782,7 +28114,7 @@
               className: _()._,
               children: (0, _.jsx)(_, {
                 onStatusChange: _,
-                transport: __webpack_require__,
+                transport: _,
                 onComplete: _,
                 platform: _,
                 refreshInfo: _,
@@ -28809,14 +28141,8 @@
         });
       }
       function _(_) {
-        const {
-            label: _,
-            error: __webpack_require__,
-            tone: _,
-            autoFocus: _,
-            ..._
-          } = _,
-          _ = _ ?? (__webpack_require__ ? "danger" : void 0);
+        const { label: _, error: _, tone: _, autoFocus: _, ..._ } = _,
+          _ = _ ?? (_ ? "danger" : void 0);
         return (0, _.jsxs)("div", {
           className: _().TextField,
           children: [
@@ -28827,7 +28153,7 @@
               : _,
             (0, _.jsx)(_, {
               type: "error",
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)(_, {
               autoFocus: _,
@@ -28838,19 +28164,16 @@
         });
       }
       function _(_) {
-        const { children: _, highlight: __webpack_require__ } = _;
+        const { children: _, highlight: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().FieldLabel,
-            __webpack_require__ && _().Highlight,
-          ),
+          className: (0, _._)(_().FieldLabel, _ && _().Highlight),
           children: _,
         });
       }
       function _(_) {
         const {
           value: _,
-          onChange: __webpack_require__,
+          onChange: _,
           type: _ = "text",
           tone: _,
           className: _,
@@ -28867,19 +28190,16 @@
         });
       }
       function _(_) {
-        const { children: _, type: __webpack_require__ } = _;
+        const { children: _, type: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().FieldHint,
-            "error" === __webpack_require__ && _().Error,
-          ),
+          className: (0, _._)(_().FieldHint, "error" === _ && _().Error),
           children: _,
         });
       }
       function _(_) {
-        const { label: _, onChange: __webpack_require__, value: _ } = _;
+        const { label: _, onChange: _, value: _ } = _;
         let _ = () => {
-          __webpack_require__ && __webpack_require__(!_);
+          _ && __webpack_require__(!_);
         };
         return (0, _.jsxs)("div", {
           className: _().CheckboxField,
@@ -28914,11 +28234,11 @@
         });
       }
       function _(_) {
-        const { refreshLogin: _, ...__webpack_require__ } = _;
+        const { refreshLogin: _, ..._ } = _;
         return _ && SteamClient.User?.StartShutdown
           ? (0, _.jsx)(_, {})
           : (0, _.jsx)(_, {
-              ...__webpack_require__,
+              ..._,
             });
       }
       function _(_) {
@@ -28954,25 +28274,15 @@
         });
       }
       function _(_) {
-        const {
-            className: _,
-            loading: __webpack_require__,
-            disabled: _,
-            children: _,
-            ..._
-          } = _,
-          _ = _ || __webpack_require__;
+        const { className: _, loading: _, disabled: _, children: _, ..._ } = _,
+          _ = _ || _;
         return (0, _.jsxs)("button", {
-          className: (0, _._)(
-            _().SubmitButton,
-            __webpack_require__ && _().Loading,
-            _,
-          ),
+          className: (0, _._)(_().SubmitButton, _ && _().Loading, _),
           disabled: _,
           ..._,
           children: [
             _,
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)("div", {
                 className: _().LoadingContainer,
                 children: (0, _.jsx)(_, {
@@ -29038,7 +28348,7 @@
       function _(_) {
         const {
             reset: _,
-            failure: __webpack_require__,
+            failure: _,
             onRequestOffline: _,
             errorReference: _,
             extendedErrorMessage: _,
@@ -29095,8 +28405,8 @@
             }
             _ && (_.description = _);
             return _;
-          })(__webpack_require__, _),
-          _ = _._.IN_STEAMUI && __webpack_require__ == _.Network;
+          })(_, _),
+          _ = _._.IN_STEAMUI && _ == _.Network;
         return (0, _.jsxs)(_, {
           compact: !0,
           children: [
@@ -29151,7 +28461,7 @@
       function _(_) {
         const {
             type: _,
-            onSubmitCode: __webpack_require__,
+            onSubmitCode: _,
             status: _,
             accountName: _,
             associatedLabel: _,
@@ -29333,9 +28643,9 @@
         });
       }
       function _(_) {
-        const { accountName: _, type: __webpack_require__ } = _,
+        const { accountName: _, type: _ } = _,
           _ =
-            "mobile" === __webpack_require__
+            "mobile" === _
               ? (0, _._)("#Login_MobileProtectingAccount")
               : (0, _._)("#Login_EmailProtectingAccount"),
           _ = _();
@@ -29424,11 +28734,7 @@
         });
       }
       function _(_) {
-        const {
-            type: _,
-            accountName: __webpack_require__,
-            onUseCodeOverride: _,
-          } = _,
+        const { type: _, accountName: _, onUseCodeOverride: _ } = _,
           _ = _(),
           _ = (0, _.jsx)(_, {
             type: "mobile",
@@ -29461,7 +28767,7 @@
             children: [
               (0, _.jsx)(_, {
                 type: _,
-                accountName: __webpack_require__,
+                accountName: _,
               }),
               (0, _.jsx)(_, {}),
               (0, _.jsxs)("div", {
@@ -29473,11 +28779,8 @@
         });
       }
       function _(_) {
-        const { children: _, align: __webpack_require__, inline: _ } = _,
-          _ = (0, _._)(
-            _().TextLink,
-            "center" === __webpack_require__ && _().TextAlignCenter,
-          );
+        const { children: _, align: _, inline: _ } = _,
+          _ = (0, _._)(_().TextLink, "center" === _ && _().TextAlignCenter);
         if ("href" in _) {
           const _ = _._.IN_STEAMUI
             ? `steam://openurl_external/${_.href}`
@@ -29498,17 +28801,17 @@
         }
       }
       function _(_) {
-        const { onSubmit: _, children: __webpack_require__, className: _ } = _;
+        const { onSubmit: _, children: _, className: _ } = _;
         return (0, _.jsx)("form", {
           onSubmit: (_) => (_.preventDefault(), _(), !1),
           className: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
         const {
             alignItems: _,
-            justifyContent: __webpack_require__,
+            justifyContent: _,
             gap: _,
             className: _,
             children: _,
@@ -29516,7 +28819,7 @@
           _ = (0, _._)(
             _().FlexCol,
             "center" === _ && _().AlignItemsCenter,
-            "center" === __webpack_require__ && _().JustifyContentCenter,
+            "center" === _ && _().JustifyContentCenter,
             _,
           ),
           _ = _
@@ -29533,14 +28836,14 @@
       function _(_) {
         const {
             children: _,
-            justifyContent: __webpack_require__,
+            justifyContent: _,
             alignItems: _,
             className: _,
           } = _,
           _ = {
             display: "flex",
             flexDirection: "row",
-            justifyContent: __webpack_require__,
+            justifyContent: _,
             alignItems: _,
           };
         return (0, _.jsx)("div", {
@@ -29550,15 +28853,12 @@
         });
       }
       function _(_) {
-        const { onChange: _, backupCode: __webpack_require__, ..._ } = _;
+        const { onChange: _, backupCode: _, ..._ } = _;
         return (0, _.jsx)(_, {
-          length: _(__webpack_require__),
-          backupCode: __webpack_require__,
+          length: _(_),
+          backupCode: _,
           onChange: (_) => {
-            _(
-              (_ = _.map((_) => _.toUpperCase())).join("").trim(),
-              __webpack_require__,
-            ) && _(_);
+            _((_ = _.map((_) => _.toUpperCase())).join("").trim(), _) && _(_);
           },
           autoFocus: !0,
           ..._,
@@ -29566,7 +28866,7 @@
         });
       }
       function _(_) {
-        const { children: _, spacing: __webpack_require__ = 0, align: _ } = _;
+        const { children: _, spacing: _ = 0, align: _ } = _;
         return (0, _.jsx)(_, {
           alignItems: _,
           children: _.Children.map(_, (_, _) =>
@@ -29575,7 +28875,7 @@
                   style:
                     _ > 0
                       ? {
-                          paddingTop: `${__webpack_require__}px`,
+                          paddingTop: `${_}px`,
                         }
                       : void 0,
                   children: _,
@@ -29585,7 +28885,7 @@
         });
       }
       function _(_) {
-        const { title: _, children: __webpack_require__, compact: _ } = _,
+        const { title: _, children: _, compact: _ } = _,
           _ = _();
         return (0, _.jsxs)(_, {
           gap: _._.IN_STEAMUI ? 0 : 32,
@@ -29604,7 +28904,7 @@
               : _,
             (0, _.jsx)("div", {
               className: _().FormContainer,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
@@ -29612,12 +28912,10 @@
       function _(_) {
         const {
           realm: _ = _._.EREALM,
-          launcherType: __webpack_require__ = _._.IN_STEAMUI
-            ? _._.LAUNCHER_TYPE
-            : void 0,
+          launcherType: _ = _._.IN_STEAMUI ? _._.LAUNCHER_TYPE : void 0,
           className: _ = _().HeaderLogo,
         } = _;
-        return 8 === __webpack_require__
+        return 8 === _
           ? (0, _.jsx)("div", {
               className: _,
             })
@@ -29783,7 +29081,7 @@
         });
       }
       function _(_) {
-        const { redirectURL: _, guestOption: __webpack_require__ } = _,
+        const { redirectURL: _, guestOption: _ } = _,
           [_] = (0, _.useState)(
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
@@ -29803,7 +29101,7 @@
                 redirectUrl: _,
                 theme: "modal",
                 children:
-                  __webpack_require__ &&
+                  _ &&
                   (0, _.jsx)(_, {
                     redirectURL: _,
                   }),
@@ -29969,11 +29267,9 @@
         }
       };
       function _(_) {
-        const { bPreviewMode: _, eventGID: __webpack_require__, ..._ } = _,
+        const { bPreviewMode: _, eventGID: _, ..._ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(() =>
-                _.GetClanEventModel(_),
-              ),
+            const [_, _] = (0, _.useState)(() => _.GetClanEventModel(_)),
               _ = _("usePartnerEventByEventGID");
             return (
               (0, _.useEffect)(() => {
@@ -29993,15 +29289,12 @@
               }, [_, _, _]),
               _
             );
-          })(__webpack_require__);
+          })(_);
         if (!_)
           return _
             ? (0, _.jsx)("div", {
                 className: _.ErrorDiv,
-                children: (0, _._)(
-                  "#EventDidplay_Reminder_EventNotVisible",
-                  __webpack_require__,
-                ),
+                children: (0, _._)("#EventDidplay_Reminder_EventNotVisible", _),
               })
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
@@ -30019,480 +29312,299 @@
         (0, _._)([_._], _.prototype, "HideMenu", null),
         (_ = (0, _._)([_._], _));
       const _ = (0, _._)((_) => {
-        const {
-            eventModel: _,
-            bShowStartTime: __webpack_require__,
-            bExpandLeft: _,
-            bOnlyShowIcon: _,
-            fnHasReminderSet: _,
-            fnHidePanel: _,
-            lang: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          _ = async (_, _, _) => {
-            const _ = _?.GID;
-            if (_ && _ != _._) {
-              _(!0);
-              try {
-                await _._.Get().SetFollowOrUnfollowEvent(
-                  !_,
-                  _,
-                  _.clanSteamID,
-                  _,
-                  _,
-                ),
-                  _ &&
-                    (_ === _._.k_ENotifyFlagByEmail
-                      ? _(_.k_eReminder_Email)
-                      : _ === _._.k_ENotifyFlagByPush &&
-                        _(_.k_eReminder_MobilePush));
-              } catch (_) {
-                _(
-                  (0, _.jsx)(_, {
-                    strTitle: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                        : "#EventDisplay_Reminder_FollowEvent_Error",
-                    ),
-                    strDescription: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                    ),
-                    children: (0, _._)(_).strErrorMsg,
-                  }),
-                  window,
-                );
-              }
-              _(!1);
-            }
-          },
-          _ = (_) => {
-            _.RecordAppInteractionEvent(_.appid, _);
-          },
-          _ = _.jsondata.bSaleEnabled ? _.k_eStoreSalePage : _.k_eStoreView,
-          _ = (function (_, _, _) {
-            return _(
-              _,
-              _,
-              "forceAbsolute" !== _ && _(_, _) ? "relative" : "absolute",
-            );
-          })(_, _, "forceAbsolute"),
-          _ = (_) => {
-            const _ = _.appid
-                ? "app/" + _.appid
-                : "group/" + _.clanSteamID.GetAccountID(),
-              _ = "l=" + (0, _._)(_);
-            return `${_._.STORE_BASE_URL}news/download/${_}/${_}/${_.GID}?${_}`;
-          },
-          _ = _.BHasValidatedEmail(),
-          _ = _.BHasPushNotification(),
-          _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.ReminderCheckBox,
-                _ ? _.IconMode : _.TextMode,
-                "RemindMeWidget",
-              ),
-              onClick: _,
-              children: [
-                _(_) &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindCheck,
-                    children: (0, _.jsx)(_.Jlk, {}),
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindBell,
-                    children: (0, _.jsx)(_.IrQ, {}),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderDefault,
-                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderOpennedOptions,
-                }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.FlexColumnContainer,
-                _.ReminderBackground,
-                _ && _.ReminderExpandsLeft,
-              ),
-              children: [
-                _ &&
-                  (0, _.jsx)(_, {
-                    className: _.RpcThrobber,
-                    size: "xlarge",
-                    position: "center",
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.FullStartTime,
-                    children: (0, _._)(
-                      "#EventDisplay_EventUpcoming_WithDateAndTime",
-                      (0, _._)(
-                        _,
-                        (0, _._)(
-                          new Date(1e3 * _),
-                          _.GetTimeNowWithOverrideAsDate(),
-                        ),
-                      ),
-                      _(_, !0),
-                    ),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderOptionsHeader,
-                  children: (0, _._)(
-                    "#EventDisplay_Reminder_GetNotification_Via",
+          const {
+              eventModel: _,
+              bShowStartTime: _,
+              bExpandLeft: _,
+              bOnlyShowIcon: _,
+              fnHasReminderSet: _,
+              fnHidePanel: _,
+              lang: _,
+            } = _,
+            [_, _] = _.useState(!1),
+            _ = async (_, _, _) => {
+              const _ = _?.GID;
+              if (_ && _ != _._) {
+                _(!0);
+                try {
+                  await _._.Get().SetFollowOrUnfollowEvent(
+                    !_,
+                    _,
+                    _.clanSteamID,
+                    _,
+                    _,
                   ),
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                  children: [
+                    _ &&
+                      (_ === _._.k_ENotifyFlagByEmail
+                        ? _(_.k_eReminder_Email)
+                        : _ === _._.k_ENotifyFlagByPush &&
+                          _(_.k_eReminder_MobilePush));
+                } catch (_) {
+                  _(
                     (0, _.jsx)(_, {
-                      className: _.CheckboxWrapper,
-                      bTopmost: !0,
-                      toolTipContent: (0, _._)(
+                      strTitle: (0, _._)(
                         _
-                          ? "#EventReminder_NotifyByEmail_ttip"
-                          : "#EventReminder_NotifyByEmail_Missing",
+                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                          : "#EventDisplay_Reminder_FollowEvent_Error",
                       ),
-                      children: (0, _.jsx)(_, {
-                        label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                        disabled: !_,
-                        checked: _._.Get().BFollowsEventAndNotifiedBy(
-                          _.clanSteamID,
-                          _.GID,
-                          _._.k_ENotifyFlagByEmail,
-                        ),
-                        onChange: (_) => {
-                          _(_, !1, _._.k_ENotifyFlagByEmail);
-                        },
-                      }),
-                    }),
-                    !_ &&
-                      (0, _.jsx)("div", {
-                        className: _.FlexColumnContainer,
-                        children: (0, _.jsx)("a", {
-                          href: _._.STORE_BASE_URL + "account/",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () => _(_.k_eReminder_EmailUnverified),
-                          children: (0, _._)(
-                            "#EventReminder_NotifyByEmail_Missing_Add",
-                          ),
-                        }),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                  children: [
-                    (0, _.jsx)(_, {
-                      className: _.CheckboxWrapper,
-                      bTopmost: !0,
-                      toolTipContent: (0, _._)(
+                      strDescription: (0, _._)(
                         _
-                          ? "#EventReminder_NotifyByMobile_ttip"
-                          : "#EventReminder_NotifyByMobile_Missing",
+                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
                       ),
-                      children: (0, _.jsx)(_, {
-                        label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                        disabled: !_,
-                        checked: _._.Get().BFollowsEventAndNotifiedBy(
-                          _.clanSteamID,
-                          _.GID,
-                          _._.k_ENotifyFlagByPush,
-                        ),
-                        onChange: (_) => {
-                          _(_, !1, _._.k_ENotifyFlagByPush);
-                        },
-                      }),
+                      children: (0, _._)(_).strErrorMsg,
                     }),
-                    !_ &&
-                      (0, _.jsx)("div", {
-                        className: _.FlexColumnContainer,
-                        children: (0, _.jsx)("a", {
-                          href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () => _(_.k_eReminder_MobilePushMissing),
-                          children: (0, _._)(
-                            "#EventReminder_NotifyByMobile_Install",
-                          ),
-                        }),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.ReminderOptionsHeader,
-                      children: (0, _._)(
-                        "#EventDisplay_Reminder_AddToCalendar",
-                      ),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.ReminderCalendarOptions,
-                      children: [
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          href: _("ics"),
-                          onClick: () => _(_.k_eReminder_CalendarApple),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_AppleCalendar_Short",
-                          ),
-                        }),
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          href: (() => {
-                            const _ = encodeURIComponent(
-                                (() => {
-                                  const _ = _.GetNameWithFallback(_);
-                                  if (
-                                    _.BHasEntityNameForID(
-                                      _.appid,
-                                      _.clanSteamID.GetAccountID(),
-                                    )
-                                  )
-                                    return `${_.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-                                  return _;
-                                })(),
-                              ),
-                              _ = encodeURIComponent(
-                                (() => {
-                                  let _ = _.GetSubTitleWithLanguageFallback(_);
-                                  return (
-                                    (_ = _ ? `${_}\n\n\n` : ""),
-                                    `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
-                                  );
-                                })(),
-                              ),
-                              _ = _.GetStartTimeAndDateUnixSeconds(),
-                              _ = _(_),
-                              _ = _(
-                                _.GetEndTimeAndDateUnixSeconds() ||
-                                  _ + _._.PerHour,
-                              ),
-                              _ =
-                                (_._.IN_CLIENT
-                                  ? "steam://openurl_external/"
-                                  : "") +
-                                `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-                            return (0, _._)(_);
-                          })(),
-                          onClick: () => _(_.k_eReminder_CalendarGoogle),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_GoogleCalendar_Short",
-                          ),
-                        }),
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          href: _("outlook"),
-                          onClick: () => _(_.k_eReminder_CalendarOutlook),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_OutlookCalendar_Short",
-                          ),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                !1,
-              ],
-            }),
-          ],
-        });
-      });
-      class _ {
-        m_bUserHasVolumePreference = !1;
-        m_flVolumePreference = 0;
-        BUserHasVolumePreference() {
-          return this.m_bUserHasVolumePreference;
-        }
-        SetVolumePreference(_) {
-          (this.m_flVolumePreference = _),
-            (this.m_bUserHasVolumePreference = !0);
-        }
-        GetVolumePreference() {
-          return this.m_flVolumePreference;
-        }
-        BVolumePreferenceMuted() {
-          return this.m_flVolumePreference < 0.001;
-        }
-        static s_Singleton;
-        static Get() {
-          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-        }
-      }
-      (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
-        (0, _._)([_._], _.prototype, "SetVolumePreference", null);
-      const _ = (0, _.forwardRef)(function (_, _) {
-        const {
-            video: __webpack_require__,
-            bAutoPlay: _,
-            bControls: _,
-            bLoop: _,
-            bMuted: _,
-            className: _,
-            mediaScale: _,
-            onClick: _,
-            altText: _,
-          } = _,
-          _ = (0, _.useMemo)(
-            () =>
-              Boolean(
-                __webpack_require__.rgVideoTracks?.some(
-                  (_) => "subtitles" == _.sKind || "captions" == _.sKind,
-                ),
-              ),
-            [__webpack_require__.rgVideoTracks],
-          ),
-          [_, _] = _.useState(!1);
-        if (
-          !__webpack_require__.rgVideoSources ||
-          !__webpack_require__.rgVideoSources.length
-        )
-          return null;
-        const _ = (function (_) {
-          return !(
-            !(0, _._)(_.sPoster) ||
-            (_.rgVideoSources &&
-              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
-            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
-          );
-        })(__webpack_require__);
-        let _;
-        (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
-        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-          _ = __webpack_require__.sPoster ? _(__webpack_require__.sPoster) : "";
-        return (0, _.jsxs)("video", {
-          width: "100%",
-          height: "auto",
-          autoPlay: _,
-          muted: _,
-          playsInline: !0,
-          controls: _,
-          poster: _,
-          loop: _,
-          crossOrigin: _,
-          onVolumeChange: (_) => {
-            const _ = _.target,
-              _ = _.muted ? 0 : _.volume;
-            _ && _.Get().SetVolumePreference(_);
-          },
-          onPlay: (_) => {
-            const _ = _.target,
-              _ = 0 == _.currentTime,
-              _ = _.Get().BUserHasVolumePreference();
-            if ((_(!0), _))
-              if (_ || _)
-                _ &&
-                  ((_.volume = _.Get().GetVolumePreference()),
-                  (_.muted = _.Get().BVolumePreferenceMuted()));
-              else {
-                const _ = _.muted ? 0 : _.volume;
-                _.Get().SetVolumePreference(_);
+                    window,
+                  );
+                }
+                _(!1);
               }
-          },
-          ref: _,
-          className: _,
-          onClick: _,
-          "aria-label": _,
-          style: {
-            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-          },
-          children: [
-            (0, _.jsx)(_, {
-              rgVideoSources: __webpack_require__.rgVideoSources,
-            }),
-            (0, _.jsx)(_, {
-              rgVideoTracks: __webpack_require__.rgVideoTracks,
-            }),
-          ],
-        });
-      });
-      function _(_) {
-        if (_)
-          try {
-            const _ = new URL(_);
-            return (
-              (_.search =
-                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
-              _.toString()
-            );
-          } catch {
-            return _;
-          }
-      }
-      function _(_) {
-        const { rgVideoSources: _ } = _;
-        return _.filter((_) => Boolean(_.sURL)).map((_) =>
-          (0, _.jsx)(
-            "source",
-            {
-              src: _(_.sURL),
-              type: _.sFormat,
             },
-            _.sURL,
-          ),
-        );
-      }
-      function _(_) {
-        const { rgVideoTracks: _ } = _;
-        return _
-          ? _.map((_, _) =>
-              (0, _.jsx)(
+            _ = (_) => {
+              _.RecordAppInteractionEvent(_.appid, _);
+            },
+            _ = _.jsondata.bSaleEnabled ? _.k_eStoreSalePage : _.k_eStoreView,
+            _ = (function (_, _, _) {
+              return _(
                 _,
-                {
-                  track: _,
-                  rgVideoTracks: _,
-                },
                 _,
-              ),
-            )
-          : null;
-      }
-      function _(_) {
-        const { track: _, rgVideoTracks: __webpack_require__ } = _;
-        let _ = _.eLanguage;
-        if ((0, _._)())
-          if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
-            _ = _._.GetELanguageFallback(_);
-          else {
-            if (6 !== _) return null;
-            if (
-              __webpack_require__.find(
-                (_) => _._.GetELanguageFallback(_.eLanguage) === _,
-              )
-            )
-              return null;
-          }
-        else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
-          return null;
-        return (0, _.jsx)("track", {
-          src: _(_.sURL),
-          kind: _.sKind,
-          default: _.bDefault,
-          srcLang: (0, _._)(_),
-          label: (0, _._)("#language_selection_" + (0, _._)(_)),
-        });
-      }
-      function _(_) {
-        if (!_) return _;
-        const _ = _.trim(),
-          _ = _.toLowerCase();
-        return __webpack_require__.startsWith("javascript:") ||
-          __webpack_require__.startsWith("data:") ||
-          __webpack_require__.startsWith("vbscript:")
-          ? ""
-          : _;
-      }
-      const _ = new Map([
+                "forceAbsolute" !== _ && _(_, _) ? "relative" : "absolute",
+              );
+            })(_, _, "forceAbsolute"),
+            _ = (_) => {
+              const _ = _.appid
+                  ? "app/" + _.appid
+                  : "group/" + _.clanSteamID.GetAccountID(),
+                _ = "l=" + (0, _._)(_);
+              return `${_._.STORE_BASE_URL}news/download/${_}/${_}/${_.GID}?${_}`;
+            },
+            _ = _.BHasValidatedEmail(),
+            _ = _.BHasPushNotification(),
+            _ = _ && _.GetStartTimeAndDateUnixSeconds();
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _.ReminderCheckBox,
+                  _ ? _.IconMode : _.TextMode,
+                  "RemindMeWidget",
+                ),
+                onClick: _,
+                children: [
+                  _(_) &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindCheck,
+                      children: (0, _.jsx)(_.Jlk, {}),
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindBell,
+                      children: (0, _.jsx)(_.IrQ, {}),
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderDefault,
+                    children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderOpennedOptions,
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _.FlexColumnContainer,
+                  _.ReminderBackground,
+                  _ && _.ReminderExpandsLeft,
+                ),
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      className: _.RpcThrobber,
+                      size: "xlarge",
+                      position: "center",
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.FullStartTime,
+                      children: (0, _._)(
+                        "#EventDisplay_EventUpcoming_WithDateAndTime",
+                        (0, _._)(
+                          _,
+                          (0, _._)(
+                            new Date(1e3 * _),
+                            _.GetTimeNowWithOverrideAsDate(),
+                          ),
+                        ),
+                        _(_, !0),
+                      ),
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderOptionsHeader,
+                    children: (0, _._)(
+                      "#EventDisplay_Reminder_GetNotification_Via",
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _.CheckboxWrapper,
+                        bTopmost: !0,
+                        toolTipContent: (0, _._)(
+                          _
+                            ? "#EventReminder_NotifyByEmail_ttip"
+                            : "#EventReminder_NotifyByEmail_Missing",
+                        ),
+                        children: (0, _.jsx)(_, {
+                          label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                          disabled: !_,
+                          checked: _._.Get().BFollowsEventAndNotifiedBy(
+                            _.clanSteamID,
+                            _.GID,
+                            _._.k_ENotifyFlagByEmail,
+                          ),
+                          onChange: (_) => {
+                            _(_, !1, _._.k_ENotifyFlagByEmail);
+                          },
+                        }),
+                      }),
+                      !_ &&
+                        (0, _.jsx)("div", {
+                          className: _.FlexColumnContainer,
+                          children: (0, _.jsx)("a", {
+                            href: _._.STORE_BASE_URL + "account/",
+                            target: _._.IN_CLIENT ? void 0 : "_blank",
+                            onClick: () => _(_.k_eReminder_EmailUnverified),
+                            children: (0, _._)(
+                              "#EventReminder_NotifyByEmail_Missing_Add",
+                            ),
+                          }),
+                        }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _.CheckboxWrapper,
+                        bTopmost: !0,
+                        toolTipContent: (0, _._)(
+                          _
+                            ? "#EventReminder_NotifyByMobile_ttip"
+                            : "#EventReminder_NotifyByMobile_Missing",
+                        ),
+                        children: (0, _.jsx)(_, {
+                          label: (0, _._)(
+                            "#EventDisplay_Reminder_ViaMobileApp",
+                          ),
+                          disabled: !_,
+                          checked: _._.Get().BFollowsEventAndNotifiedBy(
+                            _.clanSteamID,
+                            _.GID,
+                            _._.k_ENotifyFlagByPush,
+                          ),
+                          onChange: (_) => {
+                            _(_, !1, _._.k_ENotifyFlagByPush);
+                          },
+                        }),
+                      }),
+                      !_ &&
+                        (0, _.jsx)("div", {
+                          className: _.FlexColumnContainer,
+                          children: (0, _.jsx)("a", {
+                            href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                            target: _._.IN_CLIENT ? void 0 : "_blank",
+                            onClick: () => _(_.k_eReminder_MobilePushMissing),
+                            children: (0, _._)(
+                              "#EventReminder_NotifyByMobile_Install",
+                            ),
+                          }),
+                        }),
+                    ],
+                  }),
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ReminderOptionsHeader,
+                        children: (0, _._)(
+                          "#EventDisplay_Reminder_AddToCalendar",
+                        ),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.ReminderCalendarOptions,
+                        children: [
+                          (0, _.jsx)("a", {
+                            className: _.ReminderOption,
+                            href: _("ics"),
+                            onClick: () => _(_.k_eReminder_CalendarApple),
+                            children: (0, _._)(
+                              "#EventDisplay_Reminder_AppleCalendar_Short",
+                            ),
+                          }),
+                          (0, _.jsx)("a", {
+                            className: _.ReminderOption,
+                            target: _._.IN_CLIENT ? void 0 : "_blank",
+                            href: (() => {
+                              const _ = encodeURIComponent(
+                                  (() => {
+                                    const _ = _.GetNameWithFallback(_);
+                                    if (
+                                      _.BHasEntityNameForID(
+                                        _.appid,
+                                        _.clanSteamID.GetAccountID(),
+                                      )
+                                    )
+                                      return `${_.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
+                                    return _;
+                                  })(),
+                                ),
+                                _ = encodeURIComponent(
+                                  (() => {
+                                    let _ =
+                                      _.GetSubTitleWithLanguageFallback(_);
+                                    return (
+                                      (_ = _ ? `${_}\n\n\n` : ""),
+                                      `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                                    );
+                                  })(),
+                                ),
+                                _ = _.GetStartTimeAndDateUnixSeconds(),
+                                _ = _(_),
+                                _ = _(
+                                  _.GetEndTimeAndDateUnixSeconds() ||
+                                    _ + _._.PerHour,
+                                ),
+                                _ =
+                                  (_._.IN_CLIENT
+                                    ? "steam://openurl_external/"
+                                    : "") +
+                                  `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                              return (0, _._)(_);
+                            })(),
+                            onClick: () => _(_.k_eReminder_CalendarGoogle),
+                            children: (0, _._)(
+                              "#EventDisplay_Reminder_GoogleCalendar_Short",
+                            ),
+                          }),
+                          (0, _.jsx)("a", {
+                            className: _.ReminderOption,
+                            href: _("outlook"),
+                            onClick: () => _(_.k_eReminder_CalendarOutlook),
+                            children: (0, _._)(
+                              "#EventDisplay_Reminder_OutlookCalendar_Short",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  !1,
+                ],
+              }),
+            ],
+          });
+        }),
+        _ = new Map([
           [
             "b",
             {
@@ -30624,7 +29736,7 @@
             "spoiler",
             {
               Constructor: function (_) {
-                let [_, __webpack_require__] = _.useState(!1),
+                let [_, _] = _.useState(!1),
                   _ = _.useCallback(() => {
                     __webpack_require__(!_);
                   }, [_]);
@@ -30674,7 +29786,7 @@
                   "string" == typeof _ && (0, _._)(_) && (_ = _(_));
                 }
                 const _ =
-                    "button" == _(_.args, "style") ? _().LinkButton : null,
+                    "button" == _(_.args, "style") ? _().LinkButton : void 0,
                   _ = _ && _(_.args, "buttoncolor");
                 let _ = _(_.args, "id");
                 _ &&
@@ -30891,7 +30003,7 @@
             {
               Constructor: function (_) {
                 const _ = Boolean(_(_.args, "expanded")),
-                  [__webpack_require__, _] = _.useState(_),
+                  [_, _] = _.useState(_),
                   _ = _(_.args, "title"),
                   _ = _(_.args, "collapsed_str"),
                   _ = _(_.args, "expanded_str"),
@@ -30928,29 +30040,27 @@
                 return (0, _.jsxs)("div", {
                   className: (0, _._)({
                     [_().ExpandSectionBlock]: !0,
-                    [_.style]: null != _.style,
-                    [_().ExpandSectionExpanded]: __webpack_require__,
-                    [_().ExpandSectionCollapsed]: !__webpack_require__,
-                    BBCodeExpanded: __webpack_require__,
-                    BBCodeCollapsed: !__webpack_require__,
+                    [_.style ?? ""]: null != _.style,
+                    [_().ExpandSectionExpanded]: _,
+                    [_().ExpandSectionCollapsed]: !_,
+                    BBCodeExpanded: _,
+                    BBCodeCollapsed: !_,
                   }),
                   children: [
                     (0, _.jsxs)("div", {
                       className: _().ExpandSectionHeader,
-                      onClick: () => _(!__webpack_require__),
+                      onClick: () => _(!_),
                       children: [
-                        (0, _._)(
-                          __webpack_require__ ? _.expanded : _.collapsed,
-                        ),
+                        (0, _._)(_ ? _.expanded : _.collapsed),
                         (0, _.jsx)("div", {
                           className: _().EmbedArrow,
                           children: (0, _.jsx)(_.DK4, {
-                            angle: __webpack_require__ ? 180 : 0,
+                            angle: _ ? 180 : 0,
                           }),
                         }),
                       ],
                     }),
-                    __webpack_require__ &&
+                    _ &&
                       (0, _.jsx)("div", {
                         className: _().ExpandSectionBody,
                         children: _.children,
@@ -30967,13 +30077,12 @@
             "remindme",
             {
               Constructor: function (_) {
-                const { event: _, showErrorInfo: __webpack_require__ } =
-                    _.context,
+                const { event: _, showErrorInfo: _ } = _.context,
                   _ = _(_.args);
                 if (_)
                   return (0, _.jsx)(_, {
                     eventGID: _,
-                    bPreviewMode: __webpack_require__,
+                    bPreviewMode: _,
                   });
                 if (_) {
                   const _ = (0, _._)(_._.LANGUAGE);
@@ -31095,7 +30204,7 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args),
-                  _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                  _ = "button" == _(_.args, "style") ? _().LinkButton : void 0,
                   _ = _ && _(_.args, "buttoncolor");
                 return (0, _.jsx)(_, {
                   className: _,
@@ -31223,33 +30332,6 @@
             },
           ],
         ]);
-      function _(_, _, __webpack_require__ = 0) {
-        if (_ && 0 != _.length) {
-          if (_?.startsWith(_)) return _.ReplacementTokenToClanImageURL(_);
-          if (_?.startsWith(_)) {
-            const _ = new Array(),
-              _ = _.GetBaseURL(),
-              _ = _.substring(23),
-              _ = parseInt(_.substring(0, _.indexOf("/"))),
-              _ = _.substring(_.indexOf("/") + 1),
-              _ = _.GetHashFromHashAndExt(_),
-              _ = _.GetExtStringFromHashAndExt(_);
-            if (null != _) {
-              let _ = (0, _._)(_);
-              _.push(
-                _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-              ),
-                4 == _ &&
-                  ((_ = (0, _._)((0, _._)(_))),
-                  _.push(
-                    _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-                  ));
-            }
-            return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
-          }
-          return _;
-        }
-      }
       function _(_, _) {
         return void 0 === _ ? _[""] : _[_];
       }
@@ -31270,7 +30352,7 @@
         );
       }
       const _ = (_) => {
-        const { href: _, ...__webpack_require__ } = _;
+        const { href: _, ..._ } = _;
         let _,
           _ = (0, _._)(_);
         _(_)
@@ -31284,11 +30366,11 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           toolTipContent: _,
           direction: "top",
           children: (0, _.jsx)(_._, {
-            ...__webpack_require__,
+            ..._,
             href: _,
             rel: _,
             children: _.children,
@@ -31327,73 +30409,7 @@
           })
         );
       }
-      function _(_) {
-        let _ = _(_, "poster");
-        _ && (_ = (0, _._)(_));
-        const _ = new Array();
-        {
-          const _ = _(_, "mp4");
-          _ &&
-            __webpack_require__.push({
-              sURL: (0, _._)(_),
-              sFormat: "video/mp4",
-            });
-          const _ = _(_, "webm");
-          _ &&
-            __webpack_require__.push({
-              sURL: (0, _._)(_),
-              sFormat: "video/webm",
-            });
-        }
-        const _ = (0, _._)(_._.LANGUAGE),
-          _ = 0 != _,
-          _ = new Array();
-        for (let _ = 0; _ < 31; _++) {
-          const _ = _(_, "sub_" + (0, _._)(_));
-          _ &&
-            _.push({
-              sURL: (0, _._)(_),
-              eLanguage: _,
-              sKind: "subtitles",
-              bDefault: _ && _ == _,
-            });
-          const _ = _(_, "cap_" + (0, _._)(_));
-          _ &&
-            _.push({
-              sURL: (0, _._)(_),
-              eLanguage: _,
-              sKind: "captions",
-              bDefault: _ && _ == _,
-            });
-        }
-        return {
-          sPoster: _,
-          rgVideoSources: _,
-          rgVideoTracks: _,
-        };
-      }
-      function _(_) {
-        const _ = _(_.args),
-          _ = _.children ? _.children.toString() : void 0;
-        _ &&
-          __webpack_require__.startsWith("http") &&
-          _.rgVideoSources.push({
-            sURL: (0, _._)(_),
-            sFormat: "video/webm",
-          });
-        const _ = _(_.args, "autoplay"),
-          _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "controls"),
-          _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "loop"),
-          _ = "0" !== _ && "off" !== _ && "false" !== _;
-        return (0, _.jsx)(_, {
-          video: _,
-          bAutoPlay: _,
-          bControls: _,
-          bLoop: _ ? _ : _,
-        });
-      }
+      __webpack_require__("chunkid");
       const _ = "ː",
         _ = 604800;
       class _ {
@@ -31445,19 +30461,17 @@
         static FilterStickers(_, _) {
           return _ ? _.filter((_) => _.BStickerFilterMatch(_, _)) : _;
         }
-        SearchEmoticons(_, _ = 25, __webpack_require__ = !0) {
+        SearchEmoticons(_, _ = 25, _ = !0) {
           function _(_) {
             return _.name_normalized || _.name;
           }
           this.UpdateEmoticonList(), (_ = _.toLocaleLowerCase());
           let _ = this.recent_emoticons.filter((_) => !_ || _(_).startsWith(_)),
             _ = this.recent_emoticons.filter(
-              (_) => !__webpack_require__ && -1 !== _(_).indexOf(_),
+              (_) => !_ && -1 !== _(_).indexOf(_),
             ),
             _ = this.m_rgEmoticons.filter((_) => !_ || _(_).startsWith(_)),
-            _ = this.m_rgEmoticons.filter(
-              (_) => !__webpack_require__ && -1 !== _(_).indexOf(_),
-            ),
+            _ = this.m_rgEmoticons.filter((_) => !_ && -1 !== _(_).indexOf(_)),
             _ = new Set(),
             _ = [];
           function _(_, _, _) {
@@ -31673,12 +30687,7 @@
         );
       }
       const _ = (_) => {
-        const {
-          url: _,
-          event: __webpack_require__,
-          className: _,
-          style: _,
-        } = _;
+        const { url: _, event: _, className: _, style: _ } = _;
         let _,
           _ = (0, _._)(_);
         (_ = (function (_, _) {
@@ -31687,7 +30696,7 @@
                 ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _(_)
                 : (0, _._)(_))
             : "";
-        })(_, __webpack_require__)),
+        })(_, _)),
           _(_) && (_ = "noopener nofollow");
         const _ =
           "string" == typeof _.children &&
@@ -31696,7 +30705,7 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           toolTipContent: _,
           direction: "top",
           children: (0, _.jsx)(_._, {
@@ -31770,6 +30779,28 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(_, _, _ = 0) {
+        if (!_ || 0 == _.length) return null;
+        if (_?.startsWith(_)) return _.ReplacementTokenToClanImageURL(_);
+        if (_?.startsWith(_)) {
+          const _ = new Array(),
+            _ = _.GetBaseURL(),
+            _ = _.substring(23),
+            _ = parseInt(_.substring(0, _.indexOf("/"))),
+            _ = _.substring(_.indexOf("/") + 1),
+            _ = _.GetHashFromHashAndExt(_),
+            _ = _.GetExtStringFromHashAndExt(_);
+          if (null != _) {
+            let _ = (0, _._)(_);
+            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _),
+              4 == _ &&
+                ((_ = (0, _._)((0, _._)(_))),
+                _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _));
+          }
+          return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
+        }
+        return _;
+      }
       const _ = new Map([
           ...Array.from(_.entries()),
           ...Array.from(_.entries()),
@@ -31803,15 +30834,14 @@
             "img",
             {
               Constructor: function (_) {
-                const { showErrorInfo: _, version: __webpack_require__ } =
-                  _.context;
+                const { showErrorInfo: _, version: _ } = _.context;
                 let _ = _?.children?.toString();
                 (null != _ && null != _ && 0 != _.length) ||
                   (_ = _?.args?.[""]);
                 const _ = _?.args?.alt,
-                  _ = (function (_, _, __webpack_require__ = 0) {
-                    return _(_, _, __webpack_require__);
-                  })(_, _.language, Number.parseInt(__webpack_require__));
+                  _ = (function (_, _, _ = 0) {
+                    return _(_, _, _);
+                  })(_, _.language, Number.parseInt(_));
                 return null == _
                   ? null
                   : "string" == typeof _
@@ -31855,11 +30885,7 @@
           ],
         ]),
         _ = (_) => {
-          const {
-              text: _,
-              bShowErrorInfo: __webpack_require__,
-              version: _,
-            } = _,
+          const { text: _, bShowErrorInfo: _, version: _ } = _,
             _ = _.useCallback(
               (_) =>
                 new _(
@@ -31882,7 +30908,7 @@
           return (0, _.jsx)("div", {
             className: _().FAQContainer,
             children: _.current.ParseBBCode(_, {
-              showErrorInfo: __webpack_require__,
+              showErrorInfo: _,
               version: _,
             }),
           });
@@ -31891,7 +30917,7 @@
       const _ = (_) => {
           const {
               title: _,
-              content: __webpack_require__,
+              content: _,
               bIsPreview: _,
               elSideBars: _,
               version: _,
@@ -31935,7 +30961,7 @@
                             (0, _.jsx)("div", {
                               className: _.FAQContent,
                               children: (0, _.jsx)(_, {
-                                text: __webpack_require__,
+                                text: _,
                                 bShowErrorInfo: _,
                                 version: _ || "0",
                               }),
@@ -32021,20 +31047,20 @@
       function _(_) {
         const {
             accountID: _,
-            bHideWhenNotAvailable: __webpack_require__,
+            bHideWhenNotAvailable: _,
             bHideName: _,
             bLink: _ = !0,
           } = _,
           [_] = (function (_) {
-            const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+            const { data: _, isLoading: _ } = (0, _._)({
               queryKey: [_, _],
               queryFn: () => _.load(_),
             });
-            return [_, __webpack_require__];
+            return [_, _];
           })(_),
           _ = (function (_) {
             const _ = (0, _._)(),
-              { data: __webpack_require__, isLoading: _ } = (0, _._)({
+              { data: _, isLoading: _ } = (0, _._)({
                 queryKey: ["nicknames"],
                 queryFn: async () => {
                   const _ = new Map();
@@ -32050,7 +31076,7 @@
                   return _;
                 },
               });
-            return __webpack_require__ ? __webpack_require__.get(_) : null;
+            return _ ? __webpack_require__.get(_) : null;
           })(_),
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
           _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
@@ -32059,7 +31085,7 @@
           children: Boolean(!_)
             ? (0, _.jsx)(_.Fragment, {
                 children:
-                  Boolean(!__webpack_require__) &&
+                  Boolean(!_) &&
                   (0, _.jsx)("span", {
                     children: _,
                   }),
@@ -32090,7 +31116,7 @@
           (_.k_eCommunityPreview = "preview");
       })(_ || (_ = {}));
       const _ = (_) => {
-        const { route: _, faqid: __webpack_require__ } = _,
+        const { route: _, faqid: _ } = _,
           _ = (function (_, _) {
             let _ = "/faqs/" + _._.VANITY_ID + "/";
             switch (_) {
@@ -32108,7 +31134,7 @@
                 _ += "preview/" + _(_);
             }
             return _;
-          })(_, __webpack_require__);
+          })(_, _);
         return _.bForceRedirect
           ? (0, _.jsx)(_._, {
               push: !0,
@@ -32130,7 +31156,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const { faqContent: _ } = _,
-            [__webpack_require__, _] = (function (_, _, _) {
+            [_, _] = (function (_, _, _) {
               const [_, _] = _.useState(null),
                 [_, _] = _.useState(!1);
               return (
@@ -32156,11 +31182,9 @@
                     className: _.InfoRow,
                     children: (0, _._)(
                       "#FAQViewer_Admin_LastUpdate",
-                      __webpack_require__?.author_account_id
+                      _?.author_account_id
                         ? (0, _.jsx)(_, {
-                            accountID: Number.parseInt(
-                              __webpack_require__.author_account_id,
-                            ),
+                            accountID: Number.parseInt(_.author_account_id),
                           })
                         : (0, _._)("#FAQViewer_UnknownUser"),
                       (0, _.jsx)("span", {
@@ -32188,10 +31212,8 @@
         },
         _ = (_) => {
           const { faqContent: _ } = _,
-            [__webpack_require__, _] = (function (_) {
-              const [_, __webpack_require__] = _.useState(
-                  _.Get().GetFAQDraftContent(_),
-                ),
+            [_, _] = (function (_) {
+              const [_, _] = _.useState(_.Get().GetFAQDraftContent(_)),
                 [_, _] = _.useState(!!_);
               return (
                 (0, _.useEffect)(() => {
@@ -32204,7 +31226,7 @@
               );
             })(_.faq_id);
           if (
-            !__webpack_require__ ||
+            !_ ||
             !_ ||
             __webpack_require__.GetLastTimeLanguageUpdated(_.language) <=
               _.timestamp
@@ -32313,7 +31335,7 @@
         _ = __webpack_require__._(_);
       const _ = (_) => {
           const { faqid: _ } = _,
-            [__webpack_require__, _] = (function (_, _) {
+            [_, _] = (function (_, _) {
               return [_ && _.Get().GetFAQPublishedContent(_, _), !0];
             })(_, (0, _._)(_._.LANGUAGE));
           return (
@@ -32321,23 +31343,23 @@
               _.Get().RemoveAllDirtyDrafts();
             }, []),
             _
-              ? __webpack_require__
+              ? _
                 ? (0, _.jsx)(_, {
-                    title: __webpack_require__.title,
-                    content: __webpack_require__.content,
-                    version: __webpack_require__.version,
+                    title: _.title,
+                    content: _.content,
+                    version: _.version,
                     elSideBars: [
                       (0, _.jsx)(
                         _,
                         {
-                          faqContent: __webpack_require__,
+                          faqContent: _,
                         },
                         "sidebar",
                       ),
                       (0, _.jsx)(
                         _,
                         {
-                          faqContent: __webpack_require__,
+                          faqContent: _,
                         },
                         "adminbar",
                       ),
@@ -32374,10 +31396,7 @@
           });
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            redirectUrl: _ = _._.HELP_BASE_URL,
-            accountName: __webpack_require__,
-          } = _,
+        const { redirectUrl: _ = _._.HELP_BASE_URL, accountName: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1),
           _ = !!(0, _._)(_());
@@ -32395,117 +31414,21 @@
                     : window.location.assign(_);
                 },
                 redirectUrl: _,
-                defaultAccountName: __webpack_require__,
+                defaultAccountName: _,
                 theme: _ ? "modal" : void 0,
               }),
         });
       }
-      var _,
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = "function" == typeof matchMedia ? matchMedia : _,
-          _ = (0, _.useMemo)(() => _(_), [_, _]),
-          [_, _] = (0, _.useState)(!!_ && _.matches);
-        return (
-          (0, _.useEffect)(() => {
-            if (!_) return () => {};
-            function _(_) {
-              _(_.matches);
-            }
-            return (
-              _(_.matches),
-              __webpack_require__.addEventListener("change", _),
-              () => __webpack_require__.removeEventListener("change", _)
-            );
-          }, [_]),
-          _
-        );
-      }
-      function _() {
-        return null;
-      }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Header = 1)] = "Header"),
-          (_[(_.Fallback = 2)] = "Fallback");
-      })(_ || (_ = {}));
-      const _ = (0, _.createContext)({});
-      const _ = (0, _.createContext)({
-        _: 768,
-        _: 940,
-        _: 1240,
-        _: "lg",
-      });
-      function _(_) {
-        const { children: _, breakpoints: __webpack_require__ = {} } = _,
-          _ = (0, _.useContext)(_),
-          _ = {
-            _: __webpack_require__._ ?? _._,
-            _: __webpack_require__._ ?? _._,
-            _: __webpack_require__._ ?? _._,
-          },
-          _ = (function (_) {
-            const _ = _(`(min-width: ${_._}px)`),
-              _ = _(`(min-width: ${_._}px)`),
-              _ = _(`(min-width: ${_._}px)`),
-              [_, _] = (0, _.useState)(!0);
-            (0, _.useEffect)(() => _(!0), []);
-            const _ = (0, _.useContext)(_);
-            if (!_)
-              return _.viewportWidth
-                ? _.viewportWidth.value >= _._
-                  ? "lg"
-                  : _.viewportWidth.value >= _._
-                    ? "md"
-                    : _.viewportWidth.value >= _._
-                      ? "sm"
-                      : "initial"
-                : "lg";
-            return _ ? "lg" : _ ? "md" : _ ? "sm" : "initial";
-          })(_),
-          { _: _, _: _, _: _ } = _,
-          _ = (0, _.useMemo)(
-            () => ({
-              _: _,
-              _: _,
-              _: _,
-              _: _,
-            }),
-            [_, _, _, _],
-          );
-        return (0, _.jsx)(_.Provider, {
-          value: _,
-          children: _,
-        });
-      }
-      function _(_) {
-        const { formFactor: _, children: __webpack_require__ } = _,
-          _ = (0, _.useContext)(_),
-          _ = (0, _.useMemo)(
-            () => ({
-              ..._,
-              _: _ ?? _._,
-            }),
-            [_, _],
-          );
-        return _
-          ? (0, _.jsx)(_.Provider, {
-              value: _,
-              children: __webpack_require__,
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: __webpack_require__,
-            });
-      }
-      ["initial", "sm", "md", "lg"].reduce((_, _, _) => ((_[_] = _), _), {});
       const _ = (0, _.createContext)({}),
         _ = (0, _.createContext)(() => {});
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)({});
+        const [_, _] = (0, _.useState)({});
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: (0, _.jsx)(_.Provider, {
-            value: __webpack_require__,
+            value: _,
             children: _.children,
           }),
         });
@@ -32513,40 +31436,11 @@
       function _() {
         return (0, _.useContext)(_);
       }
-      function _(_) {
-        const {
-            accentColor: _,
-            dullColor: __webpack_require__,
-            bodyTextColor: _,
-            children: _,
-            breakpoints: _,
-          } = _,
-          _ = (0, _.jsx)("div", {
-            "data-accent-color": _,
-            "data-dull-color": __webpack_require__,
-            "data-body-text-color": _,
-            style: {
-              display: "contents",
-            },
-            children: (0, _.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: _,
-            }),
-          });
-        return _
-          ? (0, _.jsx)(_, {
-              breakpoints: _,
-              children: _,
-            })
-          : _;
-      }
+      var _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
           defaultTextSize: _,
-          accentColor: __webpack_require__ = "blue",
+          accentColor: _ = "blue",
           dullColor: _ = "greyneutral",
           bodyTextColor: _ = "text-light",
           breakpoints: _,
@@ -32562,14 +31456,14 @@
               "--default-letter-spacing": `var(--letter-spacing-${_})`,
             }),
           (0, _.jsx)(_, {
-            children: (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
               breakpoints: _,
               children: (0, _.jsx)(_, {
                 children: (0, _.jsx)("div", {
                   className: _()(_.Root, "noOpinionatedGlobalStyles"),
                   style: _,
-                  children: (0, _.jsxs)(_, {
-                    accentColor: __webpack_require__,
+                  children: (0, _.jsxs)(_._, {
+                    accentColor: _,
                     dullColor: _,
                     bodyTextColor: _,
                     children: [_, !1],
@@ -32582,9 +31476,9 @@
       });
       function _(_) {
         const { children: _ } = _,
-          { formFactorOverride: __webpack_require__ } = _();
-        return (0, _.jsx)(_, {
-          formFactor: __webpack_require__,
+          { formFactorOverride: _ } = _();
+        return (0, _.jsx)(_._, {
+          formFactor: _,
           children: _,
         });
       }
@@ -32593,7 +31487,14 @@
             ._("chunkid")
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
-        _ = _.Fragment,
+        _ = _.lazy(async () => ({
+          default: (
+            await Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+          ).GlobalFooter,
+        })),
         _ = (_) =>
           (0, _.jsx)(_._, {
             basename: _(),
@@ -32654,10 +31555,8 @@
                               (0, _.jsx)(_, {
                                 config: {
                                   "faqs-root": () => {
-                                    const {
-                                        faqid: _,
-                                        languageCode: __webpack_require__,
-                                      } = _.match.params,
+                                    const { faqid: _, languageCode: _ } =
+                                        _.match.params,
                                       _ = (function (_) {
                                         const _ = _?.replace(/-/g, "");
                                         return 16 == _?.length && _.test(_)
@@ -32799,6 +31698,170 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            accentColor: _,
+            dullColor: _,
+            bodyTextColor: _,
+            children: _,
+            breakpoints: _,
+          } = _,
+          _ = {
+            display: "contents",
+          };
+        let _, _, _;
+        "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
+          "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
+          "string" == typeof _
+            ? (_ = _)
+            : _ &&
+              (function (_, _) {
+                for (const [_, _] of Object.entries(_))
+                  _[`--color-text-body-${_}`] = _;
+              })(_, _);
+        const _ = (0, _.jsx)("div", {
+          "data-accent-color": _,
+          "data-dull-color": _,
+          "data-body-text-color": _,
+          style: _,
+          children: (0, _.jsx)("div", {
+            style: {
+              display: "contents",
+              color: "var(--color-text-body-body)",
+            },
+            children: _,
+          }),
+        });
+        return _
+          ? (0, _.jsx)(_._, {
+              breakpoints: _,
+              children: _,
+            })
+          : _;
+      }
+      function _(_, _, _) {
+        for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = "function" == typeof matchMedia ? matchMedia : _,
+          _ = (0, _.useMemo)(() => _(_), [_, _]),
+          [_, _] = (0, _.useState)(!!_ && _.matches);
+        return (
+          (0, _.useEffect)(() => {
+            if (!_) return () => {};
+            function _(_) {
+              _(_.matches);
+            }
+            return (
+              _(_.matches),
+              __webpack_require__.addEventListener("change", _),
+              () => __webpack_require__.removeEventListener("change", _)
+            );
+          }, [_]),
+          _
+        );
+      }
+      function _() {
+        return null;
+      }
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Header = 1)] = "Header"),
+          (_[(_.Fallback = 2)] = "Fallback");
+      })(_ || (_ = {}));
+      const _ = (0, _.createContext)({});
+      const _ = ["initial", "sm", "md", "lg"],
+        _ = (0, _.createContext)({
+          _: 768,
+          _: 940,
+          _: 1240,
+          _: "lg",
+        });
+      function _(_) {
+        const { children: _, breakpoints: _ = {} } = _,
+          _ = (0, _.useContext)(_),
+          _ = {
+            _: _._ ?? _._,
+            _: _._ ?? _._,
+            _: _._ ?? _._,
+          },
+          _ = (function (_) {
+            const _ = _(`(min-width: ${_._}px)`),
+              _ = _(`(min-width: ${_._}px)`),
+              _ = _(`(min-width: ${_._}px)`),
+              [_, _] = (0, _.useState)(!0);
+            (0, _.useEffect)(() => _(!0), []);
+            const _ = (0, _.useContext)(_);
+            if (!_)
+              return _.viewportWidth
+                ? _.viewportWidth.value >= _._
+                  ? "lg"
+                  : _.viewportWidth.value >= _._
+                    ? "md"
+                    : _.viewportWidth.value >= _._
+                      ? "sm"
+                      : "initial"
+                : "lg";
+            return _ ? "lg" : _ ? "md" : _ ? "sm" : "initial";
+          })(_),
+          { _: _, _: _, _: _ } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+            }),
+            [_, _, _, _],
+          );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { formFactor: _, children: _ } = _,
+          _ = (0, _.useContext)(_),
+          _ = (0, _.useMemo)(
+            () => ({
+              ..._,
+              _: _ ?? _._,
+            }),
+            [_, _],
+          );
+        return _
+          ? (0, _.jsx)(_.Provider, {
+              value: _,
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
+      }
+      function _() {
+        return (0, _.useContext)(_)._;
+      }
+      _.reduce((_, _, _) => ((_[_] = _), _), {});
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -32826,6 +31889,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      var _;
       function _(_) {
         return 3 == _ || 6 == _;
       }
@@ -32842,7 +31906,57 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
+      }),
+        (function (_) {
+          (_[(_.kPFIFlag_MicroTransactionFile = 1)] =
+            "kPFIFlag_MicroTransactionFile"),
+            (_[(_.kPFIFlag_Incompatible = 2)] = "kPFIFlag_Incompatible"),
+            (_[(_.kPFIFlag_RevenueSplitsFinalized = 4)] =
+              "kPFIFlag_RevenueSplitsFinalized"),
+            (_[(_.kPFIFlag_AcceptedForUse = 8)] = "kPFIFlag_AcceptedForUse"),
+            (_[(_.kPFIFlag_CollectionShowSubscribeAll = 16)] =
+              "kPFIFlag_CollectionShowSubscribeAll"),
+            (_[(_.kPFIFlag_ItemInProgress = 32)] = "kPFIFlag_ItemInProgress"),
+            (_[(_.kPFIFlag_GamePlayable = 64)] = "kPFIFlag_GamePlayable"),
+            (_[(_.kPFIFlag_AwaitingModeration = 128)] =
+              "kPFIFlag_AwaitingModeration"),
+            (_[(_.kPFIFlag_PendingApproval = 256)] =
+              "kPFIFlag_PendingApproval"),
+            (_[(_.kPFIFlag_FixedStats = 1536)] = "kPFIFlag_FixedStats"),
+            (_[(_.kPFIFlag_LatestWorkshopTermsNotAccepted = 2048)] =
+              "kPFIFlag_LatestWorkshopTermsNotAccepted"),
+            (_[(_.kPFIFlag_DepotContent = 4096)] = "kPFIFlag_DepotContent"),
+            (_[(_.kPFIFlag_CollectionAllOwnerItems = 8192)] =
+              "kPFIFlag_CollectionAllOwnerItems"),
+            (_[(_.kPFIFlag_CollectionIsASet = 16384)] =
+              "kPFIFlag_CollectionIsASet"),
+            (_[(_.kPFIFlag_Subscribable = 32768)] = "kPFIFlag_Subscribable"),
+            (_[(_.kPFIFlag_ForceUnbanned = 65536)] = "kPFIFlag_ForceUnbanned"),
+            (_[(_.kPFIFlag_ForceInappropriate = 131072)] =
+              "kPFIFlag_ForceInappropriate"),
+            (_[(_.kPFIFlag_ForceAppropriate = 262144)] =
+              "kPFIFlag_ForceAppropriate"),
+            (_[(_.kPFIFlag_RequireVerification = 524288)] =
+              "kPFIFlag_RequireVerification"),
+            (_[(_.kPFIFlag_HasApprovedSteamChinaContent = 1048576)] =
+              "kPFIFlag_HasApprovedSteamChinaContent"),
+            (_[(_.kPFIFlag_HasApprovedContent = 2097152)] =
+              "kPFIFlag_HasApprovedContent"),
+            (_[(_.kPFIFlag_IgnoreTextContentCheckFlag = 4194304)] =
+              "kPFIFlag_IgnoreTextContentCheckFlag"),
+            (_[(_.kPFIFlag_DisableComments = 8388608)] =
+              "kPFIFlag_DisableComments"),
+            (_[(_.kPFIFlag_NeedsContentCheck = 16777216)] =
+              "kPFIFlag_NeedsContentCheck"),
+            (_[(_.kPFIFlag_SteamChinaCreated = 33554432)] =
+              "kPFIFlag_SteamChinaCreated"),
+            (_[(_.kPFIFlag_RejectedLatestContent = 67108864)] =
+              "kPFIFlag_RejectedLatestContent"),
+            (_[(_.kPFIFlag_ManagedContentDescriptors = 134217728)] =
+              "kPFIFlag_ManagedContentDescriptors"),
+            (_[(_.kPFIFlag_HasAuthorSnapshots = 268435456)] =
+              "kPFIFlag_HasAuthorSnapshots");
+        })(_ || (_ = {}));
       const _ = 1,
         _ = 4;
       const _ = "18446744073709551615";
@@ -33311,6 +32425,101 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (_.preferenceControls.isTechnicallyNecessary) return !0;
+        const _ = (0, _._)();
+        if (!_) return !1;
+        switch (_.preference_state) {
+          case 1:
+          case 0:
+            return !0;
+          case 2:
+          case 4:
+            return !1;
+        }
+        return (
+          "IsAllowed" in _.preferenceControls &&
+          _.preferenceControls.IsAllowed(_)
+        );
+      }
+      const _ = {
+          name: "cookieSettings",
+          options: {
+            secure: !0,
+            httpOnly: !1,
+            path: "/",
+            sameSite: "none",
+            maxAge: 31536e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        },
+        _ = {
+          name: "strResponsiveViewPrefs",
+          options: {
+            maxAge: 31536e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (!document.cookie) return;
+        const _ = document.cookie.match("(^|; )" + _.name + "=([^;]*)");
+        return _ && _[2] ? decodeURIComponent(_[2]) : void 0;
+      }
+      function _(_) {
+        return (function (_, _) {
+          if (!document.cookie) return;
+          if (!(0, _._)(_)) return;
+          const _ = _.options?.path ?? "/";
+          let _ = "";
+          _.options?.expires
+            ? (_ += ";expires=" + _.options.expires.toUTCString())
+            : _.options?.maxAge &&
+              (_ += ";max-age=" + Math.floor(_.options.maxAge / 1e3)),
+            _.options?.secure && (_ += ";secure"),
+            (document.cookie =
+              encodeURIComponent(_.name) +
+              "=" +
+              encodeURIComponent(_) +
+              _ +
+              ";path=" +
+              _);
+        })(
+          {
+            ..._,
+            options: {
+              ..._.options,
+              expires: new Date(0),
+            },
+          },
+          "",
+        );
+      }
+      function _() {
+        return window.SSR?.renderContext?.cookiePrefs;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -33332,10 +32541,10 @@
           bDOMElementFocusByDefault: !1,
         }),
         _ = _.forwardRef(function (_, _) {
-          const { href: __webpack_require__ = "#", ..._ } = _;
+          const { href: _ = "#", ..._ } = _;
           return (0, _.jsx)(_, {
             ref: _,
-            href: __webpack_require__,
+            href: _,
             ..._,
           });
         }),
@@ -33354,6 +32563,12 @@
         (0, _._)("form", {
           bFocusableByDefault: !1,
         });
+      function _(_, _, _ = !1) {
+        _.useEffect(() => {
+          const _ = _.current;
+          _ && (_ ? _.Activate(_) : _.Deactivate());
+        }, [_, _, _]);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -33376,6 +32591,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33388,7 +32604,7 @@
         _ = __webpack_require__("chunkid");
       _.forwardRef(function (_, _) {
         const {
-            navID: __webpack_require__,
+            navID: _,
             onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
@@ -33406,7 +32622,7 @@
           { elemProps: _, navOptions: _, gamepadEvents: _ } = (0, _._)(_);
         return (0, _._)()
           ? (0, _.jsx)(_, {
-              navID: __webpack_require__,
+              navID: _,
               onActivated: _,
               onDeactivated: _,
               navTreeRef: _,
@@ -33434,7 +32650,7 @@
       function _(_) {
         const {
             navID: _,
-            onActivated: __webpack_require__,
+            onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
             enabled: _ = !0,
@@ -33453,7 +32669,7 @@
           { refDiv: _, tree: _ } = (function (_) {
             const {
                 navID: _,
-                parentEmbeddedNavTree: __webpack_require__,
+                parentEmbeddedNavTree: _,
                 disabledRoot: _,
                 enabled: _,
                 navTreeRef: _,
@@ -33464,15 +32680,10 @@
               _ = (0, _._)() || _.GetDefaultContext(),
               _ = _.useContext(_._),
               [_] = _.useState(() =>
-                _.NewGamepadNavigationTree(
-                  _,
-                  _,
-                  __webpack_require__ ?? _?.Tree,
-                  {
-                    ..._,
-                    bIsEmbeddedInLegacyTree: !!__webpack_require__,
-                  },
-                ),
+                _.NewGamepadNavigationTree(_, _, _ ?? _?.Tree, {
+                  ..._,
+                  bIsEmbeddedInLegacyTree: !!_,
+                }),
               );
             let _ = _.useRef(null);
             return (
@@ -33511,7 +32722,7 @@
             modal: _,
             historyMode: _,
           });
-        (0, _._)(_.OnActivateCallbacks, __webpack_require__),
+        (0, _._)(_.OnActivateCallbacks, _),
           (0, _._)(_.OnDeactivateCallbacks, _),
           (0, _._)(_, _, _),
           _.useLayoutEffect(() => {
@@ -33542,11 +32753,7 @@
         bIsMounted: !1,
       });
       function _(_) {
-        const {
-            tree: _,
-            disableFocusClasses: __webpack_require__ = !1,
-            children: _,
-          } = _,
+        const { tree: _, disableFocusClasses: _ = !1, children: _ } = _,
           [_, _] = _.useState(_?.BIsActive() || !1),
           [_, _] = _.useState(_?.BIsActiveWithinContext() || !1),
           _ = (0, _._)(_?.SubscribableIsMounted) ?? !1;
@@ -33565,10 +32772,10 @@
           () => ({
             bActiveTree: _,
             bActiveTreeWithinContext: _,
-            bDisableFocusClasses: __webpack_require__,
+            bDisableFocusClasses: _,
             bIsMounted: _,
           }),
-          [_, __webpack_require__, _, _],
+          [_, _, _, _],
         );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -33587,6 +32794,7 @@
       });
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = _.createContext({
         focusNavWindow: null,
         bSupportsFocus: !0,
@@ -33601,6 +32809,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -33635,7 +32844,7 @@
         };
       });
       function _(_, _) {
-        const { onTextEntered: __webpack_require__, ..._ } = _,
+        const { onTextEntered: _, ..._ } = _,
           _ = _.useRef(null),
           _ = _.useRef({});
         Object.assign(_.current, {
@@ -33712,7 +32921,7 @@
       const _ = _.createContext(null),
         _ = _.createContext(_._);
       function _(_) {
-        const { navRef: _, ...__webpack_require__ } = _,
+        const { navRef: _, ..._ } = _,
           _ = _.useRef(null),
           _ = (0, _.useContext)(_),
           _ = (0, _.useContext)(_),
@@ -33727,7 +32936,7 @@
           })(_, _);
         return (
           _.useLayoutEffect(() => {
-            _ && _.SetProperties(__webpack_require__);
+            _ && _.SetProperties(_);
           }),
           _.useLayoutEffect(() => {
             if (!_) return;
@@ -33749,7 +32958,7 @@
       function _(_) {
         const {
             onButtonDown: _,
-            onButtonUp: __webpack_require__,
+            onButtonUp: _,
             onOKButton: _,
             onCancelButton: _,
             onSecondaryButton: _,
@@ -33768,8 +32977,7 @@
           } = _,
           _ = {};
         void 0 !== _ && (_.onButtonDown = _),
-          void 0 !== __webpack_require__ &&
-            (_.onButtonUp = __webpack_require__),
+          void 0 !== _ && (_.onButtonUp = _),
           void 0 !== _ && (_.onOKButton = _),
           void 0 !== _ && (_.onCancelButton = _),
           void 0 !== _ && (_.onSecondaryButton = _),
@@ -33794,7 +33002,7 @@
       function _(_) {
         const {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -33821,7 +33029,7 @@
           elemProps: _,
           navOptions: {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -33851,7 +33059,7 @@
       function _(_) {
         return function (_) {
           const {
-              focusClassName: __webpack_require__,
+              focusClassName: _,
               focusWithinClassName: _,
               bFocusableByDefault: _,
               className: _,
@@ -33876,7 +33084,7 @@
             _,
             {
               ..._,
-              className: _()(_, _ && _ && __webpack_require__, _ && _ && _),
+              className: _()(_, _ && _ && _, _ && _ && _),
               tabIndex: _ ? -1 : _,
               ref: _,
             },
@@ -34010,6 +33218,228 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("FocusNavigation").Debug;
+      function _(_) {
+        const { children: _, disableFocusRing: _, ..._ } = _,
+          [_, _] = _.useState({
+            bFocusWithin: !1,
+            navTarget: null,
+            prevTarget: null,
+          }),
+          _ = _.useRef(null),
+          _ = _.useMemo(
+            () => ({
+              OnBlur: (_, _, _) => {
+                _({
+                  bFocusWithin: !1,
+                  navTarget: null,
+                  prevTarget: null,
+                });
+              },
+              OnFocus: (_, _, _) => {
+                _({
+                  bFocusWithin: !0,
+                  navTarget: _,
+                  prevTarget: null,
+                });
+              },
+              OnFocusChange: (_, _, _) => {
+                _({
+                  bFocusWithin: !0,
+                  navTarget: _,
+                  prevTarget: _,
+                });
+              },
+              OnForceMeasureFocusRing: () => {
+                _.current?.MeasureElementAndUpdate();
+              },
+            }),
+            [_],
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsx)(_, {
+                ..._,
+                ..._,
+                refMeasure: _,
+              }),
+            (0, _.jsx)(_._.Provider, {
+              value: _,
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            rootClassName: _,
+            className: _,
+            bFocusWithin: _,
+            navTarget: _,
+            refMeasure: _,
+          } = _,
+          [_, _] = _.useState(null),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(!1);
+        return _ || _
+          ? (0, _.jsx)("div", {
+              className: _()(_().FocusRingRoot, _),
+              ref: _,
+              children: (0, _.jsx)(_, {
+                refMeasure: _,
+                className: _()(_, _ && _().DebugFocusRing),
+                bFocusWithin: _ && (_ || _),
+                navTarget: _,
+                elContainer: _,
+                bDebug: _,
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            className: _,
+            bFocusWithin: _,
+            navTarget: _,
+            elContainer: _,
+            bDebug: _,
+            refMeasure: _,
+          } = _,
+          [_, _] = _.useState(null),
+          [_, _] = _.useReducer((_) => _ + 1, 0),
+          [_, _] = _.useReducer((_) => _ + 1, 0);
+        (0, _._)(
+          _,
+          _.useMemo(
+            () => ({
+              MeasureElementAndUpdate: _,
+            }),
+            [],
+          ),
+        );
+        const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
+          _ = _ && !_,
+          _ = (function (_, _) {
+            const [_, _] = _.useState(!1);
+            return (
+              (0, _.useEffect)(() => {
+                if (_ && _) {
+                  let _ = _.GetBoundingRect(),
+                    _ = _.Element;
+                  const _ = _.ownerDocument.defaultView,
+                    _ = (_) =>
+                      "none" == _.getComputedStyle(_).display ||
+                      (0 == _?.width && 0 == _.height && 0 == _._ && 0 == _._);
+                  for (; _(_) && _?.parentElement; )
+                    (_ = _.parentElement),
+                      (_ = __webpack_require__.getBoundingClientRect());
+                  let _ = _.Element != _;
+                  _(
+                    (_) => (
+                      _ &&
+                        _ != _ &&
+                        _(
+                          "Focused on hidden item: ",
+                          _.Element,
+                          ". Closest visible ancestor: ",
+                          _,
+                        ),
+                      _
+                    ),
+                  );
+                }
+              }, [_, _]),
+              _
+            );
+          })(_, _),
+          _ = _.useCallback(() => {
+            if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
+            let _ = _.GetBoundingRect();
+            const _ = _.getBoundingClientRect(),
+              _ = {
+                left: _._ - _._,
+                top: _._ - _._,
+                height: _.height,
+                width: _.width,
+              };
+            _((_) =>
+              _ &&
+              _.left == _.left &&
+              _.top == _.top &&
+              _.height == _.height &&
+              _.width == _.width
+                ? _
+                : _,
+            );
+          }, [_, _, _]);
+        _.useLayoutEffect(() => _(), [_]),
+          _.useLayoutEffect(() => {
+            _();
+          }, [_]);
+        let _ = _;
+        return (
+          _ && _ && (_.BWantsFocusRing() || (_ = !1)),
+          _.useEffect(() => {
+            if (!_) return;
+            const _ = performance.now();
+            let _;
+            const _ = () => {
+              _(),
+                performance.now() - _ <= 500 && (_ = requestAnimationFrame(_));
+            };
+            return __webpack_require__(), () => cancelAnimationFrame(_);
+          }, [_, _, _, _]),
+          _ && _
+            ? (0, _.createElement)(_, {
+                ..._,
+                key: _,
+                className: _()(_, _ && _().FocusRingOnHiddenItem),
+                target: _,
+              })
+            : null
+        );
+      }
+      function _(_) {
+        const {
+            className: _,
+            left: _,
+            top: _,
+            height: _,
+            width: _,
+            target: _,
+          } = _,
+          _ = {
+            left: (_ ?? 0) - 0 + "px",
+            top: (_ ?? 0) - 0 + "px",
+            height: _ + "px",
+            width: _ + "px",
+          };
+        return (0, _.jsx)("div", {
+          className: _()(_().FocusRing, _),
+          style: _,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       __webpack_require__("chunkid");
@@ -34111,7 +33541,7 @@
       function _(_) {
         const {
             "flow-children": _,
-            onActivate: __webpack_require__,
+            onActivate: _,
             onCancel: _,
             focusClassName: _,
             focusWithinClassName: _,
@@ -34121,9 +33551,8 @@
         let _ = {};
         const _ = (0, _._)(_);
         _ != _._.NONE && (_.layout = _),
-          __webpack_require__ &&
-            ((_.onClick = _.onClick || __webpack_require__),
-            (_.onOKButton = _.onOKButton || __webpack_require__)),
+          _ &&
+            ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
           _.onOKButton &&
             void 0 === _.focusable &&
             void 0 === _.focusableIfEmpty &&
@@ -34140,9 +33569,7 @@
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
-          _.focusable &&
-            (__webpack_require__ || _.onOKButton) &&
-            (_.role ??= "button");
+          _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
         const _ = (0, _.useContext)(_).Component;
         return (0, _.jsx)(_._.Provider, {
           value: _,
@@ -34235,7 +33662,7 @@
       function _(_) {
         const {
             onOKActionDescription: _,
-            onCancelActionDescription: __webpack_require__,
+            onCancelActionDescription: _,
             onSecondaryActionDescription: _,
             onOptionsActionDescription: _,
             onMenuActionDescription: _,
@@ -34246,8 +33673,7 @@
           };
         return (
           void 0 !== _ && (_[_._._] = _),
-          void 0 !== __webpack_require__ &&
-            (_[_._.CANCEL] = __webpack_require__),
+          void 0 !== _ && (_[_._.CANCEL] = _),
           void 0 !== _ && (_[_._.SECONDARY] = _),
           void 0 !== _ && (_[_._.OPTIONS] = _),
           void 0 !== _ && (_[_._.START] = _),
@@ -34326,25 +33752,19 @@
         constructor(_) {
           this.m_root = _;
         }
-        static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavState(_, _ = !0, _ = !0) {
           return {
-            root: _.SerializeNavNode(_, _, __webpack_require__),
+            root: _.SerializeNavNode(_, _, _),
             bHadFocus: _.BFocusWithin() && _.Tree.BIsActiveWithinContext(),
           };
         }
-        static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavNode(_, _ = !0, _ = !0) {
           let _;
           const [_, _] = _.GetChildren();
           _.length &&
             -1 != _ &&
             _ &&
-            (_ = _.map((_, _) =>
-              _.SerializeNavNode(
-                _,
-                _ == _ || __webpack_require__,
-                __webpack_require__,
-              ),
-            ));
+            (_ = _.map((_, _) => _.SerializeNavNode(_, _ == _ || _, _)));
           const _ = {
             rgChildren: _,
           };
@@ -34354,15 +33774,14 @@
             _
           );
         }
-        static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavState(_, _, _ = 0) {
           const { root: _, bHadFocus: _ } = _;
           _.Tree.Controller.RestoreHistoryTransaction(() => {
             _.RestoreSerializedNavNode(_, _),
-              (1 == __webpack_require__ || (0 == __webpack_require__ && _)) &&
-                _.BTakeFocus(_._.APPLICATION);
+              (1 == _ || (0 == _ && _)) && _.BTakeFocus(_._.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavNode(_, _, _ = 0) {
           const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
@@ -34371,7 +33790,7 @@
                 let _ = "";
                 for (let _ = 0; _ < _; _++) _ += "*";
                 return (_ += " "), _;
-              })(__webpack_require__)}`
+              })(_)}`
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
@@ -34486,8 +33905,8 @@
           var _;
         }
         RestoreFocusSnapshot(_, _ = 0) {
-          return (function (_, _, __webpack_require__ = 0) {
-            return _.RestoreSerializedNavState(_, _, __webpack_require__);
+          return (function (_, _, _ = 0) {
+            return _.RestoreSerializedNavState(_, _, _);
           })(this.m_node, _, _);
         }
         NavTree() {
@@ -35320,16 +34739,15 @@
         }
         SetProperties(_) {
           const _ =
-            ((__webpack_require__ = this.m_Properties?.actionDescriptionMap),
+            ((_ = this.m_Properties?.actionDescriptionMap),
             (_ = _?.actionDescriptionMap),
-            !(null == __webpack_require__ || null == _
-              ? __webpack_require__ === _
-              : "object" == typeof __webpack_require__ &&
+            !(null == _ || null == _
+              ? _ === _
+              : "object" == typeof _ &&
                 "object" == typeof _ &&
-                Object.keys(__webpack_require__).length ===
-                  Object.keys(_).length &&
-                Object.keys(__webpack_require__).every(
-                  (_) => _.hasOwnProperty(_) && __webpack_require__[_] === _[_],
+                Object.keys(_).length === Object.keys(_).length &&
+                Object.keys(_).every(
+                  (_) => _.hasOwnProperty(_) && _[_] === _[_],
                 )));
           var _, _;
           const _ = this.m_Properties?.focusableIfEmpty,
@@ -35613,16 +35031,15 @@
           const {
             focusable: _,
             focusableIfEmpty: _,
-            childFocusDisabled: __webpack_require__,
+            childFocusDisabled: _,
             fnCanTakeFocus: _,
           } = this.m_Properties;
           return this.m_bMounted
             ? _ && !_(this)
               ? "none"
-              : _ ||
-                  (_ && (__webpack_require__ || 0 == this.m_rgChildren.length))
+              : _ || (_ && (_ || 0 == this.m_rgChildren.length))
                 ? "self"
-                : !__webpack_require__ && this.m_rgChildren.length
+                : !_ && this.m_rgChildren.length
                   ? "children"
                   : "none"
             : "none";
@@ -35770,7 +35187,7 @@
           if (this.BTryInternalNavigation(_, _.detail.is_repeat ?? !1))
             return !0;
           const {
-            onMoveUp: __webpack_require__,
+            onMoveUp: _,
             onMoveRight: _,
             onMoveDown: _,
             onMoveLeft: _,
@@ -35778,7 +35195,7 @@
           let _ = !1;
           switch (_) {
             case _._.DIR_UP:
-              __webpack_require__ && (_ = __webpack_require__(_.detail, this));
+              _ && (_ = __webpack_require__(_.detail, this));
               break;
             case _._.DIR_RIGHT:
               _ && (_ = _(_.detail, this));
@@ -36302,15 +35719,15 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         console.assert
-          ? 0 == __webpack_require__.length
+          ? 0 == _.length
             ? console.assert(!!_, _)
-            : console.assert(!!_, _, ...__webpack_require__)
-          : _ || console.warn(_, ...__webpack_require__);
+            : console.assert(!!_, _, ..._)
+          : _ || console.warn(_, ..._);
       }
-      function _(_, _, ...__webpack_require__) {
-        _(!1, _, ...__webpack_require__);
+      function _(_, _, ..._) {
+        _(!1, _, ..._);
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -36406,6 +35823,15 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      function _() {
+        return !1;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       const _ =
@@ -36414,6 +35840,97 @@
       function _(_) {
         return _.test(_) ? _ : "https://" + _;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = new Set([
+        "sc_schinese",
+        "schinese",
+        "tchinese",
+        "japanese",
+        "koreana",
+        "thai",
+        "arabic",
+        "bulgarian",
+        "czech",
+        "danish",
+        "german",
+        "english",
+        "spanish",
+        "latam",
+        "greek",
+        "french",
+        "italian",
+        "indonesian",
+        "hungarian",
+        "dutch",
+        "norwegian",
+        "polish",
+        "portuguese",
+        "brazilian",
+        "romanian",
+        "russian",
+        "finnish",
+        "swedish",
+        "turkish",
+        "vietnamese",
+        "ukrainian",
+      ]);
+      function _(_) {
+        return _.has(_);
+      }
+      const _ = new Map([
+        ["en", "english"],
+        ["de", "german"],
+        ["fr", "french"],
+        ["it", "italian"],
+        ["ko", "koreana"],
+        ["es-419", "latam"],
+        ["es", "spanish"],
+        ["zh", "schinese"],
+        ["zh-cn", "schinese"],
+        ["zh-tw", "tchinese"],
+        ["ru", "russian"],
+        ["ar", "arabic"],
+        ["th", "thai"],
+        ["ja", "japanese"],
+        ["pt-br", "brazilian"],
+        ["pt", "portuguese"],
+        ["pl", "polish"],
+        ["da", "danish"],
+        ["nl", "dutch"],
+        ["fi", "finnish"],
+        ["nb", "norwegian"],
+        ["no", "norwegian"],
+        ["sv", "swedish"],
+        ["hu", "hungarian"],
+        ["cs", "czech"],
+        ["ro", "romanian"],
+        ["tr", "turkish"],
+        ["bg", "bulgarian"],
+        ["el", "greek"],
+        ["uk", "ukrainian"],
+        ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
+        ["id", "indonesian"],
+      ]);
+      const _ = new Map();
+      for (const [_, _] of _.entries()) _.set(_, _);
+      function _(_) {
+        if ("english" !== _)
+          return "sc_schinese" === _ ? "schinese" : "english";
+      }
+      function _(_) {
+        return "arabic" === _;
+      }
+      _.set("sc_schinese", _.get("schinese")),
+        _.set("korean", _.get("koreana"));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -36615,34 +36132,30 @@
         _ = _.BinaryWriter.prototype;
       function _(_) {
         const _ = {},
-          { fields: __webpack_require__ } = _;
-        for (const _ in __webpack_require__) {
-          const _ = __webpack_require__[_];
+          { fields: _ } = _;
+        for (const _ in _) {
+          const _ = _[_];
           _[_._] = _;
         }
         return _;
       }
       function _(_, _) {
-        const { proto: __webpack_require__, fields: _ } = _,
-          _ = new __webpack_require__();
+        const { proto: _, fields: _ } = _,
+          _ = new _();
         if (null == _) return _;
         for (const _ in _) {
-          const { _: __webpack_require__, _: _, _: _, _: _, _: _ } = _[_];
+          const { _: _, _: _, _: _, _: _, _: _ } = _[_];
           if (!Object.prototype.hasOwnProperty.call(_, _)) continue;
           const _ = _[_];
           _
             ? _
               ? _.Message.setRepeatedWrapperField(
                   _,
-                  __webpack_require__,
+                  _,
                   Array.isArray(_) ? _.map((_) => _.fromObject(_)) : [],
                 )
-              : _.Message.setWrapperField(
-                  _,
-                  __webpack_require__,
-                  _.fromObject(_),
-                )
-            : _.Message.setField(_, __webpack_require__, _);
+              : _.Message.setWrapperField(_, _, _.fromObject(_))
+            : _.Message.setField(_, _, _);
         }
         return _;
       }
@@ -36763,13 +36276,8 @@
         };
       }
       function _(_, _) {
-        return function (__webpack_require__ = !0) {
-          return _.Message.getWrapperField(
-            this,
-            _,
-            _,
-            __webpack_require__ ? 1 : 0,
-          );
+        return function (_ = !0) {
+          return _.Message.getWrapperField(this, _, _, _ ? 1 : 0);
         };
       }
       function _(_, _) {
@@ -38161,6 +37669,16 @@
                   },
                   vram_size: {
                     _: 17,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  screen_width: {
+                    _: 18,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  screen_height: {
+                    _: 19,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -48581,6 +48099,11 @@
                     _: !0,
                     _: !0,
                   },
+                  schema_version: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -48670,6 +48193,21 @@
                     _: 7,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  internal_key: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  min_progress: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  max_progress: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -53805,7 +53343,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 42, 44, 52, 71],
+              [11, 12, 20, 21, 25, 41, 52, 71, 74],
               null,
             );
         }
@@ -53961,21 +53499,9 @@
                     _: !0,
                     _: !0,
                   },
-                  accessories: {
-                    _: 42,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
                   self_purchase_option: {
                     _: 43,
                     _: _,
-                  },
-                  invalid_purchase_options: {
-                    _: 44,
-                    _: _,
-                    _: !0,
-                    _: !0,
                   },
                   screenshots: {
                     _: 50,
@@ -54015,7 +53541,7 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  full_description: {
+                  full_description_bbcode: {
                     _: 58,
                     _: _._.readString,
                     _: _._.writeString,
@@ -54039,10 +53565,16 @@
                     _: !0,
                     _: !0,
                   },
-                  purchase_description: {
+                  purchase_description_bbcode: {
                     _: 72,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  package_groups: {
+                    _: 74,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -54088,8 +53620,78 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  label: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  show_above_purchase: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Demo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.parent_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3], null);
+            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5], null);
         }
         static sm_m;
         static sm_mbf;
@@ -54119,6 +53721,18 @@
                     _: _._.readUint32,
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
+                  },
+                  demos: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  standalone_demos: {
+                    _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -54692,13 +54306,28 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  main_capsule_2x: {
+                    _: 18,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                   small_capsule: {
                     _: 3,
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  small_capsule_2x: {
+                    _: 19,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                   header: {
                     _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  header_2x: {
+                    _: 20,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -54759,6 +54388,11 @@
                   },
                   raw_page_background: {
                     _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  edition_comparison: {
+                    _: 17,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -55228,6 +54862,33 @@
                     _: !1,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  package_group: {
+                    _: 49,
+                    _: "default",
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  is_edition: {
+                    _: 50,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  free_to_keep_base_package: {
+                    _: 51,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  price_cannot_be_displayed_as_discount: {
+                    _: 52,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  price_to_base_discount_on: {
+                    _: 53,
+                    _: _._.readInt64String,
+                    _: _._.writeInt64String,
                   },
                 },
               }),
@@ -56075,6 +55736,86 @@
         }
         getClassName() {
           return "StoreItem_Link";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  heading: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  display_type: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  dropdown_title: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dropdown_description_bbcode: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PackageGroup";
         }
       }
       class _ extends _.Message {
@@ -60088,7 +59829,7 @@
       function _(_, _) {
         return (
           (function (_, _) {
-            const [__webpack_require__, _] = _.useState(_);
+            const [_, _] = _.useState(_);
             return (
               _.useEffect(() => {
                 if (!_) {
@@ -60097,7 +59838,7 @@
                 }
                 _(!0);
               }, [_, _]),
-              __webpack_require__
+              _
             );
           })(_, _) || _
         );
@@ -60178,6 +59919,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -60185,8 +59927,8 @@
         return _;
       }
       const _ = window.Config ?? _._,
-        _ = window.UserConfig ?? _._;
-      window.Config || _._;
+        _ = window.UserConfig ?? _._,
+        _ = window.Config ? () => Promise.resolve() : _._;
       window.Config && Object.assign(_._, window.Config),
         window.UserConfig && Object.assign(_._, window.UserConfig);
     },
@@ -60229,7 +59971,7 @@
           return _;
         };
       function _(_) {
-        const { useStorage: _, children: __webpack_require__ } = _;
+        const { useStorage: _, children: _ } = _;
         let _, _;
         if ("useActiveCMInterface" in _) _ = _ = _.useActiveCMInterface;
         else {
@@ -60239,7 +59981,7 @@
                 _,
                 "neither useActiveCMInterface nor useActiveSteamInterface were provided",
               ),
-              __webpack_require__
+              _
             );
           _ = _.useActiveSteamInterface;
         }
@@ -60256,7 +59998,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       const _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
@@ -61018,8 +60760,8 @@
 }`);
       var _ = __webpack_require__("chunkid");
       class _ {
-        static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetSNRLinkParam(_, __webpack_require__),
+        static InstrumentLink(_, _, _ = null) {
+          const _ = _.GetSNRLinkParam(_, _),
             _ = _.GetCuratorClanIDParam(_);
           return _.AddNavParamToURL(_, _, _);
         }
@@ -61110,22 +60852,22 @@
       const _ = _.createContext({});
       _.createContext(void 0);
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = _(),
           _ = _.useMemo(
             () => ({
               ..._,
-              ...__webpack_require__,
+              ..._,
             }),
             [
               _,
-              __webpack_require__.domain,
-              __webpack_require__.controller,
-              __webpack_require__.method,
-              __webpack_require__.submethod,
-              __webpack_require__.feature,
-              __webpack_require__.depth,
-              __webpack_require__.curator_clanid,
+              _.domain,
+              _.controller,
+              _.method,
+              _.submethod,
+              _.feature,
+              _.depth,
+              _.curator_clanid,
             ],
           );
         return (0, _.jsx)(_.Provider, {
@@ -62000,8 +61742,8 @@
         }
         async MakeReady() {
           const _ = [];
-          for (const [_, __webpack_require__] of this.m_mapConnectionDetails)
-            _.push(this.ConnectToSite(__webpack_require__));
+          for (const [_, _] of this.m_mapConnectionDetails)
+            _.push(this.ConnectToSite(_));
           const _ = await Promise.all(_);
           (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
           for (const _ of _) if (1 != _.result) return _;
@@ -62011,9 +61753,8 @@
           };
         }
         GetConnectionDetails(_) {
-          for (const [_, __webpack_require__] of this.m_mapConnectionDetails)
-            if (__webpack_require__.connection === _)
-              return __webpack_require__;
+          for (const [_, _] of this.m_mapConnectionDetails)
+            if (_.connection === _) return _;
           return (
             _.Error("GetConnectionDetails: failed to identify connection"), null
           );
@@ -62021,8 +61762,8 @@
         DispatchTransportStatusUpdate() {
           if (!this.m_fnOnStatusEventHandler) return;
           let _ = !0;
-          for (const [_, __webpack_require__] of this.m_mapConnectionDetails)
-            __webpack_require__.connection.BCanSendMessages() || (_ = !1);
+          for (const [_, _] of this.m_mapConnectionDetails)
+            _.connection.BCanSendMessages() || (_ = !1);
           this.m_fnOnStatusEventHandler({
             bConnected: _,
           });
@@ -62556,8 +62297,8 @@
           if (!_ || "string" != typeof _) return null;
           const _ = _.split(".");
           if (3 !== _.length) return null;
-          const [__webpack_require__, _] = _,
-            _ = (0, _._)(__webpack_require__),
+          const [_, _] = _,
+            _ = (0, _._)(_),
             _ = (0, _._)(_);
           return _ && _
             ? {
@@ -62587,10 +62328,10 @@
         m_fnRequestNewAccessToken;
         m_refreshAccessTokenPromise;
         m_dtLastExpireCheck = 0;
-        constructor(_, _, __webpack_require__ = !1, _) {
+        constructor(_, _, _ = !1, _) {
           (this.m_strWebAPIBaseURL = _),
             (this.m_webApiAccessToken = _),
-            (this.m_bJsonMode = __webpack_require__),
+            (this.m_bJsonMode = _),
             (this.m_fnRequestNewAccessToken = _),
             (this.m_bJWTToken = null != _(_)),
             (this.m_ServiceTransport = {
@@ -62895,6 +62636,208 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            target: _,
+            visibilityObserver: _,
+            className: _,
+            style: _,
+            bEnablePointerEvents: _,
+            direction: _ = "right",
+            nBodyAlignment: _ = 0.5,
+            nBodyDistance: _ = 8,
+            nAllowOffscreenPx: _ = 10,
+            nMaxLateralMoveOnScreen: _,
+            onNoSpace: _,
+            bTopmost: _,
+            children: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(null),
+          [_, _] = _.useState(null),
+          _ = _.useCallback(() => {
+            let _ = _;
+            if (!_ || !_ || !_) return;
+            if (_ && _ && !_.visible) return;
+            let _ = _.ownerDocument.defaultView;
+            if (!_ || _.closed) return;
+            const _ = _.querySelector(".hover_arrow.left"),
+              _ = _.querySelector(".hover_arrow.right"),
+              _ = _.querySelector(".hover_arrow.top"),
+              _ = _.querySelector(".hover_arrow.bottom"),
+              _ = _.getBoundingClientRect(),
+              _ = _.getBoundingClientRect(),
+              _ = "overlay" == _ || "overlay-center" == _,
+              _ = _.getBoundingClientRect();
+            _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;");
+            let _ = _;
+            _.matches(":dir(rtl)") &&
+              ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
+            let {
+                nLeft: _,
+                nTop: _,
+                nOverflow: _,
+                nLateralOverflow: _,
+              } = _(_, _, _, _, _, _, _),
+              _ = _;
+            if (_ > (_ ?? 10) && !_) {
+              const _ = (function (_) {
+                  switch (_) {
+                    case "right":
+                      return "left";
+                    case "left":
+                      return "right";
+                    case "bottom":
+                      return "top";
+                    case "top":
+                      return "bottom";
+                    case "overlay":
+                      return "overlay";
+                    case "overlay-center":
+                      return "overlay-center";
+                  }
+                })(_),
+                {
+                  nLeft: _,
+                  nTop: _,
+                  nOverflow: _,
+                  nLateralOverflow: _,
+                } = _(_, _, _, _, _, _, _);
+              if (
+                (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
+                _ > (_ ?? 10))
+              )
+                return (
+                  console.log(
+                    "Not showing hover because it didn't fit in the main or alt direction",
+                  ),
+                  _.setAttribute("style", "display: none;"),
+                  _(!0),
+                  void _?.()
+                );
+            }
+            0 === _ ||
+              _ ||
+              ([_, _] = (function (_, _, _, _, _) {
+                let _ = Math.max(_[0], _[1]);
+                void 0 !== _ && (_ = Math.min(_, _));
+                _ = Math.max(0, _);
+                const _ = _[0] > _[1] ? _ : -_;
+                "left" === _ || "right" === _ ? (_ += _) : (_ += _);
+                return [_, _];
+              })(_, _, _, _, _));
+            let _ = null;
+            switch (_) {
+              case "left":
+                _ = _;
+                break;
+              case "right":
+                _ = _;
+                break;
+              case "top":
+                _ = _;
+                break;
+              case "bottom":
+                _ = _;
+            }
+            _ && _.setAttribute("style", ""),
+              _ != _ && _(_),
+              _ != _ && _(_),
+              _ || _(!0);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
+        _.useEffect(() => _(), [_]);
+        let _ = Object.assign(
+            {
+              left: _,
+              top: _,
+            },
+            _,
+          ),
+          _ = !_ || _.visible;
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
+          children: (0, _.jsx)("div", {
+            ..._,
+            className: (0, _._)(
+              _().HoverPosition,
+              _ && _ && _().Ready,
+              _ && _().NoSpace,
+              _ && _().EnablePointerEvents,
+              _,
+            ),
+            style: _,
+            ref: _,
+            children: _,
+          }),
+        });
+      }
+      function _(_, _, _, _, _, _, _) {
+        const _ = _.innerWidth,
+          _ = _.innerHeight;
+        let _, _, _, _;
+        switch (_) {
+          case "right":
+            (_ = _.right + _ - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
+              (_ = Math.max(0, _ + _.width - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+            break;
+          case "left":
+            (_ = _.left - _ - _.width - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
+              (_ = Math.max(0, 0 - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+            break;
+          case "bottom":
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.bottom + _ - _.top),
+              (_ = Math.max(0, _ + _.height - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+            break;
+          case "top":
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.top - _ - _.height - _.top),
+              (_ = Math.max(0, 0 - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+            break;
+          case "overlay":
+            (_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]);
+            break;
+          case "overlay-center":
+            (_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
+              (_ = _.top - _.top + 0.5 * _.height - 0.5 * _.height),
+              (_ = 0),
+              (_ = [0, 0]);
+        }
+        return {
+          nLeft: _,
+          nTop: _,
+          nOverflow: _,
+          nLateralOverflow: _,
+        };
+      }
+      function _(_, _, _, _) {
+        return Math.max(0, Math.min(1, _)) * (_ - _) + _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
@@ -63006,7 +62949,7 @@
         static InitFromString(_) {
           let _ = new _();
           try {
-            let [__webpack_require__, _, _, _, _] =
+            let [_, _, _, _, _] =
                 _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
               _ = Number(_),
               _ = Number(_),
@@ -63115,10 +63058,10 @@
         static sm_strMethod;
         static sm_strSubmethod;
         static sm_strComputedLinkPrefix;
-        static SetNavEventParams(_, _, __webpack_require__ = null, _ = null) {
+        static SetNavEventParams(_, _, _ = null, _ = null) {
           (_.sm_strDomain = _),
             (_.sm_strController = _),
-            (_.sm_strMethod = __webpack_require__),
+            (_.sm_strMethod = _),
             (_.sm_strSubmethod = _),
             (_.sm_strComputedLinkPrefix = null);
         }
@@ -63133,8 +63076,8 @@
             _
           );
         }
-        static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__),
+        static InstrumentLink(_, _, _ = null) {
+          const _ = _.GetLinkParam(_, _),
             _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
           return _._.AddNavParamToURL(_, _, _);
         }
@@ -63174,13 +63117,8 @@
       }
       function _(_, _) {
         if (!_) return !1;
-        const [__webpack_require__, _] = _.split(".", 2);
-        return (
-          __webpack_require__ &&
-          _ &&
-          _(_, __webpack_require__) &&
-          _ in _.SteamClient[__webpack_require__]
-        );
+        const [_, _] = _.split(".", 2);
+        return _ && _ && _(_, _) && _ in _.SteamClient[_];
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -63543,7 +63481,7 @@
         (0, _._)([_._], _.prototype, "InternalSetupValue", null);
       const _ = new _();
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _ ? _.GetClanInfoByClanAccountID(_) : void 0,
           ),
           [_, _] = (0, _.useState)(!!_ && !_.BHasClanInfoLoadedByAccountID(_));
@@ -65312,15 +65250,11 @@
             if (this.ValidateCreatorHomeTitles(_))
               for (const [
                 _,
-                {
-                  title: __webpack_require__,
-                  description: _,
-                  listtileimage: _,
-                },
+                { title: _, description: _, listtileimage: _ },
               ] of Object.entries(_ ?? {}))
-                __webpack_require__ &&
+                _ &&
                   this.m_mapListInfo.set(_, {
-                    title: __webpack_require__ ?? "",
+                    title: _ ?? "",
                     description: _?.length ? _ : void 0,
                     imageUrl: _?.length ? _ : void 0,
                   });
@@ -68235,10 +68169,9 @@
           _.apply(console, [_, _, ..._]);
         };
         const _ = console.error;
-        (console.error = (_, ...__webpack_require__) => {
+        (console.error = (_, ..._) => {
           const _ = _();
-          _(new Error(_(_, ...__webpack_require__)), 1, _),
-            _.apply(console, [_, ...__webpack_require__]);
+          _(new Error(_(_, ..._)), 1, _), _.apply(console, [_, ..._]);
         }),
           (console.clogerror = (_, _, ..._) => {
             const _ = _();
@@ -68263,6 +68196,8 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
+          "Millennium internal",
+          "millenium",
           "Refused unauthorized RPC command",
         ];
       function _() {
@@ -68294,14 +68229,10 @@
         constructor(_ = !0) {
           _
             ? (_.forEach(
-                ({
-                  error: _,
-                  cCallsitesToIgnore: _,
-                  strComponentStack: __webpack_require__,
-                }) =>
+                ({ error: _, cCallsitesToIgnore: _, strComponentStack: _ }) =>
                   this.ReportError(_, {
                     cCallsitesToIgnore: _,
-                    strComponentStack: __webpack_require__,
+                    strComponentStack: _,
                   }),
               ),
               (_ = (_, _, _) =>
@@ -69311,6 +69242,7 @@
         m_strInternalName;
         m_rgLinks;
         m_userFilterFailure;
+        m_strFullDescriptionBBCode;
         constructor(_, _) {
           (this.m_eItemType = _.item_type()),
             (this.m_unID = _._()),
@@ -69403,7 +69335,11 @@
             _.apply_user_filters &&
               !this.m_userFilterFailure &&
               ((this.m_userFilterFailure = _.user_filter_failure()?.toObject()),
-              (this.m_DataRequested.apply_user_filters = !0));
+              (this.m_DataRequested.apply_user_filters = !0)),
+            _.include_full_description &&
+              !this.m_strFullDescriptionBBCode &&
+              ((this.m_strFullDescriptionBBCode = _.full_description_bbcode()),
+              (this.m_DataRequested.include_full_description = !0));
         }
         static BDataRequestContainsOtherDataRequest(_, _) {
           return Boolean(
@@ -69423,6 +69359,7 @@
               (!_.include_basic_info || _.include_basic_info) &&
               (!_.include_supported_languages ||
                 _.include_supported_languages) &&
+              (!_.include_full_description || _.include_full_description) &&
               (!_.include_links || _.include_links),
           );
         }
@@ -69620,6 +69557,14 @@
               include_reviews: !0,
             }),
             this.m_ReviewInfo?.summary_language_specific
+          );
+        }
+        GetFullDescriptionBBCode() {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_full_description: !0,
+            }),
+            this.m_strFullDescriptionBBCode
           );
         }
         GetShortDescription() {
@@ -70426,6 +70371,7 @@
           include_reviews: !0,
           include_basic_info: !0,
           include_supported_languages: !0,
+          include_full_description: !0,
           include_links: !0,
         };
         async QueueAppRequest(_, _) {
@@ -70458,6 +70404,7 @@
             _.include_reviews,
             _.include_basic_info,
             _.include_supported_languages,
+            _.include_full_description,
             _.include_links,
           ];
           for (const _ of _) if (!0 !== _ && void 0 !== _) return !1;
@@ -71318,17 +71265,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.forwardRef((_, _) => {
-        const {
-          className: __webpack_require__,
-          contextMenuStyles: _,
-          disabled: _,
-          ..._
-        } = _;
+        const { className: _, contextMenuStyles: _, disabled: _, ..._ } = _;
         return (0, _.jsx)("div", {
           ..._,
           ref: _,
           className: (0, _._)(
-            __webpack_require__,
+            _,
             (_ || _()).contextMenuItem,
             "contextMenuItem",
             _ && "disabled",
@@ -71374,7 +71316,7 @@
           let {
             children: _,
             className: _,
-            label: __webpack_require__,
+            label: _,
             onCancel: _,
             cancelText: _,
             refInstance: _,
@@ -71428,17 +71370,17 @@
                 navRef: this.m_navRef,
                 ref: _,
                 role: _,
-                "aria-labelledby": __webpack_require__ ? _ : void 0,
+                "aria-labelledby": _ ? _ : void 0,
                 ..._,
                 children: [
                   _,
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)("div", {
                       _: _,
                       style: {
                         display: "none",
                       },
-                      children: __webpack_require__,
+                      children: _,
                     }),
                   !this.instance.BIsSubMenu() &&
                     (0, _.jsxs)(_.Fragment, {
@@ -71507,7 +71449,7 @@
           const {
               onSelected: _,
               bInteractableItem: _,
-              onMoveRight: __webpack_require__,
+              onMoveRight: _,
               ..._
             } = this.props,
             _ = this.context?.styles ?? _();
@@ -71533,7 +71475,7 @@
                 onClick: this.props.disabled ? void 0 : this.OnClick,
                 focusable: !this.props.disabled,
                 onOKButton: this.OnOKButton,
-                onMoveRight: __webpack_require__,
+                onMoveRight: _,
                 unselectable: this.props.unselectable,
                 role: _.role ?? "menuitem",
                 "aria-selected": this.props.selected,
@@ -71622,7 +71564,7 @@
           let {
             label: _,
             selectedWithin: _,
-            children: __webpack_require__,
+            children: _,
             className: _,
             bInGamepadUI: _,
             ..._
@@ -72208,13 +72150,9 @@
           });
         }
         render() {
-          const {
-              children: _,
-              fallback: _,
-              errorKey: __webpack_require__,
-            } = this.props,
+          const { children: _, fallback: _, errorKey: _ } = this.props,
             { error: _, identifierHash: _, lastErrorKey: _ } = this.state;
-          return _ && __webpack_require__ == _
+          return _ && _ == _
             ? void 0 !== _
               ? "function" == typeof _
                 ? _(_.error)
@@ -72264,12 +72202,7 @@
           });
         },
         _ = (_) => {
-          const {
-              error: _,
-              onRefresh: __webpack_require__,
-              identifierHash: _,
-              store: _,
-            } = _,
+          const { error: _, onRefresh: _, identifierHash: _, store: _ } = _,
             _ = (_.error && _.error.message) || "unknown error",
             _ = `${_.product}_${_.version}_${_}`;
           return (0, _.jsxs)(_, {
@@ -72282,7 +72215,7 @@
                       textDecoration: "underline",
                       cursor: "pointer",
                     },
-                    onClick: __webpack_require__,
+                    onClick: _,
                     children: "Refresh",
                   }),
                 ],
@@ -72354,14 +72287,14 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.98 10.23L3.20996 25H32.75L17.98 10.23Z",
                 fill: "currentColor",
@@ -72372,7 +72305,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.98 26.54L3.20996 11.77H32.75L17.98 26.54Z",
                 fill: "currentColor",
@@ -72383,7 +72316,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M9.82497 18.385L24.595 3.61499L24.595 33.155L9.82497 18.385Z",
                 fill: "currentColor",
@@ -72394,7 +72327,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M26.135 18.385L11.365 33.155L11.365 3.61503L26.135 18.385Z",
                 fill: "currentColor",
@@ -72403,7 +72336,7 @@
         }
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
@@ -72468,8 +72401,8 @@
         });
       }
       function _(_) {
-        const { alert: _, urgent: __webpack_require__, ..._ } = _;
-        return __webpack_require__
+        const { alert: _, urgent: _, ..._ } = _;
+        return _
           ? (0, _.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
@@ -72689,7 +72622,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)();
+        const [_, _] = (0, _._)();
         return (0, _.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 15 23",
@@ -72697,7 +72630,7 @@
           ..._,
           children: [
             (0, _.jsx)("g", {
-              clipPath: __webpack_require__,
+              clipPath: _,
               children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 fillRule: "evenodd",
@@ -72795,7 +72728,7 @@
         });
       }
       function _(_) {
-        const { color: _ = "#FFFFFF", ...__webpack_require__ } = _;
+        const { color: _ = "#FFFFFF", ..._ } = _;
         return (0, _.jsxs)("svg", {
           version: "1.1",
           _: "Layer_2",
@@ -72806,7 +72739,7 @@
           width: "256px",
           height: "256px",
           viewBox: "0 0 256 256",
-          ...__webpack_require__,
+          ..._,
           children: [
             (0, _.jsx)("line", {
               fill: "none",
@@ -72930,7 +72863,7 @@
         });
       }
       function _(_) {
-        const { color: _ = "#fff", ...__webpack_require__ } = _;
+        const { color: _ = "#fff", ..._ } = _;
         return (0, _.jsx)("svg", {
           version: "1.1",
           _: "base",
@@ -72946,7 +72879,7 @@
           strokeLinecap: "round",
           strokeLinejoin: "round",
           strokeMiterlimit: "10",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("polyline", {
             fill: "none",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
@@ -73262,7 +73195,7 @@
         });
       }
       function _(_) {
-        const { angle: _, ...__webpack_require__ } = _;
+        const { angle: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           style: {
             transform: `rotate(${_.angle}deg)`,
@@ -73276,7 +73209,7 @@
           width: "256px",
           height: "256px",
           viewBox: "0 0 256 256",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("polygon", {
             points: "13.913,141 128,59 242.087,141 ",
             fill: _.fill || "#ffffff",
@@ -73284,12 +73217,7 @@
         });
       }
       function _(_) {
-        let {
-          bPending: _,
-          bShowArm: __webpack_require__,
-          className: _,
-          ..._
-        } = _;
+        let { bPending: _, bShowArm: _, className: _, ..._ } = _;
         return (0, _._)({
           bSuppressAssert: !0,
         })
@@ -73306,13 +73234,13 @@
                 }),
                 (0, _.jsx)("path", {
                   className: "WavingArm",
-                  opacity: __webpack_require__ ? "1" : "0",
+                  opacity: _ ? "1" : "0",
                   _: "M4.67541 11.8555C5.6007 10.8308 7.18156 10.7501 8.20635 11.6754L18.9515 21.3773L15.6007 25.0884L4.85556 15.3865C3.83077 14.4612 3.75011 12.8803 4.67541 11.8555V11.8555Z",
                   fill: "currentColor",
                   strokeWidth: "0",
                 }),
                 (0, _.jsx)("path", {
-                  opacity: __webpack_require__ ? "1" : "0",
+                  opacity: _ ? "1" : "0",
                   _: "M32.3573 11.8876C33.2626 12.93 33.1515 14.509 32.109 15.4144L23.2784 23.083L20 19.3078L28.8305 11.6392C29.873 10.7339 31.452 10.8451 32.3573 11.8876Z",
                   fill: "currentColor",
                   strokeWidth: "0",
@@ -73485,11 +73413,11 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: _,
-          ...__webpack_require__,
+          ..._,
           width: "50",
           height: "50",
           viewBox: "0 0 50 50",
@@ -73536,22 +73464,22 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       _.createContext({});
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = (0, _._)(),
           _ = _.useMemo(
             () => ({
               ..._._.GetDefaultParams(),
               ..._,
-              ...__webpack_require__,
+              ..._,
             }),
             [
               _,
-              __webpack_require__.domain,
-              __webpack_require__.controller,
-              __webpack_require__.method,
-              __webpack_require__.submethod,
-              __webpack_require__.feature,
-              __webpack_require__.depth,
+              _.domain,
+              _.controller,
+              _.method,
+              _.submethod,
+              _.feature,
+              _.depth,
             ],
           );
         return (0, _.jsx)(_._, {
@@ -73572,6 +73500,214 @@
         return (
           void 0 === _.current && (_.current = "svgid_" + _++),
           [_.current, `url(#${_.current})`]
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({}),
+        _ = () => _.useContext(_);
+      function _(_) {
+        const [_, _] = _.useState(null),
+          _ = _.useMemo(
+            () => ({
+              targetElement: _,
+            }),
+            [_],
+          );
+        return (0, _.jsxs)(_.Provider, {
+          value: _,
+          children: [
+            (0, _.jsx)("div", {
+              ref: _,
+            }),
+            _.children,
+          ],
+        });
+      }
+      function _(_) {
+        const { divProps: _, tooltipProps: _ } = _({
+          ..._,
+          toolTipContent: _.toolTipContent
+            ? (0, _.jsx)(_, {
+                children: _(_.toolTipContent),
+              })
+            : null,
+        });
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            _.children,
+          ],
+        });
+      }
+      function _(_) {
+        const { divProps: _, tooltipProps: _ } = _(_);
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            _.children,
+          ],
+        });
+      }
+      function _(_) {
+        const { children: _ } = _,
+          { divProps: _, tooltipProps: _ } = _({
+            ..._,
+            toolTipContent: _.toolTipContent
+              ? (0, _.jsx)(_, {
+                  children: _(_.toolTipContent),
+                })
+              : null,
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.cloneElement(_, {
+              ..._,
+              ..._.props,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            toolTipContent: _,
+            nDelayShowMS: _ = 300,
+            bDisabled: _,
+            direction: _,
+            nBodyAlignment: _,
+            nBodyDistance: _,
+            nAllowOffscreenPx: _,
+            nMaxLateralMoveOnScreen: _,
+            strTooltipClassname: _,
+            bNavStop: _,
+            bTopmost: _,
+            usePointerEvents: _,
+            children: _,
+            onMouseLeave: _,
+            ..._
+          } = _,
+          _ = {
+            direction: _,
+            nBodyAlignment: _,
+            nBodyDistance: _,
+            nAllowOffscreenPx: _,
+            nMaxLateralMoveOnScreen: _,
+            className: _,
+            bTopmost: _,
+          },
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(),
+          _ = _.useCallback(
+            (_) => {
+              (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
+                (_(!0), _(_.currentTarget));
+            },
+            [_],
+          ),
+          _ = _.useCallback(() => {
+            _(!1);
+          }, []);
+        _.useEffect(() => {
+          _ && _ && _(!1);
+        }, [_, _]);
+        const _ = {
+          active: _ && !_,
+          target: _,
+          nDelayShowMS: _,
+          hoverPositionProps: _,
+          children: _,
+        };
+        let _ = {
+          ..._,
+        };
+        return (
+          _
+            ? ((_.onPointerEnter = _), (_.onPointerLeave = _))
+            : ((_.onMouseEnter = _), (_.onMouseLeave = _)),
+          {
+            divProps: _,
+            stateHandlers: {
+              setTarget: _,
+              setHovered: _,
+            },
+            tooltipProps: _,
+          }
+        );
+      }
+      function _(_) {
+        return "string" == typeof _ ? _._.LocalizeIfToken(_, !0) : _;
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          ..._,
+          className: (0, _._)(_().TextToolTip, _.className),
+        });
+      }
+      function _(_) {
+        const {
+            active: _,
+            target: _,
+            nDelayShowMS: _ = 300,
+            hoverPositionProps: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _();
+        if (
+          (_.useEffect(() => {
+            if (_) {
+              if (_) {
+                const _ = window.setTimeout(() => _(!0), _);
+                return () => window.clearTimeout(_);
+              }
+              _(!0);
+            } else (0, _._)() || _(!1);
+          }, [_]),
+          !_)
+        )
+          return null;
+        if (!_ || !_) return null;
+        const { targetElement: _ } = _;
+        return _.createPortal(
+          (0, _.jsx)(_._, {
+            target: _,
+            ..._,
+            children: _,
+          }),
+          _ ?? _.ownerDocument.body,
         );
       }
     },
@@ -74256,10 +74392,8 @@
         }
         return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
       }
-      function _(_, _, ...__webpack_require__) {
-        return 1 === _ || "1" === _
-          ? _(_, _, ...__webpack_require__)
-          : _(_ + "_Plural", _, ...__webpack_require__);
+      function _(_, _, ..._) {
+        return 1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._);
       }
       function _(_, ..._) {
         return 0 == _.length
@@ -74492,13 +74626,13 @@
         return _.toLocaleTimeString(_, _);
       }
       const _ = new Map();
-      function _(_, _, __webpack_require__ = !0, _ = !0, _ = !1) {
+      function _(_, _, _ = !0, _ = !0, _ = !1) {
         const _ = new Date(),
           _ = new Date(1e3 * _);
         if (_.getFullYear() != _.getFullYear()) return _(_);
         _ && _._(new Date().setHours(24, 0, 0, 0) - _.getTime());
         const _ = new Date();
-        if ((_.setHours(0, 0, 0, 0), __webpack_require__))
+        if ((_.setHours(0, 0, 0, 0), _))
           if (_ >= _) {
             if ((_.setDate(_.getDate() + 1), _ < _))
               return (0, _._)("#Time_Today");
@@ -74918,17 +75052,14 @@
       function _(_, _ = "") {
         return _.replace(/\bhttps?:\/\/\S+/gi, _);
       }
-      function _(_, _, __webpack_require__ = !0) {
+      function _(_, _, _ = !0) {
         let _ = _.trim();
-        if (
-          ((_ = _.replace(__webpack_require__ ? /\s+/g : /[ \t]+/g, " ")),
-          _.length > _)
-        ) {
+        if (((_ = _.replace(_ ? /\s+/g : /[ \t]+/g, " ")), _.length > _)) {
           _ = _.substring(0, _);
           let _ = _.replace(/^(.*([.!?])) .*$/, "$1"),
             _ = _.length;
           (_ < 0.6 * _ || _ == _) && (_ = _.replace(/ [^ ]*$/, "...")),
-            (_ = __webpack_require__ ? _.replace(/(\r\n|\n|\r)/gm, "") : _);
+            (_ = _ ? _.replace(/(\r\n|\n|\r)/gm, "") : _);
         }
         return _;
       }
@@ -74983,8 +75114,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       function _(_) {
         if (void 0 === _)
           return console.error("Cannot GetHostname on empty URL"), "";
@@ -75003,6 +75134,7 @@
         return _
           ? (1 == _._.EUNIVERSE &&
               ("http:" == _.substring(0, 5) && (_ = "https:" + _.substring(5)),
+              (0, _._)(_._.MEDIA_CDN_URL, "Media CDN not setup"),
               (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ =
                 (_ = _.replace(
                   /https:\/\/media.steampowered.com\//g,
@@ -75118,7 +75250,6 @@
         _: () => _,
         _: () => _._,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -75137,12 +75268,7 @@
           );
         };
       function _(_) {
-        const {
-            IN_GAMEPADUI: _,
-            IN_DESKTOPUI: __webpack_require__,
-            IN_VR: _,
-            children: _,
-          } = _,
+        const { IN_GAMEPADUI: _, IN_DESKTOPUI: _, IN_VR: _, children: _ } = _,
           _ = _({
             bSuppressAssert: !0,
           }),
@@ -75154,10 +75280,10 @@
           _ = _.useMemo(
             () => ({
               IN_GAMEPADUI: _ ?? _?.IN_GAMEPADUI ?? _._.IN_GAMEPADUI,
-              IN_DESKTOPUI: __webpack_require__ ?? _?.IN_DESKTOPUI ?? !1,
+              IN_DESKTOPUI: _ ?? _?.IN_DESKTOPUI ?? !1,
               IN_VR: _ ?? _?.IN_VR ?? _,
             }),
-            [_, _, __webpack_require__, _, _],
+            [_, _, _, _, _],
           );
         return _.createElement(
           _.Provider,
@@ -75451,7 +75577,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 8553), _((_._ = _));
+      return (_ = 372), _((_._ = _));
       var _;
     });
     _._();

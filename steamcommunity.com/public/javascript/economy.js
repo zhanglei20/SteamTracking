@@ -33,115 +33,6 @@ function Economy_UseResponsiveLayout()
  *		Initialization
  */
 
-function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly )
-{
-	INVENTORY_PAGE_ITEMS = 25;	//5 x 5 grid
-	INVENTORY_PAGE_WIDTH = 104 * 5;
-	g_bIsInventoryPage = true;
-	g_bShowTradableItemsOnly = bShowTradableItemsOnly;
-	g_bAllowHighDPIItemImages = $J('html').hasClass('responsive');
-
-	// set up the filter control
-	Filter.InitFilter( $('filter_control') );
-
-	// decide what page we're going to start with
-	// 	priority: hash params > cookie > first non-empty inventory > first inventory
-	var oHashParams = ReadInventoryHash( window.location.hash );
-	var oCookieParams = ReadInventoryCookie( GetCookie( 'strInventoryLastContext' ) );
-
-	if ( window.location.hash == '#pending_gifts' && $('tabcontent_pendinggifts') )
-	{
-		if ( bHasPendingGifts )
-			ShowPendingGifts();
-		else
-			ShowItemInventory( 753, 1 );
-	}
-	else if ( window.location.hash == '#gift_history' && g_bViewingOwnProfile )
-	{
-		ShowGiftHistory();
-	}
-	else if ( oHashParams && BValidateHashParams( oHashParams ) )
-	{
-		ShowItemInventory( oHashParams.appid, oHashParams.contextid, oHashParams.assetid );
-	}
-	else if ( showAppId != -1 )
-	{
-		if ( showAppId == 0 )
-			showAppId = 753;
-
-		ShowItemInventory( showAppId, 0 );
-	}
-	else if ( oCookieParams )
-	{
-		ShowItemInventory( oCookieParams.appid, oCookieParams.contextid );
-		UserYou.SetDefaultInventoryId( oCookieParams );
-	}
-	else
-	{
-		var oFirstInventory = null;
-		var oFirstNonEmptyInventory = null;
-		for ( var appid in g_rgAppContextData )
-		{
-			var rgApp = g_rgAppContextData[appid];
-			for ( var contextid in rgApp.rgContexts )
-			{
-				var rgContext = rgApp.rgContexts[contextid];
-				if ( rgContext.asset_count && !oFirstNonEmptyInventory )
-				{
-					oFirstNonEmptyInventory = { appid: appid, contextid: contextid };
-					break;
-				}
-				else if ( !oFirstInventory )
-				{
-					oFirstInventory = { appid: appid, contextid: contextid };
-				}
-			}
-			if ( oFirstNonEmptyInventory )
-				break;
-		}
-		var oInventoryToShow = oFirstNonEmptyInventory ? oFirstNonEmptyInventory : oFirstInventory;
-		if ( oInventoryToShow )
-		{
-			ShowItemInventory( oInventoryToShow.appid, oInventoryToShow.contextid );
-			UserYou.SetDefaultInventoryId( oInventoryToShow );
-		}
-
-	}
-
-	InitDynamicInventoryItemAutosizing( $J('#inventories'), '.trade_item_box', true );
-	$J(window).on('Responsive_SmallScreenModeToggled', function() {
-		if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
-		{
-			$J('#inventory_pagecontrols').hide();
-		}
-		else
-		{
-			$J('#inventory_pagecontrols').show();
-		}
-	});
-
-	// watch for incoming # urls
-	new LocationHashObserver( null, 0.2, OnLocationChange );
-}
-
-function ReadInventoryHash( hash )
-{
-	if ( hash && hash.length > 1 )
-	{
-		var rgHashElements = hash.substring(1).split('_');
-		if ( rgHashElements.length >= 1 && rgHashElements.length < 4 )
-		{
-			var oLocation = { appid: parseInt( rgHashElements[0] ) };
-			if ( rgHashElements.length >= 2 )
-				oLocation.contextid = rgHashElements[1];
-			if ( rgHashElements.length == 3 )
-				oLocation.assetid = rgHashElements[2];
-			return oLocation;
-		}
-	}
-	return null;
-}
-
 function ReadInventoryCookie( cookie )
 {
 	if( cookie )
@@ -193,30 +84,6 @@ function BValidateHashParams( oHashParams )
 
 }
 
-LocationHashObserver = Class.create(Abstract.TimedObserver, {
-	getValue: function() {
-		return window.location.hash;
-	}
-} );
-
-function OnLocationChange ( elIgnored, hash )
-{
-	var oHashParams = ReadInventoryHash( hash );
-	if ( hash == '#pending_gifts' && $('tabcontent_pendinggifts') )
-	{
-		ShowPendingGifts();
-	}
-	else if ( oHashParams && BValidateHashParams( oHashParams ) )
-	{
-		ShowItemInventory( oHashParams.appid, oHashParams.contextid, oHashParams.assetid );
-	}
-	else
-	{
-		var inventoryDefault = UserYou.GetDefaultInventoryId();
-		ShowItemInventory( inventoryDefault.appid, inventoryDefault.contextid );
-	}
-}
-
 /*
  *		Inventory
  */
@@ -231,13 +98,26 @@ function InventoryPreviousPage()
 	g_ActiveInventory.PreviousPage();
 }
 
+function ToggleTagFilters()
+{
+	var elTagHolder = $( 'filter_options' );
+	if( elTagHolder && elTagHolder.hasClassName( 'filter_expanded' ) )
+	{
+		HideTagFilters();
+	}
+	else
+	{
+		ShowTagFilters();
+	}
+}
+
 function ShowTagFilters()
 {
 	if( g_ActiveInventory && g_ActiveInventory.getTagContainer() )
 		g_ActiveInventory.getTagContainer().show();
 
-	$( 'filter_tag_show' ).hide();
-	$( 'filter_tag_hide' ).show();
+	$J( '#filter_tag_show' ).css( 'visibility', 'hidden' );
+	$J( '#filter_tag_hide' ).css( 'visibility', 'visible' );
 
 	var elTagHolder = $( 'filter_options' );
 	if( elTagHolder )
@@ -257,17 +137,17 @@ function HideTagFilters()
 	if( g_ActiveInventory && g_ActiveInventory.getTagContainer() )
 	{
 		g_ActiveInventory.getTagContainer().hide();
-		$( 'filter_tag_show' ).show();
-		$( 'filter_tag_hide' ).hide();
+		$J( '#filter_tag_show' ).css( 'visibility', 'visible' );
+		$J( '#filter_tag_hide' ).css( 'visibility', 'hidden' );
 		Filter.UpdateTagFiltering( {} );
 
 		if( Object.values( g_ActiveInventory.tags ).length == 0 )
 		{
-			$( 'filter_tag_show' ).hide();
+			$J( '#filter_tag_show' ).css( 'visibility', 'hidden' );
 		}
 		else
 		{
-			$( 'filter_tag_show' ).show();
+			$J( '#filter_tag_show' ).css( 'visibility', 'visible' );
 		}
 	}
 
@@ -2190,10 +2070,13 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			var elTab = $('inventory_link_' + appid );
 			elTab.siblings().invoke( 'removeClassName', 'active');
 
-			var $ResponsiveSelect = $J('#responsive_inventory_select');
-			var $Opt = $ResponsiveSelect.children('[data-appid=' + parseInt(appid) + ']');
+			var $ResponsiveSelect = $J('#responsive_inventory_select_droplist');
+			var $Opt = $ResponsiveSelect.find('#' + appid);
 			if ( $Opt.length )
-				$ResponsiveSelect.val( $Opt.attr('value') );
+			{
+				$J('#responsive_inventory_select').val( appid );
+				$J('#responsive_inventory_select_trigger').html( $Opt.html() );
+			}
 
 			var elPendingGift = $('pending_gift_link' );
 			if ( elPendingGift )

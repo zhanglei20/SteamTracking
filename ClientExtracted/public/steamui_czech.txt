@@ -4788,7 +4788,6 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_WindowsCompat_Description" "Klient služby Steam je momentálně spuštěn v režimu kompatibility. To může u některých funkcí a her způsobovat problémy. Postupujte dle pokynů níže a režim kompatibility vypněte."
 "Steam_WindowsCompat_DoNotShowAgain" "Znovu nezobrazovat"
 "Steam_WindowsCompat_SupportLinkDesc" "Jak mám režim kompatibility vypnout?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Ukončit klienta"
 "Steam_WindowsCompat_RestartSteam" "Restartovat klienta"
 "Steam_WindowsCompat_Continue" "Pokračovat"
@@ -4869,11 +4868,12 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "RescueDialog_ExitSteam" "Ukončit klienta"
 
 "TransportDialog_Title" "Neočekávaná chyba přenosu"
-"TransportDialog_Explanation" "Při spouštění klienta služby Steam došlo k neočekávané chybě (0x%errorCount%). Pro více informací klikněte <a href=steam://openurl_external/https://help.steampowered.com/cs/faqs/view/7516-B23C-D572-5B0E>zde</a>."
+"TransportDialog_Explanation" "Při spouštění klienta služby Steam došlo k neočekávané chybě (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Vyberte jednu z následujících možností:"
 "TransportDialog_RestartSteam" "Restartovat klienta"
 "TransportDialog_RestartSteamWebHelper" "Restartovat program steamwebhelper"
 "TransportDialog_ContinueAnyway" "(Valve) Přesto pokračovat"
+"TransportDialog_SupportLinkDesc" "Více informací"
 "TransportDialog_ExitSteam" "Ukončit klienta"
 
 "DownloadRegion_default"				 "Neznámý"

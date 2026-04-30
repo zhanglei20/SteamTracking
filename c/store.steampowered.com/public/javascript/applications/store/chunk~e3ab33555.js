@@ -3,6 +3,11 @@
   {
     chunkid: (module) => {
       module.exports = {
+        BreadContainer: "YaL4BAoqywnKnb5jbU_il",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
         WidePageCtn: "uHgjQHyNygSKukDngfNQO",
         PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
@@ -49,11 +54,6 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG",
       };
     },
     chunkid: (module) => {
@@ -119,15 +119,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { crumbs: _, className: __webpack_require__ } = _;
+        const { crumbs: _, className: _, bHideLastArrow: _ } = _;
         return _ && 0 != _.length
           ? (0, _.jsxs)("div", {
-              className: (0, _._)(_.BreadContainer, __webpack_require__),
+              className: (0, _._)(_.BreadContainer, _),
               children: [
                 (0, _.jsx)(_._, {
                   className: "blockbg",
                   "flow-children": "row",
-                  children: _.map((_) => {
+                  children: _.map((_, _) => {
                     const _ = new Array();
                     return (
                       _.url.startsWith("http")
@@ -151,15 +151,16 @@
                               "link_" + _.name,
                             ),
                           ),
-                      _.push(
-                        (0, _.jsx)(
-                          "span",
-                          {
-                            children: " > ",
-                          },
-                          _.name + "span",
+                      (!_ || _ < _.length - 1) &&
+                        _.push(
+                          (0, _.jsx)(
+                            "span",
+                            {
+                              children: " > ",
+                            },
+                            _.name + "span",
+                          ),
                         ),
-                      ),
                       _
                     );
                   }),
@@ -409,7 +410,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -501,7 +501,7 @@
         include_basic_info: !0,
       };
       function _(_) {
-        const { clanInfo: _, closeModal: __webpack_require__ } = _,
+        const { clanInfo: _, closeModal: _ } = _,
           [_] = (0, _._)(_.appid, _),
           [_, _] = _.useState(!0),
           [_, _] = _.useState(!0),
@@ -514,7 +514,7 @@
         return (0, _.jsx)(_._, {
           strTitle: (0, _._)("#EventDashboard_Stats_title"),
           strDescription: (0, _._)("#EventDashboard_Stats_desc"),
-          closeModal: __webpack_require__,
+          closeModal: _,
           bDisableBackgroundDismiss: !0,
           bOKDisabled: _,
           onOK: () =>
@@ -665,7 +665,7 @@
       function _(_) {
         const {
             summary: _,
-            clanSteamID: __webpack_require__,
+            clanSteamID: _,
             bEventIsInModerationQueue: _,
             bIsAllowedInLibrary: _,
             bCompact: _,
@@ -1061,7 +1061,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { event: _, lang: __webpack_require__ } = _,
+        const { event: _, lang: _ } = _,
           _ = (0, _._)(() => _.jsondata.meet_steam_groups),
           _ = (0, _._)(_.clanSteamID.GetAccountID()),
           [_, _, _] = (0, _.useMemo)(() => {
@@ -1131,9 +1131,9 @@
               })
             : null;
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1158,7 +1158,7 @@
         _ = (0, _._)((_) => {
           const {
               event: _,
-              lang: __webpack_require__,
+              lang: _,
               partnerEventStore: _,
               emoticonStore: _,
               nOverrideStartTime: _,
@@ -1199,10 +1199,10 @@
                 string: (0, _._)("#Loading"),
               }),
             });
-          let _ = _.GetDescriptionWithFallback(__webpack_require__);
+          let _ = _.GetDescriptionWithFallback(_);
           return (0, _.jsx)(_, {
             event: _,
-            lang: __webpack_require__,
+            lang: _,
             titleBar: _,
             body: (0, _.jsxs)(_._, {
               children: [
@@ -1226,12 +1226,12 @@
                     }),
                     (0, _.jsx)("div", {
                       className: _().EventDetailTitle,
-                      children: _.GetNameWithFallback(__webpack_require__),
+                      children: _.GetNameWithFallback(_),
                     }),
-                    _.BHasSubTitle(__webpack_require__) &&
+                    _.BHasSubTitle(_) &&
                       (0, _.jsx)("div", {
                         className: _().EventDetailsSubTitle,
-                        children: _.GetSubTitle(__webpack_require__),
+                        children: _.GetSubTitle(_),
                       }),
                   ],
                 }),
@@ -1258,7 +1258,7 @@
                             _.BHasTag("steam_award_nomination_request") &&
                               (0, _.jsx)(_.EventDisplaySteamAwardNomination, {
                                 event: _,
-                                lang: __webpack_require__,
+                                lang: _,
                                 previewMode: _,
                               }),
                             _.BHasTag("steam_award_vote_request") &&
@@ -1283,7 +1283,7 @@
                                 partnerEventStore: _,
                                 showErrorInfo: _,
                                 event: _,
-                                languageOverride: __webpack_require__,
+                                languageOverride: _,
                               }),
                               Boolean(
                                 _.jsondata.bSaleEnabled &&
@@ -1353,7 +1353,7 @@
                     (0, _.jsx)(_._, {
                       children: (0, _.jsx)(_, {
                         event: _,
-                        lang: __webpack_require__,
+                        lang: _,
                         nOverrideStartTime: _,
                         nOverrideEndTime: _,
                       }),
@@ -1410,18 +1410,16 @@
         _ = (0, _._)((_) => {
           const {
               event: _,
-              lang: __webpack_require__,
+              lang: _,
               titleBar: _,
               body: _,
               postbody: _,
               footer: _,
             } = _,
-            _ = _.GetImageURLWithFallback("background", __webpack_require__),
-            _ = _.BIsImageSafeForAllAges("background", __webpack_require__),
-            _ = "lang_" + (0, _._)(__webpack_require__),
-            _ =
-              !!_ &&
-              _.BImageNeedScreenshotFallback("background", __webpack_require__);
+            _ = _.GetImageURLWithFallback("background", _),
+            _ = _.BIsImageSafeForAllAges("background", _),
+            _ = "lang_" + (0, _._)(_),
+            _ = !!_ && _.BImageNeedScreenshotFallback("background", _);
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _().EventDetailsPageContainer,
@@ -1490,7 +1488,7 @@
           });
         },
         _ = (_) => {
-          const { body: _, postbody: __webpack_require__, strImageURL: _ } = _;
+          const { body: _, postbody: _, strImageURL: _ } = _;
           return (0, _.jsxs)("div", {
             className: _().EventBodyCtn,
             children: [
@@ -1515,9 +1513,9 @@
                       }),
                     ],
                   }),
-                  Boolean(__webpack_require__) &&
+                  Boolean(_) &&
                     (0, _.jsx)(_._, {
-                      children: __webpack_require__,
+                      children: _,
                     }),
                 ],
               }),
@@ -1527,7 +1525,7 @@
       function _(_) {
         const {
             event: _,
-            lang: __webpack_require__,
+            lang: _,
             nOverrideStartTime: _,
             nOverrideEndTime: _,
           } = _,
@@ -1571,7 +1569,7 @@
                         className: _().EventDetailTimeInfo,
                         children: (0, _.jsx)(_._, {
                           eventModel: _,
-                          lang: __webpack_require__,
+                          lang: _,
                         }),
                       }),
                     (0, _.jsxs)("div", {
@@ -1596,7 +1594,7 @@
                     Boolean(_.jsondata.meet_steam_groups) &&
                       (0, _.jsx)(_, {
                         event: _,
-                        lang: __webpack_require__,
+                        lang: _,
                       }),
                   ],
                 }),
@@ -1612,7 +1610,7 @@
       function _(_) {
         const { appid: _ } = _;
         (0, _._)(_ && 0 != _, "Expected Appid In Game Info Section");
-        const [__webpack_require__] = (0, _._)(_, {
+        const [_] = (0, _._)(_, {
           include_assets: !0,
           include_platforms: !0,
           include_release: !0,
@@ -1638,7 +1636,7 @@
             }),
             (0, _.jsx)("div", {
               className: (0, _._)(_().GameActions),
-              children: __webpack_require__
+              children: _
                 ? (0, _.jsx)(_._, {
                     appid: _,
                     bIsFree: __webpack_require__.BIsFree(),
@@ -1655,7 +1653,7 @@
       }
       function _(_) {
         const { clanSteamID: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_.GetAccountID());
+          [_, _] = (0, _._)(_.GetAccountID());
         return _
           ? (0, _.jsxs)("div", {
               className: _().EventDetailGameCallToAction,
@@ -1858,7 +1856,7 @@
       function _(_) {
         const {
           nLatestTime: _,
-          nEarliestTime: __webpack_require__,
+          nEarliestTime: _,
           fnGetTimeToUpdate: _,
           onError: _,
           strAlsoShowTimeZone: _,
@@ -1906,13 +1904,8 @@
           })(_, _, _, _, _),
           _ = !_ && _;
         let _, _;
-        if (
-          _ &&
-          __webpack_require__ &&
-          _ == __webpack_require__ &&
-          __webpack_require__ > _._.GetTimeNowWithOverride()
-        ) {
-          const _ = _().unix(__webpack_require__);
+        if (_ && _ && _ == _ && _ > _._.GetTimeNowWithOverride()) {
+          const _ = _().unix(_);
           (_ = {
             hours: {
               max: _.hour(),
@@ -1937,7 +1930,7 @@
           }),
             (_ = _);
         }
-        _ || !__webpack_require__ || _ || (_ = _().unix(__webpack_require__));
+        _ || !_ || _ || (_ = _().unix(_));
         const _ = _()._.guess(),
           _ = _().unix(_)._(_),
           _ = !!_ && _ != _ && _().unix(_)._(_),
@@ -2042,7 +2035,7 @@
                             ((0 != _.weekday() && 6 != _.weekday()) ||
                               (_ = !1));
                           return _;
-                        })(__webpack_require__, _, _, _),
+                        })(_, _, _, _),
                       initialValue: _,
                       inputProps: {
                         placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
@@ -2245,7 +2238,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-          const [_, __webpack_require__] = _.useState(null),
+          const [_, _] = _.useState(null),
             { eventModel: _ } = _;
           let _ = _.clanSteamID.GetAccountID();
           _.useEffect(() => {

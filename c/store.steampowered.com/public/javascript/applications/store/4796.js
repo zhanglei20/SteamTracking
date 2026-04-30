@@ -302,7 +302,7 @@
         (0, _._)([_._], _.prototype, "InternalSetupValue", null);
       const _ = new _();
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _ ? _.GetClanInfoByClanAccountID(_) : void 0,
           ),
           [_, _] = (0, _.useState)(!!_ && !_.BHasClanInfoLoadedByAccountID(_));
@@ -2076,15 +2076,11 @@
             if (this.ValidateCreatorHomeTitles(_))
               for (const [
                 _,
-                {
-                  title: __webpack_require__,
-                  description: _,
-                  listtileimage: _,
-                },
+                { title: _, description: _, listtileimage: _ },
               ] of Object.entries(_ ?? {}))
-                __webpack_require__ &&
+                _ &&
                   this.m_mapListInfo.set(_, {
-                    title: __webpack_require__ ?? "",
+                    title: _ ?? "",
                     description: _?.length ? _ : void 0,
                     imageUrl: _?.length ? _ : void 0,
                   });
@@ -2123,14 +2119,10 @@
         };
       }
       function _(_) {
-        const {
-          data: _,
-          isFetching: __webpack_require__,
-          refetch: _,
-        } = (0, _._)(_(_));
+        const { data: _, isFetching: _, refetch: _ } = (0, _._)(_(_));
         return {
           creatorHome: _,
-          isFetching: __webpack_require__,
+          isFetching: _,
           refetch: _,
         };
       }
@@ -2767,7 +2759,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _.Get().BIsPartnerEventPermissionsLoaded(_),
           ),
           _ = _._.InitFromClanID(_),

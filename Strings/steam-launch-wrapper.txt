@@ -1,0 +1,230 @@
+$XDG_RUNTIME_DIR not set.
+%s read failed
+%s/game-bin:%s
+%s/steam/env/%s
+--app-id
+--debug
+--game-bin
+--journal
+--no-game-bin
+--no-journal
+--no-scope
+--oom-score-adjust
+--oom-score-adjust parameter cannot be empty
+--scope
+--version
+/org/freedesktop/systemd1
+/proc/self/oom_score_adj
+/run/user/%d/systemd/private
+/usr/bin:/bin
+ENABLE_VULKAN_RENDERDOC_CAPTURE
+GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+GLIBC_2.2.5
+GLIBC_2.3
+GLIBC_2.3.4
+GLIBC_2.4
+GLIBC_2.8
+Invalid fd filename: '%s'
+JobRemoved
+Opened libsystemd
+PATH not set, using a default
+PIDs
+PRESSURE_VESSEL_SYSTEMD_SCOPE
+PROTON_LOG
+Putting this process into a scope
+Redirecting messages to systemd Journal, identifier: %s
+Result of StartTransientUnit job: %s
+STEAM_LAUNCH_WRAPPER_DEBUG
+STEAM_LAUNCH_WRAPPER_GAME_BIN
+STEAM_LAUNCH_WRAPPER_JOURNAL
+STEAM_LAUNCH_WRAPPER_SCOPE
+STEAM_RUNTIME
+STEAM_RUNTIME not in use
+StartTransientUnit
+StartTransientUnit job successful
+Starting transient unit took more than 30 seconds
+SteamAppId
+Successfully placed this process into a scope
+Unable to access systemd socket
+Unable to allocate bus object
+Unable to call StartTransientUnit method
+Unable to call close_range
+Unable to connect to JobRemoved signal
+Unable to connect to systemd user session
+Unable to construct identifier for logging
+Unable to construct new PATH
+Unable to construct systemd socket address
+Unable to construct systemd socket path
+Unable to enter cgroup: required libsystemd methods not found
+Unable to get flags of %ld
+Unable to get start timestamp
+Unable to get timestamp
+Unable to make fd %d a copy of %d
+Unable to open /proc/self/fd
+Unable to open libsystemd: %s
+Unable to open systemd Journal stream
+Unable to process bus messages
+Unable to read JobRemoved signal
+Unable to read reply of StartTransientUnit method
+Unable to readdir /proc/self/fd
+Unable to retrieve XDG_RUNTIME_DIR
+Unable to set FD_CLOEXEC on %ld
+Unable to set bus address
+Unable to set new PATH
+Unable to set up logging: required libsystemd method not found
+Unrecognised option %s
+WINEDEBUG
+Waiting for transient unit to be set up
+XDG_RUNTIME_DIR
+_DYNAMIC
+_GLOBAL_OFFSET_TABLE_
+_IO_stdin_used
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+_Jv_RegisterClasses
+__FRAME_END__
+__JCR_END__
+__JCR_LIST__
+__TMC_END__
+__asprintf_chk
+__asprintf_chk@@GLIBC_2.8
+__bss_start
+__ctype_b_loc
+__ctype_b_loc@@GLIBC_2.3
+__data_start
+__do_global_dtors_aux
+__do_global_dtors_aux_fini_array_entry
+__dso_handle
+__errno_location
+__errno_location@@GLIBC_2.2.5
+__frame_dummy_init_array_entry
+__gmon_start__
+__init_array_end
+__init_array_start
+__libc_csu_fini
+__libc_csu_init
+__libc_start_main
+__libc_start_main@@GLIBC_2.2.5
+__snprintf_chk
+__snprintf_chk@@GLIBC_2.3.4
+__stack_chk_fail
+__stack_chk_fail@@GLIBC_2.4
+__strdup
+__strdup@@GLIBC_2.2.5
+_edata
+_end
+_fini
+_init
+_start
+access
+access@@GLIBC_2.2.5
+app-steam-app%s-%d.scope
+apply_environment
+boolean_env
+call_gmon_start
+close@@GLIBC_2.2.5
+close_range(CLOSE_RANGE_CLOEXEC) is not supported on this kernel
+closedir
+closedir@@GLIBC_2.2.5
+completed.6952
+crtstuff.c
+data_start
+debug
+debugx
+deregister_tm_clones
+dlerror
+dlerror@@GLIBC_2.2.5
+dlopen
+dlopen@@GLIBC_2.2.5
+dlsym
+dlsym@@GLIBC_2.2.5
+done
+dup2
+dup2@@GLIBC_2.2.5
+err@@GLIBC_2.2.5
+errx
+errx@@GLIBC_2.2.5
+execvp
+execvp@@GLIBC_2.2.5
+fail
+fclose
+fclose@@GLIBC_2.2.5
+fcntl
+fcntl@@GLIBC_2.2.5
+ferror
+ferror@@GLIBC_2.2.5
+fopen64
+fopen64@@GLIBC_2.2.5
+frame_dummy
+fread
+fread@@GLIBC_2.2.5
+free
+free@@GLIBC_2.2.5
+g_debugging
+g_env_variables
+g_libsystemd
+getenv
+getenv@@GLIBC_2.2.5
+getpid
+getpid@@GLIBC_2.2.5
+gettimeofday
+gettimeofday@@GLIBC_2.2.5
+getuid
+getuid@@GLIBC_2.2.5
+invalid character for oom-score-adjust: '%c'
+invalid or out of range (0-1000) value for oom-score-adjust: string '%s', int '%i'
+libc.so.6
+libdl.so.2
+libsystemd.so.0
+main
+main.c
+my_close_range
+no sub-command!
+on_job_removed
+open64@@GLIBC_2.2.5
+opendir
+opendir@@GLIBC_2.2.5
+org.freedesktop.systemd1.Manager
+puts
+puts@@GLIBC_2.2.5
+readdir64
+readdir64@@GLIBC_2.2.5
+register_tm_clones
+sd_bus_call_method
+sd_bus_close_unref
+sd_bus_match_signal
+sd_bus_message_read
+sd_bus_message_unref
+sd_bus_new
+sd_bus_process
+sd_bus_set_address
+sd_bus_start
+sd_bus_wait
+sd_journal_stream_fd
+setenv
+setenv@@GLIBC_2.2.5
+ssa(sv)a(sa(sv))
+steam-app%s
+steam-launch-wrapper version 0.20240918.0-7-g96985ed
+strcmp
+strcmp@@GLIBC_2.2.5
+strlen
+strlen@@GLIBC_2.2.5
+strtol
+strtol@@GLIBC_2.2.5
+syscall
+syscall@@GLIBC_2.2.5
+unable to open '%s'
+unable to write all content of '%s' to '%s'
+unable to write to '%s'
+unix:path=%s
+uoss
+vwarn
+vwarn@@GLIBC_2.2.5
+vwarnx
+vwarnx@@GLIBC_2.2.5
+warn@@GLIBC_2.2.5
+warnx@@GLIBC_2.2.5
+write
+write@@GLIBC_2.2.5

@@ -28,14 +28,14 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { popup: _ } = _,
-          [__webpack_require__, _] = _.useState();
+          [_, _] = _.useState();
         return (
           _.useEffect(() => {
-            if (__webpack_require__)
+            if (_)
               return _._.RegisterPopup(_, () =>
-                __webpack_require__.SteamClient.Window.BringToFront(),
+                _.SteamClient.Window.BringToFront(),
               );
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           void 0 === _.noteid
             ? (0, _.jsx)(_, {
                 popup: _,
@@ -48,7 +48,7 @@
         );
       }
       function _(_) {
-        const { popup: _, refPopup: __webpack_require__ } = _,
+        const { popup: _, refPopup: _ } = _,
           _ = (0, _._)("#GameNotes_NoteForGame", _.display_name);
         return (0, _.jsx)(_._, {
           body_class: _.GameNotesPopup,
@@ -59,7 +59,7 @@
             popupWidth: 500,
             popupHeight: 500,
             resizable: !0,
-            refPopup: __webpack_require__,
+            refPopup: _,
             className: "TODO",
             children: [
               (0, _.jsx)(_._, {
@@ -78,8 +78,8 @@
         });
       }
       function _(_) {
-        const { noteParent: _, noteid: __webpack_require__ } = _,
-          { data: _ } = (0, _._)(_, __webpack_require__);
+        const { noteParent: _, noteid: _ } = _,
+          { data: _ } = (0, _._)(_, _);
         return _
           ? (0, _.jsx)(_._, {
               note: _,
@@ -87,7 +87,7 @@
           : null;
       }
       function _(_) {
-        const { popup: _, refPopup: __webpack_require__ } = _,
+        const { popup: _, refPopup: _ } = _,
           _ = _.noteParent,
           _ = _.useMemo(() => [(0, _._)(_)], [_]);
         return (0, _.jsx)(_._, {
@@ -97,7 +97,7 @@
           popupWidth: 900,
           popupHeight: 830,
           resizable: !0,
-          refPopup: __webpack_require__,
+          refPopup: _,
           className: "TODO",
           children: (0, _.jsx)(_._, {
             initialEntries: _,

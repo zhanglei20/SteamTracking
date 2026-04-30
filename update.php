@@ -51,6 +51,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			CURLOPT_CONNECTTIMEOUT => 10,
 			CURLOPT_SSL_VERIFYPEER => 0,
 			CURLOPT_SSL_VERIFYHOST => 0,
+			CURLOPT_COOKIE         => 'workshop_preferences=%7B%22bOptedIn%22%3Atrue%7D',
 		];
 
 		private CurlShareHandle $CurlShareHandle;
@@ -181,8 +182,8 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			{
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
-				$this->RunCommand( 'node dump_javascript_protobufs.mjs' );
-				$this->RunCommand( 'node dump_javascript_urls.mjs' );
+				$this->RunCommand( 'node tools/dump_javascript_protobufs.mjs' );
+				$this->RunCommand( 'node tools/dump_javascript_urls.mjs' );
 				$this->RunCommand( 'node tools/dump_javascript_svg.mjs' );
 			}
 
@@ -196,15 +197,15 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					'__KEY__',
 					'__TIME__',
 					'__CDN__',
-					'https://steamcommunity.com/',
-					'https://store.steampowered.com/',
+					//'https://steamcommunity.com/',
+					//'https://store.steampowered.com/',
 				],
 				[
 					'key=' . $this->APIKey,
 					'_=' . $this->CurrentTime,
 					'_cdn=fastly',
-					'https://community.fastly.steamstatic.com/',
-					'https://store.fastly.steamstatic.com/',
+					//'https://community.fastly.steamstatic.com/',
+					//'https://store.fastly.steamstatic.com/',
 				],
 				$URL
 			);
@@ -212,7 +213,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 		private function HandleResponse( string $File, string $Data, string $URL ) : bool
 		{
-			$IsSSR = str_starts_with( $File, 'store.steampowered.com/ssr/' );
+			$IsSSR = str_starts_with( $File, 'store.steampowered.com/ssr/' ) || str_starts_with( $File, 'steamcommunity.com/ssr/' ) || str_starts_with( $File, 'partner.steamgames.com/ssr/' );
 
 			if( $File === 'API/SupportedAPIList.json' )
 			{
@@ -369,11 +370,6 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 							continue;
 						}
 
-						if( str_ends_with( $File, '.css' ) )
-						{
-							continue; // TODO: Ignore css for now because biome doesn't format it
-						}
-
 						$this->CurrentSSRFiles[ $File ] = true;
 
 						$this->URLsToFetch[ ] =
@@ -388,7 +384,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			}
 			else if( $IsSSR )
 			{
-				$Data = preg_replace( '/^\s*const CLSTAMP = [0-9]+;\s*/', '', $Data );
+				// raw ssr files are not tracked, only clean versions are
 			}
 			else if( $File === '.support/archives/steam-android.apk' )
 			{
@@ -571,6 +567,34 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					return true;
 				}
 
+				// Extract json from numeric localization chunks
+				if( preg_match( '/[0-9]+\.js$/', $File ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				{
+					$JsonData = stripcslashes( $Matches[ 1 ] );
+					$JsonData = json_decode( $JsonData, true );
+
+					if( $JsonData !== null )
+					{
+						$JsonData = json_encode( $JsonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
+						file_put_contents( preg_replace( '/\.js$/', '.json', $File ), $JsonData );
+
+						// Delete old .js and c/ copies from before this extraction existed
+						if( file_exists( $File ) )
+						{
+							unlink( $File );
+						}
+
+						$CleanFile = __DIR__ . '/c/' . $OriginalFile;
+
+						if( file_exists( $CleanFile ) )
+						{
+							unlink( $CleanFile );
+						}
+
+						return true;
+					}
+				}
+
 				file_put_contents( $File, $Data );
 
 				if( $IsSSR )
@@ -597,12 +621,44 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 						}
 
 						system(
-							'node generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ) .
+							'node tools/generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ) .
 							' && npm run prettier ' . escapeshellarg( $CleanFile )
 						);
 					}
 
 					$this->DumpJavascriptFiles = true;
+				}
+				else if( $IsSSR && str_ends_with( $File, '.json' ) )
+				{
+					$JsonData = json_decode( $Data, true );
+					// TODO: strip hash from named json files: preg_replace( '/^(?!chunk-)(.+)-[A-Z0-9]{8}\.json$/', '$1.json', basename( $OriginalFile ) )
+					$CleanFile = __DIR__ . '/c/' . $OriginalFile;
+					$CleanFolder = dirname( $CleanFile );
+
+					if( !is_dir( $CleanFolder ) )
+					{
+						$this->Log( '{lightblue}Creating ' . $CleanFolder );
+
+						mkdir( $CleanFolder, 0755, true );
+					}
+
+					file_put_contents( $CleanFile, json_encode( $JsonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL );
+				}
+				else if( $IsSSR && str_ends_with( $File, '.css' ) )
+				{
+					$CleanFile = __DIR__ . '/c/' . $OriginalFile;
+					$CleanFolder = dirname( $CleanFile );
+
+					if( !is_dir( $CleanFolder ) )
+					{
+						$this->Log( '{lightblue}Creating ' . $CleanFolder );
+
+						mkdir( $CleanFolder, 0755, true );
+					}
+
+					file_put_contents( $CleanFile, $Data );
+
+					system( 'npm run prettier ' . escapeshellarg( $CleanFile ) );
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
@@ -856,7 +912,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessManifests( array $KnownUrls ) : array
 		{
-			$this->RunCommand( 'node generate_manifest_urls.mjs' );
+			$this->RunCommand( 'node tools/generate_manifest_urls.mjs' );
 
 			$URLsToFetch = [];
 			$KnownFilenames = [];
@@ -952,6 +1008,13 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 					if( $IsChunkFile( $Filename ) && !isset( $NewChunks[ $Filename ] ) )
 					{
+						// Preserve .json files whose corresponding .js chunk is still in the manifest
+						if( str_ends_with( $Filename, '.json' )
+						 && isset( $NewChunks[ str_replace( '.json', '.js', $Filename ) ] ) )
+						{
+							continue;
+						}
+
 						$FilepathOnDisk = $FileInfo->getRealPath();
 
 						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
@@ -960,6 +1023,13 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 						$TagFile = $Folder . '/' . $Filename;
 						unset( $this->ETags[ $TagFile ], $this->ETags[ $TagFile . '.unmodified' ] );
+
+						// When deleting a .json chunk, also clear ETags for the corresponding .js
+						if( str_ends_with( $Filename, '.json' ) )
+						{
+							$JsTagFile = str_replace( '.json', '.js', $TagFile );
+							unset( $this->ETags[ $JsTagFile ], $this->ETags[ $JsTagFile . '.unmodified' ] );
+						}
 
 						// Also delete the corresponding file in the clean directory if it exists
 						$CleanFilepath = __DIR__ . '/c/' . $Folder . '/' . $Filename;
@@ -981,7 +1051,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessSSRFiles() : array
 		{
-			$this->RunCommand( 'node generate_ssr_urls.mjs' );
+			$this->RunCommand( 'node tools/generate_ssr_urls.mjs' );
 
 			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_ssr.txt';
 
@@ -1062,15 +1132,32 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 						unset( $this->ETags[ $File ], $this->ETags[ $File . '.unmodified' ] );
 
 						unlink( $FilepathOnDisk );
+					}
+				}
 
-						// Also delete the corresponding file in the clean directory if it exists
-						$CleanFilepath = __DIR__ . '/c/' . $File;
+				// Clean up orphaned files in the clean directory
+				$CleanFolder = str_replace( __DIR__ . '/', __DIR__ . '/c/', $Folder );
 
-						if( file_exists( $CleanFilepath ) )
-						{
-							$this->Log( 'Deleting clean file ' . $CleanFilepath );
-							unlink( $CleanFilepath );
-						}
+				if( !is_dir( $CleanFolder ) )
+				{
+					continue;
+				}
+
+				foreach( new DirectoryIterator( $CleanFolder ) as $FileInfo )
+				{
+					if( $FileInfo->isDot() )
+					{
+						continue;
+					}
+
+					$Filename = $FileInfo->getFilename();
+
+					if( !isset( $NewChunks[ $Filename ] ) )
+					{
+						$FilepathOnDisk = $FileInfo->getRealPath();
+
+						$this->Log( 'Deleting clean file ' . $FilepathOnDisk );
+						unlink( $FilepathOnDisk );
 					}
 				}
 			}
@@ -1083,6 +1170,14 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			if( str_starts_with( $File, '/store/ssr/' ) )
 			{
 				return 'store.steampowered.com/ssr/' . basename( $File );
+			}
+			else if( str_starts_with( $File, '/steamcommunity/public/ssr/' ) )
+			{
+				return 'steamcommunity.com/ssr/' . basename( $File );
+			}
+			else if( str_starts_with( $File, '/appmgmt/ssr/' ) )
+			{
+				return 'partner.steamgames.com/ssr/' . basename( $File );
 			}
 
 			$this->Log( '{lightred}Unknown SSR path: ' . $File );

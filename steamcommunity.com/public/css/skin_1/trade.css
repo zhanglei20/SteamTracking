@@ -1510,10 +1510,6 @@ html.responsive .trade_right {
 	position: relative;
 }
 
-html.responsive .responsive_fixonscroll_ctn div.appselect {
-	margin: 0 auto;
-}
-
 .responsive_trade_prompt {
 	font-size: 22px;
 	margin: 4px auto;

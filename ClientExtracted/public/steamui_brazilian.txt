@@ -4779,7 +4779,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_WindowsCompat_Description" "O Windows está executando o Steam em modo de compatibilidade, o que pode causar problemas com alguns recursos e jogos Steam. Siga as instruções abaixo para desativar o modo de compatibilidade."
 "Steam_WindowsCompat_DoNotShowAgain" "Não exibir novamente"
 "Steam_WindowsCompat_SupportLinkDesc" "Como desativo o modo de compatibilidade?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Fechar o Steam"
 "Steam_WindowsCompat_RestartSteam" "Reinicie o Steam"
 "Steam_WindowsCompat_Continue" "Continuar"
@@ -4860,11 +4859,12 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "RescueDialog_ExitSteam" "Sair do Steam"
 
 "TransportDialog_Title" "Erro de transporte inesperado"
-"TransportDialog_Explanation" "O Steam encontrou um erro inesperado durante a inicialização (0x%errorCount%). Clique <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>aqui</a> para obter mais informações."
+"TransportDialog_Explanation" "O Steam encontrou um erro inesperado durante a inicialização (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Escolha uma das seguintes opções:"
 "TransportDialog_RestartSteam" "Reiniciar o Steam"
 "TransportDialog_RestartSteamWebHelper" "Reiniciar o steamwebhelper"
 "TransportDialog_ContinueAnyway" "Uso interno da Valve: continuar mesmo assim"
+"TransportDialog_SupportLinkDesc" "Mais informações"
 "TransportDialog_ExitSteam" "Sair do Steam"
 
 "DownloadRegion_default"				 "Desconhecida"

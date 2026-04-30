@@ -10,7 +10,7 @@ function BrowserViewHandleMessageFromParent( strMessage, strArguments )
 
 function OnAddNewHardware()
 {
-	if ( Steam.BIsUserInSteamClient() && Steam.GetClientPackageVersion() >= 1770934110 )
+	if ( Steam.BIsUserInSteamClient() && ( Steam.GetClientPackageVersion() == 0 || Steam.GetClientPackageVersion() >= 1770934110 ) )
 	{
 		g_dialogSavedHardware.Dismiss();
 		window.SteamClient.BrowserView.RegisterForMessageFromParent( BrowserViewHandleMessageFromParent );
@@ -195,7 +195,7 @@ function UserReview_Report( recommendationID, baseURL, callback )
 			}
 			else if ( results.success == 21 )
 			{
-				ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
+				ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
 			}
 			else
 			{

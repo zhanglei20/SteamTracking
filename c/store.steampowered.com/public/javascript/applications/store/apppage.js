@@ -17,250 +17,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "m-0": "_3NvasCX7YWBZpC8aibkm0E",
-        "m-1": "_37cUiZ5UzC1qHmlFJaMIAr",
-        "m-2": "_22pmrTZIf7_RclhN_Za_yk",
-        "m-3": "_2xmWKu-UddfctI38U1zCEJ",
-        "m-4": "_3zdjzY_LgHtL18eXyDfTPX",
-        "m-5": "_3Rlz0SKD-6_YdCp2lqn9vN",
-        "m-6": "_3r8BgGiIlHywi0ZHwZwQ06",
-        "m-7": "N4_w_lLzz5mWWR8OXme85",
-        "m-8": "_9RIErOlJkYsmKjLXHdh97",
-        "m-9": "_3z-GriX8_kmVXisqGPQP4v",
-        "mx-0": "_3-jQFfu-TMQAisG5aNNkWL",
-        "mx-1": "_3BMISfIZLtYzhHW9gLrAhg",
-        "mx-2": "_1qzk80q4_oPzj26TeKpTx4",
-        "mx-3": "_3chNW-hTH9zf2lM67pGxrc",
-        "mx-4": "_3frK-RoVzz1_EkxXrUWrpa",
-        "mx-5": "_3d0EunwtOvStQ2yDju5Spo",
-        "mx-6": "UjWcrV75gIWdphzCurEvP",
-        "mx-7": "_15ha2x6_NUFo1Tv6qK8b78",
-        "mx-8": "_1RQYcsmS0CjJeuzIfLKoED",
-        "mx-9": "_2HJM3M2-vhQ5LBWCEaHOwi",
-        "my-0": "_3QML-HLKdsHN3lQ1vnk92D",
-        "my-1": "_1k6paF6gdfFzTl10WpotUM",
-        "my-2": "xSx33Q9HV5Ghqo03_YD5k",
-        "my-3": "_3BN9zmVvKsCyZ0tUXADLZM",
-        "my-4": "_3uyKbdicYj323IQJk-C8pG",
-        "my-5": "IxdkD105ge_zVEjQSuOId",
-        "my-6": "PmQV_ETAJ2g68DVWZEwxP",
-        "my-7": "_2q2PjZKCT0YIQ-64rWcY5q",
-        "my-8": "atp0PA3O78rEG05sop1fy",
-        "my-9": "vwwFwt8PahbfVSHR8_dJ5",
-        "mt-0": "_109GkAGFgOGiAPmVWK0m0J",
-        "mt-1": "gcFbF6YCx-Lp1Wp7EW130",
-        "mt-2": "_1UhHoqACuXOxmpTTta5IYN",
-        "mt-3": "_21w5WD7DxSnCFirjLtmLln",
-        "mt-4": "dC3DCnUnyoa2MZdUTN--9",
-        "mt-5": "_1tHqS2kAVIkraAPe_emo_I",
-        "mt-6": "_18dOE6TP4mRA7O3QdHL6GB",
-        "mt-7": "_3PdDVSTb3FR6m2brEsXliC",
-        "mt-8": "uiWkru3-06GVOmizQovm9",
-        "mt-9": "_26krDKtA7KTg210iFtKDvs",
-        "mr-0": "_2JK4igEQnowNhIS95PjlpW",
-        "mr-1": "Xy_RM1YHfHueMwZ6Smuf-",
-        "mr-2": "jdWkWN_Qu1mD2tI-a-hQI",
-        "mr-3": "_3XSARDxZN9Hes-RhIbMx6g",
-        "mr-4": "_1_SfHa_DzTvF9H2i4FTAZb",
-        "mr-5": "_2fcrNE3XTDZqsIqbhDJ1YS",
-        "mr-6": "_1ia3k6QUCE9Yr5JEqjwWms",
-        "mr-7": "RlFjDLmdHRJ7-0VSHDiv8",
-        "mr-8": "_1wvVeysP-cva7unTTk4TZu",
-        "mr-9": "_37_fmgsAoPlUU-EINA3iw3",
-        "mb-0": "_2c4TKzSjS2WAfq0403RDx_",
-        "mb-1": "_2dEkpD7AbUbQ3ubo7no0-o",
-        "mb-2": "_2nC6jKijNLiq9As21KIMXB",
-        "mb-3": "_2XlwuDp5QXfLFNpocL5Gz_",
-        "mb-4": "_2UcIPijJhD703NF_kYKayO",
-        "mb-5": "_1sK8Yda13RgoRePOBe5B55",
-        "mb-6": "_3NZ41YJjSNKcAe_AtsA6uC",
-        "mb-7": "U9w5sJKetkMqDM2HfepP1",
-        "mb-8": "dlBjE6HR2ixI9oVDz1vWu",
-        "mb-9": "_3DrMY_KKwfmYDJgrscjEOe",
-        "ml-0": "_3zSVo1Cbe-CqaT7Tk5n00K",
-        "ml-1": "_38GBx2G5jz8pj4-KsL5pNh",
-        "ml-2": "_21QgAfqz5ZMSV25FtObliZ",
-        "ml-3": "_3FxuHgd44pkOHaYIItfdVa",
-        "ml-4": "_36ths_LJ_HGQ8jpAbKPpMt",
-        "ml-5": "_3tCyVpWgPiEL92a-_i5aQU",
-        "ml-6": "_3XYrr-ZC8Fcj0IeAxg2ZPm",
-        "ml-7": "_37tKLSzsW0G30aS_wy80eT",
-        "ml-8": "F5R9g8RmAnrtQbyPV5ix3",
-        "ml-9": "_3l1WU4ErogK0pPSexH-wDD",
-        "ms-0": "_3njyHGeybkRb9Tkhnvez7I",
-        "ms-1": "_28bOBaeV2RCbmBFHJsWm-c",
-        "ms-2": "_1FyNN6wyWXfHg1IgElwi07",
-        "ms-3": "dOT_kJXMOV19jz3wVY6Gl",
-        "ms-4": "_1KxJd_wdpzNBCEgFoLrNU-",
-        "ms-5": "_1iFDsUip64LQ5I7jDHGZWr",
-        "ms-6": "NcnhIjMDlF-VszAnqcNmc",
-        "ms-7": "_2shlV62iI1JzPuigy4vCOZ",
-        "ms-8": "_1nRQe9Tok999PkIvZs-12P",
-        "ms-9": "ScfhtCsVc5qHrAoq5F2pF",
-        "me-0": "_3P4irYonZp8u26fxPtv4Nu",
-        "me-1": "_2ySaED3jKKFQf2zMRk3Rrj",
-        "me-2": "_3EwtwYs1IJen6Q8oYLcXoU",
-        "me-3": "_2Hu5i9cD0OJwOqHspAcFG_",
-        "me-4": "_3SvsLTqeLQeoMpJDf7zKCE",
-        "me-5": "_1LVPNo6zmpoM4iWtgTVhyR",
-        "me-6": "kwh-P2VVDak-g1WdnFL7",
-        "me-7": "_2Be9rYdptPKMP6utQjbwTH",
-        "me-8": "_2xizOoRBQMN0dHkDzQZHou",
-        "me-9": "_1BSTIpDP6bWPxnp1OaBYS4",
-        "p-0": "VPuVpAjInCFCHJpawNhv",
-        "p-1": "_2EfaZiZ2t3m99ha3hRtrK_",
-        "p-2": "Cgo8G5L7D0oP0OHVGcq_D",
-        "p-3": "_2Cp-F0qCW7cAQbmpJCHIuk",
-        "p-4": "_1NBFz9qQu7S4tSVNyypXBZ",
-        "p-5": "_1l2NMjcaz7o9zoIcsd2qz6",
-        "p-6": "_2ilEUuArzl2bxfBeqH56xR",
-        "p-7": "_1pYnEk5gbmwcthm_TJ9jVl",
-        "p-8": "_1Uh6oJUxQ_yWTMS4b2nhqd",
-        "p-9": "_2U-PgKEiAsQ6I5CX1Bcivc",
-        "px-0": "_25BvgupZw3IC6Py6Q1SRSA",
-        "px-1": "_3dcUlSOoU-08fUdJFUbvvv",
-        "px-2": "_3SAnkvn0B-LMdMFaduuu-r",
-        "px-3": "_1PBYi_MJRnTnb78ieSkZdM",
-        "px-4": "ZBrEpMlUTpZXA3Jtzp7Td",
-        "px-5": "_3I3zmPr3ESw4zOzOGDASW_",
-        "px-6": "CwtOBEDDfH99-w_bGE3IG",
-        "px-7": "_3xUq6lmbysdSG1UfHHUa5Z",
-        "px-8": "_28tN4C6v8VW2ejxRY2B1tu",
-        "px-9": "_2hqyltVU3s67q6p-4i9NSC",
-        "py-0": "_39VRdJWq8EW9_zxn56glGF",
-        "py-1": "_3L7uZ9UMb8zNWkAfISDalH",
-        "py-2": "_17dh99ftEgW6MqUUyBEx9n",
-        "py-3": "_3rxHYJ-yn5HnVZXyo_UIr6",
-        "py-4": "_1e1cmGasx_GOrdyo8scISG",
-        "py-5": "_3keWdP7JZkvrPRNcvaiLCP",
-        "py-6": "_3PN00WLNv23XSFFf8pTRJA",
-        "py-7": "_3juWwdcO32MpzR8tsdQagh",
-        "py-8": "JiHYKdA6XyJ0Ptq-KhzCw",
-        "py-9": "noBlhkZf0RHZhYXB-u8Cn",
-        "pt-0": "_3hle3vTNIOsz-LDRsBRY8e",
-        "pt-1": "_2QX6zl8-FIRfsfskDVA813",
-        "pt-2": "_3tkNlRPf8fhD5yVwtPBwVh",
-        "pt-3": "_1_Rc7SQfN5Qkd681XnezIM",
-        "pt-4": "_2FUhFn7oE7LBNBVeff9nq_",
-        "pt-5": "_2e8IX6nBIj88MV99s7B1Lg",
-        "pt-6": "_15WvEWMiZeootsczTe36Jy",
-        "pt-7": "_3ziqLpUqFx5xC0N3ooqjiH",
-        "pt-8": "_3GaJ_-CpZ5lNNdCbGXUXg7",
-        "pt-9": "_2MtXtdpOAGbSL6TlapM8EC",
-        "pr-0": "_2Ympx2cMMCrdz4V95G2ArW",
-        "pr-1": "_1bNQ5TKTK_j6u8lPYqL0yW",
-        "pr-2": "_2uSxeDaa_JQTOmz7yV0k8E",
-        "pr-3": "m4LxyG5E129U0MbPfIf2T",
-        "pr-4": "_3Do03S0ZKwn8pLCE8Qrvf7",
-        "pr-5": "_1C5Zb1kX29DZRamONPSGC6",
-        "pr-6": "_11ql9N5bOqmptua-6sFC5f",
-        "pr-7": "_2fJem-j6vjo97DOzx4R0EL",
-        "pr-8": "_2Dzi0GwXUgs6NmegaXqHo_",
-        "pr-9": "_1nyIrDj-Uw95ptRpWlupdl",
-        "pb-0": "_2smsNZjXQrK7RAddM9a-pT",
-        "pb-1": "_3tCFi-k_DFQJBNrBUX5eSf",
-        "pb-2": "_1-lbnfCiPUSAWURO2UI3yE",
-        "pb-3": "_3aguvGoDSU7aRkd1Pur1eb",
-        "pb-4": "_3Kq594Fr1cFP11xSUJXOTu",
-        "pb-5": "_2kn-Aabzv0bclc3Cko9_kY",
-        "pb-6": "_2Hg_TxQ7ZUT2jmQhEgZFZC",
-        "pb-7": "KjcAwdvbyLZzlxD_leTPh",
-        "pb-8": "_3R4_1rHsnIpPTSCsL5Hom6",
-        "pb-9": "_2qBwHRV-c4v57-RsAc4AOV",
-        "pl-0": "_3Sp8OG8KyWGRbDbGEZNtrB",
-        "pl-1": "uslfTkLL92njN_sKYxRuZ",
-        "pl-2": "_1SbormTNbavQKl4LhoMRr7",
-        "pl-3": "_7zDvGqiHcip7DNtejXiKQ",
-        "pl-4": "_1_K_p2jSw_PhXIjkgs-u39",
-        "pl-5": "_3cpeFONZg59MSkpRb37D3a",
-        "pl-6": "_3yAkjKQ0-lA5EvX8FC25gk",
-        "pl-7": "_3PV5AGRGFKuO_PmlQysycB",
-        "pl-8": "_3pycPOPwDSDTSqjC-9NkYE",
-        "pl-9": "H-SWK55qJtoBpyxa-msy0",
-        "ps-0": "_19TCeDxrlkMt1KFHsMZHWZ",
-        "ps-1": "gpKT68PBrX7DZDHaRwvHr",
-        "ps-2": "_2H7vgbK2JbmsTPE5YJ49Di",
-        "ps-3": "_3ZKIkWDed2-7jp2Ltw8JNK",
-        "ps-4": "T7pWU2K-ISGDGkIfHakgE",
-        "ps-5": "kTAojgnIXoRu9N3Xmtvu6",
-        "ps-6": "_2FxHVaVxFxbe-gywGTBYLr",
-        "ps-7": "_1OIzwZrMIFGImS2JjitYmZ",
-        "ps-8": "_3CFOeSMptqFOpNamNhVKXi",
-        "ps-9": "_2-Km8hDA6U_3Ushrcpw5fF",
-        "pe-0": "_27a8xQ-ReVtGIErEP4KSqS",
-        "pe-1": "_3Z8vgpLcNnDj_CKZt5t3iC",
-        "pe-2": "_1r4cicsHCcd-zPwDUlnDne",
-        "pe-3": "_1W06WZT9fE3UheEUPZ6j-T",
-        "pe-4": "_1SnH8kPcm7zLqpn9jh3213",
-        "pe-5": "_3a7Hx9u7-0RusYJCnEINZS",
-        "pe-6": "_3GAeIsOY_x_QohkaGqfan9",
-        "pe-7": "n-dZaqQUadHY-vI9Wg-dt",
-        "pe-8": "_2UeKFA5h3vFPE0V9JPEIbE",
-        "pe-9": "_1cPkY-6VYkADuCungu6r78",
-        Width: "_3-4uPm6iJyvxHpK3DT7x6L",
-        MaxWidth: "_3IiNa2WD-MUmLrad0-RzSC",
-        MinWidth: "_3AocqvUfA7f6sPEQVWiDCC",
-        Height: "_1u7tlq5OcUVR8p7-ic_ZVw",
-        MaxHeight: "_3N3KVUKs9soeYCWc3BpHkM",
-        MinHeight: "_3ugvZ2nny7eChIYJuwKYO-",
-        FlexBasis: "_3swtpIrvrz0futGxsN8SLc",
-        FlexGrow: "_1jkRBcprAG-KoLJ4aRxwVr",
-        FlexShrink: "_1TqZRAPkIEpJ8piAHaVHvn",
-        "Radius-none": "_2sNdnlgM-A9e5AfdXG2kmr",
-        "Radius-sm": "_1dhvtWTnQHytZWk5i-f-We",
-        "Radius-md": "_3C--qZDFlz6NtkjDDeT2SG",
-        "Radius-lg": "_2RYinm9bxw0vanLueNM8f-",
-        "Radius-full": "_1ZmWikEporw6-kCli580bF",
-        Cursor: "_1GQDAOi2OOMjJ6Nj-opqk8",
-        Position: "_3C1PO6CmOdCmEpWqSSnfgG",
-        Inset: "_3nwiM11zkcuihmteaUVqjN",
-        GridColumn: "MA0AWq66E_Bq_xW4BQWnH",
-        GridColumnStart: "_20b31iGeCAQ2i3C_BMDzpZ",
-        GridColumnEnd: "_3M7MhFYmQEKpfvkfbkxPyt",
-        GridRow: "_3kxN6A0fo06zQYu6QqPBl2",
-        GridRowStart: "Ln1Z3B34njL8P6RMbyzSc",
-        GridRowEnd: "_3HjlrI3alztQQ7yy_VjZgU",
-        GridArea: "uh0Q7gKQw3ZgTwvd5mQiZ",
-        Background: "_1i6AhxSEgz1FAUyiEt1Xsk",
-        Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
-        ZIndex: "_3MdwIbGpGWeiE-O2owd3VF",
-        Display: "_1jz8vOMNXWjuOs8PNx6twM",
-        Elevation: "_51vKfcQCBgoT8lSk1q3iX",
-        Border: "_2lajVjbyrA4lq9xF0X4NQW",
-        BorderColor: "_1x6gylcu6acqj_bRoqrFHf",
-        Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
-        AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
-        JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
-        TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Text: "f6hU22EA7Z8peFWZVBJU",
-        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
-        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
-        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
-        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
-        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
-        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
-        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
-        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
-        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
-        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
-        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
-        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
-        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
-        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
-        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
-        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
-        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
-        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
-        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
+        Spoiler: "_2HIF4E13yuhn3QbY2I5vlt",
       };
     },
     chunkid: (module) => {
@@ -405,6 +162,18 @@
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+        BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
+        "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
+        "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
+        "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
+        "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
+        "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
+        "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
+        "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
+        "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
+        focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
+        hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
       };
     },
     chunkid: (module) => {
@@ -438,6 +207,7 @@
         Points: "_3k_jxlKBddOAxgSknpHNTq",
         IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
         Footer: "_164mmLkSJ91cXzABhIrlZq",
+        PointsArea: "_3CsHeO3G5c1fQY9Xx4lgUI",
         Column: "_2ihFd-KfZvzA81NOi3SEEJ",
         Left: "_1v0jLHAK-8P4IONBwuF4kv",
         BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
@@ -460,11 +230,24 @@
         SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
         SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
         InitialLoading: "_1ZKr7z5ZdQghkZZCnjx455",
+        Loading: "fGpQ7K-RTxeDJfNELWaCD",
         ErrorContainer: "_1SebPOeiRaEqfXHg_dsaYQ",
         ErrorText: "ok8moMj5E4XI25uTRhAHN",
         PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
         PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
         NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
+        BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
+        "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
+        "ItemFocusAnim-darkGreySettings": "XvVy1qhFrJwjYK25wo2O6",
+        "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
+        "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
+        "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
+        "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
+        "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
+        "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
+        focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
+        hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
       };
     },
     chunkid: (module) => {
@@ -494,6 +277,18 @@
         PurchaseNoticeImage: "_19Tk4I5-EL-sVXsUaa3hwU",
         Tilt: "_3dAAfHHQ8xq74OLmQXo9V4",
         VROnly: "_11BzgaR-a1UCE-aOC3bMCD",
+        BackgroundAnimation: "_1J1jrrETaG-3_8wMEeqpxY",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3yvzhClP6mJaghIH0GHKiv",
+        "ItemFocusAnim-darkerGrey": "_1czfyTnV7yzFQJdFsTmDJT",
+        "ItemFocusAnim-darkGreySettings": "_20J2LUfIRwm4TI5vyu-UFE",
+        "ItemFocusAnim-darkGrey": "_1_qHMTE8sRRjCMuxLoZMl2",
+        "ItemFocusAnim-grey": "jagchSyBiPamV4PALsowV",
+        "ItemFocusAnim-translucent-white-10": "_3ZVEkEzGePMK1PBQ_GpIb1",
+        "ItemFocusAnim-translucent-white-20": "_38eVNkJEvCSuIwBUyo7Qrg",
+        "ItemFocusAnimBorder-darkGrey": "_2C7zuRFt6F6RcgTOiWBVnr",
+        "ItemFocusAnim-green": "_1IMTjdceyCiJjpowdAaHgY",
+        focusAnimation: "_1tLo_FTRTZsAztlpw36eHl",
+        hoverAnimation: "_3oGieUcvOTZppk7m3PHA6L",
       };
     },
     chunkid: (module) => {
@@ -562,7 +357,6 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
-        "duration-app-launch": "800ms",
         ParentWidgetContainer: "_2fynndXXlBKZiRaoG9GuDP",
         ParentCapsuleImageContainer: "mcjC8_8ivZdyhU3QKlFrN",
         ParentCapsuleImage: "_2Ti5cIvl7SlIoK7eSIapbL",
@@ -589,6 +383,18 @@
         TwoWide: "_25IMXSN3XeXOPiu-sYHV1U",
         Placeholder: "_1tX6f_kWb07D_qLWgL7-Ah",
         SeeAllLink: "_1SnxJyZ5foWgNRCNLmKm6H",
+        BackgroundAnimation: "_1upvVPGAs4gPDPuPdiwYLw",
+        "ItemFocusAnim-darkerGrey-nocolor": "HZYxQObJqyV14ZPiEV6Lk",
+        "ItemFocusAnim-darkerGrey": "_2ezINEgZ6JsrAsAeqd9me7",
+        "ItemFocusAnim-darkGreySettings": "_3hMFH9HQiviY-7U9Fku-Bk",
+        "ItemFocusAnim-darkGrey": "_1X6dhTonzVQgrOwVCmKMAA",
+        "ItemFocusAnim-grey": "_10lr_URcMaBKxQoDCDSiW9",
+        "ItemFocusAnim-translucent-white-10": "_2qAvXvRSJ5YY0wBBIwBCVs",
+        "ItemFocusAnim-translucent-white-20": "_1jA2vfdCnoLEOAQXduMla",
+        "ItemFocusAnimBorder-darkGrey": "_24pyz7i5duUDYEkH6dcM8a",
+        "ItemFocusAnim-green": "_1Z9fl4e9G4PQnLxyIHXNKG",
+        focusAnimation: "_268HCaPK9gD6A2Mw_o7sqP",
+        hoverAnimation: "DbNTwkzqEh5siXLRNvICD",
       };
     },
     chunkid: (module) => {
@@ -677,538 +483,16 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = [
-          {
-            prop: "margin",
-            responsive: !0,
-            className: (_) => _[`m-${_}`],
-          },
-          {
-            prop: "marginX",
-            responsive: !0,
-            className: (_) => _[`mx-${_}`],
-          },
-          {
-            prop: "marginY",
-            responsive: !0,
-            className: (_) => _[`my-${_}`],
-          },
-          {
-            prop: "marginTop",
-            responsive: !0,
-            className: (_) => _[`mt-${_}`],
-          },
-          {
-            prop: "marginRight",
-            responsive: !0,
-            className: (_) => _[`mr-${_}`],
-          },
-          {
-            prop: "marginBottom",
-            responsive: !0,
-            className: (_) => _[`mb-${_}`],
-          },
-          {
-            prop: "marginLeft",
-            responsive: !0,
-            className: (_) => _[`ml-${_}`],
-          },
-          {
-            prop: "marginStart",
-            responsive: !0,
-            className: (_) => _[`ms-${_}`],
-          },
-          {
-            prop: "marginEnd",
-            responsive: !0,
-            className: (_) => _[`me-${_}`],
-          },
-        ],
-        _ = [
-          ..._,
-          {
-            prop: "padding",
-            responsive: !0,
-            className: (_) => _[`p-${_}`],
-          },
-          {
-            prop: "paddingX",
-            responsive: !0,
-            className: (_) => _[`px-${_}`],
-          },
-          {
-            prop: "paddingY",
-            responsive: !0,
-            className: (_) => _[`py-${_}`],
-          },
-          {
-            prop: "paddingTop",
-            responsive: !0,
-            className: (_) => _[`pt-${_}`],
-          },
-          {
-            prop: "paddingRight",
-            responsive: !0,
-            className: (_) => _[`pr-${_}`],
-          },
-          {
-            prop: "paddingBottom",
-            responsive: !0,
-            className: (_) => _[`pb-${_}`],
-          },
-          {
-            prop: "paddingLeft",
-            responsive: !0,
-            className: (_) => _[`pl-${_}`],
-          },
-          {
-            prop: "paddingStart",
-            responsive: !0,
-            className: (_) => _[`ps-${_}`],
-          },
-          {
-            prop: "paddingEnd",
-            responsive: !0,
-            className: (_) => _[`pe-${_}`],
-          },
-          {
-            prop: "width",
-            responsive: !0,
-            className: _.Width,
-            cssProperty: "--width",
-          },
-          {
-            prop: "minWidth",
-            responsive: !0,
-            className: _.MinWidth,
-            cssProperty: "--min-width",
-          },
-          {
-            prop: "maxWidth",
-            responsive: !0,
-            className: _.MaxWidth,
-            cssProperty: "--max-width",
-          },
-          {
-            prop: "height",
-            responsive: !0,
-            className: _.Height,
-            cssProperty: "--height",
-          },
-          {
-            prop: "minHeight",
-            responsive: !0,
-            className: _.MinHeight,
-            cssProperty: "--min-height",
-          },
-          {
-            prop: "maxHeight",
-            responsive: !0,
-            className: _.MaxHeight,
-            cssProperty: "--max-height",
-          },
-          {
-            prop: "flexBasis",
-            responsive: !0,
-            className: _.FlexBasis,
-            cssProperty: "--flex-basis",
-          },
-          {
-            prop: "flexGrow",
-            responsive: !0,
-            className: _.FlexGrow,
-            cssProperty: "--flex-grow",
-          },
-          {
-            prop: "flexShrink",
-            responsive: !0,
-            className: _.FlexShrink,
-            cssProperty: "--flex-shrink",
-          },
-          {
-            prop: "radius",
-            responsive: !0,
-            className: (_) => _[`Radius-${_}`],
-          },
-          {
-            prop: "cursor",
-            responsive: !0,
-            className: _.Cursor,
-            cssProperty: "--cursor",
-          },
-          {
-            prop: "position",
-            responsive: !0,
-            className: _.Position,
-            cssProperty: "--position",
-          },
-          {
-            prop: "inset",
-            responsive: !0,
-            className: _.Inset,
-            cssProperty: (_) => ["--inset", (0, _._)(_)],
-          },
-          {
-            prop: "gridColumn",
-            responsive: !0,
-            className: _.GridColumn,
-            cssProperty: "--grid-column",
-          },
-          {
-            prop: "gridColumnStart",
-            responsive: !0,
-            className: _.GridColumnStart,
-            cssProperty: "--grid-column-start",
-          },
-          {
-            prop: "gridColumnEnd",
-            responsive: !0,
-            className: _.GridColumnEnd,
-            cssProperty: "--grid-column-end",
-          },
-          {
-            prop: "gridRow",
-            responsive: !0,
-            className: _.GridRow,
-            cssProperty: "--grid-row",
-          },
-          {
-            prop: "gridRowStart",
-            responsive: !0,
-            className: _.GridRowStart,
-            cssProperty: "--grid-row-start",
-          },
-          {
-            prop: "gridRowEnd",
-            responsive: !0,
-            className: _.GridRowEnd,
-            cssProperty: "--grid-row-end",
-          },
-          {
-            prop: "gridArea",
-            responsive: !0,
-            className: _.GridArea,
-            cssProperty: "--grid-area",
-          },
-          {
-            prop: "alignSelf",
-            responsive: !0,
-            className: _.AlignSelf,
-            cssProperty: "--align-self",
-          },
-          {
-            prop: "justifySelf",
-            responsive: !0,
-            className: _.JustifySelf,
-            cssProperty: "--justify-self",
-          },
-          {
-            prop: "background",
-            responsive: !0,
-            className: _.Background,
-            cssProperty: (_) => ["--background", (0, _._)(_)],
-          },
-          {
-            prop: "overflow",
-            responsive: !0,
-            className: _.Overflow,
-            cssProperty: "--overflow",
-          },
-          {
-            prop: "zIndex",
-            responsive: !0,
-            className: _.ZIndex,
-            cssProperty: "--z-index",
-          },
-          {
-            prop: "display",
-            responsive: !0,
-            className: _.Display,
-            cssProperty: "--display",
-          },
-          {
-            prop: "elevation",
-            responsive: !0,
-            className: _.Elevation,
-            dataProperty: "elevation",
-          },
-          {
-            prop: "border",
-            responsive: !0,
-            className: _.Border,
-            cssProperty: "--border",
-          },
-          {
-            prop: "borderColor",
-            responsive: !0,
-            className: [_.Border, _.BorderColor].join(" "),
-            cssProperty: (_) => ["--border-color", (0, _._)(_)],
-          },
-          {
-            prop: "outline",
-            responsive: !0,
-            className: _.Outline,
-            cssProperty: (_) => ["--outline-color", (0, _._)(_)],
-          },
-          {
-            prop: "textAlign",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-        ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
-      function _(_, _) {
-        if ("object" != typeof _) return _;
-        for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
-        return _.initial;
-      }
-      const _ = {
-        0: !0,
-        1: !0,
-        2: !0,
-        3: !0,
-        4: !0,
-        5: !0,
-        6: !0,
-        7: !0,
-        8: !0,
-        9: !0,
-      };
-      function _(_, _) {
-        return (function (_, _, _) {
-          const _ = [],
-            _ = {},
-            _ = {},
-            { extracted: _, remaining: _ } = (function (_, _) {
-              const _ = {
-                remaining: {
-                  ..._,
-                },
-                extracted: {},
-              };
-              for (const _ of _) {
-                const _ = _.prop;
-                _ in _.remaining &&
-                  ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
-              }
-              return _;
-            })(_, _);
-          for (const _ of _) {
-            if (!(_.prop in _)) continue;
-            let _ = _[_.prop];
-            if (void 0 !== _) {
-              if ((_.responsive && (_ = _(_, _.formFactor)), _.className)) {
-                if (
-                  !_.cssProperty &&
-                  !_.dataProperty &&
-                  "string" == typeof _.className &&
-                  !_
-                )
-                  continue;
-                const _ =
-                  "function" == typeof _.className
-                    ? _.className(_)
-                    : _.className;
-                _.push(_);
-              }
-              if (_.cssProperty)
-                if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_, _);
-                  if (_.length && Array.isArray(_[0]))
-                    __webpack_require__.forEach(([_, _]) => (_[_] = _));
-                  else {
-                    const _ = _;
-                    _[_[0]] = _[1];
-                  }
-                } else _[_.cssProperty] = _;
-              if (_.dataProperty)
-                if ("function" == typeof _.dataProperty) {
-                  const [_, _] = _.dataProperty(_);
-                  _[`data-${_}`] = _;
-                } else _[`data-${_.dataProperty}`] = _;
-            }
-          }
-          return (
-            "className" in _ &&
-              "string" == typeof _.className &&
-              _.push(_.className),
-            "style" in _ &&
-              _.style &&
-              "object" == typeof _.style &&
-              Object.assign(_, _.style),
-            {
-              ..._,
-              ..._,
-              className: _.join(" "),
-              style: _,
-            }
-          );
-        })(_, _, {
-          formFactor: (0, _._)(),
-        });
-      }
-      function _(_) {
-        return (function (_) {
-          return !!_[_];
-        })(_)
-          ? `var(--spacing-${_})`
-          : _;
-      }
-      function _(_) {
-        if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
-        const [_, __webpack_require__] = _.split(" ");
-        return `rgb( from ${`var(--color-${_})`} r g b / ${__webpack_require__} )`;
-      }
-      function _(_, _) {
-        return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
-      }
-      function _(_) {
-        return _.startsWith("text") ? `var(--color-${_})` : _(_);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _ = "span",
-            ref: __webpack_require__,
-            className: _,
-            ..._
-          } = _,
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: __webpack_require__,
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()(_.Text, _),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ...[
-          {
-            prop: "weight",
-            responsive: !0,
-            className: _.TextWeight,
-            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_, _.contrast ?? "body"),
-            ],
-          },
-          {
-            prop: "contrast",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_.color ?? "text-body", _),
-            ],
-          },
-          {
-            prop: "truncate",
-            className: _.Truncate,
-          },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: _.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: _.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`TextSize-${_}`],
-        },
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { underline: _ = "auto", ...__webpack_require__ } = _;
-        return (0, _.jsx)("a", {
-          ...(0, _._)(
-            {
-              ...__webpack_require__,
-              underline: _,
-              className: _.TextLink,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "underline",
-          className: (_) => _[`Underline-${_}`],
-        },
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_, _.UnstyledButton),
-          ...__webpack_require__,
+          ..._,
         });
       };
     },
@@ -1225,7 +509,7 @@
       function _(_) {
         const {
           title: _,
-          navKey: __webpack_require__,
+          navKey: _,
           seeAllLink: _,
           appIDs: _,
           sortOrder: _,
@@ -1248,7 +532,7 @@
               ],
             }),
             (0, _.jsx)(_._, {
-              navKey: __webpack_require__,
+              navKey: _,
               appIDs: _,
               maxItemCount: 4,
               sortOrder: _,
@@ -1284,7 +568,7 @@
       function _(_) {
         const {
             navKey: _,
-            classes: __webpack_require__,
+            classes: _,
             appIDs: _,
             sortOrder: _,
             scorePenaltyIfOwned: _,
@@ -1310,7 +594,7 @@
         }, [_, _, _, _, _, _]);
         const _ = _;
         return (0, _.jsx)(_._, {
-          className: (0, _._)(__webpack_require__, {
+          className: (0, _._)(_, {
             SaleSectionCarousel: !0,
             [_().Carousel]: !0,
             [_().ItemCount1]: _ && 1 == _.length,
@@ -1341,7 +625,7 @@
       function _(_) {
         const {
             appID: _,
-            size: __webpack_require__,
+            size: _,
             creatorClanAccountID: _,
             strFeaturingMsg: _,
           } = _,
@@ -1350,7 +634,7 @@
           return (0, _.jsx)("div", {
             className: (0, _._)({
               [_().Capsule]: !0,
-              [_().Small]: "small" == __webpack_require__,
+              [_().Small]: "small" == _,
             }),
           });
         if (!_)
@@ -1367,7 +651,7 @@
           className: (0, _._)({
             [_().Capsule]: !0,
             [_().TwoWide]: _,
-            [_().Small]: "small" == __webpack_require__,
+            [_().Small]: "small" == _,
           }),
           children: (0, _.jsx)(_._, {
             capsule: _,
@@ -1461,7 +745,7 @@
           (_[(_.LNY2020 = 2)] = "LNY2020");
       })(_ || (_ = {}));
       const _ = (_, _) => {
-          const { anim: __webpack_require__ } = (0, _._)({
+          const { anim: _ } = (0, _._)({
               anim: 1,
               from: {
                 anim: 0,
@@ -1509,7 +793,7 @@
                   (function (_, _) {
                     _.Default;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioY: _,
                       rotationRatioX: _,
                       rotationRatioZ: _,
@@ -1525,20 +809,20 @@
                       filter: _,
                       flRandom: 0,
                       transform: _.interpolate((_) => {
-                        const _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
+                        const _ = _ * _ * _,
+                          _ = _ * _ * _,
+                          _ = _ * _ * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateY(${_}rad) rotateX(${_}rad) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ),
                 _ = _.map((_) =>
                   (function (_, _) {
                     if (Math.random() > 0.1) return null;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioZ: _,
                       yRange: _,
                       xRange: _,
@@ -1552,18 +836,18 @@
                       filter: _,
                       flRandom: Math.random(),
                       transform: _.interpolate((_) => {
-                        const _ = ((_ * __webpack_require__) / 4) * _,
+                        const _ = ((_ * _) / 4) * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ).filter((_) => !!_);
               return {
                 rgParticleStyles: _,
                 rgStreamerStyles: _,
               };
-            }, [_, _, __webpack_require__]);
+            }, [_, _, _]);
           return _;
         },
         _ = {
@@ -1580,7 +864,7 @@
         },
         _ = ({ eType: _ }) => {
           _.Gold, _.LNY2020;
-          const [_, __webpack_require__] = (function () {
+          const [_, _] = (function () {
             const [_, _] = (0, _.useState)(null),
               _ = (0, _.useCallback)((_) => {
                 _ &&
@@ -1642,7 +926,7 @@
               bottom: 0,
               overflow: "hidden",
             },
-            ref: __webpack_require__,
+            ref: _,
             children: [
               _,
               _.map((_, _) =>
@@ -2038,7 +1322,7 @@
       function _(_) {
         const {
             trackingLocation: _,
-            strClassName: __webpack_require__,
+            strClassName: _,
             bViewAllShowInfiniteScroll: _,
           } = _,
           [_, _, _] = (0, _._)(),
@@ -2064,14 +1348,15 @@
           { last_update_event: _, rgEvents: _ } = (function (_) {
             const {
                 appid: _,
-                event_customization: __webpack_require__,
+                event_customization: _,
                 partnerEventStore: _,
                 trackingLocation: _,
                 fnEventShowModal: _,
               } = _,
               [_, _] = (0, _.useState)(null),
               [_, _] = (0, _.useState)(null),
-              [_] = _("emgid", void 0);
+              [_] = _("emgid", void 0),
+              [_] = _("announce_gid", void 0);
             return (
               (0, _.useEffect)(() => {
                 const _ = (0, _._)("EventWebRowEmbed");
@@ -2104,7 +1389,7 @@
                       _,
                       0,
                       2,
-                      __webpack_require__,
+                      _,
                     );
                     if ((_(_), _ && _ && _.length > 0)) {
                       const _ = _._.Get().GetTracker();
@@ -2119,23 +1404,23 @@
                     }
                   })();
                 }
-              }, [_, _, __webpack_require__, _, _, _]),
+              }, [_, _, _, _, _]),
               (0, _.useEffect)(() => {
-                if (null != _ && _) {
-                  const _ = _.find((_) => _.GID === _);
+                if (null != _ && (_ || _)) {
+                  const _ = _.find(
+                    (_) => _.GID === _ || _.AnnouncementGID == _,
+                  );
                   if (_) _(_);
                   else {
                     (async () => {
-                      const _ = await _.LoadPartnerEventFromClanEventGID(
-                        _,
-                        _,
-                        0,
-                      );
+                      const _ = _
+                        ? await _.LoadPartnerEventFromClanEventGID(_, _, 0)
+                        : await _.LoadPartnerEventFromAnnoucementGID(_, _, 0);
                       _ && _([..._, _]);
                     })();
                   }
                 }
-              }, [_, _, _, _, _, _]),
+              }, [_, _, _, _, _, _, _]),
               {
                 last_update_event: _,
                 rgEvents: _,
@@ -2146,16 +1431,9 @@
             fnEventShowModal: _,
           }),
           _ = (0, _.useCallback)(() => {
-            const {
-                event_gid: _,
-                announcement_gid: __webpack_require__,
-                clan_account_id: _,
-              } = _,
+            const { event_gid: _, announcement_gid: _, clan_account_id: _ } = _,
               _ = _._.Get().GetTracker();
-            _ && _ && _.MarkEventRead(_, _, _) && _.Flush(),
-              _(__webpack_require__),
-              _(null),
-              _();
+            _ && _ && _.MarkEventRead(_, _, _) && _.Flush(), _(_), _(null), _();
           }, [_, _, _]);
         (0, _.useEffect)(
           () => (
@@ -2176,7 +1454,7 @@
               : void 0,
           _ = window.screen.width <= _ ? 1 : 2;
         return (0, _.jsxs)(_._, {
-          className: __webpack_require__,
+          className: _,
           "flow-children": "row",
           children: [
             (0, _.jsx)(_._, {
@@ -2250,7 +1528,7 @@
       function _(_) {
         const {
             appid: _,
-            partnerEventStore: __webpack_require__,
+            partnerEventStore: _,
             trackingLocation: _,
             announcementGID: _,
             eventModel: _,
@@ -2263,7 +1541,7 @@
           appid: _,
           trackingLocation: _,
           announcementGID: _,
-          partnerEventStore: __webpack_require__,
+          partnerEventStore: _,
           eventModel: _,
           closeModal: _,
         });
@@ -2290,17 +1568,8 @@
         });
       }
       function _(_) {
-        const {
-            nUpdateTime: _,
-            announcementGID: __webpack_require__,
-            onClick: _,
-          } = _,
-          _ = __webpack_require__
-            ? _._.GetClanEventFromAnnouncementGID(__webpack_require__)
-            : null,
-          _ = (_) => {
-            _?.(), _.stopPropagation(), _.preventDefault();
-          },
+        const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
+          _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
           _ = window.screen.width > 500 ? _._ : _._;
         return (0, _.jsxs)("div", {
           children: [
@@ -2311,7 +1580,9 @@
               className: _.SectionButtonCtn,
               children: (0, _.jsx)("div", {
                 className: _.SectionButton,
-                onClick: _,
+                onClick: (_) => {
+                  _?.(), _.stopPropagation(), _.preventDefault();
+                },
                 children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
@@ -2322,7 +1593,9 @@
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 children: (0, _.jsx)(_, {
                   event: _,
-                  onClick: _,
+                  onClick: (_) => {
+                    _?.(), _.stopPropagation(), _.preventDefault();
+                  },
                 }),
               }),
           ],
@@ -2553,8 +1826,8 @@
             "EPurchaseNoticeType_VRSupported");
       })(_ || (_ = {}));
       const _ = function (_) {
-        const { appid: _, type: __webpack_require__ } = _;
-        switch (__webpack_require__) {
+        const { appid: _, type: _ } = _;
+        switch (_) {
           case _.EPurchaseNoticeType_ControllerRequired:
             return (0, _.jsx)(_, {
               appid: _,
@@ -2585,7 +1858,7 @@
       function _(_) {
         const {
             clanID: _,
-            title: __webpack_require__,
+            title: _,
             seeAllLink: _,
             appIDs: _,
             rgAppIDToCreatorIDs: _,
@@ -2616,7 +1889,7 @@
           ? (0, _.jsx)(_, {
               creatorHomeType: _,
               clanID: _,
-              titleOverride: __webpack_require__,
+              titleOverride: _,
               seeAllLink: _,
               appIDs: _,
               mapAppIDsToCreatorClanID: _,
@@ -2630,7 +1903,7 @@
       function _(_) {
         const {
             creatorHomeType: _,
-            clanID: __webpack_require__,
+            clanID: _,
             titleOverride: _,
             seeAllLink: _,
             appIDs: _,
@@ -2638,8 +1911,8 @@
             strFeatureFirstAppMsg: _,
           } = _,
           _ = ((0, _._)(940), (0, _._)()),
-          [_, _] = (0, _._)(__webpack_require__),
-          { creatorHome: _ } = (0, _._)(__webpack_require__),
+          [_, _] = (0, _._)(_),
+          { creatorHome: _ } = (0, _._)(_),
           _ = _?.GetCreatorHomeURL(_),
           [_, _] = _.useState(void 0);
         if (!_) return;
@@ -2692,7 +1965,7 @@
                     Boolean(!_ && _) &&
                       (0, _.jsx)(_._, {
                         className: _().CarouselFollowButton,
-                        clanAccountID: __webpack_require__,
+                        clanAccountID: _,
                       }),
                     (0, _.jsx)(_._, {
                       url: _,
@@ -2721,7 +1994,7 @@
                   (0, _.jsx)("div", {
                     className: _().CarouselFollowSection,
                     children: (0, _.jsx)(_, {
-                      clanID: __webpack_require__,
+                      clanID: _,
                       creatorName: _.GetName(),
                       creatorUrl: _,
                     }),
@@ -2732,9 +2005,9 @@
         });
       }
       function _(_) {
-        const { creatorHomeType: _, clanID: __webpack_require__ } = _,
-          [_, _] = (0, _._)(__webpack_require__),
-          { creatorHome: _ } = (0, _._)(__webpack_require__),
+        const { creatorHomeType: _, clanID: _ } = _,
+          [_, _] = (0, _._)(_),
+          { creatorHome: _ } = (0, _._)(_),
           _ = _?.GetCreatorHomeURL(_);
         if (_)
           return (0, _.jsxs)("div", {
@@ -2757,7 +2030,7 @@
                 }),
               }),
               (0, _.jsx)(_, {
-                clanID: __webpack_require__,
+                clanID: _,
                 creatorName: _.GetName(),
                 creatorUrl: _,
               }),
@@ -2765,11 +2038,7 @@
           });
       }
       function _(_) {
-        const {
-          clanID: _,
-          creatorName: __webpack_require__,
-          creatorUrl: _,
-        } = _;
+        const { clanID: _, creatorName: _, creatorUrl: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().ClanInfoColumn,
           children: [
@@ -2777,10 +2046,7 @@
               className: _().ClanFollowTitle,
               children: (0, _.jsx)("a", {
                 href: _,
-                children: (0, _._)(
-                  "#StoreApp_FollowCreator",
-                  __webpack_require__,
-                ),
+                children: (0, _._)("#StoreApp_FollowCreator", _),
               }),
             }),
             (0, _.jsx)("div", {
@@ -2805,7 +2071,7 @@
       function _(_) {
         let {
             _: _,
-            dashManifests: __webpack_require__,
+            dashManifests: _,
             hlsManifest: _,
             screenshot: _,
             title: _,
@@ -2845,7 +2111,7 @@
               audioMuted: _,
               setAudioMuted: _.GetSetAudioMuted(),
               children: (0, _.jsx)(_._, {
-                dashManifests: __webpack_require__,
+                dashManifests: _,
                 hlsManifest: _,
                 screenshot: _,
                 forcePause: _,
@@ -3016,22 +2282,16 @@
         });
       }
       function _(_) {
-        const {
-          bNoKeyboardSupport: _,
-          bGamepadPreferred: __webpack_require__,
-        } = _;
+        const { bNoKeyboardSupport: _, bGamepadPreferred: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.NoticeContainer),
-          children: [
-            _ && (0, _.jsx)(_, {}),
-            __webpack_require__ && !_ && (0, _.jsx)(_, {}),
-          ],
+          children: [_ && (0, _.jsx)(_, {}), _ && !_ && (0, _.jsx)(_, {})],
         });
       }
       function _(_) {
         const {
           bControllerSupportWizardComplete: _,
-          bPS4ControllerSupport: __webpack_require__,
+          bPS4ControllerSupport: _,
           bPS5ControllerSupport: _,
           bPS4ControllerBTSupport: _,
           bPS5ControllerBTSupport: _,
@@ -3045,7 +2305,7 @@
           bPreview: _,
         } = _;
         let _ = [];
-        if (__webpack_require__ && _ && _ && _) {
+        if (_ && _ && _ && _) {
           const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
               controllerType: 34,
@@ -3069,7 +2329,7 @@
             ),
           );
         } else {
-          if (__webpack_require__) {
+          if (_) {
             const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
               controllerType: 34,
@@ -3299,8 +2559,10 @@
         render() {
           const _ = _(
             this.props.reactionType,
-            !this.props.bDisableAnimation &&
-              (this.state.bHovered || this.props.bForceAnimated),
+            !(
+              0 != this.props.bDisableAnimation ||
+              (!this.state.bHovered && !this.props.bForceAnimated)
+            ),
           );
           return (0, _.jsx)("img", {
             className: this.props.className,
@@ -3331,13 +2593,15 @@
             }),
             (this.state = {
               bShowModal: !1,
+              targetid: "",
+              targetType: 0,
             });
         }
         render() {
           const {
             bShowModal: _,
             targetType: _,
-            fnSuccessFunc: __webpack_require__,
+            fnSuccessFunc: _,
             targetid: _,
             ugcType: _,
             initialSelectedReaction: _,
@@ -3348,13 +2612,13 @@
                 {
                   targetid: _,
                   active: _,
-                  targetType: _,
+                  targetType: _ ?? 0,
                   ugcType: _,
                   onDismiss: () =>
                     this.setState({
                       bShowModal: !1,
                     }),
-                  onSuccess: __webpack_require__,
+                  onSuccess: _,
                   initialSelectedReaction: _,
                 },
                 _,
@@ -3365,7 +2629,7 @@
       function _(_) {
         const {
           targetType: _,
-          targetid: __webpack_require__,
+          targetid: _,
           bShowModal: _,
           ugcType: _,
           initialSelectedReaction: _,
@@ -3375,7 +2639,7 @@
         return (0, _.jsx)(
           _,
           {
-            targetid: __webpack_require__,
+            targetid: _,
             active: _,
             targetType: _,
             ugcType: _,
@@ -3383,13 +2647,13 @@
             onSuccess: _,
             initialSelectedReaction: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       function _(_) {
         const {
             active: _,
-            targetid: __webpack_require__,
+            targetid: _,
             targetType: _,
             ugcType: _,
             initialSelectedReaction: _,
@@ -3399,7 +2663,7 @@
           [_, _] = _.useState(_ || 0),
           [_, _] = _.useState(_.SELECTING),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(2),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (function (_, _, _, _) {
@@ -3415,7 +2679,7 @@
               },
               enabled: _,
             });
-          })(_, _, __webpack_require__, _),
+          })(!!_, _, _, _),
           _ = (function (_, _) {
             return (0, _._)({
               queryKey: ["AwardsConfiguration"],
@@ -3425,15 +2689,15 @@
                 let _ = await _._.GetReactionConfig(_, _);
                 if (1 == __webpack_require__.GetEResult()) {
                   const _ = new Map();
-                  let _ = __webpack_require__.Body().toObject().reactions;
-                  for (const _ of _) _.set(_.reactionid, _);
+                  let _ = __webpack_require__.Body().toObject().reactions ?? [];
+                  for (const _ of _) _.reactionid && _.set(_.reactionid, _);
                   return _;
                 }
                 throw __webpack_require__.GetEResult();
               },
               enabled: _,
             });
-          })(_, _),
+          })(!!_, _),
           _ = (function (_, _) {
             return (0, _._)({
               queryKey: ["UserPointBalance"],
@@ -3444,25 +2708,23 @@
                 __webpack_require__.Body().set_steamid(_);
                 let _ = await _._.GetSummary(_, _);
                 if (1 == _.GetEResult())
-                  return _._.fromString(_.Body().summary().points());
+                  return _._.fromString(
+                    _.Body().toObject().summary?.points ?? "0",
+                  );
                 throw _.GetEResult();
               },
               enabled: _,
             });
-          })(_, _),
+          })(!!_, _),
           _ = (function (_) {
             const _ = (0, _._)();
             return (0, _._)({
               mutationFn: async (_) => {
                 if (!_._.logged_in) throw 21;
-                const {
-                  targetid: __webpack_require__,
-                  targetType: _,
-                  nReactionId: _,
-                } = _;
+                const { targetid: _, targetType: _, nReactionId: _ } = _;
                 let _ = _._.Init(_._);
                 _.Body().set_target_type(_),
-                  _.Body().set_targetid(__webpack_require__),
+                  _.Body().set_targetid(_),
                   _.Body().set_reactionid(_);
                 const _ = await _._.AddReaction(_, _);
                 if (1 != _.GetEResult()) throw _.GetEResult();
@@ -3482,13 +2744,17 @@
           !_)
         )
           return null;
-        const _ = _.data || new Map(),
-          _ = _.data,
+        const _ = _.data ?? new Map(),
+          _ = _.data ?? new _._(0),
           _ = (function (_, _, _) {
             let _ = [];
             return (
               _.forEach(function (_) {
-                if (_.valid_target_types.includes(_) && _.purchaseable)
+                if (
+                  _.valid_target_types?.includes(_) &&
+                  _.purchaseable &&
+                  _.reactionid
+                )
                   switch (_) {
                     case 1:
                     case 3:
@@ -3497,7 +2763,9 @@
                       _.push(_.reactionid);
                       break;
                     case 2:
-                      _.valid_ugc_types.includes(_) && _.push(_.reactionid);
+                      void 0 !== _ &&
+                        _.valid_ugc_types?.includes(_) &&
+                        _.push(_.reactionid);
                   }
               }),
               _
@@ -3706,7 +2974,7 @@
                                     }),
                                     (0, _.jsx)("span", {
                                       className: _.AwardName,
-                                      children: _.data?.get(_).localized_title,
+                                      children: _.data?.get(_)?.localized_title,
                                     }),
                                   ),
                                 }),
@@ -3886,7 +3154,7 @@
           ],
         });
       function _(_) {
-        const { pointBalance: _, children: __webpack_require__ } = _,
+        const { pointBalance: _, children: _ } = _,
           _ = _ && (0, _._)(_.toNumber());
         return (0, _.jsxs)("div", {
           className: _.Footer,
@@ -3930,7 +3198,7 @@
               children: (0, _.jsx)(_._, {
                 className: _.Actions,
                 "flow-children": "row",
-                children: _.Children.map(__webpack_require__, (_) =>
+                children: _.Children.map(_, (_) =>
                   (0, _.jsx)("div", {
                     className: _.Action,
                     children: _,
@@ -3966,7 +3234,7 @@
           const {
             reaction: _,
             selected: _,
-            alreadyAwarded: __webpack_require__,
+            alreadyAwarded: _,
             cost: _,
             autoFocus: _,
             awardConfig: _,
@@ -3976,11 +3244,7 @@
             type: "button",
             onMouseEnter: this.handleMouseOver,
             onMouseLeave: this.handleMouseOut,
-            className: (0, _._)(
-              _.Button,
-              _ && _.Selected,
-              __webpack_require__ && _.Disabled,
-            ),
+            className: (0, _._)(_.Button, _ && _.Selected, _ && _.Disabled),
             autoFocus: _,
             ..._,
             children: [
@@ -3989,7 +3253,7 @@
                 children: (0, _.jsx)(_, {
                   reactionType: _,
                   bForceAnimated: this.state.bHovered,
-                  bDisableAnimation: __webpack_require__,
+                  bDisableAnimation: _,
                 }),
               }),
               (0, _.jsxs)("div", {
@@ -4001,11 +3265,11 @@
                   }),
                   (0, _.jsx)(_, {
                     className: _.Points,
-                    children: (0, _._)(_),
+                    children: (0, _._)(_ ?? 0),
                   }),
                 ],
               }),
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)(_, {
                   className: _.IconCheckMark,
                 }),
@@ -4021,10 +3285,10 @@
             className: _.Loading,
           }),
         _ = (_) => {
-          const { children: _, className: __webpack_require__, ..._ } = _;
+          const { children: _, className: _, ..._ } = _;
           return (0, _.jsxs)("span", {
             ..._,
-            className: (0, _._)(__webpack_require__, _.PointsAmount),
+            className: (0, _._)(_, _.PointsAmount),
             children: [
               (0, _.jsx)(_.vrn, {
                 className: _.PointsAmountIcon,
@@ -4609,8 +3873,8 @@
           : null;
       }
       function _(_) {
-        const { appid: _, appBannerDef: __webpack_require__, app_name: _ } = _,
-          _ = ((_ = __webpack_require__.strBannerType), _.get(_));
+        const { appid: _, appBannerDef: _, app_name: _ } = _,
+          _ = ((_ = _.strBannerType), _.get(_));
         var _;
         const _ = (0, _._)(
           _._.STORE_BASE_URL +
@@ -4655,10 +3919,7 @@
                 }),
               ],
             })
-          : (console.warn(
-              `No banner type found for ${__webpack_require__.strBannerType}`,
-            ),
-            null);
+          : (console.warn(`No banner type found for ${_.strBannerType}`), null);
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4756,7 +4017,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        let { trailers: _, screenshots: __webpack_require__ } = _;
+        let { trailers: _, screenshots: _ } = _;
         return (0, _.jsx)(_._, {
           navID: "GameHighlightGamepadCarousel",
           children: (0, _.jsx)(_._, {
@@ -4765,14 +4026,14 @@
             children: (0, _.jsx)(_, {
               children: (0, _.jsx)(_, {
                 trailers: _,
-                screenshots: __webpack_require__,
+                screenshots: _,
               }),
             }),
           }),
         });
       }
       function _(_) {
-        let { trailers: _, screenshots: __webpack_require__ } = _,
+        let { trailers: _, screenshots: _ } = _,
           _ = (0, _._)(),
           _ = "theater" == _.strMode,
           _ = (0, _._)(_, "theater"),
@@ -4788,7 +4049,7 @@
               _ = (0, _.useCallback)((_) => !!_, [_]);
             return [_, _];
           })(_, _),
-          _ = _(_, __webpack_require__);
+          _ = _(_, _);
         if (
           ((function (_) {
             let _ = _.length;
@@ -4799,6 +4060,7 @@
                 .forEach((_) => _.remove());
             }, [_]);
           })(_),
+          _.use(_._.Ready()),
           0 == _.length)
         )
           return null;
@@ -5024,7 +4286,7 @@
       }
       function _(_) {
         let { trailer: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _._)(),
           _ = (0, _._)(_.CarouselItem, _.DashTrailer);
         return (0, _.jsx)(_._, {
@@ -5040,7 +4302,7 @@
               hlsManifest: _.hlsManifest,
               screenshot: _.poster,
               altText: _.title,
-              forcePause: !__webpack_require__ || !_,
+              forcePause: !_ || !_,
               onPlaybackEnd: null,
               title: _.title,
               category: _.category,
@@ -5074,7 +4336,7 @@
       }
       function _(_) {
         let { children: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(_),
+          [_, _] = (0, _.useState)(_),
           _ = (0, _.useCallback)((_) => {
             !(function (_) {
               let _ = new Date();
@@ -5104,7 +4366,7 @@
               _(!_);
           }, []);
         return (0, _.jsx)(_._, {
-          autoplayEnabled: __webpack_require__,
+          autoplayEnabled: _,
           setAutoplayEnabled: _,
           playerVolume: _ / 100,
           setPlayerVolume: _,
@@ -5115,7 +4377,7 @@
       }
       const _ = (0, _.createContext)(void 0);
       function _(_) {
-        let { orderedItems: _, children: __webpack_require__ } = _,
+        let { orderedItems: _, children: _ } = _,
           _ = (0, _._)().m_bAutoplayEnabled,
           [_, _] = (0, _.useState)(() =>
             (function (_, _) {
@@ -5149,7 +4411,7 @@
           }, [_, _, _, _]);
         return (0, _.jsx)(_.Provider, {
           value: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _() {
@@ -5177,7 +4439,7 @@
       function _(_) {
         let { items: _ } = _,
           {
-            refStrip: __webpack_require__,
+            refStrip: _,
             refTrack: _,
             refThumb: _,
             fnRegisterItemElement: _,
@@ -5311,7 +4573,7 @@
               className: (0, _._)(_.Strip, _ && _.TheaterMode),
               children: [
                 (0, _.jsx)(_, {
-                  refStrip: __webpack_require__,
+                  refStrip: _,
                   items: _,
                   registerItemElement: _,
                 }),
@@ -5325,11 +4587,7 @@
         });
       }
       function _(_) {
-        let {
-            refStrip: _,
-            items: __webpack_require__,
-            registerItemElement: _,
-          } = _,
+        let { refStrip: _, items: _, registerItemElement: _ } = _,
           _ = (function () {
             let _ = _(),
               _ = (0, _.useCallback)(
@@ -5365,14 +4623,11 @@
         });
       }
       function _(_) {
-        let { item: _, registerItemElement: __webpack_require__ } = _,
+        let { item: _, registerItemElement: _ } = _,
           _ = _(),
           _ = _.key == _.strActiveID,
           _ = _.key,
-          _ = (0, _.useCallback)(
-            (_) => __webpack_require__(_, _),
-            [_, __webpack_require__],
-          ),
+          _ = (0, _.useCallback)((_) => __webpack_require__(_, _), [_, _]),
           _ = _.data.thumbnail ? _.data.thumbnail : "",
           _ = (0, _._)(_.Item, _ && _.Active);
         return (0, _.jsxs)("div", {
@@ -5393,7 +4648,7 @@
         });
       }
       function _(_) {
-        let { refTrack: _, refThumb: __webpack_require__ } = _,
+        let { refTrack: _, refThumb: _ } = _,
           _ = _(),
           _ = _.strPreviousID ? () => _.fnSetActive(_.strPreviousID) : null,
           _ = _.strNextID ? () => _.fnSetActive(_.strNextID) : null;
@@ -5411,7 +4666,7 @@
               ref: _,
               className: _.Track,
               children: (0, _.jsx)("div", {
-                ref: __webpack_require__,
+                ref: _,
                 className: _.Thumb,
               }),
             }),
@@ -5452,11 +4707,11 @@
         _ = __webpack_require__("chunkid");
       const _ = 5e3;
       function _(_) {
-        let { appName: _, trailers: __webpack_require__, screenshots: _ } = _,
+        let { appName: _, trailers: _, screenshots: _ } = _,
           _ =
             (0, _._)(`(max-width: ${_.storeNarrowResponsiveWidth})`) ||
             _._.IN_MOBILE_WEBVIEW,
-          _ = _(__webpack_require__, _);
+          _ = _(_, _);
         return (
           (function (_) {
             let _ = _.length;
@@ -5494,7 +4749,7 @@
       const _ = (0, _.createContext)(!1);
       function _(_) {
         let { children: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)((_) => _(_.isIntersecting), []),
           _ = (0, _._)(_),
           { refRoot: _ } = (function (_) {
@@ -5563,10 +4818,10 @@
                 refRoot: _,
               }
             );
-          })(__webpack_require__),
+          })(_),
           _ = (0, _._)(_, _);
         return (0, _.jsx)(_.Provider, {
-          value: __webpack_require__,
+          value: _,
           children: (0, _.jsx)("div", {
             ref: _,
             children: _,
@@ -5574,7 +4829,7 @@
         });
       }
       function _(_) {
-        let { appName: _, items: __webpack_require__ } = _,
+        let { appName: _, items: _ } = _,
           _ = _(),
           _ = (function () {
             let _ = _(),
@@ -5745,7 +5000,7 @@
                     ],
                   }),
                   (0, _.jsx)(_, {
-                    items: __webpack_require__,
+                    items: _,
                     activeItem: _.strActiveID,
                   }),
                 ],
@@ -5758,7 +5013,7 @@
         });
       }
       function _(_) {
-        let { ref: _, children: __webpack_require__, ..._ } = _,
+        let { ref: _, children: _, ..._ } = _,
           _ = (0, _._)(),
           _ = _.strMode,
           _ = (0, _._)(_, "none"),
@@ -5784,7 +5039,7 @@
             ..._,
             popover: "manual",
             onClick: _,
-            children: __webpack_require__,
+            children: _,
           })
         );
       }
@@ -5809,10 +5064,8 @@
         });
       }
       function _(_) {
-        let { items: _, activeItem: __webpack_require__ } = _,
-          _ = _.findIndex(
-            (_) => __webpack_require__ && _.key == __webpack_require__,
-          ),
+        let { items: _, activeItem: _ } = _,
+          _ = _.findIndex((_) => _ && _.key == _),
           _ = "";
         return (
           _ >= 0 &&
@@ -5828,7 +5081,7 @@
         );
       }
       function _(_) {
-        let { _: _, screenshot: __webpack_require__, focus: _ } = _,
+        let { _: _, screenshot: _, focus: _ } = _,
           _ = _(_),
           _ = _ == _().strNextID;
         let _ = _(_ || _),
@@ -5843,7 +5096,7 @@
             _.Screenshot,
             _ && _.PageEmbedded,
           ),
-          _ = (_.strMode, __webpack_require__.full),
+          _ = (_.strMode, _.full),
           _ = _ ? _ : null;
         return (0, _.jsxs)("div", {
           ref: _,
@@ -5853,7 +5106,7 @@
           children: [
             (0, _.jsx)("img", {
               src: _,
-              alt: __webpack_require__.altText,
+              alt: _.altText,
             }),
             (0, _.jsxs)("div", {
               className: _.Controls,
@@ -5866,7 +5119,7 @@
         });
       }
       function _(_) {
-        let { _: _, trailer: __webpack_require__, focus: _ } = _,
+        let { _: _, trailer: _, focus: _ } = _,
           _ = _(_),
           _ = _(_),
           [_, _] = (0, _._)(),
@@ -5881,15 +5134,15 @@
             ref: _,
             className: _,
             children: (0, _.jsx)(_._, {
-              dashManifests: __webpack_require__.dashManifests,
-              hlsManifest: __webpack_require__.hlsManifest,
-              screenshot: __webpack_require__.poster,
-              altText: __webpack_require__.title,
+              dashManifests: _.dashManifests,
+              hlsManifest: _.hlsManifest,
+              screenshot: _.poster,
+              altText: _.title,
               forcePause: !_ || !_ || !_,
               onPlaybackEnd: _,
-              title: __webpack_require__.title,
-              category: __webpack_require__.category,
-              statsURL: __webpack_require__.statsURL,
+              title: _.title,
+              category: _.category,
+              statsURL: _.statsURL,
               focus: _,
             }),
           }),
@@ -5903,6 +5156,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { category: _ } = _;
@@ -5919,12 +5173,7 @@
         });
       }
       function _(_) {
-        const {
-            results: _,
-            learnMore: __webpack_require__,
-            appName: _,
-            eStartingTab: _,
-          } = _,
+        const { results: _, learnMore: _, appName: _, eStartingTab: _ } = _,
           [_, _] = (0, _.useState)(!1);
         let _ = _.useCallback(
           (_) => {
@@ -5936,7 +5185,7 @@
         let _ = {
           onOKButton: void 0,
           onOKActionDescription: null,
-          onCancelActionDescription: (0, _._)("#Button_Close"),
+          onCancelActionDescription: _._.Localize("#Button_Close"),
           onCancelButton: () => _(!1),
         };
         return (0, _.jsxs)("div", {
@@ -5944,7 +5193,7 @@
             (0, _.jsx)(_._, {
               className: _().LearnMore,
               onClick: _,
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)(_._, {
               active: _,
@@ -5965,12 +5214,7 @@
         });
       }
       const _ = function (_) {
-        const {
-            appID: _,
-            results: __webpack_require__,
-            appName: _,
-            tab: _,
-          } = _,
+        const { appID: _, results: _, appName: _, tab: _ } = _,
           _ = (0, _._)(),
           _ = "steamos" == _ ? 2 : 1;
         let _, _, _;
@@ -5979,10 +5223,10 @@
               "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
             )),
             (_ = (0, _.jsx)(_._, {
-              category: __webpack_require__.steamos_resolved_category,
+              category: _.steamos_resolved_category,
             })),
             (_ = (0, _.jsx)(_, {
-              category: __webpack_require__.steamos_resolved_category,
+              category: _.steamos_resolved_category,
             })))
           : ((_ = _
               ? (0, _._)(
@@ -5992,14 +5236,14 @@
                   "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
                 )),
             (_ = (0, _.jsx)(_._, {
-              category: __webpack_require__.resolved_category,
+              category: _.resolved_category,
             })),
             (_ = (0, _.jsx)(_, {
-              category: __webpack_require__.resolved_category,
+              category: _.resolved_category,
             })));
-        const _ = __webpack_require__?.steam_deck_blog_url,
+        const _ = _?.steam_deck_blog_url,
           _ = _.useId();
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)("div", {
               className: _().BannerContainer,
               role: "group",
@@ -6017,7 +5261,7 @@
                       children: [_, _],
                     }),
                     (0, _.jsx)(_, {
-                      results: __webpack_require__,
+                      results: _,
                       learnMore: (0, _._)(
                         "#SteamDeckVerified_Store_CompatSection_LearnMore",
                       ),
@@ -6030,7 +5274,7 @@
                       }),
                     _ &&
                       (0, _.jsx)(_._, {
-                        url: __webpack_require__.steam_deck_blog_url,
+                        url: _.steam_deck_blog_url,
                         containerClass: _().DeveloperComments_Anchor,
                         bIncludeIcon: !0,
                       }),
@@ -6053,12 +5297,7 @@
         _ =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
       function _(_) {
-        const {
-            rgSources: _,
-            onIncrementalError: __webpack_require__,
-            alt: _,
-            ..._
-          } = _,
+        const { rgSources: _, onIncrementalError: _, alt: _, ..._ } = _,
           [_, _] = (0, _.useState)(0),
           _ = _[_];
         return (0, _.jsx)("img", {
@@ -6076,7 +5315,7 @@
       function _(_) {
         const {
             avatarURL: _,
-            size: __webpack_require__,
+            size: _,
             statusStyle: _,
             statusPosition: _,
             className: _,
@@ -6104,7 +5343,7 @@
                 case "FillArea":
                   return (0, _._)(_);
               }
-            })(__webpack_require__ ?? "Medium"),
+            })(_ ?? "Medium"),
           ),
           (0, _.jsxs)("div", {
             className: _()(
@@ -6118,7 +5357,7 @@
               },
               _,
             ),
-            "data-size": __webpack_require__,
+            "data-size": _,
             "data-status-position": _,
             children: [
               (0, _.jsx)("div", {
@@ -6136,147 +5375,26 @@
           })
         );
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return void 0 === _ ? _[""] : _[_];
-      }
-      const _ = {
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsx)("b", {
-              children: _.children,
-            });
-          },
-        },
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsx)("i", {
-              children: _.children,
-            });
-          },
-        },
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsx)("u", {
-              children: _.children,
-            });
-          },
-        },
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsx)("code", {
-              children: _.children,
-            });
-          },
-        },
-        strike: {
-          Constructor: function (_) {
-            return (0, _.jsx)("s", {
-              children: _.children,
-            });
-          },
-        },
-        color: {
-          Constructor: function (_) {
-            const _ = _(_.args),
-              _ = {};
-            _ &&
-              (_.match(/^#[a-fA-F0-9]+$/) || _.match(/rgba?\([0-9, ]+\)$/)) &&
-              (_.color = _);
-            return (0, _.jsx)("span", {
-              style: _,
-              children: _.children,
-            });
-          },
-        },
-      };
-      const _ = {
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsx)("h1", {
-              children: _.children,
-            });
-          },
-          skipFollowingNewline: !0,
-        },
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsx)("h2", {
-              children: _.children,
-            });
-          },
-          skipFollowingNewline: !0,
-        },
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsx)("h3", {
-              children: _.children,
-            });
-          },
-          skipFollowingNewline: !0,
-        },
-        code: {
-          Constructor: function (_) {
-            return (0, _.jsx)("pre", {
-              children: (0, _.jsx)("code", {
-                children: _.children,
-              }),
-            });
-          },
-          skipFollowingNewline: !0,
-        },
-        quote: {
-          Constructor: function (_) {
-            return (0, _.jsx)("blockquote", {
-              children: _.children,
-            });
-          },
-          skipFollowingNewline: !0,
-          skipInternalNewline: !0,
-        },
-        _: {
-          Constructor: function (_) {
-            return (0, _.jsxs)(_.Fragment, {
-              children: [(0, _.jsx)("hr", {}), _.children],
-            });
-          },
-          skipFollowingNewline: !0,
-        },
-      };
-      const _ = {
-        list: {
-          Constructor: function (_) {
-            return (0, _.jsx)("ul", {
-              children: _.children,
-            });
-          },
-          skipInternalNewline: !0,
-        },
-        olist: {
-          Constructor: function (_) {
-            return (0, _.jsx)("ol", {
-              children: _.children,
-            });
-          },
-          skipInternalNewline: !0,
-        },
-        "*": {
-          Constructor: function (_) {
-            return (0, _.jsx)("li", {
-              children: _.children,
-            });
-          },
-          autocloses: !0,
-        },
-      };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return (0, _.jsx)("span", {
+          className: _().Spoiler,
+          children: _.children,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { eReactionID: _, nCount: __webpack_require__ } = _,
+        const { eReactionID: _, nCount: _ } = _,
           _ = _(_);
         return _
           ? (0, _.jsxs)("div", {
@@ -6300,7 +5418,7 @@
                       className: _.Desc,
                       children: _.localized_desc,
                     }),
-                    _.points_transferred > 0 &&
+                    !!_.points_transferred &&
                       (0, _.jsx)("div", {
                         className: _.Points,
                         children: (0, _._)(
@@ -6308,12 +5426,12 @@
                           (0, _._)(_.points_transferred),
                         ),
                       }),
-                    __webpack_require__ > 0 &&
+                    !!_ &&
                       (0, _.jsx)("div", {
                         className: _.Count,
                         children: (0, _._)(
                           "#RewardsReaction_ToolTip_Granted",
-                          (0, _._)(__webpack_require__),
+                          (0, _._)(_),
                         ),
                       }),
                   ],
@@ -6326,125 +5444,65 @@
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 3276, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 3276, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 76966, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 76966, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 32733, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 32733, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7071, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 7071, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 77233, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 77233, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31186, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 31186, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 39032, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 39032, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31475, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 31475, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 36512, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 36512, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15598, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 15598, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 57108, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 57108, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69921, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69921, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 1416, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1416, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 8616, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 8616, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 1039, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1039, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51495, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51495, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 1871, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1871, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 70176, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 70176, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 93577, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 93577, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 78461, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 78461, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 91203, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 91203, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 25745, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 25745, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 8492, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 8492, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24080, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 24080, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89617, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89617, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 86119, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 86119, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 38902, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 38902, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84344, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84344, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 73854, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 73854, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 5511, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 5511, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -6559,13 +5617,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { url: _, children: __webpack_require__ } = _;
+        const { url: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           target: "_blank",
           href: _.href,
           underline: "auto",
           contrast: "title",
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_, _) {
@@ -6585,7 +5643,7 @@
       const _ = _.createContext([]);
       function _(_) {
         const _ = _.useContext(_);
-        let _ = _(_.args) ?? _(_.args, "href");
+        let _ = (0, _._)(_.args) ?? (0, _._)(_.args, "href");
         if (!_ || !__webpack_require__.match(/^https?:\/\//)) return _.children;
         (0, _._)(_) && (_ = (0, _._)(_));
         const _ = URL.parse(_);
@@ -6710,15 +5768,11 @@
         return (0, _._)(_ / 60, 1);
       }
       function _(_) {
-        const {
-            review: _,
-            bIsFriend: __webpack_require__,
-            bShortPresentation: _,
-          } = _,
+        const { review: _, bIsFriend: _, bShortPresentation: _ } = _,
           { appid: _ } = _.useContext(_),
           _ = _.voted_up;
         let _ = _ ? "#Review_Recommended" : "#Review_NotRecommended";
-        __webpack_require__ &&
+        _ &&
           (_ = _
             ? "#Review_RecommendedByFriend"
             : "#Review_NotRecommendedByFriend");
@@ -6776,16 +5830,8 @@
       }
       function _(_) {
         const { review: _ } = _,
-          {
-            appid: __webpack_require__,
-            app_release_date: _,
-            appname: _,
-          } = _.useContext(_);
-        if (
-          __webpack_require__ == _._ ||
-          __webpack_require__ == _._ ||
-          __webpack_require__ == _._
-        ) {
+          { appid: _, app_release_date: _, appname: _ } = _.useContext(_);
+        if (_ == _._ || _ == _._ || _ == _._) {
           if ((_.timestamp_updated || _.timestamp_created) < 1695853800)
             return (0, _.jsx)(_._, {
               className: _().Disclaimer,
@@ -6797,8 +5843,7 @@
       }
       function _(_) {
         const { review: _ } = _,
-          { app_release_date: __webpack_require__, appname: _ } =
-            _.useContext(_);
+          { app_release_date: _, appname: _ } = _.useContext(_);
         return _.written_during_early_access
           ? (0, _.jsx)(_._, {
               className: _().Disclaimer,
@@ -6812,11 +5857,8 @@
       }
       function _(_) {
         const { review: _ } = _,
-          { app_release_date: __webpack_require__, appname: _ } =
-            _.useContext(_);
-        return __webpack_require__ &&
-          _.author.last_played &&
-          _.author.last_played < __webpack_require__
+          { app_release_date: _, appname: _ } = _.useContext(_);
+        return _ && _.author.last_played && _.author.last_played < _
           ? (0, _.jsx)(
               _._,
               {
@@ -6937,16 +5979,13 @@
       function _(_) {
         const {
           strLabel: _,
-          bSelected: __webpack_require__,
+          bSelected: _,
           bEnabled: _,
           onActivate: _,
           children: _,
         } = _;
         return (0, _.jsxs)(_._, {
-          className: (0, _._)(
-            _().VoteButton,
-            __webpack_require__ && _().Selected,
-          ),
+          className: (0, _._)(_().VoteButton, _ && _().Selected),
           onClick: _,
           disabled: !_,
           children: [
@@ -6960,7 +5999,7 @@
       }
       function _(_) {
         const { review: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(),
+          [_, _, _] = (0, _._)(),
           [_, _] = _.useState(),
           _ = (function (_) {
             const _ = (0, _._)();
@@ -7066,7 +6105,7 @@
             }),
             (0, _.jsx)(_, {
               targetType: 1,
-              bShowModal: __webpack_require__,
+              bShowModal: _,
               targetid: _.recommendationid,
               onDismiss: _,
               onSuccess: () => {},
@@ -7119,7 +6158,7 @@
       }
       function _(_) {
         const { review: _ } = _,
-          { appid: __webpack_require__ } = _.useContext(_);
+          { appid: _ } = _.useContext(_);
         return (0, _.jsxs)(_._, {
           className: _().ReviewRatings,
           children: [
@@ -7148,7 +6187,7 @@
               (0, _.jsx)("div", {
                 className: _().Right,
                 children: (0, _.jsx)(_._, {
-                  href: _(_, __webpack_require__),
+                  href: _(_, _),
                   children: (0, _.jsxs)(_._, {
                     className: _().CommentCount,
                     toolTipContent: _.Localize("#Review_SeeFullReview"),
@@ -7188,7 +6227,7 @@
       const _ = _.createContext(0);
       function _(_) {
         const _ = _.useContext(_),
-          _ = _(_.args),
+          _ = (0, _._)(_.args),
           _ = JSON.parse(`[${_}]`).includes(_);
         return (0, _.jsx)("span", {
           className: (0, _._)(_().Highlight, _ && _().Active),
@@ -7210,9 +6249,12 @@
         const { text: _ = "" } = _,
           _ = _.useMemo(() => {
             const _ = {
-              ..._,
-              ..._,
-              ..._,
+              ..._._,
+              ..._._,
+              ..._._,
+              spoiler: {
+                Constructor: _,
+              },
               highlight: {
                 Constructor: _,
               },
@@ -7234,12 +6276,12 @@
       }
       function _(_) {
         const { review: _ } = _,
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(
             _().ReviewText,
-            __webpack_require__ && _().Expanded,
+            _ && _().Expanded,
             _ && _().Collapsed,
           ),
           children: [
@@ -7272,14 +6314,14 @@
         });
       }
       function _(_) {
-        const { review: _, reaction: __webpack_require__ } = _,
+        const { review: _, reaction: _ } = _,
           [_, _, _] = (0, _._)(),
-          _ = _(__webpack_require__.reaction_type);
+          _ = _(_.reaction_type);
         return (0, _.jsx)(_._, {
           bDisabled: _,
           toolTipContent: (0, _.jsx)(_, {
-            eReactionID: __webpack_require__.reaction_type,
-            nCount: __webpack_require__.count,
+            eReactionID: _.reaction_type,
+            nCount: _.count,
           }),
           direction: "top",
           children: (0, _.jsxs)(_._, {
@@ -7292,31 +6334,31 @@
                 bShowModal: _,
                 targetid: _.recommendationid,
                 onDismiss: _,
-                initialSelectedReaction: __webpack_require__.reaction_type,
+                initialSelectedReaction: _.reaction_type,
                 onSuccess: () => {},
               }),
               (0, _.jsx)("img", {
                 className: _().Icon,
-                src: _(__webpack_require__.reaction_type, !1),
+                src: _(_.reaction_type, !1),
                 alt: _?.localized_title,
               }),
-              __webpack_require__.count > 1 &&
+              _.count > 1 &&
                 (0, _.jsx)("div", {
                   className: _().Count,
-                  children: __webpack_require__.count,
+                  children: _.count,
                 }),
             ],
           }),
         });
       }
       function _(_) {
-        const { nReactions: _, onActivate: __webpack_require__ } = _;
+        const { nReactions: _, onActivate: _ } = _;
         return (0, _.jsx)(_._, {
           toolTipContent: _.Localize("#Review_ShowAllReactions"),
           direction: "top",
           children: (0, _.jsxs)(_._, {
             className: _().Reaction,
-            onActivate: __webpack_require__,
+            onActivate: _,
             children: [
               (0, _.jsx)("img", {
                 className: _().Icon,
@@ -7335,7 +6377,7 @@
       }
       function _(_) {
         const { review: _ } = _,
-          [__webpack_require__, _] = _.useState(!0),
+          [_, _] = _.useState(!0),
           _ = _();
         if (!_.isSuccess || !_.reactions || 0 == _.reactions?.length)
           return null;
@@ -7344,7 +6386,7 @@
         for (let _ of _.reactions) {
           const _ = _.data?.find((_) => _.reactionid == _.reaction_type);
           _ &&
-            (!__webpack_require__ || (_.length < 3 && _.purchaseable)
+            (!_ || (_.length < 3 && _.purchaseable)
               ? _.push(_)
               : (_ += _.count));
         }
@@ -7361,7 +6403,7 @@
                 _.reaction_type,
               ),
             ),
-            __webpack_require__ &&
+            _ &&
               _ > 0 &&
               (0, _.jsx)(_, {
                 nReactions: _,
@@ -7371,27 +6413,22 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            name: __webpack_require__,
-            onHighlight: _,
-            onUnhighlight: _,
-          } = _,
+        const { _: _, name: _, onHighlight: _, onUnhighlight: _ } = _,
           _ = _.useCallback(() => {
             window.SetReviewTopicFilter(_, !0);
           }, [_]);
-        return __webpack_require__
+        return _
           ? (0, _.jsx)(_._, {
               className: _().ReviewTagButton,
               onClick: _,
               onMouseEnter: () => _(_),
               onMouseLeave: () => _(_),
-              children: __webpack_require__,
+              children: _,
             })
           : null;
       }
       function _(_) {
-        const { review: _, mapTags: __webpack_require__, setHighlight: _ } = _,
+        const { review: _, mapTags: _, setHighlight: _ } = _,
           _ = _.useCallback(
             function (_) {
               _(_);
@@ -7495,9 +6532,37 @@
         });
       }
       function _(_) {
+        const { review: _ } = _,
+          { appid: _ } = _.useContext(_);
+        return _.developer_response && _.timestamp_dev_responded
+          ? (0, _.jsxs)("div", {
+              className: _().DeveloperResponse,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().Text,
+                  children: _.Localize(
+                    "#Review_OfficialDeveloperResponseExistsDate",
+                    (0, _._)(_.timestamp_dev_responded, {
+                      fullmonthname: !0,
+                      bUseRelativeNames: !1,
+                    }),
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _().Link,
+                  href: _(_, _),
+                  children: _.Localize(
+                    "#Review_OfficialDeveloperResponse_View",
+                  ),
+                }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
         const {
             review: _,
-            bIsFriend: __webpack_require__,
+            bIsFriend: _,
             bShortPresentation: _,
             mapTags: _,
           } = _,
@@ -7509,7 +6574,7 @@
             children: [
               (0, _.jsx)(_, {
                 review: _,
-                bIsFriend: __webpack_require__,
+                bIsFriend: _,
                 bShortPresentation: _,
               }),
               (0, _.jsxs)(_._, {
@@ -7570,7 +6635,7 @@
       function _(_) {
         const {
           review: _,
-          bIsFriend: __webpack_require__ = !1,
+          bIsFriend: _ = !1,
           bShortPresentation: _ = !1,
           gamepadPresentation: _,
           mapTags: _,
@@ -7592,7 +6657,7 @@
             onGamepadDirection: "full" == _ ? _ : void 0,
             className: (0, _._)(
               _().ReviewDetails,
-              __webpack_require__ && _().Friend,
+              _ && _().Friend,
               _ && _().Short,
               !!_ && _().Gamepad,
               "full" == _ && _().Fullscreen,
@@ -7605,22 +6670,27 @@
               style: {
                 maxHeight: _.height,
               },
-              children: (0, _.jsx)("div", {
+              children: (0, _.jsxs)("div", {
                 className: _().ReviewWrapper,
-                children: (0, _.jsxs)(_._, {
-                  className: _().Top,
-                  children: [
-                    (0, _.jsx)(_, {
-                      author: _.author,
-                    }),
-                    (0, _.jsx)(_, {
-                      review: _,
-                      bIsFriend: __webpack_require__,
-                      bShortPresentation: _,
-                      mapTags: _,
-                    }),
-                  ],
-                }),
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: _().Top,
+                    children: [
+                      (0, _.jsx)(_, {
+                        author: _.author,
+                      }),
+                      (0, _.jsx)(_, {
+                        review: _,
+                        bIsFriend: _,
+                        bShortPresentation: _,
+                        mapTags: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                ],
               }),
             }),
           }),
@@ -7629,11 +6699,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, className: __webpack_require__, title: _ } = _;
+        const { _: _, className: _, title: _ } = _;
         return _
           ? (0, _.jsx)("div", {
               _: _,
-              className: (0, _._)(_().ReviewSectionTitle, __webpack_require__),
+              className: (0, _._)(_().ReviewSectionTitle, _),
               children: _.Localize(_),
             })
           : null;
@@ -7655,12 +6725,8 @@
         );
       }
       _.forwardRef(function (_, _) {
-        const {
-            name: __webpack_require__,
-            initialColumn: _,
-            fnOnFocusedColumnChange: _,
-          } = _,
-          [_, _] = _(__webpack_require__, _, _);
+        const { name: _, initialColumn: _, fnOnFocusedColumnChange: _ } = _,
+          [_, _] = _(_, _, _);
         return (0, _.jsx)(_, {
           ..._,
           ref: _,
@@ -7821,7 +6887,7 @@
         CellRenderer(_) {
           const {
               fnGetColumnWidth: _,
-              fnGetId: __webpack_require__,
+              fnGetId: _,
               fnItemRenderer: _,
               nItemHeight: _,
               autoFocus: _,
@@ -8135,7 +7201,7 @@
           const {
               className: _,
               nNumItems: _,
-              nIndexLeftmost: __webpack_require__,
+              nIndexLeftmost: _,
               nHeight: _,
               nItemHeight: _,
               overscan: _ = 3,
@@ -8147,14 +7213,7 @@
             } = this.props,
             _ = this.state.nContainerWidth;
           return (
-            _(
-              "Inner render",
-              this.props.name,
-              this.props.nNumItems,
-              _,
-              __webpack_require__,
-              _,
-            ),
+            _("Inner render", this.props.name, this.props.nNumItems, _, _, _),
             (0, _.jsx)(_._, {
               ref: this.m_refContainer,
               "flow-children": "row",
@@ -8180,10 +7239,10 @@
                   overscanIndicesGetter: ({
                     cellCount: _,
                     overscanCellsCount: _,
-                    startIndex: __webpack_require__,
+                    startIndex: _,
                     stopIndex: _,
                   }) => ({
-                    overscanStartIndex: Math.max(0, __webpack_require__ - _),
+                    overscanStartIndex: Math.max(0, _ - _),
                     overscanStopIndex: Math.min(_ - 1, _ + _),
                   }),
                   rowCount: 1,
@@ -8422,7 +7481,7 @@
       function _(_) {
         const {
             itemWidthPercentage: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             name: _,
             nNumItems: _,
             ..._
@@ -8435,7 +7494,7 @@
           _ = _.useCallback((_) => (_ * _) / 100, [_, _]);
         return (0, _.jsx)(_._, {
           className: _().FullScreenCarousel,
-          onCancel: __webpack_require__,
+          onCancel: _,
           children: (0, _.jsx)("div", {
             className: _().InnerContainer,
             ref: _,
@@ -8465,7 +7524,7 @@
       function _(_) {
         const {
             name: _,
-            initialColumn: __webpack_require__,
+            initialColumn: _,
             modalClassName: _,
             fnOnFocusedColumnChange: _,
             bFullScreen: _,
@@ -8473,7 +7532,7 @@
             nFullScreenItemWidthPercentage: _,
             ..._
           } = _,
-          [_, _] = _(_, __webpack_require__, _);
+          [_, _] = _(_, _, _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -8510,7 +7569,7 @@
       function _(_) {
         const {
             rgReviews: _,
-            nNumItems: __webpack_require__,
+            nNumItems: _,
             nFriendReviews: _,
             getTitle: _,
             mapTags: _,
@@ -8585,7 +7644,7 @@
               className: _().Carousel,
               "aria-labelledby": _,
               scrollToAlignment: "center",
-              nNumItems: __webpack_require__,
+              nNumItems: _,
               nHeight: _ / 0.92,
               nItemHeight: _ / 0.92,
               nItemMarginX: 20,
@@ -8600,11 +7659,7 @@
         });
       }
       function _(_) {
-        const {
-            queryReviews: _,
-            mapTags: __webpack_require__,
-            loadMore: _,
-          } = _,
+        const { queryReviews: _, mapTags: _, loadMore: _ } = _,
           _ = _.useMemo(
             () => (_?.data?.pages || []).map((_) => _.reviews).flat(1),
             [_?.data?.pages],
@@ -8621,12 +7676,12 @@
           nNumItems: _.length + (_ ? 1 : 0),
           nFriendReviews: 0,
           getTitle: _,
-          mapTags: __webpack_require__,
+          mapTags: _,
           onItemFocusChanged: _,
         });
       }
       function _(_) {
-        const { summary: _, mapTags: __webpack_require__ } = _,
+        const { summary: _, mapTags: _ } = _,
           _ = _?.friendreviews?.length || 0,
           _ = _?.reviews?.length || 0,
           _ = _.useCallback(
@@ -8656,7 +7711,7 @@
           nNumItems: _.length,
           nFriendReviews: _,
           getTitle: _,
-          mapTags: __webpack_require__,
+          mapTags: _,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -8708,7 +7763,7 @@
       function _(_) {
         const {
             title: _,
-            className: __webpack_require__,
+            className: _,
             bIsFriend: _,
             bShortPresentation: _,
             reviews: _,
@@ -8717,7 +7772,7 @@
           _ = _.useId();
         return _?.length
           ? (0, _.jsxs)("div", {
-              className: _()(_().ReviewSection, __webpack_require__),
+              className: _()(_().ReviewSection, _),
               children: [
                 (0, _.jsx)(_, {
                   _: _,
@@ -8757,7 +7812,7 @@
       }
       function _(_) {
         const { searchParams: _ } = _,
-          { appid: __webpack_require__ } = _.useContext(_),
+          { appid: _ } = _.useContext(_),
           [_, _] = _.useState(!1),
           _ = (0, _._)(
             _.useCallback((_) => {
@@ -8780,7 +7835,7 @@
               retry: (_, _) =>
                 _ instanceof _ ? 8 != _.eResult && _ < 3 : _ < 3,
             });
-          })(__webpack_require__, _, _),
+          })(_, _, _),
           _ = _?.data?.pages?.[0],
           _ =
             (_?.data?.pages?.[_.data.pages.length - 1],
@@ -8819,7 +7874,7 @@
         });
       }
       function _(_) {
-        const { queryReviews: _, mapTags: __webpack_require__ } = _,
+        const { queryReviews: _, mapTags: _ } = _,
           _ = (_?.data?.pages || []).map((_) => _.reviews).flat(1),
           _ =
             (_?.data?.pages[0].cAppRecommendationCount || 0) > _.length &&
@@ -8837,7 +7892,7 @@
                 children: [
                   (0, _.jsx)(_, {
                     reviews: _,
-                    mapTags: __webpack_require__,
+                    mapTags: _,
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
@@ -8850,11 +7905,11 @@
               });
       }
       function _(_) {
-        const { summary: _, className: __webpack_require__ } = _,
+        const { summary: _, className: _ } = _,
           { appid: _ } = _.useContext(_);
         return _?.query_summary?.total_reviews_unfiltered
           ? (0, _.jsx)("a", {
-              className: _()(_().BrowseAllLink, __webpack_require__),
+              className: _()(_().BrowseAllLink, _),
               href:
                 _._.COMMUNITY_BASE_URL +
                 `app/${_}/reviews/?browsefilter=toprated`,
@@ -8866,7 +7921,7 @@
           : null;
       }
       function _(_) {
-        const { summary: _, mapTags: __webpack_require__ } = _,
+        const { summary: _, mapTags: _ } = _,
           _ = (0, _._)();
         return _
           ? _
@@ -8885,13 +7940,13 @@
                           className: _().Friends,
                           bIsFriend: !0,
                           reviews: _?.friendreviews,
-                          mapTags: __webpack_require__,
+                          mapTags: _,
                         }),
                         (0, _.jsx)(_, {
                           title: "#Review_SectionTitle_Top",
                           className: _().TopReviews,
                           reviews: _?.reviews,
-                          mapTags: __webpack_require__,
+                          mapTags: _,
                         }),
                         (0, _.jsx)(_, {
                           className: _().LeftColumn,
@@ -8907,7 +7962,7 @@
                           className: _().Recent,
                           bShortPresentation: !0,
                           reviews: _?.recentreviews,
-                          mapTags: __webpack_require__,
+                          mapTags: _,
                         }),
                         (0, _.jsx)(_, {
                           className: _().RightColumn,
@@ -8926,18 +7981,14 @@
         appname: "",
       });
       function _(_) {
-        const {
-            appid: _,
-            app_release_date: __webpack_require__,
-            appname: _,
-          } = _,
+        const { appid: _, app_release_date: _, appname: _ } = _,
           _ = _.useMemo(
             () => ({
               appid: _,
-              app_release_date: __webpack_require__,
+              app_release_date: _,
               appname: _,
             }),
-            [_, __webpack_require__, _],
+            [_, _, _],
           ),
           [_, _] = _.useState({
             filter: "summary",
@@ -9040,11 +8091,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

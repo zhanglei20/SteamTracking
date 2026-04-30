@@ -73,11 +73,13 @@
   border: 4.95px solid #4ad4ff;
   width: 99px;
   height: 99px;
-  margin-bottom: 10px;
 }
 .kmeCX_wpui82T0Ay3SHMK ._3Or4z4eTNQFrEBsv0jrVjh img {
   width: 100%;
   height: 100%;
+}
+.kmeCX_wpui82T0Ay3SHMK ._3Or4z4eTNQFrEBsv0jrVjh {
+  margin-bottom: 10px;
 }
 .kmeCX_wpui82T0Ay3SHMK .Vs2aJC40zq4lSl1GB9Fl_ {
   font-style: normal;
@@ -85,7 +87,6 @@
   font-size: 35px;
   line-height: 42px;
   color: #fff;
-  margin-bottom: 30px;
 }
 .kmeCX_wpui82T0Ay3SHMK .Vs2aJC40zq4lSl1GB9Fl_ ._1rb__jUs4xd9Symf36sR84,
 .kmeCX_wpui82T0Ay3SHMK .Vs2aJC40zq4lSl1GB9Fl_ ._1V-KRTqy8PtfpmvRkySY8x {
@@ -94,6 +95,9 @@
 .kmeCX_wpui82T0Ay3SHMK .Vs2aJC40zq4lSl1GB9Fl_ ._15WYpmISjvERUIGbPuilgB {
   padding-top: 20px;
   max-width: 400px;
+}
+.kmeCX_wpui82T0Ay3SHMK .Vs2aJC40zq4lSl1GB9Fl_ {
+  margin-bottom: 30px;
 }
 .kmeCX_wpui82T0Ay3SHMK ._1Dve5b-rHkzuotINR4Xh7G {
   background: linear-gradient(270.05deg, #1babd8 0.05%, #4ad4ff 99.24%);
@@ -186,12 +190,14 @@
   background-color: #fff;
 }
 .AEfs48npNOs7PsklaKQxL {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
       #0578a2 0%,
       #449963 52.6%,
       #104a4a
-    ), url("/public/images/yearinreview/streak_bg_large.webp");
+    ),
+    url("/public/images/yearinreview/streak_bg_large.webp");
 }
 ._2ucSwGfZ2AsP91rIgpYzVq.ActiveTab {
   background-color: rgba(103, 193, 245, 0.34);
@@ -265,7 +271,11 @@
   background: linear-gradient(147.86deg, #782370 25.78%, #05113c 101.81%);
 }
 ._10UIoD-XRojfRickf62ZTS {
-  background: linear-gradient(14deg, #162964e0, #105662b8);
+  background: linear-gradient(
+    14deg,
+    rgba(22, 41, 100, 0.8784313725),
+    rgba(16, 86, 98, 0.7215686275)
+  );
 }
 ._3cqzPE9ojgybX_YLM2LciT._2MFzmPCaRDOMvCIKivbWEh {
   background: radial-gradient(
@@ -291,7 +301,12 @@
   );
 }
 .-cK9wrdjQGd-QRMbnBIR1 ._161UjXtlOv_RVKerItXecq {
-  background: linear-gradient(45deg, #0b70598a 15%, #005580d9 55%, #941a73bd);
+  background: linear-gradient(
+    45deg,
+    rgba(11, 112, 89, 0.5411764706) 15%,
+    rgba(0, 85, 128, 0.8509803922) 55%,
+    rgba(148, 26, 115, 0.7411764706)
+  );
 }
 ._2gfncxf5WyN1lFA6C6mrMk {
   background: radial-gradient(#17333a, #0a0d0d);
@@ -387,12 +402,14 @@
   color: #e496ff;
 }
 ._3BT7r54MhJESU8AzMNlenV {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      #02bbff34 0%,
-      #ff03b33a 52.6%,
-      #6aff0023
-    ), url("/public/images/yearinreview/steam_logo_offset.png");
+      rgba(2, 187, 255, 0.2039215686) 0%,
+      rgba(255, 3, 179, 0.2274509804) 52.6%,
+      rgba(106, 255, 0, 0.137254902)
+    ),
+    url("/public/images/yearinreview/steam_logo_offset.png");
 }
 ._12Vol7iOpxdPj9khHmvu-C {
   background: #2d73ff;
@@ -494,12 +511,14 @@
   background-color: #fff;
 }
 ._3rUSvxNxSynWWZDLv1Gj5f {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
       #925801 0%,
       #2c0050 52.6%,
       #022216
-    ), url("/public/images/yearinreview/streak_bg_large.webp");
+    ),
+    url("/public/images/yearinreview/streak_bg_large.webp");
 }
 ._19KvzLtRQ9-Q5m1uXJOkR2.ActiveTab {
   background-color: rgba(190, 240, 51, 0.34);
@@ -578,20 +597,24 @@
   background: #48067f;
 }
 ._3F7PUMGMU4V8RNuW8b9NID.w_LxbT-xjHVJAG3DwLvO- {
-  background: conic-gradient(
+  background:
+    conic-gradient(
       from 87deg at -8.32% 0%,
-      #693f004d 7.2531156242deg,
+      rgba(105, 63, 0, 0.3019607843) 7.2531156242deg,
       rgba(0, 71, 44, 0.56) 42.3303329945deg,
       #33005c 96.4028513432deg
-    ), #000;
+    ),
+    #000;
 }
 ._3F7PUMGMU4V8RNuW8b9NID._94te0EvHMP3bmVjDN-sRr {
-  background: conic-gradient(
+  background:
+    conic-gradient(
       from -90deg at 108.32% 100%,
       rgba(105, 63, 0, 0.29) 7.2531156242deg,
       rgba(0, 71, 44, 0.56) 24.2867588997deg,
       #33005c 62.7407902479deg
-    ), #000;
+    ),
+    #000;
 }
 ._1rn7C8gOo19reFJ4HWbHZO ._3F7PUMGMU4V8RNuW8b9NID {
   background: radial-gradient(
@@ -711,12 +734,14 @@
   color: #3898b0;
 }
 ._1ujDQYkFU24pcZA1ZGeGME {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      #d3d9203a 0%,
-      #d3d9203a 52.6%,
-      #d3d9203a
-    ), url("/public/images/yearinreview/steam_logo_offset.png");
+      rgba(211, 217, 32, 0.2274509804) 0%,
+      rgba(211, 217, 32, 0.2274509804) 52.6%,
+      rgba(211, 217, 32, 0.2274509804)
+    ),
+    url("/public/images/yearinreview/steam_logo_offset.png");
 }
 ._2rDtQVS8ZlIw7YqmTAyNmm {
   background: #925801;
@@ -792,6 +817,118 @@
 ._1AcAxWWu9yo7s4gOpoGGn0:hover {
   filter: brightness(110%);
   color: #fff;
+}
+@keyframes _14OuUh1QjZE3TsW4NZNR2T {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes _34-QNskZMB7mEWsqhnZP6b {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes _2mYgNS2XvBpQoFx7GpbaE8 {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _2A4pb12mtvU-l5nClt2fv- {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
+@keyframes _2wJw5tkwjDagaHTwWVdn1u {
+  from {
+    background: hsla(0, 0%, 100%, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.15);
+    color: #fff;
+  }
+}
+@keyframes _1flpMlWbeXKOl-WYA3Xem3 {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes _2Du1mKAGG_7kB5hkqpPOqX {
+  from {
+    background: hsla(0, 0%, 100%, 0.3);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.1);
+    color: #fff;
+  }
+}
+@keyframes _1mHlVprPR_Qin9oSqFmQwX {
+  from {
+    background: hsla(0, 0%, 100%, 0.5);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
+  }
+}
+@keyframes _1dQDG_S6sUmSjy1GFP6ybp {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes _1X5ahFc-n3nVkWAsUpG49I {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes _1ddfD3xnl7ZxtZ7TYShOPs {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes _2A0Chr-r6KVC7bWMKjWlOP {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
 @keyframes _3FyW_RSMfp3r4eHfuMQIA5 {
   to {
@@ -1047,12 +1184,14 @@
   color: #f4d760;
 }
 .aI_Il7gY1Syqm796Upnp9 {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      #d3d9203a 0%,
-      #d3d9203a 52.6%,
-      #d3d9203a
-    ), url("/public/images/yearinreview/steam_logo_offset.png");
+      rgba(211, 217, 32, 0.2274509804) 0%,
+      rgba(211, 217, 32, 0.2274509804) 52.6%,
+      rgba(211, 217, 32, 0.2274509804)
+    ),
+    url("/public/images/yearinreview/steam_logo_offset.png");
 }
 .hRwmhfYcSqvrvsdGJuU4J {
   background: #01a2ab;
@@ -1125,6 +1264,118 @@
 .e2J3CJVLkCcWuogJlnJqA:hover {
   filter: brightness(110%);
   color: #fff;
+}
+@keyframes Uwk2oDOlH9H45uB6SckjX {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes _1HzbepuV2ne3fOiiw4M6L2 {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes _3jhvEXbsQ8rwLbzgIG2YKY {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _22jVwj2EIKxChqvLWQbXuN {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
+@keyframes _3E-Kmphz35Z5zxRRLBBv__ {
+  from {
+    background: hsla(0, 0%, 100%, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.15);
+    color: #fff;
+  }
+}
+@keyframes _1MX1VV5l2Txw56HFd3WETD {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes _6H60CwBcO9kk4y1pOFm21 {
+  from {
+    background: hsla(0, 0%, 100%, 0.3);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.1);
+    color: #fff;
+  }
+}
+@keyframes _31Gmo3sGiGSz9BuXbnqa54 {
+  from {
+    background: hsla(0, 0%, 100%, 0.5);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
+  }
+}
+@keyframes _2BlrdTd8j7eGp87-nNi7Md {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes _3TnQtlMvVkjLUwNdMvKkKA {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes _3xy4OMg8IMNU-GS54X-fou {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes _3TsGkEqTE3pjbkbIFVAmfi {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
 ._1FQxwxnbfp1DQRGwxjKNTx {
   background: radial-gradient(70% 100vh at 50% 50%, #0f1924 30%, #4e0020 77%);
@@ -1372,12 +1623,14 @@
   color: #f4d760;
 }
 ._3LwhtMUR2vVFHRvyRMNxGK {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
       #e23477 0%,
-      #d3d9203a 52.6%,
+      rgba(211, 217, 32, 0.2274509804) 52.6%,
       #8fb100
-    ), url("/public/images/yearinreview/steam_logo_offset.png");
+    ),
+    url("/public/images/yearinreview/steam_logo_offset.png");
   background-blend-mode: multiply;
 }
 ._2PM8va6tUvi6JiJjaXTe_k {

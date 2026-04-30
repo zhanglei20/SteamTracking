@@ -66,7 +66,7 @@
       const _ = (_) => {
           const {
               strLabel: _,
-              strToolTip: __webpack_require__,
+              strToolTip: _,
               fnSetCurator: _,
               bLimitToCreatorHome: _,
             } = _,
@@ -131,12 +131,12 @@
               onBlur: (_) =>
                 setTimeout(() => _.current && _.current.Hide(), 200),
               ref: _,
-              tooltip: __webpack_require__,
+              tooltip: _,
             }),
           });
         },
         _ = (_) => {
-          const { list: _, fnSetCurator: __webpack_require__ } = _;
+          const { list: _, fnSetCurator: _ } = _;
           return (0, _.jsx)(_._, {
             className: _.SearchResults,
             children: _.map((_) =>
@@ -228,11 +228,7 @@
           });
         }),
         _ = (_) => {
-          const {
-              strName: _,
-              records: __webpack_require__,
-              bHideByDefault: _,
-            } = _,
+          const { strName: _, records: _, bHideByDefault: _ } = _,
             [_, _] = (0, _.useState)(_);
           return (0, _.jsxs)("div", {
             className: _.SectionContainer,
@@ -243,7 +239,7 @@
                 children: [
                   _,
                   " (",
-                  __webpack_require__.length,
+                  _.length,
                   ")",
                   (0, _.jsx)("span", {
                     children: " ",
@@ -334,7 +330,7 @@
           });
         }),
         _ = (_) => {
-          const { record: _, closeModal: __webpack_require__ } = _,
+          const { record: _, closeModal: _ } = _,
             [_, _] = (0, _.useState)(_.clan_account_id),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(void 0),
@@ -349,11 +345,11 @@
               _(!0),
                 _.Get()
                   .MigrateOrUpdateSalePage(_.sale_page_id, _, _.gid_clan_event)
-                  .then(([_, _, __webpack_require__]) => {
-                    _(_), _(_), _(__webpack_require__);
+                  .then(([_, _, _]) => {
+                    _(_), _(_), _(_);
                   });
             },
-            onCancel: __webpack_require__,
+            onCancel: _,
             children: [
               Boolean(_.clan_account_id)
                 ? (0, _.jsxs)(_.Fragment, {
@@ -762,7 +758,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-          const [_, __webpack_require__] = (0, _.useState)(!0);
+          const [_, _] = (0, _.useState)(!0);
           (0, _.useEffect)(() => {
             Promise.all([_._.InitGlobal(), _._.Init()]).then(() =>
               __webpack_require__(!1),
@@ -846,7 +842,7 @@
         }),
         _ = (0, _._)((_) => {
           const _ = Number(_.app._),
-            [__webpack_require__, _] = (0, _.useState)(0),
+            [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)(!1),
             _ = (0, _.useRef)(new Set()),
@@ -869,7 +865,7 @@
             _ = _ ? _.group_name : _.app.name,
             _ = `${_._.COMMUNITY_BASE_URL}games/${_ ? _.vanity_url : _}/partnerevents/`,
             _ = _.length,
-            _ = __webpack_require__ == _,
+            _ = _ == _,
             _ = _.filter((_) => _.BIsVisibleEvent()),
             _ = _.length,
             _ = _.filter(
@@ -888,8 +884,8 @@
             _ = _.length,
             _ = !_ && _ > 0 && (null == _ ? void 0 : _.clanSteamID),
             _ = async () => {
-              const _ = __webpack_require__;
-              _(__webpack_require__ + 50), _(!0);
+              const _ = _;
+              _(_ + 50), _(!0);
               const _ = await _._.LoadPartnerEventsPageable(void 0, _, _, 50);
               _(_.concat(_)), _(!1);
             };
@@ -993,7 +989,7 @@
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!0);
+        const [_, _] = _.useState(!0);
         return (
           _.useEffect(() => {
             _._.Init(), Promise.all([]).then(() => __webpack_require__(!1));

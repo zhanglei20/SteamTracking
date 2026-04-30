@@ -557,16 +557,6 @@ a.games_list_tab:hover {
 	margin-bottom: 12px;
 }
 
-html.responsive .responsive_fixonscroll_ctn #context_selector {
-	margin: 8px 1% 2px 1%;
-}
-
-html.responsive .responsive_fixonscroll_ctn #contextselect {
-	max-width: 430px;
-	width: auto;
-	margin: 0 auto;
-}
-
 #contextselect {
 	background-color: #000000;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/context_arrow.png' );
@@ -574,6 +564,9 @@ html.responsive .responsive_fixonscroll_ctn #contextselect {
 	background-position: right top;
 	border: 1px solid #676767;
 	cursor: pointer;
+	display: block;
+	padding: 0;
+	text-align: start;
 }
 
 #contextselect.focus {
@@ -1208,7 +1201,7 @@ body.migrated_profile_page .inventory_rightnav {
 	margin-right: 0;
 }
 
-.inventory_rightnav a.btn_grey_black, .inventory_rightnav div.btn_medium {
+.inventory_rightnav .btn_grey_black, .inventory_rightnav .btn_medium {
 	color: white;
 	margin-left: 12px;
 }
@@ -1379,4 +1372,97 @@ html.responsive .responsive_inventory_fixed_ctn {
 
 .redeem_form_row {
 	margin-bottom: 10px;
+}
+
+.responsive_tab_control {
+	max-width: 98%;
+}
+
+.dselect_container .dropcontainer ul {
+	background: #3a6d8b;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
+	inset: 0 0 auto;
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden auto;
+	padding: 1px;
+	position: absolute;
+	z-index: 2000;
+}
+
+html.GamepadMode .dselect_container .dropcontainer ul {
+	border-radius: 3px;
+	padding: 0;
+}
+
+.dselect_container .dropcontainer ul.dropdownhidden {
+	display: none;
+}
+
+.dselect_container .dropcontainer ul li a {
+	color: #ffffff;
+	display: block;
+	font-size: 16px;
+}
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	padding: 4px;
+}
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
+	background-color: #1967d2; /* Old browsers */
+	background: -webkit-linear-gradient( 150deg, #3a6d8b 5%,#1967d2 95%);
+	background: linear-gradient( -60deg, #3a6d8b 5%,#1967d2 95%);
+}
+
+.dselect_container .trigger {
+	background: rgba(0, 0, 0, 0.3);
+	border: none;
+	border-radius: 3px;
+	color: #ffffff;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	max-width: 100%;
+	min-width: 250px;
+	overflow: hidden;
+	padding: 0 34px 0 4px;
+	position: relative;
+	text-align: start;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.dselect_container .trigger.activetrigger {
+	border-radius: 3px 3px 0 0;
+}
+
+.dselect_container .trigger::after {
+	background: url('https://community.fastly.steamstatic.com/public/images/economy/ico_arrow_dn_for_select.png') no-repeat left center;
+	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 24px;
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .dselect_container .trigger {
+		background: unset;
+	}
+
+	html.responsive .dselect_container .trigger.activetrigger {
+		border-radius: 3px;
+	}
+
+	html.responsive .dselect_container .dropcontainer ul {
+		border-radius: 3px;
+	}
 }

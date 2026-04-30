@@ -52,8 +52,8 @@
   cursor: pointer;
   align-content: center;
   padding: 10px 20px;
-  background-color: #fefefed1;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: rgba(254, 254, 254, 0.8196078431);
+  text-shadow: 1px 1px 0 hsla(0, 0%, 100%, 0.5);
   color: #3d7291;
   font-weight: 600;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);

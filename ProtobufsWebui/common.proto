@@ -54,6 +54,7 @@ message CAppOverview {
 	optional int32 display_name_elanguage = 75 [default = -1];
 	optional bool has_custom_sort_as = 76;
 	optional uint64 bitfield_supported_languages = 77 [default = 0];
+	repeated .CAppOverview_PerClientData remote_per_client_data = 78;
 }
 
 message CAppOverview_Change {
@@ -421,6 +422,20 @@ message CClientNotificationCloudSyncConflict {
 
 message CClientNotificationCloudSyncFailure {
 	optional uint32 appid = 1;
+}
+
+message CClientNotificationControllerConnected {
+	optional uint32 controller_index = 1;
+}
+
+message CClientNotificationControllerDisconnected {
+	optional uint32 controller_type = 1;
+	optional string controller_name = 2;
+}
+
+message CClientNotificationControllerLowBattery {
+	optional uint32 controller_type = 1;
+	optional float pct_remaining = 2;
 }
 
 message CClientNotificationDockUnsupportedFirmware {
@@ -1298,6 +1313,8 @@ message CMsgClientSettings {
 	optional int32 system_idle_screensaver_battery_sec = 24008;
 	optional int32 system_idle_screensaver_ac_sec = 24009;
 	optional bool vr_show_perf_graph_in_hmd = 25000;
+	optional bool vr_audio_spatialize = 25001;
+	optional bool vr_audio_spatialize_surround = 25002;
 	optional bool accessibility_debug_visualizer = 26000;
 	optional bool accessibility_screen_reader_enabled = 26001;
 	optional float accessibility_screen_reader_rate = 26002;
@@ -1330,6 +1347,7 @@ message CMsgClientSettings {
 	optional bool controller_enable_chord = 140011;
 	optional bool controller_poll_rate = 140012;
 	optional bool controller_siapi_config_author_mode = 140013;
+	optional bool controller_show_ibex_tour = 140014;
 	optional string controller_chat_radial_menu_option_0 = 140030;
 	optional string controller_chat_radial_menu_option_1 = 140031;
 	optional string controller_chat_radial_menu_option_2 = 140032;
@@ -2777,10 +2795,19 @@ message CVirtualMenuKey {
 message CVRGamepadUI_Frame {
 	optional uint32 frame_id = 1;
 	optional .CVRGamepadUI_Frame_FrameMenu menu = 2;
-	repeated .CVRGamepadUIShared_Action defined_actions = 3;
+	repeated .CVRGamepadUIShared_Action action_definitions = 3;
+	//repeated .CVRGamepadUIShared_Action defined_actions = 3;
 	optional .CVRGamepadUI_Frame_FrameControls controls = 4;
 	optional bool is_vrlink_remote = 5;
+	optional .CVRGamepadUI_Frame_FrameActions frame_actions = 6;
+	repeated string steamui_page_overlay_keys = 7;
 	optional string tmp_title = 1000;
+}
+
+// Used by: common.proto
+message CVRGamepadUI_Frame_FrameActions {
+	optional uint32 focus_main_panel_action = 1;
+	optional uint32 focus_left_frame_menu_action = 2;
 }
 
 // Used by: common.proto
@@ -2861,6 +2888,14 @@ message CVRGamepadUI_Message_ExecuteSteamURL_Request {
 message CVRGamepadUI_Message_ExecuteSteamURL_Response {
 }
 
+message CVRGamepadUI_Message_GetAppIcon_Request {
+	optional uint32 app_id = 1;
+}
+
+message CVRGamepadUI_Message_GetAppIcon_Response {
+	optional string icon_url = 1;
+}
+
 message CVRGamepadUI_Message_Header {
 	optional string name = 1;
 	optional uint32 message_id = 2;
@@ -2889,6 +2924,14 @@ message CVRGamepadUI_Message_RemoteVideoStream_Request {
 message CVRGamepadUI_Message_RemoteVideoStream_Response {
 }
 
+message CVRGamepadUI_Message_ReportVRPanelErrorBoundaryError_Request {
+	optional string error_name = 1;
+	optional string error_message_with_stack = 2;
+}
+
+message CVRGamepadUI_Message_ReportVRPanelErrorBoundaryError_Response {
+}
+
 message CVRGamepadUI_Message_SetCurrentLanguage_Request {
 	optional string language = 1;
 }
@@ -2915,7 +2958,8 @@ message CVRGamepadUI_Message_ShowDashboardPopup_Request {
 	optional bool inherit_parent_curvature = 9;
 	optional .CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect clip_rect = 10;
 	optional bool interactive = 11;
-	optional bool requires_laser = 12;
+	optional bool only_visible_with_laser = 12;
+	//optional bool requires_laser = 12;
 	optional string parent_device_path = 13;
 	optional int32 sort_order = 14 [(.description) = "enum"];
 	optional int32 parent_enum = 15 [(.description) = "enum"];
@@ -3171,6 +3215,134 @@ message LoyaltyRewardDefinition_CommunityItemData {
 	optional bool tiled = 13;
 }
 
+message SiteServerUI_CancelLogin_Request {
+}
+
+message SiteServerUI_CancelLogin_Response {
+	optional int32 logon_state = 1;
+	optional int32 logon_eresult = 2;
+}
+
+message SiteServerUI_ClientStatus_Request {
+}
+
+message SiteServerUI_ClientStatus_Response {
+	repeated .SiteServerUI_ClientStatus_Response_ClientInfo clients = 4;
+	repeated .SiteServerUI_ClientStatus_Response_Payment payments = 5;
+}
+
+// Used by: common.proto
+message SiteServerUI_ClientStatus_Response_ClientInfo {
+	optional uint32 ip = 1;
+	optional string hostname = 2;
+	optional bool connected = 3;
+	optional uint64 instance_id = 4;
+}
+
+// Used by: common.proto
+message SiteServerUI_ClientStatus_Response_Payment {
+	optional uint64 transid = 1;
+	optional uint64 steamid = 2;
+	optional string amount = 3;
+	optional int32 time_created = 4;
+	optional int32 purchase_status = 5;
+	optional string hostname = 6;
+	optional string persona_name = 7;
+	optional string profile_url = 8;
+	optional string avatar_url = 9;
+}
+
+message SiteServerUI_ContentCacheConfig_Request {
+	optional bool enabled = 1;
+	optional uint32 port = 2;
+	optional string cache_location = 3;
+	optional uint32 max_size_gb = 4;
+	optional bool p2p_enabled = 5;
+	optional bool external_process = 6;
+	optional string explicit_ip_address = 7;
+}
+
+message SiteServerUI_ContentCacheConfig_Response {
+}
+
+message SiteServerUI_ContentCacheStatus_Request {
+}
+
+message SiteServerUI_ContentCacheStatus_Response {
+	optional bool enabled = 1;
+	optional uint32 port = 2;
+	optional string cache_location = 3;
+	optional uint32 max_size_gb = 4;
+	optional bool p2p_enabled = 5;
+	optional uint32 current_size_gb = 6;
+	optional uint64 current_bw = 7;
+	optional uint64 total_bytes_served = 8;
+	optional string explicit_ip_address = 9;
+	optional bool external_process = 10;
+}
+
+message SiteServerUI_GetLanguage_Request {
+}
+
+message SiteServerUI_GetLanguage_Response {
+	optional string language = 1;
+}
+
+message SiteServerUI_Login_Request {
+	optional string username = 1;
+	optional string password = 2;
+	optional string steamguardcode = 3;
+	optional bool remember_password = 4;
+}
+
+message SiteServerUI_Login_Response {
+	optional int32 logon_state = 1;
+	optional int32 logon_eresult = 2;
+}
+
+message SiteServerUI_LoginStatus_Request {
+}
+
+message SiteServerUI_LoginStatus_Response {
+	optional string username = 1;
+	optional bool cached_credentials = 2;
+	optional int32 logon_state = 3;
+	optional int32 logon_eresult = 4;
+}
+
+message SiteServerUI_Logout_Request {
+}
+
+message SiteServerUI_Logout_Response {
+	optional int32 logon_state = 1;
+	optional int32 logout_eresult = 2;
+}
+
+message SiteServerUI_Quit_Request {
+	optional bool restart = 1;
+}
+
+message SiteServerUI_Quit_Response {
+}
+
+message SiteServerUI_SetLanguage_Request {
+	optional string language = 1;
+}
+
+message SiteServerUI_SetLanguage_Response {
+}
+
+message SiteServerUI_Status_Request {
+}
+
+message SiteServerUI_Status_Response {
+	optional int32 logon_state = 1;
+	optional int32 logon_eresult = 2;
+	optional bool connected = 3;
+	optional bool cache_enabled = 4;
+	optional int32 acct_status = 5;
+}
+
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreBrowseContext {
 	optional string language = 1;
@@ -3269,11 +3441,13 @@ message StoreItem {
 	optional uint32 game_count = 56;
 	optional string internal_name = 57;
 	optional string full_description = 58;
+	//optional string full_description_bbcode = 58;
 	optional bool is_free_temporarily = 59;
 	optional .StoreItem_Assets assets_without_overrides = 60;
 	optional .StoreBrowseFilterFailure user_filter_failure = 70;
 	repeated .StoreItem_Link links = 71;
-	optional string purchase_description = 72;
+	optional string purchase_description_bbcode = 72;
+	repeated .StoreItem_PackageGroup package_groups = 74;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3294,6 +3468,10 @@ message StoreItem_Assets {
 	optional string clan_avatar = 14;
 	optional string page_background_path = 15;
 	optional string raw_page_background = 16;
+	optional string edition_comparison = 17;
+	optional string main_capsule_2x = 18;
+	optional string small_capsule_2x = 19;
+	optional string header_2x = 20;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3319,6 +3497,13 @@ message StoreItem_Categories {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_Demo {
+	optional uint32 appid = 1;
+	optional string label = 2;
+	optional bool show_above_purchase = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreItem_FreeWeekend {
 	optional uint32 start_time = 1;
 	optional uint32 end_time = 2;
@@ -3337,6 +3522,15 @@ message StoreItem_Link {
 	optional int32 link_type = 1 [(.description) = "enum"];
 	optional string url = 2;
 	optional string text = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_PackageGroup {
+	optional string name = 1;
+	optional string heading = 2;
+	optional int32 display_type = 3 [(.description) = "enum"];
+	optional string dropdown_title = 4;
+	optional string dropdown_description_bbcode = 5;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3384,6 +3578,11 @@ message StoreItem_PurchaseOption {
 	optional .StoreItem_PurchaseOption_RecurrenceInfo recurrence_info = 46;
 	optional uint32 free_to_keep_ends = 47;
 	optional bool must_purchase_as_set = 48 [default = false];
+	optional string package_group = 49 [default = "default"];
+	optional bool is_edition = 50;
+	optional uint32 free_to_keep_base_package = 51;
+	optional bool price_cannot_be_displayed_as_discount = 52 [default = false];
+	optional int64 price_to_base_discount_on = 53;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3408,6 +3607,8 @@ message StoreItem_RelatedItems {
 	optional uint32 parent_appid = 1;
 	repeated uint32 demo_appid = 2;
 	repeated uint32 standalone_demo_appid = 3;
+	repeated .StoreItem_Demo demos = 4;
+	repeated .StoreItem_Demo standalone_demos = 5;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3542,5 +3743,7 @@ message UserSystemInformation {
 	optional string driver_version = 15;
 	optional string driver_date = 16;
 	optional uint32 vram_size = 17;
+	optional uint32 screen_width = 18;
+	optional uint32 screen_height = 19;
 }
 

@@ -1,10 +1,12 @@
 ._3Vqm_VeN4ssp-Plt0sq9f- {
   border-top: 1px solid #bbed08;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%
-    ), #25282e;
+    ),
+    #25282e;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -206,7 +208,7 @@
 }
 ._3Vqm_VeN4ssp-Plt0sq9f- ._1NnpcKcQDkW2SVMohIW_9R::after {
   content: ":";
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 ._3Vqm_VeN4ssp-Plt0sq9f- .ftpouOEdAxieFE50x58Ch {
   color: #fff;

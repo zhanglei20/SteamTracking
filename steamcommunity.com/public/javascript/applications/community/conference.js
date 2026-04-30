@@ -163,7 +163,7 @@
       var a = t(7850),
         o = t(92757),
         s = t(6813),
-        i = t(59952),
+        i = t(40414),
         r = t(22837),
         l = t(17720),
         c = t(87231),
@@ -206,12 +206,12 @@
                 youtubeVideoID: e.youtubeVideoID,
               };
             this.m_mapConferences.set(e.vanity, o);
-            const s = await (0, i.Er)(
+            const s = await (0, i.E)(
                 e.localized_logo,
                 n,
                 null == a ? void 0 : a.timestamp,
               ),
-              m = await (0, i.Er)(
+              m = await (0, i.E)(
                 e.localized_mobile_logo,
                 n,
                 null == a ? void 0 : a.timestamp,
@@ -371,7 +371,7 @@
         de = t(72978),
         me = t.n(de),
         ue = t(3919),
-        ve = t(50354),
+        ve = t(84547),
         _e = t(50140);
       function he(e) {
         const { closeModal: n } = e;

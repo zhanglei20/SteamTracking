@@ -672,6 +672,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -780,6 +781,18 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     chunkid: (module) => {
@@ -797,12 +810,15 @@
         BackgroundAnimation: "_15yvWK6GCakW5yZ0YB66fv",
         "ItemFocusAnim-darkerGrey-nocolor": "Eu2HOvMbunn7MzCLIJ5ES",
         "ItemFocusAnim-darkerGrey": "DvP1wiF6eV9afdQaEkods",
+        "ItemFocusAnim-darkGreySettings": "_2MNkLvIOgwx0GSMCjDlkL8",
         "ItemFocusAnim-darkGrey": "_2tQsBdyAzzF2_nY65OSwNm",
         "ItemFocusAnim-grey": "Qg-4WEghuaXqBRIE-lEVs",
         "ItemFocusAnim-translucent-white-10": "_18ENJxMfn40_y_8CMeuuMm",
         "ItemFocusAnim-translucent-white-20": "_1wbIEe3KnohwpAw2O4M9YP",
         "ItemFocusAnimBorder-darkGrey": "_3hC5OOIGfv0lY8ykI4qpNa",
         "ItemFocusAnim-green": "_3ZDnxVKI3Xfr_a6bvaivKR",
+        focusAnimation: "_2KA789f9Y4_LCtoyqU3FM3",
+        hoverAnimation: "VH09gZfzWmSxuuocDY_-n",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2284,7 +2300,7 @@
         return _.Get().GetAssetSetByID(_, _)?.name || (0, _._)("#Unknown");
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(null),
+        const [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(null),
           _ = (0, _.useCallback)((_) => {
             _.Get()
@@ -2305,15 +2321,11 @@
         );
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(() =>
-          _.Get().GetAssetSetByID(_, _),
-        );
-        return (
-          (0, _._)(_.Get().GetAssetSetChangeCallback(_), _), __webpack_require__
-        );
+        const [_, _] = (0, _.useState)(() => _.Get().GetAssetSetByID(_, _));
+        return (0, _._)(_.Get().GetAssetSetChangeCallback(_), _), _;
       }
       async function _(_, _) {
-        const { fnCreateAssetSet: __webpack_require__ } = _(),
+        const { fnCreateAssetSet: _ } = _(),
           _ = {
             appid: _,
             name: _ ? _ : _,
@@ -2342,7 +2354,7 @@
       let _ = null;
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { assetSetID: _, className: __webpack_require__, appid: _ } = _,
+        const { assetSetID: _, className: _, appid: _ } = _,
           { publicAssetSetID: _ } = _(_);
         return (0, _.jsxs)(_._, {
           onClick: (_) =>
@@ -2388,7 +2400,7 @@
             " ",
             (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#TimelineMarkers_Hidden_download_ttip"),
-              className: __webpack_require__,
+              className: _,
               children: "(?)",
             }),
           ],
@@ -2797,15 +2809,11 @@
         return _.Get().RemoveTempMarker(_);
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() =>
-          _.Get().GetAllMarkersForApp(_),
-        );
-        return (
-          (0, _._)(_.Get().GetAppMarkerListChange(_), __webpack_require__), _
-        );
+        const [_, _] = (0, _.useState)(() => _.Get().GetAllMarkersForApp(_));
+        return (0, _._)(_.Get().GetAppMarkerListChange(_), _), _;
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(() =>
+        const [_, _] = (0, _.useState)(() =>
           _.Get().GetMarkerIDSetForAssetSetID(_),
         );
         return (
@@ -2815,7 +2823,7 @@
           (0, _._)(_.Get().GetAppMarkerListChange(_), () =>
             _(_.Get().GetMarkerIDSetForAssetSetID(_)),
           ),
-          __webpack_require__
+          _
         );
       }
       function _(_, _) {
@@ -2838,14 +2846,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { imageBase64OrUntrustedSVG: _, imageType: __webpack_require__ } =
-          _;
+        const { imageBase64OrUntrustedSVG: _, imageType: _ } = _;
         if (!_) return null;
         let _;
         return (
-          1 == __webpack_require__
+          1 == _
             ? (_ = `data:image/svg+xml,${encodeURIComponent(_)}`)
-            : 2 == __webpack_require__ && (_ = _),
+            : 2 == _ && (_ = _),
           (0, _.jsx)("div", {
             className: (0, _._)(_.IconPreviewCtn),
             children: (0, _.jsxs)("div", {
@@ -2882,9 +2889,9 @@
         });
       }
       function _(_) {
-        const { appid: _, assetSetID: __webpack_require__, markerID: _ } = _,
+        const { appid: _, assetSetID: _, markerID: _ } = _,
           { oPublishedMarker: _, oUnpublishedMarker: _ } = (function (_, _) {
-            const [__webpack_require__, _] = (0, _.useState)(null),
+            const [_, _] = (0, _.useState)(null),
               [_, _] = (0, _.useState)(null);
             return (
               (0, _.useEffect)(() => {
@@ -2895,11 +2902,11 @@
                 _(_), _(_);
               }),
               {
-                oPublishedMarker: __webpack_require__,
+                oPublishedMarker: _,
                 oUnpublishedMarker: _,
               }
             );
-          })(__webpack_require__, _),
+          })(_, _),
           { publicAssetSetID: _, hiddenAssetSetID: _ } = _(_),
           [_, _] = (0, _.useState)(!1);
         if (!_ && !_) return null;
@@ -2944,30 +2951,30 @@
       function _(_) {
         const {
             appid: _,
-            assetSetID: __webpack_require__,
+            assetSetID: _,
             strMessageOnEmpty: _,
             bDraggable: _,
           } = _,
-          _ = _(_, __webpack_require__);
+          _ = _(_, _);
         return _ && 0 != _.size
           ? (0, _.jsx)("div", {
               className: _.IconGridCtn,
               children: (0, _.jsx)(_, {
-                assetSetID: __webpack_require__,
+                assetSetID: _,
                 children: Array.from(_).map((_, _) =>
                   (0, _.jsx)(
                     _,
                     {
-                      _: `assetsetid_${__webpack_require__}_markerid_${_}`,
+                      _: `assetsetid_${_}_markerid_${_}`,
                       index: _,
                       bDraggable: _,
                       children: (0, _.jsx)(_, {
                         appid: _,
-                        assetSetID: __webpack_require__,
+                        assetSetID: _,
                         markerID: _,
                       }),
                     },
-                    __webpack_require__ + "_" + _,
+                    _ + "_" + _,
                   ),
                 ),
               }),
@@ -2978,12 +2985,7 @@
             });
       }
       function _(_) {
-        const {
-          _: _,
-          children: __webpack_require__,
-          index: _,
-          bDraggable: _,
-        } = _;
+        const { _: _, children: _, index: _, bDraggable: _ } = _;
         return (0, _.jsx)(_._, {
           draggableId: _,
           index: _,
@@ -2997,12 +2999,12 @@
               style: {
                 ..._.draggableProps.style,
               },
-              children: __webpack_require__,
+              children: _,
             }),
         });
       }
       function _(_) {
-        const { assetSetID: _, children: __webpack_require__ } = _;
+        const { assetSetID: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           droppableId: "undroppable" + _,
           direction: "horizontal",
@@ -3013,14 +3015,14 @@
               style: {
                 display: "flex",
               },
-              children: [__webpack_require__, _.placeholder],
+              children: [_, _.placeholder],
             }),
         });
       }
       function _(_) {
-        const { assetSetID: _, appid: __webpack_require__, strMessage: _ } = _;
+        const { assetSetID: _, appid: _, strMessage: _ } = _;
         return (0, _.jsx)(_._, {
-          droppableId: `droptarget_assetsetid_${_}_appid_${__webpack_require__}`,
+          droppableId: `droptarget_assetsetid_${_}_appid_${_}`,
           children: (_) =>
             (0, _.jsxs)("div", {
               ..._.droppableProps,
@@ -3133,7 +3135,7 @@
         };
       }
       function _(_) {
-        const { bLoading: _, rgApps: __webpack_require__ } = (function () {
+        const { bLoading: _, rgApps: _ } = (function () {
           const [_, _] = (0, _.useState)(_());
           return (0, _.useEffect)(() => (0, _._)(_, _), []), _;
         })();
@@ -3141,7 +3143,7 @@
           bLoading: _,
           app: (0, _.useMemo)(
             () => __webpack_require__.find((_) => _.game_id === _),
-            [__webpack_require__, _],
+            [_, _],
           ),
         };
       }
@@ -4432,7 +4434,7 @@
           }
         }
         async RemoveUserMarker(_, _) {
-          const { fnRemoveUserTimelineMarker: __webpack_require__ } = _(),
+          const { fnRemoveUserTimelineMarker: _ } = _(),
             _ = this.m_timelineLoader.GetGameID();
           return 1 == (await __webpack_require__(_, this.GetClipID(), _, _))
             ? (this.m_timelineLoader.RemoveUserMarker(_, _), !0)
@@ -4536,7 +4538,7 @@
       function _(_) {
         const {
             children: _,
-            mode: __webpack_require__,
+            mode: _,
             fnGetManifest: _,
             loader: _,
             recordingState: _,
@@ -4547,9 +4549,7 @@
             playbackDefinition: _,
             clipSummaries: _,
           } = _,
-          [_] = _.useState(
-            () => new _(_, _, __webpack_require__, _, _, _, _, _),
-          );
+          [_] = _.useState(() => new _(_, _, _, _, _, _, _, _));
         (0, _.useEffect)(() => {
           _.SetLoader(_);
         }, [_, _]),
@@ -5304,17 +5304,15 @@
           if (!this.m_timelineMask) return null;
           const _ = this.m_timelineMask.GetTimelineOffsetFromGlobal(_, 0);
           if (!_) return null;
-          const { nTimelineOffsetMS: __webpack_require__, strTimelineID: _ } =
-            _;
+          const { nTimelineOffsetMS: _, strTimelineID: _ } = _;
           if (!_) return null;
           if (this.m_mapTimelineClips.has(_)) {
             return this.m_mapTimelineClips
               .get(_)
               .find(
                 (_) =>
-                  _.msTimelineOffset <= __webpack_require__.valMS &&
-                  _.msTimelineOffset + _.msDuration >=
-                    __webpack_require__.valMS,
+                  _.msTimelineOffset <= _.valMS &&
+                  _.msTimelineOffset + _.msDuration >= _.valMS,
               );
           }
           return null;
@@ -5425,7 +5423,7 @@
       function _(_) {
         let {
             loader: _,
-            playbackCoordinator: __webpack_require__,
+            playbackCoordinator: _,
             children: _,
             clipSummaries: _,
             refTimelineParentCtn: _,
@@ -5434,7 +5432,7 @@
         return (
           (0, _.useEffect)(() => {
             if (!_) return;
-            let _ = new _(_, __webpack_require__, _);
+            let _ = new _(_, _, _);
             return _(_), () => _.Close();
           }, [_]),
           (0, _.useEffect)(() => {
@@ -5514,7 +5512,7 @@
         _ = _.memo(function (_) {
           const {
               msVisibleStart: _,
-              msTimelineStart: __webpack_require__,
+              msTimelineStart: _,
               pxVisibleDuration: _,
               pxVisibleStart: _,
             } = _,
@@ -5531,8 +5529,8 @@
               };
             })(),
             _ = _(),
-            _ = Math.ceil((_ - __webpack_require__) / _),
-            _ = __webpack_require__ + _ * _,
+            _ = Math.ceil((_ - _) / _),
+            _ = _ + _ * _,
             _ = _.ConvertGlobalMSToGlobalPXOffset(_),
             _ = (0, _.useMemo)(() => {
               const _ = Math.ceil(_ / _),
@@ -5573,11 +5571,8 @@
             : null;
         });
       function _(_) {
-        const {
-            globalOffsetPX: _,
-            timelineRelativeIndex: __webpack_require__,
-          } = _,
-          _ = __webpack_require__ % 20 == 0 ? _.Major : _.Minor;
+        const { globalOffsetPX: _, timelineRelativeIndex: _ } = _,
+          _ = _ % 20 == 0 ? _.Major : _.Minor;
         return (0, _.jsx)("div", {
           className: _.TimeTick,
           style: {
@@ -5749,7 +5744,7 @@
       function _(_) {
         let {
           entry: _,
-          strMarkerIcon: __webpack_require__,
+          strMarkerIcon: _,
           onClick: _,
           onMouseEnter: _,
           onMouseLeave: _,
@@ -5774,12 +5769,12 @@
           onMouseLeave: _,
           children: (0, _.jsx)(_, {
             entry: _,
-            strMarkerIcon: __webpack_require__,
+            strMarkerIcon: _,
           }),
         });
       }
       function _(_) {
-        let { entry: _, strMarkerIcon: __webpack_require__ } = _;
+        let { entry: _, strMarkerIcon: _ } = _;
         const _ = _().GetGameID();
         return (0, _._)(_)
           ? (0, _.jsx)(_, {
@@ -5788,19 +5783,19 @@
             })
           : (0, _._)(_)
             ? (0, _.jsx)(_, {})
-            : _(__webpack_require__)
+            : _(_)
               ? (0, _.jsx)(_, {
                   entry: _,
-                  strMarkerIcon: __webpack_require__,
+                  strMarkerIcon: _,
                 })
               : (0, _.jsx)(_, {
-                  strMarkerIcon: __webpack_require__,
+                  strMarkerIcon: _,
                   strGameID: _,
                 });
       }
       function _(_) {
-        const { achievementEntry: _, strGameID: __webpack_require__ } = _,
-          _ = _(new _._(__webpack_require__).GetAppID(), _.achievement_name);
+        const { achievementEntry: _, strGameID: _ } = _,
+          _ = _(new _._(_).GetAppID(), _.achievement_name);
         let _, _;
         if (_)
           (_ = "white"),
@@ -5823,7 +5818,7 @@
         });
       }
       function _(_) {
-        const { entry: _, strMarkerIcon: __webpack_require__ } = _;
+        const { entry: _, strMarkerIcon: _ } = _;
         let _, _;
         (0, _._)(_)
           ? ((_ = {
@@ -5831,7 +5826,7 @@
               color: _.Blue,
             }),
             (_ = _.CustomMarker))
-          : (_ = _(__webpack_require__));
+          : (_ = _(_));
         const _ = _(_.color);
         return (0, _.jsx)(_, {
           color: _,
@@ -5842,9 +5837,9 @@
         });
       }
       function _(_) {
-        const { icon: _, className: __webpack_require__ } = _;
+        const { icon: _, className: _ } = _;
         return _(_).func({
-          className: __webpack_require__,
+          className: _,
         });
       }
       function _(_) {
@@ -5858,16 +5853,16 @@
         });
       }
       function _(_) {
-        const { strMarkerIcon: _, strGameID: __webpack_require__ } = _;
+        const { strMarkerIcon: _, strGameID: _ } = _;
         return (0, _.jsx)(_, {
           children: (0, _.jsx)(_, {
             icon: _,
-            gameID: __webpack_require__,
+            gameID: _,
           }),
         });
       }
       function _(_) {
-        const { icon: _, gameID: __webpack_require__, className: _ } = _,
+        const { icon: _, gameID: _, className: _ } = _,
           _ = (function (_, _) {
             return _
               ? _(_, _)
@@ -5875,7 +5870,7 @@
                   "useGameMarkerFromID called in a context where the hook isn't defined.",
                 ),
                 null);
-          })(new _._(__webpack_require__).GetAppID(), _);
+          })(new _._(_).GetAppID(), _);
         if (_(_))
           return (0, _.jsx)(_, {
             ..._,
@@ -5907,14 +5902,14 @@
         );
       }
       function _(_) {
-        const { children: _, color: __webpack_require__ } = _;
+        const { children: _, color: _ } = _;
         return (0, _.jsx)("div", {
           className: _.MarkerCtn,
           children: (0, _.jsx)("div", {
             className: _.Marker,
-            style: __webpack_require__
+            style: _
               ? {
-                  color: __webpack_require__,
+                  color: _,
                 }
               : null,
             children: _,
@@ -5955,7 +5950,7 @@
       function _(_) {
         const {
             closeModal: _,
-            strTimelineID: __webpack_require__,
+            strTimelineID: _,
             entry: _,
             playbackCoordinator: _,
             fnClearSelection: _,
@@ -5975,7 +5970,7 @@
               onCancel: _,
               onOK: async () => {
                 _.fnSetLoading(!0);
-                (await _.UpdateUserMarker(__webpack_require__, _, _, _))
+                (await _.UpdateUserMarker(_, _, _, _))
                   ? _()
                   : (_.fnSetError(!0),
                     _.fnSetStrError((0, _._)("#Marker_UpdateFailed")));
@@ -6133,7 +6128,7 @@
       });
       function _(_) {
         const { children: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(),
@@ -6181,7 +6176,7 @@
         const _ = (0, _.useMemo)(
           () => ({
             bContainerFocus: _,
-            bInContainer: __webpack_require__,
+            bInContainer: _,
             nMouseClientXPX: _,
             globalMouseXPX: _,
             scrollWindowMouseXPX: _,
@@ -6189,7 +6184,7 @@
             bContextMenuOpen: _,
             setContextMenuOpen: _,
           }),
-          [_, __webpack_require__, _, _, _, _, _],
+          [_, _, _, _, _, _, _],
         );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -6268,7 +6263,7 @@
       function _(_) {
         const {
             playbackCoordinator: _,
-            timelineView: __webpack_require__,
+            timelineView: _,
             nGlobalOffsetMS: _,
             fnSetSelectionClipRange: _,
             isCurrentPlayback: _,
@@ -6277,23 +6272,19 @@
             onContextMenuOpenChange: _,
           } = _,
           _ = (0, _._)(() => _.GetClipsAtGlobalMS(_)),
-          _ = _(__webpack_require__);
+          _ = _(_);
         (0, _.useEffect)(() => (_(!0), () => _(!1)), [_]);
         const _ = (() => {
-            const { strTimelineID: _, nTimelineOffsetMS: __webpack_require__ } =
+            const { strTimelineID: _, nTimelineOffsetMS: _ } =
               _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
             if (!_) return null;
             const _ = _.GetLoader().GetTimelineData(_);
             if (!_) return null;
-            const _ = _._(
-              _.m_rgPhases,
-              (_) => __webpack_require__.valMS - parseInt(_.time),
-            );
+            const _ = _._(_.m_rgPhases, (_) => _.valMS - parseInt(_.time));
             if (_ < 0) return null;
             const _ = _.m_rgPhases[_];
-            return __webpack_require__.valMS >= parseInt(_.time) &&
-              __webpack_require__.valMS <=
-                parseInt(_.time) + parseInt(_.duration)
+            return _.valMS >= parseInt(_.time) &&
+              _.valMS <= parseInt(_.time) + parseInt(_.duration)
               ? {
                   strTimelineID: _,
                   phase: _,
@@ -6304,7 +6295,7 @@
         return (
           (0, _.useEffect)(
             () => () => __webpack_require__.SetPhaseToHighlight(null),
-            [__webpack_require__],
+            [_],
           ),
           (0, _.jsxs)(_._, {
             refInstance: _,
@@ -6336,15 +6327,12 @@
               }),
               (0, _.jsx)(_._, {
                 onSelected: () => {
-                  const {
-                      strTimelineID: _,
-                      nTimelineOffsetMS: __webpack_require__,
-                    } = _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS),
-                    _ = _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_),
-                    _ = (0, _._)(__webpack_require__.valMS + _);
-                  !(function (_, _, _) {
-                    null != _() && _().TakeScreenshot(_, _, _.valMS);
-                  })(_.GetGameID(), _, _);
+                  const { strTimelineID: _, nTimelineOffsetMS: _ } =
+                    _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
+                  _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_);
+                  !(function (_, _, _, _) {
+                    null != _() && _().TakeScreenshot(_, _, _.valMS, _);
+                  })(_.GetGameID(), _, _, _.GetClipID());
                 },
                 className: _.TimelineContextMenuItem,
                 children: (0, _.jsxs)("div", {
@@ -6405,7 +6393,7 @@
                 (0, _.jsx)(_._, {
                   onSelected: () => {
                     if (!_) return;
-                    const { phase: _, strTimelineID: __webpack_require__ } = _;
+                    const { phase: _, strTimelineID: _ } = _;
                     !(function (_, _, _, _) {
                       const _ = _ + 1,
                         _ = _ + _ - 2;
@@ -6432,7 +6420,7 @@
                       ).create(!1);
                     })(
                       _.GetGameID(),
-                      __webpack_require__,
+                      _,
                       parseInt(_.time),
                       parseInt(_.duration),
                     );
@@ -6491,7 +6479,7 @@
       function _(_) {
         const {
             playbackCoordinator: _,
-            timelineView: __webpack_require__,
+            timelineView: _,
             markerInfo: _,
             setSelectedMarker: _,
             clearRange: _,
@@ -6505,7 +6493,7 @@
           _ = (0, _._)(() =>
             _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_.nGlobalMS.valMS),
           ),
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = (_) => {
             let _ = _,
               _ = _;
@@ -6665,7 +6653,7 @@
       function _(_) {
         const {
             markerInfo: _,
-            view: __webpack_require__,
+            view: _,
             coordinator: _,
             gameID: _,
             clipID: _,
@@ -6683,7 +6671,7 @@
           _ = (function () {
             const _ = _(),
               _ = _(),
-              { setSelectedMarker: __webpack_require__ } = _(),
+              { setSelectedMarker: _ } = _(),
               _ = _(),
               { onNavigateToClip: _, onNavigateToScreenshot: _ } = _(),
               _ = _(),
@@ -6695,7 +6683,7 @@
                   markerInfo: _,
                   playbackCoordinator: _,
                   timelineView: _,
-                  setSelectedMarker: __webpack_require__,
+                  setSelectedMarker: _,
                   onNavigateToClip: _,
                   onNavigateToScreenshot: _,
                   bLowDiskSpace: _,
@@ -6703,7 +6691,7 @@
                 });
                 (0, _._)(_, _, _);
               },
-              [_, _, _, _, __webpack_require__, _, _, _],
+              [_, _, _, _, _, _, _, _],
             );
           })(),
           { selectedMarker: _ } = _(),
@@ -6776,7 +6764,7 @@
                 onMouseLeave: _,
               }
             );
-          })(__webpack_require__, _),
+          })(_, _),
           _ = _.useCallback(
             (_) => {
               const _ = _.valMS - 5e3,
@@ -6789,7 +6777,7 @@
                   `/GameRecording/Marker/Click/${_.entry.type}`,
                 );
             },
-            [_, _.valMS, _, __webpack_require__, _],
+            [_, _.valMS, _, _, _],
           ),
           _ = {
             transform: `translateX( calc( ${_}px - 50% ))`,
@@ -6959,12 +6947,12 @@
       function _(_) {
         const {
             view: _,
-            entry: __webpack_require__,
+            entry: _,
             nGlobalEntryEndMS: _,
             nGlobalTLStartMS: _,
           } = _,
           _ = _(),
-          _ = (0, _._)(parseInt(__webpack_require__.time) + _.valMS),
+          _ = (0, _._)(parseInt(_.time) + _.valMS),
           _ = (0, _._)(() => {
             const _ = _.ConvertGlobalMSToGlobalPXOffset(_.valMS),
               _ = _.GetVirtualWindowStartPX();
@@ -6981,10 +6969,10 @@
             width: _ - _,
           },
           _ = (0, _._)({
-            [_.Unspecified]: __webpack_require__.mode === _._.Invalid,
-            [_.Staging]: __webpack_require__.mode === _._.Staging,
-            [_.Menus]: __webpack_require__.mode === _._.Menus,
-            [_.Playing]: __webpack_require__.mode === _._.Playing,
+            [_.Unspecified]: _.mode === _._.Invalid,
+            [_.Staging]: _.mode === _._.Staging,
+            [_.Menus]: _.mode === _._.Menus,
+            [_.Playing]: _.mode === _._.Playing,
           });
         return (0, _.jsx)(
           "div",
@@ -6992,7 +6980,7 @@
             className: (0, _._)(_.GameModeMarker, _, _ && _.GameModeMarkerClip),
             style: _,
           },
-          __webpack_require__._,
+          _._,
         );
       }
       const _ = _.memo(function (_) {
@@ -7013,7 +7001,7 @@
         _ = _.memo(function (_) {
           const {
               timelineID: _,
-              globalOffsetMS: __webpack_require__,
+              globalOffsetMS: _,
               nDurationMS: _,
             } = _.timeline,
             _ = _(),
@@ -7030,8 +7018,8 @@
                     },
                   ];
             }),
-            _ = (0, _._)(__webpack_require__ + _),
-            _ = __webpack_require__ - _.GetTimelineOffsetMS(_);
+            _ = (0, _._)(_ + _),
+            _ = _ - _.GetTimelineOffsetMS(_);
           let _ = [];
           for (let _ = 0; _ < _.length; _++) {
             const _ = (0, _._)(
@@ -7093,14 +7081,14 @@
               });
       });
       function _(_) {
-        const { view: _, setDragActive: __webpack_require__ } = _,
+        const { view: _, setDragActive: _ } = _,
           _ = (0, _._)(
             () => _.GetVisualWindowStartPX() + _.GetScrollWindowWidth() / 2,
           );
         return (0, _.jsx)(_, {
           playheadPosition: _,
           children: (0, _.jsx)(_, {
-            setDragActive: __webpack_require__,
+            setDragActive: _,
             bDragActive: !1,
           }),
         });
@@ -7130,7 +7118,7 @@
           );
         }),
         _ = (0, _.memo)(function (_) {
-          const { dragState: _, setDragActive: __webpack_require__ } = _,
+          const { dragState: _, setDragActive: _ } = _,
             { bDragActive: _, bPausedOnDragStart: _ } = _,
             _ = _(),
             _ = _(),
@@ -7301,7 +7289,7 @@
                 className: _ ? _.Active : void 0,
                 playheadPosition: _,
                 children: (0, _.jsx)(_, {
-                  setDragActive: __webpack_require__,
+                  setDragActive: _,
                   bDragActive: _,
                 }),
               }),
@@ -7309,15 +7297,13 @@
           );
         }),
         _ = (0, _.memo)(function (_) {
-          const { setDragActive: _, bDragActive: __webpack_require__ } = _,
+          const { setDragActive: _, bDragActive: _ } = _,
             _ = _(),
             _ = (_) => {
-              __webpack_require__ || _.SetThumbnailComponent(_.Playhead),
-                _.stopPropagation();
+              _ || _.SetThumbnailComponent(_.Playhead), _.stopPropagation();
             },
             _ = (_) => {
-              __webpack_require__ || _.SetThumbnailComponent(null),
-                _.stopPropagation();
+              _ || _.SetThumbnailComponent(null), _.stopPropagation();
             };
           return (0, _.jsx)("div", {
             className: _.PlayHeadContent,
@@ -7415,15 +7401,11 @@
         });
       }
       function _(_) {
-        const {
-          className: _,
-          playheadPosition: __webpack_require__,
-          children: _,
-        } = _;
+        const { className: _, playheadPosition: _, children: _ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.PlayHeadContainer, _),
           style: {
-            transform: `translateX( calc(${__webpack_require__}px - 50% ))`,
+            transform: `translateX( calc(${_}px - 50% ))`,
           },
           children: _,
         });
@@ -7716,7 +7698,7 @@
       const _ = parseInt(_.thumbnailWidth),
         _ = _.forwardRef(function (_, _) {
           const {
-              globalMS: __webpack_require__,
+              globalMS: _,
               children: _,
               imgClassName: _,
               className: _,
@@ -7727,9 +7709,7 @@
             _ = _.GetClipID(),
             _ = (0, _._)(() => _.GetRecordingMode()),
             _ = (0, _._)(() =>
-              _.ConvertGlobaOffsetToRecordingAndRelativeOffset(
-                __webpack_require__,
-              ),
+              _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_),
             ),
             _ = (_(), !1),
             _ = _?.nRecordingOffsetMS,
@@ -7819,26 +7799,18 @@
         );
       }
       function _(_) {
-        const {
-            strGameID: _,
-            thumbnailEntry: __webpack_require__,
-            achievementEntry: _,
-          } = _,
+        const { strGameID: _, thumbnailEntry: _, achievementEntry: _ } = _,
           _ = _(new _._(_).GetAppID(), _.achievement_name);
         return _
           ? (0, _.jsx)(_, {
               title: _.name ?? "",
               description: _.description ?? "",
-              thumbnailEntry: __webpack_require__,
+              thumbnailEntry: _,
             })
           : null;
       }
       function _(_) {
-        const {
-          title: _,
-          description: __webpack_require__,
-          thumbnailEntry: _,
-        } = _;
+        const { title: _, description: _, thumbnailEntry: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.InfoBoxContainer,
           children: [
@@ -7862,25 +7834,19 @@
             (0, _.jsx)("div", {
               className: _.DescriptionBlock,
               children:
-                __webpack_require__ &&
+                _ &&
                 (0, _.jsx)("div", {
                   className: _.Description,
-                  children: __webpack_require__,
+                  children: _,
                 }),
             }),
           ],
         });
       }
       const _ = _.forwardRef(function (_, _) {
-        const {
-            globalPX: __webpack_require__,
-            onMouseEnter: _,
-            onMouseLeave: _,
-          } = _,
+        const { globalPX: _, onMouseEnter: _, onMouseLeave: _ } = _,
           _ = _(),
-          _ = (0, _._)(() =>
-            _.ConvertPXOffsetToGlobalMS(__webpack_require__, !1),
-          ),
+          _ = (0, _._)(() => _.ConvertPXOffsetToGlobalMS(_, !1)),
           _ = (0, _._)(() => _.GetThumbnailComponent()),
           _ = _(),
           _ = (0, _._)(() => _.GetRecordingMode());
@@ -7903,7 +7869,7 @@
                 _ === _.Highlight
                   ? (0, _.jsx)(_, {})
                   : (0, _.jsx)(_, {
-                      globalPX: __webpack_require__,
+                      globalPX: _,
                     }),
                 (0, _.jsx)(_, {
                   globalMS: _,
@@ -7931,7 +7897,7 @@
       }
       function _(_) {
         const { globalMS: _ } = _,
-          { setSelectedMarker: __webpack_require__ } = _(),
+          { setSelectedMarker: _ } = _(),
           _ = _(),
           _ = _(),
           _ = (0, _._)(() => _.FindRangeEventsAtGlobalMS(_)),
@@ -8131,13 +8097,11 @@
       }
       function _(_) {
         const { setSelectedMarker: _ } = _(),
-          { markerInfo: __webpack_require__ } = _,
+          { markerInfo: _ } = _,
           _ = _(),
           _ = (0, _._)(() => _.ShouldModeShowClipControls()),
           _ = (0, _._)(() =>
-            _.ConvertGlobaOffsetToRecordingAndRelativeOffset(
-              __webpack_require__.nGlobalMS.valMS,
-            ),
+            _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_.nGlobalMS.valMS),
           ),
           _ = _(),
           _ = _();
@@ -8155,22 +8119,16 @@
                 onClick: (_) => {
                   let _ = _,
                     _ = _;
-                  (0, _._)(__webpack_require__.entry) &&
-                    ((_ = 0),
-                    (_ = parseInt(__webpack_require__.entry.duration)));
+                  (0, _._)(_.entry) &&
+                    ((_ = 0), (_ = parseInt(_.entry.duration)));
                   const [_, _] = _.GetLoader().CreateGlobalRangeForTimeline(
-                    __webpack_require__.strTimelineID,
-                    __webpack_require__.nGlobalMS.valMS,
+                    _.strTimelineID,
+                    _.nGlobalMS.valMS,
                     _,
                     _,
                   );
                   _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                    _?.(
-                      __webpack_require__.entry._,
-                      __webpack_require__.strTimelineID,
-                      _,
-                      _,
-                    ),
+                    _?.(_.entry._, _.strTimelineID, _, _),
                     _(),
                     _.ReportTrackedAction(
                       "/GameRecording/Tooltip/ClipFromHighlight",
@@ -8261,7 +8219,7 @@
         });
       }
       function _(_) {
-        const { entry: _, gameID: __webpack_require__ } = _,
+        const { entry: _, gameID: _ } = _,
           _ = _.handle,
           { onNavigateToScreenshot: _ } = _();
         return (0, _.jsx)(_._, {
@@ -8273,7 +8231,7 @@
             onClick: () => {
               _ &&
                 (_.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
-                _(__webpack_require__, _));
+                _(_, _));
             },
             children: (0, _.jsx)(_._, {}),
           }),
@@ -8402,7 +8360,7 @@
       function _(_) {
         const {
             globalPX: _,
-            setInteractingWithThumbnail: __webpack_require__,
+            setInteractingWithThumbnail: _,
             bInteractingWithThumbnail: _,
           } = _,
           _ = _(),
@@ -8435,7 +8393,7 @@
               (_.current = null),
               _.GetAutoScrollPaused() && _.SetAutoScrollPauseTimeout(),
               _.SetThumbnailComponent(null);
-          }, [__webpack_require__, _, _]),
+          }, [_, _, _]),
           _ = (0, _.useCallback)(
             (_, _) => {
               if (!_.current || !_.current) return;
@@ -8523,10 +8481,7 @@
             : null;
         }),
         _ = (0, _.memo)(function (_) {
-          const {
-              activeControlState: _,
-              setActiveControlState: __webpack_require__,
-            } = _,
+          const { activeControlState: _, setActiveControlState: _ } = _,
             [_, _] = (0, _.useState)(),
             [_, _] = (0, _.useState)(),
             _ = _(),
@@ -8569,7 +8524,7 @@
               children: [
                 (0, _.jsx)(_, {
                   isActive: "left" === _,
-                  setControlState: __webpack_require__,
+                  setControlState: _,
                   setRangeControlPX: _,
                   pxOffset: _,
                 }),
@@ -8580,7 +8535,7 @@
                 }),
                 (0, _.jsx)(_, {
                   isActive: "right" === _,
-                  setControlState: __webpack_require__,
+                  setControlState: _,
                   setRangeControlPX: _,
                   pxOffset: _,
                 }),
@@ -8598,30 +8553,26 @@
       const _ = (0, _.memo)(function (_) {
         const {
             isActive: _,
-            setControlState: __webpack_require__,
+            setControlState: _,
             setRangeControlPX: _,
             pxOffset: _,
           } = _,
           _ = _();
         return _
           ? (0, _.jsx)(_, {
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
               pxOffset: _,
             })
           : (0, _.jsx)(_, {
               offsetMS: _.valMS,
               direction: "left",
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
             });
       });
       function _(_) {
-        const {
-            setControlState: _,
-            setRangeControlPX: __webpack_require__,
-            pxOffset: _,
-          } = _,
+        const { setControlState: _, setRangeControlPX: _, pxOffset: _ } = _,
           _ = _(),
           _ = _(),
           _ = _(),
@@ -8718,7 +8669,7 @@
               } else _(_._(_.valPX, 0, _));
               _.current = _.valPX;
             }, [_.valPX, _.valMS, _.valPX, _, _, _, _, _, _]);
-          })(_(), _, _, _, _, __webpack_require__),
+          })(_(), _, _, _, _, _),
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
@@ -8733,30 +8684,26 @@
       const _ = (0, _.memo)(function (_) {
         const {
             isActive: _,
-            setControlState: __webpack_require__,
+            setControlState: _,
             setRangeControlPX: _,
             pxOffset: _,
           } = _,
           _ = _();
         return _
           ? (0, _.jsx)(_, {
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
               pxOffset: _,
             })
           : (0, _.jsx)(_, {
               offsetMS: _.valMS,
               direction: "right",
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
             });
       });
       function _(_) {
-        const {
-            setControlState: _,
-            setRangeControlPX: __webpack_require__,
-            pxOffset: _,
-          } = _,
+        const { setControlState: _, setRangeControlPX: _, pxOffset: _ } = _,
           _ = _(),
           _ = _(),
           _ = _(),
@@ -8855,7 +8802,7 @@
               } else _(_._(_.valPX, 0, _));
               _.current = _.valPX;
             }, [_.valMS, _.valPX, _, _, _, _, _, _.valPX, _]);
-          })(_(), _, _, _, _, __webpack_require__),
+          })(_(), _, _, _, _, _),
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
@@ -8870,7 +8817,7 @@
       function _(_) {
         const {
             offsetMS: _,
-            direction: __webpack_require__,
+            direction: _,
             setControlState: _,
             setRangeControlPX: _,
           } = _,
@@ -8890,9 +8837,9 @@
               const _ = (0, _._)(_);
               let _, _;
               const _ = () => {
-                _(__webpack_require__),
+                _(_),
                   _.SetThumbnailComponent(
-                    "left" === __webpack_require__ ? _.RangeLeft : _.RangeRight,
+                    "left" === _ ? _.RangeLeft : _.RangeRight,
                   ),
                   _();
               };
@@ -8904,12 +8851,10 @@
               _.addEventListener("mouseup", _),
                 (_ = () => _.removeEventListener("mouseup", _));
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           ),
           _ = (_) => {
-            _.SetThumbnailComponent(
-              "left" === __webpack_require__ ? _.RangeLeft : _.RangeRight,
-            );
+            _.SetThumbnailComponent("left" === _ ? _.RangeLeft : _.RangeRight);
           },
           _ = (_) => {
             _.SetThumbnailComponent(null);
@@ -8923,19 +8868,15 @@
           onBlur: _,
           children: (0, _.jsx)(_, {
             offsetPX: _,
-            direction: __webpack_require__,
+            direction: _,
           }),
         });
       }
       const _ = (0, _.memo)(function (_) {
-          const {
-            startOffsetPX: _,
-            endOffsetPX: __webpack_require__,
-            className: _,
-          } = _;
-          if (isNaN(_) || isNaN(__webpack_require__)) return null;
+          const { startOffsetPX: _, endOffsetPX: _, className: _ } = _;
+          if (isNaN(_) || isNaN(_)) return null;
           const _ = {
-            width: __webpack_require__ - _ || 0,
+            width: _ - _ || 0,
             transform: `translateX(${_}px)`,
           };
           return (0, _.jsx)("div", {
@@ -8944,9 +8885,9 @@
           });
         }),
         _ = (0, _.memo)(function (_) {
-          const { direction: _, offsetPX: __webpack_require__ } = _,
+          const { direction: _, offsetPX: _ } = _,
             _ = {
-              transform: `translateX( calc( ${__webpack_require__}px - 50%) )`,
+              transform: `translateX( calc( ${_}px - 50%) )`,
             },
             _ = _(),
             _ = (0, _._)(() => _.GetThumbnailComponent() === _.Playhead);
@@ -9039,12 +8980,12 @@
         });
       });
       function _(_) {
-        const { label: _, startPX: __webpack_require__, recordingMode: _ } = _;
+        const { label: _, startPX: _, recordingMode: _ } = _;
         let _ = _ == _.Overlay;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.TimelineRelativeDate, _ && _.Overlay),
           style: {
-            transform: `translateX(${__webpack_require__}px)`,
+            transform: `translateX(${_}px)`,
           },
           children: _,
         });
@@ -9069,14 +9010,9 @@
         });
       });
       function _(_) {
-        const {
-            isActive: _,
-            endPX: __webpack_require__,
-            startPX: _,
-            recordingType: _,
-          } = _,
+        const { isActive: _, endPX: _, startPX: _, recordingType: _ } = _,
           _ = {
-            width: __webpack_require__ - _ || 0,
+            width: _ - _ || 0,
             transform: `translateX(${_}px)`,
           },
           _ = _(),
@@ -9095,7 +9031,7 @@
             }),
             _ &&
               (0, _.jsx)(_, {
-                endPX: __webpack_require__,
+                endPX: _,
               }),
           ],
         });
@@ -9145,10 +9081,10 @@
           });
         }),
         _ = (0, _.memo)(function (_) {
-          const { endPX: _, startPX: __webpack_require__ } = _,
+          const { endPX: _, startPX: _ } = _,
             _ = {
-              width: _ - __webpack_require__ || 0,
-              transform: `translateX(${__webpack_require__}px)`,
+              width: _ - _ || 0,
+              transform: `translateX(${_}px)`,
             };
           return (0, _.jsx)("div", {
             className: _.ClipDecorator,
@@ -9314,7 +9250,7 @@
         });
       }
       function _(_) {
-        const { timelineView: _, scrollSize: __webpack_require__ } = _,
+        const { timelineView: _, scrollSize: _ } = _,
           _ = _(),
           _ = (function (_, _) {
             const _ = (0, _.useRef)(void 0),
@@ -9371,19 +9307,15 @@
                 onMouseLeave: _,
               }
             );
-          })(_, __webpack_require__),
+          })(_, _),
           _ = (0, _._)(() => _.GetTimelineMarginWidth()),
           _ = (0, _._)(() => _.GetScrollableWidthPX()),
           _ = (0, _.useCallback)(
             (_) => {
               const _ = _ + _;
-              return _._(
-                (_ * __webpack_require__.scrollBarWidth) / _,
-                0,
-                __webpack_require__.scrollBarWidth,
-              );
+              return _._((_ * _.scrollBarWidth) / _, 0, _.scrollBarWidth);
             },
-            [__webpack_require__.scrollBarWidth, _, _],
+            [_.scrollBarWidth, _, _],
           );
         return (0, _.jsxs)("div", {
           className: _.ScrollTrack,
@@ -9393,7 +9325,7 @@
               timelineView: _,
               playbackCoordinator: _,
               fnConvertGlobalPXToTrackPX: _,
-              scrollBarWidth: __webpack_require__.scrollBarWidth,
+              scrollBarWidth: _.scrollBarWidth,
             }),
             (0, _.jsx)(_, {
               timelineView: _,
@@ -9405,7 +9337,7 @@
       function _(_) {
         const {
             timelineView: _,
-            playbackCoordinator: __webpack_require__,
+            playbackCoordinator: _,
             fnConvertGlobalPXToTrackPX: _,
             scrollBarWidth: _,
           } = _,
@@ -9446,10 +9378,7 @@
         });
       }
       function _(_) {
-        const {
-            timelineView: _,
-            fnConvertGlobalPXToTrackPX: __webpack_require__,
-          } = _,
+        const { timelineView: _, fnConvertGlobalPXToTrackPX: _ } = _,
           _ = _(),
           _ = _(),
           _ = (0, _._)(() => {
@@ -9484,7 +9413,7 @@
       function _(_) {
         const {
             scrollSize: _,
-            timelineWidth: __webpack_require__,
+            timelineWidth: _,
             thumbWidth: _,
             timelineView: _,
           } = _,
@@ -9552,7 +9481,7 @@
                 bHiglightThumb: _,
               }
             );
-          })(_, __webpack_require__, _, _);
+          })(_, _, _, _);
         return (0, _.jsx)("div", {
           className: (0, _._)(_.ScrollThumb, _ && _.Highlight),
           style: {
@@ -9563,133 +9492,8 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_tours = {};
-        m_strActiveTour = "";
-        m_storage = void 0;
-        m_bReady = !1;
-        constructor() {
-          (0, _._)(this);
-        }
-        async Init(_) {
-          if (this.m_storage) return;
-          this.m_storage = _;
-          const _ = await _(_);
-          Object.keys(_ || {}).forEach((_) => {
-            const _ = !!_[_];
-            this.m_tours[_] = {
-              ...(this.m_tours[_] || {
-                stops: {},
-              }),
-              bSeen: _,
-            };
-          }),
-            (this.m_bReady = !0);
-        }
-        UpdateStop(_, _, _, _) {
-          this.m_tours[_] ||
-            (this.m_tours[_] = {
-              bSeen: !1,
-              stops: {},
-            }),
-            (this.m_tours[_].stops[_] = {
-              options: _,
-              elem: _,
-            });
-        }
-        BHasSeenTour(_) {
-          return !this.m_bReady || (this.m_tours[_] && this.m_tours[_].bSeen);
-        }
-        GetTrackedStops(_) {
-          return this.m_tours[_]?.stops || {};
-        }
-        ActivateTour(_) {
-          this.m_strActiveTour &&
-            this.m_strActiveTour !== _ &&
-            this.DismissTour(this.m_strActiveTour),
-            (this.m_strActiveTour = _);
-        }
-        DismissTour(_) {
-          this.m_tours[_] &&
-            (this.MarkTourSeen(_),
-            (this.m_tours[_].bSeen = !0),
-            this.m_strActiveTour === _ && (this.m_strActiveTour = ""));
-        }
-        MarkTourSeen(_) {
-          return _(this.m_storage, _, Date.now());
-        }
-        MarkTourUnseen(_) {
-          return _(this.m_storage, _, void 0);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_tours", void 0),
-        (0, _._)([_._], _.prototype, "m_strActiveTour", void 0),
-        (0, _._)([_._], _.prototype, "m_bReady", void 0),
-        (0, _._)([_._.bound], _.prototype, "UpdateStop", null),
-        (0, _._)([_._], _.prototype, "ActivateTour", null),
-        (0, _._)([_._], _.prototype, "DismissTour", null);
-      const _ = "tour_history";
-      async function _(_) {
-        const _ = await _.GetObject(_);
-        return _ && "object" == typeof _ ? _ : {};
-      }
-      async function _(_, _, _) {
-        const _ = await _(_);
-        return _.StoreObject(_, {
-          ..._,
-          [_]: _,
-        });
-      }
-      const _ = new _();
-      function _() {
-        const _ = (0, _._)();
-        return (
-          (0, _.useEffect)(() => {
-            _.Init(_);
-          }, [_]),
-          _
-        );
-      }
-      function _(_) {
-        const _ = _(),
-          { bShowTour: __webpack_require__, stopElems: _ } = (0, _._)(() => ({
-            bShowTour: !_.BHasSeenTour(_),
-            stopElems: _.GetTrackedStops(_),
-          }));
-        return {
-          bShowTour: __webpack_require__,
-          stopElems: _,
-          onInteraction: (0, _.useCallback)(() => _.MarkTourSeen(_), [_, _]),
-          onDismiss: (0, _.useCallback)(() => _.DismissTour(_), [_, _]),
-          onActivate: (0, _.useCallback)(() => _.ActivateTour(_), [_, _]),
-          updateStop: _.UpdateStop,
-        };
-      }
-      function _(_) {
-        const {
-            name: _,
-            tour: __webpack_require__,
-            options: _,
-            children: _,
-          } = _,
-          { updateStop: _ } = _(__webpack_require__),
-          _ = (0, _.useCallback)(
-            (_) => _(__webpack_require__, _, _, _),
-            [_, __webpack_require__, _],
-          ),
-          _ = _.Children.only(_),
-          _ = (0, _._)(_, _.props.ref);
-        return (0, _.cloneElement)(_.Children.only(_), {
-          ref: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _(),
           _ = (0, _._)(() => _.GetVisibleTimelines());
@@ -9708,7 +9512,7 @@
       function _(_) {
         const {
           timelineOffsetMS: _,
-          nDurationMS: __webpack_require__,
+          nDurationMS: _,
           phase: _,
           timeline: _,
         } = _;
@@ -9720,7 +9524,7 @@
       function _(_) {
         const {
             children: _,
-            timeline: __webpack_require__,
+            timeline: _,
             timelineOffsetMS: _,
             nDurationMS: _,
             phase: _,
@@ -9737,13 +9541,11 @@
           } = (0, _._)(() => {
             const _ = _.GetPhaseToHighlight();
             return {
-              pxStart: _.ConvertGlobalMSToGlobalPXOffset(
-                __webpack_require__.globalOffsetMS + _,
-              ),
+              pxStart: _.ConvertGlobalMSToGlobalPXOffset(_.globalOffsetMS + _),
               pxWidth: _.ConvertDurationMSToDeltaPX(_),
               bHighlight:
                 _ &&
-                _[0] === __webpack_require__.timelineID &&
+                _[0] === _.timelineID &&
                 _[1] === _.background_timeline_offset,
             };
           }),
@@ -9757,8 +9559,8 @@
           })(),
           _ = () => {
             const _ = _.GetLoader(),
-              _ = _.GetTimelineData(__webpack_require__.timelineID),
-              _ = _.GetTimelineMetadata(__webpack_require__.timelineID),
+              _ = _.GetTimelineData(_.timelineID),
+              _ = _.GetTimelineMetadata(_.timelineID),
               _ = _.m_rgPhases.find((_) => parseInt(_.time) === _);
             _ &&
               _({
@@ -9838,17 +9640,11 @@
         });
       }
       function _(_) {
-        const {
-            timelineView: _,
-            entry: __webpack_require__,
-            timelineOffset: _,
-          } = _,
-          _ = _ + parseInt(__webpack_require__.time),
+        const { timelineView: _, entry: _, timelineOffset: _ } = _,
+          _ = _ + parseInt(_.time),
           { pxStart: _, pxWidth: _ } = (0, _._)(() => ({
             pxStart: _.ConvertGlobalMSToGlobalPXOffset(_),
-            pxWidth: _.ConvertDurationMSToDeltaPX(
-              parseInt(__webpack_require__.duration),
-            ),
+            pxWidth: _.ConvertDurationMSToDeltaPX(parseInt(_.duration)),
           })),
           _ = {
             width: `${_}px`,
@@ -9875,7 +9671,7 @@
       function _(_) {
         const {
             loader: _,
-            className: __webpack_require__,
+            className: _,
             clipSummaries: _,
             refTimelineParentCtn: _,
             disableZoom: _,
@@ -9889,7 +9685,7 @@
         let _ = (0, _._)(
           _.ScrollAndControlsCtn,
           _.GetGamepadMode() && _.GamepadMode,
-          __webpack_require__,
+          _,
         );
         return (0, _.jsx)(_, {
           loader: _,
@@ -9902,7 +9698,7 @@
             children: [
               (0, _.jsx)(_, {}),
               (0, _.jsx)(_, {}),
-              (0, _.jsx)(_, {
+              (0, _.jsx)(_._, {
                 tour: "recording_timeline",
                 name: "timeline",
                 options: {
@@ -10000,9 +9796,9 @@
         });
       }
       function _(_) {
-        const { children: _, _: __webpack_require__, className: _ } = _;
+        const { children: _, _: _, className: _ } = _;
         return (0, _.jsx)("div", {
-          _: __webpack_require__,
+          _: _,
           className: (0, _._)(_, _.AbsoluteLayer),
           children: (0, _.jsx)("div", {
             className: _.RelativeLayer,
@@ -10188,7 +9984,7 @@
 	"endtime": 60000
 }`);
       function _(_) {
-        const { appid: _, markerID: __webpack_require__ } = _,
+        const { appid: _, markerID: _ } = _,
           _ = (function (_) {
             const [_] = (0, _.useState)(() => new _._());
             return (
@@ -10234,37 +10030,10 @@
             _.RemoveTimelineEvent(_, "5"),
               _.RemoveTimelineEvent(_, "12"),
               _.RemoveTimelineEvent(_, "16"),
-              _.AddEventToTimeline(
-                _,
-                12500,
-                __webpack_require__,
-                "5",
-                9,
-                __webpack_require__,
-                __webpack_require__,
-                0,
-              ),
-              _.AddEventToTimeline(
-                _,
-                33500,
-                __webpack_require__,
-                "12",
-                2,
-                __webpack_require__,
-                __webpack_require__,
-                0,
-              ),
-              _.AddEventToTimeline(
-                _,
-                48500,
-                __webpack_require__,
-                "16",
-                9,
-                __webpack_require__,
-                __webpack_require__,
-                0,
-              );
-          }, [__webpack_require__, _]),
+              _.AddEventToTimeline(_, 12500, _, "5", 9, _, _, 0),
+              _.AddEventToTimeline(_, 33500, _, "12", 2, _, _, 0),
+              _.AddEventToTimeline(_, 48500, _, "16", 9, _, _, 0);
+          }, [_, _]),
           (0, _.jsx)(_, {
             loader: _,
             fnGetManifest: () => "",
@@ -10357,7 +10126,7 @@
         return -1 !== _ && _ > _.lastIndexOf("/") ? _.slice(0, _) : _;
       }
       function _(_) {
-        const { appid: _, closeModal: __webpack_require__ } = _,
+        const { appid: _, closeModal: _ } = _,
           [_, _] = (0, _.useState)(() => [
             {
               markerid: "",
@@ -10427,7 +10196,7 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: (0, _._)("#TimelineMarkers_Dialog_Create"),
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: (0, _._)("#TimelineMarkers_Dialog_Create"),
@@ -10435,7 +10204,7 @@
                 (_) => !_(_.markerid) || !_.image || _.image?.length < 10,
               ),
               bDisableBackgroundDismiss: !0,
-              onCancel: __webpack_require__,
+              onCancel: _,
               strOKButtonText: (0, _._)("#Button_Create"),
               onOK: async () => {
                 _.fnSetLoading(!0);
@@ -10583,13 +10352,9 @@
       }
       function _(_) {
         const { fnHandleFiles: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1);
+          [_, _] = (0, _.useState)(!1);
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _["drag-drop-box"],
-            __webpack_require__ && _.dragging,
-            _.DragBox,
-          ),
+          className: (0, _._)(_["drag-drop-box"], _ && _.dragging, _.DragBox),
           onDragEnter: (_) => {
             _.preventDefault(), _(!0);
           },
@@ -10610,7 +10375,7 @@
         });
       }
       function _(_) {
-        const { marker: _, appid: __webpack_require__, setMarkerID: _ } = _;
+        const { marker: _, appid: _, setMarkerID: _ } = _;
         return (
           (0, _.useEffect)(
             () => (
@@ -10664,7 +10429,7 @@
                     ),
                   }),
                   (0, _.jsx)(_, {
-                    appid: __webpack_require__,
+                    appid: _,
                     markerID: _.timeline_marker_id,
                   }),
                 ],
@@ -10675,7 +10440,7 @@
       function _(_) {
         const {
             appid: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             bDisallowMarkerIDEdit: _,
             oTimelineMarkerDef: _,
           } = _,
@@ -10719,7 +10484,7 @@
           return (0, _.jsx)(_._, {
             state: _,
             strDialogTitle: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
           });
         let _, _;
         if (!_ || _.unpublished_changes) {
@@ -10849,7 +10614,7 @@
       function _(_) {
         const {
             markerID: _,
-            strErrorMessage: __webpack_require__,
+            strErrorMessage: _,
             imageContent: _,
             imageType: _,
           } = _,
@@ -10906,10 +10671,7 @@
         });
       }
       function _(_) {
-        const {
-            createVisibilityState: _,
-            setCreateVisibilityState: __webpack_require__,
-          } = _,
+        const { createVisibilityState: _, setCreateVisibilityState: _ } = _,
           _ = _.useId();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -10953,7 +10715,7 @@
       const _ = "publicmissing";
       function _(_) {
         const { appid: _ } = _,
-          { publicAssetSetID: __webpack_require__ } = _(_),
+          { publicAssetSetID: _ } = _(_),
           _ = _(_);
         return (0, _.jsx)("div", {
           children: (0, _.jsxs)("div", {
@@ -10980,9 +10742,9 @@
                 children: (0, _.jsxs)("div", {
                   className: _.GridCtn,
                   children: [
-                    Boolean(__webpack_require__)
+                    Boolean(_)
                       ? (0, _.jsx)(_, {
-                          assetSetID: __webpack_require__,
+                          assetSetID: _,
                           appid: _,
                           bDraggable: !1,
                           strMessageOnEmpty: (0, _._)(
@@ -10994,7 +10756,7 @@
                         }),
                     _?.length > 0 &&
                       (0, _.jsx)(_, {
-                        assetSetID: __webpack_require__ || _,
+                        assetSetID: _ || _,
                         appid: _,
                         strMessage: (0, _._)(
                           "#TimelineMarkers_drag_target_public",
@@ -11117,17 +10879,15 @@
             });
       }
       function _(_) {
-        const { appid: _, assetSetID: __webpack_require__, closeModal: _ } = _,
-          _ = _(_, __webpack_require__),
+        const { appid: _, assetSetID: _, closeModal: _ } = _,
+          _ = _(_, _),
           { fnCreateAssetSet: _, fnUpdateAssetSet: _ } = _(),
           [_, _] = (0, _.useState)(_.name),
           [_, _] = (0, _.useState)(_.desc),
           _ = _.trimStart().toLowerCase().startsWith("steam_"),
           _ = 0 == _.trim().length,
           _ = (0, _._)(
-            __webpack_require__
-              ? "#AssetSet_Dialog_Edit_Title"
-              : "#AssetSet_Dialog_Create_Title",
+            _ ? "#AssetSet_Dialog_Edit_Title" : "#AssetSet_Dialog_Create_Title",
           ),
           _ = (0, _._)();
         return _.bLoading
@@ -11147,9 +10907,7 @@
                 let _ = null;
                 try {
                   let _;
-                  __webpack_require__
-                    ? (_ = await _(_))
-                    : ((_.branches = []), (_ = await _(_))),
+                  _ ? (_ = await _(_)) : ((_.branches = []), (_ = await _(_))),
                     1 != _ &&
                       (_ = (0, _._)({
                         sucess: _,
@@ -11198,7 +10956,7 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          { hiddenAssetSetID: __webpack_require__ } = _(_);
+          { hiddenAssetSetID: _ } = _(_);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.Unassigned, _.Ctn),
           children: [
@@ -11216,16 +10974,16 @@
                   }),
                   (0, _.jsx)(_, {
                     appid: _,
-                    assetSetID: __webpack_require__,
+                    assetSetID: _,
                   }),
                 ],
               }),
             }),
             (0, _.jsx)("div", {
-              children: Boolean(__webpack_require__)
+              children: Boolean(_)
                 ? (0, _.jsx)(_, {
                     appid: _,
-                    assetSetID: __webpack_require__,
+                    assetSetID: _,
                     strMessageOnEmpty: (0, _._)("#TimelineMarkers_Hidden_none"),
                     bDraggable: !0,
                   })
@@ -11252,10 +11010,10 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          { hiddenAssetSetID: __webpack_require__ } = _(_),
-          _ = _(_, __webpack_require__);
+          { hiddenAssetSetID: _ } = _(_),
+          _ = _(_, _);
         return (0, _.jsxs)(_._, {
-          disabled: !__webpack_require__ || !_ || 0 == _.size,
+          disabled: !_ || !_ || 0 == _.size,
           onClick: (_) =>
             (0, _._)(
               (0, _.jsx)(_, {
@@ -11271,7 +11029,7 @@
         });
       }
       function _(_) {
-        const { appid: _, closeModal: __webpack_require__ } = _,
+        const { appid: _, closeModal: _ } = _,
           { hiddenAssetSetID: _, publicAssetSetID: _ } = _(_),
           _ = _(_, _),
           _ = (0, _._)();
@@ -11281,12 +11039,12 @@
               strDialogTitle: (0, _._)(
                 "#TimelineMarkers_MoveAllHiddenToPublic",
               ),
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: (0, _._)("#TimelineMarkers_MoveAllHiddenToPublic"),
               strDescription: (0, _._)("#Dialog_AreYouSure"),
-              onCancel: __webpack_require__,
+              onCancel: _,
               bOKDisabled: !_,
               onOK: async () => {
                 _.fnSetLoading(!0);
@@ -11421,7 +11179,7 @@
         });
       }
       function _(_) {
-        const { oAssetSet: _, closeModal: __webpack_require__ } = _,
+        const { oAssetSet: _, closeModal: _ } = _,
           _ = _.Get().GetBranchDetails(),
           [_, _] = (0, _.useState)(new Set(_.branches || [])),
           { fnAddBranchToAssetSet: _, fnRemoveBranchFromAssetSet: _ } = _(),
@@ -11432,12 +11190,12 @@
               strDialogTitle: (0, _._)(
                 "#TimelineMarkers_Hidden_updatebranches",
               ),
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsxs)(_._, {
               strTitle: (0, _._)("#TimelineMarkers_Hidden_updatebranches"),
               strDescription: (0, _._)("#AssetSet_Branch_Dialog_Desc"),
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: async () => {
                 _.fnSetLoading(!0);
                 const _ = Array.from(_);
@@ -11514,19 +11272,11 @@
         });
       }
       function _(_) {
-        const { appid: _, assetSetID: __webpack_require__, closeModal: _ } = _,
-          _ = _(_, __webpack_require__),
+        const { appid: _, assetSetID: _, closeModal: _ } = _,
+          _ = _(_, _),
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(() =>
-              _.Get().GetAllAssetSets(_),
-            );
-            return (
-              (0, _._)(
-                _.Get().GetAppAssetSetListChangeCallback(_),
-                __webpack_require__,
-              ),
-              _
-            );
+            const [_, _] = (0, _.useState)(() => _.Get().GetAllAssetSets(_));
+            return (0, _._)(_.Get().GetAppAssetSetListChangeCallback(_), _), _;
           })(_),
           _ = _(_),
           [_, _] = (0, _.useState)(null),
@@ -11577,14 +11327,7 @@
               bOKDisabled: !_,
               onOK: async () => {
                 _.fnSetLoading(!0);
-                1 ==
-                (await _(
-                  _,
-                  __webpack_require__,
-                  _.markerid,
-                  _.image,
-                  _.image_type,
-                ))
+                1 == (await _(_, _, _.markerid, _.image, _.image_type))
                   ? (_.fnSetStrSuccess(
                       (0, _._)("#TimelineMarker_Clone_success"),
                     ),
@@ -11679,8 +11422,8 @@
         });
       }
       function _(_) {
-        const { appid: _, assetSetID: __webpack_require__ } = _,
-          _ = _(_, __webpack_require__);
+        const { appid: _, assetSetID: _ } = _,
+          _ = _(_, _);
         return (0, _.jsxs)("div", {
           className: _.Ctn,
           children: [
@@ -11733,7 +11476,7 @@
                       (0, _._)(
                         (0, _.jsx)(_, {
                           appid: _,
-                          assetSetID: __webpack_require__,
+                          assetSetID: _,
                         }),
                         (0, _._)(_),
                       ),
@@ -12076,12 +11819,12 @@
           const _ = await _._.GetTimelinesForApp({
               game_id: _,
             }),
-            { timelines: __webpack_require__ = [] } = _.Body().toObject();
+            { timelines: _ = [] } = _.Body().toObject();
           this.m_mapRunningTimelines.forEach((_, _) => {
             __webpack_require__.find((_) => _.timeline_id == _) ||
               __webpack_require__.push(_.m_metadata);
           }),
-            this.UpdateTimelineMetadata(__webpack_require__),
+            this.UpdateTimelineMetadata(_),
             (this.m_fnTimelineURLBuilder = (_) =>
               `https://steamloopback.host/gamerecordings/timelines/${_}.json`),
             (this.m_bInitialized = !0),
@@ -12094,11 +11837,11 @@
           });
           if (1 != _.GetEResult()) throw new Error("Unable to load clip " + _);
           const {
-            timelines: __webpack_require__ = [],
+            timelines: _ = [],
             game_id: _,
             first_timeline_start_offset_ms: _,
           } = _.Body().toObject();
-          (this.m_gameID = _), this.UpdateTimelineMetadata(__webpack_require__);
+          (this.m_gameID = _), this.UpdateTimelineMetadata(_);
           for (let _ of this.m_rgTimelineMetadata) {
             (0, _._)(`Loaded clip ${_} timeline ${_.metadata.timeline_id}`);
             for (let _ of _.metadata.recordings)
@@ -16593,6 +16336,11 @@
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
                   },
+                  source_clip_id: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -21076,6 +20824,355 @@
         static InitFromShortcutID(_) {
           return new _(_._.k_EGameIDTypeShortcut, 0, _);
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_tours = {};
+        m_strActiveTour = "";
+        m_storage = void 0;
+        m_bReady = !1;
+        constructor() {
+          (0, _._)(this);
+        }
+        async Init(_) {
+          if (this.m_storage) return;
+          this.m_storage = _;
+          const _ = await _(_);
+          Object.keys(_ || {}).forEach((_) => {
+            const _ = !!_[_];
+            this.m_tours[_] = {
+              ...(this.m_tours[_] || {
+                stops: {},
+              }),
+              bSeen: _,
+            };
+          }),
+            (this.m_bReady = !0);
+        }
+        UpdateStop(_, _, _, _) {
+          this.m_tours[_] ||
+            (this.m_tours[_] = {
+              bSeen: !1,
+              stops: {},
+            }),
+            (this.m_tours[_].stops[_] = {
+              options: _,
+              elem: _,
+            });
+        }
+        BHasSeenTour(_) {
+          return !this.m_bReady || (this.m_tours[_] && this.m_tours[_].bSeen);
+        }
+        GetTrackedStops(_) {
+          return this.m_tours[_]?.stops || {};
+        }
+        ActivateTour(_) {
+          this.m_strActiveTour &&
+            this.m_strActiveTour !== _ &&
+            this.DismissTour(this.m_strActiveTour),
+            (this.m_strActiveTour = _);
+        }
+        DismissTour(_) {
+          this.m_tours[_] &&
+            (this.MarkTourSeen(_),
+            (this.m_tours[_].bSeen = !0),
+            this.m_strActiveTour === _ && (this.m_strActiveTour = ""));
+        }
+        MarkTourSeen(_) {
+          return _(this.m_storage, _, Date.now());
+        }
+        MarkTourUnseen(_) {
+          return _(this.m_storage, _, void 0);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_tours", void 0),
+        (0, _._)([_._], _.prototype, "m_strActiveTour", void 0),
+        (0, _._)([_._], _.prototype, "m_bReady", void 0),
+        (0, _._)([_._.bound], _.prototype, "UpdateStop", null),
+        (0, _._)([_._], _.prototype, "ActivateTour", null),
+        (0, _._)([_._], _.prototype, "DismissTour", null);
+      const _ = "tour_history";
+      async function _(_) {
+        const _ = await _.GetObject(_);
+        return _ && "object" == typeof _ ? _ : {};
+      }
+      async function _(_, _, _) {
+        const _ = await _(_);
+        return _.StoreObject(_, {
+          ..._,
+          [_]: _,
+        });
+      }
+      const _ = new _();
+      function _() {
+        const _ = (0, _._)();
+        return (
+          (0, _.useEffect)(() => {
+            _.Init(_);
+          }, [_]),
+          _
+        );
+      }
+      function _(_) {
+        const _ = _(),
+          { bShowTour: _, stopElems: _ } = (0, _._)(() => ({
+            bShowTour: !_.BHasSeenTour(_),
+            stopElems: _.GetTrackedStops(_),
+          }));
+        return {
+          bShowTour: _,
+          stopElems: _,
+          onInteraction: (0, _.useCallback)(() => _.MarkTourSeen(_), [_, _]),
+          onDismiss: (0, _.useCallback)(() => _.DismissTour(_), [_, _]),
+          onActivate: (0, _.useCallback)(() => _.ActivateTour(_), [_, _]),
+          updateStop: _.UpdateStop,
+        };
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { active: _, name: _, stops: _ } = _,
+          { bShowTour: _, onInteraction: _, onDismiss: _, stopElems: _ } = _(_),
+          [_, _] = (0, _.useState)(0);
+        if (!_ || !_ || _ >= _.length) return null;
+        const { _: _, title: _, content: _ } = _[_],
+          _ = _[_];
+        if (!_ || !_.elem) return null;
+        let _ = _;
+        return (
+          Array.isArray(_) &&
+            (_ = _.map((_, _) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  children: _,
+                },
+                _,
+              ),
+            )),
+          (0, _.jsx)(_, {
+            ..._,
+            children: (0, _.jsxs)(_, {
+              tour: _,
+              title: _,
+              onRequestClose: _,
+              children: [
+                _,
+                (0, _.jsxs)("div", {
+                  className: _.Action,
+                  children: [
+                    _.length > 1 &&
+                      (0, _.jsx)("div", {
+                        className: _.TipCount,
+                        children: (0, _._)("#Tour_TipCount", _ + 1, _.length),
+                      }),
+                    _ < _.length - 1
+                      ? (0, _.jsx)(_._, {
+                          onClick: () => {
+                            _(_ + 1), _();
+                          },
+                          children: (0, _._)("#Button_Next"),
+                        })
+                      : (0, _.jsx)(_._, {
+                          onClick: _,
+                          children: (0, _._)("#Button_Done"),
+                        }),
+                  ],
+                }),
+              ],
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { elem: _, options: _, children: _ } = _,
+          { ownerWindow: _ } = (0, _._)(),
+          _ = _.getBoundingClientRect(),
+          { style: _, position: _ } = (function (_, _, _, _ = 0) {
+            let _,
+              _ = _;
+            const _ = 240,
+              _ = 10,
+              _ = _ + _,
+              _ = _ + _ + _;
+            let _ = _.document.body.matches(":dir(rtl)");
+            _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
+            (("left" === _ && _._ < _) ||
+              ("right" === _ && _.innerWidth - (_._ + _.width) < _)) &&
+              (_ = "below");
+            switch (_) {
+              case "left":
+                _ = {
+                  top: _.top,
+                  width: _.left - _ - _,
+                  left: _,
+                  minWidth: _,
+                  flexDirection: "row",
+                  justifyContent: "flex-end",
+                };
+                break;
+              case "right":
+                _ = {
+                  top: _.top,
+                  left: _.right + _,
+                  right: _,
+                  minWidth: _,
+                  flexDirection: "row",
+                  justifyContent: "flex-start",
+                };
+                break;
+              case "above":
+                _ = {
+                  top: _,
+                  height: _._ - _ - _,
+                  left: _._,
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
+                };
+                break;
+              default:
+                _ = _
+                  ? {
+                      top: _._ + _.height + _,
+                      right: _.innerWidth - _.right,
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                    }
+                  : {
+                      top: _._ + _.height + _,
+                      left: _._,
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                    };
+            }
+            const _ = {
+              display: "flex",
+            };
+            return {
+              style: {
+                ..._,
+                ..._,
+              },
+              position: _,
+              rect: _,
+            };
+          })(_, _, _.position, _.offset);
+        return (0, _.createPortal)(
+          (0, _.jsxs)("div", {
+            className: _.TourPositioner,
+            style: _,
+            "data-position": _,
+            children: [
+              (0, _.jsx)(_, {
+                position: _,
+                targetRect: _,
+              }),
+              _,
+            ],
+          }),
+          _.document.body,
+        );
+      }
+      function _(_) {
+        const { tour: _, title: _, onRequestClose: _, children: _ } = _,
+          { onActivate: _ } = _(_);
+        return (
+          (0, _.useEffect)(() => _(), [_]),
+          (0, _.jsxs)("div", {
+            className: _.TourBox,
+            children: [
+              (0, _.jsx)("div", {
+                onClick: _,
+                className: _.CloseButton,
+                children: (0, _.jsx)(_.sED, {
+                  className: _._,
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: _.Title,
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _.Content,
+                children: _,
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { name: _, tour: _, options: _, children: _ } = _,
+          { updateStop: _ } = _(_),
+          _ = (0, _.useCallback)((_) => _(_, _, _, _), [_, _, _]),
+          _ = _.Children.only(_),
+          _ = (0, _._)(_, _.props.ref);
+        return (0, _.cloneElement)(_.Children.only(_), {
+          ref: _,
+        });
+      }
+      function _(_) {
+        const { position: _, targetRect: _ } = _;
+        return (0, _.jsx)("svg", {
+          viewBox: "0 0 28 10",
+          className: _.TourStopArrow,
+          style: _(_, _),
+          children: (0, _.jsx)("polygon", {
+            points: "0,0 14,10 28,0",
+            fill: "currentColor",
+          }),
+        });
+      }
+      const _ = 28,
+        _ = 10;
+      function _(_, _) {
+        const _ = {
+          width: `${_}px`,
+          height: `${_}px`,
+        };
+        switch (_) {
+          case "right":
+            (_.left = "0px"), (_.top = `${Math.max(_.height / 2 - _, _)}px`);
+            break;
+          case "left":
+            (_.right = "0px"), (_.top = `${Math.max(_.height / 2 - _, _)}px`);
+            break;
+          case "above":
+            (_.bottom = -_ + "px"),
+              (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`);
+            break;
+          case "below":
+            (_.top = -_ + "px"),
+              (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`);
+        }
+        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

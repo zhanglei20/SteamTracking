@@ -81,7 +81,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -212,7 +212,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;

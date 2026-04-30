@@ -1313,20 +1313,10 @@
         )
           _.push(_(_, _, _ + _ > _ ? _ : _ + _));
         1 === _
-          ? ((_ = _[_ - 1]),
-            _.push(
-              __webpack_require__[_ >> 2] +
-                __webpack_require__[(_ << 4) & 63] +
-                "==",
-            ))
+          ? ((_ = _[_ - 1]), _.push(_[_ >> 2] + _[(_ << 4) & 63] + "=="))
           : 2 === _ &&
             ((_ = (_[_ - 2] << 8) + _[_ - 1]),
-            _.push(
-              __webpack_require__[_ >> 10] +
-                __webpack_require__[(_ >> 4) & 63] +
-                __webpack_require__[(_ << 2) & 63] +
-                "=",
-            ));
+            _.push(_[_ >> 10] + _[(_ >> 4) & 63] + _[(_ << 2) & 63] + "="));
         return _.join("");
       };
       for (
@@ -2623,7 +2613,7 @@
                   '\', this)" type="text/javascript" ' +
                   (goog.Dependency.defer_ ? "defer" : "") +
                   _ +
-                  "></script>"),
+                  "><\/script>"),
                   _.write(
                     goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -2676,10 +2666,10 @@
               if (goog.isDocumentLoading_()) {
                 var _ = function (_, _) {
                   (_ = _
-                    ? '<script type="module" crossorigin>' + _ + "</script>"
+                    ? '<script type="module" crossorigin>' + _ + "<\/script>"
                     : '<script type="module" crossorigin src="' +
                       _ +
-                      '"></script>'),
+                      '"><\/script>'),
                     _.write(
                       goog.TRUSTED_TYPES_POLICY_
                         ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -2832,7 +2822,7 @@
                             goog.protectScriptTag_(
                               'goog.Dependency.callback_("' + _ + '");',
                             ) +
-                            "</script>";
+                            "<\/script>";
                         _.write(
                           goog.TRUSTED_TYPES_POLICY_
                             ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -6086,7 +6076,7 @@
         }),
         (goog.labs.userAgent.browser.getVersion = function () {
           function _(_) {
-            return (_ = goog.array.find(_, _)), __webpack_require__[_] || "";
+            return (_ = goog.array.find(_, _)), _[_] || "";
           }
           var _ = goog.labs.userAgent.util.getUserAgent();
           if (goog.labs.userAgent.browser.isIE())
@@ -12697,8 +12687,8 @@
           ? globalThis
           : "undefined" != typeof window
             ? window
-            : void 0 !== __webpack_require__._
-              ? __webpack_require__._
+            : void 0 !== _._
+              ? _._
               : "undefined" != typeof self
                 ? self
                 : _;
@@ -13479,10 +13469,8 @@
           : !1 === _.deep
             ? _
             : (_ = _.defaultDecorator) &&
-                null !=
-                  (__webpack_require__ =
-                    null == (_ = _.options_) ? void 0 : _.enhancer)
-              ? __webpack_require__
+                null != (_ = null == (_ = _.options_) ? void 0 : _.enhancer)
+              ? _
               : _;
         var _, _, _;
       }
@@ -22115,7 +22103,7 @@
                         break;
                       case "script":
                         ((_ = _.createElement("div")).innerHTML =
-                          "<script></script>"),
+                          "<script><\/script>"),
                           (_ = _.removeChild(_.firstChild));
                         break;
                       case "select":
@@ -28143,21 +28131,13 @@
             _.split(" ").forEach(function (_) {
               return (
                 (_ = _),
-                void ((__webpack_require__ = _).classList
-                  ? __webpack_require__.classList.remove(_)
-                  : "string" == typeof __webpack_require__.className
-                    ? (__webpack_require__.className = _(
-                        __webpack_require__.className,
-                        _,
-                      ))
+                void ((_ = _).classList
+                  ? _.classList.remove(_)
+                  : "string" == typeof _.className
+                    ? (_.className = _(_.className, _))
                     : __webpack_require__.setAttribute(
                         "class",
-                        _(
-                          (__webpack_require__.className &&
-                            __webpack_require__.className.baseVal) ||
-                            "",
-                          _,
-                        ),
+                        _((_.className && _.className.baseVal) || "", _),
                       ))
               );
               var _, _;

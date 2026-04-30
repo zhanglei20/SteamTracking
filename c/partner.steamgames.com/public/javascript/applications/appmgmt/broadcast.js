@@ -150,11 +150,23 @@
         FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
         FilterInput: "_2l4z-U60lABvd9XWArGjAf",
         AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
+        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
+        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
+        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
+        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
+        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
+        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
+        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
+        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
+        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
+        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -213,7 +225,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         FriendsListInsetShadowCtn: "_1qeW35auMlJ5pJVNtBC-bF",
         FriendListInsetShadowTop: "_1osHa9KHOmdCDNrA232z4N",
         FriendListInsetShadowBottom: "_2OoTJwlWvzvAysWOOEQaXS",
@@ -277,7 +289,7 @@
       function _(_) {
         const {
             _: _,
-            hoverClassName: __webpack_require__,
+            hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
             children: _,
@@ -308,7 +320,7 @@
           );
         return (0, _.jsx)("div", {
           ref: _,
-          className: __webpack_require__,
+          className: _,
           onMouseEnter: _,
           onMouseLeave: _,
           onFocus: _,
@@ -319,7 +331,7 @@
       function _(_) {
         const {
             _: _,
-            strExtraParams: __webpack_require__,
+            strExtraParams: _,
             fnOnClickOverride: _,
             strOverrideURL: _,
           } = _,
@@ -329,12 +341,12 @@
             _ ||
               (_ && "creatorid" in _
                 ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )
                 : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )),
@@ -13020,12 +13032,12 @@
             (this.m_TextFilterWords = new _._()),
             (this.m_DataAccess = _);
         }
-        async Init(_ = 0, _ = null, __webpack_require__ = null) {
+        async Init(_ = 0, _ = null, _ = null) {
           (this.m_bInitialized = !1),
             (this.m_WebUIServiceTransport = _._),
             (this.m_unAccountID = _),
             (this.m_Transport = _),
-            (this.m_Storage = __webpack_require__),
+            (this.m_Storage = _),
             (this.m_strBannedWords = ""),
             (this.m_strProfanityWords = ""),
             (this.m_strCleanWords = ""),
@@ -14174,9 +14186,9 @@
         }
         m_mapBroadcasterSteamIDToEvents = new Map();
         m_mapBroadcasterSteamIDData = new Map();
-        static GetBBCodeParam(_, _, __webpack_require__ = "") {
+        static GetBBCodeParam(_, _, _ = "") {
           const _ = new RegExp(`\\W${_}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(_);
-          return _ ? _[1] : __webpack_require__;
+          return _ ? _[1] : _;
         }
         static ParseCalendarEventPresentersFromText(_) {
           const _ = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
@@ -14575,7 +14587,7 @@
       function _(_) {
         const {
             latestWinner: _,
-            className: __webpack_require__,
+            className: _,
             strActionButton: _,
             strActionClassname: _,
           } = _,
@@ -14600,7 +14612,7 @@
             : (0, _._)("#GA2022_UnknownPersonaName");
         return (0, _.jsx)(_._, {
           href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
-          className: __webpack_require__,
+          className: _,
           children: (0, _.jsxs)("div", {
             className: (0, _._)({
               [_().GiveawayWinnerBox]: !0,
@@ -14660,9 +14672,9 @@
         });
       }
       function _(_) {
-        const { gidGiveaway: _, stream: __webpack_require__ } = _,
+        const { gidGiveaway: _, stream: _ } = _,
           _ = (function (_, _) {
-            const [__webpack_require__, _] = (0, _._)(() => [
+            const [_, _] = (0, _._)(() => [
                 _?.steamid,
                 _._.GetBroadcast(_?.steamid)?.m_ulBroadcastID,
               ]),
@@ -14670,22 +14682,22 @@
             _.useEffect(() => {
               let _ = null;
               return (
-                (__webpack_require__ || _) &&
-                  ((_ = _.Get().GetOrCreateChat(_, __webpack_require__)),
-                  _.StartForSteamID(__webpack_require__, _),
+                (_ || _) &&
+                  ((_ = _.Get().GetOrCreateChat(_, _)),
+                  _.StartForSteamID(_, _),
                   _(_)),
                 () => {
                   _ && (_.Stop(), _(null));
                 }
               );
-            }, [__webpack_require__, _]);
+            }, [_, _]);
             const _ = (0, _._)(() => _?.m_latestAnnouncement || null);
             if ("giveaway_draw" == _?.type) {
               const _ = _;
               if (_.giveaway_gid == _) return _;
             }
             return null;
-          })(_, __webpack_require__),
+          })(_, _),
           _ = (0, _._)("GameAwardDrop2022");
         let _ = null,
           _ = _().GiveawayRegisterButton;
@@ -14713,7 +14725,7 @@
           "i",
         );
       const _ = (_) => {
-          const { userType: _, msg: __webpack_require__, presenterInfo: _ } = _;
+          const { userType: _, msg: _, presenterInfo: _ } = _;
           if ("presenter" === _)
             return (0, _.jsx)("span", {
               children: (0, _.jsx)(_._, {
@@ -14724,13 +14736,10 @@
                 bioString: _.bio,
                 children: (0, _.jsx)("a", {
                   className: (0, _._)(_().MessageName, _().MessagePresenter),
-                  href:
-                    _._.COMMUNITY_BASE_URL +
-                    "profiles/" +
-                    __webpack_require__.steamid,
+                  href: _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
-                  children: __webpack_require__.persona_name,
+                  children: _.persona_name,
                 }),
               }),
             });
@@ -14743,14 +14752,11 @@
               (0, _.jsx)("span", {
                 children: (0, _.jsx)("a", {
                   className: (0, _._)(_().MessageName, _),
-                  href:
-                    _._.COMMUNITY_BASE_URL +
-                    "profiles/" +
-                    __webpack_require__.steamid,
-                  "data-miniprofile": "s" + __webpack_require__.steamid,
+                  href: _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid,
+                  "data-miniprofile": "s" + _.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
-                  children: __webpack_require__.persona_name,
+                  children: _.persona_name,
                 }),
               })
             );
@@ -15129,10 +15135,10 @@
           const {
               hidden: _,
               bPartnerMemberOnlyChat: _,
-              bInvertLayout: __webpack_require__,
+              bInvertLayout: _,
             } = this.props,
             _ = this.m_chat ? this.m_chat.m_rgChatMessages : [],
-            _ = __webpack_require__ ? _.reverse() : _,
+            _ = _ ? _.reverse() : _,
             _ = this.m_chat
               ? _.GetPresenterMapForBroadcasterSteamID(
                   this.m_chat.GetBroadcastSteamID(),
@@ -15150,7 +15156,7 @@
               (0, _.jsx)(_, {
                 latestAnnouncement: _,
               }),
-              __webpack_require__ &&
+              _ &&
                 !!this.m_chat &&
                 (0, _.jsx)(_, {
                   oChat: this.m_chat,
@@ -15168,7 +15174,7 @@
                 children: _.map((_, _) => this.RenderUserChatLine(_, _, _)),
               }),
               (0, _.jsx)(_, {}),
-              !__webpack_require__ &&
+              !_ &&
                 !!this.m_chat &&
                 (0, _.jsx)(_, {
                   oChat: this.m_chat,
@@ -15180,22 +15186,18 @@
         }
       };
       function _(_) {
-        const {
-          oChat: _,
-          emoticonStore: __webpack_require__,
-          bPartnerMemberOnlyChat: _,
-        } = _;
+        const { oChat: _, emoticonStore: _, bPartnerMemberOnlyChat: _ } = _;
         return !_ || (_._?.logged_in && _._?.is_partner_member)
           ? _._?.logged_in
             ? (0, _.jsx)(_, {
                 oChat: _,
-                emoticonStore: __webpack_require__,
+                emoticonStore: _,
               })
             : null
           : (0, _.jsx)(_, {});
       }
       function _(_) {
-        const { oChat: _, emoticonStore: __webpack_require__ } = _,
+        const { oChat: _, emoticonStore: _ } = _,
           [_, _] = _.useState(""),
           _ = _.useRef(void 0),
           _ = (0, _._)(() => _.m_bRateLimited),
@@ -15260,7 +15262,7 @@
                       disabled: !1,
                       OnEmoticonSelected: _,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                      emoticonStore: __webpack_require__,
+                      emoticonStore: _,
                     }),
                     (0, _.jsx)(_, {
                       ..._,
@@ -15274,13 +15276,9 @@
         });
       }
       function _(_) {
-        const {
-          oChat: _,
-          emoticonStore: __webpack_require__,
-          textInputRef: _,
-        } = _;
+        const { oChat: _, emoticonStore: _, textInputRef: _ } = _;
         return _.m_strFlairGroupID &&
-          __webpack_require__.flair_list &&
+          _.flair_list &&
           __webpack_require__.GetFlairListByGroupID(_.m_strFlairGroupID)?.length
           ? (0, _.jsx)(_._, {
               disabled: !1,
@@ -15288,7 +15286,7 @@
                 _.UpdateChatMessageFlair(_), _?.current && _.current.focus();
               },
               rtLastAckedNewEmoticons: Number.MAX_VALUE,
-              emoticonStore: __webpack_require__,
+              emoticonStore: _,
               strFlairGroupID: _.m_strFlairGroupID,
               title: (0, _._)("#ChatEntryButton_Flair"),
               buttonIcon: (0, _.jsx)(_.P7r, {}),
@@ -15783,12 +15781,10 @@
           }
           return this.PlayFromAvailableStreams(_, _);
         }
-        async PlayFromAvailableStreams(_, _, __webpack_require__ = !1) {
+        async PlayFromAvailableStreams(_, _, _ = !1) {
           const _ = new Set();
           for (;;) {
-            const _ = _.filter(
-                (_) => !(_.has(_) || (__webpack_require__ && _.nAppIDVOD)),
-              ),
+            const _ = _.filter((_) => !(_.has(_) || (_ && _.nAppIDVOD))),
               _ = this.GetAutoStartStream(_);
             if (!_) return null;
             if (await this.AttemptToPlayStream(_, _)) return _;
@@ -16008,12 +16004,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { steamid: _, closeModal: __webpack_require__ } = _;
+        const { steamid: _, closeModal: _ } = _;
         return (0, _.jsxs)(_._, {
           strDescription: "",
           strTitle: (0, _._)("#Button_Share"),
-          onCancel: __webpack_require__,
-          onOK: __webpack_require__,
+          onCancel: _,
+          onOK: _,
           bAlertDialog: !0,
           modalClassName: "EventDisplay_Share_Dialog",
           children: [
@@ -16367,11 +16363,11 @@
             this.MarkBroadcastSeen();
             let _ = "show" === _.Get().GetChatVisibility();
             const {
-              event: __webpack_require__,
+              event: _,
               language: _,
               fnRenderBroadcastContext: _,
             } = this.props;
-            __webpack_require__ &&
+            _ &&
               (_ = {
                 ..._,
                 left_panel: __webpack_require__.GetImageURL(
@@ -16402,7 +16398,7 @@
                   (0, _.jsxs)("div", {
                     className: (0, _._)({
                       [_().bordered_container]: !0,
-                      [_().Event]: Boolean(__webpack_require__),
+                      [_().Event]: Boolean(_),
                       broadcast_brd_ctn_trgt: !0,
                     }),
                     children: [
@@ -16496,12 +16492,10 @@
                     ],
                   }),
                   Boolean(
-                    __webpack_require__ &&
-                      __webpack_require__.jsondata &&
-                      __webpack_require__.jsondata.broadcast_item_drops_enabled,
+                    _ && _.jsondata && _.jsondata.broadcast_item_drops_enabled,
                   ) &&
                     (0, _.jsx)(_, {
-                      event: __webpack_require__,
+                      event: _,
                     }),
                   (0, _.jsx)("div", {
                     className: _().clear_div,
@@ -16600,8 +16594,8 @@
       }
       function _(_) {
         const { stream: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.steamid]),
-          _ = _._.GetOrCreateBroadcastInfo(__webpack_require__).m_nAppID,
+          [_] = (0, _._)(() => [_.steamid]),
+          _ = _._.GetOrCreateBroadcastInfo(_).m_nAppID,
           _ = _.list.find(
             (_) =>
               _.appid == _ &&
@@ -16623,8 +16617,7 @@
           );
         }
         {
-          const _ =
-            _._.COMMUNITY_BASE_URL + "broadcast/watch/" + __webpack_require__;
+          const _ = _._.COMMUNITY_BASE_URL + "broadcast/watch/" + _;
           return (0, _.jsx)(_._, {
             toolTipContent: (0, _._)("#BroadcastWatch_View_Broadcast_Page"),
             children: (0, _.jsx)("a", {
@@ -16811,7 +16804,7 @@
       function _(_) {
         const {
             curStream: _,
-            onStreamSelect: __webpack_require__,
+            onStreamSelect: _,
             fnFilterStreams: _,
             bShowCapsuleArt: _,
             broadcastEmbedContext: _,
@@ -16872,7 +16865,7 @@
                   {
                     stream: _,
                     bSelected: _.accountid == _.accountid,
-                    onStreamSelect: __webpack_require__,
+                    onStreamSelect: _,
                     bShowCapsuleArt: _,
                   },
                   _.accountid ?? _.steamid,
@@ -16885,7 +16878,7 @@
       function _(_) {
         const {
           onStreamSelect: _,
-          bSelected: __webpack_require__,
+          bSelected: _,
           stream: _,
           bShowCapsuleArt: _,
         } = _;
@@ -16915,13 +16908,13 @@
               children: (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _().stream_icon_container,
-                  __webpack_require__ && _().stream_selected,
+                  _ && _().stream_selected,
                 ),
                 onClick: () => _ && _(_),
                 rootMargin: "100px 0px 100px 0px",
                 children: (0, _.jsx)(_, {
                   strThumbnail: _.thumbnail_http_address,
-                  bSelected: __webpack_require__,
+                  bSelected: _,
                   strCapsuleArtURL: _,
                 }),
               }),
@@ -16944,11 +16937,7 @@
         });
       }
       function _(_) {
-        const {
-            strCapsuleArtURL: _,
-            strThumbnail: __webpack_require__,
-            bSelected: _,
-          } = _,
+        const { strCapsuleArtURL: _, strThumbnail: _, bSelected: _ } = _,
           _ = _ ? _().stream_icon_selected : _().stream_icon;
         if (_) {
           const _ = [_];
@@ -16967,12 +16956,12 @@
         }
         return (0, _.jsx)("img", {
           className: _,
-          src: __webpack_require__,
+          src: _,
         });
       }
       function _(_) {
-        const { stream: _, orientation: __webpack_require__ } = _,
-          _ = "below" == __webpack_require__,
+        const { stream: _, orientation: _ } = _,
+          _ = "below" == _,
           [_, _] = (0, _._)(() => [
             _._.GetBroadcast(_.steamid),
             _._.GetBroadcast(_.steamid)?.m_ulBroadcastID,
@@ -17100,6 +17089,198 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        var _ = Object.create(null);
+        return (
+          _ &&
+            _.Children.map(_, function (_) {
+              return _;
+            }).forEach(function (_) {
+              _[_.key] = (function (_) {
+                return _ && (0, _.isValidElement)(_) ? _(_) : _;
+              })(_);
+            }),
+          _
+        );
+      }
+      function _(_, _, _) {
+        return null != _[_] ? _[_] : _.props[_];
+      }
+      function _(_, _, _) {
+        var _ = _(_.children),
+          _ = (function (_, _) {
+            function _(_) {
+              return _ in _ ? _[_] : _[_];
+            }
+            (_ = _ || {}), (_ = _ || {});
+            var _,
+              _ = Object.create(null),
+              _ = [];
+            for (var _ in _)
+              _ in _ ? _.length && ((_[_] = _), (_ = [])) : _.push(_);
+            var _ = {};
+            for (var _ in _) {
+              if (_[_])
+                for (_ = 0; _ < _[_].length; _++) {
+                  var _ = _[_][_];
+                  _[_[_][_]] = __webpack_require__(_);
+                }
+              _[_] = __webpack_require__(_);
+            }
+            for (_ = 0; _ < _.length; _++) _[_[_]] = __webpack_require__(_[_]);
+            return _;
+          })(_, _);
+        return (
+          Object.keys(_).forEach(function (_) {
+            var _ = _[_];
+            if ((0, _.isValidElement)(_)) {
+              var _ = _ in _,
+                _ = _ in _,
+                _ = _[_],
+                _ = (0, _.isValidElement)(_) && !_.props._;
+              !_ || (_ && !_)
+                ? _ || !_ || _
+                  ? _ &&
+                    _ &&
+                    (0, _.isValidElement)(_) &&
+                    (_[_] = (0, _.cloneElement)(_, {
+                      onExited: __webpack_require__.bind(null, _),
+                      _: _.props._,
+                      exit: _(_, "exit", _),
+                      enter: _(_, "enter", _),
+                    }))
+                  : (_[_] = (0, _.cloneElement)(_, {
+                      _: !1,
+                    }))
+                : (_[_] = (0, _.cloneElement)(_, {
+                    onExited: __webpack_require__.bind(null, _),
+                    _: !0,
+                    exit: _(_, "exit", _),
+                    enter: _(_, "enter", _),
+                  }));
+            }
+          }),
+          _
+        );
+      }
+      var _ =
+          Object.values ||
+          function (_) {
+            return Object.keys(_).map(function (_) {
+              return _[_];
+            });
+          },
+        _ = (function (_) {
+          function _(_, _) {
+            var _,
+              _ = (_ = _.call(this, _, _) || this).handleExited.bind(
+                (0, _._)(_),
+              );
+            return (
+              (_.state = {
+                contextValue: {
+                  isMounting: !0,
+                },
+                handleExited: _,
+                firstRender: !0,
+              }),
+              _
+            );
+          }
+          (0, _._)(_, _);
+          var _ = _.prototype;
+          return (
+            (_.componentDidMount = function () {
+              (this.mounted = !0),
+                this.setState({
+                  contextValue: {
+                    isMounting: !1,
+                  },
+                });
+            }),
+            (_.componentWillUnmount = function () {
+              this.mounted = !1;
+            }),
+            (_.getDerivedStateFromProps = function (_, _) {
+              var _,
+                _,
+                _ = _.children,
+                _ = _.handleExited;
+              return {
+                children: _.firstRender
+                  ? ((_ = _),
+                    (_ = _),
+                    _(_.children, function (_) {
+                      return (0, _.cloneElement)(_, {
+                        onExited: _.bind(null, _),
+                        _: !0,
+                        appear: _(_, "appear", _),
+                        enter: _(_, "enter", _),
+                        exit: _(_, "exit", _),
+                      });
+                    }))
+                  : _(_, _, _),
+                firstRender: !1,
+              };
+            }),
+            (_.handleExited = function (_, _) {
+              var _ = _(this.props.children);
+              _.key in _ ||
+                (_.props.onExited && _.props.onExited(_),
+                this.mounted &&
+                  this.setState(function (_) {
+                    var _ = (0, _._)({}, _.children);
+                    return (
+                      delete _[_.key],
+                      {
+                        children: _,
+                      }
+                    );
+                  }));
+            }),
+            (_.render = function () {
+              var _ = this.props,
+                _ = _.component,
+                _ = _.childFactory,
+                _ = (0, _._)(_, ["component", "childFactory"]),
+                _ = this.state.contextValue,
+                _ = _(this.state.children).map(_);
+              return (
+                delete _.appear,
+                delete _.enter,
+                delete _.exit,
+                null === _
+                  ? _.createElement(
+                      _._.Provider,
+                      {
+                        value: _,
+                      },
+                      _,
+                    )
+                  : _.createElement(
+                      _._.Provider,
+                      {
+                        value: _,
+                      },
+                      _.createElement(_, _, _),
+                    )
+              );
+            }),
+            _
+          );
+        })(_.Component);
+      (_.propTypes = {}),
+        (_.defaultProps = {
+          component: "div",
+          childFactory: function (_) {
+            return _;
+          },
+        });
+      const _ = _;
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 500;
       class _ extends _.Component {
@@ -17107,7 +17288,7 @@
           let {
             keyExtractor: _,
             style: _,
-            duration: __webpack_require__ = _,
+            duration: _ = _,
             className: _,
             children: _,
             childRef: _,
@@ -17115,9 +17296,9 @@
           } = this.props;
           const _ = {
             ...(_ || {}),
-            transitionDuration: __webpack_require__ / 1e3 + "s",
+            transitionDuration: _ / 1e3 + "s",
           };
-          return (0, _.jsx)(_._, {
+          return (0, _.jsx)(_, {
             ..._,
             className: (0, _._)("crossfade", _),
             children: (0, _.jsx)(
@@ -17125,7 +17306,7 @@
               {
                 nodeRef: _,
                 classNames: "crossfade-anim",
-                timeout: __webpack_require__,
+                timeout: _,
                 style: _,
                 children: _,
               },
@@ -17135,7 +17316,7 @@
         }
       }
       function _(_) {
-        const { src: _, ...__webpack_require__ } = _,
+        const { src: _, ..._ } = _,
           _ = {
             backgroundImage: `url(${_})`,
           },
@@ -17144,7 +17325,7 @@
           style: _,
           keyExtractor: () => _,
           childRef: _,
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("div", {
             ref: _,
             className: "crossfade-img",
@@ -17594,7 +17775,7 @@
         render() {
           let _ = !1,
             _ = !1;
-          const { video: __webpack_require__, actions: _ } = this.props;
+          const { video: _, actions: _ } = this.props;
           let _,
             _,
             _ = 0,
@@ -17704,7 +17885,7 @@
                 children: (0, _.jsx)(_.wB_, {}),
               }),
               (0, _.jsx)(_, {
-                video: __webpack_require__,
+                video: _,
               }),
               _ &&
                 _.map((_) =>
@@ -19107,17 +19288,13 @@
       _ = (0, _._)([_._], _);
       class _ extends _.Component {
         showContextMenu(_) {
-          const {
-              options: _,
-              value: __webpack_require__,
-              onChange: _,
-            } = this.props,
+          const { options: _, value: _, onChange: _ } = this.props,
             _ = Object.keys(_).map((_) =>
               (0, _.jsx)(
                 _._,
                 {
                   onSelected: () => _(_),
-                  bChecked: _ === __webpack_require__,
+                  bChecked: _ === _,
                   children: (0, _._)(_[_]),
                 },
                 _,
@@ -20248,12 +20425,12 @@
             console.error(_);
           }
         }
-        DelayedGetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+        DelayedGetBroadcastManifest(_, _, _ = Date.now()) {
           _.m_schManifestTimeout.Schedule(5e3, () =>
-            this.GetBroadcastManifest(_, _, __webpack_require__),
+            this.GetBroadcastManifest(_, _, _),
           );
         }
-        async GetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+        async GetBroadcastManifest(_, _, _ = Date.now()) {
           _.SetState(_.Loading, "");
           let _ = {
               steamid: _.m_steamIDBroadcast,
@@ -20306,7 +20483,7 @@
               _.Loading,
               (0, _._)("#BroadcastWatch_WaitingForResponse"),
             );
-            let _ = Date.now() - __webpack_require__;
+            let _ = Date.now() - _;
             if (_ > 6e4)
               return void _.SetState(
                 _.Error,
@@ -20314,7 +20491,7 @@
               );
             let _ = _ > 3e4 ? _.retry : 5e3;
             _.m_schManifestTimeout.Schedule(_, () =>
-              this.GetBroadcastManifest(_, _, __webpack_require__),
+              this.GetBroadcastManifest(_, _, _),
             );
           } else
             "waiting_for_start" == _
@@ -20323,7 +20500,7 @@
                   (0, _._)("#BroadcastWatch_WaitingForStart"),
                 ),
                 _.m_schManifestTimeout.Schedule(_.retry, () =>
-                  this.GetBroadcastManifest(_, _, __webpack_require__),
+                  this.GetBroadcastManifest(_, _, _),
                 ))
               : "waiting_for_reconnect" == _
                 ? (_.SetState(
@@ -20331,7 +20508,7 @@
                     (0, _._)("#BroadcastWatch_WaitingForReconnect"),
                   ),
                   _.m_schManifestTimeout.Schedule(_.retry, () =>
-                    this.GetBroadcastManifest(_, _, __webpack_require__),
+                    this.GetBroadcastManifest(_, _, _),
                   ))
                 : "end" == _
                   ? _.SetState(
@@ -20431,13 +20608,13 @@
           _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
             this.m_activeVideo.StartVOD(_);
         }
-        BroadcastDownloadFailed(_, _ = !0, __webpack_require__ = _._.Invalid) {
+        BroadcastDownloadFailed(_, _ = !0, _ = _._.Invalid) {
           _.Stop();
           let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
           _ &&
             _.m_eWatchState != _.Loading &&
             (_.m_bWebRTC && _ && (_.m_bWebRTC = !1),
-            __webpack_require__ == _._.StreamGone
+            _ == _._.StreamGone
               ? this.DelayedGetBroadcastManifest(_, _.GetWatchLocation())
               : this.GetBroadcastManifest(_, _.GetWatchLocation()));
         }
@@ -21135,7 +21312,7 @@
         OnEmoticonClick(_) {
           const {
             emoticonStore: _,
-            strFlairGroupID: __webpack_require__,
+            strFlairGroupID: _,
             SetUIDisplayPref: _,
             contextOptions: _,
             bShowChatAddons: _,
@@ -21152,9 +21329,7 @@
                   onRoomEffectSelected: this.props.onRoomEffectSelected,
                   onStickerSelected: this.props.onStickerSelected,
                 })
-              : __webpack_require__ &&
-                  _.flair_list &&
-                  _.GetFlairListByGroupID(__webpack_require__)?.length > 0
+              : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
                 ? (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
@@ -21194,24 +21369,19 @@
           return !_ || _ < _ || (_ && (!_ || _ < _));
         }
         render() {
-          const {
-            disabled: _,
-            className: _,
-            ttip: __webpack_require__,
-            useImg: _,
-          } = this.props;
+          const { disabled: _, className: _, ttip: _, useImg: _ } = this.props;
           let _ = [_],
             _ = !1;
           return (
             _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
-            __webpack_require__ && _.push("ttip"),
+            _ && _.push("ttip"),
             _
               ? (0, _.jsx)(_._, {
                   onClick: this.OnEmoticonClick,
                   onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
                   focusable: !0,
                   children: (0, _.jsx)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: (0, _.jsx)("img", {
                       src: this.props.useImg,
                       className: (0, _._)(..._),
@@ -21231,7 +21401,7 @@
                     this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
                   disabled: _,
                   children: (0, _.jsxs)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: [
                       this.props.buttonIcon || (0, _.jsx)(_._, {}),
                       _ && (0, _.jsx)(_._, {}),
@@ -21263,8 +21433,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = !1) {
-        return `${_}economy/sticker${__webpack_require__ ? "static" : ""}/${encodeURIComponent(_)}`;
+      function _(_, _, _ = !1) {
+        return `${_}economy/sticker${_ ? "static" : ""}/${encodeURIComponent(_)}`;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -21342,21 +21512,21 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__, onClick: _ } = _;
+        const { active: _, children: _, onClick: _ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_.Tab, _ && _.Active),
           focusClassName: _.Focus,
           onActivate: _,
           children: (0, _.jsx)("div", {
             className: (0, _._)(_.TabContent, _ && _.Active),
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
       function _(_) {
         const {
           items: _,
-          renderItem: __webpack_require__,
+          renderItem: _,
           onItemSelect: _,
           keyExtractor: _,
           renderEmpty: _,
@@ -21384,13 +21554,7 @@
         );
       }
       function _(_) {
-        const {
-          title: _,
-          onFilterChange: __webpack_require__,
-          filter: _,
-          onSubmit: _,
-          ..._
-        } = _;
+        const { title: _, onFilterChange: _, filter: _, onSubmit: _, ..._ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -21403,19 +21567,14 @@
             }),
             (0, _.jsx)(_, {
               value: _,
-              onChange: __webpack_require__,
+              onChange: _,
               onSubmit: _,
             }),
           ],
         });
       }
       function _(_) {
-        const {
-          onFilterChange: _,
-          filter: __webpack_require__,
-          sections: _,
-          title: _,
-        } = _;
+        const { onFilterChange: _, filter: _, sections: _, title: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_, {
@@ -21440,7 +21599,7 @@
               ],
             }),
             (0, _.jsx)(_, {
-              value: __webpack_require__,
+              value: _,
               onChange: _,
             }),
           ],
@@ -21462,7 +21621,7 @@
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__, onSubmit: _ } = _;
+        const { value: _, onChange: _, onSubmit: _ } = _;
         return (0, _.jsx)("div", {
           className: _.FilterInputContainer,
           children: (0, _.jsx)(_._, {
@@ -21476,10 +21635,10 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_, _.AddonPickerMessage),
-          ...__webpack_require__,
+          ..._,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -21498,14 +21657,14 @@
       const _ = (0, _._)((_) => {
         const {
           emoticonStore: _,
-          roomEffectSettings: __webpack_require__,
+          roomEffectSettings: _,
           strFlairGroupID: _,
           onEmoticonSelected: _,
           onRoomEffectSelected: _,
           onStickerSelected: _,
         } = _;
         !(function (_) {
-          const [_, __webpack_require__] = (0, _.useState)(_.is_initialized);
+          const [_, _] = (0, _.useState)(_.is_initialized);
           (0, _.useEffect)(() => {
             if (!_.is_initialized) {
               _.UpdateEmoticonList();
@@ -21581,7 +21740,7 @@
                   renderContent: () =>
                     (0, _.jsx)(_, {
                       store: _,
-                      effectSettings: __webpack_require__,
+                      effectSettings: _,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
@@ -21612,7 +21771,7 @@
           const {
               emoticonStore: _,
               onEmoticonSelected: _,
-              onStickerSelected: __webpack_require__,
+              onStickerSelected: _,
               strFlairGroupID: _,
             } = this.props,
             _ = [];
@@ -21765,7 +21924,7 @@
           const {
               store: _,
               onEmoticonSelect: _,
-              onStickerSelect: __webpack_require__,
+              onStickerSelect: _,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -21794,7 +21953,7 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentStickers"),
                 items: _._.FilterStickers(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
                     sticker: _,
@@ -21826,16 +21985,9 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
-            _ =
-              !_ && __webpack_require__
-                ? _.GetFlairListByGroupID(__webpack_require__)
-                : _.emoticon_list,
+            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
           return (0, _.jsx)(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
@@ -21894,8 +22046,8 @@
         };
         render() {
           const { store: _, onItemSelect: _ } = this.props,
-            { filter: __webpack_require__ } = this.state,
-            _ = _._.FilterStickers(_.GetStickerList(), __webpack_require__);
+            { filter: _ } = this.state,
+            _ = _._.FilterStickers(_.GetStickerList(), _);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_StickerHeading"),
             items: _,
@@ -21909,10 +22061,10 @@
               this.setState({
                 filter: _,
               }),
-            filter: __webpack_require__,
+            filter: _,
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
-              __webpack_require__
+              _
                 ? (0, _.jsx)(_, {
                     children: (0, _._)("#AddonPicker_NoResults"),
                   })
@@ -21945,17 +22097,13 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              effectSettings: _,
-              onItemSelect: __webpack_require__,
-            } = this.props,
+          const { store: _, effectSettings: _, onItemSelect: _ } = this.props,
             { filter: _ } = this.state,
             _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_EffectHeading"),
             items: _,
-            onItemSelect: __webpack_require__,
+            onItemSelect: _,
             renderItem: (_) =>
               (0, _.jsx)(_, {
                 effect: _,
@@ -22002,11 +22150,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
             _ = [];
           return (
@@ -22065,11 +22209,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state;
           return (0, _.jsx)(_, {
             onFilterChange: (_) =>
@@ -22080,10 +22220,7 @@
             sections: [
               {
                 title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(
-                  _.GetFlairListByGroupID(__webpack_require__),
-                  _,
-                ),
+                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
@@ -22103,14 +22240,14 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (_) => {
-        const { emoticon: _, large: __webpack_require__ } = _,
+        const { emoticon: _, large: _ } = _,
           _ = !_.last_used && _.time_received;
         return (0, _.jsxs)("div", {
           className: _().EmoticonItem,
           children: [
             (0, _.jsx)(_._, {
               emoticon: _.name,
-              large: __webpack_require__,
+              large: _,
             }),
             _ && (0, _.jsx)(_, {}),
           ],
@@ -22122,11 +22259,7 @@
         };
         m_ref = _.createRef();
         render() {
-          const {
-              sticker: _,
-              className: _,
-              ...__webpack_require__
-            } = this.props,
+          const { sticker: _, className: _, ..._ } = this.props,
             _ = _(_._.COMMUNITY_CDN_URL, _.name);
           return (0, _.jsxs)("div", {
             ref: this.m_ref,
@@ -22147,7 +22280,7 @@
               this.setState({
                 showHover: !1,
               }),
-            ...__webpack_require__,
+            ..._,
             children: [
               (0, _.jsx)("img", {
                 style: {
@@ -22167,15 +22300,15 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            sticker: { name: __webpack_require__, appid: _ },
+            sticker: { name: _, appid: _ },
           } = _,
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("img", {
-            src: _(_._.COMMUNITY_CDN_URL, __webpack_require__),
+            src: _(_._.COMMUNITY_CDN_URL, _),
             className: _().StickerHoverSticker,
           }),
         });
@@ -22189,7 +22322,7 @@
           const {
               effect: _,
               roomEffectSettings: _,
-              className: __webpack_require__,
+              className: _,
               ..._
             } = this.props,
             _ = _[_.name];
@@ -22211,7 +22344,7 @@
               this.setState({
                 showHover: !1,
               }),
-            className: (0, _._)(__webpack_require__, _().EffectButton),
+            className: (0, _._)(_, _().EffectButton),
             ..._,
             children: [
               _.renderEffectIcon(),
@@ -22228,14 +22361,14 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            effect: { name: __webpack_require__, appid: _ },
+            effect: { name: _, appid: _ },
             roomEffectSettings: _,
           } = _,
-          _ = _[__webpack_require__],
+          _ = _[_],
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("div", {
             className: _().EffectHoverEffect,
@@ -22334,7 +22467,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
           version: "1.1",
@@ -22343,7 +22476,7 @@
           width: "20px",
           height: "20px",
           viewBox: "0 0 24 24",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("path", {
             _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           }),
@@ -22927,6 +23060,19 @@
       });
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (void 0 === _)
+          throw new ReferenceError(
+            "this hasn't been initialised - super() hasn't been called",
+          );
+        return _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
   },
 ]);

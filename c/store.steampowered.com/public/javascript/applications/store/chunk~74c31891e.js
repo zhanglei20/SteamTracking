@@ -7,6 +7,18 @@
         FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
         FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
         FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
+        BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
+        "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
+        "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
+        "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
+        "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
+        "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
+        "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
+        "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
+        "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
+        focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
+        hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
       };
     },
     chunkid: (module) => {
@@ -38,10 +50,21 @@
       module.exports = {
         "duration-app-launch": "800ms",
         storeMenuResponsiveModeWidth: "730px",
-        narrowWidth: "500px",
         SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
         WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
         BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
+        BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
+        "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
+        "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
+        "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
+        "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
+        "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
+        "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
+        "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
+        "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
+        focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
+        hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -372,7 +395,6 @@
       function _(_) {
         const {
             reservationPackageID: _,
-            event: __webpack_require__,
             depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
@@ -380,8 +402,8 @@
             strDeliveryOverride: _,
             bDeliveryOverrideOnlyIfOutOfStock: _,
           } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _.useMemo)(
             () => [
               {
@@ -417,7 +439,7 @@
             (0, _.jsx)(_.Suspense, {
               fallback: null,
               children: (0, _.jsx)(_, {
-                bIsPreview: _,
+                bIsPreview: !!_,
                 rgReservationDef: _,
               }),
             }),
@@ -432,11 +454,11 @@
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
-                      event: __webpack_require__,
                       reservationDef: _[0],
                       hardwareDetail: _,
                     }),
-                  Boolean(_?.allow_purchase_in_country) &&
+                  _ &&
+                    _?.allow_purchase_in_country &&
                     (0, _.jsx)(_._, {
                       reservationDef: _[0],
                       hardwareDetail: _,
@@ -459,7 +481,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, color: __webpack_require__, bgcolor: _ } = _,
+        const { appid: _, color: _, bgcolor: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_),
           _ = (0, _._)(_);
@@ -474,7 +496,7 @@
               "WishlistButton",
             ),
             styleOverride: {
-              color: __webpack_require__,
+              color: _,
               backgroundColor: _,
             },
           }),
@@ -502,18 +524,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            appID: _,
-            classOverride: __webpack_require__,
-            styleOverride: _,
-          } = _,
+        const { appID: _, classOverride: _, styleOverride: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverFollowButton"),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           _ = (0, _._)(_),
           { mutateAsync: _ } = (0, _._)(_, !_, void 0);
         return (0, _.jsxs)(_._, {
-          className: (0, _._)(_().FollowButton, __webpack_require__),
+          className: (0, _._)(_().FollowButton, _),
           onClick: async (_) => {
             _.preventDefault(),
               _.stopPropagation(),
@@ -537,7 +555,7 @@
         });
       }
       function _(_) {
-        const { appid: _, color: __webpack_require__, bgcolor: _ } = _;
+        const { appid: _, color: _, bgcolor: _ } = _;
         (0, _._)();
         return (0, _.jsx)(_, {
           appID: _,
@@ -546,7 +564,7 @@
             _().BBCodeFollowButton,
           ),
           styleOverride: {
-            color: __webpack_require__,
+            color: _,
             backgroundColor: _,
           },
         });
@@ -655,18 +673,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { eventModel: _, nEventBadgeID: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { eventModel: _, nEventBadgeID: _ } = _,
+          _ = (0, _._)(_);
         if (_?.level > 0) {
           let _ = _.level;
           if (_?.BHasSaleEnabled()) {
             const _ = _.GetSaleSectionsByType("badge_progress");
             if (1 == _?.length) {
               const _ = _[0].badge_progress;
-              if (
-                _?.event_badgeid == __webpack_require__ &&
-                _?.granted_by_discovery_queue
-              ) {
+              if (_?.event_badgeid == _ && _?.granted_by_discovery_queue) {
                 const _ = _.levels[_.levels.length - 1].level;
                 return (0, _.jsx)(_, {
                   eventModel: _,
@@ -684,11 +699,7 @@
         return null;
       }
       function _(_) {
-        const {
-            eventModel: _,
-            nBadgeLevel: __webpack_require__,
-            nMaxLevel: _,
-          } = _,
+        const { eventModel: _, nBadgeLevel: _, nMaxLevel: _ } = _,
           _ = _.useMemo(() => {
             const _ = _.GetSaleSections().filter(
               (_) => "discoveryqueue" == _.section_type,
@@ -700,7 +711,7 @@
             [_, _],
           ),
           _ = (0, _._)(_, _),
-          _ = Math.min(__webpack_require__ + _, _);
+          _ = Math.min(_ + _, _);
         return (0, _.jsx)("span", {
           className: "DisplayBadgeProgress",
           children: (0, _._)(_),
@@ -717,7 +728,7 @@
           : null;
       }
       function _(_) {
-        const { nDoorIndex: _, children: __webpack_require__ } = _,
+        const { nDoorIndex: _, children: _ } = _,
           _ = (0, _._)(_),
           { fnOpenDoor: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
@@ -748,7 +759,7 @@
                       size: "small",
                     }),
                   Boolean(_) && (0, _.jsx)(_.Jlk, {}),
-                  __webpack_require__,
+                  _,
                 ],
               }),
         });
@@ -765,9 +776,9 @@
       const _ = (0, _._)(_._);
       function _(_) {
         const _ = Number.parseInt((0, _._)(_.args)),
-          { event: __webpack_require__, showErrorInfo: _ } = _.context;
+          { event: _, showErrorInfo: _ } = _.context;
         if (_) {
-          const _ = __webpack_require__?.jsondata?.sale_sections?.findIndex(
+          const _ = _?.jsondata?.sale_sections?.findIndex(
             (_) => _.unique_id == _,
           );
           if (_ >= 0) {
@@ -775,8 +786,8 @@
             return (0, _.jsx)(_._, {
               location: _ ? 2 : 0,
               children: (0, _.jsx)(_, {
-                event: __webpack_require__,
-                section: __webpack_require__.jsondata.sale_sections[_],
+                event: _,
+                section: _.jsondata.sale_sections[_],
                 activeTab: new _._(null, _),
                 language: _.language,
                 nSaleDayIndex: _,
@@ -801,7 +812,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanAccountID: _, color: __webpack_require__, bgcolor: _ } = _;
+        const { clanAccountID: _, color: _, bgcolor: _ } = _;
         (0, _._)();
         const [_, _] = _.useState(!1);
         return (0, _.jsx)("div", {
@@ -812,7 +823,7 @@
             nCreatorAccountID: _,
             classOverride: _().FollowGameButtonNotTop,
             styleOverride: {
-              color: __webpack_require__,
+              color: _,
               backgroundColor: _,
             },
             followType: "group",
@@ -918,11 +929,11 @@
           : null;
       }
       function _(_) {
-        const { nDoorIndex: _, bHide: __webpack_require__, children: _ } = _,
+        const { nDoorIndex: _, bHide: _, children: _ } = _,
           _ = (0, _._)(_);
         return null == _
           ? null
-          : (_ && !__webpack_require__) || (!_ && __webpack_require__)
+          : (_ && !_) || (!_ && _)
             ? (0, _.jsx)(_.Fragment, {
                 children: _.children,
               })
@@ -968,7 +979,7 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { event: _, showErrorInfo: __webpack_require__ } = _.context,
+        const { showErrorInfo: _ } = _.context,
           _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
@@ -978,7 +989,6 @@
             _ = (0, _._)(_.args, "delivery_override_out_of_stock");
           return (0, _.jsx)(_, {
             reservationPackageID: _,
-            event: _,
             depositPackageID: _,
             psuLessPackageID: _,
             strOutOfStockOverride: _,
@@ -991,7 +1001,7 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { bSalePage: _ } = _,
-          [__webpack_require__, _] = _.useState(_._.IsInitialized());
+          [_, _] = _.useState(_._.IsInitialized());
         return (
           _.useEffect(() => {
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
@@ -1130,7 +1140,7 @@
             const _ = (0, _._)();
             _ && _.locale(_);
           }, []),
-          __webpack_require__ ? _.children : null
+          _ ? _.children : null
         );
       }
     },

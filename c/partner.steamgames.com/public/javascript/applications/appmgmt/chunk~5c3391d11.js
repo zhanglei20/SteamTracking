@@ -46,6 +46,18 @@
         CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
         CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
+        BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
+        "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
+        "ItemFocusAnim-darkGreySettings": "_1rM6kybplpPqKeO6oRkrNQ",
+        "ItemFocusAnim-darkGrey": "_2FbbkQw3hYI7YAtytr5IDn",
+        "ItemFocusAnim-grey": "_2suu44WFaHB4fkFfIvCI7U",
+        "ItemFocusAnim-translucent-white-10": "_2j1TKoZjmYdt4yBTKkRCgR",
+        "ItemFocusAnim-translucent-white-20": "_1qTgWOW3x6-b_CW5qQoSSo",
+        "ItemFocusAnimBorder-darkGrey": "_1Lxbh0NQsK7RWCdF8QEIej",
+        "ItemFocusAnim-green": "_1ZB1uzf3hgyFkekpi0xZg5",
+        focusAnimation: "WewegkENW7QZMuoX3r_v8",
+        hoverAnimation: "NCIvCtzfGkBvu5KDz_CE1",
       };
     },
     chunkid: (module) => {
@@ -67,6 +79,8 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
+        GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
         VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
@@ -97,33 +111,25 @@
         }),
         _ = () => _.useContext(_);
       function _() {
-        const {
-          bForceShowCompatInfo: _,
-          bSteamDeck: _,
-          bSteamOS: __webpack_require__,
-        } = _();
-        return __webpack_require__ && !_
-          ? [!0, 2]
-          : __webpack_require__ || _ || _._.ON_DECK
-            ? [!0, 1]
-            : [!1, 0];
+        const { bForceShowCompatInfo: _, bSteamDeck: _, bSteamOS: _ } = _();
+        return _ && !_ ? [!0, 2] : _ || _ || _._.ON_DECK ? [!0, 1] : [!1, 0];
       }
       function _(_) {
-        const { _: _, className: __webpack_require__ } = _,
+        const { _: _, className: _ } = _,
           { data: _ } = (0, _._)(_);
         return _
           ? (0, _.jsx)(_, {
               category: _?.steam_deck_compat_category,
-              className: __webpack_require__,
+              className: _,
             })
           : null;
       }
       const _ = (_) => {
-          const { category: _, className: __webpack_require__ } = _;
+          const { category: _, className: _ } = _;
           if (!_) return null;
           const _ = _(_);
           return (0, _.jsxs)("div", {
-            className: (0, _._)(_.SteamDeckCompatInfo, __webpack_require__),
+            className: (0, _._)(_.SteamDeckCompatInfo, _),
             children: [
               (0, _.jsx)(_.lRD, {}),
               (0, _.jsx)(_, {
@@ -281,11 +287,10 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           [_, _, _] = (0, _._)();
-        if (!__webpack_require__ || !_ || 0 !== __webpack_require__.item_type)
-          return null;
+        if (!_ || !_ || 0 !== _.item_type) return null;
         const _ = _.steam_deck_compat_category || 0;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().LearnMoreCtn, "LearnMoreCtn"),
@@ -305,7 +310,7 @@
             (0, _.jsx)(_._, {
               active: _,
               children: (0, _.jsx)(_, {
-                nAppID: __webpack_require__.appid,
+                nAppID: _.appid,
                 closeModal: _,
               }),
             }),
@@ -313,13 +318,11 @@
         });
       }
       function _(_) {
-        const { nAppID: _, closeModal: __webpack_require__ } = _,
+        const { nAppID: _, closeModal: _ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = _.useState(
-              _.Get().GetCompatabilityResultForApp(_),
-            );
+            const [_, _] = _.useState(_.Get().GetCompatabilityResultForApp(_));
             return (
-              (0, _._)(_.Get().GetCallbackForAppList(_), __webpack_require__),
+              (0, _._)(_.Get().GetCallbackForAppList(_), _),
               _.useEffect(() => {
                 _.Get().BHasCompatabilityResultForApp(_) ||
                   _.Get()
@@ -337,8 +340,8 @@
         return (0, _.jsx)(_._, {
           "aria-labelledby": _,
           modalClassName: "DeckVerifiedModalDialog",
-          closeModal: __webpack_require__,
-          onCancel: __webpack_require__,
+          closeModal: _,
+          onCancel: _,
           children: (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
               focusable: !1,
@@ -405,13 +408,8 @@
         return null;
       }
       function _(_) {
-        const {
-          _: _,
-          category: __webpack_require__,
-          appName: _,
-          descriptionToken: _,
-        } = _;
-        if (0 == __webpack_require__)
+        const { _: _, category: _, appName: _, descriptionToken: _ } = _;
+        if (0 == _)
           return (0, _.jsx)("div", {
             _: _,
             className: _().CompatibilityDetailRatingSummary,
@@ -426,7 +424,7 @@
           });
         let _ = "",
           _ = null;
-        switch (__webpack_require__) {
+        switch (_) {
           case 3:
             (_ = "#SteamDeckVerified_DescriptionHeader_Verified"),
               (_ = _().Verified);
@@ -441,7 +439,7 @@
         }
         const _ = (0, _.jsx)("span", {
             className: _,
-            children: (0, _._)(_(__webpack_require__)),
+            children: (0, _._)(_(_)),
           }),
           _ = (0, _.jsx)("span", {
             className: _().CompatibilityDetailRatingSummary,
@@ -464,13 +462,8 @@
         });
       }
       function _(_) {
-        const {
-          _: _,
-          category: __webpack_require__,
-          appName: _,
-          descriptionToken: _,
-        } = _;
-        if (0 == __webpack_require__)
+        const { _: _, category: _, appName: _, descriptionToken: _ } = _;
+        if (0 == _)
           return (0, _.jsx)("div", {
             className: _().CompatibilityDetailRatingSummary,
             children: _
@@ -484,7 +477,7 @@
           });
         let _ = "",
           _ = null;
-        switch (__webpack_require__) {
+        switch (_) {
           case 2:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
               (_ = _().Compatible);
@@ -495,7 +488,7 @@
         }
         const _ = (0, _.jsx)("span", {
             className: _,
-            children: (0, _._)(_(__webpack_require__)),
+            children: (0, _._)(_(_)),
           }),
           _ = (0, _.jsx)("span", {
             className: _().CompatibilityDetailRatingSummary,
@@ -2368,7 +2361,7 @@
       function _(_) {
         const {
           results: _,
-          titleId: __webpack_require__,
+          titleId: _,
           descriptionId: _,
           appName: _,
           buttonProps: _,
@@ -2428,7 +2421,7 @@
             ..._,
             children: [
               (0, _.jsxs)("div", {
-                _: __webpack_require__,
+                _: _,
                 className: _().DialogHeader,
                 children: [
                   (0, _.jsx)("div", {
@@ -2503,7 +2496,7 @@
       function _(_) {
         const {
             titleId: _,
-            title: __webpack_require__,
+            title: _,
             autoFocus: _,
             buttonProps: _,
             ratingIcon: _,
@@ -2536,7 +2529,7 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().DialogTitle,
-                        children: __webpack_require__,
+                        children: _,
                       }),
                       (0, _.jsx)("div", {
                         className: _().AppTitleCategory,
@@ -2565,18 +2558,13 @@
         );
       }
       function _(_) {
-        const {
-            titleId: _,
-            descriptionId: __webpack_require__,
-            results: _,
-            appName: _,
-          } = _,
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
           _ =
             _.steamos_resolved_items &&
             -1 !==
               _.steamos_resolved_items?.findIndex((_) => 1 == _.display_type),
           _ = (0, _.jsx)(_._, {
-            _: __webpack_require__,
+            _: _,
             category: _.steamos_resolved_category ?? 0,
             appName: _,
           }),
@@ -2646,15 +2634,10 @@
         });
       }
       function _(_) {
-        const {
-            titleId: _,
-            descriptionId: __webpack_require__,
-            results: _,
-            appName: _,
-          } = _,
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
           _ = -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type),
           _ = (0, _.jsx)(_._, {
-            _: __webpack_require__,
+            _: _,
             category: _.resolved_category,
             appName: _,
           }),
@@ -2721,12 +2704,12 @@
         });
       }
       function _(_) {
-        const { blogURL: _, eHWCompatibiltyDisplay: __webpack_require__ } = _,
+        const { blogURL: _, eHWCompatibiltyDisplay: _ } = _,
           _ = (0, _._)();
         if (!_) return null;
         if (_) {
           const _ =
-            2 == __webpack_require__
+            2 == _
               ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog")
               : (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
           return (0, _.jsxs)("div", {
@@ -2744,7 +2727,7 @@
           });
         }
         const _ =
-          2 == __webpack_require__
+          2 == _
             ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
             : (0, _._)(
                 "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
@@ -2832,71 +2815,63 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          activeTab: "",
-        };
-        componentDidMount() {
-          this.props.startingTab
-            ? this.setState({
-                activeTab: this.props.startingTab,
-              })
-            : !this.props.bDisableRouting &&
-              this.props.location &&
-              this.setState({
-                activeTab: (0, _._)(this.props.location, "tab"),
-              });
-        }
-        componentDidUpdate(_) {
-          !this.props.bDisableRouting &&
-            this.props.location &&
-            this.props.location.key !== _.location.key &&
-            this.setState({
-              activeTab: (0, _._)(this.props.location, "tab"),
-            });
-        }
-        OnTabClick(_) {
-          this.setState({
-            activeTab: _.key,
-          }),
-            !this.props.bDisableRouting &&
-              this.props.history &&
-              (0, _._)(this.props.history, "tab", _.key),
-            _.onClick && _.onClick(_);
-        }
-        render() {
-          const _ = this.props.tabs.filter((_) => !_.hidden);
-          if (!_.length) return null;
-          const _ = _.find((_) => _.key === this.state.activeTab) || _[0],
-            _ = this.props.preferredFocus
-              ? (this.props.startingTab ?? _[0].key)
-              : void 0;
-          return (0, _.jsxs)(_.Fragment, {
+      function _(_) {
+        const {
+            tabs: _,
+            bDisableRouting: _,
+            startingTab: _,
+            classNameCtn: _,
+            classNameTab: _,
+            classNameTabContent: _,
+            preferredFocus: _,
+            bVerticalTabs: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(
+            () =>
+              _ || (!_ && (0, _._)(_, "tab") ? ((0, _._)(_, "tab") ?? "") : ""),
+          );
+        (0, _.useEffect)(() => {
+          if (!_.bDisableRouting && _) {
+            const _ = (0, _._)(_, "tab");
+            _ && _(_);
+          }
+        }, [_, _.key, _.bDisableRouting, _]);
+        const _ = _.useCallback(
+            (_) => {
+              _(_.key),
+                _ || (0, _._)(_, "tab", _.key),
+                _.onClick && _.onClick(_);
+            },
+            [_, _],
+          ),
+          _ = _.filter((_) => !_.hidden);
+        if (!_.length) return null;
+        const _ = _.find((_) => _.key === _) || _[0],
+          _ = _ ? (_ ?? _[0].key) : void 0,
+          _ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _().GraphicalAssetsTabs,
-                  this.props.classNameCtn,
+                  _ && _().GraphicalAssetsTabsVertical,
+                  _,
                 ),
-                navEntryPreferPosition: this.props.preferredFocus
-                  ? _._.PREFERRED_CHILD
-                  : _._.FIRST,
+                navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
                 children: _.map((_, _) =>
                   (0, _.jsx)(
                     _,
                     {
                       tab: _,
-                      OnTabClick: this.OnTabClick,
-                      classNameTab: this.props.classNameTab,
+                      OnTabClick: _,
+                      classNameTab: _,
                       active: _.key === _.key,
                       preferredFocus: _ === _.key,
                     },
@@ -2906,15 +2881,20 @@
               }),
               _ &&
                 (0, _.jsx)(_._, {
-                  className: this.props.classNameTabContent,
+                  className: _,
                   children: _.contents,
                 }),
             ],
           });
-        }
+        return _
+          ? (0, _.jsx)(_._, {
+              className: (0, _._)(_().GraphicalAssetsTabsLayoutVertical),
+              children: _,
+            })
+          : _;
       }
       function _(_) {
-        const { statusType: _ = "success", children: __webpack_require__ } = _;
+        const { statusType: _ = "success", children: _ } = _;
         let _ = "";
         return (
           "success" === _
@@ -2924,51 +2904,49 @@
               : "caution" === _ && (_ = _().StatusCaution),
           (0, _.jsx)("div", {
             className: (0, _._)(_().GraphicalAssetStatus, _),
-            children: __webpack_require__,
+            children: _,
           })
         );
       }
-      (0, _._)([_._], _.prototype, "OnTabClick", null);
-      const _ = (0, _._)(function (_) {
-          const {
-            tab: _,
-            OnTabClick: __webpack_require__,
-            classNameTab: _,
-            active: _,
-            preferredFocus: _,
-          } = _;
-          return (0, _.jsx)(_._, {
-            condition: Boolean(_.statusToolTip || _.tooltip),
-            wrap: (_) =>
-              (0, _.jsx)(_._, {
-                toolTipContent: _.statusToolTip || _.tooltip,
-                children: _,
-              }),
-            children: (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                _().GraphicalAssetsTab,
-                _ && _().Active,
-                _ && "ActiveTab",
-                _,
-              ),
-              onActivate: () => __webpack_require__(_),
-              preferredFocus: _,
-              children: [
-                Boolean(_.vo_warning) &&
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _.vo_warning,
-                    children: (0, _.jsx)("div", {
-                      className: _().VOWarning,
-                      children: (0, _._)("#EventEditor_VOWarning"),
-                    }),
-                  }),
-                _.status,
-                _.name,
-              ],
+      function _(_) {
+        const {
+          tab: _,
+          OnTabClick: _,
+          classNameTab: _,
+          active: _,
+          preferredFocus: _,
+        } = _;
+        return (0, _.jsx)(_._, {
+          condition: Boolean(_.statusToolTip || _.tooltip),
+          wrap: (_) =>
+            (0, _.jsx)(_._, {
+              toolTipContent: _.statusToolTip || _.tooltip,
+              children: _,
             }),
-          });
-        }),
-        _ = (0, _._)(_);
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _().GraphicalAssetsTab,
+              _ && _().Active,
+              _ && "ActiveTab",
+              _,
+            ),
+            onActivate: () => __webpack_require__(_),
+            preferredFocus: _,
+            children: [
+              Boolean(_.vo_warning) &&
+                (0, _.jsx)(_._, {
+                  toolTipContent: _.vo_warning,
+                  children: (0, _.jsx)("div", {
+                    className: _().VOWarning,
+                    children: (0, _._)("#EventEditor_VOWarning"),
+                  }),
+                }),
+              _.status,
+              _.name,
+            ],
+          }),
+        });
+      }
     },
   },
 ]);

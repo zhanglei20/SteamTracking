@@ -55,6 +55,18 @@
         PostedBy: "_2VqeQaZVaUkkEWaiLkmqmT",
         ReminderContainer: "_3Vf2MkZ_LWIoNVv36RwJtO",
         ReadMoreCnt: "_1YmaiDiNhC33cL5DKj05KQ",
+        BackgroundAnimation: "_2-llXPi4w88rsWfJFYSLHB",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2eejrtSFYCSnzH8C6-WC3a",
+        "ItemFocusAnim-darkerGrey": "oMlqiiSY2Eqr2ln_FmAg4",
+        "ItemFocusAnim-darkGreySettings": "AcW48fP-EnfyD8bO6anBj",
+        "ItemFocusAnim-darkGrey": "_3lAc02j3vPGIoXryYyGTZR",
+        "ItemFocusAnim-grey": "_388VkzVpUFRuQ1HZEymCy",
+        "ItemFocusAnim-translucent-white-10": "tK-6xcUa6TrN9X1V5zj25",
+        "ItemFocusAnim-translucent-white-20": "_1UaaS_yXA7SqNdxVDXCD9W",
+        "ItemFocusAnimBorder-darkGrey": "_1V7Z378RTDEmk3dXXGXsQa",
+        "ItemFocusAnim-green": "_2ldXxMP_HINQZvEbjgDdbf",
+        focusAnimation: "_3zr66n761wV-ZHFKw_Yvbn",
+        hoverAnimation: "_1MvZ2haWg8XTcl8VHKnoS0",
       };
     },
     chunkid: (module) => {
@@ -131,7 +143,6 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
-        "duration-app-launch": "800ms",
         EventDetailsPageContainer: "_2Ptras-ZC31rwdT6pD-t0a",
         EventBackgroundBlurCtn: "_32nPM5nI8cmMdkvRnsUcq",
         EventBackgroundBlur: "stsss-bTNuazY8FYtvTOX",
@@ -2165,11 +2176,11 @@
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: () => _(_, !0),
-          onSuccess: ([_, __webpack_require__]) => {
+          onSuccess: ([_, _]) => {
             1 == _ &&
               _.setQueryData(
                 [`GetNominationShareLink_${_._.accountid}`],
-                [_, __webpack_require__],
+                [_, _],
               );
           },
         });
@@ -2345,11 +2356,10 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)(_.appid, {
+        const [_, _] = (0, _._)(_.appid, {
             include_assets: !0,
           }),
           [_, _] = (0, _._)(_.clanID);
@@ -2756,7 +2766,7 @@
           const {
               event: _,
               langOverride: _,
-              partnerEventStore: __webpack_require__,
+              partnerEventStore: _,
               emoticonStore: _,
               className: _,
               additionalTypeAndDateElement: _,
@@ -2932,7 +2942,7 @@
                       children: [
                         (0, _.jsx)(_._, {
                           text: _,
-                          partnerEventStore: __webpack_require__,
+                          partnerEventStore: _,
                           event: _,
                         }),
                         (0, _.jsx)("span", {
@@ -2978,7 +2988,7 @@
                 !Boolean(_) &&
                   (0, _.jsx)(_._, {
                     eventModel: _,
-                    partnerEventStore: __webpack_require__,
+                    partnerEventStore: _,
                     emoticonStore: _,
                   }),
               ],
@@ -3153,7 +3163,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)({}),
+        const [_, _] = (0, _.useState)({}),
           _ = (0, _._)("useEventHeaderData");
         return (
           (0, _.useEffect)(() => {
@@ -3206,29 +3216,23 @@
               });
             }
           }, [_, _?.token?.reason, _]),
-          __webpack_require__
+          _
         );
       }
       function _(_) {
-        const { appId: _, clanId: __webpack_require__, bShowRSSFeed: _ } = _,
-          {
-            strStoreURL: _,
-            strCommunityURL: _,
-            strForumURL: _,
-          } = _(_, __webpack_require__),
+        const { appId: _, clanId: _, bShowRSSFeed: _ } = _,
+          { strStoreURL: _, strCommunityURL: _, strForumURL: _ } = _(_, _),
           _ = (0, _._)(),
           _ =
             _._.STORE_BASE_URL +
             "feeds/" +
             (0, _._)() +
-            (_ ? "/app/" + _ : "/group/" + __webpack_require__) +
+            (_ ? "/app/" + _ : "/group/" + _) +
             "/?cc=" +
             _._.COUNTRY +
             "&l=" +
             _._.LANGUAGE,
-          _ = _._.Get().GetPartnerEventPermissions(
-            _._.InitFromClanID(__webpack_require__),
-          ),
+          _ = _._.Get().GetPartnerEventPermissions(_._.InitFromClanID(_)),
           _ = _ && (_.can_edit || _.support_user),
           _ = _._.Get().BOwnsApp(_),
           _ = (0, _.useMemo)(() => {
@@ -3268,15 +3272,11 @@
               _ &&
                 _.push({
                   label: (0, _._)("#EventDisplay_Admin_ExtraShort"),
-                  data: (0, _._)(
-                    _,
-                    _._.InitFromClanID(__webpack_require__),
-                    "admin",
-                  ),
+                  data: (0, _._)(_, _._.InitFromClanID(_), "admin"),
                 }),
               _
             );
-          }, [_, _, _, _, _, _, _, _, _, __webpack_require__]);
+          }, [_, _, _, _, _, _, _, _, _, _]);
         return (0, _.jsx)(_._, {
           strDefaultLabel: (0, _._)("#EventDisplay_LinksDropDown_ExtraShort"),
           strClassName: _().AppBannerLinkDD,
@@ -3291,13 +3291,13 @@
         });
       }
       const _ = (0, _._)((_) => {
-        const { appId: _, clanId: __webpack_require__ } = _,
+        const { appId: _, clanId: _ } = _,
           {
             strCapsuleUrl: _,
             strGroupTitle: _,
             _: _,
             strExtraBannerGroupStyle: _,
-          } = _(_, __webpack_require__),
+          } = _(_, _),
           _ = (0, _.useMemo)(
             () =>
               _
@@ -3305,9 +3305,9 @@
                     appid: _,
                   }
                 : {
-                    creatorid: __webpack_require__,
+                    creatorid: _,
                   },
-            [_, __webpack_require__],
+            [_, _],
           ),
           { data: _ } = (0, _._)(_),
           _ = _._.Get().BOwnsApp(_);
@@ -3385,7 +3385,7 @@
                               className: _().HeaderButtonDark,
                             })
                           : (0, _.jsx)(_._, {
-                              clanAccountID: __webpack_require__,
+                              clanAccountID: _,
                               className: _().HeaderButtonDark,
                             }),
                       }),
@@ -3567,7 +3567,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { eventModel: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!0),
+          [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(new Set()),
           [_, _] = (0, _.useState)(new Set()),
           [_, _] = (0, _.useState)(new Set()),
@@ -3575,7 +3575,7 @@
           [_, _] = (0, _.useState)(null),
           _ = (0, _.useRef)(null);
         (0, _.useEffect)(() => {
-          if (__webpack_require__) {
+          if (_) {
             (async () => {
               const _ = _().CancelToken.source();
               _.current = _.cancel;
@@ -3601,7 +3601,7 @@
             })();
           }
           return () => _.current && _.current();
-        }, [__webpack_require__, _.GID, _.clanSteamID]);
+        }, [_, _.GID, _.clanSteamID]);
         const _ = new Array();
         return (
           _.Get()
@@ -3644,7 +3644,7 @@
                       (0, _.jsx)(_._, {
                         children: (0, _._)("#EventRepost_Dialog_Desc"),
                       }),
-                      __webpack_require__
+                      _
                         ? (0, _.jsx)(_._, {
                             string: (0, _._)("#Loading"),
                           })
@@ -4004,11 +4004,7 @@
         }
       };
       function _(_) {
-        const {
-            eventModel: _,
-            emoticonStore: __webpack_require__,
-            partnerEventStore: _,
-          } = _,
+        const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(_),
           _ = (0, _._)(_);
@@ -4024,7 +4020,7 @@
                     eventLink: _,
                     sharePageUrls: _,
                     appid: _.appid,
-                    emoticonStore: __webpack_require__,
+                    emoticonStore: _,
                     partnerEventStore: _,
                   }),
                 }),
@@ -4047,11 +4043,7 @@
         });
       }
       function _(_) {
-        const {
-          commentCount: _,
-          discussionURL: __webpack_require__,
-          gotoDiscussion: _,
-        } = _;
+        const { commentCount: _, discussionURL: _, gotoDiscussion: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().DiscussContainer,
           children: [
@@ -4059,9 +4051,9 @@
               className: _().DiscussionCount,
               children: [(0, _.jsx)(_.ROZ, {}), (0, _._)(_)],
             }),
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)(_._, {
-                href: (0, _._)(__webpack_require__),
+                href: (0, _._)(_),
                 children: (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _().Button,
@@ -4077,7 +4069,7 @@
                   ],
                 }),
               }),
-            !__webpack_require__ &&
+            !_ &&
               (0, _.jsxs)(_._, {
                 focusable: !0,
                 onActivate: _,
@@ -4196,7 +4188,7 @@
         include_assets: !0,
       };
       function _(_) {
-        const { event: _, lang: __webpack_require__, previewMode: _ } = _,
+        const { event: _, lang: _, previewMode: _ } = _,
           [_] = (0, _._)(() => [_.GetSteamAwardCategory()]),
           _ = (0, _._)("EventDisplaySteamAwardNomination"),
           [_, _] = (0, _.useState)(null),
@@ -4272,7 +4264,7 @@
                         ? _
                           ? (0, _._)(
                               "#SteamAwards_EventNominateGamePrompt_Long",
-                              _.GetGameTitle(__webpack_require__),
+                              _.GetGameTitle(_),
                             )
                           : (0, _.jsx)("a", {
                               className: _().LinkText,
@@ -4281,7 +4273,7 @@
                               ),
                               children: (0, _._)(
                                 "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                                _.GetGameTitle(__webpack_require__),
+                                _.GetGameTitle(_),
                               ),
                             })
                         : (0, _._)("#SteamAwards_Event_NominationsClosed"),
@@ -4299,11 +4291,7 @@
         });
       }
       function _(_) {
-        const {
-            event: _,
-            nominationEventDetails: __webpack_require__,
-            currentNomination: _,
-          } = _,
+        const { event: _, nominationEventDetails: _, currentNomination: _ } = _,
           [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
           _ = _?.appid,
           _ = (0, _._)(_, _, 0),
@@ -4333,7 +4321,7 @@
             [_, _, _],
           ),
           _ = _._.GetTimeNowWithOverride(),
-          _ = 1 == __webpack_require__.rgAwardCategoryDetails?.length,
+          _ = 1 == _.rgAwardCategoryDetails?.length,
           _ =
             _.BIsEventActionEnabled() || _ < _.GetStartTimeAndDateUnixSeconds();
         return _ && (_ || _)
@@ -4348,8 +4336,7 @@
                   children: [
                     (0, _.jsx)("div", {
                       style: {
-                        background:
-                          __webpack_require__?.strNominateButtonBGColor,
+                        background: _?.strNominateButtonBGColor,
                       },
                       className: (0, _._)(
                         _().SteamAwardNominateButton,
@@ -4372,12 +4359,12 @@
                             children: _
                               ? (0, _._)(
                                   "#SteamAwards_NominateWidget_CTA_PastTense",
-                                  __webpack_require__.rgAwardCategoryDetails[0]
+                                  _.rgAwardCategoryDetails[0]
                                     .strSuggestedCategoryTitle,
                                 )
                               : (0, _._)(
                                   "#SteamAwards_NominateWidget_CTA",
-                                  __webpack_require__.rgAwardCategoryDetails[0]
+                                  _.rgAwardCategoryDetails[0]
                                     .strSuggestedCategoryTitle,
                                 ),
                           }),
@@ -4387,12 +4374,11 @@
                     (0, _.jsx)("div", {
                       className: _().SteamAwardCategoryDesc,
                       children:
-                        __webpack_require__.rgAwardCategoryDetails[0]
-                          .strSuggestedCategoryDesc,
+                        _.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
                     }),
                   ],
                 }),
-                Boolean(_ && _ != __webpack_require__.eLaborOfLove) &&
+                Boolean(_ && _ != _.eLaborOfLove) &&
                   (0, _.jsx)("div", {
                     className: _().SteamAwardLinkToNominationPage,
                     children: (0, _.jsx)("a", {
@@ -4411,14 +4397,14 @@
       function _(_) {
         const {
             curNominatedAppID: _,
-            newAppID: __webpack_require__,
+            newAppID: _,
             strLocTokenInfix: _,
             fnOnConfirm: _,
             fnOnCancel: _,
             closeModal: _,
           } = _,
           [_] = (0, _._)(_, _),
-          [_] = (0, _._)(__webpack_require__, _);
+          [_] = (0, _._)(_, _);
         return (0, _.jsx)(_._, {
           modalClassName: _().SteamAwardConflictModal,
           strTitle: (0, _._)(`#SteamAward_${_}ConflictWarning_Title`),
@@ -4798,11 +4784,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            event: _,
-            nOverrideStartTime: __webpack_require__,
-            nOverrideEndTime: _,
-          } = _,
+        const { event: _, nOverrideStartTime: _, nOverrideEndTime: _ } = _,
           _ = _.stylesmodule
             ? {
                 ..._(),
@@ -4810,7 +4792,7 @@
               }
             : _(),
           [_, _, _] = (0, _._)(() => [
-            __webpack_require__ ||
+            _ ||
               (_.bOldAnnouncement
                 ? _.postTime
                 : _.GetStartTimeAndDateUnixSeconds()),
@@ -4829,15 +4811,11 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            event: __webpack_require__,
-            dateRangeLayout: _ = "horizontal",
-          } = _,
+        const { _: _, event: _, dateRangeLayout: _ = "horizontal" } = _,
           [_, _, _] = (0, _._)(() => [
             __webpack_require__.GetStartTimeAndDateUnixSeconds(),
             __webpack_require__.GetEndTimeAndDateUnixSeconds(),
-            __webpack_require__.type,
+            _.type,
           ]),
           _ = {};
         return (
@@ -5039,11 +5017,11 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {
+          [_] = (0, _._)(_, {
             include_basic_info: !0,
             include_links: !0,
           });
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         const _ = __webpack_require__.GetLinks();
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
@@ -5083,8 +5061,8 @@
         );
       }
       function _(_) {
-        const { gidClanEvent: _, rgSocial: __webpack_require__ } = _,
-          _ = _(__webpack_require__);
+        const { gidClanEvent: _, rgSocial: _, bIsCreatorHomeEvent: _ } = _,
+          _ = _(_);
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
               children: [
@@ -5093,7 +5071,9 @@
                     _().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: (0, _._)("#EventDisplay_Sale_SocialTitle"),
+                  children: _
+                    ? (0, _._)("#EventDisplay_Sale_SocialTitle_Dev")
+                    : (0, _._)("#EventDisplay_Sale_SocialTitle"),
                 }),
                 (0, _.jsx)(_, {
                   _: _,
@@ -5105,7 +5085,7 @@
       }
       const _ = [6, 23, 18, 8, 9, 19, 24];
       function _(_) {
-        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _,
+        const { _: _, rgSocialMedia: _, className: _ } = _,
           _ = (0, _._)();
         return (0, _.jsx)("div", {
           className: (0, _._)(_().AppSocialLinks, _),
@@ -5172,97 +5152,97 @@
         });
       }
       function _(_) {
-        const { linkType: _, ...__webpack_require__ } = _;
+        const { linkType: _, ..._ } = _;
         switch (_) {
           case 1:
             return (0, _.jsx)(_.agV, {
-              ...__webpack_require__,
+              ..._,
             });
           case 2:
             return (0, _.jsx)(_.ZnA, {
-              ...__webpack_require__,
+              ..._,
             });
           case 3:
             return (0, _.jsx)(_._, {
-              ...__webpack_require__,
+              ..._,
             });
           case 4:
             return (0, _.jsx)(_.ofN, {
-              ...__webpack_require__,
+              ..._,
             });
           case 5:
             return (0, _.jsx)(_.Bki, {
-              ...__webpack_require__,
+              ..._,
             });
           case 6:
           case 18:
           case 23:
             return (0, _.jsx)(_.$vK, {
-              ...__webpack_require__,
+              ..._,
             });
           case 7:
             return (0, _.jsx)(_.OSJ, {
-              ...__webpack_require__,
+              ..._,
             });
           case 8:
             return (0, _.jsx)(_.nm_, {
-              ...__webpack_require__,
+              ..._,
             });
           case 9:
             return (0, _.jsx)(_.tIO, {
-              ...__webpack_require__,
+              ..._,
             });
           case 10:
             return (0, _.jsx)(_.Vt2, {
-              ...__webpack_require__,
+              ..._,
             });
           case 11:
             return (0, _.jsx)(_.Vgk, {
-              ...__webpack_require__,
+              ..._,
             });
           case 12:
             return (0, _.jsx)(_.VSd, {
-              ...__webpack_require__,
+              ..._,
             });
           case 13:
             return (0, _.jsx)(_.ccb, {
-              ...__webpack_require__,
+              ..._,
             });
           case 14:
             return (0, _.jsx)(_.rNt, {
-              ...__webpack_require__,
+              ..._,
             });
           case 15:
             return (0, _.jsx)(_.g$j, {
-              ...__webpack_require__,
+              ..._,
             });
           case 16:
             return (0, _.jsx)(_.BQz, {
-              ...__webpack_require__,
+              ..._,
             });
           case 17:
             return (0, _.jsx)(_.jdP, {
-              ...__webpack_require__,
+              ..._,
             });
           case 19:
             return (0, _.jsx)(_.bKN, {
-              ...__webpack_require__,
+              ..._,
             });
           case 20:
             return (0, _.jsx)(_.sDU, {
-              ...__webpack_require__,
+              ..._,
             });
           case 21:
             return (0, _.jsx)(_.MbF, {
-              ...__webpack_require__,
+              ..._,
             });
           case 22:
             return (0, _.jsx)(_.emH, {
-              ...__webpack_require__,
+              ..._,
             });
           case 24:
             return (0, _.jsx)(_.Yoo, {
-              ...__webpack_require__,
+              ..._,
             });
           case 25:
           case 0:

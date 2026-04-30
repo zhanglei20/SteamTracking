@@ -4780,7 +4780,6 @@
 "Steam_WindowsCompat_Description" "Windows наразі виконує Steam у режимі сумісності з попередньою версією Windows, що може спричинити неполадки у деяких функціях Steam чи під час запуску ігор. Будь ласка, слідуйте вказівкам нижче, аби вимкнути режим сумісності."
 "Steam_WindowsCompat_DoNotShowAgain" "Не показувати знову"
 "Steam_WindowsCompat_SupportLinkDesc" "Як мені вимкнути режим сумісності?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Закрити Steam"
 "Steam_WindowsCompat_RestartSteam" "Перезапустити Steam"
 "Steam_WindowsCompat_Continue" "Продовжити"
@@ -4861,11 +4860,12 @@
 "RescueDialog_ExitSteam" "Вийти зі Steam"
 
 "TransportDialog_Title" "Неочікувана помилка перенесення"
-"TransportDialog_Explanation" "Виникла неочікувана помилка під час запуску Steam (0x%errorCount%). Натисніть <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>тут</a>, щоб дізнатися більше."
+"TransportDialog_Explanation" "Виникла неочікувана помилка під час запуску Steam (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Виберіть одну з опцій нижче:"
 "TransportDialog_RestartSteam" "Перезапустити Steam"
 "TransportDialog_RestartSteamWebHelper" "Перезапустити steamwebhelper"
 "TransportDialog_ContinueAnyway" "(Лише для Valve) Усе одно продовжити"
+"TransportDialog_SupportLinkDesc" "Більше інформації"
 "TransportDialog_ExitSteam" "Вийти зі Steam"
 
 "DownloadRegion_default"				 "Невідомо"

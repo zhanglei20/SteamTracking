@@ -881,12 +881,12 @@
             (this.m_TextFilterWords = new _._()),
             (this.m_DataAccess = _);
         }
-        async Init(_ = 0, _ = null, __webpack_require__ = null) {
+        async Init(_ = 0, _ = null, _ = null) {
           (this.m_bInitialized = !1),
             (this.m_WebUIServiceTransport = _._),
             (this.m_unAccountID = _),
             (this.m_Transport = _),
-            (this.m_Storage = __webpack_require__),
+            (this.m_Storage = _),
             (this.m_strBannedWords = ""),
             (this.m_strProfanityWords = ""),
             (this.m_strCleanWords = ""),
@@ -1431,7 +1431,7 @@
           let {
             onVisibilityChange: _,
             rootMargin: _,
-            trigger: __webpack_require__,
+            trigger: _,
             horizontal: _,
             ..._
           } = this.props;

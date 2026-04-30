@@ -66,125 +66,65 @@
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 10898, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 10898, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 68916, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 68916, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 25603, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 25603, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3697, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 3697, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89875, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89875, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 18156, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 18156, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98314, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98314, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98881, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98881, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 5162, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 5162, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 29044, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 29044, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83462, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83462, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97855, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97855, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44726, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 44726, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 1762, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1762, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 29181, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 29181, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 85629, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 85629, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69493, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69493, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 8982, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 8982, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75091, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75091, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3615, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 3615, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53357, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 53357, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 47671, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 47671, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 33022, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 33022, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 18434, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 18434, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 14859, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 14859, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 17061, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 17061, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 57624, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 57624, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83898, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83898, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 1916, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1916, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 68573, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 68573, 19)));
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
@@ -226,11 +166,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            level: _ = "auto",
-            className: __webpack_require__,
-            color: _,
-          } = _,
+        const { level: _ = "auto", className: _, color: _ } = _,
           _ = (function (_, _) {
             if ("auto" === _ && 0 === _) return "h1";
             const _ = "auto" === _ ? _.toString() : _;
@@ -250,7 +186,7 @@
           ...(0, _._)(
             {
               ..._,
-              className: _()((0, _._)(), _.Heading, __webpack_require__),
+              className: _()((0, _._)(), _.Heading, _),
             },
             _,
           ),
@@ -288,125 +224,65 @@
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 19919, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 19919, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 42067, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 42067, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 81420, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 81420, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 87898, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 87898, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 56366, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 56366, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66835, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 66835, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 35265, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 35265, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69942, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69942, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 5687, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 5687, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21741, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21741, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 20761, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 20761, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 82928, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 82928, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 10379, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 10379, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 61721, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 61721, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 26480, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 26480, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 210, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 210, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 77850, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 77850, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 73522, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 73522, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 82066, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 82066, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 23458, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 23458, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 124, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 124, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 71356, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71356, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 64943, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 64943, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 54553, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 54553, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 42808, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 42808, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44212, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 44212, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15793, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 15793, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48441, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 48441, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 95875, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 95875, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 55696, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 55696, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -486,13 +362,16 @@
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ...__webpack_require__ } = _;
-        return (0, _.jsx)("a", {
+        const { underline: _ = "auto", ..._ } = _,
+          _ = _._.IN_GAMEPADUI ? _._ : "a";
+        return (0, _.jsx)(_, {
           ...(0, _._)(
             {
-              ...__webpack_require__,
+              ..._,
               underline: _,
               className: _.TextLink,
             },
@@ -507,8 +386,7 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { nPackageID: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
@@ -534,7 +412,7 @@
               paddingBottom: "4",
               children: [
                 (0, _.jsx)(_, {
-                  size: "6",
+                  size: "7",
                   children: _._.Localize(
                     "#SinglePackagePricing_Right_Help_Title",
                   ),
@@ -554,7 +432,7 @@
               direction: "column",
               children: [
                 (0, _.jsx)(_, {
-                  size: "6",
+                  size: "7",
                   children: _._.Localize("#SinglePackagePricing_Right_FAQ"),
                 }),
                 (0, _.jsxs)(_._, {
@@ -589,20 +467,43 @@
         const _ = `${_._.PARTNER_BASE_URL}doc/finance/taxfaq`;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsx)(_._, {
+            (0, _.jsxs)(_._, {
               paddingBottom: "4",
-              children: (0, _.jsxs)(_._, {
-                size: "4",
-                color: "text-body",
-                contrast: "subtitle",
-                children: [
-                  _._.Localize("#SinglePricingPackage_Desc_1"),
-                  (0, _.jsx)(_, {
-                    href: _,
-                    children: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  _: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: _._.Localize("#SinglePricingPackage_Intro_1"),
+                }),
+                (0, _.jsx)(_._, {
+                  _: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: _._.Localize("#SinglePricingPackage_Intro_2"),
+                }),
+                (0, _.jsx)(_._, {
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: (0, _.jsxs)("ol", {
+                    children: [
+                      (0, _.jsx)("li", {
+                        children: _._.Localize(
+                          "#SinglePricingPackage_Intro_2a",
+                        ),
+                      }),
+                      (0, _.jsx)("li", {
+                        children: _._.Localize(
+                          "#SinglePricingPackage_Intro_2b",
+                        ),
+                      }),
+                    ],
                   }),
-                ],
-              }),
+                }),
+              ],
             }),
             (0, _.jsx)(_._, {
               paddingBottom: "4",
@@ -628,7 +529,7 @@
       }
       const _ = (0, _._)();
       function _(_) {
-        const { nPackageID: _, appids: __webpack_require__ } = _,
+        const { nPackageID: _, appids: _ } = _,
           _ = (0, _._)();
         (0, _._)(_);
         const _ = (0, _._)(),
@@ -676,7 +577,7 @@
                       className: "panel",
                       children: [
                         (0, _.jsx)(_, {
-                          size: "6",
+                          size: "7",
                           children: _._.Localize(
                             "#SinglePackagePricing_Right_Convert_Title",
                           ),
@@ -694,6 +595,7 @@
                         (0, _.jsxs)(_._, {
                           direction: "column",
                           paddingTop: "5",
+                          align: "start",
                           children: [
                             (0, _.jsx)(_._, {
                               size: "3",
@@ -717,7 +619,7 @@
         });
       }
       function _(_) {
-        const { nPackageID: _, appids: __webpack_require__ } = _,
+        const { nPackageID: _, appids: _ } = _,
           _ = (0, _._)(),
           {
             rgCurrencyRows: _,
@@ -822,8 +724,9 @@
                 rgCountryOverrideRows: _,
               };
             }, [_, _, _, _, _]);
-          })(_, _, __webpack_require__),
-          _ = !!(0, _._)(_);
+          })(_, _, _),
+          _ = !!(0, _._)(_),
+          { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
         (0, _.useEffect)(() => {
           (0, _._)([_]);
         }, [_]);
@@ -868,7 +771,11 @@
                         children: (0, _.jsxs)(_._, {
                           direction: "row",
                           children: [
-                            (0, _.jsx)(_._, {}),
+                            (0, _.jsx)(_._, {
+                              fnConversionMethodSelected: (_) => {
+                                _(_, (0, _._)(_, "USD"), _);
+                              },
+                            }),
                             (0, _.jsxs)(_._, {
                               direction: "column",
                               paddingLeft: "5",
@@ -972,7 +879,7 @@
       }
       function _(_) {
         const { usdRow: _ } = _,
-          { fnApplyGuidelines: __webpack_require__ } = (0, _._)((0, _._)());
+          { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
         return (0, _.jsx)(_._, {
           strButton: _._.Localize("#PricingDashboard_Select_Price_button"),
           strTooltip: _._.Localize(
@@ -980,8 +887,8 @@
           ),
           fnGetUSDPriceInCents: () => (0, _._)(_.packageID, "USD"),
           fnOnUpdate: (_) => __webpack_require__(_.packageID, _),
-          strDescription: (0, _._)(
-            "#PricingDashboard_GuidelinesPickerDescription",
+          strDescription: _._.Localize(
+            "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           appids: _.appids,
           nPackageID: _.packageID,
@@ -989,13 +896,12 @@
         });
       }
       function _(_) {
-        const { nPackageID: _, oPricingGuideline: __webpack_require__ } = _,
+        const { nPackageID: _, oPricingGuideline: _ } = _,
           [_, _, _] = (0, _._)(),
           _ = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
-              color: "dull",
               onClick: _,
               children: (0, _._)(
                 "#PricingDashboard_ApplyGuidelinesDialog_Button",

@@ -266,7 +266,6 @@
     "Settings_Controller_XboxSupport": "为 Xbox 控制器启用蒸汽平台输入",
     "Settings_Controller_SwitchSupport": "为 Switch Pro 控制器启用蒸汽平台输入",
     "Settings_Controller_GenericGamepadSupport": "为通用控制器启用蒸汽平台输入",
-    "Settings_Controller_SCPairing": "配对蒸汽平台控制器",
     "Settings_ControllerCalibration_HapticsEnable": "蒸汽平台触感",
     "Settings_ControllerCalibration_Grip_Sensor_Desc": "Steam Controller 的握持传感器可检测手与控制器握把之间的范围。您可以在蒸汽平台输入中将其用作普通按键，或用作陀螺仪激活按键。请使用下方设置调整手部检测的灵敏度。",
     "Settings_Customization_StartupVideo_Desc": "选择启动蒸汽平台时要播放的自定义影片，个性化您的蒸汽平台体验。此设置按设备生效，而非按用户生效。",
@@ -296,8 +295,8 @@
     "Settings_System_SteamBeta": "蒸汽平台测试分支",
     "Developer_SLS_Journal_Enabled_Explainer": "共享关键系统进程日志以及崩溃报告。这些补充信息可以提供必要的背景信息，以帮助识别和解决崩溃的根本原因。\n\n报告包含系统更新服务、启动管理服务、SteamOS 管理服务、设置管理服务以及蒸汽平台崩溃收集服务的日志。",
     "Settings_SteamRuntimeSystemInformation": "蒸汽平台运行时系统信息",
-    "Settings_SteamRuntimeSystemInformation_Desc": "蒸汽平台收集了有关您系统的以下信息：",
-    "Settings_SystemReport_Desc": "蒸汽平台收集了有关您系统的以下信息：",
+    "Settings_SteamRuntimeSystemInformation_Desc": "蒸汽平台收集了蒸汽平台日志，以及您系统的以下数据：",
+    "Settings_SystemReport_Desc": "蒸汽平台收集了蒸汽平台日志，以及您系统的以下数据：",
     "Settings_SystemReport_SubmitRequest_Desc": "您希望向蒸汽平台客服服务器提交系统报告吗？",
     "Settings_SystemReport_SubmitOK_Desc": "您的系统报告已成功上传给蒸汽平台客服。",
     "Settings_SystemReport_SubmitFail_Desc": "上传您的系统报告失败，请稍后重试，或联系蒸汽平台客服。",
@@ -496,5 +495,9 @@
     "HardwareDeviceName_Generic": "蒸汽平台设备",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
+    "ControllerWelcome_BigPictureIntro_Title": "蒸汽平台键",
+    "ControllerWelcome_BigPictureIntro_Body_KnownHardware": "这是蒸汽平台键。按下该键即可启动控制器。\n\n再按一次可打开大屏幕模式——它是专为游戏手柄优化的蒸汽平台版本，也是在您的 %1$s 上使用 Steam Controller 的最佳方式。",
+    "ControllerWelcome_BigPictureIntro_Body_UnknownHardware": "这是蒸汽平台键。按下该键即可启动控制器。\n\n再按一次可打开大屏幕模式——它是专为游戏手柄优化的蒸汽平台版本，也是在您的 PC 上使用 Steam Controller 的最佳方式。",
+    "Settings_Controller_NoController": "未检测到控制器。连接控制器以在蒸汽平台中管理其设置。"
 }

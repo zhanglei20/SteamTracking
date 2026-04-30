@@ -273,7 +273,7 @@ body:not(.no_home_gutter) .home_page_gutter {
 }
 
 @media all and (min-width: 1224px) {
-	html:not(.gamepad) body:not(.no_home_gutter) .home_page_content {
+	html:not(.GamepadMode) body:not(.no_home_gutter) .home_page_content {
 		padding-left: 234px;
 	}
 	body:not(.no_home_gutter) .home_page_gutter {
@@ -290,7 +290,7 @@ body:not(.no_home_gutter) .home_page_gutter {
 }
 
 @media all and (min-width: 1442px) {
-	html:not(.gamepad) body:not(.no_home_gutter) .home_page_content {
+	html:not(.GamepadMode) body:not(.no_home_gutter) .home_page_content {
 		padding-right: 234px;
 	}
 	body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
@@ -2207,178 +2207,178 @@ html.responsive .store_main_capsule,
 
 }
 
-	html.responsive.gamepad .home_page_body_ctn {
+	html.responsive.GamepadMode .home_page_body_ctn {
 		width: auto;
 		min-width: 0;
 	}
 
-	html.responsive.gamepad .home_page_content.special_offers {
+	html.responsive.GamepadMode .home_page_content.special_offers {
 		margin-bottom: 0;
 	}
 
-	html.responsive.gamepad .home_page_content {
+	html.responsive.GamepadMode .home_page_content {
 		width: auto;
 	}
 
-	html.responsive.gamepad .home_page_content > *[data-content-dive=true] {
+	html.responsive.GamepadMode .home_page_content > *[data-content-dive=true] {
 		margin-top: 10px;
 		float: none;
 		display: block;
 		text-align: center;
 	}
 
-	html.responsive.gamepad .home_page_content > *[data-content-dive=true] .btn_small > span,
-	html.responsive.gamepad .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
+	html.responsive.GamepadMode .home_page_content > *[data-content-dive=true] .btn_small > span,
+	html.responsive.GamepadMode .home_page_content > *[data-content-dive=true] .btn_small_tall > span {
 		padding: 5px 30px;
 		border-color: #FFFFFF;
 	}
 
-	html.responsive.gamepad .page_background_holder {
+	html.responsive.GamepadMode .page_background_holder {
 		background-size: cover;
 	}
 
-	html.responsive.gamepad .home_leftcol, html.responsive.gamepad .home_rightcol {
+	html.responsive.GamepadMode .home_leftcol, html.responsive.GamepadMode .home_rightcol {
 		width: auto;
 		float: none;
 		flex-grow: 1;
 	}
 
-	html.responsive.gamepad .home_smallcaps,
-	html.responsive.gamepad .home_headercaps,
-	html.responsive.gamepad .apps_recommended_by_curators,
-	html.responsive.gamepad .underten .home_specials_grid {
+	html.responsive.GamepadMode .home_smallcaps,
+	html.responsive.GamepadMode .home_headercaps,
+	html.responsive.GamepadMode .apps_recommended_by_curators,
+	html.responsive.GamepadMode .underten .home_specials_grid {
 		white-space: nowrap;
 		overflow-x: auto;
 	}
 
-	html.responsive.gamepad .home_smallcaps a.home_smallcap,
-	html.responsive.gamepad .home_headercaps a.home_headercap,
-	html.responsive.gamepad .curated_app_item,
-	html.responsive.gamepad .underten .home_specials_grid .special {
+	html.responsive.GamepadMode .home_smallcaps a.home_smallcap,
+	html.responsive.GamepadMode .home_headercaps a.home_headercap,
+	html.responsive.GamepadMode .curated_app_item,
+	html.responsive.GamepadMode .underten .home_specials_grid .special {
 		float: none;
 		display: inline-block;
 		white-space: normal;	/* override the nowrap we set above */
 	}
 
-	html.responsive.gamepad .home_headercaps a.home_headercap {
+	html.responsive.GamepadMode .home_headercaps a.home_headercap {
 		vertical-align: top;
 	}
 
-	html.responsive.gamepad .home_leftcol.home_tab_col {
+	html.responsive.GamepadMode .home_leftcol.home_tab_col {
 		margin-bottom: 16px;
 	}
 
-	html.responsive.gamepad .dailydeal_specials_ctn {
+	html.responsive.GamepadMode .dailydeal_specials_ctn {
 		margin: 0 auto 16px auto;
 		width: 624px;
 	}
 
-	html.responsive.gamepad .dailydeal_specials_ctn .dailydeal_ctn {
+	html.responsive.GamepadMode .dailydeal_specials_ctn .dailydeal_ctn {
 		float: left;
 		max-width: 276px;
 		margin-right: 8px;
 	}
 
-	html.responsive.gamepad .dailydeal_specials_ctn .home_specials_grid {
+	html.responsive.GamepadMode .dailydeal_specials_ctn .home_specials_grid {
 		float: left;
 		max-width: 308px;
 		padding-top: 14px;
 	}
 
-	html.responsive.gamepad .dailydeal_specials_ctn .home_block_footer {
+	html.responsive.GamepadMode .dailydeal_specials_ctn .home_block_footer {
 		clear: left;
 	}
 
-	html.responsive.gamepad .dailydeal_cap,
-	html.responsive.gamepad .dailydeal_cap img {
+	html.responsive.GamepadMode .dailydeal_cap,
+	html.responsive.GamepadMode .dailydeal_cap img {
 		width: 100%;
 		height: auto;
 	}
 
-	html.responsive.gamepad .home_specials_ctn {
+	html.responsive.GamepadMode .home_specials_ctn {
 		margin-bottom: 16px;
 	}
 
-	html.responsive.gamepad .underten .home_specials_grid .special {
+	html.responsive.GamepadMode .underten .home_specials_grid .special {
 		margin-right: 2px;
 		margin-bottom: 0;
 	}
 
 	/* not logged in */
-	html.responsive.gamepad .home_recommended_spotlight {
+	html.responsive.GamepadMode .home_recommended_spotlight {
 		height: auto;
 	}
 
-	html.responsive.gamepad .home_page_sign_in_ctn,
-	html.responsive.gamepad .steam_curators_empty {
+	html.responsive.GamepadMode .home_page_sign_in_ctn,
+	html.responsive.GamepadMode .steam_curators_empty {
 		width: auto;
 	}
 
 	/* recommendations */
 
-	html.responsive.gamepad .home_ctn.home_content_ctn {
+	html.responsive.GamepadMode .home_ctn.home_content_ctn {
 		margin: 0;
 		padding: 0;
 	}
 
-	html.responsive.gamepad body.v6 .home_content_ctn .page_content_ctn.dark {
+	html.responsive.GamepadMode body.v6 .home_content_ctn .page_content_ctn.dark {
 		padding: 20px 2% 0 2%;
 	}
 
-	html.responsive.gamepad .home_content.twowide a.home_content_item {
+	html.responsive.GamepadMode .home_content.twowide a.home_content_item {
 		width: calc( 50% - 5px);
 		padding: 0;
 		margin-right: 10px;
 	}
 
-	html.responsive.gamepad .home_content.fourwide a.home_content_item {
+	html.responsive.GamepadMode .home_content.fourwide a.home_content_item {
 		width: calc( 50% - 5px );
 		padding: 0;
 		margin-right: 10px;
 		margin-bottom: 10px;
 	}
 
-	html.responsive.gamepad .home_content.fourwide a.home_content_item:nth-child( 2n ),
-	html.responsive.gamepad .home_content.twowide a.home_content_item:nth-child( 2n ) {
+	html.responsive.GamepadMode .home_content.fourwide a.home_content_item:nth-child( 2n ),
+	html.responsive.GamepadMode .home_content.twowide a.home_content_item:nth-child( 2n ) {
 		margin-right: 0;
 	}
 
-	html.responsive.gamepad .home_content.single {
+	html.responsive.GamepadMode .home_content.single {
 		margin-top: 50px;
 	}
 
-	html.responsive.gamepad .home_content.single .capsule {
+	html.responsive.GamepadMode .home_content.single .capsule {
 		height: auto;
 		width: 100%;
 		max-width: 292px;
 		display: block;
 	}
 
-	html.responsive.gamepad .home_content.single .gamelink {
+	html.responsive.GamepadMode .home_content.single .gamelink {
 		max-width: 100%;
 	}
 
-	html.responsive.gamepad .home_content.single .screenshots {
+	html.responsive.GamepadMode .home_content.single .screenshots {
 		display: block;
 		white-space: nowrap;
 	}
 
-	html.responsive.gamepad .home_content.single .screenshots .screenshot {
+	html.responsive.GamepadMode .home_content.single .screenshots .screenshot {
 		margin: 0;
 		display: inline-block;
 		margin-right: 2px;
 	}
 
-	html.responsive.gamepad .home_content.single a.screenshot:hover img {
+	html.responsive.GamepadMode .home_content.single a.screenshot:hover img {
 		transform: none;
 		box-shadow: none;
 	}
 
-	html.responsive.gamepad .home_content.single .review_text {
+	html.responsive.GamepadMode .home_content.single .review_text {
 		width: auto;
 	}
 
-	html.responsive.gamepad .home_content.single .discount_block_ctn {
+	html.responsive.GamepadMode .home_content.single .discount_block_ctn {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -2387,33 +2387,33 @@ html.responsive .store_main_capsule,
 	}
 
 
-	html.responsive.gamepad .hardware_content {
+	html.responsive.GamepadMode .hardware_content {
 		font-size: 17px;
 	}
 
-	html.responsive.gamepad .responsive_spotlight_block.nonresponsive_hidden,
-	html.responsive.gamepad .home_rightcol.recommended {
+	html.responsive.GamepadMode .responsive_spotlight_block.nonresponsive_hidden,
+	html.responsive.GamepadMode .home_rightcol.recommended {
 		max-width: 308px;
 		display: inline-block;
 		vertical-align: top;
 	}
 
-	html.responsive.gamepad .responsive_spotlight_block {
+	html.responsive.GamepadMode .responsive_spotlight_block {
 		margin-right: 16px;
 	}
 
-	html.responsive.gamepad .responsive_home_spotlight_recommended {
+	html.responsive.GamepadMode .responsive_home_spotlight_recommended {
 		text-align: center;
 	}
 
-	html.responsive.gamepad .spotlight_col {
+	html.responsive.GamepadMode .spotlight_col {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
 
-	html.responsive.gamepad .carousel_container .carousel_items:not(.no_paging),
-	html.responsive.gamepad .carousel_container.maincap .carousel_items:not(.no_paging) {
+	html.responsive.GamepadMode .carousel_container .carousel_items:not(.no_paging),
+	html.responsive.GamepadMode .carousel_container.maincap .carousel_items:not(.no_paging) {
 		overflow-x: scroll;
 		overflow-y: hidden;
 		box-sizing:content-box;
@@ -2425,67 +2425,67 @@ html.responsive .store_main_capsule,
 		display: flex;
 		flex-wrap: nowrap;
 	}
-	html.responsive.gamepad .carousel_container.maincap .carousel_items:focus-within {
+	html.responsive.GamepadMode .carousel_container.maincap .carousel_items:focus-within {
 		outline: none;
 	}
 
-	html.responsive.gamepad .recommended_by_steam_labs_ctn .lower_left_block {
+	html.responsive.GamepadMode .recommended_by_steam_labs_ctn .lower_left_block {
 		padding-top: 0;
 	}
 
-	html.responsive.gamepad .carousel_container.spotlight .carousel_items:not(.no_paging),
-	html.responsive.gamepad .carousel_container.paging_capsules .carousel_items:not(.no_paging){
+	html.responsive.GamepadMode .carousel_container.spotlight .carousel_items:not(.no_paging),
+	html.responsive.GamepadMode .carousel_container.paging_capsules .carousel_items:not(.no_paging){
 		padding-bottom: 0px;
 	}
 
-	html.responsive.gamepad .carousel_container .carousel_items:not(.no_paging) > * {
+	html.responsive.GamepadMode .carousel_container .carousel_items:not(.no_paging) > * {
 		opacity: 1;
 		pointer-events: auto;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap .carousel_items > * {
+	html.responsive.GamepadMode .carousel_container.maincap .carousel_items > * {
 		display: inline-block;
 		height: auto;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap .capsule {
+	html.responsive.GamepadMode .carousel_container.maincap .capsule {
 		padding-top: 57.30519480519481%;
 		height: 0;
 		width: 100%;
         overflow: hidden;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap {
+	html.responsive.GamepadMode .carousel_container.maincap {
 		height: auto;
 	}
 
-	html.responsive.gamepad .store_main_capsule .capsule {
+	html.responsive.GamepadMode .store_main_capsule .capsule {
 		box-shadow: none;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap .screenshots,
-	html.responsive.gamepad .carousel_container.maincap .reason,
-	html.responsive.gamepad .carousel_container.maincap .platforms {
+	html.responsive.GamepadMode .carousel_container.maincap .screenshots,
+	html.responsive.GamepadMode .carousel_container.maincap .reason,
+	html.responsive.GamepadMode .carousel_container.maincap .platforms {
 		display: none;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap .app_name {
+	html.responsive.GamepadMode .carousel_container.maincap .app_name {
 		display: block;
 		height: auto;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap .app_name > div {
+	html.responsive.GamepadMode .carousel_container.maincap .app_name > div {
 	   line-height: unset;
 	   font-size: 18px;
 	   font-weight: 600;
     }
 
-html.responsive.gamepad .store_main_capsule,
-	html.responsive.gamepad .store_main_capsule:hover {
+html.responsive.GamepadMode .store_main_capsule,
+	html.responsive.GamepadMode .store_main_capsule:hover {
 		background-image: none;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap .discount_block {
+	html.responsive.GamepadMode .carousel_container.maincap .discount_block {
 		position: relative;
 		bottom: initial;
 		left: initial;
@@ -2495,57 +2495,57 @@ html.responsive.gamepad .store_main_capsule,
 		padding: 6px;
 	}
 
-	html.responsive.gamepad .carousel_container.maincap .carousel_items {
+	html.responsive.GamepadMode .carousel_container.maincap .carousel_items {
 		height: auto;
 	}
 
-	html.responsive.gamepad .community_recommendation_app .community_recommendations_block {
+	html.responsive.GamepadMode .community_recommendation_app .community_recommendations_block {
 		width: auto;
 	}
 
-	html.responsive.gamepad .community_recommendation_app {
+	html.responsive.GamepadMode .community_recommendation_app {
 		display: flex;
 		flex-direction: column;
 	}
 
-	html.responsive.gamepad .community_recommendation_app .review_box .content {
+	html.responsive.GamepadMode .community_recommendation_app .review_box .content {
 		font-size: 12px;
 	}
 
-	html.responsive.gamepad .community_recommendation_app > .right_col {
+	html.responsive.GamepadMode .community_recommendation_app > .right_col {
 		background: linear-gradient(180deg, #0A141D 0%, rgba(10, 20, 29, 0.2) 100%);
 	}
 
 	/* Nav buttons */
-	html.responsive.gamepad .big_buttons {
+	html.responsive.GamepadMode .big_buttons {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
 
-	html.responsive.gamepad .community_recommendations_by_steam_labs_ctn .carousel_container {
+	html.responsive.GamepadMode .community_recommendations_by_steam_labs_ctn .carousel_container {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
 
-	html.responsive.gamepad .home_tabs_content {
+	html.responsive.GamepadMode .home_tabs_content {
 		min-height: unset;
 	}
 
-	html.responsive.gamepad .home_rightcol {
+	html.responsive.GamepadMode .home_rightcol {
 		display: none;
 	}
 
-	html.responsive.gamepad .apps_recommended_by_curators_ctn.home_ctn {
+	html.responsive.GamepadMode .apps_recommended_by_curators_ctn.home_ctn {
 		margin-bottom: 0;
 	}
 
-	html.responsive.gamepad .home_marketing_message > span {
+	html.responsive.GamepadMode .home_marketing_message > span {
 		width: 100%;
 		height: 0;
 		padding-top: 105%; /* Maintain aspect ratio as grid items resize */
 	}
 
-	html.responsive.gamepad .home_marketing_message {
+	html.responsive.GamepadMode .home_marketing_message {
 		margin: 0;
 		margin-left: 0;
 		display: block;

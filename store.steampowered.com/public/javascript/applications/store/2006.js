@@ -117,7 +117,7 @@
     },
     77700: (e) => {
       e.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
@@ -199,7 +199,7 @@
     },
     29347: (e, t, s) => {
       "use strict";
-      s.d(t, { r: () => g, z: () => d });
+      s.d(t, { r: () => u, z: () => d });
       var n = s(7850),
         i = s(90626),
         o = s(56283),
@@ -211,7 +211,7 @@
         p = s(86355);
       const d = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: s } = e,
-            [d, g] = (0, i.useState)(""),
+            [d, u] = (0, i.useState)(""),
             m = (0, p.mr)(e.clanSteamID.GetAccountID()),
             S = () => e.closeModal && e.closeModal(),
             x = p.pU.GetFilteredClanImages(t, d),
@@ -235,7 +235,7 @@
                         (0, n.jsx)(o.pd, {
                           placeholder: (0, l.we)("#ClanImageChooser_Search"),
                           value: d,
-                          onChange: (e) => g(e.currentTarget.value),
+                          onChange: (e) => u(e.currentTarget.value),
                         }),
                         (0, n.jsx)("div", {
                           className: h.ImagesOuterContainer,
@@ -247,7 +247,7 @@
                             : Boolean(x.length > 0)
                               ? x.map((e) =>
                                   (0, n.jsx)(
-                                    u,
+                                    g,
                                     {
                                       clanImage: e,
                                       searchStringHilight: d,
@@ -282,10 +282,10 @@
             }),
           });
         },
-        u = (e) => {
+        g = (e) => {
           const { clanImage: t, searchStringHilight: s, fnImageClick: i } = e;
           let o = t.file_name ? t.file_name : "",
-            r = g(s, o, String(t.imageid), h.Hilight);
+            r = u(s, o, String(t.imageid), h.Hilight);
           return (0, n.jsxs)("div", {
             className: h.ImageContainer,
             children: [
@@ -302,7 +302,7 @@
             ],
           });
         };
-      function g(e, t, s, i) {
+      function u(e, t, s, i) {
         let o = [];
         if (e.length > 0) {
           let r = t.toLocaleLowerCase();
@@ -352,8 +352,8 @@
         h = s.n(c),
         p = s(52038),
         d = s(61859),
-        u = s(91675),
-        g = s(84933),
+        g = s(91675),
+        u = s(84933),
         m = s(32754);
       let S = class extends r.Component {
         GenerateLanguageOptions() {
@@ -388,9 +388,9 @@
                 : 1
               : e.sLocName.localeCompare(t.sLocName),
           );
-          let g = !1;
+          let u = !1;
           for (const t of r) {
-            t.bSupported != g &&
+            t.bSupported != u &&
               (e.push(
                 (0, i.jsx)(
                   "option",
@@ -406,7 +406,7 @@
                   t.bSupported ? "SupportedGroup" : "UnsupportedGroup",
                 ),
               ),
-              (g = t.bSupported));
+              (u = t.bSupported));
             const o = s && s(t.eLang),
               r = n && n(t.eLang);
             let a = t.sLocName;
@@ -415,7 +415,7 @@
               ((a += " "),
               (a += (0, d.we)(
                 "#Language_Last_Update",
-                (0, d.$z)(r) + " @ " + (0, u.KC)(r, { bForce24HourClock: !1 }),
+                (0, d.$z)(r) + " @ " + (0, g.KC)(r, { bForce24HourClock: !1 }),
               ))),
               e.push(
                 (0, i.jsx)(
@@ -455,7 +455,7 @@
           });
         }
       };
-      (0, n.Cg)([g.oI], S.prototype, "OnLanguageChange", null),
+      (0, n.Cg)([u.oI], S.prototype, "OnLanguageChange", null),
         (S = (0, n.Cg)([o.PA], S));
     },
     20482: (e, t, s) => {
@@ -471,8 +471,8 @@
         h = s(52038),
         p = s(61859),
         d = s(84933),
-        u = s(78327);
-      var g = s(10886),
+        g = s(78327);
+      var u = s(10886),
         m = s(19654),
         S = s(3209),
         x = s(51706),
@@ -548,9 +548,9 @@
       class D extends o.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {
-          u.iA.logged_in
+          g.iA.logged_in
             ? this.setState({ bShareOnSteamDialog: !0 })
-            : u.TS.IN_CLIENT
+            : g.TS.IN_CLIENT
               ? console.log(
                   "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
                 )
@@ -605,8 +605,8 @@
             sharePageUrls: s,
             fnShareOnSteamActivityFeed: n,
           } = e,
-          a = (0, u.Y2)(),
-          [c, d] = (0, o.useState)((0, r.sf)(u.TS.LANGUAGE)),
+          a = (0, g.Y2)(),
+          [c, d] = (0, o.useState)((0, r.sf)(g.TS.LANGUAGE)),
           x = (0, o.useMemo)(() => {
             const e = new URL(t);
             return e.searchParams.set("l", (0, r.Lg)(c)), e.href;
@@ -675,7 +675,7 @@
                           className: M().ShareBtn,
                           children: (0, i.jsx)("img", {
                             className: (0, h.A)(l().Button),
-                            src: g.A,
+                            src: u.A,
                           }),
                         }),
                       }),
@@ -728,8 +728,8 @@
         h = s(51006),
         p = s(17720),
         d = s(37735),
-        u = s(34629),
-        g = s(88997),
+        g = s(34629),
+        u = s(88997),
         m = s(70995),
         S = s(27666),
         x = s(86355),
@@ -931,10 +931,10 @@
           });
         }
       }
-      (0, u.Cg)([C.oI], A.prototype, "OnKeyDown", null),
-        (0, u.Cg)([C.oI], A.prototype, "OnClickSuggestion", null),
-        (0, u.Cg)([C.oI], A.prototype, "OnMouseOverSuggestion", null),
-        (0, u.Cg)([C.oI], A.prototype, "BindSelectedElement", null);
+      (0, g.Cg)([C.oI], A.prototype, "OnKeyDown", null),
+        (0, g.Cg)([C.oI], A.prototype, "OnClickSuggestion", null),
+        (0, g.Cg)([C.oI], A.prototype, "OnMouseOverSuggestion", null),
+        (0, g.Cg)([C.oI], A.prototype, "BindSelectedElement", null);
       class w extends a.PureComponent {
         containerRef = a.createRef();
         OnMouseOver(e) {
@@ -957,8 +957,8 @@
           });
         }
       }
-      (0, u.Cg)([C.oI], w.prototype, "OnMouseOver", null),
-        (0, u.Cg)([C.oI], w.prototype, "OnClick", null);
+      (0, g.Cg)([C.oI], w.prototype, "OnMouseOver", null),
+        (0, g.Cg)([C.oI], w.prototype, "OnClick", null);
       const D = A;
       var j = s(79786),
         E = s.n(j);
@@ -1229,16 +1229,16 @@
           });
         }
       }
-      (0, u.Cg)([C.oI], y.prototype, "BindMentionDialog", null),
-        (0, u.Cg)([C.oI], y.prototype, "OnKeyDown", null),
-        (0, u.Cg)([C.oI], y.prototype, "OnFocus", null),
-        (0, u.Cg)([C.oI], y.prototype, "OnKeyPress", null),
-        (0, u.Cg)([C.oI], y.prototype, "OnClick", null),
-        (0, u.Cg)([C.oI], y.prototype, "OnEmoticonSuggestionSelected", null),
-        (0, u.Cg)([C.oI], y.prototype, "OnBBCodeSuggestionSelected", null),
-        (0, u.Cg)([C.oI], y.prototype, "FocusTextInput", null),
-        (0, u.Cg)([C.oI], y.prototype, "GetTextAreaRef", null),
-        (0, u.Cg)([C.oI], y.prototype, "GetTextAreaCurrent", null);
+      (0, g.Cg)([C.oI], y.prototype, "BindMentionDialog", null),
+        (0, g.Cg)([C.oI], y.prototype, "OnKeyDown", null),
+        (0, g.Cg)([C.oI], y.prototype, "OnFocus", null),
+        (0, g.Cg)([C.oI], y.prototype, "OnKeyPress", null),
+        (0, g.Cg)([C.oI], y.prototype, "OnClick", null),
+        (0, g.Cg)([C.oI], y.prototype, "OnEmoticonSuggestionSelected", null),
+        (0, g.Cg)([C.oI], y.prototype, "OnBBCodeSuggestionSelected", null),
+        (0, g.Cg)([C.oI], y.prototype, "FocusTextInput", null),
+        (0, g.Cg)([C.oI], y.prototype, "GetTextAreaRef", null),
+        (0, g.Cg)([C.oI], y.prototype, "GetTextAreaCurrent", null);
       var B = s(56283),
         R = s(283),
         P = s(95695),
@@ -1272,14 +1272,14 @@
           } = e,
           l = a.useMemo(() => ({ width: i, height: o }), [i, o]),
           [c, h] = a.useState(void 0),
-          [d, u] = a.useState(Boolean(s)),
-          [g, m] = a.useState(!1),
+          [d, g] = a.useState(Boolean(s)),
+          [u, m] = a.useState(!1),
           x = (0, ie.zO)(t, "dummy"),
           C = a.useCallback(
             async (e) => {
               if (
                 (x.ClearImages(),
-                e && (u(!0), await x.AddExistingClanImage(e, 0)))
+                e && (g(!0), await x.AddExistingClanImage(e, 0)))
               ) {
                 h(e);
                 const t = x.GetUploadImages()[0].IsValidAssetType(l);
@@ -1288,7 +1288,7 @@
                   (s && s.image_hash == e.image_hash) ||
                   r(e);
               }
-              u(!1);
+              g(!1);
             },
             [x, s, r, l],
           );
@@ -1346,7 +1346,7 @@
                       L.status,
                     ),
                   }),
-                  g
+                  u
                     ? (0, n.jsx)(J.t, {
                         string: (0, N.we)("#Uploading"),
                         size: "small",
@@ -1491,12 +1491,12 @@
                 });
         }
       };
-      le = re = (0, u.Cg)([r.PA], le);
+      le = re = (0, g.Cg)([r.PA], le);
       var ce,
         he = s(12611),
         pe = s(74410),
         de = s(26408);
-      let ue = class extends a.Component {
+      let ge = class extends a.Component {
         descAutoTextAreaRef = a.createRef();
         constructor(e) {
           super(e), (this.state = { bShowDragTarget: !1 });
@@ -1515,7 +1515,7 @@
           e && e.target.select();
         }
         InsertText(e) {
-          ge.replaceSelection(this.GetTextAreaRef().current, e);
+          ue.replaceSelection(this.GetTextAreaRef().current, e);
         }
         OnTextAreaDropListener(e) {
           if (
@@ -1528,7 +1528,7 @@
               for (let e of [S.z.GetBaseURL(), S.z.GetBaseURLV2()])
                 if (t.startsWith(e)) {
                   let s = "[img]" + he.lw + "/" + t.substr(e.length) + "[/img]";
-                  ge.replaceSelection(this.GetTextAreaRef().current, s);
+                  ue.replaceSelection(this.GetTextAreaRef().current, s);
                   break;
                 }
           }
@@ -1587,12 +1587,12 @@
           });
         }
       };
-      (0, u.Cg)([C.oI], ue.prototype, "ClanImageDragListener", null),
-        (0, u.Cg)([C.oI], ue.prototype, "onFocus", null),
-        (0, u.Cg)([C.oI], ue.prototype, "OnTextAreaDropListener", null),
-        (0, u.Cg)([C.oI], ue.prototype, "GetTextAreaRef", null),
-        (ue = (0, u.Cg)([r.PA], ue));
-      class ge {
+      (0, g.Cg)([C.oI], ge.prototype, "ClanImageDragListener", null),
+        (0, g.Cg)([C.oI], ge.prototype, "onFocus", null),
+        (0, g.Cg)([C.oI], ge.prototype, "OnTextAreaDropListener", null),
+        (0, g.Cg)([C.oI], ge.prototype, "GetTextAreaRef", null),
+        (ge = (0, g.Cg)([r.PA], ge));
+      class ue {
         static BIsFireFox() {
           return Boolean(
             new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -1603,7 +1603,7 @@
         static replaceSelection(e, t) {
           let s = e.selectionStart;
           e.focus(),
-            ge.InsertTextAtSelect(t, e),
+            ue.InsertTextAtSelect(t, e),
             e.setSelectionRange(s, s + t.length);
         }
         static getSelectedString(e) {
@@ -1613,19 +1613,19 @@
           );
         }
         static wrapBBCode(e, t, s) {
-          let n = ge.getSelectedString(s),
+          let n = ue.getSelectedString(s),
             i = "";
           (i =
             0 == n.indexOf(e) && n.lastIndexOf(t) == n.length - t.length
               ? n.substr(e.length, n.length - e.length - t.length)
               : e + n + t),
-            ge.replaceSelection(s, i);
+            ue.replaceSelection(s, i);
         }
         static append(e, t) {
           t &&
             (t.focus(),
             t.setSelectionRange(t.value.length, t.value.length),
-            ge.InsertTextAtSelect(e, t));
+            ue.InsertTextAtSelect(e, t));
         }
         static ClearTextArea(e) {
           if (e) {
@@ -1643,7 +1643,7 @@
           }
         }
         static overwrite(e, t) {
-          t && (ge.ClearTextArea(t), ge.InsertTextAtSelect(e, t));
+          t && (ue.ClearTextArea(t), ue.InsertTextAtSelect(e, t));
         }
         static InsertTextAtSelect(e, t) {
           const s = t.selectionStart,
@@ -1662,29 +1662,29 @@
       let me = class extends a.Component {
         m_linkPopupRef = a.createRef();
         onBold() {
-          ge.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+          ue.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
         }
         onItalics() {
-          ge.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+          ue.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
         }
         onUnderline() {
-          ge.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+          ue.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
         }
         onStrikeThrough() {
-          ge.wrapBBCode(
+          ue.wrapBBCode(
             "[strike]",
             "[/strike]",
             this.props.fnTextareaRef().current,
           );
         }
         onHeader() {
-          ge.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
+          ue.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
         }
         onHeader2() {
-          ge.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
+          ue.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
         }
         onHeader3() {
-          ge.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
+          ue.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
         }
         onUnorderedList() {
           this.handleList("list");
@@ -1697,18 +1697,18 @@
             s = "[" + e + "]\n",
             n = "[/" + e + "]";
           if (t.selectionStart == t.selectionEnd)
-            ge.wrapBBCode(s + "[*]", "\n" + n, t);
+            ue.wrapBBCode(s + "[*]", "\n" + n, t);
           else {
             let e =
               s +
-              ge
+              ue
                 .getSelectedString(t)
                 .split("\n")
                 .map((e) => (e.match(/\*+\s/) ? "[*]" : "[*] ") + e)
                 .join("\n") +
               "\n" +
               n;
-            ge.replaceSelection(t, e);
+            ue.replaceSelection(t, e);
           }
         }
         OnAddLink(e) {
@@ -1761,7 +1761,7 @@
         }
         OnEmoticonSelected(e, t = !1) {
           let s = `ː${e}ː`;
-          ge.replaceSelection(this.props.fnTextareaRef().current, s),
+          ue.replaceSelection(this.props.fnTextareaRef().current, s),
             this.props.fnTextareaRef().current.focus();
         }
         BSupports(e) {
@@ -1943,23 +1943,23 @@
           }),
         });
       }
-      (0, u.Cg)([C.oI], me.prototype, "onBold", null),
-        (0, u.Cg)([C.oI], me.prototype, "onItalics", null),
-        (0, u.Cg)([C.oI], me.prototype, "onUnderline", null),
-        (0, u.Cg)([C.oI], me.prototype, "onStrikeThrough", null),
-        (0, u.Cg)([C.oI], me.prototype, "onHeader", null),
-        (0, u.Cg)([C.oI], me.prototype, "onHeader2", null),
-        (0, u.Cg)([C.oI], me.prototype, "onHeader3", null),
-        (0, u.Cg)([C.oI], me.prototype, "onUnorderedList", null),
-        (0, u.Cg)([C.oI], me.prototype, "onOrderedList", null),
-        (0, u.Cg)([C.oI], me.prototype, "OnAddLink", null),
-        (0, u.Cg)([C.oI], me.prototype, "ShowHelpDialog", null),
-        (0, u.Cg)([C.oI], me.prototype, "OnConvertHTMLToBBCodeDialog", null),
-        (0, u.Cg)([C.oI], me.prototype, "OnOpenYoutubeDialog", null),
-        (0, u.Cg)([C.oI], me.prototype, "OnOpenImageDialog", null),
-        (0, u.Cg)([C.oI], me.prototype, "OnOpenSpeakerDialog", null),
-        (0, u.Cg)([C.oI], me.prototype, "OnEmoticonSelected", null),
-        (me = (0, u.Cg)([r.PA], me));
+      (0, g.Cg)([C.oI], me.prototype, "onBold", null),
+        (0, g.Cg)([C.oI], me.prototype, "onItalics", null),
+        (0, g.Cg)([C.oI], me.prototype, "onUnderline", null),
+        (0, g.Cg)([C.oI], me.prototype, "onStrikeThrough", null),
+        (0, g.Cg)([C.oI], me.prototype, "onHeader", null),
+        (0, g.Cg)([C.oI], me.prototype, "onHeader2", null),
+        (0, g.Cg)([C.oI], me.prototype, "onHeader3", null),
+        (0, g.Cg)([C.oI], me.prototype, "onUnorderedList", null),
+        (0, g.Cg)([C.oI], me.prototype, "onOrderedList", null),
+        (0, g.Cg)([C.oI], me.prototype, "OnAddLink", null),
+        (0, g.Cg)([C.oI], me.prototype, "ShowHelpDialog", null),
+        (0, g.Cg)([C.oI], me.prototype, "OnConvertHTMLToBBCodeDialog", null),
+        (0, g.Cg)([C.oI], me.prototype, "OnOpenYoutubeDialog", null),
+        (0, g.Cg)([C.oI], me.prototype, "OnOpenImageDialog", null),
+        (0, g.Cg)([C.oI], me.prototype, "OnOpenSpeakerDialog", null),
+        (0, g.Cg)([C.oI], me.prototype, "OnEmoticonSelected", null),
+        (me = (0, g.Cg)([r.PA], me));
       let xe = class extends a.Component {
         state = { youtubeInput: "", alignment: pe.V2.left };
         OnYoutubeInsertLink() {
@@ -1971,7 +1971,7 @@
                 "https://www.youtube.com/watch?v=" +
                 e.strVideoID +
                 (e.nStartSeconds ? "&t=" + e.nStartSeconds : "");
-              ge.wrapBBCode(t, "", this.props.textareaRef.current);
+              ue.wrapBBCode(t, "", this.props.textareaRef.current);
             } else {
               let t =
                 "[previewyoutube=" +
@@ -1979,7 +1979,7 @@
                 ";" +
                 this.state.alignment +
                 "]";
-              ge.wrapBBCode(
+              ue.wrapBBCode(
                 t,
                 "[/previewyoutube]",
                 this.props.textareaRef.current,
@@ -2145,14 +2145,14 @@
           });
         }
       };
-      (0, u.Cg)([C.oI], xe.prototype, "OnYoutubeInsertLink", null),
-        (0, u.Cg)([C.oI], xe.prototype, "OnUrlChange", null),
-        (0, u.Cg)([C.oI], xe.prototype, "OnLeftSelected", null),
-        (0, u.Cg)([C.oI], xe.prototype, "OnRightSelected", null),
-        (0, u.Cg)([C.oI], xe.prototype, "OnFullSelected", null),
-        (0, u.Cg)([C.oI], xe.prototype, "OnSummarySelected", null),
-        (0, u.Cg)([C.oI], xe.prototype, "OnOuterDivClickPassDown", null),
-        (xe = (0, u.Cg)([r.PA], xe));
+      (0, g.Cg)([C.oI], xe.prototype, "OnYoutubeInsertLink", null),
+        (0, g.Cg)([C.oI], xe.prototype, "OnUrlChange", null),
+        (0, g.Cg)([C.oI], xe.prototype, "OnLeftSelected", null),
+        (0, g.Cg)([C.oI], xe.prototype, "OnRightSelected", null),
+        (0, g.Cg)([C.oI], xe.prototype, "OnFullSelected", null),
+        (0, g.Cg)([C.oI], xe.prototype, "OnSummarySelected", null),
+        (0, g.Cg)([C.oI], xe.prototype, "OnOuterDivClickPassDown", null),
+        (xe = (0, g.Cg)([r.PA], xe));
       let Ce = class extends a.Component {
         static {
           ce = this;
@@ -2162,7 +2162,7 @@
         LoadFromTextArea() {
           const { textareaRef: e } = this.props;
           if (e && e.current) {
-            let t = ge.getSelectedString(e.current),
+            let t = ue.getSelectedString(e.current),
               s = ce.m_regExp.exec(t);
             s
               ? this.setState({ strURL: s[1], textToDisplay: s[2] })
@@ -2181,7 +2181,7 @@
         onInsertLink() {
           const { strURL: e, textToDisplay: t } = this.state;
           let s = "[url=" + e + "]" + t + "[/url]";
-          ge.replaceSelection(this.props.textareaRef.current, s);
+          ue.replaceSelection(this.props.textareaRef.current, s);
         }
         render() {
           return (0, n.jsx)(H.o0, {
@@ -2240,10 +2240,10 @@
           });
         }
       };
-      (0, u.Cg)([C.oI], Ce.prototype, "onLinkTitleUpdate", null),
-        (0, u.Cg)([C.oI], Ce.prototype, "onLinkURLUpdate", null),
-        (0, u.Cg)([C.oI], Ce.prototype, "onInsertLink", null),
-        (Ce = ce = (0, u.Cg)([r.PA], Ce));
+      (0, g.Cg)([C.oI], Ce.prototype, "onLinkTitleUpdate", null),
+        (0, g.Cg)([C.oI], Ce.prototype, "onLinkURLUpdate", null),
+        (0, g.Cg)([C.oI], Ce.prototype, "onInsertLink", null),
+        (Ce = ce = (0, g.Cg)([r.PA], Ce));
       let Le = class extends a.Component {
         refFirstInput;
         state = { imgURL: "", anchorURL: "" };
@@ -2257,7 +2257,7 @@
           e && e.length > 0 && ((s += "[url=" + e + "]"), (n = "[/url]" + n)),
             (s += "[img]" + t),
             (n = "[/img]" + n),
-            ge.wrapBBCode(s, n, this.props.textareaRef.current);
+            ue.wrapBBCode(s, n, this.props.textareaRef.current);
         }
         OnImageURLChange(e) {
           this.state.imgURL != e.target.value &&
@@ -2335,16 +2335,16 @@
           });
         }
       };
-      (0, u.Cg)([C.oI], Le.prototype, "OnImageInsert", null),
-        (0, u.Cg)([C.oI], Le.prototype, "OnImageURLChange", null),
-        (0, u.Cg)([C.oI], Le.prototype, "OnAnchorURLChange", null),
-        (Le = (0, u.Cg)([r.PA], Le));
+      (0, g.Cg)([C.oI], Le.prototype, "OnImageInsert", null),
+        (0, g.Cg)([C.oI], Le.prototype, "OnImageURLChange", null),
+        (0, g.Cg)([C.oI], Le.prototype, "OnAnchorURLChange", null),
+        (Le = (0, g.Cg)([r.PA], Le));
       const Ie = (e) => {
         const [t, s] = a.useState(""),
           [i, o] = a.useState(""),
           [r, l] = a.useState(""),
           [c, h] = a.useState(""),
-          [d, u] = a.useState(void 0),
+          [d, g] = a.useState(void 0),
           [m, x] = a.useState(void 0),
           { data: C } = (0, Q.Dv)(),
           { isLoading: L, data: I } = (0, Z.js)(m?.GetAccountID()),
@@ -2366,7 +2366,7 @@
             }
             m && (s += ` steamid="${m.ConvertTo64BitString()}"`),
               (s += `]${c}[/speaker]`),
-              ge.replaceSelection(e.textareaRef.current, s);
+              ue.replaceSelection(e.textareaRef.current, s);
           },
           className: $().BBCodeEditorInputStyles,
           children: (0, n.jsxs)("div", {
@@ -2441,7 +2441,7 @@
                       }),
                       (0, n.jsx)(B.$n, {
                         onClick: (e) =>
-                          (0, g.lX)(
+                          (0, u.lX)(
                             (0, n.jsx)(Me, { friends: C, setSteamID: x }),
                             e,
                           ),
@@ -2467,7 +2467,7 @@
                   (0, n.jsx)(oe, {
                     clanSteamID: e.clanSteamID,
                     inputClanImage: d,
-                    setImage: u,
+                    setImage: g,
                     nWidth: 184,
                     nHeight: 184,
                   }),
@@ -2578,8 +2578,8 @@
               .then((e) => {
                 this.m_isMounted &&
                   (this.m_bAppend
-                    ? ge.append(e, this.props.textareaRef.current)
-                    : ge.overwrite(e, this.props.textareaRef.current),
+                    ? ue.append(e, this.props.textareaRef.current)
+                    : ue.overwrite(e, this.props.textareaRef.current),
                   this.setState({ bConverting: !1, bFinishedConverting: !0 }));
               })
               .catch((e) => {
@@ -2712,11 +2712,11 @@
                 });
         }
       };
-      (0, u.Cg)([C.oI], _e.prototype, "OnConvertAndOverriteHTML", null),
-        (0, u.Cg)([C.oI], _e.prototype, "OnConvertAndAppendHTML", null),
-        (0, u.Cg)([C.oI], _e.prototype, "OnCheckboxChange", null),
-        (0, u.Cg)([C.oI], _e.prototype, "OnTextAreaChange", null),
-        (_e = (0, u.Cg)([r.PA], _e));
+      (0, g.Cg)([C.oI], _e.prototype, "OnConvertAndOverriteHTML", null),
+        (0, g.Cg)([C.oI], _e.prototype, "OnConvertAndAppendHTML", null),
+        (0, g.Cg)([C.oI], _e.prototype, "OnCheckboxChange", null),
+        (0, g.Cg)([C.oI], _e.prototype, "OnTextAreaChange", null),
+        (_e = (0, g.Cg)([r.PA], _e));
       var ve = s(32337),
         Ae = s(86244),
         we = s.n(Ae);
@@ -2724,7 +2724,7 @@
         const { appid: t, eventLink: s } = e,
           i = a.useRef(null),
           { data: r } = (0, Z.js)(V.iA.steamid),
-          [u, g] = a.useState(""),
+          [g, u] = a.useState(""),
           [m, S] = a.useState(!1),
           [x, C] = a.useState(""),
           [L, I] = a.useState(!1);
@@ -2741,7 +2741,7 @@
               i.current("ShareEventOnFriendsActivityFeed: cancel previous...");
             const e = o().CancelToken.source();
             (i.current = e.cancel), S(!0);
-            let n = u;
+            let n = g;
             0 != n.trim().length && (n += "\n\n"), (n += s);
             const r =
               V.TS.COMMUNITY_BASE_URL +
@@ -2858,13 +2858,13 @@
                           }),
                           (0, n.jsx)("div", {
                             className: (0, v.A)(U().FlexColumnContainer),
-                            children: (0, n.jsx)(ue, {
+                            children: (0, n.jsx)(ge, {
                               strPlaceholder: (0, N.we)(
                                 "#EventDisplay_Share_OnMyStatus_Placeholder",
                               ),
-                              fnGetCurText: () => u,
-                              fnOnTextChange: (e) => g(e.currentTarget.value),
-                              fnSetText: g,
+                              fnGetCurText: () => g,
+                              fnOnTextChange: (e) => u(e.currentTarget.value),
+                              fnSetText: u,
                               emoticonStore: e.emoticonStore,
                               bSupportHTMLImport: !1,
                               showFormatHelp: "UserStatusPublished",
@@ -2903,8 +2903,8 @@
         h = s(61859),
         p = s(56283),
         d = s(12155),
-        u = s(81315),
-        g = s.n(u),
+        g = s(81315),
+        u = s.n(g),
         m = s(25489);
       !(function (e) {
         (e.topleft = "topleft"),
@@ -3211,10 +3211,10 @@
               right: this.state.curRightPosPct + "%",
               bottom: this.state.curBottomPosPct + "%",
             },
-            t = g().LinkRegionDragBox;
+            t = u().LinkRegionDragBox;
           return (
             null != this.state.EdgeDown &&
-              (t += ` ${g().EdgeDown} ` + g()[this.state.EdgeDown]),
+              (t += ` ${u().EdgeDown} ` + u()[this.state.EdgeDown]),
             (0, o.jsxs)("div", {
               className: t,
               style: e,
@@ -3222,37 +3222,37 @@
               draggable: !1,
               children: [
                 (0, o.jsxs)("div", {
-                  className: g().LinkRegionGridBox,
+                  className: u().LinkRegionGridBox,
                   children: [
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().TopLeft}`,
+                      className: `${u().LinkRegionEdge} ${u().TopLeft}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.topleft);
                       },
                       draggable: !1,
                     }),
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().Top}`,
+                      className: `${u().LinkRegionEdge} ${u().Top}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.top);
                       },
                     }),
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().TopRight}`,
+                      className: `${u().LinkRegionEdge} ${u().TopRight}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.topright);
                       },
                       draggable: !1,
                     }),
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().Left}`,
+                      className: `${u().LinkRegionEdge} ${u().Left}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.left);
                       },
                       draggable: !1,
                     }),
                     (0, o.jsxs)("div", {
-                      className: `${g().LinkRegionEdge} ${g().Middle}`,
+                      className: `${u().LinkRegionEdge} ${u().Middle}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.middle);
                       },
@@ -3260,45 +3260,45 @@
                       children: [
                         this.props.deleteFn &&
                           (0, o.jsx)("div", {
-                            className: g().LinkRegionDelete,
+                            className: u().LinkRegionDelete,
                             onClick: this.HandleDelete,
                             children: (0, o.jsx)(d.sED, {}),
                           }),
                         !this.props.bDisableLink &&
                           (0, o.jsx)("div", {
-                            className: g().LinkRegionSettings,
+                            className: u().LinkRegionSettings,
                             onClick: this.OnEditLink,
                             children: (0, o.jsx)(d.xv8, {}),
                           }),
                         (0, o.jsxs)("div", {
-                          className: g().LinkText,
+                          className: u().LinkText,
                           children: [" ", this.m_strDescription, " "],
                         }),
                       ],
                     }),
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().Right}`,
+                      className: `${u().LinkRegionEdge} ${u().Right}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.right);
                       },
                       draggable: !1,
                     }),
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().BottomLeft}`,
+                      className: `${u().LinkRegionEdge} ${u().BottomLeft}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.bottomleft);
                       },
                       draggable: !1,
                     }),
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().Bottom}`,
+                      className: `${u().LinkRegionEdge} ${u().Bottom}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.bottom);
                       },
                       draggable: !1,
                     }),
                     (0, o.jsx)("div", {
-                      className: `${g().LinkRegionEdge} ${g().BottomRight}`,
+                      className: `${u().LinkRegionEdge} ${u().BottomRight}`,
                       onMouseDown: (e) => {
                         this.OnMouseDown(e, n.bottomright);
                       },
@@ -3308,10 +3308,10 @@
                 }),
                 this.state.bEditingLink &&
                   (0, o.jsxs)("div", {
-                    className: g().LinkRegionInfo,
+                    className: u().LinkRegionInfo,
                     children: [
                       (0, o.jsx)(p.pd, {
-                        className: g().LinkRegionInput,
+                        className: u().LinkRegionInput,
                         type: "text",
                         name: "link_url",
                         value: this.state.text_link_url,
@@ -3321,7 +3321,7 @@
                         mustBeURL: !0,
                       }),
                       (0, o.jsx)(p.pd, {
-                        className: g().LinkRegionInput,
+                        className: u().LinkRegionInput,
                         type: "text",
                         name: "link_description",
                         value: this.state.text_link_description,
@@ -3332,7 +3332,7 @@
                         onChange: this.OnSetLinkDescriptionChange,
                       }),
                       (0, o.jsxs)("div", {
-                        className: g().LinkRegionButtonContainer,
+                        className: u().LinkRegionButtonContainer,
                         children: [
                           (0, o.jsxs)(p.$n, {
                             disabled: !this.state.valid_link,

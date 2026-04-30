@@ -92,6 +92,18 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        BackgroundAnimation: "as_cPCTdExBaAhzMjehmx",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3REe8K0T1RfUEtDDejtQ03",
+        "ItemFocusAnim-darkerGrey": "_2rMzB6_Y9isiMJ1V-tpDsh",
+        "ItemFocusAnim-darkGreySettings": "_2gt9V0RJbJDAxgjiI0W--m",
+        "ItemFocusAnim-darkGrey": "_2DWprVVroDu51CgcS9gJnY",
+        "ItemFocusAnim-grey": "_2sp5v3tjZITO1dxzcMKD1R",
+        "ItemFocusAnim-translucent-white-10": "VrJdwT4EYP3CUR8WMU0-s",
+        "ItemFocusAnim-translucent-white-20": "AbnX7J1LvonPhSklnSLzg",
+        "ItemFocusAnimBorder-darkGrey": "_1pTAHJRrSYmjCfVHODbAhe",
+        "ItemFocusAnim-green": "_39gEuXLK0UB_Vkul0GzqpM",
+        focusAnimation: "_2fRYPUp4Ldlej6Ho45Kx4f",
+        hoverAnimation: "_32SJsEzVOUF3IzBjOhAcAV",
       };
     },
     chunkid: (module) => {
@@ -148,6 +160,18 @@
         Features: "fqwOycZBL_zQfcUiVVWyz",
         SVGTitle: "_121fln1p_mlV8b9CUxpCDS",
         TopGradient: "_1IWSiRVmH1DlNlWSaBeUuZ",
+        BackgroundAnimation: "GlgXFqTBI3R9rxd2KA04y",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1kB8oUdy8IZfiwFDL_pAGJ",
+        "ItemFocusAnim-darkerGrey": "xcelgnkLpBj6UtSAndv3L",
+        "ItemFocusAnim-darkGreySettings": "_3a9Z1ZIsMkaKPGnbs2nxYH",
+        "ItemFocusAnim-darkGrey": "_2mP9oADy7mRytC1Pn0bpY4",
+        "ItemFocusAnim-grey": "_1ewbLnSXfnTXBStxVN9F4g",
+        "ItemFocusAnim-translucent-white-10": "FrNBc1zAMRHwtajBKUdFi",
+        "ItemFocusAnim-translucent-white-20": "_3oZazG1fCXcfZtHT9PF4Ny",
+        "ItemFocusAnimBorder-darkGrey": "_1BIVh95ZorgGIwQ5w0cUqT",
+        "ItemFocusAnim-green": "J6Y_JgX-ESrD7SpsuhpWJ",
+        focusAnimation: "_1WSn45Atrt8LOxBRy0Vl9P",
+        hoverAnimation: "_2H1VOI9e_fr1MHawpRigy0",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -270,7 +294,7 @@
           const {
               children: _,
               logoPosition: _,
-              editMode: __webpack_require__,
+              editMode: _,
               ..._
             } = this.props,
             _ = this.GetLogoPosition();
@@ -388,15 +412,14 @@
         get logo_src() {
           return (
             this.state.bLogoLoaded &&
-            this.m_refLogoImage.current &&
-            this.m_refLogoImage.current.src
+            this.m_refLogoImage.current?.imgRef?.current?.src
           );
         }
         render() {
           const {
               rgLogoImages: _,
               editMode: _,
-              logoPosition: __webpack_require__,
+              logoPosition: _,
               className: _,
               classNameNoLogo: _,
               fnOnPositionChanged: _,
@@ -436,13 +459,13 @@
                     onLoad: this.OnLoaded,
                   }),
                   _ &&
-                    null !== __webpack_require__ &&
+                    null !== _ &&
                     (0, _.jsx)(
                       _,
                       {
                         strLogoImageURL: _[0],
                         editMode: _,
-                        logoPosition: __webpack_require__ || _,
+                        logoPosition: _ || _,
                         fnOnPositionChanged: _ && _,
                         fullscreen: this.props.bFullscreen,
                         children: (0, _.jsx)(_._, {
@@ -507,7 +530,7 @@
         get src() {
           return (
             this.m_refBackgroundImage.current &&
-            this.m_refBackgroundImage.current.src
+            this.m_refBackgroundImage.current?.imgRef.current?.src
           );
         }
         OnIncrementalError(_, _, _) {
@@ -521,7 +544,7 @@
         OnHeaderLoad() {
           this.props.onLoad && this.props.onLoad(),
             (this.m_refCanvasBlurImage =
-              this.m_refBackgroundImage.current.imgRef.current),
+              this.m_refBackgroundImage.current?.imgRef.current),
             (this.HasBlurImages() &&
               this.props.rgBlurImages[this.state.nBlurImageIndex]) ||
               this.setState({
@@ -640,7 +663,7 @@
       function _(_) {
         const {
             logoPosition: _,
-            strLogoImageURL: __webpack_require__,
+            strLogoImageURL: _,
             children: _,
             fnOnPositionChanged: _,
             fullscreen: _,
@@ -684,7 +707,7 @@
                 }),
               _.editMode &&
                 (0, _.jsx)(_, {
-                  _: __webpack_require__,
+                  _: _,
                   pinType: _.pinnedPosition,
                   index: 0,
                   widthPct: _.nWidthPct,
@@ -763,19 +786,14 @@
             this.UpdateBoxPosition());
         }
         static getDerivedStateFromProps(_, _) {
-          const {
-            pinType: __webpack_require__,
-            widthPct: _,
-            heightPct: _,
-            _: _,
-          } = _;
+          const { pinType: _, widthPct: _, heightPct: _, _: _ } = _;
           if (_ && _._ == _) return null;
           const {
             nBottomPct: _,
             nTopPct: _,
             nLeftPct: _,
             nRightPct: _,
-          } = _(__webpack_require__, _, _);
+          } = _(_, _, _);
           return {
             _: _,
             curBottomPosPct: _,
@@ -785,7 +803,7 @@
             curWidthPct: _,
             curHeightPct: _,
             EdgeDown: null,
-            pinType: __webpack_require__,
+            pinType: _,
           };
         }
         LinkRegionBoxRef(_) {
@@ -830,7 +848,7 @@
           const {
             nBottomPct: _,
             nTopPct: _,
-            nLeftPct: __webpack_require__,
+            nLeftPct: _,
             nRightPct: _,
           } = _(
             this.m_pinType,
@@ -840,7 +858,7 @@
           this.setState({
             curBottomPosPct: _,
             curTopPosPct: _,
-            curLeftPosPct: __webpack_require__,
+            curLeftPosPct: _,
             curRightPosPct: _,
           });
         }
@@ -848,7 +866,7 @@
           if (void 0 === this.state.EdgeDown) return;
           _.shiftKey && this.m_fnMouseUp();
           let {
-            curTopPosPct: __webpack_require__,
+            curTopPosPct: _,
             curRightPosPct: _,
             curBottomPosPct: _,
             curLeftPosPct: _,
@@ -922,18 +940,18 @@
                 return 0;
               if ("CenterCenter" == this.props.pinType) {
                 let _ = Math.min(Math.max(_, 0), 45);
-                return (__webpack_require__ = _), _;
+                return (_ = _), _;
               }
               return _;
             };
           function _() {
-            _ = Math.min(_, 98 - __webpack_require__);
+            _ = Math.min(_, 98 - _);
           }
           function _() {
             _ = Math.min(_, 99 - _);
           }
           function _() {
-            __webpack_require__ = Math.min(__webpack_require__, 98 - _);
+            _ = Math.min(_, 98 - _);
           }
           function _() {
             _ = Math.min(_, 99 - _);
@@ -946,22 +964,16 @@
               (_ = _(_.clientX)), _();
               break;
             case _.top:
-              (__webpack_require__ = _(_.clientY)), _();
+              (_ = _(_.clientY)), _();
               break;
             case _.bottom:
               (_ = _(_.clientY)), _();
               break;
             case _.topleft:
-              (__webpack_require__ = _(_.clientY)),
-                (_ = _(_.clientX)),
-                _(),
-                _();
+              (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
               break;
             case _.topright:
-              (__webpack_require__ = _(_.clientY)),
-                (_ = _(_.clientX)),
-                _(),
-                _();
+              (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
               break;
             case _.bottomleft:
               (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
@@ -972,8 +984,7 @@
             case _.middle:
               (_ = _(_.clientX)),
                 (_ = _(_.clientY)),
-                "CenterCenter" != this.state.pinType &&
-                  (__webpack_require__ = _(_.clientY)),
+                "CenterCenter" != this.state.pinType && (_ = _(_.clientY)),
                 "CenterCenter" != this.state.pinType &&
                   "BottomCenter" != this.state.pinType &&
                   "UpperCenter" != this.state.pinType &&
@@ -983,12 +994,12 @@
                 _(),
                 _();
           }
-          (__webpack_require__ = (0, _._)(__webpack_require__, 0, 98)),
+          (_ = (0, _._)(_, 0, 98)),
             (_ = (0, _._)(_, 0, 98)),
             (_ = (0, _._)(_, 0, 99)),
             (_ = (0, _._)(_, 0, 99)),
             this.setState({
-              curTopPosPct: __webpack_require__,
+              curTopPosPct: _,
               curRightPosPct: _,
               curBottomPosPct: _,
               curLeftPosPct: _,
@@ -1118,12 +1129,12 @@
         (0, _._)([_._], _.prototype, "OnMouseUp", null),
         (0, _._)([_._], _.prototype, "OnResizeComplete", null);
       const _ = (_) => {
-        const { title: _, className: __webpack_require__ } = _;
+        const { title: _, className: _ } = _;
         let _ = 26;
         _.length > 8 && (_ = Math.max(_ - (_.length - 5) / 2, 5.8));
         const [_, _] = (0, _._)();
         return (0, _.jsxs)("svg", {
-          className: (0, _._)(_().SVGTitle, __webpack_require__),
+          className: (0, _._)(_().SVGTitle, _),
           viewBox: "0 0 300 14",
           children: [
             (0, _.jsx)("defs", {
@@ -1175,7 +1186,7 @@
         });
       };
       function _(_) {
-        const { title: _, children: __webpack_require__ } = _,
+        const { title: _, children: _ } = _,
           _ = _.useContext(_),
           _ = _.useRef(null);
         return (0, _.jsx)(_._, {
@@ -1198,7 +1209,7 @@
               }),
               (0, _.jsx)("div", {
                 className: _().Features,
-                children: __webpack_require__,
+                children: _,
               }),
             ],
           }),
@@ -1686,11 +1697,8 @@
             });
         }
         OnPositionChanged(_) {
-          const {
-            LogoEditorStore: _,
-            fnOnPositionChanged: __webpack_require__,
-          } = this.props;
-          _.SetLogoPosition(_), __webpack_require__ && __webpack_require__(_);
+          const { LogoEditorStore: _, fnOnPositionChanged: _ } = this.props;
+          _.SetLogoPosition(_), _ && __webpack_require__(_);
         }
         render() {
           const { LogoEditorStore: _ } = this.props;
@@ -1845,11 +1853,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = _.useRef(null);
         return (0, _.jsx)(_._, {
           nodeRef: _,
-          ...__webpack_require__,
+          ..._,
           children: _.children(_),
         });
       }
@@ -1860,85 +1868,67 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        m_refImage = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              nImage: 0,
-              nPropChangeCounter: 0,
-            });
-        }
-        componentDidUpdate(_, _) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
-            this.setState({
-              nImage: 0,
-              nPropChangeCounter: _.nPropChangeCounter + 1,
-            });
-        }
-        get src() {
-          let _ = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (_ = this.props.rgSources[this.state.nImage]),
-            _ ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (_ =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            _
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(_) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              _,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
+      function _(_) {
+        const {
+            rgSources: _,
+            onIncrementalError: _,
+            onError: _,
+            strAltText: _,
+            ref: _,
+            ..._
+          } = _,
+          _ = _.useRef(null),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0);
+        _.useImperativeHandle(
+          _,
+          () => ({
+            imgRef: _,
+            nSourceIndex: _,
+            nSourceLength: _.length,
+          }),
+          [_, _, _],
+        );
+        const _ = _.useMemo(() => JSON.stringify(_), [_]);
+        _.useEffect(() => {
+          _(0), _((_) => _ + 1);
+        }, [_]);
+        const _ = _.useMemo(() => {
+            let _ = "";
+            return (
+              _ && _.length > _ && (_ = _[_]),
+              _ ||
+                (console.warn(
+                  "MultiSourceImage created with no image src",
+                  _,
+                  _,
+                ),
+                (_ =
+                  "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+              _
             );
-          let _ = this.state.nImage + 1;
-          _ >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(_),
-            _ < this.props.rgSources.length &&
-              this.setState({
-                nImage: _,
-              });
-        }
-        render() {
-          const {
-              rgSources: _,
-              onIncrementalError: _,
-              onError: __webpack_require__,
-              strAltText: _,
-              ..._
-            } = this.props,
-            _ = this.src,
-            _ = this.state.nPropChangeCounter;
-          return (0, _.jsx)(
-            "img",
-            {
-              ref: this.m_refImage,
-              ..._,
-              src: _,
-              onError: this.OnImageError,
-              alt: _,
+          }, [_, _, _]),
+          _ = _.useCallback(
+            (_) => {
+              __webpack_require__?.(_, _[_], _);
+              const _ = _ + 1;
+              _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            _,
+            [_, _, _, _],
           );
-        }
+        return (0, _.jsx)(
+          "img",
+          {
+            ref: _,
+            ..._,
+            src: _,
+            onError: _,
+            alt: _,
+          },
+          _,
+        );
       }
-      (0, _._)([_._], _.prototype, "OnImageError", null);
     },
   },
 ]);

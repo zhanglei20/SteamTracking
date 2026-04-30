@@ -92,7 +92,9 @@ body.v6.labs h2{
 }
 
 p a {
-	color: rgb(139, 138, 138);
+	color: rgb(157, 158, 159);
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .survey_content_section .nav_button.disabled button{

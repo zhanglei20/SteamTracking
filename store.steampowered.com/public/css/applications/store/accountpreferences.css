@@ -46,7 +46,7 @@
 ._24o8cEsvGK0bE4hHyUGhfh {
   margin-bottom: 22px;
   background: rgba(59, 63, 72, 0.5);
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
   padding: 6px 6px 6px 12px;
 }
@@ -179,13 +179,13 @@
   display: flex;
 }
 ._3XAMDDm5D1pSZpakvjyRPk svg {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   height: 18px;
   margin-top: 4px;
 }
 ._3XAMDDm5D1pSZpakvjyRPk._3yrEIJRje6XiWe9BiIGY7P svg {
   transform: rotateZ(180deg);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 ._2NBAZEDaX1dPJTQImo4BFa {
   display: inline-flex;
@@ -196,7 +196,7 @@
   color: #fff;
   padding: 4px 10px;
   border-radius: 2px;
-  background-color: #f0f8ff12;
+  background-color: rgba(240, 248, 255, 0.0705882353);
 }
 ._2NBAZEDaX1dPJTQImo4BFa button.DialogButton {
   margin: 5px 0;
@@ -204,7 +204,7 @@
   color: #fff;
   padding: 4px 10px;
   border-radius: 2px;
-  background-color: #f0f8ff12;
+  background-color: rgba(240, 248, 255, 0.0705882353);
 }
 .LKNSqnZGtL7Z-k7LqX8i0 {
   padding-top: 25px;
@@ -312,7 +312,7 @@
   margin: 0px 0px;
   transform: scale(0.86, 0.86) translateX(0px);
   transition-property: transform;
-  transition-duration: .34s;
+  transition-duration: 0.34s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0;
@@ -351,10 +351,10 @@
 .ingame ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
+    rgb(140, 214, 29) 0%,
+    rgb(161, 244, 16) 30%,
+    rgb(161, 244, 16) 70%,
+    rgb(140, 214, 29) 100%
   );
 }
 .ingame ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
@@ -371,19 +371,19 @@
 .watchingbroadcast ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
+    rgb(156, 143, 212) 0%,
+    rgb(156, 143, 212) 30%,
+    rgb(156, 143, 212) 70%,
+    rgb(156, 143, 212) 100%
   );
 }
 .online ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
+    rgb(109, 207, 246) 0%,
+    rgb(109, 207, 246) 30%,
+    rgb(109, 207, 246) 70%,
+    rgb(109, 207, 246) 100%
   );
 }
 .online ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
@@ -442,11 +442,11 @@
   height: calc(100% - 2px);
   width: calc(100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter .24s ease-in-out;
+  transition: filter 0.24s ease-in-out;
 }
 ._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }
@@ -544,7 +544,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -675,7 +675,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -820,10 +820,10 @@
   padding: 6px;
   border-radius: 50%;
   margin: 8px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.4);
 }
 ._1tCO1rmBfntUI0TlpTly1F:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: hsla(0, 0%, 100%, 0.6);
   cursor: pointer;
 }
 ._1tCO1rmBfntUI0TlpTly1F._1a_f8VY56CtjgePDRTaC-W {
@@ -846,7 +846,7 @@
   right: 10px;
   width: 20px;
   opacity: 0;
-  transition: opacity .2s ease-in;
+  transition: opacity 0.2s ease-in;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   padding: 5px 5px 1px 5px;
@@ -886,28 +886,28 @@
   ._2mir-ym1kKS06jV0W7mtUx
   ._2gQ1ywJDhv3qFFjvjtt39w
   svg._3u6D3tBNr6Pd8scEAu0WHh {
-  color: #ffffff36;
+  color: hsla(0, 0%, 100%, 0.2117647059);
 }
 ._20iEFcT5JyJPhTjbaJ0ajE ._2mir-ym1kKS06jV0W7mtUx ._22EU1rJVczbjFuV39qprXh {
-  background-color: #a3a3a326;
+  background-color: rgba(163, 163, 163, 0.1490196078);
 }
 ._20iEFcT5JyJPhTjbaJ0ajE
   ._2mir-ym1kKS06jV0W7mtUx
   ._22EU1rJVczbjFuV39qprXh
   ._3u6D3tBNr6Pd8scEAu0WHh {
-  color: #ffffff36;
-  fill: #ffffff36;
+  color: hsla(0, 0%, 100%, 0.2117647059);
+  fill: hsla(0, 0%, 100%, 0.2117647059);
 }
 ._173r5KvavKBUk01FwZftvC {
   margin: 1px 0px;
   padding: 6px 10px;
-  background-color: #00000033;
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
 ._173r5KvavKBUk01FwZftvC._2eItHkwsCAtMw7E-EF_YG_ {
-  background-color: #3898ff55;
+  background-color: rgba(56, 152, 255, 0.3333333333);
 }
 ._173r5KvavKBUk01FwZftvC._2eItHkwsCAtMw7E-EF_YG_ ._3o3paJd8GOTYKXh7Rd3Br8 {
   background-color: #1a9fff;
@@ -1012,13 +1012,13 @@
   line-height: 12px !important;
 }
 ._2h6gzZPnXmr8pFVxduqp_k ._2-E69gxiszxb3lmuoV7yYi svg {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   height: 12px;
   margin-top: 4px;
 }
 ._2h6gzZPnXmr8pFVxduqp_k ._2-E69gxiszxb3lmuoV7yYi.JQwtQncjBu_1UajTl86pS svg {
   transform: rotateZ(180deg);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .aR0IvXuy6BAh7MauaSs5j {
   display: inline-flex;
@@ -1060,7 +1060,7 @@
   gap: 20px;
   display: flex;
   flex-direction: row;
-  background-color: #00000033;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 ._3EYcq6Ow2WM7bGuzWyQRMN ._37dMp7l0gWnMweQxR4Qj7Z {
   max-width: 50%;
@@ -1075,7 +1075,7 @@
   text-wrap: nowrap;
 }
 ._3EYcq6Ow2WM7bGuzWyQRMN button.DialogButton:hover {
-  background-color: #d9412699 !important;
+  background-color: rgba(217, 65, 38, 0.6) !important;
 }
 ._1DTV9TockJu_p7oiuZdWi6 {
   height: 17px;
@@ -1129,11 +1129,11 @@
   color: #fff;
   padding: 4px 10px;
   border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: hsla(0, 0%, 100%, 0.1);
 }
 ._9fMwjaiixbDViVPurFAa4:hover {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: hsla(0, 0%, 100%, 0.2);
 }
 .BblQleWhhGVHu1TTaGdBI {
   display: flex;
@@ -1162,7 +1162,7 @@
   gap: 10px;
   padding: 10px 5px;
   font-size: 12px;
-  background-color: #3898ff55;
+  background-color: rgba(56, 152, 255, 0.3333333333);
 }
 .-haW8HUYitKrzvsXQj_y6 ._1AvzOfTQ0sRKrk6NjJCe1M {
   background-color: unset;

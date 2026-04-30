@@ -101,7 +101,7 @@
       }
       function _() {
         const [_, _] = (0, _.useState)(""),
-          [__webpack_require__, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(!1),
           _ = (function () {
             const _ = (0, _.useMemo)(
@@ -210,18 +210,14 @@
         });
       }
       function _(_) {
-        const {
-          appShortcuts: _,
-          sectionTitle: __webpack_require__,
-          withDivider: _,
-        } = _;
+        const { appShortcuts: _, sectionTitle: _, withDivider: _ } = _;
         return _ && _.length
           ? (0, _.jsxs)("div", {
               className: _().AppHubShortcutsCtn,
               children: [
                 (0, _.jsx)("div", {
                   className: _().AppHubTitle,
-                  children: __webpack_require__,
+                  children: _,
                 }),
                 (0, _.jsx)("div", {
                   "flow-children": "row",
@@ -276,7 +272,7 @@
         });
       }
       function _(_) {
-        const { activeTab: _, activeSort: __webpack_require__ } = _,
+        const { activeTab: _, activeSort: _ } = _,
           _ = _.useRef(void 0);
         _.useEffect(() => {
           const _ = document.getElementById(_);
@@ -330,7 +326,7 @@
           ].map((_, _) => {
             const _ = _ ? _ === _._ : 0 === _,
               _ = _._ ? `${_}=${_._}` : "",
-              _ = __webpack_require__ ? `${_}=${__webpack_require__}` : "",
+              _ = _ ? `${_}=${_}` : "",
               _ = `${_._.COMMUNITY_BASE_URL}${_ || _ ? "?" : ""}${_}${_ ? "&" : ""}${_}`;
             return (0, _.jsx)(
               _._,
@@ -346,7 +342,7 @@
         });
       }
       function _(_) {
-        const { activeTab: _, activeSort: __webpack_require__ } = _;
+        const { activeTab: _, activeSort: _ } = _;
         return (0, _.jsxs)(_._, {
           "flow-children": "row",
           className: _().SortContainer,
@@ -365,9 +361,7 @@
                 _: "mostrecent",
               },
             ].map((_, _) => {
-              const _ = __webpack_require__
-                  ? __webpack_require__ === _._
-                  : 0 === _,
+              const _ = _ ? _ === _._ : 0 === _,
                 _ = _ ? `${_}=${_}` : "",
                 _ = _._ ? `${_}=${_._}` : "",
                 _ = `${_._.COMMUNITY_BASE_URL}${_ || _ ? "?" : ""}${_}${_ ? "&" : ""}${_}`;
@@ -398,7 +392,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
+        const { children: _, navTreeRef: _, ..._ } = _,
           _ = _.useRef(void 0),
           _ = (0, _._)(_, _),
           _ = (0, _._)(),
@@ -412,7 +406,7 @@
           historyMode: "navigationapi",
           children: (0, _.jsx)(_._, {
             disableFocusRing: !_,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       });
@@ -477,7 +471,7 @@
           );
         return [_, _];
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const _ = new URLSearchParams(_.location.search.substring(1));
         for (const _ in _)
           if (_.hasOwnProperty(_)) {

@@ -1105,8 +1105,8 @@
             );
           let _ =
             ((_ = this.m_representation),
-            (__webpack_require__ = this.m_nNextSegment),
-            _(_.segmentTemplate.strMedia, _.strID, __webpack_require__));
+            (_ = this.m_nNextSegment),
+            _(_.segmentTemplate.strMedia, _.strID, _));
           var _, _;
           this.DownloadSegment(this.m_representation, this.m_nNextSegment, _);
         }
@@ -3700,7 +3700,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() => Boolean(_)),
+        const [_, _] = (0, _.useState)(() => Boolean(_)),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
@@ -3717,7 +3717,7 @@
           elSuccess: _,
           elError: _,
           strThrobber: _,
-          fnSetLoading: __webpack_require__,
+          fnSetLoading: _,
           fnSetError: _,
           fnSetSuccess: _,
           fnSetStrError: _,
@@ -3733,7 +3733,7 @@
       function _(_) {
         const {
             strDialogTitle: _,
-            state: __webpack_require__,
+            state: _,
             closeModal: _,
             strThrobber: _,
           } = _,
@@ -3746,7 +3746,7 @@
             elSuccess: _,
             elError: _,
             strThrobber: _,
-          } = __webpack_require__;
+          } = _;
         return _ || _ || _
           ? (0, _.jsxs)(_._, {
               strTitle: _,
@@ -4677,7 +4677,7 @@
         });
       }
       function _(_) {
-        let { direction: _, ...__webpack_require__ } = _,
+        let { direction: _, ..._ } = _,
           _ = {
             transform: `scaleX( ${"right" == _ ? "-1" : "1"} )`,
           };

@@ -36,12 +36,14 @@ class ClientExtractor
 	{
 		$this->Log( 'Building tools' );
 
-		$ProtobufDumperProject = self::ROOT_DIR . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/ProtobufDumper.csproj';
+		$ProtobufDumperProject = __DIR__ . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/ProtobufDumper.csproj';
+
+		$Runtime = PHP_OS_FAMILY === 'Windows' ? 'win-x64' : 'linux-x64';
 
 		$this->RunCommand( 'dotnet clean --configuration Release ' . escapeshellarg( $ProtobufDumperProject ) );
-		$this->RunCommand( 'dotnet publish --configuration Release -p:PublishSingleFile=true --runtime linux-x64 --self-contained ' . escapeshellarg( $ProtobufDumperProject ) );
+		$this->RunCommand( 'dotnet publish --configuration Release -p:PublishSingleFile=true --runtime ' . $Runtime . ' --self-contained ' . escapeshellarg( $ProtobufDumperProject ) );
 
-		$DumpStringsDir = self::ROOT_DIR . '/DumpStrings';
+		$DumpStringsDir = __DIR__ . '/DumpStrings';
 
 		$this->RunCommand( 'cd ' . escapeshellarg( $DumpStringsDir ) . ' && go build' );
 	}
@@ -147,10 +149,32 @@ class ClientExtractor
 				{
 					$Stat = $Zip->statIndex( $i );
 
-					if( $Stat !== false )
+					if( $Stat === false )
 					{
-						$FileListings[] = $Stat;
+						continue;
 					}
+
+					if( str_contains( $Stat[ 'name' ], '\\' ) )
+					{
+						$OldPath = $ExtractDir . '/' . $Stat[ 'name' ];
+						$FixedName = str_replace( '\\', '/', $Stat[ 'name' ] );
+						$NewPath = $ExtractDir . '/' . $FixedName;
+
+						if( file_exists( $OldPath ) )
+						{
+							$NewDir = dirname( $NewPath );
+
+							if( !is_dir( $NewDir ) )
+							{
+								mkdir( $NewDir, 0755, true );
+							}
+
+							rename( $OldPath, $NewPath );
+							$this->Log( 'Fixed backslash path: ' . $Stat[ 'name' ] );
+						}
+					}
+
+					$FileListings[] = $Stat;
 				}
 
 				$Zip->close();
@@ -177,17 +201,17 @@ class ClientExtractor
 	{
 		$this->Log( 'Dumping protobufs' );
 
-		$ProtobufDumper = self::ROOT_DIR . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/linux-x64/publish/ProtobufDumper';
+		$ProtobufDumper = __DIR__ . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/linux-x64/publish/ProtobufDumper';
 
 		if( PHP_OS_FAMILY === 'Windows' )
 		{
-			$ProtobufDumper = self::ROOT_DIR . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/win-x64/publish/ProtobufDumper.exe';
+			$ProtobufDumper = __DIR__ . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/win-x64/publish/ProtobufDumper.exe';
 		}
 
 		$Binaries =
 		[
-			self::LINUX_BINS_DIR . '/ubuntu12_32/steamui.so',
-			self::LINUX_BINS_DIR . '/ubuntu12_32/steamclient.so',
+			self::LINUX_BINS_DIR . '/steamrt64/steamui.so',
+			self::LINUX_BINS_DIR . '/steamrt64/steamclient.so',
 		];
 
 		if( !file_exists( $ProtobufDumper ) )
@@ -223,9 +247,17 @@ class ClientExtractor
 	{
 		$this->Log( 'Dumping strings' );
 
-		$DumpStrings = self::ROOT_DIR . '/DumpStrings/DumpStrings';
-		$UbuntuDir = self::LINUX_BINS_DIR . '/ubuntu12_32';
-		$SteamBinary = self::CLIENT_EXTRACTED_DIR . '/ubuntu12_32/steam';
+		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings' . ( PHP_OS_FAMILY === 'Windows' ? '.exe' : '' );
+		$SteamRTDir = self::LINUX_BINS_DIR . '/steamrt64';
+		$SteamBinaries =
+		[
+			self::CLIENT_EXTRACTED_DIR . '/steamrt64/steam',
+			self::LINUX_BINS_DIR . '/steamrt64/steam-launch-wrapper',
+			self::LINUX_BINS_DIR . '/steamrt64/steam_monitor',
+			self::LINUX_BINS_DIR . '/steamrt64/steamsysinfo',
+			self::LINUX_BINS_DIR . '/steamrt64/steamwebhelper',
+			self::LINUX_BINS_DIR . '/steamrt64/streaming_client'
+		];
 
 		if( !file_exists( $DumpStrings ) )
 		{
@@ -238,16 +270,16 @@ class ClientExtractor
 			mkdir( self::STRINGS_DIR, 0755, true );
 		}
 
-		if( is_dir( $UbuntuDir ) )
+		if( is_dir( $SteamRTDir ) )
 		{
 			$Iterator = new RecursiveIteratorIterator(
-				new RecursiveDirectoryIterator( $UbuntuDir, RecursiveDirectoryIterator::SKIP_DOTS )
+				new RecursiveDirectoryIterator( $SteamRTDir, RecursiveDirectoryIterator::SKIP_DOTS )
 			);
 
 			/** @var \SplFileInfo $File */
 			foreach( $Iterator as $File )
 			{
-				if( $File->isFile() && $File->getExtension() === 'so' )
+				if( $File->isFile() && $File->getExtension() === 'so' && !str_contains( $File->getPath(), 'pv-runtime' )  )
 				{
 					$Name = $File->getBasename( '.so' );
 					$this->Log( 'Dumping ' . $File->getFilename() );
@@ -270,17 +302,24 @@ class ClientExtractor
 			}
 		}
 
-		if( file_exists( $SteamBinary ) )
+		foreach( $SteamBinaries as $SteamBinary )
 		{
-			$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $SteamBinary );
-			exec( $Command, $Output, $ReturnCode );
-
-			if( $ReturnCode === 0 )
+			if( file_exists( $SteamBinary ) )
 			{
+				$Name = basename( $SteamBinary );
+				$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $SteamBinary );
+				exec( $Command, $Output, $ReturnCode );
+
+				if( $ReturnCode !== 0 )
+				{
+					$this->Log( '{lightred}Failed to dump strings from: ' . $Name );
+					continue;
+				}
 				$Strings = array_unique( $Output );
 				sort( $Strings );
 
-				file_put_contents( self::STRINGS_DIR . '/steam.txt', implode( PHP_EOL, $Strings ) . PHP_EOL );
+				file_put_contents( self::STRINGS_DIR . '/'. $Name . '.txt', implode( PHP_EOL, $Strings ) . PHP_EOL );
+				$Output = [];
 			}
 		}
 	}
@@ -319,7 +358,7 @@ class ClientExtractor
 	{
 		$this->Log( 'Prettifying javascript' );
 
-		$GenerateClean = self::ROOT_DIR . '/generate_clean_js.mjs';
+		$GenerateClean = __DIR__ . '/generate_clean_js.mjs';
 		$Directories =
 		[
 			self::CLIENT_EXTRACTED_DIR . '/steamui',

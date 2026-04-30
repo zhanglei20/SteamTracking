@@ -12,6 +12,18 @@
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+        BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
+        "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
+        "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
+        "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
+        "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
+        "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
+        "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
+        "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
+        "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
+        focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
+        hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -217,7 +229,7 @@
       function _(_) {
         const {
             trackingLocation: _,
-            strClassName: __webpack_require__,
+            strClassName: _,
             bViewAllShowInfiniteScroll: _,
           } = _,
           [_, _, _] = (0, _._)(),
@@ -243,14 +255,15 @@
           { last_update_event: _, rgEvents: _ } = (function (_) {
             const {
                 appid: _,
-                event_customization: __webpack_require__,
+                event_customization: _,
                 partnerEventStore: _,
                 trackingLocation: _,
                 fnEventShowModal: _,
               } = _,
               [_, _] = (0, _.useState)(null),
               [_, _] = (0, _.useState)(null),
-              [_] = _("emgid", void 0);
+              [_] = _("emgid", void 0),
+              [_] = _("announce_gid", void 0);
             return (
               (0, _.useEffect)(() => {
                 const _ = (0, _._)("EventWebRowEmbed");
@@ -283,7 +296,7 @@
                       _,
                       0,
                       2,
-                      __webpack_require__,
+                      _,
                     );
                     if ((_(_), _ && _ && _.length > 0)) {
                       const _ = _._.Get().GetTracker();
@@ -298,23 +311,23 @@
                     }
                   })();
                 }
-              }, [_, _, __webpack_require__, _, _, _]),
+              }, [_, _, _, _, _]),
               (0, _.useEffect)(() => {
-                if (null != _ && _) {
-                  const _ = _.find((_) => _.GID === _);
+                if (null != _ && (_ || _)) {
+                  const _ = _.find(
+                    (_) => _.GID === _ || _.AnnouncementGID == _,
+                  );
                   if (_) _(_);
                   else {
                     (async () => {
-                      const _ = await _.LoadPartnerEventFromClanEventGID(
-                        _,
-                        _,
-                        0,
-                      );
+                      const _ = _
+                        ? await _.LoadPartnerEventFromClanEventGID(_, _, 0)
+                        : await _.LoadPartnerEventFromAnnoucementGID(_, _, 0);
                       _ && _([..._, _]);
                     })();
                   }
                 }
-              }, [_, _, _, _, _, _]),
+              }, [_, _, _, _, _, _, _]),
               {
                 last_update_event: _,
                 rgEvents: _,
@@ -325,16 +338,9 @@
             fnEventShowModal: _,
           }),
           _ = (0, _.useCallback)(() => {
-            const {
-                event_gid: _,
-                announcement_gid: __webpack_require__,
-                clan_account_id: _,
-              } = _,
+            const { event_gid: _, announcement_gid: _, clan_account_id: _ } = _,
               _ = _._.Get().GetTracker();
-            _ && _ && _.MarkEventRead(_, _, _) && _.Flush(),
-              _(__webpack_require__),
-              _(null),
-              _();
+            _ && _ && _.MarkEventRead(_, _, _) && _.Flush(), _(_), _(null), _();
           }, [_, _, _]);
         (0, _.useEffect)(
           () => (
@@ -355,7 +361,7 @@
               : void 0,
           _ = window.screen.width <= 500 ? 1 : 2;
         return (0, _.jsxs)(_._, {
-          className: __webpack_require__,
+          className: _,
           "flow-children": "row",
           children: [
             (0, _.jsx)(_._, {
@@ -429,7 +435,7 @@
       function _(_) {
         const {
             appid: _,
-            partnerEventStore: __webpack_require__,
+            partnerEventStore: _,
             trackingLocation: _,
             announcementGID: _,
             eventModel: _,
@@ -442,7 +448,7 @@
           appid: _,
           trackingLocation: _,
           announcementGID: _,
-          partnerEventStore: __webpack_require__,
+          partnerEventStore: _,
           eventModel: _,
           closeModal: _,
         });
@@ -469,17 +475,8 @@
         });
       }
       function _(_) {
-        const {
-            nUpdateTime: _,
-            announcementGID: __webpack_require__,
-            onClick: _,
-          } = _,
-          _ = __webpack_require__
-            ? _._.GetClanEventFromAnnouncementGID(__webpack_require__)
-            : null,
-          _ = (_) => {
-            null == _ || _(), _.stopPropagation(), _.preventDefault();
-          },
+        const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
+          _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
           _ = window.screen.width > 500 ? _._ : _._;
         return (0, _.jsxs)("div", {
           children: [
@@ -490,7 +487,9 @@
               className: _.SectionButtonCtn,
               children: (0, _.jsx)("div", {
                 className: _.SectionButton,
-                onClick: _,
+                onClick: (_) => {
+                  null == _ || _(), _.stopPropagation(), _.preventDefault();
+                },
                 children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
@@ -501,7 +500,9 @@
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 children: (0, _.jsx)(_, {
                   event: _,
-                  onClick: _,
+                  onClick: (_) => {
+                    null == _ || _(), _.stopPropagation(), _.preventDefault();
+                  },
                 }),
               }),
           ],
@@ -533,7 +534,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!0);
+        const [_, _] = _.useState(!0);
         return (
           _.useEffect(() => {
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),

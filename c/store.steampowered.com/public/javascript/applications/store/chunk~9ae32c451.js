@@ -151,9 +151,7 @@
         constructor() {}
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _ ? _.Get().GetBadgeInfo(_) : void 0,
-        );
+        const [_, _] = (0, _.useState)(_ ? _.Get().GetBadgeInfo(_) : void 0);
         return (
           (0, _.useEffect)(() => {
             !_ &&
@@ -162,10 +160,7 @@
                 .LoadBadgeInfo(_)
                 .then((_) => __webpack_require__(_));
           }, [_, _]),
-          (0, _._)(
-            _ ? _.Get().GetBadgeInfoChangeCallback(_) : void 0,
-            __webpack_require__,
-          ),
+          (0, _._)(_ ? _.Get().GetBadgeInfoChangeCallback(_) : void 0, _),
           _
         );
       }
@@ -173,7 +168,7 @@
         _.Get().Test_SetBadgeInfo(_);
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
           _ ? _.Get().GetInitialBadgeInfo(_) : void 0,
         );
         return (
@@ -390,7 +385,7 @@
               ((this.m_nHighestDoorOpened = _),
               this.GetLargestDoorIndexChange().Dispatch(_));
         }
-        async OpenDoor(_, _ = !0, __webpack_require__ = "", _ = !1) {
+        async OpenDoor(_, _ = !0, _ = "", _ = !1) {
           return !_._.logged_in ||
             !this.m_userData ||
             _ > this.m_userData.length ||
@@ -411,7 +406,7 @@
                 : (this.m_mapDoorOpenPromise.has(_) ||
                     this.m_mapDoorOpenPromise.set(
                       _,
-                      this.InternalOpenDoor(_, _, __webpack_require__, _),
+                      this.InternalOpenDoor(_, _, _, _),
                     ),
                   this.m_mapDoorOpenPromise.get(_));
         }
@@ -560,31 +555,18 @@
       }
       function _(_) {
         const _ = _(),
-          [__webpack_require__, _] = (0, _.useState)(
-            _ ? _.Get().BIsDoorOpened(_) : void 0,
-          );
-        return (
-          (0, _._)(_.Get().GetDoorStateChangeCallback(_), _),
-          __webpack_require__
-        );
+          [_, _] = (0, _.useState)(_ ? _.Get().BIsDoorOpened(_) : void 0);
+        return (0, _._)(_.Get().GetDoorStateChangeCallback(_), _), _;
       }
       function _() {
         const _ = _(),
-          [_, __webpack_require__] = (0, _.useState)(
-            _ ? _.Get().GetLargestDoorOpenIndex() : _,
-          );
-        return (
-          (0, _._)(_.Get().GetLargestDoorIndexChange(), __webpack_require__), _
-        );
+          [_, _] = (0, _.useState)(_ ? _.Get().GetLargestDoorOpenIndex() : _);
+        return (0, _._)(_.Get().GetLargestDoorIndexChange(), _), _;
       }
       function _() {
         const _ = _(),
-          [_, __webpack_require__] = (0, _.useState)(
-            !!_ && _.Get().BIsAnyDoorOpened(),
-          );
-        return (
-          (0, _._)(_.Get().GetIsAnyDoorOpenChange(), __webpack_require__), _
-        );
+          [_, _] = (0, _.useState)(!!_ && _.Get().BIsAnyDoorOpened());
+        return (0, _._)(_.Get().GetIsAnyDoorOpenChange(), _), _;
       }
       function _(_) {
         _.Get().SetInMemoryUpdateDoorOpenUpto(_);
@@ -925,7 +907,7 @@
       function _(_) {
         const {
             creatorID: _,
-            bShowTagline: __webpack_require__,
+            bShowTagline: _,
             bHideCreatorType: _,
             bSmallFormat: _,
             bHideFollowButton: _,
@@ -1009,7 +991,7 @@
                                       className: _.CreatorNameName,
                                       children: _.GetName(),
                                     }),
-                                    Boolean(__webpack_require__) &&
+                                    Boolean(_) &&
                                       (0, _.jsx)("div", {
                                         className: (0, _._)(
                                           _.FlexColumnContainer,
@@ -1077,7 +1059,7 @@
         });
       }
       function _(_) {
-        const { appid: _, bSmallFormat: __webpack_require__ } = _,
+        const { appid: _, bSmallFormat: _ } = _,
           [_] = (0, _._)(_, {
             include_basic_info: !0,
           });
@@ -1120,7 +1102,7 @@
           ? (0, _.jsx)(_._, {
               children: (0, _.jsx)(_, {
                 creatorID: _,
-                bSmallFormat: __webpack_require__,
+                bSmallFormat: _,
               }),
             })
           : null;
@@ -1328,27 +1310,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          href: _,
-          children: __webpack_require__,
-          bAllowFocuseableAnchor: _,
-          ..._
-        } = _;
+        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
         return (0, _._)()
           ? (0, _.jsx)("div", {
               ..._,
-              children: __webpack_require__,
+              children: _,
             })
           : _
             ? (0, _.jsx)(_._, {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               })
             : (0, _.jsx)("a", {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               });
       }
     },

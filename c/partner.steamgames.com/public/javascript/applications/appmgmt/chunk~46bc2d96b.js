@@ -404,7 +404,7 @@
         return _.Get().GetDiscountEventListCallback();
       }
       function _(_) {
-        const { rgDiscountEvents: _, eResult: __webpack_require__ } = _(0, _);
+        const { rgDiscountEvents: _, eResult: _ } = _(0, _);
         let _ = [];
         return (
           _?.forEach((_) => {
@@ -412,7 +412,7 @@
           }),
           {
             rgMajorSaleDiscountEvents: _,
-            eResult: __webpack_require__,
+            eResult: _,
           }
         );
       }
@@ -441,9 +441,7 @@
       }
       function _(_) {
         const { data: _ } = (function (_) {
-          const [_, __webpack_require__] = (0, _.useState)(
-              _.Get().GetDiscountEvent(_),
-            ),
+          const [_, _] = (0, _.useState)(_.Get().GetDiscountEvent(_)),
             [_, _] = _.useState(!!_);
           return (
             _.useEffect(() => {
@@ -458,7 +456,7 @@
                 })();
               } else _(!1);
             }, [_, _]),
-            (0, _._)(_.Get().GetDiscountEventCallback(_), __webpack_require__),
+            (0, _._)(_.Get().GetDiscountEventCallback(_), _),
             {
               data: _,
               isLoading: _,
@@ -468,9 +466,7 @@
         return _;
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-            _.Get().GetDiscountEvent(_),
-          ),
+        const [_, _] = (0, _.useState)(_.Get().GetDiscountEvent(_)),
           [_, _] = (0, _.useState)(_.Get().GetAppList(_));
         return (
           (0, _.useEffect)(() => {
@@ -481,7 +477,7 @@
                   _ && (__webpack_require__(_.oDiscountEvent), _(_.rgAppList));
                 });
           }, [_?._, _, _]),
-          (0, _._)(_.Get().GetDiscountEventCallback(_), __webpack_require__),
+          (0, _._)(_.Get().GetDiscountEventCallback(_), _),
           (0, _._)(_.Get().GetAppListCallback(_), _),
           _
             ? {
@@ -958,7 +954,7 @@
             _.strErrorMsg
           );
         }
-        async UpdateOptInRegistrationJson(_, _, __webpack_require__ = !1) {
+        async UpdateOptInRegistrationJson(_, _, _ = !1) {
           let _ = null;
           try {
             const _ = new FormData();
@@ -966,7 +962,7 @@
               _.append("appid", "" + _),
               _.append("opt_in_name", _.opt_in_name),
               _.append("jsondata", JSON.stringify(_)),
-              __webpack_require__ && _.append("bCreatePendingInvite", "true");
+              _ && _.append("bCreatePendingInvite", "true");
             const _ =
                 _._.PARTNER_BASE_URL +
                 "optin/ajaxupdateoptinregistrationpayload/" +
@@ -1157,20 +1153,12 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-          _.Get().GetAllOptInRegistrations(_),
-        );
-        return (
-          (0, _._)(
-            _.Get().GetOptInNameRegistrationsCallbackList(_),
-            __webpack_require__,
-          ),
-          _
-        );
+        const [_, _] = _.useState(_.Get().GetAllOptInRegistrations(_));
+        return (0, _._)(_.Get().GetOptInNameRegistrationsCallbackList(_), _), _;
       }
       function _(_) {
         const _ = _(_),
-          [__webpack_require__, _] = _.useState({
+          [_, _] = _.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
             nAppOptedOut: 0,
@@ -1194,11 +1182,10 @@
                       ? (_.nAppEligible += 1)
                       : (_.nAppOptedOut += 1);
               }),
-                JSON.stringify(_) != JSON.stringify(__webpack_require__) &&
-                  _(_);
+                JSON.stringify(_) != JSON.stringify(_) && _(_);
             }
-          }, [_, __webpack_require__]),
-          __webpack_require__
+          }, [_, _]),
+          _
         );
       }
       function _(_, _) {
@@ -1230,22 +1217,16 @@
         return (0, _._)(_.Get().GetSingleAppRegistrationChange(_, _), _), _;
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
           _.Get().GetOptInRegistrationAndEligibilityForAppOrCreate(_, _),
         );
-        return (
-          (0, _._)(_.Get().GetSingleAppRegistrationChange(_, _), _),
-          __webpack_require__
-        );
+        return (0, _._)(_.Get().GetSingleAppRegistrationChange(_, _), _), _;
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
           _.Get().GetExistingOptInRegistartion(_, _),
         );
-        return (
-          (0, _._)(_.Get().GetSingleAppRegistrationChange(_, _), _),
-          __webpack_require__
-        );
+        return (0, _._)(_.Get().GetSingleAppRegistrationChange(_, _), _), _;
       }
       function _() {
         return {
@@ -1454,18 +1435,18 @@
           }
           return !1;
         }
-        async LoadPackageDiscounts(_, _, __webpack_require__ = 0) {
+        async LoadPackageDiscounts(_, _, _ = 0) {
           const _ = _._(_).sort().join(",");
           return (
             this.m_mapExistingPackageRequests.has(_) ||
               this.m_mapExistingPackageRequests.set(
                 _,
-                this.InternalLoadPackageDiscounts(_, _, __webpack_require__),
+                this.InternalLoadPackageDiscounts(_, _, _),
               ),
             this.m_mapExistingPackageRequests.get(_)
           );
         }
-        async InternalLoadPackageDiscounts(_, _, __webpack_require__ = 0) {
+        async InternalLoadPackageDiscounts(_, _, _ = 0) {
           const _ = new Set();
           for (const _ of _)
             this.m_mapPackageDiscountsByPackageId.has(_) || 0 == _ || _.add(_);
@@ -1483,15 +1464,7 @@
               _ = new Array();
             for (; _.length > 0; ) {
               const _ = _.splice(0, 50);
-              _.push(_),
-                _.push(
-                  this.LoadPackageDiscountsFromPHP(
-                    _,
-                    _,
-                    _,
-                    __webpack_require__,
-                  ),
-                );
+              _.push(_), _.push(this.LoadPackageDiscountsFromPHP(_, _, _, _));
             }
             const _ = await Promise.all(_),
               _ = [];
@@ -1735,20 +1708,18 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(
-            _.Get().GetAllDiscountsForPackage(_),
-          );
+          [_, _] = _.useState(_.Get().GetAllDiscountsForPackage(_));
         return (
           (0, _._)(_.Get().GetCallbackListForPackage(_), _),
           _.useMemo(() => {
             let _ = null;
-            if (null == __webpack_require__)
+            if (null == _)
               return {
                 deepestDiscount: _,
                 bLoading: !0,
               };
-            if (__webpack_require__?.length > 0)
-              for (const _ of __webpack_require__)
+            if (_?.length > 0)
+              for (const _ of _)
                 _.rtEndDate > _ ||
                   _.nDiscountPct <= 0 ||
                   ((null == _ ||
@@ -1760,7 +1731,7 @@
               deepestDiscount: _,
               bLoading: !1,
             };
-          }, [_, _, __webpack_require__])
+          }, [_, _, _])
         );
       }
       function _(_) {
@@ -1818,14 +1789,12 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(
-            _.Get().GetAllDiscountsForAllPackages(),
-          );
+          [_, _] = _.useState(_.Get().GetAllDiscountsForAllPackages());
         return (
           (0, _._)(_.Get().GetGlobalCallbackList(), _),
           _.useMemo(() => {
             let _ = null;
-            if (null == __webpack_require__)
+            if (null == _)
               return {
                 mostRecentDiscount: _,
                 bLoading: !0,
@@ -1844,26 +1813,16 @@
               mostRecentDiscount: _,
               bLoading: !1,
             };
-          }, [_, _, __webpack_require__])
+          }, [_, _, _])
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-          _.Get().GetAllDiscountsForDiscountEvent(_),
-        );
-        return (
-          (0, _._)(
-            _.Get().GetCallbackListForDiscountEvent(_),
-            __webpack_require__,
-          ),
-          _
-        );
+        const [_, _] = _.useState(_.Get().GetAllDiscountsForDiscountEvent(_));
+        return (0, _._)(_.Get().GetCallbackListForDiscountEvent(_), _), _;
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-          _.Get().GetAllDiscountsForPackage(_),
-        );
-        (0, _._)(_.Get().GetCallbackListForPackage(_), __webpack_require__);
+        const [_, _] = _.useState(_.Get().GetAllDiscountsForPackage(_));
+        (0, _._)(_.Get().GetCallbackListForPackage(_), _);
         const [_, _] = _.useState(!1),
           _ = _();
         return (
@@ -2450,12 +2409,12 @@
         return 1 == _?.eState ? (_?.discount?.nDiscountPct ?? 0) : null;
       }
       function _(_, _) {
-        const [__webpack_require__, _] = _.useState(() =>
+        const [_, _] = _.useState(() =>
           _.Get().m_mapPackageStateForDiscountEvents.get(_)?.get(_),
         );
         (0, _._)(_.Get().GetDiscountGridCellCallbackList(_, _), _);
         return {
-          packageState: __webpack_require__,
+          packageState: _,
           fnSetDiscountPct: _.useCallback(
             (_) => {
               _.Get().OverridePackageDiscountPct(_, _, _);
@@ -2488,7 +2447,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(() => _(_)),
+        const [_, _] = _.useState(() => _(_)),
           _ = _.useCallback(() => {
             __webpack_require__(_(_));
           }, [_]);
@@ -2557,9 +2516,7 @@
             const [_, _] = _.useState(_.IsInitialized());
             return (0, _._)(_.s_initializationCallbackList, _), _;
           })(),
-          [__webpack_require__, _] = _.useState(
-            _ ? _.Get().GetFutureDiscountRanges(_) : [],
-          ),
+          [_, _] = _.useState(_ ? _.Get().GetFutureDiscountRanges(_) : []),
           _ = _.useCallback(
             () => _(_ ? _.Get().GetFutureDiscountRanges(_) : []),
             [_, _],
@@ -2571,16 +2528,14 @@
           ),
           (0, _._)(_ && (0, _._)(_), _),
           _.useEffect(_, [_, _, _]),
-          __webpack_require__
+          _
         );
       }
       function _(_) {
-        let [_, __webpack_require__] = _.useState(() =>
-            _.Get().GetHighestPackageDiscount(_),
-          ),
+        let [_, _] = _.useState(() => _.Get().GetHighestPackageDiscount(_)),
           _ = _.useCallback(() => {
             __webpack_require__(_.Get().GetHighestPackageDiscount(_));
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return (0, _._)(_.Get().GetDiscountPackageCallbackList(_), _), _;
       }
     },
@@ -2819,9 +2774,7 @@
         return (0, _._)(_.Get().m_visibleDiscountEventIDsCallbackList, _), _;
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-            _.Get().m_mapDiscountEventsByID.get(_),
-          ),
+        const [_, _] = _.useState(_.Get().m_mapDiscountEventsByID.get(_)),
           _ = _.useCallback(
             () => __webpack_require__(_.Get().m_mapDiscountEventsByID.get(_)),
             [_],
@@ -2833,11 +2786,9 @@
         );
       }
       function _(_ = !0) {
-        const [_, __webpack_require__] = _.useState(
-            _.Get().GetEventSelectionParameters(),
-          ),
+        const [_, _] = _.useState(_.Get().GetEventSelectionParameters()),
           _ = _ ? _.Get().m_gridEventSelectionParametersCallbackList : null;
-        return (0, _._)(_, __webpack_require__), _;
+        return (0, _._)(_, _), _;
       }
       function _() {
         const [_, _] = _.useState(_.Get().m_eRelatedDiscountView);
@@ -2893,19 +2844,15 @@
         return _;
       }
       function _(_) {
-        const {
-            children: _,
-            fnBLocalChangesExist: __webpack_require__,
-            fnWarnUser: _,
-          } = _,
+        const { children: _, fnBLocalChangesExist: _, fnWarnUser: _ } = _,
           _ = (0, _._)(),
           _ = _.useMemo(
             () => ({
               client: _,
-              fnBLocalChangesExist: __webpack_require__,
+              fnBLocalChangesExist: _,
               fnWarnUser: _,
             }),
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -2952,7 +2899,7 @@
       }
       function _(_) {
         const { column: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(_.getFilterValue() ?? "");
+          [_, _] = (0, _.useState)(_.getFilterValue() ?? "");
         return (0, _.jsxs)("div", {
           className: _().PackageNameHeader,
           children: [
@@ -2961,7 +2908,7 @@
               placeholder: (0, _._)(
                 "#PackageGrid_PackageNameFilterInputPrompt",
               ),
-              value: __webpack_require__,
+              value: _,
               onChange: (_) => {
                 _(_.target.value.toString()),
                   (0, _.startTransition)(() =>
@@ -2973,8 +2920,7 @@
         });
       }
       function _(_) {
-        const { fnBLocalChangesExist: _, fnWarnUser: __webpack_require__ } =
-            _(),
+        const { fnBLocalChangesExist: _, fnWarnUser: _ } = _(),
           { cell: _, row: _, className: _, toolTip: _ } = _,
           _ = _.original.packageID,
           _ =
@@ -2985,7 +2931,7 @@
             });
         return (0, _.jsxs)(_, {
           fnBLocalChangesExist: _,
-          fnWarnUser: __webpack_require__,
+          fnWarnUser: _,
           href: `${_._.PARTNER_BASE_URL}store/packagelanding/${_}`,
           strToolTip: _,
           strClassName: _,
@@ -3089,12 +3035,12 @@
       }
       function _(_) {
         const { row: _ } = _,
-          { fnBLocalChangesExist: __webpack_require__, fnWarnUser: _ } = _(),
+          { fnBLocalChangesExist: _, fnWarnUser: _ } = _(),
           _ = _.original.appids,
           _ = _?.length ?? 0,
           _ = _.original.packageID;
         return (0, _.jsx)(_, {
-          fnBLocalChangesExist: __webpack_require__,
+          fnBLocalChangesExist: _,
           fnWarnUser: _,
           href: `${_._.PARTNER_BASE_URL}store/packagelanding/${_}`,
           strToolTip: (0, _._)("#PackageGrid_VisitPackagePricing_Tooltip"),
@@ -3143,7 +3089,7 @@
       function _(_) {
         const {
           fnBLocalChangesExist: _,
-          fnWarnUser: __webpack_require__,
+          fnWarnUser: _,
           href: _,
           children: _,
           strToolTip: _,
@@ -3353,9 +3299,7 @@
               () => (_ ? ("string" == typeof _ ? new _._(_) : _) : null),
               [_],
             ),
-            [__webpack_require__, _] = (0, _.useState)(
-              !!_ && !_.BHasProfileBySteamID(_),
-            );
+            [_, _] = (0, _.useState)(!!_ && !_.BHasProfileBySteamID(_));
           return (
             (0, _.useEffect)(() => {
               const _ = _().CancelToken.source();
@@ -3379,7 +3323,7 @@
                 () => _.cancel("unmounting useUserProfile")
               );
             }, [_]),
-            [__webpack_require__, !!_ && _.GetProfileBySteamID(_)]
+            [_, !!_ && _.GetProfileBySteamID(_)]
           );
         })(_.useMemo(() => (_ ? _._.InitFromAccountID(_) : null), [_]));
       }

@@ -2,6 +2,36 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2403],
   {
+    chunkid: (module) => {
+      module.exports = function _(_, _) {
+        if (_ === _) return !0;
+        if (_ && _ && "object" == typeof _ && "object" == typeof _) {
+          if (_.constructor !== _.constructor) return !1;
+          var _, _, _;
+          if (Array.isArray(_)) {
+            if ((_ = _.length) != _.length) return !1;
+            for (_ = _; 0 !== _--; ) if (!_(_[_], _[_])) return !1;
+            return !0;
+          }
+          if (_.constructor === RegExp)
+            return _.source === _.source && _.flags === _.flags;
+          if (_.valueOf !== Object.prototype.valueOf)
+            return _.valueOf() === __webpack_require__.valueOf();
+          if (_.toString !== Object.prototype.toString)
+            return _.toString() === __webpack_require__.toString();
+          if ((_ = (_ = Object.keys(_)).length) !== Object.keys(_).length)
+            return !1;
+          for (_ = _; 0 !== _--; )
+            if (!Object.prototype.hasOwnProperty.call(_, _[_])) return !1;
+          for (_ = _; 0 !== _--; ) {
+            var _ = _[_];
+            if (!_(_[_], _[_])) return !1;
+          }
+          return !0;
+        }
+        return _ != _ && _ != _;
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -348,8 +378,7 @@
                     ? window
                     : "undefined" != typeof self
                       ? self
-                      : __webpack_require__._).document &&
-            _.document.attachEvent;
+                      : _._).document && _.document.attachEvent;
         if (!_) {
           var _ = (function () {
               var _ =
@@ -4409,9 +4438,7 @@
         }),
         (_.queryPoint = function (_, _) {
           if (_ < this.mid) {
-            if (this.left)
-              if ((__webpack_require__ = this.left.queryPoint(_, _)))
-                return __webpack_require__;
+            if (this.left) if ((_ = this.left.queryPoint(_, _))) return _;
             return _(this.leftPoints, _, _);
           }
           if (_ > this.mid) {
@@ -6082,17 +6109,13 @@
           return (
             (0, _._)(this, _),
             (_ = this),
-            (__webpack_require__ = _),
+            (_ = _),
             (_ = arguments),
-            (__webpack_require__ = (0, _._)(__webpack_require__)),
+            (_ = (0, _._)(_)),
             (0, _._)(
               _,
               _()
-                ? Reflect.construct(
-                    __webpack_require__,
-                    _ || [],
-                    (0, _._)(_).constructor,
-                  )
+                ? Reflect.construct(_, _ || [], (0, _._)(_).constructor)
                 : __webpack_require__.apply(_, _),
             )
           );
@@ -7561,7 +7584,7 @@
             });
           }
           createResult(_, _) {
-            const { state: __webpack_require__ } = _,
+            const { state: _ } = _,
               _ = super.createResult(_, _),
               {
                 isFetching: _,
@@ -7569,7 +7592,7 @@
                 isError: _,
                 isRefetchError: _,
               } = _,
-              _ = __webpack_require__.fetchMeta?.fetchMore?.direction,
+              _ = _.fetchMeta?.fetchMore?.direction,
               _ = _ && "forward" === _,
               _ = _ && "forward" === _,
               _ = _ && "backward" === _,
@@ -7578,8 +7601,8 @@
               ..._,
               fetchNextPage: this.fetchNextPage,
               fetchPreviousPage: this.fetchPreviousPage,
-              hasNextPage: (0, _._)(_, __webpack_require__.data),
-              hasPreviousPage: (0, _._)(_, __webpack_require__.data),
+              hasNextPage: (0, _._)(_, _.data),
+              hasPreviousPage: (0, _._)(_, _.data),
               isFetchNextPageError: _,
               isFetchingNextPage: _,
               isFetchPreviousPageError: _,

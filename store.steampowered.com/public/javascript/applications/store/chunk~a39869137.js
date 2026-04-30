@@ -9,6 +9,41 @@
         FollowGameButtonNotTop: "T3A9t1mjAR00ljJGlBapl",
       };
     },
+    81886: (e, t, i) => {
+      "use strict";
+      function n(e) {
+        return (
+          !!e &&
+          ("game" === e ||
+            "dlc" === e ||
+            "software" === e ||
+            "music" === e ||
+            "application" === e ||
+            "demo" === e ||
+            "hardware" === e ||
+            "mod" === e ||
+            "video" == e ||
+            "beta" === e ||
+            "advertising" === e)
+        );
+      }
+      function s(e) {
+        return (
+          null != e &&
+          (0 == e ||
+            4 == e ||
+            6 == e ||
+            11 == e ||
+            1 == e ||
+            10 == e ||
+            2 == e ||
+            7 == e ||
+            12 == e ||
+            14 == e)
+        );
+      }
+      i.d(t, { fp: () => n, vm: () => s });
+    },
     47143: (e, t, i) => {
       "use strict";
       i.d(t, { Zn: () => Q, N_: () => W, Br: () => H });
@@ -3845,7 +3880,7 @@
                             id: X,
                             active: X && K,
                             bIsHoverMode: !0,
-                            bGrowOnHover: !0,
+                            eGrowOnHover: R.C.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),

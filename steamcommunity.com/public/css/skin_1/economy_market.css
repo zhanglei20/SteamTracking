@@ -290,7 +290,6 @@ ul.market_restrictions li {
 	position: absolute;
 	right: 15px;
 	bottom: 8px;
-	z-index: 2;
 }
 
 .pick_and_sell_button .item_market_action_button_contents {
@@ -1745,7 +1744,8 @@ input.filter_search_box:focus {
 
 .market_dialog_right_column
 {
-	flex: 1;
+	flex: 1 1 0;
+	max-width: calc( 100% - 150px );
 }
 
 .market_dialog_billing_address_row
@@ -1767,13 +1767,15 @@ input.filter_search_box:focus {
 
 .market_dialog_billing_address_left_column
 {
+	box-sizing: border-box;
+	padding-right: 5px;
 	width: 50%;
 }
 
 .market_dialog_billing_address_right_column
 {
-	margin-left: 10px;
-	flex: 1;
+	box-sizing: border-box;
+	padding-left: 5px;
 	width: 50%;
 }
 
@@ -2305,192 +2307,116 @@ input.filter_search_box:focus {
 	color: #60acde;
 }
 
-/* DSelect */
-.dropcontainer ul {
-	list-style-type:none;
-	line-height: 22px;
-	margin:0;
-	position:absolute;
-	top:0;
-	left: 0;
-	right: 0;
-	overflow: auto;
-	overflow-x: hidden;
-
-	box-shadow: 0 0 5px 0 #000000;
-	background: #417A9B;
+#market_buy_commodity_popup .market_dialog_content input[type="text"],
+#market_buy_commodity_popup .market_dialog_content select,
+#market_buy_commodity_popup .market_dialog_content textarea,
+#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+	box-sizing: border-box;
+	margin-block: 3px 10px;
+	padding: 3px;
+	text-align: start;
+	width: 100%;
 }
-.dropdownhidden{
+
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content input[type="text"],
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content select,
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content textarea {
+	padding: 8px 10px;
+}
+
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content input[type="text"],
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content select,
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content textarea,
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+	background-color: rgba( 0, 0, 0, 0.4);
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* DSelect */
+.dselect_container .dropcontainer ul {
+	background: #417A9B;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
+	inset: 0 0 auto;
+	line-height: 22px;
+	list-style-type: none;
+	margin: 0 1px;
+	overflow: hidden auto;
+	padding: 0;
+	position: absolute;
+	z-index: 2000;
+}
+
+html.GamepadMode .dselect_container .dropcontainer ul {
+	border-radius: 3px;
+}
+
+.dselect_container .dropcontainer ul.dropdownhidden {
 	display: none;
 }
-.dropdownvisible{
-	display: block;
+
+.dselect_container .dropcontainer ul.dropdownvisible {
+	max-height: 205px;
+	top: -1px;
 }
-.dropcontainer ul li {
-	padding: 0;
-	margin: 0;
-}
-.dropcontainer ul li.emptyvalue {
+
+.dselect_container .dropcontainer ul li.emptyvalue {
 	font-style: italic;
 }
-.dropcontainer ul a {
-	padding: 0 10px;
-	display:block;
-	text-decoration:none;
+
+.dselect_container .dropcontainer ul li a {
 	color: #e5e4dc;
-
-	white-space: nowrap;
-}
-
-.dropcontainer{
-	position:relative;
-}
-
-.dselect_container {
-	font-size: 12px;
-}
-
-.dselect_container {
-	position: relative;
-
-}
-.dselect_container button.trigger, .dselect_container button.activetrigger {
 	display: block;
-	box-sizing: content-box;
-	text-align: inherit;
+}
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	padding: 0 10px;
+}
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
+	background-color: #67c1f5; /* Old browsers */
+	color: #ffffff;
+	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
+
+#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
 	cursor: pointer;
-
-	color: #67c1f5;
-	padding: 0 30px 0 8px;
-	font-size: 12px;
-	line-height: 21px;
-	border: 0;
-	border-radius: 3px;
-	text-decoration: none;
-
+	display: block;
 	overflow: hidden;
+	padding: 3px 27px 3px 3px;
+	position: relative;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	position:relative;
 }
 
-.dselect_container button.trigger {
-	background: rgba( 103, 193, 245, 0.1 );
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+	padding: 8px 27px 8px 10px;
 }
 
-.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover {
-	color: #ffffff;
-	background: #67c1f5;
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger.activetrigger {
+	border-radius: 3px 3px 0 0;
 }
 
-
-.dselect_container button.activetrigger {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	z-index: 91;
-	position: relative;
-}
-
-.dselect_container button.trigger::after, .dselect_container button.activetrigger::after {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	width: 20px;
-	background: url('https://community.fastly.steamstatic.com/public/images/economy/market/ico_arrow_dn_for_select.png') no-repeat left center;
-	content: '';
-}
-
-.dselect_container button.trigger:hover,
-.dselect_container .dropcontainer a.highlighted_selection
-{
-	color: #ffffff;
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger:hover,
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger.activetrigger {
 	background-color: #67c1f5; /* Old browsers */
 	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 
-.market_dialog_content .dselect_container {
-	width: 100%;
-	padding: 0;
-	display: inline-block;
-}
-
-.market_dialog_content .dselect_container button.trigger {
-	color: #ffffff;
-	background: rgba( 0, 0, 0, 0.4);
-}
-
-.dselect_container button.trigger:hover
-{
-	background-color: #67c1f5; /* Old browsers */
-background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
-	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
-}
-
-.market_dialog_content .dselect_container button,
-.market_dialog_content .dselect_container button:hover,
-.market_dialog_content .dselect_container button:active,
-.market_dialog_content .dselect_container button:visited
-{
-	text-decoration: none;
-	font-weight: normal;
-}
-
-.market_dialog_content .trigger {
-	display:block;
-	padding-left:2px;
-	padding-right:2px;
-	overflow: hidden;
-}
-
-.market_dialog_content input[type="text"],
-.market_dialog_content select,
-.market_dialog_content textarea,
-.market_dialog_content .dselect_container button.trigger
-{
-	background-color: rgba( 0, 0, 0, 0.4);
-	color: #fff;
-	border: 1px solid #000;
-	border-radius: 3px;
-	box-shadow: 1px 1px 0px #45556c;
-	width: 98%;
-	max-width: calc( 100% - 12px );
-	padding: 3px;
-	margin-top: 3px;
-	margin-bottom: 10px;
-	text-align: start !important;
-
-	font-size: 13px;
-	line-height: 18px;
-}
-
-.market_dialog_content .dselect_container button.trigger.activetrigger
-{
-	color: #ffffff;
-	background: #67c1f5;
-}
-
-.dropcontainer ul {
-    list-style-type: none;
-    line-height: 22px;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    overflow: auto;
-    overflow-x: hidden;
-    box-shadow: 0 0 5px 0 #000000;
-    background: #417A9B;
-}
-
-.dropdownvisible
-{
-	max-height: 225px;
-	overflow-y: auto;
-	z-index: 1001;
+#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger::after {
+	background: url('https://community.fastly.steamstatic.com/public/images/economy/ico_arrow_dn_for_select.png') no-repeat left center;
+	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 24px;
 }
 
 @media screen and (max-width: 910px) {

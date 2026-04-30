@@ -879,7 +879,7 @@
         U = s(20194),
         B = s(30470);
       var E = s(69235),
-        M = s(56854),
+        M = s(56555),
         O = s(49953),
         F = s(55241),
         W = s(85010),
@@ -2335,11 +2335,26 @@
     },
     35380: (e, t, s) => {
       "use strict";
-      s.d(t, { $5: () => l, Sh: () => o, rt: () => a, zl: () => r });
+      s.d(t, { $5: () => o, rt: () => a, zl: () => r });
       var n = s(90626),
         i = s(17690);
       function a(e) {
-        return (0, n.useMemo)(() => o(e), [e?.id, e?.type]);
+        return (0, n.useMemo)(
+          () =>
+            (function (e) {
+              if (!e || !e.id) return;
+              if (!e.type) return { appid: e.id };
+              switch (e.type) {
+                case "sub":
+                  return { packageid: e.id };
+                case "bundle":
+                  return { bundleid: e.id };
+                default:
+                  return { appid: e.id };
+              }
+            })(e),
+          [e?.id, e?.type],
+        );
       }
       function r(e, t) {
         return (0, n.useMemo)(
@@ -2358,19 +2373,6 @@
         );
       }
       function o(e) {
-        if (e && e.id) {
-          if (!e.type) return { appid: e.id };
-          switch (e.type) {
-            case "sub":
-              return { packageid: e.id };
-            case "bundle":
-              return { bundleid: e.id };
-            default:
-              return { appid: e.id };
-          }
-        }
-      }
-      function l(e) {
         return (0, n.useMemo)(() => {
           if (null != e && e != i.sc) return { appid: e };
         }, [e]);

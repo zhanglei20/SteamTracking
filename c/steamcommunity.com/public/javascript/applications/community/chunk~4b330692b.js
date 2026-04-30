@@ -18,6 +18,7 @@
         Points: "_3k_jxlKBddOAxgSknpHNTq",
         IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
         Footer: "_164mmLkSJ91cXzABhIrlZq",
+        PointsArea: "_3CsHeO3G5c1fQY9Xx4lgUI",
         Column: "_2ihFd-KfZvzA81NOi3SEEJ",
         Left: "_1v0jLHAK-8P4IONBwuF4kv",
         BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
@@ -40,11 +41,24 @@
         SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
         SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
         InitialLoading: "_1ZKr7z5ZdQghkZZCnjx455",
+        Loading: "fGpQ7K-RTxeDJfNELWaCD",
         ErrorContainer: "_1SebPOeiRaEqfXHg_dsaYQ",
         ErrorText: "ok8moMj5E4XI25uTRhAHN",
         PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
         PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
         NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
+        BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
+        "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
+        "ItemFocusAnim-darkGreySettings": "XvVy1qhFrJwjYK25wo2O6",
+        "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
+        "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
+        "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
+        "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
+        "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
+        "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
+        focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
+        hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
       };
     },
     chunkid: (module) => {
@@ -101,7 +115,7 @@
           (_[(_.LNY2020 = 2)] = "LNY2020");
       })(_ || (_ = {}));
       const _ = (_, _) => {
-          const { anim: __webpack_require__ } = (0, _._)({
+          const { anim: _ } = (0, _._)({
               anim: 1,
               from: {
                 anim: 0,
@@ -149,7 +163,7 @@
                   (function (_, _) {
                     _.Default;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioY: _,
                       rotationRatioX: _,
                       rotationRatioZ: _,
@@ -165,20 +179,20 @@
                       filter: _,
                       flRandom: 0,
                       transform: _.interpolate((_) => {
-                        const _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
+                        const _ = _ * _ * _,
+                          _ = _ * _ * _,
+                          _ = _ * _ * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateY(${_}rad) rotateX(${_}rad) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ),
                 _ = _.map((_) =>
                   (function (_, _) {
                     if (Math.random() > 0.1) return null;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioZ: _,
                       yRange: _,
                       xRange: _,
@@ -192,18 +206,18 @@
                       filter: _,
                       flRandom: Math.random(),
                       transform: _.interpolate((_) => {
-                        const _ = ((_ * __webpack_require__) / 4) * _,
+                        const _ = ((_ * _) / 4) * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ).filter((_) => !!_);
               return {
                 rgParticleStyles: _,
                 rgStreamerStyles: _,
               };
-            }, [_, _, __webpack_require__]);
+            }, [_, _, _]);
           return _;
         },
         _ = {
@@ -220,7 +234,7 @@
         },
         _ = ({ eType: _ }) => {
           _.Gold, _.LNY2020;
-          const [_, __webpack_require__] = (function () {
+          const [_, _] = (function () {
             const [_, _] = (0, _.useState)(null),
               _ = (0, _.useCallback)((_) => {
                 _ &&
@@ -282,7 +296,7 @@
               bottom: 0,
               overflow: "hidden",
             },
-            ref: __webpack_require__,
+            ref: _,
             children: [
               _,
               _.map((_, _) =>
@@ -590,10 +604,10 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       const _ = (_) => {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_, _.UnstyledButton),
-          ...__webpack_require__,
+          ..._,
         });
       };
       var _,
@@ -640,10 +654,11 @@
         render() {
           const _ =
             ((_ = this.props.reactionType),
-            (__webpack_require__ =
-              !this.props.bDisableAnimation &&
-              (this.state.bHovered || this.props.bForceAnimated)),
-            `${_._.STORE_CDN_URL}public/images/loyalty/reactions/${__webpack_require__ ? "animated" : "still"}/${_}.png`);
+            (_ = !(
+              0 != this.props.bDisableAnimation ||
+              (!this.state.bHovered && !this.props.bForceAnimated)
+            )),
+            `${_._.STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${_}.png`);
           var _, _;
           return (0, _.jsx)("img", {
             className: this.props.className,
@@ -671,13 +686,15 @@
             }),
             (this.state = {
               bShowModal: !1,
+              targetid: "",
+              targetType: 0,
             });
         }
         render() {
           const {
             bShowModal: _,
             targetType: _,
-            fnSuccessFunc: __webpack_require__,
+            fnSuccessFunc: _,
             targetid: _,
             ugcType: _,
             initialSelectedReaction: _,
@@ -688,13 +705,13 @@
                 {
                   targetid: _,
                   active: _,
-                  targetType: _,
+                  targetType: null != _ ? _ : 0,
                   ugcType: _,
                   onDismiss: () =>
                     this.setState({
                       bShowModal: !1,
                     }),
-                  onSuccess: __webpack_require__,
+                  onSuccess: _,
                   initialSelectedReaction: _,
                 },
                 _,
@@ -707,7 +724,7 @@
       };
       const _ = _;
       function _(_) {
-        var _, _;
+        var _, _, _, _, _;
         const {
             active: _,
             targetid: _,
@@ -720,7 +737,7 @@
           [_, _] = _.useState(_ || 0),
           [_, _] = _.useState(_.SELECTING),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(2),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (function (_, _, _, _) {
@@ -736,41 +753,57 @@
               },
               enabled: _,
             });
-          })(_, _, _, _),
+          })(!!_, _, _, _),
           _ = (function (_, _) {
             return (0, _._)({
               queryKey: ["AwardsConfiguration"],
               queryFn: async () => {
+                var _;
                 const _ = _._.Init(_._);
-                _.Body().set_elanguage((0, _._)(_._.LANGUAGE));
+                __webpack_require__
+                  .Body()
+                  .set_elanguage((0, _._)(_._.LANGUAGE));
                 let _ = await _._.GetReactionConfig(_, _);
-                if (1 == __webpack_require__.GetEResult()) {
+                if (1 == _.GetEResult()) {
                   const _ = new Map();
-                  let _ = __webpack_require__.Body().toObject().reactions;
-                  for (const _ of _) _.set(_.reactionid, _);
+                  let _ =
+                    null !== (_ = _.Body().toObject().reactions) && void 0 !== _
+                      ? _
+                      : [];
+                  for (const _ of _) _.reactionid && _.set(_.reactionid, _);
                   return _;
                 }
-                throw __webpack_require__.GetEResult();
-              },
-              enabled: _,
-            });
-          })(_, _),
-          _ = (function (_, _) {
-            return (0, _._)({
-              queryKey: ["UserPointBalance"],
-              queryFn: async () => {
-                if (!_._.logged_in) throw 21;
-                const _ = _._.steamid,
-                  _ = _._.Init(_._);
-                __webpack_require__.Body().set_steamid(_);
-                let _ = await _._.GetSummary(_, _);
-                if (1 == _.GetEResult())
-                  return _._.fromString(_.Body().summary().points());
                 throw _.GetEResult();
               },
               enabled: _,
             });
-          })(_, _),
+          })(!!_, _),
+          _ = (function (_, _) {
+            return (0, _._)({
+              queryKey: ["UserPointBalance"],
+              queryFn: async () => {
+                var _, _;
+                if (!_._.logged_in) throw 21;
+                const _ = _._.steamid,
+                  _ = _._.Init(_._);
+                _.Body().set_steamid(_);
+                let _ = await _._.GetSummary(_, _);
+                if (1 == _.GetEResult())
+                  return _._.fromString(
+                    null !==
+                      (_ =
+                        null === (_ = _.Body().toObject().summary) ||
+                        void 0 === _
+                          ? void 0
+                          : _.points) && void 0 !== _
+                      ? _
+                      : "0",
+                  );
+                throw _.GetEResult();
+              },
+              enabled: _,
+            });
+          })(!!_, _),
           _ = (function (_) {
             const _ = (0, _._)();
             return (0, _._)({
@@ -799,13 +832,20 @@
           !_)
         )
           return null;
-        const _ = _.data || new Map(),
-          _ = _.data,
+        const _ = null !== (_ = _.data) && void 0 !== _ ? _ : new Map(),
+          _ = null !== (_ = _.data) && void 0 !== _ ? _ : new _._(0),
           _ = (function (_, _, _) {
             let _ = [];
             return (
               _.forEach(function (_) {
-                if (_.valid_target_types.includes(_) && _.purchaseable)
+                var _, _;
+                if (
+                  (null === (_ = _.valid_target_types) || void 0 === _
+                    ? void 0
+                    : _.includes(_)) &&
+                  _.purchaseable &&
+                  _.reactionid
+                )
                   switch (_) {
                     case 1:
                     case 3:
@@ -814,7 +854,11 @@
                       _.push(_.reactionid);
                       break;
                     case 2:
-                      _.valid_ugc_types.includes(_) && _.push(_.reactionid);
+                      void 0 !== _ &&
+                        (null === (_ = _.valid_ugc_types) || void 0 === _
+                          ? void 0
+                          : _.includes(_)) &&
+                        _.push(_.reactionid);
                   }
               }),
               _
@@ -1040,10 +1084,14 @@
                                     (0, _.jsx)("span", {
                                       className: _.AwardName,
                                       children:
-                                        null === (_ = _.data) || void 0 === _
+                                        null ===
+                                          (_ =
+                                            null === (_ = _.data) ||
+                                            void 0 === _
+                                              ? void 0
+                                              : _.get(_)) || void 0 === _
                                           ? void 0
-                                          : __webpack_require__.get(_)
-                                              .localized_title,
+                                          : _.localized_title,
                                     }),
                                   ),
                                 }),
@@ -1223,7 +1271,7 @@
           ],
         });
       function _(_) {
-        const { pointBalance: _, children: __webpack_require__ } = _,
+        const { pointBalance: _, children: _ } = _,
           _ = _ && (0, _._)(_.toNumber());
         return (0, _.jsxs)("div", {
           className: _.Footer,
@@ -1267,7 +1315,7 @@
               children: (0, _.jsx)(_._, {
                 className: _.Actions,
                 "flow-children": "row",
-                children: _.Children.map(__webpack_require__, (_) =>
+                children: _.Children.map(_, (_) =>
                   (0, _.jsx)("div", {
                     className: _.Action,
                     children: _,
@@ -1303,7 +1351,7 @@
           const {
             reaction: _,
             selected: _,
-            alreadyAwarded: __webpack_require__,
+            alreadyAwarded: _,
             cost: _,
             autoFocus: _,
             awardConfig: _,
@@ -1313,11 +1361,7 @@
             type: "button",
             onMouseEnter: this.handleMouseOver,
             onMouseLeave: this.handleMouseOut,
-            className: (0, _._)(
-              _.Button,
-              _ && _.Selected,
-              __webpack_require__ && _.Disabled,
-            ),
+            className: (0, _._)(_.Button, _ && _.Selected, _ && _.Disabled),
             autoFocus: _,
             ..._,
             children: [
@@ -1326,7 +1370,7 @@
                 children: (0, _.jsx)(_, {
                   reactionType: _,
                   bForceAnimated: this.state.bHovered,
-                  bDisableAnimation: __webpack_require__,
+                  bDisableAnimation: _,
                 }),
               }),
               (0, _.jsxs)("div", {
@@ -1338,11 +1382,11 @@
                   }),
                   (0, _.jsx)(_, {
                     className: _.Points,
-                    children: (0, _._)(_),
+                    children: (0, _._)(null != _ ? _ : 0),
                   }),
                 ],
               }),
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)(_, {
                   className: _.IconCheckMark,
                 }),
@@ -1358,10 +1402,10 @@
             className: _.Loading,
           }),
         _ = (_) => {
-          const { children: _, className: __webpack_require__, ..._ } = _;
+          const { children: _, className: _, ..._ } = _;
           return (0, _.jsxs)("span", {
             ..._,
-            className: (0, _._)(__webpack_require__, _.PointsAmount),
+            className: (0, _._)(_, _.PointsAmount),
             children: [
               (0, _.jsx)(_.vrn, {
                 className: _.PointsAmountIcon,

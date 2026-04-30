@@ -1,4 +1,4 @@
-var CLSTAMP = "10538461";
+var CLSTAMP = "10623317";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [41],
@@ -2577,7 +2577,7 @@ var CLSTAMP = "10538461";
                   '\', this)" type="text/javascript" ' +
                   (goog.Dependency.defer_ ? "defer" : "") +
                   n +
-                  "></script>"),
+                  "><\/script>"),
                   t.write(
                     goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createHTML(n)
@@ -2630,10 +2630,10 @@ var CLSTAMP = "10538461";
               if (goog.isDocumentLoading_()) {
                 var n = function (e, r) {
                   (e = r
-                    ? '<script type="module" crossorigin>' + r + "</script>"
+                    ? '<script type="module" crossorigin>' + r + "<\/script>"
                     : '<script type="module" crossorigin src="' +
                       e +
-                      '"></script>'),
+                      '"><\/script>'),
                     t.write(
                       goog.TRUSTED_TYPES_POLICY_
                         ? goog.TRUSTED_TYPES_POLICY_.createHTML(e)
@@ -2783,7 +2783,7 @@ var CLSTAMP = "10538461";
                             goog.protectScriptTag_(
                               'goog.Dependency.callback_("' + t + '");',
                             ) +
-                            "</script>";
+                            "<\/script>";
                         e.write(
                           goog.TRUSTED_TYPES_POLICY_
                             ? goog.TRUSTED_TYPES_POLICY_.createHTML(n)
@@ -25817,7 +25817,7 @@ var CLSTAMP = "10538461";
                         break;
                       case "script":
                         ((e = o.createElement("div")).innerHTML =
-                          "<script></script>"),
+                          "<script><\/script>"),
                           (e = e.removeChild(e.firstChild));
                         break;
                       case "select":

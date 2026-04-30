@@ -31,7 +31,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clipToUpload: _, finishUpload: __webpack_require__ } = _,
+        const { clipToUpload: _, finishUpload: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(),
           { fnUploadClip: _ } = (0, _._)(),
@@ -66,7 +66,7 @@
       }
       function _(_) {
         const { clipToUpload: _ } = _,
-          [__webpack_require__, _] = _.useState(),
+          [_, _] = _.useState(),
           [_, _] = _.useState();
         _.useEffect(
           () =>
@@ -82,7 +82,7 @@
         );
         let _ = (0, _._)("#Chat_Uploading", _.clip_id),
           _ = {
-            width: __webpack_require__ + "%",
+            width: _ + "%",
           };
         return (0, _.jsxs)("div", {
           className: "chatFileUploadProgressContainer",
@@ -1785,8 +1785,8 @@
       }
       const _ = function (_) {
         const { previewURL: _ } = _,
-          [__webpack_require__, _] = _.useState(!1);
-        return __webpack_require__
+          [_, _] = _.useState(!1);
+        return _
           ? (0, _.jsx)(_, {
               ..._,
             })
@@ -1837,13 +1837,13 @@
         );
       }
       function _(_) {
-        const { clip: _, mode: __webpack_require__ } = _,
+        const { clip: _, mode: _ } = _,
           { loader: _, fnGetManifest: _ } = _(_);
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsx)(_._, {
             loader: _,
             fnGetManifest: _,
-            mode: __webpack_require__,
+            mode: _,
             children: (0, _.jsxs)("div", {
               className: _.ClipDetails,
               children: [
@@ -1851,7 +1851,7 @@
                   className: _.VideoContainer,
                   children: (0, _.jsx)(_._, {
                     positionAbsolute: !1,
-                    autoPlay: __webpack_require__ != _._.ChatClip,
+                    autoPlay: _ != _._.ChatClip,
                   }),
                 }),
                 (0, _.jsx)(_._, {

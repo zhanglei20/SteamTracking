@@ -3321,7 +3321,7 @@
                   '\', this)" type="text/javascript" ' +
                   (goog.Dependency.defer_ ? "defer" : "") +
                   n +
-                  "></script>"),
+                  "><\/script>"),
                   t.write(
                     goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createHTML(n)
@@ -3374,10 +3374,10 @@
               if (goog.isDocumentLoading_()) {
                 var n = function (e, r) {
                   (e = r
-                    ? '<script type="module" crossorigin>' + r + "</script>"
+                    ? '<script type="module" crossorigin>' + r + "<\/script>"
                     : '<script type="module" crossorigin src="' +
                       e +
-                      '"></script>'),
+                      '"><\/script>'),
                     t.write(
                       goog.TRUSTED_TYPES_POLICY_
                         ? goog.TRUSTED_TYPES_POLICY_.createHTML(e)
@@ -3527,7 +3527,7 @@
                             goog.protectScriptTag_(
                               'goog.Dependency.callback_("' + t + '");',
                             ) +
-                            "</script>";
+                            "<\/script>";
                         e.write(
                           goog.TRUSTED_TYPES_POLICY_
                             ? goog.TRUSTED_TYPES_POLICY_.createHTML(n)
@@ -9222,35 +9222,39 @@
           return this.readSignedVarint32();
         }),
         (jspb.BinaryDecoder.prototype.readString = function (e) {
-          var t = this.bytes_,
-            r = this.cursor_;
-          e = r + e;
-          for (var n = [], o = ""; r < e; ) {
-            var i = t[r++];
-            if (128 > i) n.push(i);
+          for (
+            var t = this.bytes_, r = this.cursor_, n = r + e, o = [], i = "";
+            r < n;
+          ) {
+            var s = t[r++];
+            if (s < 128) o.push(s);
             else {
-              if (192 > i) continue;
-              if (224 > i) {
-                var s = t[r++];
-                n.push(((31 & i) << 6) | (63 & s));
-              } else if (240 > i) {
-                s = t[r++];
+              if (s < 192) continue;
+              if (s < 224) {
+                if (n - r < 1) break;
                 var a = t[r++];
-                n.push(((15 & i) << 12) | ((63 & s) << 6) | (63 & a));
-              } else if (248 > i) {
-                (i =
-                  ((7 & i) << 18) |
-                  ((63 & (s = t[r++])) << 12) |
-                  ((63 & (a = t[r++])) << 6) |
-                  (63 & t[r++])),
-                  (i -= 65536),
-                  n.push(55296 + ((i >> 10) & 1023), 56320 + (1023 & i));
+                o.push(((31 & s) << 6) | (63 & a));
+              } else if (s < 240) {
+                if (n - r < 2) break;
+                a = t[r++];
+                var l = t[r++];
+                o.push(((15 & s) << 12) | ((63 & a) << 6) | (63 & l));
+              } else if (s < 248) {
+                if (n - r < 3) break;
+                var u =
+                    ((7 & s) << 18) |
+                    ((63 & (a = t[r++])) << 12) |
+                    ((63 & (l = t[r++])) << 6) |
+                    (63 & t[r++]),
+                  c = 56320 + (1023 & (u -= 65536)),
+                  g = 55296 + ((u >> 10) & 1023);
+                o.push(g, c);
               }
             }
-            8192 <= n.length &&
-              ((o += String.fromCharCode.apply(null, n)), (n.length = 0));
+            o.length >= 8192 &&
+              ((i += String.fromCharCode.apply(null, o)), (o.length = 0));
           }
-          return (o += goog.crypt.byteArrayToString(n)), (this.cursor_ = r), o;
+          return (i += goog.crypt.byteArrayToString(o)), (this.cursor_ = n), i;
         }),
         (jspb.BinaryDecoder.prototype.readStringWithLength = function () {
           var e = this.readUnsignedVarint32();
@@ -25016,7 +25020,7 @@
                         break;
                       case "script":
                         ((e = o.createElement("div")).innerHTML =
-                          "<script></script>"),
+                          "<script><\/script>"),
                           (e = e.removeChild(e.firstChild));
                         break;
                       case "select":
@@ -35304,7 +35308,7 @@
           ),
           {},
         ).exports;
-      } catch (e) {}
+      } catch {}
       function o(e, t, r) {
         (this.low = 0 | e), (this.high = 0 | t), (this.unsigned = !!r);
       }
@@ -35448,6 +35452,15 @@
             t--
           );
           return 0 != this.high ? t + 33 : t + 1;
+        }),
+        (j.isSafeInteger = function () {
+          var e = this.high >> 21;
+          return (
+            !e ||
+            (!this.unsigned &&
+              -1 === e &&
+              !(0 === this.low && -2097152 === this.high))
+          );
         }),
         (j.isZero = function () {
           return 0 === this.high && 0 === this.low;
@@ -35860,7 +35873,26 @@
             (e[0] << 24) | (e[1] << 16) | (e[2] << 8) | e[3],
             t,
           );
-        });
+        }),
+        "function" == typeof BigInt &&
+          ((o.fromBigInt = function (e, t) {
+            return g(
+              Number(BigInt.asIntN(32, e)),
+              Number(BigInt.asIntN(32, e >> BigInt(32))),
+              t,
+            );
+          }),
+          (o.fromValue = function (e, t) {
+            return "bigint" == typeof e ? o.fromBigInt(e, t) : d(e, t);
+          }),
+          (j.toBigInt = function () {
+            var e = BigInt(this.low >>> 0);
+            return (
+              (BigInt(this.unsigned ? this.high >>> 0 : this.high) <<
+                BigInt(32)) |
+              e
+            );
+          }));
       const R = o;
     },
     68841: (e, t, r) => {

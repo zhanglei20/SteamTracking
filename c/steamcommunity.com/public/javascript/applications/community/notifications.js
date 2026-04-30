@@ -454,7 +454,7 @@
       }
       function _(_) {
         const { filterOptions: _ } = _,
-          { filters: __webpack_require__ } = _();
+          { filters: _ } = _();
         return 3 == _.type
           ? (0, _.jsx)(_, {
               filterOptions: _,
@@ -510,7 +510,7 @@
         });
       }
       function _(_) {
-        const { expanded: _, children: __webpack_require__ } = _,
+        const { expanded: _, children: _ } = _,
           [_, _] = (0, _.useState)(void 0),
           _ = (0, _._)((_) => {
             const _ = _.target;
@@ -523,12 +523,12 @@
           },
           children: (0, _.jsx)("div", {
             ref: _,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
       function _(_) {
-        const { filterOptions: _, checked: __webpack_require__ } = _,
+        const { filterOptions: _, checked: _ } = _,
           _ = (function () {
             const _ = (0, _._)();
             return _.useMemo(() => {
@@ -555,7 +555,7 @@
               {
                 className: _().FilterCheckbox,
                 label: _.display,
-                checked: __webpack_require__,
+                checked: _,
                 onChange: (_) => {
                   _.SetFilter(_.type, _);
                 },
@@ -564,12 +564,9 @@
             ),
             _ &&
               (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().CommentFilterCtn,
-                  __webpack_require__ && _().Expanded,
-                ),
+                className: (0, _._)(_().CommentFilterCtn, _ && _().Expanded),
                 children: (0, _.jsx)(_, {
-                  expanded: __webpack_require__,
+                  expanded: _,
                   children: (0, _.jsx)("div", {
                     className: _().CommentFilters,
                     children:
@@ -592,7 +589,7 @@
       function _(_) {
         const { rollup: _ } = _;
         (0, _._)(() => _.item.hidden);
-        const [__webpack_require__, _] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)(
             (0, _.useCallback)((_) => {
               _.isIntersecting && _(!0);
@@ -618,7 +615,7 @@
               children: (0, _.jsx)(_, {
                 ref: _,
                 children:
-                  __webpack_require__ &&
+                  _ &&
                   (0, _.jsx)(_, {
                     rollup: _,
                     onNotificationClick: _,

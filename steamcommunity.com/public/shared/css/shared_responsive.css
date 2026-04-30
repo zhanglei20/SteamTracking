@@ -915,15 +915,6 @@ html.force_desktop body #footer_responsive_optin_spacer {
 	}
 }
 
-.responsive_fixonscroll_ctn  {
-	position: fixed;
-	left: 0;
-	right: 0;
-	background: #171a21;
-	box-shadow: 0 2px 4px 0 #000000;
-	z-index: 15;
-}
-
 .responsive_app_menu {
 	display: flex;
 	flex-direction: row;
@@ -958,17 +949,17 @@ html.force_desktop body #footer_responsive_optin_spacer {
 
 }
 
-	html.responsive.gamepad:not(.legacy_mobile) .responsive_scroll_snap_start {
+	html.responsive.GamepadMode:not(.legacy_mobile) .responsive_scroll_snap_start {
 		scroll-snap-align: start;
 		scroll-snap-stop: always;
 	}
 
-	html.responsive.gamepad:not(.legacy_mobile) .responsive_scroll_snap_ctn {
+	html.responsive.GamepadMode:not(.legacy_mobile) .responsive_scroll_snap_ctn {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
 	}
 
-	html.responsive.gamepad div.responsive_tab_baseline {
+	html.responsive.GamepadMode div.responsive_tab_baseline {
         display: none;
     }
 

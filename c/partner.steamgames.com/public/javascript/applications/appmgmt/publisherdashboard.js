@@ -261,7 +261,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef((_, _) => {
         const {
-          title: __webpack_require__,
+          title: _,
           count: _,
           description: _,
           children: _,
@@ -278,7 +278,7 @@
                 (0, _.jsxs)("div", {
                   className: _.Title,
                   children: [
-                    __webpack_require__,
+                    _,
                     null != _ &&
                       (0, _.jsx)("span", {
                         className: _.Count,
@@ -325,7 +325,7 @@
       function _(_) {
         const {
             now: _,
-            viewDate: __webpack_require__,
+            viewDate: _,
             events: _,
             filterVisibleEventIds: _,
             bShowPreceedingWeeks: _,
@@ -337,7 +337,7 @@
           } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_, (_) => (0, _._)(_.startDate)),
-          _ = (0, _._)(__webpack_require__, -__webpack_require__.getDay()),
+          _ = (0, _._)(_, -__webpack_require__.getDay()),
           _ = new Date(
             __webpack_require__.getFullYear(),
             __webpack_require__.getMonth() + 1,
@@ -406,8 +406,8 @@
               _ = __webpack_require__.getMonth() === _.getMonth(),
               _ =
                 __webpack_require__.getMonth() === _.getMonth() ||
-                (_ && _ <= __webpack_require__) ||
-                (_ && _ >= __webpack_require__),
+                (_ && _ <= _) ||
+                (_ && _ >= _),
               _ = _.getTime() === _.getTime(),
               _ = _.get(Math.floor(_.getTime() / 1e3))?.sort(_),
               _ = _?.every((_) => _.has(_._)),
@@ -459,13 +459,8 @@
         });
       }
       function _(_) {
-        const {
-          date: _,
-          daysEvents: __webpack_require__,
-          tooltipDateFormat: _,
-          children: _,
-        } = _;
-        if (!__webpack_require__)
+        const { date: _, daysEvents: _, tooltipDateFormat: _, children: _ } = _;
+        if (!_)
           return (0, _.jsx)(_.Fragment, {
             children: _,
           });
@@ -1823,7 +1818,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { app: _ } = _,
-          [__webpack_require__] = (0, _._)(_.appid, 0, {
+          [_] = (0, _._)(_.appid, 0, {
             include_assets: !0,
             include_release: !0,
           }),
@@ -1832,7 +1827,7 @@
           children: [
             (0, _.jsx)(_, {
               app: _,
-              storeItem: __webpack_require__,
+              storeItem: _,
               hasStoreItem: _,
             }),
             (0, _.jsx)(_, {
@@ -1843,7 +1838,7 @@
         });
       }
       function _(_) {
-        const { app: _, storeItem: __webpack_require__, hasStoreItem: _ } = _,
+        const { app: _, storeItem: _, hasStoreItem: _ } = _,
           _ = _._.PARTNER_BASE_URL + "apps/landing/" + _.appid,
           _ = _ ? __webpack_require__.GetName() : _.name,
           _ = __webpack_require__?.GetAssets().GetHeaderURL();
@@ -1937,8 +1932,8 @@
           : (0, _._)("#App_Landing_UnsetReleaseDate");
       }
       function _(_) {
-        const { app: _, hasStoreItem: __webpack_require__ } = _,
-          _ = (0, _._)(_.releasestate, __webpack_require__),
+        const { app: _, hasStoreItem: _ } = _,
+          _ = (0, _._)(_.releasestate, _),
           _ = (0, _._)(
             _.ItemReleaseStatusText,
             "prerelease" == _.releasestate && _.Prerelease,
@@ -2190,7 +2185,7 @@
         m_plan;
         m_assetInput;
         m_optIn;
-        _;
+        id;
         title;
         startDate;
         endDate;
@@ -3136,7 +3131,7 @@
       function _(_) {
         const {
           eventName: _,
-          eventDescription: __webpack_require__,
+          eventDescription: _,
           eventUrl: _,
           startTime: _,
           endTime: _,
@@ -3170,7 +3165,7 @@
                     }),
                   ],
                 }),
-                __webpack_require__,
+                _,
                 _?.length > 0 &&
                   (0, _.jsx)("div", {
                     className: _.ItemWarning,
@@ -3264,7 +3259,7 @@
       function _(_) {
         const {
             eventData: _,
-            eventUrl: __webpack_require__,
+            eventUrl: _,
             optIn: _,
             invitedAndRegisteredApps: _,
           } = _,
@@ -3373,7 +3368,7 @@
                     ],
                   }),
                 (0, _.jsx)(_._, {
-                  url: __webpack_require__,
+                  url: _,
                   children: _
                     ? (0, _._)(
                         "#Dashboard_UpcomingEvents_Events_OptIn_Button_EligibleGames",
@@ -3395,12 +3390,7 @@
         var _, _;
       }
       function _(_) {
-        const {
-          text: _,
-          count: __webpack_require__,
-          tooltip: _,
-          hidden: _,
-        } = _;
+        const { text: _, count: _, tooltip: _, hidden: _ } = _;
         return (0, _.jsx)(_._, {
           toolTipContent: _,
           children: (0, _.jsxs)("div", {
@@ -3412,7 +3402,7 @@
               }),
               (0, _.jsx)("div", {
                 className: _.StatusItemBoxText,
-                children: __webpack_require__,
+                children: _,
               }),
             ],
           }),
@@ -3451,14 +3441,14 @@
       function _(_) {
         const {
             eventData: _,
-            appId: __webpack_require__,
+            appId: _,
             registerByDate: _,
             registrationType: _,
           } = _,
           _ = (0, _._)(_._.LANGUAGE),
           _ = _.m_plan,
           _ = _.m_optIn,
-          [_] = (0, _._)(__webpack_require__, 0, {
+          [_] = (0, _._)(_, 0, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -3475,11 +3465,9 @@
               ? _
               : _.format(new Date(1e3 * _?.description.start_date)),
           _ = _.useMemo(() => {
-            const _ = _.m_optIn.rgRegisteredApps.find(
-              (_) => _.appid == __webpack_require__,
-            );
+            const _ = _.m_optIn.rgRegisteredApps.find((_) => _.appid == _);
             return _ ? [_] : [];
-          }, [_.m_optIn.rgRegisteredApps, __webpack_require__]),
+          }, [_.m_optIn.rgRegisteredApps, _]),
           _ = _?.length > 0,
           _ = _.discount_event_id
             ? `${_._.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_.discount_event_id}`
@@ -3882,7 +3870,7 @@
         }
       }
       function _(_) {
-        const { deadline: _, json: __webpack_require__ } = _,
+        const { deadline: _, json: _ } = _,
           _ = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
             day: "numeric",
@@ -3890,7 +3878,7 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
-              children: ["Name: ", __webpack_require__.name],
+              children: ["Name: ", _.name],
             }),
             (0, _.jsxs)("div", {
               children: ["Due date: ", _],
@@ -3900,13 +3888,9 @@
       }
       function _(_) {
         const { deadline: _ } = _,
-          [__webpack_require__] = (0, _._)(
-            _?.store_item_id,
-            _?.store_item_type,
-            {
-              include_assets: !0,
-            },
-          ),
+          [_] = (0, _._)(_?.store_item_id, _?.store_item_type, {
+            include_assets: !0,
+          }),
           _ = `${_._.PARTNER_BASE_URL}promotion/dailydeals/invite/${_.gid}`,
           _ = (0, _._)(_?.due_date, !0);
         return (0, _.jsx)(_, {
@@ -3924,13 +3908,9 @@
       }
       function _(_) {
         const { deadline: _ } = _,
-          [__webpack_require__] = (0, _._)(
-            _?.store_item_id,
-            _?.store_item_type,
-            {
-              include_assets: !0,
-            },
-          ),
+          [_] = (0, _._)(_?.store_item_id, _?.store_item_type, {
+            include_assets: !0,
+          }),
           _ = `${_._.PARTNER_BASE_URL}promotion/assetportal/request/${_.gid}`,
           _ = (0, _._)(_?.due_date, !0);
         return (0, _.jsx)(_, {
@@ -3949,9 +3929,9 @@
         });
       }
       function _(_) {
-        const { deadline: _, json: __webpack_require__ } = _,
-          _ = _(__webpack_require__.opt_in_name),
-          _ = `${_._.PARTNER_BASE_URL}optin/sale/${__webpack_require__.opt_in_name.replace("sale_", "")}`;
+        const { deadline: _, json: _ } = _,
+          _ = _(_.opt_in_name),
+          _ = `${_._.PARTNER_BASE_URL}optin/sale/${_.opt_in_name.replace("sale_", "")}`;
         return _
           ? (0, _.jsx)(_, {
               title: _.description.definition.event_title[_._.LANGUAGE],
@@ -3966,8 +3946,8 @@
           : null;
       }
       function _(_) {
-        const { deadline: _, json: __webpack_require__ } = _,
-          _ = _(__webpack_require__.opt_in_name),
+        const { deadline: _, json: _ } = _,
+          _ = _(_.opt_in_name),
           [_] = (0, _._)(_?.store_item_id, _?.store_item_type, {
             include_assets: !0,
           });
@@ -3996,7 +3976,7 @@
         include_assets: !0,
       };
       function _(_) {
-        const { deadline: _, json: __webpack_require__ } = _,
+        const { deadline: _, json: _ } = _,
           [_] = (0, _._)(_.store_item_id, _),
           _ = (0, _._)(_.store_item_id),
           _ = _?.find((_) => _.milestone_id == Number.parseInt(_.gid)),
@@ -4027,7 +4007,7 @@
         });
       }
       function _(_) {
-        const { deadline: _, json: __webpack_require__ } = _,
+        const { deadline: _, json: _ } = _,
           _ = (0, _._)(_?.due_date, !0),
           _ = `${_._.PARTNER_BASE_URL}taxrequirement/view/${_.partnerid}/${_.gid}`,
           _ = (function () {
@@ -4082,7 +4062,7 @@
             default:
               return "";
           }
-        })(__webpack_require__?.TemplateName, _);
+        })(_?.TemplateName, _);
         return (
           _ ||
             (_ +=
@@ -4091,7 +4071,7 @@
                 "#PartnerDeadline_TaxRequirement_ActualAuthorityRequired",
               )),
           (0, _.jsx)(_, {
-            title: _(__webpack_require__?.TemplateName),
+            title: _(_?.TemplateName),
             body: _,
             rightCol: (0, _.jsx)(_._, {
               url: _,
@@ -4105,7 +4085,7 @@
       function _(_) {
         const {
           imageUrl: _,
-          title: __webpack_require__,
+          title: _,
           body: _,
           imageTooltip: _,
           url: _,
@@ -4124,7 +4104,7 @@
               hasImage: !!_,
               children: [
                 (0, _.jsx)(_._, {
-                  text: __webpack_require__,
+                  text: _,
                 }),
                 (0, _.jsx)("div", {
                   className: _ ? _.DeadlineWarningUrgent : _.DeadlineWarning,
@@ -4177,21 +4157,21 @@
         );
       }
       function _(_) {
-        const { deal: _, partnerId: __webpack_require__ } = _;
+        const { deal: _, partnerId: _ } = _;
         return _(new Date(), _)
           ? (0, _.jsx)(_, {
               deal: _,
-              partnerId: __webpack_require__,
+              partnerId: _,
             })
           : (0, _.jsx)(_, {
-              partnerId: __webpack_require__,
+              partnerId: _,
               deal: _,
             });
       }
       function _(_) {
-        const { partnerId: _, deal: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__.store_item_type),
-          [_] = (0, _._)(__webpack_require__.store_item_id, _, {
+        const { partnerId: _, deal: _ } = _,
+          _ = (0, _._)(_.store_item_type),
+          [_] = (0, _._)(_.store_item_id, _, {
             include_assets: !0,
           }),
           _ = _?.GetAssets().GetHeaderURL();
@@ -4203,44 +4183,38 @@
             : 1 == _ &&
               _ &&
               (_ = _._.PARTNER_BASE_URL + "store/packagelanding/" + _.GetID());
-        const _ = __webpack_require__.rtime32_start_time + 82800,
+        const _ = _.rtime32_start_time + 82800,
           {
             nDiscountPercentHigh: _,
             dtDiscountStart: _,
             dtDiscountEnd: _,
-          } = (0, _._)(__webpack_require__),
-          _ = _.useMemo(
-            () => (0, _._)(__webpack_require__, _),
-            [__webpack_require__, _],
-          ),
-          _ = (0, _._)(__webpack_require__),
+          } = (0, _._)(_),
+          _ = _.useMemo(() => (0, _._)(_, _), [_, _]),
+          _ = (0, _._)(_),
           _ = _ > 0,
           _ = _ >= _._.DealReady,
           _ = _
             ? (0, _._)("#Dashboard_UpcomingEvents_DailyDeal_ReadyToGo")
             : "",
-          _ = (0, _._)(
-            _?.toString(),
-            __webpack_require__.discount_event_id?.toString(),
-          ),
+          _ = (0, _._)(_?.toString(), _.discount_event_id?.toString()),
           _ = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
             day: "numeric",
-          }).format(new Date(1e3 * __webpack_require__.rtime32_start_time)),
-          _ = (0, _._)(__webpack_require__);
+          }).format(new Date(1e3 * _.rtime32_start_time)),
+          _ = (0, _._)(_);
         return (0, _.jsxs)(_._, {
           hasImage: !!_,
           children: [
             (0, _.jsx)(_._, {
               imageUrl: _,
               url: _,
-              tooltip: __webpack_require__.store_item_name,
+              tooltip: _.store_item_name,
             }),
             (0, _.jsxs)(_._, {
               hasImage: !!_,
               children: [
                 (0, _.jsx)(_._, {
-                  text: __webpack_require__.store_item_name,
+                  text: _.store_item_name,
                 }),
                 (0, _.jsxs)("div", {
                   children: [
@@ -4251,7 +4225,7 @@
                       ),
                     }),
                     (0, _.jsx)(_._, {
-                      startTimestamp: __webpack_require__.rtime32_start_time,
+                      startTimestamp: _.rtime32_start_time,
                       endTimestamp: _,
                     }),
                   ],
@@ -4288,7 +4262,7 @@
                       "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
                     ),
                     status: (0, _.jsx)(_._, {
-                      oDailyDeal: __webpack_require__,
+                      oDailyDeal: _,
                     }),
                     actionStatus: (0, _._)(
                       "#Dashboard_UpcomingEvents_DailyDeal_EditDiscount",
@@ -4360,15 +4334,15 @@
         );
       }
       function _(_) {
-        const { deal: _, partnerId: __webpack_require__ } = _,
+        const { deal: _, partnerId: _ } = _,
           [_, _] = (0, _._)(_?.store_item_id, (0, _._)(_?.store_item_type), {
             include_assets: !0,
           }),
-          _ = (0, _._)(__webpack_require__, _?.gid ? [_.gid] : []),
+          _ = (0, _._)(_, _?.gid ? [_.gid] : []),
           _ = _?.get(_.gid),
           _ = !_ || !_ || 1 == _;
         if (_.cancelled || _.deleted) return null;
-        const _ = `${_._.PARTNER_BASE_URL}promotion/dailydeals/dashboard/${__webpack_require__}`;
+        const _ = `${_._.PARTNER_BASE_URL}promotion/dailydeals/dashboard/${_}`;
         let _;
         return (
           (_ = _?.GetAssets().GetHeaderURL()
@@ -4741,9 +4715,9 @@
       var _ = __webpack_require__("chunkid");
       const _ = new Date(Date.UTC(2024, 10, 15, 17, 0, 0));
       function _(_) {
-        const { apps: _, partnerId: __webpack_require__ } = _,
+        const { apps: _, partnerId: _ } = _,
           _ = `${_._.PARTNER_BASE_URL}doc/gettingstarted/contentsurvey/germany`,
-          _ = `${_._.PARTNER_BASE_URL}recommended_actions/missingratingforgermany/?partnerid=${__webpack_require__}`,
+          _ = `${_._.PARTNER_BASE_URL}recommended_actions/missingratingforgermany/?partnerid=${_}`,
           _ = new Intl.DateTimeFormat(navigator.language, {
             month: "long",
             day: "numeric",
@@ -4863,7 +4837,7 @@
         );
         return _.useMemo(() => {
           if (!_) return [];
-          const { setRegistrations: _, mapEvents: __webpack_require__ } = _,
+          const { setRegistrations: _, mapEvents: _ } = _,
             _ = (0, _._)(_._.LANGUAGE);
           return (
             Array.from(__webpack_require__.values()).map((_) => {
@@ -4893,9 +4867,9 @@
         }, [_]);
       }
       function _(_) {
-        const { eventModel: _, registered: __webpack_require__ } = _,
+        const { eventModel: _, registered: _ } = _,
           _ = (0, _._)(_._.LANGUAGE),
-          _ = __webpack_require__
+          _ = _
             ? _.GetNameWithFallback(_)
             : (0, _._)(
                 "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Title",
@@ -4927,7 +4901,7 @@
                   (0, _.jsx)("div", {
                     children: _.GetSummaryWithFallback(_),
                   }),
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsxs)("div", {
                       className: _.YoureRegistered,
                       children: [
@@ -4943,7 +4917,7 @@
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
                 url: _,
-                children: __webpack_require__
+                children: _
                   ? (0, _._)(
                       "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Button_EditRegistration",
                     )
@@ -5383,7 +5357,7 @@
         });
       }
       function _(_) {
-        const { partnerId: _, testData: __webpack_require__ } = _,
+        const { partnerId: _, testData: _ } = _,
           [_] = (0, _._)("expanded", !1),
           [_, _] = _.useState(!!_),
           _ = _.useCallback((_) => {
@@ -5412,12 +5386,7 @@
           ),
           [_, _] = _.useState(0),
           _ = _(),
-          { rgShownEvents: _, nShouldBeShownCount: _ } = _(
-            _,
-            _,
-            _,
-            __webpack_require__,
-          ),
+          { rgShownEvents: _, nShouldBeShownCount: _ } = _(_, _, _, _),
           _ = (function (_, _, _, _, _, _) {
             const _ = _();
             return (
@@ -5633,7 +5602,7 @@
         return _ > _.endDate;
       }
       function _(_) {
-        const { filterText: _, setFilterText: __webpack_require__ } = _;
+        const { filterText: _, setFilterText: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.FilterTextArea,
           children: [
@@ -5659,7 +5628,7 @@
         });
       }
       function _(_) {
-        const { filterType: _, setFilterType: __webpack_require__ } = _,
+        const { filterType: _, setFilterType: _ } = _,
           _ = _.useMemo(
             () => [
               {
@@ -5700,11 +5669,7 @@
         });
       }
       function _(_) {
-        const {
-            partnerId: _,
-            showWarnings: __webpack_require__,
-            testData: _,
-          } = _,
+        const { partnerId: _, showWarnings: _, testData: _ } = _,
           _ = _.useMemo(() => new Date(), []),
           _ = _.useMemo(() => new _(), []),
           _ = _.useMemo(
@@ -5719,12 +5684,12 @@
           _ = _.useMemo(
             () => ({
               now: _,
-              bShowWarnings: __webpack_require__,
+              bShowWarnings: _,
               bExpanded: !0,
               additionalEventStore: _,
               setManageDiscountsAppIDs: _,
             }),
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           ),
           { rgShownEvents: _ } = _(_, _, 0, _),
           _ = _.useMemo(
@@ -5754,7 +5719,7 @@
       function _(_) {
         const {
             events: _,
-            filterVisibleEventIds: __webpack_require__,
+            filterVisibleEventIds: _,
             dayRefsToScrollTo: _,
             fnScrollToDay: _,
             filterEnabled: _,
@@ -5813,7 +5778,7 @@
                     {
                       date: new Date(1e3 * _),
                       events: _,
-                      filterVisibleEventIds: __webpack_require__,
+                      filterVisibleEventIds: _,
                       dayRefsToScrollTo: _,
                       fnScrollToDay: _,
                       firstMonth: 0 == _,
@@ -5826,7 +5791,7 @@
                     `${"normal" != _ ? _ + "_" : ""}${_}`,
                   )
                 : void 0,
-            [_, _.length, __webpack_require__, _, _, _],
+            [_, _.length, _, _, _, _],
           ),
           _ = _.useCallback(
             (_, _, _) =>
@@ -5905,7 +5870,7 @@
       function _(_) {
         const {
             date: _,
-            events: __webpack_require__,
+            events: _,
             eventTimeGroup: _,
             filterVisibleEventIds: _,
             dayRefsToScrollTo: _,
@@ -5930,11 +5895,8 @@
             [_, _],
           ),
           _ = _.useMemo(
-            () =>
-              Array.from(
-                (0, _._)(__webpack_require__, (_) => (0, _._)(_.startDate)),
-              ).sort(_),
-            [__webpack_require__],
+            () => Array.from((0, _._)(_, (_) => (0, _._)(_.startDate))).sort(_),
+            [_],
           ),
           _ = _.useRef(void 0),
           _ = _.useMemo(
@@ -5968,10 +5930,7 @@
               ),
             [_, _, _, _],
           ),
-          _ = _.useMemo(
-            () => __webpack_require__.map((_) => [_, _(_)]),
-            [__webpack_require__],
-          ),
+          _ = _.useMemo(() => __webpack_require__.map((_) => [_, _(_)]), [_]),
           _ = _.useMemo(
             () => _.reduce((_, _) => _.set(_[1], _[0]), new Map()),
             [_],
@@ -6012,7 +5971,7 @@
         return (0, _.jsxs)("div", {
           className: _.ListMonthContainer,
           children: [
-            __webpack_require__.length > 0 &&
+            _.length > 0 &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsxs)("div", {
@@ -6080,7 +6039,7 @@
                   }),
                 ],
               }),
-            0 == __webpack_require__.length &&
+            0 == _.length &&
               (0, _.jsx)("div", {
                 className: _.EmptyMonth,
                 children: (0, _._)(
@@ -6120,7 +6079,7 @@
       function _(_) {
         const {
             events: _,
-            showHeader: __webpack_require__,
+            showHeader: _,
             showDateInHeader: _,
             refScrollTo: _,
             setHoverEvent: _,
@@ -6132,11 +6091,11 @@
               return _.set(_, [..._, _]), _;
             }, new Map());
             for (const _ of _.values()) _.sort(_);
-            return Array.from(_).sort(([_, _], [__webpack_require__, _]) =>
+            return Array.from(_).sort(([_, _], [_, _]) =>
               (_[0].eventTypeSortWeight ?? 0) != (_[0].eventTypeSortWeight ?? 0)
                 ? (_[0].eventTypeSortWeight ?? 0) -
                   (_[0].eventTypeSortWeight ?? 0)
-                : _.localeCompare(__webpack_require__),
+                : _.localeCompare(_),
             );
           }, [_]),
           _ = _.useMemo(
@@ -6146,7 +6105,7 @@
                   _,
                   {
                     events: _,
-                    showHeader: __webpack_require__,
+                    showHeader: _,
                     showDateInHeader: _,
                     refScrollTo: _,
                     setHoverEvent: _,
@@ -6154,7 +6113,7 @@
                   _,
                 ),
               ),
-            [_, _, _, __webpack_require__, _],
+            [_, _, _, _, _],
           );
         return (0, _.jsx)("div", {
           ref: _,
@@ -6165,7 +6124,7 @@
       function _(_) {
         const {
             events: _,
-            showHeader: __webpack_require__,
+            showHeader: _,
             showDateInHeader: _,
             refScrollTo: _,
             setHoverEvent: _,
@@ -6178,13 +6137,13 @@
                   {
                     event: _,
                     setHoverEvent: _,
-                    showHeader: __webpack_require__ && 0 == _,
+                    showHeader: _ && 0 == _,
                     showDateInHeader: _,
                   },
                   _._,
                 ),
               ),
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           );
         return (0, _.jsx)("div", {
           ref: _,
@@ -6195,7 +6154,7 @@
       function _(_) {
         const {
             event: _,
-            showHeader: __webpack_require__,
+            showHeader: _,
             showDateInHeader: _,
             setHoverEvent: _,
           } = _,
@@ -6252,7 +6211,7 @@
             onPointerEnter: () => _(_),
             onPointerLeave: () => _(void 0),
             children: [
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsxs)("div", {
                   className: _.ListEventHeader,
                   children: [
@@ -6362,12 +6321,7 @@
         );
       }
       function _(_) {
-        const {
-            text: _,
-            events: __webpack_require__,
-            expanded: _,
-            setExpanded: _,
-          } = _,
+        const { text: _, events: _, expanded: _, setExpanded: _ } = _,
           _ = __webpack_require__.slice(0, 4).map((_) => ({
             event: _,
             element: _.getCapsuleElement?.(),
@@ -6496,9 +6450,6 @@
           { data: _ } = (0, _._)({
             appid: _,
           }),
-          { data: _ } = (0, _._)({
-            appid: _,
-          }),
           _ = _._.PARTNER_BASE_URL + "apps/landing/" + _,
           _ = (function (_, _) {
             if (_?.asset_url_format && _[_])
@@ -6534,17 +6485,27 @@
                   children: _.name,
                 }),
               }),
-            (0, _.jsxs)("div", {
-              className: _.AppLabels,
-              children: [
-                (0, _.jsx)(_, {
-                  appType: _.type,
-                }),
-                (0, _.jsx)(_, {
-                  releaseState: _.releasestate,
-                  hasStoreItem: _?.visible,
-                }),
-              ],
+            (0, _.jsx)(_, {
+              app: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { app: _ } = _,
+          _ = _.appid,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        return (0, _.jsxs)("div", {
+          className: _.AppLabels,
+          children: [
+            (0, _.jsx)(_, {
+              appType: _.type,
+            }),
+            (0, _.jsx)(_, {
+              releaseState: _.releasestate,
+              hasStoreItem: _?.visible,
             }),
           ],
         });
@@ -6574,8 +6535,8 @@
         );
       }
       function _(_) {
-        const { releaseState: _, hasStoreItem: __webpack_require__ } = _,
-          _ = (0, _._)(_, __webpack_require__);
+        const { releaseState: _, hasStoreItem: _ } = _,
+          _ = (0, _._)(_, _);
         return (
           "released" != _ &&
           (0, _.jsx)("div", {
@@ -6808,7 +6769,7 @@
       function _(_) {
         const {
           title: _,
-          image: __webpack_require__,
+          image: _,
           description: _,
           details: _,
           priority: _,
@@ -6823,7 +6784,7 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _.Image,
-                  children: __webpack_require__,
+                  children: _,
                 }),
                 (0, _.jsxs)("div", {
                   className: _.Body,

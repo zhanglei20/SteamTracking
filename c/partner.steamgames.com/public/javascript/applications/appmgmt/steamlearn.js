@@ -1228,6 +1228,21 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  quantize_size: {
+                    _: 21,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  quantize_min: {
+                    _: 22,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  quantize_max: {
+                    _: 23,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -7135,7 +7150,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3], null);
+            _.Message.initialize(this, _, 0, -1, [2, 3, 5], null);
         }
         static sm_m;
         static sm_mbf;
@@ -7158,6 +7173,12 @@
                   },
                   map_mappings: {
                     _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  map_string_values: {
+                    _: 5,
                     _: _,
                     _: !0,
                     _: !0,
@@ -7226,6 +7247,11 @@
                     _: 1,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  value_string: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                   mapping: {
                     _: 2,
@@ -7403,6 +7429,70 @@
         }
         getClassName() {
           return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapMappingsEntry";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.key || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  key: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  value: {
+                    _: 2,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapStringValuesEntry";
         }
       }
       class _ extends _.Message {
@@ -15364,23 +15454,6 @@
           __webpack_require__.Body().result()
         );
       }
-      async function _(_, _, _, _) {
-        let _ = _._.Init(_);
-        _.Body().set_project_id(_),
-          _.Body().set_published_version(_),
-          _.Body().set_train_id(_),
-          _.Body().set_from_scheduled(!1),
-          _.Body().set_deactivate(_);
-        const _ = await _.SetTrainLive(_.Get().GetServiceTransport(), _);
-        return (
-          _ &&
-            1 == _.GetEResult() &&
-            _._.invalidateQueries({
-              queryKey: [_, _],
-            }),
-          _.Body().result()
-        );
-      }
       async function _(_, _) {
         await _(_, 0, _, _(_, _)),
           await _._.invalidateQueries({
@@ -16322,20 +16395,16 @@
             _.push(_.SteamLearnProjectTrain(_, _)),
           _(_.pathname, [_.SteamLearnProjectTrainStatus(void 0, void 0)]) &&
             _.push(_.SteamLearnProjectTrainStatus(_, _)),
-          _(_.pathname, [_.SteamLearnProjectTrainStatusNew(void 0, void 0)]) &&
-            _.push(_.SteamLearnProjectTrainStatusNew(_, _)),
           _(_.pathname, [_.SteamLearnProjectInferenceTester(void 0, void 0)]) &&
             _.push(_.SteamLearnProjectInferenceTester(_, _));
       }
       const _ = (_) => {
           const {
               nProjectID: _,
-              arrOtherPublishedVersions: __webpack_require__,
+              arrOtherPublishedVersions: _,
               msgProjectConfig: _,
             } = _(),
-            [_, _] = _.useState(
-              __webpack_require__.length > 0 ? __webpack_require__[0] : 0,
-            ),
+            [_, _] = _.useState(_.length > 0 ? _[0] : 0),
             [_, _] = _.useState(!1),
             _ = async (_) => {
               _(!0),
@@ -16394,10 +16463,7 @@
           });
         },
         _ = (_) => {
-          const {
-              msgProjectConfig: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgProjectConfig: _, msgWorkingProjectConfig: _ } = _(),
             [_, _] = _.useState(!1),
             [_, _] = _.useState(!1);
           _.useEffect(() => {
@@ -16409,7 +16475,7 @@
             showModifications: !0,
             arrayDiffMethod: "lcs",
           });
-          return _ && __webpack_require__
+          return _ && _
             ? (0, _.jsxs)(_._, {
                 active: _.bVisible,
                 onDismiss: _.fnClosePopup,
@@ -16629,7 +16695,7 @@
         _ = (_) => {
           const {
               nProjectID: _,
-              nPublishedVersion: __webpack_require__,
+              nPublishedVersion: _,
               msgProjectConfig: _,
               msgWorkingProjectConfig: _,
             } = _(),
@@ -16679,7 +16745,7 @@
                     "#SteamLearn_Project_Publish_Warning",
                   ),
                   onOK: async () => {
-                    const [__webpack_require__, _] = await (async function (_) {
+                    const [_, _] = await (async function (_) {
                       let _ = _._.Init(_);
                       _.Body().set_project_id(_);
                       const _ = await _.PublishProject(
@@ -16697,7 +16763,7 @@
                           ])
                         : [3, 0];
                     })(_);
-                    1 == __webpack_require__ &&
+                    1 == _ &&
                       (console.log("switching to version", _),
                       setTimeout(
                         () => _(_, _, _, _, _.arrMsgProjectConfigInfos),
@@ -16744,7 +16810,7 @@
                       _ &&
                         (0, _.jsx)("select", {
                           className: _.PublishedVersionInput,
-                          value: __webpack_require__,
+                          value: _,
                           onChange: (_) =>
                             _(
                               _,
@@ -16786,7 +16852,7 @@
               (0, _.jsxs)("div", {
                 className: _.StatusSection,
                 children: [
-                  (_ || 0 != __webpack_require__) &&
+                  (_ || 0 != _) &&
                     (0, _.jsx)(_._, {
                       disabled: !_ || _,
                       onClick: (_) =>
@@ -16796,7 +16862,7 @@
                       children: (0, _._)("#SteamLearn_Project_Save"),
                     }),
                   !_ &&
-                    0 == __webpack_require__ &&
+                    0 == _ &&
                     (0, _.jsx)(_._, {
                       disabled: _,
                       onClick: (_) => _(),
@@ -16818,7 +16884,7 @@
                     bVisible: _,
                     fnClosePopup: _,
                   }),
-                  0 == __webpack_require__ &&
+                  0 == _ &&
                     _ &&
                     _.length > 0 &&
                     !_ &&
@@ -16853,7 +16919,7 @@
       }
       const _ = () => {
         const [_, _] = _.useState(_.Hidden),
-          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(""),
           [_, _] = _.useState(0),
           _ = (0, _._)(),
           _ = new Date(),
@@ -16879,7 +16945,7 @@
                 (0, _.jsx)("input", {
                   type: "text",
                   className: _.ListFilter,
-                  value: __webpack_require__,
+                  value: _,
                   onChange: (_) => _(_.target.value),
                   placeholder: (0, _._)("#SteamLearn_FilterProject"),
                 }),
@@ -16924,7 +16990,7 @@
         _ = __webpack_require__("chunkid");
       const _ = () => {
           const [_, _] = _.useState(""),
-            [__webpack_require__, _] = _.useState(""),
+            [_, _] = _.useState(""),
             [_, _] = _.useState(!1);
           return (0, _.jsxs)("div", {
             className: _.ProjectCreatePage,
@@ -16954,7 +17020,7 @@
                   }),
                   (0, _.jsx)("textarea", {
                     className: _.InputAreaWide,
-                    value: __webpack_require__,
+                    value: _,
                     onChange: (_) => _(_.target.value),
                   }),
                 ],
@@ -16963,7 +17029,7 @@
                 disabled: !_,
                 onClick: async () => {
                   _(!1);
-                  const [_, _] = await _(_, __webpack_require__);
+                  const [_, _] = await _(_, _);
                   switch (_) {
                     case 1: {
                       const _ =
@@ -17037,7 +17103,7 @@
       })(_, 200);
       const _ = () => {
           const { msgWorkingProjectConfig: _, nPublishedVersion: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _(),
             _ = 0 == _,
             _ = (_) => {
@@ -17124,7 +17190,7 @@
                         ),
                       ),
                       (0, _.jsx)(_, {
-                        bShowPopup: __webpack_require__,
+                        bShowPopup: _,
                         fnSetShowPopup: _,
                         fnAddSelectedDataSources: (_) => {
                           for (const _ of _) _(_, _);
@@ -17192,7 +17258,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState([]),
+          const [_, _] = _.useState([]),
             _ = _(_.nDataSourceID),
             { msgWorkingProjectConfig: _ } = _();
           if (!_.isSuccess) return null;
@@ -17288,10 +17354,7 @@
           });
         },
         _ = (_) => {
-          const {
-              msgWorkingProjectConfig: _,
-              nPublishedVersion: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _, nPublishedVersion: _ } = _(),
             _ = _(
               _.rgSettings.nDataSourceID,
               _.rgSettings.arrDataElementUsagePathNames[0],
@@ -17316,6 +17379,12 @@
             [_, _] = _.useState(_?.min_range().toFixed(2)),
             [_, _] = _.useState(!0),
             [_, _] = _.useState(_?.max_range().toFixed(2)),
+            [_, _] = _.useState(!0),
+            [_, _] = _.useState(_?.quantize_min()?.toFixed(2) ?? "0.0"),
+            [_, _] = _.useState(!0),
+            [_, _] = _.useState(_?.quantize_max()?.toFixed(2) ?? "0.0"),
+            [_, _] = _.useState(!0),
+            [_, _] = _.useState(_?.quantize_size()?.toFixed(2) ?? "0.0"),
             [_, _] = _.useState(!0),
             [_, _] = _.useState(_?.std_dev().toFixed(2)),
             [_, _] = _.useState(!0),
@@ -17404,11 +17473,23 @@
                 (_ =
                   _(_, _.dropout_pct()?.toString() || "0", () =>
                     _.set_dropout_pct(parseInt(_)),
+                  ) || _),
+                (_ =
+                  _(_, _.quantize_min()?.toString() || "0", () =>
+                    _.set_quantize_min(parseFloat(_)),
+                  ) || _),
+                (_ =
+                  _(_, _.quantize_max()?.toString() || "0", () =>
+                    _.set_quantize_max(parseFloat(_)),
+                  ) || _),
+                (_ =
+                  _(_, _.quantize_size()?.toString() || "0", () =>
+                    _.set_quantize_size(parseFloat(_)),
                   ) || _));
             }),
               _ && _(_);
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
-          const _ = 0 == __webpack_require__,
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
+          const _ = 0 == _,
             _ = (_, _, _) => {
               _(_),
                 /^-?[\d]*\.?[\d]{0,2}$/.test(_)
@@ -17474,6 +17555,11 @@
                 _ = (0, _._)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_NormLogRange_Desc",
                 );
+                break;
+              case 7:
+                _ = (0, _._)(
+                  "#SteamLearn_Config_DataSource_Input_Preprocess_Quantize_Desc",
+                );
             }
           let _ = [
             {
@@ -17529,8 +17615,15 @@
                 ),
                 value: 5,
               },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_DataSource_Input_Preprocess_Quantize",
+                ),
+                value: 7,
+              },
             ],
             _ = 3 == _?.preprocessing_type() || 5 == _?.preprocessing_type(),
+            _ = 7 == _?.preprocessing_type(),
             _ = 4 == _?.preprocessing_type(),
             _ = 1 == _?.preprocessing_type(),
             _ = 6 == _?.preprocessing_type();
@@ -17720,6 +17813,75 @@
                               className: _.Label,
                               children: (0, _._)(
                                 "#SteamLearn_Config_DataSource_Input_Preprocess_StdDev",
+                              ),
+                            }),
+                            (0, _.jsx)("input", {
+                              type: "text",
+                              className: (0, _._)(
+                                _.ValueInput,
+                                !_ && _.Invalid,
+                              ),
+                              disabled: !1,
+                              value: _,
+                              onChange: (_) => _(_.target.value, _, _),
+                            }),
+                          ],
+                        }),
+                      _ &&
+                        0 != _.input() &&
+                        (0, _.jsxs)("div", {
+                          className: _.PreprocessingOptions,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.Label,
+                              children: (0, _._)(
+                                "#SteamLearn_Config_DataSource_Input_Preprocess_QuntizeSize",
+                              ),
+                            }),
+                            (0, _.jsx)("input", {
+                              type: "text",
+                              className: (0, _._)(
+                                _.ValueInput,
+                                !_ && _.Invalid,
+                              ),
+                              disabled: !1,
+                              value: _,
+                              onChange: (_) => _(_.target.value, _, _),
+                            }),
+                          ],
+                        }),
+                      _ &&
+                        0 != _.input() &&
+                        (0, _.jsxs)("div", {
+                          className: _.PreprocessingOptions,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.Label,
+                              children: (0, _._)(
+                                "#SteamLearn_Config_DataSource_Input_Preprocess_MinRange",
+                              ),
+                            }),
+                            (0, _.jsx)("input", {
+                              type: "text",
+                              className: (0, _._)(
+                                _.ValueInput,
+                                !_ && _.Invalid,
+                              ),
+                              disabled: !1,
+                              value: _,
+                              onChange: (_) => _(_.target.value, _, _),
+                            }),
+                          ],
+                        }),
+                      _ &&
+                        0 != _.input() &&
+                        (0, _.jsxs)("div", {
+                          className: _.PreprocessingOptions,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.Label,
+                              children: (0, _._)(
+                                "#SteamLearn_Config_DataSource_Input_Preprocess_MaxRange",
                               ),
                             }),
                             (0, _.jsx)("input", {
@@ -18054,7 +18216,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState([]);
+          const [_, _] = _.useState([]);
           _.useEffect(() => {
             _.bShowPopup || __webpack_require__([]);
           }, [_.bShowPopup]);
@@ -18184,7 +18346,7 @@
       }
       const _ = () => {
           const _ = _(),
-            [_, __webpack_require__] = _.useState(0),
+            [_, _] = _.useState(0),
             _ = _.data;
           if (!_) return null;
           let _ = new Map();
@@ -18337,7 +18499,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = () => {
         const { nProjectID: _, msgWorkingProjectConfig: _ } = _(),
-          [__webpack_require__, _] = _.useState({}),
+          [_, _] = _.useState({}),
           [_, _] = _.useState((0, _.jsx)("div", {})),
           [_, _] = _.useState("10"),
           [_, _] = _.useState(0),
@@ -18378,7 +18540,7 @@
                 [_.data_element_path()]: "0",
               }));
           }, [_]);
-        return 0 == Object.keys(__webpack_require__).length
+        return 0 == Object.keys(_).length
           ? null
           : (0, _.jsx)("div", {
               className: _.ProjectInferenceTesterPage,
@@ -18423,11 +18585,10 @@
                               (0, _.jsx)("input", {
                                 type: "text",
                                 className: _.ValueInput,
-                                value:
-                                  __webpack_require__[_.data_element_path()],
+                                value: _[_.data_element_path()],
                                 onChange: (_) =>
                                   _({
-                                    ...__webpack_require__,
+                                    ..._,
                                     [_.data_element_path()]: _.target.value,
                                   }),
                               }),
@@ -18503,14 +18664,10 @@
                           for (const _ of _) {
                             if (0 == _.input()) continue;
                             const _ = new _();
-                            isNaN(+__webpack_require__[_.data_element_path()])
-                              ? _.set_string_value(
-                                  __webpack_require__[_.data_element_path()],
-                                )
+                            isNaN(+_[_.data_element_path()])
+                              ? _.set_string_value(_[_.data_element_path()])
                               : _.set_float_value(
-                                  parseFloat(
-                                    __webpack_require__[_.data_element_path()],
-                                  ),
+                                  parseFloat(_[_.data_element_path()]),
                                 ),
                               _.Body().add_data(_);
                           }
@@ -18679,7 +18836,7 @@
         _ = (_) => {
           const {
               nProjectID: _,
-              nPublishedVersion: __webpack_require__,
+              nPublishedVersion: _,
               msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(_.fnGetInitialValue()),
@@ -18688,7 +18845,7 @@
               !_.fnValidateValue || _.fnValidateValue(_.fnGetInitialValue()),
             ),
             [_, _] = _.useState(_),
-            [_, _] = _.useState(__webpack_require__);
+            [_, _] = _.useState(_);
           _.useEffect(() => {
             const _ = _.digitCount && _.digitCount > 0;
             ((!_ && parseInt(_.fnGetInitialValue()) != parseInt(_)) ||
@@ -18696,12 +18853,12 @@
                 parseFloat(_.fnGetInitialValue()).toFixed(_.digitCount) !=
                   parseFloat(_).toFixed(_.digitCount)) ||
               _ != _ ||
-              _ != __webpack_require__) &&
+              _ != _) &&
               (_(_.fnGetInitialValue()),
               _(!_.fnValidateValue || _.fnValidateValue(_.fnGetInitialValue())),
               _(_),
-              _(__webpack_require__));
-          }, [_, _, _, _, __webpack_require__, _]);
+              _(_));
+          }, [_, _, _, _, _, _]);
           return (0, _.jsxs)("div", {
             className: _.InputOption,
             children: [
@@ -18773,19 +18930,17 @@
         _ = (_) => {
           const {
               nProjectID: _,
-              nPublishedVersion: __webpack_require__,
+              nPublishedVersion: _,
               msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(_.fnGetInitialValue()),
             [_, _] = _.useState(_),
-            [_, _] = _.useState(__webpack_require__);
+            [_, _] = _.useState(_);
           return (
             _.useEffect(() => {
-              (_.fnGetInitialValue() != _ ||
-                _ != _ ||
-                _ != __webpack_require__) &&
-                (_(_.fnGetInitialValue()), _(_), _(__webpack_require__));
-            }, [_, _, _, _, __webpack_require__, _]),
+              (_.fnGetInitialValue() != _ || _ != _ || _ != _) &&
+                (_(_.fnGetInitialValue()), _(_), _(_));
+            }, [_, _, _, _, _, _]),
             _.hidden
               ? null
               : (0, _.jsx)("div", {
@@ -18812,7 +18967,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -18820,7 +18975,7 @@
             className: (0, _._)(_.FlowNode, _.BatchNormalizationNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -18923,7 +19078,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -18967,7 +19122,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -18979,9 +19134,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -18996,7 +19149,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -19024,7 +19177,7 @@
             className: (0, _._)(_.FlowNode, _.BertFinetuneNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -19168,7 +19321,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.bert_finetune().bert_model()),
             [_, _] = _.useState(
               _.msgNode.bert_finetune().unfrozen_layers()?.toString() || "0",
@@ -19252,7 +19405,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -19314,7 +19467,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.bert_finetune().set_bert_model(_),
                         _.msgNode
                           .bert_finetune()
@@ -19335,7 +19488,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -19343,7 +19496,7 @@
             className: (0, _._)(_.FlowNode, _.BertNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -19444,7 +19597,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -19486,7 +19639,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -19501,9 +19654,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -19518,7 +19669,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -19550,7 +19701,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -19694,7 +19845,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.bert_tokenizer().bert_model()),
             [_, _] = _.useState(
               _.msgNode.bert_tokenizer().sequence_length()?.toString() || "512",
@@ -19778,7 +19929,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -19839,7 +19990,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.bert_tokenizer().set_bert_model(_),
                         _.msgNode
                           .bert_tokenizer()
@@ -19860,7 +20011,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -19880,7 +20031,7 @@
               className: (0, _._)(_.FlowNode, _.CombineNode, _.Preprocessing),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -20123,7 +20274,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -20143,7 +20294,7 @@
               className: (0, _._)(_.FlowNode, _.ConcatNode, _.Keras),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -20433,7 +20584,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -20480,7 +20631,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -21207,7 +21358,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -21220,7 +21371,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -21335,7 +21486,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           return (0, _.jsxs)(_._, {
             active: _.bVisible,
             onDismiss: () => _.fnSetPopupVisible(!1),
@@ -21376,7 +21527,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -21389,7 +21540,7 @@
                     children: [
                       (0, _.jsx)(_._, {
                         onClick: () => {
-                          _.msgNode.set_comment(__webpack_require__),
+                          _.msgNode.set_comment(_),
                             _(_),
                             _.fnSetPopupVisible(!1);
                         },
@@ -21439,7 +21590,7 @@
       }
       const _ = (_) => {
           const _ = _.data.msgNode,
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             { msgWorkingProjectConfig: _ } = _(),
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -21447,7 +21598,7 @@
             className: (0, _._)(_.FlowNode, _.DenseNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -21595,7 +21746,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dense().width().toString()),
             [_, _] = _.useState(_.msgNode.dense().activation()),
             [_, _] = _.useState(_.msgNode.dense().regularization());
@@ -21705,7 +21856,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -21835,7 +21986,7 @@
                       _.msgNode.dense().set_width(parseInt(_)),
                         _.msgNode.dense().set_activation(_),
                         _.msgNode.dense().set_regularization(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -21852,7 +22003,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -21860,7 +22011,7 @@
             className: (0, _._)(_.FlowNode, _.Conv1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -22022,7 +22173,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.conv_1d().filters().toString()),
             [_, _] = _.useState(_.msgNode.conv_1d().kernel_size().toString()),
             [_, _] = _.useState(
@@ -22101,7 +22252,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -22225,7 +22376,7 @@
                         _.msgNode.conv_1d().set_kernel_size(parseInt(_)),
                         _.msgNode.conv_1d().set_strides(parseInt(_)),
                         _.msgNode.conv_1d().set_activation(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -22242,7 +22393,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -22250,7 +22401,7 @@
             className: (0, _._)(_.FlowNode, _.DenseStackNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -22422,7 +22573,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.dense_stack().width().length.toString(),
             ),
@@ -22540,7 +22691,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -22710,7 +22861,7 @@
                         _.msgNode.dense_stack().set_dropout_pct(parseInt(_)),
                         _.msgNode.dense_stack().set_activation(_),
                         _.msgNode.dense_stack().set_regularization(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -22727,7 +22878,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -22735,7 +22886,7 @@
             className: (0, _._)(_.FlowNode, _.DotNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -22854,7 +23005,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dot().normalize());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.dot().normalize());
@@ -22897,7 +23048,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -22950,7 +23101,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.dot().set_normalize(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -22967,7 +23118,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -22975,7 +23126,7 @@
             className: (0, _._)(_.FlowNode, _.DropoutNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -23092,7 +23243,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dropout().dropout_pct().toString());
           _.useEffect(() => {
             _(_.msgNode.comment()),
@@ -23138,7 +23289,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -23180,7 +23331,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.dropout().set_dropout_pct(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -23197,7 +23348,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -23206,7 +23357,7 @@
             className: (0, _._)(_.FlowNode, _.EmbeddingNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -23375,7 +23526,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.embedding().compact_table().length > 0
                 ? _.msgNode.embedding().compact_table()
@@ -23438,7 +23589,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -23608,7 +23759,7 @@
                         _.msgNode.embedding().set_flatten(_),
                         _.msgNode.embedding().set_export_name(_),
                         _.msgNode.embedding().set_embed_name(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -23625,7 +23776,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)();
           _.useEffect(() => {
@@ -23637,14 +23788,11 @@
                 !1,
                 `No input connector on node ${_.toObject()}`,
               );
-            const {
-                msgIncomingNode: __webpack_require__,
-                nIncomingConnectorID: _,
-              } = _(_, _),
+            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(_, _),
               _ = _.connectors().filter((_) => !_.is_input_connector()).length;
             let _ = _;
-            if (__webpack_require__) {
-              const _ = _(_, __webpack_require__, _);
+            if (_) {
+              const _ = _(_, _, _);
               (0, _._)(
                 _.length <= 1,
                 `Input tensor to STEAMLEARN_NODE_TYPE_EXPLODE not one-dimensional! ( ${_.length} ) (node ${__webpack_require__.node_id()}, connector ${_}`,
@@ -23692,7 +23840,7 @@
             className: (0, _._)(_.FlowNode, _.ExplodeNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -23793,7 +23941,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -23837,7 +23985,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -23850,7 +23998,7 @@
                     children: [
                       (0, _.jsx)(_._, {
                         onClick: () => {
-                          _.msgNode.set_comment(__webpack_require__),
+                          _.msgNode.set_comment(_),
                             _(_),
                             _.fnSetPopupVisible(!1);
                         },
@@ -23869,7 +24017,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ =
               ((0, _._)(),
@@ -23887,7 +24035,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -24083,7 +24231,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] =
+            [_, _] =
               (_.msgNode.connectors().filter((_) => _.is_input_connector())
                 .length,
               _.msgNode.connectors().filter((_) => !_.is_input_connector())
@@ -24156,7 +24304,7 @@
                           isText: !0,
                           dontUpdateProject: !0,
                           width: 200,
-                          fnGetInitialValue: () => __webpack_require__,
+                          fnGetInitialValue: () => _,
                           fnSetValue: (_) => _(_),
                         }),
                       ],
@@ -24338,7 +24486,7 @@
                           _.msgNode.external_embedding().set_embedding_name(_),
                           _.msgNode.external_embedding().set_compact_table(_),
                           _.msgNode.external_embedding().set_exclude_missing(_),
-                          _.msgNode.set_comment(__webpack_require__),
+                          _.msgNode.set_comment(_),
                           _(_),
                           _.fnSetPopupVisible(!1);
                       },
@@ -24356,7 +24504,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _(_.data.msgNode.external_model().project_id()),
@@ -24377,7 +24525,7 @@
               className: (0, _._)(_.FlowNode, _.ExternalModelNode, _.Keras),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -24938,7 +25086,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = 1 == _.extract().mode(),
@@ -24958,7 +25106,7 @@
             className: (0, _._)(_.FlowNode, _.ExtractNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -25867,7 +26015,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -25875,7 +26023,7 @@
             className: (0, _._)(_.FlowNode, _.FlattenNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -25976,7 +26124,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -26020,7 +26168,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26035,9 +26183,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -26052,7 +26198,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -26060,7 +26206,7 @@
             className: (0, _._)(_.FlowNode, _.GlobalAvgPooling1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -26163,7 +26309,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_]);
@@ -26207,7 +26353,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26222,9 +26368,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -26239,7 +26383,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -26247,7 +26391,7 @@
             className: (0, _._)(_.FlowNode, _.GlobalMaxPooling1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -26350,7 +26494,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_]);
@@ -26394,7 +26538,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26409,9 +26553,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -26426,7 +26568,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _(_, _.input().input_num()),
             _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -26445,7 +26587,7 @@
               className: (0, _._)(_.FlowNode, _.InputNode, _.Preprocessing),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _.data.msgNode,
                 }),
@@ -26570,7 +26712,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.input().inference_iterate());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.input().inference_iterate());
@@ -26610,7 +26752,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26659,7 +26801,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.input().set_inference_iterate(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
@@ -26677,7 +26819,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -26697,7 +26839,7 @@
               className: (0, _._)(_.FlowNode, _.KMeansNode, _.Preprocessing),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -26833,7 +26975,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.kmeans()?.num_clusters().toString() || "0",
             ),
@@ -26885,7 +27027,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26975,7 +27117,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.kmeans().set_num_clusters(parseInt(_)),
                         _.msgNode.kmeans().set_name(_),
                         _.msgNode.kmeans().set_generate_clusters(_),
@@ -26995,7 +27137,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27023,7 +27165,7 @@
             className: (0, _._)(_.FlowNode, _.LogicNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27140,7 +27282,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.logic().logic_operator());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.logic().logic_operator());
@@ -27209,7 +27351,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27251,7 +27393,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.logic().set_logic_operator(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -27268,7 +27410,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27276,7 +27418,7 @@
             className: (0, _._)(_.FlowNode, _.MaskedHeadNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27389,7 +27531,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_]);
@@ -27433,7 +27575,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27448,9 +27590,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -27465,7 +27605,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27473,7 +27613,7 @@
             className: (0, _._)(_.FlowNode, _.MaxPooling1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27607,7 +27747,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.max_pooling_1d().pool_size().toString(),
             ),
@@ -27659,7 +27799,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27724,7 +27864,7 @@
                     onClick: () => {
                       _.msgNode.max_pooling_1d().set_pool_size(parseInt(_)),
                         _.msgNode.max_pooling_1d().set_strides(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -27741,7 +27881,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27749,7 +27889,7 @@
             className: (0, _._)(_.FlowNode, _.NamedInferenceNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27868,7 +28008,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.named_inference().name());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.named_inference().name());
@@ -27913,7 +28053,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27948,7 +28088,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.named_inference().set_name(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -27965,7 +28105,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27973,7 +28113,7 @@
             className: (0, _._)(_.FlowNode, _.NormalizeNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -28076,7 +28216,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -28120,7 +28260,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -28132,9 +28272,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -28149,7 +28287,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -28158,7 +28296,7 @@
             className: (0, _._)(_.FlowNode, _.OnehotNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -28294,7 +28432,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.onehot().compact_table().length > 0
                 ? _.msgNode.onehot().compact_table()
@@ -28350,7 +28488,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -28438,7 +28576,7 @@
                           (_.msgNode.onehot().set_compact_table(_),
                           _.msgNode.onehot().set_width(0)),
                         _.msgNode.onehot().set_multi_hot(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -28455,7 +28593,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -28463,7 +28601,7 @@
             className: (0, _._)(_.FlowNode, _.Reshape2DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -28582,7 +28720,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.reshape_2d().dimension()?.toString() || "1",
             );
@@ -28630,7 +28768,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -28671,7 +28809,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.reshape_2d().set_dimension(parseInt(_)),
                         _(_),
                         _.fnSetPopupVisible(!1);
@@ -28689,7 +28827,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -28709,7 +28847,7 @@
               className: (0, _._)(_.FlowNode, _.RowExtractNode, _.Keras),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -28944,7 +29082,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -28956,7 +29094,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -29137,7 +29275,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.sequence_split().head_split_chance().toString(),
             ),
@@ -29201,7 +29339,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -29344,7 +29482,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode
                           .sequence_split()
                           .set_head_split_chance(parseInt(_)),
@@ -29372,7 +29510,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -29380,7 +29518,7 @@
             className: (0, _._)(_.FlowNode, _.ShuffleNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -29499,7 +29637,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.shuffle().exclude_zeroes());
           return (0, _.jsxs)(_._, {
             active: _.bVisible,
@@ -29541,7 +29679,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -29593,7 +29731,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.shuffle().set_exclude_zeroes(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
@@ -29611,7 +29749,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)();
           _.useEffect(() => {
@@ -29630,7 +29768,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -29950,7 +30088,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _(_.text_vectorization().other_project_id()),
             _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -29963,7 +30101,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -30228,7 +30366,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.text_vectorization().vocabulary_size().toString(),
             ),
@@ -30384,7 +30522,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -30681,7 +30819,7 @@
                         _.msgNode
                           .text_vectorization()
                           .set_other_fetch_id(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -30698,7 +30836,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -30725,7 +30863,7 @@
             className: (0, _._)(_.FlowNode, _.ThresholdNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -30859,7 +30997,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.threshold().threshold_value().toFixed(5),
             ),
@@ -30941,7 +31079,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -31010,7 +31148,7 @@
                     onClick: () => {
                       _.msgNode.threshold().set_threshold_value(parseFloat(_)),
                         _.msgNode.threshold().set_comparison(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -31027,7 +31165,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -31035,7 +31173,7 @@
             className: (0, _._)(_.FlowNode, _.TokenMaskNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -31209,7 +31347,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.token_mask().mask_pct().toString() || "10",
             ),
@@ -31269,7 +31407,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -31393,7 +31531,7 @@
                           .set_mask_count_limit(parseInt(_)),
                         _.msgNode.token_mask().set_random_pct(parseInt(_)),
                         _.msgNode.token_mask().set_keep_pct(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -31410,7 +31548,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -31418,7 +31556,7 @@
             className: (0, _._)(_.FlowNode, _.TokenTransformerNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -31673,7 +31811,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.token_transformer().compact_table()?.length > 0
                 ? _.msgNode.token_transformer().compact_table()
@@ -31768,7 +31906,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -32067,7 +32205,7 @@
                           .set_transformer_dropout_pct(parseInt(_)),
                         _.msgNode.token_transformer().set_is_causal(_),
                         _.msgNode.token_transformer().set_is_set(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -32108,7 +32246,7 @@
       }
       const _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = (0, _._)();
@@ -32126,7 +32264,7 @@
             },
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -32273,9 +32411,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(
-              _.msgNode.train().input_count().toString(),
-            ),
+            [_, _] = _.useState(_.msgNode.train().input_count().toString()),
             [_, _] = _.useState(_.msgNode.train().activation()),
             [_, _] = _.useState(_.msgNode.train().loss()),
             [_, _] = _.useState(_.msgNode.train().uses_weight_mask() || !1),
@@ -32702,7 +32838,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -32710,7 +32846,7 @@
             className: (0, _._)(_.FlowNode, _.TransformerNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -32890,7 +33026,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.transformer().num_heads().toString()),
             [_, _] = _.useState(
               _.msgNode.transformer().feedforward_size()?.toString() || "1024",
@@ -32976,7 +33112,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -33127,7 +33263,7 @@
                           .transformer()
                           .set_num_internal_blocks(parseInt(_)),
                         _.msgNode.transformer().set_regularization(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -33144,7 +33280,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -33152,7 +33288,7 @@
             className: (0, _._)(_.FlowNode, _.WeightedAverageNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -33272,7 +33408,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.weighted_average().axis().toString()),
             [_, _] = _.useState(_.msgNode.weighted_average().use_weights());
           _.useEffect(() => {
@@ -33320,7 +33456,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -33398,7 +33534,7 @@
                     onClick: () => {
                       _.msgNode.weighted_average().set_axis(parseInt(_)),
                         _.msgNode.weighted_average().set_use_weights(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -33433,7 +33569,7 @@
           }),
         _ = () => {
           const _ = _.useRef(null),
-            [_, __webpack_require__] = _.useState(null),
+            [_, _] = _.useState(null),
             { msgWorkingProjectConfig: _ } = _(),
             [_, _] = _(_),
             [_, _, _] = (0, _._)(_),
@@ -34376,7 +34512,7 @@
                     onEdgesChange: _,
                     onNodeDragStop: _,
                     onConnect: _,
-                    onInit: __webpack_require__,
+                    onInit: _,
                     onDrop: _,
                     onDragOver: _,
                     onReconnect: _,
@@ -35520,7 +35656,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(void 0),
+            [_, _] = _.useState(void 0),
             _ = _.msgSnapshotExample.map_storage_elements().sort((_, _) => {
               const _ = _.data_source_element_usages().find(
                   (_) => _.sql_column() == _.key(),
@@ -35531,7 +35667,7 @@
               return _.data_element_path() < _.data_element_path() ? -1 : 1;
             });
           let _ = [];
-          if (__webpack_require__)
+          if (_)
             for (const _ of __webpack_require__.outputs()) {
               if (_.regression().value().length > 0) {
                 _.push(
@@ -36329,10 +36465,7 @@
         return _;
       }
       const _ = (_) => {
-          const {
-              nPublishedVersion: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { nPublishedVersion: _, msgWorkingProjectConfig: _ } = _(),
             [_, _] = _.useState(!1),
             [_, _] = _.useState(""),
             _ = _(_.nProjectID, _.nFetchID),
@@ -36841,7 +36974,7 @@
       const _ = (_) => {
           const {
               nPublishedVersion: _,
-              msgWorkingProjectConfig: __webpack_require__,
+              msgWorkingProjectConfig: _,
               msgProjectConfig: _,
             } = _(),
             _ = _(_.nProjectID, _.nTrainID),
@@ -36871,9 +37004,26 @@
             }, [_, _]);
           const _ = _.useCallback(
             (_, _) => {
-              _(__webpack_require__.project_id(), _, _, _);
+              !(async function (_, _, _, _) {
+                let _ = _._.Init(_);
+                _.Body().set_project_id(_),
+                  _.Body().set_published_version(_),
+                  _.Body().set_train_id(_),
+                  _.Body().set_from_scheduled(!1),
+                  _.Body().set_deactivate(_);
+                const _ = await _.SetTrainLive(
+                  _.Get().GetServiceTransport(),
+                  _,
+                );
+                _ &&
+                  1 == _.GetEResult() &&
+                  _._.invalidateQueries({
+                    queryKey: [_, _],
+                  }),
+                  _.Body().result();
+              })(__webpack_require__.project_id(), _, _, _);
             },
-            [__webpack_require__, _],
+            [_, _],
           );
           if (0 == _)
             return (0, _.jsx)("div", {
@@ -37551,7 +37701,7 @@
           (_[(_.GPU = 3)] = "GPU");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.NONE);
+          const [_, _] = _.useState(_.NONE);
           return (0, _.jsxs)("div", {
             className: _.LogSection,
             children: [
@@ -37701,7 +37851,7 @@
           const {
               nProjectID: _,
               nPublishedVersion: _,
-              msgWorkingProjectConfig: __webpack_require__,
+              msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(0),
             [_, _] = _.useState(0),
@@ -37773,7 +37923,7 @@
         const {
             nProjectID: _,
             nPublishedVersion: _,
-            msgProjectConfig: __webpack_require__,
+            msgProjectConfig: _,
             msgWorkingProjectConfig: _,
           } = _(),
           [_, _] = _.useState(0),
@@ -37786,7 +37936,7 @@
           _ = _.isLoading || _.isLoading,
           _ = _ > 0,
           _ =
-            __webpack_require__ &&
+            _ &&
             _ &&
             _.serializeBase64String() ==
               __webpack_require__.serializeBase64String(),
@@ -38079,7 +38229,7 @@
         const {
           nProjectID: _,
           nPublishedVersion: _,
-          msgWorkingProjectConfig: __webpack_require__,
+          msgWorkingProjectConfig: _,
         } = _();
         let _ = {
           weekday: "short",
@@ -38422,7 +38572,7 @@
                               "#SteamLearn_Overview_DataSources",
                             ),
                           }),
-                          __webpack_require__ &&
+                          _ &&
                             __webpack_require__.data_source_ids().map((_) =>
                               (0, _.jsx)(
                                 _,
@@ -38445,7 +38595,7 @@
       };
       function _(_) {
         const _ = _(_.msgProjectStatus.project_id()),
-          [__webpack_require__, _] = _.data || [void 0, void 0];
+          [_, _] = _.data || [void 0, void 0];
         const _ =
           6 == _.msgTrain.fetch_status() ||
           5 == _.msgTrain.fetch_status() ||
@@ -38537,8 +38687,8 @@
                     className: (0, _._)(_.CompletedDetails, _.Gold),
                     children: (0, _._)(
                       "#SteamLearn_Event_CompletedDetails",
-                      _.msgTrain.best_loss().toFixed(4),
-                      (100 * _.msgTrain.best_accuracy()).toFixed(2),
+                      _.msgTrain.best_loss()?.toFixed(4) ?? "",
+                      (_.msgTrain.best_accuracy() ?? 0).toFixed(2),
                     ),
                   }),
               ],
@@ -38547,8 +38697,8 @@
         });
       }
       const _ = (_) => {
-          const { nProjectID: _, nPublishedVersion: __webpack_require__ } = _(),
-            _ = _(_, __webpack_require__, _.nFetchID, _.nTrainID).data,
+          const { nProjectID: _, nPublishedVersion: _ } = _(),
+            _ = _(_, _, _.nFetchID, _.nTrainID).data,
             _ = 1 == _?.trains().length ? _.trains()[0] : void 0;
           return _
             ? (0, _.jsxs)("div", {
@@ -38657,1298 +38807,6 @@
             className: _.ProjectStatusInfo,
             children: _,
           });
-        };
-      function _() {
-        return (0, _.jsx)("div", {
-          className: _.ProjectTrainStatusPage,
-          children: (0, _.jsx)("div", {
-            className: _.ProjectTrainStatusBody,
-            children: (0, _.jsx)(_, {}),
-          }),
-        });
-      }
-      function _() {
-        const {
-            nProjectID: _,
-            nPublishedVersion: _,
-            msgWorkingProjectConfig: __webpack_require__,
-          } = _(),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(0),
-          _ = _(_, _),
-          _ = _(_, _),
-          _ = _.data,
-          _ = _.data;
-        _.useEffect(() => {
-          0 == _ &&
-            _ &&
-            _.versions().length > 0 &&
-            _(Math.max(..._.versions()));
-        }, [_, _]),
-          _.useEffect(() => {
-            0 == _ &&
-              _ &&
-              _.versions().length > 0 &&
-              _(Math.max(..._.versions()));
-          }, [_, _]);
-        const _ = _(_, _, _, _);
-        if (_.isLoading || _.isLoading)
-          return (0, _.jsx)("div", {
-            children: "LOADING",
-          });
-        if (!_.isSuccess || !_.isSuccess || !_.isSuccess) return null;
-        const _ = _.data;
-        if (!_ || 1 != _.trains().length) return null;
-        return (0, _.jsxs)("div", {
-          className: _.ProjectTrain,
-          children: [
-            (0, _.jsx)(_, {
-              msgProjectStatus: _,
-              nFetchID: _,
-              nTrainID: _,
-              arrAllFetchIDs: _.versions(),
-              fnSetFetchID: _,
-            }),
-            (0, _.jsx)("div", {
-              className: _.Separator,
-            }),
-            (0, _.jsx)(_, {
-              msgProjectStatus: _,
-              nFetchID: _,
-              nTrainID: _,
-              arrAllTrainIDs: _.versions(),
-              fnSetTrainID: (_) => {
-                _(_);
-                for (const _ of __webpack_require__.train_infos())
-                  _.train_id() == _ && _(_.fetch_id());
-              },
-            }),
-            (0, _.jsx)("div", {
-              className: _.Separator,
-            }),
-            (0, _.jsx)(_, {
-              nFetchID: _,
-              nTrainID: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            nProjectID: _,
-            nPublishedVersion: __webpack_require__,
-            msgWorkingProjectConfig: _,
-          } = _(),
-          [_, _] = _.useState("");
-        (0, _._)(() => {
-          _(_, __webpack_require__, _.nFetchID, _.nTrainID);
-        }, 3e3);
-        if (0 == __webpack_require__)
-          return (0, _.jsx)("div", {
-            className: _.StatusMessage,
-            children: (0, _._)("#SteamLearn_Status_Fetch_Status_Unpublished"),
-          });
-        if (0 == _.arrAllFetchIDs.length)
-          return (0, _.jsx)("div", {
-            className: _.StatusMessage,
-            children: (0, _._)("#SteamLearn_Status_Fetch_Status_None"),
-          });
-        const _ = _.msgProjectStatus.trains()[0];
-        let _ = (0, _._)("#SteamLearn_Status_Fetch_Status_Unknown"),
-          _ = _.Unknown;
-        switch (_.fetch_status()) {
-          case 0:
-            (_ = (0, _._)("#SteamLearn_Status_Fetch_Status_Unknown")),
-              (_ = _.Unknown);
-            break;
-          case 1:
-            (_ = (0, _._)("#SteamLearn_Status_Fetch_Status_Unstarted")),
-              (_ = _.Unstarted);
-            break;
-          case 5:
-            (_ = (0, _._)(
-              "#SteamLearn_Status_Fetch_Status_InProgress_Metadata",
-            )),
-              (_ = _.InProgress);
-            break;
-          case 2:
-            (_ = (0, _._)("#SteamLearn_Status_Fetch_Status_InProgress_Data")),
-              (_ = _.InProgress);
-            break;
-          case 3:
-            (_ = (0, _._)("#SteamLearn_Status_Fetch_Status_Complete")),
-              (_ = _.Complete);
-            break;
-          case 4:
-            (_ = (0, _._)("#SteamLearn_Status_Fetch_Status_Error")),
-              (_ = _.Error);
-            break;
-          case 6:
-            (_ = (0, _._)(
-              "#SteamLearn_Status_Fetch_Status_InProgress_Cleanup",
-            )),
-              (_ = _.InProgress);
-            break;
-          case 7:
-            (_ = (0, _._)("#SteamLearn_Status_Fetch_Status_CleanedUp")),
-              (_ = _.Complete);
-            break;
-          case 8:
-            (_ = (0, _._)("#SteamLearn_Status_Fetch_Status_Canceled")),
-              (_ = _.Error);
-        }
-        const _ = _ == _.InProgress,
-          _ = 8 == _.fetch_status();
-        let _ = "";
-        const _ = _.fetch_rows_total() > 0;
-        if (!_) {
-          const _ = _.fetch_rows_processed() / _.fetch_rows_total(),
-            _ = Date.now() / 1e3 - _.timestamp_fetch_data_start(),
-            _ = _ / _;
-          if (_.timestamp_fetch_end()) {
-            const _ = (0, _._)(
-              "#SteamLearn_Status_Train_Fetch_Duration",
-              _(_.timestamp_fetch_end() - _.timestamp_fetch_data_start()),
-            );
-            _ != _ && _(_);
-            const _ = new Date(1e3 * _.timestamp_fetch_end());
-            _ = (0, _._)(
-              "#SteamLearn_Status_Train_Fetch_Completed",
-              _.getHours() +
-                ":" +
-                _.getMinutes().toString().padStart(2, "0") +
-                ":" +
-                _.getSeconds().toString().padStart(2, "0") +
-                ", " +
-                _.toDateString(),
-            );
-          } else {
-            let _ = _ - _;
-            if (!isNaN(_)) {
-              const _ = (0, _._)(
-                "#SteamLearn_Status_Train_Fetch_TimeEstimate",
-                _(_),
-              );
-              _ != _ && _(_);
-            }
-            const _ = new Date(1e3 * _.timestamp_fetch_start());
-            _ = (0, _._)(
-              "#SteamLearn_Status_Train_Fetch_Started",
-              _.getHours() +
-                ":" +
-                _.getMinutes().toString().padStart(2, "0") +
-                ":" +
-                _.getSeconds().toString().padStart(2, "0") +
-                ", " +
-                _.toDateString(),
-            );
-          }
-        }
-        return (0, _.jsxs)("div", {
-          className: _.FetchStatusPanel,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.TopSection,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.TopLeft,
-                  children: (0, _.jsxs)("div", {
-                    className: _.OptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.OptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Status_Fetch_Status",
-                          _.nFetchID,
-                        ),
-                      }),
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          onClick: () =>
-                            (async (_) => {
-                              let _ = _._.Init(_);
-                              _.Body().set_project_config(_),
-                                _.Body().fetch().set_fetch_id(_),
-                                _.Body().fetch().set_request_cancel(!0),
-                                await _.Train(_.Get().GetServiceTransport(), _),
-                                _(_, _, _.nFetchID, _.nTrainID);
-                            })(_.nFetchID),
-                          children: (0, _._)("#SteamLearn_Status_Fetch_Cancel"),
-                        }),
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(_.StatusString, _),
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.MetadataProcessingStatus,
-                        children: _.metadata_status().map((_, _) =>
-                          0 == _.completion_pct()
-                            ? null
-                            : (0, _.jsxs)(
-                                "div",
-                                {
-                                  className: _.MetadataEntry,
-                                  children: [
-                                    1 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_Ranges",
-                                        ),
-                                      }),
-                                    2 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_Stddevs",
-                                        ),
-                                      }),
-                                    3 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_CompactTables",
-                                          _.phase_name(),
-                                        ),
-                                      }),
-                                    4 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_KMeans",
-                                          _.phase_name(),
-                                        ),
-                                      }),
-                                    5 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_Histogram",
-                                        ),
-                                      }),
-                                    6 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_AppIDs",
-                                          _.phase_name(),
-                                        ),
-                                      }),
-                                    7 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_TextVectorization",
-                                          _.phase_name(),
-                                        ),
-                                      }),
-                                    8 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_TextVectorizationAdapt",
-                                        ),
-                                      }),
-                                    9 == _.phase() &&
-                                      (0, _.jsx)("div", {
-                                        className: _.MetadataEntryType,
-                                        children: (0, _._)(
-                                          "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_SequenceTables",
-                                          _.phase_name(),
-                                        ),
-                                      }),
-                                    (0, _.jsx)("div", {
-                                      className: (0, _._)(
-                                        _.ProgressBar,
-                                        _.Green,
-                                      ),
-                                      children: (0, _.jsx)("div", {
-                                        className: _.ProgressBarInner,
-                                        style: {
-                                          width: `${_.completion_pct()}%`,
-                                        },
-                                      }),
-                                    }),
-                                    (0, _.jsx)("div", {
-                                      className: _.ProgressValue,
-                                      children: `${_.completion_pct()}%`,
-                                    }),
-                                  ],
-                                },
-                                `MetadataStatus_${_}`,
-                              ),
-                        ),
-                      }),
-                    ],
-                  }),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.TopRight,
-                  children: (0, _.jsx)("select", {
-                    value: _.nFetchID,
-                    onChange: (_) => _.fnSetFetchID(parseInt(_.target.value)),
-                    children: _.arrAllFetchIDs.map((_) =>
-                      (0, _.jsx)(
-                        "option",
-                        {
-                          value: _,
-                          children: (0, _._)(
-                            "#SteamLearn_Status_Train_FetchOption",
-                            _,
-                          ),
-                        },
-                        `FetchOption_${_}`,
-                      ),
-                    ),
-                  }),
-                }),
-              ],
-            }),
-            _.fetch_rows_total() > 0 &&
-              (0, _.jsxs)("div", {
-                className: _.StatusProgress,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _.RowProgress,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.RowCurrent,
-                        children: (
-                          _.fetch_rows_processed() ?? 0
-                        ).toLocaleString((0, _._)()),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.RowSlash,
-                        children: "/",
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.RowTotal,
-                        children: _.fetch_rows_total().toLocaleString(
-                          (0, _._)(),
-                        ),
-                      }),
-                    ],
-                  }),
-                  _.fetch_rows_written() != _.fetch_rows_processed() &&
-                    (0, _.jsx)("div", {
-                      className: _.RowProgress,
-                      children: (0, _.jsx)("div", {
-                        className: _.RowCurrent,
-                        children: (0, _._)(
-                          "#SteamLearn_Status_Train_Fetch_Written",
-                          _.fetch_rows_written().toLocaleString((0, _._)()),
-                        ),
-                      }),
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _.RowProgress,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.ProgressBar,
-                        children: (0, _.jsx)("div", {
-                          className: _.ProgressBarInner,
-                          style: {
-                            width:
-                              (100 * (_.fetch_rows_processed() ?? 0)) /
-                                _.fetch_rows_total() +
-                              "%",
-                          },
-                        }),
-                      }),
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: _.ProgressPct,
-                          children: `${((100 * (_.fetch_rows_processed() ?? 0)) / _.fetch_rows_total() - 0.5).toFixed(0)}%`,
-                        }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.RowProgress,
-                    children: _,
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.RowProgress,
-                    children: _,
-                  }),
-                ],
-              }),
-          ],
-        });
-      }
-      const _ = (_) => {
-        const {
-            nPublishedVersion: _,
-            msgWorkingProjectConfig: __webpack_require__,
-            msgProjectConfig: _,
-          } = _(),
-          [_, _] = _.useState(-1),
-          _ = _.msgProjectStatus.trains()[0],
-          _ = _.train_status(),
-          _ = _.epoch_details().length;
-        _.useEffect(() => {
-          -1 == _ && _ && _(3 == _ ? 0 : _);
-        }, [_, _, _, _]),
-          _.useEffect(() => {
-            _ && _ > _ && _(-1);
-          }, [_, _]);
-        const _ = _.useCallback(
-          (_, _) => {
-            _(__webpack_require__.project_id(), _, _, _);
-          },
-          [__webpack_require__, _],
-        );
-        if (0 == _)
-          return (0, _.jsx)("div", {
-            className: _.StatusMessage,
-            children: (0, _._)("#SteamLearn_Status_Train_Status_Unpublished"),
-          });
-        const _ = [...new Set(_.arrAllTrainIDs)];
-        if (0 == _.length)
-          return (0, _.jsx)("div", {
-            className: _.StatusMessage,
-            children: (0, _._)("#SteamLearn_Status_Train_Status_None"),
-          });
-        let _,
-          _,
-          _,
-          _ = (0, _._)("#SteamLearn_Status_Train_Status_Unknown"),
-          _ = _.Unknown;
-        switch (_) {
-          case 0:
-            (_ = (0, _._)("#SteamLearn_Status_Train_Status_Unknown")),
-              (_ = _.Unknown);
-            break;
-          case 1:
-            (_ = (0, _._)("#SteamLearn_Status_Train_Status_Unstarted")),
-              (_ = _.Unstarted);
-            break;
-          case 2:
-            (_ = (0, _._)("#SteamLearn_Status_Train_Status_InProgress")),
-              (_ = _.InProgress);
-            break;
-          case 3:
-            (_ = (0, _._)("#SteamLearn_Status_Train_Status_Complete")),
-              (_ = _.Complete);
-            break;
-          case 4:
-            (_ = (0, _._)("#SteamLearn_Status_Train_Status_Error")),
-              (_ = _.Error);
-            break;
-          case 5:
-            (_ = (0, _._)("#SteamLearn_Status_Train_Status_StoppedEarly")),
-              (_ = _.Complete);
-            break;
-          case 6:
-            (_ = (0, _._)("#SteamLearn_Status_Train_Status_WaitingOnAS")),
-              (_ = _.InProgress);
-        }
-        const _ = _.train_batches(),
-          _ = _.val_batches();
-        let _, _;
-        const _ = 100;
-        let _ = "";
-        const _ = 2 == _ || 3 == _ || 5 == _;
-        if (0 != _) {
-          const _ =
-            _ > _.epoch_details().length ? void 0 : _.epoch_details()[_ - 1];
-          if (_) {
-            if (
-              ((_ = Math.max(..._.train_batches().map((_) => _.batch_id()), 0)),
-              (_ = Math.max(..._.val_batches().map((_) => _.batch_id()), 0)),
-              _)
-            ) {
-              const _ = (_ + _) / (_ + _),
-                _ = Date.now() / 1e3 - _.epoch_timestamp_start(),
-                _ = _ / _;
-              if (_.epoch_timestamp_end())
-                _ = (0, _._)(
-                  "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
-                  _(_.epoch_timestamp_end() - _.epoch_timestamp_start()),
-                );
-              else {
-                let _ = _ - _;
-                isNaN(_) ||
-                  (_ = (0, _._)(
-                    "#SteamLearn_Status_Train_BatchCurrent_TimeEstimate",
-                    _(_),
-                  ));
-              }
-            }
-            const _ = _ / _,
-              _ = _ / _,
-              _ = _(
-                _.train_batches().map((_) => _.loss()),
-                _,
-              ).map((_, _) => ({
-                index: _,
-                Train: _,
-              })),
-              _ = _(
-                _.val_batches().map((_) => _.loss()),
-                _,
-              ).map((_, _) => ({
-                index: _,
-                Validate: _,
-              })),
-              _ =
-                _.train_batches().length > 0
-                  ? _.train_batches()[_.train_batches().length - 1]
-                  : void 0,
-              _ =
-                _.val_batches().length > 0
-                  ? _.val_batches()[_.val_batches().length - 1]
-                  : void 0;
-            _ = [
-              {
-                strDataLabel: "Train",
-                XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
-                data: _,
-                color: "#547d9e",
-                bAxisLine: !1,
-                nFinalValue: _?.loss(),
-              },
-              {
-                strDataLabel: "Validate",
-                XAxisDomain: [0, Math.min(_, _.val_batches().length) / _],
-                data: _,
-                color: "#609e54",
-                bAxisLine: !1,
-                nFinalValue: _?.loss(),
-              },
-            ];
-            const _ = _(
-                _.train_batches().map((_) => _(_.accuracy())),
-                _,
-              ).map((_, _) => ({
-                index: _,
-                Train: _,
-              })),
-              _ = _(
-                _.val_batches().map((_) => _(_.accuracy())),
-                _,
-              ).map((_, _) => ({
-                index: _,
-                Validate: _,
-              }));
-            _ = [
-              {
-                strDataLabel: "Train",
-                XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
-                data: _,
-                color: "#547d9e",
-                bAxisLine: !1,
-                nFinalValue: _(_?.accuracy()),
-              },
-              {
-                strDataLabel: "Validate",
-                XAxisDomain: [0, Math.min(_, _.val_batches().length) / _],
-                data: _,
-                color: "#609e54",
-                bAxisLine: !1,
-                nFinalValue: _(_?.accuracy()),
-              },
-            ];
-            const _ = _(
-                _.train_batches().map((_) => _(_.f1_score())),
-                _,
-              ).map((_, _) => ({
-                index: _,
-                Train: _,
-              })),
-              _ = _(
-                _.val_batches().map((_) => _(_.f1_score())),
-                _,
-              ).map((_, _) => ({
-                index: _,
-                Validate: _,
-              }));
-            _ = [
-              {
-                strDataLabel: "Train",
-                XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
-                data: _,
-                color: "#547d9e",
-                bAxisLine: !1,
-                nFinalValue: _(_?.f1_score()),
-              },
-              {
-                strDataLabel: "Validate",
-                XAxisDomain: [0, Math.min(_, _.val_batches().length) / _],
-                data: _,
-                color: "#609e54",
-                bAxisLine: !1,
-                nFinalValue: _(_?.f1_score()),
-              },
-            ];
-          }
-        } else {
-          const _ = _.epochs().filter((_) => _.epoch_timestamp_end.length > 0),
-            _ = _.map((_, _) => ({
-              index: _ + 1,
-              Value: _.val_loss(),
-            })).filter((_) => null != _.Value),
-            _ = _.map((_, _) => ({
-              index: _ + 1,
-              Value: _.val_accuracy(),
-            })).filter((_) => null != _.Value),
-            _ = _.map((_, _) => ({
-              index: _ + 1,
-              Value: _.val_f1(),
-            })).filter((_) => null != _.Value);
-          _.length > 0 &&
-            _.length > 0 &&
-            ((_ = [
-              {
-                strDataLabel: "Value",
-                XAxisDomain: [1, _.length],
-                data: _,
-                color: "#609e54",
-                bAxisLine: !0,
-                nFinalValue: void 0,
-              },
-            ]),
-            (_ = [
-              {
-                strDataLabel: "Value",
-                XAxisDomain: [1, _.length],
-                data: _,
-                color: "#609e54",
-                bAxisLine: !0,
-                nFinalValue: void 0,
-              },
-            ])),
-            _.length > 0 &&
-              (_ = [
-                {
-                  strDataLabel: "Value",
-                  XAxisDomain: [1, _.length],
-                  data: _,
-                  color: "#609e54",
-                  bAxisLine: !0,
-                  nFinalValue: void 0,
-                },
-              ]);
-        }
-        const _ = 3 == _.train_status(),
-          _ = 5 == _.train_status(),
-          _ = _.msgProjectStatus.live_train_id() == _.nTrainID,
-          _ = !1,
-          _ = 2 == _.train_status(),
-          _ =
-            _ &&
-            _ &&
-            __webpack_require__.serializeBase64String() !=
-              _.serializeBase64String();
-        let _ = [
-          {
-            label: (0, _._)("#SteamLearn_Status_Train_AllEpochs"),
-            value: 0,
-          },
-        ];
-        for (let _ = 0; _ < _.epochs().length; _++)
-          _.push({
-            label: (0, _._)("#SteamLearn_Status_Train_EpochOption", _ + 1),
-            value: _ + 1,
-          });
-        const _ = (0, _._)(
-            "#SteamLearn_Status_Train_Duration",
-            _(_.timestamp_train_end() - _.timestamp_train_start()),
-          ),
-          _ = new Date(1e3 * _.timestamp_train_end()),
-          _ = (0, _._)(
-            "#SteamLearn_Status_Train_Completed",
-            _.getHours() +
-              ":" +
-              _.getMinutes().toString().padStart(2, "0") +
-              ":" +
-              _.getSeconds().toString().padStart(2, "0") +
-              ", " +
-              _.toDateString(),
-          ),
-          _ = _.project_nodes().find((_) => 6 == _.type()),
-          _ = 2 == _?.train().loss() || 3 == _?.train().loss();
-        let _ = _.best_loss(),
-          _ = _.best_accuracy(),
-          _ = _.best_f1();
-        return (0, _.jsxs)("div", {
-          className: _.TrainStatusPanel,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.TopSection,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.TopLeft,
-                  children: (0, _.jsxs)("div", {
-                    className: _.OptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.OptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Status_Train_Status",
-                          _.nTrainID,
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(_.StatusString, _),
-                        children: _,
-                      }),
-                      _ &&
-                        (0, _.jsxs)("div", {
-                          className: _.Timinginfo,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.Timing,
-                              children: _,
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _.Timing,
-                              children: _,
-                            }),
-                          ],
-                        }),
-                      !_ &&
-                        (_ || _) &&
-                        !_ &&
-                        (0, _.jsx)(_._, {
-                          onClick: () => _(_.nTrainID, !1),
-                          children: (0, _._)(
-                            "#SteamLearn_Status_SetInferenceVersion",
-                          ),
-                        }),
-                      _ &&
-                        (_ || _) &&
-                        !_ &&
-                        (0, _.jsx)("div", {
-                          className: _.WarningMessage,
-                          children: (0, _._)(
-                            "#SteamLearn_Status_SaveOrDiscardFirst",
-                          ),
-                        }),
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          onClick: () =>
-                            (async (_) => {
-                              let _ = _._.Init(_);
-                              _.Body().set_project_config(_),
-                                _.Body().train().set_train_id(_),
-                                _.Body().train().set_request_cancel(!0),
-                                await _.Train(_.Get().GetServiceTransport(), _);
-                            })(_.nTrainID),
-                          children: (0, _._)(
-                            "#SteamLearn_Status_Train_EndEarly",
-                          ),
-                        }),
-                      _ &&
-                        (0, _.jsx)("div", {
-                          onClick: () => _(_.nTrainID, !0),
-                          className: _.TrainLive,
-                          children: (0, _._)(
-                            "#SteamLearn_Status_InferenceLive",
-                          ),
-                        }),
-                      _,
-                    ],
-                  }),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.TopRight,
-                  children: (0, _.jsx)("select", {
-                    value: _.nTrainID,
-                    onChange: (_) => _.fnSetTrainID(parseInt(_.target.value)),
-                    children: _.map((_) =>
-                      (0, _.jsx)(
-                        "option",
-                        {
-                          value: _,
-                          children: (0, _._)(
-                            "#SteamLearn_Status_Train_TrainOption",
-                            _,
-                          ),
-                        },
-                        `TrainOption_${_}`,
-                      ),
-                    ),
-                  }),
-                }),
-              ],
-            }),
-            (0, _.jsx)("div", {
-              className: _.EpochSelectorSection,
-              children: (0, _.jsx)("select", {
-                className: _.EpochSelector,
-                value: _,
-                onChange: (_) => _(parseInt(_.target.value)),
-                children: _.map((_) =>
-                  (0, _.jsx)(
-                    "option",
-                    {
-                      value: _.value,
-                      children: _.label,
-                    },
-                    `EpochOption_${_.value}`,
-                  ),
-                ),
-              }),
-            }),
-            (0, _.jsxs)("div", {
-              className: _.BatchStatus,
-              children: [
-                _ > 0 &&
-                  0 != _ &&
-                  (0, _.jsxs)("div", {
-                    className: _.BatchStatusRow,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.PhaseLabel,
-                        children: (0, _._)(
-                          "#SteamLearn_Status_Train_BatchCurrent_Train",
-                        ),
-                      }),
-                      _ > 0 &&
-                        _ == _ &&
-                        (0, _.jsx)("div", {
-                          className: _.PhaseValues,
-                          children: (0, _.jsx)("span", {
-                            className: _.Total,
-                            children: (0, _._)(
-                              "#SteamLearn_Status_Train_Status_Complete",
-                            ),
-                          }),
-                        }),
-                      _ > 0 &&
-                        _ != _ &&
-                        (0, _.jsxs)("div", {
-                          className: _.PhaseValues,
-                          children: [
-                            _.toLocaleString((0, _._)()),
-                            " / ",
-                            (0, _.jsx)("span", {
-                              className: _.Total,
-                              children: _.toLocaleString((0, _._)()),
-                            }),
-                          ],
-                        }),
-                    ],
-                  }),
-                _ > 0 &&
-                  0 != _ &&
-                  (0, _.jsxs)("div", {
-                    className: _.BatchStatusRow,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.PhaseLabel,
-                        children: (0, _._)(
-                          "#SteamLearn_Status_Train_BatchCurrent_Validate",
-                        ),
-                      }),
-                      _ > 0 &&
-                        _ == _ &&
-                        (0, _.jsx)("div", {
-                          className: _.PhaseValues,
-                          children: (0, _.jsx)("span", {
-                            className: _.Total,
-                            children: (0, _._)(
-                              "#SteamLearn_Status_Train_Status_Complete",
-                            ),
-                          }),
-                        }),
-                      _ > 0 &&
-                        _ != _ &&
-                        (0, _.jsxs)("div", {
-                          className: _.PhaseValues,
-                          children: [
-                            _.toLocaleString((0, _._)()),
-                            " / ",
-                            (0, _.jsx)("span", {
-                              className: _.Total,
-                              children: _.toLocaleString((0, _._)()),
-                            }),
-                          ],
-                        }),
-                    ],
-                  }),
-                0 != _ &&
-                  (0, _.jsx)("div", {
-                    className: _.BatchStatusRow,
-                    children: _,
-                  }),
-                _ != 1 / 0 &&
-                  0 == _ &&
-                  (0, _.jsxs)("div", {
-                    className: _.BatchStatusRow,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.PhaseLabel,
-                        children: (0, _._)(
-                          "#SteamLearn_Status_Train_Epoch_BestLoss",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.PhaseValues,
-                        children: (0, _.jsx)("span", {
-                          className: _.Total,
-                          children: _.toFixed(4),
-                        }),
-                      }),
-                    ],
-                  }),
-                _ != 1 / 0 &&
-                  0 == _ &&
-                  (0, _.jsxs)("div", {
-                    className: _.BatchStatusRow,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.PhaseLabel,
-                        children: (0, _._)(
-                          "#SteamLearn_Status_Train_Epoch_BestAccuracy",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.PhaseValues,
-                        children: (0, _.jsx)("span", {
-                          className: _.Total,
-                          children: _.toFixed(4),
-                        }),
-                      }),
-                    ],
-                  }),
-                _ != 1 / 0 &&
-                  0 == _ &&
-                  (0, _.jsxs)("div", {
-                    className: _.BatchStatusRow,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.PhaseLabel,
-                        children: (0, _._)(
-                          _
-                            ? "#SteamLearn_Status_Train_Epoch_BestTopK10"
-                            : "#SteamLearn_Status_Train_Epoch_BestF1Score",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.PhaseValues,
-                        children: (0, _.jsx)("span", {
-                          className: _.Total,
-                          children: _.toFixed(4),
-                        }),
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-            _ &&
-              _ &&
-              (0, _.jsx)("div", {
-                className: _.CurrentEpoch,
-                children: (0, _.jsxs)("div", {
-                  className: _.GraphPair,
-                  children: [
-                    (0, _.jsx)(_, {
-                      strHeading: (0, _._)(
-                        "#SteamLearn_Status_Train_Axis_Loss",
-                      ),
-                      lines: _,
-                      fAxisPaddingPct: 25,
-                    }),
-                    (0, _.jsx)(_, {
-                      strHeading: (0, _._)(
-                        "#SteamLearn_Status_Train_Axis_Accuracy",
-                      ),
-                      lines: _,
-                      fAxisPaddingPct: 25,
-                    }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        strHeading: (0, _._)(
-                          _
-                            ? "#SteamLearn_Status_Train_Axis_TopK10"
-                            : "#SteamLearn_Status_Train_Axis_F1Score",
-                        ),
-                        lines: _,
-                        fAxisPaddingPct: 25,
-                      }),
-                  ],
-                }),
-              }),
-          ],
-        });
-      };
-      function _(_) {
-        let _ = "";
-        return (
-          _ > 3600 && ((_ += `${Math.floor(_ / 3600)}:`), (_ %= 3600)),
-          (_ += `${String(Math.floor(_ / 60)).padStart(2, "0")}:`),
-          (_ %= 60),
-          (_ += `${String(Math.floor(_)).padStart(2, "0")}`),
-          _
-        );
-      }
-      function _(_, _) {
-        if (_.length < _) return _;
-        let _ = [];
-        const _ = (_.length - 1) / _;
-        for (let _ = 0; _ + _ < _.length; _ += _) {
-          const _ = _ + _,
-            _ = 1 - (_ - Math.floor(_)),
-            _ = _ - Math.floor(_);
-          let _ = 0;
-          (_ += _ * _[Math.floor(_)]), (_ += _ * _[Math.floor(_)]);
-          for (let _ = Math.floor(_) + 1; _ < Math.floor(_); _++) _ += _[_];
-          (_ /= _), __webpack_require__.push(_);
-        }
-        return _;
-      }
-      const _ = (_) => {
-        let _, _, _, _;
-        for (const _ of _.lines) {
-          const _ = Math.min(..._.data.map((_) => _[_.strDataLabel])),
-            _ = Math.max(..._.data.map((_) => _[_.strDataLabel]));
-          (_ = Math.min(null == _ ? _ : _, _)),
-            (_ = Math.max(null == _ ? _ : _, _));
-        }
-        const _ = Math.max(0, _ - (_ - _) * (_.fAxisPaddingPct / 100)),
-          _ = _ + (_ - _) * (_.fAxisPaddingPct / 100);
-        return (
-          (_ = Math.floor(100 * _) / 100),
-          (_ = Math.ceil(100 * _) / 100),
-          (0, _.jsxs)("div", {
-            className: _.TrainGraph,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.GraphTitle,
-                children: _.strHeading,
-              }),
-              (0, _.jsx)("div", {
-                className: _.LineValues,
-                children: _.lines.map((_, _) =>
-                  null == _.nFinalValue
-                    ? null
-                    : (0, _.jsxs)(
-                        "div",
-                        {
-                          className: _.LegendValue,
-                          style: {
-                            color: _.color,
-                          },
-                          children: [
-                            `${_.strDataLabel}: `,
-                            (0, _.jsx)("span", {
-                              className: _.Value,
-                              children:
-                                "" + Math.round(1e4 * _.nFinalValue) / 1e4,
-                            }),
-                          ],
-                        },
-                        `Legend_${_.strDataLabel}_${_}`,
-                      ),
-                ),
-              }),
-              (0, _.jsxs)(_._, {
-                width: 420,
-                height: 300,
-                children: [
-                  (0, _.jsx)(_._, {}),
-                  _.lines.map((_, _) =>
-                    (0, _.jsx)(
-                      _._,
-                      {
-                        type: "number",
-                        dataKey: "index",
-                        domain: _.XAxisDomain,
-                        xAxisId: `${_.strDataLabel}_${_}`,
-                        axisLine: 0 == _ || _.bAxisLine,
-                        tick: _.bAxisLine,
-                        tickCount: _.data.length <= 10 ? _.data.length : void 0,
-                      },
-                      `${_.strHeading}_${_.strDataLabel}_${_}`,
-                    ),
-                  ),
-                  (0, _.jsx)(_._, {
-                    type: "number",
-                    tickCount: 5,
-                    domain: [_, _],
-                  }),
-                  _.lines.map((_, _) =>
-                    (0, _.jsx)(
-                      _._,
-                      {
-                        type: "monotone",
-                        stroke: _.color,
-                        dataKey: _.strDataLabel,
-                        dot: _.data.length < 10,
-                        xAxisId: `${_.strDataLabel}_${_}`,
-                        data: _.data,
-                      },
-                      `${_.strDataLabel}_${_}`,
-                    ),
-                  ),
-                ],
-              }),
-            ],
-          })
-        );
-      };
-      function _(_) {
-        if (null != _)
-          return Array.isArray(_) && _.length > 0
-            ? _.reduce((_, _) => _ + _) / _.length
-            : "number" == typeof _
-              ? _
-              : 0;
-      }
-      var _;
-      !(function (_) {
-        (_[(_.NONE = 0)] = "NONE"),
-          (_[(_.MAIN = 1)] = "MAIN"),
-          (_[(_.FETCH_WORKERS = 2)] = "FETCH_WORKERS"),
-          (_[(_.GPU = 3)] = "GPU");
-      })(_ || (_ = {}));
-      const _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.NONE);
-          return (0, _.jsxs)("div", {
-            className: _.LogSection,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.ButtonRow,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () =>
-                      __webpack_require__(_ == _.MAIN ? _.NONE : _.MAIN),
-                    children: (0, _._)(
-                      _ == _.MAIN
-                        ? "#SteamLearn_Status_LogMain_Hide"
-                        : "#SteamLearn_Status_LogMain_Show",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () =>
-                      __webpack_require__(
-                        _ == _.FETCH_WORKERS ? _.NONE : _.FETCH_WORKERS,
-                      ),
-                    children: (0, _._)(
-                      _ == _.FETCH_WORKERS
-                        ? "#SteamLearn_Status_LogFetchWorkers_Hide"
-                        : "#SteamLearn_Status_LogFetchWorkers_Show",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () =>
-                      __webpack_require__(_ == _.GPU ? _.NONE : _.GPU),
-                    children: (0, _._)(
-                      _ == _.GPU
-                        ? "#SteamLearn_Status_LogTrain_Hide"
-                        : "#SteamLearn_Status_LogTrain_Show",
-                    ),
-                  }),
-                ],
-              }),
-              _ == _.MAIN &&
-                (0, _.jsx)(_, {
-                  nFetchID: _.nFetchID,
-                  nTrainID: _.nTrainID,
-                }),
-              _ == _.FETCH_WORKERS &&
-                (0, _.jsx)(_, {
-                  nFetchID: _.nFetchID,
-                  nTrainID: _.nTrainID,
-                }),
-              _ == _.GPU &&
-                (0, _.jsx)(_, {
-                  nFetchID: _.nFetchID,
-                  nTrainID: _.nTrainID,
-                }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { nProjectID: _ } = _(),
-            _ = _(_, _.nFetchID, _.nTrainID),
-            _ = _.data;
-          return _.isLoading
-            ? (0, _.jsx)("div", {
-                className: _.LogContainer,
-                children: (0, _._)(
-                  "#SteamLearn_Status_LogTrain_Status_Loading",
-                ),
-              })
-            : _.isSuccess && null != _
-              ? (0, _.jsx)("div", {
-                  className: _.LogContainer,
-                  children: _.main_log(),
-                })
-              : (0, _.jsx)("div", {
-                  className: _.LogContainer,
-                  children: (0, _._)(
-                    "#SteamLearn_Status_LogTrain_Status_Failed",
-                  ),
-                });
-        },
-        _ = (_) => {
-          const { nProjectID: _ } = _(),
-            _ = _(_, _.nFetchID, _.nTrainID),
-            _ = _.data;
-          return _.isLoading
-            ? (0, _.jsx)("div", {
-                className: _.LogContainer,
-                children: (0, _._)(
-                  "#SteamLearn_Status_LogTrain_Status_Loading",
-                ),
-              })
-            : _.isSuccess && null != _
-              ? (0, _.jsx)("div", {
-                  className: _.WorkerLogs,
-                  children: _.fetch_worker_logs().map((_, _) =>
-                    (0, _.jsxs)(
-                      "div",
-                      {
-                        className: _.WorkerLog,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.WorkerLogHeader,
-                            children: (0, _._)(
-                              "#SteamLearn_Status_LogTrain_Worker",
-                              _,
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.LogContainer,
-                            children: _,
-                          }),
-                        ],
-                      },
-                      `worker_log_${_}`,
-                    ),
-                  ),
-                })
-              : (0, _.jsx)("div", {
-                  className: _.LogContainer,
-                  children: (0, _._)(
-                    "#SteamLearn_Status_LogTrain_Status_Failed",
-                  ),
-                });
-        },
-        _ = (_) => {
-          const { nProjectID: _ } = _(),
-            _ = _(_, _.nFetchID, _.nTrainID),
-            _ = _.data;
-          return _.isLoading
-            ? (0, _.jsx)("div", {
-                className: _.LogContainer,
-                children: (0, _._)(
-                  "#SteamLearn_Status_LogTrain_Status_Loading",
-                ),
-              })
-            : _.isSuccess && null != _
-              ? (0, _.jsx)("div", {
-                  className: _.LogContainer,
-                  children: _.gpu_log(),
-                })
-              : (0, _.jsx)("div", {
-                  className: _.LogContainer,
-                  children: (0, _._)(
-                    "#SteamLearn_Status_LogTrain_Status_Failed",
-                  ),
-                });
         },
         _ = {
           SteamLearnBase: () => "steamlearn",
@@ -39973,8 +38831,6 @@
             `/${_.SteamLearnProject()}/${_ ?? ":id"}/${_ ?? ":version"}/train`,
           SteamLearnProjectTrainStatus: (_, _) =>
             `/${_.SteamLearnProject()}/${_ ?? ":id"}/${_ ?? ":version"}/trainstatus`,
-          SteamLearnProjectTrainStatusNew: (_, _) =>
-            `/${_.SteamLearnProject()}/${_ ?? ":id"}/${_ ?? ":version"}/trainstatusnew`,
           SteamLearnProjectInferenceTester: (_, _) =>
             `/${_.SteamLearnProject()}/${_ ?? ":id"}/${_ ?? ":version"}/inferencetester`,
         };
@@ -39996,14 +38852,13 @@
           _.SteamLearnProjectTrainSettings(void 0, void 0),
           _.SteamLearnProjectTrain(void 0, void 0),
           _.SteamLearnProjectTrainStatus(void 0, void 0),
-          _.SteamLearnProjectTrainStatusNew(void 0, void 0),
           _.SteamLearnProjectInferenceTester(void 0, void 0),
         ]);
       }
       function _(_) {
         const _ = (0, _._)(),
-          { msgWorkingProjectConfig: __webpack_require__ } = _();
-        return _(_.pathname) && !__webpack_require__
+          { msgWorkingProjectConfig: _ } = _();
+        return _(_.pathname) && !_
           ? null
           : (0, _.jsx)("div", {
               className: _.MainAppContainer,
@@ -40014,7 +38869,7 @@
         const _ = (0, _._)(),
           {
             nProjectID: _,
-            nPublishedVersion: __webpack_require__,
+            nPublishedVersion: _,
             msgWorkingProjectConfig: _,
           } = _();
         if (!_(_.pathname)) return null;
@@ -40056,11 +38911,6 @@
               disabled: !_,
             },
             {
-              name: (0, _._)("#SteamLearn_Project_TrainStatus"),
-              fnRoute: _.SteamLearnProjectTrainStatusNew,
-              disabled: !_,
-            },
-            {
               name: (0, _._)("#SteamLearn_Project_InferenceTester"),
               fnRoute: _.SteamLearnProjectInferenceTester,
               disabled: !_,
@@ -40075,7 +38925,7 @@
                 className: _.TabAndSpacer,
                 children: [
                   (0, _.jsx)(_._, {
-                    _: _.fnRoute(_, __webpack_require__),
+                    _: _.fnRoute(_, _),
                     className: (0, _._)(
                       _.Tab,
                       _(_.pathname, [_.fnRoute(void 0, void 0)]) && _.Active,
@@ -40169,10 +39019,6 @@
                       }),
                       (0, _.jsx)(_._, {
                         path: _.SteamLearnProjectTrainStatus(void 0, void 0),
-                        component: _,
-                      }),
-                      (0, _.jsx)(_._, {
-                        path: _.SteamLearnProjectTrainStatusNew(void 0, void 0),
                         component: _,
                       }),
                       (0, _.jsx)(_._, {

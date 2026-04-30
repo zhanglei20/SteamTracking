@@ -14,7 +14,7 @@
     3049: (e, r, t) => {
       t.d(r, { J: () => s });
       var i = t(8527),
-        a = t(42475);
+        a = t(48891);
       function s() {
         return (0, a.A)().languages.map((e) => {
           return 2 == (r = e.strISOCode).length && i.TS.COUNTRY

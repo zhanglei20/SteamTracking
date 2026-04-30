@@ -4,7 +4,7 @@
 jQuery( function($) {
 	var mqQuerySmallMode = window.matchMedia ? window.matchMedia("(max-width: 910px)") : {matches: false};
 	var mqMobileMode = window.matchMedia ? window.matchMedia("(max-width: 500px)") : {matches: false};
-	var mqWideMode = window.matchMedia ? window.matchMedia("(min-width: 1200px)") : {matches: false};
+	var mqWideMode = window.matchMedia ? window.matchMedia("(min-width: 1400px)") : {matches: false};
 
 	var $HTML = $J('html');
 	window.UseTouchFriendlyMode = function() {
@@ -17,7 +17,7 @@ jQuery( function($) {
 		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
 	};
 	window.UseGamepadScreenMode = function() {
-		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'gamepad' );
+		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'GamepadMode' );
 	};
 	window.UseNewMobileAppMode = function() {
 		// the new mobile app can run on screen widths wider than responsive_css_maxwidth
@@ -214,7 +214,7 @@ jQuery( function($) {
 		g_fnActivateLocalMenu = LocalMenuEvents.fnActivateMenu;
 
 		$(window ).on( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu', function() {
-			var bShouldUseResponsiveMenu = UseSmallScreenMode() || UseGamepadScreenMode(); 
+			var bShouldUseResponsiveMenu = UseSmallScreenMode() || UseGamepadScreenMode();
 			if ( bLocalMenuEnabed != bShouldUseResponsiveMenu )
 			{
 				if ( bShouldUseResponsiveMenu )
@@ -242,8 +242,6 @@ jQuery( function($) {
 	}
 
 	Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents );
-
-	Responsive_InitFixOnScroll( $ );
 
 	Responsive_InitTouchDetection( $ );
 
@@ -409,18 +407,34 @@ function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalM
 	});
 }
 
+var g_mqlPointer;
 function Responsive_InitTouchDetection( $ )
 {
 	var $HTML= $J('html');
-	if ( !$HTML.hasClass('touch') && $HTML.hasClass('responsive') )
+	if ( $HTML.hasClass('responsive') )
 	{
-		$J(window ).one('touchstart', function() {
-			// user is on a touch device - enable touch-friendly accessors and
-			// remember for the rest of this session
+		// To update touch mode state, both set/clear the class on the current page, and set/clear a session cookie
+		// (observed by php code) so the behavior persists across subsequent loads/reloads.
+		const fnUpdateTouch = ( touch ) => {
+			if (touch) {
+				if (!$HTML.hasClass('touch')) {
+					$HTML.addClass('touch');
+				}
+				V_SetCookie( "strResponsiveViewPrefs", 'touch', 0 );
+			} else {
+				if ($HTML.hasClass('touch')) {
+					$HTML.removeClass('touch');
+				}
+				V_SetCookie( "strResponsiveViewPrefs", null, -1 );
+			}
+		}
 
-			$HTML.addClass('touch');
-			V_SetCookie( "strResponsiveViewPrefs", 'touch', 0 );
-		} );
+		// Detect if we're in touch mode by looking for a coarse pointer.
+		g_mqlPointer = window.matchMedia("(pointer: coarse)");
+
+		// Force an immediate update, then update on any future changes.
+		fnUpdateTouch(g_mqlPointer.matches);
+		g_mqlPointer.onchange = (e) => fnUpdateTouch(e.matches);
 	}
 }
 
@@ -428,68 +442,14 @@ function Responsive_InitTabSelect( $ )
 {
 	// handle any tab dropdowns
 	$J(document).on('change.ResponsiveTabSelect', 'select.responsive_tab_select', function() {
-		var url = $J(this ).val();
-		if ( url != window.location )
-			window.location = url;
+		Responsive_SetLocation($J(this).val());
 	});
 }
 
-function Responsive_InitFixOnScroll($)
+function Responsive_SetLocation( $url )
 {
-	var $Ctn = $J('.responsive_fixonscroll_ctn');
-	var $Elements = $J('.responsive_fixonscroll');
-	if ( $Elements.length )
-	{
-		var nCtnTop = -1;
-		var nCtnHeight = 0;
-
-		$J(window).on('scroll.ResponsiveFixOnScroll resize.ResponsiveFixOnScroll', function() {
-			var nHeaderOffset = GetResponsiveHeaderFixedOffsetAdjustment();
-			var nScrollTop = $J(window ).scrollTop() + nHeaderOffset + nCtnHeight;
-
-			if ( nHeaderOffset != nCtnTop )
-			{
-				nCtnTop = nHeaderOffset;
-				$Ctn.css( 'top', nCtnTop + 'px' );
-			}
-			$Elements.each( function() {
-				var $Element = $J(this);
-				if ( !$Element.is(':visible') )
-				{
-					if ( $Element.hasClass('in_fixed_ctn') && $Element.data('originalContents') )
-					{
-						$Element.append( $Element.data('originalContents') );
-						$Element.removeClass('in_fixed_ctn');
-						$Element.css('height', '');
-						nCtnHeight = $Ctn.height();
-					}
-					return;
-				}
-
-				var nElementTop = $Element.offset().top;
-				if ( nElementTop > nScrollTop )
-				{
-					if ( $Element.hasClass('in_fixed_ctn') )
-					{
-						$Element.append( $Element.data('originalContents') );
-						$Element.removeClass('in_fixed_ctn');
-						$Element.css('height', '');
-						nCtnHeight = $Ctn.height();
-					}
-				}
-				else
-				{
-					if ( !$Element.hasClass('in_fixed_ctn') )
-					{
-						$Element.css('height', $Element.height() + 'px' );
-						$Element.data( 'originalContents', $Element.children() );
-						$Ctn.append( $Element.children() );
-						$Element.addClass( 'in_fixed_ctn' );
-						nCtnHeight = $Ctn.height();
-					}
-				}
-			});
-		} );
+	if (window.location != $url) {
+		window.location = $url;
 	}
 }
 

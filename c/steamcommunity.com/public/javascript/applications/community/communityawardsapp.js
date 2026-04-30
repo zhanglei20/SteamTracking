@@ -90,17 +90,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(0, _._)();
         return (
@@ -142,17 +138,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {

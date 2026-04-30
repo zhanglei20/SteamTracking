@@ -4777,7 +4777,6 @@
 "Steam_WindowsCompat_Description" "Steam запущен в режиме совместимости с более ранней версией Windows, и из-за этого могут возникнуть проблемы с некоторыми функциями Steam или играми. Пожалуйста, выполните инструкции ниже для отключения режима совместимости."
 "Steam_WindowsCompat_DoNotShowAgain" "Не показывать снова"
 "Steam_WindowsCompat_SupportLinkDesc" "Как отключить режим совместимости?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Закрыть Steam"
 "Steam_WindowsCompat_RestartSteam" "Перезапустить Steam"
 "Steam_WindowsCompat_Continue" "Продолжить"
@@ -4858,11 +4857,12 @@
 "RescueDialog_ExitSteam" "Выйти из Steam"
 
 "TransportDialog_Title" "Непредвиденная ошибка транспорта"
-"TransportDialog_Explanation" "Во время запуска в Steam произошла непредвиденная ошибка (0x%errorCount%). Подробная информация — <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>здесь</a>."
+"TransportDialog_Explanation" "Во время запуска Steam произошла непредвиденная ошибка (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Выберите один из следующих вариантов:"
 "TransportDialog_RestartSteam" "Перезапустить Steam"
 "TransportDialog_RestartSteamWebHelper" "Перезапустить steamwebhelper"
 "TransportDialog_ContinueAnyway" "Только для Valve: продолжить"
+"TransportDialog_SupportLinkDesc" "Подробнее"
 "TransportDialog_ExitSteam" "Выйти из Steam"
 
 "DownloadRegion_default"				 "Неизвестно"

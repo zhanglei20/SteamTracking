@@ -169,85 +169,78 @@
 #profileBlock.recommendationProfileBlock {
 	padding-top: 13px;
 }
-.dselect_container {
-	padding: 0px;
-	display: inline;
-}
 
-.dselect_container a, .dselect_container a:hover, .dselect_container a:active, .dselect_container a:visited
-{
-	font-size: 12px;
-	line-height: 22px;
-	text-decoration: none;
-	font-weight: normal;
-}
-
-a.trigger, a.activetrigger {
-	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
-	border-right: 7px solid #8f98a0; /* HAAAAAX! */
-	display:block;
-
-	color: #333;
-	height: 22px;
-	padding-left:8px;
-	padding-right: 20px;
-	overflow: hidden;
-
-
-	background-color: #8f98a0;
-	border-radius: 3px;
-	margin: 3px 8px 3px 0px;
-}
-
-.dropcontainer ul {
-background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
+/* dynamic select */
+.dselect_container .dropcontainer ul {
+	background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
 	background: linear-gradient( to bottom, #8f98a0 5%, #b1bcc4 95%);
-	border-radius: 3px;
-	border-top-right-radius: 0;
-	border-top-left-radius: 0;
-	list-style-type:none;
-	margin:0;
-	padding:5px 5px;
-
-	position:absolute;
-	line-height: 22px;
-	z-index: 999999;
-
-	overflow: auto;
-	overflow-x: hidden;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
+	box-sizing: border-box;
+	list-style-type: none;
+	margin: 0;
+	max-height: 306px;
+	overflow: hidden auto;
+	padding: 5px;
+	position: absolute;
+	width: 100%;
+	z-index: 2000;
 }
 
-.dropdownhidden{
+html.GamepadMode .dselect_container .dropcontainer ul {
+	border-radius: 3px;
+	padding: 0;
+}
+
+.dselect_container .dropcontainer ul.dropdownhidden {
 	display: none;
 }
-.dropdownvisible{
-	top:-4px;
+
+.dselect_container .dropcontainer ul li a {
+	color: #333333;
 	display: block;
 }
-.dropcontainer ul li {
-	padding: 0px;
-	margin: 0px;
-	list-style-type: none;
-}
 
-.dropcontainer ul a {
-	padding-left:2px;
-	padding-right:2px;
-	display:block;
-	text-decoration:none;
-	color:#333;
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	font-size: 12px;
 	line-height: 22px;
-	height: 22px;
-}
-.dropcontainer a.highlighted_selection {
-	background:#3196FF;
-	color: #333;
-	text-decoration: none;
-}
-.dropcontainer{
-	position:relative;
+	padding-inline: 2px;
 }
 
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
+	background: #3196FF;
+}
+
+.dselect_container .trigger {
+	background-color: #8f98a0;
+	border: 0 solid #8f98a0;
+	border-radius: 3px;
+	color: #333333;
+	font-size: 12px;
+	line-height: 22px;
+	margin: 3px 0;
+	overflow: hidden;
+	padding-left: 8px;
+	padding-right: 26px !important;
+	position: relative;
+	text-align: start;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
+	border-radius: 3px 3px 0 0;
+}
+
+.dselect_container .trigger::after {
+	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat left center;
+	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 16px;
+}
 
 .review_page_content {
 	max-width: 918px;

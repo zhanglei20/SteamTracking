@@ -29,6 +29,18 @@
         FileUploadDropFilesMessage: "I2CE9X_I0GBNYbJf7VYBg",
         TooltipWithShortcut: "zT2msZmm-jBeLe4Dt7smo",
         KeyCap: "_3mZEV9CXrIn4FITvJk3Xy-",
+        BackgroundAnimation: "_32I7Uh1ZWySd7VGW50f5IC",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3dzJEyM6opBkmIeARAGlYr",
+        "ItemFocusAnim-darkerGrey": "_2dbsn-sR5AlFKEgCU0FBbT",
+        "ItemFocusAnim-darkGreySettings": "_2gCU5HJBuDk1vxRMJhwFGE",
+        "ItemFocusAnim-darkGrey": "_39KmlfhlZwkINJt9fdyKbw",
+        "ItemFocusAnim-grey": "_1X5Siupo5N_ZVuGesoYV0t",
+        "ItemFocusAnim-translucent-white-10": "_3aZcpOjRI-YzMZmhCRiFjd",
+        "ItemFocusAnim-translucent-white-20": "_310j_Q-iB-at4-cmQSi1Mt",
+        "ItemFocusAnimBorder-darkGrey": "_38WlDUfHs-IiaRcWKFpWyA",
+        "ItemFocusAnim-green": "_3Hq7gKwAuHvmYuBWXBx8mC",
+        focusAnimation: "_1k4kLxHBHs5edlnWmN-Cos",
+        hoverAnimation: "_3OZh2Bm4JsNC3bNfskysCA",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -224,10 +236,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const {
-            msAutosaveTimeout: __webpack_require__ = 1e3,
-            msMaxInterval: _ = 10 * __webpack_require__,
-          } = _ || {},
+        const { msAutosaveTimeout: _ = 1e3, msMaxInterval: _ = 10 * _ } =
+            _ || {},
           [_, _] = _.useState(!1),
           _ = _.useRef(0);
         return (
@@ -244,17 +254,17 @@
                 _ = void 0;
                 const _ = performance.now(),
                   _ = _ - _.current;
-                _ || _ >= __webpack_require__ || _ - _ >= _
+                _ || _ >= _ || _ - _ >= _
                   ? (console.log("Committing changes"),
                     _.CommitChanges(),
                     _(!1))
-                  : (_ = window.setTimeout(_, __webpack_require__ - _));
+                  : (_ = window.setTimeout(_, _ - _));
               };
-            let _ = window.setTimeout(_, __webpack_require__);
+            let _ = window.setTimeout(_, _);
             return () => {
               _ && (window.clearTimeout(_), _(!0));
             };
-          }, [_, _, __webpack_require__, _]),
+          }, [_, _, _, _]),
           {
             bDirty: _,
           }
@@ -283,13 +293,13 @@
       var _ = __webpack_require__("chunkid");
       const _ = _.createContext(void 0);
       function _(_) {
-        const { view: _, pmState: __webpack_require__, children: _ } = _,
+        const { view: _, pmState: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               view: _,
-              pmState: __webpack_require__,
+              pmState: _,
             }),
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -297,24 +307,19 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-          schema: _,
-          refOnUpdate: __webpack_require__,
-          bSingleLine: _,
-        } = _;
+        const { schema: _, refOnUpdate: _, bSingleLine: _ } = _;
         return (
           _(
             _.useMemo(
               () =>
-                __webpack_require__ &&
+                _ &&
                 new _._({
                   view: (_) => ({
                     update: (..._) =>
-                      __webpack_require__.current &&
-                      __webpack_require__.current(..._),
+                      _.current && __webpack_require__.current(..._),
                   }),
                 }),
-              [__webpack_require__],
+              [_],
             ),
           ),
           _(_.useMemo(() => (0, _._)(_ ? _._ : {}), [_])),
@@ -324,7 +329,7 @@
             _.useMemo(
               () =>
                 (function (_) {
-                  const { nodes: _, marks: __webpack_require__ } = _,
+                  const { nodes: _, marks: _ } = _,
                     _ = (0, _._)(
                       _._,
                       (_, _) => (
@@ -345,11 +350,11 @@
                       Escape: _._,
                       "Mod-Enter": _,
                       "Shift-Enter": _,
-                      "Mod-b": (0, _._)(__webpack_require__.strong),
-                      "Mod-i": (0, _._)(__webpack_require__.italic),
-                      "Mod-u": (0, _._)(__webpack_require__.underline),
-                      "Mod-Shift-x": (0, _._)(__webpack_require__.strike),
-                      "Ctrl-Shift-s": (0, _._)(__webpack_require__.strike),
+                      "Mod-b": (0, _._)(_.strong),
+                      "Mod-i": (0, _._)(_.italic),
+                      "Mod-u": (0, _._)(_.underline),
+                      "Mod-Shift-x": (0, _._)(_.strike),
+                      "Ctrl-Shift-s": (0, _._)(_.strike),
                       Enter: (0, _._)(_.list_item),
                       "Mod-[": (0, _._)(_.list_item),
                       "Mod-]": (0, _._)(_.list_item),
@@ -373,8 +378,7 @@
                       "Ctrl-Shift-0": (0, _._)(_.paragraph),
                     };
                   return (
-                    __webpack_require__.code &&
-                      (_["Ctrl-Shift-c"] = (0, _._)(__webpack_require__.code)),
+                    _.code && (_["Ctrl-Shift-c"] = (0, _._)(_.code)),
                     _.code_block &&
                       (_["Alt-Ctrl-Shift-c"] = (0, _._)(_.code_block)),
                     _.horizontal_rule &&
@@ -398,7 +402,7 @@
             _.useMemo(
               () =>
                 (function (_) {
-                  const { nodes: _, marks: __webpack_require__ } = _;
+                  const { nodes: _, marks: _ } = _;
                   return (0, _._)({
                     rules: [
                       (0, _._)(
@@ -411,13 +415,10 @@
                           _.childCount + _.attrs.order == parseInt(_[1]),
                       ),
                       (0, _._)(/^\s*([-+*])\s$/, _.bullet_list),
-                      (0, _._)(
-                        /(?<!\w)\*([^*]+)\*/,
-                        __webpack_require__.strong,
-                      ),
-                      (0, _._)(/(?<!\w)_([^_]+)_/, __webpack_require__.italic),
-                      (0, _._)(/(?<!\w)~([^~]+)~/, __webpack_require__.strike),
-                      (0, _._)(/(?<!\w)`([^`]+)`/, __webpack_require__.code),
+                      (0, _._)(/(?<!\w)\*([^*]+)\*/, _.strong),
+                      (0, _._)(/(?<!\w)_([^_]+)_/, _.italic),
+                      (0, _._)(/(?<!\w)~([^~]+)~/, _.strike),
+                      (0, _._)(/(?<!\w)`([^`]+)`/, _.code),
                       (0, _._)(/^```$/, _.code_block),
                       (0, _._)(/^(#{1,5})\s$/, _.heading, (_) => ({
                         level: _[1].length,
@@ -461,22 +462,22 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         return () => [
           _,
           {
             class: _,
           },
-          __webpack_require__,
+          _,
         ];
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         return [
           _,
           {
             class: _,
           },
-          __webpack_require__,
+          _,
         ];
       }
       const _ = {
@@ -605,12 +606,12 @@
                 },
               ],
               toDOM(_) {
-                const { src: _, alt: __webpack_require__, title: _ } = _.attrs;
+                const { src: _, alt: _, title: _ } = _.attrs;
                 return [
                   "img",
                   {
                     src: _,
-                    alt: __webpack_require__,
+                    alt: _,
                     title: _,
                     class: _().Image,
                   },
@@ -675,7 +676,7 @@
               toDOM(_) {
                 const {
                     webm: _,
-                    mp4: __webpack_require__,
+                    mp4: _,
                     poster: _,
                     autoplay: _,
                     controls: _,
@@ -690,11 +691,11 @@
                         type: "video/webm",
                       },
                     ]),
-                  __webpack_require__ &&
+                  _ &&
                     _.push([
                       "source",
                       {
-                        src: __webpack_require__,
+                        src: _,
                         type: "video/mp4",
                       },
                     ]),
@@ -886,12 +887,12 @@
                 },
               ],
               toDOM(_) {
-                const { href: _, title: __webpack_require__ } = _.attrs;
+                const { href: _, title: _ } = _.attrs;
                 return [
                   "a",
                   {
                     href: _,
-                    title: __webpack_require__,
+                    title: _,
                     class: "BB_Link",
                   },
                   0,
@@ -1130,7 +1131,7 @@
             );
           }
         }
-        BBNodeToPMNode(_, _, ...__webpack_require__) {
+        BBNodeToPMNode(_, _, ..._) {
           let _ = _.BBArgsToAttrs ? _.BBArgsToAttrs(_.args || {}) : void 0;
           try {
             if (
@@ -1140,15 +1141,15 @@
                   (_ = {
                     ...(_ || {}),
                     [_.convertContentToAttr]:
-                      ((_ = __webpack_require__),
+                      ((_ = _),
                       _.filter((_) => _.isText)
                         .map((_) => _.text)
                         .join()),
                   }),
-                "node" in _ && (__webpack_require__ = [])),
+                "node" in _ && (_ = [])),
               "node" in _)
             )
-              return this.TryCreateNode(_, __webpack_require__, _);
+              return this.TryCreateNode(_, _, _);
             {
               const _ = _.mark.create(_);
               return __webpack_require__.map((_) =>
@@ -1321,10 +1322,9 @@
       }
       function _(_, _) {
         if (_ && _.AttrsToBBArgs) {
-          const { tag: __webpack_require__ = _.tag, args: _ = {} } =
-            _.AttrsToBBArgs(_.attrs, _);
+          const { tag: _ = _.tag, args: _ = {} } = _.AttrsToBBArgs(_.attrs, _);
           return {
-            tag: __webpack_require__,
+            tag: _,
             args: _,
           };
         }
@@ -1462,15 +1462,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const {
-          from: __webpack_require__,
-          $from: _,
-          _: _,
-          empty: _,
-        } = _.selection;
+        const { from: _, $from: _, _: _, empty: _ } = _.selection;
         return _
           ? !!_.isInSet(_.storedMarks || _.marks())
-          : _.doc.rangeHasMark(__webpack_require__, _, _);
+          : _.doc.rangeHasMark(_, _, _);
       }
       function _(_, _, _) {
         var _;
@@ -1518,12 +1513,9 @@
             return _.before(_);
         }
       }
-      function _(_, _, __webpack_require__ = {}) {
+      function _(_, _, _ = {}) {
         return new _._(_, (_, _, _, _) => {
-          const _ =
-              __webpack_require__ instanceof Function
-                ? __webpack_require__(_)
-                : __webpack_require__,
+          const _ = _ instanceof Function ? __webpack_require__(_) : _,
             _ = _._;
           if (_[1]) {
             const _ = _ + _[0].indexOf(_[1]),
@@ -1681,12 +1673,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            color: _,
-            onChange: __webpack_require__,
-            strTitle: _,
-            disableAlpha: _,
-          } = _,
+        const { color: _, onChange: _, strTitle: _, disableAlpha: _ } = _,
           [_, _] = (0, _.useState)(() => _ || "rgba(255, 255, 255, 1)"),
           _ = (0, _.useCallback)(async () => {
             if ("EyeDropper" in window)
@@ -1702,7 +1689,7 @@
                 console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
               }
             else alert((0, _._)("#Sale_EyeDropperError"));
-          }, [__webpack_require__]);
+          }, [_]);
         return (0, _.jsxs)("div", {
           children: [
             Boolean(_) &&
@@ -1747,7 +1734,7 @@
       function _(_) {
         const {
             closeModal: _,
-            strTitle: __webpack_require__,
+            strTitle: _,
             onOK: _,
             strOKText: _,
             onCancel: _,
@@ -1768,7 +1755,7 @@
             classNameContent: _,
             children: [
               (0, _.jsx)(_._, {
-                children: __webpack_require__,
+                children: _,
               }),
               _,
               (0, _.jsx)(_._, {
@@ -1869,7 +1856,7 @@
       const _ = _.memo(function (_) {
         const {
             schema: _,
-            strColor: __webpack_require__,
+            strColor: _,
             bIsUpdate: _,
             strTargetText: _,
             bColor: _,
@@ -1880,11 +1867,11 @@
             from: _,
             _: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__),
+          [_, _] = _.useState(_),
           _ = _.useRef(null),
           [_, _] = _.useState(_),
           _ = _.useCallback(() => {
-            const { state: _, dispatch: __webpack_require__ } = _,
+            const { state: _, dispatch: _ } = _,
               _ = _ ? _.marks.color : _.marks.bgcolor;
             if (!_) return void console.log("debug: no markType");
             if (!_ || !_.startsWith("#") || 7 !== _.length)
@@ -1967,8 +1954,8 @@
                     /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
                   );
                   if (_) {
-                    let [, _, __webpack_require__, _, _] = _;
-                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(__webpack_require__, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
+                    let [, _, _, _, _] = _;
+                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(_, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
                   }
                   return "#7e3232";
                 })(_),
@@ -1992,7 +1979,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const [__webpack_require__, _] = _.useState(void 0),
+        const [_, _] = _.useState(void 0),
           _ = _.useCallback(
             (_) => {
               const _ = _.state.selection;
@@ -2044,19 +2031,19 @@
             },
             [_.marks.link, _],
           ),
-          _ = null == __webpack_require__ ? void 0 : __webpack_require__.view,
+          _ = null == _ ? void 0 : _.view,
           _ = _.useCallback(() => {
             window.setTimeout(() => _.focus(), 1), _(void 0);
           }, [_]);
         return [
           _,
-          __webpack_require__ &&
+          _ &&
             (0, _.jsx)(_._, {
               active: !0,
               children: (0, _.jsx)(_, {
                 schema: _,
                 closeModal: _,
-                ...__webpack_require__,
+                ..._,
               }),
             }),
         ];
@@ -2064,7 +2051,7 @@
       const _ = _.memo(function (_) {
         const {
             schema: _,
-            strLinkText: __webpack_require__,
+            strLinkText: _,
             strLinkHref: _,
             bIsUpdate: _,
             addtlAttrs: _,
@@ -2074,7 +2061,7 @@
             from: _,
             _: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__),
+          [_, _] = _.useState(_),
           [_, _] = _.useState(_),
           _ = _.useRef(null),
           _ = _.useRef(null),
@@ -2205,7 +2192,7 @@
         });
       });
       function _(_) {
-        const { addtlAttrs: _, values: __webpack_require__, setValues: _ } = _;
+        const { addtlAttrs: _, values: _, setValues: _ } = _;
         return (0, _.jsx)(_.Fragment, {
           children: Object.keys(_).map((_) =>
             (0, _.jsx)(
@@ -2213,7 +2200,7 @@
               {
                 attrName: _,
                 fnRender: _[_].fnRenderEditor,
-                value: __webpack_require__[_],
+                value: _[_],
                 setValues: _,
               },
               _,
@@ -2222,12 +2209,7 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-          attrName: _,
-          fnRender: __webpack_require__,
-          value: _,
-          setValues: _,
-        } = _;
+        const { attrName: _, fnRender: _, value: _, setValues: _ } = _;
         return __webpack_require__(
           _,
           _.useCallback(
@@ -2301,7 +2283,7 @@
       const _ = (0, _._)(function (_) {
         const {
             pmState: _,
-            className: __webpack_require__,
+            className: _,
             refOnUpdate: _,
             refView: _,
             bSpellcheckEnabled: _ = !0,
@@ -2366,7 +2348,7 @@
               _._,
               {
                 className: (0, _._)({
-                  ["" + __webpack_require__]: !!__webpack_require__,
+                  ["" + _]: !!_,
                   [_.Container]: !0,
                   [_.SingleLine]: !!_,
                 }),
@@ -2397,7 +2379,7 @@
         });
       });
       const _ = _.memo(function (_) {
-        const { parser: _, schema: __webpack_require__ } = _;
+        const { parser: _, schema: _ } = _;
         return (
           (0, _._)(
             _.useMemo(
@@ -2416,10 +2398,10 @@
                           return _;
                         const _ = _.ConvertLineBreaksToParagraphs(_.content);
                         return _._.maxOpen(_);
-                      })(_, __webpack_require__.nodes.hard_break, _),
+                      })(_, _.nodes.hard_break, _),
                   },
                 }),
-              [_, __webpack_require__],
+              [_, _],
             ),
           ),
           null
@@ -2447,12 +2429,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { schema: _, addtlAttrs: __webpack_require__, children: _ } = _,
+        const { schema: _, addtlAttrs: _, children: _ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           [_, _] = _.useState(() => (0, _._)(_.state, _.marks.link)),
           _ = _.useCallback((_) => _((0, _._)(_.state, _.marks.link)), [_]);
         (0, _._)(_, _);
-        const [_, _] = (0, _._)(_, __webpack_require__);
+        const [_, _] = (0, _._)(_, _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _,
@@ -2469,38 +2451,24 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            schema: _,
-            bColor: __webpack_require__,
-            addtlAttrs: _,
-            children: _,
-          } = _,
+        const { schema: _, bColor: _, addtlAttrs: _, children: _ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           [_, _] = _.useState(() =>
-            (0, _._)(
-              _.state,
-              __webpack_require__ ? _.marks.color : _.marks.bgcolor,
-            ),
+            (0, _._)(_.state, _ ? _.marks.color : _.marks.bgcolor),
           ),
           _ = _.useCallback(
-            (_) =>
-              _(
-                (0, _._)(
-                  _.state,
-                  __webpack_require__ ? _.marks.color : _.marks.bgcolor,
-                ),
-              ),
-            [__webpack_require__, _],
+            (_) => _((0, _._)(_.state, _ ? _.marks.color : _.marks.bgcolor)),
+            [_, _],
           );
         (0, _._)(_, _);
-        const [_, _] = (0, _._)(_, __webpack_require__, _);
+        const [_, _] = (0, _._)(_, _, _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _,
             (0, _.jsx)(_._, {
               onClick: () => _(_),
               toggled: _,
-              tooltip: __webpack_require__
+              tooltip: _
                 ? "#FormattingToolbar_Color"
                 : "#FormattingToolbar_BgColor",
               children: _,
@@ -2588,11 +2556,11 @@
         });
       }
       function _(_) {
-        const { schema: _, maxLevel: __webpack_require__ = 1, levels: _ } = _,
-          _ = __webpack_require__ + _ - 1;
+        const { schema: _, maxLevel: _ = 1, levels: _ } = _,
+          _ = _ + _ - 1;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            __webpack_require__ <= 1 &&
+            _ <= 1 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel1",
                 keyboardShortcut: "Ctrl-Shift-1",
@@ -2602,7 +2570,7 @@
                 },
                 children: (0, _.jsx)(_.jRw, {}),
               }),
-            __webpack_require__ <= 2 &&
+            _ <= 2 &&
               _ >= 2 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel2",
@@ -2613,7 +2581,7 @@
                 },
                 children: (0, _.jsx)(_.qOW, {}),
               }),
-            __webpack_require__ <= 3 &&
+            _ <= 3 &&
               _ >= 3 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel3",
@@ -2624,7 +2592,7 @@
                 },
                 children: (0, _.jsx)(_.x7X, {}),
               }),
-            __webpack_require__ <= 4 &&
+            _ <= 4 &&
               _ >= 4 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel4",
@@ -2635,7 +2603,7 @@
                 },
                 children: (0, _.jsx)(_.qzO, {}),
               }),
-            __webpack_require__ <= 5 &&
+            _ <= 5 &&
               _ >= 5 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel5",
@@ -2650,10 +2618,7 @@
         });
       }
       function _(_) {
-        const {
-            schema: _,
-            showIndentButtonsAsNeeded: __webpack_require__ = !1,
-          } = _,
+        const { schema: _, showIndentButtonsAsNeeded: _ = !1 } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           { bullet_list: _, ordered_list: _, list_item: _ } = _.nodes,
           _ = _.useMemo(() => _._(_), [_]),
@@ -2686,7 +2651,7 @@
                   list_item: _,
                   children: (0, _.jsx)(_.jE0, {}),
                 }),
-              (!__webpack_require__ || _) &&
+              (!_ || _) &&
                 (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsx)(_._, {
@@ -2708,17 +2673,12 @@
         );
       }
       function _(_) {
-        const {
-            list_type: _,
-            list_item: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { list_type: _, list_item: _, children: _, ..._ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           _ = _.useCallback((_) => void 0 !== (0, _._)(_.state, _), [_]),
           [_, _] = _.useState(() => _(_)),
           _ = _.useMemo(() => _._(_), [_]),
-          _ = _.useMemo(() => _._(__webpack_require__), [__webpack_require__]);
+          _ = _.useMemo(() => _._(_), [_]);
         return (
           (0, _._)(
             _,
@@ -2738,18 +2698,15 @@
         );
       }
       function _(_) {
-        const { schema: _, addtlAttrs: __webpack_require__ } = _;
+        const { schema: _, addtlAttrs: _ } = _;
         return (0, _.jsx)(_, {
           schema: _,
-          addtlAttrs: __webpack_require__,
+          addtlAttrs: _,
           children: (0, _.jsx)(_.YqK, {}),
         });
       }
       function _(_) {
-        const {
-          bSpellcheckEnabled: _,
-          setSpellcheckEnabled: __webpack_require__,
-        } = _;
+        const { bSpellcheckEnabled: _, setSpellcheckEnabled: _ } = _;
         return (0, _.jsx)(_._, {
           tooltip: _
             ? "#FormattingToolbar_DisableSpellcheck"
@@ -2788,19 +2745,15 @@
         _ = __webpack_require__("chunkid");
       const _ = () => _.useContext(_);
       function _(_) {
-        const {
-            view: _,
-            refUpdateToolbar: __webpack_require__,
-            children: _,
-          } = _,
+        const { view: _, refUpdateToolbar: _, children: _ } = _,
           _ = _.useRef(void 0);
         _.current || (_.current = new _._()),
           _.useEffect(
             () => (
-              (0, _._)(__webpack_require__, () => _.current.Dispatch(_)),
-              () => (0, _._)(__webpack_require__, void 0)
+              (0, _._)(_, () => _.current.Dispatch(_)),
+              () => (0, _._)(_, void 0)
             ),
-            [_, __webpack_require__],
+            [_, _],
           );
         const _ = _.useMemo(
           () => ({
@@ -2838,23 +2791,12 @@
         });
       }
       function _(_) {
-        const {
-            nodeType: _,
-            attrs: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { nodeType: _, attrs: _, children: _, ..._ } = _,
           { callbacks: _, view: _ } = _(),
-          [_, _] = _.useState(() => (0, _._)(_.state, _, __webpack_require__)),
-          _ = _.useCallback(
-            (_) => _((0, _._)(_.state, _, __webpack_require__)),
-            [_, __webpack_require__],
-          );
+          [_, _] = _.useState(() => (0, _._)(_.state, _, _)),
+          _ = _.useCallback((_) => _((0, _._)(_.state, _, _)), [_, _]);
         (0, _._)(_, _);
-        const _ = _.useMemo(
-          () => _._(_, __webpack_require__),
-          [__webpack_require__, _],
-        );
+        const _ = _.useMemo(() => _._(_, _), [_, _]);
         return (0, _.jsx)(_, {
           ..._,
           command: _,
@@ -2863,7 +2805,7 @@
         });
       }
       function _(_) {
-        const { mark: _, children: __webpack_require__, ..._ } = _,
+        const { mark: _, children: _, ..._ } = _,
           { callbacks: _, view: _ } = _(),
           [_, _] = _.useState(() => (0, _._)(_.state, _)),
           _ = _.useCallback((_) => _((0, _._)(_.state, _)), [_]);
@@ -2873,16 +2815,11 @@
           ..._,
           command: _,
           toggled: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const {
-            command: _,
-            toggled: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { command: _, toggled: _, children: _, ..._ } = _,
           { view: _, callbacks: _ } = _(),
           [_, _] = _.useState(() => _(_.state));
         (0, _._)(
@@ -2890,14 +2827,11 @@
           _.useCallback((_) => _(_(_.state)), [_]),
         ),
           _.useEffect(() => _(_(_.state)), [_, _]);
-        const _ = !_ && !__webpack_require__;
+        const _ = !_ && !_;
         return (0, _.jsx)(_, {
           ..._,
           children: (0, _.jsx)(_._, {
-            className: (0, _._)(
-              _.CommandButton,
-              __webpack_require__ && _.Toggled,
-            ),
+            className: (0, _._)(_.CommandButton, _ && _.Toggled),
             onMouseDown: (_) => {
               _.preventDefault(), _(_.state, _.dispatch, _);
             },
@@ -2910,7 +2844,7 @@
       function _(_) {
         const {
           onClick: _,
-          toggled: __webpack_require__,
+          toggled: _,
           disabled: _,
           children: _,
           className: _,
@@ -2919,11 +2853,7 @@
         return (0, _.jsx)(_, {
           ..._,
           children: (0, _.jsx)(_._, {
-            className: (0, _._)(
-              _.CommandButton,
-              __webpack_require__ && _.Toggled,
-              _,
-            ),
+            className: (0, _._)(_.CommandButton, _ && _.Toggled, _),
             onMouseDown: (_) => {
               0 === _.button && (_.preventDefault(), _(_));
             },
@@ -2933,16 +2863,12 @@
         });
       }
       function _(_) {
-        const {
-          tooltip: _,
-          keyboardShortcut: __webpack_require__,
-          children: _,
-        } = _;
+        const { tooltip: _, keyboardShortcut: _, children: _ } = _;
         if (!_) return _;
-        const _ = __webpack_require__
+        const _ = _
           ? (0, _.jsx)(_, {
               tooltip: _,
-              keyboardShortcut: __webpack_require__,
+              keyboardShortcut: _,
             })
           : _;
         return (0, _.jsx)(_._, {
@@ -2952,7 +2878,7 @@
         });
       }
       function _(_) {
-        const { tooltip: _, keyboardShortcut: __webpack_require__ } = _;
+        const { tooltip: _, keyboardShortcut: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.TooltipWithShortcut,
           children: [
@@ -2961,7 +2887,7 @@
             }),
             (0, _.jsx)("div", {
               children: (0, _.jsx)(_, {
-                keyboardShortcut: __webpack_require__,
+                keyboardShortcut: _,
               }),
             }),
           ],

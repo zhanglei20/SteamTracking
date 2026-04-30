@@ -22,6 +22,18 @@
         Question: "_17VRokV9gQrl4MOm03kxGV",
         Instructions: "_2N-j8qfNmHJEMMz1pXbdvC",
         WizardTooltip: "_2RXE_aA8kQtPJymKYYSMAl",
+        BackgroundAnimation: "C8N8hRwMeVp1tGShuVkOh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3OSHg17hDa1n_a1p8YV6NJ",
+        "ItemFocusAnim-darkerGrey": "_3vw4cd5iGVZPXAkYQdwc1O",
+        "ItemFocusAnim-darkGreySettings": "_35jKmGtukgtSVCv-o2sAWJ",
+        "ItemFocusAnim-darkGrey": "_2p57_OuvuARn5uJAZrKT9D",
+        "ItemFocusAnim-grey": "_1IsFUDfyU05AFfhOv9ZaFq",
+        "ItemFocusAnim-translucent-white-10": "_1-27hJIgX5EtEpiO8ruDs1",
+        "ItemFocusAnim-translucent-white-20": "Hy84D3TIRbj_PA180MPvA",
+        "ItemFocusAnimBorder-darkGrey": "WijGZOjm_kfdR-fupsAlg",
+        "ItemFocusAnim-green": "_16nOxlLQEWjquxC-Yr4mAY",
+        focusAnimation: "_1IV9IFCrYGSzJ9sS2CXScW",
+        hoverAnimation: "_1UU6b6HTIjjrWrTkpCewNw",
       };
     },
     chunkid: (module) => {
@@ -75,6 +87,18 @@
         StepImgContainer: "_27_A1alE6d3sduux3CAyY_",
         StepInstruction: "T9eBinyQ2hCY8oy4WO8g9",
         ControlsQuestion: "_86lVB7cXYqg7s4LChbRyM",
+        BackgroundAnimation: "_25lkDWhF0bwre6OQT8g7w0",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2UZY54l1AJ5zxBJhmYf490",
+        "ItemFocusAnim-darkerGrey": "hlnkWGoujK0WgKsCnBOcK",
+        "ItemFocusAnim-darkGreySettings": "_3uPCzxcRrrgoi-gsTfxgRQ",
+        "ItemFocusAnim-darkGrey": "_2u7cTUci-zR4zqevKlTsfz",
+        "ItemFocusAnim-grey": "_3PcMUvLdjJe0fnIkVlDHNa",
+        "ItemFocusAnim-translucent-white-10": "_1uSV29xzSfh0VWP4fBLSwy",
+        "ItemFocusAnim-translucent-white-20": "_3513-n6v2aZcqIN2F_qPf_",
+        "ItemFocusAnimBorder-darkGrey": "_13L0noPDezrKNjkT3uxNet",
+        "ItemFocusAnim-green": "_2LoYY8XGA4qLFMRZw7KUHR",
+        focusAnimation: "uwLjAG7MPbb5kNpkfltgX",
+        hoverAnimation: "_25AiV9rkMnY1kH88BkJPaW",
       };
     },
     chunkid: (module) => {
@@ -494,11 +518,24 @@
         HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
         HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
         HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
+        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
+        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
+        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
+        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
+        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
+        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
+        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
+        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
+        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     chunkid: (module) => {
@@ -510,6 +547,18 @@
         TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
         Reason: "_2h0GKAYcXRP10ryZHFn79d",
         StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+        BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
+        "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
+        "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
+        "ItemFocusAnim-darkGreySettings": "_2cAK7l3w0qC8uv5uzKjusc",
+        "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
+        "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
+        "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
+        "ItemFocusAnim-translucent-white-20": "_2v6guEab39IMo3I1kfiwXc",
+        "ItemFocusAnimBorder-darkGrey": "_3SS0MMDROpRbR_hYLVjAcl",
+        "ItemFocusAnim-green": "_3qjU-9ZS6bDpjjMAOYUhGm",
+        focusAnimation: "_3-bYSIZZNIWgiOR__mB2jd",
+        hoverAnimation: "_39oPHCcA4NgTm53rnykAtP",
       };
     },
     chunkid: (module) => {
@@ -548,6 +597,18 @@
         FileUploadDropFilesMessage: "I2CE9X_I0GBNYbJf7VYBg",
         TooltipWithShortcut: "zT2msZmm-jBeLe4Dt7smo",
         KeyCap: "_3mZEV9CXrIn4FITvJk3Xy-",
+        BackgroundAnimation: "_32I7Uh1ZWySd7VGW50f5IC",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3dzJEyM6opBkmIeARAGlYr",
+        "ItemFocusAnim-darkerGrey": "_2dbsn-sR5AlFKEgCU0FBbT",
+        "ItemFocusAnim-darkGreySettings": "_2gCU5HJBuDk1vxRMJhwFGE",
+        "ItemFocusAnim-darkGrey": "_39KmlfhlZwkINJt9fdyKbw",
+        "ItemFocusAnim-grey": "_1X5Siupo5N_ZVuGesoYV0t",
+        "ItemFocusAnim-translucent-white-10": "_3aZcpOjRI-YzMZmhCRiFjd",
+        "ItemFocusAnim-translucent-white-20": "_310j_Q-iB-at4-cmQSi1Mt",
+        "ItemFocusAnimBorder-darkGrey": "_38WlDUfHs-IiaRcWKFpWyA",
+        "ItemFocusAnim-green": "_3Hq7gKwAuHvmYuBWXBx8mC",
+        focusAnimation: "_1k4kLxHBHs5edlnWmN-Cos",
+        hoverAnimation: "_3OZh2Bm4JsNC3bNfskysCA",
       };
     },
     chunkid: (module) => {
@@ -579,6 +640,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         Details: "_8DSX9d1ihrMSeZUFC9elD",
         Summary: "_1FCh_hPFNuwj9vrVDMOvMC",
         FeatureList: "TwihVkmmqI5XLg6P4fpwF",
@@ -901,25 +963,22 @@
         return _(_._, (0, _._)(_));
       }
       function _(_, _) {
-        const [__webpack_require__, _] = _.useState(() =>
-          _.Get().GetInfoForStoreItem(_, _),
-        );
+        const [_, _] = _.useState(() => _.Get().GetInfoForStoreItem(_, _));
         return (
           _.useEffect(() => {
             _
-              ? _.Get().BHasInfoForStoreItem(_, _) &&
-                null != __webpack_require__
+              ? _.Get().BHasInfoForStoreItem(_, _) && null != _
                 ? _.Get().BHasInfoForStoreItem(_, _) &&
-                  __webpack_require__ != _.Get().GetInfoForStoreItem(_, _) &&
+                  _ != _.Get().GetInfoForStoreItem(_, _) &&
                   _(_.Get().GetInfoForStoreItem(_, _))
                 : _.Get().LoadStoreItemPartnerInfo(_, _).then(_)
               : _(null);
-          }, [_, _, __webpack_require__]),
-          __webpack_require__
+          }, [_, _, _]),
+          _
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(null);
+        const [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
             if (_?.length > 0) {
@@ -972,14 +1031,14 @@
         return [...new Set(_.flat())];
       }
       function _(_) {
-        const { href: _, children: __webpack_require__ } = _;
+        const { href: _, children: _ } = _;
         return _
           ? (0, _.jsx)("a", {
               ..._,
-              children: __webpack_require__,
+              children: _,
             })
           : (0, _.jsx)(_.Fragment, {
-              children: __webpack_require__,
+              children: _,
             });
       }
       function _(_, _) {
@@ -1093,11 +1152,11 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.GetStoreItemKey()]);
-        return __webpack_require__ && "app" == __webpack_require__.item_type
+          [_] = (0, _._)(() => [_.GetStoreItemKey()]);
+        return _ && "app" == _.item_type
           ? (0, _.jsx)(_, {
               oEditableMessage: _,
-              idKey: __webpack_require__,
+              idKey: _,
             })
           : (0, _.jsx)("div", {
               className: _.ErrorStylesWithIcon,
@@ -1106,22 +1165,18 @@
             });
       }
       function _(_) {
-        const { oEditableMessage: _, idKey: __webpack_require__ } = _,
+        const { oEditableMessage: _, idKey: _ } = _,
           [_, _] = (0, _._)(() => [
             _.GetUpdateEventClanAccountID(),
             _.GetUpdateEventGID(),
           ]),
-          [_] = (0, _._)(
-            __webpack_require__?._,
-            (0, _._)(__webpack_require__?.item_type),
-            _._,
-          ),
+          [_] = (0, _._)(_?._, (0, _._)(_?.item_type), _._),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
           _ = 12 != _?.GetAppType() ? _?.GetParentAppID() : void 0;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
-              appid: _ || __webpack_require__._,
+              appid: _ || _._,
               selectedEventGID: _,
               fnSetUpdateEvent: _.SetUpdateEvent,
               label: (0, _._)("#EventDropDown_MM_FeaturedEvent"),
@@ -1157,7 +1212,7 @@
       function _(_) {
         const {
             appid: _,
-            selectedEventGID: __webpack_require__,
+            selectedEventGID: _,
             fnSetUpdateEvent: _,
             label: _,
             tooltip: _,
@@ -1229,12 +1284,12 @@
                 : [],
             [_],
           ),
-          _ = _?.find((_) => _.gid === __webpack_require__);
+          _ = _?.find((_) => _.gid === _);
         return (
           "dev" == _._.WEB_UNIVERSE &&
             console.log(
-              `AssetRequestSelectPartnerEvent: selectedEventGID=${__webpack_require__} === selected?.gid=${_?.gid}`,
-              __webpack_require__,
+              `AssetRequestSelectPartnerEvent: selectedEventGID=${_} === selected?.gid=${_?.gid}`,
+              _,
               _,
               _?.gid,
             ),
@@ -1336,7 +1391,7 @@
       function _(_) {
         const {
             src: _,
-            inLink: __webpack_require__,
+            inLink: _,
             setAttrs: _,
             focusView: _,
             removeNode: _,
@@ -1542,16 +1597,16 @@
       }
       function _(_) {
         const { nodeType: _ } = _,
-          { view: __webpack_require__ } = (0, _._)(),
+          { view: _ } = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             _(), __webpack_require__.focus();
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _ = _.useCallback(
             (_) => {
               __webpack_require__.dispatch(
-                __webpack_require__.state._.insert(
-                  __webpack_require__.state.selection._,
+                _.state._.insert(
+                  _.state.selection._,
                   _.createChecked({
                     src: _,
                   }),
@@ -1559,7 +1614,7 @@
               ),
                 _();
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -1580,7 +1635,7 @@
       function _(_) {
         const {
             editAsset: _,
-            bReplace: __webpack_require__,
+            bReplace: _,
             onAssetSelected: _,
             hideModal: _,
           } = _,
@@ -1672,7 +1727,7 @@
                   }),
                   (0, _.jsxs)(_._, {
                     children: [
-                      __webpack_require__ &&
+                      _ &&
                         (0, _.jsx)(_._, {
                           className: _.ReplaceAllCheck,
                           checked: _,
@@ -1705,7 +1760,7 @@
       function _(_) {
         const {
             extraAsset: _,
-            onSelectAsset: __webpack_require__,
+            onSelectAsset: _,
             onChooseAsset: _,
             selected: _,
           } = _,
@@ -1733,11 +1788,7 @@
         );
       }
       function _(_) {
-        const {
-          selectedAsset: _,
-          activeLanguage: __webpack_require__,
-          hideModal: _,
-        } = _;
+        const { selectedAsset: _, activeLanguage: _, hideModal: _ } = _;
         var _, _;
         if (
           ((_ = !_),
@@ -1775,7 +1826,7 @@
                       (0, _.jsx)(_._, {
                         children: (0, _.jsx)(_, {
                           extraAsset: _,
-                          activeLanguage: __webpack_require__,
+                          activeLanguage: _,
                         }),
                       }),
                     ],
@@ -1792,7 +1843,7 @@
           });
       }
       function _(_) {
-        const { extraAsset: _, activeLanguage: __webpack_require__ } = _,
+        const { extraAsset: _, activeLanguage: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = _.useCallback(
@@ -1812,7 +1863,7 @@
                   }),
                 (0, _.jsx)(_._, {
                   rgAssetLangs: _,
-                  initialLang: __webpack_require__,
+                  initialLang: _,
                   showDeleteAll: !1,
                   imageClassname: _.DisplayLocImage,
                   fnGetAssetUrl: _,
@@ -1828,8 +1879,8 @@
           : null;
       }
       function _(_) {
-        const { asset_mtime: _, assets_list: __webpack_require__ } = _,
-          _ = new Map(__webpack_require__),
+        const { asset_mtime: _, assets_list: _ } = _,
+          _ = new Map(_),
           _ = (0, _._)(!0),
           _ = _.useMemo(() => _._(_.filter(_._), _._), [_]),
           _ = _.useMemo(
@@ -1849,9 +1900,9 @@
             return (0, _._)({
               mutationFn: async ({
                 strExtraAssetFileName: _,
-                mapAltText: __webpack_require__,
+                mapAltText: _,
               }) => {
-                if (!_ || !__webpack_require__) return !1;
+                if (!_ || !_) return !1;
                 const _ = new FormData();
                 _.append("sessionid", _._.SESSIONID),
                   _.append("action", "alt_text"),
@@ -1859,7 +1910,7 @@
                   _.append(
                     "alt_text",
                     JSON.stringify(
-                      Object.entries(__webpack_require__).map(([_, _]) => ({
+                      Object.entries(_).map(([_, _]) => ({
                         lang: _,
                         text: _,
                       })),
@@ -2003,7 +2054,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(void 0),
+        const [_, _] = _.useState(void 0),
           _ = (0, _._)();
         return (
           _.useEffect(() => {
@@ -2014,7 +2065,7 @@
                 (0, _._)(await (0, _._)((0, _._)(_?.url, _), 1 == _?.usage))
               );
             });
-            Promise.all(_).then(__webpack_require__);
+            Promise.all(_).then(_);
           }, [_, _]),
           _
         );
@@ -2022,7 +2073,7 @@
       function _(_) {
         const {
             extraAsset: _,
-            caption: __webpack_require__ = !0,
+            caption: _ = !0,
             controls: _ = !0,
             primaryLanguage: _,
             mapAssetsList: _,
@@ -2197,11 +2248,7 @@
         });
       }
       function _(_) {
-        const {
-            extraAsset: _,
-            deleteLang: __webpack_require__,
-            hideModal: _,
-          } = _,
+        const { extraAsset: _, deleteLang: _, hideModal: _ } = _,
           {
             mutate: _,
             isPending: _,
@@ -2210,18 +2257,15 @@
             const _ = (0, _._)("ajaxmodifyextraassets"),
               _ = (0, _._)();
             return (0, _._)({
-              mutationFn: async ({
-                extraAsset: _,
-                eLang: __webpack_require__,
-              }) => {
+              mutationFn: async ({ extraAsset: _, eLang: _ }) => {
                 const _ = new FormData();
                 _.append("sessionid", _._.SESSIONID),
                   _.append("action", "delete"),
                   _.append("name", (0, _._)(_)),
                   (0, _._)(_) &&
-                    null != __webpack_require__ &&
-                    -1 != __webpack_require__ &&
-                    _.append("lang", (0, _._)(__webpack_require__));
+                    null != _ &&
+                    -1 != _ &&
+                    _.append("lang", (0, _._)(_));
                 const _ = await fetch(_, {
                     method: "post",
                     body: _,
@@ -2254,7 +2298,7 @@
               onOK: () =>
                 _({
                   extraAsset: _,
-                  eLang: __webpack_require__,
+                  eLang: _,
                 }),
               bOKDisabled: _,
               strOKButtonText: (0, _._)(
@@ -3016,11 +3060,11 @@
         }
         return 0;
       }
-      function _(_, _ = 0, __webpack_require__ = 0) {
+      function _(_, _ = 0, _ = 0) {
         const _ = _(_, !1, _);
-        return _ ? (0, _._)(_.url, __webpack_require__) : null;
+        return _ ? (0, _._)(_.url, _) : null;
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         if (!_) return;
         if (_(_))
           return {
@@ -3034,7 +3078,7 @@
           if (_) return _;
           const _ = 29 == _ ? 6 : 0;
           return (_ = _[(0, _._)(_)]), _ || (-1 == _ ? _[0] : null);
-        })(_.images, __webpack_require__);
+        })(_.images, _);
         return _ ? _(_, _) : null;
       }
       function _(_, _ = 0) {
@@ -3083,11 +3127,11 @@
       const _ = "v_StoreAdminLanguageChange",
         _ = _.createContext(void 0);
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           _ = _.useMemo(
             () => ({
               strActiveLanguage: _,
-              setActiveLanguage: __webpack_require__,
+              setActiveLanguage: _,
             }),
             [_],
           );
@@ -3158,7 +3202,7 @@
       function _(_) {
         const {
             mapLanguages: _,
-            mapValues: __webpack_require__,
+            mapValues: _,
             strActiveLanguage: _,
             setActiveLanguage: _,
           } = _,
@@ -3176,7 +3220,7 @@
               }),
               _
             );
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _ = _.useCallback((_) => _(_.data), [_]);
         return (0, _.jsx)(_._, {
           strClassName: _.LanguageSelect,
@@ -3186,15 +3230,12 @@
         });
       }
       function _(_) {
-        const { strLocLanguage: _, value: __webpack_require__ } = _,
-          [_, _] = _.useState(() => !!__webpack_require__?.Value?.trim()),
+        const { strLocLanguage: _, value: _ } = _,
+          [_, _] = _.useState(() => !!_?.Value?.trim()),
           _ = _.useCallback((_) => _(!!_.trim()), []);
         return (
-          (0, _._)(__webpack_require__, _),
-          _.useEffect(
-            () => _(__webpack_require__.Value),
-            [_, __webpack_require__],
-          ),
+          (0, _._)(_, _),
+          _.useEffect(() => _(_.Value), [_, _]),
           (0, _.jsx)("span", {
             className: (0, _._)(_.LanguageOption, _ && _.HasValue),
             children: _,
@@ -3202,12 +3243,7 @@
         );
       }
       function _(_) {
-        const {
-          rgLanguages: _,
-          mapValues: __webpack_require__,
-          namePrefix: _,
-          rgPath: _,
-        } = _;
+        const { rgLanguages: _, mapValues: _, namePrefix: _, rgPath: _ } = _;
         return _.map((_) =>
           (0, _.jsx)(
             _,
@@ -3222,13 +3258,8 @@
         );
       }
       const _ = _.memo(function (_) {
-        const {
-            language: _,
-            value: __webpack_require__,
-            namePrefix: _,
-            rgPath: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__) || "",
+        const { language: _, value: _, namePrefix: _, rgPath: _ } = _,
+          _ = (0, _._)(_) || "",
           _ = _ + [..._, _].map((_) => `[${_}]`).join("");
         return (0, _.jsx)("input", {
           type: "hidden",
@@ -3243,7 +3274,7 @@
       function _(_) {
         const {
             strActiveLanguage: _,
-            mapValues: __webpack_require__,
+            mapValues: _,
             rctLanguageSelect: _,
             setActiveLanguage: _,
           } = _(_, [], null, null),
@@ -3257,7 +3288,7 @@
             strActiveLanguage: _,
             eActiveLang: _,
             rctLanguageSelect: _,
-            mapValues: __webpack_require__,
+            mapValues: _,
           }
         );
       }
@@ -3412,7 +3443,7 @@
             );
           }
         }
-        BBNodeToPMNode(_, _, ...__webpack_require__) {
+        BBNodeToPMNode(_, _, ..._) {
           let _ = _.BBArgsToAttrs ? _.BBArgsToAttrs(_.args || {}) : void 0;
           try {
             if (
@@ -3421,12 +3452,12 @@
                 ((_ && _[_.convertContentToAttr]) ||
                   (_ = {
                     ...(_ || {}),
-                    [_.convertContentToAttr]: _(__webpack_require__),
+                    [_.convertContentToAttr]: _(_),
                   }),
-                "node" in _ && (__webpack_require__ = [])),
+                "node" in _ && (_ = [])),
               "node" in _)
             )
-              return this.TryCreateNode(_, __webpack_require__, _);
+              return this.TryCreateNode(_, _, _);
             {
               const _ = _.mark.create(_);
               return __webpack_require__.map((_) =>
@@ -3598,10 +3629,9 @@
       }
       function _(_, _) {
         if (_ && _.AttrsToBBArgs) {
-          const { tag: __webpack_require__ = _.tag, args: _ = {} } =
-            _.AttrsToBBArgs(_.attrs, _);
+          const { tag: _ = _.tag, args: _ = {} } = _.AttrsToBBArgs(_.attrs, _);
           return {
-            tag: __webpack_require__,
+            tag: _,
             args: _,
           };
         }
@@ -3721,10 +3751,8 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const {
-            msAutosaveTimeout: __webpack_require__ = 1e3,
-            msMaxInterval: _ = 10 * __webpack_require__,
-          } = _ || {},
+        const { msAutosaveTimeout: _ = 1e3, msMaxInterval: _ = 10 * _ } =
+            _ || {},
           [_, _] = _.useState(!1),
           _ = _.useRef(0);
         return (
@@ -3743,17 +3771,17 @@
                 _ = void 0;
                 const _ = performance.now(),
                   _ = _ - _.current;
-                _ || _ >= __webpack_require__ || _ - _ >= _
+                _ || _ >= _ || _ - _ >= _
                   ? (console.log("Committing changes"),
                     _.CommitChanges(),
                     _(!1))
-                  : (_ = window.setTimeout(_, __webpack_require__ - _));
+                  : (_ = window.setTimeout(_, _ - _));
               };
-            let _ = window.setTimeout(_, __webpack_require__);
+            let _ = window.setTimeout(_, _);
             return () => {
               _ && (window.clearTimeout(_), _(!0));
             };
-          }, [_, _, __webpack_require__, _]),
+          }, [_, _, _, _]),
           {
             bDirty: _,
           }
@@ -3763,7 +3791,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const { specs: _ } = _,
-          [__webpack_require__, _] = _.useState([]),
+          [_, _] = _.useState([]),
           _ = _.useRef(0),
           _ = _.useCallback(
             (_) => (
@@ -3807,7 +3835,7 @@
       function _(_) {
         const {
             element: _,
-            spec: __webpack_require__,
+            spec: _,
             getProps: _,
             onPropsChanged: _,
             actions: _,
@@ -3817,7 +3845,7 @@
         return (
           _.useEffect(() => _.Register(_).Unregister, [_, _]),
           _.createPortal(
-            _.createElement(__webpack_require__.component, {
+            _.createElement(_.component, {
               ..._(),
               selected: _(),
               ..._,
@@ -3892,13 +3920,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         return () => [
           _,
           {
             class: _,
           },
-          __webpack_require__,
+          _,
         ];
       }
       function _(_, _) {
@@ -4051,12 +4079,12 @@
                 },
               ],
               toDOM(_) {
-                const { src: _, alt: __webpack_require__, title: _ } = _.attrs;
+                const { src: _, alt: _, title: _ } = _.attrs;
                 return [
                   "img",
                   {
                     src: _,
-                    alt: __webpack_require__,
+                    alt: _,
                     title: _,
                     class: _().Image,
                   },
@@ -4121,7 +4149,7 @@
               toDOM(_) {
                 const {
                     webm: _,
-                    mp4: __webpack_require__,
+                    mp4: _,
                     poster: _,
                     autoplay: _,
                     controls: _,
@@ -4136,11 +4164,11 @@
                         type: "video/webm",
                       },
                     ]),
-                  __webpack_require__ &&
+                  _ &&
                     _.push([
                       "source",
                       {
-                        src: __webpack_require__,
+                        src: _,
                         type: "video/mp4",
                       },
                     ]),
@@ -4332,12 +4360,12 @@
                 },
               ],
               toDOM(_) {
-                const { href: _, title: __webpack_require__ } = _.attrs;
+                const { href: _, title: _ } = _.attrs;
                 return [
                   "a",
                   {
                     href: _,
-                    title: __webpack_require__,
+                    title: _,
                     class: "BB_Link",
                   },
                   0,
@@ -4440,7 +4468,7 @@
       const _ = (0, _._)(function (_) {
         const {
             pmState: _,
-            className: __webpack_require__,
+            className: _,
             refOnUpdate: _,
             refView: _,
             bSpellcheckEnabled: _ = !0,
@@ -4504,7 +4532,7 @@
               _._,
               {
                 className: (0, _._)({
-                  ["" + __webpack_require__]: !!__webpack_require__,
+                  ["" + _]: !!_,
                   [_.Container]: !0,
                   [_.SingleLine]: !!_,
                 }),
@@ -4535,7 +4563,7 @@
         });
       });
       const _ = _.memo(function (_) {
-        const { parser: _, schema: __webpack_require__ } = _;
+        const { parser: _, schema: _ } = _;
         return (
           (0, _._)(
             _.useMemo(
@@ -4554,10 +4582,10 @@
                           return _;
                         const _ = _.ConvertLineBreaksToParagraphs(_.content);
                         return _._.maxOpen(_);
-                      })(_, __webpack_require__.nodes.hard_break, _),
+                      })(_, _.nodes.hard_break, _),
                   },
                 }),
-              [_, __webpack_require__],
+              [_, _],
             ),
           ),
           null
@@ -4570,7 +4598,7 @@
       function _(_) {
         const {
             closeModal: _,
-            strTitle: __webpack_require__,
+            strTitle: _,
             onOK: _,
             strOKText: _,
             onCancel: _,
@@ -4591,7 +4619,7 @@
             classNameContent: _,
             children: [
               (0, _.jsx)(_._, {
-                children: __webpack_require__,
+                children: _,
               }),
               _,
               (0, _.jsx)(_._, {
@@ -4611,7 +4639,7 @@
       _.memo(function (_) {
         const {
             schema: _,
-            strLinkText: __webpack_require__,
+            strLinkText: _,
             strLinkHref: _,
             bIsUpdate: _,
             addtlAttrs: _,
@@ -4621,7 +4649,7 @@
             from: _,
             _: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__),
+          [_, _] = _.useState(_),
           [_, _] = _.useState(_),
           _ = _.useRef(null),
           _ = _.useRef(null),
@@ -4716,7 +4744,7 @@
         });
       });
       function _(_) {
-        const { addtlAttrs: _, values: __webpack_require__, setValues: _ } = _;
+        const { addtlAttrs: _, values: _, setValues: _ } = _;
         return (0, _.jsx)(_.Fragment, {
           children: Object.keys(_).map((_) =>
             (0, _.jsx)(
@@ -4724,7 +4752,7 @@
               {
                 attrName: _,
                 fnRender: _[_].fnRenderEditor,
-                value: __webpack_require__[_],
+                value: _[_],
                 setValues: _,
               },
               _,
@@ -4733,12 +4761,7 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-          attrName: _,
-          fnRender: __webpack_require__,
-          value: _,
-          setValues: _,
-        } = _;
+        const { attrName: _, fnRender: _, value: _, setValues: _ } = _;
         return __webpack_require__(
           _,
           _.useCallback(
@@ -4756,7 +4779,7 @@
       const _ = _.memo(function (_) {
         const {
             schema: _,
-            strColor: __webpack_require__,
+            strColor: _,
             bIsUpdate: _,
             strTargetText: _,
             bColor: _,
@@ -4767,11 +4790,11 @@
             from: _,
             _: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__),
+          [_, _] = _.useState(_),
           _ = _.useRef(null),
           [_, _] = _.useState(_),
           _ = _.useCallback(() => {
-            const { state: _, dispatch: __webpack_require__ } = _,
+            const { state: _, dispatch: _ } = _,
               _ = _ ? _.marks.color : _.marks.bgcolor;
             if (!_) return void console.log("debug: no markType");
             if (!_ || !_.startsWith("#") || 7 !== _.length)
@@ -4842,8 +4865,8 @@
                     /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
                   );
                   if (_) {
-                    let [, _, __webpack_require__, _, _] = _;
-                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(__webpack_require__, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
+                    let [, _, _, _, _] = _;
+                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(_, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
                   }
                   return "#7e3232";
                 })(_),
@@ -4852,28 +4875,14 @@
         });
       });
       function _(_) {
-        const {
-            schema: _,
-            bColor: __webpack_require__,
-            addtlAttrs: _,
-            children: _,
-          } = _,
+        const { schema: _, bColor: _, addtlAttrs: _, children: _ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           [_, _] = _.useState(() =>
-            (0, _._)(
-              _.state,
-              __webpack_require__ ? _.marks.color : _.marks.bgcolor,
-            ),
+            (0, _._)(_.state, _ ? _.marks.color : _.marks.bgcolor),
           ),
           _ = _.useCallback(
-            (_) =>
-              _(
-                (0, _._)(
-                  _.state,
-                  __webpack_require__ ? _.marks.color : _.marks.bgcolor,
-                ),
-              ),
-            [__webpack_require__, _],
+            (_) => _((0, _._)(_.state, _ ? _.marks.color : _.marks.bgcolor)),
+            [_, _],
           );
         (0, _._)(_, _);
         const [_, _] = (function (_, _, _) {
@@ -4942,14 +4951,14 @@
                 }),
               }),
           ];
-        })(_, __webpack_require__, _);
+        })(_, _, _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _,
             (0, _.jsx)(_._, {
               onClick: () => _(_),
               toggled: _,
-              tooltip: __webpack_require__
+              tooltip: _
                 ? "#FormattingToolbar_Color"
                 : "#FormattingToolbar_BgColor",
               children: _,
@@ -5037,23 +5046,12 @@
         });
       }
       function _(_) {
-        const {
-            nodeTypes: _,
-            attrs: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { nodeTypes: _, attrs: _, children: _, ..._ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
-          [_, _] = _.useState(() => (0, _._)(_.state, _, __webpack_require__)),
-          _ = _.useCallback(
-            (_) => _((0, _._)(_.state, _, __webpack_require__)),
-            [_, __webpack_require__],
-          );
+          [_, _] = _.useState(() => (0, _._)(_.state, _, _)),
+          _ = _.useCallback((_) => _((0, _._)(_.state, _, _)), [_, _]);
         (0, _._)(_, _);
-        const _ = _.useMemo(
-            () => (0, _._)(_, __webpack_require__),
-            [_, __webpack_require__],
-          ),
+        const _ = _.useMemo(() => (0, _._)(_, _), [_, _]),
           _ = !!_;
         return (0, _.jsx)(_._, {
           ..._,
@@ -5100,11 +5098,11 @@
         });
       }
       function _(_) {
-        const { schema: _, maxLevel: __webpack_require__ = 1, levels: _ } = _,
-          _ = __webpack_require__ + _ - 1;
+        const { schema: _, maxLevel: _ = 1, levels: _ } = _,
+          _ = _ + _ - 1;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            __webpack_require__ <= 1 &&
+            _ <= 1 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel1",
                 keyboardShortcut: "Ctrl-Shift-1",
@@ -5114,7 +5112,7 @@
                 },
                 children: (0, _.jsx)(_.jRw, {}),
               }),
-            __webpack_require__ <= 2 &&
+            _ <= 2 &&
               _ >= 2 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel2",
@@ -5125,7 +5123,7 @@
                 },
                 children: (0, _.jsx)(_.qOW, {}),
               }),
-            __webpack_require__ <= 3 &&
+            _ <= 3 &&
               _ >= 3 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel3",
@@ -5136,7 +5134,7 @@
                 },
                 children: (0, _.jsx)(_.x7X, {}),
               }),
-            __webpack_require__ <= 4 &&
+            _ <= 4 &&
               _ >= 4 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel4",
@@ -5147,7 +5145,7 @@
                 },
                 children: (0, _.jsx)(_.qzO, {}),
               }),
-            __webpack_require__ <= 5 &&
+            _ <= 5 &&
               _ >= 5 &&
               (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel5",
@@ -5162,10 +5160,7 @@
         });
       }
       function _(_) {
-        const {
-            schema: _,
-            showIndentButtonsAsNeeded: __webpack_require__ = !1,
-          } = _,
+        const { schema: _, showIndentButtonsAsNeeded: _ = !1 } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           { bullet_list: _, ordered_list: _, list_item: _ } = _.nodes,
           _ = _.useMemo(() => _._(_), [_]),
@@ -5198,7 +5193,7 @@
                   list_item: _,
                   children: (0, _.jsx)(_.jE0, {}),
                 }),
-              (!__webpack_require__ || _) &&
+              (!_ || _) &&
                 (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsx)(_._, {
@@ -5220,17 +5215,12 @@
         );
       }
       function _(_) {
-        const {
-            list_type: _,
-            list_item: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { list_type: _, list_item: _, children: _, ..._ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           _ = _.useCallback((_) => void 0 !== (0, _._)(_.state, _), [_]),
           [_, _] = _.useState(() => _(_)),
           _ = _.useMemo(() => _._(_), [_]),
-          _ = _.useMemo(() => _._(__webpack_require__), [__webpack_require__]);
+          _ = _.useMemo(() => _._(_), [_]);
         return (
           (0, _._)(
             _,
@@ -5395,7 +5385,7 @@
       function _(_) {
         const {
             language: _,
-            languages: __webpack_require__,
+            languages: _,
             rctToolbarControls: _,
             mapValues: _,
             editorType: _,
@@ -5560,7 +5550,7 @@
         return (0, _.jsx)(_, {
           imageNodeType: _.pm_schema.nodes.image,
           activeLanguage: _,
-          languages: __webpack_require__,
+          languages: _,
           children: (0, _.jsx)(_, {
             editorType: _,
             view: _,
@@ -5591,7 +5581,7 @@
       function _(_) {
         const {
             imageNodeType: _,
-            activeLanguage: __webpack_require__,
+            activeLanguage: _,
             languages: _,
             children: _,
           } = _,
@@ -5610,14 +5600,14 @@
                       );
                     },
                     onCancel: () => _(void 0),
-                    activeLanguage: __webpack_require__,
+                    activeLanguage: _,
                     languages: _,
                   };
                 });
               const _ = _(_);
               return _.finally(() => _()), _;
             },
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(async (_) => {
             const _ = new URL(`${_._.PARTNER_BASE_URL}gfxproxy/externalgfx/`);
@@ -5639,7 +5629,7 @@
       function _(_) {
         const {
             editorType: _,
-            view: __webpack_require__,
+            view: _,
             refUpdateToolbar: _,
             rctToolbarControls: _,
             schema: _,
@@ -5659,7 +5649,7 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
-              view: __webpack_require__,
+              view: _,
               refUpdateToolbar: _,
               sticky: _,
               rctToolbarControls: _,
@@ -5705,7 +5695,7 @@
       function _(_) {
         const {
           view: _,
-          refUpdateToolbar: __webpack_require__,
+          refUpdateToolbar: _,
           rctToolbarControls: _,
           schema: _,
           sticky: _,
@@ -5713,7 +5703,7 @@
           setPreviewMode: _,
         } = _;
         return (0, _.jsxs)(_._, {
-          refUpdateToolbar: __webpack_require__,
+          refUpdateToolbar: _,
           view: _,
           children: [
             (0, _.jsxs)(_._, {
@@ -5767,7 +5757,7 @@
         });
       }
       function _(_) {
-        const { ePreviewMode: _, setPreviewMode: __webpack_require__ } = _;
+        const { ePreviewMode: _, setPreviewMode: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.PreviewModeCtn,
           children: [
@@ -5808,7 +5798,7 @@
       function _(_) {
         const {
             schema: _,
-            activeLanguage: __webpack_require__,
+            activeLanguage: _,
             mapValues: _,
             allowAnimations: _,
             updateDocument: _,
@@ -5821,14 +5811,14 @@
                 readProps: (_) => ({
                   src: _.attrs.src,
                   inLink: _.marks.some((_) => _.type == _.pm_schema.marks.link),
-                  activeLanguage: __webpack_require__,
+                  activeLanguage: _,
                   mapValues: _,
                   allowAnimations: _,
                   fnUpdateDocument: _,
                 }),
               },
             ],
-            [_, __webpack_require__, _, _, _],
+            [_, _, _, _, _],
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -5869,7 +5859,7 @@
       function _(_) {
         const {
             hideModal: _,
-            entries: __webpack_require__,
+            entries: _,
             isLoading: _,
             fnRefetch: _,
             mutateAltTextAsync: _,
@@ -5889,10 +5879,10 @@
         _.useEffect(() => {
           const _ = new Map(),
             _ = new Map();
-          for (const _ of __webpack_require__)
+          for (const _ of _)
             _.set(_.key, structuredClone(_)), _.set(_.key, structuredClone(_));
           _(_), _(_);
-        }, [__webpack_require__]);
+        }, [_]);
         const _ = _.useCallback(() => {
           for (const _ of _.keys()) {
             const _ = Array.from(_.values()).some(
@@ -6053,7 +6043,7 @@
       function _(_) {
         const {
             lang: _,
-            image: __webpack_require__,
+            image: _,
             caption: _,
             altText: _,
             setAltText: _,
@@ -6071,7 +6061,7 @@
           children: [
             (0, _.jsx)("td", {
               className: _.AltTextImage,
-              children: __webpack_require__,
+              children: _,
             }),
             _ &&
               (0, _.jsxs)("td", {
@@ -6125,8 +6115,8 @@
       }
       function _(_, _) {
         if (_.size !== _.size) return !1;
-        for (const [__webpack_require__, _] of _) {
-          const _ = _.get(__webpack_require__);
+        for (const [_, _] of _) {
+          const _ = _.get(_);
           if (!_ || !_(_.mapAltText, _.mapAltText)) return !1;
         }
         return !0;
@@ -6191,14 +6181,14 @@
       function _(_) {
         const {
             upload: _,
-            active: __webpack_require__,
+            active: _,
             fnUploadPrepared: _,
             fnUploadComplete: _,
           } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(void 0);
         _.useEffect(() => {
-          __webpack_require__ &&
+          _ &&
             ((function (_) {
               switch (_.type) {
                 case "image/jpeg":
@@ -6223,8 +6213,8 @@
                   _.file.name,
                 ),
               )),
-            _(__webpack_require__);
-        }, [__webpack_require__, _]);
+            _(_);
+        }, [_, _]);
         const [_, _] = _.useState(!1),
           _ = (0, _._)(),
           _ = _();
@@ -6269,7 +6259,7 @@
           : null;
       }
       function _(_) {
-        const { upload: _, isUploading: __webpack_require__, doUpload: _ } = _,
+        const { upload: _, isUploading: _, doUpload: _ } = _,
           { file: _, onCancel: _ } = _,
           { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = _(),
           _ = _.useCallback((_) => _?.replace(_, "_").toLowerCase() ?? "", [_]),
@@ -6301,7 +6291,7 @@
         const _ =
             (function (_) {
               return _ && _.length > 0;
-            })(_) && !__webpack_require__
+            })(_) && !_
               ? () => _(_, _)
               : void 0,
           _ = _.useCallback(() => {
@@ -6328,14 +6318,14 @@
                     file: _,
                     isVideo: _(_),
                     duplicate: _,
-                    bShowThrobber: __webpack_require__,
+                    bShowThrobber: _,
                     onUseDuplicate: _,
                   }),
                   (0, _.jsx)(_, {
                     name: _,
                     validatedName: _,
                     setName: _,
-                    disabled: __webpack_require__,
+                    disabled: _,
                   }),
                   _.length > 1 &&
                     (0, _.jsx)(_._, {
@@ -6360,7 +6350,7 @@
       function _(_) {
         const {
             file: _,
-            isVideo: __webpack_require__,
+            isVideo: _,
             duplicate: _,
             bShowThrobber: _,
             onUseDuplicate: _,
@@ -6419,12 +6409,12 @@
                           "#StoreAdmin_ExtraAssetUpload_Replacement",
                         ),
                       }),
-                    !__webpack_require__ &&
+                    !_ &&
                       (0, _.jsx)("img", {
                         src: _,
                         className: _.ImgPreview,
                       }),
-                    __webpack_require__ &&
+                    _ &&
                       (0, _.jsx)("video", {
                         src: _,
                         className: _.ImgPreview,
@@ -6441,12 +6431,7 @@
         });
       }
       function _(_) {
-        const {
-            name: _,
-            setName: __webpack_require__,
-            validatedName: _,
-            disabled: _,
-          } = _,
+        const { name: _, setName: _, validatedName: _, disabled: _ } = _,
           _ = _.useCallback((_) => _ && _.element.select(), []);
         return (0, _.jsx)("div", {
           children: (0, _.jsx)(_._, {
@@ -6471,7 +6456,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
-          [__webpack_require__, _] = _.useState([]),
+          [_, _] = _.useState([]),
           _ = _.useRef(0),
           _ = _.useCallback(
             (_) => (
@@ -6492,7 +6477,7 @@
             children: (0, _.jsxs)(_._, {
               children: [
                 (0, _.jsx)(_, {
-                  rgUploads: __webpack_require__,
+                  rgUploads: _,
                 }),
                 _,
               ],
@@ -6501,7 +6486,7 @@
         });
       }
       function _(_) {
-        const { children: _, queueExtraAssetUpload: __webpack_require__ } = _,
+        const { children: _, queueExtraAssetUpload: _ } = _,
           [_, _] = _.useState(void 0),
           [_, _] = _.useState([]),
           [_, _] = _.useState(!1);
@@ -6545,13 +6530,13 @@
                 regexInvalidFilenameCharacters: _,
               },
               strGameControllerURLFormat: _?.strGameControllerURLFormat,
-              queueExtraAssetUpload: __webpack_require__,
+              queueExtraAssetUpload: _,
               onExtraAssetsUpdated: _,
               storeItemID: _?.nStoreItemID,
               eStoreItemType: _?.eStoreItemType,
               bAppHasSteamChinaToolsEnabled: _,
             }),
-            [_, _, _, __webpack_require__, _],
+            [_, _, _, _, _],
           );
         return _
           ? (0, _.jsx)(_, {
@@ -6603,16 +6588,16 @@
         _ = _.createContext(void 0);
       function _(_) {
         const _ = "storeEditorDisableRichEditor",
-          [__webpack_require__, _] = _.useState(() => !localStorage.getItem(_)),
+          [_, _] = _.useState(() => !localStorage.getItem(_)),
           _ = _.useCallback((_) => {
             _ ? localStorage.removeItem(_) : localStorage.setItem(_, "1"), _(_);
           }, []),
           _ = _.useMemo(
             () => ({
-              bUseRichEditor: __webpack_require__,
+              bUseRichEditor: _,
               setUseRichEditor: _,
             }),
-            [__webpack_require__, _],
+            [_, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -6729,22 +6714,16 @@
         });
       }
       function _(_) {
-        const {
-          bNoKeyboardSupport: _,
-          bGamepadPreferred: __webpack_require__,
-        } = _;
+        const { bNoKeyboardSupport: _, bGamepadPreferred: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.NoticeContainer),
-          children: [
-            _ && (0, _.jsx)(_, {}),
-            __webpack_require__ && !_ && (0, _.jsx)(_, {}),
-          ],
+          children: [_ && (0, _.jsx)(_, {}), _ && !_ && (0, _.jsx)(_, {})],
         });
       }
       function _(_) {
         const {
           bControllerSupportWizardComplete: _,
-          bPS4ControllerSupport: __webpack_require__,
+          bPS4ControllerSupport: _,
           bPS5ControllerSupport: _,
           bPS4ControllerBTSupport: _,
           bPS5ControllerBTSupport: _,
@@ -6758,7 +6737,7 @@
           bPreview: _,
         } = _;
         let _ = [];
-        if (__webpack_require__ && _ && _ && _) {
+        if (_ && _ && _ && _) {
           const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
               controllerType: 34,
@@ -6782,7 +6761,7 @@
             ),
           );
         } else {
-          if (__webpack_require__) {
+          if (_) {
             const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
               controllerType: 34,
@@ -6929,7 +6908,7 @@
       function _(_) {
         const {
             nPageNum: _,
-            currentValues: __webpack_require__,
+            currentValues: _,
             setCurrentValues: _,
             setSkipToEnd: _,
           } = _,
@@ -6982,12 +6961,12 @@
             },
           ],
           _ = () =>
-            __webpack_require__.bNoKeyboardSupport
+            _.bNoKeyboardSupport
               ? _.k_eGamepadRequired
-              : __webpack_require__.bGamepadPreferred
+              : _.bGamepadPreferred
                 ? _.k_eGamepadPreferred
-                : __webpack_require__.bFullXboxControllerSupport ||
-                    __webpack_require__.bPartialXboxControllerSupport
+                : _.bFullXboxControllerSupport ||
+                    _.bPartialXboxControllerSupport
                   ? _.k_eGamepadAndMouse
                   : _.k_eMouseKBOnly,
           _ = _();
@@ -7001,7 +6980,7 @@
               onChange: (_) => {
                 const _ = _.find((_) => _._ == _);
                 _({
-                  ...__webpack_require__,
+                  ..._,
                   ..._?.settings,
                 }),
                   _(_.bSkipToEnd ?? !1);
@@ -7054,7 +7033,7 @@
       function _(_) {
         const {
             nPageNum: _,
-            currentValues: __webpack_require__,
+            currentValues: _,
             setCurrentValues: _,
             setSkipToEnd: _,
           } = _,
@@ -7082,21 +7061,21 @@
           ),
           _ = _.useCallback(
             () =>
-              __webpack_require__.bFullXboxControllerSupport
+              _.bFullXboxControllerSupport
                 ? _.k_eFullXboxControllerSupport
                 : _.k_ePartialXboxControllerSupport,
-            [__webpack_require__],
+            [_],
           ),
           _ = _.useCallback(
             (_) => {
               const _ = _.find((_) => _._ == _);
               _({
-                ...__webpack_require__,
+                ..._,
                 ..._?.settings,
               }),
                 _(_.bSkipToEnd ?? !1);
             },
-            [__webpack_require__, _, _, _],
+            [_, _, _, _],
           ),
           _ = _(),
           _ = (0, _.jsx)("div", {
@@ -7172,11 +7151,7 @@
         });
       }
       function _(_) {
-        const {
-            nPageNum: _,
-            currentValues: __webpack_require__,
-            setCurrentValues: _,
-          } = _,
+        const { nPageNum: _, currentValues: _, setCurrentValues: _ } = _,
           _ = [
             {
               _: 0,
@@ -7188,7 +7163,7 @@
                 bPS4ControllerSupport: !1,
                 bPS4ControllerBTSupport: !1,
               },
-              bValue: __webpack_require__.bPS4ControllerSupport,
+              bValue: _.bPS4ControllerSupport,
             },
             {
               _: 1,
@@ -7200,7 +7175,7 @@
               invertedSettings: {
                 bPS4ControllerBTSupport: !1,
               },
-              bValue: __webpack_require__.bPS4ControllerBTSupport,
+              bValue: _.bPS4ControllerBTSupport,
             },
             {
               _: 2,
@@ -7212,7 +7187,7 @@
                 bPS5ControllerSupport: !1,
                 bPS5ControllerBTSupport: !1,
               },
-              bValue: __webpack_require__.bPS5ControllerSupport,
+              bValue: _.bPS5ControllerSupport,
             },
             {
               _: 3,
@@ -7224,7 +7199,7 @@
               invertedSettings: {
                 bPS5ControllerBTSupport: !1,
               },
-              bValue: __webpack_require__.bPS5ControllerBTSupport,
+              bValue: _.bPS5ControllerBTSupport,
             },
             {
               _: 4,
@@ -7239,10 +7214,10 @@
                 bPS4ControllerSupport: !0,
               },
               bValue: !(
-                __webpack_require__.bPS4ControllerSupport ||
-                __webpack_require__.bPS4ControllerBTSupport ||
-                __webpack_require__.bPS5ControllerSupport ||
-                __webpack_require__.bPS5ControllerBTSupport
+                _.bPS4ControllerSupport ||
+                _.bPS4ControllerBTSupport ||
+                _.bPS5ControllerSupport ||
+                _.bPS5ControllerBTSupport
               ),
             },
           ],
@@ -7256,7 +7231,7 @@
                     return (
                       (_ = _ ? _.settings : _.invertedSettings),
                       void _({
-                        ...__webpack_require__,
+                        ..._,
                         ..._,
                       })
                     );
@@ -7308,7 +7283,7 @@
       function _(_) {
         const {
             nPageNum: _,
-            currentValues: __webpack_require__,
+            currentValues: _,
             setCurrentValues: _,
             setSkipToEnd: _,
           } = _,
@@ -7330,7 +7305,7 @@
               bSkipToEnd: !1,
             },
           ],
-          _ = __webpack_require__.bSteamInputAPISupport
+          _ = _.bSteamInputAPISupport
             ? _.k_eSteamInputAPISupport
             : _.k_eNoSteamInputAPISupport,
           _ = (0, _.jsx)("div", {
@@ -7340,7 +7315,7 @@
               onChange: (_) => {
                 const _ = _.find((_) => _._ == _);
                 _({
-                  ...__webpack_require__,
+                  ..._,
                   ..._?.settings,
                 }),
                   _(_.bSkipToEnd ?? !1);
@@ -7433,12 +7408,7 @@
         });
       }
       function _(_) {
-        const {
-            appid: _,
-            onClose: __webpack_require__,
-            onCommit: _,
-            params: _,
-          } = _,
+        const { appid: _, onClose: _, onCommit: _, params: _ } = _,
           [_, _] = _.useState(_),
           [_, _] = _.useState(_),
           [_, _] = _.useState(!1),
@@ -7522,7 +7492,7 @@
                     let _ = _ - 1;
                     _ && 4 == _ && (_ = 0), _(_);
                   }
-                : __webpack_require__,
+                : _,
             header: _,
             strOkButtonLabel: _ ? "Save and Exit" : "Next",
             children: _,
@@ -7548,12 +7518,8 @@
         })(_ || (_ = {}));
       const _ = _.createContext(null);
       function _(_) {
-        const {
-            nPages: _,
-            nPageIdx: __webpack_require__,
-            strHeaderText: _,
-          } = _,
-          _ = (100 * (__webpack_require__ + 1)) / (_ + 1);
+        const { nPages: _, nPageIdx: _, strHeaderText: _ } = _,
+          _ = (100 * (_ + 1)) / (_ + 1);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.ModalHeader),
           children: [
@@ -7565,10 +7531,10 @@
             (0, _.jsx)("div", {
               className: (0, _._)(
                 _.ProgressBar,
-                __webpack_require__ == _ - 1 && _.ProgressBarComplete,
+                _ == _ - 1 && _.ProgressBarComplete,
               ),
               children:
-                __webpack_require__ < _ - 1 &&
+                _ < _ - 1 &&
                 (0, _.jsx)("div", {
                   className: (0, _._)(_.ProgressBarFillComponent),
                   style: {
@@ -7582,7 +7548,7 @@
       const _ = _.memo(function (_) {
         const {
           strStepName: _,
-          strStepSubHeaderToken: __webpack_require__,
+          strStepSubHeaderToken: _,
           stepIMG: _,
           strInstructionsToken: _,
           strQuestionToken: _,
@@ -7605,7 +7571,7 @@
                   children: [
                     _,
                     (0, _.jsx)(_._, {
-                      children: (0, _._)(__webpack_require__),
+                      children: (0, _._)(_),
                     }),
                   ],
                 }),
@@ -7643,7 +7609,7 @@
       function _(_) {
         const {
           fnNext: _,
-          fnBack: __webpack_require__,
+          fnBack: _,
           children: _,
           header: _,
           strOkButtonLabel: _,
@@ -7659,8 +7625,8 @@
             }),
             (0, _.jsx)(_._, {
               className: _.WizardButtons,
-              bCancelDisabled: !__webpack_require__,
-              onCancel: __webpack_require__,
+              bCancelDisabled: !_,
+              onCancel: _,
               strCancelText: "Back",
               onOK: _,
               strOKText: _,
@@ -7670,7 +7636,7 @@
       }
       function _(_) {
         const { unAppID: _ } = _,
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           _ = _.useCallback(() => _(!0), []),
           _ = _.useCallback(() => _(!1), []),
           _ =
@@ -7678,7 +7644,7 @@
             (_.bFullXboxControllerSupport || _.bPartialXboxControllerSupport);
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)(_, {
                 appid: _,
                 onClose: _,
@@ -7814,11 +7780,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            language: _,
-            rctToolbarControls: __webpack_require__,
-            mapValues: _,
-          } = _,
+        const { language: _, rctToolbarControls: _, mapValues: _ } = _,
           _ = _.get(_),
           _ = _.createRef();
         return (0, _.jsxs)(_.Fragment, {
@@ -7826,7 +7788,7 @@
             (0, _.jsx)(_, {
               refTextArea: _,
               value: _,
-              rctToolbarControls: __webpack_require__,
+              rctToolbarControls: _,
             }),
             (0, _.jsx)(_, {
               language: _,
@@ -7837,24 +7799,20 @@
         });
       }
       function _(_) {
-        const {
-            refTextArea: _,
-            value: __webpack_require__,
-            rctToolbarControls: _,
-          } = _,
+        const { refTextArea: _, value: _, rctToolbarControls: _ } = _,
           _ = _.useCallback(
             (_, _) => {
-              _(_.current, __webpack_require__, _, _);
+              _(_.current, _, _, _);
             },
-            [_, __webpack_require__],
+            [_, _],
           ),
           _ = _.useCallback(
             (_, _) => {
-              _(_.current, __webpack_require__, _, _, (_) =>
+              _(_.current, _, _, _, (_) =>
                 _.replace(/(\r\n|\n|\r)/gm, "\r\n[*]"),
               );
             },
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsxs)(_._, {
           children: [
@@ -7917,24 +7875,24 @@
       function _(_) {
         const {
           fnInsertText: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           start: _,
           end: _,
           children: _,
         } = _;
         return (0, _.jsx)(_._, {
           onClick: () => _(_, _),
-          tooltip: __webpack_require__,
+          tooltip: _,
           children: _,
         });
       }
       function _(_) {
-        const { language: _, value: __webpack_require__, refTextArea: _ } = _,
+        const { language: _, value: _, refTextArea: _ } = _,
           _ = _.useCallback(
             (_) => __webpack_require__.Set(_.currentTarget.value),
-            [__webpack_require__],
+            [_],
           ),
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           _ = _.useCallback(
             (_) => {
               (0, _._)(_, _?.textarea);
@@ -7984,7 +7942,7 @@
       function _(_) {
         const {
             rgLanguages: _,
-            value: __webpack_require__,
+            value: _,
             strNamePrefix: _,
             rgPath: _,
             editorType: _,
@@ -7997,7 +7955,7 @@
             mapValues: _,
             rctLanguageSelect: _,
             rctHiddenInputs: _,
-          } = (0, _._)(_, __webpack_require__, _, _),
+          } = (0, _._)(_, _, _, _),
           _ = (function () {
             const _ = (0, _._)();
             return _ ? _ : _;
@@ -8102,16 +8060,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { rgCreatorHomes: _, groupvanityinfo: __webpack_require__ } = _,
+        const { rgCreatorHomes: _, groupvanityinfo: _ } = _,
           [_, _] = (0, _.useState)(!0);
         return (
           (0, _.useEffect)(() => {
-            if (__webpack_require__) {
+            if (_) {
               (async () => {
-                await _._.AddGroupVanities(__webpack_require__), _(!1);
+                await _._.AddGroupVanities(_), _(!1);
               })();
             } else _(!1);
-          }, [__webpack_require__]),
+          }, [_]),
           _
             ? null
             : (0, _.jsxs)(_._, {
@@ -8166,12 +8124,12 @@
       function _(_) {
         const {
             rgCreatorHomes: _,
-            oInputFeatured: __webpack_require__,
+            oInputFeatured: _,
             creatorNames: _,
             baseGameAppID: _,
           } = _,
           [_, _] = (0, _.useState)(() => {
-            if (__webpack_require__) return __webpack_require__;
+            if (_) return _;
             for (const _ of _.rgFrachises) {
               const _ = _.find((_) => _.linkname == _);
               if (_)
@@ -8305,19 +8263,16 @@
       }
       function _(_) {
         const { oFeatured: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(
-            () => _?.featured_appids?.length || 0,
-          );
+          [_, _] = (0, _.useState)(() => _?.featured_appids?.length || 0);
         (0, _.useEffect)(() => {
-          __webpack_require__ < (_?.featured_appids?.length || 0) &&
-            _(_.featured_appids.length);
-        }, [_, __webpack_require__]);
+          _ < (_?.featured_appids?.length || 0) && _(_.featured_appids.length);
+        }, [_, _]);
         const _ = (function (_, _) {
             if (_ >= _) return [];
             const _ = [];
             for (let _ = _; _ < _; _++) __webpack_require__.push(_);
             return _;
-          })(_?.featured_appids?.length || 0, __webpack_require__),
+          })(_?.featured_appids?.length || 0, _),
           _ =
             !_?.featured_first_app_token ||
             "#Featured_App_None" == _?.featured_first_app_token;
@@ -8402,7 +8357,7 @@
       function _(_) {
         const {
             creatorHomeClanAccountID: _,
-            rgFeaturedList: __webpack_require__,
+            rgFeaturedList: _,
             fnAddAppToFeaturedAppList: _,
             baseGameAppID: _,
           } = _,
@@ -8451,7 +8406,7 @@
                     (0, _.jsx)(_._, {
                       disabled: !_,
                       onClick: () => {
-                        (__webpack_require__ &&
+                        (_ &&
                           -1 !=
                             __webpack_require__.findIndex((_) => _ === _)) ||
                           _(_, _),
@@ -8471,7 +8426,7 @@
       function _(_) {
         const {
           rgFeaturedList: _,
-          rgFeaturedClanList: __webpack_require__,
+          rgFeaturedClanList: _,
           fnSetFeatureAppAndClans: _,
           strFeaturedFirstAppToken: _,
         } = _;
@@ -8503,13 +8458,13 @@
                           _,
                           {
                             appid: _,
-                            creatorClanID: __webpack_require__?.[_],
+                            creatorClanID: _?.[_],
                             elEditor:
                               0 == _
                                 ? (0, _.jsx)(_, {
                                     strFeaturedFirstAppToken: _,
                                     fnSetFeaturedFirstAppToken: (_) =>
-                                      _(_, __webpack_require__, _),
+                                      _(_, _, _),
                                   })
                                 : void 0,
                           },
@@ -8519,16 +8474,14 @@
                         const _ = [..._];
                         let _;
                         _.splice(_, 1),
-                          __webpack_require__ &&
-                            ((_ = [...__webpack_require__]), _.splice(_, 1)),
+                          _ && ((_ = [..._]), _.splice(_, 1)),
                           _(_, _, _);
                       },
                       onMove: (_, _) => {
                         const _ = [..._];
                         let _;
                         (0, _._)(_, _, _),
-                          __webpack_require__ &&
-                            ((_ = [...__webpack_require__]), (0, _._)(_, _, _)),
+                          _ && ((_ = [..._]), (0, _._)(_, _, _)),
                           _(_, _, _);
                       },
                     }),
@@ -8538,10 +8491,8 @@
         });
       }
       function _(_) {
-        const {
-            strFeaturedFirstAppToken: _,
-            fnSetFeaturedFirstAppToken: __webpack_require__,
-          } = _,
+        const { strFeaturedFirstAppToken: _, fnSetFeaturedFirstAppToken: _ } =
+            _,
           _ = (0, _.useMemo)(() => {
             const _ = new Array();
             return (
@@ -8590,7 +8541,7 @@
         });
       }
       function _(_) {
-        const { appid: _, elEditor: __webpack_require__, creatorClanID: _ } = _,
+        const { appid: _, elEditor: _, creatorClanID: _ } = _,
           [_] = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () => ({
@@ -8642,7 +8593,7 @@
                   }),
                 ],
               }),
-            __webpack_require__,
+            _,
           ],
         });
       }
@@ -8656,11 +8607,7 @@
         };
       }
       function _(_) {
-        const {
-            rgCreatorHomes: _,
-            oFeatured: __webpack_require__,
-            fnSetFeatured: _,
-          } = _,
+        const { rgCreatorHomes: _, oFeatured: _, fnSetFeatured: _ } = _,
           _ = (0, _.useMemo)(() => {
             const _ = new Set();
             _.forEach((_) => _.add(new _._(_.clan_steamid).GetAccountID()));
@@ -8691,9 +8638,9 @@
           className: _().PageSelect,
           children: (0, _.jsx)(_._, {
             rgOptions: _,
-            selectedOption: __webpack_require__?.clan_account_id || 0,
+            selectedOption: _?.clan_account_id || 0,
             onChange: (_) => {
-              _.data != __webpack_require__?.clan_account_id &&
+              _.data != _?.clan_account_id &&
                 _({
                   clan_account_id: _.data,
                   featured_appids: void 0,
@@ -8706,16 +8653,16 @@
       }
       function _(_) {
         const { creatorHomeClanAccountID: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(() => _(_));
+          [_, _] = (0, _.useState)(() => _(_));
         return (
           (0, _.useEffect)(() => {
-            __webpack_require__?.clan_account_id != _ && _(_(_));
-          }, [_, __webpack_require__?.clan_account_id]),
+            _?.clan_account_id != _ && _(_(_));
+          }, [_, _?.clan_account_id]),
           (0, _.jsxs)("div", {
             className: _().SelectedSource,
             children: [
               (0, _.jsx)(_._, {
-                creatorID: __webpack_require__,
+                creatorID: _,
                 bShowTagline: !0,
                 bHideCreatorType: !0,
                 bSmallFormat: !0,
@@ -8730,7 +8677,7 @@
         );
       }
       function _(_) {
-        const { oFeatured: _, fnSetFeatured: __webpack_require__ } = _;
+        const { oFeatured: _, fnSetFeatured: _ } = _;
         return (0, _.jsxs)(_._, {
           children: [
             (0, _.jsx)("br", {}),
@@ -8802,11 +8749,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            rgDLCSettings: _,
-            parentAppID: __webpack_require__,
-            dlcAppID: _,
-          } = _,
+        const { rgDLCSettings: _, parentAppID: _, dlcAppID: _ } = _,
           [_, _] = (0, _.useState)(() => _);
         return (0, _.jsxs)(_._, {
           children: [
@@ -8818,7 +8761,7 @@
               children: (0, _._)("#DLC_Dependency_Desc"),
             }),
             (0, _.jsx)(_, {
-              parentAppID: __webpack_require__,
+              parentAppID: _,
               dlcAppID: _,
               fnSelectedDLCAppID: (_) => {
                 -1 == _.findIndex((_) => _.dlc_appid == _) &&
@@ -8843,13 +8786,13 @@
       }
       function _(_) {
         const { rgDLCInfo: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(() => _?.length || 0);
+          [_, _] = (0, _.useState)(() => _?.length || 0);
         (0, _.useEffect)(() => {
-          _?.length > __webpack_require__ && _(_.length);
-        }, [__webpack_require__, _]);
+          _?.length > _ && _(_.length);
+        }, [_, _]);
         const _ = (0, _.useMemo)(() => {
           const _ = new Array();
-          for (let _ = _.length || 0; _ < __webpack_require__; ++_)
+          for (let _ = _.length || 0; _ < _; ++_)
             _.push(
               (0, _.jsx)(
                 "input",
@@ -8862,7 +8805,7 @@
               ),
             );
           return _;
-        }, [__webpack_require__, _]);
+        }, [_, _]);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _?.map((_, _) =>
@@ -8894,7 +8837,7 @@
         include_release: !0,
       };
       function _(_) {
-        const { rgDLCInfo: _, fnSetDLCInfo: __webpack_require__ } = _;
+        const { rgDLCInfo: _, fnSetDLCInfo: _ } = _;
         return (0, _.jsx)(_._, {
           items: _,
           render: (_, _) =>
@@ -8936,7 +8879,7 @@
         },
       ];
       function _(_) {
-        const { dependency: _, fnSetDLCInfo: __webpack_require__ } = _;
+        const { dependency: _, fnSetDLCInfo: _ } = _;
         return (0, _.jsx)(_, {
           appid: _.dlc_appid,
           elEditor: (0, _.jsx)("div", {
@@ -8958,14 +8901,10 @@
         });
       }
       function _(_) {
-        const {
-            parentAppID: _,
-            fnSelectedDLCAppID: __webpack_require__,
-            dlcAppID: _,
-          } = _,
+        const { parentAppID: _, fnSelectedDLCAppID: _, dlcAppID: _ } = _,
           [_, _] = (0, _.useState)(null),
           _ = (function (_) {
-            const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+            const { data: _, isLoading: _ } = (0, _._)({
               queryKey: ["useAppDLCListPartnerSite", _],
               queryFn: async () => {
                 const _ = `${_._.PARTNER_BASE_URL}apps/ajaxgetdlc`,
@@ -8987,7 +8926,7 @@
               },
               enabled: Boolean(_),
             });
-            return __webpack_require__ ? null : _;
+            return _ ? null : _;
           })(_),
           _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
@@ -9037,7 +8976,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { rgDLC: _, parentappid: __webpack_require__ } = _,
+        const { rgDLC: _, parentappid: _ } = _,
           [_, _] = _.useState(_ ? [..._] : []),
           [_, _] = _.useState([]);
         _.useEffect(() => {
@@ -9103,7 +9042,7 @@
               (0, _._)(
                 (0, _.jsx)(_, {
                   rgDLCItems: _,
-                  parentAppID: __webpack_require__,
+                  parentAppID: _,
                   onSelected: (_, _, _, _) => {
                     const _ = {
                         itemid: "" + _,
@@ -9157,7 +9096,7 @@
       function _(_) {
         const {
             closeModal: _,
-            rgDLCItems: __webpack_require__,
+            rgDLCItems: _,
             onSelected: _,
             parentAppID: _,
           } = _,
@@ -9250,9 +9189,9 @@
         });
       }
       function _(_) {
-        const { item: _, index: __webpack_require__, fnUpdateHighlight: _ } = _,
+        const { item: _, index: _, fnUpdateHighlight: _ } = _,
           _ = !_.bRetired && !_.bUnlisted,
-          _ = 0 == __webpack_require__ && _,
+          _ = 0 == _ && _,
           _ = _.useMemo(
             () => [
               {
@@ -9313,7 +9252,7 @@
                     className: _.Highlight,
                     checked: _.highlight,
                     onClick: () => {
-                      (_.highlight = !_.highlight), _(__webpack_require__, _);
+                      (_.highlight = !_.highlight), _(_, _);
                     },
                     label: (0, _._)("#StoreAdmin_Highlight_Checkbox"),
                   }),
@@ -9329,8 +9268,7 @@
                           children: (0, _.jsx)(_._, {
                             rgOptions: _,
                             onChange: (_) => {
-                              (_.highlight_reason = _.data),
-                                _(__webpack_require__, _);
+                              (_.highlight_reason = _.data), _(_, _);
                             },
                             selectedOption: _.highlight_reason
                               ? parseInt("" + _.highlight_reason)
@@ -9353,7 +9291,7 @@
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { rgPinnedBundles: _, rgEnabledBundles: __webpack_require__ } = _,
+        const { rgPinnedBundles: _, rgEnabledBundles: _ } = _,
           [_, _] = (0, _.useState)(_),
           _ = __webpack_require__.filter(
             (_) => -1 === _.findIndex((_) => _.bundleid === _.bundleid),
@@ -9373,11 +9311,10 @@
         });
       }
       function _(_) {
-        const { pinnedBundles: _, nInitialPinnedBundles: __webpack_require__ } =
-          _;
+        const { pinnedBundles: _, nInitialPinnedBundles: _ } = _;
         let _ = 0,
           _ = [];
-        for (; _ < Math.max(__webpack_require__, _.length); ) {
+        for (; _ < Math.max(_, _.length); ) {
           if (_ < _.length) {
             const _ = _[_];
             _.push({
@@ -9407,16 +9344,12 @@
         });
       }
       function _(_) {
-        const {
-          pinnedBundles: _,
-          unpinnedBundles: __webpack_require__,
-          setPinnedBundles: _,
-        } = _;
+        const { pinnedBundles: _, unpinnedBundles: _, setPinnedBundles: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.PinnedBundlesEditor,
           children: [
             (0, _.jsx)(_, {
-              unpinnedBundles: __webpack_require__,
+              unpinnedBundles: _,
               onChange: (_) => {
                 const _ = __webpack_require__.find(
                   (_) => _.bundleid === _.value,
@@ -9442,7 +9375,7 @@
         });
       }
       function _(_) {
-        const { unpinnedBundles: _, onChange: __webpack_require__ } = _,
+        const { unpinnedBundles: _, onChange: _ } = _,
           _ = _.map((_) => ({
             value: _.bundleid,
             label: _.name,
@@ -9454,17 +9387,13 @@
           isMulti: !1,
           placeholder: (0, _._)("#PinnedBundles_Placeholder"),
           options: _,
-          onChange: __webpack_require__,
+          onChange: _,
           controlShouldRenderValue: !1,
           noOptionsMessage: () => (0, _._)("#PinnedBundles_NoOptions"),
         });
       }
       function _(_) {
-        const {
-          pinnedBundles: _,
-          onDelete: __webpack_require__,
-          onMove: _,
-        } = _;
+        const { pinnedBundles: _, onDelete: _, onMove: _ } = _;
         if (0 === _.length)
           return (0, _.jsx)("div", {
             className: _.EmptyPinnedBundleList,
@@ -9472,7 +9401,7 @@
           });
         return (0, _.jsx)(_._, {
           items: _,
-          onDelete: __webpack_require__,
+          onDelete: _,
           onMove: _,
           render: (_, _) =>
             (0, _.jsx)("div", {
@@ -9701,7 +9630,7 @@
               nGuidancePrice: _.price,
               nOriginalPrice: _(_, _, _.amount.currency_code),
             })
-          : _.price / _._ > _.amount.amount &&
+          : _.price * _._ > _.amount.amount &&
             _.push({
               strCurrency: _ ? (0, _._)(_) : (0, _._)(_.amount.currency_code),
               nAmountCents: _.amount.amount,
@@ -9759,11 +9688,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            proposal: _,
-            mapCurrentPrices: __webpack_require__,
-            oGuideline: _,
-          } = _,
+        const { proposal: _, mapCurrentPrices: _, oGuideline: _ } = _,
           { fnAcceptProposal: _ } = _(),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
@@ -9803,7 +9728,7 @@
                     const _ = _.proposed_prices.base_amounts.find(
                         (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
                       )?.amount.amount,
-                      _ = _(_, __webpack_require__, _, _);
+                      _ = _(_, _, _, _);
                     (_.rgAboveThreshold.length > 0 ||
                       _.rgBelowThreshold.length > 0) &&
                       _.push("out_of_guideline"),
@@ -9827,7 +9752,7 @@
         ["out_of_guideline", "One or more currency out of expected range"],
       ]);
       function _(_) {
-        const { proposal: _, closeModal: __webpack_require__, errors: _ } = _,
+        const { proposal: _, closeModal: _, errors: _ } = _,
           [_, _] = (0, _.useState)(() => _),
           [_, _] = (0, _.useState)(""),
           { fnRejectProposal: _ } = _(),
@@ -9837,14 +9762,14 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: _,
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsxs)(_._, {
               strTitle: _,
               strDescription:
                 "Select the appropriate reasons for rejecting this price proposal. Each will surface to the user in the reject email.",
               bDisableBackgroundDismiss: !0,
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: () => {
                 _.fnSetLoading(!0),
                   _(_.packageid, _, _)
@@ -9904,7 +9829,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { partnerID: _, setTicketCount: __webpack_require__ } = _,
+        const { partnerID: _, setTicketCount: _ } = _,
           { data: _ } = (function (_, _, _) {
             return (0, _._)({
               queryKey: ["PartnerTickets", _, _, _],
@@ -9930,7 +9855,7 @@
         return (
           (0, _.useEffect)(() => {
             _?.length > 0 && __webpack_require__(_?.length);
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _ && 0 != _.length
             ? (0, _.jsxs)("div", {
                 children: [
@@ -10024,17 +9949,17 @@
       function _(_) {
         const {
             nAccountIDProposer: _,
-            packageID: __webpack_require__,
+            packageID: _,
             mapPartnerPaidByPackage: _,
           } = _,
-          _ = _.get(__webpack_require__);
+          _ = _.get(_);
         return _
           ? (0, _.jsx)(_._, {
               onClick: (_) =>
                 (0, _._)(
                   (0, _.jsx)(_, {
                     nAccountIDProposer: _,
-                    packageID: __webpack_require__,
+                    packageID: _,
                     partnerID: _[0],
                   }),
                   (0, _._)(_),
@@ -10051,21 +9976,19 @@
       function _(_) {
         const {
             partnerID: _,
-            packageID: __webpack_require__,
+            packageID: _,
             closeModal: _,
             nAccountIDProposer: _,
           } = _,
           [_] = (0, _._)(_),
-          [_] = (0, _._)(__webpack_require__, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () => _._.InitFromAccountID(_).ConvertTo64BitString(),
             [_],
           ),
           [_, _] = (0, _.useState)(() => _?.GetAppID() || 0),
           [_] = (0, _._)(_, _),
-          [_, _] = (0, _.useState)(
-            `Question about pricing for package ${__webpack_require__}`,
-          ),
+          [_, _] = (0, _.useState)(`Question about pricing for package ${_}`),
           [_, _] = (0, _.useState)("");
         (0, _.useEffect)(() => {
           _ && 0 == _ && _(_.GetAppID());
@@ -10116,7 +10039,7 @@
             })
           : (0, _.jsxs)(_._, {
               strTitle: "Create Ticket for Partner",
-              strDescription: `Create a pricing ticket for partner ${_?.name} (${_}) for Package ${__webpack_require__}. App ${_?.GetName() || ""} with ${_}. Please update ticket title and body`,
+              strDescription: `Create a pricing ticket for partner ${_?.name} (${_}) for Package ${_}. App ${_?.GetName() || ""} with ${_}. Please update ticket title and body`,
               bOKDisabled: !_ || 0 == _.trim().length || 0 == _.trim().length,
               onOK: () =>
                 _.mutate({
@@ -10156,7 +10079,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { proposal: _, mapPartnerPaidByPackage: __webpack_require__ } = _,
+        const { proposal: _, mapPartnerPaidByPackage: _ } = _,
           [_] = (0, _._)(_.packageid, _),
           [_] = (0, _._)(_?.GetIncludedAppIDsOrSelf()?.[0], _),
           _ = `${_._.PARTNER_BASE_URL}store/packagelanding/${_.packageid}`;
@@ -10220,18 +10143,17 @@
             (0, _.jsx)(_, {
               nAccountIDProposer: _.account_proposer,
               packageID: _.packageid,
-              mapPartnerPaidByPackage: __webpack_require__,
+              mapPartnerPaidByPackage: _,
             }),
             (0, _.jsx)(_, {
               packageID: _.packageid,
-              mapPartnerPaidByPackage: __webpack_require__,
+              mapPartnerPaidByPackage: _,
             }),
           ],
         });
       }
       function _(_) {
-        const { packageID: _, mapPartnerPaidByPackage: __webpack_require__ } =
-            _,
+        const { packageID: _, mapPartnerPaidByPackage: _ } = _,
           _ = __webpack_require__.get(_);
         return _
           ? (0, _.jsx)("div", {
@@ -10249,28 +10171,23 @@
       }
       function _(_) {
         const { partnerID: _ } = _,
-          [__webpack_require__] = (0, _._)(_);
-        return __webpack_require__
+          [_] = (0, _._)(_);
+        return _
           ? (0, _.jsxs)("a", {
-              href: `${_._.PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${__webpack_require__.partnerid}`,
-              children: [
-                __webpack_require__.name,
-                " (",
-                __webpack_require__.partnerid,
-                ")",
-              ],
+              href: `${_._.PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${_.partnerid}`,
+              children: [_.name, " (", _.partnerid, ")"],
             })
           : null;
       }
       function _(_) {
-        const { amountInCents: _, className: __webpack_require__ } = _;
+        const { amountInCents: _, className: _ } = _;
         return _
           ? (0, _.jsx)("div", {
-              className: __webpack_require__,
+              className: _,
               children: _(_),
             })
           : (0, _.jsx)("div", {
-              className: __webpack_require__,
+              className: _,
             });
       }
       function _(_) {
@@ -10314,11 +10231,7 @@
         });
       }
       function _(_) {
-        const {
-            proposal: _,
-            oGuideline: __webpack_require__,
-            mapCurrentPrices: _,
-          } = _,
+        const { proposal: _, oGuideline: _, mapCurrentPrices: _ } = _,
           _ = _.get(_.packageid),
           _ = _.proposed_prices.base_amounts.find(
             (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
@@ -10361,18 +10274,11 @@
         });
       }
       function _(_) {
-        const {
-            eCurrencyCode: _,
-            curPrice: __webpack_require__,
-            proposal: _,
-            guidePrice: _,
-          } = _,
+        const { eCurrencyCode: _, curPrice: _, proposal: _, guidePrice: _ } = _,
           _ = _.proposed_prices.base_amounts.find(
             (_) => _.amount.currency_code == _,
           ),
-          _ = __webpack_require__?.current_costs?.base_amounts.find(
-            (_) => _.currency_code == _,
-          );
+          _ = _?.current_costs?.base_amounts.find((_) => _.currency_code == _);
         return (0, _.jsx)(_, {
           proposed: _,
           originalAmount: _,
@@ -10380,17 +10286,10 @@
         });
       }
       function _(_) {
-        const {
-            eRegionCode: _,
-            curPrice: __webpack_require__,
-            proposal: _,
-            guidePrice: _,
-          } = _,
+        const { eRegionCode: _, curPrice: _, proposal: _, guidePrice: _ } = _,
           _ = (0, _._)(_),
           _ = _.proposed_prices.region_amounts.find((_) => _.name == _),
-          _ = __webpack_require__?.current_costs?.region_amounts.find(
-            (_) => _.region == _,
-          );
+          _ = _?.current_costs?.region_amounts.find((_) => _.region == _);
         return (0, _.jsx)(_, {
           proposed: _,
           originalAmount: _?.amount,
@@ -10398,11 +10297,7 @@
         });
       }
       function _(_) {
-        const {
-          proposed: _,
-          originalAmount: __webpack_require__,
-          guidePrice: _,
-        } = _;
+        const { proposed: _, originalAmount: _, guidePrice: _ } = _;
         let _, _;
         if (_)
           if (_ && _.price > _.amount.amount) {
@@ -10412,11 +10307,10 @@
             _ = _.outofmatrix;
             _ = `Suggested price ${_(_.price)} - ${Math.floor((_.amount.amount / _.price) * 100 - 100)}% ▲`;
           } else
-            __webpack_require__
-              ? __webpack_require__.amount > _.amount.amount
+            _
+              ? _.amount > _.amount.amount
                 ? (_ = _.priceChangedLower)
-                : __webpack_require__.amount < _.amount.amount &&
-                  (_ = _.priceChangedHigher)
+                : _.amount < _.amount.amount && (_ = _.priceChangedHigher)
               : (_ = _.priceChangedNew);
         return (0, _.jsxs)("td", {
           className: _.FullCurrencyColumn,
@@ -10428,11 +10322,11 @@
                 amountInCents: _?.amount.amount,
               }),
             }),
-            Boolean(__webpack_require__?.amount != _?.amount.amount) &&
+            Boolean(_?.amount != _?.amount.amount) &&
               (0, _.jsx)(_, {
-                amountInCents: __webpack_require__?.amount,
+                amountInCents: _?.amount,
               }),
-            Boolean(!__webpack_require__) &&
+            Boolean(!_) &&
               (0, _.jsx)("div", {
                 children: "--",
               }),
@@ -10442,7 +10336,7 @@
       function _(_) {
         const {
             rgProposals: _,
-            oGuideline: __webpack_require__,
+            oGuideline: _,
             mapCurrentPrices: _,
             mapPartnerPaidByPackage: _,
           } = _,
@@ -10477,7 +10371,7 @@
                     }),
                     (0, _.jsx)("li", {
                       className: _.AboveAutoPublish,
-                      children: "USD Price above 80$ USD",
+                      children: "USD Price above 200$ USD",
                     }),
                     (0, _.jsx)("li", {
                       className: _.CloseToLaunch,
@@ -10534,7 +10428,7 @@
                 "div",
                 {
                   children: (0, _.jsx)(_, {
-                    oGuideline: __webpack_require__,
+                    oGuideline: _,
                     proposal: _,
                     mapCurrentPrices: _,
                     mapPartnerPaidByPackage: _,
@@ -10550,8 +10444,8 @@
       }
       function _(_) {
         const { bShowWithOpenTickets: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(0);
-        return __webpack_require__ > 0 && !_
+          [_, _] = (0, _.useState)(0);
+        return _ > 0 && !_
           ? null
           : (0, _.jsxs)("div", {
               className: _.ProposalCtn,
@@ -10578,7 +10472,7 @@
             });
       }
       function _(_) {
-        const { proposal: _, setOpenTicketCount: __webpack_require__ } = _,
+        const { proposal: _, setOpenTicketCount: _ } = _,
           _ = _.mapPartnerPaidByPackage.get(_.packageid)?.[0] || 0;
         return (0, _.jsxs)("div", {
           className: _.FailuresCtn,
@@ -10600,13 +10494,13 @@
             }),
             (0, _.jsx)(_, {
               partnerID: _,
-              setTicketCount: __webpack_require__,
+              setTicketCount: _,
             }),
           ],
         });
       }
       function _(_) {
-        const { proposal: _, mapCurrentPrices: __webpack_require__ } = _,
+        const { proposal: _, mapCurrentPrices: _ } = _,
           _ = _.proposed_prices.base_amounts.find(
             (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
           )?.amount.amount,
@@ -10694,7 +10588,7 @@
           : null;
       }
       function _(_) {
-        const { proposal: _, oGuideline: __webpack_require__ } = _,
+        const { proposal: _, oGuideline: _ } = _,
           _ = _.proposed_prices.base_amounts.find(
             (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
           )?.amount.amount,
@@ -10718,7 +10612,7 @@
         });
       }
       function _(_) {
-        const { thresholdData: _, strDirection: __webpack_require__ } = _;
+        const { thresholdData: _, strDirection: _ } = _;
         let _ = null;
         return (
           _.nOriginalPrice == _.nProposedPrice && (_ = _.EqualPrices),
@@ -10743,14 +10637,14 @@
               }),
               (0, _.jsx)("td", {
                 className: _.PercentDiff,
-                children: `${_.nPercent}% ${__webpack_require__}`,
+                children: `${_.nPercent}% ${_}`,
               }),
             ],
           })
         );
       }
       function _(_) {
-        const { strGuidanceMessage: _, strDirection: __webpack_require__ } = _;
+        const { strGuidanceMessage: _, strDirection: _ } = _;
         return (0, _.jsxs)("thead", {
           children: [
             (0, _.jsx)("tr", {
@@ -10758,13 +10652,11 @@
                 colSpan: 5,
                 className: (0, _._)(
                   _.WarningTitle,
-                  "above" == __webpack_require__
-                    ? _.WarningAbove
-                    : _.WarningBelow,
+                  "above" == _ ? _.WarningAbove : _.WarningBelow,
                 ),
                 children: [
                   (0, _.jsx)("b", {
-                    children: "above" == __webpack_require__ ? "▲" : "▼",
+                    children: "above" == _ ? "▲" : "▼",
                   }),
                   " ",
                   _,
@@ -10802,13 +10694,13 @@
       function _(_) {
         const {
             proposal: _,
-            oGuideline: __webpack_require__,
+            oGuideline: _,
             USDPriceCents: _,
             mapCurrentPrices: _,
           } = _,
           { rgAboveThreshold: _, rgBelowThreshold: _ } = (0, _.useMemo)(
-            () => _(_, _, __webpack_require__, _),
-            [_, _, __webpack_require__, _],
+            () => _(_, _, _, _),
+            [_, _, _, _],
           );
         if (_.length > 0 || _.length > 0) {
           const _ = _(_);
@@ -10890,8 +10782,8 @@
       }
       function _(_) {
         const { proposal: _ } = _,
-          [__webpack_require__] = (0, _._)(_.packageid, _);
-        return __webpack_require__ && _(__webpack_require__)
+          [_] = (0, _._)(_.packageid, _);
+        return _ && _(_)
           ? (0, _.jsxs)("div", {
               className: _.ReleaseDateCallout,
               children: [
@@ -10903,8 +10795,8 @@
       }
       function _(_) {
         const { bForceShowComparisonRows: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1);
-        return __webpack_require__ || _
+          [_, _] = (0, _.useState)(!1);
+        return _ || _
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_.FullCurrencyTable),
               children: [
@@ -10922,7 +10814,7 @@
       function _(_) {
         const {
           rgProposals: _,
-          oGuideline: __webpack_require__,
+          oGuideline: _,
           mapCurrentPrices: _,
           mapPartnerPaidByPackage: _,
         } = _;
@@ -10930,7 +10822,7 @@
           children: [
             (0, _.jsx)(_, {}),
             (0, _.jsx)(_, {
-              oGuideline: __webpack_require__,
+              oGuideline: _,
             }),
             (0, _.jsx)("hr", {}),
             (0, _.jsx)("hr", {}),
@@ -10941,7 +10833,7 @@
                   children: [
                     (0, _.jsx)("hr", {}),
                     (0, _.jsx)(_, {
-                      oGuideline: __webpack_require__,
+                      oGuideline: _,
                       proposal: _,
                       mapCurrentPrices: _,
                       mapPartnerPaidByPackage: _,
@@ -11161,7 +11053,7 @@
       function _(_) {
         const {
             appid: _,
-            rgBaseGamePackageIds: __webpack_require__,
+            rgBaseGamePackageIds: _,
             rgAllBundles: _,
             rgAllPackages: _,
             rgValidLanguages: _,
@@ -11210,7 +11102,7 @@
             [_],
           ),
           _ =
-            0 === __webpack_require__.length ||
+            0 === _.length ||
             (function (_, _) {
               if (0 === _.length) return !1;
               for (const _ of _)
@@ -11232,7 +11124,7 @@
                     );
                 }
               return !1;
-            })(_, __webpack_require__),
+            })(_, _),
           _ = {
             appid: _,
             rgUnusedBundles: _,
@@ -11323,10 +11215,10 @@
         });
       }
       function _(_) {
-        const { rgOptions: _, rgOriginalOptions: __webpack_require__ } = _;
+        const { rgOptions: _, rgOriginalOptions: _ } = _;
         if ((0, _.useContext)(_).bHasErrors) return null;
         const _ = [];
-        for (let _ = 0; _ < Math.max(_.length, __webpack_require__.length); _++)
+        for (let _ = 0; _ < Math.max(_.length, _.length); _++)
           _ < _.length
             ? _.push(
                 (0, _.jsx)(
@@ -11334,7 +11226,7 @@
                   {
                     children: (0, _.jsx)(_, {
                       option: _[_],
-                      originalOption: __webpack_require__[_] ?? null,
+                      originalOption: _[_] ?? null,
                       index: _,
                     }),
                   },
@@ -11357,20 +11249,17 @@
         });
       }
       function _(_) {
-        const { option: _, originalOption: __webpack_require__, index: _ } = _,
+        const { option: _, originalOption: _, index: _ } = _,
           _ = `app[purchase_options_order][order][${_}]`;
         if ((0, _.useContext)(_).bHasErrors) return null;
-        if (!__webpack_require__) return null;
-        if (_.kind === __webpack_require__.kind && _.kind !== _ && _.kind !== _)
-          return null;
-        if (_.kind === _ && __webpack_require__.kind === _) {
+        if (!_) return null;
+        if (_.kind === _.kind && _.kind !== _ && _.kind !== _) return null;
+        if (_.kind === _ && _.kind === _) {
           let _ = [];
-          if (
-            _.dropdown_items.length < __webpack_require__.dropdown_items.length
-          )
+          if (_.dropdown_items.length < _.dropdown_items.length)
             for (
               let _ = _.dropdown_items.length;
-              _ < __webpack_require__.dropdown_items.length;
+              _ < _.dropdown_items.length;
               _++
             )
               _.push(
@@ -11380,9 +11269,7 @@
                   value: "",
                 }),
               );
-          for (const [_, _] of Object.entries(
-            __webpack_require__.dropdown_title ?? {},
-          ))
+          for (const [_, _] of Object.entries(_.dropdown_title ?? {}))
             0 !== _.trim().length &&
               ((_.dropdown_title && _.dropdown_title[_].trim().length > 0) ||
                 _.push(
@@ -11392,9 +11279,7 @@
                     value: "",
                   }),
                 ));
-          for (const [_, _] of Object.entries(
-            __webpack_require__.description ?? {},
-          ))
+          for (const [_, _] of Object.entries(_.description ?? {}))
             0 !== _.trim().length &&
               ((_.description && _.description[_].trim().length > 0) ||
                 _.push(
@@ -11408,9 +11293,9 @@
             children: _,
           });
         }
-        if (_.kind === _ && __webpack_require__.kind === _) {
+        if (_.kind === _ && _.kind === _) {
           let _ = [];
-          for (const [_, _] of Object.entries(__webpack_require__.header ?? {}))
+          for (const [_, _] of Object.entries(_.header ?? {}))
             0 !== _.trim().length &&
               ((_.header && _.header[_].trim().length > 0) ||
                 _.push(
@@ -11424,7 +11309,7 @@
             children: _,
           });
         }
-        switch (__webpack_require__.kind) {
+        switch (_.kind) {
           case _:
             return (0, _.jsx)("input", {
               type: "hidden",
@@ -11456,7 +11341,7 @@
                   name: `${_}[description]`,
                   value: "",
                 }),
-                __webpack_require__.dropdown_items?.map((_, _) =>
+                _.dropdown_items?.map((_, _) =>
                   (0, _.jsx)(
                     "input",
                     {
@@ -11474,12 +11359,7 @@
         }
       }
       function _(_) {
-        const {
-            index: _,
-            item: __webpack_require__,
-            setItem: _,
-            removeItem: _,
-          } = _,
+        const { index: _, item: _, setItem: _, removeItem: _ } = _,
           _ = (0, _.useContext)(_),
           _ = [
             {
@@ -11500,37 +11380,37 @@
             },
           ];
         let _;
-        switch (__webpack_require__.kind) {
+        switch (_.kind) {
           case _:
             _ = (0, _.jsx)(_, {
-              item: __webpack_require__,
+              item: _,
               index: _,
             });
             break;
           case _:
             _ = (0, _.jsx)(_, {
-              item: __webpack_require__,
+              item: _,
               setItem: _,
               index: _,
             });
             break;
           case _:
             _ = (0, _.jsx)(_, {
-              item: __webpack_require__,
+              item: _,
               setItem: _,
               index: _,
             });
             break;
           case _:
             _ = (0, _.jsx)(_, {
-              item: __webpack_require__,
+              item: _,
               setItem: _,
               index: _,
             });
             break;
           case _:
             _ = (0, _.jsx)(_, {
-              item: __webpack_require__,
+              item: _,
               setItem: _,
               index: _,
             });
@@ -11542,17 +11422,17 @@
               (0, _.jsx)("input", {
                 type: "hidden",
                 name: `app[purchase_options_order][order][${_}][kind]`,
-                value: __webpack_require__.kind,
+                value: _.kind,
               }),
             (0, _.jsxs)("div", {
               className: _.PurchaseOptionFirstLine,
               children: [
                 (0, _.jsxs)("select", {
                   onChange: (_) => {
-                    let _ = structuredClone(__webpack_require__);
+                    let _ = structuredClone(_);
                     (_.kind = _.target.value), _(_);
                   },
-                  value: __webpack_require__.kind,
+                  value: _.kind,
                   children: [
                     (0, _.jsx)("option", {
                       hidden: !0,
@@ -11606,7 +11486,7 @@
         });
       }
       function _(_) {
-        const { item: _, index: __webpack_require__, setItem: _ } = _,
+        const { item: _, index: _, setItem: _ } = _,
           _ = (0, _.useContext)(_),
           _ = _.rgAllPackages.find((_) => _.packageid === _.package_id),
           _ = {
@@ -11628,7 +11508,7 @@
               isMulti: !1,
               name: _.bHasErrors
                 ? void 0
-                : `app[purchase_options_order][order][${__webpack_require__}][package_id]`,
+                : `app[purchase_options_order][order][${_}][package_id]`,
               placeholder: (0, _._)(
                 "#StoreAdmin_PurchaseOptionsOrder_PackagePlaceholder",
               ),
@@ -11644,18 +11524,16 @@
       }
       function _(_) {
         const _ = (0, _.useContext)(_),
-          { item: __webpack_require__, setItem: _, index: _ } = _;
+          { item: _, setItem: _, index: _ } = _;
         let _;
-        if (__webpack_require__.bundle_id) {
-          const _ = _.rgAllBundles.find(
-            (_) => _.bundleid === __webpack_require__.bundle_id,
-          );
+        if (_.bundle_id) {
+          const _ = _.rgAllBundles.find((_) => _.bundleid === _.bundle_id);
           _ = {
-            value: __webpack_require__.bundle_id,
+            value: _.bundle_id,
             label: (0, _._)(
               "#StoreAdmin_PurchaseOptionsOrder_NameWithId",
               _.name,
-              __webpack_require__.bundle_id,
+              _.bundle_id,
             ),
           };
         }
@@ -11663,7 +11541,7 @@
           className: _.BundleOption,
           children: [
             (0, _.jsx)(_, {
-              message: _(__webpack_require__),
+              message: _(_),
             }),
             (0, _.jsx)(_._, {
               className: "react-select-container",
@@ -11679,7 +11557,7 @@
               ),
               options: _.rgUnusedBundles,
               onChange: (_) => {
-                const _ = structuredClone(__webpack_require__);
+                const _ = structuredClone(_);
                 (_.bundle_id = _.value), _(_);
               },
             }),
@@ -11688,7 +11566,7 @@
       }
       function _(_) {
         const _ = (0, _.useContext)(_),
-          { index: __webpack_require__, item: _, setItem: _ } = _,
+          { index: _, item: _, setItem: _ } = _,
           [_, _] = (0, _.useState)("english"),
           _ = (_.header && _.header[_]) || "";
         return (0, _.jsxs)(_.Fragment, {
@@ -11702,7 +11580,7 @@
                 (0, _.jsx)("input", {
                   type: "hidden",
                   value: _,
-                  name: `app[purchase_options_order][order][${__webpack_require__}][kind]`,
+                  name: `app[purchase_options_order][order][${_}][kind]`,
                 }),
                 (0, _.jsx)("input", {
                   type: "text",
@@ -11714,7 +11592,7 @@
                       _(_);
                   },
                   value: _,
-                  name: `app[purchase_options_order][order][${__webpack_require__}][header][${_}]`,
+                  name: `app[purchase_options_order][order][${_}][header][${_}]`,
                   className: _.HeaderText,
                   placeholder: "Header text",
                 }),
@@ -11726,7 +11604,7 @@
                           "input",
                           {
                             type: "hidden",
-                            name: `app[purchase_options_order][order][${__webpack_require__}][header][${_.value}]`,
+                            name: `app[purchase_options_order][order][${_}][header][${_.value}]`,
                             value: _.header[_.value],
                           },
                           _,
@@ -11758,7 +11636,7 @@
       }
       function _(_) {
         const _ = (0, _.useContext)(_),
-          { item: __webpack_require__, setItem: _, index: _ } = _,
+          { item: _, setItem: _, index: _ } = _,
           [_, _] = (0, _.useState)("english"),
           [_, _] = (0, _.useState)("english"),
           _ = _.rgUnusedPackages.map((_) => ({
@@ -11769,7 +11647,7 @@
           className: _.DropdownOption,
           children: [
             (0, _.jsx)(_, {
-              message: _(__webpack_require__),
+              message: _(_),
             }),
             (0, _.jsxs)("div", {
               className: _.TitleLine,
@@ -11783,15 +11661,12 @@
                   type: "text",
                   className: _.TitleInput,
                   name: `app[purchase_options_order][order][${_}][dropdown_title][${_}]`,
-                  value:
-                    (__webpack_require__.dropdown_title &&
-                      __webpack_require__.dropdown_title[_]) ||
-                    "",
+                  value: (_.dropdown_title && _.dropdown_title[_]) || "",
                   placeholder: (0, _._)(
                     "#StoreAdmin_PurchaseOptionsOrder_DropdownTitlePlaceholder",
                   ),
                   onChange: (_) => {
-                    const _ = structuredClone(__webpack_require__);
+                    const _ = structuredClone(_);
                     _.dropdown_title || (_.dropdown_title = {}),
                       (_.dropdown_title[_] = _.target.value),
                       _(_);
@@ -11800,16 +11675,15 @@
                 _.rgValidLanguages.map((_, _) =>
                   _.value === _
                     ? null
-                    : __webpack_require__.dropdown_title &&
-                        __webpack_require__.dropdown_title[_.value] &&
-                        __webpack_require__.dropdown_title[_.value].trim()
-                          .length > 0
+                    : _.dropdown_title &&
+                        _.dropdown_title[_.value] &&
+                        _.dropdown_title[_.value].trim().length > 0
                       ? (0, _.jsx)(
                           "input",
                           {
                             type: "hidden",
                             name: `app[purchase_options_order][order][${_}][dropdown_title][${_.value}]`,
-                            value: __webpack_require__.dropdown_title[_.value],
+                            value: _.dropdown_title[_.value],
                           },
                           _,
                         )
@@ -11861,12 +11735,9 @@
               type: "text",
               className: _.DescriptionInput,
               name: `app[purchase_options_order][order][${_}][description][${_}]`,
-              value:
-                (__webpack_require__.description &&
-                  __webpack_require__.description[_]) ||
-                "",
+              value: (_.description && _.description[_]) || "",
               onChange: (_) => {
-                const _ = structuredClone(__webpack_require__);
+                const _ = structuredClone(_);
                 _.description || (_.description = {}),
                   (_.description[_] = _.target.value),
                   _(_);
@@ -11878,15 +11749,15 @@
             _.rgValidLanguages.map((_, _) =>
               _.value === _
                 ? null
-                : __webpack_require__.description &&
-                    __webpack_require__.description[_.value] &&
-                    __webpack_require__.description[_.value].trim().length > 0
+                : _.description &&
+                    _.description[_.value] &&
+                    _.description[_.value].trim().length > 0
                   ? (0, _.jsx)(
                       "input",
                       {
                         type: "hidden",
                         name: `app[purchase_options_order][order][${_}][description][${_.value}]`,
-                        value: __webpack_require__.description[_.value],
+                        value: _.description[_.value],
                       },
                       _,
                     )
@@ -11910,7 +11781,7 @@
                   ),
                   options: _,
                   onChange: (_) => {
-                    const _ = structuredClone(__webpack_require__);
+                    const _ = structuredClone(_);
                     _.dropdown_items || (_.dropdown_items = []);
                     let _ = {
                       kind: "package",
@@ -11957,20 +11828,20 @@
                     return null;
                   },
                   onDelete: (_) => {
-                    const _ = structuredClone(__webpack_require__);
+                    const _ = structuredClone(_);
                     _.dropdown_items || (_.dropdown_items = []),
                       _.dropdown_items.splice(_, 1),
                       _(_);
                   },
                   onMove: (_, _) => {
-                    const _ = structuredClone(__webpack_require__);
+                    const _ = structuredClone(_);
                     _.dropdown_items || (_.dropdown_items = []);
                     const [_] = _.dropdown_items.splice(_, 1);
                     _.dropdown_items.splice(_, 0, _), _(_);
                   },
-                  items: __webpack_require__.dropdown_items ?? [],
+                  items: _.dropdown_items ?? [],
                 }),
-                (__webpack_require__.dropdown_items ?? []).map((_, _) =>
+                (_.dropdown_items ?? []).map((_, _) =>
                   (0, _.jsxs)(
                     "div",
                     {
@@ -11998,7 +11869,7 @@
       function _(_) {
         const {
             items: _,
-            setItems: __webpack_require__,
+            setItems: _,
             component: _,
             emptyItem: _,
             noItemsPlaceholder: _,
@@ -12054,7 +11925,7 @@
       function _(_) {
         const {
           index: _,
-          item: __webpack_require__,
+          item: _,
           setItem: _,
           moveUp: _,
           moveDown: _,
@@ -12080,7 +11951,7 @@
               className: _.ReorderableListElementContents,
               children: (0, _.jsx)(_.component, {
                 index: _,
-                item: __webpack_require__,
+                item: _,
                 setItem: _,
                 removeItem: _,
               }),
@@ -12106,9 +11977,9 @@
       };
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _._)();
-        return __webpack_require__ && _
+        return _ && _
           ? (0, _.jsx)("div", {
               className: _().StoreItemCtn,
               children: (0, _.jsx)("div", {
@@ -12135,7 +12006,7 @@
       function _(_) {
         const {
             text: _,
-            placeholderToken: __webpack_require__,
+            placeholderToken: _,
             kvName: _,
             onChangeText: _,
             bOnlyDisplay: _,
@@ -12168,14 +12039,12 @@
                   children:
                     _ ||
                     (0, _.jsx)("i", {
-                      children: __webpack_require__,
+                      children: _,
                     }),
                 })
               : (0, _.jsx)("input", {
                   type: "text",
-                  placeholder: (0, _._)(
-                    __webpack_require__ || "#KVInputBox_Default",
-                  ),
+                  placeholder: (0, _._)(_ || "#KVInputBox_Default"),
                   value: _,
                   onChange: (_) => _(_.currentTarget.value, _),
                 }),
@@ -12281,7 +12150,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(_),
+        const [_, _] = (0, _.useState)(_),
           [_, _] = (0, _.useState)(_.Get().GetDLCForAppID(_));
         return (
           (0, _.useEffect)(() => {
@@ -12299,7 +12168,7 @@
       function _(_) {
         const {
             appid: _,
-            setAppID: __webpack_require__,
+            setAppID: _,
             rgExcludeAppIDs: _,
             seasonPassID: _,
             bOnlyShowReleaseDLC: _,
@@ -12309,7 +12178,7 @@
           } = _,
           _ = _(_.parentAppID),
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(_),
+            const [_, _] = (0, _.useState)(_),
               [_, _] = (0, _.useState)(_.Get().GetSoundTracksForAppID(_));
             return (
               (0, _.useEffect)(() => {
@@ -12384,8 +12253,8 @@
       };
       function _(_) {
         const { appInfo: _ } = _,
-          [__webpack_require__] = (0, _._)(_.appid, _);
-        return __webpack_require__
+          [_] = (0, _._)(_.appid, _);
+        return _
           ? (0, _.jsxs)("span", {
               children: [
                 _.name,
@@ -12403,7 +12272,7 @@
       function _(_) {
         const {
             mileStone: _,
-            index: __webpack_require__,
+            index: _,
             bCreate: _,
             bAppHasSteamChinaToolsEnabled: _,
             rgShippedMilestoneIDs: _,
@@ -12420,13 +12289,8 @@
             [_?.milestone_desc],
           ),
           _ = _.useMemo(
-            () => [
-              "seasonpass",
-              "commitments",
-              "" + __webpack_require__,
-              "milestone_desc",
-            ],
-            [__webpack_require__],
+            () => ["seasonpass", "commitments", "" + _, "milestone_desc"],
+            [_],
           ),
           _ = (0, _._)(_, _, "app", _ ? void 0 : _);
         return (
@@ -12467,7 +12331,7 @@
       function _(_) {
         const {
             hideModal: _,
-            seasonPassID: __webpack_require__,
+            seasonPassID: _,
             mileStone: _,
             milestoneID: _,
             onSave: _,
@@ -12597,7 +12461,7 @@
                     appid: _,
                     setAppID: _,
                     rgExcludeAppIDs: null,
-                    seasonPassID: __webpack_require__,
+                    seasonPassID: _,
                     strLocalizedLabel: (0, _._)(
                       "#SeasonPass_CustomerComingSoonDLC",
                     ),
@@ -12690,13 +12554,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            milestoneID: _,
-            rgPublishedMilestoneIDs: __webpack_require__,
-            onDelete: _,
-          } = _,
+        const { milestoneID: _, rgPublishedMilestoneIDs: _, onDelete: _ } = _,
           [_, _, _] = (0, _._)();
-        return !__webpack_require__ || __webpack_require__?.includes(_)
+        return !_ || __webpack_require__?.includes(_)
           ? null
           : (0, _.jsxs)("div", {
               className: (0, _._)(_().EditBtn, _().BtnCtn),
@@ -12723,13 +12583,13 @@
       function _(_) {
         const {
             hideModal: _,
-            inputMilestone: __webpack_require__,
+            inputMilestone: _,
             setCurrentMilestone: _,
             seasonPassID: _,
             rgExcludedAppIDs: _,
           } = _,
-          _ = Boolean(!__webpack_require__.completed_appid),
-          _ = Boolean(!__webpack_require__.completed_event_gid),
+          _ = Boolean(!_.completed_appid),
+          _ = Boolean(!_.completed_event_gid),
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(null);
         return (0, _.jsx)(_._, {
@@ -12743,7 +12603,7 @@
             bOKDisabled: !_ && !_,
             onOK: () => {
               const _ = {
-                ...__webpack_require__,
+                ..._,
               };
               _ && _ && (_.completed_appid = _),
                 _ && _ && (_.completed_event_gid = _),
@@ -12804,7 +12664,7 @@
       function _(_) {
         const {
             inputMilestone: _,
-            setCurrentMilestone: __webpack_require__,
+            setCurrentMilestone: _,
             seasonPassID: _,
             rgAllMilestones: _,
             index: _,
@@ -12853,7 +12713,7 @@
                   _ &&
                     (0, _.jsx)(_, {
                       inputMilestone: _,
-                      setCurrentMilestone: __webpack_require__,
+                      setCurrentMilestone: _,
                       rgExcludedAppIDs: _(_, _, _.milestone_id),
                       seasonPassID: _,
                       hideModal: _,
@@ -12875,7 +12735,7 @@
                 children: [
                   _ &&
                     (0, _.jsx)(_, {
-                      setCurrentMilestone: __webpack_require__,
+                      setCurrentMilestone: _,
                       inputMilestone: _,
                       hideModal: _,
                       rgExcludedAppIDs: _(_, _, _.milestone_id),
@@ -12915,19 +12775,15 @@
       function _(_) {
         const {
             hideModal: _,
-            inputMilestone: __webpack_require__,
+            inputMilestone: _,
             setCurrentMilestone: _,
             seasonPassID: _,
             rgExcludedAppIDs: _,
           } = _,
-          [_, _] = (0, _.useState)(__webpack_require__.completed_appid),
-          [_, _] = (0, _.useState)(__webpack_require__.completed_event_gid),
-          [_, _] = (0, _.useState)(() =>
-            Boolean(__webpack_require__.completed_appid),
-          ),
-          [_, _] = (0, _.useState)(
-            Boolean(__webpack_require__.completed_event_gid),
-          );
+          [_, _] = (0, _.useState)(_.completed_appid),
+          [_, _] = (0, _.useState)(_.completed_event_gid),
+          [_, _] = (0, _.useState)(() => Boolean(_.completed_appid)),
+          [_, _] = (0, _.useState)(Boolean(_.completed_event_gid));
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)(_._, {
@@ -12935,11 +12791,10 @@
             bDisableBackgroundDismiss: !0,
             strTitle: (0, _._)(
               "#SeasonPass_UpdateLaunch_title",
-              __webpack_require__.localized_title?.[_._.LANGUAGE] ||
-                __webpack_require__.localized_title?.english,
+              _.localized_title?.[_._.LANGUAGE] || _.localized_title?.english,
             ),
             strDescription: (0, _._)(
-              __webpack_require__.backfilled_release
+              _.backfilled_release
                 ? "#SeasonPass_UpdateLaunch_desc_backfill"
                 : "#SeasonPass_UpdateLaunch_desc",
             ),
@@ -12947,7 +12802,7 @@
             bOKDisabled: _ && !_,
             onOK: () => {
               _({
-                ...__webpack_require__,
+                ..._,
                 completed_appid: _,
                 completed_event_gid: _,
               });
@@ -13050,7 +12905,7 @@
       function _(_) {
         const {
           seasonPassData: _,
-          seasonPassID: __webpack_require__,
+          seasonPassID: _,
           rgPublishedMilestoneIDs: _,
           bAppHasSteamChinaToolsEnabled: _,
           fnDeleteMilestoneByID: _,
@@ -13082,7 +12937,7 @@
                       {
                         inputMilestone: _,
                         index: _,
-                        seasonPassID: __webpack_require__,
+                        seasonPassID: _,
                         rgAllMilestones: _.commitments,
                         bAppHasSteamChinaToolsEnabled: _,
                         rgPublishedMilestoneIDs: _,
@@ -13099,47 +12954,47 @@
         });
       }
       function _(_) {
-        const { milestone: _, index: __webpack_require__ } = _;
+        const { milestone: _, index: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][milestone_id]`,
+              name: `app[seasonpass][commitments][${_}][milestone_id]`,
               value: _ ? _.milestone_id : void 0,
             }),
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][internal_desc]`,
+              name: `app[seasonpass][commitments][${_}][internal_desc]`,
               value: _ ? _.internal_desc : void 0,
             }),
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][submit_time]`,
+              name: `app[seasonpass][commitments][${_}][submit_time]`,
               value: _ ? _.submit_time : void 0,
             }),
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][submit_accountid]`,
+              name: `app[seasonpass][commitments][${_}][submit_accountid]`,
               value: _ ? _.submit_accountid : void 0,
             }),
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][expected_delivery]`,
+              name: `app[seasonpass][commitments][${_}][expected_delivery]`,
               value: _ ? _.expected_delivery : void 0,
             }),
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][display_format]`,
+              name: `app[seasonpass][commitments][${_}][display_format]`,
               value: _ ? _.display_format : void 0,
             }),
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][backfilled_release]`,
+              name: `app[seasonpass][commitments][${_}][backfilled_release]`,
               value: _ ? String(Boolean(_.backfilled_release)) : void 0,
             }),
             (0, _.jsx)("input", {
               type: "hidden",
-              name: `app[seasonpass][commitments][${__webpack_require__}][coming_soon_appid]`,
+              name: `app[seasonpass][commitments][${_}][coming_soon_appid]`,
               value: _ ? _.coming_soon_appid : void 0,
             }),
             Boolean(!_) &&
@@ -13147,12 +13002,12 @@
                 children: [
                   (0, _.jsx)("input", {
                     type: "hidden",
-                    name: `app[seasonpass][commitments][${__webpack_require__}][localized_title]`,
+                    name: `app[seasonpass][commitments][${_}][localized_title]`,
                     value: void 0,
                   }),
                   (0, _.jsx)("input", {
                     type: "hidden",
-                    name: `app[seasonpass][commitments][${__webpack_require__}][milestone_desc]`,
+                    name: `app[seasonpass][commitments][${_}][milestone_desc]`,
                     value: void 0,
                   }),
                 ],
@@ -13163,7 +13018,7 @@
       function _(_) {
         const {
             inputMilestone: _,
-            index: __webpack_require__,
+            index: _,
             seasonPassID: _,
             rgAllMilestones: _,
             bAppHasSteamChinaToolsEnabled: _,
@@ -13195,13 +13050,13 @@
                 children: [
                   (0, _.jsx)(_, {
                     milestone: _,
-                    index: __webpack_require__,
+                    index: _,
                   }),
                   (0, _.jsx)(_, {
                     text: _.localized_title,
                     className: _().Title,
                     onChangeText: null,
-                    kvName: `app[seasonpass][commitments][${__webpack_require__}][localized_title]`,
+                    kvName: `app[seasonpass][commitments][${_}][localized_title]`,
                     bOnlyDisplay: !0,
                     placeholderToken: (0, _._)(
                       "#SeasonPass_NoLang_Fallback",
@@ -13268,14 +13123,14 @@
                     setCurrentMilestone: _,
                     seasonPassID: _,
                     rgAllMilestones: _,
-                    index: __webpack_require__,
+                    index: _,
                     rgShippedMilestoneIDs: _,
                   }),
                   (0, _.jsx)(_, {
                     milestoneID: _.milestone_id,
                     mileStone: _,
                     onSave: _,
-                    index: __webpack_require__,
+                    index: _,
                     bAppHasSteamChinaToolsEnabled: _,
                     rgShippedMilestoneIDs: _,
                     seasonPassID: _,
@@ -13294,19 +13149,17 @@
       function _(_) {
         const {
             seasonPassID: _,
-            seasonPassData: __webpack_require__,
+            seasonPassData: _,
             rgPublishedMilestoneIDs: _,
             rgShippedMilestoneIDs: _,
           } = _,
           [_, _] = (0, _.useState)(
-            __webpack_require__ || {
+            _ || {
               commitments: [],
             },
           ),
           { bAppHasSteamChinaToolsEnabled: _ } = (0, _._)(),
-          [_, _] = (0, _.useState)(
-            __webpack_require__?.commitments?.length || 0,
-          ),
+          [_, _] = (0, _.useState)(_?.commitments?.length || 0),
           _ = (0, _.useMemo)(() => {
             let _ = 0;
             do {
@@ -13408,7 +13261,7 @@
       function _(_) {
         const {
           seasonPassID: _,
-          fnAppendSeasonPass: __webpack_require__,
+          fnAppendSeasonPass: _,
           nNextMilestoneID: _,
           index: _,
           bAppHasSteamChinaToolsEnabled: _,
@@ -13515,7 +13368,7 @@
                 (0, _.jsx)("div", {
                   className: _().MilestoneButton,
                   children: (0, _.jsx)(_, {
-                    onSave: __webpack_require__,
+                    onSave: _,
                     milestoneID: _,
                     index: _,
                     bCreate: !0,
@@ -13530,10 +13383,7 @@
         });
       }
       function _(_) {
-        const {
-            seasonPassData: _,
-            rgShippedMilestoneIDs: __webpack_require__,
-          } = _,
+        const { seasonPassData: _, rgShippedMilestoneIDs: _ } = _,
           _ = (0, _._)(),
           [_, _, _] = (0, _.useMemo)(() => {
             const _ =
@@ -13550,7 +13400,7 @@
                 (_) => _.expected_delivery < _ && !_.backfilled_release,
               );
             return [_.length > 0, _.length > 0, _.length > 0];
-          }, [_, _, __webpack_require__]);
+          }, [_, _, _]);
         return _
           ? (0, _.jsx)(_.Fragment, {
               children:
@@ -13566,8 +13416,8 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { rgSocialMedia: _ } = _,
-          [__webpack_require__, _] = _.useState(_ ? [..._] : []),
-          [_, _] = _.useState(__webpack_require__.length),
+          [_, _] = _.useState(_ ? [..._] : []),
+          [_, _] = _.useState(_.length),
           _ = _.useCallback(
             (_) => {
               _.length > _ && _(_.length), _(_);
@@ -13578,11 +13428,11 @@
           children: [
             (0, _.jsx)(_, {
               ..._,
-              rgSocialMediaItems: __webpack_require__,
+              rgSocialMediaItems: _,
               fnSetItems: _,
             }),
             (0, _.jsx)(_, {
-              items: __webpack_require__,
+              items: _,
               maxSeen: _,
             }),
           ],
@@ -13591,7 +13441,7 @@
       function _(_) {
         const {
             rgSocialMediaItems: _,
-            fnSetItems: __webpack_require__,
+            fnSetItems: _,
             rgSupportedSocialMediaTypes: _,
             rgValidationData: _,
           } = _,
@@ -13659,7 +13509,7 @@
         });
       }
       function _(_) {
-        const { options: _, onAddLink: __webpack_require__ } = _;
+        const { options: _, onAddLink: _ } = _;
         return (0, _.jsx)("div", {
           className: _.AddLinkDropDown,
           children: (0, _.jsx)(_._, {
@@ -13675,11 +13525,7 @@
         });
       }
       function _(_) {
-        const {
-          item: _,
-          onUpdateLink: __webpack_require__,
-          validationData: _,
-        } = _;
+        const { item: _, onUpdateLink: _, validationData: _ } = _;
         let _;
         _ = _.number
           ? (0, _._)("#StoreAdmin_SocialMedia_EnterNumber")
@@ -13749,7 +13595,7 @@
         });
       }
       function _(_) {
-        const { items: _, maxSeen: __webpack_require__ } = _,
+        const { items: _, maxSeen: _ } = _,
           _ = _.useMemo(
             () =>
               (function (_, _) {
@@ -13802,8 +13648,8 @@
                   }),
                   _
                 );
-              })(_, __webpack_require__),
-            [_, __webpack_require__],
+              })(_, _),
+            [_, _],
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [..._],
@@ -13813,18 +13659,18 @@
       function _(_) {
         const {
             rgAntiCheatData: _,
-            rgSupportedAntiCheatOptions: __webpack_require__,
+            rgSupportedAntiCheatOptions: _,
             rgLanguages: _,
             rgSupportedAntiCheatBootProtections: _,
           } = _,
           _ = _.useMemo(() => new Map(_), [_]),
           _ = (0, _.useMemo)(
             () =>
-              Object.entries(__webpack_require__).map(([_, _]) => ({
+              Object.entries(_).map(([_, _]) => ({
                 label: (0, _._)(`#StoreAdmin_AntiCheat_Type_${_}`),
                 data: _,
               })),
-            [__webpack_require__],
+            [_],
           ),
           [_, _] = (0, _.useState)(_.type),
           [_, _] = (0, _.useState)(_.kernel),
@@ -13858,7 +13704,7 @@
                     "none" !== _.data &&
                       "unspecified" !== _.data &&
                       "other" !== _.data &&
-                      _(__webpack_require__[_.data].kernel));
+                      _(_[_.data].kernel));
                 },
               }),
             }),
@@ -13894,7 +13740,7 @@
         });
       }
       function _(_) {
-        const { label: _, children: __webpack_require__ } = _;
+        const { label: _, children: _ } = _;
         return (0, _.jsxs)("div", {
           className: "formrow flexRow",
           children: [
@@ -13911,7 +13757,7 @@
               className: "formdata settingsBlock",
               children: (0, _.jsx)("div", {
                 className: "left",
-                children: __webpack_require__,
+                children: _,
               }),
             }),
           ],
@@ -13932,33 +13778,25 @@
         });
       }
       function _(_) {
-        const {
-          options: _,
-          selectedOption: __webpack_require__,
-          onSelectionChanged: _,
-        } = _;
+        const { options: _, selectedOption: _, onSelectionChanged: _ } = _;
         return (0, _.jsx)("div", {
           className: _.AntiCheatDropDown,
           children: (0, _.jsx)(_._, {
             controlled: !0,
             rgOptions: _,
             onChange: _,
-            selectedOption: __webpack_require__,
+            selectedOption: _,
           }),
         });
       }
       function _(_) {
-        const { values: _, mapLanguages: __webpack_require__ } = _,
+        const { values: _, mapLanguages: _ } = _,
           {
             strActiveLanguage: _,
             mapValues: _,
             rctLanguageSelect: _,
             rctHiddenInputs: _,
-          } = (0, _._)(__webpack_require__, _, "app", [
-            "game",
-            "3panticheat",
-            "othernameloc",
-          ]),
+          } = (0, _._)(_, _, "app", ["game", "3panticheat", "othernameloc"]),
           _ = _.get(_),
           _ = (0, _._)(_);
         return (0, _.jsxs)(_, {
@@ -13980,14 +13818,14 @@
         });
       }
       function _(_) {
-        const { checked: _, onChange: __webpack_require__ } = _;
+        const { checked: _, onChange: _ } = _;
         return (0, _.jsxs)(_, {
           children: [
             (0, _.jsx)(_._, {
               className: (0, _._)(_.KernelMode, _.CheckboxLabel),
               label: (0, _._)("#StoreAdmin_AntiCheat_KernelModeLabel"),
               checked: _,
-              onChange: __webpack_require__,
+              onChange: _,
             }),
             (0, _.jsx)("div", {
               className: _.CheckboxDescription,
@@ -13999,14 +13837,14 @@
         });
       }
       function _(_) {
-        const { checked: _, onChange: __webpack_require__ } = _;
+        const { checked: _, onChange: _ } = _;
         return (0, _.jsxs)(_, {
           children: [
             (0, _.jsx)(_._, {
               className: _.CheckboxLabel,
               label: (0, _._)("#StoreAdmin_AntiCheat_UninstallCompletelyLabel"),
               checked: _,
-              onChange: __webpack_require__,
+              onChange: _,
             }),
             (0, _.jsx)("div", {
               className: _.CheckboxDescription,
@@ -14018,11 +13856,7 @@
         });
       }
       function _(_) {
-        const {
-          supported: _,
-          currentValue: __webpack_require__,
-          onChange: _,
-        } = _;
+        const { supported: _, currentValue: _, onChange: _ } = _;
         if (0 == _.length) return null;
         let _ = _.map((_) => {
             return {
@@ -14039,9 +13873,7 @@
             };
             var _;
           }),
-          _ = _.find((_) => _ == __webpack_require__)
-            ? __webpack_require__
-            : _[0];
+          _ = _.find((_) => _ == _) ? _ : _[0];
         return (0, _.jsx)(_, {
           children: (0, _.jsxs)(_, {
             children: [
@@ -14075,7 +13907,7 @@
       function _(_) {
         const {
             selectedOption: _,
-            kernelMode: __webpack_require__,
+            kernelMode: _,
             uninstallsCompletely: _,
             bootProtection: _,
           } = _,
@@ -14121,8 +13953,8 @@
                   ),
                   _
                 );
-              })(_, __webpack_require__, _, _),
-            [_, __webpack_require__, _, _],
+              })(_, _, _, _),
+            [_, _, _, _],
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [..._],
@@ -14131,7 +13963,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
+        const [_, _] = _.useState(!1);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -14202,18 +14034,18 @@
         });
       }
       function _(_) {
-        const { item: _, language: __webpack_require__ } = _;
+        const { item: _, language: _ } = _;
         let _ = (0, _._)("#StoreAdmin_NonAppContent_MissingLanguage");
         _.localized_title &&
           (_ =
-            _.localized_title[__webpack_require__] ??
+            _.localized_title[_] ??
             _.localized_title.english ??
             (0, _._)("#StoreAdmin_NonAppContent_MissingLanguage"));
         let _ = (0, _._)("#StoreAdmin_NonAppContent_MissingLanguage");
         return (
           _.localized_description &&
             (_ =
-              _.localized_description[__webpack_require__] ??
+              _.localized_description[_] ??
               _.localized_description.english ??
               (0, _._)("#StoreAdmin_NonAppContent_MissingLanguage")),
           (0, _.jsxs)("tr", {
@@ -14236,11 +14068,7 @@
         );
       }
       function _(_) {
-        const {
-            originalItems: _,
-            packageid: __webpack_require__,
-            onDismiss: _,
-          } = _,
+        const { originalItems: _, packageid: _, onDismiss: _ } = _,
           _ = [];
         for (const _ of _)
           _.push({
@@ -14249,7 +14077,7 @@
             visible: _.visible,
           });
         const _ = (function (_) {
-            const [_, __webpack_require__] = _.useState(_),
+            const [_, _] = _.useState(_),
               _ = (_, _) => {
                 let _ = [..._];
                 (_[_] = _), __webpack_require__(_);
@@ -14321,7 +14149,7 @@
                 };
               },
             });
-          })(__webpack_require__),
+          })(_),
           _ = () => {
             window.location.reload();
           };
@@ -14452,18 +14280,16 @@
       }
       function _(_) {
         const { state: _ } = _,
-          { item: __webpack_require__, setItem: _, deleteItem: _ } = _,
+          { item: _, setItem: _, deleteItem: _ } = _,
           [_, _] = _.useState("english"),
           _ = (0, _._)(!1);
         let _ = "";
-        __webpack_require__.localized_title &&
-          __webpack_require__.localized_title[_] &&
-          (_ = __webpack_require__.localized_title[_]);
+        _.localized_title && _.localized_title[_] && (_ = _.localized_title[_]);
         let _ = "";
         return (
-          __webpack_require__.localized_description &&
-            __webpack_require__.localized_description[_] &&
-            (_ = __webpack_require__.localized_description[_]),
+          _.localized_description &&
+            _.localized_description[_] &&
+            (_ = _.localized_description[_]),
           (0, _.jsxs)("div", {
             className: _.ItemEditorRowContents,
             children: [
@@ -14478,8 +14304,7 @@
                     ),
                     value: _,
                     onChange: (_) => {
-                      (__webpack_require__.localized_title[_] = _.target.value),
-                        _(__webpack_require__);
+                      (_.localized_title[_] = _.target.value), _(_);
                     },
                     maxLength: 120,
                   }),
@@ -14504,10 +14329,9 @@
                 className: _.ItemEditorRowVisibleToggle,
                 children: [
                   (0, _.jsx)(_._, {
-                    value: "1" === __webpack_require__.visible,
+                    value: "1" === _.visible,
                     onChange: (_) => {
-                      (__webpack_require__.visible = _ ? "1" : "0"),
-                        _(__webpack_require__);
+                      (_.visible = _ ? "1" : "0"), _(_);
                     },
                   }),
                   " ",
@@ -14533,9 +14357,7 @@
                     maxLength: 300,
                     rows: 5,
                     onChange: (_) => {
-                      (__webpack_require__.localized_description[_] =
-                        _.target.value),
-                        _(__webpack_require__);
+                      (_.localized_description[_] = _.target.value), _(_);
                     },
                     value: _,
                   }),
@@ -14549,7 +14371,7 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { packageid: _ } = _,
-          [__webpack_require__, _] = _.useState(_.bShowCapsuleArt),
+          [_, _] = _.useState(_.bShowCapsuleArt),
           [_, _] = _.useState(_.bHideItemPrefixes),
           [_, _] = _.useState(null),
           _ = (function (_) {
@@ -14625,7 +14447,7 @@
                               children: [
                                 (0, _.jsx)("input", {
                                   type: "checkbox",
-                                  checked: __webpack_require__,
+                                  checked: _,
                                   onChange: (_) => {
                                     _(_.target.checked);
                                   },
@@ -14670,7 +14492,7 @@
                             onClick: async () => {
                               _("working"),
                                 await _.mutateAsync({
-                                  bShowCapsuleArt: __webpack_require__,
+                                  bShowCapsuleArt: _,
                                   bHideItemPrefix: _,
                                 })
                                   .then((_) => {
@@ -14686,7 +14508,7 @@
                                   });
                             },
                             disabled:
-                              __webpack_require__ === _.bShowCapsuleArt &&
+                              _ === _.bShowCapsuleArt &&
                               _ === _.bHideItemPrefixes,
                             children: (0, _._)(
                               "#StoreAdmin_ShowCapsuleArt_SaveAndPublish",
@@ -14772,7 +14594,7 @@
                   (0, _.jsx)("input", {
                     type: "checkbox",
                     className: _().PackagePurchaseDisplayCheckbox,
-                    checked: __webpack_require__,
+                    checked: _,
                     onChange: _,
                   }),
                   (0, _.jsx)(_._, {
@@ -14800,7 +14622,7 @@
                   (0, _.jsx)("input", {
                     type: "checkbox",
                     className: _().PackagePurchaseDisplayCheckbox,
-                    checked: __webpack_require__,
+                    checked: _,
                     disabled: !0,
                   }),
                   (0, _.jsx)(_._, {
@@ -14861,7 +14683,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)([]),
+        const [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(!1),
           { itemid: _, apptype: _, altasset: _, altpostfix: _ } = _;
         (0, _.useEffect)(
@@ -14918,11 +14740,7 @@
         return _;
       }
       function _(_) {
-        const {
-            rgImages: _,
-            fnOnSuccess: __webpack_require__,
-            fnCloseDialog: _,
-          } = _,
+        const { rgImages: _, fnOnSuccess: _, fnCloseDialog: _ } = _,
           [_, _] = (0, _.useState)({}),
           _ = (0, _.useCallback)(
             (_, _, _) =>
@@ -14959,7 +14777,7 @@
           strOKButtonText: (0, _._)(
             "#StoreAdmin_GraphicalAssets_ConfirmDialog_ConfirmBtn",
           ),
-          onOK: __webpack_require__,
+          onOK: _,
           bDestructiveWarning: !_,
           bDisableBackgroundDismiss: !0,
           children: [
@@ -14977,7 +14795,7 @@
         });
       }
       function _(_) {
-        const { image: _, onCheckboxChange: __webpack_require__ } = _,
+        const { image: _, onCheckboxChange: _ } = _,
           _ = _(_.image_def.name);
         let _ = [];
         for (const _ of _)
@@ -15077,11 +14895,11 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__, _] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
-              onClick: __webpack_require__,
+              onClick: _,
               children: (0, _._)("#Button_Unlink"),
             }),
             (0, _.jsx)(_._, {
@@ -15095,12 +14913,7 @@
         });
       }
       function _(_) {
-        const {
-            pageLink: _,
-            clanAccountID: __webpack_require__,
-            clanName: _,
-            closeModal: _,
-          } = _,
+        const { pageLink: _, clanAccountID: _, clanName: _, closeModal: _ } = _,
           _ = (function (_, _, _) {
             const _ = _();
             return (0, _._)({
@@ -15121,7 +14934,7 @@
                 return await _.mutateAsync(_);
               },
             });
-          })(_.appid, __webpack_require__, _.linkname),
+          })(_.appid, _, _.linkname),
           _ = (0, _._)();
         return _.bLoading
           ? (0, _.jsx)(_._, {
@@ -15134,7 +14947,7 @@
               strTitle: (0, _._)("#Button_Unlink"),
               strDescription: (0, _._)(
                 "#AppLanding_Creator_UnlinkDesc",
-                _ || __webpack_require__,
+                _ || _,
                 _.linkname,
               ),
               onOK: () => {
@@ -15166,7 +14979,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { nAppID: _, nPartnerID: __webpack_require__ } = _,
+        const { nAppID: _, nPartnerID: _ } = _,
           [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -15185,12 +14998,7 @@
         });
       }
       function _(_) {
-        const {
-            nAppID: _,
-            nPartnerID: __webpack_require__,
-            linkname: _,
-            closeModal: _,
-          } = _,
+        const { nAppID: _, nPartnerID: _, linkname: _, closeModal: _ } = _,
           _ = (function (_, _, _) {
             const _ = _();
             return (0, _._)({
@@ -15216,7 +15024,7 @@
                 return await _.mutateAsync(_);
               },
             });
-          })(__webpack_require__, _, _),
+          })(_, _, _),
           [_, _] = (0, _.useState)(null),
           _ = (function (_) {
             const _ = (0, _._)(),
@@ -15238,7 +15046,7 @@
                 enabled: _ > 0,
               });
             return _.isLoading ? null : _.data;
-          })(__webpack_require__),
+          })(_),
           _ = (function () {
             const _ = (0, _._)({
               queryKey: ["useClanLinkableForMeViaCreatorHome", _._.accountid],
@@ -15348,13 +15156,11 @@
             });
       }
       function _(_) {
-        const { clanAccountID: _, bExistingLink: __webpack_require__ } = _,
+        const { clanAccountID: _, bExistingLink: _ } = _,
           [_, _] = (0, _._)(_),
           _ = _ ? _.group_name + `(${_})` : "" + _;
         return (0, _.jsx)(_._, {
-          toolTipContent: __webpack_require__
-            ? (0, _._)("#AppLanding_Creator_Existing")
-            : void 0,
+          toolTipContent: _ ? (0, _._)("#AppLanding_Creator_Existing") : void 0,
           children: (0, _.jsxs)("div", {
             className: _().DropDownItem,
             children: [
@@ -15364,7 +15170,7 @@
               }),
               _,
               " ",
-              __webpack_require__ ? "*" : "",
+              _ ? "*" : "",
             ],
           }),
         });
@@ -15373,23 +15179,21 @@
       function _(_) {
         const {
             nAppID: _,
-            nPrimaryPartnerID: __webpack_require__,
+            nPrimaryPartnerID: _,
             strName: _,
             strKvTargetName: _,
           } = _,
           [_, _] = (0, _.useState)(() => _),
           _ = (function (_, _) {
-            const [__webpack_require__, _] = (0, _.useState)(() =>
-                _ > 0 ? _ : null,
-              ),
-              _ = (0, _._)(__webpack_require__ > 0 ? null : _);
+            const [_, _] = (0, _.useState)(() => (_ > 0 ? _ : null)),
+              _ = (0, _._)(_ > 0 ? null : _);
             return (
               (0, _.useEffect)(() => {
-                !__webpack_require__ && _?.length > 0 && _(_[0].partner_id);
-              }, [_, __webpack_require__]),
-              __webpack_require__
+                !_ && _?.length > 0 && _(_[0].partner_id);
+              }, [_, _]),
+              _
             );
-          })(_, __webpack_require__),
+          })(_, _),
           _ = _(_),
           _ = _?.find(
             (_) =>
@@ -15468,12 +15272,8 @@
         };
       }
       function _(_) {
-        const { pageLink: _, strKvTargetName: __webpack_require__ } = _,
-          {
-            clanAccountID: _,
-            clanInfo: _,
-            strURL: _,
-          } = _(_, __webpack_require__);
+        const { pageLink: _, strKvTargetName: _ } = _,
+          { clanAccountID: _, clanInfo: _, strURL: _ } = _(_, _);
         return (0, _.jsxs)("div", {
           className: _().CreatorNameCtn,
           children: [
@@ -15497,30 +15297,26 @@
         });
       }
       function _(_) {
-        const {
-          clanAccountID: _,
-          clanInfo: __webpack_require__,
-          strURL: _,
-        } = _;
+        const { clanAccountID: _, clanInfo: _, strURL: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
               href: _,
               target: "_blank",
-              children: __webpack_require__?.group_name || _,
+              children: _?.group_name || _,
             }),
             (0, _.jsx)(_._, {
               className: _().HoverCtn,
               hoverProps: _,
               hoverContent: (0, _.jsx)(_._, {
-                clanInfo: __webpack_require__,
+                clanInfo: _,
               }),
               children: (0, _.jsx)(_._, {
                 href: _,
                 target: "_blank",
                 children: (0, _.jsx)("img", {
                   className: _().Avatar,
-                  src: __webpack_require__?.avatar_full_url,
+                  src: _?.avatar_full_url,
                 }),
               }),
             }),
@@ -15529,7 +15325,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__, _] = (0, _._)(),
+        const [_, _, _] = (0, _._)(),
           {
             rgScreenshots: _,
             refetch: _,
@@ -15537,7 +15333,7 @@
           } = (function (_) {
             const _ = (0, _._)("screenshots"),
               {
-                data: __webpack_require__,
+                data: _,
                 refetch: _,
                 isFetching: _,
               } = (0, _._)({
@@ -15555,7 +15351,7 @@
                 staleTime: 0,
               });
             return {
-              rgScreenshots: __webpack_require__,
+              rgScreenshots: _,
               refetch: _,
               isFetching: _,
             };
@@ -15563,14 +15359,11 @@
           { mutateAsync: _, isPending: _ } = (function () {
             const _ = (0, _._)("quickupdateajax");
             return (0, _._)({
-              mutationFn: async ({
-                nIndex: _,
-                mapAltText: __webpack_require__,
-              }) => {
-                if (null == _ || !__webpack_require__) return !1;
+              mutationFn: async ({ nIndex: _, mapAltText: _ }) => {
+                if (null == _ || !_) return !1;
                 const _ = new FormData();
                 _.append("sessionid", _._.SESSIONID);
-                for (const [_, _] of Object.entries(__webpack_require__))
+                for (const [_, _] of Object.entries(_))
                   _.append(`app[assets][screenshots][${_}][alt_text][${_}]`, _);
                 const _ = await fetch(_, {
                     method: "post",
@@ -15628,7 +15421,7 @@
                   }),
               }),
             (0, _.jsx)(_._, {
-              onClick: __webpack_require__,
+              onClick: _,
               children: (0, _._)("#StoreAdmin_EditAltText_Button"),
             }),
           ],
@@ -15637,11 +15430,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            nAppID: _,
-            rgAllCreatorHomeNames: __webpack_require__,
-            nPrimaryPartnerID: _,
-          } = _,
+        const { nAppID: _, rgAllCreatorHomeNames: _, nPrimaryPartnerID: _ } = _,
           _ = _(_),
           _ = (0, _.useMemo)(
             () =>
@@ -15659,7 +15448,7 @@
                     }),
                   )
                 : [],
-            [_, __webpack_require__],
+            [_, _],
           );
         return 0 == _.length
           ? null
@@ -15685,18 +15474,14 @@
       }
       function _(_) {
         const { pageLink: _ } = _,
-          {
-            clanAccountID: __webpack_require__,
-            clanInfo: _,
-            strURL: _,
-          } = _(_, "developer");
+          { clanAccountID: _, clanInfo: _, strURL: _ } = _(_, "developer");
         return (0, _.jsxs)("div", {
           className: _().CreatorNameCtn,
           children: [
             (0, _.jsx)(_, {
               pageLink: _,
-              clanAccountID: __webpack_require__,
-              clanName: _?.group_name || "" + __webpack_require__,
+              clanAccountID: _,
+              clanName: _?.group_name || "" + _,
             }),
             (0, _.jsx)("div", {
               className: _().CreatorCtn,
@@ -15706,7 +15491,7 @@
                   children: _.linkname,
                 }),
                 (0, _.jsx)(_, {
-                  clanAccountID: __webpack_require__,
+                  clanAccountID: _,
                   strURL: _,
                   clanInfo: _,
                 }),
@@ -15800,7 +15585,7 @@
           input: "#Accessibility_Group_Input",
         };
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(_.initialOpen ?? !1),
+        const [_, _] = (0, _.useState)(_.initialOpen ?? !1),
           _ = _.useId(),
           _ = Object.entries(_.features)
             .filter(([_, _]) => _)
@@ -16761,7 +16546,7 @@
       function _(_) {
         const {
             close: _,
-            features: __webpack_require__,
+            features: _,
             editMode: _,
             changedMode: _,
             isMultiplayer: _,
@@ -16783,12 +16568,12 @@
           })(
             _,
             _ ||
-              __webpack_require__.bAccessibilityChatSpeechtoText ||
-              __webpack_require__.bAccessibilityChatTexttoSpeech,
+              _.bAccessibilityChatSpeechtoText ||
+              _.bAccessibilityChatTexttoSpeech,
             _,
             _,
           ),
-          [_, _] = _.useState(__webpack_require__);
+          [_, _] = _.useState(_);
         let _ = () => _((_) => _ - 1);
         0 === _ && (_ = _);
         let _ = () => _((_) => _ + 1),
@@ -16868,8 +16653,8 @@
       }
       function _(_) {
         const { nPages: _ } = _,
-          { nPageIndex: __webpack_require__ } = _(),
-          _ = (100 * (__webpack_require__ + 1)) / (_ + 1);
+          { nPageIndex: _ } = _(),
+          _ = (100 * (_ + 1)) / (_ + 1);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("div", {
@@ -16881,10 +16666,10 @@
             (0, _.jsx)("div", {
               className: (0, _._)(
                 _.ProgressBar,
-                __webpack_require__ == _ - 1 && _.ProgressBarComplete,
+                _ == _ - 1 && _.ProgressBarComplete,
               ),
               children:
-                __webpack_require__ < _ - 1 &&
+                _ < _ - 1 &&
                 (0, _.jsx)("div", {
                   className: (0, _._)(_.ProgressBarFillComponent),
                   style: {
@@ -16896,8 +16681,8 @@
         });
       }
       function _(_) {
-        const { nPageIndex: _, bEditMode: __webpack_require__ } = _();
-        return __webpack_require__
+        const { nPageIndex: _, bEditMode: _ } = _();
+        return _
           ? null
           : (0, _.jsx)("div", {
               className: _.StepRow,
@@ -16914,7 +16699,7 @@
             });
       }
       function _(_) {
-        const { currentValues: _, fnSetValue: __webpack_require__ } = _();
+        const { currentValues: _, fnSetValue: _ } = _();
         return (0, _.jsx)(_._, {
           label: (0, _.jsxs)("div", {
             className: _.CheckboxComplexLabel,
@@ -16981,7 +16766,7 @@
       function _(_) {
         const {
             isMultiplayer: _,
-            bWizardCompleted: __webpack_require__,
+            bWizardCompleted: _,
             nLastVersionCompleted: _,
             ..._
           } = _,
@@ -17001,7 +16786,7 @@
                 nLastVersionCompleted: _,
               }),
             (0, _.jsx)(_, {
-              bWizardCompleted: __webpack_require__,
+              bWizardCompleted: _,
               nLastVersionCompleted: _,
               bHasAnyAccessibilityFeatures: _,
               setModalState: _,
@@ -17013,12 +16798,12 @@
       function _(_) {
         const {
           bHasAnyAccessibilityFeatures: _,
-          bWizardCompleted: __webpack_require__,
+          bWizardCompleted: _,
           nLastVersionCompleted: _,
           setModalState: _,
           features: _,
         } = _;
-        return _ || __webpack_require__
+        return _ || _
           ? (0, _.jsx)(_, {
               bHasAnyAccessibilityFeatures: _,
               onEdit: () => _(2),
@@ -17339,7 +17124,7 @@
       function _(_) {
         const {
             fnSetItemID: _,
-            strLabel: __webpack_require__,
+            strLabel: _,
             itemType: _,
             fnFilterID: _,
             className: _,
@@ -17446,7 +17231,7 @@
                   type: "text",
                   ref: _,
                   className: _.SearchInput,
-                  label: __webpack_require__,
+                  label: _,
                   tooltip: _,
                   placeholder: _,
                   onChange: _,
@@ -17528,14 +17313,8 @@
         });
       }
       function _(_) {
-        const {
-            name: _,
-            _: __webpack_require__,
-            type: _,
-            is_visible: _,
-            fnSetItemID: _,
-          } = _,
-          [_] = (0, _._)(__webpack_require__, _, {
+        const { name: _, _: _, type: _, is_visible: _, fnSetItemID: _ } = _,
+          [_] = (0, _._)(_, _, {
             include_assets: !0,
           });
         let _ = "#DailyDeals_HeaderArtMissing";
@@ -17566,7 +17345,7 @@
                     children: [(0, _._)("#Sale_FeaturingHidden"), " "],
                   }),
                 _,
-                1 == _ ? ` (${__webpack_require__})` : "",
+                1 == _ ? ` (${_})` : "",
               ],
             }),
           ],
@@ -17613,13 +17392,13 @@
         };
       const _ = _.createContext(void 0);
       function _(_) {
-        const { view: _, pmState: __webpack_require__, children: _ } = _,
+        const { view: _, pmState: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               view: _,
-              pmState: __webpack_require__,
+              pmState: _,
             }),
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -17627,24 +17406,19 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-          schema: _,
-          refOnUpdate: __webpack_require__,
-          bSingleLine: _,
-        } = _;
+        const { schema: _, refOnUpdate: _, bSingleLine: _ } = _;
         return (
           _(
             _.useMemo(
               () =>
-                __webpack_require__ &&
+                _ &&
                 new _._({
                   view: (_) => ({
                     update: (..._) =>
-                      __webpack_require__.current &&
-                      __webpack_require__.current(..._),
+                      _.current && __webpack_require__.current(..._),
                   }),
                 }),
-              [__webpack_require__],
+              [_],
             ),
           ),
           _(_.useMemo(() => (0, _._)(_ ? _ : {}), [_])),
@@ -17654,7 +17428,7 @@
             _.useMemo(
               () =>
                 (function (_) {
-                  const { nodes: _, marks: __webpack_require__ } = _,
+                  const { nodes: _, marks: _ } = _,
                     _ = (0, _._)(
                       _._,
                       (_, _) => (
@@ -17675,11 +17449,11 @@
                       Escape: _._,
                       "Mod-Enter": _,
                       "Shift-Enter": _,
-                      "Mod-b": (0, _._)(__webpack_require__.strong),
-                      "Mod-i": (0, _._)(__webpack_require__.italic),
-                      "Mod-u": (0, _._)(__webpack_require__.underline),
-                      "Mod-Shift-x": (0, _._)(__webpack_require__.strike),
-                      "Ctrl-Shift-s": (0, _._)(__webpack_require__.strike),
+                      "Mod-b": (0, _._)(_.strong),
+                      "Mod-i": (0, _._)(_.italic),
+                      "Mod-u": (0, _._)(_.underline),
+                      "Mod-Shift-x": (0, _._)(_.strike),
+                      "Ctrl-Shift-s": (0, _._)(_.strike),
                       Enter: (0, _._)(_.list_item),
                       "Mod-[": (0, _._)(_.list_item),
                       "Mod-]": (0, _._)(_.list_item),
@@ -17703,8 +17477,7 @@
                       "Ctrl-Shift-0": (0, _._)(_.paragraph),
                     };
                   return (
-                    __webpack_require__.code &&
-                      (_["Ctrl-Shift-c"] = (0, _._)(__webpack_require__.code)),
+                    _.code && (_["Ctrl-Shift-c"] = (0, _._)(_.code)),
                     _.code_block &&
                       (_["Alt-Ctrl-Shift-c"] = (0, _._)(_.code_block)),
                     _.horizontal_rule &&
@@ -17728,7 +17501,7 @@
             _.useMemo(
               () =>
                 (function (_) {
-                  const { nodes: _, marks: __webpack_require__ } = _;
+                  const { nodes: _, marks: _ } = _;
                   return (0, _._)({
                     rules: [
                       (0, _._)(
@@ -17741,13 +17514,10 @@
                           _.childCount + _.attrs.order == parseInt(_[1]),
                       ),
                       (0, _._)(/^\s*([-+*])\s$/, _.bullet_list),
-                      (0, _._)(
-                        /(?<!\w)\*([^*]+)\*/,
-                        __webpack_require__.strong,
-                      ),
-                      (0, _._)(/(?<!\w)_([^_]+)_/, __webpack_require__.italic),
-                      (0, _._)(/(?<!\w)~([^~]+)~/, __webpack_require__.strike),
-                      (0, _._)(/(?<!\w)`([^`]+)`/, __webpack_require__.code),
+                      (0, _._)(/(?<!\w)\*([^*]+)\*/, _.strong),
+                      (0, _._)(/(?<!\w)_([^_]+)_/, _.italic),
+                      (0, _._)(/(?<!\w)~([^~]+)~/, _.strike),
+                      (0, _._)(/(?<!\w)`([^`]+)`/, _.code),
                       (0, _._)(/^```$/, _.code_block),
                       (0, _._)(/^(#{1,5})\s$/, _.heading, (_) => ({
                         level: _[1].length,
@@ -17793,15 +17563,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const {
-          from: __webpack_require__,
-          $from: _,
-          _: _,
-          empty: _,
-        } = _.selection;
+        const { from: _, $from: _, _: _, empty: _ } = _.selection;
         return _
           ? !!_.isInSet(_.storedMarks || _.marks())
-          : _.doc.rangeHasMark(__webpack_require__, _, _);
+          : _.doc.rangeHasMark(_, _, _);
       }
       function _(_, _, _) {
         const { parent: _ } = _,
@@ -17874,12 +17639,9 @@
           );
         };
       }
-      function _(_, _, __webpack_require__ = {}) {
+      function _(_, _, _ = {}) {
         return new _._(_, (_, _, _, _) => {
-          const _ =
-              __webpack_require__ instanceof Function
-                ? __webpack_require__(_)
-                : __webpack_require__,
+          const _ = _ instanceof Function ? __webpack_require__(_) : _,
             _ = _._;
           if (_[1]) {
             const _ = _ + _[0].indexOf(_[1]),
@@ -17929,7 +17691,7 @@
       function _(_) {
         const {
             _: _,
-            hoverClassName: __webpack_require__,
+            hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
             children: _,
@@ -17960,7 +17722,7 @@
           );
         return (0, _.jsx)("div", {
           ref: _,
-          className: __webpack_require__,
+          className: _,
           onMouseEnter: _,
           onMouseLeave: _,
           onFocus: _,
@@ -17971,7 +17733,7 @@
       function _(_) {
         const {
             _: _,
-            strExtraParams: __webpack_require__,
+            strExtraParams: _,
             fnOnClickOverride: _,
             strOverrideURL: _,
           } = _,
@@ -17981,12 +17743,12 @@
             _ ||
               (_ && "creatorid" in _
                 ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )
                 : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )),
@@ -18065,7 +17827,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { rgAssetURL: _, rgLang: __webpack_require__, bIsImage: _ } = _,
+        const { rgAssetURL: _, rgLang: _, bIsImage: _ } = _,
           [_, _] = (0, _.useState)([]);
         if (
           ((0, _.useEffect)(() => {
@@ -18102,7 +17864,7 @@
                 }),
                 _.map((_) => ({
                   url: _[_],
-                  lang: __webpack_require__[_],
+                  lang: _[_],
                 })).map((_) =>
                   (0, _.jsx)(
                     _._,
@@ -18135,7 +17897,7 @@
       function _(_) {
         const {
             rgAssetLangs: _,
-            initialLang: __webpack_require__,
+            initialLang: _,
             fnGetAssetUrl: _,
             fnDeletAssetLang: _,
             imageClassname: _,
@@ -18144,9 +17906,7 @@
             bVerifyAssets: _,
             bVideoAsset: _,
           } = _,
-          [_, _] = _.useState(
-            __webpack_require__ ?? _._.Get().GetCurEditLanguage() ?? _[0],
-          ),
+          [_, _] = _.useState(_ ?? _._.Get().GetCurEditLanguage() ?? _[0]),
           [_, _] = _.useState(_(_)),
           _ = _.useMemo(() => [..._].sort(), [_]);
         _.useEffect(() => {
@@ -18213,7 +17973,7 @@
       function _(_) {
         const {
             language: _,
-            selectedLanguage: __webpack_require__,
+            selectedLanguage: _,
             setSelectedLanguage: _,
             deleteLanguage: _,
           } = _,
@@ -18229,7 +17989,7 @@
                   _.preventDefault(), _(_);
                 },
                 children:
-                  _ === __webpack_require__
+                  _ === _
                     ? (0, _.jsx)("span", {
                         className: _().LangSelected,
                         children: "" + _,
@@ -18251,7 +18011,7 @@
         );
       }
       function _(_) {
-        const { curAssetURL: _, imageClassname: __webpack_require__ } = _;
+        const { curAssetURL: _, imageClassname: _ } = _;
         if (!_)
           return (0, _.jsx)("div", {
             className: _().ArtNoArt,
@@ -18264,16 +18024,16 @@
             })
           : _._.includes(_)
             ? (0, _.jsx)(_, {
-                className: __webpack_require__ || _().ArtPreview,
+                className: _ || _().ArtPreview,
                 strTextURL: _,
               })
             : (0, _.jsx)("img", {
-                className: __webpack_require__ || _().ArtPreview,
+                className: _ || _().ArtPreview,
                 src: _,
               });
       }
       function _(_) {
-        const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
+        const { curAssetURL: _, imageClassname: _ } = _,
           _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
@@ -18281,7 +18041,7 @@
           }, [_]),
           (0, _.jsx)("video", {
             ref: _,
-            className: __webpack_require__ || _().ArtPreview,
+            className: _ || _().ArtPreview,
             autoPlay: !0,
             loop: !0,
             controls: !0,
@@ -18293,7 +18053,7 @@
         );
       }
       function _(_) {
-        const { strTextURL: _, className: __webpack_require__ } = _,
+        const { strTextURL: _, className: _ } = _,
           [_, _] = _.useState("");
         return (
           _.useEffect(() => {
@@ -18307,7 +18067,7 @@
               });
           }, [_]),
           (0, _.jsx)("textarea", {
-            className: __webpack_require__,
+            className: _,
             value: _,
             readOnly: !0,
             rows: 20,
@@ -18327,7 +18087,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bDone: _, name: __webpack_require__, tooltip: _ } = _;
+        const { bDone: _, name: _, tooltip: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().StatusLineItemCtn,
           children: [
@@ -18340,7 +18100,7 @@
             }),
             (0, _.jsx)(_._, {
               toolTipContent: _,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
@@ -18359,27 +18119,22 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          href: _,
-          children: __webpack_require__,
-          bAllowFocuseableAnchor: _,
-          ..._
-        } = _;
+        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
         return (0, _._)()
           ? (0, _.jsx)("div", {
               ..._,
-              children: __webpack_require__,
+              children: _,
             })
           : _
             ? (0, _.jsx)(_._, {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               })
             : (0, _.jsx)("a", {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               });
       }
       var _ = __webpack_require__("chunkid"),
@@ -18396,7 +18151,7 @@
       function _(_) {
         const {
             creatorID: _,
-            bShowTagline: __webpack_require__,
+            bShowTagline: _,
             bHideCreatorType: _,
             bSmallFormat: _,
             bHideFollowButton: _,
@@ -18480,7 +18235,7 @@
                                       className: _.CreatorNameName,
                                       children: _.GetName(),
                                     }),
-                                    Boolean(__webpack_require__) &&
+                                    Boolean(_) &&
                                       (0, _.jsx)("div", {
                                         className: (0, _._)(
                                           _.FlexColumnContainer,
@@ -18548,7 +18303,7 @@
         });
       }
       function _(_) {
-        const { clanInfo: _, bAddLinkToMemberList: __webpack_require__ } = _;
+        const { clanInfo: _, bAddLinkToMemberList: _ } = _;
         if (
           ((0, _._)(
             _ && _.clanAccountID,
@@ -18569,7 +18324,7 @@
             bSmallFormat: !0,
             bShowTagline: !0,
             bHideCreatorType: !0,
-            bAddLinkToMemberList: __webpack_require__,
+            bAddLinkToMemberList: _,
           }),
         });
       }
@@ -18601,7 +18356,7 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: __webpack_require__,
+            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -18632,7 +18387,7 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  __webpack_require__ && _().Muted,
+                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -18683,20 +18438,16 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__?.name
+          { data: _ } = (0, _._)(_);
+        return _?.name
           ? (0, _.jsx)("div", {
               className: _().CapsuleName,
-              children: __webpack_require__.name,
+              children: _.name,
             })
           : null;
       }
       function _(_) {
-        const {
-            creatorAccountID: _,
-            bShowAsMuted: __webpack_require__,
-            strClassName: _,
-          } = _,
+        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -18745,11 +18496,7 @@
           })(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().BottomCreatorRow,
-            __webpack_require__ && _().Muted,
-            _,
-          ),
+          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -18788,7 +18535,7 @@
       function _(_) {
         const {
             capsule: _,
-            bShowParentApp: __webpack_require__,
+            bShowParentApp: _,
             elElementToAppendToHover: _,
             index: _,
             navKey: _,
@@ -18800,9 +18547,7 @@
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          _ = (0, _._)(
-            __webpack_require__ ? _?.related_items?.parent_appid : void 0,
-          ),
+          _ = (0, _._)(_ ? _?.related_items?.parent_appid : void 0),
           { data: _ } = (0, _._)(_);
         if (!_ || !_) return null;
         const _ = !!_ && !!_,
@@ -18869,14 +18614,14 @@
       function _(_) {
         const {
             strExtraParams: _,
-            parentID: __webpack_require__,
+            parentID: _,
             parentStoreItemDefaultInfo: _,
             childAppType: _,
             bPreferDemoStorePage: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          { data: _ } = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               className: _().CapsuleParentInfo,
@@ -18893,7 +18638,7 @@
                     ),
                   }),
                   (0, _.jsx)(_._, {
-                    _: __webpack_require__,
+                    _: _,
                     strExtraParams: _,
                     children: (0, _.jsx)("img", {
                       loading: "lazy",
@@ -18912,7 +18657,7 @@
       function _(_) {
         const {
             _: _,
-            bHideStatusBanners: __webpack_require__,
+            bHideStatusBanners: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -18954,7 +18699,7 @@
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
-                      hide_status_banners: __webpack_require__,
+                      hide_status_banners: _,
                       show_early_access: _.bShowEarlyAccessBanner,
                     }),
                     "none" != _ &&
@@ -18988,11 +18733,7 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            strDoubleCapsuleMessage: __webpack_require__,
-            index: _,
-          } = _,
+        const { _: _, strDoubleCapsuleMessage: _, index: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return (0, _.jsxs)("div", {
@@ -19000,7 +18741,7 @@
           children: [
             (0, _.jsx)("div", {
               className: _().Reason,
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)("div", {
               className: _().StoreSaleItemRelease,
@@ -19019,7 +18760,7 @@
       function _(_) {
         const {
             _: _,
-            bHidePriceIfOwned: __webpack_require__,
+            bHidePriceIfOwned: _,
             bHideStatusBanners: _,
             bUseSubscriptionLayout: _,
             elElementToAppendToHover: _,
@@ -19039,7 +18780,7 @@
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && __webpack_require__),
+        const _ = Boolean(_ && _),
           _ = Boolean(_);
         return (0, _.jsx)(_, {
           _: _,
@@ -19079,7 +18820,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+        const { appid: _, className: _, bTextMode: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -19088,11 +18829,11 @@
           bIsFree: Boolean(_?.is_free),
           bIsComingSoon: Boolean(_?.is_coming_soon),
           bTextMode: _,
-          className: __webpack_require__,
+          className: _,
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)(),
           {
             appid: _,
@@ -19146,7 +18887,7 @@
         );
       }
       function _(_) {
-        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+        const { possibleDemoAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
@@ -19154,12 +18895,12 @@
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,
-                className: __webpack_require__,
+                className: _,
               })
           : null;
       }
       function _(_) {
-        const { parentAppID: _, className: __webpack_require__ } = _,
+        const { parentAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -19168,7 +18909,7 @@
               appid: _,
               bIsComingSoon: Boolean(_.is_coming_soon),
               bIsFree: Boolean(_.is_free),
-              className: __webpack_require__,
+              className: _,
             })
           : null;
       }
@@ -19187,7 +18928,7 @@
       function _(_) {
         const {
             accountID: _,
-            bHideWhenNotAvailable: __webpack_require__,
+            bHideWhenNotAvailable: _,
             bHideName: _,
             bLink: _ = !0,
           } = _,
@@ -19200,7 +18941,7 @@
           children: Boolean(!_)
             ? (0, _.jsx)(_.Fragment, {
                 children:
-                  Boolean(!__webpack_require__) &&
+                  Boolean(!_) &&
                   (0, _.jsx)("span", {
                     children: _,
                   }),
@@ -19248,16 +18989,16 @@
       function _(_) {
         const {
             children: _,
-            ProcessFileUpload: __webpack_require__,
+            ProcessFileUpload: _,
             FetchImageURL: _,
             bAllowImageHotLinking: _ = !1,
           } = _,
           [_] = _.useState(() => ({
-            manager: new _(__webpack_require__, _, _),
+            manager: new _(_, _, _),
           })),
           { manager: _ } = _;
         return (
-          _.SetProps(__webpack_require__, _, _),
+          _.SetProps(_, _, _),
           (0, _.jsxs)(_.Provider, {
             value: _,
             children: [
@@ -19504,10 +19245,10 @@
         }
       }
       function _(_) {
-        const { element: _, data: __webpack_require__ } = _,
-          _ = "file" in __webpack_require__ ? __webpack_require__.file : void 0,
+        const { element: _, data: _ } = _,
+          _ = "file" in _ ? _.file : void 0,
           _ = _.useMemo(() => _ && URL.createObjectURL(_), [_]),
-          _ = "url" in __webpack_require__ ? __webpack_require__.url : _,
+          _ = "url" in _ ? _.url : _,
           _ = _?.type.startsWith("video/");
         return _.createPortal(
           (0, _.jsxs)("span", {
@@ -19651,13 +19392,13 @@
           );
         }
         async ProcessDataURL(_, _) {
-          const [__webpack_require__, _] = _.split(","),
+          const [_, _] = _.split(","),
             _ = __webpack_require__.match(
               /^data:(?<mimetype>[^;]*);(?<encoding>.*)$/,
             );
           if (!_ || "base64" != _.groups.encoding)
             return void this.AddError(
-              `Unable to data URL, unexpected format: ${__webpack_require__}`,
+              `Unable to data URL, unexpected format: ${_}`,
             );
           const _ = _?.groups.mimetype,
             _ = (function (_) {
@@ -19751,7 +19492,7 @@
           : null;
       });
       function _(_) {
-        const { manager: _, children: __webpack_require__ } = _,
+        const { manager: _, children: _ } = _,
           _ = _.useCallback(
             (_, _) => {
               for (const _ of _)
@@ -19760,9 +19501,9 @@
             [_],
           ),
           [_, _] = (0, _._)(_);
-        return _.cloneElement(__webpack_require__, {
+        return _.cloneElement(_, {
           ..._,
-          ...__webpack_require__.props,
+          ..._.props,
         });
       }
     },
@@ -19794,19 +19535,15 @@
         _ = __webpack_require__("chunkid");
       const _ = () => _.useContext(_);
       function _(_) {
-        const {
-            view: _,
-            refUpdateToolbar: __webpack_require__,
-            children: _,
-          } = _,
+        const { view: _, refUpdateToolbar: _, children: _ } = _,
           _ = _.useRef(void 0);
         _.current || (_.current = new _._()),
           _.useEffect(
             () => (
-              (0, _._)(__webpack_require__, () => _.current.Dispatch(_)),
-              () => (0, _._)(__webpack_require__, void 0)
+              (0, _._)(_, () => _.current.Dispatch(_)),
+              () => (0, _._)(_, void 0)
             ),
-            [_, __webpack_require__],
+            [_, _],
           );
         const _ = _.useMemo(
           () => ({
@@ -19844,23 +19581,12 @@
         });
       }
       function _(_) {
-        const {
-            nodeType: _,
-            attrs: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { nodeType: _, attrs: _, children: _, ..._ } = _,
           { callbacks: _, view: _ } = _(),
-          [_, _] = _.useState(() => (0, _._)(_.state, _, __webpack_require__)),
-          _ = _.useCallback(
-            (_) => _((0, _._)(_.state, _, __webpack_require__)),
-            [_, __webpack_require__],
-          );
+          [_, _] = _.useState(() => (0, _._)(_.state, _, _)),
+          _ = _.useCallback((_) => _((0, _._)(_.state, _, _)), [_, _]);
         (0, _._)(_, _);
-        const _ = _.useMemo(
-          () => _._(_, __webpack_require__),
-          [__webpack_require__, _],
-        );
+        const _ = _.useMemo(() => _._(_, _), [_, _]);
         return (0, _.jsx)(_, {
           ..._,
           command: _,
@@ -19869,7 +19595,7 @@
         });
       }
       function _(_) {
-        const { mark: _, children: __webpack_require__, ..._ } = _,
+        const { mark: _, children: _, ..._ } = _,
           { callbacks: _, view: _ } = _(),
           [_, _] = _.useState(() => (0, _._)(_.state, _)),
           _ = _.useCallback((_) => _((0, _._)(_.state, _)), [_]);
@@ -19879,16 +19605,11 @@
           ..._,
           command: _,
           toggled: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const {
-            command: _,
-            toggled: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { command: _, toggled: _, children: _, ..._ } = _,
           { view: _, callbacks: _ } = _(),
           [_, _] = _.useState(() => _(_.state));
         (0, _._)(
@@ -19896,14 +19617,11 @@
           _.useCallback((_) => _(_(_.state)), [_]),
         ),
           _.useEffect(() => _(_(_.state)), [_, _]);
-        const _ = !_ && !__webpack_require__;
+        const _ = !_ && !_;
         return (0, _.jsx)(_, {
           ..._,
           children: (0, _.jsx)(_._, {
-            className: (0, _._)(
-              _.CommandButton,
-              __webpack_require__ && _.Toggled,
-            ),
+            className: (0, _._)(_.CommandButton, _ && _.Toggled),
             onMouseDown: (_) => {
               _.preventDefault(), _(_.state, _.dispatch, _);
             },
@@ -19916,7 +19634,7 @@
       function _(_) {
         const {
           onClick: _,
-          toggled: __webpack_require__,
+          toggled: _,
           disabled: _,
           children: _,
           className: _,
@@ -19925,11 +19643,7 @@
         return (0, _.jsx)(_, {
           ..._,
           children: (0, _.jsx)(_._, {
-            className: (0, _._)(
-              _.CommandButton,
-              __webpack_require__ && _.Toggled,
-              _,
-            ),
+            className: (0, _._)(_.CommandButton, _ && _.Toggled, _),
             onMouseDown: (_) => {
               0 === _.button && (_.preventDefault(), _(_));
             },
@@ -19939,16 +19653,12 @@
         });
       }
       function _(_) {
-        const {
-          tooltip: _,
-          keyboardShortcut: __webpack_require__,
-          children: _,
-        } = _;
+        const { tooltip: _, keyboardShortcut: _, children: _ } = _;
         if (!_) return _;
-        const _ = __webpack_require__
+        const _ = _
           ? (0, _.jsx)(_, {
               tooltip: _,
-              keyboardShortcut: __webpack_require__,
+              keyboardShortcut: _,
             })
           : _;
         return (0, _.jsx)(_._, {
@@ -19958,7 +19668,7 @@
         });
       }
       function _(_) {
-        const { tooltip: _, keyboardShortcut: __webpack_require__ } = _;
+        const { tooltip: _, keyboardShortcut: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.TooltipWithShortcut,
           children: [
@@ -19967,7 +19677,7 @@
             }),
             (0, _.jsx)("div", {
               children: (0, _.jsx)(_, {
-                keyboardShortcut: __webpack_require__,
+                keyboardShortcut: _,
               }),
             }),
           ],
@@ -20046,7 +19756,7 @@
       function _(_) {
         const {
             items: _,
-            render: __webpack_require__,
+            render: _,
             onDelete: _,
             onEdit: _,
             onReorder: _,
@@ -20307,22 +20017,22 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = (0, _._)(),
           _ = _.useMemo(
             () => ({
               ..._._.GetDefaultParams(),
               ..._,
-              ...__webpack_require__,
+              ..._,
             }),
             [
               _,
-              __webpack_require__.domain,
-              __webpack_require__.controller,
-              __webpack_require__.method,
-              __webpack_require__.submethod,
-              __webpack_require__.feature,
-              __webpack_require__.depth,
+              _.domain,
+              _.controller,
+              _.method,
+              _.submethod,
+              _.feature,
+              _.depth,
             ],
           );
         return (0, _.jsx)(_._, {

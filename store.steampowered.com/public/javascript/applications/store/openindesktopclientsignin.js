@@ -29,18 +29,21 @@
     },
     28491: (e, n, t) => {
       "use strict";
-      t.d(n, { Y: () => a });
+      t.d(n, { Y: () => l });
       var i = t(7850),
         s = t(20187),
         o = t(41324),
-        r = t(50122);
-      function a(e) {
-        const { underline: n = "auto", ...t } = e;
-        return (0, i.jsx)("a", {
-          ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, c),
+        r = t(50122),
+        a = t(8527),
+        c = t(45699);
+      function l(e) {
+        const { underline: n = "auto", ...t } = e,
+          s = a.TS.IN_GAMEPADUI ? c.Ii : "a";
+        return (0, i.jsx)(s, {
+          ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, d),
         });
       }
-      const c = [
+      const d = [
         ...s.Ae,
         { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];
@@ -82,7 +85,7 @@
     62151: (e, n, t) => {
       "use strict";
       t.d(n, { F5: () => o });
-      var i = t(42475);
+      var i = t(48891);
       const s = {};
       (s.arabic = () => t.e(3695).then(t.t.bind(t, 93695, 19))),
         (s.brazilian = () => t.e(1091).then(t.t.bind(t, 41091, 19))),
@@ -114,46 +117,6 @@
         (s.turkish = () => t.e(4921).then(t.t.bind(t, 94921, 19))),
         (s.ukrainian = () => t.e(1667).then(t.t.bind(t, 11667, 19))),
         (s.vietnamese = () => t.e(4528).then(t.t.bind(t, 74528, 19)));
-      const o = (0, i.l)(async function (e) {
-        if (s[e]) return s[e]();
-      });
-    },
-    55672: (e, n, t) => {
-      "use strict";
-      t.d(n, { Z: () => o });
-      var i = t(42475);
-      const s = {};
-      (s.arabic = () => t.e(3710).then(t.t.bind(t, 8476, 19))),
-        (s.brazilian = () => t.e(6562).then(t.t.bind(t, 99574, 19))),
-        (s.bulgarian = () => t.e(1449).then(t.t.bind(t, 43789, 19))),
-        (s.czech = () => t.e(7591).then(t.t.bind(t, 815, 19))),
-        (s.danish = () => t.e(6523).then(t.t.bind(t, 4289, 19))),
-        (s.dutch = () => t.e(5110).then(t.t.bind(t, 54978, 19))),
-        (s.english = () => t.e(2256).then(t.t.bind(t, 33800, 19))),
-        (s.finnish = () => t.e(6031).then(t.t.bind(t, 3907, 19))),
-        (s.french = () => t.e(5018).then(t.t.bind(t, 45040, 19))),
-        (s.german = () => t.e(6208).then(t.t.bind(t, 94750, 19))),
-        (s.greek = () => t.e(9712).then(t.t.bind(t, 69668, 19))),
-        (s.hungarian = () => t.e(6165).then(t.t.bind(t, 45233, 19))),
-        (s.indonesian = () => t.e(8306).then(t.t.bind(t, 90200, 19))),
-        (s.italian = () => t.e(1531).then(t.t.bind(t, 31864, 19))),
-        (s.japanese = () => t.e(1973).then(t.t.bind(t, 7263, 19))),
-        (s.koreana = () => t.e(7539).then(t.t.bind(t, 30295, 19))),
-        (s.latam = () => t.e(2435).then(t.t.bind(t, 50559, 19))),
-        (s.norwegian = () => t.e(2320).then(t.t.bind(t, 86512, 19))),
-        (s.polish = () => t.e(8967).then(t.t.bind(t, 52889, 19))),
-        (s.portuguese = () => t.e(6239).then(t.t.bind(t, 72269, 19))),
-        (s.romanian = () => t.e(2749).then(t.t.bind(t, 34419, 19))),
-        (s.russian = () => t.e(8025).then(t.t.bind(t, 75777, 19))),
-        (s.sc_schinese = () => t.e(9027).then(t.t.bind(t, 23723, 19))),
-        (s.schinese = () => t.e(7786).then(t.t.bind(t, 85436, 19))),
-        (s.spanish = () => t.e(2632).then(t.t.bind(t, 76736, 19))),
-        (s.swedish = () => t.e(1225).then(t.t.bind(t, 94625, 19))),
-        (s.tchinese = () => t.e(5241).then(t.t.bind(t, 15191, 19))),
-        (s.thai = () => t.e(8595).then(t.t.bind(t, 4230, 19))),
-        (s.turkish = () => t.e(9152).then(t.t.bind(t, 34792, 19))),
-        (s.ukrainian = () => t.e(2954).then(t.t.bind(t, 27246, 19))),
-        (s.vietnamese = () => t.e(6149).then(t.t.bind(t, 59863, 19)));
       const o = (0, i.l)(async function (e) {
         if (s[e]) return s[e]();
       });
@@ -518,10 +481,10 @@
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => f, default: () => I });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => O, default: () => w });
       var i = t(7850),
         s = t(53965),
-        o = t(53971),
+        o = t(83392),
         r = t(20187),
         a = t(28491),
         c = t(62151),
@@ -531,71 +494,76 @@
         u = t(51706),
         p = t(71009),
         m = t(32754),
-        b = t(61859),
-        _ = t(84933),
-        C = t(30470),
+        _ = t(61859),
+        C = t(84933),
+        b = t(30470),
         g = t(11131),
-        S = t.n(g);
-      const f = (0, h.Nr)(function (e) {
+        S = t.n(g),
+        f = t(90626),
+        I = t(92724);
+      const O = (0, h.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
             p.useOpenWebInSteamClient)(),
             h = 1 == t,
-            [g, f, I] = (0, _.uD)();
-          return (0, i.jsxs)(i.Fragment, {
-            children: [
-              (0, i.jsx)(m.Gq, {
-                toolTipContent: d.Z.Localize("#AddToWishlist_ttip"),
-                children: (0, i.jsx)(s.$, {
-                  onClick: f,
-                  children: (0, b.we)("#AddToYourWishlist"),
+            [g, O, w] = (0, C.uD)();
+          return (
+            (0, f.use)((0, I.u)()),
+            (0, i.jsxs)(i.Fragment, {
+              children: [
+                (0, i.jsx)(m.Gq, {
+                  toolTipContent: d.Z.Localize("#AddToWishlist_ttip"),
+                  children: (0, i.jsx)(s.$, {
+                    onClick: O,
+                    children: (0, _.we)("#AddToYourWishlist"),
+                  }),
                 }),
-              }),
-              (0, i.jsx)(u.EN, {
-                active: g,
-                children: (0, i.jsxs)(u.o0, {
-                  strTitle: (0, b.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                  className: S().WishlistModalOverride,
-                  strDescription: c.F5.Localize("#Wishlist_NotSignedIn"),
-                  closeModal: I,
-                  bAlertDialog: !0,
-                  children: [
-                    (0, i.jsxs)(o.s, {
-                      direction: "row",
-                      gap: "4",
-                      paddingTop: "4",
-                      paddingBottom: "4",
-                      children: [
-                        (0, i.jsx)(s.$, {
-                          onClick: n,
-                          children: (0, b.we)(
-                            "#OpenInDesktopAppBanner_OpenAppButton",
-                          ),
-                        }),
-                        (0, i.jsx)(s.$, {
-                          color: "dull",
-                          onClick: l.l,
-                          children: d.Z.Localize("#Login_SignIn"),
-                        }),
-                      ],
-                    }),
-                    !h &&
-                      (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(r.EY, {
-                          children: (0, b.oW)(
-                            "#GotSteam_NeedSteam",
-                            (0, i.jsx)(a.Y, {
-                              href: `${C.TS.STORE_BASE_URL}about`,
-                            }),
-                          ),
-                        }),
+                (0, i.jsx)(u.EN, {
+                  active: g,
+                  children: (0, i.jsxs)(u.o0, {
+                    strTitle: (0, _.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    className: S().WishlistModalOverride,
+                    strDescription: c.F5.Localize("#Wishlist_NotSignedIn"),
+                    closeModal: w,
+                    bAlertDialog: !0,
+                    children: [
+                      (0, i.jsxs)(o.s, {
+                        direction: "row",
+                        gap: "4",
+                        paddingTop: "4",
+                        paddingBottom: "4",
+                        children: [
+                          (0, i.jsx)(s.$, {
+                            onClick: n,
+                            children: (0, _.we)(
+                              "#OpenInDesktopAppBanner_OpenAppButton",
+                            ),
+                          }),
+                          (0, i.jsx)(s.$, {
+                            color: "dull",
+                            onClick: l.l,
+                            children: d.Z.Localize("#Login_SignIn"),
+                          }),
+                        ],
                       }),
-                  ],
+                      !h &&
+                        (0, i.jsx)(i.Fragment, {
+                          children: (0, i.jsx)(r.EY, {
+                            children: (0, _.oW)(
+                              "#GotSteam_NeedSteam",
+                              (0, i.jsx)(a.Y, {
+                                href: `${b.TS.STORE_BASE_URL}about`,
+                              }),
+                            ),
+                          }),
+                        }),
+                    ],
+                  }),
                 }),
-              }),
-            ],
-          });
+              ],
+            })
+          );
         }),
-        I = f;
+        w = O;
     },
   },
 ]);

@@ -222,6 +222,18 @@
         pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
         innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
         DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
+        BackgroundAnimation: "_25VCY5c_WxOmDf5rM9ytzl",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3Wd6R5ArXmgfz1dMwANtD7",
+        "ItemFocusAnim-darkerGrey": "_2mepLvzcUGS8PS7_cO5A4C",
+        "ItemFocusAnim-darkGreySettings": "KiXqOP4sNGGqLzPFjAa3D",
+        "ItemFocusAnim-darkGrey": "_3NRkgxBrOQc_fQX1HvTkk3",
+        "ItemFocusAnim-grey": "SAxIC6YdDjzPzIqw_aS4s",
+        "ItemFocusAnim-translucent-white-10": "_-1Vlo_3w2uf9fF1-AU1F4",
+        "ItemFocusAnim-translucent-white-20": "_7B6-9HPzoer1QOmgjEAWS",
+        "ItemFocusAnimBorder-darkGrey": "GRKCpstf6SP8ly-oMKYX3",
+        "ItemFocusAnim-green": "_2cBvKmN3c2ILRdjHTpBZUQ",
+        focusAnimation: "_3eJJYrpdNOdlU26_C9wlMp",
+        hoverAnimation: "BiWwdgbiMRC3pAc-R3rqS",
       };
     },
     chunkid: (module) => {
@@ -246,6 +258,18 @@
         ForceDesktop: "_3qIuY9S_vXm3IQS-uE9SRS",
         PopoutSubMenu: "Baq37ml_4RsqEDikF0aIo",
         PopoutSubMenuItems: "_2fZ_eG4hoUgJoNBzVAW8wq",
+        BackgroundAnimation: "_3mu2U32Y_2WuSVGodurd6a",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1oGSmxXXFpN5G7Jn9ZvEQS",
+        "ItemFocusAnim-darkerGrey": "_3lg1LMj3mXezJ7ascb4yGV",
+        "ItemFocusAnim-darkGreySettings": "_1uSUbmC-8W1-FADNfUsSBP",
+        "ItemFocusAnim-darkGrey": "_2wO0UJLCBVNzypL_1QtVVs",
+        "ItemFocusAnim-grey": "_7GGFchhgqc71nZ8eL_lya",
+        "ItemFocusAnim-translucent-white-10": "_3ZLBhyvDidB4Rfz45C_SYe",
+        "ItemFocusAnim-translucent-white-20": "_3tuAQj0tTIvILlQs8SVJ6O",
+        "ItemFocusAnimBorder-darkGrey": "_2ndsTZA8rKNYYxX6q4X62O",
+        "ItemFocusAnim-green": "_3dGZBujqGTb6MvSpwfXt-u",
+        focusAnimation: "_1eQxz4PDgw0-4zeOxZc9zb",
+        hoverAnimation: "uLTwa30_-yxoQKi5qqCAw",
       };
     },
     chunkid: (module) => {
@@ -277,16 +301,19 @@
         NoMinWidth: "R7OZbuJa9H3NPk-5gy3Is",
         ActiveAndUnfocused: "_28cXJKe4jqDnSsP9HO7yYm",
         StandaloneFieldSeparator: "_1vcky98a3hG0ulFCdee4kd",
+        InlineWrapShiftsChildrenBelow: "_3LCXhoVmpvqbOW8fsItdTl",
+        Background: "_2CCdODv0vfzOMrEBUzZwfI",
+        Classic: "_2QgNsvFPYTZ5yRiTm7mUyu",
         StandardPadding: "xIITXDcM70faUNqssgUyx",
         CompactPadding: "_3hgIZByMuZIEiFspMRGFBw",
-        WithDescription: "_3tB2lyT2Pfvfv-jyuVgUOg",
         WithBottomSeparatorStandard: "GxgIyq8R5xTOeu4ftGrgX",
         WithBottomSeparatorThick: "_39x36zDuDr8Z0Z_UnJkY4S",
         HighlightOnFocus: "_2HFrmMgB38Ike5w4rVxzEX",
+        "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
+        "ItemFocusAnim-darkGreySettings": "_2wp31uHPEwPmxifWYeIBl7",
         Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
         Disabled: "aIeh3X5T2M074RLW1qn6_",
         WithBottomSeparator: "_3YKpU6T7dSIjGegCiQgg3h",
-        "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
         "ItemFocusAnim-darkGrey": "_2NVMbdV4wBIACWgwBU2kyz",
         FieldChildrenWithIcon: "_1aw7cA3mAZfWt8idAlVJWi",
         FieldChildrenInner: "_2o2fXzn99OddeqZMjbDuxQ",
@@ -294,14 +321,14 @@
         FieldIcon: "_2DM37juowId1V_DScp3l4",
         Front: "_2sj0iYB2llhya3q15q0xiX",
         BeforeChildren: "_1mbHaypn3SksXyYjPLVuX1",
+        FieldLeftColumn: "_2tALpM7z8naXJ35Pp5fNAG",
+        WithChildrenBelow: "_37xzVt6arvEzyNdW5GxK8f",
+        ChildrenWidthGrow: "Jgod1QRim6eNfvia2_3Ac",
+        FieldRightColumn: "PSZtxj2h3MlyYv-c9dgke",
         FieldLabelRow: "_2VcTlXFC64Jtg9gvtT6cmY",
         VerticalAlignCenter: "_16vVnDqpbNs-zIH-EdV6Vz",
-        InlineWrapShiftsChildrenBelow: "_3LCXhoVmpvqbOW8fsItdTl",
         ExtraPaddingOnChildrenBelow: "_3nLNLFMUMSt4jvxIayuPV3",
         ChildrenWidthFixed: "ljcbLhG2-njpG2eCdWOyu",
-        ChildrenWidthGrow: "Jgod1QRim6eNfvia2_3Ac",
-        WithFirstRow: "_2bDqk4Jeoyk1wZd7ttBNAR",
-        WithChildrenBelow: "_37xzVt6arvEzyNdW5GxK8f",
         FieldLabel: "_3jMlJm4PQCA8SfNlUR99Fo",
         FieldLabelValue: "KGS2r2ext4jvDYa-MAFLD",
         FieldDescription: "_1W1to_azoBRG95oNAFpf9Q",
@@ -351,6 +378,18 @@
       module.exports = {
         "duration-app-launch": "800ms",
         DropDownControlButton: "v8oJcDOQF6xmlVTw4VhOr",
+        BackgroundAnimation: "_39ftBgrwHL79vzBWzTUNIg",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1uRxKXzp4hyFG853DRpRmG",
+        "ItemFocusAnim-darkerGrey": "gmgYjyVXiyoE4dXuiyvRe",
+        "ItemFocusAnim-darkGreySettings": "BHeZLoGSQeMbyP_u3BOyv",
+        "ItemFocusAnim-darkGrey": "_wAkIFq95RDIO0BaFscJ-",
+        "ItemFocusAnim-grey": "_2EU0bFj-iDnGzS3y22Pm1n",
+        "ItemFocusAnim-translucent-white-10": "zCo-rS_8G4PFjVNj2HddR",
+        "ItemFocusAnim-translucent-white-20": "_3dLS4qNfRaL3VlHxF0assn",
+        "ItemFocusAnimBorder-darkGrey": "_2qWT6FmefGsz6vW4GyAN1d",
+        "ItemFocusAnim-green": "VJdx426NYwPhzacwDjqUy",
+        focusAnimation: "_1VSndovYnDm2jbIx6FU3Nq",
+        hoverAnimation: "_2tJDT6WmelyKdUlLq2gtna",
       };
     },
     chunkid: (module) => {
@@ -374,10 +413,9 @@
         PagedSettingsDialog_PageList_ShowTitle: "_3UfINfoarLdX2Cbx22cWNf",
         PageSettingsDialog_PageList_NoHeaderPadding: "_2EiZ3BiLOqNY5BfgsBnUda",
         PagedSettingsDialog_PageListItem: "_2mL2HfT5AkDXRi1YBnRWKa",
-        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
+        ScaledChildren: "_3oALQTKb_fq_yVJAuTkwdb",
         Active: "_1ELdDY5kb5jxjXe-FpWBo5",
-        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
-        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
+        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
         PageListItem_Icon: "_3f2IOwoVFEcJNNmmRXIMK8",
         PageListItem_Title: "_4niDTAfIpKQoRx-CR_3K",
         Separator: "_3sUwukdeKdKRTojXu4I3ga",
@@ -391,6 +429,9 @@
         Down: "_1C1JjI4inJUtodtSWKAPoE",
         BackgroundAnimation: "_5VEJ9ppWFMtmQZUIl5QGM",
         "ItemFocusAnim-darkerGrey-nocolor": "gmWXVs6ySMfR95uy-dzLj",
+        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
+        "ItemFocusAnim-darkGreySettings": "BvE4zAUWrioZv0MShImce",
+        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
         "ItemFocusAnim-grey": "_2_WUbDOZ71hKkEf-CD41hr",
         "ItemFocusAnim-translucent-white-10": "_3JK1VosnPSCLdf_lSz1exG",
         "ItemFocusAnim-translucent-white-20": "_2PDwQBU5MzHQ75ycEVpwK3",
@@ -441,6 +482,7 @@
         ErrorShake: "_1Fa-zp9wEmgbJm3YkQA2pN",
         "error-shake": "_1LFdeSuH6SCeGkW45tXeoo",
         CompoundSlider: "_2hwF2eVaZdtuE6Wjt9abSp",
+        CompoundSliderContainer: "_2wBZ7aE2Em8DBhLh0Pr8EX",
         CompoundSliderSubSlider: "uOFmzX5QDJ7-4tKNOFuqN",
         Right: "_3GOpBMvB0XixIzfe8Xz0AB",
         CompoundSliderSubSliderLabelContainer: "_2iD1mdJ-bbl3eteXK1vrpf",
@@ -452,12 +494,15 @@
         BackgroundAnimation: "_34goutNBSou3YR_kTuPeXo",
         "ItemFocusAnim-darkerGrey-nocolor": "_3uBtlQHaoF-Fdvf-44fdfj",
         "ItemFocusAnim-darkerGrey": "_1so9RRpNCSzFaLUuFaAoTQ",
+        "ItemFocusAnim-darkGreySettings": "_3xDgicGGM7zf4FDtrZTsrg",
         "ItemFocusAnim-darkGrey": "_3rHHM0QPQeBnxSX9SsyTAv",
         "ItemFocusAnim-grey": "_3bS2YJzXbd_HJcslwwJonb",
         "ItemFocusAnim-translucent-white-10": "_1eyjVbw17bPbJY8cd6MyX2",
         "ItemFocusAnim-translucent-white-20": "_1iqNj4v83-vYdxWouoYIbw",
         "ItemFocusAnimBorder-darkGrey": "_2Pzyj6rGS2MYa48LGSbRdv",
         "ItemFocusAnim-green": "_2C-5CyKHqs57xJb0nU1LnG",
+        focusAnimation: "_3aA7B5vDTJc5xq6IfXhQ2H",
+        hoverAnimation: "_12ndx-pa_lUGfXXWOFQVSY",
       };
     },
     chunkid: (module) => {
@@ -486,15 +531,27 @@
         Transparent: "_1ahzMoQaAT-POqYjqcQSCt",
         HidePageListButton: "_3LLH_F43MTu6UtG4Z3kudv",
         ReturnToPageListButton: "_1cWmu5TUWFAVHlv1EVaF8e",
+        BackgroundAnimation: "_31dp93HtW4YaAIrv5kQNht",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34v5-JW2L6fQ4YmSbk9AaR",
+        "ItemFocusAnim-darkerGrey": "_2hiPwZ5sHjd1palQvy9OrL",
+        "ItemFocusAnim-darkGreySettings": "_1Er_w8LQhe6MyIC6NfUM3V",
+        "ItemFocusAnim-darkGrey": "_8LuF4KlRbCw_drO7e2TC7",
+        "ItemFocusAnim-grey": "_2xSXLf_M9pyhcs0Up0YB3t",
+        "ItemFocusAnim-translucent-white-10": "_3XpUY5O65d5iC8QOTibOTo",
+        "ItemFocusAnim-translucent-white-20": "TtpwXKTKHcg8dU-yHafz8",
+        "ItemFocusAnimBorder-darkGrey": "_1XsIqwGv6cpC9wDe_vUw01",
+        "ItemFocusAnim-green": "Sv4pIC9tV5_-yNVWid_iZ",
+        focusAnimation: "W2aVTuNiYbD-L-tBboMKB",
+        hoverAnimation: "_2L5cxouAMAylE7_T3HQoRf",
       };
     },
     chunkid: (module) => {
       module.exports = {
         Group: "_1ml4SNc3LIyBDHIf8ekVSw",
         CenteredPill: "L2J24Sa_dQql2exoKoBMi",
+        Active: "_3-_jME_xsuvgT3Dvq4bw_q",
         Button: "HijmccPB1BKyhOwhX1EVl",
         Disabled: "_3hmGW9wIxNIoPPu1aS7rFm",
-        Active: "_3-_jME_xsuvgT3Dvq4bw_q",
       };
     },
     chunkid: (module) => {
@@ -607,6 +664,18 @@
         SteamTVSteam: "_1GjVGP2qdwSOEBKimtRG0k",
         SteamTVTV: "_12AVA1wr7SWXg9INaLfBzD",
         FlipInRTL: "AMU5Zvf1pJLZGVqbpGcUC",
+        BackgroundAnimation: "amz8jVfJ2MOIPnaUYMOgI",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3pY66EiNnfad09UHGMqtd4",
+        "ItemFocusAnim-darkerGrey": "_2JoqRmzZpoTtL_KIVWXd0a",
+        "ItemFocusAnim-darkGreySettings": "_1a5-ibcS0HyYhRO2QR7x_f",
+        "ItemFocusAnim-darkGrey": "NmpWlMoGlon2VMO2kUZxr",
+        "ItemFocusAnim-grey": "_1uq0bG0F5JVFzWlPHYMXB7",
+        "ItemFocusAnim-translucent-white-10": "_3xDNjaNkQ-uP0-lcJ8G7gP",
+        "ItemFocusAnim-translucent-white-20": "vYKrwRtlsPCKPnSf3CU-7",
+        "ItemFocusAnimBorder-darkGrey": "_3h8yQpj5B4lqfo4rvQXD4p",
+        "ItemFocusAnim-green": "_2JSjyAe00zqEy25fUVQS5H",
+        focusAnimation: "_19xVMCOSnHPfsYR_llwrJD",
+        hoverAnimation: "_26wdGOzkKTLjBLc0bu8-gV",
       };
     },
     chunkid: (module) => {
@@ -992,6 +1061,7 @@
         StoreGameAdminRoot: () => "/admin/game/",
         StoreAdminRoot: () => "/admin/store/",
         StoreAdminReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
+        CreatorHomeAdminPage: () => "/admin/creatorhome/",
         AppCommunityItem: (_ = ":appid", _ = ":itemtype") =>
           `/apps/communityitems/${_}/${_}`,
         AppLandingPage: (_ = ":appid") => `/apps/landing/${_}`,
@@ -1282,7 +1352,7 @@
             })(_, [
               {
                 packageid: "" + _,
-                game_code: 0,
+                game_code: 4602,
                 territory: "",
                 key_count: _,
                 notes: _,
@@ -1376,13 +1446,13 @@
       function _(_) {
         const {
             unAppID: _,
-            oPackage: __webpack_require__,
+            oPackage: _,
             nKeys: _,
             strNotes: _,
             closeModal: _,
           } = _,
           _ = (0, _._)(),
-          _ = _(_, __webpack_require__.packageid, _, _, (_, _) => {
+          _ = _(_, _.packageid, _, _, (_, _) => {
             _
               ? (_.fnSetSuccess(!0), _.fnSetStrSuccess(_))
               : (_.fnSetError(!0), _.fnSetStrError(_));
@@ -1413,17 +1483,14 @@
             );
             return _;
           })(),
-          [__webpack_require__] = (0, _._)("year", new Date().getFullYear());
+          [_] = (0, _._)("year", new Date().getFullYear());
         new Date().getMonth();
         return (0, _.jsx)(_._, {
           children: (0, _.jsxs)("div", {
             className: _().DashboardCtn,
             children: [
               (0, _.jsxs)("h1", {
-                children: [
-                  "Steam Replay Progress Monitoring: ",
-                  __webpack_require__,
-                ],
+                children: ["Steam Replay Progress Monitoring: ", _],
               }),
               (0, _.jsx)("hr", {}),
               (0, _.jsxs)("p", {
@@ -1449,7 +1516,7 @@
         });
       }
       function _(_) {
-        const { oMonth: _, nActiveQueue: __webpack_require__ } = _;
+        const { oMonth: _, nActiveQueue: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().OptInAdminRow, _().TileContainer),
           children: [
@@ -1562,7 +1629,7 @@
                 ],
               }),
             Boolean(
-              (_.rt_end_processing && 0 == __webpack_require__) ||
+              (_.rt_end_processing && 0 == _) ||
                 _.rt_platform_summary ||
                 _.rt_queue_empty,
             ) &&
@@ -1624,11 +1691,11 @@
       const _ = (0, _.createContext)({}),
         _ = (0, _.createContext)(() => {});
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)({});
+        const [_, _] = (0, _.useState)({});
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: (0, _.jsx)(_.Provider, {
-            value: __webpack_require__,
+            value: _,
             children: _.children,
           }),
         });
@@ -1639,26 +1706,37 @@
       function _(_) {
         const {
             accentColor: _,
-            dullColor: __webpack_require__,
+            dullColor: _,
             bodyTextColor: _,
             children: _,
             breakpoints: _,
           } = _,
-          _ = (0, _.jsx)("div", {
-            "data-accent-color": _,
-            "data-dull-color": __webpack_require__,
-            "data-body-text-color": _,
+          _ = {
+            display: "contents",
+          };
+        let _, _, _;
+        "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
+          "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
+          "string" == typeof _
+            ? (_ = _)
+            : _ &&
+              (function (_, _) {
+                for (const [_, _] of Object.entries(_))
+                  _[`--color-text-body-${_}`] = _;
+              })(_, _);
+        const _ = (0, _.jsx)("div", {
+          "data-accent-color": _,
+          "data-dull-color": _,
+          "data-body-text-color": _,
+          style: _,
+          children: (0, _.jsx)("div", {
             style: {
               display: "contents",
+              color: "var(--color-text-body-body)",
             },
-            children: (0, _.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: _,
-            }),
-          });
+            children: _,
+          }),
+        });
         return _
           ? (0, _.jsx)(_._, {
               breakpoints: _,
@@ -1666,10 +1744,13 @@
             })
           : _;
       }
+      function _(_, _, _) {
+        for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+      }
       const _ = _.memo(function (_) {
         const {
           defaultTextSize: _,
-          accentColor: __webpack_require__ = "blue",
+          accentColor: _ = "blue",
           dullColor: _ = "greyneutral",
           bodyTextColor: _ = "text-light",
           breakpoints: _,
@@ -1692,7 +1773,7 @@
                   className: _()(_.Root, "noOpinionatedGlobalStyles"),
                   style: _,
                   children: (0, _.jsxs)(_, {
-                    accentColor: __webpack_require__,
+                    accentColor: _,
                     dullColor: _,
                     bodyTextColor: _,
                     children: [_, !1],
@@ -1705,9 +1786,9 @@
       });
       function _(_) {
         const { children: _ } = _,
-          { formFactorOverride: __webpack_require__ } = _();
+          { formFactorOverride: _ } = _();
         return (0, _.jsx)(_._, {
-          formFactor: __webpack_require__,
+          formFactor: _,
           children: _,
         });
       }
@@ -1752,42 +1833,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -1797,39 +1842,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1900,10 +1912,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1924,11 +1932,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1958,6 +1961,106 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2015,12 +2118,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2029,60 +2126,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2126,6 +2169,81 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2146,6 +2264,9 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2184,8 +2305,15 @@
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ));
+          )),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        );
       function _(_) {
         const _ = (0, _._)("publisherid", "application_config"),
           _ = _.useMemo(
@@ -2225,7 +2353,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
+        const [_, _] = _.useState(!1);
         return (
           _.useEffect(() => {
             const _ = (0, _._)();
@@ -2297,6 +2425,17 @@
                           (0, _.jsx)(_._, {
                             path: _._.BundlesEditor(),
                             component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.CreatorHomeAdminPage(),
+                            children: (0, _.jsx)(_._, {
+                              config: {
+                                "admin-creatorhome": (_) =>
+                                  (0, _.jsx)(_, {
+                                    creatorHomes: _.creator_homes,
+                                  }),
+                              },
+                            }),
                           }),
                           (0, _.jsx)(_._, {
                             path: _._.AppCommunityItem(),
@@ -2582,8 +2721,10 @@
                     switch (_) {
                       case "LibraryLogoEditor":
                       case "LibraryLogoEditorPopup":
-                        __webpack_require__
-                          ._("chunkid")
+                        Promise.all([
+                          __webpack_require__._("chunkid"),
+                          __webpack_require__._("chunkid"),
+                        ])
                           .then(
                             __webpack_require__.bind(
                               __webpack_require__,
@@ -2635,12 +2776,12 @@
           _: "lg",
         });
       function _(_) {
-        const { children: _, breakpoints: __webpack_require__ = {} } = _,
+        const { children: _, breakpoints: _ = {} } = _,
           _ = (0, _.useContext)(_),
           _ = {
-            _: __webpack_require__._ ?? _._,
-            _: __webpack_require__._ ?? _._,
-            _: __webpack_require__._ ?? _._,
+            _: _._ ?? _._,
+            _: _._ ?? _._,
+            _: _._ ?? _._,
           },
           _ = (function (_) {
             const _ = (0, _._)(`(min-width: ${_._}px)`),
@@ -2677,7 +2818,7 @@
         });
       }
       function _(_) {
-        const { formFactor: _, children: __webpack_require__ } = _,
+        const { formFactor: _, children: _ } = _,
           _ = (0, _.useContext)(_),
           _ = (0, _.useMemo)(
             () => ({
@@ -2689,10 +2830,10 @@
         return _
           ? (0, _.jsx)(_.Provider, {
               value: _,
-              children: __webpack_require__,
+              children: _,
             })
           : (0, _.jsx)(_.Fragment, {
-              children: __webpack_require__,
+              children: _,
             });
       }
       function _() {
@@ -2718,6 +2859,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      var _;
       function _(_) {
         return 3 == _ || 6 == _;
       }
@@ -2739,7 +2881,57 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
+      }),
+        (function (_) {
+          (_[(_.kPFIFlag_MicroTransactionFile = 1)] =
+            "kPFIFlag_MicroTransactionFile"),
+            (_[(_.kPFIFlag_Incompatible = 2)] = "kPFIFlag_Incompatible"),
+            (_[(_.kPFIFlag_RevenueSplitsFinalized = 4)] =
+              "kPFIFlag_RevenueSplitsFinalized"),
+            (_[(_.kPFIFlag_AcceptedForUse = 8)] = "kPFIFlag_AcceptedForUse"),
+            (_[(_.kPFIFlag_CollectionShowSubscribeAll = 16)] =
+              "kPFIFlag_CollectionShowSubscribeAll"),
+            (_[(_.kPFIFlag_ItemInProgress = 32)] = "kPFIFlag_ItemInProgress"),
+            (_[(_.kPFIFlag_GamePlayable = 64)] = "kPFIFlag_GamePlayable"),
+            (_[(_.kPFIFlag_AwaitingModeration = 128)] =
+              "kPFIFlag_AwaitingModeration"),
+            (_[(_.kPFIFlag_PendingApproval = 256)] =
+              "kPFIFlag_PendingApproval"),
+            (_[(_.kPFIFlag_FixedStats = 1536)] = "kPFIFlag_FixedStats"),
+            (_[(_.kPFIFlag_LatestWorkshopTermsNotAccepted = 2048)] =
+              "kPFIFlag_LatestWorkshopTermsNotAccepted"),
+            (_[(_.kPFIFlag_DepotContent = 4096)] = "kPFIFlag_DepotContent"),
+            (_[(_.kPFIFlag_CollectionAllOwnerItems = 8192)] =
+              "kPFIFlag_CollectionAllOwnerItems"),
+            (_[(_.kPFIFlag_CollectionIsASet = 16384)] =
+              "kPFIFlag_CollectionIsASet"),
+            (_[(_.kPFIFlag_Subscribable = 32768)] = "kPFIFlag_Subscribable"),
+            (_[(_.kPFIFlag_ForceUnbanned = 65536)] = "kPFIFlag_ForceUnbanned"),
+            (_[(_.kPFIFlag_ForceInappropriate = 131072)] =
+              "kPFIFlag_ForceInappropriate"),
+            (_[(_.kPFIFlag_ForceAppropriate = 262144)] =
+              "kPFIFlag_ForceAppropriate"),
+            (_[(_.kPFIFlag_RequireVerification = 524288)] =
+              "kPFIFlag_RequireVerification"),
+            (_[(_.kPFIFlag_HasApprovedSteamChinaContent = 1048576)] =
+              "kPFIFlag_HasApprovedSteamChinaContent"),
+            (_[(_.kPFIFlag_HasApprovedContent = 2097152)] =
+              "kPFIFlag_HasApprovedContent"),
+            (_[(_.kPFIFlag_IgnoreTextContentCheckFlag = 4194304)] =
+              "kPFIFlag_IgnoreTextContentCheckFlag"),
+            (_[(_.kPFIFlag_DisableComments = 8388608)] =
+              "kPFIFlag_DisableComments"),
+            (_[(_.kPFIFlag_NeedsContentCheck = 16777216)] =
+              "kPFIFlag_NeedsContentCheck"),
+            (_[(_.kPFIFlag_SteamChinaCreated = 33554432)] =
+              "kPFIFlag_SteamChinaCreated"),
+            (_[(_.kPFIFlag_RejectedLatestContent = 67108864)] =
+              "kPFIFlag_RejectedLatestContent"),
+            (_[(_.kPFIFlag_ManagedContentDescriptors = 134217728)] =
+              "kPFIFlag_ManagedContentDescriptors"),
+            (_[(_.kPFIFlag_HasAuthorSnapshots = 268435456)] =
+              "kPFIFlag_HasAuthorSnapshots");
+        })(_ || (_ = {}));
       const _ = 1,
         _ = 4;
       const _ = "18446744073709551615";
@@ -3189,6 +3381,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3207,10 +3400,10 @@
           bDOMElementFocusByDefault: !1,
         }),
         _ = _.forwardRef(function (_, _) {
-          const { href: __webpack_require__ = "#", ..._ } = _;
+          const { href: _ = "#", ..._ } = _;
           return (0, _.jsx)(_, {
             ref: _,
-            href: __webpack_require__,
+            href: _,
             ..._,
           });
         }),
@@ -3229,6 +3422,12 @@
         (0, _._)("form", {
           bFocusableByDefault: !1,
         });
+      function _(_, _, _ = !1) {
+        _.useEffect(() => {
+          const _ = _.current;
+          _ && (_ ? _.Activate(_) : _.Deactivate());
+        }, [_, _, _]);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3251,6 +3450,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3263,7 +3463,7 @@
         _ = __webpack_require__("chunkid");
       _.forwardRef(function (_, _) {
         const {
-            navID: __webpack_require__,
+            navID: _,
             onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
@@ -3281,7 +3481,7 @@
           { elemProps: _, navOptions: _, gamepadEvents: _ } = (0, _._)(_);
         return (0, _._)()
           ? (0, _.jsx)(_, {
-              navID: __webpack_require__,
+              navID: _,
               onActivated: _,
               onDeactivated: _,
               navTreeRef: _,
@@ -3309,7 +3509,7 @@
       function _(_) {
         const {
             navID: _,
-            onActivated: __webpack_require__,
+            onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
             enabled: _ = !0,
@@ -3328,7 +3528,7 @@
           { refDiv: _, tree: _ } = (function (_) {
             const {
                 navID: _,
-                parentEmbeddedNavTree: __webpack_require__,
+                parentEmbeddedNavTree: _,
                 disabledRoot: _,
                 enabled: _,
                 navTreeRef: _,
@@ -3339,15 +3539,10 @@
               _ = (0, _._)() || _.GetDefaultContext(),
               _ = _.useContext(_._),
               [_] = _.useState(() =>
-                _.NewGamepadNavigationTree(
-                  _,
-                  _,
-                  __webpack_require__ ?? _?.Tree,
-                  {
-                    ..._,
-                    bIsEmbeddedInLegacyTree: !!__webpack_require__,
-                  },
-                ),
+                _.NewGamepadNavigationTree(_, _, _ ?? _?.Tree, {
+                  ..._,
+                  bIsEmbeddedInLegacyTree: !!_,
+                }),
               );
             let _ = _.useRef(null);
             return (
@@ -3386,7 +3581,7 @@
             modal: _,
             historyMode: _,
           });
-        (0, _._)(_.OnActivateCallbacks, __webpack_require__),
+        (0, _._)(_.OnActivateCallbacks, _),
           (0, _._)(_.OnDeactivateCallbacks, _),
           (0, _._)(_, _, _),
           _.useLayoutEffect(() => {
@@ -3417,11 +3612,7 @@
         bIsMounted: !1,
       });
       function _(_) {
-        const {
-            tree: _,
-            disableFocusClasses: __webpack_require__ = !1,
-            children: _,
-          } = _,
+        const { tree: _, disableFocusClasses: _ = !1, children: _ } = _,
           [_, _] = _.useState(_?.BIsActive() || !1),
           [_, _] = _.useState(_?.BIsActiveWithinContext() || !1),
           _ = (0, _._)(_?.SubscribableIsMounted) ?? !1;
@@ -3440,10 +3631,10 @@
           () => ({
             bActiveTree: _,
             bActiveTreeWithinContext: _,
-            bDisableFocusClasses: __webpack_require__,
+            bDisableFocusClasses: _,
             bIsMounted: _,
           }),
-          [_, __webpack_require__, _, _],
+          [_, _, _, _],
         );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -3462,6 +3653,7 @@
       });
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = _.createContext({
         focusNavWindow: null,
         bSupportsFocus: !0,
@@ -3476,6 +3668,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -3503,7 +3696,7 @@
       const _ = _.createContext(null),
         _ = _.createContext(_._);
       function _(_) {
-        const { navRef: _, ...__webpack_require__ } = _,
+        const { navRef: _, ..._ } = _,
           _ = _.useRef(null),
           _ = (0, _.useContext)(_),
           _ = (0, _.useContext)(_),
@@ -3518,7 +3711,7 @@
           })(_, _);
         return (
           _.useLayoutEffect(() => {
-            _ && _.SetProperties(__webpack_require__);
+            _ && _.SetProperties(_);
           }),
           _.useLayoutEffect(() => {
             if (!_) return;
@@ -3540,7 +3733,7 @@
       function _(_) {
         const {
             onButtonDown: _,
-            onButtonUp: __webpack_require__,
+            onButtonUp: _,
             onOKButton: _,
             onCancelButton: _,
             onSecondaryButton: _,
@@ -3559,8 +3752,7 @@
           } = _,
           _ = {};
         void 0 !== _ && (_.onButtonDown = _),
-          void 0 !== __webpack_require__ &&
-            (_.onButtonUp = __webpack_require__),
+          void 0 !== _ && (_.onButtonUp = _),
           void 0 !== _ && (_.onOKButton = _),
           void 0 !== _ && (_.onCancelButton = _),
           void 0 !== _ && (_.onSecondaryButton = _),
@@ -3585,7 +3777,7 @@
       function _(_) {
         const {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -3612,7 +3804,7 @@
           elemProps: _,
           navOptions: {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -3642,7 +3834,7 @@
       function _(_) {
         return function (_) {
           const {
-              focusClassName: __webpack_require__,
+              focusClassName: _,
               focusWithinClassName: _,
               bFocusableByDefault: _,
               className: _,
@@ -3667,7 +3859,7 @@
             _,
             {
               ..._,
-              className: _()(_, _ && _ && __webpack_require__, _ && _ && _),
+              className: _()(_, _ && _ && _, _ && _ && _),
               tabIndex: _ ? -1 : _,
               ref: _,
             },
@@ -3817,7 +4009,7 @@
         _ = __webpack_require__("chunkid");
       const _ = new _._("FocusNavigation").Debug;
       function _(_) {
-        const { children: _, disableFocusRing: __webpack_require__, ..._ } = _,
+        const { children: _, disableFocusRing: _, ..._ } = _,
           [_, _] = _.useState({
             bFocusWithin: !1,
             navTarget: null,
@@ -3855,7 +4047,7 @@
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            !__webpack_require__ &&
+            !_ &&
               (0, _.jsx)(_, {
                 ..._,
                 ..._,
@@ -3871,7 +4063,7 @@
       function _(_) {
         const {
             rootClassName: _,
-            className: __webpack_require__,
+            className: _,
             bFocusWithin: _,
             navTarget: _,
             refMeasure: _,
@@ -3886,7 +4078,7 @@
               ref: _,
               children: (0, _.jsx)(_, {
                 refMeasure: _,
-                className: _()(__webpack_require__, _ && _().DebugFocusRing),
+                className: _()(_, _ && _().DebugFocusRing),
                 bFocusWithin: _ && (_ || _),
                 navTarget: _,
                 elContainer: _,
@@ -3898,7 +4090,7 @@
       function _(_) {
         const {
             className: _,
-            bFocusWithin: __webpack_require__,
+            bFocusWithin: _,
             navTarget: _,
             elContainer: _,
             bDebug: _,
@@ -3919,7 +4111,7 @@
         const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
           _ = _ && !_,
           _ = (function (_, _) {
-            const [__webpack_require__, _] = _.useState(!1);
+            const [_, _] = _.useState(!1);
             return (
               (0, _.useEffect)(() => {
                 if (_ && _) {
@@ -3948,7 +4140,7 @@
                   );
                 }
               }, [_, _]),
-              __webpack_require__
+              _
             );
           })(_, _),
           _ = _.useCallback(() => {
@@ -3975,7 +4167,7 @@
           _.useLayoutEffect(() => {
             _();
           }, [_]);
-        let _ = __webpack_require__;
+        let _ = _;
         return (
           _ && _ && (_.BWantsFocusRing() || (_ = !1)),
           _.useEffect(() => {
@@ -4001,14 +4193,14 @@
       function _(_) {
         const {
             className: _,
-            left: __webpack_require__,
+            left: _,
             top: _,
             height: _,
             width: _,
             target: _,
           } = _,
           _ = {
-            left: (__webpack_require__ ?? 0) - 0 + "px",
+            left: (_ ?? 0) - 0 + "px",
             top: (_ ?? 0) - 0 + "px",
             height: _ + "px",
             width: _ + "px",
@@ -4124,7 +4316,7 @@
       function _(_) {
         const {
             "flow-children": _,
-            onActivate: __webpack_require__,
+            onActivate: _,
             onCancel: _,
             focusClassName: _,
             focusWithinClassName: _,
@@ -4134,9 +4326,8 @@
         let _ = {};
         const _ = (0, _._)(_);
         _ != _._.NONE && (_.layout = _),
-          __webpack_require__ &&
-            ((_.onClick = _.onClick || __webpack_require__),
-            (_.onOKButton = _.onOKButton || __webpack_require__)),
+          _ &&
+            ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
           _.onOKButton &&
             void 0 === _.focusable &&
             void 0 === _.focusableIfEmpty &&
@@ -4153,9 +4344,7 @@
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
-          _.focusable &&
-            (__webpack_require__ || _.onOKButton) &&
-            (_.role ??= "button");
+          _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
         const _ = (0, _.useContext)(_).Component;
         return (0, _.jsx)(_._.Provider, {
           value: _,
@@ -4194,7 +4383,7 @@
         _ = __webpack_require__._(_);
       const _ = _.forwardRef(function (_, _) {
           const {
-            scrollDirection: __webpack_require__,
+            scrollDirection: _,
             scrollPaddingTop: _,
             scrollPaddingRight: _,
             scrollPaddingBottom: _,
@@ -4205,7 +4394,7 @@
             ..._
           } = _;
           let _;
-          switch (__webpack_require__) {
+          switch (_) {
             case "x":
               _ = _().ScrollX;
               break;
@@ -4237,14 +4426,10 @@
           });
         }),
         _ = _.forwardRef(function (_, _) {
-          const {
-              scrollStepPercent: __webpack_require__,
-              scrollBehavior: _,
-              ..._
-            } = _,
+          const { scrollStepPercent: _, scrollBehavior: _, ..._ } = _,
             _ = _.useRef(null),
             _ = _.useCallback((_) => _.currentTarget != _.target, []),
-            _ = (0, _._)(_, _, __webpack_require__, _),
+            _ = (0, _._)(_, _, _, _),
             _ = (0, _._)(_, _);
           return (0, _.jsx)(_, {
             ..._,
@@ -4254,14 +4439,9 @@
           });
         });
       _.forwardRef(function (_, _) {
-        const {
-          name: __webpack_require__,
-          msScrollRestoreDelay: _,
-          onScroll: _,
-          ..._
-        } = _;
+        const { name: _, msScrollRestoreDelay: _, onScroll: _, ..._ } = _;
         return (0, _.jsx)(_, {
-          name: __webpack_require__,
+          name: _,
           msScrollRestoreDelay: _,
           parentOnScroll: _,
           refDiv: _,
@@ -4274,14 +4454,9 @@
         });
       }),
         _.forwardRef(function (_, _) {
-          const {
-            name: __webpack_require__,
-            msScrollRestoreDelay: _,
-            onScroll: _,
-            ..._
-          } = _;
+          const { name: _, msScrollRestoreDelay: _, onScroll: _, ..._ } = _;
           return (0, _.jsx)(_, {
-            name: __webpack_require__,
+            name: _,
             msScrollRestoreDelay: _,
             parentOnScroll: _,
             refDiv: _,
@@ -4296,7 +4471,7 @@
       function _(_) {
         const {
             name: _,
-            msScrollRestoreDelay: __webpack_require__,
+            msScrollRestoreDelay: _,
             parentOnScroll: _,
             refDiv: _,
             children: _,
@@ -4308,13 +4483,8 @@
           _ = _.useRef(void 0);
         let _ = _.useCallback(
           (_) => {
-            const { scrollTop: _, scrollLeft: __webpack_require__ } =
-              _.currentTarget;
-            _(_),
-              (_.current = _),
-              _(__webpack_require__),
-              (_.current = __webpack_require__),
-              _ && _(_);
+            const { scrollTop: _, scrollLeft: _ } = _.currentTarget;
+            _(_), (_.current = _), _(_), (_.current = _), _ && _(_);
           },
           [_, _, _],
         );
@@ -4336,10 +4506,8 @@
               _.current.dispatchEvent(new UIEvent("scroll")));
           };
           (_ == _.current && _ == _.current) ||
-            (__webpack_require__
-              ? window.setTimeout(_, __webpack_require__)
-              : _());
-        }, [_, _, __webpack_require__]);
+            (_ ? window.setTimeout(_, _) : _());
+        }, [_, _, _]);
         const _ = (0, _._)(_, _);
         return _.useMemo(() => _(_, _), [_, _, _]);
       }
@@ -4418,7 +4586,7 @@
       function _(_) {
         const {
             onOKActionDescription: _,
-            onCancelActionDescription: __webpack_require__,
+            onCancelActionDescription: _,
             onSecondaryActionDescription: _,
             onOptionsActionDescription: _,
             onMenuActionDescription: _,
@@ -4429,8 +4597,7 @@
           };
         return (
           void 0 !== _ && (_[_._._] = _),
-          void 0 !== __webpack_require__ &&
-            (_[_._.CANCEL] = __webpack_require__),
+          void 0 !== _ && (_[_._.CANCEL] = _),
           void 0 !== _ && (_[_._.SECONDARY] = _),
           void 0 !== _ && (_[_._.OPTIONS] = _),
           void 0 !== _ && (_[_._.START] = _),
@@ -4509,25 +4676,19 @@
         constructor(_) {
           this.m_root = _;
         }
-        static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavState(_, _ = !0, _ = !0) {
           return {
-            root: _.SerializeNavNode(_, _, __webpack_require__),
+            root: _.SerializeNavNode(_, _, _),
             bHadFocus: _.BFocusWithin() && _.Tree.BIsActiveWithinContext(),
           };
         }
-        static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavNode(_, _ = !0, _ = !0) {
           let _;
           const [_, _] = _.GetChildren();
           _.length &&
             -1 != _ &&
             _ &&
-            (_ = _.map((_, _) =>
-              _.SerializeNavNode(
-                _,
-                _ == _ || __webpack_require__,
-                __webpack_require__,
-              ),
-            ));
+            (_ = _.map((_, _) => _.SerializeNavNode(_, _ == _ || _, _)));
           const _ = {
             rgChildren: _,
           };
@@ -4537,15 +4698,14 @@
             _
           );
         }
-        static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavState(_, _, _ = 0) {
           const { root: _, bHadFocus: _ } = _;
           _.Tree.Controller.RestoreHistoryTransaction(() => {
             _.RestoreSerializedNavNode(_, _),
-              (1 == __webpack_require__ || (0 == __webpack_require__ && _)) &&
-                _.BTakeFocus(_._.APPLICATION);
+              (1 == _ || (0 == _ && _)) && _.BTakeFocus(_._.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavNode(_, _, _ = 0) {
           const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
@@ -4554,7 +4714,7 @@
                 let _ = "";
                 for (let _ = 0; _ < _; _++) _ += "*";
                 return (_ += " "), _;
-              })(__webpack_require__)}`
+              })(_)}`
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
@@ -4669,8 +4829,8 @@
           var _;
         }
         RestoreFocusSnapshot(_, _ = 0) {
-          return (function (_, _, __webpack_require__ = 0) {
-            return _.RestoreSerializedNavState(_, _, __webpack_require__);
+          return (function (_, _, _ = 0) {
+            return _.RestoreSerializedNavState(_, _, _);
           })(this.m_node, _, _);
         }
         NavTree() {
@@ -5453,16 +5613,15 @@
         }
         SetProperties(_) {
           const _ =
-            ((__webpack_require__ = this.m_Properties?.actionDescriptionMap),
+            ((_ = this.m_Properties?.actionDescriptionMap),
             (_ = _?.actionDescriptionMap),
-            !(null == __webpack_require__ || null == _
-              ? __webpack_require__ === _
-              : "object" == typeof __webpack_require__ &&
+            !(null == _ || null == _
+              ? _ === _
+              : "object" == typeof _ &&
                 "object" == typeof _ &&
-                Object.keys(__webpack_require__).length ===
-                  Object.keys(_).length &&
-                Object.keys(__webpack_require__).every(
-                  (_) => _.hasOwnProperty(_) && __webpack_require__[_] === _[_],
+                Object.keys(_).length === Object.keys(_).length &&
+                Object.keys(_).every(
+                  (_) => _.hasOwnProperty(_) && _[_] === _[_],
                 )));
           var _, _;
           const _ = this.m_Properties?.focusableIfEmpty,
@@ -5746,16 +5905,15 @@
           const {
             focusable: _,
             focusableIfEmpty: _,
-            childFocusDisabled: __webpack_require__,
+            childFocusDisabled: _,
             fnCanTakeFocus: _,
           } = this.m_Properties;
           return this.m_bMounted
             ? _ && !_(this)
               ? "none"
-              : _ ||
-                  (_ && (__webpack_require__ || 0 == this.m_rgChildren.length))
+              : _ || (_ && (_ || 0 == this.m_rgChildren.length))
                 ? "self"
-                : !__webpack_require__ && this.m_rgChildren.length
+                : !_ && this.m_rgChildren.length
                   ? "children"
                   : "none"
             : "none";
@@ -5903,7 +6061,7 @@
           if (this.BTryInternalNavigation(_, _.detail.is_repeat ?? !1))
             return !0;
           const {
-            onMoveUp: __webpack_require__,
+            onMoveUp: _,
             onMoveRight: _,
             onMoveDown: _,
             onMoveLeft: _,
@@ -5911,7 +6069,7 @@
           let _ = !1;
           switch (_) {
             case _._.DIR_UP:
-              __webpack_require__ && (_ = __webpack_require__(_.detail, this));
+              _ && (_ = __webpack_require__(_.detail, this));
               break;
             case _._.DIR_RIGHT:
               _ && (_ = _(_.detail, this));
@@ -6543,7 +6701,7 @@
         };
       });
       function _(_, _) {
-        const { onTextEntered: __webpack_require__, ..._ } = _,
+        const { onTextEntered: _, ..._ } = _,
           _ = _.useRef(null),
           _ = _.useRef({});
         Object.assign(_.current, {
@@ -6621,7 +6779,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_, _ = 0, __webpack_require__ = Math.random) {
+      function _(_, _ = 0, _ = Math.random) {
         if (_?.length > 1) {
           let _ = _ > 0 ? Math.min(_, _.length) : _.length;
           for (; 0 !== _; ) {
@@ -6695,32 +6853,16 @@
       function _(_, _) {
         return _.reduce((_, _) => (_.set(_(_), _), _), new Map());
       }
-      function _(_, _, __webpack_require__ = !0) {
+      function _(_, _, _ = !0) {
         return _ && 0 != _.length
           ? _
             ? _.sort((_, _) =>
-                _ == _
-                  ? 0
-                  : __webpack_require__
-                    ? _ < _
-                      ? -1
-                      : 1
-                    : _ > _
-                      ? -1
-                      : 1,
+                _ == _ ? 0 : _ ? (_ < _ ? -1 : 1) : _ > _ ? -1 : 1,
               )
             : _.sort((_, _) => {
                 const _ = _.toLowerCase(),
                   _ = _.toLowerCase();
-                return _ == _
-                  ? 0
-                  : __webpack_require__
-                    ? _ < _
-                      ? -1
-                      : 1
-                    : _ > _
-                      ? -1
-                      : 1;
+                return _ == _ ? 0 : _ ? (_ < _ ? -1 : 1) : _ > _ ? -1 : 1;
               })
           : _;
       }
@@ -6745,26 +6887,26 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         console.assert
-          ? 0 == __webpack_require__.length
+          ? 0 == _.length
             ? console.assert(!!_, _)
-            : console.assert(!!_, _, ...__webpack_require__)
-          : _ || console.warn(_, ...__webpack_require__);
+            : console.assert(!!_, _, ..._)
+          : _ || console.warn(_, ..._);
       }
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         if (
           (console.assert
-            ? 0 == __webpack_require__.length
+            ? 0 == _.length
               ? console.assert(!!_, _)
-              : console.assert(!!_, _, ...__webpack_require__)
-            : _ || console.warn(_, ...__webpack_require__),
+              : console.assert(!!_, _, ..._)
+            : _ || console.warn(_, ..._),
           !_)
         )
           throw _;
       }
-      function _(_, _, ...__webpack_require__) {
-        _(!1, _, ...__webpack_require__);
+      function _(_, _, ..._) {
+        _(!1, _, ..._);
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -6901,6 +7043,15 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      function _() {
+        return !1;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       function _(_, _) {
         return _.split(_);
       }
@@ -7014,8 +7165,7 @@
         ["id", "indonesian"],
       ]);
       const _ = new Map();
-      for (const [module, module_exports] of _.entries())
-        _.set(module_exports, module);
+      for (const [_, _] of _.entries()) _.set(_, _);
       function _(_) {
         if ("english" !== _)
           return "sc_schinese" === _ ? "schinese" : "english";
@@ -7075,12 +7225,11 @@
             _ =
               _.get(_.strLanguage)?.get(_) ??
               _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
-          return (
-            _ ||
-            (0 === _.length
+          return void 0 !== _
+            ? _
+            : 0 === _.length
               ? (console.error("Couldn't find localization key", _), _)
-              : _(_, _))
-          );
+              : _(_, _);
         }
         function _(_, ..._) {
           return _(_(_, _().languages), ..._);
@@ -7343,34 +7492,30 @@
         _ = _.BinaryWriter.prototype;
       function _(_) {
         const _ = {},
-          { fields: __webpack_require__ } = _;
-        for (const _ in __webpack_require__) {
-          const _ = __webpack_require__[_];
+          { fields: _ } = _;
+        for (const _ in _) {
+          const _ = _[_];
           _[_._] = _;
         }
         return _;
       }
       function _(_, _) {
-        const { proto: __webpack_require__, fields: _ } = _,
-          _ = new __webpack_require__();
+        const { proto: _, fields: _ } = _,
+          _ = new _();
         if (null == _) return _;
         for (const _ in _) {
-          const { _: __webpack_require__, _: _, _: _, _: _, _: _ } = _[_];
+          const { _: _, _: _, _: _, _: _, _: _ } = _[_];
           if (!Object.prototype.hasOwnProperty.call(_, _)) continue;
           const _ = _[_];
           _
             ? _
               ? _.Message.setRepeatedWrapperField(
                   _,
-                  __webpack_require__,
+                  _,
                   Array.isArray(_) ? _.map((_) => _.fromObject(_)) : [],
                 )
-              : _.Message.setWrapperField(
-                  _,
-                  __webpack_require__,
-                  _.fromObject(_),
-                )
-            : _.Message.setField(_, __webpack_require__, _);
+              : _.Message.setWrapperField(_, _, _.fromObject(_))
+            : _.Message.setField(_, _, _);
         }
         return _;
       }
@@ -7491,13 +7636,8 @@
         };
       }
       function _(_, _) {
-        return function (__webpack_require__ = !0) {
-          return _.Message.getWrapperField(
-            this,
-            _,
-            _,
-            __webpack_require__ ? 1 : 0,
-          );
+        return function (_ = !0) {
+          return _.Message.getWrapperField(this, _, _, _ ? 1 : 0);
         };
       }
       function _(_, _) {
@@ -9007,6 +9147,16 @@
                   },
                   vram_size: {
                     _: 17,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  screen_width: {
+                    _: 18,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  screen_height: {
+                    _: 19,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -12336,7 +12486,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 42, 44, 52, 71],
+              [11, 12, 20, 21, 25, 41, 52, 71, 74],
               null,
             );
         }
@@ -12492,21 +12642,9 @@
                     _: !0,
                     _: !0,
                   },
-                  accessories: {
-                    _: 42,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
                   self_purchase_option: {
                     _: 43,
                     _: _,
-                  },
-                  invalid_purchase_options: {
-                    _: 44,
-                    _: _,
-                    _: !0,
-                    _: !0,
                   },
                   screenshots: {
                     _: 50,
@@ -12546,7 +12684,7 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  full_description: {
+                  full_description_bbcode: {
                     _: 58,
                     _: _._.readString,
                     _: _._.writeString,
@@ -12570,10 +12708,16 @@
                     _: !0,
                     _: !0,
                   },
-                  purchase_description: {
+                  purchase_description_bbcode: {
                     _: 72,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  package_groups: {
+                    _: 74,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -12619,8 +12763,78 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  label: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  show_above_purchase: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Demo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.parent_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3], null);
+            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5], null);
         }
         static sm_m;
         static sm_mbf;
@@ -12650,6 +12864,18 @@
                     _: _._.readUint32,
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
+                  },
+                  demos: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  standalone_demos: {
+                    _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -13223,13 +13449,28 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  main_capsule_2x: {
+                    _: 18,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                   small_capsule: {
                     _: 3,
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  small_capsule_2x: {
+                    _: 19,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                   header: {
                     _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  header_2x: {
+                    _: 20,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -13290,6 +13531,11 @@
                   },
                   raw_page_background: {
                     _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  edition_comparison: {
+                    _: 17,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -13759,6 +14005,33 @@
                     _: !1,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  package_group: {
+                    _: 49,
+                    _: "default",
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  is_edition: {
+                    _: 50,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  free_to_keep_base_package: {
+                    _: 51,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  price_cannot_be_displayed_as_discount: {
+                    _: 52,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  price_to_base_discount_on: {
+                    _: 53,
+                    _: _._.readInt64String,
+                    _: _._.writeInt64String,
                   },
                 },
               }),
@@ -14606,6 +14879,86 @@
         }
         getClassName() {
           return "StoreItem_Link";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  heading: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  display_type: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  dropdown_title: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dropdown_description_bbcode: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PackageGroup";
         }
       }
       class _ extends _.Message {
@@ -18673,7 +19026,7 @@
         ];
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
+        const [_, _] = _.useState(!1);
         return (
           _.useEffect(() => {
             if (!_.current) return;
@@ -18733,7 +19086,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = [], _ = !0) {
+      function _(_, _, _ = [], _ = !0) {
         const _ = _.useRef(_);
         (_.current = _),
           _.useEffect(() => {
@@ -18742,7 +19095,7 @@
               _.current && _.current();
             }, _);
             return () => clearInterval(_);
-          }, [_, _, ...__webpack_require__]);
+          }, [_, _, ..._]);
       }
       function _() {
         const [, _] = _.useState(0);
@@ -18809,7 +19162,7 @@
       function _(_, _) {
         return (
           (function (_, _) {
-            const [__webpack_require__, _] = _.useState(_);
+            const [_, _] = _.useState(_);
             return (
               _.useEffect(() => {
                 if (!_) {
@@ -18818,13 +19171,13 @@
                 }
                 _(!0);
               }, [_, _]),
-              __webpack_require__
+              _
             );
           })(_, _) || _
         );
       }
       function _(_ = !1) {
-        const [_, __webpack_require__] = _.useState(_);
+        const [_, _] = _.useState(_);
         return [
           _,
           _.useCallback(() => __webpack_require__(!0), []),
@@ -18987,21 +19340,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { queryClient: _ = _, steamUI: __webpack_require__ } = _;
+        const { queryClient: _ = _, steamUI: _ } = _;
         _.useEffect(() => {
           _ == _ &&
             _.setDefaultOptions({
               ..._,
               queries: {
                 ..._.queries,
-                networkMode: __webpack_require__ ? "offlineFirst" : void 0,
+                networkMode: _ ? "offlineFirst" : void 0,
               },
               mutations: {
                 ..._.mutations,
-                networkMode: __webpack_require__ ? "offlineFirst" : void 0,
+                networkMode: _ ? "offlineFirst" : void 0,
               },
             });
-        }, [_, __webpack_require__]);
+        }, [_, _]);
         let _ = _.children;
         return (
           _.debug &&
@@ -19051,7 +19404,7 @@
           return _;
         };
       function _(_) {
-        const { useStorage: _, children: __webpack_require__ } = _;
+        const { useStorage: _, children: _ } = _;
         let _, _;
         if ("useActiveCMInterface" in _) _ = _ = _.useActiveCMInterface;
         else {
@@ -19061,7 +19414,7 @@
                 _,
                 "neither useActiveCMInterface nor useActiveSteamInterface were provided",
               ),
-              __webpack_require__
+              _
             );
           _ = _.useActiveSteamInterface;
         }
@@ -19078,13 +19431,86 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       const _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
         _ = () => _().useActiveSteamInterface().GetAnonymousServiceTransport(),
         _ = () => _().useStorage(),
         _ = () => _().useActiveSteamInterface();
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 8476, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 99574, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 43789, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 815, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 4289, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 54978, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 33800, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 3907, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 45040, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94750, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 69668, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 45233, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 90200, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 31864, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 7263, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 30295, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 50559, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 86512, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 52889, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 72269, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 34419, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 75777, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 23723, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 85436, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 76736, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94625, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 15191, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 4230, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 34792, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 27246, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 59863, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -19232,7 +19658,7 @@
         static InitFromString(_) {
           let _ = new _();
           try {
-            let [__webpack_require__, _, _, _, _] =
+            let [_, _, _, _, _] =
                 _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
               _ = Number(_),
               _ = Number(_),
@@ -19535,8 +19961,7 @@
             const _ = await _(_, _, _);
             return {
               purchase_options: _.purchase_options,
-              invalid_purchase_options: _.invalid_purchase_options,
-              accessories: _.accessories,
+              package_groups: _.package_groups,
             };
           },
           staleTime: 6e5,
@@ -19603,9 +20028,12 @@
             (function (_, _, _) {
               _.setQueryData(_(_, "include_all_purchase_options"), {
                 purchase_options: _.purchase_options,
-                invalid_purchase_options: _.invalid_purchase_options,
-                accessories: _.accessories,
+                package_groups: _.package_groups,
               });
+            })(_, _, _),
+          _.include_full_description &&
+            (function (_, _, _) {
+              _(_, _, _, "include_full_description", "full_description_bbcode");
             })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -19627,16 +20055,16 @@
         "reviews",
         "game_rating",
         "purchase_options",
-        "accessories",
-        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
+        "full_description_bbcode",
         "assets_without_overrides",
         "user_filter_failure",
         "links",
         "platforms",
         "release",
+        "package_groups",
       ];
       function _(_) {
         const _ = {
@@ -19775,7 +20203,7 @@
       function _(_) {
         const {
             context: _,
-            msDelayBatch: __webpack_require__,
+            msDelayBatch: _,
             serviceTransportOverride: _,
             legacyCacheStoreItemData: _,
             children: _,
@@ -19799,7 +20227,7 @@
             [_, _, _],
           ),
           _ = _.useMemo(() => {
-            const _ = __webpack_require__
+            const _ = _
               ? (function (_) {
                   let _ = 0;
                   return (_) => {
@@ -19810,7 +20238,7 @@
                         (_ = performance.now()), __webpack_require__();
                       }, _);
                   };
-                })(__webpack_require__)
+                })(_)
               : void 0;
             return _(
               _,
@@ -19821,7 +20249,7 @@
               },
               _,
             );
-          }, [_, _, _, __webpack_require__]),
+          }, [_, _, _, _]),
           _ = _.useMemo(
             () => ({
               dataLoader: _,
@@ -20914,8 +21342,8 @@
         }
         async MakeReady() {
           const _ = [];
-          for (const [_, __webpack_require__] of this.m_mapConnectionDetails)
-            _.push(this.ConnectToSite(__webpack_require__));
+          for (const [_, _] of this.m_mapConnectionDetails)
+            _.push(this.ConnectToSite(_));
           const _ = await Promise.all(_);
           (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
           for (const _ of _) if (1 != _.result) return _;
@@ -20925,9 +21353,8 @@
           };
         }
         GetConnectionDetails(_) {
-          for (const [_, __webpack_require__] of this.m_mapConnectionDetails)
-            if (__webpack_require__.connection === _)
-              return __webpack_require__;
+          for (const [_, _] of this.m_mapConnectionDetails)
+            if (_.connection === _) return _;
           return (
             _.Error("GetConnectionDetails: failed to identify connection"), null
           );
@@ -20935,8 +21362,8 @@
         DispatchTransportStatusUpdate() {
           if (!this.m_fnOnStatusEventHandler) return;
           let _ = !0;
-          for (const [_, __webpack_require__] of this.m_mapConnectionDetails)
-            __webpack_require__.connection.BCanSendMessages() || (_ = !1);
+          for (const [_, _] of this.m_mapConnectionDetails)
+            _.connection.BCanSendMessages() || (_ = !1);
           this.m_fnOnStatusEventHandler({
             bConnected: _,
           });
@@ -21730,8 +22157,8 @@
           (_[(_.TooltipHint = 4)] = "TooltipHint"),
           (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
           (_[(_.Resizable = 16)] = "Resizable"),
-          (_[(_.ScalePosition = 32)] = "ScalePosition"),
-          (_[(_.ScaleSize = 64)] = "ScaleSize"),
+          (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
+          (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
           (_[(_.Maximized = 128)] = "Maximized"),
           (_[(_.Composited = 256)] = "Composited"),
           (_[(_.NotFocusable = 512)] = "NotFocusable"),
@@ -21766,7 +22193,7 @@
         }),
         _ = () => _.useContext(_);
       function _(_) {
-        const { ownerWindow: _, children: __webpack_require__ } = _,
+        const { ownerWindow: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               ownerWindow: _,
@@ -21778,7 +22205,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       class _ {
@@ -21799,7 +22226,7 @@
               "Name is required.  This is an internal name, different from title.",
             ),
             (this.m_strName = _);
-          const { title: __webpack_require__, eCreationFlags: _, ..._ } = _;
+          const { title: _, eCreationFlags: _, ..._ } = _;
           (this.m_rgParams = {
             ..._,
             eCreationFlags: _ ?? 0,
@@ -21810,7 +22237,7 @@
             (this.m_bCreateHidden = !!(
               this.m_rgParams.eCreationFlags & _.Hidden
             )),
-            (this.m_strTitle = __webpack_require__);
+            (this.m_strTitle = _);
         }
         UpdateParamsBeforeShow(_) {
           return _;
@@ -22270,6 +22697,12 @@
           for (const _ of this.m_mapPopups.values())
             if (_.window === _) return _;
         }
+        GetPopupForVROverlayKey(_) {
+          if (_)
+            return Array.from(this.m_mapPopups.values()).find(
+              (_) => _.params.strVROverlayKey == _,
+            );
+        }
         ClosePopupsOwnedByBrowser(_) {
           this.m_mapPopups.forEach((_) => {
             _.browser_info &&
@@ -22581,8 +23014,8 @@
           if (!_ || "string" != typeof _) return null;
           const _ = _.split(".");
           if (3 !== _.length) return null;
-          const [__webpack_require__, _] = _,
-            _ = (0, _._)(__webpack_require__),
+          const [_, _] = _,
+            _ = (0, _._)(_),
             _ = (0, _._)(_);
           return _ && _
             ? {
@@ -22612,10 +23045,10 @@
         m_fnRequestNewAccessToken;
         m_refreshAccessTokenPromise;
         m_dtLastExpireCheck = 0;
-        constructor(_, _, __webpack_require__ = !1, _) {
+        constructor(_, _, _ = !1, _) {
           (this.m_strWebAPIBaseURL = _),
             (this.m_webApiAccessToken = _),
-            (this.m_bJsonMode = __webpack_require__),
+            (this.m_bJsonMode = _),
             (this.m_fnRequestNewAccessToken = _),
             (this.m_bJWTToken = null != _(_)),
             (this.m_ServiceTransport = {
@@ -22828,7 +23261,7 @@
       function _(_) {
         const {
             target: _,
-            visibilityObserver: __webpack_require__,
+            visibilityObserver: _,
             className: _,
             style: _,
             bEnablePointerEvents: _,
@@ -22847,11 +23280,11 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(null),
+          [_, _] = _.useState(null),
           _ = _.useCallback(() => {
             let _ = _;
-            if (!_ || !_) return;
-            if (_ && __webpack_require__ && !__webpack_require__.visible)
-              return;
+            if (!_ || !_ || !_) return;
+            if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
             const _ = _.querySelector(".hover_arrow.left"),
@@ -22860,7 +23293,8 @@
               _ = _.querySelector(".hover_arrow.bottom"),
               _ = _.getBoundingClientRect(),
               _ = _.getBoundingClientRect(),
-              _ = "overlay" == _ || "overlay-center" == _;
+              _ = "overlay" == _ || "overlay-center" == _,
+              _ = _.getBoundingClientRect();
             _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;"),
@@ -22873,7 +23307,7 @@
                 nTop: _,
                 nOverflow: _,
                 nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight),
+              } = _(_, _, _, _, _, _, _),
               _ = _;
             if (_ > (_ ?? 10) && !_) {
               const _ = (function (_) {
@@ -22894,17 +23328,12 @@
                 })(_),
                 {
                   nLeft: _,
-                  nTop: __webpack_require__,
+                  nTop: _,
                   nOverflow: _,
                   nLateralOverflow: _,
-                } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+                } = _(_, _, _, _, _, _, _);
               if (
-                (_ < _ &&
-                  ((_ = _),
-                  (_ = _),
-                  (_ = __webpack_require__),
-                  (_ = _),
-                  (_ = _)),
+                (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
                 _ > (_ ?? 10))
               )
                 return (
@@ -22944,7 +23373,7 @@
               _ != _ && _(_),
               _ != _ && _(_),
               _ || _(!0);
-          }, [_, _, _, __webpack_require__, _, _, _, _, _, _, _, _]);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
         _.useEffect(() => _(), [_]);
         let _ = Object.assign(
             {
@@ -22953,8 +23382,9 @@
             },
             _,
           ),
-          _ = !__webpack_require__ || __webpack_require__.visible;
+          _ = !_ || _.visible;
         return (0, _.jsx)("div", {
+          ref: _,
           className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
           children: (0, _.jsx)("div", {
             ..._,
@@ -22972,40 +23402,40 @@
         });
       }
       function _(_, _, _, _, _, _, _) {
-        const _ = _,
-          _ = _;
+        const _ = _.innerWidth,
+          _ = _.innerHeight;
         let _, _, _, _;
         switch (_) {
           case "right":
-            (_ = _.right + _),
-              (_ = _(_.top, _.height, _.height, _)),
+            (_ = _.right + _ - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
               (_ = Math.max(0, _ + _.width - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
             break;
           case "left":
-            (_ = _.left - _ - _.width),
-              (_ = _(_.top, _.height, _.height, _)),
+            (_ = _.left - _ - _.width - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
               (_ = Math.max(0, 0 - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
             break;
           case "bottom":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.bottom + _),
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.bottom + _ - _.top),
               (_ = Math.max(0, _ + _.height - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
             break;
           case "top":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.top - _ - _.height),
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.top - _ - _.height - _.top),
               (_ = Math.max(0, 0 - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
             break;
           case "overlay":
-            (_ = _.left), (_ = _.top), (_ = 0), (_ = [0, 0]);
+            (_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]);
             break;
           case "overlay-center":
-            (_ = _.left + 0.5 * _.width - 0.5 * _.width),
-              (_ = _.top + 0.5 * _.height - 0.5 * _.height),
+            (_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
+              (_ = _.top - _.top + 0.5 * _.height - 0.5 * _.height),
               (_ = 0),
               (_ = [0, 0]);
         }
@@ -23154,7 +23584,7 @@
         static InitFromString(_) {
           let _ = new _();
           try {
-            let [__webpack_require__, _, _, _, _] =
+            let [_, _, _, _, _] =
                 _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
               _ = Number(_),
               _ = Number(_),
@@ -23243,13 +23673,8 @@
       }
       function _(_, _) {
         if (!_) return !1;
-        const [__webpack_require__, _] = _.split(".", 2);
-        return (
-          __webpack_require__ &&
-          _ &&
-          _(_, __webpack_require__) &&
-          _ in _.SteamClient[__webpack_require__]
-        );
+        const [_, _] = _.split(".", 2);
+        return _ && _ && _(_, _) && _ in _.SteamClient[_];
       }
       function _(_) {
         return _(window, _);
@@ -23355,10 +23780,9 @@
           _.apply(console, [_, _, ..._]);
         };
         const _ = console.error;
-        (console.error = (_, ...__webpack_require__) => {
+        (console.error = (_, ..._) => {
           const _ = _();
-          _(new Error(_(_, ...__webpack_require__)), 1, _),
-            _.apply(console, [_, ...__webpack_require__]);
+          _(new Error(_(_, ..._)), 1, _), _.apply(console, [_, ..._]);
         }),
           (console.clogerror = (_, _, ..._) => {
             const _ = _();
@@ -23383,6 +23807,8 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
+          "Millennium internal",
+          "millenium",
           "Refused unauthorized RPC command",
         ];
       function _() {
@@ -23414,14 +23840,10 @@
         constructor(_ = !0) {
           _
             ? (_.forEach(
-                ({
-                  error: _,
-                  cCallsitesToIgnore: _,
-                  strComponentStack: __webpack_require__,
-                }) =>
+                ({ error: _, cCallsitesToIgnore: _, strComponentStack: _ }) =>
                   this.ReportError(_, {
                     cCallsitesToIgnore: _,
-                    strComponentStack: __webpack_require__,
+                    strComponentStack: _,
                   }),
               ),
               (_ = (_, _, _) =>
@@ -23746,15 +24168,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            padded: _,
-            gap: __webpack_require__,
-            children: _,
-            bLazyRenderChildren: _,
-          } = _,
+        const { padded: _, gap: _, children: _, bLazyRenderChildren: _ } = _,
           _ = (0, _.jsx)("div", {
             style: {
-              gap: __webpack_require__ ? __webpack_require__ + "px" : void 0,
+              gap: _ ? _ + "px" : void 0,
             },
             className: (0, _._)({
               [_.ScrollSnapCarousel]: !0,
@@ -23780,11 +24197,7 @@
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         render() {
-          const {
-              showArrows: _,
-              arrowFill: _,
-              arrowStyle: __webpack_require__,
-            } = this.props,
+          const { showArrows: _, arrowFill: _, arrowStyle: _ } = this.props,
             _ = this.props.visibleSlides,
             _ = this.props.totalSlides,
             _ = this.props.currentSlide;
@@ -23805,7 +24218,7 @@
                   ),
                   children: (0, _.jsx)(_._, {
                     arrowFill: _,
-                    arrowStyle: __webpack_require__,
+                    arrowStyle: _,
                     direction: "left",
                   }),
                 }),
@@ -23864,7 +24277,7 @@
                   ),
                   children: (0, _.jsx)(_._, {
                     arrowFill: _,
-                    arrowStyle: __webpack_require__,
+                    arrowStyle: _,
                     direction: "right",
                   }),
                 }),
@@ -24010,7 +24423,7 @@
       function _(_) {
         const {
             bHideArrows: _,
-            bAutoAdvance: __webpack_require__,
+            bAutoAdvance: _,
             children: _,
             onSlide: _,
             arrowFill: _,
@@ -24019,7 +24432,7 @@
           _ = _.useContext(_._),
           _ = _.useRef(_.state.currentSlide),
           [_, _] = _.useState(null),
-          [_, _] = _.useState(!!__webpack_require__),
+          [_, _] = _.useState(!!_),
           _ = _.useRef(null),
           _ = _.useRef(null);
         _.useEffect(() => {
@@ -24236,7 +24649,7 @@
           let {
             children: _,
             className: _,
-            label: __webpack_require__,
+            label: _,
             onCancel: _,
             cancelText: _,
             refInstance: _,
@@ -24290,17 +24703,17 @@
                 navRef: this.m_navRef,
                 ref: _,
                 role: _,
-                "aria-labelledby": __webpack_require__ ? _ : void 0,
+                "aria-labelledby": _ ? _ : void 0,
                 ..._,
                 children: [
                   _,
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)("div", {
                       _: _,
                       style: {
                         display: "none",
                       },
-                      children: __webpack_require__,
+                      children: _,
                     }),
                   !this.instance.BIsSubMenu() &&
                     (0, _.jsxs)(_.Fragment, {
@@ -24369,7 +24782,7 @@
           const {
               onSelected: _,
               bInteractableItem: _,
-              onMoveRight: __webpack_require__,
+              onMoveRight: _,
               ..._
             } = this.props,
             _ = this.context?.styles ?? _();
@@ -24395,7 +24808,7 @@
                 onClick: this.props.disabled ? void 0 : this.OnClick,
                 focusable: !this.props.disabled,
                 onOKButton: this.OnOKButton,
-                onMoveRight: __webpack_require__,
+                onMoveRight: _,
                 unselectable: this.props.unselectable,
                 role: _.role ?? "menuitem",
                 "aria-selected": this.props.selected,
@@ -24420,15 +24833,10 @@
         (0, _._)([_._], _.prototype, "Focus", null);
       class _ extends _.PureComponent {
         render() {
-          const {
-            bChecked: _,
-            children: _,
-            className: __webpack_require__,
-            ..._
-          } = this.props;
+          const { bChecked: _, children: _, className: _, ..._ } = this.props;
           return (0, _.jsxs)(_, {
             ..._,
-            className: (0, _._)(__webpack_require__, _ && "menuChecked"),
+            className: (0, _._)(_, _ && "menuChecked"),
             children: [
               (0, _.jsx)("div", {
                 className: "contextMenuCheckMark",
@@ -24503,7 +24911,7 @@
           let {
             label: _,
             selectedWithin: _,
-            children: __webpack_require__,
+            children: _,
             className: _,
             bInGamepadUI: _,
             ..._
@@ -25042,17 +25450,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.forwardRef((_, _) => {
-        const {
-          className: __webpack_require__,
-          contextMenuStyles: _,
-          disabled: _,
-          ..._
-        } = _;
+        const { className: _, contextMenuStyles: _, disabled: _, ..._ } = _;
         return (0, _.jsx)("div", {
           ..._,
           ref: _,
           className: (0, _._)(
-            __webpack_require__,
+            _,
             (_ || _()).contextMenuItem,
             "contextMenuItem",
             _ && "disabled",
@@ -25060,12 +25463,7 @@
         });
       });
       function _(_) {
-        const {
-          bChecked: _,
-          children: __webpack_require__,
-          className: _,
-          ..._
-        } = _;
+        const { bChecked: _, children: _, className: _, ..._ } = _;
         return (0, _.jsxs)(_, {
           ..._,
           className: (0, _._)(_, _ && "menuChecked"),
@@ -25073,7 +25471,7 @@
             (0, _.jsx)("div", {
               className: "contextMenuCheckMark",
             }),
-            __webpack_require__,
+            _,
           ],
         });
       }
@@ -25085,12 +25483,17 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.createContext({}),
         _ = () => _.useContext(_);
       function _(_, _) {
         return _()[_] ?? _;
+      }
+      function _() {
+        let _ = _();
+        return !!_ && _.bClassicMode;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -25146,11 +25549,11 @@
       }
       const _ = _.createContext(null),
         _ = _.forwardRef(function (_, _) {
-          const { _: __webpack_require__, className: _, ..._ } = _,
+          const { _: _, className: _, ..._ } = _,
             _ = _.useContext(_),
             _ = _?.setHeaderId,
             _ = _.useId(),
-            _ = __webpack_require__ || _;
+            _ = _ || _;
           return (
             _.useEffect(() => {
               _ && _(_);
@@ -25193,17 +25596,12 @@
         });
       }
       function _(_) {
-        let {
-            children: _,
-            bCenterVertically: __webpack_require__,
-            refElem: _,
-            ..._
-          } = _,
+        let { children: _, bCenterVertically: _, refElem: _, ..._ } = _,
           _ =
             "DialogContent _DialogLayout" +
             (_.className ? " " + _.className : "");
         return (
-          __webpack_require__ && (_ += " _DialogCenterVertically"),
+          _ && (_ += " _DialogCenterVertically"),
           (0, _.jsx)("div", {
             ..._,
             ref: _,
@@ -25229,26 +25627,17 @@
         }
       }
       function _(_) {
-        const {
-          classNameContent: _,
-          bCenterVertically: __webpack_require__,
-          ..._
-        } = _;
+        const { classNameContent: _, bCenterVertically: _, ..._ } = _;
         return (0, _.jsx)(_, {
           className: _,
-          bCenterVertically: __webpack_require__,
+          bCenterVertically: _,
           children: (0, _.jsx)(_, {
             ..._,
           }),
         });
       }
       function _(_) {
-        const {
-          label: _,
-          tooltip: __webpack_require__,
-          className: _,
-          children: _,
-        } = _;
+        const { label: _, tooltip: _, className: _, children: _ } = _;
         return (0, _.jsxs)("label", {
           className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
           children: [
@@ -25257,9 +25646,9 @@
                 children: [
                   _,
                   " ",
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)(_._, {
-                      tooltip: __webpack_require__,
+                      tooltip: _,
                     }),
                   " ",
                 ],
@@ -25447,7 +25836,7 @@
           const {
             onChange: _,
             checked: _,
-            label: __webpack_require__,
+            label: _,
             description: _,
             tabIndex: _,
             disabled: _,
@@ -25697,7 +26086,6 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -25723,6 +26111,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _,
+        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25928,7 +26317,7 @@
           const {
             label: _,
             description: _,
-            requiredLabel: __webpack_require__,
+            requiredLabel: _,
             bShowCopyAction: _,
             bShowClearAction: _,
             bAlwaysShowClearAction: _,
@@ -26113,7 +26502,7 @@
           const {
             label: _,
             description: _,
-            requiredLabel: __webpack_require__,
+            requiredLabel: _,
             bShowCopyAction: _,
             bShowClearAction: _,
             bAlwaysShowClearAction: _,
@@ -26384,7 +26773,7 @@
       function _(_) {
         const {
             value: _,
-            onChange: __webpack_require__,
+            onChange: _,
             classNames: _,
             disabled: _,
             labelId: _,
@@ -26396,7 +26785,7 @@
           } = _,
           _ = {
             value: _,
-            setValue: __webpack_require__,
+            setValue: _,
             disabled: _,
           };
         return (0, _.jsx)(_.Provider, {
@@ -26419,12 +26808,7 @@
         });
       }
       function _(_) {
-        const {
-            value: _,
-            children: __webpack_require__,
-            role: _ = "radio",
-            ..._
-          } = _,
+        const { value: _, children: _, role: _ = "radio", ..._ } = _,
           { value: _, setValue: _, disabled: _ } = _.useContext(_);
         let _ = _;
         const _ = _ === _;
@@ -26440,7 +26824,7 @@
           ),
           onClick: _ ? void 0 : () => _(_),
           ..._,
-          children: __webpack_require__,
+          children: _,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -26496,14 +26880,14 @@
       function _(_) {
         const {
           label: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           strClassName: _,
           dropDownControlRef: _,
           ..._
         } = _;
         return (0, _.jsx)(_._, {
           label: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           className: _,
           children: (0, _.jsx)(_, {
             menuLabel: _,
@@ -26748,7 +27132,7 @@
       function _(_) {
         const {
             rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             selectedValue: _,
           } = _,
@@ -26769,7 +27153,7 @@
           onKeyDown: _,
           children: (0, _.jsx)(_, {
             rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
@@ -26777,7 +27161,7 @@
         });
       }
       function _(_) {
-        const { rgOptions: _, ...__webpack_require__ } = _;
+        const { rgOptions: _, ..._ } = _;
         return _.map((_, _) =>
           _(_)
             ? (0, _.jsx)(
@@ -26794,7 +27178,7 @@
               ? (0, _.jsx)(
                   _,
                   {
-                    ...__webpack_require__,
+                    ..._,
                     rgOptions: _.options,
                   },
                   _,
@@ -26802,7 +27186,7 @@
               : (0, _.jsx)(
                   _,
                   {
-                    ...__webpack_require__,
+                    ..._,
                     option: _,
                   },
                   _,
@@ -26812,7 +27196,7 @@
       function _(_) {
         const {
             option: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
@@ -26826,7 +27210,7 @@
           type: "button",
           className: (0, _._)(
             _().DialogDropDownMenu_Item,
-            __webpack_require__,
+            _,
             _.strOptionClass,
             _ && "ContextMenuAutoFocus",
           ),
@@ -26863,20 +27247,20 @@
           const {
             fnLoadOptions: _,
             strInitialDisplay: _,
-            initialValue: __webpack_require__,
+            initialValue: _,
             ..._
           } = this.props;
           let { rgOptions: _ } = this.state;
           return (
             void 0 === _ &&
-              (_ || __webpack_require__
+              (_ || _
                 ? ((_ = [
                     {
                       label: _,
-                      data: __webpack_require__,
+                      data: _,
                     },
                   ]),
-                  (_.selectedOption = __webpack_require__))
+                  (_.selectedOption = _))
                 : (_ = [])),
             (0, _.jsx)(_, {
               ..._,
@@ -27160,7 +27544,7 @@
         }
         ProcessDragMove(_) {
           _("ProcessDragMove", _, this.props.data);
-          const [_, __webpack_require__] = (function (_) {
+          const [_, _] = (function (_) {
             if ("touches" in _) {
               let _ = _;
               return [_.touches[0].clientX, _.touches[0].clientY];
@@ -27168,25 +27552,17 @@
             return [_.clientX, _.clientY];
           })(_);
           if (this.m_DragInfo.bStarted) {
-            if (
-              this.props.bEnableHTMLDrag &&
-              0 == _ &&
-              0 == __webpack_require__
-            )
-              return;
-            this.props.coordinator.OnDrag(this, _, __webpack_require__);
+            if (this.props.bEnableHTMLDrag && 0 == _ && 0 == _) return;
+            this.props.coordinator.OnDrag(this, _, _);
           } else
             Math.pow(_ - (this.m_DragInfo.startClientX ?? 0), 2) +
-              Math.pow(
-                __webpack_require__ - (this.m_DragInfo.startClientY ?? 0),
-                2,
-              ) >=
+              Math.pow(_ - (this.m_DragInfo.startClientY ?? 0), 2) >=
               25 &&
               ((this.m_DragInfo.bStarted = !0),
               this.forceUpdate(),
               this.props.fnOnDragStart && this.props.fnOnDragStart(),
               this.props.coordinator.OnDragStart(this),
-              this.props.coordinator.OnDrag(this, _, __webpack_require__));
+              this.props.coordinator.OnDrag(this, _, _));
         }
         OnMouseDown(_) {
           this.m_DragInfo.bStarted ||
@@ -27295,7 +27671,7 @@
           const {
             coordinator: _,
             data: _,
-            bEnableHTMLDrag: __webpack_require__,
+            bEnableHTMLDrag: _,
             strHTMLDragData: _,
             fnOnDragStart: _,
             fnOnDragEnd: _,
@@ -27311,11 +27687,11 @@
           return (
             this.m_DragInfo.bStarted
               ? ((_ = (0, _._)(_, _ || "DraggedOut")),
-                __webpack_require__ &&
+                _ &&
                   (_ = {
                     onDragEnd: this.OnHTMLDragEnd,
                   }))
-              : (_ = __webpack_require__
+              : (_ = _
                   ? {
                       onDragStart: this.OnHTMLDragStart,
                     }
@@ -27328,7 +27704,7 @@
               className: _,
               ..._,
               ..._,
-              draggable: __webpack_require__,
+              draggable: _,
               children: _,
             })
           );
@@ -27499,7 +27875,7 @@
           const {
               coordinator: _,
               fnBAcceptDraggable: _,
-              fnOnDrop: __webpack_require__,
+              fnOnDrop: _,
               fnOnDragEnter: _,
               fnOnDragLeave: _,
               className: _,
@@ -27563,7 +27939,7 @@
       function _(_) {
         const {
             stylesheet: _,
-            pages: __webpack_require__,
+            pages: _,
             iActivePage: _,
             onPageSelected: _,
             PageListItemComponent: _ = _,
@@ -27573,8 +27949,8 @@
         return __webpack_require__
           .filter((_, _) => {
             if (_ === _ || _ === _) {
-              for (let _ = _ + 1; _ < __webpack_require__.length; _++) {
-                const _ = __webpack_require__[_];
+              for (let _ = _ + 1; _ < _.length; _++) {
+                const _ = _[_];
                 if (_ !== _ && _ !== _ && _.visible) return !0;
               }
               return !1;
@@ -27630,7 +28006,7 @@
       function _(_) {
         const {
           title: _,
-          icon: __webpack_require__,
+          icon: _,
           active: _,
           className: _,
           onClick: _,
@@ -27641,10 +28017,10 @@
           onClick: _,
           ..._,
           children: [
-            __webpack_require__
+            _
               ? (0, _.jsx)("div", {
                   className: _().PageListItem_Icon,
-                  children: __webpack_require__,
+                  children: _,
                 })
               : null,
             (0, _.jsx)("div", {
@@ -27657,221 +28033,211 @@
       }
       (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
       const _ = _.forwardRef(function (_, _) {
-        const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
+        const { activePage: _, style: _, stylesheet: _ } = _,
           _ = _.useContext(_),
-          _ = __webpack_require__?.padding ?? "standard";
+          _ = _?.padding ?? "standard";
         return (0, _.jsxs)(_._, {
           style: _,
           className: (0, _._)(
             _?.PagedSettingsDialog_PageContent,
-            __webpack_require__?.pageClassName,
+            _?.pageClassName,
             "none" == _ && _?.NoPadding,
           ),
           refElem: _,
           role: "tabpanel",
-          "aria-labelledby": _ + __webpack_require__?.identifier,
-          _: _ + __webpack_require__?.identifier + "_Content",
+          "aria-labelledby": _ + _?.identifier,
+          _: _ + _?.identifier + "_Content",
           children: [
-            __webpack_require__?.header,
-            !__webpack_require__?.hideTitle &&
+            _?.header,
+            !_?.hideTitle &&
               (0, _.jsx)(_._, {
-                children: __webpack_require__?.title,
+                children: _?.title,
               }),
             (0, _.jsx)(_._, {
-              children: __webpack_require__?.content,
+              children: _?.content,
             }),
           ],
         });
       });
       function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
+        const { bTransparent: _, className: _, ..._ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(__webpack_require__, _().PageListSeparator, {
+          className: (0, _._)(_, _().PageListSeparator, {
             [_().Transparent]: _,
           }),
           ..._,
         });
       }
-      const _ = _.createContext(void 0),
-        _ = _.forwardRef(function (_, _) {
-          const {
-              stylesheet: __webpack_require__ = _(),
-              pages: _,
-              onPageRequested: _,
-            } = _,
-            _ = _.useId(),
-            _ = null == _.page,
-            [_, _] = _.useState(() =>
-              void 0 === _.startingPage
-                ? -1
-                : _.findIndex(
-                    (_) =>
-                      "object" == typeof _ && _.identifier === _.startingPage,
-                  ),
-            );
-          let _ = _;
-          _ ||
-            (_ = _.findIndex(
-              (_) => "object" == typeof _ && _.identifier === _.page,
-            )),
-            (_ < 0 || _ >= _.length) && (_ = 0);
-          let _ = null;
-          "object" == typeof _[_] && (_ = _[_]);
-          const _ = _.useRef(null),
-            _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
-            [_, _] = _.useState(!1),
-            _ = _ ? _ : void 0,
-            _ = _.useCallback((_) => {
-              _ && _(!0);
-            }, []),
-            _ = _.useCallback(
-              (_, _) => {
-                _(!0),
-                  _._.PlayNavSound(_._.PagedNavigation),
-                  _ && _(_.identifier),
-                  _.click ? _.click() : _ && _(_);
-              },
-              [_, _],
+      const _ = _.createContext(void 0);
+      _.forwardRef(function (_, _) {
+        const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
+          _ = _.useId(),
+          _ = null == _.page,
+          [_, _] = _.useState(() =>
+            void 0 === _.startingPage
+              ? -1
+              : _.findIndex(
+                  (_) =>
+                    "object" == typeof _ && _.identifier === _.startingPage,
+                ),
+          );
+        let _ = _;
+        _ ||
+          (_ = _.findIndex(
+            (_) => "object" == typeof _ && _.identifier === _.page,
+          )),
+          (_ < 0 || _ >= _.length) && (_ = 0);
+        let _ = null;
+        "object" == typeof _[_] && (_ = _[_]);
+        const _ = _.useRef(null),
+          _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
+          [_, _] = _.useState(!1),
+          _ = _ ? _ : void 0,
+          _ = _.useCallback((_) => {
+            _ && _(!0);
+          }, []),
+          _ = _.useCallback(
+            (_, _) => {
+              _(!0),
+                _._.PlayNavSound(_._.PagedNavigation),
+                _ && _(_.identifier),
+                _.click ? _.click() : _ && _(_);
+            },
+            [_, _],
+          ),
+          _ = _.useRef(null),
+          _ = _.showTitle ?? !0,
+          _ = (0, _._)(
+            "DialogContentTransition",
+            _.PagedSettingDialog_ContentColumn,
+          );
+        _.useEffect(() => {
+          _.bAutoFocusPageContent && _.current?.TakeFocus();
+        }, []);
+        const { refForPageList: _, refForPage: _ } = (function () {
+          const _ = _.useMemo(() => new _(), []);
+          _.useEffect(
+            () => (
+              _.Get().m_setPagedSettingsInstances.add(_),
+              () => {
+                _.Get().m_setPagedSettingsInstances.delete(_);
+              }
             ),
-            _ = _.useRef(null),
-            _ = _.showTitle ?? !0,
-            _ = (0, _._)(
-              "DialogContentTransition",
-              __webpack_require__.PagedSettingDialog_ContentColumn,
-            );
-          _.useEffect(() => {
-            _.bAutoFocusPageContent && _.current?.TakeFocus();
-          }, []);
-          const { refForPageList: _, refForPage: _ } = (function () {
-            const _ = _.useMemo(() => new _(), []);
-            _.useEffect(
-              () => (
-                _.Get().m_setPagedSettingsInstances.add(_),
-                () => {
-                  _.Get().m_setPagedSettingsInstances.delete(_);
-                }
-              ),
+            [_],
+          );
+          const _ = _.useCallback(
+              (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
               [_],
-            );
-            const _ = _.useCallback(
-                (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = (0, _._)("scroll", _),
-              _ = (0, _._)("scroll", _),
-              _ = _.useCallback(
-                (_) => {
-                  _.m_flPageListScrollTop = _?.scrollTop ?? 0;
+            ),
+            _ = _.useCallback(
+              (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
+              [_],
+            ),
+            _ = (0, _._)("scroll", _),
+            _ = (0, _._)("scroll", _),
+            _ = _.useCallback(
+              (_) => {
+                _.m_flPageListScrollTop = _?.scrollTop ?? 0;
+              },
+              [_],
+            ),
+            _ = _.useCallback(
+              (_) => {
+                _.m_flPageScrollTop = _?.scrollTop ?? 0;
+              },
+              [_],
+            ),
+            _ = (0, _._)(_, _),
+            _ = (0, _._)(_, _);
+          return {
+            refForPageList: _,
+            refForPage: _,
+          };
+        })();
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_.PagedSettingsDialog, _.className),
+            ref: _,
+            children: [
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  _.PagedSettingsDialog_PageListColumn,
+                  _.hideList && _().Hidden,
+                  "PageListColumn",
+                ),
+                navRef: _,
+                onButtonDown: (_) => {
+                  _.detail.button == _._._ &&
+                    _.current?.TakeFocus(_.detail.button);
                 },
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => {
-                  _.m_flPageScrollTop = _?.scrollTop ?? 0;
-                },
-                [_],
-              ),
-              _ = (0, _._)(_, _),
-              _ = (0, _._)(_, _);
-            return {
-              refForPageList: _,
-              refForPage: _,
-            };
-          })();
-          return (0, _.jsx)(_.Provider, {
-            value: _,
-            children: (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                __webpack_require__.PagedSettingsDialog,
-                _.className,
-              ),
-              ref: _,
-              children: [
-                (0, _.jsxs)(_._, {
-                  className: (0, _._)(
-                    __webpack_require__.PagedSettingsDialog_PageListColumn,
-                    _.hideList && _().Hidden,
-                    "PageListColumn",
-                  ),
-                  navRef: _,
-                  onButtonDown: (_) => {
-                    _.detail.button == _._._ &&
-                      _.current?.TakeFocus(_.detail.button);
-                  },
-                  onFocusWithin: _,
-                  children: [
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className:
-                          __webpack_require__.PagedSettingsDialog_Title,
-                        children: _.title,
-                      }),
-                    _.topControls &&
-                      (0, _.jsx)("div", {
-                        children: _.topControls,
-                      }),
-                    (0, _.jsx)(_._, {
-                      className: (0, _._)(
-                        __webpack_require__.PagedSettingsDialog_PageList,
-                        _.disablePageListScrolling &&
-                          __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
-                        _ &&
-                          __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
-                        _.bNoHeaderPadding &&
-                          __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
-                      ),
-                      role: "tablist",
-                      "aria-orientation": "vertical",
-                      navEntryPreferPosition: _._.PREFERRED_CHILD,
-                      ref: _,
-                      children: (0, _.jsx)(_, {
-                        stylesheet: __webpack_require__,
-                        pages: _,
-                        iActivePage: _,
-                        onPageSelected: _,
-                        PageListItemComponent: _.PageListItemComponent,
-                        PageListSeparatorComponent:
-                          _.PageListSeparatorComponent,
-                      }),
+                onFocusWithin: _,
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.PagedSettingsDialog_Title,
+                      children: _.title,
                     }),
-                    _.bottomControls &&
-                      (0, _.jsx)("div", {
-                        children: _.bottomControls,
+                  _.topControls &&
+                    (0, _.jsx)("div", {
+                      children: _.topControls,
+                    }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(
+                      _.PagedSettingsDialog_PageList,
+                      _.disablePageListScrolling &&
+                        _.PagedSettingsDialog_PageList_DisableScrolling,
+                      _ && _.PagedSettingsDialog_PageList_ShowTitle,
+                      _.bNoHeaderPadding &&
+                        _.PageSettingsDialog_PageList_NoHeaderPadding,
+                    ),
+                    role: "tablist",
+                    "aria-orientation": "vertical",
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    ref: _,
+                    children: (0, _.jsx)(_, {
+                      stylesheet: _,
+                      pages: _,
+                      iActivePage: _,
+                      onPageSelected: _,
+                      PageListItemComponent: _.PageListItemComponent,
+                      PageListSeparatorComponent: _.PageListSeparatorComponent,
+                    }),
+                  }),
+                  _.bottomControls &&
+                    (0, _.jsx)("div", {
+                      children: _.bottomControls,
+                    }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                className: _,
+                onCancelButton: _,
+                navRef: _,
+                children: [
+                  _.toggleHideList &&
+                    (0, _.jsx)(_, {
+                      hideList: _.hideList,
+                      toggleHideList: _.toggleHideList,
+                    }),
+                  _.renderPageContent
+                    ? _.renderPageContent(_, _, _)
+                    : (0, _.jsx)(_, {
+                        ref: _,
+                        activePage: _,
+                        stylesheet: _,
                       }),
-                  ],
-                }),
-                (0, _.jsxs)(_._, {
-                  className: _,
-                  onCancelButton: _,
-                  navRef: _,
-                  children: [
-                    _.toggleHideList &&
-                      (0, _.jsx)(_, {
-                        hideList: _.hideList,
-                        toggleHideList: _.toggleHideList,
-                      }),
-                    _.renderPageContent
-                      ? _.renderPageContent(_, _, _)
-                      : (0, _.jsx)(_, {
-                          ref: _,
-                          activePage: _,
-                          stylesheet: __webpack_require__,
-                        }),
-                  ],
-                }),
-              ],
-            }),
-          });
+                ],
+              }),
+            ],
+          }),
         });
+      });
       const _ = _.createContext(!1);
       _.memo(function (_) {
         const {
             isActive: _,
-            refForPage: __webpack_require__,
+            refForPage: _,
             page: _,
             PageComponent: _,
             stylesheet: _,
@@ -27888,7 +28254,7 @@
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: (0, _.jsx)(_, {
-            ref: __webpack_require__,
+            ref: _,
             style: _,
             activePage: _,
             stylesheet: _,
@@ -27899,10 +28265,10 @@
         });
       });
       function _(_) {
-        const { hideList: _, toggleHideList: __webpack_require__ } = _;
+        const { hideList: _, toggleHideList: _ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _
             ? (0, _.jsx)(_.b8_, {
                 direction: "right",
@@ -27992,13 +28358,9 @@
               this.InternalOnInput();
         }
         render() {
-          const {
-            nMinHeight: _,
-            nMaxHeight: _,
-            ...__webpack_require__
-          } = this.props;
+          const { nMinHeight: _, nMaxHeight: _, ..._ } = this.props;
           return (0, _.jsx)(_._, {
-            ...__webpack_require__,
+            ..._,
             ref: this.m_refTextArea,
             onKeyUp: this.OnKeyUp,
             onBlur: this.OnBlur,
@@ -28017,7 +28379,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _ ? _ + "_Label" : void 0;
@@ -28026,15 +28387,15 @@
         return _ ? _ + "_Description" : void 0;
       }
       function _(_, _) {
-        const { label: __webpack_require__, description: _ } = _;
+        const { label: _, description: _ } = _;
         return {
-          "aria-labelledby": __webpack_require__ ? _(_) : void 0,
+          "aria-labelledby": _ ? _(_) : void 0,
           "aria-describedby": _ ? _(_) : void 0,
         };
       }
-      const _ = _.forwardRef(function (_, _) {
+      function _(_, _) {
         const {
-            accessibilityId: __webpack_require__,
+            accessibilityId: _,
             label: _,
             description: _,
             icon: _,
@@ -28054,6 +28415,7 @@
             tooltip: _,
             explainer: _,
             explainerTitle: _,
+            transparentBackground: _,
             ..._
           } = _,
           _ = (0, _._)(),
@@ -28063,9 +28425,9 @@
           _ = "before-children" == _ && !!_,
           _ = "inline" == _ && !!_,
           _ = "below" == _ && !!_,
-          _ = _ ?? (_ ? "shift-children-below" : "keep-inline"),
+          _ = _ ?? "keep-inline",
           _ = !!(_.onClick || _.onActivate || _.focusable),
-          _ = (null != _ && _) || null != _ || (_ && null != _),
+          _ = (_ && !!_) || !!_,
           _ = _ ?? "min",
           _ = _ ?? "standard",
           _ = _ ?? "standard",
@@ -28073,6 +28435,7 @@
           _ = _ ?? !0,
           _ = _ ?? 0,
           _ = _ ?? "center",
+          _ = !_ && !_,
           _ = (function (_, _) {
             const _ = (0, _._)(),
               _ = _.useCallback(() => {
@@ -28093,6 +28456,20 @@
             },
             [_],
           );
+        let _ = (0, _.jsxs)("div", {
+          className: _().FieldChildrenWithIcon,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().FieldIcon, _().BeforeChildren),
+                children: _,
+              }),
+            (0, _.jsx)("div", {
+              className: _().FieldChildrenInner,
+              children: _,
+            }),
+          ],
+        });
         return (0, _.jsxs)(_._, {
           focusable: _,
           noFocusRing: !0,
@@ -28106,13 +28483,12 @@
           className: (0, _._)(
             _,
             _().Field,
+            _ && _().Classic,
             _ && _().Disabled,
-            _ && _().WithFirstRow,
             _ && _().WithChildrenInline,
             _ && _().WithChildrenBelow,
             "center" == _ && _().VerticalAlignCenter,
             "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
-            !!_ && _().WithDescription,
             "standard" == _ && _().WithBottomSeparatorStandard,
             "thick" == _ && _().WithBottomSeparatorThick,
             "fixed" == _ && _().ChildrenWidthFixed,
@@ -28122,75 +28498,59 @@
             "compact" == _ && _().CompactPadding,
             _ && _().Clickable,
             _ && _().HighlightOnFocus,
+            _ && _().Background,
           ),
           style: {
             "--indent-level": _,
           },
           children: [
-            _ &&
-              (0, _.jsxs)("div", {
-                className: _().FieldLabelRow,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _().FieldLabel,
-                    _: _(__webpack_require__),
-                    children: [
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().FieldIcon, _().Front),
-                          children: _,
-                        }),
-                      _,
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          tooltip: _,
-                        }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: _().FieldChildrenWithIcon,
+            (0, _.jsxs)("div", {
+              className: _().FieldLeftColumn,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().FieldLabelRow,
+                    children: (0, _.jsxs)("div", {
+                      className: _().FieldLabel,
+                      _: _(_),
                       children: [
                         _ &&
                           (0, _.jsx)("div", {
-                            className: (0, _._)(
-                              _().FieldIcon,
-                              _().BeforeChildren,
-                            ),
+                            className: (0, _._)(_().FieldIcon, _().Front),
                             children: _,
                           }),
-                        (0, _.jsx)("div", {
-                          className: _().FieldChildrenInner,
-                          children: _,
-                        }),
+                        _,
+                        _ &&
+                          (0, _.jsx)(_._, {
+                            tooltip: _,
+                          }),
                       ],
                     }),
-                ],
-              }),
-            _ &&
-              (0, _.jsxs)("div", {
-                className: _().FieldChildrenWithIcon,
-                children: [
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                      children: _,
-                    }),
-                  (0, _.jsx)("div", {
-                    className: _().FieldChildrenInner,
+                  }),
+                _ && _,
+                _ &&
+                  (0, _.jsx)(_, {
+                    accessibilityId: _(_),
                     children: _,
                   }),
-                ],
-              }),
+              ],
+            }),
             _ &&
               (0, _.jsx)("div", {
-                className: _().FieldDescription,
-                _: _(__webpack_require__),
+                className: _().FieldRightColumn,
                 children: _,
               }),
           ],
         });
-      });
+      }
+      function _(_) {
+        const { accessibilityId: _, className: _, children: _ } = _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().FieldDescription, _),
+          _: _(_),
+          children: _,
+        });
+      }
       _.forwardRef(function (_, _) {
         return (0, _.jsx)(_, {
           ref: _,
@@ -28200,7 +28560,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            label: _,
             description: _,
             explainer: _,
             icon: _,
@@ -28213,6 +28573,7 @@
             childrenContainerWidth: _,
             padding: _,
             inlineWrap: _,
+            transparentBackground: _,
             fieldClassName: _,
             fieldChildren: _,
             accessibilityNameOrder: _,
@@ -28222,7 +28583,7 @@
           _ = _.useId();
         return (0, _.jsxs)(_, {
           accessibilityId: _,
-          label: __webpack_require__,
+          label: _,
           indentLevel: _,
           description: _,
           icon: _,
@@ -28238,6 +28599,7 @@
           explainer: _,
           className: _,
           disabled: _,
+          transparentBackground: _,
           onActivate: _ ? _ : void 0,
           children: [
             (0, _.jsx)(_, {
@@ -28251,7 +28613,7 @@
       });
       const _ = _.forwardRef(function (_, _) {
           const {
-              accessibilityId: __webpack_require__,
+              accessibilityId: _,
               label: _,
               description: _,
               explainer: _,
@@ -28270,7 +28632,7 @@
               accessibilityNameOrder: _,
               ..._
             } = _,
-            _ = (function (_, _, __webpack_require__ = ["label", "button"]) {
+            _ = (function (_, _, _ = ["label", "button"]) {
               const _ = _.useId(),
                 _ = _(_, _),
                 _ = {
@@ -28284,7 +28646,7 @@
                 (_["aria-describedby"] = _["aria-describedby"]),
                 _
               );
-            })(__webpack_require__, _, _);
+            })(_, _, _);
           return (0, _.jsx)(_._, {
             ..._,
             ..._,
@@ -28294,7 +28656,7 @@
         }),
         _ = _.forwardRef(function (_, _) {
           const {
-              label: __webpack_require__,
+              label: _,
               description: _,
               icon: _,
               layout: _,
@@ -28306,7 +28668,7 @@
             _ = _.useId();
           return (0, _.jsx)(_, {
             accessibilityId: _,
-            label: __webpack_require__,
+            label: _,
             description: _,
             icon: _,
             bottomSeparator: _,
@@ -28323,134 +28685,8 @@
             }),
           });
         });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            childrenKey: _,
-            childrenClasses: __webpack_require__,
-            children: _,
-            directionClass: _,
-            animate: _ = !0,
-            sizeClass: _,
-          } = _,
-          _ = (0, _._)(_().TransitionGroup, _);
-        return (0, _.jsx)(_._, {
-          className: _,
-          appear: !1,
-          enter: _,
-          exit: _,
-          children: (0, _.jsx)(
-            _,
-            {
-              childrenClasses: __webpack_require__,
-              sizeClass: _,
-              children: _,
-            },
-            _,
-          ),
-        });
-      }
-      function _(_) {
-        const {
-            sizeClass: _,
-            children: __webpack_require__,
-            childrenClasses: _,
-            navKey: _,
-            ..._
-          } = _,
-          [_, _, _, _] = (function () {
-            let _ = _.useRef(null),
-              _ = _.useRef(void 0);
-            _.useLayoutEffect(() => {
-              let _ = _.current;
-              if (!_ || _.current) return;
-              _.current = {
-                element: _,
-                activeProps: new Set(),
-                bExiting: !1,
-                fnDone: null,
-              };
-              let _ = _.current,
-                _ = (_) => {
-                  _.target == _ && _.activeProps.add(_.propertyName);
-                };
-              __webpack_require__.addEventListener("transitionrun", _, !1);
-              let _ = (_) => {
-                _.target == _ &&
-                  (_.activeProps.delete(_.propertyName),
-                  _.fnDone &&
-                    0 == _.activeProps.size &&
-                    _.bExiting &&
-                    _.fnDone());
-              };
-              __webpack_require__.addEventListener("transitionend", _, !1),
-                __webpack_require__.addEventListener("transitioncancel", _, !1);
-            }, []);
-            let _ = _.useCallback(
-                (_) => {
-                  _.current ? (_.current.fnDone = _) : _();
-                },
-                [_],
-              ),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !1);
-              }, [_]),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !0);
-              }, [_]);
-            return [_, _, _, _];
-          })(),
-          _ = _.useRef(!0),
-          _ = _.useCallback(() => _.current, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !0), _();
-          }, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !1), _();
-          }, [_]),
-          _ = _.childrenClasses,
-          _ = {
-            enter: _.enterStart,
-            enterActive: _.enterEnd,
-            exit: _.exitStart,
-            exitActive: _.exitEnd,
-          };
-        return _.current && !_.current.ownerDocument.defaultView
-          ? null
-          : (0, _.jsx)(_._, {
-              nodeRef: _,
-              classNames: _,
-              _: !0,
-              timeout: 1e4,
-              addEndListener: _,
-              onEntering: _,
-              onExiting: _,
-              ..._,
-              children: (0, _.jsx)("div", {
-                ref: _,
-                className: (0, _._)(_().ContentWrapper, _.base),
-                children: (0, _.jsx)(_._, {
-                  className: _,
-                  fnCanTakeFocus: _,
-                  navKey: _,
-                  children: _.children,
-                }),
-              }),
-            });
-      }
-      function _(_, _) {
-        return {
-          base: _,
-          enterStart: _.Enter,
-          enterEnd: _.EnterActive,
-          exitStart: _.Exit,
-          exitEnd: _.ExitActive,
-        };
-      }
+      var _;
+      __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.None = 0)] = "None"),
           (_[(_.Left = 1)] = "Left"),
@@ -28458,153 +28694,14 @@
           (_[(_._ = 3)] = "Up"),
           (_[(_.Down = 4)] = "Down");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext(null);
-      function _(_) {
-        const _ = _.useContext(_),
-          _ = (0, _._)().IN_VR,
-          { title: _, icon: _, active: _, ..._ } = _;
-        return (0, _.jsxs)(_._, {
-          preferredFocus: _,
-          navRef: _ && _ ? _ : void 0,
-          noFocusRing: !0,
-          onActivate: _ ? void 0 : _.onClick,
-          onFocus: _ ? void 0 : _.onClick,
-          ..._,
-          children: [
-            _ &&
-              (0, _.jsx)("div", {
-                className: _().PageListItem_Icon,
-                children: _,
-              }),
-            (0, _.jsx)("div", {
-              className: _().PageListItem_Title,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(__webpack_require__, _().Separator),
-          ..._,
-        });
-      }
-      _.forwardRef(function (_, _) {
-        const {
-            page: __webpack_require__,
-            bAutoFocusPageContent: _,
-            showTitle: _ = !1,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useRef(!0);
-        _.useEffect(() => {
-          (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
-        }, [__webpack_require__, _]);
-        return (0, _.jsx)(_.Provider, {
-          value: _,
-          children: (0, _.jsx)(_, {
-            ..._,
-            stylesheet: _(),
-            showTitle: _,
-            PageListItemComponent: _,
-            PageListSeparatorComponent: _,
-            renderPageContent:
-              _.renderPageContent ||
-              ((_, _, _) =>
-                (0, _.jsx)(_, {
-                  pages: _.pages,
-                  activePage: _,
-                  refForPage: _,
-                  PageComponent: _,
-                })),
-          }),
-        });
-      });
-      function _(_) {
-        const {
-            pages: _,
-            activePage: __webpack_require__,
-            refForPage: _,
-            PageComponent: _,
-          } = _,
-          _ = (function (_) {
-            let _ = _.useRef(_),
-              _ = _.useRef(_.None),
-              _ = _.current;
-            if (_ == _) return _.current;
-            let _ = _.None;
-            _ < _ ? (_ = _.Down) : _ > _ && (_ = _._);
-            return (_.current = _), (_.current = _), _;
-          })(
-            _.useMemo(
-              () => _.findIndex((_) => _ == __webpack_require__),
-              [_, __webpack_require__],
-            ),
-          ),
-          _ = (function (_, _) {
-            const _ = _.useMemo(() => new Map(), []),
-              _ = _.useRef(_);
-            _.current = _;
-            const _ = _.useRef(_);
-            _.current = _;
-            const _ = _.useCallback(
-              (_) => (_) => {
-                __webpack_require__.set(_, _),
-                  _ === _.current && (0, _._)(_.current, _);
-              },
-              [_],
-            );
-            return (
-              _.useEffect(
-                () => (
-                  (0, _._)(_, _ && __webpack_require__.get(_)),
-                  () => (0, _._)(_, void 0)
-                ),
-                [_, _, _],
-              ),
-              _
-            );
-          })(__webpack_require__?.identifier, _);
-        let _ =
-          ((_ = _()),
-          (_ = _) == _.Left
-            ? _.Left
-            : _ == _.Right
-              ? _.Right
-              : _ == _._
-                ? _._
-                : _ == _.Down
-                  ? _.Down
-                  : "");
-        var _, _;
-        return (0, _.jsx)(_, {
-          childrenKey: __webpack_require__?.identifier,
-          childrenClasses: _(_(), _().ContentTransition),
-          directionClass: _,
-          animate: _ != _.None,
-          children:
-            __webpack_require__ &&
-            (0, _.jsx)(
-              _,
-              {
-                ref: _(__webpack_require__.identifier),
-                stylesheet: _(),
-                activePage: __webpack_require__,
-              },
-              __webpack_require__.identifier,
-            ),
-        });
-      }
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      _.createContext(null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       _.forwardRef(function (_, _) {
         const {
-            className: __webpack_require__,
+            className: _,
             opened: _,
             arrowClassName: _,
             "aria-label": _,
@@ -28617,10 +28714,7 @@
           children: [
             (0, _.jsx)(_._, {
               _: _,
-              className: (0, _._)(
-                _().DropDownControlButton,
-                __webpack_require__,
-              ),
+              className: (0, _._)(_().DropDownControlButton, _),
               "aria-labelledby": _ || _,
               ..._,
               ref: _,
@@ -28650,7 +28744,7 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, ..._ } = _;
+        const { className: _, ..._ } = _;
         let _ = _.useRef(void 0),
           _ = (0, _._)(_, _);
         const [_, _] = _.useState(!1),
@@ -28658,7 +28752,7 @@
             _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
           }, []);
         return (0, _.jsx)(_._, {
-          className: __webpack_require__,
+          className: _,
           onOptionsButton: _,
           onOptionsActionDescription: (0, _._)(
             _ ? "#Login_HidePassword" : "#Login_ShowPassword",
@@ -28682,7 +28776,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            label: _,
             className: _,
             description: _,
             icon: _,
@@ -28694,7 +28788,7 @@
         return (0, _.jsx)(_, {
           accessibilityId: _,
           className: _,
-          label: __webpack_require__,
+          label: _,
           description: _,
           icon: _,
           bottomSeparator: _,
@@ -28708,7 +28802,7 @@
         });
       });
       _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, value: _, ..._ } = _,
+        const { className: _, value: _, ..._ } = _,
           _ = _ ?? "";
         return (0, _.jsx)(_, {
           autoComplete: "off",
@@ -28740,10 +28834,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
-            onExplicitFocusLevelChanged: __webpack_require__,
+            onExplicitFocusLevelChanged: _,
             onOKButton: _,
             onCancelButton: _,
             navRef: _,
@@ -28755,7 +28850,7 @@
             navRefPanel: _,
             onOKButton: _,
             onCancelButton: _,
-            onExplicitFocusLevelChanged: __webpack_require__,
+            onExplicitFocusLevelChanged: _,
           }),
           _ = (0, _._)(_, _);
         return (0, _.jsx)(_._, {
@@ -28769,7 +28864,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            onOKButton: __webpack_require__,
+            onOKButton: _,
             onCancelButton: _,
             navRef: _,
             focusable: _,
@@ -28780,7 +28875,7 @@
           _ = _.useCallback((_, _) => _.FocusVisibleChild(), []),
           { fnOnOKButton: _, fnOnCancelButton: _ } = _({
             navRefPanel: _,
-            onOKButton: __webpack_require__,
+            onOKButton: _,
             onCancelButton: _,
             fnFocusChildren: _,
           }),
@@ -28798,7 +28893,7 @@
       function _(_) {
         let {
           navRefPanel: _,
-          onOKButton: __webpack_require__,
+          onOKButton: _,
           onCancelButton: _,
           onExplicitFocusLevelChanged: _,
           fnFocusChildren: _,
@@ -28809,9 +28904,9 @@
               const _ = _.current;
               return _?.BHasFocus() && _(_, _.detail.button)
                 ? (_ && _(!0), !0)
-                : !!__webpack_require__ && __webpack_require__(_);
+                : !!_ && __webpack_require__(_);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -28838,6 +28933,15 @@
         return _.ChildTakeFocus(_);
       }
       var _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
         _,
         _,
         _,
@@ -28910,8 +29014,12 @@
           (_[(_.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
           (_[(_.ActualTrackingSystemName_String = 1054)] =
             "ActualTrackingSystemName_String"),
+          (_[(_.AllowCameraToggle_Bool = 1055)] = "AllowCameraToggle_Bool"),
+          (_[(_.AllowLightSourceFrequency_Bool = 1056)] =
+            "AllowLightSourceFrequency_Bool"),
           (_[(_.IsDedicatedVRHeadset_Bool = 1058)] =
             "IsDedicatedVRHeadset_Bool"),
+          (_[(_.HasEyeTracker_Bool = 1060)] = "HasEyeTracker_Bool"),
           (_[(_.ReportsTimeSinceVSync_Bool = 2e3)] =
             "ReportsTimeSinceVSync_Bool"),
           (_[(_.SecondsFromVsyncToPhotons_Float = 2001)] =
@@ -29078,8 +29186,8 @@
             "Hmd_SupportsGpuBusMonitoring_Bool"),
           (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
             "DriverProvidedIPDVisibility_Bool"),
-          (_[(_.Prop_Driver_Reserved_01 = 2109)] = "Prop_Driver_Reserved_01"),
-          (_[(_.Prop_Driver_Reserved_03 = 2111)] = "Prop_Driver_Reserved_03"),
+          (_[(_.Prop_Hmd_SupportsVRGamepadFocus_Bool = 2117)] =
+            "Prop_Hmd_SupportsVRGamepadFocus_Bool"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -29162,6 +29270,10 @@
             "VendorSpecific_Reserved_Start"),
           (_[(_.VendorSpecific_Reserved_End = 10999)] =
             "VendorSpecific_Reserved_End"),
+          (_[(_.SupportsInHMDRoomSetup_Bool = 11003)] =
+            "SupportsInHMDRoomSetup_Bool"),
+          (_[(_.VRLinkClientHMDSupportsRoomSetupRequests_Bool = 11004)] =
+            "VRLinkClientHMDSupportsRoomSetupRequests_Bool"),
           (_[(_.TrackedDeviceProperty_Max = 1e6)] =
             "TrackedDeviceProperty_Max");
       })(_ || (_ = {})),
@@ -29230,6 +29342,65 @@
             (_[(_.Notification_BeginInteraction = 602)] =
               "Notification_BeginInteraction"),
             (_[(_.Notification_Destroyed = 603)] = "Notification_Destroyed");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.TheaterFast = 0)] = "TheaterFast"),
+            (_[(_.TheaterSlow = 1)] = "TheaterSlow");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Constant = 0)] = "Constant"),
+            (_[(_.Nearest = 1)] = "Nearest"),
+            (_[(_.Linear = 2)] = "Linear"),
+            (_[(_.SmoothStep = 3)] = "SmoothStep"),
+            (_[(_.SmootherStep = 4)] = "SmootherStep");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
+            (_[(_.FloorAdjustExisting = 2)] = "FloorAdjustExisting"),
+            (_[(_.RoomSetupFloor = 3)] = "RoomSetupFloor"),
+            (_[(_.ClearRoomSetup = 4)] = "ClearRoomSetup"),
+            (_[(_.RoomSetupFull = 5)] = "RoomSetupFull");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Near = 0)] = "Near"),
+            (_[(_.Middle = 1)] = "Middle"),
+            (_[(_.Far = 2)] = "Far"),
+            (_[(_.VRGamepadUI = 3)] = "VRGamepadUI");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.__LocalSteamVR = 0)] = "__LocalSteamVR"),
+            (_[(_.__LocalSteam = 1)] = "__LocalSteam"),
+            (_[(_.__RemoteSteamVR = 2)] = "__RemoteSteamVR"),
+            (_[(_.__RemoteSteam = 3)] = "__RemoteSteam"),
+            (_[(_.MutualLocal = 4)] = "MutualLocal"),
+            (_[(_.MutualSteamVR = 5)] = "MutualSteamVR"),
+            (_[(_.MutualSteam = 6)] = "MutualSteam");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Dashboard = 1)] = "Dashboard"),
+            (_[(_.LeftHand = 2)] = "LeftHand"),
+            (_[(_.RightHand = 3)] = "RightHand"),
+            (_[(_.World = 4)] = "World"),
+            (_[(_.Theater = 5)] = "Theater"),
+            (_[(_.Boot = 6)] = "Boot");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.System = 1)] = "System"),
+            (_[(_.SteamInput = 2)] = "SteamInput"),
+            (_[(_.VRInput = 3)] = "VRInput");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.SceneApp = 1)] = "SceneApp"),
+            (_[(_.Panel = 2)] = "Panel");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.ThirdPartyClient = 1)] = "ThirdPartyClient"),
+            (_[(_.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
+            (_[(_.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
         })(_ || (_ = {}));
       (0, _._)(_()["error-shake-duration"]);
       function _(_, _) {
@@ -29247,7 +29418,8 @@
         (_[(_.None = 0)] = "None"),
           (_[(_.MouseDragging = 1)] = "MouseDragging"),
           (_[(_.TouchStart = 2)] = "TouchStart"),
-          (_[(_.TouchDragging = 3)] = "TouchDragging");
+          (_[(_.TouchDragging = 3)] = "TouchDragging"),
+          (_[(_.DPad = 4)] = "DPad");
       })(_ || (_ = {}));
       class _ extends _.Component {
         m_refSlider = _.createRef();
@@ -29321,6 +29493,8 @@
             case _.TouchDragging:
             case _.TouchStart:
               return 0;
+            case _.DPad:
+              return 2;
             case _.None:
               return;
           }
@@ -29341,13 +29515,15 @@
           if (_ != this.m_eDragMode) {
             switch (
               ((this.m_eDragMode = _),
-              this.props.onChangeStart &&
+              _ != _.None &&
+                this.props.onChangeStart &&
                 this.props.onChangeStart(this.SliderChangeSource),
               _)
             ) {
               case _.MouseDragging:
               case _.TouchDragging:
               case _.TouchStart:
+              case _.DPad:
                 this.RecomputeSliderBounds(),
                   (this.m_fStartValue = this.props.value),
                   (this.m_fLatestUserValue = this.props.value);
@@ -29421,6 +29597,7 @@
             )),
             _ != this.props.value)
           ) {
+            this.m_eDragMode == _.None && this.SetDragMode(_.DPad);
             const _ = _ > this.m_fLatestUserValue;
             _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
               (this.m_fLatestUserValue = _),
@@ -29601,7 +29778,9 @@
         }
         OnInnerSliderBlur() {
           (this.m_bInnerSliderHasFocus = !1),
-            this.m_fStartValue != this.m_fLatestUserValue && this.Complete();
+            (this.m_fStartValue == this.m_fLatestUserValue &&
+              this.m_eDragMode == _.None) ||
+              this.Complete();
         }
         ResetToDefault() {
           if (!this.CanResetToDefault || this.m_eDragMode != _.None) return;
@@ -29631,7 +29810,7 @@
           const {
               min: _,
               max: _,
-              value: __webpack_require__,
+              value: _,
               clampMax: _,
               clampMin: _,
               className: _,
@@ -29705,7 +29884,7 @@
                 "leftparen" == _ ? _().Left : _().Right,
                 "SliderHandleContainer",
               )));
-          const _ = _(__webpack_require__);
+          const _ = _(_);
           return (0, _.jsx)(_, {
             noFocusRing: !0,
             className: (0, _._)(
@@ -29733,7 +29912,7 @@
             "aria-label": _["aria-label"],
             children: (0, _.jsxs)(_._, {
               role: "slider",
-              "aria-valuenow": __webpack_require__,
+              "aria-valuenow": _,
               "aria-valuetext": _,
               ..._,
               className: (0, _._)(
@@ -29793,8 +29972,8 @@
                         }),
                       }),
                     this.validRange &&
-                      null != __webpack_require__ &&
-                      !isNaN(__webpack_require__) &&
+                      null != _ &&
+                      !isNaN(_) &&
                       this.showHandle &&
                       (0, _.jsx)("div", {
                         className: _,
@@ -29824,16 +30003,16 @@
       function _(_) {
         let {
             sliderValue: _,
-            notchCount: __webpack_require__,
+            notchCount: _,
             notchLabels: _,
             notchTicksVisible: _,
             renderNotch: _,
           } = _,
           _ = _ ?? [];
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         let _ = !1,
           _ = [];
-        for (let _ = 0; _ < __webpack_require__; ++_) {
+        for (let _ = 0; _ < _; ++_) {
           let _ = _.find((_) => _.notchIndex == _);
           _ && (_ = !0),
             _.push(
@@ -29843,7 +30022,7 @@
                   notchIndex: _,
                   sliderValue: _,
                   notchLabel: _,
-                  notchCount: __webpack_require__,
+                  notchCount: _,
                   notchTicksVisible: _,
                   renderNotch: _,
                 },
@@ -29877,11 +30056,7 @@
         });
       }
       function _(_) {
-        const {
-          alignLeftEnd: _,
-          alignRightEnd: __webpack_require__,
-          active: _,
-        } = _;
+        const { alignLeftEnd: _, alignRightEnd: _, active: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _.notchTicksVisible &&
@@ -29893,7 +30068,7 @@
                 className: (0, _._)(
                   _().SliderNotchLabel,
                   _ && _().AlignToLeft,
-                  __webpack_require__ && _().AlignToRight,
+                  _ && _().AlignToRight,
                 ),
                 children: _.notchLabel?.label,
               }),
@@ -29918,7 +30093,7 @@
         (0, _._)([_._], _.prototype, "OnContextMenu", null);
       _.forwardRef(function (_, _) {
         const {
-          label: __webpack_require__,
+          label: _,
           labelIndex: _,
           xOffset: _,
           onResize: _,
@@ -29946,32 +30121,34 @@
           },
           children: (0, _.jsx)("div", {
             className: _().CompoundSliderSubSliderLabelInternal,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
-          value: __webpack_require__,
+          value: _,
           onChange: _,
           disabled: _,
           className: _,
           focusable: _,
           children: _,
           navRef: _,
+          autoFocus: _,
           ..._
         } = _;
         return (0, _.jsxs)(_._, {
           ..._,
+          autoFocus: _,
           noFocusRing: !0,
           className: (0, _._)(_, _().Toggle, {
             [_().Disabled]: !!_,
-            [_()._]: !!__webpack_require__,
+            [_()._]: !!_,
           }),
           onClick: () => {
             if (!_ && _) {
-              const _ = !__webpack_require__;
+              const _ = !_;
               _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
             }
           },
@@ -29979,7 +30156,7 @@
           navRef: _,
           focusable: _,
           role: "checkbox",
-          "aria-checked": !!__webpack_require__,
+          "aria-checked": !!_,
           children: [
             (0, _.jsx)("div", {
               className: _().ToggleRail,
@@ -29993,10 +30170,9 @@
       });
       function _(_) {
         const _ = !!_.disabled,
-          { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
-          _._)(_),
+          { actionDescriptions: _, gamepadEvents: _ } = (0, _._)(_),
           _ = _.useId(),
-          { "aria-expanded": _, "aria-controls": _ } = _;
+          { autoFocus: _, "aria-expanded": _, "aria-controls": _ } = _;
         return (0, _.jsx)(_, {
           accessibilityId: _,
           className: _.className,
@@ -30011,11 +30187,12 @@
           highlightOnFocus: _.highlightOnFocus,
           inlineWrap: "keep-inline",
           onContextMenu: _.onContextMenu,
-          actionDescriptionMap: __webpack_require__,
+          actionDescriptionMap: _,
           onClick: _.onClick,
           indentLevel: _.indentLevel,
           ..._,
           children: (0, _.jsx)(_, {
+            autoFocus: _,
             "aria-expanded": _,
             "aria-controls": _,
             ..._(_, _),
@@ -30053,7 +30230,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() => Boolean(_)),
+        const [_, _] = (0, _.useState)(() => Boolean(_)),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
@@ -30070,7 +30247,7 @@
           elSuccess: _,
           elError: _,
           strThrobber: _,
-          fnSetLoading: __webpack_require__,
+          fnSetLoading: _,
           fnSetError: _,
           fnSetSuccess: _,
           fnSetStrError: _,
@@ -30083,7 +30260,7 @@
       function _(_) {
         const {
             strDialogTitle: _,
-            state: __webpack_require__,
+            state: _,
             closeModal: _,
             strThrobber: _,
           } = _,
@@ -30096,7 +30273,7 @@
             elSuccess: _,
             elError: _,
             strThrobber: _,
-          } = __webpack_require__;
+          } = _;
         return _ || _ || _
           ? (0, _.jsxs)(_._, {
               strTitle: _,
@@ -30154,10 +30331,10 @@
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
+        const { value: _, onChange: _, disabled: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().Toggle, _ && _().Disabled),
-          onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          onClick: () => !_ && _ && __webpack_require__(!_),
           children: [
             (0, _.jsx)("div", {
               className: _().ToggleRail,
@@ -30235,13 +30412,9 @@
           });
         }
         render() {
-          const {
-              children: _,
-              fallback: _,
-              errorKey: __webpack_require__,
-            } = this.props,
+          const { children: _, fallback: _, errorKey: _ } = this.props,
             { error: _, identifierHash: _, lastErrorKey: _ } = this.state;
-          return _ && __webpack_require__ == _
+          return _ && _ == _
             ? void 0 !== _
               ? "function" == typeof _
                 ? _(_.error)
@@ -30291,12 +30464,7 @@
           });
         },
         _ = (_) => {
-          const {
-              error: _,
-              onRefresh: __webpack_require__,
-              identifierHash: _,
-              store: _,
-            } = _,
+          const { error: _, onRefresh: _, identifierHash: _, store: _ } = _,
             _ = (_.error && _.error.message) || "unknown error",
             _ = `${_.product}_${_.version}_${_}`;
           return (0, _.jsxs)(_, {
@@ -30309,7 +30477,7 @@
                       textDecoration: "underline",
                       cursor: "pointer",
                     },
-                    onClick: __webpack_require__,
+                    onClick: _,
                     children: "Refresh",
                   }),
                 ],
@@ -30416,7 +30584,7 @@
           );
         return [_, _];
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const _ = new URLSearchParams(_.location.search.substring(1));
         for (const _ in _)
           if (_.hasOwnProperty(_)) {
@@ -30505,7 +30673,7 @@
         });
       }
       function _(_) {
-        const { none: _, partial: __webpack_require__, ..._ } = _;
+        const { none: _, partial: _, ..._ } = _;
         return _
           ? (0, _.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -30517,7 +30685,7 @@
                 fill: "currentColor",
               }),
             })
-          : __webpack_require__
+          : _
             ? (0, _.jsxs)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 version: "1.1",
@@ -30553,7 +30721,7 @@
               });
       }
       function _(_) {
-        const { type: _, partial: __webpack_require__, ..._ } = _,
+        const { type: _, partial: _, ..._ } = _,
           [_, _] = (0, _._)();
         return "triton" == _
           ? (0, _.jsxs)("svg", {
@@ -30620,7 +30788,7 @@
                 ],
               })
             : "xbox" == _
-              ? __webpack_require__
+              ? _
                 ? (0, _.jsxs)("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
                     version: "1.1",
@@ -30654,7 +30822,7 @@
                     }),
                   })
               : "ps4" == _
-                ? __webpack_require__
+                ? _
                   ? (0, _.jsxs)("svg", {
                       xmlns: "http://www.w3.org/2000/svg",
                       version: "1.1",
@@ -30724,7 +30892,7 @@
                       ],
                     })
                 : "ps5" == _
-                  ? __webpack_require__
+                  ? _
                     ? (0, _.jsxs)("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
                         version: "1.1",
@@ -30916,16 +31084,68 @@
                                     }),
                                   ],
                                 })
-                              : (0, _.jsx)(_, {
-                                  ..._,
-                                });
+                              : "mobile_touch" == _
+                                ? (0, _.jsxs)("svg", {
+                                    viewBox: "0 0 64 64",
+                                    transform:
+                                      "matrix(1, 0, 0, 1, 0, 0)rotate(270)",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    ..._,
+                                    children: [
+                                      (0, _.jsx)("rect", {
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: "3px",
+                                        height: "60.54",
+                                        _: "5.09",
+                                        _: "5.09",
+                                        width: "32.11",
+                                        _: "15.94",
+                                        _: "1.62",
+                                      }),
+                                      (0, _.jsx)("line", {
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: "3px",
+                                        _: "15.94",
+                                        _: "48.06",
+                                        _: "8.75",
+                                        _: "8.75",
+                                      }),
+                                      (0, _.jsx)("line", {
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: "3px",
+                                        _: "15.94",
+                                        _: "48.06",
+                                        _: "54.42",
+                                        _: "54.42",
+                                      }),
+                                      (0, _.jsx)("line", {
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: "3px",
+                                        _: "29.83",
+                                        _: "33.68",
+                                        _: "57.83",
+                                        _: "57.83",
+                                      }),
+                                    ],
+                                  })
+                                : (0, _.jsx)(_, {
+                                    ..._,
+                                  });
       }
       function _(_) {
-        const {
-          controllerType: _,
-          controllerStyle: __webpack_require__,
-          ..._
-        } = _;
+        const { controllerType: _, controllerStyle: _, ..._ } = _;
         switch (_) {
           case 4:
             return (0, _.jsx)(_, {
@@ -30966,6 +31186,7 @@
           case 41:
           case 38:
           case 44:
+          case 51:
             return (0, _.jsx)(_, {
               type: "switchpro",
               ..._,
@@ -30975,23 +31196,28 @@
               type: "hori",
               ..._,
             });
+          case 43:
+            return (0, _.jsx)(_, {
+              type: "mobile_touch",
+              ..._,
+            });
           default:
-            return 2 == __webpack_require__
+            return 2 == _
               ? (0, _.jsx)(_, {
                   type: "gamecube",
                   ..._,
                 })
-              : 3 == __webpack_require__
+              : 3 == _
                 ? (0, _.jsx)(_, {
                     type: "8bitdo_sn30",
                     ..._,
                   })
-                : 4 == __webpack_require__
+                : 4 == _
                   ? (0, _.jsx)(_, {
                       type: "8bitdo_pro",
                       ..._,
                     })
-                  : 5 == __webpack_require__
+                  : 5 == _
                     ? (0, _.jsx)(_, {
                         type: "8bitdo_ultimate",
                         ..._,
@@ -31003,7 +31229,7 @@
         }
       }
       function _(_) {
-        const { type: _, partial: __webpack_require__, ..._ } = _;
+        const { type: _, partial: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -31018,12 +31244,12 @@
         });
       }
       function _(_) {
-        const { color: _ = "currentColor", ...__webpack_require__ } = _;
+        const { color: _ = "currentColor", ..._ } = _;
         return (0, _.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
           fill: "none",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("path", {
             _: "M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z",
             fill: _,
@@ -31185,14 +31411,14 @@
         });
       }
       function _(_) {
-        const { direction: _, className: __webpack_require__, ..._ } = _;
+        const { direction: _, className: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              className: (0, _._)(_().FlipInRTL, _),
               ..._,
               children: (0, _.jsx)("path", {
                 _: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
@@ -31204,7 +31430,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              className: (0, _._)(_().FlipInRTL, _),
               ..._,
               children: (0, _.jsx)("path", {
                 _: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
@@ -31216,7 +31442,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              className: (0, _._)(_().FlipInRTL, _),
               ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
@@ -31228,7 +31454,7 @@
               viewBox: "0 0 36 36",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
-              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              className: (0, _._)(_().FlipInRTL, _),
               ..._,
               children: (0, _.jsx)("path", {
                 _: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
@@ -31238,14 +31464,14 @@
         }
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.98 10.23L3.20996 25H32.75L17.98 10.23Z",
                 fill: "currentColor",
@@ -31256,7 +31482,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.98 26.54L3.20996 11.77H32.75L17.98 26.54Z",
                 fill: "currentColor",
@@ -31267,7 +31493,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M9.82497 18.385L24.595 3.61499L24.595 33.155L9.82497 18.385Z",
                 fill: "currentColor",
@@ -31278,7 +31504,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M26.135 18.385L11.365 33.155L11.365 3.61503L26.135 18.385Z",
                 fill: "currentColor",
@@ -31287,7 +31513,7 @@
         }
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
@@ -32088,13 +32314,13 @@
         });
       }
       function _(_) {
-        const { bGreyOutRightSide: _, ...__webpack_require__ } = _;
+        const { bGreyOutRightSide: _, ..._ } = _;
         return _
           ? (0, _.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "-3 0 25 15",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: [
                 (0, _.jsx)("path", {
                   fill: "currentColor",
@@ -32114,7 +32340,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "-3 0 25 15",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: [
                 (0, _.jsx)("path", {
                   fill: "currentColor",
@@ -32269,7 +32495,7 @@
           const {
               placeholderWidth: _,
               placeholderHeight: _,
-              holdGampadFocus: __webpack_require__,
+              holdGampadFocus: _,
               onRender: _,
               style: _,
               mode: _,
@@ -32330,9 +32556,9 @@
         __webpack_require__("chunkid");
       function _(_) {
         const { labelledBy: _ } = _ || {},
-          [__webpack_require__, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0);
         return {
-          headerId: _ || __webpack_require__,
+          headerId: _ || _,
           context: _.useMemo(
             () => ({
               setHeaderId: _,
@@ -32344,7 +32570,7 @@
       function _(_) {
         const {
             active: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             className: _,
             modalClassName: _,
             children: _,
@@ -32358,7 +32584,7 @@
           children: (0, _.jsx)(_._, {
             active: _,
             children: (0, _.jsx)(_._, {
-              onEscKeypress: __webpack_require__,
+              onEscKeypress: _,
               className: _,
               children: (0, _.jsx)(_._, {
                 role: "dialog",
@@ -32372,12 +32598,12 @@
         });
       }
       function _(_) {
-        const { className: _, children: __webpack_require__ } = _;
+        const { className: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)("div", {
             className: _,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
@@ -32391,7 +32617,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0);
+        const [_, _] = (0, _.useState)(!0);
         return (
           (0, _.useEffect)(() => {
             (0, _.startTransition)(() => {
@@ -32412,10 +32638,10 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { Modal: _ } = _,
-          { name: __webpack_require__, modalProps: _, options: _ } = _,
+          { name: _, modalProps: _, options: _ } = _,
           _ = (0, _._)().ownerWindow,
           { popup: _, element: _ } = (0, _._)(
-            __webpack_require__,
+            _,
             {
               title: _.strTitle,
               html_class:
@@ -32503,9 +32729,8 @@
       }
       function _(_) {
         const { ModalManager: _ } = _,
-          [__webpack_require__, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
           [_, _] = _.useState(!0),
-          _ = _.useRef(0),
           _ = _.useCallback(() => {
             _.startTransition(() => {
               _(!0);
@@ -32513,30 +32738,29 @@
           }, []);
         _.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
           _.useLayoutEffect(() => {
-            __webpack_require__ ||
+            _ ||
               _.startTransition(() => {
                 _(_.TakeMeasureModalRequest()), _(!1);
               });
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         const _ = _.useCallback((_) => {
-          _.current++,
-            _.startTransition(() => {
-              _((_) => (_ === _ ? void 0 : _));
-            });
+          _.startTransition(() => {
+            _((_) => (_ === _ ? void 0 : _));
+          });
         }, []);
-        return __webpack_require__
+        return _
           ? (0, _.jsx)(
               _,
               {
                 onMeasureComplete: _,
-                request: __webpack_require__,
+                request: _,
               },
-              _.current,
+              _._,
             )
           : null;
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           _ = (0, _._)().ownerWindow;
         return (
           _.useLayoutEffect(() => {
@@ -32564,11 +32788,7 @@
         );
       }
       function _(_) {
-        const {
-          elContainer: _,
-          onMeasureComplete: __webpack_require__,
-          request: _,
-        } = _;
+        const { elContainer: _, onMeasureComplete: _, request: _ } = _;
         return (
           _.useEffect(() => {
             let _ = !1;
@@ -32590,7 +32810,7 @@
               })(_, _.promiseContentReady).then(_),
               () => _(void 0)
             );
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             children: _.rctToMeasure,
           })
@@ -32614,7 +32834,7 @@
       function _(_) {
         let {
           ModalManager: _,
-          bRegisterModalManager: __webpack_require__ = !0,
+          bRegisterModalManager: _ = !0,
           DialogWrapper: _,
           rctActiveContextMenus: _,
           bUseDialogElement: _ = !0,
@@ -32646,7 +32866,7 @@
             },
             [_],
           );
-        })(_, __webpack_require__);
+        })(_, _);
         let _ = null,
           _ = !_;
         return (
@@ -32711,7 +32931,7 @@
       function _(_) {
         const {
           modal: _,
-          rctActiveContextMenus: __webpack_require__,
+          rctActiveContextMenus: _,
           active: _,
           bUseDialogElement: _,
         } = _;
@@ -32733,7 +32953,7 @@
               ),
               ref: _.RefModalElement,
             }),
-            __webpack_require__,
+            _,
           ],
         });
         return _
@@ -32746,7 +32966,7 @@
       function _(_) {
         const {
             modal: _,
-            active: __webpack_require__,
+            active: _,
             rctActiveContextMenus: _,
             Component: _,
           } = _,
@@ -32757,9 +32977,9 @@
             children: (0, _.jsxs)(_, {
               className: (0, _._)(
                 "ModalOverlayContent",
-                __webpack_require__ ? "active" : "inactive",
+                _ ? "active" : "inactive",
               ),
-              active: __webpack_require__,
+              active: _,
               modalKey: _.key,
               children: [_, _.element],
             }),
@@ -32767,9 +32987,9 @@
         );
       }
       function _(_) {
-        const { className: _, active: __webpack_require__, children: _ } = _;
+        const { className: _, active: _, children: _ } = _;
         return (0, _.jsx)(_, {
-          active: __webpack_require__,
+          active: _,
           children: (0, _.jsx)(_._, {
             children: (0, _.jsx)("div", {
               className: _,
@@ -32780,7 +33000,7 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
+        const { active: _, children: _ } = _,
           _ = _.useRef(null),
           [_, _] = _.useState(!1);
         return (
@@ -32795,7 +33015,7 @@
             className: _.ModalDialog,
             onClose: () => _(!1),
             onCancel: (_) => _.preventDefault(),
-            children: __webpack_require__,
+            children: _,
           })
         );
       }
@@ -32839,7 +33059,7 @@
           };
         }
         const {
-            strTitle: __webpack_require__,
+            strTitle: _,
             strDescription: _,
             strOKButtonText: _,
             strCancelButtonText: _,
@@ -32884,7 +33104,7 @@
         return (0, _.jsx)(_._, {
           ..._,
           title:
-            __webpack_require__ ||
+            _ ||
             (0, _.jsx)(_.Fragment, {
               children: " ",
             }),
@@ -32967,7 +33187,7 @@
       function _(_) {
         const {
             className: _,
-            modalClassName: __webpack_require__,
+            modalClassName: _,
             onCancel: _,
             closeModal: _,
             bOKDisabled: _,
@@ -32984,7 +33204,7 @@
           _ = (0, _._)();
         (0, _._)(
           _ || _,
-          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_} ${__webpack_require__}`,
+          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_} ${_}`,
         );
         const _ = _.useCallback(() => {
             (_ && _()) || (_ && _());
@@ -32994,7 +33214,7 @@
           }, [_, _, _, _]);
         return (0, _.jsx)(_._, {
           onEscKeypress: _,
-          className: __webpack_require__,
+          className: _,
           bDestructiveWarning: _,
           bDisableBackgroundDismiss: _,
           bHideCloseIcon: _,
@@ -33015,12 +33235,7 @@
         });
       }
       function _(_) {
-        const {
-            title: _,
-            titleClassName: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { title: _, titleClassName: _, children: _, ..._ } = _,
           _ = _.useId();
         return (0, _.jsxs)(_, {
           "aria-labelledby": _ ? _ : "",
@@ -33029,7 +33244,7 @@
             _ &&
               (0, _.jsx)(_._, {
                 _: _,
-                className: __webpack_require__,
+                className: _,
                 children: _,
               }),
             _,
@@ -33147,7 +33362,7 @@
       function _(_) {
         const {
             refContextMenuManager: _,
-            bRegisterMenuManager: __webpack_require__ = !0,
+            bRegisterMenuManager: _ = !0,
             children: _,
           } = _,
           _ = (0, _._)(),
@@ -33156,12 +33371,12 @@
         return (
           _.current || (_.current = new _._()),
           _.useLayoutEffect(() => {
-            if (__webpack_require__)
+            if (_)
               return (
                 _._.SetMenuManager(_, _.current),
                 () => _._.SetMenuManager(_, void 0)
               );
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _.useLayoutEffect(
             () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
             [_],
@@ -33181,16 +33396,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            managerOverride: _,
-            bSuppressMouseOverlay: __webpack_require__,
-          } = _,
+        const { managerOverride: _, bSuppressMouseOverlay: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = _.useContext(_),
           _ = _ ?? _;
         (0, _._)(_.OnMenusChanged, _);
-        const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
+        const _ = !_ && _.BShouldRenderMouseOverlay(),
           _ = _.GetAllMenus();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -33211,11 +33423,7 @@
         });
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _(),
           _ = (0, _._)().ownerWindow,
           _ = _.useRef(void 0);
@@ -33237,7 +33445,7 @@
           children: _.current
             ? (0, _.jsx)(_, {
                 instance: _,
-                browserInfo: __webpack_require__,
+                browserInfo: _,
                 children: _,
               })
             : (0, _.jsx)(_, {
@@ -33247,26 +33455,22 @@
         });
       }
       function _(_) {
-        const { instance: _, children: __webpack_require__ } = _;
+        const { instance: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           ..._.position,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _.useRef(null),
           _ = (0, _._)().ownerWindow,
           _ = _.SteamClient.Browser.GetBrowserID(),
           _ = _.useCallback(
             (_) => {
-              const { options: __webpack_require__, position: _ } = _,
+              const { options: _, position: _ } = _,
                 _ = _.element;
-              if (__webpack_require__.bScreenCoordinates)
+              if (_.bScreenCoordinates)
                 _.dimensions = {
                   left: _.clientX,
                   top: _.clientY,
@@ -33308,7 +33512,7 @@
               "ContextMenuPopupBody",
             ),
             replace_existing_popup: !1,
-            target_browser: __webpack_require__,
+            target_browser: _,
             window_opener_id: _,
             bHideOnClose: !0,
             eCreationFlags: _,
@@ -33357,7 +33561,7 @@
         _ = _.memo(function (_) {
           const {
               children: _,
-              bRenderOverlayAtRoot: __webpack_require__,
+              bRenderOverlayAtRoot: _,
               refModalManager: _,
               DialogWrapper: _,
               bUseDialogElement: _ = !0,
@@ -33445,6 +33649,7 @@
         m_OnModalHiddenCallbacks = new _._();
         m_cMountedOverlays = 0;
         m_rgMeasureModalRequests = [];
+        m_nMeasureRequestID = 0;
         m_OnMeasureModal = new _._();
         m_rgLegacyPopupModals = [];
         m_OnLegacyPopupModalCountChanged = new _._();
@@ -33515,10 +33720,6 @@
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(_) {
-          (0, _._)(
-            !this.m_bOnlyPopups,
-            "Attempting to show modal in popup-only modal manager; will not display.",
-          );
           const _ = new _._(_);
           this.m_rgModals.push(_);
           const _ = {
@@ -33581,6 +33782,7 @@
         }
         RequestModalMeasure(_, _, _) {
           this.m_rgMeasureModalRequests.push({
+            _: this.m_nMeasureRequestID++,
             rctToMeasure: _,
             fnResults: _,
             promiseContentReady: _,
@@ -33758,7 +33960,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
+        const { active: _, children: _ } = _,
           _ = (0, _._)() || (0, _._)(window),
           _ = (0, _._)(),
           [_, _] = _.useState(null),
@@ -33786,7 +33988,7 @@
         )
           return null;
         let _ = (0, _.jsx)(_._, {
-          children: __webpack_require__,
+          children: _,
         });
         return (
           _ &&
@@ -33827,7 +34029,7 @@
         });
       }
       function _(_) {
-        const { featureName: _, render: __webpack_require__ } = _,
+        const { featureName: _, render: _ } = _,
           _ = _.useMemo(
             () =>
               Array.from(
@@ -33843,7 +34045,7 @@
                   {
                     featureName: _,
                     elem: _,
-                    render: __webpack_require__,
+                    render: _,
                   },
                   _,
                 ),
@@ -33852,7 +34054,7 @@
           : null;
       }
       function _(_) {
-        const { featureName: _, render: __webpack_require__ } = _,
+        const { featureName: _, render: _ } = _,
           _ = (0, _._)(),
           _ = _.useRef([]),
           _ = _.useRef(0);
@@ -33900,7 +34102,7 @@
                 {
                   elem: _,
                   featureName: _,
-                  render: __webpack_require__,
+                  render: _,
                 },
                 _,
               ),
@@ -33909,7 +34111,7 @@
         );
       }
       function _(_) {
-        const { featureName: _, elem: __webpack_require__, render: _ } = _,
+        const { featureName: _, elem: _, render: _ } = _,
           _ = _.useMemo(
             () =>
               (function (_, _) {
@@ -33930,13 +34132,13 @@
                   );
                 }
               })(__webpack_require__.getAttribute("data-props"), _),
-            [__webpack_require__, _],
+            [_, _],
           );
         return (0, _.createPortal)(
           (0, _.jsx)(_._, {
             children: _(_),
           }),
-          __webpack_require__,
+          _,
         );
       }
       function _(_, _) {
@@ -34170,7 +34372,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)();
+        const [_, _] = (0, _._)();
         return (0, _.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 15 23",
@@ -34178,7 +34380,7 @@
           ..._,
           children: [
             (0, _.jsx)("g", {
-              clipPath: __webpack_require__,
+              clipPath: _,
               children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 fillRule: "evenodd",
@@ -34310,7 +34512,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)();
+        const [_, _] = (0, _._)();
         return (0, _.jsx)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -34323,7 +34525,7 @@
           enableBackground: "new 0 0 100 91.582",
           children: (0, _.jsx)("g", {
             children: (0, _.jsx)("path", {
-              clipPath: __webpack_require__,
+              clipPath: _,
               _: "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
             }),
           }),
@@ -34361,7 +34563,7 @@
         });
       }
       function _(_) {
-        const { color: _ = "#FFFFFF", ...__webpack_require__ } = _;
+        const { color: _ = "#FFFFFF", ..._ } = _;
         return (0, _.jsxs)("svg", {
           version: "1.1",
           _: "Layer_2",
@@ -34372,7 +34574,7 @@
           width: "256px",
           height: "256px",
           viewBox: "0 0 256 256",
-          ...__webpack_require__,
+          ..._,
           children: [
             (0, _.jsx)("line", {
               fill: "none",
@@ -34418,15 +34620,11 @@
         });
       }
       function _(_) {
-        const { muted: _, className: __webpack_require__ } = _;
+        const { muted: _, className: _ } = _;
         return (0, _.jsxs)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
-          className: (0, _._)(
-            "SVGIcon_Button",
-            "SVGIcon_Volume",
-            __webpack_require__,
-          ),
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_Volume", _),
           _: "0px",
           _: "0px",
           width: "256px",
@@ -34528,7 +34726,7 @@
         });
       }
       function _(_) {
-        const { color: _ = "#fff", ...__webpack_require__ } = _;
+        const { color: _ = "#fff", ..._ } = _;
         return (0, _.jsx)("svg", {
           version: "1.1",
           _: "base",
@@ -34544,7 +34742,7 @@
           strokeLinecap: "round",
           strokeLinejoin: "round",
           strokeMiterlimit: "10",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("polyline", {
             fill: "none",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
@@ -34642,7 +34840,7 @@
         });
       }
       function _(_) {
-        const { className: _, color: __webpack_require__ = "#020202" } = _;
+        const { className: _, color: _ = "#020202" } = _;
         return (0, _.jsxs)("svg", {
           version: "1.1",
           _: "Layer_1",
@@ -34658,7 +34856,7 @@
               className: "triangle",
               children: [
                 (0, _.jsx)("path", {
-                  stroke: __webpack_require__,
+                  stroke: _,
                   strokeWidth: "16",
                   strokeLinecap: "round",
                   strokeMiterlimit: "10",
@@ -34666,7 +34864,7 @@
                 }),
                 (0, _.jsx)("path", {
                   fill: "none",
-                  stroke: __webpack_require__,
+                  stroke: _,
                   strokeWidth: "11",
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
@@ -34674,7 +34872,7 @@
                   _: "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606",
                 }),
                 (0, _.jsx)("path", {
-                  fill: __webpack_require__,
+                  fill: _,
                   _: "M127.9,208.12",
                 }),
               ],
@@ -34684,7 +34882,7 @@
               children: [
                 (0, _.jsx)("line", {
                   fill: "none",
-                  stroke: __webpack_require__,
+                  stroke: _,
                   strokeWidth: "16",
                   strokeLinecap: "round",
                   strokeMiterlimit: "10",
@@ -34694,7 +34892,7 @@
                   _: "160.07",
                 }),
                 (0, _.jsx)("path", {
-                  fill: __webpack_require__,
+                  fill: _,
                   _: "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12",
                 }),
               ],
@@ -34791,7 +34989,7 @@
         });
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
@@ -34800,7 +34998,7 @@
               height: "36px",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
                 fill: _.fill || "currentColor",
@@ -34813,7 +35011,7 @@
               height: "36px",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
                 fill: _.fill || "currentColor",
@@ -34826,7 +35024,7 @@
               height: "36px",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
                 fill: _.fill || "currentColor",
@@ -34839,7 +35037,7 @@
               height: "36px",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
                 fill: _.fill || "currentColor",
@@ -34848,7 +35046,7 @@
         }
       }
       function _(_) {
-        const { angle: _, ...__webpack_require__ } = _;
+        const { angle: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           version: "1.1",
           _: "Layer_1",
@@ -34863,7 +35061,7 @@
           height: "100px",
           viewBox: "0 0 50 100",
           fill: _.fill || "#ffffff",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("polygon", {
             points:
               "0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 ",
@@ -34871,7 +35069,7 @@
         });
       }
       function _(_) {
-        const { angle: _, singlearrow: __webpack_require__, ..._ } = _;
+        const { angle: _, singlearrow: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           style: {
             transform: `rotate(${_}deg)`,
@@ -34899,7 +35097,7 @@
               strokeMiterlimit: "10",
               points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
             }),
-            !__webpack_require__ &&
+            !_ &&
               (0, _.jsx)("polyline", {
                 className: "Arrow2",
                 fill: "none",
@@ -34913,7 +35111,7 @@
         });
       }
       function _(_) {
-        const { angle: _, ...__webpack_require__ } = _;
+        const { angle: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           style: {
             transform: `rotate(${_}deg)`,
@@ -34922,7 +35120,7 @@
           className: _().HasHorizontalDirection,
           viewBox: "0 0 32 32",
           fill: "none",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("path", {
             fill: _.fill || "currentColor",
             fillRule: "evenodd",
@@ -35065,7 +35263,7 @@
         });
       }
       function _(_) {
-        const { angle: _, ...__webpack_require__ } = _;
+        const { angle: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           style: {
             transform: `rotate(${_.angle}deg)`,
@@ -35079,7 +35277,7 @@
           width: "256px",
           height: "256px",
           viewBox: "0 0 256 256",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("polygon", {
             points: "13.913,141 128,59 242.087,141 ",
             fill: _.fill || "#ffffff",
@@ -35370,7 +35568,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)();
+        const [_, _] = (0, _._)();
         return (0, _.jsxs)("svg", {
           width: "36",
           height: "36",
@@ -35381,7 +35579,7 @@
           ..._,
           children: [
             (0, _.jsx)("g", {
-              clipPath: __webpack_require__,
+              clipPath: _,
               children: (0, _.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
@@ -36097,10 +36295,10 @@
             });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_().SteamDeckCompatLogo, _),
-          ...__webpack_require__,
+          ..._,
           viewBox: "0 0 20 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
@@ -36114,14 +36312,14 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(
             _().SteamDeckCompatIcon,
             _().SteamOSCompatCompatible,
             _,
           ),
-          ...__webpack_require__,
+          ..._,
           viewBox: "0 0 20 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
@@ -36134,14 +36332,14 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(
             _().SteamDeckCompatIcon,
             _().SteamOSCompatInformation,
             _,
           ),
-          ...__webpack_require__,
+          ..._,
           viewBox: "0 0 48 48",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
@@ -36154,14 +36352,14 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(
             _().SteamDeckCompatIcon,
             _().SteamDeckCompatVerified,
             _,
           ),
-          ...__webpack_require__,
+          ..._,
           viewBox: "0 0 20 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
@@ -36174,14 +36372,14 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(
             _().SteamDeckCompatIcon,
             _().SteamDeckCompatPlayable,
             _,
           ),
-          ...__webpack_require__,
+          ..._,
           viewBox: "0 0 20 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
@@ -36194,14 +36392,14 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(
             _().SteamDeckCompatIcon,
             _().SteamDeckCompatUnsupported,
             _,
           ),
-          ...__webpack_require__,
+          ..._,
           viewBox: "0 0 20 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
@@ -36214,14 +36412,14 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(
             _().SteamDeckCompatIcon,
             _().SteamDeckCompatUnknown,
             _,
           ),
-          ...__webpack_require__,
+          ..._,
           viewBox: "0 0 20 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
@@ -36234,7 +36432,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           width: "23",
           height: "25",
@@ -36262,7 +36460,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           width: "24",
           height: "25",
@@ -36308,7 +36506,7 @@
         });
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
@@ -36787,14 +36985,14 @@
         });
       }
       function _(_) {
-        const { fill: _, ...__webpack_require__ } = _;
+        const { fill: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 10 10",
           width: "10",
           height: "10",
           fill: "none",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("circle", {
             _: "5",
             _: "5",
@@ -36804,14 +37002,14 @@
         });
       }
       function _(_) {
-        const { fill: _, ...__webpack_require__ } = _;
+        const { fill: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 16 8",
           width: "16",
           height: "8",
           fill: "none",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("rect", {
             _: "0",
             _: "0",
@@ -36823,14 +37021,14 @@
         });
       }
       function _(_) {
-        const { fill: _, ...__webpack_require__ } = _;
+        const { fill: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 10 10",
           width: "10",
           height: "10",
           fill: "none",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("rect", {
             _: "1",
             _: "1",
@@ -36874,17 +37072,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(0, _._)();
         return (
@@ -36926,17 +37120,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {
@@ -37230,14 +37420,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { popup: _, onMaximize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMaximize: _, bOSX: _ } = _,
           _ = (0, _._)(_),
           _ = _.useCallback(() => {
-            __webpack_require__
+            _
               ? __webpack_require__()
               : (0, _._)(_, "Window.ToggleMaximize") &&
                 _.SteamClient.Window.ToggleMaximize();
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return (0, _.jsx)(_, {
           className: (0, _._)(
             _ ? "restoreButton" : "maximizeButton",
@@ -37248,18 +37438,18 @@
         });
       }
       function _(_) {
-        const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMinimize: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _.SteamClient.Window.Minimize();
           }, [_]);
         return (0, _.jsx)(_, {
           className: "minimizeButton windowControlButton",
-          onClick: __webpack_require__ ?? _,
+          onClick: _ ?? _,
           children: !_ && (0, _.jsx)(_.Xjb, {}),
         });
       }
       function _(_) {
-        const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onClose: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _ &&
               ((0, _._)(_, "Window.Close")
@@ -37268,18 +37458,17 @@
           }, [_]);
         return (0, _.jsx)(_, {
           className: "closeButton windowControlButton",
-          onClick: __webpack_require__ ?? _,
+          onClick: _ ?? _,
           children: !_ && (0, _.jsx)(_.sED, {}),
         });
       }
       function _(_) {
-        const { className: _, onClick: __webpack_require__, children: _ } = _,
+        const { className: _, onClick: _, children: _ } = _,
           _ = _.useCallback(
             (_) => {
-              __webpack_require__ &&
-                (_.stopPropagation(), __webpack_require__(_));
+              _ && (_.stopPropagation(), __webpack_require__(_));
             },
-            [__webpack_require__],
+            [_],
           );
         return (0, _.jsx)("div", {
           className: (0, _._)("title-area-icon", _),
@@ -37293,7 +37482,7 @@
       function _(_) {
         const {
             className: _,
-            style: __webpack_require__,
+            style: _,
             hideActions: _,
             hideClose: _,
             hideMin: _,
@@ -37316,7 +37505,7 @@
             (_ || _) && "WindowFocus",
             _,
           ),
-          style: __webpack_require__,
+          style: _,
           children: [
             (0, _.jsx)("div", {
               className: "title-area-highlight",
@@ -37382,11 +37571,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = _.createContext({}),
         _ = () => _.useContext(_);
       function _(_) {
-        const [_, __webpack_require__] = _.useState(null),
+        const [_, _] = _.useState(null),
           _ = _.useMemo(
             () => ({
               targetElement: _,
@@ -37397,14 +37587,14 @@
           value: _,
           children: [
             (0, _.jsx)("div", {
-              ref: __webpack_require__,
+              ref: _,
             }),
             _.children,
           ],
         });
       }
       function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _({
+        const { divProps: _, tooltipProps: _ } = _({
           ..._,
           toolTipContent: _.toolTipContent
             ? (0, _.jsx)(_, {
@@ -37419,14 +37609,14 @@
           ..._,
           children: [
             (0, _.jsx)(_, {
-              ...__webpack_require__,
+              ..._,
             }),
             _.children,
           ],
         });
       }
       function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _(_);
+        const { divProps: _, tooltipProps: _ } = _(_);
         return (0, _.jsxs)(_._, {
           className: "tool-tip-source",
           noFocusRing: !0,
@@ -37434,7 +37624,7 @@
           ..._,
           children: [
             (0, _.jsx)(_, {
-              ...__webpack_require__,
+              ..._,
             }),
             _.children,
           ],
@@ -37442,7 +37632,7 @@
       }
       function _(_) {
         const { children: _ } = _,
-          { divProps: __webpack_require__, tooltipProps: _ } = _({
+          { divProps: _, tooltipProps: _ } = _({
             ..._,
             toolTipContent: _.toolTipContent
               ? (0, _.jsx)(_, {
@@ -37453,7 +37643,7 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _.cloneElement(_, {
-              ...__webpack_require__,
+              ..._,
               ..._.props,
             }),
             (0, _.jsx)(_, {
@@ -37465,7 +37655,7 @@
       function _(_) {
         const {
             toolTipContent: _,
-            nDelayShowMS: __webpack_require__ = 300,
+            nDelayShowMS: _ = 300,
             bDisabled: _,
             direction: _,
             nBodyAlignment: _,
@@ -37507,7 +37697,7 @@
         const _ = {
           active: _ && !_,
           target: _,
-          nDelayShowMS: __webpack_require__,
+          nDelayShowMS: _,
           hoverPositionProps: _,
           children: _,
         };
@@ -37532,16 +37722,12 @@
         return "string" == typeof _ ? _._.LocalizeIfToken(_, !0) : _;
       }
       function _(_) {
-        const {
-          divProps: _,
-          tooltipProps: __webpack_require__,
-          stateHandlers: _,
-        } = _(_);
+        const { divProps: _, tooltipProps: _, stateHandlers: _ } = _(_);
         return {
           divProps: _,
           stateHandlers: _,
           tooltip: (0, _.jsx)(_, {
-            ...__webpack_require__,
+            ..._,
           }),
         };
       }
@@ -37552,16 +37738,16 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().ToolTipCustom, _),
-          ...__webpack_require__,
+          ..._,
         });
       }
       function _(_) {
         const {
             active: _,
-            target: __webpack_require__,
+            target: _,
             nDelayShowMS: _ = 300,
             hoverPositionProps: _,
             children: _,
@@ -37576,20 +37762,20 @@
                 return () => window.clearTimeout(_);
               }
               _(!0);
-            } else _(!1);
+            } else (0, _._)() || _(!1);
           }, [_]),
           !_)
         )
           return null;
-        if (!_ || !__webpack_require__) return null;
+        if (!_ || !_) return null;
         const { targetElement: _ } = _;
         return _.createPortal(
           (0, _.jsx)(_._, {
-            target: __webpack_require__,
+            target: _,
             ..._,
             children: _,
           }),
-          _ ?? __webpack_require__.ownerDocument.body,
+          _ ?? _.ownerDocument.body,
         );
       }
     },
@@ -37655,16 +37841,14 @@
       function _(_) {
         let {
           bDisableContextMenu: _,
-          onContextMenu: __webpack_require__,
+          onContextMenu: _,
           bForceExternal: _,
           href: _,
           bUseLinkFilter: _,
           getPIDFromEvent: _,
           ..._
         } = _;
-        _ || __webpack_require__ || (__webpack_require__ = _),
-          _ && _ && (_ = (0, _._)(_)),
-          _ || (_ = () => 0);
+        _ || _ || (_ = _), _ && _ && (_ = (0, _._)(_)), _ || (_ = () => 0);
         return (0, _.jsx)("a", {
           ..._,
           href: _,
@@ -37677,13 +37861,13 @@
                   unPID: _(_),
                 });
           },
-          onContextMenu: __webpack_require__,
+          onContextMenu: _,
           rel: _ ? "noopener noreferrer" : void 0,
           children: _.children,
         });
       }
       function _(_) {
-        const { strURL: _, opts: __webpack_require__ } = _;
+        const { strURL: _, opts: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -37694,7 +37878,7 @@
             }),
             (0, _.jsx)(_._, {
               onSelected: (_) => {
-                _(_, _, __webpack_require__);
+                _(_, _, _);
               },
               children: (0, _._)("#ContextMenu_OpenLinkInNewWindow"),
             }),
@@ -37713,12 +37897,8 @@
           _,
         );
       }
-      function _(_, _, __webpack_require__ = {}) {
-        const {
-          bForceExternal: _,
-          unPID: _,
-          bUseLinkFilter: _,
-        } = __webpack_require__;
+      function _(_, _, _ = {}) {
+        const { bForceExternal: _, unPID: _, bUseLinkFilter: _ } = _;
         let _;
         (_ =
           "currentTarget" in _ ? _.currentTarget.ownerDocument.defaultView : _),
@@ -37799,12 +37979,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          arrowFill: _,
-          arrowStyle: __webpack_require__,
-          direction: _,
-        } = _;
-        switch (__webpack_require__) {
+        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
+        switch (_) {
           default:
           case _._.k_ECutArrowStyle: {
             const _ = "right" == _ ? 0 : 180;
@@ -37849,11 +38025,11 @@
       function _(_) {
         const {
             bIsActive: _,
-            breadcrumbActiveColor: __webpack_require__,
+            breadcrumbActiveColor: _,
             breadcrumbColor: _,
             breadcrumbStyle: _,
           } = _,
-          _ = _ ? __webpack_require__ || "#FFFFFF" : _ || "#606974";
+          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
         switch (_) {
           default:
           case _._.k_EPillCrumb:
@@ -37887,7 +38063,7 @@
       function _(_) {
         const {
             customTooltip: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             className: _,
             icon: _,
             small: _,
@@ -37900,7 +38076,7 @@
             children: [" ", (0, _.jsx)(_._VW, {})],
           })),
           (0, _.jsx)(_, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             className: (0, _._)(
               _.HelperTooltip,
               "HelperTooltip",
@@ -38008,7 +38184,7 @@
           let {
             onVisibilityChange: _,
             rootMargin: _,
-            trigger: __webpack_require__,
+            trigger: _,
             horizontal: _,
             ..._
           } = this.props;
@@ -38842,24 +39018,20 @@
           _.createElement(_.Fragment, null, ..._)
         );
       }
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         return 1 === _ || "1" === _
-          ? _(_, _, ...__webpack_require__)
-          : _(
-              _ + "_Plural",
-              _.toLocaleString(_.GetPreferredLocales()),
-              ...__webpack_require__,
-            );
+          ? _(_, _, ..._)
+          : _(_ + "_Plural", _.toLocaleString(_.GetPreferredLocales()), ..._);
       }
       function _(_, ..._) {
         let _ = _.LocalizeIfToken(_);
         return void 0 === _ ? _ : _(_, ..._);
       }
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         let _;
         return (
           (_ = _(1 === _ || "1" === _ ? _ : _ + "_Plural", _)),
-          void 0 === _ ? _ : _(_, ...__webpack_require__)
+          void 0 === _ ? _ : _(_, ..._)
         );
       }
       function _(_, ..._) {
@@ -38879,10 +39051,8 @@
         }
         return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
       }
-      function _(_, _, ...__webpack_require__) {
-        return 1 === _ || "1" === _
-          ? _(_, _, ...__webpack_require__)
-          : _(_ + "_Plural", _, ...__webpack_require__);
+      function _(_, _, ..._) {
+        return 1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._);
       }
       function _(_, ..._) {
         return 0 == _.length
@@ -39036,6 +39206,7 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         let _;
@@ -39125,10 +39296,10 @@
         };
         return _.toLocaleDateString(_._.GetPreferredLocales(), _);
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         let _ = new Date(1e3 * _),
           _ = new Date(1e3 * _);
-        return __webpack_require__ ||
+        return _ ||
           (_.getFullYear() == _.getFullYear() &&
             _.getMonth() == _.getMonth() &&
             _.getDate() == _.getDate())
@@ -39213,13 +39384,13 @@
         return _.toLocaleTimeString(_, _);
       }
       const _ = new Map();
-      function _(_, _, __webpack_require__ = !0, _ = !0, _ = !1) {
+      function _(_, _, _ = !0, _ = !0, _ = !1) {
         const _ = new Date(),
           _ = new Date(1e3 * _);
         if (_.getFullYear() != _.getFullYear()) return _(_);
         _ && _._(new Date().setHours(24, 0, 0, 0) - _.getTime());
         const _ = new Date();
-        if ((_.setHours(0, 0, 0, 0), __webpack_require__))
+        if ((_.setHours(0, 0, 0, 0), _))
           if (_ >= _) {
             if ((_.setDate(_.getDate() + 1), _ < _))
               return (0, _._)("#Time_Today");
@@ -39355,9 +39526,9 @@
         _ = new Map(),
         _ = new Map();
       new Map();
-      function _(_, _ = !1, __webpack_require__ = !0) {
+      function _(_, _ = !1, _ = !0) {
         const _ = {
-            weekday: __webpack_require__ ? "long" : "short",
+            weekday: _ ? "long" : "short",
             day: "numeric",
             month: _ ? "long" : "short",
             year: "numeric",
@@ -39371,9 +39542,9 @@
           _)
         );
       }
-      function _(_, _ = !1, __webpack_require__ = !0) {
+      function _(_, _ = !1, _ = !0) {
         const _ = {
-            weekday: __webpack_require__ ? "long" : "short",
+            weekday: _ ? "long" : "short",
             day: "numeric",
             month: _ ? "long" : "short",
           },
@@ -39530,10 +39701,11 @@
             _ = _
               ? "#Duration_MinuteSecondMillisecond"
               : "#Duration_MinuteSecond";
-          _ = (0, _._)(_, _, _, _);
+          _ = _._.Localize(_, _, _, _);
         }
         return (
-          _ && (_ = _ ? (0, _._)("#Duration_WrittenNegation", _) : "-" + _), _
+          _ && (_ = _ ? _._.Localize("#Duration_WrittenNegation", _) : "-" + _),
+          _
         );
       }
       function _(_) {
@@ -39862,15 +40034,13 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(
-            () => !!(0, _._)(_?.location.pathname, _),
-          );
+          [_, _] = _.useState(() => !!(0, _._)(_?.location.pathname, _));
         return (
           _.useEffect(
             () => _?.listen((_) => _(!!(0, _._)(_.pathname, _))),
             [_, _],
           ),
-          __webpack_require__
+          _
         );
       }
       function _(_, _, _) {
@@ -39998,17 +40168,14 @@
       function _(_, _ = "") {
         return _.replace(/\bhttps?:\/\/\S+/gi, _);
       }
-      function _(_, _, __webpack_require__ = !0) {
+      function _(_, _, _ = !0) {
         let _ = _.trim();
-        if (
-          ((_ = _.replace(__webpack_require__ ? /\s+/g : /[ \t]+/g, " ")),
-          _.length > _)
-        ) {
+        if (((_ = _.replace(_ ? /\s+/g : /[ \t]+/g, " ")), _.length > _)) {
           _ = _.substring(0, _);
           let _ = _.replace(/^(.*([.!?])) .*$/, "$1"),
             _ = _.length;
           (_ < 0.6 * _ || _ == _) && (_ = _.replace(/ [^ ]*$/, "...")),
-            (_ = __webpack_require__ ? _.replace(/(\r\n|\n|\r)/gm, "") : _);
+            (_ = _ ? _.replace(/(\r\n|\n|\r)/gm, "") : _);
         }
         return _;
       }
@@ -40092,6 +40259,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         if (void 0 === _)
@@ -40111,6 +40279,7 @@
         return _
           ? (1 == _._.EUNIVERSE &&
               ("http:" == _.substring(0, 5) && (_ = "https:" + _.substring(5)),
+              (0, _._)(_._.MEDIA_CDN_URL, "Media CDN not setup"),
               (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ =
                 (_ = _.replace(
                   /https:\/\/media.steampowered.com\//g,
@@ -40238,7 +40407,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = _.useCallback(() => {
             (0, _._)(_, "Window.IsWindowMaximized")
               ? _.SteamClient.Window.IsWindowMaximized().then((_) => {
@@ -40258,7 +40427,7 @@
         );
       }
       function _(_, _ = 100) {
-        const [__webpack_require__, _] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = _.useCallback(() => _(!0), [_]),
           _ = _.useCallback(() => _(!1), [_]);
         return (
@@ -40274,7 +40443,7 @@
                 : void 0,
             [_, _, _],
           ),
-          (0, _._)(__webpack_require__, _)
+          (0, _._)(_, _)
         );
       }
     },
@@ -40300,7 +40469,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -40320,12 +40488,7 @@
           );
         };
       function _(_) {
-        const {
-            IN_GAMEPADUI: _,
-            IN_DESKTOPUI: __webpack_require__,
-            IN_VR: _,
-            children: _,
-          } = _,
+        const { IN_GAMEPADUI: _, IN_DESKTOPUI: _, IN_VR: _, children: _ } = _,
           _ = _({
             bSuppressAssert: !0,
           }),
@@ -40333,10 +40496,10 @@
           _ = _.useMemo(
             () => ({
               IN_GAMEPADUI: _ ?? _?.IN_GAMEPADUI ?? _._.IN_GAMEPADUI,
-              IN_DESKTOPUI: __webpack_require__ ?? _?.IN_DESKTOPUI ?? !1,
+              IN_DESKTOPUI: _ ?? _?.IN_DESKTOPUI ?? !1,
               IN_VR: _ ?? _?.IN_VR ?? _,
             }),
-            [_, _, __webpack_require__, _, _],
+            [_, _, _, _, _],
           );
         return _.createElement(
           _.Provider,

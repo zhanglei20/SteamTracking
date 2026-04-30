@@ -34,13 +34,17 @@
         DescriptionDetails: "_2OZwaevyq145GHbte-cYD4",
         FrameRateValue: "Ea6FTud7MSP13e5WFg5YS",
         DescriptionEmphasis: "_5mT3lMk6N-ZIEsrzWPbEO",
-        DataSource: "_1bBvFabMPO5kz8MeUiKwi1",
         FeedbackAgree: "Pr_M36YkNFA-weFm4NdGx",
-        OverwhelminglyAgree: "_3adsYEneLis7vG2etMd4pk",
-        StronglyAgree: "_2HKP4FBagfD5dcBMXPKBng",
-        Mixed: "A1X2rsLuGVPickr5Ay4NO",
-        DoNotAgree: "_3VdYc55Bz4LkZ1ABZOJB6S",
+        Percentage: "nB4-Z0d1bJEAy5sMjXfJv",
         Beta: "_1jNEwMKIFCwXh-4DQ7m6-a",
+        FeedbackSummaryTable: "_3LG2xiBJ11-gUCa2URMnOh",
+        FeedbackPerformance: "_1RmBbSb73HqJGS6dNMtvst",
+        FeedbackLegibility: "_2p3PivHhvkmywVnWGm9N9o",
+        FeedbackStability: "_2pt1VafEKP9iTeTSzZSzMN",
+        FeedbackInput: "_24ZtoEB6cRFTE5Jdaj7Pdv",
+        FeedbackOther: "_3fBvrj-Tz2MUdgTtvZ5pXt",
+        FeedbackTableHeader: "_319-NqR7LCiXHwG7vQdOAK",
+        FeedbackChartContainer: "_2DbhtcavqjsNhrVSLbD9wI",
       };
     },
     12916: (e) => {
@@ -350,39 +354,39 @@
         "./zh-tw": 34518,
         "./zh-tw.js": 34518,
       };
-      function i(e) {
-        var t = a(e);
+      function a(e) {
+        var t = i(e);
         return n(t);
       }
-      function a(e) {
+      function i(e) {
         if (!n.o(s, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
         return s[e];
       }
-      (i.keys = function () {
+      (a.keys = function () {
         return Object.keys(s);
       }),
-        (i.resolve = a),
-        (e.exports = i),
-        (i.id = 61738);
+        (a.resolve = i),
+        (e.exports = a),
+        (a.id = 61738);
     },
     11314: (e, t, n) => {
       "use strict";
       n.d(t, { E: () => l });
       var s = n(1839),
-        i = n(62059),
-        a = n(36058),
+        a = n(62059),
+        i = n(36058),
         r = n(55241),
         o = n(5608),
         l = (0, s.gu)({
           chartName: "BarChart",
-          GraphicalChild: i.y,
+          GraphicalChild: a.y,
           defaultTooltipEventType: "axis",
           validateTooltipEventTypes: ["axis", "item"],
           axisComponents: [
-            { axisType: "xAxis", AxisComp: a.W },
+            { axisType: "xAxis", AxisComp: i.W },
             { axisType: "yAxis", AxisComp: r.h },
           ],
           formatAxisMap: o.pr,
@@ -390,10 +394,10 @@
     },
     51155: (e, t, n) => {
       "use strict";
-      n.d(t, { E: () => _, L: () => p });
+      n.d(t, { E: () => j, L: () => p });
       var s = n(7850),
-        i = n(90626),
-        a = n(77411),
+        a = n(90626),
+        i = n(77411),
         r = n(16021),
         o = n(39020),
         l = n(16676),
@@ -403,46 +407,46 @@
         m = n(4434),
         f = n(61859),
         h = n(74303),
-        j = n(30470);
+        _ = n(30470);
       const p = {
         include_basic_info: !0,
         include_assets: !0,
         include_tag_count: 10,
         include_release: !0,
       };
-      function _(e) {
+      function j(e) {
         const {
             rgOrderedAppIDs: t,
             fnSetFilteredAppID: n,
-            rgNotToPruneList: a,
+            rgNotToPruneList: i,
             pageid: o,
           } = e,
-          [h, j] = i.useState(!0),
-          _ = (0, m.m)("OptInAppReviewFilter");
-        i.useEffect(() => {
+          [h, _] = a.useState(!0),
+          j = (0, m.m)("OptInAppReviewFilter");
+        a.useEffect(() => {
           r.A.Get()
             .QueueMultipleAppRequests(t?.slice(0, 100) || [], p)
             .then(() => {
               r.A.Get()
                 .QueueMultipleAppRequests(t?.slice(100) || [], p)
                 .then(() => {
-                  j(!1);
+                  _(!1);
                 });
             });
-        }, [_.token.reason, o, t]);
-        const [v, x] = i.useState(new Set()),
-          [w, A] = i.useState(""),
-          [b, S] = i.useState(0),
-          [T, k] = i.useState(!1),
-          [D, y] = i.useState(0);
+        }, [j.token.reason, o, t]);
+        const [v, x] = a.useState(new Set()),
+          [b, w] = a.useState(""),
+          [S, T] = a.useState(0),
+          [k, A] = a.useState(!1),
+          [y, G] = a.useState(0);
         return (
-          i.useEffect(() => {
-            const e = w?.trim().length > 2,
-              s = w?.toLocaleLowerCase(),
-              i = Array.from(v),
-              o = new Set(a || []);
-            if (t.length > 0 && (v.size > 0 || e || b || D)) {
-              const a = t
+          a.useEffect(() => {
+            const e = b?.trim().length > 2,
+              s = b?.toLocaleLowerCase(),
+              a = Array.from(v),
+              o = new Set(i || []);
+            if (t.length > 0 && (v.size > 0 || e || S || y)) {
+              const i = t
                 .filter((t) => {
                   if (e) {
                     const e = r.A.Get().GetApp(t);
@@ -466,27 +470,27 @@
                   return !0;
                 })
                 .filter((e) => {
-                  if (i.length > 0) {
+                  if (a.length > 0) {
                     const t = r.A.Get().GetApp(e);
-                    return i.every((e) => t?.GetTagIDs().includes(e));
+                    return a.every((e) => t?.GetTagIDs().includes(e));
                   }
                   return !0;
                 })
                 .filter((e) => {
-                  if (b > 0) {
+                  if (S > 0) {
                     const t = r.A.Get().GetApp(e);
                     return (
                       t &&
                       (t?.BIsComingSoon() ||
-                        t?.GetOriginalReleaseDateRTime() > b)
+                        t?.GetOriginalReleaseDateRTime() > S)
                     );
                   }
                   return !0;
                 })
-                .filter((e) => !(T && o.size > 0) || !o.has(e));
-              _.token.reason || n(a);
+                .filter((e) => !(k && o.size > 0) || !o.has(e));
+              j.token.reason || n(i);
             }
-          }, [T, _.token.reason, n, D, b, a, t, v, w]),
+          }, [k, j.token.reason, n, y, S, i, t, v, b]),
           (0, s.jsx)(u.qx, {
             title: "Filter Options",
             bStartMinimized: !0,
@@ -508,15 +512,15 @@
                       type: "text",
                       label: (0, f.we)("#EventCalendar_UniversalSearch"),
                       placeholder: "search by app name, description",
-                      value: w,
+                      value: b,
                       onChange: (e) => {
-                        A(e.target.value), y(1);
+                        w(e.target.value), G(1);
                       },
                     }),
                     (0, s.jsx)(g, {
                       setFilterTagIDs: v,
                       fnUpdateSetFilterTagIDs: (e) => {
-                        x(e), y(1);
+                        x(e), G(1);
                       },
                       rgAppIDs: t,
                       bLoading: h,
@@ -526,16 +530,16 @@
                       strDescToolTip:
                         "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
                       nEarliestTime: 0,
-                      fnGetTimeToUpdate: () => b,
+                      fnGetTimeToUpdate: () => S,
                       fnSetTimeToUpdate: (e) => {
-                        S(e), y(1);
+                        T(e), G(1);
                       },
                     }),
-                    Boolean(a?.length > 0) &&
+                    Boolean(i?.length > 0) &&
                       (0, s.jsx)(l.Yh, {
-                        checked: T,
+                        checked: k,
                         onChange: (e) => {
-                          k(e), y(1);
+                          A(e), G(1);
                         },
                         tooltip:
                           "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
@@ -554,7 +558,7 @@
             rgAppIDs: c,
             bLoading: d,
           } = e,
-          u = i.useMemo(
+          u = a.useMemo(
             () =>
               d
                 ? []
@@ -574,8 +578,8 @@
                   })(c).sort((e, t) => (e.count < t.count ? 1 : -1)),
             [c, d],
           ),
-          { data: m } = (0, o.Fv)(j.TS.LANGUAGE),
-          f = i.useMemo(
+          { data: m } = (0, o.Fv)(_.TS.LANGUAGE),
+          f = a.useMemo(
             () => u.map((e) => ({ label: m && m[e.tagid], value: e })),
             [m, u],
           );
@@ -583,7 +587,7 @@
           className: h.TagFilterBar,
           children: [
             (0, s.jsx)(l.JU, { children: "Filter by Tag:" }),
-            (0, s.jsx)(a.Ay, {
+            (0, s.jsx)(i.Ay, {
               isSearchable: !0,
               isLoading: d,
               isMulti: !0,
@@ -602,7 +606,7 @@
       function v(e) {
         const { tagCount: t } = e;
         return (
-          ((0, o.MB)(t.tagid, j.TS.LANGUAGE) || "tagid: " + t.tagid) +
+          ((0, o.MB)(t.tagid, _.TS.LANGUAGE) || "tagid: " + t.tagid) +
           " (count: " +
           t.count +
           ")"
@@ -611,10 +615,10 @@
     },
     15898: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => b });
+      n.r(t), n.d(t, { default: () => k });
       var s = n(7850),
-        i = n(90626),
-        a = n(84811),
+        a = n(90626),
+        i = n(84811),
         r = n(45037),
         o = n(55263),
         l = n(51155),
@@ -624,43 +628,50 @@
         m = n(55241),
         f = n(85010),
         h = n(62059),
-        j = n(56854),
-        p = n(49953),
-        _ = n(76549),
-        g = n(12618),
+        _ = n(94075),
+        p = n(56555),
+        j = n(49953),
+        g = n(76549),
         v = n(6083),
         x = n(67361),
-        w = n(61859),
-        A = n(78327);
-      function b(e) {
+        b = n(61859),
+        w = n(11577),
+        S = n(52038),
+        T = n(26408);
+      function k(e) {
         const { dataprops: t } = e;
         return t?.framerate || t?.feedback
-          ? (0, s.jsx)(a.tH, {
-              children: (0, s.jsxs)("div", {
-                className: r.PerformanceContainer,
-                children: [
-                  (0, s.jsxs)("h1", {
-                    children: [
-                      (0, w.we)("#GamePerformanceStats_Header"),
-                      (0, s.jsx)("span", {
-                        className: r.Beta,
-                        children: (0, w.we)("#NewToolTitleSuffix_Beta"),
-                      }),
-                    ],
-                  }),
-                  Boolean(t?.framerate) &&
-                    (0, s.jsx)(T, {
-                      appId: e.appId,
-                      frameRateData: t.framerate,
+          ? (0, s.jsx)(w.m, {
+              children: (0, s.jsx)(i.tH, {
+                children: (0, s.jsxs)("div", {
+                  className: r.PerformanceContainer,
+                  children: [
+                    (0, s.jsxs)("h1", {
+                      children: [
+                        (0, b.we)("#GamePerformanceStats_Header"),
+                        (0, s.jsx)("span", {
+                          className: r.Beta,
+                          children: (0, b.we)("#NewToolTitleSuffix_Beta"),
+                        }),
+                      ],
                     }),
-                  Boolean(t?.feedback) &&
-                    (0, s.jsx)(S, { appId: e.appId, feedbackData: t.feedback }),
-                ],
+                    Boolean(t?.framerate) &&
+                      (0, s.jsx)(y, {
+                        appId: Number(e.appId),
+                        frameRateData: t.framerate,
+                      }),
+                    Boolean(t?.feedback) &&
+                      (0, s.jsx)(A, {
+                        appId: Number(e.appId),
+                        feedbackData: t.feedback,
+                      }),
+                  ],
+                }),
               }),
             })
           : null;
       }
-      function S(e) {
+      function A(e) {
         const { feedbackData: t } = e;
         if (!t || !t.daily?.length)
           return (0, s.jsx)("div", {
@@ -670,16 +681,43 @@
               children: [
                 (0, s.jsx)("div", {
                   className: r.PerformanceSectionTitle,
-                  children: (0, w.we)("#GamePerformanceStats_CustomerFeedback"),
+                  children: (0, b.we)("#GamePerformanceStats_CustomerFeedback"),
                 }),
                 (0, s.jsx)("div", {
-                  children: (0, w.we)("#GamePerformanceStats_NoData"),
+                  children: (0, b.we)("#GamePerformanceStats_NoData"),
                 }),
               ],
             }),
           });
-        const n = Number(t.total.agree) + Number(t.total.disagree),
-          i = (Number(t.total.agree) / n) * 100;
+        const n = [
+            {
+              fill: "#ffc82c",
+              key: "disagree_performance",
+              name: (0, b.we)("#GamePerformanceStats_Performance"),
+            },
+            {
+              fill: "#59bf40",
+              key: "disagree_legibility",
+              name: (0, b.we)("#GamePerformanceStats_Legibility"),
+            },
+            {
+              fill: "#1a9fff",
+              key: "disagree_stability",
+              name: (0, b.we)("#GamePerformanceStats_Stability"),
+            },
+            {
+              fill: "#ad66bb",
+              key: "disagree_input",
+              name: (0, b.we)("#GamePerformanceStats_Input"),
+            },
+            {
+              fill: "#dcdedf",
+              key: "disagree_other",
+              name: (0, b.we)("#GamePerformanceStats_Other"),
+            },
+          ],
+          a = Number(t.total.agree) + Number(t.total.disagree),
+          i = (Number(t.total.agree) / a) * 100;
         return (0, s.jsxs)("div", {
           className: r.FeedbackContainer,
           children: [
@@ -688,83 +726,57 @@
               children: [
                 (0, s.jsx)("div", {
                   className: r.PerformanceSectionTitle,
-                  children: (0, w.we)("#GamePerformanceStats_CustomerFeedback"),
+                  children: (0, b.we)("#GamePerformanceStats_CustomerFeedback"),
                 }),
-                (0, s.jsx)(D, { nAgreePercent: i }),
+                (0, s.jsx)(N, { nAgreePercent: i }),
                 (0, s.jsx)("div", {
-                  children: (0, w.we)(
+                  children: (0, b.we)(
                     "#GamePerformanceStats_NumberOfReports",
-                    (0, v.D)(n),
+                    (0, v.D)(a),
+                    t.daily.length,
                   ),
                 }),
                 (0, s.jsx)("div", {
                   className: r.DescriptionSection,
-                  children: (0, w.PP)(
+                  children: (0, b.PP)(
                     "#GamePerformanceStats_WhyDisagree",
                     (0, s.jsx)("span", {
-                      className: r.DescriptionEmphasis,
-                      children: (0, w.we)("#GamePerformanceStats_DidNotAgree"),
+                      children: (0, b.we)("#GamePerformanceStats_DidNotAgree"),
                     }),
                     (0, s.jsx)("span", {
-                      className: r.DescriptionEmphasis,
-                      children: (0, w.we)(
+                      children: (0, b.we)(
                         "#SteamDeckVerified_Category_Verified",
                       ),
                     }),
                   ),
                 }),
-                A.iA.is_valve_email &&
-                  (0, s.jsxs)("div", {
-                    className: r.DescriptionDetails,
-                    children: [
-                      (0, s.jsx)("span", { children: "(VO)" }),
-                      i.toFixed(0),
-                      "% Agree",
-                    ],
-                  }),
+                (0, s.jsx)(D, { feedback: t }),
               ],
             }),
             (0, s.jsx)(c.u, {
               width: "100%",
               minWidth: 600,
-              height: 300,
+              minHeight: 300,
+              className: r.FeedbackChartContainer,
               children: (0, s.jsxs)(d.E, {
                 style: { width: "100%", fontSize: "16px" },
                 data: t.daily.sort((e, t) => e.date - t.date),
                 children: [
                   (0, s.jsx)(u.W, {
                     dataKey: "date",
-                    tickFormatter: k,
+                    tickFormatter: G,
                     stroke: "white",
                   }),
                   (0, s.jsx)(m.h, {
                     stroke: "white",
                     domain: [() => 0, (e) => Math.max(e, 20)],
                   }),
-                  (0, s.jsx)(f.m, { labelFormatter: k }),
-                  [
-                    {
-                      fill: "#ffc82c",
-                      key: "disagree_performance",
-                      name: "Performance",
-                    },
-                    {
-                      fill: "#59bf40",
-                      key: "disagree_legibility",
-                      name: "Legibility",
-                    },
-                    {
-                      fill: "#1a9fff",
-                      key: "disagree_stability",
-                      name: "Stability",
-                    },
-                    { fill: "#ad66bb", key: "disagree_input", name: "Input" },
-                    { fill: "#dcdedf", key: "disagree_other", name: "Other" },
-                  ].map((e) =>
+                  (0, s.jsx)(f.m, { labelFormatter: G }),
+                  n.map((e) =>
                     (0, s.jsx)(
                       h.y,
                       {
-                        shape: (0, s.jsx)(y, { fill: e.fill }),
+                        shape: (0, s.jsx)(C, { fill: e.fill }),
                         fill: e.fill,
                         dataKey: e.key,
                         stackId: "day",
@@ -773,16 +785,17 @@
                       e.key,
                     ),
                   ),
+                  (0, s.jsx)(_.s, {}),
                 ],
               }),
             }),
           ],
         });
       }
-      function T(e) {
+      function y(e) {
         const { appId: t, frameRateData: n } = e,
-          [a, d] = (0, o.t7)(t, l.L),
-          h = i.useMemo(() => {
+          [i, d] = (0, o.t7)(t, l.L),
+          h = a.useMemo(() => {
             let e = [];
             return (
               n?.frame_rate_clusters.length > 0 &&
@@ -802,18 +815,29 @@
               children: [
                 (0, s.jsx)("div", {
                   className: r.PerformanceSectionTitle,
-                  children: (0, w.we)(
+                  children: (0, b.we)(
                     "#GamePerformanceStats_AverageFrameRate_Title",
                   ),
                 }),
                 (0, s.jsx)("div", {
-                  children: (0, w.we)("#GamePerformanceStats_NoData"),
+                  children: (0, b.we)("#GamePerformanceStats_NoData"),
                 }),
               ],
             }),
           });
-        const x = n.frame_rate_clusters[0],
-          A = Number(x.mean_frame_rate).toFixed(0);
+        const _ = n.frame_rate_clusters[0],
+          v = Number(_.mean_frame_rate).toFixed(0),
+          x = (0, s.jsx)("span", {
+            className: r.FrameRateValue,
+            children: (0, b.we)("#GamePerformanceStats_FPS", v),
+          }),
+          w = i?.GetName()
+            ? (0, b.PP)(
+                "#GamePerformanceStats_AverageFrameRate",
+                i.GetName(),
+                x,
+              )
+            : (0, b.PP)("#GamePerformanceStats_AverageFrameRate_ThisGame", x);
         return (0, s.jsxs)("div", {
           className: r.FrameRateContainer,
           children: [
@@ -822,26 +846,22 @@
               children: [
                 (0, s.jsx)("div", {
                   className: r.PerformanceSectionTitle,
-                  children: (0, w.we)(
+                  children: (0, b.we)(
                     "#GamePerformanceStats_AverageFrameRate_Title",
                   ),
                 }),
+                (0, s.jsx)("div", { children: w }),
                 (0, s.jsx)("div", {
-                  children: (0, w.PP)(
-                    "#GamePerformanceStats_AverageFrameRate",
-                    a?.GetName() ?? (0, w.we)("#GamePerformanceStats_ThisGame"),
-                    (0, s.jsx)("span", {
-                      className: r.FrameRateValue,
-                      children: (0, w.we)("#GamePerformanceStats_FPS", A),
-                    }),
+                  className: r.DescriptionSection,
+                  children: (0, b.we)(
+                    "#GamePerformanceStats_FrameRateDataBasedOn",
+                    _.report_days,
                   ),
                 }),
                 (0, s.jsx)("div", {
                   className: r.DescriptionSection,
-                  children: (0, w.we)(
-                    "#GamePerformanceStats_FrameRateDataBasedOn",
-                    (0, v.D)(Number(x.report_count ?? 0)),
-                    x.report_days,
+                  children: (0, b.we)(
+                    "#GamePerformanceStats_FrameRateMoreInfo",
                   ),
                 }),
               ],
@@ -850,106 +870,139 @@
               width: "100%",
               minWidth: 600,
               height: 300,
-              children: (0, s.jsxs)(j.X, {
+              children: (0, s.jsxs)(p.X, {
                 style: { width: "100%", fontSize: "16px", color: "blue" },
                 data: h,
                 children: [
-                  (0, s.jsx)(p.d, { strokeDasharray: "3 3", color: "red" }),
+                  (0, s.jsx)(j.d, { strokeDasharray: "3 3", color: "red" }),
                   (0, s.jsx)(u.W, {
                     dataKey: "date",
-                    tickFormatter: k,
+                    tickFormatter: G,
                     stroke: "white",
                   }),
                   (0, s.jsx)(m.h, { stroke: "white" }),
-                  (0, s.jsx)(f.m, { labelFormatter: k }),
-                  (0, s.jsx)(_.N, {
+                  (0, s.jsx)(f.m, { labelFormatter: G }),
+                  (0, s.jsx)(g.N, {
                     type: "natural",
                     dataKey: "mean",
                     name: "average",
                     stroke: "#4477EE",
                   }),
-                  Boolean(!1) &&
-                    (0, s.jsx)(g.G, {
-                      type: "monotone",
-                      dataKey: "range",
-                      fill: "#cccccc",
-                      connectNulls: !0,
-                    }),
+                  !1,
                 ],
               }),
             }),
           ],
         });
       }
-      function k(e) {
+      function G(e) {
         return (0, x._l)(e);
       }
-      function D(e) {
-        const { nAgreePercent: t } = e,
-          n = [
-            [
-              95,
-              "#GamePerformanceStats_Feedback",
-              "#GamePerformanceStats_OverwhelminglyAgree",
-              r.OverwhelminglyAgree,
-            ],
-            [
-              80,
-              "#GamePerformanceStats_Feedback",
-              "#GamePerformanceStats_StronglyAgree",
-              r.StronglyAgree,
-            ],
-            [
-              50,
-              "#GamePerformanceStats_Feedback_On",
-              "#GamePerformanceStats_Mixed",
-              r.Mixed,
-            ],
-            [
-              0,
-              "#GamePerformanceStats_Feedback",
-              "#GamePerformanceStats_DoNotAgree",
-              r.DoNotAgree,
-            ],
-          ];
-        let i = 0;
-        for (const e of n) {
-          if (t >= e[0]) break;
-          i++;
-        }
-        return (0, s.jsx)("div", {
+      function N(e) {
+        const { nAgreePercent: t } = e;
+        return (0, s.jsxs)("div", {
           className: r.FeedbackAgree,
-          children: (0, w.PP)(
-            n[i][1],
-            (0, s.jsx)("span", {
-              className: n[i][3],
-              children: (0, w.we)(n[i][2]),
+          children: [
+            (0, b.PP)(
+              "#GamePerformanceStats_Feedback_Agree",
+              (0, s.jsx)("span", {
+                className: (0, S.A)(r.Percentage, r.DescriptionEmphasis),
+                children: (0, b.PP)(
+                  "#GamePerformanceStats_Feedback_AgreePercentage",
+                  t.toFixed(0),
+                ),
+              }),
+              (0, s.jsx)("span", {
+                children: (0, b.we)("#SteamDeckVerified_Category_Verified"),
+              }),
+            ),
+            (0, s.jsx)(T.o, {
+              tooltip: (0, s.jsx)("div", {
+                children: (0, b.we)(
+                  "#GamePerformanceStats_Feedback_PercentageTooltip",
+                ),
+              }),
             }),
-            (0, s.jsx)("span", {
-              className: r.DescriptionEmphasis,
-              children: (0, w.we)("#SteamDeckVerified_Category_Verified"),
-            }),
-          ),
+          ],
         });
       }
-      const y = (e) => {
-        const { fill: t, x: n, y: i, width: a, height: r } = e;
-        return (0, s.jsx)("rect", { x: n, y: i, width: a, height: r, fill: t });
+      function D(e) {
+        const { feedback: t } = e;
+        let n = new Array(
+          {
+            display: (0, b.we)("#GamePerformanceStats_Input"),
+            value: t.total.disagree_input,
+            class: r.FeedbackInput,
+          },
+          {
+            display: (0, b.we)("#GamePerformanceStats_Legibility"),
+            value: t.total.disagree_legibility,
+            class: r.FeedbackLegibility,
+          },
+          {
+            display: (0, b.we)("#GamePerformanceStats_Performance"),
+            value: t.total.disagree_performance,
+            class: r.FeedbackPerformance,
+          },
+          {
+            display: (0, b.we)("#GamePerformanceStats_Stability"),
+            value: t.total.disagree_stability,
+            class: r.FeedbackStability,
+          },
+          {
+            display: (0, b.we)("#GamePerformanceStats_Other"),
+            value: t.total.disagree_other,
+            class: r.FeedbackOther,
+          },
+        );
+        return (
+          n.sort((e, t) =>
+            e.class == r.FeedbackOther ? 1 : t.value - e.value,
+          ),
+          (0, s.jsxs)("div", {
+            className: r.FeedbackSummaryTable,
+            children: [
+              (0, s.jsx)("div", {
+                className: r.FeedbackTableHeader,
+                children: (0, b.we)("#GamePerformance_Reason"),
+              }),
+              (0, s.jsx)("div", {
+                className: r.FeedbackTableHeader,
+                children: (0, b.we)("#GamePerformance_NumResponses"),
+              }),
+              n.map((e) =>
+                (0, s.jsxs)(s.Fragment, {
+                  children: [
+                    (0, s.jsx)("div", {
+                      className: e.class,
+                      children: e.display,
+                    }),
+                    (0, s.jsx)("div", { children: e.value }),
+                  ],
+                }),
+              ),
+            ],
+          })
+        );
+      }
+      const C = (e) => {
+        const { fill: t, x: n, y: a, width: i, height: r } = e;
+        return (0, s.jsx)("rect", { x: n, y: a, width: i, height: r, fill: t });
       };
     },
     44165: (e, t, n) => {
       "use strict";
-      n.d(t, { HD: () => u, P_: () => m, f1: () => _, sB: () => p });
+      n.d(t, { HD: () => u, P_: () => m, f1: () => j, sB: () => p });
       var s = n(34629),
-        i = n(14947),
-        a = n(19367),
-        r = n.n(a),
+        a = n(14947),
+        i = n(19367),
+        r = n.n(i),
         o = n(90626),
         l = n(4434),
         c = n(78327);
       class d {
         constructor() {
-          (0, i.Gn)(this);
+          (0, a.Gn)(this);
         }
         bOpenEventLandingPage = !1;
         bIncludeFeaturedAsGameSource = !0;
@@ -994,38 +1047,96 @@
           }
         }
       }
-      (0, s.Cg)([i.sH], d.prototype, "nOverrideDateNow", void 0);
+      (0, s.Cg)([a.sH], d.prototype, "nOverrideDateNow", void 0);
       const u = new d();
       function m(e = 1) {
-        const [t, n] = o.useState(() => j()),
+        const [t, n] = o.useState(() => _()),
           s = (0, l.m)("useTimeNowWithOverride"),
-          i = o.useCallback(() => {
-            s.token.reason || n(j());
+          a = o.useCallback(() => {
+            s.token.reason || n(_());
           }, []);
         return (
           o.useEffect(() => {
             const t = 1e3 * e,
               n = t - (Date.now() % t),
-              s = window.setTimeout(i, n);
+              s = window.setTimeout(a, n);
             return () => {
               window.clearTimeout(s);
             };
-          }, [t, e, i]),
+          }, [t, e, a]),
           t
         );
       }
       window.g_EventCalendarDevFeatures = u;
       const f = new Date(),
         h = Math.floor(f.getTime() / 1e3);
-      function j() {
+      function _() {
         const e = Math.floor(Date.now() / 1e3);
         return u.nOverrideDateNow ? u.nOverrideDateNow + (e - h) : e;
       }
       function p() {
         return u.nOverrideDateNow ?? h;
       }
-      function _() {
+      function j() {
         return o.useMemo(() => p(), []);
+      }
+    },
+    11577: (e, t, n) => {
+      "use strict";
+      n.d(t, { m: () => c });
+      var s = n(90626),
+        a = n(96059),
+        i = n(16021),
+        r = n(81393),
+        o = n(78327),
+        l = n(63664);
+      function c(e) {
+        const [t, n] = (0, s.useState)(!1),
+          [c] = (0, s.useState)(() =>
+            (function () {
+              const e = (0, o.Tc)(
+                "partnerbrowse_webapi_token",
+                "application_config",
+              );
+              (0, r.wT)(Boolean(e), "require partnerbrowse_webapi_token");
+              const t = new a.D(o.TS.WEBAPI_BASE_URL, e);
+              ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  e,
+                );
+              return t;
+            })(),
+          ),
+          d = (0, s.useMemo)(
+            () => ({
+              country: o.TS.COUNTRY,
+              language: o.TS.LANGUAGE,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
+        return (
+          (0, s.useEffect)(
+            () => (
+              n(!0),
+              (function (e) {
+                return i.A.Initialize(
+                  e.GetServiceTransport(),
+                  o.iA.is_partner_member,
+                );
+              })(c)
+            ),
+            [c],
+          ),
+          t
+            ? (0, s.createElement)(l.V3, {
+                context: d,
+                serviceTransportOverride: c.GetServiceTransport(),
+                children: e.children,
+              })
+            : null
+        );
       }
     },
     55263: (e, t, n) => {
@@ -1035,75 +1146,75 @@
         Gg: () => u,
         MS: () => h,
         Ow: () => d,
-        gF: () => j,
+        gF: () => _,
         t7: () => c,
         zX: () => f,
       });
       var s = n(41735),
-        i = n.n(s),
-        a = n(90626),
+        a = n.n(s),
+        i = n(90626),
         r = n(73745),
         o = n(16021);
       function l(e, t, n, s) {
-        const l = (0, a.useRef)(void 0),
-          c = (0, a.useRef)(void 0),
+        const l = (0, i.useRef)(void 0),
+          c = (0, i.useRef)(void 0),
           d = (0, r.CH)();
         l.current = e;
-        const [u, m] = (0, a.useState)(void 0),
+        const [u, m] = (0, i.useState)(void 0),
           {
             include_assets: f,
             include_release: h,
-            include_platforms: j,
+            include_platforms: _,
             include_all_purchase_options: p,
-            include_screenshots: _,
+            include_screenshots: j,
             include_trailers: g,
             include_ratings: v,
             include_tag_count: x,
-            include_reviews: w,
-            include_basic_info: A,
-            include_supported_languages: b,
-            include_full_description: S,
-            include_included_items: T,
-            include_assets_without_overrides: k,
-            apply_user_filters: D,
-            include_links: y,
+            include_reviews: b,
+            include_basic_info: w,
+            include_supported_languages: S,
+            include_full_description: T,
+            include_included_items: k,
+            include_assets_without_overrides: A,
+            apply_user_filters: y,
+            include_links: G,
           } = n;
         if (
-          ((0, a.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             const n = {
               include_assets: f,
               include_release: h,
-              include_platforms: j,
+              include_platforms: _,
               include_all_purchase_options: p,
-              include_screenshots: _,
+              include_screenshots: j,
               include_trailers: g,
               include_ratings: v,
               include_tag_count: x,
-              include_reviews: w,
-              include_basic_info: A,
-              include_supported_languages: b,
-              include_full_description: S,
-              include_included_items: T,
-              include_assets_without_overrides: k,
-              apply_user_filters: D,
-              include_links: y,
+              include_reviews: b,
+              include_basic_info: w,
+              include_supported_languages: S,
+              include_full_description: T,
+              include_included_items: k,
+              include_assets_without_overrides: A,
+              apply_user_filters: y,
+              include_links: G,
             };
-            let a = null;
+            let i = null;
             return (
               !e ||
                 e < 0 ||
                 o.A.Get().BHasStoreItem(e, t, n) ||
                 (void 0 !== u && s && s == c.current) ||
                 (s !== c.current && (m(void 0), (c.current = s)),
-                (a = i().CancelToken.source()),
+                (i = a().CancelToken.source()),
                 o.A.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    a?.token.reason || l.current !== e || m(1 == t), d();
+                    i?.token.reason || l.current !== e || m(1 == t), d();
                   })),
-              () => a?.cancel("useStoreItemCache: unmounting")
+              () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, u, f, h, j, p, _, g, v, x, w, A, b, S, T, k, D, y, d]),
+          }, [e, t, s, u, f, h, _, p, j, g, v, x, b, w, S, T, k, A, y, G, d]),
           !e)
         )
           return [null, 2];
@@ -1131,19 +1242,19 @@
             include_all_purchase_options: m,
             include_screenshots: f,
             include_trailers: h,
-            include_ratings: j,
+            include_ratings: _,
             include_tag_count: p,
-            include_reviews: _,
+            include_reviews: j,
             include_basic_info: g,
             include_supported_languages: v,
             include_full_description: x,
-            include_included_items: w,
-            include_assets_without_overrides: A,
-            apply_user_filters: b,
-            include_links: S,
+            include_included_items: b,
+            include_assets_without_overrides: w,
+            apply_user_filters: S,
+            include_links: T,
           } = n;
         if (
-          ((0, a.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const n = {
                 include_assets: c,
@@ -1152,16 +1263,16 @@
                 include_all_purchase_options: m,
                 include_screenshots: f,
                 include_trailers: h,
-                include_ratings: j,
+                include_ratings: _,
                 include_tag_count: p,
-                include_reviews: _,
+                include_reviews: j,
                 include_basic_info: g,
                 include_supported_languages: v,
                 include_full_description: x,
-                include_included_items: w,
-                include_assets_without_overrides: A,
-                apply_user_filters: b,
-                include_links: S,
+                include_included_items: b,
+                include_assets_without_overrides: w,
+                apply_user_filters: S,
+                include_links: T,
               },
               s = e.filter(
                 (e) =>
@@ -1171,15 +1282,15 @@
                   ),
               );
             if (0 == s.length) return;
-            const a = i().CancelToken.source(),
+            const i = a().CancelToken.source(),
               r = s.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
             return (
               Promise.all(r).then(() => {
-                a.token.reason || l();
+                i.token.reason || l();
               }),
-              () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, l, c, d, u, m, f, h, j, p, _, g, v, x, w, A, b, S]),
+          }, [e, t, s, l, c, d, u, m, f, h, _, p, j, g, v, x, b, w, S, T]),
           !e)
         )
           return 2;
@@ -1203,7 +1314,7 @@
       function h(e, t, n) {
         return m(e, 2, t, n);
       }
-      function j(e, t, n) {
+      function _(e, t, n) {
         return m(e, 1, t, n);
       }
     },
@@ -1211,9 +1322,9 @@
       "use strict";
       n.d(t, { K: () => x });
       var s = n(7850),
-        i = n(90626),
-        a = n(92298),
-        r = n.n(a),
+        a = n(90626),
+        i = n(92298),
+        r = n.n(i),
         o = n(44894),
         l = n(44165),
         c = n(95695),
@@ -1222,45 +1333,45 @@
         m = n(61859),
         f = n(32754),
         h = n(12916),
-        j = n.n(h),
+        _ = n.n(h),
         p = n(87937),
-        _ = n.n(p);
+        j = n.n(p);
       const g = "hh:mm a",
         v = "HH:mm";
       function x(e) {
         const {
           nLatestTime: t,
           nEarliestTime: n,
-          fnGetTimeToUpdate: a,
+          fnGetTimeToUpdate: i,
           onError: c,
           strAlsoShowTimeZone: h,
           disabled: p,
           bNoDefaultDate: x,
-          className: S,
-          strDescToolTip: T,
-          strDescription: k,
-          bShowTimeZone: D,
-          strInvalidDateTimeLocalizedMsg: y,
+          className: T,
+          strDescToolTip: k,
+          strDescription: A,
+          bShowTimeZone: y,
+          strInvalidDateTimeLocalizedMsg: G,
           fnIsValidDateTime: N,
-          bWeekdaysOnly: G,
+          bWeekdaysOnly: D,
           fnSetTimeToUpdate: C,
-          bForce24HourFormat: I,
+          bForce24HourFormat: P,
         } = e;
-        let P =
+        let I =
           (function () {
-            const e = _()("2025-01-14T13:00:00");
+            const e = j()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
-          })() || I
+          })() || P
             ? v
             : g;
-        const F = a(),
-          [B, E] = i.useState(F > 0 ? _()(1e3 * F) : null),
-          [O, z] = i.useState(),
-          [M, L] = i.useState(),
-          R = (function (e, t, n, s, a) {
+        const F = i(),
+          [E, B] = a.useState(F > 0 ? j()(1e3 * F) : null),
+          [O, z] = a.useState(),
+          [L, R] = a.useState(),
+          M = (function (e, t, n, s, i) {
             const r = s && s(),
-              o = t && !A(t).isValid(),
-              l = e && !b(e).isValid();
+              o = t && !w(t).isValid(),
+              l = e && !S(e).isValid();
             let c = null;
             (l || o || "string" == typeof r || !1 === r) &&
               ((c = (0, m.we)(
@@ -1272,88 +1383,88 @@
                   ? (c = (0, m.we)("#DateTimePicker_Date_CannotParse"))
                   : "string" == typeof r && (c = r));
             return (
-              i.useEffect(() => {
-                a && a(c);
-              }, [c, a]),
+              a.useEffect(() => {
+                i && i(c);
+              }, [c, i]),
               c
             );
-          })(O, M, y, N, c),
-          V = !c && R;
-        let W, H;
+          })(O, L, G, N, c),
+          V = !c && M;
+        let W, U;
         if (t && n && t == n && n > l.HD.GetTimeNowWithOverride()) {
-          const e = _().unix(n);
+          const e = j().unix(n);
           (W = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (P = v);
+            (I = v);
         }
-        F || !n || x || (H = _().unix(n));
-        const U = _().tz.guess(),
-          Y = _().unix(F).tz(U),
-          Z = !!h && U != h && _().unix(F).tz(h),
+        F || !n || x || (U = j().unix(n));
+        const H = j().tz.guess(),
+          Y = j().unix(F).tz(H),
+          q = !!h && H != h && j().unix(F).tz(h),
           {
-            fnOnInput: q,
-            fnOnInputBlur: K,
-            fnOnChange: Q,
-          } = w(
-            A,
+            fnOnInput: Z,
+            fnOnInputBlur: Q,
+            fnOnChange: K,
+          } = b(
+            w,
             (e) => {
               if (p) return;
-              L(null);
-              const t = a(),
-                n = _().unix(t || l.HD.GetTimeNowWithOverride());
+              R(null);
+              const t = i(),
+                n = j().unix(t || l.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(n.hour()),
                 e.minute(n.minute()),
                 e.second(0),
                 C(e.unix()),
-                E(e);
+                B(e);
             },
-            L,
+            R,
           ),
           {
-            fnOnInput: X,
-            fnOnInputBlur: J,
+            fnOnInput: J,
+            fnOnInputBlur: X,
             fnOnChange: $,
-          } = w(
-            b,
+          } = b(
+            S,
             (e) => {
               if (p) return;
               z(null);
-              let t = a(),
+              let t = i(),
                 s = 0;
               if (t) {
-                const n = _().unix(t);
+                const n = j().unix(t);
                 (e = e.clone()).year(n.year()),
                   e.month(n.month()),
                   e.date(n.date()),
                   (s = e.unix());
               } else {
                 s =
-                  _().unix(n).hour(0).second(0).minutes(0).unix() +
+                  j().unix(n).hour(0).second(0).minutes(0).unix() +
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              C(s), E(_().unix(s));
+              C(s), B(j().unix(s));
             },
             z,
           );
         return (0, s.jsxs)("div", {
-          className: (0, u.A)(j().EventTimeSection, S),
+          className: (0, u.A)(_().EventTimeSection, T),
           children: [
             (0, s.jsxs)("div", {
-              className: (0, u.A)(j().EventTimeTitle, "DialogLabel"),
+              className: (0, u.A)(_().EventTimeTitle, "DialogLabel"),
               children: [
                 (0, s.jsx)(f.he, {
-                  toolTipContent: T,
+                  toolTipContent: k,
                   direction: "top",
-                  children: Boolean(k) && (0, s.jsx)("span", { children: k }),
+                  children: Boolean(A) && (0, s.jsx)("span", { children: A }),
                 }),
                 V &&
                   (0, s.jsxs)("span", {
-                    className: j().DateErrorCtn,
+                    className: _().DateErrorCtn,
                     children: [(0, s.jsx)("img", { src: o.A }), V],
                   }),
               ],
@@ -1362,90 +1473,90 @@
               className: d().FlexRowContainer,
               children: [
                 (0, s.jsxs)("div", {
-                  className: (0, u.A)(d().InputBorder, j().TimeBlock),
+                  className: (0, u.A)(d().InputBorder, _().TimeBlock),
                   children: [
                     (0, s.jsx)(r(), {
-                      onChange: Q,
+                      onChange: K,
                       timeFormat: !1,
-                      value: null != M ? M : B,
+                      value: null != L ? L : E,
                       isValidDate: (e) =>
                         !p &&
                         (function (e, t, n, s) {
-                          const i = _().unix(e).hour(0).seconds(0).minute(0);
-                          let a = s.unix() >= i.unix();
-                          if (a && t && t >= e) {
-                            const e = _()
+                          const a = j().unix(e).hour(0).seconds(0).minute(0);
+                          let i = s.unix() >= a.unix();
+                          if (i && t && t >= e) {
+                            const e = j()
                               .unix(t)
                               .hour(23)
                               .minute(59)
                               .seconds(59);
-                            a = s.unix() <= e.unix();
+                            i = s.unix() <= e.unix();
                           }
-                          a &&
+                          i &&
                             n &&
                             ((0 != s.weekday() && 6 != s.weekday()) ||
-                              (a = !1));
-                          return a;
-                        })(n, t, G, e),
-                      initialValue: H,
+                              (i = !1));
+                          return i;
+                        })(n, t, D, e),
+                      initialValue: U,
                       inputProps: {
                         placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
                         className: (0, u.A)(
-                          j().DateWidth,
+                          _().DateWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
                         disabled: p,
-                        onChange: (e) => q(e.currentTarget.value),
-                        onBlur: (e) => K(e.currentTarget.value),
+                        onChange: (e) => Z(e.currentTarget.value),
+                        onBlur: (e) => Q(e.currentTarget.value),
                       },
                     }),
-                    !!Z &&
+                    !!q &&
                       (0, s.jsx)("div", {
-                        className: j().PacificTimeHint,
-                        children: Z.format("L"),
+                        className: _().PacificTimeHint,
+                        children: q.format("L"),
                       }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: (0, u.A)(d().InputBorder, j().TimeBlock),
+                  className: (0, u.A)(d().InputBorder, _().TimeBlock),
                   children: [
                     (0, s.jsx)(r(), {
                       onChange: $,
                       dateFormat: !1,
-                      timeFormat: P,
+                      timeFormat: I,
                       timeConstraints: W,
-                      value: null != O ? O : B,
+                      value: null != O ? O : E,
                       inputProps: {
                         placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
                         className: (0, u.A)(
-                          j().TimeWidth,
+                          _().TimeWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
                         disabled: p,
-                        onChange: (e) => X(e.currentTarget.value),
-                        onBlur: (e) => J(e.currentTarget.value),
+                        onChange: (e) => J(e.currentTarget.value),
+                        onBlur: (e) => X(e.currentTarget.value),
                       },
                     }),
-                    !!Z &&
+                    !!q &&
                       (0, s.jsx)("div", {
-                        className: j().PacificTimeHint,
-                        children: Z.format("LT"),
+                        className: _().PacificTimeHint,
+                        children: q.format("LT"),
                       }),
                   ],
                 }),
-                D &&
+                y &&
                   (0, s.jsxs)("div", {
                     children: [
                       (0, s.jsx)("div", {
-                        className: j().TimeZone,
+                        className: _().TimeZone,
                         children: Y.zoneAbbr(),
                       }),
-                      !!Z &&
+                      !!q &&
                         (0, s.jsx)("div", {
-                          className: j().TimeZone,
-                          children: Z.zoneAbbr(),
+                          className: _().TimeZone,
+                          children: q.zoneAbbr(),
                         }),
                     ],
                   }),
@@ -1458,18 +1569,18 @@
           ],
         });
       }
-      function w(e, t, n) {
-        const [s, a] = i.useState(!1);
+      function b(e, t, n) {
+        const [s, i] = a.useState(!1);
         return {
           fnOnInput: (e) => {
-            n(e), a(!0);
+            n(e), i(!0);
           },
           fnOnInputBlur: (n) => {
             if (s) {
               const s = e(n);
               s.isValid() && t(s);
             }
-            a(!1);
+            i(!1);
           },
           fnOnChange: (n) => {
             if (!s)
@@ -1480,11 +1591,11 @@
           },
         };
       }
-      function A(e) {
-        return _()(
+      function w(e) {
+        return j()(
           e,
           (function () {
-            const e = _()("2025-01-14").format("L").split(/[-/.]/),
+            const e = j()("2025-01-14").format("L").split(/[-/.]/),
               t = e.indexOf("14");
             return e.indexOf("01") < t;
           })()
@@ -1493,16 +1604,16 @@
           !1,
         );
       }
-      function b(e) {
-        return _()(e, [g, v], !1);
+      function S(e) {
+        return j()(e, [g, v], !1);
       }
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => h, pn: () => p, qx: () => j });
+      n.d(t, { AQ: () => h, pn: () => p, qx: () => _ });
       var s = n(7850),
-        i = n(16676),
-        a = n(61859),
+        a = n(16676),
+        i = n(61859),
         r = n(12155),
         o = n(90626),
         l = n(52038),
@@ -1515,13 +1626,13 @@
         const {
             title: t,
             tooltip: n,
-            getMinimized: i,
-            toggleMinimized: a,
+            getMinimized: a,
+            toggleMinimized: i,
             className: r,
             children: o,
             elAdditionalButtons: h,
           } = e,
-          j = (0, m.q3)(() => i());
+          _ = (0, m.q3)(() => a());
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsxs)("div", {
@@ -1543,16 +1654,16 @@
                   className: u.SectionTitleButtons,
                   children: [
                     h,
-                    (0, s.jsx)(p, { bIsMinimized: j, fnToggleMinimize: a }),
+                    (0, s.jsx)(p, { bIsMinimized: _, fnToggleMinimize: i }),
                   ],
                 }),
               ],
             }),
-            !j && (0, s.jsx)(d.tH, { children: o }),
+            !_ && (0, s.jsx)(d.tH, { children: o }),
           ],
         });
       }
-      function j(e) {
+      function _(e) {
         const [t, n] = o.useState(Boolean(e.bStartMinimized));
         return (0, s.jsx)(h, {
           ...e,
@@ -1564,8 +1675,8 @@
       function p(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return (0, s.jsx)(i.$n, {
-          "data-tooltip-text": (0, a.we)(o),
+        return (0, s.jsx)(a.$n, {
+          "data-tooltip-text": (0, i.we)(o),
           onClick: n,
           children: e.bIsMinimized
             ? (0, s.jsx)(r.hz4, {})

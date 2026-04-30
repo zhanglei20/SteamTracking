@@ -4,6 +4,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -112,6 +113,18 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     chunkid: (module) => {
@@ -405,11 +418,11 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {
+          [_] = (0, _._)(_, {
             include_basic_info: !0,
             include_links: !0,
           });
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         const _ = __webpack_require__.GetLinks();
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
@@ -449,8 +462,8 @@
         );
       }
       function _(_) {
-        const { gidClanEvent: _, rgSocial: __webpack_require__ } = _,
-          _ = _(__webpack_require__);
+        const { gidClanEvent: _, rgSocial: _, bIsCreatorHomeEvent: _ } = _,
+          _ = _(_);
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
               children: [
@@ -459,7 +472,9 @@
                     _().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: (0, _._)("#EventDisplay_Sale_SocialTitle"),
+                  children: _
+                    ? (0, _._)("#EventDisplay_Sale_SocialTitle_Dev")
+                    : (0, _._)("#EventDisplay_Sale_SocialTitle"),
                 }),
                 (0, _.jsx)(_, {
                   _: _,
@@ -471,7 +486,7 @@
       }
       const _ = [6, 23, 18, 8, 9, 19, 24];
       function _(_) {
-        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _,
+        const { _: _, rgSocialMedia: _, className: _ } = _,
           _ = (0, _._)();
         return (0, _.jsx)("div", {
           className: (0, _._)(_().AppSocialLinks, _),
@@ -538,97 +553,97 @@
         });
       }
       function _(_) {
-        const { linkType: _, ...__webpack_require__ } = _;
+        const { linkType: _, ..._ } = _;
         switch (_) {
           case 1:
             return (0, _.jsx)(_.agV, {
-              ...__webpack_require__,
+              ..._,
             });
           case 2:
             return (0, _.jsx)(_.ZnA, {
-              ...__webpack_require__,
+              ..._,
             });
           case 3:
             return (0, _.jsx)(_._, {
-              ...__webpack_require__,
+              ..._,
             });
           case 4:
             return (0, _.jsx)(_.ofN, {
-              ...__webpack_require__,
+              ..._,
             });
           case 5:
             return (0, _.jsx)(_.Bki, {
-              ...__webpack_require__,
+              ..._,
             });
           case 6:
           case 18:
           case 23:
             return (0, _.jsx)(_.$vK, {
-              ...__webpack_require__,
+              ..._,
             });
           case 7:
             return (0, _.jsx)(_.OSJ, {
-              ...__webpack_require__,
+              ..._,
             });
           case 8:
             return (0, _.jsx)(_.nm_, {
-              ...__webpack_require__,
+              ..._,
             });
           case 9:
             return (0, _.jsx)(_.tIO, {
-              ...__webpack_require__,
+              ..._,
             });
           case 10:
             return (0, _.jsx)(_.Vt2, {
-              ...__webpack_require__,
+              ..._,
             });
           case 11:
             return (0, _.jsx)(_.Vgk, {
-              ...__webpack_require__,
+              ..._,
             });
           case 12:
             return (0, _.jsx)(_.VSd, {
-              ...__webpack_require__,
+              ..._,
             });
           case 13:
             return (0, _.jsx)(_.ccb, {
-              ...__webpack_require__,
+              ..._,
             });
           case 14:
             return (0, _.jsx)(_.rNt, {
-              ...__webpack_require__,
+              ..._,
             });
           case 15:
             return (0, _.jsx)(_.g$j, {
-              ...__webpack_require__,
+              ..._,
             });
           case 16:
             return (0, _.jsx)(_.BQz, {
-              ...__webpack_require__,
+              ..._,
             });
           case 17:
             return (0, _.jsx)(_.jdP, {
-              ...__webpack_require__,
+              ..._,
             });
           case 19:
             return (0, _.jsx)(_.bKN, {
-              ...__webpack_require__,
+              ..._,
             });
           case 20:
             return (0, _.jsx)(_.sDU, {
-              ...__webpack_require__,
+              ..._,
             });
           case 21:
             return (0, _.jsx)(_.MbF, {
-              ...__webpack_require__,
+              ..._,
             });
           case 22:
             return (0, _.jsx)(_.emH, {
-              ...__webpack_require__,
+              ..._,
             });
           case 24:
             return (0, _.jsx)(_.Yoo, {
-              ...__webpack_require__,
+              ..._,
             });
           case 25:
           case 0:
@@ -647,8 +662,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { clanAccountID: _, items: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { clanAccountID: _, items: _ } = _,
+          _ = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               _: "social_" + _,

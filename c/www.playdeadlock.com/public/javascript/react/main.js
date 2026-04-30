@@ -286,7 +286,7 @@
       function _(_, _) {
         return (
           (function (_, _) {
-            const [__webpack_require__, _] = _.useState(_);
+            const [_, _] = _.useState(_);
             return (
               _.useEffect(() => {
                 if (!_) {
@@ -295,7 +295,7 @@
                 }
                 _(!0);
               }, [_, _]),
-              __webpack_require__
+              _
             );
           })(_, _) || _
         );
@@ -781,26 +781,20 @@
         constructor(_) {
           this.m_root = _;
         }
-        static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavState(_, _ = !0, _ = !0) {
           return {
-            root: _.SerializeNavNode(_, _, __webpack_require__),
+            root: _.SerializeNavNode(_, _, _),
             bHadFocus: _.BFocusWithin(),
           };
         }
-        static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavNode(_, _ = !0, _ = !0) {
           let _ = null;
           const [_, _] = _.GetChildren();
           return (
             _.length &&
               -1 != _ &&
               _ &&
-              (_ = _.map((_, _) =>
-                _.SerializeNavNode(
-                  _,
-                  _ == _ || __webpack_require__,
-                  __webpack_require__,
-                ),
-              )),
+              (_ = _.map((_, _) => _.SerializeNavNode(_, _ == _ || _, _))),
             {
               sNavKey: _.NavKey,
               iActiveChild: _,
@@ -808,15 +802,14 @@
             }
           );
         }
-        static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavState(_, _, _ = 0) {
           const { root: _, bHadFocus: _ } = _;
           _.Tree.Controller.RestoreHistoryTransaction(() => {
             _.RestoreSerializedNavNode(_, _),
-              (1 == __webpack_require__ || (0 == __webpack_require__ && _)) &&
-                _.BTakeFocus(_.APPLICATION);
+              (1 == _ || (0 == _ && _)) && _.BTakeFocus(_.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavNode(_, _, _ = 0) {
           const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
@@ -825,7 +818,7 @@
                 let _ = "";
                 for (let _ = 0; _ < _; _++) _ += "*";
                 return (_ += " "), _;
-              })(__webpack_require__)}`
+              })(_)}`
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
@@ -840,7 +833,7 @@
             for (const _ of _) {
               if (!_.sNavKey) continue;
               const _ = _.get(_.sNavKey);
-              _ && _.RestoreSerializedNavNode(_, _, __webpack_require__ + 1);
+              _ && _.RestoreSerializedNavNode(_, _, _ + 1);
             }
             if (-1 != _ && _[_]?.sNavKey) {
               const _ = _.get(_[_].sNavKey);
@@ -1620,16 +1613,15 @@
         }
         SetProperties(_) {
           const _ =
-            ((__webpack_require__ = this.m_Properties?.actionDescriptionMap),
+            ((_ = this.m_Properties?.actionDescriptionMap),
             (_ = _?.actionDescriptionMap),
-            !(null == __webpack_require__ || null == _
-              ? __webpack_require__ === _
-              : "object" == typeof __webpack_require__ &&
+            !(null == _ || null == _
+              ? _ === _
+              : "object" == typeof _ &&
                 "object" == typeof _ &&
-                Object.keys(__webpack_require__).length ===
-                  Object.keys(_).length &&
-                Object.keys(__webpack_require__).every(
-                  (_) => _.hasOwnProperty(_) && __webpack_require__[_] === _[_],
+                Object.keys(_).length === Object.keys(_).length &&
+                Object.keys(_).every(
+                  (_) => _.hasOwnProperty(_) && _[_] === _[_],
                 )));
           var _, _;
           const _ = this.m_Properties?.focusableIfEmpty,
@@ -1909,16 +1901,15 @@
           const {
             focusable: _,
             focusableIfEmpty: _,
-            childFocusDisabled: __webpack_require__,
+            childFocusDisabled: _,
             fnCanTakeFocus: _,
           } = this.m_Properties;
           return this.m_bMounted
             ? _ && !_(this)
               ? "none"
-              : _ ||
-                  (_ && (__webpack_require__ || 0 == this.m_rgChildren.length))
+              : _ || (_ && (_ || 0 == this.m_rgChildren.length))
                 ? "self"
-                : !__webpack_require__ && this.m_rgChildren.length
+                : !_ && this.m_rgChildren.length
                   ? "children"
                   : "none"
             : "none";
@@ -2086,7 +2077,7 @@
           if (this.BTryInternalNavigation(_, _.detail.is_repeat ?? !1))
             return !0;
           const {
-            onMoveUp: __webpack_require__,
+            onMoveUp: _,
             onMoveRight: _,
             onMoveDown: _,
             onMoveLeft: _,
@@ -2094,7 +2085,7 @@
           let _ = !1;
           switch (_) {
             case _.DIR_UP:
-              __webpack_require__ && (_ = __webpack_require__(_.detail, this));
+              _ && (_ = __webpack_require__(_.detail, this));
               break;
             case _.DIR_RIGHT:
               _ && (_ = _(_.detail, this));
@@ -2606,8 +2597,8 @@
           var _;
         }
         RestoreFocusSnapshot(_, _ = 0) {
-          return (function (_, _, __webpack_require__ = 0) {
-            return _.RestoreSerializedNavState(_, _, __webpack_require__);
+          return (function (_, _, _ = 0) {
+            return _.RestoreSerializedNavState(_, _, _);
           })(this.m_node, _, _);
         }
         NavTree() {
@@ -2694,7 +2685,7 @@
         };
       });
       function _(_, _) {
-        const { onTextEntered: __webpack_require__, ..._ } = _,
+        const { onTextEntered: _, ..._ } = _,
           _ = _.useRef(null),
           _ = _.useRef({});
         Object.assign(_.current, {
@@ -2773,7 +2764,7 @@
       }
       _.forwardRef(function (_, _) {
         const {
-            navID: __webpack_require__,
+            navID: _,
             onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
@@ -2792,7 +2783,7 @@
           ? _.createElement(
               _,
               {
-                navID: __webpack_require__,
+                navID: _,
                 onActivated: _,
                 onDeactivated: _,
                 navTreeRef: _,
@@ -2820,7 +2811,7 @@
       function _(_) {
         const {
             navID: _,
-            onActivated: __webpack_require__,
+            onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
             enabled: _ = !0,
@@ -2838,7 +2829,7 @@
           { refDiv: _, tree: _ } = (function (_) {
             const {
                 navID: _,
-                virtualFocus: __webpack_require__,
+                virtualFocus: _,
                 parentEmbeddedNavTree: _,
                 disabledRoot: _,
                 enabled: _,
@@ -2854,7 +2845,7 @@
               );
             let _ = _.useRef(null);
             return (
-              _.SetUseVirtualFocus(__webpack_require__),
+              _.SetUseVirtualFocus(_),
               _.SetModal(_),
               _.SetIsEmbeddedInLegacyTree(!!_),
               _.SetOnGlobalButtonDown(_),
@@ -2888,7 +2879,7 @@
             onGlobalButtonDown: _,
             navTreeRef: _,
           });
-        _(_.OnActivateCallbacks, __webpack_require__),
+        _(_.OnActivateCallbacks, _),
           _(_.OnDeactivateCallbacks, _),
           (function (_, _, _) {
             const { onButtonDown: _, ..._ } = _,
@@ -2958,11 +2949,7 @@
         bDisableFocusClasses: !1,
       });
       function _(_) {
-        const {
-            tree: _,
-            disableFocusClasses: __webpack_require__ = !1,
-            children: _,
-          } = _,
+        const { tree: _, disableFocusClasses: _ = !1, children: _ } = _,
           [_, _] = _.useState(_?.BIsActive() || !1),
           [_, _] = _.useState(_?.BIsActiveWithinContext() || !1);
         _.useEffect(
@@ -2980,9 +2967,9 @@
           () => ({
             bActiveTree: _,
             bActiveTreeWithinContext: _,
-            bDisableFocusClasses: __webpack_require__,
+            bDisableFocusClasses: _,
           }),
-          [_, __webpack_require__, _],
+          [_, _, _],
         );
         return _.createElement(
           _.Provider,
@@ -3000,7 +2987,7 @@
           OnForceMeasureFocusRing: () => {},
         });
       function _(_) {
-        const { navRef: _, ...__webpack_require__ } = _,
+        const { navRef: _, ..._ } = _,
           _ = _.useRef(null),
           _ = (0, _.useContext)(_),
           _ = (0, _.useContext)(_),
@@ -3015,7 +3002,7 @@
           })(_, _);
         return (
           _.useLayoutEffect(() => {
-            _ && _.SetProperties(__webpack_require__);
+            _ && _.SetProperties(_);
           }),
           _.useLayoutEffect(() => {
             if (!_) return;
@@ -3036,7 +3023,7 @@
       function _(_) {
         const {
             onButtonDown: _,
-            onButtonUp: __webpack_require__,
+            onButtonUp: _,
             onOKButton: _,
             onCancelButton: _,
             onSecondaryButton: _,
@@ -3055,8 +3042,7 @@
           } = _,
           _ = {};
         void 0 !== _ && (_.onButtonDown = _),
-          void 0 !== __webpack_require__ &&
-            (_.onButtonUp = __webpack_require__),
+          void 0 !== _ && (_.onButtonUp = _),
           void 0 !== _ && (_.onOKButton = _),
           void 0 !== _ && (_.onCancelButton = _),
           void 0 !== _ && (_.onSecondaryButton = _),
@@ -3068,7 +3054,7 @@
         const _ = (function (_) {
           const {
               onOKActionDescription: _,
-              onCancelActionDescription: __webpack_require__,
+              onCancelActionDescription: _,
               onSecondaryActionDescription: _,
               onOptionsActionDescription: _,
               onMenuActionDescription: _,
@@ -3079,8 +3065,7 @@
             };
           return (
             void 0 !== _ && (_[_._] = _),
-            void 0 !== __webpack_require__ &&
-              (_[_.CANCEL] = __webpack_require__),
+            void 0 !== _ && (_[_.CANCEL] = _),
             void 0 !== _ && (_[_.SECONDARY] = _),
             void 0 !== _ && (_[_.OPTIONS] = _),
             void 0 !== _ && (_[_.START] = _),
@@ -3103,7 +3088,7 @@
       function _(_) {
         const {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -3130,7 +3115,7 @@
           elemProps: _,
           navOptions: {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -3160,7 +3145,7 @@
       function _(_) {
         return function (_) {
           const {
-              focusClassName: __webpack_require__,
+              focusClassName: _,
               focusWithinClassName: _,
               bFocusableByDefault: _,
               className: _,
@@ -3184,7 +3169,7 @@
             _,
             {
               ..._,
-              className: _()(_, _ && _ && __webpack_require__, _ && _ && _),
+              className: _()(_, _ && _ && _, _ && _ && _),
               tabIndex: _ ? -1 : _,
               ref: _,
             },
@@ -3326,10 +3311,10 @@
         bDOMElementFocusByDefault: !1,
       });
       _.forwardRef(function (_, _) {
-        const { href: __webpack_require__ = "#", ..._ } = _;
+        const { href: _ = "#", ..._ } = _;
         return _.createElement(_, {
           ref: _,
-          href: __webpack_require__,
+          href: _,
           ..._,
         });
       }),
@@ -3354,7 +3339,7 @@
       function _(_) {
         const {
             "flow-children": _,
-            onActivate: __webpack_require__,
+            onActivate: _,
             onCancel: _,
             focusClassName: _,
             focusWithinClassName: _,
@@ -3364,9 +3349,8 @@
         let _ = {};
         const _ = _(_);
         _ != _.NONE && (_.layout = _),
-          __webpack_require__ &&
-            ((_.onClick = _.onClick || __webpack_require__),
-            (_.onOKButton = _.onOKButton || __webpack_require__)),
+          _ &&
+            ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
           _.onOKButton &&
             void 0 === _.focusable &&
             void 0 === _.focusableIfEmpty &&
@@ -3382,9 +3366,7 @@
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
-          _.focusable &&
-            (__webpack_require__ || _.onOKButton) &&
-            (_.role ??= "button");
+          _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
         const _ = (0, _.useContext)(_).Component;
         return _.createElement(
           _.Provider,
@@ -3425,29 +3407,19 @@
       }
       function _(_, _) {
         if (!_) return !1;
-        const [__webpack_require__, _] = _.split(".", 2);
-        return (
-          __webpack_require__ &&
-          _ &&
-          _(_, __webpack_require__) &&
-          _ in _.SteamClient[__webpack_require__]
-        );
+        const [_, _] = _.split(".", 2);
+        return _ && _ && _(_, _) && _ in _.SteamClient[_];
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.forwardRef((_, _) => {
-        const {
-          className: __webpack_require__,
-          contextMenuStyles: _,
-          disabled: _,
-          ..._
-        } = _;
+        const { className: _, contextMenuStyles: _, disabled: _, ..._ } = _;
         return _.createElement("div", {
           ..._,
           ref: _,
           className: (0, _._)(
-            __webpack_require__,
+            _,
             (_ || _()).contextMenuItem,
             "contextMenuItem",
             _ && "disabled",
@@ -3476,7 +3448,7 @@
         );
       }
       function _(_) {
-        const { color: _ = "#FFFFFF", ...__webpack_require__ } = _;
+        const { color: _ = "#FFFFFF", ..._ } = _;
         return _.createElement(
           "svg",
           {
@@ -3493,7 +3465,7 @@
             width: "256px",
             height: "256px",
             viewBox: "0 0 256 256",
-            ...__webpack_require__,
+            ..._,
           },
           _.createElement("line", {
             fill: "none",
@@ -3669,7 +3641,7 @@
           let {
             children: _,
             className: _,
-            label: __webpack_require__,
+            label: _,
             onCancel: _,
             cancelText: _,
             refInstance: _,
@@ -3728,11 +3700,11 @@
                   navRef: this.m_navRef,
                   ref: _,
                   role: _,
-                  "aria-labelledby": __webpack_require__ ? _ : void 0,
+                  "aria-labelledby": _ ? _ : void 0,
                   ..._,
                 },
                 _,
-                __webpack_require__ &&
+                _ &&
                   _.createElement(
                     "div",
                     {
@@ -3741,7 +3713,7 @@
                         display: "none",
                       },
                     },
-                    __webpack_require__,
+                    _,
                   ),
                 !this.instance.BIsSubMenu() &&
                   _.createElement(
@@ -3812,7 +3784,7 @@
           const {
               onSelected: _,
               bInteractableItem: _,
-              onMoveRight: __webpack_require__,
+              onMoveRight: _,
               ..._
             } = this.props,
             _ = this.context?.styles ?? _();
@@ -3840,7 +3812,7 @@
                   onClick: this.props.disabled ? void 0 : this.OnClick,
                   focusable: !this.props.disabled,
                   onOKButton: this.OnOKButton,
-                  onMoveRight: __webpack_require__,
+                  onMoveRight: _,
                   unselectable: this.props.unselectable,
                   role: _.role ?? "menuitem",
                   "aria-selected": this.props.selected,
@@ -3936,7 +3908,7 @@
           let {
             label: _,
             selectedWithin: _,
-            children: __webpack_require__,
+            children: _,
             className: _,
             bInGamepadUI: _,
             ..._
@@ -5025,8 +4997,7 @@
         ["id", "indonesian"],
       ]);
       const _ = new Map();
-      for (const [module, module_exports] of _.entries())
-        _.set(module_exports, module);
+      for (const [_, _] of _.entries()) _.set(_, _);
       var _, _;
       function _() {
         return (0, _._)() ? _.Composited : _.None;
@@ -5127,7 +5098,7 @@
         }),
         _ = () => _.useContext(_);
       function _(_) {
-        const { ownerWindow: _, children: __webpack_require__ } = _,
+        const { ownerWindow: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               ownerWindow: _,
@@ -5139,7 +5110,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       class _ {
@@ -5160,7 +5131,7 @@
               "Name is required.  This is an internal name, different from title.",
             ),
             (this.m_strName = _);
-          const { title: __webpack_require__, eCreationFlags: _, ..._ } = _;
+          const { title: _, eCreationFlags: _, ..._ } = _;
           (this.m_rgParams = {
             ..._,
             eCreationFlags: _ ?? 0,
@@ -5171,7 +5142,7 @@
             (this.m_bCreateHidden = !!(
               this.m_rgParams.eCreationFlags & _.Hidden
             )),
-            (this.m_strTitle = __webpack_require__);
+            (this.m_strTitle = _);
         }
         UpdateParamsBeforeShow(_) {
           return _;
@@ -5806,7 +5777,7 @@
       function _(_) {
         const {
             refContextMenuManager: _,
-            bRegisterMenuManager: __webpack_require__ = !0,
+            bRegisterMenuManager: _ = !0,
             children: _,
           } = _,
           _ = _(),
@@ -5815,12 +5786,12 @@
         return (
           _.current || (_.current = new _()),
           _.useLayoutEffect(() => {
-            if (__webpack_require__)
+            if (_)
               return (
                 _.SetMenuManager(_, _.current),
                 () => _.SetMenuManager(_, void 0)
               );
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _.useLayoutEffect(() => (_(_, _.current), () => _(_, void 0)), [_]),
           _.createElement(
             _.Provider,
@@ -6015,13 +5986,9 @@
           });
         }
         render() {
-          const {
-              children: _,
-              fallback: _,
-              errorKey: __webpack_require__,
-            } = this.props,
+          const { children: _, fallback: _, errorKey: _ } = this.props,
             { error: _, identifierHash: _, lastErrorKey: _ } = this.state;
-          return _ && __webpack_require__ == _
+          return _ && _ == _
             ? void 0 !== _
               ? "function" == typeof _
                 ? _(_.error)
@@ -6068,12 +6035,7 @@
           );
         },
         _ = (_) => {
-          const {
-              error: _,
-              onRefresh: __webpack_require__,
-              identifierHash: _,
-              store: _,
-            } = _,
+          const { error: _, onRefresh: _, identifierHash: _, store: _ } = _,
             _ = (_.error && _.error.message) || "unknown error",
             _ = `${_.product}_${_.version}_${_}`;
           return _.createElement(
@@ -6090,7 +6052,7 @@
                     textDecoration: "underline",
                     cursor: "pointer",
                   },
-                  onClick: __webpack_require__,
+                  onClick: _,
                 },
                 "Refresh",
               ),
@@ -6141,10 +6103,7 @@
             _,
           );
       function _(_) {
-        const {
-            managerOverride: _,
-            bSuppressMouseOverlay: __webpack_require__,
-          } = _,
+        const { managerOverride: _, bSuppressMouseOverlay: _ } = _,
           _ = _(),
           _ = (function () {
             const { ownerWindow: _ } = _(),
@@ -6154,7 +6113,7 @@
           _ = _.useContext(_),
           _ = _ ?? _;
         _(_.OnMenusChanged, _);
-        const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
+        const _ = !_ && _.BShouldRenderMouseOverlay(),
           _ = _.GetAllMenus();
         return _.createElement(
           _.Fragment,
@@ -6175,11 +6134,7 @@
         );
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _(),
           _ = _().ownerWindow,
           _ = _.useRef(void 0);
@@ -6204,7 +6159,7 @@
           _.current
             ? _.createElement(_, {
                 instance: _,
-                browserInfo: __webpack_require__,
+                browserInfo: _,
                 children: _,
               })
             : _.createElement(_, {
@@ -6214,29 +6169,25 @@
         );
       }
       function _(_) {
-        const { instance: _, children: __webpack_require__ } = _;
+        const { instance: _, children: _ } = _;
         return _.createElement(
           _,
           {
             ..._.position,
           },
-          __webpack_require__,
+          _,
         );
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _.useRef(null),
           _ = _().ownerWindow,
           _ = _.SteamClient.Browser.GetBrowserID(),
           _ = _.useCallback(
             (_) => {
-              const { options: __webpack_require__, position: _ } = _,
+              const { options: _, position: _ } = _,
                 _ = _.element;
-              if (__webpack_require__.bScreenCoordinates)
+              if (_.bScreenCoordinates)
                 _.dimensions = {
                   left: _.clientX,
                   top: _.clientY,
@@ -6278,7 +6229,7 @@
               "ContextMenuPopupBody",
             ),
             replace_existing_popup: !1,
-            target_browser: __webpack_require__,
+            target_browser: _,
             window_opener_id: _,
             bHideOnClose: !0,
             eCreationFlags: _,
@@ -6330,7 +6281,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0);
+        const [_, _] = (0, _.useState)(!0);
         return (
           (0, _.useEffect)(() => {
             (0, _.startTransition)(() => {
@@ -6341,7 +6292,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = _.useCallback(() => {
             _(_, "Window.IsWindowMaximized")
               ? _.SteamClient.Window.IsWindowMaximized().then((_) => {
@@ -6370,14 +6321,14 @@
         );
       }
       function _(_) {
-        const { popup: _, onMaximize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMaximize: _, bOSX: _ } = _,
           _ = _(_),
           _ = _.useCallback(() => {
-            __webpack_require__
+            _
               ? __webpack_require__()
               : _(_, "Window.ToggleMaximize") &&
                 _.SteamClient.Window.ToggleMaximize();
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return _.createElement(
           _,
           {
@@ -6391,7 +6342,7 @@
         );
       }
       function _(_) {
-        const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMinimize: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _.SteamClient.Window.Minimize();
           }, [_]);
@@ -6399,13 +6350,13 @@
           _,
           {
             className: "minimizeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
+            onClick: _ ?? _,
           },
           !_ && _.createElement(_, null),
         );
       }
       function _(_) {
-        const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onClose: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _ &&
               (_(_, "Window.Close") ? _.SteamClient.Window.Close() : _.close());
@@ -6414,19 +6365,18 @@
           _,
           {
             className: "closeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
+            onClick: _ ?? _,
           },
           !_ && _.createElement(_, null),
         );
       }
       function _(_) {
-        const { className: _, onClick: __webpack_require__, children: _ } = _,
+        const { className: _, onClick: _, children: _ } = _,
           _ = _.useCallback(
             (_) => {
-              __webpack_require__ &&
-                (_.stopPropagation(), __webpack_require__(_));
+              _ && (_.stopPropagation(), __webpack_require__(_));
             },
-            [__webpack_require__],
+            [_],
           );
         return _.createElement(
           "div",
@@ -6446,7 +6396,7 @@
       function _(_) {
         const {
             className: _,
-            style: __webpack_require__,
+            style: _,
             hideActions: _,
             hideClose: _,
             hideMin: _,
@@ -6461,7 +6411,7 @@
             children: _,
           } = _,
           _ = (function (_, _ = 100) {
-            const [__webpack_require__, _] = _.useState(!1),
+            const [_, _] = _.useState(!1),
               _ = _.useCallback(() => _(!0), [_]),
               _ = _.useCallback(() => _(!1), [_]);
             return (
@@ -6477,7 +6427,7 @@
                     : void 0,
                 [_, _, _],
               ),
-              _(__webpack_require__, _)
+              _(_, _)
             );
           })(_);
         return _.createElement(
@@ -6490,7 +6440,7 @@
               (_ || _) && "WindowFocus",
               _,
             ),
-            style: __webpack_require__,
+            style: _,
           },
           _.createElement("div", {
             className: "title-area-highlight",
@@ -6543,10 +6493,10 @@
       }
       function _(_) {
         const { Modal: _ } = _,
-          { name: __webpack_require__, modalProps: _, options: _ } = _,
+          { name: _, modalProps: _, options: _ } = _,
           _ = _().ownerWindow,
           { popup: _, element: _ } = _(
-            __webpack_require__,
+            _,
             {
               title: _.strTitle,
               html_class:
@@ -6641,7 +6591,7 @@
       }
       function _(_) {
         const { ModalManager: _ } = _,
-          [__webpack_require__, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
           [_, _] = _.useState(!0),
           _ = _.useRef(0),
           _ = _.useCallback(() => {
@@ -6651,27 +6601,27 @@
           }, []);
         _.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
           _.useLayoutEffect(() => {
-            __webpack_require__ ||
+            _ ||
               _.startTransition(() => {
                 _(_.TakeMeasureModalRequest()), _(!1);
               });
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         const _ = _.useCallback((_) => {
           _.current++,
             _.startTransition(() => {
               _((_) => (_ === _ ? void 0 : _));
             });
         }, []);
-        return __webpack_require__
+        return _
           ? _.createElement(_, {
               key: _.current,
               onMeasureComplete: _,
-              request: __webpack_require__,
+              request: _,
             })
           : null;
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           _ = _().ownerWindow;
         return (
           _.useLayoutEffect(() => {
@@ -6699,11 +6649,7 @@
         );
       }
       function _(_) {
-        const {
-          elContainer: _,
-          onMeasureComplete: __webpack_require__,
-          request: _,
-        } = _;
+        const { elContainer: _, onMeasureComplete: _, request: _ } = _;
         return (
           _.useEffect(() => {
             let _ = !1;
@@ -6725,7 +6671,7 @@
               })(_, _.promiseContentReady).then(_),
               () => _(void 0)
             );
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           _.createElement(_, null, _.rctToMeasure)
         );
       }
@@ -7022,7 +6968,7 @@
       __webpack_require__("chunkid");
       const _ = _.createContext({});
       function _(_) {
-        const [_, __webpack_require__] = _.useState(null),
+        const [_, _] = _.useState(null),
           _ = _.useMemo(
             () => ({
               targetElement: _,
@@ -7035,7 +6981,7 @@
             value: _,
           },
           _.createElement("div", {
-            ref: __webpack_require__,
+            ref: _,
           }),
           _.children,
         );
@@ -7052,7 +6998,7 @@
       function _(_) {
         let {
           ModalManager: _,
-          bRegisterModalManager: __webpack_require__ = !0,
+          bRegisterModalManager: _ = !0,
           DialogWrapper: _,
           rctActiveContextMenus: _,
           bUseDialogElement: _ = !0,
@@ -7084,7 +7030,7 @@
             },
             [_],
           );
-        })(_, __webpack_require__);
+        })(_, _);
         let _ = null,
           _ = !_;
         return (
@@ -7150,7 +7096,7 @@
       function _(_) {
         const {
           modal: _,
-          rctActiveContextMenus: __webpack_require__,
+          rctActiveContextMenus: _,
           active: _,
           bUseDialogElement: _,
         } = _;
@@ -7173,7 +7119,7 @@
             ),
             ref: _.RefModalElement,
           }),
-          __webpack_require__,
+          _,
         );
         return _
           ? _.createElement(
@@ -7188,7 +7134,7 @@
       function _(_) {
         const {
             modal: _,
-            active: __webpack_require__,
+            active: _,
             rctActiveContextMenus: _,
             Component: _,
           } = _,
@@ -7203,9 +7149,9 @@
               {
                 className: (0, _._)(
                   "ModalOverlayContent",
-                  __webpack_require__ ? "active" : "inactive",
+                  _ ? "active" : "inactive",
                 ),
-                active: __webpack_require__,
+                active: _,
                 modalKey: _.key,
               },
               _,
@@ -7215,11 +7161,11 @@
         );
       }
       function _(_) {
-        const { className: _, active: __webpack_require__, children: _ } = _;
+        const { className: _, active: _, children: _ } = _;
         return _.createElement(
           _,
           {
-            active: __webpack_require__,
+            active: _,
           },
           _.createElement(
             _,
@@ -7236,7 +7182,7 @@
         );
       }
       function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
+        const { active: _, children: _ } = _,
           _ = _.useRef(null),
           [_, _] = _.useState(!1);
         return (
@@ -7254,7 +7200,7 @@
               onClose: () => _(!1),
               onCancel: (_) => _.preventDefault(),
             },
-            __webpack_require__,
+            _,
           )
         );
       }
@@ -7279,7 +7225,7 @@
         _ = _.memo(function (_) {
           const {
               children: _,
-              bRenderOverlayAtRoot: __webpack_require__,
+              bRenderOverlayAtRoot: _,
               refModalManager: _,
               DialogWrapper: _,
               bUseDialogElement: _ = !0,
@@ -7354,7 +7300,7 @@
       const _ = _.createContext(void 0),
         _ = _.Provider;
       function _(_) {
-        const { useStorage: _, children: __webpack_require__ } = _;
+        const { useStorage: _, children: _ } = _;
         let _, _;
         if ("useActiveCMInterface" in _) _ = _ = _.useActiveCMInterface;
         else {
@@ -7364,7 +7310,7 @@
                 _,
                 "neither useActiveCMInterface nor useActiveSteamInterface were provided",
               ),
-              __webpack_require__
+              _
             );
           _ = _.useActiveSteamInterface;
         }
@@ -7381,7 +7327,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       let _ = _.lazy(() =>
@@ -7806,15 +7752,15 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         console.assert
-          ? 0 == __webpack_require__.length
+          ? 0 == _.length
             ? console.assert(!!_, _)
-            : console.assert(!!_, _, ...__webpack_require__)
-          : _ || console.warn(_, ...__webpack_require__);
+            : console.assert(!!_, _, ..._)
+          : _ || console.warn(_, ..._);
       }
-      function _(_, _, ...__webpack_require__) {
-        _(!1, _, ...__webpack_require__);
+      function _(_, _, ..._) {
+        _(!1, _, ..._);
       }
       __webpack_require__._(module_exports, {
         _: () => _,

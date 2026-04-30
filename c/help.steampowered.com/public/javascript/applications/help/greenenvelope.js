@@ -81,6 +81,7 @@
         FullWidth: "_6EcDVXFHtdirTkETQjKOK",
         BackgroundAnimation: "_3w9sEc9GApj44Kg099SX99",
         "ItemFocusAnim-darkerGrey-nocolor": "_3zMKq0Ov9QZXkvzuZaEgKn",
+        "ItemFocusAnim-darkGreySettings": "qadlYXxqgL7iZI-3WagQW",
         "ItemFocusAnim-darkGrey": "_1bS3_eEfJQL1uvh9ueXwHc",
         "ItemFocusAnim-grey": "K14jHOeux9t-cKLHsLZ_R",
         "ItemFocusAnim-translucent-white-10": "_14krbCetggqySSjN1tprjy",
@@ -145,6 +146,7 @@
         NewIndicator: "_1pIhbqWsrCVPaGGYc6fT-H",
         BackgroundAnimation: "_2THWJm_DP4_8_21tEsXSSj",
         "ItemFocusAnim-darkerGrey-nocolor": "_3TDFCqwgSFsXL90HH5PmyQ",
+        "ItemFocusAnim-darkGreySettings": "_2V49icFFKCzM2imCbWVQKz",
         "ItemFocusAnim-darkGrey": "_22M7t0tCHSgmIcx2rwkyDn",
         "ItemFocusAnim-grey": "lhtmiPnDLy_PH3nWN5N8F",
         "ItemFocusAnim-translucent-white-10": "xPu5sAUAb9KZcZojHZeok",
@@ -213,6 +215,7 @@
         SteamNotificationWrapper: "UmtNgXD92RoDeYjxKEskk",
         BackgroundAnimation: "CHduhRYQLY29chQ5oLbsR",
         "ItemFocusAnim-darkerGrey-nocolor": "_3bOlzQnTJZnV9rTU3NSxJh",
+        "ItemFocusAnim-darkGreySettings": "_1bdnqXVo31tiUrXoxNB3wW",
         "ItemFocusAnim-darkGrey": "uOdBxiMFNvmWe8MWKL2vT",
         "ItemFocusAnim-grey": "_9s1knb2MNj9uD9M1SCh2u",
         "ItemFocusAnim-translucent-white-10": "_1YVG7HtpgQ26Yx-8ZWKCBi",
@@ -4601,6 +4604,11 @@
                     _: 37,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  market_name_inside_group: {
+                    _: 38,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -12509,8 +12517,8 @@
           url: (_) => {
             return (
               (_ = _.familyid),
-              (__webpack_require__ = _.request_id),
-              `${_._.STORE_BASE_URL}cart/purchaserequest/${_}/${__webpack_require__}`
+              (_ = _.request_id),
+              `${_._.STORE_BASE_URL}cart/purchaserequest/${_}/${_}`
             );
             var _, _;
           },
@@ -14158,13 +14166,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        let {
-            onActivate: _,
-            icon: __webpack_require__,
-            body: _,
-            eUIMode: _,
-            classNames: _,
-          } = _,
+        let { onActivate: _, icon: _, body: _, eUIMode: _, classNames: _ } = _,
           _ = _,
           _ = _().PinnedTemplate;
         return (
@@ -14182,7 +14184,7 @@
                 children: [
                   (0, _.jsx)("span", {
                     className: _().Icon,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                   _,
                 ],
@@ -14194,7 +14196,7 @@
       function _(_) {
         const {
           count: _,
-          icon: __webpack_require__,
+          icon: _,
           onActivate: _,
           strLocToken: _,
           bAlwaysShow: _,
@@ -14205,7 +14207,7 @@
         if (!_ && !_) return null;
         const _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
-          icon: __webpack_require__,
+          icon: _,
           body: _,
           onActivate: _,
           eUIMode: _,
@@ -14217,7 +14219,7 @@
       function _(_) {
         let {
           nUnread: _,
-          location: __webpack_require__,
+          location: _,
           eUIMode: _,
           bLoading: _,
           footer: _,
@@ -14239,29 +14241,21 @@
             return () => window.clearTimeout(_);
           }, []),
           _.useEffect(() => {
-            _ &&
-            _ > 0 &&
-            _ !== _().Unread &&
-            2 != __webpack_require__ &&
-            1 != __webpack_require__
+            _ && _ > 0 && _ !== _().Unread && 2 != _ && 1 != _
               ? _(_().Unread)
               : _ || _ != _().Unread || _(_().MarkedRead);
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         let _ = _.onActivate;
         _ || (_ = () => console.log("Missing activate function")),
           _ == _.loadingActive && (_ = void 0);
         let _ = _().StandardTemplate;
-        4 == __webpack_require__
+        4 == _
           ? (_ = _().AllNotificationsTemplate)
-          : 2 == __webpack_require__
+          : 2 == _
             ? (_ = _().DesktopToastTemplate)
             : (7 != _ && 3 != _) || (_ = _().StandardTemplateDesktop);
         let _ = null;
-        if (
-          _ != _.none &&
-          2 != __webpack_require__ &&
-          1 != __webpack_require__
-        ) {
+        if (_ != _.none && 2 != _ && 1 != _) {
           let _ = _ == _.loadingComplete ? _().Hide : null;
           _ = (0, _.jsxs)("div", {
             className: (0, _._)(_().LoadingTemplate, _),
@@ -14310,7 +14304,7 @@
                 _,
                 _ &&
                   (0, _.jsx)(_, {
-                    location: __webpack_require__,
+                    location: _,
                   }),
               ],
             }),
@@ -14330,7 +14324,7 @@
       function _(_) {
         let {
           icon: _,
-          title: __webpack_require__,
+          title: _,
           timestamp: _,
           location: _,
           fnRenderTimestamp: _,
@@ -14345,9 +14339,9 @@
               (0, _.jsx)(_, {
                 icon: _,
               }),
-              !!__webpack_require__ &&
+              !!_ &&
                 (0, _.jsx)(_, {
-                  title: __webpack_require__,
+                  title: _,
                 }),
               _ &&
                 _({
@@ -14358,9 +14352,15 @@
         );
       }
       function _(_) {
-        return (0, _.jsx)("div", {
-          className: _().Icon,
-          children: _.icon,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !!_.icon &&
+              (0, _.jsx)("div", {
+                className: _().Icon,
+                children: _.icon,
+              }),
+            " ",
+          ],
         });
       }
       function _(_) {
@@ -14427,7 +14427,7 @@
       function _(_) {
         let {
             onActivate: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             logo: _,
             icon: _,
             title: _,
@@ -14444,12 +14444,12 @@
               },
               [_, _],
             );
-          })(_, __webpack_require__);
+          })(_, _);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().ShortTemplate, !_ && _().TwoLine, _),
           onActivate: _,
           onMouseDown: (_) => {
-            1 == _.button && __webpack_require__ && __webpack_require__();
+            1 == _.button && _ && __webpack_require__();
           },
           children: [
             (0, _.jsx)("div", {
@@ -14466,10 +14466,11 @@
                 (0, _.jsxs)("div", {
                   className: _().Header,
                   children: [
-                    (0, _.jsx)("div", {
-                      className: _().Icon,
-                      children: _,
-                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().Icon,
+                        children: _,
+                      }),
                     (0, _.jsx)("div", {
                       className: _().Title,
                       children: _,
@@ -14501,7 +14502,7 @@
       function _(_) {
         let {
           fallbackLogo: _,
-          app: __webpack_require__,
+          app: _,
           data: _,
           location: _,
           icon: _,
@@ -14514,11 +14515,11 @@
           _ = _?.title ?? _?.body,
           _ = _?.title ? _.body : null,
           _ = _(_),
-          _ = _ && !__webpack_require__,
+          _ = _ && !_,
           [_, _] = _.useState(!1),
           _ = () => _(!0);
         let _ = null;
-        if (_) _ = _(__webpack_require__, _, _);
+        if (_) _ = _(_, _, _);
         else {
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ =
@@ -14571,13 +14572,13 @@
       function _(_) {
         let {
           displayName: _,
-          location: __webpack_require__,
+          location: _,
           icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
         } = _;
-        const _ = _(__webpack_require__),
+        const _ = _(_),
           _ = (0, _._)("#SteamNotifications_TradeOffer_Title"),
           _ = _
             ? (0, _._)("#SteamNotifications_TradeOffer_Body_Short", _ ?? "")
@@ -14601,7 +14602,7 @@
                     icon: _,
                     title: _,
                     timestamp: _,
-                    location: __webpack_require__,
+                    location: _,
                     fnRenderTimestamp: _,
                   }),
                   (0, _.jsx)(_, {
@@ -14622,7 +14623,7 @@
       const _ = (_) => {
         let {
           location: _,
-          icon: __webpack_require__,
+          icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
@@ -14646,7 +14647,7 @@
                 ..._,
                 children: [
                   (0, _.jsx)(_, {
-                    icon: __webpack_require__,
+                    icon: _,
                     title: _,
                     timestamp: _,
                     location: _,
@@ -14670,13 +14671,13 @@
       function _(_) {
         let {
           senderName: _,
-          location: __webpack_require__,
+          location: _,
           icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
         } = _;
-        const _ = _(__webpack_require__),
+        const _ = _(_),
           _ = _
             ? (0, _._)("#Notification_GiftReceived_Body_Short", _ ?? "")
             : (0, _._)("#Notification_GiftReceived_Body"),
@@ -14700,7 +14701,7 @@
                     icon: _,
                     title: _,
                     timestamp: _,
-                    location: __webpack_require__,
+                    location: _,
                     fnRenderTimestamp: _,
                   }),
                   (0, _.jsx)(_, {
@@ -14723,7 +14724,7 @@
       function _(_) {
         let {
           requestorName: _,
-          requestorAvatarURL: __webpack_require__,
+          requestorAvatarURL: _,
           fallbackLogo: _,
           data: _,
           location: _,
@@ -14747,7 +14748,7 @@
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
         let _ = _;
-        if (__webpack_require__ && !_) {
+        if (_ && !_) {
           const _ = 3 == _.state && 1 != _,
             _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ = (0, _.jsxs)(_._, {
@@ -14761,7 +14762,7 @@
                 }),
               (0, _.jsx)("img", {
                 className: _,
-                src: __webpack_require__,
+                src: _,
                 onError: _,
               }),
             ],
@@ -14811,7 +14812,7 @@
       function _(_) {
         let {
           itemState: _,
-          fallbackLogo: __webpack_require__,
+          fallbackLogo: _,
           data: _,
           location: _,
           icon: _,
@@ -14823,7 +14824,7 @@
         const [_, _] = _.useState(!1),
           _ = () => _(!0),
           _ = _(_);
-        let _ = __webpack_require__;
+        let _ = _;
         if (_?.item_data?.icon_url && !_) {
           let _ = `${_._.COMMUNITY_CDN_URL}economy/image/${_.item_data.icon_url}`,
             _ = _.item_data.background_color
@@ -14917,7 +14918,7 @@
       function _(_) {
         let {
           fallbackLogo: _,
-          app: __webpack_require__,
+          app: _,
           data: _,
           location: _,
           icon: _,
@@ -14926,8 +14927,8 @@
           onHide: _,
         } = _;
         const _ = _(_),
-          _ = _(__webpack_require__, _, _),
-          _ = !__webpack_require__;
+          _ = _(_, _, _),
+          _ = !_;
         let _ = "";
         return (
           1 == _.state
@@ -14986,7 +14987,7 @@
       function _(_) {
         const {
             title: _,
-            body: __webpack_require__,
+            body: _,
             logoUrl: _,
             bDataLoading: _,
             icon: _,
@@ -15016,7 +15017,7 @@
               logo: _,
               icon: _.icon,
               title: _,
-              body: __webpack_require__,
+              body: _,
               onActivate: _,
               personaStatus: _,
             })
@@ -15037,7 +15038,7 @@
                   }),
                   (0, _.jsx)(_, {
                     multiline: !0,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                   _
                     ? (0, _.jsx)(_, {
@@ -15051,7 +15052,7 @@
       function _(_) {
         let {
             currentUserSteamID: _,
-            fallbackLogo: __webpack_require__,
+            fallbackLogo: _,
             postedByDisplayName: _,
             postedByAvatarURL: _,
             ownerDisplayName: _,
@@ -15129,7 +15130,7 @@
               }))
             : (_ = _ + " " + _);
         }
-        let _ = __webpack_require__;
+        let _ = _;
         if (!_) {
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           if (_ && _(_)) {
@@ -15195,7 +15196,7 @@
       function _(_) {
         let {
           app: _,
-          fallbackLogo: __webpack_require__,
+          fallbackLogo: _,
           data: _,
           location: _,
           icon: _,
@@ -15204,7 +15205,7 @@
           onHide: _,
         } = _;
         const _ = _(_),
-          _ = _(_, __webpack_require__, _),
+          _ = _(_, _, _),
           _ = _.appid && !_;
         let _ = "",
           _ = null;
@@ -15293,7 +15294,7 @@
               })
         );
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
         return !_ || _
@@ -15303,7 +15304,7 @@
               },
               children: _,
             })
-          : __webpack_require__
+          : _
             ? (0, _.jsx)(_._, {
                 style: {
                   position: "relative",
@@ -16219,12 +16220,12 @@
             (this.m_TextFilterWords = new _._()),
             (this.m_DataAccess = _);
         }
-        async Init(_ = 0, _ = null, __webpack_require__ = null) {
+        async Init(_ = 0, _ = null, _ = null) {
           (this.m_bInitialized = !1),
             (this.m_WebUIServiceTransport = _._),
             (this.m_unAccountID = _),
             (this.m_Transport = _),
-            (this.m_Storage = __webpack_require__),
+            (this.m_Storage = _),
             (this.m_strBannedWords = ""),
             (this.m_strProfanityWords = ""),
             (this.m_strCleanWords = ""),
@@ -16694,7 +16695,7 @@
         );
       }
       function _(_) {
-        const { rollup: _, uimode: __webpack_require__, location: _ } = _,
+        const { rollup: _, uimode: _, location: _ } = _,
           _ = (function (_) {
             let _ = null;
             return _(_) ? (_ = _) : _(_) ? (_ = _) : _[_] && (_ = _[_]), _;
@@ -16702,7 +16703,7 @@
         return _
           ? (0, _.jsx)(_._, {
               controller: "notification",
-              method: (0, _._)(__webpack_require__),
+              method: (0, _._)(_),
               submethod: (0, _._)(_),
               children: (0, _.jsx)(_, {
                 ..._,
@@ -16713,7 +16714,7 @@
       function _(_) {
         const {
             rollup: _,
-            onNotificationClick: __webpack_require__,
+            onNotificationClick: _,
             location: _,
             uimode: _,
             onHide: _,
@@ -16788,7 +16789,7 @@
       function _(_) {
         const {
             steamid: _,
-            url: __webpack_require__,
+            url: _,
             strTitleLoc: _,
             strBodyLoc: _,
             rollup: _,
@@ -16803,7 +16804,7 @@
           _ = (0, _._)(_, _?.m_strPlayerName ?? ""),
           _ = (0, _._)(_, _?.m_strPlayerName ?? "");
         return (0, _.jsx)("a", {
-          href: __webpack_require__,
+          href: _,
           onMouseDown: (_) => _(() => {}, _.item, _),
           children: (0, _.jsx)(_, {
             title: _,
@@ -16811,8 +16812,7 @@
             bDataLoading: _,
             logoUrl: _?.avatar_url_medium,
             icon: (0, _.jsx)(_.Qte, {}),
-            onActivate: () =>
-              _(() => window.location.assign(__webpack_require__), _.item),
+            onActivate: () => _(() => window.location.assign(_), _.item),
             location: _,
             eUIMode: _,
             timestamp: _.timestamp,
@@ -16824,10 +16824,10 @@
       }
       function _(_) {
         const _ =
-          ((__webpack_require__ = _.rollup.type),
+          ((_ = _.rollup.type),
           (_ = _.rollup.item.body_data),
           _.useMemo(() => {
-            const _ = _(__webpack_require__),
+            const _ = _(_),
               _ = _(_);
             if (!_) return null;
             const _ =
@@ -16844,7 +16844,7 @@
               strUrl: _,
               steamid: _ && _[_],
             };
-          }, [_, __webpack_require__]));
+          }, [_, _]));
         var _, _;
         if (!_) return null;
         const { strTitleLoc: _, strBodyLoc: _, strUrl: _, steamid: _ } = _;
@@ -16859,19 +16859,13 @@
           : null;
       }
       function _(_) {
-        const {
-            url: _,
-            count: __webpack_require__,
-            icon: _,
-            strLocToken: _,
-            eFeature: _,
-          } = _,
+        const { url: _, count: _, icon: _, strLocToken: _, eFeature: _ } = _,
           _ = (function (_) {
             const _ = (0, _._)(),
-              { settings: __webpack_require__ } = _(_).data ?? {};
-            return _(__webpack_require__, _, _());
+              { settings: _ } = _(_).data ?? {};
+            return _(_, _, _());
           })(_);
-        return __webpack_require__
+        return _
           ? _
             ? null
             : (0, _.jsx)("a", {
@@ -16879,7 +16873,7 @@
                 className: _().WebPinnedNotification,
                 children: (0, _.jsx)(_, {
                   icon: (0, _.jsx)(_, {}),
-                  count: __webpack_require__,
+                  count: _,
                   onActivate: () => window.location.assign(_),
                   strLocToken: _,
                   eUIMode: 3,
@@ -17317,7 +17311,7 @@
           let {
             onVisibilityChange: _,
             rootMargin: _,
-            trigger: __webpack_require__,
+            trigger: _,
             horizontal: _,
             ..._
           } = this.props;
@@ -17331,13 +17325,10 @@
       (0, _._)([_._], _.prototype, "OnIntersection", null);
       const _ = new _(),
         _ = (0, _._)(function (_) {
-          const { bResponsiveHeader: _, notifications: __webpack_require__ } =
-            _;
+          const { bResponsiveHeader: _, notifications: _ } = _;
           _.useEffect(() => {
-            __webpack_require__ &&
-              !_.m_bLoaded &&
-              _.ProcessNewNotificationPayload(__webpack_require__);
-          }, [__webpack_require__]);
+            _ && !_.m_bLoaded && _.ProcessNewNotificationPayload(_);
+          }, [_]);
           const _ = (0, _._)();
           (0, _.useEffect)(() => {
             _.setTransport(_),
@@ -17398,9 +17389,9 @@
       function _() {
         const _ = _(),
           _ = (0, _._)(),
-          { data: __webpack_require__ } = _(_),
+          { data: _ } = _(_),
           _ = _(),
-          _ = __webpack_require__?.settings;
+          _ = _?.settings;
         return _.notifications.filter((_) => !_(_.type, _, _) && !_(_.item));
       }
       function _(_) {

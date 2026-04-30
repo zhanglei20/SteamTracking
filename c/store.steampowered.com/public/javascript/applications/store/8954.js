@@ -260,8 +260,8 @@
             rgAcceptableTypes: _,
           },
           spotlight_art_hero: {
-            width: 374,
-            height: 448,
+            width: 748,
+            height: 896,
             rgAcceptableTypes: _,
           },
           old_spotlight_art: {
@@ -310,8 +310,8 @@
             rgAcceptableTypes: [4],
           },
           takeunder_art: {
-            width: 940,
-            height: 150,
+            width: 1200,
+            height: 190,
             rgAcceptableTypes: _,
           },
           takeunder_mobile_art: {
@@ -523,8 +523,8 @@
           return this.m_clanSteamID;
         }
         async AddImage(_, _ = 0) {
-          const { language: __webpack_require__ } = (0, _._)(_.name, _);
-          return this.AddImageForLanguage(_, __webpack_require__);
+          const { language: _ } = (0, _._)(_.name, _);
+          return this.AddImageForLanguage(_, _);
         }
         async AddImageForLanguage(_, _) {
           if (!((0, _._)(_.type) || (_._.is_support && (0, _._)(_.type))))
@@ -1242,16 +1242,8 @@
         (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0);
       const _ = new _();
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _.GetClanImagesByAccount(_),
-        );
-        return (
-          (0, _._)(
-            _.GetImageListCallbackForClanAccountID(_),
-            __webpack_require__,
-          ),
-          _
-        );
+        const [_, _] = (0, _.useState)(_.GetClanImagesByAccount(_));
+        return (0, _._)(_.GetImageListCallbackForClanAccountID(_), _), _;
       }
       function _(_) {
         const _ = _._.InitFromClanID(_),

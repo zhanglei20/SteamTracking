@@ -20,6 +20,7 @@
         Points: "_3k_jxlKBddOAxgSknpHNTq",
         IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
         Footer: "_164mmLkSJ91cXzABhIrlZq",
+        PointsArea: "_3CsHeO3G5c1fQY9Xx4lgUI",
         Column: "_2ihFd-KfZvzA81NOi3SEEJ",
         Left: "_1v0jLHAK-8P4IONBwuF4kv",
         BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
@@ -42,11 +43,24 @@
         SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
         SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
         InitialLoading: "_1ZKr7z5ZdQghkZZCnjx455",
+        Loading: "fGpQ7K-RTxeDJfNELWaCD",
         ErrorContainer: "_1SebPOeiRaEqfXHg_dsaYQ",
         ErrorText: "ok8moMj5E4XI25uTRhAHN",
         PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
         PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
         NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
+        BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
+        "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
+        "ItemFocusAnim-darkGreySettings": "XvVy1qhFrJwjYK25wo2O6",
+        "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
+        "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
+        "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
+        "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
+        "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
+        "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
+        focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
+        hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
       };
     },
     56425: (e) => {
@@ -54,24 +68,24 @@
     },
     50050: (e, t, s) => {
       "use strict";
-      s.d(t, { Ay: () => Q });
+      s.d(t, { Ay: () => W });
       var a = s(34629),
         n = s(7850),
         i = s(90626),
         r = s(45699),
-        l = s(76217),
-        c = s(75204),
-        o = s(38506),
+        o = s(76217),
+        l = s(75204),
+        c = s(38506),
         d = s(56545),
         h = s(22837),
         u = s(83935),
         C = s(8527),
         w = s(29385),
-        x = s(61739),
-        m = s(88942);
-      var f = s(68255),
-        g = s(9154),
-        v = s(12155),
+        m = s(61739),
+        x = s(88942);
+      var v = s(68255),
+        f = s(9154),
+        g = s(12155),
         p = s(22797),
         j = s(52038),
         y = s(61859),
@@ -88,7 +102,7 @@
             return `hsl(${360 * Math.random()}, 100%, 40%)`;
         }
       }
-      function M(e) {
+      function b(e) {
         return e == N.LNY2020
           ? `hue-rotate(${360 + ((0, L.Tg))(-30, 10)}deg)`
           : "";
@@ -98,7 +112,7 @@
           (e[(e.Gold = 1)] = "Gold"),
           (e[(e.LNY2020 = 2)] = "LNY2020");
       })(N || (N = {}));
-      const b = (e, t) => {
+      const M = (e, t) => {
           const { anim: s } = (0, _.zh)({
               anim: 1,
               from: { anim: 0 },
@@ -113,28 +127,28 @@
                     const e = Math.random(),
                       i = Math.random() * e,
                       r = Math.random() * i,
-                      l = 4 * (Math.random() - 0.5) * Math.PI * 20,
-                      c = Math.random() + 0.5,
-                      o = [
+                      o = 4 * (Math.random() - 0.5) * Math.PI * 20,
+                      l = Math.random() + 0.5,
+                      c = [
                         Math.random() * n - n - 20,
-                        n + 20 + Math.random() * n * c,
+                        n + 20 + Math.random() * n * l,
                       ],
-                      d = c * (a <= 1e3 ? 1 : a / 1e3) * (t == N.Gold ? 2 : 1),
+                      d = l * (a <= 1e3 ? 1 : a / 1e3) * (t == N.Gold ? 2 : 1),
                       h = (Math.random() - 0.5) * a,
                       u = (Math.random() - 0.5) * a,
                       C = [u, h + u],
                       w = R(t),
-                      x = M(t);
+                      m = b(t);
                     s.push({
-                      rotationCoefficient: l,
+                      rotationCoefficient: o,
                       rotationRatioY: i,
                       rotationRatioX: e,
                       rotationRatioZ: r,
-                      yRange: o,
+                      yRange: c,
                       xRange: C,
                       scale: d,
                       colorHue: w,
-                      filter: x,
+                      filter: m,
                     });
                   }
                   return s;
@@ -148,22 +162,22 @@
                       rotationRatioX: n,
                       rotationRatioZ: i,
                       yRange: r,
-                      xRange: l,
-                      scale: c,
-                      colorHue: o,
+                      xRange: o,
+                      scale: l,
+                      colorHue: c,
                       filter: d,
                     } = e;
                     return {
-                      backgroundColor: o,
-                      fill: o,
+                      backgroundColor: c,
+                      fill: c,
                       filter: d,
                       flRandom: 0,
                       transform: t.interpolate((e) => {
                         const t = e * s * a,
-                          o = e * s * n,
+                          c = e * s * n,
                           d = e * s * i,
                           h = e * (r[1] - r[0]) + r[0];
-                        return `translate(${e * (l[1] - l[0]) + l[0]}px, ${h}px) rotateY(${t}rad) rotateX(${o}rad) rotateZ(${d}rad) scale(${c})`;
+                        return `translate(${e * (o[1] - o[0]) + o[0]}px, ${h}px) rotateY(${t}rad) rotateX(${c}rad) rotateZ(${d}rad) scale(${l})`;
                       }),
                     };
                   })(e, s),
@@ -178,18 +192,18 @@
                         yRange: n,
                         xRange: i,
                         scale: r,
-                        colorHue: l,
-                        filter: c,
+                        colorHue: o,
+                        filter: l,
                       } = e;
                       return {
                         backgroundColor: void 0,
-                        fill: l,
-                        filter: c,
+                        fill: o,
+                        filter: l,
                         flRandom: Math.random(),
                         transform: t.interpolate((e) => {
                           const t = ((e * s) / 4) * a,
-                            l = e * (n[1] - n[0]) + n[0];
-                          return `translate(${e * (i[1] - i[0]) + i[0]}px, ${l}px) rotateZ(${t}rad) scale(${r})`;
+                            o = e * (n[1] - n[0]) + n[0];
+                          return `translate(${e * (i[1] - i[0]) + i[0]}px, ${o}px) rotateZ(${t}rad) scale(${r})`;
                         }),
                       };
                     })(e, s),
@@ -219,20 +233,20 @@
             return [e, s];
           })();
           let a,
-            { rgParticleStyles: r, rgStreamerStyles: l } = b(t, e);
+            { rgParticleStyles: r, rgStreamerStyles: o } = M(t, e);
           switch (e) {
             case N.Gold:
-              a = r.map((e, t) => (0, n.jsx)(T, { style: e }, t));
+              a = r.map((e, t) => (0, n.jsx)(B, { style: e }, t));
               break;
             case N.LNY2020:
               a = r.map((e, t) =>
                 t % 2
-                  ? (0, n.jsx)(B, { style: e }, t)
-                  : (0, n.jsx)(I, { style: e }, t),
+                  ? (0, n.jsx)(I, { style: e }, t)
+                  : (0, n.jsx)(k, { style: e }, t),
               );
               break;
             case N.Default:
-              a = r.map((e, t) => (0, n.jsx)(B, { style: e }, t));
+              a = r.map((e, t) => (0, n.jsx)(I, { style: e }, t));
           }
           return (0, n.jsxs)("div", {
             style: {
@@ -246,30 +260,30 @@
             ref: s,
             children: [
               a,
-              l.map((e, t) =>
+              o.map((e, t) =>
                 e.flRandom > 0.5
                   ? (0, n.jsx)(O, { style: e }, t)
-                  : (0, n.jsx)(k, { style: e }, t),
+                  : (0, n.jsx)(T, { style: e }, t),
               ),
             ],
           });
         },
-        B = ({ style: e }) => (0, n.jsx)(_.CS.div, { style: { ...E, ...e } }),
-        T = ({ style: e }) => {
+        I = ({ style: e }) => (0, n.jsx)(_.CS.div, { style: { ...E, ...e } }),
+        B = ({ style: e }) => {
+          const [t] = (0, i.useState)(Math.floor(Math.random() * F.length)),
+            s = F[t];
+          return (0, n.jsx)(s, {
+            style: { ...S, ...e, backgroundColor: void 0 },
+          });
+        },
+        k = ({ style: e }) => {
           const [t] = (0, i.useState)(Math.floor(Math.random() * D.length)),
             s = D[t];
           return (0, n.jsx)(s, {
             style: { ...S, ...e, backgroundColor: void 0 },
           });
         },
-        I = ({ style: e }) => {
-          const [t] = (0, i.useState)(Math.floor(Math.random() * P.length)),
-            s = P[t];
-          return (0, n.jsx)(s, {
-            style: { ...S, ...e, backgroundColor: void 0 },
-          });
-        },
-        k = ({ style: e }) =>
+        T = ({ style: e }) =>
           (0, n.jsx)(_.CS.svg, {
             viewBox: "0 0 80 620",
             fill: "none",
@@ -295,7 +309,7 @@
               fill: e.fill,
             }),
           }),
-        D = [
+        F = [
           ({ style: e }) =>
             (0, n.jsx)(_.CS.svg, {
               viewBox: "0 0 48 102",
@@ -420,7 +434,7 @@
               }),
             }),
         ],
-        P = [
+        D = [
           ({ style: e }) =>
             (0, n.jsxs)(_.CS.svg, {
               xmlns: "http://www.w3.org/2000/svg",
@@ -469,7 +483,7 @@
               ],
             }),
         ];
-      var F = s(78327),
+      var P = s(78327),
         Z = s(15799);
       var H = s(56425);
       const U = (e) => {
@@ -479,9 +493,9 @@
           ...s,
         });
       };
-      var z,
-        q = s(6083),
-        $ = s(23809);
+      var q,
+        z = s(6083),
+        Q = s(23809);
       !(function (e) {
         (e[(e.SELECTING = 0)] = "SELECTING"),
           (e[(e.CONFIRM = 1)] = "CONFIRM"),
@@ -489,8 +503,8 @@
           (e[(e.DONE = 3)] = "DONE"),
           (e[(e.ERROR = 4)] = "ERROR"),
           (e[(e.LOADING_ERROR = 5)] = "LOADING_ERROR");
-      })(z || (z = {}));
-      const K = (e) =>
+      })(q || (q = {}));
+      const V = (e) =>
         (0, n.jsx)("svg", {
           viewBox: "0 0 24 24",
           fill: "none",
@@ -503,7 +517,7 @@
             d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
           }),
         });
-      class Y extends i.PureComponent {
+      class K extends i.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -516,10 +530,11 @@
         render() {
           const e =
             ((t = this.props.reactionType),
-            (s =
-              !this.props.bDisableAnimation &&
-              (this.state.bHovered || this.props.bForceAnimated)),
-            `${F.TS.STORE_CDN_URL}public/images/loyalty/reactions/${s ? "animated" : "still"}/${t}.png`);
+            (s = !(
+              0 != this.props.bDisableAnimation ||
+              (!this.state.bHovered && !this.props.bForceAnimated)
+            )),
+            `${P.TS.STORE_CDN_URL}public/images/loyalty/reactions/${s ? "animated" : "still"}/${t}.png`);
           var t, s;
           return (0, n.jsx)("img", {
             className: this.props.className,
@@ -529,9 +544,9 @@
           });
         }
       }
-      (0, a.Cg)([A.oI], Y.prototype, "handleMouseOver", null),
-        (0, a.Cg)([A.oI], Y.prototype, "handleMouseOut", null);
-      class V extends i.Component {
+      (0, a.Cg)([A.oI], K.prototype, "handleMouseOver", null),
+        (0, a.Cg)([A.oI], K.prototype, "handleMouseOut", null);
+      class Y extends i.Component {
         constructor(e) {
           super(e),
             (window.fnLoyalty_ShowAwardModal = (e, t, s, a, n) => {
@@ -545,7 +560,7 @@
                   targetType: t,
                 });
             }),
-            (this.state = { bShowModal: !1 });
+            (this.state = { bShowModal: !1, targetid: "", targetType: 0 });
         }
         render() {
           const {
@@ -558,11 +573,11 @@
           } = this.state;
           return e
             ? (0, n.jsx)(
-                J,
+                $,
                 {
                   targetid: a,
                   active: e,
-                  targetType: t,
+                  targetType: null != t ? t : 0,
                   ugcType: i,
                   onDismiss: () => this.setState({ bShowModal: !1 }),
                   onSuccess: s,
@@ -573,27 +588,27 @@
             : null;
         }
       }
-      V.defaultProps = { targetType: 1 };
-      const Q = V;
-      function J(e) {
-        var t, s;
+      Y.defaultProps = { targetType: 1 };
+      const W = Y;
+      function $(e) {
+        var t, s, a, o, g;
         const {
-            active: a,
-            targetid: l,
-            targetType: v,
-            ugcType: p,
-            initialSelectedReaction: A,
-            onSuccess: _,
-            onDismiss: L,
+            active: p,
+            targetid: A,
+            targetType: _,
+            ugcType: L,
+            initialSelectedReaction: R,
+            onSuccess: b,
+            onDismiss: M,
           } = e,
-          [R, M] = i.useState(A || 0),
-          [b, S] = i.useState(z.SELECTING),
-          [E, B] = i.useState(!1),
-          [T, I] = i.useState(void 0),
-          k = (0, F.Qn)(),
-          O = (0, $.KV)(),
-          D = (function (e, t, s, a) {
-            return (0, m.I)({
+          [S, E] = i.useState(R || 0),
+          [I, B] = i.useState(q.SELECTING),
+          [k, T] = i.useState(!1),
+          [O, F] = i.useState(2),
+          D = (0, P.Qn)(),
+          H = (0, Q.KV)(),
+          U = (function (e, t, s, a) {
+            return (0, x.I)({
               queryKey: ["UserReactions", s, a],
               queryFn: async () => {
                 if (!C.iA.logged_in) throw 21;
@@ -605,44 +620,58 @@
               },
               enabled: e,
             });
-          })(a, O, l, v),
-          P = (function (e, t) {
-            return (0, m.I)({
+          })(!!p, H, A, _),
+          V = (function (e, t) {
+            return (0, x.I)({
               queryKey: ["AwardsConfiguration"],
               queryFn: async () => {
-                const e = d.w.Init(u.Sm);
-                e.Body().set_elanguage((0, h.sf)(C.TS.LANGUAGE));
-                let s = await u.a9.GetReactionConfig(t, e);
-                if (1 == s.GetEResult()) {
-                  const e = new Map();
-                  let t = s.Body().toObject().reactions;
-                  for (const s of t) e.set(s.reactionid, s);
-                  return e;
+                var e;
+                const s = d.w.Init(u.Sm);
+                s.Body().set_elanguage((0, h.sf)(C.TS.LANGUAGE));
+                let a = await u.a9.GetReactionConfig(t, s);
+                if (1 == a.GetEResult()) {
+                  const t = new Map();
+                  let s =
+                    null !== (e = a.Body().toObject().reactions) && void 0 !== e
+                      ? e
+                      : [];
+                  for (const e of s) e.reactionid && t.set(e.reactionid, e);
+                  return t;
                 }
-                throw s.GetEResult();
-              },
-              enabled: e,
-            });
-          })(a, O),
-          H = (function (e, t) {
-            return (0, m.I)({
-              queryKey: ["UserPointBalance"],
-              queryFn: async () => {
-                if (!C.iA.logged_in) throw 21;
-                const e = C.iA.steamid,
-                  s = d.w.Init(u.pt);
-                s.Body().set_steamid(e);
-                let a = await u.a9.GetSummary(t, s);
-                if (1 == a.GetEResult())
-                  return o.A.fromString(a.Body().summary().points());
                 throw a.GetEResult();
               },
               enabled: e,
             });
-          })(a, O),
-          U = (function (e) {
+          })(!!p, H),
+          Y = (function (e, t) {
+            return (0, x.I)({
+              queryKey: ["UserPointBalance"],
+              queryFn: async () => {
+                var e, s;
+                if (!C.iA.logged_in) throw 21;
+                const a = C.iA.steamid,
+                  n = d.w.Init(u.pt);
+                n.Body().set_steamid(a);
+                let i = await u.a9.GetSummary(t, n);
+                if (1 == i.GetEResult())
+                  return c.A.fromString(
+                    null !==
+                      (s =
+                        null === (e = i.Body().toObject().summary) ||
+                        void 0 === e
+                          ? void 0
+                          : e.points) && void 0 !== s
+                      ? s
+                      : "0",
+                  );
+                throw i.GetEResult();
+              },
+              enabled: e,
+            });
+          })(!!p, H),
+          W = (function (e) {
             const t = (0, w.jE)();
-            return (0, x.n)({
+            return (0, m.n)({
               mutationFn: async (t) => {
                 if (!C.iA.logged_in) throw 21;
                 const { targetid: s, targetType: a, nReactionId: n } = t;
@@ -657,22 +686,29 @@
                 t.invalidateQueries({ queryKey: ["UserPointBalance"] });
               },
             });
-          })(O),
-          K = D.isPending || P.isPending;
+          })(H),
+          $ = U.isPending || V.isPending;
         if (
           (i.useEffect(() => {
-            D.error && (I(D.error), S(z.LOADING_ERROR));
-          }, [D.error]),
-          !a)
+            U.error && (F(U.error), B(q.LOADING_ERROR));
+          }, [U.error]),
+          !p)
         )
           return null;
-        const V = P.data || new Map(),
-          Q = H.data,
-          J = (function (e, t, s) {
+        const ne = null !== (t = V.data) && void 0 !== t ? t : new Map(),
+          ie = null !== (s = Y.data) && void 0 !== s ? s : new c.A(0),
+          re = (function (e, t, s) {
             let a = [];
             return (
               e.forEach(function (e) {
-                if (e.valid_target_types.includes(t) && e.purchaseable)
+                var n, i;
+                if (
+                  (null === (n = e.valid_target_types) || void 0 === n
+                    ? void 0
+                    : n.includes(t)) &&
+                  e.purchaseable &&
+                  e.reactionid
+                )
                   switch (t) {
                     case 1:
                     case 3:
@@ -681,42 +717,46 @@
                       a.push(e.reactionid);
                       break;
                     case 2:
-                      e.valid_ugc_types.includes(s) && a.push(e.reactionid);
+                      void 0 !== s &&
+                        (null === (i = e.valid_ugc_types) || void 0 === i
+                          ? void 0
+                          : i.includes(s)) &&
+                        a.push(e.reactionid);
                   }
               }),
               a
             );
-          })(V, v, p),
-          ne = 0 === R ? null : V.get(R),
-          ie = ne ? ne.points_cost : 0,
-          re = ne ? ne.points_transferred : 0;
-        let le,
-          ce = "";
-        switch (v) {
+          })(ne, _, L),
+          oe = 0 === S ? null : ne.get(S),
+          le = oe ? oe.points_cost : 0,
+          ce = oe ? oe.points_transferred : 0;
+        let de,
+          he = "";
+        switch (_) {
           case 1:
-            ce = (0, y.we)("#GrantAwardDescription_Review");
+            he = (0, y.we)("#GrantAwardDescription_Review");
             break;
           case 2:
-            ce = (0, y.we)("#GrantAwardDescription_UGC");
+            he = (0, y.we)("#GrantAwardDescription_UGC");
             break;
           case 3:
-            ce = (0, y.we)("#GrantAwardDescription_Profile");
+            he = (0, y.we)("#GrantAwardDescription_Profile");
             break;
           case 4:
-            ce = (0, y.we)("#GrantAwardDescription_ForumTopic");
+            he = (0, y.we)("#GrantAwardDescription_ForumTopic");
             break;
           case 5:
-            ce = (0, y.we)("#GrantAwardDescription_Comment");
+            he = (0, y.we)("#GrantAwardDescription_Comment");
         }
-        switch (b) {
-          case z.SELECTING:
+        switch (I) {
+          case q.SELECTING:
             {
               const e =
-                  0 === R ||
-                  (null === (t = D.data) || void 0 === t ? void 0 : t.has(R)),
-                s = !Q || Q.greaterThanOrEqual(ie),
-                a = (0, n.jsx)(f.jn, {
-                  onClick: () => S(z.CONFIRM),
+                  0 === S ||
+                  (null === (a = U.data) || void 0 === a ? void 0 : a.has(S)),
+                t = !ie || ie.greaterThanOrEqual(le),
+                s = (0, n.jsx)(v.jn, {
+                  onClick: () => B(q.CONFIRM),
                   disabled: e,
                   focusable: !e,
                   title: (0, y.we)(
@@ -728,11 +768,11 @@
                     e ? "#GrantAward_SelectAward" : "#GrantAward_Next",
                   ),
                 });
-              le = (0, n.jsxs)(n.Fragment, {
+              de = (0, n.jsxs)(n.Fragment, {
                 children: [
-                  (0, n.jsx)(W, { description: ce }),
+                  (0, n.jsx)(J, { description: he }),
                   (0, n.jsx)(ee, {}),
-                  K &&
+                  $ &&
                     (0, n.jsx)("div", {
                       className: Z.InitialLoading,
                       children: (0, n.jsx)("div", {
@@ -740,40 +780,40 @@
                         children: (0, n.jsx)(se, {}),
                       }),
                     }),
-                  (0, n.jsx)(c.MS, {
+                  (0, n.jsx)(l.MS, {
                     className: Z.ButtonContainer,
-                    scrollDirection: k ? "x" : "y",
+                    scrollDirection: D ? "x" : "y",
                     "flow-children": "grid",
                     children:
-                      !K &&
-                      J.map((e, t) => {
+                      !$ &&
+                      re.map((e, t) => {
                         var s, a, i;
                         return (0, n.jsx)(
                           te,
                           {
                             autoFocus:
-                              (void 0 === R && 0 == t) ||
-                              (e === R &&
-                                !(null === (s = D.data) || void 0 === s
+                              (void 0 === S && 0 == t) ||
+                              (e === S &&
+                                !(null === (s = U.data) || void 0 === s
                                   ? void 0
                                   : s.has(e))),
                             reaction: e,
                             selected:
-                              e === R &&
-                              !(null === (a = D.data) || void 0 === a
+                              e === S &&
+                              !(null === (a = U.data) || void 0 === a
                                 ? void 0
                                 : a.has(e)),
-                            cost: V.get(e).points_cost,
+                            cost: ne.get(e).points_cost,
                             alreadyAwarded:
-                              null === (i = D.data) || void 0 === i
+                              null === (i = U.data) || void 0 === i
                                 ? void 0
                                 : i.has(e),
-                            awardConfig: V.get(e),
+                            awardConfig: ne.get(e),
                             onClick: () => {
                               var t;
-                              (null === (t = D.data) || void 0 === t
+                              (null === (t = U.data) || void 0 === t
                                 ? void 0
-                                : t.has(e)) || M(e === R ? 0 : e);
+                                : t.has(e)) || E(e === S ? 0 : e);
                             },
                           },
                           e,
@@ -782,10 +822,10 @@
                   }),
                   (0, n.jsx)(ee, {}),
                   (0, n.jsx)(X, {
-                    pointBalance: Q,
+                    pointBalance: ie,
                     children:
-                      e || s
-                        ? a
+                      e || t
+                        ? s
                         : [
                             (0, n.jsx)(
                               "div",
@@ -793,7 +833,7 @@
                                 className: Z.NotEnoughPoints,
                                 children: (0, y.we)(
                                   "#GrantAward_CantAfford",
-                                  (0, q.D)(Q.negate().add(ie).toNumber()),
+                                  (0, z.D)(ie.negate().add(le).toNumber()),
                                 ),
                               },
                               "msg",
@@ -801,9 +841,9 @@
                             (0, n.jsx)(
                               r.Ii,
                               {
-                                href: `${F.TS.STORE_BASE_URL}points/howitworks`,
+                                href: `${P.TS.STORE_BASE_URL}points/howitworks`,
                                 children: (0, n.jsx)(
-                                  f.$n,
+                                  v.$n,
                                   {
                                     children: (0, y.we)(
                                       "#GrantAward_HowToGetPoints",
@@ -820,56 +860,56 @@
               });
             }
             break;
-          case z.CONFIRM:
-          case z.SUBMITTING:
-          case z.DONE:
+          case q.CONFIRM:
+          case q.SUBMITTING:
+          case q.DONE:
             {
               let e = (0, n.jsxs)(X, {
-                pointBalance: Q,
+                pointBalance: ie,
                 children: [
-                  (0, n.jsx)(f.$n, {
-                    onClick: () => S(z.SELECTING),
-                    disabled: b !== z.CONFIRM,
+                  (0, n.jsx)(v.$n, {
+                    onClick: () => B(q.SELECTING),
+                    disabled: I !== q.CONFIRM,
                     children: (0, y.we)("#GrantAward_Back"),
                   }),
-                  (0, n.jsx)(f.jn, {
+                  (0, n.jsx)(v.jn, {
                     onClick: async function () {
-                      null !== R &&
-                        0 != R &&
-                        (S(z.SUBMITTING),
-                        await U.mutate(
-                          { targetid: l, targetType: v, nReactionId: R },
+                      null !== S &&
+                        0 != S &&
+                        (B(q.SUBMITTING),
+                        await W.mutate(
+                          { targetid: A, targetType: _, nReactionId: S },
                           {
                             onSuccess: () => {
-                              S(z.DONE),
-                                B(!0),
+                              B(q.DONE),
+                                T(!0),
                                 setTimeout(() => {
-                                  _ && _(l, R);
+                                  b && b(A, S);
                                 }, 2e3);
                             },
                             onError: (e) => {
-                              S(z.ERROR), I(e);
+                              B(q.ERROR), F(e);
                             },
                           },
                         ));
                     },
                     title: (0, y.we)("#GrantAward_SubmitTooltip"),
-                    disabled: b !== z.CONFIRM,
+                    disabled: I !== q.CONFIRM,
                     children: (0, y.we)("#GrantAwardNowButton"),
                   }),
                 ],
               });
-              b === z.DONE &&
+              I === q.DONE &&
                 (e = (0, n.jsx)(X, {
-                  pointBalance: Q,
-                  children: (0, n.jsx)(f.$n, {
-                    onClick: L,
+                  pointBalance: ie,
+                  children: (0, n.jsx)(v.$n, {
+                    onClick: M,
                     children: (0, y.we)("#Button_Close"),
                   }),
                 })),
-                (le = (0, n.jsxs)(n.Fragment, {
+                (de = (0, n.jsxs)(n.Fragment, {
                   children: [
-                    (0, n.jsx)(W, { description: ce }),
+                    (0, n.jsx)(J, { description: he }),
                     (0, n.jsx)(ee, {}),
                     (0, n.jsxs)("div", {
                       style: { position: "relative" },
@@ -877,12 +917,12 @@
                         (0, n.jsxs)("div", {
                           className: (0, j.A)(
                             Z.ConfirmContainer,
-                            b === z.CONFIRM && Z.Visible,
+                            I === q.CONFIRM && Z.Visible,
                           ),
                           children: [
-                            (0, n.jsx)(Y, {
+                            (0, n.jsx)(K, {
                               className: Z.ConfirmAwardImage,
-                              reactionType: R,
+                              reactionType: S,
                             }),
                             (0, n.jsxs)("div", {
                               className: Z.ConfirmTextCtn,
@@ -891,23 +931,28 @@
                                   className: Z.ConfirmText,
                                   children: (0, y.PP)(
                                     "#GrantAward_Confirm",
-                                    (0, n.jsx)(ae, { children: (0, q.D)(ie) }),
+                                    (0, n.jsx)(ae, { children: (0, z.D)(le) }),
                                     (0, n.jsx)("span", {
                                       className: Z.AwardName,
                                       children:
-                                        null === (s = P.data) || void 0 === s
+                                        null ===
+                                          (g =
+                                            null === (o = V.data) ||
+                                            void 0 === o
+                                              ? void 0
+                                              : o.get(S)) || void 0 === g
                                           ? void 0
-                                          : s.get(R).localized_title,
+                                          : g.localized_title,
                                     }),
                                   ),
                                 }),
-                                re > 0 &&
+                                ce > 0 &&
                                   (0, n.jsx)("div", {
                                     className: Z.ConfirmText,
                                     children: (0, y.PP)(
                                       "#GrantAward_Confirm_Details",
                                       (0, n.jsx)(ae, {
-                                        children: (0, q.D)(re),
+                                        children: (0, z.D)(ce),
                                       }),
                                       (0, n.jsx)("span", {
                                         className: Z.TimePeriod,
@@ -924,19 +969,19 @@
                         (0, n.jsx)("div", {
                           className: (0, j.A)(
                             Z.LoadingContainer,
-                            b === z.SUBMITTING && Z.Visible,
+                            I === q.SUBMITTING && Z.Visible,
                           ),
                           children: (0, n.jsx)(se, {}),
                         }),
                         (0, n.jsxs)("div", {
                           className: (0, j.A)(
                             Z.SuccessContainer,
-                            b === z.DONE && Z.Visible,
+                            I === q.DONE && Z.Visible,
                           ),
                           children: [
-                            (0, n.jsx)(Y, {
+                            (0, n.jsx)(K, {
                               className: Z.ConfirmAwardImage,
-                              reactionType: R,
+                              reactionType: S,
                               bForceAnimated: !0,
                             }),
                             (0, n.jsx)("div", {
@@ -953,10 +998,10 @@
                 }));
             }
             break;
-          case z.ERROR:
+          case q.ERROR:
             {
               let e = "";
-              switch (T) {
+              switch (O) {
                 case 10:
                   e = (0, y.we)("#GrantAwardError_Busy");
                   break;
@@ -984,9 +1029,9 @@
                 default:
                   e = (0, y.we)("#GrantAwardError_Fail");
               }
-              le = (0, n.jsxs)(n.Fragment, {
+              de = (0, n.jsxs)(n.Fragment, {
                 children: [
-                  (0, n.jsx)(W, { description: ce }),
+                  (0, n.jsx)(J, { description: he }),
                   (0, n.jsx)(ee, {}),
                   (0, n.jsx)("div", {
                     style: { position: "relative" },
@@ -1000,9 +1045,9 @@
                   }),
                   (0, n.jsx)(ee, {}),
                   (0, n.jsx)(X, {
-                    pointBalance: Q,
-                    children: (0, n.jsx)(f.$n, {
-                      onClick: () => S(z.SELECTING),
+                    pointBalance: ie,
+                    children: (0, n.jsx)(v.$n, {
+                      onClick: () => B(q.SELECTING),
                       children: (0, y.we)("#GrantAward_Back"),
                     }),
                   }),
@@ -1010,9 +1055,9 @@
               });
             }
             break;
-          case z.LOADING_ERROR: {
+          case q.LOADING_ERROR: {
             let e = "";
-            switch (T) {
+            switch (O) {
               case 10:
                 e = (0, y.we)("#GrantAwardError_Busy");
                 break;
@@ -1022,9 +1067,9 @@
               default:
                 e = (0, y.we)("#GrantAwardError_LoadExistingReactions");
             }
-            le = (0, n.jsxs)(n.Fragment, {
+            de = (0, n.jsxs)(n.Fragment, {
               children: [
-                (0, n.jsx)(W, { description: ce }),
+                (0, n.jsx)(J, { description: he }),
                 (0, n.jsx)(ee, {}),
                 (0, n.jsx)("div", {
                   style: { position: "relative" },
@@ -1041,14 +1086,14 @@
             });
           }
         }
-        return (0, n.jsxs)(g.mt, {
+        return (0, n.jsxs)(f.mt, {
           className: Z.GrantAwardModal,
-          active: a,
-          onDismiss: L,
-          children: [E && (0, n.jsx)(G, { eType: N.Default }), le],
+          active: p,
+          onDismiss: M,
+          children: [k && (0, n.jsx)(G, { eType: N.Default }), de],
         });
       }
-      const W = ({ description: e }) =>
+      const J = ({ description: e }) =>
         (0, n.jsxs)("div", {
           className: Z.Header,
           children: [
@@ -1061,7 +1106,7 @@
         });
       function X(e) {
         const { pointBalance: t, children: s } = e,
-          a = t && (0, q.D)(t.toNumber());
+          a = t && (0, z.D)(t.toNumber());
         return (0, n.jsxs)("div", {
           className: Z.Footer,
           children: [
@@ -1071,7 +1116,7 @@
                 (0, n.jsxs)("div", {
                   className: Z.Left,
                   children: [
-                    (0, n.jsx)(v.vrn, { className: Z.BalanceIcon }),
+                    (0, n.jsx)(g.vrn, { className: Z.BalanceIcon }),
                     (0, n.jsxs)("div", {
                       className: Z.BalanceDetails,
                       children: [
@@ -1091,7 +1136,7 @@
                   className: Z.Column,
                   children: (0, n.jsx)("a", {
                     className: Z.FooterLink,
-                    href: `${F.TS.STORE_BASE_URL}points/howitworks`,
+                    href: `${P.TS.STORE_BASE_URL}points/howitworks`,
                     children: (0, y.we)("#GrantAward_PointsLink"),
                   }),
                 }),
@@ -1099,7 +1144,7 @@
             }),
             (0, n.jsx)("div", {
               className: Z.Right,
-              children: (0, n.jsx)(l.Z, {
+              children: (0, n.jsx)(o.Z, {
                 className: Z.Actions,
                 "flow-children": "row",
                 children: i.Children.map(s, (e) =>
@@ -1129,7 +1174,7 @@
             cost: a,
             autoFocus: i,
             awardConfig: r,
-            ...l
+            ...o
           } = this.props;
           return (0, n.jsxs)(U, {
             type: "button",
@@ -1137,11 +1182,11 @@
             onMouseLeave: this.handleMouseOut,
             className: (0, j.A)(Z.Button, t && Z.Selected, s && Z.Disabled),
             autoFocus: i,
-            ...l,
+            ...o,
             children: [
               (0, n.jsx)("div", {
                 className: Z.IconCtn,
-                children: (0, n.jsx)(Y, {
+                children: (0, n.jsx)(K, {
                   reactionType: e,
                   bForceAnimated: this.state.bHovered,
                   bDisableAnimation: s,
@@ -1156,11 +1201,11 @@
                   }),
                   (0, n.jsx)(ae, {
                     className: Z.Points,
-                    children: (0, q.D)(a),
+                    children: (0, z.D)(null != a ? a : 0),
                   }),
                 ],
               }),
-              s && (0, n.jsx)(K, { className: Z.IconCheckMark }),
+              s && (0, n.jsx)(V, { className: Z.IconCheckMark }),
             ],
           });
         }
@@ -1173,7 +1218,7 @@
           return (0, n.jsxs)("span", {
             ...a,
             className: (0, j.A)(s, Z.PointsAmount),
-            children: [(0, n.jsx)(v.vrn, { className: Z.PointsAmountIcon }), t],
+            children: [(0, n.jsx)(g.vrn, { className: Z.PointsAmountIcon }), t],
           });
         };
     },

@@ -52,7 +52,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-        const { appid: _, eventLink: __webpack_require__ } = _,
+        const { appid: _, eventLink: _ } = _,
           _ = _.useRef(null),
           { data: _ } = (0, _._)(_._.steamid),
           [_, _] = _.useState(""),
@@ -73,7 +73,7 @@
             const _ = _().CancelToken.source();
             (_.current = _.cancel), _(!0);
             let _ = _;
-            0 != _.trim().length && (_ += "\n\n"), (_ += __webpack_require__);
+            0 != _.trim().length && (_ += "\n\n"), (_ += _);
             const _ =
               _._.COMMUNITY_BASE_URL +
               "profiles/" +
@@ -213,7 +213,7 @@
                       (0, _.jsx)("div", {
                         className: _().ShareLink,
                         children: (0, _.jsx)(_._, {
-                          text: __webpack_require__,
+                          text: _,
                           event: null,
                           partnerEventStore: _.partnerEventStore,
                         }),
@@ -228,7 +228,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const _ = _.createRef(),
-          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(""),
           _ = _.createRef();
         return (0, _.jsxs)("div", {
           children: [
@@ -280,7 +280,7 @@
             (0, _.jsx)("div", {
               ref: _,
               className: _().ClipboardText,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
@@ -307,7 +307,7 @@
           const {
             eventLink: _,
             sharePageUrls: _,
-            appid: __webpack_require__,
+            appid: _,
             closeModal: _,
             emoticonStore: _,
             partnerEventStore: _,
@@ -325,7 +325,7 @@
             : this.state.bShareOnSteamDialog
               ? (0, _.jsx)(_, {
                   eventLink: _,
-                  appid: __webpack_require__,
+                  appid: _,
                   emoticonStore: _,
                   partnerEventStore: _,
                   closeModal: _,
@@ -349,7 +349,7 @@
       const _ = (_) => {
         const {
             eventLink: _,
-            sharePageUrls: __webpack_require__,
+            sharePageUrls: _,
             fnShareOnSteamActivityFeed: _,
           } = _,
           _ = (0, _._)(),
@@ -418,7 +418,7 @@
                           "#EventDisplay_Share_OnFaceBook",
                         ),
                         children: (0, _.jsx)(_._, {
-                          href: __webpack_require__.strFacebookUrl,
+                          href: _.strFacebookUrl,
                           className: _().ShareBtn,
                           children: (0, _.jsx)("img", {
                             className: (0, _._)(_().Button),
@@ -431,7 +431,7 @@
                           "#EventDisplay_Share_OnTwitter",
                         ),
                         children: (0, _.jsx)(_._, {
-                          href: __webpack_require__.strTwitterUrl,
+                          href: _.strTwitterUrl,
                           className: _().ShareBtn,
                           children: (0, _.jsx)("img", {
                             className: (0, _._)(_().Button),
@@ -444,7 +444,7 @@
                           "#EventDisplay_Share_OnReddit",
                         ),
                         children: (0, _.jsx)(_._, {
-                          href: __webpack_require__.strRedditUrl,
+                          href: _.strRedditUrl,
                           className: _().ShareBtn,
                           children: (0, _.jsx)("img", {
                             className: (0, _._)(_().Button),

@@ -5,6 +5,7 @@
   {
     43047: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         avatarHolder: "nibodjvvrm86uCfnnAn4g",
         avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
         avatar: "_3h-QRJGxnVOIExtHD1R0f2",
@@ -14,15 +15,15 @@
     },
     10622: (e, t, a) => {
       "use strict";
-      a.d(t, { Z: () => l, dV: () => A.d, rO: () => p });
+      a.d(t, { Z: () => _, dV: () => A.d, rO: () => l });
       var r = a(34629),
-        s = a(14947),
-        i = a(31561),
+        i = a(14947),
+        s = a(31561),
         n = a(51006),
         o = a(61859),
         m = a(78327),
         A = a(85044);
-      function p(e) {
+      function l(e) {
         let t = "offline";
         return (
           e &&
@@ -35,7 +36,7 @@
           t
         );
       }
-      class l {
+      class _ {
         m_steamid;
         m_bInitialized = !1;
         m_ePersonaState = 0;
@@ -59,12 +60,12 @@
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
         m_eGamingDeviceType = 0;
-        m_mapRichPresence = s.sH.map();
+        m_mapRichPresence = i.sH.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
         m_strProfileURL = void 0;
         constructor(e) {
-          (0, s.Gn)(this), (this.m_steamid = e);
+          (0, i.Gn)(this), (this.m_steamid = e);
         }
         Reset() {
           (this.m_ePersonaState = 0),
@@ -194,7 +195,7 @@
           if (0 == this.last_seen_online)
             return (0, o.we)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!m.TS.IN_MOBILE || e <= 60) && (0, i.tB)(e);
+          (!m.TS.IN_MOBILE || e <= 60) && (0, s.tB)(e);
           let t = n.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, o.we)("#PersonaStateLastSeen_JustNow")
@@ -285,50 +286,50 @@
             : `${m.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, r.Cg)([s.sH], l.prototype, "m_bInitialized", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_ePersonaState", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_unGamePlayedAppID", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_gameid", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_unPersonaStateFlags", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_strPlayerName", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_strAvatarHash", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_strAccountName", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_rtLastSeenOnline", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_strGameExtraInfo", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_unGameServerIP", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_unGameServerPort", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_game_lobby_id", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_bPlayerNamePending", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_bAvatarPending", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_broadcastId", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_broadcastAccountId", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_broadcastAppId", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_broadcastViewerCount", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_eGamingDeviceType", void 0),
-        (0, r.Cg)([s.sH], l.prototype, "m_bNameInitialized", void 0);
+      (0, r.Cg)([i.sH], _.prototype, "m_bInitialized", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_ePersonaState", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_unGamePlayedAppID", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_gameid", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_unPersonaStateFlags", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_strPlayerName", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_strAvatarHash", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_strAccountName", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_rtLastSeenOnline", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_strGameExtraInfo", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_unGameServerIP", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_unGameServerPort", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_game_lobby_id", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_bPlayerNamePending", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_bAvatarPending", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_broadcastId", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_broadcastAccountId", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_broadcastAppId", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_broadcastViewerCount", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_strBroadcastTitle", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_bCommunityBanned", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_eGamingDeviceType", void 0),
+        (0, r.Cg)([i.sH], _.prototype, "m_bNameInitialized", void 0);
     },
     1035: (e, t, a) => {
       "use strict";
       a.d(t, { Ul: () => g, xz: () => B, $Y: () => S, i8: () => d });
       var r = a(34629),
-        s = a(7850),
-        i = a(90626),
+        i = a(7850),
+        s = a(90626),
         n = a(75844),
         o = a(10622),
         m = a(52038),
         A = a(78327),
-        p = a(3088);
-      const l =
+        l = a(3088);
+      const _ =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        h =
+        p =
           a.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = a(43047),
-        u = a.n(_),
-        c = a(81393);
-      const g = i.memo(function (e) {
+      var u = a(43047),
+        c = a.n(u),
+        h = a(81393);
+      const g = s.memo(function (e) {
         const {
             strAvatarURL: t,
             size: a = "Medium",
@@ -336,9 +337,9 @@
             statusStyle: n,
             statusPosition: o,
             children: A,
-            ..._
+            ...u
           } = e,
-          g = i.useMemo(() => {
+          g = s.useMemo(() => {
             const e = [];
             return (
               t && e.push(t),
@@ -350,35 +351,35 @@
                       return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
                     case "Medium":
                     case "MediumLarge":
-                      return l;
+                      return _;
                     case "Large":
                     case "X-Large":
                     case "FillArea":
-                      return h;
+                      return p;
                     default:
-                      return (0, c.z_)(e, `Unhandled size ${e}`), l;
+                      return (0, h.z_)(e, `Unhandled size ${e}`), _;
                   }
                 })(a),
               ),
               e
             );
           }, [t, a]);
-        return (0, s.jsxs)("div", {
+        return (0, i.jsxs)("div", {
           className: (0, m.A)(
-            u().avatarHolder,
+            c().avatarHolder,
             "avatarHolder",
             "no-drag",
             a,
             r,
           ),
-          ..._,
+          ...u,
           children: [
-            (0, s.jsx)("div", {
-              className: (0, m.A)(u().avatarStatus, "avatarStatus", o),
+            (0, i.jsx)("div", {
+              className: (0, m.A)(c().avatarStatus, "avatarStatus", o),
               style: n,
             }),
-            (0, s.jsx)(p.c, {
-              className: (0, m.A)(u().avatar, "avatar"),
+            (0, i.jsx)(l.c, {
+              className: (0, m.A)(c().avatar, "avatar"),
               rgSources: g,
               draggable: !1,
             }),
@@ -386,29 +387,29 @@
           ],
         });
       });
-      let d = class extends i.Component {
+      let d = class extends s.Component {
         render() {
           const {
             persona: e,
             size: t = "Medium",
             animatedAvatar: a,
             className: r,
-            strBackupAvatarURL: i,
+            strBackupAvatarURL: s,
             ...n
           } = this.props;
-          let p = "";
+          let l = "";
           return (
             a && a.image_small && 0 != a.image_small.length
-              ? (p = A.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
+              ? (l = A.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
               : e
-                ? ((p = e.avatar_url_medium),
+                ? ((l = e.avatar_url_medium),
                   "Small" == t || "X-Small" == t
-                    ? (p = e.avatar_url)
+                    ? (l = e.avatar_url)
                     : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
-                      (p = e.avatar_url_full))
-                : i && (p = i),
-            (0, s.jsx)(g, {
-              strAvatarURL: p,
+                      (l = e.avatar_url_full))
+                : s && (l = s),
+            (0, i.jsx)(g, {
+              strAvatarURL: l,
               size: t,
               className: (0, m.A)((0, o.rO)(e), r),
               ...n,
@@ -418,24 +419,24 @@
       };
       d = (0, r.Cg)([n.PA], d);
       const S = (0, n.PA)((e) => {
-        const { profileItem: t, className: a, bDisableAnimation: r, ...i } = e;
+        const { profileItem: t, className: a, bDisableAnimation: r, ...s } = e;
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
         let n = r ? t.image_large : t.image_small;
         return (
           n || (n = t.image_small),
           n.startsWith("https://") ||
             (n = A.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + n),
-          (0, s.jsx)("div", {
-            className: (0, m.A)(u().avatarFrame, a, "avatarFrame"),
-            ...i,
-            children: (0, s.jsx)("img", {
-              className: u().avatarFrameImg,
+          (0, i.jsx)("div", {
+            className: (0, m.A)(c().avatarFrame, a, "avatarFrame"),
+            ...s,
+            children: (0, i.jsx)("img", {
+              className: c().avatarFrameImg,
               src: n,
             }),
           })
         );
       });
-      let B = class extends i.Component {
+      let B = class extends s.Component {
         m_timer;
         constructor(e) {
           super(e),
@@ -495,23 +496,23 @@
             animatedAvatar: t,
             avatarFrame: a,
             children: r,
-            style: i,
+            style: s,
             bLimitProfileFrameAnimationTime: n,
             bParentHovered: o,
             ...m
           } = this.props;
-          m.onClick && (i = { ...i, cursor: "pointer" });
+          m.onClick && (s = { ...s, cursor: "pointer" });
           const A = this.state.bAnimate ? (t ?? null) : null;
-          return (0, s.jsx)("div", {
+          return (0, i.jsx)("div", {
             onMouseEnter: () =>
               this.setState({ bAnimate: "None" != this.props.loopDuration }),
             onMouseLeave: () => this.SetupAnimationTimer(),
-            children: (0, s.jsxs)(d, {
+            children: (0, i.jsxs)(d, {
               animatedAvatar: A,
               ...m,
               children: [
                 r,
-                (0, s.jsx)(S, {
+                (0, i.jsx)(S, {
                   profileItem: a,
                   bDisableAnimation: n && !this.state.bAnimate,
                 }),
@@ -524,80 +525,59 @@
     },
     3088: (e, t, a) => {
       "use strict";
-      a.d(t, { c: () => o });
-      var r = a(34629),
-        s = a(7850),
-        i = a(90626),
-        n = a(84933);
-      class o extends i.Component {
-        m_refImage = i.createRef();
-        constructor(e) {
-          super(e), (this.state = { nImage: 0, nPropChangeCounter: 0 });
-        }
-        componentDidUpdate(e, t) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({
-              nImage: 0,
-              nPropChangeCounter: t.nPropChangeCounter + 1,
-            });
-        }
-        get src() {
-          let e = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (e = this.props.rgSources[this.state.nImage]),
-            e ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (e =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            e
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(e) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              e,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
+      a.d(t, { c: () => s });
+      var r = a(7850),
+        i = a(90626);
+      function s(e) {
+        const {
+            rgSources: t,
+            onIncrementalError: a,
+            onError: s,
+            strAltText: n,
+            ref: o,
+            ...m
+          } = e,
+          A = i.useRef(null),
+          [l, _] = i.useState(0),
+          [p, u] = i.useState(0);
+        i.useImperativeHandle(
+          o,
+          () => ({ imgRef: A, nSourceIndex: l, nSourceLength: t.length }),
+          [A, l, t],
+        );
+        const c = i.useMemo(() => JSON.stringify(t), [t]);
+        i.useEffect(() => {
+          _(0), u((e) => e + 1);
+        }, [c]);
+        const h = i.useMemo(() => {
+            let a = "";
+            return (
+              t && t.length > l && (a = t[l]),
+              a ||
+                (console.warn(
+                  "MultiSourceImage created with no image src",
+                  e,
+                  l,
+                ),
+                (a =
+                  "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+              a
             );
-          let t = this.state.nImage + 1;
-          t >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(e),
-            t < this.props.rgSources.length && this.setState({ nImage: t });
-        }
-        render() {
-          const {
-              rgSources: e,
-              onIncrementalError: t,
-              onError: a,
-              strAltText: r,
-              ...i
-            } = this.props,
-            n = this.src,
-            o = this.state.nPropChangeCounter;
-          return (0, s.jsx)(
-            "img",
-            {
-              ref: this.m_refImage,
-              ...i,
-              src: n,
-              onError: this.OnImageError,
-              alt: r,
+          }, [t, l, e]),
+          g = i.useCallback(
+            (e) => {
+              a?.(e, t[l], l);
+              const r = l + 1;
+              r >= t.length && s && s(e), r < t.length && _(r);
             },
-            o,
+            [l, s, a, t],
           );
-        }
+        return (0, r.jsx)(
+          "img",
+          { ref: A, ...m, src: h, onError: g, alt: n },
+          p,
+        );
       }
-      (0, r.Cg)([n.oI], o.prototype, "OnImageError", null);
     },
   },
 ]);

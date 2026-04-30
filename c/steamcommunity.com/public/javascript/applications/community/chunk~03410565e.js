@@ -877,7 +877,7 @@
       let _ = null;
       function _(_) {
         const _ = (0, _._)("useReloadFunction"),
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           _ = _.useCallback(() => {
             _(!0);
             const _ = _.Get().LoadSession(_, !1, _);
@@ -913,9 +913,9 @@
           _.useMemo(
             () => ({
               fnReload: _,
-              bIsReloading: __webpack_require__,
+              bIsReloading: _,
             }),
-            [_, __webpack_require__],
+            [_, _],
           )
         );
       }
@@ -1047,19 +1047,19 @@
             const _ = (0, _._)("useCreateQAndAFn");
             return _.useCallback((_) => _.Get().CreateNewSession(_, _), [_]);
           })(),
-          [__webpack_require__, _] = _.useState("");
+          [_, _] = _.useState("");
         return (0, _.jsx)(_._, {
           strTitle: (0, _._)("#QAndA_CreateQAndA_Title"),
           strDescription: (0, _._)("#QAndA_CreateQAndA_Instructions"),
           strOKButtonText: (0, _._)("#Button_Create"),
-          onOK: () => _(__webpack_require__),
-          bOKDisabled: 0 == __webpack_require__.length,
+          onOK: () => _(_),
+          bOKDisabled: 0 == _.length,
           closeModal: _.closeModal,
           className: _().CreateQAndADialog,
           children: (0, _.jsx)(_._, {
             type: "text",
             className: _().NameInput,
-            value: __webpack_require__,
+            value: _,
             placeholder: (0, _._)("#QAndA_EnterNamePrompt"),
             onFocus: (_) => _.target.select(),
             onChange: (_) => _(_.currentTarget.value),
@@ -1119,7 +1119,7 @@
       }
       function _(_) {
         const { qanda: _ } = _,
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           [_, _] = _.useState(_.strName),
           _ = (function () {
             const _ = (0, _._)("useRenameQAndAFn");
@@ -1158,16 +1158,11 @@
             ],
           });
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().QAndAName,
-            __webpack_require__ && _().Editing,
-          ),
+          className: (0, _._)(_().QAndAName, _ && _().Editing),
           onClick: (_) => {
-            _.stopPropagation(),
-              _.preventDefault(),
-              __webpack_require__ || _(!0);
+            _.stopPropagation(), _.preventDefault(), _ || _(!0);
           },
-          children: __webpack_require__ ? _ : _,
+          children: _ ? _ : _,
         });
       }
       function _(_) {
@@ -1200,22 +1195,22 @@
       function _(_) {
         const {
             gidSession: _,
-            gidQuestion: __webpack_require__,
+            gidQuestion: _,
             bUserCanModerate: _,
             bUserCanVote: _,
             fnVoteOnQuestion: _,
             rtNow: _,
           } = _,
           [_, _] = (function (_) {
-            const [_, __webpack_require__] = _.useState(_.Get().GetQuestion(_));
-            (0, _._)(_.Get().GetQuestionCallbackList(_), __webpack_require__);
+            const [_, _] = _.useState(_.Get().GetQuestion(_));
+            (0, _._)(_.Get().GetQuestionCallbackList(_), _);
             const [_, _] = _.useState(!!_);
             return [_, !!_ || _];
-          })(__webpack_require__);
+          })(_);
         if (!_) return null;
         const _ = _ - _.rtPostTime,
           _ = _ < _._.PerDay ? (0, _._)(_) : (0, _._)(_.rtPostTime),
-          _ = _ ? () => _(__webpack_require__, !_.bUserUpVoted) : null,
+          _ = _ ? () => _(_, !_.bUserUpVoted) : null,
           _ = _
             ? _.bUserUpVoted
               ? _().Vote_Positive
@@ -1293,15 +1288,15 @@
             _ &&
               (0, _.jsx)(_, {
                 gidSession: _,
-                gidQuestion: __webpack_require__,
+                gidQuestion: _,
                 eState: null == _ ? void 0 : _.eState,
               }),
           ],
         });
       }
       function _(_) {
-        const { question: _, rtNow: __webpack_require__ } = _,
-          _ = _.rtAnswerTime && __webpack_require__ - _.rtAnswerTime,
+        const { question: _, rtNow: _ } = _,
+          _ = _.rtAnswerTime && _ - _.rtAnswerTime,
           _ =
             _.rtAnswerTime &&
             (_ < _._.PerDay ? (0, _._)(_) : (0, _._)(_.rtAnswerTime));
@@ -1367,11 +1362,7 @@
             });
       }
       function _(_) {
-        const {
-            gidSession: _,
-            gidQuestion: __webpack_require__,
-            eState: _,
-          } = _,
+        const { gidSession: _, gidQuestion: _, eState: _ } = _,
           { fnAnswerQuestion: _, fnModerateQuestion: _ } = _(_),
           _ = 0 == _ || 3 == _,
           _ = 3 != _,
@@ -1384,7 +1375,7 @@
               className: _().ToolRow,
               children: (0, _.jsx)(_, {
                 strPrompt: (0, _._)("#QAndA_AnswerPrompt"),
-                fnSubmit: (_) => _(__webpack_require__, _),
+                fnSubmit: (_) => _(_, _),
               }),
             }),
             (0, _.jsxs)("div", {
@@ -1394,7 +1385,7 @@
                 (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)("#QAndA_ModerateApproveButton_ttip"),
                   children: (0, _.jsx)(_._, {
-                    onClick: () => _(__webpack_require__, 1),
+                    onClick: () => _(_, 1),
                     className: _().InputButton,
                     disabled: !_,
                     children: (0, _._)("#QAndA_ModerateApproveButton"),
@@ -1403,7 +1394,7 @@
                 (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)("#QAndA_ModerateHideButton_ttip"),
                   children: (0, _.jsx)(_._, {
-                    onClick: () => _(__webpack_require__, 3),
+                    onClick: () => _(_, 3),
                     className: _().InputButton,
                     disabled: !_,
                     children: (0, _._)("#QAndA_ModerateHideButton"),
@@ -1412,7 +1403,7 @@
                 (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)("#QAndA_QuickAnswerButton_ttip"),
                   children: (0, _.jsx)(_._, {
-                    onClick: () => _(__webpack_require__, ""),
+                    onClick: () => _(_, ""),
                     className: _().InputButton,
                     disabled: !_,
                     children: (0, _._)("#QAndA_QuickAnswerButton"),
@@ -1426,7 +1417,7 @@
       function _(_) {
         const { gidSession: _ } = _;
         _();
-        const { strName: __webpack_require__, bUserCanModerate: _ } = _(_);
+        const { strName: _, bUserCanModerate: _ } = _(_);
         return (0, _.jsxs)("div", {
           className: _().QAFullPageView,
           children: [
@@ -1434,11 +1425,7 @@
               className: _().QAName,
               children:
                 (0, _._)("#QAndA_Header") +
-                ((null == __webpack_require__
-                  ? void 0
-                  : __webpack_require__.length) > 0
-                  ? ": " + __webpack_require__
-                  : ""),
+                ((null == _ ? void 0 : _.length) > 0 ? ": " + _ : ""),
             }),
             (0, _.jsxs)("div", {
               className: _().QAColumns,
@@ -1459,12 +1446,12 @@
       function _(_) {
         const { gidSession: _ } = _,
           {
-            bUserCanModerate: __webpack_require__,
+            bUserCanModerate: _,
             rgNewQuestionGIDs: _,
             rgHiddenQuestionGIDs: _,
           } = _(_),
           _ = (0, _._)(10);
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_().QAModeratorColumn, _().QASplitColumns),
               children: [
@@ -1479,7 +1466,7 @@
                         {
                           gidSession: _,
                           gidQuestion: _,
-                          bUserCanModerate: __webpack_require__,
+                          bUserCanModerate: _,
                           bUserCanVote: !1,
                           rtNow: _,
                         },
@@ -1500,7 +1487,7 @@
                         {
                           gidSession: _,
                           gidQuestion: _,
-                          bUserCanModerate: __webpack_require__,
+                          bUserCanModerate: _,
                           bUserCanVote: !1,
                           rtNow: _,
                         },
@@ -1514,7 +1501,7 @@
           : null;
       }
       function _(_) {
-        const { gidSession: _, bHalfOfFullPage: __webpack_require__ } = _;
+        const { gidSession: _, bHalfOfFullPage: _ } = _;
         _();
         const {
             bIsLoaded: _,
@@ -1528,13 +1515,10 @@
           } = _(_),
           { fnReload: _, bIsReloading: _ } = _(_),
           _ = (0, _._)(10),
-          _ = _ && __webpack_require__,
+          _ = _ && _,
           { fnModerateQuestion: _ } = _(_);
         return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().QAMainCtn,
-            __webpack_require__ && _().QASplitColumns,
-          ),
+          className: (0, _._)(_().QAMainCtn, _ && _().QASplitColumns),
           children: [
             (0, _.jsxs)("div", {
               className: (0, _._)(_().QAHeader, _ && _().ModerationHeader),
@@ -1647,7 +1631,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)("QuestionBox");
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -1678,7 +1662,7 @@
         });
       }
       function _(_) {
-        const { strPrompt: _, fnSubmit: __webpack_require__ } = _,
+        const { strPrompt: _, fnSubmit: _ } = _,
           [_, _] = _.useState(""),
           [_, _] = _.useState(!1);
         return (0, _.jsx)(_.Fragment, {
@@ -1757,7 +1741,7 @@
       function _(_) {
         const {
             title: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             getMinimized: _,
             toggleMinimized: _,
             className: _,
@@ -1782,9 +1766,9 @@
                   ),
                   children: [
                     _,
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                       (0, _.jsx)(_._, {
-                        tooltip: __webpack_require__,
+                        tooltip: _,
                       }),
                   ],
                 }),
@@ -1808,7 +1792,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
+        const [_, _] = _.useState(Boolean(_.bStartMinimized));
         return (0, _.jsx)(_, {
           ..._,
           getMinimized: () => _,
@@ -1817,11 +1801,11 @@
         });
       }
       function _(_) {
-        const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
+        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, _.jsx)(_._, {
           "data-tooltip-text": (0, _._)(_),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _.bIsMinimized
             ? (0, _.jsx)(_.hz4, {})
             : (0, _.jsx)(_.Xjb, {}),

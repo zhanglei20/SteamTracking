@@ -505,7 +505,7 @@
         render() {
           let _ = !1,
             _ = !1;
-          const { video: __webpack_require__, actions: _ } = this.props;
+          const { video: _, actions: _ } = this.props;
           let _,
             _,
             _ = 0,
@@ -615,7 +615,7 @@
                 children: (0, _.jsx)(_.wB_, {}),
               }),
               (0, _.jsx)(_, {
-                video: __webpack_require__,
+                video: _,
               }),
               _ &&
                 _.map((_) =>
@@ -2020,17 +2020,13 @@
       _ = (0, _._)([_._], _);
       class _ extends _.Component {
         showContextMenu(_) {
-          const {
-              options: _,
-              value: __webpack_require__,
-              onChange: _,
-            } = this.props,
+          const { options: _, value: _, onChange: _ } = this.props,
             _ = Object.keys(_).map((_) =>
               (0, _.jsx)(
                 _._,
                 {
                   onSelected: () => _(_),
-                  bChecked: _ === __webpack_require__,
+                  bChecked: _ === _,
                   children: (0, _._)(_[_]),
                 },
                 _,

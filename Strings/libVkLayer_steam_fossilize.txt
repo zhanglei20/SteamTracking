@@ -1,36 +1,94 @@
   what():
  (pNext->sType chain: [
  [clone
+ _Complex
+ _Imaginary
  __vector(
+ class
  const
  for
  noexcept
+ requires
  restrict
  throw
  transaction_safe
  volatile
 !a9X
 $ORIGIN
-%016llx
+%016lx
 %02x
-%02x.%016llx.json
+%02x.%016lx.json
 %4xY
-%s handle 0x%016llx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
+%I:%M:%S %p
+%a %b %e %T %Y
+%s handle 0x%016lx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%x.%llx.json
+%x.%lx.json
 (anonymous namespace)
+*N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN9Fossilize13StateRecorder21init_recording_threadEPNS3_17DatabaseInterfaceEEUlvE_EEEEEE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGstd::exception
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
+--compute-pipeline-range
+--control-fd
+--device-index
+--disable-rate-limiter
+--disable-signal-handler
+--enable-pipeline-stats
+--enable-validation
+--graphics-pipeline-range
+--implicit-whitelist
+--master-process
+--null-device
+--num-threads
+--on-disk-module-identifier
+--on-disk-pipeline-cache
+--on-disk-replay-whitelist
+--on-disk-replay-whitelist-mask
+--on-disk-validation-blacklist
+--on-disk-validation-cache
+--on-disk-validation-whitelist
+--quiet-slave
+--raytracing-pipeline-range
+--replayer-cache
+--shmem-fd
+--spirv-val
+--timeout-seconds
 -0123456789
--St9bad_alloc
 -sSO\
+-std::bad_alloc
 .foz
 .wN\f9
+/dev/null
+/dev/random
+/dev/urandom
+/fossilize-external-%d-%d
 /fossilize-replayer-%d-%u
 /proc/self/%s
+/proc/self/autogroup
+/proc/self/exe
+/proc/sys/kernel/sched_autogroup_enabled
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
@@ -56,7 +114,9 @@ Base pipeline index is out of range.\n
 Binary varint buffer overflows payload.\n
 BindlessUBO
 BufferDeviceAddress
-CH\f1
+CLcx
+COMPUTE
+COMPUTE_VERR
 CRC mismatch!\n
 CRC-32 check failed
 Cannot copy unknown pNext sType: %d.\n
@@ -79,6 +139,7 @@ DescriptorBuffer
 DescriptorHeap
 Detected sliced file. Dropping entries from here.\n
 DynamicRendering
+Enable multithreading to use std::thread
 EngineName
 EngineVersion
 EngineVersionMajor
@@ -123,8 +184,8 @@ Failed to write metadata block.\n
 Failed to write serialized state to disk (%s).\n
 Failed to write serialized state to disk.\n
 February
-FoCLcx
 Fossilize ERROR: *VersionBucketDeltas must be an array.\n
+Fossilize ERROR: /proc/self/autogroup does not exist on this system. Skipping autogrouping.\n
 Fossilize ERROR: Base pipeline index is out of range.\n
 Fossilize ERROR: Binary varint buffer overflows payload.\n
 Fossilize ERROR: CRC mismatch!\n
@@ -135,12 +196,16 @@ Fossilize ERROR: Cannot use imported metadata together with blacklists.\n
 Fossilize ERROR: Cannot use imported metadata together with whitelists.\n
 Fossilize ERROR: Failed to add blob to cache.\n
 Fossilize ERROR: Failed to allocate space for metadata block.\n
+Fossilize ERROR: Failed to create child process.\n
 Fossilize ERROR: Failed to create directory %s.\n
+Fossilize ERROR: Failed to create session.\n
 Fossilize ERROR: Failed to create shared memory.\n
 Fossilize ERROR: Failed to extract blob.\n
 Fossilize ERROR: Failed to finalize archive.\n
+Fossilize ERROR: Failed to get FD flags.\n
 Fossilize ERROR: Failed to initialize ZIP writer from reader.\n
 Fossilize ERROR: Failed to map metadata block.\n
+Fossilize ERROR: Failed to mmap shared block.\n
 Fossilize ERROR: Failed to open ZIP archive for writing. Cannot serialize anything to disk.\n
 Fossilize ERROR: Failed to open file: %s\n
 Fossilize ERROR: Failed to parse ApplicationInfoFilter, letting recording go through.\n
@@ -153,8 +218,17 @@ Fossilize ERROR: Failed to record application info.\n
 Fossilize ERROR: Failed to record physical device features.\n
 Fossilize ERROR: Failed to seek in file: %s\n
 Fossilize ERROR: Failed to serialize application info.\n
+Fossilize ERROR: Failed to set FD flags.\n
+Fossilize ERROR: Failed to set IO priority for external replayer!\n
+Fossilize ERROR: Failed to set PGID in child.\n
+Fossilize ERROR: Failed to set nice value for external replayer!\n
+Fossilize ERROR: Failed to set scheduling policy for external replayer!\n
 Fossilize ERROR: Failed to shallow copy pNext chain.
+Fossilize ERROR: Failed to start external process %s with execv.\n
 Fossilize ERROR: Failed to unlink SHM block.\n
+Fossilize ERROR: Failed to unlink shared memory segment.\n
+Fossilize ERROR: Failed to validate PGID in child.\n
+Fossilize ERROR: Failed to wait for child process to end.\n
 Fossilize ERROR: Failed to write metadata block.\n
 Fossilize ERROR: Failed to write serialized state to disk (%s).\n
 Fossilize ERROR: Failed to write serialized state to disk.\n
@@ -166,13 +240,17 @@ Fossilize ERROR: Not a string.\n
 Fossilize ERROR: Not an array.\n
 Fossilize ERROR: Not an int.\n
 Fossilize ERROR: Not an object.\n
+Fossilize ERROR: Unexpected return for child process, %d.\n
 Fossilize ERROR: blacklistEnvironment element must be object.\n
 Fossilize ERROR: blacklistedEnvironments must be an object.\n
 Fossilize ERROR: bucketVariantDependencies must be an array.\n
 Fossilize ERROR: mz_zip_end failed!\n
+Fossilize INFO: Autogroup scheduling is not enabled on this kernel. Will rely entirely on nice().\n
+Fossilize INFO: ExternalReplayer::Impl::kill(): Failed to kill: errno %d.\n
 Fossilize INFO: Overriding serialization path: "%s".\n
 Fossilize INFO: QA: Required fallback compilation for a total of %llu pipelines.\n
 Fossilize INFO: QA: Successfully created total of %llu pipelines without compilation.\n
+Fossilize INFO: Setting autogroup scheduling.\n
 Fossilize INFO: Skipping recording due to environment rule for: %s.\n
 Fossilize INFO: apiVersion %u is too low for pApplicationName %s. Skipping.\n
 Fossilize INFO: apiVersion %u is too low for pEngineName %s. Skipping.\n
@@ -180,7 +258,7 @@ Fossilize INFO: applicationVersion %u is too low for pApplicationName %s. Skippi
 Fossilize INFO: engineVersion %u is too low for pEngineName %s. Skipping.\n
 Fossilize INFO: pApplicationName %s is blacklisted for recording. Skipping.\n
 Fossilize INFO: pEngineName %s is blacklisted for recording. Skipping.\n
-Fossilize WARN: %s handle 0x%016llx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
+Fossilize WARN: %s handle 0x%016lx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
 Fossilize WARN: %s\n
 Fossilize WARN: Archive %s could not be prepared, skipping.\n
 Fossilize WARN: Cannot find compute pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
@@ -191,6 +269,7 @@ Fossilize WARN: Cannot find raytracing pipeline in hashmap.\nObject has either n
 Fossilize WARN: Cannot find render pass in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
 Fossilize WARN: Cannot find sampler in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
 Fossilize WARN: Cannot find shader module in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Child has already been reaped.\n
 Fossilize WARN: Couldn't find variant dependency for %s, ignoring.\n
 Fossilize WARN: Detected sliced file. Dropping entries from here.\n
 Fossilize WARN: Failed to advise of file usage. This is not fatal, but might compromise disk performance.\n
@@ -209,23 +288,26 @@ Fossilize WARN: Recording compute pipeline failed, usually caused by unsupported
 Fossilize WARN: Recording graphics pipeline failed, usually caused by unsupported pNext.\n
 Fossilize WARN: Recording pipeline use failed.\n
 Fossilize WARN: Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
-Fossilize WARN: Referenced %s %016llx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
-Fossilize WARN: Referenced %s %016llx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
+Fossilize WARN: Referenced %s %016lx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
+Fossilize WARN: Referenced %s %016lx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
+Fossilize WARN: waitpid loop timed out.\n
 FossilizeApplicationInfoFilter
 FragmentShadingRate
 Friday
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
-GLIBC_2.0
-GLIBC_2.1
-GLIBC_2.1.3
-GLIBC_2.2
-GLIBC_2.2.4
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
+GLIBCXX_TUNABLES
+GLIBC_2.14
+GLIBC_2.17
+GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
-GLIBC_2.3.4
+GLIBC_2.30
 GLIBC_2.4
 GLIBC_2.6
+GLIBC_2.7
+GRAPHICS
+GRAPHICS_VERR
 Got parse error: %d\n
 Graphics pipeline
 IEND
@@ -237,7 +319,20 @@ January
 Jugm
 July
 June
+LC_ADDRESS
+LC_COLLATE
+LC_CTYPE
+LC_IDENTIFICATION
+LC_MEASUREMENT
+LC_MESSAGES
+LC_MONETARY
+LC_NAME
+LC_NUMERIC
+LC_PAPER
+LC_TELEPHONE
+LC_TIME
 MGiI
+MODULE
 March
 Monday
 MutableDescriptorType
@@ -256,24 +351,57 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt3_V214error_categoryE
+NSt6locale5facet6__shimE
 NSt6locale5facetE
 NSt6thread6_StateE
+NSt7__cxx1110moneypunctIcLb0EEE
+NSt7__cxx1110moneypunctIcLb1EEE
+NSt7__cxx1110moneypunctIwLb0EEE
+NSt7__cxx1110moneypunctIwLb1EEE
+NSt7__cxx1114collate_bynameIcEE
+NSt7__cxx1114collate_bynameIwEE
+NSt7__cxx1115messages_bynameIcEE
+NSt7__cxx1115messages_bynameIwEE
+NSt7__cxx1115numpunct_bynameIcEE
+NSt7__cxx1115numpunct_bynameIwEE
+NSt7__cxx1115time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx1115time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx1117moneypunct_bynameIcLb0EEE
+NSt7__cxx1117moneypunct_bynameIcLb1EEE
+NSt7__cxx1117moneypunct_bynameIwLb0EEE
+NSt7__cxx1117moneypunct_bynameIwLb1EEE
+NSt7__cxx117collateIcEE
+NSt7__cxx117collateIwEE
+NSt7__cxx118messagesIcEE
+NSt7__cxx118messagesIwEE
+NSt7__cxx118numpunctIcEE
+NSt7__cxx118numpunctIwEE
+NSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
 November
 O8Mr
 October
+POSIX
 Pipeline layout
 Pipeline library
 QA: Pipeline compilation required for pipeline, flags %08x'%08x.\n
 Qkkbal
+RAYTRACE
+RAYTRACE_VERR
 RJqn
 Raytracing pipeline
 Recording compute pipeline failed, usually caused by unsupported pNext.\n
 Recording graphics pipeline failed, usually caused by unsupported pNext.\n
 Recording pipeline use failed.\n
 Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
-Referenced %s %016llx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
-Referenced %s %016llx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
+Referenced %s %016lx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
+Referenced %s %016lx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
 Render pass
 STEAM_FOSSILIZE_DUMP_PATH
 STEAM_FOSSILIZE_DUMP_PATH_READ_ONLY
@@ -286,6 +414,7 @@ Sampler
 Saturday
 September
 Shader module
+St10bad_typeid
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -295,25 +424,67 @@ St10moneypunctIwLb1EE
 St11__timepunctIcE
 St11__timepunctIwE
 St11logic_error
+St11range_error
 St12codecvt_base
+St12ctype_bynameIcE
+St12ctype_bynameIwE
+St12domain_error
 St12length_error
 St12out_of_range
 St12system_error
+St13__ios_failure
 St13bad_exception
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
 St13messages_base
 St13runtime_error
+St14basic_iostreamIwSt11char_traitsIwEE
+St14codecvt_bynameIcc11__mbstate_tE
+St14codecvt_bynameIwc11__mbstate_tE
+St14collate_bynameIcE
+St14collate_bynameIwE
+St14overflow_error
 St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
 St15basic_stringbufIcSt11char_traitsIcESaIcEE
+St15basic_stringbufIwSt11char_traitsIwESaIwEE
+St15messages_bynameIcE
+St15messages_bynameIwE
+St15numpunct_bynameIcE
+St15numpunct_bynameIwE
+St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St15underflow_error
 St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
+St16invalid_argument
 St17__timepunct_cacheIcE
 St17__timepunct_cacheIwE
+St17moneypunct_bynameIcLb0EE
+St17moneypunct_bynameIcLb1EE
+St17moneypunct_bynameIwLb0EE
+St17moneypunct_bynameIwLb1EE
 St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
 St18__moneypunct_cacheIwLb1EE
+St18basic_stringstreamIcSt11char_traitsIcESaIcEE
+St18basic_stringstreamIwSt11char_traitsIwESaIwEE
+St19__codecvt_utf8_baseIDiE
+St19__codecvt_utf8_baseIDsE
+St19__codecvt_utf8_baseIwE
+St19__iosfail_type_info
+St19basic_istringstreamIcSt11char_traitsIcESaIcEE
+St19basic_istringstreamIwSt11char_traitsIwESaIwEE
 St19basic_ostringstreamIcSt11char_traitsIcESaIcEE
+St19basic_ostringstreamIwSt11char_traitsIwESaIwEE
+St20__codecvt_utf16_baseIDiE
+St20__codecvt_utf16_baseIDsE
+St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
+St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
@@ -321,6 +492,9 @@ St23__codecvt_abstract_baseIDsDu11__mbstate_tE
 St23__codecvt_abstract_baseIDsc11__mbstate_tE
 St23__codecvt_abstract_baseIcc11__mbstate_tE
 St23__codecvt_abstract_baseIwc11__mbstate_tE
+St25__codecvt_utf8_utf16_baseIDiE
+St25__codecvt_utf8_utf16_baseIDsE
+St25__codecvt_utf8_utf16_baseIwE
 St5ctypeIcE
 St5ctypeIwE
 St7codecvtIDiDu11__mbstate_tE
@@ -345,7 +519,9 @@ St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
 St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
 St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
 St9exception
 St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
@@ -362,8 +538,7 @@ Thursday
 Tuesday
 U1(\Q
 UTF-8
-Unsupported pNext found, cannot hash sType.
-Unsupported pNext found, cannot hash.
+Unknown error
 VK_EXT_pipeline_creation_cache_control
 VK_KHR_get_physical_device_properties2
 VK_LAYER_fossilize_GetDeviceProcAddr
@@ -374,71 +549,68 @@ W4vC
 Wednesday
 X5AHx
 XqkY
-YDVI
 Zjz\v
 [*QmU
 [abi:
+[friend]
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \ysK
 ]rHa
-_Accum
-_Fract
+_Float
 _GLOBAL_
 _ITM_RU1
-_ITM_RU4
+_ITM_RU8
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat
-___tls_get_addr
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
+_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
+_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
 __ctype_get_mb_cur_max
 __cxa_atexit
 __cxa_finalize
+__cxa_pure_virtual
 __duplocale
 __errno_location
 __float128
-__fprintf_chk
 __freelocale
 __fxstat
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
+__isoc99_sscanf
 __iswctype_l
-__memcpy_chk
-__memset_chk
 __newlocale
 __nl_langinfo_l
 __pthread_key_create
-__snprintf_chk
-__sprintf_chk
 __stack_chk_fail
 __strcoll_l
 __strftime_l
 __strtod_l
 __strtof_l
 __strxfrm_l
+__test_and_acquire(long*)
+__tls_get_addr
 __towlower_l
 __towupper_l
 __uselocale
-__vsnprintf_chk
 __wcscoll_l
 __wcsftime_l
 __wcsxfrm_l
 __wctype_l
 __xstat
 __xstat64
-_fini
-_init
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 a.out
 abort
 addressModeU
@@ -482,11 +654,15 @@ basic_iostream
 basic_istream
 basic_ostream
 basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
 basic_string::_M_replace_aux
 basic_string::_S_construct null not valid
 basic_string::_S_create
 basic_string::append
 basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
 basic_string::basic_string
 basic_string::compare
 basic_string::copy
@@ -495,6 +671,7 @@ basic_string::insert
 basic_string::replace
 basic_string::resize
 basic_string::substr
+basic_string_view::substr
 bind_textdomain_codeset
 binding
 bindingCount
@@ -510,6 +687,11 @@ blendEnable
 blendOverlap
 bnMG
 bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
+bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
+bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
+bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 boolean
 borderColor
 btowc
@@ -519,6 +701,7 @@ buf error
 buffer too small
 byte
 bzo=
+cannot create shim for unknown locale::facet
 cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
 char
@@ -526,10 +709,12 @@ char16_t
 char32_t
 char8_t
 chromaFilter
+clock_gettime
 close
 closedir
 closestHitShader
 cntrl
+co_await
 code
 codeSize
 colorAttachmentCount
@@ -545,7 +730,6 @@ combinerOps
 compareEnable
 compareMask
 compareOp
-complex
 components
 compression failed
 computePipelines
@@ -571,6 +755,7 @@ decltype (
 decltype(auto)
 decltype(nullptr)
 decompression failed or archive is corrupted
+default
 defaultBucketVariantDependencies
 defaultBucketVariantFeatureDependencies
 delete
@@ -652,7 +837,6 @@ file seek failed
 file stat failed
 file too large
 file write failed
-file://
 fileno
 finalLayout
 firstBinding
@@ -664,6 +848,7 @@ forceExplicitReconstruction
 fork
 format
 fossilize
+fprintf
 fputc
 fputs
 fragmentDensityMapAttachment
@@ -685,10 +870,11 @@ fwrite
 generalShader
 generic
 get_nprocs
+getentropy
 getenv
 getpgrp
 getpid
-gettext
+glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 graph
@@ -697,6 +883,7 @@ groups
 guard variable for
 hGT.
 half
+hardware
 hash
 heapArrayStride
 heapData
@@ -710,12 +897,12 @@ iconv_close
 iconv_open
 image2DViewOf3D
 images
-imaginary
 immutableSamplers
 indirectAddress
 indirectIndex
 indirectIndexArray
 initialLayout
+initializer for module
 inputAssemblyState
 inputAttachmentIndex
 inputAttachments
@@ -725,6 +912,11 @@ intersectionShader
 invalid filename
 invalid header or archive is corrupted
 invalid parameter
+ioctl
+ios_base::_M_grow_words allocation failed
+ios_base::_M_grow_words is not valid
+iostream
+iostream error
 isxdigit
 java Class for
 java resource
@@ -733,7 +925,7 @@ k*do^
 k0V(
 killpg
 layout
-ld-linux.so.2
+ld-linux-x86-64.so.2
 libc.so.6
 libpthread.so.0
 libraries
@@ -746,7 +938,11 @@ lineStipplePattern
 lineWidth
 link
 loadOp
+locale::_Impl::_M_replace_facet
+locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
+locale::facet::_S_lc_ctype_c_locale duplocale error
+locale::facet::_S_lc_ctype_c_locale newlocale error
 localtime
 location
 logicOp
@@ -794,8 +990,9 @@ mkdir
 mktime
 mmap
 module
-mold 1.10.1 (compatible with GNU ld)
+mold 2.36.0 (compatible with GNU ld)
 mr"iR
+mt19937
 multisampleState
 multisampledRenderToSingleSampledEnable
 multiviewMeshShader
@@ -812,12 +1009,14 @@ new[]
 nice
 no error
 noInvocationFragmentShadingRates
+noexcept
 non-transaction clone for
 non-virtual thunk to
 nonnull
 not a ZIP archive
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 nullDescriptor
+obj_count
+obj_size
 offset
 open
 opendir
@@ -826,9 +1025,7 @@ operator""
 out of memory
 pH_r
 pNext
-pNext in VkApplicationInfo not supported.
 pNext in VkPipelineDynamicStateCreateInfo not supported.
-pNext in VkPipelineLayoutCreateInfo not supported.
 parameter error
 passOp
 patchControlPoints
@@ -850,9 +1047,9 @@ primitivesGeneratedQueryWithRasterizerDiscard
 print
 provokingVertexMode
 pthread_cond_broadcast
+pthread_cond_clockwait
 pthread_cond_destroy
 pthread_cond_signal
-pthread_cond_timedwait
 pthread_cond_wait
 pthread_create
 pthread_detach
@@ -865,7 +1062,6 @@ pthread_mutex_unlock
 pthread_once
 pthread_setspecific
 punct
-pure virtual method called\n
 pushAddressOffset
 pushConstantRanges
 pushDataOffset
@@ -874,11 +1070,20 @@ pushOffset
 putc
 quAt
 raB3G
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
 rasterizationSamples
 rasterizationState
 rasterizationStream
 rasterizerDiscardEnable
 raytracingPipelines
+rdrand
+rdrnd
+rdseed
 read
 readdir
 readlink
@@ -920,6 +1125,7 @@ samples
 sched_setscheduler
 scissorCount
 scissors
+secure_getenv
 send
 setLayouts
 setenv
@@ -940,11 +1146,13 @@ signed char
 size
 sizeof
 sizeof...
+snprintf
 socketpair
 source
 sourceData
 space
 specializationInfo
+sprintf
 srcAccessMask
 srcAlphaBlendFactor
 srcColorBlendFactor
@@ -952,22 +1160,23 @@ srcPremultiplied
 srcStageMask
 srcSubpass
 srgb
-sscanf
 stage
 stageFlags
 stages
 static_cast
+std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
+std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::allocator
-std::bad_alloc
 std::bad_array_new_length
 std::bad_cast
 std::bad_exception
+std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
+std::bfloat16_t
 std::iostream
 std::istream
 std::ostream
@@ -985,13 +1194,16 @@ stencilTestEnable
 stippledLineEnable
 storageBuffers
 storeOp
+strchr
 strcmp
+strcpy
 strdup
 stream end
 stream error
-strerror
+strerror_r
 stride
 string literal
+string::string
 strlen
 strncmp
 strstr
@@ -1006,6 +1218,7 @@ syscall
 system
 tC7Ddx
 taskShader
+template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -1018,7 +1231,7 @@ too many files
 topology
 transaction clone for
 transaction clone for operator delete(void*)
-transaction clone for operator new[](unsigned int)
+transaction clone for operator new[](unsigned long)
 true
 type
 typeinfo fn for
@@ -1040,9 +1253,11 @@ typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+typename
 undefined error
 unexpected decompressed size
 uniformBuffers
+uninitialized __any_string
 unknown error
 unnormalizedCoordinates
 unsigned
@@ -1067,7 +1282,7 @@ validation failed
 varintOffset
 varintSize
 vector::_M_default_append
-vector::_M_realloc_insert
+vector::_M_realloc_append
 vector::reserve
 version
 version error
@@ -1134,7 +1349,6 @@ wmemcpy
 wmemmove
 wmemset
 wn>Jj
-write
 write calledback failed
 writeMask
 xChromaOffset
@@ -1146,7 +1360,7 @@ ycbcrModel
 ycbcrRange
 z^KD
 {default arg#
-{lambda(
+{lambda
 {parm#
 {unnamed type#
 {zel#|67

@@ -77,7 +77,7 @@
     },
     77700: (e) => {
       e.exports = {
-        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
@@ -317,7 +317,7 @@
             rgAcceptableTypes: o,
           },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: r },
-          spotlight_art_hero: { width: 374, height: 448, rgAcceptableTypes: o },
+          spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: o },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: r },
           marketingmessage_art: {
             width: 570,
@@ -355,7 +355,7 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: r },
+          takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: r },
           takeunder_mobile_art: {
             width: 500,
             height: 160,

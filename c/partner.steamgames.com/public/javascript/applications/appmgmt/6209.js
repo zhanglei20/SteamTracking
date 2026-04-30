@@ -235,13 +235,13 @@
         OnTimelineEntryRemoved(_) {
           const {
             entry_id: _,
-            timeline_id: __webpack_require__,
+            timeline_id: _,
             game_id: _,
           } = _.Body().toObject();
           if (_) {
             const _ = this.m_mapTimelineLoaders.get(_);
             if (_) {
-              _.loader.RemoveTimelineEvent(__webpack_require__, _);
+              _.loader.RemoveTimelineEvent(_, _);
             }
           }
           return 1;
@@ -449,11 +449,12 @@
         GetCurrentExportingClip() {
           return this.m_currentlyExportingClip;
         }
-        async TakeScreenshot(_, _, _) {
+        async TakeScreenshot(_, _, _, _) {
           const _ = await _._.TakeScreenshot({
             game_id: _,
             timeline_id: _,
             timeline_offset_ms: Math.floor(_).toString(),
+            source_clip_id: _,
           });
           if (1 == _.GetEResult()) {
             _.Body().toObject();

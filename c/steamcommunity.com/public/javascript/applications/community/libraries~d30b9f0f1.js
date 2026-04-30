@@ -132,8 +132,8 @@
         };
       }
       function _(_, _) {
-        return function (...__webpack_require__) {
-          return _(_.apply(this, __webpack_require__));
+        return function (..._) {
+          return _(_.apply(this, _));
         };
       }
       function _(_, _) {
@@ -153,8 +153,8 @@
             ? _[0]
             : _.reduce(
                 (_, _) =>
-                  (...__webpack_require__) =>
-                    _(_(...__webpack_require__)),
+                  (..._) =>
+                    _(_(..._)),
               );
       }
       __webpack_require__("chunkid");
@@ -269,7 +269,7 @@
           : 1 !== _.length;
       }
       function _(_, _) {
-        return function (_, { displayName: __webpack_require__ }) {
+        return function (_, { displayName: _ }) {
           const _ = function (_, _) {
             return _.dependsOnOwnProps
               ? _.mapToProps(_, _)
@@ -759,12 +759,7 @@
         };
       };
       var _ = function (_) {
-        const {
-            children: _,
-            context: __webpack_require__,
-            serverState: _,
-            store: _,
-          } = _,
+        const { children: _, context: _, serverState: _, store: _ } = _,
           _ = _.useMemo(() => {
             const _ = _(_);
             return {
@@ -785,7 +780,7 @@
             }
           );
         }, [_, _]);
-        const _ = __webpack_require__ || _;
+        const _ = _ || _;
         return _.createElement(
           _.Provider,
           {
@@ -1110,14 +1105,14 @@
           _: 0 !== _._ ? -_._ : 0,
           _: 0 !== _._ ? -_._ : 0,
         }),
-        _ = (_, _, __webpack_require__ = 0) =>
+        _ = (_, _, _ = 0) =>
           "x" === _
             ? {
                 _: _,
-                _: __webpack_require__,
+                _: _,
               }
             : {
-                _: __webpack_require__,
+                _: _,
                 _: _,
               },
         _ = (_, _) => Math.sqrt((_._ - _._) ** 2 + (_._ - _._) ** 2),
@@ -1162,12 +1157,7 @@
                 return _.width <= 0 || _.height <= 0 ? null : _;
               })(_.pageMarginBox, _)
             : _(_);
-      var _ = ({
-          page: _,
-          withPlaceholder: _,
-          axis: __webpack_require__,
-          frame: _,
-        }) => {
+      var _ = ({ page: _, withPlaceholder: _, axis: _, frame: _ }) => {
           const _ = ((_, _) => (_ ? _(_, _.scroll.diff.displacement) : _))(
               _.marginBox,
               _,
@@ -1178,7 +1168,7 @@
                     ..._,
                     [_.end]: _[_.end] + _.increasedBy[_.line],
                   }
-                : _)(_, __webpack_require__, _);
+                : _)(_, _, _);
           return {
             page: _,
             withPlaceholder: _,
@@ -1322,7 +1312,7 @@
       const _ = ({
           target: _,
           destination: _,
-          viewport: __webpack_require__,
+          viewport: _,
           withDroppableDisplacement: _,
           isVisibleThroughFrameFn: _,
         }) => {
@@ -1338,8 +1328,7 @@
               _,
               _,
               _,
-            ) &&
-            ((_, _, _) => __webpack_require__(_)(_))(_, __webpack_require__, _)
+            ) && ((_, _, _) => __webpack_require__(_)(_))(_, _, _)
           );
         },
         _ = (_) =>
@@ -1350,7 +1339,7 @@
       function _({
         afterDragging: _,
         destination: _,
-        displacedBy: __webpack_require__,
+        displacedBy: _,
         viewport: _,
         forceShouldAnimate: _,
         last: _,
@@ -1366,7 +1355,7 @@
                     left: _.point._,
                   };
                 return _(_(_, _));
-              })(_, __webpack_require__),
+              })(_, _),
               _ = _.descriptor._;
             _.all.push(_);
             var _;
@@ -1407,7 +1396,7 @@
       function _({
         insideDestination: _,
         inHomeList: _,
-        displacedBy: __webpack_require__,
+        displacedBy: _,
         destination: _,
       }) {
         const _ = (function (_, _) {
@@ -1419,7 +1408,7 @@
         });
         return {
           displaced: _,
-          displacedBy: __webpack_require__,
+          displacedBy: _,
           _: {
             type: "REORDER",
             destination: {
@@ -1432,20 +1421,20 @@
       function _({
         draggable: _,
         insideDestination: _,
-        destination: __webpack_require__,
+        destination: _,
         viewport: _,
         displacedBy: _,
         last: _,
         index: _,
         forceShouldAnimate: _,
       }) {
-        const _ = _(_, __webpack_require__);
+        const _ = _(_, _);
         if (null == _)
           return _({
             insideDestination: _,
             inHomeList: _,
             displacedBy: _,
-            destination: __webpack_require__,
+            destination: _,
           });
         const _ = _.find((_) => _.descriptor.index === _);
         if (!_)
@@ -1453,14 +1442,14 @@
             insideDestination: _,
             inHomeList: _,
             displacedBy: _,
-            destination: __webpack_require__,
+            destination: _,
           });
         const _ = _(_, _),
           _ = _.indexOf(_);
         return {
           displaced: _({
             afterDragging: _.slice(_),
-            destination: __webpack_require__,
+            destination: _,
             displacedBy: _,
             last: _,
             viewport: _.frame,
@@ -1470,7 +1459,7 @@
           _: {
             type: "REORDER",
             destination: {
-              droppableId: __webpack_require__.descriptor._,
+              droppableId: _.descriptor._,
               index: _,
             },
           },
@@ -1482,7 +1471,7 @@
       var _ = ({
           isMovingForward: _,
           isInHomeList: _,
-          draggable: __webpack_require__,
+          draggable: _,
           draggables: _,
           destination: _,
           insideDestination: _,
@@ -1495,16 +1484,14 @@
             const _ = (({
               isMovingForward: _,
               isInHomeList: _,
-              insideDestination: __webpack_require__,
+              insideDestination: _,
               location: _,
             }) => {
-              if (!__webpack_require__.length) return null;
+              if (!_.length) return null;
               const _ = _.index,
                 _ = _ ? _ + 1 : _ - 1,
-                _ = __webpack_require__[0].descriptor.index,
-                _ =
-                  __webpack_require__[__webpack_require__.length - 1].descriptor
-                    .index;
+                _ = _[0].descriptor.index,
+                _ = _[_.length - 1].descriptor.index;
               return _ < _ || _ > (_ ? _ : _ + 1) ? null : _;
             })({
               isMovingForward: _,
@@ -1515,7 +1502,7 @@
             return null == _
               ? null
               : _({
-                  draggable: __webpack_require__,
+                  draggable: _,
                   insideDestination: _,
                   destination: _,
                   viewport: _,
@@ -1527,13 +1514,13 @@
           const _ = (({
             isMovingForward: _,
             destination: _,
-            draggables: __webpack_require__,
+            draggables: _,
             combine: _,
             afterCritical: _,
           }) => {
             if (!_.isCombineEnabled) return null;
             const _ = _.draggableId,
-              _ = __webpack_require__[_].descriptor.index;
+              _ = _[_].descriptor.index;
             return _(_, _) ? (_ ? _ : _ - 1) : _ ? _ + 1 : _;
           })({
             isMovingForward: _,
@@ -1546,7 +1533,7 @@
           return null == _
             ? null
             : _({
-                draggable: __webpack_require__,
+                draggable: _,
                 insideDestination: _,
                 destination: _,
                 viewport: _,
@@ -1555,32 +1542,19 @@
                 index: _,
               });
         },
-        _ = ({
-          afterCritical: _,
-          impact: _,
-          draggables: __webpack_require__,
-        }) => {
+        _ = ({ afterCritical: _, impact: _, draggables: _ }) => {
           const _ = _(_);
           _ || _();
           const _ = _.draggableId,
-            _ = __webpack_require__[_].page.borderBox.center,
+            _ = _[_].page.borderBox.center,
             _ = (({
               displaced: _,
               afterCritical: _,
-              combineWith: __webpack_require__,
+              combineWith: _,
               displacedBy: _,
             }) => {
-              const _ = Boolean(
-                _.visible[__webpack_require__] ||
-                  _.invisible[__webpack_require__],
-              );
-              return _(__webpack_require__, _)
-                ? _
-                  ? _
-                  : _(_.point)
-                : _
-                  ? _.point
-                  : _;
+              const _ = Boolean(_.visible[_] || _.invisible[_]);
+              return _(_, _) ? (_ ? _ : _(_.point)) : _ ? _.point : _;
             })({
               displaced: _.displaced,
               afterCritical: _,
@@ -1594,38 +1568,31 @@
           _[_.crossAxisStart] +
           _.margin[_.crossAxisStart] +
           _.borderBox[_.crossAxisSize] / 2,
-        _ = ({ axis: _, moveRelativeTo: _, isMoving: __webpack_require__ }) =>
-          _(
-            _.line,
-            _.marginBox[_.end] + _(_, __webpack_require__),
-            _(_, _.marginBox, __webpack_require__),
-          ),
-        _ = ({ axis: _, moveRelativeTo: _, isMoving: __webpack_require__ }) =>
+        _ = ({ axis: _, moveRelativeTo: _, isMoving: _ }) =>
+          _(_.line, _.marginBox[_.end] + _(_, _), _(_, _.marginBox, _)),
+        _ = ({ axis: _, moveRelativeTo: _, isMoving: _ }) =>
           _(
             _.line,
             _.marginBox[_.start] -
-              ((_, _) => _.margin[_.end] + _.borderBox[_.size] / 2)(
-                _,
-                __webpack_require__,
-              ),
-            _(_, _.marginBox, __webpack_require__),
+              ((_, _) => _.margin[_.end] + _.borderBox[_.size] / 2)(_, _),
+            _(_, _.marginBox, _),
           );
       var _ = ({
           impact: _,
           draggable: _,
-          draggables: __webpack_require__,
+          draggables: _,
           droppable: _,
           afterCritical: _,
         }) => {
-          const _ = _(_.descriptor._, __webpack_require__),
+          const _ = _(_.descriptor._, _),
             _ = _.page,
             _ = _.axis;
           if (!_.length)
-            return (({ axis: _, moveInto: _, isMoving: __webpack_require__ }) =>
+            return (({ axis: _, moveInto: _, isMoving: _ }) =>
               _(
                 _.line,
-                _.contentBox[_.start] + _(_, __webpack_require__),
-                _(_, _.contentBox, __webpack_require__),
+                _.contentBox[_.start] + _(_, _),
+                _(_, _.contentBox, _),
               ))({
               axis: _,
               moveInto: _.page,
@@ -1634,7 +1601,7 @@
           const { displaced: _, displacedBy: _ } = _,
             _ = _.all[0];
           if (_) {
-            const _ = __webpack_require__[_];
+            const _ = _[_];
             if (_(_, _))
               return _({
                 axis: _,
@@ -1721,27 +1688,20 @@
       function _(_, _) {
         return _.map((_) => _[_]);
       }
-      var _ = ({
-          pageBorderBoxCenter: _,
-          draggable: _,
-          viewport: __webpack_require__,
-        }) => {
-          const _ = ((_, _) => _(_.scroll.diff.displacement, _))(
-              __webpack_require__,
-              _,
-            ),
+      var _ = ({ pageBorderBoxCenter: _, draggable: _, viewport: _ }) => {
+          const _ = ((_, _) => _(_.scroll.diff.displacement, _))(_, _),
             _ = _(_, _.page.borderBox.center);
           return _(_.client.borderBox.center, _);
         },
         _ = ({
           draggable: _,
           destination: _,
-          newPageBorderBoxCenter: __webpack_require__,
+          newPageBorderBoxCenter: _,
           viewport: _,
           withDroppableDisplacement: _,
           onlyOnMainAxis: _ = !1,
         }) => {
-          const _ = _(__webpack_require__, _.page.borderBox.center),
+          const _ = _(_, _.page.borderBox.center),
             _ = {
               target: _(_.page.borderBox, _),
               destination: _,
@@ -1771,7 +1731,7 @@
         _ = ({
           isMovingForward: _,
           draggable: _,
-          destination: __webpack_require__,
+          destination: _,
           draggables: _,
           previousImpact: _,
           viewport: _,
@@ -1779,25 +1739,25 @@
           previousClientSelection: _,
           afterCritical: _,
         }) => {
-          if (!__webpack_require__.isEnabled) return null;
-          const _ = _(__webpack_require__.descriptor._, _),
-            _ = _(_, __webpack_require__),
+          if (!_.isEnabled) return null;
+          const _ = _(_.descriptor._, _),
+            _ = _(_, _),
             _ =
               (({
                 isMovingForward: _,
                 draggable: _,
-                destination: __webpack_require__,
+                destination: _,
                 insideDestination: _,
                 previousImpact: _,
               }) => {
-                if (!__webpack_require__.isCombineEnabled) return null;
+                if (!_.isCombineEnabled) return null;
                 if (!_(_)) return null;
                 function _(_) {
                   const _ = {
                     type: "COMBINE",
                     combine: {
                       draggableId: _,
-                      droppableId: __webpack_require__.descriptor._,
+                      droppableId: _.descriptor._,
                     },
                   };
                   return {
@@ -1818,7 +1778,7 @@
               })({
                 isMovingForward: _,
                 draggable: _,
-                destination: __webpack_require__,
+                destination: _,
                 insideDestination: _,
                 previousImpact: _,
               }) ||
@@ -1827,7 +1787,7 @@
                 isInHomeList: _,
                 draggable: _,
                 draggables: _,
-                destination: __webpack_require__,
+                destination: _,
                 insideDestination: _,
                 previousImpact: _,
                 viewport: _,
@@ -1837,14 +1797,14 @@
           const _ = _({
             impact: _,
             draggable: _,
-            droppable: __webpack_require__,
+            droppable: _,
             draggables: _,
             afterCritical: _,
           });
           if (
             _({
               draggable: _,
-              destination: __webpack_require__,
+              destination: _,
               newPageBorderBoxCenter: _,
               viewport: _.frame,
               withDroppableDisplacement: !1,
@@ -1865,21 +1825,16 @@
             _ = (({
               impact: _,
               viewport: _,
-              destination: __webpack_require__,
+              destination: _,
               draggables: _,
               maxScrollChange: _,
             }) => {
               const _ = _(_, _(_.scroll.current, _)),
-                _ = __webpack_require__.frame
-                  ? _(
-                      __webpack_require__,
-                      _(__webpack_require__.frame.scroll.current, _),
-                    )
-                  : __webpack_require__,
+                _ = _.frame ? _(_, _(_.frame.scroll.current, _)) : _,
                 _ = _.displaced,
                 _ = _({
                   afterDragging: _(_.all, _),
-                  destination: __webpack_require__,
+                  destination: _,
                   displacedBy: _.displacedBy,
                   viewport: _.frame,
                   last: _,
@@ -1919,7 +1874,7 @@
             })({
               impact: _,
               viewport: _,
-              destination: __webpack_require__,
+              destination: _,
               draggables: _,
               maxScrollChange: _,
             });
@@ -2006,7 +1961,7 @@
       var _ = ({
           isMovingForward: _,
           previousPageBorderBoxCenter: _,
-          draggable: __webpack_require__,
+          draggable: _,
           isOver: _,
           draggables: _,
           droppables: _,
@@ -2016,16 +1971,16 @@
           const _ = (({
             isMovingForward: _,
             pageBorderBoxCenter: _,
-            source: __webpack_require__,
+            source: _,
             droppables: _,
             viewport: _,
           }) => {
-            const _ = __webpack_require__.subject.active;
+            const _ = _.subject.active;
             if (!_) return null;
-            const _ = __webpack_require__.axis,
+            const _ = _.axis,
               _ = _(_[_.start], _[_.end]),
               _ = _(_)
-                .filter((_) => _ !== __webpack_require__)
+                .filter((_) => _ !== _)
                 .filter((_) => _.isEnabled)
                 .filter((_) => Boolean(_.subject.active))
                 .filter((_) => _(_.frame)(_(_)))
@@ -2078,20 +2033,20 @@
             _ = (({
               pageBorderBoxCenter: _,
               viewport: _,
-              destination: __webpack_require__,
+              destination: _,
               insideDestination: _,
               afterCritical: _,
             }) => {
               const _ = _.filter((_) =>
                 _({
                   target: _(_, _),
-                  destination: __webpack_require__,
+                  destination: _,
                   viewport: _.frame,
                   withDroppableDisplacement: !0,
                 }),
               ).sort((_, _) => {
-                const _ = _(_, _(__webpack_require__, _(_, _))),
-                  _ = _(_, _(__webpack_require__, _(_, _)));
+                const _ = _(_, _(_, _(_, _))),
+                  _ = _(_, _(_, _(_, _)));
                 return _ < _
                   ? -1
                   : _ < _
@@ -2109,7 +2064,7 @@
             _ = (({
               previousPageBorderBoxCenter: _,
               moveRelativeTo: _,
-              insideDestination: __webpack_require__,
+              insideDestination: _,
               draggable: _,
               draggables: _,
               destination: _,
@@ -2117,7 +2072,7 @@
               afterCritical: _,
             }) => {
               if (!_) {
-                if (__webpack_require__.length) return null;
+                if (_.length) return null;
                 const _ = {
                     displaced: _,
                     displacedBy: _,
@@ -2158,7 +2113,7 @@
                 _ = _(_.axis, _.displaceBy);
               return _({
                 draggable: _,
-                insideDestination: __webpack_require__,
+                insideDestination: _,
                 destination: _,
                 viewport: _,
                 displacedBy: _,
@@ -2168,7 +2123,7 @@
             })({
               previousPageBorderBoxCenter: _,
               destination: _,
-              draggable: __webpack_require__,
+              draggable: _,
               draggables: _,
               moveRelativeTo: _,
               insideDestination: _,
@@ -2178,7 +2133,7 @@
           if (!_) return null;
           const _ = _({
             impact: _,
-            draggable: __webpack_require__,
+            draggable: _,
             droppable: _,
             draggables: _,
             afterCritical: _,
@@ -2186,7 +2141,7 @@
           return {
             clientSelection: _({
               pageBorderBoxCenter: _,
-              draggable: __webpack_require__,
+              draggable: _,
               viewport: _,
             }),
             impact: _,
@@ -2251,12 +2206,8 @@
           return _(_._) && __webpack_require__(_._);
         };
       }
-      function _({
-        pageBorderBox: _,
-        draggable: _,
-        droppables: __webpack_require__,
-      }) {
-        const _ = _(__webpack_require__).filter((_) => {
+      function _({ pageBorderBox: _, draggable: _, droppables: _ }) {
+        const _ = _(_).filter((_) => {
           if (!_.isEnabled) return !1;
           const _ = _.subject.active;
           if (!_) return !1;
@@ -2284,11 +2235,7 @@
         return _.length
           ? 1 === _.length
             ? _[0].descriptor._
-            : (function ({
-                pageBorderBox: _,
-                draggable: _,
-                candidates: __webpack_require__,
-              }) {
+            : (function ({ pageBorderBox: _, draggable: _, candidates: _ }) {
                 const _ = _.page.borderBox.center,
                   _ = __webpack_require__
                     .map((_) => {
@@ -2319,7 +2266,7 @@
       var _ = ({
           pageOffset: _,
           draggable: _,
-          draggables: __webpack_require__,
+          draggables: _,
           droppables: _,
           previousImpact: _,
           viewport: _,
@@ -2333,7 +2280,7 @@
             });
           if (!_) return _;
           const _ = _[_],
-            _ = _(_.descriptor._, __webpack_require__),
+            _ = _(_.descriptor._, _),
             _ = ((_, _) => {
               const _ = _.frame;
               return _ ? _(_, _.scroll.diff.value) : _;
@@ -2342,7 +2289,7 @@
             (({
               draggable: _,
               pageBorderBoxWithDroppableScroll: _,
-              previousImpact: __webpack_require__,
+              previousImpact: _,
               destination: _,
               insideDestination: _,
               afterCritical: _,
@@ -2359,7 +2306,7 @@
                     _ = _[_.size] / 4,
                     _ = _(_, _),
                     _ = _({
-                      displaced: __webpack_require__.displaced,
+                      displaced: _.displaced,
                       _: _,
                     });
                   return _
@@ -2373,7 +2320,7 @@
               return _
                 ? {
                     displacedBy: _,
-                    displaced: __webpack_require__.displaced,
+                    displaced: _.displaced,
                     _: {
                       type: "COMBINE",
                       combine: {
@@ -2394,25 +2341,20 @@
             (({
               pageBorderBoxWithDroppableScroll: _,
               draggable: _,
-              destination: __webpack_require__,
+              destination: _,
               insideDestination: _,
               last: _,
               viewport: _,
               afterCritical: _,
             }) => {
-              const _ = __webpack_require__.axis,
-                _ = _(__webpack_require__.axis, _.displaceBy),
+              const _ = _.axis,
+                _ = _(_.axis, _.displaceBy),
                 _ = _.value,
                 _ = _[_.start],
                 _ = _[_.end],
-                _ = (function ({
-                  draggable: _,
-                  closest: _,
-                  inHomeList: __webpack_require__,
-                }) {
+                _ = (function ({ draggable: _, closest: _, inHomeList: _ }) {
                   return _
-                    ? __webpack_require__ &&
-                      _.descriptor.index > _.descriptor.index
+                    ? _ && _.descriptor.index > _.descriptor.index
                       ? _.descriptor.index - 1
                       : _.descriptor.index
                     : null;
@@ -2435,12 +2377,12 @@
                           ? _ <= _ + _
                           : _ < _;
                     }) || null,
-                  inHomeList: _(_, __webpack_require__),
+                  inHomeList: _(_, _),
                 });
               return _({
                 draggable: _,
                 insideDestination: _,
-                destination: __webpack_require__,
+                destination: _,
                 viewport: _,
                 last: _,
                 displacedBy: _,
@@ -2461,17 +2403,13 @@
           ..._,
           [_.descriptor._]: _,
         });
-      const _ = ({
-        previousImpact: _,
-        impact: _,
-        droppables: __webpack_require__,
-      }) => {
+      const _ = ({ previousImpact: _, impact: _, droppables: _ }) => {
         const _ = _(_),
           _ = _(_);
-        if (!_) return __webpack_require__;
-        if (_ === _) return __webpack_require__;
-        const _ = __webpack_require__[_];
-        if (!_.subject.withPlaceholder) return __webpack_require__;
+        if (!_) return _;
+        if (_ === _) return _;
+        const _ = _[_];
+        if (!_.subject.withPlaceholder) return _;
         const _ = ((_) => {
           const _ = _.subject.withPlaceholder;
           _ || _();
@@ -2503,18 +2441,18 @@
             frame: _,
           };
         })(_);
-        return _(__webpack_require__, _);
+        return _(_, _);
       };
       var _ = ({
         state: _,
         clientSelection: _,
-        dimensions: __webpack_require__,
+        dimensions: _,
         viewport: _,
         impact: _,
         scrollJumpRequest: _,
       }) => {
         const _ = _ || _.viewport,
-          _ = __webpack_require__ || _.dimensions,
+          _ = _ || _.dimensions,
           _ = _ || _.current.client.selection,
           _ = _(_, _.initial.client.selection),
           _ = {
@@ -2553,18 +2491,18 @@
           _ = (({
             draggable: _,
             draggables: _,
-            droppables: __webpack_require__,
+            droppables: _,
             previousImpact: _,
             impact: _,
           }) => {
             const _ = _({
                 previousImpact: _,
                 impact: _,
-                droppables: __webpack_require__,
+                droppables: _,
               }),
               _ = _(_);
             if (!_) return _;
-            const _ = __webpack_require__[_];
+            const _ = _[_];
             if (_(_, _)) return _;
             if (_.subject.withPlaceholder) return _;
             const _ = _(_, _, _);
@@ -2592,14 +2530,14 @@
       var _ = ({
           impact: _,
           viewport: _,
-          draggables: __webpack_require__,
+          draggables: _,
           destination: _,
           forceShouldAnimate: _,
         }) => {
           const _ = _.displaced,
             _ = (function (_, _) {
               return _.map((_) => _[_]);
-            })(_.all, __webpack_require__),
+            })(_.all, _),
             _ = _({
               afterDragging: _,
               destination: _,
@@ -2616,7 +2554,7 @@
         _ = ({
           impact: _,
           draggable: _,
-          droppable: __webpack_require__,
+          droppable: _,
           draggables: _,
           viewport: _,
           afterCritical: _,
@@ -2625,7 +2563,7 @@
             impact: _,
             draggable: _,
             draggables: _,
-            droppable: __webpack_require__,
+            droppable: _,
             afterCritical: _,
           });
           return _({
@@ -2634,10 +2572,10 @@
             viewport: _,
           });
         },
-        _ = ({ state: _, dimensions: _, viewport: __webpack_require__ }) => {
+        _ = ({ state: _, dimensions: _, viewport: _ }) => {
           "SNAP" !== _.movementMode && _();
           const _ = _.impact,
-            _ = __webpack_require__ || _.viewport,
+            _ = _ || _.viewport,
             _ = _ || _.dimensions,
             { draggables: _, droppables: _ } = _,
             _ = _[_.critical.draggable._],
@@ -2666,14 +2604,9 @@
             viewport: _,
           });
         },
-        _ = ({
-          draggable: _,
-          home: _,
-          draggables: __webpack_require__,
-          viewport: _,
-        }) => {
+        _ = ({ draggable: _, home: _, draggables: _, viewport: _ }) => {
           const _ = _(_.axis, _.displaceBy),
-            _ = _(_.descriptor._, __webpack_require__),
+            _ = _(_.descriptor._, _),
             _ = _.indexOf(_);
           -1 === _ && _();
           const _ = _.slice(_ + 1),
@@ -2714,12 +2647,8 @@
         _ = (_) => {
           0;
         };
-      var _ = ({
-        additions: _,
-        updatedDroppables: _,
-        viewport: __webpack_require__,
-      }) => {
-        const _ = __webpack_require__.scroll.diff.value;
+      var _ = ({ additions: _, updatedDroppables: _, viewport: _ }) => {
+        const _ = _.scroll.diff.value;
         return _.map((_) => {
           const _ = _.descriptor.droppableId,
             _ = ((_) => {
@@ -2727,13 +2656,9 @@
               return _ || _(), _;
             })(_[_]),
             _ = _.scroll.diff.value,
-            _ = (({
-              draggable: _,
-              offset: _,
-              initialWindowScroll: __webpack_require__,
-            }) => {
+            _ = (({ draggable: _, offset: _, initialWindowScroll: _ }) => {
               const _ = _(_.client, _),
-                _ = _(_, __webpack_require__);
+                _ = _(_, _);
               return {
                 ..._,
                 placeholder: {
@@ -2746,7 +2671,7 @@
             })({
               draggable: _,
               offset: _(_, _),
-              initialWindowScroll: __webpack_require__.scroll.initial,
+              initialWindowScroll: _.scroll.initial,
             });
           return _;
         });
@@ -2789,14 +2714,14 @@
         if ("INITIAL_PUBLISH" === _.type) {
           "IDLE" !== _.phase && _();
           const {
-              critical: __webpack_require__,
+              critical: _,
               clientSelection: _,
               viewport: _,
               dimensions: _,
               movementMode: _,
             } = _.payload,
-            _ = _.draggables[__webpack_require__.draggable._],
-            _ = _.droppables[__webpack_require__.droppable._],
+            _ = _.draggables[_.draggable._],
+            _ = _.droppables[_.droppable._],
             _ = {
               selection: _,
               borderBoxCenter: _.client.borderBox.center,
@@ -2820,7 +2745,7 @@
           return {
             phase: "DRAGGING",
             isDragging: !0,
-            critical: __webpack_require__,
+            critical: _,
             movementMode: _,
             dimensions: _,
             initial: _,
@@ -2919,12 +2844,12 @@
         if ("MOVE" === _.type) {
           if ("DROP_PENDING" === _.phase) return _;
           _(_) || _();
-          const { client: __webpack_require__ } = _.payload;
-          return _(__webpack_require__, _.current.client.selection)
+          const { client: _ } = _.payload;
+          return _(_, _.current.client.selection)
             ? _
             : _({
                 state: _,
-                clientSelection: __webpack_require__,
+                clientSelection: _,
                 impact: _(_) ? _.impact : null,
               });
         }
@@ -2932,8 +2857,8 @@
           if ("DROP_PENDING" === _.phase) return _(_);
           if ("COLLECTING" === _.phase) return _(_);
           _(_) || _();
-          const { _: __webpack_require__, newScroll: _ } = _.payload,
-            _ = _.dimensions.droppables[__webpack_require__];
+          const { _: _, newScroll: _ } = _.payload,
+            _ = _.dimensions.droppables[_];
           if (!_) return _;
           const _ = _(_, _);
           return _(_, _, !1);
@@ -2941,8 +2866,8 @@
         if ("UPDATE_DROPPABLE_IS_ENABLED" === _.type) {
           if ("DROP_PENDING" === _.phase) return _;
           _(_) || _();
-          const { _: __webpack_require__, isEnabled: _ } = _.payload,
-            _ = _.dimensions.droppables[__webpack_require__];
+          const { _: _, isEnabled: _ } = _.payload,
+            _ = _.dimensions.droppables[_];
           _ || _(), _.isEnabled === _ && _();
           const _ = {
             ..._,
@@ -2953,8 +2878,8 @@
         if ("UPDATE_DROPPABLE_IS_COMBINE_ENABLED" === _.type) {
           if ("DROP_PENDING" === _.phase) return _;
           _(_) || _();
-          const { _: __webpack_require__, isCombineEnabled: _ } = _.payload,
-            _ = _.dimensions.droppables[__webpack_require__];
+          const { _: _, isCombineEnabled: _ } = _.payload,
+            _ = _.dimensions.droppables[_];
           _ || _(), _.isCombineEnabled === _ && _();
           const _ = {
             ..._,
@@ -3599,7 +3524,7 @@
       var _ = ({
         dimensionMarshal: _,
         focusMarshal: _,
-        styleMarshal: __webpack_require__,
+        styleMarshal: _,
         getResponders: _,
         announce: _,
         autoScroller: _,
@@ -3627,7 +3552,7 @@
                 );
               };
             })(
-              ((_ = __webpack_require__),
+              ((_ = _),
               () => (_) => (_) => {
                 _(_, "INITIAL_PUBLISH") && _.dragging(),
                   _(_, "DROP_ANIMATE") &&
@@ -3644,7 +3569,7 @@
               })(_),
               (
                 (_) =>
-                ({ getState: _, dispatch: __webpack_require__ }) =>
+                ({ getState: _, dispatch: _ }) =>
                 (_) =>
                 (_) => {
                   if (!_(_, "LIFT")) return void _(_);
@@ -3727,12 +3652,7 @@
         );
         var _;
       };
-      var _ = ({
-          scrollHeight: _,
-          scrollWidth: _,
-          height: __webpack_require__,
-          width: _,
-        }) => {
+      var _ = ({ scrollHeight: _, scrollWidth: _, height: _, width: _ }) => {
           const _ = _(
             {
               _: _,
@@ -3740,7 +3660,7 @@
             },
             {
               _: _,
-              _: __webpack_require__,
+              _: _,
             },
           );
           return {
@@ -3761,11 +3681,7 @@
             height: _.clientHeight,
           });
         },
-        _ = ({
-          critical: _,
-          scrollOptions: _,
-          registry: __webpack_require__,
-        }) => {
+        _ = ({ critical: _, scrollOptions: _, registry: _ }) => {
           _();
           const _ = (() => {
               const _ = _(),
@@ -3795,10 +3711,10 @@
             })(),
             _ = _.scroll.current,
             _ = _.droppable,
-            _ = __webpack_require__.droppable
+            _ = _.droppable
               .getAllByType(_.type)
               .map((_) => _.callbacks.getDimensionAndWatchScroll(_, _)),
-            _ = __webpack_require__.draggable
+            _ = _.draggable
               .getAllByType(_.draggable.type)
               .map((_) => _.getDimension(_)),
             _ = {
@@ -3970,13 +3886,9 @@
           window.scrollBy(_._, _._);
         };
       const _ = _((_) => _(_).filter((_) => !!_.isEnabled && !!_.frame));
-      var _ = ({
-        center: _,
-        destination: _,
-        droppables: __webpack_require__,
-      }) => {
+      var _ = ({ center: _, destination: _, droppables: _ }) => {
         if (_) {
-          const _ = __webpack_require__[_];
+          const _ = _[_];
           return _.frame ? _ : null;
         }
         const _ = ((_, _) => {
@@ -3984,7 +3896,7 @@
             _(_).find((_) => (_.frame || _(), _(_.frame.pageMarginBox)(_))) ||
             null;
           return _;
-        })(_, __webpack_require__);
+        })(_, _);
         return _;
       };
       const _ = {
@@ -3998,23 +3910,19 @@
         },
         disabled: !1,
       };
-      var _ = ({
-          startOfRange: _,
-          endOfRange: _,
-          current: __webpack_require__,
-        }) => {
+      var _ = ({ startOfRange: _, endOfRange: _, current: _ }) => {
           const _ = _ - _;
           if (0 === _) return 0;
-          return (__webpack_require__ - _) / _;
+          return (_ - _) / _;
         },
         _ = ({
           distanceToEdge: _,
           thresholds: _,
-          dragStartTime: __webpack_require__,
+          dragStartTime: _,
           shouldUseTimeDampening: _,
           getAutoScrollerOptions: _,
         }) => {
-          const _ = ((_, _, __webpack_require__ = () => _) => {
+          const _ = ((_, _, _ = () => _) => {
             const _ = __webpack_require__();
             if (_ > _.startScrollingFrom) return 0;
             if (_ <= _.maxScrollValueAt) return _.maxPixelScroll;
@@ -4049,7 +3957,7 @@
                       }),
                       _ = _ * _.ease(_);
                     return Math.ceil(_);
-                  })(_, __webpack_require__, _),
+                  })(_, _, _),
                   1,
                 )
               : _;
@@ -4057,12 +3965,12 @@
         _ = ({
           container: _,
           distanceToEdges: _,
-          dragStartTime: __webpack_require__,
+          dragStartTime: _,
           axis: _,
           shouldUseTimeDampening: _,
           getAutoScrollerOptions: _,
         }) => {
-          const _ = ((_, _, __webpack_require__ = () => _) => {
+          const _ = ((_, _, _ = () => _) => {
             const _ = __webpack_require__();
             return {
               startScrollingFrom: _[_.size] * _.startFromPercentage,
@@ -4073,7 +3981,7 @@
             ? _({
                 distanceToEdge: _[_.end],
                 thresholds: _,
-                dragStartTime: __webpack_require__,
+                dragStartTime: _,
                 shouldUseTimeDampening: _,
                 getAutoScrollerOptions: _,
               })
@@ -4081,7 +3989,7 @@
                 _({
                   distanceToEdge: _[_.start],
                   thresholds: _,
-                  dragStartTime: __webpack_require__,
+                  dragStartTime: _,
                   shouldUseTimeDampening: _,
                   getAutoScrollerOptions: _,
                 });
@@ -4090,7 +3998,7 @@
       var _ = ({
         dragStartTime: _,
         container: _,
-        subject: __webpack_require__,
+        subject: _,
         center: _,
         shouldUseTimeDampening: _,
         getAutoScrollerOptions: _,
@@ -4122,24 +4030,20 @@
             _: _,
           });
         if (_(_, _)) return null;
-        const _ = (({
-          container: _,
-          subject: _,
-          proposedScroll: __webpack_require__,
-        }) => {
+        const _ = (({ container: _, subject: _, proposedScroll: _ }) => {
           const _ = _.height > _.height,
             _ = _.width > _.width;
           return _ || _
             ? _ && _
               ? null
               : {
-                  _: _ ? 0 : __webpack_require__._,
-                  _: _ ? 0 : __webpack_require__._,
+                  _: _ ? 0 : _._,
+                  _: _ ? 0 : _._,
                 }
-            : __webpack_require__;
+            : _;
         })({
           container: _,
-          subject: __webpack_require__,
+          subject: _,
           proposedScroll: _,
         });
         return _ ? (_(_, _) ? null : _) : null;
@@ -4147,21 +4051,21 @@
       const _ = _((_) => (0 === _ ? 0 : _ > 0 ? 1 : -1)),
         _ = (() => {
           const _ = (_, _) => (_ < 0 ? _ : _ > _ ? _ - _ : 0);
-          return ({ current: _, max: __webpack_require__, change: _ }) => {
+          return ({ current: _, max: _, change: _ }) => {
             const _ = _(_, _),
               _ = {
-                _: _(_._, __webpack_require__._),
-                _: _(_._, __webpack_require__._),
+                _: _(_._, _._),
+                _: _(_._, _._),
               };
             return _(_, _) ? null : _;
           };
         })(),
-        _ = ({ max: _, current: _, change: __webpack_require__ }) => {
+        _ = ({ max: _, current: _, change: _ }) => {
           const _ = {
               _: Math.max(_._, _._),
               _: Math.max(_._, _._),
             },
-            _ = _(__webpack_require__),
+            _ = _(_),
             _ = _({
               max: _,
               current: _,
@@ -4189,7 +4093,7 @@
       var _ = ({
           state: _,
           dragStartTime: _,
-          shouldUseTimeDampening: __webpack_require__,
+          shouldUseTimeDampening: _,
           scrollWindow: _,
           scrollDroppable: _,
           getAutoScrollerOptions: _,
@@ -4200,7 +4104,7 @@
             const _ = (({
               viewport: _,
               subject: _,
-              center: __webpack_require__,
+              center: _,
               dragStartTime: _,
               shouldUseTimeDampening: _,
               getAutoScrollerOptions: _,
@@ -4209,7 +4113,7 @@
                 dragStartTime: _,
                 container: _.frame,
                 subject: _,
-                center: __webpack_require__,
+                center: _,
                 shouldUseTimeDampening: _,
                 getAutoScrollerOptions: _,
               });
@@ -4219,7 +4123,7 @@
               viewport: _.viewport,
               subject: _,
               center: _,
-              shouldUseTimeDampening: __webpack_require__,
+              shouldUseTimeDampening: _,
               getAutoScrollerOptions: _,
             });
             if (_) return void _(_);
@@ -4233,7 +4137,7 @@
           const _ = (({
             droppable: _,
             subject: _,
-            center: __webpack_require__,
+            center: _,
             dragStartTime: _,
             shouldUseTimeDampening: _,
             getAutoScrollerOptions: _,
@@ -4244,7 +4148,7 @@
               dragStartTime: _,
               container: _.pageMarginBox,
               subject: _,
-              center: __webpack_require__,
+              center: _,
               shouldUseTimeDampening: _,
               getAutoScrollerOptions: _,
             });
@@ -4254,16 +4158,12 @@
             droppable: _,
             subject: _,
             center: _,
-            shouldUseTimeDampening: __webpack_require__,
+            shouldUseTimeDampening: _,
             getAutoScrollerOptions: _,
           });
           _ && _(_.descriptor._, _);
         },
-        _ = ({
-          move: _,
-          scrollDroppable: _,
-          scrollWindow: __webpack_require__,
-        }) => {
+        _ = ({ move: _, scrollDroppable: _, scrollWindow: _ }) => {
           const _ = (_, _) => {
               if (!_(_, _)) return _;
               const _ = ((_, _) => {
@@ -4320,13 +4220,13 @@
         _ = ({
           scrollDroppable: _,
           scrollWindow: _,
-          move: __webpack_require__,
+          move: _,
           getAutoScrollerOptions: _,
         }) => {
           const _ = (({
               scrollWindow: _,
               scrollDroppable: _,
-              getAutoScrollerOptions: __webpack_require__ = () => _,
+              getAutoScrollerOptions: _ = () => _,
             }) => {
               const _ = _(_),
                 _ = _(_);
@@ -4340,7 +4240,7 @@
                   scrollDroppable: _,
                   dragStartTime: _,
                   shouldUseTimeDampening: _,
-                  getAutoScrollerOptions: __webpack_require__,
+                  getAutoScrollerOptions: _,
                 });
               };
               return {
@@ -4357,7 +4257,7 @@
                     shouldUseTimeDampening: !1,
                     scrollWindow: _,
                     scrollDroppable: _,
-                    getAutoScrollerOptions: __webpack_require__,
+                    getAutoScrollerOptions: _,
                   }),
                     (_ = {
                       dragStartTime: _,
@@ -4377,7 +4277,7 @@
               getAutoScrollerOptions: _,
             }),
             _ = _({
-              move: __webpack_require__,
+              move: _,
               scrollWindow: _,
               scrollDroppable: _,
             });
@@ -4427,8 +4327,7 @@
             return _ ? `${_.selector} { ${_} }` : "";
           }).join(" ");
       var _ = (_) => {
-        const _ =
-          ((__webpack_require__ = _), (_) => `[${_}="${__webpack_require__}"]`);
+        const _ = ((_ = _), (_) => `[${_}="${_}"]`);
         var _;
         const _ = (() => {
             const _ =
@@ -4669,12 +4568,7 @@
       const _ = {
         type: "IDLE",
       };
-      function _({
-        cancel: _,
-        completed: _,
-        getPhase: __webpack_require__,
-        setPhase: _,
-      }) {
+      function _({ cancel: _, completed: _, getPhase: _, setPhase: _ }) {
         return [
           {
             eventName: "mousemove",
@@ -4877,28 +4771,18 @@
       function _(_) {
         _.preventDefault();
       }
-      function _({
-        expected: _,
-        phase: _,
-        isLockActive: __webpack_require__,
-        shouldWarn: _,
-      }) {
+      function _({ expected: _, phase: _, isLockActive: _, shouldWarn: _ }) {
         return !!__webpack_require__() && _ === _;
       }
-      function _({
-        lockAPI: _,
-        store: _,
-        registry: __webpack_require__,
-        draggableId: _,
-      }) {
+      function _({ lockAPI: _, store: _, registry: _, draggableId: _ }) {
         if (_.isClaimed()) return !1;
-        const _ = __webpack_require__.draggable.findById(_);
+        const _ = _.draggable.findById(_);
         return !!_ && !!_.options.isEnabled && !!_(_.getState(), _);
       }
       function _({
         lockAPI: _,
         contextId: _,
-        store: __webpack_require__,
+        store: _,
         registry: _,
         draggableId: _,
         forceSensorStop: _,
@@ -4907,7 +4791,7 @@
         if (
           !_({
             lockAPI: _,
-            store: __webpack_require__,
+            store: _,
             registry: _,
             draggableId: _,
           })
@@ -5437,7 +5321,7 @@
       function _({
         contextId: _,
         store: _,
-        registry: __webpack_require__,
+        registry: _,
         customSensors: _,
         enableDefaultSensors: _,
       }) {
@@ -5490,24 +5374,24 @@
             (_) =>
               _({
                 lockAPI: _,
-                registry: __webpack_require__,
+                registry: _,
                 store: _,
                 draggableId: _,
               }),
-            [_, __webpack_require__, _],
+            [_, _, _],
           ),
           _ = _(
             (_, _, _) =>
               _({
                 lockAPI: _,
-                registry: __webpack_require__,
+                registry: _,
                 contextId: _,
                 store: _,
                 draggableId: _,
                 forceSensorStop: _ || null,
                 sourceEvent: _ && _.sourceEvent ? _.sourceEvent : null,
               }),
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           ),
           _ = _(
             (_) =>
@@ -5521,10 +5405,10 @@
           ),
           _ = _(
             (_) => {
-              const _ = __webpack_require__.draggable.findById(_);
+              const _ = _.draggable.findById(_);
               return _ ? _.options : null;
             },
-            [__webpack_require__.draggable],
+            [_.draggable],
           ),
           _ = _(
             function () {
@@ -5574,7 +5458,7 @@
       function _(_) {
         const {
             contextId: _,
-            setCallbacks: __webpack_require__,
+            setCallbacks: _,
             sensors: _,
             nonce: _,
             dragHandleUsageInstructions: _,
@@ -5930,18 +5814,14 @@
         return "DRAGGING" === _.type
           ? (function (_) {
               const _ = _.dimension.client,
-                {
-                  offset: __webpack_require__,
-                  combineWith: _,
-                  dropping: _,
-                } = _,
+                { offset: _, combineWith: _, dropping: _ } = _,
                 _ = Boolean(_),
                 _ = ((_) =>
                   null != _.forceShouldAnimate
                     ? _.forceShouldAnimate
                     : "SNAP" === _.mode)(_),
                 _ = Boolean(_),
-                _ = _ ? _(__webpack_require__, _) : _(__webpack_require__);
+                _ = _ ? _(_, _) : _(_);
               return {
                 position: "fixed",
                 top: _.marginBox.top,
@@ -5965,7 +5845,7 @@
       function _(_) {
         const _ = _("draggable"),
           {
-            descriptor: __webpack_require__,
+            descriptor: _,
             registry: _,
             getDraggableRef: _,
             canDragInteractiveElements: _,
@@ -5985,11 +5865,11 @@
               const _ = _();
               return (
                 _ || _(),
-                (function (_, _, __webpack_require__ = _) {
+                (function (_, _, _ = _) {
                   const _ = window.getComputedStyle(_),
                     _ = _.getBoundingClientRect(),
                     _ = _(_, _),
-                    _ = _(_, __webpack_require__);
+                    _ = _(_, _);
                   return {
                     descriptor: _,
                     placeholder: {
@@ -6004,19 +5884,19 @@
                     client: _,
                     page: _,
                   };
-                })(__webpack_require__, _, _)
+                })(_, _, _)
               );
             },
-            [__webpack_require__, _],
+            [_, _],
           ),
           _ = _(
             () => ({
               uniqueId: _,
-              descriptor: __webpack_require__,
+              descriptor: _,
               options: _,
               getDimension: _,
             }),
-            [__webpack_require__, _, _, _],
+            [_, _, _, _],
           ),
           _ = (0, _.useRef)(_),
           _ = (0, _.useRef)(!0);
@@ -6043,12 +5923,8 @@
       }
       var _ = (_, _) => _ === _,
         _ = (_) => {
-          const { combine: _, destination: __webpack_require__ } = _;
-          return __webpack_require__
-            ? __webpack_require__.droppableId
-            : _
-              ? _.droppableId
-              : null;
+          const { combine: _, destination: _ } = _;
+          return _ ? _.droppableId : _ ? _.droppableId : null;
         };
       function _(_ = null) {
         return {
@@ -6370,14 +6246,14 @@
       var _ = ({
         ref: _,
         descriptor: _,
-        env: __webpack_require__,
+        env: _,
         windowScroll: _,
         direction: _,
         isDropDisabled: _,
         isCombineEnabled: _,
         shouldClipSubject: _,
       }) => {
-        const _ = __webpack_require__.closestScrollable,
+        const _ = _.closestScrollable,
           _ = ((_, _) => {
             const _ = _(_);
             if (!_) return _;
@@ -6421,7 +6297,7 @@
           _ = (({
             descriptor: _,
             isEnabled: _,
-            isCombineEnabled: __webpack_require__,
+            isCombineEnabled: _,
             isFixedOnPage: _,
             direction: _,
             client: _,
@@ -6456,7 +6332,7 @@
               _ = "vertical" === _ ? _ : _;
             return {
               descriptor: _,
-              isCombineEnabled: __webpack_require__,
+              isCombineEnabled: _,
               isFixedOnPage: _,
               axis: _,
               isEnabled: _,
@@ -6474,7 +6350,7 @@
             descriptor: _,
             isEnabled: !_,
             isCombineEnabled: _,
-            isFixedOnPage: __webpack_require__.isFixedOnPage,
+            isFixedOnPage: _.isFixedOnPage,
             direction: _,
             client: _,
             page: _,
@@ -6646,17 +6522,13 @@
             left: 0,
           },
         },
-        _ = ({
-          isAnimatingOpenOnMount: _,
-          placeholder: _,
-          animate: __webpack_require__,
-        }) => {
+        _ = ({ isAnimatingOpenOnMount: _, placeholder: _, animate: _ }) => {
           const _ = (({
             isAnimatingOpenOnMount: _,
             placeholder: _,
-            animate: __webpack_require__,
+            animate: _,
           }) =>
-            _ || "close" === __webpack_require__
+            _ || "close" === _
               ? _
               : {
                   height: _.client.borderBox.height,
@@ -6665,7 +6537,7 @@
                 })({
             isAnimatingOpenOnMount: _,
             placeholder: _,
-            animate: __webpack_require__,
+            animate: _,
           });
           return {
             display: _.display,
@@ -6679,7 +6551,7 @@
             flexShrink: "0",
             flexGrow: "0",
             pointerEvents: "none",
-            transition: "none" !== __webpack_require__ ? _.placeholder : null,
+            transition: "none" !== _ ? _.placeholder : null,
           };
         };
       var _ = _.memo((_) => {
@@ -6909,7 +6781,7 @@
         )((_) => {
           const _ = (0, _.useContext)(_);
           _ || _();
-          const { contextId: __webpack_require__, isMovementAllowed: _ } = _,
+          const { contextId: _, isMovementAllowed: _ } = _,
             _ = (0, _.useRef)(null),
             _ = (0, _.useRef)(null),
             {
@@ -6966,17 +6838,11 @@
                       onClose: _,
                       innerRef: _,
                       animate: _,
-                      contextId: __webpack_require__,
+                      contextId: _,
                       onTransitionEnd: _,
                     }),
                 ),
-              [
-                __webpack_require__,
-                _,
-                _.placeholder,
-                _.shouldAnimatePlaceholder,
-                _,
-              ],
+              [_, _, _.placeholder, _.shouldAnimatePlaceholder, _],
             ),
             _ = _(
               () => ({
@@ -6984,10 +6850,10 @@
                 placeholder: _,
                 droppableProps: {
                   "data-rfd-droppable-id": _,
-                  "data-rfd-droppable-context-id": __webpack_require__,
+                  "data-rfd-droppable-context-id": _,
                 },
               }),
-              [__webpack_require__, _, _, _],
+              [_, _, _, _],
             ),
             _ = _ ? _.dragging.draggableId : null,
             _ = _(
@@ -9662,19 +9528,19 @@
           if (["string", "number", "boolean"].includes(typeof _)) return _;
           if (Array.isArray(_)) return _.map(_).filter((_) => void 0 !== _);
           const _ = {};
-          for (const [__webpack_require__, _] of Object.entries(_)) {
+          for (const [_, _] of Object.entries(_)) {
             const _ = _(_);
-            void 0 !== _ && (_[__webpack_require__] = _);
+            void 0 !== _ && (_[_] = _);
           }
           return _;
         },
-        _ = (_, _, __webpack_require__ = !1) => {
+        _ = (_, _, _ = !1) => {
           if (!Array.isArray(_) || !Array.isArray(_))
             throw new Error("Both arguments should be arrays.");
           const _ = _.length,
             _ = _.length,
             _ = new Array(_ + _);
-          if (__webpack_require__) {
+          if (_) {
             for (let _ = 0; _ < _; _++) _[_] = _[_ - _ - 1];
             for (let _ = 0; _ < _; _++) _[_ + _] = _[_];
             return _;
@@ -9740,11 +9606,11 @@
                   : "bigint" == typeof _
                     ? `${_}n`
                     : String(_),
-        _ = (_, _ = 1 / 0, __webpack_require__ = !1, _ = _.stringify) =>
+        _ = (_, _ = 1 / 0, _ = !1, _ = _.stringify) =>
           null === _
             ? "null"
             : Array.isArray(_) || "object" == typeof _
-              ? _(_, void 0, __webpack_require__ ? 1 : void 0, _, _)
+              ? _(_, void 0, _ ? 1 : void 0, _, _)
               : _(_, void 0, void 0, void 0, _),
         _ = (_) =>
           "boolean" == typeof _
@@ -9920,19 +9786,19 @@
               ignoreCase: _.ignoreCaseForKey,
             }),
           ),
-        _ = (_, _, __webpack_require__ = 1, _, _) => {
-          if (__webpack_require__ > (_.maxDepth || 1 / 0))
+        _ = (_, _, _ = 1, _, _) => {
+          if (_ > (_.maxDepth || 1 / 0))
             return [
               [
                 {
-                  level: __webpack_require__,
+                  level: _,
                   type: "equal",
                   text: "...",
                 },
               ],
               [
                 {
-                  level: __webpack_require__,
+                  level: _,
                   type: "equal",
                   text: "...",
                 },
@@ -9946,14 +9812,12 @@
             const _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split("\n");
             for (let _ = 0; _ < _.length; _++)
               _.push({
-                level: __webpack_require__,
+                level: _,
                 type: "equal",
                 text: "",
               }),
                 _.push({
-                  level:
-                    __webpack_require__ +
-                    (_[_].match(/^\s+/)?.[0]?.length || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "add",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
@@ -9963,13 +9827,12 @@
             const _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split("\n");
             for (let _ = 0; _ < _.length; _++)
               _.push({
-                level:
-                  __webpack_require__ + (_[_].match(/^\s+/)?.[0]?.length || 0),
+                level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                 type: "remove",
                 text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
               }),
                 _.push({
-                  level: __webpack_require__,
+                  level: _,
                   type: "equal",
                   text: "",
                 });
@@ -10000,49 +9863,48 @@
               _ = _[0],
               _ = _(_, _, _);
             if (0 === _)
-              if (_(_[_]) !== _(_[_]))
-                _(_, _, _, _, _[_], _[_], __webpack_require__, _);
+              if (_(_[_]) !== _(_[_])) _(_, _, _, _, _[_], _[_], _, _);
               else if (Array.isArray(_[_])) {
                 const _ = [..._[_]],
                   _ = [..._[_]],
-                  [_, _] = _(_, _, _, _, __webpack_require__, _, [], []);
+                  [_, _] = _(_, _, _, _, _, _, [], []);
                 (_ = _(_, _)), (_ = _(_, _));
               } else if (null === _[_])
                 _.push({
-                  level: __webpack_require__,
+                  level: _,
                   type: "equal",
                   text: `"${_}": null`,
                 }),
                   _.push({
-                    level: __webpack_require__,
+                    level: _,
                     type: "equal",
                     text: `"${_}": null`,
                   });
               else if ("object" == typeof _[_]) {
-                const _ = _(_[_], _[_], __webpack_require__ + 1, _, _);
+                const _ = _(_[_], _[_], _ + 1, _, _);
                 _.push({
-                  level: __webpack_require__,
+                  level: _,
                   type: "equal",
                   text: `"${_}": {`,
                 }),
                   (_ = _(_, _[0])),
                   _.push({
-                    level: __webpack_require__,
+                    level: _,
                     type: "equal",
                     text: "}",
                   }),
                   _.push({
-                    level: __webpack_require__,
+                    level: _,
                     type: "equal",
                     text: `"${_}": {`,
                   }),
                   (_ = _(_, _[1])),
                   _.push({
-                    level: __webpack_require__,
+                    level: _,
                     type: "equal",
                     text: "}",
                   });
-              } else _(_, _, _, _, _[_], _[_], __webpack_require__, _);
+              } else _(_, _, _, _, _[_], _[_], _, _);
             else if (_.length && _.length)
               if (_ < 0) {
                 const _ = _(_[_], void 0, 1, void 0, _.undefinedBehavior).split(
@@ -10051,14 +9913,12 @@
                 for (let _ = 0; _ < _.length; _++) {
                   const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                   _.push({
-                    level:
-                      __webpack_require__ +
-                      (_[_].match(/^\s+/)?.[0]?.length || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "remove",
                     text: _ ? _ : `"${_}": ${_}`,
                   }),
                     _.push({
-                      level: __webpack_require__,
+                      level: _,
                       type: "equal",
                       text: "",
                     });
@@ -10070,14 +9930,12 @@
                 for (let _ = 0; _ < _.length; _++) {
                   const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                   _.push({
-                    level: __webpack_require__,
+                    level: _,
                     type: "equal",
                     text: "",
                   }),
                     _.push({
-                      level:
-                        __webpack_require__ +
-                        (_[_].match(/^\s+/)?.[0]?.length || 0),
+                      level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "add",
                       text: _ ? _ : `"${_}": ${_}`,
                     });
@@ -10090,14 +9948,12 @@
               for (let _ = 0; _ < _.length; _++) {
                 const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                 _.push({
-                  level:
-                    __webpack_require__ +
-                    (_[_].match(/^\s+/)?.[0]?.length || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "remove",
                   text: _ ? _ : `"${_}": ${_}`,
                 }),
                   _.push({
-                    level: __webpack_require__,
+                    level: _,
                     type: "equal",
                     text: "",
                   });
@@ -10109,14 +9965,12 @@
               for (let _ = 0; _ < _.length; _++) {
                 const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                 _.push({
-                  level: __webpack_require__,
+                  level: _,
                   type: "equal",
                   text: "",
                 }),
                   _.push({
-                    level:
-                      __webpack_require__ +
-                      (_[_].match(/^\s+/)?.[0]?.length || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "add",
                     text: _ ? _ : `"${_}": ${_}`,
                   });
@@ -11818,7 +11672,7 @@
         constructor({
           detectCircular: _ = !0,
           maxDepth: _ = 1 / 0,
-          showModifications: __webpack_require__ = !0,
+          showModifications: _ = !0,
           arrayDiffMethod: _ = "normal",
           ignoreCase: _ = !1,
           ignoreCaseForKey: _ = !1,
@@ -11830,7 +11684,7 @@
           (this.options = {
             detectCircular: _,
             maxDepth: _,
-            showModifications: __webpack_require__,
+            showModifications: _,
             arrayDiffMethod: _,
             ignoreCase: _,
             ignoreCaseForKey: _,
@@ -12099,29 +11953,11 @@
         });
       }
       function _(_, _) {
-        let [__webpack_require__, _, _] = [0, _.length, _.length];
-        for (
-          ;
-          __webpack_require__ < _ &&
-          __webpack_require__ < _ &&
-          _[__webpack_require__] === _[__webpack_require__];
-        )
-          __webpack_require__++;
-        if (__webpack_require__ === _ && __webpack_require__ === _)
-          return [][Symbol.iterator]();
-        for (
-          ;
-          _[--_] === _[--_] &&
-          _ > __webpack_require__ &&
-          _ > __webpack_require__;
-        );
-        return _(
-          __webpack_require__,
-          _ + 1 - __webpack_require__,
-          __webpack_require__,
-          _ + 1 - __webpack_require__,
-          (_, _) => _[_] === _[_],
-        );
+        let [_, _, _] = [0, _.length, _.length];
+        for (; _ < _ && _ < _ && _[_] === _[_]; ) _++;
+        if (_ === _ && _ === _) return [][Symbol.iterator]();
+        for (; _[--_] === _[--_] && _ > _ && _ > _; );
+        return _(_, _ + 1 - _, _, _ + 1 - _, (_, _) => _[_] === _[_]);
       }
       (_.diff_core = _), (_.diff = _);
       let _ = class {
@@ -12131,12 +11967,9 @@
         next() {
           const _ = this.diff.next();
           if (_.done) {
-            const { _: _, _: __webpack_require__, _: _ } = this;
+            const { _: _, _: _, _: _ } = this;
             return (
-              _ < _ &&
-                ((_.done = !1),
-                (_.value = [_, __webpack_require__, _ - _]),
-                (this._ = _)),
+              _ < _ && ((_.done = !1), (_.value = [_, _, _ - _]), (this._ = _)),
               _
             );
           }
@@ -12403,13 +12236,13 @@
           showAll: "⭥ Show all unchanged lines",
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.diff,
+          const [_, _] = _.diff,
             _ = _.useMemo(
               () =>
-                _.length === __webpack_require__.length &&
+                _.length === _.length &&
                 _.every((_) => "equal" === _.type) &&
                 __webpack_require__.every((_) => "equal" === _.type),
-              [_, __webpack_require__],
+              [_, _],
             ),
             _ = {
               ..._,
@@ -12431,8 +12264,8 @@
             } = _.virtual && !0 !== _.virtual ? _.virtual : {},
             _ = "body" === _ ? document.body : document.querySelector(_),
             _ = _.useRef(_),
-            _ = _.useRef(__webpack_require__),
-            _ = _.useRef(_(_, __webpack_require__, _, _)),
+            _ = _.useRef(_),
+            _ = _.useRef(_(_, _, _, _)),
             _ = _.useRef([]),
             _ = _.useRef(0),
             _ = _.useRef(null),
@@ -12452,11 +12285,8 @@
               _({});
             };
           _.useEffect(() => {
-            (_.current = _),
-              (_.current = __webpack_require__),
-              (_.current = _(_, __webpack_require__, _, _)),
-              _();
-          }, [_, _, __webpack_require__]),
+            (_.current = _), (_.current = _), (_.current = _(_, _, _, _)), _();
+          }, [_, _, _]),
             _.useEffect(() => {
               if (!_.virtual || !_) return;
               const _ = () => _({});
@@ -12517,7 +12347,7 @@
                 (_.current = _),
                 _();
             },
-            _ = (_, _ = [], __webpack_require__ = !1, _ = !1) =>
+            _ = (_, _ = [], _ = !1, _ = !1) =>
               _.createElement(
                 _.Fragment,
                 null,
@@ -12539,7 +12369,7 @@
                     _,
                   );
                 }),
-                __webpack_require__ &&
+                _ &&
                   (_
                     ? _.createElement(
                         "span",
@@ -20380,6 +20210,206 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        var _ = Object.create(null);
+        return (
+          _ &&
+            _.Children.map(_, function (_) {
+              return _;
+            }).forEach(function (_) {
+              _[_.key] = (function (_) {
+                return _ && (0, _.isValidElement)(_) ? _(_) : _;
+              })(_);
+            }),
+          _
+        );
+      }
+      function _(_, _, _) {
+        return null != _[_] ? _[_] : _.props[_];
+      }
+      function _(_, _, _) {
+        var _ = _(_.children),
+          _ = (function (_, _) {
+            function _(_) {
+              return _ in _ ? _[_] : _[_];
+            }
+            (_ = _ || {}), (_ = _ || {});
+            var _,
+              _ = Object.create(null),
+              _ = [];
+            for (var _ in _)
+              _ in _ ? _.length && ((_[_] = _), (_ = [])) : _.push(_);
+            var _ = {};
+            for (var _ in _) {
+              if (_[_])
+                for (_ = 0; _ < _[_].length; _++) {
+                  var _ = _[_][_];
+                  _[_[_][_]] = __webpack_require__(_);
+                }
+              _[_] = __webpack_require__(_);
+            }
+            for (_ = 0; _ < _.length; _++) _[_[_]] = __webpack_require__(_[_]);
+            return _;
+          })(_, _);
+        return (
+          Object.keys(_).forEach(function (_) {
+            var _ = _[_];
+            if ((0, _.isValidElement)(_)) {
+              var _ = _ in _,
+                _ = _ in _,
+                _ = _[_],
+                _ = (0, _.isValidElement)(_) && !_.props._;
+              !_ || (_ && !_)
+                ? _ || !_ || _
+                  ? _ &&
+                    _ &&
+                    (0, _.isValidElement)(_) &&
+                    (_[_] = (0, _.cloneElement)(_, {
+                      onExited: __webpack_require__.bind(null, _),
+                      _: _.props._,
+                      exit: _(_, "exit", _),
+                      enter: _(_, "enter", _),
+                    }))
+                  : (_[_] = (0, _.cloneElement)(_, {
+                      _: !1,
+                    }))
+                : (_[_] = (0, _.cloneElement)(_, {
+                    onExited: __webpack_require__.bind(null, _),
+                    _: !0,
+                    exit: _(_, "exit", _),
+                    enter: _(_, "enter", _),
+                  }));
+            }
+          }),
+          _
+        );
+      }
+      var _ =
+          Object.values ||
+          function (_) {
+            return Object.keys(_).map(function (_) {
+              return _[_];
+            });
+          },
+        _ = (function (_) {
+          function _(_, _) {
+            var _,
+              _ = (_ = _.call(this, _, _) || this).handleExited.bind(
+                (0, _._)(_),
+              );
+            return (
+              (_.state = {
+                contextValue: {
+                  isMounting: !0,
+                },
+                handleExited: _,
+                firstRender: !0,
+              }),
+              _
+            );
+          }
+          (0, _._)(_, _);
+          var _ = _.prototype;
+          return (
+            (_.componentDidMount = function () {
+              (this.mounted = !0),
+                this.setState({
+                  contextValue: {
+                    isMounting: !1,
+                  },
+                });
+            }),
+            (_.componentWillUnmount = function () {
+              this.mounted = !1;
+            }),
+            (_.getDerivedStateFromProps = function (_, _) {
+              var _,
+                _,
+                _ = _.children,
+                _ = _.handleExited;
+              return {
+                children: _.firstRender
+                  ? ((_ = _),
+                    (_ = _),
+                    _(_.children, function (_) {
+                      return (0, _.cloneElement)(_, {
+                        onExited: _.bind(null, _),
+                        _: !0,
+                        appear: _(_, "appear", _),
+                        enter: _(_, "enter", _),
+                        exit: _(_, "exit", _),
+                      });
+                    }))
+                  : _(_, _, _),
+                firstRender: !1,
+              };
+            }),
+            (_.handleExited = function (_, _) {
+              var _ = _(this.props.children);
+              _.key in _ ||
+                (_.props.onExited && _.props.onExited(_),
+                this.mounted &&
+                  this.setState(function (_) {
+                    var _ = (0, _._)({}, _.children);
+                    return (
+                      delete _[_.key],
+                      {
+                        children: _,
+                      }
+                    );
+                  }));
+            }),
+            (_.render = function () {
+              var _ = this.props,
+                _ = _.component,
+                _ = _.childFactory,
+                _ = (0, _._)(_, ["component", "childFactory"]),
+                _ = this.state.contextValue,
+                _ = _(this.state.children).map(_);
+              return (
+                delete _.appear,
+                delete _.enter,
+                delete _.exit,
+                null === _
+                  ? _.createElement(
+                      _._.Provider,
+                      {
+                        value: _,
+                      },
+                      _,
+                    )
+                  : _.createElement(
+                      _._.Provider,
+                      {
+                        value: _,
+                      },
+                      _.createElement(_, _, _),
+                    )
+              );
+            }),
+            _
+          );
+        })(_.Component);
+      (_.propTypes = {}),
+        (_.defaultProps = {
+          component: "div",
+          childFactory: function (_) {
+            return _;
+          },
+        });
+      const _ = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid").useLayoutEffect;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -20408,6 +20438,19 @@
       function _(_, _) {
         (null == _ || _ > _.length) && (_ = _.length);
         for (var _ = 0, _ = Array(_); _ < _; _++) _[_] = _[_];
+        return _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (void 0 === _)
+          throw new ReferenceError(
+            "this hasn't been initialised - super() hasn't been called",
+          );
         return _;
       }
       __webpack_require__._(module_exports, {

@@ -173,19 +173,12 @@ a:hover {
 }
 
 #profileBlock {
-	width:638px;
 	margin: 5px 0px 0px 0px;
-	float: left;
+	flex-grow: 1;
+	max-width: 638px;
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 7px;
-}
-
-/* on pages that have been updated to be responsive, make sure leftcol fits next to the right column */
-html.responsive #profileBlock {
-	width: auto;
-	max-width: 638px;
-	float: none;
 }
 
 #profileBlock p {
@@ -469,7 +462,7 @@ a.general_btn:hover {
 }
 
 #rightContents.browsePage {
-	margin-top: 50px;
+	margin-top: 40px;
 }
 
 
@@ -3342,7 +3335,8 @@ input.searchText
 	text-align: left;
 	max-width: 948px;
 	padding: 20px 0 0 0;
-	margin: 0px auto;
+	margin: 0 auto;
+	width: 100%;
 }
 .breadcrumbs, .breadcrumbs a {
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;

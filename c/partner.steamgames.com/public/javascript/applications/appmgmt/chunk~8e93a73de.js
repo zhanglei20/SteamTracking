@@ -1079,8 +1079,8 @@
             );
           let _ =
             ((_ = this.m_representation),
-            (__webpack_require__ = this.m_nNextSegment),
-            _(_.segmentTemplate.strMedia, _.strID, __webpack_require__));
+            (_ = this.m_nNextSegment),
+            _(_.segmentTemplate.strMedia, _.strID, _));
           var _, _;
           this.DownloadSegment(this.m_representation, this.m_nNextSegment, _);
         }
@@ -4522,7 +4522,7 @@
         });
       }
       function _(_) {
-        let { direction: _, ...__webpack_require__ } = _,
+        let { direction: _, ..._ } = _,
           _ = {
             transform: `scaleX( ${"right" == _ ? "-1" : "1"} )`,
           };

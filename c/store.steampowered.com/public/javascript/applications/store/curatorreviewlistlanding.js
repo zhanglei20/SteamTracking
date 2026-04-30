@@ -3,14 +3,14 @@
   {
     chunkid: (module) => {
       module.exports = {
-        VideoReviewCtn: "V6zz2NPPxfnGjAchCe56r",
-        YouTubePreviewImage: "_3joL1ZVcmC-6lCOLfjuIq7",
-        TwitchPlayer: "_1Q0Ym9jG7UCFeD3c9LbOSy",
+        BreadContainer: "YaL4BAoqywnKnb5jbU_il",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG",
+        VideoReviewCtn: "V6zz2NPPxfnGjAchCe56r",
+        YouTubePreviewImage: "_3joL1ZVcmC-6lCOLfjuIq7",
+        TwitchPlayer: "_1Q0Ym9jG7UCFeD3c9LbOSy",
       };
     },
     chunkid: (module) => {
@@ -51,6 +51,18 @@
         FullReviewLink: "_3_8G-9J9Ck495Bbx1AtzXb",
         FullReviewAnchor: "_3pWCNXNZaWp_KqFU6n38sy",
         FullReviewDomain: "_2R37NZqjmxkImiPnoElHtm",
+        BackgroundAnimation: "_3mJ9erLLVEMyDp_3pY3KTp",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1ulNFI0sHkRk8TBa3fDFoS",
+        "ItemFocusAnim-darkerGrey": "OAwSuqlAeZPXQNLFz_zLx",
+        "ItemFocusAnim-darkGreySettings": "_1vwA5-HGmaz4WDUPfeIMXw",
+        "ItemFocusAnim-darkGrey": "_16cDR36DBbspxGZ8MxxB4Z",
+        "ItemFocusAnim-grey": "oS4oWYqe5S8U6CukOBsBi",
+        "ItemFocusAnim-translucent-white-10": "_1jj4yrDY55YFShmQZ8VANk",
+        "ItemFocusAnim-translucent-white-20": "TqUMJDChgbfs4XXKTa2UZ",
+        "ItemFocusAnimBorder-darkGrey": "_35LQt0hozt0Fu6IHh1i9gW",
+        "ItemFocusAnim-green": "_2cU5wBvJhWpmq45gjPgBx_",
+        focusAnimation: "XfHabgjmzuwMo5SRyzbkv",
+        hoverAnimation: "_2qskIW3iRVBxrrqQ3Sel07",
       };
     },
     chunkid: (module) => {
@@ -215,6 +227,112 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        return (
+          !!_ &&
+          ("game" === _ ||
+            "dlc" === _ ||
+            "software" === _ ||
+            "music" === _ ||
+            "application" === _ ||
+            "demo" === _ ||
+            "hardware" === _ ||
+            "mod" === _ ||
+            "video" == _ ||
+            "beta" === _ ||
+            "advertising" === _)
+        );
+      }
+      function _(_) {
+        return (
+          null != _ &&
+          (0 == _ ||
+            4 == _ ||
+            6 == _ ||
+            11 == _ ||
+            1 == _ ||
+            10 == _ ||
+            2 == _ ||
+            7 == _ ||
+            12 == _ ||
+            14 == _)
+        );
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { crumbs: _, className: _, bHideLastArrow: _ } = _;
+        return _ && 0 != _.length
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_.BreadContainer, _),
+              children: [
+                (0, _.jsx)(_._, {
+                  className: "blockbg",
+                  "flow-children": "row",
+                  children: _.map((_, _) => {
+                    const _ = new Array();
+                    return (
+                      _.url.startsWith("http")
+                        ? _.push(
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                href: _.url,
+                                children: _.name,
+                              },
+                              "anchor_" + _.name,
+                            ),
+                          )
+                        : _.push(
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                _: _.url,
+                                children: _.name,
+                              },
+                              "link_" + _.name,
+                            ),
+                          ),
+                      (!_ || _ < _.length - 1) &&
+                        _.push(
+                          (0, _.jsx)(
+                            "span",
+                            {
+                              children: " > ",
+                            },
+                            _.name + "span",
+                          ),
+                        ),
+                      _
+                    );
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  style: {
+                    clear: "left",
+                  },
+                }),
+              ],
+            })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -349,15 +467,19 @@
           )
             return _._.k_RejectWrongPlatform;
         }
-        return !_.prepurchase && _.BIsComingSoon()
-          ? _._.k_RejectNoComingSoon
-          : !_.virtual_reality && _.GetPlatforms()?.vr_support.vrhmd_only
-            ? _._.k_RejectNoVR
-            : _.GetAllCreatorClanIDs()?.some((_) =>
-                  __webpack_require__.BIsIgnoringCurator(_),
-                )
-              ? _._.k_RejectCreatorClan
-              : _._.k_NotRejected;
+        if (!_.prepurchase && _.BIsComingSoon())
+          return _._.k_RejectNoComingSoon;
+        const _ = _.GetPlatforms();
+        return !_.virtual_reality &&
+          _ &&
+          _.vr_support &&
+          _.vr_support.vrhmd_only
+          ? _._.k_RejectNoVR
+          : _.GetAllCreatorClanIDs()?.some((_) =>
+                __webpack_require__.BIsIgnoringCurator(_),
+              )
+            ? _._.k_RejectCreatorClan
+            : _._.k_NotRejected;
       }
       function _(_, _) {
         if (_.localized) {
@@ -380,33 +502,32 @@
         if (!_.early_access && _.BIsEarlyAccess())
           return _._.k_RejectEarlyAccess;
         const _ = _.GetAppType();
-        return _.software || 6 != _
-          ? _.games_already_in_library && _.BIsGameOwned(_)
+        if (!_.software && 6 == _) return _._.k_RejectSoftware;
+        if (_.games_already_in_library && _.BIsGameOwned(_))
+          return _._.k_RejectInLibrary;
+        if (_.games_not_in_library && !_.BIsGameOwned(_))
+          return _._.k_RejectNotInLibrary;
+        if (!_.video && [7, 8, 9].includes(_)) return _._.k_RejectVideo;
+        if (_.has_discount) {
+          const _ = _.GetBestPurchaseOption();
+          if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
+        }
+        return "adultonly" != _ &&
+          _.no_ao_content &&
+          (_.HasContentDescriptorID(3) || _.HasContentDescriptorID(4))
+          ? _._.k_RejectAO
+          : 1 == _ &&
+              _.games_already_in_library &&
+              _.BIsGameOwned(_.GetParentAppID() || 0)
             ? _._.k_RejectInLibrary
-            : _.games_not_in_library && !_.BIsGameOwned(_)
-              ? _._.k_RejectNotInLibrary
-              : !_.video && [7, 8, 9].includes(_)
-                ? _._.k_RejectVideo
-                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
-                  ? _._.k_RejectNoDiscount
-                  : "adultonly" != _ &&
-                      _.no_ao_content &&
-                      (_.HasContentDescriptorID(3) ||
-                        _.HasContentDescriptorID(4))
-                    ? _._.k_RejectAO
-                    : 1 == _ &&
-                        _.games_already_in_library &&
-                        _.BIsGameOwned(_.GetParentAppID())
-                      ? _._.k_RejectInLibrary
-                      : _
-                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
-                          _.BHasAppID(_)
-                          ? _._.k_RejectAlreadyDisplayed
-                          : _.has_trailer && !_.BHasTrailers(!1)
-                            ? _._.k_RejectNoTrailer
-                            : _(_, _)
-                        : _._.k_NotRejected
-          : _._.k_RejectSoftware;
+            : _
+              ? (1 == _ && _.BHasAppID(_.GetParentAppID() || 0)) ||
+                _.BHasAppID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _.has_trailer && !_.BHasTrailers(!1)
+                  ? _._.k_RejectNoTrailer
+                  : _(_, _)
+              : _._.k_NotRejected;
       }
       function _(_, _) {
         const _ = _._.Get();
@@ -507,8 +628,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
-        m_HomeView;
+        m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -517,9 +639,12 @@
         }
         static s_globalSingletonStore;
         static Get() {
+          var _;
           return (
             _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
+              ((_ = "CHomeViewStore.s_globalSingletonStore"),
+              (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
+              (_.s_globalSingletonStore = new _()),
               "dev" == _._.WEB_UNIVERSE &&
                 (window.g_HomeViewSetting = _.s_globalSingletonStore)),
             _.s_globalSingletonStore
@@ -554,11 +679,18 @@
           );
         }
         SetHomeViewSettingOverride(_) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ..._?.all,
-            ..._?.maincap,
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ..._?.all,
+                ..._?.maincap,
+              })
+            : (this.m_HomeView = {
+                home: {
+                  ..._?.all,
+                  ..._?.maincap,
+                },
+              });
         }
       }
     },
@@ -820,16 +952,16 @@
       }
       function _(_) {
         const _ = _ && _._.GetClanInfoByClanAccountID(_),
-          [__webpack_require__, _] = (0, _.useState)(!!_);
+          [_, _] = (0, _.useState)(!!_);
         return (
           (0, _.useEffect)(() => {
-            if (__webpack_require__ && _) {
+            if (_ && _) {
               const _ = _._.InitFromClanID(_);
               _._.LoadClanInfoForClanSteamID(_).finally(() => {
                 _(!0);
               });
             }
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           _
         );
       }
@@ -861,73 +993,6 @@
         );
       }
       (0, _._)([_._], _.prototype, "m_mapList", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { crumbs: _, className: __webpack_require__ } = _;
-        return _ && 0 != _.length
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(_.BreadContainer, __webpack_require__),
-              children: [
-                (0, _.jsx)(_._, {
-                  className: "blockbg",
-                  "flow-children": "row",
-                  children: _.map((_) => {
-                    const _ = new Array();
-                    return (
-                      _.url.startsWith("http")
-                        ? _.push(
-                            (0, _.jsx)(
-                              _._,
-                              {
-                                href: _.url,
-                                children: _.name,
-                              },
-                              "anchor_" + _.name,
-                            ),
-                          )
-                        : _.push(
-                            (0, _.jsx)(
-                              _._,
-                              {
-                                _: _.url,
-                                children: _.name,
-                              },
-                              "link_" + _.name,
-                            ),
-                          ),
-                      _.push(
-                        (0, _.jsx)(
-                          "span",
-                          {
-                            children: " > ",
-                          },
-                          _.name + "span",
-                        ),
-                      ),
-                      _
-                    );
-                  }),
-                }),
-                (0, _.jsx)("div", {
-                  style: {
-                    clear: "left",
-                  },
-                }),
-              ],
-            })
-          : null;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1147,7 +1212,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const _ = ["maxresdefault", "mqdefault", "default"],
-            [__webpack_require__, _] = _.useState(0);
+            [_, _] = _.useState(0);
           _.useEffect(() => _(0), [_.video]);
           const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
@@ -1162,14 +1227,9 @@
             });
           {
             const _ =
-                "https://img.youtube.com/vi/" +
-                _.video +
-                "/" +
-                _[__webpack_require__] +
-                ".jpg",
+                "https://img.youtube.com/vi/" + _.video + "/" + _[_] + ".jpg",
               _ = () => {
-                __webpack_require__ + 1 < _.length &&
-                  _(__webpack_require__ + 1);
+                _ + 1 < _.length && _(_ + 1);
               },
               _ = () => {
                 _.current && _.current.naturalHeight < 91 && _();
@@ -1184,7 +1244,7 @@
           }
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1);
+          const [_, _] = _.useState(!1);
           (0, _._)(!!_.preloadYoutubeScripts);
           const _ = (0, _._)("youtube");
           if (_ && _)
@@ -1256,14 +1316,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _?.BUsesContentHubForItemSource() ? new Set() : null,
           ),
           _ = (0, _._)("useFilteredAppViaContentHub");
         return (
           (0, _.useEffect)(() => {
             _?.BUsesContentHubForItemSource() &&
-              !__webpack_require__ &&
+              !_ &&
               (async function (_, _) {
                 const _ =
                     _._.STORE_BASE_URL +
@@ -1300,8 +1360,8 @@
               })(_, _).then((_) => {
                 _.token.reason || _(_);
               });
-          }, [__webpack_require__, _.token.reason, _, _]),
-          __webpack_require__
+          }, [_, _.token.reason, _, _]),
+          _
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -1326,7 +1386,7 @@
       function _(_) {
         const {
             posterURL: _,
-            videoid: __webpack_require__,
+            videoid: _,
             muted: _,
             autoplay: _,
             bIsClipID: _,
@@ -1365,8 +1425,8 @@
         const _ = _.indexOf("/");
         _ >= 0 && (_ = _.substring(0, _));
         let _ = _
-          ? `https://clips.twitch.tv/embed?clip=${__webpack_require__}`
-          : `https://player.twitch.tv/?video=${__webpack_require__}`;
+          ? `https://clips.twitch.tv/embed?clip=${_}`
+          : `https://player.twitch.tv/?video=${_}`;
         return (
           (_ += `&parent=${_}&autoplay=${_}&muted=${Boolean(_)}`),
           _ &&
@@ -1415,8 +1475,10 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clanInfo: _ } = _,
-          { curator_link: __webpack_require__, curator_medium_avatar: _ } = (0,
-          _._)("curator_header", "application_config");
+          { curator_link: _, curator_medium_avatar: _ } = (0, _._)(
+            "curator_header",
+            "application_config",
+          );
         return (0, _.jsx)(_._, {
           className: "page_content_ctn",
           "flow-children": "column",
@@ -1430,7 +1492,7 @@
                 (0, _.jsx)("div", {
                   className: "curator_avatar_image",
                   children: (0, _.jsx)(_._, {
-                    href: __webpack_require__,
+                    href: _,
                     children: (0, _.jsx)("img", {
                       className: "curator_avatar",
                       src: _,
@@ -1446,7 +1508,7 @@
                     }),
                     (0, _.jsx)(_._, {
                       className: "pageheader curator_name",
-                      href: __webpack_require__,
+                      href: _,
                       children: (0, _._)(
                         "#SteamCurator_List_Header_List",
                         _.group_name,
@@ -1531,7 +1593,7 @@
       }
       function _(_) {
         const { listDetails: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
           _ = new _._(_.sale_clan_steamid),
           { eventModel: _ } = (0, _._)(_.GetAccountID(), _.sale_clan_event_gid),
           _ = (0, _.useMemo)(
@@ -1551,19 +1613,19 @@
           }, [_, _, _]),
           (0, _.jsx)(_, {
             listDetails: _,
-            rgListItems: __webpack_require__,
+            rgListItems: _,
           })
         );
       }
       function _(_) {
-        const { listDetails: _, rgListItems: __webpack_require__ } = _,
+        const { listDetails: _, rgListItems: _ } = _,
           [_, _] = (0, _.useState)(0),
           [_, _] = (0, _.useState)(null),
           _ = (0, _._)("CuratorAppListDisplay");
         if (
           (_.useEffect(() => {
-            __webpack_require__ &&
-              (_(__webpack_require__?.length || 0),
+            _ &&
+              (_(_?.length || 0),
               _._.Get()
                 .HintLoad()
                 .then(() => {
@@ -1587,7 +1649,7 @@
                       _.token.reason || _([]);
                     });
                 }));
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           null == _)
         )
           return (0, _.jsx)(_._, {
@@ -1711,7 +1773,7 @@
         });
       }
       const _ = (0, _._)((_) => {
-        const { item: _, listDetails: __webpack_require__, bAutoFocus: _ } = _,
+        const { item: _, listDetails: _, bAutoFocus: _ } = _,
           _ = parseInt((0, _._)("curator_account_id", "application_config")),
           _ = (0, _._)(_),
           [_] = (0, _._)(_?.recommended_app?.appid, {
@@ -1735,13 +1797,13 @@
             recommendation_state: _,
           } = _.recommended_app,
           _ = _.is_creator_home && !_.is_ogg,
-          _ = __webpack_require__.list_jsondata.app_data?.[_],
+          _ = _.list_jsondata.app_data?.[_],
           _ = _ && (0, _._)(_),
           _ = _ && _(_),
           _ = _ != _._ && _,
           _ = _.BHasDemo(),
           _ = _?.img_url,
-          _ = `curator_clanid=${_.clanAccountID}&curator_listid=${__webpack_require__.listid}`,
+          _ = `curator_clanid=${_.clanAccountID}&curator_listid=${_.listid}`,
           _ = _.GetStorePageURL() + "/?curator_clanid=" + _.clanAccountID;
         return (0, _.jsxs)(_._, {
           className: _().CuratorReview,
@@ -1810,7 +1872,7 @@
       function _(_) {
         const {
             strVideoID: _,
-            nStartSeconds: __webpack_require__,
+            nStartSeconds: _,
             _: _,
             strImgOverrideUrl: _,
             bShowDemoButton: _,
@@ -1832,7 +1894,7 @@
                   })
                 : (0, _.jsx)(_._, {
                     video: _,
-                    startSeconds: __webpack_require__,
+                    startSeconds: _,
                     autoplay: !0,
                     autopause: !0,
                     showFullscreenBtn: !0,

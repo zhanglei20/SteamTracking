@@ -27,11 +27,24 @@
         HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
         HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
         HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
+        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
+        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
+        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
+        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
+        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
+        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
+        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
+        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
+        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     chunkid: (module) => {
@@ -43,6 +56,18 @@
         TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
         Reason: "_2h0GKAYcXRP10ryZHFn79d",
         StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+        BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
+        "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
+        "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
+        "ItemFocusAnim-darkGreySettings": "_2cAK7l3w0qC8uv5uzKjusc",
+        "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
+        "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
+        "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
+        "ItemFocusAnim-translucent-white-20": "_2v6guEab39IMo3I1kfiwXc",
+        "ItemFocusAnimBorder-darkGrey": "_3SS0MMDROpRbR_hYLVjAcl",
+        "ItemFocusAnim-green": "_3qjU-9ZS6bDpjjMAOYUhGm",
+        focusAnimation: "_3-bYSIZZNIWgiOR__mB2jd",
+        hoverAnimation: "_39oPHCcA4NgTm53rnykAtP",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -71,7 +96,7 @@
       function _(_) {
         const {
             _: _,
-            hoverClassName: __webpack_require__,
+            hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
             children: _,
@@ -102,7 +127,7 @@
           );
         return (0, _.jsx)("div", {
           ref: _,
-          className: __webpack_require__,
+          className: _,
           onMouseEnter: _,
           onMouseLeave: _,
           onFocus: _,
@@ -113,7 +138,7 @@
       function _(_) {
         const {
             _: _,
-            strExtraParams: __webpack_require__,
+            strExtraParams: _,
             fnOnClickOverride: _,
             strOverrideURL: _,
           } = _,
@@ -123,12 +148,12 @@
             _ ||
               (_ && "creatorid" in _
                 ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )
                 : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )),
@@ -165,7 +190,7 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: __webpack_require__,
+            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -196,7 +221,7 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  __webpack_require__ && _().Muted,
+                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -247,20 +272,16 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__?.name
+          { data: _ } = (0, _._)(_);
+        return _?.name
           ? (0, _.jsx)("div", {
               className: _().CapsuleName,
-              children: __webpack_require__.name,
+              children: _.name,
             })
           : null;
       }
       function _(_) {
-        const {
-            creatorAccountID: _,
-            bShowAsMuted: __webpack_require__,
-            strClassName: _,
-          } = _,
+        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -273,11 +294,7 @@
         const _ = (0, _._)(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().BottomCreatorRow,
-            __webpack_require__ && _().Muted,
-            _,
-          ),
+          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -337,7 +354,7 @@
       function _(_) {
         const {
             capsule: _,
-            bShowParentApp: __webpack_require__,
+            bShowParentApp: _,
             elElementToAppendToHover: _,
             index: _,
             navKey: _,
@@ -349,9 +366,7 @@
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          _ = (0, _._)(
-            __webpack_require__ ? _?.related_items?.parent_appid : void 0,
-          ),
+          _ = (0, _._)(_ ? _?.related_items?.parent_appid : void 0),
           { data: _ } = (0, _._)(_);
         if (!_ || !_) return null;
         const _ = !!_ && !!_,
@@ -418,14 +433,14 @@
       function _(_) {
         const {
             strExtraParams: _,
-            parentID: __webpack_require__,
+            parentID: _,
             parentStoreItemDefaultInfo: _,
             childAppType: _,
             bPreferDemoStorePage: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          { data: _ } = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               className: _().CapsuleParentInfo,
@@ -442,7 +457,7 @@
                     ),
                   }),
                   (0, _.jsx)(_._, {
-                    _: __webpack_require__,
+                    _: _,
                     strExtraParams: _,
                     children: (0, _.jsx)("img", {
                       loading: "lazy",
@@ -461,7 +476,7 @@
       function _(_) {
         const {
             _: _,
-            bHideStatusBanners: __webpack_require__,
+            bHideStatusBanners: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -503,7 +518,7 @@
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
-                      hide_status_banners: __webpack_require__,
+                      hide_status_banners: _,
                       show_early_access: _.bShowEarlyAccessBanner,
                     }),
                     "none" != _ &&
@@ -537,11 +552,7 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            strDoubleCapsuleMessage: __webpack_require__,
-            index: _,
-          } = _,
+        const { _: _, strDoubleCapsuleMessage: _, index: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return (0, _.jsxs)("div", {
@@ -549,7 +560,7 @@
           children: [
             (0, _.jsx)("div", {
               className: _().Reason,
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)("div", {
               className: _().StoreSaleItemRelease,
@@ -568,7 +579,7 @@
       function _(_) {
         const {
             _: _,
-            bHidePriceIfOwned: __webpack_require__,
+            bHidePriceIfOwned: _,
             bHideStatusBanners: _,
             bUseSubscriptionLayout: _,
             elElementToAppendToHover: _,
@@ -588,7 +599,7 @@
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && __webpack_require__),
+        const _ = Boolean(_ && _),
           _ = Boolean(_);
         return (0, _.jsx)(_._, {
           _: _,
@@ -628,7 +639,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+        const { appid: _, className: _, bTextMode: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -637,11 +648,11 @@
           bIsFree: Boolean(_?.is_free),
           bIsComingSoon: Boolean(_?.is_coming_soon),
           bTextMode: _,
-          className: __webpack_require__,
+          className: _,
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)(),
           {
             appid: _,
@@ -695,7 +706,7 @@
         );
       }
       function _(_) {
-        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+        const { possibleDemoAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
@@ -703,12 +714,12 @@
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,
-                className: __webpack_require__,
+                className: _,
               })
           : null;
       }
       function _(_) {
-        const { parentAppID: _, className: __webpack_require__ } = _,
+        const { parentAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -717,7 +728,7 @@
               appid: _,
               bIsComingSoon: Boolean(_.is_coming_soon),
               bIsFree: Boolean(_.is_free),
-              className: __webpack_require__,
+              className: _,
             })
           : null;
       }

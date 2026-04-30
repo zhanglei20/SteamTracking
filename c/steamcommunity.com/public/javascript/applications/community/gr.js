@@ -609,12 +609,15 @@
         BackgroundAnimation: "_15yvWK6GCakW5yZ0YB66fv",
         "ItemFocusAnim-darkerGrey-nocolor": "Eu2HOvMbunn7MzCLIJ5ES",
         "ItemFocusAnim-darkerGrey": "DvP1wiF6eV9afdQaEkods",
+        "ItemFocusAnim-darkGreySettings": "_2MNkLvIOgwx0GSMCjDlkL8",
         "ItemFocusAnim-darkGrey": "_2tQsBdyAzzF2_nY65OSwNm",
         "ItemFocusAnim-grey": "Qg-4WEghuaXqBRIE-lEVs",
         "ItemFocusAnim-translucent-white-10": "_18ENJxMfn40_y_8CMeuuMm",
         "ItemFocusAnim-translucent-white-20": "_1wbIEe3KnohwpAw2O4M9YP",
         "ItemFocusAnimBorder-darkGrey": "_3hC5OOIGfv0lY8ykI4qpNa",
         "ItemFocusAnim-green": "_3ZDnxVKI3Xfr_a6bvaivKR",
+        focusAnimation: "_2KA789f9Y4_LCtoyqU3FM3",
+        hoverAnimation: "VH09gZfzWmSxuuocDY_-n",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2235,7 +2238,7 @@
         };
       }
       function _(_) {
-        const { bLoading: _, rgApps: __webpack_require__ } = (function () {
+        const { bLoading: _, rgApps: _ } = (function () {
           const [_, _] = (0, _.useState)(_());
           return (0, _.useEffect)(() => (0, _._)(_, _), []), _;
         })();
@@ -2243,7 +2246,7 @@
           bLoading: _,
           app: (0, _.useMemo)(
             () => __webpack_require__.find((_) => _.game_id === _),
-            [__webpack_require__, _],
+            [_, _],
           ),
         };
       }
@@ -2252,8 +2255,8 @@
           ? _().LoadThumbnails(_, _, _, _, _, null == _ || _)
           : null;
       }
-      function _(_, _, _) {
-        return null != _() ? _().TakeScreenshot(_, _, _.valMS) : null;
+      function _(_, _, _, _) {
+        return null != _() ? _().TakeScreenshot(_, _, _.valMS, _) : null;
       }
       function _() {
         return null != _()
@@ -3603,7 +3606,7 @@
           }
         }
         async RemoveUserMarker(_, _) {
-          const { fnRemoveUserTimelineMarker: __webpack_require__ } = _(),
+          const { fnRemoveUserTimelineMarker: _ } = _(),
             _ = this.m_timelineLoader.GetGameID();
           return 1 == (await __webpack_require__(_, this.GetClipID(), _, _))
             ? (this.m_timelineLoader.RemoveUserMarker(_, _), !0)
@@ -3707,7 +3710,7 @@
       function _(_) {
         const {
             children: _,
-            mode: __webpack_require__,
+            mode: _,
             fnGetManifest: _,
             loader: _,
             recordingState: _,
@@ -3718,9 +3721,7 @@
             playbackDefinition: _,
             clipSummaries: _,
           } = _,
-          [_] = _.useState(
-            () => new _(_, _, __webpack_require__, _, _, _, _, _),
-          );
+          [_] = _.useState(() => new _(_, _, _, _, _, _, _, _));
         (0, _.useEffect)(() => {
           _.SetLoader(_);
         }, [_, _]),
@@ -4799,17 +4800,15 @@
           if (!this.m_timelineMask) return null;
           const _ = this.m_timelineMask.GetTimelineOffsetFromGlobal(_, 0);
           if (!_) return null;
-          const { nTimelineOffsetMS: __webpack_require__, strTimelineID: _ } =
-            _;
+          const { nTimelineOffsetMS: _, strTimelineID: _ } = _;
           if (!_) return null;
           if (this.m_mapTimelineClips.has(_)) {
             return this.m_mapTimelineClips
               .get(_)
               .find(
                 (_) =>
-                  _.msTimelineOffset <= __webpack_require__.valMS &&
-                  _.msTimelineOffset + _.msDuration >=
-                    __webpack_require__.valMS,
+                  _.msTimelineOffset <= _.valMS &&
+                  _.msTimelineOffset + _.msDuration >= _.valMS,
               );
           }
           return null;
@@ -4920,7 +4919,7 @@
       function _(_) {
         let {
             loader: _,
-            playbackCoordinator: __webpack_require__,
+            playbackCoordinator: _,
             children: _,
             clipSummaries: _,
             refTimelineParentCtn: _,
@@ -4929,7 +4928,7 @@
         return (
           (0, _.useEffect)(() => {
             if (!_) return;
-            let _ = new _(_, __webpack_require__, _);
+            let _ = new _(_, _, _);
             return _(_), () => _.Close();
           }, [_]),
           (0, _.useEffect)(() => {
@@ -5124,7 +5123,7 @@
       });
       function _(_) {
         const { children: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(),
@@ -5177,7 +5176,7 @@
         const _ = (0, _.useMemo)(
           () => ({
             bContainerFocus: _,
-            bInContainer: __webpack_require__,
+            bInContainer: _,
             nMouseClientXPX: _,
             globalMouseXPX: _,
             scrollWindowMouseXPX: _,
@@ -5185,7 +5184,7 @@
             bContextMenuOpen: _,
             setContextMenuOpen: _,
           }),
-          [_, __webpack_require__, _, _, _, _, _],
+          [_, _, _, _, _, _, _],
         );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -5264,7 +5263,7 @@
       function _(_) {
         const {
             playbackCoordinator: _,
-            timelineView: __webpack_require__,
+            timelineView: _,
             nGlobalOffsetMS: _,
             fnSetSelectionClipRange: _,
             isCurrentPlayback: _,
@@ -5273,23 +5272,19 @@
             onContextMenuOpenChange: _,
           } = _,
           _ = (0, _._)(() => _.GetClipsAtGlobalMS(_)),
-          _ = _(__webpack_require__);
+          _ = _(_);
         (0, _.useEffect)(() => (_(!0), () => _(!1)), [_]);
         const _ = (() => {
-            const { strTimelineID: _, nTimelineOffsetMS: __webpack_require__ } =
+            const { strTimelineID: _, nTimelineOffsetMS: _ } =
               _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
             if (!_) return null;
             const _ = _.GetLoader().GetTimelineData(_);
             if (!_) return null;
-            const _ = _._(
-              _.m_rgPhases,
-              (_) => __webpack_require__.valMS - parseInt(_.time),
-            );
+            const _ = _._(_.m_rgPhases, (_) => _.valMS - parseInt(_.time));
             if (_ < 0) return null;
             const _ = _.m_rgPhases[_];
-            return __webpack_require__.valMS >= parseInt(_.time) &&
-              __webpack_require__.valMS <=
-                parseInt(_.time) + parseInt(_.duration)
+            return _.valMS >= parseInt(_.time) &&
+              _.valMS <= parseInt(_.time) + parseInt(_.duration)
               ? {
                   strTimelineID: _,
                   phase: _,
@@ -5300,7 +5295,7 @@
         return (
           (0, _.useEffect)(
             () => () => __webpack_require__.SetPhaseToHighlight(null),
-            [__webpack_require__],
+            [_],
           ),
           (0, _.jsxs)(_._, {
             refInstance: _,
@@ -5332,13 +5327,10 @@
               }),
               (0, _.jsx)(_._, {
                 onSelected: () => {
-                  const {
-                      strTimelineID: _,
-                      nTimelineOffsetMS: __webpack_require__,
-                    } = _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS),
-                    _ = _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_),
-                    _ = (0, _._)(__webpack_require__.valMS + _);
-                  _(_.GetGameID(), _, _);
+                  const { strTimelineID: _, nTimelineOffsetMS: _ } =
+                    _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
+                  _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_);
+                  _(_.GetGameID(), _, _, _.GetClipID());
                 },
                 className: _.TimelineContextMenuItem,
                 children: (0, _.jsxs)("div", {
@@ -5399,7 +5391,7 @@
                 (0, _.jsx)(_._, {
                   onSelected: () => {
                     if (!_) return;
-                    const { phase: _, strTimelineID: __webpack_require__ } = _;
+                    const { phase: _, strTimelineID: _ } = _;
                     !(function (_, _, _, _) {
                       const _ = _ + 1,
                         _ = _ + _ - 2;
@@ -5426,7 +5418,7 @@
                       ).create(!1);
                     })(
                       _.GetGameID(),
-                      __webpack_require__,
+                      _,
                       parseInt(_.time),
                       parseInt(_.duration),
                     );
@@ -5465,10 +5457,7 @@
         );
       }
       function _(_) {
-        const {
-            playbackCoordinator: _,
-            fnSetSelectionClipRange: __webpack_require__,
-          } = _,
+        const { playbackCoordinator: _, fnSetSelectionClipRange: _ } = _,
           _ = (0, _.useRef)(void 0),
           { onMarkerCreated: _ } = _();
         return (0, _.jsxs)(_._, {
@@ -5499,14 +5488,10 @@
             (0, _.jsx)(_._, {
               onSelected: () => {
                 const _ = _.GetGlobalMSPlaytime(),
-                  { strTimelineID: __webpack_require__, nTimelineOffsetMS: _ } =
-                    _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS),
-                  _ =
-                    _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(
-                      __webpack_require__,
-                    ),
-                  _ = (0, _._)(_.valMS + _);
-                _(_.GetGameID(), __webpack_require__, _);
+                  { strTimelineID: _, nTimelineOffsetMS: _ } =
+                    _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
+                _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_);
+                _(_.GetGameID(), _, _, _.GetClipID());
               },
               className: _.TimelineContextMenuItem,
               children: (0, _.jsxs)("div", {
@@ -5734,7 +5719,7 @@
       function _(_) {
         let {
           entry: _,
-          strMarkerIcon: __webpack_require__,
+          strMarkerIcon: _,
           onClick: _,
           onMouseEnter: _,
           onMouseLeave: _,
@@ -5759,12 +5744,12 @@
           onMouseLeave: _,
           children: (0, _.jsx)(_, {
             entry: _,
-            strMarkerIcon: __webpack_require__,
+            strMarkerIcon: _,
           }),
         });
       }
       function _(_) {
-        let { entry: _, strMarkerIcon: __webpack_require__ } = _;
+        let { entry: _, strMarkerIcon: _ } = _;
         const _ = _().GetGameID();
         return (0, _._)(_)
           ? (0, _.jsx)(_, {
@@ -5773,19 +5758,19 @@
             })
           : (0, _._)(_)
             ? (0, _.jsx)(_, {})
-            : _(__webpack_require__)
+            : _(_)
               ? (0, _.jsx)(_, {
                   entry: _,
-                  strMarkerIcon: __webpack_require__,
+                  strMarkerIcon: _,
                 })
               : (0, _.jsx)(_, {
-                  strMarkerIcon: __webpack_require__,
+                  strMarkerIcon: _,
                   strGameID: _,
                 });
       }
       function _(_) {
-        const { achievementEntry: _, strGameID: __webpack_require__ } = _,
-          _ = _(new _._(__webpack_require__).GetAppID(), _.achievement_name);
+        const { achievementEntry: _, strGameID: _ } = _,
+          _ = _(new _._(_).GetAppID(), _.achievement_name);
         let _, _;
         if (_)
           (_ = "white"),
@@ -5808,7 +5793,7 @@
         });
       }
       function _(_) {
-        const { entry: _, strMarkerIcon: __webpack_require__ } = _;
+        const { entry: _, strMarkerIcon: _ } = _;
         let _, _;
         (0, _._)(_)
           ? ((_ = {
@@ -5816,7 +5801,7 @@
               color: _.Blue,
             }),
             (_ = _.CustomMarker))
-          : (_ = _(__webpack_require__));
+          : (_ = _(_));
         const _ = _(_.color);
         return (0, _.jsx)(_, {
           color: _,
@@ -5827,9 +5812,9 @@
         });
       }
       function _(_) {
-        const { icon: _, className: __webpack_require__ } = _;
+        const { icon: _, className: _ } = _;
         return _(_).func({
-          className: __webpack_require__,
+          className: _,
         });
       }
       function _(_) {
@@ -5843,16 +5828,16 @@
         });
       }
       function _(_) {
-        const { strMarkerIcon: _, strGameID: __webpack_require__ } = _;
+        const { strMarkerIcon: _, strGameID: _ } = _;
         return (0, _.jsx)(_, {
           children: (0, _.jsx)(_, {
             icon: _,
-            gameID: __webpack_require__,
+            gameID: _,
           }),
         });
       }
       function _(_) {
-        const { icon: _, gameID: __webpack_require__, className: _ } = _,
+        const { icon: _, gameID: _, className: _ } = _,
           _ = (function (_, _) {
             return _
               ? _(_, _)
@@ -5860,7 +5845,7 @@
                   "useGameMarkerFromID called in a context where the hook isn't defined.",
                 ),
                 null);
-          })(new _._(__webpack_require__).GetAppID(), _);
+          })(new _._(_).GetAppID(), _);
         if (_(_))
           return (0, _.jsx)(_, {
             ..._,
@@ -5892,14 +5877,14 @@
         );
       }
       function _(_) {
-        const { children: _, color: __webpack_require__ } = _;
+        const { children: _, color: _ } = _;
         return (0, _.jsx)("div", {
           className: _.MarkerCtn,
           children: (0, _.jsx)("div", {
             className: _.Marker,
-            style: __webpack_require__
+            style: _
               ? {
-                  color: __webpack_require__,
+                  color: _,
                 }
               : null,
             children: _,
@@ -5912,7 +5897,7 @@
       function _() {
         const _ = _(),
           _ = (0, _._)(() => _.GetDisplayHighlightEntry()),
-          [__webpack_require__, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
           _ = _.useRef(0);
         return (
           (0, _.useEffect)(() => {
@@ -5933,9 +5918,9 @@
               );
             _(null);
           }, [_, _]),
-          __webpack_require__
+          _
             ? (0, _.jsx)(_, {
-                entry: __webpack_require__,
+                entry: _,
               })
             : null
         );
@@ -6024,12 +6009,7 @@
           : null;
       }
       function _(_) {
-        const {
-          entry: _,
-          strMarkerIcon: __webpack_require__,
-          title: _,
-          description: _,
-        } = _;
+        const { entry: _, strMarkerIcon: _, title: _, description: _ } = _;
         return (0, _.jsx)("div", {
           className: _().PlayerHighlightBanner,
           children: (0, _.jsxs)("div", {
@@ -6039,7 +6019,7 @@
                 className: _().HighlightIcon,
                 children: (0, _.jsx)(_, {
                   entry: _,
-                  strMarkerIcon: __webpack_require__,
+                  strMarkerIcon: _,
                 }),
               }),
               (0, _.jsxs)("div", {
@@ -6124,7 +6104,7 @@
       function _(_) {
         const {
             disableSound: _,
-            positionAbsolute: __webpack_require__ = !0,
+            positionAbsolute: _ = !0,
             refVideoResize: _,
             style: _,
             fullscreen: _,
@@ -6142,17 +6122,12 @@
           _ = (function () {
             const _ = _(),
               _ = (0, _._)(() => _.GetGlobalMSPlaytime()),
-              { nGlobalEndMS: __webpack_require__, nGlobalStartMS: _ } = _(),
+              { nGlobalEndMS: _, nGlobalStartMS: _ } = _(),
               _ = _.GetGameRecordingVideo();
             return (
-              !(
-                (0, _._)(() => _.GetPlaybackError()) ||
-                !_ ||
-                !_ ||
-                !__webpack_require__
-              ) &&
+              !((0, _._)(() => _.GetPlaybackError()) || !_ || !_ || !_) &&
               _.valMS >= _.valMS &&
-              _.valMS <= __webpack_require__.valMS
+              _.valMS <= _.valMS
             );
           })(),
           _ = _(),
@@ -6193,7 +6168,7 @@
         let _ = (0, _._)(
           _().GameRecordingPlayer,
           _ && _().NoVideo,
-          __webpack_require__ && _().PositionAbsolute,
+          _ && _().PositionAbsolute,
           _ && _().ClippingMode,
           _ && _().Overlay,
           _ && _().PlayingClippedRegion,
@@ -6417,7 +6392,7 @@
       function _() {
         const _ = _(),
           _ = (0, _._)(() => _.GetGamepadMode()),
-          { onNavigateToClip: __webpack_require__, onNavigateToFAQ: _ } = _(),
+          { onNavigateToClip: _, onNavigateToFAQ: _ } = _(),
           _ = (0, _._)(() => _.GetGlobalMSPlaytime()),
           _ = _.GetClosestPreviousRecordingForGlobalMS(_),
           _ = _.GetClosestNextRecordingForGlobalMS(_),
@@ -6449,7 +6424,7 @@
                 __webpack_require__(_[0].strClipID),
                 _.stopPropagation());
             },
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsxs)("div", {
           className: _().PlayerError,
@@ -6556,7 +6531,7 @@
         _ = _.memo(function (_) {
           const {
               msVisibleStart: _,
-              msTimelineStart: __webpack_require__,
+              msTimelineStart: _,
               pxVisibleDuration: _,
               pxVisibleStart: _,
             } = _,
@@ -6573,8 +6548,8 @@
               };
             })(),
             _ = _(),
-            _ = Math.ceil((_ - __webpack_require__) / _),
-            _ = __webpack_require__ + _ * _,
+            _ = Math.ceil((_ - _) / _),
+            _ = _ + _ * _,
             _ = _.ConvertGlobalMSToGlobalPXOffset(_),
             _ = (0, _.useMemo)(() => {
               const _ = Math.ceil(_ / _),
@@ -6615,11 +6590,8 @@
             : null;
         });
       function _(_) {
-        const {
-            globalOffsetPX: _,
-            timelineRelativeIndex: __webpack_require__,
-          } = _,
-          _ = __webpack_require__ % 20 == 0 ? _.Major : _.Minor;
+        const { globalOffsetPX: _, timelineRelativeIndex: _ } = _,
+          _ = _ % 20 == 0 ? _.Major : _.Minor;
         return (0, _.jsx)("div", {
           className: _.TimeTick,
           style: {
@@ -6659,7 +6631,7 @@
       function _(_) {
         const {
             closeModal: _,
-            strTimelineID: __webpack_require__,
+            strTimelineID: _,
             entry: _,
             playbackCoordinator: _,
             fnClearSelection: _,
@@ -6679,7 +6651,7 @@
               onCancel: _,
               onOK: async () => {
                 _.fnSetLoading(!0);
-                (await _.UpdateUserMarker(__webpack_require__, _, _, _))
+                (await _.UpdateUserMarker(_, _, _, _))
                   ? _()
                   : (_.fnSetError(!0),
                     _.fnSetStrError((0, _._)("#Marker_UpdateFailed")));
@@ -6704,7 +6676,7 @@
       function _(_) {
         const {
             playbackCoordinator: _,
-            timelineView: __webpack_require__,
+            timelineView: _,
             markerInfo: _,
             setSelectedMarker: _,
             clearRange: _,
@@ -6718,7 +6690,7 @@
           _ = (0, _._)(() =>
             _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_.nGlobalMS.valMS),
           ),
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = (_) => {
             let _ = _,
               _ = _;
@@ -6879,7 +6851,7 @@
       function _(_) {
         var _;
         const {
-            markerInfo: __webpack_require__,
+            markerInfo: _,
             view: _,
             coordinator: _,
             gameID: _,
@@ -6887,7 +6859,7 @@
             timelineID: _,
             faded: _,
           } = _,
-          _ = __webpack_require__.nGlobalMS,
+          _ = _.nGlobalMS,
           _ = (0, _._)(() => _.ConvertGlobalMSToGlobalPXOffset(_.valMS)),
           _ = (0, _._)(() => {
             const _ = _.GetThumbnailComponent();
@@ -6896,7 +6868,7 @@
           _ = (function () {
             const _ = _(),
               _ = _(),
-              { setSelectedMarker: __webpack_require__ } = _(),
+              { setSelectedMarker: _ } = _(),
               _ = _(),
               { onNavigateToClip: _, onNavigateToScreenshot: _ } = _(),
               _ = _(),
@@ -6908,7 +6880,7 @@
                   markerInfo: _,
                   playbackCoordinator: _,
                   timelineView: _,
-                  setSelectedMarker: __webpack_require__,
+                  setSelectedMarker: _,
                   onNavigateToClip: _,
                   onNavigateToScreenshot: _,
                   bLowDiskSpace: _,
@@ -6916,16 +6888,14 @@
                 });
                 (0, _._)(_, _, _);
               },
-              [_, _, _, _, __webpack_require__, _, _, _],
+              [_, _, _, _, _, _, _, _],
             );
           })(),
           { selectedMarker: _ } = _(),
           _ =
-            (null === (_ = __webpack_require__.entry) || void 0 === _
-              ? void 0
-              : _._) == (null == _ ? void 0 : _.strEntryID) &&
-            __webpack_require__.strTimelineID ==
-              (null == _ ? void 0 : _.strTimelineID),
+            (null === (_ = _.entry) || void 0 === _ ? void 0 : _._) ==
+              (null == _ ? void 0 : _.strEntryID) &&
+            _.strTimelineID == (null == _ ? void 0 : _.strTimelineID),
           { ref: _, ..._ } = (function (_, _) {
             const _ = _.useRef(void 0),
               _ = _.useRef(void 0),
@@ -6993,20 +6963,20 @@
                 onMouseLeave: _,
               }
             );
-          })(_, __webpack_require__),
+          })(_, _),
           _ = _.useCallback(
             (_) => {
               const _ = _.valMS - 5e3,
                 _ = _.FindTimelineOffsets(_),
                 _ = Math.max(_, _.globalOffsetMS);
               _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                _.SetDisplayHighlightEntry(__webpack_require__.entry),
+                _.SetDisplayHighlightEntry(_.entry),
                 _.stopPropagation(),
                 _._.ReportTrackedAction(
-                  `/GameRecording/Marker/Click/${__webpack_require__.entry.type}`,
+                  `/GameRecording/Marker/Click/${_.entry.type}`,
                 );
             },
-            [_, _.valMS, _, _, __webpack_require__],
+            [_, _.valMS, _, _, _],
           ),
           _ = {
             transform: `translateX( calc( ${_}px - 50% ))`,
@@ -7020,7 +6990,7 @@
           style: _,
           ref: _,
           onContextMenu: (_) => {
-            _(_, __webpack_require__, {
+            _(_, _, {
               bDisableMouseOverlay: !0,
               bForcePopup: !0,
               bAlwaysOnTop: !0,
@@ -7037,13 +7007,13 @@
                   _,
                   {
                     classNames: _.TimelineMarker,
-                    entry: __webpack_require__.entry,
-                    strMarkerIcon: __webpack_require__.strMarkerIcon,
+                    entry: _.entry,
+                    strMarkerIcon: _.strMarkerIcon,
                     faded: _,
                     onClick: _,
                     bSelectedMarker: _,
                   },
-                  __webpack_require__.entry._,
+                  _.entry._,
                 ),
               },
               _.valMS,
@@ -7176,12 +7146,12 @@
       function _(_) {
         const {
             view: _,
-            entry: __webpack_require__,
+            entry: _,
             nGlobalEntryEndMS: _,
             nGlobalTLStartMS: _,
           } = _,
           _ = _(),
-          _ = (0, _._)(parseInt(__webpack_require__.time) + _.valMS),
+          _ = (0, _._)(parseInt(_.time) + _.valMS),
           _ = (0, _._)(() => {
             const _ = _.ConvertGlobalMSToGlobalPXOffset(_.valMS),
               _ = _.GetVirtualWindowStartPX();
@@ -7198,10 +7168,10 @@
             width: _ - _,
           },
           _ = (0, _._)({
-            [_.Unspecified]: __webpack_require__.mode === _._.Invalid,
-            [_.Staging]: __webpack_require__.mode === _._.Staging,
-            [_.Menus]: __webpack_require__.mode === _._.Menus,
-            [_.Playing]: __webpack_require__.mode === _._.Playing,
+            [_.Unspecified]: _.mode === _._.Invalid,
+            [_.Staging]: _.mode === _._.Staging,
+            [_.Menus]: _.mode === _._.Menus,
+            [_.Playing]: _.mode === _._.Playing,
           });
         return (0, _.jsx)(
           "div",
@@ -7209,7 +7179,7 @@
             className: (0, _._)(_.GameModeMarker, _, _ && _.GameModeMarkerClip),
             style: _,
           },
-          __webpack_require__._,
+          _._,
         );
       }
       const _ = _.memo(function (_) {
@@ -7230,7 +7200,7 @@
         _ = _.memo(function (_) {
           const {
               timelineID: _,
-              globalOffsetMS: __webpack_require__,
+              globalOffsetMS: _,
               nDurationMS: _,
             } = _.timeline,
             _ = _(),
@@ -7247,8 +7217,8 @@
                     },
                   ];
             }),
-            _ = (0, _._)(__webpack_require__ + _),
-            _ = __webpack_require__ - _.GetTimelineOffsetMS(_);
+            _ = (0, _._)(_ + _),
+            _ = _ - _.GetTimelineOffsetMS(_);
           let _ = [];
           for (let _ = 0; _ < _.length; _++) {
             const _ = (0, _._)(
@@ -7310,14 +7280,14 @@
               });
       });
       function _(_) {
-        const { view: _, setDragActive: __webpack_require__ } = _,
+        const { view: _, setDragActive: _ } = _,
           _ = (0, _._)(
             () => _.GetVisualWindowStartPX() + _.GetScrollWindowWidth() / 2,
           );
         return (0, _.jsx)(_, {
           playheadPosition: _,
           children: (0, _.jsx)(_, {
-            setDragActive: __webpack_require__,
+            setDragActive: _,
             bDragActive: !1,
           }),
         });
@@ -7347,7 +7317,7 @@
           );
         }),
         _ = (0, _.memo)(function (_) {
-          const { dragState: _, setDragActive: __webpack_require__ } = _,
+          const { dragState: _, setDragActive: _ } = _,
             { bDragActive: _, bPausedOnDragStart: _ } = _,
             _ = _(),
             _ = _(),
@@ -7518,7 +7488,7 @@
                 className: _ ? _.Active : void 0,
                 playheadPosition: _,
                 children: (0, _.jsx)(_, {
-                  setDragActive: __webpack_require__,
+                  setDragActive: _,
                   bDragActive: _,
                 }),
               }),
@@ -7526,15 +7496,13 @@
           );
         }),
         _ = (0, _.memo)(function (_) {
-          const { setDragActive: _, bDragActive: __webpack_require__ } = _,
+          const { setDragActive: _, bDragActive: _ } = _,
             _ = _(),
             _ = (_) => {
-              __webpack_require__ || _.SetThumbnailComponent(_.Playhead),
-                _.stopPropagation();
+              _ || _.SetThumbnailComponent(_.Playhead), _.stopPropagation();
             },
             _ = (_) => {
-              __webpack_require__ || _.SetThumbnailComponent(null),
-                _.stopPropagation();
+              _ || _.SetThumbnailComponent(null), _.stopPropagation();
             };
           return (0, _.jsx)("div", {
             className: _.PlayHeadContent,
@@ -7632,15 +7600,11 @@
         });
       }
       function _(_) {
-        const {
-          className: _,
-          playheadPosition: __webpack_require__,
-          children: _,
-        } = _;
+        const { className: _, playheadPosition: _, children: _ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.PlayHeadContainer, _),
           style: {
-            transform: `translateX( calc(${__webpack_require__}px - 50% ))`,
+            transform: `translateX( calc(${_}px - 50% ))`,
           },
           children: _,
         });
@@ -7649,7 +7613,7 @@
       const _ = parseInt(_.thumbnailWidth),
         _ = _.forwardRef(function (_, _) {
           const {
-              globalMS: __webpack_require__,
+              globalMS: _,
               children: _,
               imgClassName: _,
               className: _,
@@ -7660,9 +7624,7 @@
             _ = _.GetClipID(),
             _ = (0, _._)(() => _.GetRecordingMode()),
             _ = (0, _._)(() =>
-              _.ConvertGlobaOffsetToRecordingAndRelativeOffset(
-                __webpack_require__,
-              ),
+              _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_),
             ),
             _ = (_(), !1),
             _ = null == _ ? void 0 : _.nRecordingOffsetMS,
@@ -7773,11 +7735,7 @@
           : null;
       }
       function _(_) {
-        const {
-          title: _,
-          description: __webpack_require__,
-          thumbnailEntry: _,
-        } = _;
+        const { title: _, description: _, thumbnailEntry: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.InfoBoxContainer,
           children: [
@@ -7801,25 +7759,19 @@
             (0, _.jsx)("div", {
               className: _.DescriptionBlock,
               children:
-                __webpack_require__ &&
+                _ &&
                 (0, _.jsx)("div", {
                   className: _.Description,
-                  children: __webpack_require__,
+                  children: _,
                 }),
             }),
           ],
         });
       }
       const _ = _.forwardRef(function (_, _) {
-        const {
-            globalPX: __webpack_require__,
-            onMouseEnter: _,
-            onMouseLeave: _,
-          } = _,
+        const { globalPX: _, onMouseEnter: _, onMouseLeave: _ } = _,
           _ = _(),
-          _ = (0, _._)(() =>
-            _.ConvertPXOffsetToGlobalMS(__webpack_require__, !1),
-          ),
+          _ = (0, _._)(() => _.ConvertPXOffsetToGlobalMS(_, !1)),
           _ = (0, _._)(() => _.GetThumbnailComponent()),
           _ = _(),
           _ = (0, _._)(() => _.GetRecordingMode());
@@ -7842,7 +7794,7 @@
                 _ === _.Highlight
                   ? (0, _.jsx)(_, {})
                   : (0, _.jsx)(_, {
-                      globalPX: __webpack_require__,
+                      globalPX: _,
                     }),
                 (0, _.jsx)(_, {
                   globalMS: _,
@@ -7870,7 +7822,7 @@
       }
       function _(_) {
         const { globalMS: _ } = _,
-          { setSelectedMarker: __webpack_require__ } = _(),
+          { setSelectedMarker: _ } = _(),
           _ = _(),
           _ = _(),
           _ = (0, _._)(() => _.FindRangeEventsAtGlobalMS(_)),
@@ -7894,8 +7846,7 @@
                         _,
                       );
                     _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                      null == __webpack_require__ ||
-                        __webpack_require__(_._, _, _, _),
+                      null == _ || __webpack_require__(_._, _, _, _),
                       _._.ReportTrackedAction(
                         "/GameRecording/Tooltip/ClipFromRangeEvent",
                       ),
@@ -8071,13 +8022,11 @@
       }
       function _(_) {
         const { setSelectedMarker: _ } = _(),
-          { markerInfo: __webpack_require__ } = _,
+          { markerInfo: _ } = _,
           _ = _(),
           _ = (0, _._)(() => _.ShouldModeShowClipControls()),
           _ = (0, _._)(() =>
-            _.ConvertGlobaOffsetToRecordingAndRelativeOffset(
-              __webpack_require__.nGlobalMS.valMS,
-            ),
+            _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_.nGlobalMS.valMS),
           ),
           _ = _(),
           _ = _();
@@ -8095,23 +8044,16 @@
                 onClick: (_) => {
                   let _ = _,
                     _ = _;
-                  (0, _._)(__webpack_require__.entry) &&
-                    ((_ = 0),
-                    (_ = parseInt(__webpack_require__.entry.duration)));
+                  (0, _._)(_.entry) &&
+                    ((_ = 0), (_ = parseInt(_.entry.duration)));
                   const [_, _] = _.GetLoader().CreateGlobalRangeForTimeline(
-                    __webpack_require__.strTimelineID,
-                    __webpack_require__.nGlobalMS.valMS,
+                    _.strTimelineID,
+                    _.nGlobalMS.valMS,
                     _,
                     _,
                   );
                   _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                    null == _ ||
-                      _(
-                        __webpack_require__.entry._,
-                        __webpack_require__.strTimelineID,
-                        _,
-                        _,
-                      ),
+                    null == _ || _(_.entry._, _.strTimelineID, _, _),
                     _(),
                     _._.ReportTrackedAction(
                       "/GameRecording/Tooltip/ClipFromHighlight",
@@ -8202,7 +8144,7 @@
         });
       }
       function _(_) {
-        const { entry: _, gameID: __webpack_require__ } = _,
+        const { entry: _, gameID: _ } = _,
           _ = _.handle,
           { onNavigateToScreenshot: _ } = _();
         return (0, _.jsx)(_._, {
@@ -8214,7 +8156,7 @@
             onClick: () => {
               _ &&
                 (_._.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
-                _(__webpack_require__, _));
+                _(_, _));
             },
             children: (0, _.jsx)(_._, {}),
           }),
@@ -8343,7 +8285,7 @@
       function _(_) {
         const {
             globalPX: _,
-            setInteractingWithThumbnail: __webpack_require__,
+            setInteractingWithThumbnail: _,
             bInteractingWithThumbnail: _,
           } = _,
           _ = _(),
@@ -8376,7 +8318,7 @@
               (_.current = null),
               _.GetAutoScrollPaused() && _.SetAutoScrollPauseTimeout(),
               _.SetThumbnailComponent(null);
-          }, [__webpack_require__, _, _]),
+          }, [_, _, _]),
           _ = (0, _.useCallback)(
             (_, _) => {
               if (!_.current || !_.current) return;
@@ -8464,10 +8406,7 @@
             : null;
         }),
         _ = (0, _.memo)(function (_) {
-          const {
-              activeControlState: _,
-              setActiveControlState: __webpack_require__,
-            } = _,
+          const { activeControlState: _, setActiveControlState: _ } = _,
             [_, _] = (0, _.useState)(),
             [_, _] = (0, _.useState)(),
             _ = _(),
@@ -8510,7 +8449,7 @@
               children: [
                 (0, _.jsx)(_, {
                   isActive: "left" === _,
-                  setControlState: __webpack_require__,
+                  setControlState: _,
                   setRangeControlPX: _,
                   pxOffset: _,
                 }),
@@ -8521,7 +8460,7 @@
                 }),
                 (0, _.jsx)(_, {
                   isActive: "right" === _,
-                  setControlState: __webpack_require__,
+                  setControlState: _,
                   setRangeControlPX: _,
                   pxOffset: _,
                 }),
@@ -8539,30 +8478,26 @@
       const _ = (0, _.memo)(function (_) {
         const {
             isActive: _,
-            setControlState: __webpack_require__,
+            setControlState: _,
             setRangeControlPX: _,
             pxOffset: _,
           } = _,
           _ = _();
         return _
           ? (0, _.jsx)(_, {
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
               pxOffset: _,
             })
           : (0, _.jsx)(_, {
               offsetMS: _.valMS,
               direction: "left",
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
             });
       });
       function _(_) {
-        const {
-            setControlState: _,
-            setRangeControlPX: __webpack_require__,
-            pxOffset: _,
-          } = _,
+        const { setControlState: _, setRangeControlPX: _, pxOffset: _ } = _,
           _ = _(),
           _ = _(),
           _ = _(),
@@ -8659,7 +8594,7 @@
               } else _(_._(_.valPX, 0, _));
               _.current = _.valPX;
             }, [_.valPX, _.valMS, _.valPX, _, _, _, _, _, _]);
-          })(_(), _, _, _, _, __webpack_require__),
+          })(_(), _, _, _, _, _),
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
@@ -8674,30 +8609,26 @@
       const _ = (0, _.memo)(function (_) {
         const {
             isActive: _,
-            setControlState: __webpack_require__,
+            setControlState: _,
             setRangeControlPX: _,
             pxOffset: _,
           } = _,
           _ = _();
         return _
           ? (0, _.jsx)(_, {
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
               pxOffset: _,
             })
           : (0, _.jsx)(_, {
               offsetMS: _.valMS,
               direction: "right",
-              setControlState: __webpack_require__,
+              setControlState: _,
               setRangeControlPX: _,
             });
       });
       function _(_) {
-        const {
-            setControlState: _,
-            setRangeControlPX: __webpack_require__,
-            pxOffset: _,
-          } = _,
+        const { setControlState: _, setRangeControlPX: _, pxOffset: _ } = _,
           _ = _(),
           _ = _(),
           _ = _(),
@@ -8796,7 +8727,7 @@
               } else _(_._(_.valPX, 0, _));
               _.current = _.valPX;
             }, [_.valMS, _.valPX, _, _, _, _, _, _.valPX, _]);
-          })(_(), _, _, _, _, __webpack_require__),
+          })(_(), _, _, _, _, _),
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
@@ -8811,7 +8742,7 @@
       function _(_) {
         const {
             offsetMS: _,
-            direction: __webpack_require__,
+            direction: _,
             setControlState: _,
             setRangeControlPX: _,
           } = _,
@@ -8831,9 +8762,9 @@
               const _ = (0, _._)(_);
               let _, _;
               const _ = () => {
-                _(__webpack_require__),
+                _(_),
                   _.SetThumbnailComponent(
-                    "left" === __webpack_require__ ? _.RangeLeft : _.RangeRight,
+                    "left" === _ ? _.RangeLeft : _.RangeRight,
                   ),
                   _();
               };
@@ -8845,12 +8776,10 @@
               _.addEventListener("mouseup", _),
                 (_ = () => _.removeEventListener("mouseup", _));
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           ),
           _ = (_) => {
-            _.SetThumbnailComponent(
-              "left" === __webpack_require__ ? _.RangeLeft : _.RangeRight,
-            );
+            _.SetThumbnailComponent("left" === _ ? _.RangeLeft : _.RangeRight);
           },
           _ = (_) => {
             _.SetThumbnailComponent(null);
@@ -8864,19 +8793,15 @@
           onBlur: _,
           children: (0, _.jsx)(_, {
             offsetPX: _,
-            direction: __webpack_require__,
+            direction: _,
           }),
         });
       }
       const _ = (0, _.memo)(function (_) {
-          const {
-            startOffsetPX: _,
-            endOffsetPX: __webpack_require__,
-            className: _,
-          } = _;
-          if (isNaN(_) || isNaN(__webpack_require__)) return null;
+          const { startOffsetPX: _, endOffsetPX: _, className: _ } = _;
+          if (isNaN(_) || isNaN(_)) return null;
           const _ = {
-            width: __webpack_require__ - _ || 0,
+            width: _ - _ || 0,
             transform: `translateX(${_}px)`,
           };
           return (0, _.jsx)("div", {
@@ -8885,9 +8810,9 @@
           });
         }),
         _ = (0, _.memo)(function (_) {
-          const { direction: _, offsetPX: __webpack_require__ } = _,
+          const { direction: _, offsetPX: _ } = _,
             _ = {
-              transform: `translateX( calc( ${__webpack_require__}px - 50%) )`,
+              transform: `translateX( calc( ${_}px - 50%) )`,
             },
             _ = _(),
             _ = (0, _._)(() => _.GetThumbnailComponent() === _.Playhead);
@@ -8980,12 +8905,12 @@
         });
       });
       function _(_) {
-        const { label: _, startPX: __webpack_require__, recordingMode: _ } = _;
+        const { label: _, startPX: _, recordingMode: _ } = _;
         let _ = _ == _.Overlay;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.TimelineRelativeDate, _ && _.Overlay),
           style: {
-            transform: `translateX(${__webpack_require__}px)`,
+            transform: `translateX(${_}px)`,
           },
           children: _,
         });
@@ -9010,14 +8935,9 @@
         });
       });
       function _(_) {
-        const {
-            isActive: _,
-            endPX: __webpack_require__,
-            startPX: _,
-            recordingType: _,
-          } = _,
+        const { isActive: _, endPX: _, startPX: _, recordingType: _ } = _,
           _ = {
-            width: __webpack_require__ - _ || 0,
+            width: _ - _ || 0,
             transform: `translateX(${_}px)`,
           },
           _ = _(),
@@ -9036,7 +8956,7 @@
             }),
             _ &&
               (0, _.jsx)(_, {
-                endPX: __webpack_require__,
+                endPX: _,
               }),
           ],
         });
@@ -9086,10 +9006,10 @@
           });
         }),
         _ = (0, _.memo)(function (_) {
-          const { endPX: _, startPX: __webpack_require__ } = _,
+          const { endPX: _, startPX: _ } = _,
             _ = {
-              width: _ - __webpack_require__ || 0,
-              transform: `translateX(${__webpack_require__}px)`,
+              width: _ - _ || 0,
+              transform: `translateX(${_}px)`,
             };
           return (0, _.jsx)("div", {
             className: _.ClipDecorator,
@@ -9255,7 +9175,7 @@
         });
       }
       function _(_) {
-        const { timelineView: _, scrollSize: __webpack_require__ } = _,
+        const { timelineView: _, scrollSize: _ } = _,
           _ = _(),
           _ = (function (_, _) {
             const _ = (0, _.useRef)(void 0),
@@ -9312,19 +9232,15 @@
                 onMouseLeave: _,
               }
             );
-          })(_, __webpack_require__),
+          })(_, _),
           _ = (0, _._)(() => _.GetTimelineMarginWidth()),
           _ = (0, _._)(() => _.GetScrollableWidthPX()),
           _ = (0, _.useCallback)(
             (_) => {
               const _ = _ + _;
-              return _._(
-                (_ * __webpack_require__.scrollBarWidth) / _,
-                0,
-                __webpack_require__.scrollBarWidth,
-              );
+              return _._((_ * _.scrollBarWidth) / _, 0, _.scrollBarWidth);
             },
-            [__webpack_require__.scrollBarWidth, _, _],
+            [_.scrollBarWidth, _, _],
           );
         return (0, _.jsxs)("div", {
           className: _.ScrollTrack,
@@ -9334,7 +9250,7 @@
               timelineView: _,
               playbackCoordinator: _,
               fnConvertGlobalPXToTrackPX: _,
-              scrollBarWidth: __webpack_require__.scrollBarWidth,
+              scrollBarWidth: _.scrollBarWidth,
             }),
             (0, _.jsx)(_, {
               timelineView: _,
@@ -9346,7 +9262,7 @@
       function _(_) {
         const {
             timelineView: _,
-            playbackCoordinator: __webpack_require__,
+            playbackCoordinator: _,
             fnConvertGlobalPXToTrackPX: _,
             scrollBarWidth: _,
           } = _,
@@ -9387,10 +9303,7 @@
         });
       }
       function _(_) {
-        const {
-            timelineView: _,
-            fnConvertGlobalPXToTrackPX: __webpack_require__,
-          } = _,
+        const { timelineView: _, fnConvertGlobalPXToTrackPX: _ } = _,
           _ = _(),
           _ = _(),
           _ = (0, _._)(() => {
@@ -9425,7 +9338,7 @@
       function _(_) {
         const {
             scrollSize: _,
-            timelineWidth: __webpack_require__,
+            timelineWidth: _,
             thumbWidth: _,
             timelineView: _,
           } = _,
@@ -9497,7 +9410,7 @@
                 bHiglightThumb: _,
               }
             );
-          })(_, __webpack_require__, _, _);
+          })(_, _, _, _);
         return (0, _.jsx)("div", {
           className: (0, _._)(_.ScrollThumb, _ && _.Highlight),
           style: {
@@ -9608,12 +9521,12 @@
       }
       function _(_) {
         const _ = _(),
-          { bShowTour: __webpack_require__, stopElems: _ } = (0, _._)(() => ({
+          { bShowTour: _, stopElems: _ } = (0, _._)(() => ({
             bShowTour: !_.BHasSeenTour(_),
             stopElems: _.GetTrackedStops(_),
           }));
         return {
-          bShowTour: __webpack_require__,
+          bShowTour: _,
           stopElems: _,
           onInteraction: (0, _.useCallback)(() => _.MarkTourSeen(_), [_, _]),
           onDismiss: (0, _.useCallback)(() => _.DismissTour(_), [_, _]),
@@ -9622,17 +9535,9 @@
         };
       }
       function _(_) {
-        const {
-            name: _,
-            tour: __webpack_require__,
-            options: _,
-            children: _,
-          } = _,
-          { updateStop: _ } = _(__webpack_require__),
-          _ = (0, _.useCallback)(
-            (_) => _(__webpack_require__, _, _, _),
-            [_, __webpack_require__, _],
-          ),
+        const { name: _, tour: _, options: _, children: _ } = _,
+          { updateStop: _ } = _(_),
+          _ = (0, _.useCallback)((_) => _(_, _, _, _), [_, _, _]),
           _ = _.Children.only(_),
           _ = (0, _._)(_, _.props.ref);
         return (0, _.cloneElement)(_.Children.only(_), {
@@ -9658,7 +9563,7 @@
       function _(_) {
         const {
           timelineOffsetMS: _,
-          nDurationMS: __webpack_require__,
+          nDurationMS: _,
           phase: _,
           timeline: _,
         } = _;
@@ -9670,7 +9575,7 @@
       function _(_) {
         var _;
         const {
-            children: __webpack_require__,
+            children: _,
             timeline: _,
             timelineOffsetMS: _,
             nDurationMS: _,
@@ -9732,7 +9637,7 @@
           onMouseLeave: _,
           onFocus: _,
           onBlur: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
@@ -9789,17 +9694,11 @@
         });
       }
       function _(_) {
-        const {
-            timelineView: _,
-            entry: __webpack_require__,
-            timelineOffset: _,
-          } = _,
-          _ = _ + parseInt(__webpack_require__.time),
+        const { timelineView: _, entry: _, timelineOffset: _ } = _,
+          _ = _ + parseInt(_.time),
           { pxStart: _, pxWidth: _ } = (0, _._)(() => ({
             pxStart: _.ConvertGlobalMSToGlobalPXOffset(_),
-            pxWidth: _.ConvertDurationMSToDeltaPX(
-              parseInt(__webpack_require__.duration),
-            ),
+            pxWidth: _.ConvertDurationMSToDeltaPX(parseInt(_.duration)),
           })),
           _ = {
             width: `${_}px`,
@@ -9826,7 +9725,7 @@
       function _(_) {
         const {
             loader: _,
-            className: __webpack_require__,
+            className: _,
             clipSummaries: _,
             refTimelineParentCtn: _,
             disableZoom: _,
@@ -9840,7 +9739,7 @@
         let _ = (0, _._)(
           _.ScrollAndControlsCtn,
           _.GetGamepadMode() && _.GamepadMode,
-          __webpack_require__,
+          _,
         );
         return (0, _.jsx)(_, {
           loader: _,
@@ -9951,9 +9850,9 @@
         });
       }
       function _(_) {
-        const { children: _, _: __webpack_require__, className: _ } = _;
+        const { children: _, _: _, className: _ } = _;
         return (0, _.jsx)("div", {
-          _: __webpack_require__,
+          _: _,
           className: (0, _._)(_, _.AbsoluteLayer),
           children: (0, _.jsx)("div", {
             className: _.RelativeLayer,
@@ -9971,7 +9870,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
+        const [_, _] = _.useState(!1);
         return (
           _.useEffect(() => {
             _(void 0, void 0).then(() => {
@@ -10074,10 +9973,10 @@
       }
       function _(_) {
         const { clip: _ } = _,
-          { loader: __webpack_require__, fnGetManifest: _ } = _(_);
+          { loader: _, fnGetManifest: _ } = _(_);
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsx)(_, {
-            loader: __webpack_require__,
+            loader: _,
             fnGetManifest: _,
             mode: _.CommunityClip,
             children: (0, _.jsxs)("div", {
@@ -10091,7 +9990,7 @@
                   }),
                 }),
                 (0, _.jsx)(_, {
-                  loader: __webpack_require__,
+                  loader: _,
                 }),
               ],
             }),
@@ -10344,12 +10243,12 @@
           const _ = await _._.GetTimelinesForApp({
               game_id: _,
             }),
-            { timelines: __webpack_require__ = [] } = _.Body().toObject();
+            { timelines: _ = [] } = _.Body().toObject();
           this.m_mapRunningTimelines.forEach((_, _) => {
             __webpack_require__.find((_) => _.timeline_id == _) ||
               __webpack_require__.push(_.m_metadata);
           }),
-            this.UpdateTimelineMetadata(__webpack_require__),
+            this.UpdateTimelineMetadata(_),
             (this.m_fnTimelineURLBuilder = (_) =>
               `https://steamloopback.host/gamerecordings/timelines/${_}.json`),
             (this.m_bInitialized = !0),
@@ -10362,11 +10261,11 @@
           });
           if (1 != _.GetEResult()) throw new Error("Unable to load clip " + _);
           const {
-            timelines: __webpack_require__ = [],
+            timelines: _ = [],
             game_id: _,
             first_timeline_start_offset_ms: _,
           } = _.Body().toObject();
-          (this.m_gameID = _), this.UpdateTimelineMetadata(__webpack_require__);
+          (this.m_gameID = _), this.UpdateTimelineMetadata(_);
           for (let _ of this.m_rgTimelineMetadata) {
             (0, _._)(`Loaded clip ${_} timeline ${_.metadata.timeline_id}`);
             for (let _ of _.metadata.recordings)
@@ -14785,6 +14684,11 @@
                     _: 3,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
+                  },
+                  source_clip_id: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),

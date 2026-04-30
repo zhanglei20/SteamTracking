@@ -90,7 +90,7 @@
     3049: (e, t, a) => {
       a.d(t, { J: () => s });
       var r = a(8527),
-        n = a(42475);
+        n = a(48891);
       function s() {
         return (0, n.A)().languages.map((e) => {
           return 2 == (t = e.strISOCode).length && r.TS.COUNTRY

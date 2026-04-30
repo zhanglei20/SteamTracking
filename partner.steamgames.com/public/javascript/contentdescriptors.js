@@ -114,7 +114,7 @@ function SaveSurvey( appid, bIsSupport )
 		}
 		else
 		{
-			ShowAlertDialog( 'Error Saving Survey', 'There was a problem trying to save the survey. Please try again.' );
+			ShowAlertDialog( 'Error Saving Survey', response.msg ? response.msg : 'There was a problem trying to save the survey. Please try again.' );
 		}
 	} );
 }

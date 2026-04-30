@@ -32,11 +32,24 @@
         HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
         HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
         HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
+        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
+        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
+        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
+        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
+        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
+        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
+        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
+        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
+        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     28124: () => {},
@@ -133,6 +146,18 @@
         UrlContainer: "_3CXjxVNiKxUH_xCflrU0fv",
         Url: "_3YxsXALKJ70zL3MTTWqibh",
         GenerateShareLinkBtn: "_23i3vxhJO5yZFZ8UkYUHfq",
+        BackgroundAnimation: "_2LOnSlelExzMt5V4a0dNMM",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1HvhiBok8gSNZxjvKJodk_",
+        "ItemFocusAnim-darkerGrey": "_27N4Tx9ZkLoouSi6u2L0Rj",
+        "ItemFocusAnim-darkGreySettings": "_3BuduqT5jtwJUrO_Rlx9pN",
+        "ItemFocusAnim-darkGrey": "_1t5LnzcxRDUwMaXczWLvT9",
+        "ItemFocusAnim-grey": "UvYtyIHWLaxtSAiaOZoaD",
+        "ItemFocusAnim-translucent-white-10": "_2Ze0Xg_Rmw0Fw4dtnjqu06",
+        "ItemFocusAnim-translucent-white-20": "_6KKdX8p_ia-DW2BgO6XxL",
+        "ItemFocusAnimBorder-darkGrey": "_2VHjMLLOWNhhfZTRb8KGKl",
+        "ItemFocusAnim-green": "_3qPaUa-qxMzbOWeav6OXLP",
+        focusAnimation: "_2YJq7kaNhJ2mQ-Kc9fGZdd",
+        hoverAnimation: "_1Ic0fzk_zPsp6jbxsdCaeZ",
       };
     },
     26019: (e) => {
@@ -248,6 +273,18 @@
         CategorySticker: "_1draD7X6gu1HpgfRr0k3bO",
         Inactive: "_1N55FNJtt9fgD3oEKh1ulo",
         CategoryStickerHover: "_16qkH83hzNBjI3OfNA2yPZ",
+        BackgroundAnimation: "_1seXoMt6Gw5ShAn1fMGCk1",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2Pfbc5UJLub15f3GMuUOpu",
+        "ItemFocusAnim-darkerGrey": "_1zD-uKidolXqoKdiqmbZmN",
+        "ItemFocusAnim-darkGreySettings": "_1CaH5L10wLn4wyijOgOTH6",
+        "ItemFocusAnim-darkGrey": "_3Hclo3bSXjWjLg7ak63JZU",
+        "ItemFocusAnim-grey": "_276KuR-DDgs7rfFECDuv2Q",
+        "ItemFocusAnim-translucent-white-10": "_1yYdEMizQD0Hu99aKPdShy",
+        "ItemFocusAnim-translucent-white-20": "_8CBvtVkjTgCz2X_r9V8wT",
+        "ItemFocusAnimBorder-darkGrey": "_3Buhs9OTFb_CFYf4_t6djI",
+        "ItemFocusAnim-green": "_436DEQij8XRuUbarXlQ7H",
+        focusAnimation: "_2oswwg33QBrwNVBaVy2Cz0",
+        hoverAnimation: "ux33-vIaysS2_ZFy8EmtK",
       };
     },
     20433: (e, a, t) => {
@@ -321,7 +358,7 @@
           } = e,
           g = (0, o.n9)(),
           w = (0, l.w)(),
-          p = (0, d.NT)(
+          A = (0, d.NT)(
             h ||
               (a && "creatorid" in a
                 ? (0, i.It)(
@@ -339,7 +376,7 @@
           ...e,
           children: (0, n.jsx)(r.Ii, {
             className: e.className,
-            href: s ? void 0 : p,
+            href: s ? void 0 : A,
             target: m.TS.IN_CLIENT || s ? void 0 : "_blank",
             rel: "noopener noreferrer",
             onClick: s,
@@ -475,8 +512,8 @@
         h = t(39700),
         g = t(12155),
         w = t(32754),
-        p = t(52038),
-        A = t(61859),
+        A = t(52038),
+        p = t(61859),
         S = t(78327),
         x = t(84547);
       function v(e) {
@@ -499,56 +536,56 @@
             appid: _,
             bIsFree: v,
             bIsComingSoon: C,
-            className: j,
-            bTextMode: f,
+            className: N,
+            bTextMode: F,
           } = e,
-          F = (0, c.$5)(_),
-          { bIsOwned: y } = (0, i.ZJ)(F),
+          f = (0, c.$5)(_),
+          { bIsOwned: y } = (0, i.ZJ)(f),
           I = (0, o.bB)(_),
-          { mutateAsync: T } = (0, l.s)(_, !I, (0, m.L3)(s)),
-          { elDialogElement: b, fnShowLogonDialog: Q } = (0, x.E)();
+          { mutateAsync: k } = (0, l.s)(_, !I, (0, m.L3)(s)),
+          { elDialogElement: T, fnShowLogonDialog: b } = (0, x.E)();
         if (y || (!C && v))
-          return v ? (0, n.jsx)(N, { possibleDemoAppID: _ }) : null;
-        let k = null;
+          return v ? (0, n.jsx)(j, { possibleDemoAppID: _ }) : null;
+        let Q = null;
         return (
-          a && !f
-            ? (k = (0, n.jsx)(h.k, { size: 18 }))
+          a && !F
+            ? (Q = (0, n.jsx)(h.k, { size: 18 }))
             : I
-              ? I && (k = f ? (0, A.we)("#OnWishlist") : (0, n.jsx)(g.qnF, {}))
-              : (k = f
-                  ? (0, A.we)("#wishlist_add_to_wishlist")
+              ? I && (Q = F ? (0, p.we)("#OnWishlist") : (0, n.jsx)(g.qnF, {}))
+              : (Q = F
+                  ? (0, p.we)("#wishlist_add_to_wishlist")
                   : (0, n.jsx)(g.T4m, {})),
           (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)(w.he, {
-                toolTipContent: (0, A.we)("#AddToWishlist_ttip"),
+                toolTipContent: (0, p.we)("#AddToWishlist_ttip"),
                 children: (0, n.jsx)("div", {
-                  className: (0, p.A)(u().WishList, j),
+                  className: (0, A.A)(u().WishList, N),
                   onClick: async () => {
-                    S.iA.logged_in ? a || (t(!0), await T(), t(!1)) : Q();
+                    S.iA.logged_in ? a || (t(!0), await k(), t(!1)) : b();
                   },
-                  children: k,
+                  children: Q,
                 }),
               }),
-              b,
+              T,
             ],
           })
         );
       }
-      function N(e) {
+      function j(e) {
         const { possibleDemoAppID: a, className: t } = e,
           r = (0, c.$5)(a),
           { data: i } = (0, s.J$)(r);
         return i
           ? (1 != i.type && 12 != i.type) || !i.related_items?.parent_appid
             ? null
-            : (0, n.jsx)(j, {
+            : (0, n.jsx)(N, {
                 parentAppID: i.related_items?.parent_appid,
                 className: t,
               })
           : null;
       }
-      function j(e) {
+      function N(e) {
         const { parentAppID: a, className: t } = e,
           r = (0, c.$5)(a),
           { data: i } = (0, s.J$)(r),
@@ -580,46 +617,46 @@
         h = t(56011),
         g = t(78327),
         w = t(56283),
-        p = t(12155),
-        A = t(61859),
+        A = t(12155),
+        p = t(61859),
         S = t(52038),
         x = t(51706),
         v = t(738),
         C = t(82477),
-        N = t(22797),
-        j = t(55263),
-        f = t(32630),
-        F = t(75933),
+        j = t(22797),
+        N = t(55263),
+        F = t(32630),
+        f = t(75933),
         y = t(43568),
         I = t(6379),
-        T = t(17720),
-        b = t(35685),
-        Q = t(16021),
-        k = t(60746),
-        E = t(81301),
-        B = t(84933),
-        D = t(13871),
-        R = t(28124),
+        k = t(17720),
+        T = t(35685),
+        b = t(16021),
+        Q = t(60746),
+        B = t(81301),
+        E = t(84933),
+        R = t(13871),
+        D = t(28124),
         P = t(64940),
         L = t(35380),
-        V = t(39777),
-        O = t(42834);
+        O = t(39777),
+        V = t(42834);
       const H = {
         include_basic_info: !0,
         include_assets_without_overrides: !0,
       };
-      function M(e) {
+      function G(e) {
         const { category: a, fnShowPicker: t, rgPrevLaborOfLoveWinners: s } = e,
           [r, o] = i.useState("");
         if (!(0, _.jT)(a.voteid).data)
-          return (0, n.jsx)(N.t, {
+          return (0, n.jsx)(j.t, {
             size: "medium",
             position: "center",
             msDelayAppear: 200,
           });
-        let c = (0, A.we)("#Steamawards_Nominate_ThisYear");
+        let c = (0, p.we)("#Steamawards_Nominate_ThisYear");
         return (
-          3 == a.flag && (c = (0, A.we)("#Steamawards_Nominate_PastYear")),
+          3 == a.flag && (c = (0, p.we)("#Steamawards_Nominate_PastYear")),
           (0, n.jsxs)("div", {
             className: l().NominationPickerCtn,
             children: [
@@ -635,14 +672,14 @@
                         o(e.currentTarget.value.toLocaleLowerCase()),
                       value: r,
                       className: l().SearchBar,
-                      placeholder: (0, A.we)("#Steamawards_Nominate_Search"),
+                      placeholder: (0, p.we)("#Steamawards_Nominate_Search"),
                       bShowClearAction: !0,
                     }),
                   }),
                   (0, n.jsx)(d.fu, {
                     className: l().CloseButton,
                     onClick: () => t(!1),
-                    children: (0, A.we)("#Button_Close"),
+                    children: (0, p.we)("#Button_Close"),
                   }),
                 ],
               }),
@@ -652,10 +689,10 @@
                     category: a,
                     rgPrevLaborOfLoveWinners: s,
                   })
-                : (0, n.jsx)(W, { category: a, fnShowPicker: t }),
+                : (0, n.jsx)(M, { category: a, fnShowPicker: t }),
               (0, n.jsx)("div", {
                 className: l().BottomRow,
-                children: (0, n.jsx)(K, {
+                children: (0, n.jsx)(Z, {
                   unAppID: _.Fq,
                   eSteamAwardCategoryID: a.voteid,
                   eNominatonSource: 0,
@@ -666,7 +703,7 @@
           })
         );
       }
-      function W(e) {
+      function M(e) {
         const { category: a, fnShowPicker: t } = e,
           s = (0, _.jT)(a.voteid),
           r = (0, _.cO)(),
@@ -692,18 +729,18 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: l().RecommendationRowTitle,
-                      children: (0, A.we)(
+                      children: (0, p.we)(
                         "#Steamawards_Nominate_GamesYouPlayed",
                       ),
                     }),
-                    (0, n.jsx)(z, {
+                    (0, n.jsx)(Y, {
                       eSteamAwardCategoryID: a.voteid,
                       eNominatonSource: 6,
                       rgGameCarouselItems: d,
                     }),
                   ],
                 })
-              : (0, n.jsx)(G, {
+              : (0, n.jsx)(W, {
                   eSteamAwardCategoryID: a.voteid,
                   fnShowPicker: t,
                 }),
@@ -714,9 +751,9 @@
                 children: [
                   (0, n.jsx)("div", {
                     className: l().RecommendationRowTitle,
-                    children: (0, A.we)("#Steamawards_Nominate_Events"),
+                    children: (0, p.we)("#Steamawards_Nominate_Events"),
                   }),
-                  (0, n.jsx)(Z, { rgEvents: s.data.suggested_events }),
+                  (0, n.jsx)(K, { rgEvents: s.data.suggested_events }),
                 ],
               }),
             (0, n.jsxs)("div", {
@@ -724,10 +761,10 @@
               children: [
                 (0, n.jsx)("div", {
                   className: l().RecommendationRowTitle,
-                  children: (0, A.we)("#Steamawards_Nominate_Recommended"),
+                  children: (0, p.we)("#Steamawards_Nominate_Recommended"),
                 }),
                 s.data?.suggested_apps &&
-                  (0, n.jsx)(z, {
+                  (0, n.jsx)(Y, {
                     eSteamAwardCategoryID: a.voteid,
                     eNominatonSource: 7,
                     rgGameCarouselItems: s.data.suggested_apps.map((e) => ({
@@ -739,20 +776,20 @@
           ],
         });
       }
-      function G(e) {
+      function W(e) {
         const { eSteamAwardCategoryID: a, fnShowPicker: t } = e;
         return (0, n.jsxs)("div", {
           className: (0, S.A)(l().RecommendationRow, l().NoEligibleGamesCtn),
           children: [
             (0, n.jsx)("div", {
               className: l().RecommendationRowTitle,
-              children: (0, A.we)("#Steamawards_Nominate_NoEligibleGames"),
+              children: (0, p.we)("#Steamawards_Nominate_NoEligibleGames"),
             }),
             (0, n.jsx)("div", {
               className: l().RecommendationRowSubtitle,
-              children: (0, A.we)("#Steamawards_Nominate_NoEligibleGames_cont"),
+              children: (0, p.we)("#Steamawards_Nominate_NoEligibleGames_cont"),
             }),
-            (0, n.jsx)(K, {
+            (0, n.jsx)(Z, {
               unAppID: _.Fq,
               eSteamAwardCategoryID: a,
               eNominatonSource: 0,
@@ -774,7 +811,7 @@
             className: l().SearchContainer,
             ref: o,
             children: Boolean(r.isLoading)
-              ? (0, n.jsx)(N.t, {
+              ? (0, n.jsx)(j.t, {
                   className: l().SearchThrobber,
                   size: "large",
                   position: "center",
@@ -798,7 +835,7 @@
                       })
                     : (0, n.jsx)("div", {
                         className: l().NoResultsCtn,
-                        children: (0, A.we)("#Steamawards_Search_NoResults"),
+                        children: (0, p.we)("#Steamawards_Search_NoResults"),
                       }),
                 }),
           })
@@ -819,7 +856,7 @@
               id: i,
               children: (0, n.jsx)("img", { src: a.small_cap }),
             }),
-            (0, n.jsx)(K, {
+            (0, n.jsx)(Z, {
               eSteamAwardCategoryID: t,
               eNominatonSource: s,
               unAppID: r,
@@ -827,7 +864,7 @@
           ],
         });
       }
-      function Y(e) {
+      function z(e) {
         let a = 1;
         return (
           e.innerWidth >= 1080
@@ -838,42 +875,42 @@
           a
         );
       }
-      function z(e) {
+      function Y(e) {
         const {
             rgGameCarouselItems: a,
             eSteamAwardCategoryID: t,
             eNominatonSource: s,
           } = e,
-          r = (0, j.zX)(
+          r = (0, N.zX)(
             a?.map((e) => e.appID),
             H,
           ),
-          o = (0, D.R7)(),
+          o = (0, R.R7)(),
           d = o?.ownerWindow || window,
-          [c, m] = i.useState(() => Y(d)),
+          [c, m] = i.useState(() => z(d)),
           _ = (0, g.Qn)(),
           u = i.useCallback(
             (e) => {
-              m(Y(d));
+              m(z(d));
             },
             [d],
           ),
-          h = (0, B.wY)(u);
+          h = (0, E.wY)(u);
         if (1 == r) return null;
-        const w = a.filter((e) => Q.A.Get().BHasApp(e.appID));
+        const w = a.filter((e) => b.A.Get().BHasApp(e.appID));
         return (0, n.jsx)("div", {
           ref: h,
           className: l().SuggestionCarousel,
-          children: (0, n.jsx)(f.Ay, {
+          children: (0, n.jsx)(F.Ay, {
             feature: "steamawards_nominate",
             children: (0, n.jsx)(y.F, {
               gap: 12,
-              hideArrows: !(0, F.rp)(),
+              hideArrows: !(0, f.rp)(),
               visibleElements: c,
               useTestScrollbar: !0,
               bLazyRenderChildren: !0,
               hidePips: _,
-              screenIsWide: (0, F.rp)(),
+              screenIsWide: (0, f.rp)(),
               children: w.map((e) =>
                 (0, n.jsx)(
                   X,
@@ -898,8 +935,8 @@
             nPlaytime: r,
           } = e,
           i = (0, L.$5)(a),
-          { data: o } = (0, V.J$)(i),
-          { data: d } = (0, V.gy)(i);
+          { data: o } = (0, O.J$)(i),
+          { data: d } = (0, O.gy)(i);
         if (!o) return null;
         let c = null;
         return (
@@ -910,17 +947,17 @@
               c &&
                 (0, n.jsx)("div", {
                   className: l().PlaytimeIndicator,
-                  children: (0, A.we)("#Steamawards_Playtime_Hours", c),
+                  children: (0, p.we)("#Steamawards_Playtime_Hours", c),
                 }),
               (0, n.jsx)(m.u, {
                 id: i,
                 children: (0, n.jsx)("img", {
-                  className: R.AppCapsuleImage,
-                  src: (0, O.b0)(d, "small_capsule"),
+                  className: D.AppCapsuleImage,
+                  src: (0, V.b0)(d, "small_capsule"),
                   alt: o.name || "",
                 }),
               }),
-              (0, n.jsx)(K, {
+              (0, n.jsx)(Z, {
                 unAppID: a,
                 eNominatonSource: s,
                 eSteamAwardCategoryID: t,
@@ -929,7 +966,7 @@
           })
         );
       }
-      function K(e) {
+      function Z(e) {
         const {
             unAppID: a,
             eSteamAwardCategoryID: t,
@@ -937,7 +974,7 @@
             fnShowPicker: r,
           } = e,
           o = (0, _.cO)(),
-          d = (0, D.R7)(),
+          d = (0, R.R7)(),
           c = d?.ownerWindow || window,
           m = a === _.Fq,
           u = i.useMemo(() => {
@@ -946,13 +983,13 @@
           }, [t, o.data, a]),
           h = i.useCallback(
             (e) => {
-              let t = (0, A.we)(
+              let t = (0, p.we)(
                 "#Steamawards_Nominate_Error_Generic",
                 a,
                 e ?? "Unknown",
               );
               42 == e &&
-                (t = (0, A.we)("#Steamawards_Nominate_Error_NoMatch", a)),
+                (t = (0, p.we)("#Steamawards_Nominate_Error_NoMatch", a)),
                 (0, x.pY)(t, c);
             },
             [c, a],
@@ -961,13 +998,13 @@
             a === _.Fq && r && r(!1);
           }, [r, a]),
           v = (0, _.$d)(a, t, s, h, g);
-        let C = (0, A.we)("#Steamawards_Nominate"),
-          N = null;
+        let C = (0, p.we)("#Steamawards_Nominate"),
+          j = null;
         return (
           m
-            ? ((C = (0, A.we)("#Steamawards_Skip_Btn")),
-              (N = (0, n.jsx)(p.MOk, {})))
-            : u && (C = (0, A.we)("#Steamawards_Nominated")),
+            ? ((C = (0, p.we)("#Steamawards_Skip_Btn")),
+              (j = (0, n.jsx)(A.MOk, {})))
+            : u && (C = (0, p.we)("#Steamawards_Nominated")),
           (0, n.jsxs)(w.$n, {
             onClick: (e) => {
               u
@@ -979,14 +1016,14 @@
                     );
             },
             className: (0, S.A)(l().NominateGameButton, u && l().Nominated),
-            children: [N, C],
+            children: [j, C],
           })
         );
       }
-      function Z(e) {
+      function K(e) {
         const { rgEvents: a } = e,
           [t, s] = i.useState(!1),
-          r = (0, D.R7)(),
+          r = (0, R.R7)(),
           o = r?.ownerWindow || window,
           [d, c] = i.useState(4),
           m = i.useCallback(
@@ -1001,7 +1038,7 @@
             },
             [o],
           ),
-          _ = (0, B.wY)(m);
+          _ = (0, E.wY)(m);
         return (
           i.useEffect(() => {
             if (t) return;
@@ -1015,7 +1052,7 @@
               });
               const e = a.map((e) =>
                 I.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                  T.b.InitFromClanID(e.clanid),
+                  k.b.InitFromClanID(e.clanid),
                   e.event_gid,
                   0,
                   "dev" == u.TS.WEB_UNIVERSE,
@@ -1029,23 +1066,23 @@
               ? (0, n.jsx)("div", {
                   ref: _,
                   className: l().EventCarousel,
-                  children: (0, n.jsx)(f.Ay, {
+                  children: (0, n.jsx)(F.Ay, {
                     feature: "steamawards_event",
                     children: (0, n.jsx)(y.F, {
                       gap: 12,
-                      hideArrows: !(0, F.rp)(),
+                      hideArrows: !(0, f.rp)(),
                       visibleElements: d,
                       useTestScrollbar: !0,
                       bLazyRenderChildren: !0,
                       className: l().GameCarousel,
-                      screenIsWide: (0, F.rp)(),
+                      screenIsWide: (0, f.rp)(),
                       children: a.map((e) =>
                         (0, n.jsx)(J, { gidEvent: e.event_gid }, e.event_gid),
                       ),
                     }),
                   }),
                 })
-              : (0, n.jsx)(N.t, {
+              : (0, n.jsx)(j.t, {
                   className: l().EventCarousel,
                   size: "xlarge",
                   position: "center",
@@ -1057,13 +1094,13 @@
         const { gidEvent: a } = e,
           t = I.O3.GetClanEventModel(a);
         if (!t) return null;
-        return (0, n.jsx)(b.uY, {
+        return (0, n.jsx)(T.uY, {
           event: t,
           bShowAssociatedApp: !0,
           bHidePrices: !0,
           onClick: (e) => {
-            k.KN.Get().RecordEventRead(t, 7),
-              (0, E.Y)(t, h.uX(e)),
+            Q.KN.Get().RecordEventRead(t, 7),
+              (0, B.Y)(t, h.uX(e)),
               e.stopPropagation(),
               e.preventDefault();
           },
@@ -1076,7 +1113,7 @@
         ne = t(44165);
       function se(e) {
         const { steamID: a, nYear: t } = e,
-          [s, r] = i.useState(() => k.KN.IsInitialized()),
+          [s, r] = i.useState(() => Q.KN.IsInitialized()),
           [o] = (0, $.QD)("k", null),
           d = Boolean((a && a != u.iA.steamid) || o),
           m = te()("2025-12-01T10:00:00-08:00").unix(),
@@ -1084,9 +1121,9 @@
           h = !d && _ <= m;
         return (
           i.useEffect(() => {
-            I.O3.Init(), k.KN.InitGlobal().then(() => r(!0));
+            I.O3.Init(), Q.KN.InitGlobal().then(() => r(!0));
           }, []),
-          (0, n.jsx)(f.Ay, {
+          (0, n.jsx)(F.Ay, {
             method: "nominations",
             children: (0, n.jsxs)(c.Z, {
               className: l().NominationsPageContent,
@@ -1108,7 +1145,7 @@
                 s && (0, n.jsx)(le, { bEnableNominating: h }),
                 (0, n.jsxs)("div", {
                   className: l().BackgroundDark,
-                  children: [!d && (0, n.jsx)(ue, {}), (0, n.jsx)(pe, {})],
+                  children: [!d && (0, n.jsx)(ue, {}), (0, n.jsx)(Ae, {})],
                 }),
               ],
             }),
@@ -1125,7 +1162,7 @@
               children: [
                 (0, n.jsx)("div", {
                   className: l().FAQSaletitle,
-                  children: (0, A.PP)(
+                  children: (0, p.PP)(
                     "#Steamawards_Title",
                     (0, n.jsx)("br", {}),
                     (0, n.jsx)("br", {}),
@@ -1133,19 +1170,19 @@
                 }),
                 (0, n.jsx)("div", {
                   className: l().FAQComingsoon,
-                  children: (0, A.we)("#Steamawards_NominateNow"),
+                  children: (0, p.we)("#Steamawards_NominateNow"),
                 }),
                 (0, n.jsx)("div", {
                   className: l().FAQComingsoon,
-                  children: (0, A.we)("#Steamawards_LevelUpNow", e.year),
+                  children: (0, p.we)("#Steamawards_LevelUpNow", e.year),
                 }),
                 (0, n.jsx)("div", {
                   className: l().FAQComingsoon,
-                  children: (0, A.we)("#Steamawards_VoteWinter"),
+                  children: (0, p.we)("#Steamawards_VoteWinter"),
                 }),
                 (0, n.jsx)("div", {
                   className: l().FAQComingsoon,
-                  children: (0, A.we)("#Steamawards_WinnersAnnounced"),
+                  children: (0, p.we)("#Steamawards_WinnersAnnounced"),
                 }),
               ],
             }),
@@ -1169,11 +1206,11 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: (0, S.A)(l().FriendsTitle, l().Gold),
-                        children: (0, A.we)("#Steamawards_TheSteamAwards"),
+                        children: (0, p.we)("#Steamawards_TheSteamAwards"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FriendsTitle,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FriendsNominations",
                           s.data?.m_strPlayerName,
                         ),
@@ -1188,7 +1225,7 @@
                   children: (0, n.jsx)("a", {
                     href: `${g.TS.STORE_BASE_URL}steamawards/nominations`,
                     className: (0, S.A)(l().NominateGameButton, l().White),
-                    children: (0, A.we)(
+                    children: (0, p.we)(
                       "#Steamawards_MakeYourOwnNominations_Btn",
                     ),
                   }),
@@ -1206,7 +1243,7 @@
           className: (0, S.A)(l().NominationProgressCtn),
           children: (0, n.jsx)("div", {
             className: l().ProgressTitle,
-            children: (0, A.PP)(
+            children: (0, p.PP)(
               "#Steamawards_TotalNominations",
               s,
               t.data?.votes?.length,
@@ -1277,7 +1314,7 @@
                             className: l().Checkbox,
                             children:
                               r &&
-                              (0, n.jsx)(p.X4B, {
+                              (0, n.jsx)(A.X4B, {
                                 color: "#ffffff",
                                 highlightColor: "#ffffff",
                               }),
@@ -1319,7 +1356,7 @@
               ],
             }),
             o &&
-              (0, n.jsx)(M, {
+              (0, n.jsx)(G, {
                 fnShowPicker: d,
                 category: a,
                 rgPrevLaborOfLoveWinners: s,
@@ -1330,16 +1367,16 @@
       function ce(e) {
         const { nomination: a, bBlurry: t } = e,
           s = (0, L.$5)(a.appid),
-          { data: r } = (0, V.J$)(s),
-          { data: i } = (0, V.gy)(s);
+          { data: r } = (0, O.J$)(s),
+          { data: i } = (0, O.gy)(s);
         return r
           ? t
-            ? (0, n.jsx)("img", { src: (0, O.b0)(i, "header"), alt: r.name })
+            ? (0, n.jsx)("img", { src: (0, V.b0)(i, "header"), alt: r.name })
             : (0, n.jsx)(m.u, {
                 className: l().NominatedGameCapsule,
                 id: s,
                 children: (0, n.jsx)("img", {
-                  src: (0, O.b0)(i, "header"),
+                  src: (0, V.b0)(i, "header"),
                   alt: r.name,
                 }),
               })
@@ -1350,14 +1387,14 @@
       }
       function _e(e) {
         const { has_nomination: a, fnShowPicker: t } = e;
-        let s = (0, A.we)("#Steamawards_Nominate_Btn"),
+        let s = (0, p.we)("#Steamawards_Nominate_Btn"),
           r = l().ActionNominate,
           i = () => t(!0);
         return (
           u.iA.logged_in
             ? a &&
-              ((s = (0, A.we)("#Steamawards_Edit_Btn")), (r = l().ActionEdit))
-            : ((s = (0, A.we)("#Steamawards_Login_Btn")),
+              ((s = (0, p.we)("#Steamawards_Edit_Btn")), (r = l().ActionEdit))
+            : ((s = (0, p.we)("#Steamawards_Login_Btn")),
               (r = l().ActionLogin),
               (i = () => (0, C.vg)())),
           (0, n.jsx)("div", {
@@ -1396,7 +1433,7 @@
                 children: [
                   (0, n.jsx)("div", {
                     className: l().BadgeSectionTitle,
-                    children: (0, A.we)("#Steamawards_Badge_SectionTitle"),
+                    children: (0, p.we)("#Steamawards_Badge_SectionTitle"),
                   }),
                   (0, n.jsx)("div", {
                     className: l().BadgeTasksCtn,
@@ -1409,11 +1446,11 @@
               children: [
                 (0, n.jsx)("div", {
                   className: l().BadgeStatusTitle,
-                  children: (0, A.we)("#Steamawards_Badge_BadgeTitle"),
+                  children: (0, p.we)("#Steamawards_Badge_BadgeTitle"),
                 }),
                 (0, n.jsx)("div", {
                   className: l().BadgeStatusDesc,
-                  children: (0, A.we)("#Steamawards_Badge_BadgeDesc"),
+                  children: (0, p.we)("#Steamawards_Badge_BadgeDesc"),
                 }),
                 (0, n.jsx)("div", {
                   className: l().BadgeImageRow,
@@ -1439,7 +1476,7 @@
             }),
             (0, n.jsx)("div", {
               className: l().BadgeDesc,
-              children: (0, A.we)(`#Steamawards_Badge_BadgeTask${a}`),
+              children: (0, p.we)(`#Steamawards_Badge_BadgeTask${a}`),
             }),
           ],
         });
@@ -1447,13 +1484,13 @@
       function ge(e) {
         switch (e) {
           case 610:
-            return (0, A.we)("#Steamawards_Task1");
+            return (0, p.we)("#Steamawards_Task1");
           case 611:
-            return (0, A.we)("#Steamawards_Task2");
+            return (0, p.we)("#Steamawards_Task2");
           case 612:
-            return (0, A.we)("#Steamawards_Task3");
+            return (0, p.we)("#Steamawards_Task3");
           case 613:
-            return (0, A.we)("#Steamawards_Task4");
+            return (0, p.we)("#Steamawards_Task4");
           default:
             return "Unknown Task";
         }
@@ -1465,13 +1502,13 @@
           children: [
             (0, n.jsx)("div", {
               className: l().Checkbox,
-              children: t ? (0, n.jsx)(p.Jlk, {}) : null,
+              children: t ? (0, n.jsx)(A.Jlk, {}) : null,
             }),
             (0, n.jsx)("div", { className: l().TaskTitle, children: ge(a) }),
           ],
         });
       }
-      function pe() {
+      function Ae() {
         const e = g.TS.COMMUNITY_BASE_URL + "my/badges/";
         return (0, n.jsx)("div", {
           className: (0, S.A)(l().NominationsFAQ, l().SectionContent),
@@ -1483,18 +1520,18 @@
                 children: [
                   (0, n.jsx)("h3", {
                     className: l().FaqSectionTitle,
-                    children: (0, A.we)("#Steamawards_FAQ_Title_Badges"),
+                    children: (0, p.we)("#Steamawards_FAQ_Title_Badges"),
                   }),
                   (0, n.jsxs)("div", {
                     className: l().FaqEntry,
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)("#Steamawards_FAQ_XP_Q"),
+                        children: (0, p.we)("#Steamawards_FAQ_XP_Q"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)("#Steamawards_FAQ_XP_A"),
+                        children: (0, p.we)("#Steamawards_FAQ_XP_A"),
                       }),
                     ],
                   }),
@@ -1503,15 +1540,15 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)("#Steamawards_FAQ_BadgesAll_Q"),
+                        children: (0, p.we)("#Steamawards_FAQ_BadgesAll_Q"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.PP)(
+                        children: (0, p.PP)(
                           "#Steamawards_FAQ_BadgesAll_A_wLink",
                           (0, n.jsx)("a", {
                             href: e,
-                            children: (0, A.we)(
+                            children: (0, p.we)(
                               "#Steamawards_FAQ_BadgesAll_A_YourBadges",
                             ),
                           }),
@@ -1524,11 +1561,11 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)("#Steamawards_FAQ_ReviewsPrev_Q"),
+                        children: (0, p.we)("#Steamawards_FAQ_ReviewsPrev_Q"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)("#Steamawards_FAQ_ReviewsPrev_A"),
+                        children: (0, p.we)("#Steamawards_FAQ_ReviewsPrev_A"),
                       }),
                     ],
                   }),
@@ -1537,17 +1574,17 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)("#Steamawards_FAQ_BadgeSkipping_Q"),
+                        children: (0, p.we)("#Steamawards_FAQ_BadgeSkipping_Q"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_BadgeSkipping_A1",
                         ),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_BadgeSkipping_A2",
                         ),
                       }),
@@ -1560,20 +1597,20 @@
                 children: [
                   (0, n.jsx)("h3", {
                     className: l().FaqSectionTitle,
-                    children: (0, A.we)("#Steamawards_FAQ_Title_Nominations"),
+                    children: (0, p.we)("#Steamawards_FAQ_Title_Nominations"),
                   }),
                   (0, n.jsxs)("div", {
                     className: l().FaqEntry,
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_WhoCanNominate_Q",
                         ),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_WhoCanNominate_A",
                         ),
                       }),
@@ -1584,11 +1621,11 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)("#Steamawards_FAQ_HowToNominate_Q"),
+                        children: (0, p.we)("#Steamawards_FAQ_HowToNominate_Q"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)("#Steamawards_FAQ_HowToNominate_A"),
+                        children: (0, p.we)("#Steamawards_FAQ_HowToNominate_A"),
                       }),
                     ],
                   }),
@@ -1597,19 +1634,19 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)("#Steamawards_FAQ_WhichGames_Q"),
+                        children: (0, p.we)("#Steamawards_FAQ_WhichGames_Q"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)("#Steamawards_FAQ_WhichGames_A1"),
+                        children: (0, p.we)("#Steamawards_FAQ_WhichGames_A1"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)("#Steamawards_FAQ_WhichGames_A2"),
+                        children: (0, p.we)("#Steamawards_FAQ_WhichGames_A2"),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)("#Steamawards_FAQ_WhichGames_A3"),
+                        children: (0, p.we)("#Steamawards_FAQ_WhichGames_A3"),
                       }),
                     ],
                   }),
@@ -1618,13 +1655,13 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_NominateMultiple_Q",
                         ),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_NominateMultiple_A",
                         ),
                       }),
@@ -1635,13 +1672,13 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_EditNominations_Q",
                         ),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_EditNominations_A",
                         ),
                       }),
@@ -1652,13 +1689,13 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_HowShareFriends_Q",
                         ),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_HowShareFriends_A",
                         ),
                       }),
@@ -1669,13 +1706,13 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_WinnersSelected_Q",
                         ),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_WinnersSelected_A",
                         ),
                       }),
@@ -1686,13 +1723,13 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: l().FAQ_Q,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_WhyParticipate_Q",
                         ),
                       }),
                       (0, n.jsx)("div", {
                         className: l().FAQ_A,
-                        children: (0, A.we)(
+                        children: (0, p.we)(
                           "#Steamawards_FAQ_WhyParticipate_A",
                         ),
                       }),
@@ -1704,16 +1741,16 @@
           }),
         });
       }
-      function Ae(e) {
+      function pe(e) {
         const { closeModal: a, nYear: t } = e,
           s = (0, _.np)(),
           r = (0, _._C)(),
           [o, d] = (0, i.useState)(!1);
         if (!s.data) return null;
         const [m, h] = s.data;
-        let p = "";
+        let A = "";
         h.code &&
-          (p =
+          (A =
             g.TS.STORE_BASE_URL +
             `steamawards/nominations/${t}/` +
             u.iA.steamid +
@@ -1722,32 +1759,32 @@
         return (0, n.jsx)(x.o0, {
           closeModal: a,
           bAlertDialog: !0,
-          strCancelButtonText: (0, A.we)("#Steamawards_Close_Btn"),
-          strTitle: (0, A.we)("#Steamawards_ShareLink_Title"),
+          strCancelButtonText: (0, p.we)("#Steamawards_Close_Btn"),
+          strTitle: (0, p.we)("#Steamawards_ShareLink_Title"),
           children: (0, n.jsxs)(c.Z, {
             className: l().ShareModalBody,
             "flow-children": "column",
             children: [
               (0, n.jsx)("p", {
                 className: (0, S.A)(l().ShareModalText, l().IntroText),
-                children: (0, A.we)("#Steamawards_ShareModal_Description"),
+                children: (0, p.we)("#Steamawards_ShareModal_Description"),
               }),
-              p &&
+              A &&
                 (0, n.jsxs)(n.Fragment, {
                   children: [
                     (0, n.jsx)(w.JU, {
-                      children: (0, A.we)("#YIR_ShareModal_YourLink"),
+                      children: (0, p.we)("#YIR_ShareModal_YourLink"),
                     }),
                     (0, n.jsxs)("div", {
                       className: l().UrlContainer,
                       children: [
-                        (0, n.jsx)("div", { className: l().Url, children: p }),
+                        (0, n.jsx)("div", { className: l().Url, children: A }),
                         (0, n.jsx)(w.jn, {
                           className: l().Button,
                           onClick: () => {
-                            navigator.clipboard.writeText(p), d(!0);
+                            navigator.clipboard.writeText(A), d(!0);
                           },
-                          children: (0, A.we)(
+                          children: (0, p.we)(
                             o
                               ? "#YIR_ShareModal_CopyLink_Success"
                               : "#YIR_ShareModal_CopyLink",
@@ -1757,7 +1794,7 @@
                     }),
                     (0, n.jsx)("p", {
                       className: l().ShareModalText,
-                      children: (0, A.we)(
+                      children: (0, p.we)(
                         "#Steamawards_ShareModal_Description2",
                       ),
                     }),
@@ -1766,8 +1803,8 @@
               (0, n.jsx)(w.$n, {
                 className: l().GenerateShareLinkBtn,
                 onClick: () => r.mutate(),
-                children: (0, A.we)(
-                  p
+                children: (0, p.we)(
+                  A
                     ? "#Steamawards_GenerateLink_Btn_Renew"
                     : "#Steamawards_GenerateLink_Btn",
                 ),
@@ -1788,13 +1825,13 @@
                   e.preventDefault(),
                     e.stopPropagation(),
                     (function (e, a) {
-                      (0, v.pg)((0, n.jsx)(Ae, { nYear: e }), a);
+                      (0, v.pg)((0, n.jsx)(pe, { nYear: e }), a);
                     })(a, (0, h.uX)(e));
                 },
                 children: [
-                  (0, n.jsx)(p.SYj, {}),
+                  (0, n.jsx)(A.SYj, {}),
                   (0, n.jsx)("span", {
-                    children: (0, A.we)("#Steamawards_ShareLink_Btn"),
+                    children: (0, p.we)("#Steamawards_ShareLink_Btn"),
                   }),
                 ],
               }),
@@ -1803,30 +1840,30 @@
               className: l().ShareLinkCtn,
               children: (0, n.jsx)("div", {
                 className: l().ProgressTitle,
-                children: (0, A.we)("#Steamawards_GenerateLink_Fallback"),
+                children: (0, p.we)("#Steamawards_GenerateLink_Fallback"),
               }),
             });
       }
       var xe = t(4775),
         ve = t.n(xe),
         Ce = t(60383),
-        Ne = t(60014),
-        je = t(84811),
-        fe = t(8812),
-        Fe = t(10050),
+        je = t(60014),
+        Ne = t(84811),
+        Fe = t(8812),
+        fe = t(10050),
         ye = t(38535);
       const Ie = {
         include_basic_info: !0,
         include_assets_without_overrides: !0,
         include_trailers: !0,
       };
-      function Te() {
+      function ke() {
         const e = i.useContext(_.AD);
         return e
           ? (0, n.jsxs)(c.Z, {
               className: ve().VotingPageContent,
               children: [
-                (0, n.jsx)(be, {
+                (0, n.jsx)(Te, {
                   bIsVotingOpen: e.bVotingOpen,
                   bIsVotingPast: e.bVotingPast,
                 }),
@@ -1834,34 +1871,34 @@
                   className: ve().VotingArea,
                   children: [
                     e.bHasStickerRewards &&
-                      (0, n.jsx)(Qe, {
+                      (0, n.jsx)(be, {
                         unSaleAppID: e.config.appid,
                         bIsVotingOpen: e.bVotingOpen,
                         bIsVotingPast: e.bVotingPast,
                       }),
-                    (0, n.jsx)(Ee, {
+                    (0, n.jsx)(Be, {
                       bIsVotingOpen: e.bVotingOpen,
                       bIsVotingPast: e.bVotingPast,
                       unSaleAppID: e.config.appid,
                     }),
                   ],
                 }),
-                (0, n.jsx)(Ve, {}),
+                (0, n.jsx)(Oe, {}),
               ],
             })
           : null;
       }
-      function be(e) {
+      function Te(e) {
         const { bIsVotingOpen: a, bIsVotingPast: t } = e,
           s = i.useContext(_.AD),
           r = (0, _.CF)();
         let o;
         return (
           (o = a
-            ? (0, A.we)("#Steamawards_Voting_Header_VoteNow")
+            ? (0, p.we)("#Steamawards_Voting_Header_VoteNow")
             : t
-              ? (0, A.we)("#Steamawards_Voting_Header_WinnersUp")
-              : (0, A.we)(
+              ? (0, p.we)("#Steamawards_Voting_Header_WinnersUp")
+              : (0, p.we)(
                   "#Steamawards_Voting_Header_VoteSoon_New",
                   He(s.rtVoteStart),
                 )),
@@ -1875,7 +1912,7 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: (0, S.A)(ve().EventTitle, r.EventTitle),
-                      children: (0, A.PP)(
+                      children: (0, p.PP)(
                         "#Steamawards_Title_WithYear",
                         s.nYear,
                         (0, n.jsx)("br", {}),
@@ -1894,7 +1931,7 @@
                       ? (0, n.jsx)(n.Fragment, {
                           children: (0, n.jsx)("div", {
                             className: (0, S.A)(ve().InfoText, r.InfoText),
-                            children: (0, A.PP)(
+                            children: (0, p.PP)(
                               "#Steamawards_Voting_Header_Winners",
                               s.nYear,
                             ),
@@ -1904,20 +1941,20 @@
                           children: [
                             (0, n.jsx)("div", {
                               className: (0, S.A)(ve().InfoText, r.InfoText),
-                              children: (0, A.we)(
+                              children: (0, p.we)(
                                 "#Steamawards_Voting_Header_Finalists",
                               ),
                             }),
                             (0, n.jsx)("div", {
                               className: (0, S.A)(ve().InfoText, r.InfoText),
-                              children: (0, A.we)(
+                              children: (0, p.we)(
                                 "#Steamawards_Voting_Header_HowTo",
                                 He(s.rtVoteEnd),
                               ),
                             }),
                             (0, n.jsx)("div", {
                               className: (0, S.A)(ve().InfoText, r.InfoText),
-                              children: (0, A.we)(
+                              children: (0, p.we)(
                                 "#Steamawards_Voting_Header_Dates_New",
                                 He(s.rtVoteEnd),
                               ),
@@ -1931,19 +1968,19 @@
           })
         );
       }
-      function Qe(e) {
+      function be(e) {
         const { unSaleAppID: a, bIsVotingOpen: t, bIsVotingPast: s } = e,
           r = (0, _.Jo)(a),
           i = (0, _.a8)(a),
           o = (0, _.CF)();
         if (!r.data) return null;
         const l = r.data.votes.map((e) =>
-          (0, n.jsx)(ke, { unSaleAppID: a, definition: e }, e.voteid),
+          (0, n.jsx)(Qe, { unSaleAppID: a, definition: e }, e.voteid),
         );
         let d = null;
         return (
           (d = s
-            ? (0, A.PP)(
+            ? (0, p.PP)(
                 "#Steamawards_Progress_Title_Past",
                 i.data?.length ?? 0,
                 r.data.votes.length,
@@ -1951,17 +1988,17 @@
             : t
               ? g.iA.logged_in
                 ? i.data?.length > 0
-                  ? (0, A.PP)(
+                  ? (0, p.PP)(
                       "#Steamawards_Progress_Title",
                       i.data?.length,
                       r.data.votes.length,
                     )
-                  : (0, A.PP)(
+                  : (0, p.PP)(
                       "#Steamawards_Progress_Title_None",
                       r.data.votes.length,
                     )
-                : (0, A.we)("#Steamawards_Progress_Title_LoggedOut")
-              : (0, A.PP)(
+                : (0, p.we)("#Steamawards_Progress_Title_LoggedOut")
+              : (0, p.PP)(
                   "#Steamawards_Progress_Title_Soon",
                   r.data.votes.length,
                 )),
@@ -1978,7 +2015,7 @@
           })
         );
       }
-      function ke(e) {
+      function Qe(e) {
         const { definition: a, unSaleAppID: t } = e,
           s = (0, _.Mn)(t, a.voteid),
           r = (0, _.PV)(t, a.voteid),
@@ -2005,11 +2042,11 @@
           ],
         });
       }
-      function Ee(e) {
+      function Be(e) {
         const { unSaleAppID: a, bIsVotingOpen: t, bIsVotingPast: s } = e,
           r = (0, _.Jo)(a).data.votes.map((e) =>
             (0, n.jsx)(
-              Be,
+              Ee,
               {
                 bIsVotingOpen: t,
                 bIsVotingPast: s,
@@ -2025,50 +2062,50 @@
           children: r,
         });
       }
-      function Be(e) {
+      function Ee(e) {
         const {
             definition: a,
             unSaleAppID: t,
             bIsVotingOpen: s,
             bIsVotingPast: r,
           } = e,
-          o = (0, j.zX)(
+          o = (0, N.zX)(
             a.app_discounts.map((e) => e.appid),
             Ie,
           ),
           l = (0, _.Mn)(t, a.voteid),
           d = i.useRef(0),
-          m = (0, D.R7)(),
+          m = (0, R.R7)(),
           u = i.useContext(_.AD),
-          [h, p] = i.useState([]),
+          [h, A] = i.useState([]),
           [x, v] = i.useState(0),
-          [C, f] = i.useState(!1),
-          [F, y] = i.useState(0),
-          [I, T] = i.useState(!l && !r),
-          [b, Q] = i.useState(),
-          [k, E] = i.useState(669),
-          R =
+          [C, F] = i.useState(!1),
+          [f, y] = i.useState(0),
+          [I, k] = i.useState(!l && !r),
+          [T, b] = i.useState(),
+          [Q, B] = i.useState(669),
+          D =
             g.TS.BASE_URL_STORE_CDN_ASSETS +
             "promo/steamawards2024/backgrounds/" +
             a.internal_name +
             ".jpg?v=1",
           P = g.TS.IMG_URL + "promo/steamawards2023/placeholder_main.png",
           L = m?.ownerWindow || window,
-          V = i.useCallback((e) => {
-            E(e.contentRect.height);
+          O = i.useCallback((e) => {
+            B(e.contentRect.height);
           }, []),
-          O = (0, B.wY)(V),
+          V = (0, E.wY)(O),
           H = i.useCallback(() => {
             let e = "-20% 0px -50% 0px";
-            if (L.innerHeight <= k) e = "0px 0px 0px 0px";
+            if (L.innerHeight <= Q) e = "0px 0px 0px 0px";
             else {
               const a = 40,
-                t = L.innerHeight / k,
-                n = Math.min(t * a + t * k - (k + a), 0.65 * L.innerHeight);
-              e = `-${Math.min(0.4 * k, 0.1 * L.innerHeight)}px 0px -${n}px 0px`;
+                t = L.innerHeight / Q,
+                n = Math.min(t * a + t * Q - (Q + a), 0.65 * L.innerHeight);
+              e = `-${Math.min(0.4 * Q, 0.1 * L.innerHeight)}px 0px -${n}px 0px`;
             }
-            Q(e);
-          }, [L.innerHeight, k]);
+            b(e);
+          }, [L.innerHeight, Q]);
         i.useEffect(
           () => (
             window.addEventListener("resize", H),
@@ -2083,33 +2120,33 @@
                   const t = await Promise.all(
                     a.app_discounts?.map(async (e) => {
                       const a = [e.appid, g.iA.accountid].toString(),
-                        t = await (0, fe.sx)(a);
+                        t = await (0, Fe.sx)(a);
                       return { appid: e.appid, hash: t };
                     }),
                   );
                   t.sort((e, a) => (e.hash > a.hash ? 1 : -1)),
                     (e = t.map((e) => e.appid));
                 } else e = a.app_discounts.map((e) => e.appid);
-                p(e), v(e[d.current]), H();
+                A(e), v(e[d.current]), H();
               })();
           }, [a.app_discounts, H, h]);
-        const M = i.useCallback(() => {
-            if (!F) {
+        const G = i.useCallback(() => {
+            if (!f) {
               let e = d.current + 1;
               e >= h.length && (e = 0), (d.current = e), v(h[d.current]);
             }
-          }, [h, F]),
-          W = i.useCallback((e) => {
-            f(e);
+          }, [h, f]),
+          M = i.useCallback((e) => {
+            F(e);
           }, []),
-          G = i.useCallback((e) => {
+          W = i.useCallback((e) => {
             y(e), v(e);
           }, []),
           q = i.useCallback(() => {
             y(0), v(h[d.current]);
           }, [h]);
         if (1 == o)
-          return (0, n.jsx)(N.t, {
+          return (0, n.jsx)(j.t, {
             position: "center",
             size: "large",
             msDelayAppear: 300,
@@ -2125,37 +2162,37 @@
                 bIsVotingOpen: s,
                 bIsCurrentVoteApp: l == e,
                 fnOnMouseLeaveApp: q,
-                fnOnMouseEnterApp: G,
+                fnOnMouseEnterApp: W,
               },
               e,
             ),
           ),
-          Y = h?.map((e) =>
+          z = h?.map((e) =>
             (0, n.jsx)(
               Pe,
               {
-                bHoveringApp: e == F,
+                bHoveringApp: e == f,
                 unAppID: e,
                 bPlayMicrotrailers: C,
                 bCurrentlyActive: x === e,
-                fnOnVideoEnd: M,
+                fnOnVideoEnd: G,
               },
               e,
             ),
           );
-        let z = (0, n.jsx)(n.Fragment, { children: Y });
+        let Y = (0, n.jsx)(n.Fragment, { children: z });
         return (
           a.winner_appid && r
-            ? (z = (0, n.jsx)(Re, { unAppID: a.winner_appid }))
-            : l && (z = (0, n.jsx)(De, { unAppID: l })),
-          (0, n.jsx)(je.tH, {
+            ? (Y = (0, n.jsx)(De, { unAppID: a.winner_appid }))
+            : l && (Y = (0, n.jsx)(Re, { unAppID: l })),
+          (0, n.jsx)(Ne.tH, {
             children: (0, n.jsx)(Ce.J, {
               thresholds: [0.4],
-              rootMargin: b,
+              rootMargin: T,
               trigger: "repeated",
-              onVisibilityChange: W,
+              onVisibilityChange: M,
               children: (0, n.jsxs)(c.Z, {
-                ref: O,
+                ref: V,
                 className: (0, S.A)(
                   ve().SteamAwardCategory,
                   l && ve().CategoryVoted,
@@ -2168,13 +2205,13 @@
                   }),
                   (0, n.jsx)("div", {
                     className: (0, S.A)(ve().SteamAwardCategoryBackground),
-                    style: { backgroundImage: `url( ${R} )` },
+                    style: { backgroundImage: `url( ${D} )` },
                   }),
                   (0, n.jsx)("div", {
                     className: (0, S.A)(
                       ve().SteamAwardCategoryBlurryBackground,
                     ),
-                    style: { backgroundImage: `url( ${R} )` },
+                    style: { backgroundImage: `url( ${D} )` },
                   }),
                   (0, n.jsxs)("div", {
                     className: ve().CategoryRow,
@@ -2187,7 +2224,7 @@
                             children: [
                               (0, n.jsx)("div", {
                                 className: ve().CategoryYear,
-                                children: (0, A.PP)(
+                                children: (0, p.PP)(
                                   "#Steamawards_Title_WithYear_NoBreaks",
                                   u.nYear,
                                 ),
@@ -2205,10 +2242,10 @@
                           (l || r) &&
                             (0, n.jsx)(w.$n, {
                               className: ve().HideShowBtn,
-                              onClick: () => T(!I),
+                              onClick: () => k(!I),
                               children: I
-                                ? (0, A.we)("#Steamawards_HideFinalists_Btn")
-                                : (0, A.we)("#Steamawards_ShowFinalists_Btn"),
+                                ? (0, p.we)("#Steamawards_HideFinalists_Btn")
+                                : (0, p.we)("#Steamawards_ShowFinalists_Btn"),
                             }),
                         ],
                       }),
@@ -2216,12 +2253,12 @@
                         className: (0, S.A)(ve().RightColumn),
                         children: (0, n.jsxs)("div", {
                           className: ve().CapsuleContainer,
-                          children: [z, (0, n.jsx)("img", { src: P })],
+                          children: [Y, (0, n.jsx)("img", { src: P })],
                         }),
                       }),
                     ],
                   }),
-                  (0, n.jsx)(Fe.M, {
+                  (0, n.jsx)(fe.M, {
                     timeout: 500,
                     unmountOnExit: !0,
                     mountOnEnter: !0,
@@ -2242,10 +2279,10 @@
                             children: [
                               (0, n.jsx)("div", {
                                 children: r
-                                  ? (0, A.we)(
+                                  ? (0, p.we)(
                                       "#Steamawards_Voting_Finalists_Past",
                                     )
-                                  : (0, A.we)("#Steamawards_Voting_Finalists"),
+                                  : (0, p.we)("#Steamawards_Voting_Finalists"),
                               }),
                               (0, n.jsx)("div", {
                                 className: ve().FinalistsLine,
@@ -2265,16 +2302,16 @@
           })
         );
       }
-      function De(e) {
+      function Re(e) {
         const { unAppID: a } = e,
-          [t] = (0, j.t7)(a, Ie),
-          s = (0, Ne.aL)(t?.GetStorePageURL(), "nominee_capsule");
+          [t] = (0, N.t7)(a, Ie),
+          s = (0, je.aL)(t?.GetStorePageURL(), "nominee_capsule");
         return t
           ? (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsx)("div", {
                   className: ve().CurrentVoteBanner,
-                  children: (0, A.we)("#Steamawards_Voting_YourVote"),
+                  children: (0, p.we)("#Steamawards_Voting_YourVote"),
                 }),
                 (0, n.jsx)("a", {
                   href: s,
@@ -2286,16 +2323,16 @@
             })
           : null;
       }
-      function Re(e) {
+      function De(e) {
         const { unAppID: a } = e,
-          [t] = (0, j.t7)(a, Ie),
-          s = (0, Ne.aL)(t?.GetStorePageURL(), "winner_capsule");
+          [t] = (0, N.t7)(a, Ie),
+          s = (0, je.aL)(t?.GetStorePageURL(), "winner_capsule");
         return t
           ? (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsx)("div", {
                   className: ve().CurrentVoteBanner,
-                  children: (0, A.we)("#Steamawards_Voting_Winner"),
+                  children: (0, p.we)("#Steamawards_Voting_Winner"),
                 }),
                 (0, n.jsx)("a", {
                   className: ve().WinnerCapsule,
@@ -2316,7 +2353,7 @@
             bPlayMicrotrailers: r,
             bHoveringApp: o,
           } = e,
-          [l] = (0, j.t7)(a, Ie),
+          [l] = (0, N.t7)(a, Ie),
           d = i.useRef(void 0),
           c = (0, ye.dy)();
         i.useEffect(() => {
@@ -2352,11 +2389,11 @@
             bIsVotingOpen: d,
             bIsCurrentVoteApp: m,
           } = e,
-          [u] = (0, j.t7)(a, Ie),
+          [u] = (0, N.t7)(a, Ie),
           h = (0, _.ZB)(a, s, t),
-          g = (0, Ne.aL)(u?.GetStorePageURL(), "nominee_capsule"),
-          p = (0, _.Vz)(s),
-          x = p && p.currentNomination?.appid === a,
+          g = (0, je.aL)(u?.GetStorePageURL(), "nominee_capsule"),
+          A = (0, _.Vz)(s),
+          x = A && A.currentNomination?.appid === a,
           v = i.useCallback(() => {
             (0, P.UserEligibleToNominateOrVote)(!0)
               ? m || h.mutate()
@@ -2366,8 +2403,8 @@
           }, [m, h]);
         if (!u) return null;
         const C = m
-          ? (0, A.we)("#Steamawards_Voting_Action_Voted")
-          : (0, A.we)("#Steamawards_Voting_Action_Vote");
+          ? (0, p.we)("#Steamawards_Voting_Action_Voted")
+          : (0, p.we)("#Steamawards_Voting_Action_Vote");
         return (0, n.jsxs)(c.Z, {
           className: (0, S.A)(
             ve().FinalistGameCtn,
@@ -2399,12 +2436,12 @@
             x &&
               (0, n.jsx)("div", {
                 className: ve().YourNomination,
-                children: (0, A.we)("#Steamawards_Voting_Action_YourNominee"),
+                children: (0, p.we)("#Steamawards_Voting_Action_YourNominee"),
               }),
           ],
         });
       }
-      function Ve() {
+      function Oe() {
         const e = i.useContext(_.AD),
           a = (0, _.CF)(),
           t = g.TS.HELP_BASE_URL + "faqs/view/71D3-35C2-AD96-AA3A",
@@ -2412,10 +2449,10 @@
           r = "#Steamawards_Voting_FAQ_6_A" + (e.nYear >= 2024 ? "_2024" : "");
         let o = [
           (0, n.jsx)(
-            Oe,
+            Ve,
             {
-              strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_1_Q"),
-              strAnswer: (0, A.oW)(
+              strQuestion: (0, p.we)("#Steamawards_Voting_FAQ_1_Q"),
+              strAnswer: (0, p.oW)(
                 "#Steamawards_Voting_FAQ_1_A",
                 (0, n.jsx)("a", { href: t, children: ", " }),
               ),
@@ -2427,10 +2464,10 @@
           e.bHasStickerRewards &&
             o.push(
               (0, n.jsx)(
-                Oe,
+                Ve,
                 {
-                  strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_2_Q"),
-                  strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_2_A"),
+                  strQuestion: (0, p.we)("#Steamawards_Voting_FAQ_2_Q"),
+                  strAnswer: (0, p.we)("#Steamawards_Voting_FAQ_2_A"),
                 },
                 "FAQ_2",
               ),
@@ -2438,10 +2475,10 @@
           (o = [
             ...o,
             (0, n.jsx)(
-              Oe,
+              Ve,
               {
-                strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_3_Q"),
-                strAnswer: (0, A.we)(
+                strQuestion: (0, p.we)("#Steamawards_Voting_FAQ_3_Q"),
+                strAnswer: (0, p.we)(
                   "#Steamawards_Voting_FAQ_3_A_New",
                   He(e.rtVoteStart),
                   He(e.rtVoteEnd),
@@ -2450,26 +2487,26 @@
               "FAQ_3",
             ),
             (0, n.jsx)(
-              Oe,
+              Ve,
               {
-                strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_7_Q"),
-                strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_7_A"),
+                strQuestion: (0, p.we)("#Steamawards_Voting_FAQ_7_Q"),
+                strAnswer: (0, p.we)("#Steamawards_Voting_FAQ_7_A"),
               },
               "FAQ_4",
             ),
             (0, n.jsx)(
-              Oe,
+              Ve,
               {
-                strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_8_Q"),
-                strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_8_A"),
+                strQuestion: (0, p.we)("#Steamawards_Voting_FAQ_8_Q"),
+                strAnswer: (0, p.we)("#Steamawards_Voting_FAQ_8_A"),
               },
               "FAQ_5",
             ),
             (0, n.jsx)(
-              Oe,
+              Ve,
               {
-                strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_4_Q"),
-                strAnswer: (0, A.we)(
+                strQuestion: (0, p.we)("#Steamawards_Voting_FAQ_4_Q"),
+                strAnswer: (0, p.we)(
                   "#Steamawards_Voting_FAQ_4_A_New",
                   He(e.rtVoteEnd),
                 ),
@@ -2477,16 +2514,16 @@
               "FAQ_6",
             ),
             (0, n.jsx)(
-              Oe,
+              Ve,
               {
-                strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_5_Q"),
-                strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_5_A"),
+                strQuestion: (0, p.we)("#Steamawards_Voting_FAQ_5_Q"),
+                strAnswer: (0, p.we)("#Steamawards_Voting_FAQ_5_A"),
               },
               "FAQ_7",
             ),
             (0, n.jsx)(
-              Oe,
-              { strQuestion: (0, A.we)(s), strAnswer: (0, A.we)(r) },
+              Ve,
+              { strQuestion: (0, p.we)(s), strAnswer: (0, p.we)(r) },
               "FAQ_8",
             ),
           ]),
@@ -2495,7 +2532,7 @@
             children: [
               (0, n.jsx)("div", {
                 className: (0, S.A)(ve().FaqSectionTitle, a.FaqSectionTitle),
-                children: (0, A.we)("#Steamawards_Voting_FAQ_Title"),
+                children: (0, p.we)("#Steamawards_Voting_FAQ_Title"),
               }),
               (0, n.jsx)("div", {
                 className: (0, S.A)(ve().FAQCtn, a.FAQCtn),
@@ -2505,7 +2542,7 @@
           })
         );
       }
-      function Oe(e) {
+      function Ve(e) {
         const { strQuestion: a, strAnswer: t } = e,
           s = (0, _.CF)();
         return (0, n.jsxs)(c.Z, {
@@ -2523,7 +2560,7 @@
         });
       }
       function He(e) {
-        return new Date(1e3 * e).toLocaleString(A.pf.GetPreferredLocales(), {
+        return new Date(1e3 * e).toLocaleString(p.pf.GetPreferredLocales(), {
           day: "numeric",
           month: "short",
           hour: "numeric",
@@ -2531,13 +2568,13 @@
           timeZoneName: "short",
         });
       }
-      var Me = t(26019),
-        We = t.n(Me),
-        Ge = t(79870),
-        qe = t.n(Ge),
+      var Ge = t(26019),
+        Me = t.n(Ge),
+        We = t(79870),
+        qe = t.n(We),
         Ue = t(66701),
-        Ye = t.n(Ue);
-      function ze(e) {
+        ze = t.n(Ue);
+      function Ye(e) {
         const { nYear: a } = e,
           t = (0, ne.f1)(),
           s = (0, _.RE)(),
@@ -2546,7 +2583,7 @@
             return (
               i.useEffect(() => {
                 let a = Xe[e];
-                a || (a = Xe[Ze]), t({ ...Ke, ...a });
+                a || (a = Xe[Ke]), t({ ...Ze, ...a });
               }, [e]),
               a
             );
@@ -2570,20 +2607,20 @@
             };
           }, [a, t, s, r]);
         return o
-          ? (0, n.jsx)(f.Ay, {
+          ? (0, n.jsx)(F.Ay, {
               method: "steamawards",
               children: (0, n.jsx)(_.AD.Provider, {
                 value: o,
-                children: (0, n.jsx)(Te, {}),
+                children: (0, n.jsx)(ke, {}),
               }),
             })
           : null;
       }
-      const Xe = { 2023: We(), 2024: qe(), 2025: Ye() },
-        Ke = Object.values(Xe).reduce((e, a) => ({ ...e, ...a }), {}),
-        Ze = 2023;
+      const Xe = { 2023: Me(), 2024: qe(), 2025: ze() },
+        Ze = Object.values(Xe).reduce((e, a) => ({ ...e, ...a }), {}),
+        Ke = 2023;
       const Je = () =>
-        (0, n.jsx)(f.Ay, {
+        (0, n.jsx)(F.Ay, {
           controller: "steamawards",
           children: (0, n.jsxs)(r.dO, {
             children: [
@@ -2599,7 +2636,7 @@
               (0, n.jsx)(r.qh, {
                 path: s.B.SteamAwards(),
                 render: (e) =>
-                  (0, n.jsx)(ze, { nYear: parseInt(e.match.params.year) }),
+                  (0, n.jsx)(Ye, { nYear: parseInt(e.match.params.year) }),
               }),
             ],
           }),

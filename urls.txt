@@ -145,6 +145,7 @@ https://store.steampowered.com/public/css/promo/remote_play_together.css?__TIME_
 https://store.steampowered.com/public/css/promo/storev6.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/promo/styles_earlyaccess.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/promo/styles_streaming.css?__TIME__&__CDN__
+https://store.steampowered.com/public/css/promo/v7_promo.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_about.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__&__CDN__
 https://store.steampowered.com/public/css/styles_hwsurvey.css?__TIME__&__CDN__
@@ -436,6 +437,7 @@ https://www.playdeadlock.com/public/javascript/react/main.js?__TIME__&__CDN__
 ClientManifest/steam_client_ubuntu12            @ https://client-update.fastly.steamstatic.com/steam_client_ubuntu12?__TIME__
 ClientManifest/steam_client_win64               @ https://client-update.fastly.steamstatic.com/steam_client_win64?__TIME__
 ClientManifest/steam_client_osx                 @ https://client-update.fastly.steamstatic.com/steam_client_osx?__TIME__
+ClientManifest/steam_client_linuxarm64          @ https://client-update.fastly.steamstatic.com/steam_client_linuxarm64?__TIME__
 ClientManifest/steamdeck_stable                 @ https://client-update.fastly.steamstatic.com/steam_client_steamdeck_stable_ubuntu12?__TIME__
 
 //
@@ -444,6 +446,8 @@ ClientManifest/steamdeck_stable                 @ https://client-update.fastly.s
 ClientManifest/steam_client_publicbeta_ubuntu12 @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_ubuntu12?__TIME__
 ClientManifest/steam_client_publicbeta_win64    @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_win64?__TIME__
 ClientManifest/steam_client_publicbeta_osx      @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_osx?__TIME__
+ClientManifest/steam_client_publicbeta_linuxarm64 @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_linuxarm64?__TIME__
+ClientManifest/steam_client_beta_linuxarm64     @ https://client-update.fastly.steamstatic.com/steam_client_linux_arm64_beta_861407927dc8efb407da7cf_linuxarm64?__TIME__
 ClientManifest/steamdeck_publicbeta             @ https://client-update.fastly.steamstatic.com/steam_client_steamdeck_publicbeta_ubuntu12?__TIME__
 
 //
@@ -488,3 +492,6 @@ Random/SteamMobileApks.txt                      @ https://store.steampowered.com
 //
 
 SSR @ https://store.steampowered.com/wishlist/id/steamdb_wolfgang/
+SSR @ https://store.steampowered.com/sitemap
+SSR @ https://partner.steamgames.com/pricing/explorer
+SSR @ https://steamcommunity.com/workshop/browse/?appid=730

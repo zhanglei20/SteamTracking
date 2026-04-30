@@ -25,12 +25,12 @@
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
-          isLoading: __webpack_require__,
+          isLoading: _,
           imageRef: _,
           loaderRef: _,
           getBlob: _,
         } = (function (_) {
-          const [_, __webpack_require__] = _.useState(!0),
+          const [_, _] = _.useState(!0),
             _ = _.useRef(void 0),
             _ = _.useRef(void 0),
             _ = _.useRef(null);
@@ -97,7 +97,7 @@
                   ref: _,
                   className: _.AvatarLoading,
                   style: {
-                    display: __webpack_require__ ? "" : "none",
+                    display: _ ? "" : "none",
                   },
                   children: (0, _._)("#Loading"),
                 }),

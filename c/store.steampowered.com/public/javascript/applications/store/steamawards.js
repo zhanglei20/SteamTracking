@@ -32,11 +32,24 @@
         HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
         HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
         HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
+        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
+        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
+        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
+        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
+        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
+        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
+        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
+        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
+        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     chunkid: () => {},
@@ -133,6 +146,18 @@
         UrlContainer: "_3CXjxVNiKxUH_xCflrU0fv",
         Url: "_3YxsXALKJ70zL3MTTWqibh",
         GenerateShareLinkBtn: "_23i3vxhJO5yZFZ8UkYUHfq",
+        BackgroundAnimation: "_2LOnSlelExzMt5V4a0dNMM",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1HvhiBok8gSNZxjvKJodk_",
+        "ItemFocusAnim-darkerGrey": "_27N4Tx9ZkLoouSi6u2L0Rj",
+        "ItemFocusAnim-darkGreySettings": "_3BuduqT5jtwJUrO_Rlx9pN",
+        "ItemFocusAnim-darkGrey": "_1t5LnzcxRDUwMaXczWLvT9",
+        "ItemFocusAnim-grey": "UvYtyIHWLaxtSAiaOZoaD",
+        "ItemFocusAnim-translucent-white-10": "_2Ze0Xg_Rmw0Fw4dtnjqu06",
+        "ItemFocusAnim-translucent-white-20": "_6KKdX8p_ia-DW2BgO6XxL",
+        "ItemFocusAnimBorder-darkGrey": "_2VHjMLLOWNhhfZTRb8KGKl",
+        "ItemFocusAnim-green": "_3qPaUa-qxMzbOWeav6OXLP",
+        focusAnimation: "_2YJq7kaNhJ2mQ-Kc9fGZdd",
+        hoverAnimation: "_1Ic0fzk_zPsp6jbxsdCaeZ",
       };
     },
     chunkid: (module) => {
@@ -248,6 +273,18 @@
         CategorySticker: "_1draD7X6gu1HpgfRr0k3bO",
         Inactive: "_1N55FNJtt9fgD3oEKh1ulo",
         CategoryStickerHover: "_16qkH83hzNBjI3OfNA2yPZ",
+        BackgroundAnimation: "_1seXoMt6Gw5ShAn1fMGCk1",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2Pfbc5UJLub15f3GMuUOpu",
+        "ItemFocusAnim-darkerGrey": "_1zD-uKidolXqoKdiqmbZmN",
+        "ItemFocusAnim-darkGreySettings": "_1CaH5L10wLn4wyijOgOTH6",
+        "ItemFocusAnim-darkGrey": "_3Hclo3bSXjWjLg7ak63JZU",
+        "ItemFocusAnim-grey": "_276KuR-DDgs7rfFECDuv2Q",
+        "ItemFocusAnim-translucent-white-10": "_1yYdEMizQD0Hu99aKPdShy",
+        "ItemFocusAnim-translucent-white-20": "_8CBvtVkjTgCz2X_r9V8wT",
+        "ItemFocusAnimBorder-darkGrey": "_3Buhs9OTFb_CFYf4_t6djI",
+        "ItemFocusAnim-green": "_436DEQij8XRuUbarXlQ7H",
+        focusAnimation: "_2oswwg33QBrwNVBaVy2Cz0",
+        hoverAnimation: "ux33-vIaysS2_ZFy8EmtK",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -276,7 +313,7 @@
       function _(_) {
         const {
             _: _,
-            hoverClassName: __webpack_require__,
+            hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
             children: _,
@@ -307,7 +344,7 @@
           );
         return (0, _.jsx)("div", {
           ref: _,
-          className: __webpack_require__,
+          className: _,
           onMouseEnter: _,
           onMouseLeave: _,
           onFocus: _,
@@ -318,7 +355,7 @@
       function _(_) {
         const {
             _: _,
-            strExtraParams: __webpack_require__,
+            strExtraParams: _,
             fnOnClickOverride: _,
             strOverrideURL: _,
           } = _,
@@ -328,12 +365,12 @@
             _ ||
               (_ && "creatorid" in _
                 ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )
                 : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )),
@@ -410,14 +447,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { event: _, closeModal: __webpack_require__ } = _;
+        const { event: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           initialEvent: _,
           bShowOnlyInitialEvent: !0,
           partnerEventStore: _._,
           emoticonStore: _._,
           showAppHeader: !0,
-          closeModal: __webpack_require__,
+          closeModal: _,
         });
       }
       function _(_, _) {
@@ -447,11 +484,7 @@
           _.currentTarget == _.target && this.props.fnClose();
         }
         render() {
-          const {
-            event: _,
-            langOverride: _,
-            isPreview: __webpack_require__,
-          } = this.props;
+          const { event: _, langOverride: _, isPreview: _ } = this.props;
           return (0, _.jsx)("div", {
             ref: this.m_refFocus,
             className: _.Main,
@@ -463,7 +496,7 @@
                 emoticonStore: _._,
                 partnerEventStore: _._.Get(),
                 langOverride: _,
-                isPreview: __webpack_require__,
+                isPreview: _,
                 bDisableBroadcastPlayer: !1,
               },
               _.GID,
@@ -500,7 +533,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+        const { appid: _, className: _, bTextMode: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -509,11 +542,11 @@
           bIsFree: Boolean(_?.is_free),
           bIsComingSoon: Boolean(_?.is_coming_soon),
           bTextMode: _,
-          className: __webpack_require__,
+          className: _,
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)(),
           {
             appid: _,
@@ -567,7 +600,7 @@
         );
       }
       function _(_) {
-        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+        const { possibleDemoAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
@@ -575,12 +608,12 @@
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,
-                className: __webpack_require__,
+                className: _,
               })
           : null;
       }
       function _(_) {
-        const { parentAppID: _, className: __webpack_require__ } = _,
+        const { parentAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -589,7 +622,7 @@
               appid: _,
               bIsComingSoon: Boolean(_.is_coming_soon),
               bIsFree: Boolean(_.is_free),
-              className: __webpack_require__,
+              className: _,
             })
           : null;
       }
@@ -643,11 +676,7 @@
         include_assets_without_overrides: !0,
       };
       function _(_) {
-        const {
-            category: _,
-            fnShowPicker: __webpack_require__,
-            rgPrevLaborOfLoveWinners: _,
-          } = _,
+        const { category: _, fnShowPicker: _, rgPrevLaborOfLoveWinners: _ } = _,
           [_, _] = _.useState("");
         if (!(0, _._)(_.voteid).data)
           return (0, _.jsx)(_._, {
@@ -695,7 +724,7 @@
                   })
                 : (0, _.jsx)(_, {
                     category: _,
-                    fnShowPicker: __webpack_require__,
+                    fnShowPicker: _,
                   }),
               (0, _.jsx)("div", {
                 className: _().BottomRow,
@@ -703,7 +732,7 @@
                   unAppID: _._,
                   eSteamAwardCategoryID: _.voteid,
                   eNominatonSource: 0,
-                  fnShowPicker: __webpack_require__,
+                  fnShowPicker: _,
                 }),
               }),
             ],
@@ -711,7 +740,7 @@
         );
       }
       function _(_) {
-        const { category: _, fnShowPicker: __webpack_require__ } = _,
+        const { category: _, fnShowPicker: _ } = _,
           _ = (0, _._)(_.voteid),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -752,7 +781,7 @@
                 })
               : (0, _.jsx)(_, {
                   eSteamAwardCategoryID: _.voteid,
-                  fnShowPicker: __webpack_require__,
+                  fnShowPicker: _,
                 }),
             Boolean(!_) &&
               _.data?.suggested_events?.length > 0 &&
@@ -789,8 +818,7 @@
         });
       }
       function _(_) {
-        const { eSteamAwardCategoryID: _, fnShowPicker: __webpack_require__ } =
-          _;
+        const { eSteamAwardCategoryID: _, fnShowPicker: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().RecommendationRow, _().NoEligibleGamesCtn),
           children: [
@@ -806,18 +834,14 @@
               unAppID: _._,
               eSteamAwardCategoryID: _,
               eNominatonSource: 0,
-              fnShowPicker: __webpack_require__,
+              fnShowPicker: _,
             }),
           ],
         });
       }
       function _(_) {
-        const {
-            strSearch: _,
-            category: __webpack_require__,
-            rgPrevLaborOfLoveWinners: _,
-          } = _,
-          _ = (0, _._)(_, __webpack_require__, _),
+        const { strSearch: _, category: _, rgPrevLaborOfLoveWinners: _ } = _,
+          _ = (0, _._)(_, _, _),
           _ = _.useRef(void 0),
           _ = (0, _._)();
         return (
@@ -842,7 +866,7 @@
                           (0, _.jsx)(
                             _,
                             {
-                              eSteamAwardCategoryID: __webpack_require__.voteid,
+                              eSteamAwardCategoryID: _.voteid,
                               eNominatonSource: 3,
                               appSuggestion: _,
                             },
@@ -861,7 +885,7 @@
       function _(_) {
         const {
             appSuggestion: _,
-            eSteamAwardCategoryID: __webpack_require__,
+            eSteamAwardCategoryID: _,
             eNominatonSource: _,
           } = _,
           _ = parseInt(_._),
@@ -876,7 +900,7 @@
               }),
             }),
             (0, _.jsx)(_, {
-              eSteamAwardCategoryID: __webpack_require__,
+              eSteamAwardCategoryID: _,
               eNominatonSource: _,
               unAppID: _,
             }),
@@ -897,7 +921,7 @@
       function _(_) {
         const {
             rgGameCarouselItems: _,
-            eSteamAwardCategoryID: __webpack_require__,
+            eSteamAwardCategoryID: _,
             eNominatonSource: _,
           } = _,
           _ = (0, _._)(
@@ -935,7 +959,7 @@
                   _,
                   {
                     eNominatonSource: _,
-                    eSteamAwardCategoryID: __webpack_require__,
+                    eSteamAwardCategoryID: _,
                     appID: _.appID,
                     nPlaytime: _.nPlaytime,
                   },
@@ -949,7 +973,7 @@
       function _(_) {
         const {
             appID: _,
-            eSteamAwardCategoryID: __webpack_require__,
+            eSteamAwardCategoryID: _,
             eNominatonSource: _,
             nPlaytime: _,
           } = _,
@@ -979,7 +1003,7 @@
               (0, _.jsx)(_, {
                 unAppID: _,
                 eNominatonSource: _,
-                eSteamAwardCategoryID: __webpack_require__,
+                eSteamAwardCategoryID: _,
               }),
             ],
           })
@@ -988,7 +1012,7 @@
       function _(_) {
         const {
             unAppID: _,
-            eSteamAwardCategoryID: __webpack_require__,
+            eSteamAwardCategoryID: _,
             eNominatonSource: _,
             fnShowPicker: _,
           } = _,
@@ -997,9 +1021,9 @@
           _ = _?.ownerWindow || window,
           _ = _ === _._,
           _ = _.useMemo(() => {
-            const _ = _.data?.find((_) => _.category_id == __webpack_require__);
+            const _ = _.data?.find((_) => _.category_id == _);
             return _?.appid === _;
-          }, [__webpack_require__, _.data, _]),
+          }, [_, _.data, _]),
           _ = _.useCallback(
             (_) => {
               let _ = (0, _._)(
@@ -1016,7 +1040,7 @@
           _ = _.useCallback(() => {
             _ === _._ && _ && _(!1);
           }, [_, _]),
-          _ = (0, _._)(_, __webpack_require__, _, _, _);
+          _ = (0, _._)(_, _, _, _, _);
         let _ = (0, _._)("#Steamawards_Nominate"),
           _ = null;
         return (
@@ -1041,7 +1065,7 @@
       }
       function _(_) {
         const { rgEvents: _ } = _,
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           _ = (0, _._)(),
           _ = _?.ownerWindow || window,
           [_, _] = _.useState(4),
@@ -1060,7 +1084,7 @@
           _ = (0, _._)(_);
         return (
           _.useEffect(() => {
-            if (__webpack_require__) return;
+            if (_) return;
             (async () => {
               _.forEach((_) => {
                 _._.QueueLoadPartnerEvent(
@@ -1079,9 +1103,9 @@
               );
               await Promise.all(_), _(!0);
             })();
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _.length
-            ? __webpack_require__
+            ? _
               ? (0, _.jsx)("div", {
                   ref: _,
                   className: _().EventCarousel,
@@ -1137,7 +1161,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { steamID: _, nYear: __webpack_require__ } = _,
+        const { steamID: _, nYear: _ } = _,
           [_, _] = _.useState(() => _._.IsInitialized()),
           [_] = (0, _._)("k", null),
           _ = Boolean((_ && _ != _._.steamid) || _),
@@ -1159,7 +1183,7 @@
                       steamid: _,
                     })
                   : (0, _.jsx)(_, {
-                      year: __webpack_require__,
+                      year: _,
                     }),
                 !_ &&
                   (0, _.jsxs)("div", {
@@ -1170,7 +1194,7 @@
                     children: [
                       (0, _.jsx)(_, {}),
                       (0, _.jsx)(_, {
-                        nYear: __webpack_require__,
+                        nYear: _,
                       }),
                     ],
                   }),
@@ -1225,7 +1249,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, bEnableNominating: __webpack_require__ } = _,
+        const { steamid: _, bEnableNominating: _ } = _,
           _ = (0, _._)(_);
         return (0, _.jsx)("div", {
           className: _().NominationsHeaderCtn,
@@ -1256,7 +1280,7 @@
                   }),
                 ],
               }),
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)("div", {
                   className: _().HeaderButtonCtn,
                   children: (0, _.jsx)("a", {
@@ -1311,7 +1335,7 @@
       function _(_) {
         const {
             category: _,
-            bEnableNominating: __webpack_require__,
+            bEnableNominating: _,
             rgPrevLaborOfLoveWinners: _,
           } = _,
           { currentNomination: _ } = (0, _._)(_.voteid),
@@ -1350,7 +1374,7 @@
                     (0, _.jsxs)("div", {
                       className: _().CategoryTitleRow,
                       children: [
-                        __webpack_require__ &&
+                        _ &&
                           (0, _.jsx)("div", {
                             className: _().Checkbox,
                             children:
@@ -1393,7 +1417,7 @@
                           })
                         : (0, _.jsx)(_, {}),
                     }),
-                    __webpack_require__ &&
+                    _ &&
                       (0, _.jsx)(_, {
                         fnShowPicker: _,
                         has_nomination: Boolean(_),
@@ -1412,12 +1436,12 @@
         });
       }
       function _(_) {
-        const { nomination: _, bBlurry: __webpack_require__ } = _,
+        const { nomination: _, bBlurry: _ } = _,
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
-          ? __webpack_require__
+          ? _
             ? (0, _.jsx)("img", {
                 src: (0, _._)(_, "header"),
                 alt: _.name,
@@ -1438,7 +1462,7 @@
         });
       }
       function _(_) {
-        const { has_nomination: _, fnShowPicker: __webpack_require__ } = _;
+        const { has_nomination: _, fnShowPicker: _ } = _;
         let _ = (0, _._)("#Steamawards_Nominate_Btn"),
           _ = _().ActionNominate,
           _ = () => __webpack_require__(!0);
@@ -1524,9 +1548,9 @@
         });
       }
       function _(_) {
-        const { nBadgeLevel: _, bCompleted: __webpack_require__ } = _;
+        const { nBadgeLevel: _, bCompleted: _ } = _;
         return (0, _.jsxs)("div", {
-          className: (0, _._)(_().BadgeItem, __webpack_require__ && _().Active),
+          className: (0, _._)(_().BadgeItem, _ && _().Active),
           children: [
             (0, _.jsx)("div", {
               className: _().BadgeImage,
@@ -1558,13 +1582,13 @@
         }
       }
       function _(_) {
-        const { eStoreQuestID: _, completed: __webpack_require__ } = _;
+        const { eStoreQuestID: _, completed: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().BadgeTask,
           children: [
             (0, _.jsx)("div", {
               className: _().Checkbox,
-              children: __webpack_require__ ? (0, _.jsx)(_.Jlk, {}) : null,
+              children: _ ? (0, _.jsx)(_.Jlk, {}) : null,
             }),
             (0, _.jsx)("div", {
               className: _().TaskTitle,
@@ -1795,7 +1819,7 @@
         });
       }
       function _(_) {
-        const { closeModal: _, nYear: __webpack_require__ } = _,
+        const { closeModal: _, nYear: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1);
@@ -1805,7 +1829,7 @@
         _.code &&
           (_ =
             _._.STORE_BASE_URL +
-            `steamawards/nominations/${__webpack_require__}/` +
+            `steamawards/nominations/${_}/` +
             _._.steamid +
             "?k=" +
             _.code);
@@ -1950,14 +1974,14 @@
           : null;
       }
       function _(_) {
-        const { bIsVotingOpen: _, bIsVotingPast: __webpack_require__ } = _,
+        const { bIsVotingOpen: _, bIsVotingPast: _ } = _,
           _ = _.useContext(_._),
           _ = (0, _._)();
         let _;
         return (
           (_ = _
             ? (0, _._)("#Steamawards_Voting_Header_VoteNow")
-            : __webpack_require__
+            : _
               ? (0, _._)("#Steamawards_Voting_Header_WinnersUp")
               : (0, _._)(
                   "#Steamawards_Voting_Header_VoteSoon_New",
@@ -1988,7 +2012,7 @@
                       ),
                       children: _,
                     }),
-                    __webpack_require__
+                    _
                       ? (0, _.jsx)(_.Fragment, {
                           children: (0, _.jsx)("div", {
                             className: (0, _._)(_().InfoText, _.InfoText),
@@ -2030,11 +2054,7 @@
         );
       }
       function _(_) {
-        const {
-            unSaleAppID: _,
-            bIsVotingOpen: __webpack_require__,
-            bIsVotingPast: _,
-          } = _,
+        const { unSaleAppID: _, bIsVotingOpen: _, bIsVotingPast: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)();
@@ -2057,7 +2077,7 @@
                 _.data?.length ?? 0,
                 _.data.votes.length,
               )
-            : __webpack_require__
+            : _
               ? _._.logged_in
                 ? _.data?.length > 0
                   ? (0, _._)(
@@ -2094,12 +2114,12 @@
         );
       }
       function _(_) {
-        const { definition: _, unSaleAppID: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__, _.voteid),
-          _ = (0, _._)(__webpack_require__, _.voteid),
+        const { definition: _, unSaleAppID: _ } = _,
+          _ = (0, _._)(_, _.voteid),
+          _ = (0, _._)(_, _.voteid),
           _ = (0, _._)(),
-          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${__webpack_require__}/${_ ? _?.item_image_small : _?.item_image_large}`,
-          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${__webpack_require__}/${_?.item_image_small}`;
+          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_ ? _?.item_image_small : _?.item_image_large}`,
+          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_?.item_image_small}`;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().CategoryStickerCtn, _.CategoryStickerCtn),
           children: [
@@ -2123,16 +2143,12 @@
         });
       }
       function _(_) {
-        const {
-            unSaleAppID: _,
-            bIsVotingOpen: __webpack_require__,
-            bIsVotingPast: _,
-          } = _,
+        const { unSaleAppID: _, bIsVotingOpen: _, bIsVotingPast: _ } = _,
           _ = (0, _._)(_).data.votes.map((_) =>
             (0, _.jsx)(
               _,
               {
-                bIsVotingOpen: __webpack_require__,
+                bIsVotingOpen: _,
                 bIsVotingPast: _,
                 unSaleAppID: _,
                 definition: _,
@@ -2149,7 +2165,7 @@
       function _(_) {
         const {
             definition: _,
-            unSaleAppID: __webpack_require__,
+            unSaleAppID: _,
             bIsVotingOpen: _,
             bIsVotingPast: _,
           } = _,
@@ -2157,7 +2173,7 @@
             _.app_discounts.map((_) => _.appid),
             _,
           ),
-          _ = (0, _._)(__webpack_require__, _.voteid),
+          _ = (0, _._)(_, _.voteid),
           _ = _.useRef(0),
           _ = (0, _._)(),
           _ = _.useContext(_._),
@@ -2245,7 +2261,7 @@
               _,
               {
                 eCategory: _.voteid,
-                unSaleAppID: __webpack_require__,
+                unSaleAppID: _,
                 bCurrentlyActive: _ === _,
                 unAppID: _,
                 bIsVotingOpen: _,
@@ -2407,12 +2423,12 @@
       }
       function _(_) {
         const { unAppID: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _._)(
             __webpack_require__?.GetStorePageURL(),
             "nominee_capsule",
           );
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
@@ -2433,12 +2449,12 @@
       }
       function _(_) {
         const { unAppID: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _._)(
             __webpack_require__?.GetStorePageURL(),
             "winner_capsule",
           );
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
@@ -2461,7 +2477,7 @@
       function _(_) {
         const {
             unAppID: _,
-            bCurrentlyActive: __webpack_require__,
+            bCurrentlyActive: _,
             fnOnVideoEnd: _,
             bPlayMicrotrailers: _,
             bHoveringApp: _,
@@ -2470,16 +2486,12 @@
           _ = _.useRef(void 0),
           _ = (0, _._)();
         _.useEffect(() => {
-          _.current &&
-            (__webpack_require__ && _ ? _.current.play() : _.current.pause());
-        }, [__webpack_require__, _]);
+          _.current && (_ && _ ? _.current.play() : _.current.pause());
+        }, [_, _]);
         const _ = _?.GetMicroTrailer(_);
         return _ && _?.strWebMURL
           ? (0, _.jsxs)("video", {
-              className: (0, _._)(
-                _().MicrotrailerVideo,
-                __webpack_require__ && _().Active,
-              ),
+              className: (0, _._)(_().MicrotrailerVideo, _ && _().Active),
               poster: _.GetAssetsWithoutOverrides().GetMainCapsuleURL(),
               onEnded: _,
               ref: _,
@@ -2504,7 +2516,7 @@
       function _(_) {
         const {
             unAppID: _,
-            unSaleAppID: __webpack_require__,
+            unSaleAppID: _,
             eCategory: _,
             bCurrentlyActive: _,
             fnOnMouseEnterApp: _,
@@ -2513,7 +2525,7 @@
             bIsCurrentVoteApp: _,
           } = _,
           [_] = (0, _._)(_, _),
-          _ = (0, _._)(_, _, __webpack_require__),
+          _ = (0, _._)(_, _, _),
           _ = (0, _._)(_?.GetStorePageURL(), "nominee_capsule"),
           _ = (0, _._)(_),
           _ = _ && _.currentNomination?.appid === _,
@@ -2675,7 +2687,7 @@
         );
       }
       function _(_) {
-        const { strQuestion: _, strAnswer: __webpack_require__ } = _,
+        const { strQuestion: _, strAnswer: _ } = _,
           _ = (0, _._)();
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().FaqEntry, _.FaqEntry),
@@ -2686,7 +2698,7 @@
             }),
             (0, _.jsx)("div", {
               className: (0, _._)(_().FAQ_A, _.FAQ_A),
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });

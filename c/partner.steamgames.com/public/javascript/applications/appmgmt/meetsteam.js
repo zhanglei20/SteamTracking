@@ -1447,10 +1447,10 @@
       const _ = _.createContext(void 0);
       function _(_) {
         const { children: _ } = _,
-          [__webpack_require__, _] = _("showpastevents", !1);
+          [_, _] = _("showpastevents", !1);
         return (0, _.jsx)(_.Provider, {
           value: {
-            bShowArchived: __webpack_require__,
+            bShowArchived: _,
             setShowArchived: _,
           },
           children: _,
@@ -1494,7 +1494,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { hideModal: _, gid: __webpack_require__ } = _,
+        const { hideModal: _, gid: _ } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
           [_, _] = _.useState(0),
@@ -1503,11 +1503,11 @@
           [_, _] = _.useState(!1),
           _ = _(),
           _ = (0, _._)({
-            queryKey: ["MeetSteamInviteDirectDialog", __webpack_require__, _],
+            queryKey: ["MeetSteamInviteDirectDialog", _, _],
             queryFn: async () => {
               const _ = {
                   steamid: _._.InitFromAccountID(_).ConvertTo64BitString(),
-                  gid: __webpack_require__,
+                  gid: _,
                   type: 6,
                 },
                 _ = await _._.GetUserActionData(_, _);
@@ -1515,7 +1515,7 @@
                 ? JSON.parse(_.Body().jsondata())
                 : {};
             },
-            enabled: Boolean(__webpack_require__) && _ > 0,
+            enabled: Boolean(_) && _ > 0,
           });
         _.useEffect(() => {
           _.isLoading ||
@@ -1531,7 +1531,7 @@
             _(!0);
             const _ = Number.parseInt(_) > 0 ? Number.parseInt(_) : 0,
               _ = await _(
-                __webpack_require__,
+                _,
                 [
                   {
                     nAccountID: _,
@@ -1606,7 +1606,7 @@
         });
       }
       function _(_) {
-        const { hideModal: _, gid: __webpack_require__ } = _,
+        const { hideModal: _, gid: _ } = _,
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
@@ -1618,7 +1618,7 @@
           strCancelButtonText: null !== _ ? "Close" : "Cancel",
           onOK: async () => {
             _(!0);
-            const _ = await _(__webpack_require__, _, !1);
+            const _ = await _(_, _, !1);
             1 == _?.success
               ? (_(_.rgInvitedAccounts.length), _(_.rgSkippedAccounts.length))
               : _("We hit error during invite, check console: " + _?.msg),
@@ -1954,7 +1954,7 @@
       let _;
       function _(_) {
         const { rgEventGIDs: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(),
+          [_, _, _] = (0, _._)(),
           [_, _] = (0, _.useState)(null);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -1969,7 +1969,7 @@
               children: "Analyse Top Partner Coverage",
             }),
             (0, _.jsx)(_._, {
-              active: __webpack_require__,
+              active: _,
               children: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
                   closeModal: _,
@@ -2176,7 +2176,7 @@
         });
       }
       function _(_) {
-        const { rgEventGIDs: _, fnSelectedEvents: __webpack_require__ } = _,
+        const { rgEventGIDs: _, fnSelectedEvents: _ } = _,
           [_, _] = (0, _.useState)([]),
           { bShowArchived: _, setShowArchived: _ } = _(),
           { bIsLoading: _, events: _ } = (0, _._)(_),
@@ -2218,11 +2218,7 @@
             });
       }
       function _(_) {
-        const {
-            gidClanEvent: _,
-            rgSelected: __webpack_require__,
-            fnSetSelected: _,
-          } = _,
+        const { gidClanEvent: _, rgSelected: _, fnSetSelected: _ } = _,
           _ = (0, _._)(_).GetNameWithFallback(0);
         return (0, _.jsx)(_._, {
           label: _,
@@ -2231,7 +2227,7 @@
             const _ = __webpack_require__.indexOf(_),
               _ = Boolean(_ >= 0);
             _ && !_
-              ? _([...__webpack_require__, _])
+              ? _([..._, _])
               : !_ &&
                 _ &&
                 _([
@@ -2246,8 +2242,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { hideModal: _, gid: __webpack_require__ } = _,
-          _ = _(__webpack_require__),
+        const { hideModal: _, gid: _ } = _,
+          _ = _(_),
           _ = (0, _._)(),
           [_, _] = (0, _.useMemo)(
             () =>
@@ -2316,7 +2312,7 @@
                             );
                           }
                           return null;
-                        })(_, __webpack_require__);
+                        })(_, _);
                       },
                       children: [_, " Invites To Sent. Send now?"],
                     }),
@@ -2366,7 +2362,7 @@
       }
       function _(_) {
         const { reg: _ } = _,
-          [__webpack_require__] = (0, _._)(_.partner_id);
+          [_] = (0, _._)(_.partner_id);
         return (0, _.jsxs)("tr", {
           children: [
             (0, _.jsx)("td", {
@@ -2382,7 +2378,7 @@
               children: Boolean(_.invitation_emailed) ? "YES" : "",
             }),
             (0, _.jsxs)("td", {
-              children: [__webpack_require__?.name, " (", _.partner_id, ")"],
+              children: [_?.name, " (", _.partner_id, ")"],
             }),
             (0, _.jsx)("td", {
               children: _.email_override,
@@ -2391,16 +2387,10 @@
         });
       }
       function _(_) {
-        const {
-            hideModal: _,
-            gid: __webpack_require__,
-            title: _,
-            group: _,
-            session: _,
-          } = _,
+        const { hideModal: _, gid: _, title: _, group: _, session: _ } = _,
           _ = (0, _._)(),
-          _ = _(__webpack_require__),
-          _ = _(_, __webpack_require__, _?.group_id),
+          _ = _(_),
+          _ = _(_, _, _?.group_id),
           [_, _] = (0, _.useMemo)(() => {
             const _ = _?.data?.filter((_) => _.session_id == _._),
               _ = new Map(),
@@ -2580,14 +2570,9 @@
         return _ in _ && (_ = _[_]), _;
       }
       function _(_) {
-        const {
-            inviteInfo: _,
-            regInfo: __webpack_require__,
-            group: _,
-            preRegQuestions: _,
-          } = _,
+        const { inviteInfo: _, regInfo: _, group: _, preRegQuestions: _ } = _,
           [_] = (0, _._)(_.partner_id),
-          _ = _(__webpack_require__, _);
+          _ = _(_, _);
         return (0, _.jsxs)("tr", {
           children: [
             (0, _.jsx)("td", {
@@ -2609,9 +2594,7 @@
               children: _.email_override,
             }),
             (0, _.jsx)("td", {
-              children: __webpack_require__.guests_registered
-                ? __webpack_require__.guests_registered - 1
-                : 0,
+              children: _.guests_registered ? _.guests_registered - 1 : 0,
             }),
             (0, _.jsx)("td", {
               children: _ ? (0, _._)(_) : "",
@@ -2673,7 +2656,7 @@
       }
       function _(_) {
         const { rgEventGIDs: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(),
+          [_, _, _] = (0, _._)(),
           [_, _] = (0, _.useState)(null);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -2688,7 +2671,7 @@
               children: "Show Registration Across Events",
             }),
             (0, _.jsx)(_._, {
-              active: __webpack_require__,
+              active: _,
               children: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
                   closeModal: _,
@@ -2720,7 +2703,7 @@
       function _(_) {
         const { rgGidMeetSteamEvents: _ } = _,
           {
-            rgAllRegistrations: __webpack_require__,
+            rgAllRegistrations: _,
             rgPartnerIDs: _,
             rgValveAccounts: _,
             rgMapAccountToSessionTimes: _,
@@ -2787,7 +2770,7 @@
           })(_),
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
-            if (!(_ && __webpack_require__ && _ && _)) return null;
+            if (!(_ && _ && _ && _)) return null;
             const _ = new Map();
             _.forEach((_) => _.set(_._, _));
             const _ = [];
@@ -2820,7 +2803,7 @@
               }),
               _
             );
-          }, [_, __webpack_require__, _, _]),
+          }, [_, _, _, _]),
           _ = _();
         return _ && _ && _
           ? (0, _.jsxs)(_.Fragment, {
@@ -2989,11 +2972,8 @@
             : null;
       }
       function _(_) {
-        const { month: _, events: __webpack_require__ } = _,
-          _ = _.useMemo(
-            () => [...__webpack_require__].sort((_) => -_.startTime),
-            [__webpack_require__],
-          ),
+        const { month: _, events: _ } = _,
+          _ = _.useMemo(() => [..._].sort((_) => -_.startTime), [_]),
           _ = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
             month: "long",
@@ -3236,7 +3216,7 @@
       }
       function _(_) {
         const { gid: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)();
+          [_, _, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           children: [
             " | ",
@@ -3255,7 +3235,7 @@
             }),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
-                active: __webpack_require__,
+                active: _,
                 children: (0, _.jsx)(_, {
                   hideModal: _,
                   gid: _,
@@ -3267,7 +3247,7 @@
       }
       function _(_) {
         const { gid: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)();
+          [_, _, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           children: [
             " | ",
@@ -3280,7 +3260,7 @@
             }),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
-                active: __webpack_require__,
+                active: _,
                 children: (0, _.jsx)(_, {
                   hideModal: _,
                   gid: _,
@@ -3292,7 +3272,7 @@
       }
       function _(_) {
         const { gid: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)();
+          [_, _, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           children: [
             " | ",
@@ -3305,7 +3285,7 @@
             }),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
-                active: __webpack_require__,
+                active: _,
                 children: (0, _.jsx)(_, {
                   hideModal: _,
                   gid: _,
@@ -3384,29 +3364,17 @@
       function _(_) {
         const {
             gid: _,
-            group: __webpack_require__,
+            group: _,
             rgAvailability: _,
             session: _,
             firstSession: _ = !0,
           } = _,
-          _ = _._.GetWithFallback(
-            __webpack_require__?.localized_session_title,
-            0,
-          ),
-          _ = _._.GetWithFallback(
-            __webpack_require__?.localized_session_description,
-            0,
-          ),
-          _ = _._.GetWithFallback(
-            __webpack_require__?.localized_intended_audience,
-            0,
-          ),
-          _ = _?.find(
-            (_) =>
-              _.group_id == __webpack_require__.group_id && _.session_id == _._,
-          ),
+          _ = _._.GetWithFallback(_?.localized_session_title, 0),
+          _ = _._.GetWithFallback(_?.localized_session_description, 0),
+          _ = _._.GetWithFallback(_?.localized_intended_audience, 0),
+          _ = _?.find((_) => _.group_id == _.group_id && _.session_id == _._),
           [_, _, _] = (0, _._)(),
-          _ = _((0, _._)(), _, __webpack_require__?.group_id);
+          _ = _((0, _._)(), _, _?.group_id);
         let _ = Math.min((_?.guest_count / _.max_capacity) * 100, 100),
           _ = _?.guest_count > 0 ? `${_}%` : "0%",
           _ = _?.guest_count >= _.max_capacity;
@@ -3417,7 +3385,7 @@
               : _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            _ && Boolean(__webpack_require__)
+            _ && Boolean(_)
               ? (0, _.jsxs)("td", {
                   children: [
                     _,
@@ -3487,7 +3455,7 @@
                     children: (0, _.jsx)(_, {
                       gid: _,
                       title: _,
-                      group: __webpack_require__,
+                      group: _,
                       session: _,
                       hideModal: _,
                     }),
@@ -3570,13 +3538,9 @@
         });
       }
       function _(_) {
-        const {
-          conf: _,
-          nInterestCount: __webpack_require__,
-          rgSurveyInterest: _,
-        } = _;
+        const { conf: _, nInterestCount: _, rgSurveyInterest: _ } = _;
         return (0, _.jsx)(_._, {
-          title: `${_.name} in ${_.place} around ${_.time}: Interest: ${(0, _._)(__webpack_require__)}`,
+          title: `${_.name} in ${_.place} around ${_.time}: Interest: ${(0, _._)(_)}`,
           bStartMinimized: !0,
           children: (0, _.jsx)(_, {
             conf: _,
@@ -3600,17 +3564,17 @@
         }
       }
       function _(_) {
-        const { conf: _, rgSurveyInterest: __webpack_require__ } = _,
+        const { conf: _, rgSurveyInterest: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               __webpack_require__.filter((_) =>
                 _.results?.attending?.includes(_._),
               ),
-            [_, __webpack_require__],
+            [_, _],
           ),
           _ = (0, _._)(),
           { bComplete: _, nCount: _ } = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(!1),
+            const [_, _] = (0, _.useState)(!1),
               [_, _] = (0, _.useState)(0),
               _ = (0, _._)();
             return (
@@ -3660,7 +3624,7 @@
             });
       }
       function _(_) {
-        const { conf: _, rgSurveyInterest: __webpack_require__ } = _,
+        const { conf: _, rgSurveyInterest: _ } = _,
           _ = (0, _._)();
         return (0, _.jsxs)("div", {
           children: [
@@ -3807,7 +3771,7 @@
         });
       }
       function _(_) {
-        const { partnerID: _, registration: __webpack_require__ } = _;
+        const { partnerID: _, registration: _ } = _;
         return (0, _.jsxs)("tr", {
           children: [
             (0, _.jsx)("td", {
@@ -3816,38 +3780,33 @@
               }),
             }),
             (0, _.jsx)("td", {
-              children: __webpack_require__.have_you_met_steam ? "" : "NO",
+              children: _.have_you_met_steam ? "" : "NO",
             }),
             (0, _.jsx)(_, {
               nPartnerID: _,
             }),
             (0, _.jsx)("td", {
-              children: __webpack_require__.attending.length,
+              children: _.attending.length,
             }),
             (0, _.jsx)("td", {
               children:
-                __webpack_require__.english_not_good &&
-                __webpack_require__.preferred_language
-                  ? (0, _._)(__webpack_require__.preferred_language)
+                _.english_not_good && _.preferred_language
+                  ? (0, _._)(_.preferred_language)
                   : "",
             }),
             (0, _.jsx)("td", {
-              children: __webpack_require__.country_code,
+              children: _.country_code,
             }),
             (0, _.jsx)("td", {
-              children: (0, _._)(__webpack_require__.submit_time),
+              children: (0, _._)(_.submit_time),
             }),
           ],
         });
       }
       function _(_) {
-        const {
-            strsteamid: _,
-            partnerID: __webpack_require__,
-            registration: _,
-          } = _,
+        const { strsteamid: _, partnerID: _, registration: _ } = _,
           _ = (0, _._)(_),
-          _ = _(new _._(_).GetAccountID(), __webpack_require__),
+          _ = _(new _._(_).GetAccountID(), _),
           _ = _?.realname || _.data?.m_strPlayerName;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -3863,7 +3822,7 @@
       }
       function _(_) {
         const { nPartnerID: _ } = _,
-          [__webpack_require__] = (0, _._)(_),
+          [_] = (0, _._)(_),
           _ = (function (_) {
             const _ = (0, _._)({
               queryKey: _(_),
@@ -3877,9 +3836,7 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("td", {
-              children: __webpack_require__
-                ? __webpack_require__?.name + ` (${_})`
-                : _,
+              children: _ ? _?.name + ` (${_})` : _,
             }),
             (0, _.jsx)("td", {
               children: _?.map(
@@ -4219,17 +4176,13 @@
         });
       }
       function _(_) {
-        const { name: _, rgClanEventGIDs: __webpack_require__ } = _,
+        const { name: _, rgClanEventGIDs: _ } = _,
           [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_._, {
               onClick: _,
-              children: [
-                "See ",
-                (0, _._)(__webpack_require__.length),
-                " Events",
-              ],
+              children: ["See ", (0, _._)(_.length), " Events"],
             }),
             (0, _.jsx)(_._, {
               active: _,
@@ -4472,7 +4425,7 @@
             });
       }
       function _(_) {
-        const { oRegistration: _, fnSetRegistration: __webpack_require__ } = _,
+        const { oRegistration: _, fnSetRegistration: _ } = _,
           { rgEvents: _, rgOldEvents: _, selectConference: _ } = _();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -4600,11 +4553,7 @@
         });
       }
       function _(_) {
-        const {
-          oRegistration: _,
-          fnSetRegistration: __webpack_require__,
-          conf: _,
-        } = _;
+        const { oRegistration: _, fnSetRegistration: _, conf: _ } = _;
         return (0, _.jsx)(_._, {
           checked: _.attending?.includes(_._),
           onChange: (_) => {
@@ -4627,7 +4576,7 @@
         });
       }
       function _(_) {
-        const { oRegistration: _, fnSetRegistration: __webpack_require__ } = _,
+        const { oRegistration: _, fnSetRegistration: _ } = _,
           _ = (0, _._)(_._.accountid),
           _ = (function (_) {
             const _ = (function () {
@@ -4772,11 +4721,7 @@
             });
       }
       function _(_) {
-        const {
-            nPartnerID: _,
-            setPartnerID: __webpack_require__,
-            label: _,
-          } = _,
+        const { nPartnerID: _, setPartnerID: _, label: _ } = _,
           _ = (0, _._)(_._.accountid);
         if (!_)
           return (0, _.jsx)(_._, {
@@ -5003,7 +4948,7 @@
       function _(_) {
         const {
             rgSurveyResults: _,
-            mapAccountsToReg: __webpack_require__,
+            mapAccountsToReg: _,
             meetSteamEvents: _,
           } = _,
           _ = (0, _.useMemo)(() => {
@@ -5046,7 +4991,7 @@
               }),
               _
             );
-          }, [__webpack_require__, _, _]),
+          }, [_, _, _]),
           _ = (0, _.useMemo)(
             () => [
               _.accessor("name", {

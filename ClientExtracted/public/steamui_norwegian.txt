@@ -4784,7 +4784,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_WindowsCompat_Description" "Windows kjører Steam i Windows-kompatibilitetsmodus for øyeblikket, som kan forårsake problemer med noen Steam-funksjoner og kjøring av spill. Følg instruksjonene nedenfor for å fjerne kompatibilitetsmodus."
 "Steam_WindowsCompat_DoNotShowAgain" "Vis ikke igjen"
 "Steam_WindowsCompat_SupportLinkDesc" "Hvordan deaktiverer jeg kompatibilitetsmodus?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Lukk Steam"
 "Steam_WindowsCompat_RestartSteam" "Start Steam på nytt"
 "Steam_WindowsCompat_Continue" "Fortsett"
@@ -4865,11 +4864,12 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "RescueDialog_ExitSteam" "Avslutt Steam"
 
 "TransportDialog_Title" "Uventet transportfeil"
-"TransportDialog_Explanation" "Steam støtte på en uventet feil under oppstart (0x%errorCount%). Trykk <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>her</a> for mer informasjon."
+"TransportDialog_Explanation" "Steam støtte på en uventet feil under oppstart (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Velg et av følgende alternativer:"
 "TransportDialog_RestartSteam" "Start Steam på nytt"
 "TransportDialog_RestartSteamWebHelper" "Start steamwebhelper på nytt"
 "TransportDialog_ContinueAnyway" "Valve: Fortsett likevel"
+"TransportDialog_SupportLinkDesc" "Mer informasjon"
 "TransportDialog_ExitSteam" "Avslutt Steam"
 
 "DownloadRegion_default"				 "Ukjent"

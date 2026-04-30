@@ -104,9 +104,6 @@ body.v6 h2.announcement_top_title{
 	html .creator_announcement_read_all_bottom {
 		display:none;
 	}
-	html .page_content.curator_header_ctn {
-		width: 940px;
-	}
 }
 
 /* Smaller fallback responsive */

@@ -374,7 +374,7 @@
       (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
       const _ = new _();
       function _(_ = 1) {
-        const [_, __webpack_require__] = _.useState(() => _()),
+        const [_, _] = _.useState(() => _()),
           _ = (0, _._)("useTimeNowWithOverride"),
           _ = _.useCallback(() => {
             _.token.reason || __webpack_require__(_());
@@ -443,7 +443,7 @@
         );
       }
       function _(_) {
-        const { redirectURL: _, guestOption: __webpack_require__ } = _,
+        const { redirectURL: _, guestOption: _ } = _,
           [_] = (0, _.useState)(
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
@@ -463,7 +463,7 @@
                 redirectUrl: _,
                 theme: "modal",
                 children:
-                  __webpack_require__ &&
+                  _ &&
                   (0, _.jsx)(_._, {
                     redirectURL: _,
                   }),
@@ -526,7 +526,7 @@
       const _ = (0, _._)((_) => {
           const {
               dateAndTime: _,
-              bSingleLine: __webpack_require__,
+              bSingleLine: _,
               bOnlyTime: _,
               bOnlyDate: _,
             } = _,
@@ -539,7 +539,7 @@
                   ..._.stylesmodule,
                 }
               : _();
-          return __webpack_require__
+          return _
             ? (0, _.jsxs)("span", {
                 className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
                 children: [
@@ -706,7 +706,7 @@
           const {
               startDateAndTime: _,
               endDateAndTime: _,
-              bHideEndTime: __webpack_require__,
+              bHideEndTime: _,
             } = this.props,
             _ = this.props.stylesmodule
               ? {
@@ -765,7 +765,7 @@
                   ),
                 }),
               })),
-            __webpack_require__ || null == _ || _ < 1)
+            _ || null == _ || _ < 1)
           )
             return _;
           const _ = _ <= _ && _ <= _;
@@ -859,13 +859,13 @@
       function _(_) {
         const {
           rtStartDate: _,
-          rtEndDate: __webpack_require__,
+          rtEndDate: _,
           strMonthFormat: _,
           className: _,
         } = _;
         return (0, _.jsxs)("div", {
           className: _,
-          children: [_(_, __webpack_require__, _), " "],
+          children: [_(_, _, _), " "],
         });
       }
       _ = (0, _._)([_._], _);

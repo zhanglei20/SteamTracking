@@ -81,6 +81,7 @@
         FullWidth: "_6EcDVXFHtdirTkETQjKOK",
         BackgroundAnimation: "_3w9sEc9GApj44Kg099SX99",
         "ItemFocusAnim-darkerGrey-nocolor": "_3zMKq0Ov9QZXkvzuZaEgKn",
+        "ItemFocusAnim-darkGreySettings": "qadlYXxqgL7iZI-3WagQW",
         "ItemFocusAnim-darkGrey": "_1bS3_eEfJQL1uvh9ueXwHc",
         "ItemFocusAnim-grey": "K14jHOeux9t-cKLHsLZ_R",
         "ItemFocusAnim-translucent-white-10": "_14krbCetggqySSjN1tprjy",
@@ -145,6 +146,7 @@
         NewIndicator: "_1pIhbqWsrCVPaGGYc6fT-H",
         BackgroundAnimation: "_2THWJm_DP4_8_21tEsXSSj",
         "ItemFocusAnim-darkerGrey-nocolor": "_3TDFCqwgSFsXL90HH5PmyQ",
+        "ItemFocusAnim-darkGreySettings": "_2V49icFFKCzM2imCbWVQKz",
         "ItemFocusAnim-darkGrey": "_22M7t0tCHSgmIcx2rwkyDn",
         "ItemFocusAnim-grey": "lhtmiPnDLy_PH3nWN5N8F",
         "ItemFocusAnim-translucent-white-10": "xPu5sAUAb9KZcZojHZeok",
@@ -213,6 +215,7 @@
         SteamNotificationWrapper: "UmtNgXD92RoDeYjxKEskk",
         BackgroundAnimation: "CHduhRYQLY29chQ5oLbsR",
         "ItemFocusAnim-darkerGrey-nocolor": "_3bOlzQnTJZnV9rTU3NSxJh",
+        "ItemFocusAnim-darkGreySettings": "_1bdnqXVo31tiUrXoxNB3wW",
         "ItemFocusAnim-darkGrey": "uOdBxiMFNvmWe8MWKL2vT",
         "ItemFocusAnim-grey": "_9s1knb2MNj9uD9M1SCh2u",
         "ItemFocusAnim-translucent-white-10": "_1YVG7HtpgQ26Yx-8ZWKCBi",
@@ -227,6 +230,109 @@
       module.exports = {
         WebPinnedNotification: "_34nLZDNirxRHssbsjB_dJf",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = "061818254b2c99ac49e6626adb128ed1282a392f",
+        _ = 120;
+      class _ {
+        m_unAppID;
+        m_bInitialized = !1;
+        m_strName;
+        m_strIconURL;
+        m_dtUpdatedFromServer;
+        m_eAppType;
+        constructor(_) {
+          this.m_unAppID = _;
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return 4 == this.apptype || 2 == this.apptype;
+        }
+        BuildAppURL(_, _) {
+          return _
+            ? _._.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                _ +
+                ".jpg"
+            : (0, _._)(_);
+        }
+        DeserializeFromMessage(_) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = _.name()),
+            (this.m_strIconURL = _.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = _.app_type());
+        }
+        DeserializeFromAppOverview(_) {
+          _.icon_hash() && 1073741824 != _.app_type()
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = _.display_name()),
+              (this.m_strIconURL = _.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = _.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(_) {
+          try {
+            (this.m_strName = _.strName),
+              (this.m_strIconURL = _.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(_.strUpdatedFromServer)),
+              (this.m_eAppType = _.eAppType),
+              (this.m_bInitialized = !0);
+          } catch {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, _._)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -534,6 +640,30 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function _(_, _) {
+        let _ = ".jpg";
+        (_ && "0000000000000000000000000000000000000000" !== _) || (_ = _),
+          44 == _.length && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
+        let _ = _._.AVATAR_BASE_URL;
+        return (
+          _ ||
+            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (_ += _.substr(0, 2) + "/")),
+          (_ += _),
+          _ && "small" != _ && (_ += "_" + _),
+          (_ += _),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -628,6 +758,198 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        const _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _._)();
+        _.current = _;
+        const [_, _] = (0, _.useState)(void 0),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = {
+              include_assets: _,
+              include_release: _,
+              include_platforms: _,
+              include_all_purchase_options: _,
+              include_screenshots: _,
+              include_trailers: _,
+              include_ratings: _,
+              include_tag_count: _,
+              include_reviews: _,
+              include_basic_info: _,
+              include_supported_languages: _,
+              include_full_description: _,
+              include_included_items: _,
+              include_assets_without_overrides: _,
+              apply_user_filters: _,
+              include_links: _,
+            };
+            let _ = null;
+            return (
+              !_ ||
+                _ < 0 ||
+                _._.Get().BHasStoreItem(_, _, _) ||
+                (void 0 !== _ && _ && _ == _.current) ||
+                (_ !== _.current && (_(void 0), (_.current = _)),
+                (_ = _().CancelToken.source()),
+                _._.Get()
+                  .QueueStoreItemRequest(_, _, _)
+                  .then((_) => {
+                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                  })),
+              () => _?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
+        return _ ? [_, 3] : [null, 2];
+      }
+      function _(_, _, _) {
+        return _(_, 0, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, 2, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, 1, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = _(_, _, _);
+        let _;
+        1 != _?.GetStoreItemType() ||
+          _.GetAssets()?.GetHeaderURL() ||
+          1 != _?.GetIncludedAppIDs().length ||
+          (_ = _.GetIncludedAppIDs()[0]);
+        const [_, _] = _(_, _);
+        return _ && _?.BIsVisible() ? [_, _] : [_, _];
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)(),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            if (!_ || 0 == _.length) return;
+            const _ = {
+                include_assets: _,
+                include_release: _,
+                include_platforms: _,
+                include_all_purchase_options: _,
+                include_screenshots: _,
+                include_trailers: _,
+                include_ratings: _,
+                include_tag_count: _,
+                include_reviews: _,
+                include_basic_info: _,
+                include_supported_languages: _,
+                include_full_description: _,
+                include_included_items: _,
+                include_assets_without_overrides: _,
+                apply_user_filters: _,
+                include_links: _,
+              },
+              _ = _.filter(
+                (_) =>
+                  !(
+                    _._.Get().BHasStoreItem(_, _, _) ||
+                    _._.Get().BIsStoreItemMissing(_, _)
+                  ),
+              );
+            if (0 == _.length) return;
+            const _ = _().CancelToken.source(),
+              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
+            return (
+              Promise.all(_).then(() => {
+                _.token.reason || _();
+              }),
+              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return 2;
+        if (
+          !_.every(
+            (_) =>
+              _._.Get().BHasStoreItem(_, _, _) ||
+              _._.Get().BIsStoreItemMissing(_, _),
+          )
+        )
+          return 1;
+        return _.every((_) =>
+          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
+        )
+          ? 3
+          : 2;
+      }
+      function _(_, _, _) {
+        return _(_, 0, _, _);
+      }
+      function _() {
+        _.useEffect(
+          () => (
+            _._.Get().SetReturnUnavailableItems(!0),
+            () => _._.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           GreenEnvelope: () => _,
@@ -674,13 +996,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        let {
-            onActivate: _,
-            icon: __webpack_require__,
-            body: _,
-            eUIMode: _,
-            classNames: _,
-          } = _,
+        let { onActivate: _, icon: _, body: _, eUIMode: _, classNames: _ } = _,
           _ = _,
           _ = _().PinnedTemplate;
         return (
@@ -698,7 +1014,7 @@
                 children: [
                   (0, _.jsx)("span", {
                     className: _().Icon,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                   _,
                 ],
@@ -710,7 +1026,7 @@
       function _(_) {
         const {
           count: _,
-          icon: __webpack_require__,
+          icon: _,
           onActivate: _,
           strLocToken: _,
           bAlwaysShow: _,
@@ -721,7 +1037,7 @@
         if (!_ && !_) return null;
         const _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
-          icon: __webpack_require__,
+          icon: _,
           body: _,
           onActivate: _,
           eUIMode: _,
@@ -733,7 +1049,7 @@
       function _(_) {
         let {
           nUnread: _,
-          location: __webpack_require__,
+          location: _,
           eUIMode: _,
           bLoading: _,
           footer: _,
@@ -755,29 +1071,21 @@
             return () => window.clearTimeout(_);
           }, []),
           _.useEffect(() => {
-            _ &&
-            _ > 0 &&
-            _ !== _().Unread &&
-            2 != __webpack_require__ &&
-            1 != __webpack_require__
+            _ && _ > 0 && _ !== _().Unread && 2 != _ && 1 != _
               ? _(_().Unread)
               : _ || _ != _().Unread || _(_().MarkedRead);
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         let _ = _.onActivate;
         _ || (_ = () => console.log("Missing activate function")),
           _ == _.loadingActive && (_ = void 0);
         let _ = _().StandardTemplate;
-        4 == __webpack_require__
+        4 == _
           ? (_ = _().AllNotificationsTemplate)
-          : 2 == __webpack_require__
+          : 2 == _
             ? (_ = _().DesktopToastTemplate)
             : (7 != _ && 3 != _) || (_ = _().StandardTemplateDesktop);
         let _ = null;
-        if (
-          _ != _.none &&
-          2 != __webpack_require__ &&
-          1 != __webpack_require__
-        ) {
+        if (_ != _.none && 2 != _ && 1 != _) {
           let _ = _ == _.loadingComplete ? _().Hide : null;
           _ = (0, _.jsxs)("div", {
             className: (0, _._)(_().LoadingTemplate, _),
@@ -826,7 +1134,7 @@
                 _,
                 _ &&
                   (0, _.jsx)(_, {
-                    location: __webpack_require__,
+                    location: _,
                   }),
               ],
             }),
@@ -846,7 +1154,7 @@
       function _(_) {
         let {
           icon: _,
-          title: __webpack_require__,
+          title: _,
           timestamp: _,
           location: _,
           fnRenderTimestamp: _,
@@ -861,9 +1169,9 @@
               (0, _.jsx)(_, {
                 icon: _,
               }),
-              !!__webpack_require__ &&
+              !!_ &&
                 (0, _.jsx)(_, {
-                  title: __webpack_require__,
+                  title: _,
                 }),
               _ &&
                 _({
@@ -874,9 +1182,15 @@
         );
       }
       function _(_) {
-        return (0, _.jsx)("div", {
-          className: _().Icon,
-          children: _.icon,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !!_.icon &&
+              (0, _.jsx)("div", {
+                className: _().Icon,
+                children: _.icon,
+              }),
+            " ",
+          ],
         });
       }
       function _(_) {
@@ -944,7 +1258,7 @@
       function _(_) {
         let {
             onActivate: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             logo: _,
             icon: _,
             title: _,
@@ -961,12 +1275,12 @@
               },
               [_, _],
             );
-          })(_, __webpack_require__);
+          })(_, _);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().ShortTemplate, !_ && _().TwoLine, _),
           onActivate: _,
           onMouseDown: (_) => {
-            1 == _.button && __webpack_require__ && __webpack_require__();
+            1 == _.button && _ && __webpack_require__();
           },
           children: [
             (0, _.jsx)("div", {
@@ -983,10 +1297,11 @@
                 (0, _.jsxs)("div", {
                   className: _().Header,
                   children: [
-                    (0, _.jsx)("div", {
-                      className: _().Icon,
-                      children: _,
-                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().Icon,
+                        children: _,
+                      }),
                     (0, _.jsx)("div", {
                       className: _().Title,
                       children: _,
@@ -1018,7 +1333,7 @@
       function _(_) {
         let {
           fallbackLogo: _,
-          app: __webpack_require__,
+          app: _,
           data: _,
           location: _,
           icon: _,
@@ -1031,11 +1346,11 @@
           _ = _?.title ?? _?.body,
           _ = _?.title ? _.body : null,
           _ = _(_),
-          _ = _ && !__webpack_require__,
+          _ = _ && !_,
           [_, _] = _.useState(!1),
           _ = () => _(!0);
         let _ = null;
-        if (_) _ = _(__webpack_require__, _, _);
+        if (_) _ = _(_, _, _);
         else {
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ =
@@ -1088,13 +1403,13 @@
       function _(_) {
         let {
           displayName: _,
-          location: __webpack_require__,
+          location: _,
           icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
         } = _;
-        const _ = _(__webpack_require__),
+        const _ = _(_),
           _ = (0, _._)("#SteamNotifications_TradeOffer_Title"),
           _ = _
             ? (0, _._)("#SteamNotifications_TradeOffer_Body_Short", _ ?? "")
@@ -1118,7 +1433,7 @@
                     icon: _,
                     title: _,
                     timestamp: _,
-                    location: __webpack_require__,
+                    location: _,
                     fnRenderTimestamp: _,
                   }),
                   (0, _.jsx)(_, {
@@ -1139,7 +1454,7 @@
       const _ = (_) => {
         let {
           location: _,
-          icon: __webpack_require__,
+          icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
@@ -1163,7 +1478,7 @@
                 ..._,
                 children: [
                   (0, _.jsx)(_, {
-                    icon: __webpack_require__,
+                    icon: _,
                     title: _,
                     timestamp: _,
                     location: _,
@@ -1187,13 +1502,13 @@
       function _(_) {
         let {
           senderName: _,
-          location: __webpack_require__,
+          location: _,
           icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
         } = _;
-        const _ = _(__webpack_require__),
+        const _ = _(_),
           _ = _
             ? (0, _._)("#Notification_GiftReceived_Body_Short", _ ?? "")
             : (0, _._)("#Notification_GiftReceived_Body"),
@@ -1217,7 +1532,7 @@
                     icon: _,
                     title: _,
                     timestamp: _,
-                    location: __webpack_require__,
+                    location: _,
                     fnRenderTimestamp: _,
                   }),
                   (0, _.jsx)(_, {
@@ -1240,7 +1555,7 @@
       function _(_) {
         let {
           requestorName: _,
-          requestorAvatarURL: __webpack_require__,
+          requestorAvatarURL: _,
           fallbackLogo: _,
           data: _,
           location: _,
@@ -1264,7 +1579,7 @@
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
         let _ = _;
-        if (__webpack_require__ && !_) {
+        if (_ && !_) {
           const _ = 3 == _.state && 1 != _,
             _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ = (0, _.jsxs)(_._, {
@@ -1278,7 +1593,7 @@
                 }),
               (0, _.jsx)("img", {
                 className: _,
-                src: __webpack_require__,
+                src: _,
                 onError: _,
               }),
             ],
@@ -1328,7 +1643,7 @@
       function _(_) {
         let {
           itemState: _,
-          fallbackLogo: __webpack_require__,
+          fallbackLogo: _,
           data: _,
           location: _,
           icon: _,
@@ -1340,7 +1655,7 @@
         const [_, _] = _.useState(!1),
           _ = () => _(!0),
           _ = _(_);
-        let _ = __webpack_require__;
+        let _ = _;
         if (_?.item_data?.icon_url && !_) {
           let _ = `${_._.COMMUNITY_CDN_URL}economy/image/${_.item_data.icon_url}`,
             _ = _.item_data.background_color
@@ -1434,7 +1749,7 @@
       function _(_) {
         let {
           fallbackLogo: _,
-          app: __webpack_require__,
+          app: _,
           data: _,
           location: _,
           icon: _,
@@ -1443,8 +1758,8 @@
           onHide: _,
         } = _;
         const _ = _(_),
-          _ = _(__webpack_require__, _, _),
-          _ = !__webpack_require__;
+          _ = _(_, _, _),
+          _ = !_;
         let _ = "";
         return (
           1 == _.state
@@ -1503,7 +1818,7 @@
       function _(_) {
         const {
             title: _,
-            body: __webpack_require__,
+            body: _,
             logoUrl: _,
             bDataLoading: _,
             icon: _,
@@ -1533,7 +1848,7 @@
               logo: _,
               icon: _.icon,
               title: _,
-              body: __webpack_require__,
+              body: _,
               onActivate: _,
               personaStatus: _,
             })
@@ -1554,7 +1869,7 @@
                   }),
                   (0, _.jsx)(_, {
                     multiline: !0,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                   _
                     ? (0, _.jsx)(_, {
@@ -1568,7 +1883,7 @@
       function _(_) {
         let {
             currentUserSteamID: _,
-            fallbackLogo: __webpack_require__,
+            fallbackLogo: _,
             postedByDisplayName: _,
             postedByAvatarURL: _,
             ownerDisplayName: _,
@@ -1646,7 +1961,7 @@
               }))
             : (_ = _ + " " + _);
         }
-        let _ = __webpack_require__;
+        let _ = _;
         if (!_) {
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           if (_ && (0, _._)(_)) {
@@ -1712,7 +2027,7 @@
       function _(_) {
         let {
           app: _,
-          fallbackLogo: __webpack_require__,
+          fallbackLogo: _,
           data: _,
           location: _,
           icon: _,
@@ -1721,7 +2036,7 @@
           onHide: _,
         } = _;
         const _ = _(_),
-          _ = _(_, __webpack_require__, _),
+          _ = _(_, _, _),
           _ = _.appid && !_;
         let _ = "",
           _ = null;
@@ -1810,7 +2125,7 @@
               })
         );
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
         return !_ || _
@@ -1820,7 +2135,7 @@
               },
               children: _,
             })
-          : __webpack_require__
+          : _
             ? (0, _.jsx)(_._, {
                 style: {
                   position: "relative",
@@ -1895,7 +2210,7 @@
         );
       }
       function _(_) {
-        const { rollup: _, uimode: __webpack_require__, location: _ } = _,
+        const { rollup: _, uimode: _, location: _ } = _,
           _ = (function (_) {
             let _ = null;
             return (
@@ -1910,7 +2225,7 @@
         return _
           ? (0, _.jsx)(_._, {
               controller: "notification",
-              method: (0, _._)(__webpack_require__),
+              method: (0, _._)(_),
               submethod: (0, _._)(_),
               children: (0, _.jsx)(_, {
                 ..._,
@@ -1921,7 +2236,7 @@
       function _(_) {
         const {
             rollup: _,
-            onNotificationClick: __webpack_require__,
+            onNotificationClick: _,
             location: _,
             uimode: _,
             onHide: _,
@@ -1995,7 +2310,7 @@
       function _(_) {
         const {
             steamid: _,
-            url: __webpack_require__,
+            url: _,
             strTitleLoc: _,
             strBodyLoc: _,
             rollup: _,
@@ -2010,7 +2325,7 @@
           _ = (0, _._)(_, _?.m_strPlayerName ?? ""),
           _ = (0, _._)(_, _?.m_strPlayerName ?? "");
         return (0, _.jsx)("a", {
-          href: __webpack_require__,
+          href: _,
           onMouseDown: (_) => _(() => {}, _.item, _),
           children: (0, _.jsx)(_, {
             title: _,
@@ -2018,8 +2333,7 @@
             bDataLoading: _,
             logoUrl: _?.avatar_url_medium,
             icon: (0, _.jsx)(_.Qte, {}),
-            onActivate: () =>
-              _(() => window.location.assign(__webpack_require__), _.item),
+            onActivate: () => _(() => window.location.assign(_), _.item),
             location: _,
             eUIMode: _,
             timestamp: _.timestamp,
@@ -2031,10 +2345,10 @@
       }
       function _(_) {
         const _ =
-          ((__webpack_require__ = _.rollup.type),
+          ((_ = _.rollup.type),
           (_ = _.rollup.item.body_data),
           _.useMemo(() => {
-            const _ = __webpack_require__,
+            const _ = _,
               _ = (0, _._)(_),
               _ = (0, _._)(_);
             if (!_) return null;
@@ -2052,7 +2366,7 @@
               strUrl: _,
               steamid: _ && _[_],
             };
-          }, [_, __webpack_require__]));
+          }, [_, _]));
         var _, _;
         if (!_) return null;
         const { strTitleLoc: _, strBodyLoc: _, strUrl: _, steamid: _ } = _;
@@ -2067,15 +2381,9 @@
           : null;
       }
       function _(_) {
-        const {
-            url: _,
-            count: __webpack_require__,
-            icon: _,
-            strLocToken: _,
-            eFeature: _,
-          } = _,
+        const { url: _, count: _, icon: _, strLocToken: _, eFeature: _ } = _,
           _ = (0, _._)(_);
-        return __webpack_require__
+        return _
           ? _
             ? null
             : (0, _.jsx)("a", {
@@ -2083,7 +2391,7 @@
                 className: _().WebPinnedNotification,
                 children: (0, _.jsx)(_, {
                   icon: (0, _.jsx)(_, {}),
-                  count: __webpack_require__,
+                  count: _,
                   onActivate: () => window.location.assign(_),
                   strLocToken: _,
                   eUIMode: 3,
@@ -2428,13 +2736,10 @@
       var _ = __webpack_require__("chunkid");
       const _ = new _._(),
         _ = (0, _._)(function (_) {
-          const { bResponsiveHeader: _, notifications: __webpack_require__ } =
-            _;
+          const { bResponsiveHeader: _, notifications: _ } = _;
           _.useEffect(() => {
-            __webpack_require__ &&
-              !_.m_bLoaded &&
-              _.ProcessNewNotificationPayload(__webpack_require__);
-          }, [__webpack_require__]);
+            _ && !_.m_bLoaded && _.ProcessNewNotificationPayload(_);
+          }, [_]);
           const _ = (0, _._)();
           (0, _.useEffect)(() => {
             _.setTransport(_),
@@ -2474,9 +2779,9 @@
       function _() {
         const _ = _(),
           _ = (0, _._)(),
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
-          _ = __webpack_require__?.settings;
+          _ = _?.settings;
         return _.notifications.filter(
           (_) => !(0, _._)(_.type, _, _) && !(0, _._)(_.item),
         );

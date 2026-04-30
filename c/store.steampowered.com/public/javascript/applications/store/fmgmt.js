@@ -39,7 +39,7 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         strBarForegroundColor: "#1a9fff",
-        strBarBackgroundColor: "rgba(255,255,255,.1)",
+        strBarBackgroundColor: "hsla(0,0%,100%,.1)",
         ThrobberContainer: "_1dfVPvR3jkg7V5wYeWqGje",
         PlaytimeHistoryBrowser: "_3Q_itK0y9iym9Rf_hRp2U4",
         PlaytimeHistoryDay: "_1tN3Fqg4eB8P5q6VnP8zsU",
@@ -59,6 +59,18 @@
         AppListTooltip: "_2gqejUUMCHd51lF8qlQ1ns",
         AppImage: "_3Jl4YQadMqVmN9rTlDoxsJ",
         Loaded: "emNZdRnzXbk4gR0vRINf8",
+        BackgroundAnimation: "_1skXl8WnIZKGbIikWx5BQ-",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1-51lPwmuvdjQkvcL4mg0p",
+        "ItemFocusAnim-darkerGrey": "_2zLHr0TQ3Cw2_wBzgQqi1u",
+        "ItemFocusAnim-darkGreySettings": "_3ssmTtvWPb13bQl5_2beiv",
+        "ItemFocusAnim-darkGrey": "_1R0sxt2GyuTiRYm0lI8lJv",
+        "ItemFocusAnim-grey": "_34M9qiJoSUi5SHy4MZsgPR",
+        "ItemFocusAnim-translucent-white-10": "MIFiVCx0d1Zy-bjTA_w1X",
+        "ItemFocusAnim-translucent-white-20": "Re5K2D0jN-MNmc8WhESaT",
+        "ItemFocusAnimBorder-darkGrey": "_238UxDx4xOQoNJYxliEhdt",
+        "ItemFocusAnim-green": "_2LrzaGXXvD_v3bx9bHNk0E",
+        focusAnimation: "_24chPJqOvTQQi5ZL5IGWlg",
+        hoverAnimation: "_3u4E9lRS_kkm8hY_-pJOTk",
       };
     },
     chunkid: (module) => {
@@ -166,6 +178,18 @@
         ThrobberContainer: "_12k1ELQW10xFpZWSrbnaad",
         FriendSelectorPlaceholder: "_2r46bpLc_qpnLHbnayzmSG",
         Error: "rE1IiJak5Yg84H2WpLPYJ",
+        BackgroundAnimation: "_2gMFjtI3Npavu3drgAC-AR",
+        "ItemFocusAnim-darkerGrey-nocolor": "_15Cg2WWyrbx6rCN-pmv59J",
+        "ItemFocusAnim-darkerGrey": "_2rRq8Gy9yiXoX8z6rDNWVn",
+        "ItemFocusAnim-darkGreySettings": "_27pb_HIkONceiGG5UIoqY9",
+        "ItemFocusAnim-darkGrey": "_2WHt-XB4uzgTCI4w5ZfQM7",
+        "ItemFocusAnim-grey": "_3vZZjLOqYQmrrgAPi_7AiJ",
+        "ItemFocusAnim-translucent-white-10": "y9mw3g-UiKMQ_H2lckG0Q",
+        "ItemFocusAnim-translucent-white-20": "dOJ_xBzYKLq_t7kNPf5pU",
+        "ItemFocusAnimBorder-darkGrey": "_1SidwQ9O2E2VOFjgEURpzO",
+        "ItemFocusAnim-green": "E8HfymaSbnYz0P9nwLk64",
+        focusAnimation: "hEfJZd3QktV9Zsg-tsoEe",
+        hoverAnimation: "I-3xyBNE4dVX5NZUEtdk5",
       };
     },
     chunkid: (module) => {
@@ -310,6 +334,18 @@
         ContentDescriptorDescription: "_1CzqDvlI9BiZ34y76ZxiDP",
         ContentDescriptorToggle: "_2BQ5kejzl2IpMdjad_8Zmd",
         ContentDescriptorExampleApp: "_2Dst3UKiLxmHuFByhiTRzj",
+        BackgroundAnimation: "_3d47hDyXHjImQ-0sBNKN4m",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2Va_HlTCtMyS00qHlQAUEM",
+        "ItemFocusAnim-darkerGrey": "_3p3wgY2eTPLi2hqQpaK9p2",
+        "ItemFocusAnim-darkGreySettings": "HEYNYwmGnFOfnMkG7Az1U",
+        "ItemFocusAnim-darkGrey": "_2i-dF3_dt4Ic_OSaazxG3w",
+        "ItemFocusAnim-grey": "_3SyVw-_Wu7fZM8KhSrs9rO",
+        "ItemFocusAnim-translucent-white-10": "_20DNPKptIqSEKzhV0GH0xW",
+        "ItemFocusAnim-translucent-white-20": "_3sKISgTqXMmXihaUvMOYeZ",
+        "ItemFocusAnimBorder-darkGrey": "_1YBr5gruJDFH9r8hJ30BPR",
+        "ItemFocusAnim-green": "_1EQrVuWmXvELpyS3EgWgn3",
+        focusAnimation: "_31hEvRiEdPzD2TCl1Dqyxd",
+        hoverAnimation: "_3elDD1evSEYwuNdPRRVKeQ",
       };
     },
     chunkid: (module) => {
@@ -411,7 +447,7 @@
         });
       }
       function _(_) {
-        const { role: _, persona: __webpack_require__, isSelf: _ } = _;
+        const { role: _, persona: _, isSelf: _ } = _;
         let _ = _.size || "Large";
         const _ = (0, _._)(),
           _ = (0, _._)(),
@@ -424,7 +460,7 @@
               children: [
                 (0, _.jsx)(_._, {
                   className: _.Avatar,
-                  persona: __webpack_require__,
+                  persona: _,
                   size: _,
                   statusPosition: "right",
                 }),
@@ -435,7 +471,7 @@
                   bHidePersona: !1,
                   bParenthesizeNicknames: _,
                   bCompactView: !1,
-                  persona: __webpack_require__,
+                  persona: _,
                   strNickname: _,
                   eFriendRelationship: 3,
                   bEllipsisName: !0,
@@ -468,13 +504,13 @@
           : null;
       }
       function _(_) {
-        const { persona: _, role: __webpack_require__, invitePending: _ } = _,
+        const { persona: _, role: _, invitePending: _ } = _,
           _ = (0, _._)() == _.GetSteamIDAsString();
         return (0, _.jsxs)("div", {
           className: _.FamilyMemberStatus,
           children: [
             (0, _.jsx)(_, {
-              role: __webpack_require__,
+              role: _,
               persona: _,
               isSelf: _,
             }),
@@ -492,7 +528,7 @@
         });
       }
       function _(_) {
-        const { bExpanded: _, setExpanded: __webpack_require__ } = _;
+        const { bExpanded: _, setExpanded: _ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
           onClick: () => __webpack_require__(!_),
@@ -525,7 +561,7 @@
       const _ = "nicknames";
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_],
             queryFn: async () => {
               const _ = new Map();
@@ -541,7 +577,7 @@
               return _;
             },
           });
-        return __webpack_require__ ? __webpack_require__.get(_) : null;
+        return _ ? __webpack_require__.get(_) : null;
       }
       const _ = new (_())(
           (_) =>
@@ -598,15 +634,15 @@
         ),
         _ = "avatarandpersonas";
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: [_, _],
           queryFn: () => _.load(_),
         });
-        return [_, __webpack_require__];
+        return [_, _];
       }
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
             queryFn: async () => {
               const _ = await _.loadMany(_);
@@ -628,7 +664,7 @@
               }),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ ? null : _;
       }
     },
@@ -643,18 +679,23 @@
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: ["communitypreferences"],
-          queryFn: async () => {
-            const _ = _._.Init(_._),
-              _ = await _._.GetCommunityPreferences(_, _);
-            if (1 != __webpack_require__.GetEResult())
-              throw new Error(
-                `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
-              );
-            return __webpack_require__.Body();
-          },
-        });
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: ["communitypreferences"],
+              queryFn: async () => {
+                const _ = _._.Init(_._),
+                  _ = await _._.GetCommunityPreferences(_, _);
+                if (1 != __webpack_require__.GetEResult())
+                  throw new Error(
+                    `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
+                  );
+                return __webpack_require__.Body();
+              },
+              staleTime: 3e5,
+            };
+          })(_),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -665,7 +706,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1);
+        const [_, _] = (0, _.useState)(!1);
         return (
           (0, _.useEffect)(() => {
             let _ = !0;
@@ -743,17 +784,12 @@
         });
       }
       function _(_) {
-        const {
-            inviterSteamID: _,
-            familyGroupID: __webpack_require__,
-            role: _,
-            inviteID: _,
-          } = _,
+        const { inviterSteamID: _, familyGroupID: _, role: _, inviteID: _ } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(__webpack_require__),
-          _ = (0, _._)(__webpack_require__, _),
           _ = (0, _._)(_),
-          _ = (0, _._)(__webpack_require__, _),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_, _),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(""),
@@ -1151,7 +1187,7 @@
       const _ = _.memo(function (_) {
           const {
               virtualizer: _,
-              bDynamic: __webpack_require__,
+              bDynamic: _,
               idx: _,
               rowGap: _,
               renderItem: _,
@@ -1166,7 +1202,8 @@
               [_, _],
             );
           return (0, _.jsx)(_._, {
-            ref: __webpack_require__ ? _.measureElement : void 0,
+            ref: _ ? _.measureElement : void 0,
+            navKey: `VirtualizedListIndex-${_}`,
             "data-index": _,
             fnScrollIntoViewHandler: _,
             scrollIntoViewWhenChildFocused: "force",
@@ -1179,7 +1216,7 @@
         }),
         _ = _.forwardRef(function (_, _) {
           const {
-              nRows: __webpack_require__,
+              nRows: _,
               nItemHeight: _,
               nRowGap: _,
               overscan: _,
@@ -1209,7 +1246,7 @@
             ),
             _ = (0, _._)(_, _),
             _ = {
-              nRows: __webpack_require__,
+              nRows: _,
               nItemHeight: _,
               nRowGap: _,
               overscan: _,
@@ -1244,7 +1281,7 @@
       function _(_) {
         const {
             nScrollMargin: _,
-            nRows: __webpack_require__,
+            nRows: _,
             nItemHeight: _,
             nRowGap: _ = 10,
             overscan: _ = 6,
@@ -1254,7 +1291,7 @@
           } = _,
           _ = ((0, _._)(), _ + _),
           _ = (0, _._)({
-            count: __webpack_require__,
+            count: _,
             scrollMargin: _,
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
@@ -1282,7 +1319,7 @@
       function _(_) {
         const {
             nRows: _,
-            nScrollMargin: __webpack_require__,
+            nScrollMargin: _,
             elScrollable: _,
             nItemHeight: _,
             nRowGap: _ = 10,
@@ -1295,7 +1332,7 @@
           _ = (0, _._)(),
           _ = (0, _._)({
             count: _,
-            scrollMargin: __webpack_require__ - (_?.offsetTop || 0),
+            scrollMargin: _ - (_?.offsetTop || 0),
             getScrollElement: () => _,
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
@@ -1326,12 +1363,7 @@
         );
       }
       function _(_) {
-        const {
-            virtualizer: _,
-            nRowGap: __webpack_require__,
-            renderItem: _,
-            bDynamic: _,
-          } = _,
+        const { virtualizer: _, nRowGap: _, renderItem: _, bDynamic: _ } = _,
           _ = _.getVirtualItems(),
           _ = _.length ? _[0].start - _.options.scrollMargin : 0,
           _ = Math.max(0, _.getTotalSize());
@@ -1358,7 +1390,7 @@
                   virtualizer: _,
                   bDynamic: _,
                   idx: _.index,
-                  rowGap: __webpack_require__,
+                  rowGap: _,
                   renderItem: _,
                 },
                 _.key,
@@ -1508,7 +1540,7 @@
         });
       }
       function _(_) {
-        const { familyGroupID: _, onSelect: __webpack_require__ } = _,
+        const { familyGroupID: _, onSelect: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)();
@@ -1539,18 +1571,14 @@
                       })
                     : (0, _.jsx)(_, {
                         steamids: _,
-                        onSelect: __webpack_require__,
+                        onSelect: _,
                       }),
                 ],
               })
             : null;
       }
       function _(_) {
-        const {
-          familyGroupID: _,
-          onSelect: __webpack_require__,
-          onCancel: _,
-        } = _;
+        const { familyGroupID: _, onSelect: _, onCancel: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.SelectAccountContainer,
           children: [
@@ -1571,12 +1599,12 @@
               className: _.MethodButtons,
               children: (0, _.jsx)(_, {
                 familyGroupID: _,
-                onSelect: __webpack_require__,
+                onSelect: _,
               }),
             }),
             (0, _.jsx)(_, {
               familyGroupID: _,
-              onSelect: __webpack_require__,
+              onSelect: _,
             }),
           ],
         });
@@ -1584,7 +1612,7 @@
       function _(_) {
         const {
           familyGroupID: _,
-          onSelect: __webpack_require__,
+          onSelect: _,
           onCancel: _,
           slotCooldownSeconds: _,
         } = _;
@@ -1620,23 +1648,19 @@
             }),
             (0, _.jsx)(_, {
               steamids: _,
-              onSelect: __webpack_require__,
+              onSelect: _,
             }),
           ],
         });
       }
       function _(_) {
-        const {
-            familyGroupID: _,
-            steamid: __webpack_require__,
-            onCancel: _,
-          } = _,
+        const { familyGroupID: _, steamid: _, onCancel: _ } = _,
           { setErrorMessage: _ } = (0, _._)(),
-          _ = (0, _._)(__webpack_require__);
+          _ = (0, _._)(_);
         (0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric");
         const [_, _] = (0, _.useState)(0),
           [_, _] = (0, _.useState)(null),
-          _ = (0, _._)(_, __webpack_require__, _);
+          _ = (0, _._)(_, _, _);
         (0, _._)(
           _,
           "#FamilyManagement_ErrorInvite",
@@ -1663,7 +1687,7 @@
                       eMethod: "awaitemail2fa" === _ ? 2 : 1,
                     })
                   : (0, _.jsx)(_, {
-                      steamid: __webpack_require__,
+                      steamid: _,
                       role: _,
                       onCancel: () => _(0),
                       onConfirm: () => {
@@ -1725,7 +1749,7 @@
         });
       }
       function _(_) {
-        const { eMethod: _, onClose: __webpack_require__ } = _;
+        const { eMethod: _, onClose: _ } = _;
         let _;
         if (1 === _ && _._.IN_MOBILE_WEBVIEW)
           _ = "#FamilyManagement_Await2FAForInvite_MobileAuth_InMobileApp";
@@ -1736,8 +1760,8 @@
         }
         return (0, _.jsxs)(_._, {
           bAlertDialog: !0,
-          onOK: __webpack_require__,
-          closeModal: __webpack_require__,
+          onOK: _,
+          closeModal: _,
           strTitle: (0, _._)("#FamilyManagement_ConfirmInviteTitle"),
           children: [
             (0, _.jsx)(_._, {}),
@@ -1749,17 +1773,12 @@
         });
       }
       function _(_) {
-        const {
-            onCancel: _,
-            onConfirm: __webpack_require__,
-            steamid: _,
-            role: _,
-          } = _,
+        const { onCancel: _, onConfirm: _, steamid: _, role: _ } = _,
           _ = (0, _._)(_).data;
         return (0, _.jsxs)(_._, {
           onCancel: _,
           strTitle: (0, _._)("#FamilyManagement_ConfirmInviteTitle"),
-          onOK: __webpack_require__,
+          onOK: _,
           strOKButtonText: (0, _._)("#FamilyManagement_Invite"),
           children: [
             (0, _.jsx)(_._, {}),
@@ -1794,7 +1813,7 @@
         });
       }
       function _(_) {
-        const { familyGroupID: _, onSelect: __webpack_require__ } = _,
+        const { familyGroupID: _, onSelect: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(_)
             .data.members()
@@ -1808,7 +1827,7 @@
                 className: _.SelectFriendModal,
                 onCancel: () => _(!1),
                 children: (0, _.jsx)(_, {
-                  setSelectedFriendSteamID: __webpack_require__,
+                  setSelectedFriendSteamID: _,
                   excludeSteamIDs: _,
                 }),
               }),
@@ -1822,7 +1841,7 @@
         });
       }
       function _(_) {
-        const { steamids: _, onSelect: __webpack_require__ } = _;
+        const { steamids: _, onSelect: _ } = _;
         return (0, _.jsx)(_._, {
           className: _.ProfileSelector,
           "flow-children": "grid",
@@ -1839,7 +1858,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, onClick: __webpack_require__ } = _,
+        const { steamid: _, onClick: _ } = _,
           _ = new _._(_),
           _ = (0, _._)(_),
           _ = (0, _._)(),
@@ -1853,7 +1872,7 @@
         const _ = _.data;
         return (0, _.jsxs)(_._, {
           className: _.ProfileChoice,
-          onActivate: __webpack_require__,
+          onActivate: _,
           children: [
             (0, _.jsx)("div", {
               className: _.Avatar,
@@ -1879,7 +1898,7 @@
         });
       }
       function _(_) {
-        const { role: _, onSelect: __webpack_require__ } = _;
+        const { role: _, onSelect: _ } = _;
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_.InviteButton),
           noFocusRing: !1,
@@ -1893,10 +1912,7 @@
         });
       }
       function _(_) {
-        const {
-            setSelectedFriendSteamID: _,
-            excludeSteamIDs: __webpack_require__,
-          } = _,
+        const { setSelectedFriendSteamID: _, excludeSteamIDs: _ } = _,
           _ = (0, _._)();
         (0, _._)(_, "#FamilyManagement_ErrorLoadFriendListGeneric");
         const _ = _.data;
@@ -1910,16 +1926,16 @@
             : (0, _.jsx)(_, {
                 setSelectedFriendSteamID: _,
                 steamIDs: _,
-                excludeSteamIDs: __webpack_require__,
+                excludeSteamIDs: _,
               });
       }
       function _(_) {
         const {
             setSelectedFriendSteamID: _,
-            steamIDs: __webpack_require__,
+            steamIDs: _,
             excludeSteamIDs: _,
           } = _,
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _] = _.useState(""),
@@ -2013,7 +2029,7 @@
         });
       }
       function _(_) {
-        const { strFilter: _, setFilter: __webpack_require__ } = _;
+        const { strFilter: _, setFilter: _ } = _;
         return (0, _.jsx)(_._, {
           autoFocus: !0,
           bShowClearAction: !0,
@@ -2027,11 +2043,7 @@
         });
       }
       function _(_) {
-        const {
-            persona: _,
-            nickname: __webpack_require__,
-            setSelectedFriendSteamID: _,
-          } = _,
+        const { persona: _, nickname: _, setSelectedFriendSteamID: _ } = _,
           _ = (0, _._)(),
           _ = _.data?.preferences().parenthesize_nicknames();
         return (0, _.jsxs)(_._, {
@@ -2054,7 +2066,7 @@
               bParenthesizeNicknames: _,
               bCompactView: !1,
               persona: _,
-              strNickname: __webpack_require__,
+              strNickname: _,
               eFriendRelationship: 3,
             }),
           ],
@@ -2065,7 +2077,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { familyGroupID: _, member: __webpack_require__ } = _,
+        const { familyGroupID: _, member: _ } = _,
           _ = (0, _._)(__webpack_require__.steamid());
         (0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric");
         const [_, _, _] = (0, _._)(!1);
@@ -2076,19 +2088,19 @@
         return (
           !(function (_) {
             return "function" == typeof _.cooldown_seconds_remaining;
-          })(__webpack_require__)
+          })(_)
             ? (_ = (0, _.jsx)(_, {
                 active: _,
                 onClose: _,
                 familyGroupID: _,
-                invited: __webpack_require__,
+                invited: _,
                 persona: _,
               }))
             : ((_ = (0, _.jsx)(_, {
                 active: _,
                 onClose: _,
                 familyGroupID: _,
-                member: __webpack_require__,
+                member: _,
                 persona: _,
               })),
               (_ = !0)),
@@ -2114,7 +2126,7 @@
       function _(_) {
         const {
             active: _,
-            onClose: __webpack_require__,
+            onClose: _,
             familyGroupID: _,
             member: _,
             persona: _,
@@ -2150,7 +2162,7 @@
                   onSuccess: () => _.push(_.pathname),
                 });
             },
-            closeModal: __webpack_require__,
+            closeModal: _,
             children: (0, _.jsx)("div", {
               className: _.RemovalDescription,
               children: _,
@@ -2161,7 +2173,7 @@
       function _(_) {
         const {
             active: _,
-            onClose: __webpack_require__,
+            onClose: _,
             familyGroupID: _,
             member: _,
             persona: _,
@@ -2206,7 +2218,7 @@
                 title: _,
                 bAllowFullSize: !0,
                 bOKDisabled: !0,
-                closeModal: __webpack_require__,
+                closeModal: _,
                 bHideCloseIcon: !0,
                 children: (0, _.jsxs)("div", {
                   className: _.ButtonList,
@@ -2281,7 +2293,7 @@
                     }),
                     (0, _.jsx)(_._, {
                       className: _.ManagementButton,
-                      onClick: __webpack_require__,
+                      onClick: _,
                       children: (0, _._)("#FamilyManagement_Cancel"),
                     }),
                   ],
@@ -2294,7 +2306,7 @@
       function _(_) {
         const {
             active: _,
-            onClose: __webpack_require__,
+            onClose: _,
             familyGroupID: _,
             invited: _,
             persona: _,
@@ -2320,14 +2332,14 @@
             onOK: () => {
               _(null), _.mutate();
             },
-            closeModal: __webpack_require__,
+            closeModal: _,
           }),
         });
       }
       function _(_) {
         const {
             active: _,
-            onClose: __webpack_require__,
+            onClose: _,
             familyGroupID: _,
             invited: _,
             persona: _,
@@ -2361,7 +2373,7 @@
                 title: _,
                 bAllowFullSize: !0,
                 bOKDisabled: !0,
-                closeModal: __webpack_require__,
+                closeModal: _,
                 bHideCloseIcon: !0,
                 children: (0, _.jsxs)("div", {
                   className: _.ButtonList,
@@ -2391,7 +2403,7 @@
                     }),
                     (0, _.jsx)(_._, {
                       className: _.ManagementButton,
-                      onClick: __webpack_require__,
+                      onClick: _,
                       children: (0, _._)("#FamilyManagement_Cancel"),
                     }),
                   ],
@@ -2403,7 +2415,7 @@
       }
       function _(_) {
         const { familyGroupID: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(!1),
+          [_, _, _] = (0, _._)(!1),
           _ = (0, _._)(_),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(
@@ -2423,7 +2435,7 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
-              active: __webpack_require__,
+              active: _,
               children: (0, _.jsxs)(_._, {
                 strTitle: (0, _._)(
                   "#FamilyManagement_DeleteFamilyConfirmationTitle",
@@ -2488,7 +2500,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { familyGroupID: _, ...__webpack_require__ } = _,
+        const { familyGroupID: _, ..._ } = _,
           _ = (0, _._)(_);
         (0, _._)(
           _,
@@ -2496,18 +2508,18 @@
           _._.k_EFamilyQueryLoadHistory,
         );
         let _ = (0, _.useMemo)(() => _.data?.slice(0).reverse() || [], [_]);
-        const _ = parseInt(__webpack_require__.nFamilyHistoryRowHeight),
+        const _ = parseInt(_.nFamilyHistoryRowHeight),
           _ = _.useCallback(
             (_) =>
               (0, _.jsx)(_, {
                 entry: _[_],
-                styleProps: __webpack_require__,
+                styleProps: _,
                 fnRenderName: _.FnRenderName,
               }),
-            [_, __webpack_require__, _.FnRenderName],
+            [_, _, _.FnRenderName],
           );
         return (0, _.jsx)(_._, {
-          className: __webpack_require__.FamilyHistory,
+          className: _.FamilyHistory,
           children: (0, _.jsx)(_, {
             bDynamic: !0,
             nRows: _.length,
@@ -2517,12 +2529,7 @@
         });
       }
       function _(_) {
-        let {
-          entry: _,
-          styleProps: __webpack_require__,
-          fnRenderName: _,
-          ..._
-        } = _;
+        let { entry: _, styleProps: _, fnRenderName: _, ..._ } = _;
         const _ = Intl.DateTimeFormat(_._.GetPreferredLocales(), {
             month: "numeric",
             year: "numeric",
@@ -2645,16 +2652,16 @@
             _ = (0, _._)("#FamilyHistory_UnknownChange");
         }
         return (0, _.jsxs)(_._, {
-          className: (0, _._)(__webpack_require__.Entry),
+          className: (0, _._)(_.Entry),
           focusable: !0,
           ..._,
           children: [
             (0, _.jsx)("div", {
-              className: (0, _._)(__webpack_require__.Timestamp),
+              className: (0, _._)(_.Timestamp),
               children: _,
             }),
             (0, _.jsx)("div", {
-              className: (0, _._)(__webpack_require__.EntryText),
+              className: (0, _._)(_.EntryText),
               children: _,
             }),
           ],
@@ -2685,14 +2692,14 @@
       function _(_) {
         const {
             idxStart: _,
-            idxEnd: __webpack_require__,
+            idxEnd: _,
             renderItem: _,
             height: _,
             itemWidth: _,
             columnGap: _,
           } = _,
           _ = [];
-        for (let _ = _; _ < __webpack_require__; _++) _.push(_(_, _));
+        for (let _ = _; _ < _; _++) _.push(_(_, _));
         return (0, _.jsx)(_._, {
           className: _.VirtualizedGridRow,
           style: {
@@ -2705,7 +2712,7 @@
       function _(_) {
         const {
             nItems: _,
-            renderItem: __webpack_require__,
+            renderItem: _,
             nAspectRatio: _,
             nColumns: _ = 7,
             nColumnGap: _ = 10,
@@ -2742,19 +2749,14 @@
                 height: _,
                 itemWidth: _,
                 columnGap: _,
-                renderItem: __webpack_require__,
+                renderItem: _,
               },
               _,
             ),
         });
       }
       function _(_) {
-        const {
-            app: _,
-            width: __webpack_require__,
-            index: _,
-            renderItem: _,
-          } = _,
+        const { app: _, width: _, index: _, renderItem: _ } = _,
           [_, _] = _.useState("loading"),
           _ = (0, _._)(_.appid);
         if (void 0 === _) return null;
@@ -2785,14 +2787,14 @@
         return _(_, _, {
           className: _()(_.AppGridItem, (_ || "loaded" == _) && _.Loaded),
           style: {
-            width: __webpack_require__,
+            width: _,
           },
           fnScrollIntoViewHandler: () => !0,
           children: _,
         });
       }
       function _(_) {
-        const { rgApps: _, renderItem: __webpack_require__, ..._ } = _,
+        const { rgApps: _, renderItem: _, ..._ } = _,
           _ = _.useCallback(
             (_, _) => {
               const _ = _[_];
@@ -2802,12 +2804,12 @@
                   app: _,
                   width: _,
                   index: _,
-                  renderItem: __webpack_require__,
+                  renderItem: _,
                 },
                 _.appid,
               );
             },
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsx)(_, {
           nItems: _.length,
@@ -2835,7 +2837,7 @@
         _ && (_._.IN_CLIENT ? (window.location.href = _) : (0, _._)(_, _));
       }
       function _(_) {
-        const { app: _, sort: __webpack_require__ } = _,
+        const { app: _, sort: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_.appid),
           _ = _.owner_steamids.filter((_) => _ != _),
@@ -2921,8 +2923,7 @@
           default:
             _ = "#FamilyGame_Excluded_Unknown";
         }
-        ("date_acquired-asc" != __webpack_require__ &&
-          "date_acquired-desc" != __webpack_require__) ||
+        ("date_acquired-asc" != _ && "date_acquired-desc" != _) ||
           !_.rt_time_acquired ||
           (_ = (0, _.jsx)("div", {
             className: _.Acquired,
@@ -3032,14 +3033,12 @@
           : null;
       }
       function _(_) {
-        const { item: _, strSteamID: __webpack_require__ } = _,
-          _ = _(__webpack_require__),
+        const { item: _, strSteamID: _ } = _,
+          _ = _(_),
           _ = _.appid,
-          { settings: _, mapAppsAllowed: _ } = (0, _._)(
-            __webpack_require__,
-          ).data,
+          { settings: _, mapAppsAllowed: _ } = (0, _._)(_).data,
           _ = _?.get(_.appid) || !1,
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           _ = _.useCallback(() => {
             (0, _._)(_, !_, [_]), _.mutate(_);
           }, [_, _, _, _]);
@@ -3054,14 +3053,14 @@
           : null;
       }
       function _(_) {
-        const { item: _, bOwnsGame: __webpack_require__, familyContext: _ } = _,
+        const { item: _, bOwnsGame: _, familyContext: _ } = _,
           _ = (0, _._)(),
           { familyGroup: _, invalidateGamesList: _ } = _,
           _ = 1 == _.members.find((_) => _.steamid == _).role,
           { data: _ } = (0, _._)({
             appid: _.appid,
           }),
-          _ = __webpack_require__ || 0 == _.exclude_reason,
+          _ = _ || 0 == _.exclude_reason,
           _ = (0, _._)(_.appid),
           { mutateAsync: _ } = (0, _._)(_.appid),
           _ = _._.IN_CLIENT,
@@ -3125,7 +3124,7 @@
       function _(_) {
         const {
             app: _,
-            item: __webpack_require__,
+            item: _,
             bShowLicenseCount: _,
             sort: _,
             className: _,
@@ -3135,22 +3134,20 @@
           _ = (0, _._)(),
           _ = _.useContext(_),
           _ = (0, _.jsx)(_, {
-            app: __webpack_require__,
+            app: _,
             sort: _,
           }),
-          _ = (0, _._)(__webpack_require__.appid),
+          _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
-          _ =
-            0 == __webpack_require__.exclude_reason ||
-            3 == __webpack_require__.exclude_reason,
-          _ = __webpack_require__.owner_steamids.some((_) => _ == _),
+          _ = 0 == _.exclude_reason || 3 == _.exclude_reason,
+          _ = _.owner_steamids.some((_) => _ == _),
           _ = _._.IN_CLIENT,
           _ = _ && _.visible,
           _ = _.useCallback(
             (_) => {
               (0, _._)(
                 (0, _.jsx)(_, {
-                  item: __webpack_require__,
+                  item: _,
                   bOwnsGame: _,
                   familyContext: _,
                 }),
@@ -3159,7 +3156,7 @@
                 _.stopPropagation(),
                 _.preventDefault();
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           ),
           _ = (_ && (_ || _)) || _,
           _ = _.useCallback(
@@ -3173,7 +3170,7 @@
           );
         return (0, _.jsx)(_._, {
           _: _,
-          name: __webpack_require__.name,
+          name: _.name,
           bPreventNavigation: _ || _,
           bHidePrice: _,
           bShowWishlistButton: !_,
@@ -3195,7 +3192,7 @@
               _,
               _ &&
                 (0, _.jsx)(_, {
-                  item: __webpack_require__,
+                  item: _,
                 }),
             ],
           }),
@@ -3203,12 +3200,7 @@
       }
       function _(_) {
         const _ = 2,
-          {
-            nRows: __webpack_require__,
-            setShowAll: _,
-            setRows: _,
-            nIncrement: _ = _,
-          } = _,
+          { nRows: _, setShowAll: _, setRows: _, nIncrement: _ = _ } = _,
           _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
@@ -3217,7 +3209,7 @@
                 block: "end",
               }),
               _.current?.Node().ForceMeasureFocusRing());
-          }, [__webpack_require__]),
+          }, [_]),
           (0, _.jsxs)(_._, {
             className: _.Buttons,
             children: [
@@ -3227,7 +3219,7 @@
                   className: _.Button,
                   navRef: _,
                   onClick: () => {
-                    _(__webpack_require__ + _);
+                    _(_ + _);
                   },
                   children: (0, _._)("#FamilyGames_ShowMore"),
                 }),
@@ -3245,7 +3237,7 @@
         );
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (function () {
+        const [_, _] = (function () {
             const [_, _] = _.useState(7),
               _ = _.useCallback((_, _) => {
                 let _;
@@ -3262,27 +3254,27 @@
           [_, _] = _.useState(2),
           [_, _] = _.useState(_),
           _ = _.useMemo(() => {
-            const _ = _ ? _ : _.slice(0, __webpack_require__ * _);
+            const _ = _ ? _ : _.slice(0, _ * _);
             return _?.map((_) => ({
               appid: _.appid,
               name: _.name,
             }));
-          }, [_, _, _, __webpack_require__]),
-          _ = Math.max(_.length - __webpack_require__ * _, 0);
+          }, [_, _, _, _]),
+          _ = Math.max(_.length - _ * _, 0);
         return {
           rgApps: _,
           nRows: _,
           setRows: _,
           bDisplayingAll: _ || 0 == _,
           setShowAll: _,
-          nColumns: __webpack_require__,
+          nColumns: _,
           OnWidthChanged: _,
         };
       }
       function _(_) {
         const {
             rgSortedGames: _,
-            strLabel: __webpack_require__,
+            strLabel: _,
             bShowLicenseCount: _ = !0,
             sort: _,
           } = _,
@@ -3315,7 +3307,7 @@
                   children: [
                     (0, _.jsx)("div", {
                       className: _.Label,
-                      children: __webpack_require__,
+                      children: _,
                     }),
                     (0, _.jsx)("div", {
                       className: _.Count,
@@ -3342,12 +3334,12 @@
       function _(_) {
         const {
             rgOptions: _,
-            sort: __webpack_require__,
+            sort: _,
             setSort: _,
             bAscending: _,
             children: _,
           } = _,
-          _ = _.findIndex((_) => _ == __webpack_require__),
+          _ = _.findIndex((_) => _ == _),
           _ = -1 != _,
           _ = _[(_ + 1) % _.length];
         return (0, _.jsxs)(_._, {
@@ -3367,21 +3359,21 @@
         });
       }
       function _(_) {
-        const { sort: _, setSort: __webpack_require__ } = _;
+        const { sort: _, setSort: _ } = _;
         return (0, _.jsxs)(_._, {
           className: _.FamilyGamesSort,
           children: [
             (0, _.jsx)(_, {
               rgOptions: ["alpha-asc", "alpha-desc"],
               sort: _,
-              setSort: __webpack_require__,
+              setSort: _,
               bAscending: "alpha-asc" == _,
               children: (0, _._)("#FamilyGames_Sort_Alphabetical"),
             }),
             (0, _.jsx)(_, {
               rgOptions: ["date_acquired-desc", "date_acquired-asc"],
               sort: _,
-              setSort: __webpack_require__,
+              setSort: _,
               bAscending: "date_acquired-asc" == _,
               children: (0, _._)("#FamilyGames_Sort_DateAcquired"),
             }),
@@ -3389,12 +3381,12 @@
         });
       }
       function _(_) {
-        const { strFilter: _, setFilter: __webpack_require__ } = _,
+        const { strFilter: _, setFilter: _ } = _,
           _ = _.useCallback(
             (_) => {
               __webpack_require__(_.target.value);
             },
-            [__webpack_require__],
+            [_],
           );
         return (0, _.jsx)(_._, {
           className: _.FamilyGamesSearchBox,
@@ -3407,12 +3399,7 @@
         });
       }
       function _(_) {
-        const {
-          strFilter: _,
-          setFilter: __webpack_require__,
-          sort: _,
-          setSort: _,
-        } = _;
+        const { strFilter: _, setFilter: _, sort: _, setSort: _ } = _;
         return (0, _.jsxs)(_._, {
           className: _.FamilyGamesControls,
           children: [
@@ -3422,7 +3409,7 @@
             }),
             (0, _.jsx)(_, {
               strFilter: _,
-              setFilter: __webpack_require__,
+              setFilter: _,
             }),
           ],
         });
@@ -3432,7 +3419,7 @@
         bIncludeExcluded: !0,
       };
       function _(_) {
-        const { familyGroupID: _, children: __webpack_require__ } = _,
+        const { familyGroupID: _, children: _ } = _,
           _ = (0, _._)(_, _),
           _ = (0, _._)(_),
           _ = _.useMemo(
@@ -3445,16 +3432,16 @@
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       const _ = _.createContext(void 0);
       function _(_) {
         const { familyGroupID: _ } = _,
-          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(""),
           [_, _] = _.useState("alpha-asc"),
           _ = (0, _._)(_, _),
-          _ = (0, _._)(_.data, _, __webpack_require__),
+          _ = (0, _._)(_.data, _, _),
           _ = _.useMemo(() => _?.filter((_) => 0 == _.exclude_reason), [_]),
           _ = _.useMemo(
             () =>
@@ -3483,7 +3470,7 @@
                     (0, _.jsxs)(_.Fragment, {
                       children: [
                         (0, _.jsx)(_, {
-                          strFilter: __webpack_require__,
+                          strFilter: _,
                           setFilter: _,
                           sort: _,
                           setSort: _,
@@ -3562,6 +3549,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      __webpack_require__("chunkid");
       const _ = [5, 2, 1, 4, 3];
       function _(_) {
         let _ = [];
@@ -3605,8 +3593,8 @@
         return (0, _._)(_);
       }
       function _(_) {
-        const { steamid: _, settings: __webpack_require__, familyGroup: _ } = _,
-          _ = (0, _._)(_, __webpack_require__),
+        const { steamid: _, settings: _, familyGroup: _ } = _,
+          _ = (0, _._)(_, _),
           _ = (0, _._)(_),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(_, "#FamilyManagement_ErrorModifyParentalSettingsGeneric"),
@@ -3662,7 +3650,7 @@
             },
             [_, _, _],
           );
-        let _ = __webpack_require__.is_enabled ? "enabled" : "disabled";
+        let _ = _.is_enabled ? "enabled" : "disabled";
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -3687,7 +3675,7 @@
       function _(_) {
         const {
             steamid: _,
-            otherChildrenQuery: __webpack_require__,
+            otherChildrenQuery: _,
             confirmCopy: _,
             setConfirmCopy: _,
           } = _,
@@ -3703,7 +3691,7 @@
           }, [_, _, _, _]);
         let _ = "";
         if (_.length > 0) {
-          for (let _ of __webpack_require__)
+          for (let _ of _)
             _.isSuccess &&
               _.data.GetSteamIDAsString() == _ &&
               (_ = _.data.m_strPlayerName);
@@ -3726,7 +3714,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, settings: __webpack_require__ } = _,
+        const { steamid: _, settings: _ } = _,
           _ = (0, _._)(_),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(_, "#FamilyManagement_ErrorModifyParentalSettingsGeneric");
@@ -3745,11 +3733,9 @@
           ),
           _ = _.useCallback(
             (_, _) => {
-              _(null),
-                (__webpack_require__.applist_base_id = _.data),
-                _.mutate(__webpack_require__);
+              _(null), (_.applist_base_id = _.data), _.mutate(_);
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_._, {
           focusable: !0,
@@ -3757,15 +3743,15 @@
           bottomSeparator: "none",
           label: (0, _._)("#Parental_Baselist_Label"),
           rgOptions: _,
-          selectedOption: __webpack_require__.applist_base_id,
+          selectedOption: _.applist_base_id,
           onChange: _,
         });
       }
       function _(_) {
-        const { steamid: _, settings: __webpack_require__, game: _, ..._ } = _,
+        const { steamid: _, settings: _, game: _, ..._ } = _,
           _ = (0, _._)(_),
           _ = _.appid,
-          _ = __webpack_require__.applist_custom.find((_) => _.appid == _),
+          _ = _.applist_custom.find((_) => _.appid == _),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(_, "#FamilyManagement_ErrorModifyParentalSettingsGeneric");
         const _ = _?.is_allowed || !1,
@@ -3779,10 +3765,8 @@
                 _.img_icon_hash +
                 ".jpg"),
           _ = _.useCallback(() => {
-            _(null),
-              (0, _._)(__webpack_require__, !_, [_]),
-              _.mutate(__webpack_require__);
-          }, [_, __webpack_require__, _, _, _]);
+            _(null), (0, _._)(_, !_, [_]), _.mutate(_);
+          }, [_, _, _, _, _]);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_.ParentalGameRow, _ && _.Allowed),
           onActivate: _,
@@ -3812,12 +3796,12 @@
       function _(_) {
         const {
             setContentDescriptors: _,
-            selectedContentDescriptors: __webpack_require__,
+            selectedContentDescriptors: _,
             showFilter: _,
             setShowFilter: _,
             onDismiss: _,
           } = _,
-          [_, _] = (0, _.useState)(__webpack_require__),
+          [_, _] = (0, _.useState)(_),
           _ = [
             {
               label: (0, _._)("#Parental_GameList_ShowAllFilter"),
@@ -3909,7 +3893,7 @@
       function _(_) {
         const {
             strFilter: _,
-            setFilter: __webpack_require__,
+            setFilter: _,
             strView: _,
             setView: _,
             setContentDescriptors: _,
@@ -3971,7 +3955,7 @@
                     }),
                     (0, _.jsx)(_, {
                       strFilter: _,
-                      setFilter: __webpack_require__,
+                      setFilter: _,
                     }),
                     (0, _.jsx)(_._, {
                       className: _.FilterDropdownButton,
@@ -4095,12 +4079,12 @@
       function _(_) {
         const {
             strToken: _,
-            steamid: __webpack_require__,
+            steamid: _,
             nAllowed: _,
             nTotal: _,
             setAllowAllApps: _,
           } = _,
-          _ = _(__webpack_require__);
+          _ = _(_);
         return (0, _.jsxs)("div", {
           className: _.SectionHeader,
           children: [
@@ -4128,7 +4112,7 @@
       function _(_) {
         const {
             strTitleToken: _,
-            nAllowed: __webpack_require__,
+            nAllowed: _,
             nTotal: _,
             setAllowAllApps: _,
             strView: _,
@@ -4152,7 +4136,7 @@
                   (0, _.jsx)(_, {
                     strToken: _,
                     steamid: _,
-                    nAllowed: __webpack_require__,
+                    nAllowed: _,
                     nTotal: _,
                     setAllowAllApps: _,
                   }),
@@ -4175,33 +4159,27 @@
         );
       }
       function _(_) {
-        const {
-            steamid: _,
-            settings: __webpack_require__,
-            mapAppsAllowed: _,
-          } = _,
+        const { steamid: _, settings: _, mapAppsAllowed: _ } = _,
           _ = (0, _._)(_),
           [_, _] = _.useState(""),
           [_, _] = _.useState([]),
           [_, _] = _.useState("show_all"),
           [_, _] = _.useState("grid");
-        let [_, _] = _(__webpack_require__, _, _);
-        const _ = _?.filter(
-            (_) => !(0, _._)(_.appid, !0, __webpack_require__, _),
-          ),
+        let [_, _] = _(_, _, _);
+        const _ = _?.filter((_) => !(0, _._)(_.appid, !0, _, _)),
           _ = new Set(_.map((_) => _.appid)),
           _ = _?.length || 0,
           _ = (!_ && _?.length) || 0,
           _ = _.useCallback(
             (_) => {
               (0, _._)(
-                __webpack_require__,
+                _,
                 _,
                 _.map((_) => _.appid),
               ),
-                _.mutate(__webpack_require__);
+                _.mutate(_);
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         return 0 != _.length || _ || 0 !== _.length
           ? ("show_allowed_only" === _
@@ -4231,14 +4209,14 @@
                       nTotal: _,
                       setAllowAllApps: !_ && _,
                       steamid: _,
-                      settings: __webpack_require__,
+                      settings: _,
                       rgAllApps: _,
                     }),
                     (0, _.jsx)(_, {
                       strTitleToken: "#Parental_GameList_Store",
                       strView: _,
                       steamid: _,
-                      settings: __webpack_require__,
+                      settings: _,
                       rgAllApps: _,
                     }),
                     _.length + _.length == 0 &&
@@ -4253,11 +4231,7 @@
           : null;
       }
       function _(_) {
-        const {
-            steamid: _,
-            settings: __webpack_require__,
-            rgSortedGames: _,
-          } = _,
+        const { steamid: _, settings: _, rgSortedGames: _ } = _,
           _ = parseInt(_.nParentalListRowHeight),
           _ = _.useCallback(
             (_) =>
@@ -4265,12 +4239,12 @@
                 _,
                 {
                   steamid: _,
-                  settings: __webpack_require__,
+                  settings: _,
                   game: _[_],
                 },
                 _,
               ),
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_, {
           nRows: _?.length,
@@ -4282,7 +4256,7 @@
       function _(_) {
         const {
           app: _,
-          item: __webpack_require__,
+          item: _,
           bIsAllowed: _,
           setAllowed: _,
           className: _,
@@ -4300,7 +4274,7 @@
       function _(_) {
         const {
             steamid: _,
-            settings: __webpack_require__,
+            settings: _,
             rgSortedGames: _,
             nColumns: _,
             onWidthChanged: _,
@@ -4316,17 +4290,15 @@
           ),
           _ = _.useCallback(
             (_, _) => {
-              (0, _._)(__webpack_require__, _, [_.appid]),
-                _.mutate(__webpack_require__);
+              (0, _._)(_, _, [_.appid]), _.mutate(_);
             },
-            [__webpack_require__, _],
+            [_, _],
           ),
           _ = _.useCallback(
             (_, _, _) => {
               const _ =
-                __webpack_require__.applist_custom.find(
-                  (_) => _.appid == _.appid,
-                )?.is_allowed || !1;
+                _.applist_custom.find((_) => _.appid == _.appid)?.is_allowed ||
+                !1;
               return (0, _.jsx)(_, {
                 app: _,
                 item: _[_],
@@ -4335,7 +4307,7 @@
                 ..._,
               });
             },
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_, {
           rgApps: _,
@@ -4345,42 +4317,32 @@
         });
       }
       function _(_) {
-        const {
-          steamid: _,
-          settings: __webpack_require__,
-          mapAppsAllowed: _,
-        } = _;
+        const { steamid: _, settings: _, mapAppsAllowed: _ } = _;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
               steamid: _,
-              settings: __webpack_require__,
+              settings: _,
             }),
-            0 != __webpack_require__.applist_base_id &&
+            0 != _.applist_base_id &&
               (0, _.jsx)(_, {
                 steamid: _,
-                settings: __webpack_require__,
+                settings: _,
                 mapAppsAllowed: _,
               }),
           ],
         });
       }
       function _(_) {
-        const {
-            steamid: _,
-            settings: __webpack_require__,
-            feature: _,
-            label: _,
-          } = _,
-          _ = !!(__webpack_require__.enabled_features & (1 << _)),
+        const { steamid: _, settings: _, feature: _, label: _ } = _,
+          _ = !!(_.enabled_features & (1 << _)),
           _ = (0, _._)(_),
           _ = _.useCallback(
             (_) => {
-              const _ = __webpack_require__.enabled_features ^ (1 << _);
-              (__webpack_require__.enabled_features = _),
-                _.mutate(__webpack_require__);
+              const _ = _.enabled_features ^ (1 << _);
+              (_.enabled_features = _), _.mutate(_);
             },
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_._, {
           className: _.ToggleCtn,
@@ -4452,8 +4414,8 @@
         17: null,
       };
       function _(_) {
-        const { steamid: _, settings: __webpack_require__ } = _,
-          _ = _.useRef(__webpack_require__.enabled_features),
+        const { steamid: _, settings: _ } = _,
+          _ = _.useRef(_.enabled_features),
           _ = [1, 2, 3, 4],
           _ = [10, 11, 12, 13, 14, 15],
           _ = [];
@@ -4473,7 +4435,7 @@
                       children: [
                         (0, _.jsx)(_, {
                           steamid: _,
-                          settings: __webpack_require__,
+                          settings: _,
                           feature: _,
                           label: _[_].featureDescription,
                         }),
@@ -4490,7 +4452,7 @@
       function _(_) {
         const {
             className: _,
-            enabled: __webpack_require__,
+            enabled: _,
             locked: _,
             slotIndex: _,
             onToggle: _,
@@ -4506,20 +4468,17 @@
           className: (0, _._)(
             _,
             _.ParentalPlaytimeWindowSelector,
-            __webpack_require__ && _.Enabled,
+            _ && _.Enabled,
             _ && _.Locked,
           ),
           onActivate: () => {
             _ || _ || _(_), _(null), _(!1);
           },
           onPointerDown: (_) => {
-            _(!__webpack_require__),
-              _(!0),
-              _(_),
-              _.target.releasePointerCapture(_.pointerId);
+            _(!_), _(!0), _(_), _.target.releasePointerCapture(_.pointerId);
           },
           onPointerEnter: (_) => {
-            null === _ || _ || __webpack_require__ === _ || _(_),
+            null === _ || _ || _ === _ || _(_),
               _.target.releasePointerCapture(_.pointerId);
           },
           onPointerLeave: (_) => {
@@ -4531,12 +4490,7 @@
         });
       }
       function _(_) {
-        const {
-            className: _,
-            nWindows: __webpack_require__,
-            nLockedWindows: _,
-            onToggle: _,
-          } = _,
+        const { className: _, nWindows: _, nLockedWindows: _, onToggle: _ } = _,
           _ = [],
           _ = Intl.DateTimeFormat(_._.GetPreferredLocales(), {
             hour: "numeric",
@@ -4544,7 +4498,7 @@
           }),
           [_, _] = (0, _.useState)(null);
         for (let _ = 0; _ < 48; _++) {
-          const _ = __webpack_require__ & (BigInt(1) << BigInt(_)),
+          const _ = _ & (BigInt(1) << BigInt(_)),
             _ = _ && _ & (BigInt(1) << BigInt(_));
           _.push(
             (0, _.jsx)(
@@ -4606,14 +4560,9 @@
         });
       }
       function _(_) {
-        const {
-            steamid: _,
-            settings: __webpack_require__,
-            dayIndexStart: _,
-            closeModal: _,
-          } = _,
+        const { steamid: _, settings: _, dayIndexStart: _, closeModal: _ } = _,
           [_, _] = _.useState(_),
-          _ = _.useRef(Object.assign({}, __webpack_require__)),
+          _ = _.useRef(Object.assign({}, _)),
           _ = (0, _._)(_);
         return (0, _.jsx)(_._, {
           className: _.ParentalPlaytimeWindowsDialog,
@@ -4633,12 +4582,12 @@
         });
       }
       function _(_) {
-        const { dayIndex: _, onChange: __webpack_require__ } = _,
+        const { dayIndex: _, onChange: _ } = _,
           _ = _.useCallback(
             (_) => {
               __webpack_require__(_.data);
             },
-            [__webpack_require__],
+            [_],
           ),
           _ = _();
         return (0, _.jsx)(_._, {
@@ -4655,11 +4604,7 @@
         });
       }
       function _(_) {
-        const {
-            restrictions: _,
-            dayIndex: __webpack_require__,
-            setDayIndex: _,
-          } = _,
+        const { restrictions: _, dayIndex: _, setDayIndex: _ } = _,
           [_, _] = _.useState(BigInt(parseInt(_?.allowed_time_windows) || 0)),
           _ = (0, _._)();
         _.useEffect(() => {
@@ -4691,7 +4636,7 @@
               className: _.TopRow,
               children: [
                 (0, _.jsx)(_, {
-                  dayIndex: __webpack_require__,
+                  dayIndex: _,
                   onChange: _,
                 }),
                 (0, _.jsxs)("div", {
@@ -4755,12 +4700,7 @@
         return _;
       }
       function _(_) {
-        const {
-            className: _,
-            nWindows: __webpack_require__,
-            onSet: _,
-            ..._
-          } = _,
+        const { className: _, nWindows: _, onSet: _, ..._ } = _,
           [_, _] = _.useState(_()().startOf("day")),
           [_, _] = _.useState(_()().startOf("day").add(1, "day")),
           _ = _;
@@ -4772,12 +4712,12 @@
           48 * (_.day() - _.day());
         const _ = _.useCallback(() => {
             let _ = _(_, _);
-            _(__webpack_require__ | _);
-          }, [_, __webpack_require__, _, _]),
+            _(_ | _);
+          }, [_, _, _, _]),
           _ = _.useCallback(() => {
             let _ = _(_, _);
-            _(__webpack_require__ & ~_);
-          }, [_, __webpack_require__, _, _]),
+            _(_ & ~_);
+          }, [_, _, _, _]),
           _ = _.useCallback(
             (_) => {
               const _ = _;
@@ -4879,7 +4819,7 @@
       function _(_) {
         const {
             strLabel: _,
-            nMinutes: __webpack_require__,
+            nMinutes: _,
             onSelected: _,
             nMin: _ = 0,
             nMax: _ = 25,
@@ -4902,7 +4842,7 @@
           label: (0, _._)(_),
           bottomSeparator: "none",
           rgOptions: _,
-          selectedOption: Math.floor(__webpack_require__ / 60),
+          selectedOption: Math.floor(_ / 60),
           onChange: _,
           strDropDownButtonClassName: _.HoursSelector,
           arrowClassName: _.Arrow,
@@ -4914,22 +4854,16 @@
         });
       }
       function _(_) {
-        const {
-            steamid: _,
-            settings: __webpack_require__,
-            dayIndex: _,
-            strDay: _,
-          } = _,
+        const { steamid: _, settings: _, dayIndex: _, strDay: _ } = _,
           [_, _] = _.useState(!1),
           _ = BigInt(
             parseInt(
-              __webpack_require__.playtime_restrictions?.playtime_days[_]
-                ?.allowed_time_windows,
+              _.playtime_restrictions?.playtime_days[_]?.allowed_time_windows,
             ) || 0,
           ),
           _ =
-            __webpack_require__.playtime_restrictions?.playtime_days[_]
-              ?.allowed_daily_minutes || 0;
+            _.playtime_restrictions?.playtime_days[_]?.allowed_daily_minutes ||
+            0;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_._, {
@@ -4961,7 +4895,7 @@
               active: _,
               children: (0, _.jsx)(_, {
                 steamid: _,
-                settings: __webpack_require__,
+                settings: _,
                 dayIndexStart: _,
                 closeModal: () => _(!1),
               }),
@@ -4988,13 +4922,13 @@
         );
       }
       function _(_) {
-        const { steamid: _, settings: __webpack_require__ } = _,
+        const { steamid: _, settings: _ } = _,
           _ = _().map((_) =>
             (0, _.jsx)(
               _,
               {
                 steamid: _,
-                settings: __webpack_require__,
+                settings: _,
                 dayIndex: _.data,
                 strDay: _.label,
               },
@@ -5007,29 +4941,23 @@
         });
       }
       function _(_) {
-        const { steamid: _, settings: __webpack_require__ } = _,
+        const { steamid: _, settings: _ } = _,
           _ = (0, _._)(_),
           _ = _.useCallback(
             (_) => {
               if (
-                ((__webpack_require__.playtime_restrictions.apply_playtime_restrictions =
-                  _),
-                !__webpack_require__.playtime_restrictions.playtime_days
-                  ?.length)
+                ((_.playtime_restrictions.apply_playtime_restrictions = _),
+                !_.playtime_restrictions.playtime_days?.length)
               ) {
-                __webpack_require__.playtime_restrictions.playtime_days = [];
+                _.playtime_restrictions.playtime_days = [];
                 for (let _ = 0; _ < 7; _++)
-                  __webpack_require__.playtime_restrictions.playtime_days.push(
-                    {},
-                  );
+                  _.playtime_restrictions.playtime_days.push({});
               }
-              _.mutate(__webpack_require__);
+              _.mutate(_);
             },
-            [_, __webpack_require__],
+            [_, _],
           ),
-          _ =
-            __webpack_require__.playtime_restrictions
-              .apply_playtime_restrictions;
+          _ = _.playtime_restrictions.apply_playtime_restrictions;
         return (0, _.jsxs)("div", {
           className: _.ParentalPlaytime,
           children: [
@@ -5043,7 +4971,7 @@
             _ &&
               (0, _.jsx)(_, {
                 steamid: _,
-                settings: __webpack_require__,
+                settings: _,
               }),
           ],
         });
@@ -5051,12 +4979,12 @@
       function _(_) {
         const {
             steamid: _,
-            eContentDescriptor: __webpack_require__,
+            eContentDescriptor: _,
             settings: _,
             fnSelectContentDescriptor: _,
           } = _,
           _ = (0, _._)(_);
-        let _ = _(__webpack_require__),
+        let _ = _(_),
           _ = (function (_, _ = !1) {
             let _ = "";
             switch (_) {
@@ -5094,18 +5022,18 @@
                 (_ += " " + (0, _._)("#ContentDescriptor_Affirm18YearsOld")),
               _
             );
-          })(__webpack_require__, !0);
+          })(_, !0);
         const _ = (_, _) => (_) => {
             const _ = !_;
             let _ = _(_);
             if (_) {
-              const _ = [__webpack_require__].concat(_(__webpack_require__));
+              const _ = [_].concat(_(_));
               for (const _ of _) {
                 -1 !== _.findIndex((_) => _ === _.valueOf()) ||
                   _.push(_.valueOf());
               }
             } else {
-              const _ = [__webpack_require__].concat(_(__webpack_require__));
+              const _ = [_].concat(_(_));
               for (const _ of _) {
                 const _ = _.findIndex((_) => _ === _.valueOf());
                 -1 !== _ && _.splice(_, 1);
@@ -5137,7 +5065,7 @@
                     (0, _.jsx)("br", {}),
                     (0, _.jsx)(_._, {
                       className: _.ContentDescriptorViewExamples,
-                      onClick: () => _(__webpack_require__),
+                      onClick: () => _(_),
                       children: (0, _._)(
                         "#ContentDescriptors_ViewExampleProducts",
                       ),
@@ -5174,13 +5102,13 @@
         });
       }
       function _(_) {
-        const { strName: _, strLogoUrl: __webpack_require__ } = _;
+        const { strName: _, strLogoUrl: _ } = _;
         return (0, _.jsxs)(_._, {
           className: _.ContentDescriptorExampleApp,
           focusable: !0,
           children: [
             (0, _.jsx)("img", {
-              src: __webpack_require__,
+              src: _,
             }),
             (0, _.jsx)("div", {
               children: _,
@@ -5189,10 +5117,7 @@
         });
       }
       function _(_) {
-        const {
-            eSelectedContentDescriptor: _,
-            fnSelectDescriptor: __webpack_require__,
-          } = _,
+        const { eSelectedContentDescriptor: _, fnSelectDescriptor: _ } = _,
           _ =
             ((_ = _),
             (0, _._)({
@@ -5247,7 +5172,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, settings: __webpack_require__ } = _,
+        const { steamid: _, settings: _ } = _,
           [_, _] = (0, _.useState)(null);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -5290,7 +5215,7 @@
                         {
                           steamid: _,
                           eContentDescriptor: _,
-                          settings: __webpack_require__,
+                          settings: _,
                           fnSelectContentDescriptor: _,
                         },
                         _,
@@ -5365,7 +5290,7 @@
         });
       }
       function _(_) {
-        const { member: _, persona: __webpack_require__ } = _;
+        const { member: _, persona: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.ParentalHeader,
           children: [
@@ -5374,18 +5299,14 @@
               children: (0, _._)("#Parental_Settings_For"),
             }),
             (0, _.jsx)(_._, {
-              persona: __webpack_require__,
+              persona: _,
               role: _.role(),
             }),
           ],
         });
       }
       function _(_) {
-        const {
-            steamID: _,
-            settings: __webpack_require__,
-            mapAppsAllowed: _,
-          } = _,
+        const { steamID: _, settings: _, mapAppsAllowed: _ } = _,
           _ = (0, _.useMemo)(
             () => [
               {
@@ -5393,7 +5314,7 @@
                 key: "games",
                 contents: (0, _.jsx)(_, {
                   steamid: _,
-                  settings: __webpack_require__,
+                  settings: _,
                   mapAppsAllowed: _,
                 }),
               },
@@ -5402,7 +5323,7 @@
                 key: "settings",
                 contents: (0, _.jsx)(_, {
                   steamid: _,
-                  settings: __webpack_require__,
+                  settings: _,
                 }),
               },
               {
@@ -5410,11 +5331,11 @@
                 key: "playtime",
                 contents: (0, _.jsx)(_, {
                   steamid: _,
-                  settings: __webpack_require__,
+                  settings: _,
                 }),
               },
             ],
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_._, {
           tabs: _,
@@ -5423,16 +5344,16 @@
         });
       }
       function _(_) {
-        const { steamid: _, settings: __webpack_require__ } = _;
+        const { steamid: _, settings: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
               steamid: _,
-              settings: __webpack_require__,
+              settings: _,
             }),
             (0, _.jsx)(_, {
               steamid: _,
-              settings: __webpack_require__,
+              settings: _,
             }),
           ],
         });
@@ -5440,7 +5361,7 @@
       var _,
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { item: _, closeModal: __webpack_require__ } = _,
+        const { item: _, closeModal: _ } = _,
           _ = (0, _._)(_),
           [_, _] = _.useState(3600),
           _ = "mobile" === (0, _._)() ? "below" : "inline",
@@ -5473,7 +5394,7 @@
           ];
         return (0, _.jsxs)(_._, {
           className: _().ApproveRequestDialog,
-          closeModal: __webpack_require__,
+          closeModal: _,
           onOK: _,
           strTitle: (0, _.jsx)(_._, {
             className: _().Title,
@@ -5497,13 +5418,13 @@
       function _(_) {
         const {
             currentMinutes: _,
-            currentWindows: __webpack_require__,
+            currentWindows: _,
             additionalMinutes: _,
             setAdditionalMinutes: _,
             nWindows: _,
             setWindows: _,
           } = _,
-          _ = __webpack_require__ == BigInt(0xffffffffffff),
+          _ = _ == BigInt(0xffffffffffff),
           _ = 1440 == _,
           _ = _.useCallback(
             (_) => {
@@ -5538,7 +5459,7 @@
                     }),
                     (0, _.jsx)(_, {
                       nWindows: _,
-                      nLockedWindows: __webpack_require__,
+                      nLockedWindows: _,
                       onToggle: _,
                     }),
                   ],
@@ -5573,7 +5494,7 @@
         );
       }
       function _(_) {
-        const { item: _, closeModal: __webpack_require__ } = _,
+        const { item: _, closeModal: _ } = _,
           _ = (0, _._)(_),
           [_, _] = _.useState(!1),
           _ = _.current_playtime_restrictions().allowed_daily_minutes(),
@@ -5597,7 +5518,7 @@
         }, [_, _, _, _, _]);
         return (0, _.jsx)(_._, {
           className: _().ApproveRequestDialog,
-          closeModal: __webpack_require__,
+          closeModal: _,
           onOK: _,
           bOKDisabled: _,
           strTitle: (0, _.jsx)(_._, {
@@ -5615,23 +5536,19 @@
         });
       }
       function _(_) {
-        let {
-          steamIDResponder: _,
-          resultMessage: __webpack_require__,
-          timeResponded: _,
-        } = _;
+        let { steamIDResponder: _, resultMessage: _, timeResponded: _ } = _;
         const _ = (0, _._)(_.ConvertTo64BitString()),
           _ = _?.data,
           _ = (0, _._)(_.GetAccountID()),
           _ = (0, _._)();
         return (
-          _ || (__webpack_require__ = (0, _._)("#ParentalRequest_Canceled")),
+          _ || (_ = (0, _._)("#ParentalRequest_Canceled")),
           (0, _.jsxs)("div", {
             className: _().RequestResponse,
             children: [
               (0, _.jsx)("div", {
                 className: _().Result,
-                children: __webpack_require__,
+                children: _,
               }),
               !!_ &&
                 (0, _.jsxs)("div", {
@@ -5661,11 +5578,7 @@
         );
       }
       function _(_) {
-        const {
-            steamID: _,
-            locToken: __webpack_require__,
-            locTokenPlurality: _,
-          } = _,
+        const { steamID: _, locToken: _, locTokenPlurality: _ } = _,
           _ = (0, _._)(_.ConvertTo64BitString()),
           _ = _?.data,
           _ = (0, _._)(_.GetAccountID()),
@@ -5681,7 +5594,7 @@
                   statusPosition: "right",
                 }),
                 (0, _._)(
-                  __webpack_require__,
+                  _,
                   _,
                   (0, _.jsx)(_._, {
                     persona: _.data,
@@ -5698,19 +5611,19 @@
       function _(_) {
         const {
             item: _,
-            nFeatures: __webpack_require__,
+            nFeatures: _,
             onReject: _,
             renderApproveDialog: _,
           } = _,
           _ = (0, _._)(),
           _ = _.steamid() == _,
-          _ = !__webpack_require__,
+          _ = !_,
           [_, _] = _.useState(!1),
           _ = _.useCallback(() => {
             _(!0);
           }, []);
         let _ = [],
-          _ = __webpack_require__;
+          _ = _;
         for (let _ = 0; _ < 32; _++)
           if (_ & (1 << _)) {
             const _ = _,
@@ -5861,34 +5774,34 @@
         });
       }
       function _(_) {
-        const { packageIDs: _, bundleIDs: __webpack_require__ } = _;
-        return _.length || __webpack_require__.length
+        const { packageIDs: _, bundleIDs: _ } = _;
+        return _.length || _.length
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
                   className: _().Purchased,
                   children: (0, _._)(
                     "#PurchaseRequest_Purchased",
-                    _.length + __webpack_require__.length,
+                    _.length + _.length,
                   ),
                 }),
                 (0, _.jsx)(_, {
                   packageIDs: _,
-                  bundleIDs: __webpack_require__,
+                  bundleIDs: _,
                 }),
               ],
             })
           : null;
       }
       function _(_) {
-        const { packageIDs: _, bundleIDs: __webpack_require__ } = _,
+        const { packageIDs: _, bundleIDs: _ } = _,
           [_, _] = (0, _.useState)(!1);
-        if (!_.length && !__webpack_require__.length) return null;
-        const _ = _.length + __webpack_require__.length;
+        if (!_.length && !_.length) return null;
+        const _ = _.length + _.length;
         let _ = null;
-        if (_ || _ <= 5) _ = _(_, __webpack_require__, _);
+        if (_ || _ <= 5) _ = _(_, _, _);
         else {
-          (_ = _(_, __webpack_require__, 5)),
+          (_ = _(_, _, 5)),
             _.push(
               (0, _.jsx)(
                 "span",
@@ -5900,7 +5813,7 @@
                 "sepand",
               ),
             );
-          const _ = _.length + __webpack_require__.length - 5;
+          const _ = _.length + _.length - 5;
           _.push(
             (0, _.jsx)(
               _._,
@@ -5974,16 +5887,16 @@
       }
       function _(_) {
         const { packageID: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {});
+          [_] = (0, _._)(_, {});
         return (0, _.jsx)(_, {
-          storeItem: __webpack_require__,
+          storeItem: _,
         });
       }
       function _(_) {
         const { bundleID: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {});
+          [_] = (0, _._)(_, {});
         return (0, _.jsx)(_, {
-          storeItem: __webpack_require__,
+          storeItem: _,
         });
       }
       function _(_) {
@@ -6022,10 +5935,10 @@
         });
       }
       function _(_) {
-        const { item: _, familyGroupID: __webpack_require__ } = _,
+        const { item: _, familyGroupID: _ } = _,
           _ = (0, _._)(),
           _ = _.requester_steamid() === _,
-          _ = (0, _._)(__webpack_require__, _.request_id(), _ ? 4 : 1),
+          _ = (0, _._)(_, _.request_id(), _ ? 4 : 1),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(
           _,
@@ -6034,7 +5947,7 @@
             : "#FamilyManagement_ErrorDeclinePurchaseRequest",
           _._.k_EFamilyQueryDeclinePurchaseRequest,
         );
-        const _ = (0, _._)(__webpack_require__, _.request_id());
+        const _ = (0, _._)(_, _.request_id());
         let _ = "";
         if (_.is_completed())
           switch (_.response_action()) {
@@ -6136,7 +6049,7 @@
         );
       }
       function _(_) {
-        const { item: _, familyGroupID: __webpack_require__ } = _;
+        const { item: _, familyGroupID: _ } = _;
         let _;
         switch (_.type) {
           case _.k_ParentalFeature:
@@ -6152,7 +6065,7 @@
           case _.k_PurchaseRequest:
             _ = (0, _.jsx)(_, {
               item: _.data,
-              familyGroupID: __webpack_require__,
+              familyGroupID: _,
             });
             break;
           default:
@@ -6161,7 +6074,7 @@
         return _;
       }
       function _(_) {
-        const { rgRequests: _, familyGroupID: __webpack_require__ } = _,
+        const { rgRequests: _, familyGroupID: _ } = _,
           _ = _.length > 0;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -6178,7 +6091,7 @@
                     _,
                     {
                       item: _,
-                      familyGroupID: __webpack_require__,
+                      familyGroupID: _,
                     },
                     _.key,
                   ),
@@ -6241,7 +6154,7 @@
         );
       }
       function _(_) {
-        const { date: _, vecSessions: __webpack_require__ } = _;
+        const { date: _, vecSessions: _ } = _;
         let _ = new Date(_);
         _.setDate(_.getDate() + 1);
         const _ = _.getTime() / 1e3,
@@ -6249,7 +6162,7 @@
           _ = (0, _._)(_, !0, !0, !1, !0),
           [_, _] = (0, _.useState)(!1);
         let _ = 0;
-        for (const _ of __webpack_require__)
+        for (const _ of _)
           _ += Math.min(_.time_end, _) - Math.max(_.time_start, _);
         const _ =
             0 === _ ? (0, _._)("#FamilyPlaytime_NoPlaytime") : (0, _._)(_),
@@ -6261,14 +6174,14 @@
             );
           };
         let _ = new Map();
-        for (const _ of __webpack_require__) {
+        for (const _ of _) {
           _.has(_.appid) || _.set(_.appid, 0);
           const _ = Math.min(_.time_end, _) - Math.max(_.time_start, _);
           _.set(_.appid, _.get(_.appid) + _);
         }
         const _ = Array.from(_.entries());
         _.sort((_, _) => _[1] - _[1]);
-        const _ = 0 == __webpack_require__.length;
+        const _ = 0 == _.length;
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_.PlaytimeHistoryDay, _ && _.Empty),
           children: [
@@ -6327,7 +6240,7 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__, _] = _.useState(0),
+          [_, _] = _.useState(0),
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_, _._.k_DataRequest_Assets);
         if (!_) return null;
@@ -6335,22 +6248,22 @@
         let _ = [`${_}${_}/library_600x900.jpg`, `${_}${_}/portrait.png`, _._];
         _.GetAssets()?.GetLibraryCapsuleURL() &&
           (_ = [_.GetAssets()?.GetLibraryCapsuleURL(), ..._]);
-        const _ = _[__webpack_require__];
+        const _ = _[_];
         return (0, _.jsx)("img", {
           className: (0, _._)(_.AppImage, _ && _.Loaded),
           onLoad: () => {
             _(!0);
           },
           onError: () => {
-            __webpack_require__ < _.length && _((_) => _ + 1);
+            _ < _.length && _((_) => _ + 1);
           },
           src: _,
         });
       }
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _._.k_DataRequest_Assets);
-        return __webpack_require__
+          [_] = (0, _._)(_, _._.k_DataRequest_Assets);
+        return _
           ? (0, _.jsx)(_._, {
               href: __webpack_require__.GetStorePageURL(),
               children: (0, _.jsx)(_, {
@@ -6360,9 +6273,9 @@
           : null;
       }
       function _(_) {
-        const { nDate: _, nBin: __webpack_require__, vecSessions: _ } = _,
-          _ = _ + 3600 * _ * __webpack_require__,
-          _ = _ + 3600 * _ * (__webpack_require__ + 1),
+        const { nDate: _, nBin: _, vecSessions: _ } = _,
+          _ = _ + 3600 * _ * _,
+          _ = _ + 3600 * _ * (_ + 1),
           [_, _] = (0, _.useState)(!1);
         let _ = 0,
           _ = new Set();
@@ -6438,7 +6351,7 @@
                           },
                         )
                       : "";
-                  })(__webpack_require__),
+                  })(_),
                 }),
               }),
             }),
@@ -6446,7 +6359,7 @@
         });
       }
       function _(_) {
-        const { appid: _, nSecondsPlayed: __webpack_require__ } = _,
+        const { appid: _, nSecondsPlayed: _ } = _,
           [_] = (0, _._)(_, _._.k_DataRequest_Assets);
         return _
           ? (0, _.jsx)(_._, {
@@ -6462,7 +6375,7 @@
                   }),
                   (0, _.jsx)("div", {
                     className: _.SessionRowTimeRange,
-                    children: (0, _._)(__webpack_require__),
+                    children: (0, _._)(_),
                   }),
                   (0, _.jsx)("div", {
                     className: _.SessionRowGameName,
@@ -6625,7 +6538,7 @@
       }
       function _(_) {
         const { familyGroupID: _ } = _,
-          { mutate: __webpack_require__ } = (0, _._)(_);
+          { mutate: _ } = (0, _._)(_);
         return (0, _.jsx)(_._, {
           className: _.UndeleteSplashButton,
           onClick: () => __webpack_require__(),
@@ -6736,12 +6649,7 @@
         });
       }
       function _(_) {
-        const {
-          active: _,
-          isCreate: __webpack_require__,
-          closeModal: _,
-          cooldownSeconds: _,
-        } = _;
+        const { active: _, isCreate: _, closeModal: _, cooldownSeconds: _ } = _;
         return (0, _.jsx)(_._, {
           active: _,
           children: (0, _.jsxs)(_._, {
@@ -6749,7 +6657,7 @@
             onOK: _,
             closeModal: _,
             strTitle: (0, _._)(
-              __webpack_require__
+              _
                 ? "#FamilyManagement_FamilyCreated"
                 : "#FamilyManagement_FamilyJoined",
             ),
@@ -6760,7 +6668,7 @@
               (0, _.jsx)("div", {
                 className: _.DialogText,
                 children: (0, _._)(
-                  __webpack_require__
+                  _
                     ? "#FamilyManagement_CooldownAllowed_2_Create"
                     : "#FamilyManagement_CooldownAllowed_2_Join",
                 ),
@@ -6770,7 +6678,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(""),
+        const [_, _] = (0, _.useState)(""),
           _ = (0, _._)(),
           _ = ((0, _._)(), (0, _._)()),
           [_, _, _] = (0, _._)(!1),
@@ -7110,7 +7018,7 @@
           : null;
       }
       function _(_) {
-        const { familyGroupID: _, isAdult: __webpack_require__ } = _,
+        const { familyGroupID: _, isAdult: _ } = _,
           _ = (0, _._)(_);
         (0, _._)(
           _,
@@ -7125,9 +7033,9 @@
           children: [
             (0, _.jsx)(_, {
               familyGroupID: _,
-              isAdult: __webpack_require__,
+              isAdult: _,
             }),
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)("div", {
                 className: _.FamilySlotsContainer,
                 children: (0, _._)("#FamilyManagement_MemberCount", _, _),
@@ -7306,7 +7214,7 @@
         );
       }
       function _(_) {
-        const { familyGroupID: _, isAdult: __webpack_require__ } = _,
+        const { familyGroupID: _, isAdult: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(_),
           { setErrorMessage: _ } = (0, _._)();
@@ -7328,7 +7236,7 @@
           _ = (_) => {
             _(_.target.value), _(null);
           };
-        return _ && __webpack_require__
+        return _ && _
           ? (0, _.jsxs)(_._, {
               className: _.FamilyNameEditor,
               children: [
@@ -7378,13 +7286,13 @@
                 }),
                 (0, _.jsxs)(_._, {
                   className: _.FamilyNameButton,
-                  onActivate: __webpack_require__ ? _ : void 0,
+                  onActivate: _ ? _ : void 0,
                   children: [
                     (0, _.jsx)("div", {
                       className: _.FamilyName,
                       children: _,
                     }),
-                    __webpack_require__ &&
+                    _ &&
                       (0, _.jsx)(_._, {
                         className: _.EditButton,
                         children: (0, _.jsx)(_.ffu, {}),
@@ -7419,7 +7327,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.forwardRef)(function (_, _) {
           const {
-              component: __webpack_require__,
+              component: _,
               padding: _,
               paddingX: _,
               paddingY: _,
@@ -7476,8 +7384,8 @@
               ref: _,
               ..._,
             };
-          if (__webpack_require__) {
-            const _ = __webpack_require__;
+          if (_) {
+            const _ = _;
             return (0, _.jsx)(_, {
               ..._,
             });
@@ -7491,7 +7399,7 @@
         }),
         _ = (0, _.forwardRef)(function (_, _) {
           const {
-              children: __webpack_require__,
+              children: _,
               style: _,
               spacing: _,
               horizontalSpacing: _,
@@ -7516,7 +7424,7 @@
                 marginLeft: _(-_),
               },
               className: _.InlineContainer,
-              children: _.Children.map(__webpack_require__, (_) =>
+              children: _.Children.map(_, (_) =>
                 null != _
                   ? (0, _.jsx)(_, {
                       paddingLeft: _ || _,
@@ -7531,7 +7439,7 @@
         }),
         _ = (0, _.forwardRef)(function (_, _) {
           const {
-              spacing: __webpack_require__,
+              spacing: _,
               itemClassName: _,
               children: _,
               className: _,
@@ -7546,7 +7454,7 @@
             children: _.Children.map(_, (_, _) =>
               null != _
                 ? (0, _.jsx)(_, {
-                    paddingBottom: _ !== _ - 1 ? __webpack_require__ : void 0,
+                    paddingBottom: _ !== _ - 1 ? _ : void 0,
                     className: (0, _._)(_, _.RemoveOnEmpty),
                     children: _,
                   })
@@ -7576,7 +7484,7 @@
         _ = (0, _.createContext)(_),
         _ = () => (0, _.useContext)(_),
         _ = (_) => {
-          const { config: _, children: __webpack_require__ } = _,
+          const { config: _, children: _ } = _,
             _ = _ || _,
             _ = (0, _.useMemo)(
               () =>
@@ -7613,7 +7521,7 @@
                 (0, _.jsx)("style", {
                   children: _,
                 }),
-                __webpack_require__,
+                _,
               ],
             })
           );
