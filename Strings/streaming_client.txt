@@ -3203,6 +3203,8 @@ ${FILENAME}
 +(VKV
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGAw
+++CCUNGf
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -4479,8 +4481,6 @@ ${FILENAME}
 0123456789abcdefABCDEF:.
 0123456789abcdefghijklmnopqrstuvwxyz
 01E)
-02:47:29
-02:47:33
 0365<?:9(+.-$'"!`cfelojix{~}twrqPSVU\_ZYHKNMDGBA
 04!j
 04:3
@@ -4958,6 +4958,8 @@ ${FILENAME}
 18StoreItem_Trailers
 196?
 198
+19:52:43
+19:52:52
 19CActivationCodeInfo
 19CClientHandshakeMsg
 19CClientMicroTxnInfo
@@ -5603,9 +5605,6 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
-3267
-3267.
-3276
 32654.
 32655
 32655&
@@ -5616,10 +5615,12 @@ ${FILENAME}
 326554&##
 326554&'
 326654&&#"
+3267
 3267!
 3267!5!&
 3267!5!&&#"
 3267&'^7l
+3267.
 32675
 32675#5!
 32675&&#"
@@ -5636,6 +5637,7 @@ ${FILENAME}
 327'Z
 3275!5!
 3275#5!
+3276
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -5954,6 +5956,7 @@ ${FILENAME}
 4/Ji
 4/Kv#b
 40#Au
+4096
 40CHIDMessageFromRemote_DeviceInputReports
 40CMsgSteamDatagramCachedCredentialsForApp
 40CMsgSteamDatagramClientPingSampleRequest
@@ -6008,11 +6011,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-467&&54632
-467.
-4096
 4632
 46632
+467&&54632
+467.
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6248,17 +6250,17 @@ ${FILENAME}
 54&'7
 546'2>
 5467
-54632
+54663
 546632
 5467!
+5467#".
 5467#5!
 5467&54$32
 5467'
 5467'!
 5467'7
 5467.
-54663
-5467#".
+54632
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6472,10 +6474,10 @@ ${FILENAME}
 6654#"
 6654&#"
 6675
+6753
 666666666666666666666666666666666666666666666666
 67!5!
 675!
-6753
 6754&#"
 67547&55&'7
 6786
@@ -6666,10 +6668,10 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
-75#5!
 754.
-7524
 74632
+75#5!
+7524
 75pRD
 75th
 76&'3
@@ -23356,6 +23358,7 @@ Z~5pW3Y
 \n\ftrailer_name
 \n\fuse_age_gate
 \n\fvirtual_port
+\n\fwindow_width
 \n\fx_normalized
 \n\fy_normalized
 \n\n"CMsgSteamDatagramLinkLifetimeStats
@@ -31834,7 +31837,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Apr 30 2026 02:47:32
+lib Apr 30 2026 19:52:46
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -39193,6 +39196,12 @@ win32_merger
 win32_name_converter
 win32_splitter
 win32_unload
+window_frame_offset_x
+window_frame_offset_y
+window_pixel_density
+window_position_x
+window_position_y
+windowed
 windows
 with a type that does not implement MergeFrom. This is unsafe;
 wiz-

@@ -113,10 +113,10 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789
 0123456789ABCDEF
-02:47:31
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
+19:52:45
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -325,6 +325,7 @@ Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
+Lv*z]
 Matched '%s' -> '%s'\n
 MemFree:
 MemTotal:

@@ -1273,6 +1273,7 @@ $\nY8O
 01/01/00
 0123456789
 0123456789ABCDEF
+0123456789ABCDEFP
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -5776,6 +5777,7 @@ Zulu
 \n\fstring_value
 \n\fswift_prefix
 \n\ftime_expires
+\n\fwindow_width
 \n\fx_normalized
 \n\fy_normalized
 \n\nCSetQoSMsg
@@ -5857,6 +5859,7 @@ Zulu
 \n\rshift_keycode
 \n\rsource_handle
 \n\rvroverlay_key
+\n\rwindow_height
 \n\tEOSBranch
 \n\taccountid
 \n\targuments
@@ -9052,6 +9055,12 @@ wide
 wide > 0
 width
 wikipedia.org
+window_frame_offset_x
+window_frame_offset_y
+window_pixel_density
+window_position_x
+window_position_y
+windowed
 with a type that does not implement MergeFrom. This is unsafe;
 wmemchr
 wmemcmp

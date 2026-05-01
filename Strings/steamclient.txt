@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -5337,10 +5336,10 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}
 +.CAuthenticationSupport_RevokeToken_Request
 +.CAuthentication_GetAuthSessionInfo_Request
 +.CBluetoothManager_GetDeviceDetails_Request
@@ -8062,7 +8061,6 @@ $steammessages_parental_objects.proto"
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
@@ -11593,11 +11591,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16451,7 +16449,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hh9
 9IClientVR
 9IGv
 9ISteamUGC
@@ -40931,6 +40928,7 @@ Zulu
 \n\fvr_hmd_model
 \n\fwake_allowed
 \n\fwallet_state
+\n\fwindow_width
 \n\fwine_version
 \n\fwordban_list
 \n\fx_normalized
@@ -41517,6 +41515,7 @@ Zulu
 \n\rwebapi_key_id
 \n\rwebsite_title
 \n\rweighted_load
+\n\rwindow_height
 \n\rworkshop_file
 \n\tAppStatus
 \n\tBasicInfo
@@ -48257,7 +48256,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 ghjkl
 gidlist
 gidparentcomment
@@ -60692,7 +60691,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr 30 2026 02:47:34
+steam Apr 30 2026 19:52:54
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 steam-runtime-launch-client --alongside-steam -- amixer -c acp5x contents
@@ -63503,6 +63502,12 @@ winNT
 winVista
 winXP
 window
+window_frame_offset_x
+window_frame_offset_y
+window_pixel_density
+window_position_x
+window_position_y
+windowed
 windows
 windows,
 windowsize
