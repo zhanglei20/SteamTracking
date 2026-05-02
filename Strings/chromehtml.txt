@@ -5924,7 +5924,6 @@ quantil
 quechua
 qwest
 qwilt
-q|;Gp\ft
 rack
 rackspace
 random_device could not be read

@@ -113,10 +113,10 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789
 0123456789ABCDEF
+01:24:51
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-19:52:45
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -124,7 +124,6 @@ $ORIGIN
 <unknown>
 AllocateCrashMemoryReserve
 Anonymous mutex cannot have bAllAccess == true
-Apr 30 2026
 AreStackTrackingFiltersEnabledAtStart
 Assert( %s ):%s:%d\n
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
@@ -325,8 +324,8 @@ Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
-Lv*z]
 Matched '%s' -> '%s'\n
+May  2 2026
 MemFree:
 MemTotal:
 MiniDumpUnlock

@@ -392,6 +392,7 @@
 !Software\Valve\Steam\CloudEnabled
 !UI/Display/Current/MaxScaleFactor
 !UI/Display/Current/MinScaleFactor
+!V_isempty( pchVar )
 !V_isempty( svHostname )
 !\fmHs8
 !\n\finitial_left
@@ -5006,6 +5007,7 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG8e
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7345,6 +7347,7 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
+0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7388,7 +7391,6 @@ ${LANGUAGE}
 0000
 00000000
 0000000000000000000000000000000000000000
-0.15
 000000001532
 00003333
 00:00:00
@@ -13215,7 +13217,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hh(>
 9IGv
 9Inventory
 9PE,$
@@ -14643,7 +14644,6 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 30 2026 19:53:31
 April
 Arabic
 AreFilesInSubscriptionList
@@ -24730,6 +24730,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
+May  2 2026 01:24:57
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -37721,6 +37722,7 @@ chinatelecom
 chmod
 choose_directory
 chord.vdf
+chord_*.vdf
 chord_neptune.vdf
 chose_local_files
 chown
@@ -41060,7 +41062,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghost_
 gidlist
 gidparentcomment
@@ -48082,7 +48084,8 @@ local://controller_base/basicui_controller_legion_go_s.vdf
 local://controller_base/basicui_gamepad.vdf
 local://controller_base/basicui_neptune.vdf
 local://controller_base/chord%s
-local://controller_base/chord_controller_triton.vdf
+local://controller_base/chord_controller_neptune.vdf
+local://controller_base/chord_triton.vdf
 local://controller_base/desktop_neptune.vdf
 local://controller_base/desktop_steamcontroller_gordon.vdf
 local://controller_base/empty.vdf
@@ -52644,6 +52647,7 @@ return_previews
 return_reactions
 return_short_description
 return_vote_data
+reupload_requested
 reused
 reverse
 reverse_diamond_button_layout
