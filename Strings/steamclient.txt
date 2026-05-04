@@ -106,7 +106,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123M
+ !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -516,7 +516,6 @@
 !IsVirtualPortEphemeralFakePort( m_nRemoteVirtualPort )
 !ListenSocket()
 !V_isempty( pchBetaKey )
-!V_isempty( pchVar )
 !V_isempty( pszDepotCacheFolder )
 !V_isempty( pszFolder )
 !V_isempty( pszGameDir )
@@ -5339,9 +5338,10 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}
 +.CAuthenticationSupport_RevokeToken_Request
 +.CAuthentication_GetAuthSessionInfo_Request
 +.CBluetoothManager_GetDeviceDetails_Request
@@ -8062,8 +8062,8 @@ $steammessages_parental_objects.proto"
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
@@ -16453,7 +16453,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9HhG
+9H(H
 9IClientVR
 9IGv
 9ISteamUGC
@@ -60698,7 +60698,7 @@ stderr
 stdin
 stdout
 steam
-steam May  2 2026 01:24:53
+steam May  4 2026 17:47:06
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 steam-runtime-launch-client --alongside-steam -- amixer -c acp5x contents

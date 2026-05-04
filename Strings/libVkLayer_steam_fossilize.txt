@@ -1,5 +1,7 @@
   what():
  (pNext->sType chain: [
+ ... error spam detected at %s:%d, silencing.\n
+ ... warning spam detected at %s:%d, silencing.\n
  [clone
  _Complex
  _Imaginary
@@ -47,6 +49,7 @@ $ORIGIN
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN9Fossilize13StateRecorder21init_recording_threadEPNS3_17DatabaseInterfaceEEUlvE_EEEEEE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG*
 ++CCUNGstd::exception
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
@@ -78,6 +81,11 @@ $ORIGIN
 -0123456789
 -sSO\
 -std::bad_alloc
+../external/fossilize/fossilize.cpp
+../external/fossilize/fossilize_db.cpp
+../external/fossilize/fossilize_errors.hpp
+../external/fossilize/layer/dispatch.cpp
+../external/fossilize/layer/instance.cpp
 .foz
 .wN\f9
 /dev/null
@@ -258,6 +266,8 @@ Fossilize INFO: applicationVersion %u is too low for pApplicationName %s. Skippi
 Fossilize INFO: engineVersion %u is too low for pEngineName %s. Skipping.\n
 Fossilize INFO: pApplicationName %s is blacklisted for recording. Skipping.\n
 Fossilize INFO: pEngineName %s is blacklisted for recording. Skipping.\n
+Fossilize WARN:  ... error spam detected at %s:%d, silencing.\n
+Fossilize WARN:  ... warning spam detected at %s:%d, silencing.\n
 Fossilize WARN: %s handle 0x%016lx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
 Fossilize WARN: %s\n
 Fossilize WARN: Archive %s could not be prepared, skipping.\n
@@ -1206,6 +1216,7 @@ string literal
 string::string
 strlen
 strncmp
+strrchr
 strstr
 strtol
 strtold_l

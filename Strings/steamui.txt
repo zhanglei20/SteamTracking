@@ -392,7 +392,6 @@
 !Software\Valve\Steam\CloudEnabled
 !UI/Display/Current/MaxScaleFactor
 !UI/Display/Current/MinScaleFactor
-!V_isempty( pchVar )
 !V_isempty( svHostname )
 !\fmHs8
 !\n\finitial_left
@@ -1604,7 +1603,6 @@ $Number%05d$
 $ORIGIN
 $O\tdwR\rox\\r*
 $RepresentationID$
-$SteamInput/Configurator/ShowIbexTour
 $UI/Display/Current/IsExternalDisplay
 $V7E
 $XI(6
@@ -2988,6 +2986,7 @@ ${LANGUAGE}
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1@H0
 (8GXgw
 (8HXhx
 (<PDxl
@@ -4535,6 +4534,7 @@ ${LANGUAGE}
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlfE_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUljE_
+*ZN19CSettingsController23RegisterSettingHandlersEvEUlvE0_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlvE_
 *ZN19CSettingsController29SetForeignDefaultValueHandlerE10StringViewOSt8functionIFvP18CMsgSettingVariantEEEUlvE_
 *ZN19CStreamTransportSDR22BHandleTransportSignalERK19CTransportSignalMsgE33CStreamTransportSDR_SignalContext
@@ -5007,7 +5007,6 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8e
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAuthenticationSupport_RevokeToken_Request
@@ -5426,6 +5425,8 @@ ${LANGUAGE}
 ,steammessages_unified_base.steamclient.proto"b\n0CAccountHardware_RegisterSteamController_Request
 ,steammessages_unified_base.steamclient.proto"i\n4CContentServerDirectory_ConnectedSteamPipeServerInfo
 ,steammessages_unified_base.steamclient.proto"y\n
+,system\ControllerLowBatteryNotificationSound
+,system\ControllerLowBatteryNotificationToast
 ,value:
 - Timing for jumping packet: [present=%llu][capture=%llu][pipe=%llu][convert=%llu][encode=%llu]
 -"ke6
@@ -24730,7 +24731,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  2 2026 01:24:57
+May  4 2026 17:47:20
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -29646,6 +29647,7 @@ ShowEula
 ShowFirstTime
 ShowGameArgs
 ShowIMECandidates
+ShowIbexWelcomeTour
 ShowInterstitials
 ShowJumpList: %s
 ShowLaunchOption
@@ -30135,6 +30137,7 @@ SteamInput/ChatRadialMenu/5
 SteamInput/ChatRadialMenu/6
 SteamInput/ChatRadialMenu/7
 SteamInput/Configurator/ErrorMsgEnabled
+SteamInput/Configurator/ShowIbexTour
 SteamInputManager
 SteamInstaller
 SteamLibrary
@@ -41062,7 +41065,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -47781,6 +47784,8 @@ lNrZ
 lRecorded >= m_lFirstAudioPTS
 l\n NotifyGyroQuaternionStateChanged
 l\n!system_enable_low_power_downloads
+l\n)controller_low_battery_notification_sound
+l\n)controller_low_battery_notification_toast
 l\n\npromotions
 l\vDZ2\fs
 l`UROM=;98310-*)(&$"

@@ -188,7 +188,6 @@
 !BUseIOCP()
 !H88p
 !IsAlive()
-!V_isempty( pchVar )
 !V_isempty( prefix )
 !V_isempty( suffix )
 !V_isempty( svHostname )
@@ -2086,10 +2085,8 @@ $ffn
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEF`
 0123456789abcdef
-01:24:49
-01:24:53
-01:24:54
 08bX
 0?0L
 0A/8
@@ -2513,6 +2510,8 @@ $ffn
 172.16
 172.16.3.31
 172.16.3.39
+17:47:01
+17:47:06
 17CBootstrapLogFile
 17CClientWalletInfo
 17CDebugStatsSystem
@@ -2852,11 +2851,9 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-64CK\vH
-8000
-8192
-65536
 60000000
+64CK\vH
+65536
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2908,6 +2905,8 @@ $ffn
 8.K%G
 8/A0
 80 Mbps
+8000
+8192
 82\n:XPH
 83L3
 83N6
@@ -7256,7 +7255,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  2 2026
+May  4 2026
 MaybeAllocateAligned cannot fail here.
 Meeting
 MemFree:
@@ -9352,7 +9351,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May  2 2026 01:24:54
+Startup - updater built May  4 2026 17:47:06
 State
 StaticFileWriterThread()
 Steam
