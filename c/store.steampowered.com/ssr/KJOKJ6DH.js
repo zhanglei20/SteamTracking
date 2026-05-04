@@ -4431,11 +4431,18 @@ var _ = "BUi42fzAwGY-";
 var _ = "HWTMAITMowM-";
 var _ = "MFaLtBAVIAM-";
 var _ = "Vg3QiTRTamw-";
+var _ = "_4TzghvuD-r8-";
 var _ = "eLjOKgMe1Sk-";
 var _ = "_2JoNBzwPL3Y-";
 var _ = "hbIROan00j4-";
-var _ = "/2KRULVAA.png";
-var _ = "/K3O6MRBA.png";
+var _ = "/LIMPAQCA.png";
+var _ = "/7YQ5TYBA.png";
+var _ = "/UIN4IDCA.png";
+var _ = "/RKG3HMBA.png";
+var _ = "/ST4P7GAA.png";
+var _ = "/GRRBBVCA.png";
+var _ = "/I5LQVACA.png";
+var _ = "/THG74XAA.png";
 var _ = _(_(), 1),
   _ = {
     appid: 1675200,
@@ -4448,6 +4455,15 @@ var _ = _(_(), 1),
   },
   _ = {
     packageid: 354231,
+  },
+  _ = {
+    appid: 4165870,
+  },
+  _ = {
+    appid: 4165910,
+  },
+  _ = {
+    appid: 4165890,
   },
   _ = [
     "AT",
@@ -4508,10 +4524,13 @@ function _() {
   });
 }
 function _() {
-  return _(_), _(_), _(_), _(_), _(), null;
+  return _(_), _(_), _(_), _(_), _(_), _(_), _(_), _(), null;
 }
 function _() {
   let { data: _ } = _(_),
+    { data: _ } = _(_),
+    { data: _ } = _(_),
+    { data: _ } = _(_),
     { data: _ } = _(_),
     { data: _ } = _(_),
     _ = _(),
@@ -4519,38 +4538,58 @@ function _() {
       {
         storeItem: _ ? _ : void 0,
         image: _(_),
+        icon: _(_),
+        name: _("#Menu_Section_Hardware_SteamDeck"),
       },
       {
         storeItem: _ ? _ : void 0,
         image: _(_),
-        name: _("#Menu_Section_Hardware_Family"),
+        icon: _(_),
+        name: _("#Menu_Section_Hardware_SteamController"),
+      },
+      {
+        storeItem: _ ? _ : void 0,
+        image: _(_),
+        icon: _(_),
+        name: _("#Menu_Section_Hardware_SteamMachine"),
+      },
+      {
+        storeItem: _ ? _ : void 0,
+        image: _(_),
+        icon: _(_),
+        name: _("#Menu_Section_Hardware_SteamFrame"),
       },
       {
         storeItem: _,
       },
     ]
       .filter(({ storeItem: _ }) => _ && _.visible)
-      .slice(0, 2);
-  return (0, _.jsxs)(_, {
+      .slice(0, 4);
+  return (0, _.jsx)(_, {
     className: _,
-    children: [
-      _.length >= 1 &&
-        (0, _.jsx)(_, {
-          ..._[0],
-        }),
-      _.length >= 2 &&
-        (0, _.jsx)(_, {
-          ..._[1],
-        }),
-    ],
+    children: _.map((_) =>
+      (0, _.jsx)(
+        _,
+        {
+          ..._,
+        },
+        _.image,
+      ),
+    ),
   });
 }
 function _(_) {
-  let { storeItem: _, image: _, name: _ = _.name } = _;
+  let { storeItem: _, image: _, icon: _, name: _ = _.name } = _;
   return (0, _.jsxs)(_, {
     className: _,
     storeItem: _,
     children: [
+      _ &&
+        (0, _.jsx)("img", {
+          className: _,
+          src: _,
+          alt: _,
+        }),
       _ &&
         (0, _.jsx)("img", {
           className: _,
@@ -4578,6 +4617,7 @@ function _() {
       _ &&
         (0, _.jsx)(_, {
           storeItem: _,
+          name: _("#Menu_Section_Hardware_Family"),
         }),
       _ &&
         (0, _.jsx)(_, {
@@ -4585,7 +4625,7 @@ function _() {
         }),
       (0, _.jsx)(_, {
         storeItem: _,
-        name: _("#Menu_Section_Hardware_VRHardware"),
+        name: _("#Menu_Section_Hardware_ValveIndex"),
       }),
       (0, _.jsx)(_, {}),
       _ &&
