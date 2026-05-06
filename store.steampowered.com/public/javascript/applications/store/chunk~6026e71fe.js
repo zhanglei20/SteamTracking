@@ -3429,7 +3429,7 @@
         }, [t, a, e]);
         let o = l.k_Loading;
         return (
-          null == r ? (o = l.k_LoadFailure) : r && (o = l.k_LoadSuccess),
+          null === r ? (o = l.k_LoadFailure) : r && (o = l.k_LoadSuccess),
           { rgHardwareDetails: r, eHardwareLoadingState: o }
         );
       }
@@ -17000,7 +17000,7 @@
               o = !1;
             return (
               a == nn.oo.k_LoadFailure
-                ? (i = (0, B.we)("#Sale_Reservation_Too_Busy"))
+                ? (i = (0, B.we)("#Sale_Reservations_BusyServer"))
                 : (0, er.CJ)(r)
                   ? ((o = !0),
                     (i =

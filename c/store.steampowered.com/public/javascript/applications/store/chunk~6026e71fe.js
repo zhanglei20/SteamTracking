@@ -3791,7 +3791,7 @@
         }, [_, _, _]);
         let _ = _.k_Loading;
         return (
-          null == _ ? (_ = _.k_LoadFailure) : _ && (_ = _.k_LoadSuccess),
+          null === _ ? (_ = _.k_LoadFailure) : _ && (_ = _.k_LoadSuccess),
           {
             rgHardwareDetails: _,
             eHardwareLoadingState: _,
@@ -18369,7 +18369,7 @@
               _ = !1;
             return (
               _ == _._.k_LoadFailure
-                ? (_ = (0, _._)("#Sale_Reservation_Too_Busy"))
+                ? (_ = (0, _._)("#Sale_Reservations_BusyServer"))
                 : (0, _._)(_)
                   ? ((_ = !0),
                     (_ =
