@@ -1158,7 +1158,17 @@
 }
 ._0BH1ydyFmSnUvoVK2hIc:where(.RmQIHBmo3QqjBtWih540t) {
   --background: rgb(from var(--color-accent-3) r g b / 50%);
-  --hover-background: rgb(from var(--color-accent-4) r g b / 50%);
+  --hover-background: rgb(from var(--color-accent-5) r g b / 50%);
+  color: var(--color-accent-11);
+}
+._0BH1ydyFmSnUvoVK2hIc:where(.RmQIHBmo3QqjBtWih540t):where(
+    [data-accent-color="greyneutral"]
+  ),
+._0BH1ydyFmSnUvoVK2hIc:where(.RmQIHBmo3QqjBtWih540t):where(
+    [data-dull-color="greyneutral"] [data-accent-color="dull"]
+  ) {
+  --background: rgb(from var(--color-accent-3) r g b / 50%);
+  --hover-background: rgb(from var(--color-accent-6) r g b / 50%);
   color: var(--color-accent-11);
 }
 ._0BH1ydyFmSnUvoVK2hIc:where(._3Ivla_Ow2vkS32o8Ih_PeA) {
