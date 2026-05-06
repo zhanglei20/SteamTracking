@@ -17489,7 +17489,7 @@
             _.hub_description &&
               (0, _.jsx)("div", {
                 className: _.ContentHubSubtitle,
-                children: _.hub_description,
+                children: (0, _._)(_.hub_description),
               }),
           ],
         });
