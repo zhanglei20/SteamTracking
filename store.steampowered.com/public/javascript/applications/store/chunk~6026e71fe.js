@@ -16203,7 +16203,7 @@
             t.hub_description &&
               (0, n.jsx)("div", {
                 className: Ja.ContentHubSubtitle,
-                children: t.hub_description,
+                children: (0, B.we)(t.hub_description),
               }),
           ],
         });
