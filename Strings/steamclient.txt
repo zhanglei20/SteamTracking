@@ -16452,7 +16452,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H(H
+9H(X
 9IClientVR
 9IGv
 9ISteamUGC
@@ -60697,7 +60697,7 @@ stderr
 stdin
 stdout
 steam
-steam May  5 2026 16:19:26
+steam May  7 2026 02:00:17
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 steam-runtime-launch-client --alongside-steam -- amixer -c acp5x contents

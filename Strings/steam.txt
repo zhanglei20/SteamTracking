@@ -2084,6 +2084,9 @@ $ffn
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789ABCDEF`
 0123456789abcdef
+02:00:12
+02:00:18
+02:00:19
 08bX
 0?0L
 0A/8
@@ -2494,8 +2497,6 @@ $ffn
 15ISSLCertificate
 15IUpdateStatusUI
 16 Mbps
-16:19:21
-16:19:28
 16CAdHocValidation
 16CBilling_Address
 16CConsoleUpdateUI
@@ -2849,11 +2850,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
+60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -7255,7 +7256,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  5 2026
+May  7 2026
 MaybeAllocateAligned cannot fail here.
 Meeting
 MemFree:
@@ -9351,7 +9352,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May  5 2026 16:19:28
+Startup - updater built May  7 2026 02:00:19
 State
 StaticFileWriterThread()
 Steam
