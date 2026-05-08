@@ -3465,10 +3465,11 @@
             );
         }
       }
-      function _(_, _, _, _) {
+      function _(_, _, _, _, _) {
         var _, _, _;
         let _ = [],
-          _ = 0;
+          _ = 0,
+          _ = 2;
         const _ = {},
           _ = _.tags || {};
         for (const _ of Object.keys(_)) {
@@ -3482,18 +3483,37 @@
             (_ += null != _ ? _ : 0);
           const _ = _(_.name, _, _[_], _);
           if (_)
-            if (_[_.strLabel]) {
-              const _ = _[_.strLabel],
-                _ = "string" == typeof _.tag ? [_.tag] : _.tag,
-                _ = "string" == typeof _.tag ? [_.tag] : _.tag;
-              (_.tag = _.concat(..._)),
-                void 0 !== _.matches &&
+            if (_[_.strLabel])
+              if (_) {
+                const _ = _[_.strLabel],
+                  _ = "string" == typeof _.tag ? [_.tag] : _.tag,
+                  _ = "string" == typeof _.tag ? [_.tag] : _.tag;
+                (_.tag = _.concat(..._)),
                   void 0 !== _.matches &&
-                  (_.matches =
-                    (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) +
-                    (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)),
-                void 0 === _.color && _.color && (_.color = _.color);
-            } else _.push(_), (_[_.strLabel] = _);
+                    void 0 !== _.matches &&
+                    (_.matches =
+                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) +
+                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)),
+                  void 0 === _.color && _.color && (_.color = _.color);
+              } else {
+                let _;
+                do {
+                  (_ = `${_.strLabel} (?${_}?)`), _++;
+                } while (_[_]);
+                (0, _._)(
+                  !1,
+                  "Forced to assign a unique label to option",
+                  _,
+                  _,
+                  _[_.strLabel],
+                );
+                const _ = {
+                  ..._,
+                  strLabel: _,
+                };
+                _.push(_), (_[_.strLabel] = _);
+              }
+            else _.push(_), (_[_.strLabel] = _);
         }
         if (_) _.sort(_);
         else {
@@ -5423,7 +5443,7 @@
             });
           } else {
             const _ = _[_.facet],
-              _ = _(_, "select");
+              _ = _(_, "select", !1);
             (0, _._)(
               _.rgOptions.every((_) => "string" == typeof _.tag),
               `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.strLabel}" facet.`,
@@ -5578,7 +5598,7 @@
                       : _ - _;
               };
             }
-            const _ = _(_, "select", _);
+            const _ = _(_, "select", !1, _);
             if (!_) return null;
             return {
               facet: _,
@@ -6398,7 +6418,7 @@
           const _ = _[_];
           if (!_.tags) continue;
           const _ = Object.keys(_.tags).length < _,
-            _ = _(_, _ ? "checkbox" : "select", void 0, _);
+            _ = _(_, _ ? "checkbox" : "select", !0, void 0, _);
           _ && (_ ? _.push(_) : _.push(_));
         }
         return [_, _].filter((_) => _.length > 0);

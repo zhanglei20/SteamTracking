@@ -1,6 +1,6 @@
 "linuxarm64"
 {
-	"version"		"1778200041"
+	"version"		"1778278094"
 	"tenfoot_images_all"
 	{
 		"file"		"tenfoot_images_all.zip.86419c7a56c12dd107b5e0d46f50c8a9b121f3cc"
@@ -248,11 +248,11 @@
 	}
 	"bins_sdk_linuxarm64_linuxarm64"
 	{
-		"file"		"bins_sdk_linuxarm64_linuxarm64.zip.9771aadff255f09a8556b570ef2b04d7695abd5e"
-		"size"		"15629262"
-		"sha2"		"2d105172c1282699548b89cd88703b61bfa7a3c6ea6529b6366b04178bbfeed3"
-		"zipvz"		"bins_sdk_linuxarm64_linuxarm64.zip.vz.101362da268ddce1d75c094f0349ed7e3be7ac73_9878425"
-		"sha2vz"		"75419a1a90b8cad8909dc85b688b829d41698853ac16f7dce4311ae2e689d01f"
+		"file"		"bins_sdk_linuxarm64_linuxarm64.zip.44ed24ba92313499b4b04db3c9e25734ab2b0217"
+		"size"		"15629253"
+		"sha2"		"89ac7b17a483c14605a39967c4187eddb76e612f15a6ec3ef5c30a690bd5b3d5"
+		"zipvz"		"bins_sdk_linuxarm64_linuxarm64.zip.vz.272908fb8cf053cfdc94bdf3f6315602f1a68fbc_9875227"
+		"sha2vz"		"6b713a31acba7ca8891525083a73f342b267fec1574ce8cc52d45a0de2dbdd0d"
 	}
 	"bins_androidarm64_linuxarm64"
 	{
@@ -271,9 +271,9 @@
 }
 "kvsign2"
 {
-	"linuxarm64"		"c4a17378dba678cb9ba10bb4c817497cae7832a358805b46cc328ff2c41ce91de122f3f99bc7ac11f5b87eff6d9ed536dc0482b5fe53a25f4abffdeaf99c830e"
+	"linuxarm64"		"80566ea65427815f40d635b8762cc175cba64eb0854784d4c4ea83310919b1b732d780e0f21eb0c4e0c8a01242117a7650eab26af9df97695dcb9135bdd4690e"
 }
 "kvsignatures"
 {
-	"linuxarm64"		"8e520f9d35e6a25dabe6c09bedca9975ed707b72b93104f3d384d110584c55b108db10be5a34ef50119fdf931f0a52b35f21ed9d2ad06070d764102f43149b40b1d614421a9d4fa42e4910dbe84c70f56e9a95c4b9270ca8aebd37928f559cfc644368abb46d70ce54f25871be4945bf2e662140457ae41cffae0c6ebc9112de"
+	"linuxarm64"		"4e1fa63a06c9a165894aa0834dcbdb4ff373b685fc104988ad09346dc7d7562eaec42c5a0950a5c68f502e105f361413de8b1be525bebd1dd2799048bbd54a6a59217b07231cddf1b069a3785820ede0d93e8266c933ceecc5dbc5742b0a51f8398378ece3ebf69ff420d220633aee30e0158c939adf83927efcbe2015e9422e"
 }

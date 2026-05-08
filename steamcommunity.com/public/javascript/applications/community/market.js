@@ -2967,40 +2967,57 @@
             );
         }
       }
-      function yt(t, c, n, e) {
-        var l, s, a;
-        let v = [],
-          i = 0;
-        const r = {},
-          o = t.tags || {};
-        for (const c of Object.keys(o)) {
-          let n;
-          e &&
-            (n =
-              null !== (l = e.counts[t.name] && e.counts[t.name][c]) &&
-              void 0 !== l
-                ? l
+      function yt(t, c, n, e, l) {
+        var s, a, v;
+        let i = [],
+          r = 0,
+          o = 2;
+        const h = {},
+          d = t.tags || {};
+        for (const c of Object.keys(d)) {
+          let e;
+          l &&
+            (e =
+              null !== (s = l.counts[t.name] && l.counts[t.name][c]) &&
+              void 0 !== s
+                ? s
                 : 0),
-            (i += null != n ? n : 0);
-          const h = St(t.name, c, o[c], n);
-          if (h)
-            if (r[h.strLabel]) {
-              const t = r[h.strLabel],
-                c = "string" == typeof t.tag ? [t.tag] : t.tag,
-                n = "string" == typeof h.tag ? [h.tag] : h.tag;
-              (t.tag = c.concat(...n)),
-                void 0 !== t.matches &&
-                  void 0 !== h.matches &&
-                  (t.matches =
-                    (null !== (s = t.matches) && void 0 !== s ? s : 0) +
-                    (null !== (a = h.matches) && void 0 !== a ? a : 0)),
-                void 0 === t.color && h.color && (t.color = h.color);
-            } else v.push(h), (r[h.strLabel] = h);
+            (r += null != e ? e : 0);
+          const u = St(t.name, c, d[c], e);
+          if (u)
+            if (h[u.strLabel])
+              if (n) {
+                const t = h[u.strLabel],
+                  c = "string" == typeof t.tag ? [t.tag] : t.tag,
+                  n = "string" == typeof u.tag ? [u.tag] : u.tag;
+                (t.tag = c.concat(...n)),
+                  void 0 !== t.matches &&
+                    void 0 !== u.matches &&
+                    (t.matches =
+                      (null !== (a = t.matches) && void 0 !== a ? a : 0) +
+                      (null !== (v = u.matches) && void 0 !== v ? v : 0)),
+                  void 0 === t.color && u.color && (t.color = u.color);
+              } else {
+                let t;
+                do {
+                  (t = `${u.strLabel} (?${o}?)`), o++;
+                } while (h[t]);
+                (0, g.wT)(
+                  !1,
+                  "Forced to assign a unique label to option",
+                  t,
+                  u,
+                  h[u.strLabel],
+                );
+                const c = { ...u, strLabel: t };
+                i.push(c), (h[c.strLabel] = c);
+              }
+            else i.push(u), (h[u.strLabel] = u);
         }
-        if (n) v.sort(n);
+        if (e) i.sort(e);
         else {
           if ("select" === c) {
-            v.sort((t, c) => {
+            i.sort((t, c) => {
               var n, e;
               return (
                 (null !== (n = c.matches) && void 0 !== n ? n : 0) -
@@ -3008,19 +3025,19 @@
               );
             });
             let t = -1;
-            for (let c = v.length - 1; c >= 0 && 0 === v[c].matches; c--) t = c;
-            if (-1 === t) v = (0, lt.Z)(v, (t) => t.strLabel);
+            for (let c = i.length - 1; c >= 0 && 0 === i[c].matches; c--) t = c;
+            if (-1 === t) i = (0, lt.Z)(i, (t) => t.strLabel);
             else {
-              const c = (0, lt.Z)(v.slice(0, t), (t) => t.strLabel),
-                n = (0, lt.Z)(v.slice(t), (t) => t.strLabel);
-              v = [...c, ...n];
+              const c = (0, lt.Z)(i.slice(0, t), (t) => t.strLabel),
+                n = (0, lt.Z)(i.slice(t), (t) => t.strLabel);
+              i = [...c, ...n];
             }
-          } else v = (0, lt.Z)(v, (t) => t.strLabel);
+          } else i = (0, lt.Z)(i, (t) => t.strLabel);
         }
-        if (e && 0 === i) return null;
-        if (e && e.total === i && 1 === Object.keys(e.counts[t.name]).length)
+        if (l && 0 === r) return null;
+        if (l && l.total === r && 1 === Object.keys(l.counts[t.name]).length)
           return null;
-        return { strLabel: t.localized_name, rgOptions: v, fieldType: c };
+        return { strLabel: t.localized_name, rgOptions: i, fieldType: c };
       }
       function St(t, c, n, e) {
         const l = { facet: t, tag: c, strLabel: n.localized_name, matches: e };
@@ -4607,7 +4624,7 @@
             a.push({ facet: n, img: l[t.img], toggle: i });
           } else {
             const n = c[t.facet],
-              l = yt(n, "select");
+              l = yt(n, "select", !1);
             (0, g.wT)(
               l.rgOptions.every((t) => "string" == typeof t.tag),
               `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${l.strLabel}" facet.`,
@@ -4739,7 +4756,7 @@
                         : l - s;
                 };
               }
-              const e = yt(c, "select", n);
+              const e = yt(c, "select", !1, n);
               if (!e) return null;
               return { facet: e, condition: fn(t.trigger) };
             })
@@ -5459,7 +5476,7 @@
           const a = t[c];
           if (!a.tags) continue;
           const v = Object.keys(a.tags).length < e,
-            i = yt(a, v ? "checkbox" : "select", void 0, n);
+            i = yt(a, v ? "checkbox" : "select", !0, void 0, n);
           i && (v ? s.push(i) : l.push(i));
         }
         return [l, s].filter((t) => t.length > 0);
