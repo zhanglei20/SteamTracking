@@ -1990,6 +1990,8 @@
     "ControllerWelcome_WelcomeNoUpdate_Body": "Before you get in-game, here are a couple important things about your Steam Controller.",
     "ControllerWelcome_PlugInPuck_Title": "Plug in the Steam Controller Puck",
     "ControllerWelcome_PlugInPuck_Body": "Before updating your controller, we will need to update the Steam Controller Puck",
+    "ControllerWelcome_CheckingForUpdates_Title": "Checking for firmware updates",
+    "ControllerWelcome_CheckingForUpdates_Body": "Checking if your Steam Controller requires firmware updates.",
     "ControllerWelcome_UpdatePuck_Title": "Updating Steam Controller Puck",
     "ControllerWelcome_UpdatePuck_Body_KnownHardware": "We are now updating your Steam Controller Puck. Please keep it plugged into your %1$s until the update is complete.",
     "ControllerWelcome_UpdatePuck_Body_UnknownHardware": "We are now updating your Steam Controller Puck. Please keep it plugged into your PC until the update is complete.",
