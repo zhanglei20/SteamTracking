@@ -1160,12 +1160,13 @@
             marginY: "2",
           });
         },
-        Name: function () {
+        Name: function (_) {
           const _ = _(),
             _ = _();
           return (0, _.jsx)(_._, {
             size: "7",
             weight: "heavy",
+            ..._,
             children: (0, _.jsx)(_, {
               description: _,
               asset: _,
@@ -1203,25 +1204,8 @@
             : null;
         },
         GameInfo: function (_) {
-          var _;
-          const { hrefGame: _ } = _,
-            _ = _(),
-            _ = _.appid,
-            { data: _ } = (0, _._)({
-              appid: _,
-            }),
-            { data: _ } = (0, _._)({
-              appid: _,
-            }),
-            _ = _ && _.community_icon ? (0, _._)(_, "community_icon") : void 0,
-            _ = (0, _._)(_),
-            _ =
-              null != _
-                ? _
-                : (null == _ ? void 0 : _.visible) &&
-                    14 !== (null == _ ? void 0 : _.type)
-                  ? _
-                  : void 0;
+          const _ = _(),
+            { gameURL: _, strName: _, iconURL: _ } = _(_.hrefGame);
           return (0, _.jsxs)(_._, {
             direction: "row",
             gapX: "2",
@@ -1231,11 +1215,7 @@
                 href: _,
                 children: _
                   ? (0, _.jsx)(_._, {
-                      alt:
-                        null !== (_ = null == _ ? void 0 : _.name) &&
-                        void 0 !== _
-                          ? _
-                          : "",
+                      alt: null != _ ? _ : "",
                       src: _,
                       className: _.GameImage,
                     })
@@ -1246,19 +1226,9 @@
               (0, _.jsxs)(_._, {
                 direction: "column",
                 children: [
-                  _
-                    ? (0, _.jsx)(_._, {
-                        href: _,
-                        size: "3",
-                        contrast: "note",
-                        underline: "hover",
-                        children: null == _ ? void 0 : _.name,
-                      })
-                    : (0, _.jsx)(_._, {
-                        size: "3",
-                        contrast: "note",
-                        children: null == _ ? void 0 : _.name,
-                      }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
                   (0, _.jsx)(_._, {
                     size: "3",
                     contrast: "note",
@@ -1269,6 +1239,7 @@
             ],
           });
         },
+        GameName: _,
         Descriptions: function () {
           const _ = _();
           return (0, _.jsx)(_.Fragment, {
@@ -1409,6 +1380,44 @@
           }),
         });
       }, _);
+      function _(_) {
+        const _ = _().appid,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = _ && _.community_icon ? (0, _._)(_, "community_icon") : void 0,
+          _ = (0, _._)(_);
+        return {
+          gameURL:
+            null != _
+              ? _
+              : (null == _ ? void 0 : _.visible) &&
+                  14 !== (null == _ ? void 0 : _.type)
+                ? _
+                : void 0,
+          iconURL: _,
+          strName: null == _ ? void 0 : _.name,
+        };
+      }
+      function _(_) {
+        const { gameURL: _, strName: _ } = _(_.hrefGame);
+        return _
+          ? (0, _.jsx)(_._, {
+              href: _,
+              size: "3",
+              contrast: "note",
+              underline: "hover",
+              children: _,
+            })
+          : (0, _.jsx)(_._, {
+              size: "3",
+              contrast: "note",
+              children: _,
+            });
+      }
       function _(_) {
         const { children: _, href: _ } = _;
         return _

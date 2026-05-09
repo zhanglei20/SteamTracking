@@ -113,7 +113,7 @@
     },
     36080: (t, c, n) => {
       "use strict";
-      n.r(c), n.d(c, { default: () => Pt });
+      n.r(c), n.d(c, { default: () => Nt });
       var e = n(7850),
         l = n(83392),
         s = n(90534),
@@ -381,10 +381,10 @@
       }
       var P = n(28491),
         E = n(6083);
-      function G(t, c) {
+      function N(t, c) {
         return t.name_color ? `#${t.name_color}` : c;
       }
-      function N(t, c) {
+      function G(t, c) {
         const n =
           "string" == typeof (null == c ? void 0 : c.amount)
             ? parseInt(c.amount)
@@ -398,8 +398,8 @@
         return (0, e.jsx)(_.EY, {
           contrast: "note",
           ...s,
-          style: { ...(null != l ? l : {}), color: G(c) },
-          children: N(c, n),
+          style: { ...(null != l ? l : {}), color: N(c) },
+          children: G(c, n),
         });
       }
       function F(t) {
@@ -408,8 +408,8 @@
           contrast: "note",
           underline: "hover",
           ...s,
-          style: { ...(null != l ? l : {}), color: G(c) },
-          children: N(c, n),
+          style: { ...(null != l ? l : {}), color: N(c) },
+          children: G(c, n),
         });
       }
       var $ = n(67603);
@@ -955,7 +955,7 @@
             s = it();
           return (0, e.jsx)(l.s, {
             direction: "column",
-            border: `2px solid ${G(s, "#3A3A3A")}`,
+            border: `2px solid ${N(s, "#3A3A3A")}`,
             className: It.ItemDescription,
             ...n,
             children: c,
@@ -1008,13 +1008,14 @@
             marginY: "2",
           });
         },
-        Name: function () {
-          const t = it(),
-            c = rt();
+        Name: function (t) {
+          const c = it(),
+            n = rt();
           return (0, e.jsx)(zt.D, {
             size: "7",
             weight: "heavy",
-            children: (0, e.jsx)(B, { description: t, asset: c }),
+            ...t,
+            children: (0, e.jsx)(B, { description: c, asset: n }),
           });
         },
         FraudWarnings: function () {
@@ -1031,7 +1032,7 @@
                       color: "red-9",
                       as: "div",
                       children: [
-                        (0, e.jsx)(At, {
+                        (0, e.jsx)(Yt, {
                           style: {
                             height: "1.25em",
                             verticalAlign: "text-bottom",
@@ -1048,37 +1049,19 @@
             : null;
         },
         GameInfo: function (t) {
-          var c;
-          const { hrefGame: n } = t,
-            a = it(),
-            v = a.appid,
-            { data: i } = (0, Lt.lv)({ appid: v }),
-            { data: r } = (0, Lt.J$)({ appid: v }),
-            o =
-              i && i.community_icon ? (0, Mt.b0)(i, "community_icon") : void 0,
-            h = (0, kt.n)(r),
-            d =
-              null != n
-                ? n
-                : (null == r ? void 0 : r.visible) &&
-                    14 !== (null == r ? void 0 : r.type)
-                  ? h
-                  : void 0;
+          const c = it(),
+            { gameURL: n, strName: a, iconURL: v } = Ot(t.hrefGame);
           return (0, e.jsxs)(l.s, {
             direction: "row",
             gapX: "2",
             align: "center",
             children: [
-              (0, e.jsx)(Ot, {
-                href: d,
-                children: o
+              (0, e.jsx)(Rt, {
+                href: n,
+                children: v
                   ? (0, e.jsx)(jt._, {
-                      alt:
-                        null !== (c = null == r ? void 0 : r.name) &&
-                        void 0 !== c
-                          ? c
-                          : "",
-                      src: o,
+                      alt: null != a ? a : "",
+                      src: v,
                       className: It.GameImage,
                     })
                   : (0, e.jsx)(s.az, { className: It.GameImagePlaceholder }),
@@ -1086,29 +1069,18 @@
               (0, e.jsxs)(l.s, {
                 direction: "column",
                 children: [
-                  d
-                    ? (0, e.jsx)(P.Y, {
-                        href: d,
-                        size: "3",
-                        contrast: "note",
-                        underline: "hover",
-                        children: null == r ? void 0 : r.name,
-                      })
-                    : (0, e.jsx)(_.EY, {
-                        size: "3",
-                        contrast: "note",
-                        children: null == r ? void 0 : r.name,
-                      }),
+                  (0, e.jsx)(At, { ...t }),
                   (0, e.jsx)(_.EY, {
                     size: "3",
                     contrast: "note",
-                    children: a.type,
+                    children: c.type,
                   }),
                 ],
               }),
             ],
           });
         },
+        GameName: At,
         Descriptions: function () {
           const t = it();
           return (0, e.jsx)(e.Fragment, {
@@ -1231,10 +1203,40 @@
         });
       }, Ht);
       function Ot(t) {
+        const c = it().appid,
+          { data: n } = (0, Lt.lv)({ appid: c }),
+          { data: e } = (0, Lt.J$)({ appid: c }),
+          l = n && n.community_icon ? (0, Mt.b0)(n, "community_icon") : void 0,
+          s = (0, kt.n)(e);
+        return {
+          gameURL:
+            null != t
+              ? t
+              : (null == e ? void 0 : e.visible) &&
+                  14 !== (null == e ? void 0 : e.type)
+                ? s
+                : void 0,
+          iconURL: l,
+          strName: null == e ? void 0 : e.name,
+        };
+      }
+      function At(t) {
+        const { gameURL: c, strName: n } = Ot(t.hrefGame);
+        return c
+          ? (0, e.jsx)(P.Y, {
+              href: c,
+              size: "3",
+              contrast: "note",
+              underline: "hover",
+              children: n,
+            })
+          : (0, e.jsx)(_.EY, { size: "3", contrast: "note", children: n });
+      }
+      function Rt(t) {
         const { children: c, href: n } = t;
         return n ? (0, e.jsx)("a", { href: n, children: c }) : c;
       }
-      function At(t) {
+      function Yt(t) {
         return (0, e.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 20 20",
@@ -1248,9 +1250,9 @@
           }),
         });
       }
-      var Rt = n(81393),
-        Yt = n(84811);
-      function Pt(t) {
+      var Pt = n(81393),
+        Et = n(84811);
+      function Nt(t) {
         const {
             name: c,
             bIsMarket: n,
@@ -1269,10 +1271,10 @@
                 const e = window;
                 e.UpdateReactItemInfo ||
                   (e.UpdateReactItemInfo = (t, c, n) => {
-                    const e = Bt.get(t);
+                    const e = $t.get(t);
                     e
                       ? e(c, n)
-                      : (0, Rt.wT)(!1, `Updater not registered: ${t}`);
+                      : (0, Pt.wT)(!1, `Updater not registered: ${t}`);
                   });
                 if (
                   null === (n = e.g_mapPendingItemInfo) || void 0 === n
@@ -1284,9 +1286,9 @@
                   c(n, l), e.g_mapPendingItemInfo.delete(t);
                 }
                 return (
-                  Bt.set(t, c),
+                  $t.set(t, c),
                   () => {
-                    Bt.delete(t);
+                    $t.delete(t);
                   }
                 );
               })(c, (t, c) => d(t && { description: t, asset: c })),
@@ -1295,14 +1297,14 @@
           h
             ? (0, e.jsx)(o, {
                 steamidOwner: i,
-                children: (0, e.jsx)(Yt.tH, {
+                children: (0, e.jsx)(Et.tH, {
                   children: n
-                    ? (0, e.jsx)(Nt, {
+                    ? (0, e.jsx)(Ft, {
                         description: h.description,
                         asset: h.asset,
                         bHideActionsForUnique: a,
                       })
-                    : (0, e.jsx)(Et, {
+                    : (0, e.jsx)(Gt, {
                         description: h.description,
                         asset: h.asset,
                         bInteractable: l,
@@ -1314,7 +1316,7 @@
             : null
         );
       }
-      function Et(t) {
+      function Gt(t) {
         const {
           description: c,
           asset: n,
@@ -1344,12 +1346,12 @@
                 ],
               }),
               s && !a && (0, e.jsx)(Tt.SellOnMarket, {}),
-              !!a && (0, e.jsx)(Gt, { strLabel: a }),
+              !!a && (0, e.jsx)(Bt, { strLabel: a }),
             ],
           }),
         });
       }
-      function Gt(t) {
+      function Bt(t) {
         const { strLabel: c } = t;
         return (0, e.jsx)(l.s, {
           background: "greyneutral-3",
@@ -1366,7 +1368,7 @@
           }),
         });
       }
-      function Nt(t) {
+      function Ft(t) {
         var c;
         const { description: n, asset: s, bHideActionsForUnique: a } = t,
           v = !(a && !n.commodity);
@@ -1413,7 +1415,7 @@
           }),
         });
       }
-      const Bt = new Map();
+      const $t = new Map();
     },
     65423: (t, c, n) => {
       "use strict";
@@ -2376,7 +2378,7 @@
           });
         },
       };
-      function G(t) {
+      function N(t) {
         return t
           ? "string" == typeof t
             ? t
@@ -2389,7 +2391,7 @@
                 "")
           : "";
       }
-      const N = Object.assign(function (t) {
+      const G = Object.assign(function (t) {
         const {
             selectedValue: c,
             onSelectionChange: n,
@@ -2397,7 +2399,7 @@
             filter: a,
             filterPlaceholder: v,
             placeholder: i,
-            getOptionLabel: r = G,
+            getOptionLabel: r = N,
             ...o
           } = t,
           h = Y({
@@ -2411,17 +2413,17 @@
             filterPlaceholder: v,
           }),
           d = null != c;
-        return (0, e.jsxs)(N.Root, {
+        return (0, e.jsxs)(G.Root, {
           state: h,
           ...o,
           children: [
-            (0, e.jsxs)(N.Trigger, {
+            (0, e.jsxs)(G.Trigger, {
               children: [
-                d && (0, e.jsx)(N.Value, { children: r(c) }),
-                !d && (0, e.jsx)(N.Placeholder, { children: i }),
+                d && (0, e.jsx)(G.Value, { children: r(c) }),
+                !d && (0, e.jsx)(G.Placeholder, { children: i }),
               ],
             }),
-            (0, e.jsx)(N.Options, {
+            (0, e.jsx)(G.Options, {
               children: h.rgFilteredOptions.map((t) =>
                 (0, e.jsx)(A, { value: t, children: r(t) }, r(t)),
               ),
@@ -2440,7 +2442,7 @@
               filter: a,
               filterPlaceholder: v,
               placeholder: i,
-              getOptionLabel: r = G,
+              getOptionLabel: r = N,
               maxSelected: o,
               ...h
             } = t,
@@ -2464,19 +2466,19 @@
                 ? new Intl.ListFormat((0, I.ZO)().strISOCode).format(t)
                 : t.join(", ");
           }
-          return (0, e.jsxs)(N.Root, {
+          return (0, e.jsxs)(G.Root, {
             state: d,
             ...h,
             children: [
-              (0, e.jsxs)(N.Trigger, {
+              (0, e.jsxs)(G.Trigger, {
                 children: [
-                  u && (0, e.jsx)(N.Value, { children: p }),
-                  !u && (0, e.jsx)(N.Placeholder, { children: i }),
+                  u && (0, e.jsx)(G.Value, { children: p }),
+                  !u && (0, e.jsx)(G.Placeholder, { children: i }),
                 ],
               }),
-              (0, e.jsx)(N.Options, {
+              (0, e.jsx)(G.Options, {
                 children: d.rgFilteredOptions.map((t) =>
-                  (0, e.jsx)(N.Option, { value: t, children: r(t) }, r(t)),
+                  (0, e.jsx)(G.Option, { value: t, children: r(t) }, r(t)),
                 ),
               }),
             ],
@@ -3273,7 +3275,7 @@
         return ((t - c) / (n - c)) * 100;
       }
       var Et = n(48906);
-      function Gt(t) {
+      function Nt(t) {
         const { defaultValue: c = 0, currency: n, ...l } = t;
         return (0, e.jsx)(Et.I, {
           valueToString: (t) =>
@@ -3281,14 +3283,14 @@
               return void 0 === t
                 ? ""
                 : t === 1 / 0
-                  ? Nt
+                  ? Gt
                   : c
                     ? Math.round(t / 100).toString()
                     : (t / 100).toFixed(2);
             })(t, n.bWholeUnitsOnly),
           valueFromString: (t) =>
             (function (t, c, n) {
-              return t === Nt
+              return t === Gt
                 ? 1 / 0
                 : "" === t
                   ? c
@@ -3302,7 +3304,7 @@
           ...l,
         });
       }
-      const Nt = "∞";
+      const Gt = "∞";
       const Bt = (0, l.createContext)(null);
       function Ft(t) {
         const { state: c, onStateChange: n } = t;
@@ -3418,7 +3420,7 @@
       function Wt(t) {
         return (0, e.jsx)(v.az, {
           flexGrow: "1",
-          children: (0, e.jsx)(Gt, { variant: "inset-focus", ...t }),
+          children: (0, e.jsx)(Nt, { variant: "inset-focus", ...t }),
         });
       }
       const Dt = 3;
@@ -3549,10 +3551,10 @@
         Ec =
           n.p +
           "images/applications/community/knife_gypsy_jackknife.png?v=valveisgoodatcaching",
-        Gc =
+        Nc =
           n.p +
           "images/applications/community/knife_falchion.png?v=valveisgoodatcaching",
-        Nc =
+        Gc =
           n.p +
           "images/applications/community/knife_tactical.png?v=valveisgoodatcaching",
         Bc =
@@ -3639,8 +3641,8 @@
           knife_push: (0, s.YJ)(Yc),
           knife_survival_bowie: (0, s.YJ)(Pc),
           knife_gypsy_jackknife: (0, s.YJ)(Ec),
-          knife_falchion: (0, s.YJ)(Gc),
-          knife_tactical: (0, s.YJ)(Nc),
+          knife_falchion: (0, s.YJ)(Nc),
+          knife_tactical: (0, s.YJ)(Gc),
           knife_gut: (0, s.YJ)(Bc),
           knife_kukri: (0, s.YJ)(Fc),
           knife_canis: (0, s.YJ)($c),
@@ -5512,9 +5514,9 @@
           ]),
         });
       }
-      const Gn = 753,
-        Nn = `${Gn}_item_class`,
-        Bn = `${Gn}_Event`;
+      const Nn = 753,
+        Gn = `${Nn}_item_class`,
+        Bn = `${Nn}_Event`;
       function Fn(t) {
         const {
             facets: c,
@@ -5524,10 +5526,10 @@
             ...a
           } = t,
           i = { ...c },
-          r = i[Nn];
-        delete i[Nn];
+          r = i[Gn];
+        delete i[Gn];
         !n.app || delete i[Bn];
-        const o = An(Gn, i, s);
+        const o = An(Nn, i, s);
         return (0, e.jsxs)(v.az, {
           ...a,
           children: [
@@ -6597,18 +6599,18 @@
               "#AdvancedSearch_AppSelect_FilterPlaceholder",
             ),
           });
-        return (0, e.jsxs)(N.Root, {
+        return (0, e.jsxs)(G.Root, {
           state: v,
           size: s,
           radius: "sm",
           marginBottom: "2",
           clearable: a,
           children: [
-            (0, e.jsxs)(N.Trigger, {
+            (0, e.jsxs)(G.Trigger, {
               children: [
                 c && (0, e.jsx)(Ce, { app: c, size: s }),
                 !c &&
-                  (0, e.jsx)(N.Placeholder, {
+                  (0, e.jsx)(G.Placeholder, {
                     weight: "medium",
                     contrast: "title",
                     children: vt.Localize(
@@ -6617,12 +6619,12 @@
                   }),
               ],
             }),
-            (0, e.jsx)(N.VirtualizedOptions, {
+            (0, e.jsx)(G.VirtualizedOptions, {
               estimateSize: () => 48,
               items: v.rgFilteredOptions,
               renderItem: (t, n) =>
                 (0, e.jsx)(
-                  N.VirtualizedOption,
+                  G.VirtualizedOption,
                   {
                     value: t,
                     virtualItem: n,
