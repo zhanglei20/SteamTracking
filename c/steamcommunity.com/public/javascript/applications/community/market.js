@@ -1231,7 +1231,7 @@
                   }),
                   (0, _.jsx)(_._, {
                     size: "3",
-                    contrast: "note",
+                    contrast: "description",
                     children: _.type,
                   }),
                 ],
@@ -1245,7 +1245,7 @@
           return (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(_, {
               description: _,
-              contrast: "description",
+              contrast: "body",
               size: "3",
             }),
           });
@@ -1266,7 +1266,7 @@
           return (0, _.jsx)(_, {
             description: _,
             type: "owner_descriptions",
-            contrast: "description",
+            contrast: "body",
             size: "3",
           });
         },
@@ -1408,13 +1408,13 @@
           ? (0, _.jsx)(_._, {
               href: _,
               size: "3",
-              contrast: "note",
+              contrast: "description",
               underline: "hover",
               children: _,
             })
           : (0, _.jsx)(_._, {
               size: "3",
-              contrast: "note",
+              contrast: "description",
               children: _,
             });
       }
