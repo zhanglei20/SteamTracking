@@ -1072,7 +1072,7 @@
                   (0, e.jsx)(At, { ...t }),
                   (0, e.jsx)(_.EY, {
                     size: "3",
-                    contrast: "note",
+                    contrast: "description",
                     children: c.type,
                   }),
                 ],
@@ -1086,7 +1086,7 @@
           return (0, e.jsx)(e.Fragment, {
             children: (0, e.jsx)(st, {
               description: t,
-              contrast: "description",
+              contrast: "body",
               size: "3",
             }),
           });
@@ -1102,7 +1102,7 @@
           return (0, e.jsx)(st, {
             description: t,
             type: "owner_descriptions",
-            contrast: "description",
+            contrast: "body",
             size: "3",
           });
         },
@@ -1226,11 +1226,15 @@
           ? (0, e.jsx)(P.Y, {
               href: c,
               size: "3",
-              contrast: "note",
+              contrast: "description",
               underline: "hover",
               children: n,
             })
-          : (0, e.jsx)(_.EY, { size: "3", contrast: "note", children: n });
+          : (0, e.jsx)(_.EY, {
+              size: "3",
+              contrast: "description",
+              children: n,
+            });
       }
       function Rt(t) {
         const { children: c, href: n } = t;
