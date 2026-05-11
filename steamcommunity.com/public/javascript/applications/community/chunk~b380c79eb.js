@@ -339,19 +339,29 @@
           placement: f,
         } = e;
         let p = n;
-        const x = (0, i.we)({
+        const x = (0, o.useCallback)(
+            (e, n, r) => {
+              !e &&
+                "outside-press" === r &&
+                n &&
+                (n.stopPropagation(), n.preventDefault()),
+                t && t(e);
+            },
+            [t],
+          ),
+          g = (0, i.we)({
             open: p,
-            onOpenChange: t,
+            onOpenChange: x,
             middleware: (0, d.p)(e),
             whileElementsMounted: l.ll,
             placement: f && "object" == typeof f ? f.initial : f,
           }),
-          g = (0, i.kp)(x.context, { enabled: !!u.click }),
-          v = (0, i.iQ)(x.context, { enabled: !!u.focus }),
-          C = (0, i.s9)(x.context),
-          m = (0, o.useRef)([]),
-          I = (0, i.C1)(x.context, {
-            listRef: m,
+          v = (0, i.kp)(g.context, { enabled: !!u.click }),
+          C = (0, i.iQ)(g.context, { enabled: !!u.focus }),
+          m = (0, i.s9)(g.context, { outsidePressEvent: "click" }),
+          I = (0, o.useRef)([]),
+          b = (0, i.C1)(g.context, {
+            listRef: I,
             activeIndex: r,
             selectedIndex: c,
             onNavigate: s,
@@ -359,34 +369,34 @@
             loop: !0,
             focusItemOnOpen: !1,
           }),
-          b = (0, o.useRef)([]),
-          j = (0, o.useRef)(!1),
-          S = (0, i.lY)(x.context, {
+          j = (0, o.useRef)([]),
+          S = (0, o.useRef)(!1),
+          k = (0, i.lY)(g.context, {
             enabled: !!u.typeahead,
-            listRef: b,
+            listRef: j,
             activeIndex: r,
             selectedIndex: c,
             onMatch: p ? s : a,
-            onTypingChange: (e) => (j.current = e),
+            onTypingChange: (e) => (S.current = e),
           }),
-          k = (0, i.It)(x.context, { role: h }),
+          O = (0, i.It)(g.context, { role: h }),
           {
-            getFloatingProps: O,
-            getReferenceProps: y,
-            getItemProps: L,
-          } = (0, i.bv)([k, g, v, C, I, S]);
+            getFloatingProps: y,
+            getReferenceProps: L,
+            getItemProps: P,
+          } = (0, i.bv)([O, v, C, m, b, k]);
         return {
-          floating: x,
-          getFloatingProps: O,
-          getReferenceProps: y,
-          getItemProps: L,
+          floating: g,
+          getFloatingProps: y,
+          getReferenceProps: L,
+          getItemProps: P,
           open: p,
           activeIndex: r,
           selectedIndex: c,
           setSelectedIndex: a,
-          elementsRef: m,
-          labelsRef: b,
-          typingRef: j,
+          elementsRef: I,
+          labelsRef: j,
+          typingRef: S,
           initialFocus: u.virtualItemFocus ? -1 : void 0,
         };
       }
@@ -804,8 +814,8 @@
               onFocusedIndexChange: O,
               refPopover: y,
               placeholder: L,
-              maxSelected: V,
-              ...P
+              maxSelected: P,
+              ...V
             } = S("<SelectTrigger>"),
             w = {
               tabIndex: 0,
@@ -829,7 +839,7 @@
               radius: p,
               hasValue: _,
               tabIndex: 0,
-              ...P,
+              ...V,
             }),
             N = (0, u.Q)(t, R, w, void 0);
           return (0, r.jsx)(i.k.Anchor, { children: N });
@@ -982,9 +992,9 @@
             ref: O,
             disabled: y,
             gamepadFocusable: L = !0,
-            ...V
+            ...P
           } = t,
-          P = {
+          V = {
             ...n,
             variant: I,
             size: b,
@@ -1007,7 +1017,7 @@
           _ = L && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
-          ...P,
+          ...V,
           onClick: (e) => {
             w.current && e.target !== w.current && w.current.focus();
           },
@@ -1021,7 +1031,7 @@
             onChange: (e) => {
               y || (x(e.target.value), C && C(e));
             },
-            ...V,
+            ...P,
           }),
         });
       }

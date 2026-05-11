@@ -5066,6 +5066,7 @@
                   "data-active": !!l,
                   "data-muted": !!a,
                   overflow: "hidden",
+                  minWidth: "0",
                   children: [
                     (0, e.jsx)(v.az, {
                       overflow: "hidden",
