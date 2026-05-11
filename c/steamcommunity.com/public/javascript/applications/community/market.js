@@ -5968,6 +5968,7 @@
                   "data-active": !!_,
                   "data-muted": !!_,
                   overflow: "hidden",
+                  minWidth: "0",
                   children: [
                     (0, _.jsx)(_._, {
                       overflow: "hidden",
