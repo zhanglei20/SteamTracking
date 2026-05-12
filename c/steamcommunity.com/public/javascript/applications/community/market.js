@@ -6398,7 +6398,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { showSteamItems: _, onShowSteamItemsChange: _ } = _;
@@ -6832,31 +6831,15 @@
           children: [
             _.bNewMarket
               ? (0, _.jsx)("div", {})
-              : (0, _.jsxs)(_._, {
+              : (0, _.jsx)(_._, {
                   gap: "2",
                   align: "center",
                   justify: "between",
-                  children: [
-                    (0, _.jsx)("a", {
-                      href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
-                      className: _.BetaLink,
-                      children: _.Localize("#AdvancedSearch_BetaTag"),
-                    }),
-                    _ &&
-                      (0, _.jsx)(_._, {
-                        size: "1",
-                        orientation: "vertical",
-                        color: "dull-9",
-                      }),
-                    (0, _.jsx)("span", {
-                      onClick: () => {
-                        (0, _._)("marketFiltersBeta", "0", 30),
-                          window.location.reload();
-                      },
-                      className: _.BetaLink,
-                      children: _.Localize("#AdvancedSearch_Beta_OptOut"),
-                    }),
-                  ],
+                  children: (0, _.jsx)("a", {
+                    href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
+                    className: _.BetaLink,
+                    children: _.Localize("#AdvancedSearch_BetaTag"),
+                  }),
                 }),
             _ &&
               (0, _.jsxs)(_._, {

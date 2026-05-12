@@ -261,9 +261,15 @@ ${COMMUNITY_BASE_URL}id/${profile_url}
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
 ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?u=${}
+${COMMUNITY_BASE_URL}login/home/?goto=${}
 ${COMMUNITY_BASE_URL}market
+${COMMUNITY_BASE_URL}market/
 ${COMMUNITY_BASE_URL}market/${}${_ ? _ : ""}
+${COMMUNITY_BASE_URL}market/appaccessories/${}
 ${COMMUNITY_BASE_URL}market/appfilters/${}
+${COMMUNITY_BASE_URL}market/cancelalllistings/
+${COMMUNITY_BASE_URL}market/deleteitembucket
+${COMMUNITY_BASE_URL}market/faq/
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}${_ ? `?sellorderassetid=${}` : ""}
 ${COMMUNITY_BASE_URL}market/priceoverview/?${}
@@ -291,6 +297,7 @@ ${COMMUNITY_BASE_URL}my/gamecards/${}
 ${COMMUNITY_BASE_URL}my/gamenotifications/
 ${COMMUNITY_BASE_URL}my/games?tab=all&clientid=${client_instanceid}
 ${COMMUNITY_BASE_URL}my/groups/
+${COMMUNITY_BASE_URL}my/inventory
 ${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
@@ -395,6 +402,7 @@ ${COMMUNITY_CDN_URL}economy/emoticon/${}
 ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/image/${icon_url}
+${COMMUNITY_CDN_URL}economy/image/${}
 ${COMMUNITY_CDN_URL}economy/image/${}/330x192
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}
@@ -455,6 +463,7 @@ ${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
 ${HELP_BASE_URL}faqs/view/6639-EB3C-EC79-FF60
 ${HELP_BASE_URL}faqs/view/71D3-35C2-AD96-AA3A
 ${HELP_BASE_URL}faqs/view/7EFD-3CAE-64D3-1C31
+${HELP_BASE_URL}kb/${}
 ${HELP_BASE_URL}tickermaster/ticket/${owner_dispute_details}
 ${HELP_BASE_URL}wizard/HelpChangeEmail?redir=store/account/
 ${HELP_BASE_URL}wizard/HelpChangePassword?redir=store/account/
@@ -851,6 +860,7 @@ ${LOGIN_BASE_URL}jwt/checkdevice/${m_steamid}
 ${LOGIN_BASE_URL}jwt/finalizelogin
 ${MEDIA_CDN_COMMUNITY_URL}${}
 ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
+${MEDIA_CDN_COMMUNITY_URL}assets/market/${}/v1/${}/${}.avif
 ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${}.jpg
@@ -1307,6 +1317,7 @@ ${STORE_BASE_URL}account/preferences/
 ${STORE_BASE_URL}account/preferences/#store_broadcast_settings
 ${STORE_BASE_URL}account/savepreferences
 ${STORE_BASE_URL}account/subscriptions/
+${STORE_BASE_URL}account/verifycards
 ${STORE_BASE_URL}actions/ajaxgetdiscounts
 ${STORE_BASE_URL}actions/ajaxgetdynamicsaleitems
 ${STORE_BASE_URL}actions/ajaxgetdynamicsaleitemsapplist
@@ -1390,6 +1401,7 @@ ${STORE_BASE_URL}developer/${m_strVanity}/
 ${STORE_BASE_URL}developer/${vanity}/
 ${STORE_BASE_URL}digitalgiftcards/
 ${STORE_BASE_URL}digitalgiftcards/selectgiftcard
+${STORE_BASE_URL}digitalgiftcards/selectgiftcard/
 ${STORE_BASE_URL}dlc/${}
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
@@ -1591,6 +1603,8 @@ ${STORE_BASE_URL}stats/supportdata.json
 ${STORE_BASE_URL}stats/userdata.json?days_back=3
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steam_refunds/
+${STORE_BASE_URL}steamaccount/addfunds?marketlisting=${listingid}&returnurl=${}
+${STORE_BASE_URL}steamaccount/addfunds?marketlisting=1&returnurl=${}
 ${STORE_BASE_URL}steamawards/
 ${STORE_BASE_URL}steamawards/ajaxgetsteamawardeventdetails
 ${STORE_BASE_URL}steamawards/ajaxgetuservotes
