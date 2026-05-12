@@ -5427,6 +5427,7 @@ ioctl(GRDESCSIZE): %s
 iso10646-1
 iso8859-11
 j!z!g,h,H
+jN7|
 joyconleft
 joyconpair
 joyconright

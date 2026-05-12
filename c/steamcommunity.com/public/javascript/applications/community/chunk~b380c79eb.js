@@ -383,17 +383,7 @@
           placement: _,
         } = _;
         let _ = _;
-        const _ = (0, _.useCallback)(
-            (_, _, _) => {
-              !_ &&
-                "outside-press" === _ &&
-                _ &&
-                (_.stopPropagation(), _.preventDefault()),
-                _ && __webpack_require__(_);
-            },
-            [_],
-          ),
-          _ = (0, _._)({
+        const _ = (0, _._)({
             open: _,
             onOpenChange: _,
             middleware: (0, _._)(_),
@@ -406,9 +396,7 @@
           _ = (0, _._)(_.context, {
             enabled: !!_.focus,
           }),
-          _ = (0, _._)(_.context, {
-            outsidePressEvent: "click",
-          }),
+          _ = (0, _._)(_.context),
           _ = (0, _.useRef)([]),
           _ = (0, _._)(_.context, {
             listRef: _,

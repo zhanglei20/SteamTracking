@@ -339,29 +339,19 @@
           placement: f,
         } = e;
         let p = n;
-        const x = (0, o.useCallback)(
-            (e, n, r) => {
-              !e &&
-                "outside-press" === r &&
-                n &&
-                (n.stopPropagation(), n.preventDefault()),
-                t && t(e);
-            },
-            [t],
-          ),
-          g = (0, i.we)({
+        const x = (0, i.we)({
             open: p,
-            onOpenChange: x,
+            onOpenChange: t,
             middleware: (0, d.p)(e),
             whileElementsMounted: l.ll,
             placement: f && "object" == typeof f ? f.initial : f,
           }),
-          v = (0, i.kp)(g.context, { enabled: !!u.click }),
-          C = (0, i.iQ)(g.context, { enabled: !!u.focus }),
-          m = (0, i.s9)(g.context, { outsidePressEvent: "click" }),
-          I = (0, o.useRef)([]),
-          b = (0, i.C1)(g.context, {
-            listRef: I,
+          g = (0, i.kp)(x.context, { enabled: !!u.click }),
+          v = (0, i.iQ)(x.context, { enabled: !!u.focus }),
+          C = (0, i.s9)(x.context),
+          m = (0, o.useRef)([]),
+          I = (0, i.C1)(x.context, {
+            listRef: m,
             activeIndex: r,
             selectedIndex: c,
             onNavigate: s,
@@ -369,34 +359,34 @@
             loop: !0,
             focusItemOnOpen: !1,
           }),
-          j = (0, o.useRef)([]),
-          S = (0, o.useRef)(!1),
-          k = (0, i.lY)(g.context, {
+          b = (0, o.useRef)([]),
+          j = (0, o.useRef)(!1),
+          S = (0, i.lY)(x.context, {
             enabled: !!u.typeahead,
-            listRef: j,
+            listRef: b,
             activeIndex: r,
             selectedIndex: c,
             onMatch: p ? s : a,
-            onTypingChange: (e) => (S.current = e),
+            onTypingChange: (e) => (j.current = e),
           }),
-          O = (0, i.It)(g.context, { role: h }),
+          k = (0, i.It)(x.context, { role: h }),
           {
-            getFloatingProps: y,
-            getReferenceProps: L,
-            getItemProps: P,
-          } = (0, i.bv)([O, v, C, m, b, k]);
+            getFloatingProps: O,
+            getReferenceProps: y,
+            getItemProps: L,
+          } = (0, i.bv)([k, g, v, C, I, S]);
         return {
-          floating: g,
-          getFloatingProps: y,
-          getReferenceProps: L,
-          getItemProps: P,
+          floating: x,
+          getFloatingProps: O,
+          getReferenceProps: y,
+          getItemProps: L,
           open: p,
           activeIndex: r,
           selectedIndex: c,
           setSelectedIndex: a,
-          elementsRef: I,
-          labelsRef: j,
-          typingRef: S,
+          elementsRef: m,
+          labelsRef: b,
+          typingRef: j,
           initialFocus: u.virtualItemFocus ? -1 : void 0,
         };
       }
@@ -814,8 +804,8 @@
               onFocusedIndexChange: O,
               refPopover: y,
               placeholder: L,
-              maxSelected: P,
-              ...V
+              maxSelected: V,
+              ...P
             } = S("<SelectTrigger>"),
             w = {
               tabIndex: 0,
@@ -839,7 +829,7 @@
               radius: p,
               hasValue: _,
               tabIndex: 0,
-              ...V,
+              ...P,
             }),
             N = (0, u.Q)(t, R, w, void 0);
           return (0, r.jsx)(i.k.Anchor, { children: N });
@@ -992,9 +982,9 @@
             ref: O,
             disabled: y,
             gamepadFocusable: L = !0,
-            ...P
+            ...V
           } = t,
-          V = {
+          P = {
             ...n,
             variant: I,
             size: b,
@@ -1017,7 +1007,7 @@
           _ = L && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
-          ...V,
+          ...P,
           onClick: (e) => {
             w.current && e.target !== w.current && w.current.focus();
           },
@@ -1031,7 +1021,7 @@
             onChange: (e) => {
               y || (x(e.target.value), C && C(e));
             },
-            ...P,
+            ...V,
           }),
         });
       }
@@ -1287,7 +1277,7 @@
     14181: (e, n, t) => {
       "use strict";
       t.d(n, { ZO: () => o });
-      var r = t(48891);
+      var r = t(13843);
       function o() {
         return (0, r.A)().languages[0];
       }

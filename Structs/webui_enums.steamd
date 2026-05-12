@@ -167,6 +167,25 @@ enum EAllowShareIP
 	k_EAllowShareIP_Anyone = 3;
 }
 
+enum EAM
+{
+	k_EAMFindAccountTypeInvalid = 0;
+	k_EAMFindAccountTypeAccountName = 1;
+	k_EAMFindAccountTypeEmail = 2;
+	k_EAMFindAccountTypePersonaName = 3;
+	k_EAMFindAccountTypeURL = 4;
+	k_EAMFindAccountTypeAllOnline_Obsolete = 5;
+	k_EAMFindAccountTypeAll = 6;
+	k_EAMFindClanTypeClanName = 7;
+	k_EAMFindClanTypeURL = 8;
+	k_EAMFindClanTypeOfficialURL = 9;
+	k_EAMFindClanTypeAppID = 10;
+	k_EAMFindCheckAccountNameInUse = 11;
+	k_EAMFindCheckEmailAddressInUse = 12;
+	k_EAMNotFindCreateAccount = 13;
+	k_EAMFindClanTypeCreatorVanity = 14;
+}
+
 enum EAppReleaseState
 {
 	k_EAppReleaseState_Unknown = 0;
@@ -247,6 +266,18 @@ enum EChatFontSize
 	k_EChatFontSizeSmall = 1;
 	k_EChatFontSizeDefault = 2;
 	k_EChatFontSizeLarge = 3;
+}
+
+enum EClanAccountType
+{
+	k_EClanAccountTypePrivate = 0;
+	k_EClanAccountTypePublic = 1;
+	k_EClanAccountTypeLocked = 2;
+	k_EClanAccountTypeDisabled = 3;
+	k_EClanAccountTypeOfficial = 4;
+	k_EClanAccountTypeDeleted = 5;
+	k_EClanAccountTypeValveOfficial = 6;
+	k_EClanAccountTypeInviteOnly = 7;
 }
 
 enum EClientUINotification
@@ -1060,6 +1091,13 @@ enum HAVE
 	HAVE_ENOUGH_DATA = 4;
 }
 
+enum iEc
+{
+	k_EWindowBringToFrontInvalid = 0;
+	k_EWindowBringToFrontAndForceOS = 1;
+	k_EWindowBringToFrontWithoutForcingOS = 2;
+}
+
 enum ITEM_OPTIONS
 {
 	ITEM_OPTIONS_ALL = 1;
@@ -1193,6 +1231,13 @@ enum Preview
 	k_PreviewDesktop = 1;
 	k_PreviewMobile = 2;
 	k_PreviewGamepad = 3;
+}
+
+enum Rhn
+{
+	k_EGameIDTypeApp = 0;
+	k_EGameIDTypeGameMod = 1;
+	k_EGameIDTypeShortcut = 2;
 }
 
 enum ShowGripButtons
