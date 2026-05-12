@@ -106,6 +106,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123M
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -6996,7 +6997,7 @@ $steammessages_parental_objects.proto"
 .CMarketingMessageProto"p\n1CMarketingMessages_CreateMarketingMessage_Request
 .CMarketingMessageProto*
 .CMsgAuthTicket
-.CMsgAvailableHardwareUpdate"7\n
+.CMsgAvailableHardwareUpdate"K\n
 .CMsgBluetoothManagerDeviceInfo"9\n+CBluetoothManager_GetAdapterDetails_Request
 .CMsgCellList.Cell
 .CMsgClientAppInfoRequest.App
@@ -8052,11 +8053,11 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
-01/01/00
 0123456789.
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+01/01/00
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
@@ -16997,6 +16998,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@,
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -22647,7 +22649,7 @@ Config Edit Failed: %d, %d, %s, %s, %d, %d, %d
 Config fetch is in progess, but network config avail is %d?
 Config store has m_bDisableDiskSave on beta or public!
 ConfigSet - failed to find config set file on-disk: %s
-ConfigSet - failed to find ibex config set file on-disk: %s
+ConfigSet - failed to find ibex config set file on-disk, saving now: %s
 ConfigSet - found config set file on-disk: %s
 ConfigSet - found ibex config set file on-disk: %s
 ConfigSet Failed to Resolve Path: %s
@@ -25389,7 +25391,7 @@ Failed to fetch settings for %u, rescheduling
 Failed to finalize manifest
 Failed to find all chunks for %s (%llu/%llu, flags %u)
 Failed to find chunk in file %s!
-Failed to find configset for serial: %s\n
+Failed to find configset for serial: %s %d\n
 Failed to find delta sha reference in file %s!
 Failed to find time in logfile name
 Failed to find user in m_vecPUsers on DisconnectUser
@@ -37631,7 +37633,7 @@ Unable to parse %s\n
 Unable to read %s\n
 Unable to read VR Path Registry from %s\n
 Unable to read active slot from controller. Pairing in slot 0. %d
-Unable to read bond from docked Triton immediate after it docked\n
+Unable to read bond from docked Triton immediately after it docked %u\n
 Unable to read bond when recording triton pair bond last used\n
 Unable to read docked controller serial number %d
 Unable to read dongle serial number %d
@@ -41179,6 +41181,7 @@ Zulu
 \n\ntype_flags
 \n\nuint_value
 \n\nulfriendid
+\n\nupdate_all
 \n\nupdate_url
 \n\nupdatetime
 \n\nusage_page
@@ -48257,7 +48260,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -53406,6 +53409,7 @@ m_bIsBroadcasting
 m_bIsFinalized
 m_bIsFirstLoad
 m_bIsMasterInstance
+m_bIsPuckDockedSlot
 m_bIsRTMP
 m_bIsRecordingDesktop
 m_bIsUserMarker
@@ -60694,7 +60698,7 @@ stderr
 stdin
 stdout
 steam
-steam May  8 2026 22:39:42
+steam May 11 2026 23:58:14
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 steam-runtime-launch-client --alongside-steam -- amixer -c acp5x contents
