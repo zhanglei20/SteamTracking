@@ -745,7 +745,10 @@ function _(_) {
     _ = _.isIdle || (_.isError && _.error.bFatal === !1),
     _ = _.require_billing_info && _,
     _ = _.error?.bFatal ? _.error : void 0,
-    _ = _(_, _.wallet_info);
+    _ = _(_, _.wallet_info),
+    _ = _(_, _.tax_info),
+    _ = _.price * _.quantity + _,
+    _ = _(_.wallet_info, _);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsxs)(_, {
@@ -793,6 +796,7 @@ function _(_) {
                 walletBalance: _,
                 billingCountry: _.localized_country,
                 billingStates: _.billing_states,
+                hasFunds: _,
               }),
             !_.isSuccess &&
               !_ &&
@@ -802,6 +806,7 @@ function _(_) {
                 order: _,
                 onPurchase: _.mutate,
                 disabled: !_ || !_,
+                hasFunds: _,
               }),
             _.error?.bFatal === !1 &&
               (0, _.jsx)(_.NonFatalError, {
@@ -968,12 +973,10 @@ function _(_) {
     },
     _ = () => _(null),
     _ = (_) => {
-      let _ = parseInt(_);
-      isNaN(_) ||
-        _({
-          ..._,
-          quantity: _,
-        });
+      _({
+        ..._,
+        quantity: _,
+      });
     },
     _ = _(_, _),
     _ = _.price * _.quantity + _,
@@ -999,8 +1002,10 @@ function _(_) {
       (0, _.jsx)(_, {
         label: _.Localize("#BuyOrderDialog_QuantityField"),
         children: (0, _.jsx)(_, {
-          value: _.quantity.toString(),
-          onTextChange: _,
+          value: _.quantity,
+          onValueChange: _,
+          valueToString: (_) => _.toString(),
+          valueFromString: (_) => (isNaN(parseInt(_)) ? _ : parseInt(_)),
           size: "1",
           disabled: _,
         }),
@@ -1226,16 +1231,11 @@ function _(_) {
       onPurchase: _,
       disabled: _,
       hideSSA: _,
-      order: _,
+      hasFunds: _,
       serverInfo: {
-        wallet_info: _,
         ssa: { last_update: _, eu_ssa: _ },
-        tax_info: _,
       },
     } = _,
-    _ = _(_, _),
-    _ = _.price * _.quantity + _,
-    _ = _(_, _),
     _ = "";
   if (!_) {
     let _ = new URL(location.href);
