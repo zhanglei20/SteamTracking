@@ -507,6 +507,7 @@
                 U().LightboxImageContainer,
                 U().LightboxMainImage,
               ),
+              tabIndex: 0,
               onClick: (a) => {
                 "IMG" !== a.target.nodeName && e.onCloseRequest(a);
               },
