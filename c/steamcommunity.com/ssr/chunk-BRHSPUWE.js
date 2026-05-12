@@ -3352,16 +3352,9 @@ function _() {
           property: "description",
           content: _.description,
         }),
-      _?.shareTitle &&
-        (0, _.jsx)("meta", {
-          property: "og:title",
-          content: _.shareTitle,
-        }),
-      _?.shareImage &&
-        (0, _.jsx)("meta", {
-          property: "og:image",
-          content: _.shareImage,
-        }),
+      (0, _.jsx)(_, {
+        metadata: _,
+      }),
       _?.snr &&
         (0, _.jsx)("meta", {
           property: "valve:snr",
@@ -3376,6 +3369,31 @@ function _() {
         clientAssets: _,
         staticMode: _.static,
       }),
+    ],
+  });
+}
+function _(_) {
+  let { metadata: _ } = _;
+  if (!_) return null;
+  let { shareImage: _, shareTitle: _ } = _,
+    _ = Array.isArray(_) ? _ : [_];
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      _ &&
+        (0, _.jsx)("meta", {
+          property: "og:title",
+          content: _,
+        }),
+      _.map((_, _) =>
+        (0, _.jsx)(
+          "meta",
+          {
+            property: "og:image",
+            content: _,
+          },
+          _,
+        ),
+      ),
     ],
   });
 }
