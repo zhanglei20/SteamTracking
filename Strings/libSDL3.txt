@@ -76,6 +76,7 @@
  System Control
  Thelio
  Touchpad
+!"2D textures must have a layer count of 1"
 !"Alpha-to-coverage enabled but no color targets present!"
 !"Blit destination texture must be created with the COLOR_TARGET usage flag"
 !"Blit destination texture must be non-NULL"
@@ -132,7 +133,6 @@
 !"For any texture: usage cannot contain both GRAPHICS_STORAGE_READ and SAMPLER"
 !"For any texture: width, height, and layer_count_or_depth must be >= 1"
 !"For array textures: sample_count must be SDL_GPU_SAMPLECOUNT_1"
-!"For array textures: usage must not contain DEPTH_STENCIL_TARGET"
 !"For cube array textures: layer_count_or_depth must be a multiple of 6"
 !"For cube array textures: sample_count must be SDL_GPU_SAMPLECOUNT_1"
 !"For cube array textures: the format is unsupported for the given usage"
@@ -233,13 +233,11 @@ $ORIGIN
 %s%s%s%.4x,%s
 %s() failed: %s
 %s, An unsupported SDL pixel format (0x%x) was specified
-%s/%d.png
+%s.tray%d
 %s/.config
-%s/SDL
 %s/device/report_descriptor
 %s/device/uevent
 %s/ibus/bus/%s-%s-%s
-%s/tray-XXXXXX
 %s: %ld (%lx)
 %s: %s (%d): %s %s
 %s: %s (%d): %s %s (0x%X)
@@ -257,7 +255,10 @@ $ORIGIN
 '%s'\n    * %s (%s:%d)\n    * triggered %u time%s.\n    * always ignore: %s.\n
 '.5<=6/7>????????????????
 (Standard system devices)
+(ia{sv}av)
+(iiay)
 (null)
+(sa(iiay)ss)
 ,[1K6
 ,hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1
 ,hint:SDL_GAMECONTROLLER_USE_GAMECUBE_LABELS:=1
@@ -292,11 +293,16 @@ $ORIGIN
 /.flatpak-info
 /.local/share/
 /Desktop
+/NO_DBUSMENU
+/StatusNotifierItem
+/StatusNotifierItem/menu
+/StatusNotifierWatcher
 /dev
 /dev/input
 /dev/input/%s
 /dev/null
 /dev/tty
+/org/freedesktop/DBus
 /org/freedesktop/IBus
 /org/freedesktop/RealtimeKit1
 /org/freedesktop/ScreenSaver
@@ -628,6 +634,8 @@ $ORIGIN
 8BitDo SF30 Pro
 8BitDo SN30 Pro
 8BitDo Tech Ltd
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">\r\n<node>\r\n  <interface name="org.kde.StatusNotifierItem">\r\n\r\n    <property name="Category" type="s" access="read"/>\r\n    <property name="Id" type="s" access="read"/>\r\n    <property name="Title" type="s" access="read"/>\r\n    <property name="Status" type="s" access="read"/>\r\n    <property name="WindowId" type="i" access="read"/>\r\n\r\n    <!-- An additional path to add to the theme search path to find the icons specified above. -->\r\n    <property name="IconThemePath" type="s" access="read"/>\r\n    <property name="Menu" type="o" access="read"/>\r\n    <property name="ItemIsMenu" type="b" access="read"/>\r\n\r\n\r\n    <!-- main icon -->\r\n    <!-- names are preferred over pixmaps -->\r\n    <property name="IconName" type="s" access="read"/>\r\n\r\n    <!--struct containing width, height and image data-->\r\n    <property name="IconPixmap" type="a(iiay)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>\r\n    </property>\r\n\r\n    <property name="OverlayIconName" type="s" access="read"/>\r\n\r\n    <property name="OverlayIconPixmap" type="a(iiay)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>\r\n    </property>\r\n\r\n\r\n    <!-- Requesting attention icon -->\r\n    <property name="AttentionIconName" type="s" access="read"/>\r\n\r\n    <!--same definition as image-->\r\n    <property name="AttentionIconPixmap" type="a(iiay)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>\r\n    </property>\r\n\r\n    <property name="AttentionMovieName" type="s" access="read"/>\r\n\r\n\r\n\r\n    <!-- tooltip data -->\r\n\r\n    <!--(iiay) is an image-->\r\n    <property name="ToolTip" type="(sa(iiay)ss)" access="read">\r\n      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusToolTipStruct"/>\r\n    </property>\r\n\r\n    <method name="ProvideXdgActivationToken">\r\n        <arg name="token" type="s" direction="in"/>\r\n    </method>\r\n\r\n    <!-- interaction: the systemtray wants the application to do something -->\r\n    <method name="ContextMenu">\r\n        <!-- we're passing the coordinates of the icon, so the app knows where to put the popup window -->\r\n        <arg name="x" type="i" direction="in"/>\r\n        <arg name="y" type="i" direction="in"/>\r\n    </method>\r\n\r\n    <method name="Activate">\r\n        <arg name="x" type="i" direction="in"/>\r\n        <arg name="y" type="i" direction="in"/>\r\n    </method>\r\n\r\n    <method name="SecondaryActivate">\r\n        <arg name="x" type="i" direction="in"/>\r\n        <arg name="y" type="i" direction="in"/>\r\n    </method>\r\n\r\n    <method name="Scroll">\r\n      <arg name="delta" type="i" direction="in"/>\r\n      <arg name="orientation" type="s" direction="in"/>\r\n    </method>\r\n\r\n    <!-- Signals: the client wants to change something in the status-->\r\n    <signal name="NewTitle">\r\n    </signal>\r\n\r\n    <signal name="NewIcon">\r\n    </signal>\r\n\r\n    <signal name="NewAttentionIcon">\r\n    </signal>\r\n\r\n    <signal name="NewOverlayIcon">\r\n    </signal>\r\n\r\n    <signal name="NewMenu">\r\n    </signal>\r\n\r\n    <signal name="NewToolTip">\r\n    </signal>\r\n\r\n    <signal name="NewStatus">\r\n      <arg name="status" type="s"/>\r\n    </signal>\r\n\r\n  </interface>\r\n</node>
+<?xml version="1.0"?><node name="/"><interface name="com.canonical.dbusmenu"><property name="Version" type="u" access="read"></property><property name="TextDirection" type="s" access="read"></property><property name="Status" type="s" access="read"></property><property name="IconThemePath" type="as" access="read"></property><method name="GetLayout"><arg type="i" name="parentId" direction="in"></arg><arg type="i" name="recursionDepth" direction="in"></arg><arg type="as" name="propertyNames" direction="in"></arg><arg type="u" name="revision" direction="out"></arg><arg type="(ia{sv}av)" name="layout" direction="out"></arg></method><method name="GetGroupProperties"><arg type="ai" name="ids" direction="in"></arg><arg type="as" name="propertyNames" direction="in"></arg><arg type="a(ia{sv})" name="properties" direction="out"></arg></method><method name="GetProperty"><arg type="i" name="id" direction="in"></arg><arg type="s" name="name" direction="in"></arg><arg type="v" name="value" direction="out"></arg></method><method name="Event"><arg type="i" name="id" direction="in"></arg><arg type="s" name="eventId" direction="in"></arg><arg type="v" name="data" direction="in"></arg><arg type="u" name="timestamp" direction="in"></arg></method><method name="EventGroup"><arg type="a(isvu)" name="events" direction="in"></arg><arg type="ai" name="idErrors" direction="out"></arg></method><method name="AboutToShow"><arg type="i" name="id" direction="in"></arg><arg type="b" name="needUpdate" direction="out"></arg></method><method name="AboutToShowGroup"><arg type="ai" name="ids" direction="in"></arg><arg type="ai" name="updatesNeeded" direction="out"></arg><arg type="ai" name="idErrors" direction="out"></arg></method><signal name="ItemsPropertiesUpdated"><arg type="a(ia{sv})" name="updatedProps" direction="out"/><arg type="a(ias)" name="removedProps" direction="out"/></signal><signal name="LayoutUpdated"><arg type="u" name="revision" direction="out"></arg><arg type="i" name="parent" direction="out"></arg></signal><signal name="ItemActivationRequested"><arg type="i" name="id" direction="out"></arg><arg type="u" name="timestamp" direction="out"></arg></signal></interface></node>
 <unspecified>
 =@zj?@L~@@\GA@l
 =v<y5
@@ -714,12 +722,16 @@ ASTRO Gaming
 AUDIO
 Abort
 Abort/Break/Retry/Ignore/AlwaysIgnore? [abriA] :
+AboutToShow
+AboutToShowGroup
 Abs Pressure
 Abs Tilt X
 Abs Tilt Y
 Abs X
 Abs Y
 AccessCamera
+Activate
+Active
 Active Off: %s\n
 Added HIDAPI device '%s' VID 0x%.4x, PID 0x%.4x, bluetooth %d, version %d, serial %s, interface %d, interface_class %d, interface_subclass %d, interface_protocol %d, usage page 0x%.4x, usage 0x%.4x, path = %s, driver = %s (%s)
 Again
@@ -737,6 +749,7 @@ App name: %s
 App version: %s
 Application
 Application didn't initialize properly, did you include SDL_main.h in the file containing your main() function?
+ApplicationStatus
 Aspect Ratio: %f\n
 Aspect Ratio: undefined
 Assertion Failed
@@ -804,16 +817,14 @@ Cannot acquire a swapchain texture from an unclaimed window!
 Cannot change binding on a stream created with SDL_OpenAudioDeviceStream
 Cannot change stream bindings on device opened with SDL_OpenAudioDeviceStream
 Cannot create an OPENGL window invalid egl_data
-Cannot create directory for tray icon: %s
-Cannot create submenu for entry not created with SDL_TRAYENTRY_SUBMENU
 Cannot get swapchain format, window has not been claimed!
-Cannot get user cache directory: %s
 Cannot open hidapi haptic from non hidapi joystick
 Cannot set swapchain parameters on unclaimed window!
 Cannot set the parent of a window to itself.
 Cannot wait for a swapchain from an unclaimed window!
 CapsLock
 Capture
+Category
 CentaurHauls
 ChannelDown
 ChannelUp
@@ -837,6 +848,7 @@ Constants
 Container detected, disabling HIDAPI udev integration
 Container detected, disabling udev integration
 Context
+ContextMenu
 Continuous Frequency: %s\n
 Controller
 Copy
@@ -844,7 +856,6 @@ Corrupt JPEG
 Corrupt PNG
 Could not %s: %i (Base %i)
 Could not %s: %s
-Could not acquire GTK context
 Could not allocate space to read DB into memory
 Could not bind EGL API
 Could not connect PulseAudio stream
@@ -853,7 +864,6 @@ Could not create EGL context
 Could not create EGL context (context attributes are not supported)
 Could not create GL context
 Could not create GLES window surface
-Could not create GTK context
 Could not create writable colormap
 Could not determine connected PulseAudio stream's buffer attributes
 Could not enable XInput2 event handling
@@ -864,17 +874,11 @@ Could not find display info
 Could not get EGL display
 Could not get a full ble packet after %d retries\n
 Could not get any window title response from Xorg, returning empty string!
-Could not init GTK
 Could not initialize EGL
 Could not initialize OpenGL / GLES library
 Could not initialize UDEV
 Could not kill(): %s
-Could not load AppIndicator functions
-Could not load AppIndicator libraries
 Could not load EGL library
-Could not load GTK functions
-Could not load GTK libraries
-Could not load GTK-3, another GTK version already present
 Could not load function SteamAPI_ISteamRemoteStorage_BeginFileWriteBatch
 Could not load function SteamAPI_ISteamRemoteStorage_EndFileWriteBatch
 Could not load function SteamAPI_ISteamRemoteStorage_FileDelete
@@ -950,7 +954,6 @@ Couldn't find matching GLX visual
 Couldn't find matching render driver
 Couldn't find offscreen surface for window
 Couldn't find/parse HID_ID
-Couldn't fit %d bytes in buffer of size %d
 Couldn't get WM hints
 Couldn't get XRandR crtc info
 Couldn't get XRandR output info
@@ -1106,13 +1109,16 @@ Error seeking in datastream: %s
 Error writing to datastream: %s
 Escape
 Established Timings:
+Event
 Event queue is full (%d events)
+EventGroup
 ExSel
 Execute
 Expected image size %dx%d, actual size %dx%d
 Extensible WAVE header too small
 F32BE
 F32LE
+FLATPAK_ID
 Failed loading %s: %s
 Failed sending autocenter command
 Failed sending autocenter disable command
@@ -1133,7 +1139,6 @@ Failed to created an offscreen surface (EGL display: %p)
 Failed to defragment memory, likely OOM!
 Failed to find an X11 visual for the primary display
 Failed to find any GPUs with Vulkan support
-Failed to format new temporary filename
 Failed to get evdev touchscreen limits
 Failed to get evdev touchscreen name
 Failed to initialize Vulkan!
@@ -1214,7 +1219,6 @@ GIP: Unimplemented Static Configuration message
 GLES2_CreatePalette
 GLES2_CreateRenderer
 GLES2_CreateTexture
-GLES2_DestroyRenderer
 GLES2_RenderReadPixels
 GLES2_RunCommandQueue
 GLES2_UpdatePalette
@@ -1273,6 +1277,7 @@ GL_INVALID_OPERATION
 GL_INVALID_VALUE
 GL_OES_EGL_image_external
 GL_OES_surfaceless_context
+GL_OES_texture_npot
 GL_OUT_OF_MEMORY
 GL_RenderReadPixels
 GL_RunCommandQueue
@@ -1299,7 +1304,11 @@ Gdk/UnscaledDPI
 Gdk/WindowScalingFactor
 Generic X11 Display
 GenuineIntel
+GetAll
 GetDisplayDevice
+GetGroupProperties
+GetLayout
+GetProperty
 GetYUVPlanes(): Unsupported YUV format: %s
 Getting Vulkan extensions failed:
 Getting Vulkan extensions failed: vkEnumerateInstanceExtensionProperties returned %s(%d)
@@ -1396,6 +1405,9 @@ INCR
 INFO
 INPUT
 ISO-8859-1
+IconName
+IconPixmap
+IconThemePath
 Ignore
 Image not of any known type, or corrupt
 Image too large to decode
@@ -1417,6 +1429,7 @@ International 6
 International 7
 International 8
 International 9
+Introspect
 Invalid EGL device is requested.
 Invalid GPU device
 Invalid IMA ADPCM bits per sample of %u
@@ -1471,6 +1484,9 @@ Invalid window ID
 Invalid window data
 Invalid window driver data
 IsPresent
+IsStatusNotifierHostRegistered
+Item not found
+ItemIsMenu
 JNI_OnLoad
 JPEG format not supported: 8-bit only
 JPEG format not supported: delayed height
@@ -1559,6 +1575,7 @@ Language 7
 Language 8
 Language 9
 Late swap tearing currently unsupported
+LayoutUpdated
 Leaked %s (%p)
 Left
 Left Alt
@@ -1574,6 +1591,7 @@ LevelThree
 Lic Pro Controller
 Line too long (tried to draw %d pixels, max %d)
 Linux
+ListNames
 Logitech ChillStream
 Logitech Driving Force GT
 Logitech Driving Force Pro
@@ -1609,6 +1627,7 @@ MediaSelect
 MediaStop
 MediaTrackNext
 MediaTrackPrevious
+Memory allocation failure!
 Memory buffer is full
 Menu
 Meta
@@ -1643,6 +1662,9 @@ NVIDIA Corporation
 NVIDIA SHIELD Controller
 NameOwnerChanged
 Negative swap interval unsupported in this GL
+NewIcon
+NewMenu
+NewToolTip
 Nintendo
 Nintendo Co., Ltd.
 Nintendo GameCube Controller
@@ -1700,13 +1722,11 @@ Not charging\n
 Not enough data in queue
 Not enough data in queue (resample)
 Not enough resources to create thread
-Not using GTK due to hint
-Not using GTK due to saved uid/gid
-Not using GTK due to setuid/setgid
 Null surface in frame %i
 NumLock
 Numlock
 Opaque presentation unsupported! Expect weird transparency bugs!
+OpenFile
 OpenGL
 OpenGL 3.0 and later are not supported by this system
 OpenGL NV12/NV21 not supported
@@ -1722,6 +1742,7 @@ OpenGL not initialized
 OpenGL palette shaders not supported
 OpenGL shaders: %s
 OpenPipeWireRemote
+OpenURI
 OpenXR is not enabled in this build of SDL
 Oper
 Operation invalid on popup windows
@@ -1849,6 +1870,7 @@ Production Week: %d\n
 Production Week: unspecified
 Production Year: %d\n
 Production Year: unspecified
+PropertiesChanged
 PulseAudio
 PulseHotplug
 PulseMainloop
@@ -1870,6 +1892,7 @@ Reading from
 Reading past end of flushed track
 Reading past end of incomplete track
 Refresh
+RegisterStatusNotifierItem
 Rel X
 Rel Y
 Relative paths not permitted
@@ -2049,7 +2072,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-461-g299ed5198
+SDL-release-3.4.0-709-g3dbd3e43e
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -2225,7 +2248,11 @@ SDL.thread.create.name
 SDL.thread.create.stacksize
 SDL.thread.create.userdata
 SDL.tray.create.icon
+SDL.tray.create.leftclick_callback
+SDL.tray.create.middleclick_callback
+SDL.tray.create.rightclick_callback
 SDL.tray.create.tooltip
+SDL.tray.create.userdata
 SDL.window.HDR_enabled
 SDL.window.HDR_headroom
 SDL.window.SDR_white_level
@@ -2261,6 +2288,7 @@ SDL.window.shape
 SDL.window.x11.display
 SDL.window.x11.screen
 SDL.window.x11.window
+SDL2_COMPAT
 SDL3_0.0.0
 SDL3_Application
 SDL3_DYNAMIC_API
@@ -2548,7 +2576,6 @@ SDL_EGL_GetWindowSurface
 SDL_EGL_LIBRARY
 SDL_EGL_LoadLibraryOnly() has not been called or has failed.
 SDL_EGL_SetAttributeCallbacks
-SDL_ENABLE_GTK
 SDL_ENABLE_SCREEN_KEYBOARD
 SDL_EVENT_AUDIO_DEVICE_ADDED
 SDL_EVENT_AUDIO_DEVICE_FORMAT_CHANGED
@@ -2641,6 +2668,7 @@ SDL_EVENT_USER
 SDL_EVENT_WILL_ENTER_BACKGROUND
 SDL_EVENT_WILL_ENTER_FOREGROUND
 SDL_EVENT_WINDOW_CLOSE_REQUESTED
+SDL_EVENT_WINDOW_CURVATURE_CHANGED
 SDL_EVENT_WINDOW_DESTROYED
 SDL_EVENT_WINDOW_DISPLAY_CHANGED
 SDL_EVENT_WINDOW_DISPLAY_SCALE_CHANGED
@@ -3194,6 +3222,7 @@ SDL_IsJoystickHaptic
 SDL_IsJoystickVirtual
 SDL_IsMainThread
 SDL_IsMouseHaptic
+SDL_IsPhone
 SDL_IsTV
 SDL_IsTablet
 SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS
@@ -3571,6 +3600,7 @@ SDL_SELECTION
 SDL_SHUTDOWN_DBUS_ON_QUIT
 SDL_STORAGE_TITLE_DRIVER
 SDL_STORAGE_USER_DRIVER
+SDL_SURFACE_MALLOC
 SDL_SaveBMP
 SDL_SaveBMP_IO
 SDL_SaveFile
@@ -3825,6 +3855,7 @@ SDL_VIDEO_MATCH_EXCLUSIVE_MODE_ON_MOVE
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
 SDL_VIDEO_OFFSCREEN_SAVE_FRAMES
 SDL_VIDEO_SYNC_WINDOW_OPERATIONS
+SDL_VIDEO_X11_ENABLE_XSYNC_EXT
 SDL_VIDEO_X11_EXTERNAL_WINDOW_INPUT
 SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR
 SDL_VIDEO_X11_NET_WM_PING
@@ -4101,8 +4132,10 @@ Sample rate exceeds limit of %d
 Saved Games folder unavailable on XDG
 Screen is not calibrated.
 Screenshots folder unavailable on XDG
+Scroll
 ScrollLock
 Second USB cable for WUP-028 not connected
+SecondaryActivate
 Select
 Selection timeout
 SendEffect failed, device disconnected
@@ -4136,6 +4169,7 @@ Space
 Standard Timings:
 Standby: %s\n
 State
+Status
 Steam
 Steam Controller
 Steam Deck
@@ -4192,6 +4226,7 @@ TEST
 TEXT
 TIS-620
 TRACE
+TextDirection
 Texture dimensions are limited to %dx%d
 Texture dimensions can't be 0
 Texture doesn't have a palette
@@ -4200,6 +4235,7 @@ Texture format %s not supported by SDL_GPU
 Texture format must be NV12, NV21, or P010
 Texture format must be YV12 or IYUV
 Texture format not supported
+Texture framebuffer was incomplete
 Texture has no default usage mode!
 Texture is not currently available
 Texture isn't palettized format
@@ -4225,11 +4261,13 @@ Time out elapsed after mode switch on display %u with no window becoming fullscr
 TimeToEmpty
 Timer not found
 Timing%s: \n
+Title
 Too many buttons (%d max allowed)
+ToolTip
 Tooltip and popup menu windows must specify a parent window
 Total Signal Level: %f\n
+Touch
 Trackpad
-Tray entry submenu already exists
 Tried to read outside of surface bounds
 Tried to send rumble with invalid size
 Truncated IMA ADPCM block
@@ -4257,6 +4295,15 @@ Unable to allocate label control structure
 Unable to allocate toolkit window structure
 Unable to bind memory for texture!
 Unable to create required pipeline state
+Unable to create tray entry: allocation failure!
+Unable to create tray menu: allocation failure!
+Unable to create tray submenu: allocation failure!
+Unable to create tray: %s
+Unable to create tray: no SNI support!
+Unable to create tray: unable to get connection!
+Unable to create tray: unable to register object path!
+Unable to create tray: unable to register status notifier item!
+Unable to create tray: unable to request a unique name!
 Unable to find memory type for allocation
 Unable to initialize inotify, falling back to polling: %s
 Unable to lock destination surface
@@ -4288,6 +4335,7 @@ Unknown companded encoding
 Unknown event type
 Unknown image format: %d
 Unknown pixel format
+Unknown property
 Unknown scale mode: %d
 Unknown texture address mode: %d
 Unknown texture scale mode: %d
@@ -4406,6 +4454,7 @@ Vader 5
 Validation layers enabled, expect debug level performance!
 Validation layers not found, continuing without validation
 Values of 'indices' out of bounds
+Version
 Very large image (corrupt?)
 Victrix Gambit Tournament Controller
 Video Signal Level: %f\n
@@ -4463,6 +4512,7 @@ Window must be created with SDL_WINDOW_TRANSPARENT
 Window must have a parent to enable the modal state; use SDL_SetWindowParent() to set the parent first.
 Window not claimed by this device
 Window surface is invalid, please call SDL_GetWindowSurface() to get a new surface
+WindowId
 Windows-style path separators ('\') not permitted, use '/' instead.
 Windows.Xbox.Input.ArcadeStick
 Windows.Xbox.Input.Chatpad
@@ -4864,6 +4914,7 @@ __stack_chk_fail
 __xstat
 _beginthreadex/_endthreadex not supported on this platform
 _exit
+a(iiay)
 a:b0,b:b1,back:b3,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,lefttrigger:a4,leftx:a0,lefty:a1,misc1:b11,misc2:b4,rightshoulder:b10,righttrigger:b7,start:b6,x:a5,y:b2,
 a:b0,b:b1,back:b4,dpdown:b12,dpleft:b13,dpright:b14,dpup:b11,guide:b5,leftshoulder:b9,lefttrigger:a4,leftx:a0,lefty:a1,start:b6,x:b2,y:b3,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,start:b6,x:b2,y:b3,
@@ -4894,7 +4945,7 @@ abxy
 access
 acos
 acosf
-activate
+activation_token
 aligning pitch would overflow
 all-scroll
 alphasort
@@ -4902,10 +4953,6 @@ alsa
 altivec
 always_ignore
 analog
-app_indicator_new
-app_indicator_set_icon
-app_indicator_set_menu
-app_indicator_set_status
 application
 application.icon-name
 application.icon_name
@@ -4961,8 +5008,11 @@ channel_buffers
 charging
 charging state
 charging/discharging
+checkmark
+children-display
 chrome
 clearerr
+clicked
 client-rt.conf
 clientWindow
 clock_gettime
@@ -4975,6 +5025,8 @@ color-scheme
 color_scale
 color_target_infos
 com.canonical.Unity.LauncherEntry
+com.canonical.dbusmenu
+com.canonical.dbusmenu.Error
 command_buffer
 composition
 compute_pass
@@ -4991,16 +5043,19 @@ createinfo
 crosshair
 current
 data
+dbus
 dbus_bus_add_match
 dbus_bus_get_private
 dbus_bus_get_unique_name
 dbus_bus_register
 dbus_bus_remove_match
+dbus_bus_request_name
 dbus_connection_add_filter
 dbus_connection_close
 dbus_connection_dispatch
 dbus_connection_flush
 dbus_connection_get_is_connected
+dbus_connection_get_object_path_data
 dbus_connection_open_private
 dbus_connection_read_write
 dbus_connection_read_write_dispatch
@@ -5011,6 +5066,7 @@ dbus_connection_send_with_reply_and_block
 dbus_connection_set_exit_on_disconnect
 dbus_connection_try_register_object_path
 dbus_connection_unref
+dbus_connection_unregister_object_path
 dbus_error_free
 dbus_error_has_name
 dbus_error_init
@@ -5023,17 +5079,22 @@ dbus_message_append_args_valist
 dbus_message_get_args
 dbus_message_get_args_valist
 dbus_message_has_path
+dbus_message_is_method_call
 dbus_message_is_signal
 dbus_message_iter_append_basic
+dbus_message_iter_append_fixed_array
 dbus_message_iter_close_container
 dbus_message_iter_get_arg_type
 dbus_message_iter_get_basic
+dbus_message_iter_get_fixed_array
 dbus_message_iter_init
 dbus_message_iter_init_append
 dbus_message_iter_next
 dbus_message_iter_open_container
 dbus_message_iter_recurse
+dbus_message_new_error
 dbus_message_new_method_call
+dbus_message_new_method_return
 dbus_message_new_signal
 dbus_message_set_no_reply
 dbus_message_unref
@@ -5110,6 +5171,7 @@ eglTerminate
 eglWaitGL
 eglWaitNative
 eglWaitSyncKHR
+enabled
 energy_now
 entry
 environ
@@ -5182,38 +5244,18 @@ fribidi_unicode_to_charset
 fseeko64
 ftello64
 fwrite
-g_get_user_cache_dir
-g_main_context_acquire
-g_main_context_iteration
-g_main_context_new
-g_main_context_pop_thread_default
-g_main_context_push_thread_default
-g_main_context_unref
-g_mkdtemp
-g_object_get
-g_object_ref
-g_object_ref_sink
-g_object_unref
-g_signal_connect_data
-g_signal_handler_disconnect
 gain
 gamecube
 gamepad
 generic
 getcwd
 getcwd failed: %s
-getegid
 getenv
-geteuid
-getgid
 gethostname
 getpagesize
 getpid
-getresgid
-getresuid
 getrlimit
 gettimeofday
-getuid
 glActiveTexture
 glActiveTextureARB
 glAttachObjectARB
@@ -5263,7 +5305,6 @@ glEnableVertexAttribArray
 glEnd
 glFinish
 glFramebufferTexture2D
-glFramebufferTexture2D() failed
 glFramebufferTexture2DEXT
 glFramebufferTexture2DEXT() failed
 glGenBuffers
@@ -5354,25 +5395,6 @@ glXSwapIntervalSGI failed
 gmtime_r
 graphicsPipelineCreateInfo
 graphics_pipeline
-gtk_check_menu_item_get_active
-gtk_check_menu_item_new_with_label
-gtk_check_menu_item_set_active
-gtk_init_check
-gtk_menu_item_get_label
-gtk_menu_item_new_with_label
-gtk_menu_item_set_label
-gtk_menu_item_set_submenu
-gtk_menu_new
-gtk_menu_shell_append
-gtk_menu_shell_insert
-gtk_misc_get_type
-gtk_progress_get_type
-gtk_separator_menu_item_new
-gtk_settings_get_default
-gtk_widget_destroy
-gtk_widget_get_sensitive
-gtk_widget_set_sensitive
-gtk_widget_show
 guide
 handle
 haptic
@@ -5427,7 +5449,6 @@ ioctl(GRDESCSIZE): %s
 iso10646-1
 iso8859-11
 j!z!g,h,H
-jN7|
 joyconleft
 joyconpair
 joyconright
@@ -5436,6 +5457,7 @@ joystick isn't virtual
 k_eControllerType_
 key already exists and replace is disabled
 kill
+label
 lasx
 latin_letters
 leftshoulder
@@ -5460,15 +5482,11 @@ libXi.so.6
 libXrandr.so.2
 libXss.so.1
 libXtst.so.6
-libappindicator3.so.1
 libasound.so.2
-libayatana-appindicator3.so.1
 libc.so.6
 libdbus-1.so.3
 libdl.so.2
 libfribidi.so.0
-libgdk-3.so.0
-libgtk-3.so.0
 libm.so.6
 libpipewire-0.3.so.0
 libpthread.so.0
@@ -5619,6 +5637,8 @@ org.fcitx.Fcitx.InputMethod1
 org.freedesktop.DBus
 org.freedesktop.DBus.Error.NameHasNoOwner
 org.freedesktop.DBus.Error.NoMemory
+org.freedesktop.DBus.Error.UnknownProperty
+org.freedesktop.DBus.Introspectable
 org.freedesktop.DBus.Properties
 org.freedesktop.IBus
 org.freedesktop.IBus.InputContext
@@ -5635,10 +5655,14 @@ org.freedesktop.portal.Fcitx
 org.freedesktop.portal.FileTransfer
 org.freedesktop.portal.IBus
 org.freedesktop.portal.Inhibit
+org.freedesktop.portal.OpenURI
 org.freedesktop.portal.Realtime
 org.freedesktop.portal.Request
 org.freedesktop.portal.Settings
 org.gnome.ScreenSaver
+org.kde.StatusNotifierItem
+org.kde.StatusNotifierItem-%d-%d
+org.kde.StatusNotifierWatcher
 other
 other color
 out.var.COLOR0
@@ -5892,7 +5916,6 @@ sched_getscheduler
 sched_setscheduler
 scissor
 scope
-sdl-appindicator-%d-%d
 sdl2-compat.external_window
 sdl2-compat.surface2
 sdl2-compat.window.preferred_fullscreen_display
@@ -5909,6 +5932,7 @@ sem_timedwait
 sem_trywait
 sem_wait
 sensor
+separator
 session.services
 setenv
 setlocale
@@ -6048,6 +6072,7 @@ strtol
 strtoll
 strtoul
 strtoull
+submenu
 surface
 sw-resize
 swapchain_texture
@@ -6083,6 +6108,8 @@ tis620-0
 tis620-1
 tis620-2
 title_storage
+toggle-state
+toggle-type
 tonemap_factor1
 tonemap_factor2
 tonemap_method
@@ -6219,6 +6246,7 @@ video4linux
 view
 viewport
 viewport != ((void *)0)
+visible
 vkAcquireNextImageKHR
 vkAcquireNextImageKHR()
 vkAllocateCommandBuffers

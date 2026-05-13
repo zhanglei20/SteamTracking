@@ -891,7 +891,7 @@ service Player {
 	rpc GetFavoriteBadge (.CPlayer_GetFavoriteBadge_Request) returns (.CPlayer_GetFavoriteBadge_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetFriendsGameplayInfo (.CPlayer_GetFriendsGameplayInfo_Request) returns (.CPlayer_GetFriendsGameplayInfo_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetGameAchievements (.CPlayer_GetGameAchievements_Request) returns (.CPlayer_GetGameAchievements_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetGameBadgeLevels (.CPlayer_GetGameBadgeLevels_Request) returns (.CPlayer_GetGameBadgeLevels_Response);

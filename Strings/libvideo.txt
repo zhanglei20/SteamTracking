@@ -456,6 +456,9 @@ $RepresentationID$
 $XI(6
 $\n k_EClanInGameContentReleaseEvent
 $\n k_ECodecUsageReasonGameRecording
+$\n k_EGamePerformanceSetting_Custom
+$\n k_EGamePerformanceSetting_Medium
+$\n k_EGamePerformanceSetting_NotSet
 $\n k_ESteamReviewScore_VeryNegative
 $\n k_ESteamReviewScore_VeryPositive
 $\nY8O
@@ -632,6 +635,7 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAcceptAllEULAs
 %\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
@@ -1727,6 +1731,7 @@ $ffn
 /proc/self/fd
 /proc/self/maps
 /proc/version
+/run/host/%s
 /steamrt64
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
@@ -1766,14 +1771,14 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+0.8.3
 00000000
 0.15
-0.8.3
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2195,6 +2200,7 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
+17:45:42
 17CAudioFileDecoder
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2289,6 +2295,7 @@ $ffn
 2+ss
 2,THh
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20.GamePerformanceSettings.EGamePerformanceSetting
 200 Mbps
 2000
 200M
@@ -2330,11 +2337,11 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:58:09
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23CECKeyExchangePublicKey
+23GamePerformanceSettings
 23IUnbufferedSendCallback
 24 Mbps
 24CCryptoKeyBase_RawBuffer
@@ -5418,6 +5425,7 @@ EForeignKeyAction
 EFriendRelationship
 EGCAction
 EGCStatus
+EGamePerformanceSetting
 EGamingDeviceType
 EGetFrameFromMPD
 EGetFramesFromVideo
@@ -6036,6 +6044,7 @@ Game Server
 Game Voucher
 GameInstall
 GameManagedItems
+GamePerformanceSettings
 GameServer
 GameStop
 Gamepad
@@ -7162,7 +7171,7 @@ Max block allocation size for PB arena
 MaxProtocol
 MaxResults
 Maximum family size exceeded
-May 11 2026
+May 13 2026
 MaybeAllocateAligned cannot fail here.
 Meeting
 MemFree:
@@ -8618,6 +8627,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -9032,6 +9043,7 @@ SSLv3/TLS write server done
 SSLv3/TLS write server hello
 SSLv3/TLS write session ticket
 STEAM_
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STORE lib
 STORE routines
 STREAM_CLOSED
@@ -11004,6 +11016,7 @@ Zulu
 \n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
+\n\rrtime_created
 \n\rscreen_height
 \n\rserver_secret
 \n\rsize_unzipped
@@ -13892,6 +13905,8 @@ g_vecTempTextBuffer
 gai_strerror
 galician
 game
+game_resolution_height
+game_resolution_width
 gameid
 gamepad+mouse.vdf
 gamepad_flickstick.vdf
@@ -13961,7 +13976,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -15037,6 +15052,9 @@ k_EConnectionTypeWebSocket == GetConnectionType( hConnection )
 k_EEventBroadcastStart
 k_EEventMatchStart
 k_EEventPartnerMaxType
+k_EGamePerformanceSetting_High
+k_EGamePerformanceSetting_Low
+k_EGamePerformanceSetting_Ultra
 k_EHandshakeStateComplete == m_EHandshakeState
 k_EHandshakeStateInProgress == m_EHandshakeState
 k_EIPTypeV4 == addr.GetType()
@@ -16479,7 +16497,6 @@ m_hConnection != 0xdddddddd
 m_hSocket == INVALID_SOCKET
 m_hashMap
 m_heap
-m_heap.IsValidIndex( index )
 m_iAudioTrack >= 0
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000
@@ -17790,6 +17807,7 @@ pPendingMsg == m_pPendingMsgFirst
 pPendingMsg->GetPUDPConnection() == this
 pPendingMsg->GetSeqEnd() >= m_nOurSeqCur
 pPendingMsgAcked
+pPlayer
 pPlayer->GetNextRunFrameUS() >= 0
 pPool->m_SpaceUsed < 0xFFFF
 pPrivateKey->GetPublicKey( pPublicKey )
@@ -18092,6 +18110,7 @@ pq->q[item->index] == item
 pqualid
 pqueue_new
 pread64
+precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 preloadonly
@@ -18626,6 +18645,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheduledItem.m_ulTime
 scheme=
@@ -18912,6 +18932,7 @@ setmntent
 setpriority
 setsid
 setsockopt
+setting
 settings.m_eHardware != k_EVideoEncoderHardware_Unknown
 settings.m_timeBase.num == 1
 setup_tbuf

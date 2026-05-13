@@ -278,11 +278,11 @@ $\nY8O
 16CAdHocValidation
 16CKeyValuesSystem
 16IKeyValuesSystem
+17:45:42
+17:46:04
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
-23:58:09
-23:58:10
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
@@ -511,7 +511,7 @@ MacOS 14 (as 10.19)
 MacOS 15
 MacOS 15 (as 10.20)
 Matched '%s' -> '%s'\n
-May 11 2026
+May 13 2026
 MemFree:
 MemTotal:
 Memory leak: mempool blocks left in memory: %d\n
@@ -583,6 +583,7 @@ Root
 SDL_GetError
 SDL_SetCurrentThreadPriority
 SKyu
+STEAM_DESKTOP_APP_AFFINITY_LIST
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 Size
@@ -1142,6 +1143,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 secblock.h
 secure_getenv

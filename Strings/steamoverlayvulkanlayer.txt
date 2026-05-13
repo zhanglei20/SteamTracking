@@ -49,6 +49,7 @@ GL_ARB_separate_shader_objects
 GL_ARB_shading_language_420pack
 GameOverlayRenderer.dll
 GameOverlayRenderer64.dll
+H*QtO5
 HDRParams
 JArray
 N10__cxxabiv115__forced_unwindE

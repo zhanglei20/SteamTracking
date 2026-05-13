@@ -243,6 +243,7 @@ $ORIGIN
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG:
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
@@ -327,6 +328,7 @@ $ORIGIN
 /proc/self/cmdline
 /proc/self/exe
 /proc/self/fd
+/run/host/%s
 /steamerrorreporter
 /tmp
 /tmp/.steam-sem-names
@@ -357,6 +359,7 @@ $ORIGIN
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
+17:45:42
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
@@ -365,7 +368,6 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
-23:58:09
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -374,7 +376,6 @@ $ORIGIN
 9IMemAlloc
 <empty>
 <family %u, %u bytes>
-<hl6!
 <no address info>
 <unknown>
 ALL_PROXY
@@ -554,7 +555,7 @@ Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block 
 Lowered '%s' -> '%s'\n
 MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
 Matched '%s' -> '%s'\n
-May 11 2026
+May 13 2026
 MemFree:
 MemTotal:
 MinidumpCallback
@@ -625,6 +626,7 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
+STEAM_DESKTOP_APP_AFFINITY_LIST
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
@@ -1332,6 +1334,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 sdk32
 secblock.h

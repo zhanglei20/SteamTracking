@@ -508,6 +508,9 @@ $O\tdwR\rox\\r*
 $XI(6
 $\n k_EClanInGameContentReleaseEvent
 $\n k_ECodecUsageReasonGameRecording
+$\n k_EGamePerformanceSetting_Custom
+$\n k_EGamePerformanceSetting_Medium
+$\n k_EGamePerformanceSetting_NotSet
 $\n k_ESteamReviewScore_VeryNegative
 $\n k_ESteamReviewScore_VeryPositive
 $\nY8O
@@ -687,6 +690,7 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAcceptAllEULAs
 %\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
@@ -1259,7 +1263,6 @@ $ffn
 (h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
-(int)(intp)m_hParam != -1
 (iub & (m_nSizeWithStack-1)) == 0
 (main)
 (merge
@@ -1447,8 +1450,8 @@ $ffn
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG L|
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;V|
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1833,7 +1836,7 @@ $ffn
 ../tier1/utlqueue.cpp
 ../tier1/utlstring.cpp
 ../tier1/utlsymbol.cpp
-../vgui2/src/LocalizedStringTable.cpp
+../vgui2/src/localizedstringtable.cpp
 ../vstdlib/commandline.cpp
 ../vstdlib/coroutine.cpp
 ../vstdlib/debugstatssystem.cpp
@@ -1999,6 +2002,7 @@ $ffn
 /proc/self/fd
 /proc/self/maps
 /proc/version
+/run/host/%s
 /sbin/lsof
 /steamrt64
 /sys/bus/iio/devices
@@ -2020,21 +2024,17 @@ $ffn
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam-runtime-launch-client
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
@@ -2077,10 +2077,10 @@ $ffn
 0 Umv
 00000000
 00003333
-00:00:00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
@@ -2477,6 +2477,8 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
+1536
+15000
 155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
@@ -2506,10 +2508,11 @@ $ffn
 16ITCPHostCallback
 16JobStatsBucket_t
 172.16
-1536
-15000
 172.16.3.31
 172.16.3.39
+17:45:42
+17:47:52
+17:47:53
 17CBootstrapLogFile
 17CClientWalletInfo
 17CDebugStatsSystem
@@ -2603,6 +2606,7 @@ $ffn
 2,THh
 2.1 Chromium 1.9
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20.GamePerformanceSettings.EGamePerformanceSetting
 200 Mbps
 2000
 200M
@@ -2644,12 +2648,11 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:58:09
-23:58:13
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23CECKeyExchangePublicKey
+23GamePerformanceSettings
 23IUnbufferedSendCallback
 24 Mbps
 24CCryptoKeyBase_RawBuffer
@@ -2851,9 +2854,9 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-60000000
 64CK\vH
 65536
+60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2892,7 +2895,6 @@ $ffn
 7CUtlSetIyi8CDefLessE
 7E\vy
 7XRJ
-7ZG1
 7\n2k_EMsgAMGameServerPlayerCompatibilityCheckResponse
 7\n2k_EMsgAMValidatePasswordResetCodeAndSendSmsRequest
 7\n2k_EMsgClientInformOfResetForgottenPasswordResponse
@@ -5647,6 +5649,7 @@ EForeignKeyAction
 EFriendRelationship
 EGCAction
 EGCStatus
+EGamePerformanceSetting
 EGamingDeviceType
 EGpuDriverId
 EHTTPMethod
@@ -5895,7 +5898,6 @@ Error: XRRFreeCrtcInfo() is not available\n
 Error: XRRFreeOutputInfo() is not available\n
 Error: XRRGetCrtcInfo() is not available\n
 Error: XRRGetOutputInfo() is not available\n
-Error: failed to disable wireless power management: %d\n
 Error: failed to forward message to bootstrap log: %s\n
 Error: invalid command: %d
 Error: parent failed to provide a valid IPC socket\n
@@ -6316,6 +6318,7 @@ GameCodeFromKey
 GameInstall
 GameItemID
 GameManagedItems
+GamePerformanceSettings
 GameServer
 GameStop
 Gamepad
@@ -7256,7 +7259,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 11 2026
+May 13 2026
 MaybeAllocateAligned cannot fail here.
 Meeting
 MemFree:
@@ -8557,6 +8560,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -8764,6 +8769,8 @@ SCT_set_signature_nid
 SCT_set_version
 SDL_GetError
 SDL_SetCurrentThreadPriority
+SDL_VIDEODRIVER
+SDL_VIDEO_DRIVER
 SDQn]
 SECG curve over a 112 bit prime field
 SECG curve over a 113 bit binary field
@@ -9007,6 +9014,7 @@ STEAM_BIGPICTURE
 STEAM_BOOTSTRAP_LOG_VERBOSE
 STEAM_CLIENT_CONFIG_FILE
 STEAM_CLIENT_LOG_FOLDER
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_GAME
 STEAM_RUNTIME
@@ -9347,12 +9355,13 @@ Start Of Scan: %d components
 Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
+StartSteamLauncherService
 StartSteamRTAuxillaryProcesses
 StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May 11 2026 23:58:13
+Startup - updater built May 13 2026 17:47:52
 State
 StaticFileWriterThread()
 Steam
@@ -10207,16 +10216,12 @@ Visa Electron (BoaCompra)
 Vql4
 W%0Qv4AV
 WARNING
+WARNING: %s='%s' does not allow fallback. Appending 'x11,windows'\n
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WARNING: setlocale('%s') failed, using locale: '%s'. International characters may not work.\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -10880,6 +10885,7 @@ Zulu
 \n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
+\n\rrtime_created
 \n\rscreen_height
 \n\rserver_secret
 \n\rsize_unzipped
@@ -13674,6 +13680,8 @@ gai_strerror
 galician
 galileo
 game
+game_resolution_height
+game_resolution_width
 gameid
 gameitemid
 gameoverlayrenderer.so
@@ -14914,6 +14922,9 @@ k_EConnectionTypeWebSocket == GetConnectionType( hConnection )
 k_EEventBroadcastStart
 k_EEventMatchStart
 k_EEventPartnerMaxType
+k_EGamePerformanceSetting_High
+k_EGamePerformanceSetting_Low
+k_EGamePerformanceSetting_Ultra
 k_EHandshakeStateComplete == m_EHandshakeState
 k_EHandshakeStateInProgress == m_EHandshakeState
 k_EIPTypeV4 == addr.GetType()
@@ -16390,10 +16401,10 @@ m_errorIndex>=0
 m_fileReader
 m_fnCompletionCallback
 m_hConnection != 0xdddddddd
+m_hParam != ICommandLine::InvalidHParam()
 m_hSocket == INVALID_SOCKET
 m_hashMap
 m_heap
-m_heap.IsValidIndex( index )
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
@@ -17901,6 +17912,7 @@ pq->q[item->index] == item
 pqualid
 pqueue_new
 pread64
+precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 preloadonly
@@ -18453,6 +18465,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheduledItem.m_ulTime
 scheme=
@@ -18747,6 +18760,7 @@ setpriority
 setrlimit
 setsid
 setsockopt
+setting
 setup_tbuf
 setvbuf
 sfixed32
@@ -19118,8 +19132,9 @@ stdin
 stdout
 steam
 steam-runtime-check-requirements
+steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- sudo -n jupiter-biosupdate
+steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 steam-runtime-launcher-service
 steam-steamrt.sh
 steam.cfg
@@ -19246,15 +19261,9 @@ subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
 success
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 superseded
 suppPubInfo
 supplied row stride too small

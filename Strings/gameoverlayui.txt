@@ -461,7 +461,6 @@ $\nY8O
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
@@ -1095,6 +1094,7 @@ $\nY8O
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_EContentReportSubjectAction_BannedFromHub
+/\n+k_EContentReportSubjectAction_OwnerDisputed
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -1112,6 +1112,7 @@ $\nY8O
 /proc/mounts
 /proc/self/maps
 /proc/stat
+/run/host/%s
 /sbin/lsof
 /steamrt64
 /sys/bus/iio/devices
@@ -1133,21 +1134,17 @@ $\nY8O
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam-runtime-launch-client
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -1169,6 +1166,7 @@ $\nY8O
 01/01/00
 0123456789
 0123456789ABCDEF
+0123456789ABCDEF !
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -1556,6 +1554,7 @@ $\nY8O
 16HTMLComboBoxHost
 16IDynamicFunction
 16ListPanelDragger
+17:49:03
 17CClientWalletInfo
 17CFileWriterThread
 17CIngameFPSCPUInfo
@@ -1679,7 +1678,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:58:16
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1771,6 +1769,7 @@ $\nY8O
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
+3\n/k_PublishedFileQueryType_RankedByNumParentItems
 3pay
 4 Mbps
 40 Mbps
@@ -1886,6 +1885,7 @@ $\nY8O
 9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
+9\n5k_PublishedFileQueryType_RankedByNumParentCollections
 9\n\noneof_decl
 9a&g
 : Tried to copy from a message with a different type. to:
@@ -3323,9 +3323,9 @@ ESDCardFormatStage
 ESessionPersistence
 EShellConfigUpdateSection
 ESignatureClass
+ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
@@ -3445,7 +3445,6 @@ Error: %s: failed to write to %s: %s\n
 Error: %s: invalid address
 Error: %s: popen failed
 Error: %s: steamos-priv-write failed %s: %s\n
-Error: failed to disable wireless power management: %d\n
 Error: failed to open: %s\n
 ErrorAppID
 ErrorHeadline
@@ -4684,7 +4683,7 @@ MaxUseCount
 Maximize
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 11 2026
+May 13 2026
 MaybeAllocateAligned cannot fail here.
 Meetei_Mayek
 Meeting
@@ -5560,6 +5559,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -6598,13 +6599,8 @@ Visa (BoaCompra)
 Visa Electron (BoaCompra)
 WARNING
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -8561,6 +8557,10 @@ k_ESLSHelper_Minidump
 k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
+k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_71
+k_ESpeakerConfiguration_Other
+k_ESpeakerConfiguration_Stereo
 k_ESplitScalingFilter_Invalid
 k_ESplitScalingFilter_Linear
 k_ESplitScalingFilter_Nearest
@@ -8571,10 +8571,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD
@@ -9871,8 +9867,9 @@ stdin
 stdio
 stdout
 steam
+steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- sudo -n jupiter-biosupdate
+steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 steam.pid
 steam/cached/icon_tab_placement_arrow
 steam:
@@ -9970,15 +9967,9 @@ subtabposition
 subtitles
 subtype mismatch
 success
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 supplied row stride too small
 support changed ownership
 support cleared content

@@ -275,6 +275,56 @@
           excluded_content_descriptors: [3, 4, 1],
         };
       _.createContext({});
+      var _;
+      !(function (_) {
+        (_[(_.kPFIFlag_MicroTransactionFile = 1)] =
+          "kPFIFlag_MicroTransactionFile"),
+          (_[(_.kPFIFlag_Incompatible = 2)] = "kPFIFlag_Incompatible"),
+          (_[(_.kPFIFlag_RevenueSplitsFinalized = 4)] =
+            "kPFIFlag_RevenueSplitsFinalized"),
+          (_[(_.kPFIFlag_AcceptedForUse = 8)] = "kPFIFlag_AcceptedForUse"),
+          (_[(_.kPFIFlag_CollectionShowSubscribeAll = 16)] =
+            "kPFIFlag_CollectionShowSubscribeAll"),
+          (_[(_.kPFIFlag_ItemInProgress = 32)] = "kPFIFlag_ItemInProgress"),
+          (_[(_.kPFIFlag_GamePlayable = 64)] = "kPFIFlag_GamePlayable"),
+          (_[(_.kPFIFlag_AwaitingModeration = 128)] =
+            "kPFIFlag_AwaitingModeration"),
+          (_[(_.kPFIFlag_PendingApproval = 256)] = "kPFIFlag_PendingApproval"),
+          (_[(_.kPFIFlag_FixedStats = 1536)] = "kPFIFlag_FixedStats"),
+          (_[(_.kPFIFlag_LatestWorkshopTermsNotAccepted = 2048)] =
+            "kPFIFlag_LatestWorkshopTermsNotAccepted"),
+          (_[(_.kPFIFlag_DepotContent = 4096)] = "kPFIFlag_DepotContent"),
+          (_[(_.kPFIFlag_CollectionAllOwnerItems = 8192)] =
+            "kPFIFlag_CollectionAllOwnerItems"),
+          (_[(_.kPFIFlag_CollectionIsASet = 16384)] =
+            "kPFIFlag_CollectionIsASet"),
+          (_[(_.kPFIFlag_Subscribable = 32768)] = "kPFIFlag_Subscribable"),
+          (_[(_.kPFIFlag_ForceUnbanned = 65536)] = "kPFIFlag_ForceUnbanned"),
+          (_[(_.kPFIFlag_ForceInappropriate = 131072)] =
+            "kPFIFlag_ForceInappropriate"),
+          (_[(_.kPFIFlag_ForceAppropriate = 262144)] =
+            "kPFIFlag_ForceAppropriate"),
+          (_[(_.kPFIFlag_RequireVerification = 524288)] =
+            "kPFIFlag_RequireVerification"),
+          (_[(_.kPFIFlag_HasApprovedSteamChinaContent = 1048576)] =
+            "kPFIFlag_HasApprovedSteamChinaContent"),
+          (_[(_.kPFIFlag_HasApprovedContent = 2097152)] =
+            "kPFIFlag_HasApprovedContent"),
+          (_[(_.kPFIFlag_IgnoreTextContentCheckFlag = 4194304)] =
+            "kPFIFlag_IgnoreTextContentCheckFlag"),
+          (_[(_.kPFIFlag_DisableComments = 8388608)] =
+            "kPFIFlag_DisableComments"),
+          (_[(_.kPFIFlag_NeedsContentCheck = 16777216)] =
+            "kPFIFlag_NeedsContentCheck"),
+          (_[(_.kPFIFlag_SteamChinaCreated = 33554432)] =
+            "kPFIFlag_SteamChinaCreated"),
+          (_[(_.kPFIFlag_RejectedLatestContent = 67108864)] =
+            "kPFIFlag_RejectedLatestContent"),
+          (_[(_.kPFIFlag_ManagedContentDescriptors = 134217728)] =
+            "kPFIFlag_ManagedContentDescriptors"),
+          (_[(_.kPFIFlag_HasAuthorSnapshots = 268435456)] =
+            "kPFIFlag_HasAuthorSnapshots");
+      })(_ || (_ = {}));
       function _(_, _ = "") {
         switch (_) {
           case 0:
@@ -412,7 +462,7 @@
             return _;
         }
       }
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -507,47 +557,16 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
-            (_[(_.k_ELoginUIStyleNewWithoutQRCode = 1)] =
-              "k_ELoginUIStyleNewWithoutQRCode"),
-            (_[(_.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
-            "k_ECommunityProfileItemProperty_ImageSmall"),
-            (_[(_.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
-              "k_ECommunityProfileItemProperty_ImageLarge"),
-            (_[(_.k_ECommunityProfileItemProperty_InternalName = 2)] =
-              "k_ECommunityProfileItemProperty_InternalName"),
-            (_[(_.k_ECommunityProfileItemProperty_Title = 3)] =
-              "k_ECommunityProfileItemProperty_Title"),
-            (_[(_.k_ECommunityProfileItemProperty_Description = 4)] =
-              "k_ECommunityProfileItemProperty_Description"),
-            (_[(_.k_ECommunityProfileItemProperty_AppID = 5)] =
-              "k_ECommunityProfileItemProperty_AppID"),
-            (_[(_.k_ECommunityProfileItemProperty_TypeID = 6)] =
-              "k_ECommunityProfileItemProperty_TypeID"),
-            (_[(_.k_ECommunityProfileItemProperty_Class = 7)] =
-              "k_ECommunityProfileItemProperty_Class"),
-            (_[(_.k_ECommunityProfileItemProperty_MovieWebM = 8)] =
-              "k_ECommunityProfileItemProperty_MovieWebM"),
-            (_[(_.k_ECommunityProfileItemProperty_MovieMP4 = 9)] =
-              "k_ECommunityProfileItemProperty_MovieMP4"),
-            (_[(_.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
-              "k_ECommunityProfileItemProperty_MovieWebMSmall"),
-            (_[(_.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
-              "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ERaiseGameWindowResult_NotRunning = 1)] =
-            "k_ERaiseGameWindowResult_NotRunning"),
-            (_[(_.k_ERaiseGameWindowResult_Success = 2)] =
-              "k_ERaiseGameWindowResult_Success"),
-            (_[(_.k_ERaiseGameWindowResult_Failure = 3)] =
-              "k_ERaiseGameWindowResult_Failure");
-        })(_ || (_ = {})),
+        })(_ || (_ = {}));
+      var _, _, _, _, _, _;
+      !(function (_) {
+        (_[(_.k_ERaiseGameWindowResult_NotRunning = 1)] =
+          "k_ERaiseGameWindowResult_NotRunning"),
+          (_[(_.k_ERaiseGameWindowResult_Success = 2)] =
+            "k_ERaiseGameWindowResult_Success"),
+          (_[(_.k_ERaiseGameWindowResult_Failure = 3)] =
+            "k_ERaiseGameWindowResult_Failure");
+      })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (_[(_.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
@@ -1467,6 +1486,7 @@
           return "CMsgProtoBufHeader";
         }
       }
+      _.Message;
       _.Message;
       _.Message;
       _.Message;
@@ -6007,7 +6027,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 8958), _((_._ = _));
+      return (_ = 9361), _((_._ = _));
       var _;
     });
     _._();

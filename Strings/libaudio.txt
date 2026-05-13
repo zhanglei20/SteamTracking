@@ -61,6 +61,8 @@ $ORIGIN
 *ZL19RunCommandGetOutput10StringViewR10CUtlStringbbEUlS_E_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG-
+++CCUNGB
 ++CCUNGstd::exception
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -92,6 +94,7 @@ $ORIGIN
 .cpl
 .mp3
 .steam_exec_test.sh
+/core
 /dev
 /dev/
 /dev/disk/by-uuid
@@ -100,6 +103,8 @@ $ORIGIN
 /etc/mtab
 /proc/mounts
 /proc/self/maps
+/run/host/%s
+/sink/%s/volume-control
 /steamrt64
 /tmp
 /tmp/disk-free.XXXXXX
@@ -303,12 +308,14 @@ DBG_STAT
 DLOPEN Error:%s\n
 Don't know how to check filesystem type on POSIX!
 Element( i )
+Empty response on setting
 Error
 Error State on string being set.
 Execute: %s\n
 Expected %lld but got %lld!
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
+Failed to change setting
 Failed to load "%s"
 Failed to load optional module %s\n
 Failed to move pulse sink input
@@ -369,19 +376,18 @@ InternalPlaySound: Failed to create playback stream
 InternalPlaySound: Playback stream failed (%s)
 Invalid FileWriterItem_t
 Invalid index %u
+Invalid response: %s
 IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control true
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio true
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio-surround false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio-surround true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings bluetooth.autoswitch-to-headset-profile false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings bluetooth.autoswitch-to-headset-profile true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono true
 LOCK_EX
 LOCK_SH
 LoadFileRangeIntoBuffer_Internal
@@ -554,7 +560,6 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 __ctype_b_loc
 __ctype_tolower_loc
@@ -637,6 +642,9 @@ alignof
 allocator
 alphasort64
 analog
+analog-stereo
+analog-surround-51
+analog-surround-71
 application.icon_name
 application.id
 application.name
@@ -709,6 +717,12 @@ delete
 delete[]
 device.bus
 device.description
+device.volume.read-mute
+device.volume.read-volume
+device.volume.write-mute-toggle
+device.volume.write-mute-value
+device.volume.write-volume-updown
+device.volume.write-volume-value
 disk-free command failed\n
 diskSize
 dl_iterate_phdr
@@ -727,8 +741,12 @@ existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
 faccessat
 failed to load miles library
+failed to send volume command
+failed to set bluetooth autoswitch
+failed to set mono audio
 failed to set sink input mute
 failed to set sink input volume
+failed to toggle mute
 fallocate64
 false
 fclose
@@ -783,6 +801,9 @@ handset
 handsfree
 hardware
 hdmi
+hdmi-stereo
+hdmi-surround
+hdmi-surround71
 headphones
 headset
 hidden alias for
@@ -864,6 +885,7 @@ mount
 msync
 mt19937
 munmap
+mute-toggle
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nChannels == 1 || nChannels == 2
 nGrowSize >= 0
@@ -881,6 +903,7 @@ new[]
 noexcept
 non-transaction clone for
 non-virtual thunk to
+null
 num > 0
 numElements >= 0
 obj_count
@@ -894,7 +917,6 @@ opendir
 operator
 operator""
 org.valvesoftware.steam
-output:hdmi-
 pConv && pConv->GetDelimiterLength() > 0
 pEndingDelim && pEndingDelim[0]
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
@@ -922,6 +944,7 @@ pa_context_get_state
 pa_context_move_sink_input_by_index
 pa_context_move_source_output_by_index
 pa_context_new_with_proplist
+pa_context_send_message_to_object
 pa_context_set_card_profile_by_index
 pa_context_set_default_sink
 pa_context_set_default_source
@@ -973,6 +996,8 @@ pa_threaded_mainloop_stop
 pa_threaded_mainloop_unlock
 pclose
 phone
+pipewire-pulse:bluetooth-headset-autoswitch
+pipewire-pulse:force-mono-output
 playback
 popen
 port.type
@@ -1058,6 +1083,7 @@ std::ostream
 std::string
 stderr
 steam
+steamos.supports-hdmi-cec
 strcasecmp
 strcasestr
 strchr
@@ -1133,6 +1159,8 @@ vector::_M_realloc_append
 video
 virtual thunk to
 void
+volume-down
+volume-up
 vsnprintf
 vtable for
 vtable for __cxxabiv1::__class_type_info
@@ -1143,8 +1171,7 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 wchar_t
-wpctl settings bluetooth.autoswitch-to-headset-profile
-wpctl settings node.features.audio.mono
+wpctl settings monitor.alsa.enable-external-volume-control
 wpctl settings node.stream.spatial-audio
 wpctl settings node.stream.spatial-audio-surround
 write

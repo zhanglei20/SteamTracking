@@ -101,6 +101,7 @@ $ORIGIN
 /etc/mtab
 /proc/mounts
 /proc/self/maps
+/run/host/%s
 /steamrt64
 /tmp
 /tmp/disk-free.XXXXXX
