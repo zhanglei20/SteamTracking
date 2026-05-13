@@ -496,3 +496,4 @@ SSR @ https://store.steampowered.com/sitemap
 SSR @ https://partner.steamgames.com/pricing/explorer
 SSR @ https://steamcommunity.com/workshop/browse/?appid=730
 SSR @ https://steamcommunity.com/market/listings/730/G180720F7083004
+SSR @ https://steamcommunity.com/market/search/
