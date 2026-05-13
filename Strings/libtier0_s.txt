@@ -61,8 +61,8 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGIF
-++CCUNGnN
+++CCUNG)G
+++CCUNGNO
 ++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
@@ -116,7 +116,7 @@ $ORIGIN
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-23:58:11
+17:46:19
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -325,7 +325,7 @@ Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-May 11 2026
+May 13 2026
 MemFree:
 MemTotal:
 MiniDumpUnlock
@@ -445,6 +445,7 @@ RunCallbacks
 RunTypeValidationTests
 SDL_GetError
 SDL_SetCurrentThreadPriority
+STEAM_DESKTOP_APP_AFFINITY_LIST
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 ServerMain
@@ -1091,6 +1092,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 secblock.h
 secure_getenv
@@ -1160,6 +1162,7 @@ strrchr
 strstr
 strtol
 strtoul
+strtoull
 symlink
 syscall
 system

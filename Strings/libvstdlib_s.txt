@@ -189,7 +189,6 @@ $\nY8O
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (anonymous namespace)
-(int)(intp)m_hParam != -1
 (main)
 (none)
 *N12_GLOBAL__N_121system_error_categoryE
@@ -200,7 +199,6 @@ $\nY8O
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGstd::exception
 +ulsX
-,4ZZ
 ----------------------------------------\n
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -276,6 +274,7 @@ $\nY8O
 /proc/mounts
 /proc/self/maps
 /proc/version
+/run/host/%s
 /steamrt64
 /tmp
 /tmp/disk-free.XXXXXX
@@ -1749,6 +1748,7 @@ m_configOverride
 m_errorIndex>=0
 m_fileReader
 m_fnCompletionCallback
+m_hParam != ICommandLine::InvalidHParam()
 m_listChangedFiles
 m_listCommandLineOption
 m_mapConditionalSymbolTable

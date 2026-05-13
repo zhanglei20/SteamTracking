@@ -26,9 +26,8 @@
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGY
-++CCUNGn\v
 ++CCUNGstd::exception
+++CCUNGy
 /dev/random
 /dev/urandom
 /proc/self/cmdline
@@ -148,6 +147,8 @@ SteamAPI_ISteamApps_RequestAllProofOfPurchaseKeys
 SteamAPI_ISteamApps_RequestAppProofOfPurchaseKey
 SteamAPI_ISteamApps_SetActiveBeta
 SteamAPI_ISteamApps_SetDlcContext
+SteamAPI_ISteamApps_SetGamePerformanceSetting
+SteamAPI_ISteamApps_SetGameRenderResolution
 SteamAPI_ISteamApps_UninstallDLC
 SteamAPI_ISteamClient_BReleaseSteamPipe
 SteamAPI_ISteamClient_BShutdownIfAllPipesClosed
@@ -1012,6 +1013,7 @@ SteamAPI_ISteamUtils_GetSteamUILanguage
 SteamAPI_ISteamUtils_InitFilterText
 SteamAPI_ISteamUtils_IsAPICallCompleted
 SteamAPI_ISteamUtils_IsOverlayEnabled
+SteamAPI_ISteamUtils_IsRunningUnderProton
 SteamAPI_ISteamUtils_IsSteamChinaLauncher
 SteamAPI_ISteamUtils_IsSteamInBigPictureMode
 SteamAPI_ISteamUtils_IsSteamRunningInVR

@@ -584,7 +584,6 @@ $d`D-laM
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
@@ -971,7 +970,6 @@ $d`D-laM
 (fS{ggRcjh
 (h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
-(int)(intp)m_hParam != -1
 (iub & (m_nSizeWithStack-1)) == 0
 (merge
 (null)
@@ -1093,7 +1091,6 @@ $d`D-laM
 *ZN12CBrowserView19OnMsgHistoryChangedER16CHTMLProtoBufMsgI18CMsgHistoryChangedEEUl13scoped_refptrI12CefV8ContextEE_
 *ZN12CBrowserView22OnMsgFavIconURLChangedER16CHTMLProtoBufMsgI21CMsgFavIconURLChangedEEUl13scoped_refptrI12CefV8ContextEE_
 *ZN12CBrowserView9EmitEventEPKcRSt6vectorI13scoped_refptrI10CefV8ValueESaIS5_EEEUlS3_I12CefV8ContextEE_
-*ZN12CValveCefAPP24OnProcessMessageReceivedE13scoped_refptrI10CefBrowserES0_I8CefFrameE16cef_process_id_tS0_I17CefProcessMessageEEUlS0_I14CefDOMDocumentEE_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
 *ZN14CClientHandler15OnAddressChangeE13scoped_refptrI10CefBrowserES0_I8CefFrameERK13CefStringBaseI19CefStringTraitsUTF8EEUlS0_I18CefNavigationEntryEbiiE_
@@ -1103,6 +1100,7 @@ $d`D-laM
 *ZN19CCompositorGLThread15OnWindowRemovedEmEUlPK19ICompositorDrawableE_
 *ZN19CCompositorGLThread22OnStackingOrderChangedEmmEUlPK19ICompositorDrawableE_
 *ZN19CX11EventDispatcher23UnregisterEventListenerEP24ICompositorEventListenerEUlPKS0_E_
+*ZN21RenderProcessMessagesL20OnGetFocusedNodeTextERKNS_19RenderHandlerParamsEEUl13scoped_refptrI14CefDOMDocumentEE_
 *ZN23CV8ManagerRenderProcess30CreateCallbackUnregisterObjectER13scoped_refptrI10CefV8ValueES0_I10CefBrowserEyEUlvE_
 *ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListINS_12CallbackInfoEiEEUlvE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
@@ -1499,6 +1497,7 @@ $d`D-laM
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_EContentReportSubjectAction_BannedFromHub
+/\n+k_EContentReportSubjectAction_OwnerDisputed
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -1548,6 +1547,7 @@ $d`D-laM
 /proc/self/fd
 /proc/self/maps
 /proc/version
+/run/host/%s
 /sbin/lsof
 /steamrt64
 /sys/bus/iio/devices
@@ -1573,21 +1573,17 @@ $d`D-laM
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam-runtime-launch-client
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -1611,11 +1607,11 @@ $d`D-laM
 0 Umv
 0000000000000000000000000000000000000000
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -1797,7 +1793,6 @@ $d`D-laM
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11M|
 12 Mbps
-123456789
 128 Kbps
 128K
 12CAddressInfo
@@ -1916,6 +1911,7 @@ $d`D-laM
 14CefLoadHandler
 14ConCommandBase
 1536
+123456789
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 15CChatMemberInfo
@@ -2136,6 +2132,8 @@ $d`D-laM
 16IDynamicFunction
 16IKeyValuesSystem
 16ITexture2DStream
+17:45:42
+17:47:58
 17CClientWalletInfo
 17CFileWriterThread
 17CIBusFreeFunctionIP10_GSettingsJPKcEE
@@ -2299,8 +2297,6 @@ $d`D-laM
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22CProxyURLRequestClient
-23:58:09
-23:58:16
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -2442,6 +2438,7 @@ $d`D-laM
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
+3\n/k_PublishedFileQueryType_RankedByNumParentItems
 3\v;8BJ\nH
 3ej\n
 3g\f8
@@ -2610,12 +2607,12 @@ $d`D-laM
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CefClient
-9H(Eo
 9IGv
 9IMemAlloc
 9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
+9\n5k_PublishedFileQueryType_RankedByNumParentCollections
 9\n\noneof_decl
 9a&g
 9eZI
@@ -5268,9 +5265,9 @@ ESDCardFormatStage
 ESessionPersistence
 EShellConfigUpdateSection
 ESignatureClass
+ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
@@ -5591,7 +5588,6 @@ Error: Couldn't retrieve overlay metrics for '%s'
 Error: DisplayManagerInit: XRR unsupported
 Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
-Error: failed to disable wireless power management: %d\n
 Error: failed to find required GL entrypoints
 Error: file dialog request to steam failed
 Error: missing section: client_info
@@ -6996,6 +6992,7 @@ IVRSteamPrivate_023
 IVRSteamPrivate_024
 IVRSteamPrivate_025
 IVRSteamPrivate_026
+IVRSteamPrivate_027
 IVRSystem_022
 I\nlQ
 I\tHA\t981G'dc
@@ -7622,7 +7619,7 @@ LoadFromBuffer: missing {   (current key: '%s')
 LoadTGA: Only type 2 and 10 targa RGB images supported\n
 LoadURL
 Loaded GL %d.%d
-Local file request not allowed for %s
+Local file request not allowed for %s:%d
 LocalKeySet
 LocalName
 Localize
@@ -7799,7 +7796,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 11 2026
+May 13 2026
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -7961,6 +7958,7 @@ N2vr19IVRSteamPrivate_023E
 N2vr19IVRSteamPrivate_024E
 N2vr19IVRSteamPrivate_025E
 N2vr19IVRSteamPrivate_026E
+N2vr19IVRSteamPrivate_027E
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -7987,7 +7985,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_026EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_027EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -8015,6 +8013,7 @@ N5vrapi33CVRSteamPrivateAdapter_022_as_023E
 N5vrapi33CVRSteamPrivateAdapter_023_as_024E
 N5vrapi33CVRSteamPrivateAdapter_024_as_025E
 N5vrapi33CVRSteamPrivateAdapter_025_as_026E
+N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -9185,6 +9184,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -9692,6 +9693,7 @@ STEAMVIDEOTOKEN2
 STEAM_
 STEAM_BROWSER_RESIZE_WORKAROUND
 STEAM_CLIENT_LOG_FOLDER
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STEAM_DISABLE_BROWSER_SHUTDOWN_WORKAROUND
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_ENABLE_XCOMPOSITE_WORKAROUND
@@ -9933,6 +9935,7 @@ SetWifiDebugMode
 SetWindowIconFromFile
 SetWindowStackingOrder
 Sets
+Setting browser's expected Gamescope VR Overlay Key to "%s"
 Setting xcomposite workaround enabled via env var: %d
 SettingChanged
 Settings
@@ -10873,6 +10876,7 @@ UTF-8 data when
 UTF8
 UTF8STRING
 UTF8String
+UTF8_STRING
 UUID
 UUIDs
 UUPx((
@@ -11118,13 +11122,8 @@ WARNING: cancelling DoClose() for bHideOnClose, but using Window.Close() is pref
 WARNING: discarding _NET_WM_PID %u as invalid for X11 window - use specialized XCB_X11_TO_PID function!\n
 WARNING: dlopen/dlsym libX11.so.6: failed to resolve one or more functions\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -13220,7 +13219,6 @@ can't convert uint64 to int32 (data loss)
 can't convert uint64 to int64 (data loss)
 can't find SRP server param
 can't reach here.
-can't set http allowlist\n
 can-go-back-forward-changed
 can-power-off
 cancelable
@@ -15078,7 +15076,6 @@ failed to base64 encode value
 failed to create lock
 failed to generate a valid callback handler key
 failed to init async
-failed to set http allowlist (error=%s)\n
 failed to set pool
 failed to swap context
 failure
@@ -20048,6 +20045,10 @@ k_ESLSHelper_Minidump
 k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
+k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_71
+k_ESpeakerConfiguration_Other
+k_ESpeakerConfiguration_Stereo
 k_ESplitScalingFilter_Invalid
 k_ESplitScalingFilter_Linear
 k_ESplitScalingFilter_Nearest
@@ -20058,10 +20059,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD
@@ -20447,6 +20444,7 @@ m_errorIndex>=0
 m_fdShMemFDSender > 0
 m_fileReader
 m_fnCompletionCallback
+m_hParam != ICommandLine::InvalidHParam()
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
@@ -22357,6 +22355,7 @@ scale_page_to_focused_element
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheduled-shutdown
 scheme=
@@ -23051,9 +23050,10 @@ stdout
 steam
 steam-chat.com
 steam-glcomposer%s-frame-%05lu.png
+steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
+steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-steam-runtime-launch-client --alongside-steam -- sudo -n jupiter-biosupdate
 steam.dev
 steam.pid
 steam://
@@ -23289,15 +23289,9 @@ subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
 success
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 suggested-default-performance-profile
 suggested-minimum-limit
 superseded
@@ -24473,6 +24467,7 @@ zy:HO
 { pos: %4d,%4d size: %4d,%4d }
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
+{9zA
 {default arg#
 {kHw
 {lambda
