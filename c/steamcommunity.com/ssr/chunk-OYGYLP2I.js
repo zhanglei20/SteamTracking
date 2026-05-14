@@ -11320,6 +11320,8 @@ var _ = {
     },
     3: {
       strSymbol: "€",
+      strDecimalSymbol: ",",
+      strThousandsSeparator: " ",
     },
     4: {
       strSymbol: "CHF",
