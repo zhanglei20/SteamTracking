@@ -74,25 +74,27 @@ function _(_) {
 }
 var _ = _(_(), 1);
 function _(_) {
-  let { reasons: _, guardDaysRequired: _ } = _;
-  return _.length
-    ? (0, _.jsxs)(_, {
-        gap: "2",
-        padding: "4",
-        direction: "column",
-        background: "red-3",
-        border: "2px solid var(--color-red-7)",
-        radius: "sm",
+  let { reasons: _, guardDaysRequired: _, allowedTime: _ } = _,
+    _ = _.length > 0;
+  return (0, _.jsxs)(_, {
+    gap: "2",
+    padding: "4",
+    direction: "column",
+    background: "red-3",
+    border: "2px solid var(--color-red-7)",
+    radius: "sm",
+    children: [
+      (0, _.jsx)(_, {
+        size: "5",
+        children: _.LocalizePlural("#Unavailable_Header", _.length),
+      }),
+      (0, _.jsxs)("ul", {
+        style: {
+          margin: 0,
+        },
         children: [
-          (0, _.jsx)(_, {
-            size: "5",
-            children: _.LocalizePlural("#Unavailable_Header", _.length),
-          }),
-          (0, _.jsx)("ul", {
-            style: {
-              margin: 0,
-            },
-            children: _.map((_) =>
+          _ &&
+            _.map((_) =>
               (0, _.jsx)(
                 _,
                 {
@@ -102,10 +104,35 @@ function _(_) {
                 _,
               ),
             ),
-          }),
+          !_ &&
+            (0, _.jsx)(_, {
+              _: "li",
+              children: _.Localize("#Economy_Market_TopLevelReason_Unknown"),
+            }),
         ],
-      })
-    : null;
+      }),
+      (0, _.jsx)(_, {
+        time: _,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { time: _ } = _;
+  if (!_) return null;
+  let _ = Intl.DateTimeFormat(_(), {
+    dateStyle: "full",
+    timeStyle: "medium",
+  }).format(new Date(_ * 1e3));
+  return (0, _.jsx)(_, {
+    children: _.LocalizeReact(
+      "#Economy_Market_HeaderTip_TimeCanUse",
+      (0, _.jsx)(_, {
+        color: "green-10",
+        children: _,
+      }),
+    ),
+  });
 }
 function _(_) {
   let { reason: _, guardDaysRequired: _ } = _,
@@ -495,6 +522,7 @@ function _() {
             children: (0, _.jsx)(_, {
               reasons: _.rgReasons,
               guardDaysRequired: _.unSGRequiredDays,
+              allowedTime: _.rtAllowed,
             }),
           }),
       }),
