@@ -49,8 +49,7 @@ $ORIGIN
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG1
-++CCUNGV
+++CCUNGq
 ++CCUNGstd::exception
 ----------------------------\n
 /ValveIPCSHM_%d
@@ -321,7 +320,6 @@ Previous renderer inactive, force releasing video stream\n
 Process %d failed to shm_open %s\n
 Process was forked: %d -> %d, follow new process in the new log file!\n
 PutInternal: Not enough space for put when locked\n
-Pxo!
 QkkXa
 Ran out of IPC SharedObjectManager entries!\n
 Regrabbing pointer on window %lx\n

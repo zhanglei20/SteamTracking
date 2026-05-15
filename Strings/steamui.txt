@@ -7445,6 +7445,7 @@ ${LANGUAGE}
 /usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
+/usr/bin/steamos-systemreport
 /usr/bin/xdg-open
 /usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
 /usr/lib/os-release
@@ -7542,11 +7543,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+0123456789.
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -12938,6 +12939,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -12978,7 +12980,6 @@ ${LANGUAGE}
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
 65536
-60000000
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 666666666666666666666666666666666666666666666666
@@ -24976,7 +24977,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 13 2026 17:48:51
+May 14 2026 23:17:25
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -37036,7 +37037,6 @@ bInput
 bIsApplication
 bIsBackupInstall
 bIsBroadcasting
-bIsCEFDebuggingEnabled
 bIsDeckOled
 bIsDefaultFolder
 bIsDefaultInputDevice
