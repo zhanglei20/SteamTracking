@@ -1158,6 +1158,7 @@ Failed to send ID_DONGLE_GET_WIRELESS_STATE request
 Failed to stat device handle
 Field Sequential, Left on Sync
 Field Sequential, Right on Sync
+File is not a JPEG file
 File is not a PNG file
 File is not a Windows BMP file
 File length did not exactly match the destination length
@@ -2072,7 +2073,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-709-g3dbd3e43e
+SDL-release-3.4.0-718-g0e5e772ba
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -3307,6 +3308,8 @@ SDL_LoadFile
 SDL_LoadFileAsync
 SDL_LoadFile_IO
 SDL_LoadFunction
+SDL_LoadJPG
+SDL_LoadJPG_IO
 SDL_LoadObject
 SDL_LoadPNG
 SDL_LoadPNG_IO
@@ -4946,6 +4949,7 @@ access
 acos
 acosf
 activation_token
+alias
 aligning pitch would overflow
 all-scroll
 alphasort
@@ -5003,6 +5007,7 @@ capabilities/rel
 capacity
 capture
 ccck
+cell
 cgo{scc
 channel_buffers
 charging
@@ -5033,6 +5038,8 @@ compute_pass
 compute_pipeline
 config.name
 context
+context-menu
+copy
 copy_pass
 correct
 cosf
@@ -5393,6 +5400,8 @@ glXSwapIntervalMESA failed
 glXSwapIntervalSGI
 glXSwapIntervalSGI failed
 gmtime_r
+grab
+grabbing
 graphicsPipelineCreateInfo
 graphics_pipeline
 guide
@@ -5401,6 +5410,7 @@ haptic
 height
 height * pitch would overflow
 height + 1 would overflow
+help
 hid_get_indexed_string: not supported by hidraw
 hid_read_timeout: unexpected poll error (device disconnected)
 hidapi device
@@ -5538,6 +5548,7 @@ logf
 lround
 lroundf
 lseek
+lt4X<
 main
 make GL context current
 malloc
@@ -5586,6 +5597,7 @@ mold 2.36.0 (compatible with GNU ld)
 monochrome
 mouse
 mouse_input
+move
 n-resize
 n33>0
 n33>0x
@@ -5602,6 +5614,7 @@ nintendo_joycons_combined
 nl_langinfo
 no current context
 no video driver
+no-drop
 node.always-process
 node.description
 node.latency
@@ -6238,6 +6251,7 @@ varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nunifor
 varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nuniform sampler2D tex1;\nuniform vec4 texel_size; // texel size (xy: texel size, zw: texture dimensions)\n\nvec4 SamplePaletteNearest(vec2 uv)\n{\n    float index = texture2D(tex0, uv).r * 255.0;\n    return texture2D(tex1, vec2((index + 0.5) / 256.0, 0.5));\n}\n\nvec4 SamplePaletteLinear(vec2 uv)\n{\n    // scale & offset uvs to integer values at texel centers\n    vec2 uv_texels = uv * texel_size.zw + 0.5;\n\n    // get uvs for the center of the 4 surrounding texels by flooring\n    vec4 uv_min_max = vec4((floor(uv_texels) - 0.5) * texel_size.xy, (floor(uv_texels) + 0.5) * texel_size.xy);\n\n    // blend factor\n    vec2 uv_frac = fract(uv_texels);\n\n    // sample all 4 texels\n    vec4 texelA = SamplePaletteNearest(uv_min_max.xy);\n    vec4 texelB = SamplePaletteNearest(uv_min_max.xw);\n    vec4 texelC = SamplePaletteNearest(uv_min_max.zy);\n    vec4 texelD = SamplePaletteNearest(uv_min_max.zw);\n\n    // bilinear interpolation\n    return mix(mix(texelA, texelB, uv_frac.y), mix(texelC, texelD, uv_frac.y), uv_frac.x);\n}\n\nvec2 GetPixelArtUV(vec2 uv)\n{\n    vec2 boxSize = clamp(fwidth(uv) * texel_size.zw, 1e-5, 1.0);\n    vec2 tx = uv * texel_size.zw - 0.5 * boxSize;\n    vec2 txOffset = smoothstep(vec2(1.0) - boxSize, vec2(1.0), fract(tx));\n    return (floor(tx) + 0.5 + txOffset) * texel_size.xy;\n}\n\nvec4 GetPixelArtSample(vec2 uv)\n{\n    return textureGrad(tex0, GetPixelArtUV(uv), dFdx(v_texCoord), dFdy(v_texCoord));\n}\n\n\nvoid main()\n{\n    gl_FragColor = SamplePaletteLinear(GetPixelArtUV(v_texCoord)) * v_color;\n}
 varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nuniform vec4 texel_size; // texel size (xy: texel size, zw: texture dimensions)\n\nvec2 GetPixelArtUV(vec2 uv)\n{\n    vec2 boxSize = clamp(fwidth(uv) * texel_size.zw, 1e-5, 1.0);\n    vec2 tx = uv * texel_size.zw - 0.5 * boxSize;\n    vec2 txOffset = smoothstep(vec2(1.0) - boxSize, vec2(1.0), fract(tx));\n    return (floor(tx) + 0.5 + txOffset) * texel_size.xy;\n}\n\nvec4 GetPixelArtSample(vec2 uv)\n{\n    return textureGrad(tex0, GetPixelArtUV(uv), dFdx(v_texCoord), dFdy(v_texCoord));\n}\n\n\nvoid main()\n{\n    gl_FragColor = GetPixelArtSample(v_texCoord);\n    gl_FragColor *= v_color;\n}
 varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nuniform vec4 texel_size; // texel size (xy: texel size, zw: texture dimensions)\n\nvec2 GetPixelArtUV(vec2 uv)\n{\n    vec2 boxSize = clamp(fwidth(uv) * texel_size.zw, 1e-5, 1.0);\n    vec2 tx = uv * texel_size.zw - 0.5 * boxSize;\n    vec2 txOffset = smoothstep(vec2(1.0) - boxSize, vec2(1.0), fract(tx));\n    return (floor(tx) + 0.5 + txOffset) * texel_size.xy;\n}\n\nvec4 GetPixelArtSample(vec2 uv)\n{\n    return textureGrad(tex0, GetPixelArtUV(uv), dFdx(v_texCoord), dFdy(v_texCoord));\n}\n\n\nvoid main()\n{\n    gl_FragColor = GetPixelArtSample(v_texCoord);\n    gl_FragColor.a = 1.0;\n    gl_FragColor *= v_color;\n}
+vertical-text
 vertices
 verystrict
 vfork
@@ -6560,3 +6574,5 @@ xmonad
 xpad
 yidqk
 zenity
+zoom-in
+zoom-out
