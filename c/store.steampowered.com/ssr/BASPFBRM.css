@@ -16500,7 +16500,7 @@ html.touch .eXdQIQlDIzE- .rfUn9L2Khic-,
   pointer-events: none;
   background: #000;
 }
-.Acv6ZIJxoFk-._7QBdLN5HD9A-,
+.Acv6ZIJxoFk-.E-65We4PMeg-,
 .Acv6ZIJxoFk-.oFuClJZIqYM- {
   transition: height 0.23s ease-in-out;
   height: auto;
@@ -25926,6 +25926,7 @@ html.responsive.touch .khI3dKnN9c8-._8DtxCZWrOkc- {
 .S98CfzE64Ec- {
   display: flex;
   align-items: center;
+  gap: 4px;
   flex-shrink: 0;
   border-radius: 2px;
   padding: 5px 8px;
@@ -25972,7 +25973,7 @@ html.responsive.touch .khI3dKnN9c8-._8DtxCZWrOkc- {
   flex-shrink: 0;
   width: 8px;
   height: 8px;
-  margin-inline-start: 6px;
+  margin-inline-start: 2px;
   fill: #9dacbc;
 }
 @media screen and (max-width: 910px) {
@@ -26357,7 +26358,7 @@ html:has(dialog.BtC3iFY66lw-[open]) {
 }
 .LSY1zV2DJSM- {
   display: grid;
-  grid-template-columns: fit-content(0) 292px 1fr auto;
+  grid-template-columns: fit-content(0) 288px 1fr auto;
   grid-template-rows: 30px 32px auto;
   grid-template-areas: "dragger capsule title remove" "dragger capsule mid mid" "dragger capsule lower purchase";
   gap: 2px 12px;
@@ -26391,7 +26392,7 @@ html:has(dialog.BtC3iFY66lw-[open]) {
   background-color: #0e141b66;
 }
 .LSY1zV2DJSM-.XNnjz6jit-E- {
-  grid-template-columns: fit-content(0) 162px auto auto;
+  grid-template-columns: fit-content(0) 150px auto auto;
   grid-template-rows: 28px 24px auto;
   grid-template-areas: "dragger capsule title remove" "dragger capsule mid purchase" "dragger capsule lower purchase";
   gap: 2px 12px;
@@ -26432,13 +26433,13 @@ html:has(dialog.BtC3iFY66lw-[open]) {
   }
 }
 html.responsive.GamepadMode .LSY1zV2DJSM-:not(.XNnjz6jit-E-) {
-  grid-template-columns: fit-content(0) 292px 1fr auto;
+  grid-template-columns: fit-content(0) 288px 1fr auto;
   grid-template-rows: 32px 24px 40px auto;
   grid-template-areas: "dragger capsule title title" "dragger capsule mid mid" "dragger capsule tags tags" "dragger capsule lower purchase";
 }
 @media screen and (max-width: 910px) {
   .LSY1zV2DJSM-:not(.XNnjz6jit-E-) {
-    grid-template-columns: fit-content(0) 292px 1fr auto;
+    grid-template-columns: fit-content(0) 288px 1fr auto;
     grid-template-rows: 32px 24px 40px auto;
     grid-template-areas: "dragger capsule title title" "dragger capsule mid mid" "dragger capsule tags tags" "dragger capsule lower purchase";
   }
@@ -26545,11 +26546,6 @@ html.responsive.GamepadMode .LSY1zV2DJSM-:not(.XNnjz6jit-E-) {
 }
 .LSY1zV2DJSM-.XNnjz6jit-E- {
   padding: 4px;
-}
-.LSY1zV2DJSM-.XNnjz6jit-E- .oVvbc-NOBF8-,
-.LSY1zV2DJSM-.XNnjz6jit-E- .oVvbc-NOBF8- .S4P-Tu6KIaQ- {
-  width: 162px;
-  height: 75px;
 }
 @media screen and (max-width: 700px) {
   .LSY1zV2DJSM-.XNnjz6jit-E- .oVvbc-NOBF8- {
@@ -29155,17 +29151,33 @@ body.in_global_drag .title-area {
 .AHPZRiL51P0- {
   display: flex;
 }
+.AHPZRiL51P0- .mzlfwmGWozc- {
+  max-width: 0;
+  overflow: hidden;
+  transition:
+    max-width 0.2s ease,
+    margin-inline-start 0.2s ease;
+}
+.AHPZRiL51P0- .mzlfwmGWozc-.C0WRs9Wkn6Q- {
+  max-width: 150px;
+  margin-inline-start: 5px;
+  overflow: unset;
+}
+.AHPZRiL51P0- .mzlfwmGWozc- button:focus-visible {
+  outline: 1px solid white;
+}
 .wJ3Q5pBP4TU- {
   flex-grow: 1;
   padding: 10px;
+  min-width: 100px;
   font-size: 14px;
   font-weight: 300;
-  line-height: 22px;
   border: none;
   border-radius: 3px;
   box-shadow: inset 0 0 #0000;
   background: #3b3f4880;
   color: #dfe3e6;
+  transition: flex-basis 0.2s ease;
 }
 .wJ3Q5pBP4TU-:focus,
 .wJ3Q5pBP4TU-:focus-within {
@@ -29363,7 +29375,8 @@ html.responsive.touch .jfAmlCmNzHQ- h2 {
   justify-content: space-between;
   width: 100%;
 }
-.mXEzovQA26E- .PxJocx32j8o- a {
+.mXEzovQA26E- .PxJocx32j8o- a,
+.mXEzovQA26E- .PxJocx32j8o- span {
   color: #67707b;
   font-size: 11px;
   box-sizing: border-box;
