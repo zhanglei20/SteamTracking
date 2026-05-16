@@ -150,7 +150,8 @@ body.v7 #footer .rule {
 }
 
 .carousel_container .carousel_thumbs > div {
-	height: 6px;
+	height: 8px;
+	border-radius: 6px;
 }
 
 .page_background_holder_mobile {
@@ -630,6 +631,7 @@ body.v7 .sale_capsule_carousel .carousel_items > * {
 }
 
 .home_pagecontent_ctn {
+	container-type: inline-size;
     max-width: 1300px;
 	box-sizing: border-box;
     margin-left: auto;
@@ -797,7 +799,6 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 	grid-template-areas:
     "title button"
     "subtitle button";
-	container-type: inline-size;
 	z-index: 1;
 	position: relative;
 	padding: 0 0 10px 0;
@@ -2925,7 +2926,6 @@ html.responsive .home_category_ctn .home_category_title_ctn {
 
 .home_title_ctn {
 	display: flex;
-	container-type: inline-size;
 	padding: 0px 0px 10px 0px;
 	flex-direction: column;
 }
@@ -4571,40 +4571,66 @@ html.responsive .content_hub_carousel_ctn .season_sale_feature_event_capsule {
 	top: 13%;
 }
 
+.carousel_container .arrow.right > div {
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/cut_arrow.svg' );
+	background-size: contain;
+}
+
+.carousel_container .arrow.left > div {
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/cut_arrow.svg' );
+	transform: rotate(180deg);
+	background-size: contain;
+}
+
+.carousel_container .arrow > div {
+	height: 50px;
+}
+
 .carousel_container .arrow {
 	transform: translateY(calc(-50% + 37px));
+	height: 50px;
 }
 
 .carousel_container .arrow.right {
 	right: -50px;
 	background: none;
-	transition: all .15s ease-in-out;
+	opacity: .7;
+	transition: opacity .2s ease-in-out;
 }
 
 .carousel_container .arrow.right:hover {
-	transform: translateY(calc(-50% + 37px)) scale(1.1);
+	transform: translateY(calc(-50% + 37px));
+	opacity: 1;
 	background: none;
 }
 
 .carousel_container .arrow.left {
 	left: -50px;
 	background: none;
-	transition: all .15s ease-in-out;
+	opacity: .7;
+	transition: opacity .2s ease-in-out;
 }
 
 .carousel_container .arrow.left:hover {
-	transform: translateY(calc(-50% + 37px)) scale(1.05);
+	transform: translateY(calc(-50% + 37px));
+	opacity: 1;
 	background: none;
 }
 
 .carousel_container.maincap .arrow.right:hover {
-	transform: translateY(calc(-50% + 37px)) scale(1.1);
+	transform: translateY(calc(-50% + 37px));
+	opacity: 1;
 	background: none;
 }
 
 .carousel_container.maincap .arrow.left:hover {
-	transform: translateY(calc(-50% + 37px)) translateX(0px) scale(1.1);
+	transform: translateY(calc(-50% + 37px)) translateX(0px);
+	opacity: 1;
 	background: none;
+}
+
+.carousel_container .carousel_thumbs > div.focus {
+	background-color: hsla(202,60%,100%,1);
 }
 
 /* Game Hover overrides */
