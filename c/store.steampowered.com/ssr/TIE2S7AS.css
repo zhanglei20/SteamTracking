@@ -26631,23 +26631,17 @@ html.responsive.GamepadMode .S0ymvFQzg-k- {
 }
 .DUS6KmDUKhc- {
   flex: 1;
-  display: grid;
-  grid-template-columns: min-content auto;
-  column-gap: 1ch;
-  grid-template-rows: auto;
+  display: flex;
+  gap: 5px;
   text-transform: uppercase;
   white-space: nowrap;
   font-size: 11px;
 }
 @media screen and (max-width: 910px) {
   html.responsive .DUS6KmDUKhc- {
-    display: flex;
-  }
-  html.responsive .DUS6KmDUKhc- .yrG419d95pU- {
-    display: none;
-  }
-  html.responsive .DUS6KmDUKhc- .mOoPKvox-wE- {
-    margin-right: 8px;
+    flex-direction: column;
+    gap: 0px;
+    margin-right: 4px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -26657,7 +26651,8 @@ html.responsive.GamepadMode .S0ymvFQzg-k- {
 }
 @media screen and (max-width: 910px) {
   html.responsive .XNnjz6jit-E- .DUS6KmDUKhc- {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 5px;
     justify-self: flex-start;
   }
 }
@@ -26665,6 +26660,9 @@ html.responsive.GamepadMode .S0ymvFQzg-k- {
   html.responsive.responsive .XNnjz6jit-E- .DUS6KmDUKhc- {
     display: none;
   }
+}
+.DUS6KmDUKhc- .yrG419d95pU- {
+  display: none;
 }
 .DUS6KmDUKhc- .mOoPKvox-wE- {
   white-space: nowrap;
@@ -26822,6 +26820,9 @@ html.responsive.GamepadMode .S0ymvFQzg-k- {
 .jHvUCZyctAM-.Ypx0AcKkoSM- {
   background-color: #89acd1;
   color: #1f2a39;
+}
+.jHvUCZyctAM-.Ypx0AcKkoSM-:hover {
+  background-color: #9cc3ed;
 }
 .p2qp0XfBE8M- {
   display: flex;
