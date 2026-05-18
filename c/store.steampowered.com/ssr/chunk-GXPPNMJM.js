@@ -1117,14 +1117,21 @@ function _(_) {
 }
 var _ = _.createContext(void 0);
 function _(_) {
-  let { filters: _, setFilters: _, sort: _, children: _ } = _,
+  let {
+      filters: _,
+      setFilters: _,
+      sort: _,
+      bLoadingFilters: _,
+      children: _,
+    } = _,
     _ = _.useMemo(
       () => ({
         filters: _,
         setFilters: _,
         sort: _,
+        bLoadingFilters: _,
       }),
-      [_, _, _],
+      [_, _, _, _],
     );
   return (0, _.jsx)(_.Provider, {
     value: _,
@@ -1132,8 +1139,8 @@ function _(_) {
   });
 }
 function _() {
-  let { filters: _, setFilters: _ } = _.useContext(_);
-  return [_, _];
+  let { filters: _, setFilters: _, bLoadingFilters: _ } = _.useContext(_);
+  return [_, _, _];
 }
 function _() {
   let { sort: _ } = _.useContext(_);
@@ -9746,17 +9753,16 @@ function _(_) {
       appid: _,
     }),
     _ = _(),
-    _ = _[_] === _.k_EWishlistSort_ReviewScore,
     _ = _[_] === _.k_EWishlistSort_ReleaseDate,
-    _ = (_?.is_coming_soon || _) && !_;
+    _ = _?.is_coming_soon || _;
   return (0, _.jsxs)("div", {
     className: _,
     children: [
-      !_ &&
+      _ &&
         (0, _.jsx)(_, {
           appid: _,
         }),
-      _ &&
+      !_?.is_coming_soon &&
         (0, _.jsx)(_, {
           appid: _,
         }),
@@ -9891,7 +9897,14 @@ function _(_) {
       appid: _.appid,
     }),
     { data: _ } = _(_),
-    _ = _ && _?.is_early_access ? 4 : 5;
+    _ = _ && _?.is_early_access ? 4 : 5,
+    [_, _, _] = _(),
+    _ = _ ? [] : _.rgTagFilters,
+    _ = new Set(_),
+    _ = _.concat(_?.map((_) => _.tagid).filter((_) => !_.has(_)) ?? []).slice(
+      0,
+      _,
+    );
   return (0, _.jsxs)("div", {
     className: _,
     children: [
@@ -9899,23 +9912,22 @@ function _(_) {
         className: _,
         children: _.Localize("#wishlist_controls_tags_header"),
       }),
-      _?.slice(0, _).map((_) =>
+      _.map((_) =>
         (0, _.jsx)(
           _,
           {
-            tag: _,
+            tagID: _,
           },
-          _.tagid,
+          _,
         ),
       ),
     ],
   });
 }
 function _(_) {
-  let { tag: _ } = _,
+  let { tagID: _ } = _,
     [_, _] = _(),
     _ = _(),
-    _ = _.tagid,
     _ = _.rgTagFilters.includes(_),
     _ = _.useCallback(
       () =>
@@ -10800,6 +10812,7 @@ function _(_) {
           filters: _,
           setFilters: _,
           sort: _,
+          bLoadingFilters: _,
           children: [
             (0, _.jsx)(_, {
               filters: _,
@@ -11031,9 +11044,7 @@ function _(_) {
   let _;
   if (_.tagID) {
     let _ = (0, _.jsx)(_, {
-      tag: {
-        tagid: _.tagID,
-      },
+      tagID: _.tagID,
     });
     _ = _.LocalizeReact(
       _.cTagMatches > 1
