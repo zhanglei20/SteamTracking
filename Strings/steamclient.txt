@@ -5373,7 +5373,6 @@ $steammessages_parental_objects.proto"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}d
 +.CAudio_SupportsUseBluetoothForMic_Response
 +.CAuthenticationSupport_RevokeToken_Request
 +.CAuthentication_GetAuthSessionInfo_Request
@@ -8104,15 +8103,15 @@ $steammessages_parental_objects.proto"
 00000001
 00003333
 00:00:00
-00|000
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00|000
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0`
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFpb
 0123456789abcdef
 08bX
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
@@ -11663,11 +11662,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13767,6 +13766,7 @@ $steammessages_parental_objects.proto"
 33CAdapterSteamNetworkingSockets009
 33CAdapterSteamNetworkingSockets011
 33CAdapterSteamNetworkingSockets012
+33CAdapterSteamNetworkingSockets013
 33CAudio_GetHdmiCecEnabled_Response
 33CAudio_SendHdmiCecVolume_Response
 33CAudio_SetHdmiCecEnabled_Response
@@ -17117,6 +17117,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -19904,6 +19905,7 @@ CGetCompatToolBucketJob for %s starting.
 CGetCompatToolBucketJob for %s: not installed or other error, early out.
 CGetControllerConnectionState
 CGetControllerInfoWorkItem::RunFunc: Read failure.\n
+CGetControllerInfoWorkItem::RunFunc: timeout\n
 CGetControllerInfoWorkItem::RunFunc: too many read failures.
 CGetCursorImageMsg
 CGetDockedControllerActiveSlotWorkItem
@@ -22979,7 +22981,6 @@ ControllerActiveConfigMsg
 ControllerBindings
 ControllerConfigResponse
 ControllerConfigUsage
-ControllerData.m_ulSerialNumber != STEAM_CONTROLLER_HANDLE_ALL_CONTROLLERS
 ControllerGyroEulerAngles
 ControllerPersonalization
 ControllerQuaternion
@@ -25938,7 +25939,6 @@ Finding FOZ pipeline cache files for archive version %u, base directory: %s.
 Finding Mesa %s cache files, base directory: %s.
 Finding Mesa SF caches, base directory: %s.
 Finding NVIDIA cache files, base directory: %s.
-Fingerprint check failed: %x vs. %x
 Finish method returned eresult %d\n
 FinishDepotUpload
 FinishStreamingSession
@@ -27435,7 +27435,6 @@ Google Swiftshader
 Google.Protobuf.Reflection
 Gospel
 Got %d download sources and %d caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID %d / Launcher %d)
-Got %s expected %s\n
 Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got SDR config revision %d from %s\n
@@ -27471,6 +27470,7 @@ Gray color space not permitted on RGB PNG
 Greek
 Greenlight Items
 GreenlightItems
+Grip Pulse: eSide: %u, nStrength: %d, nRepeats: %d, nFlags: %d\n
 Group
 Group HTTP metrics by hostname.  Careful, the cardinality of your in-memory map might be large.
 GroupChatMessageNotification_t
@@ -28123,8 +28123,8 @@ IdUsage
 IdVersion
 IdempotencyLevel
 IdentifyControllerRumbleEffect
+Identity %s isn't valid for Messages sessions.
 Identity is blank
-Identity isn't valid for Messages sessions.
 IdleAction
 IdleActionUSec
 IdleHint
@@ -29868,7 +29868,8 @@ Message from relay session %u mapped to %s, but that connection has no Transport
 Message is too deep, the parser exceeded the configured recursion limit of
 Message missing required fields:
 Message of type "
-Message size %d is too big.  Max is %d
+Message size %d is too big.  Max internal size is %d
+Message size %u is too big.  Max is %d
 Message type "
 Message type %d wasn't declared, but we registered job %s to handle it?\n
 Message"
@@ -34214,6 +34215,7 @@ SNP decode first reliable stream pos underflow.  %llx mod %llx, expected next %l
 SNP decode overrun %d bytes for %s segment data.
 SNP decode overrun, %d bytes for %s
 SNP decode unreliable msgnum underflow.  %llx mod %llx, highest seen %llx
+SNP stop waiting advanced past sentinel gap.  This should never happen!
 SNP stop waiting reduced %lld (pkt %lld) -> %lld (pkt %lld)
 SNP_SendPacket
 SNetAPI
@@ -36230,6 +36232,7 @@ SteamNetworkingSockets009
 SteamNetworkingSockets010
 SteamNetworkingSockets011
 SteamNetworkingSockets012
+SteamNetworkingSockets013
 SteamNetworkingSocketsCert_t
 SteamNetworkingSocketsInterface()->m_keyPrivateKey.IsValid()
 SteamNetworkingSocketsLowLevelDecRef
@@ -37826,6 +37829,7 @@ Unencrypted
 Unencrypted addresses only allowed to 'dev' POPID
 Unexpected AvailAnyRouterCommunication %d
 Unexpected EGameFrameRateReportingPreference value: %d\n
+Unexpected IPV6_TCLASS cmsg_len %lld
 Unexpected IP_TOS cmsg_len %lld
 Unexpected NoConnection
 Unexpected P2PSessionError %d
@@ -45465,6 +45469,7 @@ control command failed
 control=mangohud\n
 controller
 controllerData
+controllerInfo.m_ulSerialNumber != STEAM_CONTROLLER_HANDLE_ALL_CONTROLLERS
 controllerPath
 controllerType
 controller_8bitdo
@@ -48354,6 +48359,7 @@ gamma value does not match sRGB
 gamma value out of range
 gapFilled->first < gapFilled->second
 gapFilled->first <= nSegBegin
+gapFilled->second > nSegBegin
 gap_ms
 gateway
 gatt-manager1
@@ -48446,7 +48452,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenhw
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -48650,6 +48656,9 @@ gray[16] color-map: too few entries
 gray[8] color-map: too few entries
 greek
 greeting
+grip_sense_haptic_test
+grip_sense_haptic_test_repeats
+grip_sense_haptic_test_strength
 group
 group details changed
 group name must start with a non-digit
@@ -53241,7 +53250,7 @@ low-pri yield - ../clientdll/clientjob.cpp:440
 low-pri yield - ../clientdll/clientjob.cpp:471
 low-pri yield - ../clientdll/clientjob.cpp:780
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:6900
+low-pri yield - ../clientdll/clientugc.cpp:6912
 low-pri yield - ../clientdll/compatmanager.cpp:1973
 low-pri yield - ../clientdll/compatmanager.cpp:2224
 low-pri yield - ../clientdll/compatmanager.cpp:2491
@@ -56239,10 +56248,7 @@ nSDR_POPID
 nSRecord
 nScanCode < V_ARRAYSIZE( s_HidToXKeySym)
 nScore >= 0 || m_vecAvailableTransports.size() == 1
-nSegBegin < gapFilled->second
 nSegBegin < nSegEnd
-nSegBegin > gapFilled->first
-nSegEnd < gapFilled->second
 nSeq >= GetSeqStart() && nSeq <= GetSeqEnd()
 nSeq >= m_nSeqFirstUnacked && nSeq < ( m_nSeqFirstUnacked + k_nMaxUnackedPkts )
 nSeqStart <= nSeqEnd
@@ -60582,6 +60588,7 @@ socketaddress.cc
 socketpair
 socketpair() call failed.  Error code 0x%08x.
 sockopt(IPPROTO_IP, IP_RECVTOS, 1) failed (0x%x), will not be able to read TOS\n
+sockopt(IPPROTO_IPV6, IPV6_RECVTCLASS, 1) failed (0x%x), will not be able to read TOS for IPv6 packets\n
 soco
 soft_press
 soft_press_sytle
@@ -60927,7 +60934,7 @@ stderr
 stdin
 stdout
 steam
-steam May 14 2026 23:17:22
+steam May 19 2026 01:26:36
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -61329,6 +61336,7 @@ stime went backwards?
 stoken
 stop using I64/I32, use lld or d respectively
 stop_waiting offset
+stop_waiting past sentinel gap
 stop_waiting pktNum %llu offset %llu
 storage1
 storage_system
