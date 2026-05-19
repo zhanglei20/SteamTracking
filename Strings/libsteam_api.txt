@@ -14,6 +14,7 @@
  volatile
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
+%BtwB0Oo
 %llu
 %s/.steam/%s
 %s/.steam/steam
@@ -27,7 +28,6 @@
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGstd::exception
-++CCUNGy
 /dev/random
 /dev/urandom
 /proc/self/cmdline
@@ -1059,7 +1059,7 @@ SteamAPI_SteamFriends_v018
 SteamAPI_SteamGameServerHTTP_v003
 SteamAPI_SteamGameServerInventory_v003
 SteamAPI_SteamGameServerNetworkingMessages_SteamAPI_v002
-SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v012
+SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v013
 SteamAPI_SteamGameServerNetworking_v006
 SteamAPI_SteamGameServerStats_v001
 SteamAPI_SteamGameServerUGC_v021
@@ -1118,7 +1118,7 @@ SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID
 SteamAPI_SteamNetworkingIdentity_ToString
 SteamAPI_SteamNetworkingMessage_t_Release
 SteamAPI_SteamNetworkingMessages_SteamAPI_v002
-SteamAPI_SteamNetworkingSockets_SteamAPI_v012
+SteamAPI_SteamNetworkingSockets_SteamAPI_v013
 SteamAPI_SteamNetworkingUtils_SteamAPI_v004
 SteamAPI_SteamNetworking_v006
 SteamAPI_SteamParentalSettings_v001
@@ -1182,7 +1182,7 @@ SteamMatchMakingServers002
 SteamMiniDumpInit
 SteamNetworking006
 SteamNetworkingMessages002
-SteamNetworkingSockets012
+SteamNetworkingSockets013
 SteamNetworkingUtils004
 SteamOverlayGameId
 SteamParties002
