@@ -2783,6 +2783,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3048,8 +3049,7 @@
           let _ = (0, _.sfN)(_._.LANGUAGE);
           _.BIsLanguageValidForRealms(_) ||
             (_ = _.BInRealmGlobal() ? _.Bhc : _.ZLm);
-          let _ = [_.GetImageURLWithFallback("capsule", _)],
-            _ = _.GetNameWithFallback(_);
+          let _ = _.GetNameWithFallback(_);
           const _ = _.BHasSubTitle(_),
             _ = !0,
             _ = _.BHasSaleEnabled(),
@@ -3145,13 +3145,10 @@
                 (0, _.jsxs)("div", {
                   className: _.TileEventRow,
                   children: [
-                    (0, _.jsx)("div", {
-                      className: _.TileImageCtn,
-                      onClick: (_) => this.OnFallbackClick(_),
-                      children: (0, _.jsx)(_._, {
-                        className: _.TileImage,
-                        srcs: _,
-                      }),
+                    (0, _.jsx)(_, {
+                      fnOnFallbackClick: this.OnFallbackClick,
+                      lang: _,
+                      eventModel: _,
                     }),
                     (0, _.jsx)("div", {
                       className: _.TileTextContainer,
@@ -3287,6 +3284,18 @@
           });
         }
       };
+      function _(_) {
+        const { fnOnFallbackClick: _, eventModel: _, lang: _ } = _;
+        let _ = [(0, _._)(_, "capsule", _)];
+        return (0, _.jsx)("div", {
+          className: _.TileImageCtn,
+          onClick: (_) => _(_),
+          children: (0, _.jsx)(_._, {
+            className: _.TileImage,
+            srcs: _,
+          }),
+        });
+      }
       (0, _._)([_._], _.prototype, "OnFallbackClick", null),
         (0, _._)([_._], _.prototype, "OnGotoPage", null),
         (0, _._)([_._], _.prototype, "OnIgnoreFallbackClick", null),
@@ -14281,76 +14290,64 @@
           });
         }
       };
-      (0, _._)([_._], _.prototype, "OnURLUpdate", null),
-        (_ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              langOverride: this.props.lang,
-            });
-        }
-        OnArtworkLangChange(_, _, _) {
-          const { section: _ } = this.props;
-          _._.GetExtensionString(_) && _.SetImage(_._.GetHashAndExt(_), _),
-            this.setState(
-              {
-                langOverride: _,
-              },
-              () => _.SetImage(null, _),
-            );
-        }
-        render() {
-          const {
+      function _(_) {
+        const {
             clanSteamID: _,
             section: _,
             lang: _,
             bEditor: _,
             artworkType: _,
-          } = this.props;
-          let _ = _.GetImageURLWithFallback(this.state.langOverride, _),
-            _ = _.BHasSomeImage(),
-            _ = _._[_];
-          const _ = _._.GetEditModel();
-          return (0, _.jsxs)("div", {
-            className: _.ImagePreview,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.FullImageCtn,
-                children: [
-                  (0, _.jsx)("img", {
-                    width: _ ? (0, _._)(_.width) : void 0,
-                    height: _ ? (0, _._)(_.height) : void 0,
-                    src: _,
-                  }),
-                  Boolean(_) &&
-                    (0, _.jsx)(_, {
-                      section: _,
-                      clanSteamID: _,
-                      lang: _,
-                      artworkType: _,
-                    }),
-                ],
-              }),
-              _ &&
-                (0, _.jsx)(_._, {
-                  clanSteamID: _,
-                  langOverride: this.state.langOverride,
-                  fnGetImageHash: (_) => _.GetImageHash(_),
-                  fnOnLanguagePreviewChange: (_) =>
-                    this.setState({
-                      langOverride: _,
-                    }),
-                  fnOnRemoveImage: (_) => _.SetImage(null, _),
-                  fnOnArtworkLangChange: this.OnArtworkLangChange,
-                  realms: _.GetIncludedRealmList(),
-                  fnLangHasData: _.BHasTitleImage,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _._.GetEditModel(),
+          _ = _.useCallback(
+            (_, _, _) => {
+              _._.GetExtensionString(_) &&
+                __webpack_require__.SetImage(_._.GetHashAndExt(_), _),
+                _(_);
+            },
+            [_],
+          ),
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.BHasSomeImage(),
+            _._[_],
+            __webpack_require__.GetEmailImageURLWithFallback(_, _),
+          ]);
+        return (0, _.jsxs)("div", {
+          className: _.ImagePreview,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.FullImageCtn,
+              children: [
+                (0, _.jsx)("img", {
+                  width: _ ? (0, _._)(_.width) : void 0,
+                  height: _ ? (0, _._)(_.height) : void 0,
+                  src: _,
                 }),
-            ],
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnArtworkLangChange", null),
+                Boolean(_) &&
+                  (0, _.jsx)(_, {
+                    section: _,
+                    clanSteamID: _,
+                    lang: _,
+                    artworkType: _,
+                  }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                clanSteamID: _,
+                langOverride: _,
+                fnGetImageHash: (_) => __webpack_require__.GetImageHash(_),
+                fnOnLanguagePreviewChange: (_) => _(_),
+                fnOnRemoveImage: (_) => __webpack_require__.SetImage(null, _),
+                fnOnArtworkLangChange: _,
+                realms: _.GetIncludedRealmList(),
+                fnLangHasData: _.BHasTitleImage,
+              }),
+          ],
+        });
+      }
+      (0, _._)([_._], _.prototype, "OnURLUpdate", null),
         (_ = (0, _._)([_._], _));
       let _ = class extends _.Component {
         constructor(_) {

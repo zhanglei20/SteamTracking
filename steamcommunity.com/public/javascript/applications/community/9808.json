@@ -271,5 +271,6 @@
     "Economy_Market_TopLevelReason_NoSteamGuard": "Your account must be protected by Steam Guard for at least %1$s days.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "You must enable Steam Guard on your account. Please ensure that your email is verified and you have logged into your account twice after enabling Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Your account must be protected by Steam Guard for at least %1$s days.",
-    "Economy_Market_HeaderTip_TimeCanUse": "If nothing further occurs to restrict your access, you'll be able to use The Community Market on %1$s"
+    "Economy_Market_HeaderTip_TimeCanUse": "If nothing further occurs to restrict your access, you'll be able to use The Community Market on %1$s",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Your account is on a temporary cooldown from trade and market features."
 }

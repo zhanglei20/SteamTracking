@@ -312,14 +312,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 30;
       function _(_) {
         const {
@@ -332,23 +333,21 @@
             bHidePrices: _,
           } = _,
           _ = (0, _._)(_.appid),
-          [_, _, _, _, _, _] = (0, _._)(() => {
-            const _ = _ || (0, _.sfN)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.full);
-            return [
+          _ = _ || (0, _.sfN)(_._.LANGUAGE),
+          _ =
+            (0, _._)(
+              void 0 !== _ ? void 0 : _,
+              "capsule",
               _,
-              _.GetNameWithFallback(_) || "",
-              _.GetCategoryAsString(),
-              _.GetSummaryWithFallback(_),
-              _,
-              _.GetSubTitleWithLanguageFallback(_) || "",
-            ];
-          }),
+              _._.capsule_main,
+            ) ?? _,
+          _ = (0, _._)(void 0 !== _ ? void 0 : _, "capsule", _, _._.full) ?? _,
+          [_, _, _, _] = (0, _._)(() => [
+            _.GetNameWithFallback(_) || "",
+            _.GetCategoryAsString(),
+            _.GetSummaryWithFallback(_),
+            _.GetSubTitleWithLanguageFallback(_) || "",
+          ]),
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = [];
@@ -525,18 +524,22 @@
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = (0, _.sfN)(_._.LANGUAGE),
-          [_, _, _, _, _] = (0, _._)(() =>
+          _ =
+            (0, _._)(
+              void 0 !== _ ? void 0 : _,
+              "capsule",
+              _,
+              _._.capsule_main,
+            ) ?? _,
+          [_, _, _, _] = (0, _._)(() =>
             _
               ? [
-                  void 0 !== _
-                    ? _
-                    : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
                   _.GetNameWithFallback(_),
                   _.GetCategoryAsString(),
                   _.GetSubTitleWithLanguageFallback(_),
                   _.GetSummaryWithFallback(_),
                 ]
-              : [void 0, void 0, void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0],
           );
         if (!_)
           return (0, _.jsx)("div", {
@@ -556,10 +559,9 @@
             (0, _.jsx)("div", {
               className: _().OtherEvents_ContentCtn,
               children: (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().OtherEvents_MainImageCtn,
-                  _ && _().MaskImages,
-                ),
+                className: (0, _._)(_().OtherEvents_MainImageCtn, {
+                  [_().MaskImages]: _,
+                }),
                 children: (0, _.jsx)(_._, {
                   rgSources: _,
                   className: _().OtherEvents_MainImage,
@@ -632,6 +634,7 @@
             hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
+            disableScreenshots: _,
             children: _,
           } = _,
           _ = _.useRef(null),
@@ -641,13 +644,16 @@
               _ &&
                 (_ && _(!0),
                 window.GameHover &&
+                  (_.current &&
+                    _ &&
+                    (_.current.dataset.hoverDisableScreenshots = "true"),
                   window.GameHover(_ ? _() : _.current, _, "global_hover", {
                     type: _,
                     _: (0, _._)(_)._,
                     _: 1,
-                  }));
+                  })));
             },
-            [_, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {

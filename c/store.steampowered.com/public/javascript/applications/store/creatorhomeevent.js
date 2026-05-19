@@ -1400,6 +1400,7 @@
           return !1;
         }
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, bIsPreview: _ } = _;
         let _ = _.jsondata.sale_background_video_webm,
@@ -1442,10 +1443,8 @@
       function _(_) {
         const { event: _, language: _, children: _, bIsPreview: _ } = _,
           _ = _.useRef(null),
-          [_, _] = (0, _._)(() => [
-            _.GetImageURLWithFallback("sale_header", _),
-            _.jsondata.sale_sub_menu,
-          ]);
+          _ = (0, _._)(_, "sale_header", _),
+          [_] = (0, _._)(() => [_.jsondata.sale_sub_menu]);
         _.useEffect(() => {
           if (!_) return;
           const _ = new Image();
@@ -1543,19 +1542,25 @@
             ? (0, _.jsx)("a", {
                 className: _().SalePageLogoCtn,
                 href: _._.STORE_BASE_URL + _,
-                children: (0, _.jsx)("img", {
-                  src: _.GetImageURLWithFallback("sale_logo", _),
-                  alt: "logo",
+                children: (0, _.jsx)(_, {
+                  ..._,
                 }),
               })
             : (0, _.jsx)("div", {
                 className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
-                children: (0, _.jsx)("img", {
-                  src: _.GetImageURLWithFallback("sale_logo", _),
-                  alt: "logo",
+                children: (0, _.jsx)(_, {
+                  ..._,
                 }),
               })
           : null;
+      }
+      function _(_) {
+        const { eventModel: _, language: _ } = _,
+          _ = (0, _._)(_, "sale_logo", _);
+        return (0, _.jsx)("img", {
+          src: _,
+          alt: "logo",
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2905,7 +2910,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             event: _,
@@ -2923,34 +2929,22 @@
             [_, _],
           ),
           _ = _ || (0, _.sfN)(_._.LANGUAGE),
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetSummaryWithFallback(_),
             _.GetNameWithFallback(_),
-            _.GetCategoryAsString(),
             _.BShowLibrarySpotlightText(),
           ]);
-        let _ = new Array();
-        (_ =
-          void 0 !== _
-            ? [_]
-            : 2434320 == _.appid || _._.EUNIVERSE == _._
-              ? _
-                ? _.GetImageForSizeAsArrayWithFallback(
-                    "localized_store_app_spotlight_mobile",
-                    _,
-                    _._.full,
-                  )
-                : _.GetImageForSizeAsArrayWithFallback(
-                    "localized_store_app_spotlight",
-                    _,
-                    _._.full,
-                  )
-              : _.GetImageForSizeAsArrayWithFallback(
-                  "spotlight",
-                  _,
-                  _._.spotlight_main,
-                )),
-          _ && (_ = _(_));
+        let _ = "spotlight",
+          _ = _._.spotlight_main;
+        (2434320 != _.appid && _._.EUNIVERSE != _._) ||
+          ((_ = _
+            ? "localized_store_app_spotlight_mobile"
+            : "localized_store_app_spotlight"),
+          (_ = _._.full));
+        let _ =
+          (0, _._)(void 0 !== _ ? void 0 : _, _, _, _) ??
+          (void 0 !== _ ? [_] : []);
+        _ && _ && (_ = _(_));
         const _ = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsx)("div", {
@@ -5787,7 +5781,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5852,19 +5845,16 @@
         const _ =
           _.visibility_state !== _._.k_EEventStateVisible &&
           _.visibility_state !== _._.k_EEventStateUnlisted;
-        return (0, _.jsx)(_._, {
-          navID: "StoreSalePageRoot",
-          children: (0, _.jsx)(_, {
-            eventModel: _,
+        return (0, _.jsx)(_, {
+          eventModel: _,
+          children: (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
+              curator_clanid: _?.clanSteamID?.GetAccountID(),
               children: (0, _.jsx)(_._, {
-                curator_clanid: _?.clanSteamID?.GetAccountID(),
-                children: (0, _.jsx)(_._, {
-                  promotionName: _,
-                  language: _,
-                  eventModel: _,
-                  bIsPreview: _,
-                }),
+                promotionName: _,
+                language: _,
+                eventModel: _,
+                bIsPreview: _,
               }),
             }),
           }),

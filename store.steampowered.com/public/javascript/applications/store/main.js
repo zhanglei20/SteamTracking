@@ -7752,33 +7752,6 @@
         }, [t, r, e]);
       }
     },
-    12447: (e, t, r) => {
-      "use strict";
-      r.d(t, { u: () => u });
-      var i = r(7850),
-        n = r(8871),
-        s = r(90626),
-        a = r(78327),
-        o = r(85585),
-        l = r(7445),
-        c = r(87133);
-      const u = s.forwardRef(function (e, t) {
-        const { children: r, navTreeRef: u, ...m } = e,
-          d = s.useRef(void 0),
-          g = (0, n.Ue)(d, u),
-          p = (0, a.Qn)(),
-          _ = (0, c.AO)("__nav_tree_root");
-        return (0, i.jsx)(o.B2, {
-          ...m,
-          navTreeRef: g,
-          ref: t,
-          parentEmbeddedNavTree: _,
-          disabledRoot: !p,
-          historyMode: "navigationapi",
-          children: (0, i.jsx)(l.q, { disableFocusRing: !p, children: r }),
-        });
-      });
-    },
     65233: (e, t, r) => {
       "use strict";
       r.d(t, { QI: () => c, VQ: () => o, Vu: () => l });
@@ -9329,28 +9302,29 @@
         Yo: () => N,
       });
       var i = r(34629),
-        n = r(88006),
-        s = r(69817),
-        a = r(91986),
-        o = r(81393),
-        l = r(6419),
+        n = r(91986),
+        s = r(81393),
+        a = r(6419),
+        o = r(94104),
+        l = r(69817),
         c = r(6144),
         u = r(60778);
       var m = r(45730),
-        d = r(87133),
-        g = r(56011);
-      function p(e, t, r) {
+        d = r(88006),
+        g = r(87133),
+        p = r(56011);
+      function _(e, t, r) {
         const i = [],
           [n, s] = e.GetChildren(),
           a = e.GetActiveChild();
         let o;
         const l = a ? a.Element?.getBoundingClientRect() : null;
         if (a) {
-          const e = f(a, t, r);
+          const e = b(a, t, r);
           if (
             e &&
             !e.offScreen &&
-            ((o = _(a, e, e.overlap, r)), o && !o.visibility.offScreen)
+            ((o = h(a, e, e.overlap, r)), o && !o.visibility.offScreen)
           )
             return o;
           e && i.push({ child: a, visibility: e });
@@ -9359,33 +9333,33 @@
         for (let e = 0; e < n.length; e++) {
           const r = n[e];
           if (r == a) continue;
-          const s = f(r, t, c ?? void 0);
+          const s = b(r, t, c ?? void 0);
           s && i.push({ child: r, visibility: s });
         }
         let u;
-        i.sort(h);
+        i.sort(f);
         for (const e of i) {
           const { child: r, visibility: i } = e;
           if (i.offScreen && u) {
             if (!u.visibility.offScreen) break;
             if (i.distance && i.distance > u.visibility.distance) break;
           }
-          const n = r == a ? o : _(r, i, i.overlap || t, c ?? void 0);
-          n && (!u || h(n, u) < 0) && (u = n);
+          const n = r == a ? o : h(r, i, i.overlap || t, c ?? void 0);
+          n && (!u || f(n, u) < 0) && (u = n);
         }
         return u;
       }
-      function _(e, t, r, i) {
+      function h(e, t, r, i) {
         switch (e.GetFocusable()) {
           case "none":
             return;
           case "children":
-            return p(e, t.overlap || r, i);
+            return _(e, t.overlap || r, i);
           case "self":
             return { child: e, visibility: t };
         }
       }
-      function h(e, t) {
+      function f(e, t) {
         const r = e.visibility,
           i = t.visibility;
         return r.offScreen
@@ -9396,7 +9370,7 @@
             ? -1
             : r.distance - i.distance;
       }
-      function f(e, t, r) {
+      function b(e, t, r) {
         const i = e.Element?.getBoundingClientRect(),
           n = e.GetFocusable();
         let s;
@@ -9417,7 +9391,7 @@
               return { offScreen: "bottom", distance: e - t.bottom };
             if (r < t.left) return { offScreen: "left", distance: t.left - r };
           }
-          r && (s = (0, g.bZ)(i, r));
+          r && (s = (0, p.bZ)(i, r));
         } else if ("children" == n) {
           const r = e.Element;
           if (!r) return null;
@@ -9445,8 +9419,7 @@
           distance: s,
         };
       }
-      var b = r(25489),
-        B = r(94104);
+      var B = r(25489);
       class y {
         m_options;
         m_msStart;
@@ -9530,7 +9503,7 @@
         m_propTargets;
         m_props = {};
         constructor(e, t, r) {
-          super("ownerDocument" in e ? B.qf(e) : e, r),
+          super("ownerDocument" in e ? o.qf(e) : e, r),
             (this.m_object = e),
             (this.m_propTargets = t);
         }
@@ -9660,75 +9633,75 @@
           S("Scrolling Into View:", t);
         let s = [],
           a = t,
-          o = R(t),
-          l = n ?? Number.MAX_VALUE;
+          l = R(t),
+          c = n ?? Number.MAX_VALUE;
         for (; a; ) {
-          let e = (0, B._f)(a);
-          e || (e = (0, B.qf)(a));
+          let e = (0, o._f)(a);
+          e || (e = (0, o.qf)(a));
           let t = T(a),
             r = x(e, R(e)),
-            c = L(e),
-            u = { element: e, left: 0, top: 0 };
+            u = L(e),
+            m = { element: e, left: 0, top: 0 };
           if (
             (S(
               "Checking scroll div",
               e,
-              `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${c.scrollLeft} of ${c.MaxScrollLeft()}, adjusted =>`,
+              `scroll y:${u.scrollTop} of ${u.MaxScrollTop()}, x:${u.scrollLeft} of ${u.MaxScrollLeft()}, adjusted =>`,
               r,
               "target => ",
-              o,
+              l,
             ),
             (i && "y" != i) ||
-              !(0, B.aF)(e, "y") ||
-              ((u.top = I(o, r, t, "y")),
-              (u.top = b.OQ(
-                u.top,
-                -c.scrollTop,
-                c.MaxScrollTop() - c.scrollTop,
+              !(0, o.aF)(e, "y") ||
+              ((m.top = I(l, r, t, "y")),
+              (m.top = B.OQ(
+                m.top,
+                -u.scrollTop,
+                u.MaxScrollTop() - u.scrollTop,
               )),
               n &&
-                ((u.top = Math.min(l, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
-                (l -= Math.abs(u.top))),
-              S(`- checked y: ${u.top}`)),
+                ((m.top = Math.min(c, Math.abs(m.top)) * (m.top < 0 ? -1 : 1)),
+                (c -= Math.abs(m.top))),
+              S(`- checked y: ${m.top}`)),
             (i && "x" != i) ||
-              !(0, B.aF)(e, "x") ||
-              ((u.left = I(o, r, t, "x")),
-              (u.left = b.OQ(
-                u.left,
-                -c.scrollLeft,
-                c.MaxScrollLeft() - c.scrollLeft,
+              !(0, o.aF)(e, "x") ||
+              ((m.left = I(l, r, t, "x")),
+              (m.left = B.OQ(
+                m.left,
+                -u.scrollLeft,
+                u.MaxScrollLeft() - u.scrollLeft,
               )),
               n &&
-                ((u.left =
-                  Math.min(l, Math.abs(u.left)) * (u.left < 0 ? -1 : 1)),
-                (l -= Math.abs(u.left))),
-              S(`- checked x: ${u.left}`)),
-            s.push(u),
-            n && !l)
+                ((m.left =
+                  Math.min(c, Math.abs(m.left)) * (m.left < 0 ? -1 : 1)),
+                (c -= Math.abs(m.left))),
+              S(`- checked x: ${m.left}`)),
+            s.push(m),
+            n && !c)
           )
             break;
           if (!("ownerDocument" in e)) break;
-          const m = window.getComputedStyle(e);
-          if ("fixed" === m.position || "sticky" === m.position) break;
+          const d = window.getComputedStyle(e);
+          if ("fixed" === d.position || "sticky" === d.position) break;
           (a = e),
-            (o = {
-              top: o.top - u.top,
-              right: o.right - u.left,
-              bottom: o.bottom - u.top,
-              left: o.left - u.left,
+            (l = {
+              top: l.top - m.top,
+              right: l.right - m.left,
+              bottom: l.bottom - m.top,
+              left: l.left - m.left,
             });
         }
-        let c = !1;
+        let u = !1;
         for (let e of s) {
           if (F(e.left) && F(e.top)) continue;
           let t = L(e.element),
             i = t.scrollTop + e.top,
             n = t.scrollLeft + e.left;
-          (n = b.OQ(n, 0, t.MaxScrollLeft())),
-            (i = b.OQ(i, 0, t.MaxScrollTop())),
+          (n = B.OQ(n, 0, t.MaxScrollLeft())),
+            (i = B.OQ(i, 0, t.MaxScrollTop())),
             (F(t.scrollLeft - n) && F(t.scrollTop - i)) ||
               (t.scrollTo({ left: n, top: i, behavior: r }),
-              c || (S("Scrolling:"), (c = !0)),
+              u || (S("Scrolling:"), (u = !0)),
               S(
                 `- ${e.top},${e.left} => ${i}, ${n}, behavior: ${r}`,
                 e.element,
@@ -9845,7 +9818,7 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, i.Cg)([l.o], W.prototype, "ResetScrollState", null);
+      (0, i.Cg)([a.o], W.prototype, "ResetScrollState", null);
       const q = new WeakMap();
       function L(e) {
         let t = q.get(e);
@@ -9901,7 +9874,7 @@
         m_nDepth;
         m_Focused = (0, c.Jc)(!1);
         m_FocusWithin = (0, c.Jc)(!1);
-        m_ActionDescriptionsChangedCallbackList = new a.l();
+        m_ActionDescriptionsChangedCallbackList = new n.l();
         m_FocusableIfEmptyAncestor = null;
         m_rgNavigationHandlers = [];
         m_rgFocusHandlers = [];
@@ -9912,7 +9885,7 @@
             (this.m_nDepth = t ? t.m_nDepth + 1 : 0);
         }
         CreateHandle() {
-          return new d.kI(this);
+          return new g.kI(this);
         }
         get Tree() {
           return this.m_Tree;
@@ -10027,7 +10000,7 @@
                 e.SetFocusableIfEmptyAncestor(this.m_FocusableIfEmptyAncestor),
             this.m_bMounted &&
               e.BFocusWithin() &&
-              ((0, o.wT)(
+              ((0, s.wT)(
                 !this.m_ActiveChild && this.BFocusWithin(),
                 "Invalid focus state in AddChild",
               ),
@@ -10037,7 +10010,7 @@
           (this.m_element = e),
             this.m_Parent
               ? this.m_Parent.AddChild(this)
-              : (0, o.wT)(
+              : (0, s.wT)(
                   this == this.m_Tree.Root,
                   "Only root should have no parent",
                 ),
@@ -10067,7 +10040,7 @@
             const e = this.m_rgChildren.findIndex((e) => e.BFocusWithin());
             -1 != e &&
               (this.SetActiveChild(e),
-              (0, o.wT)(
+              (0, s.wT)(
                 this.BFocusWithin(),
                 "Child has focus, we should be m_bFocusWithin",
               ));
@@ -10093,7 +10066,7 @@
             this.UnregisterDOMEvents(),
             this.m_Parent
               ? this.m_Parent.RemoveChild(this)
-              : (0, o.wT)(
+              : (0, s.wT)(
                   this == this.m_Tree.Root,
                   "Only root should have no parent",
                 );
@@ -10123,7 +10096,7 @@
         }
         RemoveChild(e) {
           let t = this.m_rgChildren.indexOf(e);
-          (0, o.wT)(-1 !== t, "Child was not found to remove"),
+          (0, s.wT)(-1 !== t, "Child was not found to remove"),
             -1 !== t &&
               (this.m_ActiveChild == e && (this.m_ActiveChild = void 0),
               this.m_rgChildren.splice(t, 1));
@@ -10253,7 +10226,7 @@
           const t = this.FindNextFocusableChildInDirection(
             -1,
             E.FORWARD,
-            n.pR.INVALID,
+            d.pR.INVALID,
           );
           return this.InternalFocusDescendant(t, e);
         }
@@ -10261,29 +10234,29 @@
           const t = this.FindNextFocusableChildInDirection(
             this.m_rgChildren.length,
             E.BACKWARD,
-            n.pR.INVALID,
+            d.pR.INVALID,
           );
           return this.InternalFocusDescendant(t, e);
         }
         FindFocusableDescendant(e, t) {
-          const r = (0, d.G4)(e),
+          const r = (0, g.G4)(e),
             { focusableIfEmpty: i, childFocusDisabled: n } =
               this.m_Properties ?? {};
           if (n) return null;
           if (this.m_rgChildren.length) {
             this.EnsureChildrenSorted();
-            const { navEntryPreferPosition: n, resetNavOnEntry: a } =
+            const { navEntryPreferPosition: n, resetNavOnEntry: s } =
               this.m_Properties ?? {};
-            let o = this.GetActiveChildIndex();
-            a && void 0 !== e && (o = -1);
-            const l = this.GetLayout();
+            let a = this.GetActiveChildIndex();
+            s && void 0 !== e && (a = -1);
+            const o = this.GetLayout();
             let c, u;
             if (
-              (this.IsValidChildIndex(o) ||
-                (o =
-                  o >= this.m_rgChildren.length ||
-                  l == k.ROW_REVERSE ||
-                  l == k.COLUMN_REVERSE ||
+              (this.IsValidChildIndex(a) ||
+                (a =
+                  a >= this.m_rgChildren.length ||
+                  o == k.ROW_REVERSE ||
+                  o == k.COLUMN_REVERSE ||
                   n == D.LAST
                     ? this.m_rgChildren.length - 1
                     : 0),
@@ -10291,11 +10264,11 @@
                 ? (u = "x")
                 : n == D.MAINTAIN_Y
                   ? (u = "y")
-                  : l == k.GEOMETRIC && r && (u = s.xr[r]),
+                  : o == k.GEOMETRIC && r && (u = l.xr[r]),
               (u || t) && r)
             ) {
               const i = this.m_Tree.GetLastFocusedNode();
-              if (t || (i && u == s.xr[r])) {
+              if (t || (i && u == l.xr[r])) {
                 const s =
                   t ||
                   this.AdjustRectForLastMovementOnTangentAxis(
@@ -10307,7 +10280,7 @@
                   s,
                 ),
                   (c = this.FindClosestFocusableNodeToRect(e, s));
-              } else if (u != s.xr[r]) {
+              } else if (u != l.xr[r]) {
                 const t = this.ComputeRelativeDirection(e, k.GRID),
                   r = t == E.BACKWARD ? this.m_rgChildren.length : -1;
                 c = this.FindNextFocusableChildInDirection(r, t, e);
@@ -10331,19 +10304,19 @@
             } else
               n == D.LAST &&
                 (c = this.FindNextFocusableChildInDirection(
-                  o + 1,
+                  a + 1,
                   E.BACKWARD,
                   e,
                 ));
             return (
               c ||
                 (c = this.FindNextFocusableChildInDirection(
-                  o - 1,
+                  a - 1,
                   E.FORWARD,
                   e,
                 )),
               c ||
-                (c = this.FindNextFocusableChildInDirection(o, E.BACKWARD, e)),
+                (c = this.FindNextFocusableChildInDirection(a, E.BACKWARD, e)),
               c || (i ? this : null)
             );
           }
@@ -10351,7 +10324,7 @@
         }
         BVisibleChildTakeFocus(e) {
           const t = this.Element?.ownerDocument?.defaultView ?? window,
-            r = p(this, {
+            r = _(this, {
               top: 0,
               left: 0,
               right: t.innerWidth,
@@ -10367,7 +10340,7 @@
         GetLayout() {
           if (this.m_Properties?.layout) return this.m_Properties.layout;
           if (this.m_rgChildren.length < 2) return k.NONE;
-          return (0, d.ko)(this.m_element);
+          return (0, g.ko)(this.m_element);
         }
         OnNavigationEvent(e) {
           const t = e.detail.button;
@@ -10376,38 +10349,38 @@
           const {
             onMoveUp: r,
             onMoveRight: i,
-            onMoveDown: s,
-            onMoveLeft: a,
+            onMoveDown: n,
+            onMoveLeft: s,
           } = this.m_Properties ?? {};
-          let o = !1;
+          let a = !1;
           switch (t) {
-            case n.pR.DIR_UP:
-              r && (o = r(e.detail, this));
+            case d.pR.DIR_UP:
+              r && (a = r(e.detail, this));
               break;
-            case n.pR.DIR_RIGHT:
-              i && (o = i(e.detail, this));
+            case d.pR.DIR_RIGHT:
+              i && (a = i(e.detail, this));
               break;
-            case n.pR.DIR_DOWN:
-              s && (o = s(e.detail, this));
+            case d.pR.DIR_DOWN:
+              n && (a = n(e.detail, this));
               break;
-            case n.pR.DIR_LEFT:
-              a && (o = a(e.detail, this));
+            case d.pR.DIR_LEFT:
+              s && (a = s(e.detail, this));
           }
-          return o;
+          return a;
         }
         InternalFocusDescendant(e, t, r) {
-          return !!e && (this.m_Tree.TransferFocus(t, e, (0, d.G4)(r)), !0);
+          return !!e && (this.m_Tree.TransferFocus(t, e, (0, g.G4)(r)), !0);
         }
         BTryInternalNavigation(e, t) {
           const r = this.GetLayout();
           let i,
-            s = this.ComputeRelativeDirection(e, r);
+            n = this.ComputeRelativeDirection(e, r);
           if (
             (P(
-              `Handling navigation event ${n.pR[e]} - ${k[r]} - ${E[s]}`,
+              `Handling navigation event ${d.pR[e]} - ${k[r]} - ${E[n]}`,
               this.m_element,
             ),
-            s == E.INVALID)
+            n == E.INVALID)
           )
             return !1;
           if (this.m_Properties?.focusable && this.BHasFocus())
@@ -10415,43 +10388,43 @@
           if ((this.EnsureChildrenSorted(!0), r == k.GRID))
             i = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
-              s,
+              n,
               e,
             );
           else if (r == k.GEOMETRIC)
-            i = this.FindNextFocusableChildGeometric(s, e);
+            i = this.FindNextFocusableChildGeometric(n, e);
           else {
             let t = this.GetActiveChildIndex();
             this.IsValidChildIndex(t) ||
-              (t = s == E.FORWARD ? -1 : this.m_rgChildren.length),
-              (i = this.FindNextFocusableChildInDirection(t, s, e));
+              (t = n == E.FORWARD ? -1 : this.m_rgChildren.length),
+              (i = this.FindNextFocusableChildInDirection(t, n, e));
           }
           if (i) {
-            const r = (0, d.G4)(e);
+            const r = (0, g.G4)(e);
             if (this.GetScrollIntoViewType() == N.NoTransformSparseContent) {
               const e = i.Element?.ownerDocument.defaultView;
               if (e) {
-                const n =
+                const s =
                     ("y" == r ? e.innerHeight : e.innerWidth) /
                     (t ? 4.5 : 3.33),
                   a = R(i.Element);
                 let o = !1;
                 if (
                   ("y" == r
-                    ? s == E.FORWARD
+                    ? n == E.FORWARD
                       ? (o =
-                          a.top > e.innerHeight && a.bottom > e.innerHeight + n)
-                      : s == E.BACKWARD && (o = a.bottom < 0 && a.top < -n)
+                          a.top > e.innerHeight && a.bottom > e.innerHeight + s)
+                      : n == E.BACKWARD && (o = a.bottom < 0 && a.top < -s)
                     : "x" == r &&
-                      (s == E.FORWARD
+                      (n == E.FORWARD
                         ? (o =
-                            a.left > e.innerWidth && a.right > e.innerWidth + n)
-                        : s == E.BACKWARD && (o = a.right < 0 && a.left < -n)),
+                            a.left > e.innerWidth && a.right > e.innerWidth + s)
+                        : n == E.BACKWARD && (o = a.right < 0 && a.left < -s)),
                   o)
                 )
                   return (
-                    P(`Element too far away, scrolling ${n} on ${r} axis `),
-                    O(i.Element, i.Element, "smooth", r, n),
+                    P(`Element too far away, scrolling ${s} on ${r} axis `),
+                    O(i.Element, i.Element, "smooth", r, s),
                     !0
                   );
               }
@@ -10476,9 +10449,9 @@
             case k.ROW:
             case k.ROW_REVERSE:
               switch (e) {
-                case n.pR.DIR_LEFT:
+                case d.pR.DIR_LEFT:
                   return r ? E.FORWARD : E.BACKWARD;
-                case n.pR.DIR_RIGHT:
+                case d.pR.DIR_RIGHT:
                   return r ? E.BACKWARD : E.FORWARD;
                 default:
                   return E.INVALID;
@@ -10486,9 +10459,9 @@
             case k.COLUMN:
             case k.COLUMN_REVERSE:
               switch (e) {
-                case n.pR.DIR_UP:
+                case d.pR.DIR_UP:
                   return r ? E.FORWARD : E.BACKWARD;
-                case n.pR.DIR_DOWN:
+                case d.pR.DIR_DOWN:
                   return r ? E.BACKWARD : E.FORWARD;
                 default:
                   return E.INVALID;
@@ -10496,11 +10469,11 @@
             case k.GRID:
             case k.GEOMETRIC:
               switch (e) {
-                case n.pR.DIR_LEFT:
-                case n.pR.DIR_UP:
+                case d.pR.DIR_LEFT:
+                case d.pR.DIR_UP:
                   return r ? E.FORWARD : E.BACKWARD;
-                case n.pR.DIR_RIGHT:
-                case n.pR.DIR_DOWN:
+                case d.pR.DIR_RIGHT:
+                case d.pR.DIR_DOWN:
                   return r ? E.BACKWARD : E.FORWARD;
                 default:
                   return E.INVALID;
@@ -10527,22 +10500,22 @@
           return -1;
         }
         FindNextFocusableChildInGrid(e, t, r) {
-          const i = r == n.pR.DIR_UP || r == n.pR.DIR_DOWN,
-            s = this.GetLastFocusElement();
-          if (!s || s == this.m_element)
+          const i = r == d.pR.DIR_UP || r == d.pR.DIR_DOWN,
+            n = this.GetLastFocusElement();
+          if (!n || n == this.m_element)
             return (
-              (0, o.wT)(
+              (0, s.wT)(
                 !1,
                 "No active child for grid navigation",
                 this.m_iLastActiveChildIndex,
                 this.m_rgChildren.length,
-                s,
+                n,
               ),
               this.FindFocusableDescendant(r)
             );
           let a = this.GetActiveDescendant().GetBoundingRect();
           if (
-            ((r != n.pR.DIR_UP && r != n.pR.DIR_DOWN) ||
+            ((r != d.pR.DIR_UP && r != d.pR.DIR_DOWN) ||
               (a = this.AdjustRectForLastMovementOnTangentAxis(a, "y")),
             i)
           ) {
@@ -10551,7 +10524,7 @@
               const e = this.ScanChildren(
                 this.AdvanceIndex(i, t),
                 t,
-                (e) => !(0, d.UR)("y", a, e.GetBoundingRect()),
+                (e) => !(0, g.UR)("y", a, e.GetBoundingRect()),
               );
               if (-1 != e) {
                 const i = this.m_rgChildren[e].GetBoundingRect(),
@@ -10575,7 +10548,7 @@
               n += i
             ) {
               const e = this.m_rgChildren[n];
-              if (!(0, d.UR)("y", a, e.GetBoundingRect())) return null;
+              if (!(0, g.UR)("y", a, e.GetBoundingRect())) return null;
               let t = e.FindFocusableNode(r);
               if (t) return t;
             }
@@ -10586,7 +10559,7 @@
           const r = this.GetLastFocusElement();
           if (!r || r == this.m_element)
             return (
-              (0, o.wT)(
+              (0, s.wT)(
                 !1,
                 "No active child for geometric navigation",
                 this.m_iLastActiveChildIndex,
@@ -10595,7 +10568,7 @@
               ),
               this.FindFocusableDescendant(t)
             );
-          const i = (0, d.G4)(t);
+          const i = (0, g.G4)(t);
           if (!i) return null;
           const n = this.AdjustRectForLastMovementOnTangentAxis(
             this.GetActiveDescendant().GetBoundingRect(),
@@ -10604,7 +10577,7 @@
           return this.FindClosetChildInDirection(i, n, e, t);
         }
         AdjustRectForLastMovementOnTangentAxis(e, t) {
-          const r = this.m_Tree.GetLastFocusedMovementRect(s.xr[t]);
+          const r = this.m_Tree.GetLastFocusedMovementRect(l.xr[t]);
           return r
             ? "x" == t
               ? { left: e.left, right: e.right, top: r.top, bottom: r.bottom }
@@ -10612,14 +10585,14 @@
             : e;
         }
         FindClosestFocusableNodeToRect(e, t) {
-          const r = (0, d.G4)(e),
-            i = r && s.xr[r],
+          const r = (0, g.G4)(e),
+            i = r && l.xr[r],
             n = [];
           for (const e of this.m_rgChildren) {
             const r = e.GetBoundingRect();
             if (r) {
-              const s = (0, B.bZ)(t, r),
-                a = i ? (0, d.ix)(i, t, r) : 0;
+              const s = (0, o.bZ)(t, r),
+                a = i ? (0, g.ix)(i, t, r) : 0;
               n.push({ child: e, overlap: a, dist: s });
             }
           }
@@ -10636,24 +10609,24 @@
           P(
             `Find child closest to rect, rect is at left ${t.left} top ${t.top} right ${t.right} bottom ${t.bottom}`,
           );
-          const n = (0, d.lr)(e, t),
-            a = [];
+          const n = (0, g.lr)(e, t),
+            s = [];
           for (const i of this.m_rgChildren) {
-            const o = i.GetBoundingRect();
-            if (o) {
-              const l = (0, d.lr)(e, o);
+            const a = i.GetBoundingRect();
+            if (a) {
+              const o = (0, g.lr)(e, a);
               let c;
-              (c = r == E.FORWARD ? l.min - n.max : n.min - l.max),
+              (c = r == E.FORWARD ? o.min - n.max : n.min - o.max),
                 c >= 0 &&
-                  a.push({
+                  s.push({
                     child: i,
-                    overlap: (0, d.ix)(s.xr[e], t, o),
+                    overlap: (0, g.ix)(l.xr[e], t, a),
                     dist: c,
                   });
             }
           }
           if (
-            (a.sort((e, t) => {
+            (s.sort((e, t) => {
               if (e.overlap) {
                 if (!t.overlap) return -1;
               } else if (t.overlap) return 1;
@@ -10662,44 +10635,44 @@
             }),
             U.IsDebugEnabled())
           ) {
-            const e = a
+            const e = s
               .slice(0, 3)
               .map(
                 ({ dist: e, overlap: t, child: r }) =>
                   `[ node: ${r.m_element?.className} dist: ${e} overlap: ${t} ]`,
               );
-            P(`Found nodes on axis, top 3 (of ${a.length}: ${e.join(", ")}`);
+            P(`Found nodes on axis, top 3 (of ${s.length}: ${e.join(", ")}`);
           }
-          for (const { child: e } of a) {
+          for (const { child: e } of s) {
             const r = e.FindFocusableNode(i, t);
             if (r) return r;
           }
           return null;
         }
-        FindClosestChildInNextAxiallyAlignedSet(e, t, r, i, n, a) {
+        FindClosestChildInNextAxiallyAlignedSet(e, t, r, i, n, s) {
           (!n || n < 0) && (n = 0);
-          let o = [];
+          let a = [];
           if (!i) return null;
-          const l = (0, d.xb)(i);
+          const o = (0, g.xb)(i);
           this.ScanChildren(n, t, (t) => {
             const r = t.GetBoundingRect();
             return (
               !!r &&
-              (!(!a || (0, d.UR)(s.xr[e], a, r)) ||
-                (o.push({
+              (!(!s || (0, g.UR)(l.xr[e], s, r)) ||
+                (a.push({
                   child: t,
-                  overlap: (0, d.ix)(e, i, r),
-                  dist: (0, d._V)(e, l, r),
+                  overlap: (0, g.ix)(e, i, r),
+                  dist: (0, g._V)(e, o, r),
                 }),
                 !1))
             );
           }),
-            t == E.BACKWARD && o.reverse(),
-            o.sort((e, t) => {
+            t == E.BACKWARD && a.reverse(),
+            a.sort((e, t) => {
               const r = t.overlap - e.overlap;
               return 0 != r ? r : e.dist - t.dist;
             });
-          for (const { child: e } of o) {
+          for (const { child: e } of a) {
             const t = e.FindFocusableNode(r, i);
             if (t) return t;
           }
@@ -10741,7 +10714,7 @@
           this.UpdateParentActiveChild(),
             this.m_Tree.OnChildActivated(e),
             this.m_Tree.BIsActiveFocus()
-              ? ((0, o.wT)(
+              ? ((0, s.wT)(
                   !this.m_Tree.BUseVirtualFocus(),
                   "Virtual focus tree should not have browser focus",
                 ),
@@ -10751,76 +10724,76 @@
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
             this.m_Tree.BIsActive() &&
-              (function (e, t) {
-                const r = e.Element;
-                if (!r) return;
-                let i = [
+              (function (e, t, r) {
+                const i = e.Element;
+                if (!i) return;
+                let n = [
                   { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
                 ];
                 for (let t = e.Parent; t; t = t.Parent) {
                   const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
                     r = t.m_Properties?.scrollIntoViewType;
                   if (e) {
-                    const n = { node: t, eScrollType: r };
-                    "force" === e ? (i = [n]) : i.push(n);
+                    const i = { node: t, eScrollType: r };
+                    "force" === e ? (n = [i]) : n.push(i);
                   }
                   if (void 0 !== r)
                     for (
-                      let e = i.length - 1;
-                      e >= 0 && void 0 === i[e].eScrollType;
+                      let e = n.length - 1;
+                      e >= 0 && void 0 === n[e].eScrollType;
                       e--
                     )
-                      i[e].eScrollType = r;
+                      n[e].eScrollType = r;
                 }
-                for (; i.length; ) {
-                  let { node: r, eScrollType: n } = i.pop(),
-                    s = 0 == i.length;
+                for (; n.length; ) {
+                  let { node: i, eScrollType: s } = n.pop(),
+                    a = 0 == n.length;
                   if (
-                    (void 0 === n && (n = C ? N.NoTransform : N.Standard),
-                    r?.m_Properties?.fnScrollIntoViewHandler &&
-                      !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
+                    (void 0 === s && (s = C ? N.NoTransform : N.Standard),
+                    i?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== i.m_Properties.fnScrollIntoViewHandler(e, t, i))
                   )
                     continue;
-                  const a = r.m_element,
-                    o =
-                      n == N.NoTransform ||
-                      n == N.NoTransformSparseContent ||
-                      !s;
-                  if (t) {
-                    const t = o ? R(a) : a.getBoundingClientRect();
+                  const o = i.m_element,
+                    l =
+                      s == N.NoTransform ||
+                      s == N.NoTransformSparseContent ||
+                      !a;
+                  if (t || r === m.D$.GAMEPAD) {
+                    const t = l ? R(o) : o.getBoundingClientRect();
                     let r = !1;
                     const i = Math.max(1.4 * (t.bottom - t.top), 40),
                       n = v && performance.now() - v < 500;
                     (n ||
                       t.bottom < -i ||
-                      t.top > a.ownerDocument.defaultView.innerHeight + i) &&
+                      t.top > o.ownerDocument.defaultView.innerHeight + i) &&
                       ((r = !0),
                       n ||
                         S(
-                          `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
+                          `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${o.ownerDocument.defaultView.innerHeight} + ${i} `,
                         ));
                     let s = r ? "auto" : "smooth";
                     r && (v = performance.now()),
                       e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
-                      o
-                        ? O(0, a, s)
-                        : a.scrollIntoView({ behavior: s, block: "nearest" });
+                      l
+                        ? O(0, o, s)
+                        : o.scrollIntoView({ behavior: s, block: "nearest" });
                   } else
                     S("No previous element for scrolling, will jump"),
-                      o
-                        ? O(0, a, "auto")
-                        : a?.scrollIntoView({
+                      l
+                        ? O(0, o, "auto")
+                        : o?.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
                             inline: "nearest",
                           });
                 }
-              })(this, t);
+              })(this, t, e);
         }
       }
-      (0, i.Cg)([l.o], G.prototype, "OnDOMFocus", null),
-        (0, i.Cg)([l.o], G.prototype, "OnDOMBlur", null),
-        (0, i.Cg)([l.o], G.prototype, "OnNavigationEvent", null);
+      (0, i.Cg)([a.o], G.prototype, "OnDOMFocus", null),
+        (0, i.Cg)([a.o], G.prototype, "OnDOMBlur", null),
+        (0, i.Cg)([a.o], G.prototype, "OnNavigationEvent", null);
     },
     7745: (e, t, r) => {
       "use strict";
@@ -29434,6 +29407,11 @@
                     br: o.qM.readUint32,
                     bw: o.gp.writeUint32,
                   },
+                  crc_schema: {
+                    n: 5,
+                    br: o.qM.readUint32,
+                    bw: o.gp.writeUint32,
+                  },
                 },
               }),
             qe.sm_m
@@ -29497,6 +29475,11 @@
                   },
                   schema: { n: 3, br: o.qM.readBytes, bw: o.gp.writeBytes },
                   stats: { n: 4, c: Ue, r: !0, q: !0 },
+                  crc_schema: {
+                    n: 5,
+                    br: o.qM.readUint32,
+                    bw: o.gp.writeUint32,
+                  },
                 },
               }),
             Le.sm_m
@@ -49672,6 +49655,7 @@
                     pbr: a.qM.readPackedUint64String,
                     bw: a.gp.writeRepeatedUint64String,
                   },
+                  has_demo: { n: 27, br: a.qM.readBool, bw: a.gp.writeBool },
                 },
               }),
             U.sm_m
@@ -52794,10 +52778,11 @@
       r.d(t, {
         AQ: () => j,
         EO: () => f,
-        Ec: () => x,
+        Ec: () => F,
         Ij: () => z,
         J$: () => l,
         LM: () => p,
+        OE: () => T,
         Q_: () => _,
         U2: () => c,
         Yo: () => w,
@@ -52807,15 +52792,15 @@
         ik: () => S,
         is: () => h,
         j4: () => y,
-        jD: () => O,
+        jD: () => W,
         lv: () => B,
         mr: () => b,
         mt: () => d,
         op: () => I,
         qI: () => R,
-        rK: () => F,
-        us: () => A,
-        vB: () => D,
+        rK: () => O,
+        us: () => U,
+        vB: () => N,
         wl: () => g,
         xz: () => v,
       });
@@ -52826,10 +52811,10 @@
         o = r(7338);
       function l(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(A(t, e));
+        return (0, n.I)(U(t, e));
       }
       function c(e) {
-        return m(e, A);
+        return m(e, U);
       }
       function u(e) {
         return m(e, j, "include_assets");
@@ -52840,7 +52825,7 @@
           l = e && "packageid" in e && !!e.packageid;
         let c;
         if (l) {
-          const t = a.getQueryData(k(e, "default_info"));
+          const t = a.getQueryData(D(e, "default_info"));
           t &&
             1 == t.included_appids?.length &&
             (c = { appid: t.included_appids[0] });
@@ -52853,11 +52838,11 @@
       function d(e, t, r) {
         const i = t && "appid" in t && !!t.appid;
         return {
-          queryKey: k(t, "include_included_items"),
+          queryKey: D(t, "include_included_items"),
           queryFn: async () => {
-            r && G(e, t, r);
+            r && H(e, t, r);
             return (
-              (await G(e, t, "include_included_items")).included_appids ?? []
+              (await H(e, t, "include_included_items")).included_appids ?? []
             );
           },
           initialData: i ? [t.appid] : void 0,
@@ -52868,7 +52853,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return q(e, t, "include_basic_info", "basic_info");
+            return L(e, t, "include_basic_info", "basic_info");
           })(t, e),
         );
       }
@@ -52878,20 +52863,20 @@
       }
       function _(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(U(t, e));
+        return (0, n.I)(P(t, e));
       }
       function h(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(P(t, e));
+        return (0, n.I)(k(t, e));
       }
       function f(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
           e && "bundleid" in e
-            ? U(t, e)
+            ? P(t, e)
             : (function (e, t) {
                 return {
-                  ...P(e, t),
+                  ...k(e, t),
                   select: (e) =>
                     e?.purchase_options && e.purchase_options.length > 0
                       ? e.purchase_options[0]
@@ -52906,7 +52891,7 @@
         return (0, n.I)(
           (function (e, t) {
             return {
-              ...A(e, t),
+              ...U(e, t),
               select: (e) =>
                 e.self_purchase_option || e.best_purchase_option || null,
               staleTime: 6e5,
@@ -52916,33 +52901,29 @@
       }
       function B(e, t = !1) {
         const r = (0, o.eG)();
-        return (0, n.I)(t ? T(r, e) : j(r, e));
+        return (0, n.I)(t ? x(r, e) : j(r, e));
       }
       function y(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(
-          (function (e, t) {
-            return q(e, t, "include_screenshots", "screenshots");
-          })(t, e),
-        );
+        return (0, n.I)(T(t, e));
       }
       function w(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return q(e, t, "include_trailers", "trailers");
+            return L(e, t, "include_trailers", "trailers");
           })(t, e),
         );
       }
       function M(e, t = {}) {
         const r = (0, o.eG)();
-        return (0, n.I)({ ...T(r, e), ...t });
+        return (0, n.I)({ ...x(r, e), ...t });
       }
       function S(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return q(e, t, "include_reviews", "reviews");
+            return L(e, t, "include_reviews", "reviews");
           })(t, e),
         );
       }
@@ -52950,46 +52931,49 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return q(e, t, "include_release", "release");
+            return L(e, t, "include_release", "release");
           })(t, e),
         );
       }
       function v(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(x(t, e));
+        return (0, n.I)(F(t, e));
       }
       function R(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(F(t, e));
+        return (0, n.I)(O(t, e));
       }
       function z(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(O(t, e));
+        return (0, n.I)(W(t, e));
       }
       function I(e, t) {
-        return q(e, t, "include_full_description", "full_description_bbcode");
+        return L(e, t, "include_full_description", "full_description_bbcode");
       }
       function j(e, t) {
-        return q(e, t, "include_assets", "assets");
+        return L(e, t, "include_assets", "assets");
       }
       function T(e, t) {
-        return q(
+        return L(e, t, "include_screenshots", "screenshots");
+      }
+      function x(e, t) {
+        return L(
           e,
           t,
           "include_assets_without_overrides",
           "assets_without_overrides",
         );
       }
-      function x(e, t) {
-        return q(e, t, "top_tags", "tags");
-      }
       function F(e, t) {
-        return q(e, t, "include_platforms", "platforms");
+        return L(e, t, "top_tags", "tags");
       }
       function O(e, t) {
-        return q(e, t, "apply_user_filters", "user_filter_failure");
+        return L(e, t, "include_platforms", "platforms");
       }
-      function W(e) {
+      function W(e, t) {
+        return L(e, t, "apply_user_filters", "user_filter_failure");
+      }
+      function q(e) {
         return (
           !!e &&
           ("appid" in e && !e.appid
@@ -52998,75 +52982,75 @@
               ((0, i.wT)(!1, "Invalid bundleid passed to useStoreItem"), !1))
         );
       }
-      function q(e, t, r, i) {
+      function L(e, t, r, i) {
         return {
-          queryKey: k(t, r),
-          queryFn: async () => (await G(e, t, r))[i] || null,
+          queryKey: D(t, r),
+          queryFn: async () => (await H(e, t, r))[i] || null,
           staleTime: 216e5,
-          enabled: W(t),
+          enabled: q(t),
         };
       }
-      function L(e, t, r, i, n) {
-        e.setQueryData(k(t, i), r[n] ?? null);
-      }
-      function A(e, t) {
-        return {
-          queryKey: k(t, "default_info"),
-          queryFn: async () => E(await G(e, t, "default_info")),
-          staleTime: 216e5,
-          enabled: W(t),
-        };
+      function A(e, t, r, i, n) {
+        e.setQueryData(D(t, i), r[n] ?? null);
       }
       function U(e, t) {
         return {
-          ...A(e, t),
+          queryKey: D(t, "default_info"),
+          queryFn: async () => G(await H(e, t, "default_info")),
+          staleTime: 216e5,
+          enabled: q(t),
+        };
+      }
+      function P(e, t) {
+        return {
+          ...U(e, t),
           select: (e) => e.best_purchase_option || null,
           staleTime: 6e5,
         };
       }
-      function P(e, t) {
+      function k(e, t) {
         const r = "include_all_purchase_options";
         return {
-          queryKey: k(t, r),
+          queryKey: D(t, r),
           queryFn: async () => {
-            const i = await G(e, t, r);
+            const i = await H(e, t, r);
             return {
               purchase_options: i.purchase_options,
               package_groups: i.package_groups,
             };
           },
           staleTime: 6e5,
-          enabled: W(t),
+          enabled: q(t),
         };
       }
-      function k(e, t) {
+      function D(e, t) {
         return ["StoreItem", e && (0, a.ER)(e), t];
       }
-      function D(e, t, r) {
+      function N(e, t, r) {
         const i = (0, a.Jz)(t);
         i &&
           (!(function (e, t, r) {
-            e.setQueryData(k(t, "default_info"), E(r));
+            e.setQueryData(D(t, "default_info"), G(r));
           })(e, i, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              L(e, t, r, "include_basic_info", "basic_info");
+              A(e, t, r, "include_basic_info", "basic_info");
             })(e, i, t),
           r.include_assets &&
             (function (e, t, r) {
-              L(e, t, r, "include_assets", "assets");
+              A(e, t, r, "include_assets", "assets");
             })(e, i, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              L(e, t, r, "include_screenshots", "screenshots");
+              A(e, t, r, "include_screenshots", "screenshots");
             })(e, i, t),
           r.include_trailers &&
             (function (e, t, r) {
-              L(e, t, r, "include_trailers", "trailers");
+              A(e, t, r, "include_trailers", "trailers");
             })(e, i, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              L(
+              A(
                 e,
                 t,
                 r,
@@ -53076,49 +53060,49 @@
             })(e, i, t),
           r.include_reviews &&
             (function (e, t, r) {
-              L(e, t, r, "include_reviews", "reviews");
+              A(e, t, r, "include_reviews", "reviews");
             })(e, i, t),
           r.include_release &&
             (function (e, t, r) {
-              L(e, t, r, "include_release", "release");
+              A(e, t, r, "include_release", "release");
             })(e, i, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              L(e, t, r, "top_tags", "tags");
+              A(e, t, r, "top_tags", "tags");
             })(e, i, t),
           r.include_platforms &&
             (function (e, t, r) {
-              L(e, t, r, "include_platforms", "platforms");
+              A(e, t, r, "include_platforms", "platforms");
             })(e, i, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              L(e, t, r, "apply_user_filters", "user_filter_failure");
+              A(e, t, r, "apply_user_filters", "user_filter_failure");
             })(e, i, t),
           r.include_all_purchase_options &&
             (function (e, t, r) {
-              e.setQueryData(k(t, "include_all_purchase_options"), {
+              e.setQueryData(D(t, "include_all_purchase_options"), {
                 purchase_options: r.purchase_options,
                 package_groups: r.package_groups,
               });
             })(e, i, t),
           r.include_full_description &&
             (function (e, t, r) {
-              L(e, t, r, "include_full_description", "full_description_bbcode");
+              A(e, t, r, "include_full_description", "full_description_bbcode");
             })(e, i, t),
           r.include_included_items &&
             r.included_item_data_request &&
             (t.included_items?.included_apps?.forEach((t) =>
-              D(e, t, r.included_item_data_request),
+              N(e, t, r.included_item_data_request),
             ),
             t.included_items?.included_packages?.forEach((t) =>
-              D(e, t, r.included_item_data_request),
+              N(e, t, r.included_item_data_request),
             ),
             t.included_items?.included_bundles?.forEach((t) =>
-              D(e, t, r.included_item_data_request),
+              N(e, t, r.included_item_data_request),
             )));
       }
-      const N = [
+      const E = [
         "assets",
         "tagids",
         "tags",
@@ -53137,12 +53121,12 @@
         "release",
         "package_groups",
       ];
-      function E(e) {
+      function G(e) {
         const t = { ...e };
-        for (const e of N) delete t[e];
+        for (const e of E) delete t[e];
         return t;
       }
-      async function G(e, t, r) {
+      async function H(e, t, r) {
         return await e.load(`${(0, a.ER)(t)}|${r}`);
       }
     },
@@ -73556,86 +73540,134 @@
         );
       }
     },
-    6813: (e, t, r) => {
+    32801: (e, t, r) => {
       "use strict";
-      r.d(t, { X: () => u });
+      r.d(t, { X: () => h });
       var i = r(7850),
-        n = r(90626),
-        s = r(72739),
-        a = r(56011),
-        o = r(62490),
-        l = r(64753),
-        c = r(84811);
-      function u({ config: e, isDynamic: t }) {
-        const r = t ? d : m;
-        return (0, i.jsx)(n.Fragment, {
+        n = r(8871),
+        s = r(90626),
+        a = r(78327),
+        o = r(85585),
+        l = r(7445),
+        c = r(87133);
+      const u = s.forwardRef(function (e, t) {
+        const { children: r, navTreeRef: u, ...m } = e,
+          d = s.useRef(void 0),
+          g = (0, n.Ue)(d, u),
+          p = (0, a.Qn)(),
+          _ = (0, c.AO)("__nav_tree_root");
+        return (0, i.jsx)(o.B2, {
+          ...m,
+          navTreeRef: g,
+          ref: t,
+          parentEmbeddedNavTree: _,
+          disabledRoot: !p,
+          historyMode: "navigationapi",
+          children: (0, i.jsx)(l.q, { disableFocusRing: !p, children: r }),
+        });
+      });
+      var m = r(64753),
+        d = r(72739),
+        g = r(84811),
+        p = r(62490),
+        _ = r(56011);
+      function h({ config: e, isDynamic: t, omitFocusNavTreeBridge: r }) {
+        const n = t ? b : f;
+        return (0, i.jsx)(s.Fragment, {
           children: Object.keys(e || {}).map((t) =>
-            (0, i.jsx)(r, { featureName: t, render: e[t] }, t),
+            (0, i.jsx)(
+              n,
+              { featureName: t, render: e[t], omitFocusNavTreeBridge: !!r },
+              t,
+            ),
           ),
         });
       }
-      function m(e) {
-        const { featureName: t, render: r } = e,
-          s = n.useMemo(
+      function f(e) {
+        const { featureName: t, render: r, omitFocusNavTreeBridge: n } = e,
+          a = s.useMemo(
             () =>
               Array.from(
                 document.querySelectorAll(`[data-featuretarget=${t}]`),
               ),
             [t],
           );
-        return s.length
+        return a.length
           ? (0, i.jsx)(i.Fragment, {
-              children: s.map((e, n) =>
-                (0, i.jsx)(g, { featureName: t, elem: e, render: r }, n),
+              children: a.map((e, s) =>
+                (0, i.jsx)(
+                  B,
+                  {
+                    featureName: t,
+                    elem: e,
+                    render: r,
+                    omitFocusNavTreeBridge: n,
+                  },
+                  s,
+                ),
               ),
             })
           : null;
       }
-      function d(e) {
-        const { featureName: t, render: r } = e,
-          s = (0, l.CH)(),
-          c = n.useRef([]),
-          u = n.useRef(0);
+      function b(e) {
+        const { featureName: t, render: r, omitFocusNavTreeBridge: n } = e,
+          a = (0, m.CH)(),
+          o = s.useRef([]),
+          l = s.useRef(0);
         return (
-          n.useEffect(() => {
+          s.useEffect(() => {
             const e = `[data-featuretarget=${t}]`;
-            (c.current = []), (u.current = 0);
-            const r = (e) => c.current.push({ key: u.current++, elem: e }),
-              i = (e) => o.Wp(c.current, (t) => t.elem == e);
-            document.querySelectorAll(e).forEach(r), c.current.length && s();
+            (o.current = []), (l.current = 0);
+            const r = (e) => o.current.push({ key: l.current++, elem: e }),
+              i = (e) => p.Wp(o.current, (t) => t.elem == e);
+            document.querySelectorAll(e).forEach(r), o.current.length && a();
             const n = new MutationObserver((t) => {
               let n = !1;
               for (const s of t)
-                a.Mr(
+                _.Mr(
                   s,
                   (t) => {
-                    p(t, e).forEach((e) => {
+                    y(t, e).forEach((e) => {
                       r(e), (n = !0);
                     });
                   },
                   (t) => {
-                    p(t, e).forEach((e) => {
+                    y(t, e).forEach((e) => {
                       i(e), (n = !0);
                     });
                   },
                 );
-              n && s();
+              n && a();
             });
             return (
               n.observe(document, { childList: !0, subtree: !0 }),
               () => n.disconnect()
             );
-          }, [t, s]),
+          }, [t, a]),
           (0, i.jsx)(i.Fragment, {
-            children: c.current.map(({ key: e, elem: n }) =>
-              (0, i.jsx)(g, { elem: n, featureName: t, render: r }, e),
+            children: o.current.map(({ key: e, elem: s }) =>
+              (0, i.jsx)(
+                B,
+                {
+                  elem: s,
+                  featureName: t,
+                  render: r,
+                  omitFocusNavTreeBridge: n,
+                },
+                e,
+              ),
             ),
           })
         );
       }
-      function g(e) {
-        const { featureName: t, elem: r, render: a } = e,
-          o = n.useMemo(
+      function B(e) {
+        const {
+            featureName: t,
+            elem: r,
+            render: n,
+            omitFocusNavTreeBridge: a,
+          } = e,
+          o = s.useMemo(
             () =>
               (function (e, t) {
                 if (!e) return {};
@@ -73657,9 +73689,19 @@
               })(r.getAttribute("data-props"), t),
             [r, t],
           );
-        return (0, s.createPortal)((0, i.jsx)(c.tH, { children: a(o) }), r);
+        return a
+          ? (0, d.createPortal)((0, i.jsx)(g.tH, { children: n(o) }), r)
+          : (0, d.createPortal)(
+              (0, i.jsx)(g.tH, {
+                children: (0, i.jsx)(u, {
+                  navID: `FeatureTarget_${t}`,
+                  children: n(o),
+                }),
+              }),
+              r,
+            );
       }
-      function p(e, t) {
+      function y(e, t) {
         return e.matches(t) ? [e] : e.querySelectorAll(t);
       }
     },
@@ -82320,7 +82362,7 @@
           }),
         });
       };
-      var Ce = r(6813),
+      var Ce = r(32801),
         ve = r(32630),
         Re = r(97058),
         ze = r(65233),
@@ -82519,6 +82561,10 @@
               r.Push(this.m_ParentNavTree.AddChildNavTree(this)),
             "navigationapi" == this.m_Properties.historyMode &&
               r.Push((0, Pe.D)(this)),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(
+              this.BIsActive(),
+              this,
+            ),
             r.GetUnregisterFunc()
           );
         }
@@ -83613,17 +83659,16 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
             r.e(925),
             r.e(1677),
             r.e(2687),
             r.e(8567),
-            r.e(4623),
+            r.e(9138),
             r.e(2965),
           ]).then(r.bind(r, 16546)),
         ),
@@ -83640,17 +83685,16 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
             r.e(925),
             r.e(1677),
             r.e(2687),
             r.e(8567),
-            r.e(4623),
+            r.e(9138),
             r.e(2965),
           ])
             .then(r.bind(r, 16546))
@@ -88744,16 +88788,14 @@
           null
         );
       });
-      var Aa = r(12447);
-      function Ua() {
+      function Aa() {
         const e = Nt(Et.d),
           t = n.useRef(null),
           [r, i] = n.useState(null);
         t.current = r;
         const s = n.useCallback((e) => {
-          e &&
-            e.parentElement &&
-            (e.parentElement.className = Ht()(Vt.StoreMenuLegacyWrapper));
+          const t = e?.closest(".StoreMenuLoadingPlaceholder");
+          t && (t.className = Ht()(Vt.StoreMenuLegacyWrapper));
         }, []);
         return (
           (0, n.useEffect)(
@@ -88766,8 +88808,7 @@
             [],
           ),
           e && r
-            ? (0, o.jsx)(Aa.u, {
-                navID: "StoreMenu",
+            ? (0, o.jsx)("div", {
                 ref: s,
                 className: Vt.StoreMenuNavWrapper,
                 children: (0, o.jsx)(va, { refPage: t }),
@@ -88775,28 +88816,28 @@
             : null
         );
       }
-      var Pa = r(10034);
-      function ka(e) {
-        return Ft() ? (0, o.jsx)(Da, {}) : e.children;
+      var Ua = r(10034);
+      function Pa(e) {
+        return Ft() ? (0, o.jsx)(ka, {}) : e.children;
       }
-      function Da() {
+      function ka() {
         const [e, t] = n.useState(null);
         return (
-          Na(e?.parentElement?.parentElement, Pa.ResponsiveHeaderContent),
-          Na(e?.parentElement?.parentElement, Pa.ElementTakeover),
+          Da(e?.parentElement?.parentElement, Ua.ResponsiveHeaderContent),
+          Da(e?.parentElement?.parentElement, Ua.ElementTakeover),
           (0, o.jsx)("div", {
-            className: Ht()(Pa.SearchContainer),
+            className: Ht()(Ua.SearchContainer),
             ref: t,
             children: (0, o.jsx)(wa, { bBackdropActive: !1 }),
           })
         );
       }
-      function Na(e, t) {
+      function Da(e, t) {
         n.useLayoutEffect(() => {
           if (e && t) return e.classList.add(t), () => e.classList.remove(t);
         }, [e, t]);
       }
-      const Ea = n.lazy(() =>
+      const Na = n.lazy(() =>
         Promise.all([
           r.e(6597),
           r.e(9197),
@@ -88806,23 +88847,23 @@
           r.e(4781),
           r.e(706),
           r.e(6883),
-          r.e(3384),
           r.e(7262),
-          r.e(1006),
-          r.e(1035),
+          r.e(9882),
+          r.e(5612),
+          r.e(8759),
           r.e(596),
           r.e(1677),
           r.e(1703),
           r.e(3749),
           r.e(9157),
-          r.e(4667),
+          r.e(598),
           r.e(875),
           r.e(6295),
           r.e(5949),
           r.e(9672),
         ]).then(r.bind(r, 30769)),
       );
-      function Ga(e) {
+      function Ea(e) {
         const { children: t } = e,
           [r, i] = n.useState(),
           s = n.useCallback(
@@ -88848,7 +88889,7 @@
                 children: (0, o.jsx)(A.tH, {
                   children: (0, o.jsx)(n.Suspense, {
                     fallback: null,
-                    children: (0, o.jsx)(Ea, { ...r, fnCloseModal: a }),
+                    children: (0, o.jsx)(Na, { ...r, fnCloseModal: a }),
                   }),
                 }),
               }),
@@ -88856,19 +88897,19 @@
           ],
         });
       }
-      var Ha = r(31292),
-        Va = r(55156),
-        Za = r(87652);
-      let Ka = 0;
-      function $a(e) {
+      var Ga = r(31292),
+        Ha = r(55156),
+        Va = r(87652);
+      let Za = 0;
+      function Ka(e) {
         return n.lazy(async function () {
-          let t = Ka++,
+          let t = Za++,
             r = performance.now();
           performance.mark(`reactLazyLoad${t}`);
           const i = await e();
           return (
-            (0, Ha.D)() &&
-              ((0, Ha.D)().m_stats.firstReactLazyLoad ??=
+            (0, Ga.D)() &&
+              ((0, Ga.D)().m_stats.firstReactLazyLoad ??=
                 performance.now() - r),
             performance.measure(`reactLazyLoad${t}`, {
               start: `reactLazyLoad${t}`,
@@ -88877,11 +88918,11 @@
           );
         });
       }
-      const Qa = $a(() =>
+      const $a = Ka(() =>
           Promise.all([
             r.e(9197),
             r.e(4796),
-            r.e(1006),
+            r.e(9882),
             r.e(925),
             r.e(8401),
             r.e(8310),
@@ -88889,26 +88930,25 @@
             r.e(976),
           ]).then(r.bind(r, 98425)),
         ),
-        Ya = $a(() =>
+        Qa = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(5979),
             r.e(8614),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
             r.e(8401),
             r.e(2634),
           ]).then(r.bind(r, 36563)),
         ),
-        Xa = $a(() =>
+        Ya = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(6334),
             r.e(2403),
             r.e(9197),
@@ -88918,12 +88958,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -88931,7 +88971,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -88946,7 +88986,7 @@
             r.e(7333),
           ]).then(r.bind(r, 56659)),
         ),
-        Ja = $a(() =>
+        Xa = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
@@ -88958,25 +88998,25 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
+            r.e(8759),
             r.e(596),
             r.e(1703),
-            r.e(4667),
+            r.e(598),
             r.e(4867),
             r.e(321),
             r.e(177),
             r.e(8396),
           ]).then(r.bind(r, 49850)),
         ),
-        eo = $a(() =>
+        Ja = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(4135),
             r.e(5313),
             r.e(9197),
@@ -88986,12 +89026,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -88999,7 +89039,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89013,12 +89053,12 @@
             r.e(9236),
           ]).then(r.bind(r, 9678)),
         ),
-        to = $a(() =>
+        eo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(2298),
             r.e(9427),
             r.e(5422),
@@ -89029,12 +89069,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89042,7 +89082,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89055,12 +89095,12 @@
             r.e(970),
           ]).then(r.bind(r, 34568)),
         ),
-        ro = $a(() =>
+        to = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(4135),
             r.e(5313),
             r.e(9197),
@@ -89070,12 +89110,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89083,7 +89123,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89097,22 +89137,22 @@
             r.e(3276),
           ]).then(r.bind(r, 44231)),
         ),
-        io = $a(() => r.e(30).then(r.bind(r, 91648))),
-        no = $a(() =>
+        ro = Ka(() => r.e(30).then(r.bind(r, 91648))),
+        io = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(9197),
             r.e(4796),
             r.e(8614),
-            r.e(3384),
+            r.e(8759),
             r.e(596),
             r.e(3687),
           ]).then(r.bind(r, 87731)),
         ),
-        so = $a(() =>
+        no = Ka(() =>
           Promise.all([r.e(4781), r.e(1402)]).then(r.bind(r, 44899)),
         ),
-        ao = $a(() =>
+        so = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(9197),
@@ -89122,14 +89162,14 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(7262),
+            r.e(8759),
             r.e(596),
             r.e(2687),
             r.e(716),
           ]).then(r.bind(r, 49271)),
         ),
-        oo = $a(() =>
+        ao = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(9197),
@@ -89139,23 +89179,23 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(7262),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(1677),
             r.e(1703),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(6295),
             r.e(5949),
             r.e(9672),
           ]).then(r.bind(r, 25054)),
         ),
-        lo = $a(() =>
+        oo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(9197),
@@ -89165,28 +89205,31 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(7262),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(1677),
             r.e(1703),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(6295),
             r.e(5949),
             r.e(9672),
           ]).then(r.bind(r, 6804)),
         ),
-        co = $a(() =>
+        lo = Ka(() =>
+          Promise.all([r.e(400), r.e(7701)]).then(r.bind(r, 88916)),
+        ),
+        co = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(2298),
             r.e(9427),
             r.e(5422),
@@ -89197,12 +89240,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89210,7 +89253,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89223,12 +89266,12 @@
             r.e(970),
           ]).then(r.bind(r, 58426)),
         ),
-        uo = $a(() =>
+        uo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(2298),
             r.e(9136),
             r.e(9197),
@@ -89238,12 +89281,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89251,7 +89294,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89265,7 +89308,7 @@
             r.e(4268),
           ]).then(r.bind(r, 3111)),
         ),
-        mo = $a(() =>
+        mo = Ka(() =>
           Promise.all([
             r.e(8970),
             r.e(9197),
@@ -89275,28 +89318,27 @@
             r.e(5068),
           ]).then(r.bind(r, 40917)),
         ),
-        go = $a(() =>
+        go = Ka(() =>
           Promise.all([r.e(8970), r.e(2389), r.e(1215), r.e(6966)]).then(
             r.bind(r, 8685),
           ),
         ),
-        po = $a(() =>
+        po = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(6334),
             r.e(8614),
-            r.e(3384),
             r.e(2389),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
             r.e(9157),
             r.e(875),
             r.e(6814),
           ]).then(r.bind(r, 56125)),
         ),
-        _o = $a(() =>
+        _o = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(7937),
@@ -89307,8 +89349,8 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(7262),
+            r.e(8759),
             r.e(596),
             r.e(1703),
             r.e(2687),
@@ -89316,12 +89358,12 @@
             r.e(5871),
           ]).then(r.bind(r, 11417)),
         ),
-        ho = $a(() =>
+        ho = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(2298),
             r.e(9136),
             r.e(9197),
@@ -89331,12 +89373,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89344,7 +89386,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89354,11 +89396,11 @@
             r.e(8620),
           ]).then(r.bind(r, 57912)),
         ),
-        fo = $a(() => r.e(8843).then(r.bind(r, 71009))),
-        bo = $a(() =>
+        fo = Ka(() => r.e(8843).then(r.bind(r, 71009))),
+        bo = Ka(() =>
           Promise.all([r.e(1814), r.e(1349)]).then(r.bind(r, 26240)),
         ),
-        Bo = $a(() =>
+        Bo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
@@ -89371,22 +89413,21 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
             r.e(925),
             r.e(1677),
             r.e(2687),
             r.e(8567),
-            r.e(4623),
+            r.e(9138),
             r.e(3164),
             r.e(5894),
           ]).then(r.bind(r, 13164)),
         ),
-        yo = $a(() =>
+        yo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
@@ -89399,22 +89440,21 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
             r.e(925),
             r.e(1677),
             r.e(2687),
             r.e(8567),
-            r.e(4623),
+            r.e(9138),
             r.e(3164),
             r.e(8987),
           ]).then(r.bind(r, 35649)),
         ),
-        wo = $a(() =>
+        wo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
@@ -89427,26 +89467,25 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
             r.e(925),
             r.e(1677),
             r.e(2687),
             r.e(8567),
-            r.e(4623),
+            r.e(9138),
             r.e(2965),
-          ]).then(r.bind(r, 10953)),
+          ]).then(r.bind(r, 17798)),
         ),
-        Mo = $a(() =>
+        Mo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(9197),
             r.e(4796),
             r.e(8614),
@@ -89454,31 +89493,31 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
             r.e(1703),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
             r.e(3027),
           ]).then(r.bind(r, 5136)),
         ),
-        So = $a(() =>
+        So = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(2298),
             r.e(4135),
             r.e(5313),
@@ -89490,12 +89529,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89503,7 +89542,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89516,12 +89555,12 @@
             r.e(2414),
           ]).then(r.bind(r, 67309)),
         ),
-        Co = $a(() =>
+        Co = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(6334),
             r.e(2403),
             r.e(9197),
@@ -89531,12 +89570,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89544,7 +89583,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89559,12 +89598,12 @@
             r.e(7333),
           ]).then(r.bind(r, 87669)),
         ),
-        vo = $a(() =>
+        vo = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(4135),
             r.e(5313),
             r.e(9197),
@@ -89574,12 +89613,12 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
@@ -89587,7 +89626,7 @@
             r.e(2687),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(3337),
@@ -89601,10 +89640,10 @@
             r.e(9236),
           ]).then(r.bind(r, 19516)),
         ),
-        Ro = $a(() =>
+        Ro = Ka(() =>
           Promise.all([r.e(9157), r.e(7819)]).then(r.bind(r, 90428)),
         ),
-        zo = $a(() =>
+        zo = Ka(() =>
           Promise.all([
             r.e(9197),
             r.e(4796),
@@ -89614,17 +89653,18 @@
             r.e(706),
             r.e(6883),
             r.e(7262),
+            r.e(8759),
             r.e(1703),
             r.e(3749),
             r.e(6991),
           ]).then(r.bind(r, 108)),
         ),
-        Io = $a(() =>
+        Io = Ka(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
             r.e(7937),
-            r.e(9099),
+            r.e(400),
             r.e(4135),
             r.e(9790),
             r.e(8680),
@@ -89635,26 +89675,26 @@
             r.e(4781),
             r.e(706),
             r.e(6883),
-            r.e(3384),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
-            r.e(1035),
+            r.e(9882),
+            r.e(5612),
+            r.e(8759),
             r.e(596),
             r.e(925),
             r.e(1677),
             r.e(1703),
             r.e(3749),
             r.e(9157),
-            r.e(4667),
+            r.e(598),
             r.e(875),
             r.e(8713),
             r.e(8954),
             r.e(9297),
           ]).then(r.bind(r, 13643)),
         ),
-        jo = $a(async () => ({
+        jo = Ka(async () => ({
           default: (
             await Promise.all([
               r.e(9427),
@@ -89664,7 +89704,7 @@
             ]).then(r.bind(r, 17223))
           ).GlobalFooter,
         })),
-        To = $a(() =>
+        To = Ka(() =>
           Promise.all([
             r.e(8970),
             r.e(9427),
@@ -89679,13 +89719,13 @@
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
+            r.e(9882),
             r.e(2687),
             r.e(1814),
             r.e(9456),
           ]).then(r.bind(r, 56354)),
         ),
-        xo = $a(() =>
+        xo = Ka(() =>
           Promise.all([
             r.e(8970),
             r.e(9427),
@@ -89700,13 +89740,13 @@
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
+            r.e(9882),
             r.e(2687),
             r.e(1814),
             r.e(9456),
           ]).then(r.bind(r, 1593)),
         ),
-        Fo = $a(() =>
+        Fo = Ka(() =>
           Promise.all([
             r.e(8970),
             r.e(9427),
@@ -89721,7 +89761,7 @@
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(1006),
+            r.e(9882),
             r.e(2687),
             r.e(1814),
             r.e(9456),
@@ -89822,7 +89862,7 @@
                               exact: !0,
                               path: y.B.AppStorePage(),
                               render: (e) =>
-                                (0, o.jsx)(Xa, {
+                                (0, o.jsx)(Ya, {
                                   appid: parseInt(e.match.params.appid),
                                 }),
                             }),
@@ -89848,7 +89888,7 @@
                                       ),
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Ja,
+                                        Xa,
                                         { ...e, promotionName: t },
                                         `broadcastsale_${t}`,
                                       ),
@@ -89862,7 +89902,7 @@
                                 (0, o.jsx)(Ce.X, {
                                   config: {
                                     "creatorhome-social-media-edit": (e) =>
-                                      (0, o.jsx)(io, { ...e }),
+                                      (0, o.jsx)(ro, { ...e }),
                                   },
                                 }),
                             }),
@@ -89872,7 +89912,7 @@
                                 (0, o.jsx)(Ce.X, {
                                   config: {
                                     "creatorhome-events-link-edit": (e) =>
-                                      (0, o.jsx)(no, { ...e }),
+                                      (0, o.jsx)(io, { ...e }),
                                   },
                                 }),
                             }),
@@ -89882,7 +89922,7 @@
                                 (0, o.jsx)(Ce.X, {
                                   config: {
                                     "curator-admin-rss": () =>
-                                      (0, o.jsx)(to, {}),
+                                      (0, o.jsx)(eo, {}),
                                   },
                                 }),
                             }),
@@ -89932,7 +89972,7 @@
                                   config: {
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Ja,
+                                        Xa,
                                         {
                                           ...e,
                                           clanid: s.GP.clanid,
@@ -89944,9 +89984,9 @@
                                           s.GP.listid,
                                       ),
                                     "creatorhome-social-media-display": (e) =>
-                                      (0, o.jsx)(so, { ...e }),
+                                      (0, o.jsx)(no, { ...e }),
                                     "creator-home-event": (e) =>
-                                      (0, o.jsx)(ro, { ...e }),
+                                      (0, o.jsx)(to, { ...e }),
                                   },
                                 }),
                             }),
@@ -89958,7 +89998,7 @@
                                   config: {
                                     "list-display": () =>
                                       (0, o.jsx)(
-                                        ao,
+                                        so,
                                         { listid: e.match.params.listid },
                                         "curator_list",
                                       ),
@@ -89972,7 +90012,7 @@
                                 (0, o.jsx)(Ce.X, {
                                   config: {
                                     "creatorhome-social-media-display": (e) =>
-                                      (0, o.jsx)(so, { ...e }),
+                                      (0, o.jsx)(no, { ...e }),
                                   },
                                 }),
                             }),
@@ -89984,7 +90024,7 @@
                                   config: {
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Ja,
+                                        Xa,
                                         {
                                           subid:
                                             Number.parseInt(
@@ -90010,7 +90050,7 @@
                                   config: {
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Ja,
+                                        Xa,
                                         {
                                           bundleid:
                                             Number.parseInt(
@@ -90117,13 +90157,13 @@
                               render: () =>
                                 (0, o.jsx)(Ce.X, {
                                   config: {
-                                    categories: () => (0, o.jsx)(eo, {}),
+                                    categories: () => (0, o.jsx)(Ja, {}),
                                   },
                                 }),
                             }),
                             (0, o.jsx)(Oo, {
                               path: y.B.AccountPreferences(),
-                              render: (e) => (0, o.jsx)(Ya, { ...e }),
+                              render: (e) => (0, o.jsx)(Qa, { ...e }),
                             }),
                             (0, o.jsx)(Oo, {
                               exact: !0,
@@ -90142,7 +90182,7 @@
                                 (0, o.jsx)(Ce.X, {
                                   config: {
                                     "discovery-queue-button": () =>
-                                      (0, o.jsx)(oo, {}),
+                                      (0, o.jsx)(ao, {}),
                                   },
                                 }),
                             }),
@@ -90233,6 +90273,8 @@
                                 (0, o.jsx)(Ce.X, {
                                   config: {
                                     "discovery-queue-home": () =>
+                                      (0, o.jsx)(oo, {}),
+                                    "personal-calendar-home": () =>
                                       (0, o.jsx)(lo, {}),
                                   },
                                 }),
@@ -90304,7 +90346,7 @@
             i = (0, s.Tc)("hwinfo", "application_config");
           return (0, o.jsx)(Uo, {
             storeUserConfig: t,
-            children: (0, o.jsx)(Za.Iz, {
+            children: (0, o.jsx)(Va.Iz, {
               children: (0, o.jsx)(U.I.Provider, {
                 value: { bCanUseLink: !0 },
                 children: (0, o.jsx)(s.ss, {
@@ -90316,8 +90358,8 @@
                         children: (0, o.jsx)(W, {
                           children: (0, o.jsx)(lt, {
                             children: (0, o.jsx)(me, {
-                              children: (0, o.jsx)(Ga, {
-                                children: (0, o.jsx)(Va.Y, { children: r }),
+                              children: (0, o.jsx)(Ea, {
+                                children: (0, o.jsx)(Ha.Y, { children: r }),
                               }),
                             }),
                           }),
@@ -90340,7 +90382,7 @@
                     "green-envelope": () =>
                       (0, o.jsx)(n.Suspense, {
                         fallback: null,
-                        children: (0, o.jsx)(Qa, {
+                        children: (0, o.jsx)($a, {
                           bResponsiveHeader: !1,
                           notifications: (0, s.Tc)(
                             "steam_notifications",
@@ -90351,7 +90393,7 @@
                     "green-envelope-responsive": () =>
                       (0, o.jsx)(n.Suspense, {
                         fallback: null,
-                        children: (0, o.jsx)(Qa, {
+                        children: (0, o.jsx)($a, {
                           bResponsiveHeader: !0,
                           notifications: (0, s.Tc)(
                             "steam_notifications",
@@ -90377,12 +90419,12 @@
                     "store-menu-v7": () =>
                       (0, o.jsx)(n.Suspense, {
                         fallback: null,
-                        children: (0, o.jsx)(Ua, {}),
+                        children: (0, o.jsx)(Aa, {}),
                       }),
                     "store-menu-responsive-search": () =>
                       (0, o.jsx)(n.Suspense, {
                         fallback: null,
-                        children: (0, o.jsx)(ka, {}),
+                        children: (0, o.jsx)(Pa, {}),
                       }),
                   },
                 }),
@@ -90429,10 +90471,10 @@
           "responseEnd" in t &&
           "number" == typeof t.responseEnd &&
           t.responseEnd &&
-          (0, Ha.D)()
+          (0, Ga.D)()
         ) {
           const e = Ko - t.responseEnd;
-          (0, Ha.D)().IncrementStat("storeReactStartup", e),
+          (0, Ga.D)().IncrementStat("storeReactStartup", e),
             performance.measure("storeReactStartup", {
               start: t.responseEnd,
               duration: e,
@@ -90491,8 +90533,8 @@
                   .createRoot(document.getElementById("application_root"))
                   .render(n.createElement(qo, { history: e }))
               : console.error('No "application_root" was found to target'),
-            (0, Ha.D)() &&
-              (0, Ha.D)().IncrementStat(
+            (0, Ga.D)() &&
+              (0, Ga.D)().IncrementStat(
                 "storeReactLocalizationReady",
                 performance.now() - Ko,
               ),

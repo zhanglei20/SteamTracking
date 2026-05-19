@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Valve เท่านั้น",
     "moderation_escalationlevel_supervisor_desc": "ต้องได้รับการอนุมัติจากหัวหน้า",
+    "moderation_escalation_escalationnote": "หมายเหตุการเร่งเรื่อง:",
     "moderation_chatmetadata_deleted": "เมทาเดตาที่เกี่ยวข้องกับรายงานแช็ตนี้ถูกลบไปแล้วเนื่องจากมีอายุเกินระยะเวลาการเก็บรักษาที่กำหนดไว้เพียงแค่ประมาณ 21 วันเท่านั้น",
     "moderation_chatmetadata_futurelogcollection": "บันทึกแช็ตนี้อาจได้รับการปรับปรุงด้วยการส่งข้อความเพิ่มเติมหลังจากที่รายงานภายใน %1$s วินาที",
     "moderation_resolutionaction_removed": "ลบเนื้อหาที่รายงาน",

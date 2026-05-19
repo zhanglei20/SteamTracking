@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "게임으로 필터링...",
     "AdvancedSearch_BetaTag": "베타 기능 - 피드백 제공",
     "AdvancedSearch_TextSearch_Tooltip": "장터 아이템 이름 검색...",
-    "AdvancedSearch_Beta_OptOut": "이전 필터로 전환",
     "AdvancedSearch_CSContainers_Tooltip": "무기 상자, 스티커 캡슐, 기념품 패키지 등",
     "Header_MarketTitle": "Steam 장터",
     "Header_MarketDescription": "Steam 지갑 자금으로 커뮤니티 멤버들과 아이템을 사고 팔아보세요.",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "현재 계정이 잠겨 있습니다. 계정이 잠긴 이유에 대한 자세한 정보는 Steam 클라이언트에 로그인한 상태에서 오른쪽 상단에 있는 빨간색 막대를 클릭하면 확인할 수 있습니다.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "(제한 해제 관련 정보)",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "현재 계정에 교환 차단이 적용되어 있습니다.",
+    "Economy_Market_TopLevelReason_Unknown": "이 계정은 현재 Steam 장터를 이용할 수 없습니다.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "교환 차단은 일시적 또는 영구적으로 적용될 수 있습니다. 교환 차단 만료일을 확인하려면 Steam 클라이언트에 로그인한 상태에서 오른쪽 상단의 빨간색 막대를 누르세요.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "계정에 교환 차단이 적용되어 있습니다. 교환 차단이 만료일을 확인하려면 Steam 클라이언트에 로그인한 상태에서 오른쪽 상단의 빨간색 막대를 누르세요.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "(추가 정보)",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Steam Guard를 활성화한 후 15일이 지나야 합니다. Steam 고객지원에서는 이 제한을 해제해 드릴 수 없습니다.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "계정에 Steam Guard를 활성화한 후 최소 %1$s일이 지나야 합니다.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "계정에 Steam Guard를 활성화해야 합니다. 이메일 주소를 인증했으며 Steam Guard를 활성화한 후 계정에 두 번 로그인했는지 확인해 주세요.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "계정에 Steam Guard를 활성화한 후 최소 %1$s일이 지나야 합니다."
+    "Economy_Market_HeaderTip_NoSteamGuard": "계정에 Steam Guard를 활성화한 후 최소 %1$s일이 지나야 합니다.",
+    "Economy_Market_HeaderTip_TimeCanUse": "계정에 추가 제한 조치가 적용되지 않는 한 %1$s부터 Steam 장터를 이용할 수 있습니다.",
+    "Economy_Market_TopLevelReason_TradeCooldown": "고객님의 계정에 일시적으로 거래 및 장터 기능 쿨다운이 적용되어 있습니다."
 }

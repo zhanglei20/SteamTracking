@@ -5690,7 +5690,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           19: [19, 1663, 1774, 3814, 1646, 4158],
@@ -12307,12 +12306,16 @@
           _ = Number.parseInt(
             (0, _._)("yearinreview_eresults", "application_config"),
           );
+        _.useEffect(() => {
+          (0, _._)(_, "src", null),
+            (0, _._)(_, "snr", null),
+            (0, _._)(_, "sP", null);
+        }, [_]);
+        const _ = _.useRef(null);
         if (
           (_.useEffect(() => {
-            (0, _._)(_, "src", null),
-              (0, _._)(_, "snr", null),
-              (0, _._)(_, "sP", null);
-          }, [_]),
+            _.current && _.current.NavTree()?.Activate(!0);
+          }, []),
           _ == _._)
         )
           return (0, _.jsx)(_, {
@@ -12323,9 +12326,12 @@
             message: (0, _._)("#YIR_Error_NoData"),
           });
         const _ = new _._(_);
-        return (0, _.jsx)(_, {
-          steamID: _,
-          year: _,
+        return (0, _.jsx)(_._, {
+          navRef: _,
+          children: (0, _.jsx)(_, {
+            steamID: _,
+            year: _,
+          }),
         });
       }
       function _(_) {
@@ -12920,27 +12926,24 @@
         return (
           (0, _._)(),
           (0, _.jsx)(_._, {
-            navID: "YearInReviewPageRoot",
+            domain: "store.steampowered.com",
+            controller: "yearinreview",
             children: (0, _.jsx)(_._, {
-              domain: "store.steampowered.com",
-              controller: "yearinreview",
               children: (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  path: `${_.Home(":steamId?", ":year?")}`,
-                  render: (_) =>
-                    (0, _.jsx)(_._, {
-                      method: "yearinreview",
-                      children: (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_, {
-                          steamId:
-                            "my" == _.match.params.steamId
-                              ? _._.steamid
-                              : _.match.params.steamId,
-                          year: _.match.params.year,
-                        }),
+                path: `${_.Home(":steamId?", ":year?")}`,
+                render: (_) =>
+                  (0, _.jsx)(_._, {
+                    method: "yearinreview",
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
+                        steamId:
+                          "my" == _.match.params.steamId
+                            ? _._.steamid
+                            : _.match.params.steamId,
+                        year: _.match.params.year,
                       }),
                     }),
-                }),
+                  }),
               }),
             }),
           })

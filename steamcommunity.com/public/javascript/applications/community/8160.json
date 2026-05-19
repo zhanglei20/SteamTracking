@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Oyuna göre filtrele...",
     "AdvancedSearch_BetaTag": "Beta özelliği - Geri bildirim verin",
     "AdvancedSearch_TextSearch_Tooltip": "Pazar'da öğe adıyla arama yapın…",
-    "AdvancedSearch_Beta_OptOut": "Eski filtrelere geç",
     "AdvancedSearch_CSContainers_Tooltip": "Silah kasaları, çıkartma kapsülleri, hatıra paketleri vb.",
     "Header_MarketTitle": "Steam Topluluk Pazarı",
     "Header_MarketDescription": "Steam Cüzdanı bakiyesi karşılığında topluluk üyeleriyle öğe alışverişi yapın.",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Hesabınız şu anda kilitlidir. Bu kilit ile ilgili daha fazla bilgiyi, Steam istemcisine giriş yapmışken, sağ üst köşede gösterilen kırmızı çubuğa tıklayarak öğrenebilirsiniz.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "Bu kısıtlamayı kaldırmak için...",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "Hesabınız şu anda takas yasağına sahip.",
+    "Economy_Market_TopLevelReason_Unknown": "Bu hesap şu anda Steam Topluluk Pazarı'nı kullanamaz.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Takas yasağı geçici veya kalıcı olabilir. Bu takas yasağının ne zaman sona ereceğini görmek için, Steam istemcisine giriş yapmışken, sağ üst köşede gösterilen kırmızı çubuğa tıklayarak öğrenebilirsiniz.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Hesabınızın takas yapması yasaklanmıştır. Bu takas yasağının ne zaman sona ereceğini görmek için, Steam istemcisine giriş yapmışken, sağ üst köşede gösterilen kırmızı çubuğa tıklayarak öğrenebilirsiniz.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Daha fazla bilgi...",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Steam Guard hesabınızda etkinleştirildikten sonra 15 gün beklemeniz gerekmektedir. Steam Destek bu kısıtlamayı kaldıramaz.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Hesabınız, en az %1$s gün boyunca Steam Guard ile korunmuş olmalıdır.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Hesabınızda Steam Guard'ı etkinleştirmeniz gerekmektedir. Lütfen e-posta adresinizin doğrulanmış olduğundan ve Steam Guard'ı etkinleştirdikten sonra hesabınıza iki defa giriş yaptığınızdan emin olun.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Hesabınız, en az %1$s gün boyunca Steam Guard ile korunmuş olmalıdır."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Hesabınız, en az %1$s gün boyunca Steam Guard ile korunmuş olmalıdır.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Erişiminizi engelleyecek başka bir durum oluşmazsa, Topluluk Pazarı'nı %1$s tarihinde kullanabileceksiniz.",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Hesabınıza takas ve Topluluk Pazarı kullanımına yönelik geçici bir bekleme süresi uygulanmıştır."
 }

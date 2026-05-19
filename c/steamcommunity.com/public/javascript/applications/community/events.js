@@ -5,9 +5,8 @@
       module.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
-        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
-        SectionButtonCtn: "_1HP0yfVUrZ-TPBYhiQkye2",
         SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
+        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
         EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
@@ -255,19 +254,19 @@
           _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
           _ = window.screen.width > 500 ? _._ : _._;
         return (0, _.jsxs)("div", {
+          className: _.Container,
           children: [
-            (0, _.jsx)("h2", {
-              children: (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
-            }),
-            (0, _.jsx)("div", {
-              className: _.SectionButtonCtn,
-              children: (0, _.jsx)(_._, {
-                className: _.SectionButton,
-                onClick: (_) => {
-                  null == _ || _(), _.stopPropagation(), _.preventDefault();
-                },
-                children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
-              }),
+            (0, _.jsxs)("h2", {
+              children: [
+                (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
+                (0, _.jsx)(_._, {
+                  className: _.SectionButton,
+                  onClick: (_) => {
+                    null == _ || _(), _.stopPropagation(), _.preventDefault();
+                  },
+                  children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                }),
+              ],
             }),
             !!_ &&
               (0, _.jsx)(_._, {
@@ -285,6 +284,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 500;
       function _(_) {
@@ -295,66 +295,79 @@
             elPostRowElement: _,
             bViewAllShowInfiniteScroll: _,
           } = _,
-          _ = (0, _._)().ownerWindow.window.innerWidth <= _ ? 1 : 2;
-        return (0, _.jsxs)(_._, {
-          className: _,
-          "flow-children": "row",
-          children: [
-            !!_ &&
-              (0, _.jsxs)("div", {
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        let _ = 2,
+          _ = _ + 1;
+        return (
+          _.ownerWindow.window
+            ? (_ = _.ownerWindow.window.innerWidth)
+            : _.viewportWidth && (_ = _.viewportWidth.value),
+          (_ = _ <= _ ? 1 : 2),
+          _ && 0 == _.length && !_
+            ? null
+            : (0, _.jsxs)(_._, {
+                className: _,
+                "flow-children": "row",
                 children: [
-                  (0, _.jsx)("h2", {
-                    children: _._.Localize("#EventBrowse_RecentEvents"),
-                  }),
-                  !_._.IN_GAMEPADUI &&
-                    !!_ &&
-                    (0, _.jsx)("div", {
-                      className: _.SectionButtonCtn,
-                      children:
-                        _ && _
-                          ? (0, _.jsx)(_._, {
-                              className: _.SectionButton,
-                              onClick: () => _(_[0]),
-                              children: _._.Localize(
-                                "#EventBrowse_MoreEventsBtn",
-                              ),
-                            })
-                          : (0, _.jsx)(_._, {
-                              eventModel: _[0],
-                              route: _._.k_eViewWebSiteHub,
-                              className: _.SectionButton,
-                              children: _._.Localize(
-                                "#EventBrowse_MoreEventsBtn",
-                              ),
-                            }),
+                  !!_ &&
+                    _.length > 0 &&
+                    (0, _.jsxs)("div", {
+                      className: _.Container,
+                      children: [
+                        (0, _.jsxs)("h2", {
+                          children: [
+                            _._.Localize("#EventBrowse_RecentEvents"),
+                            !_._.IN_GAMEPADUI &&
+                              !!_ &&
+                              (0, _.jsx)(_.Fragment, {
+                                children:
+                                  _ && _
+                                    ? (0, _.jsx)(_._, {
+                                        className: _.SectionButton,
+                                        onClick: () => _(_[0]),
+                                        children: _._.Localize(
+                                          "#EventBrowse_MoreEventsBtn",
+                                        ),
+                                      })
+                                    : (0, _.jsx)(_._, {
+                                        eventModel: _[0],
+                                        route: _._.k_eViewWebSiteHub,
+                                        className: _.SectionButton,
+                                        children: _._.Localize(
+                                          "#EventBrowse_MoreEventsBtn",
+                                        ),
+                                      }),
+                              }),
+                          ],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.EventsSummariesCtn,
+                          children: __webpack_require__.slice(0, _).map((_) => {
+                            const _ = _
+                                ? (_) => {
+                                    _(_),
+                                      _.stopPropagation(),
+                                      _.preventDefault();
+                                  }
+                                : void 0,
+                              _ = 1 === _.length && _ > 500 ? _._ : _._;
+                            return (0, _.jsx)(
+                              _,
+                              {
+                                event: _,
+                                onClick: _,
+                              },
+                              _.GID,
+                            );
+                          }),
+                        }),
+                      ],
                     }),
-                  (0, _.jsx)("div", {
-                    className: _.EventsSummariesCtn,
-                    children: __webpack_require__.slice(0, _).map((_) => {
-                      const _ = _
-                          ? (_) => {
-                              _(_), _.stopPropagation(), _.preventDefault();
-                            }
-                          : void 0,
-                        _ =
-                          1 === _.length && window.screen.width > 500
-                            ? _._
-                            : _._;
-                      return (0, _.jsx)(
-                        _,
-                        {
-                          event: _,
-                          onClick: _,
-                        },
-                        _.GID,
-                      );
-                    }),
-                  }),
+                  _,
                 ],
-              }),
-            _,
-          ],
-        });
+              })
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -540,18 +553,16 @@
             closeModal: _,
           } = _,
           _ = (0, _._)();
-        return null === _
-          ? null
-          : (0, _.jsx)(_._, {
-              className: _ ? void 0 : _.StoreHeaderAdjust,
-              eventClassName: _ ? _.GamePadUIWidthAdjust : void 0,
-              appid: _,
-              trackingLocation: _,
-              announcementGID: _,
-              partnerEventStore: _,
-              eventModel: _,
-              closeModal: _,
-            });
+        return (0, _.jsx)(_._, {
+          className: _ ? void 0 : _.StoreHeaderAdjust,
+          eventClassName: _ ? _.GamePadUIWidthAdjust : void 0,
+          appid: _,
+          trackingLocation: _,
+          announcementGID: _,
+          partnerEventStore: _,
+          eventModel: null != _ ? _ : void 0,
+          closeModal: _,
+        });
       }
       function _(_) {
         const { appid: _ } = _;

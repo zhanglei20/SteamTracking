@@ -784,7 +784,7 @@
   transition-delay: 0.125s;
 }
 .gamepadui_svg_library_IbexDiagramFrontPanelTransparencyEffect_1SoIo.gamepadui_svg_library_ShowXRay_dX_dr {
-  opacity: 0;
+  opacity: 0.1;
   transition-delay: 0s;
 }
 .gamepadui_svg_library_ActivatableFill_3D14G {
@@ -4021,6 +4021,10 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_FieldChildrenInner_2o2fX {
   flex-grow: 1;
+  min-width: 0;
+}
+.gamepaddialog_FieldChildrenInner_2o2fX .DialogInput_Wrapper {
+  min-width: 0;
 }
 .gamepaddialog_FieldChildrenInner_2o2fX > svg {
   height: 1em;
@@ -4422,6 +4426,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_LabelFieldValue_3pteV {
   color: #8b929a;
   word-break: break-word;
+  text-align: end;
 }
 .gamepaddialog_Field_eKmEX.gpfocuswithin .gamepaddialog_LabelFieldValue_3pteV {
   color: #b8bcbf;

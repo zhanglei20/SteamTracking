@@ -12,37 +12,44 @@
     58317: (e, t, o) => {
       "use strict";
       o.r(t), o.d(t, { default: () => u });
-      var n = o(7850),
-        c = o(90626),
-        i = o(6336),
-        r = o(87100),
-        s = o(4869);
+      var r = o(7850),
+        i = o(90626),
+        n = o(6336),
+        s = o(87100),
+        c = o(4869);
       function u(e) {
-        const [t, o] = (0, c.useState)(!1),
-          u = (0, c.useRef)(null);
-        return (0, n.jsx)("span", {
-          children: (0, n.jsxs)("button", {
-            onClick: (t) => (
+        const [t, o] = (0, i.useState)(!1),
+          u = (0, i.useRef)(null),
+          a = (0, i.useMemo)(
+            () =>
+              (e.bPrefixCurrentURL ? window.location.href.split("#")[0] : "") +
+              e.text,
+            [e.text, e.bPrefixCurrentURL],
+          );
+        return (0, r.jsx)("span", {
+          children: (0, r.jsxs)("button", {
+            onClick: (e) => (
               o(!0),
-              t.stopPropagation(),
-              navigator.clipboard.writeText(e.text),
+              e.stopPropagation(),
+              navigator.clipboard.writeText(a),
               setTimeout(() => o(!1), 1e3),
               !1
             ),
-            className: r.CopyButton,
+            className: s.CopyButton,
             ref: u,
+            title: a,
             children: [
               t &&
                 u.current &&
-                (0, n.jsx)(i.g, {
+                (0, r.jsx)(n.g, {
                   target: u.current,
                   direction: "bottom",
-                  children: (0, n.jsx)("div", {
-                    className: r.CopiedNotice,
+                  children: (0, r.jsx)("div", {
+                    className: s.CopiedNotice,
                     children: "Copied.",
                   }),
                 }),
-              (0, n.jsx)(s.cKB, {}),
+              (0, r.jsx)(c.cKB, {}),
             ],
           }),
         });

@@ -410,6 +410,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1418,7 +1419,7 @@
               postbody: _,
               footer: _,
             } = _,
-            _ = _.GetImageURLWithFallback("background", _),
+            _ = (0, _._)(_, "background", _),
             _ = _.BIsImageSafeForAllAges("background", _),
             _ = "lang_" + (0, _.wwZ)(_),
             _ = !!_ && _.BImageNeedScreenshotFallback("background", _);

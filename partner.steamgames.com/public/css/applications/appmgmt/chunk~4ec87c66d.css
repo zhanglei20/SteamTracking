@@ -5436,6 +5436,7 @@ html.responsive.touch
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
+  text-decoration: none;
 }
 ._1MwNf8slOG9lOvAeOshmuu:not(:last-child) {
   margin-right: 8px;
@@ -5644,6 +5645,7 @@ html.responsive.touch
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK ._22jEpNTfml-w_aRJV-fKDm {
   aspect-ratio: 16 / 9;
   flex-basis: 40%;
+  max-width: 350px;
 }
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK ._2qyLPxO8_nkczRvFiaju8N {
   max-height: unset;
@@ -14438,7 +14440,7 @@ button.rbc-input::-moz-focus-inner {
 ._2MAlj6wb25S_X-n2HRJSYy .DialogButton {
   padding: 0px 20px;
   background-color: #1a9fff;
-  color: #f0f;
+  color: #fff;
 }
 ._2MAlj6wb25S_X-n2HRJSYy .DialogButton:hover {
   background-color: #1a9fff;
@@ -15525,6 +15527,8 @@ p a:hover {
 }
 ._1-lXevywfwnvWgq9wWIuU2 .gUn74c3vh5bpvGU6nx9Zw {
   position: relative;
+  max-height: 300px;
+  overflow-y: scroll;
 }
 ._1-lXevywfwnvWgq9wWIuU2 .gUn74c3vh5bpvGU6nx9Zw .Tk6iBLgHjRHuLoBAj21Ry {
   padding: 1px 3px;
@@ -15608,6 +15612,12 @@ p a:hover {
 }
 ._1-lXevywfwnvWgq9wWIuU2 ._2DqGfjdxXIOkOrqs1sblsE ._3Tyh3r8_e2IQfo1jRNCldG {
   margin-bottom: 2px;
+}
+._1-lXevywfwnvWgq9wWIuU2
+  ._2DqGfjdxXIOkOrqs1sblsE
+  ._3Tyh3r8_e2IQfo1jRNCldG
+  a:hover {
+  color: #fff;
 }
 ._1-lXevywfwnvWgq9wWIuU2 ._3670NSTxRoD8AaISIV3gaB {
   display: flex;

@@ -7382,7 +7382,7 @@
         le = s(67045),
         ce = s(96409),
         de = s(92757),
-        ue = s(6813),
+        ue = s(32801),
         pe = s(8527),
         me = s(77411),
         he = s(17720),
@@ -16934,40 +16934,44 @@
             hoverClassName: s,
             fnGetIDOverride: r,
             fnHoverState: i,
-            children: o,
+            disableScreenshots: o,
+            children: l,
           } = e,
-          l = a.useRef(null),
-          c = a.useCallback(
+          c = a.useRef(null),
+          u = a.useCallback(
             (e) => {
               const s = p(t);
               s &&
                 (i && i(!0),
                 window.GameHover &&
-                  window.GameHover(r ? r() : l.current, e, "global_hover", {
+                  (c.current &&
+                    o &&
+                    (c.current.dataset.hoverDisableScreenshots = "true"),
+                  window.GameHover(r ? r() : c.current, e, "global_hover", {
                     type: s,
                     id: (0, d.G$)(t).id,
                     v6: 1,
-                  }));
+                  })));
             },
-            [i, r, t],
+            [i, r, o, t],
           ),
-          u = a.useCallback(
+          m = a.useCallback(
             (e) => {
               p(t) &&
                 (i && e.relatedTarget && i(!1),
                 window.HideGameHover &&
-                  window.HideGameHover(r ? r() : l.current, e, "global_hover"));
+                  window.HideGameHover(r ? r() : c.current, e, "global_hover"));
             },
             [t, i, r],
           );
         return (0, n.jsx)("div", {
-          ref: l,
+          ref: c,
           className: s,
-          onMouseEnter: c,
-          onMouseLeave: u,
-          onFocus: c,
-          onBlur: u,
-          children: o,
+          onMouseEnter: u,
+          onMouseLeave: m,
+          onFocus: u,
+          onBlur: m,
+          children: l,
         });
       }
       function h(e) {
@@ -17532,7 +17536,7 @@
         r = s(76217),
         i = s(23310),
         o = s(96171),
-        l = s(68276),
+        l = s(65522),
         c = s(20433);
       var d = s(78588),
         u = s(12424),
@@ -17603,7 +17607,12 @@
                         b().AddToWishlistButton,
                       ),
                     }),
-                  !i && (0, n.jsx)(f.Q, { id: t, bMinimizePlatforms: j }),
+                  !i &&
+                    (0, n.jsx)(f.Q, {
+                      id: t,
+                      bMinimizePlatforms: j,
+                      bHideWindows: !0,
+                    }),
                   !a &&
                     (0, n.jsx)("span", {
                       className: b().BottomBarPriceInfo,
@@ -17729,6 +17738,7 @@
             bHasParentAppToDisplay: w,
             onlyOneDiscountPct: u,
             bShowEarlyAccessBanner: m,
+            bUseDiv: !d,
           });
         return (0, n.jsxs)(r.Z, {
           className: (0, C.A)({
@@ -17825,58 +17835,60 @@
         const {
             id: t,
             bHideStatusBanners: s,
-            strExtraParams: r,
-            index: i,
-            imageType: o,
-            bHasParentAppToDisplay: l,
-            bIsHovered: c,
-            strDoubleCapsuleMessage: u,
-            bPreferDemoStorePage: p,
-            bShowEarlyAccessBanner: m,
-            bPreferAssetWithoutOverride: _,
+            bUseDiv: r,
+            strExtraParams: i,
+            index: o,
+            imageType: l,
+            bHasParentAppToDisplay: c,
+            bIsHovered: u,
+            strDoubleCapsuleMessage: p,
+            bPreferDemoStorePage: m,
+            bShowEarlyAccessBanner: _,
+            bPreferAssetWithoutOverride: g,
           } = e,
-          g = (0, I.n9)(),
-          x = (0, R.w)(),
-          b = (0, P._)(t),
-          { data: f } = (0, h.J$)(t);
-        if (!f) return null;
-        const A = (0, U.NT)(
-          (0, N.It)(`${(0, q._)(f, p)}${r ? `?${r}` : ""}`, g, x),
-        );
-        let S;
-        const j = !!u;
+          x = (0, I.n9)(),
+          b = (0, R.w)(),
+          f = (0, P._)(t),
+          { data: A } = (0, h.J$)(t);
+        if (!A) return null;
+        const S = r
+            ? void 0
+            : (0, U.NT)(
+                (0, N.It)(`${(0, q._)(A, m)}${i ? `?${i}` : ""}`, x, b),
+              ),
+          j = r ? "div" : a.Ii,
+          w = !!p;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
-              className: (0, C.A)({ [W().TwoWidthCtn]: j }),
+              className: (0, C.A)({ [W().TwoWidthCtn]: w }),
               children: [
-                (0, n.jsxs)(a.Ii, {
-                  href: S ? void 0 : A,
+                (0, n.jsxs)(j, {
+                  href: S,
                   style: { display: "block", cursor: "pointer" },
-                  className: (0, C.A)({ [W().TwoWidthCapsule]: j }),
-                  preferredFocus: l,
-                  onClick: S,
+                  className: (0, C.A)({ [W().TwoWidthCapsule]: w }),
+                  preferredFocus: c,
                   children: [
                     (0, n.jsx)(B.V, {
-                      appids: b,
+                      appids: f,
                       hide_status_banners: s,
                       show_early_access: e.bShowEarlyAccessBanner,
                     }),
-                    "none" != o &&
+                    "none" != l &&
                       (0, n.jsx)(d.a, {
-                        imageType: o,
+                        imageType: l,
                         id: t,
-                        bPreferAssetWithoutOverride: _,
+                        bPreferAssetWithoutOverride: g,
                       }),
                     (0, n.jsx)(F.J, { id: t }),
-                    (0, n.jsx)(k.m, { id: t, active: c, bIsHoverMode: !0 }),
+                    (0, n.jsx)(k.m, { id: t, active: u, bIsHoverMode: !0 }),
                   ],
                 }),
-                j &&
+                w &&
                   (0, n.jsx)(X, {
                     id: t,
-                    strDoubleCapsuleMessage: u,
-                    index: i,
+                    strDoubleCapsuleMessage: p,
+                    index: o,
                   }),
               ],
             }),

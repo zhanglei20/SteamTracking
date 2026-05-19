@@ -9246,14 +9246,15 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
-          _ = _.useRef(void 0);
+          _ = _.useRef(null);
         return (
-          _.useEffect(() => _.current?.Activate(!0), []),
+          _.useEffect(() => {
+            _.current && _.current.NavTree()?.Activate(!0);
+          }, []),
           (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
-              navID: "LoyaltyShell",
-              navTreeRef: _,
               className: (0, _._)(_.Shell),
+              navRef: _,
               children: (0, _.jsx)(_._, {
                 domain: "store.steampowered.com",
                 feature: "pointsshop",

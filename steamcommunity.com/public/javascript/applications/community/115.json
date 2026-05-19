@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Sadece Valve",
     "moderation_escalationlevel_supervisor_desc": "Denetleyici gerekli",
+    "moderation_escalation_escalationnote": "Üst birim için not:",
     "moderation_chatmetadata_deleted": "Bu sohbet şikâyetine ilişkin üst veriler, süre kısıtlaması nedeniyle silinmiştir. Bu veriler yaklaşık 21 gün boyunca saklanır.",
     "moderation_chatmetadata_futurelogcollection": "Bu sohbet kaydı, şikâyet gönderildikten %1$s sonra gönderilmiş ilave mesajlarla genişletilebilir.",
     "moderation_resolutionaction_removed": "Şikâyet edilen içeriği kaldır",

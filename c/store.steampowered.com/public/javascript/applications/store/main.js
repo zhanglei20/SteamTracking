@@ -8476,38 +8476,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-        const { children: _, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(void 0),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(),
-          _ = (0, _._)("__nav_tree_root");
-        return (0, _.jsx)(_._, {
-          ..._,
-          navTreeRef: _,
-          ref: _,
-          parentEmbeddedNavTree: _,
-          disabledRoot: !_,
-          historyMode: "navigationapi",
-          children: (0, _.jsx)(_._, {
-            disableFocusRing: !_,
-            children: _,
-          }),
-        });
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -10198,6 +10166,7 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = [],
@@ -10344,8 +10313,7 @@
           distance: _,
         };
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_options;
         m_msStart;
@@ -11705,7 +11673,7 @@
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
             this.m_Tree.BIsActive() &&
-              (function (_, _) {
+              (function (_, _, _) {
                 const _ = _.Element;
                 if (!_) return;
                 let _ = [
@@ -11746,7 +11714,7 @@
                       _ == _.NoTransform ||
                       _ == _.NoTransformSparseContent ||
                       !_;
-                  if (_) {
+                  if (_ || _ === _._.GAMEPAD) {
                     const _ = _ ? _(_) : _.getBoundingClientRect();
                     let _ = !1;
                     const _ = Math.max(1.4 * (_.bottom - _.top), 40),
@@ -11778,7 +11746,7 @@
                             inline: "nearest",
                           });
                 }
-              })(this, _);
+              })(this, _, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -32203,6 +32171,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  crc_schema: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -32278,6 +32251,11 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  crc_schema: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -54623,6 +54601,11 @@
                     pbr: _._.readPackedUint64String,
                     _: _._.writeRepeatedUint64String,
                   },
+                  has_demo: {
+                    _: 27,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -58181,6 +58164,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -58292,11 +58276,7 @@
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return _(_, _, "include_screenshots", "screenshots");
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
@@ -58346,6 +58326,9 @@
       }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
+      }
+      function _(_, _) {
+        return _(_, _, "include_screenshots", "screenshots");
       }
       function _(_, _) {
         return _(
@@ -81319,7 +81302,31 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _({ config: _, isDynamic: _ }) {
+      const _ = _.forwardRef(function (_, _) {
+        const { children: _, navTreeRef: _, ..._ } = _,
+          _ = _.useRef(void 0),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)("__nav_tree_root");
+        return (0, _.jsx)(_._, {
+          ..._,
+          navTreeRef: _,
+          ref: _,
+          parentEmbeddedNavTree: _,
+          disabledRoot: !_,
+          historyMode: "navigationapi",
+          children: (0, _.jsx)(_._, {
+            disableFocusRing: !_,
+            children: _,
+          }),
+        });
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _({ config: _, isDynamic: _, omitFocusNavTreeBridge: _ }) {
         const _ = _ ? _ : _;
         return (0, _.jsx)(_.Fragment, {
           children: Object.keys(_ || {}).map((_) =>
@@ -81328,6 +81335,7 @@
               {
                 featureName: _,
                 render: _[_],
+                omitFocusNavTreeBridge: !!_,
               },
               _,
             ),
@@ -81335,7 +81343,7 @@
         });
       }
       function _(_) {
-        const { featureName: _, render: _ } = _,
+        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
           _ = _.useMemo(
             () =>
               Array.from(
@@ -81352,6 +81360,7 @@
                     featureName: _,
                     elem: _,
                     render: _,
+                    omitFocusNavTreeBridge: _,
                   },
                   _,
                 ),
@@ -81360,7 +81369,7 @@
           : null;
       }
       function _(_) {
-        const { featureName: _, render: _ } = _,
+        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
           _ = (0, _._)(),
           _ = _.useRef([]),
           _ = _.useRef(0);
@@ -81409,6 +81418,7 @@
                   elem: _,
                   featureName: _,
                   render: _,
+                  omitFocusNavTreeBridge: _,
                 },
                 _,
               ),
@@ -81417,7 +81427,12 @@
         );
       }
       function _(_) {
-        const { featureName: _, elem: _, render: _ } = _,
+        const {
+            featureName: _,
+            elem: _,
+            render: _,
+            omitFocusNavTreeBridge: _,
+          } = _,
           _ = _.useMemo(
             () =>
               (function (_, _) {
@@ -81440,12 +81455,22 @@
               })(__webpack_require__.getAttribute("data-props"), _),
             [_, _],
           );
-        return (0, _.createPortal)(
-          (0, _.jsx)(_._, {
-            children: _(_),
-          }),
-          _,
-        );
+        return _
+          ? (0, _.createPortal)(
+              (0, _.jsx)(_._, {
+                children: _(_),
+              }),
+              _,
+            )
+          : (0, _.createPortal)(
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  navID: `FeatureTarget_${_}`,
+                  children: _(_),
+                }),
+              }),
+              _,
+            );
       }
       function _(_, _) {
         return _.matches(_) ? [_] : _.querySelectorAll(_);
@@ -90779,6 +90804,10 @@
               ),
             "navigationapi" == this.m_Properties.historyMode &&
               __webpack_require__.Push((0, _._)(this)),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(
+              this.BIsActive(),
+              this,
+            ),
             __webpack_require__.GetUnregisterFunc()
           );
         }
@@ -91924,12 +91953,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -97953,16 +97980,14 @@
           null
         );
       });
-      var _ = __webpack_require__("chunkid");
       function _() {
         const _ = _(_._),
           _ = _.useRef(null),
           [_, _] = _.useState(null);
         _.current = _;
         const _ = _.useCallback((_) => {
-          _ &&
-            _.parentElement &&
-            (_.parentElement.className = _()(_.StoreMenuLegacyWrapper));
+          const _ = _?.closest(".StoreMenuLoadingPlaceholder");
+          _ && (_.className = _()(_.StoreMenuLegacyWrapper));
         }, []);
         return (
           (0, _.useEffect)(
@@ -97975,8 +98000,7 @@
             [],
           ),
           _ && _
-            ? (0, _.jsx)(_._, {
-                navID: "StoreMenu",
+            ? (0, _.jsx)("div", {
                 ref: _,
                 className: _.StoreMenuNavWrapper,
                 children: (0, _.jsx)(_, {
@@ -98119,7 +98143,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -98411,42 +98434,6 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -98499,6 +98486,48 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -98511,7 +98540,6 @@
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -98619,35 +98647,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -98701,27 +98700,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -98835,6 +98817,49 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -98845,6 +98870,7 @@
         ),
         _ = _(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -99519,6 +99545,8 @@
                                 (0, _.jsx)(_._, {
                                   config: {
                                     "discovery-queue-home": () =>
+                                      (0, _.jsx)(_, {}),
+                                    "personal-calendar-home": () =>
                                       (0, _.jsx)(_, {}),
                                   },
                                 }),

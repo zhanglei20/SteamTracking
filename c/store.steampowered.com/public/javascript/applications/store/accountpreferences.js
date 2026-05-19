@@ -405,7 +405,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_Preferences = void 0;
@@ -749,8 +748,7 @@
               _.SetPreferenceState(_._._);
             }, [_]),
             _ = (0, _._)();
-          return (0, _.jsxs)(_._, {
-            navID: "StoreCookiesSettings",
+          return (0, _.jsxs)("div", {
             children: [
               (0, _.jsx)("div", {
                 className: (0, _._)(
@@ -1264,8 +1262,7 @@
                 preferenceSetting: _,
               }),
             );
-          return (0, _.jsxs)(_._, {
-            navID: "StoreNotificationSettings",
+          return (0, _.jsxs)("div", {
             children: [
               (0, _.jsxs)("div", {
                 children: [
@@ -1482,8 +1479,7 @@
                     );
                 }
               })),
-          (0, _.jsxs)(_._, {
-            navID: "StorePlaytestInvites",
+          (0, _.jsxs)("div", {
             children: [
               (0, _.jsx)("div", {
                 className: "account_header_line noicon",
@@ -1743,8 +1739,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        return (0, _.jsxs)(_._, {
-          navID: "StorePlaytests",
+        return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
               bShowPlaytestOverview: !1,
@@ -2543,8 +2538,7 @@
       var _,
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.jsxs)(_._, {
-          navID: "StoreSecurityAndDevices",
+        return (0, _.jsxs)("div", {
           children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
         });
       }

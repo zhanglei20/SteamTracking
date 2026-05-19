@@ -80,6 +80,7 @@
     "AccessoriesList_Title": "الملحقات",
     "Filter_ViewResults": "عرض النتائج",
     "Market_AppUnplayedAndUnvetted_Dismiss": "انقر هنا لعرض هذا العنصر على أي حال",
+    "Economy_Market_TopLevelReason_Unknown": "لا يمكن لهذا الحساب حاليًا استخدام سوق مجتمع Steam.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "معلومات أكثر...",
     "Economy_Market_TopLevelReason_InvalidCookie": "يواجه Steam مشكلة في استخدام ملفات تعريف الارتباط الخاصة بمتصفحك."
 }

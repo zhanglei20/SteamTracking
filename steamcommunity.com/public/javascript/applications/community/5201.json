@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Somente para a Valve",
     "moderation_escalationlevel_supervisor_desc": "Requer supervisor",
+    "moderation_escalation_escalationnote": "Observação do encaminhamento:",
     "moderation_chatmetadata_deleted": "Os metadados associados a esta denúncia de mensagem da conversa já foram excluídos. Eles ficam armazenados por aproximadamente 21 dias.",
     "moderation_chatmetadata_futurelogcollection": "Este registro de conversa pode ser enriquecido com mensagens adicionais enviadas após a denúncia em %1$s",
     "moderation_resolutionaction_removed": "Remover o conteúdo denunciado",

@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Фильтровать по игре...",
     "AdvancedSearch_BetaTag": "Бета-тестирование функции: оставить отзыв",
     "AdvancedSearch_TextSearch_Tooltip": "Поиск по названиям предметов на торговой площадке...",
-    "AdvancedSearch_Beta_OptOut": "Переключиться на старые фильтры",
     "AdvancedSearch_CSContainers_Tooltip": "Оружейные кейсы, капсулы с наклейками, сувенирные кейсы и т. д.",
     "Header_MarketTitle": "Торговая площадка Steam",
     "Header_MarketDescription": "Продавайте предметы участникам сообщества или приобретайте их, используя средства кошелька Steam",
@@ -31,7 +30,7 @@
     "Header_Search_Placeholder": "Искать на торговой площадке",
     "Header_Search_PlaceholderNew": "Новый поиск...",
     "Header_Search_Filters": "Фильтры",
-    "Header_OptOut": "Выйти из бета-версии торговой площадки",
+    "Header_OptOut": "Выйти из бета-теста торговой площадки",
     "Header_GiveFeedback": "Оставить отзыв",
     "CommodityExplanation": "Этот предмет является типовым, то есть все его копии идентичны друг другу. По этой причине отдельные лоты на продажу недоступны, но вы можете создать запрос на покупку предмета за определённую цену. Наиболее дешёвое предложение автоматически сопоставится с наиболее дорогим запросом.",
     "Search_AmountFound": "Найдено результатов: %1$s",
@@ -153,7 +152,7 @@
     "OrderBook_Table_PriceOrMore": "%1$s и более",
     "OrderBook_Table_Price": "Цена",
     "OrderBook_Table_Quantity": "Кол-во",
-    "OrderBook_SellOrder_Description": "Заявок на продажу: %1$s Начальная цена: %2$s",
+    "OrderBook_SellOrder_Description": "Заявок на продажу: %1$s. Цена от: %2$s",
     "OrderBook_SellOrder_Description_None": "Нет заявок на продажу этого предмета",
     "OrderBook_BuyOrder_Description": "Заявок на покупку по цене %2$s и ниже: %1$s",
     "OrderBook_BuyOrder_Description_None": "Для этого предмета нет активных заявок на покупку.",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Ваш аккаунт заблокирован. Чтобы получить информацию об ограничении, нажмите на красную панель в правой верхней части клиента Steam.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "Чтобы убрать это ограничение…",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "В данный момент ваш аккаунт заблокирован в системе обмена.",
+    "Economy_Market_TopLevelReason_Unknown": "В данный момент для вашего аккаунта ограничена возможность использовать торговую площадку.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Запрет на торговлю может быть как временным, так и постоянным. Чтобы узнать, когда запрет закончится, нажмите на красную панель в правой верхней части клиента Steam.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Обмен на вашем аккаунте запрещён. Чтобы получить информацию об ограничении, нажмите на красную панель в правой верхней части клиента Steam.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Подробнее...",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Необходимо подождать 15 дней после активации Steam Guard на вашем аккаунте. Служба поддержки Steam не может снимать ограничения.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Ваш аккаунт должен находиться под защитой Steam Guard не менее %1$s дн.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Необходимо включить Steam Guard на этом аккаунте. Пожалуйста, убедитесь, что ваш адрес электронной почты подтверждён и вы вошли в свой аккаунт как минимум дважды после включения Steam Guard.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Ваш аккаунт должен находиться под защитой Steam Guard не менее %1$s дн."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Ваш аккаунт должен находиться под защитой Steam Guard не менее %1$s дн.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Если на аккаунт не будут наложены новые ограничения, то вы сможете пользоваться торговой площадкой с <%1$s>",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Для вашего аккаунта временно заблокированы функции обмена и продажи предметов на торговой площадке."
 }

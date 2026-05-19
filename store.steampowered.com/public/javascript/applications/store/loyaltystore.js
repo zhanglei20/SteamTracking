@@ -8325,33 +8325,34 @@
       "use strict";
       i.d(t, { L: () => u, X: () => m });
       var s = i(7850),
-        r = i(22580),
-        n = i(90626),
-        a = i(12447),
-        o = i(52038),
-        l = i(6708),
-        c = i(99428),
-        d = i(32630);
+        r = i(76217),
+        n = i(22580),
+        a = i(90626),
+        o = i(32630),
+        l = i(52038),
+        c = i(6708),
+        d = i(99428);
       function m(e) {
         const { children: t } = e,
-          i = n.useRef(void 0);
+          i = a.useRef(null);
         return (
-          n.useEffect(() => i.current?.Activate(!0), []),
-          (0, s.jsx)(c.Yp, {
-            children: (0, s.jsx)(a.u, {
-              navID: "LoyaltyShell",
-              navTreeRef: i,
-              className: (0, o.A)(l.Shell),
-              children: (0, s.jsx)(d.Ay, {
+          a.useEffect(() => {
+            i.current && i.current.NavTree()?.Activate(!0);
+          }, []),
+          (0, s.jsx)(d.Yp, {
+            children: (0, s.jsx)(r.Z, {
+              className: (0, l.A)(c.Shell),
+              navRef: i,
+              children: (0, s.jsx)(o.Ay, {
                 domain: "store.steampowered.com",
                 feature: "pointsshop",
-                children: (0, s.jsx)(c.az, {
+                children: (0, s.jsx)(d.az, {
                   display: "flex",
                   flexDirection: "row",
-                  className: l.ShellScrollParent,
-                  children: (0, s.jsx)(c.az, {
+                  className: c.ShellScrollParent,
+                  children: (0, s.jsx)(d.az, {
                     flex: "1",
-                    className: l.ShellScroll,
+                    className: c.ShellScroll,
                     "flow-children": "column",
                     children: t,
                   }),
@@ -8362,10 +8363,10 @@
         );
       }
       function u(e) {
-        (0, n.useEffect)(
+        (0, a.useEffect)(
           () => (
-            r.DZ.Get().SetCurrentSearchPlaceholder(e),
-            () => r.DZ.Get().SetCurrentSearchPlaceholder("")
+            n.DZ.Get().SetCurrentSearchPlaceholder(e),
+            () => n.DZ.Get().SetCurrentSearchPlaceholder("")
           ),
           [e],
         );

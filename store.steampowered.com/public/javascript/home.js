@@ -3117,7 +3117,7 @@ GHomepage = {
 		let $ImgCtn = $CapCtn.children('.capsule_image_ctn').first();
 
 		const strMicrotrailerWebmSrc = strMicrotrailerData || rgItemData?.microtrailer;
-		if ( GDynamicStore.s_preferences.disable_microtrailers )
+		if ( GDynamicStore.s_preferences.disable_microtrailers || !strMicrotrailerWebmSrc )
 		{
 			if ( rgItemData?.screenshots )
 			{

@@ -79,6 +79,7 @@ message CContentModeration_EscalateSubject_Request {
 	optional uint64 subject_id = 3;
 	optional int32 required_level = 4 [(.description) = "enum"];
 	optional int32 reason = 5 [(.description) = "enum"];
+	optional string note = 6;
 }
 
 message CContentModeration_EscalateSubject_Response {
@@ -321,6 +322,7 @@ message CContentModeration_UpdateSubject_Request {
 	optional int32 credible_threat_of_violence_status = 6 [(.description) = "enum"];
 	optional .AdditionalSubjectData additional_subject_data = 7;
 	optional string owner_dispute_details = 8;
+	optional uint64 new_subject_id = 9;
 }
 
 message CContentModeration_UpdateSubject_Response {

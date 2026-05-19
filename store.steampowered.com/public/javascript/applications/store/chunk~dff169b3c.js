@@ -2726,7 +2726,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            le.prototype.selected_subject_type || m.Sg(le.M()),
+            le.prototype.subject || m.Sg(le.M()),
             c.Message.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
@@ -2736,14 +2736,7 @@
             le.sm_m ||
               (le.sm_m = {
                 proto: le,
-                fields: {
-                  selected_subject_type: {
-                    n: 1,
-                    br: m.qM.readEnum,
-                    bw: m.gp.writeEnum,
-                  },
-                  subject: { n: 2, c: ae, r: !0, q: !0 },
-                },
+                fields: { subject: { n: 2, c: ae, r: !0, q: !0 } },
               }),
             le.sm_m
           );
@@ -3614,6 +3607,7 @@
                     bw: m.gp.writeEnum,
                   },
                   reason: { n: 5, br: m.qM.readEnum, bw: m.gp.writeEnum },
+                  note: { n: 6, br: m.qM.readString, bw: m.gp.writeString },
                 },
               }),
             Se.sm_m
@@ -3731,6 +3725,11 @@
                     n: 8,
                     br: m.qM.readString,
                     bw: m.gp.writeString,
+                  },
+                  new_subject_id: {
+                    n: 9,
+                    br: m.qM.readUint64String,
+                    bw: m.gp.writeUint64String,
                   },
                 },
               }),

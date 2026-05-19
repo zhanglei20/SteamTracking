@@ -155,7 +155,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   pointer-events: none;
   background: #000;
 }
-._2aMRbzoT83AkFGYSmCvnRe.YoLbM_PjSF7Lk-_QYDToT,
+._2aMRbzoT83AkFGYSmCvnRe._23t3208XMavZer6IZIxzSb,
 ._2aMRbzoT83AkFGYSmCvnRe._2aYdrHuuHZHrhgAJh-eZX3 {
   transition: height 0.23s ease-in-out;
   height: auto;
@@ -4788,9 +4788,6 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
   ._2N8SepiLeBUusG1vbHCgiY {
     background-size: var(--background-scale, 166%);
   }
-}
-.BasicUI ._2N8SepiLeBUusG1vbHCgiY {
-  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.4) 0px, black 80px);
 }
 .bE2EA4JB9SDa1PZ7HSFL- {
   position: relative;
@@ -9517,11 +9514,27 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .BasicUI ._2VUpHDtxN8lR1LDahY_cI2 {
   column-gap: 12px;
+  transform: none !important;
+}
+.fiveElementEightGap ._2VUpHDtxN8lR1LDahY_cI2 > * {
+  margin-right: 8px;
+}
+.fiveElementEightGap ._2VUpHDtxN8lR1LDahY_cI2 > *:nth-child(5n + 1) {
+  margin-right: 0px;
+}
+html.responsive.touch .fiveElementEightGap {
+  gap: 4px;
+}
+@media screen and (max-width: 910px) {
+  html.responsive .fiveElementEightGap {
+    gap: 4px;
+  }
 }
 ._3HjnEmKg66o82ah74EIvmq {
   display: flex;
   justify-content: center;
   margin-top: 12px;
+  gap: 2px;
 }
 ._3dMffY_iRZXHjZmXN9aLej {
   position: absolute;

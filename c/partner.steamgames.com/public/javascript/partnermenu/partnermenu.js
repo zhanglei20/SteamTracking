@@ -2764,12 +2764,12 @@
         #s;
         #a;
         #i;
-        #d;
+        #_;
         #p;
         #l;
         #c;
         #u;
-        #_;
+        #d;
         #g = new Set();
         bindMethods() {
           this.refetch = this.refetch.bind(this);
@@ -2830,7 +2830,7 @@
           _ &&
             (this.#t !== _ ||
               _(this.options.enabled, this.#t) !== _(_.enabled, this.#t) ||
-              _ !== this.#_) &&
+              _ !== this.#d) &&
             this.#C(_);
         }
         getOptimisticResult(_) {
@@ -2905,17 +2905,17 @@
         }
         #C(_) {
           this.#h(),
-            (this.#_ = _),
+            (this.#d = _),
             !(
               _ ||
               _(this.options.enabled, this.#t) === !1 ||
-              !_(this.#_) ||
-              this.#_ === 0
+              !_(this.#d) ||
+              this.#d === 0
             ) &&
               (this.#u = setInterval(() => {
                 (this.options.refetchIntervalInBackground || _.isFocused()) &&
                   this.#m();
-              }, this.#_));
+              }, this.#d));
         }
         #b() {
           this.#f(), this.#C(this.#y());
@@ -2953,10 +2953,10 @@
           }
           let { error: _, errorUpdatedAt: _, status: _ } = _;
           if (_.select && _.data !== void 0)
-            if (_ && _.data === _?.data && _.select === this.#d) _ = this.#p;
+            if (_ && _.data === _?.data && _.select === this.#_) _ = this.#p;
             else
               try {
-                (this.#d = _.select),
+                (this.#_ = _.select),
                   (_ = _.select(_.data)),
                   (_ = _(_?.data, _, _)),
                   (this.#p = _),
@@ -3194,9 +3194,9 @@
           let _ = this.#l(_).map((_) =>
             _.observer.getOptimisticResult(_.defaultedQueryOptions),
           );
-          return [_, (_) => this.#p(_ ?? _, _), () => this.#d(_, _)];
+          return [_, (_) => this.#p(_ ?? _, _), () => this.#_(_, _)];
         }
-        #d(_, _) {
+        #_(_, _) {
           let _ = this.#l(_);
           return _.map((_, _) => {
             let _ = _[_];
@@ -3245,7 +3245,7 @@
         #u() {
           if (this.hasListeners()) {
             let _ = this.#s,
-              _ = this.#p(this.#d(this.#t, this.#o), this.#r?.combine);
+              _ = this.#p(this.#_(this.#t, this.#o), this.#r?.combine);
             _ !== _ &&
               _.batch(() => {
                 this.listeners.forEach((_) => {
@@ -26794,7 +26794,7 @@ Error generating stack: ` +
     k_EMsgBaseCM: () => _,
     k_EMsgBaseCS: () => _,
     k_EMsgBaseChannelAuth: () => _,
-    k_EMsgBaseChatServer: () => dse,
+    k_EMsgBaseChatServer: () => _se,
     k_EMsgBaseClient: () => _,
     k_EMsgBaseClient2: () => _,
     k_EMsgBaseClient3: () => Uae,
@@ -26855,7 +26855,7 @@ Error generating stack: ` +
     k_EMsgChannelEncryptRequest: () => _,
     k_EMsgChannelEncryptResponse: () => _,
     k_EMsgChannelEncryptResult: () => _,
-    k_EMsgChatServerGetPendingNotificationCount: () => _se,
+    k_EMsgChatServerGetPendingNotificationCount: () => dse,
     k_EMsgChatServerGetPendingNotificationCountResponse: () => mse,
     k_EMsgChatServerRouteFriendMsg: () => _,
     k_EMsgClientAMGetClanOfficers: () => _,
@@ -27026,7 +27026,7 @@ Error generating stack: ` +
     k_EMsgClientLoggedOff: () => _,
     k_EMsgClientLogon: () => _,
     k_EMsgClientLogonGameServer: () => _,
-    k_EMsgClientMMSCreateLobby: () => _ee,
+    k_EMsgClientMMSCreateLobby: () => dee,
     k_EMsgClientMMSCreateLobbyResponse: () => mee,
     k_EMsgClientMMSFlushFrenemyListCache: () => Hee,
     k_EMsgClientMMSFlushFrenemyListCacheResponse: () => Dee,
@@ -27280,8 +27280,8 @@ Error generating stack: ` +
     k_EMsgDRMWorkerProcessDescribeSecretResponse: () => gne,
     k_EMsgDRMWorkerProcessEvaluateCrashRequest: () => Pne,
     k_EMsgDRMWorkerProcessEvaluateCrashResponse: () => Ane,
-    k_EMsgDRMWorkerProcessExamineBlobRequest: () => dne,
-    k_EMsgDRMWorkerProcessExamineBlobResponse: () => _ne,
+    k_EMsgDRMWorkerProcessExamineBlobRequest: () => _ne,
+    k_EMsgDRMWorkerProcessExamineBlobResponse: () => dne,
     k_EMsgDRMWorkerProcessGetBlobRequest: () => kne,
     k_EMsgDRMWorkerProcessGetBlobResponse: () => Rne,
     k_EMsgDRMWorkerProcessInstallAllRequest: () => wne,
@@ -27369,10 +27369,10 @@ Error generating stack: ` +
     k_EMsgFSCommentNotification: () => yre,
     k_EMsgFSCommentNotificationViewed: () => Cre,
     k_EMsgFSComputeFrenematrix: () => pre,
-    k_EMsgFSComputeFrenematrixResponse: () => dre,
+    k_EMsgFSComputeFrenematrixResponse: () => _re,
     k_EMsgFSGetPendingNotificationCount: () => Rre,
     k_EMsgFSGetPendingNotificationCountResponse: () => Pre,
-    k_EMsgFSPlayStatusNotification: () => _re,
+    k_EMsgFSPlayStatusNotification: () => dre,
     k_EMsgFSRichPresenceRequest: () => cre,
     k_EMsgFSRichPresenceResponse: () => ure,
     k_EMsgFSUpdateFollowingList: () => fre,
@@ -27503,11 +27503,11 @@ Error generating stack: ` +
     k_EMsgMDSMigrateChunkResponse: () => eee,
     k_EMsgMDSToCSFlushChunk: () => _,
     k_EMsgMDSToCSFlushManifest: () => tee,
-    k_EMsgMMSBase: () => dee,
+    k_EMsgMMSBase: () => _ee,
     k_EMsgMMSGetLobbyList: () => Uee,
     k_EMsgMMSGetLobbyListResponse: () => Lee,
     k_EMsgMMSRoutingOverride: () => jee,
-    k_EMsgMPASBase: () => _te,
+    k_EMsgMPASBase: () => dte,
     k_EMsgMPASVacBanReset: () => mte,
     k_EMsgMulti: () => _,
     k_EMsgNonStdMsgBase: () => zee,
@@ -27568,8 +27568,8 @@ Error generating stack: ` +
     k_EMsgRemoteClientAppUploadStats: () => Eae,
     k_EMsgRemoteClientAuthResponse_OBSOLETE: () => Qne,
     k_EMsgRemoteClientAuth_OBSOLETE: () => Kne,
-    k_EMsgRemoteClientAuthorizationCancelRequest: () => dae,
-    k_EMsgRemoteClientAuthorizationConfirmed: () => _ae,
+    k_EMsgRemoteClientAuthorizationCancelRequest: () => _ae,
+    k_EMsgRemoteClientAuthorizationConfirmed: () => dae,
     k_EMsgRemoteClientAuthorizationRequest: () => uae,
     k_EMsgRemoteClientAuthorizationResponse: () => pae,
     k_EMsgRemoteClientBase: () => qne,
@@ -27661,7 +27661,7 @@ Error generating stack: ` +
     k_EMsgUCMUpdatePublishedFileStat: () => Ite,
     k_EMsgUDSBase: () => ate,
     k_EMsgUDSHasSession: () => pte,
-    k_EMsgUDSHasSessionResponse: () => dte,
+    k_EMsgUDSHasSessionResponse: () => _te,
     k_EMsgUDSRenderUserAuth: () => lte,
     k_EMsgUDSRenderUserAuthResponse: () => cte,
     k_EMsgUFSDownloadChunkRequest: () => _,
@@ -27688,13 +27688,13 @@ Error generating stack: ` +
     k_EMsgUFSUpdateFileFlagsResponse: () => _,
     k_EMsgUFSUpdateRecordBatched: () => _,
     k_EMsgUFSUpdateRecordBatchedResponse: () => _,
-    k_EMsgUGSBase: () => doe,
+    k_EMsgUGSBase: () => _oe,
     k_EMsgUGSGetUserGameStats: () => _,
     k_EMsgUGSGetUserGameStatsResponse: () => _,
     k_EMsgUGSGetUserStats: () => _,
     k_EMsgUGSStoreUserStats: () => _,
     k_EMsgUGSStoreUserStatsResponse: () => _,
-    k_EMsgUGSUpdateGlobalStats: () => _oe,
+    k_EMsgUGSUpdateGlobalStats: () => doe,
     k_EMsgUMQBase: () => yoe,
     k_EMsgUniverseChanged: () => _,
     k_EMsgUniverseData: () => _,
@@ -28844,8 +28844,8 @@ Error generating stack: ` +
     cee,
     uee,
     pee,
-    dee,
     _ee,
+    dee,
     mee,
     gee,
     fee,
@@ -28898,8 +28898,8 @@ Error generating stack: ` +
     cte,
     ute,
     pte,
-    dte,
     _te,
+    dte,
     mte,
     gte,
     fte,
@@ -28952,8 +28952,8 @@ Error generating stack: ` +
     cre,
     ure,
     pre,
-    dre,
     _re,
+    dre,
     mre,
     gre,
     fre,
@@ -29006,8 +29006,8 @@ Error generating stack: ` +
     coe,
     uoe,
     poe,
-    doe,
     _oe,
+    doe,
     moe,
     goe,
     foe,
@@ -29060,8 +29060,8 @@ Error generating stack: ` +
     cne,
     une,
     pne,
-    dne,
     _ne,
+    dne,
     mne,
     gne,
     fne,
@@ -29114,8 +29114,8 @@ Error generating stack: ` +
     cae,
     uae,
     pae,
-    dae,
     _ae,
+    dae,
     mae,
     gae,
     fae,
@@ -29168,8 +29168,8 @@ Error generating stack: ` +
     cse,
     use,
     pse,
-    dse,
     _se,
+    dse,
     mse,
     gse,
     fse,
@@ -30283,8 +30283,8 @@ Error generating stack: ` +
         (cee = 6405),
         (uee = 6406),
         (pee = 6407),
-        (dee = 6600),
-        (_ee = 6601),
+        (_ee = 6600),
+        (dee = 6601),
         (mee = 6602),
         (gee = 6603),
         (fee = 6604),
@@ -30337,8 +30337,8 @@ Error generating stack: ` +
         (cte = 7004),
         (ute = 7005),
         (pte = 7006),
-        (dte = 7007),
-        (_te = 7100),
+        (_te = 7007),
+        (dte = 7100),
         (mte = 7101),
         (gte = 7200),
         (fte = 7300),
@@ -30391,8 +30391,8 @@ Error generating stack: ` +
         (cre = 7504),
         (ure = 7505),
         (pre = 7506),
-        (dre = 7507),
-        (_re = 7508),
+        (_re = 7507),
+        (dre = 7508),
         (mre = 7510),
         (gre = 7511),
         (fre = 7512),
@@ -30445,8 +30445,8 @@ Error generating stack: ` +
         (coe = 7806),
         (uoe = 7807),
         (poe = 7808),
-        (doe = 7900),
         (_oe = 7900),
+        (doe = 7900),
         (moe = 7901),
         (goe = 7902),
         (foe = 8e3),
@@ -30499,8 +30499,8 @@ Error generating stack: ` +
         (cne = 9107),
         (une = 9110),
         (pne = 9111),
-        (dne = 9112),
-        (_ne = 9113),
+        (_ne = 9112),
+        (dne = 9113),
         (mne = 9114),
         (gne = 9115),
         (fne = 9116),
@@ -30553,8 +30553,8 @@ Error generating stack: ` +
         (cae = 9516),
         (uae = 9517),
         (pae = 9518),
-        (dae = 9519),
-        (_ae = 9520),
+        (_ae = 9519),
+        (dae = 9520),
         (mae = 9521),
         (gae = 9522),
         (fae = 9523),
@@ -30607,8 +30607,8 @@ Error generating stack: ` +
         (cse = 10104),
         (use = 10105),
         (pse = 10106),
-        (dse = 12e3),
         (_se = 12e3),
+        (dse = 12e3),
         (mse = 12001),
         (gse = 12100),
         (fse = 12100),
@@ -43014,6 +43014,10 @@ Error generating stack: ` +
     });
   var _ = _(() => {
     "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+    _();
     _();
   });
   var _,
@@ -43156,20 +43160,20 @@ Error generating stack: ` +
     });
   var _ = {};
   _(_, {
-    k_EPrivacyCookiePreferenceState_AllowAll: () => lie,
-    k_EPrivacyCookiePreferenceState_Customized: () => uie,
-    k_EPrivacyCookiePreferenceState_DefaultAllowAll: () => iie,
-    k_EPrivacyCookiePreferenceState_DefaultRejectAll: () => pie,
-    k_EPrivacyCookiePreferenceState_RejectAll: () => cie,
+    k_EPrivacyCookiePreferenceState_AllowAll: () => cie,
+    k_EPrivacyCookiePreferenceState_Customized: () => pie,
+    k_EPrivacyCookiePreferenceState_DefaultAllowAll: () => lie,
+    k_EPrivacyCookiePreferenceState_DefaultRejectAll: () => _ie,
+    k_EPrivacyCookiePreferenceState_RejectAll: () => uie,
   });
-  var iie,
-    lie,
+  var lie,
     cie,
     uie,
     pie,
+    _ie,
     _ = _(() => {
       "use strict";
-      (iie = 0), (lie = 1), (cie = 2), (uie = 3), (pie = 4);
+      (lie = 0), (cie = 1), (uie = 2), (pie = 3), (_ie = 4);
     });
   var _ = _(() => {
     "use strict";
@@ -43182,7 +43186,7 @@ Error generating stack: ` +
     _,
     _,
     _,
-    _ie,
+    mie,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -43655,7 +43659,7 @@ Error generating stack: ` +
           );
         }
         _.GetCookiePreferences = _;
-      })((_ie ||= {}));
+      })((mie ||= {}));
     });
   function _(_) {
     if (_.preferenceControls.isTechnicallyNecessary) return !0;
@@ -43781,7 +43785,7 @@ Error generating stack: ` +
           },
         });
     });
-  function mie(_, _) {
+  function gie(_, _) {
     if (!document.cookie || !_(_)) return;
     let _ = _.options?.path ?? "/",
       _ = "";
@@ -43799,7 +43803,7 @@ Error generating stack: ` +
         _);
   }
   function _(_) {
-    return mie(
+    return gie(
       {
         ..._,
         options: {
@@ -43819,16 +43823,16 @@ Error generating stack: ` +
     _();
   });
   function _(_) {
-    return new URL("." + _, gie).toString();
+    return new URL("." + _, fie).toString();
   }
-  var gie,
+  var fie,
     _ = _(() => {
       "use strict";
       _();
-      gie = document.currentScript?.src;
+      fie = document.currentScript?.src;
     });
   var _,
-    fie,
+    yie,
     _,
     _ = _(() => {
       "use strict";
@@ -43836,24 +43840,24 @@ Error generating stack: ` +
       _();
       _();
       (_ = window.Config ?? _),
-        (fie = window.UserConfig ?? _),
+        (yie = window.UserConfig ?? _),
         (_ = window.Config ? () => Promise.resolve() : _);
       window.Config && Object.assign(_, window.Config);
       window.UserConfig && Object.assign(_, window.UserConfig);
     });
   function _(_) {
-    return Cie.has(_);
+    return bie.has(_);
   }
   function _(_) {
     if (_ !== "english") return _ === "sc_schinese" ? "schinese" : "english";
   }
-  var yie,
-    Cie,
+  var Cie,
     bie,
+    Sie,
     _,
     _ = _(() => {
       "use strict";
-      (yie = [
+      (Cie = [
         "sc_schinese",
         "schinese",
         "tchinese",
@@ -43886,8 +43890,8 @@ Error generating stack: ` +
         "vietnamese",
         "ukrainian",
       ]),
-        (Cie = new Set(yie));
-      (bie = new Map([
+        (bie = new Set(Cie));
+      (Sie = new Map([
         ["en", "english"],
         ["de", "german"],
         ["fr", "french"],
@@ -43923,7 +43927,7 @@ Error generating stack: ` +
         ["id", "indonesian"],
       ])),
         (_ = new Map());
-      for (let [_, _] of bie.entries()) _.set(_, _);
+      for (let [_, _] of Sie.entries()) _.set(_, _);
       _.set("sc_schinese", _.get("schinese"));
       _.set("korean", _.get("koreana"));
     });
@@ -44141,8 +44145,8 @@ Error generating stack: ` +
   });
   var _ = {};
   _(_, {
-    apply: () => wie,
-    isSupported: () => Tie,
+    apply: () => xie,
+    isSupported: () => Iie,
   });
   function _(_, _, _) {
     _.set(
@@ -44162,7 +44166,7 @@ Error generating stack: ` +
   function _(_) {
     return _.get(_) || "hidden";
   }
-  function Eie(_) {
+  function kie(_) {
     let _ = _.popoverTargetElement;
     if (!(_ instanceof HTMLElement)) return;
     let _ = _(_);
@@ -44176,16 +44180,16 @@ Error generating stack: ` +
       !_.isConnected ||
       (_ && _(_) !== "showing") ||
       (!_ && _(_) !== "hidden") ||
-      (_ instanceof vie && _.hasAttribute("open")) ||
+      (_ instanceof Eie && _.hasAttribute("open")) ||
       document.fullscreenElement === _
     );
   }
   function _(_) {
     return _ ? Array.from(_.get(_.ownerDocument) || []).indexOf(_) + 1 : 0;
   }
-  function kie(_) {
+  function Rie(_) {
     let _ = _(_),
-      _ = Rie(_);
+      _ = Pie(_);
     return _(_) > _(_) ? _ : _;
   }
   function _(_) {
@@ -44218,7 +44222,7 @@ Error generating stack: ` +
         return;
     }
   }
-  function Rie(_) {
+  function Pie(_) {
     for (; _; ) {
       let _ = _.popoverTargetElement;
       if (_ instanceof HTMLElement) return _;
@@ -44230,7 +44234,7 @@ Error generating stack: ` +
         return;
     }
   }
-  function Pie(_) {
+  function Aie(_) {
     let _ = new Map(),
       _ = 0,
       _ = _.ownerDocument;
@@ -44245,7 +44249,7 @@ Error generating stack: ` +
     }
     return _(_?.parentElement), _;
   }
-  function Aie(_) {
+  function Bie(_) {
     return _.hidden ||
       _ instanceof _ ||
       ((_ instanceof HTMLButtonElement ||
@@ -44261,7 +44265,7 @@ Error generating stack: ` +
       ? !1
       : typeof _.tabIndex == "number" && _.tabIndex !== -1;
   }
-  function Bie(_) {
+  function Mie(_) {
     if (_.shadowRoot && _.shadowRoot.delegatesFocus !== !0) return null;
     let _ = _;
     _.shadowRoot && (_ = _.shadowRoot);
@@ -44282,12 +44286,12 @@ Error generating stack: ` +
     let _ = _.ownerDocument.createTreeWalker(_, NodeFilter.SHOW_ELEMENT),
       _ = _.currentNode;
     for (; _; ) {
-      if (Aie(_)) return _;
+      if (Bie(_)) return _;
       _ = _.nextNode();
     }
   }
-  function Mie(_) {
-    Bie(_)?.focus();
+  function Tie(_) {
+    Mie(_)?.focus();
   }
   function _(_) {
     if (!_(_, !1)) return;
@@ -44306,7 +44310,7 @@ Error generating stack: ` +
     let _ = !1;
     if (_.popover === "auto") {
       let _ = _.getAttribute("popover"),
-        _ = Pie(_) || _;
+        _ = Aie(_) || _;
       if ((_(_, !1, !0), _ !== _.getAttribute("popover") || !_(_, !1))) return;
     }
     _(_) || (_ = !0), _.delete(_);
@@ -44315,7 +44319,7 @@ Error generating stack: ` +
       _.set(_, "showing"),
       _.has(_) || _.set(_, new Set()),
       _.get(_).add(_),
-      Mie(_),
+      Tie(_),
       _.popover === "auto" &&
         (_.has(_) || _.set(_, new Set()), _.get(_).add(_), _(_.get(_), !0)),
       _ && _ && _.popover === "auto" && _.set(_, _),
@@ -44370,7 +44374,7 @@ Error generating stack: ` +
     if (!_) return;
     let _ = _.ownerDocument;
     if (!_(_)) return;
-    let _ = kie(_);
+    let _ = Rie(_);
     if (_ && _.type === "pointerdown") _.set(_, _);
     else if (_.type === "pointerup") {
       let _ = _.get(_) === _;
@@ -44390,7 +44394,7 @@ Error generating stack: ` +
         : _.removeAttribute("aria-expanded");
     }
   }
-  function Tie() {
+  function Iie() {
     return (
       typeof HTMLElement < "u" &&
       typeof HTMLElement.prototype == "object" &&
@@ -44418,12 +44422,12 @@ Error generating stack: ` +
         _ instanceof Document ? _.head.prepend(_) : _.prepend(_);
     } else _.adoptedStyleSheets = [_, ..._.adoptedStyleSheets];
   }
-  function wie() {
+  function xie() {
     window.ToggleEvent = window.ToggleEvent || _;
     function _(_) {
       return (
         _?.includes(":popover-open") &&
-          (_ = _.replace(Iie, "$1.\\:popover-open")),
+          (_ = _.replace(wie, "$1.\\:popover-open")),
         _
       );
     }
@@ -44561,7 +44565,7 @@ Error generating stack: ` +
         if (!(_ instanceof _ || _ instanceof Document)) return;
         let _ = _.closest("[popovertargetaction],[popovertarget]");
         if (_) {
-          Eie(_), _.preventDefault();
+          kie(_), _.preventDefault();
           return;
         }
       },
@@ -44584,7 +44588,7 @@ Error generating stack: ` +
   var _,
     _,
     _,
-    vie,
+    Eie,
     _,
     _,
     _,
@@ -44593,7 +44597,7 @@ Error generating stack: ` +
     _,
     _,
     _,
-    Iie,
+    wie,
     _,
     _,
     _ = _(() => {
@@ -44609,7 +44613,7 @@ Error generating stack: ` +
       }),
         (_ = new WeakMap());
       (_ = globalThis.ShadowRoot || function () {}),
-        (vie = globalThis.HTMLDialogElement || function () {}),
+        (Eie = globalThis.HTMLDialogElement || function () {}),
         (_ = new WeakMap()),
         (_ = new WeakMap()),
         (_ = new WeakMap());
@@ -44618,7 +44622,7 @@ Error generating stack: ` +
       _ = new WeakMap();
       _ = new WeakMap();
       _ = globalThis.ShadowRoot || function () {};
-      (Iie = /(^|[^\\]):popover-open\b/g),
+      (wie = /(^|[^\\]):popover-open\b/g),
         (_ = `
   :where([popover]) {
     position: fixed;
@@ -45449,7 +45453,7 @@ Error generating stack: ` +
     _,
     _,
     _,
-    Gie,
+    Oie,
     _,
     _,
     _,
@@ -45506,11 +45510,11 @@ Error generating stack: ` +
       _.fromString = _;
       _.fromValue = _;
       (_ = 65536),
-        (Gie = 1 << 24),
+        (Oie = 1 << 24),
         (_ = _ * _),
         (_ = _ * _),
         (_ = _ / 2),
-        (_ = _(Gie)),
+        (_ = _(Oie)),
         (_ = _(0));
       _.ZERO = _;
       _ = _(0, !0);
@@ -46079,6 +46083,9 @@ Error generating stack: ` +
   var _ = _(() => {
     "use strict";
   });
+  var _ = _(() => {
+    "use strict";
+  });
   var _,
     _,
     _,
@@ -46146,7 +46153,7 @@ Error generating stack: ` +
     _,
     _,
     _,
-    ele,
+    tle,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -51008,11 +51015,8 @@ Error generating stack: ` +
           );
         }
         _.SetRecommendationBotReviewStatus = _;
-      })((ele ||= {}));
+      })((tle ||= {}));
     });
-  var _ = _(() => {
-    "use strict";
-  });
   var _ = _((qhe, _) => {
     "use strict";
     _.exports = function (_, _) {
@@ -51025,7 +51029,7 @@ Error generating stack: ` +
   });
   var _ = _((Khe, _) => {
     "use strict";
-    var tle = _(),
+    var rle = _(),
       _ = Object.prototype.toString,
       _ = (function (_) {
         return function (_) {
@@ -51047,7 +51051,7 @@ Error generating stack: ` +
     function _(_) {
       return typeof _ > "u";
     }
-    function rle(_) {
+    function ole(_) {
       return (
         _ !== null &&
         !_(_) &&
@@ -51058,7 +51062,7 @@ Error generating stack: ` +
       );
     }
     var _ = _("ArrayBuffer");
-    function ole(_) {
+    function nle(_) {
       var _;
       return (
         typeof ArrayBuffer < "u" && ArrayBuffer.isView
@@ -51067,10 +51071,10 @@ Error generating stack: ` +
         _
       );
     }
-    function nle(_) {
+    function ale(_) {
       return typeof _ == "string";
     }
-    function ale(_) {
+    function sle(_) {
       return typeof _ == "number";
     }
     function _(_) {
@@ -51081,17 +51085,17 @@ Error generating stack: ` +
       var _ = Object.getPrototypeOf(_);
       return _ === null || _ === Object.prototype;
     }
-    var sle = _("Date"),
-      ile = _("File"),
-      lle = _("Blob"),
-      cle = _("FileList");
+    var ile = _("Date"),
+      lle = _("File"),
+      cle = _("Blob"),
+      ule = _("FileList");
     function _(_) {
       return _.call(_) === "[object Function]";
     }
-    function ule(_) {
+    function ple(_) {
       return _(_) && _(_.pipe);
     }
-    function ple(_) {
+    function _le(_) {
       var _ = "[object FormData]";
       return (
         _ &&
@@ -51101,10 +51105,10 @@ Error generating stack: ` +
       );
     }
     var dle = _("URLSearchParams");
-    function _le(_) {
+    function mle(_) {
       return _.trim ? _.trim() : _.replace(/^\s+|\s+$/g, "");
     }
-    function mle() {
+    function gle() {
       return typeof navigator < "u" &&
         (navigator.product === "ReactNative" ||
           navigator.product === "NativeScript" ||
@@ -51135,23 +51139,23 @@ Error generating stack: ` +
       for (var _ = 0, _ = arguments.length; _ < _; _++) _(arguments[_], _);
       return _;
     }
-    function gle(_, _, _) {
+    function fle(_, _, _) {
       return (
         _(_, function (_, _) {
-          _ && typeof _ == "function" ? (_[_] = tle(_, _)) : (_[_] = _);
+          _ && typeof _ == "function" ? (_[_] = rle(_, _)) : (_[_] = _);
         }),
         _
       );
     }
-    function fle(_) {
+    function yle(_) {
       return _.charCodeAt(0) === 65279 && (_ = _.slice(1)), _;
     }
-    function yle(_, _, _, _) {
+    function Cle(_, _, _, _) {
       (_.prototype = Object.create(_.prototype, _)),
         (_.prototype.constructor = _),
         _ && Object.assign(_.prototype, _);
     }
-    function Cle(_, _, _) {
+    function ble(_, _, _) {
       var _,
         _,
         _,
@@ -51164,21 +51168,21 @@ Error generating stack: ` +
       } while (_ && (!_ || _(_, _)) && _ !== Object.prototype);
       return _;
     }
-    function ble(_, _, _) {
+    function Sle(_, _, _) {
       (_ = String(_)),
         (_ === void 0 || _ > _.length) && (_ = _.length),
         (_ -= _.length);
       var _ = _.indexOf(_, _);
       return _ !== -1 && _ === _;
     }
-    function Sle(_) {
+    function hle(_) {
       if (!_) return null;
       var _ = _.length;
       if (_(_)) return null;
       for (var _ = new Array(_); _-- > 0; ) _[_] = _[_];
       return _;
     }
-    var hle = (function (_) {
+    var vle = (function (_) {
       return function (_) {
         return _ && _ instanceof _;
       };
@@ -51186,34 +51190,34 @@ Error generating stack: ` +
     _.exports = {
       isArray: _,
       isArrayBuffer: _,
-      isBuffer: rle,
-      isFormData: ple,
-      isArrayBufferView: ole,
-      isString: nle,
-      isNumber: ale,
+      isBuffer: ole,
+      isFormData: _le,
+      isArrayBufferView: nle,
+      isString: ale,
+      isNumber: sle,
       isObject: _,
       isPlainObject: _,
       isUndefined: _,
-      isDate: sle,
-      isFile: ile,
-      isBlob: lle,
+      isDate: ile,
+      isFile: lle,
+      isBlob: cle,
       isFunction: _,
-      isStream: ule,
+      isStream: ple,
       isURLSearchParams: dle,
-      isStandardBrowserEnv: mle,
+      isStandardBrowserEnv: gle,
       forEach: _,
       merge: _,
-      extend: gle,
-      trim: _le,
-      stripBOM: fle,
-      inherits: yle,
-      toFlatObject: Cle,
+      extend: fle,
+      trim: mle,
+      stripBOM: yle,
+      inherits: Cle,
+      toFlatObject: ble,
       kindOf: _,
       kindOfTest: _,
-      endsWith: ble,
-      toArray: Sle,
-      isTypedArray: hle,
-      isFileList: cle,
+      endsWith: Sle,
+      toArray: hle,
+      isTypedArray: vle,
+      isFileList: ule,
     };
   });
   var _ = _((Qhe, _) => {
@@ -51258,7 +51262,7 @@ Error generating stack: ` +
   });
   var _ = _((Yhe, _) => {
     "use strict";
-    var vle = _();
+    var Ele = _();
     function _() {
       this.handlers = [];
     }
@@ -51277,7 +51281,7 @@ Error generating stack: ` +
       this.handlers[_] && (this.handlers[_] = null);
     };
     _.prototype.forEach = function (_) {
-      vle.forEach(this.handlers, function (_) {
+      Ele.forEach(this.handlers, function (_) {
         _ !== null && _(_);
       });
     };
@@ -51285,9 +51289,9 @@ Error generating stack: ` +
   });
   var _ = _((Xhe, _) => {
     "use strict";
-    var Ele = _();
+    var kle = _();
     _.exports = function (_, _) {
-      Ele.forEach(_, function (_, _) {
+      kle.forEach(_, function (_, _) {
         _ !== _ &&
           _.toUpperCase() === _.toUpperCase() &&
           ((_[_] = _), delete _[_]);
@@ -51371,7 +51375,7 @@ Error generating stack: ` +
   var _ = _(($he, _) => {
     "use strict";
     var _ = _();
-    function kle(_, _) {
+    function Rle(_, _) {
       _ = _ || new FormData();
       var _ = [];
       function _(_) {
@@ -51411,7 +51415,7 @@ Error generating stack: ` +
       }
       return _(_), _;
     }
-    _.exports = kle;
+    _.exports = Rle;
   });
   var _ = _((eve, _) => {
     "use strict";
@@ -51483,16 +51487,16 @@ Error generating stack: ` +
   });
   var _ = _((nve, _) => {
     "use strict";
-    var Rle = _(),
-      Ple = _();
+    var Ple = _(),
+      Ale = _();
     _.exports = function (_, _) {
-      return _ && !Rle(_) ? Ple(_, _) : _;
+      return _ && !Ple(_) ? Ale(_, _) : _;
     };
   });
   var _ = _((ave, _) => {
     "use strict";
     var _ = _(),
-      Ale = [
+      Ble = [
         "age",
         "authorization",
         "content-length",
@@ -51528,7 +51532,7 @@ Error generating stack: ` +
                 (_ = _.trim(_.substr(_ + 1))),
                 _)
               ) {
-                if (_[_] && Ale.indexOf(_) >= 0) return;
+                if (_[_] && Ble.indexOf(_) >= 0) return;
                 _ === "set-cookie"
                   ? (_[_] = (_[_] ? _[_] : []).concat([_]))
                   : (_[_] = _[_] ? _[_] + ", " + _ : _);
@@ -51582,12 +51586,12 @@ Error generating stack: ` +
   var _ = _((ive, _) => {
     "use strict";
     var _ = _(),
-      Ble = _();
+      Mle = _();
     function _(_) {
       _.call(this, _ ?? "canceled", _.ERR_CANCELED),
         (this.name = "CanceledError");
     }
-    Ble.inherits(_, _, {
+    Mle.inherits(_, _, {
       __CANCEL__: !0,
     });
     _.exports = _;
@@ -51602,16 +51606,16 @@ Error generating stack: ` +
   var _ = _((cve, _) => {
     "use strict";
     var _ = _(),
-      Mle = _(),
       Tle = _(),
       Ile = _(),
       wle = _(),
       xle = _(),
       Hle = _(),
       Dle = _(),
-      _ = _(),
       Fle = _(),
-      Nle = _();
+      _ = _(),
+      Nle = _(),
+      Gle = _();
     _.exports = function (_) {
       return new Promise(function (_, _) {
         var _ = _.data,
@@ -51631,10 +51635,10 @@ Error generating stack: ` +
               : "";
           _.Authorization = "Basic " + btoa(_ + ":" + _);
         }
-        var _ = wle(_.baseURL, _.url);
+        var _ = xle(_.baseURL, _.url);
         _.open(
           _.method.toUpperCase(),
-          Ile(_, _.params, _.paramsSerializer),
+          wle(_, _.params, _.paramsSerializer),
           !0,
         ),
           (_.timeout = _.timeout);
@@ -51642,7 +51646,7 @@ Error generating stack: ` +
           if (_) {
             var _ =
                 "getAllResponseHeaders" in _
-                  ? xle(_.getAllResponseHeaders())
+                  ? Hle(_.getAllResponseHeaders())
                   : null,
               _ =
                 !_ || _ === "text" || _ === "json"
@@ -51656,7 +51660,7 @@ Error generating stack: ` +
                 config: _,
                 request: _,
               };
-            Mle(
+            Tle(
               function (_) {
                 _(_), _();
               },
@@ -51689,7 +51693,7 @@ Error generating stack: ` +
             var _ = _.timeout
                 ? "timeout of " + _.timeout + "ms exceeded"
                 : "timeout exceeded",
-              _ = _.transitional || Dle;
+              _ = _.transitional || Fle;
             _.timeoutErrorMessage && (_ = _.timeoutErrorMessage),
               _(
                 new _(
@@ -51704,8 +51708,8 @@ Error generating stack: ` +
           _.isStandardBrowserEnv())
         ) {
           var _ =
-            (_.withCredentials || Hle(_)) && _.xsrfCookieName
-              ? Tle.read(_.xsrfCookieName)
+            (_.withCredentials || Dle(_)) && _.xsrfCookieName
+              ? Ile.read(_.xsrfCookieName)
               : void 0;
           _ && (_[_.xsrfHeaderName] = _);
         }
@@ -51726,13 +51730,13 @@ Error generating stack: ` +
           (_.cancelToken || _.signal) &&
             ((_ = function (_) {
               _ &&
-                (_(!_ || (_ && _.type) ? new Fle() : _), _.abort(), (_ = null));
+                (_(!_ || (_ && _.type) ? new Nle() : _), _.abort(), (_ = null));
             }),
             _.cancelToken && _.cancelToken.subscribe(_),
             _.signal &&
               (_.signal.aborted ? _() : _.signal.addEventListener("abort", _))),
           _ || (_ = null);
-        var _ = Nle(_);
+        var _ = Gle(_);
         if (_ && ["http", "https", "file"].indexOf(_) === -1) {
           _(new _("Unsupported protocol " + _ + ":", _.ERR_BAD_REQUEST, _));
           return;
@@ -51750,9 +51754,9 @@ Error generating stack: ` +
     var _ = _(),
       _ = _(),
       _ = _(),
-      Gle = _(),
       Ole = _(),
-      Ule = {
+      Ule = _(),
+      Lle = {
         "Content-Type": "application/x-www-form-urlencoded",
       };
     function _(_, _) {
@@ -51760,7 +51764,7 @@ Error generating stack: ` +
         _.isUndefined(_["Content-Type"]) &&
         (_["Content-Type"] = _);
     }
-    function Lle() {
+    function jle() {
       var _;
       return (
         typeof XMLHttpRequest < "u"
@@ -51771,7 +51775,7 @@ Error generating stack: ` +
         _
       );
     }
-    function jle(_, _, _) {
+    function Wle(_, _, _) {
       if (_.isString(_))
         try {
           return (_ || JSON.parse)(_), _.trim(_);
@@ -51781,8 +51785,8 @@ Error generating stack: ` +
       return (_ || JSON.stringify)(_);
     }
     var _ = {
-      transitional: Gle,
-      adapter: Lle(),
+      transitional: Ole,
+      adapter: jle(),
       transformRequest: [
         function (_, _) {
           if (
@@ -51807,7 +51811,7 @@ Error generating stack: ` +
             _;
           if ((_ = _.isFileList(_)) || (_ && _ === "multipart/form-data")) {
             var _ = this.env && this.env.FormData;
-            return Ole(
+            return Ule(
               _
                 ? {
                     "files[]": _,
@@ -51816,7 +51820,7 @@ Error generating stack: ` +
               _ && new _(),
             );
           } else if (_ || _ === "application/json")
-            return _(_, "application/json"), jle(_);
+            return _(_, "application/json"), Wle(_);
           return _;
         },
       ],
@@ -51859,25 +51863,25 @@ Error generating stack: ` +
       _.headers[_] = {};
     });
     _.forEach(["post", "put", "patch"], function (_) {
-      _.headers[_] = _.merge(Ule);
+      _.headers[_] = _.merge(Lle);
     });
     _.exports = _;
   });
-  var _ = _((dve, _) => {
+  var _ = _((_ve, _) => {
     "use strict";
-    var Wle = _(),
-      zle = _();
+    var zle = _(),
+      Vle = _();
     _.exports = function (_, _, _) {
-      var _ = this || zle;
+      var _ = this || Vle;
       return (
-        Wle.forEach(_, function (_) {
+        zle.forEach(_, function (_) {
           _ = _.call(_, _, _);
         }),
         _
       );
     };
   });
-  var _ = _((_ve, _) => {
+  var _ = _((dve, _) => {
     "use strict";
     _.exports = function (_) {
       return !!(_ && _.__CANCEL__);
@@ -51887,15 +51891,15 @@ Error generating stack: ` +
     "use strict";
     var _ = _(),
       _ = _(),
-      Vle = _(),
       qle = _(),
-      Kle = _();
+      Kle = _(),
+      Qle = _();
     function _(_) {
       if (
         (_.cancelToken && _.cancelToken.throwIfRequested(),
         _.signal && _.signal.aborted)
       )
-        throw new Kle();
+        throw new Qle();
     }
     _.exports = function (_) {
       _(_),
@@ -51912,7 +51916,7 @@ Error generating stack: ` +
             delete _.headers[_];
           },
         );
-      var _ = _.adapter || qle.adapter;
+      var _ = _.adapter || Kle.adapter;
       return _(_).then(
         function (_) {
           return (
@@ -51923,7 +51927,7 @@ Error generating stack: ` +
         },
         function (_) {
           return (
-            Vle(_) ||
+            qle(_) ||
               (_(_),
               _ &&
                 _.response &&
@@ -52018,7 +52022,7 @@ Error generating stack: ` +
   });
   var _ = _((yve, _) => {
     "use strict";
-    var Qle = _().version,
+    var Yle = _().version,
       _ = _(),
       _ = {};
     ["object", "boolean", "number", "function", "string", "symbol"].forEach(
@@ -52033,7 +52037,7 @@ Error generating stack: ` +
       function _(_, _) {
         return (
           "[Axios v" +
-          Qle +
+          Yle +
           "] Transitional option '" +
           _ +
           "'" +
@@ -52063,7 +52067,7 @@ Error generating stack: ` +
         );
       };
     };
-    function Yle(_, _, _) {
+    function Xle(_, _, _) {
       if (typeof _ != "object")
         throw new _("options must be an object", _.ERR_BAD_OPTION_VALUE);
       for (var _ = Object.keys(_), _ = _.length; _-- > 0; ) {
@@ -52083,18 +52087,18 @@ Error generating stack: ` +
       }
     }
     _.exports = {
-      assertOptions: Yle,
+      assertOptions: Xle,
       validators: _,
     };
   });
   var _ = _((Cve, _) => {
     "use strict";
     var _ = _(),
-      Xle = _(),
-      _ = _(),
-      _ = _(),
-      _ = _(),
       Zle = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      Jle = _(),
       _ = _(),
       _ = _.validators;
     function _(_) {
@@ -52165,8 +52169,8 @@ Error generating stack: ` +
     };
     _.prototype.getUri = function (_) {
       _ = _(this.defaults, _);
-      var _ = Zle(_.baseURL, _.url);
-      return Xle(_, _.params, _.paramsSerializer);
+      var _ = Jle(_.baseURL, _.url);
+      return Zle(_, _.params, _.paramsSerializer);
     };
     _.forEach(["delete", "get", "head", "options"], function (_) {
       _.prototype[_] = function (_, _) {
@@ -52202,7 +52206,7 @@ Error generating stack: ` +
   });
   var _ = _((bve, _) => {
     "use strict";
-    var Jle = _();
+    var $le = _();
     function _(_) {
       if (typeof _ != "function")
         throw new TypeError("executor must be a function.");
@@ -52232,7 +52236,7 @@ Error generating stack: ` +
           );
         }),
         _(function (_) {
-          _.reason || ((_.reason = new Jle(_)), _(_.reason));
+          _.reason || ((_.reason = new $le(_)), _(_.reason));
         });
     }
     _.prototype.throwIfRequested = function () {
@@ -52273,31 +52277,31 @@ Error generating stack: ` +
   });
   var _ = _((hve, _) => {
     "use strict";
-    var $le = _();
+    var ece = _();
     _.exports = function (_) {
-      return $le.isObject(_) && _.isAxiosError === !0;
+      return ece.isObject(_) && _.isAxiosError === !0;
     };
   });
   var _ = _((vve, _) => {
     "use strict";
     var _ = _(),
-      ece = _(),
-      _ = _(),
       tce = _(),
-      rce = _();
+      _ = _(),
+      rce = _(),
+      oce = _();
     function _(_) {
       var _ = new _(_),
-        _ = ece(_.prototype.request, _);
+        _ = tce(_.prototype.request, _);
       return (
         _.extend(_, _.prototype, _),
         _.extend(_, _),
         (_.create = function (_) {
-          return _(tce(_, _));
+          return _(rce(_, _));
         }),
         _
       );
     }
-    var _ = _(rce);
+    var _ = _(oce);
     _.Axios = _;
     _.CanceledError = _();
     _.CancelToken = _();
@@ -52318,10 +52322,10 @@ Error generating stack: ` +
     "use strict";
     _.exports = _();
   });
-  var oce,
+  var nce,
     _ = _(() => {
       "use strict";
-      oce = _(_());
+      nce = _(_());
       _();
     });
   var _ = _(() => {
@@ -52335,11 +52339,6 @@ Error generating stack: ` +
     _();
     _();
     _();
-    _();
-    _();
-  });
-  var _ = _(() => {
-    "use strict";
     _();
     _();
   });
@@ -52544,12 +52543,12 @@ Error generating stack: ` +
       _.ukrainian = _;
       _.vietnamese = _;
     });
-  var nke,
+  var tke,
     _ = _(() => {
       "use strict";
       _();
       _();
-      nke = _(_);
+      tke = _(_);
     });
   var _ = _(() => {
     "use strict";
@@ -52733,7 +52732,7 @@ Error generating stack: ` +
   var _,
     _,
     _,
-    xke,
+    Tke,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -52741,7 +52740,7 @@ Error generating stack: ` +
       _();
       (_ = _(_(), 1)),
         (_ = _.default.createContext({})),
-        (xke = _.default.createContext(void 0));
+        (Tke = _.default.createContext(void 0));
     });
   function _(_, _) {
     _ != null &&
@@ -58414,11 +58413,11 @@ Error generating stack: ` +
         installCompressionStreams(overwritten);
     })();
   });
-  var _ue = {};
-  var aRe,
+  var due = {};
+  var rRe,
     _ = _(() => {
       "use strict";
-      aRe = _(_(), 1);
+      rRe = _(_(), 1);
     });
   var _ = _((_, _) => {
     "use strict";
@@ -58713,7 +58712,7 @@ Error generating stack: ` +
     function ppe(_) {
       return this.__data__.has(_);
     }
-    function dpe(_, _) {
+    function _pe(_, _) {
       var _ = this.__data__;
       if (_ instanceof _) {
         var _ = _.__data__;
@@ -58726,8 +58725,8 @@ Error generating stack: ` +
     _.prototype.delete = cpe;
     _.prototype.get = upe;
     _.prototype.has = ppe;
-    _.prototype.set = dpe;
-    function _pe(_, _) {
+    _.prototype.set = _pe;
+    function dpe(_, _) {
       var _ = _(_) || Npe(_) ? Iue(_.length, String) : [],
         _ = _.length,
         _ = !!_;
@@ -59004,7 +59003,7 @@ Error generating stack: ` +
       return !!_ && typeof _ == "object";
     }
     function _(_) {
-      return _(_) ? _pe(_) : bpe(_);
+      return _(_) ? dpe(_) : bpe(_);
     }
     function jpe() {
       return [];
@@ -59045,7 +59044,7 @@ Error generating stack: ` +
   }
   var Ype,
     _,
-    HRe,
+    IRe,
     _ = _(() => {
       "use strict";
       (Ype = Intl.DateTimeFormat().resolvedOptions().timeZone),
@@ -59056,7 +59055,7 @@ Error generating stack: ` +
                 .find((_) => _.trim().startsWith("timezoneName"))
                 ?.split("=")[1]
             : void 0),
-        (HRe = _ && decodeURIComponent(_));
+        (IRe = _ && decodeURIComponent(_));
       Xpe();
     });
   var _ = _(() => {
@@ -59222,7 +59221,7 @@ Error generating stack: ` +
   function $pe(_) {
     return (_[0] * 299 + _[1] * 587 + _[2] * 114) / 1e3 >= 128;
   }
-  function ede(_) {
+  function e_e(_) {
     switch (_) {
       case 0:
         return String.fromCodePoint(128027);
@@ -59242,7 +59241,7 @@ Error generating stack: ` +
       ),
       _ = $pe(_),
       _ = _;
-    _ && (_ = ede(_) + " " + _);
+    _ && (_ = e_e(_) + " " + _);
     let _ = _.length >= 1 && typeof _[0] == "string" && _[0].includes("%c"),
       _ = _ && _.shift(),
       _;
@@ -59468,9 +59467,9 @@ Error generating stack: ` +
         _.Get().SetDebugLogEnabled("SteamClient", _);
     });
   function _(_, _, _) {
-    return _.addEventListener(_, _), () => rde(_, _, _);
+    return _.addEventListener(_, _), () => r_e(_, _, _);
   }
-  function rde(_, _, _) {
+  function r_e(_, _, _) {
     _.removeEventListener(_, _);
   }
   function _(_, _) {
@@ -59529,12 +59528,12 @@ Error generating stack: ` +
       _
     );
   }
-  var tde,
-    EPe,
+  var t_e,
+    SPe,
     _ = _(() => {
       "use strict";
-      (tde = _(_(), 1)),
-        (EPe = {
+      (t_e = _(_(), 1)),
+        (SPe = {
           1: "vgp_onok",
           2: "vgp_oncancel",
           3: "vgp_onsecondaryaction",
@@ -59583,7 +59582,7 @@ Error generating stack: ` +
       _ = _.default.useCallback(
         (_) => {
           _ && _(_),
-            ode(
+            o_e(
               "Gamepad Event fired:",
               _.detail.button,
               ", handled:",
@@ -59614,14 +59613,14 @@ Error generating stack: ` +
       );
   }
   var _,
-    nde,
-    ode,
+    n_e,
+    o_e,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
       _();
       _();
-      (nde = _(_(), 1)), (ode = new _("GamepadEvents").Debug);
+      (n_e = _(_(), 1)), (o_e = new _("GamepadEvents").Debug);
     });
   var _,
     _ = _(() => {
@@ -59656,7 +59655,7 @@ Error generating stack: ` +
     "use strict";
     _();
   });
-  function ade(_) {
+  function a_e(_) {
     return {
       ShowVirtualKeyboard: () => {},
       ShowModalKeyboard: () => {},
@@ -59676,7 +59675,7 @@ Error generating stack: ` +
       BIsElementValidForInput: () =>
         _.current && document.activeElement == _.current,
     });
-    let _ = ide(_.current),
+    let _ = i_e(_.current),
       _ = _.default.useCallback(
         (_) => {
           if (!(!document.hasFocus() && document.activeElement == _.current)) {
@@ -59736,19 +59735,19 @@ Error generating stack: ` +
       _
     );
   }
-  function ide(_) {
+  function i_e(_) {
     let _ = _.default.useRef(void 0),
-      _ = _.default.useContext(sde);
+      _ = _.default.useContext(s_e);
     return _.current || (_.current = _(_ || {})), _.current;
   }
   var _,
-    sde,
+    s_e,
     _ = _(() => {
       "use strict";
       _();
       _ = _(_(), 1);
       _();
-      sde = _.default.createContext(ade);
+      s_e = _.default.createContext(a_e);
     });
   function _(_) {
     let {
@@ -59778,14 +59777,14 @@ Error generating stack: ` +
     "use strict";
   });
   function _() {
-    return _.useContext(lde);
+    return _.useContext(l_e);
   }
   var _,
-    cde,
-    lde,
+    c_e,
+    l_e,
     _ = _(() => {
       "use strict";
-      (_ = _(_(), 1)), (cde = _(_(), 1)), (lde = _.createContext(void 0));
+      (_ = _(_(), 1)), (c_e = _(_(), 1)), (l_e = _.createContext(void 0));
     });
   function _() {
     return _.default.useContext(_)?.focusNavWindow;
@@ -59806,7 +59805,7 @@ Error generating stack: ` +
           bSupportsFocus: !0,
         }));
     });
-  function ude(_) {
+  function u_e(_) {
     let {
         navID: _,
         onActivated: _,
@@ -59825,7 +59824,7 @@ Error generating stack: ` +
         ..._
       } = _,
       { elemProps: _, navOptions: _, gamepadEvents: _ } = _(_),
-      { refDiv: _, tree: _ } = pde({
+      { refDiv: _, tree: _ } = p_e({
         navID: _,
         parentEmbeddedNavTree: _,
         disabledRoot: _,
@@ -59847,7 +59846,7 @@ Error generating stack: ` +
         });
       });
     let _ = _(_, _.props.ref);
-    return (0, _.jsx)(dde, {
+    return (0, _.jsx)(__e, {
       tree: _ ? null : _,
       disableFocusClasses: _ || _,
       children: (0, _.jsx)(_.Provider, {
@@ -59860,7 +59859,7 @@ Error generating stack: ` +
       }),
     });
   }
-  function pde(_) {
+  function p_e(_) {
     let {
         navID: _,
         parentEmbeddedNavTree: _,
@@ -59903,7 +59902,7 @@ Error generating stack: ` +
       }
     );
   }
-  function dde(_) {
+  function __e(_) {
     let { tree: _, disableFocusClasses: _ = !1, children: _ } = _,
       [_, _] = _.default.useState(_?.BIsActive() || !1),
       [_, _] = _.default.useState(_?.BIsActiveWithinContext() || !1),
@@ -59940,7 +59939,7 @@ Error generating stack: ` +
   }
   var _,
     _,
-    qPe,
+    WPe,
     _,
     _ = _(() => {
       "use strict";
@@ -59953,7 +59952,7 @@ Error generating stack: ` +
       _();
       _();
       (_ = _(_(), 1)),
-        (qPe = _.default.forwardRef(function (_, _) {
+        (WPe = _.default.forwardRef(function (_, _) {
           let {
               navID: _,
               onActivated: _,
@@ -59972,7 +59971,7 @@ Error generating stack: ` +
             } = _,
             { elemProps: _, navOptions: _, gamepadEvents: _ } = _(_);
           return _()
-            ? (0, _.jsx)(ude, {
+            ? (0, _.jsx)(u_e, {
                 navID: _,
                 onActivated: _,
                 onDeactivated: _,
@@ -60005,7 +60004,7 @@ Error generating stack: ` +
         bIsMounted: !1,
       });
     });
-  function mde(_, _) {
+  function m_e(_, _) {
     let _ = _.useRef(null);
     return (
       _ &&
@@ -60018,8 +60017,8 @@ Error generating stack: ` +
     let { navRef: _, ..._ } = _,
       _ = _.useRef(null),
       _ = (0, _.useContext)(_),
-      _ = (0, _.useContext)(_de),
-      _ = mde(_, _);
+      _ = (0, _.useContext)(d_e),
+      _ = m_e(_, _);
     return (
       _.useLayoutEffect(() => {
         _ && _.SetProperties(_);
@@ -60040,7 +60039,7 @@ Error generating stack: ` +
       }
     );
   }
-  function gde(_) {
+  function g_e(_) {
     let {
         onButtonDown: _,
         onButtonUp: _,
@@ -60110,7 +60109,7 @@ Error generating stack: ` +
         resetNavOnEntry: _,
         ..._
       } = _,
-      { gamepadEvents: _, actionDescriptions: _, props: _ } = gde(_),
+      { gamepadEvents: _, actionDescriptions: _, props: _ } = g_e(_),
       _ = {
         autoFocus: _,
         preferredFocus: _,
@@ -60272,10 +60271,10 @@ Error generating stack: ` +
     _,
     _,
     _,
-    _de,
-    iAe,
+    d_e,
+    nAe,
     _,
-    fde,
+    f_e,
     _ = _(() => {
       "use strict";
       _();
@@ -60291,59 +60290,59 @@ Error generating stack: ` +
       _();
       _();
       _();
-      (_ = _(_(), 1)), (_ = _.createContext(null)), (_de = _.createContext(_));
-      iAe = _("div");
-      (_ = _.createContext(void 0)), (fde = _.Provider);
+      (_ = _(_(), 1)), (_ = _.createContext(null)), (d_e = _.createContext(_));
+      nAe = _("div");
+      (_ = _.createContext(void 0)), (f_e = _.Provider);
     });
   var _,
     _,
-    pAe,
-    dAe,
-    yde,
+    lAe,
+    cAe,
+    y_e,
     _,
+    uAe,
+    pAe,
     _Ae,
+    dAe,
     mAe,
     gAe,
-    fAe,
-    yAe,
-    CAe,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
       _();
       _();
       (_ = _(_(), 1)),
-        (pAe = _("div", {
+        (lAe = _("div", {
           bDOMElementFocusByDefault: !1,
         })),
-        (dAe = _("button", {
+        (cAe = _("button", {
           bActivateByDefault: (_) => _.type === "submit",
         })),
-        (yde = _("a", {
+        (y_e = _("a", {
           bActivateByDefault: !0,
           bDOMElementFocusByDefault: !1,
         })),
         (_ = _.default.forwardRef(function (_, _) {
           let { href: _ = "#", ..._ } = _;
-          return (0, _.jsx)(yde, {
+          return (0, _.jsx)(y_e, {
             ref: _,
             href: _,
             ..._,
           });
         })),
-        (_Ae = _("input")),
-        (mAe = _("textarea")),
-        (gAe = _("img", {
+        (uAe = _("input")),
+        (pAe = _("textarea")),
+        (_Ae = _("img", {
           bDOMElementFocusByDefault: !1,
         })),
-        (fAe = _("label", {
+        (dAe = _("label", {
           bActivateByDefault: !0,
           bDOMElementFocusByDefault: !1,
         })),
-        (yAe = _("section", {
+        (mAe = _("section", {
           bFocusableByDefault: !1,
         })),
-        (CAe = _("form", {
+        (gAe = _("form", {
           bFocusableByDefault: !1,
         }));
     });
@@ -60544,69 +60543,69 @@ Error generating stack: ` +
   });
   var _ = {};
   _(_, {
-    k_EAppTypeApplication: () => H_e,
-    k_EAppTypeBeta: () => Y_e,
-    k_EAppTypeComic: () => Q_e,
-    k_EAppTypeConfig: () => L_e,
-    k_EAppTypeDLC: () => G_e,
-    k_EAppTypeDemo: () => F_e,
-    k_EAppTypeDepotOnly: () => Z_e,
-    k_EAppTypeDeprected: () => N_e,
-    k_EAppTypeDriver: () => U_e,
-    k_EAppTypeFranchise: () => W_e,
-    k_EAppTypeGame: () => x_e,
-    k_EAppTypeGuide: () => O_e,
-    k_EAppTypeHardware: () => j_e,
-    k_EAppTypeInvalid: () => w_e,
-    k_EAppTypeMusicAlbum: () => q_e,
-    k_EAppTypePlugin: () => V_e,
-    k_EAppTypeSeries: () => K_e,
-    k_EAppTypeShortcut: () => X_e,
-    k_EAppTypeTool: () => D_e,
-    k_EAppTypeVideo: () => z_e,
+    k_EAppTypeApplication: () => Hde,
+    k_EAppTypeBeta: () => Yde,
+    k_EAppTypeComic: () => Qde,
+    k_EAppTypeConfig: () => Lde,
+    k_EAppTypeDLC: () => Gde,
+    k_EAppTypeDemo: () => Fde,
+    k_EAppTypeDepotOnly: () => Zde,
+    k_EAppTypeDeprected: () => Nde,
+    k_EAppTypeDriver: () => Ude,
+    k_EAppTypeFranchise: () => Wde,
+    k_EAppTypeGame: () => xde,
+    k_EAppTypeGuide: () => Ode,
+    k_EAppTypeHardware: () => jde,
+    k_EAppTypeInvalid: () => wde,
+    k_EAppTypeMusicAlbum: () => qde,
+    k_EAppTypePlugin: () => Vde,
+    k_EAppTypeSeries: () => Kde,
+    k_EAppTypeShortcut: () => Xde,
+    k_EAppTypeTool: () => Dde,
+    k_EAppTypeVideo: () => zde,
   });
-  var w_e,
-    x_e,
-    H_e,
-    D_e,
-    F_e,
-    N_e,
-    G_e,
-    O_e,
-    U_e,
-    L_e,
-    j_e,
-    W_e,
-    z_e,
-    V_e,
-    q_e,
-    K_e,
-    Q_e,
-    Y_e,
-    X_e,
-    Z_e,
+  var wde,
+    xde,
+    Hde,
+    Dde,
+    Fde,
+    Nde,
+    Gde,
+    Ode,
+    Ude,
+    Lde,
+    jde,
+    Wde,
+    zde,
+    Vde,
+    qde,
+    Kde,
+    Qde,
+    Yde,
+    Xde,
+    Zde,
     _ = _(() => {
       "use strict";
-      (w_e = 0),
-        (x_e = 1),
-        (H_e = 2),
-        (D_e = 4),
-        (F_e = 8),
-        (N_e = 16),
-        (G_e = 32),
-        (O_e = 64),
-        (U_e = 128),
-        (L_e = 256),
-        (j_e = 512),
-        (W_e = 1024),
-        (z_e = 2048),
-        (V_e = 4096),
-        (q_e = 8192),
-        (K_e = 16384),
-        (Q_e = 32768),
-        (Y_e = 65536),
-        (X_e = 1073741824),
-        (Z_e = -2147483648);
+      (wde = 0),
+        (xde = 1),
+        (Hde = 2),
+        (Dde = 4),
+        (Fde = 8),
+        (Nde = 16),
+        (Gde = 32),
+        (Ode = 64),
+        (Ude = 128),
+        (Lde = 256),
+        (jde = 512),
+        (Wde = 1024),
+        (zde = 2048),
+        (Vde = 4096),
+        (qde = 8192),
+        (Kde = 16384),
+        (Qde = 32768),
+        (Yde = 65536),
+        (Xde = 1073741824),
+        (Zde = -2147483648);
     });
   var _ = _(() => {
     "use strict";
@@ -60798,7 +60797,7 @@ Error generating stack: ` +
     _ = _(_(), 1);
   _();
   var _ = "lhk3C1-ntcM-";
-  function xie() {
+  function Hie() {
     return !(
       typeof HTMLElement < "u" &&
       typeof HTMLElement.prototype == "object" &&
@@ -60806,18 +60805,18 @@ Error generating stack: ` +
     );
   }
   async function _() {
-    xie() && (await Promise.resolve().then(() => (_(), _))).apply();
+    Hie() && (await Promise.resolve().then(() => (_(), _))).apply();
   }
   var _ = _(_(), 1);
   _();
-  function Hie(_) {
+  function Die(_) {
     let [_, _] = _(_, "-");
     return _ === "left" || _ === "right" ? [void 0, _] : [_, _];
   }
   var _ = 0,
     _ = 1,
-    Die = 2;
-  function Fie(_) {
+    Fie = 2;
+  function Nie(_) {
     let {
         direction: _,
         ignoreHorizontal: _,
@@ -60830,7 +60829,7 @@ Error generating stack: ` +
       _ = (0, _.useRef)(!1),
       _ = (0, _.useRef)(null),
       [_, _] = (0, _.useState)(!1),
-      [_, _] = (0, _.useMemo)(() => Hie(_), [_]),
+      [_, _] = (0, _.useMemo)(() => Die(_), [_]),
       _ = (0, _.useCallback)(() => {
         if (!_.current || !_.current) return;
         let _ = _.current.getBoundingClientRect(),
@@ -60964,7 +60963,7 @@ Error generating stack: ` +
       ),
       _ = (0, _.useCallback)(
         (_) => {
-          _ === Die && _();
+          _ === Fie && _();
         },
         [_, _],
       ),
@@ -61051,7 +61050,7 @@ Error generating stack: ` +
         ref: _,
         ..._
       } = _,
-      { triggerProps: _, menuProps: _, isShowingMenu: _ } = Fie(_);
+      { triggerProps: _, menuProps: _, isShowingMenu: _ } = Nie(_);
     if (!_ || _.Children.toArray(_).length === 0) return _;
     let _ = _;
     return (0, _.jsxs)(_.Fragment, {
@@ -61810,7 +61809,7 @@ Error generating stack: ` +
           (_.version = "19.1.1");
       },
     }),
-    Zke = _({
+    Qke = _({
       "../../node_modules/react/cjs/react.development.js"(_, _) {
         "use strict";
       },
@@ -63321,7 +63320,7 @@ Error generating stack: ` +
           });
       },
     }),
-    Jke = _({
+    Yke = _({
       "src/vendor/react-client/react-client-flight.development.cjs"(_, _) {
         "use strict";
       },
@@ -63445,12 +63444,12 @@ Error generating stack: ` +
     {
       createResponse: uue,
       processStringChunk: pue,
-      getRoot: due,
+      getRoot: _ue,
     } = (0, cue.default)(_);
   async function _(_, _, _, _) {
     try {
       let _ = uue(_, {}, _, () => {}, void 0, _);
-      return pue(_, _), due(_);
+      return pue(_, _), _ue(_);
     } catch (_) {
       return (
         console.error("deserializeServerComponentFromString error", _),
@@ -63541,7 +63540,7 @@ Error generating stack: ` +
   async function* gue(_, _) {
     let { abortSignal: _, additionalHeaders: _, requestType: _ } = _;
     "TextDecoderStream" in window ||
-      (await Promise.resolve().then(() => (_(), _ue)));
+      (await Promise.resolve().then(() => (_(), due)));
     let _ = new Headers(_);
     _.append(_, _);
     let _,
@@ -63923,14 +63922,14 @@ Error generating stack: ` +
   _();
   var _ = _(_(), 1);
   var _ = _(_(), 1);
-  function Cde(_, _, _) {
+  function C_e(_, _, _) {
     return (0, _.useMemo)(() => _, [_, _, _]);
   }
-  function bde(_) {
+  function b_e(_) {
     let _ = "steam://";
     return _(_.EREALM) && (_ = "steamchina://"), _ + _;
   }
-  var Sde = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
+  var S_e = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
     _ = _.default.memo(function (_) {
       let {
           _: _,
@@ -63962,7 +63961,7 @@ Error generating stack: ` +
             bIsExternal: !0,
             targetRoute: _,
           };
-        if (Sde.test(_)) {
+        if (S_e.test(_)) {
           let _ = new URL(location.href),
             _ = new URL(_.startsWith("//") ? _.protocol + _ : _);
           if (_.origin !== _.origin)
@@ -63985,9 +63984,9 @@ Error generating stack: ` +
       }, [_, _, _, _?.routes]);
       _ &&
         (_.IN_CLIENT
-          ? (_ = bde(`openurl/${_}`))
+          ? (_ = b_e(`openurl/${_}`))
           : ((_.target ??= "_blank"), (_.rel ??= "noreferrer noopener")));
-      let _ = Cde(_, _, _),
+      let _ = C_e(_, _, _),
         _ = _ && _.IN_GAMEPADUI ? _ : "a";
       return (0, _.jsx)(_, {
         ref: _,
@@ -64890,7 +64889,7 @@ Error generating stack: ` +
   var _ = "wc1giPfMJ1w-";
   var _ = "HngrSQ530u4-";
   var _ = _(_(), 1);
-  function dge(_) {
+  function _ge(_) {
     let { navContent: _, children: _, labelAddition: _ } = _,
       _ = (0, _.useRef)(null),
       _ = (0, _.useRef)(null),
@@ -65068,7 +65067,7 @@ Error generating stack: ` +
                 }),
               _.map((_, _) =>
                 (0, _.jsx)(
-                  dge,
+                  _ge,
                   {
                     navContent: _,
                   },
@@ -65110,7 +65109,7 @@ Error generating stack: ` +
     });
   }
   var _ = _(_(), 1);
-  function _ge(_) {
+  function dge(_) {
     let _ = () => {
       _(_), window.location.reload();
     };
@@ -65340,7 +65339,7 @@ Error generating stack: ` +
               }),
             }),
             _.spoof &&
-              (0, _.jsx)(_ge, {
+              (0, _.jsx)(dge, {
                 spoofProfileUrl: _.spoof.profileUrl,
                 spoofUsername: _.spoof.username,
               }),

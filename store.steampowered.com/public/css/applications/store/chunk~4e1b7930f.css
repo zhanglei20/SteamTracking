@@ -2347,11 +2347,27 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .BasicUI ._2VUpHDtxN8lR1LDahY_cI2 {
   column-gap: 12px;
+  transform: none !important;
+}
+.fiveElementEightGap ._2VUpHDtxN8lR1LDahY_cI2 > * {
+  margin-right: 8px;
+}
+.fiveElementEightGap ._2VUpHDtxN8lR1LDahY_cI2 > *:nth-child(5n + 1) {
+  margin-right: 0px;
+}
+html.responsive.touch .fiveElementEightGap {
+  gap: 4px;
+}
+@media screen and (max-width: 910px) {
+  html.responsive .fiveElementEightGap {
+    gap: 4px;
+  }
 }
 ._3HjnEmKg66o82ah74EIvmq {
   display: flex;
   justify-content: center;
   margin-top: 12px;
+  gap: 2px;
 }
 ._3dMffY_iRZXHjZmXN9aLej {
   position: absolute;

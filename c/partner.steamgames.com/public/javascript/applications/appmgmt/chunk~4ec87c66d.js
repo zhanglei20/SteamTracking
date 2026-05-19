@@ -24320,10 +24320,11 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get(),
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.GetName(),
             _.GetFullName(),
             _.BIsOptInEnabled(),
+            _.EVisibility(),
           ]),
           [_, _, _] = (0, _._)(!1);
         return (0, _.jsxs)("div", {
@@ -24373,6 +24374,23 @@
                           _ ? _.SetOptInEnabled(_) : _();
                         },
                       }),
+                      _ &&
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _.jsx)("h3", {
+                              children: "Opt-In Visibility:",
+                            }),
+                            (0, _.jsx)("b", {
+                              children:
+                                void 0 === _ ||
+                                _ === _._.k_EOptInVisibility_Public
+                                  ? "Public"
+                                  : "Invite Only",
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("br", {}),
+                          ],
+                        }),
                       (0, _.jsx)("a", {
                         href: `${_._.PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales`,
                         target: "_blank",
@@ -30943,10 +30961,15 @@
                 .then((_) => {
                   if (_ != _._)
                     _.fnSetError(!0),
-                      _.fnSetStrError(
-                        "Error: Failed to create the email on the steam server: Eresult: " +
-                          _,
-                      );
+                      _ == _._
+                        ? _.fnSetStrError(
+                            "Error: Failed to create the email on the steam server because the opt-in event is not marked as live. Please tick live before creating the email: Eresult: " +
+                              _,
+                          )
+                        : _.fnSetStrError(
+                            "Error: Failed to create the email on the steam server: Eresult: " +
+                              _,
+                          );
                   else {
                     const _ = _().CancelToken.source();
                     _._.Get()
@@ -65679,7 +65702,9 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _().PartnerName,
-                  children: (0, _.jsxs)("b", {
+                  children: (0, _.jsxs)("a", {
+                    href: `${_._.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${_}`,
+                    target: "_blank",
                     children: [_.name, " (", _, ")"],
                   }),
                 }),
@@ -79661,7 +79686,7 @@
         BIsMutedClanID(_) {
           return this.m_mapBlockedClanIds.has(_);
         }
-        async UpdateCommunitionSetting(_, _, _) {
+        async UpdateCommunicationSetting(_, _, _) {
           const _ = _._.STORE_BASE_URL + "account/optoutappcommunication/",
             _ = new FormData();
           if (
@@ -80268,7 +80293,7 @@
           let _ = _.appInfo ? _.appid : void 0,
             _ = _.clanInfo ? _.clanInfo.clanid : void 0;
           null != _ || null != _
-            ? (await _.Get().UpdateCommunitionSetting(_, _, _),
+            ? (await _.Get().UpdateCommunicationSetting(_, _, _),
               _._.RecordAppInteractionEvent(_, _._.k_eMuted))
             : (0, _._)(
                 !1,
@@ -82708,6 +82733,7 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
             saleDescList: _,
@@ -82856,8 +82882,7 @@
             saleDesc: _,
             message: (0, _._)("#Sale_InDraftModeHasApp"),
           });
-        const _ = (0, _.sfN)(_._.LANGUAGE),
-          _ = _.GetSaleURL();
+        const _ = (0, _.sfN)(_._.LANGUAGE);
         return (0, _.jsx)(_._, {
           children: (0, _.jsxs)("div", {
             className: (0, _._)(_().TileContainer),
@@ -82875,20 +82900,9 @@
               (0, _.jsxs)("div", {
                 className: (0, _._)(_().EventDetailsCtn),
                 children: [
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _.GetSummaryWithFallback(_),
-                    children: (0, _.jsx)("a", {
-                      href: _,
-                      target: "_blank",
-                      children: (0, _.jsx)(_._, {
-                        className: (0, _._)(_().CapsuleImg),
-                        rgSources: _.GetImageForSizeAsArrayWithFallback(
-                          "capsule",
-                          _,
-                          _._.capsule_main,
-                        ),
-                      }),
-                    }),
+                  (0, _.jsx)(_, {
+                    eventModel: _,
+                    eLanguage: _,
                   }),
                   (0, _.jsxs)("div", {
                     className: (0, _._)(_().TopStatsCtn),
@@ -82943,6 +82957,22 @@
                   saleDesc: _,
                 }),
             ],
+          }),
+        });
+      }
+      function _(_) {
+        const { eventModel: _, eLanguage: _ } = _,
+          _ = _.GetSaleURL(),
+          _ = (0, _._)(_, "capsule", _, _._.capsule_main);
+        return (0, _.jsx)(_._, {
+          toolTipContent: _.GetSummaryWithFallback(_),
+          children: (0, _.jsx)("a", {
+            href: _,
+            target: "_blank",
+            children: (0, _.jsx)(_._, {
+              className: (0, _._)(_().CapsuleImg),
+              rgSources: _,
+            }),
           }),
         });
       }
@@ -91287,6 +91317,7 @@
             hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
+            disableScreenshots: _,
             children: _,
           } = _,
           _ = _.useRef(null),
@@ -91296,13 +91327,16 @@
               _ &&
                 (_ && _(!0),
                 window.GameHover &&
+                  (_.current &&
+                    _ &&
+                    (_.current.dataset.hoverDisableScreenshots = "true"),
                   window.GameHover(_ ? _() : _.current, _, "global_hover", {
                     type: _,
                     _: (0, _._)(_)._,
                     _: 1,
-                  }));
+                  })));
             },
-            [_, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -98563,6 +98597,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _ } = _,
@@ -99229,8 +99264,6 @@
               emoticonStore: _,
               className: _,
               additionalTypeAndDateElement: _,
-              fnFilterImageURLsForKnownFailures: _,
-              fnImageFailureCallback: _,
               headerClassnames: _,
               isPreview: _,
               bShouldMaskImages: _,
@@ -99238,16 +99271,9 @@
             } = this.props,
             _ = _ || (0, _.sfN)(_._.LANGUAGE),
             _ = _.GetDescriptionWithFallback(_) || "",
-            _ = _;
-          let _ = _.GetImageForSizeAsArrayWithFallback(
-            "background",
-            _,
-            _._.background_main,
-          );
-          _ && (_ = _(_));
-          const _ = _.GetCategoryAsString(),
-            _ = _.type,
-            _ = _.BImageNeedScreenshotFallback("background", _);
+            _ = _,
+            _ = _.GetCategoryAsString(),
+            _ = _.type;
           let _ = "";
           if (_.appid) _ = _?.GetName() || "";
           else if (_.clanSteamID) {
@@ -99268,22 +99294,10 @@
                 "editor" == _ ? _().InEditor : "",
               ),
               children: [
-                _ != _.Fwr &&
-                  !_ &&
-                  (0, _.jsx)(_._, {
-                    className: (0, _._)(
-                      _().EventCoverImageBackground,
-                      _ && _().MaskImages,
-                    ),
-                    rgSources: _,
-                    onIncrementalError: (_, _, _) => _ && _(_),
-                  }),
-                _.length > 0 &&
-                  (0, _.jsx)(_._, {
-                    className: _().EventBackgroundBlur,
-                    rgSources: _,
-                    onIncrementalError: (_, _, _) => _ && _(_),
-                  }),
+                (0, _.jsx)(_, {
+                  ...this.props,
+                  eLanguage: _,
+                }),
                 (0, _.jsx)("div", {
                   className: _().LibraryEventTitleContainer,
                   children: (0, _.jsxs)("div", {
@@ -99455,6 +99469,42 @@
           });
         }
       };
+      function _(_) {
+        const {
+            event: _,
+            fnFilterImageURLsForKnownFailures: _,
+            fnImageFailureCallback: _,
+            eLanguage: _,
+            bShouldMaskImages: _,
+          } = _,
+          _ = _.BImageNeedScreenshotFallback("background", _),
+          _ = _.type;
+        let _ = (0, _._)(_, "background", _, _._.background_main);
+        return (
+          _ && _ && (_ = __webpack_require__(_)),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ != _.Fwr &&
+                !_ &&
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _().EventCoverImageBackground,
+                    _ && _().MaskImages,
+                  ),
+                  rgSources: _,
+                  onIncrementalError: (_, _, _) => _ && _(_),
+                }),
+              _ &&
+                _.length > 0 &&
+                (0, _.jsx)(_._, {
+                  className: _().EventBackgroundBlur,
+                  rgSources: _,
+                  onIncrementalError: (_, _, _) => _ && _(_),
+                }),
+            ],
+          })
+        );
+      }
       var _;
       (0, _._)([_._], _.prototype, "OnEnterVisible", null),
         (0, _._)([_._], _.prototype, "OnLeaveVisible", null),
@@ -100952,6 +101002,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
@@ -100960,6 +101011,24 @@
             ? ""
             : (0, _._)(_.default_label))
         );
+      }
+      function _(_) {
+        const { event: _, elTitle: _, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _ ? "product_mobile_banner" : "product_banner", _);
+        return (0, _.jsxs)("div", {
+          className: _().SaleImageCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().SaleImageHelper,
+              children: _,
+            }),
+            (0, _.jsx)("img", {
+              src: _,
+              alt: _,
+            }),
+          ],
+        });
       }
       const _ = (0, _._)((_) => {
         const {
@@ -100970,7 +101039,6 @@
             title: _,
             subtitle: _,
           } = _,
-          _ = (0, _._)(),
           _ = (0, _._)(),
           { eventModel: _ } = (0, _._)(
             _.sale_page_cross_promo_clan_account_id,
@@ -100984,21 +101052,9 @@
             className: (0, _._)(_().SaleSectionHeader, "SaleSectionHeader"),
             style: _(_, _, _),
             children: _?.BHasSomeImage("product_banner")
-              ? (0, _.jsxs)("div", {
-                  className: _().SaleImageCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().SaleImageHelper,
-                      children: _,
-                    }),
-                    (0, _.jsx)("img", {
-                      src: _.GetImageURLWithFallback(
-                        _ ? "product_mobile_banner" : "product_banner",
-                        _,
-                      ),
-                      alt: _,
-                    }),
-                  ],
+              ? (0, _.jsx)(_, {
+                  ..._,
+                  elTitle: _,
                 })
               : _,
           }),
@@ -101230,6 +101286,7 @@
                     (0, _.jsx)(_._, {
                       _: _,
                       bMinimizePlatforms: _,
+                      bHideWindows: !0,
                     }),
                   !_ &&
                     (0, _.jsx)("span", {
@@ -101372,6 +101429,7 @@
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
+            bUseDiv: !_,
           });
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
@@ -101471,6 +101529,7 @@
         const {
             _: _,
             bHideStatusBanners: _,
+            bUseDiv: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -101486,11 +101545,11 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        const _ = !!_;
+        const _ = _
+            ? void 0
+            : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
+          _ = _ ? "div" : _._,
+          _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -101498,8 +101557,8 @@
                 [_().TwoWidthCtn]: _,
               }),
               children: [
-                (0, _.jsxs)(_._, {
-                  href: _ ? void 0 : _,
+                (0, _.jsxs)(_, {
+                  href: _,
                   style: {
                     display: "block",
                     cursor: "pointer",
@@ -101508,7 +101567,6 @@
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
-                  onClick: _,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,

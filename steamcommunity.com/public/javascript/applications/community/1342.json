@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "กรองตามเกม...",
     "AdvancedSearch_BetaTag": "คุณสมบัติเบต้า - ให้ข้อเสนอแนะ",
     "AdvancedSearch_TextSearch_Tooltip": "ค้นหาชื่อไอเท็มทั่วตลาด...",
-    "AdvancedSearch_Beta_OptOut": "สลับไปใช้ตัวกรองเก่า",
     "AdvancedSearch_CSContainers_Tooltip": "กล่องอาวุธ แคปซูลสติกเกอร์ แพ็กเกจของที่ระลึก ฯลฯ",
     "Header_MarketTitle": "ตลาดชุมชน Steam",
     "Header_MarketDescription": "ซื้อและขายไอเท็มกับสมาชิกชุมชนด้วยเงินวอลเล็ต Steam",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "บัญชีของคุณถูกล็อกอยู่ในขณะนี้ ข้อมูลเกี่ยวกับการล็อกนี้สามารถดูได้โดยการคลิกที่แถบสีแดง ซึ่งแสดงอยู่ที่มุมขวาบนเมื่อเข้าสู่ระบบไปยังไคลเอนต์ Steam",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "หากต้องการยกเลิกข้อจำกัดนี้...",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "บัญชีของคุณถูกแบนการแลกเปลี่ยนอยู่ในขณะนี้",
+    "Economy_Market_TopLevelReason_Unknown": "บัญชีนี้ไม่สามารถใช้งานตลาดชุมชน Steam ได้ในขณะนี้",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "ระยะเวลาการแบนการแลกเปลี่ยนอาจเป็นแบบชั่วคราวไปจนถึงถาวร หากต้องการดูวันหมดอายุของการแบนการแลกเปลี่ยน โปรดคลิกแถบสีแดงที่แสดงอยู่ที่มุมขวาบนหลังจากเข้าสู่ระบบไปยังไคลเอนต์ Steam",
     "Economy_Market_HeaderTip_AccountTradeBanned": "บัญชีของคุณถูกแบนจากการแลกเปลี่ยน หากต้องการดูวันหมดอายุของการแบนการแลกเปลี่ยน โปรดคลิกที่แถบสีแดงที่แสดงในมุมขวาบนหลังจากเข้าสู่ระบบไปยังไคลเอนต์ Steam แล้ว",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "ข้อมูลเพิ่มเติม...",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "คุณต้องรอจนกว่า Steam Guard จะเปิดใช้งานบนบัญชีของคุณครบ 15 วัน ฝ่ายสนับสนุน Steam ไม่สามารถยกเลิกข้อจำกัดนี้ได้",
     "Economy_Market_TopLevelReason_NoSteamGuard": "บัญชีของคุณต้องได้รับการปกป้องโดย Steam Guard เป็นเวลาอย่างน้อย %1$s วัน",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "คุณต้องเปิดการใช้งาน Steam Guard ในบัญชีของคุณ โปรดตรวจสอบให้แน่ใจว่าอีเมลของคุณได้รับการยืนยันแล้ว และคุณได้เข้าสู่ระบบบัญชีของคุณ 2 ครั้งหลังจากเปิดการใช้งาน Steam Guard แล้ว",
-    "Economy_Market_HeaderTip_NoSteamGuard": "บัญชีของคุณต้องได้รับการปกป้องโดย Steam Guard เป็นเวลาอย่างน้อย %1$s วัน"
+    "Economy_Market_HeaderTip_NoSteamGuard": "บัญชีของคุณต้องได้รับการปกป้องโดย Steam Guard เป็นเวลาอย่างน้อย %1$s วัน",
+    "Economy_Market_HeaderTip_TimeCanUse": "หากไม่มีเหตุการณ์ใดเกิดขึ้นเพิ่มเติมที่จะจำกัดการเข้าถึงของคุณ คุณจะสามารถใช้งานตลาดชุมชนได้ในวันที่ %1$s",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Your account is on a temporary cooldown from trade and market features."
 }

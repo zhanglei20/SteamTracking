@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Solo Valve",
     "moderation_escalationlevel_supervisor_desc": "Se requiere un supervisor",
+    "moderation_escalation_escalationnote": "Nota sobre remisión del asunto:",
     "moderation_chatmetadata_deleted": "Los metadatos asociados a esta denuncia de chat se han eliminado por antigüedad. Solo se retienen durante unos 21 días.",
     "moderation_chatmetadata_futurelogcollection": "Este registro del chat podría ampliarse con los mensajes adicionales enviados después de la denuncia dentro de %1$s",
     "moderation_resolutionaction_removed": "Eliminar el contenido denunciado",

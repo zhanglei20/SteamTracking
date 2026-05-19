@@ -1849,6 +1849,10 @@
               ),
             "navigationapi" == this.m_Properties.historyMode &&
               __webpack_require__.Push(_(this)),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(
+              this.BIsActive(),
+              this,
+            ),
             __webpack_require__.GetUnregisterFunc()
           );
         }
@@ -4112,16 +4116,10 @@
         _: () => _,
         _: () => _,
       });
-      var _,
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Header = 1)] = "Header"),
-          (_[(_.Fallback = 2)] = "Fallback");
-      })(_ || (_ = {}));
-      const _ = (0, _.createContext)({});
       const _ = ["initial", "sm", "md", "lg"],
         _ = (0, _.createContext)({
           _: 768,
@@ -4144,7 +4142,7 @@
               _ = (0, _._)(`(min-width: ${_._}px)`),
               [_, _] = (0, _.useState)(!0);
             (0, _.useEffect)(() => _(!0), []);
-            const _ = (0, _.useContext)(_);
+            const _ = (0, _._)();
             if (!_)
               return _.viewportWidth
                 ? _.viewportWidth.value >= _._
@@ -10720,6 +10718,38 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.forwardRef(function (_, _) {
+        const { children: _, navTreeRef: _, ..._ } = _,
+          _ = _.useRef(void 0),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)("__nav_tree_root");
+        return (0, _.jsx)(_._, {
+          ..._,
+          navTreeRef: _,
+          ref: _,
+          parentEmbeddedNavTree: _,
+          disabledRoot: !_,
+          historyMode: "navigationapi",
+          children: (0, _.jsx)(_._, {
+            disableFocusRing: !_,
+            children: _,
+          }),
+        });
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -12470,6 +12500,7 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         var _;
@@ -12626,8 +12657,7 @@
           distance: _,
         };
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         constructor(_, _) {
           (this.m_bActive = !1),
@@ -14106,7 +14136,7 @@
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
             this.m_Tree.BIsActive() &&
-              (function (_, _) {
+              (function (_, _, _) {
                 var _, _, _, _;
                 const _ = _.Element;
                 if (!_) return;
@@ -14160,7 +14190,7 @@
                       _ == _.NoTransform ||
                       _ == _.NoTransformSparseContent ||
                       !_;
-                  if (_) {
+                  if (_ || _ === _._.GAMEPAD) {
                     const _ = _ ? _(_) : _.getBoundingClientRect();
                     let _ = !1;
                     const _ = Math.max(1.4 * (_.bottom - _.top), 40),
@@ -14193,7 +14223,7 @@
                             inline: "nearest",
                           });
                 }
-              })(this, _);
+              })(this, _, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -15995,7 +16025,32 @@
       }
       function _(_) {
         if (null === _) return null;
-        switch (_) {
+        switch (
+          (function (_) {
+            switch (_) {
+              case _._:
+              case _._:
+              case _._:
+                return _._;
+              case _._:
+                return _._;
+              case _._:
+                return _._;
+              case _._:
+                return _._;
+              case _._:
+                return _._;
+              case _._:
+                return _._;
+              case _._:
+                return _._;
+              case _._:
+                return _._;
+              default:
+                return _;
+            }
+          })(_)
+        ) {
           case _._:
             return 4664;
           case _._:
@@ -28249,7 +28304,7 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.selected_subject_type || _._(_._()),
+            _.prototype.subject || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static M() {
@@ -28258,11 +28313,6 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  selected_subject_type: {
-                    _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
                   subject: {
                     _: 2,
                     _: _,
@@ -29218,6 +29268,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  note: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -29348,6 +29403,11 @@
                     _: 8,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  new_subject_id: {
+                    _: 9,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -38691,6 +38751,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  crc_schema: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -38764,6 +38829,11 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  crc_schema: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -51555,6 +51625,24 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Header = 1)] = "Header"),
+          (_[(_.Fallback = 2)] = "Fallback");
+      })(_ || (_ = {}));
+      const _ = (0, _.createContext)({});
+      function _() {
+        return (0, _.useContext)(_);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -52397,6 +52485,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -52503,11 +52592,7 @@
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return _(_, _, "include_screenshots", "screenshots");
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
@@ -52546,6 +52631,9 @@
       }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
+      }
+      function _(_, _) {
+        return _(_, _, "include_screenshots", "screenshots");
       }
       function _(_, _) {
         return _(
@@ -90848,8 +90936,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _({ config: _, isDynamic: _ }) {
+      function _({ config: _, isDynamic: _, omitFocusNavTreeBridge: _ }) {
         const _ = _ ? _ : _;
         return (0, _.jsx)(_.Fragment, {
           children: Object.keys(_ || {}).map((_) =>
@@ -90858,6 +90947,7 @@
               {
                 featureName: _,
                 render: _[_],
+                omitFocusNavTreeBridge: !!_,
               },
               _,
             ),
@@ -90865,7 +90955,7 @@
         });
       }
       function _(_) {
-        const { featureName: _, render: _ } = _,
+        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
           _ = _.useMemo(
             () =>
               Array.from(
@@ -90882,6 +90972,7 @@
                     featureName: _,
                     elem: _,
                     render: _,
+                    omitFocusNavTreeBridge: _,
                   },
                   _,
                 ),
@@ -90890,7 +90981,7 @@
           : null;
       }
       function _(_) {
-        const { featureName: _, render: _ } = _,
+        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
           _ = (0, _._)(),
           _ = _.useRef([]),
           _ = _.useRef(0);
@@ -90939,6 +91030,7 @@
                   elem: _,
                   featureName: _,
                   render: _,
+                  omitFocusNavTreeBridge: _,
                 },
                 _,
               ),
@@ -90947,7 +91039,12 @@
         );
       }
       function _(_) {
-        const { featureName: _, elem: _, render: _ } = _,
+        const {
+            featureName: _,
+            elem: _,
+            render: _,
+            omitFocusNavTreeBridge: _,
+          } = _,
           _ = _.useMemo(
             () =>
               (function (_, _) {
@@ -90970,12 +91067,22 @@
               })(__webpack_require__.getAttribute("data-props"), _),
             [_, _],
           );
-        return (0, _.createPortal)(
-          (0, _.jsx)(_._, {
-            children: _(_),
-          }),
-          _,
-        );
+        return _
+          ? (0, _.createPortal)(
+              (0, _.jsx)(_._, {
+                children: _(_),
+              }),
+              _,
+            )
+          : (0, _.createPortal)(
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  navID: `FeatureTarget_${_}`,
+                  children: _(_),
+                }),
+              }),
+              _,
+            );
       }
       function _(_, _) {
         return _.matches(_) ? [_] : _.querySelectorAll(_);

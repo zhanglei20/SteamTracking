@@ -12,6 +12,8 @@
         BottomButtons: "_1WHIJmT4YG0U0TGfx-u93k",
         OwnerDisputeCtn: "_2QWA5XBjtoSIM-_eLNiw2a",
         EditButton: "_1oiwHOMI9o4tYFhxPeBzdb",
+        ValveOnly: "_1yQPp5pd2qUm4v9YW77mFO",
+        SupervisorOnly: "_19k-dyaHYt8ca02K-yjSvc",
       };
     },
     chunkid: (module) => {
@@ -41,6 +43,7 @@
         EscalateSubjectDialogCtn: "_2JObmr3sTdkGUMl1qy7pFq",
         BottomButtons: "_3ismg57mYPglYuxYD8MyWH",
         EscalationLevelSelect: "eM6-NVA-Wty4aAN1I5edn",
+        ReasonTextArea: "_2Y0347paZ_xn2vI7jgBpkJ",
       };
     },
     chunkid: (module) => {
@@ -99,7 +102,8 @@
       function _(_) {
         const { subject: _, onClose: _ } = _,
           [_, _] = (0, _.useState)(_._),
-          _ = (0, _._)(_.subject_type, _.subject_group_id, _.subject_id);
+          _ = (0, _._)(_.subject_type, _.subject_group_id, _.subject_id),
+          _ = (0, _.useRef)(null);
         return (0, _.jsxs)(_._, {
           className: _().EscalateSubjectDialogCtn,
           children: [
@@ -127,13 +131,26 @@
                 }),
               ],
             }),
+            (0, _.jsx)("label", {
+              children: _._.Localize("#moderation_escalation_escalationnote"),
+            }),
+            (0, _.jsx)(_._, {
+              className: _().ReasonTextArea,
+              ref: _,
+            }),
             (0, _.jsxs)(_._, {
               className: _().BottomButtons,
               children: [
                 (0, _.jsx)(_._, {
                   onClick: async () => {
+                    var _;
+                    const _ =
+                      null === (_ = _.current) || void 0 === _
+                        ? void 0
+                        : _.value;
                     await _.mutateAsync({
                       eNewLevel: _,
+                      strNote: _,
                     }),
                       __webpack_require__();
                   },
@@ -1857,6 +1874,28 @@
                     ],
                   }),
                 _._.Localize("#commentsanctiondialog_moderate"),
+                _ &&
+                  _.required_moderator_level === _._ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      " ",
+                      (0, _.jsx)("span", {
+                        className: _.ValveOnly,
+                        children: "(VO)",
+                      }),
+                    ],
+                  }),
+                _ &&
+                  _.required_moderator_level === _._ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      " ",
+                      (0, _.jsx)("span", {
+                        className: _.SupervisorOnly,
+                        children: "(Supervisor)",
+                      }),
+                    ],
+                  }),
               ],
             }),
           });
@@ -2014,13 +2053,13 @@
                                 subject: _,
                                 onClose: _.onClose,
                               }),
-                              _.subject &&
-                                (0, _.jsx)(_._, {
-                                  onClick: () => _("escalate"),
-                                  children: _._.Localize(
-                                    "#moderation_escalation_escalate",
-                                  ),
-                                }),
+                              (0, _.jsx)(_._, {
+                                disabled: !_.subject,
+                                onClick: () => _("escalate"),
+                                children: _._.Localize(
+                                  "#moderation_escalation_escalate",
+                                ),
+                              }),
                               (0, _.jsx)("button", {
                                 onClick: () => _("sanction"),
                                 children: "Sanction",
@@ -2068,6 +2107,9 @@
                             strNote: _,
                           }),
                             _.onClose(),
+                            1 === window.location.href.split("#").length &&
+                              "0" !== _.subjectId &&
+                              (window.location.href += "#c" + _.subjectId),
                             window.location.reload();
                         },
                         onCancel: () => _("main"),

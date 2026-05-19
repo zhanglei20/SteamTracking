@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Lọc theo trò chơi...",
     "AdvancedSearch_BetaTag": "Tính năng beta - Gửi phản hồi",
     "AdvancedSearch_TextSearch_Tooltip": "Tìm theo tên vật phẩm trên chợ...",
-    "AdvancedSearch_Beta_OptOut": "Chuyển qua bộ lọc cũ",
     "AdvancedSearch_CSContainers_Tooltip": "Hòm vũ khí, gói hình dán, gói lưu niệm, v.v.",
     "Header_MarketTitle": "Chợ cộng đồng Steam",
     "Header_MarketDescription": "Mua và bán vật phẩm với thành viên cộng đồng bằng quỹ ví Steam",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Tài khoản của bạn hiện bị khóa. Có thể tìm thông tin về lệnh khóa này bằng cách nhấp vào thanh màu đỏ ở phía trên góc bên phải khi đăng nhập vào phần mềm Steam.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "Để gỡ bỏ hạn chế này...",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "Tài khoản của bạn hiện bị cấm trao đổi.",
+    "Economy_Market_TopLevelReason_Unknown": "Tài khoản này hiện không thể dùng chợ cộng đồng Steam.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Lệnh cấm trao đổi có thể kéo dài từ tạm thời đến vĩnh viễn. Để xem khi nào lệnh cấm hết hạn, vui lòng nhấp vào thanh màu đỏ ở phía trên góc bên phải khi đăng nhập vào phần mềm Steam.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Tài khoản của bạn đã bị cấm trao đổi. Để xem khi nào lệnh cấm hết hạn, vui lòng nhấp vào thanh màu đỏ ở phía trên góc bên phải khi đăng nhập vào phần mềm Steam.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Thông tin thêm...",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Bạn phải đợi đến khi Steam Guard đã được kích hoạt trên tài khoản đủ 15 ngày. Đội hỗ trợ Steam không thể gỡ bỏ hạn chế này.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Tài khoản của bạn phải được bảo vệ bởi Steam Guard trong ít nhất %1$s ngày.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Bạn phải kích hoạt Steam Guard trên tài khoản. Hãy đảm bảo email của bạn đã được xác minh và bạn đã đăng nhập tài khoản của mình hai lần sau khi kích hoạt Steam Guard.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Tài khoản của bạn phải được bảo vệ bởi Steam Guard trong ít nhất %1$s ngày."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Tài khoản của bạn phải được bảo vệ bởi Steam Guard trong ít nhất %1$s ngày.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Nếu không xảy ra việc gì gây giới hạn truy cập của bạn, bạn sẽ có thể dùng chợ cộng đồng vào %1$s",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Tài khoản của bạn tạm thời không được trao đổi và dùng tính năng chợ."
 }

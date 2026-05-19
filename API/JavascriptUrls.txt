@@ -1,5 +1,6 @@
 ${AUDIO_URL}international2020/${}.wav
 ${AUDIO_URL}international2022/${}.wav
+${BASE_URL_SHARED_CDN}/store_item_assets/${filename}
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
 ${BASE_URL_SHARED_CDN}community_assets/
@@ -1167,6 +1168,7 @@ ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?appidlist=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?bundleid=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${partnerid}
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?rt_feature_start=${}&rt_feature_end=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?saleclaneventgid=${}&saleclanaccountid=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}&count=${}${}
@@ -1521,7 +1523,6 @@ ${STORE_BASE_URL}parental/requestrecovery
 ${STORE_BASE_URL}personalcalendar
 ${STORE_BASE_URL}personalcalendar/
 ${STORE_BASE_URL}personalcalendardata
-${STORE_BASE_URL}personalcalendarold/getrecommendations
 ${STORE_BASE_URL}phone/add
 ${STORE_BASE_URL}phone/manage
 ${STORE_BASE_URL}points/
@@ -1670,6 +1671,7 @@ ${STORE_ICON_BASE_URL}${}/
 ${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ITEM_BASE_URL}${filename}
 ${STORE_ITEM_BASE_URL}${}
+${STORE_ITEM_BASE_URL}steam/apps/${}/header.jpg
 ${STORE_ITEM_BASE_URL}steam/apps/${}/portrait.png
 ${STORE_ITEM_BASE_URL}steam/clusters/${}/${}/${}${}
 ${STORE_ITEM_BASE_URL}steam/spotlights/${}/${}${}
@@ -2717,7 +2719,6 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
-https://steamcommunity.com/groups/SteamLabs/discussions/19/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke

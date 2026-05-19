@@ -2149,7 +2149,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2161,9 +2160,7 @@
           [_] = (0, _._)(_, {
             include_assets: !0,
           }),
-          _ = _.useRef(void 0);
-        _.useEffect(() => _.current?.Activate(!0), []);
-        const _ = (0, _._)(),
+          _ = (0, _._)(),
           { eStoreDiscoveryQueueType: _, storePageFilter: _ } =
             _.useMemo(() => {
               if (_?.length > 0) {
@@ -2194,36 +2191,30 @@
         return _ && _
           ? _
             ? null
-            : (0, _.jsx)(_._, {
-                navTreeRef: _,
-                navID: "DiscoveryQueueAppWidget",
-                children: (0, _.jsxs)(_._, {
-                  focusable: !0,
-                  className: _().DiscoveryQueueWidgetCtn,
-                  onSecondaryButton: _,
-                  onOKButton: _,
-                  onOKActionDescription: (0, _._)(
-                    "#DiscoveryQueue_ResumeWizard",
-                  ),
-                  onSecondaryActionDescription: (0, _._)("#Button_Close"),
-                  children: [
-                    (0, _.jsxs)("div", {
+            : (0, _.jsxs)(_._, {
+                focusable: !0,
+                className: _().DiscoveryQueueWidgetCtn,
+                onSecondaryButton: _,
+                onOKButton: _,
+                onOKActionDescription: (0, _._)("#DiscoveryQueue_ResumeWizard"),
+                onSecondaryActionDescription: (0, _._)("#Button_Close"),
+                children: [
+                  (0, _.jsxs)("div", {
+                    onClick: _,
+                    className: _().WidgetText,
+                    children: [
+                      (0, _.jsx)(_.mcU, {}),
+                      (0, _._)("#DiscoveryQueue_ResumeWizard"),
+                      _?.length > 0 && ": " + _,
+                    ],
+                  }),
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _().CloseButton,
                       onClick: _,
-                      className: _().WidgetText,
-                      children: [
-                        (0, _.jsx)(_.mcU, {}),
-                        (0, _._)("#DiscoveryQueue_ResumeWizard"),
-                        _?.length > 0 && ": " + _,
-                      ],
+                      children: (0, _.jsx)(_._, {}),
                     }),
-                    !_ &&
-                      (0, _.jsx)("div", {
-                        className: _().CloseButton,
-                        onClick: _,
-                        children: (0, _.jsx)(_._, {}),
-                      }),
-                  ],
-                }),
+                ],
               })
           : null;
       }
@@ -2237,17 +2228,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return (0, _.jsx)(_._, {
           placeholderHeight: "200px",
           rootMargin: "0px 0px 100% 0px",
           children: (0, _.jsx)(_._, {
-            navID: "DiscoveryQueueWidget",
-            children: (0, _.jsx)(_._, {
-              eStoreDiscoveryQueueType: _._._,
-            }),
+            eStoreDiscoveryQueueType: _._._,
           }),
         });
       }
