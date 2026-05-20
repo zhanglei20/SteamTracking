@@ -1765,6 +1765,10 @@
               r.Push(this.m_ParentNavTree.AddChildNavTree(this)),
             "navigationapi" == this.m_Properties.historyMode &&
               r.Push(ye(this)),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(
+              this.BIsActive(),
+              this,
+            ),
             r.GetUnregisterFunc()
           );
         }
@@ -2963,7 +2967,7 @@
             r.e(9118),
             r.e(5263),
             r.e(8138),
-          ]).then(r.bind(r, 70162)),
+          ]).then(r.bind(r, 10801)),
         ),
         mt = i.lazy(() =>
           Promise.all([
@@ -3753,7 +3757,7 @@
       "use strict";
       r.d(t, { N: () => s });
       var i = r(7850),
-        n = r(96678);
+        n = r(10430);
       function s(e) {
         const {
             accentColor: t,
@@ -3792,44 +3796,38 @@
         for (const [i, n] of Object.entries(r)) e[`--color-${t}-${i}`] = n;
       }
     },
-    96678: (e, t, r) => {
+    10430: (e, t, r) => {
       "use strict";
       r.d(t, {
-        cW: () => u,
-        cr: () => d,
-        IE: () => l,
-        xC: () => m,
-        LT: () => p,
+        IE: () => o,
+        LT: () => g,
+        cW: () => c,
+        cr: () => u,
+        xC: () => d,
       });
-      var i,
-        n = r(7850),
-        s = r(45237),
+      var i = r(7850),
+        n = r(45237),
+        s = r(9646),
         a = r(90626);
-      !(function (e) {
-        (e[(e.None = 0)] = "None"),
-          (e[(e.Header = 1)] = "Header"),
-          (e[(e.Fallback = 2)] = "Fallback");
-      })(i || (i = {}));
-      const o = (0, a.createContext)({});
-      const l = ["initial", "sm", "md", "lg"],
-        c = (0, a.createContext)({ sm: 768, md: 940, lg: 1240, ff: "lg" });
-      function u(e) {
-        var t, r, i;
-        const { children: l, breakpoints: u = {} } = e,
-          d = (0, a.useContext)(c),
+      const o = ["initial", "sm", "md", "lg"],
+        l = (0, a.createContext)({ sm: 768, md: 940, lg: 1240, ff: "lg" });
+      function c(e) {
+        var t, r, o;
+        const { children: c, breakpoints: u = {} } = e,
+          d = (0, a.useContext)(l),
           m = {
             sm: null !== (t = u.sm) && void 0 !== t ? t : d.sm,
             md: null !== (r = u.md) && void 0 !== r ? r : d.md,
-            lg: null !== (i = u.lg) && void 0 !== i ? i : d.lg,
+            lg: null !== (o = u.lg) && void 0 !== o ? o : d.lg,
           },
           g = (function (e) {
-            const t = (0, s.$)(`(min-width: ${e.sm}px)`),
-              r = (0, s.$)(`(min-width: ${e.md}px)`),
-              i = (0, s.$)(`(min-width: ${e.lg}px)`),
-              [n, l] = (0, a.useState)(!0);
+            const t = (0, n.$)(`(min-width: ${e.sm}px)`),
+              r = (0, n.$)(`(min-width: ${e.md}px)`),
+              i = (0, n.$)(`(min-width: ${e.lg}px)`),
+              [o, l] = (0, a.useState)(!0);
             (0, a.useEffect)(() => l(!0), []);
-            const c = (0, a.useContext)(o);
-            if (!n)
+            const c = (0, s.d)();
+            if (!o)
               return c.viewportWidth
                 ? c.viewportWidth.value >= e.lg
                   ? "lg"
@@ -3846,27 +3844,27 @@
             () => ({ ff: g, sm: p, md: h, lg: _ }),
             [g, p, h, _],
           );
-        return (0, n.jsx)(c.Provider, { value: B, children: l });
+        return (0, i.jsx)(l.Provider, { value: B, children: c });
       }
-      function d(e) {
+      function u(e) {
         const { formFactor: t, children: r } = e,
-          i = (0, a.useContext)(c),
+          n = (0, a.useContext)(l),
           s = (0, a.useMemo)(
-            () => ({ ...i, ff: null != t ? t : i.ff }),
-            [i, t],
+            () => ({ ...n, ff: null != t ? t : n.ff }),
+            [n, t],
           );
         return t
-          ? (0, n.jsx)(c.Provider, { value: s, children: r })
-          : (0, n.jsx)(n.Fragment, { children: r });
+          ? (0, i.jsx)(l.Provider, { value: s, children: r })
+          : (0, i.jsx)(i.Fragment, { children: r });
       }
-      function m() {
-        return (0, a.useContext)(c).ff;
+      function d() {
+        return (0, a.useContext)(l).ff;
       }
-      const g = l.reduce((e, t, r) => ((e[t] = r), e), {});
-      function p(e) {
+      const m = o.reduce((e, t, r) => ((e[t] = r), e), {});
+      function g(e) {
         return (function (e, t) {
-          return g[e] >= g[t];
-        })(m(), e);
+          return m[e] >= m[t];
+        })(d(), e);
       }
     },
     55156: (e, t, r) => {
@@ -3875,7 +3873,7 @@
       var i = r(7850),
         n = r(90626),
         s = r(13857),
-        a = r(96678);
+        a = r(10430);
       const o = (0, n.createContext)({}),
         l = (0, n.createContext)(() => {});
       function c(e) {
@@ -9805,6 +9803,33 @@
         }, [t, r, e]);
       }
     },
+    12447: (e, t, r) => {
+      "use strict";
+      r.d(t, { u: () => u });
+      var i = r(7850),
+        n = r(8871),
+        s = r(90626),
+        a = r(78327),
+        o = r(85585),
+        l = r(7445),
+        c = r(87133);
+      const u = s.forwardRef(function (e, t) {
+        const { children: r, navTreeRef: u, ...d } = e,
+          m = s.useRef(void 0),
+          g = (0, n.Ue)(m, u),
+          p = (0, a.Qn)(),
+          h = (0, c.AO)("__nav_tree_root");
+        return (0, i.jsx)(o.B2, {
+          ...d,
+          navTreeRef: g,
+          ref: t,
+          parentEmbeddedNavTree: h,
+          disabledRoot: !p,
+          historyMode: "navigationapi",
+          children: (0, i.jsx)(l.q, { disableFocusRing: !p, children: r }),
+        });
+      });
+    },
     65233: (e, t, r) => {
       "use strict";
       r.d(t, { QI: () => c, VQ: () => o, Vu: () => l });
@@ -11405,17 +11430,18 @@
         Yo: () => A,
       });
       var i = r(34629),
-        n = r(88006),
-        s = r(69817),
-        a = r(91986),
-        o = r(81393),
-        l = r(6419),
+        n = r(91986),
+        s = r(81393),
+        a = r(6419),
+        o = r(94104),
+        l = r(69817),
         c = r(6144),
         u = r(60778);
       var d = r(45730),
-        m = r(87133),
-        g = r(56011);
-      function p(e, t, r) {
+        m = r(88006),
+        g = r(87133),
+        p = r(56011);
+      function h(e, t, r) {
         var i;
         const n = [],
           [s, a] = e.GetChildren(),
@@ -11427,11 +11453,11 @@
             : i.getBoundingClientRect()
           : null;
         if (o) {
-          const e = B(o, t, r);
+          const e = b(o, t, r);
           if (
             e &&
             !e.offScreen &&
-            ((l = h(o, e, e.overlap, r)), l && !l.visibility.offScreen)
+            ((l = _(o, e, e.overlap, r)), l && !l.visibility.offScreen)
           )
             return l;
           e && n.push({ child: o, visibility: e });
@@ -11440,11 +11466,11 @@
         for (let e = 0; e < s.length; e++) {
           const r = s[e];
           if (r == o) continue;
-          const i = B(r, t, null != u ? u : void 0);
+          const i = b(r, t, null != u ? u : void 0);
           i && n.push({ child: r, visibility: i });
         }
         let d;
-        n.sort(_);
+        n.sort(B);
         for (const e of n) {
           const { child: r, visibility: i } = e;
           if (i.offScreen && d) {
@@ -11452,22 +11478,22 @@
             if (i.distance && i.distance > d.visibility.distance) break;
           }
           const n =
-            r == o ? l : h(r, i, i.overlap || t, null != u ? u : void 0);
-          n && (!d || _(n, d) < 0) && (d = n);
+            r == o ? l : _(r, i, i.overlap || t, null != u ? u : void 0);
+          n && (!d || B(n, d) < 0) && (d = n);
         }
         return d;
       }
-      function h(e, t, r, i) {
+      function _(e, t, r, i) {
         switch (e.GetFocusable()) {
           case "none":
             return;
           case "children":
-            return p(e, t.overlap || r, i);
+            return h(e, t.overlap || r, i);
           case "self":
             return { child: e, visibility: t };
         }
       }
-      function _(e, t) {
+      function B(e, t) {
         const r = e.visibility,
           i = t.visibility;
         return r.offScreen
@@ -11478,7 +11504,7 @@
             ? -1
             : r.distance - i.distance;
       }
-      function B(e, t, r) {
+      function b(e, t, r) {
         var i;
         const n =
             null === (i = e.Element) || void 0 === i
@@ -11503,7 +11529,7 @@
               return { offScreen: "bottom", distance: e - t.bottom };
             if (r < t.left) return { offScreen: "left", distance: t.left - r };
           }
-          r && (a = (0, g.bZ)(n, r));
+          r && (a = (0, p.bZ)(n, r));
         } else if ("children" == s) {
           const r = e.Element;
           if (!r) return null;
@@ -11531,8 +11557,7 @@
           distance: a,
         };
       }
-      var b = r(25489),
-        f = r(94104);
+      var f = r(25489);
       class w {
         constructor(e, t) {
           (this.m_bActive = !1),
@@ -11609,7 +11634,7 @@
       }
       class y extends w {
         constructor(e, t, r) {
-          super("ownerDocument" in e ? f.qf(e) : e, r),
+          super("ownerDocument" in e ? o.qf(e) : e, r),
             (this.m_props = {}),
             (this.m_object = e),
             (this.m_propTargets = t);
@@ -11740,75 +11765,75 @@
           S("Scrolling Into View:", t);
         let s = [],
           a = t,
-          o = z(t),
-          l = null != n ? n : Number.MAX_VALUE;
+          l = z(t),
+          c = null != n ? n : Number.MAX_VALUE;
         for (; a; ) {
-          let e = (0, f._f)(a);
-          e || (e = (0, f.qf)(a));
+          let e = (0, o._f)(a);
+          e || (e = (0, o.qf)(a));
           let t = T(a),
             r = x(e, z(e)),
-            c = U(e),
-            u = { element: e, left: 0, top: 0 };
+            u = U(e),
+            d = { element: e, left: 0, top: 0 };
           if (
             (S(
               "Checking scroll div",
               e,
-              `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${c.scrollLeft} of ${c.MaxScrollLeft()}, adjusted =>`,
+              `scroll y:${u.scrollTop} of ${u.MaxScrollTop()}, x:${u.scrollLeft} of ${u.MaxScrollLeft()}, adjusted =>`,
               r,
               "target => ",
-              o,
+              l,
             ),
             (i && "y" != i) ||
-              !(0, f.aF)(e, "y") ||
-              ((u.top = j(o, r, t, "y")),
-              (u.top = b.OQ(
-                u.top,
-                -c.scrollTop,
-                c.MaxScrollTop() - c.scrollTop,
+              !(0, o.aF)(e, "y") ||
+              ((d.top = j(l, r, t, "y")),
+              (d.top = f.OQ(
+                d.top,
+                -u.scrollTop,
+                u.MaxScrollTop() - u.scrollTop,
               )),
               n &&
-                ((u.top = Math.min(l, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
-                (l -= Math.abs(u.top))),
-              S(`- checked y: ${u.top}`)),
+                ((d.top = Math.min(c, Math.abs(d.top)) * (d.top < 0 ? -1 : 1)),
+                (c -= Math.abs(d.top))),
+              S(`- checked y: ${d.top}`)),
             (i && "x" != i) ||
-              !(0, f.aF)(e, "x") ||
-              ((u.left = j(o, r, t, "x")),
-              (u.left = b.OQ(
-                u.left,
-                -c.scrollLeft,
-                c.MaxScrollLeft() - c.scrollLeft,
+              !(0, o.aF)(e, "x") ||
+              ((d.left = j(l, r, t, "x")),
+              (d.left = f.OQ(
+                d.left,
+                -u.scrollLeft,
+                u.MaxScrollLeft() - u.scrollLeft,
               )),
               n &&
-                ((u.left =
-                  Math.min(l, Math.abs(u.left)) * (u.left < 0 ? -1 : 1)),
-                (l -= Math.abs(u.left))),
-              S(`- checked x: ${u.left}`)),
-            s.push(u),
-            n && !l)
+                ((d.left =
+                  Math.min(c, Math.abs(d.left)) * (d.left < 0 ? -1 : 1)),
+                (c -= Math.abs(d.left))),
+              S(`- checked x: ${d.left}`)),
+            s.push(d),
+            n && !c)
           )
             break;
           if (!("ownerDocument" in e)) break;
-          const d = window.getComputedStyle(e);
-          if ("fixed" === d.position || "sticky" === d.position) break;
+          const m = window.getComputedStyle(e);
+          if ("fixed" === m.position || "sticky" === m.position) break;
           (a = e),
-            (o = {
-              top: o.top - u.top,
-              right: o.right - u.left,
-              bottom: o.bottom - u.top,
-              left: o.left - u.left,
+            (l = {
+              top: l.top - d.top,
+              right: l.right - d.left,
+              bottom: l.bottom - d.top,
+              left: l.left - d.left,
             });
         }
-        let c = !1;
+        let u = !1;
         for (let e of s) {
           if (F(e.left) && F(e.top)) continue;
           let t = U(e.element),
             i = t.scrollTop + e.top,
             n = t.scrollLeft + e.left;
-          (n = b.OQ(n, 0, t.MaxScrollLeft())),
-            (i = b.OQ(i, 0, t.MaxScrollTop())),
+          (n = f.OQ(n, 0, t.MaxScrollLeft())),
+            (i = f.OQ(i, 0, t.MaxScrollTop())),
             (F(t.scrollLeft - n) && F(t.scrollTop - i)) ||
               (t.scrollTo({ left: n, top: i, behavior: r }),
-              c || (S("Scrolling:"), (c = !0)),
+              u || (S("Scrolling:"), (u = !0)),
               S(
                 `- ${e.top},${e.left} => ${i}, ${n}, behavior: ${r}`,
                 e.element,
@@ -11935,7 +11960,7 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, i.Cg)([l.o], W.prototype, "ResetScrollState", null);
+      (0, i.Cg)([a.o], W.prototype, "ResetScrollState", null);
       const q = new WeakMap();
       function U(e) {
         let t = q.get(e);
@@ -11985,7 +12010,7 @@
             (this.m_bMounted = !1),
             (this.m_Focused = (0, c.Jc)(!1)),
             (this.m_FocusWithin = (0, c.Jc)(!1)),
-            (this.m_ActionDescriptionsChangedCallbackList = new a.l()),
+            (this.m_ActionDescriptionsChangedCallbackList = new n.l()),
             (this.m_FocusableIfEmptyAncestor = null),
             (this.m_rgNavigationHandlers = []),
             (this.m_rgFocusHandlers = []),
@@ -11995,7 +12020,7 @@
             (this.m_nDepth = t ? t.m_nDepth + 1 : 0);
         }
         CreateHandle() {
-          return new m.kI(this);
+          return new g.kI(this);
         }
         get Tree() {
           return this.m_Tree;
@@ -12160,7 +12185,7 @@
                 e.SetFocusableIfEmptyAncestor(this.m_FocusableIfEmptyAncestor),
             this.m_bMounted &&
               e.BFocusWithin() &&
-              ((0, o.wT)(
+              ((0, s.wT)(
                 !this.m_ActiveChild && this.BFocusWithin(),
                 "Invalid focus state in AddChild",
               ),
@@ -12171,7 +12196,7 @@
           (this.m_element = e),
             this.m_Parent
               ? this.m_Parent.AddChild(this)
-              : (0, o.wT)(
+              : (0, s.wT)(
                   this == this.m_Tree.Root,
                   "Only root should have no parent",
                 ),
@@ -12208,7 +12233,7 @@
             const e = this.m_rgChildren.findIndex((e) => e.BFocusWithin());
             -1 != e &&
               (this.SetActiveChild(e),
-              (0, o.wT)(
+              (0, s.wT)(
                 this.BFocusWithin(),
                 "Child has focus, we should be m_bFocusWithin",
               ));
@@ -12237,7 +12262,7 @@
             this.UnregisterDOMEvents(),
             this.m_Parent
               ? this.m_Parent.RemoveChild(this)
-              : (0, o.wT)(
+              : (0, s.wT)(
                   this == this.m_Tree.Root,
                   "Only root should have no parent",
                 );
@@ -12283,7 +12308,7 @@
         }
         RemoveChild(e) {
           let t = this.m_rgChildren.indexOf(e);
-          (0, o.wT)(-1 !== t, "Child was not found to remove"),
+          (0, s.wT)(-1 !== t, "Child was not found to remove"),
             -1 !== t &&
               (this.m_ActiveChild == e && (this.m_ActiveChild = void 0),
               this.m_rgChildren.splice(t, 1));
@@ -12416,7 +12441,7 @@
           const t = this.FindNextFocusableChildInDirection(
             -1,
             E.FORWARD,
-            n.pR.INVALID,
+            m.pR.INVALID,
           );
           return this.InternalFocusDescendant(t, e);
         }
@@ -12424,28 +12449,28 @@
           const t = this.FindNextFocusableChildInDirection(
             this.m_rgChildren.length,
             E.BACKWARD,
-            n.pR.INVALID,
+            m.pR.INVALID,
           );
           return this.InternalFocusDescendant(t, e);
         }
         FindFocusableDescendant(e, t) {
           var r, i;
-          const n = (0, m.G4)(e),
-            { focusableIfEmpty: a, childFocusDisabled: o } =
+          const n = (0, g.G4)(e),
+            { focusableIfEmpty: s, childFocusDisabled: a } =
               null !== (r = this.m_Properties) && void 0 !== r ? r : {};
-          if (o) return null;
+          if (a) return null;
           if (this.m_rgChildren.length) {
             this.EnsureChildrenSorted();
-            const { navEntryPreferPosition: r, resetNavOnEntry: o } =
+            const { navEntryPreferPosition: r, resetNavOnEntry: a } =
               null !== (i = this.m_Properties) && void 0 !== i ? i : {};
-            let l = this.GetActiveChildIndex();
-            o && void 0 !== e && (l = -1);
+            let o = this.GetActiveChildIndex();
+            a && void 0 !== e && (o = -1);
             const c = this.GetLayout();
             let u, d;
             if (
-              (this.IsValidChildIndex(l) ||
-                (l =
-                  l >= this.m_rgChildren.length ||
+              (this.IsValidChildIndex(o) ||
+                (o =
+                  o >= this.m_rgChildren.length ||
                   c == L.ROW_REVERSE ||
                   c == L.COLUMN_REVERSE ||
                   r == N.LAST
@@ -12455,11 +12480,11 @@
                 ? (d = "x")
                 : r == N.MAINTAIN_Y
                   ? (d = "y")
-                  : c == L.GEOMETRIC && n && (d = s.xr[n]),
+                  : c == L.GEOMETRIC && n && (d = l.xr[n]),
               (d || t) && n)
             ) {
               const i = this.m_Tree.GetLastFocusedNode();
-              if (t || (i && d == s.xr[n])) {
+              if (t || (i && d == l.xr[n])) {
                 const s =
                   t ||
                   this.AdjustRectForLastMovementOnTangentAxis(
@@ -12471,7 +12496,7 @@
                   s,
                 ),
                   (u = this.FindClosestFocusableNodeToRect(e, s));
-              } else if (d != s.xr[n]) {
+              } else if (d != l.xr[n]) {
                 const t = this.ComputeRelativeDirection(e, L.GRID),
                   r = t == E.BACKWARD ? this.m_rgChildren.length : -1;
                 u = this.FindNextFocusableChildInDirection(r, t, e);
@@ -12495,20 +12520,20 @@
             } else
               r == N.LAST &&
                 (u = this.FindNextFocusableChildInDirection(
-                  l + 1,
+                  o + 1,
                   E.BACKWARD,
                   e,
                 ));
             return (
               u ||
                 (u = this.FindNextFocusableChildInDirection(
-                  l - 1,
+                  o - 1,
                   E.FORWARD,
                   e,
                 )),
               u ||
-                (u = this.FindNextFocusableChildInDirection(l, E.BACKWARD, e)),
-              u || (a ? this : null)
+                (u = this.FindNextFocusableChildInDirection(o, E.BACKWARD, e)),
+              u || (s ? this : null)
             );
           }
           return null;
@@ -12527,7 +12552,7 @@
                     : r.defaultView) && void 0 !== i
                 ? i
                 : window,
-            o = p(this, {
+            o = h(this, {
               top: 0,
               left: 0,
               right: a.innerWidth,
@@ -12547,7 +12572,7 @@
           )
             return this.m_Properties.layout;
           if (this.m_rgChildren.length < 2) return L.NONE;
-          return (0, m.ko)(this.m_element);
+          return (0, g.ko)(this.m_element);
         }
         OnNavigationEvent(e) {
           var t, r;
@@ -12560,41 +12585,41 @@
           )
             return !0;
           const {
-            onMoveUp: s,
-            onMoveRight: a,
-            onMoveDown: o,
-            onMoveLeft: l,
+            onMoveUp: n,
+            onMoveRight: s,
+            onMoveDown: a,
+            onMoveLeft: o,
           } = null !== (r = this.m_Properties) && void 0 !== r ? r : {};
-          let c = !1;
+          let l = !1;
           switch (i) {
-            case n.pR.DIR_UP:
-              s && (c = s(e.detail, this));
+            case m.pR.DIR_UP:
+              n && (l = n(e.detail, this));
               break;
-            case n.pR.DIR_RIGHT:
-              a && (c = a(e.detail, this));
+            case m.pR.DIR_RIGHT:
+              s && (l = s(e.detail, this));
               break;
-            case n.pR.DIR_DOWN:
-              o && (c = o(e.detail, this));
+            case m.pR.DIR_DOWN:
+              a && (l = a(e.detail, this));
               break;
-            case n.pR.DIR_LEFT:
-              l && (c = l(e.detail, this));
+            case m.pR.DIR_LEFT:
+              o && (l = o(e.detail, this));
           }
-          return c;
+          return l;
         }
         InternalFocusDescendant(e, t, r) {
-          return !!e && (this.m_Tree.TransferFocus(t, e, (0, m.G4)(r)), !0);
+          return !!e && (this.m_Tree.TransferFocus(t, e, (0, g.G4)(r)), !0);
         }
         BTryInternalNavigation(e, t) {
           var r, i;
-          const s = this.GetLayout();
-          let a,
-            o = this.ComputeRelativeDirection(e, s);
+          const n = this.GetLayout();
+          let s,
+            a = this.ComputeRelativeDirection(e, n);
           if (
             (P(
-              `Handling navigation event ${n.pR[e]} - ${L[s]} - ${E[o]}`,
+              `Handling navigation event ${m.pR[e]} - ${L[n]} - ${E[a]}`,
               this.m_element,
             ),
-            o == E.INVALID)
+            a == E.INVALID)
           )
             return !1;
           if (
@@ -12604,54 +12629,54 @@
             this.BHasFocus()
           )
             return P("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), s == L.GRID))
-            a = this.FindNextFocusableChildInGrid(
+          if ((this.EnsureChildrenSorted(!0), n == L.GRID))
+            s = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
-              o,
+              a,
               e,
             );
-          else if (s == L.GEOMETRIC)
-            a = this.FindNextFocusableChildGeometric(o, e);
+          else if (n == L.GEOMETRIC)
+            s = this.FindNextFocusableChildGeometric(a, e);
           else {
             let t = this.GetActiveChildIndex();
             this.IsValidChildIndex(t) ||
-              (t = o == E.FORWARD ? -1 : this.m_rgChildren.length),
-              (a = this.FindNextFocusableChildInDirection(t, o, e));
+              (t = a == E.FORWARD ? -1 : this.m_rgChildren.length),
+              (s = this.FindNextFocusableChildInDirection(t, a, e));
           }
-          if (a) {
-            const r = (0, m.G4)(e);
+          if (s) {
+            const r = (0, g.G4)(e);
             if (this.GetScrollIntoViewType() == A.NoTransformSparseContent) {
               const e =
-                null === (i = a.Element) || void 0 === i
+                null === (i = s.Element) || void 0 === i
                   ? void 0
                   : i.ownerDocument.defaultView;
               if (e) {
                 const i =
                     ("y" == r ? e.innerHeight : e.innerWidth) /
                     (t ? 4.5 : 3.33),
-                  n = z(a.Element);
-                let s = !1;
+                  n = z(s.Element);
+                let o = !1;
                 if (
                   ("y" == r
-                    ? o == E.FORWARD
-                      ? (s =
+                    ? a == E.FORWARD
+                      ? (o =
                           n.top > e.innerHeight && n.bottom > e.innerHeight + i)
-                      : o == E.BACKWARD && (s = n.bottom < 0 && n.top < -i)
+                      : a == E.BACKWARD && (o = n.bottom < 0 && n.top < -i)
                     : "x" == r &&
-                      (o == E.FORWARD
-                        ? (s =
+                      (a == E.FORWARD
+                        ? (o =
                             n.left > e.innerWidth && n.right > e.innerWidth + i)
-                        : o == E.BACKWARD && (s = n.right < 0 && n.left < -i)),
-                  s)
+                        : a == E.BACKWARD && (o = n.right < 0 && n.left < -i)),
+                  o)
                 )
                   return (
                     P(`Element too far away, scrolling ${i} on ${r} axis `),
-                    O(a.Element, a.Element, "smooth", r, i),
+                    O(s.Element, s.Element, "smooth", r, i),
                     !0
                   );
               }
             }
-            return this.m_Tree.TransferFocus(d.D$.GAMEPAD, a, r), !0;
+            return this.m_Tree.TransferFocus(d.D$.GAMEPAD, s, r), !0;
           }
           return !1;
         }
@@ -12676,9 +12701,9 @@
             case L.ROW:
             case L.ROW_REVERSE:
               switch (e) {
-                case n.pR.DIR_LEFT:
+                case m.pR.DIR_LEFT:
                   return r ? E.FORWARD : E.BACKWARD;
-                case n.pR.DIR_RIGHT:
+                case m.pR.DIR_RIGHT:
                   return r ? E.BACKWARD : E.FORWARD;
                 default:
                   return E.INVALID;
@@ -12686,9 +12711,9 @@
             case L.COLUMN:
             case L.COLUMN_REVERSE:
               switch (e) {
-                case n.pR.DIR_UP:
+                case m.pR.DIR_UP:
                   return r ? E.FORWARD : E.BACKWARD;
-                case n.pR.DIR_DOWN:
+                case m.pR.DIR_DOWN:
                   return r ? E.BACKWARD : E.FORWARD;
                 default:
                   return E.INVALID;
@@ -12696,11 +12721,11 @@
             case L.GRID:
             case L.GEOMETRIC:
               switch (e) {
-                case n.pR.DIR_LEFT:
-                case n.pR.DIR_UP:
+                case m.pR.DIR_LEFT:
+                case m.pR.DIR_UP:
                   return r ? E.FORWARD : E.BACKWARD;
-                case n.pR.DIR_RIGHT:
-                case n.pR.DIR_DOWN:
+                case m.pR.DIR_RIGHT:
+                case m.pR.DIR_DOWN:
                   return r ? E.BACKWARD : E.FORWARD;
                 default:
                   return E.INVALID;
@@ -12727,22 +12752,22 @@
           return -1;
         }
         FindNextFocusableChildInGrid(e, t, r) {
-          const i = r == n.pR.DIR_UP || r == n.pR.DIR_DOWN,
-            s = this.GetLastFocusElement();
-          if (!s || s == this.m_element)
+          const i = r == m.pR.DIR_UP || r == m.pR.DIR_DOWN,
+            n = this.GetLastFocusElement();
+          if (!n || n == this.m_element)
             return (
-              (0, o.wT)(
+              (0, s.wT)(
                 !1,
                 "No active child for grid navigation",
                 this.m_iLastActiveChildIndex,
                 this.m_rgChildren.length,
-                s,
+                n,
               ),
               this.FindFocusableDescendant(r)
             );
           let a = this.GetActiveDescendant().GetBoundingRect();
           if (
-            ((r != n.pR.DIR_UP && r != n.pR.DIR_DOWN) ||
+            ((r != m.pR.DIR_UP && r != m.pR.DIR_DOWN) ||
               (a = this.AdjustRectForLastMovementOnTangentAxis(a, "y")),
             i)
           ) {
@@ -12751,7 +12776,7 @@
               const e = this.ScanChildren(
                 this.AdvanceIndex(i, t),
                 t,
-                (e) => !(0, m.UR)("y", a, e.GetBoundingRect()),
+                (e) => !(0, g.UR)("y", a, e.GetBoundingRect()),
               );
               if (-1 != e) {
                 const i = this.m_rgChildren[e].GetBoundingRect(),
@@ -12775,7 +12800,7 @@
               n += i
             ) {
               const e = this.m_rgChildren[n];
-              if (!(0, m.UR)("y", a, e.GetBoundingRect())) return null;
+              if (!(0, g.UR)("y", a, e.GetBoundingRect())) return null;
               let t = e.FindFocusableNode(r);
               if (t) return t;
             }
@@ -12786,7 +12811,7 @@
           const r = this.GetLastFocusElement();
           if (!r || r == this.m_element)
             return (
-              (0, o.wT)(
+              (0, s.wT)(
                 !1,
                 "No active child for geometric navigation",
                 this.m_iLastActiveChildIndex,
@@ -12795,7 +12820,7 @@
               ),
               this.FindFocusableDescendant(t)
             );
-          const i = (0, m.G4)(t);
+          const i = (0, g.G4)(t);
           if (!i) return null;
           const n = this.AdjustRectForLastMovementOnTangentAxis(
             this.GetActiveDescendant().GetBoundingRect(),
@@ -12804,7 +12829,7 @@
           return this.FindClosetChildInDirection(i, n, e, t);
         }
         AdjustRectForLastMovementOnTangentAxis(e, t) {
-          const r = this.m_Tree.GetLastFocusedMovementRect(s.xr[t]);
+          const r = this.m_Tree.GetLastFocusedMovementRect(l.xr[t]);
           return r
             ? "x" == t
               ? { left: e.left, right: e.right, top: r.top, bottom: r.bottom }
@@ -12812,14 +12837,14 @@
             : e;
         }
         FindClosestFocusableNodeToRect(e, t) {
-          const r = (0, m.G4)(e),
-            i = r && s.xr[r],
+          const r = (0, g.G4)(e),
+            i = r && l.xr[r],
             n = [];
           for (const e of this.m_rgChildren) {
             const r = e.GetBoundingRect();
             if (r) {
-              const s = (0, f.bZ)(t, r),
-                a = i ? (0, m.ix)(i, t, r) : 0;
+              const s = (0, o.bZ)(t, r),
+                a = i ? (0, g.ix)(i, t, r) : 0;
               n.push({ child: e, overlap: a, dist: s });
             }
           }
@@ -12836,24 +12861,24 @@
           P(
             `Find child closest to rect, rect is at left ${t.left} top ${t.top} right ${t.right} bottom ${t.bottom}`,
           );
-          const n = (0, m.lr)(e, t),
-            a = [];
+          const n = (0, g.lr)(e, t),
+            s = [];
           for (const i of this.m_rgChildren) {
-            const o = i.GetBoundingRect();
-            if (o) {
-              const l = (0, m.lr)(e, o);
+            const a = i.GetBoundingRect();
+            if (a) {
+              const o = (0, g.lr)(e, a);
               let c;
-              (c = r == E.FORWARD ? l.min - n.max : n.min - l.max),
+              (c = r == E.FORWARD ? o.min - n.max : n.min - o.max),
                 c >= 0 &&
-                  a.push({
+                  s.push({
                     child: i,
-                    overlap: (0, m.ix)(s.xr[e], t, o),
+                    overlap: (0, g.ix)(l.xr[e], t, a),
                     dist: c,
                   });
             }
           }
           if (
-            (a.sort((e, t) => {
+            (s.sort((e, t) => {
               if (e.overlap) {
                 if (!t.overlap) return -1;
               } else if (t.overlap) return 1;
@@ -12862,42 +12887,42 @@
             }),
             D.IsDebugEnabled())
           ) {
-            const e = a.slice(0, 3).map(({ dist: e, overlap: t, child: r }) => {
+            const e = s.slice(0, 3).map(({ dist: e, overlap: t, child: r }) => {
               var i;
               return `[ node: ${null === (i = r.m_element) || void 0 === i ? void 0 : i.className} dist: ${e} overlap: ${t} ]`;
             });
-            P(`Found nodes on axis, top 3 (of ${a.length}: ${e.join(", ")}`);
+            P(`Found nodes on axis, top 3 (of ${s.length}: ${e.join(", ")}`);
           }
-          for (const { child: e } of a) {
+          for (const { child: e } of s) {
             const r = e.FindFocusableNode(i, t);
             if (r) return r;
           }
           return null;
         }
-        FindClosestChildInNextAxiallyAlignedSet(e, t, r, i, n, a) {
+        FindClosestChildInNextAxiallyAlignedSet(e, t, r, i, n, s) {
           (!n || n < 0) && (n = 0);
-          let o = [];
+          let a = [];
           if (!i) return null;
-          const l = (0, m.xb)(i);
+          const o = (0, g.xb)(i);
           this.ScanChildren(n, t, (t) => {
             const r = t.GetBoundingRect();
             return (
               !!r &&
-              (!(!a || (0, m.UR)(s.xr[e], a, r)) ||
-                (o.push({
+              (!(!s || (0, g.UR)(l.xr[e], s, r)) ||
+                (a.push({
                   child: t,
-                  overlap: (0, m.ix)(e, i, r),
-                  dist: (0, m._V)(e, l, r),
+                  overlap: (0, g.ix)(e, i, r),
+                  dist: (0, g._V)(e, o, r),
                 }),
                 !1))
             );
           }),
-            t == E.BACKWARD && o.reverse(),
-            o.sort((e, t) => {
+            t == E.BACKWARD && a.reverse(),
+            a.sort((e, t) => {
               const r = t.overlap - e.overlap;
               return 0 != r ? r : e.dist - t.dist;
             });
-          for (const { child: e } of o) {
+          for (const { child: e } of a) {
             const t = e.FindFocusableNode(r, i);
             if (t) return t;
           }
@@ -12943,7 +12968,7 @@
           this.UpdateParentActiveChild(),
             this.m_Tree.OnChildActivated(e),
             this.m_Tree.BIsActiveFocus()
-              ? ((0, o.wT)(
+              ? ((0, s.wT)(
                   !this.m_Tree.BUseVirtualFocus(),
                   "Virtual focus tree should not have browser focus",
                 ),
@@ -12955,93 +12980,93 @@
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
             this.m_Tree.BIsActive() &&
-              (function (e, t) {
-                var r, i, n, s;
-                const a = e.Element;
-                if (!a) return;
-                let o = [
+              (function (e, t, r) {
+                var i, n, s, a;
+                const o = e.Element;
+                if (!o) return;
+                let l = [
                   {
                     node: e,
                     eScrollType:
-                      null === (r = e.m_Properties) || void 0 === r
+                      null === (i = e.m_Properties) || void 0 === i
                         ? void 0
-                        : r.scrollIntoViewType,
+                        : i.scrollIntoViewType,
                   },
                 ];
                 for (let t = e.Parent; t; t = t.Parent) {
                   const e =
-                      null === (i = t.m_Properties) || void 0 === i
-                        ? void 0
-                        : i.scrollIntoViewWhenChildFocused,
-                    r =
                       null === (n = t.m_Properties) || void 0 === n
                         ? void 0
-                        : n.scrollIntoViewType;
+                        : n.scrollIntoViewWhenChildFocused,
+                    r =
+                      null === (s = t.m_Properties) || void 0 === s
+                        ? void 0
+                        : s.scrollIntoViewType;
                   if (e) {
                     const i = { node: t, eScrollType: r };
-                    "force" === e ? (o = [i]) : o.push(i);
+                    "force" === e ? (l = [i]) : l.push(i);
                   }
                   if (void 0 !== r)
                     for (
-                      let e = o.length - 1;
-                      e >= 0 && void 0 === o[e].eScrollType;
+                      let e = l.length - 1;
+                      e >= 0 && void 0 === l[e].eScrollType;
                       e--
                     )
-                      o[e].eScrollType = r;
+                      l[e].eScrollType = r;
                 }
-                for (; o.length; ) {
-                  let { node: r, eScrollType: i } = o.pop(),
-                    n = 0 == o.length;
+                for (; l.length; ) {
+                  let { node: i, eScrollType: n } = l.pop(),
+                    s = 0 == l.length;
                   if (
-                    (void 0 === i && (i = v ? A.NoTransform : A.Standard),
-                    (null === (s = null == r ? void 0 : r.m_Properties) ||
-                    void 0 === s
+                    (void 0 === n && (n = v ? A.NoTransform : A.Standard),
+                    (null === (a = null == i ? void 0 : i.m_Properties) ||
+                    void 0 === a
                       ? void 0
-                      : s.fnScrollIntoViewHandler) &&
-                      !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
+                      : a.fnScrollIntoViewHandler) &&
+                      !1 !== i.m_Properties.fnScrollIntoViewHandler(e, t, i))
                   )
                     continue;
-                  const a = r.m_element,
-                    l =
-                      i == A.NoTransform ||
-                      i == A.NoTransformSparseContent ||
-                      !n;
-                  if (t) {
-                    const t = l ? z(a) : a.getBoundingClientRect();
+                  const o = i.m_element,
+                    c =
+                      n == A.NoTransform ||
+                      n == A.NoTransformSparseContent ||
+                      !s;
+                  if (t || r === d.D$.GAMEPAD) {
+                    const t = c ? z(o) : o.getBoundingClientRect();
                     let r = !1;
                     const i = Math.max(1.4 * (t.bottom - t.top), 40),
                       n = C && performance.now() - C < 500;
                     (n ||
                       t.bottom < -i ||
-                      t.top > a.ownerDocument.defaultView.innerHeight + i) &&
+                      t.top > o.ownerDocument.defaultView.innerHeight + i) &&
                       ((r = !0),
                       n ||
                         S(
-                          `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
+                          `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${o.ownerDocument.defaultView.innerHeight} + ${i} `,
                         ));
                     let s = r ? "auto" : "smooth";
                     r && (C = performance.now()),
                       e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
-                      l
-                        ? O(0, a, s)
-                        : a.scrollIntoView({ behavior: s, block: "nearest" });
+                      c
+                        ? O(0, o, s)
+                        : o.scrollIntoView({ behavior: s, block: "nearest" });
                   } else
                     S("No previous element for scrolling, will jump"),
-                      l
-                        ? O(0, a, "auto")
-                        : null == a ||
-                          a.scrollIntoView({
+                      c
+                        ? O(0, o, "auto")
+                        : null == o ||
+                          o.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
                             inline: "nearest",
                           });
                 }
-              })(this, t);
+              })(this, t, e);
         }
       }
-      (0, i.Cg)([l.o], G.prototype, "OnDOMFocus", null),
-        (0, i.Cg)([l.o], G.prototype, "OnDOMBlur", null),
-        (0, i.Cg)([l.o], G.prototype, "OnNavigationEvent", null);
+      (0, i.Cg)([a.o], G.prototype, "OnDOMFocus", null),
+        (0, i.Cg)([a.o], G.prototype, "OnDOMBlur", null),
+        (0, i.Cg)([a.o], G.prototype, "OnNavigationEvent", null);
     },
     7745: (e, t, r) => {
       "use strict";
@@ -14586,7 +14611,32 @@
       }
       function R(e) {
         if (null === e) return null;
-        switch (e) {
+        switch (
+          (function (e) {
+            switch (e) {
+              case n.ky:
+              case n.Wz:
+              case n.no:
+                return n.r;
+              case n.q:
+                return n.NC;
+              case n.Uw:
+                return n.M6;
+              case n.Qn:
+                return n.qS;
+              case n.H8:
+                return n.Lo;
+              case n.vF:
+                return n.nt;
+              case n.cF:
+                return n.gb;
+              case n.oL:
+                return n.WA;
+              default:
+                return e;
+            }
+          })(e)
+        ) {
           case n.pt:
             return 4664;
           case n.bq:
@@ -25730,7 +25780,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            R.prototype.selected_subject_type || a.Sg(R.M()),
+            R.prototype.subject || a.Sg(R.M()),
             n.Message.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
@@ -25738,14 +25788,7 @@
             R.sm_m ||
               (R.sm_m = {
                 proto: R,
-                fields: {
-                  selected_subject_type: {
-                    n: 1,
-                    br: a.qM.readEnum,
-                    bw: a.gp.writeEnum,
-                  },
-                  subject: { n: 2, c: v, r: !0, q: !0 },
-                },
+                fields: { subject: { n: 2, c: v, r: !0, q: !0 } },
               }),
             R.sm_m
           );
@@ -26596,6 +26639,7 @@
                     bw: a.gp.writeEnum,
                   },
                   reason: { n: 5, br: a.qM.readEnum, bw: a.gp.writeEnum },
+                  note: { n: 6, br: a.qM.readString, bw: a.gp.writeString },
                 },
               }),
             A.sm_m
@@ -26711,6 +26755,11 @@
                     n: 8,
                     br: a.qM.readString,
                     bw: a.gp.writeString,
+                  },
+                  new_subject_id: {
+                    n: 9,
+                    br: a.qM.readUint64String,
+                    bw: a.gp.writeUint64String,
                   },
                 },
               }),
@@ -35228,6 +35277,11 @@
                     br: l.qM.readUint32,
                     bw: l.gp.writeUint32,
                   },
+                  crc_schema: {
+                    n: 5,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
                 },
               }),
             xe.sm_m
@@ -35289,6 +35343,11 @@
                   },
                   schema: { n: 3, br: l.qM.readBytes, bw: l.gp.writeBytes },
                   stats: { n: 4, c: We, r: !0, q: !0 },
+                  crc_schema: {
+                    n: 5,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
                 },
               }),
             Fe.sm_m
@@ -46746,6 +46805,22 @@
       window.Config && Object.assign(i.TS, window.Config),
         window.UserConfig && Object.assign(i.iA, window.UserConfig);
     },
+    9646: (e, t, r) => {
+      "use strict";
+      r.d(t, { d: () => a });
+      var i,
+        n = r(90626);
+      r(7850);
+      !(function (e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.Header = 1)] = "Header"),
+          (e[(e.Fallback = 2)] = "Fallback");
+      })(i || (i = {}));
+      const s = (0, n.createContext)({});
+      function a() {
+        return (0, n.useContext)(s);
+      }
+    },
     7860: (e, t, r) => {
       "use strict";
       r.d(t, { L: () => c, s: () => o });
@@ -47475,9 +47550,10 @@
       r.d(t, {
         AQ: () => z,
         EO: () => B,
-        Ec: () => j,
+        Ec: () => I,
         J$: () => l,
         LM: () => p,
+        OE: () => R,
         Q_: () => h,
         U2: () => c,
         Yo: () => w,
@@ -47486,13 +47562,13 @@
         ik: () => M,
         is: () => _,
         j4: () => f,
-        kE: () => U,
+        kE: () => k,
         lv: () => b,
         op: () => C,
         qI: () => v,
-        rK: () => I,
-        us: () => O,
-        vB: () => k,
+        rK: () => T,
+        us: () => W,
+        vB: () => D,
         wl: () => g,
         xz: () => S,
       });
@@ -47503,10 +47579,10 @@
         o = r(7338);
       function l(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(O(t, e));
+        return (0, n.I)(W(t, e));
       }
       function c(e) {
-        return d(e, O);
+        return d(e, W);
       }
       function u(e) {
         return d(e, z, "include_assets");
@@ -47518,7 +47594,7 @@
           c = e && "packageid" in e && !!e.packageid;
         let u;
         if (c) {
-          const t = l.getQueryData(U(e, "default_info"));
+          const t = l.getQueryData(k(e, "default_info"));
           t &&
             1 ==
               (null === (i = t.included_appids) || void 0 === i
@@ -47534,12 +47610,12 @@
       function m(e, t, r) {
         const i = t && "appid" in t && !!t.appid;
         return {
-          queryKey: U(t, "include_included_items"),
+          queryKey: k(t, "include_included_items"),
           queryFn: async () => {
             var i;
-            r && L(e, t, r);
+            r && N(e, t, r);
             return null !==
-              (i = (await L(e, t, "include_included_items")).included_appids) &&
+              (i = (await N(e, t, "include_included_items")).included_appids) &&
               void 0 !== i
               ? i
               : [];
@@ -47552,7 +47628,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_basic_info", "basic_info");
+            return F(e, t, "include_basic_info", "basic_info");
           })(t, e),
         );
       }
@@ -47562,20 +47638,20 @@
       }
       function h(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(W(t, e));
+        return (0, n.I)(q(t, e));
       }
       function _(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(q(t, e));
+        return (0, n.I)(U(t, e));
       }
       function B(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
           e && "bundleid" in e
-            ? W(t, e)
+            ? q(t, e)
             : (function (e, t) {
                 return {
-                  ...q(e, t),
+                  ...U(e, t),
                   select: (e) =>
                     (null == e ? void 0 : e.purchase_options) &&
                     e.purchase_options.length > 0
@@ -47588,21 +47664,17 @@
       }
       function b(e, t = !1) {
         const r = (0, o.eG)();
-        return (0, n.I)(t ? R(r, e) : z(r, e));
+        return (0, n.I)(t ? j(r, e) : z(r, e));
       }
       function f(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(
-          (function (e, t) {
-            return x(e, t, "include_screenshots", "screenshots");
-          })(t, e),
-        );
+        return (0, n.I)(R(t, e));
       }
       function w(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_trailers", "trailers");
+            return F(e, t, "include_trailers", "trailers");
           })(t, e),
         );
       }
@@ -47610,7 +47682,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_reviews", "reviews");
+            return F(e, t, "include_reviews", "reviews");
           })(t, e),
         );
       }
@@ -47618,39 +47690,42 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_release", "release");
+            return F(e, t, "include_release", "release");
           })(t, e),
         );
       }
       function S(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(j(t, e));
+        return (0, n.I)(I(t, e));
       }
       function v(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(I(t, e));
+        return (0, n.I)(T(t, e));
       }
       function C(e, t) {
-        return x(e, t, "include_full_description", "full_description_bbcode");
+        return F(e, t, "include_full_description", "full_description_bbcode");
       }
       function z(e, t) {
-        return x(e, t, "include_assets", "assets");
+        return F(e, t, "include_assets", "assets");
       }
       function R(e, t) {
-        return x(
+        return F(e, t, "include_screenshots", "screenshots");
+      }
+      function j(e, t) {
+        return F(
           e,
           t,
           "include_assets_without_overrides",
           "assets_without_overrides",
         );
       }
-      function j(e, t) {
-        return x(e, t, "top_tags", "tags");
-      }
       function I(e, t) {
-        return x(e, t, "include_platforms", "platforms");
+        return F(e, t, "top_tags", "tags");
       }
-      function T(e) {
+      function T(e, t) {
+        return F(e, t, "include_platforms", "platforms");
+      }
+      function x(e) {
         return (
           !!e &&
           ("appid" in e && !e.appid
@@ -47659,77 +47734,77 @@
               ((0, i.wT)(!1, "Invalid bundleid passed to useStoreItem"), !1))
         );
       }
-      function x(e, t, r, i) {
+      function F(e, t, r, i) {
         return {
-          queryKey: U(t, r),
-          queryFn: async () => (await L(e, t, r))[i] || null,
+          queryKey: k(t, r),
+          queryFn: async () => (await N(e, t, r))[i] || null,
           staleTime: 216e5,
-          enabled: T(t),
+          enabled: x(t),
         };
       }
-      function F(e, t, r, i, n) {
+      function O(e, t, r, i, n) {
         var s;
-        e.setQueryData(U(t, i), null !== (s = r[n]) && void 0 !== s ? s : null);
-      }
-      function O(e, t) {
-        return {
-          queryKey: U(t, "default_info"),
-          queryFn: async () => P(await L(e, t, "default_info")),
-          staleTime: 216e5,
-          enabled: T(t),
-        };
+        e.setQueryData(k(t, i), null !== (s = r[n]) && void 0 !== s ? s : null);
       }
       function W(e, t) {
         return {
-          ...O(e, t),
+          queryKey: k(t, "default_info"),
+          queryFn: async () => L(await N(e, t, "default_info")),
+          staleTime: 216e5,
+          enabled: x(t),
+        };
+      }
+      function q(e, t) {
+        return {
+          ...W(e, t),
           select: (e) => e.best_purchase_option || null,
           staleTime: 6e5,
         };
       }
-      function q(e, t) {
+      function U(e, t) {
         const r = "include_all_purchase_options";
         return {
-          queryKey: U(t, r),
+          queryKey: k(t, r),
           queryFn: async () => {
-            const i = await L(e, t, r);
+            const i = await N(e, t, r);
             return {
               purchase_options: i.purchase_options,
               package_groups: i.package_groups,
             };
           },
           staleTime: 6e5,
-          enabled: T(t),
+          enabled: x(t),
         };
       }
-      function U(e, t) {
+      function k(e, t) {
         return ["StoreItem", e && (0, a.ER)(e), t];
       }
-      function k(e, t, r) {
+      function D(e, t, r) {
         var i, n, s, o, l, c;
         const u = (0, a.Jz)(t);
         u &&
           (!(function (e, t, r) {
-            e.setQueryData(U(t, "default_info"), P(r));
+            e.setQueryData(k(t, "default_info"), L(r));
           })(e, u, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              F(e, t, r, "include_basic_info", "basic_info");
+              O(e, t, r, "include_basic_info", "basic_info");
             })(e, u, t),
           r.include_assets &&
             (function (e, t, r) {
-              F(e, t, r, "include_assets", "assets");
+              O(e, t, r, "include_assets", "assets");
             })(e, u, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              F(e, t, r, "include_screenshots", "screenshots");
+              O(e, t, r, "include_screenshots", "screenshots");
             })(e, u, t),
           r.include_trailers &&
             (function (e, t, r) {
-              F(e, t, r, "include_trailers", "trailers");
+              O(e, t, r, "include_trailers", "trailers");
             })(e, u, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              F(
+              O(
                 e,
                 t,
                 r,
@@ -47739,35 +47814,35 @@
             })(e, u, t),
           r.include_reviews &&
             (function (e, t, r) {
-              F(e, t, r, "include_reviews", "reviews");
+              O(e, t, r, "include_reviews", "reviews");
             })(e, u, t),
           r.include_release &&
             (function (e, t, r) {
-              F(e, t, r, "include_release", "release");
+              O(e, t, r, "include_release", "release");
             })(e, u, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              F(e, t, r, "top_tags", "tags");
+              O(e, t, r, "top_tags", "tags");
             })(e, u, t),
           r.include_platforms &&
             (function (e, t, r) {
-              F(e, t, r, "include_platforms", "platforms");
+              O(e, t, r, "include_platforms", "platforms");
             })(e, u, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              F(e, t, r, "apply_user_filters", "user_filter_failure");
+              O(e, t, r, "apply_user_filters", "user_filter_failure");
             })(e, u, t),
           r.include_all_purchase_options &&
             (function (e, t, r) {
-              e.setQueryData(U(t, "include_all_purchase_options"), {
+              e.setQueryData(k(t, "include_all_purchase_options"), {
                 purchase_options: r.purchase_options,
                 package_groups: r.package_groups,
               });
             })(e, u, t),
           r.include_full_description &&
             (function (e, t, r) {
-              F(e, t, r, "include_full_description", "full_description_bbcode");
+              O(e, t, r, "include_full_description", "full_description_bbcode");
             })(e, u, t),
           r.include_included_items &&
             r.included_item_data_request &&
@@ -47777,23 +47852,23 @@
                   ? void 0
                   : i.included_apps) ||
               void 0 === n ||
-              n.forEach((t) => k(e, t, r.included_item_data_request)),
+              n.forEach((t) => D(e, t, r.included_item_data_request)),
             null ===
               (o =
                 null === (s = t.included_items) || void 0 === s
                   ? void 0
                   : s.included_packages) ||
               void 0 === o ||
-              o.forEach((t) => k(e, t, r.included_item_data_request)),
+              o.forEach((t) => D(e, t, r.included_item_data_request)),
             null ===
               (c =
                 null === (l = t.included_items) || void 0 === l
                   ? void 0
                   : l.included_bundles) ||
               void 0 === c ||
-              c.forEach((t) => k(e, t, r.included_item_data_request))));
+              c.forEach((t) => D(e, t, r.included_item_data_request))));
       }
-      const D = [
+      const P = [
         "assets",
         "tagids",
         "tags",
@@ -47812,12 +47887,12 @@
         "release",
         "package_groups",
       ];
-      function P(e) {
+      function L(e) {
         const t = { ...e };
-        for (const e of D) delete t[e];
+        for (const e of P) delete t[e];
         return t;
       }
-      async function L(e, t, r) {
+      async function N(e, t, r) {
         return await e.load(`${(0, a.ER)(t)}|${r}`);
       }
     },
@@ -82669,25 +82744,30 @@
     },
     6813: (e, t, r) => {
       "use strict";
-      r.d(t, { X: () => u });
+      r.d(t, { X: () => d });
       var i = r(7850),
-        n = r(90626),
-        s = r(72739),
-        a = r(56011),
-        o = r(62490),
-        l = r(64753),
-        c = r(84811);
-      function u({ config: e, isDynamic: t }) {
-        const r = t ? m : d;
-        return (0, i.jsx)(n.Fragment, {
+        n = r(12447),
+        s = r(64753),
+        a = r(90626),
+        o = r(72739),
+        l = r(84811),
+        c = r(62490),
+        u = r(56011);
+      function d({ config: e, isDynamic: t, omitFocusNavTreeBridge: r }) {
+        const n = t ? g : m;
+        return (0, i.jsx)(a.Fragment, {
           children: Object.keys(e || {}).map((t) =>
-            (0, i.jsx)(r, { featureName: t, render: e[t] }, t),
+            (0, i.jsx)(
+              n,
+              { featureName: t, render: e[t], omitFocusNavTreeBridge: !!r },
+              t,
+            ),
           ),
         });
       }
-      function d(e) {
-        const { featureName: t, render: r } = e,
-          s = n.useMemo(
+      function m(e) {
+        const { featureName: t, render: r, omitFocusNavTreeBridge: n } = e,
+          s = a.useMemo(
             () =>
               Array.from(
                 document.querySelectorAll(`[data-featuretarget=${t}]`),
@@ -82696,57 +82776,80 @@
           );
         return s.length
           ? (0, i.jsx)(i.Fragment, {
-              children: s.map((e, n) =>
-                (0, i.jsx)(g, { featureName: t, elem: e, render: r }, n),
+              children: s.map((e, s) =>
+                (0, i.jsx)(
+                  p,
+                  {
+                    featureName: t,
+                    elem: e,
+                    render: r,
+                    omitFocusNavTreeBridge: n,
+                  },
+                  s,
+                ),
               ),
             })
           : null;
       }
-      function m(e) {
-        const { featureName: t, render: r } = e,
-          s = (0, l.CH)(),
-          c = n.useRef([]),
-          u = n.useRef(0);
+      function g(e) {
+        const { featureName: t, render: r, omitFocusNavTreeBridge: n } = e,
+          o = (0, s.CH)(),
+          l = a.useRef([]),
+          d = a.useRef(0);
         return (
-          n.useEffect(() => {
+          a.useEffect(() => {
             const e = `[data-featuretarget=${t}]`;
-            (c.current = []), (u.current = 0);
-            const r = (e) => c.current.push({ key: u.current++, elem: e }),
-              i = (e) => o.Wp(c.current, (t) => t.elem == e);
-            document.querySelectorAll(e).forEach(r), c.current.length && s();
+            (l.current = []), (d.current = 0);
+            const r = (e) => l.current.push({ key: d.current++, elem: e }),
+              i = (e) => c.Wp(l.current, (t) => t.elem == e);
+            document.querySelectorAll(e).forEach(r), l.current.length && o();
             const n = new MutationObserver((t) => {
               let n = !1;
               for (const s of t)
-                a.Mr(
+                u.Mr(
                   s,
                   (t) => {
-                    p(t, e).forEach((e) => {
+                    h(t, e).forEach((e) => {
                       r(e), (n = !0);
                     });
                   },
                   (t) => {
-                    p(t, e).forEach((e) => {
+                    h(t, e).forEach((e) => {
                       i(e), (n = !0);
                     });
                   },
                 );
-              n && s();
+              n && o();
             });
             return (
               n.observe(document, { childList: !0, subtree: !0 }),
               () => n.disconnect()
             );
-          }, [t, s]),
+          }, [t, o]),
           (0, i.jsx)(i.Fragment, {
-            children: c.current.map(({ key: e, elem: n }) =>
-              (0, i.jsx)(g, { elem: n, featureName: t, render: r }, e),
+            children: l.current.map(({ key: e, elem: s }) =>
+              (0, i.jsx)(
+                p,
+                {
+                  elem: s,
+                  featureName: t,
+                  render: r,
+                  omitFocusNavTreeBridge: n,
+                },
+                e,
+              ),
             ),
           })
         );
       }
-      function g(e) {
-        const { featureName: t, elem: r, render: a } = e,
-          o = n.useMemo(
+      function p(e) {
+        const {
+            featureName: t,
+            elem: r,
+            render: s,
+            omitFocusNavTreeBridge: c,
+          } = e,
+          u = a.useMemo(
             () =>
               (function (e, t) {
                 if (!e) return {};
@@ -82768,9 +82871,19 @@
               })(r.getAttribute("data-props"), t),
             [r, t],
           );
-        return (0, s.createPortal)((0, i.jsx)(c.tH, { children: a(o) }), r);
+        return c
+          ? (0, o.createPortal)((0, i.jsx)(l.tH, { children: s(u) }), r)
+          : (0, o.createPortal)(
+              (0, i.jsx)(l.tH, {
+                children: (0, i.jsx)(n.u, {
+                  navID: `FeatureTarget_${t}`,
+                  children: s(u),
+                }),
+              }),
+              r,
+            );
       }
-      function p(e, t) {
+      function h(e, t) {
         return e.matches(t) ? [e] : e.querySelectorAll(t);
       }
     },

@@ -6037,16 +6037,8 @@
                   }),
                 ],
               });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, name: _ = "GamepadWebRoot", ..._ } = _;
-        return (0, _.jsx)(_._, {
-          ..._,
-          navID: _,
-          children: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { navigate: _, onClick: _, ..._ } = _,
           { target: _ } = _;
@@ -6077,8 +6069,8 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { root: _, currentPath: _, linksAvailable: _, children: _ } = _;
-        return (0, _.jsx)(_, {
-          name: "ProfileEditShell",
+        return (0, _.jsx)(_._, {
+          navID: "ProfileEditShell",
           children: (0, _.jsx)(_._, {
             children: (0, _.jsxs)(_._, {
               className: _.Shell,
@@ -7018,38 +7010,6 @@
           ],
         });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-        const { children: _, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(void 0),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(),
-          _ = (0, _._)("__nav_tree_root");
-        return (0, _.jsx)(_._, {
-          ..._,
-          navTreeRef: _,
-          ref: _,
-          parentEmbeddedNavTree: _,
-          disabledRoot: !_,
-          historyMode: "navigationapi",
-          children: (0, _.jsx)(_._, {
-            disableFocusRing: !_,
-            children: _,
-          }),
-        });
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

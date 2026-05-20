@@ -172,9 +172,8 @@
       module.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
-        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
-        SectionButtonCtn: "_1HP0yfVUrZ-TPBYhiQkye2",
         SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
+        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
         EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
@@ -703,6 +702,9 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -715,30 +717,36 @@
           scorePenaltyIfOwned: _,
           capsuleSize: _,
         } = _;
-        return (0, _.jsxs)("div", {
+        return (0, _.jsx)(_._, {
           className: _().StoreItemsCarousel,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _().Header,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().Title,
-                  children: _,
+          navEntryPreferPosition: _._.PREFERRED_CHILD,
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().Header,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Title,
+                    children: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    url: _,
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                preferredFocus: !0,
+                children: (0, _.jsx)(_._, {
+                  navKey: _,
+                  appIDs: _,
+                  maxItemCount: 4,
+                  sortOrder: _,
+                  scorePenaltyIfOwned: _,
+                  capsuleSize: _,
                 }),
-                (0, _.jsx)(_._, {
-                  url: _,
-                }),
-              ],
-            }),
-            (0, _.jsx)(_._, {
-              navKey: _,
-              appIDs: _,
-              maxItemCount: 4,
-              sortOrder: _,
-              scorePenaltyIfOwned: _,
-              capsuleSize: _,
-            }),
-          ],
+              }),
+            ],
+          }),
         });
       }
     },
@@ -762,8 +770,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = -1;
       function _(_) {
         const {
@@ -899,7 +908,7 @@
       function _(_) {
         const { url: _ } = _;
         return _
-          ? (0, _.jsx)("a", {
+          ? (0, _.jsx)(_._, {
               href: _,
               className: (0, _._)(
                 _().SeeAllLink,
@@ -1541,19 +1550,19 @@
           _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
           _ = window.screen.width > 500 ? _._ : _._;
         return (0, _.jsxs)("div", {
+          className: _.Container,
           children: [
-            (0, _.jsx)("h2", {
-              children: (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
-            }),
-            (0, _.jsx)("div", {
-              className: _.SectionButtonCtn,
-              children: (0, _.jsx)(_._, {
-                className: _.SectionButton,
-                onClick: (_) => {
-                  _?.(), _.stopPropagation(), _.preventDefault();
-                },
-                children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
-              }),
+            (0, _.jsxs)("h2", {
+              children: [
+                (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
+                (0, _.jsx)(_._, {
+                  className: _.SectionButton,
+                  onClick: (_) => {
+                    _?.(), _.stopPropagation(), _.preventDefault();
+                  },
+                  children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                }),
+              ],
             }),
             !!_ &&
               (0, _.jsx)(_._, {
@@ -1572,6 +1581,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 500;
       function _(_) {
@@ -1582,66 +1592,79 @@
             elPostRowElement: _,
             bViewAllShowInfiniteScroll: _,
           } = _,
-          _ = (0, _._)().ownerWindow.window.innerWidth <= _ ? 1 : 2;
-        return (0, _.jsxs)(_._, {
-          className: _,
-          "flow-children": "row",
-          children: [
-            !!_ &&
-              (0, _.jsxs)("div", {
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        let _ = 2,
+          _ = _ + 1;
+        return (
+          _.ownerWindow.window
+            ? (_ = _.ownerWindow.window.innerWidth)
+            : _.viewportWidth && (_ = _.viewportWidth.value),
+          (_ = _ <= _ ? 1 : 2),
+          _ && 0 == _.length && !_
+            ? null
+            : (0, _.jsxs)(_._, {
+                className: _,
+                "flow-children": "row",
                 children: [
-                  (0, _.jsx)("h2", {
-                    children: _._.Localize("#EventBrowse_RecentEvents"),
-                  }),
-                  !_._.IN_GAMEPADUI &&
-                    !!_ &&
-                    (0, _.jsx)("div", {
-                      className: _.SectionButtonCtn,
-                      children:
-                        _ && _
-                          ? (0, _.jsx)(_._, {
-                              className: _.SectionButton,
-                              onClick: () => _(_[0]),
-                              children: _._.Localize(
-                                "#EventBrowse_MoreEventsBtn",
-                              ),
-                            })
-                          : (0, _.jsx)(_._, {
-                              eventModel: _[0],
-                              route: _._.k_eViewWebSiteHub,
-                              className: _.SectionButton,
-                              children: _._.Localize(
-                                "#EventBrowse_MoreEventsBtn",
-                              ),
-                            }),
+                  !!_ &&
+                    _.length > 0 &&
+                    (0, _.jsxs)("div", {
+                      className: _.Container,
+                      children: [
+                        (0, _.jsxs)("h2", {
+                          children: [
+                            _._.Localize("#EventBrowse_RecentEvents"),
+                            !_._.IN_GAMEPADUI &&
+                              !!_ &&
+                              (0, _.jsx)(_.Fragment, {
+                                children:
+                                  _ && _
+                                    ? (0, _.jsx)(_._, {
+                                        className: _.SectionButton,
+                                        onClick: () => _(_[0]),
+                                        children: _._.Localize(
+                                          "#EventBrowse_MoreEventsBtn",
+                                        ),
+                                      })
+                                    : (0, _.jsx)(_._, {
+                                        eventModel: _[0],
+                                        route: _._.k_eViewWebSiteHub,
+                                        className: _.SectionButton,
+                                        children: _._.Localize(
+                                          "#EventBrowse_MoreEventsBtn",
+                                        ),
+                                      }),
+                              }),
+                          ],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.EventsSummariesCtn,
+                          children: __webpack_require__.slice(0, _).map((_) => {
+                            const _ = _
+                                ? (_) => {
+                                    _(_),
+                                      _.stopPropagation(),
+                                      _.preventDefault();
+                                  }
+                                : void 0,
+                              _ = 1 === _.length && _ > 500 ? _._ : _._;
+                            return (0, _.jsx)(
+                              _,
+                              {
+                                event: _,
+                                onClick: _,
+                              },
+                              _.GID,
+                            );
+                          }),
+                        }),
+                      ],
                     }),
-                  (0, _.jsx)("div", {
-                    className: _.EventsSummariesCtn,
-                    children: __webpack_require__.slice(0, _).map((_) => {
-                      const _ = _
-                          ? (_) => {
-                              _(_), _.stopPropagation(), _.preventDefault();
-                            }
-                          : void 0,
-                        _ =
-                          1 === _.length && window.screen.width > 500
-                            ? _._
-                            : _._;
-                      return (0, _.jsx)(
-                        _,
-                        {
-                          event: _,
-                          onClick: _,
-                        },
-                        _.GID,
-                      );
-                    }),
-                  }),
+                  _,
                 ],
-              }),
-            _,
-          ],
-        });
+              })
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1840,25 +1863,21 @@
           closeModal: _,
         });
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
           _ = new Date(_.setUTCHours(0, 0, 0, 0) - 15552e6),
           _ = Math.floor(__webpack_require__.getTime() / 1e3),
           { appid: _ } = _;
-        return (0, _.jsx)(_._, {
-          navID: "EventsRowBridge",
-          children: (0, _.jsx)(_, {
-            appid: _,
-            partnerEventStore: _._.Get(),
-            event_customization: {
-              rtime_oldestevent: _,
-              exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
-              exclude_event_types: [_._._],
-            },
-            strClassName: "early_access_announcements",
-            trackingLocation: _._._,
-          }),
+        return (0, _.jsx)(_, {
+          appid: _,
+          partnerEventStore: _._.Get(),
+          event_customization: {
+            rtime_oldestevent: _,
+            exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
+            exclude_event_types: [_._._],
+          },
+          strClassName: "early_access_announcements",
+          trackingLocation: _._._,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -2082,7 +2101,6 @@
       };
       var _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2094,6 +2112,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -2157,91 +2177,96 @@
           [_, _] = _.useState(void 0);
         if (!_) return;
         const _ = !_ && (_ ? 1 == _ : _ <= 2) && _;
-        return (0, _.jsxs)("div", {
+        return (0, _.jsx)(_._, {
           className: (0, _._)(
             _().CreatorHomeWithItems,
             _ ? _().WithFollowBtn : "",
           ),
-          children: [
-            _?.creator_page_bg_url &&
-              (0, _.jsx)("div", {
-                className: _().Background,
-                style: {
-                  backgroundImage: `url(${_.creator_page_bg_url})`,
-                },
-              }),
-            (0, _.jsxs)("div", {
-              className: _().Header,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().ClanInfoRow,
-                  children: [
-                    Boolean(_) &&
-                      (0, _.jsx)("div", {
-                        children: (0, _.jsx)("a", {
-                          href: _,
-                          children: (0, _.jsx)("img", {
-                            className: _().ClanAvatarImage,
-                            src: _.GetAvatarURLFullSize(),
+          navEntryPreferPosition: _._.PREFERRED_CHILD,
+          children: (0, _.jsxs)(_._, {
+            children: [
+              _?.creator_page_bg_url &&
+                (0, _.jsx)("div", {
+                  className: _().Background,
+                  style: {
+                    backgroundImage: `url(${_.creator_page_bg_url})`,
+                  },
+                }),
+              (0, _.jsxs)(_._, {
+                className: _().Header,
+                "flow-children": "row",
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().ClanInfoRow,
+                    children: [
+                      Boolean(_) &&
+                        (0, _.jsx)("div", {
+                          children: (0, _.jsx)(_._, {
+                            href: _,
+                            children: (0, _.jsx)("img", {
+                              className: _().ClanAvatarImage,
+                              src: _.GetAvatarURLFullSize(),
+                            }),
                           }),
                         }),
+                      (0, _.jsx)("img", {
+                        className: _().AvatarBackground,
+                        src: _.GetAvatarURLFullSize(),
                       }),
-                    (0, _.jsx)("img", {
-                      className: _().AvatarBackground,
-                      src: _.GetAvatarURLFullSize(),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().ClanName,
-                      children: (0, _.jsx)("a", {
-                        href: _,
-                        children: _ || _.GetName(),
+                      (0, _.jsx)("div", {
+                        className: _().ClanName,
+                        children: (0, _.jsx)("a", {
+                          href: _,
+                          children: _ || _.GetName(),
+                        }),
                       }),
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().ButtonContainer,
-                  children: [
-                    Boolean(!_ && _) &&
-                      (0, _.jsx)(_._, {
-                        className: _().CarouselFollowButton,
-                        clanAccountID: _,
-                      }),
-                    (0, _.jsx)(_._, {
-                      url: _,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().CarouselContentsRow,
-                _ && _().WithFollowSection,
-              ),
-              children: [
-                (0, _.jsx)(_._, {
-                  navKey: "store_page_" + _,
-                  classes: _().Carousel,
-                  appIDs: _,
-                  maxItemCount: _ ? _ : 4,
-                  shrinkToFitItems: !0,
-                  mapAppToCreatorClan: _,
-                  strFeatureFirstAppMsg: _,
-                  setNumberVisibleItems: _,
-                }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().CarouselFollowSection,
-                    children: (0, _.jsx)(_, {
-                      clanID: _,
-                      creatorName: _.GetName(),
-                      creatorUrl: _,
-                    }),
+                    ],
                   }),
-              ],
-            }),
-          ],
+                  (0, _.jsxs)("div", {
+                    className: _().ButtonContainer,
+                    children: [
+                      Boolean(!_ && _) &&
+                        (0, _.jsx)(_._, {
+                          className: _().CarouselFollowButton,
+                          clanAccountID: _,
+                        }),
+                      (0, _.jsx)(_._, {
+                        url: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  _().CarouselContentsRow,
+                  _ && _().WithFollowSection,
+                ),
+                preferredFocus: !0,
+                children: [
+                  (0, _.jsx)(_._, {
+                    navKey: "store_page_" + _,
+                    classes: _().Carousel,
+                    appIDs: _,
+                    maxItemCount: _ ? _ : 4,
+                    shrinkToFitItems: !0,
+                    mapAppToCreatorClan: _,
+                    strFeatureFirstAppMsg: _,
+                    setNumberVisibleItems: _,
+                  }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().CarouselFollowSection,
+                      children: (0, _.jsx)(_, {
+                        clanID: _,
+                        creatorName: _.GetName(),
+                        creatorUrl: _,
+                      }),
+                    }),
+                ],
+              }),
+            ],
+          }),
         });
       }
       function _(_) {
@@ -4222,7 +4247,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (0, _.useMemo)(() => {
@@ -4262,15 +4286,12 @@
       function _(_) {
         let { trailers: _, screenshots: _ } = _;
         return (0, _.jsx)(_._, {
-          navID: "GameHighlightGamepadCarousel",
-          children: (0, _.jsx)(_._, {
-            supportsFullscreen: !1,
-            supportsTheater: !0,
+          supportsFullscreen: !1,
+          supportsTheater: !0,
+          children: (0, _.jsx)(_, {
             children: (0, _.jsx)(_, {
-              children: (0, _.jsx)(_, {
-                trailers: _,
-                screenshots: _,
-              }),
+              trailers: _,
+              screenshots: _,
             }),
           }),
         });
@@ -8269,11 +8290,8 @@
           ),
           (0, _.jsx)(_.Provider, {
             value: _,
-            children: (0, _.jsx)(_._, {
-              navID: "AppReviews",
-              children: (0, _.jsx)(_, {
-                searchParams: _,
-              }),
+            children: (0, _.jsx)(_, {
+              searchParams: _,
             }),
           })
         );
@@ -8828,122 +8846,132 @@
         }));
       function _(_) {
         const { appid: _ } = _;
-        return (0, _.jsx)(_._, {
+        return (0, _.jsxs)(_._, {
           eAdultOnlyMediaBehavior: "allowed",
-          children: (0, _.jsx)(_._, {
-            config: {
-              "events-row": () =>
-                (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
-                    appid: _,
+          children: [
+            (0, _.jsx)(_._, {
+              config: {
+                "events-row": () =>
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {
+                      appid: _,
+                    }),
                   }),
-                }),
-              "review-award": () => (0, _.jsx)(_, {}),
-              "deck-topplayed-banner": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-              "steamawardsvote-embed": () =>
-                (0, _.jsx)(_, {
-                  appID: _,
-                }),
-              "broadcast-embed": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                  appid: _.appid,
-                }),
-              "demo-and-quick-pitch": () =>
-                (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
+                "deck-topplayed-banner": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                "steamawardsvote-embed": () =>
+                  (0, _.jsx)(_, {
                     appID: _,
                   }),
-                }),
-              "deck-verified-results": (_) =>
-                (0, _.jsx)(_, {
-                  appID: _,
-                  results: (0, _._)("deckcompatibility", "application_config"),
-                  appName: (0, _._)("appname", "application_config"),
-                  ..._,
-                }),
-              "gamehighlight-trailer": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-              "gamehighlight-gamepadcarousel": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-              "gamehighlight-desktopcarousel": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-              "discovery-queue-app-widget": () =>
-                (0, _.jsx)(_, {
-                  appID: _,
-                }),
-              "game-notice-controller-required": () =>
-                (0, _.jsx)(_, {
-                  appid: _,
-                  type: _.EPurchaseNoticeType_ControllerRequired,
-                }),
-              "game-notice-vr-required": () =>
-                (0, _.jsx)(_, {
-                  type: _.EPurchaseNoticeType_VRRequired,
-                }),
-              "game-notice-vr-supported": () =>
-                (0, _.jsx)(_, {
-                  type: _.EPurchaseNoticeType_VRSupported,
-                }),
-              "store-sidebar-controller-support-info": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-              "store-sidebar-accessibility-info": (_) =>
-                (0, _.jsx)(_, {
-                  features: _,
-                }),
-              "season-pass-display": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-              "storeitems-carousel": (_) =>
-                (0, _.jsx)(_._, {
-                  feature: "recommended",
-                  children: (0, _.jsx)(_.default, {
+                "broadcast-embed": (_) =>
+                  (0, _.jsx)(_, {
                     ..._,
-                  }),
-                }),
-              "storeitems-carousel-dlc": (_) =>
-                (0, _.jsx)(_._, {
-                  feature: "dlc",
-                  children: (0, _.jsx)(_.default, {
-                    ..._,
-                  }),
-                }),
-              "creatorhome-carousel": (_) =>
-                (0, _.jsx)(_._, {
-                  feature: "creator",
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                }),
-              parentappwidget: (_) =>
-                (0, _.jsx)(_._, {
-                  feature: _.feature,
-                  children: (0, _.jsx)(_, {
                     appid: _.appid,
                   }),
-                }),
-              appreviews: (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-              "wishlist-item-categories": (_) =>
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-            },
-          }),
+                "demo-and-quick-pitch": () =>
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {
+                      appID: _,
+                    }),
+                  }),
+                "deck-verified-results": (_) =>
+                  (0, _.jsx)(_, {
+                    appID: _,
+                    results: (0, _._)(
+                      "deckcompatibility",
+                      "application_config",
+                    ),
+                    appName: (0, _._)("appname", "application_config"),
+                    ..._,
+                  }),
+                "gamehighlight-trailer": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                "gamehighlight-gamepadcarousel": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                "gamehighlight-desktopcarousel": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                "discovery-queue-app-widget": () =>
+                  (0, _.jsx)(_, {
+                    appID: _,
+                  }),
+                "game-notice-controller-required": () =>
+                  (0, _.jsx)(_, {
+                    appid: _,
+                    type: _.EPurchaseNoticeType_ControllerRequired,
+                  }),
+                "game-notice-vr-required": () =>
+                  (0, _.jsx)(_, {
+                    type: _.EPurchaseNoticeType_VRRequired,
+                  }),
+                "game-notice-vr-supported": () =>
+                  (0, _.jsx)(_, {
+                    type: _.EPurchaseNoticeType_VRSupported,
+                  }),
+                "store-sidebar-controller-support-info": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                "store-sidebar-accessibility-info": (_) =>
+                  (0, _.jsx)(_, {
+                    features: _,
+                  }),
+                "season-pass-display": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                "storeitems-carousel": (_) =>
+                  (0, _.jsx)(_._, {
+                    feature: "recommended",
+                    children: (0, _.jsx)(_.default, {
+                      ..._,
+                    }),
+                  }),
+                "storeitems-carousel-dlc": (_) =>
+                  (0, _.jsx)(_._, {
+                    feature: "dlc",
+                    children: (0, _.jsx)(_.default, {
+                      ..._,
+                    }),
+                  }),
+                "creatorhome-carousel": (_) =>
+                  (0, _.jsx)(_._, {
+                    feature: "creator",
+                    children: (0, _.jsx)(_, {
+                      ..._,
+                    }),
+                  }),
+                parentappwidget: (_) =>
+                  (0, _.jsx)(_._, {
+                    feature: _.feature,
+                    children: (0, _.jsx)(_, {
+                      appid: _.appid,
+                    }),
+                  }),
+                appreviews: (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                "wishlist-item-categories": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+              },
+            }),
+            (0, _.jsx)(_._, {
+              omitFocusNavTreeBridge: !0,
+              config: {
+                "review-award": () => (0, _.jsx)(_, {}),
+              },
+            }),
+          ],
         });
       }
     },

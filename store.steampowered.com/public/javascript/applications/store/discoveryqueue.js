@@ -53,15 +53,15 @@
         o = a(23809),
         l = a(44654),
         c = a(10622),
-        d = a(17720),
-        m = a(42457),
+        m = a(17720),
+        d = a(42457),
         u = a(58632),
         h = a.n(u);
       function p(e, t) {
         return new (h())(
           async (t) => {
             const a = [...t],
-              n = await m.xt.GetPlayerLinkDetails(e, { steamids: a }),
+              n = await d.xt.GetPlayerLinkDetails(e, { steamids: a }),
               i = new Map();
             return (
               n
@@ -92,7 +92,7 @@
           if (null == e) return null;
           const a = await (function (e) {
             return (S ??= p(e));
-          })(t).load(d.b.InitFromAccountID(e).ConvertTo64BitString());
+          })(t).load(m.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
             let a = new c.Z(e);
             const n = t?.public_data,
@@ -113,14 +113,14 @@
             i?.game_extra_info && (a.m_strGameExtraInfo = i?.game_extra_info);
             n?.profile_url && (a.m_strProfileURL = n.profile_url);
             return a;
-          })(d.b.InitFromAccountID(e), a);
+          })(m.b.InitFromAccountID(e), a);
         },
       });
       function g() {
         return n.useContext(f);
       }
       function C(e, t, a) {
-        const n = "string" == typeof a ? new d.b(a).GetAccountID() : a;
+        const n = "string" == typeof a ? new m.b(a).GetAccountID() : a;
         return {
           queryKey: ["PlayerSummary", n],
           queryFn: () => e.loadPersonaState(n, t),
@@ -146,8 +146,8 @@
         o = a(46371),
         l = a(81393),
         c = a(78327),
-        d = a(90626),
-        m = a(68797),
+        m = a(90626),
+        d = a(68797),
         u = a(6144),
         h = a(84933),
         p = a(14947),
@@ -260,9 +260,9 @@
                 this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
                 this.m_claimState
               );
-            t = (0, m.H)(a);
+            t = (0, d.H)(a);
           } catch (e) {
-            t = (0, m.H)(e);
+            t = (0, d.H)(e);
           }
           return (
             console.error(
@@ -338,9 +338,9 @@
                 (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
                 this.m_canClaimPromise
               );
-            t = (0, m.H)(a);
+            t = (0, d.H)(a);
           } catch (e) {
-            t = (0, m.H)(e);
+            t = (0, d.H)(e);
           }
           return (
             console.error(
@@ -399,10 +399,10 @@
         }
       }
       function S() {
-        const [e, t] = (0, d.useState)(C.Get().GetClaimItemState()),
-          [a, n] = (0, d.useState)(!0);
+        const [e, t] = (0, m.useState)(C.Get().GetClaimItemState()),
+          [a, n] = (0, m.useState)(!0);
         return (
-          (0, d.useEffect)(() => {
+          (0, m.useEffect)(() => {
             C.Get()
               .LoadCanUserClaimItem()
               .then(t)
@@ -468,9 +468,9 @@
         o = a(52038),
         l = a(61859),
         c = a(61336),
-        d = a(78327),
-        m = a(15392),
-        u = a(27666);
+        m = a(78327),
+        d = a(15392),
+        u = a(40414);
       function h(e) {
         const { gidEvent: t } = e,
           a = (0, r.RR)(t),
@@ -479,7 +479,7 @@
               a?.jsondata?.localized_sale_product_banner?.length > 0 &&
               a?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
-              const e = (0, s.sfN)(d.TS.LANGUAGE),
+              const e = (0, s.sfN)(m.TS.LANGUAGE),
                 t = l.NT.GetWithFallback(
                   a.jsondata.localized_sale_product_banner,
                   e,
@@ -490,8 +490,8 @@
                 );
               if (t?.length > 0 && n?.length > 0)
                 return [
-                  u.z.GenerateURLFromHashAndExt(a.clanSteamID, t),
-                  u.z.GenerateURLFromHashAndExt(a.clanSteamID, n),
+                  u.zU.GenerateURLFromHashAndExt(a.clanSteamID, t),
+                  u.zU.GenerateURLFromHashAndExt(a.clanSteamID, n),
                 ];
             }
             return [null, null];
@@ -499,15 +499,15 @@
         return h?.length > 0 && p?.length > 0
           ? (0, n.jsxs)("a", {
               href: (0, c.k2)(a.GetSaleURL()),
-              className: m.Link,
+              className: d.Link,
               children: [
                 (0, n.jsx)("img", {
                   src: h,
-                  className: (0, o.A)(m.Banner, m.Big),
+                  className: (0, o.A)(d.Banner, d.Big),
                 }),
                 (0, n.jsx)("img", {
                   src: p,
-                  className: (0, o.A)(m.Banner, m.Mobile),
+                  className: (0, o.A)(d.Banner, d.Mobile),
                 }),
               ],
             })
@@ -516,7 +516,7 @@
     },
     30769: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Qe });
+      a.r(t), a.d(t, { default: () => Be });
       var n = a(90626),
         i = a(7850),
         s = a(45699),
@@ -524,8 +524,8 @@
         o = a(37788),
         l = a(23310),
         c = a(46371),
-        d = a(23809),
-        m = a(62093),
+        m = a(23809),
+        d = a(62093),
         u = a(60014),
         h = a(13871),
         p = a(30894),
@@ -582,16 +582,16 @@
         R = a(10224),
         G = a(43706),
         F = a(60779),
-        Q = a(92834),
-        B = a(3740),
+        B = a(92834),
+        Q = a(3740),
         P = a(44986),
         L = a(32754),
         k = a(61336),
         E = a(20713),
         W = a(40807),
         O = a(80902),
-        M = a(22837),
-        U = a(1035),
+        U = a(22837),
+        M = a(1035),
         q = a(34181),
         z = a(17720),
         V = a(4796),
@@ -644,7 +644,7 @@
         oe = a(26505),
         le = a(6083);
       const ce = new v.wd("AppRelevance").Debug;
-      function de(e) {
+      function me(e) {
         const {
             appID: t,
             bShowAvatars: a,
@@ -654,8 +654,8 @@
             bShowCreatorInfo: l,
           } = e,
           c = (0, oe.Nd)(t),
-          m = (function (e) {
-            const t = (0, d.KV)();
+          d = (function (e) {
+            const t = (0, m.KV)();
             return (0, O.I)({
               queryKey: ["AppRelevanceStore", "FriendsRecommended", e],
               queryFn: () => ne.LoadFriendsRecommendedApp(t, e),
@@ -742,11 +742,11 @@
               const i = a ? 10 : 1;
               for (
                 let t = 0;
-                t < m.data.accountids_recommended?.length && t < i;
+                t < d.data.accountids_recommended?.length && t < i;
                 t++
               ) {
                 const a = z.b.InitFromAccountID(
-                  m.data.accountids_recommended[t],
+                  d.data.accountids_recommended[t],
                 );
                 e.push(a.ConvertTo64BitString());
               }
@@ -764,13 +764,13 @@
                 rgOwnedFriends: n,
               };
             },
-            enabled: m.isSuccess && c.isSuccess,
+            enabled: d.isSuccess && c.isSuccess,
           });
         if (
           !h ||
           _.isLoading ||
           u.isLoading ||
-          m.isLoading ||
+          d.isLoading ||
           c.isLoading ||
           f.isLoading ||
           C.isLoading ||
@@ -797,7 +797,7 @@
           b = v.length > 0,
           j = c.data?.owns?.length,
           T = c.data?.in_wishlist?.length,
-          R = m.data?.accountids_recommended?.length;
+          R = d.data?.accountids_recommended?.length;
         let G = 0;
         return (
           j > 0 && G++,
@@ -861,7 +861,7 @@
                           }),
                         l &&
                           Boolean(C.data) &&
-                          (0, i.jsx)(me, { creatorInfo: C.data }),
+                          (0, i.jsx)(de, { creatorInfo: C.data }),
                         w >= 0 &&
                           (0, i.jsx)(ge, {
                             header: (0, I.um)(
@@ -881,7 +881,7 @@
                           }),
                         (0, i.jsx)(pe, {
                           bShowAvatars: a,
-                          count: m.data?.accountids_recommended?.length,
+                          count: d.data?.accountids_recommended?.length,
                           locToken: "#DiscoveryQueue_FriendsRecommended",
                           arrSteamIDs: S.data?.rgRecommendedFriends,
                         }),
@@ -911,7 +911,7 @@
           })
         );
       }
-      function me(e) {
+      function de(e) {
         const { creatorInfo: t } = e;
         if (!t) return null;
         let a;
@@ -1016,7 +1016,7 @@
             ({ data: e }) =>
               e &&
               (0, i.jsx)(
-                U.i8,
+                M.i8,
                 {
                   "data-miniprofile": "s" + e.m_steamid.ConvertTo64BitString(),
                   persona: e,
@@ -1036,7 +1036,7 @@
               className: se().FriendBlockCtn,
               "data-miniprofile": "s" + t,
               children: [
-                (0, i.jsx)(U.i8, {
+                (0, i.jsx)(M.i8, {
                   persona: a,
                   size: "Small",
                   statusPosition: "right",
@@ -1044,7 +1044,7 @@
                 (0, i.jsx)(q.D, {
                   className: se().PersonaStatus,
                   persona: a,
-                  eFriendRelationship: M._UC,
+                  eFriendRelationship: U._UC,
                   bIsSelf: !1,
                   strNickname: null,
                   bParenthesizeNicknames: !1,
@@ -1089,8 +1089,8 @@
             selected: o,
             fnFocused: l,
             eStoreDiscoveryQueueType: c,
-            storePageFilter: d,
-            bPreferDemoStorePage: m,
+            storePageFilter: m,
+            bPreferDemoStorePage: d,
             elVideo: u,
             elDetails: p,
             appAriaIDs: _,
@@ -1099,7 +1099,7 @@
           g = (0, D.Qn)(),
           C = (0, h.R7)(),
           S = C?.ownerWindow || window,
-          v = ve(y, c, d, m),
+          v = ve(y, c, m, d),
           { bIsIgnored: w, fnUpdateIgnored: A } = (0, Ce.TK)(t),
           { bIsWishlisted: b, fnUpdateWishlist: j } = (0, Ce.u4)(t),
           T = n.useRef(void 0);
@@ -1112,7 +1112,7 @@
           return console.warn("Error: missing store item for appid ", t), null;
         const N = { width: s || void 0, height: a || void 0 };
         return (0, i.jsxs)(r.Z, {
-          "aria-labelledby": (0, Q.q)(
+          "aria-labelledby": (0, B.q)(
             _.nameId,
             _.tagsId,
             _.reviewId,
@@ -1193,8 +1193,8 @@
             appAriaIDs: l,
           } = e,
           [c] = (0, f.t7)(t, Ce.Gy),
-          d = (0, xe.$5)(t),
-          { bIsIgnored: m, fnUpdateIgnored: u } = (0, Ce.TK)(t),
+          m = (0, xe.$5)(t),
+          { bIsIgnored: d, fnUpdateIgnored: u } = (0, Ce.TK)(t),
           { bIsWishlisted: h, fnUpdateWishlist: p } = (0, Ce.u4)(t),
           _ = ve(c, n, s, o),
           y = (0, D.Qn)(),
@@ -1233,7 +1233,7 @@
                       href: _,
                       children: c.GetName(),
                     }),
-                    (0, i.jsx)(B.N, { bSingleLineMode: !0, id: d }),
+                    (0, i.jsx)(Q.N, { bSingleLineMode: !0, id: m }),
                   ],
                 }),
                 (0, i.jsx)(Ae, {
@@ -1246,13 +1246,13 @@
                   children: (0, i.jsx)(Se.J, {
                     bShowTooltip: !0,
                     bTruncateTotalReviews: a,
-                    id: d,
+                    id: m,
                   }),
                 }),
                 (0, i.jsx)("div", {
                   id: l.relevanceId,
                   className: se().AppRelevanceCtn,
-                  children: (0, i.jsx)(de, {
+                  children: (0, i.jsx)(me, {
                     bHideDescription: y,
                     bShowAvatars: !a,
                     storeItem: c,
@@ -1272,7 +1272,7 @@
                     children: [
                       c.BHasDemo() &&
                         (0, i.jsx)(W.j, {
-                          id: d,
+                          id: m,
                           className: (0, x.A)(
                             se().QueueButton,
                             se().Primary,
@@ -1329,7 +1329,7 @@
                           focusable: !0,
                           className: (0, x.A)(
                             se().QueueButton,
-                            m && se().Active,
+                            d && se().Active,
                           ),
                           onClick: u,
                           children: (0, i.jsx)(g.NtH, {}),
@@ -1377,23 +1377,23 @@
         }
         return { appids: i, exhausted: s };
       }
-      function Qe(e) {
+      function Be(e) {
         const [t, a] = n.useState(!1),
-          s = (0, d.KV)();
+          s = (0, m.KV)();
         return (
           (0, n.useEffect)(() => {
             b.aI.Init(s), a(!0);
           }, [s]),
-          t ? (0, i.jsx)(Be, { ...e }) : null
+          t ? (0, i.jsx)(Qe, { ...e }) : null
         );
       }
-      function Be(e) {
+      function Qe(e) {
         const {
             eStoreDiscoveryQueueType: t,
             fnCloseModal: a,
             includeAppID: o,
             storePageFilter: c,
-            bPreferDemoStorePage: d,
+            bPreferDemoStorePage: m,
             bShowAOAutoPlayWarning: _,
           } = e,
           [y, f] = n.useState(0),
@@ -1401,13 +1401,13 @@
           [T, N] = n.useState(0),
           G = (0, h.R7)(),
           F = G?.ownerWindow || window,
-          Q = (0, u.ru)(Ge),
-          [B, P] = n.useState(0),
-          L = (0, m.b)();
-        (0, A.E)("ArrowLeft", () => M(!1), !0, !0),
-          (0, A.E)("Left", () => M(!1), !0, !0),
-          (0, A.E)("ArrowRight", () => M(!0), !0, !0),
-          (0, A.E)("Right", () => M(!0), !0, !0),
+          B = (0, u.ru)(Ge),
+          [Q, P] = n.useState(0),
+          L = (0, d.b)();
+        (0, A.E)("ArrowLeft", () => U(!1), !0, !0),
+          (0, A.E)("Left", () => U(!1), !0, !0),
+          (0, A.E)("ArrowRight", () => U(!0), !0, !0),
+          (0, A.E)("Right", () => U(!0), !0, !0),
           (0, A.E)("Escape", () => a?.(), !0, !0),
           (0, A.E)("Esc", () => a?.(), !0, !0);
         const E = n.useMemo(() => Boolean(F.innerWidth < Re), [F]),
@@ -1433,9 +1433,9 @@
         }, []),
           n.useEffect(() => {
             const e = O[y];
-            e != v && (e && e != Ne && L.AddImpression(e, Q), j(e));
-          }, [L, y, v, O, Q]);
-        const M = (e) => {
+            e != v && (e && e != Ne && L.AddImpression(e, B), j(e));
+          }, [L, y, v, O, B]);
+        const U = (e) => {
           const t = w.OQ(y + (e ? 1 : -1), 0, O.length - 1);
           t != y &&
             (f(t), Te("New selected index: ", t, " Prev selected index: ", y));
@@ -1453,7 +1453,7 @@
             O.length != T &&
               (N(O.length), O.length > T && O[y] == Ne && f(y + 1));
           }, [T, y, O]);
-        const [U] = n.useState(new Map()),
+        const [M] = n.useState(new Map()),
           q = (0, b.WX)(t, c),
           z = !(0, R.c5)() && y > 0,
           V = !(0, R.c5)() && y < O.length - 1,
@@ -1470,22 +1470,22 @@
               [i, s] = n.useState(0),
               [r, o] = n.useState(!1),
               [l, c] = n.useState(0),
-              d = n.useRef(0),
-              m = 50,
+              m = n.useRef(0),
+              d = 50,
               u = (e) => {
-                o(!0), (d.current = e.touches[0].clientX), s(0), c(0);
+                o(!0), (m.current = e.touches[0].clientX), s(0), c(0);
               },
               h = (e) => {
                 if (!r) return;
-                const t = e.touches[0].clientX - d.current;
-                s(t), c(i > m ? 1 : i < -m ? -1 : 0);
+                const t = e.touches[0].clientX - m.current;
+                s(t), c(i > d ? 1 : i < -d ? -1 : 0);
               },
               p = () => {
                 r &&
                   (o(!1),
-                  i > m
+                  i > d
                     ? e((e) => Math.max(e - 1, 0))
-                    : i < -m && e((e) => Math.min(e + 1, t - 1)),
+                    : i < -d && e((e) => Math.min(e + 1, t - 1)),
                   s(0),
                   c(0));
               };
@@ -1568,7 +1568,7 @@
                 (0, i.jsx)(r.Z, {
                   role: "button",
                   "aria-label": (0, I.we)("#Carousel_Next"),
-                  onClick: () => M(!1),
+                  onClick: () => U(!1),
                   className: (0, x.A)(
                     se().QueueNavArrow,
                     se().LeftArrow,
@@ -1579,7 +1579,7 @@
                 (0, i.jsx)(r.Z, {
                   role: "button",
                   "aria-label": (0, I.we)("#Carousel_Prev"),
-                  onClick: () => M(!0),
+                  onClick: () => U(!0),
                   className: (0, x.A)(
                     se().QueueNavArrow,
                     se().RightArrow,
@@ -1619,12 +1619,12 @@
                             index: y + e,
                             bShowMinimizedDisplay: E,
                             selectedIndex: y,
-                            bPreferDemoStorePage: Boolean(d),
-                            mapViewedAppCount: U,
+                            bPreferDemoStorePage: Boolean(m),
+                            mapViewedAppCount: M,
                             fnCloseModal: a,
                             fnLoadNextQueue: () => W(!1),
-                            fnAdvance: M,
-                            bSkipAppRequestPending: Boolean(0 != B),
+                            fnAdvance: U,
+                            bSkipAppRequestPending: Boolean(0 != Q),
                             showAOAutoPlayWarning: Boolean(_),
                           }),
                       },
@@ -1652,8 +1652,8 @@
             bShowMinimizedDisplay: o,
             selectedIndex: l,
             bPreferDemoStorePage: c,
-            mapViewedAppCount: d,
-            fnCloseModal: m,
+            mapViewedAppCount: m,
+            fnCloseModal: d,
             fnLoadNextQueue: u,
             fnAdvance: h,
             bSkipAppRequestPending: p,
@@ -1690,18 +1690,18 @@
           let o = 0;
           for (let e = r - 1; e >= 0 && s[e] !== Ne; e--) o++;
           return (
-            d.has(i) ||
-              d.set(i, b.aI.Get().GetTotalSkippedAppsForDiscoveryQueue(t, a)),
+            m.has(i) ||
+              m.set(i, b.aI.Get().GetTotalSkippedAppsForDiscoveryQueue(t, a)),
             (0, n.createElement)(Le, {
               ...e,
               key: l,
               selected: S,
               lastCard: l == s.length - 1,
               fnLoadNextQueue: u,
-              fnCloseModal: m,
+              fnCloseModal: d,
               summaryCardIndex: i,
               eStoreDiscoveryQueueType: t,
-              viewedAppCount: (d.get(i) || 0) + o,
+              viewedAppCount: (m.get(i) || 0) + o,
               fnFocused: C,
               fnAdvance: () => h(!0),
               bSkipAppRequestPending: p,
@@ -1739,8 +1739,8 @@
             summaryCardIndex: s,
             lastCard: o,
             selected: l,
-            fnLoadNextQueue: d,
-            storePageFilter: m,
+            fnLoadNextQueue: m,
+            storePageFilter: d,
             fnDisplaySummaryReward: h,
             viewedAppCount: y,
             fnFocused: f,
@@ -1762,7 +1762,7 @@
               .then(() => {
                 b.aI
                   .Get()
-                  .LoadSkippedApps(t, m)
+                  .LoadSkippedApps(t, d)
                   .then((e) => {
                     N(e.reduce((e, t) => (F.has(t) ? e + 1 : e), 0)),
                       G(
@@ -1774,12 +1774,12 @@
                       w(!0);
                   });
               });
-        }, [v, t, l, m, F]);
-        const [Q, B] = n.useState(!1),
-          P = (0, b.IH)(t, m),
+        }, [v, t, l, d, F]);
+        const [B, Q] = n.useState(!1),
+          P = (0, b.IH)(t, d),
           L = (0, S.m)("DiscoveryQueueSummary"),
           E = async () => {
-            o ? Q || (B(!0), await d(), L?.token?.reason || B(!1)) : g();
+            o ? B || (Q(!0), await m(), L?.token?.reason || Q(!1)) : g();
           };
         return (0, i.jsxs)(ke, {
           selected: l,
@@ -1879,13 +1879,13 @@
                       !P &&
                         (0, i.jsx)(r.Z, {
                           className: (0, x.A)(
-                            Q && se().Disabled,
+                            B && se().Disabled,
                             se().QueueButton,
                             se().Primary,
                             se().Wide,
                           ),
                           onClick: E,
-                          children: Q
+                          children: B
                             ? (0, I.we)("#Loading")
                             : (0, I.we)("#Button_Continue"),
                         }),
@@ -1907,9 +1907,9 @@
             fnFocused: l,
             bLoaded: c,
           } = e,
-          d = (0, u.aL)(D.TS.STORE_BASE_URL + "wishlist"),
-          m = (0, h.R7)(),
-          p = m?.ownerWindow || window,
+          m = (0, u.aL)(D.TS.STORE_BASE_URL + "wishlist"),
+          d = (0, h.R7)(),
+          p = d?.ownerWindow || window,
           _ = n.useRef(void 0);
         return (
           n.useEffect(() => {
@@ -1927,7 +1927,7 @@
               "#DiscoveryQueue_ViewWishlist",
             ),
             onOptionsButton: () => {
-              p.location.href = (0, k.NT)(d);
+              p.location.href = (0, k.NT)(m);
             },
             onOKActionDescription: (0, I.we)("#Button_Continue"),
             onOKButton: () => {
@@ -1966,29 +1966,29 @@
           return (0, i.jsx)(Ee, {});
         const o = a.data.num_items_earned,
           l = a.data.current_def.num_items_per_def,
-          d = l - o,
-          m = (o / l) * 100;
+          m = l - o,
+          d = (o / l) * 100;
         return (0, i.jsxs)(r.Z, {
           className: se().SaleRewardsCtn,
           children: [
-            (0, i.jsx)(T, { nPercent: m, size: 70, strokeWidth: 12 }),
+            (0, i.jsx)(T, { nPercent: d, size: 70, strokeWidth: 12 }),
             (0, i.jsxs)(r.Z, {
               className: se().RewardStatusCtn,
               children: [
                 (0, i.jsx)("div", {
                   className: se().SaleRewardAppTitle,
                   children: (0, I.we)(
-                    "#DiscoveryQueue_SaleStatus_Title" + (d ? "" : "_Complete"),
+                    "#DiscoveryQueue_SaleStatus_Title" + (m ? "" : "_Complete"),
                     (0, le.D)(o),
                     n.GetName(),
                   ),
                 }),
-                d > 0 &&
+                m > 0 &&
                   (0, i.jsx)("div", {
                     className: se().SaleRewardAppTitle,
                     children: (0, I.we)(
                       "#DiscoveryQueue_SaleStatus_Desc",
-                      (0, le.D)(d),
+                      (0, le.D)(m),
                       n.GetName(),
                     ),
                   }),
@@ -2007,108 +2007,97 @@
     },
     47554: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => g });
+      a.r(t), a.d(t, { default: () => f });
       var n = a(7850),
         i = a(90626),
-        s = a(12447),
-        r = a(76217),
-        o = a(43706),
-        l = a(39199),
-        c = a(55263),
-        d = a(95034),
+        s = a(76217),
+        r = a(43706),
+        o = a(39199),
+        l = a(55263),
+        c = a(95034),
         m = a(12155),
-        u = a(26749),
-        h = a(61859),
-        p = a(71109),
-        _ = a.n(p),
-        y = a(78327),
-        f = a(90511);
-      function g(e) {
+        d = a(26749),
+        u = a(61859),
+        h = a(71109),
+        p = a.n(h),
+        _ = a(78327),
+        y = a(90511);
+      function f(e) {
         const { appID: t } = e,
-          a = (0, u.G)(),
-          [p] = (0, d.QD)("inqueue", "" + o.QV.qy),
-          [g, C] = (0, i.useState)(!1),
-          [S] = (0, c.t7)(t, { include_assets: !0 }),
-          x = i.useRef(void 0);
-        i.useEffect(() => x.current?.Activate(!0), []);
-        const I = (0, y.Qn)(),
-          { eStoreDiscoveryQueueType: v, storePageFilter: w } =
+          a = (0, d.G)(),
+          [h] = (0, c.QD)("inqueue", "" + r.QV.qy),
+          [f, g] = (0, i.useState)(!1),
+          [C] = (0, l.t7)(t, { include_assets: !0 }),
+          S = (0, _.Qn)(),
+          { eStoreDiscoveryQueueType: x, storePageFilter: I } =
             i.useMemo(() => {
-              if (p?.length > 0) {
-                const e = p.split("_"),
+              if (h?.length > 0) {
+                const e = h.split("_"),
                   t = Number(e[0]);
                 let a;
                 return (
-                  e.length > 1 && (a = (0, l.bz)(e[1])),
+                  e.length > 1 && (a = (0, o.bz)(e[1])),
                   { eStoreDiscoveryQueueType: t, storePageFilter: a }
                 );
               }
               return {
-                eStoreDiscoveryQueueType: o.QV.qy,
+                eStoreDiscoveryQueueType: r.QV.qy,
                 storePageFilter: void 0,
               };
-            }, [p]),
-          { showDiscoveryQueue: A } = (0, f.GV)(v, {
+            }, [h]),
+          { showDiscoveryQueue: v } = (0, y.GV)(x, {
             includeAppID: t,
-            storePageFilter: w,
+            storePageFilter: I,
           }),
-          D = i.useCallback(() => {
-            C(!0);
+          w = i.useCallback(() => {
+            g(!0);
           }, []),
-          b = (0, l.WX)(v, w);
-        return a && S
-          ? g
+          A = (0, o.WX)(x, I);
+        return a && C
+          ? f
             ? null
-            : (0, n.jsx)(s.u, {
-                navTreeRef: x,
-                navID: "DiscoveryQueueAppWidget",
-                children: (0, n.jsxs)(r.Z, {
-                  focusable: !0,
-                  className: _().DiscoveryQueueWidgetCtn,
-                  onSecondaryButton: D,
-                  onOKButton: A,
-                  onOKActionDescription: (0, h.we)(
-                    "#DiscoveryQueue_ResumeWizard",
-                  ),
-                  onSecondaryActionDescription: (0, h.we)("#Button_Close"),
-                  children: [
-                    (0, n.jsxs)("div", {
-                      onClick: A,
-                      className: _().WidgetText,
-                      children: [
-                        (0, n.jsx)(m.mcU, {}),
-                        (0, h.we)("#DiscoveryQueue_ResumeWizard"),
-                        b?.length > 0 && ": " + b,
-                      ],
+            : (0, n.jsxs)(s.Z, {
+                focusable: !0,
+                className: p().DiscoveryQueueWidgetCtn,
+                onSecondaryButton: w,
+                onOKButton: v,
+                onOKActionDescription: (0, u.we)(
+                  "#DiscoveryQueue_ResumeWizard",
+                ),
+                onSecondaryActionDescription: (0, u.we)("#Button_Close"),
+                children: [
+                  (0, n.jsxs)("div", {
+                    onClick: v,
+                    className: p().WidgetText,
+                    children: [
+                      (0, n.jsx)(m.mcU, {}),
+                      (0, u.we)("#DiscoveryQueue_ResumeWizard"),
+                      A?.length > 0 && ": " + A,
+                    ],
+                  }),
+                  !S &&
+                    (0, n.jsx)("div", {
+                      className: p().CloseButton,
+                      onClick: w,
+                      children: (0, n.jsx)(m.X, {}),
                     }),
-                    !I &&
-                      (0, n.jsx)("div", {
-                        className: _().CloseButton,
-                        onClick: D,
-                        children: (0, n.jsx)(m.X, {}),
-                      }),
-                  ],
-                }),
+                ],
               })
           : null;
       }
     },
     6804: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => l });
+      a.r(t), a.d(t, { default: () => o });
       var n = a(7850),
-        i = a(12447),
-        s = a(43706),
-        r = a(96236),
-        o = a(38405);
-      function l() {
-        return (0, n.jsx)(r.K, {
+        i = a(43706),
+        s = a(96236),
+        r = a(38405);
+      function o() {
+        return (0, n.jsx)(s.K, {
           placeholderHeight: "200px",
           rootMargin: "0px 0px 100% 0px",
-          children: (0, n.jsx)(i.u, {
-            navID: "DiscoveryQueueWidget",
-            children: (0, n.jsx)(o.g, { eStoreDiscoveryQueueType: s.QV.qy }),
-          }),
+          children: (0, n.jsx)(r.g, { eStoreDiscoveryQueueType: i.QV.qy }),
         });
       }
     },
@@ -2122,8 +2111,8 @@
         o = a(26749),
         l = a(76217),
         c = a(78327),
-        d = a(51706),
-        m = a(738),
+        m = a(51706),
+        d = a(738),
         u = a(90511);
       function h(e) {
         const t = (0, o.G)(),
@@ -2131,8 +2120,8 @@
           h = i.useCallback(() => {
             c.iA.logged_in
               ? a()
-              : (0, m.pg)(
-                  (0, n.jsx)(d.KG, {
+              : (0, d.pg)(
+                  (0, n.jsx)(m.KG, {
                     onOK: () => {
                       window.location.href = `${c.TS.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
                     },

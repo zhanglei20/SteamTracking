@@ -1482,6 +1482,7 @@ A:active {
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
+  text-decoration: none;
 }
 ._1MwNf8slOG9lOvAeOshmuu:not(:last-child) {
   margin-right: 8px;
@@ -1690,6 +1691,7 @@ A:active {
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK ._22jEpNTfml-w_aRJV-fKDm {
   aspect-ratio: 16 / 9;
   flex-basis: 40%;
+  max-width: 350px;
 }
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK ._2qyLPxO8_nkczRvFiaju8N {
   max-height: unset;

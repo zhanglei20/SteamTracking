@@ -291,40 +291,44 @@
             hoverClassName: r,
             fnGetIDOverride: a,
             fnHoverState: n,
-            children: o,
+            disableScreenshots: o,
+            children: l,
           } = e,
-          l = s.useRef(null),
-          c = s.useCallback(
+          c = s.useRef(null),
+          m = s.useCallback(
             (e) => {
               const r = u(t);
               r &&
                 (n && n(!0),
                 window.GameHover &&
-                  window.GameHover(a ? a() : l.current, e, "global_hover", {
+                  (c.current &&
+                    o &&
+                    (c.current.dataset.hoverDisableScreenshots = "true"),
+                  window.GameHover(a ? a() : c.current, e, "global_hover", {
                     type: r,
                     id: (0, d.G$)(t).id,
                     v6: 1,
-                  }));
+                  })));
             },
-            [n, a, t],
+            [n, a, o, t],
           ),
-          m = s.useCallback(
+          h = s.useCallback(
             (e) => {
               u(t) &&
                 (n && e.relatedTarget && n(!1),
                 window.HideGameHover &&
-                  window.HideGameHover(a ? a() : l.current, e, "global_hover"));
+                  window.HideGameHover(a ? a() : c.current, e, "global_hover"));
             },
             [t, n, a],
           );
         return (0, i.jsx)("div", {
-          ref: l,
+          ref: c,
           className: r,
-          onMouseEnter: c,
-          onMouseLeave: m,
-          onFocus: c,
-          onBlur: m,
-          children: o,
+          onMouseEnter: m,
+          onMouseLeave: h,
+          onFocus: m,
+          onBlur: h,
+          children: l,
         });
       }
       function p(e) {
@@ -7706,7 +7710,7 @@
         Ht = r(63508),
         Kt = r.n(Ht),
         Xt = r(54728),
-        Jt = r(27666);
+        Jt = r(40414);
       class Yt {
         constructor() {
           (0, m.Gn)(this);
@@ -7949,10 +7953,10 @@
           n = t.winners_info?.length > 0 ? t.winners_info[0].accountid : 0,
           [o, l] = d.useState(n),
           c = (0, ir.L$)(
-            `${Jt.z.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${Jt.zU.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           m = (0, ir.L$)(
-            `${Jt.z.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${Jt.zU.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           u = er(t.giveaway_gid);
         let h =
@@ -13921,6 +13925,7 @@
               t.PlayMPD(
                 e.m_data.url,
                 e.m_data.hls_url,
+                void 0,
                 e.m_strCDNAuthUrlParameters,
               );
           } else {
@@ -15370,7 +15375,7 @@
         c = r(61336),
         d = r(78327),
         m = r(15392),
-        u = r(27666);
+        u = r(40414);
       function h(e) {
         const { gidEvent: t } = e,
           r = (0, n.RR)(t),
@@ -15390,8 +15395,8 @@
                 );
               if (t?.length > 0 && i?.length > 0)
                 return [
-                  u.z.GenerateURLFromHashAndExt(r.clanSteamID, t),
-                  u.z.GenerateURLFromHashAndExt(r.clanSteamID, i),
+                  u.zU.GenerateURLFromHashAndExt(r.clanSteamID, t),
+                  u.zU.GenerateURLFromHashAndExt(r.clanSteamID, i),
                 ];
             }
             return [null, null];

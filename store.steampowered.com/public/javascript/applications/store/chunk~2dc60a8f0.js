@@ -470,23 +470,24 @@
       r.d(e, { s: () => l });
       var p = r(7850),
         o = r(39479),
-        i = r(11526),
-        t = r(75659),
-        a = r(64238),
-        n = r.n(a),
+        i = r(64238),
+        t = r.n(i),
+        a = r(11526),
+        n = r(75659),
         c = r(68875);
       function l(s) {
-        const { as: e = "div", ref: r, ...t } = s,
-          a = (0, i.mz)({ ...t, className: n()(s.className, c.Flex) }, m),
-          l = !t.disabled && !!t.onClick,
-          _ = e;
+        const { as: e = "div", ref: r, navRef: i, ...n } = s,
+          l = (0, a.mz)({ ...n, className: t()(s.className, c.Flex) }, m),
+          _ = !n.disabled && !!n.onClick,
+          d = e;
         return (0, p.jsx)(o.J, {
-          focusable: l,
-          children: (0, p.jsx)(_, { ref: r, ...a }),
+          focusable: _,
+          navRef: i,
+          children: (0, p.jsx)(d, { ref: r, ...l }),
         });
       }
       const m = [
-        ...t.h,
+        ...n.h,
         {
           prop: "direction",
           responsive: !0,

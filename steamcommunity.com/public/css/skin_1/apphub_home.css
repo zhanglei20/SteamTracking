@@ -886,8 +886,4 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 		width: auto;
 		float: none;
 	}
-
-	html.responsive .leftcol {
-		max-width: 640px;
-	}
 }

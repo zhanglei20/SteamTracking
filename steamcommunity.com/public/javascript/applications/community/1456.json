@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Filter berdasarkan game...",
     "AdvancedSearch_BetaTag": "Fitur beta - Berikan masukan",
     "AdvancedSearch_TextSearch_Tooltip": "Cari nama item di seluruh Pasar...",
-    "AdvancedSearch_Beta_OptOut": "Ganti ke filter lama",
     "AdvancedSearch_CSContainers_Tooltip": "Peti Senjata, Kapsul Stiker, Paket Suvenir, dll.",
     "Header_MarketTitle": "Pasar Komunitas Steam",
     "Header_MarketDescription": "Jual-beli item dengan anggota komunitas untuk menambahkan Saldo Steam Wallet",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Saat ini akunmu terkunci. Informasi terkait penguncian ini dapat dilihat dengan mengeklik tombol bar merah yang terlihat di bagian pojok kanan atas saat masuk ke Steam client.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "Untuk mencabut pembatasan ini...",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "Saat ini akunmu sedang dalam masa ban pertukaran.",
+    "Economy_Market_TopLevelReason_Unknown": "Akun ini tidak dapat menggunakan Pasar Komunitas Steam saat ini.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Durasi ban pertukaran bisa berlaku untuk sementara waktu sampai permanen. Silakan klik tombol bar merah yang terlihat di bagian pojok kanan atas saat masuk ke Steam client untuk melihat durasi waktu ban pertukaran tersebut.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Akunmu di-ban dari melakukan pertukaran. Silakan klik tombol bar merah yang terlihat di bagian pojok kanan atas saat masuk ke Steam client untuk melihat durasi waktu ban pertukaran tersebut.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Info lebih lanjut...",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Kamu harus menunggu sampai Steam Guard telah diaktifkan di akunmu selama 15 hari. Bantuan Steam tidak dapat mencabut pembatasan ini.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Akunmu harus dilindungi oleh Steam Guard setidaknya selama %1$s hari.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Kamu harus mengaktifkan Steam Guard di dalam akunmu. Pastikan bahwa email-mu sudah diverifikasi dan kamu login setidaknya dua kali ke akunmu setelah mengaktifkan Steam Guard.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Akunmu harus dilindungi oleh Steam Guard setidaknya selama %1$s hari."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Akunmu harus dilindungi oleh Steam Guard setidaknya selama %1$s hari.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Jika tidak ada hal lain yang membatasi aksesmu, kamu akan dapat menggunakan Pasar Komunitas pada %1$s",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Akunmu tidak dapat mengakses fitur pertukaran dan pasar untuk sementara karena adanya waktu jeda."
 }

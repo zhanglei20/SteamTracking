@@ -475,12 +475,15 @@ a.games_list_tab:hover {
 
 
 
+#context_selector, .filter_ctn, .view_inventory_page {
+	box-sizing: border-box;
+	padding-inline: 10px;
+	width: 100%;
+}
+
 .view_inventory_page {
+	padding-block: 10px;
 	position: relative;
-	background-color: #1c1e21;
-	padding: 11px;
-	width: 884px;
-	margin-left: 6px;
 }
 
 .view_inventory_page .inventory_page_left {
@@ -489,7 +492,7 @@ a.games_list_tab:hover {
 
 .view_inventory_page .inventory_page_right {
 	float: right;
-	width: 350px;
+	width: 370px;
 	position: relative;
 }
 
@@ -528,18 +531,8 @@ a.games_list_tab:hover {
 
 
 /* filter control */
-.filter_ctn {
-	margin-bottom: 8px;
-	margin-left: 12px;
-}
-.filter_label, .filter_control_ctn {
-	float: left;
-	margin-right: 10px;
-	line-height: 32px;
-	height: 32px;
-}
-#filter_control {
-	width: 366px;
+.filter_tag_options {
+	margin-inline: 10px;
 }
 
 .econ_tag_filter_category {
@@ -553,71 +546,21 @@ a.games_list_tab:hover {
 }
 
 #context_selector {
-	margin-left: 12px;
 	margin-bottom: 12px;
 }
 
-#contextselect {
-	background-color: #000000;
-	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/context_arrow.png' );
-	background-repeat: no-repeat;
-	background-position: right top;
-	border: 1px solid #676767;
-	cursor: pointer;
-	display: block;
-	padding: 0;
-	text-align: start;
-}
-
-#contextselect.focus {
-	background-position: right bottom;
-}
-
-#contextselect, #contextselect_options_contexts {
+#contextselect_trigger {
 	width: 430px;
 }
 
-#contextselect_options_contexts {
-	border-bottom: none;
-}
-
-#contexts {
-	border-bottom: 1px solid #707070;
-}
-
-#contextselect_options {
-	padding-left: 1px;
-}
-
-.context_name {
-	position: relative;
+html:not(.GamepadMode) #contextselect_trigger {
+	background-color: #000000;
+	border: 1px solid #676767;
 	font-size: 26px;
-	line-height: 35px;
-	height: 35px;
 	font-weight: bold;
-	color: #ffffff;
-	padding-left: 12px;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	line-height: 35px;
+	padding-inline: 15px;
 }
-
-#contextselect .context_name {
-	padding-right: 37px;
-}
-
-#contextselect_options .context_name {
-	color: #cac9c9;
-	border-bottom: 1px solid #6c6c6c;
-	cursor: default;
-}
-
-#contextselect_options .context_name:hover {
-	background-color: #212d3d;
-	color: #ffffff;
-}
-
-
 
 body.clienthoverpage {
 	font-family:Arial, Helvetica, Verdana, sans-serif;
@@ -1259,10 +1202,10 @@ body.migrated_profile_page .inventory_rightnav {
 
 @media screen and (max-width: 910px) {
 
-	html.responsive .view_inventory_page {
+	html.responsive #context_selector, html.responsive .filter_ctn, html.responsive .view_inventory_page {
 		width: auto;
 		margin-left: 0;
-		padding: 5px 1%;
+		padding-inline: 1%;
 	}
 
 	html.responsive .view_inventory_page .inventory_page_right {
@@ -1307,16 +1250,6 @@ body.migrated_profile_page .inventory_rightnav {
 		overflow-x: auto;
 	}
 
-	html.responsive .filter_ctn .filter_control_ctn {
-		overflow: hidden;
-		float: none;
-	}
-
-	html.responsive .filter_ctn.inventory_filters #filter_control {
-		width: 96%;
-		max-width: 363px;
-	}
-
 	html.responsive .view_inventory_page .inventory_ctn {
 		overflow: visible;
 		width: auto;
@@ -1347,14 +1280,6 @@ body.migrated_profile_page .inventory_rightnav {
 
 	html.responsive .item img:not(.item_throbber) {
 		width: 100%;
-	}
-}
-
-@media screen and (max-width: 475px )
-{
-
-	html.responsive .filter_ctn .filter_control_ctn {
-		clear: left;
 	}
 }
 

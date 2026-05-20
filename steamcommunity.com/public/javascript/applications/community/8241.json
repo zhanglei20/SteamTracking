@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Khusus Valve",
     "moderation_escalationlevel_supervisor_desc": "Pengawas Diperlukan",
+    "moderation_escalation_escalationnote": "Catatan eskalasi:",
     "moderation_chatmetadata_deleted": "Metadata yang terkait dengan laporan obrolan ini telah dihapus karena sudah usang (hanya disimpan selama ~21 hari).",
     "moderation_chatmetadata_futurelogcollection": "Log obrolan ini dapat memuat pesan tambahan yang dikirim setelah laporan masuk dalam %1$s",
     "moderation_resolutionaction_removed": "Hapus konten yang dilaporkan",

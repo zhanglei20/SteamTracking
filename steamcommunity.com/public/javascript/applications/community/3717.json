@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Filtrar por jogo...",
     "AdvancedSearch_BetaTag": "Funcionalidade beta - Dá-nos a tua opinião",
     "AdvancedSearch_TextSearch_Tooltip": "Procurar em nomes de itens no Mercado...",
-    "AdvancedSearch_Beta_OptOut": "Mudar para filtros antigos",
     "AdvancedSearch_CSContainers_Tooltip": "Caixas de armas, cápsulas de autocolantes, brindes, etc.",
     "Header_MarketTitle": "Mercado da Comunidade Steam",
     "Header_MarketDescription": "Compra e vende itens a membros da comunidade com os fundos da Carteira Steam",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "A tua conta está atualmente bloqueada. Informações sobre esta situação podem ser encontradas ao clicar na barra vermelha apresentada no canto superior direito da aplicação Steam, enquanto tiveres a sessão iniciada.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "Para remover esta restrição...",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "A tua conta está banida do sistema de trocas.",
+    "Economy_Market_TopLevelReason_Unknown": "De momento, esta conta não pode usar o Mercado da Comunidade Steam.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "O banimento do sistema de trocas pode ser temporário ou permanente. Para saberes quando esta restrição vai terminar, clica na barra vermelha apresentada no canto superior direito da aplicação Steam, enquanto tiveres a sessão iniciada.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "A tua conta foi banida do sistema de trocas Steam. Para saberes quando esta restrição vai terminar, clica na barra vermelha apresentada no canto superior direito da aplicação Steam, enquanto tiveres a sessão iniciada.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Mais informações...",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Tens de esperar até que passem 15 dias após a ativação do Steam Guard na tua conta. O Suporte Steam não pode remover esta restrição.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "A tua conta tem de estar protegida pelo Steam Guard há pelo menos %1$s dias.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Tens de ativar o Steam Guard na tua conta. Certifica-te de que o teu endereço de e-mail foi confirmado pelo Steam e de que iniciaste sessão na tua conta duas vezes após a ativação do Steam guard.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "A tua conta tem de estar protegida pelo Steam Guard há pelo menos %1$s dias."
+    "Economy_Market_HeaderTip_NoSteamGuard": "A tua conta tem de estar protegida pelo Steam Guard há pelo menos %1$s dias.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Desde que não ocorra mais nada que restrinja o teu acesso, poderás usar o Mercado da Comunidade a %1$s.",
+    "Economy_Market_TopLevelReason_TradeCooldown": "A tua conta está temporariamente impedida de trocar e de usar o Mercado."
 }

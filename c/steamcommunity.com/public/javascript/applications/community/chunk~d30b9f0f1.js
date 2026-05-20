@@ -1250,7 +1250,7 @@
                     section_type: "items",
                     smart_section: !0,
                     smart_section_type: "all_released",
-                    default_label: "#Sale_default_label_24",
+                    default_label: "#Sale_default_label_281",
                     capsules_per_row_array: [1],
                     carousel_rows: 1,
                     single_item_style: "library",
@@ -2880,9 +2880,6 @@
         }
         GetImageURL(_, _ = _.Bhc, _ = _._.full) {
           return this.m_curModel.GetImageURL(_, _, _);
-        }
-        GetImageURLWithFallback(_, _, _ = _._.full) {
-          return this.m_curModel.GetImageURLWithFallback(_, _, _);
         }
         GetImageHashAndExt(_, _) {
           return this.m_curModel.GetImageHashAndExt(_, _);
@@ -15893,6 +15890,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         BHasSolrEvent(_) {
@@ -16361,15 +16359,10 @@
                 eventModel: _,
                 route: _._.k_eView,
                 children: [
-                  _
-                    ? (0, _.jsx)("img", {
-                        style: {
-                          height: "40px",
-                          marginRight: "8px",
-                        },
-                        src: _.GetImageURLWithFallback("capsule", _.Bhc),
-                      })
-                    : null,
+                  _ &&
+                    (0, _.jsx)(_, {
+                      event: _,
+                    }),
                   _ ? _.GetNameWithFallback(_.Bhc) : null,
                   "  (",
                   _ ? _.AnnouncementGID : null,
@@ -16388,6 +16381,17 @@
             },
           })
         );
+      }
+      function _(_) {
+        const { event: _ } = _,
+          _ = (0, _._)(_, "capsule", _.Bhc);
+        return (0, _.jsx)("img", {
+          style: {
+            height: "40px",
+            marginRight: "8px",
+          },
+          src: _,
+        });
       }
       const _ = (0, _._)((_) => {
         var _;
@@ -25606,51 +25610,56 @@
             sErrorMessage: _,
             eResult: _,
           } = (0, _._)(_, _),
-          _ = (0, _._)();
-        if (_)
-          return (0, _.jsx)(_._, {
-            string: (0, _._)("#Sale_CrossPromoSale_Loading"),
-            size: "small",
-          });
-        if (_ && _ != _._)
-          return (0, _.jsxs)("div", {
-            children: [(0, _._)("#EventDisplay_Share_Failure"), " ", _],
-          });
-        const _ =
-          null == _ ? void 0 : _.GetImageURLWithFallback("product_banner", _);
-        return (0, _.jsxs)("div", {
-          children: [
-            _
-              ? (0, _.jsx)("div", {
-                  children: (0, _._)("#Sale_CrossPromoSale_Linked"),
-                })
-              : (0, _.jsx)("div", {
-                  children: (0, _._)("#Sale_CrossPromoSale_LinkIncomplete"),
-                }),
-            _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#Sale_CrossPromoSale_PageTitle",
-                        _.GetNameWithFallback(_),
-                      ),
-                    }),
-                    _
-                      ? (0, _.jsx)("img", {
-                          src: _,
-                          className: _.ImageFit,
-                        })
-                      : (0, _.jsx)("div", {
-                          children: (0, _._)("#Sale_CrossPromoSale_NoImage"),
-                        }),
-                  ],
-                })
-              : (0, _.jsx)("div", {
-                  children: (0, _._)("#Sale_CrossPromoSale_Linked_notvisible"),
-                }),
-          ],
-        });
+          _ = (0, _._)(),
+          _ = (0, _._)(_, "product_banner", _);
+        return _
+          ? (0, _.jsx)(_._, {
+              string: (0, _._)("#Sale_CrossPromoSale_Loading"),
+              size: "small",
+            })
+          : _ && _ != _._
+            ? (0, _.jsxs)("div", {
+                children: [(0, _._)("#EventDisplay_Share_Failure"), " ", _],
+              })
+            : (0, _.jsxs)("div", {
+                children: [
+                  _
+                    ? (0, _.jsx)("div", {
+                        children: (0, _._)("#Sale_CrossPromoSale_Linked"),
+                      })
+                    : (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#Sale_CrossPromoSale_LinkIncomplete",
+                        ),
+                      }),
+                  _
+                    ? (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#Sale_CrossPromoSale_PageTitle",
+                              _.GetNameWithFallback(_),
+                            ),
+                          }),
+                          _
+                            ? (0, _.jsx)("img", {
+                                src: _,
+                                className: _.ImageFit,
+                              })
+                            : (0, _.jsx)("div", {
+                                children: (0, _._)(
+                                  "#Sale_CrossPromoSale_NoImage",
+                                ),
+                              }),
+                        ],
+                      })
+                    : (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#Sale_CrossPromoSale_Linked_notvisible",
+                        ),
+                      }),
+                ],
+              });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -27365,7 +27374,9 @@
                 closeModal: _,
                 onOK: () => {
                   null !== _ &&
-                    ((_.product_configs = _.filter((_, _) => _ !== _)), _());
+                    ((_.product_configs = _.filter((_, _) => _ !== _)),
+                    (_.package_to_config_tuple = []),
+                    _());
                 },
                 onCancel: () => _(null),
                 strDescription: _._.Localize("#Dialog_AreYouSure"),
@@ -33965,7 +33976,7 @@
             this.m_section.localized_image.length > _ &&
             (this.m_section.localized_image[_] = null);
         }
-        GetImageURLWithFallback(_, _) {
+        GetEmailImageURLWithFallback(_, _) {
           let _ = this.GetImageHashAndExtWithFallback(_);
           return _ ? _._.GenerateURLFromHashAndExt(_, _) : void 0;
         }
@@ -41308,6 +41319,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
@@ -41316,6 +41328,24 @@
             ? ""
             : (0, _._)(_.default_label))
         );
+      }
+      function _(_) {
+        const { event: _, elTitle: _, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _ ? "product_mobile_banner" : "product_banner", _);
+        return (0, _.jsxs)("div", {
+          className: _().SaleImageCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().SaleImageHelper,
+              children: _,
+            }),
+            (0, _.jsx)("img", {
+              src: _,
+              alt: _,
+            }),
+          ],
+        });
       }
       const _ = (0, _._)((_) => {
         var _;
@@ -41327,7 +41357,6 @@
             title: _,
             subtitle: _,
           } = _,
-          _ = (0, _._)(),
           _ = (0, _._)(),
           { eventModel: _ } = (0, _._)(
             _.sale_page_cross_promo_clan_account_id,
@@ -41341,21 +41370,9 @@
             className: (0, _._)(_().SaleSectionHeader, "SaleSectionHeader"),
             style: _(_, _, _),
             children: (null == _ ? void 0 : _.BHasSomeImage("product_banner"))
-              ? (0, _.jsxs)("div", {
-                  className: _().SaleImageCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().SaleImageHelper,
-                      children: _,
-                    }),
-                    (0, _.jsx)("img", {
-                      src: _.GetImageURLWithFallback(
-                        _ ? "product_mobile_banner" : "product_banner",
-                        _,
-                      ),
-                      alt: _,
-                    }),
-                  ],
+              ? (0, _.jsx)(_, {
+                  ..._,
+                  elTitle: _,
                 })
               : _,
           }),
@@ -41788,6 +41805,7 @@
                     (0, _.jsx)(_._, {
                       _: _,
                       bMinimizePlatforms: _,
+                      bHideWindows: !0,
                     }),
                   !_ &&
                     (0, _.jsx)("span", {
@@ -41902,6 +41920,7 @@
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
+            bUseDiv: !_,
           });
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
@@ -42001,6 +42020,7 @@
         const {
             _: _,
             bHideStatusBanners: _,
+            bUseDiv: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -42016,11 +42036,11 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        const _ = !!_;
+        const _ = _
+            ? void 0
+            : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
+          _ = _ ? "div" : _._,
+          _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -42028,8 +42048,8 @@
                 [_().TwoWidthCtn]: _,
               }),
               children: [
-                (0, _.jsxs)(_._, {
-                  href: _ ? void 0 : _,
+                (0, _.jsxs)(_, {
+                  href: _,
                   style: {
                     display: "block",
                     cursor: "pointer",
@@ -42038,7 +42058,6 @@
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
-                  onClick: _,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,

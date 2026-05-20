@@ -121,7 +121,7 @@
     chunkid: (module) => {
       module.exports = {
         CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
-        GrowOnHoverSmall: "YoLbM_PjSF7Lk-_QYDToT",
+        GrowOnHoverImplicit: "_23t3208XMavZer6IZIxzSb",
         GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
       };
     },
@@ -451,6 +451,66 @@
             _ && __webpack_require__(_);
           },
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_) {
+        const _ = await fetch(_, {
+          method: "GET",
+        });
+        if (!_._) throw new Error(`Server returned ${_.status}`);
+        const _ = await _.json();
+        return _.success != _._ ? null : _;
+      }
+      function _() {
+        return "undefined" != typeof window && "undefined" != typeof self
+          ? self.origin
+          : "ssr_server";
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
+      function _(_, _) {
+        return {
+          queryKey: _(_),
+          queryFn: async () => {
+            const _ = await (async function (_) {
+              const _ = _._.InitFromClanID(_);
+              return _(
+                `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
+              );
+            })(_);
+            if (_) {
+              _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
+                _.vanity_url &&
+                  _.setQueryData(_(_.vanity_url), _.clanAccountID);
+              const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
+              return _;
+            }
+            return null;
+          },
+          enabled: !!_,
+        };
+      }
+      function _(_) {
+        return ["clantoclaninfo", _];
+      }
+      function _(_) {
+        return ["apptoclanid", _];
+      }
+      function _(_) {
+        return ["vanitytoclanid", _];
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4438,57 +4498,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_) {
-        const _ = await fetch(_, {
-          method: "GET",
-        });
-        if (!_._) throw new Error(`Server returned ${_.status}`);
-        const _ = await _.json();
-        return _.success != _._ ? null : _;
-      }
-      function _() {
-        return "undefined" != typeof window && "undefined" != typeof self
-          ? self.origin
-          : "ssr_server";
-      }
-      function _(_) {
-        const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                const _ = await (async function (_) {
-                  const _ = _._.InitFromClanID(_);
-                  return _(
-                    `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
-                  );
-                })(_);
-                if (_) {
-                  _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
-                    _.vanity_url &&
-                      _.setQueryData(_(_.vanity_url), _.clanAccountID);
-                  const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
-                  return _;
-                }
-                return null;
-              },
-              enabled: !!_,
-            };
-          })(_, _),
-        );
-      }
-      function _(_) {
-        return ["clantoclaninfo", _];
-      }
-      function _(_) {
-        return ["apptoclanid", _];
-      }
-      function _(_) {
-        return ["vanitytoclanid", _];
-      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _._)({
@@ -4550,7 +4560,7 @@
             styleOverride: _,
             followType: _,
           } = _,
-          { data: _ } = _(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = _(_);
         return _ && _
           ? (0, _.jsxs)("div", {
@@ -8266,34 +8276,46 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, strClassName: _, bMinimizePlatforms: _ } = _,
+        const {
+            _: _,
+            strClassName: _,
+            bMinimizePlatforms: _,
+            bHideWindows: _,
+          } = _,
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         if (_) {
-          let _ =
-            _?.windows &&
-            (0, _.jsx)("span", {
-              title: _._.Localize("#Platform_Windows"),
-              children: (0, _.jsx)(_.Xz0, {
-                "aria-label": _._.Localize("#Platform_Windows"),
-              }),
-            });
+          let _ = _
+            ? null
+            : _?.windows &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Windows"),
+                children: (0, _.jsx)(_.Xz0, {
+                  "aria-label": _._.Localize("#Platform_Windows"),
+                }),
+              });
           return (
-            (0, _._)() && _?.mac
+            ((0, _._)() || (0, _._)() || (0, _._)()) && _?.steamos_linux
               ? (_ = (0, _.jsx)("span", {
-                  title: _._.Localize("#Platform_Mac"),
-                  children: (0, _.jsx)(_.kPc, {
-                    "aria-label": _._.Localize("#Platform_Mac"),
-                  }),
-                }))
-              : ((0, _._)() || (0, _._)() || (0, _._)()) &&
-                _?.steamos_linux &&
-                (_ = (0, _.jsx)("span", {
                   title: _._.Localize("#Platform_Linux"),
                   children: (0, _.jsx)(_.Qte, {
                     "aria-label": _._.Localize("#Platform_Linux"),
                   }),
-                })),
+                }))
+              : (0, _._)() && _?.mac
+                ? (_ = (0, _.jsx)("span", {
+                    title: _._.Localize("#Platform_Mac"),
+                    children: (0, _.jsx)(_.kPc, {
+                      "aria-label": _._.Localize("#Platform_Mac"),
+                    }),
+                  }))
+                : _.vr_support?.vrhmd &&
+                  (_ = (0, _.jsx)("span", {
+                    title: _._.Localize("#Platform_VR"),
+                    children: (0, _.jsx)(_._, {
+                      "aria-label": _._.Localize("#Platform_VR"),
+                    }),
+                  })),
             _
               ? (0, _.jsx)("span", {
                   className: (0, _._)(_().CapsulePlatform, _),
@@ -8305,7 +8327,8 @@
         return (0, _.jsxs)("span", {
           className: (0, _._)(_().CapsulePlatform, _),
           children: [
-            _.windows &&
+            !_ &&
+              _.windows &&
               (0, _.jsx)("span", {
                 title: _._.Localize("#Platform_Windows"),
                 children: (0, _.jsx)(_.Xz0, {
@@ -8856,7 +8879,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, active: _, bIsHoverMode: _, eGrowOnHover: _ } = _,
+        const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = _.useRef(0),
           _ = _.useRef(null);
@@ -8880,8 +8903,8 @@
             : null;
         let _;
         switch (_) {
-          case _.k_ETrailerGrowAmount_Small:
-            _ = _().GrowOnHoverSmall;
+          case _.k_ETrailerGrowAmount_Implicit:
+            _ = _().GrowOnHoverImplicit;
             break;
           case _.k_ETrailerGrowAmount_Medium:
             _ = _().GrowOnHoverMedium;
@@ -8913,8 +8936,8 @@
       }
       !(function (_) {
         (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
-          (_[(_.k_ETrailerGrowAmount_Small = 1)] =
-            "k_ETrailerGrowAmount_Small"),
+          (_[(_.k_ETrailerGrowAmount_Implicit = 1)] =
+            "k_ETrailerGrowAmount_Implicit"),
           (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
             "k_ETrailerGrowAmount_Medium");
       })(_ || (_ = {}));

@@ -717,23 +717,24 @@
       s.d(r, { s: () => l });
       var t = s(7850),
         o = s(39479),
-        n = s(11526),
-        i = s(75659),
-        p = s(64238),
-        a = s.n(p),
+        n = s(64238),
+        i = s.n(n),
+        p = s(11526),
+        a = s(75659),
         c = s(68875);
       function l(e) {
-        const { as: r = "div", ref: s, ...i } = e,
-          p = (0, n.mz)({ ...i, className: a()(e.className, c.Flex) }, m),
-          l = !i.disabled && !!i.onClick,
-          d = r;
+        const { as: r = "div", ref: s, navRef: n, ...a } = e,
+          l = (0, p.mz)({ ...a, className: i()(e.className, c.Flex) }, m),
+          d = !a.disabled && !!a.onClick,
+          _ = r;
         return (0, t.jsx)(o.J, {
-          focusable: l,
-          children: (0, t.jsx)(d, { ref: s, ...p }),
+          focusable: d,
+          navRef: n,
+          children: (0, t.jsx)(_, { ref: s, ...l }),
         });
       }
       const m = [
-        ...i.h,
+        ...a.h,
         {
           prop: "direction",
           responsive: !0,
@@ -1046,7 +1047,7 @@
         w7: () => m,
         mz: () => p,
       });
-      var t = s(96678),
+      var t = s(10430),
         o = s(55348);
       const n = {
         0: !0,
@@ -1147,7 +1148,7 @@
     55348: (e, r, s) => {
       "use strict";
       s.d(r, { I: () => n, n: () => i });
-      var t = s(96678);
+      var t = s(10430);
       const o = t.IE.reduce((e, r, s) => ((e[r] = s), e), {});
       function n(e, r) {
         if ("object" != typeof e) return e;

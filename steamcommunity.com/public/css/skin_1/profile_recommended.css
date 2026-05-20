@@ -248,19 +248,10 @@ html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
 	position: relative;
 }
 
-.review_page_content #rightContents {
-	padding: 0;
-}
-
 @media screen and (max-width: 910px)
 {
 	html.responsive #leftContents {
 		width: auto;
 		float: none;
-	}
-
-	html.responsive #rightContents {
-		float: none;
-		width: auto;
 	}
 }

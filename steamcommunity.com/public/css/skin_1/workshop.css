@@ -173,11 +173,11 @@ a:hover {
 }
 
 #profileBlock {
-	margin: 5px 0px 0px 0px;
-	flex-grow: 1;
-	max-width: 638px;
 	display: flex;
+	flex: 1 0 0;
 	flex-direction: column;
+	margin: 5px 0px 0px 0px;
+	min-width: 0;
 	padding-bottom: 7px;
 }
 
@@ -333,10 +333,6 @@ a:hover {
 #profileBlock p.headlineSub {
 	color: #8F98A0;
 	font-size: 14px;
-}
-
-.browsePagePadding
-{
 }
 
 .general_btn {

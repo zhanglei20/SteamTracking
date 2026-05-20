@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "按游戏筛选…",
     "AdvancedSearch_BetaTag": "测试版功能 - 提供反馈",
     "AdvancedSearch_TextSearch_Tooltip": "搜索市场物品名称…",
-    "AdvancedSearch_Beta_OptOut": "切换至旧版筛选器",
     "AdvancedSearch_CSContainers_Tooltip": "武器箱、印花胶囊、纪念包等",
     "Header_MarketTitle": "Steam 社区市场",
     "Header_MarketDescription": "用 Steam 钱包资金与社区成员进行物品买卖。",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "您的帐户目前已被锁定。您可在登录 Steam 客户端后，点击右上角显示的红色条框查看有关本次锁定的信息。",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "要解除此限制…",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "您的帐户目前已受到交易封禁。",
+    "Economy_Market_TopLevelReason_Unknown": "此帐户目前不能使用 Steam 社区市场。",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "交易封禁可能是暂时的，也可能是永久的。请您在登录 Steam 客户端后，点击右上角显示的红色条框查看本次交易封禁的到期时间。",
     "Economy_Market_HeaderTip_AccountTradeBanned": "您的帐户已受到交易封禁。请您在登录 Steam 客户端后，点击右上角显示的红色条框查看本次交易封禁的到期时间。",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "更多信息…",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "您必须等待 Steam 令牌在您的帐户中启用满 15 天。Steam 客服无法移除此限制。",
     "Economy_Market_TopLevelReason_NoSteamGuard": "您的帐户必须已受 Steam 令牌保护至少 %1$s 天。",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "您必须在您的帐户中启用 Steam 令牌。请确保您已验证过电子邮件，且在启用 Steam 令牌后已登录帐户两次。",
-    "Economy_Market_HeaderTip_NoSteamGuard": "您的帐户必须已受 Steam 令牌保护至少 %1$s 天。"
+    "Economy_Market_HeaderTip_NoSteamGuard": "您的帐户必须已受 Steam 令牌保护至少 %1$s 天。",
+    "Economy_Market_HeaderTip_TimeCanUse": "如果没有其他因素限制您的访问，您将可以在 %1$s使用社区市场。",
+    "Economy_Market_TopLevelReason_TradeCooldown": "您的帐户正处于交易和市场功能的暂时交易冷却期。"
 }

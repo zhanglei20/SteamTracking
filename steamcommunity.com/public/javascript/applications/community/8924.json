@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Vain Valve",
     "moderation_escalationlevel_supervisor_desc": "Valvoja vaaditaan",
+    "moderation_escalation_escalationnote": "Eskalointia koskeva kommentti:",
     "moderation_chatmetadata_deleted": "Chatista tehtyyn ilmiantoon liittyvät metatiedot on poistettu niiden iän vuoksi. Tietoja säilytetään vain noin 21 päivän ajan.",
     "moderation_chatmetadata_futurelogcollection": "Keskustelulokin voi päivittää %1$s tehdyn ilmiannon jälkeen lähetetyillä viesteillä",
     "moderation_resolutionaction_removed": "Poista ilmiannettu sisältö",

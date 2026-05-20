@@ -331,8 +331,8 @@ function TradePageSelectNoInventory( user )
 {
 	Filter.ApplyFilter( '' );
 	HideTagFilters();
-	$('filter_tag_show').hide();
-	$('filter_tag_hide').hide();
+	$('#filter_tag_show').hide();
+	$('#filter_tag_hide').hide();
 	$('inventories').childElements().invoke( 'hide' );
 	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'https://community.fastly.steamstatic.com/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
 }
@@ -1117,6 +1117,7 @@ function EnsureSufficientTradeSlots( bYourSlots, cSlotsInUse, cCurrencySlotsInUs
 		{
 			var element = $(prefix + i );
 			element.id='';
+			element.hide();
 			$(elSlotContainer.parentNode).appendChild( element.remove() );
 			rgElementsToRemove.push( element );
 		}

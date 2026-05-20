@@ -35504,21 +35504,6 @@ var CLSTAMP = "steamdb";
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  is_steam_box_deprecated: {
-                    _: 99,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  is_steam_deck_deprecated: {
-                    _: 107,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  is_tesla_deprecated: {
-                    _: 110,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
                   gaming_device_type: {
                     _: 111,
                     _: _._.readUint32,
@@ -42868,7 +42853,7 @@ var CLSTAMP = "steamdb";
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.selected_subject_type || _._(_._()),
+            _.prototype.subject || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static sm_m;
@@ -42879,11 +42864,6 @@ var CLSTAMP = "steamdb";
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  selected_subject_type: {
-                    _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
                   subject: {
                     _: 2,
                     _: _,
@@ -43859,6 +43839,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  note: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -43991,6 +43976,11 @@ var CLSTAMP = "steamdb";
                     _: 8,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  new_subject_id: {
+                    _: 9,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -66057,6 +66047,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  crc_schema: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -66132,6 +66127,11 @@ var CLSTAMP = "steamdb";
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  crc_schema: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),

@@ -600,6 +600,7 @@ message CPlayer_GetUserStats_Request {
 	optional uint32 appid = 2;
 	optional bytes sha_schema = 3;
 	optional uint32 crc_stats = 4;
+	optional uint32 crc_schema = 5;
 }
 
 message CPlayer_GetUserStats_Response {
@@ -607,6 +608,7 @@ message CPlayer_GetUserStats_Response {
 	optional uint32 crc_stats = 2;
 	optional bytes schema = 3;
 	repeated .CPlayer_GetUserStats_Response_Stats stats = 4;
+	optional uint32 crc_schema = 5;
 }
 
 message CPlayer_GetUserStats_Response_Stats {

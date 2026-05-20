@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "依遊戲篩選…",
     "AdvancedSearch_BetaTag": "測試版功能 - 提供意見回饋",
     "AdvancedSearch_TextSearch_Tooltip": "搜尋市集物品名稱…",
-    "AdvancedSearch_Beta_OptOut": "切換為舊的篩選條件",
     "AdvancedSearch_CSContainers_Tooltip": "武器箱、貼紙轉蛋、紀念包等",
     "Header_MarketTitle": "Steam 社群市集",
     "Header_MarketDescription": "用 Steam 錢包資金向社群成員購買及販賣物品",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "您的帳戶已被鎖定。請登入 Steam 用戶端並點擊右上方顯示的紅色框框以取得帳戶鎖定的相關資訊。",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "如欲移除此限制…",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "您的帳戶目前已遭交易封鎖。",
+    "Economy_Market_TopLevelReason_Unknown": "此帳戶目前無法使用 Steam 社群市集。",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "交易封鎖可能是暫時性，也可能是永久性質。請登入 Steam 用戶端並點擊右上方顯示的紅色框框來了解封鎖期限。",
     "Economy_Market_HeaderTip_AccountTradeBanned": "您的帳戶已遭封鎖交易。請登入 Steam 用戶端並點擊右上方顯示的紅色框框來了解封鎖期限。",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "更多資訊…",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "您必須等待帳戶啟用 Steam Guard 滿 15 天。Steam 客服無法移除此限制。",
     "Economy_Market_TopLevelReason_NoSteamGuard": "您的帳戶必須受到 Steam Guard 保護至少 %1$s 天。",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "您必須為您的帳戶啟用 Steam Guard。請確認您的電子信箱是否已完成驗證，並且在您啟用 Steam Guard 後已經登入帳戶兩次。",
-    "Economy_Market_HeaderTip_NoSteamGuard": "您的帳戶必須受到 Steam Guard 保護至少 %1$s 天。"
+    "Economy_Market_HeaderTip_NoSteamGuard": "您的帳戶必須受到 Steam Guard 保護至少 %1$s 天。",
+    "Economy_Market_HeaderTip_TimeCanUse": "假設不再有其它造成限制的情況發生，您將可於 %1$s 後使用社群市集",
+    "Economy_Market_TopLevelReason_TradeCooldown": "您的帳戶處於暫時的冷卻期，無法使用交易和市集功能。"
 }

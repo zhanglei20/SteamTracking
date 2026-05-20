@@ -7,9 +7,8 @@
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
-        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
-        SectionButtonCtn: "_1HP0yfVUrZ-TPBYhiQkye2",
         SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
+        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
         EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
@@ -30,7 +29,7 @@
     },
     52425: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => J });
+      n.r(t), n.d(t, { default: () => z });
       var a = n(90626),
         o = n(7850),
         s = n(34214),
@@ -207,22 +206,22 @@
         P = n(45699),
         j = n(76217),
         G = n(23310),
-        y = n(50433),
-        M = n(16261),
+        M = n(50433),
+        y = n(16261),
         B = n(34418),
-        U = n(12155);
+        F = n(12155);
       function N(e) {
         return (0, o.jsxs)("div", {
           className: B.LatestUpdateButtonCtn,
           children: [
             (0, o.jsx)("div", {
               className: B.LatestUpdateIcon,
-              children: (0, o.jsx)(U.UTF, { role: "presentation" }),
+              children: (0, o.jsx)(F.UTF, { role: "presentation" }),
             }),
             (0, o.jsx)(P.ml, {
               className: B.LatestUpdateButton,
               onClick: e.onClick,
-              children: M.Z.Localize(
+              children: y.Z.Localize(
                 "#EventBrowse_LatestUpdateTime_Button",
                 (0, D._l)(e.nUpdateTime),
               ),
@@ -230,24 +229,24 @@
           ],
         });
       }
-      function F(e) {
+      function U(e) {
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
           s = n ? m.O3.GetClanEventFromAnnouncementGID(n) : null,
-          i = window.screen.width > 500 ? y.kH : y.uY;
+          i = window.screen.width > 500 ? M.kH : M.uY;
         return (0, o.jsxs)("div", {
+          className: B.Container,
           children: [
-            (0, o.jsx)("h2", {
-              children: (0, D.we)("#EventBrowse_LastUpdateDate", (0, D._l)(t)),
-            }),
-            (0, o.jsx)("div", {
-              className: B.SectionButtonCtn,
-              children: (0, o.jsx)(P.ml, {
-                className: B.SectionButton,
-                onClick: (e) => {
-                  null == a || a(), e.stopPropagation(), e.preventDefault();
-                },
-                children: (0, D.we)("#EventBrowse_ViewLatestUpdate"),
-              }),
+            (0, o.jsxs)("h2", {
+              children: [
+                (0, D.we)("#EventBrowse_LastUpdateDate", (0, D._l)(t)),
+                (0, o.jsx)(P.ml, {
+                  className: B.SectionButton,
+                  onClick: (e) => {
+                    null == a || a(), e.stopPropagation(), e.preventDefault();
+                  },
+                  children: (0, D.we)("#EventBrowse_MoreEventsBtn"),
+                }),
+              ],
             }),
             !!s &&
               (0, o.jsx)(j.Z, {
@@ -265,9 +264,10 @@
         });
       }
       var T = n(32803),
-        R = n(13871);
-      const H = 500;
-      function O(e) {
+        R = n(9646),
+        H = n(13871);
+      const O = 500;
+      function W(e) {
         const {
             strClassName: t,
             rgEvents: n,
@@ -275,59 +275,76 @@
             elPostRowElement: s,
             bViewAllShowInfiniteScroll: i,
           } = e,
-          r = (0, R.R7)().ownerWindow.window.innerWidth <= H ? 1 : 2;
-        return (0, o.jsxs)(j.Z, {
-          className: t,
-          "flow-children": "row",
-          children: [
-            !!n &&
-              (0, o.jsxs)("div", {
+          r = (0, R.d)(),
+          c = (0, H.R7)();
+        let l = 2,
+          d = O + 1;
+        return (
+          c.ownerWindow.window
+            ? (d = c.ownerWindow.window.innerWidth)
+            : r.viewportWidth && (d = r.viewportWidth.value),
+          (l = d <= O ? 1 : 2),
+          n && 0 == n.length && !s
+            ? null
+            : (0, o.jsxs)(j.Z, {
+                className: t,
+                "flow-children": "row",
                 children: [
-                  (0, o.jsx)("h2", {
-                    children: M.Z.Localize("#EventBrowse_RecentEvents"),
-                  }),
-                  !A.TS.IN_GAMEPADUI &&
-                    !!n &&
-                    (0, o.jsx)("div", {
-                      className: B.SectionButtonCtn,
-                      children:
-                        i && a
-                          ? (0, o.jsx)(P.ml, {
-                              className: B.SectionButton,
-                              onClick: () => a(n[0]),
-                              children: M.Z.Localize(
-                                "#EventBrowse_MoreEventsBtn",
-                              ),
-                            })
-                          : (0, o.jsx)(T.tj, {
-                              eventModel: n[0],
-                              route: T.PH.k_eViewWebSiteHub,
-                              className: B.SectionButton,
-                              children: M.Z.Localize(
-                                "#EventBrowse_MoreEventsBtn",
-                              ),
-                            }),
+                  !!n &&
+                    n.length > 0 &&
+                    (0, o.jsxs)("div", {
+                      className: B.Container,
+                      children: [
+                        (0, o.jsxs)("h2", {
+                          children: [
+                            y.Z.Localize("#EventBrowse_RecentEvents"),
+                            !A.TS.IN_GAMEPADUI &&
+                              !!n &&
+                              (0, o.jsx)(o.Fragment, {
+                                children:
+                                  i && a
+                                    ? (0, o.jsx)(P.ml, {
+                                        className: B.SectionButton,
+                                        onClick: () => a(n[0]),
+                                        children: y.Z.Localize(
+                                          "#EventBrowse_MoreEventsBtn",
+                                        ),
+                                      })
+                                    : (0, o.jsx)(T.tj, {
+                                        eventModel: n[0],
+                                        route: T.PH.k_eViewWebSiteHub,
+                                        className: B.SectionButton,
+                                        children: y.Z.Localize(
+                                          "#EventBrowse_MoreEventsBtn",
+                                        ),
+                                      }),
+                              }),
+                          ],
+                        }),
+                        (0, o.jsx)("div", {
+                          className: B.EventsSummariesCtn,
+                          children: n.slice(0, l).map((e) => {
+                            const t = a
+                                ? (t) => {
+                                    a(e),
+                                      t.stopPropagation(),
+                                      t.preventDefault();
+                                  }
+                                : void 0,
+                              s = 1 === n.length && d > 500 ? M.kH : M.uY;
+                            return (0, o.jsx)(
+                              s,
+                              { event: e, onClick: t },
+                              e.GID,
+                            );
+                          }),
+                        }),
+                      ],
                     }),
-                  (0, o.jsx)("div", {
-                    className: B.EventsSummariesCtn,
-                    children: n.slice(0, r).map((e) => {
-                      const t = a
-                          ? (t) => {
-                              a(e), t.stopPropagation(), t.preventDefault();
-                            }
-                          : void 0,
-                        s =
-                          1 === n.length && window.screen.width > 500
-                            ? y.kH
-                            : y.uY;
-                      return (0, o.jsx)(s, { event: e, onClick: t }, e.GID);
-                    }),
-                  }),
+                  s,
                 ],
-              }),
-            s,
-          ],
-        });
+              })
+        );
       }
       var q = n(55563),
         Z = n(9154);
@@ -464,7 +481,7 @@
         let L;
         return (
           g && D
-            ? (L = (0, o.jsx)(F, {
+            ? (L = (0, o.jsx)(U, {
                 nUpdateTime: f.rtime,
                 announcementGID: D,
                 onClick: I,
@@ -477,7 +494,7 @@
             children: [
               (0, o.jsx)(Z.EN, {
                 active: i,
-                children: (0, o.jsx)(W, {
+                children: (0, o.jsx)(J, {
                   ...e,
                   announcementGID:
                     u || (null == l ? void 0 : l.AnnouncementGID),
@@ -485,7 +502,7 @@
                   closeModal: v,
                 }),
               }),
-              (0, o.jsx)(O, {
+              (0, o.jsx)(W, {
                 elPostRowElement: L,
                 rgEvents: E,
                 fnEventShowModal: _,
@@ -496,7 +513,7 @@
           })
         );
       }
-      function W(e) {
+      function J(e) {
         const {
             appid: t,
             partnerEventStore: n,
@@ -506,18 +523,16 @@
             closeModal: r,
           } = e,
           c = (0, w.Qn)();
-        return null === i
-          ? null
-          : (0, o.jsx)(E.N, {
-              className: c ? void 0 : B.StoreHeaderAdjust,
-              eventClassName: c ? B.GamePadUIWidthAdjust : void 0,
-              appid: t,
-              trackingLocation: a,
-              announcementGID: s,
-              partnerEventStore: n,
-              eventModel: i,
-              closeModal: r,
-            });
+        return (0, o.jsx)(E.N, {
+          className: c ? void 0 : B.StoreHeaderAdjust,
+          eventClassName: c ? B.GamePadUIWidthAdjust : void 0,
+          appid: t,
+          trackingLocation: a,
+          announcementGID: s,
+          partnerEventStore: n,
+          eventModel: null != i ? i : void 0,
+          closeModal: r,
+        });
       }
       function Y(e) {
         const { appid: t } = e;
@@ -540,7 +555,7 @@
           }),
         });
       }
-      function J(e) {
+      function z(e) {
         const [t, n] = a.useState(!0);
         return (
           a.useEffect(() => {

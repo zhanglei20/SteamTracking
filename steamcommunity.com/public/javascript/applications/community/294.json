@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Valve専用",
     "moderation_escalationlevel_supervisor_desc": "監督者が必須です",
+    "moderation_escalation_escalationnote": "エスカレーションメモ：",
     "moderation_chatmetadata_deleted": "このチャットレポートに関連付けられたメタデータは、約21日間の保存期間を超えたため削除されました。",
     "moderation_chatmetadata_futurelogcollection": "このチャットログには、報告後%1$s以内に送信されたメッセージが追加される場合があります",
     "moderation_resolutionaction_removed": "報告されたコンテンツを削除",

@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Filtrera efter spel ...",
     "AdvancedSearch_BetaTag": "Betafunktion – lämna feedback",
     "AdvancedSearch_TextSearch_Tooltip": "Sök efter namn på artiklar på marknaden …",
-    "AdvancedSearch_Beta_OptOut": "Växla till gamla filter",
     "AdvancedSearch_CSContainers_Tooltip": "Vapenlådor, klistermärkeskapslar, souvenirpaket osv.",
     "Header_MarketTitle": "Steams gemenskapsmarknad",
     "Header_MarketDescription": "Köp och sälj artiklar med andra gemenskapsmedlemmar med hjälp av medlen i Steam-plånboken",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Ditt konto är för tillfället låst. Information om låsningen hittar du genom att klicka på den röda ikonen som visas i det övre högra hörnet när du är inloggad i Steam-klienten.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "För att ta bort begränsningen ...",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "Ditt konto är avstängt från byteshandel för tillfället.",
+    "Economy_Market_TopLevelReason_Unknown": "Det här kontot kan inte använda Steams gemenskapsmarknad just nu.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Avstängningar från byteshandel kan vara temporära eller permanenta. För att se när din avstängning från byteshandel upphör, klicka på det röda fältet som visas i det övre högra hörnet när du är inloggad på Steam-klienten.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Ditt konto har blivit avstängt från byteshandel. För att se när avstängningen upphävs, klicka på den röda ikonen som syns i det övre högra hörnet när du är inloggad på Steam-klienten.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Läs mer ...",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Du måste vänta tills Steam Guard har varit aktiverat på ditt konto i 15 dagar. Steam Support kan inte ta bort begränsningar.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Ditt konto måste vara skyddat med Steam Guard i minst %1$s dagar.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Du måste aktivera Steam Guard på ditt konto. Försäkra dig om att din e-postadress är verifierad och att du har loggat in på kontot två gånger sedan Steam Guard aktiverades.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Ditt konto måste vara skyddat med Steam Guard i minst %1$s dagar."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Ditt konto måste vara skyddat med Steam Guard i minst %1$s dagar.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Förutsatt att ingenting annat begränsar din åtkomst kommer du att kunna använda gemenskapsmarknaden igen från och med %1$s.",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Ditt konto har tillfälligt begränsad åtkomst till byteshandel och marknadsfunktioner."
 }

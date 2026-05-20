@@ -99,6 +99,7 @@
             hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
+            disableScreenshots: _,
             children: _,
           } = _,
           _ = _.useRef(null),
@@ -108,13 +109,16 @@
               _ &&
                 (_ && _(!0),
                 window.GameHover &&
+                  (_.current &&
+                    _ &&
+                    (_.current.dataset.hoverDisableScreenshots = "true"),
                   window.GameHover(_ ? _() : _.current, _, "global_hover", {
                     type: _,
                     _: (0, _._)(_)._,
                     _: 1,
-                  }));
+                  })));
             },
-            [_, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -252,6 +256,7 @@
                     (0, _.jsx)(_._, {
                       _: _,
                       bMinimizePlatforms: _,
+                      bHideWindows: !0,
                     }),
                   !_ &&
                     (0, _.jsx)("span", {
@@ -380,6 +385,7 @@
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
+            bUseDiv: !_,
           });
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
@@ -479,6 +485,7 @@
         const {
             _: _,
             bHideStatusBanners: _,
+            bUseDiv: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -494,11 +501,11 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        const _ = !!_;
+        const _ = _
+            ? void 0
+            : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
+          _ = _ ? "div" : _._,
+          _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -506,8 +513,8 @@
                 [_().TwoWidthCtn]: _,
               }),
               children: [
-                (0, _.jsxs)(_._, {
-                  href: _ ? void 0 : _,
+                (0, _.jsxs)(_, {
+                  href: _,
                   style: {
                     display: "block",
                     cursor: "pointer",
@@ -516,7 +523,6 @@
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
-                  onClick: _,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,

@@ -3113,7 +3113,7 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.selected_subject_type || _._(_._()),
+            _.prototype.subject || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static sm_m;
@@ -3124,11 +3124,6 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  selected_subject_type: {
-                    _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
                   subject: {
                     _: 2,
                     _: _,
@@ -4104,6 +4099,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  note: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -4236,6 +4236,11 @@
                     _: 8,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  new_subject_id: {
+                    _: 9,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),

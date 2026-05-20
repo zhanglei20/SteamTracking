@@ -940,16 +940,18 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 30;
       function _(_) {
+        var _, _;
         const {
             event: _,
             imageURLOverride: _,
@@ -960,23 +962,33 @@
             bHidePrices: _,
           } = _,
           _ = (0, _._)(_.appid),
-          [_, _, _, _, _, _] = (0, _._)(() => {
-            const _ = _ || (0, _.sfN)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.full);
-            return [
-              _,
-              _.GetNameWithFallback(_) || "",
-              _.GetCategoryAsString(),
-              _.GetSummaryWithFallback(_),
-              _,
-              _.GetSubTitleWithLanguageFallback(_) || "",
-            ];
-          }),
+          _ = _ || (0, _.sfN)(_._.LANGUAGE),
+          _ =
+            null !==
+              (_ = (0, _._)(
+                void 0 !== _ ? void 0 : _,
+                "capsule",
+                _,
+                _._.capsule_main,
+              )) && void 0 !== _
+              ? _
+              : _,
+          _ =
+            null !==
+              (_ = (0, _._)(
+                void 0 !== _ ? void 0 : _,
+                "capsule",
+                _,
+                _._.full,
+              )) && void 0 !== _
+              ? _
+              : _,
+          [_, _, _, _] = (0, _._)(() => [
+            _.GetNameWithFallback(_) || "",
+            _.GetCategoryAsString(),
+            _.GetSummaryWithFallback(_),
+            _.GetSubTitleWithLanguageFallback(_) || "",
+          ]),
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = [];
@@ -1150,23 +1162,31 @@
         });
       }
       function _(_) {
+        var _;
         const { event: _, imageURLOverride: _, onClick: _ } = _,
           _ = (0, _._)(_.appid),
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = (0, _.sfN)(_._.LANGUAGE),
-          [_, _, _, _, _] = (0, _._)(() =>
+          _ =
+            null !==
+              (_ = (0, _._)(
+                void 0 !== _ ? void 0 : _,
+                "capsule",
+                _,
+                _._.capsule_main,
+              )) && void 0 !== _
+              ? _
+              : _,
+          [_, _, _, _] = (0, _._)(() =>
             _
               ? [
-                  void 0 !== _
-                    ? _
-                    : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-                  _.GetNameWithFallback(_),
-                  _.GetCategoryAsString(),
-                  _.GetSubTitleWithLanguageFallback(_),
-                  _.GetSummaryWithFallback(_),
+                  __webpack_require__.GetNameWithFallback(_),
+                  __webpack_require__.GetCategoryAsString(),
+                  __webpack_require__.GetSubTitleWithLanguageFallback(_),
+                  __webpack_require__.GetSummaryWithFallback(_),
                 ]
-              : [void 0, void 0, void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0],
           );
         if (!_)
           return (0, _.jsx)("div", {
@@ -1186,10 +1206,9 @@
             (0, _.jsx)("div", {
               className: _().OtherEvents_ContentCtn,
               children: (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().OtherEvents_MainImageCtn,
-                  _ && _().MaskImages,
-                ),
+                className: (0, _._)(_().OtherEvents_MainImageCtn, {
+                  [_().MaskImages]: _,
+                }),
                 children: (0, _.jsx)(_._, {
                   rgSources: _,
                   className: _().OtherEvents_MainImage,
@@ -1209,7 +1228,8 @@
                     }),
                     (0, _.jsx)(_._, {
                       bSingleLine: !0,
-                      dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                      dateAndTime:
+                        __webpack_require__.GetStartTimeAndDateUnixSeconds(),
                     }),
                   ],
                 }),
@@ -2397,8 +2417,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
+        var _;
         const {
             event: _,
             spotlightURLOverride: _,
@@ -2415,34 +2437,26 @@
             [_, _],
           ),
           _ = _ || (0, _.sfN)(_._.LANGUAGE),
-          [_, _, _, _] = (0, _._)(() => [
-            _.GetSummaryWithFallback(_),
-            _.GetNameWithFallback(_),
-            _.GetCategoryAsString(),
-            _.BShowLibrarySpotlightText(),
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.GetSummaryWithFallback(_),
+            __webpack_require__.GetNameWithFallback(_),
+            __webpack_require__.BShowLibrarySpotlightText(),
           ]);
-        let _ = new Array();
-        (_ =
+        let _ = "spotlight",
+          _ = _._.spotlight_main;
+        (2434320 != _.appid && _._.EUNIVERSE != _._) ||
+          ((_ = _
+            ? "localized_store_app_spotlight_mobile"
+            : "localized_store_app_spotlight"),
+          (_ = _._.full));
+        let _ =
+          null !== (_ = (0, _._)(void 0 !== _ ? void 0 : _, _, _, _)) &&
           void 0 !== _
-            ? [_]
-            : 2434320 == _.appid || _._.EUNIVERSE == _._
-              ? _
-                ? _.GetImageForSizeAsArrayWithFallback(
-                    "localized_store_app_spotlight_mobile",
-                    _,
-                    _._.full,
-                  )
-                : _.GetImageForSizeAsArrayWithFallback(
-                    "localized_store_app_spotlight",
-                    _,
-                    _._.full,
-                  )
-              : _.GetImageForSizeAsArrayWithFallback(
-                  "spotlight",
-                  _,
-                  _._.spotlight_main,
-                )),
-          _ && (_ = _(_));
+            ? _
+            : void 0 !== _
+              ? [_]
+              : [];
+        _ && _ && (_ = _(_));
         const _ = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsx)("div", {

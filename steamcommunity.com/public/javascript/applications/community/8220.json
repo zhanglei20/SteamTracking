@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Φιλτράρισμα ανά παιχνίδι…",
     "AdvancedSearch_BetaTag": "Χαρακτηριστικό έκδοσης βήτα – Αφήστε σχόλια",
     "AdvancedSearch_TextSearch_Tooltip": "Αναζήτηση σε ονόματα αντικειμένων Αγοράς…",
-    "AdvancedSearch_Beta_OptOut": "Αλλαγή σε παλιά φίλτρα",
     "AdvancedSearch_CSContainers_Tooltip": "Θήκες όπλων, κάψουλες αυτοκόλλητων, πακέτα σουβενίρ κτλ.",
     "Header_MarketTitle": "Αγορά Κοινότητας Steam",
     "Header_MarketDescription": "Πραγματοποιήστε αγορές και πωλήσεις αντικειμένων με άλλα μέλη της Κοινότητας, χρησιμοποιώντας χρήματα από το Πορτοφόλι Steam σας",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Ο λογαριασμός σας είναι κλειδωμένος αυτήν τη στιγμή. Μπορείτε να δείτε πληροφορίες σχετικά με το κλείδωμα του λογαριασμού σας κάνοντας κλικ στην κόκκινη μπάρα που φαίνεται στην πάνω δεξιά γωνία ενώ είστε συνδεδεμένοι στην εφαρμογή Steam.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "Για να αφαιρέσετε αυτόν τον περιορισμό…",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "Ο λογαριασμός σας αυτήν τη στιγμή έχει αποκλεισμό ανταλλαγών.",
+    "Economy_Market_TopLevelReason_Unknown": "Αυτός ο λογαριασμός δεν μπορεί να χρησιμοποιήσει προς το παρόν την Αγορά Κοινότητας Steam.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Ο αποκλεισμός ανταλλαγών μπορεί να κυμανθεί σε διάρκεια από προσωρινός έως οριστικός. Για να δείτε πότε λήγει ο αποκλεισμός ανταλλαγών σας, κάντε κλικ στην κόκκινη μπάρα που φαίνεται στην πάνω δεξιά γωνία ενώ είστε συνδεδεμένοι στην εφαρμογή του Steam.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Ο λογαριασμός σας έχει αποκλεισμό ανταλλαγών. Για να δείτε πότε λήγει ο αποκλεισμός αυτός, κάντε κλικ στην κόκκινη μπάρα που εμφανίζεται στην πάνω δεξιά γωνία ενώ είστε συνδεδεμένοι στην εφαρμογή του Steam.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Περισσότερες πληροφορίες…",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Πρέπει να περιμένετε να περάσουν 15 ημέρες από την ενεργοποίηση του Steam Guard στον λογαριασμό σας. Η Υποστήριξη Steam δεν μπορεί να αφαιρέσει αυτόν τον περιορισμό.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Ο λογαριασμός σας πρέπει να προστατεύεται από το Steam Guard για τουλάχιστον %1$s ημέρες.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Πρέπει να ενεργοποιήσετε το Steam Guard στον λογαριασμό σας. Σιγουρευτείτε ότι το email σας είναι επιβεβαιωμένο και ότι έχετε συνδεθεί στον λογαριασμό σας τουλάχιστον δυο φορές μετά την ενεργοποίηση του Steam Guard.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Ο λογαριασμός σας πρέπει να προστατεύεται από το Steam Guard για τουλάχιστον %1$s ημέρες."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Ο λογαριασμός σας πρέπει να προστατεύεται από το Steam Guard για τουλάχιστον %1$s ημέρες.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Αν δεν προκύψουν περαιτέρω προβλήματα που να περιορίζουν την πρόσβασή σας, θα μπορείτε να χρησιμοποιήσετε την Αγορά Κοινότητας %1$s.",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Your account is on a temporary cooldown from trade and market features."
 }

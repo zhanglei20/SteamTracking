@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Csak Valve",
     "moderation_escalationlevel_supervisor_desc": "Felügyelő szükséges",
+    "moderation_escalation_escalationnote": "Eszkalációs megjegyzés:",
     "moderation_chatmetadata_deleted": "Az e csevegési jelentéshez tartozó metaadatokat a koruk miatt töröltük. Csak ~21 napig őrizzük meg.",
     "moderation_chatmetadata_futurelogcollection": "E csevegési napló kiegészíthető további üzenetek küldésével a jelentés után, %1$s múlva.",
     "moderation_resolutionaction_removed": "Jelentett tartalom eltávolítása",

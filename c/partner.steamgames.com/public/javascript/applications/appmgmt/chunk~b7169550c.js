@@ -646,17 +646,9 @@
             _: _,
             bPreferAssetWithoutOverride: _,
           });
-        let _,
-          _,
-          _ = "";
-        if ("main" === _)
-          (_ = _().mainCapsuleImgWidth),
-            (_ = _().mainCapsuleImgHeight),
-            (_ = _().MainCapsuleImageContainer);
-        else
-          (_ = _().headerCapsuleImgWidth),
-            (_ = _().headerCapsuleImgHeight),
-            (_ = _().HeaderCapsuleImageContainer);
+        let _ = "";
+        if ("main" === _) _ = _().MainCapsuleImageContainer;
+        else _ = _().HeaderCapsuleImageContainer;
         if (void 0 === _ || !_)
           return (0, _.jsx)("div", {
             className: (0, _._)(_, "CapsuleImageCtn"),
@@ -669,8 +661,6 @@
             lazyLoad: !0,
             srcs: _,
             className: (0, _._)(_().CapsuleImage),
-            width: _,
-            height: _,
             alt: _.name,
           }),
         });

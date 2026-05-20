@@ -1357,12 +1357,12 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", ref: _, navRef: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -1374,6 +1374,7 @@
           _ = _;
         return (0, _.jsx)(_._, {
           focusable: _,
+          navRef: _,
           children: (0, _.jsx)(_, {
             ref: _,
             ..._,
@@ -2285,14 +2286,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 30;
       function _(_) {
         const {
@@ -2305,23 +2307,21 @@
             bHidePrices: _,
           } = _,
           _ = (0, _._)(_.appid),
-          [_, _, _, _, _, _] = (0, _._)(() => {
-            const _ = _ || (0, _.sfN)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.full);
-            return [
+          _ = _ || (0, _.sfN)(_._.LANGUAGE),
+          _ =
+            (0, _._)(
+              void 0 !== _ ? void 0 : _,
+              "capsule",
               _,
-              _.GetNameWithFallback(_) || "",
-              _.GetCategoryAsString(),
-              _.GetSummaryWithFallback(_),
-              _,
-              _.GetSubTitleWithLanguageFallback(_) || "",
-            ];
-          }),
+              _._.capsule_main,
+            ) ?? _,
+          _ = (0, _._)(void 0 !== _ ? void 0 : _, "capsule", _, _._.full) ?? _,
+          [_, _, _, _] = (0, _._)(() => [
+            _.GetNameWithFallback(_) || "",
+            _.GetCategoryAsString(),
+            _.GetSummaryWithFallback(_),
+            _.GetSubTitleWithLanguageFallback(_) || "",
+          ]),
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = [];
@@ -2498,18 +2498,22 @@
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = (0, _.sfN)(_._.LANGUAGE),
-          [_, _, _, _, _] = (0, _._)(() =>
+          _ =
+            (0, _._)(
+              void 0 !== _ ? void 0 : _,
+              "capsule",
+              _,
+              _._.capsule_main,
+            ) ?? _,
+          [_, _, _, _] = (0, _._)(() =>
             _
               ? [
-                  void 0 !== _
-                    ? _
-                    : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
                   _.GetNameWithFallback(_),
                   _.GetCategoryAsString(),
                   _.GetSubTitleWithLanguageFallback(_),
                   _.GetSummaryWithFallback(_),
                 ]
-              : [void 0, void 0, void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0],
           );
         if (!_)
           return (0, _.jsx)("div", {
@@ -2529,10 +2533,9 @@
             (0, _.jsx)("div", {
               className: _().OtherEvents_ContentCtn,
               children: (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().OtherEvents_MainImageCtn,
-                  _ && _().MaskImages,
-                ),
+                className: (0, _._)(_().OtherEvents_MainImageCtn, {
+                  [_().MaskImages]: _,
+                }),
                 children: (0, _.jsx)(_._, {
                   rgSources: _,
                   className: _().OtherEvents_MainImage,
@@ -7626,7 +7629,7 @@
           let _ = _.appInfo ? _.appid : void 0,
             _ = _.clanInfo ? _.clanInfo.clanid : void 0;
           null != _ || null != _
-            ? (await _._.Get().UpdateCommunitionSetting(_, _, _),
+            ? (await _._.Get().UpdateCommunicationSetting(_, _, _),
               _._.RecordAppInteractionEvent(_, _._.k_eMuted))
             : (0, _._)(
                 !1,
@@ -8093,7 +8096,7 @@
         BIsMutedClanID(_) {
           return this.m_mapBlockedClanIds.has(_);
         }
-        async UpdateCommunitionSetting(_, _, _) {
+        async UpdateCommunicationSetting(_, _, _) {
           const _ = _._.STORE_BASE_URL + "account/optoutappcommunication/",
             _ = new FormData();
           if (
@@ -8143,6 +8146,89 @@
       }
       (0, _._)([_._], _.prototype, "m_mapBlockedAppIds", void 0),
         (0, _._)([_._], _.prototype, "m_mapBlockedClanIds", void 0);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        static s_PersonalCalendarStore;
+        static Get() {
+          return (
+            _.s_PersonalCalendarStore ||
+              ((_.s_PersonalCalendarStore = new _()),
+              _.s_PersonalCalendarStore.Init(),
+              (window.g_SubscriptionStore = _.s_PersonalCalendarStore)),
+            _.s_PersonalCalendarStore
+          );
+        }
+        async GetCalendarRecommendations(_, _, _) {
+          const _ = new Date();
+          _.setDate(_.getDate() + _), _.setHours(0, 0, 0, 0);
+          const _ = new Date();
+          _.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0);
+          const _ = await _._.fetchQuery(_(_, _, _));
+          return (
+            (_.arrAppInfos = _.arrAppInfos.filter(
+              (_) =>
+                _.nReleaseDate >= _.getTime() / 1e3 &&
+                _.nReleaseDate < _.getTime() / 1e3,
+            )),
+            _
+          );
+        }
+        Init() {}
+      }
+      function _(_, _, _) {
+        return (0, _._)(_(_, _, _));
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["personalcalendar", _, _, _],
+          queryFn: async () => {
+            const _ = {
+                tag: _,
+              },
+              _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
+                params: _,
+                timeout: 2e4,
+              });
+            return {
+              arrAppInfos: _.data.arrAppInfos,
+              strResultMessage: _.data.strResultMessage,
+              bUsesWishlistedGames: _.data.bUsesWishlistedGames,
+            };
+          },
+          placeholderData: (_) => _,
+        };
+      }
+      function _(_, _, _, _) {
+        const _ = new Date();
+        if ((_.setDate(_.getDate() - _), _)) {
+          const _ = _.getDay() % 7;
+          _.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0);
+        } else _.setHours(0, 0, 0, 0);
+        const _ = [],
+          _ = new Date(_),
+          _ = Math.ceil((_ + _) / 7);
+        for (let _ = 0; _ < _; _++) {
+          _.push([]);
+          for (let _ = 0; _ < 7; _++)
+            (!_ || (0 != _.getDay() && 6 != _.getDay())) &&
+              _[_].push(Math.floor(_.getTime() / 1e3)),
+              _.setDate(_.getDate() + 1),
+              _.setHours(0, 0, 0, 0);
+        }
+        return _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -12445,6 +12531,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
@@ -12453,6 +12540,24 @@
             ? ""
             : (0, _._)(_.default_label))
         );
+      }
+      function _(_) {
+        const { event: _, elTitle: _, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _ ? "product_mobile_banner" : "product_banner", _);
+        return (0, _.jsxs)("div", {
+          className: _().SaleImageCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().SaleImageHelper,
+              children: _,
+            }),
+            (0, _.jsx)("img", {
+              src: _,
+              alt: _,
+            }),
+          ],
+        });
       }
       const _ = (0, _._)((_) => {
         const {
@@ -12463,7 +12568,6 @@
             title: _,
             subtitle: _,
           } = _,
-          _ = (0, _._)(),
           _ = (0, _._)(),
           { eventModel: _ } = (0, _._)(
             _.sale_page_cross_promo_clan_account_id,
@@ -12477,21 +12581,9 @@
             className: (0, _._)(_().SaleSectionHeader, "SaleSectionHeader"),
             style: _(_, _, _),
             children: _?.BHasSomeImage("product_banner")
-              ? (0, _.jsxs)("div", {
-                  className: _().SaleImageCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().SaleImageHelper,
-                      children: _,
-                    }),
-                    (0, _.jsx)("img", {
-                      src: _.GetImageURLWithFallback(
-                        _ ? "product_mobile_banner" : "product_banner",
-                        _,
-                      ),
-                      alt: _,
-                    }),
-                  ],
+              ? (0, _.jsx)(_, {
+                  ..._,
+                  elTitle: _,
                 })
               : _,
           }),
@@ -16950,44 +17042,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        static s_PersonalCalendarStore;
-        static Get() {
-          return (
-            _.s_PersonalCalendarStore ||
-              ((_.s_PersonalCalendarStore = new _()),
-              _.s_PersonalCalendarStore.Init(),
-              (window.g_SubscriptionStore = _.s_PersonalCalendarStore)),
-            _.s_PersonalCalendarStore
-          );
-        }
-        async GetCalendarRecommendations(_) {
-          return _._.fetchQuery(_(_));
-        }
-        Init() {}
-      }
-      function _(_) {
-        return {
-          queryKey: ["personalcalendar", _],
-          queryFn: async () => {
-            const _ = {
-                tag: _,
-              },
-              _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
-                params: _,
-                timeout: 2e4,
-              });
-            return {
-              arrAppInfos: _.data.arrAppInfos,
-              strResultMessage: _.data.strResultMessage,
-              arrUserTags: _.data.arrUserTags,
-              bUsesWishlistedGames: _.data.bUsesWishlistedGames,
-            };
-          },
-          placeholderData: (_) => _,
-        };
-      }
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
       }
@@ -17365,7 +17421,15 @@
             if ("nearby_recommended" == _)
               return {
                 capsules: (
-                  await _.Get().GetCalendarRecommendations(0)
+                  await _._.Get().GetCalendarRecommendations(
+                    0,
+                    _.calendar_section_data.forward
+                      ? 0
+                      : _.calendar_section_data.day_count,
+                    _.calendar_section_data.forward
+                      ? _.calendar_section_data.day_count
+                      : 0,
+                  )
                 ).arrAppInfos.map((_) => ({
                   _: _.nAppID,
                   type: "game",
@@ -24198,6 +24262,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -24944,7 +25009,7 @@
       function _(_) {
         const { event: _, eventCalendarItem: _ } = _;
         let _ = (0, _.sfN)(_._.LANGUAGE);
-        const _ = _.GetImageURLWithFallback("capsule", _, _._.capsule_main);
+        const _ = (0, _._)(_, "capsule", _, _._.capsule_main);
         return (0, _.jsxs)("div", {
           className: _().ClanEventCapsuleCtn,
           onClick: () => _.Get().SelectClanEventGID(_.GID),
@@ -25025,7 +25090,7 @@
       function _(_) {
         const { event: _ } = _;
         let _ = (0, _.sfN)(_._.LANGUAGE);
-        const _ = _.GetImageURLWithFallback("capsule", _),
+        const _ = (0, _._)(_, "capsule", _),
           _ = (0, _._)(_);
         return (0, _.jsx)("div", {
           className: _().ClanEventDetailBackground,
@@ -25264,8 +25329,7 @@
           ],
         });
       };
-      var _,
-        _ = __webpack_require__("chunkid");
+      var _;
       !(function (_) {
         (_[(_.k_eNone = 0)] = "k_eNone"),
           (_[(_.k_eSecond = 1)] = "k_eSecond"),

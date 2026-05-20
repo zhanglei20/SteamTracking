@@ -23,7 +23,6 @@
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Филтриране по игра…",
     "AdvancedSearch_BetaTag": "Бета характеристика — Даване на отзиви",
     "AdvancedSearch_TextSearch_Tooltip": "Търсете из имената на артикули от пазара…",
-    "AdvancedSearch_Beta_OptOut": "Преминаване към стари филтри",
     "AdvancedSearch_CSContainers_Tooltip": "Оръжейни сандъци, капсули със стикери, сувенирни пакети и т.н.",
     "Header_MarketTitle": "Общественият Steam пазар",
     "Header_MarketDescription": "Купувайте и продавайте артикули с членове на общността за средства в Steam портфейла.",
@@ -238,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Понастоящем акаунтът Ви е заключен. Информация за това заключване може да бъде намерена, като кликнете върху червената лента, показана в горния десен ъгъл, докато сте влезли в Steam клиента.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "С цел да премахнете това ограничение…",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "Понастоящем акаунтът Ви е с наложена забрана за търгуване.",
+    "Economy_Market_TopLevelReason_Unknown": "В момента този акаунт не може да използва обществения Steam пазар.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Продължителността на забраната за търгуване може да варира от временна до перманентна. С цел да видите кога тази забрана изтича, моля, кликнете върху червената лента, показана в горния десен ъгъл, докато сте влезли в Steam клиента.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Акаунтът Ви е получил забрана за търгуване. С цел да видите кога тази забрана изтича, моля, кликнете върху червената лента, показана в горния десен ъгъл, докато сте влезли в Steam клиента.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "Още инф…",
@@ -270,5 +270,7 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "Трябва да изчакате, докато Steam Guard е бил включен за акаунта Ви от 15 дни. Steam поддръжката не може да премахне това ограничение.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Акаунтът Ви трябва да бъде защитен със Steam Guard за поне %1$s дни.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Трябва да включите Steam Guard за акаунта си. Моля, уверете се, че е-пощата Ви е потвърдена и сте влизали поне два пъти в акаунта си след включването на Steam Guard.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Акаунтът Ви трябва да бъде защитен със Steam Guard за поне %1$s дни."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Акаунтът Ви трябва да бъде защитен със Steam Guard за поне %1$s дни.",
+    "Economy_Market_HeaderTip_TimeCanUse": "Ако не възникне нищо друго, което да ограничи достъпа Ви, ще сте способни да ползвате обществения пазар на %1$s",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Акаунтът Ви е във временен период на изчакване от характеристиките за търговия и пазара."
 }
