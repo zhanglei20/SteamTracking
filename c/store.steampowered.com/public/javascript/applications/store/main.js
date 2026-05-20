@@ -66516,7 +66516,7 @@
           return this.m_mapIgnoredPackages?.has(_);
         }
         BIsGameOwned(_) {
-          return this.m_setOwnedApps.has(Number(_));
+          return !!_ && this.m_setOwnedApps.has(Number(_));
         }
         BIsStoreItemOwned(_) {
           switch (_.GetStoreItemType()) {

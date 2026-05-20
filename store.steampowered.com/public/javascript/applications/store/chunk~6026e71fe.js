@@ -11605,7 +11605,7 @@
             className: (0, g.A)(d().SaleSectionHeader, "SaleSectionHeader"),
             style: x(t, a, r),
             children: b?.BHasSomeImage("product_banner")
-              ? (0, n.jsx)(C, { ...e, elTitle: w })
+              ? (0, n.jsx)(C, { ...e, event: b, elTitle: w })
               : w,
           }),
           B = (0, n.jsx)("div", {
