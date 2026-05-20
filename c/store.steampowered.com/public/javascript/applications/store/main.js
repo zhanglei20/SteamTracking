@@ -8476,6 +8476,38 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.forwardRef(function (_, _) {
+        const { children: _, navTreeRef: _, ..._ } = _,
+          _ = _.useRef(void 0),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)("__nav_tree_root");
+        return (0, _.jsx)(_._, {
+          ..._,
+          navTreeRef: _,
+          ref: _,
+          parentEmbeddedNavTree: _,
+          disabledRoot: !_,
+          historyMode: "navigationapi",
+          children: (0, _.jsx)(_._, {
+            disableFocusRing: !_,
+            children: _,
+          }),
+        });
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -81301,29 +81333,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-        const { children: _, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(void 0),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(),
-          _ = (0, _._)("__nav_tree_root");
-        return (0, _.jsx)(_._, {
-          ..._,
-          navTreeRef: _,
-          ref: _,
-          parentEmbeddedNavTree: _,
-          disabledRoot: !_,
-          historyMode: "navigationapi",
-          children: (0, _.jsx)(_._, {
-            disableFocusRing: !_,
-            children: _,
-          }),
-        });
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _({ config: _, isDynamic: _, omitFocusNavTreeBridge: _ }) {
@@ -81464,7 +81473,7 @@
             )
           : (0, _.createPortal)(
               (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_, {
+                children: (0, _.jsx)(_._, {
                   navID: `FeatureTarget_${_}`,
                   children: _(_),
                 }),
@@ -97980,6 +97989,7 @@
           null
         );
       });
+      var _ = __webpack_require__("chunkid");
       function _() {
         const _ = _(_._),
           _ = _.useRef(null),
@@ -98000,7 +98010,8 @@
             [],
           ),
           _ && _
-            ? (0, _.jsx)("div", {
+            ? (0, _.jsx)(_._, {
+                navID: "StoreMenu",
                 ref: _,
                 className: _.StoreMenuNavWrapper,
                 children: (0, _.jsx)(_, {
@@ -99659,60 +99670,67 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {}),
-              (0, _.jsx)(_, {
-                children: (0, _.jsx)(_._, {
-                  config: {
-                    "green-envelope": () =>
-                      (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {
-                          bResponsiveHeader: !1,
-                          notifications: (0, _._)(
-                            "steam_notifications",
-                            "application_config",
-                          ),
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    config: {
+                      "green-envelope": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {
+                            bResponsiveHeader: !1,
+                            notifications: (0, _._)(
+                              "steam_notifications",
+                              "application_config",
+                            ),
+                          }),
                         }),
-                      }),
-                    "green-envelope-responsive": () =>
-                      (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {
-                          bResponsiveHeader: !0,
-                          notifications: (0, _._)(
-                            "steam_notifications",
-                            "application_config",
-                          ),
+                      "green-envelope-responsive": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {
+                            bResponsiveHeader: !0,
+                            notifications: (0, _._)(
+                              "steam_notifications",
+                              "application_config",
+                            ),
+                          }),
                         }),
-                      }),
-                    parentalunlock: (_) =>
-                      (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {
-                          ..._,
+                      parentalunlock: (_) =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {
+                            ..._,
+                          }),
                         }),
-                      }),
-                    "open-in-desktop-client": () =>
-                      (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    "open-in-desktop-client-or-login": () =>
-                      (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    "store-menu-v7": () =>
-                      (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    "store-menu-responsive-search": () =>
-                      (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                  },
-                }),
+                      "open-in-desktop-client": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                      "open-in-desktop-client-or-login": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                      "store-menu-responsive-search": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                    },
+                  }),
+                  (0, _.jsx)(_._, {
+                    omitFocusNavTreeBridge: !0,
+                    config: {
+                      "store-menu-v7": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                    },
+                  }),
+                ],
               }),
               (0, _.jsx)(_._, {
                 config: {
