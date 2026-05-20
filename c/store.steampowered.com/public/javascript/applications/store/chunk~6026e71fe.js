@@ -12583,6 +12583,7 @@
             children: _?.BHasSomeImage("product_banner")
               ? (0, _.jsx)(_, {
                   ..._,
+                  event: _,
                   elTitle: _,
                 })
               : _,
