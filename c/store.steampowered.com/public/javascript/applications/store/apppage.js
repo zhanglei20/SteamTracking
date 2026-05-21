@@ -4207,6 +4207,9 @@
           ? (0, _.jsxs)(_._, {
               focusable: !0,
               className: _().ParentWidgetContainer,
+              onActivate: () => {
+                window.location.href = _;
+              },
               children: [
                 (0, _.jsx)("div", {
                   className: (0, _._)(_().ParentCapsuleImageContainer),

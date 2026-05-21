@@ -196,25 +196,25 @@
             bHidePrice: r,
             bShowInLibraryInsteadOfPrice: c,
             bHidePlatforms: b,
-            strClassName: v,
-            creatorAccountID: x,
-            bShowName: A,
-            onlyOneDiscountPct: f,
+            strClassName: x,
+            creatorAccountID: A,
+            bShowName: f,
+            onlyOneDiscountPct: v,
             bShowAddToCart: S,
             bShowWishlistButton: w,
           } = e,
           j = (0, i.useRef)(null),
-          [g, C] = (0, i.useState)(!1),
-          { data: P } = (0, o.J$)(t);
+          [g, P] = (0, i.useState)(!1),
+          { data: C } = (0, o.J$)(t);
         if (
           ((0, i.useEffect)(() => {
-            j.current && C(j.current.offsetWidth < 370);
+            j.current && P(j.current.offsetWidth < 370);
           }, [j]),
           !t || !("appid" in t || "bundleid" in t || "packageid" in t))
         )
           return null;
-        const D = Boolean(w && P?.item_type == s.c6.qI),
-          y = Boolean(!x && !S && !D && b && r);
+        const D = Boolean(w && C?.item_type == s.c6.qI),
+          y = Boolean(!A && !S && !D && b && r);
         return (0, a.jsxs)(a.Fragment, {
           children: [
             !y &&
@@ -224,10 +224,10 @@
                   d().CapsuleBottomBar,
                   "CapsuleBottomBar",
                   n && d().Muted,
-                  v,
+                  x,
                 ),
                 children: [
-                  x && (0, a.jsx)(I, { creatorAccountID: x, ...e }),
+                  A && (0, a.jsx)(I, { creatorAccountID: A, ...e }),
                   S &&
                     (0, a.jsx)(l.h, {
                       id: t,
@@ -257,12 +257,12 @@
                       children: (0, a.jsx)(m.N, {
                         id: t,
                         bShowInLibrary: c,
-                        onlyOneDiscountPct: f,
+                        onlyOneDiscountPct: v,
                       }),
                     }),
                 ],
               }),
-            A && (0, a.jsx)(_, { id: t }),
+            f && (0, a.jsx)(_, { id: t }),
           ],
         });
       }
@@ -312,16 +312,16 @@
         b = n(39777),
         _ = n(14987),
         I = n(60014),
-        v = n(58918),
-        x = n(90626),
-        A = n(35380),
-        f = n(55963),
+        x = n(58918),
+        A = n(90626),
+        f = n(35380),
+        v = n(55963),
         S = n(33924),
         w = n(18654),
         j = n.n(w),
         g = n(94191),
-        C = n(72860),
-        P = n(70300),
+        P = n(72860),
+        C = n(70300),
         D = n(54492),
         y = n(49411),
         E = n(52038),
@@ -346,22 +346,23 @@
             bPreferDemoStorePage: m,
             bShowEarlyAccessBanner: p,
           } = e,
-          [h, _] = x.useState(!1),
-          I = (0, A.rt)(t),
-          { data: v } = (0, b.J$)(I),
-          f = (0, A.$5)(n ? v?.related_items?.parent_appid : void 0),
-          { data: S } = (0, b.J$)(f);
-        if (!v || !I) return null;
-        const w = !!S && !!f,
-          g = (0, a.jsx)(L, {
+          h = (0, T.Qn)(),
+          [_, I] = A.useState(!1),
+          x = (0, f.rt)(t),
+          { data: v } = (0, b.J$)(x),
+          S = (0, f.$5)(n ? v?.related_items?.parent_appid : void 0),
+          { data: w } = (0, b.J$)(S);
+        if (!v || !x) return null;
+        const g = !!w && !!S,
+          P = (0, a.jsx)(L, {
             ...e,
             strExtraParams: e.strExtraParams,
-            id: I,
-            bIsHovered: h,
-            bHasParentAppToDisplay: w,
+            id: x,
+            bIsHovered: _,
+            bHasParentAppToDisplay: g,
             onlyOneDiscountPct: u,
             bShowEarlyAccessBanner: p,
-            bUseDiv: !d,
+            bUsePanel: !d && !h,
           });
         return (0, a.jsxs)(s.Z, {
           className: (0, E.A)({
@@ -371,18 +372,18 @@
           navEntryPreferPosition: o.iU.PREFERRED_CHILD,
           navKey: c,
           children: [
-            (0, a.jsxs)(P.oj, {
+            (0, a.jsxs)(C.oj, {
               appid: v.appid,
               children: [
                 Boolean(d)
                   ? (0, a.jsx)("div", {
-                      onMouseEnter: () => _(!0),
-                      onMouseLeave: () => _(!1),
-                      children: g,
+                      onMouseEnter: () => I(!0),
+                      onMouseLeave: () => I(!1),
+                      children: P,
                     })
                   : (0, a.jsx)(l.Q, {
                       className: j().CapsuleContainer,
-                      id: I,
+                      id: x,
                       elElementToAppend: e.elElementToAppendToHover,
                       bShowDemoButton: e.bShowDemoButton,
                       bPreferDemoStorePage: e.bPreferDemoStorePage,
@@ -395,16 +396,16 @@
                       nWidthMultiplier: e.nWidthMultiplier,
                       bShowIgnoreButton: e.bShowIgnoreButton,
                       bShowDescription: e.bShowDescriptionInHover,
-                      children: g,
+                      children: P,
                     }),
                 Boolean(r) && (0, a.jsx)(a.Fragment, { children: r }),
               ],
             }),
-            w &&
+            g &&
               (0, a.jsx)(G, {
                 strExtraParams: e.strExtraParams,
-                parentID: f,
-                parentStoreItemDefaultInfo: S,
+                parentID: S,
+                parentStoreItemDefaultInfo: w,
                 childAppType: v.type,
                 bPreferDemoStorePage: Boolean(m),
               }),
@@ -425,8 +426,8 @@
         return m
           ? (0, a.jsx)(r.ml, {
               className: j().CapsuleParentInfo,
-              ...(0, C.S)(s, d, u, l, t),
-              children: (0, a.jsxs)(P.oj, {
+              ...(0, P.S)(s, d, u, l, t),
+              children: (0, a.jsxs)(C.oj, {
                 appid: s.appid,
                 children: [
                   (0, a.jsx)("div", {
@@ -458,60 +459,61 @@
         const {
             id: t,
             bHideStatusBanners: n,
-            bUseDiv: s,
-            strExtraParams: o,
-            index: i,
-            imageType: l,
-            bHasParentAppToDisplay: c,
-            bIsHovered: u,
-            strDoubleCapsuleMessage: m,
-            bPreferDemoStorePage: p,
-            bShowEarlyAccessBanner: v,
-            bPreferAssetWithoutOverride: x,
+            bUsePanel: o,
+            strExtraParams: i,
+            index: l,
+            imageType: c,
+            bHasParentAppToDisplay: u,
+            bIsHovered: m,
+            strDoubleCapsuleMessage: p,
+            bPreferDemoStorePage: x,
+            bShowEarlyAccessBanner: A,
+            bPreferAssetWithoutOverride: f,
           } = e,
-          A = (0, I.n9)(),
-          S = (0, y.w)(),
-          w = (0, _._)(t),
-          { data: j } = (0, b.J$)(t);
-        if (!j) return null;
-        const C = s
+          S = (0, I.n9)(),
+          w = (0, y.w)(),
+          j = (0, _._)(t),
+          { data: P } = (0, b.J$)(t);
+        if (!P) return null;
+        const C = o
             ? void 0
             : (0, N.NT)(
-                (0, f.It)(`${(0, F._)(j, p)}${o ? `?${o}` : ""}`, A, S),
+                (0, v.It)(`${(0, F._)(P, x)}${i ? `?${i}` : ""}`, S, w),
               ),
-          P = s ? "div" : r.Ii,
-          H = !!m;
+          H = o ? s.Z : r.Ii,
+          T = !!p;
         return (0, a.jsxs)(a.Fragment, {
           children: [
             (0, a.jsxs)("div", {
-              className: (0, E.A)({ [k().TwoWidthCtn]: H }),
+              className: (0, E.A)({ [k().TwoWidthCtn]: T }),
               children: [
-                (0, a.jsxs)(P, {
+                (0, a.jsxs)(H, {
                   href: C,
                   style: { display: "block", cursor: "pointer" },
-                  className: (0, E.A)({ [k().TwoWidthCapsule]: H }),
-                  preferredFocus: c,
+                  className: (0, E.A)({ [k().TwoWidthCapsule]: T }),
+                  preferredFocus: u,
+                  focusable: !0,
                   children: [
                     (0, a.jsx)(g.V, {
-                      appids: w,
+                      appids: j,
                       hide_status_banners: n,
-                      show_early_access: e.bShowEarlyAccessBanner,
+                      show_early_access: A,
                     }),
-                    "none" != l &&
+                    "none" != c &&
                       (0, a.jsx)(d.a, {
-                        imageType: l,
+                        imageType: c,
                         id: t,
-                        bPreferAssetWithoutOverride: x,
+                        bPreferAssetWithoutOverride: f,
                       }),
                     (0, a.jsx)(D.J, { id: t }),
-                    (0, a.jsx)(h.m, { id: t, active: u, bIsHoverMode: !0 }),
+                    (0, a.jsx)(h.m, { id: t, active: m, bIsHoverMode: !0 }),
                   ],
                 }),
-                H &&
+                T &&
                   (0, a.jsx)($, {
                     id: t,
-                    strDoubleCapsuleMessage: m,
-                    index: i,
+                    strDoubleCapsuleMessage: p,
+                    index: l,
                   }),
               ],
             }),
@@ -554,18 +556,18 @@
             strDoubleCapsuleMessage: _,
           } = e,
           { data: I } = (0, b.J$)(t),
-          { bIsOwned: x } = (0, v.ZJ)(t),
-          A = x && !r;
+          { bIsOwned: A } = (0, x.ZJ)(t),
+          f = A && !r;
         if (s && I && I.item_type == i.c6.qI && I.appid)
           return (0, a.jsx)(u.E, { appid: I.appid, bIsMuted: p });
         if (o) return null;
-        const f = Boolean(x && n),
-          S = Boolean(A);
+        const v = Boolean(A && n),
+          S = Boolean(f);
         return (0, a.jsx)(m.q, {
           id: t,
           bShowAsMuted: S,
           bHidePrice: l,
-          bShowInLibraryInsteadOfPrice: f,
+          bShowInLibraryInsteadOfPrice: v,
           bHidePlatforms: c,
           creatorAccountID: d,
           bShowName: e.bShowName,
@@ -592,10 +594,10 @@
         b = n(39700),
         _ = n(12155),
         I = n(32754),
-        v = n(52038),
-        x = n(61859),
-        A = n(78327),
-        f = n(84547);
+        x = n(52038),
+        A = n(61859),
+        f = n(78327),
+        v = n(84547);
       function S(e) {
         const { appid: t, className: n, bTextMode: r } = e,
           o = (0, u.$5)(t),
@@ -619,30 +621,30 @@
             className: w,
             bTextMode: g,
           } = e,
-          C = (0, u.$5)(s),
-          { bIsOwned: P } = (0, i.ZJ)(C),
+          P = (0, u.$5)(s),
+          { bIsOwned: C } = (0, i.ZJ)(P),
           D = (0, l.bB)(s),
           { mutateAsync: y } = (0, c.s)(s, !D, (0, m.L3)(r)),
-          { elDialogElement: E, fnShowLogonDialog: H } = (0, f.E)();
-        if (P || (!S && p))
+          { elDialogElement: E, fnShowLogonDialog: H } = (0, v.E)();
+        if (C || (!S && p))
           return p ? (0, a.jsx)(j, { possibleDemoAppID: s }) : null;
         let N = null;
         return (
           t && !g
             ? (N = (0, a.jsx)(b.k, { size: 18 }))
             : D
-              ? D && (N = g ? (0, x.we)("#OnWishlist") : (0, a.jsx)(_.qnF, {}))
+              ? D && (N = g ? (0, A.we)("#OnWishlist") : (0, a.jsx)(_.qnF, {}))
               : (N = g
-                  ? (0, x.we)("#wishlist_add_to_wishlist")
+                  ? (0, A.we)("#wishlist_add_to_wishlist")
                   : (0, a.jsx)(_.T4m, {})),
           (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsx)(I.he, {
-                toolTipContent: (0, x.we)("#AddToWishlist_ttip"),
+                toolTipContent: (0, A.we)("#AddToWishlist_ttip"),
                 children: (0, a.jsx)("div", {
-                  className: (0, v.A)(h().WishList, w),
+                  className: (0, x.A)(h().WishList, w),
                   onClick: async () => {
-                    A.iA.logged_in ? t || (n(!0), await y(), n(!1)) : H();
+                    f.iA.logged_in ? t || (n(!0), await y(), n(!1)) : H();
                   },
                   children: N,
                 }),

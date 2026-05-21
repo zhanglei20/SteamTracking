@@ -580,7 +580,7 @@
 "&\n$CAudio_GetMonoDownmixEnabled_Request"8\n%CAudio_GetMonoDownmixEnabled_Response
 "&\n$CAudio_GetUseBluetoothForMic_Request"8\n%CAudio_GetUseBluetoothForMic_Response
 "&\n$CRemoteClient_CancelPairing_Response">\n(CRemoteClient_CancelPairing_Notification
-"&\n$CShader_ReportExternalBuild_Response2
+"&\n$CShader_ReportExternalBuild_Response"f\n.CShader_ReportBucketProcessingComplete_Request
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
 "'\n%CAudio_SetMonoDownmixEnabled_Response"+\n)CAudio_SupportsUseBluetoothForMic_Request"=\n*CAudio_SupportsUseBluetoothForMic_Response
@@ -3499,6 +3499,7 @@ ${LANGUAGE}
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
 (\t"1\n/CGameRecording_UserUpdateTimelineEntry_Response"y\n.CGameRecording_UserRemoveTimelineEntry_Request
+(\t"1\n/CShader_ReportBucketProcessingComplete_Response2
 (\t"2\n!CRemoteClient_AllocateSDR_Request
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
 (\t"3\n1CAccountHardware_RegisterSteamController_Response"n\n<CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -5131,7 +5132,6 @@ ${LANGUAGE}
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
-++CCUNGs
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
 +.CAuthenticationSupport_RevokeToken_Request
@@ -5217,7 +5217,6 @@ ${LANGUAGE}
 +:JYix
 +HpXhE
 +QQ 3K%
-+SLF
 +U2L
 +\n#accessibility_screen_reader_enabled
 +\n#content_descriptorids_including_dlc
@@ -7211,6 +7210,7 @@ ${LANGUAGE}
 /.COffline_GetUnsignedOfflineLogonTicket_Request
 /.CPlayer_NewSteamAnnouncementState_Notification
 /.CPublishedFile_FileDeleted_Client_Notification
+/.CShader_ReportBucketProcessingComplete_Request
 /.CSteamInputService_ControllerStateFlow_Request
 /.CSteamInputService_TritonUndocked_Notification
 /.CStore_MigratePartnerLinkTracking_Notification
@@ -7528,6 +7528,7 @@ ${LANGUAGE}
 0.CPublishedFile_UpdateContentDescriptors_Request
 0.CRemoteClient_EnableSteamBroadcast_Notification
 0.CRemoteClient_RegisterStatusUpdate_Notification
+0.CShader_ReportBucketProcessingComplete_Response"
 0.CSiteManagerClient_TrackedPayments_Notification
 0.CSteamInputService_ControllerStateFlow_Response
 0.CSteamInputService_GetTritonPairingInfo_Request
@@ -7545,15 +7546,14 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -8077,7 +8077,6 @@ ${LANGUAGE}
 10CUtlMemoryIP18CBaseFrameFunctionE
 10CUtlMemoryIP18CGameStreamSessionE
 10CUtlMemoryIP19HTMLCommandBuffer_tE
-10CUtlMemoryIP21CRemoteSteamAppClientE
 10CUtlMemoryIP23CGameStreamAudioEncoderE
 10CUtlMemoryIP24CPromiseResolutionThreadE
 10CUtlMemoryIP24IGameStreamAudioCallbackE
@@ -8357,7 +8356,6 @@ ${LANGUAGE}
 10CUtlVectorIP18CBaseFrameFunction10CUtlMemoryIS1_EE
 10CUtlVectorIP18CGameStreamSession10CUtlMemoryIS1_EE
 10CUtlVectorIP19HTMLCommandBuffer_t10CUtlMemoryIS1_EE
-10CUtlVectorIP21CRemoteSteamAppClient10CUtlMemoryIS1_EE
 10CUtlVectorIP23CGameStreamAudioEncoder10CUtlMemoryIS1_EE
 10CUtlVectorIP24CPromiseResolutionThread10CUtlMemoryIS1_EE
 10CUtlVectorIP24IGameStreamAudioCallback10CUtlMemoryIS1_EE
@@ -12360,6 +12358,7 @@ ${LANGUAGE}
 46COffline_GetUnsignedOfflineLogonTicket_Request
 46CPlayer_NewSteamAnnouncementState_Notification
 46CPublishedFile_FileDeleted_Client_Notification
+46CShader_ReportBucketProcessingComplete_Request
 46CSteamInputService_ControllerStateFlow_Request
 46CSteamInputService_InitControllerList_Response
 46CSteamInputService_TritonUndocked_Notification
@@ -12408,6 +12407,7 @@ ${LANGUAGE}
 47CRemoteClient_EnableSteamBroadcast_Notification
 47CRemoteClient_RegisterStatusUpdate_Notification
 47CRemotePlayTogether_Notification_ControllerSlot
+47CShader_ReportBucketProcessingComplete_Response
 47CSiteManagerClient_TrackedPayments_Notification
 47CSteamInputService_ControllerStateFlow_Response
 47CSteamInputService_GetTritonPairingInfo_Request
@@ -12943,6 +12943,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+6144
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -12954,7 +12955,6 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13425,7 +13425,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9H(tA
+9HhXA
 9IGv
 9Inventory
 9PE,$
@@ -24982,7 +24982,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 19 2026 01:26:40
+May 20 2026 23:18:42
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -28529,6 +28529,7 @@ Repeated map key: '
 ReplaceRoleActions
 ReportAccessibilitySettings
 ReportBroadcastChannel
+ReportBucketProcessingComplete
 ReportClientArgs
 ReportClientError
 ReportClipRange
@@ -49714,7 +49715,6 @@ m_vecParentalPlaytimeWarnings
 m_vecParentalSettingsChanged
 m_vecPendingAchievementsCallbacks
 m_vecPendingAppContentBetaRequests
-m_vecPendingClientDeletions
 m_vecPendingClipRequests
 m_vecPendingJobPromises
 m_vecPendingManualGameRecordingDeletes
@@ -52604,6 +52604,7 @@ q$9l
 q,&2ke!
 q.IsValid()
 qCJ.
+qNL[
 qR5FE%
 qUN1
 qcStatements
