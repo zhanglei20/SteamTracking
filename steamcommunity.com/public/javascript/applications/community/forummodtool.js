@@ -78,22 +78,22 @@
       n.r(t),
         n.d(t, {
           default: () => Ce,
-          useAcquitForumComment: () => Le,
-          useSanctionForumComment: () => Ie,
+          useAcquitForumComment: () => Ie,
+          useSanctionForumComment: () => Le,
         });
       var r = n(7850),
         s = n(34410),
-        i = n(90314),
-        a = n(32754),
-        o = n(90626),
-        l = n(78327),
-        c = n(9154),
-        u = n(68255),
-        d = n(37049),
-        p = n(90182),
-        m = n(28395),
-        h = n(63987),
-        g = n(15993),
+        i = n(15993),
+        a = n(90314),
+        o = n(32754),
+        l = n(90626),
+        c = n(78327),
+        u = n(9154),
+        d = n(68255),
+        p = n(37049),
+        m = n(90182),
+        h = n(28395),
+        g = n(63987),
         j = n(63275),
         _ = n(30770),
         v = n.n(_),
@@ -101,40 +101,40 @@
         b = n(76217);
       function A(e) {
         const { subject: t, onClose: n } = e,
-          [s, i] = (0, o.useState)(g.PV),
-          a = (0, p.lY)(t.subject_type, t.subject_group_id, t.subject_id),
-          l = (0, o.useRef)(null);
+          [s, a] = (0, l.useState)(i.PV),
+          o = (0, m.lY)(t.subject_type, t.subject_group_id, t.subject_id),
+          c = (0, l.useRef)(null);
         return (0, r.jsxs)(b.Z, {
           className: v().EscalateSubjectDialogCtn,
           children: [
             (0, r.jsx)(b.Z, {
-              children: m.T.Localize("#moderation_escalation_description"),
+              children: h.T.Localize("#moderation_escalation_description"),
             }),
             (0, r.jsxs)("select", {
               className: v().EscalationLevelSelect,
               value: s,
-              onChange: (e) => i(parseInt(e.target.value)),
+              onChange: (e) => a(parseInt(e.target.value)),
               children: [
                 (0, r.jsx)("option", {
-                  value: g.HH,
-                  children: m.T.Localize("#moderation_escalationlevel_any"),
+                  value: i.HH,
+                  children: h.T.Localize("#moderation_escalationlevel_any"),
                 }),
                 (0, r.jsx)("option", {
-                  value: g.lp,
-                  children: m.T.Localize(
+                  value: i.lp,
+                  children: h.T.Localize(
                     "#moderation_escalationlevel_supervisor",
                   ),
                 }),
                 (0, r.jsx)("option", {
-                  value: g.PV,
-                  children: m.T.Localize("#moderation_escalationlevel_valve"),
+                  value: i.PV,
+                  children: h.T.Localize("#moderation_escalationlevel_valve"),
                 }),
               ],
             }),
             (0, r.jsx)("label", {
-              children: m.T.Localize("#moderation_escalation_escalationnote"),
+              children: h.T.Localize("#moderation_escalation_escalationnote"),
             }),
-            (0, r.jsx)(B.dO, { className: v().ReasonTextArea, ref: l }),
+            (0, r.jsx)(B.dO, { className: v().ReasonTextArea, ref: c }),
             (0, r.jsxs)(b.Z, {
               className: v().BottomButtons,
               children: [
@@ -142,12 +142,12 @@
                   onClick: async () => {
                     var e;
                     const t =
-                      null === (e = l.current) || void 0 === e
+                      null === (e = c.current) || void 0 === e
                         ? void 0
                         : e.value;
-                    await a.mutateAsync({ eNewLevel: s, strNote: t }), n();
+                    await o.mutateAsync({ eNewLevel: s, strNote: t }), n();
                   },
-                  children: m.T.Localize("#moderation_escalation_escalate"),
+                  children: h.T.Localize("#moderation_escalation_escalate"),
                 }),
                 (0, r.jsx)(B.fu, {
                   onClick: n,
@@ -165,15 +165,15 @@
         w = n(59884),
         M = n.n(w);
       function C(e) {
-        const [t, n] = (0, o.useState)(null),
-          [s, i] = (0, o.useState)([]),
-          [a, l] = (0, o.useState)(!1),
-          [c, u] = (0, o.useState)(!1);
+        const [t, n] = (0, l.useState)(null),
+          [s, i] = (0, l.useState)([]),
+          [a, o] = (0, l.useState)(!1),
+          [c, u] = (0, l.useState)(!1);
         let d = e.reasons;
         for (const e of s) d = d[e].children;
-        const p = null !== t ? (0, h.V$)(t) : null,
-          m = null !== t ? (0, h.GA)(t) : null,
-          g = () => {
+        const p = null !== t ? (0, g.V$)(t) : null,
+          m = null !== t ? (0, g.GA)(t) : null,
+          h = () => {
             null !== t
               ? n(null)
               : 0 === s.length
@@ -189,18 +189,18 @@
                     className: M().BlockList,
                     children: d.map((t, a) => {
                       const o = () => {
-                        if ((0, h.Ju)(t)) {
+                        if ((0, g.Ju)(t)) {
                           const e = [...s];
                           e.push(a), i(e);
                         } else {
-                          if (!(0, h.X$)(t))
+                          if (!(0, g.X$)(t))
                             throw new Error("This should be unreachable.");
-                          (0, h.V$)(t.value) || (0, h.GA)(t.value)
+                          (0, g.V$)(t.value) || (0, g.GA)(t.value)
                             ? n(t.value)
                             : e.onSelect(t.value);
                         }
                       };
-                      return (0, h.Ur)(t)
+                      return (0, g.Ur)(t)
                         ? (0, r.jsx)(
                             B.Ii,
                             {
@@ -217,11 +217,11 @@
                               className: M().BlockListItem,
                               children: [
                                 (0, r.jsx)("span", {
-                                  children: (0, h.Ju)(t)
+                                  children: (0, g.Ju)(t)
                                     ? j.u.Localize(t.strLocToken)
-                                    : (0, h.Jt)(t.value),
+                                    : (0, g.Jt)(t.value),
                                 }),
-                                (0, h.Ju)(t) &&
+                                (0, g.Ju)(t) &&
                                   (0, r.jsx)("span", { children: "▶" }),
                               ],
                             },
@@ -229,7 +229,7 @@
                           );
                     }),
                   }),
-                  (0, r.jsx)(S.n9, { onClick: g, children: "Back" }),
+                  (0, r.jsx)(S.n9, { onClick: h, children: "Back" }),
                 ],
               }),
             null !== t &&
@@ -238,7 +238,7 @@
                 children: [
                   (0, r.jsx)("div", {
                     className: M().BlockListItem,
-                    children: (0, h.Jt)(t),
+                    children: (0, g.Jt)(t),
                   }),
                   null !== p &&
                     (0, r.jsxs)("label", {
@@ -246,7 +246,7 @@
                         (0, r.jsx)("input", {
                           type: "checkbox",
                           checked: a,
-                          onChange: (e) => l(e.target.checked),
+                          onChange: (e) => o(e.target.checked),
                         }),
                         " Targeted at women",
                       ],
@@ -265,13 +265,13 @@
                   (0, r.jsxs)("div", {
                     className: M().BottomButtons,
                     children: [
-                      (0, r.jsx)(S.n9, { onClick: g, children: "Back" }),
+                      (0, r.jsx)(S.n9, { onClick: h, children: "Back" }),
                       (0, r.jsx)(S.n9, {
                         onClick: () => {
                           let n = t;
                           null !== n &&
-                            (a && null !== (0, h.V$)(n) && (n = (0, h.V$)(n)),
-                            c && null !== (0, h.GA)(n) && (n = (0, h.GA)(n)),
+                            (a && null !== (0, g.V$)(n) && (n = (0, g.V$)(n)),
+                            c && null !== (0, g.GA)(n) && (n = (0, g.GA)(n)),
                             e.onSelect(n));
                         },
                         children: "Continue",
@@ -289,17 +289,17 @@
         z = n(81393),
         U = n(37085),
         F = n(88942),
-        L = n(22837),
-        I = n(80613),
-        Q = n.n(I),
+        I = n(22837),
+        L = n(80613),
+        Q = n.n(L),
         E = n(89068),
         N = n(56545);
-      class q extends I.Message {
+      class q extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             q.prototype.quicktext_id || E.Sg(q.M()),
-            I.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
+            L.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
         }
         static M() {
           return (
@@ -401,12 +401,12 @@
           return "CSupportData_QuickText";
         }
       }
-      class O extends I.Message {
+      class O extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             O.prototype.content || E.Sg(O.M()),
-            I.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -472,12 +472,12 @@
           return "CSupportData_QuickTextContent";
         }
       }
-      class D extends I.Message {
+      class D extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             D.prototype.quicktext_id || E.Sg(D.M()),
-            I.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -532,12 +532,12 @@
           return "CSupportAgents_GetQuickText_Request";
         }
       }
-      class W extends I.Message {
+      class W extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             W.prototype.quicktext || E.Sg(W.M()),
-            I.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -587,12 +587,12 @@
           return "CSupportAgents_GetQuickText_Response";
         }
       }
-      class P extends I.Message {
+      class P extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             P.prototype.appid || E.Sg(P.M()),
-            I.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -657,12 +657,12 @@
           return "CHelpRequestLogs_UploadUserApplicationLog_Request";
         }
       }
-      class G extends I.Message {
+      class G extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             G.prototype.id || E.Sg(G.M()),
-            I.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -715,12 +715,12 @@
           return "CHelpRequestLogs_UploadUserApplicationLog_Response";
         }
       }
-      class K extends I.Message {
+      class K extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             K.prototype.appid || E.Sg(K.M()),
-            I.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -769,12 +769,12 @@
           return "CHelpRequestLogs_GetApplicationLogDemand_Request";
         }
       }
-      class H extends I.Message {
+      class H extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             H.prototype.request_id || E.Sg(H.M()),
-            I.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -855,16 +855,16 @@
         })(R || (R = {}));
       var J = n(23809);
       function V(e) {
-        const [t, n] = (0, o.useState)(null),
-          [s, i] = (0, o.useState)("main"),
-          [a, c] = (0, o.useState)(!1),
-          [u, d] = (0, o.useState)(!1),
-          [p, g] = (0, o.useState)(null),
-          [j, _] = (0, o.useState)(null),
-          [v, B] = (0, o.useState)(null),
-          [A, f] = (0, o.useState)(!1),
-          [w, M] = (0, o.useState)(!1),
-          [R, I] = (0, o.useState)(""),
+        const [t, n] = (0, l.useState)(null),
+          [s, i] = (0, l.useState)("main"),
+          [a, o] = (0, l.useState)(!1),
+          [u, d] = (0, l.useState)(!1),
+          [p, m] = (0, l.useState)(null),
+          [j, _] = (0, l.useState)(null),
+          [v, B] = (0, l.useState)(null),
+          [A, f] = (0, l.useState)(!1),
+          [w, M] = (0, l.useState)(!1),
+          [R, L] = (0, l.useState)(""),
           Q = a || u || p || j || v || A || w,
           E =
             ((q = e.authorSteamId),
@@ -872,7 +872,7 @@
               queryKey: ["get_primary_language_for_user", q],
               queryFn: async () => {
                 const e = await fetch(
-                    `${l.TS.COMMUNITY_BASE_URL}profiles/${q}/ajaxlanguagepreferences`,
+                    `${c.TS.COMMUNITY_BASE_URL}profiles/${q}/ajaxlanguagepreferences`,
                   ),
                   t = await e.json();
                 if (t.success === U.R) return t.preferences;
@@ -882,7 +882,7 @@
               },
             }));
         var q;
-        let O = L.Bhc;
+        let O = I.Bhc;
         if (E.isSuccess) {
           const e = E.data;
           void 0 !== e.pref_primary_language && -1 !== e.pref_primary_language
@@ -899,7 +899,7 @@
               if (null == e || void 0 === t) return null;
               const r = N.w.Init(D);
               r.Body().set_quicktext_id(e),
-                r.Body().set_language((0, L.LgB)(t));
+                r.Body().set_language((0, I.LgB)(t));
               const s = await T.GetQuickText(n, r);
               if (s.GetEResult() !== U.R)
                 throw new Error(
@@ -909,10 +909,10 @@
             },
             enabled: void 0 !== e,
           });
-        })((0, h.AH)(t), O);
-        (0, o.useEffect)(() => {
+        })((0, g.AH)(t), O);
+        (0, l.useEffect)(() => {
           var e, t, n, r, s, i, a;
-          I(
+          L(
             null !==
               (a =
                 null !==
@@ -947,7 +947,7 @@
           children: [
             "reason" === s &&
               (0, r.jsx)(C, {
-                reasons: h.UL,
+                reasons: g.UL,
                 onSelect: (e) => {
                   n(e), i("main");
                 },
@@ -968,10 +968,10 @@
                         onClick: () => i("reason"),
                         children:
                           null === t
-                            ? m.T.Localize(
+                            ? h.T.Localize(
                                 "#commentsanctiondialog_selectreason",
                               )
-                            : (0, h.Jt)(t),
+                            : (0, g.Jt)(t),
                       }),
                       (0, r.jsxs)("label", {
                         className: y().OneColumn,
@@ -979,7 +979,7 @@
                           (0, r.jsx)("input", {
                             type: "checkbox",
                             checked: a,
-                            onChange: (e) => c(e.target.checked),
+                            onChange: (e) => o(e.target.checked),
                           }),
                           " Delete",
                         ],
@@ -1002,7 +1002,7 @@
                       (0, r.jsxs)("select", {
                         id: "hubban",
                         onChange: (e) =>
-                          g(
+                          m(
                             "0" === e.target.value
                               ? null
                               : parseInt(e.target.value),
@@ -1170,7 +1170,7 @@
                         className: (0, k.A)(y().OneColumn, y().MessageTextArea),
                         placeholder: "Message to send",
                         value: R,
-                        onChange: (e) => I(e.target.value),
+                        onChange: (e) => L(e.target.value),
                       }),
                     ],
                   }),
@@ -1225,11 +1225,11 @@
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
       function le(e) {
         const { rgSources: t, onIncrementalError: n, alt: s, ...i } = e,
-          [a, l] = (0, o.useState)(0),
+          [a, o] = (0, l.useState)(0),
           c = t[a];
         return (0, r.jsx)("img", {
           onError: (e) => {
-            l((e) => e + 1), null == n || n(e, c, a);
+            o((e) => e + 1), null == n || n(e, c, a);
           },
           alt: s,
           ...i,
@@ -1327,7 +1327,7 @@
             isOnline:
               (null === (s = c.private_data) || void 0 === s
                 ? void 0
-                : s.persona_state) === L.UXk,
+                : s.persona_state) === I.UXk,
             isInGame:
               void 0 !==
               (null === (i = c.private_data) || void 0 === i
@@ -1341,10 +1341,10 @@
             isAwayOrSnooze:
               (null === (o = c.private_data) || void 0 === o
                 ? void 0
-                : o.persona_state) === L.PrD ||
+                : o.persona_state) === I.PrD ||
               (null === (l = c.private_data) || void 0 === l
                 ? void 0
-                : l.persona_state) === L.vPz,
+                : l.persona_state) === I.vPz,
             ...m,
           })
         );
@@ -1372,7 +1372,7 @@
                 children: (0, r.jsx)("tr", {
                   children: (0, r.jsx)("td", {
                     colSpan: 4,
-                    children: m.T.Localize("#subjectauditlog_noentries"),
+                    children: h.T.Localize("#subjectauditlog_noentries"),
                   }),
                 }),
               }),
@@ -1383,7 +1383,7 @@
       function Be(e) {
         var t, n, s, i, a;
         const { subject: o } = e,
-          l = (0, p.Kt)(
+          l = (0, m.Kt)(
             null == o ? void 0 : o.subject_type,
             null == o ? void 0 : o.subject_group_id,
             null == o ? void 0 : o.subject_id,
@@ -1421,7 +1421,7 @@
                       (0, r.jsx)("tr", {
                         children: (0, r.jsx)("td", {
                           colSpan: 4,
-                          children: m.T.Localize("#subjectauditlog_noentries"),
+                          children: h.T.Localize("#subjectauditlog_noentries"),
                         }),
                       }),
                     l &&
@@ -1438,7 +1438,7 @@
                             (0, r.jsx)("tr", {
                               children: (0, r.jsx)("td", {
                                 colSpan: 4,
-                                children: m.T.Localize(
+                                children: h.T.Localize(
                                   "#subjectauditlog_error",
                                 ),
                               }),
@@ -1448,7 +1448,7 @@
                             (0, r.jsx)("tr", {
                               children: (0, r.jsx)("td", {
                                 colSpan: 4,
-                                children: m.T.Localize(
+                                children: h.T.Localize(
                                   "#subjectauditlog_noentries",
                                 ),
                               }),
@@ -1483,7 +1483,7 @@
                 (0, r.jsxs)("td", {
                   children: [
                     (0, r.jsx)("a", {
-                      href: `${l.TS.COMMUNITY_BASE_URL}profiles/${s.actor_steamid}`,
+                      href: `${c.TS.COMMUNITY_BASE_URL}profiles/${s.actor_steamid}`,
                       children: (0, r.jsx)("span", {
                         children:
                           null ===
@@ -1506,7 +1506,7 @@
                 }),
                 (0, r.jsxs)("td", {
                   children: [
-                    (0, h.fg)(s.action),
+                    (0, g.fg)(s.action),
                     s.automated_action &&
                       (0, r.jsx)(r.Fragment, { children: " (Automated)" }),
                   ],
@@ -1533,14 +1533,14 @@
             return (0, r.jsxs)(r.Fragment, {
               children: [
                 "Reason: ",
-                (0, h.Jt)(s.reason),
-                s.resolution !== i.CC &&
-                  s.resolution !== i.S6 &&
+                (0, g.Jt)(s.reason),
+                s.resolution !== a.CC &&
+                  s.resolution !== a.S6 &&
                   (0, r.jsxs)(r.Fragment, {
                     children: [
                       (0, r.jsx)("br", {}),
                       "Resolution: ",
-                      (0, h.l)(s.resolution),
+                      (0, g.l)(s.resolution),
                     ],
                   }),
                 s.sanctions &&
@@ -1548,7 +1548,7 @@
                     children: [
                       (0, r.jsx)("br", {}),
                       "Sanctions: ",
-                      s.sanctions.map(h.cB).join(", "),
+                      s.sanctions.map(g.cB).join(", "),
                     ],
                   }),
               ],
@@ -1563,7 +1563,7 @@
             });
           case ee.YI:
             return (0, r.jsxs)(r.Fragment, {
-              children: ["New level: ", (0, h.ar)(s.level)],
+              children: ["New level: ", (0, g.ar)(s.level)],
             });
           case ee._7:
             return (0, r.jsxs)(r.Fragment, {
@@ -1585,7 +1585,7 @@
                 (0, r.jsx)("tr", {
                   children: (0, r.jsx)("td", {
                     colSpan: 4,
-                    children: m.T.Localize("#contentreportslist_noreports"),
+                    children: h.T.Localize("#contentreportslist_noreports"),
                   }),
                 }),
               s &&
@@ -1599,35 +1599,35 @@
       function fe(e) {
         var t, n;
         const { report: s } = e,
-          a = (0, re.jn)(s.reporter_steamid);
-        if (!a.isSuccess) return null;
-        if (!(null === (t = a.data) || void 0 === t ? void 0 : t.public_data))
+          i = (0, re.jn)(s.reporter_steamid);
+        if (!i.isSuccess) return null;
+        if (!(null === (t = i.data) || void 0 === t ? void 0 : t.public_data))
           return null;
-        const o = !!s.time_disputed && s.dispute_resolved === i.z_,
-          c =
-            s.resolved !== i.z_ &&
-            (!s.time_disputed || s.dispute_resolved !== i.z_),
+        const o = !!s.time_disputed && s.dispute_resolved === a.z_,
+          l =
+            s.resolved !== a.z_ &&
+            (!s.time_disputed || s.dispute_resolved !== a.z_),
           u = 0 !== s.time_dispute_resolved,
-          d = s.resolved === i.CC;
+          d = s.resolved === a.CC;
         return (0, r.jsxs)("tr", {
           children: [
             (0, r.jsx)("td", { children: (0, se.P0)(s.time_reported, !1, "") }),
             (0, r.jsxs)("td", {
               children: [
                 (0, r.jsx)("a", {
-                  href: `${l.TS.COMMUNITY_BASE_URL}profiles/${s.reporter_steamid}`,
+                  href: `${c.TS.COMMUNITY_BASE_URL}profiles/${s.reporter_steamid}`,
                   children: (0, r.jsx)(ge, {
-                    playerLinkDetails: a.data,
+                    playerLinkDetails: i.data,
                     size: "X-Small",
                     alt: "Reporter",
                   }),
                 }),
                 " ",
                 (0, r.jsx)("a", {
-                  href: `${l.TS.COMMUNITY_BASE_URL}profiles/${s.reporter_steamid}`,
+                  href: `${c.TS.COMMUNITY_BASE_URL}profiles/${s.reporter_steamid}`,
                   children: (0, r.jsx)("span", {
                     children:
-                      null === (n = a.data.public_data) || void 0 === n
+                      null === (n = i.data.public_data) || void 0 === n
                         ? void 0
                         : n.persona_name,
                   }),
@@ -1637,7 +1637,7 @@
             (0, r.jsx)("td", {
               children:
                 s.report_reason !== te.OQ &&
-                (0, r.jsx)("span", { children: (0, h.Jt)(s.report_reason) }),
+                (0, r.jsx)("span", { children: (0, g.Jt)(s.report_reason) }),
             }),
             (0, r.jsxs)("td", {
               children: [
@@ -1645,17 +1645,17 @@
                   !o &&
                   !u &&
                   (0, r.jsx)("span", {
-                    children: m.T.Localize(
+                    children: h.T.Localize(
                       "#contentreportslist_acquitted_at",
                       (0, se.P0)(s.time_resolved, !1, ""),
                     ),
                   }),
-                c &&
+                l &&
                   !d &&
                   !o &&
                   !u &&
                   (0, r.jsx)("span", {
-                    children: m.T.Localize(
+                    children: h.T.Localize(
                       "#contentreportslist_resolved_at",
                       (0, se.P0)(s.time_resolved, !1, ""),
                     ),
@@ -1663,14 +1663,14 @@
                 o &&
                   !u &&
                   (0, r.jsx)("span", {
-                    children: m.T.Localize(
+                    children: h.T.Localize(
                       "#contentreportslist_disputed_at",
                       (0, se.P0)(s.time_disputed, !1, ""),
                     ),
                   }),
                 u &&
                   (0, r.jsx)("span", {
-                    children: m.T.Localize(
+                    children: h.T.Localize(
                       "#contentreportslist_dispute_resolved_at",
                       (0, se.P0)(s.time_dispute_resolved, !1, ""),
                     ),
@@ -1698,69 +1698,67 @@
         Me = n(12155);
       function Ce(e) {
         var t;
-        const [n, i] = (0, o.useState)(!1),
-          c = (0, p.kZ)(s.lN, e.topicId);
-        let u;
-        if (c.isSuccess)
-          for (const n of null !== (t = c.data.subjects) && void 0 !== t
+        const [n, a] = (0, l.useState)(!1),
+          u = (0, m.kZ)(s.lN, e.topicId);
+        let d;
+        if (u.isSuccess)
+          for (const n of null !== (t = u.data.subjects) && void 0 !== t
             ? t
             : [])
-            n.subject_id === e.subjectId && (u = n);
-        const d =
-            u &&
-            (u.unresolved_report_count > 0 || u.unresolved_dispute_count > 0),
-          h = (0, r.jsx)("span", {
-            className: X.ModerateLink,
-            children: (0, r.jsxs)("a", {
-              onClick: () => i(!0),
-              children: [
-                d &&
-                  (0, r.jsxs)(r.Fragment, {
-                    children: [
-                      (0, r.jsx)("img", {
-                        className: X.Flag,
-                        src: `${l.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
-                      }),
-                      " ",
-                    ],
-                  }),
-                m.T.Localize("#commentsanctiondialog_moderate"),
-                u &&
-                  u.required_moderator_level === g.PV &&
-                  (0, r.jsxs)(r.Fragment, {
-                    children: [
-                      " ",
-                      (0, r.jsx)("span", {
-                        className: X.ValveOnly,
-                        children: "(VO)",
-                      }),
-                    ],
-                  }),
-                u &&
-                  u.required_moderator_level === g.lp &&
-                  (0, r.jsxs)(r.Fragment, {
-                    children: [
-                      " ",
-                      (0, r.jsx)("span", {
-                        className: X.SupervisorOnly,
-                        children: "(Supervisor)",
-                      }),
-                    ],
-                  }),
-              ],
-            }),
+            n.subject_id === e.subjectId && (d = n);
+        const p =
+            d &&
+            (d.unresolved_report_count > 0 || d.unresolved_dispute_count > 0),
+          g = (0, r.jsxs)("a", {
+            onClick: () => a(!0),
+            className: "forum_comment_permlink",
+            children: [
+              p &&
+                (0, r.jsxs)(r.Fragment, {
+                  children: [
+                    (0, r.jsx)("img", {
+                      className: X.Flag,
+                      src: `${c.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                    }),
+                    " ",
+                  ],
+                }),
+              h.T.Localize("#commentsanctiondialog_moderate"),
+              d &&
+                d.required_moderator_level === i.PV &&
+                (0, r.jsxs)(r.Fragment, {
+                  children: [
+                    " ",
+                    (0, r.jsx)("span", {
+                      className: X.ValveOnly,
+                      children: "(VO)",
+                    }),
+                  ],
+                }),
+              d &&
+                d.required_moderator_level === i.lp &&
+                (0, r.jsxs)(r.Fragment, {
+                  children: [
+                    " ",
+                    (0, r.jsx)("span", {
+                      className: X.SupervisorOnly,
+                      children: "(Supervisor)",
+                    }),
+                  ],
+                }),
+            ],
           });
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            n && (0, r.jsx)(Re, { onClose: () => i(!1), ...e, subject: u }),
-            u &&
-              (0, r.jsx)(a.Gq, {
-                toolTipContent: (0, r.jsx)(Te, { subject: u }),
+            n && (0, r.jsx)(Re, { onClose: () => a(!1), ...e, subject: d }),
+            d &&
+              (0, r.jsx)(o.Gq, {
+                toolTipContent: (0, r.jsx)(Te, { subject: d }),
                 direction: "bottom",
                 nDelayShowMS: 0,
-                children: h,
+                children: g,
               }),
-            !u && h,
+            !d && g,
           ],
         });
       }
@@ -1773,15 +1771,15 @@
           (0, r.jsxs)(r.Fragment, {
             children: [
               (0, r.jsx)("div", {
-                children: m.T.Localize("#reasonlist_title"),
+                children: h.T.Localize("#reasonlist_title"),
               }),
               n.map(([e, t]) =>
                 (0, r.jsx)(
                   "div",
                   {
-                    children: m.T.Localize(
+                    children: h.T.Localize(
                       "#reasonlist_reasonwithcount",
-                      (0, h.Jt)(e),
+                      (0, g.Jt)(e),
                       t,
                     ),
                   },
@@ -1793,30 +1791,30 @@
         );
       }
       function Re(e) {
-        var t, n, a;
-        const { subject: p } = e,
-          [h, g] = (0, o.useState)("main"),
-          j = Ie(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
+        var t, n, i;
+        const { subject: o } = e,
+          [m, g] = (0, l.useState)("main"),
+          j = Le(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
           _ = [
             {
               name: "History",
               key: "history",
               contents: (0, r.jsx)(Y.tH, {
-                children: (0, r.jsx)(_e, { subject: p }),
+                children: (0, r.jsx)(_e, { subject: o }),
               }),
             },
             {
               name: "Reports",
               key: "reports",
               contents: (0, r.jsx)(Y.tH, {
-                children: (0, r.jsx)(xe, { subject: p }),
+                children: (0, r.jsx)(xe, { subject: o }),
               }),
             },
           ];
         let v = 0,
           b = 0;
-        if (p)
-          for (const e of p.reports)
+        if (o)
+          for (const e of o.reports)
             e.time_resolved && !e.time_disputed && v++,
               e.time_dispute_resolved && b++;
         const x = {
@@ -1824,25 +1822,25 @@
             subject_group_id: e.topicId,
             subject_id: e.subjectId,
           },
-          f = void 0 !== p && !p.owner_dispute_time && p.resolved === i.S6,
-          y = void 0 !== p && !!p.owner_dispute_time;
-        return (0, r.jsx)(d.w, {
+          f = void 0 !== o && !o.owner_dispute_time && o.resolved === a.S6,
+          y = void 0 !== o && !!o.owner_dispute_time;
+        return (0, r.jsx)(p.w, {
           onlyPopoutIfNeeded: !0,
           popupHeight: 340,
           popupWidth: 640,
           strTitle: "Moderate subject",
-          children: (0, r.jsx)(c.eV, {
+          children: (0, r.jsx)(u.eV, {
             bAllowFullSize: !0,
             title: "Moderate",
             "aria-describedby": "moderate",
             onCancel: e.onClose,
             className: X.ModerateDialog,
-            children: (0, r.jsx)(u.f3, {
-              children: (0, r.jsx)(u.a3, {
+            children: (0, r.jsx)(d.f3, {
+              children: (0, r.jsx)(d.a3, {
                 children: (0, r.jsxs)("div", {
                   className: X.ModerateDialogCtn,
                   children: [
-                    "main" === h &&
+                    "main" === m &&
                       (0, r.jsxs)("div", {
                         className: X.ModerateCtn,
                         children: [
@@ -1853,9 +1851,9 @@
                                 children: [
                                   null !==
                                     (t =
-                                      null == p
+                                      null == o
                                         ? void 0
-                                        : p.unresolved_report_count) &&
+                                        : o.unresolved_report_count) &&
                                   void 0 !== t
                                     ? t
                                     : 0,
@@ -1864,9 +1862,9 @@
                                   " resolved / ",
                                   null !==
                                     (n =
-                                      null == p
+                                      null == o
                                         ? void 0
-                                        : p.unresolved_dispute_count) &&
+                                        : o.unresolved_dispute_count) &&
                                   void 0 !== n
                                     ? n
                                     : 0,
@@ -1883,18 +1881,18 @@
                             children: [
                               (0, r.jsx)(Ue, {
                                 ...e,
-                                subject: p,
+                                subject: o,
                                 onClose: e.onClose,
                               }),
                               (0, r.jsx)(Fe, {
                                 ...e,
-                                subject: p,
+                                subject: o,
                                 onClose: e.onClose,
                               }),
                               (0, r.jsx)(B.fu, {
                                 disabled: !e.subject,
                                 onClick: () => g("escalate"),
-                                children: m.T.Localize(
+                                children: h.T.Localize(
                                   "#moderation_escalation_escalate",
                                 ),
                               }),
@@ -1912,8 +1910,8 @@
                                 (0, r.jsxs)("span", {
                                   children: [
                                     (0, r.jsx)("a", {
-                                      href: `${l.TS.HELP_BASE_URL}tickermaster/ticket/${p.owner_dispute_details}`,
-                                      children: m.T.Localize(
+                                      href: `${c.TS.HELP_BASE_URL}tickermaster/ticket/${o.owner_dispute_details}`,
+                                      children: h.T.Localize(
                                         "#moderation_already_owner_disputed",
                                       ),
                                     }),
@@ -1929,9 +1927,9 @@
                           }),
                         ],
                       }),
-                    "escalate" === h &&
+                    "escalate" === m &&
                       (0, r.jsx)(A, { subject: x, onClose: () => g("main") }),
-                    "sanction" === h &&
+                    "sanction" === m &&
                       (0, r.jsx)(V, {
                         subject: x,
                         authorSteamId: e.authorSteamId,
@@ -1949,22 +1947,22 @@
                         },
                         onCancel: () => g("main"),
                       }),
-                    "ownerdispute" === h &&
+                    "ownerdispute" === m &&
                       (0, r.jsx)(ze, {
                         subject: x,
                         authorSteamId: e.authorSteamId,
                         onClose: () => g("main"),
                       }),
-                    "editownerdisputedetails" === h &&
+                    "editownerdisputedetails" === m &&
                       (0, r.jsx)(ke, {
                         subject: x,
                         onClose: () => g("main"),
                         currentDetails:
                           null !==
-                            (a =
-                              null == p ? void 0 : p.owner_dispute_details) &&
-                          void 0 !== a
-                            ? a
+                            (i =
+                              null == o ? void 0 : o.owner_dispute_details) &&
+                          void 0 !== i
+                            ? i
                             : "",
                       }),
                   ],
@@ -1976,13 +1974,13 @@
       }
       function ke(e) {
         const { subject: t, onClose: n, currentDetails: s } = e,
-          [i, a] = (0, o.useState)(s),
-          l = (0, p.wy)(t.subject_type, t.subject_group_id, t.subject_id, i);
+          [i, a] = (0, l.useState)(s),
+          o = (0, m.wy)(t.subject_type, t.subject_group_id, t.subject_id, i);
         return (0, r.jsxs)(b.Z, {
           children: [
             (0, r.jsxs)("label", {
               children: [
-                m.T.Localize("#moderation_editownerdisputedetails_label"),
+                h.T.Localize("#moderation_editownerdisputedetails_label"),
                 (0, r.jsx)("input", {
                   type: "text",
                   value: i,
@@ -1995,15 +1993,15 @@
               children: [
                 (0, r.jsx)(B.fu, {
                   onClick: async () => {
-                    await l.mutateAsync(), n();
+                    await o.mutateAsync(), n();
                   },
-                  children: m.T.Localize(
+                  children: h.T.Localize(
                     "#moderation_editownerdisputedetails_save",
                   ),
                 }),
                 (0, r.jsx)(B.fu, {
                   onClick: n,
-                  children: m.T.Localize("#moderation_ownerdispute_cancel"),
+                  children: h.T.Localize("#moderation_ownerdispute_cancel"),
                 }),
               ],
             }),
@@ -2012,17 +2010,17 @@
       }
       function ze(e) {
         const { authorSteamId: t, subject: n, onClose: s } = e,
-          [i, a] = (0, o.useState)(""),
-          l = (0, p.y4)(t, n.subject_type, n.subject_group_id, n.subject_id, i);
+          [i, a] = (0, l.useState)(""),
+          o = (0, m.y4)(t, n.subject_type, n.subject_group_id, n.subject_id, i);
         return (0, r.jsxs)(b.Z, {
           className: X.OwnerDisputeCtn,
           children: [
             (0, r.jsx)("div", {
-              children: m.T.Localize("#moderation_ownerdispute_description"),
+              children: h.T.Localize("#moderation_ownerdispute_description"),
             }),
             (0, r.jsxs)("label", {
               children: [
-                m.T.Localize("#moderation_ownerdispute_ticketmastercode"),
+                h.T.Localize("#moderation_ownerdispute_ticketmastercode"),
                 " ",
                 (0, r.jsx)("input", {
                   type: "text",
@@ -2036,13 +2034,13 @@
               children: [
                 (0, r.jsx)(B.fu, {
                   onClick: async () => {
-                    await l.mutateAsync(), s();
+                    await o.mutateAsync(), s();
                   },
-                  children: m.T.Localize("#moderation_ownerdispute_dispute"),
+                  children: h.T.Localize("#moderation_ownerdispute_dispute"),
                 }),
                 (0, r.jsx)(B.fu, {
                   onClick: s,
-                  children: m.T.Localize("#moderation_ownerdispute_cancel"),
+                  children: h.T.Localize("#moderation_ownerdispute_cancel"),
                 }),
               ],
             }),
@@ -2051,37 +2049,37 @@
       }
       function Ue(e) {
         const { subject: t } = e,
-          n = Le(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
+          n = Ie(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
           s =
             t &&
             (t.unresolved_report_count > 0 ||
               t.unresolved_dispute_count > 0 ||
-              (t.resolved === i.S6 && t.dispute_resolved !== i.CC) ||
-              t.dispute_resolved === i.S6);
+              (t.resolved === a.S6 && t.dispute_resolved !== a.CC) ||
+              t.dispute_resolved === a.S6);
         return (0, r.jsx)("button", {
           onClick: async () => {
             await n.mutateAsync(), e.onClose();
           },
           disabled: !s,
-          children: m.T.Localize("#moderation_actions_acquit"),
+          children: h.T.Localize("#moderation_actions_acquit"),
         });
       }
       function Fe(e) {
         const { subject: t } = e,
           n =
             t &&
-            t.resolved !== i.z_ &&
+            t.resolved !== a.z_ &&
             (t.unresolved_dispute_count > 0 || t.unresolved_report_count > 0),
-          a = (0, p.CS)(s.lN, e.topicId, e.subjectId);
+          i = (0, m.CS)(s.lN, e.topicId, e.subjectId);
         return (0, r.jsx)("button", {
           onClick: async () => {
-            await a.mutateAsync({}), e.onClose();
+            await i.mutateAsync({}), e.onClose();
           },
           disabled: !n,
-          children: m.T.Localize("#moderation_actions_sustain"),
+          children: h.T.Localize("#moderation_actions_sustain"),
         });
       }
-      function Le(e, t, n, r) {
+      function Ie(e, t, n, r) {
         const i = (0, J.KV)(),
           a = (0, ye.jE)();
         return (0, Se.n)({
@@ -2097,11 +2095,11 @@
             return a.Body();
           },
           onSuccess: async (e) => {
-            await (0, p.iW)(a, s.lN, n, r);
+            await (0, m.iW)(a, s.lN, n, r);
           },
         });
       }
-      function Ie(e, t, n, r) {
+      function Le(e, t, n, r) {
         const i = (0, J.KV)(),
           a = (0, ye.jE)();
         return (0, Se.n)({
@@ -2127,7 +2125,7 @@
             return o.Body();
           },
           onSuccess: async (e) => {
-            await (0, p.iW)(a, s.lN, n, r);
+            await (0, m.iW)(a, s.lN, n, r);
           },
         });
       }

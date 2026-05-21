@@ -1858,46 +1858,44 @@
         const _ =
             _ &&
             (_.unresolved_report_count > 0 || _.unresolved_dispute_count > 0),
-          _ = (0, _.jsx)("span", {
-            className: _.ModerateLink,
-            children: (0, _.jsxs)("a", {
-              onClick: () => _(!0),
-              children: [
-                _ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)("img", {
-                        className: _.Flag,
-                        src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
-                      }),
-                      " ",
-                    ],
-                  }),
-                _._.Localize("#commentsanctiondialog_moderate"),
-                _ &&
-                  _.required_moderator_level === _._ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      " ",
-                      (0, _.jsx)("span", {
-                        className: _.ValveOnly,
-                        children: "(VO)",
-                      }),
-                    ],
-                  }),
-                _ &&
-                  _.required_moderator_level === _._ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      " ",
-                      (0, _.jsx)("span", {
-                        className: _.SupervisorOnly,
-                        children: "(Supervisor)",
-                      }),
-                    ],
-                  }),
-              ],
-            }),
+          _ = (0, _.jsxs)("a", {
+            onClick: () => _(!0),
+            className: "forum_comment_permlink",
+            children: [
+              _ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("img", {
+                      className: _.Flag,
+                      src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                    }),
+                    " ",
+                  ],
+                }),
+              _._.Localize("#commentsanctiondialog_moderate"),
+              _ &&
+                _.required_moderator_level === _._ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: _.ValveOnly,
+                      children: "(VO)",
+                    }),
+                  ],
+                }),
+              _ &&
+                _.required_moderator_level === _._ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: _.SupervisorOnly,
+                      children: "(Supervisor)",
+                    }),
+                  ],
+                }),
+            ],
           });
         return (0, _.jsxs)(_.Fragment, {
           children: [
