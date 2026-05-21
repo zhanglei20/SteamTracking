@@ -294,159 +294,6 @@ function _(_) {
     : null;
 }
 var _ = _(_(), 1);
-var _ = _(_(), 1);
-function _(_) {
-  let { total: _ } = _,
-    _ = _(_),
-    _ = "";
-  return (
-    typeof _ == "number" && _.length > 0
-      ? (_ = _.LocalizePlural("#Search_AmountFoundFor", _(_)))
-      : typeof _ == "number"
-        ? (_ = _.LocalizePlural("#Search_AmountFound", _(_)))
-        : _.length > 0 && (_ = _.Localize("#Search_ResultsFoundFor")),
-    (0, _.jsxs)(_, {
-      align: "center",
-      gap: "2",
-      wrap: "wrap",
-      children: [
-        _
-          ? (0, _.jsx)(_, {
-              contrast: "description",
-              children: _,
-            })
-          : null,
-        _.map(({ key: _, label: _, onClear: _ }) =>
-          (0, _.jsxs)(
-            _,
-            {
-              color: "dull",
-              onClick: _,
-              children: [
-                _,
-                (0, _.jsx)(_, {
-                  marginLeft: "2",
-                }),
-              ],
-            },
-            _,
-          ),
-        ),
-      ],
-    })
-  );
-}
-function _(_) {
-  let { state: _, onChange: _ } = _,
-    _ = _(),
-    _ = [];
-  _.strSearch &&
-    _.push({
-      key: "q",
-      label: `"${_.strSearch}"`,
-      onClear: () =>
-        _({
-          ..._,
-          strSearch: "",
-        }),
-    });
-  let _ = _.bSteamItems ? _.filterSteam : _.filterInGame,
-    _ = _.app?.appid ?? 0,
-    _ = _.bSteamItems ? 753 : _,
-    _ = _(_),
-    _ = _(_),
-    _ = (_) =>
-      _({
-        ..._,
-        filterInGame: _.bSteamItems ? _.filterInGame : _,
-        filterSteam: _.bSteamItems ? _ : _.filterSteam,
-      });
-  _(_.price, _.maxPrice) &&
-    _.push({
-      key: "p",
-      label: `${_(_.price[0], _.currency.eCurrency)} - ${_(_.price[1], _.currency.eCurrency)}`,
-      onClear: () =>
-        _({
-          ..._,
-          price: [0, _.maxPrice],
-        }),
-    });
-  for (let [_, _] of Object.entries(_.facets))
-    for (let _ of Object.keys(_)) {
-      let _ = (_.data ? _.data[`${_}_${_}`] : void 0)?.tags,
-        _ = _ ? _[_] : void 0,
-        _ = _ ? _.localized_name : _;
-      _.push({
-        key: `f_${_}_${_}`,
-        label: _,
-        onClear: () =>
-          _({
-            ..._,
-            facets: _(_.facets, _, _, !1),
-          }),
-      });
-    }
-  for (let [_, _] of Object.entries(_.accessories))
-    for (let _ of Object.keys(_))
-      _.push({
-        key: `a_${_}_${_}`,
-        label: _,
-        onClear: () =>
-          _({
-            ..._,
-            accessories: _(_.accessories, _, _, !1),
-          }),
-      });
-  for (let [_, _] of Object.entries(_.properties)) {
-    let _ = _.data ? _.data.get(parseInt(_)) : void 0;
-    if (!_) continue;
-    let _ = [0, 0];
-    _.type === _.k_EAssetPropertyType_Float
-      ? ((_[0] = _.float_min ?? _.float_min ?? 0),
-        (_[1] = _.float_max ?? _.float_max ?? 1))
-      : _.type === _.k_EAssetPropertyType_Int &&
-        ((_[0] = _.int_min ?? _.int_min ?? 0),
-        (_[1] = _.int_max ?? _.int_max ?? 0));
-    let _ = _.Localize(
-        "#AssetPropertyNumberFilterRange",
-        _.localized_label ?? "",
-        _[0],
-        _[1],
-      ),
-      _ = `ap_${_}`;
-    _.push({
-      key: _,
-      label: _,
-      onClear: () => {
-        let _ = {
-          ..._,
-          properties: {
-            ..._.properties,
-          },
-        };
-        delete _.properties[_._], _(_);
-      },
-    });
-  }
-  return _;
-}
-function _(_, _) {
-  let [_, _] = _;
-  return (_ > 0 && _ < _) || (_ < _ && _ > 0);
-}
-function _(_, _, _, _) {
-  let _ = {
-    ..._,
-    [_]: {
-      ..._[_],
-    },
-  };
-  return (
-    (_[_][_] = !0),
-    _ || (Object.keys(_[_]).length === 1 ? delete _[_] : delete _[_][_]),
-    _
-  );
-}
 var _ = _(_(), 1),
   _ = _({
     Component: _,
@@ -546,6 +393,7 @@ function _() {
   let _ = _.data?.pages && _.data.pages[0] && _.data.pages[0].facets,
     _ = _(),
     [_, _] = (0, _.useState)(!1),
+    _ = _(_.appid),
     _ =
       !_.bSearchDescriptions && _.isSuccess
         ? (0, _.jsxs)(_, {
@@ -567,10 +415,12 @@ function _() {
                   total: _.data.pages[0]?.total_count,
                   state: _,
                   onChange: (_) => _(_, !0),
+                  facets: _.data,
                 }),
             ],
           })
-        : (0, _.jsx)(_.Fragment, {});
+        : (0, _.jsx)(_.Fragment, {}),
+    [_, _] = _(_, _);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(_, {
@@ -631,6 +481,17 @@ function _() {
                     },
                     initialSelectedListing: _,
                     onShowFilters: _,
+                    filter: _,
+                    onFilterChange: (_) => _(_, !0),
+                    textFilter: _.strSearch,
+                    onTextFilterChange: (_) =>
+                      _(
+                        {
+                          ..._,
+                          strSearch: _,
+                        },
+                        !0,
+                      ),
                   }),
               ],
             }),

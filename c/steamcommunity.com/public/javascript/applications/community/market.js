@@ -5590,58 +5590,9 @@
             const _ = _[_.facet];
             if (!_) return [];
             if ("Quality" === _.name) {
-              const _ = _.tags && _.tags.strange,
-                _ = _.tags && _.tags.tournament;
-              (0, _._)(_ && _, "Could not find expected toggle tags");
               const _ = _(_.trigger);
               return {
-                facet: {
-                  strLabel: _.localized_name,
-                  fieldType: "togglegroup",
-                  rgToggles: [
-                    {
-                      facet: _.name,
-                      tag: "strange",
-                      strLabel: _.localized_name,
-                    },
-                    {
-                      facet: _.name,
-                      tag: "tournament",
-                      strLabel: _.localized_name,
-                      condition: _([
-                        {
-                          facet: "Type",
-                          tag: _,
-                        },
-                        {
-                          facet: "Weapon",
-                          exclude: _,
-                        },
-                        {
-                          facet: "ItemSet",
-                        },
-                      ]),
-                    },
-                  ],
-                  computeNext: (_, _) => {
-                    if (
-                      _[_.name] &&
-                      _[_.name].strange &&
-                      _[_.name].tournament
-                    ) {
-                      let _ = "tournament";
-                      _[_.name] && _[_.name].strange && (_ = "strange");
-                      const _ = {
-                        ..._,
-                        [_.name]: {
-                          ..._[_.name],
-                        },
-                      };
-                      return delete _[_.name][_], _;
-                    }
-                    return _;
-                  },
-                },
+                facet: _(_, !0),
                 condition: _,
               };
             }
@@ -6466,6 +6417,50 @@
             }),
           ],
         });
+      }
+      function _(_, _ = !1) {
+        const _ = _.tags && _.tags.strange,
+          _ = _.tags && _.tags.tournament,
+          _ = _.tags && _.tags.normal;
+        return (
+          (0, _._)(_ && _ && _, "Could not find expected toggle tags"),
+          {
+            strLabel: _.localized_name,
+            fieldType: "togglegrid",
+            rgToggles: [
+              {
+                facet: _.name,
+                tag: "normal",
+                strLabel: _.localized_name,
+              },
+              {
+                facet: _.name,
+                tag: "strange",
+                strLabel: _.localized_name,
+              },
+              {
+                facet: _.name,
+                tag: "tournament",
+                strLabel: _.localized_name,
+                condition: _
+                  ? _([
+                      {
+                        facet: "Type",
+                        tag: _,
+                      },
+                      {
+                        facet: "Weapon",
+                        exclude: _,
+                      },
+                      {
+                        facet: "ItemSet",
+                      },
+                    ])
+                  : void 0,
+              },
+            ],
+          }
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

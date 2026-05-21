@@ -206,6 +206,7 @@
     "UniqueBuyOrder_Explanation_1": "Set your preferred price and your purchase is made automatically when the item becomes available at that price.",
     "UniqueBuyOrder_Explanation_2": "Steam will ensure you get the best price available.",
     "UniqueBuyOrder_Explanation_3": "For this item, buy orders will be matched with the cheapest option to buy regardless of any unique characteristics.",
+    "PriceFilter_ValueAndUp": "%1$s and up",
     "Error_Sorry": "Sorry!",
     "Error_Encountered": "An error was encountered while processing your request:",
     "Error_TooManyRequests_Description": "You've made too many requests recently. Please wait and try your request again later.",
