@@ -3906,7 +3906,7 @@
                   (0, _.jsx)(_, {
                     ..._,
                   }),
-                "copy-to-clipboard-button": (_) =>
+                "copy-comment-link-to-clipboard-button": (_) =>
                   (0, _.jsx)(_, {
                     ..._,
                   }),

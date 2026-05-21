@@ -1158,27 +1158,33 @@
               window.GDynamicStore.DecorateDynamicItems(e);
             }
           }, [e.nAppID, a]),
-          (0, s.jsx)(u.u, {
-            id: { appid: e.nAppID },
-            hoverClassName: N.StoreAppHover,
-            disableScreenshots: !0,
-            children: (0, s.jsxs)(l.Z, {
-              ref: a,
-              className: (0, C.A)(N.StoreAppCapsule, n && N.Hovered),
-              onMouseOver: () => i(!0),
-              onMouseOut: () => i(!1),
-              children: [
-                (0, s.jsx)("img", { className: N.Image, src: t }),
-                c &&
-                  n &&
-                  (0, s.jsx)(G, { id: { appid: e.nAppID }, nIntervalMS: 1e3 }),
-                !c &&
-                  (0, s.jsx)(h.m, {
-                    id: { appid: e.nAppID },
-                    active: n,
-                    bIsHoverMode: !0,
-                  }),
-              ],
+          (0, s.jsx)(p.nn, {
+            feature: "personalcalendar-homepage",
+            children: (0, s.jsx)(u.u, {
+              id: { appid: e.nAppID },
+              hoverClassName: N.StoreAppHover,
+              disableScreenshots: !0,
+              children: (0, s.jsxs)(l.Z, {
+                ref: a,
+                className: (0, C.A)(N.StoreAppCapsule, n && N.Hovered),
+                onMouseOver: () => i(!0),
+                onMouseOut: () => i(!1),
+                children: [
+                  (0, s.jsx)("img", { className: N.Image, src: t }),
+                  c &&
+                    n &&
+                    (0, s.jsx)(G, {
+                      id: { appid: e.nAppID },
+                      nIntervalMS: 1e3,
+                    }),
+                  !c &&
+                    (0, s.jsx)(h.m, {
+                      id: { appid: e.nAppID },
+                      active: n,
+                      bIsHoverMode: !0,
+                    }),
+                ],
+              }),
             }),
           })
         );

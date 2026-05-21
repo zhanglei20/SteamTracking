@@ -16,6 +16,8 @@
         EditButton: "_1oiwHOMI9o4tYFhxPeBzdb",
         ValveOnly: "_1yQPp5pd2qUm4v9YW77mFO",
         SupervisorOnly: "_19k-dyaHYt8ca02K-yjSvc",
+        AcquitIcon: "_2Q79wl4YD01LCBJ_eG8hwX",
+        SanctionIcon: "_2uzKX4ZNJJzGdL1KdS7DVn",
       };
     },
     16339: (e) => {
@@ -77,7 +79,7 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: () => Ce,
+          default: () => Me,
           useAcquitForumComment: () => Ie,
           useSanctionForumComment: () => Le,
         });
@@ -98,16 +100,16 @@
         _ = n(30770),
         v = n.n(_),
         B = n(45699),
-        b = n(76217);
-      function A(e) {
+        A = n(76217);
+      function b(e) {
         const { subject: t, onClose: n } = e,
           [s, a] = (0, l.useState)(i.PV),
           o = (0, m.lY)(t.subject_type, t.subject_group_id, t.subject_id),
           c = (0, l.useRef)(null);
-        return (0, r.jsxs)(b.Z, {
+        return (0, r.jsxs)(A.Z, {
           className: v().EscalateSubjectDialogCtn,
           children: [
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(A.Z, {
               children: h.T.Localize("#moderation_escalation_description"),
             }),
             (0, r.jsxs)("select", {
@@ -135,7 +137,7 @@
               children: h.T.Localize("#moderation_escalation_escalationnote"),
             }),
             (0, r.jsx)(B.dO, { className: v().ReasonTextArea, ref: c }),
-            (0, r.jsxs)(b.Z, {
+            (0, r.jsxs)(A.Z, {
               className: v().BottomButtons,
               children: [
                 (0, r.jsx)(B.fu, {
@@ -163,8 +165,8 @@
         y = n.n(f),
         S = n(55388),
         w = n(59884),
-        M = n.n(w);
-      function C(e) {
+        C = n.n(w);
+      function M(e) {
         const [t, n] = (0, l.useState)(null),
           [s, i] = (0, l.useState)([]),
           [a, o] = (0, l.useState)(!1),
@@ -186,7 +188,7 @@
               (0, r.jsxs)(r.Fragment, {
                 children: [
                   (0, r.jsx)("div", {
-                    className: M().BlockList,
+                    className: C().BlockList,
                     children: d.map((t, a) => {
                       const o = () => {
                         if ((0, g.Ju)(t)) {
@@ -204,17 +206,17 @@
                         ? (0, r.jsx)(
                             B.Ii,
                             {
-                              className: M().BlockListItem,
+                              className: C().BlockListItem,
                               href: t.url,
                               children: j.u.Localize(t.strLocToken),
                             },
                             t.url,
                           )
                         : (0, r.jsxs)(
-                            b.Z,
+                            A.Z,
                             {
                               onActivate: o,
-                              className: M().BlockListItem,
+                              className: C().BlockListItem,
                               children: [
                                 (0, r.jsx)("span", {
                                   children: (0, g.Ju)(t)
@@ -234,10 +236,10 @@
               }),
             null !== t &&
               (0, r.jsxs)("div", {
-                className: M().BlockList,
+                className: C().BlockList,
                 children: [
                   (0, r.jsx)("div", {
-                    className: M().BlockListItem,
+                    className: C().BlockListItem,
                     children: (0, g.Jt)(t),
                   }),
                   null !== p &&
@@ -263,7 +265,7 @@
                       ],
                     }),
                   (0, r.jsxs)("div", {
-                    className: M().BottomButtons,
+                    className: C().BottomButtons,
                     children: [
                       (0, r.jsx)(S.n9, { onClick: h, children: "Back" }),
                       (0, r.jsx)(S.n9, {
@@ -769,18 +771,18 @@
           return "CHelpRequestLogs_GetApplicationLogDemand_Request";
         }
       }
-      class H extends L.Message {
+      class J extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            H.prototype.request_id || E.Sg(H.M()),
+            J.prototype.request_id || E.Sg(J.M()),
             L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            H.sm_m ||
-              (H.sm_m = {
-                proto: H,
+            J.sm_m ||
+              (J.sm_m = {
+                proto: J,
                 fields: {
                   request_id: {
                     n: 1,
@@ -789,39 +791,39 @@
                   },
                 },
               }),
-            H.sm_m
+            J.sm_m
           );
         }
         static MBF() {
-          return H.sm_mbf || (H.sm_mbf = E.w0(H.M())), H.sm_mbf;
+          return J.sm_mbf || (J.sm_mbf = E.w0(J.M())), J.sm_mbf;
         }
         toObject(e = !1) {
-          return H.toObject(e, this);
+          return J.toObject(e, this);
         }
         static toObject(e, t) {
-          return E.BT(H.M(), e, t);
+          return E.BT(J.M(), e, t);
         }
         static fromObject(e) {
-          return E.Uq(H.M(), e);
+          return E.Uq(J.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (Q().BinaryReader)(e),
-            n = new H();
-          return H.deserializeBinaryFromReader(n, t);
+            n = new J();
+          return J.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return E.zj(H.MBF(), e, t);
+          return E.zj(J.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (Q().BinaryWriter)();
-          return H.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          E.i0(H.M(), e, t);
+          E.i0(J.M(), e, t);
         }
         serializeBase64String() {
           var e = new (Q().BinaryWriter)();
-          return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CHelpRequestLogs_GetApplicationLogDemand_Response";
@@ -848,12 +850,12 @@
               return e.SendMsg(
                 "HelpRequestLogs.GetApplicationLogDemand#1",
                 (0, N.I8)(K, t),
-                H,
+                J,
                 { ePrivilege: 1 },
               );
             });
         })(R || (R = {}));
-      var J = n(23809);
+      var H = n(23809);
       function V(e) {
         const [t, n] = (0, l.useState)(null),
           [s, i] = (0, l.useState)("main"),
@@ -862,10 +864,10 @@
           [p, m] = (0, l.useState)(null),
           [j, _] = (0, l.useState)(null),
           [v, B] = (0, l.useState)(null),
-          [A, f] = (0, l.useState)(!1),
-          [w, M] = (0, l.useState)(!1),
+          [b, f] = (0, l.useState)(!1),
+          [w, C] = (0, l.useState)(!1),
           [R, L] = (0, l.useState)(""),
-          Q = a || u || p || j || v || A || w,
+          Q = a || u || p || j || v || b || w,
           E =
             ((q = e.authorSteamId),
             (0, F.I)({
@@ -892,7 +894,7 @@
               (O = e.last_logon_langauge);
         }
         const W = (function (e, t) {
-          const n = (0, J.KV)();
+          const n = (0, H.KV)();
           return (0, F.I)({
             queryKey: ["get_quick_text", e, t],
             queryFn: async () => {
@@ -946,16 +948,16 @@
         return (0, r.jsxs)(r.Fragment, {
           children: [
             "reason" === s &&
-              (0, r.jsx)(C, {
+              (0, r.jsx)(M, {
                 reasons: g.UL,
                 onSelect: (e) => {
                   n(e), i("main");
                 },
               }),
             "main" === s &&
-              (0, r.jsxs)(b.Z, {
+              (0, r.jsxs)(A.Z, {
                 children: [
-                  (0, r.jsxs)(b.Z, {
+                  (0, r.jsxs)(A.Z, {
                     className: y().SanctionForm,
                     children: [
                       (0, r.jsx)("label", {
@@ -1147,7 +1149,7 @@
                         children: [
                           (0, r.jsx)("input", {
                             type: "checkbox",
-                            checked: A,
+                            checked: b,
                             onChange: (e) => f(e.target.checked),
                           }),
                           " Permanent trade ban",
@@ -1161,7 +1163,7 @@
                             (0, r.jsx)("input", {
                               type: "checkbox",
                               checked: w,
-                              onChange: (e) => M(e.target.checked),
+                              onChange: (e) => C(e.target.checked),
                             }),
                             " Mark as suspicious",
                           ],
@@ -1174,7 +1176,7 @@
                       }),
                     ],
                   }),
-                  (0, r.jsxs)(b.Z, {
+                  (0, r.jsxs)(A.Z, {
                     className: y().BottomButtons,
                     children: [
                       (0, r.jsx)(S.Oh, {
@@ -1193,7 +1195,7 @@
                             p && n.push({ sanction: x.ME, days: p }),
                             j && n.push({ sanction: x.sR, days: j }),
                             v && n.push({ sanction: x.bX, days: v }),
-                            A && n.push({ sanction: x.Fh, days: -1 }),
+                            b && n.push({ sanction: x.Fh, days: -1 }),
                             w && n.push({ sanction: x.X5 }),
                             e.onOK(n, R.trim(), t);
                         },
@@ -1208,8 +1210,8 @@
         });
       }
       var Z = n(38135),
-        Y = n(84811),
-        X = n(83077),
+        X = n(84811),
+        Y = n(83077),
         $ = n(62490),
         ee = n(55184),
         te = n(4340),
@@ -1462,7 +1464,7 @@
                                   : i.entries) || void 0 === a
                               ? void 0
                               : a.map((e) =>
-                                  (0, r.jsx)(be, { entry: e }, e.timestamp),
+                                  (0, r.jsx)(Ae, { entry: e }, e.timestamp),
                                 )),
                         ],
                       }),
@@ -1472,7 +1474,7 @@
             }),
         });
       }
-      function be(e) {
+      function Ae(e) {
         var t, n;
         const { entry: s } = e,
           i = (0, re.jn)(s.actor_steamid);
@@ -1512,7 +1514,7 @@
                   ],
                 }),
                 (0, r.jsx)("td", {
-                  children: (0, r.jsx)(Ae, {
+                  children: (0, r.jsx)(be, {
                     eAction: s.action,
                     jsonData: s.additional_json_data,
                   }),
@@ -1521,7 +1523,7 @@
             })
           : null;
       }
-      function Ae(e) {
+      function be(e) {
         const { eAction: t, jsonData: n } = e;
         let s = {};
         switch ((n && (s = JSON.parse(n)), t)) {
@@ -1695,8 +1697,8 @@
       var ye = n(29385),
         Se = n(61739),
         we = n(60690),
-        Me = n(12155);
-      function Ce(e) {
+        Ce = n(12155);
+      function Me(e) {
         var t;
         const [n, a] = (0, l.useState)(!1),
           u = (0, m.kZ)(s.lN, e.topicId);
@@ -1711,13 +1713,12 @@
             (d.unresolved_report_count > 0 || d.unresolved_dispute_count > 0),
           g = (0, r.jsxs)("a", {
             onClick: () => a(!0),
-            className: "forum_comment_permlink",
             children: [
               p &&
                 (0, r.jsxs)(r.Fragment, {
                   children: [
                     (0, r.jsx)("img", {
-                      className: X.Flag,
+                      className: Y.Flag,
                       src: `${c.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
                     }),
                     " ",
@@ -1730,7 +1731,7 @@
                   children: [
                     " ",
                     (0, r.jsx)("span", {
-                      className: X.ValveOnly,
+                      className: Y.ValveOnly,
                       children: "(VO)",
                     }),
                   ],
@@ -1741,7 +1742,7 @@
                   children: [
                     " ",
                     (0, r.jsx)("span", {
-                      className: X.SupervisorOnly,
+                      className: Y.SupervisorOnly,
                       children: "(Supervisor)",
                     }),
                   ],
@@ -1797,26 +1798,26 @@
           j = Le(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
           _ = [
             {
-              name: "History",
-              key: "history",
-              contents: (0, r.jsx)(Y.tH, {
-                children: (0, r.jsx)(_e, { subject: o }),
+              name: "Reports",
+              key: "reports",
+              contents: (0, r.jsx)(X.tH, {
+                children: (0, r.jsx)(xe, { subject: o }),
               }),
             },
             {
-              name: "Reports",
-              key: "reports",
-              contents: (0, r.jsx)(Y.tH, {
-                children: (0, r.jsx)(xe, { subject: o }),
+              name: "History",
+              key: "history",
+              contents: (0, r.jsx)(X.tH, {
+                children: (0, r.jsx)(_e, { subject: o }),
               }),
             },
           ];
         let v = 0,
-          b = 0;
+          A = 0;
         if (o)
           for (const e of o.reports)
             e.time_resolved && !e.time_disputed && v++,
-              e.time_dispute_resolved && b++;
+              e.time_dispute_resolved && A++;
         const x = {
             subject_type: s.lN,
             subject_group_id: e.topicId,
@@ -1834,18 +1835,18 @@
             title: "Moderate",
             "aria-describedby": "moderate",
             onCancel: e.onClose,
-            className: X.ModerateDialog,
+            className: Y.ModerateDialog,
             children: (0, r.jsx)(d.f3, {
               children: (0, r.jsx)(d.a3, {
                 children: (0, r.jsxs)("div", {
-                  className: X.ModerateDialogCtn,
+                  className: Y.ModerateDialogCtn,
                   children: [
                     "main" === m &&
                       (0, r.jsxs)("div", {
-                        className: X.ModerateCtn,
+                        className: Y.ModerateCtn,
                         children: [
                           (0, r.jsxs)("div", {
-                            className: X.ModerationData,
+                            className: Y.ModerationData,
                             children: [
                               (0, r.jsxs)("div", {
                                 children: [
@@ -1869,7 +1870,7 @@
                                     ? n
                                     : 0,
                                   " disputed / ",
-                                  b,
+                                  A,
                                   " disputes resolved",
                                 ],
                               }),
@@ -1877,8 +1878,17 @@
                             ],
                           }),
                           (0, r.jsxs)("div", {
-                            className: X.ModerationActionButtons,
+                            className: Y.ModerationActionButtons,
                             children: [
+                              (0, r.jsxs)("button", {
+                                onClick: () => g("sanction"),
+                                children: [
+                                  (0, r.jsx)(Ce.X, {
+                                    className: Y.SanctionIcon,
+                                  }),
+                                  "Sanction",
+                                ],
+                              }),
                               (0, r.jsx)(Ue, {
                                 ...e,
                                 subject: o,
@@ -1895,10 +1905,6 @@
                                 children: h.T.Localize(
                                   "#moderation_escalation_escalate",
                                 ),
-                              }),
-                              (0, r.jsx)("button", {
-                                onClick: () => g("sanction"),
-                                children: "Sanction",
                               }),
                               !y &&
                                 (0, r.jsx)("button", {
@@ -1918,8 +1924,8 @@
                                     (0, r.jsx)("button", {
                                       onClick: () =>
                                         g("editownerdisputedetails"),
-                                      className: X.EditButton,
-                                      children: (0, r.jsx)(Me.ffu, {}),
+                                      className: Y.EditButton,
+                                      children: (0, r.jsx)(Ce.ffu, {}),
                                     }),
                                   ],
                                 }),
@@ -1928,7 +1934,7 @@
                         ],
                       }),
                     "escalate" === m &&
-                      (0, r.jsx)(A, { subject: x, onClose: () => g("main") }),
+                      (0, r.jsx)(b, { subject: x, onClose: () => g("main") }),
                     "sanction" === m &&
                       (0, r.jsx)(V, {
                         subject: x,
@@ -1976,7 +1982,7 @@
         const { subject: t, onClose: n, currentDetails: s } = e,
           [i, a] = (0, l.useState)(s),
           o = (0, m.wy)(t.subject_type, t.subject_group_id, t.subject_id, i);
-        return (0, r.jsxs)(b.Z, {
+        return (0, r.jsxs)(A.Z, {
           children: [
             (0, r.jsxs)("label", {
               children: [
@@ -1988,8 +1994,8 @@
                 }),
               ],
             }),
-            (0, r.jsxs)(b.Z, {
-              className: X.BottomButtons,
+            (0, r.jsxs)(A.Z, {
+              className: Y.BottomButtons,
               children: [
                 (0, r.jsx)(B.fu, {
                   onClick: async () => {
@@ -2012,8 +2018,8 @@
         const { authorSteamId: t, subject: n, onClose: s } = e,
           [i, a] = (0, l.useState)(""),
           o = (0, m.y4)(t, n.subject_type, n.subject_group_id, n.subject_id, i);
-        return (0, r.jsxs)(b.Z, {
-          className: X.OwnerDisputeCtn,
+        return (0, r.jsxs)(A.Z, {
+          className: Y.OwnerDisputeCtn,
           children: [
             (0, r.jsx)("div", {
               children: h.T.Localize("#moderation_ownerdispute_description"),
@@ -2029,8 +2035,8 @@
                 }),
               ],
             }),
-            (0, r.jsxs)(b.Z, {
-              className: X.BottomButtons,
+            (0, r.jsxs)(A.Z, {
+              className: Y.BottomButtons,
               children: [
                 (0, r.jsx)(B.fu, {
                   onClick: async () => {
@@ -2056,12 +2062,16 @@
               t.unresolved_dispute_count > 0 ||
               (t.resolved === a.S6 && t.dispute_resolved !== a.CC) ||
               t.dispute_resolved === a.S6);
-        return (0, r.jsx)("button", {
+        return (0, r.jsxs)("button", {
           onClick: async () => {
             await n.mutateAsync(), e.onClose();
           },
           disabled: !s,
-          children: h.T.Localize("#moderation_actions_acquit"),
+          children: [
+            (0, r.jsx)(Ce.jlt, { className: Y.AcquitIcon }),
+            " ",
+            h.T.Localize("#moderation_actions_acquit"),
+          ],
         });
       }
       function Fe(e) {
@@ -2080,7 +2090,7 @@
         });
       }
       function Ie(e, t, n, r) {
-        const i = (0, J.KV)(),
+        const i = (0, H.KV)(),
           a = (0, ye.jE)();
         return (0, Se.n)({
           mutationFn: async () => {
@@ -2100,7 +2110,7 @@
         });
       }
       function Le(e, t, n, r) {
-        const i = (0, J.KV)(),
+        const i = (0, H.KV)(),
           a = (0, ye.jE)();
         return (0, Se.n)({
           mutationFn: async (s) => {
@@ -2422,7 +2432,7 @@
           } = e,
           v = (0, h.zy)(),
           B = (0, h.W6)(),
-          [b, A] = (0, s.useState)(() => {
+          [A, b] = (0, s.useState)(() => {
             var e;
             return (
               a ||
@@ -2437,12 +2447,12 @@
         (0, s.useEffect)(() => {
           if (!e.bDisableRouting && v) {
             const e = (0, o.f3)(v, "tab");
-            e && A(e);
+            e && b(e);
           }
-        }, [v, v.key, e.bDisableRouting, A]);
+        }, [v, v.key, e.bDisableRouting, b]);
         const x = s.useCallback(
             (e) => {
-              A(e.key),
+              b(e.key),
                 n || (0, o.Bm)(B, "tab", e.key),
                 e.onClick && e.onClick(e);
             },
@@ -2450,7 +2460,7 @@
           ),
           f = t.filter((e) => !e.hidden);
         if (!f.length) return null;
-        const y = f.find((e) => e.key === b) || f[0],
+        const y = f.find((e) => e.key === A) || f[0],
           S = g ? (null != a ? a : f[0].key) : void 0,
           w = (0, r.jsxs)(r.Fragment, {
             children: [
