@@ -1344,43 +1344,43 @@ function _(_) {
   let { description: _ } = _,
     _ = _() === "initial";
   if (!_) return null;
-  let _ = [],
-    _ = !1,
-    _ = !1,
-    _ = !1;
-  return (
-    _.descriptions?.forEach((_) => {
-      if (!(_.name === "exterior_wear" || _.name === "sticker_info")) {
-        if (_.name === "attribute" && !_.commodity)
-          if (!_) _ = !0;
-          else return;
-        (_.name === "blank" && (!_ || _)) ||
-          (_.push(_), (_ = _.name === "blank"), (_ = _ || !_));
-      }
+  let _ = _.descriptions ?? [];
+  if (_(_.appid)) {
+    let _ = !1,
+      _ = !1,
+      _ = !1;
+    _.filter((_) => {
+      if (_.name === "exterior_wear" || _.name === "sticker_info") return !1;
+      if (_.name === "attribute" && !_.commodity)
+        if (!_) _ = !0;
+        else return !1;
+      return _.name === "blank" && (!_ || _)
+        ? !1
+        : ((_ = _.name === "blank"), (_ = _ || !_), !0);
+    });
+  }
+  return (0, _.jsx)(_, {
+    direction: "column",
+    justify: "center",
+    minWidth: "0",
+    gap: "2",
+    paddingTop: "4",
+    paddingRight: "4",
+    children: (0, _.jsxs)(_.Root, {
+      description: {
+        ..._,
+        descriptions: _,
+      },
+      children: [
+        !_ && (0, _.jsx)(_.Name, {}),
+        !_ &&
+          (0, _.jsx)(_.GameInfo, {
+            hrefGame: _.AppHome(_.appid),
+          }),
+        (0, _.jsx)(_.Descriptions, {}),
+      ],
     }),
-    (0, _.jsx)(_, {
-      direction: "column",
-      justify: "center",
-      minWidth: "0",
-      gap: "2",
-      paddingTop: "4",
-      paddingRight: "4",
-      children: (0, _.jsxs)(_.Root, {
-        description: {
-          ..._,
-          descriptions: _,
-        },
-        children: [
-          !_ && (0, _.jsx)(_.Name, {}),
-          !_ &&
-            (0, _.jsx)(_.GameInfo, {
-              hrefGame: _.AppHome(_.appid),
-            }),
-          (0, _.jsx)(_.Descriptions, {}),
-        ],
-      }),
-    })
-  );
+  });
 }
 var _ = _(_(), 1);
 function _(_ = {}) {
@@ -5831,6 +5831,11 @@ function _(_) {
                         relevantAssetProperties: _,
                         onShowFilters: _,
                         activeBucketDescription: _,
+                        filter: _,
+                        onFilterChange: _,
+                        textFilter: _.strQuery,
+                        onTextFilterChange: _,
+                        facetingInfo: _,
                       }),
                     }),
                   ],
@@ -5924,12 +5929,18 @@ var _ = _.default.memo(function (_) {
       relevantAssetProperties: _,
       onShowFilters: _,
       activeBucketDescription: _,
+      filter: _,
+      onFilterChange: _,
+      textFilter: _,
+      onTextFilterChange: _,
+      facetingInfo: _,
     } = _,
     { isFetchingNextPage: _, fetchNextPage: _ } = _,
     _ = (0, _.useCallback)(() => {
       _ || _();
     }, [_, _]),
     [_, _] = _("resultsView"),
+    _ = _() === "initial",
     [_, _] = _(
       _
         ? {
@@ -5981,7 +5992,8 @@ var _ = _.default.memo(function (_) {
   (0, _.useEffect)(() => {
     _ || (_(_.data?.pages) && _(!0));
   }, [_.data?.pages, _]);
-  let _ = _();
+  let _ = _(),
+    _ = _(_);
   if (!_.data?.pages?.length) return null;
   let _ = _.data.pages[0]?.total_count || 0,
     _ = _ === "list" ? _ : _,
@@ -5995,15 +6007,16 @@ var _ = _.default.memo(function (_) {
             onClick: () => _(!0),
             children: _.Localize("#Mobile_FiltersButton"),
           }),
-        (0, _.jsx)(_, {
-          contrast: "description",
-          size: "2",
-          children: _.LocalizePlural(
-            "#Search_ListingsFound",
-            _,
-            Intl.NumberFormat(_()).format(_),
-          ),
-        }),
+        !_ &&
+          (0, _.jsx)(_, {
+            total: _,
+            state: _,
+            onStateChange: _,
+            textFilter: _,
+            onClearText: () => _(""),
+            facetingInfo: _,
+            facets: _.data,
+          }),
       ],
     }),
     _ = (0, _.jsx)(_, {

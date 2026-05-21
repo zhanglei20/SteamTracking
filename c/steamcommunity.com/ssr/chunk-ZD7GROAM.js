@@ -1208,6 +1208,33 @@ function _() {
   let _ = (0, _.useContext)(_);
   return _(_, "No filter config provider found!"), _;
 }
+function _(_, _) {
+  return _.bSteamItems
+    ? [
+        _.filterSteam,
+        (_, _) =>
+          _(
+            {
+              ..._,
+              filterSteam: _,
+            },
+            _,
+          ),
+        !0,
+      ]
+    : [
+        _.filterInGame,
+        (_, _) =>
+          _(
+            {
+              ..._,
+              filterInGame: _,
+            },
+            _,
+          ),
+        !1,
+      ];
+}
 var _ = {
   Home: (_) => _("", _),
   AppHome: (_, _) =>
@@ -8363,54 +8390,9 @@ function _(_) {
     let _ = _[_.facet];
     if (!_) return [];
     if (_.name === "Quality") {
-      let _ = _.tags && _.tags.strange,
-        _ = _.tags && _.tags.tournament;
-      _(_ && _, "Could not find expected toggle tags");
       let _ = _(_.trigger);
       return {
-        facet: {
-          strLabel: _.localized_name,
-          fieldType: "togglegroup",
-          rgToggles: [
-            {
-              facet: _.name,
-              tag: "strange",
-              strLabel: _.localized_name,
-            },
-            {
-              facet: _.name,
-              tag: "tournament",
-              strLabel: _.localized_name,
-              condition: _([
-                {
-                  facet: "Type",
-                  tag: _,
-                },
-                {
-                  facet: "Weapon",
-                  exclude: _,
-                },
-                {
-                  facet: "ItemSet",
-                },
-              ]),
-            },
-          ],
-          computeNext: (_, _) => {
-            if (_[_.name] && _[_.name].strange && _[_.name].tournament) {
-              let _ = "tournament";
-              _[_.name] && _[_.name].strange && (_ = "strange");
-              let _ = {
-                ..._,
-                [_.name]: {
-                  ..._[_.name],
-                },
-              };
-              return delete _[_.name][_], _;
-            }
-            return _;
-          },
-        },
+        facet: _(_, !0),
         condition: _,
       };
     }
@@ -9224,6 +9206,50 @@ function _(_) {
     default:
       return _(_, "Unhandled facet type"), [];
   }
+}
+function _(_, _ = !1) {
+  let _ = _.tags && _.tags.strange,
+    _ = _.tags && _.tags.tournament,
+    _ = _.tags && _.tags.normal;
+  return (
+    _(_ && _ && _, "Could not find expected toggle tags"),
+    {
+      strLabel: _.localized_name,
+      fieldType: "togglegrid",
+      rgToggles: [
+        {
+          facet: _.name,
+          tag: "normal",
+          strLabel: _.localized_name,
+        },
+        {
+          facet: _.name,
+          tag: "strange",
+          strLabel: _.localized_name,
+        },
+        {
+          facet: _.name,
+          tag: "tournament",
+          strLabel: _.localized_name,
+          condition: _
+            ? _([
+                {
+                  facet: "Type",
+                  tag: _,
+                },
+                {
+                  facet: "Weapon",
+                  exclude: _,
+                },
+                {
+                  facet: "ItemSet",
+                },
+              ])
+            : void 0,
+        },
+      ],
+    }
+  );
 }
 var _ = _(_(), 1),
   _ = (0, _.createContext)(!1);
@@ -12337,6 +12363,7 @@ function _(_) {
 var _ = _(_(), 1);
 var _ = _(_(), 1);
 var _ = _(_(), 1);
+var _ = _(_(), 1);
 function _(_) {
   let { children: _ } = _;
   return (0, _.jsx)(_, {
@@ -13845,66 +13872,45 @@ function _(_) {
 function _(_) {
   let { state: _, onStateChange: _, assetProperties: _, facets: _ } = _,
     _ = _.find((_) => _._ === _),
-    _ = Object.values(_).find((_) => _.name === "Exterior");
-  return !_ || !_
-    ? null
-    : (0, _.jsxs)(_.Fragment, {
+    _ = Object.values(_).find((_) => _.name === "Exterior"),
+    _ = Object.values(_).find((_) => _.name === "Quality");
+  return _
+    ? (0, _.jsxs)(_.Fragment, {
         children: [
-          (0, _.jsx)(_, {
-            state: _,
-            onStateChange: _,
-            property: _,
-            facet: _,
-          }),
-          (0, _.jsxs)(_, {
-            align: "center",
-            gap: "3",
-            marginTop: "2",
-            marginBottom: "2",
-            children: [
-              (0, _.jsx)(_, {
-                ..._,
-                quality: "strange",
-              }),
-              (0, _.jsx)(_, {
-                ..._,
-                quality: "tournament",
-              }),
-            ],
-          }),
+          !!_ &&
+            (0, _.jsx)(_, {
+              state: _,
+              onStateChange: _,
+              property: _,
+              facet: _,
+            }),
+          !!_ &&
+            (0, _.jsx)(_, {
+              state: _,
+              onStateChange: _,
+              facet: _,
+            }),
         ],
-      });
+      })
+    : null;
 }
 function _(_) {
-  let { appid: _, facets: _, onStateChange: _, state: _, quality: _ } = _,
-    _ = _[`${_}_Quality`],
-    _ = (_) => {
-      let _ = {
-        ..._,
-        facets: {
-          ..._.facets,
-        },
-      };
-      _
-        ? (_.facets.Quality = {
-            [_]: !0,
-          })
-        : delete _.facets.Quality,
-        _(_, !0);
-    };
-  if (!_.tags) return null;
-  let _ = _.tags[_];
+  let { state: _, onStateChange: _, facet: _ } = _;
   return (0, _.jsxs)(_, {
-    align: "center",
+    direction: "column",
     gap: "2",
+    paddingBottom: "2",
+    marginTop: "2",
     children: [
       (0, _.jsx)(_, {
         weight: "medium",
+        contrast: "subtitle",
         children: _.localized_name,
       }),
       (0, _.jsx)(_, {
-        value: _.facets.Quality && _.facets.Quality[_],
+        state: _,
         onChange: _,
+        ..._(_),
       }),
     ],
   });
@@ -14158,7 +14164,235 @@ function _(_) {
     ..._,
   });
 }
+var _ = _(_(), 1);
+function _(_) {
+  let { total: _, state: _, onChange: _, facets: _ } = _,
+    _ = _.bSteamItems ? _.filterSteam : _.filterInGame,
+    _ = _.bSteamItems ? 753 : (_.app?.appid ?? 0),
+    _ = _({
+      appid: _,
+      state: _,
+      onStateChange: (_) =>
+        _({
+          ..._,
+          filterSteam: _.bSteamItems ? _ : _.filterSteam,
+          filterInGame: _.bSteamItems ? _.filterSteam : _,
+        }),
+      textFilter: _.strSearch,
+      onClearText: () =>
+        _({
+          ..._,
+          strSearch: void 0,
+        }),
+      facets: _,
+    }),
+    _ = _(_.length, _);
+  return (0, _.jsxs)(_, {
+    align: "center",
+    gap: "2",
+    wrap: "wrap",
+    children: [
+      _
+        ? (0, _.jsx)(_, {
+            contrast: "description",
+            children: _,
+          })
+        : null,
+      _.map(({ key: _, label: _, onClear: _ }) =>
+        (0, _.jsxs)(
+          _,
+          {
+            color: "dull",
+            onClick: _,
+            children: [
+              _,
+              (0, _.jsx)(_, {
+                marginLeft: "2",
+              }),
+            ],
+          },
+          _,
+        ),
+      ),
+    ],
+  });
+}
+function _(_) {
+  let { total: _, facetingInfo: _, facets: _, ..._ } = _,
+    _ = (0, _.useMemo)(() => {
+      let _ = {};
+      if (!(!_ || !_)) {
+        for (let _ of Object.keys(_))
+          _(_[_], "select", !0, void 0, _) && (_[_] = !0);
+        return (_) => !!_[_];
+      }
+    }, [_, _]),
+    _ = _({
+      appid: _.state.app?.appid ?? 0,
+      includeFacet: _,
+      facets: _,
+      ..._,
+    }),
+    _ = _(_.length, _);
+  return (0, _.jsxs)(_, {
+    align: "center",
+    gap: "2",
+    wrap: "wrap",
+    children: [
+      _
+        ? (0, _.jsx)(_, {
+            contrast: "description",
+            children: _,
+          })
+        : null,
+      _.map(({ key: _, label: _, onClear: _ }) =>
+        (0, _.jsxs)(
+          _,
+          {
+            color: "dull",
+            onClick: _,
+            children: [
+              _,
+              (0, _.jsx)(_, {
+                marginLeft: "2",
+              }),
+            ],
+          },
+          _,
+        ),
+      ),
+    ],
+  });
+}
+function _(_, _) {
+  let _ = "";
+  return (
+    typeof _ == "number" && _ > 0
+      ? (_ = _.LocalizePlural("#Search_AmountFoundFor", _(_)))
+      : typeof _ == "number"
+        ? (_ = _.LocalizePlural("#Search_AmountFound", _(_)))
+        : _ > 0 && (_ = _.Localize("#Search_ResultsFoundFor")),
+    _
+  );
+}
+function _(_) {
+  let {
+      appid: _,
+      state: _,
+      onStateChange: _,
+      textFilter: _,
+      onClearText: _,
+      includeFacet: _,
+      facets: _,
+    } = _,
+    _ = _(),
+    _ = [];
+  _ &&
+    _.push({
+      key: "q",
+      label: `"${_}"`,
+      onClear: _,
+    });
+  let _ = _(_);
+  if (_(_.price, _.maxPrice)) {
+    let [_, _] = _.price,
+      _ = _(_, _.currency.eCurrency),
+      _ = _ < _.maxPrice ? _(_, _.currency.eCurrency) : null,
+      _ = "";
+    _ && !_
+      ? (_ = _.Localize("#PriceFilter_ValueAndUp", _))
+      : (_ = `${_} - ${_}`),
+      _.push({
+        key: "p",
+        label: _,
+        onClear: () =>
+          _({
+            ..._,
+            price: [0, _.maxPrice],
+          }),
+      });
+  }
+  for (let [_, _] of Object.entries(_.facets))
+    if (!(_ && !_(`${_}_${_}`)))
+      for (let _ of Object.keys(_)) {
+        let _ = (_ && _[`${_}_${_}`])?.tags,
+          _ = _ ? _[_] : void 0,
+          _ = _ ? _.localized_name : _;
+        _.push({
+          key: `f_${_}_${_}`,
+          label: _,
+          onClear: () =>
+            _({
+              ..._,
+              facets: _(_.facets, _, _, !1),
+            }),
+        });
+      }
+  for (let [_, _] of Object.entries(_.accessories))
+    for (let _ of Object.keys(_))
+      _.push({
+        key: `a_${_}_${_}`,
+        label: _,
+        onClear: () =>
+          _({
+            ..._,
+            accessories: _(_.accessories, _, _, !1),
+          }),
+      });
+  for (let [_, _] of Object.entries(_.properties)) {
+    let _ = _.data ? _.data.get(parseInt(_)) : void 0;
+    if (!_) continue;
+    let _ = [0, 0];
+    _.type === _.k_EAssetPropertyType_Float
+      ? ((_[0] = _.float_min ?? _.float_min ?? 0),
+        (_[1] = _.float_max ?? _.float_max ?? 1))
+      : _.type === _.k_EAssetPropertyType_Int &&
+        ((_[0] = _.int_min ?? _.int_min ?? 0),
+        (_[1] = _.int_max ?? _.int_max ?? 0));
+    let _ = _.Localize(
+        "#AssetPropertyNumberFilterRange",
+        _.localized_label ?? "",
+        _[0],
+        _[1],
+      ),
+      _ = `ap_${_}`;
+    _.push({
+      key: _,
+      label: _,
+      onClear: () => {
+        let _ = {
+          ..._,
+          properties: {
+            ..._.properties,
+          },
+        };
+        delete _.properties[_._], _(_);
+      },
+    });
+  }
+  return _;
+}
+function _(_, _) {
+  let [_, _] = _;
+  return (_ > 0 && _ < _) || (_ < _ && _ > 0);
+}
+function _(_, _, _, _) {
+  let _ = {
+    ..._,
+    [_]: {
+      ..._[_],
+    },
+  };
+  return (
+    (_[_][_] = !0),
+    _ || (Object.keys(_[_]).length === 1 ? delete _[_] : delete _[_][_]),
+    _
+  );
+}
 export {
+  _,
+  _,
+  _,
   _,
   _,
   _,
