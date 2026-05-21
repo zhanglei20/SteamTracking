@@ -370,6 +370,7 @@
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: _,
           } = _,
+          _ = (0, _._)(),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -385,7 +386,7 @@
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
-            bUseDiv: !_,
+            bUsePanel: !_ && !_,
           });
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
@@ -485,7 +486,7 @@
         const {
             _: _,
             bHideStatusBanners: _,
-            bUseDiv: _,
+            bUsePanel: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -504,7 +505,7 @@
         const _ = _
             ? void 0
             : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
-          _ = _ ? "div" : _._,
+          _ = _ ? _._ : _._,
           _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -523,11 +524,12 @@
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
+                  focusable: !0,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
                       hide_status_banners: _,
-                      show_early_access: _.bShowEarlyAccessBanner,
+                      show_early_access: _,
                     }),
                     "none" != _ &&
                       (0, _.jsx)(_._, {

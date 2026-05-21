@@ -833,7 +833,7 @@
 "&\n$CAudio_GetMonoDownmixEnabled_Request"8\n%CAudio_GetMonoDownmixEnabled_Response
 "&\n$CAudio_GetUseBluetoothForMic_Request"8\n%CAudio_GetUseBluetoothForMic_Response
 "&\n$CRemoteClient_CancelPairing_Response">\n(CRemoteClient_CancelPairing_Notification
-"&\n$CShader_ReportExternalBuild_Response2
+"&\n$CShader_ReportExternalBuild_Response"f\n.CShader_ReportBucketProcessingComplete_Request
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
 "'\n%CAudio_SetMonoDownmixEnabled_Response"+\n)CAudio_SupportsUseBluetoothForMic_Request"=\n*CAudio_SupportsUseBluetoothForMic_Response
@@ -2372,7 +2372,10 @@ $steammessages_parental_objects.proto"
 %s (%llu kB)
 %s (emsg=%d)
 %s - failed to collect system logs
+%s - failed to send manifest request
+%s - failed to send patch request
 %s - locked by 0x%p
+%s - manifest request received %d (%s) HTTP response
 %s - received %d (%s) HTTP response
 %s - received 200 OK but empty response - converting to 404
 %s - skipping directory: %s
@@ -3932,6 +3935,7 @@ $steammessages_parental_objects.proto"
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
 (\t"1\n/CGameRecording_UserUpdateTimelineEntry_Response"y\n.CGameRecording_UserRemoveTimelineEntry_Request
+(\t"1\n/CShader_ReportBucketProcessingComplete_Response2
 (\t"2\n!CRemoteClient_AllocateSDR_Request
 (\t"3\n!CMsgClientLaunchClientAppResponse
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
@@ -5371,6 +5375,7 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG\nk
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
@@ -5826,7 +5831,6 @@ $steammessages_parental_objects.proto"
 - callback definition not available\n
 - host "%s" %s, RemmoteClientID %llu, IP %s, %u connections \n
 - host %s, vhost %s, cell %u, %s (#%u), %u connections of %u max\n
-- type %s, name %s, iteration %u, chunks: index %u, %u outstanding (%s), %u deferred, %u requested, %u succeeded, %u failed. %.1f %s \n
 -"ke6
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
@@ -6284,7 +6288,6 @@ $steammessages_parental_objects.proto"
 ...<truncated>...
 ...OnAppRunningEvent EventStateChange
 ../../src/common/appregkeystring.h
-../../src/common/jobfuture.h
 ../../src/common/processworkitem.h
 ../../src/common/shadercache/ishaderdiskcache.h
 ../../src/common/steam/IClientGameServer.h
@@ -6381,6 +6384,7 @@ $steammessages_parental_objects.proto"
 ../clientdll/controllerworkitem.cpp
 ../clientdll/controllerxinput_linux.cpp
 ../clientdll/csinterface.cpp
+../clientdll/csinterface.h
 ../clientdll/depotbuild.cpp
 ../clientdll/depotbuilder.cpp
 ../clientdll/depotdownloadmgr.cpp
@@ -6424,9 +6428,10 @@ $steammessages_parental_objects.proto"
 ../clientdll/shadercachemanager/shadercachemanager.cpp:2016
 ../clientdll/shadercachemanager/shadercachemanager.cpp:2114
 ../clientdll/shadercachemanager/shadercachemanager.cpp:2184
-../clientdll/shadercachemanager/shadercachemanager.cpp:3788
-../clientdll/shadercachemanager/shadercachemanager.cpp:3916
-../clientdll/shadercachemanager/shadercachemanager.cpp:4198
+../clientdll/shadercachemanager/shadercachemanager.cpp:2238
+../clientdll/shadercachemanager/shadercachemanager.cpp:3840
+../clientdll/shadercachemanager/shadercachemanager.cpp:3968
+../clientdll/shadercachemanager/shadercachemanager.cpp:4250
 ../clientdll/shadercachemanager/shadercontentupdatejob.cpp
 ../clientdll/sitelicenseclient.cpp
 ../clientdll/steamclient.cpp
@@ -7714,6 +7719,7 @@ $steammessages_parental_objects.proto"
 /.COffline_GetUnsignedOfflineLogonTicket_Request
 /.CPlayer_NewSteamAnnouncementState_Notification
 /.CPublishedFile_FileDeleted_Client_Notification
+/.CShader_ReportBucketProcessingComplete_Request
 /.CSteamInputService_ControllerStateFlow_Request
 /.CSteamInputService_TritonUndocked_Notification
 /.CStore_MigratePartnerLinkTracking_Notification
@@ -8084,6 +8090,7 @@ $steammessages_parental_objects.proto"
 0.CPublishedFile_UpdateContentDescriptors_Request
 0.CRemoteClient_EnableSteamBroadcast_Notification
 0.CRemoteClient_RegisterStatusUpdate_Notification
+0.CShader_ReportBucketProcessingComplete_Response"
 0.CSiteManagerClient_TrackedPayments_Notification
 0.CSteamInputService_ControllerStateFlow_Response
 0.CSteamInputService_GetTritonPairingInfo_Request
@@ -8102,16 +8109,16 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00:00:00
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 00|000
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFpb
+0123456789ABCDEFp^
 0123456789abcdef
 08bX
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
@@ -11662,10 +11669,10 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+20000
 200M
 2019
 2048
-20000
 2000000
 208.64.200.0/22
 208.78.164.0/22
@@ -14014,6 +14021,7 @@ $steammessages_parental_objects.proto"
 34CRemoteClient_Offline_Notification
 34CRemoteClient_StartPairing_Request
 34CRemotePlay_SessionStarted_Request
+34CReportBucketProcessingCompleteJob
 34CSetDualSenseTriggerEffectWorkItem
 34CShaderCacheImplFossilizePipelines
 34CShader_GetBucketManifest_Response
@@ -15357,6 +15365,7 @@ $steammessages_parental_objects.proto"
 46COffline_GetUnsignedOfflineLogonTicket_Request
 46CPlayer_NewSteamAnnouncementState_Notification
 46CPublishedFile_FileDeleted_Client_Notification
+46CShader_ReportBucketProcessingComplete_Request
 46CSteamInputService_ControllerStateFlow_Request
 46CSteamInputService_InitControllerList_Response
 46CSteamInputService_TritonUndocked_Notification
@@ -15409,6 +15418,7 @@ $steammessages_parental_objects.proto"
 47CRemoteClient_EnableSteamBroadcast_Notification
 47CRemoteClient_RegisterStatusUpdate_Notification
 47CRemotePlayTogether_Notification_ControllerSlot
+47CShader_ReportBucketProcessingComplete_Response
 47CSiteManagerClient_TrackedPayments_Notification
 47CSteamInputService_ControllerStateFlow_Response
 47CSteamInputService_GetTritonPairingInfo_Request
@@ -17117,7 +17127,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -21387,6 +21397,7 @@ CRemoteStorageSyncContext::ThreadedDecryptFile
 CRemoteStorageSyncContext::ThreadedDecryptFile failed
 CRemoteStorageSyncContext::ThreadedEncryptFile
 CRemoteStorageSyncContext::ThreadedWriteFile failed
+CReportBucketProcessingCompleteJob
 CReportExternalBuildJob
 CReservationPositionMessage
 CResourceCache::BFreeResource
@@ -23425,6 +23436,7 @@ DLCList
 DLOPEN Error:%s\n
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
+DOCKED_SLOT
 DOCTYPE
 DOCUMENTS
 DOWNGRD
@@ -25582,6 +25594,7 @@ Failed to initialize fan service manager
 Failed to initialize server address for shared fd id: 0x%lx\n
 Failed to initialize server address for shared fd: %d\n
 Failed to initialize sound system\n
+Failed to issue HTTP request for depot %u
 Failed to join own broadcast chat (BroadcastID %llu)
 Failed to kick controller %u out of bluetooth mode after pairing for slot %u: %u
 Failed to launch executable %s\n
@@ -28848,6 +28861,7 @@ ItemVoteSummary
 Items
 Items_Mtx
 Items_ReadyToUse
+Iteration %u, chunks: index %u, %u outstanding (%s), %u deferred, %u requested, %u succeeded, %u failed. %.1f %s \n
 J+TO]
 J0X|
 J:xrG
@@ -33561,6 +33575,7 @@ Replay currently disabled on NVIDIA.\n
 ReplyToFriendMessage
 ReportAccessibilitySettings
 ReportBroadcastChannel
+ReportBucketProcessingComplete
 ReportChatDeclined
 ReportClientArgs
 ReportClientError
@@ -35444,6 +35459,7 @@ Shader.GetBucketManifest#1
 Shader.GetShaderReportingCadence#1
 Shader.GetStaleBucket#1
 Shader.RegisterShader#1
+Shader.ReportBucketProcessingComplete#1
 Shader.ReportExternalBuild#1
 Shader.SendShader#1
 Sharada
@@ -39326,6 +39342,8 @@ YldUpdateUsageReportIfNecessary
 YldWaitForAppStateLoaded
 YldWaitForCallback
 YldWaitForLibraryReadyOfflineMode
+YldWaitForResourcesFree - lock
+YldWaitForResourcesFree - signal
 YldWriteCacheDirectoryToFile
 YnFpW
 YooMoney
@@ -39872,15 +39890,15 @@ Zulu
 [AppID %u] Getting Workshop info for item %llu failed : %s
 [AppID %u] HTTP Upload for UGC file '%s' (length=%d) to %s, path %s - failed with with error '%s' (%d)
 [AppID %u] HTTP Upload for file '%s' (offset=%lld, length=%d) to %s, path %s - failed with with error '%s' (%d)
+[AppID %u] HTTP download for file '%s' from host '%s' - %s.
 [AppID %u] HTTP download for file '%s' from host '%s' - Returned error '%s' (%d).
 [AppID %u] HTTP download for file '%s' from host '%s' - Success.
-[AppID %u] HTTP download for file '%s' from host '%s' - Timed out.
 [AppID %u] HTTP download for file '%s' from host '%s', path %s, beginning. . .
+[AppID %u] HTTP upload for UGC file '%s' (length=%d) to %s, path %s - %s.
 [AppID %u] HTTP upload for UGC file '%s' (length=%d) to %s, path %s - success.
-[AppID %u] HTTP upload for UGC file '%s' (length=%d) to %s, path %s - timed out.
 [AppID %u] HTTP upload for UGC file '%s' beginning . . .
+[AppID %u] HTTP upload for file '%s' (offset=%lld, length=%d) to %s, path %s - %s.
 [AppID %u] HTTP upload for file '%s' (offset=%lld, length=%d) to %s, path %s - success.
-[AppID %u] HTTP upload for file '%s' (offset=%lld, length=%d) to %s, path %s - timed out.
 [AppID %u] HTTP upload for file '%s' beginning . . .
 [AppID %u] Ignoring flagged conflict for file '%s', setting to 'forgotten'
 [AppID %u] Inhibiting sync requests for pending platform change
@@ -42292,6 +42310,7 @@ Zulu
 \t#\t%\t+\t/\t5\tC\tI\tM\tO\tU\tY\t_\tk\tq\tw\t
 \t(%zu) comparing %s with %s\n
 \t*** %s - %s - (had more work last frame!!) ***\n
+\t- type %s, name %s chunks: %u outstanding, %u requested, %u succeeded, %u failed. \n
 \t--channel56\t%d\t%d
 \t--channel5\t%d
 \t--channel6\t%d
@@ -47564,6 +47583,7 @@ failed to create temp folder %s
 failed to generate a valid callback handler key
 failed to get memory
 failed to init async
+failed to issue
 failed to lock matchmaking system after 1000ms, proceeding unsafely\n
 failed to move in file
 failed to move out file
@@ -53250,7 +53270,7 @@ low-pri yield - ../clientdll/clientjob.cpp:440
 low-pri yield - ../clientdll/clientjob.cpp:471
 low-pri yield - ../clientdll/clientjob.cpp:780
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:6912
+low-pri yield - ../clientdll/clientugc.cpp:6916
 low-pri yield - ../clientdll/compatmanager.cpp:1973
 low-pri yield - ../clientdll/compatmanager.cpp:2224
 low-pri yield - ../clientdll/compatmanager.cpp:2491
@@ -53259,7 +53279,7 @@ low-pri yield - ../clientdll/compatmanager.cpp:3203
 low-pri yield - ../clientdll/compatmanager.cpp:3216
 low-pri yield - ../clientdll/compatmanager.cpp:3268
 low-pri yield - ../clientdll/compatmanager.cpp:3868
-low-pri yield - ../clientdll/csinterface.cpp:180
+low-pri yield - ../clientdll/csinterface.cpp:222
 low-pri yield - ../clientdll/depotbuilder.cpp:107
 low-pri yield - ../clientdll/depotreconstruct.cpp:3071
 low-pri yield - ../clientdll/peercontentserver.cpp:712
@@ -53524,6 +53544,7 @@ m_Settings
 m_ShaderManager
 m_SiteLicenseClient
 m_SourceID.m_strHostName
+m_SourceInfo
 m_Sources
 m_Sources[i]->GetCurrentMode()
 m_SpewThrottle
@@ -55167,6 +55188,7 @@ m_unAppPlayedByOtherUserSession
 m_unAppsAdded
 m_unBytesProcessing >= pChunkData->m_Index.m_uOriginalSize
 m_unChunkRequestsOutstanding
+m_unChunkRequestsOutstanding > 0
 m_unConnectionIDLocal == 0
 m_unConnectionIDRemote
 m_unContext
@@ -60882,7 +60904,7 @@ statistics/rx_bytes
 statistics/tx_bytes
 stats
 stats message size doesn't make sense.  Stats message size %u, packet size %d
-stats: (%s, %d) %s: %llu Bytes, %.0f sec (%.2f Mbps). %u Hits / %u Misses (%.0f %%, %.0f %% bytes)
+stats: (%s, %d) %s: %llu Bytes, %.0f sec (%.2f Mbps). %u Hits / %u Misses (%.0f %%, %.0f %% bytes), score %.4f
 statsEndToEnd.m_nReplyTimeoutsSinceLastRecv > 0
 statsEndToEnd.m_nReplyTimeoutsSinceLastRecv > 0 || statsEndToEnd.m_recv.m_packets.Total() == 0
 statsEndToEnd.m_usecWhenTimeoutStarted > 0
@@ -60934,7 +60956,7 @@ stderr
 stdin
 stdout
 steam
-steam May 19 2026 01:26:36
+steam May 20 2026 23:18:35
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -61859,6 +61881,7 @@ time_to_last_byte_ms
 time_to_send_req_ms
 time_transferred
 time_update_start
+timed out
 timed_trial_add_playtime
 timed_trial_add_playtime <appId> <seconds>: add trial app playtime (developer only)
 timed_trial_reset_playtime
