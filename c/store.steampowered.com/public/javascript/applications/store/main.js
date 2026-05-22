@@ -11979,7 +11979,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new _._("ScrollSnap").Debug;
       function _(_, _ = "smooth", _, _) {
         const _ = (_ ?? 30) / 100,
           _ = _.useRef(void 0),
@@ -12059,6 +12061,10 @@
                 return !1;
             }
             return (
+              _(
+                `ScrollOnGamepadDirection top:${_.current} left:${_.current}, behavior:${_ ?? "auto"} `,
+                _.current,
+              ),
               _ && "smooth" != _
                 ? (_.current.scrollTo({
                     top: _.current,

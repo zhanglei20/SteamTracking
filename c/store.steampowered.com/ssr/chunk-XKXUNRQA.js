@@ -2137,6 +2137,7 @@ var _ = class extends _ {
     }
   }
 };
+var _ = new _("ScrollSnap").Debug;
 function _(_, _) {
   let _ = _.default.useRef(void 0);
   return _.default.useCallback(
@@ -2213,6 +2214,10 @@ function _(_, _ = "smooth", _, _) {
           return !1;
       }
       return (
+        _(
+          `ScrollOnGamepadDirection top:${_.current} left:${_.current}, behavior:${_ ?? "auto"} `,
+          _.current,
+        ),
         !_ || _ == "smooth"
           ? _(_.current, _.current)
           : (_.current.scrollTo({

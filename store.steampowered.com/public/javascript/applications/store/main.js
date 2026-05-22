@@ -10988,19 +10988,21 @@
     },
     63512: (e, t, r) => {
       "use strict";
-      r.d(t, { ak: () => o, tw: () => l });
+      r.d(t, { ak: () => c, tw: () => u });
       var i = r(90626),
         n = r(69381),
-        s = r(30600),
-        a = r(88006);
-      function o(e, t = "smooth", r, s) {
-        const o = (r ?? 30) / 100,
-          l = i.useRef(void 0),
+        s = r(60778),
+        a = r(30600),
+        o = r(88006);
+      const l = new s.wd("ScrollSnap").Debug;
+      function c(e, t = "smooth", r, s) {
+        const a = (r ?? 30) / 100,
           c = i.useRef(void 0),
-          u = i.useCallback(() => {
-            (l.current = void 0), (c.current = void 0);
+          u = i.useRef(void 0),
+          m = i.useCallback(() => {
+            (c.current = void 0), (u.current = void 0);
           }, []),
-          m = (function (e, t) {
+          d = (function (e, t) {
             const r = i.useRef(void 0);
             return i.useCallback(
               (i, s) => {
@@ -11028,7 +11030,7 @@
               },
               [e, t],
             );
-          })(e, u);
+          })(e, m);
         return i.useCallback(
           (r) => {
             if (s && !s(r)) return !1;
@@ -11037,49 +11039,53 @@
             const {
                 scrollTop: i,
                 scrollHeight: n,
-                clientHeight: d,
-                scrollLeft: g,
-                scrollWidth: p,
-                clientWidth: _,
+                clientHeight: g,
+                scrollLeft: p,
+                scrollWidth: _,
+                clientWidth: h,
               } = e.current,
-              h = l.current ?? i,
-              f = c.current ?? g;
+              f = c.current ?? i,
+              b = u.current ?? p;
             switch (r.detail.button) {
-              case a.pR.DIR_UP:
-                if (h <= 2) return !1;
-                l.current = Math.max(0, h - d * o);
-                break;
-              case a.pR.DIR_DOWN:
-                if (h >= n - d - 2) return !1;
-                l.current = Math.min(n - d, h + d * o);
-                break;
-              case a.pR.DIR_LEFT:
+              case o.pR.DIR_UP:
                 if (f <= 2) return !1;
-                c.current = Math.max(0, f - _ * o);
+                c.current = Math.max(0, f - g * a);
                 break;
-              case a.pR.DIR_RIGHT:
-                if (f >= p - _ - 2) return !1;
-                c.current = Math.min(p - _, f + _ * o);
+              case o.pR.DIR_DOWN:
+                if (f >= n - g - 2) return !1;
+                c.current = Math.min(n - g, f + g * a);
+                break;
+              case o.pR.DIR_LEFT:
+                if (b <= 2) return !1;
+                u.current = Math.max(0, b - h * a);
+                break;
+              case o.pR.DIR_RIGHT:
+                if (b >= _ - h - 2) return !1;
+                u.current = Math.min(_ - h, b + h * a);
                 break;
               default:
                 return !1;
             }
             return (
+              l(
+                `ScrollOnGamepadDirection top:${c.current} left:${u.current}, behavior:${t ?? "auto"} `,
+                e.current,
+              ),
               t && "smooth" != t
                 ? (e.current.scrollTo({
-                    top: l.current,
-                    left: c.current,
+                    top: c.current,
+                    left: u.current,
                     behavior: "auto",
                   }),
-                  u())
-                : m(l.current, c.current),
+                  m())
+                : d(c.current, u.current),
               !0
             );
           },
-          [s, e, t, o, m, u],
+          [s, e, t, a, d, m],
         );
       }
-      function l() {
+      function u() {
         const e = i.useRef(null),
           t = i.useCallback(
             (t) => {
@@ -11091,7 +11097,7 @@
             },
             [e],
           );
-        return { ref: (0, s.wY)(t), navRef: e };
+        return { ref: (0, a.wY)(t), navRef: e };
       }
     },
     73170: (e, t, r) => {
