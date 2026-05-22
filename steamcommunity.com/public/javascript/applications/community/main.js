@@ -3260,7 +3260,7 @@
         Ot = i.lazy(() =>
           Promise.all([r.e(6377), r.e(2775), r.e(140)]).then(r.bind(r, 22)),
         ),
-        Wt = i.lazy(() => r.e(583).then(r.bind(r, 58317))),
+        Wt = i.lazy(() => r.e(2606).then(r.bind(r, 74433))),
         qt = () => (R.UF.IS_OGG ? "games" : "groups"),
         Ut = {
           DiagData: () => "/:anything*/diagdata",
@@ -3642,7 +3642,8 @@
                   (0, n.jsx)(ot, { ...e }),
                 "forum-reported-subjects-list": (e) => (0, n.jsx)(Ft, { ...e }),
                 "forum-post-moderation-tool": (e) => (0, n.jsx)(Ot, { ...e }),
-                "copy-to-clipboard-button": (e) => (0, n.jsx)(Wt, { ...e }),
+                "copy-comment-link-to-clipboard-button": (e) =>
+                  (0, n.jsx)(Wt, { ...e }),
               },
             }),
           ],

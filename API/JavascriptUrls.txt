@@ -121,7 +121,7 @@ ${CHAT_BASE_URL}chat/commitfileupload/
 ${CHAT_BASE_URL}comment/recommendation/formattinghelp
 ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
-${CHAT_BASE_URL}public/images/broadcast/cs2_major2025_bud_icon.png
+${CHAT_BASE_URL}public/images/broadcast/cs2_major2026_cologne_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
 ${CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png
@@ -3180,7 +3180,6 @@ steam://open/workshop
 steam://openexternalforpid/
 steam://openurl/
 steam://openurl/${href}
-steam://openurl/${url}
 steam://openurl/${}
 steam://openurl/${}?${}=${}
 steam://openurl_external/

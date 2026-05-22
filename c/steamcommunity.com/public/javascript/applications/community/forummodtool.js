@@ -14,6 +14,8 @@
         EditButton: "_1oiwHOMI9o4tYFhxPeBzdb",
         ValveOnly: "_1yQPp5pd2qUm4v9YW77mFO",
         SupervisorOnly: "_19k-dyaHYt8ca02K-yjSvc",
+        AcquitIcon: "_2Q79wl4YD01LCBJ_eG8hwX",
+        SanctionIcon: "_2uzKX4ZNJJzGdL1KdS7DVn",
       };
     },
     chunkid: (module) => {
@@ -1860,7 +1862,6 @@
             (_.unresolved_report_count > 0 || _.unresolved_dispute_count > 0),
           _ = (0, _.jsxs)("a", {
             onClick: () => _(!0),
-            className: "forum_comment_permlink",
             children: [
               _ &&
                 (0, _.jsxs)(_.Fragment, {
@@ -1953,8 +1954,8 @@
           _ = _(_.clanSteamId, _.forumId, _.topicId, _.subjectId),
           _ = [
             {
-              name: "History",
-              key: "history",
+              name: "Reports",
+              key: "reports",
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   subject: _,
@@ -1962,8 +1963,8 @@
               }),
             },
             {
-              name: "Reports",
-              key: "reports",
+              name: "History",
+              key: "history",
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   subject: _,
@@ -2041,6 +2042,15 @@
                           (0, _.jsxs)("div", {
                             className: _.ModerationActionButtons,
                             children: [
+                              (0, _.jsxs)("button", {
+                                onClick: () => _("sanction"),
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    className: _.SanctionIcon,
+                                  }),
+                                  "Sanction",
+                                ],
+                              }),
                               (0, _.jsx)(_, {
                                 ..._,
                                 subject: _,
@@ -2057,10 +2067,6 @@
                                 children: _._.Localize(
                                   "#moderation_escalation_escalate",
                                 ),
-                              }),
-                              (0, _.jsx)("button", {
-                                onClick: () => _("sanction"),
-                                children: "Sanction",
                               }),
                               !_ &&
                                 (0, _.jsx)("button", {
@@ -2221,12 +2227,18 @@
               _.unresolved_dispute_count > 0 ||
               (_.resolved === _._ && _.dispute_resolved !== _._) ||
               _.dispute_resolved === _._);
-        return (0, _.jsx)("button", {
+        return (0, _.jsxs)("button", {
           onClick: async () => {
             await __webpack_require__.mutateAsync(), _.onClose();
           },
           disabled: !_,
-          children: _._.Localize("#moderation_actions_acquit"),
+          children: [
+            (0, _.jsx)(_.jlt, {
+              className: _.AcquitIcon,
+            }),
+            " ",
+            _._.Localize("#moderation_actions_acquit"),
+          ],
         });
       }
       function _(_) {

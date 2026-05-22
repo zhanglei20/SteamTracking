@@ -1268,38 +1268,41 @@
             }
           }, [_.nAppID, _]),
           (0, _.jsx)(_._, {
-            _: {
-              appid: _.nAppID,
-            },
-            hoverClassName: _.StoreAppHover,
-            disableScreenshots: !0,
-            children: (0, _.jsxs)(_._, {
-              ref: _,
-              className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
-              onMouseOver: () => _(!0),
-              onMouseOut: () => _(!1),
-              children: [
-                (0, _.jsx)("img", {
-                  className: _.Image,
-                  src: _,
-                }),
-                _ &&
+            feature: "personalcalendar-homepage",
+            children: (0, _.jsx)(_._, {
+              _: {
+                appid: _.nAppID,
+              },
+              hoverClassName: _.StoreAppHover,
+              disableScreenshots: !0,
+              children: (0, _.jsxs)(_._, {
+                ref: _,
+                className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
+                onMouseOver: () => _(!0),
+                onMouseOut: () => _(!1),
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.Image,
+                    src: _,
+                  }),
                   _ &&
-                  (0, _.jsx)(_, {
-                    _: {
-                      appid: _.nAppID,
-                    },
-                    nIntervalMS: 1e3,
-                  }),
-                !_ &&
-                  (0, _.jsx)(_._, {
-                    _: {
-                      appid: _.nAppID,
-                    },
-                    active: _,
-                    bIsHoverMode: !0,
-                  }),
-              ],
+                    _ &&
+                    (0, _.jsx)(_, {
+                      _: {
+                        appid: _.nAppID,
+                      },
+                      nIntervalMS: 1e3,
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      _: {
+                        appid: _.nAppID,
+                      },
+                      active: _,
+                      bIsHoverMode: !0,
+                    }),
+                ],
+              }),
             }),
           })
         );

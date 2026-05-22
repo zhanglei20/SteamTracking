@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10673816";
+var CLSTAMP = "10676240";
 (() => {
   "use strict";
   var a,
@@ -22,22 +22,22 @@ var CLSTAMP = "10673816";
     (o.O = (e, c, d, f) => {
       if (!c) {
         var b = 1 / 0;
-        for (t = 0; t < a.length; t++) {
-          for (var [c, d, f] = a[t], n = !0, i = 0; i < c.length; i++)
+        for (s = 0; s < a.length; s++) {
+          for (var [c, d, f] = a[s], n = !0, i = 0; i < c.length; i++)
             (!1 & f || b >= f) && Object.keys(o.O).every((a) => o.O[a](c[i]))
               ? c.splice(i--, 1)
               : ((n = !1), f < b && (b = f));
           if (n) {
-            a.splice(t--, 1);
-            var s = d();
-            void 0 !== s && (e = s);
+            a.splice(s--, 1);
+            var t = d();
+            void 0 !== t && (e = t);
           }
         }
         return e;
       }
       f = f || 0;
-      for (var t = a.length; t > 0 && a[t - 1][2] > f; t--) a[t] = a[t - 1];
-      a[t] = [c, d, f];
+      for (var s = a.length; s > 0 && a[s - 1][2] > f; s--) a[s] = a[s - 1];
+      a[s] = [c, d, f];
     }),
     (o.n = (a) => {
       var e = a && a.__esModule ? () => a.default : () => a;
@@ -83,7 +83,6 @@ var CLSTAMP = "10673816";
         297: "localization/sales_german-json",
         349: "itemscollection",
         537: "localization/sales_brazilian-json",
-        583: "copytoclipboardbutton",
         657: "chunk~03410565e",
         759: "localization/main_koreana-json",
         766: "chunk~7bb437d7f",
@@ -117,6 +116,7 @@ var CLSTAMP = "10673816";
         2446: "localization/main_brazilian-json",
         2481: "localization/shared_bulgarian-json",
         2588: "localization/sales_finnish-json",
+        2606: "copycommentlinktoclipboardbutton",
         2664: "localization/shared_english-json",
         2667: "libraries~b592473e6",
         2694: "chunk~52ce742d4",
@@ -240,7 +240,7 @@ var CLSTAMP = "10673816";
         115: "7fe0c637068d3c29b4c3",
         129: "9173a8db92d4f279fd5f",
         139: "4e8d4d6bfdde1ec55e0c",
-        140: "8c4520236582621e2708",
+        140: "d81a418bffb950f2f579",
         195: "7e0fe9745b4c12057bd0",
         198: "fe8e65e72bc02e4eb94e",
         249: "4ee04f206086fcd90089",
@@ -261,7 +261,6 @@ var CLSTAMP = "10673816";
         537: "a064c0486130b1a193ce",
         569: "70320920f56c9cc56b0f",
         581: "13697502ec2be1b7c4a6",
-        583: "d6745320717b4127a924",
         657: "052595cb1f423624f823",
         667: "06d292bec6ea708594ee",
         716: "86134b10483aa9a0558e",
@@ -275,7 +274,7 @@ var CLSTAMP = "10673816";
         833: "398d136e929e4c9668c9",
         864: "55be13f1c21732c731ba",
         876: "9e70518e2294c9ca5d87",
-        892: "23c3366ce43db9c53581",
+        892: "9f2d8c1ab52bd3aba3a4",
         916: "3905b03ddc6f63101031",
         926: "078d5c167555cc57c349",
         976: "2d5c4f7c4d5b96ddcd89",
@@ -346,6 +345,7 @@ var CLSTAMP = "10673816";
         2539: "2f1eb966947c52bb478a",
         2571: "0afe80f325a3cd6d93d4",
         2588: "e4bc2516a8eca1620964",
+        2606: "e2c92e83d28deed31860",
         2640: "32974b63d4f034058709",
         2664: "bd365c7e4ed626d9596e",
         2667: "db2918765a2e4865b011",
@@ -619,7 +619,7 @@ var CLSTAMP = "10673816";
         9129: "ef417223ad22576b3790",
         9180: "4e5a649dccb61aedae2b",
         9184: "16c0e146f8d93479c405",
-        9187: "305c2838d51bb9bf583d",
+        9187: "d204310c4c8256f8f685",
         9209: "8621728ee786881e78b2",
         9246: "6fcf615de621a521a216",
         9281: "c7d711bb4f14b0215b87",
@@ -631,7 +631,7 @@ var CLSTAMP = "10673816";
         9436: "e9d092b7afefaea7e2c3",
         9453: "cb5d1cbc0e76b0d2dd2a",
         9515: "5142d2e10dfe472d69bb",
-        9517: "726033e2fc87514e3216",
+        9517: "93eb5d37eac4fd7833af",
         9596: "7058032ecd6a26dcb87f",
         9656: "53b0dd18f1d6d577c23a",
         9743: "14e69d1ef0569f7a3dde",
@@ -659,7 +659,6 @@ var CLSTAMP = "10673816";
         140: "forummodtool",
         258: "eventinternal",
         349: "itemscollection",
-        583: "copytoclipboardbutton",
         892: "forumreportedsubjects",
         976: "greenenvelope",
         1220: "gamenotes",
@@ -667,6 +666,7 @@ var CLSTAMP = "10673816";
         1574: "footer",
         2079: "broadcasts",
         2092: "communityhomeheader",
+        2606: "copycommentlinktoclipboardbutton",
         2694: "chunk~52ce742d4",
         3156: "gr",
         3256: "chunk~7a7b104fb",
@@ -694,12 +694,11 @@ var CLSTAMP = "10673816";
       ".css?contenthash=" +
       {
         91: "0a584103bd1aedb98d85",
-        140: "615f132a7f5d8642b108",
+        140: "af3e3493d023c5a184a4",
         258: "c82658532a547a6c0b32",
         349: "f8ccdeee7b33ad2be371",
         581: "2961cfe794b0147723ce",
-        583: "bf1cb86d118d4e65760e",
-        892: "0d758003ef4f7c223623",
+        892: "cd676df3240c3f407ccb",
         976: "2794bc847fa39f3101a9",
         1220: "eb29a17ee37d7d8c6139",
         1415: "d36ca37d03360de21819",
@@ -707,6 +706,7 @@ var CLSTAMP = "10673816";
         2079: "67af114f5d6e6c23de7c",
         2092: "53767595096bd4c627bc",
         2480: "10cccca79969ce5b4a1c",
+        2606: "f18d9ba35ce10867793f",
         2694: "18c1aa7f2414819d389f",
         3156: "a54e90c7c3d23eceaa42",
         3256: "504a31db2d776f0daaad",
@@ -749,11 +749,11 @@ var CLSTAMP = "10673816";
         var n, i;
         if (void 0 !== c)
           for (
-            var s = document.getElementsByTagName("script"), t = 0;
-            t < s.length;
-            t++
+            var t = document.getElementsByTagName("script"), s = 0;
+            s < t.length;
+            s++
           ) {
-            var l = s[t];
+            var l = t[s];
             if (
               l.getAttribute("src") == a ||
               l.getAttribute("data-webpack") == f + c
@@ -874,7 +874,6 @@ var CLSTAMP = "10673816";
                 258: 1,
                 349: 1,
                 581: 1,
-                583: 1,
                 892: 1,
                 976: 1,
                 1220: 1,
@@ -883,6 +882,7 @@ var CLSTAMP = "10673816";
                 2079: 1,
                 2092: 1,
                 2480: 1,
+                2606: 1,
                 2694: 1,
                 3156: 1,
                 3256: 1,
@@ -957,14 +957,14 @@ var CLSTAMP = "10673816";
           var d,
             f,
             [b, n, i] = c,
-            s = 0;
+            t = 0;
           if (b.some((e) => 0 !== a[e])) {
             for (d in n) o.o(n, d) && (o.m[d] = n[d]);
-            if (i) var t = i(o);
+            if (i) var s = i(o);
           }
-          for (e && e(c); s < b.length; s++)
-            (f = b[s]), o.o(a, f) && a[f] && a[f][0](), (a[f] = 0);
-          return o.O(t);
+          for (e && e(c); t < b.length; t++)
+            (f = b[t]), o.o(a, f) && a[f] && a[f][0](), (a[f] = 0);
+          return o.O(s);
         },
         c = (self.webpackChunkcommunity = self.webpackChunkcommunity || []);
       c.forEach(e.bind(null, 0)), (c.push = e.bind(null, c.push.bind(c)));
