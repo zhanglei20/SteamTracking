@@ -4649,7 +4649,7 @@
     "ControllerConfigurator_SourceMode_None_Title": "Yok",
     "ControllerConfigurator_SourceMode_Dpad_Title": "Yön Tuşları",
     "ControllerConfigurator_SourceMode_Buttons_Title": "Butonlar",
-    "ControllerConfigurator_SourceMode_FourButtons_Title": "Buton Alanı",
+    "ControllerConfigurator_SourceMode_FourButtons_Title": "Buton Grubu",
     "ControllerConfigurator_SourceMode_AbsoluteMouse_Title": "Fare Olarak",
     "ControllerConfigurator_SourceMode_RelativeMouse_Title": "Analog Çubuk Fare (Artık kullanılmıyor)",
     "ControllerConfigurator_SourceMode_JoystickMove_Title": "Analog Çubuk",
@@ -5449,7 +5449,7 @@
     "ControllerBinding_MouseRegionGyroButtonInvert_Off_Description": "Eğer seçilirse, butona basıldığında cihazın jiroskopu kapanacaktır.",
     "ControllerBinding_MouseRegionGyroButtonInvert_Toggle": "Jiroskop Butonu Davranışı - Aç/Kapa",
     "ControllerBinding_MouseRegionGyroButtonInvert_Toggle_Description": "Eğer seçilirse butona basıldığında cihazın jiroskopu açılır/kapanır.",
-    "ControllerBinding_ModeDropDown_ABXY": "Girdi Stili - Tuş Alanı",
+    "ControllerBinding_ModeDropDown_ABXY": "Girdi Stili - Buton Grubu",
     "ControllerBinding_ModeDropDown_ABXY_Description": "Bu girdi bir grup buton olarak çalışacaktır. Bu butonlara komutlar atayabilirsiniz. Her türlü buton atanabilir ancak XInput butonları sadece XInput kontrolcü uyumlu oyunlarda çalışır.",
     "ControllerBinding_RequiresClickFourButtons": "Tıklatma Gerektiriyor",
     "ControllerBinding_RequiresClickFourButtons_Description": "Ayarlanmışsa dokunmatik yüzeyin çalışması için tıklanması gerekir. Ayarlanmamışsa sadece dokunarak butonlar etkinleştirilebilir.",
@@ -9426,5 +9426,5 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Geniş jiroskop hareketleri analog çubuk çıktısı sınırını aştıktan sonra istenen açıyı dengelemeye çalışmayın.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "İstenen açıyı, yalnızca jiroskop etkinken dengelemeye çalışın.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "İstenen açıyı dengelemeye çalışın. Jiroskop etkin değilse, kalan dengeleme açılarını kullanmaya devam edin.",
-    "LibraryTab_ControllerGames": "Controller Friendly"
+    "LibraryTab_ControllerGames": "Kontrolcü Uyumlu"
 }

@@ -9426,5 +9426,5 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Försök inte att kompensera till önskad vinkel efter att styrspaksutmatning har mättats av stora gyrorörelser.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Försök att kompensera till önskad vinkel, men bara när gyrot är aktivt.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Försök att kompensera till önskad vinkel. Fortsätt att utföra eventuella vinkelkompenseringar om gyrot inte är aktivt.",
-    "LibraryTab_ControllerGames": "Controller Friendly"
+    "LibraryTab_ControllerGames": "Kontrollvänligt"
 }

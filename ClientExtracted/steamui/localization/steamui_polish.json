@@ -9426,5 +9426,5 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Nie próbuj nadążać za pożądanym kątem po tym, jak spory ruch żyroskopem przekroczy dane wyjściowe drążka.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Próbuj nadążać do pożądanego kąta, ale tylko gdy żyroskop jest aktywny.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Próbuj nadążać do pożądanego kąta. Jeśli żyroskop nie jest aktywny, kontynuuj przesyłanie wszelkich pozostałych kątów do nadążenia.",
-    "LibraryTab_ControllerGames": "Controller Friendly"
+    "LibraryTab_ControllerGames": "Przyjazne kontrolerom"
 }

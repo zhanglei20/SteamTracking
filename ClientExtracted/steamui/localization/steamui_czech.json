@@ -9387,7 +9387,7 @@
     "HardwareUpdaterWizard_Wireless_Warning": "USB-C kabel můžete odpojit od vysílače Steam Controller Puck a použít ho k připojení ovladače.",
     "HardwareUpdaterWizard_Wireless_Warning_ValveOnly": "<1>POUZE PRO VALVE: Před připojením ovladač VYPNĚTE. Toto je dočasné opatření a v budoucnu nebude potřeba.</1>",
     "HardwareUpdaterWizard_Success_Title": "Aktualizace byla dokončena",
-    "HardwareUpdaterWizard_Success_Description": "Aktualizace Vašeho ovladače Steam Controller byla dokončena. Pokud jste pro aktualizaci ovladače odpojili svůj puk, nezapomeňte ho znovu připojit.",
+    "HardwareUpdaterWizard_Success_Description": "Aktualizace byla dokončena. Pokud jste pro aktualizaci ovladače odpojili svůj puk, nezapomeňte ho znovu připojit.",
     "HardwareUpdaterWizard_Success_Button": "OK",
     "HardwareUpdaterWizard_Error_Title": "Aktualizace se nezdařila",
     "HardwareUpdaterWizard_Error_Description": "Něco se pokazilo. Zkuste vypnout a zapnout svůj ovladač a opakovat aktualizaci.",

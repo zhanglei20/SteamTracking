@@ -2365,6 +2365,7 @@
     "Settings_RemotePlay_PerformanceOverlay_Icons": "Show Icons",
     "Settings_RemotePlay_PerformanceOverlay_Details": "Show Details",
     "Settings_RemotePlay_WindowedMode": "Windowed Mode",
+    "Settings_RemotePlay_Microphone": "Microphone",
     "Settings_RemotePlay_HardwareDecoding": "Hardware Decoding",
     "Settings_RemotePlay_HEVC": "HEVC Video",
     "Settings_RemotePlay_AV1": "AV1 Video",
