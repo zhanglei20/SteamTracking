@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10676215";
+var CLSTAMP = "10677436";
 (() => {
   "use strict";
   var e,
@@ -443,7 +443,7 @@ var CLSTAMP = "10676215";
         2322: "421c75a6b5bf99215323",
         2389: "49bc630f6da52d9b27e3",
         2403: "3a2fdcf4f10862bdf75a",
-        2414: "c43ec4c0e84685e608f8",
+        2414: "1a553c3f531769bb5a20",
         2435: "6a84aef7be5bdc0edca8",
         2484: "27da3b6f5434b437e400",
         2489: "ad9ddbc8d2c39a6007e7",
@@ -483,7 +483,7 @@ var CLSTAMP = "10676215";
         3216: "0e1ecf45e628ae4923f1",
         3217: "44fab6f7da2044e98bcb",
         3266: "c4da66f6513f75ad62fb",
-        3276: "d897441272de91b0cd4d",
+        3276: "fe15cc6136c3916f2bcf",
         3318: "8fb38abea2e8ad893a83",
         3337: "df5dff2fcaee3774ceff",
         3374: "74d03c091d443ffa8798",
@@ -766,7 +766,7 @@ var CLSTAMP = "10676215";
         9197: "b8f0789ae0087b2cc97f",
         9207: "e9293045a533cc8a5140",
         9209: "f3f6185949adaae3bf4c",
-        9236: "e0f0b0ad905452e49f19",
+        9236: "cdc5e740406ee55faf72",
         9297: "caa951174269c0ffe5b2",
         9307: "c5df3cceb257def8c40e",
         9326: "25c059f95270d42b40bf",
@@ -861,7 +861,7 @@ var CLSTAMP = "10676215";
         2634: "48b4a55c36245fe921e6",
         3027: "126ef59a8391ceafa4f1",
         3276: "c1d094a5a6c359806b26",
-        3337: "30b8b4c0d2c0fa7192b0",
+        3337: "d1dfa5ad40bf398b6c9c",
         3687: "978e721335a41852226d",
         4268: "2e24279c812855286d46",
         4781: "027b578c258d5d5b4f29",
@@ -883,7 +883,7 @@ var CLSTAMP = "10676215";
         8396: "ef0850dd89d7462b64f6",
         8620: "ffb53321bde92f41e5f1",
         8685: "c91e038a32d637a1c3d6",
-        8713: "a037d26d9e2b2d024230",
+        8713: "129c01a9cf2ff4d0891a",
         8843: "79b6a827de7e2bdab6c6",
         8987: "6f96db821976ddd44268",
         9138: "83a17908fc3b5e05b883",
