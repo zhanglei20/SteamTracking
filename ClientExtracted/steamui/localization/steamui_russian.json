@@ -9426,5 +9426,5 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Не навёрстывать нужный угол после резких поворотов гироскопа, которые не дают генерировать новый вывод джойстика.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Навёрстывать нужный угол, но только когда гироскоп активирован.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Навёрстывать нужный угол. Если гироскоп не активирован, продолжать применять значения углов для достижения требуемого.",
-    "LibraryTab_ControllerGames": "Controller Friendly"
+    "LibraryTab_ControllerGames": "С поддержкой контроллеров"
 }

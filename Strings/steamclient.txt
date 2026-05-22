@@ -5375,7 +5375,6 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG\nk
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
@@ -8109,18 +8108,20 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFp^
+0123456789ABCDEFp{
 0123456789abcdef
 08bX
+0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
+0: Off. 1: Spew the gyro speed and the extracted quaternion rotation speed
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
 0=>Miles 1=>XAudio2
 0?0L
@@ -11669,11 +11670,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-20000
-200M
 2019
 2048
+20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16578,6 +16579,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hh\v
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17127,7 +17129,6 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -27483,7 +27484,6 @@ Gray color space not permitted on RGB PNG
 Greek
 Greenlight Items
 GreenlightItems
-Grip Pulse: eSide: %u, nStrength: %d, nRepeats: %d, nFlags: %d\n
 Group
 Group HTTP metrics by hostname.  Careful, the cardinality of your in-memory map might be large.
 GroupChatMessageNotification_t
@@ -27500,6 +27500,7 @@ Gurmukhi
 Gy?K
 Gyro Noise Value: %f, Raw Jerk Value: %f, Low Pass Jerk Value: %f, Jerk Threshold: %f, Jerks Detected: %u\n
 Gyro Rate switched from: %u us to: %u us.\n
+Gyro Raw Speed: %f, %f, %f\n
 Gyro Sensor value: (%u us) fell outside of margin of error: (%u%%). Falling back on estimated polling value (%u us). \n
 Gyro deflection so far: %f\n
 GzOKV
@@ -29597,6 +29598,7 @@ Lost connectivity to ALL %d Steam Datagram routing clusters.  Possible problem w
 Low FPS
 Low Spec Hardware (Steam Deck/Frame)
 Low Violence
+Low pass filter on the output to help lower FPS games. Needs more thought.
 LowMemoryWarning
 Lowered '%s' -> '%s'\n
 Luxembourgish
@@ -32920,6 +32922,7 @@ QualityOverride
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
+Quaternion Speed: %f, %f, %f\n
 Quechua
 QueryEndResponse
 QueryRefreshTokenByID
@@ -36625,6 +36628,7 @@ Streaming device at %s didn't respond to streaming proof request
 Streaming launch isn't available, unexpected reason %d
 StreamingAudioFinished
 StreamingAudioPreparationComplete
+StreamingClientSettingsChanged_t
 StreamingSession
 StreamingSessionEvent
 StreamingTargetAudioChannels
@@ -38214,6 +38218,7 @@ UseCandidate was set!
 UsePushToMute
 UsePushToTalk
 UsePushToTalkFriendsUI
+Used to test old Gyro to joystick Camera processing pipeline (1) against old (0).
 UsedVideoH264
 UsedVideoHEVC
 UsedVideoX264
@@ -38848,6 +38853,7 @@ What is the name of your school?
 What is your favorite team?
 What is your mother's maiden name?
 When a local endpoint expects to receive SETTINGS frame, it receives an other type of frame
+When in handheld mode, how far we tilt the gyro quaternion before processing. This affects only the "Gyro to Mouse" and "Gyro to JoystickCamera" modes. And only affects Yaw, Roll, Yaw + Roll, and Laser Pointer 3DOF to 2D conversion styles within those modes. Player Space and World Space are controller affordance agnostic.
 When loading sources into preset "%d", could not find mode ID "%d".
 When loading sources into preset %d, found mismatched source %s for mode ID %d, %s.  Incompatible Mode for this Source.  Creating compatible mode.
 When loading sources into preset %d, found mismatched source types for mode ID %d: %d / %d.
@@ -48472,7 +48478,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -48724,6 +48730,7 @@ gyro_calibration_duration_manual
 gyro_calibration_duration_manual_timeout
 gyro_calibration_duration_stationary
 gyro_data
+gyro_debug_gyro_speed_vs_quaternion_speed
 gyro_debug_sensor_timings
 gyro_deflection_to_joystick_max
 gyro_deflection_to_joystick_min
@@ -48742,7 +48749,9 @@ gyro_filter_min_speed
 gyro_filter_smoothness
 gyro_filtered_quaternion
 gyro_filtered_speed
+gyro_force_handheld_orientation
 gyro_force_sensor_rate
+gyro_handheld_pitch_offset
 gyro_lock_extents
 gyro_mode
 gyro_mouse_sample_angle_offset
@@ -48777,6 +48786,8 @@ gyro_sw_antidrift_enabled
 gyro_to_2d_conversion_style
 gyro_to_camera_angles
 gyro_to_joystick
+gyro_to_joystick_camera_raw
+gyro_to_joystick_camera_relax
 gyro_to_joystick_deflection
 gyro_to_joystick_deflection_neutral_angle
 gyro_to_joystick_deflection_use_gravity
@@ -58913,10 +58924,8 @@ q.m_pLast == this
 q2wI
 q?w0\v
 qCJ.
-qCurrentQuaternionState.IsValid()
 qHardwareQuaternion.IsValid()
 qR5FE%
-qTiltedQuaternion.IsValid()
 qUN1
 q\n\tStats_UDP
 qcStatements
@@ -59795,6 +59804,7 @@ sc_kalman_fastq
 sc_kalman_h_vel
 sc_kalman_q_vel
 sc_kalman_r_vel
+sc_kalman_repeated_sample
 sc_kalman_slowq
 sc_schinese
 sc_subscriptions
@@ -60956,7 +60966,7 @@ stderr
 stdin
 stdout
 steam
-steam May 20 2026 23:18:35
+steam May 22 2026 19:14:06
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

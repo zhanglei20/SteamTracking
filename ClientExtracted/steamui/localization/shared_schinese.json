@@ -163,7 +163,7 @@
     "VoiceTransmissionTypeExplainer": "按下用户定义的键以在语音频道中聊天",
     "VoiceTransmissionType_WhenSpeaking": "自动",
     "VoiceTransmissionType_PushToTalk_Key": "按键通话：%1$s",
-    "VoicePushToTalkPressHotKey": "Press key or mouse-button to assign",
+    "VoicePushToTalkPressHotKey": "按下按键或鼠标按键以分配",
     "VoicePushToTalkAssigned": "按键通话热键为",
     "VoicePushToMuteAssigned": "按键静音热键为",
     "VoiceMuteToggleAssigned": "静音切换热键设置为",

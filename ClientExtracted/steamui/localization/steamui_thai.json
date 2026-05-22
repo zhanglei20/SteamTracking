@@ -9426,5 +9426,5 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "อย่าพยายามชดเชยให้เป็นมุมที่ต้องการ หลังจากที่การตวัดไจโรกว้าง ๆ ทำให้เอาต์พุตของจอยสติกถึงขีดจำกัด",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "พยายามชดเชยให้เป็นมุมที่ต้องการ แต่เฉพาะตอนนี้ที่ใช้งานไจโรอยู่เท่านั้น",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "พยายามชดเชยให้เป็นมุมที่ต้องการ หากไม่ได้ใช้งานไจโรอยู่ ให้ใช้มุมชดเชยที่เหลือต่อไปเรื่อย ๆ",
-    "LibraryTab_ControllerGames": "Controller Friendly"
+    "LibraryTab_ControllerGames": "เป็นมิตรกับคอนโทรลเลอร์"
 }

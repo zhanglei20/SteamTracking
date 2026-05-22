@@ -5777,6 +5777,8 @@ ${LANGUAGE}
 -exitsteam
 -flushconfig
 -force-no-dbus-simulate-user-activity
+-force-oobe-stage1
+-force-oobe-stage2
 -forcecontrollerappid
 -foreground
 -friendsui
@@ -6152,9 +6154,9 @@ ${LANGUAGE}
 ../steamUI/gamestream/vrstreamthread.cpp
 ../steamUI/gamestream/x264wrapper.cpp
 ../steamUI/hardwareupdatecontroller.cpp
-../steamUI/hardwareupdatecontroller.cpp:148
-../steamUI/hardwareupdatecontroller.cpp:219
-../steamUI/hardwareupdatecontroller.cpp:263
+../steamUI/hardwareupdatecontroller.cpp:156
+../steamUI/hardwareupdatecontroller.cpp:249
+../steamUI/hardwareupdatecontroller.cpp:293
 ../steamUI/installfoldercontroller.cpp
 ../steamUI/ledcontroller.cpp
 ../steamUI/ledcontroller.cpp:1479
@@ -7499,7 +7501,6 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
-0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7544,13 +7545,13 @@ ${LANGUAGE}
 0000
 00000000
 0000000000000000000000000000000000000000
-000000001532
+0.15
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -13425,7 +13426,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9HhXA
 9IGv
 9Inventory
 9PE,$
@@ -17610,6 +17610,7 @@ CRemotePlayController::OnRemotePlayTogetherPlayerJoined
 CRemotePlayController::OnRemotePlayTogetherPlayerLeft
 CRemotePlayController::OnStreamingClientConnected
 CRemotePlayController::OnStreamingClientDisconnected
+CRemotePlayController::OnStreamingClientSettingsChanged
 CRemotePlayController::OnStreamingClientUsedInput
 CRemoteSteamAppMgr::OnAppEventStateChange
 CRemoteSteamAppMgr::OnRemoteClientAppCloudStatusChanged
@@ -21358,6 +21359,8 @@ Force Password Change
 Force Run Restriction
 Force a Specific AppID for Steam Controller Config - Prevents context/app switching from changing configuration
 Force canceled while pending
+Force show stage1 oobe
+Force show stage2 oobe
 Force the use of the system browser composer
 ForceAcceptInvite
 ForceOOBE
@@ -24982,7 +24985,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 20 2026 23:18:42
+May 22 2026 19:14:39
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -25531,6 +25534,7 @@ N21CRemotePlayController49CCallbackInternal_OnRemoteDevicePairingPINChangedE
 N21CRemotePlayController50CCallbackInternal_OnRemoteClientDongleDisconnectedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
+N21CRemotePlayController50CCallbackInternal_OnStreamingClientSettingsChangedE
 N21CRemotePlayController51CCallbackInternal_OnRemoteClientInputSettingsChangeE
 N21CRemotePlayController52CCallbackInternal_OnRemotePlayTogetherGroupDisbandedE
 N21CRemotePlayController53CCallbackInternal_OnRemoteClientVRStreamingInvitationE
@@ -28204,6 +28208,7 @@ R\n\tWriteFile
 R\n\vGetRTMPInfo
 R\n\vSetRTMPInfo
 R\n\vtoken_lists
+R_x9K
 RackSystem
 RadioButton
 RadioButton::OnThink()
@@ -28485,6 +28490,7 @@ RemotePlay.UnpairLocalWifiAP
 RemotePlay.UnpairRemoteClient
 RemotePlay.UnpairRemoteDevice
 RemotePlay.UnpairRemoteDevices
+RemotePlayClientCaps
 RemotePlayClientConfig
 RemotePlayServerConfig
 RemotePlayTogether
@@ -29202,7 +29208,6 @@ STEAM_TOUCH_CLICK_MODE
 STEAM_TROPHY
 STEAM_USE_DYNAMIC_VRS
 STOP USING,%s
-STORAGE DEVICE
 STORE lib
 STORE routines
 STREAM_CLOSED
@@ -41421,7 +41426,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -51105,6 +51110,7 @@ old_rsa_priv_decode
 oldsettings
 oldtall
 oldwide
+omitting firmware update for unit with invalid serial number: %s, scheduling retry
 on all connections.
 on this connection.
 on-external-power
@@ -52604,7 +52610,6 @@ q$9l
 q,&2ke!
 q.IsValid()
 qCJ.
-qNL[
 qR5FE%
 qUN1
 qcStatements
@@ -54032,6 +54037,7 @@ skip_steamvr_install_dialog
 skip_storage_update
 skip_unvetted_apps
 skipped
+skipping firmware update for unit with invalid serial number: %s
 slg_write
 slot
 slot full

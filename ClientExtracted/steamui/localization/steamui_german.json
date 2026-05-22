@@ -9426,5 +9426,5 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Versuchen Sie nicht, die Diskrepanz zum gewünschten Winkel aufzuholen, nachdem die Stickausgabe durch große Bewegungen des Gyroskops ausgelastet wurde.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Versuchen Sie, die Diskrepanz zum gewünschten Winkel nur aufzuholen, wenn das Gyroskop aktiviert ist.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Versuchen Sie, die Diskrepanz zum gewünschten Winkel aufzuholen. Wenn das Gyroskop nicht aktiviert ist, ermitteln Sie alle verbleibenden aufzuholenden Winkel.",
-    "LibraryTab_ControllerGames": "Controller Friendly"
+    "LibraryTab_ControllerGames": "Controllerunterstützung"
 }

@@ -2552,6 +2552,8 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
+19:14:01
+19:14:05
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -2645,8 +2647,6 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:18:30
-23:18:35
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -7258,7 +7258,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 20 2026
+May 22 2026
 MaybeAllocateAligned cannot fail here.
 Meeting
 MemFree:
@@ -9360,7 +9360,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May 20 2026 23:18:35
+Startup - updater built May 22 2026 19:14:05
 State
 StaticFileWriterThread()
 Steam

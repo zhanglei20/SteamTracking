@@ -8163,7 +8163,7 @@
     "AppControllerConfiguration_ViewLayout": "Vezi configurația",
     "AppControllerConfiguration_FindCommunityConfig_Browse": "Răsfoiește",
     "AppControllerConfiguration_FindCommunityConfig_BrowseCommunity": "Configurații comunitare",
-    "AppControllerConfiguration_FindCommunityConfig_Desc": "Răsfoiește<1>configurațiile comunitare</1> pentru jocuri care nu oferă oficial compatibilitate pentru controlere",
+    "AppControllerConfiguration_FindCommunityConfig_Desc": "Răsfoiește <1>configurațiile comunitare</1> pentru jocuri care nu oferă oficial compatibilitate pentru controlere",
     "AppControllerConfiguration_Edit": "Editează configurația",
     "AppControllerConfiguration_Settings": "Setări",
     "AppControllerConfiguration_SeeErrorMsgs": "SUNT PREZENTE MESAJE DE EROARE – VEZI ERORILE",
@@ -9426,5 +9426,5 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Nu încerca ajustarea la unghiul dorit după ce smucirile lungi ale giroscopului saturează outputul joystickului.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Încearcă ajustarea la unghiul dorit, dar doar când giroscopul este activ.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Încearcă ajustarea la unghiul dorit. Dacă giroscopul nu este activ, continuă rotația compensatorie până la atingerea unghiului dorit.",
-    "LibraryTab_ControllerGames": "Controller Friendly"
+    "LibraryTab_ControllerGames": "Compatibile cu controlere"
 }
