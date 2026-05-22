@@ -27741,7 +27741,7 @@
       const _ = (0, _._)((_) => {
         const { saleSection: _, editModel: _ } = _,
           _ = __webpack_require__.GetCurEditLanguage(),
-          [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.default_label,
             _.localized_label,
             _.label_link,
@@ -27753,6 +27753,7 @@
             __webpack_require__.GetClanSteamID(),
             __webpack_require__.GetIncludedRealmList(),
             _.internal_section_title || "",
+            _.section_type,
           ]),
           _ = Boolean(_._.GetWithFallback(_, _)),
           _ = _ || _._.IsValidTitleOption(_, "label");
@@ -27764,7 +27765,8 @@
         const _ = (0, _._)(),
           _ =
             !!(0, _._)(_, __webpack_require__.GetEventModel(), _.eLocation) ||
-            "title_image" == _.section_type;
+            "title_image" == _.section_type,
+          _ = "crosspromotesalepage" === _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             !_ &&
@@ -27804,115 +27806,117 @@
                         __webpack_require__.SetDirty(_._.jsondata_sales);
                     },
                   }),
-                  _ &&
-                    (0, _.jsxs)(_._, {
-                      clanSteamID: __webpack_require__.GetClanSteamID(),
-                      className: _.CustomImageTitle,
-                      children: [
-                        (0, _.jsx)("span", {
-                          className: _.PromptText,
-                          children: (0, _._)("#Sale_option_title_image"),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.UploadImageButton,
-                          children: (0, _.jsx)(_._, {
-                            onClick: (_) => {
-                              _.preventDefault(),
-                                _.stopPropagation(),
-                                (0, _._)(
-                                  (0, _.jsx)(_._, {
-                                    loc_images: _,
-                                    partnerEventStore: _._,
-                                    appid: _,
-                                    realms: _,
-                                    artworkType: "sale_section_title",
-                                    eventModel: _,
-                                    clanSteamID: _,
-                                    fnLangHasData: _.BHasTitleImage,
-                                    fnGetImageHash: (_, _) => {
-                                      var _;
-                                      return null ===
-                                        (_ = _.localized_label_image) ||
-                                        void 0 === _
-                                        ? void 0
-                                        : _[_];
-                                    },
-                                    fnSetImageURL: (_, _, _ = _.Bhc) => {
-                                      const _ = _._.GetHashAndExt(_);
-                                      _.localized_label_image = _._.Set(
-                                        _ || [],
-                                        _,
-                                        _,
-                                      );
-                                    },
-                                  }),
-                                  (0, _._)(_),
+                ],
+              }),
+            !_ &&
+              _ &&
+              (0, _.jsxs)(_._, {
+                clanSteamID: __webpack_require__.GetClanSteamID(),
+                className: _.CustomImageTitle,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.PromptText,
+                    children: (0, _._)("#Sale_option_title_image"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.UploadImageButton,
+                    children: (0, _.jsx)(_._, {
+                      onClick: (_) => {
+                        _.preventDefault(),
+                          _.stopPropagation(),
+                          (0, _._)(
+                            (0, _.jsx)(_._, {
+                              loc_images: _,
+                              partnerEventStore: _._,
+                              appid: _,
+                              realms: _,
+                              artworkType: "sale_section_title",
+                              eventModel: _,
+                              clanSteamID: _,
+                              fnLangHasData: _.BHasTitleImage,
+                              fnGetImageHash: (_, _) => {
+                                var _;
+                                return null === (_ = _.localized_label_image) ||
+                                  void 0 === _
+                                  ? void 0
+                                  : _[_];
+                              },
+                              fnSetImageURL: (_, _, _ = _.Bhc) => {
+                                const _ = _._.GetHashAndExt(_);
+                                _.localized_label_image = _._.Set(
+                                  _ || [],
+                                  _,
+                                  _,
                                 );
-                            },
-                            children:
-                              _ > 0
-                                ? (0, _._)(
-                                    "#selectimage_managing_n_existing_title",
-                                    _,
-                                  )
-                                : (0, _._)("#selectimage_uploading_title"),
-                          }),
-                        }),
-                      ],
+                              },
+                            }),
+                            (0, _._)(_),
+                          );
+                      },
+                      children:
+                        _ > 0
+                          ? (0, _._)(
+                              "#selectimage_managing_n_existing_title",
+                              _,
+                            )
+                          : (0, _._)("#selectimage_uploading_title"),
                     }),
-                  _ &&
-                    (0, _.jsxs)(_._, {
-                      clanSteamID: __webpack_require__.GetClanSteamID(),
-                      children: [
-                        (0, _.jsx)(_._, {
-                          label: (0, _._)("#Sale_LinkURL"),
-                          tooltip: (0, _._)("#Sale_LinkURL_title_hint"),
-                          placeholder: (0, _._)("#Sale_LinkURL"),
-                          onChange: (_) => {
-                            (_.label_link = _.target.value),
-                              __webpack_require__.SetDirty(_._.jsondata_sales);
-                          },
-                          value: _,
-                        }),
-                        (0, _.jsx)(_, {
-                          saleSection: _,
-                          editModel: _,
-                        }),
-                      ],
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _.SectionSubtitleCtn,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        children: (0, _._)("#EventEditor_Event_SubTitle"),
-                      }),
-                      (0, _.jsx)(_._, {
-                        nameType: "subtitle",
-                        default_label: _,
-                        localized_label: _,
-                        editModel: _,
-                        onClearCustomTitle: () => {
-                          (_.localized_subtitle = _._.Set(
-                            _.localized_subtitle || [],
-                            _,
-                            null,
-                          )),
-                            __webpack_require__.SetDirty(_._.jsondata_sales);
-                        },
-                        onSetCustomTitle: (_) => {
-                          (_.localized_subtitle = _._.Set(
-                            _.localized_subtitle || [],
-                            _,
-                            _,
-                          )),
-                            __webpack_require__.SetDirty(_._.jsondata_sales);
-                        },
-                        onSetDefaultLabel: (_) => {
-                          (_.default_subtitle = _),
-                            __webpack_require__.SetDirty(_._.jsondata_sales);
-                        },
-                      }),
-                    ],
+                  }),
+                ],
+              }),
+            !_ &&
+              _ &&
+              (0, _.jsxs)(_._, {
+                clanSteamID: __webpack_require__.GetClanSteamID(),
+                children: [
+                  (0, _.jsx)(_._, {
+                    label: (0, _._)("#Sale_LinkURL"),
+                    tooltip: (0, _._)("#Sale_LinkURL_title_hint"),
+                    placeholder: (0, _._)("#Sale_LinkURL"),
+                    onChange: (_) => {
+                      (_.label_link = _.target.value),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
+                    value: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    saleSection: _,
+                    editModel: _,
+                  }),
+                ],
+              }),
+            (!_ || _) &&
+              (0, _.jsxs)("div", {
+                className: _.SectionSubtitleCtn,
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#EventEditor_Event_SubTitle"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    nameType: "subtitle",
+                    default_label: _,
+                    localized_label: _,
+                    editModel: _,
+                    onClearCustomTitle: () => {
+                      (_.localized_subtitle = _._.Set(
+                        _.localized_subtitle || [],
+                        _,
+                        null,
+                      )),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
+                    onSetCustomTitle: (_) => {
+                      (_.localized_subtitle = _._.Set(
+                        _.localized_subtitle || [],
+                        _,
+                        _,
+                      )),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
+                    onSetDefaultLabel: (_) => {
+                      (_.default_subtitle = _),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
                   }),
                 ],
               }),
