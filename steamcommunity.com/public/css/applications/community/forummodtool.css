@@ -698,6 +698,21 @@ table div {
   margin-bottom: 24px;
   height: 5em;
 }
+._3_dhawEOV-fztaXEftlfxJ {
+  padding: 4px;
+  border: 1px solid #930808;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: flex-start;
+  align-items: center;
+}
+._3_dhawEOV-fztaXEftlfxJ svg {
+  height: 16px;
+  width: 16px;
+  color: red;
+  fill: red;
+}
 .F2uRfcfN3gZAD8WCNOVq6 {
   min-width: 250px;
   display: flex;

@@ -25985,7 +25985,7 @@
       const nr = (0, r.PA)((e) => {
         const { saleSection: t, editModel: a } = e,
           s = a.GetCurEditLanguage(),
-          [r, c, u, _, p, h, v, S, f, y, w] = (0, d.q3)(() => [
+          [r, c, u, _, p, h, v, S, f, y, w, x] = (0, d.q3)(() => [
             t.default_label,
             t.localized_label,
             t.label_link,
@@ -25997,21 +25997,23 @@
             a.GetClanSteamID(),
             a.GetIncludedRealmList(),
             t.internal_section_title || "",
+            t.section_type,
           ]),
-          x = Boolean(M.NT.GetWithFallback(c, s)),
-          C = x || tr.a.IsValidTitleOption(r, "label");
-        let T = 0;
+          C = Boolean(M.NT.GetWithFallback(c, s)),
+          T = C || tr.a.IsValidTitleOption(r, "label");
+        let j = 0;
         null == _ ||
           _.forEach((e) => {
-            T += e ? 1 : 0;
+            j += e ? 1 : 0;
           });
-        const j = (0, ar.yD)(),
-          D =
-            !!(0, Fe.s0)(t, a.GetEventModel(), j.eLocation) ||
-            "title_image" == t.section_type;
+        const D = (0, ar.yD)(),
+          E =
+            !!(0, Fe.s0)(t, a.GetEventModel(), D.eLocation) ||
+            "title_image" == t.section_type,
+          A = "crosspromotesalepage" === x;
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            !D &&
+            !E &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)("p", {
@@ -26047,116 +26049,117 @@
                       (t.default_label = e), a.SetDirty(o.IQ.jsondata_sales);
                     },
                   }),
-                  x &&
-                    (0, n.jsxs)(I.E, {
-                      clanSteamID: a.GetClanSteamID(),
-                      className: b.CustomImageTitle,
-                      children: [
-                        (0, n.jsx)("span", {
-                          className: b.PromptText,
-                          children: (0, M.we)("#Sale_option_title_image"),
-                        }),
-                        (0, n.jsx)("div", {
-                          className: b.UploadImageButton,
-                          children: (0, n.jsx)(m.jn, {
-                            onClick: (e) => {
-                              e.preventDefault(),
-                                e.stopPropagation(),
-                                (0, V.pg)(
-                                  (0, n.jsx)(Et.X, {
-                                    loc_images: _,
-                                    partnerEventStore: l.mh,
-                                    appid: v,
-                                    realms: y,
-                                    artworkType: "sale_section_title",
-                                    eventModel: S,
-                                    clanSteamID: f,
-                                    fnLangHasData: a.BHasTitleImage,
-                                    fnGetImageHash: (e, a) => {
-                                      var n;
-                                      return null ===
-                                        (n = t.localized_label_image) ||
-                                        void 0 === n
-                                        ? void 0
-                                        : n[a];
-                                    },
-                                    fnSetImageURL: (e, a, n = i.Bhc) => {
-                                      const o = Jt.zU.GetHashAndExt(a);
-                                      t.localized_label_image = M.NT.Set(
-                                        _ || [],
-                                        n,
-                                        o,
-                                      );
-                                    },
-                                  }),
-                                  (0, Oe.uX)(e),
+                ],
+              }),
+            !E &&
+              C &&
+              (0, n.jsxs)(I.E, {
+                clanSteamID: a.GetClanSteamID(),
+                className: b.CustomImageTitle,
+                children: [
+                  (0, n.jsx)("span", {
+                    className: b.PromptText,
+                    children: (0, M.we)("#Sale_option_title_image"),
+                  }),
+                  (0, n.jsx)("div", {
+                    className: b.UploadImageButton,
+                    children: (0, n.jsx)(m.jn, {
+                      onClick: (e) => {
+                        e.preventDefault(),
+                          e.stopPropagation(),
+                          (0, V.pg)(
+                            (0, n.jsx)(Et.X, {
+                              loc_images: _,
+                              partnerEventStore: l.mh,
+                              appid: v,
+                              realms: y,
+                              artworkType: "sale_section_title",
+                              eventModel: S,
+                              clanSteamID: f,
+                              fnLangHasData: a.BHasTitleImage,
+                              fnGetImageHash: (e, a) => {
+                                var n;
+                                return null === (n = t.localized_label_image) ||
+                                  void 0 === n
+                                  ? void 0
+                                  : n[a];
+                              },
+                              fnSetImageURL: (e, a, n = i.Bhc) => {
+                                const o = Jt.zU.GetHashAndExt(a);
+                                t.localized_label_image = M.NT.Set(
+                                  _ || [],
+                                  n,
+                                  o,
                                 );
-                            },
-                            children:
-                              T > 0
-                                ? (0, M.Yp)(
-                                    "#selectimage_managing_n_existing_title",
-                                    T,
-                                  )
-                                : (0, M.we)("#selectimage_uploading_title"),
-                          }),
-                        }),
-                      ],
+                              },
+                            }),
+                            (0, Oe.uX)(e),
+                          );
+                      },
+                      children:
+                        j > 0
+                          ? (0, M.Yp)(
+                              "#selectimage_managing_n_existing_title",
+                              j,
+                            )
+                          : (0, M.we)("#selectimage_uploading_title"),
                     }),
-                  C &&
-                    (0, n.jsxs)(I.E, {
-                      clanSteamID: a.GetClanSteamID(),
-                      children: [
-                        (0, n.jsx)(m.pd, {
-                          label: (0, M.we)("#Sale_LinkURL"),
-                          tooltip: (0, M.we)("#Sale_LinkURL_title_hint"),
-                          placeholder: (0, M.we)("#Sale_LinkURL"),
-                          onChange: (e) => {
-                            (t.label_link = e.target.value),
-                              a.SetDirty(o.IQ.jsondata_sales);
-                          },
-                          value: u,
-                        }),
-                        (0, n.jsx)(ir, { saleSection: t, editModel: a }),
-                      ],
-                    }),
-                  (0, n.jsxs)("div", {
-                    className: b.SectionSubtitleCtn,
-                    children: [
-                      (0, n.jsx)(m.JU, {
-                        children: (0, M.we)("#EventEditor_Event_SubTitle"),
-                      }),
-                      (0, n.jsx)(tr.a, {
-                        nameType: "subtitle",
-                        default_label: p,
-                        localized_label: h,
-                        editModel: a,
-                        onClearCustomTitle: () => {
-                          (t.localized_subtitle = M.NT.Set(
-                            t.localized_subtitle || [],
-                            s,
-                            null,
-                          )),
-                            a.SetDirty(o.IQ.jsondata_sales);
-                        },
-                        onSetCustomTitle: (e) => {
-                          (t.localized_subtitle = M.NT.Set(
-                            t.localized_subtitle || [],
-                            s,
-                            e,
-                          )),
-                            a.SetDirty(o.IQ.jsondata_sales);
-                        },
-                        onSetDefaultLabel: (e) => {
-                          (t.default_subtitle = e),
-                            a.SetDirty(o.IQ.jsondata_sales);
-                        },
-                      }),
-                    ],
                   }),
                 ],
               }),
-            D &&
+            !E &&
+              T &&
+              (0, n.jsxs)(I.E, {
+                clanSteamID: a.GetClanSteamID(),
+                children: [
+                  (0, n.jsx)(m.pd, {
+                    label: (0, M.we)("#Sale_LinkURL"),
+                    tooltip: (0, M.we)("#Sale_LinkURL_title_hint"),
+                    placeholder: (0, M.we)("#Sale_LinkURL"),
+                    onChange: (e) => {
+                      (t.label_link = e.target.value),
+                        a.SetDirty(o.IQ.jsondata_sales);
+                    },
+                    value: u,
+                  }),
+                  (0, n.jsx)(ir, { saleSection: t, editModel: a }),
+                ],
+              }),
+            (!E || A) &&
+              (0, n.jsxs)("div", {
+                className: b.SectionSubtitleCtn,
+                children: [
+                  (0, n.jsx)(m.JU, {
+                    children: (0, M.we)("#EventEditor_Event_SubTitle"),
+                  }),
+                  (0, n.jsx)(tr.a, {
+                    nameType: "subtitle",
+                    default_label: p,
+                    localized_label: h,
+                    editModel: a,
+                    onClearCustomTitle: () => {
+                      (t.localized_subtitle = M.NT.Set(
+                        t.localized_subtitle || [],
+                        s,
+                        null,
+                      )),
+                        a.SetDirty(o.IQ.jsondata_sales);
+                    },
+                    onSetCustomTitle: (e) => {
+                      (t.localized_subtitle = M.NT.Set(
+                        t.localized_subtitle || [],
+                        s,
+                        e,
+                      )),
+                        a.SetDirty(o.IQ.jsondata_sales);
+                    },
+                    onSetDefaultLabel: (e) => {
+                      (t.default_subtitle = e), a.SetDirty(o.IQ.jsondata_sales);
+                    },
+                  }),
+                ],
+              }),
+            E &&
               (0, n.jsx)("p", {
                 className: g().InstructionText,
                 children: (0, M.we)("#Sale_Section_ForcedTitle"),

@@ -1529,45 +1529,75 @@ function _(_) {
 function _(_) {
   let { buy: _, sell: _, ..._ } = _,
     _ = _.length + _.length > 0,
-    _ = _() === "initial";
-  return _
-    ? (0, _.jsx)(_, {
-        children: (0, _.jsxs)(_, {
-          columns: {
-            initial: "max-content max-content 1fr",
-            _: "2fr max-content max-content 1fr",
-          },
-          gap: "1",
-          alignContent: "center",
-          children: [
-            _.length > 0 &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_, {
-                    children: _.Localize("#MyOrders_Heading_MyPurchaseOffers"),
-                  }),
-                  (0, _.jsx)(_, {
-                    orders: _,
-                    ..._,
-                  }),
-                ],
+    [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)(!1);
+  if (!_) return (0, _.jsx)(_, {});
+  let _ = {
+      initial: "max-content max-content 1fr",
+      _: "2fr max-content max-content 1fr",
+    },
+    _ = 5,
+    _ = _.length > _,
+    _ = _.slice(0, _),
+    _ = _.length > _,
+    _ = _.slice(0, _);
+  return (0, _.jsx)(_, {
+    children: (0, _.jsxs)(_, {
+      columns: _,
+      gap: "1",
+      alignContent: "center",
+      children: [
+        _.length > 0 &&
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                children: _.Localize("#MyOrders_Heading_MyPurchaseOffers"),
               }),
-            _.length > 0 &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_, {
-                    children: _.Localize("#MyOrders_Heading_MyListings"),
-                  }),
-                  (0, _.jsx)(_, {
-                    orders: _,
-                    ..._,
-                  }),
-                ],
+              (0, _.jsx)(_, {
+                orders: _,
+                ..._,
               }),
-          ],
-        }),
-      })
-    : (0, _.jsx)(_, {});
+            ],
+          }),
+        _ &&
+          !_ &&
+          (0, _.jsx)(_, {
+            onClick: () => _(!0),
+            children: _.Localize("#MyOrders_SeeAllN", _.length),
+          }),
+        _.length > 0 &&
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                children: _.Localize("#MyOrders_Heading_MyListings"),
+              }),
+              (0, _.jsx)(_, {
+                orders: _,
+                ..._,
+              }),
+            ],
+          }),
+        _ &&
+          !_ &&
+          (0, _.jsx)(_, {
+            onClick: () => _(!0),
+            children: _.Localize("#MyOrders_SeeAllN", _.length),
+          }),
+      ],
+    }),
+  });
+}
+function _(_) {
+  let { children: _, onClick: _ } = _;
+  return (0, _.jsx)(_, {
+    gridColumn: "1 / -1",
+    children: (0, _.jsx)(_, {
+      color: "text-body",
+      underline: "always",
+      onClick: _,
+      children: _,
+    }),
+  });
 }
 function _(_) {
   return (0, _.jsx)(_, {
@@ -2545,8 +2575,8 @@ function _(_) {
   )
     return _;
 }
-var _ = _(_(), 1),
-  _ = _(_(), 1);
+var _ = _(_(), 1);
+var _ = _(_(), 1);
 function _(_) {
   let { buckets: _, description: _ } = _;
   return _.length
@@ -2592,8 +2622,10 @@ function _(_) {
         selectedValue: _.find(({ bucket_id: _ }) => _ === _) || null,
         onSelectionChange: (_) => _(_ ? _.bucket_id : null),
         options: _,
-        placeholder: "More options...",
-        filterPlaceholder: "Filter...",
+        placeholder: _.Localize("#ItemBucketPicker_Overflow_Placeholder"),
+        filterPlaceholder: _.Localize(
+          "#ItemBucketPicker_Overflow_FilterPlaceholder",
+        ),
         getOptionLabel: _,
       }),
     });

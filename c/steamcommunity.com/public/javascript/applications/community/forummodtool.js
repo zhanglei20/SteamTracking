@@ -38,6 +38,7 @@
         SanctionForm: "_33cLeNjYsBEX2T0-B9gc5G",
         OneColumn: "_2LTDR9F3yb80ONcUPcDxo1",
         MessageTextArea: "_3IWpl3mfH9OFkiqMIh7WtY",
+        ErrorMessage: "_3_dhawEOV-fztaXEftlfxJ",
       };
     },
     chunkid: (module) => {
@@ -931,10 +932,14 @@
               );
             });
         })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)("main"),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
@@ -1036,6 +1041,11 @@
                   (0, _.jsxs)(_._, {
                     className: _().SanctionForm,
                     children: [
+                      null !== _ &&
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(_().OneColumn, _().ErrorMessage),
+                          children: [(0, _.jsx)(_.Q9b, {}), " Error: ", _],
+                        }),
                       (0, _.jsx)("label", {
                         htmlFor: "reason",
                         children: "Reason:",
@@ -1259,50 +1269,57 @@
                         onClick: _.onCancel,
                         children: "Cancel",
                       }),
-                      (0, _.jsx)(_._, {
-                        onClick: () => {
-                          (0, _._)(
-                            null !== _,
-                            "eReason must be non-null to sanction",
-                          );
-                          const _ = [];
-                          _ &&
-                            __webpack_require__.push({
-                              sanction: _._,
-                            }),
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_._, {
+                          onClick: async () => {
+                            _(!0),
+                              (0, _._)(
+                                null !== _,
+                                "eReason must be non-null to sanction",
+                              );
+                            const _ = [];
                             _ &&
                               __webpack_require__.push({
                                 sanction: _._,
                               }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: _,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: _,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: _,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: -1,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                              }),
-                            _.onOK(_, _.trim(), _);
-                        },
-                        disabled: null === _ || !_,
-                        children: "Sanction",
-                      }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: _,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: _,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: _,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: -1,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                });
+                            const _ = await _.onOK(_, _.trim(), _);
+                            _(_), _(!1);
+                          },
+                          disabled: null === _ || !_,
+                          children: "Sanction",
+                        }),
                     ],
                   }),
                 ],
@@ -1311,7 +1328,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2105,16 +2121,23 @@
                         subject: _,
                         authorSteamId: _.authorSteamId,
                         onOK: async (_, _, _) => {
-                          await _.mutateAsync({
-                            eReason: _,
-                            rgSanctions: _,
-                            strNote: _,
-                          }),
+                          try {
+                            await _.mutateAsync({
+                              eReason: _,
+                              rgSanctions: _,
+                              strNote: _,
+                            });
+                          } catch (_) {
+                            return _.message;
+                          }
+                          return (
                             _.onClose(),
                             1 === window.location.href.split("#").length &&
                               "0" !== _.subjectId &&
                               (window.location.href += "#c" + _.subjectId),
-                            window.location.reload();
+                            window.location.reload(),
+                            null
+                          );
                         },
                         onCancel: () => _("main"),
                       }),
@@ -2297,7 +2320,10 @@
             const _ = await _._.SanctionReportedPost(_, _);
             if (!_.BSuccess())
               throw new Error(
-                "Failed to sanction forum comment: " + _.GetEResult(),
+                "Failed to sanction forum comment: (" +
+                  _.GetEResult() +
+                  ") " +
+                  _.GetErrorMessage(),
               );
             return _.Body();
           },
