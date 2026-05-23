@@ -1,6 +1,6 @@
 "win64"
 {
-	"version"		"1778284294"
+	"version"		"1779486452"
 	"ostype"		"win10"
 	"steamchina_steamui_websrc_all"
 	{
@@ -58,11 +58,11 @@
 	}
 	"steamchina_bins_hardware_all"
 	{
-		"file"		"steamchina_bins_hardware_all.zip.0fec0ba566601f3f3c02a210bb7ca376cc0b2ab1"
-		"size"		"720310"
-		"sha2"		"2a43a6bfb72c9266e1734b23f68147f229acd9e64bb68ad4079ceb42d89ddf39"
-		"zipvz"		"steamchina_bins_hardware_all.zip.vz.3bdcc5830a6dac679ad0775b9a0bd8117b7347ae_353236"
-		"sha2vz"		"fb2328548e9a2a3ba4cd17de7bfea355028ea3e0d901066b08862fc259fa7887"
+		"file"		"steamchina_bins_hardware_all.zip.ff227fe36ecc878f0706920c204f9e60cc593340"
+		"size"		"346802"
+		"sha2"		"08a479bd7b9798a3899d9fe76a00705e0d14e6af5a4e3b3cfe78e3207b0afe38"
+		"zipvz"		"steamchina_bins_hardware_all.zip.vz.320ac7db3df033d94dbeb2acf2c57aee46e168c6_275615"
+		"sha2vz"		"984aa88a046e4688230753ad5adf10ab8d5a69fb1f5c838b3934150e96332136"
 	}
 	"steamchina_steamui_websrc_sounds_all"
 	{
@@ -157,9 +157,9 @@
 }
 "kvsign2"
 {
-	"win64"		"b85e05ee827a8aae4639b91da0c80368fc2a101c2debed591767d277d71a30e4c24526ba7f57a79d04eba683867ec4045f71bea5e6fd8586c7629ebfefc03801"
+	"win64"		"d74ece57b8fc99ab4c984771a9dd3591960b33591fb10bcecfce308206315d6ab87637442531544bd0460273df7628d0af09b33819baed7336352caf98d18106"
 }
 "kvsignatures"
 {
-	"win64"		"0906d857048faf2394936557814024f7736529d80869c8e2f4f4a40eeed07661a12493b7c57e06fdc5ebb1ad17fab1e5350a1fc21e6ed3425a03e6a4a24fd67f136a133e6cd5c94d68feee38124a8cc83012285b5d4457f81ae1fef5ed6cfa2f174af50436b0a07c5eeef75d26fff41da5b1f83ed93e592b5e7ad43cf389276b"
+	"win64"		"4058bfbe4b2adeddd2c87506a880e8a8e7684eb0c8995aa9f29488b99909c36c6c63d70d82f34a83734041a2d85b2841b9be2798813336f2bb6a0e53256445833fa25c02057361c4ee3ba88475079ae7f5c9ba2132b305f0141700b2982b43eecff624f5d8908ea8278f6cbf67f22cd4adfcff25f2c23d9dc9c0d5b20bb8e2f7"
 }
