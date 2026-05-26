@@ -3056,7 +3056,7 @@
           r = (0, ge.E)();
         return (0, a.jsx)("div", {
           style: { display: "flex", width: "304px" },
-          children: (0, a.jsx)($n.uY, {
+          children: (0, a.jsx)($n.u, {
             event: t,
             imageURLOverride: n,
             langOverride: o ?? r,
@@ -4751,7 +4751,7 @@
         });
       }
       var Kt = t(77021),
-        Qt = t(32478);
+        Qt = t(76647);
       function Jt(e) {
         const {
             promotionName: n,
@@ -5026,7 +5026,7 @@
           C &&
             C.groupID != b &&
             (k[k.length - 1].elements.push(
-              Se(n, C, s && s?.GetActiveTabUniqueID()),
+              Se(n, C, i, s && s?.GetActiveTabUniqueID()),
             ),
             (C = null)),
             b
@@ -5041,7 +5041,7 @@
         }),
           C &&
             (k[k.length - 1].elements.push(
-              Se(n, C, s && s?.GetActiveTabUniqueID()),
+              Se(n, C, i, s && s?.GetActiveTabUniqueID()),
             ),
             (C = null));
         const A = k.map((e, n) =>

@@ -12277,7 +12277,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new _._("ScrollSnap").Debug;
       function _(_, _ = "smooth", _, _) {
         const _ = (_ ?? 30) / 100,
           _ = _.useRef(void 0),
@@ -12357,6 +12359,10 @@
                 return !1;
             }
             return (
+              _(
+                `ScrollOnGamepadDirection top:${_.current} left:${_.current}, behavior:${_ ?? "auto"} `,
+                _.current,
+              ),
               _ && "smooth" != _
                 ? (_.current.scrollTo({
                     top: _.current,
@@ -35505,23 +35511,46 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { padded: _, gap: _, children: _, bLazyRenderChildren: _ } = _,
-          _ = (0, _.jsx)(_._, {
-            "flow-children": "row",
-            style: {
-              gap: _ ? _ + "px" : void 0,
-            },
-            className: (0, _._)(
-              {
-                SaleSectionCarouselPadding: _,
-              },
-              "ScrollSnapCarousel",
-              "SaleSectionCarousel",
-              _.ScrollSnapCarousel,
-              _.className,
-            ),
+        const {
+            padded: _,
+            gap: _,
             children: _,
+            bLazyRenderChildren: _,
+            startingSlide: _,
+          } = _,
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _.current?.scrollIntoView({
+            inline: "start",
+            block: "nearest",
+            behavior: "auto",
           });
+        }, [_]);
+        const _ = (0, _.jsxs)(_._, {
+          "flow-children": "row",
+          style: {
+            gap: _ ? _ + "px" : void 0,
+          },
+          className: (0, _._)(
+            {
+              SaleSectionCarouselPadding: _,
+            },
+            "ScrollSnapCarousel",
+            "SaleSectionCarousel",
+            _.ScrollSnapCarousel,
+            _.className,
+          ),
+          children: [
+            _ &&
+              _.Children.map(_, (_, _) =>
+                (0, _.jsx)("div", {
+                  ref: _ == _ ? _ : void 0,
+                  children: _,
+                }),
+              ),
+            !_ && _,
+          ],
+        });
         return _
           ? (0, _.jsx)(_._, {
               horizontal: !1,
@@ -39466,7 +39495,8 @@
           ),
           _ = (0, _._)();
         _.useEffect(() => {
-          (_.bAutoFocusPageContent || _.state?.bDirectNav) &&
+          !_.bManuallyFocusPageContent &&
+            _.state?.bDirectNav &&
             _.current?.TakeFocus();
         }, [_.state]);
         const { refForPageList: _, refForPage: _ } = (function () {

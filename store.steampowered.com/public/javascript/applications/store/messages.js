@@ -1814,12 +1814,12 @@
           queryKey: ["useGamePlaytimeInfo", e],
           queryFn: async () =>
             (async function (e, t) {
-              const s = a.w.Init(o.G9);
+              const s = a.w.Init(o.G9h);
               s.Body().set_steamid(l.iA.steamid),
                 s.Body().set_appids_filter([e]),
                 s.Body().set_include_played_free_games(!0),
                 s.Body().set_language(l.TS.LANGUAGE);
-              const n = await o.xt.GetOwnedGames(t, s);
+              const n = await o.xtC.GetOwnedGames(t, s);
               if (n.Body().games().length > 0)
                 return n.Body().games()[0].toObject();
               return {};

@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Теми зі скаргами",
     "moderation_already_owner_disputed": "Уже оспорено",
     "moderationstats_alltypes": "Усі типи тем",
-    "moderation_alternateforumtool": "Альтернативний інструмент",
+    "forumsubjectlist_subjectreportsummary": "Нерозглянуті — %1$s, оспорені — %2$s",
     "empty_no_trailing_comma": ""
 }

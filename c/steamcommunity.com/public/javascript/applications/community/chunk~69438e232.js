@@ -1182,13 +1182,18 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        Sticky: "_3dlxz6KBJpvmA-qsVAzxs8",
         GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
         GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        ChecklistMode: "_3blAkLFfSQrJjGklUKOP7e",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        checklistBox: "_1idkU7IA8dDPOIbsU-dRkJ",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+        StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
+        StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
     chunkid: (module) => {
@@ -16075,7 +16080,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, imageType: _, bPreferAssetWithoutOverride: _ } = _,
+        const {
+            _: _,
+            imageType: _,
+            bPreferAssetWithoutOverride: _,
+            strAdditionalClassName: _,
+          } = _,
           { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(_, _, _);
         if ("library" === _ || "vertical" == _)
           return (0, _.jsx)(_._, {
@@ -16087,12 +16097,12 @@
         else _ = _().HeaderCapsuleImageContainer;
         if (void 0 === _ || !_)
           return (0, _.jsx)("div", {
-            className: (0, _._)(_, "CapsuleImageCtn"),
+            className: (0, _._)(_, "CapsuleImageCtn", _),
           });
         if (null == _) return null;
         let _ = (0, _._)(_, "header" === _);
         return (0, _.jsx)("div", {
-          className: (0, _._)(_, "CapsuleImageCtn"),
+          className: (0, _._)(_, "CapsuleImageCtn", _),
           children: (0, _.jsx)(_._, {
             lazyLoad: !0,
             srcs: _,
@@ -20646,7 +20656,7 @@
                   className: _().StoreSaleDiscountBox,
                   children: `-${_}%`,
                 }),
-              Boolean(_) &&
+              Boolean(_ && _) &&
                 (0, _.jsx)("div", {
                   className: _().DiscountIconCtn,
                   children: (0, _.jsx)(_.XH_, {}),
@@ -24861,105 +24871,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "100% 0px 100% 0px",
-        _ = "tab",
-        _ = "SaleSection_",
-        _ = 940;
-      function _() {
-        return window.innerWidth >= _;
-      }
-      function _() {
-        const [_, _] = (0, _.useState)(window.innerWidth);
-        return (
-          (0, _.useEffect)(() => {
-            const _ = () => {
-              _(window.innerWidth);
-            };
-            return (
-              window.addEventListener("resize", _),
-              () => window.removeEventListener("resize", _)
-            );
-          }, []),
-          _
-        );
-      }
-      function _(_ = _) {
-        return _() >= _;
-      }
-      function _(_) {
-        const _ = _(_),
-          _ = (0, _._)(_);
-        return _
-          ? {
-              nMaxCapsulesPerRow: _.nMaxItemsPerRow,
-              bScreenIsWide: _,
-            }
-          : {
-              nMaxCapsulesPerRow: Math.min(
-                Math.max(
-                  Math.floor(window.innerWidth / _.nItemMinimumWidth),
-                  1,
-                ),
-                _.nMaxItemsPerRow,
-              ),
-              bScreenIsWide: _,
-            };
-      }
-      function _(_) {
-        const _ = (0, _._)(_);
-        return _()
-          ? _.nMaxItemsPerRow
-          : Math.min(
-              Math.max(Math.floor(window.innerWidth / _.nItemMinimumWidth), 1),
-              _.nMaxItemsPerRow,
-            );
-      }
-      function _(_) {
-        switch (_) {
-          case _._:
-            return _.mv5;
-          case _._:
-            return _.KH9;
-          case _._:
-            return _.hmR;
-          case _._:
-            return _.R2g;
-          default:
-            return;
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case _.mv5:
-            return _._;
-          case _.KH9:
-            return _._;
-          case _.hmR:
-            return _._;
-          default:
-            return;
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -25433,7 +25344,7 @@
             : _.has(_);
         }
         BIsGameOwned(_) {
-          return this.m_setOwnedApps.has(Number(_));
+          return !!_ && this.m_setOwnedApps.has(Number(_));
         }
         BIsStoreItemOwned(_) {
           switch (_.GetStoreItemType()) {
@@ -28784,23 +28695,49 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { padded: _, gap: _, children: _, bLazyRenderChildren: _ } = _,
-          _ = (0, _.jsx)(_._, {
-            "flow-children": "row",
-            style: {
-              gap: _ ? _ + "px" : void 0,
-            },
-            className: (0, _._)(
-              {
-                SaleSectionCarouselPadding: _,
-              },
-              "ScrollSnapCarousel",
-              "SaleSectionCarousel",
-              _.ScrollSnapCarousel,
-              _.className,
-            ),
+        const {
+            padded: _,
+            gap: _,
             children: _,
-          });
+            bLazyRenderChildren: _,
+            startingSlide: _,
+          } = _,
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          var _;
+          null === (_ = _.current) ||
+            void 0 === _ ||
+            _.scrollIntoView({
+              inline: "start",
+              block: "nearest",
+              behavior: "auto",
+            });
+        }, [_]);
+        const _ = (0, _.jsxs)(_._, {
+          "flow-children": "row",
+          style: {
+            gap: _ ? _ + "px" : void 0,
+          },
+          className: (0, _._)(
+            {
+              SaleSectionCarouselPadding: _,
+            },
+            "ScrollSnapCarousel",
+            "SaleSectionCarousel",
+            _.ScrollSnapCarousel,
+            _.className,
+          ),
+          children: [
+            _ &&
+              _.Children.map(_, (_, _) =>
+                (0, _.jsx)("div", {
+                  ref: _ == _ ? _ : void 0,
+                  children: _,
+                }),
+              ),
+            !_ && _,
+          ],
+        });
         return _
           ? (0, _.jsx)(_._, {
               horizontal: !1,
@@ -33533,8 +33470,8 @@
               _,
               _().personaNameAndStatusLabel,
               (0, _._)(_),
-              _ && _().compactView,
-              _ && _().NoMask,
+              _ ? _().compactView : void 0,
+              _ ? _().NoMask : void 0,
             ];
           _ || _.has_public_party_beacon
             ? (_ = (0, _.jsx)(_, {
@@ -33563,7 +33500,7 @@
               (_ = (0, _.jsx)(_._, {
                 persona: _,
               }));
-          let _ = null;
+          let _ = (0, _.jsx)(_.Fragment, {});
           _
             ? (_ = (0, _.jsx)("div", {
                 className: "ContextMenuButton",
@@ -33587,10 +33524,16 @@
             onContextMenu: _,
             children: [
               (0, _.jsxs)("div", {
-                className: (0, _._)(_().statusAndName, _ && _().threeLines),
+                className: (0, _._)(
+                  _().statusAndName,
+                  _ ? _().threeLines : void 0,
+                ),
                 children: [
                   (0, _.jsxs)("div", {
-                    className: (0, _._)(_().playerName, _ && _().EllipsisName),
+                    className: (0, _._)(
+                      _().playerName,
+                      _ ? _().EllipsisName : void 0,
+                    ),
                     children: [
                       _ || " ",
                       _ &&
@@ -33635,7 +33578,7 @@
                       (0, _.jsxs)("div", {
                         className: (0, _._)(
                           _().gameName,
-                          _ && _().threeLines,
+                          _ ? _().threeLines : void 0,
                           _().richPresenceLabel,
                           "no-drag",
                         ),
@@ -42728,7 +42671,9 @@
             });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       let _ = null;
       function _(_) {
         var _;
@@ -42737,11 +42682,12 @@
           (0, _._)(_.args, "src") ||
           (null === (_ = _.children) || void 0 === _ ? void 0 : _.toString());
         _ || (_ = (0, _._)(_.args));
-        const _ = (0, _._)(
-          _,
-          _.language,
-          null == _ ? void 0 : _.rtime32_last_modified,
-        );
+        const _ = "inline" === (0, _._)(_.args, "style"),
+          _ = (0, _._)(
+            _,
+            _.language,
+            null == _ ? void 0 : _.rtime32_last_modified,
+          );
         if (null == _) return null;
         if ("string" == typeof _) {
           let _;
@@ -42751,6 +42697,9 @@
             (null == _ ? void 0 : _.BHasTag("auto_rssfeed")) && (_ = !1),
             _
               ? (0, _.jsx)(_._, {
+                  className: (0, _._)({
+                    [_().Image_Inline]: _,
+                  }),
                   src: _,
                   crossOrigin: _ ? "anonymous" : void 0,
                 })
@@ -42758,6 +42707,9 @@
                 (0, _.jsx)(_, {
                   strURL: _,
                   children: (0, _.jsx)(_._, {
+                    className: (0, _._)({
+                      [_().Image_Inline]: _,
+                    }),
                     src: _,
                     crossOrigin: _ ? "anonymous" : void 0,
                   }),
@@ -50013,6 +49965,8 @@
             classNameTabContent: _,
             preferredFocus: _,
             bVerticalTabs: _,
+            bSticky: _,
+            bChecklistMode: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -50052,6 +50006,8 @@
                 className: (0, _._)(
                   _().GraphicalAssetsTabs,
                   _ && _().GraphicalAssetsTabsVertical,
+                  _ && _().ChecklistMode,
+                  _ && _().Sticky,
                   _,
                 ),
                 navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
@@ -50084,16 +50040,24 @@
           : _;
       }
       function _(_) {
-        const { statusType: _ = "success", children: _ } = _;
+        const { statusType: _ = "success", bShowStatusBox: _, children: _ } = _;
         let _ = "";
         return (
           "success" === _
             ? (_ = _().StatusSuccess)
             : "danger" === _
               ? (_ = _().StatusDanger)
-              : "caution" === _ && (_ = _().StatusCaution),
+              : "caution" === _
+                ? (_ = _().StatusCaution)
+                : "info" === _
+                  ? (_ = _().StatusInfo)
+                  : "incomplete" === _ && (_ = _().StatusIncomplete),
           (0, _.jsx)("div", {
-            className: (0, _._)(_().GraphicalAssetStatus, _),
+            className: (0, _._)(
+              _().GraphicalAssetStatus,
+              _,
+              _ ? _().checklistBox : "",
+            ),
             children: _,
           })
         );

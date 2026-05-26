@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Gerapporteerde onderwerpen",
     "moderation_already_owner_disputed": "Al bezwaar aangetekend",
     "moderationstats_alltypes": "Alle onderwerptypen",
-    "moderation_alternateforumtool": "Alternatieve tool",
+    "forumsubjectlist_subjectreportsummary": "%1$s niet opgelost, voor %1$s bezwaar aangetekend",
     "empty_no_trailing_comma": ""
 }

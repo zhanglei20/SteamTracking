@@ -1891,6 +1891,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1943,6 +1944,8 @@
         null,
       );
       const _ = 99999;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = [
         _._,
         _.zeJ,
@@ -2104,18 +2107,24 @@
       function _(_) {
         return _(_) ? _?.smart_section_type : void 0;
       }
-      function _(_, _) {
-        if (!_.BIsNextFest() || _(_.section_type) || _(_)) return !1;
+      function _(_) {
         return (
-          ((_.jsondata.sale_ml_recommender_delay_hours &&
+          (_.jsondata.sale_ml_recommender_delay_hours &&
             (_.startTime ?? 0) +
               _.jsondata.sale_ml_recommender_delay_hours * _._.PerHour -
               new Date().getTime() / 1e3) ??
-            0) > 0
+          0
         );
       }
-      function _(_, _) {
-        return !!_.use_random_order || !!_(_, _);
+      function _(_, _, _) {
+        return (
+          !!_.BIsNextFest() &&
+          !!_(_.section_type) &&
+          (_ == _._.Random || _(_) > 0)
+        );
+      }
+      function _(_, _, _) {
+        return !!_.use_random_order || !!_(_, _, _);
       }
       !(function (_) {
         (_[(_.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -3016,7 +3025,7 @@
         GetSaleSections() {
           return this.jsondata.sale_sections ?? [];
         }
-        GenerateDynamicSaleSections(_, _, _, _) {
+        GenerateDynamicSaleSections(_, _, _, _, _) {
           const _ = [],
             _ = {
               section_type: "unselected_empty",
@@ -3049,6 +3058,12 @@
                 section_type: "footer_default_social_share",
                 unique_id: _++,
               }),
+            _ &&
+              _.push({
+                ..._,
+                section_type: "nextfest_header",
+                unique_id: _++,
+              }),
             _
           );
         }
@@ -3058,17 +3073,23 @@
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
-            _ = this.GetEventType() == _.ajI;
-          return _ || _ || _ || _
+            _ = this.GetEventType() == _.ajI,
+            _ = _._.is_valve_email,
+            _ =
+              this.BIsNextFest(_) &&
+              !!this.startTime &&
+              (this.startTime > new Date("2026-03-01").getTime() / 1e3 || _);
+          return _ || _ || _ || _ || _
             ? [
+                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1),
               ]
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
           if (_ > _) {
-            return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
+            return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
           }
@@ -3340,12 +3361,16 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest() {
-          const _ = this.jsondata.sale_vanity_id;
+        BIsNextFest(_ = !0) {
+          const _ = "nextfest",
+            _ = this.jsondata.sale_vanity_id?.toLowerCase(),
+            _ = new _._(this.clanSteamID).GetAccountID();
           return (
-            new _._(this.clanSteamID).GetAccountID() == _._ &&
-            _ &&
-            _.toLowerCase().startsWith("nextfest")
+            !(!_ || _ != _._) &&
+            (_
+              ? __webpack_require__.startsWith(_)
+              : __webpack_require__.startsWith(_) &&
+                !__webpack_require__.includes("prev"))
           );
         }
         GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
@@ -3532,6 +3557,111 @@
         let _ = "" + _;
         const _ = _._.GetELanguageFallback(_);
         return _ != _ && (_ += "_" + _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "100% 0px 100% 0px",
+        _ = "tab",
+        _ = "SaleSection_",
+        _ = "exploration";
+      var _;
+      !(function (_) {
+        (_.Random = "r"), (_.Personalized = "p");
+      })(_ || (_ = {}));
+      const _ = 940;
+      function _() {
+        return window.innerWidth >= _;
+      }
+      function _() {
+        const [_, _] = (0, _.useState)(window.innerWidth);
+        return (
+          (0, _.useEffect)(() => {
+            const _ = () => {
+              _(window.innerWidth);
+            };
+            return (
+              window.addEventListener("resize", _),
+              () => window.removeEventListener("resize", _)
+            );
+          }, []),
+          _
+        );
+      }
+      function _(_ = _) {
+        return _() >= _;
+      }
+      function _(_) {
+        const _ = _(_),
+          _ = (0, _._)(_);
+        return _
+          ? {
+              nMaxCapsulesPerRow: _.nMaxItemsPerRow,
+              bScreenIsWide: _,
+            }
+          : {
+              nMaxCapsulesPerRow: Math.min(
+                Math.max(
+                  Math.floor(window.innerWidth / _.nItemMinimumWidth),
+                  1,
+                ),
+                _.nMaxItemsPerRow,
+              ),
+              bScreenIsWide: _,
+            };
+      }
+      function _(_) {
+        const _ = (0, _._)(_);
+        return _()
+          ? _.nMaxItemsPerRow
+          : Math.min(
+              Math.max(Math.floor(window.innerWidth / _.nItemMinimumWidth), 1),
+              _.nMaxItemsPerRow,
+            );
+      }
+      function _(_) {
+        switch (_) {
+          case _._:
+            return _.mv5;
+          case _._:
+            return _.KH9;
+          case _._:
+            return _.hmR;
+          case _._:
+            return _.R2g;
+          default:
+            return;
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _.mv5:
+            return _._;
+          case _.KH9:
+            return _._;
+          case _.hmR:
+            return _._;
+          default:
+            return;
+        }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

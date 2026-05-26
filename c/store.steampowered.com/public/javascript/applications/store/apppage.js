@@ -138,6 +138,37 @@
     },
     chunkid: (module) => {
       module.exports = {
+        PreventScroll: "ycpazsHLq6lCBFmWPCLCZ",
+        ModalDialog: "_1mPKxUDAZ01x-i7612JIsL",
+        ModalDialogContent: "_79d7mzfWutbJb1DCbh1Du",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
+        SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
+        XButton: "RC4JznqJb34yCm04FKk0I",
+        SimpleModalContentCtn: "_2yRV5HfgoGdJZqs9Fl049T",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        DialogContent: "_16pXKCOoRIbFwtZHgqjB8K",
+        SearchForm: "WKTuaTjd0YaeJa49cFaSk",
+        AddCategoryBtnCtn: "_2iyGkBsDUSp94uk2MlLz1W",
+        Visible: "_2MUWoUxUqeFYQh8spy5bpH",
+        SearchInput: "_3MO9bYl8-oPkXVO9nu_FXh",
+        CategorySelectorCtn: "dGWKt0BhpSa4efl8jRzwR",
+        ListHeader: "Y4Cx2WnIKvFCo_RLEflGd",
+        DialogCategoryCtn: "_1lH7WZP40yb1SOyXWbcjOH",
+        Suggested: "_1ma6_Ey6CqTCDCkq0tqrH4",
+        MaxCategoriesMessage: "_223Zevm4T9O8RGEnzI5jHT",
+        Buttons: "_2_jN6aSsudj0rOSKRlnwP9",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         wishlistCategoryMaxDisplayChars: "26",
         CategoriesCtn: "_1Ua4366mxFvXUSFTfIlJ-i",
         CategoryListHeader: "_3Ra2jK42XFbrJlIPtsmMfC",
@@ -470,6 +501,7 @@
       module.exports = {
         CategoriesMenuOption: "_3xnfcAL3FecCAajGoP5Dby",
         Label: "_1u14-I56YvpTValKAwSmtn",
+        HeaderCtn: "_3IDBSmGNBOIarHdK2hVHf9",
       };
     },
     chunkid: (module) => {
@@ -1452,70 +1484,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = (function () {
-            const [_, _] = (0, _.useState)(location.search);
-            return (
-              (0, _.useEffect)(() => {
-                function _(_) {
-                  "urlchange" === _.data && _(location.search);
-                }
-                return (
-                  window.addEventListener("message", _),
-                  () => {
-                    window.removeEventListener("message", _);
-                  }
-                );
-              }, []),
-              _
-            );
-          })(),
-          _ = (0, _.useMemo)(() => {
-            const _ = new URLSearchParams(
-              __webpack_require__.substring("chunkid"),
-            ).get(_);
-            return null != _
-              ? null != _
-                ? "boolean" == typeof _
-                  ? _.constructor("false" !== _)
-                  : _.constructor(_)
-                : _
-              : _;
-          }, [_, _, _]),
-          [_, _] = (0, _.useState)(_),
-          _ = _.useCallback(
-            (_, _ = !1) => {
-              const _ = new URLSearchParams(
-                __webpack_require__.substring("chunkid"),
-              );
-              if (null != _) {
-                if (_.get(_) == _) return;
-                _.set(_, String(_));
-              } else {
-                if (!_.has(_)) return;
-                _.delete(_);
-              }
-              _
-                ? history.replaceState(
-                    history.state,
-                    "",
-                    decodeURIComponent(`${window.location.pathname}?${_}`),
-                  )
-                : history.pushState(
-                    history.state,
-                    "",
-                    decodeURIComponent(`${window.location.pathname}?${_}`),
-                  ),
-                (0, _.startTransition)(() => {
-                  _(_), window.postMessage("urlchange");
-                });
-            },
-            [_, _],
-          );
-        return [_, _];
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1549,7 +1520,7 @@
       function _(_) {
         const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
           _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
-          _ = window.screen.width > 500 ? _._ : _._;
+          _ = _._;
         return (0, _.jsxs)("div", {
           className: _.Container,
           children: [
@@ -1583,6 +1554,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 500;
       function _(_) {
@@ -1592,6 +1564,7 @@
             fnEventShowModal: _,
             elPostRowElement: _,
             bViewAllShowInfiniteScroll: _,
+            nSummaryMaxLength: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)();
@@ -1610,57 +1583,62 @@
                 children: [
                   !!_ &&
                     _.length > 0 &&
-                    (0, _.jsxs)("div", {
+                    (0, _.jsx)("div", {
                       className: _.Container,
-                      children: [
-                        (0, _.jsxs)("h2", {
-                          children: [
-                            _._.Localize("#EventBrowse_RecentEvents"),
-                            !_._.IN_GAMEPADUI &&
-                              !!_ &&
-                              (0, _.jsx)(_.Fragment, {
-                                children:
-                                  _ && _
-                                    ? (0, _.jsx)(_._, {
-                                        className: _.SectionButton,
-                                        onClick: () => _(_[0]),
-                                        children: _._.Localize(
-                                          "#EventBrowse_MoreEventsBtn",
-                                        ),
-                                      })
-                                    : (0, _.jsx)(_._, {
-                                        eventModel: _[0],
-                                        route: _._.k_eViewWebSiteHub,
-                                        className: _.SectionButton,
-                                        children: _._.Localize(
-                                          "#EventBrowse_MoreEventsBtn",
-                                        ),
-                                      }),
-                              }),
-                          ],
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.EventsSummariesCtn,
-                          children: __webpack_require__.slice(0, _).map((_) => {
-                            const _ = _
-                                ? (_) => {
-                                    _(_),
-                                      _.stopPropagation(),
-                                      _.preventDefault();
-                                  }
-                                : void 0,
-                              _ = 1 === _.length && _ > 500 ? _._ : _._;
-                            return (0, _.jsx)(
-                              _,
-                              {
-                                event: _,
-                                onClick: _,
-                              },
-                              _.GID,
-                            );
+                      children: (0, _.jsxs)(_._, {
+                        children: [
+                          (0, _.jsxs)("h2", {
+                            children: [
+                              _._.Localize("#EventBrowse_RecentEvents"),
+                              !_._.IN_GAMEPADUI &&
+                                !!_ &&
+                                (0, _.jsx)(_.Fragment, {
+                                  children:
+                                    _ && _
+                                      ? (0, _.jsx)(_._, {
+                                          className: _.SectionButton,
+                                          onClick: () => _(_[0]),
+                                          children: _._.Localize(
+                                            "#EventBrowse_MoreEventsBtn",
+                                          ),
+                                        })
+                                      : (0, _.jsx)(_._, {
+                                          eventModel: _[0],
+                                          route: _._.k_eViewWebSiteHub,
+                                          className: _.SectionButton,
+                                          children: _._.Localize(
+                                            "#EventBrowse_MoreEventsBtn",
+                                          ),
+                                        }),
+                                }),
+                            ],
                           }),
-                        }),
-                      ],
+                          (0, _.jsx)("div", {
+                            className: _.EventsSummariesCtn,
+                            children: __webpack_require__
+                              .slice(0, _)
+                              .map((_) => {
+                                const _ = _
+                                    ? (_) => {
+                                        _(_),
+                                          _.stopPropagation(),
+                                          _.preventDefault();
+                                      }
+                                    : void 0,
+                                  _ = _._;
+                                return (0, _.jsx)(
+                                  _,
+                                  {
+                                    event: _,
+                                    onClick: _,
+                                    nSummaryMaxLength: _,
+                                  },
+                                  _.GID,
+                                );
+                              }),
+                          }),
+                        ],
+                      }),
                     }),
                   _,
                 ],
@@ -1709,8 +1687,8 @@
               [_, _] = (0, _.useState)(null),
               [_, _] = (0, _.useState)(null),
               _ = (0, _._)(),
-              [_] = _("emgid", void 0),
-              [_] = _("announce_gid", void 0);
+              [_] = (0, _._)("emgid", void 0),
+              [_] = (0, _._)("announce_gid", void 0);
             return (
               (0, _.useEffect)(() => {
                 const _ = (0, _._)("EventWebRowEmbed");
@@ -2101,7 +2079,6 @@
         }
       };
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8304,6 +8281,136 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = Object.assign(
+        function (_) {
+          const { children: _, className: _, ..._ } = _;
+          return (0, _.jsx)(_.Root, {
+            ..._,
+            children: (0, _.jsx)(_.Content, {
+              className: _,
+              children: _,
+            }),
+          });
+        },
+        {
+          Root: function (_) {
+            const {
+                onClose: _,
+                className: _,
+                navID: _,
+                children: _,
+                allowScrollBehind: _,
+                ..._
+              } = _,
+              [_, _] = _.useState(!1),
+              _ = _.useCallback((_) => {
+                _ &&
+                  (_.showModal(),
+                  _.ownerDocument.defaultView &&
+                    _(
+                      _.ownerDocument.body.scrollHeight >
+                        _.ownerDocument.defaultView.innerHeight,
+                    ));
+              }, []),
+              _ = _.useCallback(
+                (_) => {
+                  _.target == _.currentTarget && _("backdropclick");
+                },
+                [_],
+              );
+            return (0, _.jsx)(_, {
+              navID: _ ?? "ModalDialog",
+              onClose: _,
+              children: (0, _.jsx)("dialog", {
+                ref: _,
+                className: _()(_.ModalDialog, !_ && _ && _.PreventScroll, _),
+                onClose: () => _("onclose"),
+                onClick: _,
+                ..._,
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    " ",
+                    (0, _.jsx)(_._, {
+                      children: _,
+                    }),
+                  ],
+                }),
+              }),
+            });
+          },
+          Content: function (_) {
+            const { className: _, children: _ } = _;
+            return (0, _.jsx)("div", {
+              className: _()(_.ModalDialogContent, _),
+              onClick: (_) => _.stopPropagation(),
+              children: _,
+            });
+          },
+        },
+      );
+      function _(_) {
+        const { navID: _, onClose: _, children: _ } = _,
+          _ = _.useCallback(() => __webpack_require__("cancelbutton"), [_]),
+          _ = _.useRef(void 0);
+        (0, _._)(_, !0, !0);
+        return (0, _._)()
+          ? (0, _.jsx)(_._, {
+              navID: _ ?? "ModalDialog",
+              onCancelButton: _,
+              modal: !0,
+              navTreeRef: _,
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          onClose: _,
+          className: _,
+          navID: _,
+          children: _,
+          strTitle: _,
+          ..._
+        } = _;
+        return (0, _.jsx)(_, {
+          onClose: _,
+          navID: _ ?? "SimpleModalDialog",
+          ..._,
+          children: (0, _.jsxs)("div", {
+            className: _()(_, _().SimpleModalDialog),
+            children: [
+              " ",
+              (0, _.jsxs)(_._, {
+                className: _().SimpleModalDialogHeader,
+                children: [
+                  _ &&
+                    (0, _.jsx)("h2", {
+                      className: _().SimpleModalDialogTitle,
+                      children: _,
+                    }),
+                  (0, _.jsx)("button", {
+                    onClick: (_) => (_("xclick"), _.preventDefault(), !1),
+                    className: _().XButton,
+                    children: (0, _.jsx)(_.tmm, {}),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _().SimpleModalContentCtn,
+                children: _,
+              }),
+            ],
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = "0",
         _ = "wishlistcategories";
       function _(_, _, _) {
@@ -8362,6 +8469,70 @@
           })(_, _, _),
         );
       }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => {
+            const _ = _._.Init(_._);
+            __webpack_require__.Body().set_appid(_.appid),
+              __webpack_require__.Body().set_category_name(_.categoryName),
+              __webpack_require__.Body().set_categoryid(_.categoryID);
+            const _ = await _._.AddWishlistItemCategory(_, _);
+            let _ = {
+              eresult: _.GetEResult(),
+            };
+            return (
+              _.BSuccess() &&
+                (_.category = {
+                  _: _.Body().categoryid(),
+                  name: _.Body().name(),
+                  cItems: _.Body().item_count(),
+                  bNotificationOptIn: !!_.Body().notification_opt_in(),
+                }),
+              _
+            );
+          },
+          onSuccess(_, _) {
+            __webpack_require__.invalidateQueries({
+              queryKey: ["WishlistSortedFiltered", _],
+              exact: !1,
+            }),
+              __webpack_require__.invalidateQueries({
+                queryKey: [_, _],
+                exact: !1,
+              }),
+              __webpack_require__.invalidateQueries({
+                queryKey: _(_, _.appid),
+              });
+          },
+        });
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => {
+            const _ = _._.Init(_._);
+            __webpack_require__.Body().set_appid(_.appid),
+              __webpack_require__.Body().set_categoryid(_.categoryID);
+            return (await _._.RemoveWishlistItemCategory(_, _)).GetEResult();
+          },
+          onSuccess(_, _) {
+            __webpack_require__.invalidateQueries({
+              queryKey: ["WishlistSortedFiltered", _],
+              exact: !1,
+            }),
+              __webpack_require__.invalidateQueries({
+                queryKey: [_, _],
+                exact: !1,
+              }),
+              __webpack_require__.invalidateQueries({
+                queryKey: _(_, _.appid),
+              });
+          },
+        });
+      }
       const _ = "wishlist_recent_categories";
       function _(_) {
         return {
@@ -8369,6 +8540,24 @@
           queryFn: async () => (await _.GetObject(_)) ?? [],
           staleTime: 36e5,
         };
+      }
+      function _() {
+        const _ = (0, _._)();
+        return (0, _._)(_(_));
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => {
+            const _ = (await _.ensureQueryData(_(_))) ?? [],
+              _ = Array.from(new Set([..._.rgCategoryIDs, _])).slice(0, 3);
+            return await _.StoreObject(_, _), _;
+          },
+          onSuccess: async (_) => {
+            _.setQueryData([_], _);
+          },
+        });
       }
       function _(_) {
         return (
@@ -8383,6 +8572,36 @@
             ? _.cItems - _.cItems
             : _.name.localeCompare(_.name),
         );
+      }
+      function _(_) {
+        const { data: _ } = _(_);
+        return _.useMemo(() => {
+          let _ = [
+            {
+              _: _,
+              name: (0, _._)("#Wishlist_Categories_Suggested_Birthday"),
+              cItems: 0,
+              bNotificationOptIn: !1,
+            },
+            {
+              _: _,
+              name: (0, _._)("#Wishlist_Categories_Suggested_Recommended"),
+              cItems: 0,
+              bNotificationOptIn: !1,
+            },
+            {
+              _: _,
+              name: (0, _._)("#Wishlist_Categories_Suggested_Discount"),
+              cItems: 0,
+              bNotificationOptIn: !1,
+            },
+          ];
+          for (const _ of _ ?? [])
+            _ = _.filter(
+              (_) => _.name.toLocaleLowerCase() !== _.name.toLocaleLowerCase(),
+            );
+          return _;
+        }, [_]);
       }
       const _ = parseInt(_.wishlistCategoryMaxDisplayChars);
       var _;
@@ -8425,8 +8644,9 @@
             _.current?.Node().BFocusWithin() &&
               _.current.Node().ForceMeasureFocusRing();
           }, [_]),
-          (0, _.jsxs)("div", {
+          (0, _.jsxs)(_._, {
             className: _()(_.CategoriesCtn, _),
+            scrollIntoViewWhenChildFocused: !0,
             children: [
               null !== _ &&
                 (0, _.jsx)("span", {
@@ -8483,20 +8703,18 @@
           } = _,
           _ = _ === _.k_ECategoryButtonAction_Remove,
           _ = _ === _.k_ECategoryButtonAction_Filter,
-          _ = _.name.length > _;
+          _ = _.name.length >= _;
         let _ = _;
         _ && !_
           ? (_ = (0, _._)("#Wishlist_Gamepad_Filter_Category"))
-          : _ !== _.k_ECategoryButtonAction_Add ||
-            _ ||
-            (_ = (0, _._)("#Wishlist_Gamepad_Add_Category"));
+          : _ !== _.k_ECategoryButtonAction_Add || _
+            ? _ !== _.k_ECategoryButtonAction_Remove ||
+              _ ||
+              (_ = (0, _._)("#Wishlist_Gamepad_Removecategory"))
+            : (_ = (0, _._)("#Wishlist_Gamepad_Add_Category"));
         const _ = {
-            onSecondaryActionDescription: _
-              ? (_ ?? (0, _._)("#Wishlist_Gamepad_Removecategory"))
-              : void 0,
-            onSecondaryButton: () => _ && _ && _(),
-            onOKActionDescription: _ ? null : _,
-            onOKButton: () => !_ && _ && _(),
+            onOKActionDescription: _,
+            onOKButton: () => _ && _(),
             focusClassName: _.Focused,
           },
           _ = !!_;
@@ -8536,6 +8754,21 @@
           })
         );
       }
+      function _(_) {
+        const { categoryCount: _, onClick: _, bSimulateHover: _ } = _;
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _._)("#Wishlist_Controls_Categories_Manage"),
+          children: (0, _.jsx)(_._, {
+            className: _()(
+              _.CategoryBtn,
+              _.CategorySettingsBtn,
+              _ && _.Focused,
+            ),
+            onClick: _,
+            children: _ > 0 ? (0, _.jsx)(_.vmx, {}) : (0, _.jsx)(_.FWt, {}),
+          }),
+        });
+      }
       !(function (_) {
         (_[(_.k_ECategoryButtonAction_None = 0)] =
           "k_ECategoryButtonAction_None"),
@@ -8546,11 +8779,255 @@
           (_[(_.k_ECategoryButtonAction_Remove = 3)] =
             "k_ECategoryButtonAction_Remove");
       })(_ || (_ = {}));
+      const _ = 16;
+      function _(_) {
+        const { appid: _, steamid: _, onClose: _, filteredCategoryIDs: _ } = _,
+          [_, _] = _.useState([]),
+          _ = _(),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ =
+            _ && _.name && _.visible
+              ? (0, _._)("#Wishlist_Controls_Categories_Manageitem", _?.name)
+              : (0, _._)("#Wishlist_Controls_Categories_Manage"),
+          _ = _.useCallback(() => {
+            _.mutate({
+              rgCategoryIDs: _.reverse(),
+            }),
+              _();
+          }, [_, _, _]);
+        return (0, _.jsx)(_, {
+          onClose: _,
+          strTitle: _,
+          navID: "AddWishlistCategoryDialog",
+          className: _.DialogContent,
+          children: (0, _.jsx)(_._, {
+            "flow-children": "column",
+            children: (0, _.jsx)(_, {
+              appid: _,
+              steamid: _,
+              onCategoryAdd: (_) => _([..._, _].slice(-3)),
+              onCategoryRemove: (_) => {
+                _ && _.has(_) && _();
+              },
+              onClose: _,
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            appid: _,
+            steamid: _,
+            onCategoryAdd: _,
+            onCategoryRemove: _,
+            onClose: _,
+          } = _,
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(void 0),
+          _ = _(_);
+        _.useEffect(() => {
+          !_ && _.data && _(_.data);
+        }, [_.data, _]);
+        const _ = _(_),
+          _ = async (_, _) => {
+            if (!_ || 0 === _) return;
+            const _ = await _.mutateAsync({
+              appid: _,
+              categoryName: _,
+              categoryID: _ ?? _,
+            });
+            _.eresult === _._ &&
+              _.category?._ &&
+              (_(_.category._),
+              _ &&
+                !_.some((_) => _._ === _.category._) &&
+                _((_) => [..._, _.category]));
+          },
+          _ = _(_),
+          _ = (_) => {
+            _.stopPropagation(),
+              _.preventDefault(),
+              _ && 0 !== _.length && (_(""), _(_));
+          },
+          { data: _ } = _(_, _),
+          _ = _(_),
+          _ = _.length > 0,
+          _ = (function (_, _, _, _) {
+            const { data: _ } = _(_, _),
+              { data: _ } = _(),
+              _ = (_, _) => {
+                const _ = new Set(_);
+                return [
+                  ..._.map((_) => _.find((_) => _._ === _)).filter((_) => !!_),
+                  ..._.filter((_) => !__webpack_require__.has(_._)),
+                ];
+              };
+            return _.useMemo(() => {
+              if (!_) return [];
+              const _ = new Set(_?.map((_) => _._) ?? []),
+                _ = _.filter((_) => !_.has(_._));
+              if (!_ || 0 === _.length)
+                return _(
+                  __webpack_require__.filter((_) => _.cItems > 0),
+                  _ ?? [],
+                );
+              const _ = _.toLocaleLowerCase();
+              let _ = !1,
+                _ = __webpack_require__.filter((_) => {
+                  let _ = _.name.toLocaleLowerCase();
+                  return _ || (_ = _ === _), _.indexOf(_) > -1;
+                });
+              return (
+                (_ = _(_, [])),
+                _ ||
+                  _.unshift({
+                    _: _,
+                    name: _,
+                    cItems: 0,
+                    bNotificationOptIn: !1,
+                  }),
+                _
+              );
+            }, [_, _, _, _]);
+          })(_ ?? [], _, _, _);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              className: _.CategorySelectorCtn,
+              "flow-children": "column",
+              children: [
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.ListHeader,
+                      children: (0, _._)(
+                        "#Wishlist_Controls_Categories_Header_Current",
+                      ),
+                    }),
+                    (0, _.jsx)(_, {
+                      rgCategories: _ ?? [],
+                      header: null,
+                      eAction: _.k_ECategoryButtonAction_Remove,
+                      onClick: (_, _) => {
+                        return (
+                          (_ = _),
+                          void (
+                            0 !== _ &&
+                            (_.mutate({
+                              appid: _,
+                              categoryID: _,
+                            }),
+                            _(_))
+                          )
+                        );
+                        var _;
+                      },
+                      bMultiline: !0,
+                      bShowEmptyLabel: !0,
+                      containerClassName: _.DialogCategoryCtn,
+                    }),
+                    !!_ && _.length >= _ && (0, _.jsx)(_, {}),
+                  ],
+                }),
+                (0, _.jsxs)("form", {
+                  className: _.SearchForm,
+                  onSubmit: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      autoFocus: !0,
+                      value: _,
+                      className: _.SearchInput,
+                      type: "search",
+                      placeholder: (0, _._)(
+                        "#Wishlist_Categories_Dialog_Search",
+                      ),
+                      onChange: (_) => _(_.target.value),
+                      onOKActionDescription:
+                        _.length > 0
+                          ? (0, _._)("#Wishlist_Categories_Dialog_Add")
+                          : null,
+                      maxLength: 500,
+                    }),
+                    !_._.IN_GAMEPADUI &&
+                      (0, _.jsx)("div", {
+                        className: _()(
+                          _.AddCategoryBtnCtn,
+                          _.length > 0 && _.Visible,
+                        ),
+                        children: (0, _.jsx)(_._, {
+                          onClick: _,
+                          children: (0, _._)("#Wishlist_Categories_Dialog_Add"),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.ListHeader,
+                      children: (0, _._)(
+                        "#Wishlist_Controls_Categories_Header_Other",
+                      ),
+                    }),
+                    (0, _.jsx)(_, {
+                      rgCategories: _,
+                      onClick: _,
+                      header: null,
+                      bMultiline: !0,
+                      bShowEmptyLabel: !0,
+                      containerClassName: _.DialogCategoryCtn,
+                      eAction: _.k_ECategoryButtonAction_Add,
+                    }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ListHeader,
+                        children: (0, _._)(
+                          "#Wishlist_Controls_Categories_Header_Suggested",
+                        ),
+                      }),
+                      (0, _.jsx)(_, {
+                        rgCategories: _,
+                        onClick: _,
+                        header: null,
+                        bMultiline: !0,
+                        containerClassName: _()(
+                          _.DialogCategoryCtn,
+                          _.Suggested,
+                        ),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              className: _.Buttons,
+              children: (0, _.jsx)(_._, {
+                onClick: _,
+                children: _._.Localize("#Button_Done"),
+              }),
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsx)("div", {
+          className: _.MaxCategoriesMessage,
+          children: (0, _._)("#Wishlist_Categories_Max_Per_App_Reached", _),
+        });
+      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _ } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(void 0),
+          [_, _] = _.useState(!1),
+          [_, _] = (0, _._)(),
           { data: _ } = (function (_, _) {
             const _ = (0, _._)(),
               _ = (0, _._)(),
@@ -8561,127 +9038,59 @@
             });
           })(_),
           { data: _ } = _(_),
-          _ = (function (_) {
-            const { data: _ } = _(_);
-            return _.useMemo(() => {
-              let _ = [
-                {
-                  _: _,
-                  name: (0, _._)("#Wishlist_Categories_Suggested_Birthday"),
-                  cItems: 0,
-                  bNotificationOptIn: !1,
-                },
-                {
-                  _: _,
-                  name: (0, _._)("#Wishlist_Categories_Suggested_Recommended"),
-                  cItems: 0,
-                  bNotificationOptIn: !1,
-                },
-                {
-                  _: _,
-                  name: (0, _._)("#Wishlist_Categories_Suggested_Discount"),
-                  cItems: 0,
-                  bNotificationOptIn: !1,
-                },
-              ];
-              for (const _ of _ ?? [])
-                _ = _.filter(
-                  (_) =>
-                    _.name.toLocaleLowerCase() !== _.name.toLocaleLowerCase(),
-                );
-              return _;
-            }, [_]);
-          })(_),
-          { data: _ } = (function () {
-            const _ = (0, _._)();
-            return (0, _._)(_(_));
-          })(),
+          _ = _(_),
+          { data: _ } = _(),
           { data: _ } = _(_, _),
-          _ = (function (_) {
-            const _ = (0, _._)(),
-              _ = (0, _._)();
-            return (0, _._)({
-              mutationFn: async (_) => {
-                const _ = _._.Init(_._);
-                __webpack_require__.Body().set_appid(_.appid),
-                  __webpack_require__.Body().set_category_name(_.categoryName),
-                  __webpack_require__.Body().set_categoryid(_.categoryID);
-                const _ = await _._.AddWishlistItemCategory(_, _);
-                let _ = {
-                  eresult: _.GetEResult(),
-                };
-                return (
-                  _.BSuccess() &&
-                    (_.category = {
-                      _: _.Body().categoryid(),
-                      name: _.Body().name(),
-                      cItems: _.Body().item_count(),
-                      bNotificationOptIn: !!_.Body().notification_opt_in(),
-                    }),
-                  _
+          _ = _(_),
+          _ = _(_),
+          _ = _(),
+          _ = async (_, _) => {
+            if (
+              _.find((_) => (_ && _ !== _ ? _._ === _ : _.name === _)).bSelected
+            )
+              _.mutate({
+                appid: _,
+                categoryID: _,
+              }),
+                _(
+                  _.map((_) =>
+                    _._ === _
+                      ? {
+                          ..._,
+                          bSelected: !1,
+                          cItems: Math.max(0, _.cItems - 1),
+                        }
+                      : _,
+                  ),
                 );
-              },
-              onSuccess(_, _) {
-                __webpack_require__.invalidateQueries({
-                  queryKey: ["WishlistSortedFiltered", _],
-                  exact: !1,
-                }),
-                  __webpack_require__.invalidateQueries({
-                    queryKey: [_, _],
-                    exact: !1,
-                  }),
-                  __webpack_require__.invalidateQueries({
-                    queryKey: _(_, _.appid),
-                  });
-              },
-            });
-          })(_),
-          _ = (function (_) {
-            const _ = (0, _._)(),
-              _ = (0, _._)();
-            return (0, _._)({
-              mutationFn: async (_) => {
-                const _ = _._.Init(_._);
-                return (
-                  __webpack_require__.Body().set_appid(_.appid),
-                  __webpack_require__.Body().set_categoryid(_.categoryID),
-                  (await _._.RemoveWishlistItemCategory(_, _)).GetEResult()
-                );
-              },
-              onSuccess(_, _) {
-                __webpack_require__.invalidateQueries({
-                  queryKey: ["WishlistSortedFiltered", _],
-                  exact: !1,
-                }),
-                  __webpack_require__.invalidateQueries({
-                    queryKey: [_, _],
-                    exact: !1,
-                  }),
-                  __webpack_require__.invalidateQueries({
-                    queryKey: _(_, _.appid),
-                  });
-              },
-            });
-          })(_),
-          _ = (function () {
-            const _ = (0, _._)(),
-              _ = (0, _._)();
-            return (0, _._)({
-              mutationFn: async (_) => {
-                const _ = (await _.ensureQueryData(_(_))) ?? [],
-                  _ = Array.from(new Set([..._.rgCategoryIDs, _])).slice(0, 3);
-                return await _.StoreObject(_, _), _;
-              },
-              onSuccess: async (_) => {
-                _.setQueryData([_], _);
-              },
-            });
-          })();
-        return (
-          _.useEffect(() => {
+            else if (_) {
+              const _ = await _.mutateAsync({
+                appid: _,
+                categoryName: _,
+                categoryID: _ ?? _,
+              });
+              _.eresult === _._ &&
+                _.category?._ &&
+                (_((_) =>
+                  _.map((_) =>
+                    _.name === _
+                      ? {
+                          ..._.category,
+                          bSelected: !0,
+                        }
+                      : _,
+                  ),
+                ),
+                _.mutate({
+                  rgCategoryIDs: [_.category._],
+                }));
+            }
+          };
+        if (
+          (_.useEffect(() => {
             if (_ || !_ || !_ || !_ || !_ || !_) return;
             let _ = new Set(_.map((_) => _._) ?? []),
-              _ = _.slice(0, 6).map((_) => ({
+              _ = _.map((_) => ({
                 ..._,
                 bSelected: !0,
               }));
@@ -8693,65 +9102,61 @@
             _.length < 6 && (_ = [..._, ...(_?.slice(0, 6 - _.length) ?? [])]),
               _(_);
           }, [_, _, _, _, _, _]),
-          _ && 0 !== _.length
-            ? (0, _.jsxs)("div", {
-                className: _.CategoriesMenuOption,
+          !_ || 0 === _.length)
+        )
+          return null;
+        const _ = _.filter((_) => !_.bSelected),
+          _ = _.filter((_) => _.bSelected);
+        return (0, _.jsxs)("div", {
+          className: _.CategoriesMenuOption,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.HeaderCtn,
+              ..._,
+              onClick: () => _(!0),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Label,
+                  children: (0, _._)("#Wishlist_QuickAdd_Header"),
+                }),
+                (0, _.jsx)(_, {
+                  categoryCount: _?.length ?? 0,
+                  bSimulateHover: _,
+                  onClick: () => {},
+                }),
+              ],
+            }),
+            _.length > 0 &&
+              (0, _.jsx)(_, {
+                rgCategories: _,
+                header: null,
+                onClick: _,
+                bMultiline: !0,
+              }),
+            _.length > 0 &&
+              (0, _.jsxs)("div", {
                 children: [
                   (0, _.jsx)("div", {
-                    className: _.Label,
-                    children: (0, _._)("#Wishlist_QuickAdd_Header"),
+                    children: "Recent & Suggested",
                   }),
                   (0, _.jsx)(_, {
-                    rgCategories: _ ?? [],
+                    rgCategories: _,
                     header: null,
-                    onClick: async (_, _) => {
-                      if (
-                        _.find((_) => (_ && _ !== _ ? _._ === _ : _.name === _))
-                          .bSelected
-                      )
-                        _.mutate({
-                          appid: _,
-                          categoryID: _,
-                        }),
-                          _(
-                            _.map((_) =>
-                              _._ === _
-                                ? {
-                                    ..._,
-                                    bSelected: !1,
-                                  }
-                                : _,
-                            ),
-                          );
-                      else if (_) {
-                        const _ = await _.mutateAsync({
-                          appid: _,
-                          categoryName: _,
-                          categoryID: _ ?? _,
-                        });
-                        _.eresult === _._ &&
-                          _.category?._ &&
-                          (_((_) =>
-                            _.map((_) =>
-                              _.name === _
-                                ? {
-                                    ..._.category,
-                                    bSelected: !0,
-                                  }
-                                : _,
-                            ),
-                          ),
-                          _.mutate({
-                            rgCategoryIDs: [_.category._],
-                          }));
-                      }
-                    },
+                    onClick: _,
                     bMultiline: !0,
                   }),
                 ],
-              })
-            : null
-        );
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                appid: _,
+                steamid: _,
+                onClose: () => {
+                  _(!1), _(void 0);
+                },
+              }),
+          ],
+        });
       }
       const _ = _.lazy(() =>
           __webpack_require__
@@ -8760,6 +9165,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -8869,11 +9275,6 @@
                   (0, _.jsx)(_, {
                     appID: _,
                   }),
-                "broadcast-embed": (_) =>
-                  (0, _.jsx)(_, {
-                    ..._,
-                    appid: _.appid,
-                  }),
                 "demo-and-quick-pitch": () =>
                   (0, _.jsx)(_._, {
                     children: (0, _.jsx)(_, {
@@ -8918,14 +9319,6 @@
                 "game-notice-vr-supported": () =>
                   (0, _.jsx)(_, {
                     type: _.EPurchaseNoticeType_VRSupported,
-                  }),
-                "store-sidebar-controller-support-info": (_) =>
-                  (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                "store-sidebar-accessibility-info": (_) =>
-                  (0, _.jsx)(_, {
-                    features: _,
                   }),
                 "season-pass-display": (_) =>
                   (0, _.jsx)(_, {
@@ -8973,6 +9366,19 @@
               omitFocusNavTreeBridge: !0,
               config: {
                 "review-award": () => (0, _.jsx)(_, {}),
+                "broadcast-embed": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                    appid: _.appid,
+                  }),
+                "store-sidebar-accessibility-info": (_) =>
+                  (0, _.jsx)(_, {
+                    features: _,
+                  }),
+                "store-sidebar-controller-support-info": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
               },
             }),
           ],

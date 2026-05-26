@@ -3048,7 +3048,6 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 					const rgContext = g_ActiveUser.GetContext( appid, nId );
 					let name = rgContext.name;
 										rgOptions.push( new Object( {
-						'class': 'popup_item context_name',
 						'value': 'context_option_' + appid + '_' + nId,
 						'text': name
 					} ) );

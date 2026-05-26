@@ -24,26 +24,31 @@
         o = t(18654),
         u = t.n(o);
       function d(e) {
-        const { id: a, imageType: t, bPreferAssetWithoutOverride: o } = e,
-          { storeItemAsset: d, storeItemDefaultInfo: p } = (0, s.q)(a, t, o);
+        const {
+            id: a,
+            imageType: t,
+            bPreferAssetWithoutOverride: o,
+            strAdditionalClassName: d,
+          } = e,
+          { storeItemAsset: p, storeItemDefaultInfo: m } = (0, s.q)(a, t, o);
         if ("library" === t || "vertical" == t)
           return (0, r.jsx)(i.G, { id: a, bPreferAssetWithoutOverride: o });
-        let m = "";
-        if ("main" === t) m = u().MainCapsuleImageContainer;
-        else m = u().HeaderCapsuleImageContainer;
-        if (void 0 === d || !p)
+        let _ = "";
+        if ("main" === t) _ = u().MainCapsuleImageContainer;
+        else _ = u().HeaderCapsuleImageContainer;
+        if (void 0 === p || !m)
           return (0, r.jsx)("div", {
-            className: (0, l.A)(m, "CapsuleImageCtn"),
+            className: (0, l.A)(_, "CapsuleImageCtn", d),
           });
-        if (null == d) return null;
-        let _ = (0, n.N)(d, "header" === t);
+        if (null == p) return null;
+        let A = (0, n.N)(p, "header" === t);
         return (0, r.jsx)("div", {
-          className: (0, l.A)(m, "CapsuleImageCtn"),
+          className: (0, l.A)(_, "CapsuleImageCtn", d),
           children: (0, r.jsx)(c.o, {
             lazyLoad: !0,
-            srcs: _,
+            srcs: A,
             className: (0, l.A)(u().CapsuleImage),
-            alt: p.name,
+            alt: m.name,
           }),
         });
       }

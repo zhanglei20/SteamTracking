@@ -614,13 +614,18 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        Sticky: "_3dlxz6KBJpvmA-qsVAzxs8",
         GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
         GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        ChecklistMode: "_3blAkLFfSQrJjGklUKOP7e",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        checklistBox: "_1idkU7IA8dDPOIbsU-dRkJ",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+        StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
+        StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
     35720: (e, t, n) => {
@@ -1282,7 +1287,7 @@
         Fq: () => l,
         G1: () => k,
         G7: () => E,
-        Gx: () => P,
+        Gx: () => Z,
         HQ: () => q,
         JW: () => M,
         Jb: () => T,
@@ -1293,7 +1298,7 @@
         SJ: () => b,
         T_: () => B,
         WS: () => L,
-        X0: () => Z,
+        X0: () => P,
         a4: () => i,
         aQ: () => f,
         aU: () => V,
@@ -1357,8 +1362,8 @@
         V = 34,
         E = 35,
         F = 36,
-        Z = 37,
-        P = 38,
+        P = 37,
+        Z = 38,
         G = 39,
         O = 40,
         W = 41,
@@ -1372,7 +1377,14 @@
     },
     99116: (e, t, n) => {
       "use strict";
-      n.d(t, { TW: () => l, $z: () => c, _l: () => u, R2: () => d });
+      n.d(t, {
+        cc: () => m,
+        TW: () => l,
+        KC: () => d,
+        $z: () => c,
+        _l: () => u,
+        R2: () => p,
+      });
       var r = n(3049);
       const a = {};
       (a.arabic = () => n.e(6696).then(n.t.bind(n, 6696, 19))),
@@ -1453,7 +1465,29 @@
         const d = { month: n ? "long" : "short", day: "numeric" };
         return i && (d.weekday = "long"), l.toLocaleDateString((0, r.J)(), d);
       }
-      function d(e) {
+      function d(e, t, n) {
+        const a = new Date(1e3 * e),
+          o = (0, r.J)(),
+          i = {
+            ...(t?.bForce24HourClock ||
+            (function (e) {
+              const t = new Date();
+              return (
+                t.setHours(15),
+                t.toLocaleTimeString(e, { hour: "numeric" }) ==
+                  t.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })
+              );
+            })(o[0])
+              ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
+              : { hour: "numeric", minute: "2-digit" }),
+            ...n,
+          };
+        return a.toLocaleTimeString(o, i);
+      }
+      function m(e) {
+        return e.toLocaleDateString((0, r.J)(), { weekday: "long" });
+      }
+      function p(e) {
         const t = Math.floor(e / s.Kp.PerYear),
           n = Math.floor(e / s.Kp.PerMonth),
           r = Math.floor((e % s.Kp.PerMonth) / s.Kp.PerDay),
@@ -1548,7 +1582,7 @@
         a = n(96171),
         o = n(3740),
         i = n(24267),
-        s = n(40807),
+        s = n(55509),
         l = n(12424),
         c = n(81204),
         u = n(94636),
@@ -1650,8 +1684,8 @@
         V = n(61855),
         E = n(35380),
         F = n(75279),
-        Z = n(6144),
-        P = n(84933),
+        P = n(6144),
+        Z = n(84933),
         G = n(64769),
         O = n.n(G);
       const W = 5500,
@@ -1818,8 +1852,8 @@
       function ne(e) {
         const { rgTrailerAndImages: t } = e,
           n = (0, d.useRef)(0),
-          a = (0, P.CH)(),
-          [o] = d.useState(new Z.LU()),
+          a = (0, Z.CH)(),
+          [o] = d.useState(new P.LU()),
           i = (0, d.useCallback)(
             (e = !1) => {
               if ((e && (n.current = 0), t?.length > 0)) {
@@ -1988,7 +2022,7 @@
             classNames: { appearActive: O().Opening, enterDone: O().Open },
             children: (e) =>
               (0, r.jsx)("div", {
-                ref: (0, P.XB)(e, a),
+                ref: (0, Z.XB)(e, a),
                 className: de().HoverContentTransition,
                 tabIndex: -1,
                 children: n,
@@ -2579,9 +2613,9 @@
         if (a[e]) return a[e]();
       });
     },
-    40807: (e, t, n) => {
+    55509: (e, t, n) => {
       "use strict";
-      n.d(t, { j: () => J });
+      n.d(t, { j: () => z });
       var r = n(7850),
         a = n(96171),
         o = n(39777),
@@ -2595,45 +2629,35 @@
         p = n(35720),
         C = n(22837),
         _ = n(64753),
-        g = n(45699),
-        h = n(44375);
-      function f(e) {
-        const { children: t, ...n } = e;
-        return (0, r.jsx)(g.fu, {
-          className: h.GreenButton,
-          type: "button",
-          ...n,
-          children: (0, r.jsx)("span", { children: t }),
-        });
-      }
-      var S = n(58918),
-        w = n(99838),
-        b = n(90626),
-        x = n(31258),
-        v = n(35380),
-        y = n(96873),
-        L = n(84811),
-        j = n(88997),
-        B = n(61859),
-        A = n(60155),
-        H = n(58579),
-        k = n.n(H);
-      const D = {
+        g = n(55388),
+        h = n(58918),
+        f = n(99838),
+        S = n(90626),
+        w = n(31258),
+        b = n(35380),
+        x = n(96873),
+        v = n(84811),
+        y = n(88997),
+        L = n(61859),
+        j = n(60155),
+        B = n(58579),
+        A = n.n(B);
+      const H = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
         bDisablePopTop: !0,
       };
-      function I(e) {
+      function k(e) {
         const { setRemoteClientID: t, rgSessions: n } = e,
-          a = (0, b.useCallback)(
+          a = (0, S.useCallback)(
             (e) => {
               n?.length &&
-                (0, j.lX)(
-                  (0, r.jsx)(T, { sessions: n, setRemoteDownloadClientId: t }),
+                (0, y.lX)(
+                  (0, r.jsx)(D, { sessions: n, setRemoteDownloadClientId: t }),
                   e,
-                  D,
+                  H,
                 );
             },
             [t, n],
@@ -2641,24 +2665,24 @@
         return n?.length
           ? (0, r.jsx)("button", {
               onClick: a,
-              className: k().ClientSelectDropdown,
-              children: (0, r.jsx)(R, {}),
+              className: A().ClientSelectDropdown,
+              children: (0, r.jsx)(T, {}),
             })
           : null;
       }
-      function T({ sessions: e, setRemoteDownloadClientId: t }) {
+      function D({ sessions: e, setRemoteDownloadClientId: t }) {
         return (0, r.jsx)("ul", {
-          className: k().ClientListDropdownMenu,
+          className: A().ClientListDropdownMenu,
           children: e.map((e) =>
             (0, r.jsx)(
-              A.kt,
+              j.kt,
               {
                 onSelected: () => {
                   t(e.client_instanceid);
                 },
-                children: (0, B.we)(
+                children: (0, L.we)(
                   "#GamesList_Client_Indicator",
-                  N(e.device_type) ?? "",
+                  I(e.device_type) ?? "",
                   e.machine_name,
                 ),
               },
@@ -2667,21 +2691,21 @@
           ),
         });
       }
-      function N(e) {
+      function I(e) {
         switch (e) {
           case C.g0U:
-            return (0, B.we)("#Library_DeviceType_PC");
+            return (0, L.we)("#Library_DeviceType_PC");
           case C.LS$:
-            return (0, B.we)("#Library_DeviceType_SteamDeck");
+            return (0, L.we)("#Library_DeviceType_SteamDeck");
           case C.bOm:
-            return (0, B.we)("#Library_DeviceType_SteamMachine");
+            return (0, L.we)("#Library_DeviceType_SteamMachine");
           case C.jYC:
-            return (0, B.we)("#Library_DeviceType_SteamFrame");
+            return (0, L.we)("#Library_DeviceType_SteamFrame");
           default:
             return;
         }
       }
-      function R(e) {
+      function T(e) {
         return (0, r.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 13 8",
@@ -2693,29 +2717,29 @@
           }),
         });
       }
-      var M = n(51706),
-        V = n(12155),
-        E = n(22797),
-        F = n(30470),
-        Z = n(39285),
-        P = n.n(Z);
-      function G(e) {
+      var N = n(51706),
+        R = n(12155),
+        M = n(22797),
+        V = n(30470),
+        E = n(39285),
+        F = n.n(E);
+      function P(e) {
         const { appid: t } = e,
-          n = (0, v.$5)(t),
+          n = (0, b.$5)(t),
           { data: a } = (0, o.J$)(n),
           [i, s, l] = (0, _.uD)(!1),
           { mutateAsync: c } = (0, p.S)({ appid: t }),
-          [u, d] = (0, b.useState)(!1),
-          m = (0, S.S6)(t);
+          [u, d] = (0, S.useState)(!1),
+          m = (0, h.S6)(t);
         return a
           ? m
             ? null
             : (0, r.jsxs)(r.Fragment, {
                 children: [
-                  (0, r.jsxs)(f, {
+                  (0, r.jsxs)(g.sP, {
                     onClick: async () => {
                       try {
-                        d(!0), await c(), (0, w.WZ)(), d(!1), s();
+                        d(!0), await c(), (0, f.WZ)(), d(!1), s();
                       } catch (e) {
                         d(!1),
                           console.error(
@@ -2725,25 +2749,25 @@
                       }
                     },
                     children: [
-                      u && (0, r.jsx)(E.t, { size: "small" }),
-                      (0, B.we)("#Sale_AddToLibrary_NoPlus"),
+                      u && (0, r.jsx)(M.t, { size: "small" }),
+                      (0, L.we)("#Sale_AddToLibrary_NoPlus"),
                     ],
                   }),
-                  (0, r.jsx)(L.tH, {
-                    children: (0, r.jsx)(M.EN, {
+                  (0, r.jsx)(v.tH, {
+                    children: (0, r.jsx)(N.EN, {
                       active: i,
-                      children: (0, r.jsx)(M.o0, {
-                        strTitle: (0, B.we)("#Sale_AddedToLibrary"),
-                        strDescription: (0, B.PP)(
+                      children: (0, r.jsx)(N.o0, {
+                        strTitle: (0, L.we)("#Sale_AddedToLibrary"),
+                        strDescription: (0, L.PP)(
                           "#Sale_AddToLibrary_DialogDesc",
                           (0, r.jsx)("span", {
-                            className: P().GameName,
+                            className: F().GameName,
                             children: a.name || "",
                           }),
                         ),
                         closeModal: l,
                         bAlertDialog: !0,
-                        children: (0, r.jsx)(O, { id: n }),
+                        children: (0, r.jsx)(Z, { id: n }),
                       }),
                     }),
                   }),
@@ -2751,21 +2775,21 @@
               })
           : null;
       }
-      function O(e) {
+      function Z(e) {
         const { id: t } = e,
-          n = (0, y.Vc)(),
-          [a, i] = (0, b.useState)(0),
-          [s, l] = (0, b.useState)(!1),
+          n = (0, x.Vc)(),
+          [a, i] = (0, S.useState)(0),
+          [s, l] = (0, S.useState)(!1),
           { data: c } = (0, o.qI)(t);
         if (!t || !("appid" in t)) return null;
-        if (F.TS.IN_CLIENT || !c) return null;
+        if (V.TS.IN_CLIENT || !c) return null;
         const u = n.data?.sessions?.filter((e) => {
           switch (e.device_type) {
             default:
             case C.g0U:
               {
                 if (!e.os_type) return !1;
-                const t = (0, x.gU)(e.os_type);
+                const t = (0, w.gU)(e.os_type);
                 if (c.windows && t.includes("Windows")) return !0;
                 if (c.mac && t.includes("Mac")) return !0;
                 if (c.steamos_linux && t.includes("Linux")) return !0;
@@ -2779,19 +2803,19 @@
         if (u && u?.length > 0) {
           const e = u[a];
           return (0, r.jsx)("div", {
-            className: P().RemoteOptions,
+            className: F().RemoteOptions,
             children: Boolean(s)
-              ? (0, r.jsx)(U, { session: e })
+              ? (0, r.jsx)(O, { session: e })
               : (0, r.jsxs)(r.Fragment, {
                   children: [
-                    (0, r.jsx)(W, {
+                    (0, r.jsx)(G, {
                       rgAcceptableSession: u,
                       session: e,
                       setSessionIndex: i,
                     }),
                     (0, r.jsx)("div", {
-                      className: P().ActionRow,
-                      children: (0, r.jsx)(z, {
+                      className: F().ActionRow,
+                      children: (0, r.jsx)(W, {
                         appid: t.appid,
                         session: e,
                         setRemoteDownloadRequested: l,
@@ -2803,21 +2827,21 @@
         }
         return null;
       }
-      function W(e) {
+      function G(e) {
         const { rgAcceptableSession: t, session: n, setSessionIndex: a } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)("div", {
-              children: (0, B.we)("#Sale_AddToLibrary_RemoteDownload"),
+              children: (0, L.we)("#Sale_AddToLibrary_RemoteDownload"),
             }),
             (0, r.jsxs)("div", {
-              className: P().ClientSelector,
+              className: F().ClientSelector,
               children: [
                 (0, r.jsx)("span", {
-                  className: P().ClientName,
+                  className: F().ClientName,
                   children: n.machine_name,
                 }),
-                (0, r.jsx)(I, {
+                (0, r.jsx)(k, {
                   rgSessions: t,
                   setRemoteClientID: (e) => {
                     const n = t.findIndex((t) => t.client_instanceid === e);
@@ -2829,47 +2853,47 @@
           ],
         });
       }
-      function U(e) {
+      function O(e) {
         const { session: t } = e;
         return (0, r.jsxs)("div", {
-          className: P().DownloadStartedCtn,
+          className: F().DownloadStartedCtn,
           children: [
-            (0, B.we)("#Sale_AddToLibrary_DownloadStarted"),
+            (0, L.we)("#Sale_AddToLibrary_DownloadStarted"),
             (0, r.jsx)("br", {}),
             (0, r.jsx)("a", {
-              href: `${F.TS.COMMUNITY_BASE_URL}my/games?tab=all&clientid=${t.client_instanceid}`,
-              children: (0, B.we)("#Sale_AddToLibrary_SeeDownloadProgress"),
+              href: `${V.TS.COMMUNITY_BASE_URL}my/games?tab=all&clientid=${t.client_instanceid}`,
+              children: (0, L.we)("#Sale_AddToLibrary_SeeDownloadProgress"),
             }),
           ],
         });
       }
-      function z(e) {
+      function W(e) {
         const { appid: t, session: n, setRemoteDownloadRequested: a } = e,
-          o = (0, y.we)(t, n.client_instanceid);
+          o = (0, x.we)(t, n.client_instanceid);
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsxs)(f, {
+            (0, r.jsxs)(g.sP, {
               onClick: () => {
                 o.mutateAsync(), a(!0);
               },
               children: [
-                (0, r.jsx)(V.f5X, {}),
-                (0, B.we)("#Button_StartDownload"),
+                (0, r.jsx)(R.f5X, {}),
+                (0, L.we)("#Button_StartDownload"),
               ],
             }),
             (0, r.jsx)("div", {
-              className: P().LearnMoreCtn,
+              className: F().LearnMoreCtn,
               children: (0, r.jsx)("a", {
                 href: "https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409",
-                className: P().InlineLink,
-                children: (0, B.we)("#Button_Learn"),
+                className: F().InlineLink,
+                children: (0, L.we)("#Button_Learn"),
               }),
             }),
           ],
         });
       }
-      var K = n(55672);
-      function J(e) {
+      var U = n(55672);
+      function z(e) {
         const { id: t, className: n } = e,
           { data: d } = (0, o.J$)(t);
         if (!d) return null;
@@ -2880,16 +2904,16 @@
           C = p.length > 0,
           _ = C || d.type === a.uE.ue,
           g = _
-            ? K.Z.Localize("#Sale_InstallDemo_ttip", d.name || "")
+            ? U.Z.Localize("#Sale_InstallDemo_ttip", d.name || "")
             : C
-              ? K.Z.Localize("#Sale_CannotInstallDemo_ttip", d.name || "")
-              : K.Z.Localize("#Loading");
+              ? U.Z.Localize("#Sale_CannotInstallDemo_ttip", d.name || "")
+              : U.Z.Localize("#Loading");
         if ((0, c.$W)()) {
           if (_ && C) {
             const e = d.type === a.uE.ue ? d.appid : p[0];
             return (0, r.jsx)("div", {
               className: n,
-              children: (0, r.jsx)(G, { appid: e }),
+              children: (0, r.jsx)(P, { appid: e }),
             });
           }
           return null;
@@ -2905,8 +2929,8 @@
               },
               className: (0, l.A)(n, m().DemoButton, !_ && m().DisabledButton),
               children: _
-                ? K.Z.Localize("#Sale_InstallDemo")
-                : K.Z.Localize("#Sale_DemoNotFound"),
+                ? U.Z.Localize("#Sale_InstallDemo")
+                : U.Z.Localize("#Sale_DemoNotFound"),
             });
       }
     },
@@ -3234,7 +3258,7 @@
                   className: u().StoreSaleDiscountBox,
                   children: `-${n}%`,
                 }),
-              Boolean(f) &&
+              Boolean(n && f) &&
                 (0, r.jsx)("div", {
                   className: u().DiscountIconCtn,
                   children: (0, r.jsx)(d.XH_, {}),
@@ -3402,6 +3426,40 @@
           l = (0, s.w)(),
           c = (0, o.tB)((0, r._)(e, t));
         return { snr: (0, i.L3)(n), strStoreURL: (0, i.It)(c, n, l) };
+      }
+    },
+    55388: (e, t, n) => {
+      "use strict";
+      n.d(t, { Oh: () => l, n9: () => s, sP: () => i });
+      var r = n(7850),
+        a = n(45699),
+        o = n(44375);
+      function i(e) {
+        const { children: t, ...n } = e;
+        return (0, r.jsx)(a.fu, {
+          className: o.GreenButton,
+          type: "button",
+          ...n,
+          children: (0, r.jsx)("span", { children: t }),
+        });
+      }
+      function s(e) {
+        const { children: t, ...n } = e;
+        return (0, r.jsx)(a.fu, {
+          className: o.BlueButton,
+          type: "button",
+          ...n,
+          children: (0, r.jsx)("span", { children: t }),
+        });
+      }
+      function l(e) {
+        const { children: t, ...n } = e;
+        return (0, r.jsx)(a.fu, {
+          className: o.GreyButton,
+          type: "button",
+          ...n,
+          children: (0, r.jsx)("span", { children: t }),
+        });
       }
     },
     80696: (e, t, n) => {
@@ -4530,7 +4588,7 @@
       n.d(t, {
         Ez: () => R,
         Dy: () => F,
-        wW: () => Z,
+        wW: () => P,
         UN: () => V,
         Q8: () => I,
         Tz: () => T,
@@ -4865,7 +4923,7 @@
         }
         const c = (0, r.jsx)("span", {
             className: l,
-            children: (0, A.we)(Z(n)),
+            children: (0, A.we)(P(n)),
           }),
           u = (0, r.jsx)("span", {
             className: D().CompatibilityDetailRatingSummary,
@@ -4897,7 +4955,7 @@
             return "#SteamDeckVerified_Category_Unknown";
         }
       }
-      function Z(e) {
+      function P(e) {
         switch (e) {
           case s.Hi:
             return "#SteamOSCompatibility_Category_Compatible";
@@ -5689,7 +5747,7 @@
               "aria-label": (0, u.we)("#ControllerButton_LPad"),
             });
           case i.g4.RightTrackpad:
-            return (0, o.jsx)(Z, {
+            return (0, o.jsx)(P, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_RPad"),
@@ -5701,7 +5759,7 @@
               "aria-label": (0, u.we)("#ControllerButton_LPad_Click"),
             });
           case i.g4.RightTrackpadClick:
-            return (0, o.jsx)(P, {
+            return (0, o.jsx)(Z, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_RPad_Click"),
@@ -6811,7 +6869,7 @@
               ],
             });
       }
-      function Z({ bIsKnockout: e, ...t }) {
+      function P({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -6844,7 +6902,7 @@
               ],
             });
       }
-      function P({ bIsKnockout: e, ...t }) {
+      function Z({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -7408,7 +7466,7 @@
                       {
                         className: w().CompatibilityDetailsRow,
                         children: [
-                          (0, r.jsx)(Z, { displaytype: e.display_type }),
+                          (0, r.jsx)(P, { displaytype: e.display_type }),
                           (0, r.jsx)("span", {
                             children: (0, v.we)(e.loc_token),
                           }),
@@ -7428,7 +7486,7 @@
                         {
                           className: w().CompatibilityDetailsRow,
                           children: [
-                            (0, r.jsx)(Z, { displaytype: e.display_type }),
+                            (0, r.jsx)(P, { displaytype: e.display_type }),
                             (0, r.jsx)("span", {
                               children: (0, v.we)(e.loc_token),
                             }),
@@ -7578,7 +7636,7 @@
             );
         }
       }
-      function Z(e) {
+      function P(e) {
         const { displaytype: t } = e;
         switch (t) {
           case s:
@@ -7629,64 +7687,68 @@
             classNameTabContent: d,
             preferredFocus: _,
             bVerticalTabs: h,
+            bSticky: f,
+            bChecklistMode: S,
           } = e,
-          f = (0, C.zy)(),
-          S = (0, C.W6)(),
-          [w, b] = (0, a.useState)(
+          w = (0, C.zy)(),
+          b = (0, C.W6)(),
+          [x, v] = (0, a.useState)(
             () =>
               i ||
-              (!n && (0, s.f3)(f, "tab") ? ((0, s.f3)(f, "tab") ?? "") : ""),
+              (!n && (0, s.f3)(w, "tab") ? ((0, s.f3)(w, "tab") ?? "") : ""),
           );
         (0, a.useEffect)(() => {
-          if (!e.bDisableRouting && f) {
-            const e = (0, s.f3)(f, "tab");
-            e && b(e);
+          if (!e.bDisableRouting && w) {
+            const e = (0, s.f3)(w, "tab");
+            e && v(e);
           }
-        }, [f, f.key, e.bDisableRouting, b]);
-        const x = a.useCallback(
+        }, [w, w.key, e.bDisableRouting, v]);
+        const y = a.useCallback(
             (e) => {
-              b(e.key),
-                n || (0, s.Bm)(S, "tab", e.key),
+              v(e.key),
+                n || (0, s.Bm)(b, "tab", e.key),
                 e.onClick && e.onClick(e);
             },
-            [n, S],
+            [n, b],
           ),
-          v = t.filter((e) => !e.hidden);
-        if (!v.length) return null;
-        const y = v.find((e) => e.key === w) || v[0],
-          L = _ ? (i ?? v[0].key) : void 0,
-          j = (0, r.jsxs)(r.Fragment, {
+          L = t.filter((e) => !e.hidden);
+        if (!L.length) return null;
+        const j = L.find((e) => e.key === x) || L[0],
+          B = _ ? (i ?? L[0].key) : void 0,
+          A = (0, r.jsxs)(r.Fragment, {
             children: [
               (0, r.jsx)(m.Z, {
                 className: (0, o.A)(
                   c().GraphicalAssetsTabs,
                   h && c().GraphicalAssetsTabsVertical,
+                  S && c().ChecklistMode,
+                  f && c().Sticky,
                   l,
                 ),
                 navEntryPreferPosition: _ ? p.iU.PREFERRED_CHILD : p.iU.FIRST,
-                children: v.map((e, t) =>
+                children: L.map((e, t) =>
                   (0, r.jsx)(
                     g,
                     {
                       tab: e,
-                      OnTabClick: x,
+                      OnTabClick: y,
                       classNameTab: u,
-                      active: e.key === y.key,
-                      preferredFocus: L === e.key,
+                      active: e.key === j.key,
+                      preferredFocus: B === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              y && (0, r.jsx)(m.Z, { className: d, children: y.contents }),
+              j && (0, r.jsx)(m.Z, { className: d, children: j.contents }),
             ],
           });
         return h
           ? (0, r.jsx)(m.Z, {
               className: (0, o.A)(c().GraphicalAssetsTabsLayoutVertical),
-              children: j,
+              children: A,
             })
-          : j;
+          : A;
       }
       function g(e) {
         const {

@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Gemeldete Themen",
     "moderation_already_owner_disputed": "Bereits angefochten",
     "moderationstats_alltypes": "Alle Themen",
-    "moderation_alternateforumtool": "Alternatives Werkzeug",
+    "forumsubjectlist_subjectreportsummary": "%1$s offene, %1$s angefochtene",
     "empty_no_trailing_comma": ""
 }

@@ -354,27 +354,47 @@
         h = t(96236),
         m = t(11279);
       function p(e) {
-        const { padded: r, gap: t, children: n, bLazyRenderChildren: l } = e,
-          a = (0, s.jsx)(i.Z, {
-            "flow-children": "row",
-            style: { gap: t ? t + "px" : void 0 },
-            className: (0, o.A)(
-              { SaleSectionCarouselPadding: r },
-              "ScrollSnapCarousel",
-              "SaleSectionCarousel",
-              m.ScrollSnapCarousel,
-              e.className,
-            ),
+        const {
+            padded: r,
+            gap: t,
             children: n,
+            bLazyRenderChildren: l,
+            startingSlide: c,
+          } = e,
+          d = a.useRef(null);
+        a.useLayoutEffect(() => {
+          d.current?.scrollIntoView({
+            inline: "start",
+            block: "nearest",
+            behavior: "auto",
           });
+        }, [c]);
+        const u = (0, s.jsxs)(i.Z, {
+          "flow-children": "row",
+          style: { gap: t ? t + "px" : void 0 },
+          className: (0, o.A)(
+            { SaleSectionCarouselPadding: r },
+            "ScrollSnapCarousel",
+            "SaleSectionCarousel",
+            m.ScrollSnapCarousel,
+            e.className,
+          ),
+          children: [
+            c &&
+              a.Children.map(n, (e, r) =>
+                (0, s.jsx)("div", { ref: r == c ? d : void 0, children: e }),
+              ),
+            !c && n,
+          ],
+        });
         return l
           ? (0, s.jsx)(h.K, {
               horizontal: !1,
               placeholderWidth: 1,
               placeholderHeight: 1,
-              children: a,
+              children: u,
             })
-          : a;
+          : u;
       }
       var _ = t(60383),
         f = t(64238),

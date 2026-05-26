@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Rapporterade ämnen",
     "moderation_already_owner_disputed": "Redan bestridd",
     "moderationstats_alltypes": "Alla ämnestyper",
-    "moderation_alternateforumtool": "Alternativt verktyg",
+    "forumsubjectlist_subjectreportsummary": "%1$s olösta, %1$s bestridda",
     "empty_no_trailing_comma": ""
 }

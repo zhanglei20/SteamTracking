@@ -64,7 +64,7 @@
         return new (_())(
           async (_) => {
             const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
                 steamids: _,
               }),
               _ = new Map();
@@ -577,6 +577,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ({ nPercent: _, size: _ = 120, strokeWidth: _ = 20 }) => {
         const _ = (_ - _) / 2,
@@ -621,7 +622,6 @@
         });
       };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1445,6 +1445,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("DiscoveryQueueWizard").Debug,
         _ = 1,
@@ -1601,6 +1602,8 @@
           })((_) => _(_), _.length),
           _ = (_) => _._(_ + _, _) && (_._(_, -1, 1) || _),
           _ = (0, _._)(_._.STORE_BASE_URL + "explore?dq=widget"),
+          _ = !(0, _._)() && !(0, _._)() && _ === _._._,
+          _ = (0, _._)(_._.STORE_BASE_URL + "explore/next/" + _._._),
           _ = _[_] !== _,
           { nQueueStart: _, nCount: _ } = (function (_, _) {
             let _ = 0;
@@ -1657,6 +1660,17 @@
                         }),
                       ),
                     }),
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        className: _().ClassicQueueLink,
+                        children: (0, _._)(
+                          "#DiscoveryQueue_ClassicQueue_Link",
+                          (0, _.jsx)(_._, {
+                            className: _().LearnMoreLink,
+                            href: (0, _._)(_),
+                          }),
+                        ),
+                      }),
                     (0, _.jsx)(_._, {
                       className: _().ControlsCtn,
                       children: (0, _.jsx)(_._, {

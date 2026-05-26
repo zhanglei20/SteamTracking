@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Zgłoszone tematy",
     "moderation_already_owner_disputed": "Już utworzono spór",
     "moderationstats_alltypes": "Wszystkie typy tematów",
-    "moderation_alternateforumtool": "Narzędzie alternatywne",
+    "forumsubjectlist_subjectreportsummary": "Nierozstrzygnięte: %1$s. Zakwestionowane: %1$s.",
     "empty_no_trailing_comma": ""
 }

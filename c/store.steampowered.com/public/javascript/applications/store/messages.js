@@ -1890,12 +1890,12 @@
           queryKey: ["useGamePlaytimeInfo", _],
           queryFn: async () =>
             (async function (_, _) {
-              const _ = _._.Init(_._);
+              const _ = _._.Init(_.G9h);
               __webpack_require__.Body().set_steamid(_._.steamid),
                 __webpack_require__.Body().set_appids_filter([_]),
                 __webpack_require__.Body().set_include_played_free_games(!0),
                 __webpack_require__.Body().set_language(_._.LANGUAGE);
-              const _ = await _._.GetOwnedGames(_, _);
+              const _ = await _.xtC.GetOwnedGames(_, _);
               if (_.Body().games().length > 0)
                 return _.Body().games()[0].toObject();
               return {};

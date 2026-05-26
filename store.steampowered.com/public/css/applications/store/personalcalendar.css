@@ -580,6 +580,7 @@ html.responsive.touch .fiveElementEightGap {
   flex-direction: row;
   justify-content: center;
   gap: 6px;
+  font-size: clamp(0.65rem, 1.5cqi, 0.85rem);
 }
 ._1rLdYDrWbYRcVNpPlFd225
   .uUNiI-Woa-IKlMTl8sNz4
@@ -657,12 +658,6 @@ html.responsive.touch
     min-width: 100px;
     gap: 4px;
     height: unset;
-  }
-  html.responsive.responsive
-    ._1rLdYDrWbYRcVNpPlFd225
-    .uUNiI-Woa-IKlMTl8sNz4
-    ._1UXC23q3yEmSJ2eQNdi-0W {
-    font-size: 10px;
   }
   html.responsive.responsive
     ._1rLdYDrWbYRcVNpPlFd225

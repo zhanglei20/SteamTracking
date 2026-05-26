@@ -113,6 +113,13 @@
 ._2Jd3MGaOu0C9Ydswf8Q4Tn {
   padding-top: 5px;
 }
+.BasicUI ._2Jd3MGaOu0C9Ydswf8Q4Tn {
+  overflow: hidden;
+  position: relative;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
 ._2Jd3MGaOu0C9Ydswf8Q4Tn h2 {
   width: 100%;
   display: flex;
@@ -143,7 +150,8 @@
 ._1snIw0RvJduvDtqpmwtKJ9 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
-  margin-bottom: 5px;
+  flex-direction: row;
+  gap: 8px;
   margin-top: 5px;
   overflow-x: auto;
 }

@@ -5627,9 +5627,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.F5);
+          const i = h.w.Init(w.F55);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetProfileBackground(this.m_transport, i);
+          const s = await w.xtC.SetProfileBackground(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R &&
@@ -5643,9 +5643,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.C0);
+          const i = h.w.Init(w.C0y);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetAvatarFrame(this.m_transport, i);
+          const s = await w.xtC.SetAvatarFrame(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5660,9 +5660,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.UM);
+          const i = h.w.Init(w.UMm);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetAnimatedAvatar(this.m_transport, i);
+          const s = await w.xtC.SetAnimatedAvatar(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5677,9 +5677,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.A6);
+          const i = h.w.Init(w.A6_);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetMiniProfileBackground(this.m_transport, i);
+          const s = await w.xtC.SetMiniProfileBackground(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5694,9 +5694,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.BT);
+          const i = h.w.Init(w.BTZ);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetSteamDeckKeyboardSkin(this.m_transport, i);
+          const s = await w.xtC.SetSteamDeckKeyboardSkin(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5985,10 +5985,10 @@
         async LoadRecentlyPlayedApps() {
           if (((this.m_bLoadedRecentlyPlayed = !0), !this.BIsLoggedIn()))
             return [];
-          const e = h.w.Init(w.t2),
+          const e = h.w.Init(w.t24),
             t = Math.floor(Date.now() / 1e3) - 14 * me.Kp.PerDay;
           e.Body().set_min_last_played(t);
-          const i = await w.xt.ClientGetLastPlayedTimes(this.m_transport, e);
+          const i = await w.xtC.ClientGetLastPlayedTimes(this.m_transport, e);
           return i.GetEResult() == te.R
             ? ((this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
                 i.Body().toObject().games,
@@ -6025,9 +6025,9 @@
         }
         async RefreshEquippedProfileItems() {
           if (!this.BIsLoggedIn()) return;
-          const e = h.w.Init(w.aK);
+          const e = h.w.Init(w.aKf);
           e.SetBodyFields({ steamid: m.iA.steamid });
-          const t = await w.xt.GetProfileItemsEquipped(this.m_transport, e);
+          const t = await w.xtC.GetProfileItemsEquipped(this.m_transport, e);
           t.GetEResult() == te.R
             ? (this.m_equippedItems = t.Body().toObject())
             : console.error(
@@ -6036,9 +6036,9 @@
         }
         async RefreshPurchasedProfileCustomizations() {
           if (!this.BIsLoggedIn()) return;
-          const e = h.w.Init(w.ll);
+          const e = h.w.Init(w.llP);
           e.SetBodyFields({ steamid: m.iA.steamid });
-          const t = await w.xt.GetPurchasedAndUpgradedProfileCustomizations(
+          const t = await w.xtC.GetPurchasedAndUpgradedProfileCustomizations(
             this.m_transport,
             e,
           );

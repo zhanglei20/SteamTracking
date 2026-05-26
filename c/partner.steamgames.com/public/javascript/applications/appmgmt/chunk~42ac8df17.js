@@ -8596,7 +8596,7 @@
                   className: _().StoreSaleDiscountBox,
                   children: `-${_}%`,
                 }),
-              Boolean(_) &&
+              Boolean(_ && _) &&
                 (0, _.jsx)("div", {
                   className: _().DiscountIconCtn,
                   children: (0, _.jsx)(_.XH_, {}),
@@ -10134,7 +10134,7 @@
           return this.m_mapIgnoredPackages?.has(_);
         }
         BIsGameOwned(_) {
-          return this.m_setOwnedApps.has(Number(_));
+          return !!_ && this.m_setOwnedApps.has(Number(_));
         }
         BIsStoreItemOwned(_) {
           switch (_.GetStoreItemType()) {
@@ -13675,7 +13675,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         let _ = _;
         _ =
@@ -13695,29 +13696,40 @@
                 nMinimumDigitsAfterDecimal: 0,
                 ..._,
               };
-        const _ = _.bUseBinary1K ? 1024 : 1e3,
-          _ = _ * _,
-          _ = _ * _,
-          _ = _ * _;
-        let _,
-          _ = "";
-        _ > _
-          ? ((_ = _ / _), (_ = "Tera"))
-          : _ > _
-            ? ((_ = _ / _), (_ = "Giga"))
-            : _ > _
-              ? ((_ = _ / _), (_ = "Mega"))
+        const { nNum: _, strPrefix: _ } = (function (_, _) {
+            const _ = _.bUseBinary1K ? 1024 : 1e3,
+              _ = _ * _,
+              _ = _ * _,
+              _ = _ * _;
+            return _ > _
+              ? {
+                  nNum: _ / _,
+                  strPrefix: "Tera",
+                }
               : _ > _
-                ? ((_ = _ / _), (_ = "Kilo"))
-                : (_ = _);
-        const _ =
-          "#" +
-          _ +
-          (_.bValueIsInBytes ? "bytes" : "bits") +
-          (_.bValueIsRate ? "_PerSecond" : "");
-        return (0, _._)(
+                ? {
+                    nNum: _ / _,
+                    strPrefix: "Giga",
+                  }
+                : _ > _
+                  ? {
+                      nNum: _ / _,
+                      strPrefix: "Mega",
+                    }
+                  : _ > _
+                    ? {
+                        nNum: _ / _,
+                        strPrefix: "Kilo",
+                      }
+                    : {
+                        nNum: _,
+                        strPrefix: "",
+                      };
+          })(_, _),
+          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
+        return _._.Localize(
           _,
-          _.toLocaleString(_._.GetPreferredLocales(), {
+          _.toLocaleString((0, _._)(), {
             minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
             maximumFractionDigits: _.nDigitsAfterDecimal,
           }),
@@ -13730,7 +13742,7 @@
             (_ = {
               maximumFractionDigits: _,
             }),
-          _ ? _.toLocaleString(_._.GetPreferredLocales(), _) : "" + _
+          _ ? _.toLocaleString((0, _._)(), _) : "" + _
         );
       }
       function _(_) {

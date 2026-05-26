@@ -257,11 +257,6 @@
 
 
 
-.inventory_rightnav {
-	float: right;
-	margin-right: 16px;
-}
-
 .tabitems_ctn {
     position: relative;
 }
@@ -551,6 +546,7 @@ a.games_list_tab:hover {
 
 #contextselect_trigger {
 	width: 430px;
+	max-width: 100%;
 }
 
 html:not(.GamepadMode) #contextselect_trigger {
@@ -559,7 +555,7 @@ html:not(.GamepadMode) #contextselect_trigger {
 	font-size: 26px;
 	font-weight: bold;
 	line-height: 35px;
-	padding-inline: 15px;
+	padding-inline: 15px 39px;
 }
 
 body.clienthoverpage {
@@ -1139,14 +1135,23 @@ body.migrated_profile_page .inventory_links {
 	margin: 0 0 24px;
 }
 
-body.migrated_profile_page .inventory_rightnav {
+.inventory_rightnav {
+	display: flex;
+	flex-direction: row;
 	float: right;
-	margin-right: 0;
+	gap: 12px;
 }
 
-.inventory_rightnav .btn_grey_black, .inventory_rightnav .btn_medium {
-	color: white;
-	margin-left: 12px;
+html:not(.GamepadMode) #inventory_more_dselect_container .trigger {
+	background: rgba( 0, 0, 0, 0.5);
+	border-radius: 2px;
+	border: none;
+	color: #67c1f5;
+	font-size: 15px;
+	line-height: 30px;
+	min-width: 0;
+	padding: 1px 39px 1px 15px;
+	width: auto;
 }
 
 .inventory_newtradeoffer {
@@ -1223,13 +1228,6 @@ body.migrated_profile_page .inventory_rightnav {
 		max-height: 69px;
 	}
 
-	html.responsive #contextselect,
-	html.responsive #contextselect_options_contexts {
-		max-width: 88vw;
-	}
-
-
-
 	html.responsive .view_inventory_page #inventories {
 		width: auto;
 		padding: 0;
@@ -1283,13 +1281,22 @@ body.migrated_profile_page .inventory_rightnav {
 	}
 }
 
-html.responsive .responsive_inventory_fixed_ctn {
-	position: fixed;
-	left: 0;
-	right: 0;
-	background: #000000;
-	top: 62px;
+#responsive_inventory_select_dselect_container .trigger {
+	min-width: 250px;
+	width: 100%;
 }
+
+html:not(.GamepadMode) #responsive_inventory_select_dselect_container .trigger {
+	background: rgba(0, 0, 0, 0.3);
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0 28px 0 4px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 .giftcard_billing_required {
 	margin-bottom: 10px;
@@ -1303,6 +1310,10 @@ html.responsive .responsive_inventory_fixed_ctn {
 	max-width: 98%;
 }
 
+.dselect_container .dropcontainer {
+	z-index: 2000;
+}
+
 .dselect_container .dropcontainer ul {
 	background: #3a6d8b;
 	border-radius: 0 0 3px 3px;
@@ -1312,8 +1323,7 @@ html.responsive .responsive_inventory_fixed_ctn {
 	margin: 0;
 	overflow: hidden auto;
 	padding: 1px;
-	position: absolute;
-	z-index: 2000;
+	white-space: nowrap;
 }
 
 html.GamepadMode .dselect_container .dropcontainer ul {
@@ -1328,10 +1338,10 @@ html.GamepadMode .dselect_container .dropcontainer ul {
 .dselect_container .dropcontainer ul li a {
 	color: #ffffff;
 	display: block;
-	font-size: 16px;
 }
 
 html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	font-size: 16px;
 	padding: 4px;
 }
 
@@ -1343,27 +1353,18 @@ html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
 }
 
 .dselect_container .trigger {
-	background: rgba(0, 0, 0, 0.3);
-	border: none;
-	border-radius: 3px;
 	color: #ffffff;
-	cursor: pointer;
-	display: block;
-	font-size: 16px;
-	line-height: 24px;
-	max-width: 100%;
-	min-width: 250px;
 	overflow: hidden;
-	padding: 0 34px 0 4px;
 	position: relative;
 	text-align: start;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: 100%;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 200; /* thin */
+}
 
-		}
+/* `div` and `button` added here to increase specificity so as to override shared_gamepad.css. */
+html.GamepadMode div.dselect_container button.trigger {
+	padding-inline-end: 36px;
+}
 
 .dselect_container .trigger.activetrigger {
 	border-radius: 3px 3px 0 0;

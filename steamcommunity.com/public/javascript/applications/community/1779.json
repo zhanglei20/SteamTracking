@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Rapporterte saker",
     "moderation_already_owner_disputed": "Allerede bestridt",
     "moderationstats_alltypes": "Alle sakstyper",
-    "moderation_alternateforumtool": "Alternativt verktøy",
+    "forumsubjectlist_subjectreportsummary": "%1$s uløst, %1$s bestridt",
     "empty_no_trailing_comma": ""
 }

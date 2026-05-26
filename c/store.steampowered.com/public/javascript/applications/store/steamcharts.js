@@ -5845,7 +5845,7 @@
           _ &&
             _.groupID != _ &&
             (_[_.length - 1].elements.push(
-              _(_, _, _ && _?.GetActiveTabUniqueID()),
+              _(_, _, _, _ && _?.GetActiveTabUniqueID()),
             ),
             (_ = null)),
             _
@@ -5860,7 +5860,7 @@
         }),
           _ &&
             (_[_.length - 1].elements.push(
-              _(_, _, _ && _?.GetActiveTabUniqueID()),
+              _(_, _, _, _ && _?.GetActiveTabUniqueID()),
             ),
             (_ = null));
         const _ = _.map((_, _) =>

@@ -30,7 +30,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, imageType: _, bPreferAssetWithoutOverride: _ } = _,
+        const {
+            _: _,
+            imageType: _,
+            bPreferAssetWithoutOverride: _,
+            strAdditionalClassName: _,
+          } = _,
           { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(_, _, _);
         if ("library" === _ || "vertical" == _)
           return (0, _.jsx)(_._, {
@@ -42,12 +47,12 @@
         else _ = _().HeaderCapsuleImageContainer;
         if (void 0 === _ || !_)
           return (0, _.jsx)("div", {
-            className: (0, _._)(_, "CapsuleImageCtn"),
+            className: (0, _._)(_, "CapsuleImageCtn", _),
           });
         if (null == _) return null;
         let _ = (0, _._)(_, "header" === _);
         return (0, _.jsx)("div", {
-          className: (0, _._)(_, "CapsuleImageCtn"),
+          className: (0, _._)(_, "CapsuleImageCtn", _),
           children: (0, _.jsx)(_._, {
             lazyLoad: !0,
             srcs: _,

@@ -43,6 +43,7 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
         CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
@@ -8832,105 +8833,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "100% 0px 100% 0px",
-        _ = "tab",
-        _ = "SaleSection_",
-        _ = 940;
-      function _() {
-        return window.innerWidth >= _;
-      }
-      function _() {
-        const [_, _] = (0, _.useState)(window.innerWidth);
-        return (
-          (0, _.useEffect)(() => {
-            const _ = () => {
-              _(window.innerWidth);
-            };
-            return (
-              window.addEventListener("resize", _),
-              () => window.removeEventListener("resize", _)
-            );
-          }, []),
-          _
-        );
-      }
-      function _(_ = _) {
-        return _() >= _;
-      }
-      function _(_) {
-        const _ = _(_),
-          _ = (0, _._)(_);
-        return _
-          ? {
-              nMaxCapsulesPerRow: _.nMaxItemsPerRow,
-              bScreenIsWide: _,
-            }
-          : {
-              nMaxCapsulesPerRow: Math.min(
-                Math.max(
-                  Math.floor(window.innerWidth / _.nItemMinimumWidth),
-                  1,
-                ),
-                _.nMaxItemsPerRow,
-              ),
-              bScreenIsWide: _,
-            };
-      }
-      function _(_) {
-        const _ = (0, _._)(_);
-        return _()
-          ? _.nMaxItemsPerRow
-          : Math.min(
-              Math.max(Math.floor(window.innerWidth / _.nItemMinimumWidth), 1),
-              _.nMaxItemsPerRow,
-            );
-      }
-      function _(_) {
-        switch (_) {
-          case _._:
-            return _.mv5;
-          case _._:
-            return _.KH9;
-          case _._:
-            return _.hmR;
-          case _._:
-            return _.R2g;
-          default:
-            return;
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case _.mv5:
-            return _._;
-          case _.KH9:
-            return _._;
-          case _.hmR:
-            return _._;
-          default:
-            return;
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10035,7 +9937,7 @@
         return new (_())(
           async (_) => {
             const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
                 steamids: _,
               }),
               _ = new Map();
@@ -10981,23 +10883,46 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { padded: _, gap: _, children: _, bLazyRenderChildren: _ } = _,
-          _ = (0, _.jsx)(_._, {
-            "flow-children": "row",
-            style: {
-              gap: _ ? _ + "px" : void 0,
-            },
-            className: (0, _._)(
-              {
-                SaleSectionCarouselPadding: _,
-              },
-              "ScrollSnapCarousel",
-              "SaleSectionCarousel",
-              _.ScrollSnapCarousel,
-              _.className,
-            ),
+        const {
+            padded: _,
+            gap: _,
             children: _,
+            bLazyRenderChildren: _,
+            startingSlide: _,
+          } = _,
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _.current?.scrollIntoView({
+            inline: "start",
+            block: "nearest",
+            behavior: "auto",
           });
+        }, [_]);
+        const _ = (0, _.jsxs)(_._, {
+          "flow-children": "row",
+          style: {
+            gap: _ ? _ + "px" : void 0,
+          },
+          className: (0, _._)(
+            {
+              SaleSectionCarouselPadding: _,
+            },
+            "ScrollSnapCarousel",
+            "SaleSectionCarousel",
+            _.ScrollSnapCarousel,
+            _.className,
+          ),
+          children: [
+            _ &&
+              _.Children.map(_, (_, _) =>
+                (0, _.jsx)("div", {
+                  ref: _ == _ ? _ : void 0,
+                  children: _,
+                }),
+              ),
+            !_ && _,
+          ],
+        });
         return _
           ? (0, _.jsx)(_._, {
               horizontal: !1,
@@ -15156,7 +15081,9 @@
             });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       let _ = null;
       function _() {
         return (
@@ -15367,7 +15294,8 @@
         const { showErrorInfo: _, event: _ } = _.context;
         let _ = (0, _._)(_.args, "src") || _.children?.toString();
         _ || (_ = (0, _._)(_.args));
-        const _ = (0, _._)(_, _.language, _?.rtime32_last_modified);
+        const _ = "inline" === (0, _._)(_.args, "style"),
+          _ = (0, _._)(_, _.language, _?.rtime32_last_modified);
         if (null == _) return null;
         if ("string" == typeof _) {
           let _;
@@ -15377,6 +15305,9 @@
             __webpack_require__?.BHasTag("auto_rssfeed") && (_ = !1),
             _
               ? (0, _.jsx)(_._, {
+                  className: (0, _._)({
+                    [_().Image_Inline]: _,
+                  }),
                   src: _,
                   crossOrigin: _ ? "anonymous" : void 0,
                 })
@@ -15384,6 +15315,9 @@
                 (0, _.jsx)(_, {
                   strURL: _,
                   children: (0, _.jsx)(_._, {
+                    className: (0, _._)({
+                      [_().Image_Inline]: _,
+                    }),
                     src: _,
                     crossOrigin: _ ? "anonymous" : void 0,
                   }),
@@ -18738,8 +18672,8 @@
             return {
               queryKey: ["communitypreferences"],
               queryFn: async () => {
-                const _ = _._.Init(_._),
-                  _ = await _._.GetCommunityPreferences(_, _);
+                const _ = _._.Init(_.tzK),
+                  _ = await _.xtC.GetCommunityPreferences(_, _);
                 if (__webpack_require__.GetEResult() != _._)
                   throw new Error(
                     `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,

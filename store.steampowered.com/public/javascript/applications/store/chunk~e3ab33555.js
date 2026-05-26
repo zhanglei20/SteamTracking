@@ -9,7 +9,11 @@
     45737: (e) => {
       e.exports = {
         AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
         WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        AdminHeader: "vrqqGANTuXeQs27RGumFj",
+        Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
+        Required: "_1-jmJyKnLRFoN-GX0Oqor8",
         PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
         PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
         Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
@@ -17,6 +21,7 @@
         ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
         ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
         SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
         ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
         LeftCol: "_1AqrivbzwCs57BXiugqpeA",
         ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
@@ -54,6 +59,8 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+        AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
+        RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
       };
     },
     12916: (e) => {
@@ -161,7 +168,7 @@
     },
     92557: (e, t, a) => {
       "use strict";
-      a.d(t, { K8: () => Ne, P2: () => fe, jA: () => Ce });
+      a.d(t, { K8: () => Ie, P2: () => Be, jA: () => Ce });
       var s = a(34629),
         n = a(7850),
         i = a(22837),
@@ -386,10 +393,10 @@
         y = a(32541),
         A = a(42011),
         C = a(52885),
-        I = a(32803),
-        N = a(46107),
-        f = a(43667),
-        B = a(64940),
+        N = a(32803),
+        I = a(46107),
+        B = a(43667),
+        f = a(64940),
         P = a(90316),
         G = a.n(P),
         L = a(67417),
@@ -1134,13 +1141,13 @@
             (_.useEffect(() => window.scrollTo(0, 0), [u, v]),
             !g && t.GetEventType() == i.ajI)
           )
-            return (0, n.jsx)(I.OG, {
+            return (0, n.jsx)(N.OG, {
               eventModel: t,
-              route: I.PH.k_eStoreSalePage,
+              route: N.PH.k_eStoreSalePage,
               bPopup: !1,
             });
-          const D = (0, I.Bw)(t, I.PH.k_eStoreNewsHub, "allowRelative"),
-            T = (0, I.Bw)(t, I.PH.k_eStoreUsersNewsHub, "allowRelative");
+          const D = (0, N.Bw)(t, N.PH.k_eStoreNewsHub, "allowRelative"),
+            T = (0, N.Bw)(t, N.PH.k_eStoreUsersNewsHub, "allowRelative");
           if (!t.bLoaded || !w || (u && !S && x !== E.eR))
             return (0, n.jsx)("div", {
               className: ue().FlexCenter,
@@ -1150,8 +1157,8 @@
                 string: (0, M.we)("#Loading"),
               }),
             });
-          let N = t.GetDescriptionWithFallback(a);
-          return (0, n.jsx)(Ie, {
+          let I = t.GetDescriptionWithFallback(a);
+          return (0, n.jsx)(Ne, {
             event: t,
             lang: a,
             titleBar: p,
@@ -1204,13 +1211,13 @@
                         (0, n.jsxs)(b.tH, {
                           children: [
                             t.BHasTag("steam_award_nomination_request") &&
-                              (0, n.jsx)(B.EventDisplaySteamAwardNomination, {
+                              (0, n.jsx)(f.EventDisplaySteamAwardNomination, {
                                 event: t,
                                 lang: a,
                                 previewMode: g,
                               }),
                             t.BHasTag("steam_award_vote_request") &&
-                              (0, n.jsx)(B.WinterSaleSteamAwardVoteWrapper, {
+                              (0, n.jsx)(f.WinterSaleSteamAwardVoteWrapper, {
                                 appID: t.appid,
                                 bIsEventActionEnabled:
                                   t.BIsEventActionEnabled(),
@@ -1227,7 +1234,7 @@
                             ),
                             children: [
                               (0, n.jsx)(C.fh, {
-                                text: N || "",
+                                text: I || "",
                                 partnerEventStore: s,
                                 showErrorInfo: g,
                                 event: t,
@@ -1291,7 +1298,7 @@
                       ],
                     }),
                     (0, n.jsx)(b.tH, {
-                      children: (0, n.jsx)(Be, {
+                      children: (0, n.jsx)(fe, {
                         event: t,
                         lang: a,
                         nOverrideStartTime: l,
@@ -1342,7 +1349,7 @@
             }),
           });
         }),
-        Ie = (0, d.PA)((e) => {
+        Ne = (0, d.PA)((e) => {
           const {
               event: t,
               lang: a,
@@ -1351,7 +1358,7 @@
               postbody: o,
               footer: l,
             } = e,
-            d = (0, N.m0)(t, "background", a),
+            d = (0, I.m0)(t, "background", a),
             c = t.BIsImageSafeForAllAges("background", a),
             _ = "lang_" + (0, i.wwZ)(a),
             m = !!d && t.BImageNeedScreenshotFallback("background", a);
@@ -1372,13 +1379,13 @@
                 clanId: t.clanSteamID.GetAccountID(),
               }),
               s,
-              (0, n.jsx)(Ne, { strImageURL: d }),
-              (0, n.jsx)(fe, { strImageURL: d, body: r, postbody: o }),
+              (0, n.jsx)(Ie, { strImageURL: d }),
+              (0, n.jsx)(Be, { strImageURL: d, body: r, postbody: o }),
               Boolean(l) && (0, n.jsx)(b.tH, { children: l }),
             ],
           });
         }),
-        Ne = (e) => {
+        Ie = (e) => {
           const { strImageURL: t } = e;
           return (0, n.jsxs)("div", {
             className: G().EventCoverImageCtn,
@@ -1410,7 +1417,7 @@
             ],
           });
         },
-        fe = (e) => {
+        Be = (e) => {
           const { body: t, postbody: a, strImageURL: s } = e;
           return (0, n.jsxs)("div", {
             className: G().EventBodyCtn,
@@ -1436,7 +1443,7 @@
             ],
           });
         };
-      function Be(e) {
+      function fe(e) {
         const {
             event: t,
             lang: a,
@@ -1477,7 +1484,7 @@
                       d < _ &&
                       (0, n.jsx)("div", {
                         className: G().EventDetailTimeInfo,
-                        children: (0, n.jsx)(f.j, { eventModel: t, lang: a }),
+                        children: (0, n.jsx)(B.j, { eventModel: t, lang: a }),
                       }),
                     (0, n.jsxs)("div", {
                       className: G().EventDetailUserType,
@@ -1745,16 +1752,16 @@
           strDescription: y,
           bShowTimeZone: A,
           strInvalidDateTimeLocalizedMsg: C,
-          fnIsValidDateTime: I,
-          bWeekdaysOnly: N,
-          fnSetTimeToUpdate: f,
-          bForce24HourFormat: B,
+          fnIsValidDateTime: N,
+          bWeekdaysOnly: I,
+          fnSetTimeToUpdate: B,
+          bForce24HourFormat: f,
         } = e;
         let P =
           (function () {
             const e = g()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
-          })() || B
+          })() || f
             ? x
             : S;
         const G = i(),
@@ -1781,7 +1788,7 @@
               }, [d, i]),
               d
             );
-          })(H, F, C, I, d),
+          })(H, F, C, N, d),
           V = !d && M;
         let U, W;
         if (t && a && t == a && a > l.HD.GetTimeNowWithOverride()) {
@@ -1812,7 +1819,7 @@
               (e = e.clone()).hour(a.hour()),
                 e.minute(a.minute()),
                 e.second(0),
-                f(e.unix()),
+                B(e.unix()),
                 k(e);
             },
             O,
@@ -1840,7 +1847,7 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              f(s), k(g().unix(s));
+              B(s), k(g().unix(s));
             },
             R,
           );
@@ -1890,7 +1897,7 @@
                             ((0 != s.weekday() && 6 != s.weekday()) ||
                               (i = !1));
                           return i;
-                        })(a, t, N, e),
+                        })(a, t, I, e),
                       initialValue: W,
                       inputProps: {
                         placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),

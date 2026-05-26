@@ -52,6 +52,8 @@ center
 .apphub_HeaderTop.workshop
 {
 	background-image:url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_workshop_header.png?v=3');
+	background-repeat: no-repeat;
+	background-position-y: bottom;
 }
 .BasicUI.gpnav_active .apphub_HeaderTop.workshop
 {
@@ -326,8 +328,8 @@ center
 	overflow: hidden;
 	overflow-x: auto;
 
-	margin-block-start: 20px;
-	margin-block-end: 12px;
+	padding-block-start: 20px;
+	padding-block-end: 12px;
 }
 
 .responsive_tab_ctn.apphub_responsive_tab {

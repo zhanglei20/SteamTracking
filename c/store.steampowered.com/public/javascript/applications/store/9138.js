@@ -441,7 +441,7 @@
         return new (_())(
           async (_) => {
             const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
                 steamids: _,
               }),
               _ = new Map();
@@ -2338,10 +2338,12 @@
         const { purchaseOption: _, validatedItem: _ } = _;
         let _ = _?.formatted_original_price,
           _ = _?.formatted_final_price,
-          _ = _?.discount_pct;
+          _ = _?.discount_pct,
+          _ = _?.final_price_in_cents;
         return (
           _ &&
             _.original_price &&
+            _.subtotal.amount_in_cents != _ &&
             ((_ = _.original_price.formatted_amount),
             (_ = _.subtotal.formatted_amount),
             (_ = (0, _._)(_))),

@@ -352,10 +352,10 @@
         return (0, _._)({
           queryKey: _(),
           queryFn: async () => {
-            const _ = _._.Init(_._);
+            const _ = _._.Init(_.jng);
             __webpack_require__.Body().set_badgeid(_),
               __webpack_require__.Body().set_steamid(_._.steamid);
-            return (await _._.GetCommunityBadgeProgress(_, _))
+            return (await _.xtC.GetCommunityBadgeProgress(_, _))
               .Body()
               .toObject();
           },

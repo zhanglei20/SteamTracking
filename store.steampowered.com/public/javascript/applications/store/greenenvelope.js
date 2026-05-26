@@ -694,7 +694,7 @@
         return new (u())(
           async (t) => {
             const i = [...t],
-              n = await d.xt.GetPlayerLinkDetails(e, { steamids: i }),
+              n = await d.xtC.GetPlayerLinkDetails(e, { steamids: i }),
               o = new Map();
             return (
               n
@@ -788,7 +788,7 @@
         y = i(84811),
         N = i(29553),
         v = i.n(N),
-        S = i(77373),
+        S = i(37340),
         I = i(96171),
         x = i(17720);
       function A(e) {

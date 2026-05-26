@@ -163,6 +163,7 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
         CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
@@ -11464,7 +11465,8 @@
           ),
           _ = (0, _._)();
         _.useEffect(() => {
-          (_.bAutoFocusPageContent || _.state?.bDirectNav) &&
+          !_.bManuallyFocusPageContent &&
+            _.state?.bDirectNav &&
             _.current?.TakeFocus();
         }, [_.state]);
         const { refForPageList: _, refForPage: _ } = (function () {
@@ -12560,6 +12562,7 @@
         );
       }
       var _ = __webpack_require__("chunkid");
+      const _ = new _._("ScrollSnap").Debug;
       function _(_, _ = "smooth", _, _) {
         const _ = (_ ?? 30) / 100,
           _ = _.useRef(void 0),
@@ -12639,6 +12642,10 @@
                 return !1;
             }
             return (
+              _(
+                `ScrollOnGamepadDirection top:${_.current} left:${_.current}, behavior:${_ ?? "auto"} `,
+                _.current,
+              ),
               _ && "smooth" != _
                 ? (_.current.scrollTo({
                     top: _.current,
@@ -15519,6 +15526,15 @@
           _.current
         );
       }
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)().languages.map((_) => {
+          return 2 == (_ = _.strISOCode).length && _._.COUNTRY
+            ? `${_}-${_._.COUNTRY}`
+            : _;
+          var _;
+        });
+      }
       function _(_, _ = 0) {
         let _;
         return (
@@ -15526,7 +15542,7 @@
             (_ = {
               maximumFractionDigits: _,
             }),
-          _ ? _.toLocaleString(_._.GetPreferredLocales(), _) : "" + _
+          _ ? _.toLocaleString(_(), _) : "" + _
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -18615,7 +18631,6 @@
       function _() {
         return _.nOverrideDateNow ?? _;
       }
-      var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
         __webpack_require__._("chunkid").then(_._.bind(_, 8476, 19))),
@@ -18703,6 +18718,10 @@
         null,
       );
       const _ = 99999;
+      var _;
+      !(function (_) {
+        (_.Random = "r"), (_.Personalized = "p");
+      })(_ || (_ = {}));
       _._,
         _.zeJ,
         _.Fa4,
@@ -19597,7 +19616,7 @@
         GetSaleSections() {
           return this.jsondata.sale_sections ?? [];
         }
-        GenerateDynamicSaleSections(_, _, _, _) {
+        GenerateDynamicSaleSections(_, _, _, _, _) {
           const _ = [],
             _ = {
               section_type: "unselected_empty",
@@ -19630,6 +19649,12 @@
                 section_type: "footer_default_social_share",
                 unique_id: _++,
               }),
+            _ &&
+              _.push({
+                ..._,
+                section_type: "nextfest_header",
+                unique_id: _++,
+              }),
             _
           );
         }
@@ -19639,17 +19664,23 @@
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
-            _ = this.GetEventType() == _.ajI;
-          return _ || _ || _ || _
+            _ = this.GetEventType() == _.ajI,
+            _ = _._.is_valve_email,
+            _ =
+              this.BIsNextFest(_) &&
+              !!this.startTime &&
+              (this.startTime > new Date("2026-03-01").getTime() / 1e3 || _);
+          return _ || _ || _ || _ || _
             ? [
+                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1),
               ]
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
           if (_ > _) {
-            return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
+            return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
           }
@@ -19925,12 +19956,16 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest() {
-          const _ = this.jsondata.sale_vanity_id;
+        BIsNextFest(_ = !0) {
+          const _ = "nextfest",
+            _ = this.jsondata.sale_vanity_id?.toLowerCase(),
+            _ = new _._(this.clanSteamID).GetAccountID();
           return (
-            new _._(this.clanSteamID).GetAccountID() == _._ &&
-            _ &&
-            _.toLowerCase().startsWith("nextfest")
+            !(!_ || _ != _._) &&
+            (_
+              ? __webpack_require__.startsWith(_)
+              : __webpack_require__.startsWith(_) &&
+                !__webpack_require__.includes("prev"))
           );
         }
         GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
@@ -32634,8 +32669,8 @@
                 queryFn: async () => {
                   const _ = new Map();
                   if (_._.logged_in) {
-                    const _ = _._.Init(_._),
-                      _ = (await _._.GetNicknameList(_, _)).Body().toObject();
+                    const _ = _._.Init(_.w_T),
+                      _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
                     _?.nicknames &&
                       _.nicknames.length > 0 &&
                       _.nicknames.forEach((_) => {
@@ -37768,6 +37803,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -46032,13 +46068,13 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+        B4H: () => _,
+        tzK: () => _,
+        w_T: () => _,
+        SCE: () => _,
+        EyI: () => _,
+        Bx6: () => _,
+        xtC: () => _,
       });
       var _ = {};
       __webpack_require__._(_),
@@ -51464,15 +51500,15 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  min_progress: {
+                  min_progress_int: {
                     _: 9,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
                   },
-                  max_progress: {
+                  max_progress_int: {
                     _: 10,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
                   },
                   groupid: {
                     _: 11,
@@ -51483,6 +51519,21 @@
                     _: 12,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  progress_type: {
+                    _: 13,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  min_progress_float: {
+                    _: 14,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                  max_progress_float: {
+                    _: 15,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
                   },
                 },
               }),
@@ -51607,6 +51658,222 @@
         }
         getClassName() {
           return "CPlayer_GetGameAchievements_Response_Group";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  appid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserAchievements_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.achievements || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  achievements: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  schema_version: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  schema_hash: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserAchievements_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.internal_key || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  internal_key: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  unlocked: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  unlock_time: {
+                    _: 3,
+                    _: _._.readFixed32,
+                    _: _._.writeFixed32,
+                  },
+                  progress_int: {
+                    _: 4,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  progress_float: {
+                    _: 5,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserAchievements_Response_Achievement";
         }
       }
       class _ extends _.Message {
@@ -56299,6 +56566,18 @@
           (_.GetGameAchievements = function (_, _) {
             return _.SendMsg(
               "Player.GetGameAchievements#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetUserAchievements = function (_, _) {
+            return _.SendMsg(
+              "Player.GetUserAchievements#1",
               (0, _._)(_, _),
               _,
               {
@@ -64243,7 +64522,11 @@
 	"reactroot": 100754,
 	"bundlelist": 100755,
 	"verifiedprogram": 100756,
-	"trailercarousel": 100757
+	"trailercarousel": 100757,
+	"personalcalendar-lastmonth": 100800,
+	"personalcalendar-lastweek": 100801,
+	"personalcalendar-calendar": 100802,
+	"personalcalendar-homepage": 100803
 }`);
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -82249,7 +82532,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 71395), _((_._ = _));
+      return (_ = 11562), _((_._ = _));
       var _;
     });
     _._();

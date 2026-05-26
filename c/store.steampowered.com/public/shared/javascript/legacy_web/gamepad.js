@@ -2877,7 +2877,8 @@
               _[_] &&
                 _.intercept({
                   async handler() {
-                    const _ = window.navigation.currentEntry?.getState() ?? {};
+                    const _ = _.destination.getState() ?? {},
+                      { [_(_)]: _, ..._ } = _;
                     window.navigation.updateCurrentEntry({
                       state: {
                         ..._,

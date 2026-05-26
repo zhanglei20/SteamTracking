@@ -11,15 +11,6 @@
 	padding: 20px 0 5px 0;
 }
 
-.workshopBrowsePagingControls {
-	float: right;
-
-}
-
-.workshopBrowsePaging {
-	line-height: 34px;
-}
-
 .review_box {
 	position: relative;
 	border-top: 1px solid #425a76;
@@ -297,6 +288,10 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	display: inline-block;
 }
 
+.dselect_container .dropcontainer {
+	z-index: 2000;
+}
+
 .dselect_container .dropcontainer ul {
 	background-color: #000000;
 	border-radius: 0 3px 3px;
@@ -306,9 +301,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	max-height: 306px;
 	overflow: hidden auto;
 	padding: 5px;
-	position: absolute;
 	white-space: nowrap;
-	z-index: 2000;
 }
 
 html.GamepadMode .dselect_container .dropcontainer ul {
@@ -345,10 +338,14 @@ html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
 	font-size: 12px;
 	line-height: 22px;
 	overflow: hidden;
-	padding-left: 8px;
-	padding-right: 26px !important;
+	padding-inline: 8px 24px;
 	position: relative;
 	vertical-align: middle;
+}
+
+/* `div` and `button` added here to increase specificity so as to override shared_gamepad.css. */
+html.GamepadMode div.dselect_container button.trigger {
+	padding-inline-end: 28px;
 }
 
 html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
@@ -370,7 +367,7 @@ html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
 		float: none;
 		width: auto;
 	}
-	
+
 	html.responsive #rightContents .box {
 		margin: unset;
 	}
@@ -382,7 +379,7 @@ html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
 		float: none;
 		width: auto;
 	}
-	
+
 	html.responsive.GamepadMode #rightContents .box {
 		margin: unset;
 	}

@@ -25123,6 +25123,8 @@
         null,
       );
       const _ = 99999;
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       _._,
         _.zeJ,
         _.Fa4,
@@ -26042,7 +26044,7 @@
         GetSaleSections() {
           return this.jsondata.sale_sections ?? [];
         }
-        GenerateDynamicSaleSections(_, _, _, _) {
+        GenerateDynamicSaleSections(_, _, _, _, _) {
           const _ = [],
             _ = {
               section_type: "unselected_empty",
@@ -26075,6 +26077,12 @@
                 section_type: "footer_default_social_share",
                 unique_id: _++,
               }),
+            _ &&
+              _.push({
+                ..._,
+                section_type: "nextfest_header",
+                unique_id: _++,
+              }),
             _
           );
         }
@@ -26084,17 +26092,23 @@
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
-            _ = this.GetEventType() == _.ajI;
-          return _ || _ || _ || _
+            _ = this.GetEventType() == _.ajI,
+            _ = _._.is_valve_email,
+            _ =
+              this.BIsNextFest(_) &&
+              !!this.startTime &&
+              (this.startTime > new Date("2026-03-01").getTime() / 1e3 || _);
+          return _ || _ || _ || _ || _
             ? [
+                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1),
               ]
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
           if (_ > _) {
-            return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
+            return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
           }
@@ -26366,12 +26380,16 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest() {
-          const _ = this.jsondata.sale_vanity_id;
+        BIsNextFest(_ = !0) {
+          const _ = "nextfest",
+            _ = this.jsondata.sale_vanity_id?.toLowerCase(),
+            _ = new _._(this.clanSteamID).GetAccountID();
           return (
-            new _._(this.clanSteamID).GetAccountID() == _._ &&
-            _ &&
-            _.toLowerCase().startsWith("nextfest")
+            !(!_ || _ != _._) &&
+            (_
+              ? __webpack_require__.startsWith(_)
+              : __webpack_require__.startsWith(_) &&
+                !__webpack_require__.includes("prev"))
           );
         }
         GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
@@ -26813,6 +26831,10 @@
       });
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
+      var _;
+      !(function (_) {
+        (_.Random = "r"), (_.Personalized = "p");
+      })(_ || (_ = {}));
       const _ = 940;
       function _(_ = _) {
         return (
@@ -39870,8 +39892,8 @@
               _,
               _().personaNameAndStatusLabel,
               (0, _._)(_),
-              _ && _().compactView,
-              _ && _().NoMask,
+              _ ? _().compactView : void 0,
+              _ ? _().NoMask : void 0,
             ];
           _ || _.has_public_party_beacon
             ? (_ = (0, _.jsx)(_, {
@@ -39900,7 +39922,7 @@
               (_ = (0, _.jsx)(_, {
                 persona: _,
               }));
-          let _ = null;
+          let _ = (0, _.jsx)(_.Fragment, {});
           _
             ? (_ = (0, _.jsx)("div", {
                 className: "ContextMenuButton",
@@ -39924,10 +39946,16 @@
             onContextMenu: _,
             children: [
               (0, _.jsxs)("div", {
-                className: (0, _._)(_().statusAndName, _ && _().threeLines),
+                className: (0, _._)(
+                  _().statusAndName,
+                  _ ? _().threeLines : void 0,
+                ),
                 children: [
                   (0, _.jsxs)("div", {
-                    className: (0, _._)(_().playerName, _ && _().EllipsisName),
+                    className: (0, _._)(
+                      _().playerName,
+                      _ ? _().EllipsisName : void 0,
+                    ),
                     children: [
                       _ || " ",
                       _ &&
@@ -39972,7 +40000,7 @@
                       (0, _.jsxs)("div", {
                         className: (0, _._)(
                           _().gameName,
-                          _ && _().threeLines,
+                          _ ? _().threeLines : void 0,
                           _().richPresenceLabel,
                           "no-drag",
                         ),
@@ -44282,6 +44310,8 @@
               ],
             });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       let _ = null;
       function _() {
         return (
@@ -44492,7 +44522,8 @@
         const { showErrorInfo: _, event: _ } = _.context;
         let _ = (0, _._)(_.args, "src") || _.children?.toString();
         _ || (_ = (0, _._)(_.args));
-        const _ = (0, _._)(_, _.language, _?.rtime32_last_modified);
+        const _ = "inline" === (0, _._)(_.args, "style"),
+          _ = (0, _._)(_, _.language, _?.rtime32_last_modified);
         if (null == _) return null;
         if ("string" == typeof _) {
           let _;
@@ -44502,6 +44533,9 @@
             __webpack_require__?.BHasTag("auto_rssfeed") && (_ = !1),
             _
               ? (0, _.jsx)(_._, {
+                  className: (0, _._)({
+                    [_().Image_Inline]: _,
+                  }),
                   src: _,
                   crossOrigin: _ ? "anonymous" : void 0,
                 })
@@ -44509,6 +44543,9 @@
                 (0, _.jsx)(_, {
                   strURL: _,
                   children: (0, _.jsx)(_._, {
+                    className: (0, _._)({
+                      [_().Image_Inline]: _,
+                    }),
                     src: _,
                     crossOrigin: _ ? "anonymous" : void 0,
                   }),
