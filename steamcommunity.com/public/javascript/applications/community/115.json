@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Şikâyet edilen konular",
     "moderation_already_owner_disputed": "Zaten itiraz edildi",
     "moderationstats_alltypes": "Tüm konu türleri",
-    "moderation_alternateforumtool": "Alternatif araç",
+    "forumsubjectlist_subjectreportsummary": "%1$s çözülmemiş, %1$s itiraz edilmiş",
     "empty_no_trailing_comma": ""
 }

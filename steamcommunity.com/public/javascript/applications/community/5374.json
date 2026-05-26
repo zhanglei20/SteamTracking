@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Subiecte raportate",
     "moderation_already_owner_disputed": "Deja contestat",
     "moderationstats_alltypes": "Toate tipurile de subiecte",
-    "moderation_alternateforumtool": "Instrument alternativ",
+    "forumsubjectlist_subjectreportsummary": "Nerezolvate: %1$s. Contestate: %1$s",
     "empty_no_trailing_comma": ""
 }

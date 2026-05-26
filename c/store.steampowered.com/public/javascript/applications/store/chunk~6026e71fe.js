@@ -1,6 +1,24 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9388],
+  [9388, 6264],
   {
+    chunkid: (module) => {
+      module.exports = {
+        "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
+        "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
+        "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
+        "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
+        Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+        "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
+        "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+        ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
+        Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
+        Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
+        Disabled: "_2I6xXve3oCxh8fra7SWTnq",
+        "Size-1": "_2e1xlPghh48rkP13ydQOPb",
+        "Size-2": "B7HtDxiiORArIRcBR9kVB",
+      };
+    },
     chunkid: (module) => {
       module.exports = {
         Skeleton: "_3mh9mimYdqEileUp-cYkQh",
@@ -11,6 +29,19 @@
       module.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
+        Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
+        SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
+        Item: "_2aNlsjcdOdHOtP8uACA3bM",
+        "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
+        "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
+        "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
+        "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
+        "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
       };
     },
     chunkid: (module) => {
@@ -327,6 +358,7 @@
         Title: "_1Y6V5Io76K2V2ndqKbJ3Jj",
         PriceFormatted: "fw4s5ZhAN1s7JOz2St8ll",
         Capsule: "_1YmWtGQx7RPg34mzRPqMd-",
+        CapsuleCtnOverride: "_2YNmsOz2phP8ss67xqftMV",
         Info: "_3wnfYKWMVy4IzwkuD-ZTnX",
         description: "_2GCyETuEDO1wYJirDK5xzd",
         BackgroundAnimation: "_1PMJYtmG-0LXiCIzsf7hHH",
@@ -915,6 +947,15 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ExplorationModeTitle: "_2Yw2Zq7DhXUnz__aZKNc_r",
+        ExplorationModeContent: "_38138ngfKoemnKfJzKW9GG",
+        ExplorationModeToggle: "jCg8gWGML1DAedhv9S7Bz",
+        OptionDisabled: "qeM14TZHm0uJ8srLTpEO4",
+        ExplorationModeDescription: "_1rgWiRelyItuYoOZELdZSD",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         RewardCtn: "_35QMJ0rAr2YDvKLt4p3aWN",
         RewardImage: "_13gBFmALaxfjyp4FvrOCIZ",
         RewardTxtCtn: "_3OaXqOusS5WJNlfvyNc5k7",
@@ -1247,6 +1288,9 @@
         Center: "woD-PhBCDg6E0eRDR9JaP",
         Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
         Description: "r3oaGi8Z4_MjYvdW_zsl5",
+        TitleSubDescVAlignTop: "_2Zm_gRrFMfN5qz4FX-ioXC",
+        TitleSubDescVAlignCenter: "_3S3o87MCy5HvHZnto1F9VB",
+        TitleSubDescVAlignBottom: "ZVmHAf8nZRO-hqEMsQN20",
         MediaLogo: "FFWRI2x0ufl_AF68kEPIq",
         BackgroundAnimation: "_2-SCxC1my6FrH3aDEzPwlp",
         "ItemFocusAnim-darkerGrey-nocolor": "_3imOd9Zme0cKg033W9R6vV",
@@ -1301,6 +1345,250 @@
     },
     chunkid: () => {},
     chunkid: () => {},
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            children: _,
+            beforeContent: _,
+            afterContent: _,
+            hasValue: _,
+            ..._
+          } = _,
+          _ = (function (_) {
+            const {
+                variant: _ = "default",
+                size: _ = "2",
+                radius: _,
+                focusable: _ = !0,
+                hoverable: _ = !0,
+                clickable: _ = !0,
+                disabled: _,
+                className: _,
+                ..._
+              } = _,
+              _ = "underline" === _ ? "none" : _;
+            return (0, _._)(
+              {
+                ..._,
+                radius: _,
+                className: _()(
+                  _.ControlBox,
+                  _ && !_ && _.Focusable,
+                  _ && !_ && _.Hoverable,
+                  _ && !_ && _.Clickable,
+                  _ && _.Disabled,
+                  _[`Variant-${_}`],
+                  _[`Size-${_}`],
+                  _,
+                ),
+              },
+              _._,
+            );
+          })(_);
+        return (0, _.jsxs)(_._, {
+          ..._,
+          align: "center",
+          "data-has-value": !!_,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                paddingRight: "2",
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              flexGrow: "1",
+              minWidth: "0",
+              children: _,
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                paddingLeft: "2",
+                children: _,
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { options: _, getOptionLabel: _ = (_) => _, ..._ } = _;
+        return (0, _.jsx)(_.Root, {
+          ..._,
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _.Item,
+              {
+                value: _,
+                children: __webpack_require__(_),
+              },
+              _,
+            ),
+          ),
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          className: _.Indicator,
+          radius: _.radius,
+        });
+      }
+      function _(_, _) {
+        const _ = _.compareDocumentPosition(_);
+        return _ & Node.DOCUMENT_POSITION_FOLLOWING
+          ? -1
+          : _ & Node.DOCUMENT_POSITION_PRECEDING
+            ? 1
+            : 0;
+      }
+      (_.Item = function (_) {
+        const { value: _, children: _ } = _,
+          _ = (0, _.useContext)(_),
+          [_, _] = (0, _.useState)(),
+          { register: _, unregister: _ } = _ || {};
+        if (
+          ((0, _.useEffect)(
+            () => (_ && _ && _ ? (_(_, _), () => _(_, _)) : () => {}),
+            [_, _, _, _],
+          ),
+          !_)
+        )
+          return null;
+        const { value: _, onValueChange: _, radius: _, size: _ } = _,
+          _ = _ === _,
+          _ = _ ? void 0 : () => _(_),
+          _ = void 0 === _ ? _ : _;
+        return (0, _.jsx)(_._, {
+          justify: "center",
+          align: "center",
+          radius: _,
+          ref: _,
+          onClick: _,
+          "data-selected": _ ? "true" : "false",
+          className: _()(_.Item, _ && _[`Size-${_}`]),
+          children: _,
+        });
+      }),
+        (_.Root = function (_) {
+          const {
+              variant: _ = "default",
+              radius: _,
+              size: _,
+              children: _,
+              value: _,
+              onValueChange: _,
+            } = _,
+            [_, _] = (0, _.useState)({}),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => ({
+                  ..._,
+                  [_]: _,
+                })),
+              [],
+            ),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => {
+                  const _ = {
+                    ..._,
+                  };
+                  return _[_] === _ && delete _[_], _;
+                }),
+              [],
+            ),
+            _ = (0, _.useMemo)(
+              () => ({
+                value: _,
+                onValueChange: _,
+                register: _,
+                unregister: _,
+                radius: _,
+                size: _,
+              }),
+              [_, _, _, _, _, _],
+            );
+          return (0, _.jsx)(_._, {
+            clickable: !1,
+            hoverable: !1,
+            focusable: !1,
+            variant: _,
+            radius: _,
+            size: _,
+            className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
+            tabIndex: 0,
+            onKeyDown: (_) => {
+              let _ = 0;
+              switch (_.key) {
+                case " ":
+                case "Enter":
+                case "ArrowRight":
+                  _ = 1;
+                  break;
+                case "ArrowLeft":
+                  _ = -1;
+              }
+              if (_) {
+                const _ = Array.from(Object.values(_)).sort(_);
+                let _;
+                if (null === _) _ = _ > 0 ? 0 : _.length - 1;
+                else {
+                  const _ = _[_],
+                    _ = __webpack_require__.findIndex((_) => _ === _);
+                  (0, _._)(
+                    "number" == typeof _,
+                    "Could not find current segmented value position",
+                  ),
+                    (_ = _ + _);
+                }
+                const _ = _[_ < 0 ? _.length + _ : _ % _.length],
+                  _ = Object.keys(_).find((_) => _[_] === _);
+                "string" != typeof _
+                  ? console.error("Could not find next segmeneted value")
+                  : (_(_), _.stopPropagation(), _.preventDefault());
+              }
+            },
+            children: (0, _.jsx)(_.Provider, {
+              value: _,
+              children: (0, _.jsxs)("div", {
+                className: _.SegmentedControl,
+                children: [
+                  _,
+                  null !== _ &&
+                    (0, _.jsx)(_, {
+                      radius: _,
+                    }),
+                ],
+              }),
+            }),
+          });
+        });
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -2265,10 +2553,79 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (function () {
+            const [_, _] = (0, _.useState)(location.search);
+            return (
+              (0, _.useEffect)(() => {
+                function _(_) {
+                  "urlchange" === _.data && _(location.search);
+                }
+                return (
+                  window.addEventListener("message", _),
+                  () => {
+                    window.removeEventListener("message", _);
+                  }
+                );
+              }, []),
+              _
+            );
+          })(),
+          _ = (0, _.useMemo)(() => {
+            const _ = new URLSearchParams(
+              __webpack_require__.substring("chunkid"),
+            ).get(_);
+            return null != _
+              ? null != _
+                ? "boolean" == typeof _
+                  ? _.constructor("false" !== _)
+                  : _.constructor(_)
+                : _
+              : _;
+          }, [_, _, _]),
+          [_, _] = (0, _.useState)(_),
+          _ = _.useCallback(
+            (_, _ = !1) => {
+              const _ = new URLSearchParams(
+                __webpack_require__.substring("chunkid"),
+              );
+              if (null != _) {
+                if (_.get(_) == _) return;
+                _.set(_, String(_));
+              } else {
+                if (!_.has(_)) return;
+                _.delete(_);
+              }
+              _
+                ? history.replaceState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  )
+                : history.pushState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  ),
+                (0, _.startTransition)(() => {
+                  _(_), window.postMessage("urlchange");
+                });
+            },
+            [_, _],
+          );
+        return [_, _];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2305,6 +2662,7 @@
             onClick: _,
             eEventRount: _,
             bHidePrices: _,
+            nSummaryMaxLength: _,
           } = _,
           _ = (0, _._)(_.appid),
           _ = _ || (0, _.sfN)(_._.LANGUAGE),
@@ -2319,7 +2677,7 @@
           [_, _, _, _] = (0, _._)(() => [
             _.GetNameWithFallback(_) || "",
             _.GetCategoryAsString(),
-            _.GetSummaryWithFallback(_),
+            _.GetSummaryWithFallback(_, _),
             _.GetSubTitleWithLanguageFallback(_) || "",
           ]),
           _ = (0, _._)(_.appid),
@@ -2339,7 +2697,8 @@
         let _ = _;
         return (
           _ && (_.length > _ || _.length > _) && (_ = void 0),
-          (0, _.jsxs)(_.Fragment, {
+          (0, _.jsxs)("div", {
+            className: _().EventSizer,
             children: [
               (0, _.jsxs)(_._, {
                 className: (0, _._)(
@@ -2353,7 +2712,10 @@
                 preferredFocus: !0,
                 children: [
                   (0, _.jsxs)("div", {
-                    className: _().EventSummaryContainer,
+                    className: (0, _._)(
+                      _().EventSummaryContainer,
+                      _().HideInWideMode,
+                    ),
                     children: [
                       (0, _.jsx)("div", {
                         className: _().EventSummaryType,
@@ -2401,23 +2763,45 @@
                               className: _().OtherEvents_SubTitle,
                               children: _,
                             }),
-                          Boolean(_ > _)
-                            ? (0, _.jsx)("div", {
+                          (0, _.jsxs)(_._, {
+                            direction: "row",
+                            gap: "3",
+                            align: "center",
+                            children: [
+                              (0, _.jsx)("div", {
                                 className: (0, _._)(
-                                  _().UpcomingCtn,
-                                  "UpcomingCtn",
+                                  _().EventType,
+                                  _().ShowInWideMode,
                                 ),
-                                children: (0, _.jsx)(_._, {
-                                  bSingleLine: !0,
-                                  dateAndTime:
-                                    _.GetStartTimeAndDateUnixSeconds(),
-                                }),
-                              })
-                            : (0, _.jsx)(_._, {
-                                bSingleLine: !0,
-                                bOnlyDate: !0,
-                                dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                                children: _,
                               }),
+                              Boolean(_ > _)
+                                ? (0, _.jsx)("div", {
+                                    className: (0, _._)(
+                                      _().UpcomingCtn,
+                                      "UpcomingCtn",
+                                    ),
+                                    children: (0, _.jsx)(_._, {
+                                      bSingleLine: !0,
+                                      dateAndTime:
+                                        _.GetStartTimeAndDateUnixSeconds(),
+                                    }),
+                                  })
+                                : (0, _.jsx)(_._, {
+                                    bSingleLine: !0,
+                                    bOnlyDate: !0,
+                                    dateAndTime:
+                                      _.GetStartTimeAndDateUnixSeconds(),
+                                  }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _().EventSummaryText,
+                              _().ShowInWideMode,
+                            ),
+                            children: _,
+                          }),
                         ],
                       }),
                     ],
@@ -2490,92 +2874,6 @@
                 }),
             ],
           }),
-        });
-      }
-      function _(_) {
-        const { event: _, imageURLOverride: _, onClick: _ } = _,
-          _ = (0, _._)(_.appid),
-          _ = (0, _._)(_.appid),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _.sfN)(_._.LANGUAGE),
-          _ =
-            (0, _._)(
-              void 0 !== _ ? void 0 : _,
-              "capsule",
-              _,
-              _._.capsule_main,
-            ) ?? _,
-          [_, _, _, _] = (0, _._)(() =>
-            _
-              ? [
-                  _.GetNameWithFallback(_),
-                  _.GetCategoryAsString(),
-                  _.GetSubTitleWithLanguageFallback(_),
-                  _.GetSummaryWithFallback(_),
-                ]
-              : [void 0, void 0, void 0, void 0],
-          );
-        if (!_)
-          return (0, _.jsx)("div", {
-            className: _().OtherEvents_EventCtn,
-          });
-        const _ = [];
-        if ((_ && _.push(_), _)) {
-          const _ = (0, _._)(_, "main_capsule");
-          _ && _.push(_);
-        }
-        return (0, _.jsxs)(_._, {
-          className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
-          eventModel: _,
-          route: _._.k_eView,
-          onClick: _,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().OtherEvents_ContentCtn,
-              children: (0, _.jsx)("div", {
-                className: (0, _._)(_().OtherEvents_MainImageCtn, {
-                  [_().MaskImages]: _,
-                }),
-                children: (0, _.jsx)(_._, {
-                  rgSources: _,
-                  className: _().OtherEvents_MainImage,
-                  alt: "",
-                }),
-              }),
-            }),
-            (0, _.jsxs)("div", {
-              className: _().OtherEvents_TextCtn,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().HorizontalDescriptionCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().HorizontalDescription,
-                      children: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      bSingleLine: !0,
-                      dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
-                    }),
-                  ],
-                }),
-                (0, _.jsx)("div", {
-                  className: _().HorizontalTitle,
-                  children: _,
-                }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().HorizontalSubTitle,
-                    children: _,
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().HorizontalSummary,
-                    children: _,
-                  }),
-              ],
-            }),
-          ],
         });
       }
     },
@@ -6670,7 +6968,7 @@
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapGenreToStickerResponse = new Map();
-        m_eStoryBadgeGranted = _._._;
+        m_eStoryBadgeGranted = _.GPz._;
         m_strLocalizedStoryHeader;
         m_strLocalizedStoryHeaderMobile;
         static s_Singleton;
@@ -10017,29 +10315,32 @@
           : "links" === _.section_type ||
               "title_image" === _.section_type ||
               "sale_tabhub" === (0, _._)(_)
-            ? _
-              ? __webpack_require__.map((_) => ({
-                  Render: (_) =>
-                    (function (_, _) {
-                      const {
-                        saleEvent: _,
-                        language: _,
-                        index: _,
-                        section: _,
-                      } = _;
-                      return (0, _.jsx)(
-                        _,
-                        {
-                          link: _,
+            ? "title_image" === _.section_type &&
+              "title" === _.title_image_selected
+              ? []
+              : _
+                ? __webpack_require__.map((_) => ({
+                    Render: (_) =>
+                      (function (_, _) {
+                        const {
+                          saleEvent: _,
                           language: _,
-                          clanAccountID: _.clanSteamID.GetAccountID(),
-                          strClassName: _().LinkCapsule,
-                        },
-                        _.unique_id + "_" + _,
-                      );
-                    })(_, _),
-                }))
-              : []
+                          index: _,
+                          section: _,
+                        } = _;
+                        return (0, _.jsx)(
+                          _,
+                          {
+                            link: _,
+                            language: _,
+                            clanAccountID: _.clanSteamID.GetAccountID(),
+                            strClassName: _().LinkCapsule,
+                          },
+                          _.unique_id + "_" + _,
+                        );
+                      })(_, _),
+                  }))
+                : []
             : (0, _._)(_.section_type)
               ? _
                 ? _.filter((_) => !(0, _._)(_)).map((_) => ({
@@ -12159,8 +12460,8 @@
             })
           : null;
       }
-      function _(_, _, _) {
-        if (_?.length > 0 && _.BIsNextFest() && !(0, _._)(_, _)) {
+      function _(_, _, _, _) {
+        if (_?.length > 0 && _.BIsNextFest() && !(0, _._)(_, _, _)) {
           const _ = (0, _._)("rgMLRecommenderWishlist", "application_config");
           Array.isArray(_) &&
             _.length > 0 &&
@@ -12573,8 +12874,14 @@
             _.sale_page_cross_promo_clan_account_id,
             _.sale_page_cross_promo_event_gid,
             !1,
-          ),
-          _ = _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
+          );
+        if (
+          "title_image" == _.section_type &&
+          "image" === _.title_image_selected
+        )
+          return null;
+        const _ =
+          _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
         if (!_) return null;
         const _ = _ || (0, _._)(_, _, _);
         let _ = (0, _.jsx)("div", {
@@ -16536,7 +16843,8 @@
           _
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 1;
       function _(_, _, _, _) {
         const _ = _(
@@ -16572,13 +16880,13 @@
           } else _.push(..._);
         return _;
       }
-      function _(_, _, _, _) {
-        return !(0, _._)(_, _) || _.length <= 1
+      function _(_, _, _, _, _) {
+        return !(0, _._)(_, _, _) || _.length <= 1
           ? _
           : _(_, _, _, _.random_order_top_x);
       }
-      function _(_, _, _) {
-        if (!(0, _._)(_, _) || !window.sessionStorage) return _;
+      function _(_, _, _, _) {
+        if (!(0, _._)(_, _, _) || !window.sessionStorage) return _;
         const _ = _(_, _, _, "section"),
           _ = _(
             _,
@@ -17063,12 +17371,28 @@
         ).Unregister;
         return () => _();
       }
-      async function _(_, _, _, _, _, _, _, _, _, _, _ = 0, _ = void 0, _, _) {
-        const _ = _(_, _, _);
+      async function _(
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _ = 0,
+        _ = void 0,
+        _,
+        _,
+        _,
+      ) {
+        const _ = _(_, _, _, _);
         if ((0, _._)(_.section_type) && "sale_tabhub" != (0, _._)(_))
-          return await _(_, _, _, _, _, _, _, _, _, _, _, _, _, _);
+          return await _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _);
         if ("events" === _.section_type || "sale_events" == _.section_type) {
-          const _ = await (async function (_, _, _, _) {
+          const _ = await (async function (_, _, _, _, _) {
             let _;
             if ((0, _._)(_)) {
               const _ = (0, _._)(_);
@@ -17184,7 +17508,8 @@
               "events" + _.length,
               _?.GetActiveTabUniqueID(),
             );
-            (_ = _(_, _, _, _)), (_ = _.map((_) => _._.GetClanEventModel(_)));
+            (_ = _(_, _, _, _, _)),
+              (_ = _.map((_) => _._.GetClanEventModel(_)));
             let _ = _.filter(
               (_) =>
                 !!_ &&
@@ -17212,7 +17537,7 @@
               (_.Get().AddEvents(_.unique_id, _),
               _.Get().IncrementalSectionNeedingReveal(_.clanSteamID, _.GID, _));
             return _;
-          })(_, _, _, _);
+          })(_, _, _, _, _);
           return {
             rgEvents: _,
           };
@@ -17222,7 +17547,14 @@
           "title_image" === _.section_type ||
           "sale_tabhub" === (0, _._)(_)
         ) {
-          const _ = await (async function (_, _, _, _) {
+          if (
+            "title_image" === _.section_type &&
+            "title" === _.title_image_selected
+          )
+            return {
+              rgLinks: [],
+            };
+          const _ = await (async function (_, _, _, _, _) {
             let _ = _.links;
             if ("sale_tabhub" === (0, _._)(_)) {
               _ = (await _.Get().GetSaleTags()).map((_) => ({
@@ -17230,10 +17562,10 @@
                 localized_link_capsule: void 0,
                 materialized_link_capsule: _.square,
               }));
-              _ = _(_, _, _(_, _, _, "links", _?.GetActiveTabUniqueID()), _);
+              _ = _(_, _, _(_, _, _, "links", _?.GetActiveTabUniqueID()), _, _);
             }
             return _;
-          })(_, _, _, _);
+          })(_, _, _, _, _);
           return {
             rgLinks: _,
           };
@@ -17248,7 +17580,7 @@
           };
         }
       }
-      async function _(_, _, _, _, _, _, _, _, _, _, _ = 0, _, _, _, _) {
+      async function _(_, _, _, _, _, _, _, _, _, _, _ = 0, _, _, _, _, _) {
         const _ = {
           rgCapsules: new Array(),
           nHiddenCapsules: 0,
@@ -17685,7 +18017,7 @@
               _.smart_section_max_apps &&
               _.length < _.smart_section_max_apps
             )),
-            _.enable_faceted_browsing || (_ = _(_, _, _, _)),
+            _.enable_faceted_browsing || (_ = _(_, _, _, _, _)),
             _.firstCapsule &&
               ((_ = _.filter((_) => _._ !== _.firstCapsule?._)),
               _.unshift(_.firstCapsule)),
@@ -17695,10 +18027,10 @@
         } else if (_.enable_faceted_browsing) {
           if (_.featured_app_tagid) {
             const _ = await _._.fetchQuery(
-              (function (_, _, _, _, _ = null, _ = null) {
+              (function (_, _, _, _, _, _ = null, _ = null) {
                 const _ = _?.GetQuery(),
                   _ = _ ? JSON.stringify(_) : null,
-                  _ = (0, _._)(_, _) ? 1e4 : Math.floor(1.1 * _);
+                  _ = (0, _._)(_, _, _) ? 1e4 : Math.floor(1.1 * _);
                 return {
                   queryKey: [
                     "GetDynamicCapsulesForSection",
@@ -17731,7 +18063,15 @@
                   enabled: _.enable_faceted_browsing,
                   staleTime: 36e5,
                 };
-              })(_, _, _, _.featured_app_tagid, _, _?.GetTab()?.store_filter),
+              })(
+                _,
+                _,
+                _,
+                _.featured_app_tagid,
+                _,
+                _,
+                _?.GetTab()?.store_filter,
+              ),
             );
             (_ = !!_.bMoreResultsRemaining),
               _.SetFacetCounts(_.rgSolrFacetCounts),
@@ -17742,10 +18082,10 @@
                 .filter((_) => "sub" != _.type && "bundle" != _.type)
                 .map((_) => _._),
               _ = await _._.fetchQuery(
-                (function (_, _, _, _, _ = null, _ = null) {
+                (function (_, _, _, _, _, _ = null, _ = null) {
                   const _ = _?.GetQuery(),
                     _ = _ ? JSON.stringify(_) : null,
-                    _ = (0, _._)(_, _) ? 1e4 : Math.floor(1.1 * _),
+                    _ = (0, _._)(_, _, _) ? 1e4 : Math.floor(1.1 * _),
                     _ = _.sort().join(",");
                   return {
                     queryKey: [
@@ -17785,17 +18125,17 @@
                     enabled: _.enable_faceted_browsing && _?.length > 0,
                     staleTime: 36e5,
                   };
-                })(_, _, _, _, _, _?.GetTab()?.store_filter),
+                })(_, _, _, _, _, _, _?.GetTab()?.store_filter),
               );
             (_ = !!_.bMoreResultsRemaining),
               _.SetFacetCounts(_.rgSolrFacetCounts),
               _.SetSolrMatchCount(_.nMatchCount),
               (_ = _.rgCapsules);
           }
-          _ = _(_, _, _, [..._]);
-        } else _ = _(_, _, _, [..._.capsules]);
+          _ = _(_, _, _, _, [..._]);
+        } else _ = _(_, _, _, _, [..._.capsules]);
         if (_.signal.aborted) return _;
-        (_ = (0, _._)(_, _, _)),
+        (_ = (0, _._)(_, _, _, _)),
           _ && (_ = _(_)),
           _.BUsesContentHubForItemSource() ||
             _.enable_faceted_browsing ||
@@ -17968,85 +18308,87 @@
               })(_, _, "trailercarousel"),
               _ = _.useMemo(() => new Map(), []),
               _ = _.useMemo(() => new Map(), []);
-            _(_, _),
-              _(_, _),
-              _.useEffect(() => {
-                if (_.enable_faceted_browsing) return;
-                const _ = new AbortController(),
-                  _ = async () => {
-                    const _ = (_) =>
-                      (function (_, _) {
-                        const _ = _.map((_, _) => ({
-                          capsule: _,
-                          index: _,
-                        }))
-                          .sort((_, _) => {
-                            const _ = _.get(_.capsule._) ?? 0,
-                              _ = _.get(_.capsule._) ?? 0;
-                            return _ !== _ ? _ - _ : _.index - _.index;
-                          })
-                          .map((_) => _.capsule);
-                        return _;
-                      })(_, _);
-                    let { rgCapsules: _ } = await _(
-                      _,
-                      _,
-                      _(_, _, _),
-                      _,
-                      _,
-                      _,
-                      void 0,
-                      _,
-                      _,
-                      _,
-                      _,
-                      _,
-                      _,
-                      _,
-                      _,
+            _(_, _), _(_, _);
+            const [_] = (0, _._)(_._, void 0);
+            _.useEffect(() => {
+              if (_.enable_faceted_browsing) return;
+              const _ = new AbortController(),
+                _ = async () => {
+                  const _ = (_) =>
+                    (function (_, _) {
+                      const _ = _.map((_, _) => ({
+                        capsule: _,
+                        index: _,
+                      }))
+                        .sort((_, _) => {
+                          const _ = _.get(_.capsule._) ?? 0,
+                            _ = _.get(_.capsule._) ?? 0;
+                          return _ !== _ ? _ - _ : _.index - _.index;
+                        })
+                        .map((_) => _.capsule);
+                      return _;
+                    })(_, _);
+                  let { rgCapsules: _ } = await _(
+                    _,
+                    _,
+                    _(_, _, _, _),
+                    _,
+                    _,
+                    _,
+                    void 0,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                  );
+                  (_ = _.filter((_) => null != _.type && (0, _._)(_.type))),
+                    _.trailer_carousel_allow_apps_without_trailers ||
+                      (_ = _.filter((_) =>
+                        _._.Get()
+                          .GetApp(_._)
+                          ?.BHasTrailers("blocked" == _),
+                      ));
+                  const _ = _.slice(_, _ + _).map((_) => _._);
+                  if (
+                    (await _._.Get().QueueMultipleAppRequests(_, _._)) == _._
+                  ) {
+                    const _ = _.flatMap((_) =>
+                      _._.Get().GetApp(_).GetDemoStandaloneStorePageAppIDs(),
                     );
-                    (_ = _.filter((_) => null != _.type && (0, _._)(_.type))),
-                      _.trailer_carousel_allow_apps_without_trailers ||
-                        (_ = _.filter((_) =>
-                          _._.Get()
-                            .GetApp(_._)
-                            ?.BHasTrailers("blocked" == _),
-                        ));
-                    const _ = _.slice(_, _ + _).map((_) => _._);
-                    if (
-                      (await _._.Get().QueueMultipleAppRequests(_, _._)) == _._
-                    ) {
-                      const _ = _.flatMap((_) =>
-                        _._.Get().GetApp(_).GetDemoStandaloneStorePageAppIDs(),
-                      );
-                      await _._.Get().QueueMultipleAppRequests(_, _._);
-                    }
-                    _.signal.aborted || (_((_ ?? []).concat(_)), _(!1));
-                  };
-                return (
-                  _(),
-                  () => {
-                    _.abort();
+                    await _._.Get().QueueMultipleAppRequests(_, _._);
                   }
-                );
-              }, [
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _.enable_faceted_browsing,
-                _,
-                _,
-                _,
-                _,
-                _,
-              ]);
+                  _.signal.aborted || (_((_ ?? []).concat(_)), _(!1));
+                };
+              return (
+                _(),
+                () => {
+                  _.abort();
+                }
+              );
+            }, [
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _.enable_faceted_browsing,
+              _,
+              _,
+              _,
+              _,
+              _,
+            ]);
             const _ = _._(_, 0, _.length - 1),
               _ = _[_]?._;
             if (
@@ -18906,6 +19248,7 @@
                       _: _,
                       imageType: "main",
                       bPreferAssetWithoutOverride: !1,
+                      strAdditionalClassName: _().CapsuleCtnOverride,
                     }),
                 }),
                 (0, _.jsxs)("div", {
@@ -21382,61 +21725,64 @@
           ),
           _ = (0, _._)(),
           _ = (0, _._)();
-        (0, _.useEffect)(() => _(_.section, _, _, _, _), [_, _, _, _.section]),
-          (0, _.useEffect)(() => {
-            const _ = new AbortController();
-            return (
-              (async () => {
-                const _ = await _(
-                  _,
-                  _,
-                  _.section,
-                  _,
-                  _,
-                  _,
-                  _.facetFilterState,
-                  _,
-                  _,
-                  _,
-                  _,
-                  _,
-                  _.history,
-                  _,
-                );
-                _.signal.aborted ||
-                  ("rgCapsules" in _
-                    ? (_(_.rgCapsules),
-                      _(_.nHiddenCapsules),
-                      _(_.bCapsuleArrayTruncated),
-                      _(_.bAwaitingShowContentLoading))
-                    : "rgEvents" in _
-                      ? _(_.rgEvents)
-                      : "rgLinks" in _
-                        ? _(_.rgLinks)
-                        : "rgCuratorLists" in _ && _(_.rgCuratorLists),
-                  _(!0));
-              })(),
-              () => {
-                _.abort();
-              }
-            );
-          }, [
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _.history,
-            _.section,
-            _.section.enable_faceted_browsing,
-            _,
-          ]),
+        (0, _.useEffect)(() => _(_.section, _, _, _, _), [_, _, _, _.section]);
+        const [_] = (0, _._)(_._, void 0);
+        (0, _.useEffect)(() => {
+          const _ = new AbortController();
+          return (
+            (async () => {
+              const _ = await _(
+                _,
+                _,
+                _.section,
+                _,
+                _,
+                _,
+                _.facetFilterState,
+                _,
+                _,
+                _,
+                _,
+                _,
+                _,
+                _.history,
+                _,
+              );
+              _.signal.aborted ||
+                ("rgCapsules" in _
+                  ? (_(_.rgCapsules),
+                    _(_.nHiddenCapsules),
+                    _(_.bCapsuleArrayTruncated),
+                    _(_.bAwaitingShowContentLoading))
+                  : "rgEvents" in _
+                    ? _(_.rgEvents)
+                    : "rgLinks" in _
+                      ? _(_.rgLinks)
+                      : "rgCuratorLists" in _ && _(_.rgCuratorLists),
+                _(!0));
+            })(),
+            () => {
+              _.abort();
+            }
+          );
+        }, [
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _.history,
+          _.section,
+          _.section.enable_faceted_browsing,
+          _,
+        ]),
           (0, _.useEffect)(
             () => () => {
               _.appVisibilityTracker?.MarkAllAppsNotVisible(
@@ -21467,7 +21813,8 @@
             _._.Get().AddInteraction(_.unique_id, _), _(_);
           },
           _ = (function (_, _, _) {
-            return _.useMemo(() => _(_, _, _), [_, _, _]);
+            const [_] = (0, _._)(_._, void 0);
+            return _.useMemo(() => _(_, _, _, _), [_, _, _, _]);
           })(_, _.section, _);
         let _ = null;
         if (_) {
@@ -21523,12 +21870,18 @@
               ],
             });
           }
-          if (!_) {
-            if (!_ && !_.enable_faceted_browsing) return null;
-            _ = (0, _.jsx)(_, {
-              section: _,
-            });
-          }
+          if (!_)
+            if (
+              "title_image" === _.section_type &&
+              "title" === _.title_image_selected
+            )
+              _ = (0, _.jsx)(_.Fragment, {});
+            else {
+              if (!_ && !_.enable_faceted_browsing) return null;
+              _ = (0, _.jsx)(_, {
+                section: _,
+              });
+            }
         } else
           _ = _.enable_faceted_browsing
             ? (0, _.jsx)("div", {
@@ -21798,6 +22151,7 @@
                   _,
                   0,
                   _,
+                  void 0,
                   _.history,
                   _,
                 );
@@ -29107,8 +29461,8 @@
         return (0, _.jsxs)("div", {
           className: (0, _._)({
             [_().TitleDescriptionCtn]: !0,
-            [_().TitleSubDescVAlignTop]: _ == _.k_Top,
-            [_().TitleSubDescVAlignCenter]: _ == _.k_Center || !_,
+            [_().TitleSubDescVAlignTop]: _ == _.k_Top || !_,
+            [_().TitleSubDescVAlignCenter]: _ == _.k_Center,
             [_().TitleSubDescVAlignBottom]: _ == _.k_Bottom,
           }),
           children: [
@@ -29508,6 +29862,107 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)("rgMLRecommenderWishlist", "application_config"),
+          _ = Array.isArray(_) && _.length > 0 && Number.isInteger(_[0]),
+          _ = (0, _._)(_),
+          _ = _ <= 0 && _,
+          [_] = (0, _._)(_._, void 0),
+          _ = _ == _._.Random,
+          [_, _] = _.useState(_ && !_ ? _._.Personalized : _._.Random);
+        if (_ <= 0 && !_) return;
+        let _ = (0, _._)(
+            "#SaleSectionNextFestHeader_ExplorationMode_DescriptionReady1",
+          ),
+          _ = (0, _._)(
+            "#SaleSectionNextFestHeader_ExplorationMode_DescriptionReady2",
+          );
+        if (_ > 0) {
+          const _ = _ > 0 ? new Date().getTime() / 1e3 + _ : 0,
+            _ = 3600 * Math.round(_ / 3600),
+            _ = (0, _._)(new Date(1e3 * _)),
+            _ = (0, _._)(_);
+          (_ = (0, _._)(
+            "#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady1",
+          )),
+            (_ = (0, _._)(
+              "#SaleSectionNextFestHeader_ExplorationMode_DescriptionNotReady2",
+              _,
+              _,
+            ));
+        }
+        return (0, _.jsxs)("div", {
+          className: _().SaleSection,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().ExplorationModeTitle,
+              children: (0, _._)(
+                "#SaleSectionNextFestHeader_ExplorationMode_Title",
+              ),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().ExplorationModeContent,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ExplorationModeToggle,
+                  children: (0, _.jsxs)(_._.Root, {
+                    value: _,
+                    onValueChange: (_) => {
+                      return (
+                        (_ = _),
+                        void (
+                          _ &&
+                          ((0, _._)(_, {
+                            [_._]: _,
+                          }),
+                          _(_))
+                        )
+                      );
+                      var _;
+                    },
+                    variant: "default",
+                    radius: "sm",
+                    children: [
+                      (0, _.jsx)(_._.Item, {
+                        value: _._.Random,
+                        children: (0, _._)(
+                          "#SaleSectionNextFestHeader_ExplorationMode_Random",
+                        ),
+                      }),
+                      (0, _.jsx)(_._.Item, {
+                        value: _._.Personalized,
+                        children: (0, _.jsx)("div", {
+                          className: (0, _._)(!_ && _().OptionDisabled),
+                          children: (0, _._)(
+                            "#SaleSectionNextFestHeader_ExplorationMode_Personalized",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().ExplorationModeDescription,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      children: _,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
+      }
       function _(_) {
         const { event: _, section: _, activeTab: _, language: _ } = _,
           _ = (0, _._)();
@@ -29752,6 +30207,10 @@
           case "contenthubsections":
             return null;
           case "calendar":
+            return (0, _.jsx)(_, {
+              ..._,
+            });
+          case "nextfest_header":
             return (0, _.jsx)(_, {
               ..._,
             });

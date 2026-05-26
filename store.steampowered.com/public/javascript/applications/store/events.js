@@ -739,7 +739,7 @@
                 "flow-children": "column",
                 navEntryPreferPosition: E.iU.PREFERRED_CHILD,
                 children: p.map((e) =>
-                  (0, s.jsx)(B.uY, { event: e }, e.AnnouncementGID),
+                  (0, s.jsx)(B.u, { event: e }, e.AnnouncementGID),
                 ),
               }),
               Boolean(C) &&

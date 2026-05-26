@@ -67,13 +67,18 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        Sticky: "_3dlxz6KBJpvmA-qsVAzxs8",
         GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
         GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        ChecklistMode: "_3blAkLFfSQrJjGklUKOP7e",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        checklistBox: "_1idkU7IA8dDPOIbsU-dRkJ",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+        StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
+        StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
     22: (e, t, n) => {
@@ -99,22 +104,22 @@
         g = n(63987),
         j = n(63275),
         _ = n(30770),
-        v = n.n(_),
-        B = n(45699),
-        A = n(76217);
-      function b(e) {
+        B = n.n(_),
+        v = n(45699),
+        b = n(76217);
+      function A(e) {
         const { subject: t, onClose: n } = e,
           [s, a] = (0, l.useState)(i.PV),
           o = (0, m.lY)(t.subject_type, t.subject_group_id, t.subject_id),
           c = (0, l.useRef)(null);
-        return (0, r.jsxs)(A.Z, {
-          className: v().EscalateSubjectDialogCtn,
+        return (0, r.jsxs)(b.Z, {
+          className: B().EscalateSubjectDialogCtn,
           children: [
-            (0, r.jsx)(A.Z, {
+            (0, r.jsx)(b.Z, {
               children: h.T.Localize("#moderation_escalation_description"),
             }),
             (0, r.jsxs)("select", {
-              className: v().EscalationLevelSelect,
+              className: B().EscalationLevelSelect,
               value: s,
               onChange: (e) => a(parseInt(e.target.value)),
               children: [
@@ -137,11 +142,11 @@
             (0, r.jsx)("label", {
               children: h.T.Localize("#moderation_escalation_escalationnote"),
             }),
-            (0, r.jsx)(B.dO, { className: v().ReasonTextArea, ref: c }),
-            (0, r.jsxs)(A.Z, {
-              className: v().BottomButtons,
+            (0, r.jsx)(v.dO, { className: B().ReasonTextArea, ref: c }),
+            (0, r.jsxs)(b.Z, {
+              className: B().BottomButtons,
               children: [
-                (0, r.jsx)(B.fu, {
+                (0, r.jsx)(v.fu, {
                   onClick: async () => {
                     var e;
                     const t =
@@ -152,7 +157,7 @@
                   },
                   children: h.T.Localize("#moderation_escalation_escalate"),
                 }),
-                (0, r.jsx)(B.fu, {
+                (0, r.jsx)(v.fu, {
                   onClick: n,
                   children: j.u.Localize("#moderation_cancel"),
                 }),
@@ -205,7 +210,7 @@
                       };
                       return (0, g.Ur)(t)
                         ? (0, r.jsx)(
-                            B.Ii,
+                            v.Ii,
                             {
                               className: M().BlockListItem,
                               href: t.url,
@@ -214,7 +219,7 @@
                             t.url,
                           )
                         : (0, r.jsxs)(
-                            A.Z,
+                            b.Z,
                             {
                               onActivate: o,
                               className: M().BlockListItem,
@@ -287,28 +292,28 @@
         });
       }
       var T,
-        R,
-        z = n(52038),
-        k = n(81393),
+        k,
+        R = n(52038),
+        z = n(81393),
         U = n(37085),
-        F = n(88942),
-        I = n(22837),
+        I = n(88942),
+        F = n(22837),
         L = n(80613),
         E = n.n(L),
         Q = n(89068),
         N = n(56545);
-      class q extends L.Message {
+      class O extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            q.prototype.quicktext_id || Q.Sg(q.M()),
+            O.prototype.quicktext_id || Q.Sg(O.M()),
             L.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
         }
         static M() {
           return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   quicktext_id: {
                     n: 1,
@@ -331,7 +336,7 @@
                     pbr: Q.qM.readPackedUint32,
                     bw: Q.gp.writeRepeatedUint32,
                   },
-                  content: { n: 7, c: O },
+                  content: { n: 7, c: q },
                   button_text: {
                     n: 8,
                     br: Q.qM.readString,
@@ -364,77 +369,6 @@
                     br: Q.qM.readBool,
                     bw: Q.gp.writeBool,
                   },
-                },
-              }),
-            q.sm_m
-          );
-        }
-        static MBF() {
-          return q.sm_mbf || (q.sm_mbf = Q.w0(q.M())), q.sm_mbf;
-        }
-        toObject(e = !1) {
-          return q.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return Q.BT(q.M(), e, t);
-        }
-        static fromObject(e) {
-          return Q.Uq(q.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (E().BinaryReader)(e),
-            n = new q();
-          return q.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return Q.zj(q.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (E().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          Q.i0(q.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (E().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSupportData_QuickText";
-        }
-      }
-      class O extends L.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.content || Q.Sg(O.M()),
-            L.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  content: { n: 1, br: Q.qM.readString, bw: Q.gp.writeString },
-                  major_revision: {
-                    n: 2,
-                    br: Q.qM.readUint32,
-                    bw: Q.gp.writeUint32,
-                  },
-                  minor_revision: {
-                    n: 3,
-                    br: Q.qM.readUint32,
-                    bw: Q.gp.writeUint32,
-                  },
-                  author: { n: 4, br: Q.qM.readUint32, bw: Q.gp.writeUint32 },
-                  last_update: {
-                    n: 5,
-                    br: Q.qM.readUint32,
-                    bw: Q.gp.writeUint32,
-                  },
-                  language: { n: 6, br: Q.qM.readInt32, bw: Q.gp.writeInt32 },
                 },
               }),
             O.sm_m
@@ -470,6 +404,77 @@
         serializeBase64String() {
           var e = new (E().BinaryWriter)();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSupportData_QuickText";
+        }
+      }
+      class q extends L.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            q.prototype.content || Q.Sg(q.M()),
+            L.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
+                fields: {
+                  content: { n: 1, br: Q.qM.readString, bw: Q.gp.writeString },
+                  major_revision: {
+                    n: 2,
+                    br: Q.qM.readUint32,
+                    bw: Q.gp.writeUint32,
+                  },
+                  minor_revision: {
+                    n: 3,
+                    br: Q.qM.readUint32,
+                    bw: Q.gp.writeUint32,
+                  },
+                  author: { n: 4, br: Q.qM.readUint32, bw: Q.gp.writeUint32 },
+                  last_update: {
+                    n: 5,
+                    br: Q.qM.readUint32,
+                    bw: Q.gp.writeUint32,
+                  },
+                  language: { n: 6, br: Q.qM.readInt32, bw: Q.gp.writeInt32 },
+                },
+              }),
+            q.sm_m
+          );
+        }
+        static MBF() {
+          return q.sm_mbf || (q.sm_mbf = Q.w0(q.M())), q.sm_mbf;
+        }
+        toObject(e = !1) {
+          return q.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return Q.BT(q.M(), e, t);
+        }
+        static fromObject(e) {
+          return Q.Uq(q.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (E().BinaryReader)(e),
+            n = new q();
+          return q.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return Q.zj(q.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (E().BinaryWriter)();
+          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          Q.i0(q.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (E().BinaryWriter)();
+          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSupportData_QuickTextContent";
@@ -548,8 +553,8 @@
               (W.sm_m = {
                 proto: W,
                 fields: {
-                  quicktext: { n: 1, c: q },
-                  english_reference: { n: 2, c: O },
+                  quicktext: { n: 1, c: O },
+                  english_reference: { n: 2, c: q },
                 },
               }),
             W.sm_m
@@ -855,7 +860,7 @@
                 { ePrivilege: 1 },
               );
             });
-        })(R || (R = {}));
+        })(k || (k = {}));
       var H = n(23809),
         V = n(22797),
         Z = n(4869);
@@ -866,16 +871,16 @@
           [u, d] = (0, l.useState)(null),
           [p, m] = (0, l.useState)(!1),
           [j, _] = (0, l.useState)(!1),
-          [v, B] = (0, l.useState)(null),
-          [b, f] = (0, l.useState)(null),
+          [B, v] = (0, l.useState)(null),
+          [A, f] = (0, l.useState)(null),
           [w, M] = (0, l.useState)(null),
-          [R, L] = (0, l.useState)(!1),
+          [k, L] = (0, l.useState)(!1),
           [E, Q] = (0, l.useState)(!1),
-          [q, O] = (0, l.useState)(""),
-          W = p || j || v || b || w || R || E,
+          [O, q] = (0, l.useState)(""),
+          W = p || j || B || A || w || k || E,
           P =
             ((G = e.authorSteamId),
-            (0, F.I)({
+            (0, I.I)({
               queryKey: ["get_primary_language_for_user", G],
               queryFn: async () => {
                 const e = await fetch(
@@ -889,7 +894,7 @@
               },
             }));
         var G;
-        let J = I.Bhc;
+        let J = F.Bhc;
         if (P.isSuccess) {
           const e = P.data;
           void 0 !== e.pref_primary_language && -1 !== e.pref_primary_language
@@ -900,13 +905,13 @@
         }
         const K = (function (e, t) {
           const n = (0, H.KV)();
-          return (0, F.I)({
+          return (0, I.I)({
             queryKey: ["get_quick_text", e, t],
             queryFn: async () => {
               if (null == e || void 0 === t) return null;
               const r = N.w.Init(D);
               r.Body().set_quicktext_id(e),
-                r.Body().set_language((0, I.LgB)(t));
+                r.Body().set_language((0, F.LgB)(t));
               const s = await T.GetQuickText(n, r);
               if (s.GetEResult() !== U.R)
                 throw new Error(
@@ -919,7 +924,7 @@
         })((0, g.AH)(t), J);
         (0, l.useEffect)(() => {
           var e, t, n, r, s, i, a;
-          O(
+          q(
             null !==
               (a =
                 null !==
@@ -960,14 +965,14 @@
                 },
               }),
             "main" === s &&
-              (0, r.jsxs)(A.Z, {
+              (0, r.jsxs)(b.Z, {
                 children: [
-                  (0, r.jsxs)(A.Z, {
+                  (0, r.jsxs)(b.Z, {
                     className: y().SanctionForm,
                     children: [
                       null !== u &&
                         (0, r.jsxs)("div", {
-                          className: (0, z.A)(y().OneColumn, y().ErrorMessage),
+                          className: (0, R.A)(y().OneColumn, y().ErrorMessage),
                           children: [(0, r.jsx)(Z.Q9b, {}), " Error: ", u],
                         }),
                       (0, r.jsx)("label", {
@@ -1014,12 +1019,12 @@
                       (0, r.jsxs)("select", {
                         id: "hubban",
                         onChange: (e) =>
-                          B(
+                          v(
                             "0" === e.target.value
                               ? null
                               : parseInt(e.target.value),
                           ),
-                        value: null != v ? v : 0,
+                        value: null != B ? B : 0,
                         children: [
                           (0, r.jsx)("option", {
                             value: "0",
@@ -1072,7 +1077,7 @@
                               ? null
                               : parseInt(e.target.value),
                           ),
-                        value: null != b ? b : 0,
+                        value: null != A ? A : 0,
                         children: [
                           (0, r.jsx)("option", {
                             value: "0",
@@ -1159,7 +1164,7 @@
                         children: [
                           (0, r.jsx)("input", {
                             type: "checkbox",
-                            checked: R,
+                            checked: k,
                             onChange: (e) => L(e.target.checked),
                           }),
                           " Permanent trade ban",
@@ -1179,14 +1184,14 @@
                           ],
                         }),
                       (0, r.jsx)("textarea", {
-                        className: (0, z.A)(y().OneColumn, y().MessageTextArea),
+                        className: (0, R.A)(y().OneColumn, y().MessageTextArea),
                         placeholder: "Message to send",
-                        value: q,
-                        onChange: (e) => O(e.target.value),
+                        value: O,
+                        onChange: (e) => q(e.target.value),
                       }),
                     ],
                   }),
-                  (0, r.jsxs)(A.Z, {
+                  (0, r.jsxs)(b.Z, {
                     className: y().BottomButtons,
                     children: [
                       (0, r.jsx)(S.Oh, {
@@ -1198,19 +1203,19 @@
                         (0, r.jsx)(S.n9, {
                           onClick: async () => {
                             o(!0),
-                              (0, k.wT)(
+                              (0, z.wT)(
                                 null !== t,
                                 "eReason must be non-null to sanction",
                               );
                             const n = [];
                             p && n.push({ sanction: x.EF }),
                               j && n.push({ sanction: x.Cv }),
-                              v && n.push({ sanction: x.ME, days: v }),
-                              b && n.push({ sanction: x.sR, days: b }),
+                              B && n.push({ sanction: x.ME, days: B }),
+                              A && n.push({ sanction: x.sR, days: A }),
                               w && n.push({ sanction: x.bX, days: w }),
-                              R && n.push({ sanction: x.Fh, days: -1 }),
+                              k && n.push({ sanction: x.Fh, days: -1 }),
                               E && n.push({ sanction: x.X5 });
-                            const r = await e.onOK(n, q.trim(), t);
+                            const r = await e.onOK(n, O.trim(), t);
                             d(r), o(!1);
                           },
                           disabled: null === t || !W,
@@ -1342,7 +1347,7 @@
             isOnline:
               (null === (s = c.private_data) || void 0 === s
                 ? void 0
-                : s.persona_state) === I.UXk,
+                : s.persona_state) === F.UXk,
             isInGame:
               void 0 !==
               (null === (i = c.private_data) || void 0 === i
@@ -1356,20 +1361,20 @@
             isAwayOrSnooze:
               (null === (o = c.private_data) || void 0 === o
                 ? void 0
-                : o.persona_state) === I.PrD ||
+                : o.persona_state) === F.PrD ||
               (null === (l = c.private_data) || void 0 === l
                 ? void 0
-                : l.persona_state) === I.vPz,
+                : l.persona_state) === F.vPz,
             ...m,
           })
         );
       }
       var _e = n(20609);
-      function ve(e) {
-        const { subject: t } = e;
-        return t ? (0, r.jsx)(Ae, { ...e }) : (0, r.jsx)(Be, {});
-      }
       function Be(e) {
+        const { subject: t } = e;
+        return t ? (0, r.jsx)(be, { ...e }) : (0, r.jsx)(ve, {});
+      }
+      function ve(e) {
         return (0, r.jsx)("div", {
           children: (0, r.jsxs)("table", {
             children: [
@@ -1395,7 +1400,7 @@
           }),
         });
       }
-      function Ae(e) {
+      function be(e) {
         var t, n, s, i, a;
         const { subject: o } = e,
           l = (0, m.Kt)(
@@ -1477,7 +1482,7 @@
                                   : i.entries) || void 0 === a
                               ? void 0
                               : a.map((e) =>
-                                  (0, r.jsx)(be, { entry: e }, e.timestamp),
+                                  (0, r.jsx)(Ae, { entry: e }, e.timestamp),
                                 )),
                         ],
                       }),
@@ -1487,7 +1492,7 @@
             }),
         });
       }
-      function be(e) {
+      function Ae(e) {
         var t, n;
         const { entry: s } = e,
           i = (0, se.jn)(s.actor_steamid);
@@ -1764,10 +1769,10 @@
           });
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            n && (0, r.jsx)(ze, { onClose: () => a(!1), ...e, subject: d }),
+            n && (0, r.jsx)(Re, { onClose: () => a(!1), ...e, subject: d }),
             d &&
               (0, r.jsx)(o.Gq, {
-                toolTipContent: (0, r.jsx)(Re, { subject: d }),
+                toolTipContent: (0, r.jsx)(ke, { subject: d }),
                 direction: "bottom",
                 nDelayShowMS: 0,
                 children: g,
@@ -1776,7 +1781,7 @@
           ],
         });
       }
-      function Re(e) {
+      function ke(e) {
         const { subject: t } = e;
         if (!t || !t.reports) return null;
         const n = (0, te.D5)(t.reports, (e) => e.report_reason);
@@ -1804,7 +1809,7 @@
           })
         );
       }
-      function ze(e) {
+      function Re(e) {
         var t, n, i;
         const { subject: o } = e,
           [m, g] = (0, l.useState)("main"),
@@ -1821,16 +1826,16 @@
               name: "History",
               key: "history",
               contents: (0, r.jsx)($.tH, {
-                children: (0, r.jsx)(ve, { subject: o }),
+                children: (0, r.jsx)(Be, { subject: o }),
               }),
             },
           ];
-        let v = 0,
-          A = 0;
+        let B = 0,
+          b = 0;
         if (o)
           for (const e of o.reports)
-            e.time_resolved && !e.time_disputed && v++,
-              e.time_dispute_resolved && A++;
+            e.time_resolved && !e.time_disputed && B++,
+              e.time_dispute_resolved && b++;
         const x = {
             subject_type: s.lN,
             subject_group_id: e.topicId,
@@ -1872,7 +1877,7 @@
                                     ? t
                                     : 0,
                                   " unresolved / ",
-                                  v,
+                                  B,
                                   " resolved / ",
                                   null !==
                                     (n =
@@ -1883,7 +1888,7 @@
                                     ? n
                                     : 0,
                                   " disputed / ",
-                                  A,
+                                  b,
                                   " disputes resolved",
                                 ],
                               }),
@@ -1902,17 +1907,17 @@
                                   "Sanction",
                                 ],
                               }),
-                              (0, r.jsx)(Fe, {
-                                ...e,
-                                subject: o,
-                                onClose: e.onClose,
-                              }),
                               (0, r.jsx)(Ie, {
                                 ...e,
                                 subject: o,
                                 onClose: e.onClose,
                               }),
-                              (0, r.jsx)(B.fu, {
+                              (0, r.jsx)(Fe, {
+                                ...e,
+                                subject: o,
+                                onClose: e.onClose,
+                              }),
+                              (0, r.jsx)(v.fu, {
                                 disabled: !e.subject,
                                 onClick: () => g("escalate"),
                                 children: h.T.Localize(
@@ -1947,7 +1952,7 @@
                         ],
                       }),
                     "escalate" === m &&
-                      (0, r.jsx)(b, { subject: x, onClose: () => g("main") }),
+                      (0, r.jsx)(A, { subject: x, onClose: () => g("main") }),
                     "sanction" === m &&
                       (0, r.jsx)(X, {
                         subject: x,
@@ -1980,7 +1985,7 @@
                         onClose: () => g("main"),
                       }),
                     "editownerdisputedetails" === m &&
-                      (0, r.jsx)(ke, {
+                      (0, r.jsx)(ze, {
                         subject: x,
                         onClose: () => g("main"),
                         currentDetails:
@@ -1998,11 +2003,11 @@
           }),
         });
       }
-      function ke(e) {
+      function ze(e) {
         const { subject: t, onClose: n, currentDetails: s } = e,
           [i, a] = (0, l.useState)(s),
           o = (0, m.wy)(t.subject_type, t.subject_group_id, t.subject_id, i);
-        return (0, r.jsxs)(A.Z, {
+        return (0, r.jsxs)(b.Z, {
           children: [
             (0, r.jsxs)("label", {
               children: [
@@ -2014,10 +2019,10 @@
                 }),
               ],
             }),
-            (0, r.jsxs)(A.Z, {
+            (0, r.jsxs)(b.Z, {
               className: ee.BottomButtons,
               children: [
-                (0, r.jsx)(B.fu, {
+                (0, r.jsx)(v.fu, {
                   onClick: async () => {
                     await o.mutateAsync(), n();
                   },
@@ -2025,7 +2030,7 @@
                     "#moderation_editownerdisputedetails_save",
                   ),
                 }),
-                (0, r.jsx)(B.fu, {
+                (0, r.jsx)(v.fu, {
                   onClick: n,
                   children: h.T.Localize("#moderation_ownerdispute_cancel"),
                 }),
@@ -2038,7 +2043,7 @@
         const { authorSteamId: t, subject: n, onClose: s } = e,
           [i, a] = (0, l.useState)(""),
           o = (0, m.y4)(t, n.subject_type, n.subject_group_id, n.subject_id, i);
-        return (0, r.jsxs)(A.Z, {
+        return (0, r.jsxs)(b.Z, {
           className: ee.OwnerDisputeCtn,
           children: [
             (0, r.jsx)("div", {
@@ -2055,16 +2060,16 @@
                 }),
               ],
             }),
-            (0, r.jsxs)(A.Z, {
+            (0, r.jsxs)(b.Z, {
               className: ee.BottomButtons,
               children: [
-                (0, r.jsx)(B.fu, {
+                (0, r.jsx)(v.fu, {
                   onClick: async () => {
                     await o.mutateAsync(), s();
                   },
                   children: h.T.Localize("#moderation_ownerdispute_dispute"),
                 }),
-                (0, r.jsx)(B.fu, {
+                (0, r.jsx)(v.fu, {
                   onClick: s,
                   children: h.T.Localize("#moderation_ownerdispute_cancel"),
                 }),
@@ -2073,7 +2078,7 @@
           ],
         });
       }
-      function Fe(e) {
+      function Ie(e) {
         const { subject: t } = e,
           n = Le(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
           s =
@@ -2094,7 +2099,7 @@
           ],
         });
       }
-      function Ie(e) {
+      function Fe(e) {
         const { subject: t } = e,
           n =
             t &&
@@ -2213,7 +2218,7 @@
         return new (a())(
           async (t) => {
             const n = [...t],
-              s = await r.xt.GetPlayerLinkDetails(e, { steamids: n }),
+              s = await r.xtC.GetPlayerLinkDetails(e, { steamids: n }),
               i = new Map();
             return (
               s
@@ -2440,7 +2445,7 @@
         u = n(32754),
         d = n(51272),
         p = n(76217),
-        m = n(23310),
+        m = n(84143),
         h = n(92757);
       function g(e) {
         const {
@@ -2452,84 +2457,96 @@
             classNameTabContent: d,
             preferredFocus: g,
             bVerticalTabs: j,
+            bSticky: B,
+            bChecklistMode: v,
           } = e,
-          v = (0, h.zy)(),
-          B = (0, h.W6)(),
-          [A, b] = (0, s.useState)(() => {
+          b = (0, h.zy)(),
+          A = (0, h.W6)(),
+          [x, f] = (0, s.useState)(() => {
             var e;
             return (
               a ||
               (!n &&
-              (0, o.f3)(v, "tab") &&
-              null !== (e = (0, o.f3)(v, "tab")) &&
+              (0, o.f3)(b, "tab") &&
+              null !== (e = (0, o.f3)(b, "tab")) &&
               void 0 !== e
                 ? e
                 : "")
             );
           });
         (0, s.useEffect)(() => {
-          if (!e.bDisableRouting && v) {
-            const e = (0, o.f3)(v, "tab");
-            e && b(e);
+          if (!e.bDisableRouting && b) {
+            const e = (0, o.f3)(b, "tab");
+            e && f(e);
           }
-        }, [v, v.key, e.bDisableRouting, b]);
-        const x = s.useCallback(
+        }, [b, b.key, e.bDisableRouting, f]);
+        const y = s.useCallback(
             (e) => {
-              b(e.key),
-                n || (0, o.Bm)(B, "tab", e.key),
+              f(e.key),
+                n || (0, o.Bm)(A, "tab", e.key),
                 e.onClick && e.onClick(e);
             },
-            [n, B],
+            [n, A],
           ),
-          f = t.filter((e) => !e.hidden);
-        if (!f.length) return null;
-        const y = f.find((e) => e.key === A) || f[0],
-          S = g ? (null != a ? a : f[0].key) : void 0,
-          w = (0, r.jsxs)(r.Fragment, {
+          S = t.filter((e) => !e.hidden);
+        if (!S.length) return null;
+        const w = S.find((e) => e.key === x) || S[0],
+          M = g ? (null != a ? a : S[0].key) : void 0,
+          C = (0, r.jsxs)(r.Fragment, {
             children: [
               (0, r.jsx)(p.Z, {
                 className: (0, i.A)(
                   c().GraphicalAssetsTabs,
                   j && c().GraphicalAssetsTabsVertical,
+                  v && c().ChecklistMode,
+                  B && c().Sticky,
                   l,
                 ),
                 navEntryPreferPosition: g ? m.iU.PREFERRED_CHILD : m.iU.FIRST,
-                children: f.map((e, t) =>
+                children: S.map((e, t) =>
                   (0, r.jsx)(
                     _,
                     {
                       tab: e,
-                      OnTabClick: x,
+                      OnTabClick: y,
                       classNameTab: u,
-                      active: e.key === y.key,
-                      preferredFocus: S === e.key,
+                      active: e.key === w.key,
+                      preferredFocus: M === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              y && (0, r.jsx)(p.Z, { className: d, children: y.contents }),
+              w && (0, r.jsx)(p.Z, { className: d, children: w.contents }),
             ],
           });
         return j
           ? (0, r.jsx)(p.Z, {
               className: (0, i.A)(c().GraphicalAssetsTabsLayoutVertical),
-              children: w,
+              children: C,
             })
-          : w;
+          : C;
       }
       function j(e) {
-        const { statusType: t = "success", children: n } = e;
-        let s = "";
+        const { statusType: t = "success", bShowStatusBox: n, children: s } = e;
+        let a = "";
         return (
           "success" === t
-            ? (s = c().StatusSuccess)
+            ? (a = c().StatusSuccess)
             : "danger" === t
-              ? (s = c().StatusDanger)
-              : "caution" === t && (s = c().StatusCaution),
+              ? (a = c().StatusDanger)
+              : "caution" === t
+                ? (a = c().StatusCaution)
+                : "info" === t
+                  ? (a = c().StatusInfo)
+                  : "incomplete" === t && (a = c().StatusIncomplete),
           (0, r.jsx)("div", {
-            className: (0, i.A)(c().GraphicalAssetStatus, s),
-            children: n,
+            className: (0, i.A)(
+              c().GraphicalAssetStatus,
+              a,
+              n ? c().checklistBox : "",
+            ),
+            children: s,
           })
         );
       }

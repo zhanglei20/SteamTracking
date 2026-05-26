@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Subjek yang dilaporkan",
     "moderation_already_owner_disputed": "Sudah disengketakan",
     "moderationstats_alltypes": "Semua jenis subjek",
-    "moderation_alternateforumtool": "Alat alternatif",
+    "forumsubjectlist_subjectreportsummary": "%1$s belum diselesaikan, %1$s disengketakan",
     "empty_no_trailing_comma": ""
 }

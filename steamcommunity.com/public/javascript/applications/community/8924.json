@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Ilmiannetut aiheet",
     "moderation_already_owner_disputed": "Aiemmin kiistautettu",
     "moderationstats_alltypes": "Kaikki aihetyypit",
-    "moderation_alternateforumtool": "Vaihtoehtoinen työkalu",
+    "forumsubjectlist_subjectreportsummary": "%1$s ratkaisematonta, %1$s kiistautettua",
     "empty_no_trailing_comma": ""
 }

@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Nahlášené předměty",
     "moderation_already_owner_disputed": "Již zpochybněno",
     "moderationstats_alltypes": "Všechny typy předmětů",
-    "moderation_alternateforumtool": "Alternativní nástroj",
+    "forumsubjectlist_subjectreportsummary": "%1$s nevyřešeno, %1$s zpochybněno",
     "empty_no_trailing_comma": ""
 }

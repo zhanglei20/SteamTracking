@@ -1739,7 +1739,7 @@
         return new (a())(
           async (c) => {
             const n = [...c],
-              l = await e.xt.GetPlayerLinkDetails(t, { steamids: n }),
+              l = await e.xtC.GetPlayerLinkDetails(t, { steamids: n }),
               s = new Map();
             return (
               l

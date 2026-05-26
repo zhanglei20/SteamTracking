@@ -557,8 +557,8 @@
             queryFn: async () => {
               const e = new Map();
               if (p.iA.logged_in) {
-                const a = _.w.Init(h.dN),
-                  n = (await h.xt.GetNicknameList(t, a)).Body().toObject();
+                const a = _.w.Init(h.w_T),
+                  n = (await h.xtC.GetNicknameList(t, a)).Body().toObject();
                 n?.nicknames &&
                   n.nicknames.length > 0 &&
                   n.nicknames.forEach((t) => {
@@ -666,8 +666,8 @@
             return {
               queryKey: ["communitypreferences"],
               queryFn: async () => {
-                const t = s.w.Init(i.tz),
-                  a = await i.xt.GetCommunityPreferences(e, t);
+                const t = s.w.Init(i.tzK),
+                  a = await i.xtC.GetCommunityPreferences(e, t);
                 if (a.GetEResult() != n.R)
                   throw new Error(
                     `Error from GetCommunityPreferences: ${a.GetEResult()} ${a.GetErrorMessage()}`,

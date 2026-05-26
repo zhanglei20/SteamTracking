@@ -349,9 +349,9 @@
         return (0, l.I)({
           queryKey: T(),
           queryFn: async () => {
-            const n = s.w.Init(r.jn);
+            const n = s.w.Init(r.jng);
             n.Body().set_badgeid(e), n.Body().set_steamid(m.iA.steamid);
-            return (await r.xt.GetCommunityBadgeProgress(t, n))
+            return (await r.xtC.GetCommunityBadgeProgress(t, n))
               .Body()
               .toObject();
           },

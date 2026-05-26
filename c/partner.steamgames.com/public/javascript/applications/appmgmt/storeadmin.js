@@ -499,26 +499,24 @@
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        EventSizer: "_2JC5DEuXUeE50kjpb7Eeau",
         OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        ShowInWideMode: "RLbLb742gN095uDUITtIB",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
         OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
-        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
-        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
-        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
-        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
-        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
+        EventType: "_2BWwVF5N-3fDuJRblB6gHb",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
@@ -4105,6 +4103,9 @@
                 title: {
                   default: null,
                 },
+                style: {
+                  default: void 0,
+                },
               },
               group: "inline",
               draggable: !0,
@@ -4115,18 +4116,21 @@
                     src: _.getAttribute("src"),
                     title: _.getAttribute("title"),
                     alt: _.getAttribute("alt"),
+                    style: _.getAttribute("style"),
                   }),
                 },
               ],
               toDOM(_) {
-                const { src: _, alt: _, title: _ } = _.attrs;
+                const { src: _, alt: _, title: _, style: _ } = _.attrs;
                 return [
                   "img",
                   {
                     src: _,
                     alt: _,
                     title: _,
-                    class: _().Image,
+                    class: (0, _._)(_().Image, {
+                      [_().Image_Inline]: "inline" === _,
+                    }),
                   },
                 ];
               },
@@ -4134,10 +4138,16 @@
                 tag: "img",
                 BBArgsToAttrs: (_) => ({
                   src: _.src,
+                  style: _.style ?? void 0,
                 }),
                 AttrsToBBArgs: (_) => ({
                   args: {
                     src: _.src,
+                    ...(_.style
+                      ? {
+                          style: _.style,
+                        }
+                      : {}),
                   },
                 }),
                 convertContentToAttr: "src",
@@ -19230,6 +19240,7 @@
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: _,
           } = _,
+          _ = (0, _._)(),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -19245,7 +19256,7 @@
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
-            bUseDiv: !_,
+            bUsePanel: !_ && !_,
           });
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
@@ -19345,7 +19356,7 @@
         const {
             _: _,
             bHideStatusBanners: _,
-            bUseDiv: _,
+            bUsePanel: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -19364,7 +19375,7 @@
         const _ = _
             ? void 0
             : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
-          _ = _ ? "div" : _._,
+          _ = _ ? _._ : _._,
           _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -19383,11 +19394,12 @@
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
+                  focusable: !0,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
                       hide_status_banners: _,
-                      show_early_access: _.bShowEarlyAccessBanner,
+                      show_early_access: _,
                     }),
                     "none" != _ &&
                       (0, _.jsx)(_._, {
@@ -20034,7 +20046,9 @@
         }
         async UploadFile(_, _) {
           (this.m_fnCreatePlaceholder && this.m_fnReplacePlaceholder) ||
-            this.AddError("No editor registered to handle file upload");
+            this.AddError(
+              "Upload File: No editor registered to handle file upload",
+            );
           const _ = this.m_fnCreatePlaceholder(
             {
               file: _,
@@ -20049,7 +20063,9 @@
         QueueUploadFileByURL(_, _, _) {
           if (
             ((this.m_fnCreatePlaceholder && this.m_fnReplacePlaceholder) ||
-              this.AddError("No editor registered to handle file upload"),
+              this.AddError(
+                "QueueUploadFile: No editor registered to handle file upload",
+              ),
             console.log(`QueueUploadFileByURL: ${_} at pos ${_}`),
             _.startsWith("data:"))
           ) {

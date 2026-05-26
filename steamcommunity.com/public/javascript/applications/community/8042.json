@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Докладвани теми",
     "moderation_already_owner_disputed": "Вече е оспорено",
     "moderationstats_alltypes": "Всички типове теми",
-    "moderation_alternateforumtool": "Алтернативен инструмент",
+    "forumsubjectlist_subjectreportsummary": "%1$s нерешени, %1$s оспорени",
     "empty_no_trailing_comma": ""
 }

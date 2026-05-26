@@ -46,6 +46,7 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
         CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
@@ -580,26 +581,31 @@
         l = n(18654),
         u = n.n(l);
       function d(e) {
-        const { id: t, imageType: n, bPreferAssetWithoutOverride: l } = e,
-          { storeItemAsset: d, storeItemDefaultInfo: p } = (0, r.q)(t, n, l);
+        const {
+            id: t,
+            imageType: n,
+            bPreferAssetWithoutOverride: l,
+            strAdditionalClassName: d,
+          } = e,
+          { storeItemAsset: p, storeItemDefaultInfo: g } = (0, r.q)(t, n, l);
         if ("library" === n || "vertical" == n)
           return (0, a.jsx)(s.G, { id: t, bPreferAssetWithoutOverride: l });
-        let g = "";
-        if ("main" === n) g = u().MainCapsuleImageContainer;
-        else g = u().HeaderCapsuleImageContainer;
-        if (void 0 === d || !p)
+        let m = "";
+        if ("main" === n) m = u().MainCapsuleImageContainer;
+        else m = u().HeaderCapsuleImageContainer;
+        if (void 0 === p || !g)
           return (0, a.jsx)("div", {
-            className: (0, c.A)(g, "CapsuleImageCtn"),
+            className: (0, c.A)(m, "CapsuleImageCtn", d),
           });
-        if (null == d) return null;
-        let m = (0, i.N)(d, "header" === n);
+        if (null == p) return null;
+        let h = (0, i.N)(p, "header" === n);
         return (0, a.jsx)("div", {
-          className: (0, c.A)(g, "CapsuleImageCtn"),
+          className: (0, c.A)(m, "CapsuleImageCtn", d),
           children: (0, a.jsx)(o.o, {
             lazyLoad: !0,
-            srcs: m,
+            srcs: h,
             className: (0, c.A)(u().CapsuleImage),
-            alt: p.name,
+            alt: g.name,
           }),
         });
       }
@@ -656,11 +662,11 @@
           return (0, a.jsx)("div", {
             className: c().HeroCapsuleImageContainer,
           });
-        const { strStoreVerticalURL: y, strLibraryVerticalURL: b } = (0, p.M)(
+        const { strStoreVerticalURL: y, strLibraryVerticalURL: I } = (0, p.M)(
           h,
           g,
         );
-        if (y && (!n || !b))
+        if (y && (!n || !I))
           return (0, a.jsxs)("div", {
             className: (0, u.A)(
               c().HeroCapsuleImageContainer,
@@ -680,7 +686,7 @@
                 }),
             ],
           });
-        if (b)
+        if (I)
           return (0, a.jsxs)("div", {
             className: (0, u.A)(
               c().LibraryFallbackAssetImageContainer,
@@ -690,23 +696,23 @@
             children: [
               (0, a.jsx)("div", {
                 className: c().FallbackBackground,
-                style: { backgroundImage: `url(${b})` },
+                style: { backgroundImage: `url(${I})` },
               }),
               (0, a.jsx)("img", {
-                src: b,
+                src: I,
                 className: c().CapsuleImage,
                 alt: g.name,
               }),
             ],
           });
-        const I = (0, p.N)(h, !0),
-          x = I.length - 1,
+        const b = (0, p.N)(h, !0),
+          x = b.length - 1,
           v = (e) => {
-            const t = I.indexOf(e);
-            t >= x && t < I.length - 1 && _(t + 1);
+            const t = b.indexOf(e);
+            t >= x && t < b.length - 1 && _(t + 1);
           };
-        if (f < I.length) {
-          const e = I[f];
+        if (f < b.length) {
+          const e = b[f];
           return (0, a.jsxs)("div", {
             className: c().LibraryFallbackAssetImageContainer,
             children: [
@@ -716,7 +722,7 @@
               }),
               (0, a.jsx)(l.o, {
                 lazyLoad: !0,
-                srcs: I,
+                srcs: b,
                 className: c().CapsuleImage,
                 alt: g.name,
                 onImageError: v,
@@ -770,8 +776,8 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
       var _ = n(18654),
         y = n.n(_),
-        b = n(12155),
-        I = n(52038),
+        I = n(12155),
+        b = n(52038),
         x = n(94011);
       function v(e) {
         const { appids: t, hide_status_banners: n, show_early_access: i } = e,
@@ -810,11 +816,11 @@
           L = v && !n,
           E = !n && i;
         return (0, a.jsxs)("div", {
-          className: (0, I.A)(y().CapsuleDecorators, "CapsuleDecorators"),
+          className: (0, b.A)(y().CapsuleDecorators, "CapsuleDecorators"),
           children: [
             C &&
               (0, a.jsxs)("span", {
-                className: (0, I.A)(y().Banner, y().Blue),
+                className: (0, b.A)(y().Banner, y().Blue),
                 children: [
                   (0, a.jsx)("img", {
                     src: (0, r.YJ)(f),
@@ -828,7 +834,7 @@
               (0, a.jsxs)("span", {
                 className: y().Banner,
                 children: [
-                  (0, a.jsx)(b.qnF, { className: y().LinesImg }),
+                  (0, a.jsx)(I.qnF, { className: y().LinesImg }),
                   s.Z.Localize("#Sale_OnWishlist"),
                 ],
               }),
@@ -858,7 +864,7 @@
           })(t);
         return n
           ? (0, a.jsx)("span", {
-              className: (0, I.A)(y().Banner, y().EarlyAccessGradient),
+              className: (0, b.A)(y().Banner, y().EarlyAccessGradient),
               children: s.Z.Localize("#Sale_EarlyAccess"),
             })
           : null;
@@ -1061,7 +1067,7 @@
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => S, CF: () => A, KM: () => b, KT: () => v });
+      n.d(t, { B3: () => S, CF: () => A, KM: () => I, KT: () => v });
       var a = n(41735),
         r = n.n(a),
         s = n(58632),
@@ -1078,15 +1084,15 @@
         f = n(23809),
         _ = n(7860);
       const y = "nicknames";
-      function b(e) {
+      function I(e) {
         const t = (0, f.KV)(),
           { data: n, isLoading: a } = (0, c.I)({
             queryKey: [y],
             queryFn: async () => {
               const e = new Map();
               if (g.iA.logged_in) {
-                const n = m.w.Init(h.dN),
-                  a = (await h.xt.GetNicknameList(t, n)).Body().toObject();
+                const n = m.w.Init(h.w_T),
+                  a = (await h.xtC.GetNicknameList(t, n)).Body().toObject();
                 a?.nicknames &&
                   a.nicknames.length > 0 &&
                   a.nicknames.forEach((t) => {
@@ -1098,7 +1104,7 @@
           });
         return n ? n.get(e) : null;
       }
-      const I = new (i())(
+      const b = new (i())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -1147,7 +1153,7 @@
       function v(e) {
         const { data: t, isLoading: n } = (0, c.I)({
           queryKey: [x, e],
-          queryFn: () => I.load(e),
+          queryFn: () => b.load(e),
         });
         return [t, n];
       }
@@ -1156,7 +1162,7 @@
           { data: n, isLoading: a } = (0, c.I)({
             queryKey: [x, e],
             queryFn: async () => {
-              const n = await I.loadMany(e);
+              const n = await b.loadMany(e);
               return (
                 n.forEach((e) => {
                   const n = [x, new d.b(e.steamid).GetAccountID()];
@@ -1184,7 +1190,7 @@
     },
     1909: (e, t, n) => {
       "use strict";
-      n.d(t, { Ng: () => y, iN: () => b, yk: () => I });
+      n.d(t, { Ng: () => y, iN: () => I, yk: () => b });
       var a = n(34629),
         r = n(7850),
         s = n(75844),
@@ -1303,7 +1309,7 @@
           });
         }
       };
-      function b(e) {
+      function I(e) {
         const [t, n] = (0, i.q3)(() => [
           u.O.Get().GetHasLocalizationContext(),
           u.O.Get().GetCurEditLanguage(),
@@ -1316,7 +1322,7 @@
           strTooltip: t ? void 0 : (0, m.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function I(e) {
+      function b(e) {
         const { fnLangHasData: t } = e;
         o.useEffect(
           () => (

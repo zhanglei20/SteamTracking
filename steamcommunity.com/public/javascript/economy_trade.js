@@ -1415,14 +1415,19 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 
 		g_cMyItemsInTrade = ElementCount( rgTradeStatusForSlots.me.assets ) + rgTradeStatusForSlots.me.currency.length;
 		g_cTheirItemsInTrade = ElementCount( rgTradeStatusForSlots.them.assets ) + rgTradeStatusForSlots.them.currency.length;
-		RefreshTradeEscrowDisplay();
+
+		RecomputeTradeProtectedStatus( rgTradeStatus );
+
+		if ( !g_bTradeProtected )
+		{
+			RefreshTradeEscrowDisplay();
+		}
 
 		UpdateSlots( rgTradeStatusForSlots.me.assets, rgTradeStatusForSlots.me.currency, true, UserYou, rgTradeStatusForSlots.version );
 
 		UpdateSlots( rgTradeStatusForSlots.them.assets, rgTradeStatusForSlots.them.currency, false, UserThem, rgTradeStatusForSlots.version );
 
-				RecomputeTradeProtectedStatus( rgTradeStatus );
-		
+
 		if ( rgTradeStatus.newversion )
 			g_rgLastFullTradeStatus = rgTradeStatus;
 

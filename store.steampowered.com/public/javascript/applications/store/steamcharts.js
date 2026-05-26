@@ -3484,7 +3484,7 @@
           s = (0, ue.E)();
         return (0, n.jsx)("div", {
           style: { display: "flex", width: "304px" },
-          children: (0, n.jsx)(Jt.uY, {
+          children: (0, n.jsx)(Jt.u, {
             event: a,
             imageURLOverride: t,
             langOverride: r ?? s,
@@ -5179,7 +5179,7 @@
         });
       }
       var Za = a(77021),
-        Ka = a(32478);
+        Ka = a(76647);
       function Qa(e) {
         const {
             promotionName: t,
@@ -5454,7 +5454,7 @@
           I &&
             I.groupID != C &&
             (y[y.length - 1].elements.push(
-              ve(t, I, i && i?.GetActiveTabUniqueID()),
+              ve(t, I, o, i && i?.GetActiveTabUniqueID()),
             ),
             (I = null)),
             C
@@ -5469,7 +5469,7 @@
         }),
           I &&
             (y[y.length - 1].elements.push(
-              ve(t, I, i && i?.GetActiveTabUniqueID()),
+              ve(t, I, o, i && i?.GetActiveTabUniqueID()),
             ),
             (I = null));
         const D = y.map((e, t) =>

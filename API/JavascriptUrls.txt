@@ -1298,10 +1298,8 @@ ${STORE_BASE_URL}account/ajaxgetcontrollersused
 ${STORE_BASE_URL}account/ajaxhardwaredelete
 ${STORE_BASE_URL}account/ajaxhardwarerename
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
-${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/cookiepreferences
 ${STORE_BASE_URL}account/cookiepreferences/
-${STORE_BASE_URL}account/emailoptout
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement/
 ${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
@@ -1311,6 +1309,7 @@ ${STORE_BASE_URL}account/gatedaccess?appid=${appid}
 ${STORE_BASE_URL}account/gatedaccess?appid=${}
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
+${STORE_BASE_URL}account/notificationsettings#notificationgroup_4
 ${STORE_BASE_URL}account/notinterested
 ${STORE_BASE_URL}account/optoutappcommunication/
 ${STORE_BASE_URL}account/preferences
@@ -2242,7 +2241,6 @@ https://cdn.fastly.steamstatic.com/steamcommunity/public/images/${hat_image}
 https://cdn.fastly.steamstatic.com/steamcommunity/public/images/${shirt_image}
 https://cdn.fastly.steamstatic.com/steamcommunity/public/images/avatars//${}/${avatar}.jpg
 https://cdn.fastly.steamstatic.com/store//icons/rank_icon_lg.svg
-https://cdn.fastly.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif
 https://cdn.steamstatic.com/store/promo/spring2023/push_icon.png?v=1
 https://checkout.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type=${type}
 https://checkout.steampowered.com/checkout/authenticationdetails/

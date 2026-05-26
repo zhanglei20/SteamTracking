@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    768: (e, t, r) => {
+    316: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => ii });
       var i,
         n = r(669),
         a = r.n(n),
-        s = r(725);
+        s = r(574);
       r(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -84,10 +84,10 @@
         );
       }
       var g = r(629),
-        h = r(608),
-        _ = r(123),
-        p = r(272),
-        f = r(207);
+        h = r(604),
+        _ = r(567),
+        p = r(908),
+        f = r(603);
       class b {
         m_NavigationController;
         m_postMessage;
@@ -217,17 +217,17 @@
           Math.floor(Math.random() * (t - e + 1)) + e
         );
       }
-      function w(e, t, r) {
+      function S(e, t, r) {
         return null == e || isNaN(e) ? e : Math.max(t, Math.min(r, e));
       }
-      function S() {
+      function w() {
         return !!window.document;
       }
       let T;
       function C() {
-        if (!S()) return T || (T = M()), T;
+        if (!w()) return T || (T = M()), T;
         let e = (function (e) {
-          if (!S() || !window.document.cookie) return null;
+          if (!w() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         })("sessionid");
@@ -241,7 +241,7 @@
         })();
         return (
           (function (e, t, r, i) {
-            if (!S()) return;
+            if (!w()) return;
             i || (i = "/");
             let n = "";
             if (void 0 !== r && r) {
@@ -487,8 +487,8 @@
         (0, g.Cg)([h.o], R.prototype, "OnKeyUp", null),
         (0, g.Cg)([h.o], R.prototype, "Reset", null);
       var A,
-        F = r(913),
-        E = r(31);
+        F = r(389),
+        E = r(731);
       class N {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -1442,22 +1442,22 @@
             ? g - l
             : 0;
       }
-      function we(e) {
+      function Se(e) {
         return "auto" == e
           ? 0
           : e.endsWith("px")
             ? parseInt(e)
             : (console.log("Unsupported length", e), 0);
       }
-      function Se(e) {
+      function we(e) {
         if (!("ownerDocument" in e))
           return { left: 0, right: 0, top: 0, bottom: 0 };
         const t = e.ownerDocument.defaultView.getComputedStyle(e);
         return {
-          left: we(t.scrollMarginLeft),
-          right: we(t.scrollMarginRight),
-          top: we(t.scrollMarginTop),
-          bottom: we(t.scrollMarginBottom),
+          left: Se(t.scrollMarginLeft),
+          right: Se(t.scrollMarginRight),
+          top: Se(t.scrollMarginTop),
+          bottom: Se(t.scrollMarginBottom),
         };
       }
       function Te(e, t) {
@@ -1471,10 +1471,10 @@
                     window.document.documentElement,
                   )),
             {
-              left: we(t.scrollPaddingLeft),
-              right: we(t.scrollPaddingRight),
-              top: we(t.scrollPaddingTop),
-              bottom: we(t.scrollPaddingBottom),
+              left: Se(t.scrollPaddingLeft),
+              right: Se(t.scrollPaddingRight),
+              top: Se(t.scrollPaddingTop),
+              bottom: Se(t.scrollPaddingBottom),
             }
           );
         })(e);
@@ -1500,7 +1500,7 @@
         for (; s; ) {
           let e = q(s);
           e || (e = V(s));
-          let t = Se(s),
+          let t = we(s),
             r = Te(e, Be(e)),
             c = Fe(e),
             u = { element: e, left: 0, top: 0 };
@@ -1516,7 +1516,7 @@
             (i && "y" != i) ||
               !K(e, "y") ||
               ((u.top = ye(o, r, t, "y")),
-              (u.top = w(u.top, -c.scrollTop, c.MaxScrollTop() - c.scrollTop)),
+              (u.top = S(u.top, -c.scrollTop, c.MaxScrollTop() - c.scrollTop)),
               n &&
                 ((u.top = Math.min(l, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
                 (l -= Math.abs(u.top))),
@@ -1524,7 +1524,7 @@
             (i && "x" != i) ||
               !K(e, "x") ||
               ((u.left = ye(o, r, t, "x")),
-              (u.left = w(
+              (u.left = S(
                 u.left,
                 -c.scrollLeft,
                 c.MaxScrollLeft() - c.scrollLeft,
@@ -1555,8 +1555,8 @@
           let t = Fe(e.element),
             i = t.scrollTop + e.top,
             n = t.scrollLeft + e.left;
-          (n = w(n, 0, t.MaxScrollLeft())),
-            (i = w(i, 0, t.MaxScrollTop())),
+          (n = S(n, 0, t.MaxScrollLeft())),
+            (i = S(i, 0, t.MaxScrollTop())),
             (Ce(t.scrollLeft - n) && Ce(t.scrollTop - i)) ||
               (t.scrollTo({ left: n, top: i, behavior: r }),
               c || (pe("Scrolling:"), (c = !0)),
@@ -2726,9 +2726,10 @@
               r[$e] &&
                 t.intercept({
                   async handler() {
-                    const e = window.navigation.currentEntry?.getState() ?? {};
+                    const r = t.destination.getState() ?? {},
+                      { [Ve(e)]: i, ...n } = r;
                     window.navigation.updateCurrentEntry({
-                      state: { ...e, [$e]: !0 },
+                      state: { ...n, [$e]: !0 },
                     });
                   },
                   focusReset: "manual",
@@ -4159,7 +4160,7 @@
       function yt(e, t) {
         return t instanceof vt ? t : vt.InitFromObject(e, t);
       }
-      const wt = new (class {
+      const St = new (class {
         m_transport = null;
         m_registry = null;
         SetDefaultTransport(e) {
@@ -4183,8 +4184,8 @@
           return this.m_registry;
         }
       })();
-      function St() {
-        return wt;
+      function wt() {
+        return St;
       }
       class Tt extends rt.Message {
         static ImplementsStaticInterface() {}
@@ -7276,20 +7277,20 @@
           return "CSteamInputService_FirstSteamControllerConnection_Notification";
         }
       }
-      class wr extends rt.Message {
+      class Sr extends rt.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            wr.prototype.period_ms || dt(wr.M()),
+            Sr.prototype.period_ms || dt(Sr.M()),
             rt.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            wr.sm_m ||
-              (wr.sm_m = {
-                proto: wr,
+            Sr.sm_m ||
+              (Sr.sm_m = {
+                proto: Sr,
                 fields: {
                   period_ms: { n: 1, br: nt.readInt32, bw: at.writeInt32 },
                   packets_sent: { n: 2, br: nt.readUint32, bw: at.writeUint32 },
@@ -7311,67 +7312,6 @@
                     br: nt.readUint32,
                     bw: at.writeUint32,
                   },
-                },
-              }),
-            wr.sm_m
-          );
-        }
-        static MBF() {
-          return wr.sm_mbf || (wr.sm_mbf = st(wr.M())), wr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return wr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return lt(wr.M(), e, t);
-        }
-        static fromObject(e) {
-          return ot(wr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (it().BinaryReader)(e),
-            r = new wr();
-          return wr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return ct(wr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (it().BinaryWriter)();
-          return wr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          ut(wr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (it().BinaryWriter)();
-          return wr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTritonQosStatus";
-        }
-      }
-      class Sr extends rt.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Sr.prototype.controller_index || dt(Sr.M()),
-            rt.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Sr.sm_m ||
-              (Sr.sm_m = {
-                proto: Sr,
-                fields: {
-                  controller_index: {
-                    n: 1,
-                    br: nt.readUint32,
-                    bw: at.writeUint32,
-                  },
-                  status: { n: 2, c: wr },
                 },
               }),
             Sr.sm_m
@@ -7407,6 +7347,67 @@
         serializeBase64String() {
           var e = new (it().BinaryWriter)();
           return Sr.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CTritonQosStatus";
+        }
+      }
+      class wr extends rt.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            wr.prototype.controller_index || dt(wr.M()),
+            rt.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            wr.sm_m ||
+              (wr.sm_m = {
+                proto: wr,
+                fields: {
+                  controller_index: {
+                    n: 1,
+                    br: nt.readUint32,
+                    bw: at.writeUint32,
+                  },
+                  status: { n: 2, c: Sr },
+                },
+              }),
+            wr.sm_m
+          );
+        }
+        static MBF() {
+          return wr.sm_mbf || (wr.sm_mbf = st(wr.M())), wr.sm_mbf;
+        }
+        toObject(e = !1) {
+          return wr.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return lt(wr.M(), e, t);
+        }
+        static fromObject(e) {
+          return ot(wr.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (it().BinaryReader)(e),
+            r = new wr();
+          return wr.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return ct(wr.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (it().BinaryWriter)();
+          return wr.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          ut(wr.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (it().BinaryWriter)();
+          return wr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamInputService_TritonQos_Notification";
@@ -7581,7 +7582,7 @@
           request: Tt,
         }),
           (e.RegisterForNotifyButtonStateChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7592,7 +7593,7 @@
                 );
           }),
           (e.NotifyButtonStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7604,7 +7605,7 @@
                 );
           }),
           (e.SendMsgNotifyButtonStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7620,7 +7621,7 @@
             request: At,
           }),
           (e.RegisterForNotifyAxesStateChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7631,7 +7632,7 @@
                 );
           }),
           (e.NotifyAxesStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7643,7 +7644,7 @@
                 );
           }),
           (e.SendMsgNotifyAxesStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7659,7 +7660,7 @@
             request: Ft,
           }),
           (e.RegisterForNotifyGyroQuaternionStateChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7670,7 +7671,7 @@
                 );
           }),
           (e.NotifyGyroQuaternionStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7682,7 +7683,7 @@
                 );
           }),
           (e.SendMsgNotifyGyroQuaternionStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7698,7 +7699,7 @@
             request: Et,
           }),
           (e.RegisterForNotifyGyroSpeedStateChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7709,7 +7710,7 @@
                 );
           }),
           (e.NotifyGyroSpeedStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7721,7 +7722,7 @@
                 );
           }),
           (e.SendMsgNotifyGyroSpeedStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7737,7 +7738,7 @@
             request: Nt,
           }),
           (e.RegisterForNotifyGyroAccelerometerStateChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7748,7 +7749,7 @@
                 );
           }),
           (e.NotifyGyroAccelerometerStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7760,7 +7761,7 @@
                 );
           }),
           (e.SendMsgNotifyGyroAccelerometerStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7776,7 +7777,7 @@
             request: Dt,
           }),
           (e.RegisterForNotifyGyroCalibrationStateChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7787,7 +7788,7 @@
                 );
           }),
           (e.NotifyGyroCalibrationStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7799,7 +7800,7 @@
                 );
           }),
           (e.SendMsgNotifyGyroCalibrationStateChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7815,7 +7816,7 @@
             request: nr,
           }),
           (e.RegisterForNotifyControllerPowerMenu = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7826,7 +7827,7 @@
                 );
           }),
           (e.NotifyControllerPowerMenu = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7838,7 +7839,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerPowerMenu = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7854,7 +7855,7 @@
             request: Ut,
           }),
           (e.RegisterForNotifyUnpairedTritonPluggedIn = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7865,7 +7866,7 @@
                 );
           }),
           (e.NotifyUnpairedTritonPluggedIn = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7877,7 +7878,7 @@
                 );
           }),
           (e.SendMsgNotifyUnpairedTritonPluggedIn = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7893,7 +7894,7 @@
             request: kt,
           }),
           (e.RegisterForNotifyUnpairedTritonDocked = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7904,7 +7905,7 @@
                 );
           }),
           (e.NotifyUnpairedTritonDocked = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7916,7 +7917,7 @@
                 );
           }),
           (e.SendMsgNotifyUnpairedTritonDocked = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7932,7 +7933,7 @@
             request: jt,
           }),
           (e.RegisterForNotifyTritonUndocked = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7943,7 +7944,7 @@
                 );
           }),
           (e.NotifyTritonUndocked = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7955,7 +7956,7 @@
                 );
           }),
           (e.SendMsgNotifyTritonUndocked = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7971,7 +7972,7 @@
             request: xt,
           }),
           (e.RegisterForNotifySteamDonglesChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -7982,7 +7983,7 @@
                 );
           }),
           (e.NotifySteamDonglesChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -7994,7 +7995,7 @@
                 );
           }),
           (e.SendMsgNotifySteamDonglesChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8010,7 +8011,7 @@
             request: ar,
           }),
           (e.RegisterForNotifyControllerDisconnected = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -8021,7 +8022,7 @@
                 );
           }),
           (e.NotifyControllerDisconnected = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8033,7 +8034,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerDisconnected = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8049,7 +8050,7 @@
             request: Ht,
           }),
           (e.RegisterForNotifyControllerPairingChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -8060,7 +8061,7 @@
                 );
           }),
           (e.NotifyControllerPairingChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8072,7 +8073,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerPairingChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8088,7 +8089,7 @@
             request: br,
           }),
           (e.RegisterForNotifyControllerListChanged = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -8099,7 +8100,7 @@
                 );
           }),
           (e.NotifyControllerListChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8111,7 +8112,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerListChanged = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8127,7 +8128,7 @@
             request: Mr,
           }),
           (e.RegisterForNotifyControllerBatteryState = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -8138,7 +8139,7 @@
                 );
           }),
           (e.NotifyControllerBatteryState = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8150,7 +8151,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerBatteryState = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8166,7 +8167,7 @@
             request: yr,
           }),
           (e.RegisterForNotifyFirstSteamControllerConnection = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -8177,7 +8178,7 @@
                 );
           }),
           (e.NotifyFirstSteamControllerConnection = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8189,7 +8190,7 @@
                 );
           }),
           (e.SendMsgNotifyFirstSteamControllerConnection = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -8202,10 +8203,10 @@
           }),
           (e.NotifyTritonQosHandler = {
             name: "SteamInputManager.NotifyTritonQos#1",
-            request: Sr,
+            request: wr,
           }),
           (e.RegisterForNotifyTritonQos = function (t, r) {
-            return null == (r = r || St().GetDefaultHandlerRegistry())
+            return null == (r = r || wt().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -8216,26 +8217,26 @@
                 );
           }),
           (e.NotifyTritonQos = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamInputManager.NotifyTritonQos#1",
-                  yt(Sr, e),
+                  yt(wr, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgNotifyTritonQos = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamInputManager.NotifyTritonQos#1",
-                  yt(Sr, e),
+                  yt(wr, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -8245,7 +8246,7 @@
             response: Pt,
           }),
           (e.StartControllerStateFlow = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8260,7 +8261,7 @@
                 );
           }),
           (e.SendMsgStartControllerStateFlow = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8280,7 +8281,7 @@
             response: Pt,
           }),
           (e.EndControllerStateFlow = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8295,7 +8296,7 @@
                 );
           }),
           (e.SendMsgEndControllerStateFlow = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8315,7 +8316,7 @@
             response: ir,
           }),
           (e.GetControllerAccessibilityStrings = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8330,7 +8331,7 @@
                 );
           }),
           (e.SendMsgGetControllerAccessibilityStrings = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8350,7 +8351,7 @@
             response: zt,
           }),
           (e.StartGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8365,7 +8366,7 @@
                 );
           }),
           (e.SendMsgStartGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8385,7 +8386,7 @@
             response: zt,
           }),
           (e.CancelGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8400,7 +8401,7 @@
                 );
           }),
           (e.SendMsgCancelGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8420,7 +8421,7 @@
             response: Lt,
           }),
           (e.PairDongleTritonConnected = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8435,7 +8436,7 @@
                 );
           }),
           (e.SendMsgPairDongleTritonConnected = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8455,7 +8456,7 @@
             response: qt,
           }),
           (e.PairDongleTritonDocked = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8470,7 +8471,7 @@
                 );
           }),
           (e.SendMsgPairDongleTritonDocked = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8490,7 +8491,7 @@
             response: $t,
           }),
           (e.GetDongles = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8503,7 +8504,7 @@
                 });
           }),
           (e.SendMsgGetDongles = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8521,7 +8522,7 @@
             response: Zt,
           }),
           (e.ShouldTritonPairInOobe = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8536,7 +8537,7 @@
                 );
           }),
           (e.SendMsgShouldTritonPairInOobe = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8556,7 +8557,7 @@
             response: Jt,
           }),
           (e.WaitInitialControllerStateEnumerated = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8571,7 +8572,7 @@
                 );
           }),
           (e.SendMsgWaitInitialControllerStateEnumerated = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8591,7 +8592,7 @@
             response: or,
           }),
           (e.GetTritonPairingInfo = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8606,7 +8607,7 @@
                 );
           }),
           (e.SendMsgGetTritonPairingInfo = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8626,7 +8627,7 @@
             response: ur,
           }),
           (e.ForgetTritonPairingBond = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8641,7 +8642,7 @@
                 );
           }),
           (e.SendMsgForgetTritonPairingBond = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8661,7 +8662,7 @@
             response: mr,
           }),
           (e.ForgetDonglePairingBond = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8676,7 +8677,7 @@
                 );
           }),
           (e.SendMsgForgetDonglePairingBond = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8696,7 +8697,7 @@
             response: hr,
           }),
           (e.GetControllerName = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8711,7 +8712,7 @@
                 );
           }),
           (e.SendMsgGetControllerName = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8731,7 +8732,7 @@
             response: vr,
           }),
           (e.GetControllerList = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8746,7 +8747,7 @@
                 );
           }),
           (e.SendMsgGetControllerList = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8766,7 +8767,7 @@
             response: pr,
           }),
           (e.EnableDockedInput = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8781,7 +8782,7 @@
                 );
           }),
           (e.SendMsgEnableDockedInput = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8801,7 +8802,7 @@
             response: Cr,
           }),
           (e.EnableQosStatus = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -8816,7 +8817,7 @@
                 );
           }),
           (e.SendMsgEnableQosStatus = function (e, t) {
-            return null == (t = t || St().GetDefaultTransport())
+            return null == (t = t || wt().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -9917,8 +9918,8 @@
             onOKActionDescription: B,
             onCancelActionDescription: v,
             onSecondaryActionDescription: y,
-            onOptionsActionDescription: w,
-            onMenuActionDescription: S,
+            onOptionsActionDescription: S,
+            onMenuActionDescription: w,
             actionDescriptionMap: T,
             onOKButton: C,
             onCancelButton: M,
@@ -9996,7 +9997,7 @@
               })(t[0], x),
             ),
           U &&
-            w &&
+            S &&
             ci(
               t[0],
               (function (e, t) {
@@ -10004,7 +10005,7 @@
               })(t[0], U),
             ),
           k &&
-            S &&
+            w &&
             ci(
               t[0],
               (function (e, t) {
@@ -10059,8 +10060,8 @@
             onOKActionDescription: B,
             onCancelActionDescription: v,
             onSecondaryActionDescription: y,
-            onOptionsActionDescription: w,
-            onMenuActionDescription: S,
+            onOptionsActionDescription: S,
+            onMenuActionDescription: w,
             actionDescriptionMap: T,
           }),
           ...H,
@@ -10140,7 +10141,7 @@
         },
       };
     },
-    123: (e, t, r) => {
+    567: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -10153,12 +10154,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    207: (e, t, r) => {
+    603: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => s, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(608),
-        a = r(123);
+        n = r(604),
+        a = r(567);
       class s {
         PostMessage(e) {}
         RegisterForMessage(e) {}

@@ -1188,8 +1188,8 @@
             queryFn: async () => {
               const e = new Map();
               if (p.iA.logged_in) {
-                const a = u.w.Init(_.dN),
-                  s = (await _.xt.GetNicknameList(t, a)).Body().toObject();
+                const a = u.w.Init(_.w_T),
+                  s = (await _.xtC.GetNicknameList(t, a)).Body().toObject();
                 s?.nicknames &&
                   s.nicknames.length > 0 &&
                   s.nicknames.forEach((t) => {
@@ -4638,9 +4638,9 @@
               "/ajaxpostuserstatus";
             try {
               if (Z.TS.IN_STEAMUI) {
-                let a = d.w.Init(p.kV);
+                let a = d.w.Init(p.kVt);
                 a.Body().set_appid(t), a.Body().set_status_text(s);
-                let n = await p.xt.PostStatusToFriends(
+                let n = await p.xtC.PostStatusToFriends(
                   m.Vw.CMInterface.GetServiceTransport(),
                   a,
                 );
@@ -10707,13 +10707,13 @@
               this.m_mapPromiseAchievementDef.get(e));
         }
         async InternalLoadAchievementDisplayInfo(e) {
-          const t = c.w.Init(ps.AR);
+          const t = c.w.Init(ps.ARV);
           t.Body().set_appid(e),
             t.Body().set_language(l.TS.LANGUAGE || "english");
           l.TS.LANGUAGE;
           let a = null;
           try {
-            const s = await ps.xt.GetGameAchievements(
+            const s = await ps.xtC.GetGameAchievements(
               this.m_SteamInterface.GetServiceTransport(),
               t,
             );

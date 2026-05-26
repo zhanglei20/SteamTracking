@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Chủ đề bị tố cáo",
     "moderation_already_owner_disputed": "Đã phản đối",
     "moderationstats_alltypes": "Tất cả loại chủ đề",
-    "moderation_alternateforumtool": "Công cụ thay thế",
+    "forumsubjectlist_subjectreportsummary": "%1$s chưa giải quyết, %1$s có phản đối",
     "empty_no_trailing_comma": ""
 }

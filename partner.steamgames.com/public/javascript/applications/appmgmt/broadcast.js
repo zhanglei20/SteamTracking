@@ -6400,7 +6400,7 @@
         m_Transport = null;
         m_Storage = null;
         m_TextFilterPreferences = {
-          eTextFilterSetting: nt.Bx.NS,
+          eTextFilterSetting: nt.Bx6.NS,
           bIgnoreFriends: !1,
         };
         m_TextFilterWords;
@@ -6419,12 +6419,12 @@
         m_DataAccess;
         constructor(e) {
           (0, m.Gn)(this);
-          let t = new nt.B4();
+          let t = new nt.B4H();
           (this.m_TextFilterPreferences = {
             eTextFilterSetting: t.text_filter_setting(),
             bIgnoreFriends: t.text_filter_ignore_friends(),
           }),
-            (this.m_TextFilterWords = new nt.Ey()),
+            (this.m_TextFilterWords = new nt.EyI()),
             (this.m_DataAccess = e);
         }
         async Init(e = 0, t = null, r = null) {
@@ -6555,10 +6555,10 @@
           );
           if (e)
             try {
-              this.m_TextFilterWords = nt.Ey.fromObject(JSON.parse(e));
+              this.m_TextFilterWords = nt.EyI.fromObject(JSON.parse(e));
             } catch (t) {
               console.warn("Error parsing cached text filter word list", e),
-                (this.m_TextFilterWords = new nt.Ey());
+                (this.m_TextFilterWords = new nt.EyI());
             }
         }
         SaveTextFilterWords() {
@@ -6587,12 +6587,12 @@
             );
         }
         async RequestUpdatedSettings() {
-          let e = new nt.B4();
+          let e = new nt.B4H();
           if (0 !== this.m_unAccountID)
             try {
               if (this.m_Transport) {
-                let t = g.w.Init(nt.tz);
-                e = (await nt.xt.GetCommunityPreferences(this.m_Transport, t))
+                let t = g.w.Init(nt.tzK);
+                e = (await nt.xtC.GetCommunityPreferences(this.m_Transport, t))
                   .Body()
                   .preferences();
               } else {
@@ -6602,7 +6602,7 @@
                     "textfilter/ajaxgetcommunitypreferences",
                   { params: t, withCredentials: !0 },
                 );
-                e = nt.B4.fromObject(r.data.preferences);
+                e = nt.B4H.fromObject(r.data.preferences);
               }
             } catch (e) {}
           if (
@@ -6610,12 +6610,12 @@
             e.text_filter_words_revision() !==
               this.m_TextFilterWords.text_filter_words_revision())
           ) {
-            let t = new nt.Ey();
+            let t = new nt.EyI();
             if (0 !== e.text_filter_words_revision())
               try {
                 if (this.m_Transport) {
-                  let e = g.w.Init(nt.SC);
-                  t = (await nt.xt.GetTextFilterWords(this.m_Transport, e))
+                  let e = g.w.Init(nt.SCE);
+                  t = (await nt.xtC.GetTextFilterWords(this.m_Transport, e))
                     .Body()
                     .words();
                 } else {
@@ -6625,7 +6625,7 @@
                       "textfilter/ajaxgettextfiltercustomwords",
                     { params: e, withCredentials: !0 },
                   );
-                  t = nt.Ey.fromObject(r.data.words);
+                  t = nt.EyI.fromObject(r.data.words);
                 }
               } catch (e) {}
             this.UpdateTextFilterWords(t);
@@ -6744,10 +6744,10 @@
             t = [],
             r = [];
           switch (this.m_TextFilterPreferences.eTextFilterSetting) {
-            case nt.Bx.C5:
-            case nt.Bx.NS:
+            case nt.Bx6.C5:
+            case nt.Bx6.NS:
               break;
-            case nt.Bx.bf:
+            case nt.Bx6.bf:
               t = t.concat(this.m_strBannedWords.split(e));
               break;
             default:
@@ -9474,7 +9474,7 @@
           {
             appid: 730,
             url: "https://steam.tv/csgo",
-            broadcasterAccountID: 911609735,
+            broadcasterAccountID: 927819071,
           },
         ],
       };

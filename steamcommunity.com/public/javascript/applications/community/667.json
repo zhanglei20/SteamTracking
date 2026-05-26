@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Elementi segnalati",
     "moderation_already_owner_disputed": "Già contestato",
     "moderationstats_alltypes": "Tutti i tipi di elementi",
-    "moderation_alternateforumtool": "Strumento alternativo",
+    "forumsubjectlist_subjectreportsummary": "%1$s non risolto, %1$s contestato",
     "empty_no_trailing_comma": ""
 }

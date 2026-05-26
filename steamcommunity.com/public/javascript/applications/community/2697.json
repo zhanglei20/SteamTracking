@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Sujets signalés",
     "moderation_already_owner_disputed": "Déjà contesté",
     "moderationstats_alltypes": "Tous les types de sujets",
-    "moderation_alternateforumtool": "Autre outil",
+    "forumsubjectlist_subjectreportsummary": "%1$s non résolus, %1$s contestés",
     "empty_no_trailing_comma": ""
 }

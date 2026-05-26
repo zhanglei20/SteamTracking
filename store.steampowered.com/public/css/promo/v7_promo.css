@@ -1854,6 +1854,12 @@ img.main_capsule_header {
 		flex-grow: 1;
 	}
 
+	html.responsive .review_placeholder {
+		display: flex;
+		gap: 3px;
+		padding: 5px 8px 5px 0;
+	}
+
 	html.responsive .store_main_capsule .reason {
 		display: none;
 	}
@@ -2987,6 +2993,7 @@ html.responsive .home_category_ctn .home_category_title_ctn {
 	white-space: nowrap;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	touch-action: manipulation;
 }
 
 .home_tabs_row_ctn::-webkit-scrollbar {

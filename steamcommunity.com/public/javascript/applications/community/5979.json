@@ -193,6 +193,7 @@
     "MyOrders_NoBuyOrders_Item": "Nu ai ordine de cumpărare active pentru acest obiect.",
     "MyOrders_NoSellOrders_Item": "Nu vinzi niciunul dintre aceste obiecte. Vinde obiecte din inventarul tău sau apasă butonul „Vinde” de pe această pagină.",
     "MyOrders_QuantityWithValue": "Cantitate: %1$s",
+    "MyOrders_SeeAllN": "Vezi tot (%1$s)",
     "CancelBuyOrder_GenericError": "A apărut o problemă la anularea ordinului tău. Te rugăm să încerci din nou mai târziu.",
     "CancelListing_GenericError": "A apărut o problemă la eliminarea listării tale. Te rugăm să încerci din nou mai târziu.",
     "CancelListing_Dialog_Header": "Elimină o listare",
@@ -206,6 +207,7 @@
     "UniqueBuyOrder_Explanation_1": "Setează-ți prețul preferat și achiziția ta este realizată automat când obiectul devine disponibil la acel preț.",
     "UniqueBuyOrder_Explanation_2": "Steam se va asigura că obții cel mai bun preț disponibil.",
     "UniqueBuyOrder_Explanation_3": "Pentru acest obiect, ordinele de cumpărare vor fi atribuite celei mai ieftine opțiuni disponibile pentru cumpărare, indiferent de caracteristicile unice.",
+    "PriceFilter_ValueAndUp": "Minim %1$s",
     "Error_Sorry": "Scuze!",
     "Error_Encountered": "A apărut o eroare în timpul procesării:",
     "Error_TooManyRequests_Description": "Ai făcut prea multe solicitări recent. Te rugăm să aștepți și să retrimiți solicitarea mai târziu.",
@@ -214,6 +216,8 @@
     "Error_LoadingMarketItem": "Este posibil ca obiectul solicitat să nu existe. De asemenea, poate exista o problemă temporară care împiedică încărcarea acestui obiect. Te rugăm să încerci din nou mai târziu.",
     "ListingFilter_Title": "Filtrează listările",
     "Listings_NoneFound": "Nicio listare găsită",
+    "ItemBucketPicker_Overflow_Placeholder": "Mai multe opțiuni...",
+    "ItemBucketPicker_Overflow_FilterPlaceholder": "Filtrează...",
     "Mobile_InfoSection": "Informații",
     "Mobile_GraphSection": "Graficul vânzărilor",
     "Mobile_BuyOrderSection": "Ordine de cumpărare",
@@ -272,5 +276,5 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Trebuie să activezi Steam Guard pe contul tău. Te rugăm să te asiguri că e-mailul tău este verificat și că te-ai conectat de două ori la contul tău după ce ai activat Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Contul tău trebuie să fie protejat de Steam Guard pentru o perioadă de cel puțin %1$s zile.",
     "Economy_Market_HeaderTip_TimeCanUse": "Dacă nu mai intervine nimic care să îți restricționeze accesul, vei putea utiliza piața comunitară pe %1$s.",
-    "Economy_Market_TopLevelReason_TradeCooldown": "Contul tău este momentan supus unei perioade de restricție privind schimburile și funcțiile pieței."
+    "Economy_Market_TopLevelReason_TradeCooldown": "Contul tău este momentan supus unei perioade de restricție privind schimburile și piața."
 }

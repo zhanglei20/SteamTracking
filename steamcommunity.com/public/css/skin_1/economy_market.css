@@ -2359,6 +2359,10 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 }
 
 /* DSelect */
+.dselect_container .dropcontainer {
+	z-index: 2000;
+}
+
 .dselect_container .dropcontainer ul {
 	background: #417A9B;
 	border-radius: 0 0 3px 3px;
@@ -2369,8 +2373,6 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 	margin: 0 1px;
 	overflow: hidden auto;
 	padding: 0;
-	position: absolute;
-	z-index: 2000;
 }
 
 html.GamepadMode .dselect_container .dropcontainer ul {

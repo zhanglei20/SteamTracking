@@ -44,6 +44,7 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
         CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
@@ -639,7 +640,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, imageType: _, bPreferAssetWithoutOverride: _ } = _,
+        const {
+            _: _,
+            imageType: _,
+            bPreferAssetWithoutOverride: _,
+            strAdditionalClassName: _,
+          } = _,
           { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(_, _, _);
         if ("library" === _ || "vertical" == _)
           return (0, _.jsx)(_._, {
@@ -651,12 +657,12 @@
         else _ = _().HeaderCapsuleImageContainer;
         if (void 0 === _ || !_)
           return (0, _.jsx)("div", {
-            className: (0, _._)(_, "CapsuleImageCtn"),
+            className: (0, _._)(_, "CapsuleImageCtn", _),
           });
         if (null == _) return null;
         let _ = (0, _._)(_, "header" === _);
         return (0, _.jsx)("div", {
-          className: (0, _._)(_, "CapsuleImageCtn"),
+          className: (0, _._)(_, "CapsuleImageCtn", _),
           children: (0, _.jsx)(_._, {
             lazyLoad: !0,
             srcs: _,
@@ -1195,8 +1201,8 @@
             queryFn: async () => {
               const _ = new Map();
               if (_._.logged_in) {
-                const _ = _._.Init(_._),
-                  _ = (await _._.GetNicknameList(_, _)).Body().toObject();
+                const _ = _._.Init(_.w_T),
+                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
                 _?.nicknames &&
                   _.nicknames.length > 0 &&
                   _.nicknames.forEach((_) => {

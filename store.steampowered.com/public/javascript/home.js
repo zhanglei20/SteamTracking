@@ -1257,6 +1257,10 @@ GHomepage = {
 			let $elReleaseDate = $J('<div/>', { 'class': 'release_date coming_soon' }).text( rgItemData.release_date_string );
 			$InfoCtn.append( $elReleaseDate );
 		}
+		else
+		{
+			$InfoCtn.append( $J('<div>', { 'class': 'review_placeholder' }) );
+		}
 
 		// Recommendation reason block
 		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( rgItem );
@@ -2080,14 +2084,16 @@ GHomepage = {
 			oFilterOptions = { ...oFilterOptions, has_discount: true, enforce_minimum: true };
 		}
 
-        const rgCapsules = GHomepage.FilterItemsForDisplay(GHomepage.rgRecommendedBySteamLabsApps, 'home', 4, 12, oFilterOptions );
+		const bVersion2 = $RecommendedBySteamLabs.hasClass( 'v2' );
 
-        if ( rgCapsules.length < 4 )
+		const k_nMinItems = bVersion2 ? 5 : 4;
+
+        const rgCapsules = GHomepage.FilterItemsForDisplay(GHomepage.rgRecommendedBySteamLabsApps, 'home', k_nMinItems, 20, oFilterOptions );
+
+        if ( rgCapsules.length < k_nMinItems )
         {
             return;
         }
-
-		const bVersion2 = $RecommendedBySteamLabs.hasClass( 'v2' );
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecommendedBySteamLabs,
             function( oItem, strFeature, rgOptions, nDepth )
@@ -2098,10 +2104,10 @@ GHomepage = {
 				}
 				var nAppId = oItem.appid;
                 return GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
-            }, 'recommended_by_steam_labs', bVersion2 ? 5 : 4
+            }, 'recommended_by_steam_labs', k_nMinItems
         );
 
-		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
+		GDynamicStore.MarkAppDisplayed( rgCapsules, k_nMinItems );
 		$RecommendedBySteamLabs.show();
     },
 

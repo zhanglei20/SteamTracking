@@ -132,6 +132,6 @@
     "reportedsubjectlist_header": "Жалобы на темы",
     "moderation_already_owner_disputed": "Уже оспорено",
     "moderationstats_alltypes": "Все типы тем",
-    "moderation_alternateforumtool": "Альтернативный инструмент",
+    "forumsubjectlist_subjectreportsummary": "Нерассмотренных: %1$s. Оспоренных: %1$s.",
     "empty_no_trailing_comma": ""
 }
