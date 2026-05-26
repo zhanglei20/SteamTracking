@@ -384,6 +384,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         Header: "kR_xyFf2ghgC-Jexsw_5v",
         StoreItemsCarousel: "_2BG1JKMgeqn_cr0rbRhRNA",
         Title: "_2BGZunVy7Z0-h18owewCzo",
