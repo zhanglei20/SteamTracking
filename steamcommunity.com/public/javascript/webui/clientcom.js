@@ -1,11 +1,11 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10686193";
+var CLSTAMP = "10688821";
 (() => {
   "use strict";
   var e,
     t = {
-      69545: (e, t, n) => {
+      67504: (e, t, n) => {
         function i(e, t) {
           return (
             (e = Math.ceil(e)),
@@ -21,7 +21,7 @@ var CLSTAMP = "10686193";
         function s() {
           return !!window.document;
         }
-        var r = n(5609);
+        var r = n(3101);
         const c = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -500,6 +500,6 @@ var CLSTAMP = "10686193";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var o = i.O(void 0, [9489], () => i(69545));
+  var o = i.O(void 0, [9489], () => i(67504));
   o = i.O(o);
 })();

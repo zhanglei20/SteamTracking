@@ -1078,6 +1078,28 @@ body.v7 .page_content_ctn.dark {
 	width: 18px;
 }
 
+.see_more_gamepad_hint {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	gap: 5px;
+	color: rgb(255, 255, 255);
+	font-weight: 500;
+	font-size: 13px;
+
+	opacity: 0;
+	transition: opacity 300ms ease-in-out;
+}
+
+.see_more_gamepad_hint img {
+	width: 20px;
+	height: 20px;
+}
+
+.see_more_gamepad_hint.hover_active {
+	opacity: 1;
+}
+
 .see_more_link {
 	display: flex;
 	align-items: center;
@@ -1093,9 +1115,13 @@ body.v7 .page_content_ctn.dark {
 	display: none;
 }
 
+.GamepadMode .see_more_desktop {
+	display: none;
+}
+
 @media screen and ( max-width: 910px ) {
 
-	.see_more_mobile {
+	html:not( .GamepadMode ) .see_more_mobile {
 		display: block;
 	}
 
@@ -3441,7 +3467,6 @@ html.responsive .home_tabs_sections .tab_content_items .tab_item_header .tab_row
 	background: transparent;
 	display: inline-block;
 	cursor: pointer;
-	transition: opacity .1s ease-in-out;
 	/* 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
