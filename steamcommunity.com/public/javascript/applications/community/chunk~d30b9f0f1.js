@@ -2082,8 +2082,8 @@
           if (t) return t.tabs.find((t) => t.unique_id == e);
           (0, w.wT)(t, "TabID missing: " + e);
         }
-        GetSaleSectionIndexByID(e) {
-          return e > p.Yj
+        GetSaleSectionIndexByID(e, t) {
+          return t
             ? this.m_curModel
                 .GetSaleSectionIncludingFooterSections()
                 .findIndex((t) => t.unique_id === e)
@@ -25400,7 +25400,7 @@
                       var n;
                       return t.SetSaleSectionTextLocalization(
                         s,
-                        t.GetSaleSectionIndexByID(a.unique_id),
+                        t.GetSaleSectionIndexByID(a.unique_id, !1),
                         (null === (n = null == e ? void 0 : e.currentTarget) ||
                         void 0 === n
                           ? void 0
@@ -25410,7 +25410,7 @@
                     fnSetText: (e) =>
                       t.SetSaleSectionTextLocalization(
                         s,
-                        t.GetSaleSectionIndexByID(a.unique_id),
+                        t.GetSaleSectionIndexByID(a.unique_id, !1),
                         e,
                       ),
                     ref: i,

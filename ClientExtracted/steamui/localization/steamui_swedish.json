@@ -4702,7 +4702,7 @@
     "ControllerConfigurator_SourceMode_Group_Behavior": "Beteende för %1$s",
     "ControllerConfigurator_SourceMode_Group_Settings": "Inställningar för %1$s",
     "ControllerConfigurator_Input_Settings": "Inställningar för %1$s",
-    "ControllerConfigurator_Setting_Section_General": "Allmän",
+    "ControllerConfigurator_Setting_Section_General": "Allmänt",
     "ControllerConfigurator_Setting_Section_Commands": "Kommandon",
     "ControllerConfigurator_Setting_Section_Output": "Utmatning",
     "ControllerConfigurator_Setting_Section_Deadzone": "Dödzoner",
@@ -7149,7 +7149,7 @@
     "ControllerBinding_TouchMenuButtonType_TouchMenu_ButtonClick_Description": "Skicka menykommandot när styrplattan eller styrspaken klickas.",
     "ControllerBinding_TouchMenuButtonType_ButtonRelease": "Släpp",
     "ControllerBinding_TouchMenuButtonType_TouchMenu_ButtonRelease_Description": "Skicka menykommandot när styrplattan eller styrspaken klickas och släpps.",
-    "ControllerBinding_TouchMenuButtonType_TouchRelease": "Släpp vid beröring",
+    "ControllerBinding_TouchMenuButtonType_TouchRelease": "Vidrörningsstopp",
     "ControllerBinding_TouchMenuButtonType_TouchMenu_TouchRelease_Description": "Skicka menykommandot när styrplattan eller styrspaken inte längre vidrörs.",
     "ControllerBinding_TouchMenuButtonType_TouchAlways": "Alltid",
     "ControllerBinding_TouchMenuButtonType_TouchMenu_TouchAlways_Description": "Skicka menykommandot kontinuerligt medan styrplattan eller styrspaken vidrörs.",
@@ -7314,7 +7314,7 @@
     "ControllerBinding_RadialMenuButtonType_ButtonClick_Description": "Detta aktiverar menyalternativet när knappen klickas.",
     "ControllerBinding_RadialMenuButtonType_ButtonRelease": "Släpp av knapp",
     "ControllerBinding_RadialMenuButtonType_ButtonRelease_Description": "Detta aktiverar menyalternativet när knappen släpps.",
-    "ControllerBinding_RadialMenuButtonType_TouchRelease": "Släpp vid beröring",
+    "ControllerBinding_RadialMenuButtonType_TouchRelease": "Vidrörningsstopp",
     "ControllerBinding_RadialMenuButtonType_TouchRelease_Description": "Detta aktiverar menyalternativet när styrplattan inte längre vidrörs, eller när lägesändringsknappen släpps. För styrspakar anses alla positioner utanför dödzonen vara vidrörda.",
     "ControllerBinding_RadialMenuButtonType_TouchAlways": "Alltid",
     "ControllerBinding_RadialMenuButtonType_TouchAlways_Description": "Detta aktiverar menyalternativet kontinuerligt medan styrplattan/spaken vidrörs. För styrspakar anses alla positioner utanför dödzonen vara vidrörda.",
@@ -7893,7 +7893,7 @@
     "ControllerSettingValue_TouchMenu_Button16": "16 knappar",
     "ControllerSettingValue_TouchMenu_ButtonClick": "Klick",
     "ControllerSettingValue_TouchMenu_ButtonRelease": "Släpp",
-    "ControllerSettingValue_TouchMenu_TouchRelease": "Släpp vid beröring",
+    "ControllerSettingValue_TouchMenu_TouchRelease": "Vidrörningsstopp",
     "ControllerSettingValue_TouchMenu_TouchAlways": "Kontinuerligt",
     "ControllerSettingValue_TriggerDampeningRightSoft": "Dämpning för mjuk dragning av höger avtryckare",
     "ControllerSettingValue_TriggerDampeningLeftSoft": "Dämpning för mjukt tryck på vänster avtryckare",
@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Försök inte att kompensera till önskad vinkel efter att styrspaksutmatning har mättats av stora gyrorörelser.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Försök att kompensera till önskad vinkel, men bara när gyrot är aktivt.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Försök att kompensera till önskad vinkel. Fortsätt att utföra eventuella vinkelkompenseringar om gyrot inte är aktivt.",
-    "LibraryTab_ControllerGames": "Kontrollvänligt"
+    "LibraryTab_ControllerGames": "Kontrollvänligt",
+    "Settings_RemotePlay_Microphone": "Mikrofon"
 }

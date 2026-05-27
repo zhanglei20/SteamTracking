@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Ne próbálja meg utolérni a kívánt szöget, miután nagy giro-rándítások telítik a botkormány kimenetet.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Próbálja meg utolérni a kívánt szöget, de csak miközben a giro aktív.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Próbálja meg utolérni a kívánt szöget. Ha a giro nem aktív, továbbra is hozza be a fennmaradó utolérési szöget.",
-    "LibraryTab_ControllerGames": "Játékvezérlő-barát"
+    "LibraryTab_ControllerGames": "Játékvezérlő-barát",
+    "Settings_RemotePlay_Microphone": "Mikrofon"
 }

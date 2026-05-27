@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "大幅度快速轉動陀螺儀而使搖桿輸出飽和時，不要試圖追趕想要的角度。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "試圖追趕想要的角度，但僅在陀螺儀啟用時進行。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "試圖追趕想要的角度。若陀螺儀未啟用，會繼續輸出所有剩餘的追趕角度。",
-    "LibraryTab_ControllerGames": "支援控制器"
+    "LibraryTab_ControllerGames": "支援控制器",
+    "Settings_RemotePlay_Microphone": "麥克風"
 }

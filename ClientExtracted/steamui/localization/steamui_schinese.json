@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "当陀螺仪大幅度转向超过摇杆输出上限时，不尝试补齐期望的转向角度。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "尝试补齐期望的角度，但仅在陀螺仪处于活跃状态时启用。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "尝试补齐期望的角度。即使陀螺仪未处于活跃状态，仍继续补齐剩余角度。",
-    "LibraryTab_ControllerGames": "支持控制器"
+    "LibraryTab_ControllerGames": "支持控制器",
+    "Settings_RemotePlay_Microphone": "麦克风"
 }

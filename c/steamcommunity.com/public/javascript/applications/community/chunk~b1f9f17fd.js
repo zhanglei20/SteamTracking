@@ -18072,7 +18072,7 @@
                           _.GetSaleSectionByID(_),
                           _,
                           _,
-                          _.GetSaleSectionIndexByID(_),
+                          _.GetSaleSectionIndexByID(_, !0),
                         ),
                       },
                       "li_" + _,

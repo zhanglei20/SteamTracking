@@ -856,7 +856,7 @@
                   _,
                   _,
                   _;
-                const _ = _.GetSaleSectionIndexByID(_.unique_id);
+                const _ = _.GetSaleSectionIndexByID(_.unique_id, !1);
                 for (let _ = _.Bhc; _ < _.bP9; ++_) {
                   if (
                     (_.BHasSaleSectionLabelLocalization(_, _) &&
@@ -1634,7 +1634,7 @@
                           _,
                           _,
                           _;
-                        const _ = _.GetSaleSectionIndexByID(_.unique_id);
+                        const _ = _.GetSaleSectionIndexByID(_.unique_id, !1);
                         if (
                           ((_ !== "sale_section_label_" + _ &&
                             _ !== _ + _.unique_id) ||
@@ -8938,7 +8938,7 @@
                           saleSection: _,
                           editLanguage: _,
                           eventModel: _.GetEventModel(),
-                          index: _.GetSaleSectionIndexByID(_.unique_id),
+                          index: _.GetSaleSectionIndexByID(_.unique_id, !0),
                         }),
                       },
                       _.unique_id,

@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Hoeken niet inhalen als de joystickuitvoer wordt overbelast door grote gyroscoopbewegingen.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Proberen de hoeken in te halen tot de gewenste hoek is bereikt, maar alleen als de gyroscoop actief is.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Proberen de hoeken in te halen tot de gewenste hoek is bereikt. Ook als de gyroscoop niet actief is, doorgaan met het inhalen van hoeken.",
-    "LibraryTab_ControllerGames": "Controllerondersteuning"
+    "LibraryTab_ControllerGames": "Controllerondersteuning",
+    "Settings_RemotePlay_Microphone": "Microfoon"
 }

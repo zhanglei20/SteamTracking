@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Đừng cố bắt kịp góc độ mong muốn sau khi thao tác vẩy xa gyro vượt quá khả năng đầu ra của cần trỏ.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Cố bắt kịp góc độ mong muốn, nhưng chỉ khi gyro đang hoạt động.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Cố bắt kịp góc độ mong muốn. Nếu gyro không hoạt động, tiếp tục xử lý góc độ cần bắt kịp còn lại.",
-    "LibraryTab_ControllerGames": "Thân thiện với tay cầm"
+    "LibraryTab_ControllerGames": "Thân thiện với tay cầm",
+    "Settings_RemotePlay_Microphone": "Mic "
 }

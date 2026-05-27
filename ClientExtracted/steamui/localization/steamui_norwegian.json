@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Ikke prøv å innhente den ønskede vinkelen etter at store gyrobevegelser metter styrespakens utdata.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Prøv å innhente den ønskede vinkelen, men kun mens gyroen er aktiv.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Prøv å innhente den ønskede vinkelen. Fortsett eventuell innhenting av vinkel selv om gyroen ikke er aktiv.",
-    "LibraryTab_ControllerGames": "Kontrollervennlig"
+    "LibraryTab_ControllerGames": "Kontrollervennlig",
+    "Settings_RemotePlay_Microphone": "Mikrofon"
 }

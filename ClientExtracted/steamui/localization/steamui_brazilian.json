@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Não tentar alcançar o ângulo desejado se movimentos brandos do giroscópio ultrapassarem a saída máxima da alavanca.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Tentar alcançar o ângulo desejado, mas apenas enquanto o giroscópio estiver ativo.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Tentar alcançar o ângulo desejado. Se o giroscópio não estiver ativo, continuar gerando qualquer saída de compensação de ângulo restante.",
-    "LibraryTab_ControllerGames": "Compatíveis com controle"
+    "LibraryTab_ControllerGames": "Compatíveis com controle",
+    "Settings_RemotePlay_Microphone": "Microfone"
 }

@@ -2726,7 +2726,7 @@
     "DiscoveryQueue_ViewIgnored": "Преглед на игнорираните",
     "DiscoveryQueue_YourStats": "СТАТИСТИКАТА ВИ ЗА ЦЕЛИЯ ПЕРИОД В ОПАШКАТА ЗА ОТКРИВАНЕ",
     "DiscoveryQueue_LearnMore_Default": "Опашката Ви за откриване <1>Научете още</1>",
-    "DiscoveryQueue_LearnMore_WhatsNew": "Опашката Ви „Какви са новостите“ <1>Научете още</1>",
+    "DiscoveryQueue_LearnMore_WhatsNew": "Опашката Ви „Какви са новостите“. <1>Научете още</1>.",
     "DiscoveryQueue_Customize": "Персонализиране",
     "DiscoveryQueue_Undo": "Отмяна",
     "DiscoveryQueue_FriendsOwned": "Притежавано от <1>%1$s приятел</1>",

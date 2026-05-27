@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Не вирівнювати до бажаного кута, коли довгі нахили гіроскопа замінюють виведення джойстика.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Вирівнювати до бажаного кута, але лише коли гіроскоп активний.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Вирівнювати до бажаного кута. Якщо гіроскоп не активний, продовжувати застосовувати залишкові кути для вирівнювання.",
-    "LibraryTab_ControllerGames": "З підтримкою контролерів"
+    "LibraryTab_ControllerGames": "З підтримкою контролерів",
+    "Settings_RemotePlay_Microphone": "Мікрофон"
 }

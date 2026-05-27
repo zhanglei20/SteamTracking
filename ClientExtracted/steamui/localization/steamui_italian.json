@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Non cercare di raggiungere l'angolazione desiderata dopo che i grandi movimenti del giroscopio saturano l'output del joystick.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Cerca di raggiungere l'angolazione desiderata, ma solo quando il giroscopio è attivo.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Cerca di raggiungere l'angolazione desiderata. Se il giroscopio non è attivo, continua a servire qualsiasi angolazione di recupero rimanente.",
-    "LibraryTab_ControllerGames": "Compatibilità con i controller"
+    "LibraryTab_ControllerGames": "Compatibilità con i controller",
+    "Settings_RemotePlay_Microphone": "Microfono"
 }

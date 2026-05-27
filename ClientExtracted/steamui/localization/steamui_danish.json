@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Forsøg ikke at indhente den ønskede vinkel, efter store gyrobevægelser mætter joystickets output.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Forsøg at indhente den ønskede vinkel, men kun, mens gyroen er aktiv.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Forsøg at indhente den ønskede vinkel. Fortsæt eventuel indhentning af vinkel, selvom gyroen ikke er aktiv.",
-    "LibraryTab_ControllerGames": "Spil med controller"
+    "LibraryTab_ControllerGames": "Spil med controller",
+    "Settings_RemotePlay_Microphone": "Mikrofon"
 }
