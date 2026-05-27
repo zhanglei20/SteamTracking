@@ -470,6 +470,8 @@ GHomepage = {
 
 		} catch( e ) { OnHomepageException(e); }
 
+		GHomepage.InitGamepadMoreSections();
+
         // this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
 		GHomepage.bInitialRenderComplete = true;
 		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
@@ -512,6 +514,31 @@ GHomepage = {
 			return 'b' + rgItem.bundleid;
 
 		return 'unknown';
+	},
+
+	InitGamepadMoreSections: function()
+	{
+		if ( !window.UseGamepadScreenMode() )
+			return;
+
+		$J('[data-gp-morebutton]').each( function(index, element) {
+			let $Element = $J( element );
+			let strURL = element.getAttribute('data-gp-morebutton');
+
+			$Element.on('vgp_onfocus', function() {
+				$Element.find('.see_more_gamepad_hint').addClass('hover_active')
+			});
+
+			$Element.on('vgp_onblur', function() {
+				$Element.find('.see_more_gamepad_hint').removeClass('hover_active')
+			});
+
+			$Element.on('vgp_onoptions', function() {
+				window.location = strURL;
+			});
+
+			$Element.removeAttr( 'data-gp-morebutton' );
+		});
 	},
 
 	RenderRecentApps: function()

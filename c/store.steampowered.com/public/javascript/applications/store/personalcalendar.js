@@ -1087,13 +1087,18 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useCallback)((_) => _(_), []),
           _ = (0, _._)(0, 14, 21),
-          _ = (0, _._)(14, 21, !0, !0).flat();
+          _ = (0, _._)(14, 21, !0, !0).flat(),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
+          _ = (0, _.useCallback)(() => {
+            window.location.href = _;
+          }, [_]);
         if (!_.data)
           return (0, _.jsx)(_._, {
             className: _.PersonalCalendarWidget,
           });
-        const _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _);
         let _ = _.data.arrAppInfos;
         return (
           _ &&
@@ -1112,6 +1117,8 @@
           (0, _.jsxs)(_._, {
             className: _.PersonalCalendarWidget,
             navEntryPreferPosition: _._.PREFERRED_CHILD,
+            onFocusWithin: _,
+            onOptionsButton: _,
             children: [
               (0, _.jsxs)("div", {
                 className: "title_grid",
@@ -1130,17 +1137,11 @@
                     className: "home_section_subtitle",
                     children: (0, _._)("#PersonalCalendar_Subtitle"),
                   }),
-                  (0, _.jsx)("div", {
-                    className:
-                      "see_more_link see_more_desktop home_section_button",
-                    children: (0, _.jsx)("a", {
-                      href: _,
-                      className: "btn_small btn_medium btnv6_white_transparent",
-                      children: (0, _.jsx)("span", {
-                        children: (0, _._)("#PersonalCalendar_Full"),
-                      }),
+                  !_ &&
+                    (0, _.jsx)(_, {
+                      calendarURL: _,
+                      location: "desktop",
                     }),
-                  }),
                 ],
               }),
               (0, _.jsx)(_._, {
@@ -1165,19 +1166,46 @@
                   ),
                 ),
               }),
-              (0, _.jsx)("div", {
-                className: "see_more_link see_more_mobile home_section_button",
-                children: (0, _.jsx)("a", {
-                  href: _,
-                  className: "btn_small btn_medium btnv6_white_transparent",
-                  children: (0, _.jsx)("span", {
-                    children: (0, _._)("#PersonalCalendar_Full"),
-                  }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  calendarURL: _,
+                  location: "mobile",
                 }),
-              }),
+              _ &&
+                (0, _.jsx)(_, {
+                  focusWithin: _,
+                }),
             ],
           })
         );
+      }
+      function _(_) {
+        const { calendarURL: _, location: _ } = _,
+          _ = "mobile" == _ ? "see_more_mobile" : "see_more_desktop";
+        return (0, _.jsx)("div", {
+          className: `see_more_link ${_} home_section_button`,
+          children: (0, _.jsx)("a", {
+            href: _,
+            className: "btn_small btn_medium btnv6_white_transparent",
+            children: (0, _.jsx)("span", {
+              children: (0, _._)("#PersonalCalendar_Full"),
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const { focusWithin: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)("see_more_gamepad_hint", _ && "hover_active"),
+          children: [
+            (0, _.jsx)("img", {
+              src: `${_._.IMG_URL}ico_gamepad/shared_button_y.svg`,
+            }),
+            (0, _.jsx)("div", {
+              children: (0, _._)("#PersonalCalendar_Full"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1258,7 +1286,8 @@
                   ),
                 ),
               }),
-              _ > 0 &&
+              !_ &&
+                _ > 0 &&
                 (0, _.jsx)(_._, {
                   href: _,
                   className: _.MoreGames,
