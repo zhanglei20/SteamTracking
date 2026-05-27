@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "ジャイロを大きくフリックしてジョイスティックの出力が限界に達した後は、目的の角度に追尾しようと試みません。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "ジャイロがアクティブな間だけ、目的の角度に追尾するように試みます。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "目的の角度に追尾するように試みます。ジャイロがアクティブでない場合、残りの追尾角度を提供し続けます。",
-    "LibraryTab_ControllerGames": "コントローラフレンドリー"
+    "LibraryTab_ControllerGames": "コントローラフレンドリー",
+    "Settings_RemotePlay_Microphone": "マイク"
 }

@@ -12944,6 +12944,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -12984,7 +12985,6 @@ ${LANGUAGE}
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
 65536
-60000000
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 666666666666666666666666666666666666666666666666
@@ -13426,6 +13426,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9HheA
 9IGv
 9Inventory
 9PE,$
@@ -24985,7 +24986,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 26 2026 16:08:29
+May 27 2026 21:20:37
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable

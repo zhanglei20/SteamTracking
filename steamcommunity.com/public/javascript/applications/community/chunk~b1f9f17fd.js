@@ -17035,7 +17035,7 @@
                           r.GetSaleSectionByID(e),
                           d,
                           o,
-                          r.GetSaleSectionIndexByID(e),
+                          r.GetSaleSectionIndexByID(e, !0),
                         ),
                       },
                       "li_" + e,

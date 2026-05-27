@@ -831,7 +831,7 @@
                   b,
                   w,
                   C;
-                const f = e.GetSaleSectionIndexByID(t.unique_id);
+                const f = e.GetSaleSectionIndexByID(t.unique_id, !1);
                 for (let y = r.Bhc; y < r.bP9; ++y) {
                   if (
                     (e.BHasSaleSectionLabelLocalization(y, f) &&
@@ -1625,7 +1625,7 @@
                           f,
                           y,
                           D;
-                        const I = e.GetSaleSectionIndexByID(t.unique_id);
+                        const I = e.GetSaleSectionIndexByID(t.unique_id, !1);
                         if (
                           ((n !== "sale_section_label_" + I &&
                             n !== le + t.unique_id) ||
@@ -8540,7 +8540,7 @@
                           saleSection: e,
                           editLanguage: r,
                           eventModel: l.GetEventModel(),
-                          index: l.GetSaleSectionIndexByID(e.unique_id),
+                          index: l.GetSaleSectionIndexByID(e.unique_id, !0),
                         }),
                       },
                       e.unique_id,

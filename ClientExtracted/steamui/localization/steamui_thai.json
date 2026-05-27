@@ -4671,7 +4671,7 @@
     "ControllerConfigurator_SourceMode_Hotbar_Summary_Title": "เมนูฮอตบาร์",
     "ControllerConfigurator_SourceMode_Disabled_Title": "ปิดการใช้งาน",
     "ControllerConfigurator_SourceMode_Gyro_To_Mouse_Title": "ไจโรเป็นเมาส์",
-    "ControllerConfigurator_SourceMode_Gyro_To_JoystickCamera_Title": "ไจโรเป็นกล้องจอยสติก",
+    "ControllerConfigurator_SourceMode_Gyro_To_JoystickCamera_Title": "ไจโรเป็นจอยสติกสำหรับกล้อง",
     "ControllerConfigurator_SourceMode_Gyro_To_JoystickDeflection_Title": "ไจโรเป็นการโยกจอยสติก",
     "ControllerConfigurator_SourceMode_GyroToCameraAngles_Title": "ไจโรเป็นมุม [เบต้า]",
     "ControllerConfigurator_SourceMode_FlickStickToCameraAngles_Title": "สติกตวัดเป็นมุม [เบต้า]",
@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "อย่าพยายามชดเชยให้เป็นมุมที่ต้องการ หลังจากที่การตวัดไจโรกว้าง ๆ ทำให้เอาต์พุตของจอยสติกถึงขีดจำกัด",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "พยายามชดเชยให้เป็นมุมที่ต้องการ แต่เฉพาะตอนนี้ที่ใช้งานไจโรอยู่เท่านั้น",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "พยายามชดเชยให้เป็นมุมที่ต้องการ หากไม่ได้ใช้งานไจโรอยู่ ให้ใช้มุมชดเชยที่เหลือต่อไปเรื่อย ๆ",
-    "LibraryTab_ControllerGames": "เป็นมิตรกับคอนโทรลเลอร์"
+    "LibraryTab_ControllerGames": "เป็นมิตรกับคอนโทรลเลอร์",
+    "Settings_RemotePlay_Microphone": "ไมโครโฟน"
 }

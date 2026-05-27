@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Ne pas tenter de rattrapage angulaire après la saturation de la sortie joystick suivant des mouvements brusques et rapides du gyroscope.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Tenter le rattrapage angulaire pour atteindre l'angle voulu, mais seulement quand le gyroscope est actif.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Tenter le rattrapage angulaire pour atteindre l'angle voulu. Si le gyroscope n'est pas actif, continuer à apporter les rattrapages angulaires.",
-    "LibraryTab_ControllerGames": "Contrôleurs pris en charge"
+    "LibraryTab_ControllerGames": "Contrôleurs pris en charge",
+    "Settings_RemotePlay_Microphone": "Micro"
 }

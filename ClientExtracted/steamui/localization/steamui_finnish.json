@@ -1007,7 +1007,7 @@
     "AppDetails_Review_ViewAllByFriend": "Näytä kaikki käyttäjän %1$s arvostelut",
     "OverflowBox_Action_Collapse": "Näytä vähemmän",
     "OverflowBox_Action_Expand": "Lue lisää",
-    "OverflowBox_More": "(%1$s enemmän)",
+    "OverflowBox_More": "(+%1$s)",
     "AppDetails_FriendsSection_Title": "Kaverit",
     "AppDetails_FriendsInGameNow": "%1$s kaveri pelaa juuri nyt",
     "AppDetails_FriendsInGameNow_Plural": "%1$s kaveria pelaa juuri nyt",
@@ -1021,7 +1021,7 @@
     "AppDetails_FriendsPlayed_Short": "Pelasi aiemmin",
     "AppDetails_FriendsPlayedExpand": "Näytä kaikki aiemmin pelanneet",
     "AppDetails_FriendsPlayed_Label": "%1$s ja %2$s muuta",
-    "AppDetails_FriendsMore": "(%1$s enemmän)",
+    "AppDetails_FriendsMore": "(+%1$s)",
     "AppDetails_FriendsLess": "Näytä vähemmän",
     "AppDetails_FriendsWishlisted": "%1$s kaverilla on %2$s toivelistallaan",
     "AppDetails_FriendsWishlisted_Plural": "%1$s kaverilla on %2$s toivelistallaan",
@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Ei yritä päästä haluttuun kulmaan suurten gyron käännösten vaikuttaessa ohjainsauvan syötteeseen.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Yrittää päästä haluttuun kulmaan, mutta vain gyron ollessa aktiivisena.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Yrittää päästä haluttuun kulmaan. Jos gyro ei ole aktiivisena, jatkaa muiden palautettavien kulmien tavoittamista.",
-    "LibraryTab_ControllerGames": "Ohjainystävällinen"
+    "LibraryTab_ControllerGames": "Ohjainystävällinen",
+    "Settings_RemotePlay_Microphone": "Mikrofoni"
 }

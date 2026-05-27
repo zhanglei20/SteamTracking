@@ -3082,7 +3082,7 @@
     "Email_OptOut_Send_WishlistItemDemoRelease": "Uma demo de um jogo na minha lista de desejos for lançada",
     "Email_OptOut_Send_CreatorHomeItemRelease": "Uma editora ou um developer que sigo no Steam lançar um jogo, mesmo que seja em Acesso Antecipado, ou quando tal jogo sair dessa fase para ser lançado oficialmente",
     "Email_OptOut_Send_CreatorHomeItemDemoRelease": "Uma editora ou um developer que seguir no Steam lançar uma demo",
-    "Email_OptOut_Send_CuratorConnect": "Um developer no Steam enviar uma cópia de um jogo ou aplicação para análise a um grupo de Curador Steam do qual eu faço parte",
+    "Email_OptOut_Send_CuratorConnect": "Quando um developer no Steam enviar uma cópia de um jogo ou aplicação para análise a um grupo de Curador Steam do qual eu faço parte",
     "Email_OptOut_Send_InLibraryEvents": "Notificações de eventos específicos de jogos",
     "Email_OptOut_Send_PartnerMessages": "Funcionalidades novas do Steamworks forem anunciadas ou quando promoções estiverem disponíveis",
     "Email_OptOut_Send_LoyaltyAwardsReceived": "Eu receber prémios da Comunidade Steam",

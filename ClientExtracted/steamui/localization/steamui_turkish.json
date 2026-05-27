@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Geniş jiroskop hareketleri analog çubuk çıktısı sınırını aştıktan sonra istenen açıyı dengelemeye çalışmayın.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "İstenen açıyı, yalnızca jiroskop etkinken dengelemeye çalışın.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "İstenen açıyı dengelemeye çalışın. Jiroskop etkin değilse, kalan dengeleme açılarını kullanmaya devam edin.",
-    "LibraryTab_ControllerGames": "Kontrolcü Uyumlu"
+    "LibraryTab_ControllerGames": "Kontrolcü Uyumlu",
+    "Settings_RemotePlay_Microphone": "Mikrofon"
 }

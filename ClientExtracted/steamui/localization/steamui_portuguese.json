@@ -4037,7 +4037,7 @@
     "Settings_Customization_StartupVideo_Preview": "Pré-visualização",
     "Settings_Customization_StartupVideo_Download": "Transferir",
     "Settings_Customization_StartupVideo_RemoveFromDisk": "Remover do disco",
-    "Settings_Customization_StartupVideo_NotDownloaded": "Não transferido",
+    "Settings_Customization_StartupVideo_NotDownloaded": "Não transferidos",
     "Settings_Customization_StartupVideo_Type_PointsShop": "Da Loja de Pontos",
     "Settings_Customization_StartupVideo_Type_Local": "Ficheiro local",
     "Settings_Customization_StartupVideo_PointsShop": "Encontra mais vídeos de arranque",
@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Não tenta compensar até ao ângulo desejado depois de grandes movimentos bruscos do giroscópio saturarem a resposta do joystick.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Tenta compensar até ao ângulo desejado, mas só quando o giroscópio estiver ativo.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Tenta compensar até ao ângulo desejado. Se o giroscópio não estiver ativo, continua a aplicar quaisquer ângulos de compensação que ainda estejam por processar.",
-    "LibraryTab_ControllerGames": "Compatíveis com comando"
+    "LibraryTab_ControllerGames": "Compatíveis com comando",
+    "Settings_RemotePlay_Microphone": "Microfone"
 }

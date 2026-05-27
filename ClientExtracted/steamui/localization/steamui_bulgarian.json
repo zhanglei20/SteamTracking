@@ -4386,7 +4386,7 @@
     "Settings_SteamPlay_IsEnabled": "Steam Play е включено за поддържани заглавия",
     "Settings_SteamPlay_IsWildcardEnabled": "Steam Play е включено за всички заглавия",
     "Settings_SteamPlay_EnableForOtherTitles": "Включване на Steam Play за всички други заглавия",
-    "Settings_SteamPlay_EnableForOtherTitles_Desc": "You can use Steam Play to test games in your library that have not been verified with a supported compatibility tool.",
+    "Settings_SteamPlay_EnableForOtherTitles_Desc": "Можете да използвате Steam Play, така че да изпитате игрите в своята библиотека, които не са потвърдени с поддържан инструмент за съвместимост.",
     "Settings_SteamPlay_RunOtherTitlesWith": "Пускане на други заглавия с: ",
     "Settings_SteamPlay_DefaultTool": "Инструмент за съвместимост по подразбиране:",
     "Settings_SteamPlay_ChooseTool": "Избиране на инструмент за съвместимост",
@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Да не се опитва наваксване до желания ъгъл, след като големи запращания с жироскопа са пренаситили извеждането от джойстика.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Да се опитва наваксване до желания ъгъл, но само, докато жироскопът е активен.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Да се опитва наваксване до желания ъгъл. Ако жироскопът не е активен, да продължават да се поднасят всякакви оставащи ъгли за наваксване.",
-    "LibraryTab_ControllerGames": "Удачни за контролер"
+    "LibraryTab_ControllerGames": "Удачни за контролер",
+    "Settings_RemotePlay_Microphone": "Микрофон"
 }

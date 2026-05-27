@@ -9,7 +9,7 @@
     "Privacy_Public": "Δημόσια",
     "Privacy_FriendsOnly": "Φίλοι μόνο",
     "Privacy_Private": "Ιδιωτικό",
-    "Privacy_Unlisted": "Χωρίς καταχώρηση",
+    "Privacy_Unlisted": "Μη καταχωρισμένο",
     "AppType_0": "Μη έγκυρο",
     "AppType_1": "Παιχνίδια",
     "AppType_2": "Λογισμικό",
@@ -4700,8 +4700,8 @@
     "ControllerConfigurator_SourceMode_Swap_Left_With_Right": "Αλλαγή από αριστερά στα δεξιά",
     "ControllerConfigurator_SourceMode_Group_BehaviorField": "Συμπεριφορά",
     "ControllerConfigurator_SourceMode_Group_Behavior": "Συμπεριφορά: %1$s",
-    "ControllerConfigurator_SourceMode_Group_Settings": "Ρυθμίσεις %1$s",
-    "ControllerConfigurator_Input_Settings": "Ρυθμίσεις %1$s",
+    "ControllerConfigurator_SourceMode_Group_Settings": "%1$s: Ρυθμίσεις",
+    "ControllerConfigurator_Input_Settings": "%1$s: Ρυθμίσεις",
     "ControllerConfigurator_Setting_Section_General": "Γενικές",
     "ControllerConfigurator_Setting_Section_Commands": "Εντολές",
     "ControllerConfigurator_Setting_Section_Output": "Έξοδος",
@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Μην προσπαθήσετε να προσεγγίσετε την επιθυμητή γωνία μετά τον κορεσμό της εξόδου μοχλού από μεγάλες περιστροφές του γυροσκοπίου.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Προσπαθήστε να προσεγγίσετε την επιθυμητή γωνία, αλλά μόνο όσο το γυροσκόπιο είναι ενεργό.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Προσπαθήστε να προσεγγίσετε την επιθυμητή γωνία. Αν το γυροσκόπιο δεν είναι ενεργό, συνεχίστε να παρέχετε τυχόν εναπομείνασες γωνίες προσέγγισης.",
-    "LibraryTab_ControllerGames": "Συμβατά με χειριστήριο"
+    "LibraryTab_ControllerGames": "Συμβατά με χειριστήριο",
+    "Settings_RemotePlay_Microphone": "Μικρόφωνο"
 }

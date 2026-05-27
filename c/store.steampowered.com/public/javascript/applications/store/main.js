@@ -89651,6 +89651,9 @@
             (_ = _.replace(
               /{STEAM_CLAN_IMAGE}/g,
               `${_._.CLAN_CDN_ASSET_URL}images/`,
+            ).replace(
+              /{STEAM_CLAN_LOC_IMAGE}/g,
+              `${_._.CLAN_CDN_ASSET_URL}images/`,
             )))
           : _;
       }

@@ -515,7 +515,7 @@
     "AppDetails_NewNote": "Catatan Baru",
     "AppDetails_ViewAllNotes": "Lihat Semua Catatan",
     "GameNotes_NoteForGame": "Catatan - %1$s",
-    "AppDetails_ViewConfiguration": "Lihat Cepat",
+    "AppDetails_ViewConfiguration": "Tampilan Cepat",
     "AppDetails_ControllerEdit": "Edit Tata Letak",
     "AppDetails_CloudStatus_Unknown": "Tidak Diketahui",
     "AppDetails_CloudStatus_Disabled": "Dinonaktifkan",
@@ -2296,7 +2296,7 @@
     "Settings_RemotePlay_EditValue": "Edit Nilai",
     "Settings_RemotePlay_EnableCaptureNVFBC": "Gunakan Capture NVFBC di GPU NVIDIA",
     "Settings_RemotePlay_EnableHardwareEncoding": "Aktifkan hardware pengodean",
-    "Settings_RemotePlay_SoftwareEncodingThreads_Description": "Jumlah utas pengodean software",
+    "Settings_RemotePlay_SoftwareEncodingThreads_Description": "Jumlah thread pengodean software",
     "Settings_RemotePlay_SoftwareEncodingThreads_Auto": "Otomatis",
     "Settings_RemotePlay_EnableTrafficPriority": "Pemprioritasan lalu lintas jaringan",
     "Settings_RemotePlay_EnableTrafficPriority_Description": "Jika kamu memiliki router yang lebih baru atau lebih baik, kamu juga dapat mengaktifkan pemprioritasan lalu lintas jaringan.",
@@ -4292,7 +4292,7 @@
     "Developer_SLS_Enabled_Description": "Membantu meningkatkan SteamOS dengan membagikan laporan crash.",
     "Developer_SLS_Enabled_Explainer": "Bantu tingkatkan SteamOS dengan membagikan laporan crash kepada tim pengembang SteamOS.\n\nInformasi ini akan digunakan untuk membantu meningkatkan keandalan dan kompatibilitas SteamOS.\n\nKamu dapat mengonfigurasi kategori data yang akan dibagikan. Untuk rincian lebih lanjut tentang data apa saja yang termasuk dalam setiap kategori, lihat masing-masing kategori.",
     "Developer_SLS_Minidump_Enabled": "Aktifkan Pengumpulan Laporan Crash Aplikasi",
-    "Developer_SLS_Minidump_Enabled_Explainer": "Laporan ini akan dihasilkan saat aplikasi mengalami crash. Data ini akan digunakan untuk membantu meningkatkan kompatibilitas dan keandalan aplikasi dengan SteamOS.\n\nLaporan berisi minidump crash dengan pengumpulan tumpukan proses dinonaktifkan. Minidump akan berisi tumpukan runtime untuk setiap utas pada saat crash, konteks utas (termasuk nilai register CPU), metadata tentang arsitektur CPU, dan nama juga jalur executable.",
+    "Developer_SLS_Minidump_Enabled_Explainer": "Laporan ini akan dihasilkan saat aplikasi mengalami crash. Data ini akan digunakan untuk membantu meningkatkan kompatibilitas dan keandalan aplikasi dengan SteamOS.\n\nLaporan berisi minidump crash dengan pengumpulan tumpukan proses dinonaktifkan. Minidump akan berisi tumpukan runtime untuk setiap utas pada saat crash, konteks thread (termasuk nilai register CPU), metadata tentang arsitektur CPU, dan nama serta jalur executable.",
     "Developer_SLS_Kdump_Enabled": "Aktifkan Pengumpulan Laporan Crash Kernel",
     "Developer_SLS_Kdump_Enabled_Explainer": "Laporan ini akan dihasilkan saat kernel mengalami kesalahan fatal. Data ini akan digunakan untuk meningkatkan stabilitas sistem SteamOS secara keseluruhan.\n\nLaporan ini mencakup dump memori kernel saat crash terjadi dan kernel melakukan pencatatan log.",
     "Developer_SLS_GPU_Enabled": "Aktifkan Pengumpulan Laporan Crash GPU",
@@ -9426,5 +9426,6 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_Off_Description": "Jangan mencoba mencapai sudut yang diinginkan setelah gerakan giroskop yang besar membuat output joystick menjadi jenuh.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Cobalah untuk mencapai sudut yang diinginkan, tapi hanya saat giroskop aktif.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Cobalah untuk mencapai sudut yang diinginkan. Jika giroskop tidak aktif, terus berikan pencapaian sudut yang tersisa.",
-    "LibraryTab_ControllerGames": "Ramah Kontroler"
+    "LibraryTab_ControllerGames": "Ramah Kontroler",
+    "Settings_RemotePlay_Microphone": "Mikrofon"
 }
