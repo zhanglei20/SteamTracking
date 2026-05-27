@@ -12944,8 +12944,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-6144
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -12956,6 +12954,7 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -12985,6 +12984,7 @@ ${LANGUAGE}
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
 65536
+60000000
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 666666666666666666666666666666666666666666666666
@@ -24985,7 +24985,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 22 2026 19:14:39
+May 26 2026 16:08:29
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -28208,7 +28208,6 @@ R\n\tWriteFile
 R\n\vGetRTMPInfo
 R\n\vSetRTMPInfo
 R\n\vtoken_lists
-R_x9K
 RackSystem
 RadioButton
 RadioButton::OnThink()
