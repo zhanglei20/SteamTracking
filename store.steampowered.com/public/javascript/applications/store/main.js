@@ -81471,10 +81471,15 @@
               /{MEDIA_CDN_COMMUNITY_URL}/g,
               i.TS.MEDIA_CDN_COMMUNITY_URL,
             )).replace(/{COMMUNITY_CDN_URL}/g, i.TS.COMMUNITY_CDN_URL)),
-            (e = e.replace(
-              /{STEAM_CLAN_IMAGE}/g,
-              `${i.TS.CLAN_CDN_ASSET_URL}images/`,
-            )))
+            (e = e
+              .replace(
+                /{STEAM_CLAN_IMAGE}/g,
+                `${i.TS.CLAN_CDN_ASSET_URL}images/`,
+              )
+              .replace(
+                /{STEAM_CLAN_LOC_IMAGE}/g,
+                `${i.TS.CLAN_CDN_ASSET_URL}images/`,
+              )))
           : e;
       }
       function c(e) {
