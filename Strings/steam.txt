@@ -2477,8 +2477,6 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
-1536
-15000
 155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
@@ -2494,6 +2492,8 @@ $ffn
 15ISSLCertificate
 15IUpdateStatusUI
 16 Mbps
+16:08:20
+16:08:25
 16CAdHocValidation
 16CBilling_Address
 16CConsoleUpdateUI
@@ -2508,6 +2508,8 @@ $ffn
 16ITCPHostCallback
 16JobStatsBucket_t
 172.16
+1536
+15000
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2552,8 +2554,6 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
-19:14:01
-19:14:05
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -7258,7 +7258,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 22 2026
+May 26 2026
 MaybeAllocateAligned cannot fail here.
 Meeting
 MemFree:
@@ -9360,7 +9360,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May 22 2026 19:14:05
+Startup - updater built May 26 2026 16:08:25
 State
 StaticFileWriterThread()
 Steam

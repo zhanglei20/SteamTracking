@@ -104,6 +104,7 @@
   what():
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123-xz
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -8117,7 +8118,7 @@ $steammessages_parental_objects.proto"
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFp{
+0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -11670,11 +11671,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16579,7 +16580,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hh\v
 9IClientVR
 9IGv
 9ISteamUGC
@@ -36022,6 +36022,7 @@ Steam Engine
 Steam ID does not pass strict parsing: '%s'
 Steam ID in logon response doesn't match, but our previous value was non-anon and valid?
 Steam Link
+Steam Link Touch Controller
 Steam Music: Unable to create audio device\n
 Steam Runtime Launch Service:
 Steam SDL Dummy OpenGL Window
@@ -48478,7 +48479,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggenh
 ghjkl
 gidlist
 gidparentcomment
@@ -53269,9 +53270,9 @@ lost rgb to gray
 lost/gained channels
 low-memory-warning
 low-power-mode1
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1633
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1786
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1991
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1634
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1798
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:2003
 low-pri yield - ../clientdll/appdatacache.cpp:884
 low-pri yield - ../clientdll/autocloud.cpp:591
 low-pri yield - ../clientdll/autocloud.cpp:670
@@ -60966,7 +60967,7 @@ stderr
 stdin
 stdout
 steam
-steam May 22 2026 19:14:06
+steam May 26 2026 16:08:25
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
