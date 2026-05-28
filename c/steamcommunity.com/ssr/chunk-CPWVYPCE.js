@@ -1261,7 +1261,7 @@ var _ = _(_(), 1),
   };
 function _() {
   let _ = {
-    bOptedIn: !1,
+    bOptedIn: !0,
     numResultsPerPage: 30,
     filters_column: "left",
     bDimVotedUp: !1,
