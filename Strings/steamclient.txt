@@ -104,7 +104,6 @@
   what():
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./0123-xz
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -8123,6 +8122,7 @@ $steammessages_parental_objects.proto"
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
 0: Off. 1: Spew the gyro speed and the extracted quaternion rotation speed
+0: Off. 1: Spew the hardware delta time vs. the platform delta time.
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
 0=>Miles 1=>XAudio2
 0?0L
@@ -8225,6 +8225,7 @@ $steammessages_parental_objects.proto"
 1 Mbps
 1!1'1-191C1E1K1]1a1g1m1s1
 1!:EA
+1. CGyroSource::Update bIsHardwareUpdate: %d Hardware rate: %u.\n
 1.2.11
 1.5 Mbps
 1.5.6
@@ -11625,6 +11626,7 @@ $steammessages_parental_objects.proto"
 2+ss
 2,THh
 2-.CMsgSteamDatagramConnectionClosed.ERelayMode
+2. CGyroSource::UpdatePrediction flTimeSinceLastPrediction %f \n
 2..CGameServers_QueryByFakeIP_Request.EQueryType"S\n\nEQueryType
 2.CAccountHardware_RegisterSteamController_Response"
 2.CAccountHardware_SteamControllerGetConfig_Request
@@ -11671,11 +11673,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13290,6 +13292,7 @@ $steammessages_parental_objects.proto"
 3,IE),W
 3--Jg
 3-WH
+3. CGyroTo2DMode::UpdateDeltaTime. Hardware rate: %f, Mode Polling Rate %f. bIsHardwareUpdate: %d\n
 3.CAccountHardware_DeRegisterSteamController_Request
 3.CAccountHardware_SteamControllerGetConfig_Response"
 3.CAccountHardware_SteamControllerSetConfig_Response"
@@ -23955,6 +23958,7 @@ Do not reconnect
 DoNotDisturb
 Dock device notification: %d
 Docked
+Docked slot = true\n
 Does not own required app
 DoesEventRecordingExist
 DoesGamePhaseRecordingExist
@@ -27719,6 +27723,7 @@ Haptics update action set error %i\n
 Harassment
 Hard Rock
 Hardcore
+Hardware Frame: %d, flDeltaTime %f\n
 Hardware Promo
 Hardware not capable of IPT
 HardwareUpdate
@@ -38214,6 +38219,7 @@ Use a dummy updater during oobe
 Use local dev websites
 Use other funding source
 Use other payment method
+Use the main loop's cached time as opposed to a fresh sample. Just for A/B testing.
 Use vulkan ANGLE backend
 UseCandidate was set!
 UsePushToMute
@@ -48732,6 +48738,7 @@ gyro_calibration_duration_manual_timeout
 gyro_calibration_duration_stationary
 gyro_data
 gyro_debug_gyro_speed_vs_quaternion_speed
+gyro_debug_hardware_vs_mode_time
 gyro_debug_sensor_timings
 gyro_deflection_to_joystick_max
 gyro_deflection_to_joystick_min
@@ -48799,6 +48806,7 @@ gyro_to_joystick_out_min
 gyro_to_joystick_power_curve
 gyro_to_mouse
 gyro_use_per_controller_preferences
+gyro_use_polling_time_for_prediction
 gyro_vertical_horizontal_ratio
 gyro_yaw
 gyro_yaw_scale
@@ -53282,7 +53290,7 @@ low-pri yield - ../clientdll/clientjob.cpp:440
 low-pri yield - ../clientdll/clientjob.cpp:471
 low-pri yield - ../clientdll/clientjob.cpp:780
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:6916
+low-pri yield - ../clientdll/clientugc.cpp:6922
 low-pri yield - ../clientdll/compatmanager.cpp:1973
 low-pri yield - ../clientdll/compatmanager.cpp:2224
 low-pri yield - ../clientdll/compatmanager.cpp:2491
@@ -60967,7 +60975,7 @@ stderr
 stdin
 stdout
 steam
-steam May 27 2026 21:20:33
+steam May 29 2026 00:03:00
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

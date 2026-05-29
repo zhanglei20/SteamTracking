@@ -1981,7 +1981,7 @@ function _() {
   return _(_), _;
 }
 function _() {
-  let { app: _, workshopConfig: _ } = _.useLoaderData(),
+  let { app: _, appHubHeader: _, workshopConfig: _ } = _.useLoaderData(),
     _ = _(),
     _ = `${_.MEDIA_CDN_COMMUNITY_URL}images/apps/${_.appid}/${_.workshop_header ?? ""}.jpg`;
   return (0, _.jsxs)(_, {
