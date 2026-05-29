@@ -1244,6 +1244,116 @@ var _ = "fKeHSh3rwXM-";
 var _ = "IjIO2w9MOyk-";
 var _ = "QWgDi2A4OQw-";
 var _ = "O0AnJi2MRlU-";
+var _ = _(_(), 1);
+function _(_) {
+  return (0, _.useMemo)(
+    () =>
+      _(_.short_description ?? "").replace(/(?:https?|ftp):\/\/[ \n\S]+/g, ""),
+    [_.short_description],
+  );
+}
+function _(_) {
+  return _
+    ? _.COMMUNITY_BASE_URL + "sharedfiles/filedetails/?id=" + _
+    : _.COMMUNITY_BASE_URL;
+}
+function _(_) {
+  return _.Localize(
+    "#Workshop_ItemDetails_TimestampWithTime",
+    _(_ ?? 0),
+    _(_ ?? 0),
+  );
+}
+function _(_, _) {
+  return (0, _.useMemo)(() => {
+    let _ = new Map(),
+      _ = _.declared_tags;
+    switch (_) {
+      case _:
+        _ = _.mtx_tags;
+        break;
+      case _:
+        _ = _.readytouse_tags;
+        break;
+      case _:
+        _ = _.collection_tags;
+        break;
+      case _:
+        _ = _.video_tags;
+        break;
+      case _:
+        _ = _.merch_tags;
+        break;
+    }
+    return (
+      _?.forEach((_) => {
+        _.tags.forEach((_) => _.set(_.name, _));
+      }),
+      _
+    );
+  }, [_, _]);
+}
+function _(_, _) {
+  let _ = (0, _.useContext)(_),
+    _ = _(_, _);
+  return (0, _.useMemo)(() => _.filter((_) => _.tag && _.has(_.tag)), [_, _]);
+}
+function _(_) {
+  return ["GetUGCContributorData", _];
+}
+function _(_, _ = !0) {
+  let _ = _();
+  return _({
+    queryKey: ["ugc_item_preview", _],
+    queryFn: async () => {
+      if (_.length == 0) return null;
+      let {
+        details: _,
+        contributorData: _,
+        playerLinkDetails: _,
+      } = await _("/workshop/actions", "GetUGCDetailsForItemPreview", _);
+      return (
+        _.setQueryData(_(_), _),
+        _.forEach((_) => {
+          _?.public_data && _.setQueryData(_(_.public_data.steamid), _);
+        }),
+        _
+      );
+    },
+    enabled: _,
+    staleTime: 3600 * 1e3,
+  });
+}
+function _(_, _) {
+  return (0, _.useMemo)(() => {
+    let _ = `(^${_.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})[^a-zA-Z0-9]*`,
+      _ = new RegExp(_);
+    return _?.replace(_, "") ?? "";
+  }, [_, _]);
+}
+function _(_, _) {
+  switch (_) {
+    case "readytouseitems":
+      return _.feature_ready_to_use_content_tab_name?.length
+        ? _.feature_ready_to_use_content_tab_name[0] == "#"
+          ? _.Localize(_.feature_ready_to_use_content_tab_name)
+          : _.feature_ready_to_use_content_tab_name
+        : _.Localize("#Workshop_Section_ReadyToUse");
+    case "merchandise":
+      return _.Localize("#Workshop_Section_Merchandise");
+    case "collections":
+      return _.Localize("#Workshop_Section_Collections");
+    case "mtxitems":
+      return _.feature_item_mtx_tab_name?.length
+        ? _.feature_item_mtx_tab_name[0] == "#"
+          ? _.Localize(_.feature_item_mtx_tab_name)
+          : _.feature_item_mtx_tab_name
+        : _.Localize("#Workshop_Section_Mtx");
+    case "videos":
+      return _.Localize("#Workshop_Section_Videos");
+  }
+  return "";
+}
 var _ = _(_(), 1),
   _ = _({
     Component: _,
@@ -1378,33 +1488,6 @@ var _ = (0, _.createContext)(void 0),
   _ = (0, _.createContext)(void 0),
   _ = (0, _.createContext)(void 0),
   _ = (0, _.createContext)(void 0);
-function _(_, _) {
-  let _ = "";
-  switch (_) {
-    case "readytouseitems":
-      _ =
-        _.feature_ready_to_use_content_tab_name &&
-        _.feature_ready_to_use_content_tab_name.length != 0
-          ? _.feature_ready_to_use_content_tab_name
-          : "#Workshop_Section_ReadyToUse";
-      break;
-    case "merchandise":
-      _ = "#Workshop_Section_Merchandise";
-      break;
-    case "collections":
-      _ = "#Workshop_Section_Collections";
-      break;
-    case "mtxitems":
-      _ =
-        _.feature_item_mtx_tab_name && _.feature_item_mtx_tab_name.length != 0
-          ? _.feature_item_mtx_tab_name
-          : "#Workshop_Section_Mtx";
-      break;
-    case "videos":
-      break;
-  }
-  return _.Localize(_);
-}
 function _(_) {
   let {
     appHubHeader: _,
@@ -1647,11 +1730,7 @@ function _() {
           children: [
             (0, _.jsx)("div", {
               className: _,
-              children: _.Localize(
-                _.feature_item_mtx_tab_name?.length != 0
-                  ? _.feature_item_mtx_tab_name
-                  : "#Workshop_Section_Mtx",
-              ),
+              children: _("mtxitems", _),
             }),
             _.logged_in &&
               (0, _.jsx)(_, {
@@ -1692,11 +1771,7 @@ function _() {
           children: [
             (0, _.jsx)("div", {
               className: _,
-              children: _.Localize(
-                _.feature_ready_to_use_content_tab_name?.length != 0
-                  ? _.feature_ready_to_use_content_tab_name
-                  : "#Workshop_Section_ReadyToUse",
-              ),
+              children: _("readytouseitems", _),
             }),
             (0, _.jsx)(_, {
               className: _,
@@ -2010,6 +2085,12 @@ function _(_) {
     : null;
 }
 export {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,

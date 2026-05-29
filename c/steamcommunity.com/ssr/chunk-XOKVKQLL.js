@@ -7775,93 +7775,6 @@ var _ = {
   aspectratio_collection_background_image: "yH6dY4JHgMU-",
 };
 var _ = _(_(), 1);
-function _(_) {
-  return (0, _.useMemo)(
-    () =>
-      _(_.short_description ?? "").replace(/(?:https?|ftp):\/\/[ \n\S]+/g, ""),
-    [_.short_description],
-  );
-}
-function _(_) {
-  return _
-    ? _.COMMUNITY_BASE_URL + "sharedfiles/filedetails/?id=" + _
-    : _.COMMUNITY_BASE_URL;
-}
-function _(_) {
-  return _.Localize(
-    "#Workshop_ItemDetails_TimestampWithTime",
-    _(_ ?? 0),
-    _(_ ?? 0),
-  );
-}
-function _(_, _) {
-  return (0, _.useMemo)(() => {
-    let _ = new Map(),
-      _ = _.declared_tags;
-    switch (_) {
-      case _:
-        _ = _.mtx_tags;
-        break;
-      case _:
-        _ = _.readytouse_tags;
-        break;
-      case _:
-        _ = _.collection_tags;
-        break;
-      case _:
-        _ = _.video_tags;
-        break;
-      case _:
-        _ = _.merch_tags;
-        break;
-    }
-    return (
-      _?.forEach((_) => {
-        _.tags.forEach((_) => _.set(_.name, _));
-      }),
-      _
-    );
-  }, [_, _]);
-}
-function _(_, _) {
-  let _ = (0, _.useContext)(_),
-    _ = _(_, _);
-  return (0, _.useMemo)(() => _.filter((_) => _.tag && _.has(_.tag)), [_, _]);
-}
-function _(_) {
-  return ["GetUGCContributorData", _];
-}
-function _(_, _ = !0) {
-  let _ = _();
-  return _({
-    queryKey: ["ugc_item_preview", _],
-    queryFn: async () => {
-      if (_.length == 0) return null;
-      let {
-        details: _,
-        contributorData: _,
-        playerLinkDetails: _,
-      } = await _("/workshop/actions", "GetUGCDetailsForItemPreview", _);
-      return (
-        _.setQueryData(_(_), _),
-        _.forEach((_) => {
-          _?.public_data && _.setQueryData(_(_.public_data.steamid), _);
-        }),
-        _
-      );
-    },
-    enabled: _,
-    staleTime: 3600 * 1e3,
-  });
-}
-function _(_, _) {
-  return (0, _.useMemo)(() => {
-    let _ = `(^${_.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})[^a-zA-Z0-9]*`,
-      _ = new RegExp(_);
-    return _?.replace(_, "") ?? "";
-  }, [_, _]);
-}
-var _ = _(_(), 1);
 function _(_, _) {
   switch (_(_, _)) {
     case "square":
@@ -13196,16 +13109,15 @@ var _ = [
   "#Workshop_SpecialFilter_ParentCollections",
 ];
 function _(_, _, _) {
+  if (_ == _.k_EQueryFilesSpecialFilter_AcceptedForUse) {
+    if (_ == "merchandise") return _.Localize("#Workshop_AcceptedMerch");
+    if (_.accepted_for_game_text && _.accepted_for_game_text.length != 0)
+      return _.accepted_for_game_text[0] == "#"
+        ? _.Localize(_.accepted_for_game_text)
+        : _.accepted_for_game_text;
+  }
   let _ = _[_];
-  return (
-    _ == _.k_EQueryFilesSpecialFilter_AcceptedForUse &&
-      (_ == "merchandise"
-        ? (_ = "#Workshop_AcceptedMerch")
-        : _.accepted_for_game_text &&
-          _.accepted_for_game_text.length != 0 &&
-          (_ = _.accepted_for_game_text)),
-    _.Localize(_)
-  );
+  return _.Localize(_);
 }
 function _(_) {
   let { browseQuery: _ } = _,
@@ -14167,9 +14079,6 @@ function _(_) {
   );
 }
 export {
-  _,
-  _,
-  _,
   _,
   _,
   _,

@@ -1,5 +1,4 @@
 export {
-  _ as GetLocalizedSectionName,
   _ as ReadPrefs,
   _ as ViewOldWorkshopButton,
   _ as WorkshopConfigContext,
