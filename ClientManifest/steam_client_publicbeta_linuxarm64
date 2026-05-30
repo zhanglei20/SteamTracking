@@ -1,6 +1,6 @@
 "linuxarm64"
 {
-	"version"		"1780020862"
+	"version"		"1780098236"
 	"tenfoot_images_all"
 	{
 		"file"		"tenfoot_images_all.zip.86419c7a56c12dd107b5e0d46f50c8a9b121f3cc"
@@ -11,11 +11,11 @@
 	}
 	"steamui_websrc_all"
 	{
-		"file"		"steamui_websrc_all.zip.97c4906340d7b994f3d271d72af3bd3d2d3abf66"
-		"size"		"32116528"
-		"sha2"		"5dca8f8df26fc8c7a7cfbd1ba6739ad11401c26a9d0d873dbb0b9d8b33253087"
-		"zipvz"		"steamui_websrc_all.zip.vz.7bcdc2a845f3557a1a47a451503afacacb2bab68_25989611"
-		"sha2vz"		"8e23bcb4b58991c61dea97f39f727dd60b960787b88c7ef7dd4d60321914e455"
+		"file"		"steamui_websrc_all.zip.29179919f22c97ccb4fbd6c23337da6f0e0a4cce"
+		"size"		"32116623"
+		"sha2"		"364c2481376172d3bdf4ec6361fa20148b5b1af671e38f92695084e6015e1ea8"
+		"zipvz"		"steamui_websrc_all.zip.vz.72d0f6e9ed93b6a13240546eb71acc69ed67bc12_25990462"
+		"sha2vz"		"6f17b5200e5722176bf4e7de163f808920a5fac7fecc607c505ff18de9faa09b"
 	}
 	"resources_misc_all"
 	{
@@ -65,11 +65,11 @@
 	}
 	"bins_hardware_all"
 	{
-		"file"		"bins_hardware_all.zip.154ceb2c00ea0a6e48d13873aae6f61d774a3d52"
-		"size"		"349701"
-		"sha2"		"43ac845d8febc99effd2b0fffb0e552df0b762ced4f4fec241ef916e869efce2"
-		"zipvz"		"bins_hardware_all.zip.vz.22c1177afe396bb8ce7e1b7381af2b960ceb2f49_277927"
-		"sha2vz"		"9221609c02d2709b6a5464bb10593d0e84628981b6ed0212d3635cf6b0fe4848"
+		"file"		"bins_hardware_all.zip.16db9e04598ed2fa23813c40bcb7b58c245023fd"
+		"size"		"350420"
+		"sha2"		"dc51c3a6c139d1172b0f6bd33003521325de779fddd2ede96ba4c717ff40a757"
+		"zipvz"		"bins_hardware_all.zip.vz.82a8c33ee136d61ebd7fe44af6f17b48e3543403_278470"
+		"sha2vz"		"ff0eaed954043f75589de2b6a929b8a8e9c5e9725d408c13eed782e763f44f17"
 	}
 	"steamui_websrc_sounds_all"
 	{
@@ -87,19 +87,19 @@
 	}
 	"bins_linuxarm64"
 	{
-		"file"		"bins_linuxarm64.zip.e808827a238a9a521ca751d04ed168dd7f25df42"
-		"size"		"68004933"
-		"sha2"		"4c693c9ac978fddc515edb4b2bd0d644348dc9df80834e30c1eeaefc4e0ef9f9"
-		"zipvz"		"bins_linuxarm64.zip.vz.70b299cff45cb727fcbaca2fa64fbafae065ba39_40359202"
-		"sha2vz"		"992da72fd45f6fe4db398d162aa9ab42fa9751ca71a70a2a75c6828692082500"
+		"file"		"bins_linuxarm64.zip.f50fb61aacb77aabe6acda58cd59bf92872202de"
+		"size"		"68005044"
+		"sha2"		"c1cf7889bdbef27da4e372c510c68be203b7f170a5a5a9ba0cb06ca60091a762"
+		"zipvz"		"bins_linuxarm64.zip.vz.400aefd4ee8b6e3cec80c175ba3037c017d445c2_40364293"
+		"sha2vz"		"8d1b09031d6258c8636991e5cfff827da1b5f6ccef2397e8cccf69497e0b2fda"
 	}
 	"bins_sdk_linuxarm64"
 	{
-		"file"		"bins_sdk_linuxarm64.zip.ca8c27164cc3455191c3689c3d49d98affd17ef5"
-		"size"		"34553122"
-		"sha2"		"3a36aa05c2286bbe193eb9c4cf59009884dadcad6e0a0d742fc945eeaf41f894"
-		"zipvz"		"bins_sdk_linuxarm64.zip.vz.fe3ff3d4508032d86e1f197b462e5e39b9c58e52_23366902"
-		"sha2vz"		"17bc531752c352e785cdf594a551d12d5118977a6d18e943408ae20dd1df6325"
+		"file"		"bins_sdk_linuxarm64.zip.5aa9ca63d8308a93c90317355a79ccba6853add6"
+		"size"		"34552952"
+		"sha2"		"4fbae601d7c82fc41786091c7c354cf5d8307b237a81807abd5c92e17f825bb3"
+		"zipvz"		"bins_sdk_linuxarm64.zip.vz.095a1c6fb76eb6db6fc70b4f11e223253b26d1d2_23363292"
+		"sha2vz"		"49ef0c9d4d1097ebbf5d371e4820373251939ecec99dc51a02cccb9ecde77b93"
 	}
 	"bins_codecs_linuxarm64"
 	{
@@ -111,11 +111,11 @@
 	}
 	"bins_misc_linuxarm64"
 	{
-		"file"		"bins_misc_linuxarm64.zip.e6b5b8c56092ca57c5e3385bb15c2237714ea3e5"
-		"size"		"37524778"
-		"sha2"		"10083c9e09b2548c79bbdd6b3aa3102346355782c04a502406bc6a360944cdac"
-		"zipvz"		"bins_misc_linuxarm64.zip.vz.36fc934d75caee7a6b1f90193cee639333b9fc84_19626695"
-		"sha2vz"		"4f7178f15037139cb65d2122ea4758863b0006ee618b4a12b1f71abbe23279df"
+		"file"		"bins_misc_linuxarm64.zip.452f92bc2acfc7507eb264aff19401f60223221d"
+		"size"		"37524954"
+		"sha2"		"43bb057393e4b85cbe421b99ec435216d33940f64acb949369dd9777fa1eae2b"
+		"zipvz"		"bins_misc_linuxarm64.zip.vz.41a6f830bdd0e1bd625b56e316c05773c4667b55_19627820"
+		"sha2vz"		"ab207f20819065f285d45e1ac9f085872fc27a3a35d1df4fe600e2c4c1170f3f"
 	}
 	"bins_hardware_linuxarm64"
 	{
@@ -149,11 +149,11 @@
 	}
 	"steam_linuxarm64"
 	{
-		"file"		"steam_linuxarm64.zip.e30a10c752aa78c4c618e7b20c1dcea20e6a715e"
-		"size"		"4345016"
-		"sha2"		"46e1511b165cdc50fc4c24df0e9af7b88a4e8c11667677af508850adf17b2049"
-		"zipvz"		"steam_linuxarm64.zip.vz.9d29c77e1251d0151c2f5c096be889181689d17a_3380469"
-		"sha2vz"		"8f0957e461205fcc2aca2e9a20fb8a332802022df0c19d823e1bac729f4cc66d"
+		"file"		"steam_linuxarm64.zip.0d4ed330a677137d67b4fd75be86dfa2ae06bc00"
+		"size"		"4345036"
+		"sha2"		"937e99536c81e72a3ceb028ed2dc1581cfff3cdbba6dab30918ab76fd3195531"
+		"zipvz"		"steam_linuxarm64.zip.vz.6f57ec4ccc2f08f5b0cc83e0acf5b72893923fac_3380321"
+		"sha2vz"		"890d13ac80c4677b3bb61e8b2fc27ea0e68c620bb69eaed1a7581c6384c90c42"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_scout_linuxarm64"
@@ -172,11 +172,11 @@
 	}
 	"bins_steamrt_linuxarm64"
 	{
-		"file"		"bins_steamrt_linuxarm64.zip.2c20e25d56b369837a10bce6b52d9dcb47c001d3"
-		"size"		"108649053"
-		"sha2"		"e50010c11d58903e5aa3e21dd1c1fedd2438c54f34d0e90ff0fe0829106a5b4b"
-		"zipvz"		"bins_steamrt_linuxarm64.zip.vz.55398efb65ed123584423cc5cae3734fba574477_60556341"
-		"sha2vz"		"38334a3c8c150e882fd3b26ef0885fd68d36b44a401717767dff75e9cf4985ad"
+		"file"		"bins_steamrt_linuxarm64.zip.1db25d28c3a514f3ed9046aea345e86c9ec8d4c5"
+		"size"		"108649614"
+		"sha2"		"9202722aa419527c639ddd09d03629c5df855f2eaa3c737181e3e2ebcc7d9ad3"
+		"zipvz"		"bins_steamrt_linuxarm64.zip.vz.b7c5cf4ee9bce6e840f39a96640e5ce1242c188d_60571755"
+		"sha2vz"		"d6c646e76163cb3133a9ee9619f1ecb90d8ad9673b6cccbdbd60a6598b6d1611"
 	}
 	"bins_codecs_steamrt_linuxarm64"
 	{
@@ -208,11 +208,11 @@
 	}
 	"steam_steamrt_linuxarm64"
 	{
-		"file"		"steam_steamrt_linuxarm64.zip.5f373aa316cfbb7d58b8c59cf05aa9168195b053"
-		"size"		"4647619"
-		"sha2"		"32c58c5c4e8e20bc35091271160fb1d5823108656eef43c32511374f48712bed"
-		"zipvz"		"steam_steamrt_linuxarm64.zip.vz.6b6bc149540980f7d931be813f33eef09a712908_3585269"
-		"sha2vz"		"8a69c5c61e0b7889466837db62bcf4d5d9cc4f496720ea8d1a3c582e68df0d13"
+		"file"		"steam_steamrt_linuxarm64.zip.f438c1fc6784cca8144d47075afbe6524c6bb561"
+		"size"		"4647641"
+		"sha2"		"2e6b9161c5f9ade0367ac9a46955e0c8bfbe0b5a8b27c7003b0ab1bd23435eb5"
+		"zipvz"		"steam_steamrt_linuxarm64.zip.vz.de56e347c725fecc9abacea0c2561f982b0c6bd1_3584616"
+		"sha2vz"		"33213676bf79994a42082b0b401d0e7565ab271b7c3a2c2b1176e0eaf30ed225"
 	}
 	"webkit_linuxarm64_linuxarm64"
 	{
@@ -224,11 +224,11 @@
 	}
 	"sdl3_linuxarm64_linuxarm64"
 	{
-		"file"		"sdl3_linuxarm64_linuxarm64.zip.91586a58d4bf0651490246d73466759b521bcea2"
-		"size"		"9552482"
-		"sha2"		"c2ef1961c2adbac2269c88cb8f400725a677bb6a8a1afad48d59e72da43e403f"
-		"zipvz"		"sdl3_linuxarm64_linuxarm64.zip.vz.18d8557b29ee56ebacdf40a40655d6d3f67f8d1f_6802242"
-		"sha2vz"		"351ab01b6f129afdee50b7d3130df0f5f34814cd793a3f03ed40fa7479b321d9"
+		"file"		"sdl3_linuxarm64_linuxarm64.zip.5003cecb5bdb295e1741d581a717043fccd562b8"
+		"size"		"9552478"
+		"sha2"		"3b3be0d030677c53b6fd9694d7713888d2b32a374a4eafb20052c53785231e8f"
+		"zipvz"		"sdl3_linuxarm64_linuxarm64.zip.vz.b40bafe81029f9be7c6bf1ef9dc5eba7c196a60c_6802050"
+		"sha2vz"		"a0b58e461bbd335a1978665e911cf707e4cb1669f28c103f74da4ede8e1e5b8e"
 	}
 	"codecs_linuxarm64_linuxarm64"
 	{
@@ -240,27 +240,27 @@
 	}
 	"bins_linuxarm64_linuxarm64"
 	{
-		"file"		"bins_linuxarm64_linuxarm64.zip.5cda65fe6a3d77319c7560d6f8e97b869279d01a"
-		"size"		"113757320"
-		"sha2"		"74cd7569b60de4be89ebf44bf8d3074ff3623087062d6508b11bea5a206ffeba"
-		"zipvz"		"bins_linuxarm64_linuxarm64.zip.vz.d7409fe62663c381ae73ba0c03b96c0b64cc7095_61497091"
-		"sha2vz"		"d361040eb0adb5229b89a3e9b1ec2e21ee38903cf6bb4f48f27e5691f38451e7"
+		"file"		"bins_linuxarm64_linuxarm64.zip.77870d881b903274aee25147ea24a90153d8c24a"
+		"size"		"113758315"
+		"sha2"		"88769079ea7c13e53d23301ed1001f6adfd54db1f1d409bc6bbc53b6af8e75a1"
+		"zipvz"		"bins_linuxarm64_linuxarm64.zip.vz.3a26b82ff8c003deba29a9eaa1874a4534ea72d1_61555709"
+		"sha2vz"		"01ec22e5e21f4ed6f40b723938b71019a02dd361f7bcdcb2f2794710fed3cafc"
 	}
 	"bins_sdk_linuxarm64_linuxarm64"
 	{
-		"file"		"bins_sdk_linuxarm64_linuxarm64.zip.9e631b4b0c89fe08268edb19cabfd4e84c0557c6"
-		"size"		"15699035"
-		"sha2"		"a13e409bc64c344a1528d1189e62c9e5d285188d0e44838cc36cb1c98aeeb4c2"
-		"zipvz"		"bins_sdk_linuxarm64_linuxarm64.zip.vz.6ffaa0f3ed7e1a5bcd12bbe71121a402039991c8_9912896"
-		"sha2vz"		"7c373a8ae081290d25b1e1f26250f6563df4b44ec01fe26adbd649cee6ac41f2"
+		"file"		"bins_sdk_linuxarm64_linuxarm64.zip.720ec7701191a034db9507bb3541ab242f96df91"
+		"size"		"15699037"
+		"sha2"		"7f57379fa4a49d4f4668c792b3be6c68465e45f02d1dc3024792ea2ba0c1273d"
+		"zipvz"		"bins_sdk_linuxarm64_linuxarm64.zip.vz.9985762dc646939782afce6de9065097c2b9db51_9912950"
+		"sha2vz"		"9433d99cf146b083eb6ac4498b42e6989f9a999b6da0015d418f37d2a7bef5b2"
 	}
 	"bins_androidarm64_linuxarm64"
 	{
-		"file"		"bins_androidarm64_linuxarm64.zip.ee55b63832fb98cfcfd568f4cafc23e6cf4d695d"
-		"size"		"17943093"
-		"sha2"		"2d9d2704b9b95e3bc3926a12942d11ed52bbedb729b5d33b6d471e43e6be48db"
-		"zipvz"		"bins_androidarm64_linuxarm64.zip.vz.779c45004cc2ff3099e2fa00c1b816c82937f96d_8788854"
-		"sha2vz"		"da83a87e9621f4fb8c991380c0a323fbc2a941e6ec44b2da87b03dfc8ccd32e0"
+		"file"		"bins_androidarm64_linuxarm64.zip.2cf7e5d7ab5efea16459aff24434cec244af111d"
+		"size"		"17943205"
+		"sha2"		"a2b7c12eb63a21f297293108873cb09b00e3e0a2a2cd621251dde19bc2a3ca8a"
+		"zipvz"		"bins_androidarm64_linuxarm64.zip.vz.49a880046c0b22e365f03922aeef5fd122d4ffc9_8791308"
+		"sha2vz"		"44bb5d80bc4f02bba6e70f13eb604ad8b3bc5c8a5e95cb0b32d2b94e3f18a18a"
 	}
 	"resource_linuxarm64_linuxarm64"
 	{
@@ -271,9 +271,9 @@
 }
 "kvsign2"
 {
-	"linuxarm64"		"79072bd95026d690ec12ee909fef4dfb8fa1b16b87ca604b4960fba0e9fb29d2a2e8b2d658da0ab909cc3e9f2bc8ae666871c5d1bb6910d587e75c2e98373801"
+	"linuxarm64"		"0f2b21e94b7c51968650d19ed084323c90cd169f3be8ee04f44331680a3b10e3bad78072c6c0347fa6c94eb8b73099d6c1ede08ee27581d1cce519a23b5cc402"
 }
 "kvsignatures"
 {
-	"linuxarm64"		"c71c7c9d0f338f789365e59043a3909afc2fcaee341125a057331827ea9638fc1c2bba8d08a4823be263688aacbfd34b0d0f9e6c1a560e66e39b87f93bec5e2474d7f3b9e053350987714d014663e058ce7297c1fa3e06fe632d6802d7ac21e54bceef6420544ca9204000c636101a08f26a0d52eb59e1b9d9340c568526e586"
+	"linuxarm64"		"59ec8b6b8d5fb47756e5df146cd8e084e03919adb7610be8c86024727fb5e6f527ad4b0f0eb849c2be42308ebd5d11ff87774fde4487ad7df02d7309fbde66dd15a418b77767cfa9e0d26772169444458b9bbfb6fd8b6b42e01060028416b4770c49a68ada3567f5e49ae60f3514897ce449df119ca619aee05bd4a1c005581f"
 }

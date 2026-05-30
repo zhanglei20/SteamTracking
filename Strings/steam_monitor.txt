@@ -266,8 +266,6 @@ $\nY8O
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:02:55
-00:02:57
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -283,6 +281,8 @@ $\nY8O
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
+23:14:23
+23:14:24
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
