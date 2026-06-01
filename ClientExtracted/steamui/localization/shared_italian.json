@@ -2651,7 +2651,7 @@
     "SteamDeckVerified_DescriptionHeader": "I test di Valve indicano che questo titolo è %1$s su Steam Deck. %2$s",
     "SteamDeckVerified_DescriptionHeader_WithAppName": "I test di Valve indicano che %1$s è %2$s su Steam Deck. %3$s",
     "SteamDeckVerified_DescriptionHeader_Verified": "Questo gioco funziona perfettamente su Steam Deck, con i controlli integrati e il display.",
-    "SteamDeckVerified_DescriptionHeader_Playable": "Questo gioco funziona bene su Steam Deck, ma potrebbe richiedere del lavoro in più per le interazioni o la configurazione.",
+    "SteamDeckVerified_DescriptionHeader_Playable": "Questo gioco funziona bene su Steam Deck, ma potrebbe richiedere un impegno maggiore per le interazioni o la configurazione.",
     "SteamDeckVerified_DescriptionHeader_Unsupported": "Al momento il gioco non funziona parzialmente o interamente su Steam Deck.",
     "SteamDeckVerified_DescriptionHeader_Unknown": "Valve sta ancora verificando questo titolo. Al momento non abbiamo ulteriori informazioni sulla compatibilità di questo gioco con Steam Deck.",
     "SteamDeckVerified_DescriptionHeader_Unknown_WithAppName": "Valve sta ancora verificando %1$s. Al momento non abbiamo ulteriori informazioni sulla compatibilità di questo gioco con Steam Deck.",

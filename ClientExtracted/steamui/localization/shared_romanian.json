@@ -2648,7 +2648,7 @@
     "SteamMachine_TestResult_CrossPlatformCloudSavesNotSupported": "Acest joc nu este compatibil cu sincronizarea progresului între platforme diferite.",
     "SteamMachine_TestResult_SimultaneousInputGyroTrackpadFriendly": "Acest joc permite utilizarea giroscopului sau trackpadului în modul „mouse” pentru controlarea camerei și comenzile gamepadului pentru deplasare.",
     "SteamMachine_TestResult_HDRMustBeManuallyEnabled": "Acest joc este compatibil cu HDR, dar opțiunea trebuie activată manual în setările jocului.",
-    "SteamDeckVerified_DescriptionHeader": "Conform testului de compatibilitate realizat de Valve, acest titlu este etichetat drept %1$s pentru Steam Deck. %2$s",
+    "SteamDeckVerified_DescriptionHeader": "Conform testului de compatibilitate cu Steam Deck realizat de Valve, acest titlu este %1$s. %2$s",
     "SteamDeckVerified_DescriptionHeader_WithAppName": "Conform testului de compatibilitate realizat de Valve, %1$s este etichetat drept %2$s pentru Steam Deck. %3$s",
     "SteamDeckVerified_DescriptionHeader_Verified": "Acest joc rulează impecabil pe Steam Deck, iar ecranul și comenzile integrate funcționează perfect.",
     "SteamDeckVerified_DescriptionHeader_Playable": "Acest joc funcționează pe Steam Deck, dar poate necesita un efort suplimentar pentru configurare sau interacțiune.",

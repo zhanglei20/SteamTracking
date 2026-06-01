@@ -7555,6 +7555,7 @@ ${LANGUAGE}
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFPwN
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -13426,7 +13427,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9HheA
+9H(eA
 9IGv
 9Inventory
 9PE,$
@@ -24229,6 +24230,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
+Jun  1 2026 22:03:58
 June
 K'iche'
 K(\f]C15
@@ -24986,7 +24988,6 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 29 2026 23:15:53
 MaybeAllocateAligned cannot fail here.
 Media
 MediaAvailable
@@ -26415,6 +26416,7 @@ Negative or overflowed total bytes for type %u in download update: %llu
 Negotiating
 Nepali
 Nested protocol message not parsed in its entirety.
+Nesting depth limit (%d) exceeded
 Net Banking (Nodwin)
 NetCash
 NetPacketGlobals

@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "%1$s vie kirjastoon, kauppaan, asetuksiin jne. Pidä painettuna, niin näet järjestelmän pikakuvakkeet.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Pikanäkymävalikko",
-    "GuidedTour_BPM_QuickAccessButton_Description": "%1$s vie nopeasti ilmoituksiin, kaverilistaan, pika-asetuksiin jne.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "Pidä hauskaa",
     "GuidedTour_BPM_SendOff_Description": "Toivottavasti pidät televisiotilasta. Työpöytätilaan palaat näin: Steam > Virta > Poistu televisiotilasta.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Yrittää päästä haluttuun kulmaan, mutta vain gyron ollessa aktiivisena.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Yrittää päästä haluttuun kulmaan. Jos gyro ei ole aktiivisena, jatkaa muiden palautettavien kulmien tavoittamista.",
     "LibraryTab_ControllerGames": "Ohjainystävällinen",
-    "Settings_RemotePlay_Microphone": "Mikrofoni"
+    "Settings_RemotePlay_Microphone": "Mikrofoni",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "Langaton Xbox-ohjain siirtyy Bluetooth-laiteparin muodostustilaan, kun Xbox-painiketta ja takaa ohjaimen yläosasta löytyvää Muodosta laitepari -painiketta pidetään pohjassa, kunnes Xbox-logo alkaa vilkkua.",
+    "PairControllerScreen_Explainer_Switch": "Nintendo Switch -ohjain siirtyy Bluetooth-pariliitostilaan, kun ohjaimen yläosasta löytyvää pariliitosnäppäintä painetaan ja pidetään pohjassa, kunnes merkkivalot alkavat vilkkua vasemmalta oikealle.",
+    "PairControllerScreen_ControllerType_Dropdown": "Laiteparin muodostus ohjaimelle",
+    "PairControllerScreen_Searching": "Haetaan Bluetooth-laitteita",
+    "PairControllerScreen_ControllerPaired": "Laitepari muodostettu"
 }

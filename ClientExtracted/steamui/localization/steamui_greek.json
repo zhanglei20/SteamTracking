@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "Πατήστε το %1$s για να δείτε τη Συλλογή, το Κατάστημα, τις ρυθμίσεις και άλλα. Κρατήστε το πατημένο για να δείτε τις συντομεύσεις συστήματος.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Μενού γρήγορης πρόσβασης",
-    "GuidedTour_BPM_QuickAccessButton_Description": "Πατήστε %1$s για να δείτε γρήγορα τις ειδοποιήσεις σας, τη Λίστα Φίλων σας, τις γρήγορες ρυθμίσεις και άλλα.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "Καλή διασκέδαση",
     "GuidedTour_BPM_SendOff_Description": "Ελπίζουμε να απολαύσετε το Big Picture. Για να επιστρέψετε στην επιφάνεια εργασίας, μεταβείτε στο Μενού > Τροφοδοσία > Έξοδος από Big Picture.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Προσπαθήστε να προσεγγίσετε την επιθυμητή γωνία, αλλά μόνο όσο το γυροσκόπιο είναι ενεργό.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Προσπαθήστε να προσεγγίσετε την επιθυμητή γωνία. Αν το γυροσκόπιο δεν είναι ενεργό, συνεχίστε να παρέχετε τυχόν εναπομείνασες γωνίες προσέγγισης.",
     "LibraryTab_ControllerGames": "Συμβατά με χειριστήριο",
-    "Settings_RemotePlay_Microphone": "Μικρόφωνο"
+    "Settings_RemotePlay_Microphone": "Μικρόφωνο",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Πριν ξεκινήσετε να παίζετε, ορίστε μερικές χρήσιμες συμβουλές.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Επεκτείνετε τη χωρητικότητα αποθήκευσης προσθέτοντας και διαμορφώνοντας μία κάρτα microSD. Πιέστε την κάρτα προς τα μέσα για εξαγωγή.",
+    "PairControllerScreen_Explainer_Xbox": "Για να θέσετε το ασύρματο χειριστήριο Xbox σας σε λειτουργία σύζευξης Bluetooth, πατήστε το κουμπί Xbox και έπειτα κρατήστε πατημένο το κουμπί σύζευξης στο πάνω μέρος του χειριστηρίου μέχρι να αρχίσει να αναβοσβήνει το λογότυπο Xbox.",
+    "PairControllerScreen_Explainer_Switch": "Για να θέσετε το χειριστήριο Nintendo Switch σας σε λειτουργία σύζευξης Bluetooth, κρατήστε πατημένο το κουμπί σύζευξης στο πάνω μέρος του χειριστηρίου μέχρι τα LED να αρχίσουν να ανάβουν διαδοχικά από τα αριστερά προς τα δεξιά.",
+    "PairControllerScreen_ControllerType_Dropdown": "Οδηγίες σύζευξης χειριστηρίου",
+    "PairControllerScreen_Searching": "Γίνεται αναζήτηση για συσκευές Bluetooth…",
+    "PairControllerScreen_ControllerPaired": "Έγινε σύζευξη χειριστηρίου"
 }

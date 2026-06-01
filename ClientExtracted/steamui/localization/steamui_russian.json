@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "Нажмите %1$s, чтобы перейти в библиотеку, магазин, настройки и так далее. Долгое нажатие покажет системные комбинации кнопок.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Меню быстрого доступа",
-    "GuidedTour_BPM_QuickAccessButton_Description": "Нажмите %1$s, чтобы быстро открыть уведомления, список друзей, быстрые настройки и прочее.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "Приступим!",
     "GuidedTour_BPM_SendOff_Description": "Надеемся, вам нравится режим Big Picture. Чтобы вернуться в режим рабочего стола, перейдите в «Меню» > «Выключение» > «Выйти из режима Big Picture».",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Навёрстывать нужный угол, но только когда гироскоп активирован.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Навёрстывать нужный угол. Если гироскоп не активирован, продолжать применять значения углов для достижения требуемого.",
     "LibraryTab_ControllerGames": "С поддержкой контроллеров",
-    "Settings_RemotePlay_Microphone": "Микрофон"
+    "Settings_RemotePlay_Microphone": "Микрофон",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "Чтобы перевести контроллер Xbox Wireless в режим привязки по Bluetooth, нажмите кнопку Xbox, а затем удерживайте кнопку привязки на верхней стороне контроллера, пока логотип Xbox не начнёт мигать.",
+    "PairControllerScreen_Explainer_Switch": "Чтобы перевести контроллер Nintendo Switch в режим привязки по Bluetooth, нажмите и удерживайте кнопку привязки на верхней стороне контроллера, пока светоиндикаторы не начнут последовательно мигать слева направо.",
+    "PairControllerScreen_ControllerType_Dropdown": "Инструкции по привязке контроллера",
+    "PairControllerScreen_Searching": "Поиск устройств Bluetooth...",
+    "PairControllerScreen_ControllerPaired": "Контроллер привязан"
 }

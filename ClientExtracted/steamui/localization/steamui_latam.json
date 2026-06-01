@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "Pulsa el botón \"%1$s\" para acceder a las configuraciones, a la biblioteca y a la tienda, entre otros. Mantenlo presionado para ver los atajos del sistema.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Mayús + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Menú de acceso rápido",
-    "GuidedTour_BPM_QuickAccessButton_Description": "Pulsa el botón \"%1$s\" para ver rápidamente tus notificaciones, lista de amigos, ajustes rápidos y más.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Mayús + Tab",
     "GuidedTour_BPM_SendOff_Title": "¡Que te diviertas!",
     "GuidedTour_BPM_SendOff_Description": "Esperamos que disfrutes del uso de Big Picture. Para volver al modo Escritorio, ve a \"Iniciar/Apagar\" > \"Salir del modo Big Picture\" en el menú.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Intenta recuperar el ángulo deseado, pero solamente mientras el giroscopio esté activo.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Intenta recuperar el ángulo deseado. Si el giroscopio no está activo, sigue aplicando la recuperación de ángulos restante.",
     "LibraryTab_ControllerGames": "Compatible con controles",
-    "Settings_RemotePlay_Microphone": "Micrófono"
+    "Settings_RemotePlay_Microphone": "Micrófono",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "Para poner tu control inalámbrico de Xbox en modo de emparejamiento por Bluetooth, presiona el botón \"Xbox\" y mantén presionado el botón de emparejamiento de la parte superior del control hasta que el logotipo de Xbox empiece a parpadear.",
+    "PairControllerScreen_Explainer_Switch": "Para poner tu control de Nintendo Switch en modo de emparejamiento por Bluetooth, mantén presionado el botón de emparejamiento de la parte superior del control hasta que los LED empiecen a desplazarse de izquierda a derecha.",
+    "PairControllerScreen_ControllerType_Dropdown": "Instrucciones para emparejar el control",
+    "PairControllerScreen_Searching": "Buscando dispositivos Bluetooth...",
+    "PairControllerScreen_ControllerPaired": "Control emparejado"
 }

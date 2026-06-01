@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "Drücken Sie %1$s, um Ihre Bibliothek, Ihren Shop, Ihre Einstellungen etc. aufzurufen. Halten Sie sie gedrückt, um zu den Tastenverknüpfungen Ihres Systems zu gelangen.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Umschalt + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Schnellzugriffsmenü",
-    "GuidedTour_BPM_QuickAccessButton_Description": "Drücken Sie %1$s, um schnell Ihre Benachrichtigungen, den Schnellzugriff, Ihre Freundesliste etc. aufzurufen.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Strg + Umschalt + Tab",
     "GuidedTour_BPM_SendOff_Title": "Viel Spaß!",
     "GuidedTour_BPM_SendOff_Description": "Wir hoffen, Sie haben Spaß mit dem Big-Picture-Modus. Falls Sie zum Desktop-Modus zurückkehren möchten, gehen Sie auf „Menü“ > „Ein/Aus“ > „Big-Picture-Modus verlassen“.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Versuchen Sie, die Diskrepanz zum gewünschten Winkel nur aufzuholen, wenn das Gyroskop aktiviert ist.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Versuchen Sie, die Diskrepanz zum gewünschten Winkel aufzuholen. Wenn das Gyroskop nicht aktiviert ist, ermitteln Sie alle verbleibenden aufzuholenden Winkel.",
     "LibraryTab_ControllerGames": "Controllerunterstützung",
-    "Settings_RemotePlay_Microphone": "Mikrofon"
+    "Settings_RemotePlay_Microphone": "Mikrofon",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "Um Ihren Xbox Wireless Controller in den Bluetooth-Kopplungsmodus zu versetzen, drücken Sie die Xbox-Taste und halten Sie anschließend die oben auf dem Controller befindliche Koppeln-Taste gedrückt, bis das Xbox-Logo blinkt.",
+    "PairControllerScreen_Explainer_Switch": "Um Ihren Nintendo Switch Controller in den Bluetooth-Kopplungsmodus zu versetzen, halten Sie den oben auf dem Controller befindlichen SYNC-Knopf gedrückt, bis die LEDs schnell hin und her blinken.",
+    "PairControllerScreen_ControllerType_Dropdown": "Anleitung zum Koppeln des Controllers",
+    "PairControllerScreen_Searching": "Bluetooth-Geräte werden gesucht …",
+    "PairControllerScreen_ControllerPaired": "Controller gekoppelt"
 }

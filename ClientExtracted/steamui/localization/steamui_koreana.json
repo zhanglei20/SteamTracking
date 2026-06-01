@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "%1$s 버튼을 누르면 라이브러리, 상점, 설정 등으로 이동할 수 있으며, 길게 누르면 시스템 단축키를 확인할 수 있습니다.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "바로 가기 메뉴",
-    "GuidedTour_BPM_QuickAccessButton_Description": "%1$s 버튼을 누르면 알림, 친구 목록, 빠른 설정 등을 바로 확인할 수 있습니다.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "이제 즐겁게 플레이하세요!",
     "GuidedTour_BPM_SendOff_Description": "Big Picture 모드를 즐겁게 사용해 주세요. 데스크톱 모드로 돌아가려면, 메뉴 > 전원 > Big Picture 모드 종료로 이동하세요.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "자이로가 활성화된 경우에만 각도를 보정합니다.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "실제 자이로 카메라 회전 각도를 반영하기 위해 각도를 보정합니다. 자이로가 활성화되지 않은 경우에도 계속해서 초과된 회전 각도를 보정합니다.",
     "LibraryTab_ControllerGames": "컨트롤러 지원",
-    "Settings_RemotePlay_Microphone": "마이크"
+    "Settings_RemotePlay_Microphone": "마이크",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "Xbox 무선 컨트롤러를 Bluetooth 페어링 모드로 전환하려면, 'Xbox 버튼'을 누른 다음 컨트롤러 상단의 '페어링 버튼'을 Xbox 로고가 깜박일 때까지 길게 누르세요.",
+    "PairControllerScreen_Explainer_Switch": "Nintendo Switch 컨트롤러를 Bluetooth 페어링 모드로 전환하려면 컨트롤러 상단의 '동기화 버튼'을 LED가 왼쪽에서 오른쪽으로 깜박일 때까지 길게 누르세요.",
+    "PairControllerScreen_ControllerType_Dropdown": "컨트롤러 페어링 방법",
+    "PairControllerScreen_Searching": "Bluetooth 기기 검색 중...",
+    "PairControllerScreen_ControllerPaired": "컨트롤러 페어링됨"
 }
