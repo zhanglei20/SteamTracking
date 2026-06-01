@@ -14939,6 +14939,7 @@
             (this.m_pauseTimer = void 0),
             (this.m_fnGetReportingInterval = _),
             (this.m_fnGetReportTags = () => []),
+            (this.m_fnGetURL = () => location.href),
             (this.m_bEnabled = !0),
             (this.m_bInitialized = !1),
             _
@@ -14970,6 +14971,7 @@
             _.fnGetReportingInterval &&
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
+            _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -15125,6 +15127,7 @@
                   _.message.splice(1, _.cCallsitesToIgnore),
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
+                (_.strUrl = this.m_fnGetURL()),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -15195,16 +15198,16 @@
             _ = Object.keys(_).map((_) => {
               const { report: _, count: _ } = _[_],
                 _ = new _._();
+              let _;
               return (
                 _.set_count(_),
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  _.set_context(
-                    JSON.stringify({
-                      componentStack: _.strComponentStack,
-                    }),
-                  ),
+                  (null != _ || (_ = {}),
+                  (_.componentStack = _.strComponentStack)),
+                _.strUrl && (null != _ || (_ = {}), (_.url = _.strUrl)),
+                _ && _.set_context(JSON.stringify(_)),
                 _
               );
             });

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10693226";
+var CLSTAMP = "10697661";
 (() => {
   var e,
     t,
@@ -192,9 +192,9 @@ var CLSTAMP = "10693226";
         }
         (i.keys = () => Object.keys(s)), (i.id = 68042), (e.exports = i);
       },
-      57100: (e, t, n) => {
+      77092: (e, t, n) => {
         "use strict";
-        n(9656);
+        n(30160);
         var s = n(63696),
           i = n(7470);
         function r(e, t) {
@@ -306,7 +306,7 @@ var CLSTAMP = "10693226";
           else n && console.error("Missing config element #", t);
         }
         const g = "presentation_mode";
-        var f = n(38294);
+        var f = n(14366);
         const k = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -414,10 +414,10 @@ var CLSTAMP = "10693226";
           },
           E = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
         s.createContext({});
-        var C = n(28581);
+        var C = n(4941);
         let v = { success: !0, result: C.R };
-        class T {
-          m_connection = new R();
+        class R {
+          m_connection = new T();
           FailureResult(e = C.zi) {
             let t = { success: !1, result: e };
             return (
@@ -503,7 +503,7 @@ var CLSTAMP = "10693226";
               .catch(() => this.FailureResult());
           }
         }
-        class R {
+        class T {
           m_mapWaitingCallbacks = new Map();
           m_socket;
           m_iCallSeq = 1;
@@ -619,7 +619,7 @@ var CLSTAMP = "10693226";
             );
           }
         }
-        let A = new T();
+        let A = new R();
         window.ClientConnectionAPI = A;
         n(83957), n(22386);
         new Map();
@@ -744,7 +744,7 @@ var CLSTAMP = "10693226";
               return t;
           }
         }
-        var P, w, M, L, O, N, G, U;
+        var P, w, M, L, O, N, U, G;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -834,13 +834,13 @@ var CLSTAMP = "10693226";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(G || (G = {})),
+          })(U || (U = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(U || (U = {}));
+          })(G || (G = {}));
         var D, B, x, W, V, H;
         !(function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
@@ -931,7 +931,7 @@ var CLSTAMP = "10693226";
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        var q = n(43672);
+        var q = n(85733);
         function Y(e, t, n, s) {
           var i,
             r = arguments.length,
@@ -1797,7 +1797,7 @@ var CLSTAMP = "10693226";
           });
         }
         window.AssertMsg = $;
-        let ke = new T();
+        let ke = new R();
         function Ie(e) {
           let t;
           try {
@@ -1833,7 +1833,7 @@ var CLSTAMP = "10693226";
               })();
           });
       },
-      28581: (e, t, n) => {
+      4941: (e, t, n) => {
         "use strict";
         n.d(t, { $A: () => a, R: () => s, Vr: () => r, zi: () => i });
         const s = 1,
@@ -1841,7 +1841,7 @@ var CLSTAMP = "10693226";
           r = 7,
           a = 19;
       },
-      43672: (e, t, n) => {
+      85733: (e, t, n) => {
         "use strict";
         async function s(e, t = "SHA-256") {
           let n;
@@ -1858,8 +1858,8 @@ var CLSTAMP = "10693226";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => v });
-        var i = n(98505),
-          r = n(34800),
+        var i = n(23185),
+          r = n(46673),
           a = n(63696);
         const o =
           window.addEventListener ||
@@ -1935,8 +1935,9 @@ var CLSTAMP = "10693226";
           m_sendTimer = null;
           m_bReportingPaused = !1;
           m_pauseTimer = void 0;
-          m_fnGetReportingInterval = R;
+          m_fnGetReportingInterval = T;
           m_fnGetReportTags = () => [];
+          m_fnGetURL = () => location.href;
           m_bEnabled = !0;
           m_bInitialized = !1;
           constructor(e = !0) {
@@ -1969,6 +1970,7 @@ var CLSTAMP = "10693226";
               s.fnGetReportingInterval &&
                 (this.m_fnGetReportingInterval = s.fnGetReportingInterval),
               s.fnGetReportTags && (this.m_fnGetReportTags = s.fnGetReportTags),
+              s.fnGetURL && (this.m_fnGetURL = s.fnGetURL),
               this.m_bEnabled ||
                 (console.error(
                   "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -2022,7 +2024,7 @@ var CLSTAMP = "10693226";
                           .filter((e) => !!e);
                         return {
                           identifier: o,
-                          identifierHash: await T(o),
+                          identifierHash: await R(o),
                           message: c,
                         };
                       })(e, t)
@@ -2050,7 +2052,7 @@ var CLSTAMP = "10693226";
                             .filter((e) => !!e);
                           return {
                             identifier: r,
-                            identifierHash: await T(r),
+                            identifierHash: await R(r),
                             message: [e.message, ...a],
                           };
                         })(e, t)
@@ -2083,7 +2085,7 @@ var CLSTAMP = "10693226";
                               .filter((e) => !!e);
                             return {
                               identifier: o,
-                              identifierHash: await T(o),
+                              identifierHash: await R(o),
                               message: [e.message, ...c],
                             };
                           })(e, t)
@@ -2105,6 +2107,7 @@ var CLSTAMP = "10693226";
                     s.message.splice(1, n.cCallsitesToIgnore),
                   n.strComponentStack &&
                     (s.strComponentStack = n.strComponentStack),
+                  (s.strUrl = this.m_fnGetURL()),
                   this.SendErrorReport(s),
                   s)
                 : null;
@@ -2172,14 +2175,15 @@ var CLSTAMP = "10693226";
               s = Object.keys(n).map((e) => {
                 const { report: t, count: s } = n[e],
                   i = new r.tF();
+                let a;
                 return (
                   i.set_count(s),
                   i.set_identifier(t.identifier + " " + t.identifierHash),
                   i.set_message(JSON.stringify(t.message)),
                   t.strComponentStack &&
-                    i.set_context(
-                      JSON.stringify({ componentStack: t.strComponentStack }),
-                    ),
+                    ((a ??= {}), (a.componentStack = t.strComponentStack)),
+                  t.strUrl && ((a ??= {}), (a.url = t.strUrl)),
+                  a && i.set_context(JSON.stringify(a)),
                   i
                 );
               });
@@ -2234,26 +2238,26 @@ var CLSTAMP = "10693226";
           );
         }
         const v = () => (b || (b = new g()), b);
-        async function T(e) {
+        async function R(e) {
           try {
             return (await s(e)).slice(0, 16);
           } catch (e) {
             return "";
           }
         }
-        function R() {
+        function T() {
           return 1e4;
         }
       },
-      98505: (e, t, n) => {
+      23185: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => u, w: () => d });
-        var s = n(43672),
-          i = n(28581),
+        var s = n(85733),
+          i = n(4941),
           r = n(58663),
-          a = n(42485),
-          o = n(41538),
-          c = n(60406);
+          a = n(6957),
+          o = n(13850),
+          c = n(30046);
         class l {
           static InitHeaderFromPacket(e) {
             return new l(void 0, e);
@@ -2423,7 +2427,7 @@ var CLSTAMP = "10693226";
           return t instanceof d ? t : d.InitFromObject(e, t);
         }
       },
-      73108: (e, t, n) => {
+      40572: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => c,
@@ -2591,7 +2595,7 @@ var CLSTAMP = "10693226";
               };
         }
       },
-      60406: (e, t, n) => {
+      30046: (e, t, n) => {
         "use strict";
         n.d(t, { pV: () => s });
         class s {
@@ -2667,7 +2671,7 @@ var CLSTAMP = "10693226";
           }
         }
       },
-      9656: (e, t, n) => {
+      30160: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -3004,6 +3008,6 @@ var CLSTAMP = "10693226";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [3987, 9489, 1068], () => o(57100));
+  var c = o.O(void 0, [3987, 9489, 1068], () => o(77092));
   c = o.O(c);
 })();

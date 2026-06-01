@@ -2027,6 +2027,7 @@ var CLSTAMP = "steamdb";
           m_pauseTimer = void 0;
           m_fnGetReportingInterval = _;
           m_fnGetReportTags = () => [];
+          m_fnGetURL = () => location.href;
           m_bEnabled = !0;
           m_bInitialized = !1;
           constructor(_ = !0) {
@@ -2059,6 +2060,7 @@ var CLSTAMP = "steamdb";
               _.fnGetReportingInterval &&
                 (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
               _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
+              _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
               this.m_bEnabled ||
                 (console.error(
                   "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -2191,6 +2193,7 @@ var CLSTAMP = "steamdb";
                     _.message.splice(1, _.cCallsitesToIgnore),
                   _.strComponentStack &&
                     (_.strComponentStack = _.strComponentStack),
+                  (_.strUrl = this.m_fnGetURL()),
                   this.SendErrorReport(_),
                   _)
                 : null;
@@ -2261,16 +2264,15 @@ var CLSTAMP = "steamdb";
               _ = Object.keys(_).map((_) => {
                 const { report: _, count: _ } = _[_],
                   _ = new _._();
+                let _;
                 return (
                   _.set_count(_),
                   _.set_identifier(_.identifier + " " + _.identifierHash),
                   _.set_message(JSON.stringify(_.message)),
                   _.strComponentStack &&
-                    _.set_context(
-                      JSON.stringify({
-                        componentStack: _.strComponentStack,
-                      }),
-                    ),
+                    ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  _.strUrl && ((_ ??= {}), (_.url = _.strUrl)),
+                  _ && _.set_context(JSON.stringify(_)),
                   _
                 );
               });
@@ -3146,6 +3148,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(57100));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(77092));
   _ = _._(_);
 })();
