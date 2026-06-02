@@ -251,6 +251,20 @@ function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, 
 	} );
 }
 
+/** OK button handler for collapsed `game_page_autocollapse` sections. Triggers expansion of the content. */
+function HandleAutoCollapseOKButton( event )
+{
+	var $Container = $J( event.currentTarget );
+	if ( $Container.hasClass( 'collapsed' ) )
+	{
+		var $Content = $Container.find( '.game_page_autocollapse' );
+		$Content.trigger('gamepage_autocollapse_expand');
+		return true;
+	}
+
+	return false;
+}
+
 
 function InitAutocollapse()
 {
@@ -272,6 +286,8 @@ function InitAutocollapse()
 		$Content.on( 'gamepage_autocollapse_expand', function() {
 			if ( $Container.hasClass( 'collapsed' ) )
 			{
+				// Stop suppressing gamepad focus on the expandable content now that it is expanded
+				$Content.data( 'gpFocusDisabled', false );
 				$Container.removeClass( 'collapsed' );
 				$Container.addClass( 'expanded' );
 
@@ -292,6 +308,14 @@ function InitAutocollapse()
 				$Container.addClass( 'collapsed' );
 				window.clearInterval( nInterval );
 				bMaxHeightSet = true;
+
+				// The content div becomes a panel with focus temporarily disabled. This allows the container Panel to get focus and handle
+				// expansion via its OK button activation. Once expanded the content panel lets focus pass through to its children (if there are any).
+				if ( $Content.attr( 'data-panel' ) === undefined )
+					$Content.attr( 'data-panel', '[]' );
+
+				$Content.data( 'gpFocusDisabled', true );
+				$Container.attr( 'data-panel', '{"onOKButton":"HandleAutoCollapseOKButton( event )","focusableIfEmpty":true}' );
 			}
 			else if ( bMaxHeightSet )
 			{

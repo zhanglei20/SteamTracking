@@ -265,7 +265,7 @@
     },
     86762: (e, i, r) => {
       "use strict";
-      r.d(i, { m: () => y });
+      r.d(i, { m: () => B });
       var n,
         a,
         s = r(7850),
@@ -291,10 +291,10 @@
         f = r(87924),
         S = r(61311);
       function N(e) {
-        const { closeModal: i, packageID: r } = e,
-          t = (0, o.FX)(r),
-          l = t.some((e) => e.nPriceInCents > e.nOldPriceInCents),
-          d = (function (e, i) {
+        const { closeModal: i, packageID: r, bPackageVisible: t } = e,
+          l = (0, o.FX)(r),
+          d = l.some((e) => e.nPriceInCents > e.nOldPriceInCents),
+          u = (function (e, i) {
             let [r, n] = v.useState(void 0);
             const s = (0, m.zq)(),
               o = (0, C.P_)(60);
@@ -315,8 +315,8 @@
             return t.every((e) => e.rtStartDate > o + f.nu || e.rtEndDate < o)
               ? a.OK
               : a.RequiresCooldown;
-          })(r, l),
-          { fnPublish: u, ePublishState: P } = (function (e) {
+          })(r, d),
+          { fnPublish: P, ePublishState: h } = (function (e) {
             const i = (0, o.h4)(),
               [r, a] = v.useState(n.Idle);
             let s = v.useCallback(async () => {
@@ -325,18 +325,18 @@
             }, [a, i, e]);
             return { fnPublish: s, ePublishState: r };
           })(r);
-        let h;
-        if (d == a.FailedToLoad)
-          h = (0, c.oW)(
+        let g;
+        if (u == a.FailedToLoad)
+          g = (0, c.oW)(
             "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
             (0, s.jsx)("div", {}),
             (0, s.jsx)("div", {}),
           );
-        else if (d == a.RequiresCooldown) {
+        else if (u == a.RequiresCooldown) {
           let e = (0, s.jsx)(D.uU, {
             href: "https://partner.steamgames.com/doc/store/pricing",
           });
-          h = (0, s.jsxs)(s.Fragment, {
+          g = (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsx)("div", {
                 children: (0, c.we)(
@@ -373,16 +373,20 @@
             ],
           });
         } else
-          P == n.Failed &&
-            (h = (0, c.oW)(
+          h == n.Failed &&
+            (g = (0, c.oW)(
               "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
               (0, s.jsx)("div", {}),
               (0, s.jsx)("div", {}),
             ));
-        if (h) {
-          let e = (0, c.we)("#PricingDashboard_PriceProposal_Publish_Title");
+        if (g) {
+          let e = (0, c.we)(
+            t
+              ? "#PricingDashboard_PriceProposal_Publish_Title"
+              : "#PricingDashboard_StageNewPrices_title",
+          );
           return (
-            d == a.RequiresCooldown &&
+            u == a.RequiresCooldown &&
               (e = (0, c.we)(
                 "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
               )),
@@ -394,41 +398,50 @@
               closeModal: i,
               children: (0, s.jsx)("div", {
                 className: j().PublishErrorDialog,
-                children: h,
+                children: g,
               }),
             })
           );
         }
-        let g = d == a.Loading || P == n.Loading;
+        let _ = u == a.Loading || h == n.Loading;
         return (0, s.jsxs)(x.o0, {
-          strTitle: (0, c.we)("#PricingDashboard_PriceProposal_Publish_Title"),
+          strTitle: (0, c.we)(
+            t
+              ? "#PricingDashboard_PriceProposal_Publish_Title"
+              : "#PricingDashboard_StageNewPrices_title",
+          ),
           bAlertDialog: !1,
           strOKButtonText: (0, c.we)(
-            "#PricingDashboard_PriceProposal_Publish_Button",
+            t
+              ? "#PricingDashboard_PriceProposal_Publish_Button"
+              : "#PricingDashboard_StageNewPrices_ok",
           ),
-          bOKDisabled: g,
-          bCancelDisabled: g,
+          bOKDisabled: _,
+          bCancelDisabled: _,
           bDestructiveWarning: !0,
-          onOK: u,
+          onOK: P,
           onCancel: i,
           closeModal: i,
           children: [
-            g && (0, s.jsx)(p.t, { position: "center" }),
-            !g &&
+            _ && (0, s.jsx)(p.t, { position: "center" }),
+            !_ &&
               (0, s.jsxs)(s.Fragment, {
                 children: [
                   (0, c.Yp)(
-                    "#PricingDashboard_PriceProposal_Publish_Explanation",
-                    t.length,
+                    t
+                      ? "#PricingDashboard_PriceProposal_Publish_Explanation"
+                      : "#PricingDashboard_StageNewPrices_desc",
+                    l.length,
                   ),
-                  l &&
+                  t &&
+                    d &&
                     (0, s.jsx)("div", {
                       className: j().PublishWarning,
                       children: (0, c.we)(
                         "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
                       ),
                     }),
-                  (0, s.jsx)(S.t, { rgLocalPriceOverrides: t }),
+                  (0, s.jsx)(S.t, { rgLocalPriceOverrides: l }),
                 ],
               }),
           ],
@@ -450,8 +463,9 @@
       var I = r(64753),
         T = r(16676),
         O = r(96434),
-        k = r.n(O);
-      function y(e) {
+        k = r.n(O),
+        y = r(39777);
+      function B(e) {
         const { packageID: i, bShowCancel: r } = e,
           n = (0, o.XB)(i),
           a = (0, o.d$)(i),
@@ -482,7 +496,7 @@
                   (j = (0, c.we)(
                     "#PricingDashboard_PriceProposal_Approved_ttip",
                   )),
-                  (w = (0, s.jsx)(B, { packageID: i })))
+                  (w = (0, s.jsx)(A, { packageID: i })))
                 : ((D = _().NoProposalsInFlight),
                   (j = (0, c.we)(
                     "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
@@ -525,30 +539,38 @@
               (0, s.jsx)(h.O, {
                 hoverKey: p,
                 className: _().PackageMore,
-                renderHover: () => (0, s.jsx)(A, { packageID: i }),
+                renderHover: () => (0, s.jsx)(W, { packageID: i }),
               }),
           ],
         });
       }
-      function B(e) {
+      function A(e) {
         const { packageID: i } = e,
-          [r, n, a] = (0, I.uD)();
+          [r, n, a] = (0, I.uD)(),
+          { data: o } = (0, y.by)({ packageid: i }),
+          t = Boolean(o);
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(T.jn, {
               onClick: n,
               children: (0, c.we)(
-                "#PricingDashboard_PriceProposal_PublishDialog_Button",
+                t
+                  ? "#PricingDashboard_PriceProposal_PublishDialog_Button"
+                  : "#PricingDashboard_StageNewPrices",
               ),
             }),
             (0, s.jsx)(x.EN, {
               active: r,
-              children: (0, s.jsx)(N, { packageID: i, closeModal: a }),
+              children: (0, s.jsx)(N, {
+                packageID: i,
+                bPackageVisible: t,
+                closeModal: a,
+              }),
             }),
           ],
         });
       }
-      function A(e) {
+      function W(e) {
         const { packageID: i } = e,
           r = (0, o.XB)(i);
         let n = (0, o.T_)(i);

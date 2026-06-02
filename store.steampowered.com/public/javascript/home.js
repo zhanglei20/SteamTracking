@@ -1447,7 +1447,7 @@ GHomepage = {
 
 				$PrePurchaseReason.appendTo( $ReasonMain );
 			}
-			else if ( rgItemData.early_access )
+			else if ( rgItemData.recent_early_access )
 			{
 				let $EarlyAccessReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( 'Now available in <strong>Early Access</strong>' );
 				$EarlyAccessReason.appendTo( $ReasonMain );
@@ -1460,9 +1460,10 @@ GHomepage = {
 			{
 				strStatus = 'Now Available to Watch';
 			}
-			else if ( rgItemData && rgItemData.free_weekend && rgItemData.free_weekend_status )
+			else if ( rgItemData && rgItemData.free_weekend && rgItemData.free_weekend_status_strong )
 			{
-				strStatus = rgItemData.free_weekend_status;
+				const $FreeWeekendReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( rgItemData.free_weekend_status_strong );
+				$FreeWeekendReason.appendTo( $ReasonMain );
 			}
 			else if ( rgRecommendationReasons.top_seller )
 			{
@@ -2617,24 +2618,42 @@ GHomepage = {
 			if ( rgItemsPassingFilter.length !== 4 )
 				continue;
 
-			let $Ctn = $J( '<div/>', {'class': 'home_discounts_block'} );
+			let bGamepad = ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() );
+			let $Ctn = $J( '<div/>', {'class': 'home_discounts_block', 'data-gp-morebutton': TagData.url } );
 
 			let $TitleCtn = $J('<div/>', { 'class': 'home_title_ctn' } ).append( $J('<div/>', { 'class': 'home_title'}).html( TagData.name ) );
 			$TitleCtn.append( $J('<div/>', { 'class': 'home_section_subtitle'} ).text( TagData.recommended ? 'Recommended tag based on what you play' : 'Featured tag' ) )
 			$Ctn.append( $TitleCtn );
 
 			let $GamesCtn =  $J('<div/>', { 'class': 'home_discount_games_ctn' } );
+			$GamesCtn.attr( 'data-panel', '{"flow-children":"geometric"}' );
 			GHomepage.RenderHomeTwoByTwoSection( $GamesCtn, rgItemsPassingFilter, 'sale_tag_bucket_top' );
 			$Ctn.append( $GamesCtn );
 
-			let $SeeMore = $J('<div/>', { 'class': 'see_more_link' } );
-			$SeeMore.append( $J('<a/>', {'class': 'btnv6_white_transparent btn_small_tall', 'href': TagData.url } ).html( '<span>' + 'See More' + '</span>' ) );
-			$Ctn.append( $SeeMore );
+			if ( bGamepad )
+			{
+				let $SeeMore = $J( '<div/>', { 'class' : 'see_more_gamepad_hint' } );
+				$SeeMore.append( `
+					<div class="see_more_gamepad_hint">
+						<img src="https://store.fastly.steamstatic.com/public/images/ico_gamepad/shared_button_y.svg">
+						<div>See More</div>
+					</div>
+				`);
+				$Ctn.append( $SeeMore );
+			}
+			else
+			{
+				let $SeeMore = $J('<div/>', { 'class': 'see_more_link' } );
+				$SeeMore.append( $J('<a/>', {'class': 'btnv6_white_transparent btn_small_tall', 'href': TagData.url } ).html( '<span>' + 'See More' + '</span>' ) );
+				$Ctn.append( $SeeMore );
+			}
 
 			$TagBlocksSection.append( $Ctn );
 			GDynamicStore.MarkAppDisplayed( rgItemsPassingFilter );
 			cTagBlocksShown++;
 		}
+
+		this.InitGamepadMoreSections();
 
 		$Parent.css( { minHeight: '' } );
 	},
