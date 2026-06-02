@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "%1$sを押すと、ライブラリ、ストア、設定などにアクセスできます。長押しすると、システムメニューのショートカットが表示されます。",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift＋Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "クイックアクセスメニュー",
-    "GuidedTour_BPM_QuickAccessButton_Description": "%1$sを押すと、お知らせ、フレンドリスト、クイック設定などを素早く確認できます。",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl＋Shift＋Tab",
     "GuidedTour_BPM_SendOff_Title": "お楽しみください",
     "GuidedTour_BPM_SendOff_Description": "Big Pictureモードをお楽しみください。「メニュー」＞「電源」＞「Big Pictureを終了する」を選択するとデスクトップモードに戻ります。",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "ジャイロがアクティブな間だけ、目的の角度に追尾するように試みます。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "目的の角度に追尾するように試みます。ジャイロがアクティブでない場合、残りの追尾角度を提供し続けます。",
     "LibraryTab_ControllerGames": "コントローラフレンドリー",
-    "Settings_RemotePlay_Microphone": "マイク"
+    "Settings_RemotePlay_Microphone": "マイク",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "XboxワイヤレスコントローラーをBluetoothペアリングモードにするには、Xboxボタンを押してから、コントローラーの上部にあるペアリングボタンを、Xboxロゴが点滅し始めるまで押し続けます。",
+    "PairControllerScreen_Explainer_Switch": "Nintendo SwitchコントローラーをBluetoothペアリングモードにするには、コントローラー上部のペアリングボタンを、LEDが左から右に点滅し始めるまで長押しします。",
+    "PairControllerScreen_ControllerType_Dropdown": "コントローラのペアリング手順",
+    "PairControllerScreen_Searching": "Bluetoothデバイスを探しています…",
+    "PairControllerScreen_ControllerPaired": "コントローラがペアリングされました"
 }

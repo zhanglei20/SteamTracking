@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "Trykk %1$s for å få tilgang til biblioteket, butikken, innstillinger og mer. Trykk og hold for å se systemsnarveier.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Hurtigtilgang",
-    "GuidedTour_BPM_QuickAccessButton_Description": "Trykk %1$s for å raskt se varsler, vennelisten, hurtiginnstillinger og mer.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Trykk %1$s for å raskt se varsler, vennelisten, samtalemeldinger, hurtiginnstillinger og mer.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "Kos deg",
     "GuidedTour_BPM_SendOff_Description": "Vi håper du liker Big Picture. For å gå tilbake til skrivebordsmodus kan du gå til Meny > Av/på > Avslutt Big Picture.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Prøv å innhente den ønskede vinkelen, men kun mens gyroen er aktiv.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Prøv å innhente den ønskede vinkelen. Fortsett eventuell innhenting av vinkel selv om gyroen ikke er aktiv.",
     "LibraryTab_ControllerGames": "Kontrollervennlig",
-    "Settings_RemotePlay_Microphone": "Mikrofon"
+    "Settings_RemotePlay_Microphone": "Mikrofon",
+    "GuidedTour_SteamMachine_Welcome_Title": "Velkommen til Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Før du begynner å spille, kan vi gå gjennom noen nyttige tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "Vi håper du får glede av Steam Machine. Hvis du vil se denne omvisningen igjen, finner du den her: Hurtigtilgang > Hjelp > Spill av omvisning",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Utvid lagringskapasiteten ved å sette inn og formatere et microSD-kort. Trykk kortet inn for å løse det ut.",
+    "PairControllerScreen_Explainer_Xbox": "For å sette den trådløse Xbox-kontrolleren i Bluetooth-sammenkoblingsmodus må du trykke Xbox-knappen og så holde sammenkoblingsknappen øverst på kontrolleren inntil Xbox-logoen begynner å blinke.",
+    "PairControllerScreen_Explainer_Switch": "For å sette Nintendo Switch-kontrolleren i Bluetooth-sammenkoblingsmodus må du trykke og holde sammenkoblingsknappen øverst på kontrolleren inntil lysene begynner å bevege seg fra venstre til høyre.",
+    "PairControllerScreen_ControllerType_Dropdown": "Instruksjoner for sammenkobling av kontrollere",
+    "PairControllerScreen_Searching": "Søker etter Bluetooth-enheter …",
+    "PairControllerScreen_ControllerPaired": "Kontroller sammenkoblet"
 }

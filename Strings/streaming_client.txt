@@ -2564,7 +2564,7 @@ ${FILENAME}
 (0'yX
 (0rt
 (1NE\n
-(1pF\
+(1pJ\
 (3zg
 (6byOTER
 (6sM
@@ -3262,9 +3262,8 @@ ${FILENAME}
 +(#\v&dbF:xrJ'$#
 +(VKV
 ++CCUNG
+++CCUNG $
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;\f
-++CCUNG`
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -5302,6 +5301,8 @@ ${FILENAME}
 21StoreItem_Screenshots
 21UserSystemInformation
 21\oi
+22:03:46
+22:03:50
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -5330,8 +5331,6 @@ ${FILENAME}
 22StoreItem_PackageGroup
 22StoreItem_RelatedItems
 232>
-23:14:23
-23:14:27
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -6082,10 +6081,9 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+4632
 467&&54632
 467.
-4632
-46632
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6320,6 +6318,7 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
+5467
 5467!
 5467#".
 5467#5!
@@ -6328,19 +6327,11 @@ ${FILENAME}
 5467'!
 5467'7
 5467.
-5467
-54632
-54663
-532654.
-546632
-546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
 54CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket
 55$8
 551f
-554663
-5546632
 55467'&
 55CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter
 55Ly
@@ -6525,6 +6516,7 @@ ${FILENAME}
 6. makr
 600MiD
 60>T
+6144
 61iz
 62d&
 63Y>
@@ -6541,8 +6533,24 @@ ${FILENAME}
 65c\r
 66(YP_
 663
+754.
+6632
+6636
+6653
+6675
+6753
+6786
+46632
+54632
+54663
+532654.
+546632
+546753
+554663
+5546632
 6654#"
 6654&#"
+666666666666666666666666666666666666666666666666
 67!5!
 675!
 6754&#"
@@ -6734,24 +6742,15 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
+74632
 75#5!
-754.
-6144
-6632
-6636
-6653
-6675
-6753
-6786
 7524
 75pRD
 75th
 76&'3
 7623.
-74632
-76653
-666666666666666666666666666666666666666666666666
 7664&#"
+76653
 76654&#"
 77!5
 77\nGJ
@@ -7233,6 +7232,7 @@ ${FILENAME}
 9G]m
 9GmlF8
 9H(F%
+9HH9j
 9Hl3
 9HqS`7A,<
 9Hx#B]F`#
@@ -14412,6 +14412,7 @@ Jtttttt
 Jtwf
 Jugando con %s
 July
+Jun  1 2026
 June
 Juntar/desliz. 2 dedos
 Juq"Z
@@ -15489,7 +15490,6 @@ MaxUseCount
 Maximum (%ld) redirects followed
 Maximum file size exceeded
 Maximum supported image dimension is %u pixels
-May 29 2026
 MaybeAllocateAligned cannot fail here.
 Mb\ni
 Mbkw
@@ -16152,6 +16152,7 @@ Nem tal
 Nepali
 Nepoda
 Neste handlingssett/-lag
+Nesting depth limit (%d) exceeded
 Netscape
 Netscape Base Url
 Netscape CA Policy Url
@@ -17183,6 +17184,7 @@ Packet is %d bytes, must be padded to at least %d bytes.
 Packet is too small
 Packet loss: %2.2f%% (%2.2f%% frame loss)
 Packet of size %d is too small.
+PacketGaps map not increasing
 PacketTraceMaxBytes
 Pacotes perdidos: %2.2f%% (Frames perdidas: %2.2f%%)
 Pacotes perdidos: %2.2f%% (quadros perdidos: %2.2f%%)
@@ -29144,6 +29146,7 @@ gzip
 g{8'j=R8
 g{jo
 g~%dup=J
+h == m_receiverState.m_mapPacketGaps.end()
 h!HE
 h!kyj
 h$2zH
@@ -29158,6 +29161,7 @@ h*1M
 h*xx)
 h+6Dm
 h+lPY
+h->first < h->second.m_nEnd
 h-I7
 h.dl
 h/IE
@@ -32076,7 +32080,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib May 29 2026 23:14:26
+lib Jun  1 2026 22:03:49
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -33431,6 +33435,7 @@ nPktNum > 0
 nPktNum > 0 && nPktNum < TLinkStatsTracker::m_nMaxRecvPktNum
 nPktNum >= 0
 nPktNumAckBegin >= 0
+nPktNumBeforeSentinelGap <= m_statsEndToEnd.m_nMaxRecvPktNum
 nPktNumNackBegin >= 0
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 nPut + nPutDelta <= outBuf.TellMaxPut()
@@ -37234,7 +37239,6 @@ stop
 stop-color
 stop-opacity
 stop_waiting offset
-stop_waiting past sentinel gap
 stop_waiting pktNum %llu offset %llu
 store
 store init error

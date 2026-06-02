@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "Tryck på %1$s att komma åt ditt bibliotek, butiken, inställningar och mer. Tryck och håll in för att se systemgenvägar.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Snabbmeny",
-    "GuidedTour_BPM_QuickAccessButton_Description": "Tryck på %1$s för att snabbt se aviseringar, vänlistan, snabbinställningar och mer.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "Ha så kul",
     "GuidedTour_BPM_SendOff_Description": "Vi hoppas att du gillar att använda Big Picture-läget. För att återgå till skrivbordsläget, gå till menyn > Av/på > Avsluta Big Picture.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Försök att kompensera till önskad vinkel, men bara när gyrot är aktivt.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Försök att kompensera till önskad vinkel. Fortsätt att utföra eventuella vinkelkompenseringar om gyrot inte är aktivt.",
     "LibraryTab_ControllerGames": "Kontrollvänligt",
-    "Settings_RemotePlay_Microphone": "Mikrofon"
+    "Settings_RemotePlay_Microphone": "Mikrofon",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "Sätt din trådlösa Xbox-handkontroll i Bluetooth-parkopplingsläge genom att trycka på Xbox-knappen och hålla ner parkopplingsknappen högst upp på handkontrollen tills Xbox-logotypen börjar blinka.",
+    "PairControllerScreen_Explainer_Switch": "För att sätta din Nintendo Switch-kontroll i Bluetooth-parkopplingsläge, tryck och håll ner parkopplingsknappen på kontrollens ovansida tills lysdioderna börjar svepa från vänster till höger.",
+    "PairControllerScreen_ControllerType_Dropdown": "Parkopplingsinstruktioner för handkontroll",
+    "PairControllerScreen_Searching": "Söker efter Bluetooth-enheter ...",
+    "PairControllerScreen_ControllerPaired": "Handkontroll parkopplad"
 }

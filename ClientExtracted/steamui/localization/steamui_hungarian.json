@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "A Könyvtárad, az Áruház, a Beállítások és egyebek a(z) %1$s megnyomásával érhetők el. A rendszer-gyorsgombok megnézéséhez tartsd lenyomva.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Gyorselérés menü",
-    "GuidedTour_BPM_QuickAccessButton_Description": "A(z) %1$s megnyomásával gyorsan megnézheted az értesítéseidet, barátlistádat, gyorsbeállításaidat és egyebeket.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "A(z) %1$s megnyomásával gyorsan megnézheted az értesítéseidet, barátlistádat, csevegésüzeneteidet, gyorsbeállításaidat és egyebeket.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "Jó szórakozást!",
     "GuidedTour_BPM_SendOff_Description": "Reméljük, élvezed a Nagy Kép használatát. Az Asztal módba visszatéréshez használd a Menü > Főkapcsoló > „Kilépés a Nagy Kép módból” lehetőséget.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Próbálja meg utolérni a kívánt szöget, de csak miközben a giro aktív.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Próbálja meg utolérni a kívánt szöget. Ha a giro nem aktív, továbbra is hozza be a fennmaradó utolérési szöget.",
     "LibraryTab_ControllerGames": "Játékvezérlő-barát",
-    "Settings_RemotePlay_Microphone": "Mikrofon"
+    "Settings_RemotePlay_Microphone": "Mikrofon",
+    "GuidedTour_SteamMachine_Welcome_Title": "Üdvözlünk a Steam Machine-en!",
+    "GuidedTour_Generic_Welcome_Description": "Mielőtt játszani kezdenél, itt van néhány hasznos javaslat.",
+    "GuidedTour_SteamMachine_SendOff_Description": "Reméljük, élvezni fogod a Steam Machine használatát. Ha szeretnéd újra megnézni ezt a bemutatót, elérheted a Gyorsbeállítások menü > Segítség > Bemutató újrajátszása útvonalon.",
+    "GuidedTour_SDCard_Title_SteamMachine": "Végül, a Steam Machine rendelkezik microSD-kártyahellyel.",
+    "GuidedTour_SDCard_Description_SteamMachine": "A tárhelykapacitást microSD-kártya behelyezésével és formázásával bővítheted. A kiadásához nyomd meg a kártyát.",
+    "PairControllerScreen_Explainer_Xbox": "Xbox vezeték nélküli játékvezérlőd Bluetooth párosítási módba állításához nyomd meg az Xbox gombot, majd tartsd nyomva a játékvezérlő tetején található párosítás gombot, amíg az Xbox logó villogni nem kezd.",
+    "PairControllerScreen_Explainer_Switch": "Nintendo Switch játékvezérlőd Bluetooth párosítási módba állításához nyomd meg és tartsd nyomva a játékvezérlő tetején található párosítás gombot, amíg a LED-ek balról jobbra pásztázni nem kezdenek.",
+    "PairControllerScreen_ControllerType_Dropdown": "Játékvezérlő-párosítási útmutató",
+    "PairControllerScreen_Searching": "Bluetooth eszközök keresése...",
+    "PairControllerScreen_ControllerPaired": "Játékvezérlő párosítva"
 }

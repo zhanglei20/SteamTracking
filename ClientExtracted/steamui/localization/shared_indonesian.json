@@ -3386,7 +3386,7 @@
     "RemotePlay_StoreFunctionalityBlocked_Description": "Akses ke toko tidak tersedia di client Steam Link ini.",
     "Tour_TipCount": "Tip: %1$s dari %2$s",
     "ImagePickerLoc_DismissWarning": "Kamu memiliki satu gambar atau lebih yang belum diunggah.",
-    "Hardware_ShippingEstimate_Range": "%1$s-%2$s Hari Kerja",
+    "Hardware_ShippingEstimate_Range": "%1$s—%2$s Hari Kerja",
     "Settings_Hotkey_ToggleOverlay": "Alihkan Overlay Steam",
     "Settings_Hotkey_TakeScreenshot": "Ambil screenshot",
     "Settings_Hotkey_TakeInstantClip": "Potong %1$s detik terakhir dari gameplay",

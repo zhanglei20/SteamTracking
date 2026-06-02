@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123m{z
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -4994,7 +4993,6 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZZN21CNetworkManagerClient23RequestUpdateDeviceDataEjENKUlvE_clEvEUlvE_bE
 *2SzR
 *5KS
-*5xh
 *7CUtlMapIPKc8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEEi22CDefCaselessStringLessE
 *8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEE
 *8CAutoPtrIN12_GLOBAL__N_119AppNetworkSummary_tEE
@@ -5377,8 +5375,6 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG9
-++CCUNG^
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
@@ -8059,8 +8055,12 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+0.0333
+0.050
 0.13.15.106
+0.15
 0.3.65
+0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -8106,10 +8106,6 @@ $steammessages_parental_objects.proto"
 000000
 00000000
 0000000000000000000000000000000000000000
-0.0333
-0.050
-0.15
-0.75
 00000001
 00003333
 00:00:00
@@ -8121,6 +8117,7 @@ $steammessages_parental_objects.proto"
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -11676,11 +11673,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+2019
+2048
 20000
 2000000
 200M
-2019
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12315,7 +12312,6 @@ $steammessages_parental_objects.proto"
 23StoreItem_IncludedItems
 23UserAchievementStored_t
 24 Mbps
-2500
 24000
 24CAPIJobAuthorizeMicroTxn
 24CAPIJobCancelReservation
@@ -12431,6 +12427,7 @@ $steammessages_parental_objects.proto"
 24WebAuthRequestCallback_t
 25.CMsgRemoteDeviceAuthorizationRequest.EKeyEscrowUsage
 25.CMsgSteamDatagramRouterPingReply.AltAddress.Protocol:
+2500
 256 Kbps
 256K
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
@@ -15981,20 +15978,20 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
 60CMarketingMessages_GetPartnerReadyToPublishMessages_Response
-60CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
 60CMsgControllerInputControllerActionChangePlayerNumberBinding
-60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
-60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
+60CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
+60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
+60CSteamInputService_ControllerButtonStateChanged_Notification
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16409,8 +16406,6 @@ $steammessages_parental_objects.proto"
 83Q2
 83Q3
 84CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_PurchasedCustomization
-9000
-9999
 86400
 87CUserAccount_GetAvailableValveDiscountPromotions_Response_ValveDiscountPromotionDetails
 88n|
@@ -16529,9 +16524,11 @@ $steammessages_parental_objects.proto"
 9.CStore_ReloadAllReservationPositionMessages_Notification
 9.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response"
 9.CUserAccount_GetAvailableValveDiscountPromotions_Request
+9000
 95th
 961e13c2046fbe474916afdb087db2222535db4e51f34b5fa45b4fd7803abff2
 98th
+9999
 99Ov
 99rKJJ
 9<n\nM
@@ -16586,6 +16583,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hh*
 9IClientVR
 9IGv
 9ISteamUGC
@@ -22225,6 +22223,7 @@ CanSuspend
 CanSuspendThenHibernate
 Canadian_Aboriginal
 Cancel
+Cancel download via MarkItemAsUnused
 CancelAuthTicket
 CancelAuthTicket called on invalid ticket
 CancelAuthTicket called on invalid ticket\n
@@ -31055,6 +31054,7 @@ Negerpunk
 Negotiated HTTP/2
 Neither global nor local color map
 Nepali
+Nesting depth limit (%d) exceeded
 Net Banking (Nodwin)
 NetCash
 NetPacketGlobals
@@ -32316,6 +32316,7 @@ Packet has illegal total message size of %d
 Packet is %d bytes, must be padded to at least %d bytes.
 Packet is too small
 Packet of size %d is too small.
+PacketGaps map not increasing
 PacketTraceMaxBytes
 Padding *and* a footer found.  This is not allowed by the spec.
 Pago Facil
@@ -39927,6 +39928,8 @@ Zulu
 [AppID %u] Loading stats from disk...failed to load file into buffer
 [AppID %u] Loading stats from disk...success
 [AppID %u] Locally deleted file %s
+[AppID %u] MarkItemAsUnused item %llu : item is not currently marked as needed.
+[AppID %u] MarkItemAsUnused item %llu : item is subscribed to by %d accounts. Not removing it.
 [AppID %u] Move local load order for workshop items %llu from %d => %d
 [AppID %u] Need to %s file %s
 [AppID %u] Need to sync from local change number '%llu' to global change number '%llu' (%s), but not attempting now
@@ -48818,6 +48821,8 @@ gyroscope_noise_tolerance
 gzip
 gzip, deflate
 gzip,identity,*;q=0
+h == m_receiverState.m_mapPacketGaps.end()
+h->first < h->second.m_nEnd
 h.nesSx
 h264
 h2Wl
@@ -53292,7 +53297,7 @@ low-pri yield - ../clientdll/clientjob.cpp:440
 low-pri yield - ../clientdll/clientjob.cpp:471
 low-pri yield - ../clientdll/clientjob.cpp:780
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:6922
+low-pri yield - ../clientdll/clientugc.cpp:6938
 low-pri yield - ../clientdll/compatmanager.cpp:1973
 low-pri yield - ../clientdll/compatmanager.cpp:2224
 low-pri yield - ../clientdll/compatmanager.cpp:2491
@@ -56271,6 +56276,7 @@ nPktNum > 0
 nPktNum > 0 && nPktNum < TLinkStatsTracker::m_nMaxRecvPktNum
 nPktNum >= 0
 nPktNumAckBegin >= 0
+nPktNumBeforeSentinelGap <= m_statsEndToEnd.m_nMaxRecvPktNum
 nPktNumNackBegin >= 0
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 nProductInfoUpdateInterval
@@ -60977,7 +60983,7 @@ stderr
 stdin
 stdout
 steam
-steam May 29 2026 23:14:30
+steam Jun  1 2026 22:03:54
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -61379,7 +61385,6 @@ stime went backwards?
 stoken
 stop using I64/I32, use lld or d respectively
 stop_waiting offset
-stop_waiting past sentinel gap
 stop_waiting pktNum %llu offset %llu
 storage1
 storage_system

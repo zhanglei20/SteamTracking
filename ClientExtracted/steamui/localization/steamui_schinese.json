@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "按下 %1$s即可访问您的库、商店、设置及更多内容。按住可查看 Steam 键快捷方式。",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "快捷访问菜单",
-    "GuidedTour_BPM_QuickAccessButton_Description": "按下 %1$s即可快速查看您的通知、好友列表、快速设置及更多内容。",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "祝您玩得愉快",
     "GuidedTour_BPM_SendOff_Description": "我们希望您喜欢大屏幕模式。如果您想返回桌面模式，可以通过“菜单”>“电源”>“退出大屏幕模式”实现。",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "尝试补齐期望的角度，但仅在陀螺仪处于活跃状态时启用。",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "尝试补齐期望的角度。即使陀螺仪未处于活跃状态，仍继续补齐剩余角度。",
     "LibraryTab_ControllerGames": "支持控制器",
-    "Settings_RemotePlay_Microphone": "麦克风"
+    "Settings_RemotePlay_Microphone": "麦克风",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "要使您的 Xbox 无线控制器进入蓝牙配对模式，请按下 Xbox 键，然后按住顶部的配对键，直到 Xbox 徽标开始闪烁为止。",
+    "PairControllerScreen_Explainer_Switch": "要使您的 Nintendo Switch 控制器进入蓝牙配对模式，请按住顶部的同步键，直到 LED 指示灯开始从左到右闪烁为止。",
+    "PairControllerScreen_ControllerType_Dropdown": "控制器配对说明",
+    "PairControllerScreen_Searching": "正在搜索蓝牙设备…",
+    "PairControllerScreen_ControllerPaired": "控制器已配对"
 }

@@ -8406,7 +8406,7 @@
     "GuidedTour_BPM_SteamButton_Description": "Ấn %1$s để truy cập thư viện, cửa hàng, thiết lập, và nhiều nữa. Ấn giữ để xem các lối tắt hệ thống.",
     "GuidedTour_BPM_SteamButton_Description_Keyboard": "Shift + Tab",
     "GuidedTour_BPM_QuickAccessButton_Title": "Menu truy cập nhanh",
-    "GuidedTour_BPM_QuickAccessButton_Description": "Ấn %1$s để xem nhanh thông báo, danh sách bạn bè, thiết lập nhanh, và nhiều nữa.",
+    "GuidedTour_BPM_QuickAccessButton_Description": "Press %1$s to quickly view your Notifications, Friends List, Chat Messages, Quick Settings, and more.",
     "GuidedTour_BPM_QuickAccessButton_Description_Keyboard": "Ctrl + Shift + Tab",
     "GuidedTour_BPM_SendOff_Title": "Chúc vui vẻ",
     "GuidedTour_BPM_SendOff_Description": "Chúng tôi hi vọng bạn thích sử dụng Big Picture. Để quay lại chế độ desktop, đi đến Menu > Nguồn điện > Thoát chế độ Big Picture.",
@@ -9427,5 +9427,15 @@
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_OnlyWhileGyroActive_Description": "Cố bắt kịp góc độ mong muốn, nhưng chỉ khi gyro đang hoạt động.",
     "ControllerBinding_GyroEnableAngleCatchUp_GyroCatchUp_AlwaysCatchup_Description": "Cố bắt kịp góc độ mong muốn. Nếu gyro không hoạt động, tiếp tục xử lý góc độ cần bắt kịp còn lại.",
     "LibraryTab_ControllerGames": "Thân thiện với tay cầm",
-    "Settings_RemotePlay_Microphone": "Mic "
+    "Settings_RemotePlay_Microphone": "Mic ",
+    "GuidedTour_SteamMachine_Welcome_Title": "Welcome to Steam Machine",
+    "GuidedTour_Generic_Welcome_Description": "Before you start playing, here are a couple useful tips.",
+    "GuidedTour_SteamMachine_SendOff_Description": "We hope you enjoy using Steam Machine. If you would like to see this tour again you can access it from: Quick Access Menu > Help > Replay Guided Tour",
+    "GuidedTour_SDCard_Title_SteamMachine": "Last of all, Steam Machine is equipped with a microSD card slot",
+    "GuidedTour_SDCard_Description_SteamMachine": "Expand your storage capacity by inserting and formatting a microSD card. Push the card in to eject.",
+    "PairControllerScreen_Explainer_Xbox": "Để đưa tay cầm Xbox không dây vào chế độ bắt cặp Bluetooth, hãy nhấn nút Xbox rồi giữ nút bắt cặp ở phía trên tay cầm cho đến khi logo Xbox bắt đầu nhấp nháy",
+    "PairControllerScreen_Explainer_Switch": "Để đưa tay cầm Nintendo Switch vào chế độ bắt cặp Bluetooth, hãy nhấn và giữ nút bắt cặp ở phía trên tay cầm cho đến khi đèn LED bắt đầu lướt từ trái sang phải",
+    "PairControllerScreen_ControllerType_Dropdown": "Hướng dẫn bắt cặp tay cầm",
+    "PairControllerScreen_Searching": "Đang tìm thiết bị Bluettooth...",
+    "PairControllerScreen_ControllerPaired": "Tay cầm đã bắt cặp"
 }
