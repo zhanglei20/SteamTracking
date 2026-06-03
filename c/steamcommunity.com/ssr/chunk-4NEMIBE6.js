@@ -13265,6 +13265,11 @@ var _ = class _ extends _.Message {
                 _: _.readString,
                 _: _.writeString,
               },
+              url: {
+                _: 5,
+                _: _.readString,
+                _: _.writeString,
+              },
             },
           }),
         _.sm_m
@@ -15166,8 +15171,8 @@ var _ = class {
         return (
           _.strComponentStack &&
             ((_ ??= {}), (_.componentStack = _.strComponentStack)),
-          _.strUrl && ((_ ??= {}), (_.url = _.strUrl)),
           _ && _.set_context(JSON.stringify(_)),
+          _.strUrl && _.set_url(_.strUrl),
           _
         );
       });

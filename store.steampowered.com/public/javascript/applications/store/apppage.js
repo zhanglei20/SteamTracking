@@ -1445,15 +1445,14 @@
                             className: C.EventsSummariesCtn,
                             children: n.slice(0, d).map((e) => {
                               const t = a
-                                  ? (t) => {
-                                      a(e),
-                                        t.stopPropagation(),
-                                        t.preventDefault();
-                                    }
-                                  : void 0,
-                                n = p.u;
+                                ? (t) => {
+                                    a(e),
+                                      t.stopPropagation(),
+                                      t.preventDefault();
+                                  }
+                                : void 0;
                               return (0, r.jsx)(
-                                n,
+                                p.u,
                                 { event: e, onClick: t, nSummaryMaxLength: o },
                                 e.GID,
                               );
