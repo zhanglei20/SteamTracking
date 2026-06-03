@@ -41,6 +41,7 @@
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
@@ -113,7 +114,7 @@
     },
     16273: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { ContentHubRoutes: () => Ee, default: () => Fe });
+      n.r(t), n.d(t, { ContentHubRoutes: () => Fe, default: () => Ee });
       var s = n(7850),
         o = n(97058),
         a = n(17083),
@@ -175,8 +176,8 @@
         },
       );
       var C = n(94621),
-        v = (n(8871), n(32754)),
-        b = n(45699),
+        b = (n(8871), n(32754)),
+        v = n(45699),
         j = n(85585),
         y = (n(7445), n(8527));
       n(81393);
@@ -252,7 +253,7 @@
         const { state: t, children: n } = e,
           o = u.useRef(void 0);
         return (
-          (0, b.O7)(o, !!o.current, !1),
+          (0, v.O7)(o, !!o.current, !1),
           (0, s.jsx)(j.D6, {
             navID: "PopoverList",
             onCancelButton: () => t.floating.context.onOpenChange(!1),
@@ -295,7 +296,7 @@
           const { children: t, render: n, ref: o } = e,
             a = (0, u.useContext)(_),
             r = (0, h.SV)([o, a?.floating.refs.setFloating]),
-            i = (0, v.gK)();
+            i = (0, b.gK)();
           return a
             ? a.open
               ? (0, s.jsx)(h.XF, {
@@ -365,13 +366,13 @@
             children: t,
           });
         };
-      var D = n(64238),
-        O = n.n(D),
+      var O = n(64238),
+        D = n.n(O),
         P = n(38878),
         R = n(83392),
         z = n(75659),
         V = n(11526);
-      function E(e) {
+      function F(e) {
         const {
             children: t,
             beforeContent: n,
@@ -396,7 +397,7 @@
               {
                 ...c,
                 radius: d,
-                className: O()(
+                className: D()(
                   P.ControlBox,
                   o && !i && P.Focusable,
                   a && !i && P.Hoverable,
@@ -421,10 +422,10 @@
           ],
         });
       }
-      var F = n(16619);
+      var E = n(16619);
       function B(e) {
         const { viewBoxSize: t = 20, ...n } = e,
-          o = n.size ? void 0 : F.IconSizeDefault;
+          o = n.size ? void 0 : E.IconSizeDefault;
         return (0, s.jsx)("svg", {
           viewBox: `0 0 ${t} ${t}`,
           ...(0, V.mz)({ className: o, ...n }, M),
@@ -435,16 +436,16 @@
           {
             prop: "size",
             responsive: !0,
-            className: (e) => F[`IconSize-${e}`],
+            className: (e) => E[`IconSize-${e}`],
           },
           {
             prop: "color",
-            className: F.Color,
+            className: E.Color,
             cssProperty: (e) => ["--icon-color", (0, V.w7)(e)],
           },
           {
             prop: "hitSlop",
-            className: F.HitSlop,
+            className: E.HitSlop,
             cssProperty: (e) => [
               "--hit-slop-custom",
               "string" == typeof e ? e : "",
@@ -504,7 +505,7 @@
             ...c
           } = e,
           d = "indeterminate" === t,
-          u = d ? Q : Z,
+          u = d ? X : Z,
           h = () => {
             o || (n && n(!!d || !t));
           };
@@ -514,7 +515,7 @@
           role: "checkbox",
           "aria-checked": d ? "mixed" : t,
           "data-state": K(t),
-          className: O()(J.Root, J[`Variant-${i}`], o && J.Disabled),
+          className: D()(J.Root, J[`Variant-${i}`], o && J.Disabled),
           onClick: h,
           tabIndex: 0,
           onKeyDown: (e) => {
@@ -537,7 +538,7 @@
       function K(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function Q(e) {
+      function X(e) {
         return (0, s.jsx)("svg", {
           viewBox: "0 0 16 16",
           fill: "none",
@@ -548,7 +549,7 @@
           }),
         });
       }
-      function X(e, t) {
+      function Q(e, t) {
         const { onSelectionChange: n, selectedValue: s, ...o } = e,
           [a, r] = (0, u.useState)(!1),
           i = (0, u.useCallback)(
@@ -644,7 +645,7 @@
                 m = (0, h.iQ)(g.context, { enabled: !!i.focus }),
                 f = (0, h.s9)(g.context),
                 C = (0, u.useRef)([]),
-                v = (0, h.C1)(g.context, {
+                b = (0, h.C1)(g.context, {
                   listRef: C,
                   activeIndex: s,
                   selectedIndex: a,
@@ -653,11 +654,11 @@
                   loop: !0,
                   focusItemOnOpen: !1,
                 }),
-                b = (0, u.useRef)([]),
+                v = (0, u.useRef)([]),
                 j = (0, u.useRef)(!1),
                 y = (0, h.lY)(g.context, {
                   enabled: !!i.typeahead,
-                  listRef: b,
+                  listRef: v,
                   activeIndex: s,
                   selectedIndex: a,
                   onMatch: d ? o : r,
@@ -668,7 +669,7 @@
                   getFloatingProps: I,
                   getReferenceProps: k,
                   getItemProps: w,
-                } = (0, h.bv)([_, x, m, f, v, y]);
+                } = (0, h.bv)([_, x, m, f, b, y]);
               return {
                 floating: g,
                 getFloatingProps: I,
@@ -679,7 +680,7 @@
                 selectedIndex: a,
                 setSelectedIndex: r,
                 elementsRef: C,
-                labelsRef: b,
+                labelsRef: v,
                 typingRef: j,
                 initialFocus: i.virtualItemFocus ? -1 : void 0,
               };
@@ -757,8 +758,8 @@
               onSelectionChange: m,
               clearable: f,
               focusedIndex: C,
-              onItemSelectionChange: v,
-              onFocusedIndexChange: b,
+              onItemSelectionChange: b,
+              onFocusedIndexChange: v,
               refPopover: j,
               placeholder: y,
               maxSelected: S,
@@ -775,13 +776,14 @@
               k && f
                 ? (0, s.jsx)(W, { onClick: h, cursor: "pointer", hitSlop: !0 })
                 : (0, s.jsx)(U, {}),
-            A = (0, s.jsx)(E, {
+            A = (0, s.jsx)(F, {
               afterContent: w,
               variant: i,
               size: l,
               radius: c,
               hasValue: k,
               tabIndex: 0,
+              cursor: "pointer",
               ..._,
             }),
             N = (0, x.Q)(n, A, I, void 0);
@@ -824,7 +826,7 @@
             ...i
           } = e,
           l = (function (e) {
-            return X(e, !1);
+            return Q(e, !1);
           })({
             onSelectionChange: n,
             selectedValue: t,
@@ -863,7 +865,7 @@
               ...l
             } = e,
             c = (function (e) {
-              return X(e, !0);
+              return Q(e, !0);
             })({
               onSelectionChange: n,
               selectedValue: t,
@@ -924,8 +926,8 @@
         fe.set(re.T4, re.mx),
         fe.set(re.u7, re.T4);
       var Ce = n(9161),
-        ve = n(73745),
-        be = n(30470),
+        be = n(73745),
+        ve = n(30470),
         je = n(74810),
         ye = n(92237),
         Se = n(4940),
@@ -957,7 +959,7 @@
                   children: [
                     "This page lets you review and edit existing categories. Click on their titles.  At the bottom there is controls to create a new category. To see the hubs performance related to making a theme sale ",
                     (0, s.jsx)("a", {
-                      href: `${be.TS.PARTNER_BASE_URL}promotion/planning/themes`,
+                      href: `${ve.TS.PARTNER_BASE_URL}promotion/planning/themes`,
                       children: "here.",
                     }),
                   ],
@@ -1077,7 +1079,7 @@
       }
       function Te(e) {
         const { item: t, rgTags: n, fnSaveCategory: o, bOpenEditor: a } = e,
-          [r, i, c] = (0, ve.uD)(a);
+          [r, i, c] = (0, be.uD)(a);
         return (0, s.jsx)("div", {
           className: _e().CategoryCtn,
           children: (0, s.jsxs)("div", {
@@ -1226,7 +1228,7 @@
                   ("tagids" === o.type ||
                     "category" === o.type ||
                     "contenthub" == o.type) &&
-                    (0, s.jsx)(De, { category: o, setCategory: a }),
+                    (0, s.jsx)(Oe, { category: o, setCategory: a }),
                 ],
               }),
             }),
@@ -1278,7 +1280,7 @@
           }),
         });
       });
-      function De(e) {
+      function Oe(e) {
         const { category: t, setCategory: n } = e,
           [o, a] = (0, u.useState)(!1),
           [r, i] = (0, u.useState)(0);
@@ -1337,7 +1339,7 @@
                       onClick: () => i(r + 1),
                       children: "Refresh Stats",
                     }),
-                    (0, s.jsx)(Oe, { category: t }),
+                    (0, s.jsx)(De, { category: t }),
                   ],
                 })
               : (0, s.jsx)(
@@ -1352,7 +1354,7 @@
           ],
         });
       }
-      function Oe(e) {
+      function De(e) {
         const { category: t } = e,
           n = (0, ie.p$)(t.must, t.any, t.mustnot);
         if (!n)
@@ -1565,8 +1567,8 @@
           })
         );
       }
-      const Ee = { ContentHubCategories: () => "/categories/" };
-      function Fe(e) {
+      const Fe = { ContentHubCategories: () => "/categories/" };
+      function Ee(e) {
         return (0, s.jsxs)(a.Kd, {
           basename: (0, d.C)() + "admin/store/contenthub/",
           children: [
@@ -1574,7 +1576,7 @@
             (0, s.jsxs)(r.dO, {
               children: [
                 (0, s.jsx)(r.qh, {
-                  path: Ee.ContentHubCategories(),
+                  path: Fe.ContentHubCategories(),
                   component: ke,
                 }),
                 (0, s.jsx)(r.qh, { component: o.a }),

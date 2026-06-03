@@ -22,6 +22,7 @@
         Open: "_2HPVMueZXbMmvgW8C6iOw7",
         DemoButton: "_2Mu1VwOBzB0kLcDCRbJD6w",
         WishlistButton: "_3FAid_cwwxW8-9Sp6pSPqS",
+        ShowInGamepadUI: "_2f6Nut1kQFb4WnCmz4uXDG",
         WishlistButtonText: "_2GqXfP0dBAJl9ozuBV3Jqh",
         WishlistLoadingText: "_2k23LU1oBxEHe-_Qff-1k3",
         WishlistButtonNotTop: "_3W_yknADVFtPgqx9Wh2ayW",
@@ -4039,6 +4040,7 @@
         (u.japanese = () => r.e(9872).then(r.t.bind(r, 79872, 19))),
         (u.koreana = () => r.e(2322).then(r.t.bind(r, 12322, 19))),
         (u.latam = () => r.e(4954).then(r.t.bind(r, 94954, 19))),
+        (u.malay = () => r.e(4753).then(r.t.bind(r, 87134, 19))),
         (u.norwegian = () => r.e(8341).then(r.t.bind(r, 48341, 19))),
         (u.polish = () => r.e(7890).then(r.t.bind(r, 97890, 19))),
         (u.portuguese = () => r.e(1810).then(r.t.bind(r, 21810, 19))),
@@ -4868,61 +4870,71 @@
         y = r.n(f),
         b = r(47911);
       function w(e) {
-        const { id: t, snr: r, classOverride: f, styleOverride: w } = e,
-          { data: h } = (0, o.J$)(t),
-          { elDialogElement: S, fnShowLogonDialog: M } = (0, s.E)(),
-          [C, I] = (0, m.useState)(() =>
-            h &&
-            (h.type == a.uE.ue || h.type == a.uE.Vi) &&
-            h.related_items?.parent_appid
-              ? h.related_items?.parent_appid
+        const {
+            id: t,
+            snr: r,
+            classOverride: f,
+            styleOverride: w,
+            bShowInGamepadUI: h,
+          } = e,
+          { data: S } = (0, o.J$)(t),
+          { elDialogElement: M, fnShowLogonDialog: C } = (0, s.E)(),
+          [I, v] = (0, m.useState)(() =>
+            S &&
+            (S.type == a.uE.ue || S.type == a.uE.Vi) &&
+            S.related_items?.parent_appid
+              ? S.related_items?.parent_appid
               : t && "appid" in t
                 ? t.appid
                 : void 0,
           ),
-          v = (0, d.$5)(C),
-          z = (0, c.bB)(C),
-          { bIsOwned: R } = (0, l.ZJ)(v),
-          [T, j] = (0, m.useState)(!1),
-          A = (0, _.m)("GameHoverWishlistButton"),
-          { mutateAsync: O } = (0, u.s)(C, !z, r);
+          z = (0, d.$5)(I),
+          R = (0, c.bB)(I),
+          { bIsOwned: T } = (0, l.ZJ)(z),
+          [j, A] = (0, m.useState)(!1),
+          O = (0, _.m)("GameHoverWishlistButton"),
+          { mutateAsync: F } = (0, u.s)(I, !R, r);
         (0, m.useEffect)(() => {
           t &&
             "appid" in t &&
-            (h?.type == a.uE.ue || h?.type == a.uE.Vi) &&
-            I(h.related_items?.parent_appid || t.appid);
-        }, [h, t]);
-        const F = (0, m.useCallback)(
+            (S?.type == a.uE.ue || S?.type == a.uE.Vi) &&
+            v(S.related_items?.parent_appid || t.appid);
+        }, [S, t]);
+        const W = (0, m.useCallback)(
           async (e) => {
             B.iA.logged_in
               ? (e.preventDefault(),
                 e.stopPropagation(),
-                j(!0),
-                await O(),
-                A.token.reason || j(!1))
-              : M();
+                A(!0),
+                await F(),
+                O.token.reason || A(!1))
+              : C();
           },
-          [A.token.reason, M, O],
+          [O.token.reason, C, F],
         );
-        return R && h?.type != a.uE.Hk
+        return T && S?.type != a.uE.Hk
           ? null
           : (0, i.jsxs)(n.Z, {
-              className: (0, g.A)(y().WishlistButton, f),
-              onActivate: F,
+              className: (0, g.A)(
+                y().WishlistButton,
+                h && y().ShowInGamepadUI,
+                f,
+              ),
+              onActivate: W,
               style: w,
               children: [
-                z ? (0, i.jsx)(p.qnF, {}) : (0, i.jsx)(p.T4m, {}),
+                R ? (0, i.jsx)(p.qnF, {}) : (0, i.jsx)(p.T4m, {}),
                 (0, i.jsx)("div", {
                   className: (0, g.A)(
                     y().WishlistButtonText,
-                    T && y().WishlistLoadingText,
+                    j && y().WishlistLoadingText,
                     "WishlistButtonText",
                   ),
                   children: b.Z.Localize(
-                    z ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
+                    R ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
                   ),
                 }),
-                S,
+                M,
               ],
             });
       }
@@ -9213,7 +9225,7 @@
         p = r(56011),
         _ = r(3578),
         g = r(2627),
-        B = r(17204),
+        B = r(45754),
         f = r(96171),
         y = r(56781),
         b = r(73139);

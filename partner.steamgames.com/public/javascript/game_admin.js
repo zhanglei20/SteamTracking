@@ -44,6 +44,7 @@ function GetSupportedLanguages()
 				'latam': 'Spanish - Latin America',
 				'sc_schinese': 'SteamChina - Simplified Chinese',
 				'indonesian': 'Indonesian',
+				'malay': 'Malay',
 			};
 	return languages;
 }

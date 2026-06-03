@@ -20,6 +20,7 @@
         Open: "_2HPVMueZXbMmvgW8C6iOw7",
         DemoButton: "_2Mu1VwOBzB0kLcDCRbJD6w",
         WishlistButton: "_3FAid_cwwxW8-9Sp6pSPqS",
+        ShowInGamepadUI: "_2f6Nut1kQFb4WnCmz4uXDG",
         WishlistButtonText: "_2GqXfP0dBAJl9ozuBV3Jqh",
         WishlistLoadingText: "_2k23LU1oBxEHe-_Qff-1k3",
         WishlistButtonNotTop: "_3W_yknADVFtPgqx9Wh2ayW",
@@ -4426,6 +4427,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 87134, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
         (_.polish = () =>
@@ -5365,7 +5368,13 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, snr: _, classOverride: _, styleOverride: _ } = _,
+        const {
+            _: _,
+            snr: _,
+            classOverride: _,
+            styleOverride: _,
+            bShowInGamepadUI: _,
+          } = _,
           { data: _ } = (0, _._)(_),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() =>
@@ -5404,7 +5413,11 @@
         return _ && _?.type != _._._
           ? null
           : (0, _.jsxs)(_._, {
-              className: (0, _._)(_().WishlistButton, _),
+              className: (0, _._)(
+                _().WishlistButton,
+                _ && _().ShowInGamepadUI,
+                _,
+              ),
               onActivate: _,
               style: _,
               children: [

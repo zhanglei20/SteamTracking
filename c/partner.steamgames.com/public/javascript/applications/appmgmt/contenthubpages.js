@@ -39,6 +39,7 @@
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
@@ -859,6 +860,7 @@
               radius: _,
               hasValue: _,
               tabIndex: 0,
+              cursor: "pointer",
               ..._,
             }),
             _ = (0, _._)(_, _, _, void 0);

@@ -604,13 +604,6 @@ body.v7 .sale_capsule_carousel .carousel_items > * {
 	/* text-transform: none; */
 }
 
-.featured_special_deals .home_section_subtitle, .title_grid .home_section_subtitle {
-	color: rgba(255, 255, 255, 0.7);
-	font-size: clamp(.75rem, 1.5cqi, 1.25rem);
-	font-weight: 400;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
-}
-
 .home_pagecontent_ctn.featured_special_deals .ctn_background .btnv6_white_transparent, .home_pagecontent_ctn.hero_parent_ctn .ctn_background .btnv6_white_transparent {
 	background: #cccccc;
 	padding: 6px 12px;
@@ -655,7 +648,8 @@ body.v7 .sale_capsule_carousel .carousel_items > * {
 
 @media screen and ( max-width: 910px ) {
 	.home_pagecontent_ctn {
-		padding: 2vw 2%;
+		padding: 2vw 2vw;
+		--gpSpace-Gutter: 2vw;
 	}
 
 	#sale_under10_area.home_pagecontent_ctn {
@@ -781,11 +775,11 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 
 .home_section_subtitle {
 	display: flex;
-	font-size: clamp(.75rem, 1.5cqi, 1.25rem);
 	text-transform: none;
-	font-family: "Motiva Sans", Sans-serif;
-	font-weight: normal;
-	color: #ffffff;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: clamp(.75rem, 1.5cqi, 1.25rem);
+	font-weight: 400;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .ctn_background .title_grid {
@@ -1113,6 +1107,13 @@ body.v7 .page_content_ctn.dark {
 	color: rgb(255, 255, 255);
 	text-align: right;
 	font-size: 14px;
+}
+
+.GamepadMode .home_tabs_sections .see_more_link {
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	margin-right: 0;
 }
 
 .see_more_mobile {
@@ -3087,12 +3088,15 @@ html.responsive .home_category_ctn .home_category_title_ctn {
 
 .tabs_menu_ctn {
 	display: flex;
+	flex-direction: column;
 	margin-bottom: 20px;
 	justify-content: space-between;
+	gap: 6px;
 }
 
 .tab_controls_ctn {
 	display: flex;
+	justify-content: flex-end;
 }
 
 .topsellers_controls {
@@ -3118,6 +3122,10 @@ html.responsive .home_category_ctn .home_category_title_ctn {
 .tabs_menu_ctn {
 	flex-direction: column;
 	gap: 20px;
+}
+
+.tab_controls_ctn {
+	justify-content: flex-start;
 }
 
 .topsellers_controls {
@@ -3392,7 +3400,6 @@ input[type="checkbox"] {
 	html.responsive .home_tabs_sections .tab_content_items .tab_item_title {
 		font-size: 14px;
 	}
-
 }
 
 @media screen and ( max-width: 1200px )

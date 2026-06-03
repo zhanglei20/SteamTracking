@@ -5,7 +5,6 @@
 }
 
 .discussions_header {
-	position: relative;
 	border-bottom: 5px solid #417B9C;
 }
 
@@ -545,15 +544,9 @@ td.wordfilter_action a:hover {
 	margin-top: 20px;
 }
 
-
-.global_discussion_search_ctn {
-	margin-bottom: 12px;
-}
-
 .discussions_view_more_link {
 	float: right;
 	line-height: 22px;
-	padding-top: 10px;
 }
 
 .discussions_view_more_link a {
@@ -675,15 +668,23 @@ a.recent_game_discussion.quasi_official_group
 		width: auto;
 	}
 
+	html.responsive .recent_game_discussion {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 910px)
+{
 	html.responsive .discussions_page .group_content.bottomless {
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
 
-	html.responsive .recent_game_discussion {
-		margin-right: 0;
-	}
 }
+	html.responsive.GamepadMode .discussions_page .group_content.bottomless {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
 
 @media screen and (max-width: 720px )
 {

@@ -32,6 +32,7 @@
         (a.japanese = () => n.e(195).then(n.t.bind(n, 40195, 19))),
         (a.koreana = () => n.e(4259).then(n.t.bind(n, 84259, 19))),
         (a.latam = () => n.e(4475).then(n.t.bind(n, 24475, 19))),
+        (a.malay = () => n.e(580).then(n.t.bind(n, 60580, 19))),
         (a.norwegian = () => n.e(6884).then(n.t.bind(n, 36884, 19))),
         (a.polish = () => n.e(5269).then(n.t.bind(n, 15269, 19))),
         (a.portuguese = () => n.e(6865).then(n.t.bind(n, 96865, 19))),

@@ -2269,7 +2269,7 @@ function PreloadImages( elElement )
 				var $elTarget = $J(j);
 
 				let strBackgroundImg = $elTarget.data('background-image-url');
-				if ( !window.UseGamepadScreenMode() && !window.UseMobileScreenMode() )
+				if ( !window.UseMobileScreenMode() )
 				{
 					const strBackgroundImg2x = $elTarget.data('background-image2x-url');
 					if ( strBackgroundImg2x )
@@ -2280,7 +2280,14 @@ function PreloadImages( elElement )
 
 			$Element.find("img[data-image-url]").each(function(i, j){
 				var $elTarget = $J(j);
-				$elTarget.attr('src', $elTarget.data('image-url') );
+				let strImgUrl = $elTarget.data('image-url');
+				if ( !window.UseMobileScreenMode() )
+				{
+					const strImg2x = $elTarget.data('image2x-url');
+					if ( strImg2x )
+						strImgUrl = strImg2x;
+				}
+				$elTarget.attr('src', strImgUrl );
 			});
 		})
 
