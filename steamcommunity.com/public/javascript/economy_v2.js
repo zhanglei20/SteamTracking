@@ -2666,6 +2666,11 @@ var CUser = Class.create( {
 
 			this.rgAppInfo[appid] = rgAppData;
 
+						if ( Array.isArray( rgAppData.rgContexts ) )
+			{
+				rgAppData.rgContexts = {};
+			}
+
 			for ( var contextid in rgAppData.rgContexts )
 			{
 				var rgContext = rgAppData.rgContexts[contextid];
