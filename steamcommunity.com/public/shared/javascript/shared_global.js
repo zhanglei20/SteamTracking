@@ -530,7 +530,7 @@ function _BindOnEnterKeyPressForDialog( Modal, deferred, fnOnEnter )
  */
 function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalParams )
 {
-	var $Dialog = $J('<dialog/>', {'class': 'newmodal'} );
+	var $Dialog = $J('<div/>', {'class': 'newmodal'} );
 	var $CloseButton = $J('<div/>', {'class': 'newmodal_close', 'data-panel': '{"focusable":true,"clickOnActivate":true}' } );
 	var $Header = ( $J('<div/>', {'class': 'newmodal_header' }) );
 	var $TopBar = ( $J('<div/>', {'class': 'modal_top_bar' }) );
@@ -833,7 +833,7 @@ CModal.prototype.Show = function()
 	if ( typeof GPOnShowingModalWindow === "function" )
 		this.m_fnGPOnCloseModal = GPOnShowingModalWindow( this.m_$Content.get( 0 ) );
 
-	this.m_$Content[0].showModal();
+	this.m_$Content.show();
 
 	// resize as any child image elements load in.
 	this.m_$Content.find('img').load( this.m_fnSizing );
@@ -859,7 +859,7 @@ CModal.prototype.Dismiss = function()
 		this.m_fnGPOnCloseModal = null;
 	}
 
-	this.m_$Content?.[0].close();
+	this.m_$Content.hide();
 
 	if ( !this.m_bIgnoreResizeEvents )
 	{
