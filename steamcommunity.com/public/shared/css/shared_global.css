@@ -988,6 +988,10 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
+dialog.newmodal {
+	margin: 0;
+	padding: 0;
+}
 
 .newmodal_background {
 	position: fixed;
