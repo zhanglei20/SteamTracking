@@ -530,7 +530,7 @@ function _BindOnEnterKeyPressForDialog( Modal, deferred, fnOnEnter )
  */
 function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalParams )
 {
-	var $Dialog = $J('<div/>', {'class': 'newmodal'} );
+	var $Dialog = $J('<dialog/>', {'class': 'newmodal'} );
 	var $CloseButton = $J('<div/>', {'class': 'newmodal_close', 'data-panel': '{"focusable":true,"clickOnActivate":true}' } );
 	var $Header = ( $J('<div/>', {'class': 'newmodal_header' }) );
 	var $TopBar = ( $J('<div/>', {'class': 'modal_top_bar' }) );
@@ -622,7 +622,7 @@ function GPShowFullScreenModal( content )
 
 function _BuilGPFullScreenModal( content, fnOnCancel )
 {
-		var $Dialog = $J('<div/>').append( $J('<div/>', {'style': 'display:flex'} ).append( content ) );
+		var $Dialog = $J('<dialog/>').append( $J('<div/>', {'style': 'display:flex'} ).append( content ) );
 	var Modal = new CModal( $Dialog );
 
 	Modal.SetRemoveContentOnDismissal( true );
@@ -662,6 +662,7 @@ function CModal( $Content, rgParams )
 	this.m_nInitialOffsetLeft = $J(window).scrollLeft();
 	this.m_$Content.css( 'position', 'fixed' );
 	this.m_$Content.css( 'z-index', 1000 );
+	this.m_$Content.css( 'outline', 'none' );
 
 	/* default gamepad behavior is B button closes the dialog */
 	if ( !this.m_$Content.attr('panel' ) )
@@ -833,7 +834,7 @@ CModal.prototype.Show = function()
 	if ( typeof GPOnShowingModalWindow === "function" )
 		this.m_fnGPOnCloseModal = GPOnShowingModalWindow( this.m_$Content.get( 0 ) );
 
-	this.m_$Content.show();
+	this.m_$Content[0].showModal();
 
 	// resize as any child image elements load in.
 	this.m_$Content.find('img').load( this.m_fnSizing );
@@ -859,7 +860,7 @@ CModal.prototype.Dismiss = function()
 		this.m_fnGPOnCloseModal = null;
 	}
 
-	this.m_$Content.hide();
+	this.m_$Content?.[0].close();
 
 	if ( !this.m_bIgnoreResizeEvents )
 	{
