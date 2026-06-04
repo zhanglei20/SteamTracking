@@ -3451,19 +3451,19 @@
         BIsValidForRealm(e) {
           return this.GetIncludedRealmList().includes(e);
         }
-        BIsNextFest(e = !0) {
+        BIsNextFest(e = !1) {
           const t = this.jsondata.sale_vanity_id?.toLowerCase(),
             r = new m.b(this.clanSteamID).GetAccountID();
           return (
             !(!t || r != _.GU) &&
             !!t.startsWith("nextfest") &&
-            (!!e || (!t.includes("preview") && !t.includes("press")))
+            (!e || (!t.endsWith("preview") && !t.endsWith("press")))
           );
         }
         BShowNextFestHeader(e) {
           return e && G.iA.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }
