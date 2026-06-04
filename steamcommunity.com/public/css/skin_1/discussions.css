@@ -233,23 +233,24 @@
 	font-weight: bold;
 	color: #fefefe;
 }
+
 .discussions_game_controls {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 16px;
 	padding-bottom: 32px;
 }
 
 .discussions_game_browseoption {
 	background-color: rgba( 0, 0, 0, 0.2 );
-	line-height: 32px;
-	padding-left: 12px;
-	float: left;
 	height: 39px;
-	padding-top: 7px;
-	padding-right: 7px;
+	line-height: 32px;
+	padding: 7px 7px 0 12px;
 }
 
 .discussions_game_searchoption {
-	margin-left: 16px;
-	float: left;
+	flex: 1 0 200px;
 }
 
 div.quicklistselect
