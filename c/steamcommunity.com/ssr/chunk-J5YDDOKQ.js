@@ -2022,15 +2022,11 @@ function _() {
             children: [
               (0, _.jsx)("div", {
                 className: _,
-                children: _.workshop_title?.startsWith("#")
-                  ? _.Localize(_.workshop_title)
-                  : _.workshop_title,
+                children: _.workshop_title,
               }),
               (0, _.jsx)("div", {
                 className: _,
-                children: _.workshop_desc?.startsWith("#")
-                  ? _.Localize(_.workshop_desc)
-                  : _.workshop_desc,
+                children: _.workshop_desc,
               }),
               !_.IN_GAMEPADUI &&
                 _.instructionsURL &&
