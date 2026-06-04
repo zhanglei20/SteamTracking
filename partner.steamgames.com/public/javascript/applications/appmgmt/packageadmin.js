@@ -72,7 +72,7 @@
         (C.brazilian = () => i.e(8916).then(i.t.bind(i, 68916, 19))),
         (C.bulgarian = () => i.e(5603).then(i.t.bind(i, 25603, 19))),
         (C.czech = () => i.e(3697).then(i.t.bind(i, 3697, 19))),
-        (C.danish = () => i.e(9875).then(i.t.bind(i, 89875, 19))),
+        (C.danish = () => i.e(5113).then(i.t.bind(i, 89875, 19))),
         (C.dutch = () => i.e(8156).then(i.t.bind(i, 18156, 19))),
         (C.english = () => i.e(8314).then(i.t.bind(i, 98314, 19))),
         (C.finnish = () => i.e(8881).then(i.t.bind(i, 98881, 19))),
