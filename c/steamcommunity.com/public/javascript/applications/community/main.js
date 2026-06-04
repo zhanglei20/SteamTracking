@@ -15086,8 +15086,8 @@
                 _.strComponentStack &&
                   (null != _ || (_ = {}),
                   (_.componentStack = _.strComponentStack)),
-                _.strUrl && (null != _ || (_ = {}), (_.url = _.strUrl)),
                 _ && _.set_context(JSON.stringify(_)),
+                _.strUrl && _.set_url(_.strUrl),
                 _
               );
             });
@@ -20593,6 +20593,11 @@
                   },
                   context: {
                     _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 5,
                     _: _._.readString,
                     _: _._.writeString,
                   },

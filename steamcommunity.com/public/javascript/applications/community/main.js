@@ -13874,8 +13874,8 @@
                 t.strComponentStack &&
                   (null != a || (a = {}),
                   (a.componentStack = t.strComponentStack)),
-                t.strUrl && (null != a || (a = {}), (a.url = t.strUrl)),
                 a && n.set_context(JSON.stringify(a)),
+                t.strUrl && n.set_url(t.strUrl),
                 n
               );
             });
@@ -18820,6 +18820,7 @@
                   message: { n: 2, br: a.qM.readString, bw: a.gp.writeString },
                   count: { n: 3, br: a.qM.readUint32, bw: a.gp.writeUint32 },
                   context: { n: 4, br: a.qM.readString, bw: a.gp.writeString },
+                  url: { n: 5, br: a.qM.readString, bw: a.gp.writeString },
                 },
               }),
             R.sm_m

@@ -2282,8 +2282,8 @@ var CLSTAMP = "steamdb";
                   _.set_message(JSON.stringify(_.message)),
                   _.strComponentStack &&
                     ((_ ??= {}), (_.componentStack = _.strComponentStack)),
-                  _.strUrl && ((_ ??= {}), (_.url = _.strUrl)),
                   _ && _.set_context(JSON.stringify(_)),
+                  _.strUrl && _.set_url(_.strUrl),
                   _
                 );
               });
@@ -2961,7 +2961,7 @@ var CLSTAMP = "steamdb";
         1449: "be34a4d4a3e4ea5a260b",
         1499: "9fe8b05c384130e7eefa",
         1973: "297d79a8ed49a4c34920",
-        2256: "8a87ee709299012f4929",
+        2256: "dd618349a5110d7a8460",
         2320: "989e4c23359ac2bdd8f5",
         2435: "7cdf6acaf218f502b153",
         2532: "dcb8b3c7c4c795e99ba1",
@@ -3163,6 +3163,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(53945));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(2245));
   _ = _._(_);
 })();
