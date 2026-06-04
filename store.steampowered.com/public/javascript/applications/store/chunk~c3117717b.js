@@ -3452,12 +3452,12 @@
           return this.GetIncludedRealmList().includes(e);
         }
         BIsNextFest(e = !0) {
-          const t = "nextfest",
-            r = this.jsondata.sale_vanity_id?.toLowerCase(),
-            i = new m.b(this.clanSteamID).GetAccountID();
+          const t = this.jsondata.sale_vanity_id?.toLowerCase(),
+            r = new m.b(this.clanSteamID).GetAccountID();
           return (
-            !(!r || i != _.GU) &&
-            (e ? r.startsWith(t) : r.startsWith(t) && !r.includes("prev"))
+            !(!t || r != _.GU) &&
+            !!t.startsWith("nextfest") &&
+            (!!e || (!t.includes("preview") && !t.includes("press")))
           );
         }
         BShowNextFestHeader(e) {

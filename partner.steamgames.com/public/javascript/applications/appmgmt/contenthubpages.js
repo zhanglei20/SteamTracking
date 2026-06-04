@@ -114,7 +114,7 @@
     },
     16273: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { ContentHubRoutes: () => Fe, default: () => Ee });
+      n.r(t), n.d(t, { ContentHubRoutes: () => Ee, default: () => Fe });
       var s = n(7850),
         o = n(97058),
         a = n(17083),
@@ -176,8 +176,8 @@
         },
       );
       var C = n(94621),
-        b = (n(8871), n(32754)),
-        v = n(45699),
+        v = (n(8871), n(32754)),
+        b = n(45699),
         j = n(85585),
         y = (n(7445), n(8527));
       n(81393);
@@ -253,7 +253,7 @@
         const { state: t, children: n } = e,
           o = u.useRef(void 0);
         return (
-          (0, v.O7)(o, !!o.current, !1),
+          (0, b.O7)(o, !!o.current, !1),
           (0, s.jsx)(j.D6, {
             navID: "PopoverList",
             onCancelButton: () => t.floating.context.onOpenChange(!1),
@@ -296,7 +296,7 @@
           const { children: t, render: n, ref: o } = e,
             a = (0, u.useContext)(_),
             r = (0, h.SV)([o, a?.floating.refs.setFloating]),
-            i = (0, b.gK)();
+            i = (0, v.gK)();
           return a
             ? a.open
               ? (0, s.jsx)(h.XF, {
@@ -368,11 +368,11 @@
         };
       var O = n(64238),
         D = n.n(O),
-        P = n(38878),
-        R = n(83392),
+        R = n(38878),
+        P = n(83392),
         z = n(75659),
         V = n(11526);
-      function F(e) {
+      function E(e) {
         const {
             children: t,
             beforeContent: n,
@@ -398,34 +398,34 @@
                 ...c,
                 radius: d,
                 className: D()(
-                  P.ControlBox,
-                  o && !i && P.Focusable,
-                  a && !i && P.Hoverable,
-                  r && !i && P.Clickable,
-                  i && P.Disabled,
-                  P[`Variant-${t}`],
-                  P[`Size-${n}`],
+                  R.ControlBox,
+                  o && !i && R.Focusable,
+                  a && !i && R.Hoverable,
+                  r && !i && R.Clickable,
+                  i && R.Disabled,
+                  R[`Variant-${t}`],
+                  R[`Size-${n}`],
                   l,
                 ),
               },
               z.h,
             );
           })(r);
-        return (0, s.jsxs)(R.s, {
+        return (0, s.jsxs)(P.s, {
           ...i,
           align: "center",
           "data-has-value": !!a,
           children: [
-            n && (0, s.jsx)(R.s, { paddingRight: "2", children: n }),
+            n && (0, s.jsx)(P.s, { paddingRight: "2", children: n }),
             (0, s.jsx)(g.az, { flexGrow: "1", minWidth: "0", children: t }),
-            o && (0, s.jsx)(R.s, { paddingLeft: "2", children: o }),
+            o && (0, s.jsx)(P.s, { paddingLeft: "2", children: o }),
           ],
         });
       }
-      var E = n(16619);
+      var F = n(16619);
       function B(e) {
         const { viewBoxSize: t = 20, ...n } = e,
-          o = n.size ? void 0 : E.IconSizeDefault;
+          o = n.size ? void 0 : F.IconSizeDefault;
         return (0, s.jsx)("svg", {
           viewBox: `0 0 ${t} ${t}`,
           ...(0, V.mz)({ className: o, ...n }, M),
@@ -436,16 +436,16 @@
           {
             prop: "size",
             responsive: !0,
-            className: (e) => E[`IconSize-${e}`],
+            className: (e) => F[`IconSize-${e}`],
           },
           {
             prop: "color",
-            className: E.Color,
+            className: F.Color,
             cssProperty: (e) => ["--icon-color", (0, V.w7)(e)],
           },
           {
             prop: "hitSlop",
-            className: E.HitSlop,
+            className: F.HitSlop,
             cssProperty: (e) => [
               "--hit-slop-custom",
               "string" == typeof e ? e : "",
@@ -509,7 +509,7 @@
           h = () => {
             o || (n && n(!!d || !t));
           };
-        return (0, s.jsxs)(R.s, {
+        return (0, s.jsxs)(P.s, {
           align: "center",
           ref: r,
           role: "checkbox",
@@ -645,7 +645,7 @@
                 m = (0, h.iQ)(g.context, { enabled: !!i.focus }),
                 f = (0, h.s9)(g.context),
                 C = (0, u.useRef)([]),
-                b = (0, h.C1)(g.context, {
+                v = (0, h.C1)(g.context, {
                   listRef: C,
                   activeIndex: s,
                   selectedIndex: a,
@@ -654,11 +654,11 @@
                   loop: !0,
                   focusItemOnOpen: !1,
                 }),
-                v = (0, u.useRef)([]),
+                b = (0, u.useRef)([]),
                 j = (0, u.useRef)(!1),
                 y = (0, h.lY)(g.context, {
                   enabled: !!i.typeahead,
-                  listRef: v,
+                  listRef: b,
                   activeIndex: s,
                   selectedIndex: a,
                   onMatch: d ? o : r,
@@ -669,7 +669,7 @@
                   getFloatingProps: I,
                   getReferenceProps: k,
                   getItemProps: w,
-                } = (0, h.bv)([_, x, m, f, b, y]);
+                } = (0, h.bv)([_, x, m, f, v, y]);
               return {
                 floating: g,
                 getFloatingProps: I,
@@ -680,7 +680,7 @@
                 selectedIndex: a,
                 setSelectedIndex: r,
                 elementsRef: C,
-                labelsRef: v,
+                labelsRef: b,
                 typingRef: j,
                 initialFocus: i.virtualItemFocus ? -1 : void 0,
               };
@@ -728,7 +728,7 @@
             ...a,
             children: [
               i &&
-                (0, s.jsxs)(R.s, {
+                (0, s.jsxs)(P.s, {
                   gap: "2",
                   align: "center",
                   children: [(0, s.jsx)(q, { checked: u, variant: "dark" }), n],
@@ -758,8 +758,8 @@
               onSelectionChange: m,
               clearable: f,
               focusedIndex: C,
-              onItemSelectionChange: b,
-              onFocusedIndexChange: v,
+              onItemSelectionChange: v,
+              onFocusedIndexChange: b,
               refPopover: j,
               placeholder: y,
               maxSelected: S,
@@ -776,7 +776,7 @@
               k && f
                 ? (0, s.jsx)(W, { onClick: h, cursor: "pointer", hitSlop: !0 })
                 : (0, s.jsx)(U, {}),
-            A = (0, s.jsx)(F, {
+            A = (0, s.jsx)(E, {
               afterContent: w,
               variant: i,
               size: l,
@@ -926,8 +926,8 @@
         fe.set(re.T4, re.mx),
         fe.set(re.u7, re.T4);
       var Ce = n(9161),
-        be = n(73745),
-        ve = n(30470),
+        ve = n(73745),
+        be = n(30470),
         je = n(74810),
         ye = n(92237),
         Se = n(4940),
@@ -959,7 +959,7 @@
                   children: [
                     "This page lets you review and edit existing categories. Click on their titles.  At the bottom there is controls to create a new category. To see the hubs performance related to making a theme sale ",
                     (0, s.jsx)("a", {
-                      href: `${ve.TS.PARTNER_BASE_URL}promotion/planning/themes`,
+                      href: `${be.TS.PARTNER_BASE_URL}promotion/planning/themes`,
                       children: "here.",
                     }),
                   ],
@@ -1079,7 +1079,7 @@
       }
       function Te(e) {
         const { item: t, rgTags: n, fnSaveCategory: o, bOpenEditor: a } = e,
-          [r, i, c] = (0, be.uD)(a);
+          [r, i, c] = (0, ve.uD)(a);
         return (0, s.jsx)("div", {
           className: _e().CategoryCtn,
           children: (0, s.jsxs)("div", {
@@ -1292,19 +1292,19 @@
                 children: (0, s.jsxs)("div", {
                   className: _e().Category,
                   children: [
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "must",
                       title: "Must have all of these tags",
                     }),
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "any",
                       title: "Must have one of these tags",
                     }),
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "mustnot",
@@ -1319,7 +1319,7 @@
               (0, s.jsxs)("div", {
                 className: _e().CategoryCtn,
                 children: [
-                  (0, s.jsx)(Re, {
+                  (0, s.jsx)(Pe, {
                     category: t,
                     setCategory: n,
                     list: "replaces_tags",
@@ -1398,7 +1398,7 @@
                   children: [
                     "Summary: ",
                     (0, s.jsx)(je.KU, { nTotalGames: n.total_games }),
-                    Boolean(o) && (0, s.jsx)(Pe, { category: t }),
+                    Boolean(o) && (0, s.jsx)(Re, { category: t }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
@@ -1424,13 +1424,13 @@
           ],
         });
       }
-      function Pe(e) {
+      function Re(e) {
         const { category: t } = e,
           n = (0, ie.eX)(t.must, t.any, t.mustnot),
           o = (0, ie.mg)(t.must, t.any, t.mustnot);
         return (0, s.jsx)(je.ny, { saleSummary: n, topAppSummary: o });
       }
-      const Re = u.memo(function (e) {
+      const Pe = u.memo(function (e) {
         const { category: t, setCategory: n, list: o, title: a } = e,
           { rgTags: r, rgCategories: l } = (0, i.DT)(),
           c = (e) => {
@@ -1567,8 +1567,8 @@
           })
         );
       }
-      const Fe = { ContentHubCategories: () => "/categories/" };
-      function Ee(e) {
+      const Ee = { ContentHubCategories: () => "/categories/" };
+      function Fe(e) {
         return (0, s.jsxs)(a.Kd, {
           basename: (0, d.C)() + "admin/store/contenthub/",
           children: [
@@ -1576,7 +1576,7 @@
             (0, s.jsxs)(r.dO, {
               children: [
                 (0, s.jsx)(r.qh, {
-                  path: Fe.ContentHubCategories(),
+                  path: Ee.ContentHubCategories(),
                   component: ke,
                 }),
                 (0, s.jsx)(r.qh, { component: o.a }),
@@ -1666,6 +1666,23 @@
             className: (e) => c[`TextSize-${e}`],
           },
         ];
+    },
+    4434: (e, t, n) => {
+      "use strict";
+      n.d(t, { m: () => r });
+      var s = n(41735),
+        o = n.n(s),
+        a = n(90626);
+      function r(e) {
+        const t = a.useRef(o().CancelToken.source());
+        return (
+          a.useEffect(() => {
+            const n = t.current;
+            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
     },
     9161: (e, t, n) => {
       "use strict";

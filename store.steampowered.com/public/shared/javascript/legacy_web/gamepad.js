@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    899: (e, t, r) => {
+    528: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => an });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(506),
+        a = r(798),
         o = r(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -84,10 +84,10 @@
         );
       }
       var _ = r(629),
-        h = r(211),
-        b = r(548),
-        f = r(143),
-        p = r(606);
+        h = r(496),
+        b = r(235),
+        f = r(240),
+        p = r(623);
       class B {
         m_NavigationController;
         m_postMessage;
@@ -488,8 +488,8 @@
         (0, _.Cg)([h.o], F.prototype, "OnKeyUp", null),
         (0, _.Cg)([h.o], F.prototype, "Reset", null);
       var A,
-        E = r(866),
-        N = r(26);
+        E = r(817),
+        N = r(735);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -13035,7 +13035,7 @@
         },
       };
     },
-    548: (e, t, r) => {
+    235: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13048,12 +13048,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    606: (e, t, r) => {
+    623: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(211),
-        s = r(548);
+        n = r(496),
+        s = r(235);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

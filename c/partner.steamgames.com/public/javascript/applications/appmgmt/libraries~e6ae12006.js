@@ -1,6 +1,6 @@
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [8008],
+  [3874],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       module.exports = (function (_) {

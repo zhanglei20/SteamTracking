@@ -1828,20 +1828,21 @@ GHomepage = {
 			localized: true,
 			displayed_elsewhere: false,
 			only_current_platform: true,
+			playtest: false,
 		};
 
 		if ( GHomepage.bIsSeasonalSale )
 		{
-			oFilterOptions = { ...oFilterOptions, has_discount: true, enforce_minimum: true };
+			oFilterOptions = { ...oFilterOptions, has_discount: true };
 		}
 
-		var rgCapsules = GHomepage.FilterItemsForDisplay( rgData, 'home', 4, 8, oFilterOptions );
+		var rgCapsules = GHomepage.FilterItemsForDisplay( rgData, 'home', 4, 16, oFilterOptions );
 		if( rgCapsules.length < 4 )
 		{
-			rgCapsules = GHomepage.FilterItemsForDisplay(
-				rgData, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
-			);
+			$RecentlyUpdated.hide();
+			return;
 		}
+
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{

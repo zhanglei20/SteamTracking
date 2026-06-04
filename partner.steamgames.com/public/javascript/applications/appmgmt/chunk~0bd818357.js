@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [4789],
+  [3388],
   {
     95695: (e) => {
       e.exports = {
@@ -5247,23 +5247,6 @@
               );
             });
         })(Qe || (Qe = {}));
-    },
-    4434: (e, t, r) => {
-      "use strict";
-      r.d(t, { m: () => n });
-      var i = r(41735),
-        s = r.n(i),
-        a = r(90626);
-      function n(e) {
-        const t = a.useRef(s().CancelToken.source());
-        return (
-          a.useEffect(() => {
-            const r = t.current;
-            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
     },
   },
 ]);

@@ -1,26 +1,3 @@
-function _(..._) {
-  return _.reduce(
-    (_, _) =>
-      _
-        ? typeof _ == "string"
-          ? _
-            ? `${_} ${_}`
-            : _
-          : typeof _ == "object"
-            ? _
-              ? `${_} ${_(_)}`
-              : _(_)
-            : _
-        : _,
-    "",
-  );
-}
-function _(_) {
-  return Object.keys(_).reduce(
-    (_, _) => (_[_] ? (_ ? `${_} ${_}` : _) : _),
-    "",
-  );
-}
 var _ = "./shared_arabic-XXXXXXXX.json";
 var _ = "./shared_brazilian-XXXXXXXX.json";
 var _ = "./shared_bulgarian-XXXXXXXX.json";
@@ -5182,6 +5159,29 @@ function _() {
 }
 var _ = new _();
 window.LocalizationManager = _;
+function _(..._) {
+  return _.reduce(
+    (_, _) =>
+      _
+        ? typeof _ == "string"
+          ? _
+            ? `${_} ${_}`
+            : _
+          : typeof _ == "object"
+            ? _
+              ? `${_} ${_(_)}`
+              : _(_)
+            : _
+        : _,
+    "",
+  );
+}
+function _(_) {
+  return Object.keys(_).reduce(
+    (_, _) => (_[_] ? (_ ? `${_} ${_}` : _) : _),
+    "",
+  );
+}
 export {
   _,
   _,
