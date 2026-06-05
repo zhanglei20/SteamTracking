@@ -4349,7 +4349,7 @@ CTextInputSuggest.prototype.Init = function( $InputElement, fnSuggestForTerm, fn
 	this.m_$SuggestionsCtn.append( this.m_$Suggestions );
 
 	this.m_$SuggestionsCtn.hide();
-	$J(document.body).append( this.m_$SuggestionsCtn );
+	this.m_$Input[0].parentElement.appendChild( this.m_$SuggestionsCtn[0] );
 
 	var zIndex = 200;	//normal popup zindex
 	this.m_$Input.parents().each( function() {
