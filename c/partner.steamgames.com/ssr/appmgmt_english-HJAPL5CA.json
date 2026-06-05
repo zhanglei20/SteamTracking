@@ -825,7 +825,7 @@
     "SteamHardware_BuildReview_Verified_Description": "Congrats! Your game is a great experience on %1$s and will be presented as such within the Steam Store and within players' Steam Libraries on %1$s.",
     "SteamHardware_BuildReview_Verified_Share": "Want to share this milestone with your fans? Here's a link to a fancy landing page you can use: %1$s",
     "SteamHardware_BuildReview_TheTestedHardware": "the tested hardware",
-    "SteamHardware_Machine_Unknown": "Steam Machine compatibility is unknown",
+    "SteamHardware_Machine_Unknown": "Your game has not been tested on Steam Machine",
     "SteamHardware_Frame_Unknown": "Steam Frame Standalone compatibility reports are coming soon",
     "SteamDeckVerified_TestDisplayName_Invalid": "Invalid",
     "SteamDeckVerified_TestDisplayName_LauncherStartup": "Launcher Startup",
