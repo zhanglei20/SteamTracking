@@ -309,6 +309,7 @@ ${COMMUNITY_BASE_URL}my/gamenotifications/
 ${COMMUNITY_BASE_URL}my/games?tab=all&clientid=${client_instanceid}
 ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}my/inventory
+${COMMUNITY_BASE_URL}my/inventory/?${_ ? "modal=1&" : ""}market=1#${}___${}
 ${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}

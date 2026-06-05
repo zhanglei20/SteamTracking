@@ -782,11 +782,11 @@ function _(_, _) {
       : console.assert(!1, "Traversal with no state available");
   } else if (_.navigationType == "replace") {
     let _ = _();
-    _ && !_
-      ? (_ &&
-          console.log(
-            "history.replace was called, trying to preserve navigation state",
-          ),
+    if (_ && !_)
+      _ &&
+        console.log(
+          "history.replace was called, trying to preserve navigation state",
+        ),
         _.intercept({
           async handler() {
             _((_) => ({
@@ -795,15 +795,18 @@ function _(_, _) {
             }));
           },
           focusReset: "manual",
-        }))
-      : _ &&
-        (_ && console.log("history.replace was called, SSR-aware"),
-        _.intercept({
-          async handler() {
-            _?.targetRoute && (await _(_.targetRoute, _.signal, !0));
-          },
-          focusReset: "manual",
-        }));
+        });
+    else if (_) {
+      _ && console.log("history.replace was called, SSR-aware");
+      let _ = !!_?.targetRoute;
+      _.intercept({
+        async handler() {
+          _ && (await _(_.targetRoute, _.signal, !0));
+        },
+        focusReset: "manual",
+        scroll: _ ? void 0 : "manual",
+      });
+    }
   } else
     _.navigationType == "reload"
       ? _()
