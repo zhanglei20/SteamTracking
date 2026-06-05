@@ -258,14 +258,6 @@ message CSteamInputService_PairDongleTritonConnected_Request {
 message CSteamInputService_PairDongleTritonConnected_Response {
 }
 
-message CSteamInputService_PairDongleTritonDocked_Request {
-	optional uint32 docked_puck_index = 1;
-	optional uint32 target_dongle_index = 2;
-}
-
-message CSteamInputService_PairDongleTritonDocked_Response {
-}
-
 message CSteamInputService_RawControllerDetailItem {
 	optional uint32 controller_index = 1;
 	optional bool initialized = 2;
@@ -421,8 +413,6 @@ service SteamInputManager {
 	rpc NotifyUnpairedTritonPluggedIn (.CSteamInputService_UnpairedTritonPluggedIn_Notification) returns (.NoResponse);
 	// ePrivilege=1, eClientExecutionSite=2
 	rpc PairDongleTritonConnected (.CSteamInputService_PairDongleTritonConnected_Request) returns (.CSteamInputService_PairDongleTritonConnected_Response);
-	// ePrivilege=1, eClientExecutionSite=2
-	rpc PairDongleTritonDocked (.CSteamInputService_PairDongleTritonDocked_Request) returns (.CSteamInputService_PairDongleTritonDocked_Response);
 	// ePrivilege=1, eClientExecutionSite=2
 	rpc ShouldTritonPairInOobe (.CSteamInputService_ShouldTritonPairInOobe_Request) returns (.CSteamInputService_ShouldTritonPairInOobe_Response);
 	// ePrivilege=1, eClientExecutionSite=2

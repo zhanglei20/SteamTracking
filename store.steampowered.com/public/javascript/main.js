@@ -2347,8 +2347,8 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 		{
 			instance.timerAdvance = setInterval ( function ()
 			{
-				if( !instance.bIsResponsive() && !window.UseGamepadScreenMode() )
-					instance.Advance ();
+				if( !instance.bIsResponsive() && !window.UseGamepadScreenMode() && instance.bIsCarouselInView() )
+					instance.Advance();
 			}, nSpeed * 1000 );
 		}
 	};
@@ -2534,6 +2534,12 @@ CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
 CGenericCarousel.prototype.bIsResponsive = function( )
 {
 	return window.UseSmallScreenMode && window.UseSmallScreenMode();
+}
+
+CGenericCarousel.prototype.bIsCarouselInView = function( )
+{
+	const rect = this.$elContainer[0].getBoundingClientRect();
+	return rect.bottom > 0 && rect.top < window.innerHeight;
 }
 
 CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
