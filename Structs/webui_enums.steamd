@@ -960,9 +960,8 @@ enum ETradingCardActivity
 enum ETrailerGrowAmount
 {
 	k_ETrailerGrowAmount_None = 0;
-	k_ETrailerGrowAmount_Small = 1;
-	k_ETrailerGrowAmount_Medium = 2;
 	k_ETrailerGrowAmount_Implicit = 1;
+	k_ETrailerGrowAmount_Medium = 2;
 }
 
 enum ETwoFactorTokenSteamguardScheme
@@ -1482,6 +1481,18 @@ enum UnnamedEnum082dd12e6086021e
 	Neutral = 0;
 	Up = 1;
 	Down = 2;
+}
+
+enum UnnamedEnum0869c4fae89a7711
+{
+	ControllerPairing = 0;
+	WelcomeToSteamFrame = 1;
+	SystemButtonHideDashboard = 2;
+	SystemButtonDashboardHidden = 3;
+	SystemButtonShowDashboard = 4;
+	PairWifiDongle = 5;
+	TourSendOff = 6;
+	SteamGuidedTourFinished = 7;
 }
 
 enum UnnamedEnum08a7599cef1b51d6

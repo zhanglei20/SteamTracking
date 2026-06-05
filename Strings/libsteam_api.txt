@@ -14,7 +14,6 @@
  volatile
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-%BtwB0Oo
 %llu
 %s/.steam/%s
 %s/.steam/steam

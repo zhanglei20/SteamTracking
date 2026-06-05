@@ -248,97 +248,7 @@
 #:*S8,}gNzl
 #ETHw
 #FLR
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
 #Q7z
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
 #\t#\v#'#)#/#3#5#E#Q#S#Y#c#k#
 #\v+(bF&drJ:x#
 #bML"
@@ -445,6 +355,7 @@ $d`D-laM
 %04u%02u%02uT%02u%02u%02uZ
 %04u-%02u-%02u
 %04u-%02u-%02u %02u:%02u:%02u
+%04x:%04x
 %08lx
 %0nV4
 %12sPublic Key Algorithm:
@@ -541,7 +452,7 @@ $d`D-laM
 %s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
 %s: system() failed, errno %d\n
 %s:%d: OpenSSL internal error: %s\n
-%s:%dx%d@%d
+%s:%dx%d@%d %u
 %sToday
 %sTomorrow
 %sYesterday
@@ -670,10 +581,10 @@ $d`D-laM
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}
 ++KEY_PAD_PLUS
 +2Hp
 +HpXhE
@@ -706,6 +617,8 @@ $d`D-laM
 --enable
 --env-fd=%d
 --error
+--forward-fd=%d
+--terminate-when-signaled
 --title
 --warning
 -0123456789
@@ -921,15 +834,14 @@ $d`D-laM
 0 Umv
 0)KEY_0
 00003333
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFPv4
 0123456789abcdef
 08bX
 0A/8
@@ -1310,6 +1222,7 @@ $d`D-laM
 : Tried to merge from a message with a different type.  to:
 : failed to parse contents
 : inherit\n
+:%dx%d@%d %u
 :':+:1:K:Q:[:c:g:m:y:
 :BAD BOOLEAN
 :BAD ENUMERATED
@@ -4569,7 +4482,6 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
@@ -7063,6 +6975,7 @@ bignum out of range
 bignum routines
 bignum too long
 bignum_to_string
+bin64
 bind
 bind_textdomain_codeset
 binder does not verify
@@ -8465,6 +8378,7 @@ exp master
 expand on static bignum data
 expandableSpace
 expected a section name
+expected valid output parameter 'mode'
 expecting a dh key
 expecting a dsa key
 expecting a ec key
@@ -8742,7 +8656,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(+"
+ggen
 givenName
 glBegin
 glBindTexture
@@ -9500,6 +9414,7 @@ invalid
 invalid CA certificate
 invalid ICC profile color space
 invalid PNG color type
+invalid RGB output range parsed from mode string
 invalid after png_start_read_image or png_read_update_info
 invalid alert
 invalid alpha mode
@@ -10244,6 +10159,7 @@ mp coefficient not inverse of r
 mp exponent not congruent to d
 mp r not prime
 mprotect
+ms-MY
 msCTLSign
 msCodeCom
 msCodeInd
@@ -10273,6 +10189,7 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nDay < 32
 nDay > 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
+nEnvFD != -1
 nGrowSize >= 0
 nMinCapacity <= k_nMaxStringSize
 nMinCapacity > Capacity()
@@ -10632,7 +10549,6 @@ othername:<unsupported>
 out of memory
 out of place
 out-of-date sRGB profile with no signature
-outEnvFD != -1
 outerglow
 outline
 output gamma out of expected range
@@ -11063,6 +10979,7 @@ public_key
 punct
 putc
 putwc
+pv-runtime/steam-runtime-steamrt/pressure-vessel/bin
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pvk data too short
 pvk too short
@@ -11951,6 +11868,7 @@ steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
 steam-runtime-launch-client --alongside-steam -- lsb_release -d -s
 steam-runtime-launch-client --alongside-steam -- lspci -mm -n
+steam-runtime-supervisor
 steam.desktop
 steam/games/PlatformMenu.vdf
 steamRealm
