@@ -19,6 +19,7 @@
   f_frsize: %lu\n
   what():
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123x
  %s%lu (%s0x%lx)\n
  ' ) - 3 G M Q _ c e i w }
  (%ld unused bits)\n
@@ -834,11 +835,11 @@ $d`D-laM
 0 Umv
 0)KEY_0
 00003333
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2347,6 +2348,8 @@ Code=
 Cofactor:
 Colors
 Command
+Command line already wrapped: %s
+Command line is already escaped: %s
 CommentCount
 Compression
 Compression buffer size cannot be changed because it is in use
@@ -4726,6 +4729,7 @@ Romanian
 Routing Domain Identifiers
 Row has too many bytes to allocate in memory
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 Russian
 S#FI
@@ -8656,7 +8660,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh#"
 givenName
 glBegin
 glBindTexture

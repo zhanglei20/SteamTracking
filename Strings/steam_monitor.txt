@@ -266,8 +266,6 @@ $\nY8O
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:24:47
-00:24:48
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -283,6 +281,8 @@ $\nY8O
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
+23:34:08
+23:34:09
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
@@ -536,7 +536,6 @@ NULL
 NULL != m_pValObjectCur
 NULL buffer passed to V_atof()
 NULL buffer passed to V_atoi()
-Nlo_
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
