@@ -116,200 +116,12 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1,
-        _ = 2,
-        _ = 3;
-      function _(_, _, _, _) {
-        const _ = (0, _.useRef)(void 0),
-          _ = (0, _.useRef)(void 0),
-          _ = (0, _._)();
-        _.current = _;
-        const [_, _] = (0, _.useState)(void 0),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            const _ = {
-              include_assets: _,
-              include_release: _,
-              include_platforms: _,
-              include_all_purchase_options: _,
-              include_screenshots: _,
-              include_trailers: _,
-              include_ratings: _,
-              include_tag_count: _,
-              include_reviews: _,
-              include_basic_info: _,
-              include_supported_languages: _,
-              include_full_description: _,
-              include_included_items: _,
-              include_assets_without_overrides: _,
-              apply_user_filters: _,
-              include_links: _,
-            };
-            let _ = null;
-            return (
-              !_ ||
-                _ < 0 ||
-                _._.Get().BHasStoreItem(_, _, _) ||
-                (void 0 !== _ && _ && _ == _.current) ||
-                (_ !== _.current && (_(void 0), (_.current = _)),
-                (_ = _().CancelToken.source()),
-                _._.Get()
-                  .QueueStoreItemRequest(_, _, _)
-                  .then((_) => {
-                    _?.token.reason || _.current !== _ || _(_ == _._), _();
-                  })),
-              () => _?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return [null, _];
-        if (!1 === _) return [void 0, _];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
-        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, _] : [null, _];
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)(),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            if (!_ || 0 == _.length) return;
-            const _ = {
-                include_assets: _,
-                include_release: _,
-                include_platforms: _,
-                include_all_purchase_options: _,
-                include_screenshots: _,
-                include_trailers: _,
-                include_ratings: _,
-                include_tag_count: _,
-                include_reviews: _,
-                include_basic_info: _,
-                include_supported_languages: _,
-                include_full_description: _,
-                include_included_items: _,
-                include_assets_without_overrides: _,
-                apply_user_filters: _,
-                include_links: _,
-              },
-              _ = _.filter(
-                (_) =>
-                  !(
-                    _._.Get().BHasStoreItem(_, _, _) ||
-                    _._.Get().BIsStoreItemMissing(_, _)
-                  ),
-              );
-            if (0 == _.length) return;
-            const _ = _().CancelToken.source(),
-              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
-            return (
-              Promise.all(_).then(() => {
-                _.token.reason || _();
-              }),
-              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return _;
-        if (
-          !_.every(
-            (_) =>
-              _._.Get().BHasStoreItem(_, _, _) ||
-              _._.Get().BIsStoreItemMissing(_, _),
-          )
-        )
-          return _;
-        return _.every((_) =>
-          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
-        )
-          ? _
-          : _;
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           HardwarePerformance: () => _,
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -340,7 +152,7 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { dataprops: _ } = _;
+        const { dataprops: _, appName: _ } = _;
         return _?.framerate || _?.feedback
           ? (0, _.jsxs)("div", {
               className: _.PerformanceContainer,
@@ -348,6 +160,7 @@
                 Boolean(_?.framerate) &&
                   (0, _.jsx)(_, {
                     appId: Number(_.appId),
+                    appName: _,
                     frameRateData: _.framerate,
                   }),
                 Boolean(_?.feedback) &&
@@ -501,13 +314,7 @@
         });
       }
       function _(_) {
-        const { appId: _, frameRateData: _ } = _,
-          [_, _] = (0, _._)(_, {
-            include_basic_info: !0,
-            include_assets: !0,
-            include_tag_count: 10,
-            include_release: !0,
-          }),
+        const { appId: _, appName: _, frameRateData: _ } = _,
           _ = _.useMemo(() => {
             let _ = [];
             return (
@@ -549,12 +356,8 @@
             className: _.FrameRateValue,
             children: _._.Localize("#GamePerformanceStats_FPS", _),
           }),
-          _ = _?.GetName()
-            ? _._.LocalizeReact(
-                "#GamePerformanceStats_AverageFrameRate",
-                _.GetName(),
-                _,
-              )
+          _ = _
+            ? _._.LocalizeReact("#GamePerformanceStats_AverageFrameRate", _, _)
             : _._.LocalizeReact(
                 "#GamePerformanceStats_AverageFrameRate_ThisGame",
                 _,
