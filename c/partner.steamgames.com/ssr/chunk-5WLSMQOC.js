@@ -248,6 +248,8 @@ Values:
 });
 var _ = _(_(), 1);
 var _ = _(_(), 1);
+var _ = _(_(), 1);
+var _ = _(_(), 1);
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
@@ -5375,152 +5377,6 @@ var _ = class _ extends _.Message {
   }
   _.GetHardwareItems = _;
 })((_ ||= {}));
-function _(_) {
-  return "appid" in _
-    ? `app_${_.appid}`
-    : "packageid" in _
-      ? `package_${_.packageid}`
-      : "bundleid" in _
-        ? `bundle_${_.bundleid}`
-        : "tagid" in _
-          ? `tag_${_.tagid}`
-          : "creatorid" in _
-            ? `creator_${_.creatorid}`
-            : "hubcategoryid" in _
-              ? `hubcategory_${_.hubcategoryid}`
-              : (_(_, "Unknown store item id type"), "");
-}
-function _(_, _) {
-  switch (_) {
-    case _.k_EStoreItemType_App:
-      return `app_${_}`;
-    case _.k_EStoreItemType_Package:
-      return `package_${_}`;
-    case _.k_EStoreItemType_Bundle:
-      return `bundle_${_}`;
-    case _.k_EStoreItemType_Tag:
-      return `tag_${_}`;
-    case _.k_EStoreItemType_Creator:
-      return `creator_${_}`;
-    case _.k_EStoreItemType_HubCategory:
-      return `hubcategory_${_}`;
-    case _.k_EStoreItemType_Mtx:
-    case _.k_EStoreItemType_Invalid:
-      return "";
-    default:
-      return _(_, `Unknown EStoreItemType ${_} ${_(_)} `), "";
-  }
-}
-var _ = /^(app|package|bundle|mtx|tag|creator|hubcategory)_(\d*)$/;
-function _(_) {
-  let _ = _.match(_);
-  if (_)
-    switch (_[1]) {
-      case "app":
-        return {
-          appid: parseInt(_[2]),
-        };
-      case "package":
-        return {
-          packageid: parseInt(_[2]),
-        };
-      case "bundle":
-        return {
-          bundleid: parseInt(_[2]),
-        };
-      case "tag":
-        return {
-          tagid: parseInt(_[2]),
-        };
-      case "creator":
-        return {
-          creatorid: parseInt(_[2]),
-        };
-      case "hubcategory":
-        return {
-          hubcategoryid: parseInt(_[2]),
-        };
-    }
-  _(!1, `Failed to parse StoreItemID ${_}`);
-}
-function _(_) {
-  let _ = _.match(_);
-  if (_)
-    switch (_[1]) {
-      case "app":
-        return {
-          item_type: _.k_EStoreItemType_App,
-          _: parseInt(_[2]),
-        };
-      case "package":
-        return {
-          item_type: _.k_EStoreItemType_Package,
-          _: parseInt(_[2]),
-        };
-      case "bundle":
-        return {
-          item_type: _.k_EStoreItemType_Bundle,
-          _: parseInt(_[2]),
-        };
-      case "tag":
-        return {
-          item_type: _.k_EStoreItemType_Tag,
-          _: parseInt(_[2]),
-        };
-      case "creator":
-        return {
-          item_type: _.k_EStoreItemType_Creator,
-          _: parseInt(_[2]),
-        };
-      case "hubcategory":
-        return {
-          item_type: _.k_EStoreItemType_HubCategory,
-          _: parseInt(_[2]),
-        };
-    }
-  return {
-    item_type: _.k_EStoreItemType_Invalid,
-    _: _ ? parseInt(_[2]) : 0,
-  };
-}
-function _(_) {
-  let _ = _.item_type ?? _.k_EStoreItemType_Invalid,
-    _ = _._ || 0;
-  switch (_) {
-    case _.k_EStoreItemType_App:
-      return {
-        appid: _,
-      };
-    case _.k_EStoreItemType_Package:
-      return {
-        packageid: _,
-      };
-    case _.k_EStoreItemType_Bundle:
-      return {
-        bundleid: _,
-      };
-    case _.k_EStoreItemType_Tag:
-      return {
-        tagid: _,
-      };
-    case _.k_EStoreItemType_Creator:
-      return {
-        creatorid: _,
-      };
-    case _.k_EStoreItemType_HubCategory:
-      return {
-        hubcategoryid: _,
-      };
-    case _.k_EStoreItemType_Mtx:
-    case _.k_EStoreItemType_Invalid:
-      return;
-    default:
-      _(_, `Unknown EStoreItemType ${_} ${_(_)} `);
-      return;
-  }
-}
-var _ = _(_(), 1);
-var _ = _(_(), 1);
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
@@ -5814,6 +5670,150 @@ var _ = class _ extends _.Message {
   _.GetCountryRestrictions = _;
 })((_ ||= {}));
 var _ = _(_(), 1);
+function _(_) {
+  return "appid" in _
+    ? `app_${_.appid}`
+    : "packageid" in _
+      ? `package_${_.packageid}`
+      : "bundleid" in _
+        ? `bundle_${_.bundleid}`
+        : "tagid" in _
+          ? `tag_${_.tagid}`
+          : "creatorid" in _
+            ? `creator_${_.creatorid}`
+            : "hubcategoryid" in _
+              ? `hubcategory_${_.hubcategoryid}`
+              : (_(_, "Unknown store item id type"), "");
+}
+function _(_, _) {
+  switch (_) {
+    case _.k_EStoreItemType_App:
+      return `app_${_}`;
+    case _.k_EStoreItemType_Package:
+      return `package_${_}`;
+    case _.k_EStoreItemType_Bundle:
+      return `bundle_${_}`;
+    case _.k_EStoreItemType_Tag:
+      return `tag_${_}`;
+    case _.k_EStoreItemType_Creator:
+      return `creator_${_}`;
+    case _.k_EStoreItemType_HubCategory:
+      return `hubcategory_${_}`;
+    case _.k_EStoreItemType_Mtx:
+    case _.k_EStoreItemType_Invalid:
+      return "";
+    default:
+      return _(_, `Unknown EStoreItemType ${_} ${_(_)} `), "";
+  }
+}
+var _ = /^(app|package|bundle|mtx|tag|creator|hubcategory)_(\d*)$/;
+function _(_) {
+  let _ = _.match(_);
+  if (_)
+    switch (_[1]) {
+      case "app":
+        return {
+          appid: parseInt(_[2]),
+        };
+      case "package":
+        return {
+          packageid: parseInt(_[2]),
+        };
+      case "bundle":
+        return {
+          bundleid: parseInt(_[2]),
+        };
+      case "tag":
+        return {
+          tagid: parseInt(_[2]),
+        };
+      case "creator":
+        return {
+          creatorid: parseInt(_[2]),
+        };
+      case "hubcategory":
+        return {
+          hubcategoryid: parseInt(_[2]),
+        };
+    }
+  _(!1, `Failed to parse StoreItemID ${_}`);
+}
+function _(_) {
+  let _ = _.match(_);
+  if (_)
+    switch (_[1]) {
+      case "app":
+        return {
+          item_type: _.k_EStoreItemType_App,
+          _: parseInt(_[2]),
+        };
+      case "package":
+        return {
+          item_type: _.k_EStoreItemType_Package,
+          _: parseInt(_[2]),
+        };
+      case "bundle":
+        return {
+          item_type: _.k_EStoreItemType_Bundle,
+          _: parseInt(_[2]),
+        };
+      case "tag":
+        return {
+          item_type: _.k_EStoreItemType_Tag,
+          _: parseInt(_[2]),
+        };
+      case "creator":
+        return {
+          item_type: _.k_EStoreItemType_Creator,
+          _: parseInt(_[2]),
+        };
+      case "hubcategory":
+        return {
+          item_type: _.k_EStoreItemType_HubCategory,
+          _: parseInt(_[2]),
+        };
+    }
+  return {
+    item_type: _.k_EStoreItemType_Invalid,
+    _: _ ? parseInt(_[2]) : 0,
+  };
+}
+function _(_) {
+  let _ = _.item_type ?? _.k_EStoreItemType_Invalid,
+    _ = _._ || 0;
+  switch (_) {
+    case _.k_EStoreItemType_App:
+      return {
+        appid: _,
+      };
+    case _.k_EStoreItemType_Package:
+      return {
+        packageid: _,
+      };
+    case _.k_EStoreItemType_Bundle:
+      return {
+        bundleid: _,
+      };
+    case _.k_EStoreItemType_Tag:
+      return {
+        tagid: _,
+      };
+    case _.k_EStoreItemType_Creator:
+      return {
+        creatorid: _,
+      };
+    case _.k_EStoreItemType_HubCategory:
+      return {
+        hubcategoryid: _,
+      };
+    case _.k_EStoreItemType_Mtx:
+    case _.k_EStoreItemType_Invalid:
+      return;
+    default:
+      _(_, `Unknown EStoreItemType ${_} ${_(_)} `);
+      return;
+  }
+}
 var _ = _(_(), 1);
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
@@ -7637,73 +7637,6 @@ function _(_, _, _, _) {
       _ && _(_, _);
   });
 }
-var _ = _(_(), 1),
-  _ = _.createContext({});
-function _() {
-  return _.useContext(_).dataLoader;
-}
-function _(_) {
-  let {
-      context: _,
-      msDelayBatch: _,
-      serviceTransportOverride: _,
-      legacyCacheStoreItemData: _,
-      children: _,
-    } = _,
-    _ = _(),
-    _ = _(),
-    _ = _.useCallback(
-      (_, _) => {
-        _(_, _.toObject(), _), _ && _(_, _);
-      },
-      [_, _],
-    ),
-    _ = _ || _,
-    { country: _, language: _, bUsePartnerAPI: _ } = _,
-    _ = _.useMemo(
-      () => ({
-        country: _,
-        language: _,
-        bUsePartnerAPI: _,
-      }),
-      [_, _, _],
-    ),
-    _ = _.useMemo(() => {
-      let _ = _ ? _(_) : void 0;
-      return _(
-        _,
-        _,
-        {
-          cache: !1,
-          batchScheduleFn: _,
-        },
-        _,
-      );
-    }, [_, _, _, _]),
-    _ = _.useMemo(
-      () => ({
-        dataLoader: _,
-        storeBrowseContext: _,
-        cacheStoreItemData: _,
-      }),
-      [_, _, _],
-    );
-  return (0, _.jsx)(_.Provider, {
-    value: _,
-    children: _,
-  });
-}
-function _(_) {
-  let _ = 0;
-  return (_) => {
-    let _,
-      _ = performance.now() - _;
-    _ < _ && (_ = _ - _),
-      setTimeout(() => {
-        (_ = performance.now()), _();
-      }, _);
-  };
-}
 function _(_) {
   let _ = _();
   return _(_(_, _));
@@ -7904,5 +7837,72 @@ function _(_, _, _) {
 }
 async function _(_, _, _) {
   return await _.load(`${_(_)}|${_}`);
+}
+var _ = _(_(), 1),
+  _ = _.createContext({});
+function _() {
+  return _.useContext(_).dataLoader;
+}
+function _(_) {
+  let {
+      context: _,
+      msDelayBatch: _,
+      serviceTransportOverride: _,
+      legacyCacheStoreItemData: _,
+      children: _,
+    } = _,
+    _ = _(),
+    _ = _(),
+    _ = _.useCallback(
+      (_, _) => {
+        _(_, _.toObject(), _), _ && _(_, _);
+      },
+      [_, _],
+    ),
+    _ = _ || _,
+    { country: _, language: _, bUsePartnerAPI: _ } = _,
+    _ = _.useMemo(
+      () => ({
+        country: _,
+        language: _,
+        bUsePartnerAPI: _,
+      }),
+      [_, _, _],
+    ),
+    _ = _.useMemo(() => {
+      let _ = _ ? _(_) : void 0;
+      return _(
+        _,
+        _,
+        {
+          cache: !1,
+          batchScheduleFn: _,
+        },
+        _,
+      );
+    }, [_, _, _, _]),
+    _ = _.useMemo(
+      () => ({
+        dataLoader: _,
+        storeBrowseContext: _,
+        cacheStoreItemData: _,
+      }),
+      [_, _, _],
+    );
+  return (0, _.jsx)(_.Provider, {
+    value: _,
+    children: _,
+  });
+}
+function _(_) {
+  let _ = 0;
+  return (_) => {
+    let _,
+      _ = performance.now() - _;
+    _ < _ && (_ = _ - _),
+      setTimeout(() => {
+        (_ = performance.now()), _();
+      }, _);
+  };
 }
 export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };
