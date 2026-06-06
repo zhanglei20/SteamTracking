@@ -5093,8 +5093,9 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG3
+++CCUNGX
 ++CCUNGpure virtual method called\n
-++CCUNGs
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7293,6 +7294,7 @@ ${LANGUAGE}
 /appcache/
 /appcontrollericons%d/%s/%s
 /avatarcache/%s
+/baU
 /bin/lsof
 /bin/sh
 /chat/
@@ -18816,6 +18818,8 @@ Comma separated list of metrics catalogs to disable.  This is the last check.
 Comma separated list of metrics operations that are disabled.  This setting has highest priority
 Comma separated list of metrics operations.  Overrides disabled catalogs
 Command
+Command line already wrapped: %s
+Command line is already escaped: %s
 Command output: %s
 Command: %s\n
 CommandLine static
@@ -24245,7 +24249,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun  5 2026 00:25:59
+Jun  5 2026 23:34:27
 June
 K'iche'
 K(\f]C15
@@ -28733,6 +28737,7 @@ Rs$c~B
 RuPay
 Rule
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 RunGame
 RunGameEngine007

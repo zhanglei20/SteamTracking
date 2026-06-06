@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123mdu
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -5324,10 +5323,10 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}
 +.CAudio_SupportsUseBluetoothForMic_Response
 +.CAuthenticationSupport_RevokeToken_Request
 +.CAuthentication_GetAuthSessionInfo_Request
@@ -8084,7 +8083,6 @@ $steammessages_parental_objects.proto"
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -13834,6 +13832,7 @@ $steammessages_parental_objects.proto"
 33CParental_ApprovePlaytime_Request
 33CParental_RequestPlaytime_Request
 33CPartnerApps_FinishUpload_Request
+33CPersistTritonPairingInfoWorkItem
 33CPlayer_GetAnimatedAvatar_Request
 33CPlayer_GetFavoriteBadge_Response
 33CPlayer_SetAnimatedAvatar_Request
@@ -21119,6 +21118,7 @@ CPeerContentServerJob
 CPendingMsg::SendPkt
 CPerAppEmailOptions
 CPerClanEmailOptions
+CPersistTritonPairingInfoWorkItem
 CPhaseAttribute
 CPipeWaiter::BRemove(%d) -- not present
 CPipewireContext::DispatchEvent
@@ -22681,6 +22681,8 @@ Comma separated list of metrics operations that are disabled.  This setting has 
 Comma separated list of metrics operations.  Overrides disabled catalogs
 Command '%s' returned: %d
 Command found; flags mismatch
+Command line already wrapped: %s
+Command line is already escaped: %s
 Command prefix for tool %u "%s" set to: "%s".
 Command stream from webhelper is corrupt, got larger than 128M command
 Command stream from webhelper is corrupt, got larger than 128M command (%d)
@@ -25632,6 +25634,7 @@ Failed to parse store '%s' from '%s'
 Failed to parse string
 Failed to parse the schema KV buffer
 Failed to parse verified settings for account ID %u
+Failed to persist new bond to controller: %d
 Failed to post %u bytes to chunk store %s
 Failed to post chunk for reading from %s
 Failed to post write to chunkstore %s
@@ -29245,6 +29248,7 @@ L*NBQJ]zr
 L+5d
 L8-\rHO
 L?333?
+L?lf
 LABEL
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -32475,6 +32479,7 @@ Permanent Redirect
 Permissions
 Permitted
 Persian
+Persist controller[%d] bond info: eRet=[%d]\n
 Persistence Failed
 Persistent Logfiles created which have no cleanup limit specified!
 Persistent logfile %s is past the keep until date - cleaning up\n
@@ -33907,6 +33912,7 @@ RunAsAppID
 RunAutoCloudOnAppExit
 RunAutoCloudOnAppLaunch
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 RunDeckEchoCancellationHack
 RunDeckMicEnableHack
@@ -48543,7 +48549,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -56326,6 +56332,7 @@ nImageHeight == nOutputHeight
 nIndex != m_mapCompatToolBuckets.InvalidIndex()
 nIndex != m_pManager->m_mapCompatToolBuckets.InvalidIndex()
 nIntervalSeconds >= 1
+nKeyLen <= sizeof( FeatureReportMsg::payload )
 nLanes <= nConfiguredLanes
 nLast != nInsertBefore
 nLastPktToAck < m_statsEndToEnd.m_nMaxRecvPktNum || usecWhenRecvLastPktToAck == m_statsEndToEnd.m_usecTimeLastRecvSeq
@@ -61122,7 +61129,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun  5 2026 00:24:54
+steam Jun  5 2026 23:34:13
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
