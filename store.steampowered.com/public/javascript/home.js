@@ -5097,7 +5097,6 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 			{
 				var $Temp = $J('<div/>');
 				$Temp.html( data.html );
-				GDynamicStore.DecorateDynamicItems( $Temp );
 				html = $Temp.html();
 				$Temp.empty();
 			}
@@ -5142,6 +5141,8 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 			else
 				bFirstRender = false;
 		}
+
+		GDynamicStore.DecorateDynamicItems( $TabItems );
 	};
 
 	$Checkbox.add($CheckboxHideF2P).add( RangeInitData ? RangeInitData.$Element : null ).on( 'change', function() {
