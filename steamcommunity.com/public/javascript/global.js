@@ -2514,14 +2514,20 @@ CGameSelector = Class.create( {
 		{
 			AlignMenu( this.elInput, this.elSuggestionsCtn, 'left', 'bottom', true );
 			ShowWithFade( this.elSuggestionsCtn );
-			this.elSuggestionsCtn.showPopover();
+			try {
+				this.elSuggestionsCtn.showPopover();
+			}
+			catch(e) {}
 		}
 	},
 
 	HideSuggestions: function()
 	{
 		HideWithFade( this.elSuggestionsCtn );
-		this.elSuggestionsCtn.hidePopover();
+		try {
+			this.elSuggestionsCtn.hidePopover();
+		}
+		catch(e) {}
 	},
 
 	OnGameSelectTextEntry: function( elInput, value )
