@@ -9655,15 +9655,16 @@
             bLazyRenderChildren: a,
             startingSlide: c,
           } = e,
-          d = o.useRef(null);
+          d = o.useRef(null),
+          m = o.useRef(null);
         o.useLayoutEffect(() => {
-          d.current?.scrollIntoView({
-            inline: "start",
-            block: "nearest",
-            behavior: "auto",
-          });
+          d.current &&
+            m.current &&
+            (d.current.scrollLeft +=
+              m.current.getBoundingClientRect().left -
+              d.current.getBoundingClientRect().left);
         }, [c]);
-        const m = (0, i.jsxs)(s.Z, {
+        const _ = (0, i.jsxs)(s.Z, {
           "flow-children": "row",
           style: { gap: r ? r + "px" : void 0 },
           className: (0, l.A)(
@@ -9673,10 +9674,11 @@
             p.ScrollSnapCarousel,
             e.className,
           ),
+          ref: d,
           children: [
             c &&
               o.Children.map(n, (e, t) =>
-                (0, i.jsx)("div", { ref: t == c ? d : void 0, children: e }),
+                (0, i.jsx)("div", { ref: t == c ? m : void 0, children: e }),
               ),
             !c && n,
           ],
@@ -9686,9 +9688,9 @@
               horizontal: !1,
               placeholderWidth: 1,
               placeholderHeight: 1,
-              children: m,
+              children: _,
             })
-          : m;
+          : _;
       }
       var g = r(60383),
         h = r(64238),

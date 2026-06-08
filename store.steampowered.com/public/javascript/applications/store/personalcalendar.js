@@ -361,15 +361,16 @@
             bLazyRenderChildren: l,
             startingSlide: c,
           } = e,
-          d = a.useRef(null);
+          d = a.useRef(null),
+          u = a.useRef(null);
         a.useLayoutEffect(() => {
-          d.current?.scrollIntoView({
-            inline: "start",
-            block: "nearest",
-            behavior: "auto",
-          });
+          d.current &&
+            u.current &&
+            (d.current.scrollLeft +=
+              u.current.getBoundingClientRect().left -
+              d.current.getBoundingClientRect().left);
         }, [c]);
-        const u = (0, n.jsxs)(i.Z, {
+        const p = (0, n.jsxs)(i.Z, {
           "flow-children": "row",
           style: { gap: t ? t + "px" : void 0 },
           className: (0, o.A)(
@@ -379,10 +380,11 @@
             m.ScrollSnapCarousel,
             e.className,
           ),
+          ref: d,
           children: [
             c &&
               a.Children.map(s, (e, r) =>
-                (0, n.jsx)("div", { ref: r == c ? d : void 0, children: e }),
+                (0, n.jsx)("div", { ref: r == c ? u : void 0, children: e }),
               ),
             !c && s,
           ],
@@ -392,9 +394,9 @@
               horizontal: !1,
               placeholderWidth: 1,
               placeholderHeight: 1,
-              children: u,
+              children: p,
             })
-          : u;
+          : p;
       }
       var _ = t(60383),
         f = t(64238),
@@ -1011,8 +1013,8 @@
         options: { path: "/personalcalendar", secure: !0, maxAge: 31536e6 },
         preferenceControls: { isTechnicallyNecessary: !0 },
       };
-      var D;
-      function R() {
+      var R;
+      function D() {
         const e = (0, s.j_)(T),
           r = e ? JSON.parse(e) : void 0,
           t = (0, E.a4)(940),
@@ -1036,11 +1038,11 @@
             (N = N.filter((e) => !r.bHideEarlyAccess || !e.bIsEarlyAccess)),
             (N = N.filter((e) => {
               switch (r.eWishlistDisplay) {
-                case D.Show:
+                case R.Show:
                   return !0;
-                case D.Only:
+                case R.Only:
                   return e.bIsWishlisted;
-                case D.Hide:
+                case R.Hide:
                   return !e.bIsWishlisted;
               }
             }))),
@@ -1151,7 +1153,7 @@
           I = d.filter((e) => e.nReleaseDate > r && e.nReleaseDate < t),
           E = u ?? 100,
           T = I.filter((e) => e.nRank <= E).length - 2,
-          [D, R] = _.useState(!1),
+          [R, D] = _.useState(!1),
           k = (0, y.Qn)(),
           G = _.useRef(null);
         return (
@@ -1183,9 +1185,9 @@
                 className: x.DayAppContainer,
                 "flow-children": "column",
                 navEntryPreferPosition: a.iU.MAINTAIN_Y,
-                preferredFocus: s && !D,
+                preferredFocus: s && !R,
                 ref: G,
-                onFocusWithin: () => R(!0),
+                onFocusWithin: () => D(!0),
                 children: I.slice(0, 2).map((e) =>
                   (0, n.jsx)(F, { nAppID: e.nAppID }, e.nAppID),
                 ),
@@ -1286,7 +1288,7 @@
           ? (0, n.jsx)(b.K, {
               placeholderHeight: 408,
               rootMargin: "0px 0px 100% 0px",
-              children: (0, n.jsx)(R, {}),
+              children: (0, n.jsx)(D, {}),
             })
           : null;
       }
@@ -1294,7 +1296,7 @@
         (e[(e.Show = 0)] = "Show"),
           (e[(e.Only = 1)] = "Only"),
           (e[(e.Hide = 2)] = "Hide");
-      })(D || (D = {}));
+      })(R || (R = {}));
     },
   },
 ]);
