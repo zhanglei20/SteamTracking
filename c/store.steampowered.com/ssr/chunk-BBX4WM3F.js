@@ -1823,6 +1823,7 @@ function _(_) {
         padding: "7",
         zIndex: "1",
         textAlign: "start",
+        _: "footer",
         children: [
           (0, _.jsx)(_, {}),
           (0, _.jsxs)(_, {

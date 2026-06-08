@@ -382,13 +382,14 @@
             bLazyRenderChildren: _,
             startingSlide: _,
           } = _,
+          _ = _.useRef(null),
           _ = _.useRef(null);
         _.useLayoutEffect(() => {
-          _.current?.scrollIntoView({
-            inline: "start",
-            block: "nearest",
-            behavior: "auto",
-          });
+          _.current &&
+            _.current &&
+            (_.current.scrollLeft +=
+              _.current.getBoundingClientRect().left -
+              _.current.getBoundingClientRect().left);
         }, [_]);
         const _ = (0, _.jsxs)(_._, {
           "flow-children": "row",
@@ -404,6 +405,7 @@
             _.ScrollSnapCarousel,
             _.className,
           ),
+          ref: _,
           children: [
             _ &&
               _.Children.map(_, (_, _) =>

@@ -1383,6 +1383,7 @@
               padding: "7",
               zIndex: "1",
               textAlign: "start",
+              id: "footer",
               children: [
                 (0, s.jsx)($, {}),
                 (0, s.jsxs)(J, {
