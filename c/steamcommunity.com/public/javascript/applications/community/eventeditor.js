@@ -2748,10 +2748,11 @@
           _ && _.length > 0)
         ) {
           const _ = _.GetLanguagesWithTokens();
-          _.ClearLanguagesTokens(_),
-            (_.GetEventModel().jsondata.bSaleEnabled = !0),
+          _.ClearLanguagesTokens(_);
+          const _ = _.GetEventModel().jsondata.bSaleEnabled;
+          (_.GetEventModel().jsondata.bSaleEnabled = !0),
             _(_, _, _),
-            (_.GetEventModel().jsondata.bSaleEnabled = !1);
+            (_.GetEventModel().jsondata.bSaleEnabled = _);
         }
         _("clone");
       }

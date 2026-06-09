@@ -2489,7 +2489,11 @@
           }
           (this.m_originalEvent = new _._()),
             (this.m_originalEvent.loadedAllLanguages = !0),
-            (0, _._)(this.m_curModel.jsondata, _),
+            (0, _._)(
+              this.m_curModel.GetEventType(),
+              this.m_curModel.jsondata,
+              _,
+            ),
             this.SetDirty(
               _.description |
                 _.name |

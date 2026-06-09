@@ -43,20 +43,20 @@
         r = s(39479),
         i = s(64238),
         C = s.n(i),
-        c = s(75659),
-        o = s(11526),
+        o = s(75659),
+        c = s(11526),
         l = s(75180);
       function a(e) {
         const { as: t = "div", ref: s, ...i } = e,
-          c = (0, o.mz)({ ...i, className: C()(l.Grid, e.className) }, h),
+          o = (0, c.mz)({ ...i, className: C()(l.Grid, e.className) }, h),
           a = t;
         return (0, n.jsx)(r.J, {
           "flow-children": "grid",
-          children: (0, n.jsx)(a, { ref: s, ...c }),
+          children: (0, n.jsx)(a, { ref: s, ...o }),
         });
       }
       const h = [
-        ...c.h,
+        ...o.h,
         {
           prop: "display",
           responsive: !0,
@@ -156,8 +156,8 @@
         r = s(83392),
         i = s(59805),
         C = s(28491),
-        c = s(10430),
-        o = s(20187),
+        o = s(10430),
+        c = s(20187),
         l = s(48474),
         a = s(37603),
         h = s(19997),
@@ -188,10 +188,10 @@
             bTooltipMode: i,
             popoverProps: C,
           } = e,
-          [c, o] = (0, u.useState)(!1);
+          [o, c] = (0, u.useState)(!1);
         return (0, n.jsxs)(w.A.Root, {
-          open: c,
-          onOpenChange: o,
+          open: o,
+          onOpenChange: c,
           interactions: {
             hover: (e) => {
               let t = { ...e, delay: { open: r, close: 0 } };
@@ -308,7 +308,7 @@
         );
       }
       function y(e) {
-        const t = (0, c.xC)();
+        const t = (0, o.xC)();
         return "initial" === t || "sm" === t
           ? null
           : (0, n.jsx)("footer", {
@@ -413,7 +413,7 @@
                                     j.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
-                                (0, n.jsx)(o.EY, { children: "微博" }),
+                                (0, n.jsx)(c.EY, { children: "微博" }),
                               ],
                             }),
                           }),
@@ -433,7 +433,7 @@
                                     j.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
-                                (0, n.jsx)(o.EY, { children: "微信" }),
+                                (0, n.jsx)(c.EY, { children: "微信" }),
                               ],
                             }),
                           }),
@@ -665,7 +665,7 @@
         );
       }
       function W() {
-        const e = (0, c.xC)();
+        const e = (0, o.xC)();
         return (0, n.jsxs)(r.s, {
           gridArea: "main",
           direction: "column",
@@ -686,7 +686,7 @@
                 }),
               ],
             }),
-            (0, n.jsx)(o.EY, {
+            (0, n.jsx)(c.EY, {
               as: "p",
               size: "1",
               className: V.LegalNotice,
@@ -760,6 +760,7 @@
               padding: "7",
               zIndex: "1",
               textAlign: "start",
+              id: "footer",
               children: [
                 (0, n.jsx)(W, {}),
                 (0, n.jsxs)(F, {
