@@ -6274,7 +6274,7 @@
             null == _ ? void 0 : _.sale_carousel_breadcrumb_style,
         };
       }
-      function _(_, _) {
+      function _(_, _, _) {
         (_.library_spotlight = void 0),
           _.email_setting &&
             ((_.email_setting.locked = void 0),
@@ -6287,7 +6287,7 @@
           (_.app_right_requirement_info = void 0),
           (_.clone_from_event_gid = _),
           (_.clone_from_sale_enabled = _.bSaleEnabled),
-          (_.bSaleEnabled = !1),
+          (_.bSaleEnabled = _ == _.ajI),
           (_.sale_discount_event_id = void 0),
           (_.valve_access_log = []),
           (_.bInvisibleGameOptIn = void 0),

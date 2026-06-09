@@ -2444,7 +2444,11 @@
           }
           (this.m_originalEvent = new _.lh()),
             (this.m_originalEvent.loadedAllLanguages = !0),
-            (0, _.sj)(this.m_curModel.jsondata, t),
+            (0, _.sj)(
+              this.m_curModel.GetEventType(),
+              this.m_curModel.jsondata,
+              t,
+            ),
             this.SetDirty(
               o.description |
                 o.name |

@@ -2742,10 +2742,11 @@
           a && a.length > 0)
         ) {
           const e = t.GetLanguagesWithTokens();
-          t.ClearLanguagesTokens(a),
-            (n.GetEventModel().jsondata.bSaleEnabled = !0),
+          t.ClearLanguagesTokens(a);
+          const i = n.GetEventModel().jsondata.bSaleEnabled;
+          (n.GetEventModel().jsondata.bSaleEnabled = !0),
             ot(n, t, e),
-            (n.GetEventModel().jsondata.bSaleEnabled = !1);
+            (n.GetEventModel().jsondata.bSaleEnabled = i);
         }
         e("clone");
       }

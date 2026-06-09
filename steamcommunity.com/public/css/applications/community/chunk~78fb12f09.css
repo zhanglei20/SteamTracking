@@ -753,7 +753,7 @@
 :where(._1xbvB3MqxnugiXxR02dPOx) {
   text-align: var(--text-align);
 }
-._3nHL7awgK1Qei1XivGvHMK {
+:where(._3nHL7awgK1Qei1XivGvHMK) {
   box-sizing: border-box;
   display: flex;
 }
@@ -781,7 +781,7 @@
 .LOeaKjPDMbdcAB54IFgyX {
   display: inline-flex;
 }
-._2YzOLNBx6TonKU0Zmp20l4 {
+:where(._2YzOLNBx6TonKU0Zmp20l4) {
   display: block;
   box-sizing: border-box;
 }
