@@ -106,6 +106,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123m
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -1383,6 +1384,31 @@
 #SettingsController_SteamController
 #SettingsDownloads_No_Throttle
 #SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR
+#SteamNetSockets_AppClose_Normal
+#SteamNetSockets_AppClose_Unusual
+#SteamNetSockets_Connected
+#SteamNetSockets_Connecting
+#SteamNetSockets_Disconnect_ConnectionTimedout
+#SteamNetSockets_Disconnect_InternalError
+#SteamNetSockets_Disconnect_LocalProblem_HostedServerPrimaryRelay
+#SteamNetSockets_Disconnect_LocalProblem_ManyRelays
+#SteamNetSockets_Disconnect_LocalProblem_NetworkConfig
+#SteamNetSockets_Disconnect_LocalProblem_Other
+#SteamNetSockets_Disconnect_P2P_Rendezvous
+#SteamNetSockets_Disconnect_RemoteProblem_BadCert
+#SteamNetSockets_Disconnect_RemoteProblem_BadCrypt
+#SteamNetSockets_Disconnect_RemoteProblem_Timeout
+#SteamNetSockets_Disconnect_RemoteProblem_TimeoutConnecting
+#SteamNetSockets_Disconnect_SteamConnectivity
+#SteamNetSockets_Disconnect_TimedOut
+#SteamNetSockets_Disconnect_Unusual
+#SteamNetSockets_FindingRoute
+#SteamNetSockets_PeerClose_App_Normal
+#SteamNetSockets_PeerClose_App_Unusual
+#SteamNetSockets_PeerClose_LocalProblem
+#SteamNetSockets_PeerClose_RemoteProblem_BadCert
+#SteamNetSockets_PeerClose_RemoteProblem_BadCrypt
+#SteamNetSockets_PeerClose_Ununusual
 #Steam_Settings_Ingame_ShowFPS_LeftBottom
 #Steam_Settings_Ingame_ShowFPS_LeftTop
 #Steam_Settings_Ingame_ShowFPS_Off
@@ -5323,8 +5349,9 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
@@ -8075,12 +8102,12 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11634,11 +11661,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-2019
-2048
 20000
 2000000
 200M
+2019
+2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -24788,6 +24815,7 @@ Enable valid email domains in BIsValidEmailAddress
 EnableConfiguratorSupport
 EnableControl
 EnableDeviceCallbacks
+EnableDiagnosticsUI
 EnableDockedInput
 EnableGameOverlay
 EnableGameOverlayForApp
@@ -29247,8 +29275,8 @@ L SoZU`
 L*NBQJ]zr
 L+5d
 L8-\rHO
+L>PPD
 L?333?
-L?lf
 LABEL
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -30248,6 +30276,7 @@ N25SteamNetworkingSocketsLib26CSteamNetworkConnectionP2PE
 N25SteamNetworkingSocketsLib26CSteamNetworkConnectionUDPE
 N25SteamNetworkingSocketsLib26CSteamNetworkingICESessionE
 N25SteamNetworkingSocketsLib26CSteamNetworkingSocketsSDRE
+N25SteamNetworkingSocketsLib26PostConnectionStateMsgTaskE
 N25SteamNetworkingSocketsLib26SteamDatagramClientThinkerE
 N25SteamNetworkingSocketsLib27CConnectionTransportP2PBaseE
 N25SteamNetworkingSocketsLib27CConnectionTransportSDRBaseE
@@ -32654,6 +32683,7 @@ PostChatMessage
 PostCode
 PostCommentToThread
 PostConnectionStateMsg
+PostConnectionStateUpdateForDiagnosticsUI
 PostConnectionStateUpdatesForAllConnections
 PostControllerConfig
 PostOutstandingRequestFriendshipCallbacks
@@ -34641,6 +34671,7 @@ STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
 STEAM_OVERLAY_LOGGING_FLUSH
 STEAM_OVERLAY_WINDOW_BLACKLIST
 STEAM_RUNTIME_LIBRARY_PATH
+STEAM_RUNTIME_STEAMRT
 STEAM_SCREEN_MAGNIFICATION
 STEAM_SCREEN_SCALE
 STEAM_SPEW_LEVELS
@@ -48549,7 +48580,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -55352,6 +55383,7 @@ m_usecIdleTimeout > 0
 m_usecNextThinkTime != k_nThinkTime_Never
 m_usecNextThinkTime == k_nThinkTime_Never
 m_usecSendSignalDeadline == k_nThinkTime_Never
+m_usecWhenNextDiagnosticsUpdate > usecNow
 m_usecWhenSentConnectRequest == usecNow
 m_usecWhenSentLastSignal == usecNow
 m_usecWhenStartedFindingRoute == 0
@@ -58728,6 +58760,7 @@ price_to_base_discount_on
 prices
 prim:
 primary
+primary.m_sessionSelectQualityMetrics.m_nScore < k_nRouteScoreHuge
 primary_controller_type
 primary_language
 primary_steam_controller_serial
@@ -59024,7 +59057,7 @@ putc
 puts
 putwc
 puubdfgklmnprssvxzaadeeeei
-pv-runtime/steam-runtime-steamrt/pressure-vessel/bin
+pv-runtime/steam-runtime-steamrt
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -61129,7 +61162,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun  5 2026 23:34:13
+steam Jun  8 2026 20:52:25
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

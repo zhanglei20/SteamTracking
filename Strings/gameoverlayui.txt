@@ -702,7 +702,6 @@ $\nY8O
 *|\n\fECPUGovernor
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
@@ -1083,7 +1082,6 @@ $\nY8O
 01/01/00
 0123456789
 0123456789ABCDEF
-0123456789ABCDEF`
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -1550,6 +1548,7 @@ $\nY8O
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 200 Mbps
 200M
+20:52:32
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -1595,7 +1594,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:34:28
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -4161,7 +4159,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun  5 2026
+Jun  8 2026
 June
 K'iche'
 KEY_0
@@ -5625,6 +5623,7 @@ SPEI
 STEAM_
 STEAM_CLIENT_LOG_FOLDER
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
+STEAM_RUNTIME_STEAMRT
 STEAM_USE_DYNAMIC_VRS
 STRING
 SafeMode
@@ -9457,7 +9456,7 @@ punct
 purchase
 putc
 putwc
-pv-runtime/steam-runtime-steamrt/pressure-vessel/bin
+pv-runtime/steam-runtime-steamrt
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pw_csgo
 pw_dota2

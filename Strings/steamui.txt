@@ -5093,8 +5093,6 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG3
-++CCUNGX
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
@@ -7294,7 +7292,6 @@ ${LANGUAGE}
 /appcache/
 /appcontrollericons%d/%s/%s
 /avatarcache/%s
-/baU
 /bin/lsof
 /bin/sh
 /chat/
@@ -7530,14 +7527,15 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -24249,7 +24247,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun  5 2026 23:34:27
+Jun  8 2026 20:52:31
 June
 K'iche'
 K(\f]C15
@@ -29227,6 +29225,7 @@ STEAM_OSMANAGER1_IS_WIFI_DEBUG_DUMP1 (interface)
 STEAM_OSMANAGER1_IS_WIFI_POWER_MANAGEMENT1 (interface)
 STEAM_OSMANAGER_LEGACY_IS_ (interface)
 STEAM_RUNTIME
+STEAM_RUNTIME_STEAMRT
 STEAM_SCREEN_MAGNIFICATION
 STEAM_SCREEN_SCALE
 STEAM_TOUCH_CLICK_MODE
@@ -41518,7 +41517,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenhy4
 ghost_
 gidlist
 gidparentcomment
@@ -52689,7 +52688,7 @@ push_to_talk_enabled
 putc
 puts
 putwc
-pv-runtime/steam-runtime-steamrt/pressure-vessel/bin
+pv-runtime/steam-runtime-steamrt
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
