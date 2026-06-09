@@ -123,8 +123,8 @@
         r = n(64238),
         i = n.n(r),
         o = n(69041),
-        a = n(75659),
-        c = n(11526),
+        c = n(75659),
+        a = n(11526),
         l = n(11820),
         h = n(73406),
         C = n(90534),
@@ -136,12 +136,12 @@
           children: r,
           color: i,
           variant: o,
-          ...a
+          ...c
         } = e;
         return r || !n
           ? (0, s.jsxs)(C.az, {
               position: "relative",
-              ...a,
+              ...c,
               width: "fit-content",
               children: [
                 (0, s.jsx)("div", {
@@ -159,28 +159,28 @@
                   }),
               ],
             })
-          : (0, s.jsx)(u, { size: t, color: i, variant: o, ...a });
+          : (0, s.jsx)(u, { size: t, color: i, variant: o, ...c });
       }
       function u(e) {
-        const { className: t, color: n, ...r } = (0, c.mz)(e, x);
+        const { className: t, color: n, ...r } = (0, a.mz)(e, f);
         return (0, s.jsx)("div", {
           "data-accent-color": n,
           className: i()(t, h.Spinner),
           ...r,
         });
       }
-      const x = [
-        ...a.L,
+      const f = [
+        ...c.L,
         { prop: "size", responsive: !0, className: (e) => h[`Size-${e}`] },
         { prop: "variant", className: (e) => h[`Variant-${e}`] },
       ];
-      var f = n(45699),
-        m = n(8527);
-      function g(e) {
+      var x = n(45699),
+        g = n(8527);
+      function m(e) {
         e.preventDefault();
       }
       const _ = [
-          ...a.L,
+          ...c.L,
           { prop: "size", responsive: !0, className: (e) => o[`Size-${e}`] },
           { prop: "variant", className: (e) => o[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
@@ -202,91 +202,99 @@
               variant: t = "default",
               size: n = "2",
               minWidth: r = "fit-content",
-              color: a,
+              color: c,
               loading: l,
               children: h,
               onClick: C,
               icon: d,
-              gamepadFocusable: u = !0,
-              ...x
+              focusable: u,
+              navProps: f,
+              ...m
             } = e,
-            g = l
+            v = l
               ? (0, s.jsx)(p, {
                   size: n,
-                  color: a,
+                  color: c,
                   variant: "bright",
                   children: h,
                 })
               : h,
-            v = l ? void 0 : C,
-            H = u && m.TS.IN_GAMEPADUI ? f.fu : "button";
-          return (0, s.jsx)(H, {
-            type: "button",
-            ...(0, c.mz)(
-              {
-                ...x,
-                variant: t,
-                size: n,
-                minWidth: r,
-                color: a,
-                className: i()(o.Button, d && o.Icon),
-                onClick: v,
-              },
-              _,
-            ),
-            children: g,
-          });
+            H = l ? void 0 : C,
+            j = u ?? f?.focusable ?? !!H,
+            L = {
+              type: "button",
+              ...(0, a.mz)(
+                {
+                  ...m,
+                  variant: t,
+                  size: n,
+                  minWidth: r,
+                  color: c,
+                  className: i()(o.Button, d && o.Icon),
+                  onClick: H,
+                },
+                _,
+              ),
+              children: v,
+            };
+          return g.TS.IN_GAMEPADUI && (j || f)
+            ? (0, s.jsx)(x.fu, { ...L, ...(f || {}), focusable: j })
+            : (0, s.jsx)("button", { ...L });
         },
         H = function (e) {
           const {
               variant: t = "default",
               size: n = "2",
               minWidth: r = "fit-content",
-              disabled: a,
+              disabled: c,
               icon: h,
-              gamepadFocusable: C = !0,
-              ...d
+              focusable: C,
+              navProps: d,
+              ...p
             } = e,
-            p = a ? g : void 0,
-            u = C && m.TS.IN_GAMEPADUI ? f.Ii : "a";
-          return (0, s.jsx)(u, {
-            ...(0, c.mz)(
+            u = c ? m : void 0,
+            f = (0, a.mz)(
               {
-                onClick: p,
-                ...d,
+                onClick: u,
+                ...p,
                 variant: t,
                 size: n,
                 minWidth: r,
                 className: i()(o.Button, h && o.Icon, (0, l.T)()),
               },
               _,
-            ),
-          });
+            );
+          return g.TS.IN_GAMEPADUI && (C || d)
+            ? (0, s.jsx)(x.Ii, { ...f, ...(d || {}), focusable: C })
+            : (0, s.jsx)("a", { ...f });
         };
     },
     49560: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => _, p: () => g });
+      n.d(t, { A: () => j, p: () => H });
       var s = n(7850),
         r = n(90626),
         i = n(73788),
         o = n(28505),
-        a = n(94621),
-        c = n(8871),
+        c = n(94621),
+        a = n(8871),
         l = n(45699),
         h = n(85585),
         C = n(7445),
         d = n(8527),
-        p = n(81393);
-      const u = (0, r.createContext)(null);
-      function x(e) {
+        p = n(81393),
+        u = n(64238),
+        f = n.n(u),
+        x = n(11820);
+      const g = (0, r.createContext)(null);
+      function m(e) {
         return d.TS.IN_GAMEPADUI
-          ? (0, s.jsx)(f, { ...e })
-          : (0, s.jsx)(m, { ...e });
+          ? (0, s.jsx)(_, { ...e })
+          : (0, s.jsx)(v, { ...e });
       }
-      function f(e) {
+      function _(e) {
         const { children: t } = e,
-          n = (0, r.useContext)(u);
+          n = (0, r.useContext)(g);
         (0, p.wT)(
           !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
@@ -306,9 +314,9 @@
           })
         );
       }
-      function m(e) {
+      function v(e) {
         const { children: t } = e,
-          n = (0, r.useContext)(u);
+          n = (0, r.useContext)(g);
         return (
           (0, p.wT)(
             !!n,
@@ -322,22 +330,22 @@
           })
         );
       }
-      function g(e) {
+      function H(e) {
         const { gutter: t = 0, placement: n } = e,
           s = [],
           r = n && "object" == typeof n;
         return (
           r && n.offset
-            ? s.push((0, a.cY)(n.offset))
-            : (r && void 0 !== n.offset) || s.push((0, a.cY)(2)),
+            ? s.push((0, c.cY)(n.offset))
+            : (r && void 0 !== n.offset) || s.push((0, c.cY)(2)),
           r && n.flip
-            ? s.push((0, a.UU)(n.flip))
-            : (r && void 0 !== n.flip) || s.push((0, a.UU)()),
+            ? s.push((0, c.UU)(n.flip))
+            : (r && void 0 !== n.flip) || s.push((0, c.UU)()),
           r && n.shift
-            ? s.push((0, a.BN)(n.shift))
-            : (r && void 0 !== n.shift) || s.push((0, a.BN)()),
+            ? s.push((0, c.BN)(n.shift))
+            : (r && void 0 !== n.shift) || s.push((0, c.BN)()),
           s.push(
-            (0, a.Ej)({
+            (0, c.Ej)({
               apply: (n) => {
                 const { rects: s, elements: r, availableHeight: i } = n,
                   o = { boxSizing: "border-box", zIndex: "1" };
@@ -359,15 +367,15 @@
                     unContentWidth: s.floating.width,
                     unTargetWidth: s.reference.width,
                   }));
-                const a =
+                const c =
                   "number" == typeof t ? `${t}px` : `var(--spacing-${t})`;
                 "function" == typeof e.maxHeight
                   ? (o.maxHeight = e.maxHeight({
                       unAvailableHeight: i,
-                      gutter: a,
+                      gutter: c,
                     }))
                   : "number" == typeof e.maxHeight
-                    ? (o.maxHeight = `min( calc( ${i}px - ${a} ), ${e.maxHeight}px )`)
+                    ? (o.maxHeight = `min( calc( ${i}px - ${c} ), ${e.maxHeight}px )`)
                     : (o.maxHeight =
                         "number" == typeof t
                           ? i - t + "px"
@@ -383,7 +391,7 @@
           s
         );
       }
-      const _ = {
+      const j = {
         Root: function (e) {
           const { children: t, ...n } = e,
             r = (function (e) {
@@ -393,12 +401,12 @@
                 placement: s,
                 interactions: r = {},
               } = e;
-              let a = t;
+              let c = t;
               0;
-              const c = (0, i.we)({
-                  open: a,
+              const a = (0, i.we)({
+                  open: c,
                   onOpenChange: n,
-                  middleware: g(e),
+                  middleware: H(e),
                   whileElementsMounted: o.ll,
                   placement: s && "object" == typeof s ? s.initial : s,
                   strategy: "fixed",
@@ -408,36 +416,36 @@
                       e?.ownerDocument?.defaultView ?? window,
                   },
                 }),
-                l = (0, i.kp)(c.context, { enabled: !!r.click }),
-                h = (0, i.iQ)(c.context, { enabled: !!r.focus }),
+                l = (0, i.kp)(a.context, { enabled: !!r.click }),
+                h = (0, i.iQ)(a.context, { enabled: !!r.focus }),
                 C = { handleClose: (0, i.iB)() },
                 d = "function" == typeof r.hover ? r.hover(C) : C,
-                p = (0, i.Mk)(c.context, { enabled: !!r.hover, ...d }),
-                u = (0, i.s9)(c.context),
-                { getFloatingProps: x, getReferenceProps: f } = (0, i.bv)([
+                p = (0, i.Mk)(a.context, { enabled: !!r.hover, ...d }),
+                u = (0, i.s9)(a.context),
+                { getFloatingProps: f, getReferenceProps: x } = (0, i.bv)([
                   l,
                   h,
                   p,
                   u,
                 ]);
               return {
-                floating: c,
-                getFloatingProps: x,
-                getReferenceProps: f,
-                open: a,
+                floating: a,
+                getFloatingProps: f,
+                getReferenceProps: x,
+                open: c,
               };
             })(n);
-          return (0, s.jsx)(u.Provider, { value: r, children: t });
+          return (0, s.jsx)(g.Provider, { value: r, children: t });
         },
         Anchor: function (e) {
           const { children: t } = e,
             n = r.Children.only(t),
-            s = (0, r.useContext)(u);
+            s = (0, r.useContext)(g);
           return n
             ? s
               ? (0, r.cloneElement)(n, {
                   ...s.getReferenceProps(n.props),
-                  ref: (0, c.XB)(n.props.ref, s.floating.refs.setReference),
+                  ref: (0, a.XB)(n.props.ref, s.floating.refs.setReference),
                 })
               : (console.error(
                   "<PopoverAnchor> must be a child of <PopoverRoot>.",
@@ -447,69 +455,57 @@
         },
         Positioner: function (e) {
           const { children: t, className: n, ref: o } = e,
-            a = (0, r.useContext)(u),
-            c = (0, i.SV)([
+            c = (0, r.useContext)(g),
+            a = (0, i.SV)([
               o,
-              a?.floating.refs.setFloating,
+              c?.floating.refs.setFloating,
               (e) => e?.showPopover?.(),
             ]);
-          if (!a)
+          if (!c)
             return (
               console.error(
                 "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
-          if (!a.open) return null;
+          if (!c.open) return null;
           let l = r.Children.only(t),
             h = r.Fragment;
-          l.type == _.FocusManager &&
-            ((l = r.Children.only(l.props.children)), (h = x));
+          l.type == j.FocusManager &&
+            ((l = r.Children.only(l.props.children)), (h = m));
           const C = (0, r.cloneElement)(l, {
-            ref: c,
-            style: {
-              ...a.floating.floatingStyles,
-              inset: "unset",
-              border: "none",
-              background: "transparent",
-              color: "inherit",
-              padding: 0,
-            },
-            className: n,
+            ref: a,
+            style: { ...c.floating.floatingStyles },
+            className: f()((0, x.T)(), n),
             popover: "manual",
-            ...a.getFloatingProps(),
+            ...c.getFloatingProps(),
           });
           return (0, s.jsx)(h, { children: C });
         },
-        FocusManager: x,
+        FocusManager: m,
       };
     },
     90534: (e, t, n) => {
       "use strict";
-      n.d(t, { GY: () => C, az: () => h });
+      n.d(t, { az: () => C });
       var s = n(7850),
-        r = n(39479),
-        i = n(64238),
-        o = n.n(i),
+        r = n(44041),
+        i = n(39479),
+        o = n(64238),
+        c = n.n(o),
         a = n(11526),
-        c = n(75659),
-        l = n(44041);
-      function h(e) {
-        const { as: t = "div", ref: n, ...r } = e,
-          i = (0, a.mz)({ ...r, className: o()(l.Box, e.className) }, d),
-          c = t;
-        return (0, s.jsx)(c, { ref: n, ...i });
-      }
+        l = n(75659),
+        h = n(8527);
       function C(e) {
-        const { as: t = "div", ref: n, navProps: i, ...c } = e,
-          h = (0, a.mz)({ ...c, className: o()(l.Box, c.className) }, d),
-          C = t;
-        return (0, s.jsx)(r.J, {
-          ...i,
-          children: (0, s.jsx)(C, { ref: n, ...h }),
-        });
+        const { as: t = "div", focusable: n, navProps: o, ref: l, ...C } = e,
+          p = (0, a.mz)({ ...C, className: c()(r.Box, e.className) }, d),
+          u = n ?? o?.focusable ?? !!C.onClick,
+          f = (0, s.jsx)(t, { ref: l, ...p });
+        return h.TS.IN_GAMEPADUI && (u || o)
+          ? (0, s.jsx)(i.J, { ...(o || {}), focusable: u, children: f })
+          : f;
       }
-      const d = c.h;
+      const d = l.h;
     },
     59805: (e, t, n) => {
       "use strict";
@@ -518,9 +514,9 @@
         r = n(39049),
         i = n(75659),
         o = n(20187),
-        a = n(11526),
-        c = n(90626);
-      const l = c.createContext({ depth: 0 });
+        c = n(11526),
+        a = n(90626);
+      const l = a.createContext({ depth: 0 });
       var h = n(11820),
         C = n(64238),
         d = n.n(C);
@@ -540,9 +536,9 @@
                   ),
                   "h1");
             return "h" + n;
-          })(t, (0, c.useContext)(l).depth);
+          })(t, (0, a.useContext)(l).depth);
         return (0, s.jsx)(o, {
-          ...(0, a.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, u),
+          ...(0, c.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, u),
         });
       }
       const u = [
@@ -562,15 +558,15 @@
         r = n(55348),
         i = n(11526),
         o = n(75659),
-        a = n(64238),
-        c = n.n(a),
+        c = n(64238),
+        a = n.n(c),
         l = n(65274);
       function h(e) {
         const { as: t = "span", ref: n, className: r, ...o } = e,
-          a = t;
-        return (0, s.jsx)(a, {
+          c = t;
+        return (0, s.jsx)(c, {
           ref: n,
-          ...(0, i.mz)({ ...o, className: c()(l.Text, r) }, d),
+          ...(0, i.mz)({ ...o, className: a()(l.Text, r) }, d),
         });
       }
       const C = [
@@ -629,21 +625,22 @@
       "use strict";
       n.d(t, { Y: () => l });
       var s = n(7850),
-        r = n(20187),
-        i = n(11526),
-        o = n(50122),
-        a = n(8527),
-        c = n(45699);
+        r = n(50122),
+        i = n(20187),
+        o = n(11526),
+        c = n(8527),
+        a = n(45699);
       function l(e) {
-        const { underline: t = "auto", ...n } = e,
-          r = a.TS.IN_GAMEPADUI ? c.Ii : "a";
-        return (0, s.jsx)(r, {
-          ...(0, i.mz)({ ...n, underline: t, className: o.TextLink }, h),
-        });
+        const { underline: t = "auto", focusable: n, navProps: i, ...l } = e,
+          C = n ?? i?.focusable ?? !!l.href,
+          d = (0, o.mz)({ ...l, underline: t, className: r.TextLink }, h);
+        return c.TS.IN_GAMEPADUI && (C || i)
+          ? (0, s.jsx)(a.Ii, { ...d, ...(i || {}), focusable: C })
+          : (0, s.jsx)("a", { ...d });
       }
       const h = [
-        ...r.Ae,
-        { prop: "underline", className: (e) => o[`Underline-${e}`] },
+        ...i.Ae,
+        { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];
     },
     11820: (e, t, n) => {
@@ -654,157 +651,134 @@
         return s.Reset;
       }
     },
-    17223: (e, t, n) => {
+    7627: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { GlobalFooter: () => q });
       var s = n(7850),
         r = n(83392),
         i = n(59805),
         o = n(28491),
-        a = n(10430),
-        c = n(20187),
+        c = n(10430),
+        a = n(20187),
         l = n(53965),
         h = n(37603),
         C = n(39479),
         d = n(64238),
         p = n.n(d),
         u = n(75659),
-        x = n(11526),
-        f = n(75180);
+        f = n(11526),
+        x = n(75180),
+        g = n(8527);
       function m(e) {
-        const { as: t = "div", ref: n, ...r } = e,
-          i = (0, x.mz)({ ...r, className: p()(f.Grid, e.className) }, g),
-          o = t;
-        return (0, s.jsx)(C.J, {
-          "flow-children": "grid",
-          children: (0, s.jsx)(o, { ref: n, ...i }),
-        });
+        const { as: t = "div", ref: n, focusable: r, navProps: i, ...o } = e,
+          c = (0, f.mz)({ ...o, className: p()(x.Grid, e.className) }, _),
+          a = r ?? i?.focusable ?? !!o.onClick,
+          l = (0, s.jsx)(t, { ref: n, ...c });
+        return g.TS.IN_GAMEPADUI
+          ? (0, s.jsx)(C.J, {
+              "flow-children": "grid",
+              ...(i || {}),
+              focusable: a,
+              children: l,
+            })
+          : l;
       }
-      const g = [
+      const _ = [
         ...u.h,
         {
           prop: "display",
           responsive: !0,
-          className: f.Display,
+          className: x.Display,
           cssProperty: "--grid-display",
         },
         {
           prop: "columns",
           responsive: !0,
-          className: f.Columns,
+          className: x.Columns,
           cssProperty: "--grid-columns",
         },
         {
           prop: "rows",
           responsive: !0,
-          className: f.Rows,
+          className: x.Rows,
           cssProperty: "--grid-rows",
         },
         {
           prop: "autoColumns",
           responsive: !0,
-          className: f.AutoColumns,
+          className: x.AutoColumns,
           cssProperty: "--grid-auto-columns",
         },
         {
           prop: "autoRows",
           responsive: !0,
-          className: f.AutoRows,
+          className: x.AutoRows,
           cssProperty: "--grid-auto-rows",
         },
         {
           prop: "autoFlow",
           responsive: !0,
-          className: f.AutoFlow,
+          className: x.AutoFlow,
           cssProperty: "--grid-auto-flow",
         },
         {
           prop: "areas",
           responsive: !0,
-          className: f.Areas,
+          className: x.Areas,
           cssProperty: "--grid-areas",
         },
         {
           prop: "flow",
           responsive: !0,
-          className: f.Flow,
+          className: x.Flow,
           cssProperty: "--grid-flow",
         },
         {
           prop: "alignContent",
           responsive: !0,
-          className: f.AlignContent,
+          className: x.AlignContent,
           cssProperty: "--grid-align-content",
         },
         {
           prop: "justifyContent",
           responsive: !0,
-          className: f.JustifyContent,
+          className: x.JustifyContent,
           cssProperty: "--grid-justify-content",
         },
         {
           prop: "alignItems",
           responsive: !0,
-          className: f.AlignItems,
+          className: x.AlignItems,
           cssProperty: "--grid-align-items",
         },
         {
           prop: "justifyItems",
           responsive: !0,
-          className: f.JustifyItems,
+          className: x.JustifyItems,
           cssProperty: "--grid-justify-items",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: f.Gap,
+          className: x.Gap,
           cssProperty: (e) => ["--grid-gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: f.Gap,
+          className: x.Gap,
           cssProperty: (e) => ["--grid-gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: f.Gap,
+          className: x.Gap,
           cssProperty: (e) => ["--grid-gap-y", `var(--spacing-${e})`],
         },
       ];
-      var _ = n(2160),
-        v = n(90626);
-      function H(e, t = ["b", "i", "br"]) {
-        const n = t.join("|"),
-          s = [],
-          r = new RegExp(
-            `(?<before>.*?)<(?<tagname>${n})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
-            "gs",
-          );
-        let i,
-          o = 0;
-        for (; (i = r.exec(e)); ) {
-          if (!i.groups) continue;
-          if (!i.groups?.endtag) {
-            const e = i.groups.before.length + i.groups.tagname.length + 2;
-            (o += e), (r.lastIndex = i.index + e), s.push(i.groups.before);
-            const t = i[2],
-              n = v.createElement(t);
-            s.push(n);
-            continue;
-          }
-          (o += i[0].length), s.push(i.groups.before);
-          const e = i.groups.tagname,
-            n = i.groups.contents || "";
-          let a = null;
-          n && (a = H(n, t));
-          const c = v.createElement(e, {}, a);
-          s.push(c);
-        }
-        return s.push(e.slice(o)), v.createElement(v.Fragment, null, ...s);
-      }
-      var j = n(91933),
+      var v = n(2160),
+        H = n(66973),
+        j = n(91933),
         L = n(38861);
       function w() {
         return "desktop" === (0, j.j_)(L.k1);
@@ -812,9 +786,9 @@
       function V() {
         w() && (0, j.Y1)(L.k1), "location" in window && location.reload();
       }
-      var z = n(8527),
-        S = n(60014),
-        b = n(74840),
+      var b = n(60014),
+        S = n(90626),
+        z = n(74840),
         M = n(90534),
         T = n(49560);
       n(42327);
@@ -826,10 +800,10 @@
             bTooltipMode: i,
             popoverProps: o,
           } = e,
-          [a, c] = (0, v.useState)(!1);
+          [c, a] = (0, S.useState)(!1);
         return (0, s.jsxs)(T.A.Root, {
-          open: a,
-          onOpenChange: c,
+          open: c,
+          onOpenChange: a,
           interactions: {
             hover: (e) => {
               let t = { ...e, delay: { open: r, close: 0 } };
@@ -847,7 +821,7 @@
       }
       var R = n(60859),
         A = n.n(R);
-      function N() {
+      function E() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -885,7 +859,7 @@
           ],
         });
       }
-      function E() {
+      function N() {
         return (0, s.jsxs)("svg", {
           width: "98",
           height: "34",
@@ -905,7 +879,7 @@
           ],
         });
       }
-      function k() {
+      function P() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "100",
@@ -930,11 +904,11 @@
           ],
         });
       }
-      function P(e) {
+      function k(e) {
         let { href: t, ...n } = e;
-        const r = (0, S.n9)();
+        const r = (0, b.n9)();
         return (
-          t?.startsWith(z.TS.STORE_BASE_URL) && (t = (0, S.bV)(r, t)),
+          t?.startsWith(g.TS.STORE_BASE_URL) && (t = (0, b.bV)(r, t)),
           (0, s.jsx)(o.Y, {
             href: t,
             color: "dull-11",
@@ -945,7 +919,7 @@
         );
       }
       function U(e) {
-        const t = (0, a.xC)();
+        const t = (0, c.xC)();
         return "initial" === t || "sm" === t
           ? null
           : (0, s.jsx)("footer", {
@@ -957,55 +931,55 @@
                     align: "center",
                     justify: "between",
                     children: [
-                      (0, s.jsx)(P, {
-                        href: z.TS.STORE_BASE_URL,
-                        children: (0, s.jsx)(N, {}),
+                      (0, s.jsx)(k, {
+                        href: g.TS.STORE_BASE_URL,
+                        children: (0, s.jsx)(E, {}),
                       }),
                       (0, s.jsxs)(M.az, {
                         className: A().NavLinks,
                         children: [
-                          (0, s.jsx)(P, {
+                          (0, s.jsx)(k, {
                             href: "https://about.steamchina.com/upgrade_announcement.html",
                             children: "公告",
                           }),
                           "  |  ",
-                          (0, s.jsx)(P, {
-                            href: z.TS.STORE_BASE_URL + "about",
+                          (0, s.jsx)(k, {
+                            href: g.TS.STORE_BASE_URL + "about",
                             children: "关于蒸汽平台",
                           }),
                           "  |  ",
-                          (0, s.jsx)(P, {
-                            href: z.TS.STORE_BASE_URL + "steam_refunds",
+                          (0, s.jsx)(k, {
+                            href: g.TS.STORE_BASE_URL + "steam_refunds",
                             children: "退款政策",
                           }),
                           "  |  ",
-                          (0, s.jsx)(P, {
-                            href: z.TS.STORE_BASE_URL + "subscriber_agreement",
+                          (0, s.jsx)(k, {
+                            href: g.TS.STORE_BASE_URL + "subscriber_agreement",
                             children: "软件许可服务协议",
                           }),
                           "  |  ",
-                          (0, s.jsx)(P, {
-                            href: z.TS.STORE_BASE_URL + "privacy_agreement",
+                          (0, s.jsx)(k, {
+                            href: g.TS.STORE_BASE_URL + "privacy_agreement",
                             children: "个人信息保护政策",
                           }),
                           "  |  ",
-                          (0, s.jsx)(P, {
-                            href: z.TS.STORE_BASE_URL + "data_outbound",
+                          (0, s.jsx)(k, {
+                            href: g.TS.STORE_BASE_URL + "data_outbound",
                             children: "个人信息出境告知书",
                           }),
                           "  |  ",
-                          (0, s.jsx)(P, {
+                          (0, s.jsx)(k, {
                             href: "https://about.steamchina.com/content_report.html",
                             children: "不良内容举报投诉",
                           }),
                           "  |  ",
                           (0, s.jsx)("br", {}),
-                          (0, s.jsx)(P, {
+                          (0, s.jsx)(k, {
                             href: "https://about.steamchina.com/infringement_report.html",
                             children: "侵权投诉",
                           }),
                           "  |  ",
-                          (0, s.jsx)(P, {
+                          (0, s.jsx)(k, {
                             href: "https://about.steamchina.com/parentguardianship_agreement.html",
                             children: "家长监护",
                           }),
@@ -1021,13 +995,13 @@
                       (0, s.jsxs)(r.s, {
                         gap: "2",
                         children: [
-                          (0, s.jsx)(P, {
+                          (0, s.jsx)(k, {
                             href: "https://www.wanmei.com/",
-                            children: (0, s.jsx)(E, {}),
+                            children: (0, s.jsx)(N, {}),
                           }),
-                          (0, s.jsx)(P, {
+                          (0, s.jsx)(k, {
                             href: "https://www.valvesoftware.com",
-                            children: (0, s.jsx)(k, {}),
+                            children: (0, s.jsx)(P, {}),
                           }),
                         ],
                       }),
@@ -1038,7 +1012,7 @@
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:
-                                z.TS.STORE_CDN_URL +
+                                g.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/Weibo-QR.png?v=2",
                             }),
                             children: (0, s.jsxs)(r.s, {
@@ -1047,10 +1021,10 @@
                                 (0, s.jsx)("img", {
                                   alt: "微博",
                                   src:
-                                    z.TS.STORE_CDN_URL +
+                                    g.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
-                                (0, s.jsx)(c.EY, { children: "微博" }),
+                                (0, s.jsx)(a.EY, { children: "微博" }),
                               ],
                             }),
                           }),
@@ -1058,7 +1032,7 @@
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:
-                                z.TS.STORE_CDN_URL +
+                                g.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/WeChat-QR.png?v=2",
                             }),
                             children: (0, s.jsxs)(r.s, {
@@ -1067,10 +1041,10 @@
                                 (0, s.jsx)("img", {
                                   alt: "微信",
                                   src:
-                                    z.TS.STORE_CDN_URL +
+                                    g.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
-                                (0, s.jsx)(c.EY, { children: "微信" }),
+                                (0, s.jsx)(a.EY, { children: "微信" }),
                               ],
                             }),
                           }),
@@ -1096,7 +1070,7 @@
                         children: [
                           "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
                           (0, s.jsx)("br", {}),
-                          (0, s.jsx)(P, {
+                          (0, s.jsx)(k, {
                             href: "https://beian.miit.gov.cn",
                             children: "沪ICP备 17051673号-4",
                           }),
@@ -1191,7 +1165,7 @@
         });
       }
       function F() {
-        const e = (0, v.useId)();
+        const e = (0, S.useId)();
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "95",
@@ -1238,7 +1212,7 @@
           }),
         });
       }
-      function Y() {
+      function G() {
         return (0, s.jsx)("svg", {
           width: "22",
           height: "22",
@@ -1250,7 +1224,7 @@
           }),
         });
       }
-      function G() {
+      function Y() {
         return (0, s.jsx)("svg", {
           width: "30",
           height: "22",
@@ -1282,15 +1256,15 @@
           level: "3",
           color: "dull-12",
           weight: "heavy",
-          className: b.LinkColumnHeading,
+          className: z.LinkColumnHeading,
           ...e,
         });
       }
       function $(e) {
         let { href: t, ...n } = e;
-        const r = (0, S.n9)();
+        const r = (0, b.n9)();
         return (
-          t?.startsWith(z.TS.STORE_BASE_URL) && (t = (0, S.bV)(r, t)),
+          t?.startsWith(g.TS.STORE_BASE_URL) && (t = (0, b.bV)(r, t)),
           (0, s.jsx)(o.Y, {
             href: t,
             color: "dull-11",
@@ -1301,7 +1275,7 @@
         );
       }
       function X() {
-        const e = (0, a.xC)();
+        const e = (0, c.xC)();
         return (0, s.jsxs)(r.s, {
           gridArea: "main",
           direction: "column",
@@ -1313,7 +1287,7 @@
               align: "center",
               children: [
                 (0, s.jsx)($, {
-                  href: z.TS.STORE_BASE_URL,
+                  href: g.TS.STORE_BASE_URL,
                   children: (0, s.jsx)(I, {}),
                 }),
                 (0, s.jsx)($, {
@@ -1322,22 +1296,22 @@
                 }),
               ],
             }),
-            (0, s.jsx)(c.EY, {
+            (0, s.jsx)(a.EY, {
               as: "p",
               size: "1",
-              className: b.LegalNotice,
-              children: H(
+              className: z.LegalNotice,
+              children: (0, H.A)(
                 O.Localize("#footer_legal_notice", new Date().getFullYear()),
               ),
             }),
             (0, s.jsxs)(r.s, {
               gap: "6",
               align: "center",
-              className: b.LogoLinks,
+              className: z.LogoLinks,
               children: [
                 (0, s.jsx)($, {
                   href: "https://www.youtube.com/@Steam",
-                  children: (0, s.jsx)(G, {}),
+                  children: (0, s.jsx)(Y, {}),
                 }),
                 (0, s.jsx)($, {
                   href: "https://bsky.app/profile/steampowered.com",
@@ -1345,7 +1319,7 @@
                 }),
                 (0, s.jsx)($, {
                   href: "https://facebook.com/steam",
-                  children: (0, s.jsx)(Y, {}),
+                  children: (0, s.jsx)(G, {}),
                 }),
                 (0, s.jsx)($, {
                   href: "https://twitter.com/steam",
@@ -1357,9 +1331,9 @@
               gap: "5",
               children: [
                 "initial" === e &&
-                  !z.TS.IN_MOBILE_WEBVIEW &&
+                  !g.TS.IN_MOBILE_WEBVIEW &&
                   (0, s.jsx)(l.v, {
-                    href: z.TS.STORE_BASE_URL + "mobile/",
+                    href: g.TS.STORE_BASE_URL + "mobile/",
                     children: O.Localize("#footer_link_get_mobile_apps"),
                   }),
                 w() &&
@@ -1375,7 +1349,7 @@
       }
       function Q(e) {
         return (
-          (0, v.use)(O.Ready()),
+          (0, S.use)(O.Ready()),
           (0, s.jsx)(h.N, {
             breakpoints: { sm: 700 },
             children: (0, s.jsxs)(m, {
@@ -1390,7 +1364,7 @@
                 sm: "min-content min-content max-content max-content",
                 md: "fit-content(400px) max-content max-content max-content max-content",
               },
-              className: p()(b.GlobalFooter, e.className),
+              className: p()(z.GlobalFooter, e.className),
               justifyContent: { initial: "start", sm: "start", md: "center" },
               gap: { initial: "6", sm: "9" },
               padding: "7",
@@ -1406,23 +1380,23 @@
                       children: O.Localize("#footer_link_header_steam"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "about/",
+                      href: g.TS.STORE_BASE_URL + "about/",
                       children: O.Localize("#footer_link_about_steam"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "subscriber_agreement/",
+                      href: g.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: O.Localize("#footer_link_steam_ssa"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.PARTNER_BASE_URL,
+                      href: g.TS.PARTNER_BASE_URL,
                       children: O.Localize("#footer_link_steamworks"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.PARTNER_BASE_URL + "steamdirect",
+                      href: g.TS.PARTNER_BASE_URL + "steamdirect",
                       children: O.Localize("#footer_link_steam_distribution"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "digitalgiftcards/",
+                      href: g.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: O.Localize("#footer_link_gift_cards"),
                     }),
                   ],
@@ -1442,11 +1416,11 @@
                       children: O.Localize("#footer_link_jobs"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "hardware/",
+                      href: g.TS.STORE_BASE_URL + "hardware/",
                       children: O.Localize("#footer_link_hardware"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "hardware_recycling/",
+                      href: g.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: O.Localize("#footer_link_recycling"),
                     }),
                   ],
@@ -1458,7 +1432,7 @@
                       children: O.Localize("#footer_link_header_legal"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "privacy_agreement/",
+                      href: g.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: O.Localize("#footer_link_privacy"),
                     }),
                     (0, s.jsx)($, {
@@ -1466,15 +1440,15 @@
                       children: O.Localize("#footer_link_accessibility"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "legal/",
+                      href: g.TS.STORE_BASE_URL + "legal/",
                       children: O.Localize("#footer_link_notices_and_policies"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "account/cookiepreferences/",
+                      href: g.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: O.Localize("#footer_link_cookies"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "steam_refunds/",
+                      href: g.TS.STORE_BASE_URL + "steam_refunds/",
                       children: O.Localize("#footer_link_refunds"),
                     }),
                   ],
@@ -1486,19 +1460,19 @@
                       children: O.Localize("#footer_link_header_more"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "about/",
+                      href: g.TS.STORE_BASE_URL + "about/",
                       children: O.Localize("#footer_link_get_steam"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "mobile/",
+                      href: g.TS.STORE_BASE_URL + "mobile/",
                       children: O.Localize("#footer_link_get_mobile_apps"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.HELP_BASE_URL,
+                      href: g.TS.HELP_BASE_URL,
                       children: O.Localize("#footer_link_get_support"),
                     }),
                     (0, s.jsx)($, {
-                      href: z.TS.STORE_BASE_URL + "account/",
+                      href: g.TS.STORE_BASE_URL + "account/",
                       children: O.Localize("#footer_link_my_account"),
                     }),
                   ],
@@ -1509,15 +1483,66 @@
         );
       }
       function q(e) {
-        if (z.TS.IN_GAMEPADUI) return null;
-        const t = (0, _.nA)(z.TS.EREALM)
+        if (g.TS.IN_GAMEPADUI) return null;
+        const t = (0, v.nA)(g.TS.EREALM)
           ? (0, s.jsx)(U, { ...e })
           : (0, s.jsx)(Q, { ...e });
-        return (0, s.jsx)(S.nn, {
+        return (0, s.jsx)(b.nn, {
           controller: "footer",
           method: "footer",
           children: t,
         });
+      }
+    },
+    66973: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => i, i: () => r });
+      var s = n(90626);
+      function r(e, ...t) {
+        const n = [],
+          i = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+        let o,
+          c = 0;
+        for (; (o = i.exec(e)); ) {
+          (c += o[0].length), n.push(o[1]);
+          const e = parseInt(o[2]),
+            i = o[3] || "",
+            a = r(i, ...t),
+            l = (e >= 1 && e <= t.length ? t[e - 1] : null)
+              ? s.cloneElement(t[e - 1], {}, i ? a : null)
+              : i;
+          n.push(l);
+        }
+        return n.push(e.substr(c)), s.createElement(s.Fragment, null, ...n);
+      }
+      function i(e, t = ["b", "i", "br"]) {
+        const n = t.join("|"),
+          r = [],
+          o = new RegExp(
+            `(?<before>.*?)<(?<tagname>${n})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
+            "gs",
+          );
+        let c,
+          a = 0;
+        for (; (c = o.exec(e)); ) {
+          if (!c.groups) continue;
+          if (!c.groups?.endtag) {
+            const e = c.groups.before.length + c.groups.tagname.length + 2;
+            (a += e), (o.lastIndex = c.index + e), r.push(c.groups.before);
+            const t = c[2],
+              n = s.createElement(t);
+            r.push(n);
+            continue;
+          }
+          (a += c[0].length), r.push(c.groups.before);
+          const e = c.groups.tagname,
+            n = c.groups.contents || "";
+          let l = null;
+          n && (l = i(n, t));
+          const h = s.createElement(e, {}, l);
+          r.push(h);
+        }
+        return r.push(e.slice(a)), s.createElement(s.Fragment, null, ...r);
       }
     },
   },
