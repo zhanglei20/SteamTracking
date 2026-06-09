@@ -4797,6 +4797,10 @@ svg.PWdT6Kxw6LQ- .Outline {
   top: 0;
   pointer-events: none;
   z-index: 2000;
+  background: transparent;
+  border: none;
+  color: inherit;
+  overflow: hidden;
 }
 .jAGa1MCcCRo-.l5PVpLvx0Ik- {
   z-index: 2001;

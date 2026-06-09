@@ -1579,7 +1579,7 @@
     },
     706: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => Ie });
+      n.d(t, { Q: () => He });
       var r = n(7850),
         a = n(96171),
         o = n(3740),
@@ -1893,18 +1893,16 @@
         );
       }
       var re = n(51078),
-        ae = n(72739),
+        ae = n(42327),
         oe = n(86328),
         ie = n(6336),
-        se = n(84811),
-        le = n(32754),
-        ce = n(42327),
+        se = n(10050),
+        le = n(84811),
+        ce = n(10224),
         ue = n(10350),
-        de = n.n(ue),
-        me = n(10224),
-        pe = n(10050);
-      const Ce = 150;
-      function _e(e) {
+        de = n.n(ue);
+      const me = 150;
+      function pe(e) {
         const {
             hoverContent: t,
             hoverProps: n,
@@ -1914,7 +1912,7 @@
             className: s,
           } = e,
           l = (0, h.Qn)(),
-          c = (0, me.zI)(),
+          c = (0, ce.zI)(),
           u = !l && !c,
           [m, p] = d.useState(!1),
           [C, g] = d.useState(void 0);
@@ -1935,7 +1933,7 @@
           children: [
             u &&
               C &&
-              (0, r.jsx)(ge, {
+              (0, r.jsx)(Ce, {
                 visible: m,
                 target: C,
                 nDelayShowMs: a,
@@ -1943,21 +1941,20 @@
                 hoverProps: n,
                 children: t,
               }),
-            (0, r.jsx)(se.tH, { children: i }),
+            (0, r.jsx)(le.tH, { children: i }),
           ],
         });
       }
-      function ge(e) {
+      function Ce(e) {
         const {
             hoverProps: t,
-            nDelayShowMs: n = Ce,
+            nDelayShowMs: n = me,
             nWidthMultiplier: a = 1.15,
             target: o,
             visible: i,
             children: s,
           } = e,
-          [l, c] = d.useState(i),
-          { targetElement: u = o.ownerDocument.body } = (0, le.gK)();
+          [l, c] = d.useState(i);
         if (
           (d.useEffect(() => {
             if (i) {
@@ -1966,7 +1963,7 @@
                 return () => window.clearTimeout(e);
               }
               c(!0);
-            } else (0, ce.p)() || c(!1);
+            } else (0, ae.p)() || c(!1);
           }, [i]),
           d.useEffect(() => {
             if (!l) return;
@@ -1986,38 +1983,33 @@
           !o || !s || !l)
         )
           return null;
-        const m = o.clientWidth < 200 ? "8px" : "10px",
-          p = {
+        const u = o.clientWidth < 200 ? "8px" : "10px",
+          m = {
             direction: "overlay-center",
             bEnablePointerEvents: !0,
             ...(t || {}),
             style: {
               zIndex: 98,
               width: o.clientWidth * a,
-              fontSize: m,
-              minHeight: "hiding" == fe() ? void 0 : 300,
+              fontSize: u,
+              minHeight: "hiding" == ge() ? void 0 : 300,
               height:
-                "hiding" == fe() ? 1.15 * o.clientWidth * (125 / 184) : void 0,
+                "hiding" == ge() ? 1.15 * o.clientWidth * (125 / 184) : void 0,
               ...t?.style,
             },
             target: o,
           };
-        return u
-          ? ae.createPortal(
-              (0, r.jsx)(he, {
-                hoverProps: p,
-                children: (0, r.jsx)(se.tH, { children: s }),
-              }),
-              u,
-            )
-          : null;
+        return (0, r.jsx)(_e, {
+          hoverProps: m,
+          children: (0, r.jsx)(le.tH, { children: s }),
+        });
       }
-      function he(e) {
+      function _e(e) {
         const { hoverProps: t, children: n } = e,
           a = d.useCallback((e) => e?.focus(), []);
         return (0, r.jsx)(ie.g, {
           ...t,
-          children: (0, r.jsx)(pe.M, {
+          children: (0, r.jsx)(se.M, {
             timeout: 500,
             in: !0,
             appear: !0,
@@ -2032,20 +2024,20 @@
           }),
         });
       }
-      function fe() {
-        return window.sessionStorage?.getItem(Se) || "default";
+      function ge() {
+        return window.sessionStorage?.getItem(he) || "default";
       }
-      const Se = "DEBUG_UseNewGameHover";
+      const he = "DEBUG_UseNewGameHover";
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(Se, e);
+        window.sessionStorage.setItem(he, e);
       };
-      var be = n(5309),
-        we = n(54906),
-        xe = n(18654),
-        ve = n.n(xe),
-        ye = n(96006),
-        Le = n(90421);
-      function je(e) {
+      var fe = n(5309),
+        Se = n(54906),
+        be = n(18654),
+        we = n.n(be),
+        xe = n(96006),
+        ve = n(90421);
+      function ye(e) {
         const { id: t } = e,
           { data: n } = (0, N.xz)(t);
         return n
@@ -2058,7 +2050,7 @@
                   .filter((e) => e.tagid)
                   .map((e) =>
                     (0, r.jsx)(
-                      Le.p,
+                      ve.p,
                       { tagid: e.tagid, className: O().Tag },
                       "tag_" + e.tagid,
                     ),
@@ -2067,7 +2059,7 @@
             })
           : null;
       }
-      function Be(e) {
+      function Le(e) {
         const {
             id: t,
             displayID: n,
@@ -2147,22 +2139,22 @@
                       children: B?.name || u,
                     }),
                   }),
-                  x && (0, r.jsx)(He, { id: t }),
-                  (0, r.jsx)(je, { id: t }),
+                  x && (0, r.jsx)(Be, { id: t }),
+                  (0, r.jsx)(ye, { id: t }),
                   Boolean(!f) && (0, r.jsx)(i.J, { id: t }),
                   Boolean(!f && H) &&
                     (0, r.jsxs)("div", {
                       className: O().ReviewsAndRelease,
                       children: [
-                        (0, r.jsx)(ye.Q, {
+                        (0, r.jsx)(xe.Q, {
                           id: t,
                           strClassName: O().PlatformDisplay,
                         }),
-                        (0, r.jsx)(Ae, { id: t }),
+                        (0, r.jsx)(je, { id: t }),
                       ],
                     }),
                   C && (0, r.jsx)(s.j, { id: t, className: O().DemoButton }),
-                  Boolean(f && I) && (0, r.jsx)(we.Q8, { id: t }),
+                  Boolean(f && I) && (0, r.jsx)(Se.Q8, { id: t }),
                   Boolean(p) && p,
                   S &&
                     I &&
@@ -2177,14 +2169,14 @@
           ],
         });
       }
-      function Ae(e) {
+      function je(e) {
         const { id: t } = e,
           { data: n } = (0, N.by)(t);
         if (!n) return null;
-        const a = (0, be.CC)(n);
+        const a = (0, fe.CC)(n);
         return (0, r.jsx)("div", { className: O().ReleaseDate, children: a });
       }
-      function He(e) {
+      function Be(e) {
         const { id: t } = e,
           { data: n } = (0, N.wl)(t);
         return n
@@ -2194,7 +2186,7 @@
             })
           : null;
       }
-      function ke(e) {
+      function Ae(e) {
         const {
             id: t,
             displayID: n,
@@ -2211,7 +2203,7 @@
           : (0, r.jsxs)("div", {
               className: (0, _.A)(
                 O().GameHoverCapsuleCtn,
-                ve().InGameHover,
+                we().InGameHover,
                 o && O().UseHidingBottomHalf,
               ),
               children: [
@@ -2225,11 +2217,11 @@
                     t && (0, r.jsx)(Y, { id: t }),
                   ],
                 }),
-                (0, r.jsx)(Be, { ...e }),
+                (0, r.jsx)(Le, { ...e }),
               ],
             });
       }
-      function Ie(e) {
+      function He(e) {
         const {
             id: t,
             name: n,
@@ -2268,7 +2260,7 @@
             elElementToAppend: i,
             bShowDemoButton: s,
             bShowDeckCompatibilityDialog: _,
-            bHideBottomHalf: "hiding" == fe(),
+            bHideBottomHalf: "hiding" == ge(),
             bHidePrice: c,
             bUseSubscriptionLayout: u,
             strSNR: y,
@@ -2277,9 +2269,9 @@
             bShowIgnoreButton: f,
             bShowDescription: S,
           },
-          A = (0, r.jsx)(ke, { ...B }),
+          A = (0, r.jsx)(Ae, { ...B }),
           H = j ? (0, r.jsx)("a", { href: j, children: m }) : m;
-        return (0, r.jsx)(_e, {
+        return (0, r.jsx)(pe, {
           hoverContent: A,
           nWidthMultiplier: C,
           ...b,

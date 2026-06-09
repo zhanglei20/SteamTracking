@@ -68127,6 +68127,7 @@
             if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
+            _.showPopover();
             const _ = _.querySelector(".hover_arrow.left"),
               _ = _.querySelector(".hover_arrow.right"),
               _ = _.querySelector(".hover_arrow.top"),
@@ -68224,6 +68225,7 @@
           ),
           _ = !_ || _.visible;
         return (0, _.jsx)("div", {
+          popover: "manual",
           ref: _,
           className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
           children: (0, _.jsx)("div", {
@@ -79366,7 +79368,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         _.useEffect(() => {
@@ -79536,12 +79537,10 @@
         const { className: _, active: _, children: _ } = _;
         return (0, _.jsx)(_, {
           active: _,
-          children: (0, _.jsx)(_._, {
-            children: (0, _.jsx)("div", {
-              className: _,
-              tabIndex: -1,
-              children: _,
-            }),
+          children: (0, _.jsx)("div", {
+            className: _,
+            tabIndex: -1,
+            children: _,
           }),
         });
       }
@@ -80464,7 +80463,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { active: _, children: _ } = _,
@@ -80494,9 +80492,7 @@
           !_ || !_)
         )
           return null;
-        let _ = (0, _.jsx)(_._, {
-          children: _,
-        });
+        let _ = _;
         return (
           _ &&
             (_ = (0, _.jsx)(_, {
@@ -85451,8 +85447,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -85462,28 +85456,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_) {
-        const [_, _] = _.useState(null),
-          _ = _.useMemo(
-            () => ({
-              targetElement: _,
-            }),
-            [_],
-          );
-        return (0, _.jsxs)(_.Provider, {
-          value: _,
-          children: [
-            (0, _.jsx)("div", {
-              ref: _,
-            }),
-            _.children,
-          ],
-        });
-      }
+        _ = __webpack_require__._(_);
       function _(_) {
         const { divProps: _, tooltipProps: _ } = _({
           ..._,
@@ -85633,10 +85606,9 @@
             hoverPositionProps: _,
             children: _,
           } = _,
-          [_, _] = _.useState(_),
-          _ = _();
-        if (
-          (_.useEffect(() => {
+          [_, _] = _.useState(_);
+        return (
+          _.useEffect(() => {
             if (_) {
               if (_) {
                 const _ = window.setTimeout(() => _(!0), _);
@@ -85645,18 +85617,13 @@
               _(!0);
             } else (0, _._)() || _(!1);
           }, [_]),
-          !_)
-        )
-          return null;
-        if (!_ || !_) return null;
-        const { targetElement: _ } = _;
-        return _.createPortal(
-          (0, _.jsx)(_._, {
-            target: _,
-            ..._,
-            children: _,
-          }),
-          _ ?? _.ownerDocument.body,
+          _ && _ && _
+            ? (0, _.jsx)(_._, {
+                target: _,
+                ..._,
+                children: _,
+              })
+            : null
         );
       }
     },
