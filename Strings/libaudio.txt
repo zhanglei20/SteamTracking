@@ -547,6 +547,7 @@ WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 WeakRandomUint32
 XXXXXX
+Yfh<
 [abi:
 [friend]
 \t(%zu) comparing %s with %s\n
