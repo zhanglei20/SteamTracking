@@ -5457,8 +5457,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = 150;
       function _(_) {
@@ -5515,8 +5513,7 @@
             visible: _,
             children: _,
           } = _,
-          [_, _] = _.useState(_),
-          { targetElement: _ = _.ownerDocument.body } = (0, _._)();
+          [_, _] = _.useState(_);
         if (
           (_.useEffect(() => {
             if (_) {
@@ -5561,17 +5558,12 @@
             },
             target: _,
           };
-        return _
-          ? _.createPortal(
-              (0, _.jsx)(_, {
-                hoverProps: _,
-                children: (0, _.jsx)(_._, {
-                  children: _,
-                }),
-              }),
-              _,
-            )
-          : null;
+        return (0, _.jsx)(_, {
+          hoverProps: _,
+          children: (0, _.jsx)(_._, {
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const { hoverProps: _, children: _ } = _,

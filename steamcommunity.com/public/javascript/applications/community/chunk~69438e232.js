@@ -15088,7 +15088,7 @@
     },
     71430: (e, t, r) => {
       "use strict";
-      r.d(t, { Q: () => Fe });
+      r.d(t, { Q: () => Ie });
       var i = r(7850),
         n = r(96171),
         a = r(3740),
@@ -15407,23 +15407,21 @@
         );
       }
       var ie = r(51078),
-        ne = r(72739),
+        ne = r(42327),
         ae = r(86328),
         se = r(6336),
-        oe = r(84811),
-        le = r(32754),
-        ce = r(42327),
-        de = r(10350),
-        ue = r.n(de),
-        me = r(10224),
-        pe = r(63741);
-      function ge(e) {
+        oe = r(63741);
+      function le(e) {
         const { children: t, ...r } = e,
           n = u.useRef(null);
-        return (0, i.jsx)(pe.A, { nodeRef: n, ...r, children: e.children(n) });
+        return (0, i.jsx)(oe.A, { nodeRef: n, ...r, children: e.children(n) });
       }
-      const _e = 150;
-      function Be(e) {
+      var ce = r(84811),
+        de = r(10224),
+        ue = r(10350),
+        me = r.n(ue);
+      const pe = 150;
+      function ge(e) {
         const {
             hoverContent: t,
             hoverProps: r,
@@ -15433,7 +15431,7 @@
             className: o,
           } = e,
           l = (0, b.Qn)(),
-          c = (0, me.zI)(),
+          c = (0, de.zI)(),
           d = !l && !c,
           [m, p] = u.useState(!1),
           [g, B] = u.useState(void 0);
@@ -15441,7 +15439,7 @@
           "data-key": "hover div",
           role: "button",
           tabIndex: 0,
-          className: (0, _.A)(ue().ItemHoverSource, o),
+          className: (0, _.A)(me().ItemHoverSource, o),
           onMouseEnter: (e) => {
             p(!0), B(e.currentTarget);
           },
@@ -15454,7 +15452,7 @@
           children: [
             d &&
               g &&
-              (0, i.jsx)(be, {
+              (0, i.jsx)(_e, {
                 visible: m,
                 target: g,
                 nDelayShowMs: n,
@@ -15462,21 +15460,20 @@
                 hoverProps: r,
                 children: t,
               }),
-            (0, i.jsx)(oe.tH, { children: s }),
+            (0, i.jsx)(ce.tH, { children: s }),
           ],
         });
       }
-      function be(e) {
+      function _e(e) {
         const {
             hoverProps: t,
-            nDelayShowMs: r = _e,
+            nDelayShowMs: r = pe,
             nWidthMultiplier: n = 1.15,
             target: a,
             visible: s,
             children: o,
           } = e,
-          [l, c] = u.useState(s),
-          { targetElement: d = a.ownerDocument.body } = (0, le.gK)();
+          [l, c] = u.useState(s);
         if (
           (u.useEffect(() => {
             if (s) {
@@ -15485,7 +15482,7 @@
                 return () => window.clearTimeout(e);
               }
               c(!0);
-            } else (0, ce.p)() || c(!1);
+            } else (0, ne.p)() || c(!1);
           }, [s]),
           u.useEffect(() => {
             if (!l) return;
@@ -15505,38 +15502,33 @@
           !a || !o || !l)
         )
           return null;
-        const m = a.clientWidth < 200 ? "8px" : "10px",
-          p = {
+        const d = a.clientWidth < 200 ? "8px" : "10px",
+          m = {
             direction: "overlay-center",
             bEnablePointerEvents: !0,
             ...(t || {}),
             style: {
               zIndex: 98,
               width: a.clientWidth * n,
-              fontSize: m,
-              minHeight: "hiding" == ye() ? void 0 : 300,
+              fontSize: d,
+              minHeight: "hiding" == be() ? void 0 : 300,
               height:
-                "hiding" == ye() ? 1.15 * a.clientWidth * (125 / 184) : void 0,
+                "hiding" == be() ? 1.15 * a.clientWidth * (125 / 184) : void 0,
               ...(null == t ? void 0 : t.style),
             },
             target: a,
           };
-        return d
-          ? ne.createPortal(
-              (0, i.jsx)(he, {
-                hoverProps: p,
-                children: (0, i.jsx)(oe.tH, { children: o }),
-              }),
-              d,
-            )
-          : null;
+        return (0, i.jsx)(Be, {
+          hoverProps: m,
+          children: (0, i.jsx)(ce.tH, { children: o }),
+        });
       }
-      function he(e) {
+      function Be(e) {
         const { hoverProps: t, children: r } = e,
           n = u.useCallback((e) => (null == e ? void 0 : e.focus()), []);
         return (0, i.jsx)(se.g, {
           ...t,
-          children: (0, i.jsx)(ge, {
+          children: (0, i.jsx)(le, {
             timeout: 500,
             in: !0,
             appear: !0,
@@ -15544,32 +15536,32 @@
             children: (e) =>
               (0, i.jsx)("div", {
                 ref: (0, q.XB)(e, n),
-                className: ue().HoverContentTransition,
+                className: me().HoverContentTransition,
                 tabIndex: -1,
                 children: r,
               }),
           }),
         });
       }
-      function ye() {
+      function be() {
         var e;
         return (
           (null === (e = window.sessionStorage) || void 0 === e
             ? void 0
-            : e.getItem(fe)) || "default"
+            : e.getItem(he)) || "default"
         );
       }
-      const fe = "DEBUG_UseNewGameHover";
+      const he = "DEBUG_UseNewGameHover";
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(fe, e);
+        window.sessionStorage.setItem(he, e);
       };
-      var we = r(5309),
-        Se = r(90727),
-        Me = r(18654),
-        ve = r.n(Me),
-        Ce = r(96006),
-        Re = r(90421);
-      function ze(e) {
+      var ye = r(5309),
+        fe = r(90727),
+        we = r(18654),
+        Se = r.n(we),
+        Me = r(96006),
+        ve = r(90421);
+      function Ce(e) {
         const { id: t } = e,
           { data: r } = (0, O.xz)(t);
         return r
@@ -15582,7 +15574,7 @@
                   .filter((e) => e.tagid)
                   .map((e) =>
                     (0, i.jsx)(
-                      Re.p,
+                      ve.p,
                       { tagid: e.tagid, className: E().Tag },
                       "tag_" + e.tagid,
                     ),
@@ -15591,7 +15583,7 @@
             })
           : null;
       }
-      function je(e) {
+      function Re(e) {
         const {
             id: t,
             displayID: r,
@@ -15674,22 +15666,22 @@
                       children: (null == z ? void 0 : z.name) || d,
                     }),
                   }),
-                  S && (0, i.jsx)(Ie, { id: t }),
-                  (0, i.jsx)(ze, { id: t }),
+                  S && (0, i.jsx)(je, { id: t }),
+                  (0, i.jsx)(Ce, { id: t }),
                   Boolean(!h) && (0, i.jsx)(s.J, { id: t }),
                   Boolean(!h && x) &&
                     (0, i.jsxs)("div", {
                       className: E().ReviewsAndRelease,
                       children: [
-                        (0, i.jsx)(Ce.Q, {
+                        (0, i.jsx)(Me.Q, {
                           id: t,
                           strClassName: E().PlatformDisplay,
                         }),
-                        (0, i.jsx)(xe, { id: t }),
+                        (0, i.jsx)(ze, { id: t }),
                       ],
                     }),
                   g && (0, i.jsx)(o.j, { id: t, className: E().DemoButton }),
-                  Boolean(h && T) && (0, i.jsx)(Se.Q8, { id: t }),
+                  Boolean(h && T) && (0, i.jsx)(fe.Q8, { id: t }),
                   Boolean(p) && p,
                   y &&
                     T &&
@@ -15704,14 +15696,14 @@
           ],
         });
       }
-      function xe(e) {
+      function ze(e) {
         const { id: t } = e,
           { data: r } = (0, O.by)(t);
         if (!r) return null;
-        const n = (0, we.CC)(r);
+        const n = (0, ye.CC)(r);
         return (0, i.jsx)("div", { className: E().ReleaseDate, children: n });
       }
-      function Ie(e) {
+      function je(e) {
         const { id: t } = e,
           { data: r } = (0, O.wl)(t);
         return r
@@ -15721,7 +15713,7 @@
             })
           : null;
       }
-      function Te(e) {
+      function xe(e) {
         const {
             id: t,
             displayID: r,
@@ -15738,7 +15730,7 @@
           : (0, i.jsxs)("div", {
               className: (0, _.A)(
                 E().GameHoverCapsuleCtn,
-                ve().InGameHover,
+                Se().InGameHover,
                 a && E().UseHidingBottomHalf,
               ),
               children: [
@@ -15752,11 +15744,11 @@
                     t && (0, i.jsx)(X, { id: t }),
                   ],
                 }),
-                (0, i.jsx)(je, { ...e }),
+                (0, i.jsx)(Re, { ...e }),
               ],
             });
       }
-      function Fe(e) {
+      function Ie(e) {
         var t;
         const {
             id: r,
@@ -15799,7 +15791,7 @@
             elElementToAppend: o,
             bShowDemoButton: l,
             bShowDeckCompatibilityDialog: B,
-            bHideBottomHalf: "hiding" == ye(),
+            bHideBottomHalf: "hiding" == be(),
             bHidePrice: d,
             bUseSubscriptionLayout: u,
             strSNR: C,
@@ -15808,9 +15800,9 @@
             bShowIgnoreButton: y,
             bShowDescription: f,
           },
-          x = (0, i.jsx)(Te, { ...j }),
+          x = (0, i.jsx)(xe, { ...j }),
           I = z ? (0, i.jsx)("a", { href: z, children: p }) : p;
-        return (0, i.jsx)(Be, {
+        return (0, i.jsx)(ge, {
           hoverContent: x,
           nWidthMultiplier: _,
           ...w,

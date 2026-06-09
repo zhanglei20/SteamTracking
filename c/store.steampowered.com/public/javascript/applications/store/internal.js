@@ -787,7 +787,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -923,6 +922,12 @@
                   middleware: _(_),
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
+                  strategy: "fixed",
+                  platform: {
+                    ..._._,
+                    getOffsetParent: (_) =>
+                      _?.ownerDocument?.defaultView ?? window,
+                  },
                 }),
                 _ = (0, _._)(_.context, {
                   enabled: !!_.click,
@@ -976,8 +981,11 @@
         Positioner: function (_) {
           const { children: _, className: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _?.floating.refs.setFloating]),
-            _ = (0, _._)();
+            _ = (0, _._)([
+              _,
+              _?.floating.refs.setFloating,
+              (_) => _?.showPopover?.(),
+            ]);
           if (!_)
             return (
               console.error(
@@ -992,15 +1000,20 @@
             ((_ = _.Children.only(_.props.children)), (_ = _));
           const _ = (0, _.cloneElement)(_, {
             ref: _,
-            style: _.floating.floatingStyles,
+            style: {
+              ..._.floating.floatingStyles,
+              inset: "unset",
+              border: "none",
+              background: "transparent",
+              color: "inherit",
+              padding: 0,
+            },
             className: _,
+            popover: "manual",
             ..._.getFloatingProps(),
           });
-          return (0, _.jsx)(_._, {
-            root: _?.targetElement,
-            children: (0, _.jsx)(_, {
-              children: _,
-            }),
+          return (0, _.jsx)(_, {
+            children: _,
           });
         },
         FocusManager: _,
@@ -2344,7 +2357,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -2408,24 +2420,33 @@
         _ = function (_) {
           const { children: _, render: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _?.floating.refs.setFloating]),
-            _ = (0, _._)();
+            _ = (0, _._)([
+              _,
+              _?.floating.refs.setFloating,
+              (_) => _?.showPopover?.(),
+            ]);
           return _
             ? _.open
-              ? (0, _.jsx)(_._, {
-                  root: _?.targetElement,
+              ? (0, _.jsx)(_, {
+                  state: _,
                   children: (0, _.jsx)(_, {
-                    state: _,
-                    children: (0, _.jsx)(_, {
-                      ref: _,
-                      style: _.floating.floatingStyles,
-                      ..._.getFloatingProps(),
-                      render: _,
-                      children: (0, _.jsx)(_._, {
-                        elementsRef: _.elementsRef,
-                        labelsRef: _.labelsRef,
-                        children: _,
-                      }),
+                    ref: _,
+                    style: {
+                      ..._.floating.floatingStyles,
+                      inset: "unset",
+                      border: "none",
+                      background: "transparent",
+                      color: "inherit",
+                      padding: 0,
+                    },
+                    ..._.getFloatingProps({
+                      popover: "manual",
+                    }),
+                    render: _,
+                    children: (0, _.jsx)(_._, {
+                      elementsRef: _.elementsRef,
+                      labelsRef: _.labelsRef,
+                      children: _,
                     }),
                   }),
                 })

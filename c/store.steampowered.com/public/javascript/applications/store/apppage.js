@@ -8328,13 +8328,8 @@
                 onClose: () => _("onclose"),
                 onClick: _,
                 ..._,
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    " ",
-                    (0, _.jsx)(_._, {
-                      children: _,
-                    }),
-                  ],
+                children: (0, _.jsx)(_._, {
+                  children: _,
                 }),
               }),
             });

@@ -30952,6 +30952,7 @@
             if (S && r && !r.visible) return;
             let i = e.ownerDocument.defaultView;
             if (!i || i.closed) return;
+            j.showPopover();
             const n = R.querySelector(".hover_arrow.left"),
               s = R.querySelector(".hover_arrow.right"),
               a = R.querySelector(".hover_arrow.top"),
@@ -31043,6 +31044,7 @@
         let O = Object.assign({ left: M, top: C }, l),
           D = !r || r.visible;
         return (0, i.jsx)("div", {
+          popover: "manual",
           ref: z,
           className: (0, s.A)(o().HoverPositionOuter, f && o().HoverAboveModal),
           children: (0, i.jsx)("div", {
@@ -39390,7 +39392,7 @@
     },
     81194: (e, t, r) => {
       "use strict";
-      r.d(t, { L: () => x, Y: () => v });
+      r.d(t, { L: () => v, Y: () => S });
       var i = r(7850),
         n = r(90626);
       function s(e) {
@@ -39570,9 +39572,8 @@
         M = r(73745),
         B = r(78025),
         C = r(76222),
-        y = r(88843),
-        S = r(32754);
-      function v(e) {
+        y = r(88843);
+      function S(e) {
         n.useEffect(() => {
           if (e)
             return (
@@ -39581,7 +39582,7 @@
             );
         }, [e]);
       }
-      function x(e) {
+      function v(e) {
         let {
           ModalManager: t,
           bRegisterModalManager: r = !0,
@@ -39594,7 +39595,7 @@
         const m = t.modals,
           p = m && !!m.length,
           g = t.active_modal;
-        v(p),
+        S(p),
           (function (e) {
             const t = (0, a.R7)().ownerWindow,
               r = (0, M.CH)(),
@@ -39629,14 +39630,14 @@
                     rctActiveContextMenus: t && c ? l : void 0,
                   };
                 return e instanceof B._F
-                  ? (0, n.createElement)(R, {
+                  ? (0, n.createElement)(I, {
                       ...r,
                       key: r.key,
                       modal: e,
-                      Component: o ?? T,
+                      Component: o ?? R,
                     })
                   : e instanceof B.$9
-                    ? (0, n.createElement)(I, {
+                    ? (0, n.createElement)(x, {
                         ...r,
                         key: r.key,
                         modal: e,
@@ -39665,12 +39666,12 @@
                 ],
               }),
               (0, i.jsx)(_, { ModalManager: t }),
-              (0, i.jsx)(z, { ModalManager: t }),
+              (0, i.jsx)(j, { ModalManager: t }),
             ],
           })
         );
       }
-      function I(e) {
+      function x(e) {
         const {
           modal: t,
           rctActiveContextMenus: r,
@@ -39698,9 +39699,9 @@
             r,
           ],
         });
-        return a ? (0, i.jsx)(j, { active: s, children: l }) : l;
+        return a ? (0, i.jsx)(T, { active: s, children: l }) : l;
       }
-      function R(e) {
+      function I(e) {
         const {
             modal: t,
             active: r,
@@ -39723,20 +39724,18 @@
           })
         );
       }
-      function T(e) {
+      function R(e) {
         const { className: t, active: r, children: n } = e;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(T, {
           active: r,
-          children: (0, i.jsx)(S.C$, {
-            children: (0, i.jsx)("div", {
-              className: t,
-              tabIndex: -1,
-              children: n,
-            }),
+          children: (0, i.jsx)("div", {
+            className: t,
+            tabIndex: -1,
+            children: n,
           }),
         });
       }
-      function j(e) {
+      function T(e) {
         const { active: t, children: r } = e,
           s = n.useRef(null),
           [a, o] = n.useState(!1);
@@ -39756,7 +39755,7 @@
           })
         );
       }
-      function z(e) {
+      function j(e) {
         const { ModalManager: t } = e,
           r = (0, M.CH)();
         return (
@@ -40580,46 +40579,45 @@
     },
     21869: (e, t, r) => {
       "use strict";
-      r.d(t, { E: () => c });
+      r.d(t, { E: () => l });
       var i = r(7850),
         n = r(90626),
         s = r(72739),
         a = r(97348),
-        o = r(76222),
-        l = r(32754);
-      function c(e) {
+        o = r(76222);
+      function l(e) {
         const { active: t, children: r } = e,
-          c = (0, a.yk)() || (0, o.tx)(window),
-          u = (0, a.oJ)(),
-          [d, m] = n.useState(null),
-          [p, g] = n.useState(!1),
-          h = n.useRef(void 0);
+          l = (0, a.yk)() || (0, o.tx)(window),
+          c = (0, a.oJ)(),
+          [u, d] = n.useState(null),
+          [m, p] = n.useState(!1),
+          g = n.useRef(void 0);
         if (
           (n.useEffect(() => {
             if (t) {
-              const e = c.ShowPortalModal(),
-                t = e.OnElementReadyCallbacks.Register(m),
-                r = e.OnModalActiveCallbacks.Register(g);
+              const e = l.ShowPortalModal(),
+                t = e.OnElementReadyCallbacks.Register(d),
+                r = e.OnModalActiveCallbacks.Register(p);
               return (
-                (h.current = e.key),
+                (g.current = e.key),
                 () => {
-                  m(null), g(!1), e.Close(), t.Unregister(), r.Unregister();
+                  d(null), p(!1), e.Close(), t.Unregister(), r.Unregister();
                 }
               );
             }
-          }, [c, t]),
-          !d || !t)
+          }, [l, t]),
+          !u || !t)
         )
           return null;
-        let _ = (0, i.jsx)(l.C$, { children: r });
+        let h = r;
         return (
-          u &&
-            (_ = (0, i.jsx)(u, {
-              active: p,
-              modalKey: h.current,
-              children: _,
+          c &&
+            (h = (0, i.jsx)(c, {
+              active: m,
+              modalKey: g.current,
+              children: h,
             })),
-          s.createPortal(_, d)
+          s.createPortal(h, u)
         );
       }
     },
@@ -44097,82 +44095,69 @@
     32754: (e, t, r) => {
       "use strict";
       r.d(t, {
-        C$: () => h,
-        Gq: () => b,
-        fS: () => B,
-        gK: () => g,
-        he: () => _,
-        m9: () => f,
-        t1: () => y,
-        zQ: () => C,
+        Gq: () => g,
+        fS: () => f,
+        he: () => m,
+        m9: () => p,
+        t1: () => w,
+        zQ: () => b,
       });
       var i = r(7850),
-        n = r(90626),
-        s = r(72739),
-        a = r(45699),
+        n = r(45699),
+        s = r(42327),
+        a = r(90626),
         o = r(6336),
         l = r(52038),
         c = r(61859),
         u = r(7077),
-        d = r.n(u),
-        m = r(42327);
-      const p = n.createContext({}),
-        g = () => n.useContext(p);
-      function h(e) {
-        const [t, r] = n.useState(null),
-          s = n.useMemo(() => ({ targetElement: t }), [t]);
-        return (0, i.jsxs)(p.Provider, {
-          value: s,
-          children: [(0, i.jsx)("div", { ref: r }), e.children],
-        });
-      }
-      function _(e) {
-        const { divProps: t, tooltipProps: r } = w({
+        d = r.n(u);
+      function m(e) {
+        const { divProps: t, tooltipProps: r } = h({
           ...e,
           toolTipContent: e.toolTipContent
-            ? (0, i.jsx)(C, { children: M(e.toolTipContent) })
+            ? (0, i.jsx)(b, { children: _(e.toolTipContent) })
             : null,
         });
-        return (0, i.jsxs)(a.ml, {
+        return (0, i.jsxs)(n.ml, {
           className: "tool-tip-source",
           noFocusRing: !0,
           focusable: e.bNavStop ?? !!t.onClick,
           ...t,
-          children: [(0, i.jsx)(S, { ...r }), e.children],
+          children: [(0, i.jsx)(M, { ...r }), e.children],
         });
       }
-      function f(e) {
-        const { divProps: t, tooltipProps: r } = w(e);
-        return (0, i.jsxs)(a.ml, {
+      function p(e) {
+        const { divProps: t, tooltipProps: r } = h(e);
+        return (0, i.jsxs)(n.ml, {
           className: "tool-tip-source",
           noFocusRing: !0,
           focusable: e.bNavStop ?? !!t.onClick,
           ...t,
-          children: [(0, i.jsx)(S, { ...r }), e.children],
+          children: [(0, i.jsx)(M, { ...r }), e.children],
         });
       }
-      function b(e) {
+      function g(e) {
         const { children: t } = e,
-          { divProps: r, tooltipProps: s } = w({
+          { divProps: r, tooltipProps: n } = h({
             ...e,
             toolTipContent: e.toolTipContent
-              ? (0, i.jsx)(C, { children: M(e.toolTipContent) })
+              ? (0, i.jsx)(b, { children: _(e.toolTipContent) })
               : null,
           });
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            n.cloneElement(t, { ...r, ...t.props }),
-            (0, i.jsx)(S, { ...s }),
+            a.cloneElement(t, { ...r, ...t.props }),
+            (0, i.jsx)(M, { ...n }),
           ],
         });
       }
-      function w(e) {
+      function h(e) {
         const {
             toolTipContent: t,
             nDelayShowMS: r = 300,
             bDisabled: i,
-            direction: s,
-            nBodyAlignment: a,
+            direction: n,
+            nBodyAlignment: s,
             nBodyDistance: o,
             nAllowOffscreenPx: l,
             nMaxLateralMoveOnScreen: c,
@@ -44185,27 +44170,27 @@
             ..._
           } = e,
           f = {
-            direction: s,
-            nBodyAlignment: a,
+            direction: n,
+            nBodyAlignment: s,
             nBodyDistance: o,
             nAllowOffscreenPx: l,
             nMaxLateralMoveOnScreen: c,
             className: u,
             bTopmost: m,
           },
-          [b, w] = n.useState(!1),
-          [M, B] = n.useState(),
-          C = n.useCallback(
+          [b, w] = a.useState(!1),
+          [M, B] = a.useState(),
+          C = a.useCallback(
             (e) => {
               (p && "pointerType" in e && "mouse" != e.pointerType) ||
                 (w(!0), B(e.currentTarget));
             },
             [p],
           ),
-          y = n.useCallback(() => {
+          y = a.useCallback(() => {
             w(!1);
           }, []);
-        n.useEffect(() => {
+        a.useEffect(() => {
           i && b && w(!1);
         }, [i, b]);
         const S = {
@@ -44227,58 +44212,50 @@
           }
         );
       }
-      function M(e) {
+      function _(e) {
         return "string" == typeof e ? c.pf.LocalizeIfToken(e, !0) : e;
       }
-      function B(e) {
-        const { divProps: t, tooltipProps: r, stateHandlers: n } = w(e);
+      function f(e) {
+        const { divProps: t, tooltipProps: r, stateHandlers: n } = h(e);
         return {
           divProps: t,
           stateHandlers: n,
-          tooltip: (0, i.jsx)(S, { ...r }),
+          tooltip: (0, i.jsx)(M, { ...r }),
         };
       }
-      function C(e) {
+      function b(e) {
         return (0, i.jsx)("div", {
           ...e,
           className: (0, l.A)(d().TextToolTip, e.className),
         });
       }
-      function y(e) {
+      function w(e) {
         const { className: t, ...r } = e;
         return (0, i.jsx)("div", {
           className: (0, l.A)(d().ToolTipCustom, t),
           ...r,
         });
       }
-      function S(e) {
+      function M(e) {
         const {
             active: t,
             target: r,
-            nDelayShowMS: a = 300,
+            nDelayShowMS: n = 300,
             hoverPositionProps: l,
             children: c,
           } = e,
-          [u, d] = n.useState(t),
-          p = g();
-        if (
-          (n.useEffect(() => {
+          [u, d] = a.useState(t);
+        return (
+          a.useEffect(() => {
             if (t) {
-              if (a) {
-                const e = window.setTimeout(() => d(!0), a);
+              if (n) {
+                const e = window.setTimeout(() => d(!0), n);
                 return () => window.clearTimeout(e);
               }
               d(!0);
-            } else (0, m.p)() || d(!1);
+            } else (0, s.p)() || d(!1);
           }, [t]),
-          !u)
-        )
-          return null;
-        if (!c || !r) return null;
-        const { targetElement: h } = p;
-        return s.createPortal(
-          (0, i.jsx)(o.g, { target: r, ...l, children: c }),
-          h ?? r.ownerDocument.body,
+          u && c && r ? (0, i.jsx)(o.g, { target: r, ...l, children: c }) : null
         );
       }
     },

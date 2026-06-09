@@ -246,7 +246,7 @@
     },
     25671: (e, n, t) => {
       "use strict";
-      t.d(n, { k: () => b, T: () => I });
+      t.d(n, { k: () => I, T: () => C });
       var r = t(7850),
         o = t(90626),
         i = t(73788),
@@ -297,22 +297,21 @@
         },
       );
       var d = t(49560),
-        h = t(32754),
-        f = t(45699),
-        p = t(85585),
-        x = t(8527);
-      const g = (0, o.createContext)(null);
-      function v(e) {
-        return x.TS.IN_GAMEPADUI
-          ? (0, r.jsx)(m, { ...e })
-          : (0, r.jsx)(C, { ...e });
+        h = t(45699),
+        f = t(85585),
+        p = t(8527);
+      const x = (0, o.createContext)(null);
+      function g(e) {
+        return p.TS.IN_GAMEPADUI
+          ? (0, r.jsx)(v, { ...e })
+          : (0, r.jsx)(m, { ...e });
       }
-      function m(e) {
+      function v(e) {
         const { state: n, children: t } = e,
           i = o.useRef(void 0);
         return (
-          (0, f.O7)(i, !!i.current, !1),
-          (0, r.jsx)(p.D6, {
+          (0, h.O7)(i, !!i.current, !1),
+          (0, r.jsx)(f.D6, {
             navID: "PopoverList",
             onCancelButton: () => n.floating.context.onOpenChange(!1),
             modal: !0,
@@ -321,7 +320,7 @@
           })
         );
       }
-      function C(e) {
+      function m(e) {
         const { state: n, children: t } = e;
         return (0, r.jsx)(i.s3, {
           context: n.floating.context,
@@ -330,7 +329,7 @@
           children: t,
         });
       }
-      function I(e) {
+      function C(e) {
         const {
           open: n,
           onOpenChange: t,
@@ -394,15 +393,15 @@
           initialFocus: u.virtualItemFocus ? -1 : void 0,
         };
       }
-      const b = {
+      const I = {
         Root: function (e) {
           const { children: n, state: t } = e;
-          return (0, r.jsx)(g.Provider, { value: t, children: n });
+          return (0, r.jsx)(x.Provider, { value: t, children: n });
         },
         Anchor: function (e) {
           const { children: n } = e,
             t = o.Children.only(n),
-            r = (0, o.useContext)(g),
+            r = (0, o.useContext)(x),
             l = (0, i.SV)([
               null == r ? void 0 : r.floating.refs.setReference,
               null == t ? void 0 : t.props.ref,
@@ -420,28 +419,38 @@
         },
         Positioner: function (e) {
           const { children: n, render: t, ref: l } = e,
-            s = (0, o.useContext)(g),
+            s = (0, o.useContext)(x),
             c = (0, i.SV)([
               l,
               null == s ? void 0 : s.floating.refs.setFloating,
-            ]),
-            a = (0, h.gK)();
+              (e) => {
+                var n;
+                return null === (n = null == e ? void 0 : e.showPopover) ||
+                  void 0 === n
+                  ? void 0
+                  : n.call(e);
+              },
+            ]);
           return s
             ? s.open
-              ? (0, r.jsx)(i.XF, {
-                  root: null == a ? void 0 : a.targetElement,
-                  children: (0, r.jsx)(v, {
-                    state: s,
-                    children: (0, r.jsx)(u, {
-                      ref: c,
-                      style: s.floating.floatingStyles,
-                      ...s.getFloatingProps(),
-                      render: t,
-                      children: (0, r.jsx)(i.ph, {
-                        elementsRef: s.elementsRef,
-                        labelsRef: s.labelsRef,
-                        children: n,
-                      }),
+              ? (0, r.jsx)(g, {
+                  state: s,
+                  children: (0, r.jsx)(u, {
+                    ref: c,
+                    style: {
+                      ...s.floating.floatingStyles,
+                      inset: "unset",
+                      border: "none",
+                      background: "transparent",
+                      color: "inherit",
+                      padding: 0,
+                    },
+                    ...s.getFloatingProps({ popover: "manual" }),
+                    render: t,
+                    children: (0, r.jsx)(i.ph, {
+                      elementsRef: s.elementsRef,
+                      labelsRef: s.labelsRef,
+                      children: n,
                     }),
                   }),
                 })
@@ -461,9 +470,9 @@
               disabled: a,
               ...d
             } = e,
-            h = (0, o.useContext)(g),
+            h = (0, o.useContext)(x),
             { ref: f, index: p } = (0, i.rm)({ label: t }),
-            x = (0, i.SV)([c, f]);
+            g = (0, i.SV)([c, f]);
           if (!h)
             return (
               console.error(
@@ -474,7 +483,7 @@
           const v = p === h.activeIndex,
             m = p === h.selectedIndex || !!l;
           return (0, r.jsx)(u.Option, {
-            ref: x,
+            ref: g,
             selected: m,
             focused: v,
             role: "option",
@@ -813,8 +822,8 @@
               onFocusedIndexChange: O,
               refPopover: V,
               placeholder: y,
-              maxSelected: L,
-              ...w
+              maxSelected: w,
+              ...L
             } = S("<SelectTrigger>"),
             P = {
               tabIndex: 0,
@@ -839,7 +848,7 @@
               hasValue: _,
               tabIndex: 0,
               cursor: "pointer",
-              ...w,
+              ...L,
             }),
             N = (0, u.Q)(t, R, P, void 0);
           return (0, r.jsx)(i.k.Anchor, { children: N });
@@ -992,9 +1001,9 @@
             ref: O,
             disabled: V,
             gamepadFocusable: y = !0,
-            ...L
+            ...w
           } = t,
-          w = {
+          L = {
             ...n,
             variant: I,
             size: b,
@@ -1017,7 +1026,7 @@
           _ = y && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
-          ...w,
+          ...L,
           onClick: (e) => {
             P.current && e.target !== P.current && P.current.focus();
           },
@@ -1031,7 +1040,7 @@
             onChange: (e) => {
               V || (x(e.target.value), m && m(e));
             },
-            ...L,
+            ...w,
           }),
         });
       }

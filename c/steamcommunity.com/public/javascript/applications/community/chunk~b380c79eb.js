@@ -339,7 +339,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -477,24 +476,39 @@
         Positioner: function (_) {
           const { children: _, render: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]),
-            _ = (0, _._)();
+            _ = (0, _._)([
+              _,
+              null == _ ? void 0 : _.floating.refs.setFloating,
+              (_) => {
+                var _;
+                return null === (_ = null == _ ? void 0 : _.showPopover) ||
+                  void 0 === _
+                  ? void 0
+                  : _.call(_);
+              },
+            ]);
           return _
             ? _.open
-              ? (0, _.jsx)(_._, {
-                  root: null == _ ? void 0 : _.targetElement,
+              ? (0, _.jsx)(_, {
+                  state: _,
                   children: (0, _.jsx)(_, {
-                    state: _,
-                    children: (0, _.jsx)(_, {
-                      ref: _,
-                      style: _.floating.floatingStyles,
-                      ..._.getFloatingProps(),
-                      render: _,
-                      children: (0, _.jsx)(_._, {
-                        elementsRef: _.elementsRef,
-                        labelsRef: _.labelsRef,
-                        children: _,
-                      }),
+                    ref: _,
+                    style: {
+                      ..._.floating.floatingStyles,
+                      inset: "unset",
+                      border: "none",
+                      background: "transparent",
+                      color: "inherit",
+                      padding: 0,
+                    },
+                    ..._.getFloatingProps({
+                      popover: "manual",
+                    }),
+                    render: _,
+                    children: (0, _.jsx)(_._, {
+                      elementsRef: _.elementsRef,
+                      labelsRef: _.labelsRef,
+                      children: _,
                     }),
                   }),
                 })

@@ -289,7 +289,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -425,6 +424,21 @@
                   middleware: _(_),
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
+                  strategy: "fixed",
+                  platform: {
+                    ..._._,
+                    getOffsetParent: (_) => {
+                      var _, _;
+                      return null !==
+                        (_ =
+                          null === (_ = null == _ ? void 0 : _.ownerDocument) ||
+                          void 0 === _
+                            ? void 0
+                            : _.defaultView) && void 0 !== _
+                        ? _
+                        : window;
+                    },
+                  },
                 }),
                 _ = (0, _._)(_.context, {
                   enabled: !!_.click,
@@ -478,8 +492,17 @@
         Positioner: function (_) {
           const { children: _, className: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]),
-            _ = (0, _._)();
+            _ = (0, _._)([
+              _,
+              null == _ ? void 0 : _.floating.refs.setFloating,
+              (_) => {
+                var _;
+                return null === (_ = null == _ ? void 0 : _.showPopover) ||
+                  void 0 === _
+                  ? void 0
+                  : _.call(_);
+              },
+            ]);
           if (!_)
             return (
               console.error(
@@ -494,15 +517,20 @@
             ((_ = _.Children.only(_.props.children)), (_ = _));
           const _ = (0, _.cloneElement)(_, {
             ref: _,
-            style: _.floating.floatingStyles,
+            style: {
+              ..._.floating.floatingStyles,
+              inset: "unset",
+              border: "none",
+              background: "transparent",
+              color: "inherit",
+              padding: 0,
+            },
             className: _,
+            popover: "manual",
             ..._.getFloatingProps(),
           });
-          return (0, _.jsx)(_._, {
-            root: null == _ ? void 0 : _.targetElement,
-            children: (0, _.jsx)(_, {
-              children: _,
-            }),
+          return (0, _.jsx)(_, {
+            children: _,
           });
         },
         FocusManager: _,

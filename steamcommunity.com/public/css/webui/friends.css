@@ -1866,6 +1866,10 @@
   top: 0;
   pointer-events: none;
   z-index: 2000;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: inherit;
+  overflow: hidden;
 }
 .hoverposition_HoverPositionOuter_2_lmT.hoverposition_HoverAboveModal_EQqOx {
   z-index: 2001;
