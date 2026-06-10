@@ -2199,6 +2199,7 @@
               (_.capsules_per_row_array = [4]),
               (_.carousel_rows = 1),
               (_.show_as_carousel = !0),
+              (_.event_schedule_use_relative_time = !0),
               (_.default_label = "#Sale_default_label_269")));
         }
         BHasSaleSectionTextLocalization(_) {
@@ -26850,6 +26851,58 @@
           ],
         });
       }
+      const _ = (0, _._)((_) => {
+        var _;
+        const { saleSection: _, editModel: _ } = _;
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_._, {
+              type: "number",
+              min: "4",
+              max: "100",
+              label: (0, _._)("#Sale_EventMaxEventsToShow"),
+              tooltip: (0, _._)("#Sale_EventMaxEventsToShow_ttip"),
+              value: _.smart_section_max_apps,
+              placeholder: (0, _._)("#Sale_EventMaxEventDefault", 15),
+              onChange: (_) => {
+                let _ = Number.parseInt(_.currentTarget.value);
+                _ &&
+                  Number.isInteger(_) &&
+                  _.smart_section_max_apps != _ &&
+                  ((_.smart_section_max_apps = _),
+                  _.SetDirty(_._.jsondata_sales));
+              },
+            }),
+            (0, _.jsxs)("div", {
+              className: _.EventEditorTextTitle,
+              children: [
+                (0, _._)("#Sale_EventDateRange"),
+                (0, _.jsx)(_._, {
+                  tooltip: (0, _._)("#Sale_EventDateRange_ttip"),
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              mustBeNumeric: !0,
+              rangeMin: 0,
+              label: "Show events newer than (in number of weeks ago)",
+              value:
+                null !== (_ = _.event_schedule_start_weeks) && void 0 !== _
+                  ? _
+                  : 4,
+              onChange: (_) => {
+                (_.event_schedule_start_weeks = Number.isFinite(
+                  Number(_.target.value),
+                )
+                  ? Number(_.target.value)
+                  : 0),
+                  (_.event_schedule_use_relative_time = !0),
+                  _.SetDirty(_._.jsondata_sales);
+              },
+            }),
+          ],
+        });
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

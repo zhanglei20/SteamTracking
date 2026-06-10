@@ -16582,10 +16582,14 @@
         window.sessionStorage.setItem(e, JSON.stringify(n));
       }
       var ha = a(14771);
-      function Sa(e, t, a) {
-        if (null == e || null == t) return null;
-        let n = e + "_" + t;
-        return a && (n += "_" + a), n;
+      function Sa(e, t, a, n) {
+        if (null == e || null == t?.unique_id) return null;
+        let r = e + "_" + t.unique_id;
+        return (
+          a && (r += "_" + a),
+          n && (r += "_" + (0, Le.Yz)(JSON.stringify(t))),
+          r
+        );
       }
       class fa {
         static s_Singleton;
@@ -16631,16 +16635,16 @@
           const a = this.m_rgRecentEvent.get(e);
           t.forEach((e) => a.push(e));
         }
-        GetEventTimeRange(e) {
+        GetEventTimeRange(e, t, a) {
           if (e.event_schedule_use_relative_time) {
-            const t = e.event_schedule_start_weeks
+            const n = e.event_schedule_start_weeks
                 ? e.event_schedule_start_weeks
-                : 2,
-              a = e.event_schedule_end_weeks ? e.event_schedule_end_weeks : 1,
-              n = Date.now() / 1e3;
+                : t,
+              r = e.event_schedule_end_weeks ? e.event_schedule_end_weeks : a,
+              s = Date.now() / 1e3;
             return {
-              start_time: n - t * ha.Kp.PerWeek,
-              end_time: n + a * ha.Kp.PerWeek,
+              start_time: s - n * ha.Kp.PerWeek,
+              end_time: s + r * ha.Kp.PerWeek,
             };
           }
           return {
@@ -16648,10 +16652,10 @@
             end_time: e.event_schedule_rtime_end ?? void 0,
           };
         }
-        async GetRecentGameEventsForSalesPage(e, t, a) {
-          const n = Sa("recent_events", t?.unique_id, a?.unique_id);
-          if (!this.m_rgRecentEvent.has(n) && !this.m_mapPromises.has(n)) {
-            let r = {
+        async GetRecentGameEventsForSalesPage(e, t, a, n) {
+          const r = Sa("recent_events", t, a?.unique_id, n);
+          if (!this.m_rgRecentEvent.has(r) && !this.m_mapPromises.has(r)) {
+            let n = {
               cc: b.TS.COUNTRY || "US",
               l: b.TS.LANGUAGE,
               clan_account_id: e.clanSteamID.GetAccountID(),
@@ -16669,19 +16673,19 @@
               optin_tagid: e.jsondata.optin_tagid || void 0,
               optin_prune_tagid: e.jsondata.optin_prune_tagid || void 0,
               optin_only: e.jsondata.optin_only || void 0,
-              ...this.GetEventTimeRange(t),
+              ...this.GetEventTimeRange(t, 2, 1),
             };
             this.m_mapPromises.set(
-              n,
-              this.InternalEventForSalePageSection(0, n, r),
+              r,
+              this.InternalEventForSalePageSection(0, r, n),
             );
           }
-          return this.m_mapPromises.get(n);
+          return this.m_mapPromises.get(r);
         }
-        async GetRecentTaggedEventsForSalesPage(e, t, a) {
-          const n = Sa("recent_tagged_events", t?.unique_id, a?.unique_id);
-          if (!this.m_rgRecentEvent.has(n) && !this.m_mapPromises.has(n)) {
-            let r = {
+        async GetRecentTaggedEventsForSalesPage(e, t, a, n) {
+          const r = Sa("recent_tagged_events", t, a?.unique_id, n);
+          if (!this.m_rgRecentEvent.has(r) && !this.m_mapPromises.has(r)) {
+            let n = {
               cc: b.TS.COUNTRY || "US",
               l: b.TS.LANGUAGE,
               start_time: t.event_schedule_rtime_start
@@ -16700,20 +16704,18 @@
               sort: t?.recent_tagged_events_sort || void 0,
             };
             this.m_mapPromises.set(
-              n,
-              this.InternalEventForSalePageSection(2, n, r),
+              r,
+              this.InternalEventForSalePageSection(2, r, n),
             );
           }
-          return this.m_mapPromises.get(n);
+          return this.m_mapPromises.get(r);
         }
-        async GetRecentClanEventsForSalesPage(e, t, a) {
-          const n = Sa("recent_events", t?.unique_id, a?.unique_id);
-          if (!this.m_rgRecentEvent.has(n) && !this.m_mapPromises.has(n)) {
-            let r = {
+        async GetRecentClanEventsForSalesPage(e, t, a, n) {
+          const r = Sa("recent_events", t, a?.unique_id, n);
+          if (!this.m_rgRecentEvent.has(r) && !this.m_mapPromises.has(r)) {
+            let n = {
               cc: b.TS.COUNTRY || "US",
               l: b.TS.LANGUAGE,
-              start_time: new Date().getTime() / 1e3 - 6 * ha.Kp.PerMonth,
-              end_time: new Date().getTime() / 1e3,
               count: t.smart_section_max_apps,
               show_recent_first: Boolean(t.event_schedule_show_recent_first),
               clanid: e.clanSteamID.GetAccountID(),
@@ -16722,13 +16724,14 @@
               sectionid: t?.unique_id || void 0,
               sectionfilter: t?.store_filter || void 0,
               sort: t?.recent_tagged_events_sort || void 0,
+              ...this.GetEventTimeRange(t, 4, 0),
             };
             this.m_mapPromises.set(
-              n,
-              this.InternalEventForSalePageSection(2, n, r),
+              r,
+              this.InternalEventForSalePageSection(2, r, n),
             );
           }
-          return this.m_mapPromises.get(n);
+          return this.m_mapPromises.get(r);
         }
         async InternalEventForSalePageSection(e, t, a) {
           if ((this.Init(t), !this.m_rgRecentEvent.has(t))) {
@@ -16768,10 +16771,10 @@
           }
           return this.m_rgRecentEvent.get(t);
         }
-        GetLiveSaleEvents(e, t, a) {
-          const n = Sa("live_sale_events", t?.unique_id, a?.unique_id);
-          if (!this.m_rgRecentEvent.has(n) && !this.m_mapPromises.has(n)) {
-            let r = {
+        GetLiveSaleEvents(e, t, a, n) {
+          const r = Sa("live_sale_events", t, a?.unique_id, n);
+          if (!this.m_rgRecentEvent.has(r) && !this.m_mapPromises.has(r)) {
+            let n = {
               cc: b.TS.COUNTRY || "US",
               l: b.TS.LANGUAGE,
               start_time: t.event_schedule_rtime_start
@@ -16790,11 +16793,11 @@
               origin: self.origin,
             };
             this.m_mapPromises.set(
-              n,
-              this.InternalEventForSalePageSection(1, n, r),
+              r,
+              this.InternalEventForSalePageSection(1, r, n),
             );
           }
-          return this.m_mapPromises.get(n);
+          return this.m_mapPromises.get(r);
         }
       }
       (0, Ae.Cg)([Te.sH], fa.prototype, "m_rgRecentEvent", void 0),
@@ -17052,23 +17055,23 @@
           const e = await (async function (e, t, a, n, r) {
             let o;
             if ((0, i.CU)(t)) {
-              const a = (0, i.Pm)(t);
-              let n = [];
-              if ("recent_events" === a) {
-                n =
+              const n = (0, i.Pm)(t);
+              let s = [];
+              if ("recent_events" === n) {
+                s =
                   e.GetEventType() == L.ajI
                     ? await fa
                         .Get()
-                        .GetRecentClanEventsForSalesPage(e, t, r?.GetTab())
+                        .GetRecentClanEventsForSalesPage(e, t, r?.GetTab(), a)
                     : await fa
                         .Get()
-                        .GetRecentGameEventsForSalesPage(e, t, r?.GetTab());
+                        .GetRecentGameEventsForSalesPage(e, t, r?.GetTab(), a);
               } else
-                "recent_tagged_events" === a
-                  ? ((n = await fa
+                "recent_tagged_events" === n
+                  ? ((s = await fa
                       .Get()
-                      .GetRecentTaggedEventsForSalesPage(e, t, r?.GetTab())),
-                    (n = await (async function (e, t) {
+                      .GetRecentTaggedEventsForSalesPage(e, t, r?.GetTab(), a)),
+                    (s = await (async function (e, t) {
                       return (
                         await z.Fm.Get().HintLoad(),
                         "wishlist" === e.recent_tagged_events_source
@@ -17083,37 +17086,38 @@
                                 )
                               : t
                       );
-                    })(t, n)),
+                    })(t, s)),
                     t.hide_duplicate_events &&
-                      (n = await (async function (e, t, a, n) {
+                      (s = await (async function (e, t, a, n, r) {
                         await z.Fm.Get().HintLoad();
-                        let r = [...a];
+                        let s = [...a];
                         for (const a of e.GetSaleSectionsByType("events")) {
                           if (a.unique_id === t.unique_id) break;
                           if ((0, i.CU)(t)) {
                             if ("recent_tagged_events" === (0, i.Pm)(a))
                               if ("wishlist" === a.recent_tagged_events_source)
-                                r = r.filter(
+                                s = s.filter(
                                   (e) => !z.Fm.Get().BIsGameWishlisted(e.appid),
                                 );
                               else if (
                                 "library" === a.recent_tagged_events_source
                               )
-                                r = r.filter(
+                                s = s.filter(
                                   (e) => !z.Fm.Get().BIsGameOwned(e.appid),
                                 );
                               else if (
                                 "recommended" === a.recent_tagged_events_source
                               )
-                                r = r.filter(
+                                s = s.filter(
                                   (e) =>
                                     !z.Fm.Get().BIsGameRecommended(e.appid),
                                 );
                               else {
                                 const e = Sa(
                                     "recent_tagged_events",
-                                    a.unique_id,
+                                    a,
                                     n?.unique_id,
+                                    r,
                                   ),
                                   t = fa
                                     .Get()
@@ -17121,7 +17125,7 @@
                                       e,
                                       a.recent_tagged_events_source,
                                     );
-                                r = r.filter((e) => {
+                                s = s.filter((e) => {
                                   for (const a of t)
                                     if (
                                       a.clan_steamid === e.clan_steamid &&
@@ -17132,7 +17136,7 @@
                                 });
                               }
                           } else
-                            r = r.filter((e) => {
+                            s = s.filter((e) => {
                               for (const t of a.events)
                                 if (
                                   t.clan_steamid === e.clan_steamid &&
@@ -17142,18 +17146,20 @@
                               return !0;
                             });
                         }
-                        return r;
-                      })(e, t, n, r?.GetTab())))
-                  : "sale_events_only" === a
-                    ? (n = await fa.Get().GetLiveSaleEvents(e, t, r?.GetTab()))
+                        return s;
+                      })(e, t, s, r?.GetTab(), a)))
+                  : "sale_events_only" === n
+                    ? (s = await fa
+                        .Get()
+                        .GetLiveSaleEvents(e, t, r?.GetTab(), a))
                     : console.log(
                         "SmaSaleSectionLoadItemEffect: Invalid Smart Section Type: " +
-                          a,
+                          n,
                       );
-              const s = n.map((e) => e.gid);
+              const l = s.map((e) => e.gid);
               o =
                 await Yt.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
-                  s,
+                  l,
                   void 0,
                 );
             } else
