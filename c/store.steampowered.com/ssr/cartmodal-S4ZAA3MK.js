@@ -606,12 +606,14 @@ var _ = {
   LineItemCol: "F0BHC6-tZX8-",
   LineItemDetailsRow: "_0v52-qZWRZU-",
   Text: "d0qItWvO3cc-",
+  NoWrap: "B3s-xbEjWEk-",
   LineItemDetailsRowTop: "RIiPxPHZe1c-",
   LineItemSpaceBetween: "jOE56KfWWqY-",
   LineItemTitle: "teMQBj-kyzo-",
   LineItemPricingOptions: "_4-rzwtAgYQE-",
   LineItemDropDown: "-synzJ1Zd2Q-",
   PlatformIcons: "phhNgR2v2Sg-",
+  PurchaseOptionPickerCtn: "uPFjNFxrtJg-",
   AddLineItemCtn: "PA5STGmwHNM-",
   AddLineItemIcon: "jcz28sPr-jc-",
   PendingLineItem: "PWKZV94Ispo-",
@@ -636,10 +638,15 @@ var _ = {
 var _ = _(_(), 1);
 var _ = _(_(), 1);
 function _(_) {
-  let { text: _, children: _, className: _ } = _;
+  let { text: _, children: _, className: _, noWrap: _ } = _;
   return (0, _.jsx)(_, {
     "flow-children": "row",
-    className: (0, _.default)(_.LineItemDetailsRow, _ && _.Text, _),
+    className: (0, _.default)(
+      _.LineItemDetailsRow,
+      _ && _.Text,
+      _ && _.NoWrap,
+      _,
+    ),
     children: _,
   });
 }
@@ -998,9 +1005,10 @@ function _(_) {
     _ = _(_.packageid, _.bundleid, _.user_can_purchase_as_gift);
   return (0, _.jsxs)(_, {
     className: _.LineItemSpaceBetween,
+    noWrap: !0,
     children: [
       (0, _.jsx)("div", {
-        className: _.LineItemCol,
+        className: (0, _.default)(_.LineItemCol, _.PurchaseOptionPickerCtn),
         children: (0, _.jsx)(_, {
           lineItem: _,
           storeItem: _,

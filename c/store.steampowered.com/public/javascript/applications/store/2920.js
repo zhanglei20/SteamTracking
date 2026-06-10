@@ -29,12 +29,14 @@
         LineItemCol: "HhD4RK0A4phOlAwZQDckk",
         LineItemDetailsRow: "_1wLomHB2PWPNx7TsNYpdtm",
         Text: "_2aGDkEAUaGvF4KHHZRRkEj",
+        NoWrap: "c0VFjXtN_fgP-PR6wQe66",
         LineItemDetailsRowTop: "_1aXXp4afkXP3Ez03MjTY3D",
         LineItemSpaceBetween: "_3L6hUlrzXOezye2BqWz-T7",
         LineItemTitle: "EflKs0JjldhDSxbUBaiOp",
         LineItemPricingOptions: "_2BTcfC4-tZENmEAXbVzKA7",
         LineItemDropDown: "QL-7d2s_ZGbceWxP5eoY4",
         PlatformIcons: "_2FgjpNRRiZkDXAB53vFFOh",
+        PurchaseOptionPickerCtn: "_2iq-WR8SMiZcAwSnm-8-eE",
         AddLineItemCtn: "_3-GZz-m5p_fxd2pqPGK6u9",
         AddLineItemIcon: "_4Uz7u01J6OO_P0hhfb0Kc",
         PendingLineItem: "_3w61e3curroiu7lCOKvLN8",
@@ -737,10 +739,15 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { text: _, children: _, className: _ } = _;
+        const { text: _, children: _, className: _, noWrap: _ } = _;
         return (0, _.jsx)(_._, {
           "flow-children": "row",
-          className: _()(_().LineItemDetailsRow, _ && _().Text, _),
+          className: _()(
+            _().LineItemDetailsRow,
+            _ && _().Text,
+            _ && _().NoWrap,
+            _,
+          ),
           children: _,
         });
       }

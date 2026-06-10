@@ -17885,7 +17885,7 @@
             end_time: _.event_schedule_rtime_end ?? void 0,
           };
         }
-        async GetRecentEventsForSalesPage(_, _, _) {
+        async GetRecentGameEventsForSalesPage(_, _, _) {
           const _ = _("recent_events", _?.unique_id, _?.unique_id);
           if (!this.m_rgRecentEvent.has(_) && !this.m_mapPromises.has(_)) {
             let _ = {
@@ -17910,7 +17910,7 @@
             };
             this.m_mapPromises.set(
               _,
-              this.InternalEventForSalePageSection(_, _),
+              this.InternalEventForSalePageSection(0, _, _),
             );
           }
           return this.m_mapPromises.get(_);
@@ -17938,20 +17938,45 @@
             };
             this.m_mapPromises.set(
               _,
-              this.InternalEventForSalePageSection(_, _),
+              this.InternalEventForSalePageSection(2, _, _),
             );
           }
           return this.m_mapPromises.get(_);
         }
-        async InternalEventForSalePageSection(_, _) {
+        async GetRecentClanEventsForSalesPage(_, _, _) {
+          const _ = _("recent_events", _?.unique_id, _?.unique_id);
+          if (!this.m_rgRecentEvent.has(_) && !this.m_mapPromises.has(_)) {
+            let _ = {
+              _: _._.COUNTRY || "US",
+              _: _._.LANGUAGE,
+              start_time: new Date().getTime() / 1e3 - 6 * _._.PerMonth,
+              end_time: new Date().getTime() / 1e3,
+              count: _.smart_section_max_apps,
+              show_recent_first: Boolean(_.event_schedule_show_recent_first),
+              clanid: _.clanSteamID.GetAccountID(),
+              tabuniqueid: _?.unique_id || void 0,
+              tabfilter: _?.store_filter || void 0,
+              sectionid: _?.unique_id || void 0,
+              sectionfilter: _?.store_filter || void 0,
+              sort: _?.recent_tagged_events_sort || void 0,
+            };
+            this.m_mapPromises.set(
+              _,
+              this.InternalEventForSalePageSection(2, _, _),
+            );
+          }
+          return this.m_mapPromises.get(_);
+        }
+        async InternalEventForSalePageSection(_, _, _) {
           if ((this.Init(_), !this.m_rgRecentEvent.has(_))) {
             this.m_rgRecentEvent.set(_, new Array());
             let _ = _._.STORE_BASE_URL + "saleaction/";
-            _.startsWith("recent_events")
-              ? (_ += "ajaxrecentsaleevents")
-              : _.startsWith("live_sale_events")
-                ? (_ += "ajaxgetlivesaleevents")
-                : (_ += "ajaxrecenttaggedsaleevents");
+            _ +=
+              0 == _
+                ? "ajaxrecentsaleevents"
+                : 1 == _
+                  ? "ajaxgetlivesaleevents"
+                  : "ajaxrecenttaggedsaleevents";
             try {
               const _ = await _().get(_, {
                 params: _,
@@ -17967,7 +17992,9 @@
                     _._.RegisterClanEvents(_);
                     const _ = _.map((_) => _.appid).filter(Boolean);
                     _.length > 0 &&
-                      _.forEach((_) => _._.Get().QueueAppRequest(_, _._));
+                      __webpack_require__.forEach((_) =>
+                        _._.Get().QueueAppRequest(_, _._),
+                      );
                   }
                 });
             } catch (_) {
@@ -18006,7 +18033,7 @@
             };
             this.m_mapPromises.set(
               _,
-              this.InternalEventForSalePageSection(_, _),
+              this.InternalEventForSalePageSection(1, _, _),
             );
           }
           return this.m_mapPromises.get(_);
@@ -18263,13 +18290,21 @@
             if ((0, _._)(_)) {
               const _ = (0, _._)(_);
               let _ = [];
-              "recent_events" === _
-                ? (_ = await _.Get().GetRecentEventsForSalesPage(
-                    _,
-                    _,
-                    _?.GetTab(),
-                  ))
-                : "recent_tagged_events" === _
+              if ("recent_events" === _) {
+                _ =
+                  _.GetEventType() == _.ajI
+                    ? await _.Get().GetRecentClanEventsForSalesPage(
+                        _,
+                        _,
+                        _?.GetTab(),
+                      )
+                    : await _.Get().GetRecentGameEventsForSalesPage(
+                        _,
+                        _,
+                        _?.GetTab(),
+                      );
+              } else
+                "recent_tagged_events" === _
                   ? ((_ = await _.Get().GetRecentTaggedEventsForSalesPage(
                       _,
                       _,

@@ -2169,7 +2169,7 @@
             !0)
           );
         }
-        static SetSaleSectionType(_, _) {
+        static SetSaleSectionType(_, _, _) {
           _.section_type !== _ &&
             ((_.internal_section_data =
               "vo_internal" === _
@@ -2191,8 +2191,15 @@
                   (_.carousel_rows = 1),
                   (_.show_as_carousel = !0)),
             "creator_list" == _ &&
+              ((_.smart_section = !0), (_.smart_section_type = "creator_list")),
+            _ == _.ajI &&
+              "events" == _ &&
               ((_.smart_section = !0),
-              (_.smart_section_type = "creator_list")));
+              (_.smart_section_type = "recent_events"),
+              (_.capsules_per_row_array = [4]),
+              (_.carousel_rows = 1),
+              (_.show_as_carousel = !0),
+              (_.default_label = "#Sale_default_label_269")));
         }
         BHasSaleSectionTextLocalization(_) {
           var _, _;
@@ -16495,8 +16502,7 @@
                       _((_ = "on" === _)),
                       void (0, _._)(() => {
                         _.smart_section = _;
-                        const _ =
-                          _ && "events" != _.section_type ? "all_released" : _;
+                        const _ = _ ? "all_released" : _;
                         (_.smart_section_type = _ ? _ : void 0),
                           !_.smart_section_max_apps &&
                             _ &&
@@ -26706,39 +26712,43 @@
           [_] = (0, _._)(() => [(0, _._)(_, !0)]),
           _ =
             _.smart_section_event_tags && _.smart_section_event_tags.length > 0;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              editModel: _,
-              saleSection: _,
-              defaultType: _ ? "recent_tagged_events" : "recent_events",
-              nDefaultMaxAppToLoad: 15,
-            }),
-            Boolean(_)
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      capsuleContainer: _,
-                      ..._,
-                    }),
-                    (0, _.jsx)(_, {
-                      section: _,
-                      ..._,
-                    }),
-                    (0, _.jsx)(_, {
-                      section: _,
-                      ..._,
-                    }),
-                    (0, _.jsx)(_, {
-                      ..._,
-                    }),
-                  ],
-                })
-              : (0, _.jsx)(_, {
-                  ..._,
+        return __webpack_require__.GetEventType() == _.ajI
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  editModel: _,
+                  saleSection: _,
+                  defaultType: _ ? "recent_tagged_events" : "recent_events",
+                  nDefaultMaxAppToLoad: 15,
                 }),
-          ],
-        });
+                Boolean(_)
+                  ? (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          capsuleContainer: _,
+                          ..._,
+                        }),
+                        (0, _.jsx)(_, {
+                          section: _,
+                          ..._,
+                        }),
+                        (0, _.jsx)(_, {
+                          section: _,
+                          ..._,
+                        }),
+                        (0, _.jsx)(_, {
+                          ..._,
+                        }),
+                      ],
+                    })
+                  : (0, _.jsx)(_, {
+                      ..._,
+                    }),
+              ],
+            });
       });
       function _(_) {
         const { editModel: _, section: _ } = _;
@@ -29785,7 +29795,7 @@
                           rgSectionTypeInfos: _,
                           sectionType: _,
                           fnSetSectionType: (_) => {
-                            _._.SetSaleSectionType(_, _),
+                            _._.SetSaleSectionType(_.GetEventType(), _, _),
                               _.SetDirty(_._.jsondata_sales);
                           },
                           showWarnings: !0,
@@ -30144,7 +30154,7 @@
                 data: "event_schedule",
                 tooltip: (0, _._)("#Sale_SectionType_EventSchedule_ttip"),
               },
-              !_ && {
+              {
                 label: (0, _._)("#Sale_Events"),
                 data: "events",
                 tooltip: (0, _._)("#Sale_Events_ttip"),

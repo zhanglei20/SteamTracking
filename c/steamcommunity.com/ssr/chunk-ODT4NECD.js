@@ -6757,6 +6757,11 @@ function _(_) {
       middleware: _(_),
       whileElementsMounted: _,
       placement: _ && typeof _ == "object" ? _.initial : _,
+      strategy: "fixed",
+      platform: {
+        ..._,
+        getOffsetParent: (_) => _?.ownerDocument?.defaultView ?? window,
+      },
     }),
     _ = _(_.context, {
       enabled: !!_.click,

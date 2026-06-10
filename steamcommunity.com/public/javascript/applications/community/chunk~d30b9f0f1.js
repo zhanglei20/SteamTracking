@@ -2128,26 +2128,33 @@
             !0)
           );
         }
-        static SetSaleSectionType(e, t) {
-          e.section_type !== t &&
-            ((e.internal_section_data =
-              "vo_internal" === t ? { ..._.p6 } : null),
-            (e.section_type = t),
-            (0, _.ye)(e.section_type)
-              ? ((e.capsules_per_row_array = [2, 3, 4, 3]),
-                (e.carousel_rows = 2),
-                (e.show_as_carousel = !0))
-              : "links" == t
-                ? ((e.capsules_per_row_array = [1]),
-                  (e.carousel_rows = 1),
-                  (e.show_as_carousel = !0))
-                : "creator_list_of_lists" == t &&
-                  ((e.capsules_per_row_array = [4]),
-                  (e.carousel_rows = 1),
-                  (e.show_as_carousel = !0)),
-            "creator_list" == t &&
-              ((e.smart_section = !0),
-              (e.smart_section_type = "creator_list")));
+        static SetSaleSectionType(e, t, a) {
+          t.section_type !== a &&
+            ((t.internal_section_data =
+              "vo_internal" === a ? { ..._.p6 } : null),
+            (t.section_type = a),
+            (0, _.ye)(t.section_type)
+              ? ((t.capsules_per_row_array = [2, 3, 4, 3]),
+                (t.carousel_rows = 2),
+                (t.show_as_carousel = !0))
+              : "links" == a
+                ? ((t.capsules_per_row_array = [1]),
+                  (t.carousel_rows = 1),
+                  (t.show_as_carousel = !0))
+                : "creator_list_of_lists" == a &&
+                  ((t.capsules_per_row_array = [4]),
+                  (t.carousel_rows = 1),
+                  (t.show_as_carousel = !0)),
+            "creator_list" == a &&
+              ((t.smart_section = !0), (t.smart_section_type = "creator_list")),
+            e == r.ajI &&
+              "events" == a &&
+              ((t.smart_section = !0),
+              (t.smart_section_type = "recent_events"),
+              (t.capsules_per_row_array = [4]),
+              (t.carousel_rows = 1),
+              (t.show_as_carousel = !0),
+              (t.default_label = "#Sale_default_label_269")));
         }
         BHasSaleSectionTextLocalization(e) {
           var t, a;
@@ -15412,8 +15419,7 @@
                       u((n = "on" === e)),
                       void (0, Ge.h5)(() => {
                         a.smart_section = n;
-                        const e =
-                          m && "events" != a.section_type ? "all_released" : s;
+                        const e = m ? "all_released" : s;
                         (a.smart_section_type = n ? e : void 0),
                           !a.smart_section_max_apps &&
                             l &&
@@ -25033,29 +25039,31 @@
       }
       const Os = (0, r.PA)((e) => {
         const { saleSection: t, editModel: a } = e,
-          [i] = (0, d.q3)(() => [(0, _.CU)(t, !0)]),
-          o =
+          [o] = (0, d.q3)(() => [(0, _.CU)(t, !0)]),
+          s =
             t.smart_section_event_tags && t.smart_section_event_tags.length > 0;
-        return (0, n.jsxs)(n.Fragment, {
-          children: [
-            (0, n.jsx)(ht, {
-              editModel: a,
-              saleSection: t,
-              defaultType: o ? "recent_tagged_events" : "recent_events",
-              nDefaultMaxAppToLoad: 15,
-            }),
-            Boolean(i)
-              ? (0, n.jsxs)(n.Fragment, {
-                  children: [
-                    (0, n.jsx)(oo.WR, { capsuleContainer: t, ...e }),
-                    (0, n.jsx)(Ps, { section: t, ...e }),
-                    (0, n.jsx)(Rs, { section: t, ...e }),
-                    (0, n.jsx)(Kt, { ...e }),
-                  ],
-                })
-              : (0, n.jsx)(Yt, { ...e }),
-          ],
-        });
+        return a.GetEventType() == i.ajI
+          ? (0, n.jsx)(Kt, { ...e })
+          : (0, n.jsxs)(n.Fragment, {
+              children: [
+                (0, n.jsx)(ht, {
+                  editModel: a,
+                  saleSection: t,
+                  defaultType: s ? "recent_tagged_events" : "recent_events",
+                  nDefaultMaxAppToLoad: 15,
+                }),
+                Boolean(o)
+                  ? (0, n.jsxs)(n.Fragment, {
+                      children: [
+                        (0, n.jsx)(oo.WR, { capsuleContainer: t, ...e }),
+                        (0, n.jsx)(Ps, { section: t, ...e }),
+                        (0, n.jsx)(Rs, { section: t, ...e }),
+                        (0, n.jsx)(Kt, { ...e }),
+                      ],
+                    })
+                  : (0, n.jsx)(Yt, { ...e }),
+              ],
+            });
       });
       function Ps(e) {
         const { editModel: t, section: a } = e;
@@ -27887,7 +27895,7 @@
                           rgSectionTypeInfos: W,
                           sectionType: J,
                           fnSetSectionType: (e) => {
-                            o.nG.SetSaleSectionType(i, e),
+                            o.nG.SetSaleSectionType(r.GetEventType(), i, e),
                               r.SetDirty(o.IQ.jsondata_sales);
                           },
                           showWarnings: !0,
@@ -28233,7 +28241,7 @@
                 data: "event_schedule",
                 tooltip: (0, o.we)("#Sale_SectionType_EventSchedule_ttip"),
               },
-              !a && {
+              {
                 label: (0, o.we)("#Sale_Events"),
                 data: "events",
                 tooltip: (0, o.we)("#Sale_Events_ttip"),

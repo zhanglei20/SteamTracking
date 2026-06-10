@@ -9510,7 +9510,7 @@
                 (_.background_gradient_top = _.background_gradient_top),
                 (_.border_color = _.border_color),
                 (_.border_width = _.border_width)),
-                _._.SetSaleSectionType(_, _),
+                _._.SetSaleSectionType(_.GetEventType(), _, _),
                 _.GetEventModel().jsondata.sale_sections.push(_),
                 _.SetDirty(_._.jsondata_sales),
                 (0, _._)((0, _._)(_), !0),
