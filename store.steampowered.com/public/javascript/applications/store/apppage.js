@@ -8943,7 +8943,8 @@
           children: [
             (0, r.jsx)(vo, { title: n.dropdown_title }),
             n.dropdown_description_bbcode &&
-              (0, r.jsx)("div", {
+              (0, r.jsx)(Wt.EY, {
+                size: "2",
                 children: (0, r.jsx)(wo, {
                   text: n.dropdown_description_bbcode,
                 }),
@@ -9772,6 +9773,10 @@
             for (let e of s) (0, V.vB)(d, e, n);
             h(!0);
           }, [d, n, s]),
+          a.useLayoutEffect(() => {
+            const e = document.querySelector("#summaryBarTop");
+            e && u && (e.style.height = "unset");
+          }, [u]),
           u
             ? (0, r.jsxs)(p.Z, {
                 className: vi().SummaryBarTop,
@@ -9805,11 +9810,9 @@
             () => (0, L.Tc)("deckcompatibility", "application_config"),
             [],
           );
-        return (0, r.jsx)(p.Z, {
-          className: (0, Y.A)(vi().SummaryBarSection, vi().SteamDeckCompat),
-          children:
-            n &&
-            (0, r.jsxs)(r.Fragment, {
+        return n
+          ? (0, r.jsxs)(p.Z, {
+              className: (0, Y.A)(vi().SummaryBarSection, vi().SteamDeckCompat),
               children: [
                 (0, r.jsx)(xi, {
                   children: lo.Localize("#AppPage_SummaryBar_SteamDeckCompat"),
@@ -9820,8 +9823,8 @@
                   results: n,
                 }),
               ],
-            }),
-        });
+            })
+          : null;
       }
       function yi(e) {
         const t = e.Element?.getBoundingClientRect(),
