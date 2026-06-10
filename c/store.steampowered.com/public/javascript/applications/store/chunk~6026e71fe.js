@@ -17819,10 +17819,12 @@
         window.sessionStorage.setItem(_, JSON.stringify(_));
       }
       var _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        if (null == _ || null == _) return null;
-        let _ = _ + "_" + _;
-        return _ && (_ += "_" + _), _;
+      function _(_, _, _, _) {
+        if (null == _ || null == _?.unique_id) return null;
+        let _ = _ + "_" + _.unique_id;
+        return (
+          _ && (_ += "_" + _), _ && (_ += "_" + (0, _._)(JSON.stringify(_))), _
+        );
       }
       class _ {
         static s_Singleton;
@@ -17868,12 +17870,12 @@
           const _ = this.m_rgRecentEvent.get(_);
           _.forEach((_) => __webpack_require__.push(_));
         }
-        GetEventTimeRange(_) {
+        GetEventTimeRange(_, _, _) {
           if (_.event_schedule_use_relative_time) {
             const _ = _.event_schedule_start_weeks
                 ? _.event_schedule_start_weeks
-                : 2,
-              _ = _.event_schedule_end_weeks ? _.event_schedule_end_weeks : 1,
+                : _,
+              _ = _.event_schedule_end_weeks ? _.event_schedule_end_weeks : _,
               _ = Date.now() / 1e3;
             return {
               start_time: _ - _ * _._.PerWeek,
@@ -17885,8 +17887,8 @@
             end_time: _.event_schedule_rtime_end ?? void 0,
           };
         }
-        async GetRecentGameEventsForSalesPage(_, _, _) {
-          const _ = _("recent_events", _?.unique_id, _?.unique_id);
+        async GetRecentGameEventsForSalesPage(_, _, _, _) {
+          const _ = _("recent_events", _, _?.unique_id, _);
           if (!this.m_rgRecentEvent.has(_) && !this.m_mapPromises.has(_)) {
             let _ = {
               _: _._.COUNTRY || "US",
@@ -17906,7 +17908,7 @@
               optin_tagid: _.jsondata.optin_tagid || void 0,
               optin_prune_tagid: _.jsondata.optin_prune_tagid || void 0,
               optin_only: _.jsondata.optin_only || void 0,
-              ...this.GetEventTimeRange(_),
+              ...this.GetEventTimeRange(_, 2, 1),
             };
             this.m_mapPromises.set(
               _,
@@ -17915,8 +17917,8 @@
           }
           return this.m_mapPromises.get(_);
         }
-        async GetRecentTaggedEventsForSalesPage(_, _, _) {
-          const _ = _("recent_tagged_events", _?.unique_id, _?.unique_id);
+        async GetRecentTaggedEventsForSalesPage(_, _, _, _) {
+          const _ = _("recent_tagged_events", _, _?.unique_id, _);
           if (!this.m_rgRecentEvent.has(_) && !this.m_mapPromises.has(_)) {
             let _ = {
               _: _._.COUNTRY || "US",
@@ -17943,14 +17945,12 @@
           }
           return this.m_mapPromises.get(_);
         }
-        async GetRecentClanEventsForSalesPage(_, _, _) {
-          const _ = _("recent_events", _?.unique_id, _?.unique_id);
+        async GetRecentClanEventsForSalesPage(_, _, _, _) {
+          const _ = _("recent_events", _, _?.unique_id, _);
           if (!this.m_rgRecentEvent.has(_) && !this.m_mapPromises.has(_)) {
             let _ = {
               _: _._.COUNTRY || "US",
               _: _._.LANGUAGE,
-              start_time: new Date().getTime() / 1e3 - 6 * _._.PerMonth,
-              end_time: new Date().getTime() / 1e3,
               count: _.smart_section_max_apps,
               show_recent_first: Boolean(_.event_schedule_show_recent_first),
               clanid: _.clanSteamID.GetAccountID(),
@@ -17959,6 +17959,7 @@
               sectionid: _?.unique_id || void 0,
               sectionfilter: _?.store_filter || void 0,
               sort: _?.recent_tagged_events_sort || void 0,
+              ...this.GetEventTimeRange(_, 4, 0),
             };
             this.m_mapPromises.set(
               _,
@@ -18010,8 +18011,8 @@
           }
           return this.m_rgRecentEvent.get(_);
         }
-        GetLiveSaleEvents(_, _, _) {
-          const _ = _("live_sale_events", _?.unique_id, _?.unique_id);
+        GetLiveSaleEvents(_, _, _, _) {
+          const _ = _("live_sale_events", _, _?.unique_id, _);
           if (!this.m_rgRecentEvent.has(_) && !this.m_mapPromises.has(_)) {
             let _ = {
               _: _._.COUNTRY || "US",
@@ -18297,11 +18298,13 @@
                         _,
                         _,
                         _?.GetTab(),
+                        _,
                       )
                     : await _.Get().GetRecentGameEventsForSalesPage(
                         _,
                         _,
                         _?.GetTab(),
+                        _,
                       );
               } else
                 "recent_tagged_events" === _
@@ -18309,6 +18312,7 @@
                       _,
                       _,
                       _?.GetTab(),
+                      _,
                     )),
                     (_ = await (async function (_, _) {
                       return (
@@ -18327,7 +18331,7 @@
                       );
                     })(_, _)),
                     _.hide_duplicate_events &&
-                      (_ = await (async function (_, _, _, _) {
+                      (_ = await (async function (_, _, _, _, _) {
                         await _._.Get().HintLoad();
                         let _ = [..._];
                         for (const _ of _.GetSaleSectionsByType("events")) {
@@ -18353,8 +18357,9 @@
                               else {
                                 const _ = _(
                                     "recent_tagged_events",
-                                    _.unique_id,
+                                    _,
                                     _?.unique_id,
+                                    _,
                                   ),
                                   _ = _.Get().GetRecentEventsFromConfigJSON(
                                     _,
@@ -18382,9 +18387,14 @@
                             });
                         }
                         return _;
-                      })(_, _, _, _?.GetTab())))
+                      })(_, _, _, _?.GetTab(), _)))
                   : "sale_events_only" === _
-                    ? (_ = await _.Get().GetLiveSaleEvents(_, _, _?.GetTab()))
+                    ? (_ = await _.Get().GetLiveSaleEvents(
+                        _,
+                        _,
+                        _?.GetTab(),
+                        _,
+                      ))
                     : console.log(
                         "SmaSaleSectionLoadItemEffect: Invalid Smart Section Type: " +
                           _,
