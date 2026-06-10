@@ -10097,7 +10097,8 @@
               title: _.dropdown_title,
             }),
             _.dropdown_description_bbcode &&
-              (0, _.jsx)("div", {
+              (0, _.jsx)(_._, {
+                size: "2",
                 children: (0, _.jsx)(_, {
                   text: _.dropdown_description_bbcode,
                 }),
@@ -11074,6 +11075,10 @@
             for (let _ of _) (0, _._)(_, _, _);
             _(!0);
           }, [_, _, _]),
+          _.useLayoutEffect(() => {
+            const _ = document.querySelector("#summaryBarTop");
+            _ && _ && (_.style.height = "unset");
+          }, [_]),
           _
             ? (0, _.jsxs)(_._, {
                 className: _().SummaryBarTop,
@@ -11118,11 +11123,9 @@
             () => (0, _._)("deckcompatibility", "application_config"),
             [],
           );
-        return (0, _.jsx)(_._, {
-          className: (0, _._)(_().SummaryBarSection, _().SteamDeckCompat),
-          children:
-            _ &&
-            (0, _.jsxs)(_.Fragment, {
+        return _
+          ? (0, _.jsxs)(_._, {
+              className: (0, _._)(_().SummaryBarSection, _().SteamDeckCompat),
               children: [
                 (0, _.jsx)(_, {
                   children: _.Localize("#AppPage_SummaryBar_SteamDeckCompat"),
@@ -11133,8 +11136,8 @@
                   results: _,
                 }),
               ],
-            }),
-        });
+            })
+          : null;
       }
       function _(_) {
         const _ = _.Element?.getBoundingClientRect(),

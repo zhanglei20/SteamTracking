@@ -4869,18 +4869,13 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   background: linear-gradient(180deg, #1b3857 0%, rgba(65, 98, 135, 0.5) 100%);
 }
 ._1Som9GnszokLGAScqhSozy {
-  display: flex;
-  gap: 12px;
-  height: 244px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: 12px;
+  column-gap: 8px;
   overflow: hidden;
 }
-@media screen and (max-width: 910px) {
-  html.responsive ._1Som9GnszokLGAScqhSozy {
-    flex-wrap: wrap;
-  }
-}
 ._1eIF6oOHrg65kqvbTZmsnv {
-  flex: 1 1 33%;
   height: 116px;
   display: flex;
   gap: 2px;
