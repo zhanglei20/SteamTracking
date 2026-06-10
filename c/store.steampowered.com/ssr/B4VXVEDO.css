@@ -29652,9 +29652,11 @@ body.in_global_drag .title-area {
 }
 .EZOUfdY7phY- ._91QY-wpj0-M- {
   flex-grow: 1;
+  min-width: 0;
 }
 .EZOUfdY7phY- .F0BHC6-tZX8- {
   display: flex;
+  min-width: 0;
 }
 .EZOUfdY7phY- ._0v52-qZWRZU- {
   display: flex;
@@ -29665,6 +29667,9 @@ body.in_global_drag .title-area {
 }
 .EZOUfdY7phY- ._0v52-qZWRZU-.d0qItWvO3cc- {
   display: block;
+}
+.EZOUfdY7phY- ._0v52-qZWRZU-.B3s-xbEjWEk- {
+  flex-wrap: nowrap;
 }
 .EZOUfdY7phY- .RIiPxPHZe1c- {
   margin-top: 0;
@@ -29690,6 +29695,14 @@ body.in_global_drag .title-area {
 .EZOUfdY7phY- .phhNgR2v2Sg- svg {
   fill: #7c8289;
   color: #7c8289;
+}
+.EZOUfdY7phY- .uPFjNFxrtJg- {
+  flex-grow: 1;
+  margin-inline-end: 15px;
+}
+.EZOUfdY7phY- .uPFjNFxrtJg- div[role="combobox"] {
+  flex-grow: 1;
+  min-width: 0;
 }
 .DialogButton.PA5STGmwHNM- {
   width: 26px;

@@ -348,6 +348,21 @@
             middleware: (0, d.p)(e),
             whileElementsMounted: l.ll,
             placement: f && "object" == typeof f ? f.initial : f,
+            strategy: "fixed",
+            platform: {
+              ...l.iD,
+              getOffsetParent: (e) => {
+                var n, t;
+                return null !==
+                  (t =
+                    null === (n = null == e ? void 0 : e.ownerDocument) ||
+                    void 0 === n
+                      ? void 0
+                      : n.defaultView) && void 0 !== t
+                  ? t
+                  : window;
+              },
+            },
           }),
           g = (0, i.kp)(x.context, { enabled: !!u.click }),
           v = (0, i.iQ)(x.context, { enabled: !!u.focus }),
@@ -375,14 +390,14 @@
           k = (0, i.It)(x.context, { role: h }),
           {
             getFloatingProps: O,
-            getReferenceProps: V,
-            getItemProps: y,
+            getReferenceProps: w,
+            getItemProps: V,
           } = (0, i.bv)([k, g, v, m, I, S]);
         return {
           floating: x,
           getFloatingProps: O,
-          getReferenceProps: V,
-          getItemProps: y,
+          getReferenceProps: w,
+          getItemProps: V,
           open: p,
           activeIndex: r,
           selectedIndex: c,
@@ -813,9 +828,9 @@
               focusedIndex: j,
               onItemSelectionChange: k,
               onFocusedIndexChange: O,
-              refPopover: V,
-              placeholder: y,
-              maxSelected: w,
+              refPopover: w,
+              placeholder: V,
+              maxSelected: y,
               ...L
             } = S("<SelectTrigger>"),
             P = {
@@ -992,9 +1007,9 @@
             afterContent: S,
             inputRef: k,
             ref: O,
-            disabled: V,
-            gamepadFocusable: y = !0,
-            ...w
+            disabled: w,
+            gamepadFocusable: V = !0,
+            ...y
           } = t,
           L = {
             ...n,
@@ -1013,10 +1028,10 @@
                   })
                 : S,
             ref: O,
-            disabled: V,
+            disabled: w,
           },
           P = (0, o.useRef)(null),
-          _ = y && p.TS.IN_GAMEPADUI ? f.BA : "input";
+          _ = V && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
           ...L,
@@ -1026,14 +1041,14 @@
           children: (0, r.jsx)(_, {
             ref: (0, h.Ue)(k, P),
             type: "text",
-            "aria-disabled": V,
-            readOnly: V,
+            "aria-disabled": w,
+            readOnly: w,
             className: l()((0, s.T)(), c.TextEntry),
             value: i || "",
             onChange: (e) => {
-              V || (x(e.target.value), m && m(e));
+              w || (x(e.target.value), m && m(e));
             },
-            ...w,
+            ...y,
           }),
         });
       }

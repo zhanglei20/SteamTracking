@@ -9078,7 +9078,7 @@
                 (a.background_gradient_top = n.background_gradient_top),
                 (a.border_color = n.border_color),
                 (a.border_width = n.border_width)),
-                ie.nG.SetSaleSectionType(a, e),
+                ie.nG.SetSaleSectionType(t.GetEventType(), a, e),
                 t.GetEventModel().jsondata.sale_sections.push(a),
                 t.SetDirty(ie.IQ.jsondata_sales),
                 (0, Sa.mi)((0, Sa.LY)(a), !0),

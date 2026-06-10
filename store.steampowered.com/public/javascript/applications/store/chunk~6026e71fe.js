@@ -16648,7 +16648,7 @@
             end_time: e.event_schedule_rtime_end ?? void 0,
           };
         }
-        async GetRecentEventsForSalesPage(e, t, a) {
+        async GetRecentGameEventsForSalesPage(e, t, a) {
           const n = Sa("recent_events", t?.unique_id, a?.unique_id);
           if (!this.m_rgRecentEvent.has(n) && !this.m_mapPromises.has(n)) {
             let r = {
@@ -16673,7 +16673,7 @@
             };
             this.m_mapPromises.set(
               n,
-              this.InternalEventForSalePageSection(n, r),
+              this.InternalEventForSalePageSection(0, n, r),
             );
           }
           return this.m_mapPromises.get(n);
@@ -16701,47 +16701,72 @@
             };
             this.m_mapPromises.set(
               n,
-              this.InternalEventForSalePageSection(n, r),
+              this.InternalEventForSalePageSection(2, n, r),
             );
           }
           return this.m_mapPromises.get(n);
         }
-        async InternalEventForSalePageSection(e, t) {
-          if ((this.Init(e), !this.m_rgRecentEvent.has(e))) {
-            this.m_rgRecentEvent.set(e, new Array());
-            let a = b.TS.STORE_BASE_URL + "saleaction/";
-            e.startsWith("recent_events")
-              ? (a += "ajaxrecentsaleevents")
-              : e.startsWith("live_sale_events")
-                ? (a += "ajaxgetlivesaleevents")
-                : (a += "ajaxrecenttaggedsaleevents");
+        async GetRecentClanEventsForSalesPage(e, t, a) {
+          const n = Sa("recent_events", t?.unique_id, a?.unique_id);
+          if (!this.m_rgRecentEvent.has(n) && !this.m_mapPromises.has(n)) {
+            let r = {
+              cc: b.TS.COUNTRY || "US",
+              l: b.TS.LANGUAGE,
+              start_time: new Date().getTime() / 1e3 - 6 * ha.Kp.PerMonth,
+              end_time: new Date().getTime() / 1e3,
+              count: t.smart_section_max_apps,
+              show_recent_first: Boolean(t.event_schedule_show_recent_first),
+              clanid: e.clanSteamID.GetAccountID(),
+              tabuniqueid: a?.unique_id || void 0,
+              tabfilter: a?.store_filter || void 0,
+              sectionid: t?.unique_id || void 0,
+              sectionfilter: t?.store_filter || void 0,
+              sort: t?.recent_tagged_events_sort || void 0,
+            };
+            this.m_mapPromises.set(
+              n,
+              this.InternalEventForSalePageSection(2, n, r),
+            );
+          }
+          return this.m_mapPromises.get(n);
+        }
+        async InternalEventForSalePageSection(e, t, a) {
+          if ((this.Init(t), !this.m_rgRecentEvent.has(t))) {
+            this.m_rgRecentEvent.set(t, new Array());
+            let n = b.TS.STORE_BASE_URL + "saleaction/";
+            n +=
+              0 == e
+                ? "ajaxrecentsaleevents"
+                : 1 == e
+                  ? "ajaxgetlivesaleevents"
+                  : "ajaxrecenttaggedsaleevents";
             try {
-              const n = await A().get(a, { params: t, withCredentials: !0 });
-              n.data.success == I.R &&
+              const e = await A().get(n, { params: a, withCredentials: !0 });
+              e.data.success == I.R &&
                 (0, Te.h5)(() => {
                   if (
-                    (this.AddAllRecentEvents(e, n.data.recent_events),
-                    n.data.partnerevents)
+                    (this.AddAllRecentEvents(t, e.data.recent_events),
+                    e.data.partnerevents)
                   ) {
-                    const e = n.data.partnerevents;
-                    Yt.O3.RegisterClanEvents(e);
-                    const t = e.map((e) => e.appid).filter(Boolean);
-                    t.length > 0 &&
-                      t.forEach((e) => D.A.Get().QueueAppRequest(e, s.Xh));
+                    const t = e.data.partnerevents;
+                    Yt.O3.RegisterClanEvents(t);
+                    const a = t.map((e) => e.appid).filter(Boolean);
+                    a.length > 0 &&
+                      a.forEach((e) => D.A.Get().QueueAppRequest(e, s.Xh));
                   }
                 });
-            } catch (t) {
-              const a = (0, U.H)(t);
+            } catch (e) {
+              const a = (0, U.H)(e);
               console.error(
                 "InternalEventForSalePageSection for " +
-                  e +
+                  t +
                   " failed:" +
                   a.strErrorMsg,
                 a,
               );
             }
           }
-          return this.m_rgRecentEvent.get(e);
+          return this.m_rgRecentEvent.get(t);
         }
         GetLiveSaleEvents(e, t, a) {
           const n = Sa("live_sale_events", t?.unique_id, a?.unique_id);
@@ -16766,7 +16791,7 @@
             };
             this.m_mapPromises.set(
               n,
-              this.InternalEventForSalePageSection(n, r),
+              this.InternalEventForSalePageSection(1, n, r),
             );
           }
           return this.m_mapPromises.get(n);
@@ -17029,11 +17054,17 @@
             if ((0, i.CU)(t)) {
               const a = (0, i.Pm)(t);
               let n = [];
-              "recent_events" === a
-                ? (n = await fa
-                    .Get()
-                    .GetRecentEventsForSalesPage(e, t, r?.GetTab()))
-                : "recent_tagged_events" === a
+              if ("recent_events" === a) {
+                n =
+                  e.GetEventType() == L.ajI
+                    ? await fa
+                        .Get()
+                        .GetRecentClanEventsForSalesPage(e, t, r?.GetTab())
+                    : await fa
+                        .Get()
+                        .GetRecentGameEventsForSalesPage(e, t, r?.GetTab());
+              } else
+                "recent_tagged_events" === a
                   ? ((n = await fa
                       .Get()
                       .GetRecentTaggedEventsForSalesPage(e, t, r?.GetTab())),

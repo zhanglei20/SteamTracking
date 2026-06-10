@@ -390,6 +390,21 @@
             middleware: (0, _._)(_),
             whileElementsMounted: _._,
             placement: _ && "object" == typeof _ ? _.initial : _,
+            strategy: "fixed",
+            platform: {
+              ..._._,
+              getOffsetParent: (_) => {
+                var _, _;
+                return null !==
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.ownerDocument) ||
+                    void 0 === _
+                      ? void 0
+                      : _.defaultView) && void 0 !== _
+                  ? _
+                  : window;
+              },
+            },
           }),
           _ = (0, _._)(_.context, {
             enabled: !!_.click,

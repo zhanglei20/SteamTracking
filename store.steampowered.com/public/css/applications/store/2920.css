@@ -1822,9 +1822,11 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
 }
 ._3F0SnUeC_obtI4WyQtijAa ._3GKl4T2MbvnGPvRzyXC5nQ {
   flex-grow: 1;
+  min-width: 0;
 }
 ._3F0SnUeC_obtI4WyQtijAa .HhD4RK0A4phOlAwZQDckk {
   display: flex;
+  min-width: 0;
 }
 ._3F0SnUeC_obtI4WyQtijAa ._1wLomHB2PWPNx7TsNYpdtm {
   display: flex;
@@ -1835,6 +1837,9 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
 }
 ._3F0SnUeC_obtI4WyQtijAa ._1wLomHB2PWPNx7TsNYpdtm._2aGDkEAUaGvF4KHHZRRkEj {
   display: block;
+}
+._3F0SnUeC_obtI4WyQtijAa ._1wLomHB2PWPNx7TsNYpdtm.c0VFjXtN_fgP-PR6wQe66 {
+  flex-wrap: nowrap;
 }
 ._3F0SnUeC_obtI4WyQtijAa ._1aXXp4afkXP3Ez03MjTY3D {
   margin-top: 0px;
@@ -1860,6 +1865,14 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
 ._3F0SnUeC_obtI4WyQtijAa ._2FgjpNRRiZkDXAB53vFFOh svg {
   fill: #7c8289;
   color: #7c8289;
+}
+._3F0SnUeC_obtI4WyQtijAa ._2iq-WR8SMiZcAwSnm-8-eE {
+  flex-grow: 1;
+  margin-inline-end: 15px;
+}
+._3F0SnUeC_obtI4WyQtijAa ._2iq-WR8SMiZcAwSnm-8-eE div[role="combobox"] {
+  flex-grow: 1;
+  min-width: 0;
 }
 .DialogButton._3-GZz-m5p_fxd2pqPGK6u9 {
   width: 26px;
