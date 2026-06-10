@@ -569,6 +569,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -576,7 +577,7 @@
           _ = (0, _._)(
             {
               ..._,
-              className: _()(_.Box, _.className),
+              className: _()(_.Box, (0, _._)(), _.className),
             },
             _,
           ),

@@ -238,7 +238,7 @@
     },
     90534: (e, n, t) => {
       "use strict";
-      t.d(n, { az: () => h });
+      t.d(n, { az: () => p });
       var i = t(7850),
         s = t(44041),
         o = t(39479),
@@ -246,17 +246,21 @@
         a = t.n(r),
         c = t(11526),
         l = t(75659),
-        d = t(8527);
-      function h(e) {
-        const { as: n = "div", focusable: t, navProps: r, ref: l, ...h } = e,
-          u = (0, c.mz)({ ...h, className: a()(s.Box, e.className) }, p),
-          m = t ?? r?.focusable ?? !!h.onClick,
-          _ = (0, i.jsx)(n, { ref: l, ...u });
-        return d.TS.IN_GAMEPADUI && (m || r)
-          ? (0, i.jsx)(o.J, { ...(r || {}), focusable: m, children: _ })
-          : _;
+        d = t(8527),
+        h = t(11820);
+      function p(e) {
+        const { as: n = "div", focusable: t, navProps: r, ref: l, ...p } = e,
+          m = (0, c.mz)(
+            { ...p, className: a()(s.Box, (0, h.T)(), e.className) },
+            u,
+          ),
+          _ = t ?? r?.focusable ?? !!p.onClick,
+          b = (0, i.jsx)(n, { ref: l, ...m });
+        return d.TS.IN_GAMEPADUI && (_ || r)
+          ? (0, i.jsx)(o.J, { ...(r || {}), focusable: _, children: b })
+          : b;
       }
-      const p = l.h;
+      const u = l.h;
     },
     20187: (e, n, t) => {
       "use strict";

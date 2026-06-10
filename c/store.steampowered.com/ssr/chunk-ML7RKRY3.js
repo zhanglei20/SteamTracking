@@ -1185,13 +1185,17 @@ var _ = [
       cssProperty: "--aspect-ratio",
     },
   ];
+var _ = "ykNywW4cg64-";
+function _() {
+  return _;
+}
 var _ = _(_(), 1);
 function _(_) {
   let { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
     _ = _(
       {
         ..._,
-        className: (0, _.default)(_, _.className),
+        className: (0, _.default)(_, _(), _.className),
       },
       _,
     ),
@@ -1422,10 +1426,6 @@ var _ = {
   Width: "OG8iH-W7xM0-",
   MinWidth: "_2RWLTCLE-0s-",
 };
-var _ = "ykNywW4cg64-";
-function _() {
-  return _;
-}
 var _ = {};
 _(_, {
   ChildContainer: () => _,

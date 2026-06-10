@@ -11807,6 +11807,7 @@ function _(_) {
     _ = _.isSuccess
       ? _.data
       : {
+          eresult: 1,
           results: [],
           current_page: 1,
           total_pages: 0,
@@ -11993,6 +11994,11 @@ function _(_) {
                         ),
                       ),
                   }),
+                _.data &&
+                  (0, _.jsx)(_, {
+                    eresult: _.data.eresult,
+                    errorMessage: _.data.error,
+                  }),
                 (0, _.jsx)(_, {
                   rgDetails: _.results,
                 }),
@@ -12014,6 +12020,43 @@ function _(_) {
       ],
     })
   );
+}
+function _(_) {
+  let { eresult: _, errorMessage: _ } = _,
+    [_, _] = (0, _.useState)(!1);
+  (0, _.useEffect)(() => {
+    _ != 1 && _(!0);
+  }, [_, _]);
+  let _ = (0, _.useCallback)(() => {
+    _(!1);
+  }, []);
+  return (0, _.jsx)(_.Fragment, {
+    children:
+      _ &&
+      (0, _.jsxs)(_, {
+        strTitle: _.Localize("#Workshop_Error_Title"),
+        onClose: _,
+        children: [
+          (0, _.jsx)(_, {
+            maxWidth: "500px",
+            children: (0, _.jsx)(_, {
+              _: "p",
+              children: _.Localize("#Workshop_Error_Browse_Desc", _),
+            }),
+          }),
+          (0, _.jsx)(_, {
+            justify: "end",
+            gap: "3",
+            align: "center",
+            marginTop: "3",
+            children: (0, _.jsx)(_, {
+              onClick: _,
+              children: _.Localize("#Button_Close"),
+            }),
+          }),
+        ],
+      }),
+  });
 }
 function _(_) {
   let { browseQuery: _ } = _,
