@@ -43,6 +43,7 @@ const languages = [
 	"_koreana-",
 	"_latam-",
 	"_norwegian-",
+	"_malay-",
 	"_polish-",
 	"_portuguese-",
 	"_romanian-",
