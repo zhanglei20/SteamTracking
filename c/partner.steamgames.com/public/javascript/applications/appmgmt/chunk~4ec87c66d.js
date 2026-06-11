@@ -5442,7 +5442,7 @@
           return this.m_oSpotlight.title;
         }
         GetAssetCount() {
-          return (0, _._)(this.m_oSpotlight.image);
+          return (0, _._)(this.m_oSpotlight.vertical_capsule);
         }
         GetLocalizedAltText(_) {
           return (
@@ -11580,7 +11580,7 @@
         }
         BIsSpotlightArtRequest() {
           return Boolean(
-            this.m_oInput.art_requests?.find((_) => "spotlight_art" == _),
+            this.m_oInput.art_requests?.find((_) => "spotlight_art_hero" == _),
           );
         }
         BIsSalePageArtRequest() {
@@ -41779,10 +41779,10 @@
                   }),
                   (0, _.jsxs)("div", {
                     children: [
-                      _.filter((_) =>
-                        _.BIsMarketingMessageArtRequest()
-                          ? _.startsWith("marketingmessage_art_2")
-                          : !_.startsWith("marketingmessage_art_2"),
+                      _.filter(
+                        (_) =>
+                          !_.startsWith("marketingmessage_art_2") &&
+                          "spotlight_art" != _,
                       ).map((_) =>
                         (0, _.jsx)(
                           _,
@@ -41976,17 +41976,15 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { planIdentify: _ } = _,
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(() => {
             let _ = 0;
             return (
-              __webpack_require__.BHasPreviewArtOfType("spotlight_art") && _++,
               __webpack_require__.BHasPreviewArtOfType("spotlight_art_hero") &&
                 _++,
-              [__webpack_require__.BIsSpotlightArtRequest(), _, 2]
+              [__webpack_require__.BIsSpotlightArtRequest(), _, 1]
             );
           });
         return _
@@ -42059,7 +42057,7 @@
                                   }),
                                   (0, _.jsx)("li", {
                                     children: (0, _._)(
-                                      "#AssetRequest_SpotlightHero_Design3",
+                                      "#AssetRequest_SpotlightHero_Design4",
                                     ),
                                   }),
                                 ],
@@ -42079,78 +42077,6 @@
                               (0, _.jsx)(_, {
                                 planIdentify: _,
                                 promoAssetType: "spotlight_art_hero",
-                              }),
-                            ],
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _().SectionCtn,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().AssetSpecs,
-                          children: (0, _.jsxs)("div", {
-                            className: _().AssetTypeCtn,
-                            children: [
-                              (0, _.jsx)("div", {
-                                className: _().AssetTitle,
-                                children: (0, _._)(
-                                  "#AssetRequest_ArtType_spotlight_art",
-                                ),
-                              }),
-                              (0, _.jsx)("div", {
-                                children: (0, _._)(
-                                  "#AssetRequest_General_Size",
-                                  306,
-                                  260,
-                                ),
-                              }),
-                              (0, _.jsx)("br", {}),
-                              (0, _.jsx)("div", {
-                                children: (0, _._)(
-                                  "#AssetRequest_Spotlight_Usage",
-                                ),
-                              }),
-                              (0, _.jsx)("br", {}),
-                              (0, _.jsxs)("ul", {
-                                children: [
-                                  (0, _.jsx)("li", {
-                                    children: (0, _._)(
-                                      "#AssetRequest_Spotlight_Design",
-                                    ),
-                                  }),
-                                  (0, _.jsx)("li", {
-                                    children: (0, _._)(
-                                      "#AssetRequest_Spotlight_Design2",
-                                    ),
-                                  }),
-                                  (0, _.jsx)("li", {
-                                    children: (0, _._)(
-                                      "#AssetRequest_Spotlight_Design3",
-                                    ),
-                                  }),
-                                  (0, _.jsx)("li", {
-                                    children: (0, _._)(
-                                      "#AssetRequest_Spotlight_Design4",
-                                    ),
-                                  }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().AssetUploadPreviewCtn,
-                          children: (0, _.jsxs)("div", {
-                            className: _().AssetUploadPreview,
-                            children: [
-                              (0, _.jsx)(_, {
-                                planID: _._,
-                                promoAssetType: "spotlight_art",
-                              }),
-                              (0, _.jsx)(_, {
-                                planIdentify: _,
                               }),
                             ],
                           }),
@@ -42163,45 +42089,6 @@
               ],
             })
           : null;
-      }
-      function _(_) {
-        const { planIdentify: _ } = _,
-          _ = (0, _._)().GetPreviewArtOfType("spotlight_art");
-        return (0, _.jsxs)("div", {
-          className: _().SpotlightPreviewCtn,
-          children: [
-            (0, _.jsx)("img", {
-              src: _?.filename ? _(_._, _.lang, _.filename) : void 0,
-            }),
-            (0, _.jsxs)("div", {
-              className: _().Content,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().Title,
-                  children: (0, _._)("#AssetRequest_Type_" + _.type),
-                }),
-                (0, _.jsx)("div", {
-                  className: _().Subtitle,
-                  children: (0, _._)(
-                    "#AssetRequest_Spotlight_End",
-                    (0, _._)(_.end_date),
-                  ),
-                }),
-                (0, _.jsx)(_._, {
-                  bIsPrePurchase: !1,
-                  bHidePrePurchase: !1,
-                  bSingleLineMode: !1,
-                  nDiscountPercentage: 50,
-                  nBaseDiscountPercentage: null,
-                  strBestPurchasePriceFormatted: "$14.99",
-                  strBestPurchaseOriginalPriceFormatted: "$30.00",
-                  bHideDiscountPercentForCompliance: !1,
-                  bShowNewFlag: !1,
-                }),
-              ],
-            }),
-          ],
-        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -43617,8 +43504,7 @@
               __webpack_require__.BIsMarketingMessageEventCapsuleRequest(),
             __webpack_require__.BIsMarketingMessageArtRequest_2() ||
               __webpack_require__.BIsMarketingMessageEventCapsuleRequest_2(),
-            __webpack_require__.BHasPreviewArtOfType("spotlight_art") &&
-              __webpack_require__.BHasPreviewArtOfType("spotlight_art_hero"),
+            __webpack_require__.BHasPreviewArtOfType("spotlight_art_hero"),
             __webpack_require__.BHasPreviewArtOfType("marketingmessage_art") ||
               __webpack_require__.BHasPreviewArtOfType(
                 "marketingmessage_art_eventcapsule",
@@ -51017,26 +50903,6 @@
                     (0, _.jsxs)("div", {
                       children: [
                         (0, _.jsx)("h3", {
-                          children: "Spotlight Banner",
-                        }),
-                        (0, _.jsxs)("div", {
-                          children: [
-                            (0, _.jsx)("span", {
-                              children: "306px x 260px",
-                            }),
-                            " (.webp)",
-                          ],
-                        }),
-                        (0, _.jsx)(_, {
-                          oEditableSpotlight: _,
-                          assetType: "image",
-                        }),
-                        (0, _.jsx)("br", {}),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      children: [
-                        (0, _.jsx)("h3", {
                           children: "Spotlight Vertical Capsule",
                         }),
                         (0, _.jsxs)("div", {
@@ -51162,19 +51028,22 @@
             _.GetModel(),
             _.GetAssetCount(),
           ]);
-        return (0, _.jsx)(_, {
-          bIsDirty: _,
-          bSaveDisabled: 0 == _,
-          fnOnRevert: () => _.RevertChanges(),
-          fnOnSave: async () => {
-            const _ = await __webpack_require__(
-              _._.k_ConfigPage_Spotlight,
-              _,
-              _.GetAssetParams(),
-            );
-            return _ && _.Reset((0, _._)(_._.k_ConfigPage_Spotlight, _)), _;
-          },
-        });
+        return (
+          console.log(_),
+          (0, _.jsx)(_, {
+            bIsDirty: _,
+            bSaveDisabled: 0 == _,
+            fnOnRevert: () => _.RevertChanges(),
+            fnOnSave: async () => {
+              const _ = await __webpack_require__(
+                _._.k_ConfigPage_Spotlight,
+                _,
+                _.GetAssetParams(),
+              );
+              return _ && _.Reset((0, _._)(_._.k_ConfigPage_Spotlight, _)), _;
+            },
+          })
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -53213,12 +53082,10 @@
               bShowInternalControls: _,
               promotionPlanID: _.GetID(),
             }),
-          _.BHasSpotlightIDs(0) &&
-            (!_ ||
-              __webpack_require__.includes("spotlight_art") ||
-              __webpack_require__.includes("spotlight_art_hero")) &&
+          !_.BHasSpotlightIDs(0) ||
+            (_ && !__webpack_require__.includes("spotlight_art_hero")) ||
             _.push({
-              artworkType: "spotlight_art",
+              artworkType: "spotlight_art_hero",
               _: _.GetSpotlightIDs(0),
               promotionPlanID: _.GetID(),
             }),
