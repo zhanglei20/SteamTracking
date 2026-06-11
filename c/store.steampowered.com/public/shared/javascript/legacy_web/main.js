@@ -393,9 +393,9 @@ var CLSTAMP = "steamdb";
       }[_] || _) +
       ".js?contenthash=" +
       {
-        97: "d6fe226678ac7e8c2bcd",
-        322: "7d791f22838c683fee08",
-        616: "64298c296eb38b526a48",
+        97: "c009283deb0329268dcf",
+        322: "7f701b122fbddc6331bf",
+        616: "c936cc8b65ef5e585f1c",
       }[_]),
     (_.miniCssF = (_) =>
       "css/legacy_web/gamepad.css?contenthash=19ddf4825411373681e0"),
@@ -615,12 +615,12 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  _(350);
+  _(990);
   var _ = _(669),
     _ = _._(_),
     _ = _(629),
-    _ = _(469),
-    _ = _(829);
+    _ = _(367),
+    _ = _(253);
   let _ = [
     {
       index: 0,
@@ -749,12 +749,12 @@ var CLSTAMP = "steamdb";
     }
   }
   (0, _._)([_._], _.prototype, "PollGamepads", null);
-  var _ = _(529);
+  var _ = _(721);
   async function _(_) {
     const { InitializeGamepadNavigation: _ } = await Promise.all([
       _._(322),
       _._(616),
-    ]).then(_.bind(_, 696));
+    ]).then(_.bind(_, 423));
     _(_);
   }
   _._.endsWith("shared/") || (_._ = _._ + "shared/"),
@@ -767,7 +767,7 @@ var CLSTAMP = "steamdb";
               (0, _._)("BrowserView.PostMessageToParent")
             ? (async function () {
                 const { InitializeForDesktop: _ } = await _._(97).then(
-                  _.bind(_, 119),
+                  _.bind(_, 999),
                 );
                 _();
               })()

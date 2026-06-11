@@ -229,6 +229,7 @@
     chunkid: (module) => {
       module.exports = {
         CurrentTabsCtn: "_24eKifx9xcytLLQcgPbDxI",
+        CurrentTabsHelp: "_3MpMXpvVtJm8HEDsvQVLp4",
         AddButton: "_2fqBDc1H7Eckp9bvNk0iRp",
         ImgPreview: "_3jXQP5QEh1cHqXXFnUFAMv",
         ColorButtonsCtn: "pxbho4ej9vrUknlcN1iac",
@@ -240,6 +241,7 @@
         TabSummaryItem: "_2wI0jrWTXmdWAEiz7y1yTH",
         Checked: "_17x-C-paezhBHOimg-XpU5",
         Hide: "_3CFHNxlYvvFQa74bL_-8xT",
+        TabSummaryQuestionTooltip: "_1tgeZCdgfdJXAgDgG0ntA9",
       };
     },
     chunkid: (module) => {
@@ -11527,6 +11529,10 @@
               (0, _.jsxs)("div", {
                 className: _.CurrentTabsCtn,
                 children: [
+                  (0, _.jsx)("div", {
+                    className: _.CurrentTabsHelp,
+                    children: (0, _._)("#Sale_Tabs_Current_help"),
+                  }),
                   (0, _.jsxs)("div", {
                     className: _.EventEditorTextTitle,
                     children: [
@@ -11895,29 +11901,35 @@
                 }));
           });
         return _ && 0 != _.length
-          ? (0, _.jsx)("div", {
+          ? (0, _.jsxs)("div", {
               className: (0, _._)(_.TabSummaryCtn, _ && _.Expanded),
-              children: _.map((_) =>
-                (0, _.jsx)(
-                  "button",
-                  {
-                    "data-label": _.strLabel,
-                    className: (0, _._)(
-                      _.TabSummaryItem,
-                      _.unique_id == _ && _.Checked,
-                      _.bHide && _.Hide,
-                    ),
-                    onClick: () => {
-                      return (
-                        (_ = _.unique_id), void (0, _._)(_ == _ ? void 0 : _)
-                      );
-                      var _;
+              children: [
+                _.map((_) =>
+                  (0, _.jsx)(
+                    "button",
+                    {
+                      "data-label": _.strLabel,
+                      className: (0, _._)(
+                        _.TabSummaryItem,
+                        _.unique_id == _ && _.Checked,
+                        _.bHide && _.Hide,
+                      ),
+                      onClick: () => {
+                        return (
+                          (_ = _.unique_id), void (0, _._)(_ == _ ? void 0 : _)
+                        );
+                        var _;
+                      },
+                      children: _.strLabel,
                     },
-                    children: _.strLabel,
-                  },
-                  _.unique_id,
+                    _.unique_id,
+                  ),
                 ),
-              ),
+                (0, _.jsx)(_._, {
+                  className: _.TabSummaryQuestionTooltip,
+                  tooltip: (0, _._)("#Sale_Tabs_QuickFilter"),
+                }),
+              ],
             })
           : null;
       }
@@ -26708,6 +26720,8 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { saleSection: _, editModel: _ } = _,
           [_] = (0, _._)(() => [(0, _._)(_, !0)]),
@@ -26856,6 +26870,15 @@
         const { saleSection: _, editModel: _ } = _;
         return (0, _.jsxs)("div", {
           children: [
+            (0, _.jsx)("div", {
+              children: (0, _._)(
+                "#Sele_Event_SmartSection_RecentEvents_sale",
+                (0, _.jsx)(_._, {
+                  _: _._.Home(_.GetStrVanityOrAppID()),
+                }),
+              ),
+            }),
+            (0, _.jsx)("br", {}),
             (0, _.jsx)(_._, {
               type: "number",
               min: "4",
@@ -30175,7 +30198,7 @@
                 data: "text_section",
                 tooltip: (0, _._)("#Sale_TextSection_ttip"),
               },
-              !_ && {
+              {
                 label: (0, _._)("#Sale_Tabs"),
                 data: "tabs",
                 tooltip: (0, _._)("#Sale_Tabs_ttip"),

@@ -2476,6 +2476,27 @@
         },
       };
     },
+    1736: (e, t, a) => {
+      "use strict";
+      a.d(t, { _: () => o });
+      var n = a(7850),
+        r = a(15759),
+        s = a(28491),
+        i = a(91307);
+      function o(e) {
+        let t = (0, i.P)(e.args) ?? (0, i.P)(e.args, "href");
+        return t && t.match(/^https?:\/\//)
+          ? ((0, r.p)(t) && (t = (0, r.E)(t)),
+            (0, n.jsx)(s.Y, {
+              target: "_blank",
+              href: t,
+              underline: "auto",
+              contrast: "title",
+              children: e.children,
+            }))
+          : e.children;
+      }
+    },
     60869: (e, t, a) => {
       "use strict";
       a.d(t, { I: () => r });
@@ -4476,42 +4497,27 @@
           : {};
       }
     },
-    55685: (e, t, a) => {
+    24570: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => g });
+      a.d(t, { o: () => _ });
       var n = a(7850),
         r = a(42780),
         s = a(47535),
         i = a(78312),
-        o = a(15759),
-        l = a(28491),
-        c = a(91307);
-      function d(e) {
-        let t = (0, c.P)(e.args) ?? (0, c.P)(e.args, "href");
-        return t && t.match(/^https?:\/\//)
-          ? ((0, o.p)(t) && (t = (0, o.E)(t)),
-            (0, n.jsx)(l.Y, {
-              target: "_blank",
-              href: t,
-              underline: "auto",
-              contrast: "title",
-              children: e.children,
-            }))
-          : e.children;
-      }
-      var u = a(60869),
-        _ = a(99376),
-        m = a(8527),
-        p = a(90626);
-      function g(e) {
+        o = a(1736),
+        l = a(60869),
+        c = a(99376),
+        d = a(8527),
+        u = a(90626);
+      function _(e) {
         const { text: t } = e;
-        return t ? (0, n.jsx)(h, { text: t }) : null;
+        return t ? (0, n.jsx)(m, { text: t }) : null;
       }
-      function h(e) {
+      function m(e) {
         const { text: t } = e,
-          a = (0, p.useMemo)(() => {
-            const e = { ...s.L, ...u.I, ...i.F, url: { Constructor: d } };
-            return new _.B(e, (e) => new r.OJ(new r.R8()), m.TS.LANGUAGE);
+          a = (0, u.useMemo)(() => {
+            const e = { ...s.L, ...l.I, ...i.F, url: { Constructor: o._ } };
+            return new c.B(e, (e) => new r.OJ(new r.R8()), d.TS.LANGUAGE);
           }, []);
         return (0, n.jsx)(n.Fragment, { children: a.ParseBBCode(t, void 0) });
       }
@@ -10756,7 +10762,7 @@
         s = a(81393),
         i = a(64753),
         o = a(53807),
-        l = a(55685),
+        l = a(24570),
         c = a(37085),
         d = a(75233),
         u = a(51614),
@@ -18757,7 +18763,7 @@
         bn = a.n(yn),
         Cn = a(52885),
         wn = a(78588),
-        xn = a(55685),
+        xn = a(24570),
         An = a(65494),
         In = a.n(An);
       function Tn(e) {
@@ -23245,31 +23251,42 @@
           t.section_type)
         ) {
           case "tabs":
-            return a
-              ? (0, n.jsxs)(n.Fragment, {
-                  children: [
-                    (0, n.jsx)("div", { ref: c }),
-                    (0, n.jsx)(ri, {
-                      section: t,
-                      ...e,
-                      activeTab: a?.GetTab(),
-                      onTabSelected: d,
-                    }),
-                  ],
-                })
-              : l
-                ? (0, n.jsx)("div", {
-                    children: (0, k.we)("#Sale_Section_TabUndefined"),
+            let r = null;
+            return (
+              !a || !t.tabs || t.tabs.length < 2
+                ? (r = (0, k.we)("#Sale_Section_TabUndefined"))
+                : t.tabs.every(
+                    (e) =>
+                      null === e.default_label ||
+                      ("" === e.default_label && null == e.localized_label),
+                  ) && (r = (0, k.we)("#Sale_Section_TabsUnnamed")),
+              r
+                ? l
+                  ? (0, n.jsx)("div", {
+                      className: m().preview_placeholder_section,
+                      children: r,
+                    })
+                  : null
+                : (0, n.jsxs)(n.Fragment, {
+                    children: [
+                      (0, n.jsx)("div", { ref: c }),
+                      (0, n.jsx)(ri, {
+                        section: t,
+                        ...e,
+                        activeTab: a?.GetTab(),
+                        onTabSelected: d,
+                      }),
+                    ],
                   })
-                : null;
+            );
           case "tab_buttons":
-            const r = t.diable_tab_id_filtering
+            const s = t.diable_tab_id_filtering
               ? new ya.y(null, i.GetSaleDay())
               : i;
             return i
               ? (0, n.jsx)(si, {
                   ...e,
-                  activeTab: r,
+                  activeTab: s,
                   onTabSelected: d,
                   hideActiveTab: !0,
                 })

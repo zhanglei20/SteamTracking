@@ -32458,31 +32458,42 @@
           t.section_type)
         ) {
           case "tabs":
-            return n
-              ? (0, i.jsxs)(i.Fragment, {
-                  children: [
-                    (0, i.jsx)("div", { ref: c }),
-                    (0, i.jsx)(mo, {
-                      section: t,
-                      ...e,
-                      activeTab: null == n ? void 0 : n.GetTab(),
-                      onTabSelected: d,
-                    }),
-                  ],
-                })
-              : l
-                ? (0, i.jsx)("div", {
-                    children: (0, T.we)("#Sale_Section_TabUndefined"),
+            let r = null;
+            return (
+              !n || !t.tabs || t.tabs.length < 2
+                ? (r = (0, T.we)("#Sale_Section_TabUndefined"))
+                : t.tabs.every(
+                    (e) =>
+                      null === e.default_label ||
+                      ("" === e.default_label && null == e.localized_label),
+                  ) && (r = (0, T.we)("#Sale_Section_TabsUnnamed")),
+              r
+                ? l
+                  ? (0, i.jsx)("div", {
+                      className: _().preview_placeholder_section,
+                      children: r,
+                    })
+                  : null
+                : (0, i.jsxs)(i.Fragment, {
+                    children: [
+                      (0, i.jsx)("div", { ref: c }),
+                      (0, i.jsx)(mo, {
+                        section: t,
+                        ...e,
+                        activeTab: null == n ? void 0 : n.GetTab(),
+                        onTabSelected: d,
+                      }),
+                    ],
                   })
-                : null;
+            );
           case "tab_buttons":
-            const r = t.diable_tab_id_filtering
+            const a = t.diable_tab_id_filtering
               ? new Mi.y(null, s.GetSaleDay())
               : s;
             return s
               ? (0, i.jsx)(_o, {
                   ...e,
-                  activeTab: r,
+                  activeTab: a,
                   onTabSelected: d,
                   hideActiveTab: !0,
                 })

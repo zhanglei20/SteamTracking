@@ -9962,6 +9962,16 @@
         });
       }
       function _(_) {
+        const { children: _ } = _;
+        return (0, _.jsx)(_._, {
+          direction: "column",
+          flexGrow: "1",
+          gap: "3",
+          overflow: "hidden",
+          children: _,
+        });
+      }
+      function _(_) {
         const { option: _ } = _,
           { data: _ } = (0, _._)({
             appid: _.appid,
@@ -9984,8 +9994,10 @@
                     _.name,
                   ),
                 }),
-                (0, _.jsx)(_._, {
-                  children: _.label,
+                (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_._, {
+                    children: _.label,
+                  }),
                 }),
               ],
             })
@@ -10009,24 +10021,40 @@
                 (0, _.jsx)(_, {
                   title: _.Localize("#AppPage_PurchaseOption_Play", _.name),
                 }),
-                (0, _.jsx)(_._, {
-                  children: _.Localize("#AppPage_PurchaseOption_FreeToPlay"),
+                (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_._, {
+                    children: _.Localize("#AppPage_PurchaseOption_FreeToPlay"),
+                  }),
                 }),
               ],
             })
           : null;
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { text: _ } = _;
+        const { text: _, onURLDetected: _ } = _,
+          _ = _.useCallback(
+            (_) => {
+              let _ = (0, _._)(_.args) ?? (0, _._)(_.args, "href");
+              return (
+                (0, _._)(_) && (_ = (0, _._)(_)),
+                _ && __webpack_require__(_),
+                (0, _._)(_)
+              );
+            },
+            [_],
+          );
         return _.useMemo(() => {
           const _ = {
             ..._._,
             ..._._,
             ..._._,
-            url: _._._,
+            url: {
+              Constructor: _,
+            },
           };
           return new _._(_, (_) => new _._(new _._()), _._.LANGUAGE);
-        }, []).ParseBBCode(_, void 0);
+        }, [_]).ParseBBCode(_, void 0);
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10077,7 +10105,16 @@
       }
       function _(_) {
         const { option: _ } = _,
+          { appid: _ } = _.useContext(_),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
           _ = _.data.package_group,
+          [_, _] = _.useState(""),
+          _ = (0, _._)(_),
+          _ = _.useCallback(() => {
+            _ && (window.location.href = _);
+          }, [_, _]),
           _ = _.useCallback(
             (_) => {
               (0, _._)(
@@ -10092,17 +10129,27 @@
         return (0, _.jsxs)(_, {
           option: _,
           onActivate: _,
+          onSecondaryButton: _ ? _ : void 0,
+          onSecondaryActionDescription: _
+            ? _.Localize("#AppPage_PurchaseOption_MoreInfo")
+            : void 0,
           children: [
             (0, _.jsx)(_, {
-              title: _.dropdown_title,
+              title:
+                _.dropdown_title ||
+                _.Localize("#AppPage_Dropdown_DefaultTitle", _?.name),
             }),
-            _.dropdown_description_bbcode &&
-              (0, _.jsx)(_._, {
-                size: "2",
-                children: (0, _.jsx)(_, {
-                  text: _.dropdown_description_bbcode,
+            (0, _.jsx)(_, {
+              children:
+                _.dropdown_description_bbcode &&
+                (0, _.jsx)(_._, {
+                  size: "2",
+                  children: (0, _.jsx)(_, {
+                    text: _.dropdown_description_bbcode,
+                    onURLDetected: _,
+                  }),
                 }),
-              }),
+            }),
           ],
         });
       }
@@ -10152,7 +10199,7 @@
         return _ || _ || _
           ? (0, _.jsxs)(_._, {
               direction: "row",
-              flexGrow: "1",
+              flexGrow: "0",
               flexShrink: "0",
               align: "end",
               justify: "end",
@@ -10193,17 +10240,21 @@
                 (0, _.jsx)(_, {
                   title: _.Localize("#AppPage_PurchaseOption_Play", _.name),
                 }),
-                !_ &&
-                  (0, _.jsx)(_._, {
-                    children: _.Localize(
-                      "#AppPage_PurchaseOption_Play_Description",
-                      _.name,
-                    ),
-                  }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    appid: _,
-                  }),
+                (0, _.jsxs)(_, {
+                  children: [
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        children: _.Localize(
+                          "#AppPage_PurchaseOption_Play_Description",
+                          _.name,
+                        ),
+                      }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        appid: _,
+                      }),
+                  ],
+                }),
                 (0, _.jsx)(_, {
                   onPlay: _,
                 }),
@@ -10263,8 +10314,10 @@
                   (0, _.jsx)(_, {
                     title: _.Localize(_, _.name),
                   }),
-                  (0, _.jsx)(_._, {
-                    children: _.Localize(_),
+                  (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_._, {
+                      children: _.Localize(_),
+                    }),
                   }),
                 ],
               })
@@ -10313,6 +10366,7 @@
           ? null
           : (0, _.jsx)(_._, {
               contrast: "body",
+              size: "2",
               children: _,
             });
       }
@@ -10453,31 +10507,43 @@
                   children: [" ", _.Localize("#AppPage_PurchaseOption_Bundle")],
                 }),
               }),
-              (0, _.jsx)(_, {
-                _: _,
-                bSelfPurchaseOption: !0,
-              }),
-              (0, _.jsxs)(_._, {
-                direction: "column",
-                flexGrow: "1",
-                flexShrink: "1",
-                overflow: "hidden",
+              (0, _.jsxs)(_, {
                 children: [
                   (0, _.jsx)(_, {
-                    option: _.best_purchase_option,
+                    _: _,
+                    bSelfPurchaseOption: !0,
                   }),
-                  (0, _.jsx)(_._, {
-                    size: "2",
-                    children: _.LocalizePlural(
-                      _,
-                      _,
-                      _.best_purchase_option?.discount_pct ||
-                        _.best_purchase_option?.bundle_discount_pct ||
-                        0,
-                    ),
-                  }),
-                  (0, _.jsx)(_, {
-                    apps: _,
+                  (0, _.jsxs)(_._, {
+                    direction: "column",
+                    flexGrow: "1",
+                    flexShrink: "1",
+                    overflow: "hidden",
+                    gap: "1",
+                    children: [
+                      (0, _.jsx)(_, {
+                        option: _.best_purchase_option,
+                      }),
+                      (0, _.jsxs)(_._, {
+                        direction: "column",
+                        flexGrow: "1",
+                        overflow: "hidden",
+                        children: [
+                          (0, _.jsx)(_._, {
+                            size: "2",
+                            children: _.LocalizePlural(
+                              _,
+                              _,
+                              _.best_purchase_option?.discount_pct ||
+                                _.best_purchase_option?.bundle_discount_pct ||
+                                0,
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            apps: _,
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
                 ],
               }),
@@ -10490,32 +10556,53 @@
         );
       }
       function _(_) {
-        const { apps: _ } = _;
-        if (0 == _.length) return null;
-        let _ = _,
-          _ = 0;
-        return (
-          _.length > 4 && ((_ = _.slice(0, 3)), (_ = _.length - _.length)),
-          (0, _.jsxs)("ul", {
-            className: _().AppList,
-            children: [
-              __webpack_require__.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    appid: _,
-                  },
-                  _,
-                ),
+        const { apps: _ } = _,
+          [_, _] = _.useState(Math.min(_.length, 6)),
+          _ = _.useRef(null),
+          _ = (0, _._)((_) => {
+            if (_.current) {
+              const _ = _.contentRect,
+                _ = _.current?.getBoundingClientRect();
+              let _ = _.height,
+                _ = 0;
+              for (let _ of _.target.children) {
+                if ("LI" != _.tagName) continue;
+                const _ = __webpack_require__.getBoundingClientRect();
+                if (
+                  !(
+                    (_ != _.length - 1 && _.height < _ - _.height) ||
+                    (_ == _.length - 1 && _.height < _)
+                  )
+                )
+                  break;
+                _++, (_ -= _.height);
+              }
+              _ != _ && _(_),
+                (_.current.style.opacity = _ == _.length ? "0" : "1");
+            }
+          });
+        if (0 == _.length || 0 == _) return null;
+        const _ = _.length - _;
+        return (0, _.jsxs)("ul", {
+          className: _().AppList,
+          ref: _,
+          children: [
+            _.slice(0, _).map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  appid: _,
+                },
+                _,
               ),
-              _ > 0 &&
-                (0, _.jsx)(_._, {
-                  size: "2",
-                  children: _.Localize("#AppPage_AdditionalItems", _),
-                }),
-            ],
-          })
-        );
+            ),
+            (0, _.jsx)(_._, {
+              ref: _,
+              size: "2",
+              children: _.Localize("#AppPage_AdditionalItems", _),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { appid: _ } = _,
@@ -10571,15 +10658,19 @@
                 title: _,
                 bPrepurchase: (0, _._)(_, _),
               }),
-              (0, _.jsx)(_, {
-                _: _,
-                bSelfPurchaseOption: !!_.self_purchase_option?.packageid,
-              }),
-              (0, _.jsx)(_, {
-                option: _,
-              }),
-              (0, _.jsx)(_, {
-                _: _,
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_, {
+                    _: _,
+                    bSelfPurchaseOption: !!_.self_purchase_option?.packageid,
+                  }),
+                  (0, _.jsx)(_, {
+                    option: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    _: _,
+                  }),
+                ],
               }),
               (0, _.jsx)(_, {
                 onAddToCart: _,
@@ -10703,7 +10794,7 @@
                   (0, _.jsx)(_, {
                     _: _,
                   }),
-                  (0, _.jsx)(_, {
+                  (0, _.jsxs)(_, {
                     option: _,
                     onActivate: _,
                     onOKActionDescription: _.Localize(
@@ -10711,26 +10802,20 @@
                     ),
                     onSecondaryButton: _,
                     onSecondaryActionDescription: _,
-                    children: (0, _.jsxs)(_._, {
-                      direction: "column",
-                      gap: "3",
-                      height: "100%",
-                      overflow: "hidden",
-                      children: [
-                        _.item_type == _._._ &&
-                          (0, _.jsx)(_, {
-                            _: _,
-                            onAddToCart: _,
-                            onInfo: _,
-                          }),
-                        _.item_type == _._._ &&
-                          (0, _.jsx)(_, {
-                            _: _,
-                            onAddToCart: _,
-                            onInfo: _,
-                          }),
-                      ],
-                    }),
+                    children: [
+                      _.item_type == _._._ &&
+                        (0, _.jsx)(_, {
+                          _: _,
+                          onAddToCart: _,
+                          onInfo: _,
+                        }),
+                      _.item_type == _._._ &&
+                        (0, _.jsx)(_, {
+                          _: _,
+                          onAddToCart: _,
+                          onInfo: _,
+                        }),
+                    ],
                   }),
                   _ &&
                     _.data.is_edition &&

@@ -2680,6 +2680,29 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        let _ = (0, _._)(_.args) ?? (0, _._)(_.args, "href");
+        return _ && _.match(/^https?:\/\//)
+          ? ((0, _._)(_) && (_ = (0, _._)(_)),
+            (0, _.jsx)(_._, {
+              target: "_blank",
+              href: _,
+              underline: "auto",
+              contrast: "title",
+              children: _.children,
+            }))
+          : _.children;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid");
       const _ = {
         list: {
@@ -4958,21 +4981,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        let _ = (0, _._)(_.args) ?? (0, _._)(_.args, "href");
-        return _ && _.match(/^https?:\/\//)
-          ? ((0, _._)(_) && (_ = (0, _._)(_)),
-            (0, _.jsx)(_._, {
-              target: "_blank",
-              href: _,
-              underline: "auto",
-              contrast: "title",
-              children: _.children,
-            }))
-          : _.children;
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4992,7 +5000,7 @@
               ..._._,
               ..._._,
               url: {
-                Constructor: _,
+                Constructor: _._,
               },
             };
             return new _._(_, (_) => new _._(new _._()), _._.LANGUAGE);
@@ -24926,25 +24934,36 @@
           _.section_type)
         ) {
           case "tabs":
-            return _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      ref: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      section: _,
-                      ..._,
-                      activeTab: __webpack_require__?.GetTab(),
-                      onTabSelected: _,
-                    }),
-                  ],
-                })
-              : _
-                ? (0, _.jsx)("div", {
-                    children: (0, _._)("#Sale_Section_TabUndefined"),
+            let _ = null;
+            return (
+              !_ || !_.tabs || _.tabs.length < 2
+                ? (_ = (0, _._)("#Sale_Section_TabUndefined"))
+                : _.tabs.every(
+                    (_) =>
+                      null === _.default_label ||
+                      ("" === _.default_label && null == _.localized_label),
+                  ) && (_ = (0, _._)("#Sale_Section_TabsUnnamed")),
+              _
+                ? _
+                  ? (0, _.jsx)("div", {
+                      className: _().preview_placeholder_section,
+                      children: _,
+                    })
+                  : null
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        ref: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        section: _,
+                        ..._,
+                        activeTab: __webpack_require__?.GetTab(),
+                        onTabSelected: _,
+                      }),
+                    ],
                   })
-                : null;
+            );
           case "tab_buttons":
             const _ = _.diable_tab_id_filtering
               ? new _._(null, _.GetSaleDay())

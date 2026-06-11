@@ -34443,26 +34443,37 @@
           _.section_type)
         ) {
           case "tabs":
-            return _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      ref: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      section: _,
-                      ..._,
-                      activeTab:
-                        null == _ ? void 0 : __webpack_require__.GetTab(),
-                      onTabSelected: _,
-                    }),
-                  ],
-                })
-              : _
-                ? (0, _.jsx)("div", {
-                    children: (0, _._)("#Sale_Section_TabUndefined"),
+            let _ = null;
+            return (
+              !_ || !_.tabs || _.tabs.length < 2
+                ? (_ = (0, _._)("#Sale_Section_TabUndefined"))
+                : _.tabs.every(
+                    (_) =>
+                      null === _.default_label ||
+                      ("" === _.default_label && null == _.localized_label),
+                  ) && (_ = (0, _._)("#Sale_Section_TabsUnnamed")),
+              _
+                ? _
+                  ? (0, _.jsx)("div", {
+                      className: _().preview_placeholder_section,
+                      children: _,
+                    })
+                  : null
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        ref: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        section: _,
+                        ..._,
+                        activeTab:
+                          null == _ ? void 0 : __webpack_require__.GetTab(),
+                        onTabSelected: _,
+                      }),
+                    ],
                   })
-                : null;
+            );
           case "tab_buttons":
             const _ = _.diable_tab_id_filtering
               ? new _._(null, _.GetSaleDay())

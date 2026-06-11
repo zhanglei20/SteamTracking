@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123m
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -2484,6 +2483,7 @@ $steammessages_parental_objects.proto"
 %s/%s/%u/ugc/%d_%s.vdf
 %s/%s/%u/ugc/%s/
 %s/%s/%u/ugc/consumed.vdf
+%s/%s/AlwaysAllowSpectating
 %s/%s/DeviceName
 %s/%s/Key
 %s/%s/TOUCH
@@ -3885,7 +3885,7 @@ $steammessages_parental_objects.proto"
 (\t"&\n$CSteamTV_GetFollowedChannels_Request"
 (\t"&\n$CTransportAuth_Authenticate_Response"+\n)CTransportAuth_StartShutdown_Notification2
 (\t"(\n&CFriendMessages_ReportMessage_Response"
-(\t"(\n&CHardwareUpdate_PrepForUpdate_Response*
+(\t"(\n&CHardwareUpdate_PrepForUpdate_Response"*\n(CHardwareUpdate_EnumerateDevices_Request"
 (\t"(\n&CInventory_GetUserPurchaseInfo_Request"<\n'CInventory_GetUserPurchaseInfo_Response
 (\t"(\n&CSiteLicense_LCSAssociateUser_Response"]\n'CSiteLicense_ClientSeatCheckout_Request
 (\t")\n'CPlayer_GetPerFriendPreferences_Request"
@@ -4291,6 +4291,7 @@ $steammessages_parental_objects.proto"
 (\v20.CStoreBrowse_GetDLCForAppsSolr_Response.DLCList
 (\v20.CSupportRefreshTokenDescription.TokenUsageEvent
 (\v21.CChatRoom_GetMessageHistory_Response.ChatMessage
+(\v21.CHardwareUpdate_EnumerateDevices_Response.Device
 (\v21.CMsgClientFSGetFriendsSteamLevelsResponse.Friend
 (\v21.CMsgClientPICSChangesSinceResponse.PackageChange
 (\v21.CMsgRemoteDeviceStreamingRequest.ReservedGamepad
@@ -4590,6 +4591,7 @@ $steammessages_parental_objects.proto"
 ).CGamescope_ReArmMuraCalibration_Response
 ).CGamescope_SetDisplayPowerState_Response
 ).CHardwareUpdate_CheckForUpdates_Response
+).CHardwareUpdate_EnumerateDevices_Request
 ).CLEDManager_SetStartupBrightness_Request
 ).CParental_EnableParentalSettings_Request
 ).CParties_OnReservationCompleted_Response"
@@ -4837,6 +4839,7 @@ $steammessages_parental_objects.proto"
 *.CGameRecording_GetTimelinesForApp_Request
 *.CGameRecording_SetPerGameSettings_Request
 *.CGameRecording_UploadClipToSteam_Response
+*.CHardwareUpdate_EnumerateDevices_Response
 *.CHardwareUpdate_StateChanged_Notification
 *.CLEDManager_SetStartupBrightness_Response
 *.CParental_DisableParentalSettings_Request
@@ -5350,10 +5353,9 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG=
-++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG}
 +.CAudio_SupportsUseBluetoothForMic_Response
 +.CAuthenticationSupport_RevokeToken_Request
 +.CAuthentication_GetAuthSessionInfo_Request
@@ -7345,6 +7347,7 @@ $steammessages_parental_objects.proto"
 .EHIDDeviceDisconnectMethod
 .EHIDDeviceLocation
 .EHardwareUpdateDeviceType
+.EHardwareUpdatePriority
 .EJSRegisterMethodType"
 .EKeyEscrowUsage
 .ELEDManagerMode"%\n#CLEDManager_SetManagerMode_Response*
@@ -7950,7 +7953,8 @@ $steammessages_parental_objects.proto"
 /sys/class/net/
 /sys/class/net/%s
 /sys/class/net/%s/address
-/sys/class/net/%s/device/hw_info
+/sys/class/net/%s/phy80211/rtw89_usb/serial_number
+/sys/class/net/%s/phy80211/rtw89_usb/uuid
 /sys/class/power_supply/BAT%d/%s
 /sys/devices/virtual/dmi/id/product_name
 /sys/devices/virtual/dmi/id/product_serial
@@ -8110,6 +8114,7 @@ $steammessages_parental_objects.proto"
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -11661,11 +11666,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-20000
-2000000
 200M
 2019
 2048
+20000
+2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -14761,6 +14766,7 @@ $steammessages_parental_objects.proto"
 40CGamescope_SetDisplayPowerState_Response
 40CHIDMessageFromRemote_DeviceInputReports
 40CHardwareUpdate_CheckForUpdates_Response
+40CHardwareUpdate_EnumerateDevices_Request
 40CInventory_PurchaseInit_Request_LineItem
 40CLEDManager_SetStartupBrightness_Request
 40CMsgClientPICSProductInfoRequest_AppInfo
@@ -14883,6 +14889,7 @@ $steammessages_parental_objects.proto"
 41CGameRecording_UploadClipToSteam_Response
 41CHIDMessageToRemote_DeviceGetVendorString
 41CHTTPDefaultRedirectEnableHandlerInternal
+41CHardwareUpdate_EnumerateDevices_Response
 41CHardwareUpdate_StateChanged_Notification
 41CJobClientSharedConnectionWaitForResponse
 41CLEDManager_SetStartupBrightness_Response
@@ -15452,6 +15459,7 @@ $steammessages_parental_objects.proto"
 48CFamilyGroups_SetFamilyCooldownOverrides_Request
 48CGameRecording_TimelineEntryChanged_Notification
 48CGameRecording_TimelineEntryRemoved_Notification
+48CHardwareUpdate_EnumerateDevices_Response_Device
 48CMarketingMessages_FindMarketingMessages_Request
 48CMarketingMessages_PartnerPublishMessage_Request
 48CMsgClientFSGetFriendsSteamLevelsResponse_Friend
@@ -17064,6 +17072,7 @@ $steammessages_parental_objects.proto"
 @nLegalDictionaryUpdateRateInSeconds
 @nNetConnectionBufferZipLevel
 @nParentalSettingsLogLevel
+@nPartnerUploadFinalizeTimeoutSecs
 @nProtobufArenaInitialBlockSize
 @nProtobufArenaMaxBlockSize
 @nProtobufArenaNumberOfHeadersToShare
@@ -18923,6 +18932,7 @@ BytesStaged
 BytesToDownload
 BytesToStage
 Bzcu
+C Bx
 C q'O
 C%C'C3C7C9COCWCiC
 C-Yn
@@ -24410,6 +24420,7 @@ EHTTPMethod
 EHTTPStatusCode
 EHTTPStatusCode %d does not allow a body in response, not sending
 EHardwareUpdateDeviceType
+EHardwareUpdatePriority
 EHostIPFamilies
 EINPROGRESS
 EINTR
@@ -24916,6 +24927,7 @@ EnumValueDescriptorProto
 EnumValueOptions
 EnumerateConnectedUsers
 EnumerateControllers
+EnumerateDevices
 EnumerateFollowingList
 EnumerateNotifications
 EnumeratePublishedFilesByUserAction
@@ -27591,8 +27603,7 @@ HTTP Connection (%p) Dispatching pending request (%p) as failed due to AsyncAbor
 HTTP Connection (%p) Dispatching pending request (%p) as failed due to failure sending\n
 HTTP Connection (%p) handle (%X) Dispatching pending request (%p) as failed due to AsyncAbort() called before RecvHTTPResponseData\n
 HTTP File request %s result: %d
-HTTP POST failed, error code %d\n
-HTTP POST timeout\n
+HTTP POST timeout, %d retries left\n
 HTTP Server has %d connections awaiting scheduled destruction but with references left.\n
 HTTP Server has zero active connections.\n
 HTTP Version not supported
@@ -29275,7 +29286,6 @@ L SoZU`
 L*NBQJ]zr
 L+5d
 L8-\rHO
-L>PPD
 L?333?
 LABEL
 LABEL_OPTIONAL
@@ -33550,6 +33560,8 @@ RemoteClientVRStreamingInvitation_t
 RemoteDeviceAuthorizationCancelled_t
 RemoteDeviceAuthorizationRequested_t
 RemoteDevicePairingPINChanged_t
+RemoteDeviceSpectatePermissionCanceled_t
+RemoteDeviceSpectatePermissionRequested_t
 RemoteInterfaces
 RemotePlay
 RemotePlayDisabled
@@ -33779,6 +33791,7 @@ Require Explicit Policy
 RequireDefaultInstallFolder
 RequireNTFSPartition
 RequirePostHandshake
+Required
 Required fields are not allowed in proto3.
 Requires 64bit operating system
 RequiresCachedPmtMethod
@@ -34821,6 +34834,7 @@ Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
 Secondaries
 Seconds
+Seconds to timeout the DRM finalize which can be slow as it involves sending to cloud storage
 Seconds to yield when sending a 100 continue for purposes of telling client to send body of request
 SecretServer
 Secrets
@@ -35361,6 +35375,7 @@ SetRebootToFirmwareSetup
 SetRefreshRateExternallyManaged
 SetRegion
 SetRemoteDeviceAuthorized
+SetRemoteDeviceSpectateAllowed
 SetRemotePlayTogetherBitrateOverride
 SetRemotePlayTogetherQualityOverride
 SetRepeatedBool
@@ -36720,6 +36735,7 @@ Success - set download throttle rate to %d Kbps\n
 Success! New manifestID %llu created and %u new chunks uploaded.
 Success! Previous manifestID %llu reused, no chunks uploaded.
 Success! http%s://%s%s\n
+Successful POST response: %d\n
 Successful file request %s %s
 Successfully generated token via password authentication
 Successfully loaded
@@ -37831,7 +37847,6 @@ UTF8STRING
 UTF8String
 UTF8_STRING
 UUID
-UUID:
 UUIDs
 UUPx((
 UUUU
@@ -38009,6 +38024,8 @@ Unknown custom filter method
 Unknown delta compression method
 Unknown depot chunk location. (unreachable?)
 Unknown destination:
+Unknown device in BDeviceNeedsSpectatePermission()
+Unknown device in SetRemoteDeviceSpectateAllowed()
 Unknown ePidType in PID stream
 Unknown ePriority %u
 Unknown enumeration value of "
@@ -38426,6 +38443,7 @@ V_AppendSlash
 V_BasicHtmlEntityEncode
 V_CP437CharsToUTF8
 V_ComposeFileName
+V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
 V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
@@ -40611,6 +40629,7 @@ Zulu
 \n)CFamilyGroups_GetPlaytimeSummary_Response
 \n)CFamilyGroups_InviteToFamilyGroup_Request
 \n)CFriendMessages_GetRecentMessages_Request
+\n)CHardwareUpdate_EnumerateDevices_Response
 \n)CMsgClientAMGetPersonaNameHistoryResponse
 \n)CMsgClientFSGetFriendsSteamLevelsResponse
 \n)CMsgSteamDatagramGameserverSessionRequest
@@ -41024,6 +41043,7 @@ Zulu
 \n\fis_chrome_os
 \n\fis_completed
 \n\fis_connected
+\n\fis_downgrade
 \n\fis_ejectable
 \n\fis_extension
 \n\fis_following
@@ -42390,6 +42410,7 @@ Zulu
 \r\n\tJS_NUMBER
 \r\n\tJS_STRING
 \r\n\tSUCCEEDED
+\r\n\tSuggested
 \r\n\tTYPE_BOOL
 \r\n\tTYPE_ENUM
 \r\n\tTriton_BL
@@ -48580,7 +48601,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -55327,6 +55348,7 @@ m_ulChatChannelID != 0
 m_ulClientID
 m_ulClientID != 0
 m_ulComittingBytesProcessed == m_ulComittingBytesTotal
+m_ulDeviceID
 m_ulEventID
 m_ulFamilyGroupID
 m_ulGroupChatID
@@ -55746,7 +55768,6 @@ managed
 manager
 manager2
 mandatory
-mandatory_update
 mangoapp_steam\n
 mangohud %s
 mangohudctl toggle reload_config
@@ -61162,7 +61183,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun  8 2026 20:52:25
+steam Jun 11 2026 00:37:26
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

@@ -133,10 +133,10 @@ var CLSTAMP = "steamdb";
           "./shared_schinese.json": [66231, 7786],
           "./shared_spanish.json": [99185, 2632],
           "./shared_swedish.json": [59456, 1225],
-          "./shared_tchinese.json": [76879, 5241],
+          "./shared_tchinese.json": [99260, 5241],
           "./shared_thai.json": [9801, 976],
           "./shared_turkish.json": [5169, 9152],
-          "./shared_ukrainian.json": [56744, 2954],
+          "./shared_ukrainian.json": [34363, 2954],
           "./shared_vietnamese.json": [73912, 6149],
         };
         function _(_) {
@@ -182,10 +182,10 @@ var CLSTAMP = "steamdb";
           "./shared_schinese.json": [66231, 7786],
           "./shared_spanish.json": [99185, 2632],
           "./shared_swedish.json": [59456, 1225],
-          "./shared_tchinese.json": [76879, 5241],
+          "./shared_tchinese.json": [99260, 5241],
           "./shared_thai.json": [9801, 976],
           "./shared_turkish.json": [5169, 9152],
-          "./shared_ukrainian.json": [56744, 2954],
+          "./shared_ukrainian.json": [34363, 2954],
           "./shared_vietnamese.json": [73912, 6149],
         };
         function _(_) {
@@ -2961,14 +2961,14 @@ var CLSTAMP = "steamdb";
         1449: "797b5812ecd2fee4cc0e",
         1499: "9fe8b05c384130e7eefa",
         1973: "61ca690a01f560ad88ef",
-        2256: "88c58437ceeb6b3c68bd",
+        2256: "5f35e79793b82caa406d",
         2320: "2ded7802d7053124fcd4",
         2435: "3dc419b618a414840f3c",
         2532: "dcb8b3c7c4c795e99ba1",
         2632: "5c577326a8d294ac3545",
         2749: "a9e5574db5f0a3ce416e",
         2945: "2895f4933307edc83db3",
-        2954: "91795713092f9cf4c52b",
+        2954: "ca70836ffebc13ff9499",
         3e3: "f25eceb68319028bebb7",
         3016: "5350f4e10ad588ceb109",
         3232: "24d7f289046539df24da",
@@ -2985,7 +2985,7 @@ var CLSTAMP = "steamdb";
         4787: "f933b9746b9145fdf8c7",
         5018: "d533a5ece9c3671e2ec5",
         5110: "2015a4cb9f04a9d6dcb2",
-        5241: "4e4418c2b73739e6f0dd",
+        5241: "599d9b0ccfd58bf69a42",
         5341: "7a78f0e1927e9759e826",
         5480: "d623db031a5e27e6bd30",
         6031: "4781c163dc15d1e7ef54",
@@ -3163,6 +3163,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(89687));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(5374));
   _ = _._(_);
 })();
