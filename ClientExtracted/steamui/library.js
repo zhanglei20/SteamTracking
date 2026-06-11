@@ -1,4 +1,4 @@
-var CLSTAMP = "10718869";
+var CLSTAMP = "10727820";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -15968,9 +15968,9 @@ var CLSTAMP = "10718869";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 8 2026 : 11:39:48",
-                BUILD_TIME_UTC: "Jun 8 2026 : 18:39:48",
-                BUILD_RTIME_UTC: 1780943988,
+                BUILD_TIME_LOCAL: "Jun 10 2026 : 16:22:48",
+                BUILD_TIME_UTC: "Jun 10 2026 : 23:22:48",
+                BUILD_RTIME_UTC: 1781133768,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -28211,7 +28211,15 @@ var CLSTAMP = "10718869";
             let i = this.m_sName;
             const s = this.m_fnIdGenerator?.() ?? null;
             null != s && (i += " (" + s + ")");
-            l(e, r, c.Get().IncludeBacktraceInLog, i, this.m_sName, ...t);
+            l(
+              e,
+              r,
+              c.Get().IncludeBacktraceInLog,
+              c.Get().AllowCSSInLogStyling,
+              i,
+              this.m_sName,
+              ...t,
+            );
           }
         }
         (0, i.Cg)([s.o], a.prototype, "Debug", null),
@@ -28222,9 +28230,11 @@ var CLSTAMP = "10718869";
         class c {
           static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
           static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
+          static k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors";
           m_setKnownDebugLogs = new Set();
           m_setEnabledDebugLogs = new Set();
           m_bIncludeBacktraceInLog = !1;
+          m_bAllowCSSInLogStyling = !0;
           m_SettingsChangedCallback = new o.l();
           m_bLoading = !0;
           constructor() {
@@ -28235,24 +28245,30 @@ var CLSTAMP = "10718869";
               n.Info,
               !0,
               this.IncludeBacktraceInLog,
+              this.AllowCSSInLogStyling,
               "LogManager",
               "LogManager",
               ...e,
             );
           }
           async LoadSettings() {
-            const e = (e) => {
+            const e = (e, t) => {
               try {
-                const t = localStorage.getItem(e);
-                return t ? JSON.parse(t) : void 0;
+                const r = localStorage.getItem(e);
+                return r ? JSON.parse(r) : t;
               } catch {
-                return;
+                return t;
               }
             };
-            this.m_bIncludeBacktraceInLog = !!e(
+            (this.m_bIncludeBacktraceInLog = !!e(
               c.k_IncludeBacktraceInLog_StorageKey,
-            );
-            const t = e(c.k_EnabledLogNames_StorageKey);
+              !1,
+            )),
+              (this.m_bAllowCSSInLogStyling = !!e(
+                c.k_AllowCSSInLogColors_StorageKey,
+                !0,
+              ));
+            const t = e(c.k_EnabledLogNames_StorageKey, void 0);
             if (Array.isArray(t)) {
               this.m_setEnabledDebugLogs = new Set(t);
               for (const e of t) this.m_setKnownDebugLogs.add(e);
@@ -28271,6 +28287,10 @@ var CLSTAMP = "10718869";
               localStorage.setItem(
                 c.k_IncludeBacktraceInLog_StorageKey,
                 JSON.stringify(this.m_bIncludeBacktraceInLog),
+              ),
+              localStorage.setItem(
+                c.k_AllowCSSInLogColors_StorageKey,
+                JSON.stringify(this.m_bAllowCSSInLogStyling),
               ),
               this.LogAsLogManager(
                 "Saved enabled debug log names. Will print log messages for:",
@@ -28345,75 +28365,83 @@ var CLSTAMP = "10718869";
               this.m_SettingsChangedCallback.Dispatch(),
               await this.SaveSettings();
           }
+          get AllowCSSInLogStyling() {
+            return this.m_bAllowCSSInLogStyling;
+          }
+          async SetAllowCSSInLogStyling(e) {
+            (this.m_bAllowCSSInLogStyling = e),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings();
+          }
           GetLogNames() {
             return Array.from(this.LogNames).sort();
           }
         }
-        function l(e, t, r, i, s, ...o) {
-          const a = (function (e) {
-              let t = 0;
-              for (let r = 0; r < e.length; r++)
-                t = e.charCodeAt(r) + ((t << 5) - t);
-              return [255 & t, (t >> 8) & 255, (t >> 16) & 255];
-            })(s).map((e, t) =>
-              Math.round(
-                Math.max(
-                  0,
-                  Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15)),
+        function l(e, t, r, i, s, o, ...a) {
+          let c,
+            l = s;
+          if (
+            (r &&
+              (l =
+                (function (e) {
+                  switch (e) {
+                    case n.Debug:
+                      return String.fromCodePoint(128027);
+                    case n.Info:
+                      return String.fromCodePoint(8505);
+                    case n.Warning:
+                      return String.fromCodePoint(9888);
+                    case n.Error:
+                      return String.fromCodePoint(128165);
+                  }
+                })(e) +
+                " " +
+                l),
+            i && t)
+          ) {
+            const e = (function (e) {
+                let t = 0;
+                for (let r = 0; r < e.length; r++)
+                  t = e.charCodeAt(r) + ((t << 5) - t);
+                return [255 & t, (t >> 8) & 255, (t >> 16) & 255];
+              })(o).map((e, t) =>
+                Math.round(
+                  Math.max(
+                    0,
+                    Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15)),
+                  ),
                 ),
               ),
-            ),
-            c = (299 * (l = a)[0] + 587 * l[1] + 114 * l[2]) / 1e3 >= 128;
-          var l;
-          let u = i;
-          r &&
-            (u =
-              (function (e) {
-                switch (e) {
-                  case n.Debug:
-                    return String.fromCodePoint(128027);
-                  case n.Info:
-                    return String.fromCodePoint(8505);
-                  case n.Warning:
-                    return String.fromCodePoint(9888);
-                  case n.Error:
-                    return String.fromCodePoint(128165);
-                }
-              })(e) +
-              " " +
-              u);
-          const d =
-              o.length >= 1 && "string" == typeof o[0] && o[0].includes("%c"),
-            m = d && o.shift();
-          let h;
-          if (
-            ((h = t
-              ? [
-                  `%c${u}%c:${d ? " %c" + m : ""}`,
-                  `color: ${c ? "black" : "white"}; background: rgb(${a.join(",")}); padding: 0 1ch; border-radius: 3px;`,
-                  "color: transparent; margin-right: -1ch",
-                  ...(d ? [""] : []),
-                  ...o,
-                ]
-              : o),
-            r)
-          )
-            console.groupCollapsed(...h),
+              t = (299 * (u = e)[0] + 587 * u[1] + 114 * u[2]) / 1e3 >= 128,
+              r =
+                a.length >= 1 && "string" == typeof a[0] && a[0].includes("%c"),
+              n = r && a.shift();
+            c = [
+              `%c${l}%c:${r ? " %c" + n : ""}`,
+              `color: ${t ? "black" : "white"}; background: rgb(${e.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+              "color: transparent; margin-right: -1ch",
+              ...(r ? [""] : []),
+              ...a,
+            ];
+          } else c = [`${l}:`, ...a];
+          var u;
+          if (r)
+            console.groupCollapsed(...c),
               console.trace("Callstack"),
               console.groupEnd();
           else
             switch (e) {
               case n.Debug:
               case n.Info:
-                console.log(...h);
+                console.log(...c);
                 break;
               case n.Warning:
-                console.warn(...h);
+                console.warn(...c);
                 break;
               case n.Error:
                 console.clogerror
-                  ? console.clogerror(3, ...h)
-                  : console.error(...h);
+                  ? console.clogerror(3, ...c)
+                  : console.error(...c);
             }
         }
         (window.DebugLogEnable = (...e) =>
@@ -29251,9 +29279,9 @@ var CLSTAMP = "10718869";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 8 2026 : 11:39:48",
-                    BUILD_TIME_UTC: "Jun 8 2026 : 18:39:48",
-                    BUILD_RTIME_UTC: 1780943988,
+                    BUILD_TIME_LOCAL: "Jun 10 2026 : 16:22:48",
+                    BUILD_TIME_UTC: "Jun 10 2026 : 23:22:48",
+                    BUILD_RTIME_UTC: 1781133768,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -29889,7 +29917,7 @@ var CLSTAMP = "10718869";
         3366: "cc756c2fdb43183ce985",
         3473: "aa2e2c813e7588319881",
         3518: "74f6ecfccd44bfb3892f",
-        3569: "20227e550a9201611170",
+        3569: "4c5112621fc061208c86",
         3583: "f831ab7edbd9ffa591ac",
         3594: "141de8df89a7a27bd2f9",
         3654: "a316470d8c7ddf6b8e9a",
@@ -30074,7 +30102,7 @@ var CLSTAMP = "10718869";
         9672: "91f76cc873bf693aba54",
         9711: "2ed989ee7251a5d19c6f",
         9779: "59ef76674166d4b9e52e",
-        9858: "96331ec62d095ee56e78",
+        9858: "938a786dd5e6e0b617b9",
         9869: "fdf04c0edf06ee6bc9e0",
         9882: "3f6dcfe6362e2c3e52ca",
         9887: "c5426588e9fdcb224e10",

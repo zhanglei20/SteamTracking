@@ -28,6 +28,7 @@
     "AppPage_PurchaseOption_Playtest_Open_Unreleased": "The Playtest will be added to your Steam Library when it's available. Watch for upcoming testing plans from the developer.",
     "AppPage_PurchaseOption_Playtest_Open": "The Playtest will be added to your Steam Library.",
     "AppPage_Prepurchase": "Pre-Purchase %1$s",
+    "AppPage_Dropdown_DefaultTitle": "Buy %1$s",
     "AppPage_PurchaseOption_JoinPlaytest_InvitedByFriend": "A friend has invited you to join the Playtest.",
     "AppPage_PurchaseOption_AddToCart": "ADD TO CART",
     "AppPage_PurchaseOption_PlayNow": "PLAY",

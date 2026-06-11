@@ -5391,17 +5391,16 @@
           [_, v] = r.useState(
             d ?? l.O3.GetClanEventFromAnnouncementGID(p.P9.ANNOUNCEMENT_GID),
           );
-        if (
-          (r.useEffect(() => {
-            if (!d && _?.AnnouncementGID != p.P9.ANNOUNCEMENT_GID) {
-              const e = new i.b(p.UF.CLANSTEAMID);
-              l.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                e,
-                p.P9.ANNOUNCEMENT_GID,
-                null,
-              ).then(v);
-            }
-          }, [_, d]),
+        r.useEffect(() => {
+          if (!d && _?.AnnouncementGID != p.P9.ANNOUNCEMENT_GID) {
+            const e = new i.b(p.UF.CLANSTEAMID);
+            l.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+              e,
+              p.P9.ANNOUNCEMENT_GID,
+              null,
+            ).then(v);
+          }
+        }, [_, d]),
           (function (e, n) {
             const t = (0, h.q3)(() => x.TU.Get().GetEventModelJson()),
               [a, o] = r.useState();
@@ -5414,10 +5413,9 @@
               )),
                 n(e);
             }, [e, n, a, t]);
-          })(_, v),
-          (0, o.s)(1500),
-          !_)
-        )
+          })(_, v);
+        const I = (0, x.ty)();
+        if (((0, o.s)(1500), !_))
           return (0, a.jsx)("div", {
             className: g().FlexCenter,
             style: { height: "500px" },
@@ -5426,9 +5424,10 @@
               string: (0, m.we)("#Loading"),
             }),
           });
-        const I =
-          _.visibility_state !== s.zv.k_EEventStateVisible &&
-          _.visibility_state !== s.zv.k_EEventStateUnlisted;
+        const j =
+          (_.visibility_state !== s.zv.k_EEventStateVisible &&
+            _.visibility_state !== s.zv.k_EEventStateUnlisted) ||
+          I;
         return (0, a.jsx)(S, {
           eventModel: _,
           children: (0, a.jsx)(b.oJ, {
@@ -5438,7 +5437,7 @@
                 promotionName: n,
                 language: t,
                 eventModel: _,
-                bIsPreview: I,
+                bIsPreview: j,
               }),
             }),
           }),

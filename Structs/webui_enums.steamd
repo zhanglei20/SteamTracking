@@ -2048,18 +2048,6 @@ enum UnnamedEnum2297b37d667f43d8
 	k_eCalibrationFailed = 4;
 }
 
-enum UnnamedEnum24802583f68845ce
-{
-	Error = -1;
-	Welcome = 0;
-	UpdatePuck = 1;
-	UpdateNereid = 2;
-	PlugInController = 3;
-	UpdateController = 4;
-	PuckIntro = 5;
-	BigPictureIntro = 6;
-}
-
 enum UnnamedEnum24822a7e69ba9ab7
 {
 	k_EPending = 0;
@@ -4195,6 +4183,20 @@ enum UnnamedEnum9d93397a59dbdedb
 	Phase = 3;
 	Expand = 4;
 	Solid = 5;
+}
+
+enum UnnamedEnum9de6ebd36cb237ad
+{
+	Welcome = 0;
+	FindOtherDevices = 1;
+	UpdatePuck = 2;
+	UpdateNereid = 3;
+	PlugInController = 4;
+	UpdateController = 5;
+	PuckIntro = 6;
+	BigPictureIntro = 7;
+	Success = 8;
+	Error = 9;
 }
 
 enum UnnamedEnuma3ebe80957217775

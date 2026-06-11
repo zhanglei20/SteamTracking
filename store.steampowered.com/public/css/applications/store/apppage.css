@@ -4803,6 +4803,9 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
 ._3WieBjkVb28rpePKxyn3gl {
   list-style: none;
   line-height: 20px;
+  overflow: hidden;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 ._3WieBjkVb28rpePKxyn3gl li {
   display: flex;
@@ -4870,10 +4873,13 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
 }
 ._1Som9GnszokLGAScqhSozy {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   row-gap: 12px;
   column-gap: 8px;
   overflow: hidden;
+}
+._1Som9GnszokLGAScqhSozy:has(> :nth-child(3):last-child) {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ._1eIF6oOHrg65kqvbTZmsnv {
   height: 116px;

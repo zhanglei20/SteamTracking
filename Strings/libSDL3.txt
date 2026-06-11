@@ -39,6 +39,7 @@
  (timestamp=%lu which=%d axis=%u value=%d)
  (timestamp=%lu which=%d ball=%u xrel=%d yrel=%d)
  (timestamp=%lu which=%d button=%u state=%s)
+ (timestamp=%lu which=%d button_id='%s')
  (timestamp=%lu which=%d capsense=%u state=%s)
  (timestamp=%lu which=%d data[0]=%f data[1]=%f data[2]=%f data[3]=%f data[4]=%f data[5]=%f)
  (timestamp=%lu which=%d hat=%u value=%u)
@@ -236,6 +237,8 @@ $ORIGIN
 %s, An unsupported SDL pixel format (0x%x) was specified
 %s.tray%d
 %s/.config
+%s/.local/share/applications/%s.desktop
+%s/applications/%s.desktop
 %s/device/report_descriptor
 %s/device/uevent
 %s/ibus/bus/%s-%s-%s
@@ -258,6 +261,7 @@ $ORIGIN
 (Standard system devices)
 (ia{sv}av)
 (iiay)
+(iiibiiay)
 (null)
 (sa(iiay)ss)
 ,[1K6
@@ -302,9 +306,12 @@ $ORIGIN
 /dev/input
 /dev/input/%s
 /dev/null
+/dev/random
 /dev/tty
+/dev/urandom
 /org/freedesktop/DBus
 /org/freedesktop/IBus
+/org/freedesktop/Notifications
 /org/freedesktop/RealtimeKit1
 /org/freedesktop/ScreenSaver
 /org/freedesktop/UPower
@@ -327,6 +334,8 @@ $ORIGIN
 /sys/class/power_supply
 /sys/devices/system/cpu/cpu0/cache/index0/coherency_line_size
 /user-dirs.dirs
+/usr/share/applications/%s.desktop
+/usr/share/local/applications/%s.desktop
 0.14.0
 0000000058626f782033363020576900,Xbox 360 Wireless Controller,a:b0,b:b1,back:b14,dpdown:b11,dpleft:b12,dpright:b13,dpup:b10,guide:b7,leftshoulder:b4,leftstick:b8,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:a5,rightx:a3,righty:a4,start:b6,x:b2,y:b3,
 0000000058626f782047616d65706100,Xbox Gamepad (userspace driver),a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a5,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a4,rightx:a2,righty:a3,start:b7,x:b2,y:b3,
@@ -571,6 +580,8 @@ $ORIGIN
 050000007e0500000603000000060000,Nintendo Wii Remote Classic Controller,crc:0d8a,a:b1,b:b0,back:b10,dpdown:b14,dpleft:b12,dpright:b13,dpup:b11,guide:b8,leftshoulder:b4,lefttrigger:b6,leftx:a0,lefty:a1~,rightshoulder:b5,righttrigger:b7,rightx:a2,righty:a3~,start:b9,x:b3,y:b2,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
 050000007e0500000603000000060000,Nintendo Wii Remote,crc:60be,a:b1,b:b0,back:b4,dpdown:b8,dpleft:b6,dpright:b7,dpup:b5,guide:b2,start:b3,x:b9,y:b10,
 050000007e0500000620000001800000,Nintendo Switch Joy-Con (L),a:b16,b:b15,guide:b4,leftshoulder:b6,leftstick:b12,leftx:a1,lefty:a0~,rightshoulder:b8,start:b9,x:b14,y:b17,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
+050000007e0500000720000001800000,Nintendo NES Controller (L),crc:a5a7,a:b1,b:b0,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b2,rightshoulder:b3,start:b5,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
+050000007e0500000720000001800000,Nintendo NES Controller (R),crc:05ae,a:b1,b:b0,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b2,rightshoulder:b3,start:b5,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
 050000007e0500000720000001800000,Nintendo Switch Joy-Con (R),a:b1,b:b2,guide:b9,leftshoulder:b4,leftstick:b10,leftx:a1~,lefty:a0,rightshoulder:b6,start:b8,x:b0,y:b3,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
 050000007e0500000920000001000000,Nintendo Switch Pro Controller,a:b1,b:b0,back:b8,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b12,leftshoulder:b4,leftstick:b10,lefttrigger:b6,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b11,righttrigger:b7,rightx:a2,righty:a3,start:b9,x:b3,y:b2,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
 050000007e0500000920000001800000,Nintendo Switch Pro Controller,a:b0,b:b1,back:b9,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b11,leftshoulder:b5,leftstick:b12,lefttrigger:b7,leftx:a0,lefty:a1,rightshoulder:b6,rightstick:b13,righttrigger:b8,rightx:a2,righty:a3,start:b10,x:b3,y:b2,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
@@ -736,9 +747,12 @@ Abs Tilt Y
 Abs X
 Abs Y
 AccessCamera
+ActionInvoked
 Activate
+ActivationToken
 Active
 Active Off: %s\n
+AddNotification
 Added HIDAPI device '%s' VID 0x%.4x, PID 0x%.4x, bluetooth %d, version %d, serial %s, interface %d, interface_class %d, interface_subclass %d, interface_protocol %d, usage page 0x%.4x, usage 0x%.4x, path = %s, driver = %s (%s)
 Again
 All SDL assertions between last init/quit:\n\n
@@ -841,6 +855,7 @@ Clear
 Clear / Again
 Clickpad
 Close
+CloseNotification
 Color: %s\n
 Combined length longer than code bits available
 Command data exceeds HID report size
@@ -1019,6 +1034,7 @@ CurrencyUnit
 Current locale not supported by X server, cannot continue.
 Cursor hot spot doesn't lie within cursor
 Cursor not associated with the current mouse
+D-Bus not available
 DEBUG
 DEBUG_INVOCATION
 DESKTOP
@@ -1143,6 +1159,8 @@ Failed to create GPU pipeline for blit
 Failed to create logical device!
 Failed to created an offscreen surface (EGL display: %p)
 Failed to defragment memory, likely OOM!
+Failed to dispatch org.freedesktop.Notifications request (Out of memory?)
+Failed to dispatch org.freedesktop.portal.Notification request (Out of memory?)
 Failed to find an X11 visual for the primary display
 Failed to find any GPUs with Vulkan support
 Failed to get evdev touchscreen limits
@@ -1159,8 +1177,11 @@ Failed to load vkGetInstanceProcAddr from Vulkan Portability library
 Failed to open a device with path '%s': %s
 Failed to read extension type: %u
 Failed to recreate Vulkan surface!
+Failed to register DBus notification filter: %s
+Failed to register DBus portal notification filter: %s
 Failed to retrieve system time (%i)
 Failed to send ID_DONGLE_GET_WIRELESS_STATE request
+Failed to send notification removal request
 Failed to stat device handle
 Field Sequential, Left on Sync
 Field Sequential, Right on Sync
@@ -1238,6 +1259,7 @@ GLIBC_2.17
 GLIBC_2.2.5
 GLIBC_2.27
 GLIBC_2.29
+GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.4
 GLIBC_2.7
@@ -1317,6 +1339,7 @@ GetDisplayDevice
 GetGroupProperties
 GetLayout
 GetProperty
+GetServerInformation
 GetYUVPlanes(): Unsupported YUV format: %s
 Getting Vulkan extensions failed:
 Getting Vulkan extensions failed: vkEnumerateInstanceExtensionProperties returned %s(%d)
@@ -1730,6 +1753,14 @@ Not charging\n
 Not enough data in queue
 Not enough data in queue (resample)
 Not enough resources to create thread
+Notification failed: %s
+Notification interface not available
+Notification sound '%s' not found
+Notification sound file '%s' cannot be opened; check file permissions
+Notification sound file '%s' not found
+NotificationClosed
+Notifications must have a title
+Notify
 Null surface in frame %i
 NumLock
 Numlock
@@ -1810,7 +1841,6 @@ PDP Xbox One Verdant Green
 PDP Xbox Series X Afterglow
 PDP Xbox Series X Midnight Blue
 PICTURES
-PIPEWIRE: StreamNameChanged: stream not ready, skipping
 PLTE
 PNG not supported: 1/2/4/8/16-bit only
 PNG not supported: unknown PNG chunk type
@@ -1901,9 +1931,11 @@ Reading past end of flushed track
 Reading past end of incomplete track
 Refresh
 RegisterStatusNotifierItem
+Registered DBus portal notification filter
 Rel X
 Rel Y
 Relative paths not permitted
+RemoveNotification
 Removing HIDAPI device '%s' VID 0x%.4x, PID 0x%.4x, bluetooth %d, version %d, serial %s, interface %d, interface_class %d, interface_subclass %d, interface_protocol %d, usage page 0x%.4x, usage 0x%.4x, path = %s, driver = %s (%s)
 Render target texture is NULL
 Render targets not supported by OpenGL
@@ -2081,7 +2113,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-910-g96c03dc66
+SDL-release-3.4.0-967-gdf294acba
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -2146,6 +2178,16 @@ SDL.joystick.cap.player_led
 SDL.joystick.cap.rgb_led
 SDL.joystick.cap.rumble
 SDL.joystick.cap.trigger_rumble
+SDL.notification.action_count
+SDL.notification.actions
+SDL.notification.header_icon
+SDL.notification.image
+SDL.notification.message
+SDL.notification.priority
+SDL.notification.replaces
+SDL.notification.sound
+SDL.notification.title
+SDL.notification.transient
 SDL.process.background
 SDL.process.create.args
 SDL.process.create.background
@@ -2651,6 +2693,7 @@ SDL_EVENT_MOUSE_BUTTON_UP
 SDL_EVENT_MOUSE_MOTION
 SDL_EVENT_MOUSE_REMOVED
 SDL_EVENT_MOUSE_WHEEL
+SDL_EVENT_NOTIFICATION_ACTION_INVOKED
 SDL_EVENT_PEN_AXIS
 SDL_EVENT_PEN_BUTTON_DOWN
 SDL_EVENT_PEN_BUTTON_UP
@@ -3330,6 +3373,8 @@ SDL_LoadSurface
 SDL_LoadSurface_IO
 SDL_LoadWAV
 SDL_LoadWAV_IO
+SDL_LocalNotification-
+SDL_LocalNotification-%u
 SDL_LockAudioStream
 SDL_LockJoysticks
 SDL_LockMutex
@@ -3382,6 +3427,7 @@ SDL_MinimizeWindow
 SDL_MixAudio
 SDL_MixAudio(): unknown audio format
 SDL_NO_SIGNAL_HANDLERS
+SDL_NotificationImage
 SDL_OPENGL_ES_DRIVER
 SDL_OPENGL_FORCE_SRGB_FRAMEBUFFER
 SDL_OPENGL_LIBRARY
@@ -3555,6 +3601,7 @@ SDL_ReleaseWindowFromGPUDevice
 SDL_ReloadGamepadMappings
 SDL_RemoveEventWatch
 SDL_RemoveHintCallback
+SDL_RemoveNotification
 SDL_RemovePath
 SDL_RemoveStoragePath
 SDL_RemoveSurfaceAlternateImages
@@ -3594,6 +3641,7 @@ SDL_RenderViewportSet
 SDL_Renderer
 SDL_ReportAssertion
 SDL_RequestAndroidPermission
+SDL_RequestNotificationPermission
 SDL_ResetAssertionReport
 SDL_ResetHint
 SDL_ResetHints
@@ -3786,6 +3834,8 @@ SDL_ShowAndroidToast
 SDL_ShowCursor
 SDL_ShowFileDialogWithProperties
 SDL_ShowMessageBox
+SDL_ShowNotification
+SDL_ShowNotificationWithProperties
 SDL_ShowOpenFileDialog
 SDL_ShowOpenFolderDialog
 SDL_ShowSaveFileDialog
@@ -3950,6 +4000,7 @@ SDL_abs
 SDL_acos
 SDL_acosf
 SDL_aligned_alloc
+SDL_aligned_alloc_zero
 SDL_aligned_free
 SDL_app
 SDL_asin
@@ -4129,6 +4180,9 @@ SDL_wcsnlen
 SDL_wcsnstr
 SDL_wcsstr
 SDL_wcstol
+SDL_wcstoll
+SDL_wcstoul
+SDL_wcstoull
 SDL_window%u-%8.8d.bmp
 SDLasyncio%d
 SET_SETTINGS failed for controller %p\n
@@ -4958,11 +5012,14 @@ a:b1,b:b3,guide:b5,leftshoulder:b9,leftstick:b7,leftx:a0,lefty:a1,rightshoulder:
 a_color
 a_position
 a_texCoord
+aa{sv}
 abort
 abxy
 access
 acos
 acosf
+action
+activation-token
 activation_token
 alias
 aligning pitch would overflow
@@ -4996,6 +5053,7 @@ auto
 avx2
 avx512f
 axby
+a{sv}
 b!r!o,P
 bInterfaceNumber
 back
@@ -5006,8 +5064,11 @@ bcdDevice
 binding
 bindings
 blendMode
+body
 break
 buffer
+buttons
+bytes
 c!s!n,q
 c>6>c
 callback
@@ -5125,6 +5186,8 @@ dbus_threads_init_default
 dbus_try_get_local_machine_id
 dbus_type_is_fixed
 default
+default-action
+default-action-target
 default.audio.sink
 default.audio.source
 default:
@@ -5132,6 +5195,7 @@ desc
 desc missing sensor descriptions
 desc missing touchpad descriptions
 design capacity
+desktop-entry
 destination
 dialog-error
 dialog-information
@@ -5140,6 +5204,7 @@ digital
 direct-to-disk audio
 directsound
 disk
+display-hint
 dlclose
 dlerror
 dlopen
@@ -5230,7 +5295,9 @@ fflush
 fgets
 fifo
 file
+file-descriptor
 file:/
+file://
 fileno
 filterEvents
 finger
@@ -5265,6 +5332,7 @@ fribidi_shape
 fribidi_unicode_to_charset
 fseeko64
 ftello64
+ftruncate
 fwrite
 gain
 gamecube
@@ -5415,6 +5483,7 @@ glXSwapIntervalMESA failed
 glXSwapIntervalSGI
 glXSwapIntervalSGI failed
 gmtime_r
+gpio_ir_recv
 grab
 grabbing
 graphicsPipelineCreateInfo
@@ -5444,6 +5513,7 @@ iface
 ignore
 ignorezero
 image
+image-data
 in.var.COLOR0
 in.var.POSITION
 in.var.TEXCOORD0
@@ -5546,7 +5616,11 @@ libusb_get_device_list
 libusb_get_port_numbers
 libusb_handle_events
 libusb_handle_events_completed
+libusb_has_capability
+libusb_hotplug_deregister_callback
+libusb_hotplug_register_callback
 libusb_init
+libusb_interrupt_event_handler
 libusb_interrupt_transfer
 libusb_kernel_driver_active
 libusb_open
@@ -5582,6 +5656,7 @@ media.type
 medium
 memcmp
 memcpy
+memfd_create
 memmove
 memset
 menu
@@ -5604,6 +5679,7 @@ misc4:b17,misc5:b18,misc6:b19
 misc5
 misc6
 mkdir
+mmap
 mode
 model
 modf
@@ -5613,6 +5689,7 @@ monochrome
 mouse
 mouse_input
 move
+munmap
 n-resize
 n33>0
 n33>0x
@@ -5671,6 +5748,7 @@ org.freedesktop.DBus.Properties
 org.freedesktop.IBus
 org.freedesktop.IBus.InputContext
 org.freedesktop.IBus.Portal
+org.freedesktop.Notifications
 org.freedesktop.RealtimeKit1
 org.freedesktop.ScreenSaver
 org.freedesktop.UPower
@@ -5683,6 +5761,7 @@ org.freedesktop.portal.Fcitx
 org.freedesktop.portal.FileTransfer
 org.freedesktop.portal.IBus
 org.freedesktop.portal.Inhibit
+org.freedesktop.portal.Notification
 org.freedesktop.portal.OpenURI
 org.freedesktop.portal.Realtime
 org.freedesktop.portal.Request
@@ -5778,6 +5857,7 @@ point
 pointer
 points
 poll
+posix_fallocate
 posix_spawn() failed: %s
 posix_spawn_file_actions_addchdir failed: %s
 posix_spawn_file_actions_addchdir_np
@@ -5906,6 +5986,7 @@ readdir
 readlink
 realloc
 realloc_func
+realpath
 reason
 rect
 rect has a negative size
@@ -5977,6 +6058,7 @@ sigaction
 sigaddset
 sigemptyset
 sigprocmask
+silent
 sinf
 size_indices
 skip
@@ -6046,6 +6128,8 @@ snprintf
 software
 sony
 sound
+sound-file
+sound-name
 source
 spa_pod_get_array
 spa_pod_is_array(pod)
@@ -6113,6 +6197,7 @@ sysdefault:
 tRNS
 table
 tanf
+target
 target.object
 tex%d
 texel_size
@@ -6137,6 +6222,7 @@ times
 tis620-0
 tis620-1
 tis620-2
+title
 title_storage
 toggle-state
 toggle-type
@@ -6149,6 +6235,7 @@ touchpad:b11,
 touchpad:b11,misc1:b12,
 touchpad:b12,misc2:b13,misc3:b14,
 transfer_buffer
+transient
 tray
 triangle area overflow
 true
@@ -6162,6 +6249,10 @@ type.sampler
 type:
 type='signal',        sender='org.freedesktop.DBus',        interface='org.freedesktop.DBus',        member='NameOwnerChanged',        arg0='org.freedesktop.portal.Desktop',        arg2=''
 type='signal', interface='org.fcitx.Fcitx.InputContext1'
+type='signal', interface='org.freedesktop.Notifications',member='ActionInvoked'
+type='signal', interface='org.freedesktop.Notifications',member='ActivationToken'
+type='signal', interface='org.freedesktop.Notifications',member='NotificationClosed'
+type='signal', interface='org.freedesktop.portal.Notification',member='ActionInvoked'
 type='signal', interface='org.freedesktop.portal.Settings',member='SettingChanged', arg0='org.freedesktop.appearance',arg1='color-scheme'
 type='signal',interface='%s'
 u,v,F
@@ -6246,6 +6337,8 @@ unknown
 unknown object
 unsetenv
 update size overflow
+urgency
+urgent
 usb:v%04X*
 usb_device
 usb_interface
@@ -6269,6 +6362,7 @@ varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nunifor
 varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nuniform sampler2D tex1;\nuniform vec4 texel_size; // texel size (xy: texel size, zw: texture dimensions)\n\nvec4 SamplePaletteNearest(vec2 uv)\n{\n    float index = texture2D(tex0, uv).r * 255.0;\n    return texture2D(tex1, vec2((index + 0.5) / 256.0, 0.5));\n}\n\nvec4 SamplePaletteLinear(vec2 uv)\n{\n    // scale & offset uvs to integer values at texel centers\n    vec2 uv_texels = uv * texel_size.zw + 0.5;\n\n    // get uvs for the center of the 4 surrounding texels by flooring\n    vec4 uv_min_max = vec4((floor(uv_texels) - 0.5) * texel_size.xy, (floor(uv_texels) + 0.5) * texel_size.xy);\n\n    // blend factor\n    vec2 uv_frac = fract(uv_texels);\n\n    // sample all 4 texels\n    vec4 texelA = SamplePaletteNearest(uv_min_max.xy);\n    vec4 texelB = SamplePaletteNearest(uv_min_max.xw);\n    vec4 texelC = SamplePaletteNearest(uv_min_max.zy);\n    vec4 texelD = SamplePaletteNearest(uv_min_max.zw);\n\n    // bilinear interpolation\n    return mix(mix(texelA, texelB, uv_frac.y), mix(texelC, texelD, uv_frac.y), uv_frac.x);\n}\n\nvec2 GetPixelArtUV(vec2 uv)\n{\n    vec2 boxSize = clamp(fwidth(uv) * texel_size.zw, 1e-5, 1.0);\n    vec2 tx = uv * texel_size.zw - 0.5 * boxSize;\n    vec2 txOffset = smoothstep(vec2(1.0) - boxSize, vec2(1.0), fract(tx));\n    return (floor(tx) + 0.5 + txOffset) * texel_size.xy;\n}\n\nvec4 GetPixelArtSample(vec2 uv)\n{\n    return textureGrad(tex0, GetPixelArtUV(uv), dFdx(v_texCoord), dFdy(v_texCoord));\n}\n\n\nvoid main()\n{\n    gl_FragColor = SamplePaletteLinear(GetPixelArtUV(v_texCoord)) * v_color;\n}
 varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nuniform vec4 texel_size; // texel size (xy: texel size, zw: texture dimensions)\n\nvec2 GetPixelArtUV(vec2 uv)\n{\n    vec2 boxSize = clamp(fwidth(uv) * texel_size.zw, 1e-5, 1.0);\n    vec2 tx = uv * texel_size.zw - 0.5 * boxSize;\n    vec2 txOffset = smoothstep(vec2(1.0) - boxSize, vec2(1.0), fract(tx));\n    return (floor(tx) + 0.5 + txOffset) * texel_size.xy;\n}\n\nvec4 GetPixelArtSample(vec2 uv)\n{\n    return textureGrad(tex0, GetPixelArtUV(uv), dFdx(v_texCoord), dFdy(v_texCoord));\n}\n\n\nvoid main()\n{\n    gl_FragColor = GetPixelArtSample(v_texCoord);\n    gl_FragColor *= v_color;\n}
 varying vec4 v_color;\nvarying vec2 v_texCoord;\nuniform sampler2D tex0;\nuniform vec4 texel_size; // texel size (xy: texel size, zw: texture dimensions)\n\nvec2 GetPixelArtUV(vec2 uv)\n{\n    vec2 boxSize = clamp(fwidth(uv) * texel_size.zw, 1e-5, 1.0);\n    vec2 tx = uv * texel_size.zw - 0.5 * boxSize;\n    vec2 txOffset = smoothstep(vec2(1.0) - boxSize, vec2(1.0), fract(tx));\n    return (floor(tx) + 0.5 + txOffset) * texel_size.xy;\n}\n\nvec4 GetPixelArtSample(vec2 uv)\n{\n    return textureGrad(tex0, GetPixelArtUV(uv), dFdx(v_texCoord), dFdy(v_texCoord));\n}\n\n\nvoid main()\n{\n    gl_FragColor = GetPixelArtSample(v_texCoord);\n    gl_FragColor.a = 1.0;\n    gl_FragColor *= v_color;\n}
+version
 vertical-text
 vertices
 verystrict

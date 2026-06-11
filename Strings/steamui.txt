@@ -2268,6 +2268,7 @@ ${LANGUAGE}
 %s: forcing gamepadui for steamdeck + gamescope\n
 %s: forcing gamepadui via %s\n
 %s: forcing gamepadui, overriding tenfoot/bigpicture\n
+%s: found device: %s
 %s: found registry default startup mode: %d\n
 %s: found registry override startup mode: %d\n
 %s: ignoring gamepadui request via registry for SteamOS\n
@@ -2292,6 +2293,7 @@ ${LANGUAGE}
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: skipping, current value already matches
 %s: starting
+%s: starting enumerate devices
 %s: starting update check
 %s: starting update: %s
 %s: switching to desktop via SteamOSManager
@@ -3406,7 +3408,7 @@ ${LANGUAGE}
 (\t"&\n$CSteamTV_GetFollowedChannels_Request"
 (\t"&\n$CTransportAuth_Authenticate_Response"+\n)CTransportAuth_StartShutdown_Notification2
 (\t"(\n&CFriendMessages_ReportMessage_Response"
-(\t"(\n&CHardwareUpdate_PrepForUpdate_Response*
+(\t"(\n&CHardwareUpdate_PrepForUpdate_Response"*\n(CHardwareUpdate_EnumerateDevices_Request"
 (\t"(\n&CInventory_GetUserPurchaseInfo_Request"<\n'CInventory_GetUserPurchaseInfo_Response
 (\t"(\n&CSiteLicense_LCSAssociateUser_Response"]\n'CSiteLicense_ClientSeatCheckout_Request
 (\t")\n'CPlayer_GetPerFriendPreferences_Request"
@@ -3749,6 +3751,7 @@ ${LANGUAGE}
 (\v20.CStoreBrowse_GetDLCForAppsSolr_Response.DLCList
 (\v20.CSupportRefreshTokenDescription.TokenUsageEvent
 (\v21.CChatRoom_GetMessageHistory_Response.ChatMessage
+(\v21.CHardwareUpdate_EnumerateDevices_Response.Device
 (\v21.CMsgRemoteDeviceStreamingRequest.ReservedGamepad
 (\v21.CPlayer_GetCommunityBadgeProgress_Response.Quest
 (\v21.CPlayer_GetGameAchievements_Response.Achievement
@@ -4019,6 +4022,7 @@ ${LANGUAGE}
 ).CGamescope_ReArmMuraCalibration_Response
 ).CGamescope_SetDisplayPowerState_Response
 ).CHardwareUpdate_CheckForUpdates_Response
+).CHardwareUpdate_EnumerateDevices_Request
 ).CLEDManager_SetStartupBrightness_Request
 ).CParental_EnableParentalSettings_Request
 ).CParties_OnReservationCompleted_Response"
@@ -4264,6 +4268,7 @@ ${LANGUAGE}
 *.CGameRecording_GetTimelinesForApp_Request
 *.CGameRecording_SetPerGameSettings_Request
 *.CGameRecording_UploadClipToSteam_Response
+*.CHardwareUpdate_EnumerateDevices_Response
 *.CHardwareUpdate_StateChanged_Notification
 *.CLEDManager_SetStartupBrightness_Response
 *.CParental_DisableParentalSettings_Request
@@ -4395,6 +4400,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE31CWebUIHardwareUpdateGetStateJob32CHardwareUpdate_GetState_Request33CHardwareUpdate_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE36CWebUIHardwareUpdatePrepForUpdateJob37CHardwareUpdate_PrepForUpdate_Request38CHardwareUpdate_PrepForUpdate_ResponseE
 *18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE38CWebUIHardwareUpdateCheckForUpdatesJob39CHardwareUpdate_CheckForUpdates_Request40CHardwareUpdate_CheckForUpdates_ResponseE
+*18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE39CWebUIHardwareUpdateEnumerateDevicesJob40CHardwareUpdate_EnumerateDevices_Request41CHardwareUpdate_EnumerateDevices_ResponseE
 *18CWebUIMsgLambdaJobIZN26CSteamUISharedJSController10InitializeEvE48CWebUISharedJSContextGetDesiredSteamUIWindowsJob49CSharedJSContext_GetDesiredSteamUIWindows_Request50CSharedJSContext_GetDesiredSteamUIWindows_ResponseE
 *18CWebUIMsgLambdaJobIZN30CSystemBluetoothControllerStub10InitializeEvE33CWebUIBluetoothManagerGetStateJob34CBluetoothManager_GetState_Request35CBluetoothManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN30CTransportValidationController10InitializeEvE38CWebUITransportValidationAddNumbersJob39CTransportValidation_AddNumbers_Request40CTransportValidation_AddNumbers_ResponseE
@@ -4848,10 +4854,12 @@ ${LANGUAGE}
 *ZN25CHardwareUpdateController10InitializeEvE31CWebUIHardwareUpdateGetStateJob
 *ZN25CHardwareUpdateController10InitializeEvE36CWebUIHardwareUpdatePrepForUpdateJob
 *ZN25CHardwareUpdateController10InitializeEvE38CWebUIHardwareUpdateCheckForUpdatesJob
+*ZN25CHardwareUpdateController10InitializeEvE39CWebUIHardwareUpdateEnumerateDevicesJob
 *ZN25CHardwareUpdateController10InitializeEvEUlRK30CHardwareUpdate_Update_RequestR31CHardwareUpdate_Update_ResponseE_
 *ZN25CHardwareUpdateController10InitializeEvEUlRK32CHardwareUpdate_GetState_RequestR33CHardwareUpdate_GetState_ResponseE_
 *ZN25CHardwareUpdateController10InitializeEvEUlRK37CHardwareUpdate_PrepForUpdate_RequestR38CHardwareUpdate_PrepForUpdate_ResponseE_
 *ZN25CHardwareUpdateController10InitializeEvEUlRK39CHardwareUpdate_CheckForUpdates_RequestR40CHardwareUpdate_CheckForUpdates_ResponseE_
+*ZN25CHardwareUpdateController10InitializeEvEUlRK40CHardwareUpdate_EnumerateDevices_RequestR41CHardwareUpdate_EnumerateDevices_ResponseE_
 *ZN25CHardwareUpdateController10InitializeEvEUlvE_
 *ZN26CSteamUISharedJSController10InitializeEvE48CWebUISharedJSContextGetDesiredSteamUIWindowsJob
 *ZN26CSteamUISharedJSController10InitializeEvEUlRK49CSharedJSContext_GetDesiredSteamUIWindows_RequestR50CSharedJSContext_GetDesiredSteamUIWindows_ResponseE_
@@ -5551,6 +5559,7 @@ ${LANGUAGE}
 --forward-fd=%d
 --prep-by-serial
 --redirect=vhui.log --control="%s"
+--show-all-devices
 --terminate-when-signaled
 --title
 --type
@@ -5815,7 +5824,6 @@ ${LANGUAGE}
 -steamid
 -steaminstaller
 -steammachinedisplay
--steamos
 -system-composer
 -system\SteamFrameWirelessAdapterPairingDialog
 -tenfoot
@@ -6124,9 +6132,10 @@ ${LANGUAGE}
 ../steamUI/gamestream/vrstreamthread.cpp
 ../steamUI/gamestream/x264wrapper.cpp
 ../steamUI/hardwareupdatecontroller.cpp
-../steamUI/hardwareupdatecontroller.cpp:156
-../steamUI/hardwareupdatecontroller.cpp:249
-../steamUI/hardwareupdatecontroller.cpp:293
+../steamUI/hardwareupdatecontroller.cpp:233
+../steamUI/hardwareupdatecontroller.cpp:340
+../steamUI/hardwareupdatecontroller.cpp:384
+../steamUI/hardwareupdatecontroller.cpp:411
 ../steamUI/installfoldercontroller.cpp
 ../steamUI/ledcontroller.cpp
 ../steamUI/ledcontroller.cpp:1660
@@ -6813,6 +6822,7 @@ ${LANGUAGE}
 .EHIDDeviceDisconnectMethod
 .EHIDDeviceLocation
 .EHardwareUpdateDeviceType
+.EHardwareUpdatePriority
 .EJSRegisterMethodType"
 .EKeyEscrowUsage
 .ELEDManagerMode"%\n#CLEDManager_SetManagerMode_Response*
@@ -7527,15 +7537,15 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
+0123456789.
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP
+0123456789ABCDEFPfP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -9693,6 +9703,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbPKcEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJbbEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbjEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJiEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
@@ -11825,6 +11836,7 @@ ${LANGUAGE}
 40CGamescope_SetDisplayPowerState_Response
 40CHIDMessageFromRemote_DeviceInputReports
 40CHardwareUpdate_CheckForUpdates_Response
+40CHardwareUpdate_EnumerateDevices_Request
 40CInventory_PurchaseInit_Request_LineItem
 40CLEDManager_SetStartupBrightness_Request
 40CMsgChildProcessQueryGpuTopology_GpuInfo
@@ -11929,6 +11941,7 @@ ${LANGUAGE}
 41CGameRecording_UploadClipToSteam_Response
 41CHIDMessageToRemote_DeviceGetVendorString
 41CHTTPDefaultRedirectEnableHandlerInternal
+41CHardwareUpdate_EnumerateDevices_Response
 41CHardwareUpdate_StateChanged_Notification
 41CLEDManager_SetStartupBrightness_Response
 41CMsgBrowserViewPostMessageToParentRequest
@@ -12434,6 +12447,7 @@ ${LANGUAGE}
 48CGameRecording_AudioSessionsChanged_Notification
 48CGameRecording_TimelineEntryChanged_Notification
 48CGameRecording_TimelineEntryRemoved_Notification
+48CHardwareUpdate_EnumerateDevices_Response_Device
 48CMarketingMessages_FindMarketingMessages_Request
 48CMarketingMessages_PartnerPublishMessage_Request
 48CMsgClientSiteLicenseGetContentCacheInfoResponse
@@ -13360,6 +13374,7 @@ ${LANGUAGE}
 9CCallbackI24CSteamParentalController35ParentalLockChangeAttemptComplete_tLb0EE
 9CCallbackI25CHardwareUpdateController19ControllerDetails_tLb0EE
 9CCallbackI25CHardwareUpdateController24ControllerDisconnected_tLb0EE
+9CCallbackI25CHardwareUpdateController27ControllerDongleConnected_tLb0EE
 9CCallbackI25CHardwareUpdateController31ControllerBootloaderConnected_tLb0EE
 9CCallbackI26CSteamUISharedJSController19AppLifetimeNotice_tLb0EE
 9CCallbackI27CGameBroadcastRecordSession23BroadcastUploadConfig_tLb0EE
@@ -13415,6 +13430,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9H(TC
 9IGv
 9Inventory
 9PE,$
@@ -13520,6 +13536,7 @@ ${LANGUAGE}
 :scheme
 :statu
 :status
+:wt0
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -13735,7 +13752,6 @@ ${LANGUAGE}
 >wcv?uj
 ? * + invalid
 ?(MZct
-?(knN
 ?.CSteamInputService_FirstSteamControllerConnection_Notification
 ?0DS=
 ?13CCallbackImplILi164EE
@@ -13817,7 +13833,6 @@ ${LANGUAGE}
 @cUDPSendRetries
 @csecAudioSignalLevelInterval
 @eAlgorithmForCachedCredentialsPin
-@fff?
 @import
 @metricsDisabledCatalogs
 @metricsDisabledOperations
@@ -13855,6 +13870,7 @@ ${LANGUAGE}
 @net_loopback
 @sBroadcastPreset
 @sBroadcastTune
+@sHardwareUpdateForceRequiredPriorityTS
 @type
 @unMinimumShaderDownloadSizeInUI
 @valvesoftware.com
@@ -16106,12 +16122,14 @@ CDesktopCapturePipeWire: Failed to start main PipeWire loop\n
 CDesktopCapturePipeWire: Failed to start the screen cast session.\n
 CDesktopCapturePipeWire: Failed to start the screen cast session: %s\n
 CDesktopCapturePipeWire: Failed to synchronize DMA buffer: %s\n
+CDesktopCapturePipeWire: Finished obtaining persistent permissions, exiting PipeWire until streaming or recording.
 CDesktopCapturePipeWire: Opening DRM render node %s\n
 CDesktopCapturePipeWire: PipeWire core error: %s\n
 CDesktopCapturePipeWire: PipeWire stream format changed (size: %dx%d, format %d, stride %d, size %d, dmabuf: %d)\n
 CDesktopCapturePipeWire: PipeWire stream state changed to %s\n
 CDesktopCapturePipeWire: PipeWire stream state error: %s\n
 CDesktopCapturePipeWire: Start signal received.\n
+CDesktopCapturePipeWire: Stopping capture session
 CDesktopCapturePipeWire: Unknown buffer type: %d\n
 CDesktopCapturePipeWire: Unknown pixel format %d\n
 CDesktopCapturePipeWire: Video frame size does not match provided data!\n
@@ -16775,6 +16793,7 @@ CHardwareUpdateController::OnAppLifetimeNotice
 CHardwareUpdateController::OnControllerBootloaderConnected
 CHardwareUpdateController::OnControllerDetails
 CHardwareUpdateController::OnControllerDisconnected
+CHardwareUpdateController::OnControllerDongleConnected
 CHardwareUpdate_Update_Request
 CHardwareUpdate_Update_Response"?\n+CHardwareUpdate_UpdateProgress_Notification
 CHideCursorMsg""\n\rCSetCursorMsg
@@ -17598,6 +17617,8 @@ CRemotePlayController::OnRemoteClientVRStreamingInvitation
 CRemotePlayController::OnRemoteDeviceAuthorizationCancelled
 CRemotePlayController::OnRemoteDeviceAuthorizationRequested
 CRemotePlayController::OnRemoteDevicePairingPINChanged
+CRemotePlayController::OnRemoteDeviceSpectatePermissionCanceled
+CRemotePlayController::OnRemoteDeviceSpectatePermissionRequested
 CRemotePlayController::OnRemoteDevicesChanged
 CRemotePlayController::OnRemotePlayInviteResult
 CRemotePlayController::OnRemotePlaySessionStopped
@@ -19563,6 +19584,7 @@ Desktop Text
 Desktop X11 RGB
 Desktop portal not supported, falling back to a different file picker\n
 Desktop state changed: desktop: %s primary: %s\n
+DesktopCaptureRestoreToken
 DesktopDBusIntrospectable
 DesktopDBusIntrospectableProxy
 DesktopDBusIntrospectableSkeleton
@@ -20175,6 +20197,7 @@ EHTTPMethod
 EHTTPStatusCode
 EHTTPStatusCode %d does not allow a body in response, not sending
 EHardwareUpdateDeviceType
+EHardwareUpdatePriority
 EHostIPFamilies
 EINPROGRESS
 EINTR
@@ -20594,6 +20617,7 @@ EnumValueDescriptorProto
 EnumValueOptions
 Enumerate all sysfs LED devices
 Enumerate audio sessions
+EnumerateDevices
 EnumerateLEDDevices
 EnumerateSessions
 EnumerateTokens
@@ -23160,6 +23184,7 @@ HardwareReg: failed to query product serial number
 HardwareReg: failed to send request: %d
 HardwareUpdate
 HardwareUpdate.CheckForUpdates#1
+HardwareUpdate.EnumerateDevices#1
 HardwareUpdate.GetState#1
 HardwareUpdate.NotifyStateChanged#1
 HardwareUpdate.NotifyUpdateStateChanged#1
@@ -23627,6 +23652,7 @@ Ignoring request to write a PLTE chunk in grayscale PNG
 Ignoring success response due to current state
 IiGM>nw
 Ik\f`dub`D
+IlgrL
 Illegal character (\) in IPC name.
 Illegal duration format; duration must end with 's'
 Illegal hex string.
@@ -24247,7 +24273,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun  8 2026 20:52:31
+Jun 11 2026 00:37:29
 June
 K'iche'
 K(\f]C15
@@ -25566,6 +25592,8 @@ N21CRemotePlayController56CCallbackInternal_OnRemoteClientRemotePlayUpdateComple
 N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayBitrateOverrideE
 N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayQualityOverrideE
 N21CRemotePlayController58CCallbackInternal_OnRemoteClientRemotePlayClearControllersE
+N21CRemotePlayController58CCallbackInternal_OnRemoteDeviceSpectatePermissionCanceledE
+N21CRemotePlayController59CCallbackInternal_OnRemoteDeviceSpectatePermissionRequestedE
 N21CRemotePlayController60CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSetE
 N21CRemotePlayController69CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilizationE
 N21CSteamUIAppController16AppDetailsData_tE
@@ -25755,6 +25783,7 @@ N25CGamescopeControllerLinux54CCallbackInternal_OnFramerateReportingFrequencyCha
 N25CHardwareUpdateController29CCallback_OnControllerDetailsE
 N25CHardwareUpdateController34CCallback_OnControllerDisconnectedE
 N25CHardwareUpdateController37CCallbackInternal_OnAppLifetimeNoticeE
+N25CHardwareUpdateController37CCallback_OnControllerDongleConnectedE
 N25CHardwareUpdateController41CCallback_OnControllerBootloaderConnectedE
 N25CSteamUINetworkController36CCallbackInternal_OnAppSummaryUpdateE
 N25CSteamUINetworkController41CCallbackInternal_OnConnectionStateUpdateE
@@ -28478,6 +28507,8 @@ RemotePlay.RegisterForRemoteClientStopped
 RemotePlay.RegisterForRemoteDeviceAuthorizationCancelled
 RemotePlay.RegisterForRemoteDeviceAuthorizationRequested
 RemotePlay.RegisterForRemoteDevicePairingPINChanged
+RemotePlay.RegisterForRemoteDeviceSpectatePermissionCanceled
+RemotePlay.RegisterForRemoteDeviceSpectatePermissionRequested
 RemotePlay.RegisterForRestrictedSessionChanges
 RemotePlay.RegisterForSessionJoined
 RemotePlay.RegisterForSessionStarted
@@ -28495,6 +28526,7 @@ RemotePlay.SetPerUserMouseInputEnabled
 RemotePlay.SetPerUserMouseInputEnabledWithGuestID
 RemotePlay.SetRemoteDeviceAuthorized
 RemotePlay.SetRemoteDevicePIN
+RemotePlay.SetRemoteDeviceSpectateAllowed
 RemotePlay.SetRemotePlayEnabled
 RemotePlay.SetStreamingClientConfig
 RemotePlay.SetStreamingClientConfigEnabled
@@ -28631,6 +28663,7 @@ RequestingLicense
 Require
 Require Explicit Policy
 RequirePostHandshake
+Required
 Required fields are not allowed in proto3.
 Requires 64bit operating system
 RequiresCachedPmtMethod
@@ -32407,6 +32440,7 @@ User.RunSurvey
 User.SaveHardwareInfo#1
 User.SendSurvey
 User.SetAsyncNotificationEnabled
+User.SetCheckForUpdatesOnRestart
 User.SetLoginCredentials
 User.ShouldShowUserChooser
 User.ShowSaveHardwareDialog
@@ -33974,6 +34008,7 @@ Zulu
 \n)CFamilyGroups_GetPlaytimeSummary_Response
 \n)CFamilyGroups_InviteToFamilyGroup_Request
 \n)CFriendMessages_GetRecentMessages_Request
+\n)CHardwareUpdate_EnumerateDevices_Response
 \n)CPublishedFile_RefreshVotingQueue_Request
 \n)CQueuedMatchmaking_SearchForGame_Response
 \n)CSiteManagerClient_IncomingClient_Request
@@ -34344,6 +34379,7 @@ Zulu
 \n\fis_bluetooth
 \n\fis_completed
 \n\fis_connected
+\n\fis_downgrade
 \n\fis_ejectable
 \n\fis_extension
 \n\fis_off_panel
@@ -35532,6 +35568,7 @@ Zulu
 \r\n\tJS_NUMBER
 \r\n\tJS_STRING
 \r\n\tSUCCEEDED
+\r\n\tSuggested
 \r\n\tTYPE_BOOL
 \r\n\tTYPE_ENUM
 \r\n\tTriton_BL
@@ -39996,9 +40033,9 @@ dx_driver_version
 dy != __null
 dynamic
 dynamic_cast
-dynamicbitrate: data loss, bw %0.02f -> %0.02f\n
+dynamicbitrate: data loss\n
 dynamicbitrate: ignore early data loss (%0.03f < %0.03f)\n
-dynamicbitrate: link %f Mbit/s lp %f Mbit/s meas %f Mbit/s pflags %d %d\n
+dynamicbitrate: tgt:%0.02f link:%0.02f lp:%0.02f meas:%0.02f inst:%0.02f dr_p:%0.02f dr_d:%0.02f pflags:(%d %d) pavg:%0.01f pmax:%0.01f\n
 e exp master
 e+ZQT
 e60c
@@ -41517,7 +41554,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenhy4
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -44672,7 +44709,6 @@ haptic_strength_right
 haptics_enabled
 hardware
 hardware_cluster_id
-hardware_id
 hardware_updater_enabled
 hasPin
 has_adult_content
@@ -50003,7 +50039,6 @@ manage_signing
 manager
 manager2
 mandatory
-mandatory_update
 manifest
 manifest_request_code
 manifest_requests
@@ -52058,6 +52093,7 @@ permitted
 permitted subtree violation
 permittedSubtrees
 persian
+persist_mode
 persona
 personaName
 persona_name_added
@@ -53171,6 +53207,7 @@ response_time
 response_time_ms
 responses
 restart
+restore_token
 restrict_auto_updates
 restrict_auto_updates_end
 restrict_auto_updates_start
@@ -53516,7 +53553,6 @@ saved_snapshot
 sbgp-autonomousSysNum
 sbgp-ipAddrBlock
 sbgp-routerIdentifier
-sc_force_fw_update
 sc_schinese
 scale
 scale <= 32768
@@ -56802,6 +56838,7 @@ update_ts
 update_type_info
 updated_secret
 updates
+updates_available
 upgrad
 upgrade
 upgraded_customizations

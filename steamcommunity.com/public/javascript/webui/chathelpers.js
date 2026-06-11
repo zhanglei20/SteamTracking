@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10727220";
+var CLSTAMP = "10727800";
 (() => {
   var e,
     t,
@@ -131,10 +131,10 @@ var CLSTAMP = "10727220";
           "./shared_schinese.json": [66231, 7786],
           "./shared_spanish.json": [99185, 2632],
           "./shared_swedish.json": [59456, 1225],
-          "./shared_tchinese.json": [76879, 5241],
+          "./shared_tchinese.json": [99260, 5241],
           "./shared_thai.json": [9801, 976],
           "./shared_turkish.json": [5169, 9152],
-          "./shared_ukrainian.json": [56744, 2954],
+          "./shared_ukrainian.json": [34363, 2954],
           "./shared_vietnamese.json": [73912, 6149],
         };
         function i(e) {
@@ -178,10 +178,10 @@ var CLSTAMP = "10727220";
           "./shared_schinese.json": [66231, 7786],
           "./shared_spanish.json": [99185, 2632],
           "./shared_swedish.json": [59456, 1225],
-          "./shared_tchinese.json": [76879, 5241],
+          "./shared_tchinese.json": [99260, 5241],
           "./shared_thai.json": [9801, 976],
           "./shared_turkish.json": [5169, 9152],
-          "./shared_ukrainian.json": [56744, 2954],
+          "./shared_ukrainian.json": [34363, 2954],
           "./shared_vietnamese.json": [73912, 6149],
         };
         function i(e) {
@@ -196,9 +196,9 @@ var CLSTAMP = "10727220";
         }
         (i.keys = () => Object.keys(s)), (i.id = 68042), (e.exports = i);
       },
-      89687: (e, t, n) => {
+      5374: (e, t, n) => {
         "use strict";
-        n(52340);
+        n(31544);
         var s = n(63696),
           i = n(7470);
         function r(e, t) {
@@ -310,7 +310,7 @@ var CLSTAMP = "10727220";
           else n && console.error("Missing config element #", t);
         }
         const g = "presentation_mode";
-        var f = n(39642);
+        var f = n(72534);
         const k = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -419,7 +419,7 @@ var CLSTAMP = "10727220";
           },
           E = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
         s.createContext({});
-        var C = n(9105);
+        var C = n(44165);
         let v = { success: !0, result: C.R };
         class R {
           m_connection = new T();
@@ -939,7 +939,7 @@ var CLSTAMP = "10727220";
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        var Y = n(13766);
+        var Y = n(67909);
         function K(e, t, n, s) {
           var i,
             r = arguments.length,
@@ -1841,7 +1841,7 @@ var CLSTAMP = "10727220";
               })();
           });
       },
-      9105: (e, t, n) => {
+      44165: (e, t, n) => {
         "use strict";
         n.d(t, { $A: () => a, R: () => s, Vr: () => r, zi: () => i });
         const s = 1,
@@ -1849,7 +1849,7 @@ var CLSTAMP = "10727220";
           r = 7,
           a = 19;
       },
-      13766: (e, t, n) => {
+      67909: (e, t, n) => {
         "use strict";
         async function s(e, t = "SHA-256") {
           let n;
@@ -1866,8 +1866,8 @@ var CLSTAMP = "10727220";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => v });
-        var i = n(78445),
-          r = n(81544),
+        var i = n(2601),
+          r = n(56216),
           a = n(63696);
         const o =
           window.addEventListener ||
@@ -2260,15 +2260,15 @@ var CLSTAMP = "10727220";
           return 1e4;
         }
       },
-      78445: (e, t, n) => {
+      2601: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => u, w: () => d });
-        var s = n(13766),
-          i = n(9105),
+        var s = n(67909),
+          i = n(44165),
           r = n(58663),
-          a = n(73465),
-          o = n(29080),
-          c = n(54362);
+          a = n(99253),
+          o = n(70231),
+          c = n(85398);
         class l {
           static InitHeaderFromPacket(e) {
             return new l(void 0, e);
@@ -2438,7 +2438,7 @@ var CLSTAMP = "10727220";
           return t instanceof d ? t : d.InitFromObject(e, t);
         }
       },
-      45576: (e, t, n) => {
+      36308: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => c,
@@ -2606,7 +2606,7 @@ var CLSTAMP = "10727220";
               };
         }
       },
-      54362: (e, t, n) => {
+      85398: (e, t, n) => {
         "use strict";
         n.d(t, { pV: () => s });
         class s {
@@ -2682,7 +2682,7 @@ var CLSTAMP = "10727220";
           }
         }
       },
-      52340: (e, t, n) => {
+      31544: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2830,14 +2830,14 @@ var CLSTAMP = "10727220";
         1449: "797b5812ecd2fee4cc0e",
         1499: "9fe8b05c384130e7eefa",
         1973: "61ca690a01f560ad88ef",
-        2256: "88c58437ceeb6b3c68bd",
+        2256: "5f35e79793b82caa406d",
         2320: "2ded7802d7053124fcd4",
         2435: "3dc419b618a414840f3c",
         2532: "dcb8b3c7c4c795e99ba1",
         2632: "5c577326a8d294ac3545",
         2749: "a9e5574db5f0a3ce416e",
         2945: "2895f4933307edc83db3",
-        2954: "91795713092f9cf4c52b",
+        2954: "ca70836ffebc13ff9499",
         3e3: "f25eceb68319028bebb7",
         3016: "5350f4e10ad588ceb109",
         3232: "24d7f289046539df24da",
@@ -2854,7 +2854,7 @@ var CLSTAMP = "10727220";
         4787: "f933b9746b9145fdf8c7",
         5018: "d533a5ece9c3671e2ec5",
         5110: "2015a4cb9f04a9d6dcb2",
-        5241: "4e4418c2b73739e6f0dd",
+        5241: "599d9b0ccfd58bf69a42",
         5341: "7a78f0e1927e9759e826",
         5480: "d623db031a5e27e6bd30",
         6031: "4781c163dc15d1e7ef54",
@@ -3023,6 +3023,6 @@ var CLSTAMP = "10727220";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [3987, 9489, 1068], () => o(89687));
+  var c = o.O(void 0, [3987, 9489, 1068], () => o(5374));
   c = o.O(c);
 })();
