@@ -1279,7 +1279,7 @@ function CTextAutoComplete( elTarget, rgPlaceholders, strLanguage, strDeskproLan
 
 	this.m_rgPlaceholders = rgPlaceholders;
 	this.m_rgSortedKeys = Object.keys( this.m_rgPlaceholders );
-	this.m_rgSortedKeys.sort();
+	this.m_rgSortedKeys.sort( (a, b) => b.length - a.length);
 	this.m_rePlaceholders = new RegExp( this.m_rgSortedKeys.join( '|' ), 'g' );
 
 		if ( this.m_$Target.parent().css( 'position' ) != 'relative' )
