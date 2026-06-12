@@ -620,6 +620,7 @@ $d`D-laM
 ()*+,-./*(((
 (): requires 1 params ( callbackFn )
 (0'yX
+(1@ha
 (8HXhx
 (@(sa{sv})@(sa{sv})@a{sv})
 (@(sa{sv})@a{sv})
@@ -895,6 +896,7 @@ $d`D-laM
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG$
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -1306,14 +1308,12 @@ $d`D-laM
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:37:26
 01/01/00
 0123456789.
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP,w
 0123456789abcdef
 08bX
 0A/8
@@ -2132,6 +2132,7 @@ $d`D-laM
 200 Mbps
 200M
 2048
+20:44:31
 20CHTMLBaseProtoBufMsg
 20CIBusCallbackManager
 20CMsgGetCookiesForURL
@@ -2397,9 +2398,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
-32CefDevToolsMessageObserverCppToC
 3333
 32767
+32CefDevToolsMessageObserverCppToC
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2510,7 +2511,6 @@ $d`D-laM
 6-nn
 60CMsgControllerInputControllerActionChangePlayerNumberBinding
 60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
-60f040bf5dec848fb6a2538d690e60ddd0bfc114
 6144
 64CK\vH
 666666666666666666666666666666666666666666666666
@@ -10966,7 +10966,6 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
-V_StripLastDir
 V_URLContainsDomain
 V_URLDecodeRaw
 V_URLParse
@@ -12458,6 +12457,7 @@ alignof
 all elements of GVariant array must have same type
 allocator
 allotmswe
+allow_autoplay_without_user_activation
 allow_no_dhe_kex
 allowed in proto3.
 allowed_extensions
@@ -14973,6 +14973,7 @@ extra compressed data
 extra data in message
 f&dy
 f.N%H
+f1ffb77137c318f63658a7ace2605401d5e35385
 fC\tc
 fNt7
 fP[J@8OLz
@@ -15557,7 +15558,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 givenName
 gizmodo.com
 glAccumxOES
@@ -20157,7 +20158,6 @@ librt.so.1
 libsteam.so
 libtier0_s.so
 libvstdlib_s.so
-libwidevinecdmadapter.so
 license
 lid-closed
 like
@@ -20169,7 +20169,6 @@ link
 link_at_position_response
 link_url
 linux
-linux-x64
 linux22
 linux24
 linux26
@@ -22815,6 +22814,7 @@ steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | gr
 steam-runtime-supervisor
 steam.dev
 steam.pid
+steam.tv
 steam://
 steam://close/bigpicture
 steam://openexternalforpid/%u/%s

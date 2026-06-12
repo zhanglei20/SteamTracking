@@ -4028,7 +4028,6 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
-V_StripLastDir
 V_UTF8ToUTF32
 V_UnqualifiedFileName
 V_atoi
@@ -4112,6 +4111,7 @@ WebMoney (Degica)
 WebMoney Steam Card (Japan)
 WebMoney Steam Card Top Up (Japan)
 WebSocket
+WebUsbDeviceDetection
 Wednesday
 Welsh
 What city were you born in?
@@ -5589,7 +5589,6 @@ m_pthreadWatcher
 m_queueItemsPending.Count() == 0
 m_sMasterEventName
 m_sMasterSharedMemoryName
-m_sWideVineDir
 m_strDirectory
 m_strFileName
 m_strFileNamePrevious
