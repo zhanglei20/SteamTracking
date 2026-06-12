@@ -555,6 +555,7 @@
             ref: _,
             variant: _ = "default",
             color: _,
+            align: _ = "center",
             ..._
           } = _,
           _ = "indeterminate" === _,
@@ -563,7 +564,7 @@
             _ || (_ && __webpack_require__(!!_ || !_));
           };
         return (0, _.jsxs)(_._, {
-          align: "center",
+          align: _,
           ref: _,
           role: "checkbox",
           "aria-checked": _ ? "mixed" : _,

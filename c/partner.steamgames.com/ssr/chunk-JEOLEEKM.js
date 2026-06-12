@@ -1901,6 +1901,7 @@ function _(_) {
       ref: _,
       variant: _ = "default",
       color: _,
+      align: _ = "center",
       ..._
     } = _,
     _ = _ === "indeterminate",
@@ -1912,7 +1913,7 @@ function _(_) {
       _ || (_.key === " " && (_(), _.preventDefault(), _.stopPropagation()));
     };
   return (0, _.jsxs)(_, {
-    align: "center",
+    align: _,
     ref: _,
     role: "checkbox",
     "aria-checked": _ ? "mixed" : _,
