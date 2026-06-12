@@ -888,19 +888,20 @@
         s = a(44165),
         o = a(90626),
         i = a(82429);
-      function l(e, t) {
-        const a = new n.lh();
+      function l(e, t, a) {
+        const o = new n.lh();
         return (
-          (a.clanSteamID = r.b.InitFromClanID(e)),
-          (a.GID = "fakeevent_" + c++),
-          (a.visibility_state = n.zv.k_EEventStateUnlisted),
-          (a.visibilityStartTime = (0, s.sB)() - 1),
-          (a.jsondata.bSaleEnabled = !0),
-          (a.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
-          (a.jsondata.sale_vanity_id = t),
-          (a.jsondata.sale_header_offset = 0),
-          (a.jsondata.sale_header_disable_top_margin = !1),
-          a
+          (o.type = t),
+          (o.clanSteamID = r.b.InitFromClanID(e)),
+          (o.GID = "fakeevent_" + c++),
+          (o.visibility_state = n.zv.k_EEventStateUnlisted),
+          (o.visibilityStartTime = (0, s.sB)() - 1),
+          (o.jsondata.bSaleEnabled = !0),
+          (o.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
+          (o.jsondata.sale_vanity_id = a),
+          (o.jsondata.sale_header_offset = 0),
+          (o.jsondata.sale_header_disable_top_margin = !1),
+          o
         );
       }
       let c = 1234;
@@ -5260,34 +5261,36 @@
               .GetSaleSections()
               .some((e) => "contenthubtitle" === e.section_type),
             j = u && m;
-          let v;
-          v = e
-            ? 0
+          let v,
+            f = !0;
+          e
+            ? (v = 0)
             : a.BUsesContentHubForItemSource()
-              ? 20
-              : a.jsondata.sale_header_offset || 0;
-          let f = !1;
-          530 === a.jsondata.sale_header_offset && (f = !0);
-          const T = re.nY
+              ? (v = 20)
+              : a.GetEventType() == r.ajI
+                ? ((v = 0), (f = !1))
+                : (v = a.jsondata.sale_header_offset || 0);
+          const T = f && 530 === a.jsondata.sale_header_offset,
+            B = re.nY
               .Get()
               .BIsPartnerTakeoverActive(
                 a.GetContentHubType(),
                 a.GetContentHubCategory(),
                 a.GetContentHubTag(),
               ),
-            B = Boolean(!T),
-            G = c
+            G = Boolean(!B),
+            M = c
               ? !I && p?.BIsBackgroundImageEnabled()
                 ? be.S.EPreviewMode_EditBackground
                 : be.S.EPreviewMode_Enabled
               : be.S.EPreviewMode_Disabled,
-            M = A || a.GetEventType() != r.ajI,
-            L = (0, Le.m)(a.clanSteamID),
-            R = u ? o.Yo.NoTransform : o.Yo.NoTransformSparseContent,
-            E = (0, C.A)(
+            L = A || a.GetEventType() != r.ajI,
+            R = (0, Le.m)(a.clanSteamID),
+            E = u ? o.Yo.NoTransform : o.Yo.NoTransformSparseContent,
+            P = (0, C.A)(
               h().SaleOuterContainer,
               w && h().SaleOuterTopMargin,
-              f && h().SaleNewSizing,
+              T && h().SaleNewSizing,
               h()[`CustomStyle_${a.jsondata.sale_vanity_id}`],
               "SaleOuterContainer",
               e && h().SalePageLogoSet,
@@ -5304,20 +5307,20 @@
                   language: d,
                   bIsPreview: !!c,
                   children: [
-                    B && (0, n.jsx)(i.Sn, {}),
+                    G && (0, n.jsx)(i.Sn, {}),
                     (0, n.jsx)(z, { eventModel: a }),
                     !!p &&
-                      (M || L) &&
+                      (L || R) &&
                       (0, n.jsx)(Ua, {
                         backgroundImageEditModel: p,
                         bBackgroundImgGroupEditMode: I,
                         fnSetBackgroundImgGroupEditMode: k,
-                        bShowAsValveOnly: !M,
+                        bShowAsValveOnly: !L,
                       }),
                     (0, n.jsxs)(s.Z, {
                       style: j ? void 0 : { marginTop: `${v || 0}px` },
-                      className: E,
-                      scrollIntoViewType: R,
+                      className: P,
+                      scrollIntoViewType: E,
                       children: [
                         (0, n.jsx)(Z, { eventModel: a, language: d }),
                         (0, n.jsx)(ee, {
@@ -5325,7 +5328,7 @@
                         }),
                         (0, n.jsx)(ie, { event: a, broadcastEmbedContext: D }),
                         (0, n.jsx)(Xa, {
-                          ePreviewMode: G,
+                          ePreviewMode: M,
                           event: a,
                           backgroundImageEditModel: p,
                           language: d,
@@ -7142,7 +7145,7 @@
           queryFn: () => {
             try {
               return (function (e, t, a, n, r) {
-                const s = (0, Le.U)(Ye.wv, e),
+                const s = (0, Le.U)(Ye.wv, f.DRF, e),
                   o = !1,
                   i = [...r, ...a],
                   l = new Set(r);
@@ -10116,7 +10119,7 @@
           queryFn: () => {
             try {
               return (function (e, t, a) {
-                const n = (0, Le.U)(Ye.yT, "" + e),
+                const n = (0, Le.U)(Ye.yT, f.DRF, "" + e),
                   r = !0,
                   s = { ...(0, Le.Sm)("tabs", ""), tabs: [] };
                 return (

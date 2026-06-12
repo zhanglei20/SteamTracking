@@ -444,7 +444,7 @@
         Label: "I1zVikvORZt41zc-QTAsw",
       };
     },
-    79092: (e, t, a) => {
+    56964: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => sc });
       var n = a(90626),
@@ -2736,17 +2736,18 @@
           });
       }
       function ht(e, t, a) {
-        const n = o.mh.CreateClone();
+        const n = o.mh.CreateClone(),
+          i = n.GetEventModel();
         if (
-          ((n.GetEventModel().jsondata.sale_header_offset = 530),
+          ((i.jsondata.sale_header_offset = 36 != i.GetEventType() ? 530 : 0),
           a && a.length > 0)
         ) {
           const e = t.GetLanguagesWithTokens();
           t.ClearLanguagesTokens(a);
-          const i = n.GetEventModel().jsondata.bSaleEnabled;
-          (n.GetEventModel().jsondata.bSaleEnabled = !0),
+          const s = i.jsondata.bSaleEnabled;
+          (i.jsondata.bSaleEnabled = !0),
             ot(n, t, e),
-            (n.GetEventModel().jsondata.bSaleEnabled = i);
+            (i.jsondata.bSaleEnabled = s);
         }
         e("clone");
       }

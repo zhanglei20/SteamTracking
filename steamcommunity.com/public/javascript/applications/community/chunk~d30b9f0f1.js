@@ -9061,7 +9061,8 @@
           r = Boolean(
             l ||
               a.GetEventModel().GetTaggedItems().length > 0 ||
-              a.GetEventModel().BUsesContentHubForItemSource(),
+              a.GetEventModel().BUsesContentHubForItemSource() ||
+              a.GetEventModel().GetEventType() == m.ajI,
           );
         return (0, i.jsx)(b.tH, {
           children:

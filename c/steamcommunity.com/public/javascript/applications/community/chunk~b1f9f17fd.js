@@ -18461,15 +18461,17 @@
               (_) => "contenthubtitle" === _.section_type,
             ),
             _ = _ && _;
-          let _;
-          _ = _
-            ? 0
+          let _,
+            _ = !0;
+          _
+            ? (_ = 0)
             : _.BUsesContentHubForItemSource()
-              ? 20
-              : _.jsondata.sale_header_offset || 0;
-          let _ = !1;
-          530 === _.jsondata.sale_header_offset && (_ = !0);
-          const _ = _._.Get().BIsPartnerTakeoverActive(
+              ? (_ = 20)
+              : _.GetEventType() == _.ajI
+                ? ((_ = 0), (_ = !1))
+                : (_ = _.jsondata.sale_header_offset || 0);
+          const _ = _ && 530 === _.jsondata.sale_header_offset,
+            _ = _._.Get().BIsPartnerTakeoverActive(
               _.GetContentHubType(),
               _.GetContentHubCategory(),
               _.GetContentHubTag(),

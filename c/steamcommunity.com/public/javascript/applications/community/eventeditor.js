@@ -2742,17 +2742,18 @@
           });
       }
       function _(_, _, _) {
-        const _ = _._.CreateClone();
+        const _ = _._.CreateClone(),
+          _ = _.GetEventModel();
         if (
-          ((_.GetEventModel().jsondata.sale_header_offset = 530),
+          ((_.jsondata.sale_header_offset = 36 != _.GetEventType() ? 530 : 0),
           _ && _.length > 0)
         ) {
           const _ = _.GetLanguagesWithTokens();
           _.ClearLanguagesTokens(_);
-          const _ = _.GetEventModel().jsondata.bSaleEnabled;
-          (_.GetEventModel().jsondata.bSaleEnabled = !0),
+          const _ = _.jsondata.bSaleEnabled;
+          (_.jsondata.bSaleEnabled = !0),
             _(_, _, _),
-            (_.GetEventModel().jsondata.bSaleEnabled = _);
+            (_.jsondata.bSaleEnabled = _);
         }
         _("clone");
       }
