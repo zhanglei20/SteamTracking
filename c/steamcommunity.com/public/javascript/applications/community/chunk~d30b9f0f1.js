@@ -9722,7 +9722,8 @@
               __webpack_require__.GetEventModel().GetTaggedItems().length > 0 ||
               __webpack_require__
                 .GetEventModel()
-                .BUsesContentHubForItemSource(),
+                .BUsesContentHubForItemSource() ||
+              __webpack_require__.GetEventModel().GetEventType() == _.ajI,
           );
         return (0, _.jsx)(_._, {
           children:
