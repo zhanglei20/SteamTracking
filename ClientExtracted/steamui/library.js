@@ -1,4 +1,4 @@
-var CLSTAMP = "10727820";
+var CLSTAMP = "10735059";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -15968,9 +15968,9 @@ var CLSTAMP = "10727820";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 10 2026 : 16:22:48",
-                BUILD_TIME_UTC: "Jun 10 2026 : 23:22:48",
-                BUILD_RTIME_UTC: 1781133768,
+                BUILD_TIME_LOCAL: "Jun 12 2026 : 13:35:42",
+                BUILD_TIME_UTC: "Jun 12 2026 : 20:35:42",
+                BUILD_RTIME_UTC: 1781296542,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -29279,9 +29279,9 @@ var CLSTAMP = "10727820";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 10 2026 : 16:22:48",
-                    BUILD_TIME_UTC: "Jun 10 2026 : 23:22:48",
-                    BUILD_RTIME_UTC: 1781133768,
+                    BUILD_TIME_LOCAL: "Jun 12 2026 : 13:35:42",
+                    BUILD_TIME_UTC: "Jun 12 2026 : 20:35:42",
+                    BUILD_RTIME_UTC: 1781296542,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -30102,7 +30102,7 @@ var CLSTAMP = "10727820";
         9672: "91f76cc873bf693aba54",
         9711: "2ed989ee7251a5d19c6f",
         9779: "59ef76674166d4b9e52e",
-        9858: "938a786dd5e6e0b617b9",
+        9858: "20b479a1a5109c76e85d",
         9869: "fdf04c0edf06ee6bc9e0",
         9882: "3f6dcfe6362e2c3e52ca",
         9887: "c5426588e9fdcb224e10",

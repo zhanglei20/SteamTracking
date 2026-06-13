@@ -508,34 +508,35 @@
             ref: r,
             variant: i = "default",
             color: l,
-            ...c
+            align: c = "center",
+            ...d
           } = e,
-          d = "indeterminate" === t,
-          u = d ? K : Y,
-          h = () => {
-            o || (n && n(!!d || !t));
+          u = "indeterminate" === t,
+          h = u ? K : Y,
+          p = () => {
+            o || (n && n(!!u || !t));
           };
         return (0, s.jsxs)(R.s, {
-          align: "center",
+          align: c,
           ref: r,
           role: "checkbox",
-          "aria-checked": d ? "mixed" : t,
+          "aria-checked": u ? "mixed" : t,
           "data-state": q(t),
           className: O()(Z.Root, Z[`Variant-${i}`], o && Z.Disabled),
-          onClick: h,
+          onClick: p,
           tabIndex: 0,
           onKeyDown: (e) => {
             o ||
-              (" " === e.key && (h(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (p(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": o,
           "data-accent-color": l,
-          ...c,
+          ...d,
           children: [
             (0, s.jsx)("div", {
               className: Z.Checkbox,
-              children: t && (0, s.jsx)(u, { className: Z.Icon }),
+              children: t && (0, s.jsx)(h, { className: Z.Icon }),
             }),
             a,
           ],
