@@ -146,6 +146,8 @@ function SubmitFormAndCallFunction_WaitDialog( form, strHeader, strWaiting, strE
 	var $Form = $J( form );
 	var $WaitDialog = ShowBlockingWaitDialog( strHeader, strWaiting );
 
+	var bSuccess = false;
+
 	$J.ajax({
 		type: $Form.attr( 'method' ),
 		url: $Form.attr( 'action' ),
@@ -167,11 +169,18 @@ function SubmitFormAndCallFunction_WaitDialog( form, strHeader, strWaiting, strE
 			ShowAlertDialog( 'Ticketmaster', strError );
 		}
 	})
-	.done( fFunction )
+	.done( function()
+	{
+		bSuccess = true;
+	})
 	.always( function()
 	{
 		$WaitDialog.Dismiss();
-	});
+		if ( bSuccess )
+		{
+			fFunction();
+		}
+	})
 }
 
 function SubmitFormAndCallFunction_CustomDialog( strDialogID, strHeader, strWaiting, strError, fFunction )

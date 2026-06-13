@@ -2131,7 +2131,6 @@ $d`D-laM
 200 Mbps
 200M
 2048
-20:45:26
 20CHTMLBaseProtoBufMsg
 20CIBusCallbackManager
 20CMsgGetCookiesForURL
@@ -2197,6 +2196,7 @@ $d`D-laM
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
 21CefWriteHandlerCppToC
+22:37:06
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
