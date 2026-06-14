@@ -11174,7 +11174,6 @@ $steammessages_parental_objects.proto"
 17VoiceEncoder_SILK
 180.0
 1800
-18446744073709551615
 18446744073709551615";\n%CMsgClientUCMDeleteScreenshotResponse
 18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
@@ -11666,11 +11665,18 @@ $steammessages_parental_objects.proto"
 20.GamePerformanceSettings.EGamePerformanceSetting
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
+270.0
 2000
 2019
 2048
+2500
+2700
 20000
+24000
+27038
+27040
 2000000
+18446744073709551615
 200M
 208.64.200.0/22
 208.78.164.0/22
@@ -12306,7 +12312,6 @@ $steammessages_parental_objects.proto"
 23StoreItem_IncludedItems
 23UserAchievementStored_t
 24 Mbps
-24000
 24CAPIJobAuthorizeMicroTxn
 24CAPIJobCancelReservation
 24CAPIJobCreatePartyBeacon
@@ -12421,7 +12426,6 @@ $steammessages_parental_objects.proto"
 24WebAuthRequestCallback_t
 25.CMsgRemoteDeviceAuthorizationRequest.EKeyEscrowUsage
 25.CMsgSteamDatagramRouterPingReply.AltAddress.Protocol:
-2500
 256 Kbps
 256K
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
@@ -12750,10 +12754,6 @@ $steammessages_parental_objects.proto"
 26TestExternalPrivilege_Stub
 26UserRequestingFriendship_t
 26VoiceEnabledStateChanged_t
-270.0
-2700
-27038
-27040
 27;C
 27AccountInformationUpdated_t
 27BigPictureStreamingResult_t
@@ -61188,7 +61188,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 12 2026 22:37:06
+steam Jun 13 2026 02:43:57
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
