@@ -18462,7 +18462,7 @@
       }
       function nn() {
         try {
-          return JSON.parse(localStorage.getItem(Ja) ?? "{}") ?? [];
+          return JSON.parse(localStorage.getItem(Ja) ?? "[]") ?? [];
         } catch (e) {
           return [];
         }

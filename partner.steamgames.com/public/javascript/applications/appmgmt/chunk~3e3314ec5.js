@@ -34,9 +34,6 @@
         ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
-    91239: (e) => {
-      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
-    },
     96745: (e, r, t) => {
       "use strict";
       t.d(r, {
@@ -175,11 +172,11 @@
         YB: () => ne,
         Zz: () => ce,
         _A: () => T,
-        d$: () => F,
+        d$: () => Y,
         fZ: () => B,
         fr: () => re,
         h4: () => de,
-        hm: () => Y,
+        hm: () => F,
         iy: () => ae,
         mP: () => X,
         mv: () => M,
@@ -913,7 +910,7 @@
             : null,
         };
       }
-      function Y() {
+      function F() {
         return n.useCallback((e, r, t) => {
           const i = k.Get().GetPrice(e, r);
           return (
@@ -929,7 +926,7 @@
           );
         }, []);
       }
-      function F(e) {
+      function Y(e) {
         const r = (0, d.CH)();
         return (
           (0, d.hL)(k.Get().GetPriceGridCellCallbackList(e, "USD"), r),
@@ -951,7 +948,7 @@
         return r;
       }
       function q(e) {
-        const r = F(e),
+        const r = Y(e),
           t = [];
         for (const i of k.Get().m_rgKnownPriceKeys) {
           const a = r.prices[i],
@@ -1302,14 +1299,6 @@
             ? (0, i.jsx)(h.Ii, { ...m, ...(p || {}), focusable: d })
             : (0, i.jsx)("a", { ...m });
         };
-    },
-    11820: (e, r, t) => {
-      "use strict";
-      t.d(r, { T: () => a });
-      var i = t(91239);
-      function a() {
-        return i.Reset;
-      }
     },
     87718: (e, r, t) => {
       "use strict";

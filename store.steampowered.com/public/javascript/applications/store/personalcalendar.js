@@ -1276,7 +1276,6 @@
             }
           }, [e.nAppID, a]),
           (0, n.jsx)(_.nn, {
-            controller: "personalcalendar",
             feature: "personalcalendar-homepage",
             children: (0, n.jsx)(u.u, {
               id: { appid: e.nAppID },

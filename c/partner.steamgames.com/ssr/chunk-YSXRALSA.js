@@ -1279,13 +1279,17 @@ var _ = [
       cssProperty: "--aspect-ratio",
     },
   ];
+var _ = "ykNywW4cg64-";
+function _() {
+  return _;
+}
 var _ = _(_(), 1);
 function _(_) {
   let { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
     _ = _(
       {
         ..._,
-        className: (0, _.default)(_, _.className),
+        className: (0, _.default)(_, _(), _.className),
       },
       _,
     ),
@@ -1536,10 +1540,6 @@ var _ = {
   Width: "OG8iH-W7xM0-",
   MinWidth: "_2RWLTCLE-0s-",
 };
-var _ = "ykNywW4cg64-";
-function _() {
-  return _;
-}
 var _ = _(_(), 1);
 function _(_) {
   let {
@@ -6185,6 +6185,7 @@ function _(_) {
 function _() {
   return (0, _.useContext)(_);
 }
+var _ = _(_(), 1);
 var _ = _(_(), 1),
   _ = (0, _.createContext)(null);
 function _(_) {
@@ -6284,14 +6285,7 @@ function _(_) {
           state: _,
           children: (0, _.jsx)(_, {
             ref: _,
-            style: {
-              ..._.floating.floatingStyles,
-              inset: "unset",
-              border: "none",
-              background: "transparent",
-              color: "inherit",
-              padding: 0,
-            },
+            style: _.floating.floatingStyles,
             ..._.getFloatingProps({
               popover: "manual",
             }),
@@ -6404,6 +6398,11 @@ function _(_) {
       middleware: _(_),
       whileElementsMounted: _,
       placement: _ && typeof _ == "object" ? _.initial : _,
+      strategy: "fixed",
+      platform: {
+        ..._,
+        getOffsetParent: (_) => _?.ownerDocument?.defaultView ?? window,
+      },
     }),
     _ = _(_.context, {
       enabled: !!_.click,

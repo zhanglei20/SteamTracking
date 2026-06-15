@@ -19828,7 +19828,7 @@
       }
       function _() {
         try {
-          return JSON.parse(localStorage.getItem(_) ?? "{}") ?? [];
+          return JSON.parse(localStorage.getItem(_) ?? "[]") ?? [];
         } catch (_) {
           return [];
         }
