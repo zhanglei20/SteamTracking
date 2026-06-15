@@ -4606,12 +4606,6 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   bottom: 0;
   pointer-events: none;
 }
-._3VWkkleXCrqxmjyoSCylnk {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 4px;
-}
 ._0BH1ydyFmSnUvoVK2hIc {
   display: inline-flex;
   flex-direction: row;
@@ -4799,6 +4793,12 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+._3VWkkleXCrqxmjyoSCylnk {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4px;
 }
 ._3WieBjkVb28rpePKxyn3gl {
   list-style: none;

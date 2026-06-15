@@ -83080,7 +83080,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = "separator",
@@ -83102,6 +83101,7 @@
           (this.m_setPagedSettingsInstances = new Set()), (0, _._)(this);
         }
       }
+      var _;
       function _(_) {
         const {
             stylesheet: _,
@@ -83197,7 +83197,15 @@
           ],
         });
       }
-      (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
+      (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0),
+        (function (_) {
+          (_[(_.k_EPagedSettingsInitialFocus_Default = 0)] =
+            "k_EPagedSettingsInitialFocus_Default"),
+            (_[(_.k_EPagedSettingsInitialFocus_PageList = 1)] =
+              "k_EPagedSettingsInitialFocus_PageList"),
+            (_[(_.k_EPagedSettingsInitialFocus_PageContent = 2)] =
+              "k_EPagedSettingsInitialFocus_PageContent");
+        })(_ || (_ = {}));
       const _ = _.forwardRef(function (_, _) {
         var _;
         const { activePage: _, style: _, stylesheet: _ } = _,
@@ -83247,7 +83255,12 @@
       const _ = _.createContext(void 0),
         _ = _.forwardRef(function (_, _) {
           var _;
-          const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
+          const {
+              stylesheet: _ = _(),
+              pages: _,
+              onPageRequested: _,
+              eInitialFocus: _,
+            } = _,
             _ = _.useId(),
             _ = null == _.page,
             [_, _] = _.useState(() =>
@@ -83294,18 +83307,12 @@
             _ = (0, _._)(
               "DialogContentTransition",
               _.PagedSettingDialog_ContentColumn,
-            ),
-            _ = (0, _._)();
+            );
           _.useEffect(() => {
-            var _, _;
-            !_.bManuallyFocusPageContent &&
-              (null === (_ = _.state) || void 0 === _
-                ? void 0
-                : _.bDirectNav) &&
-              (null === (_ = _.current) ||
-                void 0 === _ ||
-                __webpack_require__.TakeFocus());
-          }, [_.state]);
+            var _;
+            _ === _.k_EPagedSettingsInitialFocus_PageContent &&
+              (null === (_ = _.current) || void 0 === _ || _.TakeFocus());
+          }, []);
           const { refForPageList: _, refForPage: _ } = (function () {
             const _ = _.useMemo(() => new _(), []);
             _.useEffect(

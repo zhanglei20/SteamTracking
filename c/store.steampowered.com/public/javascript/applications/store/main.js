@@ -67088,6 +67088,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -67976,6 +67977,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -67987,8 +67989,9 @@
         return _.useContext(_);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _.useRef(void 0),
           [_, _] = _.useState(void 0),
@@ -68072,6 +68075,55 @@
         Render(_, _) {
           this.m_fnReadyToRender(_);
         }
+      }
+      function _(_) {
+        let _ = (0, _._)();
+        _.useEffect(() => {
+          let _ = new _._(_);
+          _._.SetCurrentLoggedInAccountID(_.GetAccountID());
+        }, [_]);
+        const _ = _.useRef(void 0),
+          _ = _.useCallback(
+            (_) => (
+              _.bIgnoreSavedDimensions || _.strRestoreDetails
+                ? _.strRestoreDetails &&
+                  _._.SetRestoreDetails(_, _.strRestoreDetails, !1)
+                : (_.strRestoreDetails = _._.GetRestoreDetails(_)),
+              _
+            ),
+            [_],
+          ),
+          _ = _.useCallback(
+            (_, _, _) => {
+              _.current &&
+                _.setTimeout(() => {
+                  _.SteamClient.Window.GetWindowRestoreDetails().then((_) => {
+                    let _ = _.current != _;
+                    _ &&
+                      _ &&
+                      (_ || _) &&
+                      (_._.SetRestoreDetails(_, _, !1), (_.current = _));
+                  });
+                }, 30);
+            },
+            [_],
+          ),
+          _ = _.useCallback(
+            (_, _) => {
+              _.SteamClient.Window.GetWindowRestoreDetails().then((_) => {
+                (_.current = _), _(_, _, !0);
+              });
+            },
+            [_],
+          );
+        return _
+          ? {
+              updateParamsBeforeShow: _,
+              onMove: _,
+              onResize: _,
+              onLoad: _,
+            }
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

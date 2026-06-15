@@ -928,7 +928,7 @@
         c = n(82429),
         d = n(68033),
         u = n(41550),
-        p = n(51706),
+        p = n(74568),
         m = n(88843),
         h = n(64641),
         g = n.n(h),
@@ -1702,9 +1702,9 @@
             }),
         ];
     },
-    61576: (e, t, n) => {
+    7320: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Fi });
+      n.r(t), n.d(t, { default: () => zi });
       var r = n(7850),
         a = n(90626),
         s = n(86330),
@@ -1864,7 +1864,7 @@
       }
       var T = n(55563),
         R = n(8107),
-        P = n(51706),
+        P = n(74568),
         E = n(84933),
         L = n(78327);
       function k(e) {
@@ -2071,8 +2071,8 @@
       }
       var F = n(22837),
         M = n(64753),
-        G = n(41735),
-        O = n.n(G),
+        O = n(41735),
+        G = n.n(O),
         H = n(35380),
         z = n(68033),
         U = n(41550),
@@ -2090,7 +2090,7 @@
         (0, a.useEffect)(
           () => (
             (async () => {
-              const e = O().CancelToken.source();
+              const e = G().CancelToken.source();
               t.current = e.cancel;
               const r = await _.O3.LoadAdjacentPartnerEvents(
                 void 0,
@@ -2727,7 +2727,7 @@
           children: [t && (0, r.jsx)(De, {}), n && !t && (0, r.jsx)(Fe, {})],
         });
       }
-      function Ge(e) {
+      function Oe(e) {
         const {
           bControllerSupportWizardComplete: t,
           bPS4ControllerSupport: n,
@@ -2898,13 +2898,13 @@
             }),
         });
       }
-      const Oe = function (e) {
+      const Ge = function (e) {
         return (0, r.jsx)(r.Fragment, {
           children:
             (e.bPartialXboxControllerSupport || e.bFullXboxControllerSupport) &&
             (0, r.jsx)("div", {
               className: Le.StoreSidebarContainer,
-              children: (0, r.jsx)(Ge, { ...e }),
+              children: (0, r.jsx)(Oe, { ...e }),
             }),
         });
       };
@@ -4052,7 +4052,7 @@
       var Dt = n(70600),
         Ft = n(88006),
         Mt = n(96236);
-      function Gt(e, t) {
+      function Ot(e, t) {
         return (0, a.useMemo)(() => {
           let n = [],
             r = new Map();
@@ -4072,7 +4072,7 @@
           return n;
         }, [e, t]);
       }
-      var Ot = n(2925),
+      var Gt = n(2925),
         Ht = n(63512),
         zt = n(49632),
         Ut = n(83392),
@@ -4153,7 +4153,7 @@
             s && o && (0, V.vB)(c, s, o), l(!0);
           }, [c, s, o]),
           i
-            ? (0, r.jsx)(Ot.QY, {
+            ? (0, r.jsx)(Gt.QY, {
                 supportsFullscreen: !1,
                 supportsTheater: !0,
                 children: (0, r.jsx)(en, {
@@ -4169,10 +4169,10 @@
       }
       function $t(e) {
         let { trailers: t, screenshots: n, appid: s } = e,
-          o = (0, Ot.ri)(),
+          o = (0, Gt.ri)(),
           i = "theater" == o.strMode,
-          l = (0, Ot.Dy)(o, "theater"),
-          c = (0, Ot.Dy)(o, "none"),
+          l = (0, Gt.Dy)(o, "theater"),
+          c = (0, Gt.Dy)(o, "none"),
           d = (0, Ht.tw)(),
           [u, h] = (function (e, t) {
             let n = (0, a.useCallback)(
@@ -4184,7 +4184,7 @@
               r = (0, a.useCallback)((t) => !!e, [e]);
             return [r, n];
           })(i, c),
-          g = Gt(t, n);
+          g = Ot(t, n);
         if (
           ((function (e) {
             let t = e.length;
@@ -4740,7 +4740,7 @@
               fnRegisterItemElement: l,
             };
           })(),
-          l = "theater" == (0, Ot.ri)().strMode;
+          l = "theater" == (0, Gt.ri)().strMode;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsxs)("div", {
@@ -4872,7 +4872,7 @@
           o =
             (0, Tn.$)(`(max-width: ${ln.storeNarrowResponsiveWidth})`) ||
             j.TS.IN_MOBILE_WEBVIEW,
-          i = Gt(n, s);
+          i = Ot(n, s);
         return (
           (function (e) {
             let t = e.length;
@@ -4885,7 +4885,7 @@
           })(i),
           0 == i.length
             ? null
-            : (0, r.jsx)(Ot.QY, {
+            : (0, r.jsx)(Gt.QY, {
                 supportsTheater: !o,
                 supportsFullscreen: (0, Nn.tg)(),
                 children: (0, r.jsx)(gn, {
@@ -4916,7 +4916,7 @@
               o = vn(),
               i = (0, a.useRef)(o);
             i.current = o;
-            let l = "none" != (0, Ot.ri)().strMode,
+            let l = "none" != (0, Gt.ri)().strMode,
               c = (0, a.useRef)(l);
             c.current = l;
             let d = (0, a.useCallback)(() => {
@@ -4999,7 +4999,7 @@
               );
             return t;
           })(),
-          i = (0, Ot.ri)(),
+          i = (0, Gt.ri)(),
           l = "theater" == i.strMode,
           [c, d] = (function () {
             let [e, t] = (0, cn.if)(),
@@ -5073,13 +5073,13 @@
           _ = n.map((e) =>
             "screenshot" == e.type
               ? (0, r.jsx)(
-                  Gn,
+                  On,
                   { id: e.key, screenshot: e.data, focus: e.key == m },
                   e.key,
                 )
               : "trailer" == e.type
                 ? (0, r.jsx)(
-                    On,
+                    Gn,
                     { id: e.key, trailer: e.data, focus: e.key == m },
                     e.key,
                   )
@@ -5139,9 +5139,9 @@
       }
       function Dn(e) {
         let { ref: t, children: n, ...s } = e,
-          o = (0, Ot.ri)(),
+          o = (0, Gt.ri)(),
           i = o.strMode,
-          l = (0, Ot.Dy)(o, "none"),
+          l = (0, Gt.Dy)(o, "none"),
           c = (0, a.useCallback)(
             (e) => {
               e.target === e.currentTarget && l();
@@ -5170,8 +5170,8 @@
       }
       function Fn(e) {
         let { appName: t } = e,
-          n = (0, Ot.ri)(),
-          a = (0, Ot.Dy)(n, "none");
+          n = (0, Gt.ri)(),
+          a = (0, Gt.Dy)(n, "none");
         return (0, r.jsxs)("div", {
           className: ln.TheaterModeHeader,
           children: [
@@ -5203,13 +5203,13 @@
           })
         );
       }
-      function Gn(e) {
+      function On(e) {
         let { id: t, screenshot: n, focus: a } = e,
           s = Cn(t),
           o = t == vn().strNextID;
         let i = Hn(s || o),
-          l = (0, Ot.ri)(),
-          c = (0, Ot.Dy)(l, "theater"),
+          l = (0, Gt.ri)(),
+          c = (0, Gt.Dy)(l, "theater"),
           d = "none" == l.strMode,
           u = (0, Rn.b$)(a);
         if (!i) return null;
@@ -5238,7 +5238,7 @@
           ],
         });
       }
-      function On(e) {
+      function Gn(e) {
         let { id: t, trailer: n, focus: s } = e,
           o = Cn(t),
           i = Hn(o),
@@ -5248,7 +5248,7 @@
           p = (0, a.useCallback)(() => u.fnSetActive(u.strNextID), [u]);
         if (!i) return null;
         let m = (0, X.A)(ln.ViewedItem, o && ln.Active, ln.Trailer);
-        return (0, r.jsx)(Ot.vG, {
+        return (0, r.jsx)(Gt.vG, {
           drop: !(0, Nn.tg)(),
           children: (0, r.jsx)("div", {
             ref: c,
@@ -5700,10 +5700,10 @@
       var Dr,
         Fr = n(37788),
         Mr = n(15759),
-        Gr = n(28491);
-      function Or(e) {
+        Or = n(28491);
+      function Gr(e) {
         const { url: t, children: n } = e;
-        return (0, r.jsx)(Gr.Y, {
+        return (0, r.jsx)(Or.Y, {
           target: "_blank",
           href: t.href,
           underline: "auto",
@@ -5737,7 +5737,7 @@
           for (const n of e)
             if (Hr(t.origin, n.site) && n.regex.exec(t.pathname))
               return n.component;
-          return Or;
+          return Gr;
         })(t || [], s);
         return (0, r.jsx)(o, { url: s, children: e.children });
       }
@@ -6671,8 +6671,8 @@
         Da = n(60778),
         Fa = n(76011);
       const Ma = new Da.wd("VirtualizedBoxCarousel"),
-        Ga = Ma.Debug,
-        Oa = Ma.Warning;
+        Oa = Ma.Debug,
+        Ga = Ma.Warning;
       function Ha(e, t, n) {
         const r = (0, Fa.SP)("VBC_" + e, t || 0);
         return (
@@ -6720,7 +6720,7 @@
           if (s)
             if (a) {
               const s = this.m_refGridElement;
-              Ga("StartScrollAnimation", n, r, a);
+              Oa("StartScrollAnimation", n, r, a);
               let o = {
                 msDuration: a,
                 timing: this.props.scrollTiming,
@@ -6752,12 +6752,12 @@
         }
         OnAnimationScrollComplete(e, t, n, r) {
           Ea.unstable_batchedUpdates(() => {
-            Ga("OnAnimationScrollComplete", n, r),
+            Oa("OnAnimationScrollComplete", n, r),
               this.SendScrollNotification(r);
             const a = this.m_mapRefs.get(n);
             a &&
               a.current &&
-              (Ga("Sending focus to", n), a.current.TakeFocus(e)),
+              (Oa("Sending focus to", n), a.current.TakeFocus(e)),
               this.props.setFocusedColumn(t),
               (this.m_scrollAnimation = null),
               (this.m_activeScrollTo = null);
@@ -6866,7 +6866,7 @@
         OnSectionRendered(e) {
           (this.m_iStart = e.columnStartIndex),
             (this.m_iEnd = e.columnStopIndex),
-            Ga("Section rendered", this.m_iStart, this.m_iEnd),
+            Oa("Section rendered", this.m_iStart, this.m_iEnd),
             this.UpdateScrollArrows();
         }
         get alignment() {
@@ -6881,7 +6881,7 @@
               e > this.props.nIndexLeftmost;
             )
               e--;
-          return Ga("LastFocusableColumn: ", e), e;
+          return Oa("LastFocusableColumn: ", e), e;
         }
         UpdateScrollArrows() {
           if (this.props.fnUpdateArrows) {
@@ -6900,7 +6900,7 @@
               a =
                 n != Math.floor(t?.scrollLeft) &&
                 n != Math.round(t?.scrollLeft);
-            Ga(
+            Oa(
               "ShowLeftArrow: ",
               r,
               e,
@@ -6965,7 +6965,7 @@
               r = parseInt(t.getPropertyValue("scroll-padding-right")) || 0,
               a = Math.max(n, r);
             a != this.state.nRightPadding &&
-              (Ga("Computed", a, "additional right padding"),
+              (Oa("Computed", a, "additional right padding"),
               this.setState({ nRightPadding: a }, () => {
                 this.m_refGrid.recomputeGridSize({
                   columnIndex: this.props.nNumItems - 1,
@@ -6979,7 +6979,7 @@
               this.m_refContainer.current,
               this.OnResize,
             )),
-            Ga(
+            Oa(
               "componentDidMount Setting width to",
               this.m_refContainer.current.clientWidth,
             ),
@@ -6989,7 +6989,7 @@
         }
         componentDidUpdate(e) {
           this.props.fnGetColumnWidth != e.fnGetColumnWidth &&
-            (Oa(
+            (Ga(
               "Column width function changed, recalculating sizes. Are you missing a useCallback?",
             ),
             this.m_refGrid?.recomputeGridSize());
@@ -7000,7 +7000,7 @@
         OnResize() {
           const e = this.m_refContainer.current.clientWidth;
           e != this.state.nContainerWidth &&
-            (Ga(
+            (Oa(
               "OnResize Setting width to",
               this.m_refContainer.current.clientWidth,
             ),
@@ -7035,7 +7035,7 @@
           );
         }
         MoveLeft(e) {
-          Ga("MoveLeft from", this.props.focusedColumn);
+          Oa("MoveLeft from", this.props.focusedColumn);
           let t = this.props.focusedColumn - 1;
           for (
             ;
@@ -7045,8 +7045,8 @@
           )
             t--;
           return t == this.props.nIndexLeftmost - 1
-            ? (Ga("At left edge, not handling left gamepad"), !1)
-            : (Ga("MoveLeft to", t),
+            ? (Oa("At left edge, not handling left gamepad"), !1)
+            : (Oa("MoveLeft to", t),
               this.ScrollToItem(
                 e ? e.detail.button : Ft.pR.INVALID,
                 t,
@@ -7055,7 +7055,7 @@
               ));
         }
         MoveRight(e) {
-          Ga("MoveRight from", this.props.focusedColumn);
+          Oa("MoveRight from", this.props.focusedColumn);
           let t = this.props.focusedColumn + 1;
           for (
             ;
@@ -7065,8 +7065,8 @@
           )
             t++;
           return t == this.props.nNumItems
-            ? (Ga("At right edge, not handling right gamepad"), !1)
-            : (Ga("MoveRight to", t),
+            ? (Oa("At right edge, not handling right gamepad"), !1)
+            : (Oa("MoveRight to", t),
               this.ScrollToItem(
                 e ? e.detail.button : Ft.pR.INVALID,
                 t,
@@ -7082,7 +7082,7 @@
           )
             return !0;
           if (
-            (Ga("ScrollToItem", t, n, r, a),
+            (Oa("ScrollToItem", t, n, r, a),
             t != this.props.focusedColumn &&
               this.m_refGrid &&
               (!this.props.fnDoesItemTakeFocus ||
@@ -7095,7 +7095,7 @@
               }),
               o = this.props.fnGetId(t);
             return (
-              Ga("Scrolling to item", t, o, n, s.scrollLeft, a),
+              Oa("Scrolling to item", t, o, n, s.scrollLeft, a),
               (this.m_activeScrollTo = { iNewFocus: t, alignment: n }),
               this.props.fnOnFocusedColumnChange &&
                 this.props.fnOnFocusedColumnChange(this.props.focusedColumn, t),
@@ -7114,7 +7114,7 @@
           return !1;
         }
         OnGamepadButtonDown(e) {
-          switch ((Ga("OnGamepadButtonDown", e.detail), e.detail.button)) {
+          switch ((Oa("OnGamepadButtonDown", e.detail), e.detail.button)) {
             case Ft.pR.BUMPER_LEFT:
               return !!this.props.enableBumperPaging && this.ScrollLeft(e);
             case Ft.pR.BUMPER_RIGHT:
@@ -7123,7 +7123,7 @@
           return !1;
         }
         OnGamepadDirection(e) {
-          switch ((Ga("OnGamepadDirection", e.detail), e.detail.button)) {
+          switch ((Oa("OnGamepadDirection", e.detail), e.detail.button)) {
             case Ft.pR.DIR_LEFT:
               return this.MoveLeft(e);
             case Ft.pR.DIR_RIGHT:
@@ -7147,7 +7147,7 @@
             } = this.props,
             m = this.state.nContainerWidth;
           return (
-            Ga("Inner render", this.props.name, this.props.nNumItems, m, n, l),
+            Oa("Inner render", this.props.name, this.props.nNumItems, m, n, l),
             (0, r.jsx)(p.Z, {
               ref: this.m_refContainer,
               "flow-children": "row",
@@ -8064,7 +8064,7 @@
                   (await bs.FQ.GetWishlistCategories(e, t)).Body().toObject()
                     .categories ?? [];
               }
-              return Os(a);
+              return Gs(a);
             })(e, t, n, r),
           staleTime: 6e5,
         };
@@ -8088,7 +8088,7 @@
                 t.Body().set_appid(n);
                 const r = await bs.FQ.GetItemCategories(e, t);
                 return r.BSuccess()
-                  ? Os(r.Body().toObject().categories ?? [])
+                  ? Gs(r.Body().toObject().categories ?? [])
                   : [];
               },
               staleTime: 6e5,
@@ -8159,7 +8159,7 @@
         const e = (0, et.rX)();
         return (0, Ze.I)(Fs(e));
       }
-      function Gs() {
+      function Os() {
         const e = (0, et.rX)(),
           t = (0, Qe.jE)();
         return (0, qe.n)({
@@ -8173,7 +8173,7 @@
           },
         });
       }
-      function Os(e) {
+      function Gs(e) {
         return (
           e.map((e) => ({
             id: e.categoryid,
@@ -8394,7 +8394,7 @@
       function qs(e) {
         const { appid: t, steamid: n, onClose: s, filteredCategoryIDs: o } = e,
           [i, l] = a.useState([]),
-          c = Gs(),
+          c = Os(),
           { data: d } = (0, V.J$)({ appid: t }),
           u =
             d && d.name && d.visible
@@ -8644,7 +8644,7 @@
           { data: g } = Ls(n, t),
           _ = ks(n),
           f = Bs(n),
-          v = Gs(),
+          v = Os(),
           x = async (e, n) => {
             if (
               s.find((t) => (n && n !== Is ? t.id === n : t.name === e))
@@ -8785,27 +8785,47 @@
       var co = n(21763),
         uo = n.n(co);
       function po(e) {
-        const {
-          className: t,
-          option: n,
-          onActivate: a,
-          onOKActionDescription: s,
-          onSecondaryButton: o,
-          onSecondaryActionDescription: i,
-          children: l,
-        } = e;
+        const { className: t, option: n, children: a, ...s } = e;
         return (0, r.jsxs)(p.Z, {
           className: (0, X.A)(uo().PurchaseOption, t),
           focusable: !0,
-          onActivate: a,
-          onOKActionDescription: s,
-          onSecondaryButton: o,
-          onSecondaryActionDescription: i,
-          children: [l, !1],
+          ...s,
+          children: [a, !1],
         });
       }
-      var mo = n(82415);
-      function ho(e) {
+      var mo = n(82415),
+        ho = n(78395),
+        go = n(37049);
+      function _o(e) {
+        const {
+          active: t,
+          onOK: n,
+          closeModal: a,
+          bCloseOnOK: s,
+          children: o,
+          ...i
+        } = e;
+        if (!t) return null;
+        const l =
+          ("string" == typeof i.strTitle && i.strTitle) ||
+          (0, C.we)("#Steam_Platform");
+        return (0, r.jsx)(go.w, {
+          onlyPopoutIfNeeded: !0,
+          popupHeight: 340,
+          popupWidth: 640,
+          strTitle: l,
+          children: (0, r.jsx)(ho.o0, {
+            ...i,
+            onCancel: a,
+            onOK: () => {
+              n(), s && a();
+            },
+            children: o,
+          }),
+        });
+      }
+      var fo = n(35720);
+      function vo(e) {
         const t = (0, yt.Gd)();
         return a.useCallback(() => {
           e.packageid
@@ -8813,13 +8833,49 @@
             : e.bundleid && window.AddItemToCart(void 0, e.bundleid, t);
         }, [t, e.packageid, e.bundleid]);
       }
-      function go(e, t) {
+      function Co(e, t) {
         return a.useCallback(() => {
           (0, mo.o)(e, t);
         }, [e, t]);
       }
-      var _o = n(59805);
-      function fo(e) {
+      function xo(e) {
+        const { data: t } = (0, V.J$)(e),
+          [n, s, o] = (function (e) {
+            const { bCloseOnOK: t = !0, children: n, ...a } = e,
+              [s, o, i] = (0, E.uD)();
+            return [
+              (0, r.jsx)(_o, {
+                active: s,
+                bCloseOnOK: t,
+                closeModal: i,
+                ...a,
+                children: n,
+              }),
+              o,
+              i,
+            ];
+          })({
+            bCloseOnOK: !0,
+            bAlertDialog: !0,
+            onOK: () => {},
+            strTitle: t?.name,
+            strDescription: lo.Localize(
+              "#AppPage_PurchaseOption_AddedToLibrary",
+              t?.name || "",
+            ),
+          }),
+          i = (0, fo.S)(e);
+        return [
+          n,
+          a.useCallback(() => {
+            i.mutateAsync().then(() => {
+              s();
+            });
+          }, [i, s]),
+        ];
+      }
+      var wo = n(59805);
+      function yo(e) {
         const { id: t, bPrepurchase: n } = e,
           { data: r } = (0, V.J$)(t);
         return r
@@ -8828,15 +8884,15 @@
             : r.name
           : null;
       }
-      function vo(e) {
+      function Ao(e) {
         const { id: t, title: n, bPrepurchase: a, children: s } = e;
-        return (0, r.jsxs)(_o.D, {
+        return (0, r.jsxs)(wo.D, {
           size: "4",
           weight: "heavy",
-          children: [t ? (0, r.jsx)(fo, { id: t, bPrepurchase: a }) : n, s],
+          children: [t ? (0, r.jsx)(yo, { id: t, bPrepurchase: a }) : n, s],
         });
       }
-      function Co(e) {
+      function jo(e) {
         const { children: t } = e;
         return (0, r.jsx)(Ut.s, {
           direction: "column",
@@ -8846,67 +8902,143 @@
           children: t,
         });
       }
-      function xo(e) {
-        const { option: t } = e,
-          { data: n } = (0, V.J$)({ appid: t.appid }),
-          s =
-            ((o = t.appid),
-            (i = n?.name ?? ""),
-            a.useCallback(() => {
-              (0, mo.M)(o, i);
-            }, [o, i]));
-        var o, i;
-        return n
-          ? (0, r.jsxs)(po, {
-              option: t,
-              onActivate: s,
+      var So = n(53965);
+      function bo(e) {
+        const { color: t, onClick: n, children: s } = e,
+          o = a.useCallback(
+            (e) => {
+              e.stopPropagation(), n && n(e);
+            },
+            [n],
+          );
+        return (0, r.jsx)(So.$, { color: t, onClick: o, children: s });
+      }
+      function Io(e) {
+        const { onPlay: t, onInfo: n, onAddToCart: a, onDownload: s } = e;
+        return t || n || a || s
+          ? (0, r.jsxs)(Ut.s, {
+              direction: "row",
+              flexGrow: "0",
+              flexShrink: "0",
+              align: "end",
+              justify: "end",
+              gap: "2",
               children: [
-                (0, r.jsx)(vo, {
-                  title: lo.Localize(
-                    "#AppPage_PurchaseOption_DownloadDemo",
-                    n.name,
-                  ),
-                }),
-                (0, r.jsx)(Co, {
-                  children: (0, r.jsx)(Wt.EY, { children: t.label }),
-                }),
+                t &&
+                  (0, r.jsx)(bo, {
+                    color: "storegreen",
+                    onClick: t,
+                    children: lo.Localize("#AppPage_PurchaseOption_PlayNow"),
+                  }),
+                !1,
+                a &&
+                  (0, r.jsx)(bo, {
+                    color: "storegreen",
+                    onClick: a,
+                    children: lo.Localize("#AppPage_PurchaseOption_AddToCart"),
+                  }),
+                s &&
+                  (0, r.jsx)(bo, {
+                    color: "storegreen",
+                    onClick: s,
+                    children: lo.Localize("#AppPage_PurchaseOption_Download"),
+                  }),
               ],
             })
           : null;
       }
-      function wo(e) {
+      function No(e) {
+        const { option: t } = e,
+          n = { appid: t.appid },
+          { data: s } = (0, V.J$)(n),
+          [o, i] = xo(n),
+          l = (0, $s.$Y)(),
+          c = t.bStandalone,
+          d = l.data?.has(t.appid),
+          u =
+            ((p = t.appid),
+            (m = s?.name ?? ""),
+            a.useCallback(() => {
+              (0, mo.M)(p, m);
+            }, [p, m]));
+        var p, m;
+        const h = (0, Rt.n)(s),
+          g = a.useCallback(() => {
+            h && (window.location.href = h);
+          }, [h]);
+        return s
+          ? (0, r.jsxs)(r.Fragment, {
+              children: [
+                (0, r.jsxs)(po, {
+                  option: t,
+                  onActivate: u,
+                  onOKActionDescription: lo.Localize(
+                    "#AppPage_PurchaseOption_Download",
+                  ),
+                  onSecondaryButton: c ? g : void 0,
+                  onSecondaryActionDescription: c
+                    ? lo.Localize("#AppPage_PurchaseOption_MoreInfo")
+                    : void 0,
+                  onOptionsButton: d ? void 0 : i,
+                  onOptionsActionDescription: d
+                    ? void 0
+                    : lo.Localize("#AppPage_PurchaseOption_AddToLibrary"),
+                  children: [
+                    (0, r.jsx)(Ao, {
+                      title: lo.Localize(
+                        "#AppPage_PurchaseOption_DownloadDemo",
+                        s.name,
+                      ),
+                    }),
+                    (0, r.jsx)(jo, {
+                      children: (0, r.jsx)(Wt.EY, { children: t.label }),
+                    }),
+                    (0, r.jsx)(Io, { onDownload: u }),
+                  ],
+                }),
+                o,
+              ],
+            })
+          : null;
+      }
+      function To(e) {
         const { option: t } = e,
           n = a.useContext(oo),
           { data: s } = (0, V.J$)({ appid: n.appid }),
-          o = go(n.appid, s?.name ?? "");
+          o = Co(n.appid, s?.name ?? "");
         return s
-          ? (0, r.jsxs)(po, {
+          ? (console.log(s),
+            (0, r.jsxs)(po, {
               option: t,
               onActivate: o,
               onOKActionDescription: lo.Localize(
                 "#AppPage_PurchaseOption_PlayNow",
               ),
               children: [
-                (0, r.jsx)(vo, {
+                (0, r.jsx)(Ao, {
                   title: lo.Localize("#AppPage_PurchaseOption_Play", s.name),
                 }),
-                (0, r.jsx)(Co, {
+                (0, r.jsx)(jo, {
                   children: (0, r.jsx)(Wt.EY, {
-                    children: lo.Localize("#AppPage_PurchaseOption_FreeToPlay"),
+                    children: lo.Localize(
+                      s.type == Na.uE.ue
+                        ? "#AppPage_PurchaseOption_FreeDemo"
+                        : "#AppPage_PurchaseOption_FreeToPlay",
+                    ),
                   }),
                 }),
               ],
-            })
+            }))
           : null;
       }
-      var yo = n(1736);
-      function Ao(e) {
+      var Ro = n(1736);
+      function Po(e) {
         const { text: t, onURLDetected: n } = e,
           r = a.useCallback(
             (e) => {
               let t = (0, dr.P)(e.args) ?? (0, dr.P)(e.args, "href");
               return (
-                (0, Mr.p)(t) && (t = (0, Mr.E)(t)), n && n(t), (0, yo._)(e)
+                (0, Mr.p)(t) && (t = (0, Mr.E)(t)), n && n(t), (0, Ro._)(e)
               );
             },
             [n],
@@ -8918,41 +9050,41 @@
           }, [r])
           .ParseBBCode(t, void 0);
       }
-      var jo = n(60155),
-        So = n(88997),
-        bo = n(59869),
-        Io = n.n(bo);
-      function No(e) {
+      var Eo = n(60155),
+        Lo = n(88997),
+        ko = n(59869),
+        Bo = n.n(ko);
+      function Do(e) {
         const { option: t } = e,
-          n = ho(t),
+          n = vo(t),
           a = t.packageid
             ? { packageid: t.packageid }
             : { bundleid: t.bundleid };
-        return (0, r.jsxs)(jo.kt, {
-          className: Io().MenuItem,
+        return (0, r.jsxs)(Eo.kt, {
+          className: Bo().MenuItem,
           onSelected: n,
           children: [
             (0, r.jsx)("div", {
-              className: Io().Name,
+              className: Bo().Name,
               children: t.purchase_option_name,
             }),
             (0, r.jsx)("div", {
-              className: Io().Price,
+              className: Bo().Price,
               children: (0, r.jsx)(kt.AO, { id: a, purchaseOption: t }),
             }),
           ],
         });
       }
-      function To(e) {
+      function Fo(e) {
         const { option: t } = e;
-        return (0, r.jsx)(jo.tz, {
+        return (0, r.jsx)(Eo.tz, {
           label: t.data.package_group.dropdown_title,
           children: t.data.items.map((e) =>
-            (0, r.jsx)(No, { option: e }, e.packageid ?? e.bundleid),
+            (0, r.jsx)(Do, { option: e }, e.packageid ?? e.bundleid),
           ),
         });
       }
-      function Ro(e) {
+      function Mo(e) {
         const { option: t } = e,
           { appid: n } = a.useContext(oo),
           { data: s } = (0, V.J$)({ appid: n }),
@@ -8964,7 +9096,7 @@
           }, [i, c]),
           u = a.useCallback(
             (e) => {
-              (0, So.lX)((0, r.jsx)(To, { option: t }), e);
+              (0, Lo.lX)((0, r.jsx)(Fo, { option: t }), e);
             },
             [t],
           );
@@ -8976,17 +9108,17 @@
             ? lo.Localize("#AppPage_PurchaseOption_MoreInfo")
             : void 0,
           children: [
-            (0, r.jsx)(vo, {
+            (0, r.jsx)(Ao, {
               title:
                 o.dropdown_title ||
                 lo.Localize("#AppPage_Dropdown_DefaultTitle", s?.name),
             }),
-            (0, r.jsx)(Co, {
+            (0, r.jsx)(jo, {
               children:
                 o.dropdown_description_bbcode &&
                 (0, r.jsx)(Wt.EY, {
                   size: "2",
-                  children: (0, r.jsx)(Ao, {
+                  children: (0, r.jsx)(Po, {
                     text: o.dropdown_description_bbcode,
                     onURLDetected: l,
                   }),
@@ -8995,8 +9127,8 @@
           ],
         });
       }
-      var Po = n(66973);
-      function Eo(e) {
+      var Oo = n(66973);
+      function Go(e) {
         const { appid: t } = e,
           { data: n } = (0, V.J$)({ appid: t }),
           { data: a } = (0, V.lv)({ appid: t });
@@ -9006,7 +9138,7 @@
           children: [
             !1,
             (0, r.jsx)(Wt.EY, {
-              children: (0, Po.i)(
+              children: (0, Oo.i)(
                 lo.Localize(
                   "#AppPage_PurchaseOption_IncludedWithMasterSub",
                   n.name,
@@ -9017,50 +9149,11 @@
           ],
         });
       }
-      var Lo = n(53965);
-      function ko(e) {
-        const { color: t, onClick: n, children: s } = e,
-          o = a.useCallback(
-            (e) => {
-              e.stopPropagation(), n && n(e);
-            },
-            [n],
-          );
-        return (0, r.jsx)(Lo.$, { color: t, onClick: o, children: s });
-      }
-      function Bo(e) {
-        const { onPlay: t, onInfo: n, onAddToCart: a } = e;
-        return t || n || a
-          ? (0, r.jsxs)(Ut.s, {
-              direction: "row",
-              flexGrow: "0",
-              flexShrink: "0",
-              align: "end",
-              justify: "end",
-              gap: "2",
-              children: [
-                t &&
-                  (0, r.jsx)(ko, {
-                    color: "storegreen",
-                    onClick: t,
-                    children: lo.Localize("#AppPage_PurchaseOption_PlayNow"),
-                  }),
-                !1,
-                a &&
-                  (0, r.jsx)(ko, {
-                    color: "storegreen",
-                    onClick: a,
-                    children: lo.Localize("#AppPage_PurchaseOption_AddToCart"),
-                  }),
-              ],
-            })
-          : null;
-      }
-      function Do(e) {
+      function Ho(e) {
         const { option: t, appidMasterSub: n } = e,
           s = a.useContext(oo),
           { data: o } = (0, V.J$)({ appid: s.appid }),
-          i = go(s.appid, o?.name ?? "");
+          i = Co(s.appid, o?.name ?? "");
         return o
           ? (0, r.jsxs)(po, {
               option: t,
@@ -9069,10 +9162,10 @@
                 "#AppPage_PurchaseOption_PlayNow",
               ),
               children: [
-                (0, r.jsx)(vo, {
+                (0, r.jsx)(Ao, {
                   title: lo.Localize("#AppPage_PurchaseOption_Play", o.name),
                 }),
-                (0, r.jsxs)(Co, {
+                (0, r.jsxs)(jo, {
                   children: [
                     !n &&
                       (0, r.jsx)(Wt.EY, {
@@ -9081,16 +9174,16 @@
                           o.name,
                         ),
                       }),
-                    n && (0, r.jsx)(Eo, { appid: n }),
+                    n && (0, r.jsx)(Go, { appid: n }),
                   ],
                 }),
-                (0, r.jsx)(Bo, { onPlay: i }),
+                (0, r.jsx)(Io, { onPlay: i }),
               ],
             })
           : null;
       }
-      var Fo = n(83710);
-      function Mo(e) {
+      var zo = n(83710);
+      function Uo(e) {
         const { option: t, appidPlaytest: n, bIsOpen: a } = e,
           { data: s } = (0, V.J$)({ appid: n }),
           { data: o } = (0, V.by)({ appid: n }),
@@ -9102,7 +9195,7 @@
           case zn.EX.Rw:
             (c = "#AppPage_PurchaseOption_JoinPlaytest"),
               (d = a
-                ? (o.steam_release_date || F.TQt) < (0, Fo._2)()
+                ? (o.steam_release_date || F.TQt) < (0, zo._2)()
                   ? "#AppPage_PurchaseOption_Playtest_Open"
                   : "#AppPage_PurchaseOption_Playtest_Open_Unreleased"
                 : "#AppPage_PurchaseOption_JoinPlaytest_Description");
@@ -9116,7 +9209,7 @@
               (d = "#AppPage_PurchaseOption_JoinPlaytest_InvitedByFriend");
             break;
           case zn.EX.m7:
-            (o.steam_release_date || F.TQt) < (0, Fo._2)()
+            (o.steam_release_date || F.TQt) < (0, zo._2)()
               ? ((c = "#AppPage_PurchaseOption_Playtest_Accepted_Title"),
                 (d = "#AppPage_PurchaseOption_Playtest_Accepted"))
               : (o.is_preload,
@@ -9134,8 +9227,8 @@
                 option: t,
                 onActivate: u,
                 children: [
-                  (0, r.jsx)(vo, { title: lo.Localize(c, s.name) }),
-                  (0, r.jsx)(Co, {
+                  (0, r.jsx)(Ao, { title: lo.Localize(c, s.name) }),
+                  (0, r.jsx)(jo, {
                     children: (0, r.jsx)(Wt.EY, { children: lo.Localize(d) }),
                   }),
                 ],
@@ -9143,30 +9236,30 @@
             : null
         );
       }
-      var Go = n(75659),
-        Oo = n(11526),
-        Ho = n(89611);
-      function zo(e) {
-        const t = (0, Oo.mz)({ ...e, className: e.className }, Uo);
+      var Wo = n(75659),
+        Vo = n(11526),
+        Ko = n(89611);
+      function Qo(e) {
+        const t = (0, Vo.mz)({ ...e, className: e.className }, qo);
         return (0, r.jsx)("img", { ...t });
       }
-      const Uo = [
-        ...Go.h,
+      const qo = [
+        ...Wo.h,
         {
           prop: "objectFit",
-          className: Ho.ObjectFit,
+          className: Ko.ObjectFit,
           cssProperty: "--object-fit",
         },
         {
           prop: "objectPosition",
-          className: Ho.ObjectPosition,
+          className: Ko.ObjectPosition,
           cssProperty: "--object-position",
         },
       ];
-      function Wo(e) {
+      function Zo(e) {
         const { discount: t } = e;
         (0, M.bB)({ msInterval: 1e3 });
-        const n = (0, Fo._2)();
+        const n = (0, zo._2)();
         if (t.discount_end_date <= n) return null;
         const a = Math.max(t.discount_end_date - n, 0),
           s = t.discount_description,
@@ -9175,7 +9268,7 @@
           ? null
           : (0, r.jsx)(Wt.EY, { contrast: "body", size: "2", children: o });
       }
-      function Vo(e) {
+      function Jo(e) {
         const { option: t } = e;
         return t && t.discount_pct
           ? t.hide_discount_pct_for_compliance
@@ -9188,7 +9281,7 @@
               : null
           : null;
       }
-      function Ko(e) {
+      function Yo(e) {
         const { option: t, discount: n } = e,
           s = a.useContext(oo),
           { data: o } = (0, V.J$)({ appid: s.appid }),
@@ -9200,7 +9293,7 @@
           ? null
           : (0, r.jsx)(Wt.EY, { contrast: "body", size: "2", children: c });
       }
-      function Qo(e) {
+      function Xo(e) {
         const { option: t } = e;
         if (!t) return null;
         if (t.is_free_to_keep && t.free_to_keep_ends)
@@ -9218,7 +9311,7 @@
             ),
           });
         if (!t?.active_discounts?.length) return null;
-        const n = (0, Fo._2)(),
+        const n = (0, zo._2)(),
           a = t.active_discounts.reduce((e, t) =>
             t.discount_end_date != F.TQt &&
             (!e ||
@@ -9229,12 +9322,12 @@
           );
         let s = "";
         if (a.discount_end_date == F.TQt)
-          s = (0, r.jsx)(Ko, { option: t, discount: a });
+          s = (0, r.jsx)(Yo, { option: t, discount: a });
         else {
           if (
             !(a.discount_end_date != F.TQt && a.discount_end_date - n > 172800)
           )
-            return (0, r.jsx)(Wo, { discount: a });
+            return (0, r.jsx)(Zo, { discount: a });
           {
             const e = a.discount_description + "_date";
             (s = lo.Localize(
@@ -9251,19 +9344,19 @@
           ? (0, r.jsx)(Wt.EY, { contrast: "body", size: "2", children: s })
           : null;
       }
-      function qo(e) {
+      function $o(e) {
         const { option: t } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(Qo, { option: t }),
-            (0, r.jsx)(Vo, { option: t }),
+            (0, r.jsx)(Xo, { option: t }),
+            (0, r.jsx)(Jo, { option: t }),
           ],
         });
       }
-      var Zo = n(95036),
-        Jo = n.n(Zo);
-      const Yo = new Da.wd("PurchaseOptions");
-      function Xo(e) {
+      var ei = n(95036),
+        ti = n.n(ei);
+      const ni = new Da.wd("PurchaseOptions");
+      function ri(e) {
         const { id: t, onAddToCart: n, onInfo: a } = e,
           { data: s } = (0, V.J$)(t),
           { data: o } = (0, V.lv)(t),
@@ -9280,10 +9373,10 @@
           0 == c.length &&
             ((u = "#AppPage_CollectionComplete"),
             (d = s.included_appids?.length || 0)),
-          Yo.Debug(t, s.best_purchase_option, s),
+          ni.Debug(t, s.best_purchase_option, s),
           (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(vo, {
+              (0, r.jsx)(Ao, {
                 id: t,
                 children: (0, r.jsxs)(Wt.EY, {
                   size: "3",
@@ -9294,7 +9387,7 @@
                   ],
                 }),
               }),
-              (0, r.jsxs)(Co, {
+              (0, r.jsxs)(jo, {
                 children: [
                   (0, r.jsx)(Jt, { id: t, bSelfPurchaseOption: !0 }),
                   (0, r.jsxs)(Ut.s, {
@@ -9304,7 +9397,7 @@
                     overflow: "hidden",
                     gap: "1",
                     children: [
-                      (0, r.jsx)(qo, { option: s.best_purchase_option }),
+                      (0, r.jsx)($o, { option: s.best_purchase_option }),
                       (0, r.jsxs)(Ut.s, {
                         direction: "column",
                         flexGrow: "1",
@@ -9320,19 +9413,19 @@
                                 0,
                             ),
                           }),
-                          (0, r.jsx)($o, { apps: c }),
+                          (0, r.jsx)(ai, { apps: c }),
                         ],
                       }),
                     ],
                   }),
                 ],
               }),
-              (0, r.jsx)(Bo, { onInfo: a, onAddToCart: n }),
+              (0, r.jsx)(Io, { onInfo: a, onAddToCart: n }),
             ],
           })
         );
       }
-      function $o(e) {
+      function ai(e) {
         const { apps: t } = e,
           [n, s] = a.useState(Math.min(t.length, 6)),
           o = a.useRef(null),
@@ -9361,10 +9454,10 @@
         if (0 == t.length || 0 == n) return null;
         const l = t.length - n;
         return (0, r.jsxs)("ul", {
-          className: Jo().AppList,
+          className: ti().AppList,
           ref: i,
           children: [
-            t.slice(0, n).map((e) => (0, r.jsx)(ei, { appid: e }, e)),
+            t.slice(0, n).map((e) => (0, r.jsx)(si, { appid: e }, e)),
             (0, r.jsx)(Wt.EY, {
               ref: o,
               size: "2",
@@ -9373,12 +9466,12 @@
           ],
         });
       }
-      function ei(e) {
+      function si(e) {
         const { appid: t } = e,
           { data: n } = (0, V.J$)({ appid: t });
         return n
           ? (0, r.jsx)("li", {
-              className: Jo().BundleApp,
+              className: ti().BundleApp,
               children: (0, r.jsx)(Wt.EY, {
                 size: "2",
                 lineClamp: 2,
@@ -9387,25 +9480,25 @@
             })
           : null;
       }
-      var ti = n(30020);
-      const ni = new Da.wd("PurchaseOptions");
-      function ri(e) {
+      var oi = n(30020);
+      const ii = new Da.wd("PurchaseOptions");
+      function li(e) {
         const { id: t } = e,
           { data: n } = (0, V.J$)(t);
         return n?.purchase_description_bbcode
           ? (0, r.jsx)("div", {
-              children: (0, r.jsx)(Ao, { text: n.purchase_description_bbcode }),
+              children: (0, r.jsx)(Po, { text: n.purchase_description_bbcode }),
             })
           : null;
       }
-      function ai(e) {
+      function ci(e) {
         const { id: t, onAddToCart: n, onInfo: s } = e,
           o = a.useContext(oo),
           { data: i } = (0, V.J$)(t),
           { data: l } = (0, V.J$)({ appid: o.appid }),
           { data: c } = (0, V.by)(t);
         if (!i || !l) return null;
-        ni.Debug(i);
+        ii.Debug(i);
         let d = i.self_purchase_option?.packageid
             ? i.self_purchase_option
             : i.best_purchase_option,
@@ -9413,32 +9506,32 @@
             ? lo.Localize("#AppPage_PurchaseOption_GetFreeToKeep", l.name)
             : void 0;
         return (
-          ni.Debug(t, d, i),
+          ii.Debug(t, d, i),
           (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(vo, {
+              (0, r.jsx)(Ao, {
                 id: t,
                 title: u,
-                bPrepurchase: (0, ti.Nq)(c, d),
+                bPrepurchase: (0, oi.Nq)(c, d),
               }),
-              (0, r.jsxs)(Co, {
+              (0, r.jsxs)(jo, {
                 children: [
                   (0, r.jsx)(Jt, {
                     id: t,
                     bSelfPurchaseOption: !!i.self_purchase_option?.packageid,
                   }),
-                  (0, r.jsx)(qo, { option: d }),
-                  (0, r.jsx)(ri, { id: t }),
+                  (0, r.jsx)($o, { option: d }),
+                  (0, r.jsx)(li, { id: t }),
                 ],
               }),
-              (0, r.jsx)(Bo, { onAddToCart: n, onInfo: s }),
+              (0, r.jsx)(Io, { onAddToCart: n, onInfo: s }),
             ],
           })
         );
       }
-      var si = n(54652),
-        oi = n.n(si);
-      function ii(e) {
+      var di = n(54652),
+        ui = n.n(di);
+      function pi(e) {
         const { id: t } = e,
           { data: n } = (0, V.J$)(t),
           { data: a } = ro(),
@@ -9464,7 +9557,7 @@
         }
         return u
           ? (0, r.jsx)(Ut.s, {
-              className: oi().PurchaseOptionBanner,
+              className: ui().PurchaseOptionBanner,
               paddingX: "1",
               background: d,
               children: (0, r.jsx)(Wt.EY, {
@@ -9477,7 +9570,7 @@
             })
           : null;
       }
-      function li(e) {
+      function mi(e) {
         const { closeModal: t } = e,
           n = a.useContext(oo),
           { data: s } = (0, V.J$)({ appid: n.appid }),
@@ -9498,7 +9591,7 @@
               children:
                 s &&
                 o &&
-                (0, r.jsx)(zo, {
+                (0, r.jsx)(Qo, {
                   width: "100%",
                   src:
                     ((i = o.asset_url_format),
@@ -9510,7 +9603,7 @@
             (0, r.jsx)(Vt.az, {
               flexGrow: "0",
               flexShrink: "0",
-              children: (0, r.jsx)(Lo.$, {
+              children: (0, r.jsx)(So.$, {
                 onClick: t,
                 children: g.Z.Localize("#Button_Close"),
               }),
@@ -9519,7 +9612,7 @@
         });
         var i, l;
       }
-      function ci(e) {
+      function hi(e) {
         const { id: t, option: n } = e,
           { data: s } = (0, V.J$)(t),
           [o, i] = a.useState(!1),
@@ -9533,7 +9626,7 @@
           u = a.useCallback(() => {
             d && (window.location.href = d);
           }, [d]),
-          p = ho(n.data);
+          p = vo(n.data);
         let m, h;
         return (
           s?.item_type == Na.c6.xO
@@ -9545,7 +9638,7 @@
           s
             ? (0, r.jsxs)(r.Fragment, {
                 children: [
-                  (0, r.jsx)(ii, { id: t }),
+                  (0, r.jsx)(pi, { id: t }),
                   (0, r.jsxs)(po, {
                     option: n,
                     onActivate: p,
@@ -9556,27 +9649,27 @@
                     onSecondaryActionDescription: h,
                     children: [
                       s.item_type == Na.c6.RD &&
-                        (0, r.jsx)(ai, { id: t, onAddToCart: p, onInfo: m }),
+                        (0, r.jsx)(ci, { id: t, onAddToCart: p, onInfo: m }),
                       s.item_type == Na.c6.xO &&
-                        (0, r.jsx)(Xo, { id: t, onAddToCart: p, onInfo: m }),
+                        (0, r.jsx)(ri, { id: t, onAddToCart: p, onInfo: m }),
                     ],
                   }),
                   o &&
                     n.data.is_edition &&
                     (0, r.jsx)(vs.Root, {
                       onClose: c,
-                      children: (0, r.jsx)(li, { closeModal: c }),
+                      children: (0, r.jsx)(mi, { closeModal: c }),
                     }),
                 ],
               })
             : (console.warn("Not ready", t), null)
         );
       }
-      var di = n(18574),
-        ui = n.n(di);
-      const pi = new Da.wd("PurchaseOptions"),
-        mi = !1;
-      function hi(e) {
+      var gi = n(18574),
+        _i = n.n(gi);
+      const fi = new Da.wd("PurchaseOptions"),
+        vi = !1;
+      function Ci(e) {
         const {
             appid: t,
             dataRequestStoreItems: n,
@@ -9601,24 +9694,24 @@
           [m, h] = a.useState(!1);
         return (
           a.useEffect(() => {
-            pi.Debug("Initializing PurchaseOptions"),
-              pi.Debug("rgStoreItems", s),
-              pi.Debug("DataRequest", n),
-              pi.Debug("rgOwnedApps", o),
-              pi.Debug("rgActiveLicenses", i),
-              pi.Debug("playtestStatus", l);
+            fi.Debug("Initializing PurchaseOptions"),
+              fi.Debug("rgStoreItems", s),
+              fi.Debug("DataRequest", n),
+              fi.Debug("rgOwnedApps", o),
+              fi.Debug("rgActiveLicenses", i),
+              fi.Debug("playtestStatus", l);
             for (let e of s) (0, V.vB)(c, e, n);
-            d(o), u(i), mi && l && p(l.appid, l), h(!0);
+            d(o), u(i), vi && l && p(l.appid, l), h(!0);
           }, [c, n, i, o, s, l, d, u, p]),
           m
             ? (0, r.jsx)(oo.Provider, {
                 value: { appid: t },
-                children: (0, r.jsx)(gi, { appid: t }),
+                children: (0, r.jsx)(xi, { appid: t }),
               })
             : null
         );
       }
-      function gi(e) {
+      function xi(e) {
         const { appid: t } = e,
           { data: n } = (0, V.J$)({ appid: t }),
           s = (function (e) {
@@ -9627,7 +9720,7 @@
               { data: r } = (0, $s.$Y)(),
               s = n?.purchase_options;
             return (
-              pi.Debug(s),
+              fi.Debug(s),
               a.useMemo(() => {
                 if (!t || !s || !r) return null;
                 const a = [];
@@ -9636,14 +9729,14 @@
                   const e = (n.purchase_options || [])
                     .map((e) => e.free_with_master_sub_appid)
                     .filter((e) => !!e);
-                  pi.Debug(e);
+                  fi.Debug(e);
                   for (const t of e)
                     if (t && r.has(t)) {
                       a.push({ type: "play", appidMasterSub: t });
                       break;
                     }
                 }
-                if (mi) {
+                if (vi) {
                   const e = t.related_items?.playtests || [];
                   if (e.length > 0)
                     for (const t of e)
@@ -9685,7 +9778,7 @@
                     c && c?.package_group.display_type == Na.aq.V
                       ? c.items.push(e)
                       : a.push({ type: "item", data: e }));
-                return pi.Debug(i), a;
+                return fi.Debug(i), a;
               }, [e, t, n, s, r])
             );
           })(t),
@@ -9703,10 +9796,10 @@
             [i],
           ),
           n && s
-            ? (pi.Debug(n),
-              pi.Debug(s),
+            ? (fi.Debug(n),
+              fi.Debug(s),
               (0, r.jsx)(p.Z, {
-                className: ui().PurchaseOptionDisplay,
+                className: _i().PurchaseOptionDisplay,
                 navEntryPreferPosition: m.iU.PREFERRED_CHILD,
                 navRef: o,
                 children:
@@ -9720,37 +9813,37 @@
                         children: lo.Localize("#AppPage_PurchaseOptions_Title"),
                       }),
                       (0, r.jsx)(p.Z, {
-                        className: ui().PurchaseOptionCarouselWrapper,
+                        className: _i().PurchaseOptionCarouselWrapper,
                         preferredFocus: !0,
-                        children: (0, r.jsx)(fi, { options: s }),
+                        children: (0, r.jsx)(yi, { options: s }),
                       }),
                     ],
                   }),
               }))
-            : (pi.Warning("Not ready", t), null)
+            : (fi.Warning("Not ready", t), null)
         );
       }
-      function _i(e) {
+      function wi(e) {
         const { option: t } = e;
         let n = null;
         switch (t.type) {
           case "item":
-            n = (0, r.jsx)(ci, { id: no(t.data), option: t });
+            n = (0, r.jsx)(hi, { id: no(t.data), option: t });
             break;
           case "dropdown":
-            n = (0, r.jsx)(Ro, { option: t });
+            n = (0, r.jsx)(Mo, { option: t });
             break;
           case "demo":
-            n = (0, r.jsx)(xo, { option: t });
+            n = (0, r.jsx)(No, { option: t });
             break;
           case "free":
-            n = (0, r.jsx)(wo, { option: t });
+            n = (0, r.jsx)(To, { option: t });
             break;
           case "play":
-            n = (0, r.jsx)(Do, { option: t, appidMasterSub: t.appidMasterSub });
+            n = (0, r.jsx)(Ho, { option: t, appidMasterSub: t.appidMasterSub });
             break;
           case "playtest":
-            n = (0, r.jsx)(Mo, {
+            n = (0, r.jsx)(Uo, {
               option: t,
               appidPlaytest: t.appidPlaytest,
               bIsOpen: t.bIsOpen,
@@ -9758,23 +9851,23 @@
         }
         return n
           ? (0, r.jsx)("div", {
-              className: ui().PurchaseOptionWrapper,
+              className: _i().PurchaseOptionWrapper,
               children: n,
             })
           : null;
       }
-      function fi(e) {
+      function yi(e) {
         const { options: t } = e,
           n = "purchase_options",
           [s, o] = Ha(n),
           i = 240,
-          l = parseInt(ui().CarouselPaddingTop),
+          l = parseInt(_i().CarouselPaddingTop),
           c = a.useCallback(
             (e, n, a, s) => {
               const o = t[e];
               return (0, r.jsx)("div", {
                 style: { width: n, height: a },
-                children: (0, r.jsx)(_i, { option: o }),
+                children: (0, r.jsx)(wi, { option: o }),
               });
             },
             [t],
@@ -9813,7 +9906,7 @@
                 name: n,
                 "aria-label": lo.Localize("#AppPage_PurchaseOptions_Title"),
                 className: (0, X.A)(
-                  ui().PurchaseOptionsCarousel,
+                  _i().PurchaseOptionsCarousel,
                   "PurchaseOptions",
                 ),
                 focusedColumn: s,
@@ -9829,10 +9922,10 @@
               }),
             });
       }
-      var vi = n(96762),
-        Ci = n(48205),
-        xi = n.n(Ci);
-      function wi(e) {
+      var Ai = n(96762),
+        ji = n(48205),
+        Si = n.n(ji);
+      function bi(e) {
         const {
             appid: t,
             dataRequestStoreItems: n,
@@ -9859,32 +9952,32 @@
           }, [u]),
           u
             ? (0, r.jsxs)(p.Z, {
-                className: xi().SummaryBarTop,
+                className: Si().SummaryBarTop,
                 "flow-children": "grid",
                 navEntryPreferPosition: m.iU.MAINTAIN_X,
                 resetNavOnEntry: !0,
                 children: [
-                  (0, r.jsx)(Ni, {
+                  (0, r.jsx)(Li, {
                     appid: t,
                     recent: l,
                     strIdForReviewSummary: c,
                   }),
-                  (0, r.jsx)(Ai, { appid: t }),
-                  (0, r.jsx)(bi, { appid: t, mapTags: g }),
-                  (0, r.jsx)(Ti, { appid: t, mapCreatorLinks: _ }),
+                  (0, r.jsx)(Ni, { appid: t }),
+                  (0, r.jsx)(Pi, { appid: t, mapTags: g }),
+                  (0, r.jsx)(ki, { appid: t, mapCreatorLinks: _ }),
                 ],
               })
             : null
         );
       }
-      function yi(e) {
+      function Ii(e) {
         const { children: t } = e;
         return (0, r.jsx)("div", {
-          className: xi().Title,
+          className: Si().Title,
           children: (0, r.jsx)(Wt.EY, { contrast: "title", children: t }),
         });
       }
-      function Ai(e) {
+      function Ni(e) {
         const { appid: t } = e,
           n = a.useMemo(
             () => (0, L.Tc)("deckcompatibility", "application_config"),
@@ -9892,13 +9985,13 @@
           );
         return n
           ? (0, r.jsxs)(p.Z, {
-              className: (0, X.A)(xi().SummaryBarSection, xi().SteamDeckCompat),
+              className: (0, X.A)(Si().SummaryBarSection, Si().SteamDeckCompat),
               children: [
-                (0, r.jsx)(yi, {
+                (0, r.jsx)(Ii, {
                   children: lo.Localize("#AppPage_SummaryBar_SteamDeckCompat"),
                 }),
                 (0, r.jsx)(Zn, {
-                  className: xi().SteamDeckCompatContent,
+                  className: Si().SteamDeckCompatContent,
                   appID: t,
                   results: n,
                 }),
@@ -9906,20 +9999,20 @@
             })
           : null;
       }
-      function ji(e) {
+      function Ti(e) {
         const t = e.Element?.getBoundingClientRect(),
           n = e.m_Parent?.Element?.getBoundingClientRect();
         return !(!t || !n) && t.bottom <= n.bottom;
       }
-      function Si(e) {
+      function Ri(e) {
         const { tag: t } = e,
           n = (0, yt.aL)(
-            j.TS.STORE_BASE_URL + `tags/${(0, vi.ut)(j.TS.LANGUAGE)}/${t}`,
+            j.TS.STORE_BASE_URL + `tags/${(0, Ai.ut)(j.TS.LANGUAGE)}/${t}`,
           );
         return (0, r.jsx)(u.Ii, {
-          className: xi().Tag,
+          className: Si().Tag,
           href: n,
-          fnCanTakeFocus: ji,
+          fnCanTakeFocus: Ti,
           children: (0, r.jsx)(Vt.az, {
             background: "blue-5",
             paddingX: "1",
@@ -9928,25 +10021,25 @@
           }),
         });
       }
-      function bi(e) {
+      function Pi(e) {
         const { appid: t, mapTags: n } = e;
         return (0, r.jsxs)(Fr.YZ, {
-          className: (0, X.A)(xi().SummaryBarSection, xi().UserTags),
+          className: (0, X.A)(Si().SummaryBarSection, Si().UserTags),
           focusable: !0,
           children: [
-            (0, r.jsx)(yi, {
+            (0, r.jsx)(Ii, {
               children: lo.Localize("#AppPage_SummaryBar_UserTags"),
             }),
             (0, r.jsx)(p.Z, {
-              className: xi().Tags,
+              className: Si().Tags,
               children: Array.from(n.entries()).map(([e, t]) =>
-                (0, r.jsx)(Si, { tag: e }, e),
+                (0, r.jsx)(Ri, { tag: e }, e),
               ),
             }),
           ],
         });
       }
-      function Ii(e) {
+      function Ei(e) {
         const {
           label: t,
           reviewScoreDescription: n,
@@ -9975,7 +10068,7 @@
             })
           : null;
       }
-      function Ni(e) {
+      function Li(e) {
         const { appid: t, recent: n, strIdForReviewSummary: s } = e,
           { data: o } = (0, V.ik)({ appid: t }),
           i = a.useCallback(() => {
@@ -9983,13 +10076,13 @@
           }, [s]);
         return o && o.summary_filtered?.review_count
           ? (0, r.jsxs)(p.Z, {
-              className: xi().SummaryBarSection,
+              className: Si().SummaryBarSection,
               onActivate: i,
               children: [
-                (0, r.jsx)(yi, {
+                (0, r.jsx)(Ii, {
                   children: lo.Localize("#AppPage_SummaryBar_UserReviews"),
                 }),
-                (0, r.jsx)(Ii, {
+                (0, r.jsx)(Ei, {
                   label: "#AppPage_Reviews_AllTime",
                   reviewScoreDescription:
                     o.summary_filtered?.review_score_label,
@@ -9997,7 +10090,7 @@
                   count: o.summary_filtered.review_count,
                 }),
                 n &&
-                  (0, r.jsx)(Ii, {
+                  (0, r.jsx)(Ei, {
                     label: "#AppPage_Reviews_Recent",
                     reviewScoreDescription: n.description,
                     percentage: n.percentage,
@@ -10007,27 +10100,27 @@
             })
           : null;
       }
-      function Ti(e) {
+      function ki(e) {
         const { appid: t, mapCreatorLinks: n } = e,
           { data: a } = (0, V.wl)({ appid: t }),
           { data: s } = (0, V.by)({ appid: t });
         return a
           ? (0, r.jsxs)(Fr.YZ, {
-              className: (0, X.A)(xi().SummaryBarSection, xi().GameInfo),
+              className: (0, X.A)(Si().SummaryBarSection, Si().GameInfo),
               children: [
-                (0, r.jsx)(yi, {
+                (0, r.jsx)(Ii, {
                   children: lo.Localize("#AppPage_SummaryBar_GameInfo"),
                 }),
                 (0, r.jsx)("table", {
                   children: (0, r.jsxs)("tbody", {
                     children: [
-                      (0, r.jsx)(Pi, {
+                      (0, r.jsx)(Di, {
                         label: "#AppPage_SummaryBar_Developer",
                         strType: "developer",
                         rgCreators: a.developers,
                         mapCreatorLinks: n,
                       }),
-                      (0, r.jsx)(Pi, {
+                      (0, r.jsx)(Di, {
                         label: "#AppPage_SummaryBar_Publisher",
                         strType: "publisher",
                         rgCreators: a.publishers,
@@ -10063,7 +10156,7 @@
             })
           : null;
       }
-      function Ri(e) {
+      function Bi(e) {
         const { creator: t, strType: n, mapCreatorLinks: a } = e,
           s = (0, yt.aL)(a.get(t.name)),
           o = (0, yt.aL)(j.TS.STORE_BASE_URL + `search/?${n}=${t.name}`),
@@ -10077,7 +10170,7 @@
           }),
         });
       }
-      function Pi(e) {
+      function Di(e) {
         const { label: t, strType: n, rgCreators: s, mapCreatorLinks: o } = e;
         return s && 0 != s.length
           ? (0, r.jsxs)("tr", {
@@ -10096,7 +10189,7 @@
                         {
                           children: [
                             0 != t && (0, r.jsx)("span", { children: ", " }),
-                            (0, r.jsx)(Ri, {
+                            (0, r.jsx)(Bi, {
                               strType: n,
                               creator: e,
                               mapCreatorLinks: o,
@@ -10112,8 +10205,8 @@
             })
           : null;
       }
-      const Ei = a.lazy(() => n.e(5139).then(n.bind(n, 51899))),
-        Li = a.lazy(() =>
+      const Fi = a.lazy(() => n.e(5139).then(n.bind(n, 51899))),
+        Mi = a.lazy(() =>
           Promise.all([
             n.e(6597),
             n.e(8970),
@@ -10124,7 +10217,7 @@
             n.e(6226),
             n.e(4781),
             n.e(9008),
-            n.e(376),
+            n.e(7326),
             n.e(2389),
             n.e(1215),
             n.e(7262),
@@ -10146,14 +10239,14 @@
             n.e(3027),
           ]).then(n.bind(n, 64940)),
         ),
-        ki = a.lazy(() =>
+        Oi = a.lazy(() =>
           Promise.all([
             n.e(9197),
             n.e(4796),
             n.e(6226),
             n.e(4781),
             n.e(9008),
-            n.e(376),
+            n.e(7326),
             n.e(1006),
             n.e(13),
             n.e(1677),
@@ -10165,7 +10258,7 @@
             n.e(9672),
           ]).then(n.bind(n, 47554)),
         ),
-        Bi = a.lazy(() =>
+        Gi = a.lazy(() =>
           Promise.all([
             n.e(6597),
             n.e(8970),
@@ -10175,7 +10268,7 @@
             n.e(6226),
             n.e(4781),
             n.e(9008),
-            n.e(376),
+            n.e(7326),
             n.e(2389),
             n.e(1215),
             n.e(7262),
@@ -10190,11 +10283,11 @@
             n.e(8396),
           ]).then(n.bind(n, 49850)),
         ),
-        Di = a.lazy(async () => ({
+        Hi = a.lazy(async () => ({
           default: (await n.e(445).then(n.bind(n, 13229)))
             .AccessibilityFeatureDisplay,
         }));
-      function Fi(e) {
+      function zi(e) {
         const { appid: t } = e;
         return (0, r.jsxs)(Nt.QA, {
           eAdultOnlyMediaBehavior: "allowed",
@@ -10204,7 +10297,7 @@
                 "events-row": () =>
                   (0, r.jsx)(It.d, { children: (0, r.jsx)(D, { appid: t }) }),
                 "deck-topplayed-banner": (e) => (0, r.jsx)(St, { ...e }),
-                "steamawardsvote-embed": () => (0, r.jsx)(Li, { appID: t }),
+                "steamawardsvote-embed": () => (0, r.jsx)(Mi, { appID: t }),
                 "demo-and-quick-pitch": () =>
                   (0, r.jsx)(It.d, { children: (0, r.jsx)(Z, { appID: t }) }),
                 "deck-verified-results": (e) =>
@@ -10223,7 +10316,7 @@
                 "gamehighlight-desktopcarousel": (e) =>
                   (0, r.jsx)(En, { ...e }),
                 "discovery-queue-app-widget": () =>
-                  (0, r.jsx)(ki, { appID: t }),
+                  (0, r.jsx)(Oi, { appID: t }),
                 "game-notice-controller-required": () =>
                   (0, r.jsx)(ie, {
                     appid: t,
@@ -10233,7 +10326,7 @@
                   (0, r.jsx)(ie, { type: re.EPurchaseNoticeType_VRRequired }),
                 "game-notice-vr-supported": () =>
                   (0, r.jsx)(ie, { type: re.EPurchaseNoticeType_VRSupported }),
-                "season-pass-display": (e) => (0, r.jsx)(Ei, { ...e }),
+                "season-pass-display": (e) => (0, r.jsx)(Fi, { ...e }),
                 "storeitems-carousel": (e) =>
                   (0, r.jsx)(Ee.Ay, {
                     feature: "recommended",
@@ -10256,8 +10349,8 @@
                   }),
                 appreviews: (e) => (0, r.jsx)(ms, { ...e }),
                 "wishlist-item-categories": (e) => (0, r.jsx)(Xs, { ...e }),
-                "purchase-options": (e) => (0, r.jsx)(hi, { ...e }),
-                "summary-bar-top": (e) => (0, r.jsx)(wi, { ...e }),
+                "purchase-options": (e) => (0, r.jsx)(Ci, { ...e }),
+                "summary-bar-top": (e) => (0, r.jsx)(bi, { ...e }),
               },
             }),
             (0, r.jsx)(J.X, {
@@ -10265,11 +10358,11 @@
               config: {
                 "review-award": () => (0, r.jsx)(ct, {}),
                 "broadcast-embed": (t) =>
-                  (0, r.jsx)(Bi, { ...e, appid: t.appid }),
+                  (0, r.jsx)(Gi, { ...e, appid: t.appid }),
                 "store-sidebar-accessibility-info": (e) =>
-                  (0, r.jsx)(Di, { features: e }),
+                  (0, r.jsx)(Hi, { features: e }),
                 "store-sidebar-controller-support-info": (e) =>
-                  (0, r.jsx)(Oe, { ...e }),
+                  (0, r.jsx)(Ge, { ...e }),
               },
             }),
           ],
