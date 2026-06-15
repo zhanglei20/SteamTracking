@@ -176,12 +176,14 @@
         },
       );
       var C = n(94621),
-        b = (n(8871), n(45699)),
-        v = n(85585),
-        j = (n(7445), n(8527));
-      n(81393);
+        v = (n(8871), n(45699)),
+        b = n(85585),
+        j = (n(7445), n(8527)),
+        y = (n(81393), n(64238)),
+        S = n.n(y);
+      n(11820);
       (0, u.createContext)(null);
-      function y(e) {
+      function _(e) {
         const { gutter: t = 0, placement: n } = e,
           s = [],
           o = n && "object" == typeof n;
@@ -242,18 +244,18 @@
           s
         );
       }
-      const S = (0, u.createContext)(null);
-      function _(e) {
+      const I = (0, u.createContext)(null);
+      function w(e) {
         return j.TS.IN_GAMEPADUI
-          ? (0, s.jsx)(I, { ...e })
-          : (0, s.jsx)(k, { ...e });
+          ? (0, s.jsx)(k, { ...e })
+          : (0, s.jsx)(A, { ...e });
       }
-      function I(e) {
+      function k(e) {
         const { state: t, children: n } = e,
           o = u.useRef(void 0);
         return (
-          (0, b.O7)(o, !!o.current, !1),
-          (0, s.jsx)(v.D6, {
+          (0, v.O7)(o, !!o.current, !1),
+          (0, s.jsx)(b.D6, {
             navID: "PopoverList",
             onCancelButton: () => t.floating.context.onOpenChange(!1),
             modal: !0,
@@ -262,7 +264,7 @@
           })
         );
       }
-      function k(e) {
+      function A(e) {
         const { state: t, children: n } = e;
         return (0, s.jsx)(h.s3, {
           context: t.floating.context,
@@ -271,14 +273,14 @@
           children: n,
         });
       }
-      const w = function (e) {
+      const T = function (e) {
           const { children: t, state: n } = e;
-          return (0, s.jsx)(S.Provider, { value: n, children: t });
+          return (0, s.jsx)(I.Provider, { value: n, children: t });
         },
-        A = function (e) {
+        N = function (e) {
           const { children: t } = e,
             n = u.Children.only(t),
-            s = (0, u.useContext)(S),
+            s = (0, u.useContext)(I),
             o = (0, h.SV)([s?.floating.refs.setReference, n?.props.ref]);
           if (!n) return null;
           if (!s)
@@ -291,9 +293,9 @@
           const { ref: a, ...r } = n.props;
           return (0, u.cloneElement)(n, { ref: o, ...s.getReferenceProps(r) });
         },
-        T = function (e) {
+        L = function (e) {
           const { children: t, render: n, ref: o } = e,
-            a = (0, u.useContext)(S),
+            a = (0, u.useContext)(I),
             r = (0, h.SV)([
               o,
               a?.floating.refs.setFloating,
@@ -301,18 +303,11 @@
             ]);
           return a
             ? a.open
-              ? (0, s.jsx)(_, {
+              ? (0, s.jsx)(w, {
                   state: a,
                   children: (0, s.jsx)(f, {
                     ref: r,
-                    style: {
-                      ...a.floating.floatingStyles,
-                      inset: "unset",
-                      border: "none",
-                      background: "transparent",
-                      color: "inherit",
-                      padding: 0,
-                    },
+                    style: a.floating.floatingStyles,
                     ...a.getFloatingProps({ popover: "manual" }),
                     render: n,
                     children: (0, s.jsx)(h.ph, {
@@ -328,7 +323,7 @@
               ),
               null);
         },
-        N = function (e) {
+        D = function (e) {
           const {
               children: t,
               label: n,
@@ -338,7 +333,7 @@
               disabled: i,
               ...l
             } = e,
-            c = (0, u.useContext)(S),
+            c = (0, u.useContext)(I),
             { ref: d, index: p } = (0, h.rm)({ label: n }),
             g = (0, h.SV)([r, d]);
           if (!c)
@@ -372,11 +367,9 @@
             children: t,
           });
         };
-      var L = n(64238),
-        O = n.n(L),
-        D = n(38878),
-        R = n(83392),
-        P = n(75659),
+      var O = n(38878),
+        P = n(83392),
+        R = n(75659),
         z = n(11526);
       function V(e) {
         const {
@@ -403,28 +396,28 @@
               {
                 ...c,
                 radius: d,
-                className: O()(
-                  D.ControlBox,
-                  o && !i && D.Focusable,
-                  a && !i && D.Hoverable,
-                  r && !i && D.Clickable,
-                  i && D.Disabled,
-                  D[`Variant-${t}`],
-                  D[`Size-${n}`],
+                className: S()(
+                  O.ControlBox,
+                  o && !i && O.Focusable,
+                  a && !i && O.Hoverable,
+                  r && !i && O.Clickable,
+                  i && O.Disabled,
+                  O[`Variant-${t}`],
+                  O[`Size-${n}`],
                   l,
                 ),
               },
-              P.h,
+              R.h,
             );
           })(r);
-        return (0, s.jsxs)(R.s, {
+        return (0, s.jsxs)(P.s, {
           ...i,
           align: "center",
           "data-has-value": !!a,
           children: [
-            n && (0, s.jsx)(R.s, { paddingRight: "2", children: n }),
+            n && (0, s.jsx)(P.s, { paddingRight: "2", children: n }),
             (0, s.jsx)(g.az, { flexGrow: "1", minWidth: "0", children: t }),
-            o && (0, s.jsx)(R.s, { paddingLeft: "2", children: o }),
+            o && (0, s.jsx)(P.s, { paddingLeft: "2", children: o }),
           ],
         });
       }
@@ -438,7 +431,7 @@
         });
       }
       const B = [
-          ...P.L,
+          ...R.L,
           {
             prop: "size",
             responsive: !0,
@@ -457,7 +450,7 @@
               "string" == typeof e ? e : "",
             ],
           },
-          P.h.find(({ prop: e }) => "cursor" === e),
+          R.h.find(({ prop: e }) => "cursor" === e),
         ],
         M = {
           up: "rotate( 180, 10, 10 )",
@@ -516,13 +509,13 @@
           p = () => {
             o || (n && n(!!u || !t));
           };
-        return (0, s.jsxs)(R.s, {
+        return (0, s.jsxs)(P.s, {
           align: c,
           ref: r,
           role: "checkbox",
           "aria-checked": u ? "mixed" : t,
           "data-state": q(t),
-          className: O()(Z.Root, Z[`Variant-${i}`], o && Z.Disabled),
+          className: S()(Z.Root, Z[`Variant-${i}`], o && Z.Disabled),
           onClick: p,
           tabIndex: 0,
           onKeyDown: (e) => {
@@ -644,15 +637,21 @@
               const g = (0, h.we)({
                   open: d,
                   onOpenChange: n,
-                  middleware: y(e),
+                  middleware: _(e),
                   whileElementsMounted: p.ll,
                   placement: c && "object" == typeof c ? c.initial : c,
+                  strategy: "fixed",
+                  platform: {
+                    ...p.iD,
+                    getOffsetParent: (e) =>
+                      e?.ownerDocument?.defaultView ?? window,
+                  },
                 }),
                 x = (0, h.kp)(g.context, { enabled: !!i.click }),
                 m = (0, h.iQ)(g.context, { enabled: !!i.focus }),
                 f = (0, h.s9)(g.context),
                 C = (0, u.useRef)([]),
-                b = (0, h.C1)(g.context, {
+                v = (0, h.C1)(g.context, {
                   listRef: C,
                   activeIndex: s,
                   selectedIndex: a,
@@ -661,33 +660,33 @@
                   loop: !0,
                   focusItemOnOpen: !1,
                 }),
-                v = (0, u.useRef)([]),
+                b = (0, u.useRef)([]),
                 j = (0, u.useRef)(!1),
-                S = (0, h.lY)(g.context, {
+                y = (0, h.lY)(g.context, {
                   enabled: !!i.typeahead,
-                  listRef: v,
+                  listRef: b,
                   activeIndex: s,
                   selectedIndex: a,
                   onMatch: d ? o : r,
                   onTypingChange: (e) => (j.current = e),
                 }),
-                _ = (0, h.It)(g.context, { role: l }),
+                S = (0, h.It)(g.context, { role: l }),
                 {
                   getFloatingProps: I,
-                  getReferenceProps: k,
-                  getItemProps: w,
-                } = (0, h.bv)([_, x, m, f, b, S]);
+                  getReferenceProps: w,
+                  getItemProps: k,
+                } = (0, h.bv)([S, x, m, f, v, y]);
               return {
                 floating: g,
                 getFloatingProps: I,
-                getReferenceProps: k,
-                getItemProps: w,
+                getReferenceProps: w,
+                getItemProps: k,
                 open: d,
                 activeIndex: s,
                 selectedIndex: a,
                 setSelectedIndex: r,
                 elementsRef: C,
-                labelsRef: v,
+                labelsRef: b,
                 typingRef: j,
                 initialFocus: i.virtualItemFocus ? -1 : void 0,
               };
@@ -708,7 +707,7 @@
             });
           return (0, s.jsx)(se.Provider, {
             value: f,
-            children: (0, s.jsx)(w, { state: C, children: t }),
+            children: (0, s.jsx)(T, { state: C, children: t }),
           });
         },
         Option: function (e) {
@@ -727,7 +726,7 @@
               (h = !!c && Array.isArray(l) && l.length >= c))
             : (u = t === l);
           const p = o || (h && !u);
-          return (0, s.jsxs)(N, {
+          return (0, s.jsxs)(D, {
             label: d,
             onSelect: () => r(t),
             selected: u,
@@ -735,7 +734,7 @@
             ...a,
             children: [
               i &&
-                (0, s.jsxs)(R.s, {
+                (0, s.jsxs)(P.s, {
                   gap: "2",
                   align: "center",
                   children: [(0, s.jsx)(J, { checked: u, variant: "dark" }), n],
@@ -746,7 +745,7 @@
         },
         Options: function (e) {
           const { refPopover: t } = oe("<Select.Options>");
-          return (0, s.jsx)(T, { ref: t, children: e.children });
+          return (0, s.jsx)(L, { ref: t, children: e.children });
         },
         Trigger: function (e) {
           const { children: t, render: n } = e,
@@ -765,8 +764,8 @@
               onSelectionChange: m,
               clearable: f,
               focusedIndex: C,
-              onItemSelectionChange: b,
-              onFocusedIndexChange: v,
+              onItemSelectionChange: v,
+              onFocusedIndexChange: b,
               refPopover: j,
               placeholder: y,
               maxSelected: S,
@@ -778,23 +777,23 @@
               onClick: () => a(!o),
               children: t,
             },
-            k = u ? Array.isArray(r) && r.length > 0 : !!r,
-            w =
-              k && f
+            w = u ? Array.isArray(r) && r.length > 0 : !!r,
+            k =
+              w && f
                 ? (0, s.jsx)(G, { onClick: h, cursor: "pointer", hitSlop: !0 })
                 : (0, s.jsx)(H, {}),
-            T = (0, s.jsx)(V, {
-              afterContent: w,
+            A = (0, s.jsx)(V, {
+              afterContent: k,
               variant: i,
               size: l,
               radius: c,
-              hasValue: k,
+              hasValue: w,
               tabIndex: 0,
               cursor: "pointer",
               ..._,
             }),
-            N = (0, x.Q)(n, T, I, void 0);
-          return (0, s.jsx)(A, { children: N });
+            T = (0, x.Q)(n, A, I, void 0);
+          return (0, s.jsx)(N, { children: T });
         },
         Value: function (e) {
           return (0, s.jsx)(U.EY, {
@@ -934,8 +933,8 @@
         me.set(ae.u7, ae.T4);
       var fe = n(9161),
         Ce = n(73745),
-        be = n(30470),
-        ve = n(74810),
+        ve = n(30470),
+        be = n(74810),
         je = n(92237),
         ye = n(4940),
         Se = n.n(ye),
@@ -966,7 +965,7 @@
                   children: [
                     "This page lets you review and edit existing categories. Click on their titles.  At the bottom there is controls to create a new category. To see the hubs performance related to making a theme sale ",
                     (0, s.jsx)("a", {
-                      href: `${be.TS.PARTNER_BASE_URL}promotion/planning/themes`,
+                      href: `${ve.TS.PARTNER_BASE_URL}promotion/planning/themes`,
                       children: "here.",
                     }),
                   ],
@@ -986,14 +985,14 @@
                     children:
                       "You have unpublished changes. Click Publish below to publish and make them available to users.",
                   }),
-                (0, s.jsx)(ke, { categories: e, onUpdate: d }),
+                (0, s.jsx)(we, { categories: e, onUpdate: d }),
                 (0, s.jsxs)("div", {
                   className: Se().ActionButtonCtn,
                   children: [
                     (0, s.jsx)(de.jn, {
                       onClick: () =>
                         (0, he.pg)(
-                          (0, s.jsx)(Pe, {
+                          (0, s.jsx)(Re, {
                             categories: e,
                             onSave: () => {
                               r(!1), c(!0);
@@ -1021,7 +1020,7 @@
             })
           : (0, s.jsx)(xe.t, { size: "medium", position: "center" });
       });
-      function ke(e) {
+      function we(e) {
         const { categories: t, onUpdate: n } = e,
           { rgTags: o } = (0, i.DT)(),
           [a] = (0, _e.QD)("edit");
@@ -1068,7 +1067,7 @@
           ],
         });
       }
-      function we(e) {
+      function ke(e) {
         const { rgTags: t, replacesTags: n } = e,
           o = (0, u.useMemo)(
             () =>
@@ -1122,7 +1121,7 @@
               }),
               (0, s.jsx)("div", {
                 className: Se().ReplacesTags,
-                children: (0, s.jsx)(we, {
+                children: (0, s.jsx)(ke, {
                   rgTags: n,
                   replacesTags: t.replaces_tags,
                 }),
@@ -1299,19 +1298,19 @@
                 children: (0, s.jsxs)("div", {
                   className: Se().Category,
                   children: [
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "must",
                       title: "Must have all of these tags",
                     }),
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "any",
                       title: "Must have one of these tags",
                     }),
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "mustnot",
@@ -1326,7 +1325,7 @@
               (0, s.jsxs)("div", {
                 className: Se().CategoryCtn,
                 children: [
-                  (0, s.jsx)(Re, {
+                  (0, s.jsx)(Pe, {
                     category: t,
                     setCategory: n,
                     list: "replaces_tags",
@@ -1346,7 +1345,7 @@
                       onClick: () => i(r + 1),
                       children: "Refresh Stats",
                     }),
-                    (0, s.jsx)(Oe, { category: t }),
+                    (0, s.jsx)(De, { category: t }),
                   ],
                 })
               : (0, s.jsx)(
@@ -1361,7 +1360,7 @@
           ],
         });
       }
-      function Oe(e) {
+      function De(e) {
         const { category: t } = e,
           n = (0, re.p$)(t.must, t.any, t.mustnot);
         if (!n)
@@ -1370,7 +1369,7 @@
             position: "center",
             size: "medium",
           });
-        const o = n.total_games > ve.iT && n.total_games <= ve.hp;
+        const o = n.total_games > be.iT && n.total_games <= be.hp;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(de.$n, {
@@ -1404,8 +1403,8 @@
                   className: je.ThemeDefinitionCtn,
                   children: [
                     "Summary: ",
-                    (0, s.jsx)(ve.KU, { nTotalGames: n.total_games }),
-                    Boolean(o) && (0, s.jsx)(De, { category: t }),
+                    (0, s.jsx)(be.KU, { nTotalGames: n.total_games }),
+                    Boolean(o) && (0, s.jsx)(Oe, { category: t }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
@@ -1418,7 +1417,7 @@
                         ?.slice(0, 10)
                         .map((e) =>
                           (0, s.jsx)(
-                            ve.W7,
+                            be.W7,
                             { info: e, category: t, bSaleSummary: o },
                             e.appid,
                           ),
@@ -1431,13 +1430,13 @@
           ],
         });
       }
-      function De(e) {
+      function Oe(e) {
         const { category: t } = e,
           n = (0, re.eX)(t.must, t.any, t.mustnot),
           o = (0, re.mg)(t.must, t.any, t.mustnot);
-        return (0, s.jsx)(ve.ny, { saleSummary: n, topAppSummary: o });
+        return (0, s.jsx)(be.ny, { saleSummary: n, topAppSummary: o });
       }
-      const Re = u.memo(function (e) {
+      const Pe = u.memo(function (e) {
         const { category: t, setCategory: n, list: o, title: a } = e,
           { rgTags: r, rgCategories: l } = (0, i.DT)(),
           c = (e) => {
@@ -1518,7 +1517,7 @@
           ],
         });
       });
-      function Pe(e) {
+      function Re(e) {
         const { categories: t, onSave: n, closeModal: o } = e,
           [a, r] = u.useState();
         return (

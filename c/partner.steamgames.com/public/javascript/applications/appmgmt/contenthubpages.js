@@ -190,7 +190,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__._(_);
       __webpack_require__("chunkid");
       (0, _.createContext)(null);
       function _(_) {
@@ -330,14 +332,7 @@
                   state: _,
                   children: (0, _.jsx)(_, {
                     ref: _,
-                    style: {
-                      ..._.floating.floatingStyles,
-                      inset: "unset",
-                      border: "none",
-                      background: "transparent",
-                      color: "inherit",
-                      padding: 0,
-                    },
+                    style: _.floating.floatingStyles,
                     ..._.getFloatingProps({
                       popover: "manual",
                     }),
@@ -402,8 +397,6 @@
           });
         };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -698,6 +691,12 @@
                   middleware: _(_),
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
+                  strategy: "fixed",
+                  platform: {
+                    ..._._,
+                    getOffsetParent: (_) =>
+                      _?.ownerDocument?.defaultView ?? window,
+                  },
                 }),
                 _ = (0, _._)(_.context, {
                   enabled: !!_.click,

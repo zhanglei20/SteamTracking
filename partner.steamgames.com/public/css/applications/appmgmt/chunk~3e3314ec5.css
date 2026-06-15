@@ -1069,6 +1069,15 @@
 :where(._3A_c3YHYd4YIjA8Y-olnPl):where(input[type="radio"]) {
   cursor: var(--cursor-radio);
 }
+:where(._3A_c3YHYd4YIjA8Y-olnPl):where([popover]) {
+  inset: unset;
+  border: none;
+  color: inherit;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+}
 ._2DCKU_4nS3RTO87T3YPOx_ {
   --spinner-color: var(--color-accent-8);
   --spinner-track-color: rgb(from var(--color-dull-10) r g b / 60%);

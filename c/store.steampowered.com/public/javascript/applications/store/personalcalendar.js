@@ -1407,7 +1407,6 @@
             }
           }, [_.nAppID, _]),
           (0, _.jsx)(_._, {
-            controller: "personalcalendar",
             feature: "personalcalendar-homepage",
             children: (0, _.jsx)(_._, {
               _: {
