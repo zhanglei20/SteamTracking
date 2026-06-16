@@ -2441,7 +2441,6 @@ https://help.steampowered.com/ticketmaster/AjaxSearchForAppByName
 https://help.steampowered.com/ticketmaster/AjaxSearchQuicktexts/
 https://help.steampowered.com/ticketmaster/AjaxSetLanguageRule/
 https://help.steampowered.com/ticketmaster/AjaxSetTicketLanguageDialog/
-https://help.steampowered.com/ticketmaster/AjaxSubmitTestResultsToPartner/
 https://help.steampowered.com/ticketmaster/AjaxTranslateHelpRequest
 https://help.steampowered.com/ticketmaster/AjaxWatchHelpRequest/
 https://help.steampowered.com/ticketmaster/ticket/${strNextTicket}

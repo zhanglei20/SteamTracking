@@ -1,5 +1,5 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7701],
+  [27701],
   {
     chunkid: (module) => {
       module.exports = {
@@ -577,6 +577,7 @@
         });
         return _
           ? (0, _.jsx)(_._, {
+              rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
               placeholderWidth: _ ?? 1,
               placeholderHeight: _ ?? 1,
@@ -684,16 +685,16 @@
         visibleSlides: _.visibleSlides,
       }));
       function _(_) {
-        const { bPreventSnapCarousel: _ } = _,
+        const { bForceSimpleCarousel: _, screenIsWide: _, children: _ } = _,
           _ = (0, _._)();
-        return _ || ((_.screenIsWide || _) && !_.bForceSimpleCarousel)
+        return (!_ && !_) || _
           ? (0, _.jsx)(_, {
               ..._,
-              children: _.children,
+              children: _,
             })
           : (0, _.jsx)(_, {
               ..._,
-              children: _.children,
+              children: _,
             });
       }
       function _(_) {
