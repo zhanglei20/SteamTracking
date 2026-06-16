@@ -801,6 +801,13 @@ enum EOverlayToStoreFlag
 	k_EOverlayToStoreFlag_AddToCartAndShow = 2;
 }
 
+enum EPagedSettingsInitialFocus
+{
+	k_EPagedSettingsInitialFocus_Default = 0;
+	k_EPagedSettingsInitialFocus_PageList = 1;
+	k_EPagedSettingsInitialFocus_PageContent = 2;
+}
+
 enum EPlatformType
 {
 	k_EPlatformTypeUnknown = 0;

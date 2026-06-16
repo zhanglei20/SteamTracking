@@ -60248,6 +60248,7 @@
         Wf: () => y,
         Dr: () => M,
         yq: () => R,
+        Of: () => O,
         R7: () => j,
         k5: () => z,
       });
@@ -61080,7 +61081,7 @@
     },
     48902: (e, t, r) => {
       "use strict";
-      r.d(t, { OJ: () => c });
+      r.d(t, { OJ: () => m, h3: () => g });
       var i = r(90626),
         n = r(13871);
       r(7850);
@@ -61089,22 +61090,23 @@
         return i.useContext(s);
       }
       var o = r(22837),
-        l = r(52038);
-      r(29233);
-      function c(e, t, r) {
+        l = r(52038),
+        c = r(68950),
+        u = r(29233);
+      function m(e, t, r) {
         const n = i.useRef(void 0),
           [s, c] = i.useState(void 0),
-          m = a();
+          u = a();
         return (
           n.current ||
-            (n.current = new u(
+            (n.current = new d(
               e,
               (function (e, t) {
                 return {
                   ...e,
                   body_class: (0, l.A)(e.body_class, t.body_class),
                 };
-              })(t, m),
+              })(t, u),
               c,
             )),
           (n.current.m_callbacks = r),
@@ -61131,7 +61133,7 @@
           { popup: n.current.window, element: s, popupObj: n.current }
         );
       }
-      class u extends n.Ad {
+      class d extends n.Ad {
         m_callbacks;
         m_fnReadyToRender;
         constructor(e, t, r) {
@@ -61170,6 +61172,50 @@
         Render(e, t) {
           this.m_fnReadyToRender(t);
         }
+      }
+      function g(e) {
+        let t = (0, c.LH)();
+        i.useEffect(() => {
+          let e = new u.b2(t);
+          n.Of.SetCurrentLoggedInAccountID(e.GetAccountID());
+        }, [t]);
+        const r = i.useRef(void 0),
+          s = i.useCallback(
+            (t) => (
+              t.bIgnoreSavedDimensions || t.strRestoreDetails
+                ? t.strRestoreDetails &&
+                  n.Of.SetRestoreDetails(e, t.strRestoreDetails, !1)
+                : (t.strRestoreDetails = n.Of.GetRestoreDetails(e)),
+              t
+            ),
+            [e],
+          ),
+          a = i.useCallback(
+            (t, i, s) => {
+              r.current &&
+                t.setTimeout(() => {
+                  t.SteamClient.Window.GetWindowRestoreDetails().then((i) => {
+                    let a = r.current != i;
+                    t &&
+                      i &&
+                      (a || s) &&
+                      (n.Of.SetRestoreDetails(e, i, !1), (r.current = i));
+                  });
+                }, 30);
+            },
+            [e],
+          ),
+          o = i.useCallback(
+            (e, t) => {
+              e.SteamClient.Window.GetWindowRestoreDetails().then((i) => {
+                (r.current = i), a(e, t, !0);
+              });
+            },
+            [a],
+          );
+        return e
+          ? { updateParamsBeforeShow: s, onMove: a, onResize: a, onLoad: o }
+          : null;
       }
     },
     41762: (e, t, r) => {
@@ -83113,7 +83159,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -83138,7 +83184,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88301,7 +88347,7 @@
           r.e(6226),
           r.e(4781),
           r.e(9008),
-          r.e(376),
+          r.e(7326),
           r.e(1006),
           r.e(13),
           r.e(1677),
@@ -88383,7 +88429,7 @@
           Promise.all([
             r.e(6597),
             r.e(5979),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1006),
             r.e(13),
@@ -88403,7 +88449,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88429,7 +88475,7 @@
             r.e(8310),
             r.e(5949),
             r.e(7333),
-          ]).then(r.bind(r, 61576)),
+          ]).then(r.bind(r, 7320)),
         ),
         Ja = $a(() =>
           Promise.all([
@@ -88441,7 +88487,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88469,7 +88515,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88511,7 +88557,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88551,7 +88597,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88602,7 +88648,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(7262),
             r.e(5289),
             r.e(3089),
@@ -88618,7 +88664,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(1006),
             r.e(13),
             r.e(1677),
@@ -88637,7 +88683,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(1006),
             r.e(13),
             r.e(1677),
@@ -88674,7 +88720,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88714,7 +88760,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88780,7 +88826,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(7262),
             r.e(5289),
             r.e(3089),
@@ -88805,7 +88851,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88845,7 +88891,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88871,7 +88917,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88897,7 +88943,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88922,7 +88968,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88959,7 +89005,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -88999,7 +89045,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -89040,7 +89086,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -89078,7 +89124,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(7262),
             r.e(5289),
             r.e(1703),
@@ -89101,7 +89147,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -89143,7 +89189,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -89164,7 +89210,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),
@@ -89185,7 +89231,7 @@
             r.e(6226),
             r.e(4781),
             r.e(9008),
-            r.e(376),
+            r.e(7326),
             r.e(2389),
             r.e(1215),
             r.e(7262),

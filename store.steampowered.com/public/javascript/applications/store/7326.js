@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [376],
+  [7326],
   {
     20978: (e) => {
       e.exports = {
@@ -58,119 +58,119 @@
     },
     45334: (e, r, t) => {
       "use strict";
-      t.d(r, { $e: () => s, B7: () => n, Pe: () => i, Pv: () => c });
+      t.d(r, { $e: () => s, B7: () => c, Pe: () => i, Pv: () => n });
       const s = 1,
-        c = 2,
-        n = 4,
+        n = 2,
+        c = 4,
         i = 1073741824;
     },
     31258: (e, r, t) => {
       "use strict";
       t.d(r, { gU: () => rr, tz: () => tr });
       const s = -700,
-        c = -600,
-        n = -599,
+        n = -600,
+        c = -599,
         i = -598,
-        a = -597,
-        o = -596,
+        o = -597,
+        a = -596,
         l = -595,
         u = -594,
         d = -593,
-        f = -592,
-        p = -591,
-        m = -590,
-        h = -589,
+        p = -592,
+        f = -591,
+        h = -590,
+        m = -589,
         b = -588,
         _ = -587,
-        k = -586,
+        x = -586,
         S = -585,
-        x = -584,
+        k = -584,
         T = -583,
         L = -582,
         M = -581,
-        O = -580,
-        N = -579,
-        y = -578,
-        j = -577,
-        v = -576,
-        w = -575,
-        E = -574,
-        W = -573,
-        I = -572,
-        g = -571,
+        w = -580,
+        O = -579,
+        j = -578,
+        y = -577,
+        W = -576,
+        N = -575,
+        v = -574,
+        g = -573,
+        E = -572,
+        I = -571,
         z = -500,
         P = -499,
         A = -498,
-        U = -497,
+        C = -497,
         D = -496,
-        C = -300,
-        R = -203,
-        V = -202,
-        B = -201,
-        F = -200,
-        K = -199,
-        q = -198,
-        G = -197,
+        R = -300,
+        U = -203,
+        B = -202,
+        F = -201,
+        V = -200,
+        G = -199,
+        H = -198,
+        K = -197,
         Z = -196,
-        H = -195,
+        q = -195,
         Q = -194,
         Y = -193,
-        X = -192,
-        J = -191,
+        J = -192,
+        X = -191,
         $ = -190,
         ee = -189,
         re = -188,
         te = -187,
         se = -186,
-        ce = -185,
-        ne = -184,
+        ne = -185,
+        ce = -184,
         ie = -183,
-        ae = -182,
-        oe = -102,
+        oe = -182,
+        ae = -102,
         le = -101,
         ue = -100,
         de = -99,
-        fe = -95,
-        pe = -94,
-        me = -93,
-        he = -92,
+        pe = -95,
+        fe = -94,
+        he = -93,
+        me = -92,
         be = -90,
         _e = -89,
-        ke = -88,
+        xe = -88,
         Se = -87,
-        xe = -86,
+        ke = -86,
         Te = -85,
         Le = -84,
         Me = -83,
-        Oe = -82,
-        Ne = -81,
-        ye = -80,
-        je = -79,
-        ve = -75,
-        we = -74,
-        Ee = -70,
-        We = -69,
-        Ie = -68,
-        ge = -67,
+        we = -82,
+        Oe = -81,
+        je = -80,
+        ye = -79,
+        We = -75,
+        Ne = -74,
+        ve = -70,
+        ge = -69,
+        Ee = -68,
+        Ie = -67,
         ze = 0,
         Pe = 1,
         Ae = 2,
-        Ue = 3,
+        Ce = 3,
         De = 4,
-        Ce = 5,
-        Re = 6,
-        Ve = 7,
-        Be = 8,
-        Fe = 9,
-        Ke = 10,
-        qe = 11,
-        Ge = 12,
+        Re = 5,
+        Ue = 6,
+        Be = 7,
+        Fe = 8,
+        Ve = 9,
+        Ge = 10,
+        He = 11,
+        Ke = 12,
         Ze = 13,
-        He = 14,
+        qe = 14,
         Qe = 15,
         Ye = 16,
-        Xe = 17,
-        Je = 18,
+        Je = 17,
+        Xe = 18,
         $e = 19,
         er = 20;
       function rr(e) {
@@ -181,43 +181,43 @@
             return "Windows 3.11";
           case Ae:
             return "Windows 95";
-          case Ue:
+          case Ce:
             return "Windows 98";
           case De:
             return "Windows ME";
-          case Ce:
-            return "Windows NT";
           case Re:
+            return "Windows NT";
+          case Ue:
             return "Windows 2000";
-          case Ve:
-            return "Windows XP";
           case Be:
-            return "Windows 2003";
+            return "Windows XP";
           case Fe:
+            return "Windows 2003";
+          case Ve:
             return "Windows Vista";
-          case Ke:
-            return "Windows 7";
-          case qe:
-            return "Windows 2008";
           case Ge:
+            return "Windows 7";
+          case He:
+            return "Windows 2008";
+          case Ke:
             return "Windows 2012";
           case Qe:
             return "Windows 2012 R2";
           case Ze:
             return "Windows 8";
-          case He:
+          case qe:
             return "Windows 8.1";
           case Ye:
             return "Windows 10";
-          case Xe:
-            return "Windows 2016";
           case Je:
+            return "Windows 2016";
+          case Xe:
             return "Windows 2019";
           case $e:
             return "Windows 2022";
           case er:
             return "Windows 11";
-          case oe:
+          case ae:
             return "Mac OS";
           case le:
             return "MacOS 10.4";
@@ -225,23 +225,23 @@
             return "MacOS 10.5";
           case de:
             return "MacOS 10.5.8";
-          case fe:
-            return "MacOS 10.6";
           case pe:
+            return "MacOS 10.6";
+          case fe:
             return "MacOS 10.6.3";
-          case me:
-            return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
           case he:
+            return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
+          case me:
             return "MacOS 10.6.7";
           case be:
             return "MacOS 10.7";
           case _e:
             return "MacOS 10.8";
-          case ke:
+          case xe:
             return "MacOS 10.9";
           case Se:
             return "MacOS 10.10";
-          case xe:
+          case ke:
             return "MacOS 10.11";
           case Te:
             return "MacOS 10.12";
@@ -249,49 +249,49 @@
             return "MacOS 10.13";
           case Me:
             return "MacOS 10.14";
-          case Oe:
-            return "MacOS 10.15";
-          case Ne:
-            return "MacOS 11 (as 10.16)";
-          case ve:
-            return "MacOS 12 (as 10.17)";
-          case Ee:
-            return "MacOS 13 (as 10.18)";
-          case ye:
-            return "MacOS 11";
-          case je:
-            return "MacOS 11.1";
           case we:
-            return "MacOS 12";
+            return "MacOS 10.15";
+          case Oe:
+            return "MacOS 11 (as 10.16)";
           case We:
-            return "MacOS 13";
-          case Ie:
-            return "MacOS 14";
+            return "MacOS 12 (as 10.17)";
+          case ve:
+            return "MacOS 13 (as 10.18)";
+          case je:
+            return "MacOS 11";
+          case ye:
+            return "MacOS 11.1";
+          case Ne:
+            return "MacOS 12";
           case ge:
+            return "MacOS 13";
+          case Ee:
+            return "MacOS 14";
+          case Ie:
             return "MacOS 15";
-          case R:
+          case U:
             return "Linux";
-          case V:
-            return "Linux 2.2";
           case B:
-            return "Linux 2.4";
+            return "Linux 2.2";
           case F:
+            return "Linux 2.4";
+          case V:
             return "Linux 2.6";
-          case K:
-            return "Linux 3.2";
-          case q:
-            return "Linux 3.5";
           case G:
+            return "Linux 3.2";
+          case H:
+            return "Linux 3.5";
+          case K:
             return "Linux 3.6";
           case Z:
             return "Linux 3.10";
-          case H:
+          case q:
             return "Linux 3.16";
           case Q:
             return "Linux 3.18";
           case Y:
             return "Linux 3.x";
-          case J:
+          case X:
             return "Linux 4.1";
           case $:
             return "Linux 4.4";
@@ -301,19 +301,19 @@
             return "Linux 4.14";
           case te:
             return "Linux 4.19";
-          case X:
+          case J:
             return "Linux 4.x";
           case se:
             return "Linux 5.x";
-          case ce:
-            return "Linux 5.4";
           case ne:
+            return "Linux 5.4";
+          case ce:
             return "Linux 6.x";
           case ie:
             return "Linux 7.x";
-          case ae:
+          case oe:
             return "Linux 5.10";
-          case C:
+          case R:
             return "PS3";
           case s:
             return "Web Client";
@@ -323,19 +323,19 @@
             return "Android 6.x";
           case A:
             return "Android 7.x";
-          case U:
+          case C:
             return "Android 8.x";
           case D:
             return "Android 9.x";
-          case c:
-            return "iOS";
           case n:
+            return "iOS";
+          case c:
             return "iOS 1";
           case i:
             return "iOS 2";
-          case a:
-            return "iOS 3";
           case o:
+            return "iOS 3";
+          case a:
             return "iOS 4";
           case l:
             return "iOS 5";
@@ -343,23 +343,23 @@
             return "iOS 6";
           case d:
             return "iOS 6.1";
-          case f:
-            return "iOS 7";
           case p:
+            return "iOS 7";
+          case f:
             return "iOS 7.1";
-          case m:
-            return "iOS 8";
           case h:
+            return "iOS 8";
+          case m:
             return "iOS 8.1";
           case b:
             return "iOS 8.2";
           case _:
             return "iOS 8.3";
-          case k:
+          case x:
             return "iOS 8.4";
           case S:
             return "iOS 9";
-          case x:
+          case k:
             return "iOS 9.1";
           case T:
             return "iOS 9.2";
@@ -367,25 +367,25 @@
             return "iOS 9_.3";
           case M:
             return "iOS 10";
-          case O:
-            return "iOS 10.1";
-          case N:
-            return "iOS 10.2";
-          case y:
-            return "iOS 10.3";
-          case j:
-            return "iOS 11";
-          case v:
-            return "iOS 11.1";
           case w:
-            return "iOS 11.2";
-          case E:
-            return "iOS 11.3";
+            return "iOS 10.1";
+          case O:
+            return "iOS 10.2";
+          case j:
+            return "iOS 10.3";
+          case y:
+            return "iOS 11";
           case W:
-            return "iOS 11.4";
-          case I:
-            return "iOS 12";
+            return "iOS 11.1";
+          case N:
+            return "iOS 11.2";
+          case v:
+            return "iOS 11.3";
           case g:
+            return "iOS 11.4";
+          case E:
+            return "iOS 12";
+          case I:
             return "iOS 12.1";
           default:
             return "Unknown";
@@ -413,13 +413,13 @@
     },
     17690: (e, r, t) => {
       "use strict";
-      t.d(r, { IU: () => l, by: () => u, sc: () => a });
+      t.d(r, { IU: () => l, by: () => u, sc: () => o });
       var s = t(78327),
-        c = t(85044),
-        n = t(81393),
+        n = t(85044),
+        c = t(81393),
         i = t(45334);
-      const a = 0,
-        o = "061818254b2c99ac49e6626adb128ed1282a392f",
+      const o = 0,
+        a = "061818254b2c99ac49e6626adb128ed1282a392f",
         l = 120;
       class u {
         m_unAppID;
@@ -444,10 +444,10 @@
           return this.m_strName;
         }
         get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, a);
         }
         get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, o);
+          return this.BuildAppURL(this.m_strIconURL, a);
         }
         get time_updated_from_server() {
           return this.m_dtUpdatedFromServer;
@@ -466,7 +466,7 @@
                 "/" +
                 e +
                 ".jpg"
-            : (0, c.t)(r);
+            : (0, n.t)(r);
         }
         DeserializeFromMessage(e) {
           (this.m_bInitialized = !0),
@@ -495,7 +495,7 @@
         }
         SerializeToCacheObject() {
           return (
-            (0, n.wT)(
+            (0, c.wT)(
               this.m_bInitialized,
               "Attempting to serialize an uninitialized AppInfo object for caching!",
             ),
@@ -513,90 +513,82 @@
     },
     42248: (e, r, t) => {
       "use strict";
-      t.d(r, { q: () => n });
+      t.d(r, { q: () => c });
       var s = t(78327),
-        c = t(22837);
-      function n() {
-        return s.TS.IN_CLIENT && (0, c.DOG)(s.TS.LAUNCHER_TYPE);
+        n = t(22837);
+      function c() {
+        return s.TS.IN_CLIENT && (0, n.DOG)(s.TS.LAUNCHER_TYPE);
       }
     },
     85044: (e, r, t) => {
       "use strict";
-      t.d(r, { d: () => c, t: () => n });
+      t.d(r, { d: () => n, t: () => c });
       var s = t(78327);
-      const c = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function n(e, r) {
+      const n = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function c(e, r) {
         let t = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = c),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = n),
           44 == e.length && ((t = e.substr(-4)), (e = e.substr(0, 40)));
-        let n = s.TS.AVATAR_BASE_URL;
+        let c = s.TS.AVATAR_BASE_URL;
         return (
-          n ||
-            ((n = s.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (n += e.substr(0, 2) + "/")),
-          (n += e),
-          r && "small" != r && (n += "_" + r),
-          (n += t),
-          n
+          c ||
+            ((c = s.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (c += e.substr(0, 2) + "/")),
+          (c += e),
+          r && "small" != r && (c += "_" + r),
+          (c += t),
+          c
         );
       }
     },
-    51706: (e, r, t) => {
+    74568: (e, r, t) => {
       "use strict";
       t.d(r, {
         mt: () => l,
         o0: () => d.o0,
-        eV: () => f.eV,
+        eV: () => p.eV,
         KG: () => d.KG,
         Ee: () => d.Ee,
-        x_: () => a.x_,
+        x_: () => o.x_,
         of: () => u,
         pY: () => d.pY,
         EN: () => i.E,
       });
       var s = t(7850),
-        c = t(90626),
-        n = t(56283),
+        n = t(90626),
+        c = t(56283),
         i = t(21869),
-        a = t(2654);
-      t(72739),
-        t(48902),
-        t(60155),
-        t(25118),
-        t(84933),
-        t(52745),
-        t(13871),
-        t(78327),
-        t(28460);
-      function o(e) {
+        o = t(2654);
+      t(37049);
+      function a(e) {
         const { labelledBy: r } = e || {},
-          [t, s] = c.useState(void 0);
+          [t, s] = n.useState(void 0);
         return {
           headerId: r || t,
-          context: c.useMemo(() => ({ setHeaderId: s }), []),
+          context: n.useMemo(() => ({ setHeaderId: s }), []),
         };
       }
       function l(e) {
         const {
             active: r,
             onDismiss: t,
-            className: c,
+            className: n,
             modalClassName: l,
             children: u,
             ...d
           } = e,
-          { headerId: f, context: p } = o({ labelledBy: e["aria-labelledby"] });
-        return (0, s.jsx)(n.t6.Provider, {
-          value: p,
+          { headerId: p, context: f } = a({ labelledBy: e["aria-labelledby"] });
+        return (0, s.jsx)(c.t6.Provider, {
+          value: f,
           children: (0, s.jsx)(i.E, {
             active: r,
-            children: (0, s.jsx)(a.x_, {
+            children: (0, s.jsx)(o.x_, {
               onEscKeypress: t,
               className: l,
-              children: (0, s.jsx)(n.UC, {
+              children: (0, s.jsx)(c.UC, {
                 role: "dialog",
-                "aria-labelledby": f,
-                className: c,
+                "aria-labelledby": p,
+                className: n,
                 ...d,
                 children: u,
               }),
@@ -613,124 +605,303 @@
       }
       t(81194);
       var d = t(78395),
-        f = t(10411);
+        p = t(10411);
       t(76222);
+    },
+    37049: (e, r, t) => {
+      "use strict";
+      t.d(r, { w: () => x });
+      var s = t(7850),
+        n = t(90626),
+        c = t(72739),
+        i = t(48902),
+        o = t(60155),
+        a = t(25118),
+        l = t(84933),
+        u = t(52745),
+        d = t(13871),
+        p = t(21869),
+        f = t(78327),
+        h = t(66703),
+        m = t(52038),
+        b = t(28460);
+      function _(e) {
+        const { popup: r, className: t, ...c } = e,
+          i = (0, b.GD)(r),
+          o = n.useRef(null);
+        return (
+          n.useEffect(() => {
+            const e = o.current;
+            if (e && (0, h.Fj)(r, "Window.SetResizeGrip")) {
+              let t = 0,
+                s = 0;
+              const n = e.getBoundingClientRect(),
+                c = e.ownerDocument.defaultView;
+              n &&
+                c &&
+                !i &&
+                ((t = Math.ceil(c.innerWidth - n.left)),
+                (s = Math.ceil(c.innerHeight - n.top))),
+                r.SteamClient.Window.SetResizeGrip(t, s);
+            }
+            return () => {
+              (0, h.Fj)(r, "Window.SetResizeGrip") &&
+                r.SteamClient.Window.SetResizeGrip(0, 0);
+            };
+          }, [r, i]),
+          i
+            ? null
+            : (0, s.jsx)("div", {
+                className: (0, m.A)("window_resize_grip", t),
+                ref: o,
+                ...c,
+              })
+        );
+      }
+      const x = (e) =>
+        (function (e) {
+          const r = (0, d.R7)().ownerWindow,
+            t = (0, f.Qn)(),
+            [c, i] = n.useState(() =>
+              t ||
+              (!0 === e.onlyPopoutIfNeeded &&
+                e.popupHeight < 0.9 * r.innerHeight &&
+                e.popupWidth < 0.9 * r.innerWidth &&
+                "visible" == r.document.visibilityState)
+                ? "inline"
+                : "popout",
+            );
+          return "inline" === c
+            ? (0, s.jsx)(p.E, { active: !0, children: e.children })
+            : "popout" === c
+              ? (0, s.jsx)(S, { ...e })
+              : null;
+        })({ modal: !0, ...e });
+      function S(e) {
+        const {
+            strName: r,
+            strTitle: t,
+            popupWidth: p,
+            popupHeight: f,
+            browserType: h,
+            onDismiss: m,
+            refPopup: b,
+            children: x,
+            titleBarClassName: S,
+            saveDimensionsKey: T,
+          } = e,
+          L = (0, d.R7)(),
+          M = L?.ownerWindow,
+          w = (0, u.yk)(),
+          O = { ...(0, i.h3)(T), onClose: m };
+        let j = 0;
+        e.resizable && (j |= d.Wf.Resizable),
+          (e.minWidth || e.minHeight) &&
+            (j |= d.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (j |= d.Wf.FullScreen);
+        const y = "PopupWindow_" + (r ? `${r}_` : "") + n.useId(),
+          { popup: W, element: N } = (0, i.OJ)(
+            y,
+            {
+              title: t,
+              dimensions: { width: p, height: f },
+              html_class: "client_chat_frame fullheight ModalDialogPopup",
+              body_class: "fullheight ModalDialogBody",
+              popup_class: "fullheight",
+              browserType: h,
+              minWidth: e.minWidth,
+              minHeight: e.minHeight,
+              replace_existing_popup: !0,
+              center_on_window: w?.BCenterPopupsOnWindow() ? M : void 0,
+              eCreationFlags: j,
+              target_browser: w?.GetBrowserInfo(),
+            },
+            O,
+          );
+        if (
+          (n.useEffect(
+            () => ((0, l.cZ)(b, W), () => (0, l.cZ)(b, void 0)),
+            [b, W],
+          ),
+          n.useEffect(() => {
+            W && (W.document.title = t ?? r);
+          }, [W, t, r]),
+          !N)
+        )
+          return null;
+        const v = e.modal ?? e.onlyPopoutIfNeeded,
+          g = !e.resizable;
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            v && (0, s.jsx)(k, { popup: W }),
+            c.createPortal(
+              (0, s.jsxs)(d.kc, {
+                ownerWindow: W,
+                children: [
+                  (0, s.jsxs)("div", {
+                    className: "PopupFullWindow",
+                    onContextMenu: o.aE,
+                    children: [
+                      (0, s.jsx)(a.c, {
+                        className: S,
+                        hideMin: g,
+                        hideMax: g,
+                        popup: W,
+                        hideActions: !m,
+                      }),
+                      (0, s.jsx)(u.EO, {
+                        bCenterPopupsOnWindow: w?.BCenterPopupsOnWindow(),
+                        browserInfo: w?.GetBrowserInfo(),
+                        children: x,
+                      }),
+                    ],
+                  }),
+                  e.resizable && (0, s.jsx)(_, { popup: W }),
+                ],
+              }),
+              N,
+            ),
+          ],
+        });
+      }
+      function k(e) {
+        const { popup: r } = e,
+          t = n.useCallback(() => {
+            r?.SteamClient.Window.BringToFront();
+          }, [r]);
+        return (
+          n.useEffect(t, [t]),
+          (0, s.jsx)(p.E, {
+            active: !0,
+            children: (0, s.jsx)("div", {
+              style: {
+                position: "fixed",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+              },
+              onClick: t,
+            }),
+          })
+        );
+      }
     },
     22797: (e, r, t) => {
       "use strict";
       t.d(r, { t: () => d });
       var s = t(7850),
-        c = t(90626),
-        n = t(52038),
+        n = t(90626),
+        c = t(52038),
         i = t(20978),
-        a = t.n(i);
-      const o =
+        o = t.n(i);
+      const a =
         t.p +
         "images/applications/store/steam_spinner.png?v=valveisgoodatcaching";
       var l = t(42248),
         u = t(8527);
-      const d = c.memo(function (e) {
+      const d = n.memo(function (e) {
         const {
           className: r,
           size: t,
           string: i,
           position: d,
-          static: p,
-          msDelayAppear: m,
+          static: f,
+          msDelayAppear: h,
         } = e;
-        let h = [a().LoadingWrapper, "SteamLogoThrobber", f(t)];
-        const [b, _] = c.useState(!m),
-          k = !(0, l.q)();
+        let m = [o().LoadingWrapper, "SteamLogoThrobber", p(t)];
+        const [b, _] = n.useState(!h),
+          x = !(0, l.q)();
         return (
-          (0, c.useEffect)(() => {
+          (0, n.useEffect)(() => {
             if (b) return;
-            const e = setTimeout(() => _(!0), m);
+            const e = setTimeout(() => _(!0), h);
             return () => clearTimeout(e);
-          }, [m, b]),
-          void 0 === i && h.push(a().noString),
-          r && h.push(r),
-          p && h.push(a().Static),
+          }, [h, b]),
+          void 0 === i && m.push(o().noString),
+          r && m.push(r),
+          f && m.push(o().Static),
           (0, s.jsxs)("div", {
-            className: (0, n.A)(
-              "center" == d && a().throbber_center_wrapper,
-              !!m && a().ThrobberDelayAppear,
-              b && a().Visible,
+            className: (0, c.A)(
+              "center" == d && o().throbber_center_wrapper,
+              !!h && o().ThrobberDelayAppear,
+              b && o().Visible,
             ),
             children: [
               b &&
-                k &&
+                x &&
                 (0, s.jsx)("div", {
-                  className: h.join(" "),
+                  className: m.join(" "),
                   children: (0, s.jsx)("div", {
-                    className: a().NewThrobber,
-                    children: (0, s.jsx)("img", { src: (0, u.YJ)(o) }),
+                    className: o().NewThrobber,
+                    children: (0, s.jsx)("img", { src: (0, u.YJ)(a) }),
                   }),
                 }),
               Boolean(i) &&
-                (0, s.jsx)("div", { className: a().ThrobberText, children: i }),
+                (0, s.jsx)("div", { className: o().ThrobberText, children: i }),
             ],
           })
         );
       });
-      c.memo(function (e) {
+      n.memo(function (e) {
         const {
           className: r,
           size: t,
           string: i,
-          position: o,
+          position: a,
           static: l,
           msDelayAppear: u,
         } = e;
-        let d = [a().LoadingWrapper, "SteamLogoThrobber", f(t)];
-        const [m, h] = c.useState(!u);
+        let d = [o().LoadingWrapper, "SteamLogoThrobber", p(t)];
+        const [h, m] = n.useState(!u);
         return (
-          (0, c.useEffect)(() => {
-            if (m) return;
-            const e = setTimeout(() => h(!0), u);
+          (0, n.useEffect)(() => {
+            if (h) return;
+            const e = setTimeout(() => m(!0), u);
             return () => clearTimeout(e);
-          }, [u, m]),
-          void 0 === i && d.push(a().noString),
+          }, [u, h]),
+          void 0 === i && d.push(o().noString),
           r && d.push(r),
-          l && d.push(a().Static),
+          l && d.push(o().Static),
           (0, s.jsxs)("div", {
-            className: (0, n.A)(
-              "center" == o && a().throbber_center_wrapper,
-              !!u && a().ThrobberDelayAppear,
-              m && a().Visible,
+            className: (0, c.A)(
+              "center" == a && o().throbber_center_wrapper,
+              !!u && o().ThrobberDelayAppear,
+              h && o().Visible,
             ),
             children: [
-              m &&
+              h &&
                 (0, s.jsx)("div", {
                   className: d.join(" "),
                   children: (0, s.jsxs)("div", {
-                    className: a().Throbber,
+                    className: o().Throbber,
                     children: [
-                      (0, s.jsx)(p, { className: a().base }),
-                      (0, s.jsx)(p, { className: a().blur }),
+                      (0, s.jsx)(f, { className: o().base }),
+                      (0, s.jsx)(f, { className: o().blur }),
                     ],
                   }),
                 }),
               Boolean(i) &&
-                (0, s.jsx)("div", { className: a().ThrobberText, children: i }),
+                (0, s.jsx)("div", { className: o().ThrobberText, children: i }),
             ],
           })
         );
       });
-      function f(e) {
+      function p(e) {
         switch (e) {
           case "small":
-            return a().throbber_small;
+            return o().throbber_small;
           case "medium":
-            return a().throbber_medium;
+            return o().throbber_medium;
           case "xlarge":
-            return a().throbber_xlarge;
+            return o().throbber_xlarge;
           case "xxlarge":
-            return a().throbber_xxlarge;
+            return o().throbber_xxlarge;
           default:
-            return a().throbber_large;
+            return o().throbber_large;
         }
       }
-      function p(e) {
+      function f(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),
@@ -746,10 +917,10 @@
             viewBox: "0 0 256 256",
             children: [
               (0, s.jsxs)("g", {
-                className: a().partCircle,
+                className: o().partCircle,
                 children: [
                   (0, s.jsx)("path", {
-                    className: a().roundOuter,
+                    className: o().roundOuter,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
@@ -757,7 +928,7 @@
                     d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundOuter,
+                    className: o().roundOuter,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
@@ -765,7 +936,7 @@
                     d: "M201.432,101.166",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundOuter,
+                    className: o().roundOuter,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
@@ -775,10 +946,10 @@
                 ],
               }),
               (0, s.jsxs)("g", {
-                className: a().mainOutline,
+                className: o().mainOutline,
                 children: [
                   (0, s.jsx)("path", {
-                    className: a().roundFill,
+                    className: o().roundFill,
                     fill: "none",
                     stroke: "#ffffff",
                     strokeWidth: "6",
@@ -786,7 +957,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundOuterOutline,
+                    className: o().roundOuterOutline,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -795,7 +966,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber01,
+                    className: o().roundThrobber01,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -804,7 +975,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber02,
+                    className: o().roundThrobber02,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -813,7 +984,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber03,
+                    className: o().roundThrobber03,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -822,7 +993,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber04,
+                    className: o().roundThrobber04,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -831,7 +1002,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber05,
+                    className: o().roundThrobber05,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -840,7 +1011,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber06,
+                    className: o().roundThrobber06,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -849,7 +1020,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber07,
+                    className: o().roundThrobber07,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -858,7 +1029,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber08,
+                    className: o().roundThrobber08,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -867,7 +1038,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber09,
+                    className: o().roundThrobber09,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -876,7 +1047,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber10,
+                    className: o().roundThrobber10,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -885,7 +1056,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber11,
+                    className: o().roundThrobber11,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -894,7 +1065,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber12,
+                    className: o().roundThrobber12,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -903,7 +1074,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber13,
+                    className: o().roundThrobber13,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -912,7 +1083,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber14,
+                    className: o().roundThrobber14,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -921,7 +1092,7 @@
                     d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                   }),
                   (0, s.jsx)("path", {
-                    className: a().roundThrobber15,
+                    className: o().roundThrobber15,
                     strokeLinecap: "butt",
                     fill: "none",
                     stroke: "#ffffff",
@@ -932,14 +1103,14 @@
                 ],
               }),
               (0, s.jsx)("g", {
-                className: a().bottomCircle,
+                className: o().bottomCircle,
                 children: (0, s.jsx)("path", {
                   fill: "#ffffff",
                   d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
                 }),
               }),
               (0, s.jsx)("g", {
-                className: a().topCircle,
+                className: o().topCircle,
                 children: (0, s.jsx)("circle", {
                   fill: "none",
                   stroke: "#ffffff",
@@ -957,15 +1128,15 @@
     },
     10224: (e, r, t) => {
       "use strict";
-      t.d(r, { c5: () => a, zI: () => o });
+      t.d(r, { c5: () => o, zI: () => a });
       var s = t(90626),
-        c = t(45387),
-        n = t.n(c),
+        n = t(45387),
+        c = t.n(n),
         i = t(84933);
-      function a() {
-        return window.innerWidth < parseInt(n().strMaxMobileWidth);
-      }
       function o() {
+        return window.innerWidth < parseInt(c().strMaxMobileWidth);
+      }
+      function a() {
         const e = (0, i.CH)();
         return (
           s.useEffect(
@@ -975,7 +1146,7 @@
             ),
             [e],
           ),
-          window.innerWidth < parseInt(n().strMaxMobileWidth)
+          window.innerWidth < parseInt(c().strMaxMobileWidth)
         );
       }
     },
@@ -983,12 +1154,12 @@
       "use strict";
       t.d(r, { m: () => i });
       var s = t(41735),
-        c = t.n(s),
-        n = t(90626);
+        n = t.n(s),
+        c = t(90626);
       function i(e) {
-        const r = n.useRef(c().CancelToken.source());
+        const r = c.useRef(n().CancelToken.source());
         return (
-          n.useEffect(() => {
+          c.useEffect(() => {
             const t = r.current;
             return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
@@ -998,20 +1169,20 @@
     },
     44691: (e, r, t) => {
       "use strict";
-      t.d(r, { E: () => c });
+      t.d(r, { E: () => n });
       var s = t(90626);
       t(13871);
-      function c(e, r, t, c) {
+      function n(e, r, t, n) {
         s.useEffect(() => {
           const s = (s) => {
             s.key === e &&
-              (r(s), t && s.preventDefault(), c && s.stopPropagation());
+              (r(s), t && s.preventDefault(), n && s.stopPropagation());
           };
           return (
             document.addEventListener("keydown", s),
             () => document.removeEventListener("keydown", s)
           );
-        }, [e, r, t, c]);
+        }, [e, r, t, n]);
       }
     },
     61855: (e, r, t) => {
