@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7701],
+  [27701],
   {
     2213: (e) => {
       e.exports = {
@@ -526,6 +526,7 @@
         });
         return l
           ? (0, n.jsx)(h.K, {
+              rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
               placeholderWidth: c ?? 1,
               placeholderHeight: d ?? 1,
@@ -620,11 +621,11 @@
         visibleSlides: e.visibleSlides,
       }));
       function w(e) {
-        const { bPreventSnapCarousel: r } = e,
-          t = (0, d.Qn)();
-        return r || ((e.screenIsWide || t) && !e.bForceSimpleCarousel)
-          ? (0, n.jsx)(C, { ...e, children: e.children })
-          : (0, n.jsx)(p, { ...e, children: e.children });
+        const { bForceSimpleCarousel: r, screenIsWide: t, children: s } = e,
+          i = (0, d.Qn)();
+        return (!t && !i) || r
+          ? (0, n.jsx)(p, { ...e, children: s })
+          : (0, n.jsx)(C, { ...e, children: s });
       }
       function C(e) {
         const r = (0, d.Qn)(),
@@ -1125,7 +1126,7 @@
                     className: "home_section_subtitle",
                     children: (0, A.we)("#PersonalCalendar_Subtitle"),
                   }),
-                  !d && (0, n.jsx)(F, { calendarURL: p, location: "desktop" }),
+                  !d && (0, n.jsx)(M, { calendarURL: p, location: "desktop" }),
                 ],
               }),
               (0, n.jsx)(b.F, {
@@ -1138,7 +1139,7 @@
                 className: d ? void 0 : "fiveElementEightGap",
                 children: h.map((e, t) =>
                   (0, n.jsx)(
-                    M,
+                    F,
                     {
                       bInitialFocus: 10 === t,
                       nTimestamp: e,
@@ -1150,7 +1151,7 @@
                   ),
                 ),
               }),
-              !d && (0, n.jsx)(F, { calendarURL: p, location: "mobile" }),
+              !d && (0, n.jsx)(M, { calendarURL: p, location: "mobile" }),
               d &&
                 (0, n.jsx)(m.o, {
                   label: (0, A.we)("#PersonalCalendar_Full"),
@@ -1160,7 +1161,7 @@
           })
         );
       }
-      function F(e) {
+      function M(e) {
         const { calendarURL: r, location: t } = e,
           s = "mobile" == t ? "see_more_mobile" : "see_more_desktop";
         return (0, n.jsx)("div", {
@@ -1174,7 +1175,7 @@
           }),
         });
       }
-      function M(e) {
+      function F(e) {
         const {
             nTimestamp: r,
             nNextTimestamp: t,
@@ -1201,16 +1202,16 @@
           T = u ?? 100,
           E = R.filter((e) => e.nRank <= T).length - 2,
           [D, k] = f.useState(!1),
-          F = (0, x.Qn)(),
-          M = f.useRef(null);
+          M = (0, x.Qn)(),
+          F = f.useRef(null);
         return (
           f.useEffect(() => {
-            if (s && F && M.current) {
-              const e = M.current.closest(".carousel__slide"),
-                r = M.current.closest(".carousel__slider-tray-wrapper");
+            if (s && M && F.current) {
+              const e = F.current.closest(".carousel__slide"),
+                r = F.current.closest(".carousel__slider-tray-wrapper");
               r && e && (r.scrollLeft = e.offsetLeft);
             }
-          }, [s, F]),
+          }, [s, M]),
           (0, n.jsxs)(l.Z, {
             className: (0, y.A)(
               j.PersonalCalendarWidgetDay,
@@ -1237,13 +1238,13 @@
                 "flow-children": "column",
                 navEntryPreferPosition: a.iU.MAINTAIN_Y,
                 preferredFocus: s && !D,
-                ref: M,
+                ref: F,
                 onFocusWithin: () => k(!0),
                 children: R.slice(0, 2).map((e) =>
                   (0, n.jsx)(G, { nAppID: e.nAppID }, e.nAppID),
                 ),
               }),
-              !F &&
+              !M &&
                 E > 0 &&
                 (0, n.jsx)(i.Ii, {
                   href: p,

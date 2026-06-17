@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9672],
+  [89672],
   {
     83581: (e) => {
       e.exports = {
@@ -330,7 +330,7 @@
         N = n(80696),
         P = n(54054),
         R = n(38535),
-        k = n(49632),
+        k = n(37523),
         Q = n(56283),
         F = n(12155),
         G = n(2627),
@@ -338,7 +338,7 @@
         L = n(83581),
         E = n.n(L);
       var W = n(44433),
-        O = n(55672);
+        O = n(78686);
       const M = new B.wd("TrailerAppVideo"),
         q = "bGameHighlightAutoplayDisabled";
       function H(e) {
@@ -2171,7 +2171,7 @@
       var se = n(57834),
         ie = n.n(se),
         re = n(14336),
-        oe = n(26505),
+        oe = n(49451),
         le = n(6083);
       const ce = new x.wd("AppRelevance").Debug;
       function ue(e) {
