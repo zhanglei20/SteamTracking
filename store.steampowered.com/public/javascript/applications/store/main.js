@@ -61715,7 +61715,11 @@
             if (C && r && !r.visible) return;
             let i = e.ownerDocument.defaultView;
             if (!i || i.closed) return;
-            T.showPopover();
+            (T.style.display = "flex"),
+              requestAnimationFrame(() => {
+                T.style.display = "block";
+              }),
+              T.showPopover();
             const n = I.querySelector(".hover_arrow.left"),
               s = I.querySelector(".hover_arrow.right"),
               a = I.querySelector(".hover_arrow.top"),

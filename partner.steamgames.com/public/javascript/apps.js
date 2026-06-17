@@ -967,7 +967,7 @@ function SetAchievement( appid, destRow, achievement )
 	}
 
 	addCell( row, ( achievement[ "hidden" ] != 0 ) ? "Yes" : "" );
-	
+
 	if ( achievement[ "icon" ] )
 	{
 		var newImg = document.createElement( "img" );
@@ -2688,7 +2688,7 @@ function LoadScreens( appid )
 // Given the hash + suffix portion, return the URL
 function AvatarURL( fn )
 {
-    return 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + fn.substring( 0, 2 ) + '/' + fn + '.jpg';
+    return 'https://shared.fastly.steamstatic.com/community_assets/images/avatars/' + fn.substring( 0, 2 ) + '/' + fn + '.jpg';
 }
 
 // populate document from set of avatars

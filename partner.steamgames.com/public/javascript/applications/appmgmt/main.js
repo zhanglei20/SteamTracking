@@ -31236,7 +31236,11 @@
             if (S && r && !r.visible) return;
             let i = e.ownerDocument.defaultView;
             if (!i || i.closed) return;
-            j.showPopover();
+            (j.style.display = "flex"),
+              requestAnimationFrame(() => {
+                j.style.display = "block";
+              }),
+              j.showPopover();
             const n = R.querySelector(".hover_arrow.left"),
               s = R.querySelector(".hover_arrow.right"),
               a = R.querySelector(".hover_arrow.top"),

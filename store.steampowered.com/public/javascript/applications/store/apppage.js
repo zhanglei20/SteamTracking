@@ -964,7 +964,7 @@
     },
     88965: (e, t, n) => {
       "use strict";
-      n.d(t, { H: () => b, _: () => A });
+      n.d(t, { H: () => S, _: () => y });
       var r = n(7850),
         a = n(45699),
         s = n(48210),
@@ -983,8 +983,9 @@
         v = n(89524),
         C = n.n(v);
       const x = -1,
-        w = parseInt(C().strScrollSnapCarouselItemHeight);
-      function A(e) {
+        w = parseInt(C().strScrollSnapCarouselItemHeight),
+        A = 250;
+      function y(e) {
         const {
             navKey: t,
             classes: n,
@@ -993,25 +994,25 @@
             scorePenaltyIfOwned: h,
             capsuleSize: f,
             maxItemCount: v,
-            mapAppToCreatorClan: A,
-            strFeatureFirstAppMsg: b,
-            setNumberVisibleItems: S,
+            mapAppToCreatorClan: y,
+            strFeatureFirstAppMsg: S,
+            setNumberVisibleItems: I,
           } = e,
-          I = (0, l.a4)(910),
-          N = (0, g.Qn)(),
-          [T, R] = (0, c.L2)(),
-          [P, E] = o.useState(a),
-          L = (0, p.zX)(a, i.Xh),
-          [k, B] = o.useState(null);
+          N = (0, l.a4)(910),
+          T = (0, g.Qn)(),
+          [R, P] = (0, c.L2)(),
+          [E, L] = o.useState(a),
+          k = (0, p.zX)(a, i.Xh),
+          [B, D] = o.useState(null);
         o.useEffect(() => {
-          if (L == p.Sq) return;
+          if (k == p.Sq) return;
           const e = a.filter((e) => !d.A.Get().BIsStoreItemMissing(e, s.c6.qI));
-          if (b && I && !N && e.length > 0 && e[0] == a[0]) {
+          if (S && N && !T && e.length > 0 && e[0] == a[0]) {
             const t = [e[0], x, ...e.slice(1)];
-            E(t), B(b), S?.(t.length);
-          } else E(e), S?.(e.length);
-        }, [a, N, I, L, S, b]);
-        const D = N;
+            L(t), D(S), I?.(t.length);
+          } else L(e), I?.(e.length);
+        }, [a, T, N, k, I, S]);
+        const F = T;
         return (0, r.jsx)(_.F, {
           className: (0, m.A)(n, {
             SaleSectionCarousel: !0,
@@ -1021,26 +1022,27 @@
           useTestScrollbar: !0,
           bLazyRenderChildren: !0,
           lazyRenderPlaceholderHeight: w,
+          lazyRenderPlaceholderWidth: A,
           gap: 12,
           hideArrows: !1,
-          screenIsWide: I,
+          screenIsWide: N,
           navKey: t,
-          bForceSimpleCarousel: D,
-          children: j(R, P, u ?? "none", h ?? 3).map((e, t) =>
+          bForceSimpleCarousel: F,
+          children: b(P, E, u ?? "none", h ?? 3).map((e, t) =>
             (0, r.jsx)(
-              y,
+              j,
               {
                 appID: e,
                 size: f,
-                creatorClanAccountID: A?.get(e),
-                strFeaturingMsg: 0 == t && k ? k : void 0,
+                creatorClanAccountID: y?.get(e),
+                strFeaturingMsg: 0 == t && B ? B : void 0,
               },
               e,
             ),
           ),
         });
       }
-      function y(e) {
+      function j(e) {
         const {
             appID: t,
             size: n,
@@ -1079,7 +1081,7 @@
           }),
         });
       }
-      function j(e, t, n, r) {
+      function b(e, t, n, r) {
         const a = o.useMemo(
             () => t.filter((t) => !e.BIsGameIgnored(t)),
             [t, e],
@@ -1109,7 +1111,7 @@
                 .map((e) => e.id)
             : a;
       }
-      function b(e) {
+      function S(e) {
         const { url: t } = e;
         return t
           ? (0, r.jsx)(a.Ii, {

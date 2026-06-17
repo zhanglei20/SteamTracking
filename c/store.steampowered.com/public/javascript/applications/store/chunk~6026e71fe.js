@@ -10613,6 +10613,7 @@
           }),
         });
       }
+      const _ = 240;
       function _(_) {
         let _ = !1;
         const _ = (0, _._)(_);
@@ -10989,6 +10990,7 @@
             padded: !Boolean(_),
             screenIsWide: _,
             navKey: _,
+            lazyRenderPlaceholderWidth: _,
             children: _(_, 0, _.length, _, _(0, _)),
           });
         else {
@@ -11068,6 +11070,7 @@
                 className: "SaleSectionCarousel",
                 useTestScrollbar: !0,
                 bLazyRenderChildren: !0,
+                lazyRenderPlaceholderWidth: _,
                 hidePips: _,
                 onSlide: (_) => _._.Get().AddInteraction(_, _ * _),
                 screenIsWide: _,

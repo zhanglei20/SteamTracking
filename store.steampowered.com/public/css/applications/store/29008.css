@@ -3840,7 +3840,7 @@ html.responsive.touch:not(.GamepadMode) ._1cOoCFwafBlSkwllIMf3XM {
 .ItemCount_5 ._3r4Ny9tQdQZc50XDM5B2q2 {
   min-width: unset !important;
 }
-.ScrollSnapCarousel > ._3r4Ny9tQdQZc50XDM5B2q2 {
+.ScrollSnapCarousel ._3r4Ny9tQdQZc50XDM5B2q2 {
   width: 258px;
   min-width: 0;
   flex-shrink: 0;
