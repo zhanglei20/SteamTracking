@@ -16207,7 +16207,7 @@
     },
     43568: (e, t, r) => {
       "use strict";
-      r.d(t, { F: () => w });
+      r.d(t, { F: () => S });
       var i = r(7850),
         s = r(7445),
         a = r(76217),
@@ -16221,57 +16221,85 @@
         _ = r(11279);
       function p(e) {
         const {
+          nSlideIndex: t,
+          nStartingSlideIndex: r,
+          ref: s,
+          children: a,
+        } = e;
+        return void 0 === r
+          ? a
+          : (0, i.jsx)("div", { ref: t === r ? s : void 0, children: a });
+      }
+      function g(e) {
+        const {
             padded: t,
             gap: r,
             children: s,
             bLazyRenderChildren: n,
             lazyRenderPlaceholderWidth: c,
-            lazyRenderPlaceholderHeight: d,
-            startingSlide: m,
+            lazyRenderPlaceholderHeight: m,
+            startingSlide: g,
           } = e,
-          p = o.useRef(null),
-          g = o.useRef(null);
+          b = o.useRef(null),
+          B = o.useRef(null),
+          h = (0, d.Qn)();
         o.useLayoutEffect(() => {
-          p.current &&
-            g.current &&
-            (p.current.scrollLeft +=
-              g.current.getBoundingClientRect().left -
-              p.current.getBoundingClientRect().left);
-        }, [m]);
-        const b = (0, i.jsxs)(a.Z, {
-          "flow-children": "row",
-          style: { gap: r ? r + "px" : void 0 },
-          className: (0, l.A)(
-            { SaleSectionCarouselPadding: t },
-            "ScrollSnapCarousel",
-            "SaleSectionCarousel",
-            _.ScrollSnapCarousel,
-            e.className,
+          b.current &&
+            B.current &&
+            (b.current.scrollLeft +=
+              B.current.getBoundingClientRect().left -
+              b.current.getBoundingClientRect().left);
+        }, [g]);
+        const f = o.Children.map(s, (e, t) =>
+            n
+              ? (0, i.jsx)(u.K, {
+                  rootMargin: "0px 50% 0px 50%",
+                  horizontal: !0,
+                  placeholderWidth: c ?? 1,
+                  placeholderHeight: 1,
+                  holdGamepadFocus: h,
+                  children: (0, i.jsx)(p, {
+                    nSlideIndex: t,
+                    nStartingSlideIndex: g,
+                    ref: B,
+                    children: e,
+                  }),
+                })
+              : (0, i.jsx)(p, {
+                  nSlideIndex: t,
+                  nStartingSlideIndex: g,
+                  ref: B,
+                  children: e,
+                }),
           ),
-          ref: p,
-          children: [
-            m &&
-              o.Children.map(s, (e, t) =>
-                (0, i.jsx)("div", { ref: t == m ? g : void 0, children: e }),
-              ),
-            !m && s,
-          ],
-        });
+          y = (0, i.jsx)(a.Z, {
+            "flow-children": "row",
+            style: { gap: r ? r + "px" : void 0 },
+            className: (0, l.A)(
+              { SaleSectionCarouselPadding: t },
+              "ScrollSnapCarousel",
+              "SaleSectionCarousel",
+              _.ScrollSnapCarousel,
+              e.className,
+            ),
+            ref: b,
+            children: f,
+          });
         return n
           ? (0, i.jsx)(u.K, {
               rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
-              placeholderWidth: c ?? 1,
-              placeholderHeight: d ?? 1,
-              children: b,
+              placeholderWidth: 1,
+              placeholderHeight: m ?? 1,
+              children: y,
             })
-          : b;
+          : y;
       }
-      var g = r(60383),
-        b = r(64238),
-        B = r.n(b),
-        h = r(66407);
-      class f extends o.Component {
+      var b = r(60383),
+        B = r(64238),
+        h = r.n(B),
+        f = r(66407);
+      class y extends o.Component {
         render() {
           const { showArrows: e, arrowFill: t, arrowStyle: r } = this.props,
             s = this.props.visibleSlides,
@@ -16292,7 +16320,7 @@
                     m.left,
                     m.carouselNavButton,
                   ),
-                  children: (0, i.jsx)(h.m, {
+                  children: (0, i.jsx)(f.m, {
                     arrowFill: t,
                     arrowStyle: r,
                     direction: "left",
@@ -16338,7 +16366,7 @@
                     m.right,
                     m.carouselNavButton,
                   ),
-                  children: (0, i.jsx)(h.m, {
+                  children: (0, i.jsx)(f.m, {
                     arrowFill: t,
                     arrowStyle: r,
                     direction: "right",
@@ -16348,19 +16376,19 @@
           });
         }
       }
-      const y = (0, n.Yw)(f, (e) => ({
+      const w = (0, n.Yw)(y, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function w(e) {
+      function S(e) {
         const { bForceSimpleCarousel: t, screenIsWide: r, children: s } = e,
           a = (0, d.Qn)();
         return (!r && !a) || t
-          ? (0, i.jsx)(p, { ...e, children: s })
-          : (0, i.jsx)(S, { ...e, children: s });
+          ? (0, i.jsx)(g, { ...e, children: s })
+          : (0, i.jsx)(M, { ...e, children: s });
       }
-      function S(e) {
+      function M(e) {
         const t = (0, d.Qn)(),
           r = () => o.Children.count(e.children),
           s = r(),
@@ -16370,8 +16398,8 @@
           p = e.hideArrows || !_,
           g = !_ || e.hidePips;
         let b = 4 / 3,
-          h = !0;
-        e.slideAspectRatio && ((b = e.slideAspectRatio), (h = !1));
+          B = !0;
+        e.slideAspectRatio && ((b = e.slideAspectRatio), (B = !1));
         const f = `items_in_row_${e.visibleElements}`;
         return (0, i.jsx)(a.Z, {
           "flow-children": "row",
@@ -16384,7 +16412,7 @@
             naturalSlideHeight: 100,
             step: e.visibleElements,
             infinite: !e.disableEdgeWrap,
-            isIntrinsicHeight: h,
+            isIntrinsicHeight: B,
             dragEnabled: !1,
             touchEnabled: !1,
             lockOnWindowScroll: !0,
@@ -16392,7 +16420,7 @@
             disableKeyboard: !0,
             currentSlide: e.startingSlide,
             children: [
-              (0, i.jsx)(R, {
+              (0, i.jsx)(C, {
                 bHideArrows: p,
                 bAutoAdvance: e.bAutoAdvance && !t,
                 onSlide: e.onSlide,
@@ -16424,14 +16452,14 @@
               }),
               !g &&
                 (e.useTestScrollbar
-                  ? (0, i.jsx)(y, { showArrows: p, carouselStore: null })
+                  ? (0, i.jsx)(w, { showArrows: p, carouselStore: null })
                   : (0, i.jsx)("div", {
-                      className: B()({
+                      className: h()({
                         [m.breadcrumbContainer]: !0,
                         [m.breadcrumbContainerTemplate]:
                           e.className?.includes("template-carousel"),
                       }),
-                      children: (0, i.jsx)(M, {
+                      children: (0, i.jsx)(v, {
                         ...e,
                         nPageSize: c,
                         children: e.children,
@@ -16441,7 +16469,7 @@
           }),
         });
       }
-      function M(e) {
+      function v(e) {
         const { nPageSize: t } = e,
           r = o.useContext(n.Yc),
           [s, a] = o.useState(r.state.currentSlide);
@@ -16462,7 +16490,7 @@
                 {
                   slide: a,
                   className: m.pip,
-                  children: (0, i.jsx)(h.U, { ...e, bIsActive: o }),
+                  children: (0, i.jsx)(f.U, { ...e, bIsActive: o }),
                 },
                 a,
               );
@@ -16470,10 +16498,10 @@
           })
         );
       }
-      function v(e) {
+      function R(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function R(e) {
+      function C(e) {
         const {
             bHideArrows: t,
             bAutoAdvance: r,
@@ -16483,8 +16511,8 @@
             arrowStyle: _,
           } = e,
           p = o.useContext(n.Yc),
-          b = o.useRef(p.state.currentSlide),
-          [B, f] = o.useState(null),
+          g = o.useRef(p.state.currentSlide),
+          [B, h] = o.useState(null),
           [y, w] = o.useState(!!r),
           S = o.useRef(null),
           M = o.useRef(null);
@@ -16492,7 +16520,7 @@
           const e = () => {
             S.current = window.setTimeout(() => {
               if (S.current) {
-                v(S);
+                R(S);
                 let e = 0;
                 p.state.currentSlide + p.state.visibleSlides <
                   p.state.totalSlides &&
@@ -16506,25 +16534,25 @@
           };
           y && e();
           const t = () => {
-            const t = b.current,
+            const t = g.current,
               r = p.state.currentSlide;
-            d && d(r), f(r > t ? "Right" : r < t ? "Left" : null), v(M);
+            d && d(r), h(r > t ? "Right" : r < t ? "Left" : null), R(M);
             (M.current = window.setTimeout(() => {
-              M.current && (f(null), v(M));
+              M.current && (h(null), R(M));
             }, 1e3)),
-              (b.current = r),
-              S.current ? (v(S), w(!1)) : y && e();
+              (g.current = r),
+              S.current ? (R(S), w(!1)) : y && e();
           };
           return (
             p.subscribe(t),
             () => {
-              p.unsubscribe(t), v(S), v(M);
+              p.unsubscribe(t), R(S), R(M);
             }
           );
         }, [p, y]);
-        const R = !!B && "CarouselSliding" + B;
+        const v = !!B && "CarouselSliding" + B;
         return (0, i.jsxs)("div", {
-          className: (0, l.A)(m.sliderBody, "SliderBody", R),
+          className: (0, l.A)(m.sliderBody, "SliderBody", v),
           children: [
             !t &&
               (0, i.jsx)(n._X, {
@@ -16535,14 +16563,14 @@
                   "CarouselBtnLeft",
                 ),
                 "aria-label": (0, c.we)("#Carousel_Prev"),
-                children: (0, i.jsx)(h.m, {
+                children: (0, i.jsx)(f.m, {
                   arrowFill: u,
                   arrowStyle: _,
                   direction: "left",
                 }),
               }),
             (0, i.jsx)(n.Ap, {
-              className: g.J.GetScrollableClassname(),
+              className: b.J.GetScrollableClassname(),
               classNameTray: m.slideTrayCustomize,
               classNameAnimation: m.DisableSliderMotion,
               role: "list",
@@ -16557,7 +16585,7 @@
                   "CarouselBtnRight",
                 ),
                 "aria-label": (0, c.we)("#Carousel_Next"),
-                children: (0, i.jsx)(h.m, {
+                children: (0, i.jsx)(f.m, {
                   arrowFill: u,
                   arrowStyle: _,
                   direction: "right",

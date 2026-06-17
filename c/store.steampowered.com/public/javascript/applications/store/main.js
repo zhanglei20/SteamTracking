@@ -68696,7 +68696,11 @@
             if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
-            _.showPopover();
+            (_.style.display = "flex"),
+              requestAnimationFrame(() => {
+                _.style.display = "block";
+              }),
+              _.showPopover();
             const _ = _.querySelector(".hover_arrow.left"),
               _ = _.querySelector(".hover_arrow.right"),
               _ = _.querySelector(".hover_arrow.top"),

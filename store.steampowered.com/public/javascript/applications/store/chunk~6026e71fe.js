@@ -9704,12 +9704,12 @@
     15041: (e, t, a) => {
       "use strict";
       a.d(t, {
-        vR: () => Z,
-        dm: () => X,
-        vB: () => J,
-        L: () => K,
-        ZX: () => re,
-        ss: () => ne,
+        vR: () => K,
+        dm: () => $,
+        vB: () => X,
+        L: () => J,
+        ZX: () => se,
+        ss: () => re,
       });
       var n = a(7850),
         r = a(22837),
@@ -9828,7 +9828,8 @@
           }),
         });
       }
-      function Z(e) {
+      const Z = 240;
+      function K(e) {
         let t = !1;
         const a = (0, o.Pm)(e);
         return (
@@ -9836,12 +9837,12 @@
           Boolean(t || e.show_parent_app)
         );
       }
-      function K(e, t) {
+      function J(e, t) {
         if ((0, o.W2)(e)) return 0;
         const a = (0, o.mz)(e);
         return a <= 0 ? 0 : a + t;
       }
-      function J(e, t) {
+      function X(e, t) {
         return !e || e.enable_faceted_browsing
           ? [1]
           : e.capsules_per_row_array
@@ -9861,23 +9862,23 @@
                 : [2, 3, 4, 3]
               : [N.OQ(e.capsules_per_row || 1, 1, t ? 3 : 5) || 1];
       }
-      function X(e, t, a) {
-        const n = J(e, a),
-          r = (0, o.W2)(e) ? (0, o.qQ)(e) : K(e, t);
+      function $(e, t, a) {
+        const n = X(e, a),
+          r = (0, o.W2)(e) ? (0, o.qQ)(e) : J(e, t);
         let s = 0;
         for (let e = 0; e < r; e++) s += n[e % n.length];
         return s;
       }
-      function $(e, t) {
+      function ee(e, t) {
         return e.capsule_style_per_row_array
           ? e.capsule_style_per_row_array
           : (function (e, t) {
-                return J(e, t).every((e) => 1 === e);
+                return X(e, t).every((e) => 1 === e);
               })(e, t)
             ? ["fullrow"]
             : ["grid"];
       }
-      function ee(e, t, a, d, u, m, p) {
+      function te(e, t, a, d, u, m, p) {
         return "events" === e.section_type || "sale_events" === e.section_type
           ? d
             ? d
@@ -9996,7 +9997,7 @@
                             rowElements: l,
                           } = t;
                           if ((0, A.sd)(e)) return null;
-                          const c = Z(s),
+                          const c = K(s),
                             d = i.BUseSubscriptionLayout();
                           let u = (0, o.W2)(s) && !t.bIsSingleCapsule;
                           const _ =
@@ -10140,13 +10141,13 @@
                       }))
                     : [];
       }
-      function te(e, t) {
+      function ae(e, t) {
         return t[e % t.length];
       }
-      function ae(e, t) {
+      function ne(e, t) {
         return "tall" === e ? t + 1 : t;
       }
-      function ne(e, t, a, r, i, o, l, c, u, _) {
+      function re(e, t, a, r, i, o, l, c, u, _) {
         const {
           nMaxCapsulesPerRow: m,
           bScreenIsWide: p,
@@ -10201,7 +10202,8 @@
             padded: !Boolean(_),
             screenIsWide: p,
             navKey: e,
-            children: C(a, 0, a.length, B, te(0, T)),
+            lazyRenderPlaceholderWidth: Z,
+            children: C(a, 0, a.length, B, ae(0, T)),
           });
         else {
           let r = l(g),
@@ -10222,8 +10224,8 @@
           for (let e = 0; S < a.length; e++) {
             let t;
             for (let e = 0; (0 == r || e < r) && S < a.length; e++) {
-              (0 == e || p) && (t = te(e, T));
-              const r = ae(t, m);
+              (0 == e || p) && (t = ae(e, T));
+              const r = ne(t, m);
               let s = Math.min(I[e % I.length], r);
               const i = Math.min(s, a.length - S);
               if (i < s && 0 === e) {
@@ -10233,7 +10235,7 @@
               }
               _.push(
                 (0, n.jsx)(
-                  se,
+                  ie,
                   { nMaxItems: s, nItems: i, children: C(a, S, S + i, s, t) },
                   "Row_" + e,
                 ),
@@ -10269,6 +10271,7 @@
                 className: "SaleSectionCarousel",
                 useTestScrollbar: !0,
                 bLazyRenderChildren: !0,
+                lazyRenderPlaceholderWidth: Z,
                 hidePips: u,
                 onSlide: (t) => P.I.Get().AddInteraction(e, t * f),
                 screenIsWide: p,
@@ -10277,7 +10280,7 @@
         }
         return { content: w, bAdditionalContent: A };
       }
-      function re(e) {
+      function se(e) {
         const {
           saleEvent: t,
           section: a,
@@ -10292,7 +10295,7 @@
               a.capsules_per_row_array.length > 0 &&
               a.capsules_per_row_array[0] >= a.capsules.length)) &&
             (a.carousel_rows = 1));
-        const i = ee(
+        const i = te(
           a,
           e.capsules,
           e.links,
@@ -10302,13 +10305,13 @@
           e.curatorLists,
         );
         if (0 === i.length) return { content: null, bAdditionalContent: !1 };
-        const l = J(a, r),
-          c = $(a, r),
+        const l = X(a, r),
+          c = ee(a, r),
           d = (0, o.qQ)(a),
           u = { section: a, saleEvent: t, language: n, activeTab: s };
-        return ne(a.unique_id, e, i, l, c, d, (e) => K(a, e), u, r);
+        return re(a.unique_id, e, i, l, c, d, (e) => J(a, e), u, r);
       }
-      const se = (e) => {
+      const ie = (e) => {
         const { nMaxItems: t, nItems: a } = e,
           r = t - a,
           s =

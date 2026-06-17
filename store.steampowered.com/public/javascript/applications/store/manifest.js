@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10746014";
+var CLSTAMP = "10748998";
 (() => {
   "use strict";
   var e,
@@ -427,7 +427,7 @@ var CLSTAMP = "10746014";
         18680: "f62d9b4f12f223d5a4e0",
         18896: "b415c4b5229e1d459d8e",
         19326: "b05606cd210094ae6c66",
-        19388: "48a5ff25c006a245df25",
+        19388: "f5926d98eed0231f5bb2",
         19605: "facd7d7e4e605e77018a",
         19812: "eb51118cb324c6535614",
         19935: "fad980799da4c8b92139",
@@ -471,7 +471,7 @@ var CLSTAMP = "10746014";
         27389: "22a15b80104de89b0a8f",
         27503: "ba5fccc304a8d0253ff5",
         27539: "9eff18635b6e11796e31",
-        27701: "02932e7ed2959b02993d",
+        27701: "c23fc76de7b00dd51bcb",
         28183: "32245bbd924ca9962136",
         28310: "e0995a6591d170612285",
         28954: "07f37e81cf2000aa268d",
@@ -535,7 +535,7 @@ var CLSTAMP = "10746014";
         38380: "6b19798ebdbbb5f8f6b3",
         38573: "e14a67012472a24095c1",
         38689: "d46e93c208246c84a9c6",
-        38713: "33f45c0308fdc843074c",
+        38713: "0c3d7a1f0a2f4cec2b2b",
         38721: "84f3cfbb7e86eb4f4a32",
         38804: "4042d1fd8c88019e3cbe",
         38843: "ea655f6d9e8340ab54cd",
@@ -642,7 +642,7 @@ var CLSTAMP = "10746014";
         56728: "610d4e984282917a40a8",
         56979: "746993c0af6c7cd14c11",
         57326: "e0097d043ec96d941fda",
-        57333: "3541d8d085489782f536",
+        57333: "9f4199d7e2e10ff4e715",
         57645: "750415c435b95bf17aa1",
         57742: "c7aa7902f4092ce52cdb",
         57819: "db23bb20acc550a20c83",
@@ -904,7 +904,7 @@ var CLSTAMP = "10746014";
         22634: "9c07f14fb6130206ac8e",
         23027: "7e0a942f8dd9d0294c15",
         27701: "b6591c7669e579adc247",
-        29008: "34ec8febae294ec40da8",
+        29008: "7894fc9c1ad97c1e395e",
         29456: "fe16a990495eb5b8892f",
         30030: "f67bc72f7bf86f1000dd",
         34695: "e16ef61a59ae3b13b2b6",

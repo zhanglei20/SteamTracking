@@ -1045,7 +1045,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = -1,
-        _ = parseInt(_().strScrollSnapCarouselItemHeight);
+        _ = parseInt(_().strScrollSnapCarouselItemHeight),
+        _ = 250;
       function _(_) {
         const {
             navKey: _,
@@ -1083,6 +1084,7 @@
           useTestScrollbar: !0,
           bLazyRenderChildren: !0,
           lazyRenderPlaceholderHeight: _,
+          lazyRenderPlaceholderWidth: _,
           gap: 12,
           hideArrows: !1,
           screenIsWide: _,
