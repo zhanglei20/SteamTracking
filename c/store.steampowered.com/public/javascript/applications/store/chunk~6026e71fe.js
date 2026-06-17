@@ -814,12 +814,26 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         ExplorationModeTitle: "_2Yw2Zq7DhXUnz__aZKNc_r",
         ValveOnly: "_35cCdGHtNkKFj006w-Giut",
         ExplorationModeContent: "_38138ngfKoemnKfJzKW9GG",
         ExplorationModeToggle: "jCg8gWGML1DAedhv9S7Bz",
         OptionDisabled: "qeM14TZHm0uJ8srLTpEO4",
         ExplorationModeDescription: "_1rgWiRelyItuYoOZELdZSD",
+        BackgroundAnimation: "oscebphohVuDQvUcFu66a",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3bvl0AXCzxsDrlce5z13v4",
+        "ItemFocusAnim-darkerGrey": "_2kmVhDqHE4at0CkzXuXsyB",
+        "ItemFocusAnim-darkGreySettings": "_3C1Pfm2sTCYNiFgrxZFkXL",
+        "ItemFocusAnim-darkGrey": "Nk3aA9WAhoyp0_21SNcAg",
+        "ItemFocusAnim-grey": "MdGdjFG8pQnft1fZhzFD5",
+        "ItemFocusAnim-translucent-white-10": "_9WIF1egGyToTu88VftV-H",
+        "ItemFocusAnim-translucent-white-20": "_2NYJd6ULCFlXERCl6XwkqJ",
+        "ItemFocusAnimBorder-darkGrey": "v-5dEEogcOs5uavWsNmi0",
+        "ItemFocusAnim-green": "_1_twvv7hCCmZoxnUFrTCaS",
+        focusAnimation: "_2BR4y7GphMeeAo5LIz0vYJ",
+        hoverAnimation: "_2rjmewvvUGDAPkXjTZwfBB",
       };
     },
     chunkid: (module) => {

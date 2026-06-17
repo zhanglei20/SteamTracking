@@ -8281,7 +8281,10 @@
                             displaytype: _.display_type,
                           }),
                           (0, _.jsx)("span", {
-                            children: _._.Localize(_.loc_token),
+                            children:
+                              "#" != _.loc_token.charAt(0)
+                                ? _._.Localize("#" + _.loc_token)
+                                : _._.Localize(_.loc_token),
                           }),
                         ],
                       },

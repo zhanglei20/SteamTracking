@@ -63,6 +63,25 @@ var _ = 0,
   _ = 3;
 var _ = {};
 _(_, {
+  k_EAppTestType_BuildReview: () => _,
+  k_EAppTestType_SteamChinaPlatformOperator_BuildReview: () => _,
+  k_EAppTestType_SteamChinaPlatformOperator_StorePageReview: () => _,
+  k_EAppTestType_SteamChina_BuildReview: () => _,
+  k_EAppTestType_SteamChina_StorePageReview: () => _,
+  k_EAppTestType_SteamDeckCompatibilityReview: () => _,
+  k_EAppTestType_SteamFrameCompatibilityReview: () => _,
+  k_EAppTestType_StorePageReview: () => _,
+});
+var _ = 0,
+  _ = 1,
+  _ = 2,
+  _ = 3,
+  _ = 4,
+  _ = 5,
+  _ = 6,
+  _ = 7;
+var _ = {};
+_(_, {
   k_EPersonaStateFlag_ClientTypeMobile: () => _,
   k_EPersonaStateFlag_ClientTypeTenfoot: () => _,
   k_EPersonaStateFlag_ClientTypeVR: () => _,
@@ -372,4 +391,4 @@ var _ = ({ error: _, onDismiss: _ }) => {
       },
       children: _,
     });
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _ };
+export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

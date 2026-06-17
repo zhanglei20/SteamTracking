@@ -7651,7 +7651,10 @@
                         children: [
                           (0, r.jsx)(Z, { displaytype: e.display_type }),
                           (0, r.jsx)("span", {
-                            children: y.Z.Localize(e.loc_token),
+                            children:
+                              "#" != e.loc_token.charAt(0)
+                                ? y.Z.Localize("#" + e.loc_token)
+                                : y.Z.Localize(e.loc_token),
                           }),
                         ],
                       },
