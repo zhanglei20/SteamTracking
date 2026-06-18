@@ -4034,8 +4034,7 @@
         return `linear-gradient(0deg, ${e || "transparent"} 0%, ${t || "transparent"} 100%)`;
       }
       function s(e, t, a) {
-        if (e.disable_background && !a)
-          return { paddingLeft: 0, paddingRight: 0 };
+        if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
         let s = "";
         if (e.background_image) {
           s += `,url(${n.zU.GenerateURLFromHashAndExt(t.clanSteamID, e.background_image)})`;

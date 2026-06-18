@@ -4488,7 +4488,7 @@
         return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
       }
       function _(_, _, _) {
-        if (_.disable_background && !_)
+        if (_.disable_background)
           return {
             paddingLeft: 0,
             paddingRight: 0,
