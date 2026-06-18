@@ -23,6 +23,20 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Heading: "_12ldq1_X5RuLWAAs_ODwt7",
+        "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
+        "HeadingSize-2": "_20m6yPkrPwQ8XwlhPdMtqu",
+        "HeadingSize-3": "_2jvih9p3Mc3zUn2nnxzDv7",
+        "HeadingSize-4": "_1zvMJY9dUjwMSI0j5QoEdq",
+        "HeadingSize-5": "_1196Oisy8jDA4szPu-KrKP",
+        "HeadingSize-6": "R1W-zMFN4WGw9JK48Yqez",
+        "HeadingSize-7": "Ena8Nl7MJg7YAYsWql_jo",
+        "HeadingSize-8": "jyf9-rlT4iFrHQOAVn298",
+        "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Spoiler: "_2HIF4E13yuhn3QbY2I5vlt",
       };
     },
@@ -602,6 +616,60 @@
         Woodsman: "urO4erFoFvnP14FJ41NMD",
         Zombies: "_3OCIBFe-fNBm1tXmL490m4",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        depth: 0,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { level: _ = "auto", className: _, color: _ } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
+        return (0, _.jsx)(_, {
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()((0, _._)(), _.Heading, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
+        },
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
