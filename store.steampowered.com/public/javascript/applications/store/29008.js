@@ -2017,7 +2017,10 @@
             timeout: 500,
             in: !0,
             appear: !0,
-            classNames: { appearActive: E().Opening, enterDone: E().Open },
+            classNames: {
+              appearActive: (0, _.A)(se().Opening, E().Opening),
+              enterDone: (0, _.A)(se().Open, E().Open),
+            },
             children: (e) =>
               (0, r.jsx)("div", {
                 ref: (0, V.XB)(e, a),

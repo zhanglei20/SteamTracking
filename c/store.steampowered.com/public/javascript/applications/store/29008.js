@@ -2237,8 +2237,8 @@
             _: !0,
             appear: !0,
             classNames: {
-              appearActive: _().Opening,
-              enterDone: _().Open,
+              appearActive: (0, _._)(_().Opening, _().Opening),
+              enterDone: (0, _._)(_().Open, _().Open),
             },
             children: (_) =>
               (0, _.jsx)("div", {
