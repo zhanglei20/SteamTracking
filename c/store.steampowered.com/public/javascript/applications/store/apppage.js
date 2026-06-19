@@ -198,6 +198,7 @@
         PurchaseOption: "_3TUpv9-O4TIdg6P4Fx3oE7",
         Green: "PnUl8lQhMsTJfCeDt3Hea",
         DebugInfo: "_2CZQTTB4EFxu3TE_6mM47o",
+        FocusRing: "_1flB_uKuLjatwxoY8KvUUG",
       };
     },
     chunkid: (module) => {
@@ -208,10 +209,12 @@
     chunkid: (module) => {
       module.exports = {
         CarouselPaddingTop: "8px",
+        CarouselPaddingBottom: "8px",
         PurchaseOptionDisplay: "_2zQCVD-7iZA3eShAcWuSrv",
         PurchaseOptionCarouselWrapper: "_2FFRq4AxO47tckosaUvn2X",
         NoCarousel: "_18-XQUf8L7zxxacjLnq08M",
         Single: "_1i8lZsm1WSza_LBo1riVvc",
+        NotLeft: "_1hXCGWwBdFCyjIGFQ7Dlo6",
         PurchaseOptionsCarousel: "_149hLCvHEvVVEn7fORfG75",
         PurchaseOptionWrapper: "_1F2jbNP9IHRfKonl_3baY8",
       };
@@ -9733,6 +9736,7 @@
                 })();
                 return new Set(_);
               },
+              placeholderData: new Set(),
               staleTime: 6e5,
             };
           })(0, _),
@@ -9741,9 +9745,22 @@
       function _(_) {
         return ["AccountActiveLicenses", _ ?? 0];
       }
+      function _() {
+        const _ = (0, _._)(),
+          _ = _._.accountid;
+        return _.useCallback(
+          (_) => {
+            _.setQueryData(_(_), () => new Set(_));
+          },
+          [_, _],
+        );
+      }
       var _ = __webpack_require__("chunkid");
       const _ = _.createContext({
           appid: _._,
+        }),
+        _ = _.createContext({
+          ShowConfirmDialog: () => {},
         }),
         _ = {};
       (_.arabic = () =>
@@ -9821,45 +9838,18 @@
           children: _,
           ..._
         } = _;
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)(_().PurchaseOption, "green" == _ && _().Green),
-          focusable: !0,
-          ..._,
-          children: [_, !1],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          active: _,
-          onOK: _,
-          closeModal: _,
-          bCloseOnOK: _,
-          children: _,
-          ..._
-        } = _;
-        if (!_) return null;
-        const _ =
-          ("string" == typeof _.strTitle && _.strTitle) ||
-          (0, _._)("#Steam_Platform");
         return (0, _.jsx)(_._, {
-          onlyPopoutIfNeeded: !0,
-          popupHeight: 340,
-          popupWidth: 640,
-          strTitle: _,
-          children: (0, _.jsx)(_._, {
+          rootClassName: _().FocusRing,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_().PurchaseOption, "green" == _ && _().Green),
+            focusable: !0,
             ..._,
-            onCancel: _,
-            onOK: () => {
-              __webpack_require__(), _ && _();
-            },
-            children: _,
+            children: [_, !1],
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)();
         return _.useCallback(() => {
@@ -9875,39 +9865,24 @@
       }
       function _(_) {
         const { data: _ } = (0, _._)(_),
-          [_, _, _] = (function (_) {
-            const { bCloseOnOK: _ = !0, children: _, ..._ } = _,
-              [_, _, _] = (0, _._)();
-            return [
-              (0, _.jsx)(_, {
-                active: _,
-                bCloseOnOK: _,
-                closeModal: _,
-                ..._,
-                children: _,
-              }),
-              _,
-              _,
-            ];
-          })({
-            bCloseOnOK: !0,
-            bAlertDialog: !0,
-            onOK: () => {},
-            strTitle: _?.name,
-            strDescription: _.Localize(
-              "#AppPage_PurchaseOption_AddedToLibrary",
-              _?.name || "",
-            ),
-          }),
+          { ShowConfirmDialog: _ } = _.useContext(_),
+          { data: _ = new Set() } = _(),
+          _ = _(),
           _ = (0, _._)(_);
-        return [
-          _,
-          _.useCallback(() => {
-            _.mutateAsync().then(() => {
-              _();
-            });
-          }, [_, _]),
-        ];
+        return _.useCallback(() => {
+          _.mutateAsync().then(([_, _]) => {
+            let _,
+              _ = _?.name || "";
+            if (_ != _._)
+              _ = _.Localize("#AppPage_PurchaseOption_AddToLibraryError", _, _);
+            else {
+              _ = _.Localize("#AppPage_PurchaseOption_AddedToLibrary", _);
+              for (let _ of _.packageids_added || []) _.add(_);
+              _(Array.from(_));
+            }
+            __webpack_require__(_, _);
+          });
+        }, [_, _, _?.name, _, _]);
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -10000,7 +9975,7 @@
             appid: _.appid,
           },
           { data: _ } = (0, _._)(_),
-          [_, _] = _(_),
+          _ = _(_),
           _ = (0, _._)(),
           _ = _.bStandalone,
           _ = _.data?.has(_.appid),
@@ -10016,55 +9991,58 @@
             _ && (window.location.href = _);
           }, [_]);
         return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsxs)(_, {
-                  color: "green",
-                  option: _,
-                  onActivate: _,
-                  onOKActionDescription: _.Localize(
-                    "#AppPage_PurchaseOption_Download",
-                  ),
-                  onSecondaryButton: _ ? _ : void 0,
-                  onSecondaryActionDescription: _
-                    ? _.Localize("#AppPage_PurchaseOption_MoreInfo")
-                    : void 0,
-                  onOptionsButton: _ ? void 0 : _,
-                  onOptionsActionDescription: _
-                    ? void 0
-                    : _.Localize("#AppPage_PurchaseOption_AddToLibrary"),
-                  children: [
-                    (0, _.jsx)(_, {
-                      title: _.Localize(
-                        "#AppPage_PurchaseOption_DownloadDemo",
-                        _.name,
-                      ),
+          ? (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)(_, {
+                color: "green",
+                option: _,
+                onActivate: _,
+                onOKActionDescription: _.Localize(
+                  "#AppPage_PurchaseOption_Download",
+                ),
+                onSecondaryButton: _ ? _ : void 0,
+                onSecondaryActionDescription: _
+                  ? _.Localize("#AppPage_PurchaseOption_MoreInfo")
+                  : void 0,
+                onOptionsButton: _ ? void 0 : _,
+                onOptionsActionDescription: _
+                  ? void 0
+                  : _.Localize("#AppPage_PurchaseOption_AddToLibrary"),
+                children: [
+                  (0, _.jsx)(_, {
+                    title: _.Localize(
+                      "#AppPage_PurchaseOption_DownloadDemo",
+                      _.name,
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_._, {
+                      children: _.label,
                     }),
-                    (0, _.jsx)(_, {
-                      children: (0, _.jsx)(_._, {
-                        children: _.label,
-                      }),
-                    }),
-                    (0, _.jsx)(_, {
-                      onDownload: _,
-                    }),
-                  ],
-                }),
-                _,
-              ],
+                  }),
+                  (0, _.jsx)(_, {
+                    onDownload: _,
+                  }),
+                ],
+              }),
             })
           : null;
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { option: _ } = _,
           _ = _.useContext(_),
           { data: _ } = (0, _._)({
             appid: _.appid,
           }),
-          _ = _(_.appid, _?.name ?? "");
+          _ = _(_.appid, _?.name ?? ""),
+          _ = (0, _._)(),
+          _ =
+            _ &&
+            _.free_weekend &&
+            (_.free_weekend.start_time || 0) <= _ &&
+            (_.free_weekend.end_time || 0) > _;
         return _
-          ? (console.log(_),
-            (0, _.jsxs)(_, {
+          ? (0, _.jsxs)(_, {
               option: _,
               color: "green",
               onActivate: _,
@@ -10075,20 +10053,35 @@
                 (0, _.jsx)(_, {
                   title: _.Localize("#AppPage_PurchaseOption_Play", _.name),
                 }),
-                (0, _.jsx)(_, {
-                  children: (0, _.jsx)(_._, {
-                    children: _.Localize(
-                      _.type == _._._
-                        ? "#AppPage_PurchaseOption_FreeDemo"
-                        : "#AppPage_PurchaseOption_FreeToPlay",
-                    ),
-                  }),
+                (0, _.jsxs)(_, {
+                  children: [
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        children: _.Localize(
+                          _.type == _._._
+                            ? "#AppPage_PurchaseOption_FreeDemo"
+                            : "#AppPage_PurchaseOption_FreeToPlay",
+                        ),
+                      }),
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        children: _.Localize(
+                          "#AppPage_PurchaseOption_FreeWeekend",
+                          (0, _._)(_.free_weekend.end_time, {
+                            weekday: void 0,
+                            year: void 0,
+                            hour: "numeric",
+                            minute: "numeric",
+                          }),
+                        ),
+                      }),
+                  ],
                 }),
                 (0, _.jsx)(_, {
                   onPlay: _,
                 }),
               ],
-            }))
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid");
@@ -10296,7 +10289,6 @@
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { option: _, appidPlaytest: _, bIsOpen: _ } = _,
           { data: _ } = (0, _._)({
@@ -10848,7 +10840,9 @@
       function _(_) {
         const { _: _, option: _ } = _,
           { data: _ } = (0, _._)(_),
+          _ = _(_),
           [_, _] = _.useState(!1),
+          { data: _ } = _(),
           _ = _.useCallback(() => {
             _(!0);
           }, []),
@@ -10861,57 +10855,124 @@
           }, [_]),
           _ = _(_.data);
         let _, _;
-        return (
-          _?.item_type == _._._
-            ? ((_ = _), (_ = _.Localize("#AppPage_PurchaseOption_BundleInfo")))
-            : _?.item_type == _._._ &&
-              _.data.is_edition &&
-              ((_ = _),
-              (_ = _.Localize("#AppPage_PurchaseOption_CompareEditions"))),
-          _
-            ? (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_, {
-                    _: _,
-                  }),
-                  (0, _.jsxs)(_, {
-                    option: _,
-                    onActivate: _,
-                    onOKActionDescription: _.Localize(
-                      "#AppPage_PurchaseOption_AddToCart",
-                    ),
-                    onSecondaryButton: _,
-                    onSecondaryActionDescription: _,
-                    children: [
-                      _.item_type == _._._ &&
-                        (0, _.jsx)(_, {
-                          _: _,
-                          onAddToCart: _,
-                          onInfo: _,
-                        }),
-                      _.item_type == _._._ &&
-                        (0, _.jsx)(_, {
-                          _: _,
-                          onAddToCart: _,
-                          onInfo: _,
-                        }),
-                    ],
-                  }),
-                  _ &&
-                    _.data.is_edition &&
-                    (0, _.jsx)(_.Root, {
-                      onClose: _,
-                      children: (0, _.jsx)(_, {
-                        closeModal: _,
+        _?.item_type == _._._
+          ? ((_ = _), (_ = _.Localize("#AppPage_PurchaseOption_BundleInfo")))
+          : _?.item_type == _._._ &&
+            _.data.is_edition &&
+            ((_ = _),
+            (_ = _.Localize("#AppPage_PurchaseOption_CompareEditions")));
+        const _ =
+          _.bAvailableForFree && _.data.packageid && !_?.has(_.data.packageid);
+        return _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  _: _,
+                }),
+                (0, _.jsxs)(_, {
+                  option: _,
+                  onActivate: _,
+                  onOKActionDescription: _.Localize(
+                    "#AppPage_PurchaseOption_AddToCart",
+                  ),
+                  onSecondaryButton: _,
+                  onSecondaryActionDescription: _,
+                  onOptionsButton: _ ? _ : void 0,
+                  onOptionsActionDescription: _
+                    ? _.Localize("#AppPage_PurchaseOption_AddToLibrary")
+                    : void 0,
+                  children: [
+                    _.item_type == _._._ &&
+                      (0, _.jsx)(_, {
+                        _: _,
+                        onAddToCart: _,
+                        onInfo: _,
                       }),
+                    _.item_type == _._._ &&
+                      (0, _.jsx)(_, {
+                        _: _,
+                        onAddToCart: _,
+                        onInfo: _,
+                      }),
+                  ],
+                }),
+                _ &&
+                  _.data.is_edition &&
+                  (0, _.jsx)(_.Root, {
+                    onClose: _,
+                    children: (0, _.jsx)(_, {
+                      closeModal: _,
                     }),
-                ],
-              })
-            : (console.warn("Not ready", _), null)
-        );
+                  }),
+              ],
+            })
+          : (console.warn("Not ready", _), null);
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(_) {
+        const { option: _ } = _,
+          _ = {
+            appid: _.appid,
+          },
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = _.useCallback(() => {
+            _ && (window.location.href = _);
+          }, [_]);
+        return _
+          ? (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)(_, {
+                option: _,
+                onActivate: _,
+                onOKActionDescription: _.Localize(
+                  "#AppPage_PurchaseOption_MoreInfo",
+                ),
+                children: [
+                  (0, _.jsx)(_, {
+                    title: _.title,
+                  }),
+                  (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      children: _.description,
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          active: _,
+          onOK: _,
+          closeModal: _,
+          bCloseOnOK: _,
+          children: _,
+          ..._
+        } = _;
+        if (!_) return null;
+        const _ =
+          ("string" == typeof _.strTitle && _.strTitle) ||
+          (0, _._)("#Steam_Platform");
+        return (0, _.jsx)(_._, {
+          onlyPopoutIfNeeded: !0,
+          popupHeight: 340,
+          popupWidth: 640,
+          strTitle: _,
+          children: (0, _.jsx)(_._, {
+            ..._,
+            onCancel: _,
+            onOK: () => {
+              __webpack_require__(), _ && _();
+            },
+            children: _,
+          }),
+        });
+      }
       const _ = new _._("PurchaseOptions"),
         _ = !1;
       function _(_) {
@@ -10922,19 +10983,12 @@
             rgOwnedApps: _,
             rgOwnedPackages: _,
             playtestStatus: _,
+            rgFreePackagesAvailable: _,
+            strAccountTypeDescription: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(!0),
-          _ = (function () {
-            const _ = (0, _._)(),
-              _ = _._.accountid;
-            return _.useCallback(
-              (_) => {
-                _.setQueryData(_(_), () => new Set(_));
-              },
-              [_, _],
-            );
-          })(),
+          _ = _(),
           _ = (0, _._)(),
           [_, _] = _.useState(!1);
         return (
@@ -10944,10 +10998,12 @@
               _.Debug("DataRequest", _),
               _.Debug("rgOwnedApps", _),
               _.Debug("rgActiveLicenses", _),
-              _.Debug("playtestStatus", _);
+              _.Debug("playtestStatus", _),
+              _.Debug("rgFreePackagesAvailable", _),
+              _.Debug("strAccountTypeDescription", _);
             for (let _ of _) (0, _._)(_, _, _);
             _(_), _(_), _ && _ && _(_.appid, _), _(!0);
-          }, [_, _, _, _, _, _, _, _, _]),
+          }, [_, _, _, _, _, _, _, _, _, _, _]),
           _
             ? (0, _.jsx)(_.Provider, {
                 value: {
@@ -10955,17 +11011,23 @@
                 },
                 children: (0, _.jsx)(_, {
                   appid: _,
+                  rgPackagesAvailableForFree: _,
+                  strAccountTypeDescription: _,
                 }),
               })
             : null
         );
       }
       function _(_) {
-        const { appid: _ } = _,
+        const {
+            appid: _,
+            rgPackagesAvailableForFree: _,
+            strAccountTypeDescription: _,
+          } = _,
           { data: _ } = (0, _._)({
             appid: _,
           }),
-          _ = (function (_) {
+          _ = (function (_, _) {
             const { data: _ } = (0, _._)({
                 appid: _,
               }),
@@ -10978,25 +11040,33 @@
               _.Debug(_),
               _.useMemo(() => {
                 if (!_ || !_ || !_) return null;
-                const _ = [];
-                if (_.has(_))
-                  _.push({
-                    type: "play",
-                  });
-                else {
-                  const _ = (_.purchase_options || [])
-                    .map((_) => _.free_with_master_sub_appid)
-                    .filter((_) => !!_);
-                  _.Debug(_);
-                  for (const _ of _)
-                    if (_ && _.has(_)) {
-                      _.push({
-                        type: "play",
-                        appidMasterSub: _,
-                      });
-                      break;
-                    }
-                }
+                const _ = _.is_free && !_.is_free_temporarily,
+                  _ = (0, _._)(),
+                  _ =
+                    _.free_weekend &&
+                    (_.free_weekend.start_time || 0) <= _ &&
+                    (_.free_weekend.end_time || 0) > _,
+                  _ = new Set(_),
+                  _ = [];
+                if (!_)
+                  if (_.has(_))
+                    _.push({
+                      type: "play",
+                    });
+                  else {
+                    const _ = (_.purchase_options || [])
+                      .map((_) => _.free_with_master_sub_appid)
+                      .filter((_) => !!_);
+                    _.Debug(_);
+                    for (const _ of _)
+                      if (_ && _.has(_)) {
+                        _.push({
+                          type: "play",
+                          appidMasterSub: _,
+                        });
+                        break;
+                      }
+                  }
                 if (_) {
                   const _ = _.related_items?.playtests || [];
                   if (_.length > 0)
@@ -11025,8 +11095,7 @@
                       bStandalone: _.has(_.appid),
                     }),
                     _.add(_.appid));
-                _.is_free &&
-                  !_.is_free_temporarily &&
+                (_ || _) &&
                   _.push({
                     type: "free",
                   });
@@ -11037,13 +11106,24 @@
                     package_group: _,
                     items: [],
                   });
+                let _ = !!_.related_items?.related_f2p;
                 const _ = new Set(
                   _.map((_) => _.free_to_keep_base_package).filter((_) => !!_),
                 );
                 let _;
                 for (let _ of _)
-                  _.has(_.packageid) ||
-                    (_.package_group !== _?._ &&
+                  if (!_.has(_.packageid)) {
+                    if (_ && !_.is_edition && _.related_items) {
+                      const _ = _.related_items.related_f2p;
+                      _.push({
+                        type: "related",
+                        appid: _.appid,
+                        title: _.header_text,
+                        description: _.description_text,
+                      }),
+                        (_ = !1);
+                    }
+                    _.package_group !== _?._ &&
                       (_.package_group
                         ? ((_ = _.get(_.package_group)),
                           _?.package_group.display_type == _._._ &&
@@ -11052,73 +11132,114 @@
                               data: _,
                             }))
                         : (_ = void 0)),
-                    _ && _?.package_group.display_type == _._._
-                      ? _.items.push(_)
-                      : _.push({
-                          type: "item",
-                          data: _,
-                        }));
+                      _ && _?.package_group.display_type == _._._
+                        ? _.items.push(_)
+                        : _.push({
+                            type: "item",
+                            data: _,
+                            bAvailableForFree:
+                              !!_.packageid && _.has(_.packageid),
+                          });
+                  }
                 return _.Debug(_), _;
-              }, [_, _, _, _, _])
+              }, [_, _, _, _, _, _])
             );
-          })(_),
+          })(_, _),
           _ = _.useRef(null),
           _ = _.useCallback((_) => {
             "FocusPurchaseOptions" == _.data?.method &&
               (_.current?.NavTree().Activate(), _.current?.TakeFocus(_._._));
           }, []);
-        return (
-          _.useEffect(
-            () => (
-              window.addEventListener("message", _),
-              () => window.removeEventListener("message", _)
-            ),
-            [_],
+        _.useEffect(
+          () => (
+            window.addEventListener("message", _),
+            () => window.removeEventListener("message", _)
           ),
-          _ && _
-            ? (_.Debug(_),
-              _.Debug(_),
-              (0, _.jsx)(_._, {
-                className: _().PurchaseOptionDisplay,
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
-                navRef: _,
-                children:
-                  _.length > 0 &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        size: "3",
-                        contrast: "title",
-                        weight: "heavy",
-                        children: _.Localize("#AppPage_PurchaseOptions_Title"),
-                      }),
-                      (0, _.jsxs)(_._, {
-                        className: (0, _._)(
-                          _().PurchaseOptionCarouselWrapper,
-                          _.length <= 2 && _().NoCarousel,
-                          1 == _.length && _().Single,
-                        ),
-                        preferredFocus: !0,
-                        children: [
-                          _.length > 2 &&
-                            (0, _.jsx)(_, {
-                              options: _,
-                            }),
-                          _.length <= 2 &&
-                            (0, _.jsx)(_, {
-                              option: _[0],
-                            }),
-                          2 == _.length &&
-                            (0, _.jsx)(_, {
-                              option: _[1],
-                            }),
-                        ],
-                      }),
-                    ],
-                  }),
-              }))
-            : (_.Warning("Not ready", _), null)
+          [_],
         );
+        const [_, _] = _.useState(""),
+          [_, _] = _.useState(""),
+          [_, _, _] = (function (_) {
+            const { bCloseOnOK: _ = !0, children: _, ..._ } = _,
+              [_, _, _] = (0, _._)();
+            return [
+              (0, _.jsx)(_, {
+                active: _,
+                bCloseOnOK: _,
+                closeModal: _,
+                ..._,
+                children: _,
+              }),
+              _,
+              _,
+            ];
+          })({
+            bCloseOnOK: !0,
+            bAlertDialog: !0,
+            onOK: () => {},
+            strTitle: _,
+            strDescription: _,
+          }),
+          _ = _.useCallback(
+            (_, _) => {
+              _(_), _(_), _();
+            },
+            [_],
+          );
+        return _ && _
+          ? (_.Debug(_),
+            _.Debug(_),
+            (0, _.jsxs)(_.Provider, {
+              value: {
+                ShowConfirmDialog: _,
+              },
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _().PurchaseOptionDisplay,
+                  navEntryPreferPosition: _._.PREFERRED_CHILD,
+                  navRef: _,
+                  children:
+                    _.length > 0 &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          size: "3",
+                          contrast: "title",
+                          weight: "heavy",
+                          children: _.Localize(
+                            "#AppPage_PurchaseOptions_Title",
+                          ),
+                        }),
+                        _.length > 2 &&
+                          (0, _.jsx)(_, {
+                            options: _,
+                          }),
+                        _.length <= 2 &&
+                          (0, _.jsxs)(_._, {
+                            className: (0, _._)(
+                              _().PurchaseOptionCarouselWrapper,
+                              _.length <= 2 && _().NoCarousel,
+                              1 == _.length && _().Single,
+                            ),
+                            preferredFocus: !0,
+                            children: [
+                              _.length <= 2 &&
+                                (0, _.jsx)(_, {
+                                  option: _[0],
+                                }),
+                              2 == _.length &&
+                                (0, _.jsx)(_, {
+                                  option: _[1],
+                                }),
+                            ],
+                          }),
+                      ],
+                    }),
+                }),
+                _,
+              ],
+            }))
+          : (_.Warning("Not ready", _), null);
       }
       function _(_) {
         const { option: _ } = _;
@@ -11157,6 +11278,11 @@
               appidPlaytest: _.appidPlaytest,
               bIsOpen: _.bIsOpen,
             });
+            break;
+          case "related":
+            _ = (0, _.jsx)(_, {
+              option: _,
+            });
         }
         return _
           ? (0, _.jsx)("div", {
@@ -11171,6 +11297,7 @@
           [_, _] = _(_),
           _ = 240,
           _ = parseInt(_().CarouselPaddingTop),
+          _ = parseInt(_().CarouselPaddingBottom),
           _ = _.useCallback(
             (_, _, _, _) => {
               const _ = _[_];
@@ -11203,6 +11330,8 @@
                   return "playtest_" + _.appidPlaytest;
                 case "play":
                   return "play_" + _.appidMasterSub;
+                case "related":
+                  return "related_" + _.appid;
                 default:
                   return (
                     (0, _._)(!1, "Unknown purchase option type", _.type),
@@ -11216,6 +11345,11 @@
         return 0 == _.length
           ? null
           : (0, _.jsx)(_._, {
+              className: (0, _._)(
+                _().PurchaseOptionCarouselWrapper,
+                0 != _ && _().NotLeft,
+              ),
+              preferredFocus: !0,
               children: (0, _.jsx)(_, {
                 name: _,
                 "aria-label": _.Localize("#AppPage_PurchaseOptions_Title"),
@@ -11226,7 +11360,7 @@
                 focusedColumn: _,
                 setFocusedColumn: _,
                 nNumItems: _.length,
-                nHeight: 263.7362637362637 + _,
+                nHeight: 263.7362637362637 + _ + _,
                 nItemHeight: 263.7362637362637,
                 nItemMarginX: 10,
                 fnGetColumnWidth: _,
