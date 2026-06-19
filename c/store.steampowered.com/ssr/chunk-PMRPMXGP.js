@@ -1,11 +1,11 @@
 var _ = _(_(), 1);
-function _(_) {
+function _(_, _) {
   let { data: _ } = _(_),
     _ = _();
   if (_ === void 0) return;
   if (_ === null) return null;
   let _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-  return _ ? _.filter((_) => !!_.all_ages) : _;
+  return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
 }
 function _(_) {
   let _ = _(_);

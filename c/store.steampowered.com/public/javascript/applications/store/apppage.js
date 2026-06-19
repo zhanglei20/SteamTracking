@@ -9900,12 +9900,11 @@
           size: "4",
           weight: "heavy",
           children: [
-            _
-              ? (0, _.jsx)(_, {
-                  _: _,
-                  bPrepurchase: _,
-                })
-              : _,
+            _ ||
+              (0, _.jsx)(_, {
+                _: _,
+                bPrepurchase: _,
+              }),
             _,
           ],
         });

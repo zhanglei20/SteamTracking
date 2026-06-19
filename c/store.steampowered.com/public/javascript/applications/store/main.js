@@ -8335,6 +8335,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -8342,25 +8343,26 @@
         const _ = document.cookie.match("(^|; )" + _.name + "=([^;]*)");
         return _ && _[2] ? decodeURIComponent(_[2]) : void 0;
       }
+      function _(_, _) {
+        if (!document.cookie) return;
+        if (!(0, _._)(_)) return void 0;
+        const _ = _.options?.path ?? "/";
+        let _ = "";
+        _.options?.expires
+          ? (_ += ";expires=" + _.options.expires.toUTCString())
+          : _.options?.maxAge &&
+            (_ += ";max-age=" + Math.floor(_.options.maxAge / 1e3)),
+          _.options?.secure && (_ += ";secure"),
+          (document.cookie =
+            encodeURIComponent(_.name) +
+            "=" +
+            encodeURIComponent(_) +
+            _ +
+            ";path=" +
+            _);
+      }
       function _(_) {
-        return (function (_, _) {
-          if (!document.cookie) return;
-          if (!(0, _._)(_)) return;
-          const _ = _.options?.path ?? "/";
-          let _ = "";
-          _.options?.expires
-            ? (_ += ";expires=" + _.options.expires.toUTCString())
-            : _.options?.maxAge &&
-              (_ += ";max-age=" + Math.floor(_.options.maxAge / 1e3)),
-            _.options?.secure && (_ += ";secure"),
-            (document.cookie =
-              encodeURIComponent(_.name) +
-              "=" +
-              encodeURIComponent(_) +
-              _ +
-              ";path=" +
-              _);
-        })(
+        return _(
           {
             ..._,
             options: {
@@ -60662,16 +60664,16 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
+      function _(_, _) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
         if (void 0 === _) return;
         if (null === _) return null;
         const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ ? _.filter((_) => !!_.all_ages) : _;
+        return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
       }
-      function _(_, _, _) {
-        const _ = _(_);
+      function _(_, _, _, _) {
+        const _ = _(_, _);
         if (_ && 0 != _.length)
           return _ ? _.find((_) => _.trailer_base_id === _) : _ ? _[0] : void 0;
       }
@@ -71932,12 +71934,41 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       __webpack_require__("chunkid");
       var _,
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_NotRejected = -1)] = "k_NotRejected"),
+          (_[(_.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
+          (_[(_.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
+          (_[(_.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
+          (_[(_.k_RejectNoVR = 3)] = "k_RejectNoVR"),
+          (_[(_.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
+          (_[(_.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
+          (_[(_.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
+          (_[(_.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
+          (_[(_.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
+          (_[(_.k_RejectIgnoreContentDescriptors = 9)] =
+            "k_RejectIgnoreContentDescriptors"),
+          (_[(_.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
+          (_[(_.k_RejectSoftware = 11)] = "k_RejectSoftware"),
+          (_[(_.k_RejectDLC = 12)] = "k_RejectDLC"),
+          (_[(_.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
+          (_[(_.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
+          (_[(_.k_RejectVideo = 15)] = "k_RejectVideo"),
+          (_[(_.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
+          (_[(_.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
+          (_[(_.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
+          (_[(_.k_RejectAO = 19)] = "k_RejectAO");
+      })(_ || (_ = {}));
+      const _ = ["app", "sub", "bundle"];
       function _(_) {
         return "app" == _ ? _._._ : "sub" == _ ? _._._ : _._._;
+      }
+      function _(_) {
+        return _.includes(_);
       }
       function _(_) {
         switch (_) {
@@ -72052,30 +72083,6 @@
                     ? "t" + _.tagid
                     : "unknown0";
       }
-      !(function (_) {
-        (_[(_.k_NotRejected = -1)] = "k_NotRejected"),
-          (_[(_.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
-          (_[(_.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
-          (_[(_.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
-          (_[(_.k_RejectNoVR = 3)] = "k_RejectNoVR"),
-          (_[(_.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
-          (_[(_.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
-          (_[(_.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
-          (_[(_.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
-          (_[(_.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
-          (_[(_.k_RejectIgnoreContentDescriptors = 9)] =
-            "k_RejectIgnoreContentDescriptors"),
-          (_[(_.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
-          (_[(_.k_RejectSoftware = 11)] = "k_RejectSoftware"),
-          (_[(_.k_RejectDLC = 12)] = "k_RejectDLC"),
-          (_[(_.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
-          (_[(_.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
-          (_[(_.k_RejectVideo = 15)] = "k_RejectVideo"),
-          (_[(_.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
-          (_[(_.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
-          (_[(_.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
-          (_[(_.k_RejectAO = 19)] = "k_RejectAO");
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

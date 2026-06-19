@@ -8788,7 +8788,7 @@
         return (0, r.jsxs)(xo.D, {
           size: "4",
           weight: "heavy",
-          children: [t ? (0, r.jsx)(wo, { id: t, bPrepurchase: a }) : n, s],
+          children: [n || (0, r.jsx)(wo, { id: t, bPrepurchase: a }), s],
         });
       }
       function yo(e) {
