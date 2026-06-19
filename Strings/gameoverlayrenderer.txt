@@ -82,7 +82,6 @@ $ORIGIN
 25CGameStreamSteamMemStream
 4IIME
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-72Q>H
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 @@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@std::bad_alloc

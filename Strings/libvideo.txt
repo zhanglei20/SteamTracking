@@ -945,6 +945,7 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
+(1@I7
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1217,6 +1218,8 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;kt
+++CCUNG`st
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1366,6 +1369,7 @@ $ffn
 -steamconsole
 -steamdeck
 -steamframe
+-steamos
 -steamos3
 -tesla
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -1643,6 +1647,7 @@ $ffn
 /proc/self/maps
 /proc/version
 /run/host/%s
+/run/host/etc/os-release
 /steamrt64
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
@@ -1682,9 +1687,9 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+00000000
 0.15
 0.8.3
-00000000
 00:00:00
 01/01/00
 0123456789.
@@ -1694,7 +1699,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:43:52
 08bX
 0?0L
 0A/8
@@ -2241,6 +2245,7 @@ $ffn
 21CUtlCStringConversion
 21UserSystemInformation
 21VideoRepresentation_t
+22:44:45
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2438,11 +2443,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
 64CK\vH
 65536
+60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -6772,7 +6777,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 13 2026
+Jun 19 2026
 June
 K'iche'
 K(\f]C15
@@ -13894,7 +13899,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -19251,6 +19256,7 @@ steamglobal
 steamhdl
 steamid
 steammessages_base.proto
+steamos
 steampipe
 steampipepeering
 steamservice.so

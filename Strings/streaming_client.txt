@@ -2480,7 +2480,7 @@ ${FILENAME}
 (0'yX
 (0rt
 (1NE\n
-(1pu\
+(1ps\
 (3zg
 (6byOTER
 (6sM
@@ -3182,7 +3182,6 @@ ${FILENAME}
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{B
 +2Hp
 +2hZ
 +3B0[
@@ -3714,6 +3713,7 @@ ${FILENAME}
 -steamdeckdisplay
 -steamframe
 -steammachinedisplay
+-steamos
 -steamos3
 -te c
 -tesla
@@ -4351,6 +4351,7 @@ ${FILENAME}
 /ra kh
 /reset
 /run/host/%s
+/run/host/etc/os-release
 /s&WU
 /sZ*e
 /sbin/lsof
@@ -4449,16 +4450,16 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
+0000000000000000000000000000000000000000
 0.06
 0/bu^U
 0/gge
-0000000000000000000000000000000000000000
-01%3
-0123456789.
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00\fo
+01%3
 01%6
 01%66754&#"
+0123456789.
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
@@ -4468,8 +4469,6 @@ ${FILENAME}
 0123456789abcdefABCDEF:.
 0123456789abcdefghijklmnopqrstuvwxyz
 01E)
-02:43:52
-02:43:56
 0365<?:9(+.-$'"!`cfelojix{~}twrqPSVU\_ZYHKNMDGBA
 04!j
 04:3
@@ -5228,6 +5227,8 @@ ${FILENAME}
 21StoreItem_Screenshots
 21UserSystemInformation
 21\oi
+22:44:45
+22:44:49
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -6246,10 +6247,6 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
-5467
-54632
-54663
-546632
 5467!
 5467#".
 5467#5!
@@ -6258,6 +6255,10 @@ ${FILENAME}
 5467'!
 5467'7
 5467.
+5467
+54632
+54663
+546632
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6450,7 +6451,6 @@ ${FILENAME}
 6. makr
 600MiD
 60>T
-663
 6144
 61iz
 62d&
@@ -6467,12 +6467,14 @@ ${FILENAME}
 65R=
 65c\r
 66(YP_
+663
 6632
 6636
 6653
 6654#"
 6654&#"
 6675
+666666666666666666666666666666666666666666666666
 67!5!
 675!
 6753
@@ -6666,17 +6668,16 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
-75#5!
 754.
 7524
 74632
+75#5!
 75pRD
 75th
 76&'3
 7623.
 7664&#"
 76653
-666666666666666666666666666666666666666666666666
 76654&#"
 77!5
 77\nGJ
@@ -14421,7 +14422,7 @@ Jtttttt
 Jtwf
 Jugando con %s
 July
-Jun 13 2026
+Jun 19 2026
 June
 Juntar/desliz. 2 dedos
 Juq"Z
@@ -18672,6 +18673,7 @@ SDL.window.create.title
 SDL.window.create.width
 SDL.window.create.x
 SDL.window.create.y
+SDL.window.openvr.overlay_id
 SDL.window.visionos.settings
 SDL.window.x11.display
 SDL.window.x11.screen
@@ -19578,6 +19580,7 @@ SetString
 SetTimezone
 SetUInt32
 SetUInt64
+Setting appid %u for vr overlay %llu\n
 Setting cipher list SRP
 Seuraava toimintosarja/kerros
 Seznam gest
@@ -32281,7 +32284,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Jun 13 2026 02:43:55
+lib Jun 19 2026 22:44:48
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -37447,6 +37450,7 @@ steamnetworkingsockets.log
 steamnetworkingsockets_messages.proto
 steamnetworkingsockets_messages_certs.proto
 steamnetworkingsockets_messages_udp.proto
+steamos
 steamos-update: using duplicate detection: %d\n
 steampowered.com
 steamservice.so

@@ -245,7 +245,6 @@ $ORIGIN
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNGu
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -270,6 +269,7 @@ $ORIGIN
 -steamconsole
 -steamdeck
 -steamframe
+-steamos
 -steamos3
 -tesla
 ../common/environmentmanager.cpp
@@ -320,6 +320,7 @@ $ORIGIN
 /dev/urandom
 /etc/lsb-release
 /etc/mtab
+/etc/os-release
 /etc/steamos-oobe-image
 /proc/%d/status
 /proc/cpuinfo
@@ -329,6 +330,7 @@ $ORIGIN
 /proc/self/exe
 /proc/self/fd
 /run/host/%s
+/run/host/etc/os-release
 /steamerrorreporter
 /tmp
 /tmp/.steam-sem-names
@@ -340,7 +342,6 @@ $ORIGIN
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
 0123456789abcdef
-02:43:52
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -368,6 +369,7 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+22:44:45
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -546,7 +548,7 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
-Jun 13 2026
+Jun 19 2026
 LOCK_EX
 LOCK_SH
 Leaked mem: %s %s\n
@@ -1414,6 +1416,7 @@ steam://close/
 steam://openurl/
 steam://openurl_external/
 steamclient.so
+steamos
 steamservice.so
 steamui.so
 steamwebhelper

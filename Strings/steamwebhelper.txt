@@ -479,7 +479,6 @@ $d`D-laM
 %hu:%u:%u%c
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-%language%
 %ld%c
 %lld
 %llu
@@ -680,7 +679,6 @@ $d`D-laM
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -854,7 +852,6 @@ $d`D-laM
 *ZN14CClientHandler15OnAddressChangeE13scoped_refptrI10CefBrowserES0_I8CefFrameERK13CefStringBaseI19CefStringTraitsUTF8EEUlS0_I18CefNavigationEntryEbiiE_
 *ZN14CClientHandler19ScheduleWindowMovedERK10CUtlStringEUlvE_
 *ZN14CClientHandler21ScheduleWindowResizedERK10CUtlStringEUlvE_
-*ZN14CClientHandler25RemoveAllBackstackEntriesEvEUl13scoped_refptrI18CefNavigationEntryEbiiE_
 *ZN19CCompositorGLThread13OnWindowAddedEmEUlPK19ICompositorDrawableE_
 *ZN19CCompositorGLThread15OnWindowRemovedEmEUlPK19ICompositorDrawableE_
 *ZN19CCompositorGLThread22OnStackingOrderChangedEmmEUlPK19ICompositorDrawableE_
@@ -896,6 +893,7 @@ $d`D-laM
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG$m
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -1314,7 +1312,6 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:43:58
 08bX
 0A/8
 0F`8
@@ -1759,7 +1756,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI20CMsgJSExecutePromiseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI20CMsgRestartJSContextE
 16CHTMLProtoBufMsgI20CMsgScalePageToValueE
 16CHTMLProtoBufMsgI20CMsgSetSteamBetaNameE
@@ -1790,7 +1786,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI24CMsgNotifyUserActivationE
 16CHTMLProtoBufMsgI24CMsgSetProtocolBlockListE
 16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
-16CHTMLProtoBufMsgI24CMsgZoomToFocusedElementE
 16CHTMLProtoBufMsgI25CMsgAckSharedPaintBuffersE
 16CHTMLProtoBufMsgI25CMsgBrowserCreateResponseE
 16CHTMLProtoBufMsgI25CMsgMaximizeRestoreWindowE
@@ -1804,12 +1799,10 @@ $d`D-laM
 16CHTMLProtoBufMsgI26CMsgToggleFindInPageDialogE
 16CHTMLProtoBufMsgI27CMsgDraggableRegionsChangedE
 16CHTMLProtoBufMsgI27CMsgFocusedNodeTextResponseE
-16CHTMLProtoBufMsgI27CMsgForcePopupsToDirectHWNDE
 16CHTMLProtoBufMsgI27CMsgHorizontalScrollBarSizeE
 16CHTMLProtoBufMsgI27CMsgProcessInfoNotificationE
 16CHTMLProtoBufMsgI27CMsgRenderProcessTerminatedE
 16CHTMLProtoBufMsgI27CMsgSetVRKeyboardVisibilityE
-16CHTMLProtoBufMsgI27CMsgZoomToElementAtPositionE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI28CMsgScalePageToValueResponseE
@@ -1823,7 +1816,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI31CMsgDisableBackgroundThrottlingE
 16CHTMLProtoBufMsgI33CMsgVerticalScrollBarSizeResponseE
 16CHTMLProtoBufMsgI35CMsgHorizontalScrollBarSizeResponseE
-16CHTMLProtoBufMsgI35CMsgZoomToElementAtPositionResponseE
 16CHTMLProtoBufMsgI38CMsgSetBrowserViewDomainRequestMappingE
 16CHTMLProtoBufMsgI41CMsgBrowserViewPostMessageToParentRequestE
 16CHTMLProtoBufMsgI8CMsgCopyE
@@ -2139,7 +2131,6 @@ $d`D-laM
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgLoadLocalization
 20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
@@ -2197,6 +2188,7 @@ $d`D-laM
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
 21CefWriteHandlerCppToC
+22:44:50
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -2248,7 +2240,6 @@ $d`D-laM
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CMsgZoomToFocusedElement
 24CefBrowserProcessHandler
 24CefDictionaryValueCToCpp
 24CefDownloadHandlerCppToC
@@ -2309,15 +2300,12 @@ $d`D-laM
 27CMsgControllerConfiguration
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetControllerSourceMode
 27CMsgSetVRKeyboardVisibility
-27CMsgZoomToElementAtPosition
 27CV8RenderProcessFuncHandler
 27CefCompletionCallbackCppToC
 27CefContextMenuHandlerCppToC
@@ -2397,9 +2385,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
-32767
 32CefDevToolsMessageObserverCppToC
 3333
+32767
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2410,7 +2398,6 @@ $d`D-laM
 35CMsgControllerActionSetMiscSettings
 35CMsgControllerInputModeShiftBinding
 35CMsgHorizontalScrollBarSizeResponse
-35CMsgZoomToElementAtPositionResponse
 35CV8HandlerUnregisterCallbackHandler
 36CMsgControllerInputGameActionBinding
 36CMsgControllerInputMouseWheelBinding
@@ -2457,6 +2444,7 @@ $d`D-laM
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 474E4U4W4c4i4m4
+4766605f244a2d18d26d0cfe222d25d6698cd5a0
 47CMsgControllerInputControllerActionMouseBinding
 49fN
 4@AA
@@ -2604,7 +2592,6 @@ $d`D-laM
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CefClient
-9Hh?o
 9IGv
 9\n5k_EAppTestType_SteamChinaPlatformOperator_BuildReview
 9\n5k_EContentReportReason_MissingProcessingGroundForData
@@ -4001,7 +3988,6 @@ CMsgFind
 CMsgFinishedRequest
 CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -4025,7 +4011,6 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -4044,7 +4029,6 @@ CMsgPageSecurity
 CMsgPauseRepaint
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgRenderProcessTerminated
 CMsgRequestFullScreen
@@ -4093,8 +4077,6 @@ CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgVerticalScrollBarSize
 CMsgViewSource
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 COMPLEMENTOFALL
 COMPLEMENTOFDEFAULT
 CONF_dump_fp
@@ -7223,7 +7205,7 @@ JobStarted
 JoinedGroup
 Joystick
 July
-Jun 13 2026
+Jun 19 2026
 June
 K'iche'
 K-163
@@ -7546,7 +7528,6 @@ Loaded GL %d.%d
 Local file request not allowed for %s:%d
 LocalKeySet
 LocalName
-Localize
 Location
 LocationUpdated
 Lock
@@ -8782,7 +8763,8 @@ Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
+Plat_IsSteamOSGameMode
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_MSTime
 Plat_MSTime64
@@ -10039,8 +10021,6 @@ Steam ID does not pass strict parsing: '%s'
 Steam Video
 Steam client out of date
 Steam encountered an error (#%d) while rendering the page you were viewing. Click <a style="color: %s" href="%s">here</a> to reload.
-Steam.Localize() requires 1 string param
-Steam.Localize(): invalid browser
 Steam/Press Master
 Steam2 Migration Complete
 Steam2010 CD-Key
@@ -11576,7 +11556,6 @@ Zulu
 [M:%u:%u:%u]
 [TXN:%llu]
 [abi:
-[english]
 [friend]
 [from client]: %s
 [generated] _bluez_adapter1_emit_changed
@@ -14977,7 +14956,6 @@ extra compressed data
 extra data in message
 f&dy
 f.N%H
-f1ffb77137c318f63658a7ace2605401d5e35385
 fC\tc
 fNt7
 fP[J@8OLz
@@ -15120,7 +15098,6 @@ force
 force-device-scale-factor
 force-opaque-background
 force-sandbox
-force_direct_hwnd_popups
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 forever
 form
@@ -20208,7 +20185,6 @@ live.com
 llnw
 load-error
 load_iv
-load_localization
 loader incomplete
 loading cert dir
 loading defaults
@@ -20226,7 +20202,6 @@ localeconv
 localhost/
 localityName
 localization
-localization_path
 location
 location-updated
 locator
@@ -22127,9 +22102,6 @@ sc_schinese
 scale
 scale_page
 scale_page_response
-scale_page_to_element_at
-scale_page_to_element_response
-scale_page_to_focused_element
 scandir64
 sched_yield
 scheduled-shutdown
@@ -22334,7 +22306,6 @@ set_horizontal_scroll
 set_icon
 set_label
 set_orientation
-set_page_scale_factor_limits
 set_page_size
 set_resize_grip
 set_round
@@ -24185,7 +24156,6 @@ xbox.com
 xdg-user-dir %s
 xdigit
 xfire.com
-xh`g
 xhosa
 xhotspot
 xj)9

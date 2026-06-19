@@ -194,6 +194,7 @@ $\nY8O
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG:
 ++CCUNGstd::exception
 +ulsX
 -- Hierarchical Call Graph --\n
@@ -214,6 +215,7 @@ $\nY8O
 -steamconsole
 -steamdeck
 -steamframe
+-steamos
 -steamos3
 -tesla
 ../common/filesystem_helpers.cpp
@@ -263,14 +265,13 @@ $\nY8O
 /proc/self/exe
 /proc/self/fd
 /proc/version
+/run/host/etc/os-release
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-02:43:52
-02:43:54
 0F`8
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -283,6 +284,8 @@ $\nY8O
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
+22:44:45
+22:44:47
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
@@ -421,7 +424,7 @@ IsSpewActive
 IsValidIndex( elem )
 JArray
 JZJ{.
-Jun 13 2026
+Jun 19 2026
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
@@ -1197,6 +1200,7 @@ steam://openurl/
 steam://openurl_external/
 steam_monitor
 steamclient.so
+steamos
 steamservice.so
 steamui.so
 steamwebhelper
