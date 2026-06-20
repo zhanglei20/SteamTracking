@@ -7629,34 +7629,35 @@
     },
     91933: (e, t, r) => {
       "use strict";
-      r.d(t, { Y1: () => s, j_: () => n, uK: () => a });
+      r.d(t, { Y1: () => a, eV: () => s, j_: () => n, uK: () => o });
       var i = r(38861);
       function n(e) {
         if (!document.cookie) return;
         const t = document.cookie.match("(^|; )" + e.name + "=([^;]*)");
         return t && t[2] ? decodeURIComponent(t[2]) : void 0;
       }
-      function s(e) {
-        return (function (e, t) {
-          if (!document.cookie) return;
-          if (!(0, i._R)(e)) return;
-          const r = e.options?.path ?? "/";
-          let n = "";
-          e.options?.expires
-            ? (n += ";expires=" + e.options.expires.toUTCString())
-            : e.options?.maxAge &&
-              (n += ";max-age=" + Math.floor(e.options.maxAge / 1e3)),
-            e.options?.secure && (n += ";secure"),
-            (document.cookie =
-              encodeURIComponent(e.name) +
-              "=" +
-              encodeURIComponent(t) +
-              n +
-              ";path=" +
-              r);
-        })({ ...e, options: { ...e.options, expires: new Date(0) } }, "");
+      function s(e, t) {
+        if (!document.cookie) return;
+        if (!(0, i._R)(e)) return void 0;
+        const r = e.options?.path ?? "/";
+        let n = "";
+        e.options?.expires
+          ? (n += ";expires=" + e.options.expires.toUTCString())
+          : e.options?.maxAge &&
+            (n += ";max-age=" + Math.floor(e.options.maxAge / 1e3)),
+          e.options?.secure && (n += ";secure"),
+          (document.cookie =
+            encodeURIComponent(e.name) +
+            "=" +
+            encodeURIComponent(t) +
+            n +
+            ";path=" +
+            r);
       }
-      function a() {
+      function a(e) {
+        return s({ ...e, options: { ...e.options, expires: new Date(0) } }, "");
+      }
+      function o() {
         return window.SSR?.renderContext?.cookiePrefs;
       }
     },
@@ -55132,18 +55133,18 @@
       var i = r(8527),
         n = r(39777),
         s = r(38535);
-      function a(e) {
-        const { data: t } = (0, n.Yo)(e),
-          r = (0, s.dy)();
-        if (void 0 === t) return;
-        if (null === t) return null;
-        const i = [...(t.highlights || []), ...(t.other_trailers || [])];
-        return r ? i.filter((e) => !!e.all_ages) : i;
+      function a(e, t) {
+        const { data: r } = (0, n.Yo)(e),
+          i = (0, s.dy)();
+        if (void 0 === r) return;
+        if (null === r) return null;
+        const a = [...(r.highlights || []), ...(r.other_trailers || [])];
+        return i && !t ? a.filter((e) => !!e.all_ages) : a;
       }
-      function o(e, t, r) {
-        const i = a(e);
-        if (i && 0 != i.length)
-          return t ? i.find((e) => e.trailer_base_id === t) : r ? i[0] : void 0;
+      function o(e, t, r, i) {
+        const n = a(e, i);
+        if (n && 0 != n.length)
+          return t ? n.find((e) => e.trailer_base_id === t) : r ? n[0] : void 0;
       }
       function l(e) {
         let t = a(e);
@@ -64781,22 +64782,51 @@
     62792: (e, t, r) => {
       "use strict";
       r.d(t, {
-        JK: () => s,
-        Je: () => u,
-        Rz: () => a,
-        SW: () => o,
-        TM: () => c,
-        _4: () => l,
+        JK: () => a,
+        Je: () => d,
+        Rz: () => l,
+        SW: () => c,
+        TM: () => m,
+        _4: () => u,
         by: () => i,
-        wD: () => m,
+        nB: () => o,
+        wD: () => g,
       });
       r(45740);
       var i,
         n = r(48210);
-      function s(e) {
+      !(function (e) {
+        (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
+          (e[(e.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
+          (e[(e.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
+          (e[(e.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
+          (e[(e.k_RejectNoVR = 3)] = "k_RejectNoVR"),
+          (e[(e.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
+          (e[(e.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
+          (e[(e.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
+          (e[(e.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
+          (e[(e.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
+          (e[(e.k_RejectIgnoreContentDescriptors = 9)] =
+            "k_RejectIgnoreContentDescriptors"),
+          (e[(e.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
+          (e[(e.k_RejectSoftware = 11)] = "k_RejectSoftware"),
+          (e[(e.k_RejectDLC = 12)] = "k_RejectDLC"),
+          (e[(e.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
+          (e[(e.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
+          (e[(e.k_RejectVideo = 15)] = "k_RejectVideo"),
+          (e[(e.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
+          (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
+          (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
+          (e[(e.k_RejectAO = 19)] = "k_RejectAO");
+      })(i || (i = {}));
+      const s = ["app", "sub", "bundle"];
+      function a(e) {
         return "app" == e ? n.c6.qI : "sub" == e ? n.c6.RD : n.c6.xO;
       }
-      function a(e) {
+      function o(e) {
+        return s.includes(e);
+      }
+      function l(e) {
         switch (e) {
           case n.c6.qI:
             return "app";
@@ -64809,7 +64839,7 @@
         }
         return "invalid";
       }
-      function o(e) {
+      function c(e) {
         switch (e) {
           case "sub":
             return n.c6.RD;
@@ -64819,7 +64849,7 @@
             return n.c6.qI;
         }
       }
-      function l(e, t) {
+      function u(e, t) {
         switch (e) {
           case n.c6.xO:
             return "bundle";
@@ -64857,7 +64887,7 @@
             }
         }
       }
-      function c(e) {
+      function m(e) {
         switch (e) {
           case n.c6.xO:
             return "bundle";
@@ -64867,7 +64897,7 @@
             return "app";
         }
       }
-      function u(e, t) {
+      function d(e, t) {
         return t == n.c6.qI
           ? { appid: e }
           : t == n.c6.RD
@@ -64882,7 +64912,7 @@
                     ? { hubcategoryid: e }
                     : null;
       }
-      function m(e) {
+      function g(e) {
         return e?.appid
           ? "a" + e.appid
           : e?.packageid
@@ -64897,30 +64927,6 @@
                     ? "t" + e.tagid
                     : "unknown0";
       }
-      !(function (e) {
-        (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
-          (e[(e.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
-          (e[(e.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
-          (e[(e.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
-          (e[(e.k_RejectNoVR = 3)] = "k_RejectNoVR"),
-          (e[(e.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
-          (e[(e.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
-          (e[(e.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
-          (e[(e.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
-          (e[(e.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
-          (e[(e.k_RejectIgnoreContentDescriptors = 9)] =
-            "k_RejectIgnoreContentDescriptors"),
-          (e[(e.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
-          (e[(e.k_RejectSoftware = 11)] = "k_RejectSoftware"),
-          (e[(e.k_RejectDLC = 12)] = "k_RejectDLC"),
-          (e[(e.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
-          (e[(e.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
-          (e[(e.k_RejectVideo = 15)] = "k_RejectVideo"),
-          (e[(e.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
-          (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
-          (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
-          (e[(e.k_RejectAO = 19)] = "k_RejectAO");
-      })(i || (i = {}));
     },
     63369: (e, t, r) => {
       "use strict";

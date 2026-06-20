@@ -573,7 +573,6 @@ $\nY8O
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
 (\r"]\n)CClientNotificationControllerDisconnected
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"f\n%CClientNotificationGameRecordingError
 (\r"i\n:CClientNotificationFamilySharingDeviceAuthorizationChanged
 (\r"q\n\vCMsgKeyChar
@@ -775,7 +774,9 @@ $\nY8O
 *pcubDecodedData
 *|\n\fECPUGovernor
 ++CCUNG
+++CCUNG#
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGH&F
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
@@ -906,8 +907,6 @@ $\nY8O
 -openoverlaydevtools
 -quicklogin
 -silent
--steamdeckdisplay
--steammachinedisplay
 -toggle-overlay-html-mode
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -925,7 +924,6 @@ $\nY8O
 ../common/jpegloader_common.cpp
 ../common/language.cpp
 ../common/logger.cpp
-../common/messageobjects.cpp
 ../common/parentalinterpreter.cpp
 ../common/registry.cpp
 ../common/steam/client_api.cpp
@@ -1166,8 +1164,6 @@ $\nY8O
 /proc/self/maps
 /run/host/%s
 /steamrt64
-/sys/devices/virtual/dmi/id/product_name
-/sys/devices/virtual/dmi/id/sys_vendor
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_64/disk-free
@@ -1181,12 +1177,11 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
-0123456789ABCDEFP
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -1446,13 +1441,11 @@ $\nY8O
 123456789
 128 Kbps
 128K
-12CAddressInfo
 12CAudioFormat
 12CAutoReleaseI15CJSCallbackFuncE
 12CAutoReleaseI18CJSCallbackPromiseE
 12CDLLValidate
 12CIntProperty
-12CLicenseInfo
 12CLogInstance
 12CMsgSetFocus
 12CMsgStopFind
@@ -1498,16 +1491,11 @@ $\nY8O
 13CSetCursorMsg
 13CSetKeymapMsg
 13IUIController
-14CCBAccountInfo
-14CClanEventInfo
 14CColorProperty
 14CFloatProperty
-14CGuestPassInfo
 14CHFontProperty
 14CHideCursorMsg
 14CInputKeyUpMsg
-14CMachineIDInfo
-14CMessageObject
 14CMsgHideWindow
 14CMsgMouseLeave
 14CMsgMouseWheel
@@ -1540,7 +1528,6 @@ $\nY8O
 14IHTMLResponses
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
-15CChatMemberInfo
 15CJSCallbackFunc
 15CMsgBrowserSize
 15CMsgFullRepaint
@@ -1590,7 +1577,6 @@ $\nY8O
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI21CMsgBrowserSetMinSizeE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
@@ -1635,7 +1621,6 @@ $\nY8O
 16ListPanelDragger
 16ParentalSettings
 17CCaptureFailedMsg
-17CClientWalletInfo
 17CFileWriterThread
 17CMsgBrowserCreate
 17CMsgBrowserRemove
@@ -1647,7 +1632,6 @@ $\nY8O
 17CMsgStartDownload
 17CMsgUpdateToolTip
 17CNegotiatedConfig
-17CPurchaseGiftInfo
 17CSetFlashStateMsg
 17CStopAudioDataMsg
 17CStopVideoDataMsg
@@ -1680,9 +1664,7 @@ $\nY8O
 18CTextureIdProperty
 18CUtlCharConversion
 18CVRConnectionReady
-19CActivationCodeInfo
 19CClientHandshakeMsg
-19CClientMicroTxnInfo
 19CDirContentsWatcher
 19CInputMouseWheelMsg
 19CMsgBrowserPosition
@@ -1786,11 +1768,9 @@ $\nY8O
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgLoadLocalization
 20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
-20CPurchaseReceiptInfo
 20CRecordedInputStream
 20CRefCountServiceBaseILb1E6CRefMTE
 20CSetSpectatorModeMsg
@@ -1802,7 +1782,6 @@ $\nY8O
 20CVideoEncoderInfoMsg
 20CVirtualHereReadyMsg
 20IJSMethodCallHandler
-21CClanAnnouncementInfo
 21CDiscoveryPingRequest
 21CHTMLPageSecurityInfo
 21CHTMLWindowController
@@ -1816,7 +1795,6 @@ $\nY8O
 21CMsgResizeGripChanged
 21CMsgSetVerticalScroll
 21CMsgSetWindowPosition
-21CPurchaseLineItemInfo
 21CStreamingKeymapEntry
 21CTouchConfigActiveMsg
 21CUtlCStringConversion
@@ -1842,7 +1820,6 @@ $\nY8O
 22CStreamingSessionStats
 22CVirtualHereRequestMsg
 22ParentalFeatureRequest
-23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -1863,7 +1840,6 @@ $\nY8O
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CMsgZoomToFocusedElement
 24CNegotiationSetConfigMsg
 24CParentalSettingsManager
 24CPauseControllerInputMsg
@@ -1887,7 +1863,6 @@ $\nY8O
 25CSaveTouchConfigLayoutMsg
 25CSetStreamingClientConfig
 25CSteamUIStorageController
-26CActivationCodePackageInfo
 26CAuthenticationResponseMsg
 26CFrameStatAccumulatedValue
 26CInputTouchFingerMotionMsg
@@ -1902,14 +1877,11 @@ $\nY8O
 26CVirtualHereShareDeviceMsg
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
-27CMsgZoomToElementAtPosition
 27CSharedConnectionController
 27CSteamUIMessagingController
 27ListPanelColumnSelectButton
@@ -1978,7 +1950,6 @@ $\nY8O
 35CClientNotificationItemAnnouncement
 35CControllerPersonalizationUpdateMsg
 35CMsgHorizontalScrollBarSizeResponse
-35CMsgZoomToElementAtPositionResponse
 36CClientNotificationCloudSyncConflict
 36CClientNotificationDownloadCompleted
 36CClientNotificationGameRecordingStop
@@ -2127,10 +2098,6 @@ $\nY8O
 7~8A
 8 Mbps
 80 Mbps
-83L3
-83N6
-83Q2
-83Q3
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CJSArray
@@ -2163,7 +2130,6 @@ $\nY8O
 9CCallbackI27CSharedConnectionController23SteamServersConnected_tLb0EE
 9CCallbackI27CSharedConnectionController26SteamServersDisconnected_tLb0EE
 9CCallbackI27CSharedConnectionController30SharedConnectionMessageReady_tLb0EE
-9CCardInfo
 9CJSObject
 9CMsgClose
 9CMsgKeyUp
@@ -2210,6 +2176,7 @@ $\nY8O
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 ?\n\tp2p_scope
+@@r4N
 @\n!ControllerPersonalizationResponse
 @bEnableLogTearOff
 @bEnableSpewThrottle
@@ -2241,10 +2208,6 @@ A\n\nannotation
 A\n\tcandidate
 Accel
 AcceptPanel
-AccessToken
-AccountIDCreator
-AccountIDLastUpdated
-AccountNum
 Activate
 ActivateItem
 AddAllocatedMessage
@@ -2263,8 +2226,6 @@ AddUInt32
 AddUInt64
 AdditionalRoute
 Address too small!
-Address1
-Address2
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 Afrikaans
 Albanian
@@ -2275,8 +2236,6 @@ Already saw decimal point or exponent; can't have another one.
 Amharic
 AnimatingImagePanel
 AnimationController
-AppID
-AppIDToRedirect
 Application built with libpng-
 Application jmp_buf size changed
 Application must supply a known background gamma
@@ -2326,16 +2285,12 @@ Bad expression token: %c at %d in %s\n
 Bad flag in RTime32DateAdd
 Bangla
 BaseControls
-BasePrice
 Basque
 Belarusian
 BgColor
-BillingCurrency
-BillingTotal
 BitmapImagePanel
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Blocking global navigation to: %s\n
-Body
 Bogus DAC index %d
 Bogus DAC value 0x%x
 Bogus DHT index %d
@@ -2789,7 +2744,6 @@ CMsgFind
 CMsgFinishedRequest
 CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -2813,7 +2767,6 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -2832,7 +2785,6 @@ CMsgPageSecurity
 CMsgPauseRepaint
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgRenderProcessTerminated
 CMsgRequestFullScreen
@@ -2881,8 +2833,6 @@ CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgVerticalScrollBarSize
 CMsgViewSource
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 CNegotiatedConfig
 CNegotiationCompleteMsg"
 CNegotiationInitMsg
@@ -3031,14 +2981,6 @@ Caps Lock
 Caps Lock Toggle
 CaptionGripPanel
 CaptionGripPanel::OnThink()
-CardBinID
-CardExpMonth
-CardExpYear
-CardHolderFirstName
-CardHolderLastName
-CardID
-CardLast4Digits
-CardNumber
 Catalan
 Caution: quantization tables are too coarse for baseline JPEG
 ChatFlashMode
@@ -3048,9 +2990,6 @@ CheckButton
 CheckButton::OnThink()
 CheckButtonChecked
 Cherokee
-City
-ClanID
-Class
 Clear
 ClearButton
 ClearField
@@ -3127,7 +3066,6 @@ ComboBoxHost
 ComboBtn
 ComboMenu
 Command
-CommentCount
 Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
 Compression buffer size cannot be changed because it is in use
 Compression buffer size cannot be reduced below 6
@@ -3165,17 +3103,13 @@ Couldn't parse script file: expected <event name>, found nothing\n
 Couldn't parse script sequence '%s': expected '{', found '%s'\n
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
 Couldn't write %s: %s\n
-CountryCode
 Create
 CreateButton
 CreateDirectory
 CreateDirectoryDialog
 CreateInterface
-CreditCardType
 Croatian
 Ctrl
-Currency
-CurrencyCode
 Cursor
 CursorEntered
 CursorEnteredChild
@@ -3218,7 +3152,6 @@ Delete
 DeletePanel
 DescriptorProto
 DescriptorProtosH
-Details
 Detected file change in %s\n
 DialogVariables
 Didn't expect more than one scan
@@ -3391,17 +3324,8 @@ Error parsing text-format
 Error reporting not implemented.
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
-ErrorAppID
-ErrorHeadline
-ErrorLinkText
-ErrorLinkURL
-ErrorString
 Escape
 Estonian
-EventName
-EventNotes
-EventTime
-EventType
 Execute: %s\n
 Expand
 Expanded map entry type
@@ -3435,7 +3359,6 @@ ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
-ExternalValidation
 Extra compressed data
 ExtractSubrange() when arena is non-NULL is only supported when
 FAILED
@@ -3517,8 +3440,6 @@ FindEntry
 Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
-FirstName
-Flags
 FlashWindow
 Flicker
 FolderIcon
@@ -3582,9 +3503,6 @@ GLIBC_2.4
 GLIBC_2.7
 G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 Galician
-GameCode
-GameCodeFromKey
-GameItemID
 GeneratedCodeInfo
 Georgian
 German
@@ -3611,7 +3529,6 @@ GetOSType
 GetPanelAnimationDictionary()
 GetPanelKeyBindingMapDictionary()
 GetPanelMessageMapDictionary()
-GetPlatformFromOS
 GetRawRepeatedField
 GetRepeatedBool
 GetRepeatedDouble
@@ -3633,11 +3550,6 @@ GetUInt32
 GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 GetVParent()
-GiftMessage
-GiftTemplate
-GifteeAccountID
-GifteeEmail
-GifteeName
 Google.Protobuf.Reflection
 GraphPanel
 Gray color space not permitted on RGB PNG
@@ -3674,9 +3586,7 @@ HTMLFramelessWrapper
 HTMLPopup
 H\n\tCandidate
 HasField
-HasWallet
 Hausa
-Headline
 Hebrew
 Hex and octal numbers must be integers.
 HideIMECandidates
@@ -3742,15 +3652,12 @@ Index must be in range of repeated field values.
 Index out-of-bounds (field is empty).
 Indonesian
 Infinite time value
-InitialPeriod
-InitialTimeUnit
 Input file read error
 Input size too large:
 InputCanceled
 InputCompleted
 InputDialog
 InsertTabImage
-InstanceName
 Insufficient memory (case %d)
 Insufficient memory for eXIf chunk data
 Insufficient memory for hIST chunk data
@@ -3847,7 +3754,6 @@ Irish
 Is64BitOS
 Is64BitOS()
 IsARM64() || GetCPUInformation().m_bSSE2
-IsGift
 IsLabelEditingAllowed()
 IsPointInCaptureRegion
 IsPowerOfTwo( nNewCapacity )
@@ -3860,9 +3766,6 @@ IsValidIndex(elem)
 IsValidKeyBindingsContext()
 IsVisible()
 Italian
-ItemAppId
-ItemCount
-ItemDescription
 ItemDeselected
 ItemSelected
 ItemsChecked
@@ -4058,7 +3961,6 @@ KeyCodeTyped
 KeyCodeUnhandled
 KeyFocusTicked
 KeyModeSet
-KeyRangeID
 KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
@@ -4123,16 +4025,12 @@ LabelDull
 Language
 LanguageMenu
 Last Message Repeated %d times.\n%s
-LastName
 Latam_Spanish
 Latvian
 LayoutFileChanged
 LayoutTemplates
 Left
-LegacyKey
 Libpng jmp_buf still allocated
-LicenseType
-LineItemCount
 ListImage
 ListItemSelected
 ListPanel
@@ -4240,9 +4138,7 @@ MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 Marathi
 March
-MasterPackageID
 Matched '%s' -> '%s'\n
-MaxUseCount
 Maximize
 Maximum supported image dimension is %u pixels
 MaybeAllocateAligned cannot fail here.
@@ -4272,7 +4168,6 @@ MessageBox
 MessageBox.ButtonHeight
 MessageBoxText
 MessageLite at 0x
-MessageObject
 MessageOptions
 MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
@@ -4285,8 +4180,6 @@ MethodDescriptorProto
 MethodOptions
 Minimize
 MinimizeToSysTray
-MinuteLimit
-MinutesUsed
 Miscellaneous marker 0x%02x, length %u
 Missing Huffman code table entry
 Missing IHDR before IDAT
@@ -4610,7 +4503,6 @@ NULL output buffer with non-zero size passed to Base64Decode
 NULL output buffer with non-zero size passed to Base64Encode
 NULL row buffer
 NaCl
-Name
 NameEntry
 NamePart
 Need space between identifier and decimal point.
@@ -4708,12 +4600,10 @@ Option "
 Option field "
 Option must have a name.
 Option must not use reserved name "uninterpreted_option".
-OrderID
 Out of Memory
 Out of memory
 Output file write error --- out of disk space?
 Overwriting on-disk registry with newly created registry.
-OwnerID
 PCS illuminant is not D50
 PERMISSION_DENIED
 PLACEHOLDER_VALUE
@@ -4725,8 +4615,6 @@ PNG unsigned integer out of range
 PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
 POSIX
 PS3 Unattributed
-PackageCount
-PackageID
 Page
 PageChanged
 PageCountChanged
@@ -4761,17 +4649,13 @@ ParentalPlaytimeRestrictions
 ParentalSettings
 Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
 PathLabel
-PaymentID
-PaymentMethod
 Pe6^
-Permissions
 Persian
 Persistent Logfiles created which have no cleanup limit specified!
 Persistent logfile %s is past the keep until date - cleaning up\n
 PersonaNotifications
 PgDn
 PgUp
-Phone
 PinCorner
 PinnedCornerOffsetX
 PinnedCornerOffsetY
@@ -4780,9 +4664,7 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamConsoleMode
-Plat_IsSteamOS
-Plat_IsTesla
+Plat_IsSteamOSGameMode
 Plat_MSTime
 Plat_MSTime64
 Plat_OutputDebugString
@@ -4801,9 +4683,6 @@ PopulateFileList
 PopulateFileNameCompletion
 PopupHTML
 Portuguese
-PostCode
-PostTime
-PosterID
 Potential overflow in png_zalloc()
 Premature end of JPEG file
 Premature end of input file
@@ -4823,8 +4702,6 @@ Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Refle
 Pulse
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
-PurchaseCountryCode
-PurchaseStatus
 QC,A
 Qkkbal
 Quantization table 0x%02x was not defined
@@ -4851,14 +4728,12 @@ Read failure in png_handle_zTXt
 Read from EMS failed
 Read from XMS failed
 Read palette index exceeding num_palette
-RecipientAddress
 Recursion limit at end of parse should be
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
-Refundable
 Registry
 ReleaseCleared() can only be used on a RepeatedPtrField not on
 ReleaseLast
@@ -4867,22 +4742,18 @@ ReleaseMessage
 ReloadButton
 Remote call failed
 RemoveLast
-RenewalPeriod
-RenewalTimeUnit
 Repaint
 Repeated fields can't have default values.
 RequestFocus
 Requested feature was omitted at compile time
 Requested size is too large to fit into size_t.
 Required fields are not allowed in proto3.
-RequiresCachedPmtMethod
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
 ResetData
 ResizeColumnToContents
 Resource\warning.wav
-ResultDetail
 RichText
 RichText.InsetX
 RichText.InsetY
@@ -4910,15 +4781,11 @@ SKyu
 SPEED
 STEAM_
 STRING
-SalesTerritoryCode
-SalesTerritoryCodeFromKey
 Sampling factors too large for interleaved scan
-Sandbox
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Saving unknown chunk:
 Scan script does not transmit all data
-ScheduledSendOnDate
 Scots
 Scroll Lock
 Scroll Lock Toggle
@@ -4949,16 +4816,10 @@ SelectButton
 Selected %d colors for quantization
 SelectedImage
 Send failed
-SenderAddress
-SenderName
 SentenceMode
 SentenceModeMenu
-Sentiment
 September
 Serbian
-SerialNumber
-ServerAddress
-ServerPassword
 ServerVirtualizedMemberLists
 ServiceDescriptorProto
 ServiceOptions
@@ -5007,7 +4868,6 @@ SharedConnection.SubscribeToClientServiceMethod
 SharedConnection.SubscribeToEMsg
 ShellCmd
 Shift
-Shipping
 Should not reach here.
 Show browser tooltips
 ShowChatRoomGroupDialog
@@ -5019,7 +4879,6 @@ ShowInviteToTradeDialog
 ShowPanel
 ShowPopupFriendsList
 SignIntoFriends
-Signature
 Simplified_Chinese
 Sindhi
 Sinhala
@@ -5172,7 +5031,6 @@ St9type_info
 Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
 Start of Image
-State
 StaticFileWriterThread()
 StatusText
 Steam - DirWatcher
@@ -5180,7 +5038,6 @@ Steam ID does not pass strict parsing: '%s'
 SteamChina_SChinese
 SteamID
 SteamRealPath
-SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
 SteamStdLib::CommandLine()
@@ -5266,7 +5123,6 @@ Tajik
 Tamil
 Tatar
 Telugu
-TerritoryCode
 Text
 TextBlock
 TextChanged
@@ -5308,13 +5164,6 @@ ThrobberImagePanel
 Thursday
 Tick
 Tigrinya
-TimeAcked
-TimeCreated
-TimeExpiration
-TimeLastUpdated
-TimeNextProcess
-TimeRedeemed
-TimeSent
 ToggleButton
 ToggleColumnVisible
 Too many IDATs found
@@ -5330,12 +5179,7 @@ Tooltip.Anchor
 Tooltip.Delay
 TooltipHTML
 TooltipWindow
-Total
-TotalDiscount
 Traditional_Chinese
-TransID
-TransactionID
-TransactionTime
 TreeImage
 TreeNode
 TreeNodeText
@@ -5421,7 +5265,6 @@ Unsupported friends ui mode
 Unsupported marker type 0x%02x
 Unsupported: type mismatch
 UpdateIMECandidates
-UpdateTime
 Urdu
 Use local dev websites
 UtlThreadSafeQueue
@@ -5543,8 +5386,6 @@ WIN7
 WINDOWS
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
-WalletAmt
-WalletCur
 Warning
 Warning parsing text-format
 Warning: thumbnail image size does not match data length %u
@@ -6029,7 +5870,6 @@ active
 activeConfigChangeMsg
 activity
 additional_includes
-addressinfo
 afrikaans
 aggregate_value
 albanian
@@ -6050,10 +5890,6 @@ altgr_shift_keycode
 amazon.com
 amharic
 amount
-amt.GetCurrencyCode() == GetCurrency()
-amtInitial.GetCurrencyCode() == GetCurrency()
-amtRecurring.GetCurrencyCode() == GetCurrency()
-amtrecurring
 an arena.
 animate
 anonymous
@@ -6258,7 +6094,6 @@ cannot create shim for unknown locale::facet
 cannot create std::vector larger than max_size()
 canvas_oop_rasterization
 capslock_keycode
-cardinfo
 catalan
 cbActual < (uint32)nBufSizeWithTerminator
 cc_enable_arenas
@@ -6432,7 +6267,6 @@ deleted virtual method called\n
 delta
 deltax
 deltay
-description
 desired_bitrate_kbps
 desired_framerate_denominator
 desired_framerate_numerator
@@ -6478,14 +6312,11 @@ dulltext
 dupKeyMap
 duplicate
 duplicate sRGB information ignored
-duration
 dutch
 dynamic_cast
 eBroadcastReady
 eBrowserType
 eCmd > 0 && eCmd < eHTMLCommands_None
-eCurrencyCode
-eCurrencyCodeDelayed
 eFlag != FlagType{}
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 eResult
@@ -6525,7 +6356,6 @@ enable_video_hevc
 enable_video_streaming
 enabled
 enabled_features
-enddate
 endmntent
 engadget.com
 english
@@ -6626,7 +6456,6 @@ font
 fopen
 fopen tmpfile failed\n
 fopen64
-force_direct_hwnd_popups
 force_to_foreground
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 format
@@ -6658,10 +6487,8 @@ frametitle
 fread
 free
 freeaddrinfo
-fremont
 french
 freopen
-frequency
 frexp
 friends
 friends/trackerui_%language%.txt
@@ -6701,11 +6528,9 @@ g_pMemAllocSteam
 g_vecTempTextBuffer
 ga-alpha color-map: too few entries
 galician
-galileo
 gameID
 game_id
 gameid
-gameitemid
 gameoverlayrenderer.so
 gamesforwindows.com
 gamespot.com
@@ -7092,13 +6917,10 @@ is_save
 is_site_license_lock
 isalnum
 isalpha
-isbundle
 isevcert
-isinbundle
 ispageload
 isredirect
 isspace
-istypegame
 iswcntrl
 iswspace
 it_IT
@@ -7107,7 +6929,6 @@ item
 itemID
 itemIndex
 itemid
-items
 ja_JP
 japanese
 java Class for
@@ -7122,7 +6943,6 @@ joinparty/
 json_name = "
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
-jupiter
 k2U\v
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
@@ -7585,7 +7405,6 @@ lEd/
 label
 labelText
 labeltext
-language
 last_directory
 latam
 latest_frame_id
@@ -7603,7 +7422,6 @@ len >= input_len
 length does not match profile
 length exceeds PNG maximum
 length_ >= n
-lenovo
 libaudio.so
 libc.so.6
 libdl.so.2
@@ -7622,7 +7440,6 @@ licensed_device_count
 lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
 lineStartIndex >= _utext
 lineheight
-lineitems
 link
 link_bandwidth
 link_url
@@ -7636,7 +7453,6 @@ locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
 localeconv
-localization_path
 location
 locked
 login
@@ -7787,7 +7603,6 @@ m_pHTMLController
 m_pImageList
 m_pImagePanel
 m_pKV
-m_pKeyValues
 m_pLogInstance
 m_pObj
 m_pObj == NULL
@@ -7959,8 +7774,6 @@ munmap
 music
 mwa!
 myspace.com
-nAmount
-nAmountDelayed
 nBrowserID
 nBytes
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
@@ -8107,7 +7920,6 @@ pToolWindow
 pWatcher != NULL
 package
 package $0;\n\n
-packages
 packed
 packet_size_received
 packet_size_requested
@@ -8143,7 +7955,6 @@ pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcmag.com
 pcubDecodedData
-period
 persian
 persona_state
 personalizationData
@@ -8267,7 +8078,6 @@ py_generic_services
 qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 quality
-quantity
 quechua
 queueAsList
 queueAsList[ iData ]
@@ -8538,7 +8348,6 @@ stackLevel >= 0 && stackLevel < m_errorIndex
 start
 startIndex < m_TextStream.Count()
 startItem >= 0
-startdate
 startup
 state
 statfs
@@ -8588,7 +8397,6 @@ steam://openexternalforpid/%u/%s
 steam://openurlforpid/%u/%s
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
-steamRealm
 steam_beta_name
 steam_id
 steambeta://
@@ -8884,7 +8692,6 @@ vQO+t
 vRQ>
 valencian
 value
-valve
 valvesoftware.com
 variable
 vasprintf

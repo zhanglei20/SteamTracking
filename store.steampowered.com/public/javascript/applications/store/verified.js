@@ -577,26 +577,59 @@
     },
     25698: (e, s, a) => {
       "use strict";
-      a.d(s, { S: () => l });
+      a.d(s, { S: () => c });
       var i = a(7850),
         t = a(3946),
-        r = a(90626);
-      function l(e) {
+        r = a(90626),
+        l = a(91933);
+      const n = {
+          name: "trailerPrefs",
+          options: { path: "/", secure: !0, maxAge: 2592e6 },
+          preferenceControls: { isTechnicallyNecessary: !0 },
+        },
+        o = { flVolume: 0.8, bMuted: !0 };
+      function d(e) {
+        !(function (e) {
+          return e.flVolume === o.flVolume && e.bMuted === o.bMuted;
+        })(e) && 0 != Object.keys(e).length
+          ? (0, l.eV)(n, JSON.stringify(e))
+          : (0, l.Y1)(n);
+      }
+      function c(e) {
         let { children: s } = e;
-        const [a, l] = (0, r.useState)(0.8),
-          [n, o] = (0, r.useState)(!0);
-        return (0, i.jsx)(t.v, {
-          playerVolume: a,
-          setPlayerVolume: l,
-          audioMuted: n,
-          setAudioMuted: o,
-          children: s,
-        });
+        const [a, c] = (0, r.useState)(() =>
+          (function () {
+            try {
+              const e = (0, l.j_)(n);
+              if (!e) return o;
+              const s = JSON.parse(e);
+              return {
+                flVolume:
+                  "number" == typeof s.flVolume ? s.flVolume : o.flVolume,
+                bMuted: "boolean" == typeof s.bMuted ? s.bMuted : o.bMuted,
+              };
+            } catch (e) {
+              return o;
+            }
+          })(),
+        );
+        return (
+          (0, r.useEffect)(() => {
+            d(a);
+          }, [a]),
+          (0, i.jsx)(t.v, {
+            playerVolume: a.flVolume,
+            setPlayerVolume: (e) => c((s) => ({ ...s, flVolume: e })),
+            audioMuted: a.bMuted,
+            setAudioMuted: (e) => c((s) => ({ ...s, bMuted: e })),
+            children: s,
+          })
+        );
       }
     },
     24704: (e, s, a) => {
       "use strict";
-      a.d(s, { T: () => M });
+      a.d(s, { T: () => L });
       var i = a(7850),
         t = a(48210),
         r = a(71381),
@@ -688,10 +721,10 @@
       var k = a(94095),
         E = a(70300),
         R = a(73371),
-        D = a.n(R),
-        I = a(54492),
-        L = a(52038);
-      const M = (0, f.PA)((e) => {
+        M = a.n(R),
+        D = a(54492),
+        I = a(52038);
+      const L = (0, f.PA)((e) => {
         const { id: s, type: a } = e,
           f = (0, S.zl)(s, a),
           {
@@ -700,37 +733,37 @@
             bPreferDemoStorePage: w,
             bShowPurchaseOptionsButton: T,
             bUseSubscriptionLayout: R,
-            bPreferAssetWithoutOverride: M,
+            bPreferAssetWithoutOverride: L,
           } = e,
           [O, W] = C.useState(!1),
           F = () => W(!O),
-          { data: H } = (0, v.U2)(f),
-          { data: V } = (0, v.wl)(f),
+          { data: V } = (0, v.U2)(f),
+          { data: H } = (0, v.wl)(f),
           { data: G } = (0, v.by)(f),
           { data: z } = (0, v.xz)(f),
           U = (0, _._)(f),
           J = (0, g.n9)();
-        if (!H || !V)
+        if (!V || !H)
           return (0, i.jsx)(r.h, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
         const K = (0, N.L3)(J),
-          Q = H.item_type == t.c6.qI;
+          Q = V.item_type == t.c6.qI;
         return (0, i.jsx)("div", {
-          className: (0, L.A)(
+          className: (0, I.A)(
             A().StoreSaleWidgetContainer,
             A().LibraryAssetExpandedDisplay,
             "LibraryAssetExpandedDisplay",
           ),
           children: (0, i.jsxs)(E.oj, {
-            appid: Q ? H.appid : void 0,
+            appid: Q ? V.appid : void 0,
             children: [
               (0, i.jsxs)("div", {
                 className: A().StoreSaleWidgetLibraryAssetExtendedTop,
                 children: [
                   (0, i.jsx)("div", {
-                    className: (0, L.A)(A().StoreSaleWidgetLeft),
+                    className: (0, I.A)(A().StoreSaleWidgetLeft),
                     children: (0, i.jsx)(l.u, {
                       id: f,
                       bPreferDemoStorePage: w,
@@ -741,9 +774,9 @@
                           (0, i.jsx)(o.a, {
                             id: f,
                             imageType: "library",
-                            bPreferAssetWithoutOverride: M,
+                            bPreferAssetWithoutOverride: L,
                           }),
-                          (0, i.jsx)(I.J, { id: f }),
+                          (0, i.jsx)(D.J, { id: f }),
                         ],
                       }),
                     }),
@@ -754,8 +787,8 @@
                       Q &&
                         (0, i.jsx)(d.E, {
                           id: f,
-                          classOverride: (0, L.A)(
-                            D().WishlistButtonNotTop,
+                          classOverride: (0, I.A)(
+                            M().WishlistButtonNotTop,
                             "WishlistButton",
                           ),
                           snr: K,
@@ -766,14 +799,14 @@
                           (0, i.jsxs)("div", {
                             className: A().StoreSaleWidgetCenter,
                             children: [
-                              V.short_description &&
-                                V.short_description.length > 0 &&
+                              H.short_description &&
+                                H.short_description.length > 0 &&
                                 (0, i.jsx)("div", {
-                                  className: (0, L.A)(
+                                  className: (0, I.A)(
                                     A().StoreSaleWidgetShortDesc,
                                     "StoreSaleWidgetShortDesc",
                                   ),
-                                  children: V.short_description,
+                                  children: H.short_description,
                                 }),
                               (0, i.jsx)(c.n, {
                                 rgTagIDs: z
@@ -794,8 +827,8 @@
                                       }),
                                     ),
                                   }),
-                                  V.developers &&
-                                    V.developers.length > 0 &&
+                                  H.developers &&
+                                    H.developers.length > 0 &&
                                     (0, i.jsxs)("div", {
                                       className: A().StoreSaleItemDev,
                                       children: [
@@ -803,12 +836,12 @@
                                           "#CreatorHome_DevelopedBy",
                                         ),
                                         (0, i.jsx)("span", {
-                                          children: V.developers[0].name,
+                                          children: H.developers[0].name,
                                         }),
                                       ],
                                     }),
-                                  V.publishers &&
-                                    V.publishers.length > 0 &&
+                                  H.publishers &&
+                                    H.publishers.length > 0 &&
                                     (0, i.jsxs)("div", {
                                       className: A().StoreSaleItemDev,
                                       children: [
@@ -816,7 +849,7 @@
                                           "#CreatorHome_PublishedBy",
                                         ),
                                         (0, i.jsx)("span", {
-                                          children: V.publishers[0].name,
+                                          children: H.publishers[0].name,
                                         }),
                                       ],
                                     }),
@@ -841,7 +874,7 @@
                         className: A().CapsuleBottomBar,
                         children:
                           R && Q
-                            ? (0, i.jsx)(h.E, { appid: H.appid, bIsMuted: !1 })
+                            ? (0, i.jsx)(h.E, { appid: V.appid, bIsMuted: !1 })
                             : (0, i.jsxs)(i.Fragment, {
                                 children: [
                                   (0, i.jsx)(m.Q, { id: f }),
@@ -851,7 +884,7 @@
                                     bHidePrice: P,
                                     bShowPurchaseOptionsButton: T,
                                     fnOnPurchaseOptionsClick: F,
-                                    bHideWishlistButton: H.is_coming_soon,
+                                    bHideWishlistButton: V.is_coming_soon,
                                   }),
                                 ],
                               }),
@@ -861,9 +894,9 @@
                         children: [
                           (0, i.jsx)(p.G, {
                             id: f,
-                            bPreferAssetWithoutOverride: M,
+                            bPreferAssetWithoutOverride: L,
                           }),
-                          (0, i.jsx)(I.J, { id: f }),
+                          (0, i.jsx)(D.J, { id: f }),
                         ],
                       }),
                     ],
@@ -874,7 +907,7 @@
                 id: f,
                 bPurchaseOptionsExpanded: O,
                 fnCollapseOptions: F,
-                bPreferAssetWithoutOverride: M,
+                bPreferAssetWithoutOverride: L,
               }),
             ],
           }),
@@ -883,7 +916,7 @@
     },
     2921: (e, s, a) => {
       "use strict";
-      a.d(s, { PE: () => M, qP: () => D, Yg: () => R });
+      a.d(s, { PE: () => L, qP: () => M, Yg: () => R });
       var i = a(7850),
         t = a(76217),
         r = a(86927),
@@ -998,7 +1031,7 @@
           ? (0, i.jsxs)("div", {
               className: (0, x.A)(C().HilightGrid, C().MediaContainer),
               children: [
-                (0, i.jsx)(I, {
+                (0, i.jsx)(D, {
                   elFeaturedInCenter: f,
                   storeItemScreenshots: r,
                   trailer: v,
@@ -1006,12 +1039,12 @@
                   name: l.name || "",
                 }),
                 Boolean(a)
-                  ? (0, i.jsx)(M, {
+                  ? (0, i.jsx)(L, {
                       id: s,
                       bShowModal: h,
                       hideModal: () => m(!1),
                     })
-                  : (0, i.jsx)(L, {
+                  : (0, i.jsx)(I, {
                       name: l.name || "",
                       trailer: v,
                       bPlayVideo: n,
@@ -1022,7 +1055,7 @@
             })
           : null;
       }
-      function D(e) {
+      function M(e) {
         const {
             id: s,
             fnOnClickButton: a,
@@ -1036,7 +1069,7 @@
         return void 0 !== !c && l && d
           ? (0, i.jsx)("div", {
               className: (0, x.A)(C().HilightGrid, C().MediaContainerMM),
-              children: (0, i.jsx)(I, {
+              children: (0, i.jsx)(D, {
                 id: s,
                 elFeaturedInCenter: (0, i.jsx)(W, {
                   id: s,
@@ -1056,7 +1089,7 @@
               children: (0, i.jsx)(_.t, { size: "medium" }),
             });
       }
-      function I(e) {
+      function D(e) {
         const {
             elFeaturedInCenter: s,
             id: a,
@@ -1096,7 +1129,7 @@
           ),
           y.push(
             (0, i.jsx)(
-              L,
+              I,
               {
                 ref: S,
                 name: t,
@@ -1190,7 +1223,7 @@
           ],
         });
       }
-      function L(e) {
+      function I(e) {
         const {
           ref: s,
           name: a,
@@ -1256,7 +1289,7 @@
           ],
         });
       }
-      function M(e) {
+      function L(e) {
         const { id: s, bShowModal: a, trailerBaseID: t, hideModal: r } = e,
           { data: l } = (0, o.J$)(s),
           d = (0, n.kB)(s),
@@ -1514,15 +1547,15 @@
         k = a(3740),
         E = a(80696),
         R = a(62349),
-        D = a(5309),
-        I = a(30020),
-        L = a(14987),
-        M = a(60014),
+        M = a(5309),
+        D = a(30020),
+        I = a(14987),
+        L = a(60014),
         O = a(35380),
         W = a(93341),
         F = a(96006),
-        H = a(94191),
-        V = a(94095),
+        V = a(94191),
+        H = a(94095),
         G = a(72860),
         z = a(70300),
         U = a(73371),
@@ -1545,18 +1578,18 @@
             bShowReviewSummary: A,
             bShowDeckCompatibilityDialog: y,
             bAutoFocus: T,
-            fnOnClickOverride: D,
+            fnOnClickOverride: M,
             bIsMarketingMessage: U,
             bPreferAssetWithoutOverride: $,
           } = e,
           Z = (0, O.zl)(s, a),
           [se, ae] = (0, x.useState)(!1),
-          ie = (0, M.n9)(),
+          ie = (0, L.n9)(),
           { data: te, isPending: re } = (0, h.U2)(Z),
           { data: le } = (0, h.Q_)(Z),
           { data: ne } = (0, h.by)(Z),
           { data: oe } = (0, P.$Y)(),
-          de = (0, L._)(Z),
+          de = (0, I._)(Z),
           ce = (0, x.useRef)(null),
           [ue, he] = (0, x.useState)(!1),
           me = (0, q.Qn)();
@@ -1580,7 +1613,7 @@
           Se = te.item_type == n.c6.qI || Ce,
           Ne = Ce && te.appid,
           be = te.name || "",
-          Pe = (0, I.Nq)(ne, le),
+          Pe = (0, D.Nq)(ne, le),
           Ae = me || !ne?.is_coming_soon || Pe;
         return (0, i.jsxs)(r.Z, {
           className: (0, Q.A)({
@@ -1596,13 +1629,13 @@
             (0, i.jsx)(z.oj, {
               appid: Se && "appid" in Z ? Z.appid : void 0,
               children: (0, i.jsxs)(t.ml, {
-                onClick: U ? D : void 0,
+                onClick: U ? M : void 0,
                 className: (0, Q.A)({
                   [v().StoreSaleWidgetContainer]: !0,
                   [v().SaleItemDefaultCapsuleDisplay]: !0,
                   [v().MarketingMessage]: U,
                 }),
-                ...(0, G.S)(te, ie, me, Boolean(p), void 0, D),
+                ...(0, G.S)(te, ie, me, Boolean(p), void 0, M),
                 preferredFocus: fe,
                 children: [
                   (0, i.jsx)("div", {
@@ -1613,7 +1646,7 @@
                       children: (0, i.jsxs)("div", {
                         className: v().StoreSaleWidgetImage,
                         children: [
-                          (0, i.jsx)(H.V, { appids: de }),
+                          (0, i.jsx)(V.V, { appids: de }),
                           (0, i.jsx)(c.a, {
                             id: Z,
                             imageType: "header",
@@ -1636,7 +1669,7 @@
                       [v().Bundle]: fe,
                     }),
                     children: [
-                      Boolean(Se && !D) &&
+                      Boolean(Se && !M) &&
                         (0, i.jsx)(u.E, {
                           id: Z,
                           classOverride: (0, Q.A)(
@@ -1648,9 +1681,9 @@
                       (0, i.jsx)("div", {
                         className: v().TitleCtn,
                         children: (0, i.jsx)("a", {
-                          href: D ? void 0 : xe,
+                          href: M ? void 0 : xe,
                           target: q.TS.IN_CLIENT ? void 0 : "_blank",
-                          onClick: D,
+                          onClick: M,
                           children: (0, i.jsx)("div", {
                             className: (0, Q.A)(
                               v().StoreSaleWidgetTitle,
@@ -1700,7 +1733,7 @@
                             !ge && te.item_type == n.c6.xO && _e < ve,
                         }),
                       Boolean(Se) && (0, i.jsx)(ee, { id: Z }),
-                      Boolean(!D)
+                      Boolean(!M)
                         ? (0, i.jsx)(i.Fragment, {
                             children:
                               _ && Se && Ne
@@ -1708,7 +1741,7 @@
                                     appid: Ne,
                                     bIsMuted: Boolean(se),
                                   })
-                                : (0, i.jsx)(V.w, {
+                                : (0, i.jsx)(H.w, {
                                     id: Z,
                                     bShowDemoButton: m,
                                     bHidePrice: j,
@@ -1757,7 +1790,7 @@
         return a
           ? (0, i.jsx)("div", {
               className: v().StoreSaleWidgetRelease,
-              children: (0, D.CC)(a),
+              children: (0, M.CC)(a),
             })
           : null;
       }
@@ -1957,7 +1990,7 @@
     },
     108: (e, s, a) => {
       "use strict";
-      a.r(s), a.d(s, { default: () => I });
+      a.r(s), a.d(s, { default: () => D });
       var i = a(7850),
         t = a(17041),
         r = a(22837),
@@ -2109,7 +2142,7 @@
         return (0, i.jsx)(l.Ii, {
           href: s,
           className: (0, b.A)(A().HardwareBannerCtn),
-          children: (0, i.jsx)(D, {}),
+          children: (0, i.jsx)(M, {}),
         });
       }
       function R(e) {
@@ -2151,7 +2184,7 @@
           ],
         });
       }
-      function D(e) {
+      function M(e) {
         const s = (0, c.zI)(),
           a = (0, r.sfN)(n.TS.LANGUAGE);
         return (0, i.jsx)(t.u, {
@@ -2162,7 +2195,7 @@
             : "{STEAM_CLAN_LOC_IMAGE}/39049601/c18308dc60fd94678bb348608ddc0d6b8fdb11ab.jpg",
         });
       }
-      function I(e) {
+      function D(e) {
         const {
           match: {
             params: { appid: s },

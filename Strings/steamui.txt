@@ -3340,7 +3340,6 @@ ${LANGUAGE}
 (\r"]\n&CClientMetrics_IPv6Connectivity_Result
 (\r"]\n'CCommunity_VerifyClanMembership_Request
 (\r"]\n)CClientNotificationControllerDisconnected
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
 (\r"^\n,CParental_GetSignedParentalSettings_Response
 (\r"^\n,CStore_SetReservationPositionMessage_Request
@@ -4624,6 +4623,8 @@ ${LANGUAGE}
 *ZN22CSystemAudioController10InitializeEvEUlRK41CAudio_SupportsUseBluetoothForMic_RequestR42CAudio_SupportsUseBluetoothForMic_ResponseE_
 *ZN22CSystemAudioController10InitializeEvEUlbE0_
 *ZN22CSystemAudioController10InitializeEvEUlbE_
+*ZN22CSystemAudioController10InitializeEvEUljE0_
+*ZN22CSystemAudioController10InitializeEvEUljE_
 *ZN22CSystemAudioController10InitializeEvEUlvE0_
 *ZN22CSystemAudioController10InitializeEvEUlvE_
 *ZN22CSystemAudioController27YldPlaySpeakerTestOnChannelERK39CAudio_PlaySpeakerTestOnChannel_RequestR40CAudio_PlaySpeakerTestOnChannel_ResponseEUlbE_
@@ -5820,7 +5821,6 @@ ${LANGUAGE}
 -sls-skip-version-check
 -steam_game %d
 -steamconsole
--steamdeck
 -steamdeckdisplay
 -steamid
 -steaminstaller
@@ -7538,15 +7538,14 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFPfP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -9028,7 +9027,6 @@ ${LANGUAGE}
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI21CMsgBrowserSetMinSizeE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
@@ -9921,7 +9919,6 @@ ${LANGUAGE}
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
 20CMsgLEDManagerDevice
-20CMsgLoadLocalization
 20CMsgRemoteClientPing
 20CMsgRestartJSContext
 20CMsgScalePageToValue
@@ -10264,7 +10261,6 @@ ${LANGUAGE}
 24CMsgSteamUIBrowserWindow
 24CMsgSystemPerfSettingsV1
 24CMsgSystemUpdateProgress
-24CMsgZoomToFocusedElement
 24CNegotiationSetConfigMsg
 24CParentalSettingsManager
 24CPauseControllerInputMsg
@@ -10480,7 +10476,6 @@ ${LANGUAGE}
 27CMsgControllerConfiguration
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgGCRoutingProtoBufHeader
 27CMsgGameServerPingQueryData
 27CMsgHorizontalScrollBarSize
@@ -10489,7 +10484,6 @@ ${LANGUAGE}
 27CMsgNetworkDeviceIP4Address
 27CMsgNetworkDeviceIP6Address
 27CMsgNetworkDeviceSetOptions
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
 27CMsgRenderProcessTerminated
@@ -10499,7 +10493,6 @@ ${LANGUAGE}
 27CMsgSystemUpdateApplyParams
 27CMsgSystemUpdateApplyResult
 27CMsgSystemUpdateCheckResult
-27CMsgZoomToElementAtPosition
 27COffline_OfflineLogonTicket
 27CParties_JoinParty_Response
 27CPlayer_GetPlayNext_Request
@@ -11300,7 +11293,6 @@ ${LANGUAGE}
 35CMsgRemoteClientGetControllerConfig
 35CMsgRemoteClientRestrictAutoUpdates
 35CMsgRemoteClientStartStreamResponse
-35CMsgZoomToElementAtPositionResponse
 35CParental_ParentalLock_Notification
 35CParental_PlaytimeUsed_Notification
 35CParental_ValidatePassword_Response
@@ -12680,7 +12672,6 @@ ${LANGUAGE}
 51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
-524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -12948,7 +12939,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -12960,6 +12950,8 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+524288
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13431,7 +13423,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9H(TC
 9IGv
 9Inventory
 9PE,$
@@ -13537,7 +13528,6 @@ ${LANGUAGE}
 :scheme
 :statu
 :status
-:wt0
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -14833,7 +14823,7 @@ Apps.SetControllerRumblePreference
 Apps.SetCustomArtworkForApp
 Apps.SetCustomLogoPositionForApp
 Apps.SetDLCEnabled
-Apps.SetDisableSteamDeckAutoDetection
+Apps.SetForceIdentAsSteamDeck
 Apps.SetLocalScreenshotCaption
 Apps.SetLocalScreenshotPrivacy
 Apps.SetLocalScreenshotSpoiler
@@ -17142,7 +17132,6 @@ CMsgFind
 CMsgFinishedRequest
 CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGCRoutingProtoBufHeader
 CMsgGameServerPingQueryData
@@ -17179,7 +17168,6 @@ CMsgLEDManagerDevice
 CMsgLEDManagerState
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -17207,7 +17195,6 @@ CMsgPauseRepaint
 CMsgPersonaChangeResponse
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgProtoBufHeader
 CMsgProtobufWrapped
@@ -17320,8 +17307,6 @@ CMsgVideoGameRecordingDef
 CMsgViewSource
 CMsgWebUITransportFailure
 CMsgWebUITransportInfo
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 CNegotiatedConfig
 CNegotiationCompleteMsg"
 CNegotiationInitMsg
@@ -19526,6 +19511,7 @@ Define Huffman Table 0x%02x
 Define Quantization Table %d  precision %d
 Define Restart Interval %u
 Degraded
+Delay-ing global binding registration until manager becomes available: %s
 DelayInhibited
 DelayLaunch
 Delaying request for http%s://%s%s\n, http request cache too busy\n
@@ -19743,7 +19729,6 @@ Disable client beta filtering
 DisableAllToasts
 DisableHttpProxy
 DisableParentalSettings
-DisableSteamDeckAutoDetection
 DisableStreaming
 DisableToastsInGame
 Disabled
@@ -20774,6 +20759,7 @@ Error: %s: failed to prepare system report for upload
 Error: %s: failed to prepare wifi trace file upload
 Error: %s: failed to read screenshot file: %s
 Error: %s: failed to register agent
+Error: %s: failed to register pending binding: %s
 Error: %s: failed to remove device: %s
 Error: %s: failed to remove directory: %s
 Error: %s: failed to retrieve diagnostic info state
@@ -21400,6 +21386,7 @@ Force show stage1 oobe
 Force show stage2 oobe
 Force the use of the system browser composer
 ForceAcceptInvite
+ForceIdentAsSteamDeck
 ForceOOBE
 ForceOOBEStage2
 ForceQuit
@@ -24273,7 +24260,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 13 2026 02:44:01
+Jun 19 2026 22:44:53
 June
 K'iche'
 K(\f]C15
@@ -27769,8 +27756,9 @@ Plat_IsGamescope()
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
 Plat_IsSteamOS3FactoryImage
+Plat_IsSteamOSGameMode
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_IsWSL
 Plat_MSTime
@@ -30078,7 +30066,6 @@ SkipDiscoveryQueueItem
 SkipOfflineModeWarning
 Skipped at least 1 frame while encoding video\n
 Skipping adding audio track to segment writer
-Skipping global binding registration: feature unsupported: %s
 Skipping in-progress or failed download for %u, asset type %s
 Skipping js method registration, already exists: %s
 Skipping usage report for controller: %s\n
@@ -37119,7 +37106,6 @@ bDPadRight
 bDPadUp
 bDesktopShortcut
 bDeveloper
-bDisableSteamDeckAutoDetection
 bDisableUserMediaUpload
 bDisplayIsExternal
 bDisplayIsUsingAutoScale
@@ -37135,6 +37121,7 @@ bEnterDismissesKeyboard
 bExpectedThisThread && !m_QueueCallbackMsg.IsEmpty()
 bExternalProcessForVOD
 bForVR || eVideoSource == k_EVideoSourceNone || eVideoSource != m_eVideoSource[ !bForVR ]
+bForceIdentAsSteamDeck
 bForceRequeue || m_unThreadBytesToRead == 0 || m_eResultRunSSL != k_EResultOK
 bFreeRemovableLicense
 bGameQueryDone
@@ -40912,7 +40899,6 @@ force display of SSA
 force overlay based audio capture (disable MF based audio capture path)
 force_alphabetic_friend_sorting
 force_deck_perf_tab
-force_direct_hwnd_popups
 force_emit_message
 force_emit_service
 force_fake_mandatory_update
@@ -48641,7 +48627,6 @@ localhost
 localhost/
 localityName
 localization
-localization_path
 localization_token
 localized_category_name
 localized_desc

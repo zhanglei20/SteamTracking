@@ -4305,7 +4305,13 @@
     },
     35380: (e, t, n) => {
       "use strict";
-      n.d(t, { $5: () => s, oc: () => l, rt: () => o, zl: () => i });
+      n.d(t, {
+        $5: () => l,
+        dE: () => s,
+        oc: () => c,
+        rt: () => o,
+        zl: () => i,
+      });
       var r = n(90626),
         a = n(17690);
       function o(e) {
@@ -4342,12 +4348,28 @@
           [e, t],
         );
       }
-      function s(e) {
+      function s(e, t) {
+        return (0, r.useMemo)(
+          () =>
+            (function (e, t) {
+              switch (t) {
+                case "sub":
+                  return { packageid: e };
+                case "bundle":
+                  return { bundleid: e };
+                default:
+                  return { appid: e };
+              }
+            })(e, t),
+          [e, t],
+        );
+      }
+      function l(e) {
         return (0, r.useMemo)(() => {
           if (null != e && e != a.sc) return { appid: e };
         }, [e]);
       }
-      function l(e) {
+      function c(e) {
         return (0, r.useMemo)(() => {
           if (null != e && e != a.sc) return { packageid: e };
         }, [e]);

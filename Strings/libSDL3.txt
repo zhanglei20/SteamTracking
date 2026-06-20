@@ -783,6 +783,7 @@ Audio subsystem is not initialized
 Audio target '%s' not available
 Audio/Sink
 Audio/Source
+Audio/Source/Virtual
 AuthenticAMD
 BMP file with bad dimensions (%dx%d)
 Backbone One
@@ -2113,7 +2114,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-973-g0d971b137
+SDL-release-3.4.0-1004-gc9b658121
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -2628,6 +2629,7 @@ SDL_EGL_LIBRARY
 SDL_EGL_LoadLibraryOnly() has not been called or has failed.
 SDL_EGL_SetAttributeCallbacks
 SDL_ENABLE_SCREEN_KEYBOARD
+SDL_ENABLE_STEAM_SCREEN_KEYBOARD
 SDL_EVENT_AUDIO_DEVICE_ADDED
 SDL_EVENT_AUDIO_DEVICE_FORMAT_CHANGED
 SDL_EVENT_AUDIO_DEVICE_REMOVED
@@ -4260,7 +4262,6 @@ SteamAPI_ISteamRemoteStorage_GetQuota
 SteamAPI_ISteamRemoteStorage_IsCloudEnabledForAccount
 SteamAPI_ISteamRemoteStorage_IsCloudEnabledForApp
 SteamAPI_SteamRemoteStorage_v016
-SteamDeck
 SteamRemoteStorage only supports INT32_MAX read size
 SteamRemoteStorage only supports INT32_MAX write size
 SteamRemoteStorage unavailable
@@ -4604,6 +4605,7 @@ Wrong preset coefficients in MS ADPCM format header
 X server refused mouse capture
 X-Box
 X11_XRRSetCrtcConfig failed
+X1~Al
 XAllocClassHint
 XAllocColor
 XAllocSizeHints

@@ -1,4 +1,4 @@
-var CLSTAMP = "10735059";
+var CLSTAMP = "10757734";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -246,7 +246,7 @@ var CLSTAMP = "10735059";
           Dyr: () => X,
           E3D: () => nr,
           EPt: () => ir,
-          Ec7: () => Oe,
+          Ec7: () => ze,
           FH6: () => ft,
           FHN: () => Pt,
           Fa4: () => hr,
@@ -314,15 +314,15 @@ var CLSTAMP = "10735059";
           R2g: () => ti,
           R71: () => v,
           Rer: () => R,
-          RhO: () => zt,
+          RhO: () => Ot,
           Rhn: () => Zi,
           Rnx: () => Mi,
           Rv: () => fe,
-          S$u: () => ze,
+          S$u: () => Oe,
           SRb: () => gr,
           SSr: () => Ei,
           SWo: () => Wn,
-          Sxg: () => Oi,
+          Sxg: () => zi,
           TQL: () => fi,
           TQt: () => ht,
           Tby: () => li,
@@ -330,7 +330,7 @@ var CLSTAMP = "10735059";
           TiP: () => rr,
           U5N: () => Je,
           UXi: () => Te,
-          UXk: () => z,
+          UXk: () => O,
           UfC: () => l,
           UkI: () => T,
           UtJ: () => Se,
@@ -360,7 +360,7 @@ var CLSTAMP = "10735059";
           ZUW: () => Di,
           Ze9: () => Vt,
           ZjD: () => he,
-          Zw7: () => zr,
+          Zw7: () => Or,
           _3b: () => P,
           _Q1: () => Rt,
           _UC: () => je,
@@ -380,9 +380,9 @@ var CLSTAMP = "10735059";
           beA: () => _i,
           bmB: () => ve,
           c3e: () => pe,
-          cU3: () => O,
+          cU3: () => z,
           cfC: () => h,
-          ciT: () => On,
+          ciT: () => zn,
           ckP: () => Ii,
           cwp: () => $e,
           dFE: () => bt,
@@ -392,7 +392,7 @@ var CLSTAMP = "10735059";
           eEM: () => ai,
           eIg: () => xe,
           eNs: () => de,
-          eSB: () => zi,
+          eSB: () => Oi,
           eY9: () => gi,
           egf: () => Lt,
           etS: () => De,
@@ -424,8 +424,8 @@ var CLSTAMP = "10735059";
           k1m: () => le,
           kEl: () => Dr,
           kFb: () => dt,
-          kG6: () => Ot,
-          kQI: () => Or,
+          kG6: () => zt,
+          kQI: () => zr,
           kSD: () => Ht,
           keb: () => We,
           kvY: () => tn,
@@ -501,7 +501,7 @@ var CLSTAMP = "10735059";
           wwZ: () => Kt,
           x6o: () => $t,
           xPp: () => pt,
-          xXg: () => zn,
+          xXg: () => On,
           xcz: () => _t,
           xyI: () => $n,
           y44: () => Ke,
@@ -548,8 +548,8 @@ var CLSTAMP = "10735059";
           j = 2,
           F = 3,
           E = 4,
-          O = 0,
-          z = 1,
+          z = 0,
+          O = 1,
           A = 2,
           D = 3,
           N = 4,
@@ -652,12 +652,12 @@ var CLSTAMP = "10735059";
           je = 3,
           Fe = 4,
           Ee = 5,
-          Oe = 6;
-        function ze(e) {
-          return e == je || e == Oe;
+          ze = 6;
+        function Oe(e) {
+          return e == je || e == ze;
         }
         function Ae(e) {
-          return e == Ee || e == Oe;
+          return e == Ee || e == ze;
         }
         const De = 0,
           Ne = 2,
@@ -714,8 +714,8 @@ var CLSTAMP = "10735059";
           jt = 17,
           Ft = 18,
           Et = 19,
-          Ot = 20,
-          zt = 21,
+          zt = 20,
+          Ot = 21,
           At = 22,
           Dt = 23,
           Nt = 24,
@@ -769,9 +769,9 @@ var CLSTAMP = "10735059";
               return "hu";
             case Et:
               return "cs";
-            case Ot:
-              return "ro";
             case zt:
+              return "ro";
+            case Ot:
               return "tr";
             case Ut:
               return "ar";
@@ -840,9 +840,9 @@ var CLSTAMP = "10735059";
               return "hungarian";
             case Et:
               return "czech";
-            case Ot:
-              return "romanian";
             case zt:
+              return "romanian";
+            case Ot:
               return "turkish";
             case Ut:
               return "arabic";
@@ -912,9 +912,9 @@ var CLSTAMP = "10735059";
             case "czech":
               return Et;
             case "romanian":
-              return Ot;
-            case "turkish":
               return zt;
+            case "turkish":
+              return Ot;
             case "arabic":
               return Ut;
             case "brazilian":
@@ -976,8 +976,8 @@ var CLSTAMP = "10735059";
           jr = 103,
           Fr = 500,
           Er = 600,
-          Or = 601,
-          zr = 1e3,
+          zr = 601,
+          Or = 1e3,
           Ar = 1001,
           Dr = 0,
           Nr = 1,
@@ -1086,8 +1086,8 @@ var CLSTAMP = "10735059";
           jn = 20,
           Fn = 22,
           En = 23,
-          On = 24,
-          zn = 25,
+          zn = 24,
+          On = 25,
           An = 27,
           Dn = 28,
           Nn = 29,
@@ -1133,7 +1133,7 @@ var CLSTAMP = "10735059";
           xi = 1,
           Bi = 4,
           Ri = 11;
-        var Ii, ki, Li, Ti, ji, Fi, Ei, Oi;
+        var Ii, ki, Li, Ti, ji, Fi, Ei, zi;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -1229,8 +1229,8 @@ var CLSTAMP = "10735059";
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(Oi || (Oi = {}));
-        const zi = 0,
+          })(zi || (zi = {}));
+        const Oi = 0,
           Ai = 1,
           Di = 320,
           Ni = 528,
@@ -4735,7 +4735,7 @@ var CLSTAMP = "10735059";
           Vr: () => c,
           Yk: () => Z,
           ZC: () => H,
-          ZI: () => z,
+          ZI: () => O,
           Ze: () => B,
           _3: () => g,
           _9: () => M,
@@ -4764,7 +4764,7 @@ var CLSTAMP = "10735059";
           sG: () => V,
           sW: () => p,
           u6: () => N,
-          uN: () => O,
+          uN: () => z,
           v6: () => ie,
           vY: () => ue,
           xU: () => ce,
@@ -4805,8 +4805,8 @@ var CLSTAMP = "10735059";
           j = 40,
           F = 41,
           E = 42,
-          O = 43,
-          z = 45,
+          z = 43,
+          O = 45,
           A = 48,
           D = 49,
           N = 50,
@@ -5925,7 +5925,7 @@ var CLSTAMP = "10735059";
           Q7u: () => c,
           S2P: () => a,
           S7K: () => M,
-          S8T: () => O,
+          S8T: () => z,
           S9G: () => k,
           TTm: () => B,
           XJc: () => h,
@@ -5938,7 +5938,7 @@ var CLSTAMP = "10735059";
           eMk: () => E,
           f7K: () => g,
           fYu: () => L,
-          geZ: () => z,
+          geZ: () => O,
           jpF: () => v,
           kHd: () => o,
           pXz: () => p,
@@ -5982,8 +5982,8 @@ var CLSTAMP = "10735059";
           j = 8507,
           F = 8509,
           E = 9330,
-          O = 9331,
-          z = 9802,
+          z = 9331,
+          O = 9802,
           A = 9804;
       },
       94729: (e, t, r) => {
@@ -7389,8 +7389,8 @@ var CLSTAMP = "10735059";
           Gf: () => A,
           tF: () => D,
           bc: () => F,
-          Ys: () => z,
-          Zd: () => O,
+          Ys: () => O,
+          Zd: () => z,
           N4: () => E,
           _5: () => re,
           Ov: () => i,
@@ -8203,8 +8203,8 @@ var CLSTAMP = "10735059";
                       bw: a.gp.writeString,
                     },
                     routes: { n: 3, c: E, r: !0, q: !0 },
-                    components: { n: 4, c: O, r: !0, q: !0 },
-                    actions: { n: 5, c: z, r: !0, q: !0 },
+                    components: { n: 4, c: z, r: !0, q: !0 },
+                    actions: { n: 5, c: O, r: !0, q: !0 },
                   },
                 }),
               F.sm_m
@@ -8306,74 +8306,11 @@ var CLSTAMP = "10735059";
             return "CClientMetrics_ReportReactUsage_Notification_RouteData";
           }
         }
-        class O extends s.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              O.prototype.component || a.Sg(O.M()),
-              s.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              O.sm_m ||
-                (O.sm_m = {
-                  proto: O,
-                  fields: {
-                    component: {
-                      n: 1,
-                      br: a.qM.readString,
-                      bw: a.gp.writeString,
-                    },
-                    count: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
-                  },
-                }),
-              O.sm_m
-            );
-          }
-          static MBF() {
-            return O.sm_mbf || (O.sm_mbf = a.w0(O.M())), O.sm_mbf;
-          }
-          toObject(e = !1) {
-            return O.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return a.BT(O.M(), e, t);
-          }
-          static fromObject(e) {
-            return a.Uq(O.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (o().BinaryReader)(e),
-              r = new O();
-            return O.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return a.zj(O.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (o().BinaryWriter)();
-            return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            a.i0(O.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (o().BinaryWriter)();
-            return (
-              O.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CClientMetrics_ReportReactUsage_Notification_ComponentData";
-          }
-        }
         class z extends s.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              z.prototype.action || a.Sg(z.M()),
+              z.prototype.component || a.Sg(z.M()),
               s.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
@@ -8384,7 +8321,11 @@ var CLSTAMP = "10735059";
                 (z.sm_m = {
                   proto: z,
                   fields: {
-                    action: { n: 1, br: a.qM.readString, bw: a.gp.writeString },
+                    component: {
+                      n: 1,
+                      br: a.qM.readString,
+                      bw: a.gp.writeString,
+                    },
                     count: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
                   },
                 }),
@@ -8422,6 +8363,65 @@ var CLSTAMP = "10735059";
             var e = new (o().BinaryWriter)();
             return (
               z.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CClientMetrics_ReportReactUsage_Notification_ComponentData";
+          }
+        }
+        class O extends s.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              O.prototype.action || a.Sg(O.M()),
+              s.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              O.sm_m ||
+                (O.sm_m = {
+                  proto: O,
+                  fields: {
+                    action: { n: 1, br: a.qM.readString, bw: a.gp.writeString },
+                    count: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  },
+                }),
+              O.sm_m
+            );
+          }
+          static MBF() {
+            return O.sm_mbf || (O.sm_mbf = a.w0(O.M())), O.sm_mbf;
+          }
+          toObject(e = !1) {
+            return O.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return a.BT(O.M(), e, t);
+          }
+          static fromObject(e) {
+            return a.Uq(O.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (o().BinaryReader)(e),
+              r = new O();
+            return O.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return a.zj(O.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (o().BinaryWriter)();
+            return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            a.i0(O.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (o().BinaryWriter)();
+            return (
+              O.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -15968,9 +15968,9 @@ var CLSTAMP = "10735059";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 12 2026 : 13:35:42",
-                BUILD_TIME_UTC: "Jun 12 2026 : 20:35:42",
-                BUILD_RTIME_UTC: 1781296542,
+                BUILD_TIME_LOCAL: "Jun 19 2026 : 15:08:12",
+                BUILD_TIME_UTC: "Jun 19 2026 : 22:08:12",
+                BUILD_RTIME_UTC: 1781906892,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -18359,7 +18359,7 @@ var CLSTAMP = "10735059";
           P: () => y,
           Vs: () => T,
           Y8: () => U,
-          aE: () => O,
+          aE: () => z,
           ai: () => F,
           fd: () => H,
           il: () => E,
@@ -19037,7 +19037,7 @@ var CLSTAMP = "10735059";
         function E(e) {
           return (0, i.jsx)("div", { className: S().ContextMenuMouseOverlay });
         }
-        function O(e) {
+        function z(e) {
           let t = [],
             r = b.uX(e),
             n = r.getSelection(),
@@ -19191,10 +19191,10 @@ var CLSTAMP = "10735059";
           (0, n.Cg)([M.oI], F.prototype, "OnBlur", null),
           (0, n.Cg)([M.oI], F.prototype, "OnKeyDown", null),
           (F = (0, n.Cg)([l.PA], F));
-        const z = "EnableContextMenuBlurDelay3";
+        const O = "EnableContextMenuBlurDelay3";
         function A() {
           return (
-            "true" === (window.localStorage && window.localStorage.getItem(z))
+            "true" === (window.localStorage && window.localStorage.getItem(O))
           );
         }
         function D() {
@@ -19206,11 +19206,11 @@ var CLSTAMP = "10735059";
             u.useCallback((e) => {
               if (!window.localStorage)
                 return void console.error(
-                  `Attempt to change setting with no localStorage available: ${z}`,
+                  `Attempt to change setting with no localStorage available: ${O}`,
                 );
               r(e);
               const t = e ? "true" : "false";
-              window.localStorage.setItem(z, t);
+              window.localStorage.setItem(O, t);
             }, []),
           ];
         }
@@ -20405,7 +20405,7 @@ var CLSTAMP = "10735059";
           GrD: () => Ct,
           Gv$: () => $,
           IFd: () => sr,
-          IGf: () => zr,
+          IGf: () => Or,
           IOc: () => ne,
           IrQ: () => pe,
           Jlk: () => ce,
@@ -20424,7 +20424,7 @@ var CLSTAMP = "10735059";
           NCC: () => Wt,
           NtH: () => Nt,
           OSJ: () => xr,
-          OWN: () => z,
+          OWN: () => O,
           OeC: () => re,
           OiG: () => rt,
           P7C: () => Ee,
@@ -20436,7 +20436,7 @@ var CLSTAMP = "10735059";
           QHH: () => ae,
           QQ4: () => He,
           QcV: () => ht,
-          Qte: () => Oe,
+          Qte: () => ze,
           RO3: () => G,
           ROZ: () => Ae,
           Rkk: () => g,
@@ -20463,7 +20463,7 @@ var CLSTAMP = "10735059";
           Yb3: () => ir,
           Yoo: () => Fr,
           YuU: () => Ye,
-          ZPc: () => Ot,
+          ZPc: () => zt,
           ZWw: () => Se,
           ZjT: () => Kt,
           ZnA: () => pr,
@@ -20478,7 +20478,7 @@ var CLSTAMP = "10735059";
           aeP: () => Me,
           agV: () => Ir,
           apU: () => Ue,
-          az8: () => Or,
+          az8: () => zr,
           b8_: () => cr,
           bKN: () => kr,
           bPr: () => Ge,
@@ -20523,7 +20523,7 @@ var CLSTAMP = "10735059";
           lMJ: () => Re,
           lRD: () => Zt,
           m59: () => b,
-          mrd: () => O,
+          mrd: () => z,
           nGC: () => te,
           nm_: () => mr,
           o5Q: () => Yt,
@@ -20531,7 +20531,7 @@ var CLSTAMP = "10735059";
           oy: () => yr,
           pDR: () => X,
           qcc: () => Qe,
-          qnF: () => zt,
+          qnF: () => Ot,
           qzq: () => De,
           rNt: () => Cr,
           rfv: () => Ve,
@@ -20557,7 +20557,7 @@ var CLSTAMP = "10735059";
           xv8: () => Q,
           yFA: () => V,
           yUp: () => q,
-          y_e: () => ze,
+          y_e: () => Oe,
           ypD: () => It,
           zD7: () => S,
           zHo: () => Ie,
@@ -21236,7 +21236,7 @@ var CLSTAMP = "10735059";
             ],
           });
         }
-        function O(e) {
+        function z(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             className: "SVGIcon_Button SVGIcon_VoiceRoom",
@@ -21249,7 +21249,7 @@ var CLSTAMP = "10735059";
             }),
           });
         }
-        function z() {
+        function O() {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 26 26",
@@ -23247,7 +23247,7 @@ var CLSTAMP = "10735059";
             ],
           });
         }
-        function Oe(e) {
+        function ze(e) {
           const t = (0, s.A)(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
@@ -23279,7 +23279,7 @@ var CLSTAMP = "10735059";
             ],
           });
         }
-        function ze() {
+        function Oe() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -24920,7 +24920,7 @@ var CLSTAMP = "10735059";
             ],
           });
         }
-        function Ot() {
+        function zt() {
           return (0, n.jsx)("svg", {
             height: "100px",
             width: "100px",
@@ -24948,7 +24948,7 @@ var CLSTAMP = "10735059";
             }),
           });
         }
-        function zt(e) {
+        function Ot(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 100 100",
@@ -25817,7 +25817,7 @@ var CLSTAMP = "10735059";
             ],
           });
         }
-        function Or(e) {
+        function zr(e) {
           const { fill: t, ...r } = e;
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -25834,7 +25834,7 @@ var CLSTAMP = "10735059";
             }),
           });
         }
-        function zr(e) {
+        function Or(e) {
           const { fill: t, ...r } = e;
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -27618,10 +27618,10 @@ var CLSTAMP = "10735059";
           _9: () => B,
           _l: () => _,
           a8: () => n,
-          dt: () => O,
+          dt: () => z,
           gR: () => M,
           lQ: () => w,
-          qZ: () => z,
+          qZ: () => O,
           sq: () => L,
           u6: () => T,
           vl: () => k,
@@ -28092,7 +28092,7 @@ var CLSTAMP = "10735059";
             }
           );
         }
-        function O(e, t, r) {
+        function z(e, t, r) {
           let n = e < 0;
           const i = E((e = n ? 0 - e : e)),
             o = i.fraction.toFixed(2).split(".")[1],
@@ -28132,7 +28132,7 @@ var CLSTAMP = "10735059";
             l
           );
         }
-        function z(e, t, r) {
+        function O(e, t, r) {
           let n = e < 0;
           const i = E((e = n ? 0 - e : e)),
             o = F(i.seconds.toString(), 2, "0"),
@@ -29080,7 +29080,7 @@ var CLSTAMP = "10735059";
           return e?.IN_GAMEPADUI;
         }
         function B() {
-          return a.TS.ON_STEAMOS;
+          return a.TS.IS_STEAMOS;
         }
         function R(e, t) {
           return 0 != t.length && e.startsWith(t);
@@ -29181,9 +29181,8 @@ var CLSTAMP = "10735059";
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
-            ON_DECK: !1,
             ON_FRAME: !1,
-            ON_STEAMOS: !1,
+            IS_STEAMOS: !1,
             ON_STEAMOS_CLIENT_BRANCH: !1,
             IN_GAMESCOPE: !1,
             IN_LOGIN: !1,
@@ -29279,9 +29278,9 @@ var CLSTAMP = "10735059";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 12 2026 : 13:35:42",
-                    BUILD_TIME_UTC: "Jun 12 2026 : 20:35:42",
-                    BUILD_RTIME_UTC: 1781296542,
+                    BUILD_TIME_LOCAL: "Jun 19 2026 : 15:08:12",
+                    BUILD_TIME_UTC: "Jun 19 2026 : 22:08:12",
+                    BUILD_RTIME_UTC: 1781906892,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -29917,13 +29916,13 @@ var CLSTAMP = "10735059";
         3366: "cc756c2fdb43183ce985",
         3473: "aa2e2c813e7588319881",
         3518: "74f6ecfccd44bfb3892f",
-        3569: "4c5112621fc061208c86",
+        3569: "3bb1bd0a327185feaff2",
         3583: "f831ab7edbd9ffa591ac",
         3594: "141de8df89a7a27bd2f9",
         3654: "a316470d8c7ddf6b8e9a",
         3669: "f5396555e65c0f7883b2",
         3685: "be7afcf3003fdb9bf1ef",
-        3714: "cfdd9d4c3a56e994df1e",
+        3714: "aba2b0d9e1fc2047282a",
         3716: "2043c1e958b8d9b48572",
         3721: "a7dc580e98850999baba",
         3744: "775ac7cdb21bac1fe37c",
@@ -30102,7 +30101,7 @@ var CLSTAMP = "10735059";
         9672: "91f76cc873bf693aba54",
         9711: "2ed989ee7251a5d19c6f",
         9779: "59ef76674166d4b9e52e",
-        9858: "20b479a1a5109c76e85d",
+        9858: "f6d524f7a53cfada01cf",
         9869: "fdf04c0edf06ee6bc9e0",
         9882: "3f6dcfe6362e2c3e52ca",
         9887: "c5426588e9fdcb224e10",

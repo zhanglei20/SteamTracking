@@ -332,7 +332,6 @@ $\n k_SystemAudioPortDirection_Input
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -955,7 +954,6 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI30CMsgSetNetFakeLocalSystemStateE
 16CHTMLProtoBufMsgI33CMsgVerticalScrollBarSizeResponseE
 16CHTMLProtoBufMsgI35CMsgHorizontalScrollBarSizeResponseE
-16CHTMLProtoBufMsgI35CMsgZoomToElementAtPositionResponseE
 16CHTMLProtoBufMsgI38CMsgSetBrowserViewDomainRequestMappingE
 16CHTMLProtoBufMsgI9CMsgCloseE
 16CMsgAckScreenDPI
@@ -1036,7 +1034,6 @@ $\n k_SystemAudioPortDirection_Input
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgLoadLocalization
 20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
@@ -1072,7 +1069,6 @@ $\n k_SystemAudioPortDirection_Input
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CMsgZoomToFocusedElement
 25CMsgAckSharedPaintBuffers
 25CMsgBrowserCreateResponse
 25CMsgFileLoadDialog_Filter
@@ -1087,14 +1083,11 @@ $\n k_SystemAudioPortDirection_Input
 26CMsgToggleFindInPageDialog
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
-27CMsgZoomToElementAtPosition
 28CMsgGetCookiesForURLResponse
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
@@ -1123,7 +1116,6 @@ $\n k_SystemAudioPortDirection_Input
 31CMsgDisableBackgroundThrottling
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
-35CMsgZoomToElementAtPositionResponse
 38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
@@ -1710,7 +1702,6 @@ CMsgFind
 CMsgFinishedRequest
 CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -1734,7 +1725,6 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -1753,7 +1743,6 @@ CMsgPageSecurity
 CMsgPauseRepaint
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgRenderProcessTerminated
 CMsgRequestFullScreen
@@ -1802,8 +1791,6 @@ CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgVerticalScrollBarSize
 CMsgViewSource
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 CORD
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
@@ -2635,7 +2622,6 @@ HTML_MSG_FUNC eHTMLCommands_TouchGesture
 HTML_MSG_FUNC eHTMLCommands_URLChanged
 HTML_MSG_FUNC eHTMLCommands_UpdateToolTip
 HTML_MSG_FUNC eHTMLCommands_VerticalScrollBarSizeResponse
-HTML_MSG_FUNC eHTMLCommands_ZoomToElementAtPositionResponse
 HTTP Version not supported
 HTTPMirror
 HWID Set
@@ -3350,8 +3336,9 @@ Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
-Plat_IsSteamOS3
+Plat_IsSteamOS
 Plat_IsSteamOS3FactoryImage
+Plat_IsSteamOSManagementEnabled
 Plat_MSTime
 Plat_OutputDebugString
 Plat_RelativeTicks
@@ -4837,7 +4824,6 @@ double
 dpi_horizontal
 driver
 dual_stack
-duration
 dutch
 dynamic_cast
 eCmd > 0 && eCmd < eHTMLCommands_None
@@ -4935,7 +4921,6 @@ fopen tmpfile failed\n
 fopen64
 force enable Chromium window occlusion testing
 force sandboxing in CEF
-force_direct_hwnd_popups
 forever
 fprintf
 fputc
@@ -5483,7 +5468,6 @@ konkani
 koreana
 kyrgyz
 label
-language
 latam
 latvian
 lazy
@@ -5540,7 +5524,6 @@ locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
 localeconv
 localization
-localization_path
 location
 logs
 long

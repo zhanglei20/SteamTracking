@@ -106,6 +106,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -2323,7 +2324,6 @@ $steammessages_parental_objects.proto"
 %s %2d %02d:%02d:%02d%.*s %d%s
 %s %6u %s %5x %s\n
 %s %d %X %X\n
-%s %s %d %s %s
 %s %s %s %s
 %s %s %s %s \n
 %s %s >%s %s
@@ -3813,7 +3813,6 @@ $steammessages_parental_objects.proto"
 (\r"]\n&CClientMetrics_IPv6Connectivity_Result
 (\r"]\n'CCommunity_VerifyClanMembership_Request
 (\r"]\n'CMsgClientGetAppOwnershipTicketResponse
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
 (\r"^\n,CParental_GetSignedParentalSettings_Response
 (\r"^\n,CStore_SetReservationPositionMessage_Request
@@ -5147,6 +5146,7 @@ $steammessages_parental_objects.proto"
 *ZN18CSiteLicenseClient36YldStartConnectToSiteLicenseProviderERK10CIPAndPortRK8CSteamIDyE17RawSocketCallback
 *ZN18CSystemPerfManager27OnSystemDisplayStateChangedEP34SystemDisplayManagerStateUpdated_tEUlvE_
 *ZN19CRemoteClientDongle14RunDongleCheckEvEUlvE_
+*ZN19CRemoteClientSoftAP11OnIPCountryEP11IPCountry_tEUlvE_
 *ZN19CRemoteClientSoftAP19ScheduledStateCheckEvEUlvE_
 *ZN19CRemoteClientSoftAP21NotifySettingsChangedERK10CUtlStringEUlvE_
 *ZN19CRemoteClientSoftAP24SetPairedSSIDAndPasswordERK10CUtlStringS2_EUlvE_
@@ -5353,8 +5353,6 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG=
-++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_SupportsUseBluetoothForMic_Response
@@ -6224,7 +6222,6 @@ $steammessages_parental_objects.proto"
 -sitelicense
 -skipstreamingdrivers
 -startcount=%d
--steamdeck
 -steamdeckdisplay
 -steamframe
 -steamid=%llu
@@ -8116,6 +8113,7 @@ $steammessages_parental_objects.proto"
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -11019,6 +11017,7 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI19CRemoteClientDongle21AppEventStateChange_tE
 17CInternalCallbackI19CRemoteClientDongle23VRHMDHardwareDetected_tE
 17CInternalCallbackI19CRemoteClientDongle24ControllerHotplugEvent_tE
+17CInternalCallbackI19CRemoteClientSoftAP11IPCountry_tE
 17CInternalCallbackI19CRemoteClientSoftAP15VRModeChanged_tE
 17CInternalCallbackI20CClientNetworkingAPI41ClientNetworking_GotSDRPingLocationStringE
 17CInternalCallbackI20CRemoteClientManager15VRModeChanged_tE
@@ -11174,6 +11173,7 @@ $steammessages_parental_objects.proto"
 17VoiceEncoder_SILK
 180.0
 1800
+18446744073709551615
 18446744073709551615";\n%CMsgClientUCMDeleteScreenshotResponse
 18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
@@ -11665,19 +11665,12 @@ $steammessages_parental_objects.proto"
 20.GamePerformanceSettings.EGamePerformanceSetting
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
-270.0
 2000
+20000
+2000000
+200M
 2019
 2048
-2500
-2700
-20000
-24000
-27038
-27040
-2000000
-18446744073709551615
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -11735,7 +11728,6 @@ $steammessages_parental_objects.proto"
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
 20CMsgLEDManagerDevice
-20CMsgLoadLocalization
 20CMsgRemoteClientPing
 20CMsgRestartJSContext
 20CMsgScalePageToValue
@@ -11843,6 +11835,7 @@ $steammessages_parental_objects.proto"
 21CAdapterSteamUtils008
 21CAdapterSteamUtils009
 21CAdapterSteamUtils010
+21CAdapterSteamUtils011
 21CAdapterSteamVideo001
 21CAdapterSteamVideo002
 21CAdapterSteamVideo003
@@ -12312,6 +12305,8 @@ $steammessages_parental_objects.proto"
 23StoreItem_IncludedItems
 23UserAchievementStored_t
 24 Mbps
+2500
+24000
 24CAPIJobAuthorizeMicroTxn
 24CAPIJobCancelReservation
 24CAPIJobCreatePartyBeacon
@@ -12371,7 +12366,6 @@ $steammessages_parental_objects.proto"
 24CMsgSystemPerfSettingsV1
 24CMsgSystemUpdateProgress
 24CMsgTrading_StartSession
-24CMsgZoomToFocusedElement
 24CNegotiationSetConfigMsg
 24CParentalSettingsManager
 24CPauseControllerInputMsg
@@ -12754,6 +12748,10 @@ $steammessages_parental_objects.proto"
 26TestExternalPrivilege_Stub
 26UserRequestingFriendship_t
 26VoiceEnabledStateChanged_t
+270.0
+2700
+27038
+27040
 27;C
 27AccountInformationUpdated_t
 27BigPictureStreamingResult_t
@@ -12843,7 +12841,6 @@ $steammessages_parental_objects.proto"
 27CMsgControllerConfiguration
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgGCRoutingProtoBufHeader
 27CMsgGameServerPingQueryData
 27CMsgHorizontalScrollBarSize
@@ -12852,7 +12849,6 @@ $steammessages_parental_objects.proto"
 27CMsgNetworkDeviceIP4Address
 27CMsgNetworkDeviceIP6Address
 27CMsgNetworkDeviceSetOptions
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
 27CMsgRenderProcessTerminated
@@ -12863,7 +12859,6 @@ $steammessages_parental_objects.proto"
 27CMsgSystemUpdateApplyParams
 27CMsgSystemUpdateApplyResult
 27CMsgSystemUpdateCheckResult
-27CMsgZoomToElementAtPosition
 27COffline_OfflineLogonTicket
 27CParties_JoinParty_Response
 27CPeerContentServerInterface
@@ -14118,7 +14113,6 @@ $steammessages_parental_objects.proto"
 35CMsgSteamDatagramCertificateRequest
 35CMsgSteamSockets_UDP_ChallengeReply
 35CMsgSteamSockets_UDP_ConnectRequest
-35CMsgZoomToElementAtPositionResponse
 35CParental_ParentalLock_Notification
 35CParental_PlaytimeUsed_Notification
 35CParental_ValidatePassword_Response
@@ -15980,6 +15974,7 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
+6144
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -15993,7 +15988,6 @@ $steammessages_parental_objects.proto"
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16585,6 +16579,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9H(p
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17147,7 +17142,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`O
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ *
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -18934,6 +18929,7 @@ BytesStaged
 BytesToDownload
 BytesToStage
 Bzcu
+C Cx
 C q'O
 C%C'C3C7C9COCWCiC
 C-Yn
@@ -18942,7 +18938,6 @@ C6pH[
 C77nYmm
 C=Kx
 C>YPH>z
-C@Cx
 C@gw
 CA Compromise
 CA Issuers
@@ -20758,7 +20753,6 @@ CMsgFind
 CMsgFinishedRequest
 CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGCRoutingProtoBufHeader
 CMsgGSAssociateWithClan
@@ -20807,7 +20801,6 @@ CMsgLEDManagerDevice
 CMsgLEDManagerState
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -20835,7 +20828,6 @@ CMsgPauseRepaint
 CMsgPersonaChangeResponse
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgProtoBufHeader
 CMsgProtobufWrapped
@@ -20982,8 +20974,6 @@ CMsgVideoGameRecordingDef
 CMsgViewSource
 CMsgWebUITransportFailure
 CMsgWebUITransportInfo
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 CNegotiatedConfig
 CNegotiationCompleteMsg"
 CNegotiationInitMsg
@@ -21386,6 +21376,7 @@ CRemoteClientPairWifiAPResponse paired to %s %llu (%s)
 CRemoteClientPairWifiAPResponse sent ssid %s
 CRemoteClientSoftAP settings updated, enabled = %d, hotspot = %d, ssid = "%s"
 CRemoteClientSoftAP::Init
+CRemoteClientSoftAP::OnIPCountry
 CRemoteClientSoftAP::ScheduledStateCheck
 CRemoteClientSoftAP::ThreadedSendSoftAPCmd
 CRemoteClient_ClientDetails
@@ -23876,7 +23867,6 @@ DisableOverlayInjection
 DisableParentalSettings
 DisableRemotePlayTogetherInputEvents
 DisableShaderReporting
-DisableSteamDeckAutoDetection
 DisableTestLicense
 Disabled
 Disabled license for package: %u\n
@@ -26045,7 +26035,9 @@ Force the usage of opaque backgrounds for CEF
 Force-enable VR Link capability for testing regardless of platform/encoder
 ForceAcceptInvite
 ForceHeartbeat
+ForceIdentAsSteamDeck
 ForceInstallDirOverride
+ForceSdkIdentAsSteamDeck
 ForceSimpleHapticEvent
 ForceUpdate
 ForceUpdateNextRestart
@@ -27340,6 +27332,7 @@ GetSteamDeckKeyboardSkin
 GetSteamEnvironmentForApp
 GetSteamGuardDetails
 GetSteamGuardEnabledTime
+GetSteamHardwareDefaultConfig
 GetSteamID
 GetSteamID().BIndividualAccount()
 GetSteamID().IsValid()
@@ -28879,6 +28872,7 @@ IsPushToTalkEnabled
 IsPushToTalkEnabled() == %d\n
 IsPushToTalkKeyDown
 IsRunning()
+IsRunningOnSteamHardware
 IsScheduled()
 IsScheduled() && m_pFunctor
 IsServiceAvailable
@@ -32580,11 +32574,11 @@ Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsGamescope
 Plat_IsInDebugSession
-Plat_IsSteamConsoleMode
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
 Plat_IsSteamOS3FactoryImage
+Plat_IsSteamOSGameMode
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_IsWSL
 Plat_MSTime
@@ -34029,6 +34023,7 @@ SDL_ConvertSurface
 SDL_CreateWindow
 SDL_DestroySurface
 SDL_DestroyWindow
+SDL_ENABLE_STEAM_SCREEN_KEYBOARD
 SDL_FlushEvents
 SDL_GAMECONTROLLER_ALLOW_STEAM_VIRTUAL_GAMEPAD
 SDL_GAMECONTROLLER_IGNORE_DEVICES
@@ -35324,6 +35319,7 @@ SetOfflineMode
 SetOpenVRShortcut
 SetOptOutEmailOptions
 SetOption(
+SetOverlayAppIDs
 SetOverlayBrowserInfo
 SetOverlayEscapeKeyHandling
 SetOverlayNotificationInset
@@ -36583,6 +36579,7 @@ SteamUtils007
 SteamUtils008
 SteamUtils009
 SteamUtils010
+SteamUtils011
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 SteamVProf::CVProfile::ExitScope()
 SteamVProf::CVProfile::MarkFrame(char const*)
@@ -38409,6 +38406,7 @@ VR API not loaded (%d)
 VRAMSize
 VRCompatibilityCheck
 VRManager()
+VROverlayCreated
 VRR support: %d
 VR\AttemptingInit
 VR\BuildIDAttempted
@@ -45621,7 +45619,6 @@ controllerType
 controller_8bitdo
 controller_action
 controller_action %s
-controller_action empty_binding
 controller_android
 controller_apple
 controller_base_rotation_angle
@@ -47981,7 +47978,6 @@ force sandboxing in CEF
 force this app into preload mode
 force_alphabetic_friend_sorting
 force_client_update_check
-force_direct_hwnd_popups
 force_emit_message
 force_emit_service
 force_full_app_update
@@ -53368,7 +53364,6 @@ localhost/
 localhost:27100
 localityName
 localization
-localization_path
 localization_token
 localized_category_name
 localized_desc
@@ -60391,6 +60386,7 @@ set-certExt
 set-cooki
 set-cookie
 set-ctype
+set-fallback-country-code\t%s
 set-msgExt
 set-policy
 set-policy-root
@@ -61188,7 +61184,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 13 2026 02:43:57
+steam Jun 19 2026 22:44:50
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

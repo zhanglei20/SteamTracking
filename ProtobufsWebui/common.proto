@@ -2956,6 +2956,7 @@ message CVRGamepadUI_Frame {
 	optional bool is_vrlink_remote = 5;
 	optional .CVRGamepadUI_Frame_FrameActions frame_actions = 6;
 	repeated string steamui_page_overlay_keys = 7;
+	optional bool is_streaming_client = 8;
 	optional string tmp_title = 1000;
 }
 
@@ -3069,6 +3070,14 @@ message CVRGamepadUI_Message_InitFrameSystem_Request {
 }
 
 message CVRGamepadUI_Message_InitFrameSystem_Response {
+}
+
+message CVRGamepadUI_Message_NavigateInstance_Request {
+	optional uint32 navigate_overlay_for_app_id = 1;
+	optional int32 location = 2 [(.description) = "enum"];
+}
+
+message CVRGamepadUI_Message_NavigateInstance_Response {
 }
 
 message CVRGamepadUI_Message_RemoteVideoStream_Request {
@@ -3268,6 +3277,12 @@ message CVRGamepadUIShared_Icon {
 	optional uint32 appid = 2;
 	optional string overlay = 3;
 	optional uint32 hwnd = 4;
+}
+
+message CVRGamepadUIShared_PathProperty_ClientUserInfo {
+	optional bool logged_in = 1;
+	optional bool valve_email = 2;
+	optional bool developer_mode_enabled = 3;
 }
 
 message CVRGamepadUIShared_PathProperty_DashboardBarActions {
