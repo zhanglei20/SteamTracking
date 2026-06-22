@@ -5383,20 +5383,20 @@
           [g],
         ),
           m.useEffect(() => {
-            const e = () => {
-              const e = window?.location?.hash;
-              if (e) {
-                const t = document.getElementById(
-                  decodeURIComponent(e.substring(1).toLowerCase()),
-                );
-                t && t.scrollIntoView({ block: "start" });
+            let e = "";
+            const t = () => {
+              const t = window?.location?.hash;
+              if (t && t != e) {
+                const a = decodeURIComponent(t.substring(1).toLowerCase()),
+                  n = document.getElementById(a);
+                n && ((e = t), n.scrollIntoView({ block: "start" }));
               }
             };
             return (
-              e(),
-              window.addEventListener("hashchange", e),
+              t(),
+              window.addEventListener("hashchange", t),
               () => {
-                window.removeEventListener("hashchange", e);
+                window.removeEventListener("hashchange", t);
               }
             );
           }, []);

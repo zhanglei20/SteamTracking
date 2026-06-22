@@ -14605,9 +14605,6 @@ html.touch .Z8uleYZI1U8- .t8xoebogvHw-,
   --bg-focus: white !important;
   --border-color: #111 !important;
 }
-[data-checkbox] [class*="checkbox_Checkbox"] {
-  margin-right: 5px;
-}
 @media screen and (max-width: 940px) {
   .-We3mMSOXq0-,
   .rKypCt9A2dU- {
@@ -15043,14 +15040,13 @@ html.touch .Z8uleYZI1U8- .t8xoebogvHw-,
 .ByXQOnGI3Ew- .DialogFooter .DialogTwoColLayout {
   gap: 8px;
 }
-._4PWwVmW-8-c- {
-  color: #000;
-  text-decoration: underline;
-  margin-left: 4px;
-}
+._4PWwVmW-8-c-,
 ._3mUzCqVce5Q- {
   color: #000;
   text-decoration: underline;
+}
+.uKxwZqGJgxE- {
+  margin-left: 5px;
 }
 .IuaVOPLDyiw- {
   color: #000;
