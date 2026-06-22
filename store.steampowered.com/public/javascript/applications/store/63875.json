@@ -22,7 +22,7 @@
     "AppPage_PurchaseOption_JoinPlaytest": "加入 %1$s",
     "AppPage_PurchaseOption_JoinPlaytest_Description": "可以请求访问权限，开发者准备好接受更多参加者时，您会得到通知。",
     "AppPage_PurchaseOption_JoinPlaytest_InvitePending": "您已请求访问权限！开发者准备好接受更多参加者时，您会收到来自 Steam 的电子邮件通知，敬请留意。",
-    "AppPage_PurchaseOption_Playtest_Accepted_Title": "立即畅玩 %1$s！'",
+    "AppPage_PurchaseOption_Playtest_Accepted_Title": "立即畅玩 %1$s！",
     "AppPage_PurchaseOption_Playtest_Accepted": "您已受邀畅玩！点击并安装后即可开始。",
     "AppPage_PurchaseOption_Playtest_Accepted_Unavailable_Title": "您已加入 %1$s",
     "AppPage_PurchaseOption_Playtest_Accepted_Unavailable": "此游戏测试当前停止运行。请留意开发者近期的测试计划。",

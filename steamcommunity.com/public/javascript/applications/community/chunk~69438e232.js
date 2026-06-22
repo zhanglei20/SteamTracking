@@ -15155,15 +15155,16 @@
     },
     84547: (e, t, r) => {
       "use strict";
-      r.d(t, { lS: () => u });
+      r.d(t, { lS: () => m, vU: () => p });
       var i = r(7850),
         n = r(64753),
         a = r(8527),
         s = r(78686),
         o = r(78395),
         l = r(21869),
-        c = r(67936);
-      function d(e) {
+        c = r(67936),
+        d = r(48474);
+      function u(e) {
         const { closeModal: t, strDescOverride: r } = e;
         return (0, i.jsx)(o.o0, {
           strTitle: c.F5.Localize("#LoginRedirect_Dialog_Title"),
@@ -15180,15 +15181,28 @@
           },
         });
       }
-      function u(e) {
+      function m(e) {
         const [t, r, a] = (0, n.uD)();
         return {
           elDialogElement: (0, i.jsx)(l.E, {
             active: t,
-            children: (0, i.jsx)(d, { closeModal: a, strDescOverride: e }),
+            children: (0, i.jsx)(u, { closeModal: a, strDescOverride: e }),
           }),
           fnShowLogonDialog: r,
         };
+      }
+      function p(e) {
+        const { label: t, strDialogDesc: r } = e,
+          { elDialogElement: n, fnShowLogonDialog: a } = m(r);
+        return (0, i.jsxs)(i.Fragment, {
+          children: [
+            (0, i.jsx)(d.$, {
+              onClick: a,
+              children: t || s.Z.Localize("#Login_SignIn"),
+            }),
+            n,
+          ],
+        });
       }
     },
     94734: (e, t, r) => {

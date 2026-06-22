@@ -27371,7 +27371,21 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (_) => null;
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : (_) => null;
       function _(_) {
         const { fnOnDirty: _, saleSection: _, event: _ } = _,
           [_, _, _, _] = (0, _._)(() => {
@@ -27637,6 +27651,12 @@
               },
               children: "Use Package Description?",
             }),
+            _ &&
+              _ &&
+              (0, _.jsx)("a", {
+                href: `${_._.PARTNER_BASE_URL}admin/store/package/${null != _ ? _ : 0}?activetab=tab_description`,
+                children: "Open Package Description Editor",
+              }),
             !_ &&
               (0, _.jsxs)(_.Fragment, {
                 children: [

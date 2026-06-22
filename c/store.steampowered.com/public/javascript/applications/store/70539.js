@@ -3,11 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        Box: "_2YzOLNBx6TonKU0Zmp20l4",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Text: "f6hU22EA7Z8peFWZVBJU",
         Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
         "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
@@ -34,11 +29,6 @@
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
         "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
       };
     },
     chunkid: (module) => {
@@ -70,6 +60,7 @@
         LineItemDetailsRow: "_1wLomHB2PWPNx7TsNYpdtm",
         Text: "_2aGDkEAUaGvF4KHHZRRkEj",
         NoWrap: "c0VFjXtN_fgP-PR6wQe66",
+        ComplianceLink: "_1Gqg5Ajp0R5LqzbJ4Wtecz",
         LineItemDetailsRowTop: "_1aXXp4afkXP3Ez03MjTY3D",
         LineItemSpaceBetween: "_3L6hUlrzXOezye2BqWz-T7",
         LineItemTitle: "EflKs0JjldhDSxbUBaiOp",
@@ -625,44 +616,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, (0, _._)(), _.className),
-            },
-            _,
-          ),
-          _ = _ ?? _?.focusable ?? !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          });
-        return _._.IN_GAMEPADUI && (_ || _)
-          ? (0, _.jsx)(_._, {
-              ...(_ || {}),
-              focusable: _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = _._;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -781,16 +734,6 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        return _.Reset;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2916,6 +2859,9 @@
                         (0, _.jsx)(_, {
                           item: _,
                         }),
+                        (0, _.jsx)(_, {
+                          item: _,
+                        }),
                       ],
                     }),
                     (0, _.jsx)(_, {
@@ -3148,6 +3094,25 @@
           ? (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
                 item: _,
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const { item: _ } = _;
+        if (!_.GetSelfPurchaseOption()?.requires_shipping) return null;
+        const _ = _._.country_code;
+        return ["GB"].includes(_)
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)("a", {
+                  className: (0, _._)(_().ComplianceLink),
+                  target: "_blank",
+                  href: "https://www.valvesoftware.com/legal/statement-of-compliance",
+                  children: (0, _._)(
+                    "#Cart_LineItem_Hardware_Compliance_Label",
+                  ),
+                }),
               }),
             })
           : null;

@@ -1,24 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [19388, 67865],
+  [19388],
   {
-    69041: (e) => {
-      e.exports = {
-        Button: "_0BH1ydyFmSnUvoVK2hIc",
-        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
-        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
-        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
-        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
-        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
-        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
-        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
-        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
-        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
-        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
-        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
-      };
-    },
     38878: (e) => {
       e.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
@@ -44,20 +28,6 @@
         skeleton: "_12eclucgixaW8U7dizVBcD",
       };
     },
-    73406: (e) => {
-      e.exports = {
-        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
-        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
-        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
-        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
-        "Size-3": "_389OPmdZoebw42_AlsUFxi",
-        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
-        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
-        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
-        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
-        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
-      };
-    },
     93799: (e) => {
       e.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
@@ -78,22 +48,6 @@
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
         "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
         "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
-      };
-    },
-    44041: (e) => {
-      e.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
-    },
-    68875: (e) => {
-      e.exports = {
-        Flex: "_3nHL7awgK1Qei1XivGvHMK",
-        Direction: "_3JCkAyd9cnB90tRcDLPp4W",
-        Justify: "_12ampOcrpRamy1y301kEaK",
-        Align: "_1SxQuUnaM-MXeF5UfssWve",
-        Gap: "ja5o2GZTopxfGJArsZgFh",
-        GapX: "_3KiTPfFvdkPH6ixij56nVM",
-        GapY: "_38cfDT7owcq-7PHlx-Bx2j",
-        Wrap: "dB7ipW28YN-_GytLR4EuE",
-        Inline: "LOeaKjPDMbdcAB54IFgyX",
       };
     },
     65274: (e) => {
@@ -125,9 +79,6 @@
         "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
-    },
-    91239: (e) => {
-      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
     },
     65888: (e) => {
       e.exports = {
@@ -1344,159 +1295,6 @@
         hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
       };
     },
-    53965: (e, t, a) => {
-      "use strict";
-      a.d(t, { $: () => y, v: () => b });
-      var n = a(7850),
-        r = a(64238),
-        s = a.n(r),
-        i = a(69041),
-        o = a(75659),
-        l = a(11526),
-        c = a(11820),
-        d = a(73406),
-        u = a(90534),
-        _ = a(83392);
-      function m(e) {
-        const {
-          size: t = "3",
-          loading: a = !0,
-          children: r,
-          color: s,
-          variant: i,
-          ...o
-        } = e;
-        return r || !a
-          ? (0, n.jsxs)(u.az, {
-              position: "relative",
-              ...o,
-              width: "fit-content",
-              children: [
-                (0, n.jsx)("div", {
-                  "data-visibility": !a,
-                  className: d.ChildContainer,
-                  children: r,
-                }),
-                a &&
-                  (0, n.jsx)(_.s, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, n.jsx)(p, { size: t, color: s, variant: i }),
-                  }),
-              ],
-            })
-          : (0, n.jsx)(p, { size: t, color: s, variant: i, ...o });
-      }
-      function p(e) {
-        const { className: t, color: a, ...r } = (0, l.mz)(e, g);
-        return (0, n.jsx)("div", {
-          "data-accent-color": a,
-          className: s()(t, d.Spinner),
-          ...r,
-        });
-      }
-      const g = [
-        ...o.L,
-        { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
-        { prop: "variant", className: (e) => d[`Variant-${e}`] },
-      ];
-      var h = a(45699),
-        S = a(8527);
-      function f(e) {
-        e.preventDefault();
-      }
-      const v = [
-          ...o.L,
-          { prop: "size", responsive: !0, className: (e) => i[`Size-${e}`] },
-          { prop: "variant", className: (e) => i[`Variant-${e}`] },
-          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
-          {
-            prop: "width",
-            className: i.Width,
-            cssProperty: "--width",
-            responsive: !0,
-          },
-          {
-            prop: "minWidth",
-            className: i.MinWidth,
-            cssProperty: "--min-width",
-            responsive: !0,
-          },
-        ],
-        y = function (e) {
-          const {
-              variant: t = "default",
-              size: a = "2",
-              minWidth: r = "fit-content",
-              color: o,
-              loading: c,
-              children: d,
-              onClick: u,
-              icon: _,
-              focusable: p,
-              navProps: g,
-              ...f
-            } = e,
-            y = c
-              ? (0, n.jsx)(m, {
-                  size: a,
-                  color: o,
-                  variant: "bright",
-                  children: d,
-                })
-              : d,
-            b = c ? void 0 : u,
-            C = p ?? g?.focusable ?? !!b,
-            w = {
-              type: "button",
-              ...(0, l.mz)(
-                {
-                  ...f,
-                  variant: t,
-                  size: a,
-                  minWidth: r,
-                  color: o,
-                  className: s()(i.Button, _ && i.Icon),
-                  onClick: b,
-                },
-                v,
-              ),
-              children: y,
-            };
-          return S.TS.IN_GAMEPADUI && (C || g)
-            ? (0, n.jsx)(h.fu, { ...w, ...(g || {}), focusable: C })
-            : (0, n.jsx)("button", { ...w });
-        },
-        b = function (e) {
-          const {
-              variant: t = "default",
-              size: a = "2",
-              minWidth: r = "fit-content",
-              disabled: o,
-              icon: d,
-              focusable: u,
-              navProps: _,
-              ...m
-            } = e,
-            p = o ? f : void 0,
-            g = (0, l.mz)(
-              {
-                onClick: p,
-                ...m,
-                variant: t,
-                size: a,
-                minWidth: r,
-                className: s()(i.Button, d && i.Icon, (0, c.T)()),
-              },
-              v,
-            );
-          return S.TS.IN_GAMEPADUI && (u || _)
-            ? (0, n.jsx)(h.Ii, { ...g, ...(_ || {}), focusable: u })
-            : (0, n.jsx)("a", { ...g });
-        };
-    },
     61023: (e, t, a) => {
       "use strict";
       a.d(t, { j: () => u });
@@ -1705,109 +1503,6 @@
           });
         });
     },
-    90534: (e, t, a) => {
-      "use strict";
-      a.d(t, { az: () => _ });
-      var n = a(7850),
-        r = a(44041),
-        s = a(39479),
-        i = a(64238),
-        o = a.n(i),
-        l = a(11526),
-        c = a(75659),
-        d = a(8527),
-        u = a(11820);
-      function _(e) {
-        const { as: t = "div", focusable: a, navProps: i, ref: c, ..._ } = e,
-          p = (0, l.mz)(
-            { ..._, className: o()(r.Box, (0, u.T)(), e.className) },
-            m,
-          ),
-          g = a ?? i?.focusable ?? !!_.onClick,
-          h = (0, n.jsx)(t, { ref: c, ...p });
-        return d.TS.IN_GAMEPADUI && (g || i)
-          ? (0, n.jsx)(s.J, { ...(i || {}), focusable: g, children: h })
-          : h;
-      }
-      const m = c.h;
-    },
-    83392: (e, t, a) => {
-      "use strict";
-      a.d(t, { s: () => _ });
-      var n = a(7850),
-        r = a(39479),
-        s = a(64238),
-        i = a.n(s),
-        o = a(11526),
-        l = a(55348),
-        c = a(75659),
-        d = a(68875),
-        u = a(8527);
-      function _(e) {
-        const { as: t = "div", focusable: a, navProps: s, ref: c, ..._ } = e,
-          p = (0, o.mz)({ ..._, className: i()(e.className, d.Flex) }, m),
-          g = a ?? s?.focusable ?? !!_.onClick,
-          h = (0, n.jsx)(t, { ref: c, ...p }),
-          S = (0, l.n)(_.direction ?? "row");
-        return u.TS.IN_GAMEPADUI
-          ? (0, n.jsx)(r.J, {
-              ...(s || {}),
-              focusable: g,
-              "flow-children": S,
-              children: h,
-            })
-          : h;
-      }
-      const m = [
-        ...c.h,
-        {
-          prop: "direction",
-          responsive: !0,
-          className: d.Direction,
-          cssProperty: "--direction",
-        },
-        {
-          prop: "justify",
-          responsive: !0,
-          className: d.Justify,
-          cssProperty: (e) => ["--justify", p(e)],
-        },
-        {
-          prop: "align",
-          responsive: !0,
-          className: d.Align,
-          cssProperty: "--align",
-        },
-        {
-          prop: "gap",
-          responsive: !0,
-          className: d.Gap,
-          cssProperty: (e) => ["--gap", `var(--spacing-${e})`],
-        },
-        {
-          prop: "gapX",
-          responsive: !0,
-          className: d.GapX,
-          cssProperty: (e) => ["--gap-x", `var(--spacing-${e})`],
-        },
-        {
-          prop: "gapY",
-          responsive: !0,
-          className: d.GapY,
-          cssProperty: (e) => ["--gap-y", `var(--spacing-${e})`],
-        },
-        {
-          prop: "wrap",
-          responsive: !0,
-          className: d.Wrap,
-          cssProperty: "--wrap",
-        },
-        { prop: "inline", responsive: !0, className: d.Inline },
-      ];
-      function p(e) {
-        return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
-      }
-    },
     80797: (e, t, a) => {
       "use strict";
       a.d(t, { Q: () => s });
@@ -1910,14 +1605,6 @@
         ...s.Ae,
         { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];
-    },
-    11820: (e, t, a) => {
-      "use strict";
-      a.d(t, { T: () => r });
-      var n = a(91239);
-      function r() {
-        return n.Reset;
-      }
     },
     91307: (e, t, a) => {
       "use strict";
@@ -3760,6 +3447,118 @@
           });
       })(q || (q = {}));
     },
+    75821: (e, t, a) => {
+      "use strict";
+      a.d(t, { $: () => v });
+      var n = a(7850),
+        r = a(90626),
+        s = a(4404),
+        i = a(64753),
+        o = a(39777),
+        l = a(4434),
+        c = a(35380),
+        d = a(52038),
+        u = a(53965),
+        _ = a(22797),
+        m = a(78686),
+        p = a(74568),
+        g = a(56330),
+        h = a(78603),
+        S = a(21683),
+        f = a(67936);
+      function v(e) {
+        const { hardwareDetail: t, reservedHardwareDetail: a } = e,
+          v = (0, s.W)(t.packageid, a?.packageid),
+          [y, b] = (0, r.useState)(!1),
+          [C, w] = (0, r.useState)(!1),
+          [x, A] = (0, r.useState)(null),
+          I = (0, l.m)("DisplayCancelReservationButton"),
+          [T, D, B] = (0, i.uD)(),
+          k = (0, c.oc)(a?.packageid),
+          { data: j } = (0, o.J$)(k),
+          G = (0, c.oc)(t.packageid),
+          { data: E } = (0, o.J$)(G);
+        let F = m.Z.Localize("#Sale_ReserveNow_Change"),
+          N = m.Z.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_2",
+            (0, n.jsx)("b", { children: E?.name ?? "" }),
+          ),
+          P = m.Z.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_1",
+            (0, n.jsx)("b", { children: j?.name ?? "" }),
+          );
+        return (
+          t.queue_in_waitlist &&
+            ((F = f.F5.Localize("#Reservation_Change_WaitList")),
+            (N = f.F5.LocalizeReact(
+              "#Reservation_Change_WaitList_Desc2",
+              (0, n.jsx)("b", { children: E?.name ?? "" }),
+            ))),
+          a?.position_is_waitlist &&
+            (P = f.F5.LocalizeReact(
+              "#Reservation_Change_WaitList_Desc1",
+              (0, n.jsx)("b", { children: j?.name ?? "" }),
+            )),
+          (0, n.jsxs)("div", {
+            className: (0, d.A)(h.reserverowReserved, "ReservationReserved"),
+            children: [
+              (0, n.jsx)(S.J, { hardwareDetail: a }),
+              (0, n.jsxs)(u.$, {
+                onClick: D,
+                disabled: y,
+                children: [
+                  Boolean(y && !C) &&
+                    (0, n.jsx)(_.t, {
+                      string: m.Z.Localize("#Updating"),
+                      size: "small",
+                    }),
+                  F,
+                ],
+              }),
+              Boolean(x) &&
+                (0, n.jsx)("div", {
+                  className: g.ErrorStylesWithIcon,
+                  children: x,
+                }),
+              (0, n.jsx)(p.EN, {
+                active: T,
+                children: (0, n.jsxs)(p.o0, {
+                  closeModal: B,
+                  strTitle: F,
+                  strOKButtonText: m.Z.Localize("#Button_Yes"),
+                  strCancelButtonText: m.Z.Localize("#Button_Dismiss"),
+                  onOK: () => {
+                    b(!0),
+                      v
+                        .mutateAsync()
+                        .then((e) => {
+                          I?.token?.reason ||
+                            (e ||
+                              A(m.Z.Localize("#Sale_Reservations_BusyServer")),
+                            w(!0));
+                        })
+                        .catch(() => {
+                          I?.token?.reason ||
+                            (A(m.Z.Localize("#Sale_Reservations_BusyServer")),
+                            w(!0));
+                        });
+                  },
+                  children: [
+                    (0, n.jsx)("p", { children: P }),
+                    (0, n.jsx)("br", {}),
+                    (0, n.jsx)("p", { children: N }),
+                    (0, n.jsx)("br", {}),
+                    (0, n.jsx)("p", {
+                      children: m.Z.Localize("#Dialog_AreYouSure"),
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          })
+        );
+      }
+    },
     67645: (e, t, a) => {
       "use strict";
       a.d(t, { oo: () => l, Zi: () => v, DR: () => h, Mk: () => S });
@@ -3935,6 +3734,299 @@
             (e[(e.k_EPurchaseReservationState_UnavailableRegion = 6)] =
               "k_EPurchaseReservationState_UnavailableRegion");
         })(n || (n = {}));
+    },
+    18899: (e, t, a) => {
+      "use strict";
+      a.d(t, { p: () => h });
+      var n = a(7850),
+        r = a(53965),
+        s = a(64753),
+        i = a(78686),
+        o = a(90626),
+        l = a(56330),
+        c = a.n(l),
+        d = a(74568),
+        u = a(22797),
+        _ = a(4434),
+        m = a(4404),
+        p = a(52038),
+        g = a(78603);
+      function h(e) {
+        const {
+            packageid: t,
+            strAction: a,
+            strDesc: l,
+            onCancelSucceeded: h,
+          } = e,
+          S = (0, m.W)(void 0, t),
+          [f, v] = (0, o.useState)(!1),
+          [y, b] = (0, o.useState)(!1),
+          [C, w] = (0, o.useState)(null),
+          x = (0, _.m)("DisplayCancelReservationButton"),
+          [A, I, T] = (0, s.uD)();
+        return (0, n.jsxs)("div", {
+          className: (0, p.A)(g.reserverow),
+          children: [
+            (0, n.jsxs)(r.$, {
+              onClick: I,
+              disabled: f,
+              children: [
+                Boolean(f && !y) &&
+                  (0, n.jsx)(u.t, {
+                    string: i.Z.Localize("#Saving"),
+                    size: "small",
+                  }),
+                a,
+              ],
+            }),
+            Boolean(C) &&
+              (0, n.jsx)("div", {
+                className: c().ErrorStylesWithIcon,
+                children: C,
+              }),
+            (0, n.jsx)(d.EN, {
+              active: A,
+              children: (0, n.jsx)(d.o0, {
+                closeModal: T,
+                strTitle: a,
+                strDescription: l,
+                strOKButtonText: i.Z.Localize("#Button_Confirm"),
+                strCancelButtonText: i.Z.Localize("#Button_Dismiss"),
+                onOK: () => {
+                  v(!0),
+                    S.mutateAsync()
+                      .then((e) => {
+                        x?.token?.reason ||
+                          (e ||
+                            w(i.Z.Localize("#Sale_Reservations_BusyServer")),
+                          b(!0),
+                          h && h());
+                      })
+                      .catch(() => {
+                        x?.token?.reason ||
+                          (w(i.Z.Localize("#Sale_Reservations_BusyServer")),
+                          b(!0));
+                      })
+                      .finally(() => v(!1));
+                },
+              }),
+            }),
+          ],
+        });
+      }
+    },
+    52865: (e, t, a) => {
+      "use strict";
+      a.d(t, { b: () => c });
+      var n = a(7850),
+        r = a(78686),
+        s = a(52038),
+        i = a(78603),
+        o = a.n(i),
+        l = a(53965);
+      function c(e) {
+        return (0, n.jsx)("div", {
+          className: (0, s.A)(o().reserverow, "ReservationUnavailable"),
+          children: (0, n.jsx)(l.$, {
+            disabled: !0,
+            children: r.Z.Localize("#Sale_ReserveUnavailable"),
+          }),
+        });
+      }
+    },
+    23601: (e, t, a) => {
+      "use strict";
+      a.d(t, { R: () => p });
+      var n = a(7850),
+        r = a(78686),
+        s = a(52038),
+        i = a(90626),
+        o = a(78603),
+        l = a(4434),
+        c = a(4404),
+        d = a(53965),
+        u = a(22797),
+        _ = a(56330),
+        m = a.n(_);
+      function p(e) {
+        const { packageid: t, label: a, bInputDisabled: _ } = e,
+          [p, g] = (0, i.useState)(!1),
+          [h, S] = (0, i.useState)(!1),
+          [f, v] = (0, i.useState)(null),
+          y = (0, l.m)("DisplyDirectReservation"),
+          b = (0, c.W)(t, void 0),
+          C = (0, i.useCallback)(
+            (e) => {
+              g(!0),
+                b
+                  .mutateAsync()
+                  .then((e) => {
+                    y?.token?.reason ||
+                      (e || v(r.Z.Localize("#Sale_Reservations_BusyServer")),
+                      S(!0));
+                  })
+                  .catch(() => {
+                    y?.token?.reason ||
+                      (S(!0), v(r.Z.Localize("#Sale_Reservations_BusyServer")));
+                  })
+                  .finally(() => g(!1));
+            },
+            [y?.token?.reason, b],
+          );
+        return (0, n.jsxs)("div", {
+          className: (0, s.A)(o.reserverow, "ReservationDirectAction"),
+          children: [
+            (0, n.jsxs)(d.$, {
+              onClick: C,
+              disabled: p || _,
+              children: [
+                Boolean(p && !h) &&
+                  (0, n.jsx)(u.t, {
+                    string: r.Z.Localize("#Saving"),
+                    size: "small",
+                  }),
+                a,
+              ],
+            }),
+            Boolean(f) &&
+              (0, n.jsx)("div", {
+                className: m().ErrorStylesWithIcon,
+                children: f,
+              }),
+          ],
+        });
+      }
+    },
+    21683: (e, t, a) => {
+      "use strict";
+      a.d(t, { J: () => d });
+      var n = a(7850),
+        r = a(78686),
+        s = a(39777),
+        i = a(35380),
+        o = a(76684),
+        l = a(78603),
+        c = a(67936);
+      function d(e) {
+        const { hardwareDetail: t } = e,
+          a = (0, i.oc)(t.packageid),
+          { data: d } = (0, s.J$)(a);
+        if (t.time_reserved) {
+          const e = (0, n.jsx)(o.K4, {
+            bSingleLine: !0,
+            dateAndTime: t.time_reserved,
+            bOnlyDate: !0,
+          });
+          return t.position_is_waitlist
+            ? (0, n.jsx)("div", {
+                className: l.alreadyreserved,
+                children: d?.name
+                  ? c.F5.LocalizeReact(
+                      "#Reservation_In_Waitlist_WithName",
+                      d.name,
+                      e,
+                    )
+                  : c.F5.LocalizeReact("#Reservation_In_Waitlist", e),
+              })
+            : (0, n.jsx)("div", {
+                className: l.alreadyreserved,
+                children: d?.name
+                  ? r.Z.LocalizeReact(
+                      "#Sale_AlreadyReserved_WithName",
+                      d.name,
+                      e,
+                    )
+                  : r.Z.LocalizeReact("#Sale_AlreadyReserved", e),
+              });
+        }
+        return t.position_is_waitlist
+          ? (0, n.jsx)("div", {
+              className: l.alreadyreserved,
+              children: d?.name
+                ? c.F5.Localize(
+                    "#Reservation_In_Waitlist_WithName_NoDate",
+                    d.name,
+                  )
+                : c.F5.Localize("#Reservation_In_Waitlist_NoDate"),
+            })
+          : (0, n.jsx)("div", {
+              className: l.alreadyreserved,
+              children: d?.name
+                ? r.Z.Localize("#Sale_AlreadyReserved_WithName_NoDate", d.name)
+                : r.Z.Localize("#Sale_AlreadyReserved_NoDate"),
+            });
+      }
+    },
+    4404: (e, t, a) => {
+      "use strict";
+      a.d(t, { W: () => _ });
+      var n = a(37085),
+        r = a(75233),
+        s = a(51614),
+        i = a(67645),
+        o = a(2551),
+        l = a(56545),
+        c = a(23809),
+        d = a(8527),
+        u = a(81393);
+      function _(e, t) {
+        const { data: a } = (0, i.DR)(e),
+          { data: _ } = (0, i.DR)(t),
+          m = (0, c.KV)(),
+          p = (0, r.jE)();
+        return (0, s.n)({
+          mutationFn: async () => {
+            if (
+              (!e && !t) ||
+              (!a && !_) ||
+              (!a?.requires_reservation && !_?.requires_reservation)
+            )
+              return (
+                console.log(
+                  "useUpdateReservationMutation: package is not loaded or does not require reservations",
+                ),
+                !1
+              );
+            if (!d.iA.logged_in)
+              return (
+                console.log(
+                  "useUpdateReservationMutation: Cannot reserve when user is not logged in",
+                ),
+                !1
+              );
+            const r = l.w.Init(o.fE);
+            e && r.Body().add_packages_to_reserve(e),
+              t && r.Body().add_packages_to_unreserve(t),
+              r.Body().set_country_code(d.iA.country_code);
+            const s = await o.nd.UpdatePackageReservations(m, r);
+            return s.GetEResult() == n.R
+              ? ((0, u.wT)(
+                  s.Body().reservation_status().length <= 2,
+                  "We only expected 2 states reservation update states back",
+                ),
+                s
+                  .Body()
+                  .reservation_status()
+                  .forEach((e) => {
+                    let t = e.packageid() == a?.packageid ? a : _;
+                    const n = { ...t };
+                    (n.reservation_state = e.reservation_state()),
+                      (n.expired = e.expired()),
+                      (n.time_expires = e.time_expires()),
+                      (n.time_reserved = e.time_reserved()),
+                      (n.rtime_estimated_notification =
+                        e.rtime_estimated_notification()),
+                      (n.notificaton_token = e.notificaton_token()),
+                      p.setQueryData((0, i.Zi)(t?.packageid), n);
+                  }),
+                !0)
+              : (console.log(
+                  `useUpdateReservationMutation Failed to update reservation for package: add ${e} | remove ${t} error code ${s.GetEResult()}`,
+                ),
+                !1);
+          },
+        });
+      }
     },
     20721: (e, t, a) => {
       "use strict";
@@ -9587,6 +9679,7 @@
             a.e(87937),
             a.e(29197),
             a.e(4796),
+            a.e(53965),
             a.e(76226),
             a.e(94781),
             a.e(29008),
@@ -10314,330 +10407,41 @@
         });
       };
     },
-    30207: (e, t, a) => {
+    77291: (e, t, a) => {
       "use strict";
-      a.d(t, { iQ: () => re, pc: () => te, bk: () => ee });
+      a.d(t, { iQ: () => M, pc: () => P, bk: () => N });
       var n = a(7850),
         r = a(22837),
         s = a(81393),
         i = a(53807),
         o = a(24570),
-        l = a(53965),
-        c = a(64753),
-        d = a(78686),
-        u = a(90626),
-        _ = a(56330),
-        m = a.n(_),
-        p = a(74568),
-        g = a(22797),
-        h = a(4434),
-        S = a(37085),
-        f = a(75233),
-        v = a(51614),
-        y = a(67645),
-        b = a(2551),
-        C = a(56545),
-        w = a(23809),
-        x = a(8527);
-      function A(e, t) {
-        const { data: a } = (0, y.DR)(e),
-          { data: n } = (0, y.DR)(t),
-          r = (0, w.KV)(),
-          i = (0, f.jE)();
-        return (0, v.n)({
-          mutationFn: async () => {
-            if (
-              (!e && !t) ||
-              (!a && !n) ||
-              (!a?.requires_reservation && !n?.requires_reservation)
-            )
-              return (
-                console.log(
-                  "useUpdateReservationMutation: package is not loaded or does not require reservations",
-                ),
-                !1
-              );
-            if (!x.iA.logged_in)
-              return (
-                console.log(
-                  "useUpdateReservationMutation: Cannot reserve when user is not logged in",
-                ),
-                !1
-              );
-            const o = C.w.Init(b.fE);
-            e && o.Body().add_packages_to_reserve(e),
-              t && o.Body().add_packages_to_unreserve(t),
-              o.Body().set_country_code(x.iA.country_code);
-            const l = await b.nd.UpdatePackageReservations(r, o);
-            return l.GetEResult() == S.R
-              ? ((0, s.wT)(
-                  l.Body().reservation_status().length <= 2,
-                  "We only expected 2 states reservation update states back",
-                ),
-                l
-                  .Body()
-                  .reservation_status()
-                  .forEach((e) => {
-                    let t = e.packageid() == a?.packageid ? a : n;
-                    const r = { ...t };
-                    (r.reservation_state = e.reservation_state()),
-                      (r.expired = e.expired()),
-                      (r.time_expires = e.time_expires()),
-                      (r.time_reserved = e.time_reserved()),
-                      (r.rtime_estimated_notification =
-                        e.rtime_estimated_notification()),
-                      (r.notificaton_token = e.notificaton_token()),
-                      i.setQueryData((0, y.Zi)(t?.packageid), r);
-                  }),
-                !0)
-              : (console.log(
-                  `useUpdateReservationMutation Failed to update reservation for package: add ${e} | remove ${t} error code ${l.GetEResult()}`,
-                ),
-                !1);
-          },
-        });
-      }
-      function I(e) {
-        const { packageid: t, strAction: a, strDesc: r } = e,
-          s = A(void 0, t),
-          [i, o] = (0, u.useState)(!1),
-          [_, S] = (0, u.useState)(!1),
-          [f, v] = (0, u.useState)(null),
-          y = (0, h.m)("DisplayCancelReservationButton"),
-          [b, C, w] = (0, c.uD)();
-        return (0, n.jsxs)(n.Fragment, {
-          children: [
-            (0, n.jsxs)(l.$, {
-              onClick: C,
-              disabled: i,
-              children: [
-                Boolean(i && !_) &&
-                  (0, n.jsx)(g.t, {
-                    string: d.Z.Localize("#Saving"),
-                    size: "small",
-                  }),
-                a,
-              ],
-            }),
-            Boolean(f) &&
-              (0, n.jsx)("div", {
-                className: m().ErrorStylesWithIcon,
-                children: f,
-              }),
-            (0, n.jsx)(p.EN, {
-              active: b,
-              children: (0, n.jsx)(p.o0, {
-                closeModal: w,
-                strTitle: a,
-                strDescription: r,
-                strOKButtonText: d.Z.Localize("#Button_Confirm"),
-                strCancelButtonText: d.Z.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  o(!0),
-                    s
-                      .mutateAsync()
-                      .then((e) => {
-                        y?.token?.reason ||
-                          (e ||
-                            v(d.Z.Localize("#Sale_Reservations_BusyServer")),
-                          S(!0));
-                      })
-                      .catch(() => {
-                        y?.token?.reason ||
-                          (v(d.Z.Localize("#Sale_Reservations_BusyServer")),
-                          S(!0));
-                      })
-                      .finally(() => o(!1));
-                },
-              }),
-            }),
-          ],
-        });
-      }
-      var T = a(39777),
-        D = a(35380),
-        B = a(76684),
-        k = a(78603),
-        j = a.n(k);
-      function G(e) {
-        const { hardwareDetail: t } = e,
-          a = (0, D.oc)(t.packageid),
-          { data: r } = (0, T.J$)(a);
-        if (t.time_reserved) {
-          const e = (0, n.jsx)(B.K4, {
-            bSingleLine: !0,
-            dateAndTime: t.time_reserved,
-            bOnlyDate: !0,
-          });
-          return (0, n.jsx)("div", {
-            className: k.alreadyreserved,
-            children: r?.name
-              ? d.Z.LocalizeReact("#Sale_AlreadyReserved_WithName", r.name, e)
-              : d.Z.LocalizeReact("#Sale_AlreadyReserved", e),
-          });
-        }
-        return (0, n.jsx)("div", {
-          className: k.alreadyreserved,
-          children: r?.name
-            ? d.Z.Localize("#Sale_AlreadyReserved_WithName_NoDate", r.name)
-            : d.Z.Localize("#Sale_AlreadyReserved_NoDate"),
-        });
-      }
-      var E = a(52038);
-      function F(e) {
-        const { packageid: t, label: a, bInputDisabled: r } = e,
-          [s, i] = (0, u.useState)(!1),
-          [o, c] = (0, u.useState)(!1),
-          [_, p] = (0, u.useState)(null),
-          S = (0, h.m)("DisplyDirectReservation"),
-          f = A(t, void 0),
-          v = (0, u.useCallback)(
-            (e) => {
-              i(!0),
-                f
-                  .mutateAsync()
-                  .then((e) => {
-                    S?.token?.reason ||
-                      (e || p(d.Z.Localize("#Sale_Reservations_BusyServer")),
-                      c(!0));
-                  })
-                  .catch(() => {
-                    S?.token?.reason ||
-                      (c(!0), p(d.Z.Localize("#Sale_Reservations_BusyServer")));
-                  })
-                  .finally(() => i(!1));
-            },
-            [S?.token?.reason, f],
-          );
-        return (0, n.jsxs)("div", {
-          className: (0, E.A)(k.reserverow, "ReservationDirectAction"),
-          children: [
-            (0, n.jsxs)(l.$, {
-              onClick: v,
-              disabled: s || r,
-              children: [
-                Boolean(s && !o) &&
-                  (0, n.jsx)(g.t, {
-                    string: d.Z.Localize("#Saving"),
-                    size: "small",
-                  }),
-                a,
-              ],
-            }),
-            Boolean(_) &&
-              (0, n.jsx)("div", {
-                className: m().ErrorStylesWithIcon,
-                children: _,
-              }),
-          ],
-        });
-      }
-      function N(e) {
-        return (0, n.jsx)("div", {
-          className: (0, E.A)(j().reserverow, "ReservationUnavailable"),
-          children: (0, n.jsx)(l.$, {
-            disabled: !0,
-            children: d.Z.Localize("#Sale_ReserveUnavailable"),
-          }),
-        });
-      }
-      function P(e) {
-        const { hardwareDetail: t, reservedHardwareDetail: a } = e,
-          r = A(t.packageid, a?.packageid),
-          [s, i] = (0, u.useState)(!1),
-          [o, m] = (0, u.useState)(!1),
-          [S, f] = (0, u.useState)(null),
-          v = (0, h.m)("DisplayCancelReservationButton"),
-          [y, b, C] = (0, c.uD)(),
-          w = (0, D.oc)(a?.packageid),
-          { data: x } = (0, T.J$)(w),
-          I = (0, D.oc)(t.packageid),
-          { data: B } = (0, T.J$)(I);
-        let j = d.Z.Localize("#Sale_ReserveNow_Change"),
-          F = d.Z.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_2",
-            (0, n.jsx)("b", { children: B?.name ?? "" }),
-          ),
-          N = d.Z.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_1",
-            (0, n.jsx)("b", { children: x?.name ?? "" }),
-          );
-        return (0, n.jsxs)("div", {
-          className: (0, E.A)(k.reserverowReserved, "ReservationReserved"),
-          children: [
-            (0, n.jsx)(G, { hardwareDetail: a }),
-            (0, n.jsxs)(l.$, {
-              onClick: b,
-              disabled: s,
-              children: [
-                Boolean(s && !o) &&
-                  (0, n.jsx)(g.t, {
-                    string: d.Z.Localize("#Updating"),
-                    size: "small",
-                  }),
-                j,
-              ],
-            }),
-            Boolean(S) &&
-              (0, n.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: S,
-              }),
-            (0, n.jsx)(p.EN, {
-              active: y,
-              children: (0, n.jsxs)(p.o0, {
-                closeModal: C,
-                strTitle: j,
-                strOKButtonText: d.Z.Localize("#Button_Yes"),
-                strCancelButtonText: d.Z.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  i(!0),
-                    r
-                      .mutateAsync()
-                      .then((e) => {
-                        v?.token?.reason ||
-                          (e ||
-                            f(d.Z.Localize("#Sale_Reservations_BusyServer")),
-                          m(!0));
-                      })
-                      .catch(() => {
-                        v?.token?.reason ||
-                          (f(d.Z.Localize("#Sale_Reservations_BusyServer")),
-                          m(!0));
-                      });
-                },
-                children: [
-                  (0, n.jsx)("p", { children: N }),
-                  (0, n.jsx)("br", {}),
-                  (0, n.jsx)("p", { children: F }),
-                  (0, n.jsx)("br", {}),
-                  (0, n.jsx)("p", {
-                    children: d.Z.Localize("#Dialog_AreYouSure"),
-                  }),
-                ],
-              }),
-            }),
-          ],
-        });
-      }
-      var R = a(60014),
-        L = a(65946),
-        M = a(55963),
-        O = a(30894),
-        H = a(44165),
-        z = a(56283),
-        U = a(12155),
-        W = a(70809),
-        q = a(61859),
-        V = a(78327),
-        Q = a(82477),
-        Y = a(92825),
-        Z = a.n(Y),
-        K = a(2699);
-      function J(e, t) {
+        l = a(18899),
+        c = a(21683),
+        d = a(23601),
+        u = a(52865),
+        _ = a(75821),
+        m = a(78686),
+        p = a(60014),
+        g = a(65946),
+        h = a(55963),
+        S = a(30894),
+        f = a(44165),
+        v = a(56283),
+        y = a(76684),
+        b = a(12155),
+        C = a(70809),
+        w = a(52038),
+        x = a(61859),
+        A = a(78327),
+        I = a(82477),
+        T = a(78603),
+        D = a(92825),
+        B = a.n(D),
+        k = a(2699);
+      function j(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
-      function X(e) {
+      function G(e) {
         const {
           strToken: t,
           rtEstimatedNotifcationDate: a,
@@ -10646,9 +10450,9 @@
         } = e;
         if (!t || !a)
           return (0, n.jsx)("div", {
-            className: Z().Ctn,
-            children: (0, n.jsx)(K.Y, {
-              elReservationMessage: d.Z.Localize(
+            className: B().Ctn,
+            children: (0, n.jsx)(k.Y, {
+              elReservationMessage: m.Z.Localize(
                 s
                   ? "#Sale_Reservation_Fallback_user_V2"
                   : "#Sale_Reservation_Fallback_V2",
@@ -10660,8 +10464,8 @@
           o = i.getMonth() + 1;
         let l = "",
           c = "",
-          u = "",
-          _ = t;
+          d = "",
+          u = t;
         switch (t) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
@@ -10671,63 +10475,64 @@
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
           case "#Sale_Reservation_ByMonthYear":
-            (l = (0, q.we)("#Sale_Reservation_MonthNoun_" + o)),
+            (l = (0, x.we)("#Sale_Reservation_MonthNoun_" + o)),
               (c = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (l = (0, q.we)("#Sale_Reservation_MonthNoun_" + J(o, 1))),
-              (c = (0, q.we)("#Sale_Reservation_MonthNoun_" + o)),
-              (u = "" + i.getFullYear());
+            (l = (0, x.we)("#Sale_Reservation_MonthNoun_" + j(o, 1))),
+              (c = (0, x.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (d = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (l = (0, q.we)("#Sale_Reservation_MonthNoun_" + J(o, 2))),
-              (c = (0, q.we)("#Sale_Reservation_MonthNoun_" + o)),
-              (u = "" + i.getFullYear());
+            (l = (0, x.we)("#Sale_Reservation_MonthNoun_" + j(o, 2))),
+              (c = (0, x.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (d = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (l = (0, q.we)("#Sale_Reservation_MonthNoun_" + J(o, 3))),
-              (c = (0, q.we)("#Sale_Reservation_MonthNoun_" + o)),
-              (u = "" + i.getFullYear());
+            (l = (0, x.we)("#Sale_Reservation_MonthNoun_" + j(o, 3))),
+              (c = (0, x.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (d = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
-            (_ = "#Sale_Reservation_Quarter" + (Math.floor((o - 1) / 3) + 1)),
+            (u = "#Sale_Reservation_Quarter" + (Math.floor((o - 1) / 3) + 1)),
               (l = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
-            (_ =
+            (u =
               "#Sale_Reservation_AfterQuarter" + (Math.floor((o - 1) / 3) + 1)),
-              (l = (0, q.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (l = (0, x.we)("#Sale_Reservation_MonthNoun_" + o)),
               (c = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
-              const e = H.HD.GetTimeNowWithOverride(),
+              const e = f.HD.GetTimeNowWithOverride(),
                 t = Math.floor((a - e) / 86400);
               t < 7 ||
                 (t < 28
-                  ? ((_ = "#Sale_Reservation_RelativeWeekly_Plural"),
+                  ? ((u = "#Sale_Reservation_RelativeWeekly_Plural"),
                     (l = "" + Math.floor(t / 7 + 1)))
-                  : ((_ = "#Sale_Reservation_RelativeMonthly"),
+                  : ((u = "#Sale_Reservation_RelativeMonthly"),
                     (l = "" + Math.floor(t / 28 + 1))));
             }
             break;
           case "#Sale_Reservation_AvailabilityUnknown":
-            _ = s
+            u = s
               ? "#Sale_Reservation_Fallback_user_V2"
               : "#Sale_Reservation_Fallback_V2";
             break;
           default:
-            _ = "#Sale_Reservation_Fallback";
+            u = "#Sale_Reservation_Fallback";
         }
         return (0, n.jsx)("div", {
-          className: Z().Ctn,
-          children: (0, n.jsx)(K.Y, {
-            elReservationMessage: (0, q.we)(_, l, c, u, ""),
+          className: B().Ctn,
+          children: (0, n.jsx)(k.Y, {
+            elReservationMessage: (0, x.we)(u, l, c, d, ""),
             strUrlLearnMoreLink: r,
           }),
         });
       }
-      function $(e) {
+      var E = a(53965);
+      function F(e) {
         return !(
           e.requires_reservation ||
           !e.allow_purchase_in_country ||
@@ -10736,7 +10541,7 @@
           (0, i.k)(e.reservation_state)
         );
       }
-      function ee(e) {
+      function N(e) {
         const {
           reservationDef: t,
           hardwareDetail: a,
@@ -10744,79 +10549,78 @@
           reservedHardwareDetail: i,
         } = e;
         if (
-          !V.iA.logged_in &&
+          !A.iA.logged_in &&
           (a.requires_reservation || a.account_restricted_from_purchasing)
         )
           return s
             ? null
             : (0, n.jsx)("div", {
-                className: (0, E.A)(k.reserverow, "ReservationLogin"),
-                children: (0, n.jsx)(l.$, {
-                  onClick: Q.vg,
-                  children: d.Z.Localize(
+                className: (0, w.A)(T.reserverow, "ReservationLogin"),
+                children: (0, n.jsx)(E.$, {
+                  onClick: I.vg,
+                  children: m.Z.Localize(
                     a.requires_reservation
                       ? "#SalePage_LoginReservationPrompt"
                       : "#SalePage_LoginPurchasePrompt",
                   ),
                 }),
               });
-        if ($(a))
-          return (0, n.jsx)(ie, { hardwareDetail: a, bPSULessModel: s });
+        if (F(a)) return (0, n.jsx)(H, { hardwareDetail: a, bPSULessModel: s });
         if (!a.requires_reservation && a.account_restricted_from_purchasing)
           return s
             ? null
             : (0, n.jsx)("div", {
-                className: (0, E.A)({
-                  [k.reserverow]: !0,
+                className: (0, w.A)({
+                  [T.reserverow]: !0,
                   ReservationUnavailable: !0,
                 }),
-                children: (0, n.jsx)(z.$n, {
-                  className: k.reservebutton,
+                children: (0, n.jsx)(v.$n, {
+                  className: T.reservebutton,
                   disabled: !0,
-                  children: d.Z.Localize("#Sale_RegisterNow_noteligible"),
+                  children: m.Z.Localize("#Sale_RegisterNow_noteligible"),
                 }),
               });
         if (!a.requires_reservation && !a.inventory_available) {
-          let e = d.Z.Localize("#Sale_ReserveExhausted"),
+          let e = m.Z.Localize("#Sale_ReserveExhausted"),
             a =
               t.localized_out_of_stock_override &&
               t.localized_out_of_stock_override?.length > 0;
           if (a) {
-            const a = (0, r.sfN)(V.TS.LANGUAGE),
-              n = q.A0.GetELanguageFallback(a);
+            const a = (0, r.sfN)(A.TS.LANGUAGE),
+              n = x.A0.GetELanguageFallback(a);
             e =
               (t.localized_out_of_stock_override &&
                 (t.localized_out_of_stock_override[a] ||
                   t.localized_out_of_stock_override[n])) ||
-              d.Z.Localize("#Sale_ReserveExhausted");
+              m.Z.Localize("#Sale_ReserveExhausted");
           }
           return (0, n.jsx)("div", {
-            className: (0, E.A)({
-              [k.reserverow]: !0,
+            className: (0, w.A)({
+              [T.reserverow]: !0,
               ReservationUnavailable: !0,
               ResUnavailOverride: a,
-              [k.ReservationPSULessOutOfStock]: s,
+              [T.ReservationPSULessOutOfStock]: s,
               ReservationPSULessOutOfStock: s,
             }),
-            children: (0, n.jsxs)(z.$n, {
-              className: k.reservebutton,
+            children: (0, n.jsxs)(v.$n, {
+              className: T.reservebutton,
               disabled: !0,
               children: [
-                Boolean(s) && (0, n.jsx)(U.mb7, {}),
+                Boolean(s) && (0, n.jsx)(b.mb7, {}),
                 s
-                  ? d.Z.Localize("#EventEmail_Button_BuyWithoutPSUOutOfStock")
+                  ? m.Z.Localize("#EventEmail_Button_BuyWithoutPSUOutOfStock")
                   : e,
               ],
             }),
           });
         }
-        return (0, n.jsx)(le, {
+        return (0, n.jsx)(U, {
           reservationDef: t,
           hardwareDetail: a,
           reservedHardwareDetail: i,
         });
       }
-      function te(e) {
+      function P(e) {
         const { hardwareDetail: t, reservationDef: a, section: s } = e,
           l = !(
             t.inventory_available ||
@@ -10825,14 +10629,14 @@
                 i.G.k_EPurchaseReservationState_NotReserved) ||
             t.requires_reservation
           ),
-          c = (0, L.q3)(() => {
+          c = (0, g.q3)(() => {
             if (
               a.localized_delivery_override_desc &&
               a.localized_delivery_override_desc?.length > 0 &&
               (!a.override_delivery_only_out_of_stock || l)
             ) {
-              const e = (0, r.sfN)(V.TS.LANGUAGE),
-                t = q.A0.GetELanguageFallback(e);
+              const e = (0, r.sfN)(A.TS.LANGUAGE),
+                t = x.A0.GetELanguageFallback(e);
               return (
                 a.localized_delivery_override_desc[e] ||
                 a.localized_delivery_override_desc[t] ||
@@ -10841,37 +10645,37 @@
             }
             return null;
           }),
-          u = !!t.account_restricted_from_purchasing && !V.iA.logged_in;
-        if ((l && !c) || u) return null;
+          d = !!t.account_restricted_from_purchasing && !A.iA.logged_in;
+        if ((l && !c) || d) return null;
         if (
-          $(t) ||
+          F(t) ||
           t.reservation_state == i.G.k_EPurchaseReservationState_Allocated
         )
           return (0, n.jsx)("div", {
-            className: (0, E.A)(k.expecteddate, "ReservationBuyNow"),
+            className: (0, w.A)(T.expecteddate, "ReservationBuyNow"),
             children: c
               ? (0, n.jsx)(o.o, { text: c })
               : (0, n.jsxs)(n.Fragment, {
                   children: [
                     (0, n.jsx)("div", {
-                      className: (0, E.A)(
-                        k.expecteddate_str,
+                      className: (0, w.A)(
+                        T.expecteddate_str,
                         "ReservationShipDate",
                       ),
-                      children: d.Z.Localize(
+                      children: m.Z.Localize(
                         "#Sale_Reservation_ExpectedDeliveryDate",
                       ),
                     }),
-                    (0, W.x)(t),
+                    (0, C.x)(t),
                   ],
                 }),
           });
-        const _ =
+        const u =
           t.reservation_state === i.G.k_EPurchaseReservationState_Reserved;
         return (0, n.jsx)("div", {
-          className: (0, E.A)(k.expecteddate, "ReservationExpectedDateCtn"),
+          className: (0, w.A)(T.expecteddate, "ReservationExpectedDateCtn"),
           children: (0, n.jsx)("div", {
-            className: (0, E.A)(k.expecteddate_str, "ReservationExpectedDate"),
+            className: (0, w.A)(T.expecteddate_str, "ReservationExpectedDate"),
             children: c
               ? (0, n.jsx)(o.o, { text: c })
               : (0, n.jsxs)(n.Fragment, {
@@ -10881,125 +10685,125 @@
                       "#Sale_Reservation_AvailabilityUnknown" !=
                         t.notificaton_token &&
                       (0, n.jsx)(n.Fragment, {
-                        children: d.Z.Localize(
-                          _
+                        children: m.Z.Localize(
+                          u
                             ? "#Sale_Reservation_YourExpectedDate"
                             : "#Sale_Reservation_ExpectedDate",
                         ),
                       }),
-                    (0, n.jsx)(X, {
+                    (0, n.jsx)(G, {
                       strUrlLearnMoreLink:
                         s.internal_section_data?.reservation_learn_more_link,
                       rtEstimatedNotifcationDate:
                         t.rtime_estimated_notification,
                       strToken: t.notificaton_token,
-                      bInReservationQueue: _,
+                      bInReservationQueue: u,
                     }),
                   ],
                 }),
           }),
         });
       }
-      function ae(e) {
+      function R(e) {
         const { hardwareDetail: t } = e;
-        return (0, n.jsx)(I, {
+        return (0, n.jsx)(l.p, {
           packageid: t.packageid,
-          strAction: d.Z.Localize("#Sale_CancelReservation"),
-          strDesc: d.Z.Localize("#Sale_Reservation_CancelAreYouSure_NoDeposit"),
+          strAction: m.Z.Localize("#Sale_CancelReservation"),
+          strDesc: m.Z.Localize("#Sale_Reservation_CancelAreYouSure_NoDeposit"),
         });
       }
-      function ne(e) {
+      function L(e) {
         return (0, n.jsxs)("div", {
-          className: (0, E.A)(k.reserverowReserved, "ReservationReserved"),
-          children: [(0, n.jsx)(G, { ...e }), (0, n.jsx)(ae, { ...e })],
+          className: (0, w.A)(T.reserverowReserved, "ReservationReserved"),
+          children: [(0, n.jsx)(c.J, { ...e }), (0, n.jsx)(R, { ...e })],
         });
       }
-      function re(e, t, a) {
-        const n = `${V.TS.STORE_BASE_URL}cart`,
-          r = `${V.TS.STORE_BASE_URL}cart/addtocart`,
-          s = (0, M.L3)(a);
-        O.Fm.Get().AddToCart(e, t, r, n, s);
+      function M(e, t, a) {
+        const n = `${A.TS.STORE_BASE_URL}cart`,
+          r = `${A.TS.STORE_BASE_URL}cart/addtocart`,
+          s = (0, h.L3)(a);
+        S.Fm.Get().AddToCart(e, t, r, n, s);
       }
-      function se(e) {
+      function O(e) {
         const { hardwareDetail: t } = e,
-          a = (0, R.n9)(),
-          r = H.HD.GetTimeNowWithOverride();
+          a = (0, p.n9)(),
+          r = f.HD.GetTimeNowWithOverride();
         return t.time_expires && r < t.time_expires
           ? (0, n.jsxs)("div", {
-              className: (0, E.A)(k.reserverowReserved, "ReservationAllocated"),
+              className: (0, w.A)(T.reserverowReserved, "ReservationAllocated"),
               children: [
                 (0, n.jsxs)("div", {
-                  className: k.alreadyreserved,
+                  className: T.alreadyreserved,
                   children: [
                     (0, n.jsx)("div", {
-                      children: d.Z.Localize("#Sale_Reservation_CompleteBy"),
+                      children: m.Z.Localize("#Sale_Reservation_CompleteBy"),
                     }),
-                    (0, n.jsx)(B.K4, {
+                    (0, n.jsx)(y.K4, {
                       dateAndTime: t.time_expires,
                       bOnlyDate: !1,
                     }),
                     (0, n.jsx)("div", {
-                      children: d.Z.Localize("#Sale_Reservation_CancelAuto"),
+                      children: m.Z.Localize("#Sale_Reservation_CancelAuto"),
                     }),
                   ],
                 }),
-                (0, n.jsx)(z.$n, {
-                  onClick: (e) => re(e, t.packageid, a),
-                  children: d.Z.Localize("#Sale_Reservation_CompletePurchase"),
+                (0, n.jsx)(v.$n, {
+                  onClick: (e) => M(e, t.packageid, a),
+                  children: m.Z.Localize("#Sale_Reservation_CompletePurchase"),
                 }),
-                (0, n.jsx)(ae, { ...e }),
+                (0, n.jsx)(R, { ...e }),
               ],
             })
           : (0, n.jsxs)("div", {
-              className: k.reserverowReserved,
+              className: T.reserverowReserved,
               children: [
                 (0, n.jsx)("div", {
-                  className: (0, E.A)(k.alreadyreserved, "ReservationExpired"),
+                  className: (0, w.A)(T.alreadyreserved, "ReservationExpired"),
                   children: (0, n.jsx)("div", {
-                    children: d.Z.Localize("#Sale_Reservation_Expired"),
+                    children: m.Z.Localize("#Sale_Reservation_Expired"),
                   }),
                 }),
-                (0, n.jsx)(ae, { ...e }),
+                (0, n.jsx)(R, { ...e }),
               ],
             });
       }
-      function ie(e) {
+      function H(e) {
         const { hardwareDetail: t, bPSULessModel: a } = e,
-          r = (0, R.Nc)();
+          r = (0, p.Nc)();
         return (0, n.jsx)("div", {
-          className: (0, E.A)({
-            [k.reserverowReserved]: !0,
+          className: (0, w.A)({
+            [T.reserverowReserved]: !0,
             ReservationAddToCart: !0,
-            [k.ReservationPSULessAddToCart]: a,
+            [T.ReservationPSULessAddToCart]: a,
             ReservationPSULessAddToCart: a,
           }),
-          children: (0, n.jsxs)(z.$n, {
-            onClick: (e) => re(e, t.packageid, r),
+          children: (0, n.jsxs)(v.$n, {
+            onClick: (e) => M(e, t.packageid, r),
             children: [
-              Boolean(a) && (0, n.jsx)(U.mb7, {}),
-              d.Z.Localize(
+              Boolean(a) && (0, n.jsx)(b.mb7, {}),
+              m.Z.Localize(
                 a ? "#EventEmail_Button_BuyWithoutPSU" : "#Sale_BuyNow",
               ),
             ],
           }),
         });
       }
-      function oe(e) {
+      function z(e) {
         const { hardwareDetail: t } = e;
-        return (0, n.jsx)(F, {
+        return (0, n.jsx)(d.R, {
           packageid: t.packageid,
-          label: d.Z.Localize("#Sale_ReserveNow_NoDeposit"),
+          label: m.Z.Localize("#Sale_ReserveNow_NoDeposit"),
         });
       }
-      function le(e) {
+      function U(e) {
         const { hardwareDetail: t, reservedHardwareDetail: a } = e;
         switch (t.reservation_state) {
           case i.G.k_EPurchaseReservationState_Reserved:
-            return (0, n.jsx)(ne, { ...e });
+            return (0, n.jsx)(L, { ...e });
           case i.G.k_EPurchaseReservationState_Allocated:
-            return (0, n.jsx)(se, { ...e });
+            return (0, n.jsx)(O, { ...e });
           case i.G.k_EPurchaseReservationState_UnavailableRegion:
-            return (0, n.jsx)(N, {});
+            return (0, n.jsx)(u.b, {});
           case i.G.k_EPurchaseReservationState_CancelPendingRefund:
           case i.G.k_EPurchaseReservationState_NotReserved:
           case i.G.k_EPurchaseReservationState_Consumed:
@@ -11010,7 +10814,7 @@
                 a?.packageid !== t.packageid,
                 `Unexpected reservation package matches me ${a?.packageid} == ${t.packageid}`,
               ),
-              a ? (0, n.jsx)(P, { ...e }) : (0, n.jsx)(oe, { ...e })
+              a ? (0, n.jsx)(_.$, { ...e }) : (0, n.jsx)(z, { ...e })
             );
         }
       }
@@ -18463,14 +18267,28 @@
             })
           : null;
       }
-      function Gn(e) {
-        return null;
-      }
-      const En = Gn;
-      function Fn(e) {
-        return null;
-      }
-      const Nn = Fn;
+      const Gn = r.lazy(() => a.e(48312).then(a.bind(a, 48312))),
+        En = Gn
+          ? function (e) {
+              return (0, n.jsx)(r.Suspense, {
+                fallback: null,
+                children: (0, n.jsx)(Gn, { ...e }),
+              });
+            }
+          : function (e) {
+              return null;
+            };
+      const Fn = r.lazy(() => a.e(72796).then(a.bind(a, 72796))),
+        Nn = Fn
+          ? function (e) {
+              return (0, n.jsx)(r.Suspense, {
+                fallback: null,
+                children: (0, n.jsx)(Fn, { ...e }),
+              });
+            }
+          : function (e) {
+              return null;
+            };
       var Pn = a(78603);
       function Rn(e) {
         const { hardwareDetail: t, storeItemReleaseInfo: a } = e,
@@ -18515,7 +18333,7 @@
           ],
         });
       }
-      var Ln = a(30207),
+      var Ln = a(77291),
         Mn = a(8527);
       function On(e) {
         const { disabled: t } = e;
@@ -18545,8 +18363,7 @@
         if (
           s.requires_reservation &&
           !s.reservation_not_allowed &&
-          s.collection_time_active &&
-          s.collection_time_active > Mn.TS.NOW
+          s.collection_time_active
         )
           return (0, n.jsx)("div", {
             className: Pn.purchaseaction,
@@ -18555,6 +18372,8 @@
               reservationAdvancedSettings:
                 a.internal_section_data?.reservation_advanced,
               storeItemReleaseInfo: c,
+              bShuffleInProgress: s.collection_time_active < Mn.TS.NOW,
+              bHasSomeReservation: !!r && (0, vn.k)(r.reservation_state),
             }),
           });
         if (c && c.is_coming_soon)
@@ -18801,10 +18620,17 @@
         $n = (0, r.createContext)(null);
       var er = a(72255),
         tr = a(61459);
-      function ar(e) {
-        return null;
-      }
-      const nr = ar;
+      const ar = r.lazy(() => a.e(32987).then(a.bind(a, 32987))),
+        nr = ar
+          ? function (e) {
+              return (0, n.jsx)(r.Suspense, {
+                fallback: null,
+                children: (0, n.jsx)(ar, { ...e }),
+              });
+            }
+          : function (e) {
+              return null;
+            };
       function rr(e) {
         return e.sort().join("_");
       }

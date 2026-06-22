@@ -1768,8 +1768,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1805,6 +1807,19 @@
       function _() {
         const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = _;
+      }
+      function _(_) {
+        const { label: _, strDialogDesc: _ } = _,
+          { elDialogElement: _, fnShowLogonDialog: _ } = _(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: _ || _._.Localize("#Login_SignIn"),
+            }),
+            _,
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
