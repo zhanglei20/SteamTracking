@@ -1584,15 +1584,16 @@
     },
     84547: (e, t, n) => {
       "use strict";
-      n.d(t, { lS: () => d, lh: () => m });
+      n.d(t, { lS: () => m, lh: () => p, vU: () => C });
       var r = n(7850),
         a = n(64753),
         o = n(8527),
         i = n(78686),
         s = n(78395),
         l = n(21869),
-        c = n(67936);
-      function u(e) {
+        c = n(67936),
+        u = n(53965);
+      function d(e) {
         const { closeModal: t, strDescOverride: n } = e;
         return (0, r.jsx)(s.o0, {
           strTitle: c.F5.Localize("#LoginRedirect_Dialog_Title"),
@@ -1601,23 +1602,36 @@
           onCancel: t,
           strOKButtonText: i.Z.Localize("#Button_OK"),
           onOK: () => {
-            m(), t();
+            p(), t();
           },
         });
       }
-      function d(e) {
+      function m(e) {
         const [t, n, o] = (0, a.uD)();
         return {
           elDialogElement: (0, r.jsx)(l.E, {
             active: t,
-            children: (0, r.jsx)(u, { closeModal: o, strDescOverride: e }),
+            children: (0, r.jsx)(d, { closeModal: o, strDescOverride: e }),
           }),
           fnShowLogonDialog: n,
         };
       }
-      function m() {
+      function p() {
         const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
+      }
+      function C(e) {
+        const { label: t, strDialogDesc: n } = e,
+          { elDialogElement: a, fnShowLogonDialog: o } = m(n);
+        return (0, r.jsxs)(r.Fragment, {
+          children: [
+            (0, r.jsx)(u.$, {
+              onClick: o,
+              children: t || i.Z.Localize("#Login_SignIn"),
+            }),
+            a,
+          ],
+        });
       }
     },
     29008: (e, t, n) => {

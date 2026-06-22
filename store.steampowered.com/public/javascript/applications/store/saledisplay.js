@@ -4906,7 +4906,25 @@
             () => window.removeEventListener("resize", p)
           ),
           [p],
-        );
+        ),
+          u.useEffect(() => {
+            const e = () => {
+              const e = window?.location?.hash;
+              if (e) {
+                const n = document.getElementById(
+                  decodeURIComponent(e.substring(1).toLowerCase()),
+                );
+                n && n.scrollIntoView({ block: "start" });
+              }
+            };
+            return (
+              e(),
+              window.addEventListener("hashchange", e),
+              () => {
+                window.removeEventListener("hashchange", e);
+              }
+            );
+          }, []);
         const _ = (0, te.W6)(),
           x = (e, n) => {
             (0, de.ip)(_, { ...(n || {}), [ae.jD]: e.toString() });
@@ -5070,7 +5088,7 @@
             bExpanded: c,
             children: d,
           } = e,
-          g = ae.mj + (n.unique_id || t),
+          g = n.section_anchor ? n.section_anchor : ae.mj + (n.unique_id || t),
           m = "tabs" != n.section_type,
           [_, x] = (0, u.useState)(!0);
         return _

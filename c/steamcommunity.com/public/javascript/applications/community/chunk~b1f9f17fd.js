@@ -6474,6 +6474,154 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _, _, _, _;
+        const { hardwareDetail: _, reservedHardwareDetail: _ } = _,
+          _ = (0, _._)(_.packageid, null == _ ? void 0 : _.packageid),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplayCancelReservationButton"),
+          [_, _, _] = (0, _._)(),
+          _ = (0, _._)(null == _ ? void 0 : _.packageid),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_.packageid),
+          { data: _ } = (0, _._)(_);
+        let _ = _._.Localize("#Sale_ReserveNow_Change"),
+          _ = _._.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_2",
+            (0, _.jsx)("b", {
+              children:
+                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                  ? _
+                  : "",
+            }),
+          ),
+          _ = _._.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_1",
+            (0, _.jsx)("b", {
+              children:
+                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                  ? _
+                  : "",
+            }),
+          );
+        return (
+          _.queue_in_waitlist &&
+            ((_ = _._.Localize("#Reservation_Change_WaitList")),
+            (_ = _._.LocalizeReact(
+              "#Reservation_Change_WaitList_Desc2",
+              (0, _.jsx)("b", {
+                children:
+                  null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                    ? _
+                    : "",
+              }),
+            ))),
+          (null == _ ? void 0 : _.position_is_waitlist) &&
+            (_ = _._.LocalizeReact(
+              "#Reservation_Change_WaitList_Desc1",
+              (0, _.jsx)("b", {
+                children:
+                  null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                    ? _
+                    : "",
+              }),
+            )),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
+            children: [
+              (0, _.jsx)(_._, {
+                hardwareDetail: _,
+              }),
+              (0, _.jsxs)(_._, {
+                onClick: _,
+                disabled: _,
+                children: [
+                  Boolean(_ && !_) &&
+                    (0, _.jsx)(_._, {
+                      string: _._.Localize("#Updating"),
+                      size: "small",
+                    }),
+                  _,
+                ],
+              }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  className: _.ErrorStylesWithIcon,
+                  children: _,
+                }),
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsxs)(_._, {
+                  closeModal: _,
+                  strTitle: _,
+                  strOKButtonText: _._.Localize("#Button_Yes"),
+                  strCancelButtonText: _._.Localize("#Button_Dismiss"),
+                  onOK: () => {
+                    _(!0),
+                      _.mutateAsync()
+                        .then((_) => {
+                          var _;
+                          (null === (_ = null == _ ? void 0 : _.token) ||
+                          void 0 === _
+                            ? void 0
+                            : _.reason) ||
+                            (_ ||
+                              _(_._.Localize("#Sale_Reservations_BusyServer")),
+                            _(!0));
+                        })
+                        .catch(() => {
+                          var _;
+                          (null === (_ = null == _ ? void 0 : _.token) ||
+                          void 0 === _
+                            ? void 0
+                            : _.reason) ||
+                            (_(_._.Localize("#Sale_Reservations_BusyServer")),
+                            _(!0));
+                        });
+                  },
+                  children: [
+                    (0, _.jsx)("p", {
+                      children: _,
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("p", {
+                      children: _,
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("p", {
+                      children: _._.Localize("#Dialog_AreYouSure"),
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -6594,6 +6742,336 @@
             (_[(_.k_EPurchaseReservationState_UnavailableRegion = 6)] =
               "k_EPurchaseReservationState_UnavailableRegion");
         })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            packageid: _,
+            strAction: _,
+            strDesc: _,
+            onCancelSucceeded: _,
+          } = _,
+          _ = (0, _._)(void 0, _),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplayCancelReservationButton"),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.reserverow),
+          children: [
+            (0, _.jsxs)(_._, {
+              onClick: _,
+              disabled: _,
+              children: [
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    string: _._.Localize("#Saving"),
+                    size: "small",
+                  }),
+                _,
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().ErrorStylesWithIcon,
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                closeModal: _,
+                strTitle: _,
+                strDescription: _,
+                strOKButtonText: _._.Localize("#Button_Confirm"),
+                strCancelButtonText: _._.Localize("#Button_Dismiss"),
+                onOK: () => {
+                  _(!0),
+                    _.mutateAsync()
+                      .then((_) => {
+                        var _;
+                        (null === (_ = null == _ ? void 0 : _.token) ||
+                        void 0 === _
+                          ? void 0
+                          : _.reason) ||
+                          (_ ||
+                            _(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0),
+                          _ && _());
+                      })
+                      .catch(() => {
+                        var _;
+                        (null === (_ = null == _ ? void 0 : _.token) ||
+                        void 0 === _
+                          ? void 0
+                          : _.reason) ||
+                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0));
+                      })
+                      .finally(() => _(!1));
+                },
+              }),
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().reserverow, "ReservationUnavailable"),
+          children: (0, _.jsx)(_._, {
+            disabled: !0,
+            children: _._.Localize("#Sale_ReserveUnavailable"),
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        var _;
+        const { packageid: _, label: _, bInputDisabled: _ } = _,
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplyDirectReservation"),
+          _ = (0, _._)(_, void 0),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(!0),
+                _.mutateAsync()
+                  .then((_) => {
+                    var _;
+                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+                      ? void 0
+                      : _.reason) ||
+                      (_ || _(_._.Localize("#Sale_Reservations_BusyServer")),
+                      _(!0));
+                  })
+                  .catch(() => {
+                    var _;
+                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+                      ? void 0
+                      : _.reason) ||
+                      (_(!0), _(_._.Localize("#Sale_Reservations_BusyServer")));
+                  })
+                  .finally(() => _(!1));
+            },
+            [
+              null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+                ? void 0
+                : _.reason,
+              _,
+            ],
+          );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.reserverow, "ReservationDirectAction"),
+          children: [
+            (0, _.jsxs)(_._, {
+              onClick: _,
+              disabled: _ || _,
+              children: [
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    string: _._.Localize("#Saving"),
+                    size: "small",
+                  }),
+                _,
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().ErrorStylesWithIcon,
+                children: _,
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { hardwareDetail: _ } = _,
+          _ = (0, _._)(_.packageid),
+          { data: _ } = (0, _._)(_);
+        if (_.time_reserved) {
+          const _ = (0, _.jsx)(_._, {
+            bSingleLine: !0,
+            dateAndTime: _.time_reserved,
+            bOnlyDate: !0,
+          });
+          return _.position_is_waitlist
+            ? (0, _.jsx)("div", {
+                className: _.alreadyreserved,
+                children: (null == _ ? void 0 : _.name)
+                  ? _._.LocalizeReact(
+                      "#Reservation_In_Waitlist_WithName",
+                      _.name,
+                      _,
+                    )
+                  : _._.LocalizeReact("#Reservation_In_Waitlist", _),
+              })
+            : (0, _.jsx)("div", {
+                className: _.alreadyreserved,
+                children: (null == _ ? void 0 : _.name)
+                  ? _._.LocalizeReact(
+                      "#Sale_AlreadyReserved_WithName",
+                      _.name,
+                      _,
+                    )
+                  : _._.LocalizeReact("#Sale_AlreadyReserved", _),
+              });
+        }
+        return _.position_is_waitlist
+          ? (0, _.jsx)("div", {
+              className: _.alreadyreserved,
+              children: (null == _ ? void 0 : _.name)
+                ? _._.Localize(
+                    "#Reservation_In_Waitlist_WithName_NoDate",
+                    _.name,
+                  )
+                : _._.Localize("#Reservation_In_Waitlist_NoDate"),
+            })
+          : (0, _.jsx)("div", {
+              className: _.alreadyreserved,
+              children: (null == _ ? void 0 : _.name)
+                ? _._.Localize("#Sale_AlreadyReserved_WithName_NoDate", _.name)
+                : _._.Localize("#Sale_AlreadyReserved_NoDate"),
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            if (
+              (!_ && !_) ||
+              (!_ && !_) ||
+              (!(null == _ ? void 0 : _.requires_reservation) &&
+                !(null == _ ? void 0 : _.requires_reservation))
+            )
+              return (
+                console.log(
+                  "useUpdateReservationMutation: package is not loaded or does not require reservations",
+                ),
+                !1
+              );
+            if (!_._.logged_in)
+              return (
+                console.log(
+                  "useUpdateReservationMutation: Cannot reserve when user is not logged in",
+                ),
+                !1
+              );
+            const _ = _._.Init(_._);
+            _ && _.Body().add_packages_to_reserve(_),
+              _ && _.Body().add_packages_to_unreserve(_),
+              _.Body().set_country_code(_._.country_code);
+            const _ = await _._.UpdatePackageReservations(_, _);
+            return _.GetEResult() == _._
+              ? ((0, _._)(
+                  _.Body().reservation_status().length <= 2,
+                  "We only expected 2 states reservation update states back",
+                ),
+                _.Body()
+                  .reservation_status()
+                  .forEach((_) => {
+                    let _ =
+                      _.packageid() == (null == _ ? void 0 : _.packageid)
+                        ? _
+                        : _;
+                    const _ = {
+                      ..._,
+                    };
+                    (_.reservation_state = _.reservation_state()),
+                      (_.expired = _.expired()),
+                      (_.time_expires = _.time_expires()),
+                      (_.time_reserved = _.time_reserved()),
+                      (_.rtime_estimated_notification =
+                        _.rtime_estimated_notification()),
+                      (_.notificaton_token = _.notificaton_token()),
+                      _.setQueryData(
+                        (0, _._)(null == _ ? void 0 : _.packageid),
+                        _,
+                      );
+                  }),
+                !0)
+              : (console.log(
+                  `useUpdateReservationMutation Failed to update reservation for package: add ${_} | remove ${_} error code ${_.GetEResult()}`,
+                ),
+                !1);
+          },
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -18601,7 +19079,36 @@
             () => window.removeEventListener("resize", _)
           ),
           [_],
-        );
+        ),
+          _.useEffect(() => {
+            const _ = () => {
+              var _;
+              const _ =
+                null ===
+                  (_ =
+                    null === window || void 0 === window
+                      ? void 0
+                      : window.location) || void 0 === _
+                  ? void 0
+                  : _.hash;
+              if (_) {
+                const _ = document.getElementById(
+                  decodeURIComponent(_.substring(1).toLowerCase()),
+                );
+                _ &&
+                  _.scrollIntoView({
+                    block: "start",
+                  });
+              }
+            };
+            return (
+              _(),
+              window.addEventListener("hashchange", _),
+              () => {
+                window.removeEventListener("hashchange", _);
+              }
+            );
+          }, []);
         const _ = (0, _._)(),
           _ = (_, _) => {
             (0, _._)(_, {
@@ -18794,7 +19301,7 @@
             bExpanded: _,
             children: _,
           } = _,
-          _ = _._ + (_.unique_id || _),
+          _ = _.section_anchor ? _.section_anchor : _._ + (_.unique_id || _),
           _ = "tabs" != _.section_type,
           [_, _] = (0, _.useState)(!0);
         return _
@@ -19123,350 +19630,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: async () => {
-            if (
-              (!_ && !_) ||
-              (!_ && !_) ||
-              (!(null == _ ? void 0 : _.requires_reservation) &&
-                !(null == _ ? void 0 : _.requires_reservation))
-            )
-              return (
-                console.log(
-                  "useUpdateReservationMutation: package is not loaded or does not require reservations",
-                ),
-                !1
-              );
-            if (!_._.logged_in)
-              return (
-                console.log(
-                  "useUpdateReservationMutation: Cannot reserve when user is not logged in",
-                ),
-                !1
-              );
-            const _ = _._.Init(_._);
-            _ && _.Body().add_packages_to_reserve(_),
-              _ && _.Body().add_packages_to_unreserve(_),
-              _.Body().set_country_code(_._.country_code);
-            const _ = await _._.UpdatePackageReservations(_, _);
-            return _.GetEResult() == _._
-              ? ((0, _._)(
-                  _.Body().reservation_status().length <= 2,
-                  "We only expected 2 states reservation update states back",
-                ),
-                _.Body()
-                  .reservation_status()
-                  .forEach((_) => {
-                    let _ =
-                      _.packageid() == (null == _ ? void 0 : _.packageid)
-                        ? _
-                        : _;
-                    const _ = {
-                      ..._,
-                    };
-                    (_.reservation_state = _.reservation_state()),
-                      (_.expired = _.expired()),
-                      (_.time_expires = _.time_expires()),
-                      (_.time_reserved = _.time_reserved()),
-                      (_.rtime_estimated_notification =
-                        _.rtime_estimated_notification()),
-                      (_.notificaton_token = _.notificaton_token()),
-                      _.setQueryData(
-                        (0, _._)(null == _ ? void 0 : _.packageid),
-                        _,
-                      );
-                  }),
-                !0)
-              : (console.log(
-                  `useUpdateReservationMutation Failed to update reservation for package: add ${_} | remove ${_} error code ${_.GetEResult()}`,
-                ),
-                !1);
-          },
-        });
-      }
-      function _(_) {
-        const { packageid: _, strAction: _, strDesc: _ } = _,
-          _ = _(void 0, _),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplayCancelReservationButton"),
-          [_, _, _] = (0, _._)();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Saving"),
-                    size: "small",
-                  }),
-                _,
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _().ErrorStylesWithIcon,
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_._, {
-                closeModal: _,
-                strTitle: _,
-                strDescription: _,
-                strOKButtonText: _._.Localize("#Button_Confirm"),
-                strCancelButtonText: _._.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  _(!0),
-                    _.mutateAsync()
-                      .then((_) => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_ ||
-                            _(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .catch(() => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .finally(() => _(!1));
-                },
-              }),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { hardwareDetail: _ } = _,
-          _ = (0, _._)(_.packageid),
-          { data: _ } = (0, _._)(_);
-        if (_.time_reserved) {
-          const _ = (0, _.jsx)(_._, {
-            bSingleLine: !0,
-            dateAndTime: _.time_reserved,
-            bOnlyDate: !0,
-          });
-          return (0, _.jsx)("div", {
-            className: _.alreadyreserved,
-            children: (null == _ ? void 0 : _.name)
-              ? _._.LocalizeReact("#Sale_AlreadyReserved_WithName", _.name, _)
-              : _._.LocalizeReact("#Sale_AlreadyReserved", _),
-          });
-        }
-        return (0, _.jsx)("div", {
-          className: _.alreadyreserved,
-          children: (null == _ ? void 0 : _.name)
-            ? _._.Localize("#Sale_AlreadyReserved_WithName_NoDate", _.name)
-            : _._.Localize("#Sale_AlreadyReserved_NoDate"),
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        var _;
-        const { packageid: _, label: _, bInputDisabled: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplyDirectReservation"),
-          _ = _(_, void 0),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _(!0),
-                _.mutateAsync()
-                  .then((_) => {
-                    var _;
-                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                      ? void 0
-                      : _.reason) ||
-                      (_ || _(_._.Localize("#Sale_Reservations_BusyServer")),
-                      _(!0));
-                  })
-                  .catch(() => {
-                    var _;
-                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                      ? void 0
-                      : _.reason) ||
-                      (_(!0), _(_._.Localize("#Sale_Reservations_BusyServer")));
-                  })
-                  .finally(() => _(!1));
-            },
-            [
-              null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                ? void 0
-                : _.reason,
-              _,
-            ],
-          );
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_.reserverow, "ReservationDirectAction"),
-          children: [
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _ || _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Saving"),
-                    size: "small",
-                  }),
-                _,
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _().ErrorStylesWithIcon,
-                children: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_().reserverow, "ReservationUnavailable"),
-          children: (0, _.jsx)(_._, {
-            disabled: !0,
-            children: _._.Localize("#Sale_ReserveUnavailable"),
-          }),
-        });
-      }
-      function _(_) {
-        var _, _;
-        const { hardwareDetail: _, reservedHardwareDetail: _ } = _,
-          _ = _(_.packageid, null == _ ? void 0 : _.packageid),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplayCancelReservationButton"),
-          [_, _, _] = (0, _._)(),
-          _ = (0, _._)(null == _ ? void 0 : _.packageid),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_.packageid),
-          { data: _ } = (0, _._)(_);
-        let _ = _._.Localize("#Sale_ReserveNow_Change"),
-          _ = _._.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_2",
-            (0, _.jsx)("b", {
-              children:
-                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
-                  ? _
-                  : "",
-            }),
-          ),
-          _ = _._.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_1",
-            (0, _.jsx)("b", {
-              children:
-                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
-                  ? _
-                  : "",
-            }),
-          );
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
-          children: [
-            (0, _.jsx)(_, {
-              hardwareDetail: _,
-            }),
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Updating"),
-                    size: "small",
-                  }),
-                _,
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsxs)(_._, {
-                closeModal: _,
-                strTitle: _,
-                strOKButtonText: _._.Localize("#Button_Yes"),
-                strCancelButtonText: _._.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  _(!0),
-                    _.mutateAsync()
-                      .then((_) => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_ ||
-                            _(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .catch(() => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      });
-                },
-                children: [
-                  (0, _.jsx)("p", {
-                    children: _,
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("p", {
-                    children: _,
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("p", {
-                    children: _._.Localize("#Dialog_AreYouSure"),
-                  }),
-                ],
-              }),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19573,6 +19741,7 @@
           }),
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return !(
           _.requires_reservation ||
@@ -19764,7 +19933,7 @@
       }
       function _(_) {
         const { hardwareDetail: _ } = _;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           packageid: _.packageid,
           strAction: _._.Localize("#Sale_CancelReservation"),
           strDesc: _._.Localize("#Sale_Reservation_CancelAreYouSure_NoDeposit"),
@@ -19774,7 +19943,7 @@
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
           children: [
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
               ..._,
             }),
             (0, _.jsx)(_, {
@@ -19859,7 +20028,7 @@
       }
       function _(_) {
         const { hardwareDetail: _ } = _;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           packageid: _.packageid,
           label: _._.Localize("#Sale_ReserveNow_NoDeposit"),
         });
@@ -19876,7 +20045,7 @@
               ..._,
             });
           case _._.k_EPurchaseReservationState_UnavailableRegion:
-            return (0, _.jsx)(_, {});
+            return (0, _.jsx)(_._, {});
           case _._.k_EPurchaseReservationState_CancelPendingRefund:
           case _._.k_EPurchaseReservationState_NotReserved:
           case _._.k_EPurchaseReservationState_Consumed:
@@ -19888,7 +20057,7 @@
                 `Unexpected reservation package matches me ${null == _ ? void 0 : _.packageid} == ${_.packageid}`,
               ),
               _
-                ? (0, _.jsx)(_, {
+                ? (0, _.jsx)(_._, {
                     ..._,
                   })
                 : (0, _.jsx)(_, {
@@ -29390,14 +29559,40 @@
             })
           : null;
       }
-      function _(_) {
-        return null;
-      }
-      const _ = _;
-      function _(_) {
-        return null;
-      }
-      const _ = _;
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : function (_) {
+              return null;
+            };
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : function (_) {
+              return null;
+            };
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { hardwareDetail: _, storeItemReleaseInfo: _ } = _,
@@ -29476,8 +29671,7 @@
         if (
           _.requires_reservation &&
           !_.reservation_not_allowed &&
-          _.collection_time_active &&
-          _.collection_time_active > _._.NOW
+          _.collection_time_active
         )
           return (0, _.jsx)("div", {
             className: _.purchaseaction,
@@ -29488,6 +29682,8 @@
                   ? void 0
                   : _.reservation_advanced,
               storeItemReleaseInfo: _,
+              bShuffleInProgress: _.collection_time_active < _._.NOW,
+              bHasSomeReservation: !!_ && (0, _._)(_.reservation_state),
             }),
           });
         if (_ && _.is_coming_soon)
@@ -29637,12 +29833,24 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return null;
-      }
-      const _ = _;
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : function (_) {
+              return null;
+            };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -29922,71 +30130,64 @@
         if (!_ || 0 == _.length) return null;
         const _ = _._.GetELanguageFallback(_),
           _ =
-            (null === (_ = _.localized_product_config_title) || void 0 === _
+            ((null === (_ = _.localized_product_config_title) || void 0 === _
               ? void 0
               : _[_]) ||
-            (null === (_ = _.localized_product_config_title) || void 0 === _
-              ? void 0
-              : _[_]) ||
-            "",
-          _ = (0, _._)(_).filter((_) => _.some((_) => _.unique_id == _))[0],
+              null === (_ = _.localized_product_config_title) || void 0 === _ ||
+              _[_],
+            (0, _._)(_).filter((_) => _.some((_) => _.unique_id == _))[0]),
           _ = _.find((_) => _.unique_id == _);
-        return (0, _.jsxs)(_._, {
+        return (0, _.jsx)(_._, {
           direction: "column",
-          children: [
-            (0, _.jsx)(_._, {
-              className: _().Heading,
-              children: _,
-            }),
+          children:
             _.variations &&
-              (0, _.jsx)(_._.Root, {
-                value: _,
-                onValueChange: (_) => {
-                  const _ = (0, _._)(_).filter((_) => {
-                    var _;
-                    return !(null === (_ = _.variations) || void 0 === _
-                      ? void 0
-                      : _.some((_) => _.unique_id == _));
-                  });
-                  _.push(_.unique_id);
-                  const _ = (0, _._)(_),
-                    _ = _.find((_) => _.tuple_id == _);
-                  _ && _(_);
-                },
-                render: (_) =>
-                  (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                children: _.variations.map((_) =>
-                  (0, _.jsx)(
-                    _._.Option,
-                    {
-                      value: _,
-                      render: (_, { bSelected: _ }) => {
-                        var _;
-                        return (0, _.jsx)(_, {
-                          ..._,
-                          bSelected: _,
-                          language: _,
-                          selectedVariationID: _,
-                          variation: _,
-                          selected: _,
-                          packageID:
-                            null ===
-                              (_ = _.find(
-                                (_) => _.tuple_id == "" + _.unique_id,
-                              )) || void 0 === _
-                              ? void 0
-                              : _.package_id,
-                          rgPackageTuples: _,
-                        });
-                      },
+            (0, _.jsx)(_._.Root, {
+              value: _,
+              onValueChange: (_) => {
+                const _ = (0, _._)(_).filter((_) => {
+                  var _;
+                  return !(null === (_ = _.variations) || void 0 === _
+                    ? void 0
+                    : _.some((_) => _.unique_id == _));
+                });
+                _.push(_.unique_id);
+                const _ = (0, _._)(_),
+                  _ = _.find((_) => _.tuple_id == _);
+                _ && _(_);
+              },
+              render: (_) =>
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+              children: _.variations.map((_) =>
+                (0, _.jsx)(
+                  _._.Option,
+                  {
+                    value: _,
+                    render: (_, { bSelected: _ }) => {
+                      var _;
+                      return (0, _.jsx)(_, {
+                        ..._,
+                        bSelected: _,
+                        language: _,
+                        selectedVariationID: _,
+                        variation: _,
+                        selected: _,
+                        packageID:
+                          null ===
+                            (_ = _.find(
+                              (_) => _.tuple_id == "" + _.unique_id,
+                            )) || void 0 === _
+                            ? void 0
+                            : _.package_id,
+                        rgPackageTuples: _,
+                      });
                     },
-                    _.unique_id,
-                  ),
+                  },
+                  _.unique_id,
                 ),
-              }),
-          ],
+              ),
+            }),
         });
       }
       function _(_) {

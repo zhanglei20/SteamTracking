@@ -12781,12 +12781,12 @@
     10844: (e, t, a) => {
       "use strict";
       a.d(t, {
-        vx: () => Tr,
-        sq: () => xr,
-        ke: () => Er,
-        m: () => jr,
-        gB: () => Ir,
-        sL: () => Mr,
+        vx: () => jr,
+        sq: () => Cr,
+        ke: () => Mr,
+        m: () => Ir,
+        gB: () => Dr,
+        sL: () => Ar,
       });
       var n = a(7850),
         i = a(22837),
@@ -25668,8 +25668,16 @@
       }
       var cl = a(24570),
         ul = a(78686);
-      const _l = (e) => null;
-      function pl(e) {
+      const _l = c.lazy(() => a.e(9033).then(a.bind(a, 79033))),
+        pl = _l
+          ? function (e) {
+              return (0, n.jsx)(c.Suspense, {
+                fallback: null,
+                children: (0, n.jsx)(_l, { ...e }),
+              });
+            }
+          : (e) => null;
+      function ml(e) {
         const { fnOnDirty: t, saleSection: a, event: i } = e,
           [o, s, l, r] = (0, d.q3)(() => {
             var e, t, n, i, o;
@@ -25722,9 +25730,9 @@
               children:
                 "Note: If we are building out the page, and if the packages are not yet visible, make sure to be in ?beta=1 mode.",
             }),
-            (0, n.jsx)(ml, { ...e }),
             (0, n.jsx)(hl, { ...e }),
-            (0, n.jsx)(_l, {
+            (0, n.jsx)(gl, { ...e }),
+            (0, n.jsx)(pl, {
               settings: r,
               fnOnUpdate: (e) => {
                 (a.internal_section_data.reservation_advanced = e), t();
@@ -25742,7 +25750,7 @@
                   },
                   onReorder: t,
                   render: (e) =>
-                    (0, n.jsx)(gl, { event: i, reservation: e, fnOnDirty: t }),
+                    (0, n.jsx)(vl, { event: i, reservation: e, fnOnDirty: t }),
                 }),
                 (0, n.jsx)(m.$n, {
                   onClick: u,
@@ -25769,7 +25777,7 @@
           ],
         });
       }
-      function ml(e) {
+      function hl(e) {
         const { fnOnDirty: t, saleSection: a } = e,
           [i] = (0, d.q3)(() => {
             var e;
@@ -25807,7 +25815,7 @@
           ],
         });
       }
-      function hl(e) {
+      function gl(e) {
         const { fnOnDirty: t, saleSection: a, event: i } = e,
           [o] = (0, d.q3)(() => {
             var e;
@@ -25836,19 +25844,19 @@
           }),
         });
       }
-      function gl(e) {
+      function vl(e) {
         return (0, n.jsxs)("div", {
           children: [
-            (0, n.jsx)(vl, { ...e }),
-            (0, n.jsx)(bl, { ...e }),
-            (0, n.jsx)(fl, { ...e }),
             (0, n.jsx)(Sl, { ...e }),
+            (0, n.jsx)(fl, { ...e }),
             (0, n.jsx)(yl, { ...e }),
+            (0, n.jsx)(bl, { ...e }),
             (0, n.jsx)(wl, { ...e }),
+            (0, n.jsx)(xl, { ...e }),
           ],
         });
       }
-      function vl(e) {
+      function Sl(e) {
         const { reservation: t, fnOnDirty: a, event: i } = e,
           [o] = (0, d.q3)(() => [t.reservation_package]);
         (0, ll.oc)(o);
@@ -25862,7 +25870,7 @@
           },
         });
       }
-      function Sl(e) {
+      function bl(e) {
         const { reservation: t, fnOnDirty: a, event: o } = e,
           [s, l, r, u] = (0, d.q3)(() => {
             var e, a;
@@ -25908,6 +25916,12 @@
               },
               children: "Use Package Description?",
             }),
+            r &&
+              u &&
+              (0, n.jsx)("a", {
+                href: `${Pn.TS.PARTNER_BASE_URL}admin/store/package/${null != u ? u : 0}?activetab=tab_description`,
+                children: "Open Package Description Editor",
+              }),
             !r &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
@@ -25945,7 +25959,7 @@
           ],
         });
       }
-      function bl(e) {
+      function fl(e) {
         const { reservation: t, fnOnDirty: a, event: i } = e;
         return (0, n.jsx)(n.Fragment, {
           children: (0, n.jsx)("div", {
@@ -25954,7 +25968,7 @@
           }),
         });
       }
-      function fl(e) {
+      function yl(e) {
         const { reservation: t, fnOnDirty: a, event: i } = e,
           [o] = (0, d.q3)(() => [t.psu_less_package]);
         return (0, n.jsx)(dl, {
@@ -25967,7 +25981,7 @@
           },
         });
       }
-      function yl(e) {
+      function wl(e) {
         const { reservation: t, fnOnDirty: a, event: o } = e,
           [s, l] = (0, d.q3)(() => {
             var e, a;
@@ -26025,7 +26039,7 @@
               }),
         });
       }
-      function wl(e) {
+      function xl(e) {
         const { reservation: t, fnOnDirty: a, event: o } = e,
           [s, l, r] = (0, d.q3)(() => {
             var e, a;
@@ -26105,8 +26119,8 @@
               }),
         });
       }
-      var xl = a(5058);
-      function Cl(e) {
+      var Cl = a(5058);
+      function Tl(e) {
         const { fnOnDirty: t, saleSection: a, event: i } = e,
           [o, s] = (0, d.q3)(() => {
             var e, t;
@@ -26163,7 +26177,7 @@
                   onDelete: r,
                   onReorder: t,
                   render: (e) =>
-                    (0, n.jsx)(jl, { event: i, supply: e, fnOnDirty: t }),
+                    (0, n.jsx)(Il, { event: i, supply: e, fnOnDirty: t }),
                 }),
                 (0, n.jsx)(m.$n, {
                   onClick: l,
@@ -26175,15 +26189,15 @@
           ],
         });
       }
-      const Tl = { include_basic_info: !0, include_all_purchase_options: !0 };
-      function jl(e) {
+      const jl = { include_basic_info: !0, include_all_purchase_options: !0 };
+      function Il(e) {
         const { supply: t, fnOnDirty: a, event: o } = e,
           [s, l, r] = (0, d.q3)(() => [
             ye.O.Get().GetCurEditLanguage(),
             t.supply_package,
             t.localized_supply_desc || [],
           ]),
-          [u, _] = (0, Ei.Gg)(l, Tl),
+          [u, _] = (0, Ei.Gg)(l, jl),
           p = (0, c.useCallback)(
             (e) => {
               (t.localized_supply_desc = (0, L.$Y)(r || [], i.bP9, null)),
@@ -26236,7 +26250,7 @@
                   u.GetBestPurchasePriceFormatted(),
                 ],
               }),
-            (0, n.jsx)(xl.fh, {
+            (0, n.jsx)(Cl.fh, {
               text: v,
               partnerEventStore: Pt.O3,
               showErrorInfo: !0,
@@ -26250,7 +26264,7 @@
           ],
         });
       }
-      const Il = (0, r.PA)((e) => {
+      const Dl = (0, r.PA)((e) => {
         const { editModel: t, saleSection: a, index: i } = e,
           { internal_section_data: s } = a,
           l = [
@@ -26339,13 +26353,13 @@
                 },
               }),
             Boolean("reservation_widget" === r) &&
-              (0, n.jsx)(pl, {
+              (0, n.jsx)(ml, {
                 event: t.GetEventModel(),
                 saleSection: a,
                 fnOnDirty: () => t.SetDirty(o.IQ.jsondata_sales),
               }),
             Boolean("while_supplies_last" === r) &&
-              (0, n.jsx)(Cl, {
+              (0, n.jsx)(Tl, {
                 event: t.GetEventModel(),
                 saleSection: a,
                 fnOnDirty: () => t.SetDirty(o.IQ.jsondata_sales),
@@ -26353,10 +26367,10 @@
           ],
         });
       });
-      var Dl = a(26378),
-        El = a.n(Dl),
-        Ml = (a(97471), a(52471));
-      function Al(e) {
+      var El = a(26378),
+        Ml = a.n(El),
+        Al = (a(97471), a(52471));
+      function kl(e) {
         var t;
         const { saleSection: a, editModel: i } = e,
           [s, l] = (0, d.q3)(() => [
@@ -26364,7 +26378,7 @@
             a.trailer_carousel_intro_trailer_base_id,
           ]),
           r = (0, ll.$5)(s ? Number.parseInt(s) : void 0),
-          c = (0, Ml.BF)(r, l ? Number.parseInt(l) : void 0),
+          c = (0, Al.BF)(r, l ? Number.parseInt(l) : void 0),
           u =
             null === (t = null == c ? void 0 : c.microtrailer) || void 0 === t
               ? void 0
@@ -26412,15 +26426,15 @@
           ],
         });
       }
-      function kl(e) {
+      function Gl(e) {
         return (0, n.jsx)("div", {
-          className: El().IntroVideoAppMismatchWarning,
+          className: Ml().IntroVideoAppMismatchWarning,
           children: (0, M.we)(
             "#Sale_TrailerCarouselType_IntroVideoAppMismatchWarning",
           ),
         });
       }
-      function Gl(e) {
+      function Bl(e) {
         const { editModel: t } = e,
           a = (0, d.q3)(() => t.GetClanAccountID()),
           { creatorHome: i, isFetching: o } = (0, ze.FV)(a),
@@ -26457,7 +26471,7 @@
                     children:
                       null == s
                         ? void 0
-                        : s.map((e) => (0, n.jsx)(Bl, { list: e }, e.listid())),
+                        : s.map((e) => (0, n.jsx)(Ll, { list: e }, e.listid())),
                   }),
                 ],
               }),
@@ -26469,7 +26483,7 @@
           ],
         });
       }
-      function Bl(e) {
+      function Ll(e) {
         const { list: t } = e,
           a = t.list_state() == Ue.eb.N0,
           i = a
@@ -26480,7 +26494,7 @@
           children: i,
         });
       }
-      function Ll(e) {
+      function Nl(e) {
         const t = (0, d.q3)(() => e.saleSection.section_type);
         switch (t) {
           case "items":
@@ -26504,7 +26518,7 @@
           case "curator":
             return (0, n.jsx)(Ka, { ...e });
           case "vo_internal":
-            return (0, n.jsx)(Il, { ...e });
+            return (0, n.jsx)(Dl, { ...e });
           case "tabs":
             return (0, n.jsx)($i.$X, { ...e });
           case "tab_buttons":
@@ -26537,7 +26551,7 @@
           case "discoveryqueue":
             return (0, n.jsx)(xe, { ...e });
           case "trailercarousel":
-            return (0, n.jsx)(Al, { ...e });
+            return (0, n.jsx)(kl, { ...e });
           case "quest":
             return (0, n.jsx)(vi, { ...e });
           case "sale_events":
@@ -26547,7 +26561,7 @@
           case "creator_list":
             return (0, n.jsx)(qe, { ...e });
           case "creator_list_of_lists":
-            return (0, n.jsx)(Gl, { ...e });
+            return (0, n.jsx)(Bl, { ...e });
           case "point_shop_smart":
             return (0, n.jsx)(gi, { ...e });
           case "claim_item":
@@ -26578,8 +26592,8 @@
             return (0, n.jsx)(yt, { ...e });
         }
       }
-      var Nl = a(64969);
-      function Ol(e) {
+      var Ol = a(64969);
+      function Pl(e) {
         var t;
         const { obj: a, fnMarkDirty: i } = e,
           o = (0, d.q3)(() => a.package_allow_list),
@@ -26624,9 +26638,9 @@
               }),
         });
       }
-      var Pl = a(30894),
-        Rl = a(34854);
-      function Fl(e) {
+      var Rl = a(30894),
+        Fl = a(34854);
+      function Hl(e) {
         const { obj: t, fnMarkDirty: a } = e,
           i = (0, d.q3)(() => t.hardware_allow_list),
           [o, s] = c.useState((null == i ? void 0 : i.length) > 0),
@@ -26644,15 +26658,15 @@
             o &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
-                  ((r = Pl.NO),
+                  ((r = Rl.NO),
                   Object.values(r)
                     .filter((e) => "number" == typeof e)
                     .map((e) => e)).map((e) =>
                     (0, n.jsx)(
                       m.Yh,
                       {
-                        className: Rl.SubCheckbox,
-                        label: Pl.NO[e],
+                        className: Fl.SubCheckbox,
+                        label: Rl.NO[e],
                         checked: l.has(e),
                         onChange: (n) =>
                           ((e, n) => {
@@ -26671,7 +26685,7 @@
         });
         var r;
       }
-      function Hl(e) {
+      function zl(e) {
         const { saleSection: t, editModel: a } = e,
           [i, s, l, r] = (0, d.q3)(() => [
             t.disable_section,
@@ -26754,7 +26768,7 @@
           ],
         });
       }
-      function zl(e) {
+      function Ul(e) {
         const { editModel: t, saleSection: a } = e,
           [i, s, l] = (0, d.q3)(() => [
             a.hide_section || !1,
@@ -26866,35 +26880,35 @@
                       t.SetDirty(o.IQ.jsondata_sales));
                   },
                 }),
-                (0, n.jsx)(Nl.l, {
+                (0, n.jsx)(Ol.l, {
                   obj: a,
                   fnMarkDirty: () => t.SetDirty(o.IQ.jsondata_sales),
                 }),
-                (0, n.jsx)(Ol, {
+                (0, n.jsx)(Pl, {
                   obj: a,
                   fnMarkDirty: () => t.SetDirty(o.IQ.jsondata_sales),
                 }),
-                (0, n.jsx)(Fl, {
+                (0, n.jsx)(Hl, {
                   obj: a,
                   fnMarkDirty: () => t.SetDirty(o.IQ.jsondata_sales),
                 }),
-                (0, n.jsx)(Hl, { ...e }),
+                (0, n.jsx)(zl, { ...e }),
               ],
             }),
           ],
         });
       }
-      var Ul = a(66845),
-        ql = a.n(Ul),
-        Vl = a(51877),
-        Ql = a(48474),
-        Wl = a(90534),
-        Yl = a(83392),
-        $l = a(11967),
-        Xl = a(22347),
-        Kl = a(29385),
-        Jl = a(98069);
-      function Zl(e) {
+      var ql = a(66845),
+        Vl = a.n(ql),
+        Ql = a(51877),
+        Wl = a(48474),
+        Yl = a(90534),
+        $l = a(83392),
+        Xl = a(11967),
+        Kl = a(22347),
+        Jl = a(29385),
+        Zl = a(98069);
+      function er(e) {
         const { saleSection: t } = e;
         return (
           (0, c.useEffect)(() => {
@@ -26905,14 +26919,14 @@
               });
           }, [t]),
           t.internal_section_data.reservation_layout
-            ? (0, n.jsx)(er, {
+            ? (0, n.jsx)(tr, {
                 ...e,
                 reservation_layout: t.internal_section_data.reservation_layout,
               })
             : null
         );
       }
-      function er(e) {
+      function tr(e) {
         const { editModel: t, reservation_layout: a, saleSection: i } = e,
           [s, l, r, c, u] = (0, d.q3)(() => {
             var e;
@@ -26930,7 +26944,7 @@
           _ = () => t.SetDirty(o.IQ.jsondata_sales);
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsx)(Vl.z, {
+            (0, n.jsx)(Ql.z, {
               options: ["vertical", "horizontal"],
               value: s,
               onValueChange: (e) => {
@@ -26969,7 +26983,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsx)(tr, {
+                  (0, n.jsx)(ar, {
                     fnOnDirty: _,
                     reservation_layout: a,
                     nReservationPackageCount: u,
@@ -26980,7 +26994,7 @@
           ],
         });
       }
-      function tr(e) {
+      function ar(e) {
         const {
           fnOnDirty: t,
           reservation_layout: a,
@@ -26988,17 +27002,17 @@
         } = e;
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsx)(sr, {
+            (0, n.jsx)(lr, {
               reservation_layout: a,
               nReservationPackageCount: i,
             }),
-            (0, n.jsx)(nr, { ...e }),
-            (0, n.jsx)(ar, { fnOnDirty: t, reservation_layout: a }),
-            (0, n.jsx)(rr, { ...e }),
+            (0, n.jsx)(ir, { ...e }),
+            (0, n.jsx)(nr, { fnOnDirty: t, reservation_layout: a }),
+            (0, n.jsx)(dr, { ...e }),
           ],
         });
       }
-      function ar(e) {
+      function nr(e) {
         const { fnOnDirty: t, reservation_layout: a } = e,
           [o] = (0, d.q3)(() => [a.product_configs || []]),
           [s, l] = (0, c.useState)(null),
@@ -27018,13 +27032,13 @@
               },
               onReorder: t,
               render: (e) =>
-                (0, n.jsx)(ir, {
+                (0, n.jsx)(or, {
                   fnOnDirty: t,
                   productConfig: e,
                   rgAllProductConfig: o,
                 }),
             }),
-            (0, n.jsx)(Ql.$, {
+            (0, n.jsx)(Wl.$, {
               onClick: () => {
                 a.product_configs || (a.product_configs = []);
                 let e = Math.floor(1 + 1e5 * Math.random());
@@ -27058,25 +27072,25 @@
           ],
         });
       }
-      function nr(e) {
+      function ir(e) {
         const { fnOnDirty: t, reservation_layout: a } = e,
           [i, o] = (0, d.q3)(() => [
             a.product_config_background_color,
             a.product_config_selected_color,
           ]),
-          s = (0, Jl._)({
+          s = (0, Zl._)({
             fnOnSetDirty: t,
             section: a,
             property: "product_config_background_color",
             color: i,
           }),
-          l = (0, Jl._)({
+          l = (0, Zl._)({
             fnOnSetDirty: t,
             section: a,
             property: "product_config_selected_color",
             color: o,
           });
-        return (0, n.jsxs)(Wl.az, {
+        return (0, n.jsxs)(Yl.az, {
           children: [
             (0, n.jsx)("br", {}),
             (0, n.jsx)(el.D, { children: "Color Controls" }),
@@ -27097,7 +27111,7 @@
           ],
         });
       }
-      function ir(e) {
+      function or(e) {
         const { productConfig: t, fnOnDirty: a, rgAllProductConfig: o } = e,
           [s, l, r] = (0, d.q3)(() => {
             var e;
@@ -27140,9 +27154,9 @@
                 _(e), m();
               },
               onReorder: a,
-              render: (e) => (0, n.jsx)(or, { fnOnDirty: a, variation: e }),
+              render: (e) => (0, n.jsx)(sr, { fnOnDirty: a, variation: e }),
             }),
-            (0, n.jsx)(Ql.$, {
+            (0, n.jsx)(Wl.$, {
               onClick: () => {
                 t.variations || (t.variations = []);
                 let e = Math.floor(1 + 1e5 * Math.random());
@@ -27178,7 +27192,7 @@
           ],
         });
       }
-      function or(e) {
+      function sr(e) {
         const { fnOnDirty: t, variation: a } = e,
           [o, s] = (0, d.q3)(() => {
             var e;
@@ -27216,9 +27230,9 @@
           ],
         });
       }
-      function sr(e) {
+      function lr(e) {
         const { reservation_layout: t, nReservationPackageCount: a } = e,
-          [i] = (0, d.q3)(() => [lr(null == t ? void 0 : t.product_configs)]);
+          [i] = (0, d.q3)(() => [rr(null == t ? void 0 : t.product_configs)]);
         return a != i
           ? (0, n.jsxs)("div", {
               className:
@@ -27233,7 +27247,7 @@
             })
           : null;
       }
-      function lr(e) {
+      function rr(e) {
         return e
           ? e.reduce((e, t) => {
               var a, n;
@@ -27250,7 +27264,7 @@
             }, 1)
           : 0;
       }
-      function rr(e) {
+      function dr(e) {
         const {
             fnOnDirty: t,
             reservation_layout: a,
@@ -27290,17 +27304,17 @@
             }),
             s.map((e) =>
               (0, n.jsx)(
-                dr,
+                cr,
                 {
                   fnOnDirty: t,
                   reservation_layout: a,
                   singleVariationCombination: e,
                   rgPackageIDs: l,
                 },
-                (0, Xl.rd)(e),
+                (0, Kl.rd)(e),
               ),
             ),
-            (0, n.jsx)(Ql.$, {
+            (0, n.jsx)(Wl.$, {
               onClick: () => {
                 (a.package_to_config_tuple = []), t();
               },
@@ -27309,15 +27323,15 @@
           ],
         });
       }
-      function dr(e) {
+      function cr(e) {
         const {
             fnOnDirty: t,
             singleVariationCombination: a,
             reservation_layout: i,
             rgPackageIDs: o,
           } = e,
-          s = (0, Xl.rd)(a),
-          l = (0, Kl.jE)(),
+          s = (0, Kl.rd)(a),
+          l = (0, Jl.jE)(),
           r = (0, ye.E)(),
           [c, u] = (0, d.q3)(() => {
             var e;
@@ -27340,14 +27354,14 @@
             .join(" x ");
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsxs)(Yl.s, {
+            (0, n.jsxs)($l.s, {
               align: "start",
               justify: "between",
               children: [
                 (0, n.jsx)(il.EY, { children: _ }),
                 c && c.tuple_id === u
                   ? (0, n.jsx)(il.EY, { children: "This is Default" })
-                  : (0, n.jsx)(Ql.$, {
+                  : (0, n.jsx)(Wl.$, {
                       onClick: () => {
                         c && ((i.default_tuple_id = c.tuple_id), t());
                       },
@@ -27355,7 +27369,7 @@
                     }),
               ],
             }),
-            (0, n.jsx)($l.l6, {
+            (0, n.jsx)(Xl.l6, {
               options: o,
               selectedValue: c ? c.package_id : void 0,
               onSelectionChange: (e) => {
@@ -27380,20 +27394,20 @@
           ],
         });
       }
-      var cr = a(54614),
-        ur = a.n(cr),
-        _r = a(17098),
-        pr = a(60860);
-      function mr(e) {
+      var ur = a(54614),
+        _r = a.n(ur),
+        pr = a(17098),
+        mr = a(60860);
+      function hr(e) {
         return null == e || "" === e || /^[a-z0-9_-]+$/.test(e);
       }
-      function hr(e) {
+      function gr(e) {
         var t;
         const { strHash: a, setHash: i } = e,
           [o, s] = c.useState(a);
         let l;
         return (
-          mr(o) ||
+          hr(o) ||
             (l = (0, n.jsx)("span", {
               children: rl.F5.Localize("#AnchorHashInputInvalid"),
             })),
@@ -27401,7 +27415,7 @@
             clearable: !1,
             value: null !== (t = null != o ? o : a) && void 0 !== t ? t : "",
             onValueChange: (e) => {
-              mr(e) ? (i(e), s(void 0)) : s(e);
+              hr(e) ? (i(e), s(void 0)) : s(e);
             },
             valueToString: (e) => e,
             valueFromString: (e) => e,
@@ -27409,7 +27423,7 @@
           })
         );
       }
-      const gr = (0, r.PA)((e) => {
+      const vr = (0, r.PA)((e) => {
         const { saleSection: t, editModel: a } = e,
           s = a.GetCurEditLanguage(),
           [r, c, u, _, p, h, v, S, f, y, w, x, C] = (0, d.q3)(() => [
@@ -27428,13 +27442,13 @@
             t.section_anchor,
           ]),
           T = Boolean(M.NT.GetWithFallback(c, s)),
-          j = T || _r.a.IsValidTitleOption(r, "label");
+          j = T || pr.a.IsValidTitleOption(r, "label");
         let I = 0;
         null == _ ||
           _.forEach((e) => {
             I += e ? 1 : 0;
           });
-        const E = (0, pr.yD)(),
+        const E = (0, mr.yD)(),
           A =
             !!(0, Fe.s0)(t, a.GetEventModel(), E.eLocation) ||
             "title_image" == t.section_type,
@@ -27453,7 +27467,7 @@
                   (0, n.jsx)(m.JU, {
                     children: (0, M.we)("#EventEditor_Event_SectionTitle"),
                   }),
-                  (0, n.jsx)(_r.a, {
+                  (0, n.jsx)(pr.a, {
                     default_label: r,
                     localized_label: c,
                     editModel: e.editModel,
@@ -27550,7 +27564,7 @@
                     },
                     value: u,
                   }),
-                  (0, n.jsx)(vr, { saleSection: t, editModel: a }),
+                  (0, n.jsx)(Sr, { saleSection: t, editModel: a }),
                 ],
               }),
             (!A || k) &&
@@ -27560,7 +27574,7 @@
                   (0, n.jsx)(m.JU, {
                     children: (0, M.we)("#EventEditor_Event_SubTitle"),
                   }),
-                  (0, n.jsx)(_r.a, {
+                  (0, n.jsx)(pr.a, {
                     nameType: "subtitle",
                     default_label: p,
                     localized_label: h,
@@ -27629,7 +27643,7 @@
                 (0, n.jsx)("p", {
                   children: (0, M.we)("#Sale_Section_Anchor_dsec"),
                 }),
-                (0, n.jsx)(hr, {
+                (0, n.jsx)(gr, {
                   strHash: C,
                   setHash: (e) => {
                     t.section_anchor != e &&
@@ -27641,7 +27655,7 @@
           ],
         });
       });
-      function vr(e) {
+      function Sr(e) {
         const { saleSection: t, editModel: a } = e,
           [i] = (0, d.q3)(() => [t.label_link_style]);
         if (!t.label_link) return null;
@@ -27658,7 +27672,7 @@
           }),
         });
       }
-      function Sr(e) {
+      function br(e) {
         const { saleSection: t, editModel: a, visible: i } = e,
           [s, l, r] = (0, ae.uD)(),
           [d, u] = c.useState(void 0);
@@ -27666,7 +27680,7 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)("div", {
-              className: ur().EditInternalTitleIcon,
+              className: _r().EditInternalTitleIcon,
               onClick: (e) => {
                 u(JSON.parse(JSON.stringify(t))),
                   l(),
@@ -27687,24 +27701,24 @@
                     Object.assign(t, d), a.SetDirty(o.IQ.jsondata_sales), r();
                   },
                   closeModal: r,
-                  children: (0, n.jsx)(gr, { editModel: a, saleSection: t }),
+                  children: (0, n.jsx)(vr, { editModel: a, saleSection: t }),
                 }),
               }),
             }),
           ],
         });
       }
-      var br = a(86927),
-        fr = a(50607),
-        yr = a(98924),
-        wr = a(27939);
-      function xr(e, t, a) {
+      var fr = a(86927),
+        yr = a(50607),
+        wr = a(98924),
+        xr = a(27939);
+      function Cr(e, t, a) {
         return e.disable_background
           ? { background: "transparent" }
           : (0, w.Vb)(e, t, a);
       }
-      const Cr = ["tabs", "social_share"];
-      function Tr(e) {
+      const Tr = ["tabs", "social_share"];
+      function jr(e) {
         return [
           "broadcast",
           "sale_item_browser",
@@ -27717,7 +27731,7 @@
           "social_share",
         ].includes(e);
       }
-      const jr = (0, r.PA)((e) => {
+      const Ir = (0, r.PA)((e) => {
         var t, a;
         const {
             saleSection: i,
@@ -27759,7 +27773,7 @@
           L = ((N = !0), (0, s.Nx)((0, s.LY)(i), N));
         var N;
         const O = c.useRef(void 0),
-          P = (0, br.BZ)(O),
+          P = (0, fr.BZ)(O),
           [R, F] = c.useState(!1),
           H = (0, f.cv)(),
           { bHighlighted: z, fnJumpTo: U } = (function (e, t, a) {
@@ -27779,7 +27793,7 @@
               F(!0);
           }),
           [q, V] = (0, d.q3)(() => [r.GetClanSteamID(), r.GetEventType()]),
-          W = (0, fr.q)(q, V),
+          W = (0, yr.q)(q, V),
           {
             sale_font: $,
             sale_section_font_size: X,
@@ -27789,7 +27803,7 @@
           Z =
             "event_schedule" !== i.section_type &&
             "broadcast" !== i.section_type,
-          ee = r.GetClanSteamID().GetAccountID() == wr.bv,
+          ee = r.GetClanSteamID().GetAccountID() == xr.bv,
           te =
             "unselected_empty" != (ne = i.section_type) && "tab_buttons" != ne;
         var ne;
@@ -27798,7 +27812,7 @@
             (null === (t = null == ie ? void 0 : ie.tabs) || void 0 === t
               ? void 0
               : t.length) > 0,
-          se = !Cr.includes(i.section_type),
+          se = !Tr.includes(i.section_type),
           re = (function (e, t) {
             return "vo_internal" == e
               ? "reservation_widget" == t
@@ -27830,7 +27844,7 @@
                 h.push({
                   name: (0, M.we)("#Sale_Section_EditTab_Contents"),
                   key: "contents",
-                  contents: (0, n.jsx)(Ll, { ...i }),
+                  contents: (0, n.jsx)(Nl, { ...i }),
                 }),
               u)
             ) {
@@ -27843,7 +27857,7 @@
                     name: (0, M.we)("#Sale_Section_EditTab_Layout"),
                     key: "display",
                     contents: (0, n.jsx)(
-                      Zl,
+                      er,
                       { editModel: e, saleSection: t },
                       "SaleSectionDisplayOptions",
                     ),
@@ -27895,7 +27909,7 @@
                 contents: (0, n.jsx)(D.E, {
                   clanSteamID: e.GetClanSteamID(),
                   requireAdmin: !0,
-                  className: ql().SectionOverrideCtn,
+                  className: Vl().SectionOverrideCtn,
                   children: (0, n.jsx)(m.pd, {
                     value: t.contenthub_override_section,
                     onChange: a,
@@ -27912,7 +27926,7 @@
                   name: (0, M.we)("#Sale_Section_EditTab_Visibility"),
                   tooltip: (0, M.we)("#Sale_Section_EditTab_Visibility_ttip"),
                   key: "visibility",
-                  contents: (0, n.jsx)(zl, { ...i }),
+                  contents: (0, n.jsx)(Ul, { ...i }),
                 }),
               p &&
                 h.push({
@@ -27963,7 +27977,7 @@
                     "coverBlur" == i.background_repeat ? h.Blur : "",
                   ),
                   style: {
-                    ...xr(i, r.GetEventModel(), !1),
+                    ...Cr(i, r.GetEventModel(), !1),
                     opacity: I ? 0 : 1,
                     transition: "opacity 500ms",
                   },
@@ -27992,7 +28006,7 @@
                             eventModel: r.GetEventModel(),
                             index: g,
                           }),
-                          (0, n.jsx)(Sr, {
+                          (0, n.jsx)(br, {
                             saleSection: i,
                             editModel: r,
                             visible: !L,
@@ -28035,7 +28049,7 @@
                       expanded: !L,
                     }),
                   }),
-                (0, n.jsx)(Dr, {
+                (0, n.jsx)(Er, {
                   editModel: r,
                   section: i,
                   tabSection: ie,
@@ -28048,7 +28062,7 @@
                         placeholderHeight: "300px",
                         rootMargin: "0px 0px 100% 0px",
                         className: b.SectionTypePicker,
-                        children: (0, n.jsx)(Ir, {
+                        children: (0, n.jsx)(Dr, {
                           rgSectionTypeInfos: W,
                           sectionType: J,
                           fnSetSectionType: (e) => {
@@ -28071,7 +28085,7 @@
               ],
             });
       });
-      function Ir(e) {
+      function Dr(e) {
         const {
             rgSectionTypeInfos: t,
             sectionType: a,
@@ -28116,13 +28130,13 @@
           ],
         });
       }
-      const Dr = (e) => {
+      const Er = (e) => {
           const { editModel: t, section: a, tabSection: o, minimized: s } = e,
             l = (0, d.q3)(() =>
               (function (e, t) {
                 let a = "";
-                (0, yr.lf)(e) && t && t.tabs && t.tabs.length > 0
-                  ? (0, yr.bq)(e, t.tabs).forEach((e) => {
+                (0, wr.lf)(e) && t && t.tabs && t.tabs.length > 0
+                  ? (0, wr.bq)(e, t.tabs).forEach((e) => {
                       a.length > 0 && (a += ", ");
                       let n = t.tabs.find((t) => t.unique_id == e);
                       a += n
@@ -28202,7 +28216,7 @@
                                 (0, n.jsx)("br", {}),
                               ],
                             }),
-                          (0, n.jsx)(kl, {}),
+                          (0, n.jsx)(Gl, {}),
                         ],
                       })
                     : r),
@@ -28210,7 +28224,7 @@
               (0, n.jsx)("div", { className: b.SectionSummaryCtn, children: c })
           );
         },
-        Er = (0, r.PA)((e) => {
+        Mr = (0, r.PA)((e) => {
           var t, a;
           const { editModel: i } = e,
             [s, l] = (0, c.useState)(!1),
@@ -28278,7 +28292,7 @@
                           };
                           (i.GetEventModel().jsondata.source_content_hub = e),
                             i.GetEventModel().jsondata
-                              .bAutoUpdateVanityURLForContentHub && Mr(e, i);
+                              .bAutoUpdateVanityURLForContentHub && Ar(e, i);
                         }
                         i.SetDirty(o.IQ.jsondata_sales);
                       },
@@ -28288,7 +28302,7 @@
               : (0, n.jsx)(T.t, { size: "medium", position: "center" }),
           });
         });
-      function Mr(e, t) {
+      function Ar(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {

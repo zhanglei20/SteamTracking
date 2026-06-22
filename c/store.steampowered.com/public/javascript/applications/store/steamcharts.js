@@ -5755,7 +5755,28 @@
             () => window.removeEventListener("resize", _)
           ),
           [_],
-        );
+        ),
+          _.useEffect(() => {
+            const _ = () => {
+              const _ = window?.location?.hash;
+              if (_) {
+                const _ = document.getElementById(
+                  decodeURIComponent(_.substring(1).toLowerCase()),
+                );
+                _ &&
+                  _.scrollIntoView({
+                    block: "start",
+                  });
+              }
+            };
+            return (
+              _(),
+              window.addEventListener("hashchange", _),
+              () => {
+                window.removeEventListener("hashchange", _);
+              }
+            );
+          }, []);
         const _ = (0, _._)(),
           _ = (_, _) => {
             (0, _._)(_, {
@@ -5940,7 +5961,7 @@
             bExpanded: _,
             children: _,
           } = _,
-          _ = _._ + (_.unique_id || _),
+          _ = _.section_anchor ? _.section_anchor : _._ + (_.unique_id || _),
           _ = "tabs" != _.section_type,
           [_, _] = (0, _.useState)(!0);
         return _

@@ -849,9 +849,9 @@
         I = t(78327),
         j = t(45699),
         S = t(69484),
-        f = t(73023),
-        w = t(73003),
-        k = t.n(w);
+        w = t(73023),
+        f = t(73003),
+        k = t.n(f);
       function C(e) {
         const { event: n, subMenu: t, language: o } = e,
           i = (0, I.Qn)(),
@@ -868,7 +868,7 @@
           },
           children: (0, a.jsx)("div", {
             className: k().SubMenuCtn,
-            style: { ...(0, f.Vb)(t, n, i) },
+            style: { ...(0, w.Vb)(t, n, i) },
             children: t.menu_items.map((e) =>
               (0, a.jsx)(
                 "div",
@@ -1426,7 +1426,7 @@
           );
         }
         return (0, a.jsx)(
-          we,
+          fe,
           {
             eventModel: e,
             displayDef: r,
@@ -1435,7 +1435,7 @@
               r &&
               r.randomize_section_order &&
               t !== je.S.EPreviewMode_EditBackground
-                ? (0, a.jsx)(fe, {
+                ? (0, a.jsx)(we, {
                     clanEventGID: e.GID,
                     elSaleSections: n.elSaleSections,
                   })
@@ -1444,7 +1444,7 @@
           "background_group_" + n.groupID,
         );
       }
-      function fe(e) {
+      function we(e) {
         const { clanEventGID: n, elSaleSections: t } = e,
           [o, r] = (0, ve.M)(`sale_section_seed_${n}`, (0, be.m)());
         if (!t || 0 === t.length) return null;
@@ -1454,7 +1454,7 @@
         }
         return (0, a.jsx)(a.Fragment, { children: t });
       }
-      function we(e) {
+      function fe(e) {
         const {
             displayDef: n,
             children: t,
@@ -2102,14 +2102,14 @@
         });
       }
       var Sn,
-        fn = t(37085);
+        wn = t(37085);
       !(function (e) {
         (e[(e.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
           (e[(e.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
           (e[(e.k_eShowImageGroup = 3)] = "k_eShowImageGroup"),
           (e[(e.k_eInsertVideo = 4)] = "k_eInsertVideo");
       })(Sn || (Sn = {}));
-      var wn = t(82429),
+      var fn = t(82429),
         kn = t(29347),
         Cn = t(96236),
         En = t(53732),
@@ -2229,7 +2229,7 @@
             $e.pU
               .DeleteClanImage(e, n)
               .then((e) => {
-                e.success != fn.R && g((0, tn.H)(e).strErrorMsg), c(!1);
+                e.success != wn.R && g((0, tn.H)(e).strErrorMsg), c(!1);
               })
               .catch((e) => {
                 g((0, tn.H)(e).strErrorMsg), c(!1);
@@ -2354,7 +2354,7 @@
             fnOnOpenLocalizedImageGroup: t,
             bDeleting: o,
           } = e,
-          r = (0, wn.Ec)(n.clanAccountID);
+          r = (0, fn.Ec)(n.clanAccountID);
         return o || !r.valve_admin
           ? null
           : (0, a.jsx)("span", {
@@ -2829,7 +2829,7 @@
           (0, ut.WC)(void 0 !== t ? void 0 : n, v, p, j) ??
           (void 0 !== t ? [t] : []);
         l && S && (S = l(S));
-        const f = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
+        const w = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
         return (0, a.jsx)(u.Fragment, {
           children: (0, a.jsx)("div", {
             className: gt().MajorEvent_Ctn,
@@ -2882,7 +2882,7 @@
                                 }),
                                 (0, a.jsx)("div", {
                                   className: gt().MajorEventSummary,
-                                  children: f,
+                                  children: w,
                                 }),
                               ],
                             }),
@@ -2977,19 +2977,19 @@
                     side: "broadcast_right" === t ? "right" : "left",
                   }),
                 "sale_header" === t && (0, a.jsx)(St, { imgURL: _ }),
-                "sale_overlay" === t && (0, a.jsx)(ft, { imgURL: _ }),
+                "sale_overlay" === t && (0, a.jsx)(wt, { imgURL: _ }),
                 Kn.pb.includes(t) &&
                   (0, a.jsx)("img", {
                     className: et.PreviewImg,
                     src:
                       en.R.GetLocalizedImageGroupForEditAsURL(r, n) ?? void 0,
                   }),
-                "product_banner" === t && (0, a.jsx)(wt, { imgURL: _ }),
-                "product_mobile_banner" === t && (0, a.jsx)(wt, { imgURL: _ }),
-                "sale_logo" === t && (0, a.jsx)(wt, { imgURL: _ }),
-                "bestofyear_banner" === t && (0, a.jsx)(wt, { imgURL: _ }),
+                "product_banner" === t && (0, a.jsx)(ft, { imgURL: _ }),
+                "product_mobile_banner" === t && (0, a.jsx)(ft, { imgURL: _ }),
+                "sale_logo" === t && (0, a.jsx)(ft, { imgURL: _ }),
+                "bestofyear_banner" === t && (0, a.jsx)(ft, { imgURL: _ }),
                 "bestofyear_banner_mobile" === t &&
-                  (0, a.jsx)(wt, { imgURL: _ }),
+                  (0, a.jsx)(ft, { imgURL: _ }),
                 (0, a.jsx)(ot, {
                   langOverride: n,
                   clanSteamID: r,
@@ -3196,7 +3196,7 @@
               src: e.imgURL,
             }),
           }),
-        ft = (e) =>
+        wt = (e) =>
           (0, a.jsx)("div", {
             className: _t().SaleHeaderPreviewContainer,
             children: (0, a.jsx)("img", {
@@ -3204,7 +3204,7 @@
               src: e.imgURL,
             }),
           }),
-        wt = (e) =>
+        ft = (e) =>
           (0, a.jsx)("div", {
             className: _t().SaleHeaderPreviewContainer,
             children: (0, a.jsx)("img", {
@@ -3593,8 +3593,8 @@
                                           }),
                                         ],
                                       }));
-        const f = Fn.Fj[e.artworkType].width,
-          w = Fn.Fj[e.artworkType].height;
+        const w = Fn.Fj[e.artworkType].width,
+          f = Fn.Fj[e.artworkType].height;
         return (0, a.jsxs)("div", {
           id: e.id,
           className: qn().ArtworkSelectorContainer,
@@ -3628,7 +3628,7 @@
                 className: (0, b.A)(qn().SelectImageBlock, qn().Tips),
                 children: [
                   S,
-                  Boolean(f && w) &&
+                  Boolean(w && f) &&
                     (0, a.jsxs)("p", {
                       children: [
                         (0, a.jsx)("b", {
@@ -3639,8 +3639,8 @@
                         ": ",
                         (0, Y.PP)(
                           "#selectimage_tip1",
-                          (0, Fn.qj)(f),
                           (0, Fn.qj)(w),
+                          (0, Fn.qj)(f),
                         ),
                       ],
                     }),
@@ -4436,10 +4436,10 @@
           h = p && r + 1 === _,
           [x, v, b] = (0, ue.uD)(),
           [I, j, S] = (0, ue.uD)();
-        let f, w;
+        let w, f;
         if (
           (u?.nUniqueIDNextSaleSection &&
-            (f = (0, Oe.h_)(
+            (w = (0, Oe.h_)(
               l.HY,
               o.GetSaleSectionByID(u?.nUniqueIDNextSaleSection),
               d,
@@ -4449,7 +4449,7 @@
           u && m?.length > 1)
         ) {
           const e = m[m.length - 1];
-          w = (0, Oe.h_)(
+          f = (0, Oe.h_)(
             l.HY,
             o?.GetSaleSectionByID(e),
             d,
@@ -4513,33 +4513,33 @@
                     }),
                 ],
               }),
-              !!w &&
-                (0, a.jsx)(Me.$n, {
-                  onClick: () =>
-                    null != c
-                      ? o.SetTabBackgroundGroup(c, r, {
-                          ...i,
-                          num_sections: i.num_sections - 1,
-                        })
-                      : o.SetSalePageBackgroundGroup(r, {
-                          ...i,
-                          num_sections: i.num_sections - 1,
-                        }),
-                  children: (0, Y.we)("#BackgroundGroups_Reduce", w),
-                }),
               !!f &&
                 (0, a.jsx)(Me.$n, {
                   onClick: () =>
                     null != c
                       ? o.SetTabBackgroundGroup(c, r, {
                           ...i,
+                          num_sections: i.num_sections - 1,
+                        })
+                      : o.SetSalePageBackgroundGroup(r, {
+                          ...i,
+                          num_sections: i.num_sections - 1,
+                        }),
+                  children: (0, Y.we)("#BackgroundGroups_Reduce", f),
+                }),
+              !!w &&
+                (0, a.jsx)(Me.$n, {
+                  onClick: () =>
+                    null != c
+                      ? o.SetTabBackgroundGroup(c, r, {
+                          ...i,
                           num_sections: i.num_sections + 1,
                         })
                       : o.SetSalePageBackgroundGroup(r, {
                           ...i,
                           num_sections: i.num_sections + 1,
                         }),
-                  children: (0, Y.we)("#BackgroundGroups_Extend", f),
+                  children: (0, Y.we)("#BackgroundGroups_Extend", w),
                 }),
               Boolean(r > 0) &&
                 (0, a.jsxs)(a.Fragment, {
@@ -4765,8 +4765,8 @@
             bDynamicallyCreatedSale: x,
           } = e,
           [v, j] = u.useState(t?.GetDayIndexFromEventStart()),
-          [S, f] = u.useState(null),
-          w = (0, g.q3)(() => t.jsondata.sale_header_disable_top_margin),
+          [S, w] = u.useState(null),
+          f = (0, g.q3)(() => t.jsondata.sale_header_disable_top_margin),
           k = (function (e, n) {
             const [t] = (0, de.QD)(ae.jD, void 0);
             return u.useMemo(() => {
@@ -4794,7 +4794,7 @@
             const e = document.getElementsByTagName("HEAD")[0],
               n = document.createElement("style");
             (n.innerText = (0, Be.L$)(t.jsondata.sale_custom_css)),
-              f(n),
+              w(n),
               e.appendChild(n);
           }
           const e = document.getElementsByClassName("react_landing_background");
@@ -4805,7 +4805,7 @@
             ),
             e.length >= 1 && (e[0].style.backgroundImage = ""),
             () => {
-              S && (S.remove(), f(null));
+              S && (S.remove(), w(null));
             }
           );
         }, [t, S, c]);
@@ -4835,15 +4835,15 @@
               .some((e) => "contenthubtitle" === e.section_type),
             I = g && u;
           let S,
-            f = !0;
+            w = !0;
           e
             ? (S = 0)
             : t.BUsesContentHubForItemSource()
               ? (S = 20)
               : t.GetEventType() == o.ajI
-                ? ((S = 0), (f = !1))
+                ? ((S = 0), (w = !1))
                 : (S = t.jsondata.sale_header_offset || 0);
-          const D = f && 530 === t.jsondata.sale_header_offset,
+          const D = w && 530 === t.jsondata.sale_header_offset,
             T = oe.nY
               .Get()
               .BIsPartnerTakeoverActive(
@@ -4862,7 +4862,7 @@
             U = g ? i.Yo.NoTransform : i.Yo.NoTransformSparseContent,
             R = (0, b.A)(
               h().SaleOuterContainer,
-              w && h().SaleOuterTopMargin,
+              f && h().SaleOuterTopMargin,
               D && h().SaleNewSizing,
               h()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
               "SaleOuterContainer",
@@ -4953,13 +4953,31 @@
             () => window.removeEventListener("resize", p)
           ),
           [p],
-        );
+        ),
+          u.useEffect(() => {
+            const e = () => {
+              const e = window?.location?.hash;
+              if (e) {
+                const n = document.getElementById(
+                  decodeURIComponent(e.substring(1).toLowerCase()),
+                );
+                n && n.scrollIntoView({ block: "start" });
+              }
+            };
+            return (
+              e(),
+              window.addEventListener("hashchange", e),
+              () => {
+                window.removeEventListener("hashchange", e);
+              }
+            );
+          }, []);
         const _ = (0, te.W6)(),
           x = (e, n) => {
             (0, de.ip)(_, { ...(n || {}), [ae.jD]: e.toString() });
           },
           [v, j] = (0, de.QD)("controller"),
-          [S, f] = (0, g.q3)(() => {
+          [S, w] = (0, g.q3)(() => {
             const e = n.GetSaleSectionIncludingFooterSections();
             return [
               he(
@@ -4970,12 +4988,12 @@
               e,
             ];
           });
-        let w = !1;
+        let f = !1;
         const k = [{ elements: [], activeTab: new Ce.y(void 0, o) }];
         let C = null;
         const E = (0, I.Qn)(),
           D = (0, Kt.ty)();
-        f.forEach((o, r) => {
+        w.forEach((o, r) => {
           const d = k[k.length - 1].activeTab;
           if (d && !d.ShouldShowSection(o)) return;
           const g = oe.nY
@@ -4990,9 +5008,9 @@
           if (void 0 === p) return;
           if (p);
           else if ((0, ke.su)(o) && !I.iA.logged_in)
-            w ||
+            f ||
               ((p = (0, a.jsx)(ke.CC, { section: o, event: n, language: t })),
-              (w = !0));
+              (f = !0));
           else {
             const n = o.diable_tab_id_filtering
               ? new Ce.y(void 0, d && d.GetSaleDay())
@@ -5117,7 +5135,7 @@
             bExpanded: c,
             children: d,
           } = e,
-          g = ae.mj + (n.unique_id || t),
+          g = n.section_anchor ? n.section_anchor : ae.mj + (n.unique_id || t),
           m = "tabs" != n.section_type,
           [_, x] = (0, u.useState)(!0);
         return _
