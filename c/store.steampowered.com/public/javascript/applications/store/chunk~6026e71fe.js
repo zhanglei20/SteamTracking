@@ -4046,6 +4046,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4055,9 +4056,9 @@
           _._,
           _._.EUNIVERSE,
           _._,
-          _._.EUNIVERSE,
-          _._,
-          ["HK", "JP", "KR", "TW"]),
+          _._.EUNIVERSE == _._ ? 409860 : 4165910),
+        _ = ["HK", "JP", "KR", "TW"],
+        _ = ["HK", "JP", "TW"],
         _ =
           _._.EUNIVERSE == _._
             ? [
@@ -4068,8 +4069,11 @@
                 595603, 595604, 595605, 946113, 946114, 1558609, 1629447,
                 1629446, 1629458, 1629460, 1629484, 1629486,
               ];
-      function _(_) {
-        return _.some((_) => _.includes(_)) && _.includes(_._.country_code);
+      function _(_, _) {
+        return (
+          _.some((_) => _.includes(_)) &&
+          (_ == _ ? _ : _).includes(_._.country_code)
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -11646,7 +11650,7 @@
           _ = null,
           _ = !1;
         if (_ != _._.k_LoadFailure && _)
-          if ((0, _._)(_))
+          if ((0, _._)(_, _))
             (_ = !0),
               (_ =
                 _ === _._
@@ -11657,15 +11661,25 @@
                         href: "https://steamdeck.komodo.jp",
                       }),
                     )
-                  : (0, _._)(
-                      "#Sale_Reservation_Komodo_Generic",
-                      _ ?? _._.Localize("#AppTypeLabel_hardware"),
-                      (0, _.jsx)("a", {
-                        className: _.Link,
-                        href: "https://komodostation.com/",
-                        children: "komodostation.com",
-                      }),
-                    ));
+                  : _ == _._
+                    ? (0, _._)(
+                        "#Sale_Reservation_Komodo_Generic_NoSk",
+                        _ ?? _._.Localize("#AppTypeLabel_hardware"),
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://komodostation.com/",
+                          children: "komodostation.com",
+                        }),
+                      )
+                    : (0, _._)(
+                        "#Sale_Reservation_Komodo_Generic",
+                        _ ?? _._.Localize("#AppTypeLabel_hardware"),
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://komodostation.com/",
+                          children: "komodostation.com",
+                        }),
+                      ));
           else if (_ && _.some((_) => !_.allow_purchase_in_country))
             (_ = !0),
               (_ = _._.Localize("#Sale_Reservation_NotAvailableCountry"));
