@@ -678,22 +678,26 @@
                       e?.ownerDocument?.defaultView ?? window,
                   },
                 }),
-                c = (0, a.kp)(l.context, { enabled: !!n.click }),
-                d = (0, a.iQ)(l.context, { enabled: !!n.focus }),
-                p = { handleClose: (0, a.iB)() },
-                u = "function" == typeof n.hover ? n.hover(p) : p,
-                m = (0, a.Mk)(l.context, { enabled: !!n.hover, ...u }),
-                h = (0, a.s9)(l.context),
-                { getFloatingProps: g, getReferenceProps: _ } = (0, a.bv)([
-                  c,
-                  d,
-                  m,
+                c = { enabled: !!n.click },
+                d = "function" == typeof n.click ? n.click(c) : c,
+                p = (0, a.kp)(l.context, d),
+                u = { enabled: !!n.focus },
+                m = "function" == typeof n.focus ? n.focus(u) : u,
+                h = (0, a.iQ)(l.context, m),
+                g = { handleClose: (0, a.iB)() },
+                _ = "function" == typeof n.hover ? n.hover(g) : g,
+                f = (0, a.Mk)(l.context, { enabled: !!n.hover, ..._ }),
+                x = (0, a.s9)(l.context),
+                { getFloatingProps: S, getReferenceProps: b } = (0, a.bv)([
+                  p,
                   h,
+                  f,
+                  x,
                 ]);
               return {
                 floating: l,
-                getFloatingProps: g,
-                getReferenceProps: _,
+                getFloatingProps: S,
+                getReferenceProps: b,
                 open: o,
               };
             })(s);

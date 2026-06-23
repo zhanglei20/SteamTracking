@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Rezoluție contestată",
     "moderationaction_escalated": "Înaintat către superior",
     "moderationaction_sanctioned": "Sancționat",
-    "moderationaction_sustainedondispute": "Contestație respinsă",
+    "moderationaction_sustained": "Decizie menținută",
     "moderationaction_unresolved": "Subiectul a rămas nerezolvat",
     "moderationaction_updated": "Detaliile subiectului au fost actualizate",
     "moderationaction_locked": "Blocat",

@@ -117,6 +117,26 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        storeMenuResponsiveModeWidth: "730px",
+        SuppressScrollOnBody: "CnyoUreRJIClNp1eHmLJd",
+        JumpListOuterCtn: "_1qM3MD9Kxqxlpfh2enyaRn",
+        BackgroundAnimation: "_6jFajm5oSsDCakzmQUBjs",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2xLwduE60Jczb3eD7-16pM",
+        "ItemFocusAnim-darkerGrey": "_1v5uoyav_s6AkBtqSV_xsh",
+        "ItemFocusAnim-darkGreySettings": "_16d0zmD7HaTy00za_ZnEHI",
+        "ItemFocusAnim-darkGrey": "mJJnjMXQw_zqMgD2_vK5C",
+        "ItemFocusAnim-grey": "_138NxcZy8rSQtaF1A-9jcN",
+        "ItemFocusAnim-translucent-white-10": "aroDEq70mXeRS5UgTxaB1",
+        "ItemFocusAnim-translucent-white-20": "c3hjUgCd-crxQ_zLQASBU",
+        "ItemFocusAnimBorder-darkGrey": "_3Uo890w8blA9DaaWqRURZF",
+        "ItemFocusAnim-green": "_17fP3PJ-2fdBkLfYqfFUAM",
+        focusAnimation: "_2YX4gcYKNIrb-SVdV6eFla",
+        hoverAnimation: "_34Xcqw6oj_gW04qaO-AGR0",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         "duration-app-launch": "800ms",
         Ctn: "LGN794ocmn1iDN3mAilmA",
@@ -747,12 +767,26 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         ExplorationModeTitle: "_2Yw2Zq7DhXUnz__aZKNc_r",
         ValveOnly: "_35cCdGHtNkKFj006w-Giut",
         ExplorationModeContent: "_38138ngfKoemnKfJzKW9GG",
         ExplorationModeToggle: "jCg8gWGML1DAedhv9S7Bz",
         OptionDisabled: "qeM14TZHm0uJ8srLTpEO4",
         ExplorationModeDescription: "_1rgWiRelyItuYoOZELdZSD",
+        BackgroundAnimation: "oscebphohVuDQvUcFu66a",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3bvl0AXCzxsDrlce5z13v4",
+        "ItemFocusAnim-darkerGrey": "_2kmVhDqHE4at0CkzXuXsyB",
+        "ItemFocusAnim-darkGreySettings": "_3C1Pfm2sTCYNiFgrxZFkXL",
+        "ItemFocusAnim-darkGrey": "Nk3aA9WAhoyp0_21SNcAg",
+        "ItemFocusAnim-grey": "MdGdjFG8pQnft1fZhzFD5",
+        "ItemFocusAnim-translucent-white-10": "_9WIF1egGyToTu88VftV-H",
+        "ItemFocusAnim-translucent-white-20": "_2NYJd6ULCFlXERCl6XwkqJ",
+        "ItemFocusAnimBorder-darkGrey": "v-5dEEogcOs5uavWsNmi0",
+        "ItemFocusAnim-green": "_1_twvv7hCCmZoxnUFrTCaS",
+        focusAnimation: "_2BR4y7GphMeeAo5LIz0vYJ",
+        hoverAnimation: "_2rjmewvvUGDAPkXjTZwfBB",
       };
     },
     chunkid: (module) => {
@@ -7198,6 +7232,231 @@
           children: _._.GetWithFallback(_.localized_presenter_name, _),
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, subMenu: _, language: _, styleVariation: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useMemo)(() => {
+            var _;
+            return null === (_ = null == _ ? void 0 : _.menu_items) ||
+              void 0 === _
+              ? void 0
+              : _.some((_) => {
+                  var _, _, _, _, _, _;
+                  return !(
+                    !(null ===
+                      (_ =
+                        null ===
+                          (_ =
+                            null === (_ = _.sub_menu_icon) || void 0 === _
+                              ? void 0
+                              : _.localized_media) || void 0 === _
+                          ? void 0
+                          : _[_]) || void 0 === _
+                      ? void 0
+                      : _.image) &&
+                    !(null ===
+                      (_ =
+                        null ===
+                          (_ =
+                            null === (_ = _.sub_menu_icon) || void 0 === _
+                              ? void 0
+                              : _.localized_media) || void 0 === _
+                          ? void 0
+                          : _[_.Bhc]) || void 0 === _
+                      ? void 0
+                      : _.image)
+                  );
+                });
+          }, [_, null == _ ? void 0 : _.menu_items]),
+          _ = (0, _.useCallback)(() => {
+            _ && (_.current && window.clearTimeout(_.current), _(!0));
+          }, [_]),
+          _ = (0, _.useCallback)(() => {
+            _ &&
+              (_.current && window.clearTimeout(_.current),
+              (_.current = window.setTimeout(() => _(!1), 180)));
+          }, [_]);
+        return (0, _.jsx)(_._, {
+          className: (0, _._)({
+            [_().SubMenuOuterCtn]: _ == _.k_SubMenu,
+            [_().isOpen]: _ && _ == _.k_SubMenu,
+            [_().HasImageIcons]: _ && _ == _.k_SubMenu,
+            [_().JumpListOuterCtn]: _ == _.k_JumpList,
+          }),
+          onMouseEnter: _,
+          onMouseLeave: _,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)({
+              [_().SubMenuCtn]: _ == _.k_SubMenu,
+            }),
+            style: {
+              ...(0, _._)(_, _, _),
+            },
+            children: _.menu_items.map((_) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  className: (0, _._)({
+                    [_().SubMenuItemCtn]: _ == _.k_SubMenu,
+                  }),
+                  children: (0, _.jsx)(_, {
+                    language: _,
+                    mainItem: _,
+                    subMenu: _,
+                    clanAccountID: _.clanSteamID.GetAccountID(),
+                    event: _,
+                    styleVariation: _,
+                  }),
+                },
+                "submenuitem" + _.unique_id,
+              ),
+            ),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            language: _,
+            mainItem: _,
+            subMenu: _,
+            clanAccountID: _,
+            event: _,
+            styleVariation: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(),
+          [_, _, _, _] = (0, _._)(() => {
+            var _, _, _, _, _, _, _, _, _, _, _;
+            const _ =
+              _.sub_menu_url &&
+              (null === (_ = _.sub_menu_url) || void 0 === _
+                ? void 0
+                : _.startsWith("#"));
+            let _ =
+              (null === (_ = _.localized_sub_menu_name) || void 0 === _
+                ? void 0
+                : _[_]) ||
+              (null === (_ = _.localized_sub_menu_name) || void 0 === _
+                ? void 0
+                : _[_.Bhc]);
+            if (_ && (!_ || 0 == _.trim().length)) {
+              const _ =
+                  null === (_ = _.sub_menu_url) || void 0 === _
+                    ? void 0
+                    : _.substring(1),
+                _ = _.jsondata.sale_sections.find(
+                  (_) => _.section_anchor === _,
+                );
+              _ &&
+                ((_ =
+                  null === (_ = (0, _._)(_, _, _, _, _.eLocation, !0)) ||
+                  void 0 === _
+                    ? void 0
+                    : _.toString()),
+                (_ && 0 != _.trim().length) || (_ = void 0));
+            }
+            return [
+              _.sub_menu_url,
+              !_ && _(_.sub_menu_url, _),
+              null != _ ? _ : "unknown",
+              (null ===
+                (_ =
+                  null ===
+                    (_ =
+                      null === (_ = _.sub_menu_icon) || void 0 === _
+                        ? void 0
+                        : _.localized_media) || void 0 === _
+                    ? void 0
+                    : _[_]) || void 0 === _
+                ? void 0
+                : _.image) ||
+                (null ===
+                  (_ =
+                    null ===
+                      (_ =
+                        null === (_ = _.sub_menu_icon) || void 0 === _
+                          ? void 0
+                          : _.localized_media) || void 0 === _
+                      ? void 0
+                      : _[_.Bhc]) || void 0 === _
+                  ? void 0
+                  : _.image) ||
+                void 0,
+            ];
+          });
+        let _ = _.label_color || "#DBDFE2";
+        return (
+          _
+            ? (_ = _.selected_label_color || _)
+            : _ && (_ = _.hover_label_color || _),
+          (0, _.jsxs)(_._, {
+            className: (0, _._)({
+              [_().SubMenuItemText]: _ == _.k_SubMenu,
+            }),
+            style: {
+              color: _,
+            },
+            href: _,
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+            children: [
+              (0, _.jsx)("div", {
+                className: _().TextLabel,
+                children: _,
+              }),
+              Boolean(_) &&
+                (0, _.jsx)("span", {
+                  className: _().ImageWrapper,
+                  children: (0, _.jsx)("img", {
+                    src: (0, _._)(_, _),
+                    alt: _,
+                    className: _().SubMenuImage,
+                  }),
+                }),
+            ],
+          })
+        );
+      }
+      function _(_, _) {
+        try {
+          const _ = window.location.pathname.toLowerCase(),
+            _ = new URL(_ || ""),
+            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
+          return _.pathname.toLocaleLowerCase() === _ || _ === _;
+        } catch {
+          return !1;
+        }
+      }
+      !(function (_) {
+        (_[(_.k_SubMenu = 0)] = "k_SubMenu"),
+          (_[(_.k_JumpList = 1)] = "k_JumpList");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -17175,132 +17434,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { event: _, subMenu: _, language: _ } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useRef)(null);
-        return (0, _.jsx)(_._, {
-          className: (0, _._)({
-            [_().SubMenuOuterCtn]: !0,
-            [_().isOpen]: _,
-          }),
-          onMouseEnter: () => {
-            _.current && window.clearTimeout(_.current), _(!0);
-          },
-          onMouseLeave: () => {
-            _.current && window.clearTimeout(_.current),
-              (_.current = window.setTimeout(() => _(!1), 180));
-          },
-          children: (0, _.jsx)("div", {
-            className: _().SubMenuCtn,
-            style: {
-              ...(0, _._)(_, _, _),
-            },
-            children: _.menu_items.map((_) =>
-              (0, _.jsx)(
-                "div",
-                {
-                  className: _().SubMenuItemCtn,
-                  children: (0, _.jsx)(_, {
-                    language: _,
-                    mainItem: _,
-                    subMenu: _,
-                    clanAccountID: _.clanSteamID.GetAccountID(),
-                  }),
-                },
-                "submenuitem" + _.unique_id,
-              ),
-            ),
-          }),
-        });
-      }
-      function _(_) {
-        const { language: _, mainItem: _, subMenu: _, clanAccountID: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          [_, _, _, _] = (0, _._)(() => {
-            var _, _, _, _, _, _, _, _;
-            return [
-              _.sub_menu_url,
-              _(_.sub_menu_url, _),
-              (null === (_ = _.localized_sub_menu_name) || void 0 === _
-                ? void 0
-                : _[_]) ||
-                (null === (_ = _.localized_sub_menu_name) || void 0 === _
-                  ? void 0
-                  : _[_.Bhc]) ||
-                "unknown",
-              (null ===
-                (_ =
-                  null ===
-                    (_ =
-                      null === (_ = _.sub_menu_icon) || void 0 === _
-                        ? void 0
-                        : _.localized_media) || void 0 === _
-                    ? void 0
-                    : _[_]) || void 0 === _
-                ? void 0
-                : _.image) ||
-                (null ===
-                  (_ =
-                    null ===
-                      (_ =
-                        null === (_ = _.sub_menu_icon) || void 0 === _
-                          ? void 0
-                          : _.localized_media) || void 0 === _
-                      ? void 0
-                      : _[_.Bhc]) || void 0 === _
-                  ? void 0
-                  : _.image) ||
-                void 0,
-            ];
-          });
-        let _ = _.label_color || "#DBDFE2";
-        return (
-          _
-            ? (_ = _.selected_label_color || _)
-            : _ && (_ = _.hover_label_color || _),
-          (0, _.jsxs)(_._, {
-            className: _().SubMenuItemText,
-            style: {
-              color: _,
-            },
-            href: _,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-            children: [
-              (0, _.jsx)("div", {
-                className: _().TextLabel,
-                children: _,
-              }),
-              Boolean(_) &&
-                (0, _.jsx)("span", {
-                  className: _().ImageWrapper,
-                  children: (0, _.jsx)("img", {
-                    src: (0, _._)(_, _),
-                    alt: _,
-                    className: _().SubMenuImage,
-                  }),
-                }),
-            ],
-          })
-        );
-      }
-      function _(_, _) {
-        try {
-          const _ = window.location.pathname.toLowerCase(),
-            _ = new URL(_ || ""),
-            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
-          return _.pathname.toLocaleLowerCase() === _ || _ === _;
-        } catch {
-          return !1;
-        }
-      }
-      var _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, bIsPreview: _ } = _;
         let _ = _.jsondata.sale_background_video_webm,
@@ -17368,11 +17502,12 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _
-              ? (0, _.jsx)(_, {
+              ? (0, _.jsx)(_._, {
                   event: _,
                   language: _,
                   bIsPreview: _,
                   subMenu: _,
+                  styleVariation: _._.k_SubMenu,
                 })
               : (0, _.jsx)(_, {
                   strURL: _,
@@ -17982,6 +18117,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19061,6 +19197,21 @@
           }),
         });
       }
+      function _() {
+        var _;
+        if (
+          null ===
+            (_ =
+              null === window || void 0 === window
+                ? void 0
+                : window.location) || void 0 === _
+            ? void 0
+            : _.hash
+        )
+          return decodeURIComponent(
+            window.location.hash.substring(1).toLowerCase(),
+          );
+      }
       const _ = (0, _._)(function (_) {
         const {
             event: _,
@@ -19081,31 +19232,23 @@
           [_],
         ),
           _.useEffect(() => {
+            let _ = "";
             const _ = () => {
-              var _;
-              const _ =
-                null ===
-                  (_ =
-                    null === window || void 0 === window
-                      ? void 0
-                      : window.location) || void 0 === _
-                  ? void 0
-                  : _.hash;
-              if (_) {
-                const _ = document.getElementById(
-                  decodeURIComponent(_.substring(1).toLowerCase()),
-                );
-                _ &&
-                  _.scrollIntoView({
-                    block: "start",
-                  });
-              }
-            };
+                const _ = _();
+                if (_ && _ != _) {
+                  const _ = document.getElementById(_);
+                  _ &&
+                    ((_ = _),
+                    __webpack_require__.scrollIntoView({
+                      block: "start",
+                    }));
+                }
+              },
+              _ = setTimeout(() => _(), 150);
             return (
-              _(),
               window.addEventListener("hashchange", _),
               () => {
-                window.removeEventListener("hashchange", _);
+                clearTimeout(_), window.removeEventListener("hashchange", _);
               }
             );
           }, []);
@@ -19137,7 +19280,13 @@
         ];
         let _ = null;
         const _ = (0, _._)(),
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = _.useMemo(() => {
+            const _ = _();
+            if (!_) return;
+            const _ = _.findIndex((_) => _.section_anchor === _);
+            return _ > -1 ? _ : void 0;
+          }, [_]);
         _.forEach((_, _) => {
           var _;
           const _ = _[_.length - 1].activeTab;
@@ -19204,7 +19353,10 @@
               salePageBackgroundDerivedConfig: _,
               backgroundImageEditModel: _,
               bExpanded: _,
-              children: _,
+              children: (0, _.jsx)(_._, {
+                enabled: !_ || _ > _,
+                children: _,
+              }),
             },
             "SaleSectionIndex_" + _.unique_id + "_" + _,
           );
@@ -19713,6 +19865,11 @@
               (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
               (_ = "" + _.getFullYear());
             break;
+          case "#Sale_Reservation_BetweenNowAndLastDay":
+            (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
+              (_ = "" + new Date(_.getFullYear(), _.getMonth(), 0).getDate()),
+              (_ = "" + _.getFullYear());
+            break;
           case "#Sale_Reservation_RelativeWeekly":
             {
               const _ = _._.GetTimeNowWithOverride(),
@@ -20083,9 +20240,9 @@
           _._,
           _._.EUNIVERSE,
           _._,
-          _._.EUNIVERSE,
-          _._,
-          ["HK", "JP", "KR", "TW"]),
+          _._.EUNIVERSE == _._ ? 409860 : 4165910),
+        _ = ["HK", "JP", "KR", "TW"],
+        _ = ["HK", "JP", "TW"],
         _ =
           _._.EUNIVERSE == _._
             ? [
@@ -20110,7 +20267,14 @@
           _ = null,
           _ = !1;
         if (_ != _._.k_LoadFailure && _)
-          if (_.some((_) => _.includes(_)) && _.includes(_._.country_code))
+          if (
+            (function (_, _) {
+              return (
+                _.some((_) => _.includes(_)) &&
+                (_ == _ ? _ : _).includes(_._.country_code)
+              );
+            })(_, _)
+          )
             (_ = !0),
               (_ =
                 _ === _
@@ -20121,15 +20285,25 @@
                         href: "https://steamdeck.komodo.jp",
                       }),
                     )
-                  : (0, _._)(
-                      "#Sale_Reservation_Komodo_Generic",
-                      null != _ ? _ : _._.Localize("#AppTypeLabel_hardware"),
-                      (0, _.jsx)("a", {
-                        className: _.Link,
-                        href: "https://komodostation.com/",
-                        children: "komodostation.com",
-                      }),
-                    ));
+                  : _ == _
+                    ? (0, _._)(
+                        "#Sale_Reservation_Komodo_Generic_NoSk",
+                        null != _ ? _ : _._.Localize("#AppTypeLabel_hardware"),
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://komodostation.com/",
+                          children: "komodostation.com",
+                        }),
+                      )
+                    : (0, _._)(
+                        "#Sale_Reservation_Komodo_Generic",
+                        null != _ ? _ : _._.Localize("#AppTypeLabel_hardware"),
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://komodostation.com/",
+                          children: "komodostation.com",
+                        }),
+                      ));
           else if (_ && _.some((_) => !_.allow_purchase_in_country))
             (_ = !0),
               (_ = _._.Localize("#Sale_Reservation_NotAvailableCountry"));
@@ -25629,39 +25803,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { tagid: _, language: _ = _._.LANGUAGE } = _;
-        return (0, _._)(_, _) || String(_);
-      }
-      function _(_) {
-        const { tagID: _, className: _ } = _,
-          _ = (0, _._)(
-            (function (_, _ = _._.LANGUAGE) {
-              const _ = (0, _._)(_, _);
-              return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
-            })(_),
-          );
-        return (0, _.jsx)(_._, {
-          className: _,
-          href: _,
-          role: "listitem",
-          children: (0, _.jsx)(_, {
-            tagid: _,
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         (0, _._)();
@@ -25694,20 +25835,72 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+          name: "trailerPrefs",
+          options: {
+            path: "/",
+            secure: !0,
+            maxAge: 2592e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        },
+        _ = {
+          flVolume: 0.8,
+          bMuted: !0,
+        };
+      function _(_) {
+        !(function (_) {
+          return _.flVolume === _.flVolume && _.bMuted === _.bMuted;
+        })(_) && 0 != Object.keys(_).length
+          ? (0, _._)(_, JSON.stringify(_))
+          : (0, _._)(_);
+      }
       function _(_) {
         let { children: _ } = _;
-        const [_, _] = (0, _.useState)(0.8),
-          [_, _] = (0, _.useState)(!0);
-        return (0, _.jsx)(_._, {
-          playerVolume: _,
-          setPlayerVolume: _,
-          audioMuted: _,
-          setAudioMuted: _,
-          children: _,
-        });
+        const [_, _] = (0, _.useState)(() =>
+          (function () {
+            try {
+              const _ = (0, _._)(_);
+              if (!_) return _;
+              const _ = JSON.parse(_);
+              return {
+                flVolume:
+                  "number" == typeof _.flVolume ? _.flVolume : _.flVolume,
+                bMuted: "boolean" == typeof _.bMuted ? _.bMuted : _.bMuted,
+              };
+            } catch (_) {
+              return _;
+            }
+          })(),
+        );
+        return (
+          (0, _.useEffect)(() => {
+            _(_);
+          }, [_]),
+          (0, _.jsx)(_._, {
+            playerVolume: _.flVolume,
+            setPlayerVolume: (_) =>
+              _((_) => ({
+                ..._,
+                flVolume: _,
+              })),
+            audioMuted: _.bMuted,
+            setAudioMuted: (_) =>
+              _((_) => ({
+                ..._,
+                bMuted: _,
+              })),
+            children: _,
+          })
+        );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25735,7 +25928,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
-          _ = (0, _._)(_, _, !0),
+          _ = (0, _._)(_, _, !0, _),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(_),
@@ -26215,6 +26408,49 @@
           fnUpdateWishlist: _,
         };
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { tagid: _, language: _ = _._.LANGUAGE } = _;
+        return (0, _._)(_, _) || String(_);
+      }
+      function _(_) {
+        const { tagID: _, className: _ } = _,
+          _ = (0, _._)(
+            (function (_, _ = _._.LANGUAGE) {
+              const _ = (0, _._)(_, _);
+              return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
+            })(_),
+          );
+        return (0, _.jsx)(_._, {
+          className: _,
+          href: _,
+          role: "listitem",
+          children: (0, _.jsx)(_, {
+            tagid: _,
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+        include_trailers: !0,
+        include_basic_info: !0,
+        include_tag_count: 20,
+        include_release: !0,
+        include_platforms: !0,
+        include_screenshots: !0,
+        include_reviews: !0,
+      };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -28269,18 +28505,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = {
-        include_assets: !0,
-        include_trailers: !0,
-        include_basic_info: !0,
-        include_tag_count: 20,
-        include_release: !0,
-        include_platforms: !0,
-        include_screenshots: !0,
-        include_reviews: !0,
-      };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "trailercarousel",
         _ = "trailercarousel_seen_intro_video",
@@ -28628,7 +28852,7 @@
           _ = (0, _._)((0, _._)(_, _)),
           [_, _] = _.useState(0),
           [_, _] = _.useState(),
-          _ = ((0, _._)(), _.useRef(void 0)),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_),
           _ = (0, _._)();
         _.useEffect(() => {
@@ -28786,6 +29010,7 @@
                             refTogglePlayPause: _,
                             bRequestPause: _ || _,
                             fnComplete: _,
+                            showAOAutoPlayWarning: !0,
                           }),
                           (0, _.jsx)(
                             _,
@@ -29489,6 +29714,7 @@
                   bSingleLineMode: !0,
                   bHidePrePurchase: _.type == _._._,
                   bPreferWholeNumbers: _.type == _._._,
+                  bHideNewTag: _.type == _._._,
                   strContainerClassName: _().PriceCtn,
                   strDiscountAndPriceClassName: _().PriceDiscount,
                   strPriceFormattedClassName: _().PriceFormatted,
@@ -29543,6 +29769,7 @@
                           strDiscountAndPriceClassName: _().PriceDiscount,
                           bHidePrePurchase: _.type == _._._,
                           bPreferWholeNumbers: _.type == _._._,
+                          bHideNewTag: _.type == _._._,
                           strPriceFormattedClassName: _().PriceFormatted,
                         }),
                       ],
@@ -29833,6 +30060,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           __webpack_require__
@@ -30037,6 +30265,8 @@
                   strDiscountAndPriceClassName: _().PriceDiscount,
                   bHidePrePurchase: !0,
                   strPriceFormattedClassName: _().PriceFormatted,
+                  bPreferWholeNumbers: (null == _ ? void 0 : _.type) == _._._,
+                  bHideNewTag: (null == _ ? void 0 : _.type) == _._._,
                 }),
               ],
             }),
@@ -30258,12 +30488,21 @@
           _ = (0, _._)(_, _, _.unique_id),
           _ = _.find((_) => _.tuple_id == _),
           _ = (0, _._)(null == _ ? void 0 : _.package_id),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        if (_ && _.final_price_in_cents) {
-          const _ = (0, _._)(_._.country_code.toUpperCase());
+        if (_ && _.final_price_in_cents && _) {
+          let _ = _.formatted_final_price;
+          if (_.type == _._._) {
+            const _ = (0, _._)(_._.country_code.toUpperCase()),
+              _ = {
+                ...(0, _._)(_),
+                bWholeUnitsOnly: !0,
+              };
+            _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
+          }
           return (0, _.jsx)("div", {
             className: _().StaticPrice,
-            children: (0, _._)(Number(_.final_price_in_cents), _),
+            children: _,
           });
         }
         return null;
@@ -30277,20 +30516,29 @@
           } = _,
           _ = (0, _._)(_.package_id),
           { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_, _, _.unique_id),
           _ = _.find((_) => _.tuple_id == _),
           _ = (0, _._)(null == _ ? void 0 : _.package_id),
           { data: _ } = (0, _._)(_);
-        if (_ && _) {
+        if (_ && _ && _) {
           const _ =
               Number(_.final_price_in_cents) - Number(_.final_price_in_cents),
             _ = (0, _._)(_._.country_code.toUpperCase());
+          let _ = "";
+          if (_.type == _._._) {
+            const _ = {
+              ...(0, _._)(_),
+              bWholeUnitsOnly: !0,
+            };
+            _ = (0, _._)(_, _);
+          } else _ = (0, _._)(_, _);
           return (0, _.jsxs)("div", {
             className: _().DeltaPrice,
             children: [
               "(",
-              (0, _.jsxs)("span", {
-                children: [_ > 0 ? "+" : "", (0, _._)(_, _)],
+              (0, _.jsx)("span", {
+                children: _ > 0 ? "+" : "",
               }),
               ")",
             ],
@@ -34425,6 +34673,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -34436,7 +34685,9 @@
             section: _,
             selected: _,
           } = _,
-          [_] = (0, _._)(() => [_.tab_highlight_label_color]);
+          [_] = (0, _._)(() => [
+            null == _ ? void 0 : _.tab_highlight_label_color,
+          ]);
         _.useEffect(() => {
           _ &&
             document.documentElement.style.setProperty(
@@ -34567,6 +34818,7 @@
                   )
                     return !1;
                   if (
+                    _.package_allow_list &&
                     (null === (_ = _.package_allow_list) || void 0 === _
                       ? void 0
                       : _.length) > 0 &&
@@ -34583,7 +34835,7 @@
                 })(_, _, _, _),
               ),
         );
-        return _;
+        return null != _ ? _ : [];
       }
       function _(_) {
         var _;
@@ -34598,7 +34850,7 @@
           [_, _] = (0, _._)(),
           _ = _(_.tabs, _, _, _),
           _ = (0, _._)(),
-          _ = _.useRef(void 0);
+          _ = _.useRef(null);
         _.useEffect(() => {
           var _;
           const _ = document.getElementById("Tab_" + _.unique_id);
@@ -34637,8 +34889,9 @@
         const _ = (0, _._)(_().SaleSectionTabsTab),
           _ = (0, _._)(_, _, _);
         if (
-          (null === (_ = null == _ ? void 0 : _.tab_bar_bg_image) ||
-          void 0 === _
+          _ &&
+          _.tab_bar_bg_image &&
+          (null === (_ = _.tab_bar_bg_image) || void 0 === _
             ? void 0
             : _.length) > 0
         ) {
@@ -34648,7 +34901,12 @@
           );
           _.background = `url(${_})`;
         }
-        return (0, _.jsx)("div", {
+        const _ =
+          _ &&
+          _.tab_jump_list &&
+          _.tab_jump_list.menu_items &&
+          _.tab_jump_list.menu_items.length > 0;
+        return (0, _.jsxs)("div", {
           className: (0, _._)({
             [_().SaleSection]: !0,
             [_().SaleSectionTabs]: !0,
@@ -34658,35 +34916,44 @@
           ref: _,
           style: _,
           _: _._ + _.unique_id,
-          children: (0, _.jsx)(_, {
-            className: (0, _._)({
-              [_().SaleSectionTabContainer]: !0,
-            }),
-            children: (0, _.jsx)("div", {
+          children: [
+            (0, _.jsx)(_, {
               className: (0, _._)({
-                [_().SaleSectionContainer]: !0,
-                [_().SaleSectionTabsRow]: !0,
+                [_().SaleSectionTabContainer]: !0,
               }),
-              ref: _,
-              children: _.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    section: _,
-                    selected: _ === _,
-                    tab: _,
-                    language: _,
-                    classNames: (0, _._)(
-                      _,
-                      _ === _ && _().SaleSectionTabsSelected,
-                    ),
-                    onTabSelected: _,
-                  },
-                  "Tab_" + _.unique_id,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)({
+                  [_().SaleSectionContainer]: !0,
+                  [_().SaleSectionTabsRow]: !0,
+                }),
+                ref: _,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      section: _,
+                      selected: _ === _,
+                      tab: _,
+                      language: _,
+                      classNames: (0, _._)(
+                        _,
+                        _ === _ && _().SaleSectionTabsSelected,
+                      ),
+                      onTabSelected: _,
+                    },
+                    "Tab_" + _.unique_id,
+                  ),
                 ),
-              ),
+              }),
             }),
-          }),
+            _ &&
+              (0, _.jsx)(_._, {
+                ..._,
+                subMenu: _.tab_jump_list,
+                bIsPreview: _,
+                styleVariation: _._.k_JumpList,
+              }),
+          ],
         });
       }
       const _ = (_) => {
@@ -34832,6 +35099,7 @@
                   activeTab: _,
                   onTabSelected: _,
                   hideActiveTab: !0,
+                  bIsPreview: _,
                 })
               : _
                 ? (0, _.jsx)("div", {

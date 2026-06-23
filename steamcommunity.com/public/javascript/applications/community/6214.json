@@ -184,7 +184,7 @@
     "moderationaction_disputed": "결과에 대해 이의 제기됨",
     "moderationaction_escalated": "추가 검토 요청됨",
     "moderationaction_sanctioned": "제재됨",
-    "moderationaction_sustainedondispute": "이의 제기 무효 처리됨",
+    "moderationaction_sustained": "기존 조정 유지됨",
     "moderationaction_unresolved": "조정 대상이 해결되지 않은 상태로 전환됨",
     "moderationaction_updated": "조정 대상 관련 세부 정보가 업데이트됨",
     "moderationaction_locked": "잠김",

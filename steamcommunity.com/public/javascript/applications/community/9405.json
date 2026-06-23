@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Risoluzione contestata",
     "moderationaction_escalated": "Inviata al supervisore",
     "moderationaction_sanctioned": "Sanzione applicata",
-    "moderationaction_sustainedondispute": "Contestazione revocata",
+    "moderationaction_sustained": "Moderazione riconfermata",
     "moderationaction_unresolved": "Risoluzione annullata",
     "moderationaction_updated": "Dettagli aggiornati",
     "moderationaction_locked": "Bloccata",

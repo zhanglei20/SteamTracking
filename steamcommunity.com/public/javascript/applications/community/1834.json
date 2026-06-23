@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Resolution disputed",
     "moderationaction_escalated": "Escalated",
     "moderationaction_sanctioned": "Sanctioned",
-    "moderationaction_sustainedondispute": "Dispute overruled",
+    "moderationaction_sustained": "Moderation sustained",
     "moderationaction_unresolved": "Subject became unresolved",
     "moderationaction_updated": "Subject details updated",
     "moderationaction_locked": "Locked",

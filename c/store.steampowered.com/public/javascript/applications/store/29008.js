@@ -5,6 +5,7 @@
       module.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
+        Loading: "_6exjsiWCk6IgWiQenqfQH",
         UseHidingBottomHalf: "_3707obuB-7wD8GDUYRaLH4",
         TrailerAnchorStoreLink: "_1VNyOcfe2cBKY52VedXjyc",
         TrailerCtn: "_3ANIAZhTtXLvORlbv-Du-N",
@@ -2469,41 +2470,41 @@
             bShowIgnoreButton: _ = !1,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return void 0 === _ && void 0 === _
-          ? null
-          : (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().GameHoverCapsuleCtn,
-                _().InGameHover,
-                _ && _().UseHidingBottomHalf,
-              ),
+          { data: _ } = (0, _._)(_),
+          _ = void 0 === _ && void 0 === _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().GameHoverCapsuleCtn,
+            _ && _().Loading,
+            _().InGameHover,
+            _ && _().UseHidingBottomHalf,
+          ),
+          children: [
+            (0, _.jsxs)("a", {
+              href: _,
+              className: _().TrailerAnchorStoreLink,
               children: [
-                (0, _.jsxs)("a", {
-                  href: _,
-                  className: _().TrailerAnchorStoreLink,
-                  children: [
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_._, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                      }),
-                  ],
-                }),
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                  }),
               ],
-            });
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4281,8 +4282,9 @@
                 if (!_) return new Set();
                 const _ = await (async function (_, _) {
                   const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgIgnoredApps || [];
+                    _ = await fetch(_),
+                    _ = await _.json();
+                  return Object.keys(_.rgIgnoredApps).map(Number) || [];
                 })(0, _);
                 return new Set(_);
               },

@@ -276,7 +276,7 @@ ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/
 ${COMMUNITY_BASE_URL}market/${}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}market/appaccessories/${}
-${COMMUNITY_BASE_URL}market/appfilters/${}
+${COMMUNITY_BASE_URL}market/appfacets/${}
 ${COMMUNITY_BASE_URL}market/cancelalllistings/
 ${COMMUNITY_BASE_URL}market/deleteitembucket
 ${COMMUNITY_BASE_URL}market/faq/

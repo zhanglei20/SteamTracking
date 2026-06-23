@@ -1,17 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10764602";
+var CLSTAMP = "10767008";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      218: (e, t, n) => {
-        n.d(t, { pR: () => r, Vz: () => i, nh: () => l });
+      472: (e, t, n) => {
+        n.d(t, { UE: () => l, pR: () => r, Vz: () => i, nh: () => p });
         var a,
           r,
           i,
-          o = n(186);
+          o = n(837);
         class s {
           m_ActiveInputId;
           m_ActiveInputTimeout;
@@ -87,6 +87,9 @@ var CLSTAMP = "10764602";
             } else this.m_inputRepeatGenerator.Reset();
           }
         }
+        function l(e) {
+          return e === i.GAMEPAD || e === i.KEYBOARD_SIMULATOR;
+        }
         !(function (e) {
           (e[(e.INVALID = 0)] = "INVALID"),
             (e[(e.OK = 1)] = "OK"),
@@ -128,7 +131,7 @@ var CLSTAMP = "10764602";
               (e[(e.LPAD = 5)] = "LPAD"),
               (e[(e.RPAD = 6)] = "RPAD");
           })(i || (i = {}));
-        class l {
+        class p {
           m_OnGamepadDetectedCallbacks = new o.l();
           m_ButtonDownCallbacks = new o.l();
           m_ButtonUpCallbacks = new o.l();
@@ -231,7 +234,7 @@ var CLSTAMP = "10764602";
           }
         }
       },
-      82: (e, t, n) => {
+      495: (e, t, n) => {
         function a(e, t) {
           return (function (e, t) {
             const n = e.findIndex(t);
@@ -240,7 +243,7 @@ var CLSTAMP = "10764602";
         }
         n.d(t, { x9: () => a });
       },
-      219: (e, t, n) => {
+      918: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -255,9 +258,9 @@ var CLSTAMP = "10764602";
         }
         n.d(t, { o: () => a });
       },
-      186: (e, t, n) => {
+      837: (e, t, n) => {
         n.d(t, { l: () => r });
-        var a = n(82);
+        var a = n(495);
         class r {
           m_vecCallbacks = [];
           Register(e) {
@@ -288,7 +291,7 @@ var CLSTAMP = "10764602";
           }
         }
       },
-      623: (e, t, n) => {
+      206: (e, t, n) => {
         function a(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
@@ -301,7 +304,7 @@ var CLSTAMP = "10764602";
         }
         n.d(t, { Dp: () => r });
       },
-      416: (e, t, n) => {
+      355: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -366,9 +369,9 @@ var CLSTAMP = "10764602";
       ({ 97: "desktop", 616: "gamepad" }[e] || e) +
       ".js?contenthash=" +
       {
-        97: "796fa8ebb003ca04dd9c",
+        97: "56c4e89046f3c775f4e1",
         322: "7f701b122fbddc6331bf",
-        616: "52aec6d9e1429556a532",
+        616: "3e6f2fab626912e16005",
       }[e]),
     (r.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=19ddf4825411373681e0"),
@@ -579,12 +582,12 @@ var CLSTAMP = "10764602";
         n = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  r(416);
+  r(355);
   var i = r(669),
     o = r.n(i),
     s = r(629),
-    c = r(218),
-    l = r(219);
+    c = r(472),
+    l = r(918);
   let p = [
     { index: 0, type: c.pR.OK, category: "action" },
     { index: 1, type: c.pR.CANCEL, category: "action" },
@@ -639,12 +642,12 @@ var CLSTAMP = "10764602";
     }
   }
   (0, s.Cg)([l.o], u.prototype, "PollGamepads", null);
-  var d = r(623);
+  var d = r(206);
   async function _(e) {
     const { InitializeGamepadNavigation: t } = await Promise.all([
       r.e(322),
       r.e(616),
-    ]).then(r.bind(r, 196));
+    ]).then(r.bind(r, 360));
     t(e);
   }
   r.p.endsWith("shared/") || (r.p = r.p + "shared/"),
@@ -658,7 +661,7 @@ var CLSTAMP = "10764602";
             ? (async function () {
                 const { InitializeForDesktop: e } = await r
                   .e(97)
-                  .then(r.bind(r, 217));
+                  .then(r.bind(r, 54));
                 e();
               })()
             : e.RegisterForGamepadDetected(() => _(e));

@@ -95,8 +95,8 @@
         p = n(8527),
         d = n(81393),
         u = n(64238),
-        x = n.n(u),
-        f = n(11820);
+        f = n.n(u),
+        x = n(11820);
       const g = (0, r.createContext)(null);
       function m(e) {
         return p.TS.IN_GAMEPADUI
@@ -227,22 +227,26 @@
                       e?.ownerDocument?.defaultView ?? window,
                   },
                 }),
-                a = (0, o.kp)(l.context, { enabled: !!r.click }),
-                h = (0, o.iQ)(l.context, { enabled: !!r.focus }),
-                C = { handleClose: (0, o.iB)() },
-                p = "function" == typeof r.hover ? r.hover(C) : C,
-                d = (0, o.Mk)(l.context, { enabled: !!r.hover, ...p }),
-                u = (0, o.s9)(l.context),
-                { getFloatingProps: x, getReferenceProps: f } = (0, o.bv)([
-                  a,
-                  h,
-                  d,
+                a = { enabled: !!r.click },
+                h = "function" == typeof r.click ? r.click(a) : a,
+                C = (0, o.kp)(l.context, h),
+                p = { enabled: !!r.focus },
+                d = "function" == typeof r.focus ? r.focus(p) : p,
+                u = (0, o.iQ)(l.context, d),
+                f = { handleClose: (0, o.iB)() },
+                x = "function" == typeof r.hover ? r.hover(f) : f,
+                g = (0, o.Mk)(l.context, { enabled: !!r.hover, ...x }),
+                m = (0, o.s9)(l.context),
+                { getFloatingProps: H, getReferenceProps: _ } = (0, o.bv)([
+                  C,
                   u,
+                  g,
+                  m,
                 ]);
               return {
                 floating: l,
-                getFloatingProps: x,
-                getReferenceProps: f,
+                getFloatingProps: H,
+                getReferenceProps: _,
                 open: c,
               };
             })(n);
@@ -287,7 +291,7 @@
           const C = (0, r.cloneElement)(a, {
             ref: l,
             style: { ...c.floating.floatingStyles },
-            className: x()((0, f.T)(), n),
+            className: f()((0, x.T)(), n),
             popover: "manual",
             ...c.getFloatingProps(),
           });
@@ -447,12 +451,12 @@
         p = n(64238),
         d = n.n(p),
         u = n(75659),
-        x = n(11526),
-        f = n(75180),
+        f = n(11526),
+        x = n(75180),
         g = n(8527);
       function m(e) {
         const { as: t = "div", ref: n, focusable: r, navProps: o, ...i } = e,
-          c = (0, x.mz)({ ...i, className: d()(f.Grid, e.className) }, H),
+          c = (0, f.mz)({ ...i, className: d()(x.Grid, e.className) }, H),
           l = r ?? o?.focusable ?? !!i.onClick,
           a = (0, s.jsx)(t, { ref: n, ...c });
         return g.TS.IN_GAMEPADUI
@@ -469,91 +473,91 @@
         {
           prop: "display",
           responsive: !0,
-          className: f.Display,
+          className: x.Display,
           cssProperty: "--grid-display",
         },
         {
           prop: "columns",
           responsive: !0,
-          className: f.Columns,
+          className: x.Columns,
           cssProperty: "--grid-columns",
         },
         {
           prop: "rows",
           responsive: !0,
-          className: f.Rows,
+          className: x.Rows,
           cssProperty: "--grid-rows",
         },
         {
           prop: "autoColumns",
           responsive: !0,
-          className: f.AutoColumns,
+          className: x.AutoColumns,
           cssProperty: "--grid-auto-columns",
         },
         {
           prop: "autoRows",
           responsive: !0,
-          className: f.AutoRows,
+          className: x.AutoRows,
           cssProperty: "--grid-auto-rows",
         },
         {
           prop: "autoFlow",
           responsive: !0,
-          className: f.AutoFlow,
+          className: x.AutoFlow,
           cssProperty: "--grid-auto-flow",
         },
         {
           prop: "areas",
           responsive: !0,
-          className: f.Areas,
+          className: x.Areas,
           cssProperty: "--grid-areas",
         },
         {
           prop: "flow",
           responsive: !0,
-          className: f.Flow,
+          className: x.Flow,
           cssProperty: "--grid-flow",
         },
         {
           prop: "alignContent",
           responsive: !0,
-          className: f.AlignContent,
+          className: x.AlignContent,
           cssProperty: "--grid-align-content",
         },
         {
           prop: "justifyContent",
           responsive: !0,
-          className: f.JustifyContent,
+          className: x.JustifyContent,
           cssProperty: "--grid-justify-content",
         },
         {
           prop: "alignItems",
           responsive: !0,
-          className: f.AlignItems,
+          className: x.AlignItems,
           cssProperty: "--grid-align-items",
         },
         {
           prop: "justifyItems",
           responsive: !0,
-          className: f.JustifyItems,
+          className: x.JustifyItems,
           cssProperty: "--grid-justify-items",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: f.Gap,
+          className: x.Gap,
           cssProperty: (e) => ["--grid-gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: f.Gap,
+          className: x.Gap,
           cssProperty: (e) => ["--grid-gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: f.Gap,
+          className: x.Gap,
           cssProperty: (e) => ["--grid-gap-y", `var(--spacing-${e})`],
         },
       ];
@@ -573,7 +577,7 @@
         z = n(90534),
         T = n(49560);
       n(42327);
-      function R(e) {
+      function y(e) {
         const {
             children: t,
             hoverContent: n,
@@ -600,8 +604,8 @@
           ],
         });
       }
-      var y = n(60859),
-        A = n.n(y);
+      var R = n(60859),
+        A = n.n(R);
       function E() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -789,7 +793,7 @@
                       (0, s.jsxs)(r.s, {
                         gap: "5",
                         children: [
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(y, {
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:
@@ -809,7 +813,7 @@
                               ],
                             }),
                           }),
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(y, {
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:

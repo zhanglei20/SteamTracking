@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Határozat vitatva",
     "moderationaction_escalated": "Eszkalálva",
     "moderationaction_sanctioned": "Szankcionálva",
-    "moderationaction_sustainedondispute": "Vitatás felülbírálva",
+    "moderationaction_sustained": "Moderálás fenntartva",
     "moderationaction_unresolved": "Az eset megoldatlanná vált",
     "moderationaction_updated": "Eset részletei frissítve",
     "moderationaction_locked": "Zárolva",

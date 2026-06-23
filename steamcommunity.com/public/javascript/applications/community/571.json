@@ -184,7 +184,7 @@
     "moderationaction_disputed": "已对解决方案提出争议",
     "moderationaction_escalated": "已转交上级处理",
     "moderationaction_sanctioned": "已处罚",
-    "moderationaction_sustainedondispute": "争议已驳回",
+    "moderationaction_sustained": "维持处理结果",
     "moderationaction_unresolved": "该对象相关的举报变为未解决",
     "moderationaction_updated": "该举报对象相关详情已更新",
     "moderationaction_locked": "已锁定",

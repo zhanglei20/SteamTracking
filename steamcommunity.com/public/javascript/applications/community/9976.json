@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Резолюцията е оспорена",
     "moderationaction_escalated": "Ескалирано",
     "moderationaction_sanctioned": "Санкционирано",
-    "moderationaction_sustainedondispute": "Оспорването е отхвърлено",
+    "moderationaction_sustained": "Модерацията е потвърдена",
     "moderationaction_unresolved": "Тематиката стана нерешена",
     "moderationaction_updated": "Подробностите на тематиката са обновени",
     "moderationaction_locked": "Заключено",

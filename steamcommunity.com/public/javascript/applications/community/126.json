@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Rozhodnutí bylo zpochybněno",
     "moderationaction_escalated": "Eskalováno",
     "moderationaction_sanctioned": "Sankcionováno",
-    "moderationaction_sustainedondispute": "Zpochybnění bylo zrušeno",
+    "moderationaction_sustained": "Moderace byla zachována",
     "moderationaction_unresolved": "Předmět se změnil na nevyřešený",
     "moderationaction_updated": "Podrobnosti předmětu byly aktualizovány",
     "moderationaction_locked": "Uzamčeno",

@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Bezwaar aangetekend",
     "moderationaction_escalated": "Geëscaleerd",
     "moderationaction_sanctioned": "Sanctie opgelegd",
-    "moderationaction_sustainedondispute": "Bezwaar verworpen",
+    "moderationaction_sustained": "Moderatie gehandhaafd",
     "moderationaction_unresolved": "Status gewijzigd in niet opgelost",
     "moderationaction_updated": "Details van onderwerp bijgewerkt",
     "moderationaction_locked": "Vergrendeld",
