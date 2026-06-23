@@ -3447,13 +3447,14 @@
             strPriceFormattedClassName: _,
             bPreferWholeNumbers: _,
             bSelfPurchaseOption: _,
+            bHideNewTag: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = _,
-          _ = (0, _._)(_, _),
+          _ = !_ && (0, _._)(_, _),
           _ = (0, _._)({
             [_().StoreSalePriceWidgetContainer]: !0,
             [_().SingleLineMode]: _,

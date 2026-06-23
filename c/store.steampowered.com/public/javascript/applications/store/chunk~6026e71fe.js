@@ -19516,6 +19516,7 @@
                   bSingleLineMode: !0,
                   bHidePrePurchase: _.type == _._._,
                   bPreferWholeNumbers: _.type == _._._,
+                  bHideNewTag: _.type == _._._,
                   strContainerClassName: _().PriceCtn,
                   strDiscountAndPriceClassName: _().PriceDiscount,
                   strPriceFormattedClassName: _().PriceFormatted,
@@ -19570,6 +19571,7 @@
                           strDiscountAndPriceClassName: _().PriceDiscount,
                           bHidePrePurchase: _.type == _._._,
                           bPreferWholeNumbers: _.type == _._._,
+                          bHideNewTag: _.type == _._._,
                           strPriceFormattedClassName: _().PriceFormatted,
                         }),
                       ],
@@ -19987,6 +19989,7 @@
         ),
         _ = (0, _.createContext)(null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           __webpack_require__
@@ -20167,6 +20170,8 @@
                   strDiscountAndPriceClassName: _().PriceDiscount,
                   bHidePrePurchase: !0,
                   strPriceFormattedClassName: _().PriceFormatted,
+                  bPreferWholeNumbers: _?.type == _._._,
+                  bHideNewTag: _?.type == _._._,
                 }),
               ],
             }),
@@ -20356,12 +20361,21 @@
           _ = _(_, _, _.unique_id),
           _ = _.find((_) => _.tuple_id == _),
           _ = (0, _._)(_?.package_id),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        if (_ && _.final_price_in_cents) {
-          const _ = (0, _._)(_._.country_code.toUpperCase());
+        if (_ && _.final_price_in_cents && _) {
+          let _ = _.formatted_final_price;
+          if (_.type == _._._) {
+            const _ = (0, _._)(_._.country_code.toUpperCase()),
+              _ = {
+                ...(0, _._)(_),
+                bWholeUnitsOnly: !0,
+              };
+            _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
+          }
           return (0, _.jsx)("div", {
             className: _().StaticPrice,
-            children: (0, _._)(Number(_.final_price_in_cents), _),
+            children: _,
           });
         }
         return null;
@@ -20375,20 +20389,29 @@
           } = _,
           _ = (0, _._)(_.package_id),
           { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = _(_, _, _.unique_id),
           _ = _.find((_) => _.tuple_id == _),
           _ = (0, _._)(_?.package_id),
           { data: _ } = (0, _._)(_);
-        if (_ && _) {
+        if (_ && _ && _) {
           const _ =
               Number(_.final_price_in_cents) - Number(_.final_price_in_cents),
             _ = (0, _._)(_._.country_code.toUpperCase());
+          let _ = "";
+          if (_.type == _._._) {
+            const _ = {
+              ...(0, _._)(_),
+              bWholeUnitsOnly: !0,
+            };
+            _ = (0, _._)(_, _);
+          } else _ = (0, _._)(_, _);
           return (0, _.jsxs)("div", {
             className: _().DeltaPrice,
             children: [
               "(",
-              (0, _.jsxs)("span", {
-                children: [_ > 0 ? "+" : "", (0, _._)(_, _)],
+              (0, _.jsx)("span", {
+                children: _ > 0 ? "+" : "",
               }),
               ")",
             ],

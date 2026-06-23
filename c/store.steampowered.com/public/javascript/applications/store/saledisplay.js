@@ -5257,16 +5257,17 @@
           [_],
         ),
           _.useEffect(() => {
+            let _ = "";
             const _ = () => {
               const _ = window?.location?.hash;
-              if (_) {
-                const _ = document.getElementById(
-                  decodeURIComponent(_.substring(1).toLowerCase()),
-                );
+              if (_ && _ != _) {
+                const _ = decodeURIComponent(_.substring(1).toLowerCase()),
+                  _ = document.getElementById(_);
                 _ &&
+                  ((_ = _),
                   _.scrollIntoView({
                     block: "start",
-                  });
+                  }));
               }
             };
             return (

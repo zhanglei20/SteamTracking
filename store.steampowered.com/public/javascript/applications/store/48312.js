@@ -34,16 +34,17 @@
       e.exports = {
         TOCLink: "_2bD720Zjxza1mHMOZ6URrU",
         LearnMoreLink: "_2njnWu1if_8cDnjWtpuBMQ",
+        Terms: "_2oU42aqXAKCuhoH2GmPkWD",
       };
     },
     57757: (e, o, a) => {
       "use strict";
       a.d(o, { S: () => d });
       var n = a(7850),
-        r = a(83392),
-        s = a(40704);
+        s = a(83392),
+        r = a(40704);
       function t(e) {
-        return (0, n.jsx)(s.I, {
+        return (0, n.jsx)(r.I, {
           ...e,
           viewBoxSize: 16,
           children: (0, n.jsx)("path", {
@@ -59,7 +60,7 @@
         const {
             checked: o,
             onChange: a,
-            disabled: s,
+            disabled: r,
             children: c,
             ref: d,
             variant: h = "default",
@@ -70,23 +71,23 @@
           x = "indeterminate" === o,
           f = x ? u : t,
           m = () => {
-            s || (a && a(!!x || !o));
+            r || (a && a(!!x || !o));
           };
-        return (0, n.jsxs)(r.s, {
+        return (0, n.jsxs)(s.s, {
           align: p,
           ref: d,
           role: "checkbox",
           "aria-checked": x ? "mixed" : o,
           "data-state": _(o),
-          className: l()(i.Root, i[`Variant-${h}`], s && i.Disabled),
+          className: l()(i.Root, i[`Variant-${h}`], r && i.Disabled),
           onClick: m,
           tabIndex: 0,
           onKeyDown: (e) => {
-            s ||
+            r ||
               (" " === e.key && (m(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
-          "aria-disabled": s,
+          "aria-disabled": r,
           "data-accent-color": v,
           ...k,
           children: [
@@ -117,24 +118,24 @@
       "use strict";
       a.d(o, { I: () => i });
       var n = a(7850),
-        r = a(11526),
-        s = a(75659),
+        s = a(11526),
+        r = a(75659),
         t = a(16619);
       function i(e) {
         const { viewBoxSize: o = 20, ...a } = e,
-          s = a.size ? void 0 : t.IconSizeDefault;
+          r = a.size ? void 0 : t.IconSizeDefault;
         return (0, n.jsx)("svg", {
           viewBox: `0 0 ${o} ${o}`,
-          ...(0, r.mz)({ className: s, ...a }, c),
+          ...(0, s.mz)({ className: r, ...a }, c),
         });
       }
       const c = [
-        ...s.L,
+        ...r.L,
         { prop: "size", responsive: !0, className: (e) => t[`IconSize-${e}`] },
         {
           prop: "color",
           className: t.Color,
-          cssProperty: (e) => ["--icon-color", (0, r.w7)(e)],
+          cssProperty: (e) => ["--icon-color", (0, s.w7)(e)],
         },
         {
           prop: "hitSlop",
@@ -144,15 +145,15 @@
             "string" == typeof e ? e : "",
           ],
         },
-        s.h.find(({ prop: e }) => "cursor" === e),
+        r.h.find(({ prop: e }) => "cursor" === e),
       ];
     },
     48312: (e, o, a) => {
       "use strict";
       a.r(o), a.d(o, { ShuffleActions: () => b, default: () => I });
       var n = a(7850),
-        r = a(57757),
-        s = a(8527),
+        s = a(57757),
+        r = a(8527),
         t = a(78686),
         i = a(5309),
         c = a(65946),
@@ -234,24 +235,30 @@
             }),
             w &&
               (0, n.jsx)(
-                r.S,
+                s.S,
                 {
                   checked: C || P,
                   onChange: j,
                   "data-checkbox": "",
                   disabled: P,
-                  children: (0, h.oW)(
-                    v.F5.Localize("#Reservation_JoinPool_Terms"),
-                    (0, n.jsx)("a", {
-                      href: a.collection_time_term_and_conditions_url,
-                      className: g().TOCLink,
-                      onClick: (e) => e.stopPropagation(),
-                    }),
-                  ),
+                  children: (0, n.jsxs)("div", {
+                    className: g().Terms,
+                    children: [
+                      " ",
+                      (0, h.oW)(
+                        v.F5.Localize("#Reservation_JoinPool_Terms"),
+                        (0, n.jsx)("a", {
+                          href: a.collection_time_term_and_conditions_url,
+                          className: g().TOCLink,
+                          onClick: (e) => e.stopPropagation(),
+                        }),
+                      ),
+                    ],
+                  }),
                 },
                 o.packageid,
               ),
-            s.iA.logged_in
+            r.iA.logged_in
               ? (0, n.jsx)(b, {
                   hardwareDetail: o,
                   bUserAcceptedTerms: !w || C,
@@ -273,7 +280,7 @@
         const {
           hardwareDetail: o,
           bUserAcceptedTerms: a,
-          onLeaveShuffleList: r,
+          onLeaveShuffleList: s,
         } = e;
         switch (o.reservation_state) {
           case p.G.k_EPurchaseReservationState_NotReserved:
@@ -296,7 +303,7 @@
               packageid: o.packageid,
               strAction: v.F5.Localize("#Reservation_Cancel_Pool"),
               strDesc: v.F5.Localize("#Reservation_Cancel_Pool_Desc"),
-              onCancelSucceeded: r,
+              onCancelSucceeded: s,
             });
           case p.G.k_EPurchaseReservationState_UnavailableRegion:
             return (0, n.jsx)(S.b, {});

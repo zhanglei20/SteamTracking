@@ -4908,20 +4908,20 @@
           [p],
         ),
           u.useEffect(() => {
-            const e = () => {
-              const e = window?.location?.hash;
-              if (e) {
-                const n = document.getElementById(
-                  decodeURIComponent(e.substring(1).toLowerCase()),
-                );
-                n && n.scrollIntoView({ block: "start" });
+            let e = "";
+            const n = () => {
+              const n = window?.location?.hash;
+              if (n && n != e) {
+                const t = decodeURIComponent(n.substring(1).toLowerCase()),
+                  a = document.getElementById(t);
+                a && ((e = n), a.scrollIntoView({ block: "start" }));
               }
             };
             return (
-              e(),
-              window.addEventListener("hashchange", e),
+              n(),
+              window.addEventListener("hashchange", n),
               () => {
-                window.removeEventListener("hashchange", e);
+                window.removeEventListener("hashchange", n);
               }
             );
           }, []);

@@ -32,6 +32,7 @@
       module.exports = {
         TOCLink: "_2bD720Zjxza1mHMOZ6URrU",
         LearnMoreLink: "_2njnWu1if_8cDnjWtpuBMQ",
+        Terms: "_2oU42aqXAKCuhoH2GmPkWD",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -272,14 +273,20 @@
                   onChange: _,
                   "data-checkbox": "",
                   disabled: _,
-                  children: (0, _._)(
-                    _._.Localize("#Reservation_JoinPool_Terms"),
-                    (0, _.jsx)("a", {
-                      href: _.collection_time_term_and_conditions_url,
-                      className: _().TOCLink,
-                      onClick: (_) => _.stopPropagation(),
-                    }),
-                  ),
+                  children: (0, _.jsxs)("div", {
+                    className: _().Terms,
+                    children: [
+                      " ",
+                      (0, _._)(
+                        _._.Localize("#Reservation_JoinPool_Terms"),
+                        (0, _.jsx)("a", {
+                          href: _.collection_time_term_and_conditions_url,
+                          className: _().TOCLink,
+                          onClick: (_) => _.stopPropagation(),
+                        }),
+                      ),
+                    ],
+                  }),
                 },
                 _.packageid,
               ),
