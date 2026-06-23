@@ -503,5 +503,11 @@
     "HardwareDeviceName_Generic": "蒸汽平台设备",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
+    "ControllerWelcome_Success_Body": "您的蒸汽平台硬件已安装最新更新，可立即畅玩游戏。祝您玩得开心！",
+    "ControllerWelcome_RequiredDismiss_RestartSteam": "重启蒸汽平台",
+    "GuidedTour_Frame_ConfirmSkipDongleDesc": "您确定要在不将无线适配器与计算机配对的情况下跳过导览吗？您可以随时在“蒸汽平台”->“设置”中进行配对。",
+    "GuidedTour_Frame_SystemButton": "蒸汽平台键",
+    "GuidedTour_Frame_SystemButtonDesc": "使用蒸汽平台键显示或隐藏蒸汽平台主面板。按住蒸汽平台键可将视图居中。",
+    "GuidedTour_PairingInstructions2": "请检查蒸汽平台是否已打开，并且使用的是您在 Steam Frame 上登录的同一帐户。"
 }

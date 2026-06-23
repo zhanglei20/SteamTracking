@@ -2669,7 +2669,7 @@
     "SteamDeckVerified_ViewDeveloperPost": "Visa inlägg från utvecklare",
     "SteamMachineVerified_DescriptionHeader": "Enligt Valves tester är spelets kompatibilitet med Steam Machine följande: %1$s. %2$s",
     "SteamMachineVerified_DescriptionHeader_WithAppName": "Enligt Valves tester har %1$s följande kompatibilitet med Steam Machine: %2$s. %3$s",
-    "SteamMachineVerified_DescriptionHeader_Verified": "This game is fully functional on Steam Machine.",
+    "SteamMachineVerified_DescriptionHeader_Verified": "Det här spelet fungerar fullt ut på Steam Machine.",
     "SteamMachineVerified_DescriptionHeader_Playable": "Spelet fungerar på Steam Machine, men interaktion eller konfiguration kan kräva extra insatser.",
     "SteamMachineVerified_DescriptionHeader_Unsupported": "Hela eller delar av spelet fungerar för närvarande inte på Steam Machine.",
     "SteamMachineVerified_DescriptionHeader_Unknown": "Valve samlar fortfarande in information om spelet. Vi har för närvarande inga ytterligare uppgifter om kompatibilitet med Steam Machine.",

@@ -2669,7 +2669,7 @@
     "SteamDeckVerified_ViewDeveloperPost": "Geliştirici Gönderisini Görüntüle",
     "SteamMachineVerified_DescriptionHeader": "Valve'ın yaptığı testlere göre bu oyunun Steam Machine uyumluluk derecelendirmesi \"%1$s\" olarak belirlenmiş. %2$s",
     "SteamMachineVerified_DescriptionHeader_WithAppName": "Valve'ın yaptığı testlere göre %1$s oyununun Steam Machine uyumluluk derecelendirmesi \"%2$s\" olarak belirlenmiş. %3$s",
-    "SteamMachineVerified_DescriptionHeader_Verified": "This game is fully functional on Steam Machine.",
+    "SteamMachineVerified_DescriptionHeader_Verified": "Bu oyun Steam Machine'de tamamen işlevseldir.",
     "SteamMachineVerified_DescriptionHeader_Playable": "Bu oyun Steam Machine'de işlevseldir ancak etkileşime geçmek veya yapılandırmak için ilave bir çaba gerekebilir.",
     "SteamMachineVerified_DescriptionHeader_Unsupported": "Bu oyunun tamamı veya bir kısmı şu anda Steam Machine'de işlevsel değildir.",
     "SteamMachineVerified_DescriptionHeader_Unknown": "Valve bu oyun hakkında bilgi toplamaya devam ediyor. Şu anda bu oyunun Steam Machine uyumluluğuyla ilgili elimizde ilave bir bilgi yok.",

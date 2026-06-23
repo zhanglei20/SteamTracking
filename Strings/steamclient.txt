@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -2656,7 +2655,6 @@ $steammessages_parental_objects.proto"
 %s: requesting update check
 %s: rescheduling immediate reconnect attempt
 %s: restored connection attempt token
-%s: restoring manual GPU clocks to %d MHz
 %s: restoring previous glx context\n
 %s: resuming bootstrapper download
 %s: set fan mode: %d -> %d
@@ -5352,6 +5350,7 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -6436,10 +6435,10 @@ $steammessages_parental_objects.proto"
 ../clientdll/systemmanager.cpp:5025
 ../clientdll/systemperfmanager.cpp
 ../clientdll/systemperfmanager_linux.cpp
-../clientdll/systemperfmanager_linux.cpp:1340
-../clientdll/systemperfmanager_linux.cpp:1396
-../clientdll/systemperfmanager_linux.cpp:1522
-../clientdll/systemperfmanager_linux.cpp:303
+../clientdll/systemperfmanager_linux.cpp:1185
+../clientdll/systemperfmanager_linux.cpp:1241
+../clientdll/systemperfmanager_linux.cpp:1367
+../clientdll/systemperfmanager_linux.cpp:291
 ../clientdll/tritoncontroller.cpp
 ../clientdll/udevcontext.cpp
 ../clientdll/ugcmanager.cpp
@@ -8105,15 +8104,14 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -11047,7 +11045,6 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI20CSiteServerLoginCtrl27SteamServerConnectFailure_tE
 17CInternalCallbackI21CNetworkManagerClient26NetworkDeviceStateChange_tE
 17CInternalCallbackI21CPerfReportingManager19AppLifetimeNotice_tE
-17CInternalCallbackI23CSystemPerfManagerLinux27SystemResumingFromSuspend_tE
 17CInternalCallbackI24CClientTimedTrialManager19AppLifetimeNotice_tE
 17CInternalCallbackI24CClientTimedTrialManager23SteamServersConnected_tE
 17CInternalCallbackI24CClientTimedTrialManager26SteamServersDisconnected_tE
@@ -12305,7 +12302,6 @@ $steammessages_parental_objects.proto"
 23StoreItem_IncludedItems
 23UserAchievementStored_t
 24 Mbps
-2500
 24000
 24CAPIJobAuthorizeMicroTxn
 24CAPIJobCancelReservation
@@ -12420,6 +12416,7 @@ $steammessages_parental_objects.proto"
 24WebAuthRequestCallback_t
 25.CMsgRemoteDeviceAuthorizationRequest.EKeyEscrowUsage
 25.CMsgSteamDatagramRouterPingReply.AltAddress.Protocol:
+2500
 256 Kbps
 256K
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
@@ -15974,7 +15971,6 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
-6144
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -15988,6 +15984,7 @@ $steammessages_parental_objects.proto"
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16579,7 +16576,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H(p
 9IClientVR
 9IGv
 9ISteamUGC
@@ -16864,7 +16860,6 @@ $steammessages_parental_objects.proto"
 ???\f???????\n???\r?\t?\v
 ?HAI\t81\t9dcG'
 ?QfZ
-?\n gpu_performance_levels_available
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
@@ -17142,7 +17137,6 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ *
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -17154,6 +17148,8 @@ ACK_REQUEST_IMMEDIATE
 ACK_REQUEST_RELAY
 ACOUSTID_FINGERPRINT
 ACOUSTID_ID
+ACS-%s:%s
+ACU-%s:%s
 AD Time Stamping
 ADH-AES128-GCM-SHA256
 ADH-AES128-SHA
@@ -18929,7 +18925,6 @@ BytesStaged
 BytesToDownload
 BytesToStage
 Bzcu
-C Cx
 C q'O
 C%C'C3C7C9COCWCiC
 C-Yn
@@ -22103,6 +22098,7 @@ C\n\vprice_stops
 C\tD\vD
 C\t\nD4
 C\vo9
+C`Fx
 Cabal
 Cabaret
 Cache Proxy results by hostname: %s\n
@@ -25071,7 +25067,6 @@ Error: %s: failed to bind object: %d - %s
 Error: %s: failed to check for update
 Error: %s: failed to check for update during apply
 Error: %s: failed to collect output for: %s
-Error: %s: failed to commit gpu clock
 Error: %s: failed to connect to login1: %s\n
 Error: %s: failed to connect to pw context
 Error: %s: failed to create a glib context\n
@@ -25102,10 +25097,6 @@ Error: %s: failed to read bios auto-message
 Error: %s: failed to read from m_nFdEventWake - %d
 Error: %s: failed to retrieve monitor fd
 Error: %s: failed to serialize display state
-Error: %s: failed to set gpu performance level to %d
-Error: %s: failed to set manual clocks, reverting to previous level: %d
-Error: %s: failed to set max gpu clock
-Error: %s: failed to set min gpu clock
 Error: %s: failed to set mode
 Error: %s: failed to start thread loop
 Error: %s: failed to update object with inavlid id: %d
@@ -25114,13 +25105,11 @@ Error: %s: failed to write to %s: %s\n
 Error: %s: fallback to last mode failed
 Error: %s: invalid address
 Error: %s: invalid fan control mode: %d
-Error: %s: invalid gpu performance level %d
 Error: %s: invalid monitor when subscribing to subsystem: %s
 Error: %s: invalid perf overlay level: %d
 Error: %s: invalid polling time
 Error: %s: invalid query mode
 Error: %s: no primary display
-Error: %s: perf mode must be manual: %d
 Error: %s: popen failed
 Error: %s: process exit code %u: %s
 Error: %s: process timed out: %s
@@ -26029,7 +26018,6 @@ Force enable GPU acceleration
 Force enable GPU blocklist
 Force enable HW accelerated video decoding
 Force enable/disable using SLR 1.0 by default over legacy LD_* setup.
-Force overriding GPU performance level: %d -> %d
 Force support for BrowserView underlays
 Force the usage of opaque backgrounds for CEF
 Force-enable VR Link capability for testing regardless of platform/encoder
@@ -31814,7 +31802,6 @@ OnSteamPipeClosed() destroying attached socket #%d\n
 OnStreamingClientConnected
 OnStreamingClientDisconnected
 OnSystemDisplayStateChanged
-OnSystemResumed
 OnTransportAcceptMessage
 OnTransportAnswer
 OnTransportChannelGone
@@ -35040,8 +35027,6 @@ Set advanced settings enabled: %d
 Set allow external display refresh rate control: %d
 Set debug Color Management enabled: %d
 Set dynamic refresh rate: %d
-Set gpu manual MHz: %d
-Set gpu performance level: %s -> %s
 Set graphics profiling enabled: %d
 Set initial value for net_fake_state
 Set low latency mode: %d
@@ -39386,8 +39371,6 @@ YieldingUpdateDynamicRefreshRateEnabled
 YieldingUpdateFPSLimit
 YieldingUpdateFPSLimitEnabled
 YieldingUpdateFSRSharpness
-YieldingUpdateGPUPerformanceLevel
-YieldingUpdateGPUPerformanceManualMhz
 YieldingUpdateHDROnSDRBrightness
 YieldingUpdateHDROnSDRTonemapOperator
 YieldingUpdateLowLatencyModeEnabled
@@ -48777,9 +48760,7 @@ gpu_compositing
 gpu_desc
 gpu_name\n
 gpu_performance_level
-gpu_performance_manual_max_mhz
 gpu_performance_manual_mhz
-gpu_performance_manual_min_mhz
 gpu_power\n
 gpu_stats=0\n
 gpu_stats\n
@@ -58865,7 +58846,6 @@ profile_colors
 profile_game_id
 profile_modifier
 profile_modifiers
-profile_peak
 profile_preferences
 profile_themes
 progenitor
@@ -61184,7 +61164,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 19 2026 22:44:50
+steam Jun 23 2026 19:36:06
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
