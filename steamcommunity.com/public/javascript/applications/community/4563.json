@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Résolution contestée",
     "moderationaction_escalated": "Réclamation remontée",
     "moderationaction_sanctioned": "Mesure prise",
-    "moderationaction_sustainedondispute": "Contestation rejetée",
+    "moderationaction_sustained": "Modération soutenue",
     "moderationaction_unresolved": "Sujet marqué non résolu",
     "moderationaction_updated": "Nouveaux éléments sur le sujet ajoutés",
     "moderationaction_locked": "Bloqué",

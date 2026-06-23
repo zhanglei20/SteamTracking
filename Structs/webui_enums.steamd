@@ -4088,6 +4088,12 @@ enum UnnamedEnum9744fddc6b9fcf31
 	SEA = 6;
 }
 
+enum UnnamedEnum974b960088059bdc
+{
+	k_SubMenu = 0;
+	k_JumpList = 1;
+}
+
 enum UnnamedEnum9880fadc8e5d89b8
 {
 	Method = 0;

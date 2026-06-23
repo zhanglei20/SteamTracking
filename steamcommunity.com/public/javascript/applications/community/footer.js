@@ -236,22 +236,26 @@
                     },
                   },
                 }),
-                a = (0, o.kp)(c.context, { enabled: !!r.click }),
-                h = (0, o.iQ)(c.context, { enabled: !!r.focus }),
-                C = { handleClose: (0, o.iB)() },
-                d = "function" == typeof r.hover ? r.hover(C) : C,
-                p = (0, o.Mk)(c.context, { enabled: !!r.hover, ...d }),
-                u = (0, o.s9)(c.context),
-                { getFloatingProps: x, getReferenceProps: f } = (0, o.bv)([
-                  a,
-                  h,
-                  p,
+                a = { enabled: !!r.click },
+                h = "function" == typeof r.click ? r.click(a) : a,
+                C = (0, o.kp)(c.context, h),
+                d = { enabled: !!r.focus },
+                p = "function" == typeof r.focus ? r.focus(d) : d,
+                u = (0, o.iQ)(c.context, p),
+                x = { handleClose: (0, o.iB)() },
+                f = "function" == typeof r.hover ? r.hover(x) : x,
+                g = (0, o.Mk)(c.context, { enabled: !!r.hover, ...f }),
+                m = (0, o.s9)(c.context),
+                { getFloatingProps: v, getReferenceProps: H } = (0, o.bv)([
+                  C,
                   u,
+                  g,
+                  m,
                 ]);
               return {
                 floating: c,
-                getFloatingProps: x,
-                getReferenceProps: f,
+                getFloatingProps: v,
+                getReferenceProps: H,
                 open: l,
               };
             })(n);

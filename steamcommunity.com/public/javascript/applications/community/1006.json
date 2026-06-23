@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Resolución en disputa",
     "moderationaction_escalated": "Escalado",
     "moderationaction_sanctioned": "Sancionado",
-    "moderationaction_sustainedondispute": "Disputa rechazada",
+    "moderationaction_sustained": "Decisión de moderación confirmada",
     "moderationaction_unresolved": "El asunto quedó sin resolver",
     "moderationaction_updated": "Detalles del asunto actualizados",
     "moderationaction_locked": "Bloqueado",

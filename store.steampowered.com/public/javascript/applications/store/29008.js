@@ -7,6 +7,7 @@
       e.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
+        Loading: "_6exjsiWCk6IgWiQenqfQH",
         UseHidingBottomHalf: "_3707obuB-7wD8GDUYRaLH4",
         TrailerAnchorStoreLink: "_1VNyOcfe2cBKY52VedXjyc",
         TrailerCtn: "_3ANIAZhTtXLvORlbv-Du-N",
@@ -2218,29 +2219,28 @@
             bShowIgnoreButton: l = !1,
           } = e,
           { data: c } = (0, H.Yo)(t),
-          { data: d } = (0, H.j4)(t);
-        return void 0 === c && void 0 === d
-          ? null
-          : (0, r.jsxs)("div", {
-              className: (0, _.A)(
-                E().GameHoverCapsuleCtn,
-                ge().InGameHover,
-                o && E().UseHidingBottomHalf,
-              ),
+          { data: d } = (0, H.j4)(t),
+          m = void 0 === c && void 0 === d;
+        return (0, r.jsxs)("div", {
+          className: (0, _.A)(
+            E().GameHoverCapsuleCtn,
+            m && E().Loading,
+            ge().InGameHover,
+            o && E().UseHidingBottomHalf,
+          ),
+          children: [
+            (0, r.jsxs)("a", {
+              href: a,
+              className: E().TrailerAnchorStoreLink,
               children: [
-                (0, r.jsxs)("a", {
-                  href: a,
-                  className: E().TrailerAnchorStoreLink,
-                  children: [
-                    Boolean(s && !i) &&
-                      (0, r.jsx)(u.E, { id: n, snr: e.strSNR }),
-                    Boolean(l && !i) && (0, r.jsx)(v, { id: n, snr: e.strSNR }),
-                    t && (0, r.jsx)(K, { id: t }),
-                  ],
-                }),
-                (0, r.jsx)(we, { ...e }),
+                Boolean(s && !i) && (0, r.jsx)(u.E, { id: n, snr: e.strSNR }),
+                Boolean(l && !i) && (0, r.jsx)(v, { id: n, snr: e.strSNR }),
+                t && (0, r.jsx)(K, { id: t }),
               ],
-            });
+            }),
+            (0, r.jsx)(we, { ...e }),
+          ],
+        });
       }
       function Le(e) {
         const {
@@ -3873,8 +3873,9 @@
                       t,
                       i.iA.country_code,
                     ),
-                    r = await fetch(n);
-                  return (await r.json()).rgIgnoredApps || [];
+                    r = await fetch(n),
+                    a = await r.json();
+                  return Object.keys(a.rgIgnoredApps).map(Number) || [];
                 })(0, t);
                 return new Set(e);
               },

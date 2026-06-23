@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Løsning bestridt",
     "moderationaction_escalated": "Eskalert",
     "moderationaction_sanctioned": "Sanksjonert",
-    "moderationaction_sustainedondispute": "Bestridelse overstyrt",
+    "moderationaction_sustained": "Moderering opprettholdt",
     "moderationaction_unresolved": "Saken ble uløst",
     "moderationaction_updated": "Saksopplysninger oppdatert",
     "moderationaction_locked": "Låst",

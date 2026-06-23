@@ -184,7 +184,7 @@
     "moderationaction_disputed": "解決策に異議が申し立てられました",
     "moderationaction_escalated": "エスカレーションされました",
     "moderationaction_sanctioned": "制裁措置が講じられました",
-    "moderationaction_sustainedondispute": "異議申し立てが却下されました",
+    "moderationaction_sustained": "モデレーションが承認されました",
     "moderationaction_unresolved": "問題が未解決になりました",
     "moderationaction_updated": "問題の詳細が更新されました",
     "moderationaction_locked": "ロック済み",
