@@ -2356,7 +2356,6 @@ ${LANGUAGE}
 %u/config/
 %u/config/%s.vdf
 %u/config/%s/
-%u/config/%s/%s-%s-%s.vdf
 %u/config/%s/%s.vdf
 %u:sdl://%d
 %x:%x.%x "%x" "%x" "%x"
@@ -6158,7 +6157,7 @@ ${LANGUAGE}
 ../steamUI/shutdowncontroller.cpp
 ../steamUI/startupmodemanager.cpp
 ../steamUI/steamoscontroller.cpp
-../steamUI/steamosmanager.cpp:302
+../steamUI/steamosmanager.cpp:303
 ../steamUI/steamuiapicallhelpers.h
 ../steamUI/steamuiappcontroller.cpp
 ../steamUI/steamuibetacontroller.cpp
@@ -7538,14 +7537,15 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFPiP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -12672,6 +12672,7 @@ ${LANGUAGE}
 51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
+524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -12939,6 +12940,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -12950,8 +12952,6 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-524288
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13423,6 +13423,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9H(WC
 9IGv
 9Inventory
 9PE,$
@@ -13756,7 +13757,6 @@ ${LANGUAGE}
 ?N4vgui10ChartPanelE
 ?QfZ
 ?\fYjvE
-?\n gpu_performance_levels_available
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
@@ -13922,6 +13922,7 @@ ACCEPT
 ACCESS_DESCRIPTION
 ACHIEVEMENTS
 ACTIVE
+ACU-
 AD Time Stamping
 ADH-AES128-GCM-SHA256
 ADH-AES128-SHA
@@ -24260,7 +24261,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 19 2026 22:44:53
+Jun 23 2026 19:36:09
 June
 K'iche'
 K(\f]C15
@@ -41540,7 +41541,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghost_
 gidlist
 gidparentcomment
@@ -44296,9 +44297,7 @@ gpu-trace --stop
 gpu_compositing
 gpu_desc
 gpu_performance_level
-gpu_performance_manual_max_mhz
 gpu_performance_manual_mhz
-gpu_performance_manual_min_mhz
 gpu_webview_regkey_disabled
 gpus
 gqr<

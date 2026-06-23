@@ -2669,7 +2669,7 @@
     "SteamDeckVerified_ViewDeveloperPost": "ดูโพสต์ของผู้พัฒนา",
     "SteamMachineVerified_DescriptionHeader": "การทดสอบของ Valve ระบุว่าเกมนี้%1$sบน Steam Machine %2$s",
     "SteamMachineVerified_DescriptionHeader_WithAppName": "การทดสอบของ Valve ระบุว่า %1$s %2$sบน Steam Machine %3$s",
-    "SteamMachineVerified_DescriptionHeader_Verified": "This game is fully functional on Steam Machine.",
+    "SteamMachineVerified_DescriptionHeader_Verified": "เกมนี้ทำงานได้อย่างเต็มรูปแบบบน Steam Machine",
     "SteamMachineVerified_DescriptionHeader_Playable": "เกมนี้ทำงานได้บน Steam Machine แต่อาจต้องดำเนินการเพิ่มเติมหรือกำหนดค่าเพื่อให้เล่นได้",
     "SteamMachineVerified_DescriptionHeader_Unsupported": "ขณะนี้เกมนี้เล่นบน Steam Machine ได้เพียงบางส่วนหรือไม่ได้เลย",
     "SteamMachineVerified_DescriptionHeader_Unknown": "Valve ยังคงเรียนรู้เกี่ยวกับเกมนี้ ขณะนี้เรายังไม่มีข้อมูลเพิ่มเติมเกี่ยวกับความเข้ากันได้กับ Steam Machine",

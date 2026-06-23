@@ -206,7 +206,6 @@ $ORIGIN
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapI14CBaseUtlSymbolItEPvi8CDefLessE
 9IValidate
-:37K\
 >/dev/null
 AIL_allocate_sample_handle
 AIL_close_digital_driver

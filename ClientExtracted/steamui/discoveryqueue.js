@@ -765,7 +765,7 @@
         Pe = n(82396),
         Ne = n(90076),
         Re = n(59578),
-        Fe = n(93777),
+        Fe = n(72740),
         ke = n(80656),
         Be = n(89193),
         Le = n(72993),
@@ -776,7 +776,7 @@
         Ve = n(36111),
         Oe = n.n(Ve),
         We = n(44521),
-        qe = n(27755);
+        qe = n(25475);
       const Ze = 0,
         He = 1,
         Ue = 2;
@@ -2326,4 +2326,4 @@
       }
     },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/discoveryqueue.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/discoveryqueue.js.map

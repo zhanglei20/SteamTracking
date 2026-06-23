@@ -4605,7 +4605,6 @@ Wrong preset coefficients in MS ADPCM format header
 X server refused mouse capture
 X-Box
 X11_XRRSetCrtcConfig failed
-X1~Al
 XAllocClassHint
 XAllocColor
 XAllocSizeHints
