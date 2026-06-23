@@ -47,7 +47,7 @@
             : (0, i.jsx)("div", {
                 className: c().Message,
                 children: m
-                  ? l.F5.Localize("#Reservation_InPool_NoDate")
+                  ? l.F5.Localize("#Reservation_InPool_NoDate", g)
                   : l.F5.Localize("#Reserationn_NoListJoined", g),
               });
         const k = m && (0, n.k)(m.reservation_state),
