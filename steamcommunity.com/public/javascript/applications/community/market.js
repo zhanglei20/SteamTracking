@@ -458,32 +458,36 @@
       }
       function K(t) {
         const {
-          description: c,
-          asset: n,
-          nameOverride: l,
-          style: s = {},
-          ...a
-        } = t;
+            description: c,
+            asset: n,
+            nameOverride: l,
+            colorOverride: s,
+            style: a = {},
+            ...i
+          } = t,
+          v = s || U(c);
         return (0, e.jsx)(b.EY, {
           contrast: "note",
-          ...a,
-          style: { ...(null != s ? s : {}), color: U(c) },
+          ...i,
+          style: { ...(null != a ? a : {}), color: v },
           children: J(c, n, l),
         });
       }
       function q(t) {
         const {
-          description: c,
-          asset: n,
-          nameOverride: l,
-          style: s = {},
-          ...a
-        } = t;
+            description: c,
+            asset: n,
+            nameOverride: l,
+            colorOverride: s,
+            style: a = {},
+            ...i
+          } = t,
+          v = s || U(c);
         return (0, e.jsx)(W.Y, {
           contrast: "note",
           underline: "hover",
-          ...a,
-          style: { ...(null != s ? s : {}), color: U(c) },
+          ...i,
+          style: { ...(null != a ? a : {}), color: v },
           children: J(c, n, l),
         });
       }
@@ -505,28 +509,34 @@
         });
       }
       function X(t) {
-        var c, n, l;
-        const s = t.context.itemDescription,
-          a = parseInt(t.args.index || "-1"),
-          i =
-            null !==
-              (n =
-                null === (c = t.children) || void 0 === c
-                  ? void 0
-                  : c.toString()) && void 0 !== n
-              ? n
-              : "";
-        let v;
-        (null === (l = s.container_properties) || void 0 === l
+        var c, n;
+        const l = t.context.itemDescription,
+          s = parseInt(t.args.index || "-1");
+        let a;
+        (null === (c = l.container_properties) || void 0 === c
           ? void 0
-          : l.contained_items) &&
-          a >= 0 &&
-          a < s.container_properties.contained_items.length &&
-          (v = s.container_properties.contained_items[a]);
-        const r = s.appid,
-          { data: o } = Y(r, v);
-        return o && v
-          ? (0, e.jsx)(tt, { appid: r, description: o, nameOverride: i }, a)
+          : c.contained_items) &&
+          s >= 0 &&
+          s < l.container_properties.contained_items.length &&
+          (a = l.container_properties.contained_items[s]);
+        const i = l.appid,
+          v = null === (n = t.children) || void 0 === n ? void 0 : n.toString(),
+          r = t.context.line.color && `#${t.context.line.color}`,
+          { data: o } = Y(i, a);
+        return a
+          ? o
+            ? (0, e.jsx)(
+                tt,
+                { appid: i, description: o, nameOverride: v, colorOverride: r },
+                s,
+              )
+            : v
+              ? (0, e.jsx)(K, {
+                  description: {},
+                  nameOverride: v,
+                  colorOverride: r,
+                })
+              : null
           : null;
       }
       function Q(t) {
@@ -539,7 +549,12 @@
           : null;
       }
       function tt(t) {
-        const { appid: c, description: n, nameOverride: l } = t;
+        const {
+          appid: c,
+          description: n,
+          nameOverride: l,
+          colorOverride: s,
+        } = t;
         return (0, e.jsx)(G, {
           description: n,
           children:
@@ -551,8 +566,13 @@
                     n.market_bucket_group_id || n.market_hash_name,
                   ),
                   nameOverride: l,
+                  colorOverride: s,
                 })
-              : (0, e.jsx)(K, { description: n, nameOverride: l }),
+              : (0, e.jsx)(K, {
+                  description: n,
+                  nameOverride: l,
+                  colorOverride: s,
+                }),
         });
       }
       function ct(t, c) {
@@ -601,8 +621,8 @@
         rt = n(1736),
         ot = n(60869);
       function ht(t) {
-        const { itemDescription: c, bbcode: n = "" } = t,
-          e = i.useMemo(() => {
+        const { itemDescription: c, line: n, bbcode: e = "" } = t,
+          l = i.useMemo(() => {
             const t = {
               ...it.L,
               ...ot.I,
@@ -615,8 +635,8 @@
             };
             return new st.B(t, (t) => new at.R8(), p.TS.LANGUAGE);
           }, []),
-          l = i.useMemo(() => ({ itemDescription: c }), [c]);
-        return i.useMemo(() => e.ParseBBCode(n, l), [e, n, l]);
+          s = i.useMemo(() => ({ itemDescription: c, line: n }), [c, n]);
+        return i.useMemo(() => l.ParseBBCode(e, s), [l, e, s]);
       }
       function dt(t) {
         var c, n;
@@ -902,7 +922,11 @@
           case "bbcode":
             return (0, e.jsx)(b.EY, {
               ...v,
-              children: (0, e.jsx)(ht, { itemDescription: s, bbcode: r }),
+              children: (0, e.jsx)(ht, {
+                itemDescription: s,
+                line: l,
+                bbcode: r,
+              }),
             });
           default:
             return (0, e.jsx)(b.EY, { ...v, children: r });

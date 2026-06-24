@@ -547,37 +547,41 @@
       }
       function _(_) {
         const {
-          description: _,
-          asset: _,
-          nameOverride: _,
-          style: _ = {},
-          ..._
-        } = _;
+            description: _,
+            asset: _,
+            nameOverride: _,
+            colorOverride: _,
+            style: _ = {},
+            ..._
+          } = _,
+          _ = _ || _(_);
         return (0, _.jsx)(_._, {
           contrast: "note",
           ..._,
           style: {
             ...(null != _ ? _ : {}),
-            color: _(_),
+            color: _,
           },
           children: _(_, _, _),
         });
       }
       function _(_) {
         const {
-          description: _,
-          asset: _,
-          nameOverride: _,
-          style: _ = {},
-          ..._
-        } = _;
+            description: _,
+            asset: _,
+            nameOverride: _,
+            colorOverride: _,
+            style: _ = {},
+            ..._
+          } = _,
+          _ = _ || _(_);
         return (0, _.jsx)(_._, {
           contrast: "note",
           underline: "hover",
           ..._,
           style: {
             ...(null != _ ? _ : {}),
-            color: _(_),
+            color: _,
           },
           children: _(_, _, _),
         });
@@ -607,17 +611,9 @@
         });
       }
       function _(_) {
-        var _, _, _;
+        var _, _;
         const _ = _.context.itemDescription,
-          _ = parseInt(_.args.index || "-1"),
-          _ =
-            null !==
-              (_ =
-                null === (_ = _.children) || void 0 === _
-                  ? void 0
-                  : _.toString()) && void 0 !== _
-              ? _
-              : "";
+          _ = parseInt(_.args.index || "-1");
         let _;
         (null === (_ = _.container_properties) || void 0 === _
           ? void 0
@@ -626,17 +622,31 @@
           _ < _.container_properties.contained_items.length &&
           (_ = _.container_properties.contained_items[_]);
         const _ = _.appid,
+          _ =
+            null === (_ = _.children) || void 0 === _
+              ? void 0
+              : __webpack_require__.toString(),
+          _ = _.context.line.color && `#${_.context.line.color}`,
           { data: _ } = _(_, _);
-        return _ && _
-          ? (0, _.jsx)(
-              _,
-              {
-                appid: _,
-                description: _,
-                nameOverride: _,
-              },
-              _,
-            )
+        return _
+          ? _
+            ? (0, _.jsx)(
+                _,
+                {
+                  appid: _,
+                  description: _,
+                  nameOverride: _,
+                  colorOverride: _,
+                },
+                _,
+              )
+            : _
+              ? (0, _.jsx)(_, {
+                  description: {},
+                  nameOverride: _,
+                  colorOverride: _,
+                })
+              : null
           : null;
       }
       function _(_) {
@@ -652,7 +662,12 @@
           : null;
       }
       function _(_) {
-        const { appid: _, description: _, nameOverride: _ } = _;
+        const {
+          appid: _,
+          description: _,
+          nameOverride: _,
+          colorOverride: _,
+        } = _;
         return (0, _.jsx)(_, {
           description: _,
           children:
@@ -664,10 +679,12 @@
                     _.market_bucket_group_id || _.market_hash_name,
                   ),
                   nameOverride: _,
+                  colorOverride: _,
                 })
               : (0, _.jsx)(_, {
                   description: _,
                   nameOverride: _,
+                  colorOverride: _,
                 }),
         });
       }
@@ -717,7 +734,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { itemDescription: _, bbcode: _ = "" } = _,
+        const { itemDescription: _, line: _, bbcode: _ = "" } = _,
           _ = _.useMemo(() => {
             const _ = {
               ..._._,
@@ -744,8 +761,9 @@
           _ = _.useMemo(
             () => ({
               itemDescription: _,
+              line: _,
             }),
-            [_],
+            [_, _],
           );
         return _.useMemo(() => _.ParseBBCode(_, _), [_, _, _]);
       }
@@ -1068,6 +1086,7 @@
               ..._,
               children: (0, _.jsx)(_, {
                 itemDescription: _,
+                line: _,
                 bbcode: _,
               }),
             });

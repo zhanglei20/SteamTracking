@@ -42027,7 +42027,8 @@
                       value: t,
                       onChange: (e) =>
                         n(
-                          (0, x.TG)(e?.currentTarget?.value)
+                          e?.currentTarget?.value &&
+                            (0, x.TG)(e?.currentTarget?.value)
                             ? Number.parseInt(e.currentTarget.value)
                             : 0,
                         ),
@@ -42293,13 +42294,10 @@
           return (0, s.jsx)("div", { children: e });
         }
         let r = "?? ";
+        const o = t?.GetBestPurchaseOption()?.final_price_in_cents;
         return (
-          (0, S.TG)(t?.GetBestPurchaseOption()?.final_price_in_cents)
-            ? (r = (
-                Number.parseInt(
-                  t.GetBestPurchaseOption().final_price_in_cents,
-                ) / 100
-              ).toFixed(2))
+          o && (0, S.TG)(o)
+            ? (r = (Number.parseInt(o) / 100).toFixed(2))
             : i && (r = (i / 100).toFixed(2)),
           (0, s.jsxs)(s.Fragment, {
             children: [
