@@ -445,16 +445,13 @@
       }
       function J(t, c, n) {
         const e =
-          "string" == typeof (null == c ? void 0 : c.amount)
-            ? parseInt(c.amount)
-            : null == c
-              ? void 0
-              : c.amount;
-        let l;
-        return (
-          (l = n || t.market_bucket_group_name || t.name),
-          (e && e > 1 ? `${(0, D.D)(e)} ` : "") + l
-        );
+            "string" == typeof (null == c ? void 0 : c.amount)
+              ? parseInt(c.amount)
+              : null == c
+                ? void 0
+                : c.amount,
+          l = n || t.name;
+        return (e && e > 1 ? `${(0, D.D)(e)} ` : "") + l;
       }
       function K(t) {
         const {

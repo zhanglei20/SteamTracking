@@ -534,16 +534,13 @@
       }
       function _(_, _, _) {
         const _ =
-          "string" == typeof (null == _ ? void 0 : _.amount)
-            ? parseInt(_.amount)
-            : null == _
-              ? void 0
-              : _.amount;
-        let _;
-        return (
-          (_ = _ || _.market_bucket_group_name || _.name),
-          (_ && _ > 1 ? `${(0, _._)(_)} ` : "") + _
-        );
+            "string" == typeof (null == _ ? void 0 : _.amount)
+              ? parseInt(_.amount)
+              : null == _
+                ? void 0
+                : _.amount,
+          _ = _ || _.name;
+        return (_ && _ > 1 ? `${(0, _._)(_)} ` : "") + _;
       }
       function _(_) {
         const {

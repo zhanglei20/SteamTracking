@@ -14149,11 +14149,8 @@ function _(_, _) {
 }
 function _(_, _, _) {
   let _ = typeof _?.amount == "string" ? parseInt(_.amount) : _?.amount,
-    _;
-  return (
-    _ ? (_ = _) : (_ = _.market_bucket_group_name || _.name),
-    (_ && _ > 1 ? `${_(_)} ` : "") + _
-  );
+    _ = _ || _.name;
+  return (_ && _ > 1 ? `${_(_)} ` : "") + _;
 }
 function _(_) {
   let {
