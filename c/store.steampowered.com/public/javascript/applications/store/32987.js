@@ -27,7 +27,7 @@
             rgHardwareDetails: _,
             selectedProduct: _,
           } = _,
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             __webpack_require__?.some((_) => _.collection_time_active),
             __webpack_require__?.some(
               (_) =>
@@ -35,44 +35,53 @@
             ),
             _.length,
             __webpack_require__?.find((_) => (0, _._)(_.reservation_state)),
+            __webpack_require__?._("chunkid"),
           ]),
           _ = (0, _._)(_?.packageid),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        if (_)
-          return _
-            ? (0, _.jsx)("div", {
-                className: _().Message,
-                children: _
-                  ? _._.Localize("#Reservation_InPool_NoDate")
-                  : _._.Localize("#Reservation_Pool_Closed"),
-              })
-            : (0, _.jsx)("div", {
-                className: _().Message,
-                children: _
-                  ? _._.Localize("#Reservation_InPool_NoDate", _)
-                  : _._.Localize("#Reserationn_NoListJoined", _),
-              });
-        const _ = _ && (0, _._)(_.reservation_state),
-          _ = (_ && _?.position_is_waitlist) || (!_ && _?.position_is_waitlist),
+        const _ = _ && (0, _._)(_.reservation_state);
+        if (_) {
+          if (_ && _)
+            return (0, _.jsx)("div", {
+              className: _().Message,
+              children: _._.Localize("#Reservation_InPool"),
+            });
+          if (!_)
+            return (0, _.jsx)("div", {
+              className: _().Message,
+              children: _
+                ? _._.Localize("#Reservation_InPool_NoDate", _)
+                : _._.Localize("#Reserationn_NoListJoined", _),
+            });
+        }
+        const _ =
+            (_ && _?.position_is_waitlist) || (!_ && _?.queue_in_waitlist),
           _ = _?.name;
-        return _ && _ && _
-          ? (0, _.jsx)("div", {
+        if (_) {
+          if (_ && _)
+            return (0, _.jsx)("div", {
               className: _().Message,
               children: _._.Localize(
                 "#Reservation_In_Waitlist_WithName_NoDate",
                 _,
               ),
+            });
+          if (!_)
+            return (0, _.jsx)("div", {
+              className: _().Message,
+              children: _._.Localize("#Reservation_Pool_Closed"),
+            });
+        }
+        return _ && _
+          ? (0, _.jsx)("div", {
+              className: _().Message,
+              children: _._.Localize(
+                "#Reservation_OnRegularReserveForModel",
+                _,
+              ),
             })
-          : _ && _
-            ? (0, _.jsx)("div", {
-                className: _().Message,
-                children: _._.Localize(
-                  "#Reservation_OnRegularReserveForModel",
-                  _,
-                ),
-              })
-            : null;
+          : null;
       }
     },
   },

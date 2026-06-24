@@ -19929,10 +19929,14 @@
             className: (0, _._)(_.noreserve, "NoReserverMsg"),
             children: _._.Localize("#Sale_Reservation_CanceledPendingRefund"),
           });
+        const _ = !!_ && (0, _._)(_.reservation_state),
+          _ =
+            _.collection_time_active > 0 && _.collection_time_active < _._.NOW;
         if (
           _.requires_reservation &&
           !_.reservation_not_allowed &&
-          _.collection_time_active
+          _.collection_time_active &&
+          (!_ || _)
         )
           return (0, _.jsx)("div", {
             className: _.purchaseaction,
@@ -19942,7 +19946,7 @@
                 _.internal_section_data?.reservation_advanced,
               storeItemReleaseInfo: _,
               bShuffleInProgress: _.collection_time_active < _._.NOW,
-              bHasSomeReservation: !!_ && (0, _._)(_.reservation_state),
+              bHasSomeReservation: _,
             }),
           });
         if (_ && _.is_coming_soon)
@@ -19953,9 +19957,8 @@
               storeItemReleaseInfo: _,
             }),
           });
-        const _ = (0, _._)(_.reservation_state);
-        return (_.requires_reservation && !_ && _.queue_in_waitlist) ||
-          (_ && _.position_is_waitlist)
+        const _ = (!_ && _.queue_in_waitlist) || (_ && _.position_is_waitlist);
+        return _.requires_reservation && _
           ? (0, _.jsx)("div", {
               className: _.purchaseaction,
               children: (0, _.jsx)(_, {
@@ -19963,6 +19966,7 @@
                 reservationAdvancedSettings:
                   _.internal_section_data?.reservation_advanced,
                 reservedHardwareDetail: _,
+                bShuffleInProgress: _,
               }),
             })
           : (0, _.jsx)(_.Fragment, {
