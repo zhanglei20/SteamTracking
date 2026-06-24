@@ -44480,7 +44480,8 @@
                       value: _,
                       onChange: (_) =>
                         __webpack_require__(
-                          (0, _._)(_?.currentTarget?.value)
+                          _?.currentTarget?.value &&
+                            (0, _._)(_?.currentTarget?.value)
                             ? Number.parseInt(_.currentTarget.value)
                             : 0,
                         ),
@@ -44756,13 +44757,10 @@
           });
         }
         let _ = "?? ";
+        const _ = _?.GetBestPurchaseOption()?.final_price_in_cents;
         return (
-          (0, _._)(_?.GetBestPurchaseOption()?.final_price_in_cents)
-            ? (_ = (
-                Number.parseInt(
-                  _.GetBestPurchaseOption().final_price_in_cents,
-                ) / 100
-              ).toFixed(2))
+          _ && (0, _._)(_)
+            ? (_ = (Number.parseInt(_) / 100).toFixed(2))
             : _ && (_ = (_ / 100).toFixed(2)),
           (0, _.jsxs)(_.Fragment, {
             children: [

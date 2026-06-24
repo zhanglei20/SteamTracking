@@ -14132,6 +14132,7 @@ function _(_) {
         ..._,
         children: (0, _.jsx)(_, {
           itemDescription: _,
+          line: _,
           bbcode: _,
         }),
       });
@@ -14155,26 +14156,42 @@ function _(_, _, _) {
   );
 }
 function _(_) {
-  let { description: _, asset: _, nameOverride: _, style: _ = {}, ..._ } = _;
+  let {
+      description: _,
+      asset: _,
+      nameOverride: _,
+      colorOverride: _,
+      style: _ = {},
+      ..._
+    } = _,
+    _ = _ || _(_);
   return (0, _.jsx)(_, {
     contrast: "note",
     ..._,
     style: {
       ...(_ ?? {}),
-      color: _(_),
+      color: _,
     },
     children: _(_, _, _),
   });
 }
 function _(_) {
-  let { description: _, asset: _, nameOverride: _, style: _ = {}, ..._ } = _;
+  let {
+      description: _,
+      asset: _,
+      nameOverride: _,
+      colorOverride: _,
+      style: _ = {},
+      ..._
+    } = _,
+    _ = _ || _(_);
   return (0, _.jsx)(_, {
     contrast: "note",
     underline: "hover",
     ..._,
     style: {
       ...(_ ?? {}),
-      color: _(_),
+      color: _,
     },
     children: _(_, _, _),
   });
@@ -14833,25 +14850,35 @@ function _(_) {
 function _(_) {
   let _ = _.context.itemDescription,
     _ = parseInt(_.args.index || "-1"),
-    _ = _.children?.toString() ?? "",
     _;
   _.container_properties?.contained_items &&
     _ >= 0 &&
     _ < _.container_properties.contained_items.length &&
     (_ = _.container_properties.contained_items[_]);
   let _ = _.appid,
+    _ = _.children?.toString(),
+    _ = _.context.line.color && `#${_.context.line.color}`,
     { data: _ } = _(_, _);
-  return !_ || !_
-    ? null
-    : (0, _.jsx)(
-        _,
-        {
-          appid: _,
-          description: _,
-          nameOverride: _,
-        },
-        _,
-      );
+  return _
+    ? _
+      ? (0, _.jsx)(
+          _,
+          {
+            appid: _,
+            description: _,
+            nameOverride: _,
+            colorOverride: _,
+          },
+          _,
+        )
+      : _
+        ? (0, _.jsx)(_, {
+            description: {},
+            nameOverride: _,
+            colorOverride: _,
+          })
+        : null
+    : null;
 }
 function _(_) {
   let { appid: _, contained_item: _ } = _,
@@ -14866,7 +14893,7 @@ function _(_) {
     : null;
 }
 function _(_) {
-  let { appid: _, description: _, nameOverride: _ } = _;
+  let { appid: _, description: _, nameOverride: _, colorOverride: _ } = _;
   return (0, _.jsx)(_, {
     description: _,
     children:
@@ -14875,10 +14902,12 @@ function _(_) {
             description: _,
             href: _.Item(_, _.market_bucket_group_id || _.market_hash_name),
             nameOverride: _,
+            colorOverride: _,
           })
         : (0, _.jsx)(_, {
             description: _,
             nameOverride: _,
+            colorOverride: _,
           }),
   });
 }
@@ -14897,7 +14926,7 @@ function _(_) {
 }
 var _ = _(_(), 1);
 function _(_) {
-  let { itemDescription: _, bbcode: _ = "" } = _,
+  let { itemDescription: _, line: _, bbcode: _ = "" } = _,
     _ = _.useMemo(() => {
       let _ = (_) => new _(),
         _ = {
@@ -14925,8 +14954,9 @@ function _(_) {
     _ = _.useMemo(
       () => ({
         itemDescription: _,
+        line: _,
       }),
-      [_],
+      [_, _],
     );
   return _.useMemo(() => _.ParseBBCode(_, _), [_, _, _]);
 }

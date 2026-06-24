@@ -2077,7 +2077,6 @@ $ffn
 14ConCommandBase
 14ISSLConnection
 1536
-15000
 155.133.240.0/23
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -2120,7 +2119,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18446744073709551615
 18CBaseFrameFunction
 18CFutureSharedStateIbE
 18CHTTPClientRequest
@@ -2144,7 +2142,6 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
-19:36:01
 19CClientInstallUtils
 19CCuratorPreferences
 19CDirContentsWatcher
@@ -2196,8 +2193,10 @@ $ffn
 20.GamePerformanceSettings.EGamePerformanceSetting
 200 Mbps
 2000
-200M
 2048
+15000
+18446744073709551615
+200M
 208.64.200.0/22
 208.78.164.0/22
 20CCDDBAppDetailCommon
@@ -2239,6 +2238,7 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
+23:14:17
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23CECKeyExchangePublicKey
@@ -2424,10 +2424,10 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
+64CK\vH
 65536
 524288
 60000000
-64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
