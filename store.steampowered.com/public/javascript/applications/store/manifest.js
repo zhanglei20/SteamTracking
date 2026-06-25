@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10775014";
+var CLSTAMP = "10776362";
 (() => {
   "use strict";
   var e,
@@ -449,7 +449,7 @@ var CLSTAMP = "10775014";
         22568: "b93950ea84e903d861af",
         22634: "45c4bc09f0c43cd277ef",
         22649: "428fed89ff643ba7b250",
-        22687: "fb1d81088a81d6862dcc",
+        22687: "c83e3b31e36d00d9b4e5",
         22842: "64a714aad3507056ba35",
         22936: "3030d5d7d0714ffd1a82",
         22940: "44f9fb066de9e3915154",
@@ -475,7 +475,7 @@ var CLSTAMP = "10775014";
         28310: "b1612f5cc4424bb9d505",
         28954: "07f37e81cf2000aa268d",
         28967: "9ba0a5cc368c946e1318",
-        29008: "a6901117642a954da5d0",
+        29008: "edc58bc87cb82d842d00",
         29197: "5050b79bb5a387462662",
         29431: "743a63a6ff8ec524259d",
         29456: "f82013c96e6991119430",
@@ -642,7 +642,7 @@ var CLSTAMP = "10775014";
         56728: "2873873b0d456f682401",
         56979: "746993c0af6c7cd14c11",
         57326: "e0097d043ec96d941fda",
-        57333: "c0c7b8c538a0b2b01ae7",
+        57333: "7a4bb26dd9b9a0e6cd59",
         57645: "750415c435b95bf17aa1",
         57742: "c7aa7902f4092ce52cdb",
         57819: "db23bb20acc550a20c83",
@@ -770,7 +770,7 @@ var CLSTAMP = "10775014";
         83710: "f23babbd5cdd7b96ca0f",
         83899: "35d6aed3963c72aefaa7",
         84113: "9cc7214d882213fc346b",
-        84135: "633ae7fb0cf3952779b2",
+        84135: "83da7315161a5054a8b4",
         84259: "700dbf258d9a43734dcc",
         84925: "af8e0271e5f7a872f5b0",
         85139: "dd0fed42a20cd256b222",
@@ -903,7 +903,7 @@ var CLSTAMP = "10775014";
         22634: "9038cf2a4d05c575f6b2",
         23027: "126ef59a8391ceafa4f1",
         27701: "25ad2e370b2a6982a458",
-        29008: "4a4507b05e0886384624",
+        29008: "98a51b6400cfc1bbad9c",
         29456: "90d390ae277b2e06bab6",
         30030: "f67bc72f7bf86f1000dd",
         32987: "e34ba1dd6d23e570bca7",
@@ -924,7 +924,7 @@ var CLSTAMP = "10775014";
         53965: "9fcb91b2f68adee90dc9",
         55860: "1f529f3fd8ebc27afe50",
         55894: "9147f0a73f31be625c9c",
-        57333: "05b327dce773f80f6f91",
+        57333: "0e4ccb12264a889ed02c",
         57819: "8245b93ca808316aea4e",
         58987: "9147f0a73f31be625c9c",
         67072: "0319ebdff1d649d907e0",
