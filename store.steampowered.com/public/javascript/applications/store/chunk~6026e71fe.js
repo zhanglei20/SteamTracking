@@ -4066,6 +4066,9 @@
                       (n.rtime_estimated_notification =
                         e.rtime_estimated_notification()),
                       (n.notificaton_token = e.notificaton_token()),
+                      (n.queue_waitlist_token = e.queue_waitlist_token()),
+                      (n.position_is_waitlist = e.position_is_waitlist()),
+                      (n.user_waitlist_token = e.user_waitlist_token()),
                       p.setQueryData((0, i.Zi)(t?.packageid), n);
                   }),
                 !0)
@@ -18583,7 +18586,7 @@
           u =
             s.collection_time_active > 0 &&
             s.collection_time_active < Mn.TS.NOW,
-          _ = (!d && s.queue_in_waitlist) || (d && s.position_is_waitlist);
+          _ = (!d && s.queue_in_waitlist) || (d && r.position_is_waitlist);
         return !s.requires_reservation ||
           s.reservation_not_allowed ||
           !s.collection_time_active ||
@@ -18604,7 +18607,6 @@
                     reservationAdvancedSettings:
                       a.internal_section_data?.reservation_advanced,
                     reservedHardwareDetail: r,
-                    bShuffleInProgress: u,
                   }),
                 })
               : (0, n.jsx)(n.Fragment, {
