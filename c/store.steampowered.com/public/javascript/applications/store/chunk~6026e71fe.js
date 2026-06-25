@@ -4444,6 +4444,9 @@
                       (_.rtime_estimated_notification =
                         _.rtime_estimated_notification()),
                       (_.notificaton_token = _.notificaton_token()),
+                      (_.queue_waitlist_token = _.queue_waitlist_token()),
+                      (_.position_is_waitlist = _.position_is_waitlist()),
+                      (_.user_waitlist_token = _.user_waitlist_token()),
                       _.setQueryData((0, _._)(_?.packageid), _);
                   }),
                 !0)
@@ -19953,7 +19956,6 @@
                     reservationAdvancedSettings:
                       _.internal_section_data?.reservation_advanced,
                     reservedHardwareDetail: _,
-                    bShuffleInProgress: _,
                   }),
                 })
               : (0, _.jsx)(_.Fragment, {
