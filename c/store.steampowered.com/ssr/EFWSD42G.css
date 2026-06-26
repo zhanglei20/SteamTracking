@@ -31163,6 +31163,7 @@ body.in_global_drag .title-area {
   padding: 15px;
   background-color: #00000040;
   animation: hxnIRn-vs9E- 0.15s ease-in-out forwards;
+  z-index: 1;
 }
 @keyframes hxnIRn-vs9E- {
   0% {

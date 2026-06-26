@@ -5,9 +5,9 @@ bed12255 ThirdPartyLegalNotices.doc
 ca504ad1 ThirdPartyLegalNotices.html
 00000000 bin/
 d2dd32e3 bin/d3ddriverquery64.exe
-b6994994 bin/hardwareupdater/IBEX_FW_6A18D057.fw
-927dcf11 bin/hardwareupdater/PROTEUS_FW_6A18D053.fw
-dcace77b bin/hardwareupdater/hardwareupdater.cfg
+71547237 bin/hardwareupdater/IBEX_FW_6A3BFE74.fw
+84dd1b8d bin/hardwareupdater/PROTEUS_FW_6A3BFE78.fw
+256558af bin/hardwareupdater/hardwareupdater.cfg
 97d40a0f bin/hardwareupdater/hardwareupdater.x86_64
 00000000 bin\hardwareupdater/
 00000000 bin\hardwareupdater/
@@ -12399,8 +12399,8 @@ bc1ad089 steamui/9963.js
 2910cacd steamui/awardicon.js
 6f85ad88 steamui/broadcast.js
 754cc1c0 steamui/broadcastapp.js
-18355722 steamui/changelist.txt
-8f4dffcf steamui/chunk~2dcc5aaf7.js
+dbccee01 steamui/changelist.txt
+6d3ef051 steamui/chunk~2dcc5aaf7.js
 28fdef82 steamui/chunk~87fd721f7.js
 eb5cf7e7 steamui/css/9441.css
 c4caa444 steamui/css/awardicon.css
@@ -12794,9 +12794,9 @@ f11d799e steamui/images/tvnoise.png
 6c038289 steamui/images/whatsnew_playnext.jpg
 ee9f76ea steamui/images/workshopbackground.png
 26108669 steamui/index.html
-619b3921 steamui/libraries/libraries~00299a408.js
+574d9335 steamui/libraries/libraries~00299a408.js
 ebedb474 steamui/libraries/libraries~2dcc5aaf7.js
-94df8382 steamui/library.js
+2dc8d03e steamui/library.js
 c8975a72 steamui/licenses.js
 47c0c50e steamui/licenses.txt
 7893139c steamui/localization/friendsui_arabic-json.js
