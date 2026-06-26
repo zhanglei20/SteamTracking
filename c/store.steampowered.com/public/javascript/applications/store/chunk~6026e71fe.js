@@ -3839,6 +3839,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { hardwareDetail: _, reservedHardwareDetail: _ } = _,
@@ -3859,28 +3860,37 @@
               children: _?.name ?? "",
             }),
           ),
-          _ = _._.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_1",
+          _ = (0, _._)(
+            _._.Localize(
+              "#Sale_Reservation_Change_NoDeposit_1_Emphasis",
+              _?.name ?? "",
+            ),
+            (0, _.jsx)("b", {}),
+            (0, _.jsx)("b", {}),
+          );
+        _.queue_in_waitlist &&
+          ((_ = _?.position_is_waitlist
+            ? _._.Localize("#Reservation_Change_WaitList")
+            : _._.Localize("#Reservation_JoinWaitList")),
+          (_ = _._.LocalizeReact(
+            "#Reservation_Change_WaitList_Desc2",
             (0, _.jsx)("b", {
               children: _?.name ?? "",
             }),
-          );
-        return (
-          _.queue_in_waitlist &&
-            ((_ = _._.Localize("#Reservation_Change_WaitList")),
-            (_ = _._.LocalizeReact(
-              "#Reservation_Change_WaitList_Desc2",
-              (0, _.jsx)("b", {
-                children: _?.name ?? "",
-              }),
-            ))),
+          ))),
           _?.position_is_waitlist &&
             (_ = _._.LocalizeReact(
               "#Reservation_Change_WaitList_Desc1",
               (0, _.jsx)("b", {
                 children: _?.name ?? "",
               }),
-            )),
+            ));
+        let _ = _;
+        return (
+          _.queue_in_waitlist &&
+            _ &&
+            !_?.position_is_waitlist &&
+            (_ = _._.Localize("#Sale_CancelReservation")),
           (0, _.jsxs)("div", {
             className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
             children: [
@@ -11432,8 +11442,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
       }
@@ -11443,16 +11454,25 @@
           rtEstimatedNotifcationDate: _,
           strUrlLearnMoreLink: _,
           bInReservationQueue: _,
+          bWaitlistIsActive: _,
+          reservedHardwareDetail: _,
         } = _;
-        if (!_ || !_)
+        let _ = _._.Localize("#Sale_Reservation_Fallback_V2");
+        if (
+          (_
+            ? (_ = _._.Localize("#Sale_Reservation_Fallback_user_V2"))
+            : _ && _ && !_.position_is_waitlist
+              ? (_ = _._.Localize(
+                  "#Reservation_Join_Waitlist_Cancel_Reservation",
+                ))
+              : _ &&
+                (_ = _._.Localize("#Reservation_In_Waitlist_Message_NotJoin")),
+          !_ || !_)
+        )
           return (0, _.jsx)("div", {
             className: _().Ctn,
             children: (0, _.jsx)(_._, {
-              elReservationMessage: _._.Localize(
-                _
-                  ? "#Sale_Reservation_Fallback_user_V2"
-                  : "#Sale_Reservation_Fallback_V2",
-              ),
+              elReservationMessage: _,
               strUrlLearnMoreLink: _,
             }),
           });
@@ -11517,9 +11537,7 @@
             }
             break;
           case "#Sale_Reservation_AvailabilityUnknown":
-            _ = _
-              ? "#Sale_Reservation_Fallback_user_V2"
-              : "#Sale_Reservation_Fallback_V2";
+            _ = void 0;
             break;
           default:
             _ = "#Sale_Reservation_Fallback";
@@ -11527,7 +11545,7 @@
         return (0, _.jsx)("div", {
           className: _().Ctn,
           children: (0, _.jsx)(_._, {
-            elReservationMessage: (0, _._)(_, _, _, _, ""),
+            elReservationMessage: _ ? (0, _._)(_, _, _, _, "") : _,
             strUrlLearnMoreLink: _,
           }),
         });
@@ -11626,7 +11644,12 @@
         });
       }
       function _(_) {
-        const { hardwareDetail: _, reservationDef: _, section: _ } = _,
+        const {
+            hardwareDetail: _,
+            reservationDef: _,
+            section: _,
+            reservedHardwareDetail: _,
+          } = _,
           _ = !(
             _.inventory_available ||
             (null != _.reservation_state &&
@@ -11678,7 +11701,8 @@
                 }),
           });
         const _ =
-          _.reservation_state === _._.k_EPurchaseReservationState_Reserved;
+            _.reservation_state === _._.k_EPurchaseReservationState_Reserved,
+          _ = !!_.queue_in_waitlist;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.expecteddate, "ReservationExpectedDateCtn"),
           children: (0, _.jsx)("div", {
@@ -11707,6 +11731,8 @@
                         _.rtime_estimated_notification,
                       strToken: _.notificaton_token,
                       bInReservationQueue: _,
+                      bWaitlistIsActive: _,
+                      reservedHardwareDetail: _,
                     }),
                   ],
                 }),
@@ -19972,6 +19998,7 @@
                         section: _,
                         reservationDef: _,
                         hardwareDetail: _,
+                        reservedHardwareDetail: _,
                       }),
                       _ &&
                         !!_.allow_purchase_in_country &&
