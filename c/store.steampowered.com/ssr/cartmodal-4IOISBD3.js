@@ -595,7 +595,6 @@ var _ = {
   StoreSaleDiscountedPriceCtn: "NjVV279yLPo-",
   Scrollable: "_2yQ6-Ou4KRk-",
   LineItemWrapper: "YXP1N1r8Yuk-",
-  fadeIn: "hxnIRn-vs9E-",
   LineItemCapsule: "Ibu28lnlXMg-",
   HeaderImg: "qtoywphCEcY-",
   HeaderImgBlurred: "S-RumYYV5RI-",
