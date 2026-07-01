@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1782533657"
+	"version"		"1782866176"
 	"ostype"		"macos1015"
 	"tenfoot_images_all"
 	{
@@ -66,11 +66,11 @@
 	}
 	"bins_hardware_all"
 	{
-		"file"		"bins_hardware_all.zip.f68b4b58d189f3a308ebbf916110a7d2581ae248"
-		"size"		"349777"
-		"sha2"		"63793f1a1d49ed63d2753afb97ebac7c15f4fe95e10898ba6ab55a9202d2068b"
-		"zipvz"		"bins_hardware_all.zip.vz.467e2952d3c5f1e51fe3f3e9ff8ba4c0bfb2454f_277854"
-		"sha2vz"		"94dfa8fdb01df20b83e789cfd564ac4ac3f3674eb38458026f902a65621c022e"
+		"file"		"bins_hardware_all.zip.5bf7068dbcba49d983ed3b90ac8a0cabdd577849"
+		"size"		"349812"
+		"sha2"		"ebb6a94da87f9994e15f4c27adde2cfaab9875c0fd03d072cb1a9cd92535536c"
+		"zipvz"		"bins_hardware_all.zip.vz.fc74dc5916cd4b598bfe90f731714937063c07d3_277888"
+		"sha2vz"		"313f18cecb55f1f0f5db59c3b25a27a4fa237319edd31c06f61e3283ea4d48e2"
 	}
 	"steamui_websrc_sounds_all"
 	{
@@ -207,9 +207,9 @@
 }
 "kvsign2"
 {
-	"osx"		"339ec465374029a0a8d8e8ec9f39311839d39a991c8e3f5fa8e0425f13b3dd859605132324e88312555b56f92a3b029a9c1b4420e07bd3cf9f3600f43b99610d"
+	"osx"		"5fc776464b0abfde86c4d68b801f8d53e67b7c1175da0bd8bde481eb4dae6ab01d16f9599ad3cd8ed3025d2020a8943d698b8aca071b502cfc46dd4ddf4cc40e"
 }
 "kvsignatures"
 {
-	"osx"		"97cc0b66703050211bada7d785da7a6a37038ed535736afb5cd317061de693820ee6d6691e0f128be8bc27772c091efa87983aaa3653fa6cc9d207a812ae3fd0c2eb8e64d330e0a11e74f6eb16f45c4a233336e3c39d0bb779573cfd89b0cfb74e663d45d7e8c765acfe35c77f419a0a953e64c63d3caf9176e6fd4a001e4dfb"
+	"osx"		"513853629be4847849bc8bcd3f962e4b01a51f5bb75840b3f6fd5914319d89302d904ebfd894f79519d6f4d12cae3ccd60d051acd8e38a23c08cfd469cfc5af841302f86927791dea6aced3c5f2be704cc45e2c786d05babeb93c99b48edb8e3a5821979d2f2e614928270466edf8cfe5a906d27e54fc77d5e33146c4d8dfb19"
 }
