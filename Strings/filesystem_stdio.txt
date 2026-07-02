@@ -57,9 +57,7 @@ $ORIGIN
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
-++CCUNG!
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG6
 ++CCUNGstd::exception
 ---------------\n
 ---FS:  %s %s\n
@@ -322,6 +320,9 @@ Plat_OutputDebugString
 Plat_VirtualAccessFlags
 Plat_ctime
 Plat_localtime
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 Requested non-existent write path %s!\n
 Seeking to a position not supported with async io
@@ -414,6 +415,7 @@ V_FixSlashes
 V_FormatAndAppend
 V_IsAbsolutePath
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_StrTrim
@@ -442,6 +444,7 @@ V_vsnprintf
 V_vsnprintfRet
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+Warning
 WeakRandomUint32
 XXXXXX
 [abi:

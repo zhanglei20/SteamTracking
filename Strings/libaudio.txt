@@ -62,8 +62,6 @@ $ORIGIN
 *ZL19RunCommandGetOutput10StringViewR10CUtlStringbbEUlS_E_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGM
-++CCUNGb\n
 ++CCUNGstd::exception
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -416,6 +414,9 @@ Plat_IsSteamOS
 Plat_OutputDebugString
 Plat_VirtualAccessFlags
 Plat_localtime
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 PulseCardInfoCallback
 PulseClientCallback
@@ -517,6 +518,7 @@ V_FixSlashes
 V_FormatAndAppend
 V_IsAbsolutePath
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_StrTrim
@@ -547,6 +549,7 @@ Value: true
 Volume Ramp Filter
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+Warning
 WeakRandomUint32
 XXXXXX
 [abi:

@@ -197,6 +197,7 @@ $\nY8O
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG8\\t
 ++CCUNGstd::exception
 +ulsX
 ----------------------------------------\n
@@ -889,6 +890,9 @@ Plat_OutputDebugStringRaw
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_localtime
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 QPON
 QUEBEC
@@ -1593,7 +1597,6 @@ dlopen
 dlsym
 double
 dynamic_cast
-e8eo
 endmntent
 error
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen

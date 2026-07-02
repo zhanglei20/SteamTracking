@@ -7553,6 +7553,7 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
@@ -8559,13 +8560,7 @@ ${LANGUAGE}
 11VideoClient
 12 Mbps
 120min
-1536
-2000
-2019
-2048
-15000
 123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 127.0.0.1
 127.0.0.1:57343
 127.0.0.1:57344
@@ -8925,6 +8920,8 @@ ${LANGUAGE}
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
+1536
+15000
 155.133.240.0/23
 1558-AFCM-4577
 15AccountHardware
@@ -9570,7 +9567,10 @@ ${LANGUAGE}
 20.GamePerformanceSettings.EGamePerformanceSetting
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
+2000
 200M
+2019
+2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -24285,7 +24285,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul  2 2026 00:23:23
+Jul  2 2026 20:50:20
 July
 JumpList
 Jumplist
@@ -24646,6 +24646,7 @@ LOGIN1_IS_ORG_FREEDESKTOP_DBUS_INTROSPECTABLE (interface)
 LOGIN1_IS_ORG_FREEDESKTOP_DBUS_PEER (interface)
 LOGIN1_IS_ORG_FREEDESKTOP_DBUS_PROPERTIES (interface)
 LPth
+LR&.yb2
 LRpn
 LU~g(1
 LV=%zu n=%zu\n
@@ -27843,6 +27844,9 @@ PopulateFileNameCompletion
 PopupHTML
 Portuguese
 Position
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostChatMessage
 PostCode
 PostCommentToThread
@@ -32619,6 +32623,7 @@ V_JoinNumbersUint(char, CUtlVector<unsigned int, CUtlMemory<unsigned int>> const
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
 V_MakeFileSafeName
+V_MakeRelativePath
 V_MatchWildcardDNSName
 V_MatchWildcardString
 V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
@@ -41589,7 +41594,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(m5
 ghost_
 gidlist
 gidparentcomment
