@@ -96,7 +96,6 @@
  + NVENC AV1
  + NVENC H264
  + NVENC HEVC
- + Pyrowave
  + VAAPI H264
  + VAAPI HEVC
  + composite
@@ -295,7 +294,6 @@
 !"Couldn't initialize software encoder"
 !"Don't poll on UDP sockets dude"
 !"Emptying callback queue because client didn't process them in a timely manner"
-!"FIXME need handle type"
 !"Fatal Error: Could not get IFileSystem interface from 'bin/FileSystem_Steam.dll"
 !"Fatal Error: Could not load module 'bin/FileSystem_Steam.dll'"
 !"Fatal Error: Could not load module 'bin/vgui2_s.dll'"
@@ -6138,7 +6136,6 @@ ${LANGUAGE}
 ../steamUI/gamestream/gamestreamvideostagecomposite.cpp
 ../steamUI/gamestream/gamestreamvideostageh264base.cpp
 ../steamUI/gamestream/gamestreamvideostagenvenc.cpp
-../steamUI/gamestream/gamestreamvideostagepyrowave.cpp
 ../steamUI/gamestream/gamestreamvideostagevaapi.cpp
 ../steamUI/gamestream/gamestreamvideostagex264.cpp
 ../steamUI/gamestream/gamestreamvideostageyv12.cpp
@@ -7556,11 +7553,10 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8563,7 +8559,13 @@ ${LANGUAGE}
 11VideoClient
 12 Mbps
 120min
+1536
+2000
+2019
+2048
+15000
 123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 127.0.0.1
 127.0.0.1:57343
 127.0.0.1:57344
@@ -8923,8 +8925,6 @@ ${LANGUAGE}
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
-1536
-15000
 155.133.240.0/23
 1558-AFCM-4577
 15AccountHardware
@@ -9570,10 +9570,7 @@ ${LANGUAGE}
 20.GamePerformanceSettings.EGamePerformanceSetting
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
-2000
 200M
-2019
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -10633,7 +10630,6 @@ ${LANGUAGE}
 29CEconItem_ContainerProperties
 29CGameNotifications_UserStatus
 29CGameRecordingPostGameSummary
-29CGameStreamVideoStagePyrowave
 29CHIDDevicePipeSharedMemStream
 29CHTTPServerSend100ContinueJob
 29CLEDManager_GetState_Response
@@ -16400,15 +16396,6 @@ CGameStreamVideoStageComposite::Scale
 CGameStreamVideoStageEncoderBase::ProcessData
 CGameStreamVideoStageNVENC
 CGameStreamVideoStageOutput
-CGameStreamVideoStagePyrowave
-CGameStreamVideoStagePyrowave: pyrowave_create_default_device() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_encoder_compute_num_packets() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_encoder_create() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_encoder_encode_cpu_synchronous() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_encoder_encode_gpu_synchronous() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_image_create() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_image_get_image_view() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_sync_object_create() failed: %d
 CGameStreamVideoStageQueueThread
 CGameStreamVideoStageQueueThread::ProcessAsync
 CGameStreamVideoStageQueueThread::ProcessAsync - sleep
@@ -20575,7 +20562,6 @@ Enable HTTP/2 on all CHTTPClients automatically for SSL connections
 Enable PipeWire desktop capture
 Enable PipeWire desktop capture using DMA-BUF
 Enable devkit functionality
-Enable multithreading to use std::thread
 Enable test storage data
 EnableBuiltInControllerDisplacementEvents
 EnableCaptureNVFBC
@@ -24299,12 +24285,12 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
+Jul  2 2026 00:23:23
 July
 JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 30 2026 21:55:08
 June
 K'iche'
 K(\f]C15
@@ -26333,7 +26319,6 @@ NO_START_OPT)
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
-NSt6thread6_StateE
 NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
 NSt7__cxx1110moneypunctIwLb0EEE
@@ -41577,7 +41562,6 @@ get_entropy
 get_header_and_data
 get_name
 get_next_file
-get_nprocs
 get_params
 getaddrinfo
 getc
@@ -41605,7 +41589,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -48521,7 +48505,6 @@ libpng error: %s
 libpng warning: %s
 libpthread.so.0
 libpulse.so.0
-libpyrowave-shared.so.0
 library
 library bug
 library has no ciphers
@@ -50703,7 +50686,6 @@ namingAuthorityId
 namingAuthorityText
 namingAuthorityUrl
 nanos
-nanosleep
 native_dropdowns
 native_steam_controller
 nauto-vts
@@ -52688,13 +52670,10 @@ pt_BR
 pt_PT
 pthread_cancel
 pthread_cond_broadcast
-pthread_cond_destroy
-pthread_cond_signal
 pthread_cond_wait
 pthread_create
 pthread_detach
 pthread_getspecific
-pthread_join
 pthread_key_create
 pthread_key_delete
 pthread_mutex_lock
@@ -52825,20 +52804,6 @@ pwrd_telecom
 pwrd_unicom
 pwrite64
 py_generic_services
-pyrowave_create_default_device
-pyrowave_create_device_by_compat
-pyrowave_device_destroy
-pyrowave_encoder_create
-pyrowave_encoder_destroy
-pyrowave_encoder_encode_cpu_synchronous
-pyrowave_encoder_encode_gpu_synchronous
-pyrowave_encoder_packetize
-pyrowave_image_create
-pyrowave_image_destroy
-pyrowave_image_get_image_view
-pyrowave_sync_object_create
-pyrowave_sync_object_destroy
-pyrowave_sync_object_get_semaphore
 python3 "%s/devkit-utils/steamos-set-steam-client" --client %s
 pzKD)
 q not prime

@@ -8120,15 +8120,15 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0s
+0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -11682,11 +11682,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16887,6 +16887,7 @@ $steammessages_parental_objects.proto"
 ???\f???????\n???\r?\t?\v
 ?HAI\t81\t9dcG'
 ?QfZ
+?XDs
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
@@ -18963,7 +18964,6 @@ C77nYmm
 C=Kx
 C>YPH>z
 C@gw
-C@sx
 CA Compromise
 CA Issuers
 CA Repository
@@ -24132,6 +24132,7 @@ E5tq
 E=FZGrH
 E>70aZSL}voh
 E@RU\
+EA-t
 EACCES
 EACState
 EADDRINUSE
@@ -38485,6 +38486,7 @@ V_AppendSlash
 V_BasicHtmlEntityEncode
 V_CP437CharsToUTF8
 V_ComposeFileName
+V_ContainsBadPathCharacters
 V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
 V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
 V_CopyAndFixSlashes
@@ -40069,6 +40071,7 @@ Zulu
 [AppID %u] Requested playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for all items
+[AppID %u] Resolved path contains invalid filename characters, failing (%s)
 [AppID %u] Resolved path is malformed UTF-8, failing (%s)
 [AppID %u] Resolving file %s from state %d - invalid, leaving
 [AppID %u] Resolving file %s from state %d - synchronized, leaving
@@ -48654,7 +48657,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 ghjkl
 gidlist
 gidparentcomment
@@ -55305,6 +55308,7 @@ m_strScheme
 m_strServiceMethodName
 m_strSource
 m_strSourceFolder
+m_strSourceGroup
 m_strSourceName
 m_strStagingDirectory
 m_strStagingFolder
@@ -61244,7 +61248,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 30 2026 21:55:05
+steam Jul  2 2026 00:23:15
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
