@@ -339,7 +339,6 @@ $ORIGIN
 /tmp/dumps
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
-00:23:07
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
@@ -368,6 +367,7 @@ $ORIGIN
 18CUtlCharConversion
 19CDirContentsWatcher
 19CUtlNoEscConversion
+20:50:12
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
@@ -620,6 +620,9 @@ POSIX does not support inheriting full mutexes
 PPid:\t
 PS3 Unattributed
 Peak %.2f ms frame\n
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 Probably deadlock or failure waiting for thread to initialize.
 Public

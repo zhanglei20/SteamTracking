@@ -892,6 +892,8 @@ $d`D-laM
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG?S
+++CCUNGd[
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++nInitFailures < 100
@@ -1304,11 +1306,10 @@ $d`D-laM
 0000000000000000000000000000000000000000
 00003333
 00:00:00
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:23:17
 01/01/00
 0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2119,6 +2120,7 @@ $d`D-laM
 200 Mbps
 200M
 2048
+20:50:18
 20CHTMLBaseProtoBufMsg
 20CIBusCallbackManager
 20CMsgGetCookiesForURL
@@ -2379,7 +2381,6 @@ $d`D-laM
 31CefV8ArrayBufferReleaseCallback
 32CefDevToolsMessageObserverCppToC
 3333
-32767
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2423,6 +2424,7 @@ $d`D-laM
 4 Mbps
 40 Mbps
 4096
+32767
 40CMsgSwapModeInputBindings_CModeInputSwap
 40CefSelectClientCertificateCallbackCToCpp
 41CMsgBrowserViewPostMessageToParentRequest
@@ -2436,7 +2438,6 @@ $d`D-laM
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 474E4U4W4c4i4m4
-4766605f244a2d18d26d0cfe222d25d6698cd5a0
 47CMsgControllerInputControllerActionMouseBinding
 49fN
 4@AA
@@ -2480,6 +2481,7 @@ $d`D-laM
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
 5\tuy
+5bb14b1dcc8e1bbadae0c36535a69b1220034351
 5mF\tfE
 5mmQ
 5q\teH
@@ -2491,7 +2493,6 @@ $d`D-laM
 60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
 6144
 64CK\vH
-666666666666666666666666666666666666666666666666
 6CefApp
 6ConVar
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
@@ -2534,6 +2535,7 @@ $d`D-laM
 8/A0
 80 Mbps
 8192
+666666666666666666666666666666666666666666666666
 82\n:XPH
 83L3
 83N6
@@ -3397,7 +3399,6 @@ Browser.NotifyUserActivation
 Browser.OpenDevTools
 Browser.Paste
 Browser.RemoveAllBackstackEntries
-Browser.RemoveAllBackstackEntries takes zero arguments
 Browser.ReplaceMisspelling
 Browser.RestartJSContext
 Browser.SetBackgroundThrottlingDisabled
@@ -6989,6 +6990,7 @@ Initializing graphics device
 Input file read error
 Input size too large:
 Input.EnableControllerAnalogInputMessages
+Input.EnableControllerAnalogInputMessages requires 1 argument: <enabled: boolean>
 Input.RegisterForControllerAnalogInputMessages
 Input.RegisterForControllerInputMessages
 Input.RegisterForKeyboardDeviceChanges
@@ -8783,6 +8785,9 @@ Polynomial:
 PopulateFileDialogFilters
 Portuguese
 PositionWindowRelative requires 5 parameters: <restore details: string> <x: number> <y: number> <width: number> <height: number>
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostMessage
 PostTime
@@ -10928,6 +10933,7 @@ V_GetFileExtension
 V_IsAbsolutePath
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
@@ -12050,6 +12056,7 @@ _g_value_equal() does not handle type %s
 _input
 _internal.BInGpuFallbackMode
 _internal.ExecutePromise
+_internal.GetBrowserProcessDetails
 _internal.GetDisplayScaleFactors
 _internal.IsDebuggingEnabled
 _internal.RequestDisableGpu
@@ -15509,7 +15516,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen(>_
 givenName
 gizmodo.com
 glAccumxOES
@@ -19393,6 +19400,7 @@ internal row width error
 internal sequential row size calculation error
 internal write transform logic error
 internal_disablegpu
+internal_getbrowserprocessdetails
 internal_getdisplayscalefactors
 internal_ingpufallbackmode
 internal_setdevmode
@@ -24023,6 +24031,7 @@ winNT
 winVista
 winXP
 window
+window.postMessage( 'browser_process_details_changed', '*' );
 window.postMessage( 'display_changed', '*' );
 window.postMessage( 'go_back', '*' );
 window.postMessage( 'go_forward', '*' );

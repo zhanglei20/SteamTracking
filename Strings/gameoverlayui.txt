@@ -700,8 +700,8 @@ $\nY8O
 *|\n\fECPUGovernor
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
 ++CCUNGpure virtual method called\n
+++CCUNGs
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
@@ -1078,11 +1078,10 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:23:25
 01/01/00
-0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -1548,6 +1547,7 @@ $\nY8O
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 200 Mbps
 200M
+20:50:21
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -5363,6 +5363,9 @@ PopulateFileList
 PopulateFileNameCompletion
 PopupHTML
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostTime
 PostedAnnouncement
@@ -6404,6 +6407,7 @@ V_IsSteamCloseProtocol
 V_IsValidURLCharacter
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".

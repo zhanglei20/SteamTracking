@@ -451,7 +451,6 @@ $\n k_SystemAudioPortDirection_Input
 *|\n\fECPUGovernor
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGD
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
@@ -2474,6 +2473,9 @@ PlatformHEVCDecoderSupport
 Polish
 PopupHTMLWindow: idx:%u handle:%u
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 Process %d failed to shm_open %s\n
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
@@ -2833,6 +2835,7 @@ V_FormatAndAppend
 V_IsAbsolutePath
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_StrTrim
