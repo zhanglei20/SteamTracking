@@ -339,6 +339,7 @@ $ORIGIN
 /tmp/dumps
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
+00:23:07
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
@@ -369,7 +370,6 @@ $ORIGIN
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
-21:55:00
 21CUtlCStringConversion
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
@@ -549,7 +549,7 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
-Jun 30 2026
+Jul  2 2026
 LOCK_EX
 LOCK_SH
 Leaked mem: %s %s\n
@@ -1340,7 +1340,6 @@ sched_get_priority_max
 sched_get_priority_min
 sched_setaffinity
 sched_yield
-script
 sdk32
 secblock.h
 section_size
