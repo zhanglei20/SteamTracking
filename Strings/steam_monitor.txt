@@ -194,7 +194,6 @@ $\nY8O
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG:
 ++CCUNGstd::exception
 +ulsX
 -- Hierarchical Call Graph --\n
@@ -207,6 +206,7 @@ $\nY8O
 -- Summary --\n
 -chromeos
 -debugbreak
+-deckard
 -holo
 -hometest
 -noassert
@@ -283,9 +283,9 @@ $\nY8O
 16IKeyValuesSystem
 18CUtlCharConversion
 19CUtlNoEscConversion
+21:55:00
+21:55:02
 21CUtlCStringConversion
-23:25:55
-23:25:57
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
@@ -413,6 +413,7 @@ GetUint64FromString() did not get correct peCS parameter
 H$6t
 H*0"ZOW
 HOME
+INVALID_KEY_SYMBOL
 IVALIDATE001
 Ignoring resume of count %d\n
 Illegal termination of worker thread '%s'
@@ -424,7 +425,7 @@ IsSpewActive
 IsValidIndex( elem )
 JArray
 JZJ{.
-Jun 24 2026
+Jun 30 2026
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
@@ -1074,6 +1075,8 @@ pchFileName
 pchHaystack != NULL
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
+pchString != nullptr
 pipe2
 posix_memalign
 ppFrames[iFrame] != NULL
@@ -1148,6 +1151,7 @@ sched_get_priority_max
 sched_get_priority_min
 sched_setaffinity
 sched_yield
+script
 secblock.h
 secure_getenv
 semaphore creation failed %s

@@ -57,7 +57,9 @@ $ORIGIN
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
+++CCUNG!
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG6
 ++CCUNGstd::exception
 ---------------\n
 ---FS:  %s %s\n
@@ -369,6 +371,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for
 TLS wrapper function for

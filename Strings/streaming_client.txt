@@ -1232,6 +1232,7 @@
 "Q5o0h6l
 "QGV
 "RNwIx
+"S\n&CStoreBrowse_GetHardwareItems_Response
 "SystemInfo"\n{\n\t"OSType"\t\t"%d"\n\t"CPUID"\t\t"%s"\n\t"CPUGhz"\t\t"%f"\n\t"PhysicalCPUCount"\t"%d"\n\t"LogicalCPUCount"\t"%d"\n\t"SystemRAM"\t\t"%d"\n\t"VideoVendorID"\t"%d"\n\t"VideoDeviceID"\t"%d"\n\t"VideoRevision"\t"%d"\n\t"VideoRAM"\t\t"%d"\n\t"VideoDisplayX"\t"%d"\n\t"VideoDisplayY"\t"%d"\n\t"VideoDisplayNameID"\t"%s"\n}\n
 "Uve
 "W\taE
@@ -1915,7 +1916,6 @@ ${FILENAME}
 %s aktar
 %s algorithm "%s" unsupported\n
 %s auth using %s with user '%s'
-%s begin_ctx=%lld
 %s cannot be done over CONNECT
 %s certificate:
 %s connect timeout after %ldms, move on!
@@ -1925,7 +1925,6 @@ ${FILENAME}
 %s destroyed (%s)
 %s double claimed!\n
 %s downtime warning expired; assumed back online.
-%s end_ctx=%lld
 %s ile ba
 %s ile oynan
 %s in chunked-encoding
@@ -2159,7 +2158,6 @@ ${FILENAME}
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
-&\n"k_EContentReportSubjectType_Unused
 &\n"k_EDeviceDisconnectMethodBluetooth
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
@@ -2480,7 +2478,6 @@ ${FILENAME}
 (0'yX
 (0rt
 (1NE\n
-(1ps\
 (3zg
 (6byOTER
 (6sM
@@ -2542,6 +2539,7 @@ ${FILENAME}
 (\n include_assets_without_overrides
 (\n input_activate_stick_or_trackpad
 (\n multipath_packets_recv_sequenced
+(\n nonpreferred_product_prepurchase
 (\n#k_EStreamControlControllerConfigMsg
 (\n$k_EBroadcastPermissionFriendsAllowed
 (\n$k_EBroadcastPermissionFriendsApprove
@@ -2611,7 +2609,6 @@ ${FILENAME}
 (\r"I\n"CMsgRemoteClientBroadcastDiscovery
 (\r"L\n\fCVideoFormat
 (\r"R\n\fCAudioFormat
-(\r"S\n&CStoreBrowse_GetHardwareItems_Response
 (\r"Y\n!CMsgSteamSockets_UDP_NoConnection
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
 (\r"_\n%CRemoteClient_GetPairingInfo_Response
@@ -2873,6 +2870,7 @@ ${FILENAME}
 )ZOS
 )\n!authorized_client_identity_string
 )\n!legacy_gameserver_identity_binary
+)\n!nonpreferred_product_early_access
 )\n$k_EPersonaStateFlag_ClientTypeMobile
 )\n$k_EStreamControlPauseControllerInput
 )\n$k_EStreamControlShowOnScreenKeyboard
@@ -3133,6 +3131,7 @@ ${FILENAME}
 *\n&k_PublishedFileQueryType_RankedByTrend
 *\n\fjobid_source
 *\n\fjobid_target
+*\n\vrelated_f2p
 *^\n\fELogFileType
 *_ds5
 *bfk(
@@ -3244,6 +3243,7 @@ ${FILENAME}
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EControllerElementTypeMagnifyingGlass
 +\n'k_EPressOutletMemberPendingState_Member
@@ -3636,6 +3636,7 @@ ${FILENAME}
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
+-\n)k_EContentReportSubjectType_CommentThread
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EControllerElementTypeButtonBumperRight
 -\n)k_EControllerElementTypeButtonTriggerLeft
@@ -3674,6 +3675,7 @@ ${FILENAME}
 -d08
 -d0\rp
 -debugbreak
+-deckard
 -devsites
 -devsiteshost
 -g8Z-
@@ -4068,6 +4070,7 @@ ${FILENAME}
 .StoreItem.Platforms.VRSupport
 .StoreItem.Playtest
 .StoreItem.PurchaseOption
+.StoreItem.RelatedF2P
 .StoreItem.RelatedItems
 .StoreItem.ReleaseInfo
 .StoreItem.Reviews
@@ -4450,10 +4453,10 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
-0000000000000000000000000000000000000000
-0.06
 0/bu^U
 0/gge
+0000000000000000000000000000000000000000
+0.06
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00\fo
 01%3
@@ -4837,6 +4840,8 @@ ${FILENAME}
 14CMessageObject
 14CMsgAuthTicket
 14COverlayDialog
+14CPyrowaveAccel
+14CPyrowaveFrame
 14CRecordedInput
 14CServerManager
 14CShowCursorMsg
@@ -5206,8 +5211,11 @@ ${FILENAME}
 20CVirtualHereReadyMsg
 20IUniformRandomStream
 20StoreItem_Categories
+20StoreItem_RelatedF2P
 214P&
 2168
+21:55:00
+21:55:04
 21AES_ECB_CipherContext
 21AES_GCM_CipherContext
 21CClanAnnouncementInfo
@@ -5255,8 +5263,6 @@ ${FILENAME}
 22StoreItem_PackageGroup
 22StoreItem_RelatedItems
 232>
-23:25:55
-23:25:59
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -6008,10 +6014,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+467&&54632
 467.
 4632
 46632
-467&&54632
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6115,7 +6121,6 @@ ${FILENAME}
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_ESteamDatagramMsg_GameserverSessionEstablished
@@ -6236,6 +6241,10 @@ ${FILENAME}
 52{M
 52|{k
 531lo
+5467.
+5467
+54632
+54663
 532654.
 532>
 536654#!5!
@@ -6247,9 +6256,6 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
-5467
-54632
-54663
 546632
 5467!
 5467#".
@@ -6258,7 +6264,6 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
-5467.
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6364,7 +6369,6 @@ ${FILENAME}
 5\n1k_ESystemDisplayCompatibilityMode_MinimalBandwith
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\fmicrotrailer
-5\n\tStoreItem
 5\n\vStoreFilter
 5\n\vnested_type
 5\n\vsale_filter
@@ -6474,13 +6478,14 @@ ${FILENAME}
 6654#"
 6654&#"
 6675
-666666666666666666666666666666666666666666666666
 67!5!
 675!
 6753
 6754&#"
 67547&55&'7
+754.
 6786
+666666666666666666666666666666666666666666666666
 67Zc
 68Jy
 699[
@@ -6669,13 +6674,12 @@ ${FILENAME}
 73nL4\v
 74&'3
 75#5!
-754.
 7524
-74632
 75pRD
 75th
 76&'3
 7623.
+74632
 7664&#"
 76653
 76654&#"
@@ -6793,6 +6797,7 @@ ${FILENAME}
 7\n\faudio_config
 7\n\nactionsets
 7\n\ninput_mode
+7\n\tStoreItem
 7\n\tenum_type
 7\tKuMs1
 7\trF
@@ -10104,6 +10109,11 @@ CPU_MHZ
 CPackageReservationStatus
 CPathString
 CPauseControllerInputMsg"
+CPyrowaveAccel: Couldn't unpack frame header\n
+CPyrowaveAccel: pyrowave_create_default_device() failed: %d\n
+CPyrowaveAccel: pyrowave_decoder_create() failed: %d
+CPyrowaveAccel: pyrowave_decoder_decode_cpu_buffer_synchronous() failed: %d
+CPyrowaveAccel: pyrowave_decoder_push_packet() failed: %d
 CQ)s
 CQ*(h
 CQ/u{
@@ -13765,6 +13775,7 @@ INTERNAL
 INVALID
 INVALID_ARGUMENT
 INVALID_CPPTYPE
+INVALID_KEY_SYMBOL
 INW@\v`Q
 IO@Y
 IOH*&bAg\v
@@ -14326,6 +14337,7 @@ J\n.c5
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\nJc
+J\n\nRelatedF2P
 J\rS%H
 J\rcbb
 J\tE5
@@ -14422,7 +14434,7 @@ Jtttttt
 Jtwf
 Jugando con %s
 July
-Jun 24 2026
+Jun 30 2026
 June
 Juntar/desliz. 2 dedos
 Juq"Z
@@ -17643,7 +17655,7 @@ Ptw;
 Public Key
 Public Key Algorithm
 Public key
-Public key ID%llu at %llu (%.1f hours ago).
+Public key ID%llu expired at %llu (%.1f hours ago).
 Public-Key
 Public-Key: (%d bit)\n
 Puedes a
@@ -17724,6 +17736,8 @@ Px05>
 Py6y
 Py9R,
 PyRd
+Pyrowave
+Pyrowave YUV decoding
 Pys[
 Pyyhk
 Py}Ux
@@ -18628,6 +18642,7 @@ S:nr
 S;R3
 S;Y1
 S>fp
+S?Et
 S@JZ+
 SA80
 SAF7
@@ -23212,6 +23227,8 @@ Z~5pW3Y
 [%s] recv queue overflow %d + %d bytes exceeds limit of %d.\n
 [%s] recv queue overflow %d messages already queued.\n
 [%s] stats are in activity level %d, but in state %d?
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [%s] too many segments, aborting packert decode\n
 [*HNXd
 [...] simgesine dokunarak ayarlar
@@ -23945,6 +23962,7 @@ Z~5pW3Y
 \n\vform_factor
 \n\vfrom_fakeip
 \n\vfull_report
+\n\vheader_text
 \n\vhost_gameid
 \n\vice_enabled
 \n\vinstance_id
@@ -25007,6 +25025,7 @@ aduje klient slu
 aduje pro streamov
 adult_content_sex
 adult_content_violence
+advance_access_date
 aeO?
 aeacute\vOslashacute\voslashacute\vDcroat.smcp
 aes key setup failed
@@ -26494,6 +26513,7 @@ coefficient%d:
 coefficient:
 cofactor
 collect_data
+collection_time_active
 color
 color_swatch
 colorpicker_instructions
@@ -27022,6 +27042,7 @@ cs;G
 cs;V
 csMp
 cs_CZ
+csecs >= 0
 csharp_namespace
 cst\
 ct%e}
@@ -27428,6 +27449,7 @@ des3-wrap
 des_ede3_wrap_cipher
 descodifica
 description
+description_text
 desired_bitrate_kbps
 desired_framerate_denominator
 desired_framerate_numerator
@@ -28140,6 +28162,7 @@ enable_traffic_priority
 enable_unreliable_fec
 enable_video_av1
 enable_video_hevc
+enable_video_pyrowave
 enable_video_streaming
 enabled
 enabled_logs
@@ -28729,6 +28752,7 @@ format error in certificate's notAfter field
 format error in certificate's notBefore field
 formatted_amount
 formatted_final_price
+formatted_lowest_recent_price
 formatted_original_price
 formatted_renewal_price
 forum_topic_id
@@ -29078,7 +29102,7 @@ gg%Rs
 gg(G
 gga till en f
 gga till och d
-ggen
+ggenX
 ggs\f
 ghM\r
 ghU0
@@ -31500,6 +31524,7 @@ k_ESessionDispositionNormal
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -31719,8 +31744,7 @@ k_EStreamVideoCodecAV1
 k_EStreamVideoCodecH264
 k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
-k_EStreamVideoCodecORBX1
-k_EStreamVideoCodecORBX2
+k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
 k_EStreamVideoCodecVP8
 k_EStreamVideoCodecVP9
@@ -32284,7 +32308,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Jun 24 2026 23:25:58
+lib Jun 30 2026 21:55:03
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -32309,6 +32333,7 @@ libm.so.6
 libopenvr_api.so
 libopus 1.1.4
 libpthread.so.0
+libpyrowave-shared.so.0
 library bug
 library has no ciphers
 library_capsule
@@ -33041,6 +33066,7 @@ maskGenAlgorithm
 maskGenFunc
 master secret
 master_key
+master_sub_appid
 matrix
 mature_content_screenshots
 max-age
@@ -34078,7 +34104,8 @@ nonce mismatch
 nonce not returned
 nonce="
 none
-nonpreferred_product_type
+nonpreferred_product_software
+nonpreferred_product_vr
 nonzero
 nopqrs(
 normal_keycode
@@ -35027,6 +35054,8 @@ pchHaystack != NULL
 pchInput
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
+pchString != nullptr
 pclose
 pcmag.com
 pcna
@@ -35509,6 +35538,12 @@ py08
 py8\f
 pyZp
 py_generic_services
+pyrowave_create_default_device
+pyrowave_decoder_create
+pyrowave_decoder_decode_cpu_buffer_synchronous
+pyrowave_decoder_destroy
+pyrowave_decoder_push_packet
+pyrowave_device_destroy
 pyrs
 pz0S=##=Q.p
 pz1kW
@@ -36084,8 +36119,8 @@ res binder
 res master
 reseed error
 reservation_country_code
+reservation_not_allowed
 reservation_state
-reservation_type
 reserved
 reserved_do_not_use
 reserved_range
@@ -36572,6 +36607,7 @@ scoring_penalty_relay_cluster
 scots
 screenshot_full
 screenshot_medium
+script
 scrypt
 scsv received when renegotiating
 sct future timestamp
@@ -37412,6 +37448,7 @@ steam://openurl/
 steam://openurl_external/
 steamRealm
 steam_deck_compat_category
+steam_frame_compat_category
 steam_id
 steam_logo
 steam_os_compat_category
@@ -39590,6 +39627,8 @@ vstdlib_wcstoui64
 vswprintf
 vt9:G?g
 vtable for
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 vtls/openssl.c
 vty9D
 vuG'

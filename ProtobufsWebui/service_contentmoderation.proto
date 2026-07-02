@@ -461,10 +461,6 @@ message ContentReportSubject {
 	optional int32 content_moderated_reason = 17 [(.description) = "enum"];
 	optional uint32 unresolved_dispute_count = 18;
 	optional uint32 oldest_unresolved_dispute_time = 19;
-	optional uint32 dispute_resolved_time = 20;
-	optional uint64 dispute_resolver_steamid = 21;
-	optional uint32 dispute_resolved = 22;
-	optional uint32 dispute_resolved_reason = 23;
 	optional uint32 owner_dispute_time = 24;
 	optional uint32 owner_dispute_resolved_time = 25;
 	optional string owner_dispute_details = 26;

@@ -569,7 +569,6 @@ $d`D-laM
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
-&\n"k_EContentReportSubjectType_Unused
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -856,7 +855,6 @@ $d`D-laM
 *ZN19CCompositorGLThread15OnWindowRemovedEmEUlPK19ICompositorDrawableE_
 *ZN19CCompositorGLThread22OnStackingOrderChangedEmmEUlPK19ICompositorDrawableE_
 *ZN19CX11EventDispatcher23UnregisterEventListenerEP24ICompositorEventListenerEUlPKS0_E_
-*ZN21RenderProcessMessagesL20OnGetFocusedNodeTextERKNS_19RenderHandlerParamsEEUl13scoped_refptrI14CefDOMDocumentEE_
 *ZN23CV8ManagerRenderProcess30CreateCallbackUnregisterObjectER13scoped_refptrI10CefV8ValueES0_I10CefBrowserEyEUlvE_
 *ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListINS_12CallbackInfoEiEEUlvE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
@@ -893,7 +891,6 @@ $d`D-laM
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG$m
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -915,6 +912,7 @@ $d`D-laM
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
@@ -997,6 +995,7 @@ $d`D-laM
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
+-\n)k_EContentReportSubjectType_CommentThread
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EProfileCustomizationTypeRecommendation
@@ -1111,6 +1110,7 @@ $d`D-laM
 ../webhelper/gpureport.cpp
 ../webhelper/html_chrome.cpp
 ../webhelper/ibus_v8_wrapper.cpp
+../webhelper/processmessages_browser.cpp
 ../webhelper/v8handler.cpp
 ../webhelper/webhelper.cpp
 ../webhelper/webhelperv8.cpp
@@ -1303,11 +1303,11 @@ $d`D-laM
 0 Umv
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -1571,7 +1571,6 @@ $d`D-laM
 13CMsgWasHidden
 13CUIFontFilePB
 13CefBaseScoped
-13CefDOMVisitor
 13CefMediaRoute
 13CefStructBaseI15CefCookieTraitsE
 13CefStructBaseI17CefSettingsTraitsE
@@ -1588,7 +1587,6 @@ $d`D-laM
 13_cef_cookie_t
 14 (default)
 14CCBAccountInfo
-14CCefDOMVisitor
 14CChromePainter
 14CClanEventInfo
 14CClientHandler
@@ -1746,7 +1744,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI19CMsgClearAllCookiesE
 16CHTMLProtoBufMsgI19CMsgComboNeedsPaintE
 16CHTMLProtoBufMsgI19CMsgFinishedRequestE
-16CHTMLProtoBufMsgI19CMsgFocusedNodeTextE
 16CHTMLProtoBufMsgI19CMsgGetZoomResponseE
 16CHTMLProtoBufMsgI19CMsgLoadingResourceE
 16CHTMLProtoBufMsgI19CMsgPopupHTMLWindowE
@@ -1798,14 +1795,12 @@ $d`D-laM
 16CHTMLProtoBufMsgI26CMsgShowBrowserContextMenuE
 16CHTMLProtoBufMsgI26CMsgToggleFindInPageDialogE
 16CHTMLProtoBufMsgI27CMsgDraggableRegionsChangedE
-16CHTMLProtoBufMsgI27CMsgFocusedNodeTextResponseE
 16CHTMLProtoBufMsgI27CMsgHorizontalScrollBarSizeE
 16CHTMLProtoBufMsgI27CMsgProcessInfoNotificationE
 16CHTMLProtoBufMsgI27CMsgRenderProcessTerminatedE
 16CHTMLProtoBufMsgI27CMsgSetVRKeyboardVisibilityE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
-16CHTMLProtoBufMsgI28CMsgScalePageToValueResponseE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI28CMsgSetAccessibilitySettingsE
 16CHTMLProtoBufMsgI28CMsgSetTouchGesturesToCancelE
@@ -1952,7 +1947,6 @@ $d`D-laM
 19CMsgComboNeedsPaint
 19CMsgControllerInput
 19CMsgFinishedRequest
-19CMsgFocusedNodeText
 19CMsgFunctionalCurve
 19CMsgGetZoomResponse
 19CMsgLinearListCurve
@@ -2153,6 +2147,7 @@ $d`D-laM
 20CefReadHandlerCppToC
 20CefV8ExceptionCToCpp
 20CefX509CertPrincipal
+21:55:06
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CLogFileAsyncCallback
@@ -2209,7 +2204,6 @@ $d`D-laM
 22CefRenderHandlerCppToC
 22CefStringVisitorCppToC
 22CefV8InterceptorCppToC
-23:26:01
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -2299,7 +2293,6 @@ $d`D-laM
 27;C
 27CMsgControllerConfiguration
 27CMsgDraggableRegionsChanged
-27CMsgFocusedNodeTextResponse
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
 27CMsgProcessInfoNotification
@@ -2318,7 +2311,6 @@ $d`D-laM
 28CMsgGetCookiesForURLResponse
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
-28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
@@ -2454,7 +2446,6 @@ $d`D-laM
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
@@ -3986,8 +3977,6 @@ CMsgFileLoadDialog
 CMsgFileLoadDialogResponse
 CMsgFind
 CMsgFinishedRequest
-CMsgFocusedNodeText
-CMsgFocusedNodeTextResponse
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -4038,7 +4027,6 @@ CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
-CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
@@ -5391,7 +5379,6 @@ Error on Release(): Not the lock owner\n
 Error parsing text-format
 Error reporting not implemented.
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.AmbientLightSensor1: %s (%s, %d)
-Error setting property '%s' on interface com.steampowered.SteamOSManager1.Audio1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.BatteryChargeLimit1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.CpuBoost1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.CpuScaling1: %s (%s, %d)
@@ -5773,6 +5760,7 @@ Forced Off
 Forced create but already created for SharedObjectEvent\n
 Format
 FormatDevice
+ForwardToRenderer: failed sending message %d to invalid browser %d\n
 Found
 Found gamescope pid: %u
 Found invalid proto option data for:
@@ -6858,6 +6846,7 @@ INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_ENUM
 INVALID_FRAMEBUFFER_OPERATION
+INVALID_KEY_SYMBOL
 INVALID_OPERATION
 INVALID_VALUE
 IP Address
@@ -7205,7 +7194,7 @@ JobStarted
 JoinedGroup
 Joystick
 July
-Jun 24 2026
+Jun 30 2026
 June
 K'iche'
 K-163
@@ -9120,6 +9109,7 @@ RegisterEndpoint
 RegisterGame
 RegisterGameByPIDFd
 RegisterGameByPid
+RegisterJSMethod: invalid browser %d\n
 RegisterPlayer
 RegisterProfile
 Registered ID
@@ -9565,7 +9555,6 @@ STEAM_OSLOG_SUBMITTER_IS_ORG_FREEDESKTOP_DBUS_OBJECT_MANAGER (interface)
 STEAM_OSLOG_SUBMITTER_IS_ORG_FREEDESKTOP_DBUS_PEER (interface)
 STEAM_OSLOG_SUBMITTER_IS_ORG_FREEDESKTOP_DBUS_PROPERTIES (interface)
 STEAM_OSMANAGER1_IS_AMBIENT_LIGHT_SENSOR1 (interface)
-STEAM_OSMANAGER1_IS_AUDIO1 (interface)
 STEAM_OSMANAGER1_IS_BATTERY_CHARGE_LIMIT1 (interface)
 STEAM_OSMANAGER1_IS_CPU_BOOST1 (interface)
 STEAM_OSMANAGER1_IS_CPU_SCALING1 (interface)
@@ -10067,9 +10056,6 @@ SteamOSLogSubmitterOrgFreedesktopDBusPropertiesSkeleton
 SteamOSManager1AmbientLightSensor1
 SteamOSManager1AmbientLightSensor1Proxy
 SteamOSManager1AmbientLightSensor1Skeleton
-SteamOSManager1Audio1
-SteamOSManager1Audio1Proxy
-SteamOSManager1Audio1Skeleton
 SteamOSManager1BatteryChargeLimit1
 SteamOSManager1BatteryChargeLimit1Proxy
 SteamOSManager1BatteryChargeLimit1Skeleton
@@ -10227,6 +10213,8 @@ StringAfterPrefixCaseSensitive
 StringCompare
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfChar
+StringIndexOfString
 StringPrintfVector currently only supports up to
 Strong Extranet ID
 Subject Information Access
@@ -10953,7 +10941,6 @@ V_URLContainsDomain
 V_URLDecodeRaw
 V_URLParse
 V_UTF16ToUTF32
-V_UTF16ToUTF8
 V_UTF32ToUTF16
 V_UTF32ToUTF8
 V_UTF8ToUChar32
@@ -11567,7 +11554,6 @@ Zulu
 [generated] _bluez_media1_emit_changed
 [generated] _bluez_media_control1_emit_changed
 [generated] _steam_osmanager1_ambient_light_sensor1_emit_changed
-[generated] _steam_osmanager1_audio1_emit_changed
 [generated] _steam_osmanager1_battery_charge_limit1_emit_changed
 [generated] _steam_osmanager1_cpu_boost1_emit_changed
 [generated] _steam_osmanager1_cpu_scaling1_emit_changed
@@ -12126,9 +12112,6 @@ _steam_oslog_submitter_org_freedesktop_dbus_properties_skeleton_handle_set_prope
 _steam_osmanager1_ambient_light_sensor1_skeleton_handle_get_property
 _steam_osmanager1_ambient_light_sensor1_skeleton_handle_method_call
 _steam_osmanager1_ambient_light_sensor1_skeleton_handle_set_property
-_steam_osmanager1_audio1_skeleton_handle_get_property
-_steam_osmanager1_audio1_skeleton_handle_method_call
-_steam_osmanager1_audio1_skeleton_handle_set_property
 _steam_osmanager1_battery_charge_limit1_skeleton_handle_get_property
 _steam_osmanager1_battery_charge_limit1_skeleton_handle_method_call
 _steam_osmanager1_battery_charge_limit1_skeleton_handle_set_property
@@ -12641,7 +12624,6 @@ attribute error
 attributes
 au PAY
 audio
-audio1
 auth-any
 auth-dss
 auth-ecdsa
@@ -12699,7 +12681,6 @@ bAllow
 bB"`3
 bBrowserViewDomainMapping
 bEnableCertWarningDisplay
-bGPUEnabled
 bHasCertError
 bHasMultipleInputs
 bInput
@@ -12713,8 +12694,6 @@ bNewNavigation
 bOnlyAllowTrustedPopups
 bPreventCloseFromJavascript
 bS11*?
-bUnderlaySupported
-bValidHandle
 bV}TS
 b\fLM%
 b\fzUkm
@@ -12996,11 +12975,11 @@ browser_setpendingfilepath
 browser_settouchgesturestocancel
 browser_startdownload
 browserview_create
-browserview_from_renderer
+browserview_fromrenderer
 browserview_postmessagetoparent
-browserview_process_message_from_parent_renderer
+browserview_processmessagefromparentrenderer
 browserview_to_renderer
-browserview_tunnel_htmlmessage_to_steam
+browserview_tunnelhtmlmessagetosteam
 browserviewpopup
 bsuccess
 btowc
@@ -13560,7 +13539,6 @@ com.google.protobufB
 com.steampowered.SteamOSLogSubmitter.Helper
 com.steampowered.SteamOSLogSubmitter.Manager
 com.steampowered.SteamOSManager1.AmbientLightSensor1
-com.steampowered.SteamOSManager1.Audio1
 com.steampowered.SteamOSManager1.BatteryChargeLimit1
 com.steampowered.SteamOSManager1.CpuBoost1
 com.steampowered.SteamOSManager1.CpuScaling1
@@ -14210,7 +14188,7 @@ data too large for key size
 data too large for modulus
 data too small
 data too small for key size
-data.m_pSteamObject.get()
+data.m_pSteamObject
 data:text/html,%3Cbody%3E%3C%2Fbody%3E
 dataEncipherment
 data_ == other.data_
@@ -14488,7 +14466,6 @@ disable-ffmpeg-hevc
 disable-gpu
 disable-gpu-compositing
 disable-winh264
-disable_chrome_runtime
 disabled
 disabled group
 disabled_off
@@ -14789,7 +14766,6 @@ enable
 enable verbose logging of JS console events
 enable-control
 enable-wall-messages
-enable_chrome_runtime
 enabled
 enabled_force
 enabled_force_on
@@ -15065,10 +15041,6 @@ first octet invalid
 fixed point overflow ignored
 fixed32
 fixed64
-flDeviceScale
-flForceDeviceScale
-flHorizontalScale
-flVerticalScale
 flags
 flickr.com
 float
@@ -15085,7 +15057,6 @@ focus_change
 focus_in
 focus_out
 focused
-focused_node_text
 fontFile.encrypted_contents().size() <= INT_MAX
 fontFileDecrypted.opentype_font_data().size() <= INT_MAX
 font_file_name
@@ -15481,7 +15452,6 @@ get_disk_info
 get_engine
 get_engines_by_names
 get_entropy
-get_focused_node_text
 get_global_engine
 get_has_unapplied
 get_header_and_data
@@ -15539,7 +15509,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 givenName
 gizmodo.com
 glAccumxOES
@@ -19422,9 +19392,9 @@ internal row size calculation error
 internal row width error
 internal sequential row size calculation error
 internal write transform logic error
-internal_bingpufallbackmode
 internal_disablegpu
 internal_getdisplayscalefactors
+internal_ingpufallbackmode
 internal_setdevmode
 internal_setforcedevicescalefactor
 internal_setrighttoleftmode
@@ -19903,6 +19873,7 @@ k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -20344,7 +20315,6 @@ m_strConvertedDefaultValue
 m_strDirectory
 m_strFileName
 m_strFileNamePrevious
-m_strLastRedirectURL
 m_strLocalFileRequestDefaultPath
 m_strLocalFileRequestURL
 m_strLogLine
@@ -20656,14 +20626,12 @@ nBytes
 nBytes < (size_t)INT_MAX - curInsertPos - 1
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nCertBits
+nCommand > 0 && nCommand < eHTMLCommands_None
+nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_OverlayKeyboard
 nDay < 32
 nDay > 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
 nEnvFD != -1
-nFullHeight
-nFullLeft
-nFullTop
-nFullWidth
 nGrowSize >= 0
 nImageHeight == nOutputHeight
 nMinCapacity <= k_nMaxStringSize
@@ -20672,6 +20640,7 @@ nMinCapacity >= nChars
 nMonth == 1 || nMonth == 3 || nMonth == 5 || nMonth == 7 || nMonth == 8 || nMonth == 10 || nMonth == 12
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 nPut + nPutDelta <= outBuf.TellMaxPut()
+nRequestId > 0
 nSRecord
 nSize != 0
 nSize >= 0
@@ -20679,10 +20648,6 @@ nStf,a
 nSw}Z\tu
 nTargetFrameRate
 nTargetLength > 0
-nUsableHeight
-nUsableLeft
-nUsableTop
-nUsableWidth
 nV_S
 nWidth >= 0 && nHeight >= 0
 nY77
@@ -20996,7 +20961,6 @@ old_item
 old_rsa_priv_decode
 on-external-power
 onBasis
-on_scroll_bars_changed
 only oneshot supported
 onlyAA
 onlyCA
@@ -21915,7 +21879,6 @@ requestList
 request_domain
 request_handle
 request_link_at_position
-request_link_at_position_response
 request_space %llu
 requested to join a private group
 requester
@@ -22101,7 +22064,6 @@ sbgp-routerIdentifier
 sc_schinese
 scale
 scale_page
-scale_page_response
 scandir64
 sched_yield
 scheduled-shutdown
@@ -22118,6 +22080,7 @@ screenavailheight
 screenavailwidth
 script
 scroll
+scroll_bars_changed
 scrollx
 scrolly
 scrypt
@@ -22307,7 +22270,6 @@ set_icon
 set_label
 set_orientation
 set_page_size
-set_resize_grip
 set_round
 set_sensitive
 set_shutting_down
@@ -22813,10 +22775,6 @@ steam_osmanager1_ambient_light_sensor1_proxy_get_property
 steam_osmanager1_ambient_light_sensor1_proxy_set_property
 steam_osmanager1_ambient_light_sensor1_skeleton_get_property
 steam_osmanager1_ambient_light_sensor1_skeleton_set_property
-steam_osmanager1_audio1_proxy_get_property
-steam_osmanager1_audio1_proxy_set_property
-steam_osmanager1_audio1_skeleton_get_property
-steam_osmanager1_audio1_skeleton_set_property
 steam_osmanager1_battery_charge_limit1_proxy_get_property
 steam_osmanager1_battery_charge_limit1_proxy_set_property
 steam_osmanager1_battery_charge_limit1_skeleton_get_property
@@ -24065,6 +24023,19 @@ winNT
 winVista
 winXP
 window
+window.postMessage( 'display_changed', '*' );
+window.postMessage( 'go_back', '*' );
+window.postMessage( 'go_forward', '*' );
+window.postMessage( 'popup-created', '*' );
+window.postMessage( 'steam_auth_completed', '*' );
+window.postMessage( 'window_details_changed', '*' );
+window.postMessage( 'window_enter_fullscreen', '*' );
+window.postMessage( 'window_exit_fullscreen', '*' );
+window.postMessage( 'window_gotfocus', '*' );
+window.postMessage( 'window_lostfocus', '*' );
+window.postMessage( 'window_moved', '*' );
+window.postMessage( 'window_resized', '*' );
+window.postMessage( 'window_restored', '*' );
 window_bringtofront
 window_close
 window_defaultmonitorhasfullscreenwindow
@@ -24090,6 +24061,7 @@ window_setkeyfocus
 window_setmaxsize
 window_setminsize
 window_setmodal
+window_setresizegrip
 window_setwindowicon
 window_show
 window_toggle_maximize

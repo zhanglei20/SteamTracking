@@ -684,6 +684,7 @@ INFO
 INSTITUTE
 INSURE
 INTERNATIONAL
+INVALID_KEY_SYMBOL
 INVESTMENTS
 IVALIDATE001
 Incorrect number of arguments.  %d arguments required, %d were given.\n
@@ -998,6 +999,8 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfChar
+StringIndexOfString
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TATTOO
 TECHNOLOGY
@@ -1142,6 +1145,7 @@ V_ReplaceBadFilenameCharactersInPlace
 V_SetCurrentDirectory
 V_SetExtension
 V_SetURLParam
+V_SkipFirstSubdomain
 V_SplitNumbers
 V_SplitNumbersUint
 V_SplitString3(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&)
@@ -1884,7 +1888,9 @@ pchFileName
 pchHaystack != NULL
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
 pchStart
+pchString != nullptr
 pchURL != NULL
 pclose
 popen

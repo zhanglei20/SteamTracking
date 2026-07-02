@@ -261,6 +261,7 @@ $ORIGIN
 -chromeosverbose
 -clientbeta
 -debugbreak
+-deckard
 -holo
 -hometest
 -noassert
@@ -368,8 +369,8 @@ $ORIGIN
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
+21:55:00
 21CUtlCStringConversion
-23:25:55
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -548,7 +549,7 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
-Jun 24 2026
+Jun 30 2026
 LOCK_EX
 LOCK_SH
 Leaked mem: %s %s\n
@@ -627,7 +628,6 @@ Root
 SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAMVIDEOTOKEN
-STEAM_BASE_FOLDER
 STEAM_DESKTOP_APP_AFFINITY_LIST
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
@@ -1255,6 +1255,8 @@ pchFileName
 pchHaystack != NULL
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
+pchString != nullptr
 pclose
 pipe2
 popen
@@ -1338,6 +1340,7 @@ sched_get_priority_max
 sched_get_priority_min
 sched_setaffinity
 sched_yield
+script
 sdk32
 secblock.h
 section_size

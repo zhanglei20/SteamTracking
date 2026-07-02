@@ -608,10 +608,8 @@ $ffn
 %s Salt Length: 0x
 %s [%s]%-*s
 %s algorithm "%s" unsupported\n
-%s begin_ctx=%lld
 %s called
 %s double claimed!\n
-%s end_ctx=%lld
 %s not implemented
 %s overflow!\n
 %s%02X
@@ -945,7 +943,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1@I7
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1218,8 +1215,8 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;kt
-++CCUNG`st
+++CCUNG;mt
+++CCUNG`ut
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1360,6 +1357,7 @@ $ffn
 -chromeosverbose
 -clientbeta
 -debugbreak
+-deckard
 -holo
 -hometest
 -inf
@@ -1687,14 +1685,14 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+0.8.3
 00000000
 0.15
-0.8.3
 00:00:00
-0123456789
+0123456789.
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 01/01/00
-0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2235,6 +2233,7 @@ $ffn
 20IHTTPRedirectHandler
 20IUniformRandomStream
 20VideoAdaptationSet_t
+21:55:00
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -2254,7 +2253,6 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:25:55
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2443,13 +2441,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
-8000
-8192
-65536
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
+60000000
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2501,6 +2497,8 @@ $ffn
 8.K%G
 8/A0
 80 Mbps
+8000
+8192
 82\n:XPH
 88n|
 88pH
@@ -3324,6 +3322,7 @@ AsyncSocketWriteTo
 AsyncWrite
 Attempt to create persistent logs with no end date!
 Attempt to schedule '%s' %lldusec in the past
+Attempted to access intermediate certificate at index %d. Total intermediates: %d
 Attempted to change replicated CVar when you are not the GM\n
 Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
@@ -6492,6 +6491,7 @@ INVALID TYPE
 INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_HSOCKETOWNER != m_hSocketOwner
+INVALID_KEY_SYMBOL
 INVALID_SOCKET != hSocket
 INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
@@ -6777,7 +6777,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 24 2026
+Jun 30 2026
 June
 K'iche'
 K(\f]C15
@@ -10706,6 +10706,8 @@ Zulu
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [%s] %s=%s\n
 [%s] [%6.2f msec] avgsample %6.2f | max %7.3f | high samples %4d\n
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [0x%p] %ums:
 [A:%u:%u:%u]
 [HEX DUMP]:
@@ -10948,6 +10950,7 @@ Zulu
 \n\rwebsite_title
 \n\tIPSec/IKE/Oakley curve #3 over a 155 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tIPSec/IKE/Oakley curve #4 over a 185 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
+\n\t\tChain Certificate %d:\n
 \n\tavailabilityStartTime="%s"
 \n\tedit_info
 \n\tevent_gid
@@ -12364,6 +12367,7 @@ coefficient%d:
 coefficient:
 cofactor
 collect_data
+collection_time_active
 com.google.protobufB
 com.valvesoftware.steam
 comcast
@@ -15971,7 +15975,6 @@ k_EMsgSCIDRequest
 k_EMsgSCIDResponse
 k_EMsgSMExpensiveReport
 k_EMsgSMHourlyReport
-k_EMsgSMMonitorSpace
 k_EMsgSMPartitionRenames
 k_EMsgSecretsBase
 k_EMsgServerSecretChanged
@@ -17857,7 +17860,9 @@ pchMsg
 pchName
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
 pchSteam2ID
+pchString != nullptr
 pchTLSServerName == NULL
 pchTemplate[0] == '\0'
 pch[cub - 1] != '\0' && pch[cub] == '\0'
@@ -18397,7 +18402,6 @@ res master
 reseed error
 reservation_country_code
 reservation_state
-reservation_type
 reserved
 reserved_range
 resizeNumBits >= 0
@@ -18578,6 +18582,7 @@ scheduledItem.m_ulTime
 scheme=
 schinese
 scots
+script
 scrypt
 scsv received when renegotiating
 sct future timestamp
@@ -19352,7 +19357,6 @@ support locked group
 support unlocked group
 supportedAlgorithms
 supportedApplicationContext
-supported_languages
 surname
 sv_SE
 svcm

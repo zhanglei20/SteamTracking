@@ -109,6 +109,7 @@ message CartGiftInfo {
 	optional int32 accountid_giftee = 1;
 	optional .CartGiftMessage gift_message = 2;
 	optional int32 time_scheduled_send = 3;
+	optional string email_giftee = 4;
 }
 
 // Used by: AccountCart, Checkout
@@ -2260,6 +2261,12 @@ message CMsgSystemDisplay {
 	optional int32 rgb_range = 19 [(.description) = "enum"];
 }
 
+// Used by: common.proto
+message CMsgSystemDisplayManagerGameResolution {
+	optional uint32 width = 1;
+	optional uint32 height = 2;
+}
+
 message CMsgSystemDisplayManagerSetMode {
 	optional int32 display_id = 1;
 	optional int32 mode_id = 2;
@@ -2270,6 +2277,8 @@ message CMsgSystemDisplayManagerState {
 	repeated .CMsgSystemDisplay displays = 1;
 	optional bool is_mode_switching_supported = 2;
 	optional int32 compatibility_mode = 3 [(.description) = "enum"];
+	optional .CMsgSystemDisplayManagerGameResolution game_resolution_override_native = 4;
+	optional .CMsgSystemDisplayManagerGameResolution game_resolution_override_default = 5;
 }
 
 // Used by: common.proto
@@ -2527,6 +2536,18 @@ message CSteamVR_AudioSettings_SettingsChanged_Notification {
 message CSteamVR_Header {
 	optional int32 type = 1 [(.description) = "enum"];
 	optional uint32 id = 2;
+}
+
+// Used by: common.proto
+message CSteamVR_LinkInfo {
+	optional int32 type = 1 [(.description) = "enum"];
+	optional int32 quality = 2 [(.description) = "enum"];
+	optional float p100 = 3;
+	optional float loss_ratio = 4;
+}
+
+message CSteamVR_MultiLinkStatusUpdate_Message {
+	repeated .CSteamVR_LinkInfo links = 1;
 }
 
 message CSteamVR_OverlayInputFocusChanged_Message {
@@ -2814,6 +2835,7 @@ message CStreamingClientConfig {
 	optional int32 window_position_y = 32;
 	optional int32 window_frame_offset_x = 33;
 	optional int32 window_frame_offset_y = 34;
+	optional bool enable_video_pyrowave = 35 [default = false];
 }
 
 message CStreamingServerConfig {
@@ -2952,6 +2974,7 @@ message CVRGamepadUI_Frame {
 	optional .CVRGamepadUI_Frame_FrameActions frame_actions = 6;
 	repeated string steamui_page_overlay_keys = 7;
 	optional bool is_streaming_client = 8;
+	optional int32 dock_location = 9 [(.description) = "enum"];
 	optional string tmp_title = 1000;
 }
 
@@ -3039,6 +3062,12 @@ message CVRGamepadUI_Message_ExecuteSteamURL_Request {
 message CVRGamepadUI_Message_ExecuteSteamURL_Response {
 }
 
+message CVRGamepadUI_Message_FocusDashboardBar_Request {
+}
+
+message CVRGamepadUI_Message_FocusDashboardBar_Response {
+}
+
 message CVRGamepadUI_Message_GetAppIcon_Request {
 	optional uint32 app_id = 1;
 }
@@ -3099,6 +3128,12 @@ message CVRGamepadUI_Message_RequestAppQuit_Response {
 	optional int32 result = 1 [(.description) = "enum"];
 }
 
+message CVRGamepadUI_Message_ResetHMDPerfSettings_Request {
+}
+
+message CVRGamepadUI_Message_ResetHMDPerfSettings_Response {
+}
+
 message CVRGamepadUI_Message_ResetHMDSettings_Request {
 }
 
@@ -3130,6 +3165,8 @@ message CVRGamepadUI_Message_SetHMDSettings_Request {
 	optional bool perf_graph_in_hmd = 8;
 	optional bool record_vr_stats = 9;
 	optional bool record_tracking = 10;
+	optional float env_brightness_construct_theater = 31;
+	optional float env_brightness_construct_nominal = 32;
 }
 
 message CVRGamepadUI_Message_SetHMDSettings_Response {
@@ -3205,6 +3242,12 @@ message CVRGamepadUI_Message_ShowOverlay_Request {
 }
 
 message CVRGamepadUI_Message_ShowOverlay_Response {
+}
+
+message CVRGamepadUI_Message_ShowPowerMenu_Request {
+}
+
+message CVRGamepadUI_Message_ShowPowerMenu_Response {
 }
 
 message CVRGamepadUI_Message_UpdateFrameUIs_Request {
@@ -3302,6 +3345,13 @@ message CVRGamepadUIShared_PathProperty_DashboardBarActions_BarMenuItem {
 	optional uint32 action_id = 3;
 }
 
+message CVRGamepadUIShared_PathProperty_DashboardState {
+	optional bool dashboard_bar_visible = 1;
+	optional bool dashboard_bar_or_child_popup_focused = 2;
+	optional int32 vrlink_role = 3 [(.description) = "enum"];
+	optional bool vrlink_unified_dashboard = 4;
+}
+
 message CVRGamepadUIShared_PathProperty_DashboardTabs {
 	repeated .CVRGamepadUIShared_PathProperty_DashboardTabs_Tab tabs = 1;
 	optional uint32 selected_tab_id = 2;
@@ -3346,9 +3396,13 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	repeated uint32 supersample_effective_resolution = 15;
 	optional uint32 frames_to_throttle_value = 20;
 	optional bool motion_smoothing_value = 21;
+	optional bool env_theater_active = 30;
+	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_theater = 31;
+	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_nominal = 32;
 	optional string performance_profile_value = 50;
 	optional bool perf_graph_in_hmd_value = 51;
 	optional bool record_vr_stats_value = 52;
+	optional bool record_tracking_value = 53;
 }
 
 message CVRGamepadUIShared_PathProperty_PowerOptions {
@@ -3375,6 +3429,14 @@ message CVRGamepadUIShared_PathProperty_VRVersionInfo {
 	optional string version = 1;
 	optional uint32 webpack_build_timestamp = 2;
 	optional string hmd_tracking_info = 3;
+}
+
+// Used by: common.proto
+message CVRGamepadUIShared_RichFloat {
+	optional float value = 1;
+	optional float default = 2;
+	optional float min = 3;
+	optional float max = 4;
 }
 
 // Used by: common.proto
