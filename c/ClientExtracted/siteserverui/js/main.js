@@ -49,38 +49,38 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./shared_arabic.json": [8476, 8476],
-        "./shared_brazilian.json": [9574, 9574],
-        "./shared_bulgarian.json": [3789, 3789],
-        "./shared_czech.json": [815, 815],
-        "./shared_danish.json": [4289, 4289],
-        "./shared_dutch.json": [4978, 4978],
-        "./shared_english.json": [3800, 3800],
-        "./shared_finnish.json": [3907, 3907],
-        "./shared_french.json": [5040, 5040],
-        "./shared_german.json": [4750, 4750],
-        "./shared_greek.json": [9668, 9668],
-        "./shared_hungarian.json": [5233, 5233],
-        "./shared_indonesian.json": [200, 200],
-        "./shared_italian.json": [1864, 1864],
-        "./shared_japanese.json": [7263, 7263],
-        "./shared_koreana.json": [295, 295],
-        "./shared_latam.json": [559, 559],
-        "./shared_malay.json": [1136, 1136],
-        "./shared_norwegian.json": [6512, 6512],
-        "./shared_polish.json": [2889, 2889],
-        "./shared_portuguese.json": [2269, 2269],
-        "./shared_romanian.json": [4419, 4419],
-        "./shared_russian.json": [5777, 5777],
-        "./shared_sc_schinese.json": [3723, 3723],
-        "./shared_schinese.json": [5436, 5436],
-        "./shared_spanish.json": [6736, 6736],
-        "./shared_swedish.json": [4625, 4625],
-        "./shared_tchinese.json": [5191, 5191],
-        "./shared_thai.json": [4230, 4230],
-        "./shared_turkish.json": [4792, 4792],
-        "./shared_ukrainian.json": [7246, 7246],
-        "./shared_vietnamese.json": [9863, 9863],
+        "./shared_arabic.json": [361, 361],
+        "./shared_brazilian.json": [9333, 9333],
+        "./shared_bulgarian.json": [9854, 9854],
+        "./shared_czech.json": [3296, 3296],
+        "./shared_danish.json": [8356, 8356],
+        "./shared_dutch.json": [4401, 4401],
+        "./shared_english.json": [1031, 1031],
+        "./shared_finnish.json": [7688, 7688],
+        "./shared_french.json": [2589, 2589],
+        "./shared_german.json": [1359, 1359],
+        "./shared_greek.json": [4175, 4175],
+        "./shared_hungarian.json": [2330, 2330],
+        "./shared_indonesian.json": [1229, 1229],
+        "./shared_italian.json": [2711, 2711],
+        "./shared_japanese.json": [8010, 8010],
+        "./shared_koreana.json": [764, 764],
+        "./shared_latam.json": [684, 684],
+        "./shared_malay.json": [8515, 8515],
+        "./shared_norwegian.json": [5319, 5319],
+        "./shared_polish.json": [2736, 2736],
+        "./shared_portuguese.json": [3248, 3248],
+        "./shared_romanian.json": [4122, 4122],
+        "./shared_russian.json": [9998, 9998],
+        "./shared_sc_schinese.json": [20, 20],
+        "./shared_schinese.json": [9965, 9965],
+        "./shared_spanish.json": [9431, 9431],
+        "./shared_swedish.json": [7046, 7046],
+        "./shared_tchinese.json": [662, 662],
+        "./shared_thai.json": [1047, 1047],
+        "./shared_turkish.json": [7700, 7700],
+        "./shared_ukrainian.json": [3301, 3301],
+        "./shared_vietnamese.json": [2378, 2378],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -136,58 +136,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ =
-        __webpack_require__._ +
-        "images/steam_spinner.png?v=8669e97b288da32670e77181618c3dfb";
-      function _(_, _) {
-        return (
-          (_ = Math.ceil(_)),
-          (_ = Math.floor(_)),
-          Math.floor(Math.random() * (_ - _ + 1)) + _
-        );
-      }
-      function _() {
-        return !!window.document;
-      }
-      let _;
-      function _() {
-        if (!_()) return _ || (_ = _()), _;
-        let _ = (function (_) {
-          if (!_() || !window.document.cookie) return null;
-          const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
-          return _ && _[2] ? decodeURIComponent(_[2]) : null;
-        })("sessionid");
-        return _ || (_ = _()), _;
-      }
-      function _() {
-        const _ = (function () {
-          let _ = "";
-          for (let _ = 0; _ < 24; _++) _ += _(0, 35).toString(36);
-          return _;
-        })();
-        return (
-          (function (_, _, _, _) {
-            if (!_()) return;
-            _ || (_ = "/");
-            let _ = "";
-            if (void 0 !== _ && _) {
-              const _ = new Date();
-              _.setTime(_.getTime() + 864e5 * _),
-                (_ = "; expires=" + _.toUTCString());
-            }
-            document.cookie =
-              encodeURIComponent(_) +
-              "=" +
-              encodeURIComponent(_) +
-              _ +
-              ";path=" +
-              _;
-          })("sessionid", _, 0),
-          _
-        );
-      }
-      let _ = new Set(),
-        _ = !1;
-      const _ = {
+          __webpack_require__._ +
+          "images/steam_spinner.png?v=8669e97b288da32670e77181618c3dfb",
+        _ = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -238,24 +189,18 @@
           PAGE_TIMESTAMP: 0,
           FROM_WEB: !1,
           WEBSITE_ID: "Unknown",
-          get SESSIONID() {
-            return _();
-          },
-          FRIENDSUI_BETA: !1,
-          STEAM_TV: !1,
-          DEV_MODE: !1,
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
-          ON_DECK: !1,
           ON_FRAME: !1,
-          ON_STEAMOS: !1,
+          IS_STEAMOS: !1,
           ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
+          DEV_MODE: !1,
           CLIENT_SESSION: 0,
           NOW: 0,
         },
@@ -276,6 +221,8 @@
           country_code: "",
           excluded_content_descriptors: [3, 4, 1],
         };
+      let _ = new Set(),
+        _ = !1;
       _.createContext({});
       var _;
       !(function (_) {
@@ -2902,6 +2849,11 @@
                     _: _.readString,
                     _: _.writeString,
                   },
+                  url: {
+                    _: 5,
+                    _: _.readString,
+                    _: _.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -4920,8 +4872,8 @@
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
                   ((_ ??= {}), (_.componentStack = _.strComponentStack)),
-                _.strUrl && ((_ ??= {}), (_.url = _.strUrl)),
                 _ && _.set_context(JSON.stringify(_)),
+                _.strUrl && _.set_url(_.strUrl),
                 _
               );
             });
@@ -7435,8 +7387,8 @@
             };
           if ("english" !== _) {
             const [_, _] = await Promise.all([
-                __webpack_require__._("chunkid").then(_._.bind(_, 3800, 19)),
-                __webpack_require__._("chunkid").then(_._.bind(_, 8876, 19)),
+                __webpack_require__._("chunkid").then(_._.bind(_, 1031, 19)),
+                __webpack_require__._("chunkid").then(_._.bind(_, 2895, 19)),
               ]),
               _ = {
                 ..._.default,
@@ -7449,8 +7401,8 @@
             _,
           );
           const [_, _] = await Promise.all([
-              __webpack_require__._("chunkid").then(_._.bind(_, 3800, 19)),
-              __webpack_require__._("chunkid").then(_._.bind(_, 8876, 19)),
+              __webpack_require__._("chunkid").then(_._.bind(_, 1031, 19)),
+              __webpack_require__._("chunkid").then(_._.bind(_, 2895, 19)),
             ]),
             _ = {
               ..._.default,
@@ -9442,37 +9394,37 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./siteserverui_arabic.json": [488, 488],
-        "./siteserverui_brazilian.json": [5802, 5802],
-        "./siteserverui_bulgarian.json": [465, 465],
-        "./siteserverui_czech.json": [5291, 5291],
-        "./siteserverui_danish.json": [8765, 8765],
-        "./siteserverui_dutch.json": [3518, 3518],
-        "./siteserverui_english.json": [8876, 8876],
-        "./siteserverui_finnish.json": [4111, 4111],
-        "./siteserverui_french.json": [196, 196],
-        "./siteserverui_german.json": [9274, 9274],
-        "./siteserverui_greek.json": [5088, 5088],
-        "./siteserverui_hungarian.json": [4725, 4725],
-        "./siteserverui_indonesian.json": [8564, 8564],
-        "./siteserverui_italian.json": [3380, 3380],
-        "./siteserverui_japanese.json": [8499, 8499],
-        "./siteserverui_koreana.json": [1891, 1891],
-        "./siteserverui_latam.json": [4955, 4955],
-        "./siteserverui_malay.json": [3092, 3092],
-        "./siteserverui_norwegian.json": [4468, 4468],
-        "./siteserverui_polish.json": [9845, 9845],
-        "./siteserverui_portuguese.json": [9745, 9745],
-        "./siteserverui_romanian.json": [1151, 1151],
-        "./siteserverui_russian.json": [2165, 2165],
-        "./siteserverui_schinese.json": [6752, 6752],
-        "./siteserverui_spanish.json": [4732, 4732],
-        "./siteserverui_swedish.json": [7885, 7885],
-        "./siteserverui_tchinese.json": [1939, 1939],
-        "./siteserverui_thai.json": [9850, 9850],
-        "./siteserverui_turkish.json": [6556, 6556],
-        "./siteserverui_ukrainian.json": [1498, 1498],
-        "./siteserverui_vietnamese.json": [1595, 1595],
+        "./siteserverui_arabic.json": [8449, 8449],
+        "./siteserverui_brazilian.json": [6125, 6125],
+        "./siteserverui_bulgarian.json": [3814, 3814],
+        "./siteserverui_czech.json": [6680, 6680],
+        "./siteserverui_danish.json": [2444, 2444],
+        "./siteserverui_dutch.json": [5001, 5001],
+        "./siteserverui_english.json": [2895, 2895],
+        "./siteserverui_finnish.json": [5024, 5024],
+        "./siteserverui_french.json": [1189, 1189],
+        "./siteserverui_german.json": [1319, 1319],
+        "./siteserverui_greek.json": [4279, 4279],
+        "./siteserverui_hungarian.json": [1698, 1698],
+        "./siteserverui_indonesian.json": [5701, 5701],
+        "./siteserverui_italian.json": [1103, 1103],
+        "./siteserverui_japanese.json": [9666, 9666],
+        "./siteserverui_koreana.json": [7476, 7476],
+        "./siteserverui_latam.json": [8676, 8676],
+        "./siteserverui_malay.json": [4539, 4539],
+        "./siteserverui_norwegian.json": [4719, 4719],
+        "./siteserverui_polish.json": [9400, 9400],
+        "./siteserverui_portuguese.json": [7896, 7896],
+        "./siteserverui_romanian.json": [578, 578],
+        "./siteserverui_russian.json": [6742, 6742],
+        "./siteserverui_schinese.json": [7077, 7077],
+        "./siteserverui_spanish.json": [6975, 6975],
+        "./siteserverui_swedish.json": [5294, 5294],
+        "./siteserverui_tchinese.json": [4846, 4846],
+        "./siteserverui_thai.json": [1695, 1695],
+        "./siteserverui_turkish.json": [9423, 9423],
+        "./siteserverui_ukrainian.json": [9709, 9709],
+        "./siteserverui_vietnamese.json": [8050, 8050],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -9491,7 +9443,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 1918), _((_._ = _));
+      return (_ = 707), _((_._ = _));
       var _;
     });
     _._();

@@ -42,9 +42,7 @@ $ORIGIN
 %d frames sampled for %.2f seconds\n
 %d validator nodes, %d nodes larger than %s\n
 %d.%d.%d.%d:%d
-%s begin_ctx=%lld
 %s double claimed!\n
-%s end_ctx=%lld
 %s/.steam/steam
 %s: %d, %d, %d
 %s: '%s', '%s'
@@ -61,8 +59,7 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGIJ
-++CCUNGnR
+++CCUNGiK
 ++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
@@ -118,7 +115,7 @@ $ORIGIN
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-23:25:57
+21:55:02
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -322,7 +319,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jun 24 2026
+Jun 30 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -741,6 +738,8 @@ Warning: thread priority outside allowed range %d\n
 WriteMiniDump
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [abi:
 [friend]
 \t%d items : %s - %s:%d\n

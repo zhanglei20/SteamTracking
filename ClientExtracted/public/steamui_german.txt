@@ -846,6 +846,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Lateinamerikanisches Spanisch)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamesisch)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonesisch)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malaiisch)"
 
 
 
@@ -2107,8 +2108,8 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "Darf Steam während der Verwendung von %game% andere Spiele und Anwendungen herunterladen?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "Darf Steam während der Verwendung von %game% andere Spiele und Anwendungen herunterladen?"
 
-"Steam_BackgroundDownloadsDefault_Allow"	"Nach Grundeinstellung richten (Downloads zulassen)"
-"Steam_BackgroundDownloadsDefault_Deny"	"Nach Grundeinstellung richten (Downloads anhalten)"
+"Steam_BackgroundDownloadsDefault_Allow"	"Nach globaler Einstellung richten (Downloads zulassen)"
+"Steam_BackgroundDownloadsDefault_Deny"	"Nach globaler Einstellung richten (Downloads anhalten)"
 "Steam_BackgroundDownloadsAllow"	"Downloads im Hintergrund immer zulassen"
 "Steam_BackgroundDownloadsDeny"	"Downloads im Hintergrund nie zulassen"
 
@@ -2121,7 +2122,7 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 
 "Steam_GameProperties_BPMOverlay_PerGameOptIn" "Spielspezifische Einstellung für BPM-Overlay bei aktiver Steam-Eingabe verwenden (Spiel-Neustart erforderlich)"
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOff" "\"Aus\" erzwingen"
-"Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Die vom Entwickler vorgeschlagene Einstellung oder Ihre Standardeinstellung verwenden."
+"Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Die vom Entwickler vorgeschlagenen Einstellungen oder Ihre globalen Einstellungen verwenden."
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOn" "\"An\" erzwingen"
 
 "Steam_GameProperties_SteamPlaySettings_Override" "Die Verwendung eines bestimmten Kompatibilitätswerkzeugs für Steam Play erzwingen"
@@ -4809,7 +4810,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "Steam_BLEControllerFirmware_Title" "Firmware-Aktualisierung – Bluetooth"
 "Steam_BLEControllerFirmware_Header" "Steam-Link-App"
-"Steam_BLEControllerFirmware_Body" "Erweitern Sie Ihr Steam-Spielerlebnis über Ihr lokales Netzwerk auf Smartphone, Tablet oder Fernseher.\n\nUm Ihren Steam Controller mit der Steam-Link-App zu verwenden, müssen Sie das neue Bluetooth-Firmwareupdate durchführen."
+"Steam_BLEControllerFirmware_Body" "Erweitern Sie Ihr Steam-Spielerlebnis über Ihr lokales Netzwerk auf Smartphone, Tablet oder Fernseher.\n\nUm Ihren Steam Controller mit der Steam-Link-App zu verwenden, müssen Sie die Bluetooth-Firmware aktualisieren."
 "Steam_BLEControllerFirmware_LearnMore" "Mehr erfahren"
 "Steam_BLEControllerFirmware_UpdateNow" "Firmware jetzt aktualisieren"
 
@@ -5057,6 +5058,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "DownloadRegion_br_manaus"			"Brasilien – Manaus"
 "DownloadRegion_br_belem"			"Brasilien – Belém"
 "DownloadRegion_br_salvador"			"Brasilien – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Controllerkonfiguration"
 "ControllerBinding_Offline_Save"	"[Autom. offline gespeichert]"

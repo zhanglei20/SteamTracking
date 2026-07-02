@@ -24,6 +24,7 @@
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 !s_bInRunFrame
+"AC3"
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
@@ -61,8 +62,8 @@ $ORIGIN
 *ZL19RunCommandGetOutput10StringViewR10CUtlStringbbEUlS_E_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG-
-++CCUNGB
+++CCUNGM
+++CCUNGb\n
 ++CCUNGstd::exception
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -479,6 +480,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for
 TLS wrapper function for
@@ -801,6 +803,7 @@ handset
 handsfree
 hardware
 hdmi
+hdmi-ac3-surround
 hdmi-stereo
 hdmi-surround
 hdmi-surround71
@@ -808,6 +811,7 @@ headphones
 headset
 hidden alias for
 hifi
+iec958.codecs.detected
 info.m_pReplacementString == 0
 initializer for module
 ioctl
@@ -1171,6 +1175,8 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 wchar_t
+wpctl reset --all --yes
+wpctl reset --all --yes --dry-run
 wpctl settings monitor.alsa.enable-external-volume-control
 wpctl settings node.stream.spatial-audio
 wpctl settings node.stream.spatial-audio-surround

@@ -1,4 +1,4 @@
-var CLSTAMP = "10776939";
+var CLSTAMP = "10792670";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -6,16 +6,6 @@ var CLSTAMP = "10776939";
     n,
     i,
     s = {
-      24793: (e) => {
-        e.exports = {
-          HoverPosition: "_3vg1vYU7iTWqONciv9cuJN",
-          Ready: "_1Ye_0niF2UqB8uQTbm8B6B",
-          NoSpace: "pxVZHRCaftc2xXduMp7bg",
-          EnablePointerEvents: "_2b9OEIbeIFhvcy770kO_TB",
-          HoverAboveModal: "EQqOxt3B11pzZRCd8kmXj",
-          HoverPositionOuter: "_2_lmTz0tA4NOSle5WaO1PZ",
-        };
-      },
       24892: (e) => {
         e.exports = {
           "duration-app-launch": "800ms",
@@ -141,15 +131,6 @@ var CLSTAMP = "10776939";
           NewThrobber: "_1m8iQOSVziKDHiInrfskv_",
         };
       },
-      57447: (e) => {
-        e.exports = {
-          TextToolTip: "_2FxbHJzYoH024ko7zqcJOf",
-          ToolTipCustom: "_3XGRklQrZMakU2xaYB0cLD",
-          ToolTipTitle: "_1LhVfNukndDa_XWzq0vdg1",
-          Center: "_2ZDqET0UaJoW_KYhO0WdTz",
-          ToolTipInsetContent: "i4LuYcvtfPgYKx3qqvKUq",
-        };
-      },
       3586: (e) => {
         e.exports = {
           Container: "_2mu1wGa9DBwSPaacW6GVmk",
@@ -211,309 +192,312 @@ var CLSTAMP = "10776939";
         "use strict";
         r.d(t, {
           $4F: () => ue,
-          $6p: () => ji,
-          $Ut: () => Ri,
+          $6p: () => zi,
+          $Ut: () => Li,
           $b2: () => c,
-          $l2: () => Sn,
-          $ys: () => yt,
-          A2g: () => rn,
-          A4L: () => vt,
+          $l2: () => Bn,
+          $ys: () => Rt,
+          A2g: () => on,
+          A4L: () => xt,
           ADn: () => V,
-          AZ7: () => Yn,
-          Aav: () => pr,
-          AcZ: () => cn,
-          Aqr: () => xr,
-          Ass: () => Ve,
-          B3I: () => pn,
-          Bb7: () => tr,
+          AZ7: () => Jn,
+          Aav: () => _r,
+          AcZ: () => dn,
+          Aqr: () => Ir,
+          Ass: () => Ke,
+          B3I: () => _n,
+          Bb7: () => ir,
           Bh9: () => te,
-          Bhc: () => gt,
+          Bhc: () => bt,
           Byx: () => w,
-          C$4: () => _r,
-          C0f: () => mi,
-          C6g: () => yi,
-          CII: () => be,
-          C_P: () => Hn,
-          Cnj: () => bn,
-          Cpk: () => Gr,
-          Ctw: () => qn,
+          C$4: () => Mr,
+          C0f: () => gi,
+          C6g: () => Ri,
+          CII: () => Ce,
+          C_P: () => qn,
+          Cnj: () => Cn,
+          Cpk: () => Zr,
+          Ctw: () => $n,
           CvG: () => G,
-          DEQ: () => mr,
+          DEQ: () => gr,
           DJE: () => F,
-          DOG: () => sn,
-          DRF: () => Xt,
+          DOG: () => cn,
+          DRF: () => tr,
           DvW: () => se,
           Dyr: () => X,
-          E3D: () => nr,
-          EPt: () => ir,
-          Ec7: () => ze,
-          FH6: () => ft,
-          FHN: () => Pt,
-          Fa4: () => hr,
-          FpT: () => hi,
-          Fwr: () => cr,
-          GXE: () => St,
-          Gj7: () => Ue,
-          H24: () => Ki,
+          E3D: () => or,
+          EPt: () => ar,
+          Ec7: () => De,
+          FH6: () => wt,
+          FHN: () => Vt,
+          Fa4: () => fr,
+          FpT: () => fi,
+          Fwr: () => dr,
+          GXE: () => Bt,
+          Gj7: () => He,
+          H24: () => Qi,
           HAb: () => W,
-          HFK: () => Ir,
-          HRy: () => fr,
-          HUv: () => ni,
-          HkE: () => Mt,
+          HFK: () => Tr,
+          HRy: () => wr,
+          HUv: () => oi,
+          HkE: () => St,
           HkO: () => $,
           Hrn: () => U,
-          I$j: () => Kn,
-          I5b: () => Sr,
-          IDH: () => nn,
-          IVA: () => it,
-          IyP: () => Qe,
+          I$j: () => Qn,
+          I5b: () => Br,
+          IDH: () => an,
+          IVA: () => at,
+          IyP: () => et,
           J2R: () => b,
-          JBx: () => Tt,
+          JBx: () => Et,
           JKf: () => ce,
-          JOj: () => Wt,
-          JPR: () => rt,
-          JV7: () => qe,
-          JoK: () => $r,
-          K91: () => Ft,
-          K9x: () => jr,
-          KDJ: () => ar,
-          KH9: () => Qn,
-          KoM: () => Zr,
-          L0X: () => sr,
-          L3y: () => kt,
-          LHp: () => Be,
-          LOv: () => Br,
-          LS$: () => Ui,
-          LgB: () => Yt,
+          JOj: () => Gt,
+          JPR: () => st,
+          JV7: () => $e,
+          JoK: () => Xr,
+          K91: () => Ot,
+          K9x: () => zr,
+          KDJ: () => ur,
+          KH9: () => ei,
+          KoM: () => Yr,
+          L0X: () => cr,
+          L3y: () => jt,
+          LHp: () => ke,
+          LOv: () => kr,
+          LS$: () => Hi,
+          LgB: () => Jt,
           Llp: () => re,
-          Lzz: () => At,
+          Lzz: () => Ut,
           MAT: () => _,
-          MED: () => mt,
-          MGb: () => Ln,
+          MED: () => gt,
+          MGb: () => Fn,
           MhR: () => i,
-          NFp: () => Ct,
-          NwL: () => Er,
+          NFp: () => yt,
+          NwL: () => Ar,
           OB6: () => y,
           OEI: () => I,
-          OFl: () => xt,
-          OZx: () => jn,
-          Obu: () => di,
-          P3F: () => Re,
-          PN1: () => mn,
-          PPm: () => we,
+          OFl: () => It,
+          OZx: () => zn,
+          Obu: () => pi,
+          P3F: () => Le,
+          PN1: () => gn,
+          PPm: () => ve,
           Pj2: () => u,
-          Pn1: () => wt,
+          Pn1: () => vt,
           PrD: () => D,
-          Pw_: () => bi,
-          Q2u: () => an,
-          Q7f: () => Tr,
-          QO1: () => Ar,
+          Pw_: () => Ci,
+          Q2u: () => un,
+          Q7f: () => Er,
+          QO1: () => Ur,
           QPp: () => K,
-          QT4: () => Bt,
-          R1s: () => Mn,
-          R2g: () => ti,
+          QT4: () => kt,
+          R1s: () => Sn,
+          R2g: () => ii,
           R71: () => v,
           Rer: () => R,
-          RhO: () => Ot,
-          Rhn: () => Zi,
-          Rnx: () => Mi,
-          Rv: () => fe,
-          S$u: () => Oe,
-          SRb: () => gr,
-          SSr: () => Ei,
-          SWo: () => Wn,
-          Sxg: () => zi,
-          TQL: () => fi,
-          TQt: () => ht,
-          Tby: () => li,
-          TeY: () => Wr,
-          TiP: () => rr,
-          U5N: () => Je,
-          UXi: () => Te,
+          RhO: () => Nt,
+          Rhn: () => Yi,
+          Rnx: () => Si,
+          Rv: () => we,
+          S$u: () => Ne,
+          SRb: () => br,
+          SSr: () => Ai,
+          SWo: () => Gn,
+          Sxg: () => Di,
+          TQL: () => wi,
+          TQt: () => ft,
+          Tby: () => mi,
+          TeY: () => Gr,
+          TiP: () => sr,
+          U5N: () => rt,
+          UXi: () => Ee,
           UXk: () => O,
           UfC: () => l,
           UkI: () => T,
-          UtJ: () => Se,
-          Uu1: () => Dt,
-          Uuy: () => on,
+          UtJ: () => Be,
+          Uu1: () => Wt,
+          Uuy: () => ln,
           VIA: () => a,
+          VOs: () => pe,
           VS9: () => H,
-          VXt: () => Pr,
-          VYj: () => Yr,
-          Vb8: () => Fn,
+          VXt: () => Vr,
+          VYj: () => Jr,
+          Vb8: () => On,
           Vpw: () => ee,
           VrD: () => s,
-          W19: () => Ce,
+          W19: () => ye,
           WE0: () => ne,
-          WNR: () => kr,
-          WU6: () => Vi,
-          Wpf: () => Nn,
-          Wvm: () => Pn,
-          X51: () => Ut,
+          WNR: () => jr,
+          WU6: () => Ki,
+          Wpf: () => Pn,
+          Wvm: () => Vn,
+          X51: () => Ht,
           Xte: () => B,
-          Y3j: () => er,
-          Y5S: () => Tn,
-          YAh: () => ci,
+          Y3j: () => nr,
+          Y5S: () => En,
+          YAh: () => di,
           YI2: () => ie,
-          Yjh: () => Le,
-          ZLm: () => Gt,
-          ZUW: () => Di,
-          Ze9: () => Vt,
+          Yjh: () => Fe,
+          ZLm: () => Zt,
+          ZUW: () => Wi,
+          Ze9: () => Kt,
           ZjD: () => he,
-          Zw7: () => Or,
+          Zw7: () => Nr,
           _3b: () => P,
-          _Q1: () => Rt,
-          _UC: () => je,
+          _Q1: () => Lt,
+          _UC: () => ze,
           _Vf: () => g,
-          a2r: () => ui,
-          aPS: () => Ae,
-          ab9: () => Un,
-          abL: () => ke,
+          a2r: () => hi,
+          aPS: () => Ue,
+          ab9: () => Hn,
+          abL: () => je,
           aff: () => p,
-          ajI: () => Lr,
-          ak3: () => lt,
-          b$p: () => In,
+          ajI: () => Fr,
+          ak3: () => mt,
+          b$p: () => Tn,
           bGq: () => k,
-          bOm: () => Pi,
-          bP9: () => Zt,
-          b_A: () => qr,
-          beA: () => _i,
-          bmB: () => ve,
-          c3e: () => pe,
+          bOm: () => Vi,
+          bP9: () => Yt,
+          b_A: () => $r,
+          beA: () => Mi,
+          bmB: () => xe,
+          c3e: () => _e,
           cU3: () => z,
           cfC: () => h,
-          ciT: () => zn,
-          ckP: () => Ii,
-          cwp: () => $e,
-          dFE: () => bt,
+          ciT: () => Dn,
+          ckP: () => Ti,
+          cwp: () => Xe,
+          dFE: () => Ct,
           dMO: () => oe,
-          dZ5: () => Nt,
-          eAR: () => Ci,
-          eEM: () => ai,
-          eIg: () => xe,
+          dZ5: () => Pt,
+          eAR: () => yi,
+          eEM: () => ui,
+          eIg: () => Ie,
           eNs: () => de,
-          eSB: () => Oi,
-          eY9: () => gi,
-          egf: () => Lt,
-          etS: () => De,
-          ey3: () => _n,
-          f4X: () => dr,
-          f7X: () => Ie,
-          fLp: () => Rn,
-          foV: () => Vr,
-          fui: () => ri,
-          fy4: () => Ge,
-          g0U: () => Ai,
-          g5s: () => et,
-          hGl: () => Mr,
+          eSB: () => Ni,
+          eY9: () => bi,
+          egf: () => Ft,
+          etS: () => We,
+          ey3: () => Mn,
+          f4X: () => pr,
+          f7X: () => Te,
+          fLp: () => Ln,
+          foV: () => Kr,
+          fui: () => si,
+          fy4: () => Ze,
+          g0U: () => Ui,
+          g5s: () => nt,
+          hGl: () => Sr,
           hGu: () => M,
           hL2: () => Y,
-          h_E: () => wn,
-          hmR: () => Jn,
-          iEc: () => $i,
-          iQT: () => It,
+          h_E: () => vn,
+          hmR: () => ri,
+          iEc: () => Xi,
+          iQT: () => Tt,
           icp: () => me,
-          imt: () => Pe,
-          izQ: () => vr,
-          j2d: () => wi,
+          imt: () => Ve,
+          izQ: () => xr,
+          j2d: () => vi,
           j5C: () => S,
-          jHX: () => Li,
-          jO6: () => Jt,
-          jYC: () => Hi,
-          jrQ: () => ki,
+          jHX: () => Fi,
+          jO6: () => rr,
+          jYC: () => qi,
+          jrQ: () => ji,
           k1m: () => le,
-          kEl: () => Dr,
-          kFb: () => dt,
-          kG6: () => zt,
-          kQI: () => zr,
-          kSD: () => Ht,
-          keb: () => We,
-          kvY: () => tn,
-          lDg: () => ei,
-          lcX: () => qi,
-          lmQ: () => tt,
-          m2$: () => Et,
-          mLF: () => Zn,
-          mWc: () => si,
-          mZ: () => at,
-          miK: () => hn,
-          mv5: () => Dn,
-          n4o: () => Kr,
-          nHq: () => ln,
-          oYe: () => gn,
+          kEl: () => Wr,
+          kFb: () => pt,
+          kG6: () => Dt,
+          kQI: () => Dr,
+          kSD: () => qt,
+          keb: () => Ge,
+          kvY: () => sn,
+          lDg: () => ni,
+          lcX: () => $i,
+          lmQ: () => it,
+          m2$: () => At,
+          mLF: () => Yn,
+          mWc: () => ci,
+          mZ: () => ut,
+          miK: () => fn,
+          mv5: () => Wn,
+          n4o: () => Qr,
+          nHq: () => mn,
+          oYe: () => bn,
           ocM: () => j,
-          oez: () => ct,
-          ogI: () => Bn,
-          pIh: () => Cr,
+          oez: () => dt,
+          ogI: () => kn,
+          pIh: () => yr,
           piN: () => o,
           pmA: () => q,
-          ppM: () => Wi,
+          ppM: () => Gi,
           ppu: () => J,
-          qNf: () => Fe,
+          qNf: () => Oe,
           qhh: () => E,
-          qho: () => ot,
-          qqY: () => An,
-          qxI: () => Xr,
-          qxU: () => Ye,
-          r5B: () => ii,
+          qho: () => lt,
+          qqY: () => Un,
+          qxI: () => tn,
+          qxU: () => Je,
+          r5B: () => ai,
+          rPb: () => fe,
           rYC: () => x,
-          r_E: () => pi,
-          rlK: () => xi,
-          rmr: () => Xe,
-          rzR: () => Ur,
-          s5U: () => st,
-          s7X: () => Fr,
+          r_E: () => _i,
+          rlK: () => Ii,
+          rmr: () => tt,
+          rzR: () => Hr,
+          s5U: () => ct,
+          s7X: () => Or,
           sC: () => n,
-          sCr: () => oi,
+          sCr: () => li,
           sGL: () => m,
           sX0: () => ae,
-          sfN: () => Qt,
-          sln: () => Me,
-          t5y: () => Vn,
-          tIg: () => vi,
-          tgE: () => Fi,
-          u0: () => lr,
-          uGW: () => Qr,
-          uYK: () => yr,
-          urx: () => ye,
-          uvF: () => Nr,
-          uw: () => En,
-          vC_: () => He,
-          vHO: () => Bi,
-          vOk: () => Ne,
+          sfN: () => er,
+          sln: () => Se,
+          t5y: () => Kn,
+          tIg: () => xi,
+          tgE: () => Oi,
+          u0: () => mr,
+          uGW: () => en,
+          uYK: () => Rr,
+          urx: () => Re,
+          uvF: () => Pr,
+          uw: () => An,
+          vC_: () => qe,
+          vHO: () => ki,
+          vOk: () => Pe,
           vPz: () => N,
-          vVO: () => Si,
+          vVO: () => Bi,
           vu5: () => L,
           vyo: () => f,
-          w1d: () => Ze,
-          wEc: () => Ni,
-          wFw: () => Xn,
-          wKv: () => nt,
-          wLO: () => ge,
-          wOY: () => un,
+          w1d: () => Ye,
+          wEc: () => Pi,
+          wFw: () => ti,
+          wKv: () => ot,
+          wLO: () => be,
+          wOY: () => hn,
           wUl: () => C,
-          wWt: () => jt,
-          wY0: () => Hr,
+          wWt: () => zt,
+          wY0: () => qr,
           wcG: () => A,
-          wim: () => Ee,
-          wjO: () => _e,
-          wrm: () => ut,
-          wwZ: () => Kt,
-          x6o: () => $t,
-          xPp: () => pt,
-          xXg: () => On,
-          xcz: () => _t,
-          xyI: () => $n,
-          y44: () => Ke,
-          y6: () => wr,
-          yXf: () => kn,
-          yhO: () => or,
-          yrU: () => vn,
+          wim: () => Ae,
+          wjO: () => Me,
+          wrm: () => ht,
+          wwZ: () => Qt,
+          x6o: () => Xt,
+          xPp: () => _t,
+          xXg: () => Nn,
+          xcz: () => Mt,
+          xyI: () => Xn,
+          y44: () => Qe,
+          y6: () => vr,
+          yXf: () => jn,
+          yhO: () => lr,
+          yrU: () => xn,
           z41: () => Z,
-          zA: () => br,
-          zRv: () => Gn,
-          zcX: () => Rr,
-          zeJ: () => ur,
+          zA: () => Cr,
+          zIc: () => ge,
+          zRv: () => Zn,
+          zcX: () => Lr,
+          zeJ: () => hr,
           zlr: () => d,
         });
         const n = 1,
@@ -634,506 +618,509 @@ var CLSTAMP = "10776939";
           pe = 0,
           ge = 1,
           fe = 2,
-          _e = 3,
-          be = 4,
-          we = 5,
-          Me = 0,
-          Ce = 1,
-          ve = 2,
-          Se = 3,
-          ye = 4,
-          xe = 5,
-          Be = 6,
-          Re = 7,
-          Ie = 11,
-          ke = 0,
-          Le = 1,
-          Te = 2,
-          je = 3,
-          Fe = 4,
-          Ee = 5,
-          ze = 6;
-        function Oe(e) {
-          return e == je || e == ze;
+          _e = 0,
+          be = 1,
+          we = 2,
+          Me = 3,
+          Ce = 4,
+          ve = 5,
+          Se = 0,
+          ye = 1,
+          xe = 2,
+          Be = 3,
+          Re = 4,
+          Ie = 5,
+          ke = 6,
+          Le = 7,
+          Te = 11,
+          je = 0,
+          Fe = 1,
+          Ee = 2,
+          ze = 3,
+          Oe = 4,
+          Ae = 5,
+          De = 6;
+        function Ne(e) {
+          return e == ze || e == De;
         }
-        function Ae(e) {
-          return e == Ee || e == ze;
+        function Ue(e) {
+          return e == Ae || e == De;
         }
-        const De = 0,
-          Ne = 2,
-          Ue = 3,
-          We = 1,
-          Pe = 4,
-          He = 1,
-          Ge = 2,
-          Ve = 47,
-          qe = 102,
-          Ze = 7,
-          Ke = 750,
-          $e = 753,
-          Ye = 769,
-          Qe = 799,
-          Xe = 241100,
-          Je = 202355,
-          et = 250820,
-          tt = 330050,
-          rt = 358510,
-          nt = 366490,
-          it = 413080,
-          st = 413090,
-          ot = 443510,
-          at = 1,
-          ct = 2371090;
-        function lt(e) {
-          return e == et || e == tt;
+        const We = 0,
+          Pe = 2,
+          He = 3,
+          Ge = 1,
+          Ve = 4,
+          qe = 1,
+          Ze = 2,
+          Ke = 47,
+          $e = 102,
+          Ye = 7,
+          Qe = 750,
+          Xe = 753,
+          Je = 769,
+          et = 799,
+          tt = 241100,
+          rt = 202355,
+          nt = 250820,
+          it = 330050,
+          st = 358510,
+          ot = 366490,
+          at = 413080,
+          ct = 413090,
+          lt = 443510,
+          ut = 1,
+          dt = 2371090;
+        function mt(e) {
+          return e == nt || e == it;
         }
-        function ut(e) {
-          return e == it || e == st || e == ot || e == Ye;
+        function ht(e) {
+          return e == at || e == ct || e == lt || e == Je;
         }
-        const dt = "18446744073709551615",
-          mt = 0,
-          ht = 2147483647,
-          pt = -1,
+        const pt = "18446744073709551615",
           gt = 0,
-          ft = 1,
-          _t = 2,
-          bt = 3,
-          wt = 4,
-          Mt = 5,
-          Ct = 6,
-          vt = 7,
-          St = 8,
-          yt = 9,
-          xt = 10,
-          Bt = 11,
-          Rt = 12,
-          It = 13,
-          kt = 14,
-          Lt = 15,
-          Tt = 16,
-          jt = 17,
-          Ft = 18,
-          Et = 19,
-          zt = 20,
-          Ot = 21,
-          At = 22,
-          Dt = 23,
-          Nt = 24,
-          Ut = 25,
-          Wt = 26,
-          Pt = 27,
-          Ht = 28,
-          Gt = 29,
-          Vt = 30,
-          qt = 31,
-          Zt = 32;
-        function Kt(e, t = "en") {
+          ft = 2147483647,
+          _t = -1,
+          bt = 0,
+          wt = 1,
+          Mt = 2,
+          Ct = 3,
+          vt = 4,
+          St = 5,
+          yt = 6,
+          xt = 7,
+          Bt = 8,
+          Rt = 9,
+          It = 10,
+          kt = 11,
+          Lt = 12,
+          Tt = 13,
+          jt = 14,
+          Ft = 15,
+          Et = 16,
+          zt = 17,
+          Ot = 18,
+          At = 19,
+          Dt = 20,
+          Nt = 21,
+          Ut = 22,
+          Wt = 23,
+          Pt = 24,
+          Ht = 25,
+          Gt = 26,
+          Vt = 27,
+          qt = 28,
+          Zt = 29,
+          Kt = 30,
+          $t = 31,
+          Yt = 32;
+        function Qt(e, t = "en") {
           switch (e) {
-            case gt:
-              return "en";
-            case ft:
-              return "de";
-            case _t:
-              return "fr";
             case bt:
-              return "it";
+              return "en";
             case wt:
-              return "ko";
+              return "de";
             case Mt:
-              return "es";
+              return "fr";
             case Ct:
-              return "zh-cn";
+              return "it";
             case vt:
-              return "zh-tw";
+              return "ko";
             case St:
-              return "ru";
+              return "es";
             case yt:
-              return "th";
+              return "zh-cn";
             case xt:
-              return "ja";
+              return "zh-tw";
             case Bt:
-              return "pt";
+              return "ru";
             case Rt:
-              return "pl";
+              return "th";
             case It:
-              return "da";
+              return "ja";
             case kt:
-              return "nl";
+              return "pt";
             case Lt:
-              return "fi";
+              return "pl";
             case Tt:
-              return "no";
+              return "da";
             case jt:
-              return "sv";
+              return "nl";
             case Ft:
-              return "hu";
+              return "fi";
             case Et:
-              return "cs";
+              return "no";
             case zt:
-              return "ro";
+              return "sv";
             case Ot:
-              return "tr";
-            case Ut:
-              return "ar";
+              return "hu";
             case At:
-              return "pt-br";
+              return "cs";
             case Dt:
-              return "bg";
+              return "ro";
             case Nt:
-              return "el";
-            case Wt:
-              return "uk";
-            case Pt:
-              return "es-419";
+              return "tr";
             case Ht:
-              return "vi";
+              return "ar";
+            case Ut:
+              return "pt-br";
+            case Wt:
+              return "bg";
+            case Pt:
+              return "el";
             case Gt:
-              return "sc-sc";
+              return "uk";
             case Vt:
-              return "id";
+              return "es-419";
             case qt:
+              return "vi";
+            case Zt:
+              return "sc-sc";
+            case Kt:
+              return "id";
+            case $t:
               return "ms";
             default:
               return t;
           }
         }
-        const $t = (e) => ("koreana" === e ? "korean" : e);
-        function Yt(e, t = "") {
+        const Xt = (e) => ("koreana" === e ? "korean" : e);
+        function Jt(e, t = "") {
           switch (e) {
-            case gt:
-              return "english";
-            case ft:
-              return "german";
-            case _t:
-              return "french";
             case bt:
-              return "italian";
+              return "english";
             case wt:
-              return "koreana";
+              return "german";
             case Mt:
-              return "spanish";
+              return "french";
             case Ct:
-              return "schinese";
+              return "italian";
             case vt:
-              return "tchinese";
+              return "koreana";
             case St:
-              return "russian";
+              return "spanish";
             case yt:
-              return "thai";
+              return "schinese";
             case xt:
-              return "japanese";
+              return "tchinese";
             case Bt:
-              return "portuguese";
+              return "russian";
             case Rt:
-              return "polish";
+              return "thai";
             case It:
-              return "danish";
+              return "japanese";
             case kt:
-              return "dutch";
+              return "portuguese";
             case Lt:
-              return "finnish";
+              return "polish";
             case Tt:
-              return "norwegian";
+              return "danish";
             case jt:
-              return "swedish";
+              return "dutch";
             case Ft:
-              return "hungarian";
+              return "finnish";
             case Et:
-              return "czech";
+              return "norwegian";
             case zt:
-              return "romanian";
+              return "swedish";
             case Ot:
-              return "turkish";
-            case Ut:
-              return "arabic";
+              return "hungarian";
             case At:
-              return "brazilian";
+              return "czech";
             case Dt:
-              return "bulgarian";
+              return "romanian";
             case Nt:
-              return "greek";
-            case Wt:
-              return "ukrainian";
-            case Pt:
-              return "latam";
+              return "turkish";
             case Ht:
-              return "vietnamese";
+              return "arabic";
+            case Ut:
+              return "brazilian";
+            case Wt:
+              return "bulgarian";
+            case Pt:
+              return "greek";
             case Gt:
-              return "sc_schinese";
+              return "ukrainian";
             case Vt:
-              return "indonesian";
+              return "latam";
             case qt:
+              return "vietnamese";
+            case Zt:
+              return "sc_schinese";
+            case Kt:
+              return "indonesian";
+            case $t:
               return "malay";
             default:
               return t;
           }
         }
-        function Qt(e, t = gt) {
+        function er(e, t = bt) {
           switch (e) {
             case "english":
-              return gt;
-            case "german":
-              return ft;
-            case "french":
-              return _t;
-            case "italian":
               return bt;
+            case "german":
+              return wt;
+            case "french":
+              return Mt;
+            case "italian":
+              return Ct;
             case "korean":
             case "koreana":
-              return wt;
-            case "spanish":
-              return Mt;
-            case "schinese":
-              return Ct;
-            case "tchinese":
               return vt;
-            case "russian":
+            case "spanish":
               return St;
-            case "thai":
+            case "schinese":
               return yt;
-            case "japanese":
+            case "tchinese":
               return xt;
-            case "portuguese":
+            case "russian":
               return Bt;
-            case "polish":
+            case "thai":
               return Rt;
-            case "danish":
+            case "japanese":
               return It;
-            case "dutch":
+            case "portuguese":
               return kt;
-            case "finnish":
+            case "polish":
               return Lt;
-            case "norwegian":
+            case "danish":
               return Tt;
-            case "swedish":
+            case "dutch":
               return jt;
-            case "hungarian":
+            case "finnish":
               return Ft;
-            case "czech":
+            case "norwegian":
               return Et;
-            case "romanian":
+            case "swedish":
               return zt;
-            case "turkish":
+            case "hungarian":
               return Ot;
-            case "arabic":
-              return Ut;
-            case "brazilian":
+            case "czech":
               return At;
-            case "bulgarian":
+            case "romanian":
               return Dt;
-            case "greek":
+            case "turkish":
               return Nt;
-            case "ukrainian":
-              return Wt;
-            case "latam":
-              return Pt;
-            case "vietnamese":
+            case "arabic":
               return Ht;
-            case "sc_schinese":
+            case "brazilian":
+              return Ut;
+            case "bulgarian":
+              return Wt;
+            case "greek":
+              return Pt;
+            case "ukrainian":
               return Gt;
-            case "indonesian":
+            case "latam":
               return Vt;
-            case "malay":
+            case "vietnamese":
               return qt;
+            case "sc_schinese":
+              return Zt;
+            case "indonesian":
+              return Kt;
+            case "malay":
+              return $t;
             default:
               return t;
           }
         }
-        const Xt = 1,
-          Jt = 2,
-          er = 4,
-          tr = 5,
-          rr = 6,
-          nr = 7,
-          ir = 8,
-          sr = 9,
-          or = 10,
-          ar = 11,
-          cr = 12,
-          lr = 13,
-          ur = 14,
-          dr = 15,
-          mr = 16,
-          hr = 17,
-          pr = 18,
-          gr = 19,
-          fr = 20,
-          _r = 21,
-          br = 22,
-          wr = 23,
-          Mr = 24,
-          Cr = 25,
-          vr = 26,
-          Sr = 27,
-          yr = 28,
-          xr = 29,
-          Br = 31,
-          Rr = 32,
-          Ir = 34,
-          kr = 35,
-          Lr = 36,
-          Tr = 100,
-          jr = 103,
-          Fr = 500,
-          Er = 600,
-          zr = 601,
-          Or = 1e3,
-          Ar = 1001,
-          Dr = 0,
-          Nr = 1,
-          Ur = 0,
-          Wr = 1,
-          Pr = 2,
-          Hr = 3,
+        const tr = 1,
+          rr = 2,
+          nr = 4,
+          ir = 5,
+          sr = 6,
+          or = 7,
+          ar = 8,
+          cr = 9,
+          lr = 10,
+          ur = 11,
+          dr = 12,
+          mr = 13,
+          hr = 14,
+          pr = 15,
+          gr = 16,
+          fr = 17,
+          _r = 18,
+          br = 19,
+          wr = 20,
+          Mr = 21,
+          Cr = 22,
+          vr = 23,
+          Sr = 24,
+          yr = 25,
+          xr = 26,
+          Br = 27,
+          Rr = 28,
+          Ir = 29,
+          kr = 31,
+          Lr = 32,
+          Tr = 34,
+          jr = 35,
+          Fr = 36,
+          Er = 100,
+          zr = 103,
+          Or = 500,
+          Ar = 600,
+          Dr = 601,
+          Nr = 1e3,
+          Ur = 1001,
+          Wr = 0,
+          Pr = 1,
+          Hr = 0,
           Gr = 1,
           Vr = 2,
-          qr = 0,
+          qr = 3,
           Zr = 1,
           Kr = 2,
-          $r = 3,
-          Yr = 4,
-          Qr = 6,
-          Xr = 7,
-          Jr = 1,
-          en = 4,
+          $r = 0,
+          Yr = 1,
+          Qr = 2,
+          Xr = 3,
+          Jr = 4,
+          en = 6,
           tn = 7,
-          rn = 8;
-        function nn(e) {
+          rn = 1,
+          nn = 4,
+          sn = 7,
+          on = 8;
+        function an(e) {
           switch (e) {
             default:
               break;
-            case en:
-            case Jr:
-            case tn:
+            case nn:
             case rn:
+            case sn:
+            case on:
               return !0;
           }
           return !1;
         }
-        function sn(e) {
+        function cn(e) {
           switch (e) {
             default:
               break;
-            case en:
-            case Jr:
+            case nn:
             case rn:
+            case on:
               return !0;
           }
           return !1;
         }
-        const on = 2,
-          an = 4,
-          cn = 8,
-          ln = 16,
-          un = 30,
-          dn = 0,
-          mn = 1,
-          hn = 2,
-          pn = 3,
-          gn = 4,
-          fn = 5;
-        function _n(e) {
+        const ln = 2,
+          un = 4,
+          dn = 8,
+          mn = 16,
+          hn = 30,
+          pn = 0,
+          gn = 1,
+          fn = 2,
+          _n = 3,
+          bn = 4,
+          wn = 5;
+        function Mn(e) {
           switch (e) {
-            case dn:
-              return "invalid";
-            case mn:
-              return "gamepad";
-            case hn:
-              return "desktop";
             case pn:
-              return "tray";
+              return "invalid";
             case gn:
-              return "all";
+              return "gamepad";
             case fn:
+              return "desktop";
+            case _n:
+              return "tray";
+            case bn:
+              return "all";
+            case wn:
               return "push";
           }
         }
-        const bn = -1,
-          wn = 0,
-          Mn = 1,
-          Cn = 2,
-          vn = 3,
-          Sn = 4,
-          yn = 5,
-          xn = 6,
-          Bn = 7;
-        function Rn(e) {
+        const Cn = -1,
+          vn = 0,
+          Sn = 1,
+          yn = 2,
+          xn = 3,
+          Bn = 4,
+          Rn = 5,
+          In = 6,
+          kn = 7;
+        function Ln(e) {
           switch (e) {
-            case wn:
-              return "vgui";
-            case Mn:
-              return "tenfoot";
-            case Cn:
-              return "mobile";
             case vn:
-              return "web";
+              return "vgui";
             case Sn:
-              return "gamepad";
+              return "tenfoot";
             case yn:
-              return "mobilechat";
+              return "mobile";
             case xn:
-              return "embedded";
+              return "web";
             case Bn:
+              return "gamepad";
+            case Rn:
+              return "mobilechat";
+            case In:
+              return "embedded";
+            case kn:
               return "desktop";
             default:
               return "unknown";
           }
         }
-        const In = 1,
-          kn = 2,
-          Ln = 9,
-          Tn = 18,
-          jn = 20,
-          Fn = 22,
-          En = 23,
-          zn = 24,
-          On = 25,
-          An = 27,
-          Dn = 28,
-          Nn = 29,
-          Un = 30,
-          Wn = 31,
-          Pn = 36,
-          Hn = 37,
-          Gn = 38,
-          Vn = 39,
-          qn = 41,
-          Zn = 42,
-          Kn = 43,
-          $n = 44,
-          Yn = 50,
-          Qn = 55,
-          Xn = 56,
-          Jn = 57,
-          ei = 58,
-          ti = 59,
-          ri = 60,
-          ni = 61,
-          ii = 62,
-          si = 64,
-          oi = 65,
-          ai = 66,
-          ci = 67,
-          li = 68,
-          ui = 69,
-          di = 70,
-          mi = 71,
-          hi = 72,
-          pi = 73,
-          gi = 74,
-          fi = 75,
-          _i = 76,
-          bi = 77,
-          wi = 78,
-          Mi = 79,
-          Ci = 80,
-          vi = 81,
-          Si = 82,
-          yi = 0,
-          xi = 1,
-          Bi = 4,
-          Ri = 11;
-        var Ii, ki, Li, Ti, ji, Fi, Ei, zi;
+        const Tn = 1,
+          jn = 2,
+          Fn = 9,
+          En = 18,
+          zn = 20,
+          On = 22,
+          An = 23,
+          Dn = 24,
+          Nn = 25,
+          Un = 27,
+          Wn = 28,
+          Pn = 29,
+          Hn = 30,
+          Gn = 31,
+          Vn = 36,
+          qn = 37,
+          Zn = 38,
+          Kn = 39,
+          $n = 41,
+          Yn = 42,
+          Qn = 43,
+          Xn = 44,
+          Jn = 50,
+          ei = 55,
+          ti = 56,
+          ri = 57,
+          ni = 58,
+          ii = 59,
+          si = 60,
+          oi = 61,
+          ai = 62,
+          ci = 64,
+          li = 65,
+          ui = 66,
+          di = 67,
+          mi = 68,
+          hi = 69,
+          pi = 70,
+          gi = 71,
+          fi = 72,
+          _i = 73,
+          bi = 74,
+          wi = 75,
+          Mi = 76,
+          Ci = 77,
+          vi = 78,
+          Si = 79,
+          yi = 80,
+          xi = 81,
+          Bi = 82,
+          Ri = 0,
+          Ii = 1,
+          ki = 4,
+          Li = 11;
+        var Ti, ji, Fi, Ei, zi, Oi, Ai, Di;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -1149,7 +1136,7 @@ var CLSTAMP = "10776939";
               "k_EConnectivityTestResult_WifiDisabled"),
             (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
               "k_EConnectivityTestResult_NoLAN");
-        })(Ii || (Ii = {})),
+        })(Ti || (Ti = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -1163,7 +1150,7 @@ var CLSTAMP = "10776939";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(ki || (ki = {})),
+          })(ji || (ji = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -1177,7 +1164,7 @@ var CLSTAMP = "10776939";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(Li || (Li = {})),
+          })(Fi || (Fi = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -1187,7 +1174,7 @@ var CLSTAMP = "10776939";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(Ti || (Ti = {})),
+          })(Ei || (Ei = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -1197,7 +1184,7 @@ var CLSTAMP = "10776939";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(ji || (ji = {})),
+          })(zi || (zi = {})),
           (function (e) {
             (e[(e.k_EAppUpdateProgress_VerifyingInstalledFiles = 0)] =
               "k_EAppUpdateProgress_VerifyingInstalledFiles"),
@@ -1215,7 +1202,7 @@ var CLSTAMP = "10776939";
                 "k_EAppUpdateProgress_Committing"),
               (e[(e.k_EAppUpdateProgress_Max = 7)] =
                 "k_EAppUpdateProgress_Max");
-          })(Fi || (Fi = {})),
+          })(Oi || (Oi = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -1223,22 +1210,22 @@ var CLSTAMP = "10776939";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(Ei || (Ei = {})),
+          })(Ai || (Ai = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(zi || (zi = {}));
-        const Oi = 0,
-          Ai = 1,
-          Di = 320,
-          Ni = 528,
-          Ui = 544,
-          Wi = 545,
-          Pi = 546,
-          Hi = 5001;
-        var Gi, Vi, qi, Zi, Ki, $i;
+          })(Di || (Di = {}));
+        const Ni = 0,
+          Ui = 1,
+          Wi = 320,
+          Pi = 528,
+          Hi = 544,
+          Gi = 545,
+          Vi = 546,
+          qi = 5001;
+        var Zi, Ki, $i, Yi, Qi, Xi;
         !(function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -1246,14 +1233,14 @@ var CLSTAMP = "10776939";
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(Gi || (Gi = {})),
+        })(Zi || (Zi = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(Vi || (Vi = {})),
+          })(Ki || (Ki = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -1267,12 +1254,12 @@ var CLSTAMP = "10776939";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })(qi || (qi = {})),
+          })($i || ($i = {})),
           (function (e) {
             (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
               (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
               (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
-          })(Zi || (Zi = {})),
+          })(Yi || (Yi = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -1306,7 +1293,7 @@ var CLSTAMP = "10776939";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(Ki || (Ki = {})),
+          })(Qi || (Qi = {})),
           (function (e) {
             (e[(e.k_EWindowBringToFrontInvalid = 0)] =
               "k_EWindowBringToFrontInvalid"),
@@ -1314,7 +1301,7 @@ var CLSTAMP = "10776939";
                 "k_EWindowBringToFrontAndForceOS"),
               (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS");
-          })($i || ($i = {}));
+          })(Xi || (Xi = {}));
       },
       85243: (e, t, r) => {
         "use strict";
@@ -1517,10 +1504,11 @@ var CLSTAMP = "10776939";
               onGlobalButtonDown: g,
               disableFocusClasses: f,
               disabledRoot: _,
-              "flow-children": b,
-              ...w
+              excludeFromScrollRegionSearch: b,
+              "flow-children": w,
+              ...M
             } = e,
-            { elemProps: M, navOptions: C, gamepadEvents: v } = (0, a.sl)(w);
+            { elemProps: C, navOptions: v, gamepadEvents: S } = (0, a.sl)(M);
           return (0, l.Vu)()
             ? (0, n.jsx)(h, {
                 navID: r,
@@ -1535,12 +1523,13 @@ var CLSTAMP = "10776939";
                 onGlobalButtonDown: g,
                 disableFocusClasses: f,
                 disabledRoot: _,
-                "flow-children": b,
-                ...C,
+                excludeFromScrollRegionSearch: b,
+                "flow-children": w,
                 ...v,
-                children: (0, n.jsx)("div", { ...M, ref: t }),
+                ...S,
+                children: (0, n.jsx)("div", { ...C, ref: t }),
               })
-            : (0, n.jsx)("div", { ...M, ref: t });
+            : (0, n.jsx)("div", { ...C, ref: t });
         });
         function h(e) {
           const {
@@ -1557,51 +1546,56 @@ var CLSTAMP = "10776939";
               onGlobalButtonDown: C,
               disableFocusClasses: v = !1,
               disabledRoot: S = !1,
-              "flow-children": y,
-              ...x
+              excludeFromScrollRegionSearch: y = !1,
+              "flow-children": x,
+              ...B
             } = e,
-            { elemProps: B, navOptions: R, gamepadEvents: I } = (0, a.sl)(x),
-            { refDiv: k, tree: L } = (function (e) {
+            { elemProps: R, navOptions: I, gamepadEvents: k } = (0, a.sl)(B),
+            { refDiv: L, tree: T } = (function (e) {
               const {
                   navID: t,
                   parentEmbeddedNavTree: r,
                   disabledRoot: n,
-                  enabled: i,
-                  navTreeRef: c,
-                  onGlobalButtonDown: d,
-                  ...m
+                  excludeFromScrollRegionSearch: i,
+                  enabled: c,
+                  navTreeRef: d,
+                  onGlobalButtonDown: m,
+                  ...h
                 } = e,
-                h = (0, l.Vu)(),
-                p = (0, u.nN)() || h.GetDefaultContext(),
-                g = o.useContext(a.TJ),
-                [f] = o.useState(() =>
-                  h.NewGamepadNavigationTree(p, t, r ?? g?.Tree, {
-                    ...m,
+                p = (0, l.Vu)(),
+                g = (0, u.nN)() || p.GetDefaultContext(),
+                f = o.useContext(a.TJ),
+                [_] = o.useState(() =>
+                  p.NewGamepadNavigationTree(g, t, r ?? f?.Tree, {
+                    ...h,
                     bIsEmbeddedInLegacyTree: !!r,
                   }),
                 );
-              let _ = o.useRef(null);
+              let b = o.useRef(null);
               return (
-                f.SetOnGlobalButtonDown(d),
+                _.SetOnGlobalButtonDown(m),
                 o.useEffect(
-                  () => f.RegisterNavigationItem(f.Root, _.current),
-                  [f, _],
+                  () => _.RegisterNavigationItem(_.Root, b.current),
+                  [_, b],
                 ),
                 o.useEffect(() => {
-                  f.SetIsEnabled(i);
-                }, [f, i]),
+                  _.SetIsEnabled(c);
+                }, [_, c]),
+                o.useEffect(() => {
+                  _.SetExcludeFromScrollRegionSearch(i);
+                }, [_, i]),
                 o.useEffect(() => {
                   if (!n)
-                    return h.RegisterGamepadNavigationTree(
-                      f,
-                      _.current.ownerDocument.defaultView,
+                    return p.RegisterGamepadNavigationTree(
+                      _,
+                      b.current.ownerDocument.defaultView,
                     );
-                }, [h, f, n]),
+                }, [p, _, n]),
                 o.useEffect(
-                  () => ((0, s.cZ)(c, f), () => (0, s.cZ)(c, null)),
-                  [c, f],
+                  () => ((0, s.cZ)(d, _), () => (0, s.cZ)(d, null)),
+                  [d, _],
                 ),
-                { refDiv: _, tree: f }
+                { refDiv: b, tree: _ }
               );
             })({
               navID: t,
@@ -1613,24 +1607,25 @@ var CLSTAMP = "10776939";
               virtualFocus: _,
               modal: f,
               historyMode: b,
+              excludeFromScrollRegionSearch: y,
             });
-          (0, i.hL)(L.OnActivateCallbacks, r),
-            (0, i.hL)(L.OnDeactivateCallbacks, m),
-            (0, d.KF)(I, k, L),
+          (0, i.hL)(T.OnActivateCallbacks, r),
+            (0, i.hL)(T.OnDeactivateCallbacks, m),
+            (0, d.KF)(k, L, T),
             o.useLayoutEffect(() => {
-              const e = (0, c.O)(y);
-              L.Root.SetProperties({ ...R, layout: e });
+              const e = (0, c.O)(x);
+              T.Root.SetProperties({ ...I, layout: e });
             });
-          const T = (0, s.Ue)(k, w.props.ref);
+          const j = (0, s.Ue)(L, w.props.ref);
           return (0, n.jsx)(g, {
-            tree: S ? null : L,
+            tree: S ? null : T,
             disableFocusClasses: v || S,
             children: (0, n.jsx)(a.TJ.Provider, {
-              value: S ? null : L.Root,
+              value: S ? null : T.Root,
               children: o.cloneElement(w, {
                 id: t,
                 "data-react-nav-root": t,
-                ref: T,
+                ref: j,
               }),
             }),
           });
@@ -1858,23 +1853,25 @@ var CLSTAMP = "10776939";
               onFocusWithin: a,
               navKey: c,
               noFocusRing: l,
-              focusable: u,
-              navRef: d,
-              actionDescriptionMap: m,
-              onMoveUp: h,
-              onMoveRight: p,
-              onMoveDown: g,
-              onMoveLeft: f,
-              navEntryPreferPosition: _,
-              scrollIntoViewWhenChildFocused: b,
-              fnScrollIntoViewHandler: w,
-              scrollIntoViewType: M,
-              resetNavOnEntry: v,
-              ...S
+              focusRingSizeElementID: u,
+              focusable: d,
+              navRef: m,
+              actionDescriptionMap: h,
+              onMoveUp: p,
+              onMoveRight: g,
+              onMoveDown: f,
+              onMoveLeft: _,
+              navEntryPreferPosition: b,
+              scrollIntoViewWhenChildFocused: w,
+              fnScrollIntoViewHandler: M,
+              scrollIntoViewType: v,
+              resetNavOnEntry: S,
+              scrollRegionToStartOrEnd: y,
+              ...x
             } = e,
-            { gamepadEvents: y, actionDescriptions: x, props: B } = C(S);
+            { gamepadEvents: B, actionDescriptions: R, props: I } = C(x);
           return {
-            elemProps: B,
+            elemProps: I,
             navOptions: {
               autoFocus: t,
               preferredFocus: r,
@@ -1885,20 +1882,22 @@ var CLSTAMP = "10776939";
               onFocusWithin: a,
               navKey: c,
               noFocusRing: l,
-              focusable: u,
-              navRef: d,
-              onMoveUp: h,
-              onMoveRight: p,
-              onMoveDown: g,
-              onMoveLeft: f,
-              navEntryPreferPosition: _,
-              scrollIntoViewWhenChildFocused: b,
-              fnScrollIntoViewHandler: w,
-              scrollIntoViewType: M,
-              resetNavOnEntry: v,
-              actionDescriptionMap: { ...m, ...x },
+              focusRingSizeElementID: u,
+              focusable: d,
+              navRef: m,
+              onMoveUp: p,
+              onMoveRight: g,
+              onMoveDown: f,
+              onMoveLeft: _,
+              navEntryPreferPosition: b,
+              scrollIntoViewWhenChildFocused: w,
+              fnScrollIntoViewHandler: M,
+              scrollIntoViewType: v,
+              resetNavOnEntry: S,
+              scrollRegionToStartOrEnd: y,
+              actionDescriptionMap: { ...h, ...R },
             },
-            gamepadEvents: y,
+            gamepadEvents: B,
           };
         }
         function S(e) {
@@ -2192,27 +2191,46 @@ var CLSTAMP = "10776939";
       20893: (e, t, r) => {
         "use strict";
         r.d(t, {
-          AE: () => b,
+          AE: () => v,
           D$: () => n,
-          G7: () => w,
-          IA: () => M,
-          Ro: () => h,
-          SZ: () => l,
-          VX: () => u,
-          W1: () => _,
-          Y3: () => v,
-          cC: () => S,
-          cR: () => p,
-          f: () => m,
-          hr: () => d,
-          nt: () => c,
-          tV: () => f,
-          u8: () => g,
+          G7: () => S,
+          IA: () => y,
+          Ro: () => _,
+          SI: () => a,
+          SZ: () => h,
+          VX: () => p,
+          W1: () => C,
+          Y3: () => B,
+          cC: () => R,
+          cR: () => b,
+          f: () => f,
+          gh: () => c,
+          gp: () => l,
+          hr: () => g,
+          nt: () => m,
+          sv: () => o,
+          tV: () => M,
+          u8: () => w,
         });
         var n,
           i = r(28864),
           s = r(61657);
         r(63696);
+        function o(e) {
+          return "object" == typeof e && null !== e && "value" in e;
+        }
+        function a(e, t) {
+          return o(e) && o(t)
+            ? e.value === t.value &&
+                Boolean(e.bShowOnLeft) == Boolean(t.bShowOnLeft)
+            : e === t;
+        }
+        function c(e) {
+          return o(e) ? e.value : e;
+        }
+        function l(e) {
+          return ("object" == typeof e && e?.type?.startsWith("vgp_")) ?? !1;
+        }
         !(function (e) {
           (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
             (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -2220,14 +2238,14 @@ var CLSTAMP = "10776939";
             (e[(e.BROWSER = 3)] = "BROWSER"),
             (e[(e.AUTOFOCUS = 4)] = "AUTOFOCUS");
         })(n || (n = {}));
-        let o = {
+        let u = {
           [s.pR.OK]: "vgp_onok",
           [s.pR.CANCEL]: "vgp_oncancel",
           [s.pR.SECONDARY]: "vgp_onsecondaryaction",
           [s.pR.OPTIONS]: "vgp_onoptions",
           [s.pR.START]: "vgp_onmenu",
         };
-        function a(e, t, r) {
+        function d(e, t, r) {
           return (
             e.addEventListener(t, r),
             () =>
@@ -2236,37 +2254,37 @@ var CLSTAMP = "10776939";
               })(e, t, r)
           );
         }
-        function c(e, t) {
-          return a(e, "vgp_onbuttondown", t);
-        }
-        function l(e, t) {
-          return a(e, "vgp_onbuttonup", t);
-        }
-        function u(e, t) {
-          return a(e, "vgp_onok", C(t));
-        }
-        function d(e, t) {
-          return a(e, "vgp_oncancel", C(t));
-        }
         function m(e, t) {
-          return a(e, "vgp_onsecondaryaction", C(t));
+          return d(e, "vgp_onbuttondown", t);
         }
         function h(e, t) {
-          return a(e, "vgp_onoptions", C(t));
+          return d(e, "vgp_onbuttonup", t);
         }
         function p(e, t) {
-          return a(e, "vgp_onmenu", C(t));
+          return d(e, "vgp_onok", x(t));
         }
         function g(e, t) {
-          return a(e, "vgp_ondirection", C(t));
+          return d(e, "vgp_oncancel", x(t));
         }
         function f(e, t) {
-          return a(e, "vgp_onfocus", t);
+          return d(e, "vgp_onsecondaryaction", x(t));
         }
         function _(e, t) {
-          return a(e, "vgp_onblur", t);
+          return d(e, "vgp_onoptions", x(t));
         }
-        function b(e, t, r) {
+        function b(e, t) {
+          return d(e, "vgp_onmenu", x(t));
+        }
+        function w(e, t) {
+          return d(e, "vgp_ondirection", x(t));
+        }
+        function M(e, t) {
+          return d(e, "vgp_onfocus", t);
+        }
+        function C(e, t) {
+          return d(e, "vgp_onblur", t);
+        }
+        function v(e, t, r) {
           let n = e;
           if (!n || !n.ownerDocument || !n.ownerDocument.defaultView) return !0;
           let i = new n.ownerDocument.defaultView.CustomEvent(t, {
@@ -2276,29 +2294,29 @@ var CLSTAMP = "10776939";
           });
           return n.dispatchEvent(i);
         }
-        function w(e, t) {
+        function S(e, t) {
           const r = { button: t, source: s.Vz.GAMEPAD, is_repeat: !1 };
-          b(e, "vgp_onbuttondown", r), b(e, "vgp_onbuttonup", r);
+          v(e, "vgp_onbuttondown", r), v(e, "vgp_onbuttonup", r);
         }
-        function M(e) {
+        function y(e) {
           const t = [s.pR.DIR_UP, s.pR.DIR_DOWN, s.pR.DIR_LEFT, s.pR.DIR_RIGHT];
           let r = !0,
             n = !1,
-            i = o[e.detail.button];
+            i = u[e.detail.button];
           return (
             i
-              ? ((n = !0), (r = b(e.target, i, e.detail)))
+              ? ((n = !0), (r = v(e.target, i, e.detail)))
               : -1 !== t.indexOf(e.detail.button) &&
-                ((n = !0), (r = b(e.target, "vgp_ondirection", e.detail))),
+                ((n = !0), (r = v(e.target, "vgp_ondirection", e.detail))),
             { bUnhandled: r, bHadLogicalEventMapping: n }
           );
         }
-        function C(e) {
+        function x(e) {
           return (t) => {
             !1 !== e(t) && (t.stopPropagation(), t.preventDefault());
           };
         }
-        function v(e) {
+        function B(e) {
           const {
               onOKActionDescription: t,
               onCancelActionDescription: r,
@@ -2317,10 +2335,10 @@ var CLSTAMP = "10776939";
             c
           );
         }
-        function S(e, t, r) {
+        function R(e, t, r) {
           return (0, i.QS)(
             (r) => {
-              if (r && t) return a(r, e, t);
+              if (r && t) return d(r, e, t);
             },
             [e, t],
           );
@@ -2328,7 +2346,7 @@ var CLSTAMP = "10776939";
       },
       61657: (e, t, r) => {
         "use strict";
-        r.d(t, { pR: () => i, Vz: () => s, nh: () => l });
+        r.d(t, { UE: () => l, pR: () => i, Vz: () => s, nh: () => u });
         var n,
           i,
           s,
@@ -2408,6 +2426,9 @@ var CLSTAMP = "10776939";
             } else this.m_inputRepeatGenerator.Reset();
           }
         }
+        function l(e) {
+          return e === s.GAMEPAD || e === s.KEYBOARD_SIMULATOR;
+        }
         !(function (e) {
           (e[(e.INVALID = 0)] = "INVALID"),
             (e[(e.OK = 1)] = "OK"),
@@ -2449,7 +2470,7 @@ var CLSTAMP = "10776939";
               (e[(e.LPAD = 5)] = "LPAD"),
               (e[(e.RPAD = 6)] = "RPAD");
           })(s || (s = {}));
-        class l {
+        class u {
           m_OnGamepadDetectedCallbacks = new o.l();
           m_ButtonDownCallbacks = new o.l();
           m_ButtonUpCallbacks = new o.l();
@@ -3052,10 +3073,21 @@ var CLSTAMP = "10776939";
           get Parent() {
             return this.m_Parent;
           }
+          GetNavParentCrossingTrees() {
+            return this.m_Parent
+              ? this.m_Parent
+              : this.m_Tree.GetParentEmbeddedNavTree() && this.Element
+                ? (this.Element.__nav_wrapper ?? null)
+                : null;
+          }
+          GetWrappedTree() {
+            return null;
+          }
           SetProperties(e) {
             const t = !(0, d.e)(
                 this.m_Properties?.actionDescriptionMap,
                 e?.actionDescriptionMap,
+                m.SI,
               ),
               r = this.m_Properties?.focusableIfEmpty,
               n = this.m_Properties?.noFocusRing;
@@ -3090,6 +3122,17 @@ var CLSTAMP = "10776939";
           }
           GetBoundingRect() {
             return this.m_element?.getBoundingClientRect();
+          }
+          GetBoundingRectForFocusRing() {
+            let e = this.m_element;
+            return (
+              this.m_Properties?.focusRingSizeElementID &&
+                (e =
+                  e?.ownerDocument?.getElementById(
+                    this.m_Properties.focusRingSizeElementID,
+                  ) ?? this.m_element),
+              e?.getBoundingClientRect()
+            );
           }
           SetHasFocus(e) {
             this.m_Focused.Set(e);
@@ -3528,75 +3571,91 @@ var CLSTAMP = "10776939";
             return o;
           }
           InternalFocusDescendant(e, t, r) {
-            return !!e && (this.m_Tree.TransferFocus(t, e, (0, p.G4)(r)), !0);
+            return !!e && (this.m_Tree.TransferFocus(t, e, r, !1), !0);
           }
-          BTryInternalNavigation(e, t) {
-            const r = this.GetLayout();
-            let n,
-              i = this.ComputeRelativeDirection(e, r);
-            if (
-              (v(
-                `Handling navigation event ${h.pR[e]} - ${S[r]} - ${B[i]}`,
-                this.m_element,
-              ),
-              i == B.INVALID)
-            )
-              return !1;
-            if (this.m_Properties?.focusable && this.BHasFocus())
-              return v("Skipping navigation within focused element"), !1;
-            if ((this.EnsureChildrenSorted(!0), r == S.GRID))
-              n = this.FindNextFocusableChildInGrid(
-                this.GetActiveChildIndex(),
-                i,
-                e,
-              );
-            else if (r == S.GEOMETRIC)
-              n = this.FindNextFocusableChildGeometric(i, e);
-            else {
-              let t = this.GetActiveChildIndex();
-              this.IsValidChildIndex(t) ||
-                (t = i == B.FORWARD ? -1 : this.m_rgChildren.length),
-                (n = this.FindNextFocusableChildInDirection(t, i, e));
+          BHasNavTargetInDirection(e, t) {
+            if (this.HasMovementHandler(e)) return !0;
+            let r = this.FindNextFocusableChild(e);
+            if (t && r) {
+              let e = r.GetWrappedTree();
+              if (e && e.GetExcludeFromScrollRegionSearch()) return !1;
             }
-            if (n) {
-              const r = (0, p.G4)(e);
-              if (
-                this.GetScrollIntoViewType() == x.NoTransformSparseContent ||
-                n.GetScrollIntoViewType() == x.NoTransformSparseContent
-              ) {
-                const e = n.Element?.ownerDocument.defaultView;
-                if (e) {
-                  const s =
-                      ("y" == r ? e.innerHeight : e.innerWidth) /
-                      (t ? 4.5 : 3.33),
-                    o = (0, M.QE)(n.Element);
-                  let a = !1;
-                  if (
-                    ("y" == r
-                      ? i == B.FORWARD
-                        ? (a =
-                            o.top > e.innerHeight &&
-                            o.bottom > e.innerHeight + s)
-                        : i == B.BACKWARD && (a = o.bottom < 0 && o.top < -s)
-                      : "x" == r &&
-                        (i == B.FORWARD
-                          ? (a =
-                              o.left > e.innerWidth &&
-                              o.right > e.innerWidth + s)
-                          : i == B.BACKWARD &&
-                            (a = o.right < 0 && o.left < -s)),
-                    a)
-                  )
-                    return (
-                      v(`Element too far away, scrolling ${s} on ${r} axis `),
-                      (0, M.Pl)(n.Element, n.Element, "smooth", r, s),
-                      !0
-                    );
-                }
-              }
-              return this.m_Tree.TransferFocus(m.D$.GAMEPAD, n, r), !0;
+            return !!r;
+          }
+          HasMovementHandler(e) {
+            switch (e) {
+              case h.pR.DIR_UP:
+                return !!this.m_Properties?.onMoveUp;
+              case h.pR.DIR_DOWN:
+                return !!this.m_Properties?.onMoveDown;
+              case h.pR.DIR_LEFT:
+                return !!this.m_Properties?.onMoveLeft;
+              case h.pR.DIR_RIGHT:
+                return !!this.m_Properties?.onMoveRight;
             }
             return !1;
+          }
+          FindNextFocusableChild(e) {
+            const t = this.GetLayout(),
+              r = this.ComputeRelativeDirection(e, t);
+            if (r == B.INVALID) return null;
+            if (this.m_Properties?.focusable && this.BHasFocus()) return null;
+            if ((this.EnsureChildrenSorted(!0), t == S.GRID))
+              return this.FindNextFocusableChildInGrid(
+                this.GetActiveChildIndex(),
+                r,
+                e,
+              );
+            if (t == S.GEOMETRIC)
+              return this.FindNextFocusableChildGeometric(r, e);
+            let n = this.GetActiveChildIndex();
+            return (
+              this.IsValidChildIndex(n) ||
+                (n = r == B.FORWARD ? -1 : this.m_rgChildren.length),
+              this.FindNextFocusableChildInDirection(n, r, e)
+            );
+          }
+          BTryInternalNavigation(e, t) {
+            v(
+              `Handling navigation event ${h.pR[e]} - ${S[this.GetLayout()]}`,
+              this.m_element,
+            );
+            const r = this.FindNextFocusableChild(e);
+            if (!r) return !1;
+            const n = (0, p.G4)(e),
+              i = this.ComputeRelativeDirection(e, this.GetLayout());
+            if (
+              this.GetScrollIntoViewType() == x.NoTransformSparseContent ||
+              r.GetScrollIntoViewType() == x.NoTransformSparseContent
+            ) {
+              const e = r.Element?.ownerDocument.defaultView;
+              if (e) {
+                const s =
+                    ("y" == n ? e.innerHeight : e.innerWidth) /
+                    (t ? 4.5 : 3.33),
+                  o = (0, M.QE)(r.Element);
+                let a = !1;
+                if (
+                  ("y" == n
+                    ? i == B.FORWARD
+                      ? (a =
+                          o.top > e.innerHeight && o.bottom > e.innerHeight + s)
+                      : i == B.BACKWARD && (a = o.bottom < 0 && o.top < -s)
+                    : "x" == n &&
+                      (i == B.FORWARD
+                        ? (a =
+                            o.left > e.innerWidth && o.right > e.innerWidth + s)
+                        : i == B.BACKWARD && (a = o.right < 0 && o.left < -s)),
+                  a)
+                )
+                  return (
+                    v(`Element too far away, scrolling ${s} on ${n} axis `),
+                    (0, M.Pl)(r.Element, r.Element, "smooth", n, s),
+                    !0
+                  );
+              }
+            }
+            return this.m_Tree.TransferFocus(m.D$.GAMEPAD, r, e), !0;
           }
           GetScrollIntoViewType() {
             return void 0 !== this.m_Properties?.scrollIntoViewType &&
@@ -3880,7 +3939,7 @@ var CLSTAMP = "10776939";
               bFocusDescendant: !0,
             });
           }
-          SetDOMFocusAndScroll(e, t) {
+          SetDOMFocusAndScroll(e, t, r, n) {
             this.UpdateParentActiveChild(),
               this.m_Tree.OnChildActivated(e),
               this.m_Tree.BIsActiveFocus()
@@ -3893,7 +3952,7 @@ var CLSTAMP = "10776939";
                   v(
                     `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                   ),
-              this.m_Tree.BIsActive() && (0, M.ZQ)(this, t, e);
+              this.m_Tree.BIsActive() && (0, M.ZQ)(this, t, e, r, n);
           }
         }
         (0, n.Cg)([o.o], R.prototype, "OnDOMFocus", null),
@@ -3927,7 +3986,7 @@ var CLSTAMP = "10776939";
       },
       77517: (e, t, r) => {
         "use strict";
-        r.d(t, { QE: () => w, ZQ: () => b, Pl: () => B });
+        r.d(t, { QE: () => C, ZQ: () => w, Pl: () => I });
         var n = r(34629),
           i = r(49412),
           s = r(93960),
@@ -4038,16 +4097,17 @@ var CLSTAMP = "10776939";
         }
         var u = r(83599),
           d = r(4690),
-          m = r(20893);
-        const h = new u.wd("ScrollSnap").Debug;
-        let p = !1;
-        const g = 1.4;
-        let f;
-        const _ = 500;
-        function b(e, t, r) {
-          const n = e.Element;
-          if (!n) return;
-          let i = [
+          m = r(61050),
+          h = r(20893),
+          p = r(61657);
+        const g = new u.wd("ScrollSnap").Debug;
+        let f = !1;
+        let _;
+        const b = 500;
+        function w(e, t, r, n, i) {
+          const s = e.Element;
+          if (!s) return;
+          let o = [
             { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
           ];
           for (let t = e.Parent; t; t = t.Parent) {
@@ -4055,62 +4115,109 @@ var CLSTAMP = "10776939";
               r = t.m_Properties?.scrollIntoViewType;
             if (e) {
               const n = { node: t, eScrollType: r };
-              "force" === e ? (i = [n]) : i.push(n);
+              "force" === e ? (o = [n]) : o.push(n);
             }
             if (void 0 !== r)
               for (
-                let e = i.length - 1;
-                e >= 0 && void 0 === i[e].eScrollType;
+                let e = o.length - 1;
+                e >= 0 && void 0 === o[e].eScrollType;
                 e--
               )
-                i[e].eScrollType = r;
+                o[e].eScrollType = r;
           }
-          for (; i.length; ) {
-            let { node: s, eScrollType: o } = i.pop(),
-              a = 0 == i.length;
+          for (; o.length; ) {
+            let { node: n, eScrollType: a } = o.pop(),
+              c = 0 == o.length;
             if (
-              (void 0 === o && (o = p ? d.Yo.NoTransform : d.Yo.Standard),
-              s?.m_Properties?.fnScrollIntoViewHandler)
+              (void 0 === a && (a = f ? d.Yo.NoTransform : d.Yo.Standard),
+              n?.m_Properties?.fnScrollIntoViewHandler)
             ) {
-              if (!1 !== s.m_Properties.fnScrollIntoViewHandler(e, t, s))
+              if (!1 !== n.m_Properties.fnScrollIntoViewHandler(e, t, n))
                 continue;
             }
-            const c = s.m_element,
-              l =
-                o == d.Yo.NoTransform ||
-                o == d.Yo.NoTransformSparseContent ||
-                !a;
-            if (t || r === m.D$.GAMEPAD) {
-              const t = l ? w(c) : c.getBoundingClientRect();
-              let r = !1;
-              const i = Math.max((t.bottom - t.top) * g, 40),
-                s = f && performance.now() - f < _;
-              (s ||
-                t.bottom < -i ||
-                t.top > c.ownerDocument.defaultView.innerHeight + i) &&
-                ((r = !0),
-                s ||
-                  h(
-                    `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${c.ownerDocument.defaultView.innerHeight} + ${i} `,
+            const l = n.m_element,
+              u =
+                a == d.Yo.NoTransform ||
+                a == d.Yo.NoTransformSparseContent ||
+                !c;
+            if (t || r === h.D$.GAMEPAD) {
+              const t = u ? C(l) : l.getBoundingClientRect(),
+                r = l.ownerDocument.defaultView.innerHeight,
+                n = 40,
+                o = i ? n : Math.max(0.4 * r, n);
+              let a = !1;
+              const c = _ && performance.now() - _ < b;
+              (c || t.bottom < -o || t.top > r + o) &&
+                ((a = !0),
+                c ||
+                  g(
+                    `Disabling smooth scrolling, ${t.bottom} < ${-o}, ${t.top} > ${r} + ${o} `,
                   ));
-              let o = r ? "auto" : "smooth";
-              r && (f = performance.now()),
-                e.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
-                l
-                  ? B(n, c, o)
-                  : c.scrollIntoView({ behavior: o, block: "nearest" });
+              let d = a ? "auto" : "smooth";
+              a && (_ = performance.now()),
+                e.Tree.Controller.BIsRestoringHistory() && (d = "auto"),
+                u
+                  ? I(s, l, d)
+                  : (g(
+                      `Scrolling Into View ('${d}' via browser scrollIntoView):`,
+                      l,
+                    ),
+                    l.scrollIntoView({ behavior: d, block: "nearest" }));
             } else
-              h("No previous element for scrolling, will jump"),
-                l
-                  ? B(n, c, "auto")
-                  : c?.scrollIntoView({
+              g("No previous element for scrolling, will jump"),
+                u
+                  ? I(s, l, "auto")
+                  : (g(
+                      "Scrolling Into View ('auto' via browser scrollIntoView):",
+                      l,
+                    ),
+                    l?.scrollIntoView({
                       behavior: "auto",
                       block: "nearest",
                       inline: "nearest",
-                    });
+                    }));
+          }
+          !(function (e, t) {
+            const r = (0, m.G4)(t);
+            if (!r) return;
+            let n = null;
+            for (let t = e; t; t = t.GetNavParentCrossingTrees())
+              t.m_Properties?.scrollRegionToStartOrEnd && (n = t);
+            if (!n) return;
+            for (
+              let i = e;
+              i &&
+              !i.BHasNavTargetInDirection(t, !0) &&
+              (i != e &&
+                i.Element &&
+                i.m_Properties?.scrollRegionToStartOrEnd &&
+                M(i.Element, t, r),
+              i != n);
+              i = i.GetNavParentCrossingTrees()
+            );
+          })(e, n);
+        }
+        function M(e, t, r) {
+          let n = e,
+            i = n.ownerDocument;
+          if (
+            (n == i.body &&
+              i.defaultView &&
+              !(0, o.aF)(n, r) &&
+              (n = i.defaultView),
+            !(0, o.aF)(n, r))
+          )
+            return;
+          const s = T(n);
+          if ("y" == r) {
+            const e = t == p.pR.DIR_DOWN ? s.MaxScrollTop() : 0;
+            s.scrollTo({ top: e, behavior: "smooth" });
+          } else {
+            const e = t == p.pR.DIR_RIGHT ? s.MaxScrollLeft() : 0;
+            s.scrollTo({ left: e, behavior: "smooth" });
           }
         }
-        function w(e) {
+        function C(e) {
           if (!e) return { left: 0, top: 0, right: 0, bottom: 0 };
           if (!("ownerDocument" in e))
             return {
@@ -4130,7 +4237,7 @@ var CLSTAMP = "10776939";
             (t += n.offsetTop), (r += n.offsetLeft), (n = n.offsetParent);
           }
           for (n = e?.parentElement; n; ) {
-            const { scrollTop: e, scrollLeft: i } = L(n);
+            const { scrollTop: e, scrollLeft: i } = j(n);
             if (((t -= e), (r -= i), "ownerDocument" in n)) {
               const e = window.getComputedStyle(n);
               if ("fixed" === e.position || "sticky" === e.position) break;
@@ -4144,15 +4251,15 @@ var CLSTAMP = "10776939";
             bottom: t + e.offsetHeight,
           };
         }
-        function M(e, t) {
+        function v(e, t) {
           return "x" == t
             ? [e.left, e.right, e.right - e.left]
             : [e.top, e.bottom, e.bottom - e.top];
         }
-        function C(e, t, r, n) {
-          let [i, s, o] = M(e, n),
-            [a, c, l] = M(t, n),
-            [u, d] = M(r, n);
+        function S(e, t, r, n) {
+          let [i, s, o] = v(e, n),
+            [a, c, l] = v(t, n),
+            [u, d] = v(r, n);
           if (i < a && s > c) return 0;
           const m = i - u,
             h = s + d,
@@ -4163,25 +4270,25 @@ var CLSTAMP = "10776939";
               ? h - c
               : 0;
         }
-        function v(e) {
+        function y(e) {
           return "auto" == e
             ? 0
             : e.endsWith("px")
               ? parseInt(e)
               : (console.log("Unsupported length", e), 0);
         }
-        function S(e) {
+        function x(e) {
           if (!("ownerDocument" in e))
             return { left: 0, right: 0, top: 0, bottom: 0 };
           const t = e.ownerDocument.defaultView.getComputedStyle(e);
           return {
-            left: v(t.scrollMarginLeft),
-            right: v(t.scrollMarginRight),
-            top: v(t.scrollMarginTop),
-            bottom: v(t.scrollMarginBottom),
+            left: y(t.scrollMarginLeft),
+            right: y(t.scrollMarginRight),
+            top: y(t.scrollMarginTop),
+            bottom: y(t.scrollMarginBottom),
           };
         }
-        function y(e, t) {
+        function B(e, t) {
           let r = (function (e) {
             let t;
             return (
@@ -4192,10 +4299,10 @@ var CLSTAMP = "10776939";
                       window.document.documentElement,
                     )),
               {
-                left: v(t.scrollPaddingLeft),
-                right: v(t.scrollPaddingRight),
-                top: v(t.scrollPaddingTop),
-                bottom: v(t.scrollPaddingBottom),
+                left: y(t.scrollPaddingLeft),
+                right: y(t.scrollPaddingRight),
+                top: y(t.scrollPaddingTop),
+                bottom: y(t.scrollPaddingBottom),
               }
             );
           })(e);
@@ -4206,27 +4313,27 @@ var CLSTAMP = "10776939";
             bottom: Math.max(0, t.bottom - r.bottom),
           };
         }
-        function x(e) {
+        function R(e) {
           return e > -1 && e < 1;
         }
-        function B(e, t, r, n, s) {
-          h(
+        function I(e, t, r, n, s) {
+          g(
             "----------------------------------------------------------------------------------",
           ),
-            h("Scrolling Into View:", t);
+            g("Scrolling Into View (NoTransform):", t);
           let a = [],
             c = t,
-            l = w(t),
+            l = C(t),
             u = s ?? Number.MAX_VALUE;
           for (; c; ) {
             let e = (0, o._f)(c);
             e || (e = (0, o.qf)(c));
-            let t = S(c),
-              r = y(e, w(e)),
-              d = k(e),
+            let t = x(c),
+              r = B(e, C(e)),
+              d = T(e),
               m = { element: e, left: 0, top: 0 };
             if (
-              (h(
+              (g(
                 "Checking scroll div",
                 e,
                 `scroll y:${d.scrollTop} of ${d.MaxScrollTop()}, x:${d.scrollLeft} of ${d.MaxScrollLeft()}, adjusted =>`,
@@ -4236,7 +4343,7 @@ var CLSTAMP = "10776939";
               ),
               (n && "y" != n) ||
                 !(0, o.aF)(e, "y") ||
-                ((m.top = C(l, r, t, "y")),
+                ((m.top = S(l, r, t, "y")),
                 (m.top = i.OQ(
                   m.top,
                   -d.scrollTop,
@@ -4246,10 +4353,10 @@ var CLSTAMP = "10776939";
                   ((m.top =
                     Math.min(u, Math.abs(m.top)) * (m.top < 0 ? -1 : 1)),
                   (u -= Math.abs(m.top))),
-                h(`- checked y: ${m.top}`)),
+                g(`- checked y: ${m.top}`)),
               (n && "x" != n) ||
                 !(0, o.aF)(e, "x") ||
-                ((m.left = C(l, r, t, "x")),
+                ((m.left = S(l, r, t, "x")),
                 (m.left = i.OQ(
                   m.left,
                   -d.scrollLeft,
@@ -4259,14 +4366,14 @@ var CLSTAMP = "10776939";
                   ((m.left =
                     Math.min(u, Math.abs(m.left)) * (m.left < 0 ? -1 : 1)),
                   (u -= Math.abs(m.left))),
-                h(`- checked x: ${m.left}`)),
+                g(`- checked x: ${m.left}`)),
               a.push(m),
               s && !u)
             )
               break;
             if (!("ownerDocument" in e)) break;
-            const p = window.getComputedStyle(e);
-            if ("fixed" === p.position || "sticky" === p.position) break;
+            const h = window.getComputedStyle(e);
+            if ("fixed" === h.position || "sticky" === h.position) break;
             (c = e),
               (l = {
                 top: l.top - m.top,
@@ -4277,22 +4384,22 @@ var CLSTAMP = "10776939";
           }
           let d = !1;
           for (let e of a) {
-            if (x(e.left) && x(e.top)) continue;
-            let t = k(e.element),
+            if (R(e.left) && R(e.top)) continue;
+            let t = T(e.element),
               n = t.scrollTop + e.top,
               s = t.scrollLeft + e.left;
             (s = i.OQ(s, 0, t.MaxScrollLeft())),
               (n = i.OQ(n, 0, t.MaxScrollTop())),
-              (x(t.scrollLeft - s) && x(t.scrollTop - n)) ||
+              (R(t.scrollLeft - s) && R(t.scrollTop - n)) ||
                 (t.scrollTo({ left: s, top: n, behavior: r }),
-                d || (h("Scrolling:"), (d = !0)),
-                h(
+                d || (g("Scrolling:"), (d = !0)),
+                g(
                   `- ${e.top},${e.left} => ${n}, ${s}, behavior: ${r}`,
                   e.element,
                 ));
           }
         }
-        class R {
+        class k {
           m_element;
           m_fnOriginalScrollTo;
           m_window;
@@ -4402,14 +4509,14 @@ var CLSTAMP = "10776939";
             return this.scrollWidth - this.clientWidth;
           }
         }
-        (0, n.Cg)([s.o], R.prototype, "ResetScrollState", null);
-        const I = new WeakMap();
-        function k(e) {
-          let t = I.get(e);
-          return t || ((t = new R(e)), I.set(e, t)), t;
+        (0, n.Cg)([s.o], k.prototype, "ResetScrollState", null);
+        const L = new WeakMap();
+        function T(e) {
+          let t = L.get(e);
+          return t || ((t = new k(e)), L.set(e, t)), t;
         }
-        function L(e) {
-          const t = I.get(e);
+        function j(e) {
+          const t = L.get(e);
           return t
             ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
             : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -4557,7 +4664,7 @@ var CLSTAMP = "10776939";
           return e;
         }
         function i(e, t, r) {
-          if (t >= 0 || r >= 0) {
+          if (t >= 0 && r >= 0) {
             const n = e.splice(t, 1)[0];
             r >= e.length ? (e[r] = n) : e.splice(r, 0, n);
           }
@@ -4708,69 +4815,68 @@ var CLSTAMP = "10776939";
       35198: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $A: () => _,
           $U: () => m,
-          B1: () => re,
-          CF: () => k,
-          Co: () => x,
-          Dy: () => w,
+          B1: () => te,
+          CF: () => I,
+          Co: () => y,
+          Dy: () => b,
           FK: () => h,
-          FL: () => A,
+          FL: () => O,
           KH: () => a,
-          Lk: () => F,
-          Nb: () => se,
-          O4: () => ne,
-          QR: () => G,
+          Lk: () => j,
+          Nb: () => ie,
+          O4: () => re,
+          QR: () => H,
           Qo: () => u,
           R: () => n,
           S7: () => d,
-          Sl: () => le,
-          Sq: () => b,
-          TE: () => v,
-          TS: () => $,
-          Te: () => T,
-          UT: () => de,
-          Ue: () => q,
+          Sl: () => ce,
+          Sq: () => _,
+          TE: () => C,
+          TS: () => K,
+          Te: () => L,
+          UT: () => ue,
+          Ue: () => V,
           Um: () => o,
           Vr: () => c,
-          Yk: () => Z,
-          ZC: () => H,
-          ZI: () => O,
-          Ze: () => B,
+          Yk: () => q,
+          ZC: () => P,
+          ZI: () => z,
+          Ze: () => x,
           _3: () => g,
-          _9: () => M,
+          _9: () => w,
           a_: () => s,
-          b7: () => J,
-          c3: () => ee,
-          cr: () => D,
-          e9: () => U,
-          eH: () => K,
+          b7: () => X,
+          c3: () => J,
+          cr: () => A,
+          e9: () => N,
+          eH: () => Z,
           f4: () => f,
-          fY: () => S,
-          fb: () => j,
-          gc: () => W,
-          hX: () => C,
-          h_: () => Q,
-          iC: () => te,
-          iV: () => L,
-          k1: () => me,
-          lG: () => Y,
-          nH: () => oe,
+          fY: () => v,
+          fb: () => T,
+          gc: () => U,
+          hX: () => M,
+          h_: () => Y,
+          iC: () => ee,
+          iV: () => k,
+          k1: () => de,
+          lG: () => $,
+          nH: () => se,
           nO: () => l,
-          oH: () => ae,
-          ob: () => y,
-          p: () => E,
-          pK: () => X,
-          sG: () => V,
+          oH: () => oe,
+          ob: () => S,
+          p: () => F,
+          pK: () => Q,
+          sG: () => G,
           sW: () => p,
-          u6: () => N,
-          uN: () => z,
-          v6: () => ie,
-          vY: () => ue,
-          xU: () => ce,
-          xr: () => P,
-          yw: () => I,
-          zL: () => R,
+          u6: () => D,
+          uN: () => E,
+          v6: () => ne,
+          vY: () => le,
+          xU: () => ae,
+          xr: () => W,
+          yw: () => R,
+          zL: () => B,
           zi: () => i,
         });
         const n = 1,
@@ -4787,56 +4893,55 @@ var CLSTAMP = "10776939";
           p = 15,
           g = 16,
           f = 17,
-          _ = 19,
-          b = 20,
-          w = 21,
-          M = 22,
-          C = 24,
-          v = 25,
-          S = 26,
-          y = 27,
-          x = 28,
-          B = 29,
-          R = 31,
-          I = 32,
-          k = 34,
-          L = 35,
-          T = 37,
-          j = 40,
-          F = 41,
-          E = 42,
-          z = 43,
-          O = 45,
-          A = 48,
-          D = 49,
-          N = 50,
-          U = 52,
-          W = 53,
-          P = 54,
-          H = 60,
-          G = 65,
-          V = 69,
-          q = 71,
-          Z = 72,
-          K = 79,
-          $ = 80,
-          Y = 83,
-          Q = 84,
-          X = 85,
-          J = 88,
-          ee = 94,
-          te = 95,
-          re = 96,
-          ne = 107,
-          ie = 108,
-          se = 112,
-          oe = 116,
-          ae = 118,
-          ce = 124,
-          le = 125,
-          ue = 126,
-          de = 129,
-          me = 130;
+          _ = 20,
+          b = 21,
+          w = 22,
+          M = 24,
+          C = 25,
+          v = 26,
+          S = 27,
+          y = 28,
+          x = 29,
+          B = 31,
+          R = 32,
+          I = 34,
+          k = 35,
+          L = 37,
+          T = 40,
+          j = 41,
+          F = 42,
+          E = 43,
+          z = 45,
+          O = 48,
+          A = 49,
+          D = 50,
+          N = 52,
+          U = 53,
+          W = 54,
+          P = 60,
+          H = 65,
+          G = 69,
+          V = 71,
+          q = 72,
+          Z = 79,
+          K = 80,
+          $ = 83,
+          Y = 84,
+          Q = 85,
+          X = 88,
+          J = 94,
+          ee = 95,
+          te = 96,
+          re = 107,
+          ne = 108,
+          ie = 112,
+          se = 116,
+          oe = 118,
+          ae = 124,
+          ce = 125,
+          le = 126,
+          ue = 129,
+          de = 130;
       },
       22521: (e, t, r) => {
         "use strict";
@@ -5299,9 +5404,11 @@ var CLSTAMP = "10776939";
           );
         }
         function l(e) {
-          if (0 == e.length) return !1;
-          for (let t = 0; t < e.length; t++)
-            if (e[t] < "0" || e[t] > "9") return !1;
+          if (!e) return !1;
+          for (let t = 0; t < e.length; t++) {
+            const r = e.charCodeAt(t);
+            if (r < 48 || r > 57) return !1;
+          }
           return !0;
         }
         function u(e, t, r, n) {
@@ -5337,14 +5444,6 @@ var CLSTAMP = "10776939";
           return new Promise((t) => setTimeout(t, e));
         }
         r.d(t, { x0: () => n, yI: () => i });
-      },
-      50330: (e, t, r) => {
-        "use strict";
-        r.d(t, { V: () => i, p: () => n });
-        function n() {
-          return !1;
-        }
-        function i(e) {}
       },
       17372: (e, t, r) => {
         "use strict";
@@ -6990,10 +7089,10 @@ var CLSTAMP = "10776939";
                       br: o.qM.readString,
                       bw: o.gp.writeString,
                     },
-                    reservation_type: {
+                    collection_time_active: {
                       n: 17,
-                      br: o.qM.readBool,
-                      bw: o.gp.writeBool,
+                      br: o.qM.readUint32,
+                      bw: o.gp.writeUint32,
                     },
                   },
                 }),
@@ -14013,10 +14112,11 @@ var CLSTAMP = "10776939";
             [l, u] = n.useState(!0),
             d = n.useCallback(() => {
               const e = (t ? r?.scrollTop : r?.scrollLeft) ?? 0,
-                n =
-                  ((t ? r?.scrollHeight : r?.scrollWidth) ?? 0) - e ==
-                  ((t ? r?.clientHeight : r?.clientWidth) ?? 0);
-              c(0 == e), u(n);
+                n = (t ? r?.scrollHeight : r?.scrollWidth) ?? 0,
+                i = (t ? r?.clientHeight : r?.clientWidth) ?? 0,
+                s = 0 == Math.round(e),
+                o = Math.round(n - e) == Math.round(i);
+              c(s), u(o);
             }, [t, r]),
             m = n.useCallback((e) => s(e), []),
             h = n.useCallback(
@@ -14513,43 +14613,43 @@ var CLSTAMP = "10776939";
             return e();
           };
       },
-      25475: (e, t, r) => {
+      92487: (e, t, r) => {
         "use strict";
         r.d(t, { Z: () => s });
         var n = r(12466);
         const i = {};
-        (i.arabic = () => r.e(4102).then(r.t.bind(r, 77134, 19))),
-          (i.brazilian = () => r.e(3594).then(r.t.bind(r, 72696, 19))),
-          (i.bulgarian = () => r.e(2481).then(r.t.bind(r, 887, 19))),
-          (i.czech = () => r.e(1423).then(r.t.bind(r, 6029, 19))),
-          (i.danish = () => r.e(8291).then(r.t.bind(r, 7311, 19))),
-          (i.dutch = () => r.e(6430).then(r.t.bind(r, 93368, 19))),
-          (i.english = () => r.e(2664).then(r.t.bind(r, 89358, 19))),
-          (i.finnish = () => r.e(2199).then(r.t.bind(r, 37117, 19))),
-          (i.french = () => r.e(8674).then(r.t.bind(r, 77038, 19))),
-          (i.german = () => r.e(6888).then(r.t.bind(r, 89056, 19))),
-          (i.greek = () => r.e(8872).then(r.t.bind(r, 36290, 19))),
-          (i.hungarian = () => r.e(9053).then(r.t.bind(r, 48403, 19))),
-          (i.indonesian = () => r.e(8522).then(r.t.bind(r, 18178, 19))),
-          (i.italian = () => r.e(7696).then(r.t.bind(r, 45582, 19))),
-          (i.japanese = () => r.e(1389).then(r.t.bind(r, 83745, 19))),
-          (i.koreana = () => r.e(139).then(r.t.bind(r, 87145, 19))),
-          (i.latam = () => r.e(5803).then(r.t.bind(r, 29169, 19))),
-          (i.malay = () => r.e(4516).then(r.t.bind(r, 75258, 19))),
-          (i.norwegian = () => r.e(6120).then(r.t.bind(r, 63194, 19))),
-          (i.polish = () => r.e(2959).then(r.t.bind(r, 47055, 19))),
-          (i.portuguese = () => r.e(823).then(r.t.bind(r, 8835, 19))),
-          (i.romanian = () => r.e(2021).then(r.t.bind(r, 78041, 19))),
-          (i.russian = () => r.e(6577).then(r.t.bind(r, 75483, 19))),
-          (i.sc_schinese = () => r.e(8443).then(r.t.bind(r, 70670, 19))),
-          (i.schinese = () => r.e(7442).then(r.t.bind(r, 13074, 19))),
-          (i.spanish = () => r.e(6752).then(r.t.bind(r, 67150, 19))),
-          (i.swedish = () => r.e(129).then(r.t.bind(r, 6359, 19))),
-          (i.tchinese = () => r.e(5553).then(r.t.bind(r, 25441, 19))),
-          (i.thai = () => r.e(4952).then(r.t.bind(r, 91276, 19))),
-          (i.turkish = () => r.e(6472).then(r.t.bind(r, 56062, 19))),
-          (i.ukrainian = () => r.e(9298).then(r.t.bind(r, 16424, 19))),
-          (i.vietnamese = () => r.e(9869).then(r.t.bind(r, 79889, 19)));
+        (i.arabic = () => r.e(4102).then(r.t.bind(r, 26819, 19))),
+          (i.brazilian = () => r.e(3594).then(r.t.bind(r, 62463, 19))),
+          (i.bulgarian = () => r.e(2481).then(r.t.bind(r, 31528, 19))),
+          (i.czech = () => r.e(1423).then(r.t.bind(r, 22926, 19))),
+          (i.danish = () => r.e(8291).then(r.t.bind(r, 17042, 19))),
+          (i.dutch = () => r.e(6430).then(r.t.bind(r, 89239, 19))),
+          (i.english = () => r.e(2664).then(r.t.bind(r, 36717, 19))),
+          (i.finnish = () => r.e(2199).then(r.t.bind(r, 32490, 19))),
+          (i.french = () => r.e(8674).then(r.t.bind(r, 94851, 19))),
+          (i.german = () => r.e(6888).then(r.t.bind(r, 13153, 19))),
+          (i.greek = () => r.e(8872).then(r.t.bind(r, 82365, 19))),
+          (i.hungarian = () => r.e(9053).then(r.t.bind(r, 12364, 19))),
+          (i.indonesian = () => r.e(8522).then(r.t.bind(r, 2079, 19))),
+          (i.italian = () => r.e(7696).then(r.t.bind(r, 30317, 19))),
+          (i.japanese = () => r.e(1389).then(r.t.bind(r, 79772, 19))),
+          (i.koreana = () => r.e(139).then(r.t.bind(r, 77126, 19))),
+          (i.latam = () => r.e(5803).then(r.t.bind(r, 93806, 19))),
+          (i.malay = () => r.e(4516).then(r.t.bind(r, 43581, 19))),
+          (i.norwegian = () => r.e(6120).then(r.t.bind(r, 19169, 19))),
+          (i.polish = () => r.e(2959).then(r.t.bind(r, 59254, 19))),
+          (i.portuguese = () => r.e(823).then(r.t.bind(r, 50286, 19))),
+          (i.romanian = () => r.e(2021).then(r.t.bind(r, 26800, 19))),
+          (i.russian = () => r.e(6577).then(r.t.bind(r, 7608, 19))),
+          (i.sc_schinese = () => r.e(8443).then(r.t.bind(r, 15442, 19))),
+          (i.schinese = () => r.e(7442).then(r.t.bind(r, 11259, 19))),
+          (i.spanish = () => r.e(6752).then(r.t.bind(r, 19917, 19))),
+          (i.swedish = () => r.e(129).then(r.t.bind(r, 78988, 19))),
+          (i.tchinese = () => r.e(5553).then(r.t.bind(r, 78472, 19))),
+          (i.thai = () => r.e(4952).then(r.t.bind(r, 83597, 19))),
+          (i.turkish = () => r.e(6472).then(r.t.bind(r, 75765, 19))),
+          (i.ukrainian = () => r.e(9298).then(r.t.bind(r, 16023, 19))),
+          (i.vietnamese = () => r.e(9869).then(r.t.bind(r, 54732, 19)));
         const s = (0, n.l)(async function (e) {
           if (i[e]) return i[e]();
         });
@@ -15783,18 +15883,17 @@ var CLSTAMP = "10776939";
             return this.m_rgParams;
           }
           Focus(e = o.iEc.k_EWindowBringToFrontAndForceOS) {
-            e != o.iEc.k_EWindowBringToFrontInvalid &&
-              (this.m_popup &&
-              void 0 !== this.m_popup.SteamClient &&
-              void 0 !== this.m_popup.SteamClient.Window
+            this.m_popup &&
+              e != o.iEc.k_EWindowBringToFrontInvalid &&
+              ((0, d.Fj)(this.m_popup, "Window.BringToFront")
                 ? this.m_popup.SteamClient.Window.BringToFront(e)
-                : this.m_popup && this.m_popup.focus());
+                : this.m_popup.focus());
           }
           Close() {
             this.m_popup &&
-              ((0, d.Fj)(this.m_popup.window, "Window.Close")
-                ? this.m_popup.window.SteamClient.Window.Close()
-                : this.m_popup.window.close());
+              ((0, d.Fj)(this.m_popup, "Window.Close")
+                ? this.m_popup.SteamClient.Window.Close()
+                : this.m_popup.close());
           }
           GetName() {
             return this.m_strName;
@@ -15862,6 +15961,20 @@ var CLSTAMP = "10776939";
           OnBeforeUnload() {}
           OnFocus() {}
           OnBlur() {}
+          m_rgChildBrowserViews = [];
+          get childBrowserViews() {
+            return this.m_rgChildBrowserViews;
+          }
+          RegisterChildBrowserView(e) {
+            return (
+              this.m_rgChildBrowserViews.push(e),
+              {
+                Unregister: () =>
+                  (this.m_rgChildBrowserViews =
+                    this.m_rgChildBrowserViews.filter((t) => t != e)),
+              }
+            );
+          }
         }
         (0, s.Cg)([c.sH], k.prototype, "m_bFocused", void 0),
           (0, s.Cg)([b.o], k.prototype, "OnMessage", null),
@@ -15968,9 +16081,9 @@ var CLSTAMP = "10776939";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 25 2026 : 17:15:12",
-                BUILD_TIME_UTC: "Jun 26 2026 : 00:15:12",
-                BUILD_RTIME_UTC: 1782432912,
+                BUILD_TIME_LOCAL: "Jul 1 2026 : 14:44:20",
+                BUILD_TIME_UTC: "Jul 1 2026 : 21:44:20",
+                BUILD_RTIME_UTC: 1782942260,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -15982,13 +16095,15 @@ var CLSTAMP = "10776939";
                   e.BIsValid() && !e.BIsClosed() && t.push(e);
                 });
                 for (let e of t)
-                  e.window?.SteamClient.Browser
-                    ?.SetShouldExitSteamOnBrowserClosed &&
+                  (0, d.Fj)(
+                    e.window,
+                    "Browser.SetShouldExitSteamOnBrowserClosed",
+                  ) &&
                     e.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                       !1,
                     ),
-                    e.window?.SteamClient.Window.SetHideOnClose &&
-                      e.window?.SteamClient.Window.SetHideOnClose(!1),
+                    (0, d.Fj)(e.window, "Window.SetHideOnClose") &&
+                      e.window.SteamClient.Window.SetHideOnClose(!1),
                     e.Close();
                 this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                   this.m_mapPopups.clear();
@@ -16514,198 +16629,6 @@ var CLSTAMP = "10776939";
           }
         }
         (0, n.Cg)([i.o], o.prototype, "OnLinkLoad", null);
-      },
-      92251: (e, t, r) => {
-        "use strict";
-        r.d(t, { g: () => c });
-        var n = r(62540),
-          i = r(63696),
-          s = r(90765),
-          o = r(24793),
-          a = r.n(o);
-        function c(e) {
-          const {
-              target: t,
-              visibilityObserver: r,
-              className: o,
-              style: c,
-              bEnablePointerEvents: u,
-              direction: d = "right",
-              nBodyAlignment: m = 0.5,
-              nBodyDistance: h = 8,
-              nAllowOffscreenPx: p = 10,
-              nMaxLateralMoveOnScreen: g,
-              onNoSpace: f,
-              bTopmost: _,
-              children: b,
-              ...w
-            } = e,
-            [M, C] = i.useState(void 0),
-            [v, S] = i.useState(void 0),
-            [y, x] = i.useState(!1),
-            [B, R] = i.useState(!1),
-            [I, k] = i.useState(null),
-            [L, T] = i.useState(null),
-            j = i.useCallback(() => {
-              let e = t;
-              if (!I || !e || !L) return;
-              if (y && r && !r.visible) return;
-              let n = e.ownerDocument.defaultView;
-              if (!n || n.closed) return;
-              const i = I.querySelector(".hover_arrow.left"),
-                s = I.querySelector(".hover_arrow.right"),
-                o = I.querySelector(".hover_arrow.top"),
-                a = I.querySelector(".hover_arrow.bottom"),
-                c = e.getBoundingClientRect(),
-                u = I.getBoundingClientRect(),
-                _ = "overlay" == d || "overlay-center" == d,
-                b = L.getBoundingClientRect();
-              i && i.setAttribute("style", "display: none;"),
-                s && s.setAttribute("style", "display: none;"),
-                o && o.setAttribute("style", "display: none;"),
-                a && a.setAttribute("style", "display: none;");
-              let w = d;
-              e.matches(":dir(rtl)") &&
-                ("left" === w ? (w = "right") : "right" === w && (w = "left"));
-              let {
-                  nLeft: B,
-                  nTop: k,
-                  nOverflow: T,
-                  nLateralOverflow: j,
-                } = l(w, m, h, c, u, b, n),
-                F = d;
-              if (T > (p ?? 10) && !_) {
-                const e = (function (e) {
-                    switch (e) {
-                      case "right":
-                        return "left";
-                      case "left":
-                        return "right";
-                      case "bottom":
-                        return "top";
-                      case "top":
-                        return "bottom";
-                      case "overlay":
-                        return "overlay";
-                      case "overlay-center":
-                        return "overlay-center";
-                    }
-                  })(F),
-                  {
-                    nLeft: t,
-                    nTop: r,
-                    nOverflow: i,
-                    nLateralOverflow: s,
-                  } = l(e, m, h, c, u, b, n);
-                if (
-                  (i < T && ((F = e), (B = t), (k = r), (T = i), (j = s)),
-                  T > (p ?? 10))
-                )
-                  return (
-                    console.log(
-                      "Not showing hover because it didn't fit in the main or alt direction",
-                    ),
-                    I.setAttribute("style", "display: none;"),
-                    R(!0),
-                    void f?.()
-                  );
-              }
-              0 === g ||
-                _ ||
-                ([k, B] = (function (e, t, r, n, i) {
-                  let s = Math.max(t[0], t[1]);
-                  void 0 !== e && (s = Math.min(e, s));
-                  s = Math.max(0, s);
-                  const o = t[0] > t[1] ? s : -s;
-                  "left" === r || "right" === r ? (n += o) : (i += o);
-                  return [n, i];
-                })(g, j, w, k, B));
-              let E = null;
-              switch (F) {
-                case "left":
-                  E = s;
-                  break;
-                case "right":
-                  E = i;
-                  break;
-                case "top":
-                  E = a;
-                  break;
-                case "bottom":
-                  E = o;
-              }
-              E && E.setAttribute("style", ""),
-                B != M && C(B),
-                k != v && S(k),
-                y || x(!0);
-            }, [t, L, I, y, r, d, m, h, p, g, M, v, f]);
-          i.useEffect(() => j(), [j]);
-          let F = Object.assign({ left: M, top: v }, c),
-            E = !r || r.visible;
-          return (0, n.jsx)("div", {
-            ref: T,
-            className: (0, s.A)(
-              a().HoverPositionOuter,
-              _ && a().HoverAboveModal,
-            ),
-            children: (0, n.jsx)("div", {
-              ...w,
-              className: (0, s.A)(
-                a().HoverPosition,
-                E && y && a().Ready,
-                B && a().NoSpace,
-                u && a().EnablePointerEvents,
-                o,
-              ),
-              style: F,
-              ref: k,
-              children: b,
-            }),
-          });
-        }
-        function l(e, t, r, n, i, s, o) {
-          const a = o.innerWidth,
-            c = o.innerHeight;
-          let l, d, m, h;
-          switch (e) {
-            case "right":
-              (l = n.right + r - s.left),
-                (d = u(n.top - s.top, n.height, i.height, t)),
-                (m = Math.max(0, l + i.width - a)),
-                (h = [Math.max(0, 0 - d), Math.max(0, d + i.height - c)]);
-              break;
-            case "left":
-              (l = n.left - r - i.width - s.left),
-                (d = u(n.top - s.top, n.height, i.height, t)),
-                (m = Math.max(0, 0 - l)),
-                (h = [Math.max(0, 0 - d), Math.max(0, d + i.height - c)]);
-              break;
-            case "bottom":
-              (l = u(n.left - s.left, n.width, i.width, t)),
-                (d = n.bottom + r - s.top),
-                (m = Math.max(0, d + i.height - c)),
-                (h = [Math.max(0, 0 - l), Math.max(0, l + i.width - a)]);
-              break;
-            case "top":
-              (l = u(n.left - s.left, n.width, i.width, t)),
-                (d = n.top - r - i.height - s.top),
-                (m = Math.max(0, 0 - d)),
-                (h = [Math.max(0, 0 - l), Math.max(0, l + i.width - a)]);
-              break;
-            case "overlay":
-              (l = n.left - s.left), (d = n.top - s.top), (m = 0), (h = [0, 0]);
-              break;
-            case "overlay-center":
-              (l = n.left - s.left + 0.5 * n.width - 0.5 * i.width),
-                (d = n.top - s.top + 0.5 * n.height - 0.5 * i.height),
-                (m = 0),
-                (h = [0, 0]);
-          }
-          return { nLeft: l, nTop: d, nOverflow: m, nLateralOverflow: h };
-        }
-        function u(e, t, r, n) {
-          return Math.max(0, Math.min(1, n)) * (t - r) + e;
-        }
       },
       29285: (e, t, r) => {
         "use strict";
@@ -17402,8 +17325,7 @@ var CLSTAMP = "10776939";
               if (this.m_hSharedConnection) {
                 this.DEBUG_LogCMInterfaceActivity(e, "send");
                 let n = i.iI(e.Serialize());
-                void 0 !==
-                SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse
+                (0, v.Dp)("SharedConnection.SendMsgAndAwaitBinaryResponse")
                   ? SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse(
                       this.m_hSharedConnection,
                       n,
@@ -17537,8 +17459,9 @@ var CLSTAMP = "10776939";
                 this.OnLogonInfoChanged(e),
                   t ||
                     ((t = !0),
-                    void 0 !==
-                    SteamClient.SharedConnection.RegisterOnBinaryMessageReceived
+                    (0, v.Dp)(
+                      "SharedConnection.RegisterOnBinaryMessageReceived",
+                    )
                       ? SteamClient.SharedConnection.RegisterOnBinaryMessageReceived(
                           this.m_hSharedConnection,
                           this.OnMsgRecvd.bind(this),
@@ -19341,10 +19264,10 @@ var CLSTAMP = "10776939";
         }
         function v(e) {
           const { instance: t, browserInfo: r, children: a } = e,
-            d = s.useRef(null),
-            h = (0, c.R7)().ownerWindow,
-            p = h.SteamClient.Browser.GetBrowserID(),
-            b = s.useCallback(
+            [d, h] = s.useState(),
+            p = (0, c.R7)().ownerWindow,
+            b = p.SteamClient.Browser.GetBrowserID(),
+            w = s.useCallback(
               (e) => {
                 const { options: r, position: n } = t,
                   i = n.element;
@@ -19356,26 +19279,26 @@ var CLSTAMP = "10776939";
                     height: 1,
                   };
                 else {
-                  let t = _.pd(h, i.getBoundingClientRect());
+                  let t = _.pd(p, i.getBoundingClientRect());
                   (e.dimensions = {
                     left: t.right,
                     top: t.top,
                     width: 2,
                     height: 1,
                   }),
-                    (e.availscreenwidth = h.screen.availWidth),
-                    (e.availscreenheight = h.screen.availHeight);
+                    (e.availscreenwidth = p.screen.availWidth),
+                    (e.availscreenheight = p.screen.availHeight);
                 }
                 return e;
               },
-              [h, t],
+              [p, t],
             );
-          let w = t.options.bStandalone
+          let M = t.options.bStandalone
             ? (0, c.yq)(c.Dr.StandaloneContextMenu)
             : (0, c.yq)(c.Dr.PopupContextMenu);
-          t.options.bCreateHidden && (w |= c.Wf.Hidden),
-            t.options.bAlwaysOnTop && (w |= c.Wf.AlwaysOnTop);
-          const { popupObj: M, element: C } = (0, l.OJ)(
+          t.options.bCreateHidden && (M |= c.Wf.Hidden),
+            t.options.bAlwaysOnTop && (M |= c.Wf.AlwaysOnTop);
+          const { popupObj: C, element: v } = (0, l.OJ)(
             "contextmenu_" + t.key,
             {
               title: t.options.title || "Menu",
@@ -19391,42 +19314,43 @@ var CLSTAMP = "10776939";
               ),
               replace_existing_popup: !1,
               target_browser: r,
-              window_opener_id: p,
+              window_opener_id: b,
               bHideOnClose: !0,
-              eCreationFlags: w,
+              eCreationFlags: M,
             },
-            { updateParamsBeforeShow: b },
+            { updateParamsBeforeShow: w },
           );
           return (
             (0, s.useEffect)(() => {
-              if (M)
+              if (C)
                 if (t.visible) {
-                  d.current && d.current.PositionMenu(),
-                    d.current && d.current.PositionPopupWindow();
-                  let e = t.options.bNoFocusWhenShown
-                    ? i.iEc.k_EWindowBringToFrontWithoutForcingOS
-                    : i.iEc.k_EWindowBringToFrontAndForceOS;
-                  t.TakeFocus(e);
+                  if (d) {
+                    d.PositionMenu(), d.PositionPopupWindow();
+                    let e = t.options.bNoFocusWhenShown
+                      ? i.iEc.k_EWindowBringToFrontWithoutForcingOS
+                      : i.iEc.k_EWindowBringToFrontAndForceOS;
+                    t.TakeFocus(e);
+                  }
                 } else
                   t.options.bRetainOnHide &&
                     window.setTimeout(() => {
-                      M.window?.SteamClient.Window.HideWindow();
+                      C.window?.SteamClient.Window.HideWindow();
                     }, 30);
-            }, [M, t, t.visible]),
-            (0, g.uH)(M.window),
+            }, [C, t, t.visible, d]),
+            (0, g.uH)(C.window),
             s.useEffect(() => {
-              t.SetPopup(M);
-            }, [t, M]),
-            C
+              t.SetPopup(C);
+            }, [t, C]),
+            v
               ? o.createPortal(
                   (0, n.jsx)(u.ai, {
-                    ref: d,
+                    ref: h,
                     ...t.position,
-                    parentWin: h,
-                    popup: M,
+                    parentWin: p,
+                    popup: C,
                     children: a,
                   }),
-                  C,
+                  v,
                 )
               : null
           );
@@ -19598,7 +19522,7 @@ var CLSTAMP = "10776939";
       },
       36437: (e, t, r) => {
         "use strict";
-        r.d(t, { L: () => B, Y: () => x });
+        r.d(t, { L: () => x, Y: () => y });
         var n = r(62540),
           i = r(63696);
         function s(e) {
@@ -19785,9 +19709,8 @@ var CLSTAMP = "10776939";
           M = r(51115),
           C = r(21440),
           v = r(3673),
-          S = r(55993),
-          y = r(98995);
-        function x(e) {
+          S = r(55993);
+        function y(e) {
           i.useEffect(() => {
             if (e)
               return (
@@ -19796,7 +19719,7 @@ var CLSTAMP = "10776939";
               );
           }, [e]);
         }
-        function B(e) {
+        function x(e) {
           let {
             ModalManager: t,
             bRegisterModalManager: r = !0,
@@ -19809,7 +19732,7 @@ var CLSTAMP = "10776939";
           const m = t.modals,
             h = m && !!m.length,
             p = t.active_modal;
-          x(h),
+          y(h),
             (function (e) {
               const t = (0, o.R7)().ownerWindow,
                 r = (0, M.CH)(),
@@ -19844,14 +19767,14 @@ var CLSTAMP = "10776939";
                       rctActiveContextMenus: t && l ? c : void 0,
                     };
                   return e instanceof C._F
-                    ? (0, i.createElement)(I, {
+                    ? (0, i.createElement)(R, {
                         ...r,
                         key: r.key,
                         modal: e,
-                        Component: a ?? k,
+                        Component: a ?? I,
                       })
                     : e instanceof C.$9
-                      ? (0, i.createElement)(R, {
+                      ? (0, i.createElement)(B, {
                           ...r,
                           key: r.key,
                           modal: e,
@@ -19881,12 +19804,12 @@ var CLSTAMP = "10776939";
                   ],
                 }),
                 (0, n.jsx)(f, { ModalManager: t }),
-                (0, n.jsx)(T, { ModalManager: t }),
+                (0, n.jsx)(L, { ModalManager: t }),
               ],
             })
           );
         }
-        function R(e) {
+        function B(e) {
           const {
             modal: t,
             rctActiveContextMenus: r,
@@ -19914,9 +19837,9 @@ var CLSTAMP = "10776939";
               r,
             ],
           });
-          return o ? (0, n.jsx)(L, { active: s, children: c }) : c;
+          return o ? (0, n.jsx)(k, { active: s, children: c }) : c;
         }
-        function I(e) {
+        function R(e) {
           const {
               modal: t,
               active: r,
@@ -19939,20 +19862,18 @@ var CLSTAMP = "10776939";
             })
           );
         }
-        function k(e) {
+        function I(e) {
           const { className: t, active: r, children: i } = e;
-          return (0, n.jsx)(L, {
+          return (0, n.jsx)(k, {
             active: r,
-            children: (0, n.jsx)(y.C$, {
-              children: (0, n.jsx)("div", {
-                className: t,
-                tabIndex: -1,
-                children: i,
-              }),
+            children: (0, n.jsx)("div", {
+              className: t,
+              tabIndex: -1,
+              children: i,
             }),
           });
         }
-        function L(e) {
+        function k(e) {
           const { active: t, children: r } = e,
             s = i.useRef(null),
             [o, a] = i.useState(!1);
@@ -19972,7 +19893,7 @@ var CLSTAMP = "10776939";
             })
           );
         }
-        function T(e) {
+        function L(e) {
           const { ModalManager: t } = e,
             r = (0, M.CH)();
           return (
@@ -26392,224 +26313,6 @@ var CLSTAMP = "10776939";
           });
         }
       },
-      98995: (e, t, r) => {
-        "use strict";
-        r.d(t, {
-          C$: () => f,
-          Gq: () => M,
-          I2: () => R,
-          MA: () => B,
-          ep: () => g,
-          fS: () => S,
-          gK: () => p,
-          he: () => _,
-          m9: () => b,
-          t1: () => x,
-          zQ: () => y,
-          zs: () => w,
-        });
-        var n = r(62540),
-          i = r(63696),
-          s = r(78325),
-          o = r(90242),
-          a = r(92251),
-          c = r(90765),
-          l = r(46108),
-          u = r(57447),
-          d = r.n(u),
-          m = r(50330);
-        const h = i.createContext({}),
-          p = () => i.useContext(h);
-        function g(e) {
-          const { targetElement: t, children: r } = e,
-            s = i.useMemo(() => ({ targetElement: t }), [t]);
-          return (0, n.jsx)(h.Provider, { value: s, children: r });
-        }
-        function f(e) {
-          const [t, r] = i.useState(null),
-            s = i.useMemo(() => ({ targetElement: t }), [t]);
-          return (0, n.jsxs)(h.Provider, {
-            value: s,
-            children: [(0, n.jsx)("div", { ref: r }), e.children],
-          });
-        }
-        function _(e) {
-          const { divProps: t, tooltipProps: r } = C({
-            ...e,
-            toolTipContent: e.toolTipContent
-              ? (0, n.jsx)(y, { children: v(e.toolTipContent) })
-              : null,
-          });
-          return (0, n.jsxs)(o.ml, {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: e.bNavStop ?? !!t.onClick,
-            ...t,
-            children: [(0, n.jsx)(I, { ...r }), e.children],
-          });
-        }
-        function b(e) {
-          const { divProps: t, tooltipProps: r } = C(e);
-          return (0, n.jsxs)(o.ml, {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: e.bNavStop ?? !!t.onClick,
-            ...t,
-            children: [(0, n.jsx)(I, { ...r }), e.children],
-          });
-        }
-        function w(e) {
-          const { divProps: t, tooltipProps: r } = C(e);
-          return (0, n.jsxs)("rect", {
-            ...t,
-            children: [(0, n.jsx)(I, { ...r }), e.children],
-          });
-        }
-        function M(e) {
-          const { children: t } = e,
-            { divProps: r, tooltipProps: s } = C({
-              ...e,
-              toolTipContent: e.toolTipContent
-                ? (0, n.jsx)(y, { children: v(e.toolTipContent) })
-                : null,
-            });
-          return (0, n.jsxs)(n.Fragment, {
-            children: [
-              i.cloneElement(t, { ...r, ...t.props }),
-              (0, n.jsx)(I, { ...s }),
-            ],
-          });
-        }
-        function C(e) {
-          const {
-              toolTipContent: t,
-              nDelayShowMS: r = 300,
-              bDisabled: n,
-              direction: s,
-              nBodyAlignment: o,
-              nBodyDistance: a,
-              nAllowOffscreenPx: c,
-              nMaxLateralMoveOnScreen: l,
-              strTooltipClassname: u,
-              bNavStop: d,
-              bTopmost: m,
-              usePointerEvents: h,
-              children: p,
-              onMouseLeave: g,
-              ...f
-            } = e,
-            _ = {
-              direction: s,
-              nBodyAlignment: o,
-              nBodyDistance: a,
-              nAllowOffscreenPx: c,
-              nMaxLateralMoveOnScreen: l,
-              className: u,
-              bTopmost: m,
-            },
-            [b, w] = i.useState(!1),
-            [M, C] = i.useState(),
-            v = i.useCallback(
-              (e) => {
-                (h && "pointerType" in e && "mouse" != e.pointerType) ||
-                  (w(!0), C(e.currentTarget));
-              },
-              [h],
-            ),
-            S = i.useCallback(() => {
-              w(!1);
-            }, []);
-          i.useEffect(() => {
-            n && b && w(!1);
-          }, [n, b]);
-          const y = {
-            active: b && !n,
-            target: M,
-            nDelayShowMS: r,
-            hoverPositionProps: _,
-            children: t,
-          };
-          let x = { ...f };
-          return (
-            h
-              ? ((x.onPointerEnter = v), (x.onPointerLeave = S))
-              : ((x.onMouseEnter = v), (x.onMouseLeave = S)),
-            {
-              divProps: x,
-              stateHandlers: { setTarget: C, setHovered: w },
-              tooltipProps: y,
-            }
-          );
-        }
-        function v(e) {
-          return "string" == typeof e ? l.pf.LocalizeIfToken(e, !0) : e;
-        }
-        function S(e) {
-          const { divProps: t, tooltipProps: r, stateHandlers: i } = C(e);
-          return {
-            divProps: t,
-            stateHandlers: i,
-            tooltip: (0, n.jsx)(I, { ...r }),
-          };
-        }
-        function y(e) {
-          return (0, n.jsx)("div", {
-            ...e,
-            className: (0, c.A)(d().TextToolTip, e.className),
-          });
-        }
-        function x(e) {
-          const { className: t, ...r } = e;
-          return (0, n.jsx)("div", {
-            className: (0, c.A)(d().ToolTipCustom, t),
-            ...r,
-          });
-        }
-        function B(e) {
-          const { className: t, center: r, ...i } = e;
-          return (0, n.jsx)("div", {
-            className: (0, c.A)(d().ToolTipTitle, r ? d().Center : "", t),
-            ...i,
-          });
-        }
-        function R(e) {
-          const { className: t, ...r } = e;
-          return (0, n.jsx)("div", {
-            className: (0, c.A)(d().ToolTipInsetContent, t),
-            ...r,
-          });
-        }
-        function I(e) {
-          const {
-              active: t,
-              target: r,
-              nDelayShowMS: o = 300,
-              hoverPositionProps: c,
-              children: l,
-            } = e,
-            [u, d] = i.useState(t),
-            h = p();
-          if (
-            (i.useEffect(() => {
-              if (t) {
-                if (o) {
-                  const e = window.setTimeout(() => d(!0), o);
-                  return () => window.clearTimeout(e);
-                }
-                d(!0);
-              } else (0, m.p)() || d(!1);
-            }, [t]),
-            !u)
-          )
-            return null;
-          if (!l || !r) return null;
-          const { targetElement: g } = h;
-          return s.createPortal(
-            (0, n.jsx)(a.g, { target: r, ...c, children: l }),
-            g ?? r.ownerDocument.body,
-          );
-        }
-      },
       34742: (e, t, r) => {
         "use strict";
         r.d(t, {
@@ -27630,7 +27333,7 @@ var CLSTAMP = "10776939";
           i = r(59351),
           s = r(46108),
           o = r(41180),
-          a = r(25475);
+          a = r(92487);
         function c(e, t) {
           return l(Date.now() / 1e3 - e, t);
         }
@@ -28462,15 +28165,16 @@ var CLSTAMP = "10776939";
       },
       87197: (e, t, r) => {
         "use strict";
-        function n(e, t) {
+        function n(e, t, r) {
           return null == e || null == t
             ? e === t
             : "object" == typeof e &&
                 "object" == typeof t &&
                 Object.keys(e).length === Object.keys(t).length &&
+                ((r = r ?? ((e, t) => e === t)),
                 Object.keys(e).every(
-                  (r) => t.hasOwnProperty(r) && e[r] === t[r],
-                );
+                  (n) => t.hasOwnProperty(n) && r(e[n], t[n]),
+                ));
         }
         r.d(t, { e: () => n });
       },
@@ -28977,6 +28681,7 @@ var CLSTAMP = "10776939";
           GP: () => a.GP,
           Hn: () => S,
           IW: () => x,
+          KC: () => l.KC,
           NQ: () => I,
           Pr: () => M,
           QO: () => u,
@@ -29118,10 +28823,9 @@ var CLSTAMP = "10776939";
       },
       43691: (e, t, r) => {
         "use strict";
-        r.d(t, { GP: () => a, TS: () => s, UF: () => c, iA: () => o });
-        var n = r(9731),
-          i = r(94729);
-        const s = {
+        r.d(t, { GP: () => o, TS: () => i, UF: () => a, iA: () => s });
+        var n = r(94729);
+        const i = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
             LANGUAGE: "english",
@@ -29172,12 +28876,6 @@ var CLSTAMP = "10776939";
             PAGE_TIMESTAMP: 0,
             FROM_WEB: !1,
             WEBSITE_ID: "Unknown",
-            get SESSIONID() {
-              return (0, n.KC)();
-            },
-            FRIENDSUI_BETA: !1,
-            STEAM_TV: !1,
-            DEV_MODE: !1,
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
@@ -29189,10 +28887,11 @@ var CLSTAMP = "10776939";
             IN_LOGIN_REFRESH: !1,
             USE_LONGEST_LOC_STRING: !1,
             SILENT_STARTUP: !1,
+            DEV_MODE: !1,
             CLIENT_SESSION: 0,
             NOW: 0,
           },
-          o = {
+          s = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -29207,10 +28906,10 @@ var CLSTAMP = "10776939";
             is_valve_email: !1,
             short_url: "",
             country_code: "",
-            excluded_content_descriptors: [i.u7, i.T4, i.mx],
+            excluded_content_descriptors: [n.u7, n.T4, n.mx],
           },
-          a = { steamid: "", clanid: 0, listid: 0 },
-          c = {
+          o = { steamid: "", clanid: 0, listid: 0 },
+          a = {
             CLANSTEAMID: "",
             CLANACCOUNTID: 0,
             APPID: 0,
@@ -29278,9 +28977,9 @@ var CLSTAMP = "10776939";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 25 2026 : 17:15:12",
-                    BUILD_TIME_UTC: "Jun 26 2026 : 00:15:12",
-                    BUILD_RTIME_UTC: 1782432912,
+                    BUILD_TIME_LOCAL: "Jul 1 2026 : 14:44:20",
+                    BUILD_TIME_UTC: "Jul 1 2026 : 21:44:20",
+                    BUILD_RTIME_UTC: 1782942260,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -29726,6 +29425,7 @@ var CLSTAMP = "10776939";
         3583: "localization/steampops_indonesian-json",
         3594: "localization/shared_brazilian-json",
         3714: "sp",
+        3834: "chunk~1a96cdf59",
         3869: "localization/steamui_indonesian-json",
         4026: "localization/friendsui_ukrainian-json",
         4102: "localization/shared_arabic-json",
@@ -29804,323 +29504,353 @@ var CLSTAMP = "10776939";
         9711: "localization/steampops_norwegian-json",
         9858: "chunk~2dcc5aaf7",
         9869: "localization/shared_vietnamese-json",
-        9882: "chunk~87fd721f7",
         9887: "localization/steamui_german-json",
       })[e] || e) +
       ".js?contenthash=" +
       {
         48: "e47e4f540b067a8b55df",
-        62: "320056a94a9d905c6854",
-        72: "ae2c02a496a8719d264a",
-        87: "22c6dc552e836ceebe8e",
+        63: "5bc0a8f5ea40640c244c",
         89: "0679e3127b09597af700",
-        106: "363bc6a8fb5a8a490dd5",
-        129: "58ee199955d20b08438a",
-        139: "fa556bce4d489864c345",
-        175: "1ca5d87d9f2e636d35a9",
-        195: "2c9adc0759f4541d3fb3",
-        246: "e7763b2d4ea2c6e1ee3d",
-        248: "07b5f022dcce13bdbee7",
-        265: "207d6e9d7e331d01c50b",
-        297: "ec62dd73effa031193af",
-        309: "1083188c869f7ec5e4e1",
-        347: "1ab46ccf43281e068759",
-        498: "9f8c3e3335a987161a66",
-        542: "27049cdac86eb9c3d1e9",
+        106: "3444a930cde738bd040b",
+        129: "3a00d71541d9b3d62298",
+        139: "43f4ea929f13e6d9aaf8",
+        195: "f803e034cadfb1d61b19",
+        218: "3fd52d93e5d68ce14112",
+        256: "ce06549b3f0401cebbe5",
+        297: "e2e8b28a620be5fdf86a",
+        342: "a662e8cdfa65ed225132",
+        437: "d7e142ac3ecbcb6eb776",
+        499: "b84cdb8febc0beb6363c",
+        548: "8b5ff9a20b9008edae42",
         580: "3e5a411a79374b95ccd3",
-        615: "b57d23a15777e57033af",
+        699: "8307e24cd59263045d53",
         716: "666de33917d80425274c",
-        726: "a28203ac9ef319a6dca8",
-        740: "7aa2210dfea66a9bf906",
+        728: "8faeeabcf9586a48b728",
+        740: "893ff03b673bf66b1146",
+        748: "938f0b50da070bae609c",
+        761: "cd266dcf9af8ce8be919",
+        766: "f23a32377bd3050c6400",
         786: "4bb1cffcda61cc74a96b",
-        823: "750ca33553e4707ca243",
+        806: "fb3b7f7e9305749b125a",
+        823: "6467c77e79b9413f4949",
         876: "25eede417d42c0cd26d1",
-        901: "72f2d300f480437c9644",
-        934: "9eb5b27f09bfc36ad93a",
-        1005: "9382b9e309c2afd47e65",
-        1007: "e8c0afdd0fc27d4ec8ab",
-        1012: "ebbaa97b86764aacb98f",
-        1065: "8eb4e1efabbff4fa645e",
+        884: "1e9d2523f65497feb69b",
+        901: "7c61b7b7d2c7225395f6",
+        959: "36a2112db24626d40607",
+        1005: "3bd85d94354714e0e4f1",
+        1012: "6449d3277e3245a235a7",
         1093: "9038f657966d3f7e10f4",
-        1160: "44205fb1f41e59ef4192",
-        1195: "0a78d10219c474e47d6d",
-        1220: "9b007c3c7394d634fa62",
-        1275: "11e4a8e286f3edd19d2b",
-        1323: "3fdb5ec5435e0f2771c4",
+        1133: "d2f912d9c2ab1427e863",
+        1139: "462f892bdd11621e1239",
+        1220: "19bfffdd8d7044eb36ab",
+        1242: "d540c2e46c3b19118e64",
+        1275: "ddb9f0aa00a9c9bbf441",
+        1325: "c752e6ae17746436bff0",
         1388: "315d0837be5086f0a826",
-        1389: "442fe633405828e8225f",
+        1389: "d4e85db473017e7ea6d0",
         1391: "0e40d57987ac9fbef65e",
-        1423: "4d0c2af9524350dbc4d0",
-        1463: "b45fbc6c6f05d55a76f1",
-        1478: "32f2772184df13887705",
+        1423: "0a80f5b8968559ace0b7",
+        1463: "57d2775f655e10309803",
+        1478: "a15e792d1d799fa4a485",
+        1502: "1935efb2461ad9bce662",
         1511: "b63d4421e78664b1b165",
-        1515: "92006b88c1c304590e8d",
+        1545: "25215dde3dc3c457826b",
+        1547: "6814f74596b44c58bf4e",
+        1548: "9d8472e8ca52930267c3",
+        1549: "f174d6a923e1b7a8a31c",
         1573: "577bb15708bfc059dd57",
-        1629: "6a08b9e557186ac265d5",
+        1629: "53d32d373f7c0277067c",
         1648: "ae7888c22c818aa27a14",
+        1651: "b7ec4ee5142468faf100",
         1663: "69583c6318b737ea4d67",
-        1730: "3b3fc7b24c6c35278cad",
-        1779: "d6741ca23f2b8912057d",
-        1791: "1e84c52145791eafb958",
-        1822: "dcc684e40e01a39a0a78",
-        1879: "62d6403013b08cb655c3",
-        2021: "244ed8675e34c954949c",
-        2026: "540be1504dacd3eafd50",
+        1709: "cd3695ef1d660e962a3c",
+        1791: "7a4d0025acd50b0c8785",
+        1792: "2741080f9fc7aecf93ec",
+        1800: "c2e8891a18999978e407",
+        1822: "5b0ebd20c79b5a4ce429",
+        1879: "e5a0394ea4f2fd2da944",
+        1917: "32e7bc7d5cdaf7899bac",
+        1922: "1f258438fbda46bf7fcc",
+        2021: "11f776f77c42b40baf87",
         2056: "b59b66100bf9f25fcdee",
-        2082: "cf0abdc69ece43a9f8af",
         2101: "432742a8a4f0cce8eb12",
-        2128: "7311ce24703383f99a71",
-        2188: "73765fc55d52bfb81fcc",
-        2199: "b7e0f65dcad556922cf8",
-        2225: "dc3d09d21b6992daad2e",
-        2263: "b90cf5ba72e946958d90",
+        2140: "b4f70f82ab73244977b8",
+        2160: "3467baf861a5f7c39db4",
+        2171: "1a6c2680f9f50b6ee647",
+        2198: "71ffc190aa7b24262e88",
+        2199: "bb34733dd3cb6ea64e0d",
+        2225: "e9549de91e74e24a5557",
+        2263: "34d5b8e0a47e4324ef7b",
         2266: "d4049da41b848707b218",
+        2294: "82b896449d9a586692a4",
         2320: "76cef2b5dd91f317cb3f",
-        2438: "65a15f294a938cc99256",
-        2448: "c1f0b015f00cac957233",
-        2481: "c46715e91f9d542d80df",
-        2515: "5710f6c8d0159b6a7677",
+        2348: "2ceb7e2ff86556fca18b",
+        2393: "7f676d56759c81a36d13",
+        2397: "12e8de49bab168797894",
+        2438: "24be384d2b304cdf50e4",
+        2448: "5cd57d315e0130e0e873",
+        2481: "8c13aff7c832e786e605",
+        2493: "b2e6ee30f4d3af08ab6d",
+        2515: "39384fb79ef15b7f53b5",
         2539: "0f9b65120876cd1969bc",
-        2561: "c32a6698e45d09331deb",
+        2561: "7d5bc855ebca075097fd",
+        2563: "517bc917cca527cc3f58",
+        2576: "31176a0c9721961ab176",
+        2600: "3ba4ddf1d7e6ba146d2c",
         2611: "f9524140f601be23197f",
         2640: "d9ded060cd6c4dc29609",
-        2646: "8c98c4c9b8b7084a8d31",
-        2664: "009687203ff990b59331",
-        2737: "0a9fc4b7f00e9fe7642d",
-        2761: "90c5bd85fc377b60ae78",
-        2774: "d71362909eafd81d3baf",
+        2646: "e29546467596233a3523",
+        2662: "bd3f70e8039adc99634a",
+        2664: "fba6402d566e6638f698",
+        2742: "60d33391566fbd216cd7",
+        2752: "ede88a82875229bb4a3a",
+        2761: "d10e19c276b0c2d8d401",
         2783: "f4c41c100afa2dbc4807",
-        2862: "6d6dfd8b8af302f8846e",
+        2834: "4d454a9d89e5afa2e62a",
+        2855: "cf823e4958e12e5ef6c8",
+        2862: "6a99372ffe2e960717da",
         2867: "3c6a175069489069b448",
-        2880: "b605b1ed357dde7687c4",
-        2889: "e08979b4cf8778cec480",
-        2903: "402a3f30e0ff2454e3bc",
+        2871: "fb5cf9ee194794b6c42b",
+        2880: "c86ee925129d6c94a44f",
+        2889: "1dfdc989ad95375759d5",
         2916: "ac9f0e39080834163a5e",
-        2917: "c5c6b958e339108f35f2",
-        2952: "5cc53fdb04ed91186e12",
-        2959: "abaefc2a0c391ada9dca",
-        2984: "cdb6f5e43526a559784c",
-        3081: "d62584c31059252cba0c",
-        3087: "c7f744de2f1ee62a6657",
-        3152: "68bc4cb3035920f6a197",
-        3180: "8e8aa27ac0cac69a5efc",
-        3200: "be88ed3551a1e7f0e16d",
-        3228: "4a02637047a4ebf33084",
-        3243: "181d34161c93d0f9039a",
-        3282: "6e1369dd2a331a4b450f",
-        3299: "c6785d85648972693309",
-        3319: "2c71e2097466ba2dabc6",
-        3323: "222baa8487a16abc369a",
-        3345: "ed54c33038df92279191",
-        3350: "25be1c0cde58ecd53fec",
-        3366: "5ab0bb18a2323349d07c",
+        2952: "dfba8734112ac661278e",
+        2959: "842f3ee23092cf30ec6b",
+        2982: "552bb7ba822785db03d2",
+        2984: "d1fce728407839d54ab1",
+        3087: "80c091990d573e07ce38",
+        3124: "20bc5f2fa654d2d5f599",
+        3158: "eb811559de47f318e011",
+        3177: "6a12458c9b500cafae0f",
+        3180: "367ab241f4ef845293b6",
+        3222: "70a1b6ded76f91a2c853",
+        3263: "1d89c594059719a35fc9",
+        3324: "a862a24aac95011ac5bd",
+        3334: "a4845ebf5538a8c9403b",
+        3350: "f80a23c85667168bf911",
+        3352: "f2ede16e80949a4d17c1",
+        3356: "f1060d832dfd2513cd22",
+        3366: "d7e43d3583690ec0e1f4",
         3473: "aa2e2c813e7588319881",
-        3518: "74f6ecfccd44bfb3892f",
-        3569: "81f96a2198b7d2816695",
-        3583: "f831ab7edbd9ffa591ac",
-        3594: "b9a3ddb8b26d3e6b208b",
-        3654: "a316470d8c7ddf6b8e9a",
-        3669: "f5396555e65c0f7883b2",
-        3685: "be7afcf3003fdb9bf1ef",
-        3714: "169c4a320ca4e5074190",
-        3716: "2043c1e958b8d9b48572",
-        3721: "a7dc580e98850999baba",
+        3569: "d093f262bbc0f95fd9e5",
+        3583: "22aaaa36100912e3ed08",
+        3585: "7848ae778b003c5839b0",
+        3589: "fd66d8f7b977b24bb0d2",
+        3594: "e0ed40c5de797633ca11",
+        3645: "b21815a71721ebf30c86",
+        3675: "31811efc3e57c33e20fc",
+        3695: "f286c82598902f2e3840",
+        3706: "948e81a3ef05a567717f",
+        3714: "aba2b0d9e1fc2047282a",
         3744: "775ac7cdb21bac1fe37c",
-        3770: "0d33737575ae96a77e1e",
-        3801: "7c87b73e3c8410868cbc",
-        3823: "8701656f2c13eaa5fdf7",
-        3845: "fa5c5bdeaa0d9634a7b4",
-        3869: "d52c585b1852ab95a523",
+        3834: "9b065f8a71cac3817e0a",
+        3869: "b75ea045d953b47b5817",
+        3876: "84fa0241ab1adeec788e",
         3899: "5ffcf512ba617d848f61",
+        3947: "5f24a36110afc8e0968a",
+        3961: "67ed5e4556be6844e345",
+        3962: "51b9d32823275b203183",
         4026: "0a24c2b15af8d2ea87bf",
-        4031: "c84e188541fbaf10fcae",
-        4102: "f1081c0859d2b6cddea0",
-        4109: "2b1ced1e377e86f065e2",
-        4139: "712b259cac8237357271",
-        4175: "92d7ba0916b98d8e27c3",
+        4057: "76e5ea1b2eae1203041b",
+        4102: "71dcbcafea414d3603b0",
+        4139: "79d7700eb0ce61e945e2",
+        4175: "2e35904177f5886d7bdd",
         4224: "2cb30c4afad3f6ef16ad",
         4259: "aa37b751e98aeca3b305",
-        4273: "0254096eb3ea3ab79cc7",
-        4321: "d342168f5d8f0df099da",
-        4340: "ffbcb0625d6a05d71a99",
+        4291: "c7469793c19cc332e1f6",
+        4309: "f994f7388aac0d4fe05c",
+        4321: "86c52d8287cbbba94d36",
+        4402: "0af03ab8e2a6e086efba",
         4475: "125e6435ae309d0db57e",
-        4481: "f9fd362f1d76ea426cef",
-        4516: "ff05ec5f0b10bcd77501",
-        4521: "1b43c2b41e8c4c729948",
-        4635: "4b3e5ea92a7976fc1b3b",
+        4481: "6037845a06e43f4c1c36",
+        4500: "492f845c5dd9461a737d",
+        4513: "5fb87340eba735948c6b",
+        4515: "0a0061ec8188e9c86123",
+        4516: "9c4f2d339035db94afd6",
+        4572: "fdcefee7c5a076c1e2ab",
+        4595: "a1cc551c2df7ac00aa37",
         4768: "17a7d7c4e34e0266ba4b",
-        4807: "3814d2b9b291e416d747",
-        4827: "eb94acfc1ccacc04b53e",
-        4830: "0dacd4b2cc7e898bf7ea",
-        4839: "b1ca14b72a083777a78d",
+        4825: "564782ada94b966add1a",
+        4839: "6acda41d1762102d43b7",
         4842: "b222206e7f49cb0d2b09",
-        4910: "e622e82e355e0b3507ba",
+        4912: "ae71f824d5e53fe3750c",
+        4922: "85077b03323ead971850",
         4925: "ed69214de5d337886985",
         4933: "696e5de7324513db0a18",
-        4952: "aa619b69c1533dd216f6",
-        5027: "b662ef7e396d587f3ebd",
-        5173: "976ad1b3dcd79bb87b9c",
+        4951: "503c3206f456c350dfd8",
+        4952: "c781e47ba87f1201ff83",
+        5019: "de1e64999df9585b947f",
+        5045: "1ce6c9e66fd00cf272b7",
+        5056: "8a07c0e63c0e839c947a",
+        5073: "ca9541ea0b126c362d75",
+        5173: "e680f814a22f2521dcef",
         5181: "c49352f8e35656f9e939",
-        5238: "ecdfe2dbc2c7cf4f97ab",
+        5256: "7985c5712ac64bead0da",
         5269: "60207428bd2868248c3a",
-        5318: "72c72d6d628744a257d2",
-        5512: "f2fd6d5e2b3aa4f28b7d",
-        5550: "cd526bcae7362d652e14",
-        5553: "622b381d3ab5868b4709",
-        5592: "f33533c53a71a2626063",
-        5643: "789574e43136a991c726",
-        5682: "d6078c3a2d12ee69f68a",
-        5704: "379467b643925dea1061",
-        5716: "1a770c8c4ce092377953",
-        5776: "62a8415b1e5e5a2da50b",
-        5803: "f2041498194c10c981e3",
-        5864: "498d9d3a6e9b9668d1b7",
-        5890: "8c7f399397bb93c6cc6a",
-        5935: "c1a681d193647b17c2eb",
-        5963: "d81ad84cf909f3394624",
-        6089: "f38bcb4ddab923c961e5",
-        6100: "14c3eef79918205227ef",
-        6120: "fe4a44635bb26a21886f",
+        5324: "567856d650d54988b214",
+        5355: "1384e750c24f11d2af09",
+        5473: "6665cc44dc9fac090d32",
+        5497: "14bf3b92aea756b4a3f2",
+        5501: "54702330033b5f61868a",
+        5536: "1c7c649745bbc6d3b5f4",
+        5553: "60e2779caa7b4516751a",
+        5569: "71b473e8c8592aa3d1dc",
+        5575: "a1d9f5e992078b45427c",
+        5592: "d86f02d1c78dffa0ea98",
+        5668: "fab72a3366cb3d606682",
+        5704: "b9b1d9243a5999e04486",
+        5716: "d8ec9e353ff8a48e7f86",
+        5743: "0162c73a6eb4ab68b6fd",
+        5752: "65a652a4cf8cb3c37607",
+        5803: "70483c3c74100d66ecfe",
+        5864: "f2e5ec8effc5760c940c",
+        5903: "270e7369ee63f73cf6f7",
+        5905: "4e37274fff725e948646",
+        6034: "8687a98c16ba56b1dc05",
+        6120: "e1935abe50b12097267e",
         6197: "8af0717e4fcd0746d10b",
-        6203: "6b96f796c31ced9d1754",
-        6277: "2108a80309cedae7b618",
-        6313: "21a2e3227a19cc911dfb",
+        6235: "ce98638999c6f5e08952",
         6345: "d77e54ee3f3a40eb2ebe",
+        6350: "79c1e06f7c6253af3bcc",
+        6381: "32a17fb20e9f52c3985a",
+        6391: "e91dfa796384dd5792a8",
         6409: "519909cf0cfb8e6cec43",
-        6430: "53e1a4860272a3131a81",
-        6472: "312693caf3e35d55c381",
-        6577: "1ae5c00e955c3e2dd62f",
-        6656: "a02969c997b7bb24129d",
-        6696: "aa3651f32fddca6c18ee",
-        6702: "9e808fe2f3c02d582f60",
-        6741: "091bc0621fccf58ef6ce",
-        6752: "2cf01e540da3dac5b37d",
-        6785: "69a9f0b91f21affb7342",
-        6793: "a77e9a03dfdeebb58ba7",
+        6430: "4aca9e264221788118e6",
+        6472: "8d61ff049193cdfd31f0",
+        6513: "9807f1b64c40a02b3c8f",
+        6577: "78d4d3863631b0eb47c6",
+        6643: "6d901c48907c613ddcbc",
+        6696: "bf0354bdfd3e79ba42f2",
+        6752: "8133e857d4c0ed0d00a9",
+        6783: "09ced4f08bbf2a1a9873",
+        6785: "b5feffbba32b8e3e4e54",
+        6787: "d848461b204dcf445b61",
         6810: "891c059117c6b984347f",
         6865: "b48073424ca49ee76f2a",
-        6873: "ed8a0d525ab0e815cdfa",
+        6879: "e0cfd74424a1d8c6165d",
         6884: "0f06d2665dc521b8f26a",
-        6888: "f305045fd3f145288113",
-        6890: "668215b2683424638b2b",
+        6888: "c4a54979d9cf8cf3ef75",
+        6890: "8fb40edb67cc114eb100",
         6896: "8911b02c243ec4c6b01a",
-        6974: "8ee868d58f46cd04e68c",
-        6988: "ab70e8ac2b7148a48d87",
-        7075: "b9a08728b5f13b17cc74",
-        7151: "45f70eb6851f2ac45f0d",
+        6913: "c5986330980f0f66a5ef",
+        6960: "fd233689ee3919f8a533",
+        7151: "9399cb74b313637fa058",
         7155: "13c2e38c399236750f6a",
-        7169: "7d597f54447ad1086c30",
-        7193: "fce469c344a783dcd9fb",
+        7191: "aee46d37d3923603d5dd",
         7306: "94d65d257f8b7e645038",
         7314: "9212ce12ca386591d521",
-        7316: "18e5e6b118a1b52fddc2",
-        7376: "1a70f0da1467e92dd08f",
-        7408: "61ed29bf41d4c36e347b",
-        7442: "787dddb329e69e817783",
-        7462: "b35cbbe9263de19498a3",
+        7316: "b433424133c7e0fe3ffa",
+        7376: "5a64bf5d31340f560998",
+        7386: "78d691bc1f52758abf36",
+        7442: "c7115895985a4f87483e",
+        7462: "49aff25d3ba9f3fd1792",
         7503: "658123cceab17e7f1fa9",
-        7521: "d3f0eafb9119a188d4db",
-        7533: "c2a3919883d5f31f0ac3",
-        7569: "5c6a8bfaf01e13e9762b",
-        7634: "fe253896901e550629d1",
-        7653: "539194c7ac94ec1eab26",
-        7657: "c4b44cb59b9c494d2005",
-        7674: "185d259e05062aa990a4",
-        7696: "c8e1816283f01db7bde0",
-        7698: "f77285881c57677eab87",
-        7767: "84f81f617ec3023624a3",
-        7770: "aceefbb364a30f3f02c4",
-        7823: "cf1f2294123233ee01f4",
-        7824: "bc3d4917fa38d194e03f",
-        7836: "c051c835bbef2af0d0dc",
-        7912: "af3811a0f8ef32ac079b",
+        7533: "84f7b46aea07d92f8434",
+        7554: "f80856c048cd00abf719",
+        7569: "7075d5c4f1fc4a72f4a3",
+        7627: "3ba7d3f7f510449560a8",
+        7653: "c71091f7cad59a1e425f",
+        7656: "c502b14ba8980f17f4c9",
+        7696: "de7a052d677f898c0b57",
+        7770: "cada18dc5b7ebdaecb46",
+        7824: "db32def3f61e834e4ddc",
+        7836: "6460c1f8c85ad1cfc76d",
+        7906: "e6d157e2bebe235d0fc3",
+        7930: "5caa86d9f8d78ad8b032",
+        7946: "993cc29facf976e15c24",
         7993: "8abb76779fa037eebe08",
         7996: "4a4ce77e9c751bf1a989",
-        8054: "3625a349f6c042e8307f",
-        8118: "8f277543e02d85b65fe1",
+        8054: "66440e5efce14ce6dc87",
+        8089: "3fde6feb10dd20d2988e",
+        8098: "74a09d96a15a0ace9267",
         8159: "811015cf4d25ecd59862",
-        8197: "7276eb7ebe65189489fd",
-        8209: "18ca2bfeb8041dea6e6c",
+        8196: "ee017111e5c4141a225a",
+        8198: "5857f061f7d49b939f13",
+        8219: "df98d1552e304c311d9e",
+        8247: "ea40a2c1c95ebf6dc60e",
         8263: "b3dd7a358e5d482491aa",
         8280: "93936d356d8860f50169",
-        8286: "1f5be36130bf4017cada",
-        8291: "f2f8729beb0570c91782",
-        8332: "1e53a24fc7fde4966025",
-        8352: "4880a79e2ac4375c02b0",
-        8361: "857ed304a0f9810c6c90",
-        8396: "c6e7425a1d36f7aaa96a",
-        8410: "7f815293dc17cb3f1469",
-        8416: "1223f2ad8846b3b6c832",
-        8443: "227a63c7aee6cf100e88",
+        8286: "3e4d91e8f8c1af50112e",
+        8291: "f4fd59006b2f91befd5a",
+        8330: "ae4d5daab6a9107ae209",
+        8346: "3d8fccf6ac6adabd3012",
+        8391: "edd72c4c85056b0644d0",
+        8396: "60403dcb5893bbe4358c",
+        8405: "177659c9fe8b2b7bf9a3",
+        8443: "9a6a49c4fe8ee06033ba",
         8445: "e06b22d6f4a143145f07",
-        8478: "17a9bb9020a9f4663156",
+        8478: "33ddea5d4aa857c0a2bb",
         8484: "90cf9e56abd4e4060277",
-        8491: "d13bd380da05f7e89f16",
-        8495: "1ef294d92fa8f7a899f7",
-        8522: "f46fd196078e5211eb95",
-        8534: "203dbed880ff6e12c806",
-        8545: "1aa2273a0a3161924d55",
-        8546: "8f1fb6a7ab13674bff41",
-        8593: "1ee93f480743d760f4e2",
-        8636: "e693c68d9c6dbb197801",
-        8674: "ecdccb55ac3938fab9bc",
-        8695: "aefea5b23571ef266ec7",
+        8495: "2f2134218b04af3bda03",
+        8497: "c5d5114bd970bc1129be",
+        8522: "00f0067f8dab0c251b1c",
+        8534: "068bd0e7dc785e2cf478",
+        8536: "ad657fa3ed5909ff619a",
+        8545: "174287b968f93bbb1564",
+        8635: "50a0734be083bf704768",
+        8636: "220c11c1d11253ca5fae",
+        8646: "8adbef2817b2ecf6c439",
+        8674: "7284dabdd6361855cec8",
         8699: "830f7e358e9dfc743b27",
-        8732: "14db866b17323a59c64f",
-        8830: "792fc72d4ee135c678d9",
-        8832: "0deae15c09d81811a824",
-        8839: "962da147e34d0f1fa2a2",
-        8841: "ad344b860d5c0c1a9c5b",
-        8855: "65413f91eca057dec759",
-        8867: "9cd16b27bd49fd43a05f",
-        8872: "9ad4f867bbc23daa3efb",
+        8700: "caca82602cc709a500f5",
+        8732: "296853997ea112599a59",
+        8780: "4b5f78ecc5d269cf0954",
+        8830: "758b6b54327d5c62ee5e",
+        8839: "91b4a0584540a6cbe29c",
+        8854: "98dc7189ba9957c84336",
+        8872: "7e18fd5f23d34c23905b",
+        8882: "b2eb5aea31ad49acf6ae",
         8906: "12513bcd136de3092c2a",
+        8935: "bbc1ebc120bef2c9799d",
         8948: "79956ac4e87cfd5cf067",
-        8950: "859cf4335b5f407ebb3c",
         8970: "c432673605747d241ec4",
-        9053: "ac87525fa456293f0e2e",
-        9063: "77f0c9977cc1aecd1944",
-        9106: "246dc3cbce1d7bdcd0a6",
-        9129: "eedab04bd5a9d01c9c97",
-        9130: "f632a0cf51548538ce9b",
-        9134: "370830da314eb8247bf6",
-        9171: "f2b08dea93b4cf387cb6",
-        9220: "3de1d5671b93b103dec8",
-        9298: "98c413124aa68aeb9306",
-        9338: "0ddeb17e98dc757d9fea",
-        9368: "f1cc8238859ce72d9b1a",
-        9386: "5849c8502bcde90c1b68",
-        9413: "2180960dc00e2f8afa77",
-        9418: "29e9fa15a9fc8e62a893",
-        9441: "5b758049b669314e10c2",
-        9448: "3b188192ff202b472e99",
-        9460: "5ebdf429d349e1154387",
+        9053: "36e5131a2c31a525768f",
+        9063: "258ca2a504162c0dac77",
+        9108: "80ea95544df711f114ae",
+        9120: "794cf0040ac9b0c1d41f",
+        9129: "0464d9577e4c92af13f4",
+        9134: "5a7e04bb3d2d818f9f9d",
+        9171: "78b6924d7eca53900c37",
+        9183: "f500299272a34d576269",
+        9266: "a54477228b6f87d7091d",
+        9268: "71a8661ed31f294a4fd2",
+        9298: "caec3c66131c85d84fd0",
+        9365: "7efb27242c0037cefec5",
+        9368: "4f425b6ed40eeaf849cf",
+        9418: "516fbdc3d5df1d0006fd",
+        9441: "a1084f4ecc1704b1797f",
+        9458: "a45c27ba640b24015d65",
         9462: "7b977c4108a105f53e81",
-        9483: "041e510122470f294cf7",
-        9661: "9270d5f951c234f01449",
-        9672: "2ae3c01f5c62c3c7f26d",
-        9711: "2ed989ee7251a5d19c6f",
+        9465: "615728f503276e76658c",
+        9485: "b4d52519addecd908178",
+        9536: "4367f32b4c6562afa768",
+        9558: "836324fb8d170325fbef",
+        9637: "706882d30a629adc3ca3",
+        9672: "bf453ced8e451d66859f",
+        9711: "c299e2fab8790c7c37d0",
+        9737: "4f8b3e58776fd31e6afb",
+        9740: "b9f257ecbdd5ae10a47f",
         9779: "59ef76674166d4b9e52e",
-        9858: "caaf1b8fbc4e52b77adf",
-        9869: "3bc449c6cdcb54d9ae66",
-        9882: "80a85b748c40acf504b7",
-        9887: "16cd8a3842cadc5e78ec",
-        9902: "191bc3582d91d1562057",
-        9930: "3c4b8b7ff76f1e044e15",
-        9963: "ce3071a5cd333db20242",
-        9988: "0681554a5bd9d24e5714",
+        9845: "13b5b6656f416f517b33",
+        9853: "cb23ac97c5ef25298c13",
+        9858: "ade6e0144b144499fc4f",
+        9861: "d075ad8e71f05bafe846",
+        9862: "51ef07edcc880ce94847",
+        9869: "87497576748f35eb5b06",
+        9887: "94ebd191cf19efff19b2",
+        9902: "687ccd0d6e13cf864303",
       }[e]),
     (a.miniCssF = (e) =>
       "css/" +
       ({
         1220: "gamenotes",
+        3834: "chunk~1a96cdf59",
         7462: "gamerecording",
         7653: "broadcastapp",
         8396: "broadcast",
         9129: "awardicon",
         9672: "discoveryqueue",
         9858: "chunk~2dcc5aaf7",
-        9882: "chunk~87fd721f7",
       }[e] || e) +
       ".css"),
     (a.g = (function () {
@@ -30261,6 +29991,7 @@ var CLSTAMP = "10776939";
             : 0 !== t[r] &&
               {
                 1220: 1,
+                3834: 1,
                 7462: 1,
                 7653: 1,
                 8396: 1,
@@ -30268,7 +29999,6 @@ var CLSTAMP = "10776939";
                 9441: 1,
                 9672: 1,
                 9858: 1,
-                9882: 1,
               }[r] &&
               n.push(
                 (t[r] = e(r).then(
@@ -30332,4 +30062,4 @@ var CLSTAMP = "10776939";
     })();
   var c = a.O(void 0, [41], () => a(69823));
   c = a.O(c);
-})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/library.js.map
+})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/library.js.map

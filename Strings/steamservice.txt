@@ -598,10 +598,8 @@ $ffn
 %s Salt Length: 0x
 %s [%s]%-*s
 %s algorithm "%s" unsupported\n
-%s begin_ctx=%lld
 %s called
 %s double claimed!\n
-%s end_ctx=%lld
 %s not implemented
 %s overflow!\n
 %s%02X
@@ -1212,8 +1210,8 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;dm
-++CCUNG`lm
+++CCUNG;gm
+++CCUNG`om
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1359,6 +1357,7 @@ $ffn
 -chromeosverbose
 -clientbeta
 -debugbreak
+-deckard
 -holo
 -hometest
 -inf
@@ -1679,11 +1678,11 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00000000
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2217,6 +2216,7 @@ $ffn
 20IClientSecureDesktop
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:55:00
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -2238,7 +2238,6 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:25:55
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23CECKeyExchangePublicKey
@@ -2424,10 +2423,10 @@ $ffn
 6*Fc7
 6-nn
 6144
+65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
-65536
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2559,6 +2558,7 @@ $ffn
 :scheme
 :statu
 :status
+:wB0
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -3046,6 +3046,7 @@ AsyncSocketWriteTo
 AsyncWrite
 Attempt to create persistent logs with no end date!
 Attempt to schedule '%s' %lldusec in the past
+Attempted to access intermediate certificate at index %d. Total intermediates: %d
 Attempted to change replicated CVar when you are not the GM\n
 Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
@@ -5921,6 +5922,7 @@ INVALID TYPE
 INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_HSOCKETOWNER != m_hSocketOwner
+INVALID_KEY_SYMBOL
 INVALID_SOCKET != hSocket
 INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
@@ -6178,7 +6180,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 24 2026
+Jun 30 2026
 June
 K'iche'
 K(\f]C15
@@ -8131,7 +8133,6 @@ SSLv3/TLS write server hello
 SSLv3/TLS write session ticket
 STEAMVIDEOTOKEN
 STEAM_
-STEAM_BASE_FOLDER
 STEAM_DESKTOP_APP_AFFINITY_LIST
 STORE lib
 STORE routines
@@ -9529,6 +9530,8 @@ Zulu
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [%s] %s=%s\n
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [A:%u:%u:%u]
 [HEX DUMP]:
 [Invalid]
@@ -9709,6 +9712,7 @@ Zulu
 \n\rwebsite_title
 \n\tIPSec/IKE/Oakley curve #3 over a 155 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tIPSec/IKE/Oakley curve #4 over a 185 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
+\n\t\tChain Certificate %d:\n
 \n\tedit_info
 \n\tevent_gid
 \n\tjson_name
@@ -11000,6 +11004,7 @@ coefficient%d:
 coefficient:
 cofactor
 collect_data
+collection_time_active
 com.google.protobufB
 com.valvesoftware.steam
 comcast
@@ -12505,7 +12510,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -14540,7 +14545,6 @@ k_EMsgSCIDRequest
 k_EMsgSCIDResponse
 k_EMsgSMExpensiveReport
 k_EMsgSMHourlyReport
-k_EMsgSMMonitorSpace
 k_EMsgSMPartitionRenames
 k_EMsgSecretsBase
 k_EMsgServerSecretChanged
@@ -16374,7 +16378,9 @@ pchMsg
 pchName
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
 pchSteam2ID
+pchString != nullptr
 pchTLSServerName == NULL
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
@@ -16908,7 +16914,6 @@ res master
 reseed error
 reservation_country_code
 reservation_state
-reservation_type
 reserved
 reserved_range
 resizeNumBits >= 0
@@ -17086,6 +17091,7 @@ scheduledItem.m_ulTime
 scheme=
 schinese
 scots
+script
 scrypt
 scsv received when renegotiating
 sct future timestamp
@@ -17850,7 +17856,6 @@ support locked group
 support unlocked group
 supportedAlgorithms
 supportedApplicationContext
-supported_languages
 surname
 svRegPath
 sv_SE

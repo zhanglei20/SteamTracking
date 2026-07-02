@@ -30,8 +30,6 @@
 $ORIGIN
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %d %H:%M:%S %Y UTC
-%s begin_ctx=%lld
-%s end_ctx=%lld
 %s: %d, %d, %d
 %s: '%s', '%s'
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -524,6 +522,8 @@ XWindowEvent
 XkbKeycodeToKeysym
 XlibMessage
 XwcLookupString
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [abi:
 [friend]
 \f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*

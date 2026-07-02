@@ -26,6 +26,8 @@
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGY
+++CCUNGn\f
 ++CCUNGstd::exception
 /dev/random
 /dev/urandom
@@ -501,6 +503,9 @@ SteamAPI_ISteamMatchmakingPlayersResponse_PlayersRefreshComplete
 SteamAPI_ISteamMatchmakingRulesResponse_RulesFailedToRespond
 SteamAPI_ISteamMatchmakingRulesResponse_RulesRefreshComplete
 SteamAPI_ISteamMatchmakingRulesResponse_RulesResponded
+SteamAPI_ISteamMatchmakingServerFriendsResponse_AddFriendToList
+SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsFailedToRespond
+SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsRefreshComplete
 SteamAPI_ISteamMatchmakingServerListResponse_RefreshComplete
 SteamAPI_ISteamMatchmakingServerListResponse_ServerFailedToRespond
 SteamAPI_ISteamMatchmakingServerListResponse_ServerResponded
@@ -520,6 +525,7 @@ SteamAPI_ISteamMatchmakingServers_RequestHistoryServerList
 SteamAPI_ISteamMatchmakingServers_RequestInternetServerList
 SteamAPI_ISteamMatchmakingServers_RequestLANServerList
 SteamAPI_ISteamMatchmakingServers_RequestSpectatorServerList
+SteamAPI_ISteamMatchmakingServers_ServerFriends
 SteamAPI_ISteamMatchmakingServers_ServerRules
 SteamAPI_ISteamMatchmaking_AddFavoriteGame
 SteamAPI_ISteamMatchmaking_AddRequestLobbyListCompatibleMembersFilter
@@ -1070,7 +1076,7 @@ SteamAPI_SteamHTTP_v003
 SteamAPI_SteamIPAddress_t_IsSet
 SteamAPI_SteamInput_v007
 SteamAPI_SteamInventory_v003
-SteamAPI_SteamMatchmakingServers_v002
+SteamAPI_SteamMatchmakingServers_v003
 SteamAPI_SteamMatchmaking_v009
 SteamAPI_SteamMusic_v001
 SteamAPI_SteamNetworkingConfigValue_t_SetFloat
@@ -1138,6 +1144,7 @@ SteamAPI_UseBreakpadCrashHandler
 SteamAPI_WriteMiniDump
 SteamAPI_gameserveritem_t_Construct
 SteamAPI_gameserveritem_t_GetName
+SteamAPI_gameserveritem_t_IsEqualTo
 SteamAPI_gameserveritem_t_SetName
 SteamAPI_servernetadr_t_Assign
 SteamAPI_servernetadr_t_Construct
@@ -1147,6 +1154,7 @@ SteamAPI_servernetadr_t_GetIP
 SteamAPI_servernetadr_t_GetQueryAddressString
 SteamAPI_servernetadr_t_GetQueryPort
 SteamAPI_servernetadr_t_Init
+SteamAPI_servernetadr_t_IsEqualTo
 SteamAPI_servernetadr_t_IsLessThan
 SteamAPI_servernetadr_t_SetConnectionPort
 SteamAPI_servernetadr_t_SetIP
@@ -1178,7 +1186,7 @@ SteamInternal_SetMinidumpSteamID:  Caching Steam ID:  %lld [API loaded %s]\n
 SteamInternal_SetMinidumpSteamID:  Setting Steam ID:  %lld\n
 SteamInternal_SteamAPI_Init
 SteamMatchMaking009
-SteamMatchMakingServers002
+SteamMatchMakingServers003
 SteamMiniDumpInit
 SteamNetworking006
 SteamNetworkingMessages002

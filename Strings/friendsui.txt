@@ -450,7 +450,6 @@ $\nY8O
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
-&\n"k_EContentReportSubjectType_Unused
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -774,9 +773,7 @@ $\nY8O
 *pcubDecodedData
 *|\n\fECPUGovernor
 ++CCUNG
-++CCUNG#
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGH&F
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
@@ -795,6 +792,7 @@ $\nY8O
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
@@ -879,6 +877,7 @@ $\nY8O
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
+-\n)k_EContentReportSubjectType_CommentThread
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EProfileCustomizationTypeRecommendation
@@ -917,6 +916,7 @@ $\nY8O
 ../common/crypto_passwordhash.cpp
 ../common/crypto_scrypt.cpp
 ../common/crypto_textencode.cpp
+../common/environmentmanager.cpp
 ../common/filesystem_helpers.cpp
 ../common/friendsuihelpers.cpp
 ../common/html_jstypes.cpp
@@ -1177,10 +1177,10 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
-00:00:00
-01/01/00
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+01/01/00
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -1671,7 +1671,6 @@ $\nY8O
 19CMsgClearAllCookies
 19CMsgComboNeedsPaint
 19CMsgFinishedRequest
-19CMsgFocusedNodeText
 19CMsgGetZoomResponse
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
@@ -1876,7 +1875,6 @@ $\nY8O
 26CProportionalFloatProperty
 26CVirtualHereShareDeviceMsg
 27CMsgDraggableRegionsChanged
-27CMsgFocusedNodeTextResponse
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
 27CMsgProcessInfoNotification
@@ -1888,7 +1886,6 @@ $\nY8O
 28CMsgGetCookiesForURLResponse
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
-28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
@@ -2009,7 +2006,6 @@ $\nY8O
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EStreamControlInputControllerAttached_OBSOLETE
@@ -2176,7 +2172,6 @@ $\nY8O
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 ?\n\tp2p_scope
-@@r4N
 @\n!ControllerPersonalizationResponse
 @bEnableLogTearOff
 @bEnableSpewThrottle
@@ -2268,6 +2263,7 @@ BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsOpen()
 BKbhTb~XBK!;
+BREAKPAD_DUMP_LOCATION
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BResizeImageRGBA
 BResolveHostString - unexpected DNS lookup flag '%d'\n
@@ -2742,8 +2738,6 @@ CMsgFileLoadDialog
 CMsgFileLoadDialogResponse
 CMsgFind
 CMsgFinishedRequest
-CMsgFocusedNodeText
-CMsgFocusedNodeTextResponse
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -2794,7 +2788,6 @@ CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
-CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
@@ -2854,6 +2847,17 @@ CPanelKeyBindingMapDictionary
 CParentalCache::OnParentalLockChangeBegin
 CPathString
 CPauseControllerInputMsg"
+CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
+CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
+CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::setenv called with no value
+CProcessEnvironmentManager::setenv invalid index %d\n
 CRC error
 CRC32_ProcessBuffer
 CRYPTO_memcmp
@@ -3230,6 +3234,8 @@ EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
 EHDRVisualization
 EJSRegisterMethodType
+ELegacyEnvironmentVariable
+ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENewSteamAnnouncementState
 EPersonaStateFlag
 EPressOutletAction
@@ -3615,6 +3621,7 @@ INFO
 INTERNAL
 INVALID_ARGUMENT
 INVALID_CPPTYPE
+INVALID_KEY_SYMBOL
 IVALIDATE001
 Icelandic
 IdempotencyLevel
@@ -4184,6 +4191,7 @@ Miscellaneous marker 0x%02x, length %u
 Missing Huffman code table entry
 Missing IHDR before IDAT
 Missing PLTE before IDAT
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 Missing field: FileDescriptorProto.name.
 Missing name.
 Monday
@@ -4779,6 +4787,7 @@ SHA256_Init( &c )
 SKIN
 SKyu
 SPEED
+STEAMVIDEOTOKEN
 STEAM_
 STRING
 Sampling factors too large for interleaved scan
@@ -5035,6 +5044,7 @@ StaticFileWriterThread()
 StatusText
 Steam - DirWatcher
 Steam ID does not pass strict parsing: '%s'
+Steam3Master
 SteamChina_SChinese
 SteamID
 SteamRealPath
@@ -5067,6 +5077,7 @@ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamUIGames001
 SteamUIUIInterfaceV001
+SteamUser
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 SteamVProf::CVProfile::ExitScope()
 Steam_BGetCallback
@@ -5087,6 +5098,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 StringPrintfVector currently only supports up to
 SubTabPosition
 Sunday
@@ -5738,6 +5750,7 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
+_STEAM_SETENV_MANAGER
 _SpewMessageType
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
@@ -6353,6 +6366,7 @@ enable_traffic_priority
 enable_unreliable_fec
 enable_video_av1
 enable_video_hevc
+enable_video_pyrowave
 enable_video_streaming
 enabled
 enabled_features
@@ -7156,6 +7170,7 @@ k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -7304,8 +7319,7 @@ k_EStreamVideoCodecAV1
 k_EStreamVideoCodecH264
 k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
-k_EStreamVideoCodecORBX1
-k_EStreamVideoCodecORBX2
+k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
 k_EStreamVideoCodecVP8
 k_EStreamVideoCodecVP9
@@ -8273,6 +8287,7 @@ server_streaming
 service
 service $0 {\n
 set to see debug vgiui2 messages
+setenv
 setlocale
 setmntent
 settings
