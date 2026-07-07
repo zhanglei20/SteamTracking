@@ -197,7 +197,8 @@ $\nY8O
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8\\t
+++CCUNG3U\t
+++CCUNGX]\t
 ++CCUNGstd::exception
 +ulsX
 ----------------------------------------\n

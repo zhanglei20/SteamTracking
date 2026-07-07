@@ -62,6 +62,7 @@ $ORIGIN
 *ZL19RunCommandGetOutput10StringViewR10CUtlStringbbEUlS_E_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGm\t
 ++CCUNGstd::exception
 -chromeosdiskmanagement
 -chromeosnopreallocate

@@ -7553,14 +7553,12 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -7724,6 +7722,9 @@ ${LANGUAGE}
 1000
 1024
 10000
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 107F-BB20-FB5A-1CE4
 10Audio_Stub
 10BlankImage
@@ -20869,7 +20870,6 @@ Error: failed to opt out of sideloaded steam client
 Error: failed to run steamos-mandatory-update check
 Error: failed to unregister for X11 property callback
 Error: fauiled to retrieve fdlist fd: %s\n
-Error: invalid adapter id: 0x%x
 Error: invalid desktop session: %s
 Error: invalid display state: %d
 Error: invalid profile: %s
@@ -21472,7 +21472,6 @@ FreeImageYUV
 FreeThreadLocalFuncCallReturnBuffers
 Freed EMS handle %u
 Freed XMS handle %u
-Fremont
 French
 FrenemyFilter
 Friday
@@ -24285,7 +24284,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul  2 2026 20:50:20
+Jul  6 2026 22:02:39
 July
 JumpList
 Jumplist
@@ -24646,7 +24645,6 @@ LOGIN1_IS_ORG_FREEDESKTOP_DBUS_INTROSPECTABLE (interface)
 LOGIN1_IS_ORG_FREEDESKTOP_DBUS_PEER (interface)
 LOGIN1_IS_ORG_FREEDESKTOP_DBUS_PROPERTIES (interface)
 LPth
-LR&.yb2
 LRpn
 LU~g(1
 LV=%zu n=%zu\n
@@ -30544,6 +30542,7 @@ SteamInput/Configurator/ShowIbexTour
 SteamInputManager
 SteamInstaller
 SteamLibrary
+SteamMachine
 SteamNetworkingSockets %s\n
 SteamNetworkingSockets connected state, transport in state 'ready'\n
 SteamNetworkingSockets connection in state '%s', transport in state 'negotiating'\n
@@ -41594,7 +41593,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(m5
+ggenhm5
 ghost_
 gidlist
 gidparentcomment
