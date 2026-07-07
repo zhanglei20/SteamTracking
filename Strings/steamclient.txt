@@ -106,7 +106,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\rWv
+ !"#$%&'()*+,-./0123\rYv
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -15997,7 +15997,6 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16040,7 +16039,14 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
+7200
+8000
+8080
+8192
+9000
+9999
 65536
+60000000
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
@@ -16119,7 +16125,6 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
-7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -16412,12 +16417,9 @@ $steammessages_parental_objects.proto"
 8.K%G
 8/A0
 80 Mbps
-8000
 802-11-wireless
 802-3-ethernet
-8080
 80CChatUsability_ClientUsabilityMetrics_Notification_UIState_CategoryCollapseState
-8192
 8276873a45f7f75ef0d42edcf975a6da5adc5799
 82\n:XPH
 83CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization
@@ -16544,11 +16546,9 @@ $steammessages_parental_objects.proto"
 9.CStore_ReloadAllReservationPositionMessages_Notification
 9.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response"
 9.CUserAccount_GetAvailableValveDiscountPromotions_Request
-9000
 95th
 961e13c2046fbe474916afdb087db2222535db4e51f34b5fa45b4fd7803abff2
 98th
-9999
 99Ov
 99rKJJ
 9<n\nM
@@ -16887,7 +16887,6 @@ $steammessages_parental_objects.proto"
 ???\f???????\n???\r?\t?\v
 ?HAI\t81\t9dcG'
 ?QfZ
-?XDs
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
@@ -24132,7 +24131,6 @@ E5tq
 E=FZGrH
 E>70aZSL}voh
 E@RU\
-EA-t
 EACCES
 EACState
 EADDRINUSE
@@ -26144,7 +26142,6 @@ Freed EMS handle %u
 Freed XMS handle %u
 Freeing update lock while already not locked
 Freestyle
-Fremont
 French
 FrenemyFilter
 Friday
@@ -36312,6 +36309,7 @@ SteamLinuxRuntime
 SteamLinuxRuntime_
 SteamLinuxRuntime_sniper
 SteamLinuxRuntime_soldier
+SteamMachine
 SteamMasterServerUpdater001
 SteamMatchGameSearch001
 SteamMatchMaking001
@@ -48660,7 +48658,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -53495,9 +53493,9 @@ low-pri yield - ../clientdll/autocloud.cpp:591
 low-pri yield - ../clientdll/autocloud.cpp:670
 low-pri yield - ../clientdll/autocloud.cpp:845
 low-pri yield - ../clientdll/autocloud.cpp:936
-low-pri yield - ../clientdll/clientjob.cpp:440
-low-pri yield - ../clientdll/clientjob.cpp:471
-low-pri yield - ../clientdll/clientjob.cpp:780
+low-pri yield - ../clientdll/clientjob.cpp:456
+low-pri yield - ../clientdll/clientjob.cpp:487
+low-pri yield - ../clientdll/clientjob.cpp:796
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - ../clientdll/clientugc.cpp:6938
 low-pri yield - ../clientdll/compatmanager.cpp:2054
@@ -58795,6 +58793,7 @@ pread64
 precise_frame_rate
 prediction resistance not supported
 preference
+preference_settings_path
 preferred-device
 preferredDeliveryMethod
 preferred_appids
@@ -61251,7 +61250,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul  2 2026 20:50:17
+steam Jul  6 2026 22:02:36
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -63851,6 +63850,7 @@ vrfilename
 vrhmd
 vrlink
 vrpathreg.sh
+vrpreferences.json
 vsAd
 vsnprintf
 vtable for
