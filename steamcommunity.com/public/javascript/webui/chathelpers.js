@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10779229";
+var CLSTAMP = "10810628";
 (() => {
   var e,
     t,
@@ -131,7 +131,7 @@ var CLSTAMP = "10779229";
           "./shared_schinese.json": [85436, 7786],
           "./shared_spanish.json": [76736, 2632],
           "./shared_swedish.json": [94625, 1225],
-          "./shared_tchinese.json": [15191, 5241],
+          "./shared_tchinese.json": [37572, 5241],
           "./shared_thai.json": [4230, 976],
           "./shared_turkish.json": [34792, 9152],
           "./shared_ukrainian.json": [27246, 2954],
@@ -178,7 +178,7 @@ var CLSTAMP = "10779229";
           "./shared_schinese.json": [85436, 7786],
           "./shared_spanish.json": [76736, 2632],
           "./shared_swedish.json": [94625, 1225],
-          "./shared_tchinese.json": [15191, 5241],
+          "./shared_tchinese.json": [37572, 5241],
           "./shared_thai.json": [4230, 976],
           "./shared_turkish.json": [34792, 9152],
           "./shared_ukrainian.json": [27246, 2954],
@@ -196,9 +196,9 @@ var CLSTAMP = "10779229";
         }
         (i.keys = () => Object.keys(s)), (i.id = 68042), (e.exports = i);
       },
-      86698: (e, t, n) => {
+      7171: (e, t, n) => {
         "use strict";
-        n(56823);
+        n(12187);
         var s = n(63696),
           i = n(7470);
         function r(e, t) {
@@ -310,7 +310,7 @@ var CLSTAMP = "10779229";
           else n && console.error("Missing config element #", t);
         }
         const g = "presentation_mode";
-        var f = n(36959);
+        var f = n(80683);
         const k = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -418,7 +418,7 @@ var CLSTAMP = "10779229";
           },
           E = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
         s.createContext({});
-        var C = n(96108);
+        var C = n(20544);
         let v = { success: !0, result: C.R };
         class R {
           m_connection = new T();
@@ -938,7 +938,7 @@ var CLSTAMP = "10779229";
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        var Y = n(51600);
+        var Y = n(18173);
         function K(e, t, n, s) {
           var i,
             r = arguments.length,
@@ -1840,7 +1840,7 @@ var CLSTAMP = "10779229";
               })();
           });
       },
-      96108: (e, t, n) => {
+      20544: (e, t, n) => {
         "use strict";
         n.d(t, { $A: () => a, R: () => s, Vr: () => r, zi: () => i });
         const s = 1,
@@ -1848,7 +1848,7 @@ var CLSTAMP = "10779229";
           r = 7,
           a = 19;
       },
-      51600: (e, t, n) => {
+      18173: (e, t, n) => {
         "use strict";
         async function s(e, t = "SHA-256") {
           let n;
@@ -1865,8 +1865,8 @@ var CLSTAMP = "10779229";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => v });
-        var i = n(87118),
-          r = n(31822),
+        var i = n(54346),
+          r = n(5369),
           a = n(63696);
         const o =
           window.addEventListener ||
@@ -2259,15 +2259,15 @@ var CLSTAMP = "10779229";
           return 1e4;
         }
       },
-      87118: (e, t, n) => {
+      54346: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => u, w: () => d });
-        var s = n(51600),
-          i = n(96108),
+        var s = n(18173),
+          i = n(20544),
           r = n(58663),
-          a = n(56738),
-          o = n(84869),
-          c = n(94553);
+          a = n(67118),
+          o = n(72603),
+          c = n(24085);
         class l {
           static InitHeaderFromPacket(e) {
             return new l(void 0, e);
@@ -2437,7 +2437,7 @@ var CLSTAMP = "10779229";
           return t instanceof d ? t : d.InitFromObject(e, t);
         }
       },
-      51037: (e, t, n) => {
+      36921: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => c,
@@ -2605,7 +2605,7 @@ var CLSTAMP = "10779229";
               };
         }
       },
-      94553: (e, t, n) => {
+      24085: (e, t, n) => {
         "use strict";
         n.d(t, { pV: () => s });
         class s {
@@ -2681,7 +2681,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      56823: (e, t, n) => {
+      12187: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2853,7 +2853,7 @@ var CLSTAMP = "10779229";
         4787: "07b24eb37c9e0b433d0c",
         5018: "deaf385b0027de4bc7e8",
         5110: "b6d91308dbed138a2376",
-        5241: "85abe55d560ef90d1dd8",
+        5241: "226debfb6bbf8438469b",
         5341: "671fa39c7d33a83df311",
         5480: "fe1e2469122f1c0d37d0",
         6031: "020e61748b9171357081",
@@ -3022,6 +3022,6 @@ var CLSTAMP = "10779229";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [3987, 9489, 1068], () => o(86698));
+  var c = o.O(void 0, [3987, 9489, 1068], () => o(7171));
   c = o.O(c);
 })();
