@@ -1311,7 +1311,6 @@ $d`D-laM
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP
 0123456789abcdef
 08bX
 0A/8
@@ -2183,7 +2182,6 @@ $d`D-laM
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
 21CefWriteHandlerCppToC
-22:02:36
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -2205,6 +2203,7 @@ $d`D-laM
 22CefRenderHandlerCppToC
 22CefStringVisitorCppToC
 22CefV8InterceptorCppToC
+23:54:06
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -2378,9 +2377,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
-3333
 32767
 32CefDevToolsMessageObserverCppToC
+3333
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -7193,7 +7192,7 @@ Japanese
 JobStarted
 JoinedGroup
 Joystick
-Jul  6 2026
+Jul  8 2026
 July
 June
 K'iche'
@@ -13694,6 +13693,7 @@ controller_steamcontroller_unknown
 controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
+controller_switch2_pro_generic
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right

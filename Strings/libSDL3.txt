@@ -163,6 +163,7 @@
 !"Invalid stencil op enum!"
 !"Invalid swapchain composition enum!"
 !"Invalid texture format enum!"
+!"Invalid transfer buffer usage!"
 !"Invalid vertex format enum!"
 !"Missing compute read-write storage buffer bbinding!"
 !"Missing compute read-write storage texture binding!"
@@ -1891,6 +1892,7 @@ Pipewire: Failed to set audio format parameters
 Pipewire: Failed to start hotplug detection loop
 Pipewire: Failed to start stream loop
 Pipewire: Stream error: %s
+Pipewire: timeout waiting for audio device to be ready
 Playback
 Playing a game
 Popup windows must specify either the 'SDL_WINDOW_TOOLTIP' or the 'SDL_WINDOW_POPUP_MENU' flag
@@ -2121,7 +2123,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1034-g07ecc125c
+SDL-release-3.4.0-1128-gcf6a235a4
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -2541,6 +2543,7 @@ SDL_CreateGPUShader_REAL
 SDL_CreateGPUTexture
 SDL_CreateGPUTexture_REAL
 SDL_CreateGPUTransferBuffer
+SDL_CreateGPUTransferBuffer_REAL
 SDL_CreateGPUXRSession
 SDL_CreateGPUXRSwapchain
 SDL_CreateHapticEffect
@@ -4373,6 +4376,7 @@ Truncated IMA ADPCM block
 Truncated MS ADPCM block
 Truncated data chunk
 Truncated data chunk in WAVE file
+Turtle Beach
 Two-way, Left on Even
 Two-way, Right on Even
 Type
@@ -4573,8 +4577,10 @@ Virtual Throttle
 Virtual Wheel
 Virtual joystick data not found
 Void Gaming PS4 FireBird
+Void Gaming Void GENESIS
 VolumeDown
 VolumeUp
+Voyetra Turtle Beach,Inc.
 Vpitch
 Vplane
 Vulkan
@@ -5104,7 +5110,6 @@ c!s!n,q
 c>6>c
 callback
 calloc
-calloc_func
 camera
 candidates
 capabilities/abs
@@ -5350,7 +5355,6 @@ frame_count
 frames
 fread
 free
-free_func
 french_numbers
 fribidi_charset_to_unicode
 fribidi_get_bidi_types
@@ -5672,7 +5676,6 @@ lt4X<
 main
 make GL context current
 malloc
-malloc_func
 manufacturer
 mappingString
 max_h
@@ -5698,6 +5701,7 @@ min_w
 misc%d
 misc1
 misc1:b11,
+misc1:b11,misc2:b12
 misc1:b11,misc2:b12,
 misc1:b11,paddle1:b12,paddle2:b13,paddle3:b14,paddle4:b15,
 misc1:b11,paddle1:b12,paddle2:b13,paddle3:b14,paddle4:b15,touchpad:b17,misc2:b16
@@ -6005,6 +6009,7 @@ pw_thread_loop_new
 pw_thread_loop_signal
 pw_thread_loop_start
 pw_thread_loop_stop
+pw_thread_loop_timed_wait
 pw_thread_loop_unlock
 pw_thread_loop_wait
 queue
@@ -6016,7 +6021,6 @@ read size overflow
 readdir
 readlink
 realloc
-realloc_func
 realpath
 reason
 rect
