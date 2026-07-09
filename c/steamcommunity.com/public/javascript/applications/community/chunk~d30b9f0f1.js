@@ -4320,7 +4320,7 @@
           queryFn: async () => {
             const _ = {
                 gid: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = `${_._.COMMUNITY_BASE_URL}sale/ajaxgetsalepagefeaturedapptagid/`,
               _ = await _().get(_, {
@@ -4523,7 +4523,7 @@
         }
         async ForceLoadOptInPage(_) {
           let _ = {
-            sessionid: _._.SESSIONID,
+            sessionid: (0, _._)(),
             origin: self.origin,
             _: _._.COUNTRY || "US",
             _: _._.LANGUAGE,
@@ -4576,7 +4576,7 @@
           var _;
           const _ = _._.COMMUNITY_BASE_URL + "saleoptin/ajaxgetactiveoptins",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               origin: self.origin,
             };
           let _ = null;
@@ -4640,7 +4640,7 @@
           return (_.optin_tagid = void 0), void (_.optin_prune_tagid = void 0);
         const _ = _._.COMMUNITY_BASE_URL + "saleoptin/ajaxgetoptintagids",
           _ = {
-            sessionid: _._.SESSIONID,
+            sessionid: (0, _._)(),
             origin: self.origin,
             optin_name: _,
           };
@@ -5001,7 +5001,7 @@
           let _ = this.m_editModel.GetGID(),
             _ = new URLSearchParams();
           if (
-            (_.append("sessionid", _._.SESSIONID),
+            (_.append("sessionid", (0, _._)()),
             this.m_editModel.GetEventModel().BHasTag("mod_reviewed") &&
               this.m_editModel.AddTag("mod_require_rereview"),
             this.m_editModel.BHasTag("auto_migrated") &&
@@ -5222,7 +5222,7 @@
           );
           let _ = new URLSearchParams();
           return (
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("clan_event_gid", _),
             _.append("clan_account_id", "" + _.GetAccountID()),
             _.append("language", (0, _.LgB)(_)),
@@ -5243,7 +5243,7 @@
           );
           let _ = new URLSearchParams();
           return (
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("clan_event_gid", _),
             _.append("clan_account_id", "" + _.GetAccountID()),
             _.append("notification_type", "" + _),
@@ -5257,7 +5257,7 @@
         async SetupPartnerEmailCampaign(_, _, _) {
           let _ = _._.COMMUNITY_BASE_URL + "eventemail/ajaxsetuppartneremail",
             _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clanid", "" + _.GetAccountID()),
             _.append("gidevent", _);
           let _ = await _().post(_, _, {
@@ -5331,7 +5331,7 @@
               _._.COMMUNITY_BASE_URL +
               "eventadmin/ajaxupdatepartneremailtarget",
             _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clan_accountid", "" + _.GetAccountID()),
             _.append("gid_event", _),
             _.append("partner_capability", "" + _.capability),
@@ -5349,7 +5349,7 @@
         async GetPartnerCapabilities(_) {
           const _ = _._.COMMUNITY_BASE_URL + "eventadmin/ajaxgetcapabilities",
             _ = new URLSearchParams();
-          __webpack_require__.append("sessionid", _._.SESSIONID);
+          __webpack_require__.append("sessionid", (0, _._)());
           return (
             await _().post(_, _, {
               withCredentials: !0,
@@ -6096,7 +6096,7 @@
                 var _;
                 const _ = _._.STORE_BASE_URL + "events_admin/ajaxgetsolrdata",
                   _ = {
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                     clan_account_id: _,
                     event_gid: _,
                   };
@@ -8998,7 +8998,7 @@
           if (this.m_events) return this.m_events;
           let _ = _._.COMMUNITY_BASE_URL + "sale/ajaxdiscountevents",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           try {
             let _ = await _().get(_, {
@@ -9033,7 +9033,7 @@
           if (!this.m_eventDetailsMap.has(_)) {
             let _ = _._.COMMUNITY_BASE_URL + "sale/ajaxdiscounteventdetails",
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 _: _,
               };
             try {
@@ -9508,18 +9508,31 @@
                 return !0;
             return !1;
           }, [_, _]),
-          _ = _.useMemo(() => {
-            if (!_ || 0 == _.size || !_ || !_) return !1;
+          [_, _, _, _] = _.useMemo(() => {
+            let _ = "#Sale_NotAllowedCapsule",
+              _ = "#Sale_NotAllowedCapsule_ttip",
+              _ = "";
+            if (!_ || 0 == _.size || !_ || !_) return [!1, _, _, _];
             let _ = !1;
-            return (
-              (_ =
-                "sub" == _.type || "bundle" == _.type
-                  ? _
-                    ? _.included_appids.every((_) => !!_.has(_))
-                    : _.included_appids.some((_) => !!_.has(_))
-                  : !!_.has(_._)),
-              !_
-            );
+            if ("sub" == _.type || "bundle" == _.type) {
+              if (
+                ((_ = _
+                  ? _.included_appids.every((_) => !!_.has(_))
+                  : _.included_appids.some((_) => !!_.has(_))),
+                !_)
+              ) {
+                (_ = _.included_appids
+                  .filter((_) => !_.has(_))
+                  .sort()
+                  .join(", ")),
+                  "sub" == _.type
+                    ? ((_ = "#Sale_Package_NotAllowedCapsule"),
+                      (_ = "#Sale_Package_NotAllowedCapsule_ttip"))
+                    : ((_ = "#Sale_Bundle_NotAllowedCapsule"),
+                      (_ = "#Sale_Bunele_NotAllowedCapsule_ttip"));
+              }
+            } else _ = !!_.has(_._);
+            return [!_, _, _, _];
           }, [_, _, _, _]),
           _ = (0, _._)(() => _.visibility_index),
           { strStoreURL: _ } = (0, _._)(_);
@@ -9567,9 +9580,9 @@
               (0, _.jsxs)("div", {
                 className: _.SaleCapsuleConflict,
                 children: [
-                  (0, _._)("#Sale_NotAllowedCapsule"),
+                  (0, _._)(_),
                   (0, _.jsx)(_._, {
-                    tooltip: (0, _._)("#Sale_NotAllowedCapsule_ttip"),
+                    tooltip: (0, _._)(_, _),
                   }),
                 ],
               }),
@@ -17062,7 +17075,6 @@
                     );
                     var _;
                   },
-                  variant: "default",
                   radius: "sm",
                   children: [
                     (0, _.jsx)(_._.Item, {
@@ -17625,7 +17637,7 @@
           try {
             const _ = {
                 saleid: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = _._.COMMUNITY_BASE_URL + "sale/ajaxoptineventdetail",
               _ = await _().get(_, {
@@ -18960,7 +18972,7 @@
                 const _ = _._.STORE_BASE_URL + "events_admin/ajaxupdatetags",
                   _ = new _._(_.clan_steamid),
                   _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("clan_accountid", "" + _.GetAccountID()),
                   _.append("gid_announcement", _.announcement_gid),
                   _.append("add_tags", _);
@@ -22721,7 +22733,7 @@
           try {
             const _ = {
                 appid: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = _._.COMMUNITY_BASE_URL + "sale/ajaxgetcommunityitemsfordrops",
               _ = await _().get(_, {
@@ -34525,7 +34537,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -34580,26 +34591,32 @@
           },
         });
       }
-      const _ = (0, _._)((_) => {
-        const _ = _.editModel,
-          [_, _] = _.useState(
-            () => _.eInitLangLanguage || _.GetCurEditLanguage(),
-          );
+      function _(_) {
+        const { editModel: _, eInitLangLanguage: _ } = _,
+          [_, _, _, _, _] = (0, _._)(() => {
+            var _;
+            return [
+              null !== (_ = _.GetCurEditLanguage()) && void 0 !== _ ? _ : _,
+              _.BHasLanguage,
+              _.BDoesSupportLanguage,
+              _.LastTimeLanguageUpdate,
+              _.GetIncludedRealmList(),
+            ];
+          });
         return (0, _.jsx)(_._, {
           selectedLang: _,
           fnOnLanguageChanged: (_) => {
-            _(_),
-              _.SetCurEditLanguage(_) &&
-                _.OnLanguageChange &&
-                _.OnLanguageChange();
+            _.SetCurEditLanguage(_) &&
+              _.OnLanguageChange &&
+              _.OnLanguageChange();
           },
-          fnLangHasData: _.BHasLanguage,
-          fnIsLangSupported: _.BDoesSupportLanguage,
-          fnLastUpdateRTime: _.LastTimeLanguageUpdate,
+          fnLangHasData: _,
+          fnIsLangSupported: _,
+          fnLastUpdateRTime: _,
           fnFilterLanguage: (_) => _ !== _.X51,
-          realms: _.GetIncludedRealmList(),
+          realms: _,
         });
-      });
+      }
       function _(_) {
         const { editModel: _ } = _,
           [_, _, _] = (0, _._)(() => [
@@ -36152,6 +36169,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_, _, _, _, _) {
@@ -36247,7 +36265,7 @@
         async UploadSingleImage(_, _, _, _) {
           var _, _, _;
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("elanguage", "" + _),
             _.append("originalname", _);
           const _ = _.GetCurrentImageOption();
@@ -36362,7 +36380,7 @@
           {
             const _ = (0, _._)(this.m_strUploadPath, "ajax", "status"),
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 requestid: _.data.requestID,
                 elanguage: _,
                 originalname: _,
@@ -36418,7 +36436,7 @@
           var _, _, _;
           const _ = new FormData();
           _.append("filesize", "" + _.file.size),
-            _.append("sessionid", _._.SESSIONID);
+            _.append("sessionid", (0, _._)());
           const _ =
               (0, _._)(this.m_strUploadPath, "ajax", "uploadurl") ||
               this.m_strUploadPath,
@@ -37664,7 +37682,7 @@
           if (this.BIsEqual(_, this.m_mapOriginalJSON.get(_))) return _._;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("clanAccountID", "" + _.GetAccountID()),
               _.append("gidClanEvent", "" + _),
               _.append("jsonData", JSON.stringify(_));
@@ -39384,7 +39402,7 @@
           let _ = _.join(",");
           _ && (_.length > 0 && (_ += ","), (_ += _.ToModString()));
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clan_accountid", "" + _.GetAccountID()),
             _.append("gid_announcement", _),
             _.append("add_tags", _),
@@ -39399,7 +39417,7 @@
         async UpdatePartnerEventType(_, _, _, _) {
           const _ = _._.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clan_accountid", "" + _.GetAccountID()),
             _.append("gid_event", _),
             _.append("new_event_type", "" + _),
@@ -41995,6 +42013,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -42007,38 +42027,50 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!_),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(Date.now()),
           _ = _.useCallback(
             (_) => {
-              _ || _(_);
+              _(_), _ || _(_);
             },
             [_],
-          );
-        return (0, _.jsx)(_._, {
-          trigger: "repeated",
-          onVisibilityChange: _,
-          children: (0, _.jsxs)(_._, {
-            focusable: !0,
-            onGamepadFocus: () => _(!0),
-            onMouseEnter: () => _ && _(!0),
-            onGamepadBlur: () => _(!1),
-            onMouseLeave: () => _ && _(!1),
-            onActivate: _,
-            onOKActionDescription: (0, _._)("#DiscoveryQueue_OpenWizard"),
-            className: (0, _._)(
-              _.DiscoveryQueueWidgetCtn,
-              _,
-              void 0 !== _ && _.Initialized,
-            ),
-            ..._,
-            children: [
-              (0, _.jsx)(_, {
-                rgAppIDs: _,
-                bAnimationEnabled: !_ && _,
-              }),
-              _,
-            ],
-          }),
-        });
+          ),
+          _ = _.useCallback(() => {
+            (_.current = Date.now()), !_ && _ && _(!0);
+          }, [_, _]);
+        return (
+          (0, _._)(() => {
+            Date.now() - _.current > 3e4 && !_ && _(!1);
+          }, 5e3),
+          (0, _._)(window, "scroll", _),
+          (0, _._)(window, "mousemove", _),
+          (0, _.jsx)(_._, {
+            trigger: "repeated",
+            onVisibilityChange: _,
+            children: (0, _.jsxs)(_._, {
+              focusable: !0,
+              onGamepadFocus: () => _(!0),
+              onMouseEnter: () => _ && _(!0),
+              onGamepadBlur: () => _(!1),
+              onMouseLeave: () => _ && _(!1),
+              onActivate: _,
+              onOKActionDescription: (0, _._)("#DiscoveryQueue_OpenWizard"),
+              className: (0, _._)(
+                _.DiscoveryQueueWidgetCtn,
+                _,
+                void 0 !== _ && _.Initialized,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)(_, {
+                  rgAppIDs: _,
+                  bAnimationEnabled: !_ && _,
+                }),
+                _,
+              ],
+            }),
+          })
+        );
       }
       let _;
       function _(_) {
@@ -42051,13 +42083,11 @@
         return (
           _.useEffect(() => {
             if (!_ || !_) return;
-            let _;
             _ || (_ = performance.now());
+            const _ = _.offsetWidth;
+            let _;
             const _ = () => {
-              const _ =
-                (((performance.now() - _) / 40) %
-                  (_.offsetWidth - 3 * _ - 16)) +
-                _;
+              const _ = (((performance.now() - _) / 40) % (_ - 3 * _ - 16)) + _;
               (_.style.transform = `translateX( -${_}px )`),
                 (_ = requestAnimationFrame(_));
             };
@@ -42456,7 +42486,7 @@
           _ = _.map((_) => {
             if (!_.community_definition || !_.community_definition.item_name)
               return null;
-            const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
+            const _ = `${_._.COMMUNITY_ASSETS_BASE_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
             return (0, _.jsx)(
               "div",
               {
@@ -43549,7 +43579,6 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -43580,7 +43609,6 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -43641,7 +43669,7 @@
           : null;
       }
       function _(_) {
-        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
+        const { creatorAccountID: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -43654,7 +43682,7 @@
         const _ = (0, _._)(null == _ ? void 0 : _.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
+          className: (0, _._)(_().BottomCreatorRow, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -43941,19 +43969,16 @@
             strDoubleCapsuleMessage: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = _ && !_;
+          { bIsOwned: _ } = (0, _._)(_);
         if (_ && _ && _.item_type == _._._ && _.appid)
           return (0, _.jsx)(_._, {
             appid: _.appid,
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && _),
-          _ = Boolean(_);
+        const _ = Boolean(_ && _);
         return (0, _.jsx)(_, {
           _: _,
-          bShowAsMuted: _,
           bHidePrice: _,
           bShowInLibraryInsteadOfPrice: _,
           bHidePlatforms: _,

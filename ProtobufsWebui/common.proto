@@ -2977,7 +2977,6 @@ message CVRGamepadUI_Frame {
 	repeated string steamui_page_overlay_keys = 7;
 	optional bool is_streaming_client = 8;
 	optional int32 dock_location = 9 [(.description) = "enum"];
-	optional string tmp_title = 1000;
 }
 
 // Used by: common.proto
@@ -3068,6 +3067,15 @@ message CVRGamepadUI_Message_FocusDashboardBar_Request {
 }
 
 message CVRGamepadUI_Message_FocusDashboardBar_Response {
+}
+
+message CVRGamepadUI_Message_GamepadButtonAction_Request {
+	optional int32 button = 1 [(.description) = "enum"];
+	optional bool button_down = 2;
+	optional bool repeat = 3;
+}
+
+message CVRGamepadUI_Message_GamepadButtonAction_Response {
 }
 
 message CVRGamepadUI_Message_GetAppIcon_Request {
@@ -3823,6 +3831,7 @@ message StoreItem_Platforms {
 	optional int32 steam_deck_compat_category = 11 [(.description) = "enum"];
 	optional int32 steam_os_compat_category = 12 [(.description) = "enum"];
 	optional int32 steam_frame_compat_category = 13 [(.description) = "enum"];
+	optional int32 steam_machine_compat_category = 14 [(.description) = "enum"];
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3909,6 +3918,7 @@ message StoreItem_RelatedItems {
 	repeated .StoreItem_Demo standalone_demos = 5;
 	repeated .StoreItem_Playtest playtests = 6;
 	optional .StoreItem_RelatedF2P related_f2p = 7;
+	repeated uint32 dlc_parent_appids = 9;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

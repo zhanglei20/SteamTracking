@@ -298,7 +298,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             checked: _,
@@ -306,7 +307,7 @@
             disabled: _,
             children: _,
             ref: _,
-            variant: _ = "default",
+            variant: _,
             color: _,
             align: _ = "center",
             ..._
@@ -315,7 +316,8 @@
           _ = _ ? _ : _,
           _ = () => {
             _ || (_ && __webpack_require__(!!_ || !_));
-          };
+          },
+          _ = (0, _._)("Checkbox", _);
         return (0, _.jsxs)(_._, {
           align: _,
           ref: _,

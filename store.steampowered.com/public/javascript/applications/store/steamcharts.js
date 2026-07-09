@@ -678,7 +678,7 @@
     },
     57757: (e, t, a) => {
       "use strict";
-      a.d(t, { S: () => d });
+      a.d(t, { S: () => u });
       var n = a(7850),
         r = a(83392),
         s = a(40704);
@@ -694,54 +694,56 @@
       }
       var i = a(21895),
         l = a(64238),
-        c = a.n(l);
-      function d(e) {
+        c = a.n(l),
+        d = a(66922);
+      function u(e) {
         const {
             checked: t,
             onChange: a,
             disabled: s,
             children: l,
-            ref: d,
-            variant: p = "default",
-            color: g,
-            align: h = "center",
-            ..._
+            ref: u,
+            variant: g,
+            color: h,
+            align: _ = "center",
+            ...x
           } = e,
-          x = "indeterminate" === t,
-          S = x ? m : o,
-          C = () => {
-            s || (a && a(!!x || !t));
-          };
+          S = "indeterminate" === t,
+          C = S ? p : o,
+          j = () => {
+            s || (a && a(!!S || !t));
+          },
+          v = (0, d.f)("Checkbox", g);
         return (0, n.jsxs)(r.s, {
-          align: h,
-          ref: d,
+          align: _,
+          ref: u,
           role: "checkbox",
-          "aria-checked": x ? "mixed" : t,
-          "data-state": u(t),
-          className: c()(i.Root, i[`Variant-${p}`], s && i.Disabled),
-          onClick: C,
+          "aria-checked": S ? "mixed" : t,
+          "data-state": m(t),
+          className: c()(i.Root, i[`Variant-${v}`], s && i.Disabled),
+          onClick: j,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (C(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (j(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
-          "data-accent-color": g,
-          ..._,
+          "data-accent-color": h,
+          ...x,
           children: [
             (0, n.jsx)("div", {
               className: i.Checkbox,
-              children: t && (0, n.jsx)(S, { className: i.Icon }),
+              children: t && (0, n.jsx)(C, { className: i.Icon }),
             }),
             l,
           ],
         });
       }
-      function u(e) {
+      function m(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function m(e) {
+      function p(e) {
         return (0, n.jsx)("svg", {
           viewBox: "0 0 16 16",
           fill: "none",
@@ -5618,7 +5620,7 @@
                 ...m
               } = e,
               p = r.useRef(0),
-              g = t.GetStoreItemType() == o.c6.qI ? t.GetAppID() : null,
+              g = t && t.GetStoreItemType() == o.c6.qI ? t.GetAppID() : null,
               h = (0, l.n9)(),
               _ = r.useMemo(
                 () => s.Ay.GetLinkParam({ ...h, feature: a || h.feature }, n),
@@ -5626,7 +5628,7 @@
               ),
               x = r.useMemo(() => c.A.GetCuratorClanIDParam(h), [h]),
               S = r.useMemo(
-                () => c.A.AddNavParamToURL(t.GetStorePageURL(), _, x),
+                () => c.A.AddNavParamToURL(t ? t.GetStorePageURL() : "", _, x),
                 [t, _, x],
               ),
               C = (0, i.b)(),
@@ -6227,18 +6229,18 @@
         }
       }
       !(function (e) {
-        (e.GetWeeklyTopSellers = function (e, t) {
+        (e.GetWeeklyTopSellers = function (e, t, a) {
           return e.SendMsg(
             "StoreTopSellers.GetWeeklyTopSellers#1",
-            (0, u.I8)(T, t),
+            (0, u.I8)(T, t, a),
             D,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
           );
         }),
-          (e.GetCountryList = function (e, t) {
+          (e.GetCountryList = function (e, t, a) {
             return e.SendMsg(
               "StoreTopSellers.GetCountryList#1",
-              (0, u.I8)(N, t),
+              (0, u.I8)(N, t, a),
               B,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );

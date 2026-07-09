@@ -6524,6 +6524,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _, _, _, _;
@@ -6548,27 +6549,29 @@
                   : "",
             }),
           ),
-          _ = _._.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_1",
+          _ = (0, _._)(
+            _._.Localize(
+              "#Sale_Reservation_Change_NoDeposit_1_Emphasis",
+              null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                ? _
+                : "",
+            ),
+            (0, _.jsx)("b", {}),
+            (0, _.jsx)("b", {}),
+          );
+        _.queue_in_waitlist &&
+          ((_ = (null == _ ? void 0 : _.position_is_waitlist)
+            ? _._.Localize("#Reservation_Change_WaitList")
+            : _._.Localize("#Reservation_JoinWaitList")),
+          (_ = _._.LocalizeReact(
+            "#Reservation_Change_WaitList_Desc2",
             (0, _.jsx)("b", {
               children:
                 null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
                   ? _
                   : "",
             }),
-          );
-        return (
-          _.queue_in_waitlist &&
-            ((_ = _._.Localize("#Reservation_Change_WaitList")),
-            (_ = _._.LocalizeReact(
-              "#Reservation_Change_WaitList_Desc2",
-              (0, _.jsx)("b", {
-                children:
-                  null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
-                    ? _
-                    : "",
-              }),
-            ))),
+          ))),
           (null == _ ? void 0 : _.position_is_waitlist) &&
             (_ = _._.LocalizeReact(
               "#Reservation_Change_WaitList_Desc1",
@@ -6578,7 +6581,13 @@
                     ? _
                     : "",
               }),
-            )),
+            ));
+        let _ = _;
+        return (
+          _.queue_in_waitlist &&
+            _ &&
+            !(null == _ ? void 0 : _.position_is_waitlist) &&
+            (_ = _._.Localize("#Sale_CancelReservation")),
           (0, _.jsxs)("div", {
             className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
             children: [
@@ -6893,6 +6902,22 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = _ && (0, _._)(_.reservation_state);
+        return !!(
+          (_ &&
+            _.reservation_state === _._.k_EPurchaseReservationState_Reserved &&
+            (null == _ ? void 0 : _.position_is_waitlist)) ||
+          (!_ && (null == _ ? void 0 : _.queue_in_waitlist))
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7093,6 +7118,9 @@
                       (_.rtime_estimated_notification =
                         _.rtime_estimated_notification()),
                       (_.notificaton_token = _.notificaton_token()),
+                      (_.queue_waitlist_token = _.queue_waitlist_token()),
+                      (_.position_is_waitlist = _.position_is_waitlist()),
+                      (_.user_waitlist_token = _.user_waitlist_token()),
                       _.setQueryData(
                         (0, _._)(null == _ ? void 0 : _.packageid),
                         _,
@@ -8468,7 +8496,7 @@
           var _;
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _ && _.append("datarecord", _),
             _ && _.append("fake_open", "" + _),
             _.append("door_index", "" + _),
@@ -8553,8 +8581,7 @@
           var _;
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
-            _.append("clan_accountid", "" + _);
+          _.append("sessionid", (0, _._)()), _.append("clan_accountid", "" + _);
           let _ = null;
           try {
             let _ = await _().post(_, _, {
@@ -8969,7 +8996,7 @@
           if (!_ || 0 == _.length) return !0;
           let _ = (0, _._)() + "actions/ajaxgetpartnereventsreport",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               clan_account_id: _.GetAccountID(),
               gidlist: _.join(","),
             };
@@ -9316,7 +9343,7 @@
             "/deletetopic/";
           null != _ && "" != _ && (_ += _ + "/");
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID), _.append("gidforumtopic", _);
+          _.append("sessionid", (0, _._)()), _.append("gidforumtopic", _);
           let _ = await _().post(_, _, {
             withCredentials: !0,
             cancelToken: _.token,
@@ -14753,50 +14780,50 @@
         }
       }
       !(function (_) {
-        (_.CreatePlan = function (_, _) {
+        (_.CreatePlan = function (_, _, _) {
           return _.SendMsg(
             "PromotionPlanning.CreatePlan#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.CreateTentativePlan = function (_, _) {
+          (_.CreateTentativePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.CreateTentativePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlan = function (_, _) {
+          (_.UpdatePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlanPartnerInfo = function (_, _) {
+          (_.UpdatePlanPartnerInfo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlanPartnerInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlanInputData = function (_, _) {
+          (_.UpdatePlanInputData = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlanInputData#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -14804,26 +14831,31 @@
               },
             );
           }),
-          (_.DeletePlan = function (_, _) {
+          (_.DeletePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.DeletePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPlan = function (_, _) {
-            return _.SendMsg("PromotionPlanning.GetPlan#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetPlan = function (_, _, _) {
+            return _.SendMsg(
+              "PromotionPlanning.GetPlan#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetAllActivePlan = function (_, _) {
+          (_.GetAllActivePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllActivePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14831,10 +14863,10 @@
               },
             );
           }),
-          (_.GetPlanCompletedInDateRange = function (_, _) {
+          (_.GetPlanCompletedInDateRange = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanCompletedInDateRange#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14842,10 +14874,10 @@
               },
             );
           }),
-          (_.GetPlanByAssociationID = function (_, _) {
+          (_.GetPlanByAssociationID = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByAssociationID#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14853,10 +14885,10 @@
               },
             );
           }),
-          (_.GetPlansUpdatedSince = function (_, _) {
+          (_.GetPlansUpdatedSince = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlansUpdatedSince#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14864,10 +14896,10 @@
               },
             );
           }),
-          (_.SearchPlan = function (_, _) {
+          (_.SearchPlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SearchPlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14875,10 +14907,10 @@
               },
             );
           }),
-          (_.GetAllPlansForApps = function (_, _) {
+          (_.GetAllPlansForApps = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllPlansForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14886,10 +14918,10 @@
               },
             );
           }),
-          (_.GetAllPlansForPartner = function (_, _) {
+          (_.GetAllPlansForPartner = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllPlansForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14898,10 +14930,10 @@
               },
             );
           }),
-          (_.GetPlanByInputAccessKey = function (_, _) {
+          (_.GetPlanByInputAccessKey = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByInputAccessKey#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14910,20 +14942,20 @@
               },
             );
           }),
-          (_.MarkLocalizationAssetComplete = function (_, _) {
+          (_.MarkLocalizationAssetComplete = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.MarkLocalizationAssetComplete#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SendNotification = function (_, _) {
+          (_.SendNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SendNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -14931,10 +14963,10 @@
               },
             );
           }),
-          (_.GetSentNotification = function (_, _) {
+          (_.GetSentNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetSentNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14942,30 +14974,30 @@
               },
             );
           }),
-          (_.ResendNotification = function (_, _) {
+          (_.ResendNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.ResendNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetPromotionEmailTarget = function (_, _) {
+          (_.SetPromotionEmailTarget = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SetPromotionEmailTarget#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPromotionPlanSalesDaily = function (_, _) {
+          (_.GetPromotionPlanSalesDaily = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPromotionPlanSalesDaily#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14973,10 +15005,10 @@
               },
             );
           }),
-          (_.GetPromotionPlanForSalePages = function (_, _) {
+          (_.GetPromotionPlanForSalePages = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPromotionPlanForSalePages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14984,20 +15016,20 @@
               },
             );
           }),
-          (_.CreateSalePageForPromo = function (_, _) {
+          (_.CreateSalePageForPromo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.CreateSalePageForPromo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUpcomingScheduledDiscounts = function (_, _) {
+          (_.GetUpcomingScheduledDiscounts = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetUpcomingScheduledDiscounts#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15005,10 +15037,10 @@
               },
             );
           }),
-          (_.GetSalePageCandidatesForPromo = function (_, _) {
+          (_.GetSalePageCandidatesForPromo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetSalePageCandidatesForPromo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15016,10 +15048,10 @@
               },
             );
           }),
-          (_.GetAdvertisingAppsForPartner = function (_, _) {
+          (_.GetAdvertisingAppsForPartner = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAdvertisingAppsForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15029,20 +15061,20 @@
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.SetInvite = function (_, _) {
+          (_.SetInvite = function (_, _, _) {
             return _.SendMsg(
               "PromotionEventInvites.SetInvite#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-            (_.GetInvite = function (_, _) {
+            (_.GetInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.GetInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -15050,40 +15082,40 @@
                 },
               );
             }),
-            (_.AcceptInvite = function (_, _) {
+            (_.AcceptInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.AcceptInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CancelInvite = function (_, _) {
+            (_.CancelInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.CancelInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.ResendEmailInvite = function (_, _) {
+            (_.ResendEmailInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.ResendEmailInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.GetEmailTargets = function (_, _) {
+            (_.GetEmailTargets = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.GetEmailTargets#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
@@ -15092,10 +15124,10 @@
             });
         })(_ || (_ = {})),
         (function (_) {
-          _.GetOptInDemoStats = function (_, _) {
+          _.GetOptInDemoStats = function (_, _, _) {
             return _.SendMsg(
               "PromotionStats.GetOptInDemoStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15713,7 +15745,7 @@
                         strTitle: "Clear Rewards for Summer 2022",
                         onOK: async () => {
                           const _ = new FormData();
-                          _.append("sessionid", _._.SESSIONID),
+                          _.append("sessionid", (0, _._)()),
                             _.append("clan_accountid", "" + _._.CLANACCOUNTID),
                             _.append("event_id", "" + _._._);
                           const _ = await _().post(
@@ -19800,8 +19832,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
       }
@@ -19811,16 +19844,28 @@
           rtEstimatedNotifcationDate: _,
           strUrlLearnMoreLink: _,
           bInReservationQueue: _,
+          bWaitlistIsActive: _,
+          reservedHardwareDetail: _,
+          bHideLabel: _,
         } = _;
-        if (!_ || !_)
+        let _ = _._.Localize("#Sale_Reservation_Fallback_V2"),
+          _ = !1;
+        if (
+          (_
+            ? (_ = _._.Localize("#Sale_Reservation_Fallback_user_V2"))
+            : _ &&
+              _ &&
+              !_.position_is_waitlist &&
+              ((_ = _._.Localize(
+                "#Reservation_Join_Waitlist_Cancel_Reservation",
+              )),
+              (_ = !0)),
+          !_ || !_ || _)
+        )
           return (0, _.jsx)("div", {
             className: _().Ctn,
             children: (0, _.jsx)(_._, {
-              elReservationMessage: _._.Localize(
-                _
-                  ? "#Sale_Reservation_Fallback_user_V2"
-                  : "#Sale_Reservation_Fallback_V2",
-              ),
+              elReservationMessage: _,
               strUrlLearnMoreLink: _,
             }),
           });
@@ -19885,19 +19930,29 @@
             }
             break;
           case "#Sale_Reservation_AvailabilityUnknown":
-            _ = _
-              ? "#Sale_Reservation_Fallback_user_V2"
-              : "#Sale_Reservation_Fallback_V2";
+            _ = void 0;
             break;
           default:
             _ = "#Sale_Reservation_Fallback";
         }
-        return (0, _.jsx)("div", {
+        return (0, _.jsxs)("div", {
           className: _().Ctn,
-          children: (0, _.jsx)(_._, {
-            elReservationMessage: (0, _._)(_, _, _, _, ""),
-            strUrlLearnMoreLink: _,
-          }),
+          children: [
+            (0, _.jsx)("div", {
+              children:
+                !_ &&
+                !!_ &&
+                (0, _._)(
+                  _
+                    ? "#Sale_Reservation_YourExpectedDate"
+                    : "#Sale_Reservation_ExpectedDate",
+                ),
+            }),
+            (0, _.jsx)(_._, {
+              elReservationMessage: _ ? (0, _._)(_, _, _, _, "") : _,
+              strUrlLearnMoreLink: _,
+            }),
+          ],
         });
       }
       var _ = __webpack_require__("chunkid");
@@ -19913,11 +19968,12 @@
       function _(_) {
         var _;
         const {
-          reservationDef: _,
-          hardwareDetail: _,
-          bPSULessModel: _,
-          reservedHardwareDetail: _,
-        } = _;
+            reservationDef: _,
+            hardwareDetail: _,
+            bPSULessModel: _,
+            reservedHardwareDetail: _,
+          } = _,
+          _ = _(_);
         if (
           !_._.logged_in &&
           (_.requires_reservation || _.account_restricted_from_purchasing)
@@ -19935,7 +19991,7 @@
                   ),
                 }),
               });
-        if (_(_))
+        if (_)
           return (0, _.jsx)(_, {
             hardwareDetail: _,
             bPSULessModel: _,
@@ -19998,7 +20054,12 @@
       }
       function _(_) {
         var _;
-        const { hardwareDetail: _, reservationDef: _, section: _ } = _,
+        const {
+            hardwareDetail: _,
+            reservationDef: _,
+            section: _,
+            reservedHardwareDetail: _,
+          } = _,
           _ = !(
             _.inventory_available ||
             (null != _.reservation_state &&
@@ -20053,7 +20114,8 @@
                 }),
           });
         const _ =
-          _.reservation_state === _._.k_EPurchaseReservationState_Reserved;
+            _.reservation_state === _._.k_EPurchaseReservationState_Reserved,
+          _ = !!_.queue_in_waitlist;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.expecteddate, "ReservationExpectedDateCtn"),
           children: (0, _.jsx)("div", {
@@ -20062,30 +20124,20 @@
               ? (0, _.jsx)(_._, {
                   text: _,
                 })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    _.notificaton_token &&
-                      _.rtime_estimated_notification &&
-                      "#Sale_Reservation_AvailabilityUnknown" !=
-                        _.notificaton_token &&
-                      (0, _.jsx)(_.Fragment, {
-                        children: _._.Localize(
-                          _
-                            ? "#Sale_Reservation_YourExpectedDate"
-                            : "#Sale_Reservation_ExpectedDate",
-                        ),
-                      }),
-                    (0, _.jsx)(_, {
-                      strUrlLearnMoreLink:
-                        null === (_ = _.internal_section_data) || void 0 === _
-                          ? void 0
-                          : _.reservation_learn_more_link,
-                      rtEstimatedNotifcationDate:
-                        _.rtime_estimated_notification,
-                      strToken: _.notificaton_token,
-                      bInReservationQueue: _,
-                    }),
-                  ],
+              : (0, _.jsx)(_, {
+                  strUrlLearnMoreLink:
+                    null === (_ = _.internal_section_data) || void 0 === _
+                      ? void 0
+                      : _.reservation_learn_more_link,
+                  rtEstimatedNotifcationDate: _.rtime_estimated_notification,
+                  strToken: _.notificaton_token,
+                  bInReservationQueue: _,
+                  bWaitlistIsActive: _,
+                  reservedHardwareDetail: _,
+                  bHideLabel:
+                    _ &&
+                    _ &&
+                    (null == _ ? void 0 : _.packageid) !== _.packageid,
                 }),
           }),
         });
@@ -22587,10 +22639,10 @@
       }
       var _;
       !(function (_) {
-        (_.GetMostPlayedGames = function (_, _) {
+        (_.GetMostPlayedGames = function (_, _, _) {
           return _.SendMsg(
             "SteamCharts.GetMostPlayedGames#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -22599,10 +22651,10 @@
             },
           );
         }),
-          (_.GetGamesByConcurrentPlayers = function (_, _) {
+          (_.GetGamesByConcurrentPlayers = function (_, _, _) {
             return _.SendMsg(
               "SteamCharts.GetGamesByConcurrentPlayers#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -22611,10 +22663,10 @@
               },
             );
           }),
-          (_.GetTopReleasesPages = function (_, _) {
+          (_.GetTopReleasesPages = function (_, _, _) {
             return _.SendMsg(
               "SteamCharts.GetTopReleasesPages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -22623,10 +22675,10 @@
               },
             );
           }),
-          (_.GetBestOfYearPages = function (_, _) {
+          (_.GetBestOfYearPages = function (_, _, _) {
             return _.SendMsg(
               "SteamCharts.GetBestOfYearPages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -22635,10 +22687,10 @@
               },
             );
           }),
-          (_.GetMostPlayedSteamDeckGames = function (_, _) {
+          (_.GetMostPlayedSteamDeckGames = function (_, _, _) {
             return _.SendMsg(
               "SteamCharts.GetMostPlayedSteamDeckGames#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -22647,10 +22699,10 @@
               },
             );
           }),
-          (_.GetMonthTopAppReleases = function (_, _) {
+          (_.GetMonthTopAppReleases = function (_, _, _) {
             return _.SendMsg(
               "SteamCharts.GetMonthTopAppReleases#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -22659,10 +22711,10 @@
               },
             );
           }),
-          (_.GetYearTopAppReleases = function (_, _) {
+          (_.GetYearTopAppReleases = function (_, _, _) {
             return _.SendMsg(
               "SteamCharts.GetYearTopAppReleases#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -29866,7 +29918,8 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { disabled: _ } = _;
         return _
@@ -29897,36 +29950,64 @@
             className: (0, _._)(_.noreserve, "NoReserverMsg"),
             children: _._.Localize("#Sale_Reservation_CanceledPendingRefund"),
           });
-        if (
-          _.requires_reservation &&
-          !_.reservation_not_allowed &&
-          _.collection_time_active
-        )
-          return (0, _.jsx)("div", {
-            className: _.purchaseaction,
-            children: (0, _.jsx)(_, {
-              hardwareDetail: _,
-              reservationAdvancedSettings:
-                null === (_ = _.internal_section_data) || void 0 === _
-                  ? void 0
-                  : _.reservation_advanced,
-              storeItemReleaseInfo: _,
-              bShuffleInProgress: _.collection_time_active < _._.NOW,
-              bHasSomeReservation: !!_ && (0, _._)(_.reservation_state),
-            }),
-          });
-        if (_ && _.is_coming_soon)
-          return (0, _.jsx)("div", {
-            className: _.purchaseaction,
-            children: (0, _.jsx)(_, {
-              hardwareDetail: _,
-              storeItemReleaseInfo: _,
-            }),
-          });
-        const _ = (0, _._)(_.reservation_state);
-        return (_.requires_reservation && !_ && _.queue_in_waitlist) ||
-          (_ && _.position_is_waitlist)
-          ? (0, _.jsx)("div", {
+        const _ = !!_ && (0, _._)(_.reservation_state),
+          _ =
+            null != _.collection_time_active &&
+            _.collection_time_active > 0 &&
+            _.collection_time_active < _._.NOW,
+          _ = (0, _._)(_, _);
+        return !_.requires_reservation ||
+          _.reservation_not_allowed ||
+          !_.collection_time_active ||
+          (_ && _)
+          ? _ && _.is_coming_soon
+            ? (0, _.jsx)("div", {
+                className: _.purchaseaction,
+                children: (0, _.jsx)(_, {
+                  hardwareDetail: _,
+                  storeItemReleaseInfo: _,
+                }),
+              })
+            : _.requires_reservation && _
+              ? (0, _.jsx)("div", {
+                  className: _.purchaseaction,
+                  children: (0, _.jsx)(_, {
+                    hardwareDetail: _,
+                    reservationAdvancedSettings:
+                      null === (_ = _.internal_section_data) || void 0 === _
+                        ? void 0
+                        : _.reservation_advanced,
+                    reservedHardwareDetail: _,
+                  }),
+                })
+              : (0, _.jsx)(_.Fragment, {
+                  children: (0, _.jsxs)("div", {
+                    className: _.purchaseaction,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        reservationDef: _,
+                        hardwareDetail: _,
+                        bPSULessModel: !1,
+                        reservedHardwareDetail: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        section: _,
+                        reservationDef: _,
+                        hardwareDetail: _,
+                        reservedHardwareDetail: _,
+                      }),
+                      _ &&
+                        !!_.allow_purchase_in_country &&
+                        (0, _.jsx)(_._, {
+                          reservationDef: _,
+                          hardwareDetail: _,
+                          bPSULessModel: !0,
+                          reservedHardwareDetail: void 0,
+                        }),
+                    ],
+                  }),
+                })
+          : (0, _.jsx)("div", {
               className: _.purchaseaction,
               children: (0, _.jsx)(_, {
                 hardwareDetail: _,
@@ -29934,33 +30015,9 @@
                   null === (_ = _.internal_section_data) || void 0 === _
                     ? void 0
                     : _.reservation_advanced,
-                reservedHardwareDetail: _,
-              }),
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: (0, _.jsxs)("div", {
-                className: _.purchaseaction,
-                children: [
-                  (0, _.jsx)(_._, {
-                    reservationDef: _,
-                    hardwareDetail: _,
-                    bPSULessModel: !1,
-                    reservedHardwareDetail: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    section: _,
-                    reservationDef: _,
-                    hardwareDetail: _,
-                  }),
-                  _ &&
-                    !!_.allow_purchase_in_country &&
-                    (0, _.jsx)(_._, {
-                      reservationDef: _,
-                      hardwareDetail: _,
-                      bPSULessModel: !0,
-                      reservedHardwareDetail: void 0,
-                    }),
-                ],
+                storeItemReleaseInfo: _,
+                bShuffleInProgress: _.collection_time_active < _._.NOW,
+                bHasSomeReservation: _,
               }),
             });
       }
@@ -30455,9 +30512,7 @@
               ? void 0
               : _[_]) ||
             "",
-          _ =
-            (null == _ ? void 0 : _.reservation_state) ===
-            _._.k_EPurchaseReservationState_Reserved;
+          _ = (0, _._)(null == _ ? void 0 : _.reservation_state);
         return (0, _.jsxs)("div", {
           className: (0, _._)({
             [_().ProductBox]: !0,
@@ -30700,13 +30755,7 @@
           { rgHardwareDetails: _, eHardwareLoadingState: _ } = (0, _._)(_),
           _ = (0, _.useMemo)(
             () =>
-              null == _
-                ? void 0
-                : _.find(
-                    (_) =>
-                      _.reservation_state ==
-                      _._.k_EPurchaseReservationState_Reserved,
-                  ),
+              null == _ ? void 0 : _.find((_) => (0, _._)(_.reservation_state)),
             [_],
           );
         if ((!_ && _ == _._.k_Loading) || void 0 === _)
@@ -34078,7 +34127,7 @@
             .map((_) => _._.find((_) => _.flavor === _))
             .filter((_) => !!_)
             .map((_) => {
-              var _, _, _;
+              var _, _, _, _;
               let _ = _.label,
                 _ = _.tooltip;
               return (
@@ -34097,11 +34146,19 @@
                     : "greatondeck" ===
                         (null === (_ = this.props.event) || void 0 === _
                           ? void 0
-                          : _.GetContentHubType()) &&
-                      ((_ =
-                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
-                      (_ =
-                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))),
+                          : _.GetContentHubType())
+                      ? ((_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
+                        (_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))
+                      : "greatonframe" ===
+                          (null === (_ = this.props.event) || void 0 === _
+                            ? void 0
+                            : _.GetContentHubType()) &&
+                        ((_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnFrame"),
+                        (_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnFrame_ttip"))),
                 (0, _.jsx)(
                   _._,
                   {
@@ -37087,7 +37144,7 @@
                 (_.style.display = "none"),
                 _(document, _, "action", "add_to_cart"),
                 _(document, _, "subid", _.toString()),
-                _(document, _, "sessionid", _._.SESSIONID),
+                _(document, _, "sessionid", (0, _._)()),
                 _(document, _, "snr", _._.SNR),
                 _.document.documentElement.append(_),
                 _.submit();
@@ -37355,7 +37412,7 @@
           const _ = new FormData();
           _.append("genre", _.toString()),
             _.append("choice", _.toString()),
-            _.append("sessionid", _._.SESSIONID);
+            _.append("sessionid", (0, _._)());
           let _ = null;
           try {
             const _ = await _().post(
@@ -40734,6 +40791,7 @@
             [_().MobileCarouselSnap]: _ == _._.k_MobileCarousel_SnapCarousel,
             [_().MobileCarouselFull]: _ == _._.k_MobileCarousel_PagedCArousel,
           }),
+          "flow-children": "grid",
           children:
             null === (_ = _.media_columns) || void 0 === _
               ? void 0
