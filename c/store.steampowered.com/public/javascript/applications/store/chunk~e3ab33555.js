@@ -1191,7 +1191,9 @@
             }),
             [_, _] = (0, _._)(_);
           if (
-            (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
+            (_.useEffect(() => {
+              window.scrollTo(0, 0);
+            }, [_, _]),
             !_ && _.GetEventType() == _.ajI)
           )
             return (0, _.jsx)(_._, {
