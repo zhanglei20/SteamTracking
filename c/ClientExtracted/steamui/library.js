@@ -17802,9 +17802,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 3 2026 : 16:15:21",
-                BUILD_TIME_UTC: "Jul 3 2026 : 23:15:21",
-                BUILD_RTIME_UTC: 1783120521,
+                BUILD_TIME_LOCAL: "Jul 8 2026 : 17:04:49",
+                BUILD_TIME_UTC: "Jul 9 2026 : 00:04:49",
+                BUILD_RTIME_UTC: 1783555489,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -31215,9 +31215,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 3 2026 : 16:15:21",
-                    BUILD_TIME_UTC: "Jul 3 2026 : 23:15:21",
-                    BUILD_RTIME_UTC: 1783120521,
+                    BUILD_TIME_LOCAL: "Jul 8 2026 : 17:04:49",
+                    BUILD_TIME_UTC: "Jul 9 2026 : 00:04:49",
+                    BUILD_RTIME_UTC: 1783555489,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -31889,7 +31889,7 @@ var CLSTAMP = "steamdb";
         2263: "34d5b8e0a47e4324ef7b",
         2266: "d4049da41b848707b218",
         2294: "82b896449d9a586692a4",
-        2320: "76cef2b5dd91f317cb3f",
+        2320: "d684eaf3b28169d80b4f",
         2348: "2ceb7e2ff86556fca18b",
         2393: "7f676d56759c81a36d13",
         2397: "12e8de49bab168797894",
@@ -31938,7 +31938,7 @@ var CLSTAMP = "steamdb";
         3356: "f1060d832dfd2513cd22",
         3366: "d7e43d3583690ec0e1f4",
         3473: "aa2e2c813e7588319881",
-        3569: "2109aebdf17cf977650d",
+        3569: "a47ead19da2cd7638510",
         3583: "22aaaa36100912e3ed08",
         3585: "7848ae778b003c5839b0",
         3589: "fd66d8f7b977b24bb0d2",
@@ -32139,7 +32139,7 @@ var CLSTAMP = "steamdb";
         9779: "59ef76674166d4b9e52e",
         9845: "13b5b6656f416f517b33",
         9853: "cb23ac97c5ef25298c13",
-        9858: "d7ccac2e8f4c67ca9a15",
+        9858: "a130f37ae46ef223bd42",
         9861: "d075ad8e71f05bafe846",
         9862: "51ef07edcc880ce94847",
         9869: "87497576748f35eb5b06",

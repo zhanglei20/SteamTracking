@@ -774,6 +774,7 @@ $\nY8O
 *|\n\fECPUGovernor
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGc&F
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
@@ -1048,7 +1049,7 @@ $\nY8O
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
-.ECaptureFailedReason"%\n
+.ECaptureFailedReason"H\n
 .EFrameAccumulatedStat
 .EGameRecordingErrorType"8\n%CClientNotificationGameRecordingStart
 .EJSRegisterMethodType"
@@ -1182,6 +1183,7 @@ $\nY8O
 01/01/00
 0123456789
 0123456789ABCDEF
+0123456789ABCDEF0o#
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -1827,6 +1829,7 @@ $\nY8O
 23CMsgSetWindowVisibility
 23CMsgSteamAuthCookiesSet
 23CNegotiationCompleteMsg
+23CStreamVideoOverflowMsg
 23CToggleMagnificationMsg
 23IClientParentalSettings
 23ParentalPlaytimeRequest
@@ -2172,7 +2175,6 @@ $\nY8O
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 ?\n\tp2p_scope
-@@23N
 @\n!ControllerPersonalizationResponse
 @bEnableLogTearOff
 @bEnableSpewThrottle
@@ -2904,6 +2906,7 @@ CStopVideoDataMsg"
 CStreamDataLostMsg
 CStreamVideoLimit
 CStreamVideoMode
+CStreamVideoOverflowMsg
 CStreamingClientCaps
 CStreamingClientConfig
 CStreamingClientHandshakeInfo
@@ -5623,6 +5626,7 @@ Zulu
 \n\rinitial_width
 \n\ris_system_key
 \n\rk_EAppTypeDLC
+\n\rlast_frame_id
 \n\rlong_frame_ms
 \n\rmouse_enabled
 \n\rnativeKeyCode
@@ -6456,6 +6460,7 @@ findactive
 findcount
 fingerid
 finnish
+first_frame_id
 fixed point overflow ignored
 fixed32
 fixed64
@@ -7257,6 +7262,7 @@ k_EStreamControlStopAudioData
 k_EStreamControlStopRequest
 k_EStreamControlStopVideoData
 k_EStreamControlSystemSuspend
+k_EStreamControlVideoOverflow
 k_EStreamDataLost
 k_EStreamDataPacket
 k_EStreamDiscoveryPingRequest

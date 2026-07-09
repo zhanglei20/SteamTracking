@@ -15161,7 +15161,9 @@
             }),
             [I, A] = (0, _.TB)(h);
           if (
-            (u.useEffect(() => window.scrollTo(0, 0), [g, h]),
+            (u.useEffect(() => {
+              window.scrollTo(0, 0);
+            }, [g, h]),
             !y && t.GetEventType() == a.ajI)
           )
             return (0, r.jsx)(C.OG, {

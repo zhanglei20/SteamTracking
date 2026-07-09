@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\rYv
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -3049,6 +3048,8 @@ $steammessages_parental_objects.proto"
 &\n"k_EStreamControlStopMicrophoneData
 &\n"k_EStreamControlVirtualHereRequest
 &\n"k_EStreamDeviceFormFactorVRHeadset
+&\n"k_EStreamingDongleFixResultFailure
+&\n"k_EStreamingDongleFixResultSuccess
 &\n"k_EUserReviewScorePreference_Unset
 &\n"k_EValveIndexComponentRightKnuckle
 &\n"k_EWatchResponseSystemNotSupported
@@ -5362,6 +5363,7 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -7301,7 +7303,7 @@ $steammessages_parental_objects.proto"
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
 .ECLientTaskListType
-.ECaptureFailedReason"%\n
+.ECaptureFailedReason"H\n
 .EChatRoomGroupRank
 .EChatRoomJoinState
 .EChatRoomMemberStateChange"N\n4ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -8067,10 +8069,14 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+00000
+000000
+0000000000000000000000000000000000000000
 0.0333
 0.050
 0.125
 0.13.15.106
+00000000
 0.15
 0.65
 0.75
@@ -8115,10 +8121,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-00000
-000000
-00000000
-0000000000000000000000000000000000000000
 00000001
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -8129,6 +8131,7 @@ $steammessages_parental_objects.proto"
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -11682,11 +11685,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12278,6 +12281,7 @@ $steammessages_parental_objects.proto"
 23CShaderContentUpdateJob
 23CSteamClientDLLValidate
 23CSteamTV_Search_Request
+23CStreamVideoOverflowMsg
 23CSystemDockManagerLinux
 23CSystemPerfManagerLinux
 23CToggleMagnificationMsg
@@ -15997,6 +16001,7 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16039,14 +16044,7 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-7200
-8000
-8080
-8192
-9000
-9999
 65536
-60000000
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
@@ -16125,6 +16123,7 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
+7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -16417,9 +16416,12 @@ $steammessages_parental_objects.proto"
 8.K%G
 8/A0
 80 Mbps
+8000
 802-11-wireless
 802-3-ethernet
+8080
 80CChatUsability_ClientUsabilityMetrics_Notification_UIState_CategoryCollapseState
+8192
 8276873a45f7f75ef0d42edcf975a6da5adc5799
 82\n:XPH
 83CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization
@@ -16546,9 +16548,11 @@ $steammessages_parental_objects.proto"
 9.CStore_ReloadAllReservationPositionMessages_Notification
 9.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response"
 9.CUserAccount_GetAvailableValveDiscountPromotions_Request
+9000
 95th
 961e13c2046fbe474916afdb087db2222535db4e51f34b5fa45b4fd7803abff2
 98th
+9999
 99Ov
 99rKJJ
 9<n\nM
@@ -16603,6 +16607,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9H(4
 9IClientVR
 9IGv
 9ISteamUGC
@@ -21326,6 +21331,7 @@ CRemoteClientJobRemotePlayInvite timed out k_ERemoteClientWaitUIProcessStreamSta
 CRemoteClientJobRequestControllerConfig
 CRemoteClientJobStartRemoteApp
 CRemoteClientJobStartRemoteApp couldn't get nonce for NVIDIA launch
+CRemoteClientJobStartRemoteApp launch_only success
 CRemoteClientJobStartRemoteApp received e_launch_result %d
 CRemoteClientJobStartRemoteApp starting authorization flow with %llu (%s)
 CRemoteClientJobStartRemoteApp timed out waiting for k_ERemoteClientWaitUIClientAuthorizationResponse
@@ -21385,6 +21391,7 @@ CRemoteClientManager::SendSuspendLanPeerContent
 CRemoteClientManager::SetDownloadingAppIDToRemoteClient
 CRemoteClientManager::StartStream failed: another launch in progress for appid %u
 CRemoteClientManager::StartStream failed: not %s
+CRemoteClientManager::m_pWorkThreadPool
 CRemoteClientManager_BroadcastStatus
 CRemoteClientManager_BroadcastStatusForRemoteDeviceSessions
 CRemoteClientManager_CheckClientConnections
@@ -21655,6 +21662,7 @@ CStore_UserTagPreferences
 CStreamDataLostMsg
 CStreamVideoLimit
 CStreamVideoMode
+CStreamVideoOverflowMsg
 CStreamingClientCaps
 CStreamingClientConfig
 CStreamingClientHandshakeInfo
@@ -24627,6 +24635,7 @@ EStreamTransport
 EStreamVersion
 EStreamVideoCodec
 EStreamingDataType
+EStreamingDongleFixResult
 ESupportCompanyDomain
 ESystemAudioChannel
 ESystemAudioDirection
@@ -24869,6 +24878,7 @@ EnableTestLicense
 EnableVoiceCalibration
 EnableVoiceNotificationSounds
 EnableWallMessages
+EnableWifiRadioSoftwareState
 Enabled
 Enabled license for package: %u\n
 Enabled the pipewire audio backend
@@ -25170,6 +25180,7 @@ Error: Cannot find dongle interface
 Error: Could not activate dongle to %s: %s
 Error: Could not commit dongle to %s: %s
 Error: Could not connect dongle to %s: %s
+Error: Could not delete old dongle connection: %s
 Error: DisplayManagerInit: XRR unsupported
 Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
@@ -27479,6 +27490,7 @@ GetWatchBroadcastMPD
 GetWebSecret
 GetWebUITransportInfo
 GetWifiAPStateJSONString
+GetWifiDongleProblemFlags
 GetWildcardMapping: Invalid unAppID k_nAppIdAll
 GetWin32Stats
 GetWishlistDemoEmailStatus
@@ -34107,6 +34119,7 @@ SDL_GetJoystickGUIDInfo
 SDL_GetJoystickID
 SDL_GetJoystickName
 SDL_GetJoystickNameForID
+SDL_GetJoystickPathForID
 SDL_GetJoystickPlayerIndex
 SDL_GetJoystickProductForID
 SDL_GetJoystickProductVersionForID
@@ -41715,6 +41728,7 @@ Zulu
 \n\rk_EMsgUGSBase
 \n\rk_EMsgUMQBase
 \n\rk_EViewerLeft
+\n\rlast_frame_id
 \n\rlast_modified
 \n\rlast_playtime
 \n\rlatest_played
@@ -42290,6 +42304,7 @@ Zulu
 \n\vk_EMsgStats
 \n\vlast_logoff
 \n\vlast_played
+\n\vlaunch_only
 \n\vlaunch_task
 \n\vleft_bumper
 \n\vlive_branch
@@ -45735,6 +45750,7 @@ controller_steamos_handheld
 controller_style
 controller_subtype
 controller_switch2_pro
+controller_switch2_pro_generic
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -47962,6 +47978,7 @@ firstGap->second <= nSegBegin
 first_day_cached
 first_deck_playtime
 first_digit >= '1' && first_digit <= '9'
+first_frame_id
 first_linux_playtime
 first_mac_playtime
 first_playtime
@@ -48658,7 +48675,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggenh
 ghjkl
 gidlist
 gidparentcomment
@@ -52652,6 +52669,7 @@ k_EStreamControlStopAudioData
 k_EStreamControlStopRequest
 k_EStreamControlStopVideoData
 k_EStreamControlSystemSuspend
+k_EStreamControlVideoOverflow
 k_EStreamDataLost
 k_EStreamDataPacket
 k_EStreamDeviceFormFactorPhone
@@ -57246,6 +57264,7 @@ numchunks
 numfiles
 numfolders
 nv->name->len > 0
+nvagipman:
 nvme-
 nvwC
 nytimes.com
@@ -61250,7 +61269,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul  6 2026 22:02:36
+steam Jul  8 2026 23:54:06
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
