@@ -2463,6 +2463,8 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
+19:36:55
+19:36:59
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -2556,8 +2558,6 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:54:01
-23:54:05
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2739,7 +2739,6 @@ $ffn
 50UserContentDescriptorPreferences_ContentDescriptor
 512 Kbps
 512K
-524288
 52F*
 55Ly
 55j_WW
@@ -2764,10 +2763,7 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-65536
-60000000
 64CK\vH
-666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
 6ConVar
@@ -2820,6 +2816,10 @@ $ffn
 80 Mbps
 8000
 8192
+65536
+524288
+60000000
+666666666666666666666666666666666666666666666666
 82\n:XPH
 83L3
 83N6
@@ -6841,7 +6841,7 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul  8 2026
+Jul 10 2026
 July
 June
 K'iche'
@@ -9279,7 +9279,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul  8 2026 23:54:05
+Startup - updater built Jul 10 2026 19:36:59
 State
 StaticFileWriterThread()
 Steam

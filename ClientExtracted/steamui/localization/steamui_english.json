@@ -8584,6 +8584,8 @@
     "DeckVerified_CategoryLabel_Playable": "Playable",
     "DeckVerified_CategoryLabel_Unsupported": "Unsupported",
     "DeckVerified_CategoryLabel_Unknown": "Unknown",
+    "SteamMachine_CompatibilitySection_Title": "Steam Machine Compatibility",
+    "SteamMachine_CompatibilitySection_Details": "Details",
     "DeckVerified_FilterLabel_Verified": "Verified Only",
     "DeckVerified_FilterLabel_Verified_Playable": "Verified and Playable",
     "DeckVerified_FilterLabel_Verified_Playable_Unknown": "Verified, Playable, and Untested",
