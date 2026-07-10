@@ -2488,7 +2488,6 @@ $steammessages_parental_objects.proto"
 %s/%s/%u/config/%s
 %s/%s/%u/ugc/%d_%s.vdf
 %s/%s/%u/ugc/%s/
-%s/%s/%u/ugc/consumed.vdf
 %s/%s/AlwaysAllowSpectating
 %s/%s/DeviceName
 %s/%s/Key
@@ -5363,8 +5362,9 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAuthenticationSupport_RevokeToken_Request
@@ -6434,7 +6434,6 @@ $steammessages_parental_objects.proto"
 ../clientdll/steamp2pvoice.cpp
 ../clientdll/streamingfeature.cpp
 ../clientdll/subscribedfilelistcache.cpp
-../clientdll/subscribedfilemanager.cpp
 ../clientdll/systemaudiomanager_linux.cpp
 ../clientdll/systemdisplaymanager.cpp:156
 ../clientdll/systemdisplaymanager_wayland.cpp
@@ -8069,14 +8068,10 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
-00000
-000000
-0000000000000000000000000000000000000000
 0.0333
 0.050
 0.125
 0.13.15.106
-00000000
 0.15
 0.65
 0.75
@@ -8121,18 +8116,22 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+00000
+000000
+00000000
+0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -8531,7 +8530,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj21AssociativeListElem_tIiiEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj23EAppFileWriteBatchStatei8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI10CUtlVectorIS2_IN18CUserRemoteStorage20AppLocalFileChange_tEES_IS6_EEEi8CDefLessE6Node_tEiNSB_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI10CUtlVectorIyS_IyEEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI15CInterfaceStatsEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI19RemoteFileAppData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN23CClientSharedConnection18SharedConnection_tEEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -8584,7 +8582,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy18CCopyableUtlVectorIP21CInternalCallbackBaseS_IS4_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy22ClientUnifiedMessage_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy23CSessionCollectingStatei8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy28SubscribedFileDownloadInfo_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy7CUtlPtrI22FileReadAsyncContext_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy7CUtlPtrI23CFileWriteStreamRequestEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy7CUtlPtrI23ClientPartyBeaconData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
@@ -8609,7 +8606,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyyi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
@@ -9096,7 +9092,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapIj21AssociativeListElem_tIiiEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj23EAppFileWriteBatchStatei8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI10CUtlVectorIS1_IN18CUserRemoteStorage20AppLocalFileChange_tEE10CUtlMemoryIS5_EEEi8CDefLessE6Node_tEiNSB_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
-10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI10CUtlVectorIy10CUtlMemoryIyEEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI15CInterfaceStatsEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj7CUtlPtrI19RemoteFileAppData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN23CClientSharedConnection18SharedConnection_tEEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
@@ -9149,7 +9144,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapIy18CCopyableUtlVectorIP21CInternalCallbackBase10CUtlMemoryIS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIy22ClientUnifiedMessage_ti8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIy23CSessionCollectingStatei8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-10CUtlRBTreeIN7CUtlMapIy28SubscribedFileDownloadInfo_ti8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIy7CUtlPtrI22FileReadAsyncContext_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIy7CUtlPtrI23CFileWriteStreamRequestEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIy7CUtlPtrI23ClientPartyBeaconData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
@@ -9174,7 +9168,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-10CUtlRBTreeIN7CUtlMapIyyi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
 10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
@@ -10063,7 +10056,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI33CMsgClientPICSProductInfoResponseE
 12CProtoBufMsgI33CMsgClientRedeemGuestPassResponseE
 12CProtoBufMsgI33CMsgClientSetClientAppUpdateStateE
-12CProtoBufMsgI33CMsgClientUCMPublishedFileUpdatedE
 12CProtoBufMsgI33CMsgTrading_InitiateTradeResponseE
 12CProtoBufMsgI33SiteServerUI_CancelLogin_ResponseE
 12CProtoBufMsgI33SiteServerUI_GetLanguage_ResponseE
@@ -10316,7 +10308,6 @@ $steammessages_parental_objects.proto"
 12SteamTV_Stub
 12StringReader
 12StructReader
-1348857570
 13AppUpdateInfo
 13CAppInfoCache
 13CBackupAppJob
@@ -11304,7 +11295,6 @@ $steammessages_parental_objects.proto"
 18CScheduledFunctionI20CWebSocketConnectionE
 18CScheduledFunctionI21CHTTPClientConnectionE
 18CScheduledFunctionI21CP2PNetworkingSessionE
-18CScheduledFunctionI22CSubscribedFileManagerE
 18CScheduledFunctionI23CSystemDockManagerLinuxE
 18CScheduledFunctionI23CSystemPerfManagerLinuxE
 18CScheduledFunctionI24CClientTimedTrialManagerE
@@ -12097,7 +12087,6 @@ $steammessages_parental_objects.proto"
 22CStreamingClientConfig
 22CStreamingServerConfig
 22CStreamingSessionStats
-22CSubscribedFileManager
 22CUpdateBatteryStateJob
 22CVirtualHereRequestMsg
 22CWorkshopInfoUpdateJob
@@ -12686,7 +12675,6 @@ $steammessages_parental_objects.proto"
 26CInputTouchFingerMotionMsg
 26CInstallScriptManagerPosix
 26CInventory_AddItem_Request
-26CJobDownloadSubscribedFile
 26CJobGetNotificationDetails
 26CJobSteamRuntimeSystemInfo
 26CMsgClientAddFriendToGroup
@@ -13400,7 +13388,6 @@ $steammessages_parental_objects.proto"
 30CClientJobIncomingTradeRequest
 30CClientJobMatchmakingLobbyData
 30CClientJobPublishedFileDeleted
-30CClientJobPublishedFileUpdated
 30CClientJobResumeSuspendedGames
 30CClientJobStartBroadcastUpload
 30CClientUnifiedServiceTransport
@@ -14856,7 +14843,6 @@ $steammessages_parental_objects.proto"
 40GameServerClient_QueryServerData_Request
 40RemoteStoragePublishedFileUnsubscribed_t
 40RemoteStorageUpdatePublishedFileResult_t
-40RemoteStorage_SubscribedFilesProcessed_t
 40SiteServerUI_ContentCacheConfig_Response
 40SiteServerUI_ContentCacheStatus_Response
 41CBluetoothManager_SetDiscovering_Response
@@ -15217,7 +15203,6 @@ $steammessages_parental_objects.proto"
 44CGameRecording_PhaseListChanged_Notification
 44CGameRecording_UserAddTimelineEntry_Response
 44CGameServers_IPsWithSteamIDs_Response_Server
-44CJobEnumerateSubscribedFilesForInstalledApps
 44CMsgClientAMGetPersonaNameHistory_IdInstance
 44CMsgClientPICSChangesSinceResponse_AppChange
 44CMsgClientPICSProductInfoRequest_PackageInfo
@@ -15259,8 +15244,6 @@ $steammessages_parental_objects.proto"
 44CUserAccount_RedeemFriendInviteToken_Request
 44CUserAccount_RevokeFriendInviteToken_Request
 44ContentManifestPayload_FileMapping_ChunkData
-44RemoteStorage_SubscribedFileDownloadPaused_t
-44RemoteStorage_SubscribedFileDownloadQueued_t
 44\r9MMR
 456789:;<=
 45CAccountHardware_GetSavedHardwareList_Request
@@ -15338,7 +15321,6 @@ $steammessages_parental_objects.proto"
 45CUserAccount_RevokeFriendInviteToken_Response
 45ClientCloudFileUploadBlockDetails_HTTPHeaders
 45LobbyMatchmakingLegacy_GetLobbyStatus_Request
-45RemoteStorage_SubscribedFileDownloadStarted_t
 45SiteServerUI_ClientStatus_Response_ClientInfo
 46$a
 46CAPIJobEnumerateUserSubscribedFilesWithUpdates
@@ -15465,7 +15447,6 @@ $steammessages_parental_objects.proto"
 47CTransportValidation_TriggerDataRequest_Request
 47CVideo_BeginGameRecordingSegmentsUpload_Request
 47CWorkItemThreadedWriteHighQualityScreenshotCopy
-47RemoteStorage_SubscribedFileDownloadCompleted_t
 48CAccountHardware_GetPersonalizationFile_Response
 48CAccountHardware_GetSteamDeckComponents_Response
 48CAccountHardware_RegisterSteamController_Request
@@ -16001,7 +15982,6 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16044,7 +16024,9 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
+7200
 65536
+60000000
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
@@ -16123,7 +16105,6 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
-7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -16254,7 +16235,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapIj23EAppFileWriteBatchStatei8CDefLessE
 7CUtlMapIj7CUtlPtrI10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyEEiS2_E
 7CUtlMapIj7CUtlPtrI10CUtlVectorIS0_IN18CUserRemoteStorage20AppLocalFileChange_tEE10CUtlMemoryIS4_EEEi8CDefLessE
-7CUtlMapIj7CUtlPtrI10CUtlVectorIy10CUtlMemoryIyEEEi8CDefLessE
 7CUtlMapIj7CUtlPtrI15CInterfaceStatsEi8CDefLessE
 7CUtlMapIj7CUtlPtrI19RemoteFileAppData_tEi8CDefLessE
 7CUtlMapIj7CUtlPtrIN23CClientSharedConnection18SharedConnection_tEEi8CDefLessE
@@ -16306,7 +16286,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapIy18CCopyableUtlVectorIP21CInternalCallbackBase10CUtlMemoryIS2_EEi8CDefLessE
 7CUtlMapIy22ClientUnifiedMessage_ti8CDefLessE
 7CUtlMapIy23CSessionCollectingStatei8CDefLessE
-7CUtlMapIy28SubscribedFileDownloadInfo_ti8CDefLessE
 7CUtlMapIy7CUtlPtrI22FileReadAsyncContext_tEi8CDefLessE
 7CUtlMapIy7CUtlPtrI23CFileWriteStreamRequestEi8CDefLessE
 7CUtlMapIy7CUtlPtrI23ClientPartyBeaconData_tEi8CDefLessE
@@ -16331,7 +16310,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapIybi8CDefLessE
 7CUtlMapIyii8CDefLessE
 7CUtlMapIyji8CDefLessE
-7CUtlMapIyyi8CDefLessE
 7CUtlPtrI10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyEE
 7CUtlPtrI10CUtlVectorIS_I14CAutoCloudFileE10CUtlMemoryIS2_EEE
 7CUtlPtrI10CUtlVectorIS_IN18CUserRemoteStorage20AppLocalFileChange_tEE10CUtlMemoryIS3_EEE
@@ -16567,14 +16545,11 @@ $steammessages_parental_objects.proto"
 9CDPadMode
 9CFunctor1IPFb10StringViewEPcE
 9CFunctor1IPFv8AESKey_tES0_E
-9CFunctor1IPFv8CSteamIDES0_E
-9CFunctor2IPFv8CSteamIDPK10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyEES0_PS5_E
 9CFunctor2IPFv8CSteamIDyES0_yE
 9CFunctor2IPFvPKcP10CUtlVectorI10CUtlString10CUtlMemoryIS3_EEEPcS7_E
 9CFunctor2IPFvPKcP10CUtlVectorI7CGameID10CUtlMemoryIS3_EEEPcS7_E
 9CFunctor2IPFvPKcPbEPcS2_E
 9CFunctor3IPFv8CSteamIDP15DownloadedUGC_tPbES0_S2_S3_E
-9CFunctor3IPFv8CSteamIDyPbES0_mS1_E
 9CFunctor3IPFv8CSteamIDyPbES0_yS1_E
 9CFunctor3IPFvP11CFileReaderPKcPbES1_PcS4_E
 9CFunctor3IPFvP11CFileWriterP10CUtlBufferbES1_S3_bE
@@ -16607,7 +16582,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H(4
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17169,6 +17143,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`C
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -18198,7 +18173,6 @@ BGetSerializedParentalSettings
 BGetSessionClientResolution
 BGetStreamTransportSignal
 BGetStreamingClientConfig
-BGetSubscribedFileDownloadInfo
 BGetTouchConfigData
 BGetUserScreenshotDirectory
 BGetValueBin
@@ -19480,7 +19454,6 @@ CClientJobPostLogon: failed to process compat data. Game install state may be in
 CClientJobPostLogon: timed out waiting for compat manager
 CClientJobPrecacheAchievementIcons
 CClientJobPrepareForSuspend
-CClientJobPublishedFileUpdated
 CClientJobPurchaseWithActivationCode
 CClientJobReadAppInfoLocCacheFromDisk
 CClientJobReadAppInfoLocCacheFromDisk::BYieldingRunAPIJob::ThreadedReadCacheFile
@@ -21817,9 +21790,6 @@ CUDPSocket::ContinueRecv: more than 1 million bytes to read from socket, are we 
 CUDPSocket::OnRecvComplete
 CUGCDownloadHelper
 CUGCDownloadHelper::EYieldingRetrieveUGC::ThreadedSaveBufferToFile
-CUGCManager::ThreadedAddFileReference
-CUGCManager::ThreadedClearCache
-CUGCManager::ThreadedProcessAllFileReferences
 CUIProtoBufMsg::BDeserialize
 CUIProtoBufMsg::SerializeCrossProc
 CUcR1
@@ -22936,7 +22906,6 @@ Console User
 ConstHdr().ip_v6().length() == 16
 ConsumeItem
 ConsumePlaytime
-ConsumedSubscribedFilePersist
 Contact Support
 Contemporary Christian
 Content Manifest for Depot %u \n\n
@@ -27396,7 +27365,6 @@ GetSubKeyName
 GetSubSectionData
 GetSubscribedApps
 GetSubscribedChannels
-GetSubscribedFileDownloadCount
 GetSubscribedItems
 GetSubscribedItemsInternal
 GetSupportSystemReport
@@ -32485,8 +32453,6 @@ Password reentry required
 Password required to kick session
 Path Loop
 Pause
-PauseAllSubscribedFileDownloads
-PauseSubscribedFileDownloadsForApp
 Paused
 Paused for %s (%d)
 Pay Easy (Degica)
@@ -33902,10 +33868,8 @@ Result %u (%s).  Unreported %u, total %u\n
 ResultDetail
 Resume
 Resume complete
-ResumeAllSubscribedFileDownloads
 ResumeAppSession
 ResumeProcess
-ResumeSubscribedFileDownloadsForApp
 ResumeSuspendedGames
 ResumeSuspendedGames - Aborting, as user is playing app %d elsewhere
 ResumeSuspendedGames - App %d - App busy, not syncing to cloud
@@ -37381,7 +37345,7 @@ The ClientServiceCallResponse does not contain a valid size for its OS Info - %d
 The JSON camel-case name of field "
 The Job Manager changed, that seems bad.
 The VAD has been replaced by a hack pending a complete rewrite
-The XTest extension doesn't exist
+The XTest extension is not available. Controller actions bound to desktop input will not function.
 The [proto3_optional=true] option may only be set on proto3fields, not
 The amount of Gyro Jerk (gyro change per second) required to create a Controller Jerk count. Note, only available on SteamDeck/Neptune/Galileo
 The current Steam realm does not match the requested resource
@@ -37420,7 +37384,6 @@ This program requires version
 This program was compiled against version
 This should never happen as this exclusively gets called from a non-master instance!
 This shouldn't be called if all the sizes are equal.
-This shouldn't happen anymore--see CUCMJobPublishedFileContentUpdated
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
 Thrash Metal
 Thread "%s" (ID %d) failed to shut down\n
@@ -38452,7 +38415,6 @@ VISIBLE
 VISIBLESTRING
 VISTA
 VL]udKl]
-VO36CConsumedSubscribedFilePersistThread
 VOLUME_DOWN
 VOLUME_UP
 VProfInternalEnterScopeCurrentThread
@@ -40085,6 +40047,7 @@ Zulu
 [AppID %u] Requested playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for all items
+[AppID %u] Requesting updated subscription list
 [AppID %u] Resolved path contains invalid filename characters, failing (%s)
 [AppID %u] Resolved path is malformed UTF-8, failing (%s)
 [AppID %u] Resolving file %s from state %d - invalid, leaving
@@ -40104,6 +40067,7 @@ Zulu
 [AppID %u] Skipping download of file %s to our platform, failed to resolve path
 [AppID %u] Skipping invalid upload entry with offset/size (%lu/%u) that exceeds shaderBuffer size (%lu) in file %s\n
 [AppID %u] Skipping invalid upload entry with offset/size (%lu/%u) that has negative shaderBuffer size (%d) in file %s\n
+[AppID %u] Skipping subscription list update (not needed).
 [AppID %u] Source manifest %llu of size %llu.
 [AppID %u] Starting PublishFile
 [AppID %u] Starting Shader Swarm download job.
@@ -44031,7 +43995,6 @@ bStillInQueue == ( pSeg->m_pMsg->m_links.m_pQueue != nullptr )
 bStillInQueue || pSeg->m_pMsg->m_links.m_pNext == nullptr
 bStillInQueue || pSeg->m_pMsg->m_linksSecondaryQueue.m_pNext == nullptr
 bSubscribedFilesDecompressOnClient
-bSubscribedFilesPollForUpdates
 bSubscribedFilesUseRangeRequests
 bSuccess || pWorkItem->HasTimedOut()
 bUseIOCP
@@ -45601,7 +45564,6 @@ construct_key_exchange_tbs
 construct_stateful_ticket
 construct_stateless_ticket
 construction vtable for
-consumed
 consumer_app_id
 consumer_appid
 consumer_shortcut_name
@@ -48675,7 +48637,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -53515,7 +53477,7 @@ low-pri yield - ../clientdll/clientjob.cpp:456
 low-pri yield - ../clientdll/clientjob.cpp:487
 low-pri yield - ../clientdll/clientjob.cpp:796
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:6938
+low-pri yield - ../clientdll/clientugc.cpp:6926
 low-pri yield - ../clientdll/compatmanager.cpp:2054
 low-pri yield - ../clientdll/compatmanager.cpp:2310
 low-pri yield - ../clientdll/compatmanager.cpp:2577
@@ -53528,8 +53490,8 @@ low-pri yield - ../clientdll/csinterface.cpp:223
 low-pri yield - ../clientdll/depotbuilder.cpp:107
 low-pri yield - ../clientdll/depotreconstruct.cpp:3066
 low-pri yield - ../clientdll/peercontentserver.cpp:712
-low-pri yield - ../clientdll/subscribedfilelistcache.cpp:368
-low-pri yield - ../clientdll/subscribedfilelistcache.cpp:385
+low-pri yield - ../clientdll/subscribedfilelistcache.cpp:372
+low-pri yield - ../clientdll/subscribedfilelistcache.cpp:389
 low-pri yield - ../clientdll/userscreenshots.cpp:2668
 low-pri yield - ../clientdll/userscreenshots.cpp:2687
 lower
@@ -54297,8 +54259,6 @@ m_mapCompatToolBuckets
 m_mapConnectionInfo
 m_mapConnectionToBuffer
 m_mapConnectionToClient
-m_mapConsumedContent
-m_mapConsumedContent[iMap].GetPtr()
 m_mapControllerEnabled
 m_mapCoplayEvents
 m_mapCurrentItemDefPricesByApp
@@ -54310,7 +54270,6 @@ m_mapDependentApps
 m_mapDepotManifests
 m_mapDigitalActionNameToHandle
 m_mapDlcDownloads
-m_mapDownloadJobs
 m_mapDownloadPeers
 m_mapDownloadTimers
 m_mapDownloadTimersProxyCaches
@@ -54505,7 +54464,6 @@ m_mapStatsSchema[ iGame ]
 m_mapSubscribedGroupChatsForNotifications
 m_mapSubscribedGroupChatsForNotifications.HasElement( Key )
 m_mapSubscribedItems
-m_mapSubscriptionInfo
 m_mapSubscriptionsChanged
 m_mapTempAppOSTypeOverrides
 m_mapTimeTrials
@@ -55361,7 +55319,6 @@ m_strVulkanDriverDesc
 m_strVulkanGPUDesc
 m_strWatchPath
 m_strWriteDirectory
-m_subscribedFileManager
 m_szArgs[ 1024 ]
 m_szAttributeGroup
 m_szAttributeValue
@@ -55401,10 +55358,8 @@ m_treeDisconnectingConnections
 m_treeIPCLogCounts
 m_treeIPCLogCounts.Element( i ).m_strMethod
 m_treeIPCLogCounts.Element( i ).m_strProcess
-m_treePausedUpdates
 m_treePendingReportPingReply
 m_treePostParamNameHashes
-m_treeQueuedUpdates
 m_treeRegisteredEMsgListeners
 m_treeSteamIDInvitesPosted
 m_treeTimedOutConnections
@@ -56543,7 +56498,6 @@ nSize <= buffer.SizeAllocated()
 nSize >= 0
 nStf,a
 nSubkeys == 0
-nSubscribedAutoDownloadMaxSimultaneous
 nSw}Z\tu
 nTargetFrameRate
 nTargetLength > 0
@@ -59917,7 +59871,6 @@ rt_last_played_time
 rt_soft
 rt_time_acquired
 rt_time_scheduled
-rtime32EarliestSubscribedFileToDownload
 rtime32_account_creation
 rtime32_created
 rtime32_creation_time
@@ -61269,7 +61222,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul  8 2026 23:54:06
+steam Jul 10 2026 19:36:59
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -61354,6 +61307,7 @@ steam_id_patron
 steam_id_sender
 steam_id_target
 steam_id_user_invited
+steam_machine_compat_category
 steam_marker
 steam_master_ipc_name_override
 steam_os_compat_category
@@ -64190,7 +64144,6 @@ workshop_log
 workshop_status
 workshop_status <appId>
 workshop_update_avilable
-workshop_visible
 workshopdepot
 workshopfiletype
 wpa-eap

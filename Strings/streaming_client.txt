@@ -3181,6 +3181,7 @@ ${FILENAME}
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG{
 +2Hp
 +2hZ
 +3B0[
@@ -4453,16 +4454,16 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
-0000000000000000000000000000000000000000
 0.06
 0/bu^U
 0/gge
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00\fo
-01%3
+0000000000000000000000000000000000000000
 01%6
 01%66754&#"
 0123456789.
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00\fo
+01%3
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
@@ -4952,6 +4953,8 @@ ${FILENAME}
 18StoreItem_Trailers
 196?
 198
+19:36:55
+19:36:58
 19CActivationCodeInfo
 19CClientHandshakeMsg
 19CClientMicroTxnInfo
@@ -5259,8 +5262,6 @@ ${FILENAME}
 22StoreItem_PackageGroup
 22StoreItem_RelatedItems
 232>
-23:54:01
-23:54:04
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -5606,6 +5607,10 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
+326554&##
+3267!5!&&#"
+3267&'^7l
+3267.
 32654.
 32655
 32655&
@@ -5613,16 +5618,11 @@ ${FILENAME}
 326554&"
 326554&#
 326554&#"
-326554&##
 326554&'
 326654&&#"
 3267
 3267!
 3267!5!&
-3267!5!&&#"
-3267&'^7l
-3267.
-3276
 32675
 32675#5!
 32675&&#"
@@ -5631,7 +5631,6 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
-32677
 326=
 326B|
 327&
@@ -5639,6 +5638,8 @@ ${FILENAME}
 327'Z
 3275!5!
 3275#5!
+3276
+32677
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -6013,10 +6014,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+4632
 46632
 467&&54632
 467.
-4632
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6477,13 +6478,13 @@ ${FILENAME}
 6654#"
 6654&#"
 6675
-6753
-6786
 666666666666666666666666666666666666666666666666
 67!5!
 675!
+6753
 6754&#"
 67547&55&'7
+6786
 67Zc
 68Jy
 699[
@@ -6671,10 +6672,10 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
+75#5!
 754.
 7524
 74632
-75#5!
 75pRD
 75th
 76&'3
@@ -9359,7 +9360,6 @@ Bouton du stick droit
 Bouton du stick gauche
 BpcFB
 Bq{Ff|
-Br&M
 Brak autoryzacji urz
 Brazilian
 Breaking '%s' in '%s'\n
@@ -14429,7 +14429,7 @@ Jt("S
 Jtttttt
 Jtwf
 Jugando con %s
-Jul  8 2026
+Jul 10 2026
 July
 June
 Juntar/desliz. 2 dedos
@@ -32310,7 +32310,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Jul  8 2026 23:54:03
+lib Jul 10 2026 19:36:57
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -37446,6 +37446,7 @@ steam_deck_compat_category
 steam_frame_compat_category
 steam_id
 steam_logo
+steam_machine_compat_category
 steam_os_compat_category
 steam_release_date
 steambeta://
