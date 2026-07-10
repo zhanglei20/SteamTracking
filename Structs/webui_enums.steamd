@@ -2850,6 +2850,13 @@ enum UnnamedEnum6010fbb978b95cf2
 	Enabled = 2;
 }
 
+enum UnnamedEnum633870f64a8b01c1
+{
+	NoRecipientSelected = 0;
+	AccountSelected = 1;
+	EmailSelected = 2;
+}
+
 enum UnnamedEnum6645bbd3618ce340
 {
 	Title = 1;

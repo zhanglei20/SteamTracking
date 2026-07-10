@@ -278,7 +278,7 @@
     },
     57757: (e, n, t) => {
       "use strict";
-      t.d(n, { S: () => d });
+      t.d(n, { S: () => g });
       var a = t(7850),
         o = t(83392),
         r = t(40704);
@@ -294,54 +294,56 @@
       }
       var s = t(21895),
         l = t(64238),
-        c = t.n(l);
-      function d(e) {
+        c = t.n(l),
+        d = t(66922);
+      function g(e) {
         const {
             checked: n,
             onChange: t,
             disabled: r,
             children: l,
-            ref: d,
-            variant: m = "default",
-            color: p,
-            align: _ = "center",
-            ...h
+            ref: g,
+            variant: p,
+            color: _,
+            align: h = "center",
+            ...x
           } = e,
-          x = "indeterminate" === n,
-          v = x ? u : i,
-          b = () => {
-            r || (t && t(!!x || !n));
-          };
+          v = "indeterminate" === n,
+          b = v ? m : i,
+          I = () => {
+            r || (t && t(!!v || !n));
+          },
+          j = (0, d.f)("Checkbox", p);
         return (0, a.jsxs)(o.s, {
-          align: _,
-          ref: d,
+          align: h,
+          ref: g,
           role: "checkbox",
-          "aria-checked": x ? "mixed" : n,
-          "data-state": g(n),
-          className: c()(s.Root, s[`Variant-${m}`], r && s.Disabled),
-          onClick: b,
+          "aria-checked": v ? "mixed" : n,
+          "data-state": u(n),
+          className: c()(s.Root, s[`Variant-${j}`], r && s.Disabled),
+          onClick: I,
           tabIndex: 0,
           onKeyDown: (e) => {
             r ||
-              (" " === e.key && (b(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (I(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": r,
-          "data-accent-color": p,
-          ...h,
+          "data-accent-color": _,
+          ...x,
           children: [
             (0, a.jsx)("div", {
               className: s.Checkbox,
-              children: n && (0, a.jsx)(v, { className: s.Icon }),
+              children: n && (0, a.jsx)(b, { className: s.Icon }),
             }),
             l,
           ],
         });
       }
-      function g(e) {
+      function u(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function u(e) {
+      function m(e) {
         return (0, a.jsx)("svg", {
           viewBox: "0 0 16 16",
           fill: "none",

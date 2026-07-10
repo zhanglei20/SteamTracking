@@ -704,7 +704,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             checked: _,
@@ -712,7 +713,7 @@
             disabled: _,
             children: _,
             ref: _,
-            variant: _ = "default",
+            variant: _,
             color: _,
             align: _ = "center",
             ..._
@@ -721,7 +722,8 @@
           _ = _ ? _ : _,
           _ = () => {
             _ || (_ && __webpack_require__(!!_ || !_));
-          };
+          },
+          _ = (0, _._)("Checkbox", _);
         return (0, _.jsxs)(_._, {
           align: _,
           ref: _,
@@ -6027,7 +6029,7 @@
                 ..._
               } = _,
               _ = _.useRef(0),
-              _ = _.GetStoreItemType() == _._._ ? _.GetAppID() : null,
+              _ = _ && _.GetStoreItemType() == _._._ ? _.GetAppID() : null,
               _ = (0, _._)(),
               _ = _.useMemo(
                 () =>
@@ -6042,7 +6044,7 @@
               ),
               _ = _.useMemo(() => _._.GetCuratorClanIDParam(_), [_]),
               _ = _.useMemo(
-                () => _._.AddNavParamToURL(_.GetStorePageURL(), _, _),
+                () => _._.AddNavParamToURL(_ ? _.GetStorePageURL() : "", _, _),
                 [_, _, _],
               ),
               _ = (0, _._)(),
@@ -6717,10 +6719,10 @@
         }
       }
       !(function (_) {
-        (_.GetWeeklyTopSellers = function (_, _) {
+        (_.GetWeeklyTopSellers = function (_, _, _) {
           return _.SendMsg(
             "StoreTopSellers.GetWeeklyTopSellers#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -6729,10 +6731,10 @@
             },
           );
         }),
-          (_.GetCountryList = function (_, _) {
+          (_.GetCountryList = function (_, _, _) {
             return _.SendMsg(
               "StoreTopSellers.GetCountryList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

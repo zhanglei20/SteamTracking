@@ -6697,7 +6697,7 @@
                         _._.COMMUNITY_BASE_URL +
                         "partnereventdata/ajaxrequestsalepagereview",
                       _ = new URLSearchParams();
-                    _.append("sessionid", _._.SESSIONID),
+                    _.append("sessionid", (0, _._)()),
                       _.append("clanAccountID", "" + _.GetAccountID()),
                       _.append("gidClanEvent", _),
                       _.append("partnerID", "" + _),
@@ -7977,7 +7977,7 @@
                 let _ = Array.from(_);
                 _.sort();
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("name", "[AUTO] " + _.GetName()),
                   _.append("event", "1"),
                   _.append("type", "discount"),
@@ -16155,7 +16155,7 @@
             _ = {
               clanid: _.GetClanSteamID().GetAccountID(),
               gidevent: _.GetGID(),
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           try {
             let _ = await _().get(_, {
@@ -16635,7 +16635,10 @@
           _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
         let _ = _.useRef(void 0);
         const _ = _.BHasSaleEnabled(),
-          _ = _.GetEventType();
+          _ = _.GetEventType(),
+          [_] = (0, _._)(() => [
+            _.GetEventModel().jsondata.country_restriction,
+          ]);
         if (!_.valve_admin) return null;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -16855,6 +16858,19 @@
                       }),
                     ],
                   }),
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  label: (0, _._)("#EventEditor_Options_RegionRestrictions"),
+                  placeholder: (0, _._)(
+                    "#EventEditor_Options_RegionRestrictions_placeholder",
+                  ),
+                  onChange: (_) => {
+                    (_.GetEventModel().jsondata.country_restriction =
+                      _.currentTarget.value),
+                      _.SetDirty(_._.description);
+                  },
+                  value: _,
+                }),
               ],
             }),
           ],
@@ -17751,7 +17767,7 @@
                         _._.COMMUNITY_BASE_URL +
                         "partnereventdata/ajaxrequestmarketingmessagemajorupdatereview",
                       _ = new URLSearchParams();
-                    _.append("sessionid", _._.SESSIONID),
+                    _.append("sessionid", (0, _._)()),
                       _.append("clanAccountID", "" + _.GetAccountID()),
                       _.append("appid", "" + _),
                       _.append("gidClanEvent", _),
@@ -19195,6 +19211,7 @@
                       section: _,
                       reservationDef: _[0],
                       hardwareDetail: _,
+                      reservedHardwareDetail: _,
                     }),
                   _ &&
                     (null == _ ? void 0 : _.allow_purchase_in_country) &&
@@ -20748,7 +20765,7 @@
             _._.COMMUNITY_BASE_URL + "invites/ajaxgetall",
             {
               params: {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
             },
           );
@@ -20763,7 +20780,7 @@
         }
         async OnCreateInviteLink() {
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("steamid_user", _._.steamid),
             _.append("duration", (2592e3).toString());
           const _ = await _().post(
@@ -20804,7 +20821,7 @@
         }
         async OnAddFriend(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0");
           try {
@@ -21018,7 +21035,7 @@
         }
         async OnActionClick(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0"),
             this.setState({

@@ -21,7 +21,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
+        "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
@@ -59,7 +59,7 @@
         "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
         "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
         disabled: "_3gVhaCZ4k3QSnF9WhRZk5m",
-        "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
+        "Variant-basic": "d2NNa31iY_ztalFCMja9O",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
         "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
         "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
@@ -135,7 +135,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             checked: _,
@@ -143,7 +144,7 @@
             disabled: _,
             children: _,
             ref: _,
-            variant: _ = "default",
+            variant: _,
             color: _,
             align: _ = "center",
             ..._
@@ -152,7 +153,8 @@
           _ = _ ? _ : _._,
           _ = () => {
             _ || (_ && __webpack_require__(!!_ || !_));
-          };
+          },
+          _ = (0, _._)("Checkbox", _);
         return (0, _.jsxs)(_._, {
           align: _,
           ref: _,
@@ -254,6 +256,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -630,6 +633,7 @@
               onIndexSelected: _,
               popoverPlacement: _,
               maxSelected: _,
+              variant: _,
               ..._
             } = _("<ComboboxTrigger>"),
             _ = {
@@ -645,12 +649,14 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_._, {}),
+            _ = (0, _._)("Combobox", _),
             _ = (0, _.jsx)(_._, {
               beforeContent: _,
               afterContent: _,
               hasValue: _,
               cursor: "pointer",
               tabIndex: 0,
+              variant: _,
               ..._,
             }),
             _ = (0, _._)(_, _, _, void 0);
@@ -836,7 +842,7 @@
           } = _,
           _ = (function (_) {
             const {
-                variant: _ = "default",
+                variant: _ = "basic",
                 size: _ = "2",
                 radius: _,
                 focusable: _ = !0,
@@ -1470,6 +1476,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -1535,7 +1542,7 @@
       }),
         (_.Root = function (_) {
           const {
-              variant: _ = "default",
+              variant: _,
               radius: _,
               size: _,
               children: _,
@@ -1561,6 +1568,7 @@
                 }),
               [],
             ),
+            _ = (0, _._)("SegmentedControl", _),
             _ = (0, _.useMemo)(
               () => ({
                 value: _,
@@ -1640,6 +1648,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1837,6 +1846,7 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_._, {}),
+            _ = (0, _._)("Select", _),
             _ = (0, _.jsx)(_._, {
               afterContent: _,
               variant: _,
@@ -2010,6 +2020,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { extracted: _, remaining: _ } = (0, _._)(_),
@@ -2030,22 +2041,23 @@
             gamepadFocusable: _ = !0,
             ..._
           } = _,
+          _ =
+            _ && _
+              ? (0, _.jsx)(_._, {
+                  onClick: () => {
+                    _(""), _ && _();
+                  },
+                  cursor: "pointer",
+                  hitSlop: !0,
+                })
+              : _,
           _ = {
             ..._,
-            variant: _,
+            variant: (0, _._)("TextInput", _),
             size: _,
             radius: _,
             beforeContent: _,
-            afterContent:
-              _ && _
-                ? (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _(""), _ && _();
-                    },
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : _,
+            afterContent: _,
             ref: _,
             disabled: _,
           },
@@ -2349,8 +2361,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2389,6 +2403,33 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
+      function _(_) {
+        var _;
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.onClick,
+          _ = (0, _.jsx)("span", {
+            role: "button",
+            ...(0, _._)(
+              {
+                ..._,
+                underline: _,
+                className: _.TextLinkButton,
+              },
+              _,
+            ),
+          });
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
