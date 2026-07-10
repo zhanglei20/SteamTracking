@@ -63430,15 +63430,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = [
-          9467224, 8255888, 7732977, 8599101, 9303484, 36, 7554697, 9572001,
-          9247354, 2163, 9691969, 7119388, 9640842, 8291895, 9651185, 8261500,
-        ],
-        _ = [
           134513080, 1479611086, 102822329, 70473277, 70210046, 111750003,
           113439358, 870350113, 238146811, 82262664, 92647162, 172234089,
           341358028, 40547474, 92253768, 39128794, 60943014, 182672432,
           89269794, 113863940, 250056809, 191966736, 192154945, 94439767,
-          1202001315, 186301610, 98887913, 121265419,
+          1202001315, 186301610, 98887913, 121265419, 106285240, 27050645,
+          163227125, 173243564, 367267973, 113711310, 107579895, 104694710,
+          111034589, 1065535948, 98172857, 87278757, 350729580,
         ],
         _ = () => {
           const [_, _] = (0, _.useState)([]),
@@ -63740,21 +63738,15 @@
                 ],
               });
             },
-            _ = (_, _) => {
-              if (12 == _._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) {
-                if (_.includes(_?.team_id) && !_.includes(_?.team_id))
-                  return -1;
-                if (!_.includes(_?.team_id) && _.includes(_?.team_id)) return 1;
-              }
-              return _.hasUploadedAutograph && !_.hasUploadedAutograph
+            _ = (_, _) =>
+              _.hasUploadedAutograph && !_.hasUploadedAutograph
                 ? -1
                 : (!_.hasUploadedAutograph && _.hasUploadedAutograph) ||
                     _?.name.toLowerCase() > _?.name.toLowerCase()
                   ? 1
                   : _?.name.toLowerCase() < _?.name.toLowerCase()
                     ? -1
-                    : 0;
-            },
+                    : 0,
             _ = 0 == _._.ACCOUNT_ID && !_._.VALVE_INTERNAL;
           return (0, _.jsxs)("div", {
             className: _().MajorsRegistrationAutographsPage,
