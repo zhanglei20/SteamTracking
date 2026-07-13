@@ -1629,7 +1629,7 @@ function _(_) {
 }
 function _(_) {
   let {
-      variant: _ = "default",
+      variant: _,
       size: _ = "2",
       minWidth: _ = "fit-content",
       disabled: _,
@@ -1638,6 +1638,7 @@ function _(_) {
       navProps: _,
       ..._
     } = _,
+    _ = _("Button", _),
     _ = _(
       {
         onClick: _ ? _ : void 0,

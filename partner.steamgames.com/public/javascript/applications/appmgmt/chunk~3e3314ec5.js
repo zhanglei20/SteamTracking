@@ -1284,21 +1284,22 @@
         },
         C = function (e) {
           const {
-              variant: r = "default",
+              variant: r,
               size: t = "2",
               minWidth: a = "fit-content",
               disabled: c,
               icon: u,
               focusable: d,
               navProps: p,
-              ...P
+              ...g
             } = e,
-            g = c ? v : void 0,
-            m = (0, o.mz)(
+            m = (0, P.f)("Button", r),
+            h = c ? v : void 0,
+            G = (0, o.mz)(
               {
-                onClick: g,
-                ...P,
-                variant: r,
+                onClick: h,
+                ...g,
+                variant: m,
                 size: t,
                 minWidth: a,
                 className: s()(n.Button, u && n.Icon, (0, l.T)()),
@@ -1306,8 +1307,8 @@
               S,
             );
           return f.TS.IN_GAMEPADUI && (d || p)
-            ? (0, i.jsx)(_.Ii, { ...m, ...(p || {}), focusable: d })
-            : (0, i.jsx)("a", { ...m });
+            ? (0, i.jsx)(_.Ii, { ...G, ...(p || {}), focusable: d })
+            : (0, i.jsx)("a", { ...G });
         };
     },
     51877: (e, r, t) => {

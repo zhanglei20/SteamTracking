@@ -33726,8 +33726,31 @@
           children: [
             (0, s.jsx)("div", {
               className: "sub_category",
-              children: (0, s.jsx)("h3", {
-                children: (0, N.we)("#OptIn_Collect_Trailer"),
+              children: (0, s.jsxs)("h3", {
+                children: [
+                  (0, N.we)("#OptIn_Collect_Trailer"),
+                  (0, s.jsx)("span", {
+                    className: "required_optional1",
+                    children: Boolean(t.collect_demo_deadline)
+                      ? (0, s.jsxs)(s.Fragment, {
+                          children: [
+                            "(",
+                            (0, N.we)(
+                              "#OptIn_Collect_SuggestedBy",
+                              (0, N.$z)(t.collect_demo_deadline),
+                            ),
+                            ")",
+                          ],
+                        })
+                      : (0, s.jsxs)(s.Fragment, {
+                          children: [
+                            "(",
+                            (0, N.we)("#OptIn_Collect_Optional"),
+                            ")",
+                          ],
+                        }),
+                  }),
+                ],
               }),
             }),
             (0, s.jsx)("p", {
@@ -33739,7 +33762,7 @@
             (0, s.jsx)("p", {
               children: (0, N.we)(
                 "#OptIn_Collect_Trailer_check_req_trailer",
-                (0, N.$z)(t.optin_deadline_date),
+                (0, N.$z)(t.collect_demo_deadline),
               ),
             }),
             a &&
