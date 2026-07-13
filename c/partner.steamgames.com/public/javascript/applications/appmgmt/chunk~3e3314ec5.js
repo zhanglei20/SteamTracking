@@ -1346,7 +1346,7 @@
         },
         _ = function (_) {
           const {
-              variant: _ = "default",
+              variant: _,
               size: _ = "2",
               minWidth: _ = "fit-content",
               disabled: _,
@@ -1355,6 +1355,7 @@
               navProps: _,
               ..._
             } = _,
+            _ = (0, _._)("Button", _),
             _ = _ ? _ : void 0,
             _ = (0, _._)(
               {

@@ -360,30 +360,31 @@
         },
         y = function (s) {
           const {
-              variant: r = "default",
+              variant: r,
               size: e = "2",
               minWidth: p = "fit-content",
               disabled: n,
               icon: l,
-              focusable: d,
-              navProps: f,
-              ...y
+              focusable: f,
+              navProps: y,
+              ...N
             } = s,
-            N = n ? u : void 0,
-            x = (0, a.mz)(
+            x = (0, d.f)("Button", r),
+            g = n ? u : void 0,
+            P = (0, a.mz)(
               {
-                onClick: N,
-                ...y,
-                variant: r,
+                onClick: g,
+                ...N,
+                variant: x,
                 size: e,
                 minWidth: p,
                 className: i()(t.Button, l && t.Icon, (0, c.T)()),
               },
               v,
             );
-          return _.TS.IN_GAMEPADUI && (d || f)
-            ? (0, o.jsx)(m.Ii, { ...x, ...(f || {}), focusable: d })
-            : (0, o.jsx)("a", { ...x });
+          return _.TS.IN_GAMEPADUI && (f || y)
+            ? (0, o.jsx)(m.Ii, { ...P, ...(y || {}), focusable: f })
+            : (0, o.jsx)("a", { ...P });
         };
     },
     62463: (s, r, e) => {
