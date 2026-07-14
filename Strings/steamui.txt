@@ -5114,9 +5114,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
+++CCUNGS
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNGx
 +.CAuthenticationSupport_RevokeToken_Request
 +.CAuthentication_GetAuthSessionInfo_Request
 +.CBluetoothManager_GetDeviceDetails_Request
@@ -7556,11 +7557,11 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-00:00:00
 0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 01/01/00
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -12695,7 +12696,6 @@ ${LANGUAGE}
 51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
-524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -12962,7 +12962,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -13002,7 +13001,11 @@ ${LANGUAGE}
 64CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
+8000
+8192
 65536
+524288
+60000000
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 666666666666666666666666666666666666666666666666
@@ -13220,9 +13223,7 @@ ${LANGUAGE}
 8.K%G
 8/A0
 80 Mbps
-8000
 80CChatUsability_ClientUsabilityMetrics_Notification_UIState_CategoryCollapseState
-8192
 82\n:XPH
 83CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization
 83L3
@@ -24292,7 +24293,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 10 2026 19:37:03
+Jul 14 2026 15:41:59
 July
 JumpList
 Jumplist
@@ -41609,7 +41610,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 ghost_
 gidlist
 gidparentcomment
@@ -57109,6 +57110,7 @@ vecPlatforms
 vecRequested
 vecScreenShots
 vecSharedState.Count() > 0
+vecSteamMachineCompatTestResults
 vecSteamOSCompatTestResults
 vecUnachieved
 vecValidAutoUpdateRestrictHours
