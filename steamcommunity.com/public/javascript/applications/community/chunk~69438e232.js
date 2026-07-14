@@ -1696,6 +1696,7 @@
       n.I2, n.sd, n.YX, n.V8;
       n.I2, n.sd, n.YX, n.V8;
       a.Hi, a.xs, a.u_;
+      n.I2, n.sd, n.YX, n.V8;
       a.Hi, a.xs, a.u_;
     },
     4703: (e, t, r) => {
@@ -27443,7 +27444,7 @@
         );
       }
       function C(e) {
-        e && (window.clearTimeout(e.current), (e.current = null));
+        e.current && (window.clearTimeout(e.current), (e.current = null));
       }
       function R(e) {
         const {
@@ -27924,48 +27925,66 @@
               ? void 0
               : r.length))
         ) {
-          const e = p == K.c9,
-            t = e
-              ? k.Z.Localize(
-                  "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
-                )
-              : k.Z.Localize(
-                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                ),
-            r = e
-              ? (0, i.jsx)(ue, {
+          let e = "",
+            t = null,
+            r = null;
+          return (
+            p == K.JR
+              ? ((e = k.Z.Localize(
+                  "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+                )),
+                (r = (0, i.jsx)(me, {
                   id: o,
-                  category: n.steamos_resolved_category,
+                  category: n.machine_resolved_category,
                   appName: l,
-                })
-              : (0, i.jsx)(de, { category: n.resolved_category, appName: l }),
-            c = e ? b : B;
-          return (0, i.jsxs)(a.Z, {
-            autoFocus: d,
-            focusableIfEmpty: d,
-            noFocusRing: !0,
-            className: A().CompatibilityDetailsContainer,
-            ..._,
-            children: [
-              (0, i.jsxs)("div", {
-                id: s,
-                className: A().DialogHeader,
-                children: [
-                  (0, i.jsx)("div", {
-                    className: A().DialogTitle,
-                    children: t,
-                  }),
-                  (0, i.jsx)("div", {
-                    className: A().AppTitleCategory,
-                    children: (0, i.jsx)(le, { category: n.resolved_category }),
-                  }),
-                ],
-              }),
-              r,
-              !1,
-              c,
-            ],
-          });
+                })))
+              : p == K.c9
+                ? ((e = k.Z.Localize(
+                    "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (r = (0, i.jsx)(ue, {
+                    id: o,
+                    category: n.steamos_resolved_category,
+                    appName: l,
+                  })),
+                  (t = b))
+                : ((e = k.Z.Localize(
+                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (r = (0, i.jsx)(de, {
+                    category: n.resolved_category,
+                    appName: l,
+                  })),
+                  (t = B)),
+            (0, i.jsxs)(a.Z, {
+              autoFocus: d,
+              focusableIfEmpty: d,
+              noFocusRing: !0,
+              className: A().CompatibilityDetailsContainer,
+              ..._,
+              children: [
+                (0, i.jsxs)("div", {
+                  id: s,
+                  className: A().DialogHeader,
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: A().DialogTitle,
+                      children: e,
+                    }),
+                    (0, i.jsx)("div", {
+                      className: A().AppTitleCategory,
+                      children: (0, i.jsx)(le, {
+                        category: n.resolved_category,
+                      }),
+                    }),
+                  ],
+                }),
+                r,
+                t,
+                !1,
+              ],
+            })
+          );
         }
         const h = (0, m.z5)(n.resolved_category),
           y = (0, m._R)(n.steamos_resolved_category),

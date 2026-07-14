@@ -61,15 +61,15 @@
         PresenterLabel: "_2FnM_Y63_Jnu_t6cnt-4se",
       };
     },
+    27828: (e) => {
+      e.exports = {
+        EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
+        EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
+        ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
+      };
+    },
     64387: (e) => {
       e.exports = { MenuBackgroundReflection: "_1vclHrINn0CO_nGkxoDkKy" };
-    },
-    57361: (e) => {
-      e.exports = {
-        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
-        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
-        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
-      };
     },
     17618: (e) => {
       e.exports = {
@@ -794,7 +794,7 @@
       (0, a.Cg)([p.oI], h.prototype, "OnLanguageChange", null),
         (h = (0, a.Cg)([r.PA], h));
     },
-    12858: (e, n, t) => {
+    73579: (e, n, t) => {
       "use strict";
       t.d(n, { _: () => Vt });
       var a = t(7850),
@@ -943,8 +943,8 @@
         C = t(75233),
         E = t(80902),
         D = t(24484),
-        G = t(17720);
-      async function A(e, n, t) {
+        A = t(17720);
+      async function G(e, n, t) {
         const a = (0, D.Fd)("partnereventpermissions", "application_config");
         if (
           (function (e) {
@@ -968,7 +968,7 @@
           }
         }
         if (k.iA.logged_in) {
-          const n = G.b.InitFromClanID(e);
+          const n = A.b.InitFromClanID(e);
           let t = `${k.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
           "partnerweb" == (0, I.yK)()
             ? (t = `${k.TS.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${e}`)
@@ -1006,7 +1006,7 @@
           (function (e) {
             return {
               queryKey: L(e),
-              queryFn: async () => await A(e),
+              queryFn: async () => await G(e),
               enabled: !!e,
             };
           })(e),
@@ -1478,8 +1478,8 @@
       var Ce = t(81393),
         Ee = t(61336),
         De = t(96236),
-        Ge = t(64846),
-        Ae = t(56283),
+        Ae = t(64846),
+        Ge = t(56283),
         ye = t(74568),
         Te = t(738),
         Le = t(48479),
@@ -1487,7 +1487,7 @@
         Ne = t(6379),
         Me = t(61257),
         Ue = t(4869),
-        Re = t(57361),
+        Re = t(27828),
         Pe = t.n(Re);
       function Oe(e) {
         const { color: n, onChange: t, strTitle: o, disableAlpha: r } = e,
@@ -1503,13 +1503,13 @@
                   })(n.sRGBHex);
                 s(a), t(a);
               } catch (e) {
-                console.warn((0, O.we)("#Sale_EyeDropperFailed"), e);
+                console.warn(B.Z.Localize("#Sale_EyeDropperFailed"), e);
               }
-            else alert((0, O.we)("#Sale_EyeDropperError"));
+            else alert(B.Z.Localize("#Sale_EyeDropperError"));
           }, [t]);
         return (0, a.jsxs)("div", {
           children: [
-            Boolean(o) && (0, a.jsx)(Ae.JU, { children: o }),
+            Boolean(o) && (0, a.jsx)(Ge.JU, { children: o }),
             (0, a.jsx)(Me.xk, {
               onChange: (e) => {
                 const n = (function (e) {
@@ -1524,8 +1524,8 @@
             (0, a.jsx)("div", {
               className: Pe().EyeDropperCtn,
               children: (0, a.jsx)(we.Gq, {
-                toolTipContent: (0, O.we)("#Sale_BackgroundColorPicker"),
-                children: (0, a.jsx)(Ae.$n, {
+                toolTipContent: B.Z.Localize("#Sale_BackgroundColorPicker"),
+                children: (0, a.jsx)(Ge.$n, {
                   className: Pe().EyeDropperBtn,
                   onClick: l,
                   children: (0, a.jsx)(Ue.O7b, {}),
@@ -1782,14 +1782,14 @@
           className: cn().UploadPreviewButtonsCtn,
           children: [
             Boolean(o.length) &&
-              (0, a.jsx)(Ae.$n, {
+              (0, a.jsx)(Ge.$n, {
                 style: { margin: "8px" },
                 onClick: t,
                 disabled: !r,
                 children: (0, O.we)("#ImageUpload_Upload"),
               }),
             Boolean(o.length) &&
-              (0, a.jsx)(Ae.$n, {
+              (0, a.jsx)(Ge.$n, {
                 style: { margin: "8px" },
                 onClick: n.ClearImages,
                 disabled: i,
@@ -1860,7 +1860,7 @@
             }),
             (0, a.jsx)(pn, { asset: n }),
             l &&
-              (0, a.jsx)(Ae.m, {
+              (0, a.jsx)(Ge.m, {
                 strDropDownClassName: v().DropDownScroll,
                 rgOptions: l,
                 selectedOption: n.language,
@@ -1869,7 +1869,7 @@
               }),
             i &&
               i?.length > 1 &&
-              (0, a.jsx)(Ae.m, {
+              (0, a.jsx)(Ge.m, {
                 label: n.GetImageOptionLabel(),
                 rgOptions: i,
                 selectedOption: u,
@@ -1918,7 +1918,7 @@
               }),
             d &&
               c.needsCrop &&
-              (0, a.jsx)(Ae.jn, {
+              (0, a.jsx)(Ge.jn, {
                 onClick: () =>
                   ((n) => {
                     if (n instanceof en.M7) {
@@ -2056,7 +2056,7 @@
           i = t.trim().toLowerCase() || "",
           s = Ye.pU.GetFilteredClanImagesList(r, i);
         if (0 == s.length) {
-          const e = G.b.InitFromClanID(n);
+          const e = A.b.InitFromClanID(n);
           let t = Ye.pU.GetLoadState(e);
           return t && t.loaded
             ? (0, a.jsx)(
@@ -2114,7 +2114,7 @@
           },
           m = () => {
             c(!0);
-            let e = G.b.InitFromClanID(n.clanAccountID);
+            let e = A.b.InitFromClanID(n.clanAccountID);
             Ye.pU
               .DeleteClanImage(e, n)
               .then((e) => {
@@ -2148,13 +2148,13 @@
                   n.url &&
                     (e.dataTransfer.setData("text", n.url),
                     Ye.pU.GetClanImageDragListener().forEach((e) => {
-                      e(G.b.InitFromClanID(n.clanAccountID), !0);
+                      e(A.b.InitFromClanID(n.clanAccountID), !0);
                     }));
                 },
                 onDragEnd: (e) => {
                   n.url &&
                     Ye.pU.GetClanImageDragListener().forEach((e) => {
-                      e(G.b.InitFromClanID(n.clanAccountID), !1);
+                      e(A.b.InitFromClanID(n.clanAccountID), !1);
                     });
                 },
                 onDoubleClick: d,
@@ -2267,7 +2267,7 @@
             })
           : null;
       }
-      function Gn(e) {
+      function An(e) {
         const { clanSteamID: n, closeModal: t, OnClanImageSelected: o } = e,
           r = u.useCallback(
             (e, n) => {
@@ -2293,7 +2293,7 @@
           ],
         });
       }
-      function An(e) {
+      function Gn(e) {
         const { clanSteamID: n, OnClanImageSelected: t } = e;
         return (0, a.jsxs)("div", {
           className: on().ImageUploadBar,
@@ -2316,7 +2316,7 @@
               type: "button",
               onClick: (e) => {
                 (0, Te.pg)(
-                  (0, a.jsx)(Gn, { clanSteamID: n, OnClanImageSelected: t }),
+                  (0, a.jsx)(An, { clanSteamID: n, OnClanImageSelected: t }),
                   (0, Fe.uX)(e) ?? window,
                 );
               },
@@ -2369,7 +2369,7 @@
                 ? [
                     [
                       (0, a.jsx)(
-                        An,
+                        Gn,
                         { clanSteamID: n, OnClanImageSelected: _ },
                         "clanartworkpicker",
                       ),
@@ -2430,7 +2430,7 @@
             fnLangHasData: s,
           } = e,
           [l, c] = (0, u.useState)(o),
-          d = G.b.InitFromClanID(n.clanAccountID),
+          d = A.b.InitFromClanID(n.clanAccountID),
           m = (0, g.q3)(() =>
             de.zU.GenerateURLFromHashAndExt(d, de.zU.GetHashAndExt(n) ?? ""),
           );
@@ -2523,7 +2523,7 @@
               ),
             }),
             !!i &&
-              (0, a.jsxs)(Ae.$n, {
+              (0, a.jsxs)(Ge.$n, {
                 onClick: c,
                 children: [
                   (0, O.we)("#Sale_RemoveAll"),
@@ -3497,7 +3497,7 @@
                   (0, a.jsx)("span", { children: " " }),
                   j,
                   i &&
-                    (0, a.jsx)(Ae.$n, {
+                    (0, a.jsx)(Ge.$n, {
                       onClick: i,
                       children: (0, a.jsx)(we.he, {
                         toolTipContent: (0, O.we)(
@@ -3545,7 +3545,7 @@
                   (0, a.jsx)("br", {}),
                   e.elAdditionalControls,
                   Boolean(e.fnRemoveAllArtwork) &&
-                    (0, a.jsx)(Ae.$n, {
+                    (0, a.jsx)(Ge.$n, {
                       onClick: (n) => {
                         (0, Te.pg)(
                           (0, a.jsx)(jt, {
@@ -3627,7 +3627,7 @@
         return "hero" === n
           ? (0, a.jsx)("div", {
               style: { padding: "16px" },
-              children: (0, a.jsx)(Ae.$n, {
+              children: (0, a.jsx)(Ge.$n, {
                 style: { textTransform: "uppercase", width: "200px" },
                 onClick: () =>
                   window.open(
@@ -3765,7 +3765,7 @@
           h(!1),
             Ze.R.ClearImageGroup(),
             s?.forEach((e, n) => {
-              const t = G.b.InitFromClanID(v);
+              const t = A.b.InitFromClanID(v);
               if (0 == Ze.R.GetAllLocalizedGroupImages().length) {
                 const n = e && de.zU.GetHashFromHashAndExt(e),
                   a = n && Ye.pU.GetClanImageByImageHash(t, n);
@@ -3777,7 +3777,7 @@
         }, [s, v, l]);
         const j = (0, u.useCallback)(
             (e, n, t = o.Bhc) => {
-              const a = G.b.InitFromClanID(v),
+              const a = A.b.InitFromClanID(v),
                 r = de.zU.GetHashAndExt(n ?? null);
               if (0 == Ze.R.GetAllLocalizedGroupImages().length) {
                 const n = r && de.zU.GetHashFromHashAndExt(r),
@@ -3890,10 +3890,10 @@
           }, []);
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(Ae.JU, {
+            (0, a.jsx)(Ge.JU, {
               children: o || (0, O.we)("#EventEditor_Tile_Title"),
             }),
-            (0, a.jsx)(Ae.m, {
+            (0, a.jsx)(Ge.m, {
               strDropDownClassName: x.DropDownScroll,
               rgOptions: r,
               selectedOption: n || "no-repeat",
@@ -3981,7 +3981,7 @@
                       },
                       label: (0, O.we)("#BackgroundGroups_Repeating"),
                     }),
-                    (0, a.jsx)(At, {
+                    (0, a.jsx)(Gt, {
                       scaling_setting: d ?? "contain",
                       disable: "no-repeat" !== c,
                       fnUpdateSetting: (e) => l({ ...s, scaling_setting: e }),
@@ -3997,17 +3997,17 @@
                 (0, a.jsxs)("div", {
                   className: He().ColorOptions,
                   children: [
-                    (0, a.jsx)(Ae.JU, {
+                    (0, a.jsx)(Ge.JU, {
                       children: (0, O.we)("#BackgroundGroups_Color"),
                     }),
                     (0, a.jsxs)("div", {
                       className: qe().ColorCtn,
                       children: [
-                        (0, a.jsx)(Ae.$n, {
+                        (0, a.jsx)(Ge.$n, {
                           style: { backgroundColor: m },
                           onClick: (e) => {
                             (0, Te.pg)(
-                              (0, a.jsx)(Gt, {
+                              (0, a.jsx)(At, {
                                 color: m ?? "",
                                 setColor: (e) =>
                                   l({ ...s, background_color1: e }),
@@ -4023,7 +4023,7 @@
                           ),
                         }),
                         " ",
-                        (0, a.jsx)(Ae.$n, {
+                        (0, a.jsx)(Ge.$n, {
                           onClick: () => l({ ...s, background_color1: void 0 }),
                           children: (0, O.we)("#BackgroundGroups_Color_Clear"),
                         }),
@@ -4031,7 +4031,7 @@
                     }),
                     (0, a.jsx)("div", {
                       className: He().SwapColorsCtn,
-                      children: (0, a.jsx)(Ae.$n, {
+                      children: (0, a.jsx)(Ge.$n, {
                         onClick: () =>
                           l({
                             ...s,
@@ -4045,11 +4045,11 @@
                       (0, a.jsxs)("div", {
                         className: qe().ColorCtn,
                         children: [
-                          (0, a.jsx)(Ae.$n, {
+                          (0, a.jsx)(Ge.$n, {
                             style: { backgroundColor: p },
                             onClick: (e) => {
                               (0, Te.pg)(
-                                (0, a.jsx)(Gt, {
+                                (0, a.jsx)(At, {
                                   color: p ?? "",
                                   setColor: (e) =>
                                     l({ ...s, background_color2: e }),
@@ -4065,7 +4065,7 @@
                             ),
                           }),
                           " ",
-                          (0, a.jsx)(Ae.$n, {
+                          (0, a.jsx)(Ge.$n, {
                             onClick: () =>
                               l({ ...s, background_color2: void 0 }),
                             children: (0, O.we)(
@@ -4082,7 +4082,7 @@
                 }),
               ],
             }),
-            (0, a.jsx)(Ge.E, {
+            (0, a.jsx)(Ae.E, {
               clanSteamID: i.clanSteamID,
               children: (0, a.jsx)(Et.S, {
                 checked: !!v,
@@ -4095,7 +4095,7 @@
           ],
         });
       }
-      function Gt(e) {
+      function At(e) {
         const { closeModal: n, color: t, setColor: o } = e,
           [r, i] = (0, u.useState)(t);
         return (0, a.jsx)(ye.o0, {
@@ -4105,7 +4105,7 @@
           children: (0, a.jsx)(Oe, { onChange: (e) => i(e), color: r }),
         });
       }
-      function At(e) {
+      function Gt(e) {
         const {
             scaling_setting: n,
             fnUpdateSetting: t,
@@ -4132,10 +4132,10 @@
           }, []);
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(Ae.JU, {
+            (0, a.jsx)(Ge.JU, {
               children: o || (0, O.we)("#BackgroundGroups_Scaling"),
             }),
-            (0, a.jsx)(Ae.m, {
+            (0, a.jsx)(Ge.m, {
               strDropDownClassName: x.DropDownScroll,
               disabled: r,
               rgOptions: i,
@@ -4169,10 +4169,10 @@
           }, []);
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(Ae.JU, {
+            (0, a.jsx)(Ge.JU, {
               children: o || (0, O.we)("#EventEditor_ColorSetting_Title"),
             }),
-            (0, a.jsx)(Ae.m, {
+            (0, a.jsx)(Ge.m, {
               strDropDownClassName: x.DropDownScroll,
               rgOptions: r,
               selectedOption: n || "top-to-bottom",
@@ -4213,10 +4213,10 @@
           }, []);
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(Ae.JU, {
+            (0, a.jsx)(Ge.JU, {
               children: o || (0, O.we)("#BackgroundGroups_Position"),
             }),
-            (0, a.jsx)(Ae.m, {
+            (0, a.jsx)(Ge.m, {
               strDropDownClassName: x.DropDownScroll,
               rgOptions: r,
               selectedOption: n || "unset",
@@ -4241,7 +4241,7 @@
           className: (0, b.A)(He().Ctn, r && x.ValveOnlyBackground),
           children: (0, a.jsxs)(p.tH, {
             children: [
-              (0, a.jsx)(Ae.Yh, {
+              (0, a.jsx)(Ge.Yh, {
                 label: (0, O.we)("#BackgroundGroups_Setting"),
                 checked: i,
                 onChange: (e) => {
@@ -4251,13 +4251,13 @@
               i
                 ? (0, a.jsxs)(a.Fragment, {
                     children: [
-                      (0, a.jsx)(Ae.Yh, {
+                      (0, a.jsx)(Ge.Yh, {
                         label: (0, O.we)("#BackgroundGroups_EditMode"),
                         tooltip: (0, O.we)("#BackgroundGroups_EditMode_ttip"),
                         checked: t,
                         onChange: o,
                       }),
-                      (0, a.jsx)(Ae.Yh, {
+                      (0, a.jsx)(Ge.Yh, {
                         label: (0, O.we)("#BackgroundGroups_ExtendToEnd"),
                         tooltip: (0, O.we)(
                           "#BackgroundGroups_ExtendToEnd_ttip",
@@ -4267,7 +4267,7 @@
                           n.SetSalePageLastCoverSectionUntilEnd(e),
                       }),
                       (0, a.jsx)("hr", {}),
-                      (0, a.jsx)(Ae.$n, {
+                      (0, a.jsx)(Ge.$n, {
                         onClick: c,
                         children: (0, O.we)(
                           "#BackgroundGroups_ClearAllSettings",
@@ -4358,7 +4358,7 @@
           children: (0, a.jsxs)("div", {
             ref: n,
             children: [
-              (0, a.jsx)(Ae.$n, {
+              (0, a.jsx)(Ge.$n, {
                 onClick: v,
                 children: (0, O.we)("#BackgroundGroups_Configure"),
               }),
@@ -4403,7 +4403,7 @@
                 ],
               }),
               !!w &&
-                (0, a.jsx)(Ae.$n, {
+                (0, a.jsx)(Ge.$n, {
                   onClick: () =>
                     null != c
                       ? o.SetTabBackgroundGroup(c, r, {
@@ -4417,7 +4417,7 @@
                   children: (0, O.we)("#BackgroundGroups_Reduce", w),
                 }),
               !!f &&
-                (0, a.jsx)(Ae.$n, {
+                (0, a.jsx)(Ge.$n, {
                   onClick: () =>
                     null != c
                       ? o.SetTabBackgroundGroup(c, r, {
@@ -4434,7 +4434,7 @@
                 (0, a.jsxs)(a.Fragment, {
                   children: [
                     (0, a.jsx)("hr", {}),
-                    (0, a.jsx)(Ae.$n, {
+                    (0, a.jsx)(Ge.$n, {
                       onClick: j,
                       children: (0, O.we)("#BackgroundGroups_RemoveThisGroup"),
                     }),
@@ -4463,7 +4463,7 @@
         const { backgroundImageEditModel: n, nTabID: t } = e;
         return (0, a.jsx)("div", {
           className: He().CtnEditor,
-          children: (0, a.jsx)(Ae.$n, {
+          children: (0, a.jsx)(Ge.$n, {
             onClick: (e) =>
               t && t >= 0
                 ? n?.AddTabBackgroundGroup(t)
@@ -4537,7 +4537,7 @@
           ref: x,
           children: [
             Boolean(m && p && p > m) &&
-              (0, a.jsx)(Ae.$n, {
+              (0, a.jsx)(Ge.$n, {
                 onClick: (e) => d(!0),
                 children: (0, O.we)("#BackgroundGroups_EditBackgroundGroup"),
               }),
@@ -4586,7 +4586,7 @@
           ref: c,
           children: [
             Boolean(r && i && i > r) &&
-              (0, a.jsx)(Ae.$n, {
+              (0, a.jsx)(Ge.$n, {
                 onClick: (e) => o(!0),
                 children: (0, O.we)("#BackgroundGroups_EditBackgroundGroup"),
               }),
@@ -4609,7 +4609,7 @@
           ]);
         return (0, a.jsxs)(p.tH, {
           children: [
-            (0, a.jsx)(Ae.Yh, {
+            (0, a.jsx)(Ge.Yh, {
               label: (0, O.we)("#BackgroundGroups_TaSetting"),
               checked: l,
               onChange: (e) => {
@@ -4619,7 +4619,7 @@
             Boolean(l) &&
               (0, a.jsxs)(a.Fragment, {
                 children: [
-                  (0, a.jsx)(Ae.Yh, {
+                  (0, a.jsx)(Ge.Yh, {
                     label: (0, O.we)("#BackgroundGroups_ExtendToEnd"),
                     tooltip: (0, O.we)(
                       "#BackgroundGroups_ExtendToEnd_Tab_ttip",
@@ -4642,7 +4642,7 @@
         });
       }
       var zt = t(77021),
-        Ht = t(75263);
+        Ht = t(43033);
       function Vt(e) {
         const {
             promotionName: n,
@@ -4698,20 +4698,20 @@
             }
           );
         }, [t, S, c]);
-        const G = t?.jsondata,
-          A = u.useMemo(
+        const A = t?.jsondata,
+          G = u.useMemo(
             () => ({
               promotionName: n,
               clanid: Number(I.UF.CLANACCOUNTID),
-              nAppIDVOD: Number(G?.broadcast_preroll_vod_appid),
+              nAppIDVOD: Number(A?.broadcast_preroll_vod_appid),
               event: t,
               bIsPreview: c,
               language: d,
-              accountIDs: c ? G?.broadcast_whitelist : void 0,
+              accountIDs: c ? A?.broadcast_whitelist : void 0,
               chat_announcement_giveaway:
-                G?.broadcast_chat_announcement_giveaway,
+                A?.broadcast_chat_announcement_giveaway,
             }),
-            [c, t, G, d, n],
+            [c, t, A, d, n],
           ),
           y = (0, g.q3)(() => m?.BIsBackgroundImageEnabled() ?? !1);
         if (t && void 0 !== v) {
@@ -4732,7 +4732,7 @@
               : t.GetEventType() == o.ajI
                 ? ((S = 0), (f = !1))
                 : (S = t.jsondata.sale_header_offset || 0);
-          const G = f && 530 === t.jsondata.sale_header_offset,
+          const A = f && 530 === t.jsondata.sale_header_offset,
             T = J.nY
               .Get()
               .BIsPartnerTakeoverActive(
@@ -4747,12 +4747,12 @@
                 : pe.S.EPreviewMode_Enabled
               : pe.S.EPreviewMode_Disabled,
             N = y || t.GetEventType() != o.ajI,
-            M = (0, Ge.m)(t.clanSteamID),
+            M = (0, Ae.m)(t.clanSteamID),
             R = g ? i.Yo.NoTransform : i.Yo.NoTransformSparseContent,
             P = (0, b.A)(
               h().SaleOuterContainer,
               k && h().SaleOuterTopMargin,
-              G && h().SaleNewSizing,
+              A && h().SaleNewSizing,
               h()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
               "SaleOuterContainer",
               e && h().SalePageLogoSet,
@@ -4788,7 +4788,7 @@
                         (0, a.jsx)(Y, {
                           rgPresenters: t.jsondata.sale_presenters,
                         }),
-                        (0, a.jsx)(ee, { event: t, broadcastEmbedContext: A }),
+                        (0, a.jsx)(ee, { event: t, broadcastEmbedContext: G }),
                         (0, a.jsx)(Wt, {
                           ePreviewMode: B,
                           event: t,
@@ -4796,7 +4796,7 @@
                           language: d,
                           promotionName: n,
                           nSaleDayIndex: v,
-                          broadcastEmbedContext: A,
+                          broadcastEmbedContext: G,
                           selectedTab: C,
                         }),
                         !x &&
@@ -4887,7 +4887,7 @@
         let C = null;
         const E = (0, I.Qn)(),
           D = (0, zt.ty)(),
-          G = u.useMemo(() => {
+          A = u.useMemo(() => {
             const e = qt();
             if (!e) return;
             const n = f.findIndex((n) => n.section_anchor === e);
@@ -4943,7 +4943,7 @@
               salePageBackgroundDerivedConfig: S,
               backgroundImageEditModel: l,
               bExpanded: u,
-              children: (0, a.jsx)(De._, { enabled: !G || r > G, children: p }),
+              children: (0, a.jsx)(De._, { enabled: !A || r > A, children: p }),
             },
             "SaleSectionIndex_" + o.unique_id + "_" + r,
           );
@@ -4969,7 +4969,7 @@
               _e(n, C, i, s && s?.GetActiveTabUniqueID()),
             ),
             (C = null));
-        const A = k.map((e, n) =>
+        const G = k.map((e, n) =>
           (0, a.jsx)(
             "div",
             {
@@ -4986,7 +4986,7 @@
           focusable: !1,
           focusableIfEmpty: !0,
           navKey: "SaleSectionListContainer",
-          children: A,
+          children: G,
         });
       });
       function Yt(e) {
@@ -5262,7 +5262,7 @@
         i = t(62641),
         s = t(17720),
         l = t(6379),
-        c = t(12858),
+        c = t(73579),
         d = t(64641),
         g = t.n(d),
         u = t(22797),

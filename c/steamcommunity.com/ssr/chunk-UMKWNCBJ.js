@@ -3240,6 +3240,35 @@ function _(_, _, _) {
   let _ = _();
   return _(_(_, _, _, _));
 }
+function _(_, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async (_) => {
+      let _ = _.Init(_);
+      _.Body().set_subject_type(_),
+        _.Body().set_subject_group_id(_),
+        _.Body().set_subject_id(_),
+        _.Body().set_required_level(_.eNewLevel),
+        _.eReason && _.Body().set_reason(_.eReason),
+        _.strNote && _.Body().set_note(_.strNote);
+      let _ = await _.EscalateSubject(_, _);
+      if (_.GetEResult() !== 1)
+        throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);
+    },
+    onSuccess: async (_, _) => {
+      await Promise.all([
+        _(_, _, _, _),
+        _.invalidateQueries({
+          queryKey: ["get_claimed"],
+        }),
+        _.invalidateQueries({
+          queryKey: ["get_subject_overview"],
+        }),
+      ]);
+    },
+  });
+}
 function _() {
   let _ = _(),
     _ = _();
@@ -3344,8 +3373,8 @@ function _(_, _, _) {
   });
 }
 var _ = ["get_subject_overview"],
-  _ = ["get_claimed"];
-var _ = ["get_reported_subjects_owned_by_current_user"],
+  _ = ["get_claimed"],
+  _ = ["get_reported_subjects_owned_by_current_user"],
   _ = (_, _) => ["get_content_report_subject_group", _, _],
   _ = (_, _, _) => ["get_content_report_subject", _, _, _],
   _ = (_, _, _) => ["get_audit_log", _, _, _],
@@ -3404,6 +3433,10 @@ function _(_) {
       });
   return _;
 }
+function _() {
+  let _ = _();
+  return _(_(_));
+}
 function _(_) {
   return {
     queryKey: _,
@@ -3417,25 +3450,12 @@ function _(_) {
 }
 function _() {
   let _ = _();
-  return _(_(_));
-}
-function _(_) {
-  return {
-    queryKey: _,
-    queryFn: async () => {
-      let _ = _.Init(_);
-      return (await _.GetClaimedSubjects(_, _)).Body().toObject();
-    },
+  return _({
+    ..._(_),
     select: (_) => (
       _(_.subjects, "Missing subject from getClaimed response!"), _(_.subjects)
     ),
-    staleTime: 2e3,
-    refetchOnWindowFocus: !0,
-  };
-}
-function _() {
-  let _ = _();
-  return _(_(_));
+  });
 }
 function _(_) {
   let _ = _(),
@@ -16805,7 +16825,7 @@ function _(_, _, _, _) {
     mutationFn: async (_) => {
       let _ = _.Init(_);
       _.Body().set_steamid_from(_),
-        _.Body().set_steamid_to(_),
+        _.Body().set_steamid_to(_ ?? _),
         _.Body().set_subject_group_id(_),
         _.Body().set_subject_id(_),
         _.Body().set_resolution(_.eResolution),
@@ -21951,11 +21971,10 @@ function _(_) {
       Number(_.group_id),
       _.EUNIVERSE,
     ).ConvertTo64BitString());
-  let _ = (_.reports?.length ? _.reports[0].reporter_steamid : "") ?? "",
-    _ = _(_.group_id, _._, _.Actions.GetFriendChatReportMetadata),
+  let _ = _(_.group_id, _._, _.Actions.GetFriendChatReportMetadata),
     _ = !!_.data?.reported_msg?.msg?.match(_)?.length,
-    _ = _(_, _, _, _),
-    _ = _.reports?.length ? _.reports[0] : void 0;
+    _ = _.reports?.length ? _.reports[0] : void 0,
+    _ = _(_, _?.reporter_steamid, _, _);
   return (0, _.jsx)(_, {
     subjectKey: _,
     actions: _,
@@ -22441,8 +22460,8 @@ function _(_) {
   });
 }
 var _ = "WxYlpC--xac-";
-var _ = "SAnq7llyABo-";
 var _ = "CZgYqrLRyJw-";
+var _ = "SAnq7llyABo-";
 var _ = "ODjhXemIPr0-";
 var _ = _(_(), 1);
 var _ = "nB-vyHFVvqk-";
@@ -22923,7 +22942,7 @@ function _(_) {
 function _(_) {
   let _ = _(Number(_.group.group_id)),
     _ = _.isError,
-    _ = `Chat messages from '${_.data?.public_data?.persona_name ?? _.group.group_id}`,
+    _ = `Chat messages from '${_.data?.public_data?.persona_name ?? _.group.group_id}'`,
     _ = _(_.group);
   return (0, _.jsx)(_, {
     group: _.group,
@@ -24440,6 +24459,7 @@ function _(_) {
   });
 }
 export {
+  _,
   _,
   _,
   _,

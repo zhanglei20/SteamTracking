@@ -7782,35 +7782,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _({ fnOnSetDirty: _, section: _, property: _, color: _ }) {
-        return (0, _.useCallback)(
-          (_) => {
-            (0, _._)(
-              (0, _.jsx)(_._, {
-                onChange: (_) => {
-                  (_[_] = _), _();
-                },
-                color: _,
-              }),
-              _,
-              {
-                bDisablePopTop: !0,
-              },
-            );
-          },
-          [_, _, _, _],
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -11577,30 +11548,11 @@
             elAdditionalLabelSettings: _,
             fnOnClearSettings: _,
           } = _,
-          [_, _, _, _] = (0, _._)(() => [
-            _.label_color,
+          [_, _, _] = (0, _._)(() => [
             _.background_gradient_bottom,
             _.background_gradient_top,
             _.collapse_header_space,
           ]),
-          _ = (0, _._)({
-            fnOnSetDirty: _,
-            section: _,
-            property: "label_color",
-            color: _,
-          }),
-          _ = (0, _._)({
-            fnOnSetDirty: _,
-            section: _,
-            property: "background_gradient_top",
-            color: _,
-          }),
-          _ = (0, _._)({
-            fnOnSetDirty: _,
-            section: _,
-            property: "background_gradient_bottom",
-            color: _,
-          }),
           _ = (0, _.useCallback)(
             (_) => {
               (_.background_color = void 0),
@@ -11616,49 +11568,20 @@
                 _();
             },
             [_, _, _],
-          ),
-          _ = (0, _._)(_, _);
+          );
+        (0, _._)(_, _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
               className: _.EventEditorTextTitle,
               children: (0, _._)(_ || "#Sale_Section_BackgroundColors_Title"),
             }),
-            !_ &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    className: _.EventEditorTextTitle,
-                    style: {
-                      color: _,
-                    },
-                    children: (0, _._)("#Sale_Section_Label_Color"),
-                  }),
-                  _,
-                ],
-              }),
+            (0, _.jsx)(_._, {
+              ..._,
+            }),
             !Boolean(_) &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    className: _.EventEditorTextTitle,
-                    style: {
-                      color: _,
-                      background: _,
-                    },
-                    children: (0, _._)("#Sale_Section_Background_Top"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    className: _.EventEditorTextTitle,
-                    style: {
-                      color: _,
-                      background: _,
-                    },
-                    children: (0, _._)("#Sale_Section_Background_Bottom"),
-                  }),
                   (0, _.jsx)(_, {
                     ..._,
                   }),
@@ -27916,7 +27839,141 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            rows: _ = 3,
+            resize: _ = "none",
+            ref: _,
+            value: _,
+            onTextChange: _,
+            onChange: _,
+            disabled: _,
+            variant: _,
+            ..._
+          } = _,
+          _ = (0, _._)("TextArea", _),
+          _ = (0, _._)({
+            ..._,
+            className: _()((0, _._)(), (0, _._)()),
+            style: {
+              resize: _,
+            },
+            cursor: "text",
+            disabled: _,
+            variant: _,
+          });
+        return (0, _.jsx)("textarea", {
+          ref: _,
+          ..._,
+          value: _ || "",
+          onChange: (_) => {
+            _ || (_(_.target.value), _ && _(_));
+          },
+          rows: _,
+          readOnly: _,
+          "aria-disabled": _,
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { callout: _, fnOnChange: _ } = _,
+          [_, _, _] = (0, _._)(() => {
+            var _;
+            const _ = _._.Get().GetCurEditLanguage();
+            return [
+              _,
+              (null === (_ = null == _ ? void 0 : _.localized_callout) ||
+              void 0 === _
+                ? void 0
+                : _[_]) || "",
+              (null == _ ? void 0 : _.enable_callout) || !1,
+            ];
+          }),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ = {
+                ..._,
+              };
+              (_.localized_callout = (0, _._)(
+                _.localized_callout || [],
+                _.bP9,
+                null,
+              )),
+                (_.localized_callout[_] = _),
+                __webpack_require__(_);
+            },
+            [_, _, _],
+          ),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)(_._, {
+              checked: _,
+              onChange: (_) => {
+                __webpack_require__(
+                  _
+                    ? {
+                        ..._,
+                        enable_callout: _,
+                      }
+                    : {
+                        enable_callout: _,
+                      },
+                );
+              },
+              children: [
+                "Enable Call out?",
+                (0, _.jsx)(_._, {
+                  tooltip:
+                    "Add a callout text with custom background and label color that appears on top of the descriptions.",
+                }),
+              ],
+            }),
+            _ &&
+              _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    children: "Edit Callout Text",
+                  }),
+                  (0, _.jsx)(_._, {
+                    active: _,
+                    children: (0, _.jsxs)(_._, {
+                      bAlertDialog: !0,
+                      closeModal: _,
+                      strTitle: "Edit Callout Text",
+                      strDescription:
+                        "Edit and hit ok to update the callout text.",
+                      children: [
+                        (0, _.jsx)(_, {
+                          placeholder: "Enter Callout",
+                          value: _,
+                          onTextChange: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          section: _,
+                          fnOnSetDirty: (_) => {
+                            __webpack_require__({
+                              ..._,
+                              ..._,
+                            });
+                          },
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -28150,7 +28207,7 @@
       }
       function _(_) {
         const { reservation: _, fnOnDirty: _, event: _ } = _,
-          [_, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _, _] = (0, _._)(() => {
             var _, _;
             const _ = _._.Get().GetCurEditLanguage(),
               _ = _._.GetELanguageFallback(_);
@@ -28165,6 +28222,8 @@
                 "",
               _.use_package_description,
               _.reservation_package,
+              _.use_screenshot_carousel,
+              _.callout,
             ];
           }),
           _ = (0, _._)(_),
@@ -28197,6 +28256,35 @@
               },
               children: "Use Package Description?",
             }),
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    checked: _,
+                    onChange: (_) => {
+                      _.use_screenshot_carousel != _ &&
+                        ((_.use_screenshot_carousel = _),
+                        __webpack_require__());
+                    },
+                    children: [
+                      "Carousel of Items from App Screenshots?",
+                      (0, _.jsx)(_._, {
+                        tooltip:
+                          "Instead of using the package capsules use all available screenshots and allow the user to carousel through them.",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    callout: _,
+                    fnOnChange: (_) => {
+                      (_.callout = {
+                        ..._,
+                      }),
+                        __webpack_require__();
+                    },
+                  }),
+                ],
+              }),
             _ &&
               _ &&
               (0, _.jsx)("a", {
@@ -35018,6 +35106,93 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            fnOnSetDirty: _,
+            section: _,
+            bHideLabelControls: _,
+            elAdditionalLabelSettings: _,
+            bDisableBackground: _,
+          } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.label_color,
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: _,
+            property: "label_color",
+            color: _,
+          }),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: _,
+            property: "background_gradient_top",
+            color: _,
+          }),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: _,
+            property: "background_gradient_bottom",
+            color: _,
+          }),
+          _ = (0, _._)(_, _);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    className: _.EventEditorTextTitle,
+                    style: {
+                      color: _,
+                    },
+                    children: _._.Localize("#Sale_Section_Label_Color"),
+                  }),
+                  _,
+                ],
+              }),
+            !Boolean(_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    className: _.EventEditorTextTitle,
+                    style: {
+                      color: _,
+                      background: _,
+                    },
+                    children: _._.Localize("#Sale_Section_Background_Top"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    className: _.EventEditorTextTitle,
+                    style: {
+                      color: _,
+                      background: _,
+                    },
+                    children: _._.Localize("#Sale_Section_Background_Bottom"),
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -35142,6 +35317,35 @@
         _: () => _,
         _: () => _,
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _({ fnOnSetDirty: _, section: _, property: _, color: _ }) {
+        return (0, _.useCallback)(
+          (_) => {
+            (0, _._)(
+              (0, _.jsx)(_._, {
+                onChange: (_) => {
+                  (_[_] = _), _(_);
+                },
+                color: _,
+              }),
+              _,
+              {
+                bDisablePopTop: !0,
+              },
+            );
+          },
+          [_, _, _, _],
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

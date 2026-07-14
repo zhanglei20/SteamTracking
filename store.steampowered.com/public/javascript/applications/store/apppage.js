@@ -316,6 +316,13 @@
         Title: "Iuddf6nrTCmOY1Cgf_Gw_",
       };
     },
+    31518: (e) => {
+      e.exports = {
+        CategoriesMenuOption: "_2-cvnCNnFqBG5u89enudpK",
+        Label: "KldL9MJqWdVCahi3zvX-E",
+        HeaderCtn: "_3WNoErKGw4jngFeVPfTZfs",
+      };
+    },
     37520: (e) => {
       e.exports = {
         DialogContent: "_16pXKCOoRIbFwtZHgqjB8K",
@@ -688,13 +695,6 @@
         WishlistButton: "_3zsPA4_Sk0JUb1auieWgUJ",
         StarIcon: "t1LMouAzeAadJbWvMJbdH",
         ButtonIcon: "_1cugSsUJQZgGaT5y3eMrQo",
-      };
-    },
-    56173: (e) => {
-      e.exports = {
-        CategoriesMenuOption: "_3xnfcAL3FecCAajGoP5Dby",
-        Label: "_1u14-I56YvpTValKAwSmtn",
-        HeaderCtn: "_3IDBSmGNBOIarHdK2hVHf9",
       };
     },
     61723: (e) => {
@@ -2088,7 +2088,7 @@
             }),
         ];
     },
-    67594: (e, t, n) => {
+    84934: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { AppStoreBrowseCacheInit: () => Yl, default: () => Zl });
       var a = n(7850),
@@ -9092,7 +9092,7 @@
           children: (0, Ns.g)("#Wishlist_Categories_Max_Per_App_Reached", Js),
         });
       }
-      var ti = n(56173);
+      var ti = n(31518);
       function ni(e, t) {
         if (!e.current) return;
         const n = e.current.closest(".queue_menu_flyout");

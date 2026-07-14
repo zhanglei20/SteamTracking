@@ -80,6 +80,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Ctn: "_25TX3VPP7fvosVbV8Tk9BY",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         "duration-app-launch": "800ms",
         SaleBackgroundOverlay: "_1WrAYASFyV0qtWIbXSGoo6",
@@ -141,6 +146,11 @@
         "ItemFocusAnim-green": "_3DJ7-ozfbmWiW9sFiyrIsz",
         focusAnimation: "_4EfsGVQ9T6jp3Au9FW6bc",
         hoverAnimation: "_1F117LcLa8O5wSOCVaeow0",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ImgCarouselCtn: "_2XU65hvvZfdgNuY2C_wL5r",
       };
     },
     chunkid: (module) => {
@@ -4560,6 +4570,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -19792,11 +19803,70 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { callout: _, language: _ } = _,
+          _ = _._.GetELanguageFallback(_),
+          [_, _, _, _] = (0, _._)(() => [
+            _.localized_callout?.[_] ||
+              _.localized_callout?.[_] ||
+              "Callout Needed!",
+            _.label_color ?? "black",
+            _.background_gradient_top ?? "green",
+            _.background_gradient_bottom ?? "green",
+          ]),
+          _ = (0, _._)(_, _);
+        return (0, _.jsx)("div", {
+          className: _().Ctn,
+          style: {
+            color: _,
+            background: _,
+          },
+          children: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            _: _,
+            classNameCarousel: _,
+            classNameImage: _,
+            bHideArrows: _,
+          } = _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(_._);
+        return _
+          ? (0, _.jsx)(_._, {
+              hideArrows: _ || !_,
+              hidePips: _,
+              useTestScrollbar: !1,
+              visibleElements: 1,
+              bLazyRenderChildren: !1,
+              screenIsWide: _,
+              className: (0, _._)(_),
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  "img",
+                  {
+                    className: (0, _._)(_, _().ImgCarouselCtn),
+                    src: (0, _._)(_, "600x338"),
+                    alt: "",
+                  },
+                  _.filename,
+                ),
+              ),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _ } = _,
+        const { _: _, idScreenshotCarousel: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -19805,12 +19875,17 @@
           ? (0, _.jsxs)("div", {
               className: _().Ctn,
               children: [
-                _ &&
-                  (0, _.jsx)(_._, {
-                    _: _,
-                    imageType: "main",
-                    bPreferAssetWithoutOverride: !1,
-                  }),
+                _
+                  ? (0, _.jsx)(_, {
+                      _: _,
+                      bHideArrows: !0,
+                    })
+                  : _ &&
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      imageType: "main",
+                      bPreferAssetWithoutOverride: !1,
+                    }),
                 (0, _.jsx)("span", {
                   className: _().Title,
                   children: _.name,
@@ -19838,7 +19913,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _ } = _,
+        const { _: _, idScreenshotCarousel: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -19849,14 +19924,17 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _().Capsule,
-                  children:
-                    _ &&
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      imageType: "main",
-                      bPreferAssetWithoutOverride: !1,
-                      strAdditionalClassName: _().CapsuleCtnOverride,
-                    }),
+                  children: _
+                    ? (0, _.jsx)(_, {
+                        _: _,
+                      })
+                    : _ &&
+                      (0, _.jsx)(_._, {
+                        _: _,
+                        imageType: "main",
+                        bPreferAssetWithoutOverride: !1,
+                        strAdditionalClassName: _().CapsuleCtnOverride,
+                      }),
                 }),
                 (0, _.jsxs)("div", {
                   className: _().Info,
@@ -20098,12 +20176,23 @@
             section: _,
           } = _,
           _ = _._.GetELanguageFallback(_),
-          _ =
+          [_, _, _, _] = (0, _._)(() => [
             _.localized_reservation_desc?.[_] ||
-            _.localized_reservation_desc?.[_] ||
-            "",
+              _.localized_reservation_desc?.[_] ||
+              "",
+            _.use_screenshot_carousel,
+            _.use_package_description,
+            _.callout && _.callout.enable_callout,
+          ]),
           _ = (0, _._)(_.reservation_package),
           { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _.useMemo)(() => {
+            if (_ && _ && _.included_appids && _.included_appids.length > 0)
+              return {
+                appid: _.included_appids[0],
+              };
+          }, [_, _]),
           _ = (0, _._)(),
           _ =
             "horizontal" !=
@@ -20119,16 +20208,23 @@
             reservation_ctn: !0,
           }),
           children: [
+            _ &&
+              (0, _.jsx)(_, {
+                callout: _.callout,
+                language: _,
+              }),
             (0, _.jsx)("div", {
               className: _.reservecopy,
-              children: _.use_package_description
+              children: _
                 ? (0, _.jsx)(_.Fragment, {
                     children: _
                       ? (0, _.jsx)(_, {
                           _: _,
+                          idScreenshotCarousel: _,
                         })
                       : (0, _.jsx)(_, {
                           _: _,
+                          idScreenshotCarousel: _,
                         }),
                   })
                 : (0, _.jsx)(_._, {
@@ -20891,7 +20987,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

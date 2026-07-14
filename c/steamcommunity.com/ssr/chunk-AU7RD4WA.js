@@ -55,7 +55,8 @@ function _(_) {
     _ = _();
   (_.className = (0, _.default)(_.className, "Panel", _ && "Focusable")),
     _(_, _);
-  let _ = _(_, _.ref);
+  let _ = _(_),
+    _ = _(_, _.ref, _);
   (_.focusable || _.focusableIfEmpty) &&
     (!_ || !_.Tree.BUseVirtualFocus()) &&
     (_.tabIndex = _.tabIndex || 0),
@@ -79,6 +80,34 @@ function _(_) {
 }
 var _ = _(_());
 var _ = _(_());
+function _(_) {
+  let { direction: _ } = _,
+    _;
+  return (
+    _ === "up"
+      ? (_ = "rotate( 180deg )")
+      : _ === "left"
+        ? (_ = "rotate( 90deg )")
+        : _ === "right"
+          ? (_ = "rotate( 270deg )")
+          : (_ = void 0),
+    (0, _.jsx)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 36 36",
+      fill: "none",
+      ..._,
+      style: {
+        transform: _,
+      },
+      children: (0, _.jsx)("path", {
+        fill: "currentColor",
+        fillRule: "evenodd",
+        clipRule: "evenodd",
+        _: "M17.5316 18.0962L9.43544 10L5.8999 13.5355L17.5316 25.1673L29.1633 13.5355L25.6278 10L17.5316 18.0962Z",
+      }),
+    })
+  );
+}
 function _(_) {
   let { direction: _, ..._ } = _,
     _;
@@ -544,6 +573,7 @@ function _(_) {
   });
 }
 export {
+  _,
   _,
   _,
   _,

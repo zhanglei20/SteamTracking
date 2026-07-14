@@ -20367,6 +20367,13 @@
           }
           return _;
         }
+        if (_.row.original) {
+          let _ = _.row.original;
+          if ("no_planned_discount" in _ && !1 === _.no_planned_discount)
+            return (0, _.jsx)("span", {
+              children: "Possible Upcoming Discount",
+            });
+        }
         return null;
       }
     },
@@ -25291,7 +25298,10 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppToDemoAppID = new Map();
         m_mapPromises = new Map();
@@ -25376,10 +25386,6 @@
           (0, _._)(this);
         }
       }
-      (0, _._)([_._], _.prototype, "m_mapAppToDemoAppID", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
         const { tableRef: _, mapAppToDiscountInfo: _, oAllStats: _ } = _,
           _ = _._.Get(),
@@ -25392,6 +25398,7 @@
             _.BIsAdditionalFeaturingSectionEnabled() &&
               _.BIsCollectGameProfileIntent(),
           ]),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
@@ -25418,7 +25425,9 @@
                     return (
                       (!_ || _.trailers_opt_in) &&
                       (!_ || _.opt_in) &&
-                      (!_ || _.discount_info || (_ && !_.no_planned_discount))
+                      (!_ ||
+                        _.discount_info ||
+                        (_ && !_.no_planned_discount && !_))
                     );
                   }).map((_) => {
                     if (_) {
@@ -25454,7 +25463,7 @@
                     return _;
                   })
                 : null,
-            [_, _, _, _, _, _],
+            [_, _, _, _, _, _, _],
           );
         if (!_ || !_ || (_ && !_))
           return (0, _.jsx)(_._, {
@@ -25549,14 +25558,25 @@
                   (0, _.jsx)(_._, {
                     checked: _,
                     onChange: _,
-                    label: "Filter To Discount Entered",
+                    label: "Filter To Discount Entered or Planned",
+                    tooltip:
+                      "Includes entered discounts, overlapping discounts with event, and also planned but not entered discounts",
                   }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      checked: _,
+                      onChange: _,
+                      label: "Exclude Planned Discounts",
+                      tooltip:
+                        "Remove any without an explicit discount entered",
+                    }),
                 ],
               }),
             ],
           })
         );
       }
+      (0, _._)([_._], _.prototype, "m_mapAppToDemoAppID", void 0);
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { tableRef: _, mapAppToDiscountInfo: _, oAllStats: _ } = _,

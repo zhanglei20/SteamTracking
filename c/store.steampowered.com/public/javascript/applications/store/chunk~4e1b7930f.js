@@ -17895,7 +17895,7 @@
         );
       }
       function _(_) {
-        _ && (window.clearTimeout(_.current), (_.current = null));
+        _.current && (window.clearTimeout(_.current), (_.current = null));
       }
       function _(_) {
         const {

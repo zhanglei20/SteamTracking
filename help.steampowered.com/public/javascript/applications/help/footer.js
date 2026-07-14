@@ -367,10 +367,11 @@
             ("onClick" in s.props && s.props.onClick && (p.onOKButton = a._K));
         const { ref: h, node: d } = (0, a.qp)(l);
         (0, c.Ui)(p, h);
-        const C = (0, n.Ue)(h, s.props?.ref);
+        const C = (0, a.BT)(d),
+          m = (0, n.Ue)(h, s.props?.ref, C);
         return (0, t.jsx)(a.TJ.Provider, {
           value: d,
-          children: o.cloneElement(s, { ...s.props, ref: C }),
+          children: o.cloneElement(s, { ...s.props, ref: m }),
         });
       }
       var p = r(64238),
@@ -1031,7 +1032,7 @@
         },
         ee = function (e) {
           const {
-              variant: s = "default",
+              variant: s,
               size: r = "2",
               minWidth: n = "fit-content",
               disabled: o,
@@ -1044,7 +1045,7 @@
               {
                 onClick: o ? J : void 0,
                 ...l,
-                variant: s,
+                variant: (0, K.f)("Button", s),
                 size: r,
                 minWidth: n,
                 className: h()(G.Button, i && G.Icon, A()),

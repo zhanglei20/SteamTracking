@@ -67,7 +67,7 @@
 }
 
 .game_area_sys_req_leftCol, .game_area_sys_req_rightCol {
-	float: start;
+	float: inline-start;
 	width: 300px;
 }
 
@@ -111,7 +111,7 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 	line-height: 20px;
 	margin-inline-end: 10px;
 	color: #3b6e8c;
-	float: start;
+	float: inline-start;
 	cursor: pointer;
 }
 

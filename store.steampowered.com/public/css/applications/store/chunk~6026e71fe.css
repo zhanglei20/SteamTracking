@@ -5656,6 +5656,13 @@ html.responsive.touch
 ._182sEaT7DgwPKoXlxOZjc4 {
   background-color: rgba(0, 0, 0, 0.5);
 }
+._25TX3VPP7fvosVbV8Tk9BY {
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 @keyframes _3--8dqRLvQdQpxNt3iZ2Ci {
   from {
     background-position: 0 100%;
@@ -5791,6 +5798,11 @@ html.responsive.touch
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+._2XU65hvvZfdgNuY2C_wL5r {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 @keyframes _1PMJYtmG-0LXiCIzsf7hHH {
   from {

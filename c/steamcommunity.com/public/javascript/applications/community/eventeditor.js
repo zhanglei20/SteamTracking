@@ -629,6 +629,7 @@
         _ = "sale_reservation_outofstock_",
         _ = "sale_reservation_delivery_",
         _ = "sale_reservation_product_",
+        _ = "sale_reservatin_callout_",
         _ = "sale_white_supplies_last_bbcode_",
         _ = "sale_section_desc_",
         _ = "sale_section_title_desc_",
@@ -976,6 +977,16 @@
                               _,
                               _.localized_reservation_desc[_],
                             ),
+                            _.callout &&
+                              _.callout.localized_callout &&
+                              Boolean(
+                                _._.Get(_.callout.localized_callout, _),
+                              ) &&
+                              _.SetLocalization(
+                                _ + _.unique_id + "_" + _.unique_id,
+                                _,
+                                _.callout.localized_callout[_],
+                              ),
                             _.localized_out_of_stock_override &&
                               Boolean(
                                 _._.Get(_.localized_out_of_stock_override, _),
@@ -1805,6 +1816,25 @@
                                     _ &&
                                     ((_.localized_reservation_desc = _._.Set(
                                       _.localized_reservation_desc || [],
+                                      _,
+                                      _,
+                                    )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ && !_.callout && (_.callout = {}),
+                                  _ ||
+                                    (_.callout.localized_callout &&
+                                      Boolean(
+                                        _._.Get(_.callout.localized_callout, _),
+                                      )))
+                                ) {
+                                  _._.Get(_.callout.localized_callout, _) !==
+                                    _ &&
+                                    ((_.callout.localized_callout = _._.Set(
+                                      _.callout.localized_callout || [],
                                       _,
                                       _,
                                     )),

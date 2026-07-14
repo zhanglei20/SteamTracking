@@ -234,7 +234,8 @@ function _(_) {
       ("onClick" in _.props && _.props.onClick && (_.onOKButton = _));
   let { ref: _, node: _ } = _(_);
   _(_, _);
-  let _ = _(_, _.props?.ref);
+  let _ = _(_),
+    _ = _(_, _.props?.ref, _);
   return (0, _.jsx)(_.Provider, {
     value: _,
     children: _.cloneElement(_, {
@@ -12759,6 +12760,7 @@ function _(_) {
       placeholder: _,
       ..._
     } = _,
+    [_, _] = (0, _.useState)(!1),
     _ = {
       value: _,
       onValueChange: _,
@@ -12766,8 +12768,8 @@ function _(_) {
       max: _,
       checkValidDate: _,
       placeholder: _,
-    },
-    [_, _] = (0, _.useState)(!1);
+      setOpen: _,
+    };
   return (0, _.jsxs)(_.Root, {
     open: _,
     onOpenChange: _,
@@ -12794,26 +12796,30 @@ function _(_) {
 }
 function _(_) {
   let {
-    value: _,
-    onValueChange: _,
-    checkValidDate: _,
-    min: _,
-    max: _,
-    clearable: _,
-    ..._
-  } = _;
-  return (0, _.jsx)(_, {
-    value: _,
-    onValueChange: _,
-    valueFromString: (_) => _(_, _),
-    valueToString: _,
-    afterContent:
+      value: _,
+      onValueChange: _,
+      checkValidDate: _,
+      setOpen: _,
+      min: _,
+      max: _,
+      clearable: _,
+      ..._
+    } = _,
+    _ =
       _ && _
         ? (0, _.jsx)(_, {
             onClick: () => _(null),
           })
         : (0, _.jsx)(_, {}),
+    _ = _.IN_GAMEPADUI ? () => _(!0) : void 0;
+  return (0, _.jsx)(_, {
+    value: _,
+    onValueChange: _,
+    valueFromString: (_) => _(_, _),
+    valueToString: _,
+    afterContent: _,
     readOnly: _.IN_GAMEPADUI,
+    onClick: _,
     ..._,
   });
 }
@@ -12919,33 +12925,40 @@ function _(_) {
         _.add({
           years: 10 * _,
         }),
-      );
-  return (0, _.jsx)(_, {
-    zoom: _,
-    focus: _,
-    onPrevPage: () => _(-1),
-    onNextPage: () => _(1),
-    ..._,
-    children: (0, _.jsx)(_, {
-      children: _.map((_) =>
-        (0, _.jsx)(
-          _,
-          {
-            onClick: () => _(_),
-            selected: !!_ && _.year === _.year,
-            disabled: _(_, _),
-            minWidth: "6ch",
-            square: !0,
-            children: _.toLocaleString(_(), {
-              calendar: _.calendarId,
-              year: "numeric",
-            }),
-          },
-          _.year,
-        ),
       ),
-    }),
-  });
+    _ = _[0];
+  return (
+    _ && _.year >= _[0].year && _.year <= _[_.length - 1].year && (_ = _),
+    (0, _.jsx)(_, {
+      zoom: _,
+      focus: _,
+      onPrevPage: () => _(-1),
+      onNextPage: () => _(1),
+      ..._,
+      children: (0, _.jsx)(_, {
+        children: _.map((_) =>
+          (0, _.jsx)(
+            _,
+            {
+              onClick: () => _(_),
+              selected: !!_ && _.year === _.year,
+              disabled: _(_, _),
+              navProps: {
+                autoFocus: _.year === _.year,
+              },
+              minWidth: "6ch",
+              square: !0,
+              children: _.toLocaleString(_(), {
+                calendar: _.calendarId,
+                year: "numeric",
+              }),
+            },
+            _.year,
+          ),
+        ),
+      }),
+    })
+  );
 }
 function _(_) {
   let {
@@ -12980,33 +12993,40 @@ function _(_) {
         _.add({
           years: _,
         }),
-      );
-  return (0, _.jsx)(_, {
-    zoom: _,
-    focus: _,
-    onZoomOut: () => _("year"),
-    onPrevPage: () => _(-1),
-    onNextPage: () => _(1),
-    ..._,
-    children: (0, _.jsx)(_, {
-      children: _.map((_) =>
-        (0, _.jsx)(
-          _,
-          {
-            onClick: () => _(_),
-            selected: !!_ && _.year === _.year && _.month === _.month,
-            disabled: _(_, _),
-            square: !0,
-            children: _.toLocaleString(_(), {
-              calendar: _.calendarId,
-              month: "short",
-            }),
-          },
-          _.month,
-        ),
       ),
-    }),
-  });
+    _ = _[0];
+  return (
+    _ && _.year === _.year && (_ = _),
+    (0, _.jsx)(_, {
+      zoom: _,
+      focus: _,
+      onZoomOut: () => _("year"),
+      onPrevPage: () => _(-1),
+      onNextPage: () => _(1),
+      ..._,
+      children: (0, _.jsx)(_, {
+        children: _.map((_) =>
+          (0, _.jsx)(
+            _,
+            {
+              onClick: () => _(_),
+              selected: !!_ && _.year === _.year && _.month === _.month,
+              disabled: _(_, _),
+              navProps: {
+                autoFocus: _.month === _.month,
+              },
+              square: !0,
+              children: _.toLocaleString(_(), {
+                calendar: _.calendarId,
+                month: "short",
+              }),
+            },
+            _.month,
+          ),
+        ),
+      }),
+    })
+  );
 }
 function _(_) {
   let {
@@ -13056,40 +13076,49 @@ function _(_) {
       ),
     _ = (_) => {
       _(_), _(void 0);
-    };
-  return (0, _.jsx)(_, {
-    zoom: _,
-    focus: _,
-    onZoomOut: () => _("month"),
-    onPrevPage: () => _(-1),
-    onNextPage: () => _(1),
-    ..._,
-    children: (0, _.jsxs)(_, {
-      columns: `repeat( ${_.daysInWeek}, 1fr )`,
-      children: [
-        (0, _.jsx)(_, {
-          firstDay: _,
-          focus: _,
-        }),
-        _.map((_) =>
-          (0, _.jsx)(
-            _,
-            {
-              onClick: () => _(_),
-              dim: _.month !== _.month,
-              selected: !!_ && _.equals(_),
-              disabled: _(_, _),
-              square: !0,
-              children: _.toLocaleString(_(), {
-                day: "numeric",
-              }),
-            },
-            `${_.month}_${_.day}`,
+    },
+    _ = _.with({
+      day: 1,
+    });
+  return (
+    _ && _.month === _.month && (_ = _),
+    (0, _.jsx)(_, {
+      zoom: _,
+      focus: _,
+      onZoomOut: () => _("month"),
+      onPrevPage: () => _(-1),
+      onNextPage: () => _(1),
+      ..._,
+      children: (0, _.jsxs)(_, {
+        columns: `repeat( ${_.daysInWeek}, 1fr )`,
+        children: [
+          (0, _.jsx)(_, {
+            firstDay: _,
+            focus: _,
+          }),
+          _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                onClick: () => _(_),
+                dim: _.month !== _.month,
+                selected: !!_ && _.equals(_),
+                navProps: {
+                  autoFocus: _.equals(_),
+                },
+                disabled: _(_, _),
+                square: !0,
+                children: _.toLocaleString(_(), {
+                  day: "numeric",
+                }),
+              },
+              `${_.month}_${_.day}`,
+            ),
           ),
-        ),
-      ],
-    }),
-  });
+        ],
+      }),
+    })
+  );
 }
 function _(_, _) {
   let { min: _, max: _, checkValidDate: _ } = _;
@@ -13195,51 +13224,79 @@ function _(_) {
 }
 function _(_) {
   let {
-    children: _,
-    onNextPage: _,
-    onPrevPage: _,
-    onZoomOut: _,
-    zoom: _,
-    focus: _,
-    ..._
-  } = _;
-  return (0, _.jsxs)(_, {
+      children: _,
+      onNextPage: _,
+      onPrevPage: _,
+      onZoomOut: _,
+      zoom: _,
+      focus: _,
+      setOpen: _,
+      ..._
+    } = _,
+    _ = (_) => {
+      if (_.detail)
+        switch (_.detail.button) {
+          case 5:
+            _.stopPropagation(), _.preventDefault(), _();
+            break;
+          case 6:
+            _.stopPropagation(), _.preventDefault(), _();
+            break;
+          case 4:
+            _ && _();
+            break;
+          case 2:
+            _(!1);
+            break;
+        }
+    },
+    _ = {
+      layout: 5,
+      onButtonDown: _,
+      focusableIfEmpty: !0,
+      onGamepadDirection: () => !0,
+    };
+  return (0, _.jsx)(_, {
     background: "dull-8",
     radius: "md",
     padding: "3",
     elevation: "1",
+    overflow: "hidden",
+    navProps: _,
     ..._,
-    children: [
-      (0, _.jsxs)(_, {
-        align: "center",
-        children: [
-          (0, _.jsx)(_, {
-            onClick: _,
-            square: !0,
-            children: (0, _.jsx)(_, {
-              direction: "left",
-              color: "text-body-title",
+    children: (0, _.jsxs)(_, {
+      children: [
+        (0, _.jsxs)(_, {
+          align: "center",
+          children: [
+            (0, _.jsx)(_, {
+              onClick: _,
+              square: !0,
+              children: (0, _.jsx)(_, {
+                direction: "left",
+                color: "text-body-title",
+              }),
             }),
-          }),
-          (0, _.jsx)(_, {
-            flexGrow: "1",
-            align: "center",
-            justify: "center",
-            onClick: _,
-            children: _(_, _),
-          }),
-          (0, _.jsx)(_, {
-            onClick: _,
-            square: !0,
-            children: (0, _.jsx)(_, {
-              direction: "right",
-              color: "text-body-title",
+            (0, _.jsx)(_, {
+              flexGrow: "1",
+              align: "center",
+              justify: "center",
+              onClick: _,
+              children: _(_, _),
             }),
-          }),
-        ],
-      }),
-      _,
-    ],
+            (0, _.jsx)(_, {
+              onClick: _,
+              square: !0,
+              children: (0, _.jsx)(_, {
+                direction: "right",
+                color: "text-body-title",
+              }),
+            }),
+          ],
+        }),
+        _,
+      ],
+    }),
   });
 }
 function _(_, _) {

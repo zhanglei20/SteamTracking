@@ -19719,6 +19719,13 @@
           }
           return t;
         }
+        if (e.row.original) {
+          let t = e.row.original;
+          if ("no_planned_discount" in t && !1 === t.no_planned_discount)
+            return (0, s.jsx)("span", {
+              children: "Possible Upcoming Discount",
+            });
+        }
         return null;
       }
     },
@@ -24247,8 +24254,11 @@
           ],
         });
       }
-      var sn = n(6144);
-      class an {
+      var sn = n(66051),
+        an = n(32232),
+        rn = n.n(an),
+        on = n(6144);
+      class ln {
         m_mapAppToDemoAppID = new Map();
         m_mapPromises = new Map();
         m_mapLoadCallback = new Map();
@@ -24262,7 +24272,7 @@
           const n = this.ConvertToKey(e, t);
           return (
             this.m_mapLoadCallback.has(n) ||
-              this.m_mapLoadCallback.set(n, new sn.lu()),
+              this.m_mapLoadCallback.set(n, new on.lu()),
             this.m_mapLoadCallback.get(n)
           );
         }
@@ -24315,21 +24325,17 @@
         static s_Singleton;
         static Get() {
           return (
-            an.s_Singleton ||
-              ((an.s_Singleton = new an()),
+            ln.s_Singleton ||
+              ((ln.s_Singleton = new ln()),
               ("dev" != D.TS.WEB_UNIVERSE && "beta" != D.TS.WEB_UNIVERSE) ||
-                (window.g_OptInDemoAppStores = an.s_Singleton)),
-            an.s_Singleton
+                (window.g_OptInDemoAppStores = ln.s_Singleton)),
+            ln.s_Singleton
           );
         }
         constructor() {
           (0, U.Gn)(this);
         }
       }
-      (0, O.Cg)([U.sH], an.prototype, "m_mapAppToDemoAppID", void 0);
-      var rn = n(66051),
-        on = n(32232),
-        ln = n.n(on);
       function cn(e) {
         const { tableRef: t, mapAppToDiscountInfo: n, oAllStats: a } = e,
           i = r.Mt.Get(),
@@ -24345,38 +24351,41 @@
           [h, _] = (0, l.useState)(!1),
           [g, S] = (0, l.useState)(!1),
           [v, x] = (0, l.useState)(!1),
-          f = (function (e, t) {
-            const [n, s] = (0, l.useState)(an.Get().GetOptInDemoApps(e));
+          [f, y] = (0, l.useState)(!1),
+          b = (function (e, t) {
+            const [n, s] = (0, l.useState)(ln.Get().GetOptInDemoApps(e));
             return (
               (0, l.useEffect)(() => {
                 t &&
-                  !an.Get().BHasLoaded(e) &&
-                  an.Get().LoadAppWithDemoAppIDs(e);
+                  !ln.Get().BHasLoaded(e) &&
+                  ln.Get().LoadAppWithDemoAppIDs(e);
               }, [e, t]),
-              (0, at.hL)(an.Get().GetLoadCallback(e), s),
+              (0, at.hL)(ln.Get().GetLoadCallback(e), s),
               n
             );
           })(
             (0, ee.q3)(() => i.GetOptInPageID()),
             d,
           ),
-          y = (0, l.useMemo)(() => o.map((e) => e.appid), [o]),
-          b = (0, et.Iy)(i.GetOptInPageID(), y),
-          j = (0, l.useMemo)(
+          j = (0, l.useMemo)(() => o.map((e) => e.appid), [o]),
+          w = (0, et.Iy)(i.GetOptInPageID(), j),
+          I = (0, l.useMemo)(
             () =>
-              o && b
+              o && w
                 ? o
                     .filter((e) => {
-                      const t = b.get(e.appid);
+                      const t = w.get(e.appid);
                       return (
                         (!h || e.trailers_opt_in) &&
-                        (!v || e.opt_in) &&
-                        (!g || e.discount_info || (t && !t.no_planned_discount))
+                        (!f || e.opt_in) &&
+                        (!g ||
+                          e.discount_info ||
+                          (t && !t.no_planned_discount && !v))
                       );
                     })
                     .map((e) => {
-                      if (b) {
-                        const t = b.get(e.appid);
+                      if (w) {
+                        const t = w.get(e.appid);
                         t &&
                           ((e.opt_in = t.opt_in),
                           (e.trailers_opt_in = Boolean(
@@ -24396,8 +24405,8 @@
                           )),
                           (e.store_url = `${D.TS.STORE_BASE_URL}app/${e.appid}`));
                       }
-                      if (f) {
-                        const t = f.get(e.appid);
+                      if (b) {
+                        const t = b.get(e.appid);
                         t &&
                           (t.is_demo_released
                             ? (e.demo_state = "Released")
@@ -24408,33 +24417,33 @@
                       return e;
                     })
                 : null,
-            [o, b, h, g, f, v],
+            [o, w, h, g, b, v, f],
           );
-        if (!b || !j || (d && !f))
+        if (!w || !I || (d && !b))
           return (0, s.jsx)(E.t, {
             string: (0, N.we)("#Loading"),
             position: "center",
             size: "medium",
           });
-        const w =
+        const C =
             D.TS.PARTNER_BASE_URL + "optin/sale/" + i.GetOptInPageID() + "/",
-          I = {
+          A = {
             header: "Opted In",
             accessorKey: "opt_in",
-            cell: (e) => (0, s.jsx)(Kt.dA, { ...e, strURLToOptIn: w }),
+            cell: (e) => (0, s.jsx)(Kt.dA, { ...e, strURLToOptIn: C }),
             size: 50,
           },
-          C = [I, ...Jt()];
+          T = [A, ...Jt()];
         return (
           c &&
-            C.push({
+            T.push({
               header: "Trailer OptIn",
               accessorKey: "trailers_opt_in",
               cell: Kt.Xg,
               size: 50,
             }),
           d &&
-            C.push(
+            T.push(
               {
                 header: "Demo OptIn",
                 accessorKey: "demo_opt_in",
@@ -24449,13 +24458,13 @@
               },
             ),
           m &&
-            C.push({
+            T.push({
               header: "Game Profile OptIn",
               accessorKey: "game_profile_intent",
               cell: Kt.Xg,
               size: 50,
             }),
-          C.push({ header: "Store URL", accessorKey: "store_url", size: 350 }),
+          T.push({ header: "Store URL", accessorKey: "store_url", size: 350 }),
           (0, s.jsxs)(u.tH, {
             children: [
               (0, s.jsx)("div", {
@@ -24463,12 +24472,12 @@
                 children:
                   "To enable additional options unlocked during registration, switch over to the 'editor' tab and scroll to the very bottom. Games can be added to the featured list from the bottom of the 'editor' tab, or from the pruning process.",
               }),
-              (0, s.jsx)(rn.k, {
+              (0, s.jsx)(sn.k, {
                 ref: t,
-                className: ln().DefaultFancyTable,
+                className: rn().DefaultFancyTable,
                 stickyHeader: !0,
-                columns: C,
-                data: j,
+                columns: T,
+                data: I,
                 getRowKey: (e, t) => t.appid ?? `index-${e}`,
                 nItemHeight: 32,
                 height: 500,
@@ -24478,8 +24487,8 @@
               (0, s.jsxs)("div", {
                 children: [
                   (0, s.jsx)(p.Yh, {
-                    checked: v,
-                    onChange: x,
+                    checked: f,
+                    onChange: y,
                     label: "Filter To OptIn",
                   }),
                   (0, s.jsx)(p.Yh, {
@@ -24490,14 +24499,25 @@
                   (0, s.jsx)(p.Yh, {
                     checked: g,
                     onChange: S,
-                    label: "Filter To Discount Entered",
+                    label: "Filter To Discount Entered or Planned",
+                    tooltip:
+                      "Includes entered discounts, overlapping discounts with event, and also planned but not entered discounts",
                   }),
+                  g &&
+                    (0, s.jsx)(p.Yh, {
+                      checked: v,
+                      onChange: x,
+                      label: "Exclude Planned Discounts",
+                      tooltip:
+                        "Remove any without an explicit discount entered",
+                    }),
                 ],
               }),
             ],
           })
         );
       }
+      (0, O.Cg)([U.sH], ln.prototype, "m_mapAppToDemoAppID", void 0);
       var dn = n(39020);
       function pn(e) {
         const { tableRef: t, mapAppToDiscountInfo: n, oAllStats: a } = e,
@@ -24542,9 +24562,9 @@
             }),
           (0, s.jsxs)(u.tH, {
             children: [
-              (0, s.jsx)(rn.k, {
+              (0, s.jsx)(sn.k, {
                 ref: t,
-                className: ln().DefaultFancyTable,
+                className: rn().DefaultFancyTable,
                 stickyHeader: !0,
                 columns: h,
                 data: m,
@@ -24793,8 +24813,8 @@
       }
       const mn = l.forwardRef((e, t) =>
         (0, s.jsx)("div", {
-          className: ln().DefaultFancyTable,
-          children: (0, s.jsx)(rn.k, {
+          className: rn().DefaultFancyTable,
+          children: (0, s.jsx)(sn.k, {
             ref: t,
             initialSorting: [{ id: "sales", desc: !0 }],
             height: 500,
@@ -25197,7 +25217,7 @@
                 const e = I().CancelToken.source();
                 y.current = e.cancel;
                 let s = null;
-                _ && (s = await an.Get().LoadAppWithDemoAppIDs(h, n));
+                _ && (s = await ln.Get().LoadAppWithDemoAppIDs(h, n));
                 const l = new Array();
                 m
                   .filter((e) =>
@@ -31637,7 +31657,7 @@
         GetDefChangeList(e) {
           return (
             this.m_mapPointShopDefsChange.has(e) ||
-              this.m_mapPointShopDefsChange.set(e, new sn.lu()),
+              this.m_mapPointShopDefsChange.set(e, new on.lu()),
             this.m_mapPointShopDefsChange.get(e)
           );
         }
@@ -31735,7 +31755,7 @@
         (0, O.Cg)([at.oI], Ga.prototype, "UpdateInternalModel", null);
       var Ma = n(23809),
         La = n(88997),
-        Oa = n(64046),
+        Oa = n(38165),
         Fa = n(58245),
         Ua = n(64035),
         qa = n.n(Ua);
@@ -34549,7 +34569,7 @@
         m_nPrunedAppIDs = [];
         m_nAdditionalFeaturedppIDs = [];
         m_nPendingReviewAppIDs = [];
-        m_listCallback = new sn.lu();
+        m_listCallback = new on.lu();
         m_mapReviewCallback = new Map();
         GetAsConsolidatedList() {
           return {
@@ -34565,7 +34585,7 @@
         GetStateForAppCallback(e) {
           return (
             this.m_mapReviewCallback.has(e) ||
-              this.m_mapReviewCallback.set(e, new sn.lu()),
+              this.m_mapReviewCallback.set(e, new on.lu()),
             this.m_mapReviewCallback.get(e)
           );
         }
@@ -34972,7 +34992,7 @@
         GetLocalStoreChangeCallback(e) {
           return (
             this.m_mapChangeCallback.has(e) ||
-              this.m_mapChangeCallback.set(e, new sn.lu()),
+              this.m_mapChangeCallback.set(e, new on.lu()),
             this.m_mapChangeCallback.get(e)
           );
         }
@@ -37547,7 +37567,7 @@
                 onChange: r,
                 checked: i,
               }),
-              (0, s.jsx)(rn.k, {
+              (0, s.jsx)(sn.k, {
                 columns: h,
                 data: m,
                 getRowKey: (e, t) => t.appid ?? `index-${e}`,
@@ -37928,7 +37948,7 @@
             ],
             [],
           );
-        return (0, s.jsx)(rn.k, {
+        return (0, s.jsx)(sn.k, {
           columns: n,
           data: t,
           getRowKey: (e, t) => t.nAppID,
@@ -47178,7 +47198,7 @@
       }
       var ie = n(25359),
         re = n.n(ie),
-        oe = n(64046),
+        oe = n(38165),
         le = n(88997);
       function ce(e) {
         const { setting: t, fnUpdateSetting: n, label: a } = e,

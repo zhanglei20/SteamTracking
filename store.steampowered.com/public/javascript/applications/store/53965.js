@@ -403,21 +403,22 @@
         },
         h = function (s) {
           const {
-              variant: r = "default",
+              variant: r,
               size: e = "2",
               minWidth: p = "fit-content",
               disabled: a,
               icon: l,
               focusable: m,
               navProps: _,
-              ...d
+              ...u
             } = s,
-            u = a ? x : void 0,
-            f = (0, n.mz)(
+            f = (0, d.f)("Button", r),
+            v = a ? x : void 0,
+            P = (0, n.mz)(
               {
-                onClick: u,
-                ...d,
-                variant: r,
+                onClick: v,
+                ...u,
+                variant: f,
                 size: e,
                 minWidth: p,
                 className: i()(t.Button, l && t.Icon, (0, c.T)()),
@@ -425,8 +426,8 @@
               g,
             );
           return N.TS.IN_GAMEPADUI && (m || _)
-            ? (0, o.jsx)(y.Ii, { ...f, ...(_ || {}), focusable: m })
-            : (0, o.jsx)("a", { ...f });
+            ? (0, o.jsx)(y.Ii, { ...P, ...(_ || {}), focusable: m })
+            : (0, o.jsx)("a", { ...P });
         };
     },
     90534: (s, r, e) => {
@@ -937,10 +938,11 @@
             ("onClick" in r.props && r.props.onClick && (l.onOKButton = a._K));
         const { ref: m, node: _ } = (0, a.qp)(c);
         (0, n.Ui)(l, m);
-        const d = (0, p.Ue)(m, r.props?.ref);
+        const d = (0, a.BT)(_),
+          u = (0, p.Ue)(m, r.props?.ref, d);
         return (0, o.jsx)(a.TJ.Provider, {
           value: _,
-          children: i.cloneElement(r, { ...r.props, ref: d }),
+          children: i.cloneElement(r, { ...r.props, ref: u }),
         });
       }
     },
