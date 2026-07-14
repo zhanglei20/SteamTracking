@@ -10297,17 +10297,6 @@ function _(_, _, ..._) {
     : _ || console.warn(_, ..._);
 }
 function _(_, _, ..._) {
-  if (
-    (console.assert
-      ? _.length == 0
-        ? console.assert(!!_, _)
-        : console.assert(!!_, _, ..._)
-      : _ || console.warn(_, ..._),
-    !_)
-  )
-    throw _;
-}
-function _(_, _, ..._) {
   _(!1, _, ..._);
 }
 var _ = {};
@@ -10442,13 +10431,14 @@ function _(_, _) {
   return (_.length = _), _;
 }
 function _(_, _, _) {
-  return (
-    _ ||
-      console.error(
+  return _
+    ? _.length < _
+      ? _.concat(Array(_ - _.length).fill(_))
+      : _
+    : (console.error(
         "array should be defined for us to fill in the missing indexes",
       ),
-    _.length < _ ? _.concat(Array(_ - _.length).fill(_)) : _
-  );
+      []);
 }
 function _(_, _) {
   if (_)
@@ -15339,18 +15329,18 @@ async function _(_) {
 function _() {
   return 1e3 * 10;
 }
+var _ = {};
+_(_, {
+  GenerateRandomSeed: () => _,
+  SeededRandom: () => _,
+});
 function _(_) {
-  let _ = null;
-  if (_ == null) return _;
-  if (_._)
-    _ = `${(_._ >> 24) & 255}.${(_._ >> 16) & 255}.${(_._ >> 8) & 255}.${(_._ >> 0) & 255}`;
-  else if (_._) {
-    _ = "";
-    for (let _ = 0; _ < _._.length; _++)
-      _ % 2 == 0 && _ > 0 && (_ += ":"),
-        (_ += _._[_].toString(16).padStart(2, "0"));
-  }
-  return _;
+  return () => (
+    (_ = (_ * 1664525 + 1013904223) % 4294967296), (_ >>> 0) / 4294967296
+  );
+}
+function _() {
+  return Math.floor(Math.random() * 4294967296);
 }
 function _() {
   let _, _;
@@ -15371,66 +15361,6 @@ function _(_, _) {
 }
 function _(_) {
   return !!_;
-}
-var _ = _(_(), 1);
-function _() {
-  let [_, _] = (0, _.useState)(location.search);
-  return (
-    (0, _.useEffect)(() => {
-      function _(_) {
-        _.data === "urlchange" && _(location.search);
-      }
-      return (
-        window.addEventListener("message", _),
-        () => {
-          window.removeEventListener("message", _);
-        }
-      );
-    }, []),
-    _
-  );
-}
-function _(_, _) {
-  let _ = _(),
-    _ = (0, _.useMemo)(() => {
-      let _ = new URLSearchParams(_.substring(1)).get(_);
-      return _ != null
-        ? _ != null
-          ? typeof _ == "boolean"
-            ? _.constructor(_ !== "false")
-            : _.constructor(_)
-          : _
-        : _;
-    }, [_, _, _]),
-    [_, _] = (0, _.useState)(_),
-    _ = _.default.useCallback(
-      (_, _ = !1) => {
-        let _ = new URLSearchParams(_.substring(1));
-        if (_ != null) {
-          if (_.get(_) == _) return;
-          _.set(_, String(_));
-        } else {
-          if (!_.has(_)) return;
-          _.delete(_);
-        }
-        _
-          ? history.replaceState(
-              history.state,
-              "",
-              decodeURIComponent(`${window.location.pathname}?${_}`),
-            )
-          : history.pushState(
-              history.state,
-              "",
-              decodeURIComponent(`${window.location.pathname}?${_}`),
-            ),
-          (0, _.startTransition)(() => {
-            _(_), window.postMessage("urlchange");
-          });
-      },
-      [_, _],
-    );
-  return [_, _];
 }
 var _ = /^(steam|ftp|https?):\/\//;
 function _(_) {
@@ -18579,8 +18509,6 @@ function _(_, _, _) {
   );
 }
 export {
-  _,
-  _,
   _,
   _,
   _,

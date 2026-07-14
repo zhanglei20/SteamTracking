@@ -8211,15 +8211,16 @@
     90665: (e, t, r) => {
       "use strict";
       r.d(t, {
-        _K: () => v,
-        C7: () => y,
-        sl: () => M,
-        D0: () => C,
+        _K: () => R,
+        C7: () => M,
+        sl: () => S,
+        D0: () => v,
         sQ: () => B,
-        HR: () => I,
-        v0: () => j,
+        HR: () => j,
+        v0: () => T,
         TJ: () => f,
         qp: () => w,
+        BT: () => y,
       });
       var i = r(7850),
         n = r(64753),
@@ -8271,6 +8272,32 @@
         );
       }
       function y(e) {
+        const t = l.useRef(null),
+          r = l.useRef(null);
+        l.useEffect(
+          () => () => {
+            r.current?.();
+          },
+          [],
+        );
+        return l.useCallback(
+          (i) => {
+            t.current !== i &&
+              ((t.current = i),
+              r.current?.(),
+              (r.current = null),
+              i &&
+                (r.current = (0, g.aM)(
+                  i,
+                  (t) =>
+                    !(!e || "none" == e.GetFocusable()) &&
+                    e.BTakeFocus(void 0, t.detail.button),
+                )));
+          },
+          [e],
+        );
+      }
+      function M(e) {
         const {
             onButtonDown: t,
             onButtonUp: r,
@@ -8314,7 +8341,7 @@
           props: f,
         };
       }
-      function M(e) {
+      function S(e) {
         const {
             autoFocus: t,
             preferredFocus: r,
@@ -8336,12 +8363,12 @@
             navEntryPreferPosition: f,
             scrollIntoViewWhenChildFocused: B,
             fnScrollIntoViewHandler: w,
-            scrollIntoViewType: M,
+            scrollIntoViewType: y,
             resetNavOnEntry: S,
             scrollRegionToStartOrEnd: C,
             ...v
           } = e,
-          { gamepadEvents: R, actionDescriptions: z, props: I } = y(v);
+          { gamepadEvents: R, actionDescriptions: z, props: I } = M(v);
         return {
           elemProps: I,
           navOptions: {
@@ -8364,7 +8391,7 @@
             navEntryPreferPosition: f,
             scrollIntoViewWhenChildFocused: B,
             fnScrollIntoViewHandler: w,
-            scrollIntoViewType: M,
+            scrollIntoViewType: y,
             resetNavOnEntry: S,
             scrollRegionToStartOrEnd: C,
             actionDescriptionMap: { ...g, ...z },
@@ -8372,7 +8399,7 @@
           gamepadEvents: R,
         };
       }
-      function S(e) {
+      function C(e) {
         return function (t) {
           const {
               focusClassName: r,
@@ -8408,17 +8435,17 @@
           );
         };
       }
-      const C = S("div");
-      function v(e) {
+      const v = C("div");
+      function R(e) {
         return (
           c.eZ.PlayNavSound(c.PN.DefaultOk),
           (0, u.kD)(e.currentTarget) && e.currentTarget.click(),
           !0
         );
       }
-      const R = l.createContext(void 0);
-      R.Provider;
-      function z(e, t, r, n, a) {
+      const z = l.createContext(void 0);
+      z.Provider;
+      function I(e, t, r, n, a) {
         const {
             elemProps: {
               focusClassName: c,
@@ -8428,58 +8455,59 @@
             },
             navOptions: p,
             gamepadEvents: h,
-          } = M(r),
+          } = S(r),
           {
             bFocusableByDefault: b = !0,
             bActivateByDefault: B = !1,
-            bDOMElementFocusByDefault: y = b,
+            bDOMElementFocusByDefault: M = b,
           } = a || {};
         void 0 === p.focusable && !g.disabled && b && (p.focusable = !0);
-        const S = (0, _.O)(m),
-          { ref: C, node: z } = w({ layout: S, ...p });
+        const C = (0, _.O)(m),
+          { ref: v, node: I } = w({ layout: C, ...p });
         h.onOKButton ||
           ((("onClick" in g && g.onClick) || (B && (!0 === B || B(g)))) &&
-            (h.onOKButton = v)),
-          p.focusable && !y
+            (h.onOKButton = R)),
+          p.focusable && !M
             ? (g.tabIndex = g.tabIndex || 0)
-            : !p.focusable && y && (g.tabIndex = g.tabIndex ?? -1),
-          (0, d.Ui)(h, C);
-        const I = (0, s.Ue)(n, C),
-          j = (0, l.useContext)(R)?.Component;
-        let T = { ...g };
+            : !p.focusable && M && (g.tabIndex = g.tabIndex ?? -1),
+          (0, d.Ui)(h, v);
+        const j = y(I),
+          T = (0, s.Ue)(n, v, j),
+          x = (0, l.useContext)(z)?.Component;
+        let F = { ...g };
         return (
-          "onClick" in g && (T.role ??= "button"),
-          z
-            ? ((T = {
-                ...T,
-                divRef: I,
-                node: z,
+          "onClick" in g && (F.role ??= "button"),
+          I
+            ? ((F = {
+                ...F,
+                divRef: T,
+                node: I,
                 focusClassName: o()(c, "gpfocus"),
                 focusWithinClassName: "gpfocuswithin",
-                bFocusableByDefault: y,
+                bFocusableByDefault: M,
                 className: o()(g.className, "Focusable"),
               }),
               (0, i.jsx)(f.Provider, {
-                value: z,
-                children: j
-                  ? l.createElement(j, { ...T, Component: t }, u)
-                  : l.createElement(t, T, u),
+                value: I,
+                children: x
+                  ? l.createElement(x, { ...F, Component: t }, u)
+                  : l.createElement(t, F, u),
               }))
             : l.createElement(
                 e,
-                { ...T, ref: n, className: o()(g.className, "Focusable") },
+                { ...F, ref: n, className: o()(g.className, "Focusable") },
                 u,
               )
         );
       }
-      function I(e, t) {
-        const r = S(e);
+      function j(e, t) {
+        const r = C(e);
         return l.forwardRef(function (i, n) {
-          return z(e, r, i, n, t);
+          return I(e, r, i, n, t);
         });
       }
-      function j(e) {
-        const t = S(e);
+      function T(e) {
+        const t = C(e);
         return l.forwardRef(function (r, i) {
           const {
               virtualKeyboardProps: n,
@@ -8510,7 +8538,7 @@
             })(r),
             l = (0, h.Cz)(n, a),
             c = (0, s.Ue)(i, l);
-          return z(e, t, o, c);
+          return I(e, t, o, c);
         });
       }
     },
@@ -8827,23 +8855,24 @@
           C = (0, m.bJ)();
         (b.className = a()(b.className, "Panel", C && "Focusable")),
           (0, d.Ui)(B, M);
-        const v = (0, n.Ue)(M, e.ref);
+        const v = (0, l.BT)(S),
+          R = (0, n.Ue)(M, e.ref, v);
         (!f.focusable && !f.focusableIfEmpty) ||
           (S && S.Tree.BUseVirtualFocus()) ||
           (b.tabIndex = b.tabIndex || 0),
           f.focusable && (r || B.onOKButton) && (b.role ??= "button");
-        const R = (0, o.useContext)(g).Component;
+        const z = (0, o.useContext)(g).Component;
         return (0, i.jsx)(l.TJ.Provider, {
           value: S,
           children: S
-            ? (0, i.jsx)(R, {
+            ? (0, i.jsx)(z, {
                 ...b,
-                divRef: v,
+                divRef: R,
                 node: S,
                 focusClassName: a()(p, "gpfocus"),
                 focusWithinClassName: a()(_, "gpfocuswithin"),
               })
-            : (0, i.jsx)("div", { ...b, ref: v }),
+            : (0, i.jsx)("div", { ...b, ref: R }),
         });
       }
     },
@@ -9082,15 +9111,16 @@
     45730: (e, t, r) => {
       "use strict";
       r.d(t, {
-        AE: () => w,
+        AE: () => y,
         D$: () => i,
-        IA: () => y,
+        IA: () => M,
         Ro: () => _,
         SI: () => a,
         SZ: () => m,
         VX: () => d,
         W1: () => B,
-        Y3: () => S,
+        Y3: () => C,
+        aM: () => w,
         cR: () => h,
         f: () => p,
         gh: () => o,
@@ -9144,22 +9174,22 @@
         return c(e, "vgp_onbuttonup", t);
       }
       function d(e, t) {
-        return c(e, "vgp_onok", M(t));
+        return c(e, "vgp_onok", S(t));
       }
       function g(e, t) {
-        return c(e, "vgp_oncancel", M(t));
+        return c(e, "vgp_oncancel", S(t));
       }
       function p(e, t) {
-        return c(e, "vgp_onsecondaryaction", M(t));
+        return c(e, "vgp_onsecondaryaction", S(t));
       }
       function _(e, t) {
-        return c(e, "vgp_onoptions", M(t));
+        return c(e, "vgp_onoptions", S(t));
       }
       function h(e, t) {
-        return c(e, "vgp_onmenu", M(t));
+        return c(e, "vgp_onmenu", S(t));
       }
       function b(e, t) {
-        return c(e, "vgp_ondirection", M(t));
+        return c(e, "vgp_ondirection", S(t));
       }
       function f(e, t) {
         return c(e, "vgp_onfocus", t);
@@ -9167,7 +9197,10 @@
       function B(e, t) {
         return c(e, "vgp_onblur", t);
       }
-      function w(e, t, r) {
+      function w(e, t) {
+        return c(e, "vgp_requestfocus", S(t));
+      }
+      function y(e, t, r) {
         let i = e;
         if (!i || !i.ownerDocument || !i.ownerDocument.defaultView) return !0;
         let n = new i.ownerDocument.defaultView.CustomEvent(t, {
@@ -9177,25 +9210,25 @@
         });
         return i.dispatchEvent(n);
       }
-      function y(e) {
+      function M(e) {
         const t = [n.pR.DIR_UP, n.pR.DIR_DOWN, n.pR.DIR_LEFT, n.pR.DIR_RIGHT];
         let r = !0,
           i = !1,
           s = l[e.detail.button];
         return (
           s
-            ? ((i = !0), (r = w(e.target, s, e.detail)))
+            ? ((i = !0), (r = y(e.target, s, e.detail)))
             : -1 !== t.indexOf(e.detail.button) &&
-              ((i = !0), (r = w(e.target, "vgp_ondirection", e.detail))),
+              ((i = !0), (r = y(e.target, "vgp_ondirection", e.detail))),
           { bUnhandled: r, bHadLogicalEventMapping: i }
         );
       }
-      function M(e) {
+      function S(e) {
         return (t) => {
           !1 !== e(t) && (t.stopPropagation(), t.preventDefault());
         };
       }
-      function S(e) {
+      function C(e) {
         const {
             onOKActionDescription: t,
             onCancelActionDescription: r,
@@ -11656,6 +11689,7 @@
       n.I2, n.sd, n.YX, n.V8;
       n.I2, n.sd, n.YX, n.V8;
       s.Hi, s.xs, s.u_;
+      n.I2, n.sd, n.YX, n.V8;
       s.Hi, s.xs, s.u_;
     },
     62490: (e, t, r) => {
@@ -11697,13 +11731,14 @@
         return e.reduce((e, r, i, n) => e + (t(r, i, n) ? 1 : 0), 0);
       }
       function c(e, t, r) {
-        return (
-          e ||
-            console.error(
+        return e
+          ? e.length < t
+            ? e.concat(Array(t - e.length).fill(r))
+            : e
+          : (console.error(
               "array should be defined for us to fill in the missing indexes",
             ),
-          e.length < t ? e.concat(Array(t - e.length).fill(r)) : e
-        );
+            []);
       }
       function u(e) {
         return e.filter((e) => null != e);
@@ -55280,20 +55315,20 @@
       r.d(t, {
         $$: () => s,
         CH: () => o,
-        DF: () => g,
+        DF: () => p,
         ML: () => n.ML,
         OP: () => n.OP,
         Qi: () => n.Qi,
         TP: () => n.TP,
-        YR: () => h,
+        YR: () => b,
         _g: () => l,
         bB: () => a,
-        bs: () => _,
+        bs: () => h,
         gc: () => d,
         hL: () => c,
         l6: () => n.l6,
-        uD: () => p,
-        wm: () => b,
+        uD: () => _,
+        wm: () => f,
         xA: () => n.xA,
       });
       var i = r(90626),
@@ -55371,23 +55406,22 @@
         );
       }
       function g(e, t) {
+        const [r, n] = i.useState(e);
         return (
-          (function (e, t) {
-            const [r, n] = i.useState(e);
-            return (
-              i.useEffect(() => {
-                if (!e) {
-                  const e = window.setTimeout(() => n(!1), t);
-                  return () => window.clearTimeout(e);
-                }
-                n(!0);
-              }, [e, t]),
-              r
-            );
-          })(e, t) || e
+          i.useEffect(() => {
+            if (!e) {
+              const e = window.setTimeout(() => n(!1), t);
+              return () => window.clearTimeout(e);
+            }
+            n(!0);
+          }, [e, t]),
+          r
         );
       }
-      function p(e = !1) {
+      function p(e, t) {
+        return g(e, t) || e;
+      }
+      function _(e = !1) {
         const [t, r] = i.useState(e);
         return [
           t,
@@ -55395,7 +55429,7 @@
           i.useCallback(() => r(!1), []),
         ];
       }
-      function _(e) {
+      function h(e) {
         const t = i.useRef(void 0);
         return i.useCallback(
           () => (
@@ -55406,7 +55440,7 @@
           [e],
         );
       }
-      function h(e) {
+      function b(e) {
         const t = i.useRef({ value: void 0, bConstructed: !1 });
         return (
           t.current.bConstructed ||
@@ -55414,7 +55448,7 @@
           t.current.value
         );
       }
-      function b(e) {
+      function f(e) {
         const t = i.useRef(e);
         return (
           (t.current.length !== e.length ||
@@ -67747,11 +67781,11 @@
         m: () => H,
         D0: () => Ne,
         wi: () => i.wi,
-        P9: () => kt,
+        P9: () => Dt,
         Vb: () => Je,
         Mm: () => tt,
-        A0: () => Ft,
-        y4: () => Ut,
+        A0: () => Ot,
+        y4: () => Pt,
         Dm: () => De,
         Y9: () => i.Y9,
         pd: () => w,
@@ -70723,6 +70757,8 @@
             "DriverProvidedIPDVisibility_Bool"),
           (e[(e.Prop_SupportsVRGamepadMode_Bool = 2117)] =
             "Prop_SupportsVRGamepadMode_Bool"),
+          (e[(e.Prop_AllowHomeApp2Setting_Int32 = 2119)] =
+            "Prop_AllowHomeApp2Setting_Int32"),
           (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -70889,7 +70925,7 @@
             (e[(e.SmoothStep = 3)] = "SmoothStep"),
             (e[(e.SmootherStep = 4)] = "SmootherStep");
         })(bt || (bt = {}));
-      var ft, Bt, wt, yt, Mt, St, Ct, vt;
+      var ft, Bt, wt, yt, Mt, St, Ct, vt, Rt;
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
           (e[(e.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -70927,62 +70963,68 @@
             (e[(e.Panel = 2)] = "Panel");
         })(Mt || (Mt = {})),
         (function (e) {
-          (e[(e.ControllerPairing = 0)] = "ControllerPairing"),
-            (e[(e.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
-            (e[(e.SystemButtonHideDashboard = 2)] =
-              "SystemButtonHideDashboard"),
-            (e[(e.SystemButtonDashboardHidden = 3)] =
-              "SystemButtonDashboardHidden"),
-            (e[(e.SystemButtonShowDashboard = 4)] =
-              "SystemButtonShowDashboard"),
-            (e[(e.PairWifiDongle = 5)] = "PairWifiDongle"),
-            (e[(e.TourSendOff = 6)] = "TourSendOff"),
-            (e[(e.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
+          (e[(e.Unknown = 0)] = "Unknown"),
+            (e[(e.LaserMouse = 1)] = "LaserMouse"),
+            (e[(e.Gamepad = 2)] = "Gamepad");
         })(St || (St = {})),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.ControllerPairing = 1)] = "ControllerPairing"),
+            (e[(e.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
+            (e[(e.SystemButtonHideDashboard = 3)] =
+              "SystemButtonHideDashboard"),
+            (e[(e.SystemButtonDashboardHidden = 4)] =
+              "SystemButtonDashboardHidden"),
+            (e[(e.SystemButtonShowDashboard = 5)] =
+              "SystemButtonShowDashboard"),
+            (e[(e.PairWifiDongle = 6)] = "PairWifiDongle"),
+            (e[(e.TourSendOff = 7)] = "TourSendOff"),
+            (e[(e.SteamGuidedTourFinished = 8)] = "SteamGuidedTourFinished");
+        })(Ct || (Ct = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.ThirdPartyClient = 1)] = "ThirdPartyClient"),
             (e[(e.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
             (e[(e.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
-        })(Ct || (Ct = {})),
+        })(vt || (vt = {})),
         (function (e) {
           (e[(e.Default = 0)] = "Default"),
             (e[(e.AuroraFloor = 1)] = "AuroraFloor");
-        })(vt || (vt = {}));
-      var Rt, zt;
+        })(Rt || (Rt = {}));
+      var zt, It;
       !(function (e) {
         (e[(e.Curved = 0)] = "Curved"), (e[(e.Flat = 1)] = "Flat");
-      })(Rt || (Rt = {})),
+      })(zt || (zt = {})),
         (function (e) {
           (e[(e.Default = 0)] = "Default"), (e[(e.Aurora = 1)] = "Aurora");
-        })(zt || (zt = {}));
+        })(It || (It = {}));
       (0, ct.i_)(at()["error-shake-duration"]);
-      function It(e, t) {
+      function jt(e, t) {
         return t < 0 ? 0 : t > 1 ? 1 : 0 == e ? t : Math.round(t / e) * e;
       }
-      function jt(e, t, r) {
+      function Tt(e, t, r) {
         const i = e + r * (t - e);
         return Number.parseFloat(i.toFixed(10));
       }
-      function Tt(e, t, r) {
+      function xt(e, t, r) {
         return (r - e) / (t - e);
       }
-      var xt;
+      var Ft;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.MouseDragging = 1)] = "MouseDragging"),
           (e[(e.TouchStart = 2)] = "TouchStart"),
           (e[(e.TouchDragging = 3)] = "TouchDragging"),
           (e[(e.DPad = 4)] = "DPad");
-      })(xt || (xt = {}));
-      class Ft extends a.Component {
+      })(Ft || (Ft = {}));
+      class Ot extends a.Component {
         m_refSlider = a.createRef();
         m_refHandle = a.createRef();
         m_navRefSlider = a.createRef();
         m_sliderBounds = void 0;
         m_handleBounds = void 0;
         m_fZoom = 1;
-        m_eDragMode = xt.None;
+        m_eDragMode = Ft.None;
         m_vTouchStartPosition = (0, ot.D0)();
         m_fStartValue;
         m_fLatestUserValue;
@@ -71021,18 +71063,18 @@
             null == this.props.value || isNaN(this.props.value)
               ? this.props.min
               : (0, se.OQ)(this.props.value, this.props.min, this.props.max);
-          return Tt(this.props.min, this.props.max, e);
+          return xt(this.props.min, this.props.max, e);
         }
         get normalizedDefaultValue() {
           const e = this.props.resetValue;
           if (
             !(null == e || isNaN(e) || e < this.props.min || e > this.props.max)
           )
-            return Tt(this.props.min, this.props.max, e);
+            return xt(this.props.min, this.props.max, e);
         }
         get normalizedSliderOrigin() {
           const e = (0, se.OQ)(0, this.props.min, this.props.max);
-          return Tt(this.props.min, this.props.max, e);
+          return xt(this.props.min, this.props.max, e);
         }
         get CanResetToDefault() {
           return (
@@ -71042,14 +71084,14 @@
         }
         get SliderChangeSource() {
           switch (this.m_eDragMode) {
-            case xt.MouseDragging:
+            case Ft.MouseDragging:
               return v;
-            case xt.TouchDragging:
-            case xt.TouchStart:
+            case Ft.TouchDragging:
+            case Ft.TouchStart:
               return C;
-            case xt.DPad:
+            case Ft.DPad:
               return R;
-            case xt.None:
+            case Ft.None:
               return;
           }
         }
@@ -71069,22 +71111,22 @@
           if (e != this.m_eDragMode) {
             switch (
               ((this.m_eDragMode = e),
-              e != xt.None &&
+              e != Ft.None &&
                 this.props.onChangeStart &&
                 this.props.onChangeStart(this.SliderChangeSource),
               e)
             ) {
-              case xt.MouseDragging:
-              case xt.TouchDragging:
-              case xt.TouchStart:
-              case xt.DPad:
+              case Ft.MouseDragging:
+              case Ft.TouchDragging:
+              case Ft.TouchStart:
+              case Ft.DPad:
                 this.RecomputeSliderBounds(),
                   (this.m_fStartValue = this.props.value),
                   (this.m_fLatestUserValue = this.props.value);
-              case xt.None:
+              case Ft.None:
             }
             switch (e) {
-              case xt.MouseDragging:
+              case Ft.MouseDragging:
                 this.m_refSlider.current?.ownerDocument?.addEventListener(
                   "mousemove",
                   this.OnWindowMouseMove,
@@ -71096,8 +71138,8 @@
                     { passive: !1 },
                   );
                 break;
-              case xt.TouchStart:
-              case xt.TouchDragging:
+              case Ft.TouchStart:
+              case Ft.TouchDragging:
                 this.m_refSlider.current?.ownerDocument?.addEventListener(
                   "touchmove",
                   this.OnWindowTouchMove,
@@ -71109,7 +71151,7 @@
                     { passive: !1 },
                   );
                 break;
-              case xt.None:
+              case Ft.None:
                 this.RemoveDocumentEventListeners();
             }
           }
@@ -71133,8 +71175,8 @@
             n = Math.pow(2, Math.floor(r / i)),
             s = this.normalizedDpadStep * n,
             a = (0, se.OQ)(s, this.normalizedDpadStep, 0.05) * t,
-            o = It(this.normalizedStep, this.normalizedClampedValue + a);
-          let l = jt(this.props.min, this.props.max, o);
+            o = jt(this.normalizedStep, this.normalizedClampedValue + a);
+          let l = Tt(this.props.min, this.props.max, o);
           if (
             ((l = (0, se.OQ)(
               l,
@@ -71143,7 +71185,7 @@
             )),
             l != this.props.value)
           ) {
-            this.m_eDragMode == xt.None && this.SetDragMode(xt.DPad);
+            this.m_eDragMode == Ft.None && this.SetDragMode(Ft.DPad);
             const e = l > this.m_fLatestUserValue;
             be.eZ.PlayNavSound(e ? be.PN.SliderUp : be.PN.SliderDown),
               (this.m_fLatestUserValue = l),
@@ -71181,19 +71223,19 @@
         UpdateSliderValueForPosition(e) {
           if (this.props.disabled || !this.m_refSlider.current) return;
           const t = this.ComputeNormalizedValueForMousePosition(e),
-            r = It(this.normalizedStep, t);
-          let i = jt(this.props.min, this.props.max, r);
+            r = jt(this.normalizedStep, t);
+          let i = Tt(this.props.min, this.props.max, r);
           const n = this.props.clampMin ?? this.props.min,
             s = this.props.clampMax ?? this.props.max;
           if (((i = (0, se.OQ)(i, n, s)), i != this.props.value)) {
             const e = i > this.props.value,
               t = 0 == this.step;
             if (
-              ((this.m_eDragMode == xt.None || !t) &&
+              ((this.m_eDragMode == Ft.None || !t) &&
                 this.props.stepSound &&
                 be.eZ.PlayNavSound(e ? be.PN.SliderUp : be.PN.SliderDown),
-              this.m_eDragMode == xt.MouseDragging ||
-                this.m_eDragMode == xt.TouchDragging)
+              this.m_eDragMode == Ft.MouseDragging ||
+                this.m_eDragMode == Ft.TouchDragging)
             ) {
               let e = !1;
               if (
@@ -71224,13 +71266,13 @@
           this.UpdateSliderValueForPosition(e.clientX);
         }
         OnWindowMouseUp(e) {
-          this.m_eDragMode != xt.None && this.Complete();
+          this.m_eDragMode != Ft.None && this.Complete();
         }
         OnMouseDown(e) {
           0 == e.button &&
             (this.props.disabled ||
               (e.preventDefault(),
-              this.SetDragMode(xt.MouseDragging),
+              this.SetDragMode(Ft.MouseDragging),
               this.UpdateSliderValueForPosition(e.clientX)));
         }
         OnTouchStart(e) {
@@ -71241,7 +71283,7 @@
           );
           t < 0 ||
             t > 1 ||
-            (this.SetDragMode(xt.TouchStart),
+            (this.SetDragMode(Ft.TouchStart),
             (this.m_vTouchStartPosition = {
               x: e.touches[0].clientX,
               y: e.touches[0].clientY,
@@ -71250,34 +71292,34 @@
         OnWindowTouchMove(e) {
           if (1 == e.touches.length) {
             switch (this.m_eDragMode) {
-              case xt.TouchStart:
+              case Ft.TouchStart:
                 const t = { x: e.touches[0].clientX, y: e.touches[0].clientY };
                 if ((0, ot.LD)(this.m_vTouchStartPosition, t) >= 10) {
                   const e = (0, ot.Fg)(this.m_vTouchStartPosition, t);
                   Math.abs(e.x) > Math.abs(e.y)
-                    ? (this.SetDragMode(xt.TouchDragging),
+                    ? (this.SetDragMode(Ft.TouchDragging),
                       this.m_refSlider.current?.focus())
-                    : this.SetDragMode(xt.None);
+                    : this.SetDragMode(Ft.None);
                 }
                 break;
-              case xt.TouchDragging:
+              case Ft.TouchDragging:
                 this.UpdateSliderValueForPosition(e.touches[0].clientX);
             }
             e.preventDefault();
           }
         }
         OnWindowTouchEnd(e) {
-          this.m_eDragMode != xt.None && this.Complete();
+          this.m_eDragMode != Ft.None && this.Complete();
         }
         Complete() {
-          const e = this.m_eDragMode != xt.None;
+          const e = this.m_eDragMode != Ft.None;
           this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
             this.props.onChangeComplete &&
               this.props.onChangeComplete(
                 this.m_fLatestUserValue,
                 this.SliderChangeSource,
               ),
-            this.SetDragMode(xt.None);
+            this.SetDragMode(Ft.None);
           const t = 0 == this.step;
           if (
             this.m_fLatestUserValue != this.m_fStartValue &&
@@ -71322,11 +71364,11 @@
         OnInnerSliderBlur() {
           (this.m_bInnerSliderHasFocus = !1),
             (this.m_fStartValue == this.m_fLatestUserValue &&
-              this.m_eDragMode == xt.None) ||
+              this.m_eDragMode == Ft.None) ||
               this.Complete();
         }
         ResetToDefault() {
-          if (!this.CanResetToDefault || this.m_eDragMode != xt.None) return;
+          if (!this.CanResetToDefault || this.m_eDragMode != Ft.None) return;
           let e;
           (this.m_fLatestUserValue = this.props.resetValue),
             this.FireOnChange(this.props.resetValue, z),
@@ -71521,7 +71563,7 @@
                       }),
                   ],
                 }),
-                (0, s.jsx)(Ot, {
+                (0, s.jsx)(Wt, {
                   notchCount: N,
                   notchLabels: E,
                   sliderValue: this.normalizedClampedValue,
@@ -71533,7 +71575,7 @@
           });
         }
       }
-      function Ot(e) {
+      function Wt(e) {
         let {
             sliderValue: t,
             notchCount: r,
@@ -71550,7 +71592,7 @@
           i && (c = !0),
             u.push(
               (0, s.jsx)(
-                Wt,
+                qt,
                 {
                   notchIndex: e,
                   sliderValue: t,
@@ -71568,7 +71610,7 @@
           children: u,
         });
       }
-      function Wt(e) {
+      function qt(e) {
         const t = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
           r = e.notchCount <= 3 && !e.notchTicksVisible,
           i = r && 0 == e.notchIndex,
@@ -71576,10 +71618,10 @@
           a = { ...e, alignLeftEnd: i, alignRightEnd: n, active: t };
         return (0, s.jsx)("div", {
           className: (0, m.A)(at().SliderNotch, r && at().AlignToEnds),
-          children: e.renderNotch ? e.renderNotch(a) : (0, s.jsx)(qt, { ...a }),
+          children: e.renderNotch ? e.renderNotch(a) : (0, s.jsx)(Lt, { ...a }),
         });
       }
-      function qt(e) {
+      function Lt(e) {
         const { alignLeftEnd: t, alignRightEnd: r, active: i } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -71599,22 +71641,22 @@
           ],
         });
       }
-      (0, n.Cg)([g.oI], Ft.prototype, "RecomputeSliderBounds", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "SetDragMode", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnGamepadDirection", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "UpdateSliderValueForPosition", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnWindowMouseMove", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnWindowMouseUp", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnMouseDown", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnTouchStart", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnWindowTouchMove", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnWindowTouchEnd", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "Complete", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "BlurInnerSlider", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnInnerSliderFocus", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnInnerSliderBlur", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "ResetToDefault", null),
-        (0, n.Cg)([g.oI], Ft.prototype, "OnContextMenu", null);
+      (0, n.Cg)([g.oI], Ot.prototype, "RecomputeSliderBounds", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "SetDragMode", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnGamepadDirection", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "UpdateSliderValueForPosition", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnWindowMouseMove", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnWindowMouseUp", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnMouseDown", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnTouchStart", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnWindowTouchMove", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnWindowTouchEnd", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "Complete", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "BlurInnerSlider", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnInnerSliderFocus", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnInnerSliderBlur", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "ResetToDefault", null),
+        (0, n.Cg)([g.oI], Ot.prototype, "OnContextMenu", null);
       a.forwardRef(function (e, t) {
         const {
           label: r,
@@ -71647,7 +71689,7 @@
           }),
         });
       });
-      const Lt = a.forwardRef(function (e, t) {
+      const At = a.forwardRef(function (e, t) {
         const {
           value: r,
           onChange: i,
@@ -71685,7 +71727,7 @@
           ],
         });
       });
-      function At(e) {
+      function Ut(e) {
         const t = !!e.disabled,
           { actionDescriptions: r, gamepadEvents: i } = (0, Xe.C7)(e),
           n = a.useId(),
@@ -71709,7 +71751,7 @@
           indentLevel: e.indentLevel,
           transparentBackground: e.transparentBackground,
           ...i,
-          children: (0, s.jsx)(Lt, {
+          children: (0, s.jsx)(At, {
             autoFocus: o,
             "aria-expanded": l,
             "aria-controls": c,
@@ -71721,21 +71763,21 @@
           }),
         });
       }
-      class Ut extends i.pF {
+      class Pt extends i.pF {
         OnToggleChange(e) {
           this.props.disabled || e === this.checked || this.Toggle();
         }
         render() {
-          return (0, s.jsx)(At, {
+          return (0, s.jsx)(Ut, {
             ...this.props,
             OnToggleChange: this.OnToggleChange,
             checked: this.checked,
           });
         }
       }
-      (0, n.Cg)([g.oI], Ut.prototype, "OnToggleChange", null);
-      var Pt = r(63512);
-      function kt(e) {
+      (0, n.Cg)([g.oI], Pt.prototype, "OnToggleChange", null);
+      var kt = r(63512);
+      function Dt(e) {
         const { children: t, bCenterVertically: r, refElem: i, ...n } = e,
           a = (0, m.A)(
             Le().GamepadDialogContent,
@@ -71743,7 +71785,7 @@
             e.className,
             r && " _DialogCenterVertically",
           ),
-          { ref: o, navRef: c } = (0, Pt.tw)(),
+          { ref: o, navRef: c } = (0, kt.tw)(),
           u = (0, g.Ue)(i, o);
         return (0, s.jsx)(l.Z, {
           ...n,
@@ -90141,7 +90183,7 @@
             r.e(28310),
             r.e(65949),
             r.e(57333),
-          ]).then(r.bind(r, 67594)),
+          ]).then(r.bind(r, 84934)),
         ),
         Qa = Va(() =>
           Promise.all([

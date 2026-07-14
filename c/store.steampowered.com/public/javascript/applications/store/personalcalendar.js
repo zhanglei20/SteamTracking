@@ -900,7 +900,7 @@
         );
       }
       function _(_) {
-        _ && (window.clearTimeout(_.current), (_.current = null));
+        _.current && (window.clearTimeout(_.current), (_.current = null));
       }
       function _(_) {
         const {
@@ -1274,6 +1274,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         name: "personalcalendarPrefs",
@@ -1545,33 +1546,36 @@
               },
               hoverClassName: _.StoreAppHover,
               disableScreenshots: !0,
-              children: (0, _.jsxs)(_._, {
-                ref: _,
-                className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
-                onMouseOver: () => _(!0),
-                onMouseOut: () => _(!1),
-                children: [
-                  (0, _.jsx)("img", {
-                    className: _.Image,
-                    src: _,
-                  }),
-                  _ &&
+              children: (0, _.jsx)(_._, {
+                appID: _.nAppID,
+                children: (0, _.jsxs)(_._, {
+                  ref: _,
+                  className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
+                  onMouseOver: () => _(!0),
+                  onMouseOut: () => _(!1),
+                  children: [
+                    (0, _.jsx)("img", {
+                      className: _.Image,
+                      src: _,
+                    }),
                     _ &&
-                    (0, _.jsx)(_, {
-                      _: {
-                        appid: _.nAppID,
-                      },
-                      nIntervalMS: 1e3,
-                    }),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      _: {
-                        appid: _.nAppID,
-                      },
-                      active: _,
-                      bIsHoverMode: !0,
-                    }),
-                ],
+                      _ &&
+                      (0, _.jsx)(_, {
+                        _: {
+                          appid: _.nAppID,
+                        },
+                        nIntervalMS: 1e3,
+                      }),
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        _: {
+                          appid: _.nAppID,
+                        },
+                        active: _,
+                        bIsHoverMode: !0,
+                      }),
+                  ],
+                }),
               }),
             }),
           })

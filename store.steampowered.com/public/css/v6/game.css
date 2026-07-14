@@ -1615,6 +1615,11 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 
 	margin-bottom: 1px;
 }
+.game_description_column h2:dir(rtl), .recommendation_bodytext h2:dir(rtl) {
+	background-image: url( /public/images/v6/maincol_gradient_rule_rtl.png );
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
 
 body.v6 .game_description_column .game_page_autocollapse.sys_req h2 {
 	margin-bottom: 0px;
@@ -1651,6 +1656,11 @@ body.v6 .game_description_column h2.gradientbg {
     background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: bottom left;
+}
+.game_description_column .block .block_header h4:dir(rtl) {
+	background-image: url( /public/images/v6/maincol_gradient_rule_rtl.png );
+	background-repeat: no-repeat;
+	background-position: bottom right;
 }
 .game_description_column .block .block_header h4 .subh4 {
     color: #8f98a0;
@@ -6818,6 +6828,11 @@ a.open_in_steam_body:hover {
     background-repeat: no-repeat;
     background-position: bottom left;
 	padding-bottom: 4px;
+}
+.game_purchase_options_editions_header:dir(rtl) {
+	background-image: url( /public/images/v6/maincol_gradient_rule_rtl.png );
+	background-repeat: no-repeat;
+	background-position: bottom right;
 }
 
 .game_purchase_options_editions_header_title {

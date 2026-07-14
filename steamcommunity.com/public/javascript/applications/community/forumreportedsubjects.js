@@ -153,7 +153,7 @@
                           ? void 0
                           : r.length
                       )
-                        ? (0, o.jsx)(v, { subject: e }, e.subject_id)
+                        ? (0, o.jsx)(g, { subject: e }, e.subject_id)
                         : (0, o.jsx)(
                             "div",
                             {
@@ -190,7 +190,7 @@
           })(e.subject_id, t.subject_id)
         );
       }
-      function g(e) {
+      function v(e) {
         for (;;) {
           const t = e.indexOf("[/quote]");
           if (-1 === t) break;
@@ -198,7 +198,7 @@
         }
         return e.slice(0, 35);
       }
-      function v(e) {
+      function g(e) {
         var t, r;
         const { subject: s } = e,
           n = x(e.subject),
@@ -212,7 +212,7 @@
             ? t
             : []) {
             if (r.gidcomment === s.subject_id) {
-              (u = g(r.text)), (d = `#${e}`);
+              (u = v(r.text)), (d = `#${e}`);
               break;
             }
             e++;
@@ -223,7 +223,7 @@
             ? r
             : [])
             if (e.gidcomment === s.subject_id) {
-              u = g(e.text);
+              u = v(e.text);
               break;
             }
         null === u && (u = "[Comment]");
@@ -326,11 +326,11 @@
     90182: (e, t, r) => {
       "use strict";
       r.d(t, {
-        EC: () => g,
+        EC: () => v,
         KQ: () => k,
         Kt: () => m,
         N8: () => p,
-        c3: () => v,
+        c3: () => g,
         iW: () => b,
         kZ: () => _,
         lY: () => h,
@@ -411,7 +411,11 @@
               throw new Error(`Failed to escalate subject: ${a.GetEMsg()}`);
           },
           onSuccess: async (o, s) => {
-            await b(u, e, t, r);
+            await Promise.all([
+              b(u, e, t, r),
+              u.invalidateQueries({ queryKey: ["get_claimed"] }),
+              u.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+            ]);
           },
         });
       }
@@ -484,7 +488,7 @@
           })(t, e),
         );
       }
-      function g(e, t, r) {
+      function v(e, t, r) {
         const s = (0, c.KV)(),
           n = (0, i.jE)();
         return (0, a.n)({
@@ -512,7 +516,7 @@
           },
         });
       }
-      function v(e, t, r) {
+      function g(e, t, r) {
         const s = (0, c.KV)(),
           n = (0, i.jE)();
         return (0, a.n)({

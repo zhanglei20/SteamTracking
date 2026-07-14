@@ -552,48 +552,6 @@ function _(_) {
       });
   }
 }
-function _(_) {
-  let { angle: _, singlearrow: _, ..._ } = _;
-  return (0, _.jsxs)("svg", {
-    style: {
-      transform: `rotate(${_}deg)`,
-    },
-    version: "1.1",
-    _: "arrowBase",
-    xmlns: "http://www.w3.org/2000/svg",
-    className: _(
-      "SVGIcon_Button SVGIcon_DoubleArrow",
-      _.HasHorizontalDirection,
-    ),
-    _: "0px",
-    _: "0px",
-    width: "256px",
-    height: "256px",
-    viewBox: "0 0 256 256",
-    ..._,
-    children: [
-      (0, _.jsx)("polyline", {
-        className: "Arrow1",
-        fill: "none",
-        stroke: _.fill || "#ffffff",
-        strokeWidth: "23",
-        strokeLinecap: "round",
-        strokeMiterlimit: "10",
-        points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
-      }),
-      !_ &&
-        (0, _.jsx)("polyline", {
-          className: "Arrow2",
-          fill: "none",
-          stroke: _.fill || "#ffffff",
-          strokeWidth: "23",
-          strokeLinecap: "round",
-          strokeMiterlimit: "10",
-          points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
-        }),
-    ],
-  });
-}
 function _() {
   return (0, _.jsxs)("svg", {
     version: "1.1",
@@ -1740,7 +1698,6 @@ function _(_) {
   });
 }
 export {
-  _,
   _,
   _,
   _,

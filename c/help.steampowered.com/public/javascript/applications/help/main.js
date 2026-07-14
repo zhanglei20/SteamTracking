@@ -13146,6 +13146,8 @@
             "DriverProvidedIPDVisibility_Bool"),
           (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
             "Prop_SupportsVRGamepadMode_Bool"),
+          (_[(_.Prop_AllowHomeApp2Setting_Int32 = 2119)] =
+            "Prop_AllowHomeApp2Setting_Int32"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -13312,7 +13314,7 @@
             (_[(_.SmoothStep = 3)] = "SmoothStep"),
             (_[(_.SmootherStep = 4)] = "SmootherStep");
         })(_ || (_ = {}));
-      var _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -13350,17 +13352,23 @@
             (_[(_.Panel = 2)] = "Panel");
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.ControllerPairing = 0)] = "ControllerPairing"),
-            (_[(_.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
-            (_[(_.SystemButtonHideDashboard = 2)] =
+          (_[(_.Unknown = 0)] = "Unknown"),
+            (_[(_.LaserMouse = 1)] = "LaserMouse"),
+            (_[(_.Gamepad = 2)] = "Gamepad");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
+            (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
+            (_[(_.SystemButtonHideDashboard = 3)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 3)] =
+            (_[(_.SystemButtonDashboardHidden = 4)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 4)] =
+            (_[(_.SystemButtonShowDashboard = 5)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 5)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 6)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 6)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 7)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 8)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -34815,6 +34823,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -34950,6 +34959,32 @@
             ref: _,
             node: _,
           }
+        );
+      }
+      function _(_) {
+        const _ = _.useRef(null),
+          _ = _.useRef(null);
+        _.useEffect(
+          () => () => {
+            __webpack_require__.current?.();
+          },
+          [],
+        );
+        return _.useCallback(
+          (_) => {
+            _.current !== _ &&
+              ((_.current = _),
+              __webpack_require__.current?.(),
+              (_.current = null),
+              _ &&
+                (_.current = (0, _._)(
+                  _,
+                  (_) =>
+                    !(!_ || "none" == _.GetFocusable()) &&
+                    _.BTakeFocus(void 0, _.detail.button),
+                )));
+          },
+          [_],
         );
       }
       function _(_) {
@@ -35132,7 +35167,8 @@
             ? (_.tabIndex = _.tabIndex || 0)
             : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
           (0, _._)(_, _);
-        const _ = (0, _._)(_, _),
+        const _ = _(_),
+          _ = (0, _._)(_, _, _),
           _ = (0, _.useContext)(_)?.Component;
         let _ = {
           ..._,
@@ -35566,7 +35602,8 @@
           _ = (0, _._)();
         (_.className = _()(_.className, "Panel", _ && "Focusable")),
           (0, _._)(_, _);
-        const _ = (0, _._)(_, _.ref);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _.ref, _);
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
@@ -35592,6 +35629,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -35664,6 +35702,9 @@
       }
       function _(_, _) {
         return _(_, "vgp_onblur", _);
+      }
+      function _(_, _) {
+        return _(_, "vgp_requestfocus", _(_));
       }
       function _(_) {
         return (_) => {
@@ -37811,13 +37852,14 @@
         return _ >= 0 && (_.splice(_, 1), !0);
       }
       function _(_, _, _) {
-        return (
-          _ ||
-            console.error(
+        return _
+          ? _.length < _
+            ? _.concat(Array(_ - _.length).fill(_))
+            : _
+          : (console.error(
               "array should be defined for us to fill in the missing indexes",
             ),
-          _.length < _ ? _.concat(Array(_ - _.length).fill(_)) : _
-        );
+            []);
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -68236,21 +68278,20 @@
         );
       }
       function _(_, _) {
+        const [_, _] = _.useState(_);
         return (
-          (function (_, _) {
-            const [_, _] = _.useState(_);
-            return (
-              _.useEffect(() => {
-                if (!_) {
-                  const _ = window.setTimeout(() => _(!1), _);
-                  return () => window.clearTimeout(_);
-                }
-                _(!0);
-              }, [_, _]),
-              _
-            );
-          })(_, _) || _
+          _.useEffect(() => {
+            if (!_) {
+              const _ = window.setTimeout(() => _(!1), _);
+              return () => window.clearTimeout(_);
+            }
+            _(!0);
+          }, [_, _]),
+          _
         );
+      }
+      function _(_, _) {
+        return _(_, _) || _;
       }
       function _(_) {
         const _ = _.useRef(void 0);

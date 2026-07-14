@@ -135,7 +135,7 @@
     },
     20433: (e, r, t) => {
       "use strict";
-      t.d(r, { j: () => m, u: () => p });
+      t.d(r, { j: () => p, u: () => m });
       var n = t(7850),
         s = t(90626),
         l = t(45699),
@@ -153,7 +153,7 @@
           if ("packageid" in e) return "sub";
         }
       }
-      function m(e) {
+      function p(e) {
         const {
             id: r,
             hoverClassName: t,
@@ -180,7 +180,7 @@
             },
             [i, l, a, r],
           ),
-          m = s.useCallback(
+          p = s.useCallback(
             (e) => {
               h(r) &&
                 (i && e.relatedTarget && i(!1),
@@ -193,23 +193,23 @@
           ref: c,
           className: t,
           onMouseEnter: u,
-          onMouseLeave: m,
+          onMouseLeave: p,
           onFocus: u,
-          onBlur: m,
+          onBlur: p,
           children: o,
         });
       }
-      function p(e) {
+      function m(e) {
         const {
             id: r,
             strExtraParams: t,
             fnOnClickOverride: s,
-            strOverrideURL: p,
+            strOverrideURL: m,
           } = e,
           f = (0, a.n9)(),
           _ = (0, o.w)(),
           g = (0, c.NT)(
-            p ||
+            m ||
               (r && "creatorid" in r
                 ? (0, i.It)(
                     `${u.TS.STORE_BASE_URL}curator/${((0, d.G$))(r).id}${t ? `?${t}` : ""}`,
@@ -222,7 +222,7 @@
                     _,
                   )),
           );
-        return (0, n.jsx)(m, {
+        return (0, n.jsx)(p, {
           ...e,
           children: (0, n.jsx)(l.Ii, {
             className: e.className,
@@ -354,7 +354,7 @@
     },
     80696: (e, r, t) => {
       "use strict";
-      t.d(r, { C0: () => n, Ck: () => f, mj: () => p });
+      t.d(r, { C0: () => n, Ck: () => f, mj: () => m });
       var n,
         s = t(7850),
         l = t(48210),
@@ -365,8 +365,8 @@
         d = t(90626),
         u = t(52471),
         h = t(73187),
-        m = t.n(h);
-      function p(e) {
+        p = t.n(h);
+      function m(e) {
         const { id: r, active: t, bIsHoverMode: o, eGrowOnActivate: h } = e,
           { data: _ } = (0, a.J$)(r),
           g = d.useRef(0),
@@ -382,7 +382,7 @@
           return _ &&
             _.related_items?.parent_appid &&
             (_.type == l.uE.ue || _.type == l.uE.Vi)
-            ? (0, s.jsx)(p, {
+            ? (0, s.jsx)(m, {
                 ...e,
                 id: { appid: _.related_items.parent_appid },
               })
@@ -390,14 +390,14 @@
         let w;
         switch (h) {
           case n.k_ETrailerGrowAmount_Implicit:
-            w = m().GrowOnHoverImplicit;
+            w = p().GrowOnHoverImplicit;
             break;
           case n.k_ETrailerGrowAmount_Medium:
-            w = m().GrowOnHoverMedium;
+            w = p().GrowOnHoverMedium;
         }
         const x = b[0];
         return (0, s.jsx)("video", {
-          className: c()(m().CapsuleMicroTrailer, w),
+          className: c()(p().CapsuleMicroTrailer, w),
           loop: !0,
           muted: !0,
           controls: !1,
@@ -537,8 +537,8 @@
         d = t(78327),
         u = t(47444),
         h = t(96236),
-        m = t(11279);
-      function p(e) {
+        p = t(11279);
+      function m(e) {
         const {
           nSlideIndex: r,
           nStartingSlideIndex: t,
@@ -577,14 +577,14 @@
                   placeholderWidth: c ?? 1,
                   placeholderHeight: 1,
                   holdGamepadFocus: S,
-                  children: (0, n.jsx)(p, {
+                  children: (0, n.jsx)(m, {
                     nSlideIndex: r,
                     nStartingSlideIndex: f,
                     ref: g,
                     children: e,
                   }),
                 })
-              : (0, n.jsx)(p, {
+              : (0, n.jsx)(m, {
                   nSlideIndex: r,
                   nStartingSlideIndex: f,
                   ref: g,
@@ -598,7 +598,7 @@
               { SaleSectionCarouselPadding: r },
               "ScrollSnapCarousel",
               "SaleSectionCarousel",
-              m.ScrollSnapCarousel,
+              p.ScrollSnapCarousel,
               e.className,
             ),
             ref: _,
@@ -628,7 +628,7 @@
           const c = (100 * a) / l,
             d = 100 * (1 - Math.min(a + s, l) / l),
             h = c + (50 * s) / l,
-            m = 100 - h;
+            p = 100 - h;
           return (0, n.jsxs)("div", {
             className: u.pipScrollerContainer,
             children: [
@@ -667,7 +667,7 @@
                   }),
                   (0, n.jsx)("div", {
                     className: u.scrollNavDiv,
-                    style: { right: "0%", width: m + "%" },
+                    style: { right: "0%", width: p + "%" },
                     children: (0, n.jsx)(i.CC, {
                       className: (0, o.A)(
                         u.carouselNavButton,
@@ -713,9 +713,9 @@
           s = t(),
           c = Math.min(t(), e.visibleElements);
         if (!s || !c) return null;
-        const m = c < s,
-          p = e.hideArrows || !m,
-          f = !m || e.hidePips;
+        const p = c < s,
+          m = e.hideArrows || !p,
+          f = !p || e.hidePips;
         let _ = 4 / 3,
           g = !0;
         e.slideAspectRatio && ((_ = e.slideAspectRatio), (g = !1));
@@ -740,7 +740,7 @@
             currentSlide: e.startingSlide,
             children: [
               (0, n.jsx)(j, {
-                bHideArrows: p,
+                bHideArrows: m,
                 bAutoAdvance: e.bAutoAdvance && !r,
                 onSlide: e.onSlide,
                 arrowFill: e.arrowFill,
@@ -771,7 +771,7 @@
               }),
               !f &&
                 (e.useTestScrollbar
-                  ? (0, n.jsx)(w, { showArrows: p, carouselStore: null })
+                  ? (0, n.jsx)(w, { showArrows: m, carouselStore: null })
                   : (0, n.jsx)("div", {
                       className: S()({
                         [u.breadcrumbContainer]: !0,
@@ -818,7 +818,7 @@
         );
       }
       function A(e) {
-        e && (window.clearTimeout(e.current), (e.current = null));
+        e.current && (window.clearTimeout(e.current), (e.current = null));
       }
       function j(e) {
         const {
@@ -827,10 +827,10 @@
             children: l,
             onSlide: d,
             arrowFill: h,
-            arrowStyle: m,
+            arrowStyle: p,
           } = e,
-          p = a.useContext(i.Yc),
-          f = a.useRef(p.state.currentSlide),
+          m = a.useContext(i.Yc),
+          f = a.useRef(m.state.currentSlide),
           [g, S] = a.useState(null),
           [b, w] = a.useState(!!t),
           x = a.useRef(null),
@@ -841,20 +841,20 @@
               if (x.current) {
                 A(x);
                 let e = 0;
-                p.state.currentSlide + p.state.visibleSlides <
-                  p.state.totalSlides &&
+                m.state.currentSlide + m.state.visibleSlides <
+                  m.state.totalSlides &&
                   (e = Math.min(
-                    p.state.currentSlide + p.state.visibleSlides,
-                    p.state.totalSlides - p.state.visibleSlides,
+                    m.state.currentSlide + m.state.visibleSlides,
+                    m.state.totalSlides - m.state.visibleSlides,
                   )),
-                  p.setStoreState({ currentSlide: e });
+                  m.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
           b && e();
           const r = () => {
             const r = f.current,
-              t = p.state.currentSlide;
+              t = m.state.currentSlide;
             d && d(t), S(t > r ? "Right" : t < r ? "Left" : null), A(C);
             (C.current = window.setTimeout(() => {
               C.current && (S(null), A(C));
@@ -863,12 +863,12 @@
               x.current ? (A(x), w(!1)) : b && e();
           };
           return (
-            p.subscribe(r),
+            m.subscribe(r),
             () => {
-              p.unsubscribe(r), A(x), A(C);
+              m.unsubscribe(r), A(x), A(C);
             }
           );
-        }, [p, b]);
+        }, [m, b]);
         const y = !!g && "CarouselSliding" + g;
         return (0, n.jsxs)("div", {
           className: (0, o.A)(u.sliderBody, "SliderBody", y),
@@ -884,7 +884,7 @@
                 "aria-label": (0, c.we)("#Carousel_Prev"),
                 children: (0, n.jsx)(v.m, {
                   arrowFill: h,
-                  arrowStyle: m,
+                  arrowStyle: p,
                   direction: "left",
                 }),
               }),
@@ -906,7 +906,7 @@
                 "aria-label": (0, c.we)("#Carousel_Next"),
                 children: (0, n.jsx)(v.m, {
                   arrowFill: h,
-                  arrowStyle: m,
+                  arrowStyle: p,
                   direction: "right",
                 }),
               }),
@@ -936,9 +936,9 @@
             style: d,
             mode: u = "JustLoad",
             children: h,
-            ...m
+            ...p
           } = e,
-          [p, f] = s.useState({
+          [m, f] = s.useState({
             bRenderChildren: !1,
             nPrevRenderHeight: 0,
             nPrevRenderWidth: 0,
@@ -973,9 +973,9 @@
           _.enabled || v(!0);
         }, [_.enabled, v]);
         let b = d;
-        if (!p.bRenderChildren) {
-          const e = p.nPrevRenderWidth || r,
-            n = p.nPrevRenderHeight || t;
+        if (!m.bRenderChildren) {
+          const e = m.nPrevRenderWidth || r,
+            n = m.nPrevRenderHeight || t;
           (void 0 === n && void 0 === e) ||
             (b = { ...d, minHeight: n, minWidth: e });
         }
@@ -983,10 +983,10 @@
         let x = (0, n.jsx)(l.J, {
           containerRef: g,
           style: b,
-          ...m,
+          ...p,
           onVisibilityChange: v,
           trigger: w,
-          children: p.bRenderChildren && h,
+          children: m.bRenderChildren && h,
         });
         return (
           o &&
@@ -1130,7 +1130,7 @@
     },
     88916: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => B });
+      t.r(r), t.d(r, { default: () => W });
       var n = t(7850),
         s = t(91933),
         l = t(45699),
@@ -1141,63 +1141,64 @@
         d = t(30470),
         u = t(20433),
         h = t(80696),
+        p = t(84518),
         m = t(19122),
-        p = t(39777),
-        f = t(60014),
-        _ = t(90626),
-        g = t(55963),
-        S = t(70310),
-        v = t(64466),
-        b = t(43568),
-        w = t(96236),
-        x = t(49411),
-        C = t(52038),
-        y = t(61859),
-        A = t(78327),
-        j = t(48335),
-        I = t(2589),
-        N = t(42834),
-        E = t(84933),
-        R = t(75933),
-        T = t(66973);
-      const D = {
+        f = t(39777),
+        _ = t(60014),
+        g = t(90626),
+        S = t(55963),
+        v = t(70310),
+        b = t(64466),
+        w = t(43568),
+        x = t(96236),
+        C = t(49411),
+        y = t(52038),
+        A = t(61859),
+        j = t(78327),
+        I = t(48335),
+        N = t(2589),
+        E = t(42834),
+        R = t(84933),
+        T = t(75933),
+        D = t(66973);
+      const k = {
         name: "personalcalendarPrefs",
         options: { path: "/personalcalendar", secure: !0, maxAge: 31536e6 },
         preferenceControls: { isTechnicallyNecessary: !0 },
       };
-      var k;
-      function F() {
-        const e = (0, s.j_)(D),
+      var F;
+      function M() {
+        const e = (0, s.j_)(k),
           r = e ? JSON.parse(e) : void 0,
-          t = (0, R.a4)(940),
-          l = (0, f.n9)(),
-          o = (0, x.w)(),
-          d = (0, A.Qn)(),
-          u = (0, S.GZ)(0, 14, 21),
-          h = (0, S.Gd)(14, 21, !0, !0).flat(),
-          p = (0, g.It)(`${c.TS.STORE_BASE_URL}personalcalendar`, l, o),
-          { bShowSeeMoreHint: _, panelProps: v } = (0, m.i)(p);
+          t = (0, T.a4)(940),
+          l = (0, _.n9)(),
+          o = (0, C.w)(),
+          d = (0, j.Qn)(),
+          u = (0, v.GZ)(0, 14, 21),
+          h = (0, v.Gd)(14, 21, !0, !0).flat(),
+          p = (0, S.It)(`${c.TS.STORE_BASE_URL}personalcalendar`, l, o),
+          { bShowSeeMoreHint: f, panelProps: g } = (0, m.i)(p);
         if (!u.data)
-          return (0, n.jsx)(i.Z, { className: j.PersonalCalendarWidget });
-        let w = u.data.arrAppInfos;
+          return (0, n.jsx)(i.Z, { className: I.PersonalCalendarWidget });
+        let b = u.data.arrAppInfos;
         return (
           r &&
-            ((w = w.filter((e) => !r.bHideOwned || !e.bIsOwned)),
-            (w = w.filter((e) => !r.bHideEarlyAccess || !e.bIsEarlyAccess)),
-            (w = w.filter((e) => {
+            ((b = b.filter((e) => !r.bHideOwned || !e.bIsOwned)),
+            (b = b.filter((e) => !r.bHideEarlyAccess || !e.bIsEarlyAccess)),
+            (b = b.filter((e) => {
               switch (r.eWishlistDisplay) {
-                case k.Show:
+                case F.Show:
                   return !0;
-                case k.Only:
+                case F.Only:
                   return e.bIsWishlisted;
-                case k.Hide:
+                case F.Hide:
                   return !e.bIsWishlisted;
               }
             }))),
           (0, n.jsxs)(i.Z, {
-            className: j.PersonalCalendarWidget,
+            className: I.PersonalCalendarWidget,
             navEntryPreferPosition: a.iU.PREFERRED_CHILD,
-            ...v,
+            ...g,
             children: [
               (0, n.jsxs)("div", {
                 className: "title_grid",
@@ -1206,20 +1207,20 @@
                     className: "home_section_title",
                     children: [
                       (0, n.jsx)("span", {
-                        className: j.NewBadge,
-                        children: (0, y.we)("#NewBadge"),
+                        className: I.NewBadge,
+                        children: (0, A.we)("#NewBadge"),
                       }),
-                      (0, y.we)("#PersonalCalendar_Title"),
+                      (0, A.we)("#PersonalCalendar_Title"),
                     ],
                   }),
                   (0, n.jsx)("div", {
                     className: "home_section_subtitle",
-                    children: (0, y.we)("#PersonalCalendar_Subtitle"),
+                    children: (0, A.we)("#PersonalCalendar_Subtitle"),
                   }),
-                  !d && (0, n.jsx)(M, { calendarURL: p, location: "desktop" }),
+                  !d && (0, n.jsx)(G, { calendarURL: p, location: "desktop" }),
                 ],
               }),
-              (0, n.jsx)(b.F, {
+              (0, n.jsx)(w.F, {
                 visibleElements: 5,
                 hideArrows: !1,
                 disableEdgeWrap: !0,
@@ -1229,29 +1230,29 @@
                 className: d ? void 0 : "fiveElementEightGap",
                 children: h.map((e, t) =>
                   (0, n.jsx)(
-                    G,
+                    H,
                     {
                       bInitialFocus: 10 === t,
                       nTimestamp: e,
                       nNextTimestamp: t < h.length - 1 ? h[t + 1] : e + 86400,
-                      arrAppInfos: w,
+                      arrAppInfos: b,
                       nRankThreshold: r?.nResultsToShow,
                     },
                     e,
                   ),
                 ),
               }),
-              !d && (0, n.jsx)(M, { calendarURL: p, location: "mobile" }),
+              !d && (0, n.jsx)(G, { calendarURL: p, location: "mobile" }),
               d &&
                 (0, n.jsx)(m.o, {
-                  label: (0, y.we)("#PersonalCalendar_Full"),
-                  shown: _,
+                  label: (0, A.we)("#PersonalCalendar_Full"),
+                  shown: f,
                 }),
             ],
           })
         );
       }
-      function M(e) {
+      function G(e) {
         const { calendarURL: r, location: t } = e,
           s = "mobile" == t ? "see_more_mobile" : "see_more_desktop";
         return (0, n.jsx)("div", {
@@ -1260,12 +1261,12 @@
             href: r,
             className: "btn_small btn_medium btnv6_white_transparent",
             children: (0, n.jsx)("span", {
-              children: (0, y.we)("#PersonalCalendar_Full"),
+              children: (0, A.we)("#PersonalCalendar_Full"),
             }),
           }),
         });
       }
-      function G(e) {
+      function H(e) {
         const {
             nTimestamp: r,
             nNextTimestamp: t,
@@ -1273,18 +1274,18 @@
             arrAppInfos: d,
             nRankThreshold: u,
           } = e,
-          h = (0, f.n9)(),
-          m = (0, x.w)(),
-          p = (0, g.It)(`${c.TS.STORE_BASE_URL}personalcalendar`, h, m),
-          S = new Date(1e3 * r),
+          h = (0, _.n9)(),
+          p = (0, C.w)(),
+          m = (0, S.It)(`${c.TS.STORE_BASE_URL}personalcalendar`, h, p),
+          f = new Date(1e3 * r),
           v = new Date(),
           b =
-            S.getDate() === v.getDate() &&
-            S.getMonth() === v.getMonth() &&
-            S.getFullYear() === v.getFullYear(),
-          w = S > v,
-          I = S.toLocaleDateString((0, o.J)(), { weekday: "short" }),
-          N = S.toLocaleString((0, o.J)(), {
+            f.getDate() === v.getDate() &&
+            f.getMonth() === v.getMonth() &&
+            f.getFullYear() === v.getFullYear(),
+          w = f > v,
+          x = f.toLocaleDateString((0, o.J)(), { weekday: "short" }),
+          N = f.toLocaleString((0, o.J)(), {
             day: "numeric",
             month: "numeric",
           }),
@@ -1298,85 +1299,85 @@
                   : e.nRank - r.nRank,
             ),
           R = u ?? 100,
-          D = E.filter((e) => e.nRank <= R).length - 2,
+          T = E.filter((e) => e.nRank <= R).length - 2,
           k = 0 == E.length,
-          [F, M] = _.useState(!1),
-          G = (0, A.Qn)(),
-          P = _.useRef(null);
+          [F, M] = g.useState(!1),
+          G = (0, j.Qn)(),
+          H = g.useRef(null);
         return (
-          _.useEffect(() => {
-            if (s && G && P.current) {
-              const e = P.current.closest(".carousel__slide"),
-                r = P.current.closest(".carousel__slider-tray-wrapper");
+          g.useEffect(() => {
+            if (s && G && H.current) {
+              const e = H.current.closest(".carousel__slide"),
+                r = H.current.closest(".carousel__slider-tray-wrapper");
               r && e && (r.scrollLeft = e.offsetLeft);
             }
           }, [s, G]),
           (0, n.jsxs)(i.Z, {
-            className: (0, C.A)(
-              j.PersonalCalendarWidgetDay,
-              b && j.TodayCtn,
-              w && j.FutureCtn,
-              k && j.EmptyDayCtn,
+            className: (0, y.A)(
+              I.PersonalCalendarWidgetDay,
+              b && I.TodayCtn,
+              w && I.FutureCtn,
+              k && I.EmptyDayCtn,
             ),
             "flow-children": "column",
             children: [
               (0, n.jsxs)("div", {
-                className: j.DayTitle,
+                className: I.DayTitle,
                 children: [
                   !b &&
-                    (0, n.jsx)("div", { className: j.DayOfWeek, children: I }),
-                  !b && (0, n.jsx)("div", { className: j.Date, children: N }),
+                    (0, n.jsx)("div", { className: I.DayOfWeek, children: x }),
+                  !b && (0, n.jsx)("div", { className: I.Date, children: N }),
                   b &&
                     (0, n.jsx)("div", {
-                      className: j.Today,
-                      children: (0, y.we)("#Time_Today"),
+                      className: I.Today,
+                      children: (0, A.we)("#Time_Today"),
                     }),
                 ],
               }),
               (0, n.jsx)(i.Z, {
-                className: j.DayAppContainer,
+                className: I.DayAppContainer,
                 "flow-children": "column",
                 navEntryPreferPosition: a.iU.MAINTAIN_Y,
                 preferredFocus: s && !F,
-                ref: P,
+                ref: H,
                 onFocusWithin: () => M(!0),
                 children: (0, n.jsxs)(n.Fragment, {
                   children: [
                     E.slice(0, 2).map((e) =>
-                      (0, n.jsx)(H, { nAppID: e.nAppID }, e.nAppID),
+                      (0, n.jsx)(P, { nAppID: e.nAppID }, e.nAppID),
                     ),
                     k &&
                       (0, n.jsx)("div", {
-                        className: j.EmptyDay,
-                        children: (0, T.i)(
-                          (0, y.we)("#PersonalCalendar_EmptyDay"),
-                          (0, n.jsx)("a", { href: p }),
+                        className: I.EmptyDay,
+                        children: (0, D.i)(
+                          (0, A.we)("#PersonalCalendar_EmptyDay"),
+                          (0, n.jsx)("a", { href: m }),
                         ),
                       }),
                   ],
                 }),
               }),
               !G &&
-                D > 0 &&
+                T > 0 &&
                 (0, n.jsx)(l.Ii, {
-                  href: p,
-                  className: j.MoreGames,
-                  children: (0, y.we)("#PersonalCalendar_More", D),
+                  href: m,
+                  className: I.MoreGames,
+                  children: (0, A.we)("#PersonalCalendar_More", T),
                 }),
             ],
           })
         );
       }
-      function H(e) {
-        const r = (0, p.lv)({ appid: e.nAppID }),
-          t = (0, R.a4)(940),
-          [s, l] = _.useState(!1),
-          a = _.useRef(null),
-          o = (0, v.l)(r.data, t ? "main_capsule" : "hero_capsule"),
-          { data: c } = (0, I.lI)(),
+      function P(e) {
+        const r = (0, f.lv)({ appid: e.nAppID }),
+          t = (0, T.a4)(940),
+          [s, l] = g.useState(!1),
+          a = g.useRef(null),
+          o = (0, b.l)(r.data, t ? "main_capsule" : "hero_capsule"),
+          { data: c } = (0, N.lI)(),
           d = c?.preferences?.disable_microtrailers;
         return (
-          _.useEffect(() => {
+          g.useEffect(() => {
             if (
               (a.current.setAttribute(
                 "data-ds-appid",
@@ -1388,52 +1389,55 @@
               window.GDynamicStore.DecorateDynamicItems(e);
             }
           }, [e.nAppID, a]),
-          (0, n.jsx)(f.nn, {
+          (0, n.jsx)(_.nn, {
             feature: "personalcalendar-homepage",
             children: (0, n.jsx)(u.u, {
               id: { appid: e.nAppID },
-              hoverClassName: j.StoreAppHover,
+              hoverClassName: I.StoreAppHover,
               disableScreenshots: !0,
-              children: (0, n.jsxs)(i.Z, {
-                ref: a,
-                className: (0, C.A)(j.StoreAppCapsule, s && j.Hovered),
-                onMouseOver: () => l(!0),
-                onMouseOut: () => l(!1),
-                children: [
-                  (0, n.jsx)("img", { className: j.Image, src: o }),
-                  d &&
-                    s &&
-                    (0, n.jsx)(P, {
-                      id: { appid: e.nAppID },
-                      nIntervalMS: 1e3,
-                    }),
-                  !d &&
-                    (0, n.jsx)(h.mj, {
-                      id: { appid: e.nAppID },
-                      active: s,
-                      bIsHoverMode: !0,
-                    }),
-                ],
+              children: (0, n.jsx)(p.A, {
+                appID: e.nAppID,
+                children: (0, n.jsxs)(i.Z, {
+                  ref: a,
+                  className: (0, y.A)(I.StoreAppCapsule, s && I.Hovered),
+                  onMouseOver: () => l(!0),
+                  onMouseOut: () => l(!1),
+                  children: [
+                    (0, n.jsx)("img", { className: I.Image, src: o }),
+                    d &&
+                      s &&
+                      (0, n.jsx)(B, {
+                        id: { appid: e.nAppID },
+                        nIntervalMS: 1e3,
+                      }),
+                    !d &&
+                      (0, n.jsx)(h.mj, {
+                        id: { appid: e.nAppID },
+                        active: s,
+                        bIsHoverMode: !0,
+                      }),
+                  ],
+                }),
               }),
             }),
           })
         );
       }
-      function P(e) {
-        const r = (0, N.DT)(e.id),
-          [t, s] = _.useState(0);
+      function B(e) {
+        const r = (0, E.DT)(e.id),
+          [t, s] = g.useState(0);
         return (
-          (0, E.$$)(() => {
+          (0, R.$$)(() => {
             r.length > 0 && s((t + 1) % r.length);
           }, e.nIntervalMS),
           r?.length && -1 != t
             ? (0, n.jsx)("div", {
-                className: j.ScreenshotCycler,
+                className: I.ScreenshotCycler,
                 children: r.map((e, r) =>
                   (0, n.jsx)(
                     "img",
                     {
-                      className: (0, C.A)(j.Screenshot, r == t && j.Active),
+                      className: (0, y.A)(I.Screenshot, r == t && I.Active),
                       src:
                         d.TS.BASE_URL_SHARED_CDN +
                         "/store_item_assets/" +
@@ -1446,12 +1450,12 @@
             : null
         );
       }
-      function B() {
+      function W() {
         return c.iA.logged_in
-          ? (0, n.jsx)(w.K, {
+          ? (0, n.jsx)(x.K, {
               placeholderHeight: 390,
               rootMargin: "100% 0px 100% 0px",
-              children: (0, n.jsx)(F, {}),
+              children: (0, n.jsx)(M, {}),
             })
           : null;
       }
@@ -1459,7 +1463,7 @@
         (e[(e.Show = 0)] = "Show"),
           (e[(e.Only = 1)] = "Only"),
           (e[(e.Hide = 2)] = "Hide");
-      })(k || (k = {}));
+      })(F || (F = {}));
     },
   },
 ]);

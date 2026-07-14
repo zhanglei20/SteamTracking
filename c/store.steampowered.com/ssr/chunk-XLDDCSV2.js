@@ -30,7 +30,8 @@ function _(_) {
     _ = _();
   (_.className = (0, _.default)(_.className, "Panel", _ && "Focusable")),
     _(_, _);
-  let _ = _(_, _.ref);
+  let _ = _(_),
+    _ = _(_, _.ref, _);
   (_.focusable || _.focusableIfEmpty) &&
     (!_ || !_.Tree.BUseVirtualFocus()) &&
     (_.tabIndex = _.tabIndex || 0),

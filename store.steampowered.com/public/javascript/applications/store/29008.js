@@ -7497,50 +7497,66 @@
             }))),
           !t.resolved_items?.length && !t.frame_resolved_items?.length)
         ) {
-          const e = u == T.c9,
-            s = e
-              ? y.Z.Localize(
-                  "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
-                )
-              : y.Z.Localize(
-                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                ),
-            c = e
-              ? (0, r.jsx)(f.cP, {
+          let e = "",
+            s = null,
+            c = null;
+          return (
+            u == T.JR
+              ? ((e = y.Z.Localize(
+                  "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+                )),
+                (c = (0, r.jsx)(f.Nt, {
                   id: o,
-                  category: t.steamos_resolved_category,
+                  category: t.machine_resolved_category,
                   appName: i,
-                })
-              : (0, r.jsx)(f.UN, { category: t.resolved_category, appName: i }),
-            d = e ? C : p;
-          return (0, r.jsxs)(a.Z, {
-            autoFocus: l,
-            focusableIfEmpty: l,
-            noFocusRing: !0,
-            className: b().CompatibilityDetailsContainer,
-            ...m,
-            children: [
-              (0, r.jsxs)("div", {
-                id: n,
-                className: b().DialogHeader,
-                children: [
-                  (0, r.jsx)("div", {
-                    className: b().DialogTitle,
-                    children: s,
-                  }),
-                  (0, r.jsx)("div", {
-                    className: b().AppTitleCategory,
-                    children: (0, r.jsx)(f.Ez, {
-                      category: t.resolved_category,
+                })))
+              : u == T.c9
+                ? ((e = y.Z.Localize(
+                    "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (c = (0, r.jsx)(f.cP, {
+                    id: o,
+                    category: t.steamos_resolved_category,
+                    appName: i,
+                  })),
+                  (s = C))
+                : ((e = y.Z.Localize(
+                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (c = (0, r.jsx)(f.UN, {
+                    category: t.resolved_category,
+                    appName: i,
+                  })),
+                  (s = p)),
+            (0, r.jsxs)(a.Z, {
+              autoFocus: l,
+              focusableIfEmpty: l,
+              noFocusRing: !0,
+              className: b().CompatibilityDetailsContainer,
+              ...m,
+              children: [
+                (0, r.jsxs)("div", {
+                  id: n,
+                  className: b().DialogHeader,
+                  children: [
+                    (0, r.jsx)("div", {
+                      className: b().DialogTitle,
+                      children: e,
                     }),
-                  }),
-                ],
-              }),
-              c,
-              !1,
-              d,
-            ],
-          });
+                    (0, r.jsx)("div", {
+                      className: b().AppTitleCategory,
+                      children: (0, r.jsx)(f.Ez, {
+                        category: t.resolved_category,
+                      }),
+                    }),
+                  ],
+                }),
+                c,
+                s,
+                !1,
+              ],
+            })
+          );
         }
         const _ = (0, h.z5)(t.resolved_category),
           g = (0, h._R)(t.steamos_resolved_category),

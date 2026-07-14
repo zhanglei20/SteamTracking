@@ -440,7 +440,7 @@
         },
         _ = function (_) {
           const {
-              variant: _ = "default",
+              variant: _,
               size: _ = "2",
               minWidth: _ = "fit-content",
               disabled: _,
@@ -449,6 +449,7 @@
               navProps: _,
               ..._
             } = _,
+            _ = (0, _._)("Button", _),
             _ = _ ? _ : void 0,
             _ = (0, _._)(
               {
@@ -1061,7 +1062,8 @@
             ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
         const { ref: _, node: _ } = (0, _._)(_);
         (0, _._)(_, _);
-        const _ = (0, _._)(_, _.props?.ref);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _.props?.ref, _);
         return (0, _.jsx)(_._.Provider, {
           value: _,
           children: _.cloneElement(_, {

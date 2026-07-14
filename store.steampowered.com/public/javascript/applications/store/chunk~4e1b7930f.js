@@ -16510,7 +16510,7 @@
         );
       }
       function R(e) {
-        e && (window.clearTimeout(e.current), (e.current = null));
+        e.current && (window.clearTimeout(e.current), (e.current = null));
       }
       function C(e) {
         const {

@@ -607,6 +607,9 @@ function _(_, _) {
 function _(_, _) {
   return _(_, "vgp_onblur", _);
 }
+function _(_, _) {
+  return _(_, "vgp_requestfocus", _(_));
+}
 function _(_, _, _) {
   let _ = _;
   if (!_ || !_.ownerDocument || !_.ownerDocument.defaultView) return !0;
@@ -9548,6 +9551,33 @@ function _(_) {
   );
 }
 function _(_) {
+  let _ = _.useRef(null),
+    _ = _.useRef(null);
+  return (
+    _.useEffect(
+      () => () => {
+        _.current?.();
+      },
+      [],
+    ),
+    _.useCallback(
+      (_) => {
+        _.current !== _ &&
+          ((_.current = _),
+          _.current?.(),
+          (_.current = null),
+          _ &&
+            (_.current = _(_, (_) =>
+              !_ || _.GetFocusable() == "none"
+                ? !1
+                : _.BTakeFocus(void 0, _.detail.button),
+            )));
+      },
+      [_],
+    )
+  );
+}
+function _(_) {
   let {
       onButtonDown: _,
       onButtonUp: _,
@@ -9720,7 +9750,8 @@ function _(_, _, _, _, _) {
       ? (_.tabIndex = _.tabIndex || 0)
       : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
     _(_, _);
-  let _ = _(_, _),
+  let _ = _(_),
+    _ = _(_, _, _),
     _ = (0, _.useContext)(_)?.Component,
     _ = {
       ..._,
@@ -9972,6 +10003,7 @@ function _() {
   return _.default.useContext(_);
 }
 export {
+  _,
   _,
   _,
   _,

@@ -328,6 +328,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CategoriesMenuOption: "_2-cvnCNnFqBG5u89enudpK",
+        Label: "KldL9MJqWdVCahi3zvX-E",
+        HeaderCtn: "_3WNoErKGw4jngFeVPfTZfs",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DialogContent: "_16pXKCOoRIbFwtZHgqjB8K",
         SearchForm: "WKTuaTjd0YaeJa49cFaSk",
         AddCategoryBtnCtn: "_2iyGkBsDUSp94uk2MlLz1W",
@@ -700,13 +707,6 @@
         WishlistButton: "_3zsPA4_Sk0JUb1auieWgUJ",
         StarIcon: "t1LMouAzeAadJbWvMJbdH",
         ButtonIcon: "_1cugSsUJQZgGaT5y3eMrQo",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        CategoriesMenuOption: "_3xnfcAL3FecCAajGoP5Dby",
-        Label: "_1u14-I56YvpTValKAwSmtn",
-        HeaderCtn: "_3IDBSmGNBOIarHdK2hVHf9",
       };
     },
     chunkid: (module) => {

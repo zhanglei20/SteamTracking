@@ -657,19 +657,19 @@
         U = r(65843),
         F = r(30770),
         O = r.n(F),
-        D = r(45699),
-        q = r(76217),
-        W = r(83392),
-        Q = r(48474);
+        q = r(45699),
+        D = r(76217),
+        Q = r(83392),
+        W = r(48474);
       function P(e) {
         const { subject: t, onClose: r } = e,
           [i, a] = (0, j.useState)(E.PV),
           o = (0, l.lY)(t.subject_type, t.subject_group_id, t.subject_id),
           c = (0, j.useRef)(null);
-        return (0, n.jsxs)(q.Z, {
+        return (0, n.jsxs)(D.Z, {
           className: O().EscalateSubjectDialogCtn,
           children: [
-            (0, n.jsx)(q.Z, {
+            (0, n.jsx)(D.Z, {
               children: s.T.Localize("#moderation_escalation_description"),
             }),
             (0, n.jsxs)("select", {
@@ -696,16 +696,16 @@
             (0, n.jsx)("label", {
               children: s.T.Localize("#moderation_escalation_escalationnote"),
             }),
-            (0, n.jsx)(D.dO, { className: O().ReasonTextArea, ref: c }),
-            (0, n.jsxs)(W.s, {
+            (0, n.jsx)(q.dO, { className: O().ReasonTextArea, ref: c }),
+            (0, n.jsxs)(Q.s, {
               direction: "row",
               justify: "end",
               children: [
-                (0, n.jsx)(D.fu, {
+                (0, n.jsx)(q.fu, {
                   onClick: r,
                   children: U.u.Localize("#moderation_cancel"),
                 }),
-                (0, n.jsx)(Q.$, {
+                (0, n.jsx)(W.$, {
                   onClick: async () => {
                     var e;
                     const t =
@@ -766,7 +766,7 @@
                       };
                       return (0, i.Ur)(t)
                         ? (0, n.jsx)(
-                            D.Ii,
+                            q.Ii,
                             {
                               className: J().BlockListItem,
                               href: t.url,
@@ -775,7 +775,7 @@
                             t.url,
                           )
                         : (0, n.jsxs)(
-                            q.Z,
+                            D.Z,
                             {
                               onActivate: c,
                               className: J().BlockListItem,
@@ -1536,9 +1536,9 @@
                 },
               }),
             "main" === a &&
-              (0, n.jsxs)(q.Z, {
+              (0, n.jsxs)(D.Z, {
                 children: [
-                  (0, n.jsxs)(q.Z, {
+                  (0, n.jsxs)(D.Z, {
                     className: K().SanctionForm,
                     children: [
                       e.sanctionMutation.isError &&
@@ -1773,7 +1773,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsxs)(q.Z, {
+                  (0, n.jsxs)(D.Z, {
                     className: K().BottomButtons,
                     children: [
                       e.sanctionMutation.isPending &&
@@ -1837,7 +1837,7 @@
             (t.unresolved_report_count > 0 || t.unresolved_dispute_count > 0),
           o = (0, n.jsx)(ke.W, {
             onClick: () => i(!0),
-            children: (0, n.jsxs)(W.s, {
+            children: (0, n.jsxs)(Q.s, {
               direction: "row",
               justify: "between",
               align: "baseline",
@@ -2011,7 +2011,7 @@
                             children: [
                               (0, n.jsx)("button", {
                                 onClick: () => b("sanction"),
-                                children: (0, n.jsxs)(W.s, {
+                                children: (0, n.jsxs)(Q.s, {
                                   direction: "row",
                                   justify: "center",
                                   align: "center",
@@ -2029,7 +2029,7 @@
                                 onClose: h,
                               }),
                               (0, n.jsx)(Ee, { ...e, subject: l, onClose: h }),
-                              (0, n.jsx)(D.fu, {
+                              (0, n.jsx)(q.fu, {
                                 disabled: !e.subject,
                                 onClick: () => b("escalate"),
                                 children: s.T.Localize(
@@ -2121,11 +2121,11 @@
                 }),
               ],
             }),
-            (0, n.jsxs)(W.s, {
+            (0, n.jsxs)(Q.s, {
               justify: "between",
               direction: "row",
               children: [
-                (0, n.jsx)(D.fu, {
+                (0, n.jsx)(q.fu, {
                   onClick: async () => {
                     await c.mutateAsync(), r();
                   },
@@ -2133,7 +2133,7 @@
                     "#moderation_editownerdisputedetails_save",
                   ),
                 }),
-                (0, n.jsx)(Q.$, {
+                (0, n.jsx)(W.$, {
                   onClick: r,
                   loading: c.isPending,
                   children: s.T.Localize("#moderation_ownerdispute_cancel"),
@@ -2147,7 +2147,7 @@
         const { authorSteamId: t, subject: r, onClose: i } = e,
           [a, o] = (0, j.useState)(""),
           c = (0, l.y4)(t, r.subject_type, r.subject_group_id, r.subject_id, a);
-        return (0, n.jsxs)(q.Z, {
+        return (0, n.jsxs)(D.Z, {
           className: ye().OwnerDisputeCtn,
           children: [
             (0, n.jsx)("div", {
@@ -2164,17 +2164,17 @@
                 }),
               ],
             }),
-            (0, n.jsxs)(W.s, {
+            (0, n.jsxs)(Q.s, {
               justify: "between",
               direction: "row",
               children: [
-                (0, n.jsx)(D.fu, {
+                (0, n.jsx)(q.fu, {
                   onClick: async () => {
                     await c.mutateAsync(), i();
                   },
                   children: s.T.Localize("#moderation_ownerdispute_dispute"),
                 }),
-                (0, n.jsx)(D.fu, {
+                (0, n.jsx)(q.fu, {
                   onClick: i,
                   children: s.T.Localize("#moderation_ownerdispute_cancel"),
                 }),
@@ -2193,7 +2193,7 @@
             await t.mutateAsync(void 0), r();
           },
           disabled: !a,
-          children: (0, n.jsxs)(W.s, {
+          children: (0, n.jsxs)(Q.s, {
             direction: "row",
             justify: "center",
             align: "center",
@@ -2578,7 +2578,11 @@
               throw new Error(`Failed to escalate subject: ${c.GetEMsg()}`);
           },
           onSuccess: async (n, s) => {
-            await m(u, e, t, r);
+            await Promise.all([
+              m(u, e, t, r),
+              u.invalidateQueries({ queryKey: ["get_claimed"] }),
+              u.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+            ]);
           },
         });
       }

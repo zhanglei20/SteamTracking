@@ -6638,7 +6638,11 @@
               throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);
           },
           onSuccess: async (r, a) => {
-            await u(m, e, t, i);
+            await Promise.all([
+              u(m, e, t, i),
+              m.invalidateQueries({ queryKey: ["get_claimed"] }),
+              m.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+            ]);
           },
         });
       }

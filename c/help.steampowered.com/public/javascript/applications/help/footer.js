@@ -372,7 +372,8 @@
             ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
         const { ref: _, node: _ } = (0, _._)(_);
         (0, _._)(_, _);
-        const _ = (0, _._)(_, _.props?.ref);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _.props?.ref, _);
         return (0, _.jsx)(_._.Provider, {
           value: _,
           children: _.cloneElement(_, {
@@ -1174,7 +1175,7 @@
         },
         _ = function (_) {
           const {
-              variant: _ = "default",
+              variant: _,
               size: _ = "2",
               minWidth: _ = "fit-content",
               disabled: _,
@@ -1187,7 +1188,7 @@
               {
                 onClick: _ ? _ : void 0,
                 ..._,
-                variant: _,
+                variant: (0, _._)("Button", _),
                 size: _,
                 minWidth: _,
                 className: _()(_.Button, _ && _.Icon, _()),

@@ -61,14 +61,14 @@
     },
     chunkid: (module) => {
       module.exports = {
-        MenuBackgroundReflection: "_1vclHrINn0CO_nGkxoDkKy",
+        EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
+        EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
+        ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
-        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
-        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
+        MenuBackgroundReflection: "_1vclHrINn0CO_nGkxoDkKy",
       };
     },
     chunkid: (module) => {
@@ -1623,9 +1623,9 @@
                   })(_.sRGBHex);
                 _(_), __webpack_require__(_);
               } catch (_) {
-                console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+                console.warn(_._.Localize("#Sale_EyeDropperFailed"), _);
               }
-            else alert((0, _._)("#Sale_EyeDropperError"));
+            else alert(_._.Localize("#Sale_EyeDropperError"));
           }, [_]);
         return (0, _.jsxs)("div", {
           children: [
@@ -1647,7 +1647,7 @@
             (0, _.jsx)("div", {
               className: _().EyeDropperCtn,
               children: (0, _.jsx)(_._, {
-                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                toolTipContent: _._.Localize("#Sale_BackgroundColorPicker"),
                 children: (0, _.jsx)(_._, {
                   className: _().EyeDropperBtn,
                   onClick: _,
