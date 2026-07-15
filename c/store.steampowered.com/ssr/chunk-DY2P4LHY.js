@@ -9271,7 +9271,6 @@ var _ = "S0ymvFQzg-k-";
 var _ = "xlAKnJ50oYQ-";
 var _ = "BQNre5l--Q8-";
 var _ = "DUS6KmDUKhc-";
-var _ = "ybxDpr9Ta6A-";
 var _ = "yrG419d95pU-";
 var _ = "mOoPKvox-wE-";
 var _ = "_7zQ9up20PmA-";
@@ -10013,7 +10012,6 @@ function _(_) {
   return (0, _.default)(_, _);
 }
 var _ = _(_(), 1);
-var _ = _(_(), 1);
 function _(_) {
   let { appid: _ } = _,
     { data: _ } = _({
@@ -10021,16 +10019,15 @@ function _(_) {
     }),
     _ = _(),
     _ = _[_] === _.k_EWishlistSort_ReleaseDate,
-    _ = _?.is_coming_soon || _,
-    _ = !_?.is_coming_soon;
+    _ = _?.is_coming_soon || _;
   return (0, _.jsxs)("div", {
-    className: (0, _.default)(_, _ && _ && _),
+    className: _,
     children: [
       _ &&
         (0, _.jsx)(_, {
           appid: _,
         }),
-      _ &&
+      !_?.is_coming_soon &&
         (0, _.jsx)(_, {
           appid: _,
         }),
@@ -10038,8 +10035,7 @@ function _(_) {
   });
 }
 function _() {
-  return (0, _.jsxs)(_, {
-    gap: "1",
+  return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)("div", {
         className: _,
@@ -10069,8 +10065,7 @@ function _(_) {
     let _ = _.Localize(`#Language_${_.LANGUAGE}`);
     _ = _.Localize("#wishlist_item_languagespecific_reviews", _);
   } else _ = _.Localize("#wishlist_item_overallreviews");
-  return (0, _.jsxs)(_, {
-    gap: "1",
+  return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)("div", {
         className: _,
@@ -10093,8 +10088,7 @@ function _(_) {
     _ = _(_);
   return !_ || !_
     ? (0, _.jsx)(_, {})
-    : (0, _.jsxs)(_, {
-        gap: "1",
+    : (0, _.jsxs)(_.Fragment, {
         children: [
           (0, _.jsx)("div", {
             className: _,
