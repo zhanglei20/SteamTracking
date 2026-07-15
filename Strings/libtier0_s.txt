@@ -47,7 +47,7 @@ $ORIGIN
 %s: %d, %d, %d
 %s: '%s', '%s'
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%s: no such process %d\n
+%s: no such process %d - %d\n
 ( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
 ( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 (%zu) Descend: %s, (%s), %s\n
@@ -59,7 +59,6 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGiK
 ++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
@@ -114,8 +113,8 @@ $ORIGIN
 0123456789ABCDEF
 11CTrackItems
 12CStdMemAlloc
-15:41:52
 16CAdHocValidation
+22:52:12
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -1109,6 +1108,7 @@ short
 sigaction
 sigaddset
 sigemptyset
+siginfo.si_pid == dwProcessId
 signed char
 sigprocmask
 sizeof

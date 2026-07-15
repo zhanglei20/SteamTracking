@@ -636,7 +636,7 @@ $ffn
 %s: (%d bit)\n
 %s: BScaleImageYUV returned false\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%s: no such process %d\n
+%s: no such process %d - %d\n
 %s:%d: OpenSSL internal error: %s\n
 %s://%s/%s%s
 %s:443
@@ -1215,9 +1215,10 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;vt
+++CCUNG`~t
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{ut
 +2Hp
 +HpXhE
 +QQ 3K%
@@ -2088,7 +2089,6 @@ $ffn
 1536
 15000
 155.133.240.0/23
-15:41:50
 15CAudioResampler
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -2243,6 +2243,7 @@ $ffn
 21CUtlCStringConversion
 21UserSystemInformation
 21VideoRepresentation_t
+22:52:10
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2440,11 +2441,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
+60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -6275,7 +6276,6 @@ HttpClientConnection (%p) now initiating TCP connection through %X \n
 Hung transaction cancelled
 Hungarian
 Hw~J
-HywG
 H{1S
 I(fQ
 I/O Operation Failed
@@ -18929,6 +18929,7 @@ sigaction
 sigaddset
 sigalgs
 sigemptyset
+siginfo.si_pid == dwProcessId
 signal
 signature
 signature algorithms error

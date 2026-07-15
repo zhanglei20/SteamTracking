@@ -74,7 +74,7 @@ $\nY8O
 %s not implemented
 %s/.steam/steam
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%s: no such process %d\n
+%s: no such process %d - %d\n
 &AElig;
 &Aacute;
 &Acirc;
@@ -279,14 +279,14 @@ $\nY8O
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 12CStdMemAlloc
-15:41:50
-15:41:52
 16CAdHocValidation
 16CKeyValuesSystem
 16IKeyValuesSystem
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
+22:52:10
+22:52:11
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
@@ -1166,6 +1166,7 @@ short
 sigaction
 sigaddset
 sigemptyset
+siginfo.si_pid == dwProcessId
 signed char
 sigprocmask
 size < INT_MAX

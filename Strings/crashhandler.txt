@@ -121,7 +121,7 @@ $ORIGIN
 %s: insufficient permissions - delete and recreate\n
 %s: is not a directory - delete and recreate.\n
 %s: is not owned by us - delete and recreate.\n
-%s: no such process %d\n
+%s: no such process %d - %d\n
 %s_%d%.2d%.2d%.2d%.2d%.2d_%d
 &AElig;
 &Aacute;
@@ -243,8 +243,6 @@ $ORIGIN
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG5
-++CCUNGZ
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
@@ -361,7 +359,6 @@ $ORIGIN
 13CCrashHandler
 13ICrashHandler
 14CUtlLinkedListI10CUtlStringiE
-15:41:50
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
@@ -373,6 +370,7 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+22:52:10
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -1368,6 +1366,7 @@ short
 sigaction
 sigaddset
 sigemptyset
+siginfo.si_pid == dwProcessId
 signal
 signed char
 sigprocmask

@@ -750,7 +750,7 @@ $ffn
 %s: lseek %s: %s\n
 %s: lseek start failed: %s\n
 %s: mkstemp %s: errno %s\n
-%s: no such process %d\n
+%s: no such process %d - %d\n
 %s: pending command too large, truncating
 %s: re-launching steam in SteamRT runtime\n
 %s: read failed: %s\n
@@ -1361,9 +1361,10 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;g|
+++CCUNG`o|
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{f|
 +2Hp
 +HpXhE
 +QQ 3K%
@@ -1989,11 +1990,8 @@ $ffn
 0 Umv
 00000000
 00003333
-01/01/00
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-0123456789.
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2310,7 +2308,6 @@ $ffn
 11IFileSystem
 11M|
 12 Mbps
-123456789
 127.0.0.1
 128 Kbps
 128K
@@ -2388,11 +2385,10 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
+172.16
 1536
 15000
 155.133.240.0/23
-15:41:50
-15:41:55
 15CBaseFileSystem
 15CChatMemberInfo
 15CEC25519KeyBase
@@ -2420,7 +2416,6 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
-172.16
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2444,7 +2439,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18446744073709551615
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2551,6 +2545,8 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:52:10
+22:52:17
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2739,7 +2735,6 @@ $ffn
 50UserContentDescriptorPreferences_ContentDescriptor
 512 Kbps
 512K
-524288
 52F*
 55Ly
 55j_WW
@@ -2762,12 +2757,20 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
 64CK\vH
+8000
+8192
 65536
+524288
+60000000
+0123456789.
+0123456789
+123456789
+18446744073709551615
 666666666666666666666666666666666666666666666666
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
 6ConVar
@@ -2818,8 +2821,6 @@ $ffn
 8.K%G
 8/A0
 80 Mbps
-8000
-8192
 82\n:XPH
 83L3
 83N6
@@ -9279,7 +9280,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 14 2026 15:41:55
+Startup - updater built Jul 14 2026 22:52:17
 State
 StaticFileWriterThread()
 Steam
@@ -18748,6 +18749,7 @@ sigaction
 sigaddset
 sigalgs
 sigemptyset
+siginfo.si_pid == dwProcessId
 signal
 signature
 signature algorithms error
