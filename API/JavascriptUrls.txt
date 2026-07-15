@@ -263,7 +263,6 @@ ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
 ${COMMUNITY_BASE_URL}groups/community_market/discussions/
-${COMMUNITY_BASE_URL}groups/steamworks/discussions
 ${COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
@@ -938,23 +937,13 @@ ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/appsearch/suggestapps?json=1&apptype=1&term=${}
 ${PARTNER_BASE_URL}/contentdescriptors/editsurvey/${}
 ${PARTNER_BASE_URL}/dashboard/?requestedPrimaryPublisher=${}
-${PARTNER_BASE_URL}/doc/
-${PARTNER_BASE_URL}/doc/features
-${PARTNER_BASE_URL}/doc/features/steamvr/info
-${PARTNER_BASE_URL}/doc/finance
-${PARTNER_BASE_URL}/doc/gettingstarted
-${PARTNER_BASE_URL}/doc/marketing
 ${PARTNER_BASE_URL}/doc/marketing/event_tools/stats
-${PARTNER_BASE_URL}/doc/sdk
-${PARTNER_BASE_URL}/doc/store
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails
 ${PARTNER_BASE_URL}/optin/ajaxadminpreprunesearch
 ${PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
-${PARTNER_BASE_URL}/pccafe
-${PARTNER_BASE_URL}/vrlicensing
 ${PARTNER_BASE_URL}actions/ajaxgetadminusers
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
@@ -1069,7 +1058,6 @@ ${PARTNER_BASE_URL}doc/store/manageeditions
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
-${PARTNER_BASE_URL}doc/store/pricing/currencies
 ${PARTNER_BASE_URL}doc/store/promo/${}_page
 ${PARTNER_BASE_URL}doc/store/promo/itemdrops
 ${PARTNER_BASE_URL}doc/store/promo/itemdrops#event
@@ -1163,7 +1151,6 @@ ${PARTNER_BASE_URL}partnerevents/ajaxsetprivatedata
 ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
-${PARTNER_BASE_URL}pricing/dashboard
 ${PARTNER_BASE_URL}pricing/dashboard/?pn=${}
 ${PARTNER_BASE_URL}pricing/explorer
 ${PARTNER_BASE_URL}promotion${}
@@ -1543,12 +1530,8 @@ ${STORE_BASE_URL}news/app/${appid}?emclan=${}&emgid=${GID}
 ${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
-${STORE_BASE_URL}news/app/1675200
-${STORE_BASE_URL}news/app/250820
-${STORE_BASE_URL}news/app/593110
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
-${STORE_BASE_URL}news/group/4145017
 ${STORE_BASE_URL}news/group/4145017/view/4578559379959234050
 ${STORE_BASE_URL}news/sale/${}
 ${STORE_BASE_URL}newshub/${appid ? _ : _}/view/${GID}
@@ -2192,7 +2175,6 @@ https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jp
 https://beian.miit.gov.cn
 https://blog.counter-strike.net/
 https://bouncinglogo.steamscreensavers.host/index.html
-https://bsky.app/profile/partner.steamgames.com
 https://bsky.app/profile/steampowered.com
 https://calendar.google.com/calendar/render?action=TEMPLATE
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.mp4
@@ -3054,7 +3036,6 @@ https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
 https://twitter.com/Steam
-https://twitter.com/Steamworks
 https://twitter.com/dota2ti
 https://twitter.com/intent/tweet/?
 https://twitter.com/steam
@@ -3138,7 +3119,6 @@ https://www.youtube.com/@Steam
 https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
 https://www.youtube.com/iframe_api
-https://www.youtube.com/user/SteamworksDev
 https://www.youtube.com/user/dota2
 https://www.youtube.com/watch?v=
 https://www.youtube.com/watch?v=${strVideoID}
