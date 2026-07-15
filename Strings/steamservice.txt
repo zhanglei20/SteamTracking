@@ -632,7 +632,7 @@ $ffn
 %s: '%s', '%s'
 %s: (%d bit)\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%s: no such process %d\n
+%s: no such process %d - %d\n
 %s:%d: OpenSSL internal error: %s\n
 %s://%s/%s%s
 %s:443
@@ -939,7 +939,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1@K5
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1211,9 +1210,10 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;pm
+++CCUNG`xm
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{om
 +2Hp
 +HpXhE
 +QQ 3K%
@@ -1678,8 +1678,11 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00000000
+0123456789.
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -1730,9 +1733,6 @@ $ffn
 1000
 1024
 10000
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CIPCServer
 10CNetFilter
 10CPipeEvent
@@ -2078,7 +2078,6 @@ $ffn
 1536
 15000
 155.133.240.0/23
-15:41:50
 15CEC25519KeyBase
 15CJobPromiseBase
 15CMetricsFactory
@@ -2230,6 +2229,7 @@ $ffn
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
 21UserSystemInformation
+22:52:10
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2422,11 +2422,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+60000000
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
-60000000
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2539,7 +2539,6 @@ $ffn
 :':+:1:K:Q:[:c:g:m:y:
 :.JlN
 :5ptI.T(
-:7A0
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -2559,6 +2558,7 @@ $ffn
 :scheme
 :statu
 :status
+:wA0
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -17047,6 +17047,7 @@ rv > 0 && rv <= nSendLen
 s ap traffic
 s hs traffic
 s(Fdi
+s(WE1
 s-maxage
 s1 != NULL
 s11bS
@@ -17436,6 +17437,7 @@ sigaction
 sigaddset
 sigalgs
 sigemptyset
+siginfo.si_pid == dwProcessId
 signal
 signature
 signature algorithms error

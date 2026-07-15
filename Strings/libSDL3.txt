@@ -2123,7 +2123,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1128-gcf6a235a4
+SDL-release-3.4.0-1163-g2d7f30078
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -3078,6 +3078,7 @@ SDL_GetNumJoystickBalls
 SDL_GetNumJoystickButtons
 SDL_GetNumJoystickHats
 SDL_GetNumLogicalCPUCores
+SDL_GetNumProperties
 SDL_GetNumRenderDrivers
 SDL_GetNumVideoDrivers
 SDL_GetNumberProperty
