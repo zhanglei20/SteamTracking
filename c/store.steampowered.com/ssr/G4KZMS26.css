@@ -29382,19 +29382,19 @@ html.responsive.touch .WrZdqiILDmU- form {
   html.responsive .LSY1zV2DJSM-:not(.XNnjz6jit-E-) {
     padding-block: 8px;
     grid-template-columns: fit-content(0) 220px auto;
-    grid-template-rows: 32px 24px 40px 42px;
+    grid-template-rows: 32px 26px 38px 42px;
     grid-template-areas: "dragger capsule title" "dragger capsule mid" "dragger capsule lower" "dragger remove purchase";
   }
 }
 html.responsive.GamepadMode .LSY1zV2DJSM-:not(.XNnjz6jit-E-) {
   grid-template-columns: fit-content(0) 288px 1fr auto;
-  grid-template-rows: 32px 24px 40px auto;
+  grid-template-rows: 32px 26px 38px auto;
   grid-template-areas: "dragger capsule title title" "dragger capsule mid mid" "dragger capsule tags tags" "dragger capsule lower purchase";
 }
 @media screen and (max-width: 910px) {
   .LSY1zV2DJSM-:not(.XNnjz6jit-E-) {
     grid-template-columns: fit-content(0) 288px 1fr auto;
-    grid-template-rows: 32px 24px 40px auto;
+    grid-template-rows: 32px 26px 38px auto;
     grid-template-areas: "dragger capsule title title" "dragger capsule mid mid" "dragger capsule tags tags" "dragger capsule lower purchase";
   }
 }
@@ -29560,6 +29560,7 @@ html.responsive.GamepadMode .LSY1zV2DJSM-:not(.XNnjz6jit-E-) {
   gap: 8px;
   align-items: center;
   min-width: 0;
+  overflow: hidden;
 }
 .XNnjz6jit-E- .S0ymvFQzg-k- {
   display: none;
@@ -29570,12 +29571,6 @@ html.responsive.GamepadMode .S0ymvFQzg-k- {
 @media screen and (max-width: 910px) {
   .S0ymvFQzg-k- {
     grid-area: tags;
-  }
-}
-@media screen and (max-width: 500px) {
-  html.responsive.responsive .S0ymvFQzg-k- {
-    overflow-x: scroll;
-    scrollbar-width: none;
   }
 }
 .xlAKnJ50oYQ- {
@@ -29592,10 +29587,15 @@ html.responsive.GamepadMode .S0ymvFQzg-k- {
 .DUS6KmDUKhc- {
   flex: 1;
   display: flex;
-  gap: 5px;
+  gap: 15px;
   text-transform: uppercase;
   white-space: nowrap;
   font-size: 11px;
+}
+@media screen and (max-width: 910px) {
+  html.responsive .DUS6KmDUKhc- {
+    gap: 8px;
+  }
 }
 @media screen and (max-width: 910px) {
   html.responsive .XNnjz6jit-E- .DUS6KmDUKhc- {
@@ -29606,6 +29606,11 @@ html.responsive.GamepadMode .S0ymvFQzg-k- {
 }
 @media screen and (max-width: 500px) {
   html.responsive.responsive .XNnjz6jit-E- .DUS6KmDUKhc- {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  html.responsive.responsive .DUS6KmDUKhc-.ybxDpr9Ta6A- .yrG419d95pU- {
     display: none;
   }
 }
