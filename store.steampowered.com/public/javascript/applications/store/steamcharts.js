@@ -1630,7 +1630,7 @@
             if (a >= 0 && void 0 !== t) {
               const n = e[a],
                 r = n.tabs?.findIndex((e) => e.unique_id === t);
-              if (r && r >= 0 && n.tabs)
+              if (void 0 !== r && r >= 0 && n.tabs)
                 return {
                   selectedTabBackgroundDef: n.tabs[r].tab_background_img_groups,
                   nTabSaleSectionIndex: a,
@@ -1663,7 +1663,9 @@
                 sectionUniqueIDs: i,
                 nSaleSectionLastIndex: l - 1,
                 nUniqueIDNextSaleSection:
-                  l < t.length && (!d || l < d) ? t[l].unique_id : void 0,
+                  l < t.length && (void 0 === d || l < d)
+                    ? t[l].unique_id
+                    : void 0,
               });
               if (o + 1 == u && e.last_group_until_cover_section_until_end)
                 for (
@@ -1676,7 +1678,7 @@
                   r.set(n, a.background_id);
                 }
             }),
-            l < t.length && (!d || l < d) && (o = t[l].unique_id),
+            l < t.length && (void 0 === d || l < d) && (o = t[l].unique_id),
             c?.enabled && void 0 !== d)
           ) {
             let e = d;
@@ -1704,10 +1706,10 @@
                     u < t.length ? t[u].unique_id : void 0,
                 });
                 if (l + 1 == o && c.last_group_until_cover_section_until_end)
-                  for (let a = e; a < t.length; ++a) {
-                    if ("tabs" == t[a].section_type && c?.enabled) break;
-                    const e = t[a].unique_id;
-                    r.set(e, i.background_id);
+                  for (let n = e; n < t.length; ++n) {
+                    const e = t[n];
+                    if ("tabs" == e.section_type && c?.enabled) break;
+                    (0, ie.bF)(a, e) && r.set(e.unique_id, i.background_id);
                   }
               });
               e < t.length && !(0, ie.bF)(a, t[e]);
@@ -4893,11 +4895,11 @@
           className: We().CtnEditor,
           children: (0, n.jsx)(Ae.$n, {
             onClick: (e) =>
-              a && a >= 0
+              void 0 !== a && a >= 0
                 ? t?.AddTabBackgroundGroup(a)
                 : t?.AddSalePageBackgroundGroup(),
             children: (0, O.we)(
-              a && a >= 0
+              void 0 !== a && a >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
@@ -5000,20 +5002,24 @@
           };
         }, [a, e]);
         const s = (0, u.q3)(() => {
-            const e = t.selectedTabBackgroundDef?.groups?.[0].background_id,
-              a = t.mapGroupToSections.get(e);
-            return le.get(a?.nBackgroundGroupID);
+            const e = t.selectedTabBackgroundDef?.groups?.[0].background_id;
+            if (e) {
+              const a = t.mapGroupToSections.get(e);
+              if (a) return le.get(a?.nBackgroundGroupID) ?? 0;
+            }
+            return 0;
           }),
           [o, i] = (0, m.useState)(null),
           l = m.useCallback((e, t) => {
             i(t);
           }, []),
-          c = (0, se.w6)(l);
+          c = (0, se.w6)(l),
+          d = Boolean(s >= 0 && o && o > s);
         return (0, n.jsxs)("div", {
           className: (0, C.A)(We().CtnEditor, Pa().TabCtn),
           ref: c,
           children: [
-            Boolean(s && o && o > s) &&
+            d &&
               (0, n.jsx)(Ae.$n, {
                 onClick: (e) => r(!0),
                 children: (0, O.we)("#BackgroundGroups_EditBackgroundGroup"),
@@ -5041,7 +5047,21 @@
               label: (0, O.we)("#BackgroundGroups_TaSetting"),
               checked: l,
               onChange: (e) => {
-                o(t.SetTabEnabled(r, e));
+                if (
+                  ((0, Ie.wT)(t, "edit model mising"),
+                  (0, Ie.wT)(void 0 !== r, "tab setting missing"),
+                  void 0 !== r && t)
+                ) {
+                  const a = t.SetTabEnabled(r, e);
+                  (0, Ie.wT)(
+                    !!a,
+                    `Failed to create model TabID ${r}backgroundModel`,
+                  ),
+                    o(a);
+                } else
+                  console.error(
+                    `Failed to enable table group, edit mode: ${!!t}, TabID: ${r}.`,
+                  );
               },
             }),
             Boolean(l) &&

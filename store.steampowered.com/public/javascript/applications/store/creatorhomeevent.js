@@ -999,9 +999,9 @@
           };
         })(e, void 0);
       }
-      var y = t(23809);
-      function T(e) {
-        (0, C.jE)(), (0, y.KV)();
+      var T = t(23809);
+      function y(e) {
+        (0, C.jE)(), (0, T.KV)();
         return (0, E.I)(
           (function (e) {
             return {
@@ -1020,7 +1020,7 @@
         M = t.n(N);
       function U(e) {
         const { eventModel: n } = e,
-          { data: t } = T(n.clanSteamID.GetAccountID());
+          { data: t } = y(n.clanSteamID.GetAccountID());
         if (
           !t ||
           (!t.can_edit && !t.support_user) ||
@@ -1202,7 +1202,7 @@
             if (t >= 0 && void 0 !== n) {
               const a = e[t],
                 o = a.tabs?.findIndex((e) => e.unique_id === n);
-              if (o && o >= 0 && a.tabs)
+              if (void 0 !== o && o >= 0 && a.tabs)
                 return {
                   selectedTabBackgroundDef: a.tabs[o].tab_background_img_groups,
                   nTabSaleSectionIndex: t,
@@ -1235,7 +1235,9 @@
                 sectionUniqueIDs: s,
                 nSaleSectionLastIndex: l - 1,
                 nUniqueIDNextSaleSection:
-                  l < n.length && (!d || l < d) ? n[l].unique_id : void 0,
+                  l < n.length && (void 0 === d || l < d)
+                    ? n[l].unique_id
+                    : void 0,
               });
               if (i + 1 == g && e.last_group_until_cover_section_until_end)
                 for (
@@ -1248,7 +1250,7 @@
                   o.set(a, t.background_id);
                 }
             }),
-            l < n.length && (!d || l < d) && (i = n[l].unique_id),
+            l < n.length && (void 0 === d || l < d) && (i = n[l].unique_id),
             c?.enabled && void 0 !== d)
           ) {
             let e = d;
@@ -1276,10 +1278,10 @@
                     g < n.length ? n[g].unique_id : void 0,
                 });
                 if (l + 1 == i && c.last_group_until_cover_section_until_end)
-                  for (let t = e; t < n.length; ++t) {
-                    if ("tabs" == n[t].section_type && c?.enabled) break;
-                    const e = n[t].unique_id;
-                    o.set(e, s.background_id);
+                  for (let a = e; a < n.length; ++a) {
+                    const e = n[a];
+                    if ("tabs" == e.section_type && c?.enabled) break;
+                    (0, se.bF)(t, e) && o.set(e.unique_id, s.background_id);
                   }
               });
               e < n.length && !(0, se.bF)(t, n[e]);
@@ -1480,8 +1482,8 @@
         De = t(96236),
         Ae = t(64846),
         Ge = t(56283),
-        ye = t(74568),
-        Te = t(738),
+        Te = t(74568),
+        ye = t(738),
         Le = t(48479),
         Be = t(30294),
         Ne = t(6379),
@@ -1689,8 +1691,8 @@
                           " file=" +
                           r.name,
                       ),
-                      (0, Te.pg)(
-                        (0, a.jsx)(ye.KG, {
+                      (0, ye.pg)(
+                        (0, a.jsx)(Te.KG, {
                           strDescription: (0, O.we)(
                             "#ImagePicker_Error",
                             r.name,
@@ -1704,8 +1706,8 @@
                     "ImageUploaderPanel.OnDropFiles: " + n.strErrorMsg,
                     n,
                   ),
-                    (0, Te.pg)(
-                      (0, a.jsx)(ye.KG, {
+                    (0, ye.pg)(
+                      (0, a.jsx)(Te.KG, {
                         strDescription: (0, O.we)(
                           "#EventError_Code",
                           n.strErrorMsg ?? "",
@@ -1930,7 +1932,7 @@
                           forceResolution: e.forceResolution,
                           fileType: e.forceFileType || $e.bg.dU,
                         });
-                      (0, Te.HT)(o, t, "CropModal", {
+                      (0, ye.HT)(o, t, "CropModal", {
                         strTitle: (0, O.we)("#ImageUpload_CropModalTitle"),
                       });
                     } else
@@ -1951,7 +1953,7 @@
           ? (0, a.jsxs)("div", {
               className: cn().PreviewImgCtn,
               onClick: (e) =>
-                (0, Te.pg)((0, a.jsx)(_n, { asset: n }), (0, Fe.uX)(e)),
+                (0, ye.pg)((0, a.jsx)(_n, { asset: n }), (0, Fe.uX)(e)),
               children: [
                 (0, a.jsxs)("span", {
                   className: cn().PreviewImgInfo,
@@ -1978,7 +1980,7 @@
       }
       function _n(e) {
         const { asset: n, closeModal: t } = e;
-        return (0, a.jsx)(ye.o0, {
+        return (0, a.jsx)(Te.o0, {
           bAlertDialog: !0,
           closeModal: t,
           bAllowFullSize: !0,
@@ -2103,8 +2105,8 @@
           d = () => o(n, hn.k_eInsertFullImage),
           g = (e) => {
             console.log("ClanImageWrapper on delete error: " + e),
-              (0, Te.pg)(
-                (0, a.jsx)(ye.KG, {
+              (0, ye.pg)(
+                (0, a.jsx)(Te.KG, {
                   strTitle: (0, O.we)("#Error_FailureNotice"),
                   strDescription: (0, O.we)("#EventDisplay_DeleteEvent_Error"),
                   children: (0, a.jsx)("p", { children: e }),
@@ -2200,8 +2202,8 @@
                 (0, a.jsx)("span", {
                   className: jn().Delete,
                   onClick: (e) => {
-                    (0, Te.pg)(
-                      (0, a.jsx)(ye.o0, {
+                    (0, ye.pg)(
+                      (0, a.jsx)(Te.o0, {
                         strTitle: (0, O.we)("#ImagePicker_DeleteImageTitle"),
                         strDescription: "",
                         onOK: m,
@@ -2276,7 +2278,7 @@
             [o, t],
           ),
           [i, s] = u.useState("");
-        return (0, a.jsxs)(ye.o0, {
+        return (0, a.jsxs)(Te.o0, {
           strTitle: (0, O.we)("#ImagePicker_Images"),
           strDescription: (0, O.we)("#ImagePicker_DoubleClickToSelect"),
           bAlertDialog: !0,
@@ -2315,7 +2317,7 @@
               id: "clanimagedialog",
               type: "button",
               onClick: (e) => {
-                (0, Te.pg)(
+                (0, ye.pg)(
                   (0, a.jsx)(An, { clanSteamID: n, OnClanImageSelected: t }),
                   (0, Fe.uX)(e) ?? window,
                 );
@@ -2324,7 +2326,7 @@
           ],
         });
       }
-      function yn(e) {
+      function Tn(e) {
         const {
             clanSteamID: n,
             rgSupportArtwork: t,
@@ -2348,8 +2350,8 @@
                 } catch (e) {
                   let n = (0, Qe.H)(e);
                   console.error("AddExistingClanImage: " + n.strErrorMsg, n),
-                    (0, Te.pg)(
-                      (0, a.jsx)(ye.KG, {
+                    (0, ye.pg)(
+                      (0, a.jsx)(Te.KG, {
                         strDescription: (0, O.we)(
                           "#EventError_Code",
                           n.strErrorMsg ?? "",
@@ -2413,7 +2415,7 @@
           },
         });
       }
-      var Tn = t(34629),
+      var yn = t(34629),
         Ln = t(14947),
         Bn = t(73744),
         Nn = t(55263),
@@ -2434,7 +2436,7 @@
           m = (0, g.q3)(() =>
             de.zU.GenerateURLFromHashAndExt(d, de.zU.GetHashAndExt(n) ?? ""),
           );
-        return (0, a.jsx)(ye.o0, {
+        return (0, a.jsx)(Te.o0, {
           strTitle: (0, O.we)("#selectimage_change_artwork_lang_title"),
           strDescription: (0, O.we)("#selectimage_change_artworl_lang_desc"),
           onOK: () => r?.(n, o, l),
@@ -2532,9 +2534,9 @@
                   }),
                 ],
               }),
-            (0, a.jsx)(ye.EN, {
+            (0, a.jsx)(Te.EN, {
               active: l,
-              children: (0, a.jsx)(ye.o0, {
+              children: (0, a.jsx)(Te.o0, {
                 strTitle: (0, O.we)("#Dialog_AreYouSure"),
                 strDescription: (0, O.we)("#ImageUpload_DeleteAll_Confirm"),
                 closeModal: d,
@@ -2632,7 +2634,7 @@
                 }),
               }),
               (0, a.jsx)(p.tH, {
-                children: (0, a.jsx)(ye.EN, {
+                children: (0, a.jsx)(Te.EN, {
                   active: l,
                   children: (0, a.jsx)(Pn, {
                     clanImage: u,
@@ -2662,9 +2664,9 @@
               }),
             }),
             (0, a.jsx)(p.tH, {
-              children: (0, a.jsx)(ye.EN, {
+              children: (0, a.jsx)(Te.EN, {
                 active: r,
-                children: (0, a.jsx)(ye.o0, {
+                children: (0, a.jsx)(Te.o0, {
                   strTitle: (0, O.we)("#selectimage_remove_image"),
                   strDescription: (0, O.we)(
                     "#selectimage_remove_details",
@@ -3547,7 +3549,7 @@
                   Boolean(e.fnRemoveAllArtwork) &&
                     (0, a.jsx)(Ge.$n, {
                       onClick: (n) => {
-                        (0, Te.pg)(
+                        (0, ye.pg)(
                           (0, a.jsx)(jt, {
                             fnRemoveAllArtwork: e.fnRemoveAllArtwork,
                           }),
@@ -3576,7 +3578,7 @@
       }
       function jt(e) {
         const { fnRemoveAllArtwork: n, closeModal: t } = e;
-        return (0, a.jsx)(ye.o0, {
+        return (0, a.jsx)(Te.o0, {
           strTitle: (0, O.we)("#Sale_RemoveAll"),
           strDescription: (0, O.we)("#ImageUpload_DeleteAll_Confirm"),
           onOK: () => {
@@ -3683,7 +3685,7 @@
             realms: o,
             fnLangHasData: r,
           } = this.props;
-          (0, Te.pg)(
+          (0, ye.pg)(
             (0, a.jsx)(Pn, {
               clanImage: e,
               lang: n,
@@ -3739,8 +3741,8 @@
           });
         }
       };
-      (0, Tn.Cg)([re.oI], ft.prototype, "ShowLangChangeDialog", null),
-        (ft = (0, Tn.Cg)([Je.PA], ft));
+      (0, yn.Cg)([re.oI], ft.prototype, "ShowLangChangeDialog", null),
+        (ft = (0, yn.Cg)([Je.PA], ft));
       var wt = t(82705);
       function kt(e) {
         const {
@@ -3793,7 +3795,7 @@
               a = t?.localized_images[n];
             return a ? a.split("/").pop() : a;
           }, []);
-        return (0, a.jsxs)(ye.o0, {
+        return (0, a.jsxs)(Te.o0, {
           onCancel: d,
           closeModal: d,
           bDisableBackgroundDismiss: !0,
@@ -3833,7 +3835,7 @@
                 })
               : (0, a.jsxs)(a.Fragment, {
                   children: [
-                    (0, a.jsx)(yn, {
+                    (0, a.jsx)(Tn, {
                       clanSteamID: n,
                       rgSupportArtwork: [l],
                       fnSetImageURL: j,
@@ -3987,7 +3989,7 @@
                       fnUpdateSetting: (e) => l({ ...s, scaling_setting: e }),
                     }),
                     Boolean("cover" != d) &&
-                      (0, a.jsx)(Tt, {
+                      (0, a.jsx)(yt, {
                         position_settings: h,
                         fnUpdateSetting: (e) =>
                           l({ ...s, position_setting: e }),
@@ -4006,7 +4008,7 @@
                         (0, a.jsx)(Ge.$n, {
                           style: { backgroundColor: m },
                           onClick: (e) => {
-                            (0, Te.pg)(
+                            (0, ye.pg)(
                               (0, a.jsx)(At, {
                                 color: m ?? "",
                                 setColor: (e) =>
@@ -4048,7 +4050,7 @@
                           (0, a.jsx)(Ge.$n, {
                             style: { backgroundColor: p },
                             onClick: (e) => {
-                              (0, Te.pg)(
+                              (0, ye.pg)(
                                 (0, a.jsx)(At, {
                                   color: p ?? "",
                                   setColor: (e) =>
@@ -4074,7 +4076,7 @@
                           }),
                         ],
                       }),
-                    (0, a.jsx)(yt, {
+                    (0, a.jsx)(Tt, {
                       gradient: _ ?? "top-to-bottom",
                       fnUpdateSetting: (e) => l({ ...s, gradient_setting: e }),
                     }),
@@ -4098,7 +4100,7 @@
       function At(e) {
         const { closeModal: n, color: t, setColor: o } = e,
           [r, i] = (0, u.useState)(t);
-        return (0, a.jsx)(ye.o0, {
+        return (0, a.jsx)(Te.o0, {
           strTitle: (0, O.we)("#Button_Color"),
           closeModal: n,
           onOK: () => o(r),
@@ -4147,7 +4149,7 @@
           ],
         });
       }
-      function yt(e) {
+      function Tt(e) {
         const { gradient: n, fnUpdateSetting: t, label: o } = e,
           r = u.useMemo(() => {
             const e = [];
@@ -4183,7 +4185,7 @@
           ],
         });
       }
-      function Tt(e) {
+      function yt(e) {
         const { position_settings: n, fnUpdateSetting: t, label: o } = e,
           r = u.useMemo(() => {
             const e = [];
@@ -4273,9 +4275,9 @@
                           "#BackgroundGroups_ClearAllSettings",
                         ),
                       }),
-                      (0, a.jsx)(ye.EN, {
+                      (0, a.jsx)(Te.EN, {
                         active: l,
-                        children: (0, a.jsx)(ye.o0, {
+                        children: (0, a.jsx)(Te.o0, {
                           strTitle: (0, O.we)("#EventEditor_GenericAreYouSure"),
                           strDescription: (0, O.we)(
                             "#BackgroundGroups_ClearAllSettings_Desc",
@@ -4362,7 +4364,7 @@
                 onClick: v,
                 children: (0, O.we)("#BackgroundGroups_Configure"),
               }),
-              (0, a.jsx)(ye.EN, {
+              (0, a.jsx)(Te.EN, {
                 active: x,
                 children: (0, a.jsx)(Dt, {
                   imgGroup: i,
@@ -4438,9 +4440,9 @@
                       onClick: j,
                       children: (0, O.we)("#BackgroundGroups_RemoveThisGroup"),
                     }),
-                    (0, a.jsx)(ye.EN, {
+                    (0, a.jsx)(Te.EN, {
                       active: I,
-                      children: (0, a.jsx)(ye.o0, {
+                      children: (0, a.jsx)(Te.o0, {
                         strTitle: (0, O.we)("#Dialog_AreYouSure"),
                         bDestructiveWarning: !0,
                         strDescription: (0, O.we)(
@@ -4465,11 +4467,11 @@
           className: He().CtnEditor,
           children: (0, a.jsx)(Ge.$n, {
             onClick: (e) =>
-              t && t >= 0
+              void 0 !== t && t >= 0
                 ? n?.AddTabBackgroundGroup(t)
                 : n?.AddSalePageBackgroundGroup(),
             children: (0, O.we)(
-              t && t >= 0
+              void 0 !== t && t >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
@@ -4507,8 +4509,8 @@
           [c, d] = (0, u.useState)(!1);
         (0, u.useEffect)(() => {
           if (!c) return;
-          const e = (0, Te.pg)(
-            (0, a.jsx)(ye.o0, {
+          const e = (0, ye.pg)(
+            (0, a.jsx)(Te.o0, {
               bAlertDialog: !0,
               closeModal: () => d(!1),
               children: (0, a.jsx)(Bt, {
@@ -4559,8 +4561,8 @@
           [t, o] = (0, u.useState)(!1);
         (0, u.useEffect)(() => {
           if (!t) return;
-          const n = (0, Te.pg)(
-            (0, a.jsx)(ye.o0, {
+          const n = (0, ye.pg)(
+            (0, a.jsx)(Te.o0, {
               bAlertDialog: !0,
               closeModal: () => o(!1),
               children: (0, a.jsx)(Ft, { ...e }),
@@ -4572,20 +4574,24 @@
           };
         }, [t, e]);
         const r = (0, g.q3)(() => {
-            const e = n.selectedTabBackgroundDef?.groups?.[0].background_id,
-              t = n.mapGroupToSections.get(e);
-            return le.get(t?.nBackgroundGroupID);
+            const e = n.selectedTabBackgroundDef?.groups?.[0].background_id;
+            if (e) {
+              const t = n.mapGroupToSections.get(e);
+              if (t) return le.get(t?.nBackgroundGroupID) ?? 0;
+            }
+            return 0;
           }),
           [i, s] = (0, u.useState)(null),
           l = u.useCallback((e, n) => {
             s(n);
           }, []),
-          c = (0, re.w6)(l);
+          c = (0, re.w6)(l),
+          d = Boolean(r >= 0 && i && i > r);
         return (0, a.jsxs)("div", {
           className: (0, b.A)(He().CtnEditor, Pt().TabCtn),
           ref: c,
           children: [
-            Boolean(r && i && i > r) &&
+            d &&
               (0, a.jsx)(Ge.$n, {
                 onClick: (e) => o(!0),
                 children: (0, O.we)("#BackgroundGroups_EditBackgroundGroup"),
@@ -4613,7 +4619,21 @@
               label: (0, O.we)("#BackgroundGroups_TaSetting"),
               checked: l,
               onChange: (e) => {
-                i(n.SetTabEnabled(o, e));
+                if (
+                  ((0, Ce.wT)(n, "edit model mising"),
+                  (0, Ce.wT)(void 0 !== o, "tab setting missing"),
+                  void 0 !== o && n)
+                ) {
+                  const t = n.SetTabEnabled(o, e);
+                  (0, Ce.wT)(
+                    !!t,
+                    `Failed to create model TabID ${o}backgroundModel`,
+                  ),
+                    i(t);
+                } else
+                  console.error(
+                    `Failed to enable table group, edit mode: ${!!n}, TabID: ${o}.`,
+                  );
               },
             }),
             Boolean(l) &&
@@ -4713,7 +4733,7 @@
             }),
             [c, t, A, d, n],
           ),
-          y = (0, g.q3)(() => m?.BIsBackgroundImageEnabled() ?? !1);
+          T = (0, g.q3)(() => m?.BIsBackgroundImageEnabled() ?? !1);
         if (t && void 0 !== v) {
           const e =
               t.jsondata.localized_sale_logo &&
@@ -4733,20 +4753,20 @@
                 ? ((S = 0), (f = !1))
                 : (S = t.jsondata.sale_header_offset || 0);
           const A = f && 530 === t.jsondata.sale_header_offset,
-            T = J.nY
+            y = J.nY
               .Get()
               .BIsPartnerTakeoverActive(
                 t.GetContentHubType(),
                 t.GetContentHubCategory(),
                 t.GetContentHubTag(),
               ),
-            L = Boolean(!T),
+            L = Boolean(!y),
             B = c
               ? !E && m?.BIsBackgroundImageEnabled()
                 ? pe.S.EPreviewMode_EditBackground
                 : pe.S.EPreviewMode_Enabled
               : pe.S.EPreviewMode_Disabled,
-            N = y || t.GetEventType() != o.ajI,
+            N = T || t.GetEventType() != o.ajI,
             M = (0, Ae.m)(t.clanSteamID),
             R = g ? i.Yo.NoTransform : i.Yo.NoTransformSparseContent,
             P = (0, b.A)(

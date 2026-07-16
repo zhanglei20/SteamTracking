@@ -1313,7 +1313,7 @@
             if (_ >= 0 && void 0 !== _) {
               const _ = _[_],
                 _ = _.tabs?.findIndex((_) => _.unique_id === _);
-              if (_ && _ >= 0 && _.tabs)
+              if (void 0 !== _ && _ >= 0 && _.tabs)
                 return {
                   selectedTabBackgroundDef: _.tabs[_].tab_background_img_groups,
                   nTabSaleSectionIndex: _,
@@ -1346,7 +1346,9 @@
                 sectionUniqueIDs: _,
                 nSaleSectionLastIndex: _ - 1,
                 nUniqueIDNextSaleSection:
-                  _ < _.length && (!_ || _ < _) ? _[_].unique_id : void 0,
+                  _ < _.length && (void 0 === _ || _ < _)
+                    ? _[_].unique_id
+                    : void 0,
               });
               if (_ + 1 == _ && _.last_group_until_cover_section_until_end)
                 for (
@@ -1359,7 +1361,7 @@
                   _.set(_, _.background_id);
                 }
             }),
-            _ < _.length && (!_ || _ < _) && (_ = _[_].unique_id),
+            _ < _.length && (void 0 === _ || _ < _) && (_ = _[_].unique_id),
             _?.enabled && void 0 !== _)
           ) {
             let _ = _;
@@ -1388,9 +1390,9 @@
                 });
                 if (_ + 1 == _ && _.last_group_until_cover_section_until_end)
                   for (let _ = _; _ < _.length; ++_) {
-                    if ("tabs" == _[_].section_type && _?.enabled) break;
-                    const _ = _[_].unique_id;
-                    _.set(_, _.background_id);
+                    const _ = _[_];
+                    if ("tabs" == _.section_type && _?.enabled) break;
+                    (0, _._)(_, _) && _.set(_.unique_id, _.background_id);
                   }
               });
               _ < _.length && !(0, _._)(_, _[_]);
@@ -4801,11 +4803,11 @@
           className: _().CtnEditor,
           children: (0, _.jsx)(_._, {
             onClick: (_) =>
-              _ && _ >= 0
+              void 0 !== _ && _ >= 0
                 ? _?.AddTabBackgroundGroup(_)
                 : _?.AddSalePageBackgroundGroup(),
             children: (0, _._)(
-              _ && _ >= 0
+              void 0 !== _ && _ >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
@@ -4916,20 +4918,24 @@
           };
         }, [_, _]);
         const _ = (0, _._)(() => {
-            const _ = _.selectedTabBackgroundDef?.groups?.[0].background_id,
-              _ = _.mapGroupToSections.get(_);
-            return _.get(_?.nBackgroundGroupID);
+            const _ = _.selectedTabBackgroundDef?.groups?.[0].background_id;
+            if (_) {
+              const _ = _.mapGroupToSections.get(_);
+              if (_) return _.get(_?.nBackgroundGroupID) ?? 0;
+            }
+            return 0;
           }),
           [_, _] = (0, _.useState)(null),
           _ = _.useCallback((_, _) => {
             _(_);
           }, []),
-          _ = (0, _._)(_);
+          _ = (0, _._)(_),
+          _ = Boolean(_ >= 0 && _ && _ > _);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().CtnEditor, _().TabCtn),
           ref: _,
           children: [
-            Boolean(_ && _ && _ > _) &&
+            _ &&
               (0, _.jsx)(_._, {
                 onClick: (_) => _(!0),
                 children: (0, _._)("#BackgroundGroups_EditBackgroundGroup"),
@@ -4959,7 +4965,21 @@
               label: (0, _._)("#BackgroundGroups_TaSetting"),
               checked: _,
               onChange: (_) => {
-                _(_.SetTabEnabled(_, _));
+                if (
+                  ((0, _._)(_, "edit model mising"),
+                  (0, _._)(void 0 !== _, "tab setting missing"),
+                  void 0 !== _ && _)
+                ) {
+                  const _ = _.SetTabEnabled(_, _);
+                  (0, _._)(
+                    !!_,
+                    `Failed to create model TabID ${_}backgroundModel`,
+                  ),
+                    _(_);
+                } else
+                  console.error(
+                    `Failed to enable table group, edit mode: ${!!_}, TabID: ${_}.`,
+                  );
               },
             }),
             Boolean(_) &&
