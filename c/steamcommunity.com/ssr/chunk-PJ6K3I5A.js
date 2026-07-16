@@ -293,6 +293,7 @@ function _(_) {
     Object.keys(_)
       .sort()
       .reduce((_, _) => ((_[_] = _[_]), _), {}),
+    _.EREALM,
   ];
 }
 function _(_, _) {
@@ -424,7 +425,7 @@ function _(_) {
 }
 function _(_, _) {
   return {
-    queryKey: ["ugc_summary", _, _.ELANGUAGE],
+    queryKey: ["ugc_summary", _, _.ELANGUAGE, _.EREALM],
     queryFn: async () => await _.load(_),
     staleTime: 3600 * 1e3,
   };
@@ -451,7 +452,7 @@ function _(_) {
 }
 function _(_, _) {
   return {
-    queryKey: ["ugc_collection_summary", _],
+    queryKey: ["ugc_collection_summary", _, _.EREALM],
     queryFn: async () => await _.load(_),
     staleTime: 3600 * 1e3,
   };

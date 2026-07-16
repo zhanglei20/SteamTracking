@@ -14050,48 +14050,72 @@ function _(_) {
         : ((_ = !1), (_ = _))),
     _ &&
       (_.push(
-        (0, _.jsx)(_, {
-          page: 1,
-          bLoading: _,
-          onChangePage: _,
-        }),
+        (0, _.jsx)(
+          _,
+          {
+            page: 1,
+            bLoading: _,
+            onChangePage: _,
+          },
+          "page1",
+        ),
       ),
       _.push(
-        (0, _.jsx)("div", {
-          children: "...",
-        }),
+        (0, _.jsx)(
+          "div",
+          {
+            children: "...",
+          },
+          "ellipsis_start",
+        ),
       ));
   for (let _ = _; _ <= _; _++)
     _ > _,
       _ == _.current_page
         ? _.push(
-            (0, _.jsx)(_, {
-              page: _,
-              bLoading: _,
-              bDisabled: !0,
-              onChangePage: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                page: _,
+                bLoading: _,
+                bDisabled: !0,
+                onChangePage: _,
+              },
+              `page${_}`,
+            ),
           )
         : _.push(
-            (0, _.jsx)(_, {
-              page: _,
-              bLoading: _,
-              onChangePage: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                page: _,
+                bLoading: _,
+                onChangePage: _,
+              },
+              `page${_}`,
+            ),
           );
   return (
     _ &&
       (_.push(
-        (0, _.jsx)("div", {
-          children: "...",
-        }),
+        (0, _.jsx)(
+          "div",
+          {
+            children: "...",
+          },
+          "ellipsis_end",
+        ),
       ),
       _.push(
-        (0, _.jsx)(_, {
-          page: _,
-          bLoading: _,
-          onChangePage: _,
-        }),
+        (0, _.jsx)(
+          _,
+          {
+            page: _,
+            bLoading: _,
+            onChangePage: _,
+          },
+          `page${_}`,
+        ),
       )),
     (0, _.jsxs)(_, {
       className: _,

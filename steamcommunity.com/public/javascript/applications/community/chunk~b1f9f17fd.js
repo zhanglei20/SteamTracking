@@ -16834,7 +16834,7 @@
                   null === (n = r.tabs) || void 0 === n
                     ? void 0
                     : n.findIndex((e) => e.unique_id === t);
-              if (a && a >= 0 && r.tabs)
+              if (void 0 !== a && a >= 0 && r.tabs)
                 return {
                   selectedTabBackgroundDef: r.tabs[a].tab_background_img_groups,
                   nTabSaleSectionIndex: i,
@@ -16870,7 +16870,9 @@
                   sectionUniqueIDs: r,
                   nSaleSectionLastIndex: d - 1,
                   nUniqueIDNextSaleSection:
-                    d < t.length && (!m || d < m) ? t[d].unique_id : void 0,
+                    d < t.length && (void 0 === m || d < m)
+                      ? t[d].unique_id
+                      : void 0,
                 });
                 if (i + 1 == _ && e.last_group_until_cover_section_until_end)
                   for (
@@ -16887,7 +16889,7 @@
                     s.set(i, n.background_id);
                   }
               }),
-            d < t.length && (!m || d < m) && (l = t[d].unique_id),
+            d < t.length && (void 0 === m || d < m) && (l = t[d].unique_id),
             (null == u ? void 0 : u.enabled) && void 0 !== m)
           ) {
             let e = m;
@@ -16915,14 +16917,14 @@
                     d < t.length ? t[d].unique_id : void 0,
                 });
                 if (l + 1 == i && u.last_group_until_cover_section_until_end)
-                  for (let n = e; n < t.length; ++n) {
+                  for (let i = e; i < t.length; ++i) {
+                    const e = t[i];
                     if (
-                      "tabs" == t[n].section_type &&
+                      "tabs" == e.section_type &&
                       (null == u ? void 0 : u.enabled)
                     )
                       break;
-                    const e = t[n].unique_id;
-                    s.set(e, r.background_id);
+                    (0, ne.bF)(n, e) && s.set(e.unique_id, r.background_id);
                   }
               });
               e < t.length && !(0, ne.bF)(n, t[e]);
@@ -17751,7 +17753,7 @@
           className: ke().CtnEditor,
           children: (0, i.jsx)(xe.$n, {
             onClick: (e) =>
-              n && n >= 0
+              void 0 !== n && n >= 0
                 ? null == t
                   ? void 0
                   : t.AddTabBackgroundGroup(n)
@@ -17759,7 +17761,7 @@
                   ? void 0
                   : t.AddSalePageBackgroundGroup(),
             children: (0, O.we)(
-              n && n >= 0
+              void 0 !== n && n >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
@@ -17862,28 +17864,37 @@
           };
         }, [n, e]);
         const a = (0, u.q3)(() => {
-            var e, n;
-            const i =
-                null ===
-                  (n =
-                    null === (e = t.selectedTabBackgroundDef) || void 0 === e
-                      ? void 0
-                      : e.groups) || void 0 === n
-                  ? void 0
-                  : n[0].background_id,
-              r = t.mapGroupToSections.get(i);
-            return ie.get(null == r ? void 0 : r.nBackgroundGroupID);
+            var e, n, i;
+            const r =
+              null ===
+                (n =
+                  null === (e = t.selectedTabBackgroundDef) || void 0 === e
+                    ? void 0
+                    : e.groups) || void 0 === n
+                ? void 0
+                : n[0].background_id;
+            if (r) {
+              const e = t.mapGroupToSections.get(r);
+              if (e)
+                return null !==
+                  (i = ie.get(null == e ? void 0 : e.nBackgroundGroupID)) &&
+                  void 0 !== i
+                  ? i
+                  : 0;
+            }
+            return 0;
           }),
           [s, o] = (0, m.useState)(null),
           l = m.useCallback((e, t) => {
             o(t);
           }, []),
-          c = (0, ee.w6)(l);
+          c = (0, ee.w6)(l),
+          d = Boolean(a >= 0 && s && s > a);
         return (0, i.jsxs)("div", {
           className: (0, y.A)(ke().CtnEditor, Ze().TabCtn),
           ref: c,
           children: [
-            Boolean(a && s && s > a) &&
+            d &&
               (0, i.jsx)(xe.$n, {
                 onClick: (e) => r(!0),
                 children: (0, O.we)("#BackgroundGroups_EditBackgroundGroup"),
@@ -17912,7 +17923,21 @@
               label: (0, O.we)("#BackgroundGroups_TaSetting"),
               checked: c,
               onChange: (e) => {
-                o(n.SetTabEnabled(a, e));
+                if (
+                  ((0, fe.wT)(n, "edit model mising"),
+                  (0, fe.wT)(void 0 !== a, "tab setting missing"),
+                  void 0 !== a && n)
+                ) {
+                  const t = n.SetTabEnabled(a, e);
+                  (0, fe.wT)(
+                    !!t,
+                    `Failed to create model TabID ${a}backgroundModel`,
+                  ),
+                    o(t);
+                } else
+                  console.error(
+                    `Failed to enable table group, edit mode: ${!!n}, TabID: ${a}.`,
+                  );
               },
             }),
             Boolean(c) &&
