@@ -2623,6 +2623,20 @@ enum UnnamedEnum453fb51a20bad046
 	UnsupportedMediaType = 3;
 }
 
+enum UnnamedEnum46bd72fc6163c6f8
+{
+	Invalid = 0;
+	ControllerPairing = 1;
+	WelcomeToSteamFrame = 2;
+	PlayspaceSetup = 3;
+	SystemButtonHideDashboard = 4;
+	SystemButtonDashboardHidden = 5;
+	SystemButtonShowDashboard = 6;
+	PairWifiDongle = 7;
+	TourSendOff = 8;
+	SteamGuidedTourFinished = 9;
+}
+
 enum UnnamedEnum47122ffa63e68b01
 {
 	Character = 0;

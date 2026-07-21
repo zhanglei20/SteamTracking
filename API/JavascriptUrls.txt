@@ -464,11 +464,8 @@ ${COMMUNITY_CDN_URL}public/sounds/webui/steam_voice_channel_exit.m4a?v=1
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_message_old_smooth.m4a
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_smoother_friend_join.m4a
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_smoother_friend_online.m4a
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${}&v=1&origin=${}
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${}&v=1&origin=${}
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=1&origin=${}
 ${COMMUNITY_URL}app/${DOTA_APP_ID}/guides
 ${COMMUNITY_URL}app/570/guides
@@ -1368,6 +1365,8 @@ ${STORE_BASE_URL}actions/ajaxresolvepackages
 ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
+${STORE_BASE_URL}api/addtowishlist
+${STORE_BASE_URL}api/removefromwishlist
 ${STORE_BASE_URL}app${appid}/landing/${sale_update_landing_page_vanity_id}
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
@@ -1476,6 +1475,7 @@ ${STORE_BASE_URL}events_admin/ajaxupdatetags
 ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
+${STORE_BASE_URL}explore/followgame/
 ${STORE_BASE_URL}explore/new/
 ${STORE_BASE_URL}explore/next/${}
 ${STORE_BASE_URL}explore/next/0
@@ -1515,7 +1515,7 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/trendingreviews/
 ${STORE_BASE_URL}legal/
-${STORE_BASE_URL}login/${_ ? `?redir=${}` : ""}
+${STORE_BASE_URL}login/${_ ? `?redir=${}` : ``}
 ${STORE_BASE_URL}login/?redir=${}
 ${STORE_BASE_URL}login/?steamtv
 ${STORE_BASE_URL}login?redir=${}
@@ -1586,6 +1586,7 @@ ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}publisher/${vanity}/
 ${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
+${STORE_BASE_URL}recommended/ignorerecommendation/
 ${STORE_BASE_URL}recommender/
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
@@ -2041,6 +2042,7 @@ ${m_strRedirectURL}
 ${m_strWebAPIBaseURL}I${}Service/${}/v${}
 ${mp4_url}${_ ? _ : _}
 ${mustBeURL}${}
+${mustBeURL}1
 ${optional_url}${value}
 ${override_url}${}
 ${page_url}${m_sCurrentPage}
@@ -2116,7 +2118,6 @@ http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
 http://steamconnecttest.com
 http://steamloopback.host
 http://store-tc.k.steam.net/graph
-http://twitter.com/steam
 http://weixin.qq.com/r/LC-K0i3EunDFrWmx93o_
 http://www.dota2.com
 http://www.dota2.com/700
@@ -2151,10 +2152,7 @@ http://www.dota2.com/thebetaisover/
 http://www.dota2.com/threespirits/
 http://www.dota2.com/winter2016
 http://www.dota2.com/wraithnight/
-http://www.facebook.com/Steam
 http://www.facebook.com/sharer.php?
-http://www.steampowered.com/steamworks/
-http://www.valvesoftware.com
 http://www.valvesoftware.com/legal.htm
 http://www.w3.org/1998/Math/MathML
 http://www.w3.org/1999/xhtml
@@ -3059,7 +3057,6 @@ https://twitter.com/dota2ti
 https://twitter.com/intent/tweet/?
 https://twitter.com/steam
 https://twitter.com/steam_games
-https://valve.enterprise.slack.com/archives/C0B3BBQF0NA
 https://valvecorp.slack.com/app_redirect?channel=${}
 https://valvesoftware.com
 https://valvesoftware.com/
@@ -3124,7 +3121,6 @@ https://www.twitch.tv/directory/game/Dota%202
 https://www.twitch.tv/valve
 https://www.valvesoftware.com
 https://www.valvesoftware.com/
-https://www.valvesoftware.com/about
 https://www.valvesoftware.com/en/about
 https://www.valvesoftware.com/legal/statement-of-compliance
 https://www.wanmei.com/
