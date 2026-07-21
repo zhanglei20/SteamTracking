@@ -9604,7 +9604,7 @@
     "Settings_RemotePlay_PyrowaveDescription": "Transmissão de vídeo de baixa latência, mas com largura de banda extremamente alta.",
     "QuickAccess_Tab_Perf_SystemProfile": "Perfil do sistema",
     "QuickAccess_Tab_Perf_SystemProfile_Performance": "Desempenho",
-    "QuickAccess_Tab_Perf_SystemProfile_Playtime": "Playtime",
+    "QuickAccess_Tab_Perf_SystemProfile_Playtime": "Hora do jogo",
     "Settings_Internet_Connect_Advanced_Enable_Label": "Configurações avançadas...",
     "Settings_Display_GameResolution_Explain_Body": "Controla a largura e a altura da tela simulada usada pelos jogos. O Steam redimensionará a imagem gerada pelo jogo para a resolução nativa do seu dispositivo usando o modo e o filtro de dimensionamento definidos na aba \"Desempenho\" do menu de acesso rápido.",
     "Settings_Display_GameResolution_Explain_ListHeader": "Esta configuração pode ser usada para:",
