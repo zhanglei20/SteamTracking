@@ -12402,6 +12402,7 @@
         return (0, r.jsx)(Kt.az, {
           flexGrow: "1",
           children: (0, r.jsxs)(hi.$, {
+            color: "greyneutral",
             onClick: () => {
               return (
                 (e = !s), void a.mutateAsync({ following: e, old_interest: n })
@@ -12463,6 +12464,7 @@
             children: [
               (0, r.jsx)(Ol.A.Anchor, {
                 children: (0, r.jsx)(hi.$, {
+                  color: "greyneutral",
                   onClick: () => o(!i),
                   width: "100%",
                   children: (0, r.jsx)(Zl, {
@@ -12539,28 +12541,29 @@
           children: (0, r.jsxs)(Ut.s, {
             direction: "row",
             padding: "2",
-            maxWidth: "400px",
-            gap: "1",
+            maxWidth: "275px",
+            gap: "2",
             children: [
               (0, r.jsx)(Kt.az, {
-                minWidth: "22px",
-                maxWidth: "22px",
+                minWidth: "16px",
+                maxWidth: "16px",
                 children:
                   t === n &&
-                  (0, r.jsx)(Wt.EY, {
-                    color: "greyneutral-12",
-                    children: (0, r.jsx)(te.MGO, {}),
-                  }),
+                  (0, r.jsx)(Wt.EY, { children: (0, r.jsx)(te.MGO, {}) }),
               }),
               (0, r.jsxs)(Ut.s, {
                 direction: "column",
                 gap: "1",
                 children: [
                   (0, r.jsx)(Wt.EY, {
+                    color: "greyneutral-12",
                     weight: "heavy",
                     children: di.Localize($l(t)),
                   }),
-                  (0, r.jsx)(Wt.EY, { children: di.Localize(ec(t)) }),
+                  (0, r.jsx)(Wt.EY, {
+                    color: "greyneutral-11",
+                    children: di.Localize(ec(t)),
+                  }),
                 ],
               }),
             ],
