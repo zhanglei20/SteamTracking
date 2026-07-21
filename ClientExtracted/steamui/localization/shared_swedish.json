@@ -3173,7 +3173,7 @@
     "Email_OptOut_PreferencesForEmail": "Aviseringsinställningar för %1$s",
     "Account_Notification_Settings_Header_Notifyvia": "Skicka en avisering via",
     "Account_Notification_Settings_Header_Email": "e-post",
-    "Account_Notification_Settings_Header_Desktop": "Popup-avisering i klienten",
+    "Account_Notification_Settings_Header_Desktop": "klienten",
     "Account_Notification_Settings_Header_Desktop_Short": "popup",
     "Account_Notification_Settings_Header_Feed": "flödet",
     "Account_Notification_Settings_Header_Mobile": "mobilappen",

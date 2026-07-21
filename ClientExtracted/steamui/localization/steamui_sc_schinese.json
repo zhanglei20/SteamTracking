@@ -394,7 +394,7 @@
     "GuidedTour_SteamButton_Description": "按下即可访问您的库、商店、设置及更多内容。按住可查看蒸汽平台键快捷方式。",
     "GuidedTour_SteamButton_Title_LGS": "这是蒸汽平台键。",
     "GuidedTour_SteamButton_Description_LGS": "按下即可访问您的库、商店、设置及更多内容。按住可查看蒸汽平台键快捷方式。",
-    "GuidedTour_Frame_ConfirmSkipDongleDesc": "您确定要在不将无线适配器与计算机配对的情况下跳过导览吗？您可以随时在“蒸汽平台”->“设置”中进行配对。",
+    "GuidedTour_Frame_ConfirmSkipDongleDesc": "您确定要跳过将无线适配器与计算机配对的步骤吗？您可以随时在“蒸汽平台”->“设置”中进行配对。",
     "GuidedTour_Frame_SystemButton": "蒸汽平台键",
     "GuidedTour_Frame_SystemButtonDesc": "使用蒸汽平台键显示或隐藏蒸汽平台主面板。按住蒸汽平台键可将视图居中。",
     "GuidedTour_PairingInstructions2": "请检查蒸汽平台是否已打开，并且使用的是您在 Steam Frame 上登录的同一帐户。",
@@ -464,7 +464,7 @@
     "SP_WindowTitle_Keyboard": "蒸汽平台输入屏幕键盘",
     "SSA_Title": "蒸汽平台订户协议",
     "SSA_Explanation": "请完整阅读此协议。 您必须同意《蒸汽平台订户协议》中的所有条款才能继续。",
-    "SteamVRInstall_Description": "安装 SteamVR 以在蒸汽平台上充分利用您的头戴式显示器。使用蒸汽平台时，每次想要启动或退出 VR 均可使用这些按键。",
+    "SteamVRInstall_Description": "安装 SteamVR 以搭配蒸汽平台充分利用您的头戴式显示器，然后每次均可通过此按键用蒸汽平台启动或退出 VR。",
     "PlayersDialog_Description": "这些蒸汽平台用户近期与您一起玩过支持此功能的多人游戏。",
     "GameInfoDialog_JoinError_VACBanned": "您无法连接至选定的服务器，因为该服务器运行于 VAC（Valve 反作弊）安全模式下。\n\n由于作弊违规，该蒸汽平台帐户已被安全服务器封禁。",
     "GameInfoDialog_JoinError_NotInitialized": "蒸汽平台尚未初始化。 请重试",
@@ -510,5 +510,7 @@
     "HardwareDeviceName_Generic": "蒸汽平台设备",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
+    "Settings_Display_GameResolution_Explain_Body": "控制游戏可使用的模拟屏幕宽度和高度。蒸汽平台会使用快捷访问菜单“性能”选项卡中的“缩放模式”和“缩放滤波器”设置，将所有游戏输出按设备原生分辨率进行缩放。",
+    "Settings_ControllerCalibration_IbexSWFilter_Desc": "启用此设置后将使用蒸汽平台输入陀螺仪校准系统，而不是硬件校准系统。开启后，点击“校准”即可获取最新的校准读数。"
 }
