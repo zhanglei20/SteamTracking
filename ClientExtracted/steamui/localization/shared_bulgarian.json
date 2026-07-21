@@ -2001,7 +2001,7 @@
     "Sale_Reservation_TwoMonthRangeYear": "%1$s — %2$s %3$s",
     "Sale_Reservation_ThreeMonthRangeYear": "%1$s — %2$s %3$s",
     "Sale_Reservation_FourMonthRangeYear": "%1$s — %2$s %3$s",
-    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s — %3$s) %4$s",
     "Sale_Reservation_AfterYear": "След %1$s",
     "Sale_Reservation_AfterMonthYear": "След %1$s %2$s",
     "Sale_Reservation_Year": "%1$s",
