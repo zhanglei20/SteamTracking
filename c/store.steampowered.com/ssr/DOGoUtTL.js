@@ -3,22 +3,22 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./assets/w5BdYCZo.css",
-      "./assets/OgU23B6e.css",
       "./assets/BlLi3DU9.css",
       "./assets/DkFNAC8M.css",
       "./assets/B_X-Qmwj.css",
       "./assets/Dx1Ttx0j.css",
       "./assets/DmDbpjfx.css",
       "./assets/-7VOKd0_.css",
+      "./assets/w5BdYCZo.css",
       "./assets/BcZZxqzU.css",
+      "./assets/OgU23B6e.css",
       "./assets/rWtaY80N.css",
       "./assets/Cil0najV.css",
       "./assets/GSKHhd3x.css",
       "./assets/CiME4Via.css",
       "./assets/qa2zKVTS.css",
-      "./assets/Bv85ZzJy.css",
       "./assets/D5Dhcami.css",
+      "./assets/Bv85ZzJy.css",
       "./assets/Cd9r0JxO.css",
     ]),
 ) => _.map((_) => _[_]);
@@ -9002,6 +9002,7 @@ var _ = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAAB
   _ = `qBP7nmof-cw-`,
   _ = `E4PXslhR-fI-`,
   _ = `lZzQoZsDjew-`,
+  _ = `qcSTFE3PRqI-`,
   _ = `_9JnnSUDfcOw-`,
   _ = `ZdGB16lKY0I-`,
   _ = `U3ndjc3qoW8-`,
@@ -9073,7 +9074,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./BEfk_9pR.js`),
+    () => import(`./CPhR-_-w.js`),
     __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]),
     import.meta.url,
   ),
@@ -9944,6 +9945,7 @@ function _(_) {
       })
     : (0, _.jsx)(_, {
         toolTipContent: _.Localize(`#wishlist_controls_tag_description`),
+        strTooltipClassname: _,
         usePointerEvents: !0,
         children: (0, _.jsx)(`button`, {
           className: (0, _.default)(_, _ && `-bFWpSZUw-0-`),

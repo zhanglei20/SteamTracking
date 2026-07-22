@@ -799,7 +799,7 @@ function _(_) {
         _ = _[1];
       if (_ && !_.startsWith(`node_modules`)) {
         let _ = _.match(/(.*?):(\d+:(\d+)?)/);
-        return _ ? `${_}${_[1]}?v=@10842766#L${_[2]}` : `${_}${_}?v=@10842766`;
+        return _ ? `${_}${_[1]}?v=@10843741#L${_[2]}` : `${_}${_}?v=@10843741`;
       }
     }
   }
@@ -866,6 +866,10 @@ function _(_) {
                         _.details?.byteLength &&
                           (0, _.jsx)(`span`, {
                             children: _(_.details.byteLength),
+                          }),
+                        _.details?.eresult !== void 0 &&
+                          (0, _.jsxs)(`span`, {
+                            children: [`EResult `, _.details?.eresult],
                           }),
                       ],
                     }),
@@ -954,7 +958,7 @@ function _(_, _) {
       (_ === `WG`
         ? _.push({
             ..._.timestamps,
-            label: `WG ${_.details?.strLegacyRequestName ?? _.details?.strJobName ?? _}`,
+            label: `WG ${_.details?.strLegacyRequestName ?? _.details?.strJobName ?? _}${_.details?.eresult !== void 0 && _.details.eresult !== 1 ? ` ( EResult ${_.details.eresult})` : ``}`,
           })
         : _ === `Memcached`
           ? _.push({
@@ -1150,8 +1154,8 @@ function _(_) {
                         children: (0, _.jsx)(`a`, {
                           target: `_blank`,
                           rel: `noreferrer`,
-                          href: `https://swarm.valve.org/changes/10842766`,
-                          children: `10842766`,
+                          href: `https://swarm.valve.org/changes/10843741`,
+                          children: `10843741`,
                         }),
                       }),
                     ],
