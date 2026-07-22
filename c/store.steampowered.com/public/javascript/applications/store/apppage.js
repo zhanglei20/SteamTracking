@@ -14028,6 +14028,7 @@
         return (0, _.jsx)(_._, {
           flexGrow: "1",
           children: (0, _.jsxs)(_._, {
+            color: "greyneutral",
             onClick: () => {
               return (
                 (_ = !_),
@@ -14104,6 +14105,7 @@
             children: [
               (0, _.jsx)(_._.Anchor, {
                 children: (0, _.jsx)(_._, {
+                  color: "greyneutral",
                   onClick: () => _(!_),
                   width: "100%",
                   children: (0, _.jsx)(_, {
@@ -14180,16 +14182,15 @@
           children: (0, _.jsxs)(_._, {
             direction: "row",
             padding: "2",
-            maxWidth: "400px",
-            gap: "1",
+            maxWidth: "275px",
+            gap: "2",
             children: [
               (0, _.jsx)(_._, {
-                minWidth: "22px",
-                maxWidth: "22px",
+                minWidth: "16px",
+                maxWidth: "16px",
                 children:
                   _ === _ &&
                   (0, _.jsx)(_._, {
-                    color: "greyneutral-12",
                     children: (0, _.jsx)(_.MGO, {}),
                   }),
               }),
@@ -14198,10 +14199,12 @@
                 gap: "1",
                 children: [
                   (0, _.jsx)(_._, {
+                    color: "greyneutral-12",
                     weight: "heavy",
                     children: _.Localize(_(_)),
                   }),
                   (0, _.jsx)(_._, {
+                    color: "greyneutral-11",
                     children: _.Localize(_(_)),
                   }),
                 ],
