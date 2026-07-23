@@ -94,7 +94,7 @@
       }
       (s.keys = () => Object.keys(i)), (s.id = 8042), (e.exports = s);
     },
-    707: (e, t, r) => {
+    2776: (e, t, r) => {
       "use strict";
       var i = r(7850),
         s = r(4844);
@@ -272,6 +272,87 @@
             "kPFIFlag_HasAuthorSnapshots");
       })(B || (B = {}));
       const w = 30;
+      [
+        ["None", "none", -1],
+        ["Afrikaans", "afrikaans", 0],
+        ["Albanian", "albanian", 1],
+        ["Amharic", "amharic", 2],
+        ["Armenian", "armenian", 3],
+        ["Assamese", "assamese", 4],
+        ["Azerbaijani", "azerbaijani", 5],
+        ["Bangla", "bangla", 6],
+        ["Basque", "basque", 7],
+        ["Belarusian", "belarusian", 8],
+        ["Bosnian", "bosnian", 9],
+        ["Catalan", "catalan", 10],
+        ["Cherokee", "cherokee", 11],
+        ["Croatian", "croatian", 12],
+        ["Dari", "dari", 13],
+        ["Estonian", "estonian", 14],
+        ["Filipino", "filipino", 15],
+        ["Galician", "galician", 16],
+        ["Georgian", "georgian", 17],
+        ["Gujarati", "gujarati", 18],
+        ["Punjabi (Gurmukhi)", "gurmukhi", 19],
+        ["Hausa", "hausa", 20],
+        ["Hebrew", "hebrew", 21],
+        ["Hindi", "hindi", 22],
+        ["Icelandic", "icelandic", 23],
+        ["Igbo", "igbo", 24],
+        ["Indonesian", "indonesian", 25],
+        ["Irish", "irish", 26],
+        ["Kannada", "kannada", 27],
+        ["Kazakh", "kazakh", 28],
+        ["Khmer", "khmer", 29],
+        ["K'iche'", "kiche", 30],
+        ["Kinyarwanda", "kinyarwanda", 31],
+        ["Konkani", "konkani", 32],
+        ["Kyrgyz", "kyrgyz", 33],
+        ["Latvian", "latvian", 34],
+        ["Lithuanian", "lithuanian", 35],
+        ["Luxembourgish", "luxembourgish", 36],
+        ["Macedonian", "macedonian", 37],
+        ["Malay", "malay", 38],
+        ["Malayalam", "malayalam", 39],
+        ["Maltese", "maltese", 40],
+        ["Maori", "maori", 41],
+        ["Marathi", "marathi", 42],
+        ["Mongolian", "mongolian", 43],
+        ["Nepali", "nepali", 44],
+        ["Odia", "odia", 45],
+        ["Persian", "persian", 46],
+        ["Quechua", "quechua", 47],
+        ["Scots", "scots", 48],
+        ["Serbian", "serbian", 49],
+        ["Punjabi (Shahmukhi)", "shahmukhi", 50],
+        ["Sindhi", "sindhi", 51],
+        ["Sinhala", "sinhala", 52],
+        ["Slovak", "slovak", 53],
+        ["Slovenian", "slovenian", 54],
+        ["Sorani", "sorani", 55],
+        ["Sotho", "sotho", 56],
+        ["Swahili", "swahili", 57],
+        ["Tajik", "tajik", 58],
+        ["Tamil", "tamil", 59],
+        ["Tatar", "tatar", 60],
+        ["Telugu", "telugu", 61],
+        ["Tigrinya", "tigrinya", 62],
+        ["Tswana", "tswana", 63],
+        ["Turkmen", "turkmen", 64],
+        ["Urdu", "urdu", 65],
+        ["Uyghur", "uyghur", 66],
+        ["Uzbek", "uzbek", 67],
+        ["Valencian", "valencian", 68],
+        ["Welsh", "welsh", 69],
+        ["Wolof", "wolof", 70],
+        ["Xhosa", "xhosa", 71],
+        ["Yoruba", "yoruba", 72],
+        ["Zulu", "zulu", 73],
+      ].map((e) => ({
+        name: e[0],
+        shortName: e[1],
+        eAdditionalLanguage: e[2],
+      }));
       function S(e, t = "") {
         switch (e) {
           case 0:
@@ -413,7 +494,7 @@
             return t;
         }
       }
-      var f, C, M, R, j, v, x, z;
+      var f, C, M, j, R, v, x, z;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -467,7 +548,7 @@
               "k_EFloatingGamepadTextInputModeModeEmail"),
             (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
               "k_EFloatingGamepadTextInputModeModeNumeric");
-        })(R || (R = {})),
+        })(j || (j = {})),
         (function (e) {
           (e[(e.k_EAppUpdateContentType_Content = 0)] =
             "k_EAppUpdateContentType_Content"),
@@ -477,7 +558,7 @@
               "k_EAppUpdateContentType_Shader"),
             (e[(e.k_EAppUpdateContentType_Max = 3)] =
               "k_EAppUpdateContentType_Max");
-        })(j || (j = {})),
+        })(R || (R = {})),
         (function (e) {
           (e[(e.k_EAppUpdateProgress_VerifyingInstalledFiles = 0)] =
             "k_EAppUpdateProgress_VerifyingInstalledFiles"),
@@ -2726,23 +2807,23 @@
           return "CClientMetrics_ClientBootstrap_Notification";
         }
       }
-      class Re extends G.Message {
+      class je extends G.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Re.prototype.cell_id || Y(Re.M()),
+            je.prototype.cell_id || Y(je.M()),
             G.Message.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Re.sm_m ||
-              (Re.sm_m = {
-                proto: Re,
+            je.sm_m ||
+              (je.sm_m = {
+                proto: je,
                 fields: {
                   cell_id: { n: 1, br: H.readUint32, bw: V.writeUint32 },
-                  stats: { n: 2, c: je, r: !0, q: !0 },
+                  stats: { n: 2, c: Re, r: !0, q: !0 },
                   throttling_kbps: {
                     n: 3,
                     br: H.readUint32,
@@ -2752,58 +2833,58 @@
                   device_type: { n: 5, br: H.readUint32, bw: V.writeUint32 },
                 },
               }),
-            Re.sm_m
+            je.sm_m
           );
         }
         static MBF() {
-          return Re.sm_mbf || (Re.sm_mbf = q(Re.M())), Re.sm_mbf;
+          return je.sm_mbf || (je.sm_mbf = q(je.M())), je.sm_mbf;
         }
         toObject(e = !1) {
-          return Re.toObject(e, this);
+          return je.toObject(e, this);
         }
         static toObject(e, t) {
-          return K(Re.M(), e, t);
+          return K(je.M(), e, t);
         }
         static fromObject(e) {
-          return $(Re.M(), e);
+          return $(je.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (D().BinaryReader)(e),
-            r = new Re();
-          return Re.deserializeBinaryFromReader(r, t);
+            r = new je();
+          return je.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Q(Re.MBF(), e, t);
+          return Q(je.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (D().BinaryWriter)();
-          return Re.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return je.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          X(Re.M(), e, t);
+          X(je.M(), e, t);
         }
         serializeBase64String() {
           var e = new (D().BinaryWriter)();
-          return Re.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_DownloadRates_Notification";
         }
       }
-      class je extends G.Message {
+      class Re extends G.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            je.prototype.source_type || Y(je.M()),
+            Re.prototype.source_type || Y(Re.M()),
             G.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            je.sm_m ||
-              (je.sm_m = {
-                proto: je,
+            Re.sm_m ||
+              (Re.sm_m = {
+                proto: Re,
                 fields: {
                   source_type: { n: 1, br: H.readUint32, bw: V.writeUint32 },
                   source_id: { n: 2, br: H.readUint32, bw: V.writeUint32 },
@@ -2841,39 +2922,39 @@
                   },
                 },
               }),
-            je.sm_m
+            Re.sm_m
           );
         }
         static MBF() {
-          return je.sm_mbf || (je.sm_mbf = q(je.M())), je.sm_mbf;
+          return Re.sm_mbf || (Re.sm_mbf = q(Re.M())), Re.sm_mbf;
         }
         toObject(e = !1) {
-          return je.toObject(e, this);
+          return Re.toObject(e, this);
         }
         static toObject(e, t) {
-          return K(je.M(), e, t);
+          return K(Re.M(), e, t);
         }
         static fromObject(e) {
-          return $(je.M(), e);
+          return $(Re.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (D().BinaryReader)(e),
-            r = new je();
-          return je.deserializeBinaryFromReader(r, t);
+            r = new Re();
+          return Re.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Q(je.MBF(), e, t);
+          return Q(Re.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (D().BinaryWriter)();
-          return je.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Re.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          X(je.M(), e, t);
+          X(Re.M(), e, t);
         }
         serializeBase64String() {
           var e = new (D().BinaryWriter)();
-          return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_DownloadRates_Notification_StatsInfo";
@@ -3843,7 +3924,7 @@
           (e.ClientDownloadRatesReport = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ClientDownloadRatesReport#1",
-              ct(Re, t),
+              ct(je, t),
               { ePrivilege: 1 },
             );
           }),
@@ -4542,8 +4623,14 @@
               : this.Body()[`set_${t}`] && this.Body()[`set_${t}`](e[t]);
         }
       }
-      function ct(e, t) {
-        return t instanceof lt ? t : lt.InitFromObject(e, t);
+      function ct(e, t, r) {
+        let i;
+        return (
+          (i = t instanceof lt ? t : lt.InitFromObject(e, t)),
+          void 0 !== r?.strDebugSource &&
+            i.Hdr().set_debug_source(r.strDebugSource),
+          i
+        );
       }
       class ut extends G.Message {
         static ImplementsStaticInterface() {}
@@ -5270,41 +5357,6 @@
           return "SiteServerUI_SetLanguage_Request";
         }
       }
-      class Rt extends G.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), G.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return Rt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new Rt();
-        }
-        static deserializeBinary(e) {
-          let t = new (D().BinaryReader)(e),
-            r = new Rt();
-          return Rt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (D().BinaryWriter)();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (D().BinaryWriter)();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "SiteServerUI_SetLanguage_Response";
-        }
-      }
       class jt extends G.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -5335,6 +5387,41 @@
         serializeBase64String() {
           var e = new (D().BinaryWriter)();
           return jt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "SiteServerUI_SetLanguage_Response";
+        }
+      }
+      class Rt extends G.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), G.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Rt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Rt();
+        }
+        static deserializeBinary(e) {
+          let t = new (D().BinaryReader)(e),
+            r = new Rt();
+          return Rt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (D().BinaryWriter)();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (D().BinaryWriter)();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "SiteServerUI_ClientStatus_Request";
@@ -5888,7 +5975,7 @@
           return this.SendMsgAndAwaitResponse(e, Ct, 0, "language");
         }
         SetLanguage(e) {
-          return this.SendMsgAndAwaitResponse(e, Rt, 1, "language");
+          return this.SendMsgAndAwaitResponse(e, jt, 1, "language");
         }
         GetClientStatus(e) {
           return this.SendMsgAndAwaitResponse(e, vt, 0, "clientstatus");
@@ -7322,7 +7409,7 @@
                 ? t(s.error)
                 : t
               : it().reporting_enabled
-                ? (0, i.jsx)(Rr, {
+                ? (0, i.jsx)(jr, {
                     error: s,
                     identifierHash: n,
                     store: it(),
@@ -7337,7 +7424,7 @@
           let r = e.error ? e.error.stack : "Stack missing",
             s = e.info ? e.info.componentStack : "",
             n = (e.error && e.error.message) || "unknown error";
-          return (0, i.jsxs)(jr, {
+          return (0, i.jsxs)(Rr, {
             children: [
               (0, i.jsxs)(vr, { children: ['Error: "', n, '"'] }),
               "   ",
@@ -7354,11 +7441,11 @@
             ],
           });
         },
-        Rr = (e) => {
+        jr = (e) => {
           const { error: t, onRefresh: r, identifierHash: s, store: n } = e,
             a = (t.error && t.error.message) || "unknown error",
             o = `${n.product}_${n.version}_${s}`;
-          return (0, i.jsxs)(jr, {
+          return (0, i.jsxs)(Rr, {
             children: [
               (0, i.jsxs)(vr, {
                 children: [
@@ -7375,7 +7462,7 @@
             ],
           });
         },
-        jr = ({ children: e }) =>
+        Rr = ({ children: e }) =>
           (0, i.jsx)("div", {
             style: {
               overflow: "auto",
@@ -7432,7 +7519,7 @@
         }
         async refreshStatus() {
           this.m_bRequestInFlight = !0;
-          const e = lt.Init(jt),
+          const e = lt.Init(Rt),
             t = await Lt.GetClientStatus(e);
           if (1 != t.Hdr().eresult()) return;
           const { clients: r = [], payments: i = [] } = t.Body().toObject(),
@@ -8382,7 +8469,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 707), e((e.s = t));
+      return (t = 2776), e((e.s = t));
       var t;
     });
     e.O();

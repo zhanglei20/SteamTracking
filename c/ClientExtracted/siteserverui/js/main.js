@@ -275,6 +275,87 @@
             "kPFIFlag_HasAuthorSnapshots");
       })(_ || (_ = {}));
       const _ = 30;
+      [
+        ["None", "none", -1],
+        ["Afrikaans", "afrikaans", 0],
+        ["Albanian", "albanian", 1],
+        ["Amharic", "amharic", 2],
+        ["Armenian", "armenian", 3],
+        ["Assamese", "assamese", 4],
+        ["Azerbaijani", "azerbaijani", 5],
+        ["Bangla", "bangla", 6],
+        ["Basque", "basque", 7],
+        ["Belarusian", "belarusian", 8],
+        ["Bosnian", "bosnian", 9],
+        ["Catalan", "catalan", 10],
+        ["Cherokee", "cherokee", 11],
+        ["Croatian", "croatian", 12],
+        ["Dari", "dari", 13],
+        ["Estonian", "estonian", 14],
+        ["Filipino", "filipino", 15],
+        ["Galician", "galician", 16],
+        ["Georgian", "georgian", 17],
+        ["Gujarati", "gujarati", 18],
+        ["Punjabi (Gurmukhi)", "gurmukhi", 19],
+        ["Hausa", "hausa", 20],
+        ["Hebrew", "hebrew", 21],
+        ["Hindi", "hindi", 22],
+        ["Icelandic", "icelandic", 23],
+        ["Igbo", "igbo", 24],
+        ["Indonesian", "indonesian", 25],
+        ["Irish", "irish", 26],
+        ["Kannada", "kannada", 27],
+        ["Kazakh", "kazakh", 28],
+        ["Khmer", "khmer", 29],
+        ["K'iche'", "kiche", 30],
+        ["Kinyarwanda", "kinyarwanda", 31],
+        ["Konkani", "konkani", 32],
+        ["Kyrgyz", "kyrgyz", 33],
+        ["Latvian", "latvian", 34],
+        ["Lithuanian", "lithuanian", 35],
+        ["Luxembourgish", "luxembourgish", 36],
+        ["Macedonian", "macedonian", 37],
+        ["Malay", "malay", 38],
+        ["Malayalam", "malayalam", 39],
+        ["Maltese", "maltese", 40],
+        ["Maori", "maori", 41],
+        ["Marathi", "marathi", 42],
+        ["Mongolian", "mongolian", 43],
+        ["Nepali", "nepali", 44],
+        ["Odia", "odia", 45],
+        ["Persian", "persian", 46],
+        ["Quechua", "quechua", 47],
+        ["Scots", "scots", 48],
+        ["Serbian", "serbian", 49],
+        ["Punjabi (Shahmukhi)", "shahmukhi", 50],
+        ["Sindhi", "sindhi", 51],
+        ["Sinhala", "sinhala", 52],
+        ["Slovak", "slovak", 53],
+        ["Slovenian", "slovenian", 54],
+        ["Sorani", "sorani", 55],
+        ["Sotho", "sotho", 56],
+        ["Swahili", "swahili", 57],
+        ["Tajik", "tajik", 58],
+        ["Tamil", "tamil", 59],
+        ["Tatar", "tatar", 60],
+        ["Telugu", "telugu", 61],
+        ["Tigrinya", "tigrinya", 62],
+        ["Tswana", "tswana", 63],
+        ["Turkmen", "turkmen", 64],
+        ["Urdu", "urdu", 65],
+        ["Uyghur", "uyghur", 66],
+        ["Uzbek", "uzbek", 67],
+        ["Valencian", "valencian", 68],
+        ["Welsh", "welsh", 69],
+        ["Wolof", "wolof", 70],
+        ["Xhosa", "xhosa", 71],
+        ["Yoruba", "yoruba", 72],
+        ["Zulu", "zulu", 73],
+      ].map((_) => ({
+        name: _[0],
+        shortName: _[1],
+        eAdditionalLanguage: _[2],
+      }));
       function _(_, _ = "") {
         switch (_) {
           case 0:
@@ -5175,8 +5256,14 @@
               : this.Body()[`set_${_}`] && this.Body()[`set_${_}`](_[_]);
         }
       }
-      function _(_, _) {
-        return _ instanceof _ ? _ : _.InitFromObject(_, _);
+      function _(_, _, _) {
+        let _;
+        return (
+          (_ = _ instanceof _ ? _ : _.InitFromObject(_, _)),
+          void 0 !== _?.strDebugSource &&
+            _.Hdr().set_debug_source(_.strDebugSource),
+          _
+        );
       }
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -9443,7 +9530,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 707), _((_._ = _));
+      return (_ = 2776), _((_._ = _));
       var _;
     });
     _._();
