@@ -116,7 +116,7 @@
     "Login_WaitingForServer": "Odotetaan palvelimen vastausta...",
     "Login_ConnectingUser": "Muodostetaan yhteyttä Steam-tiliin:",
     "Login_ShuttingDown": "Sammutetaan...",
-    "Login_LoggingOut": "Kirjaudutaan ulos...",
+    "Login_LoggingOut": "Kirjaudutaan ulos",
     "Login_EnterCredentials": "Syötä kirjautumistiedot",
     "Login_AccountName": "Toimipisteen tili",
     "Login_AccountHelp": "Käytä tiliä, jonka olet luonut toimipaikan palvelinta varten.",

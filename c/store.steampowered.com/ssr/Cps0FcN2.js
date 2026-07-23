@@ -17,8 +17,8 @@ const __vite__mapDeps = (
       "./assets/GSKHhd3x.css",
       "./assets/CiME4Via.css",
       "./assets/qa2zKVTS.css",
-      "./assets/Bv85ZzJy.css",
       "./assets/D5Dhcami.css",
+      "./assets/Bv85ZzJy.css",
       "./assets/Cd9r0JxO.css",
     ]),
 ) => _.map((_) => _[_]);
@@ -1196,10 +1196,6 @@ function _(_) {
 function _() {
   let { filters: _, setFilters: _, bLoadingFilters: _ } = _.useContext(_);
   return [_, _, _];
-}
-function _() {
-  let { sort: _ } = _.useContext(_);
-  return _;
 }
 function _() {
   let [_, _] = _(),
@@ -9002,6 +8998,7 @@ var _ = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAAB
   _ = `uQ8Li0MwEhQ-`,
   _ = `TU39sK7r2pU-`,
   _ = `nqLMv8j-iBw-`,
+  _ = `Q6G2tkjGQKw-`,
   _ = `_5obTMJByPr0-`,
   _ = `_6QzykeEsckc-`,
   _ = `qBP7nmof-cw-`,
@@ -9079,7 +9076,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./DrveWvoj.js`),
+    () => import(`./Df27La_9.js`),
     __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]),
     import.meta.url,
   ),
@@ -9743,16 +9740,13 @@ function _(_) {
     { data: _ } = _({
       appid: _,
     }),
-    _ = _[_()] === 6,
-    _ = _?.is_coming_soon || _,
     _ = !_?.is_coming_soon;
   return (0, _.jsxs)(`div`, {
-    className: (0, _.default)(_, _ && _ && `NY-NYU5x6-s-`),
+    className: (0, _.default)(_, _ && `NY-NYU5x6-s-`),
     children: [
-      _ &&
-        (0, _.jsx)(_, {
-          appid: _,
-        }),
+      (0, _.jsx)(_, {
+        appid: _,
+      }),
       _ &&
         (0, _.jsx)(_, {
           appid: _,
@@ -9822,7 +9816,7 @@ function _(_) {
             children: _.Localize(`#wishlist_item_releasedate`),
           }),
           (0, _.jsx)(`div`, {
-            className: _,
+            className: (0, _.default)(_, _),
             children: _,
           }),
         ],

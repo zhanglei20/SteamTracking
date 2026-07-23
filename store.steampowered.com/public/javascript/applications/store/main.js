@@ -11584,11 +11584,11 @@
         $o: () => f,
         Ec: () => p,
         FD: () => h,
-        Ff: () => w,
-        _R: () => C,
+        Ff: () => y,
+        _R: () => v,
         kk: () => b,
         sG: () => _,
-        z5: () => S,
+        z5: () => C,
       });
       var i = r(7850),
         n = r(34104),
@@ -11648,7 +11648,7 @@
       const f = (e) => {
           const { category: t, className: r } = e;
           if (!t) return null;
-          const n = S(t);
+          const n = C(t);
           return (0, i.jsxs)("div", {
             className: (0, u.A)(c.SteamDeckCompatInfo, r),
             children: [
@@ -11658,14 +11658,26 @@
           });
         },
         B = (e) => {
+          const { category: t, className: r } = e;
+          if (!t) return null;
+          const n = C(t);
+          return (0, i.jsxs)("div", {
+            className: (0, u.A)(c.SteamDeckCompatInfo, r),
+            children: [
+              (0, i.jsx)(l.fhy, {}),
+              (0, i.jsx)(n, { className: c.SteamDeckCompatIcon }),
+            ],
+          });
+        },
+        w = (e) => {
           const { category: t, elControllerSupport: r } = e,
-            n = C(t);
+            n = v(t);
           return (0, i.jsxs)("div", {
             className: (0, u.A)(c.SteamDeckCompatInfo, e.className),
             children: [r, (0, i.jsx)(n, { className: c.SteamDeckCompatIcon })],
           });
         };
-      function w(e) {
+      function y(e) {
         const { eDisplay: t, storeItemPlatform: r, className: a } = e;
         return t == d.ZJ
           ? (0, i.jsx)(f, {
@@ -11673,24 +11685,24 @@
               className: a,
             })
           : t == d.JR
-            ? (0, i.jsx)(f, {
+            ? (0, i.jsx)(B, {
                 category: r?.steam_machine_compat_category ?? n.YX,
                 className: a,
               })
             : t == d.c9
-              ? (0, i.jsx)(B, {
+              ? (0, i.jsx)(w, {
                   category: r?.steam_os_compat_category ?? s.xs,
                   className: a,
                 })
               : null;
       }
-      const y = { [n.V8]: l.jIP, [n.sd]: l.aVR, [n.I2]: l.o5Q, [n.YX]: l.WX$ },
-        M = { [s.xs]: l.WX$, [s.u_]: l.jIP, [s.Hi]: l.ZjT };
-      function S(e) {
-        return y[e] || l.WX$;
-      }
+      const M = { [n.V8]: l.jIP, [n.sd]: l.aVR, [n.I2]: l.o5Q, [n.YX]: l.WX$ },
+        S = { [s.xs]: l.WX$, [s.u_]: l.jIP, [s.Hi]: l.ZjT };
       function C(e) {
         return M[e] || l.WX$;
+      }
+      function v(e) {
+        return S[e] || l.WX$;
       }
       n.I2, n.sd, n.V8, n.YX;
       s.Hi, s.u_, s.xs;
@@ -75059,7 +75071,7 @@
         CeX: () => E,
         Cv4: () => d,
         DK4: () => B,
-        DQe: () => mr,
+        DQe: () => dr,
         Dp6: () => pe,
         EEf: () => Ze,
         ENo: () => Je,
@@ -75085,7 +75097,7 @@
         KKS: () => ye,
         L0X: () => V,
         LDq: () => vt,
-        LO_: () => lr,
+        LO_: () => cr,
         Lh2: () => we,
         MOk: () => J,
         MQO: () => Ie,
@@ -75154,6 +75166,7 @@
         fSs: () => O,
         faJ: () => Ue,
         ffu: () => Oe,
+        fhy: () => lr,
         g$j: () => Lt,
         h20: () => te,
         hz4: () => Q,
@@ -75171,7 +75184,7 @@
         koA: () => sr,
         l8x: () => $,
         lMJ: () => re,
-        lRD: () => ur,
+        lRD: () => mr,
         mb7: () => Xt,
         mcU: () => Yt,
         nkJ: () => Ae,
@@ -75205,7 +75218,7 @@
         wB_: () => b,
         wC1: () => g,
         ww0: () => Fe,
-        xoK: () => cr,
+        xoK: () => ur,
         xv8: () => F,
         yHA: () => Ye,
         y_e: () => ue,
@@ -79342,6 +79355,32 @@
         });
       }
       function lr(e) {
+        const { className: t, ...r } = e;
+        return (0, i.jsxs)("svg", {
+          className: (0, s.A)(o().SteamMachineCompatLogo, t),
+          ...r,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
+              fill: "white",
+            }),
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
+              fill: "white",
+            }),
+          ],
+        });
+      }
+      function cr(e) {
         const [t, r] = (0, c.l)();
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -79375,7 +79414,7 @@
           ],
         });
       }
-      function cr(e) {
+      function ur(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -79398,7 +79437,7 @@
           ],
         });
       }
-      function ur(e) {
+      function mr(e) {
         const { className: t, ...r } = e;
         return (0, i.jsx)("svg", {
           className: (0, s.A)(o().SteamDeckCompatLogo, t),
@@ -79415,7 +79454,7 @@
           }),
         });
       }
-      function mr(e) {
+      function dr(e) {
         const { className: t } = e;
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
