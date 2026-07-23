@@ -4446,7 +4446,6 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   display: flex;
   flex-direction: row;
   min-width: 0;
-  align-items: center;
 }
 ._3Ra2jK42XFbrJlIPtsmMfC {
   margin-inline-end: 1ch;
@@ -4455,6 +4454,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   font-size: 11px;
   white-space: nowrap;
   flex-shrink: 0;
+  padding-top: 4px;
 }
 ._1FrjJkMKzXxdevx_oYK2Nx {
   display: flex;

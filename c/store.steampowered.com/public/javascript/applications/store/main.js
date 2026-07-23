@@ -99669,23 +99669,29 @@
         return _() ? (0, _.jsx)(_, {}) : _.children;
       }
       function _() {
-        const [_, _] = _.useState(null);
-        return (
-          _(_?.parentElement?.parentElement, _.ResponsiveHeaderContent),
-          _(_?.parentElement?.parentElement, _.ElementTakeover),
-          (0, _.jsx)("div", {
-            className: _()(_.SearchContainer),
-            ref: _,
-            children: (0, _.jsx)(_, {
-              bBackdropActive: !1,
-            }),
-          })
-        );
-      }
-      function _(_, _) {
-        _.useLayoutEffect(() => {
-          if (_ && _) return _.classList.add(_), () => _.classList.remove(_);
-        }, [_, _]);
+        const _ = _.useCallback((_) => {
+          const _ = (function (_, _) {
+            let _ = _;
+            for (; (_ = _.parentElement); )
+              if (_.classList.contains(_)) return _;
+            return null;
+          })(_, "responsive_header_content");
+          return _
+            ? (_.classList.add(_.ResponsiveHeaderContent),
+              _.classList.add(_.ElementTakeover),
+              () => {
+                _.classList.remove(_.ResponsiveHeaderContent),
+                  _.classList.remove(_.ElementTakeover);
+              })
+            : void console.warn("Couldn't find responsive header menu");
+        }, []);
+        return (0, _.jsx)("div", {
+          className: _()(_.SearchContainer),
+          ref: _,
+          children: (0, _.jsx)(_, {
+            bBackdropActive: !1,
+          }),
+        });
       }
       const _ = _.lazy(() =>
         Promise.all([
@@ -101362,17 +101368,17 @@
                           fallback: null,
                           children: (0, _.jsx)(_, {}),
                         }),
-                      "store-menu-responsive-search": () =>
-                        (0, _.jsx)(_.Suspense, {
-                          fallback: null,
-                          children: (0, _.jsx)(_, {}),
-                        }),
                     },
                   }),
                   (0, _.jsx)(_._, {
                     omitFocusNavTreeBridge: !0,
                     config: {
                       "store-menu-v7": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                      "store-menu-responsive-search": () =>
                         (0, _.jsx)(_.Suspense, {
                           fallback: null,
                           children: (0, _.jsx)(_, {}),

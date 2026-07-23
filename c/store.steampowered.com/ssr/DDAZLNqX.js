@@ -17,8 +17,8 @@ const __vite__mapDeps = (
       "./assets/GSKHhd3x.css",
       "./assets/CiME4Via.css",
       "./assets/qa2zKVTS.css",
-      "./assets/D5Dhcami.css",
       "./assets/Bv85ZzJy.css",
+      "./assets/D5Dhcami.css",
       "./assets/Cd9r0JxO.css",
     ]),
 ) => _.map((_) => _[_]);
@@ -1858,6 +1858,7 @@ function _(_) {
 var _ = `J7mtzI88wAE-`,
   _ = `JY4lwsRhvTg-`,
   _ = `_8MgL3GQMdss-`,
+  _ = `_3TPQhhYp6Ss-`,
   _ = `BkLwnStWSSw-`;
 function _(_) {
   let { cWishlistItems: _, bLoadingFilters: _ } = _,
@@ -1884,10 +1885,13 @@ function _(_) {
           (0, _.jsxs)(`div`, {
             className: _,
             children: [
-              (0, _.jsx)(_, {
-                cWishlistItems: _,
-                bLoadingFilters: _,
-                bShowSeparator: _ && _.length > 0,
+              (0, _.jsx)(`div`, {
+                className: _,
+                children: (0, _.jsx)(_, {
+                  cWishlistItems: _,
+                  bLoadingFilters: _,
+                  bShowSeparator: _ && _.length > 0,
+                }),
               }),
               _ &&
                 (0, _.jsx)(_, {
@@ -1910,7 +1914,7 @@ function _(_) {
   let { rgCategories: _, onFilter: _ } = _;
   return _.length === 0
     ? null
-    : (0, _.jsx)(`div`, {
+    : (0, _.jsx)(_, {
         className: _,
         children: (0, _.jsx)(_, {
           rgCategories: _,
@@ -1918,6 +1922,7 @@ function _(_) {
           onClick: _,
           bShowAllButton: !0,
           bShowCounts: !0,
+          bMultiline: !0,
         }),
       });
 }
@@ -9074,7 +9079,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./CPhR-_-w.js`),
+    () => import(`./DrveWvoj.js`),
     __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]),
     import.meta.url,
   ),

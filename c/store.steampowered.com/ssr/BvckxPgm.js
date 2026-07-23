@@ -8120,19 +8120,31 @@ var _ = _.memo(function (_) {
 function _(_) {
   return _() ? (0, _.jsx)(_, {}) : _.children;
 }
+function _(_, _) {
+  let _ = _;
+  for (; (_ = _.parentElement); ) if (_.classList.contains(_)) return _;
+  return null;
+}
 function _() {
-  let [_, _] = _.useState(null);
-  return (
-    _(_?.parentElement?.parentElement, _),
-    _(_?.parentElement?.parentElement, _),
-    (0, _.jsx)(`div`, {
-      className: (0, _.default)(_),
-      ref: _,
-      children: (0, _.jsx)(_, {
-        bBackdropActive: !1,
-      }),
-    })
-  );
+  let _ = _.useCallback((_) => {
+    let _ = _(_, `responsive_header_content`);
+    if (_)
+      return (
+        _.classList.add(_),
+        _.classList.add(_),
+        () => {
+          _.classList.remove(_), _.classList.remove(_);
+        }
+      );
+    console.warn(`Couldn't find responsive header menu`);
+  }, []);
+  return (0, _.jsx)(`div`, {
+    className: (0, _.default)(_),
+    ref: _,
+    children: (0, _.jsx)(_, {
+      bBackdropActive: !1,
+    }),
+  });
 }
 function _() {
   return _.useCallback(
@@ -8142,11 +8154,6 @@ function _() {
       }),
     [],
   );
-}
-function _(_, _) {
-  _.useLayoutEffect(() => {
-    if (!(!_ || !_)) return _.classList.add(_), () => _.classList.remove(_);
-  }, [_, _]);
 }
 var _ = class {
   m_mapAppToSNRs = new Map();
