@@ -279,10 +279,13 @@ div.gPCB6myPBsc- {
   display: flex;
 }
 ._8MgL3GQMdss- {
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin: 5px 0 15px;
   display: flex;
+}
+._8MgL3GQMdss- ._3TPQhhYp6Ss- {
+  padding-top: 4px;
 }
 @media screen and (width <= 500px) {
   html.responsive.responsive ._8MgL3GQMdss- {
