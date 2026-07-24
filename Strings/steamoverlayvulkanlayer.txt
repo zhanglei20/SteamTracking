@@ -50,6 +50,7 @@ GL_ARB_shading_language_420pack
 GameOverlayRenderer.dll
 GameOverlayRenderer64.dll
 HDRParams
+H\najU
 JArray
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE

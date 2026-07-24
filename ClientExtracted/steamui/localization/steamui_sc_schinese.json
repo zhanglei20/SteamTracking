@@ -223,7 +223,6 @@
     "Login_NoConnection": "连接蒸汽平台服务器失败",
     "Login_SteamGuardMismatch": "蒸汽平台令牌验证码错误",
     "Login_ServiceUnavailable": "连接蒸汽平台服务器失败",
-    "Login_Remove_Desc1": "您想移除 %1$s 吗？ 这将删除所有已保存的登录信息。以后要使用此帐户时，您将需要输入帐户名、密码和所有相关的用以确认的蒸汽平台令牌验证码。",
     "Join_New": "首次使用蒸汽平台？",
     "Join_SiteLink_VR": "在 PC 或移动设备上访问 %1$s，以创建蒸汽平台帐户",
     "Steam_ErrorCondition_AccountDisabled": "蒸汽平台客服已冻结该帐户。\n\n造成帐户被冻结的原因通常是\n帐户遭他人访问，或者是存有支付争议。",
@@ -269,6 +268,7 @@
     "Settings_Internet_In_Offline_Mode": "蒸汽平台处于离线模式。",
     "Settings_Internet_RestartBody": "您必须重启蒸汽平台才能应用新的网络设置",
     "Settings_Display_PreferredMonitor_Desc": "大屏幕模式可以在启用时更改主显示器，让您的 PC 可以更轻松地应用到桌面和客厅两个环境中。若启用，蒸汽平台将在您进入大屏幕模式时切换您的主显示器，并在退出时返回到原始显示器。此设置将在下次打开大屏幕模式时生效。",
+    "Settings_Display_GameResolution_Explain_Body": "控制游戏可使用的模拟屏幕宽度和高度。蒸汽平台会使用快捷访问菜单“性能”选项卡中的“缩放模式”和“缩放滤波器”设置，将所有游戏输出按设备原生分辨率进行缩放。",
     "Settings_Controller_GuideButtonFocus": "按下导航键将蒸汽平台置于前端",
     "Settings_Controller_PS4Support": "为 PlayStation 控制器启用蒸汽平台输入",
     "Settings_Controller_XboxSupport": "为 Xbox 控制器启用蒸汽平台输入",
@@ -276,7 +276,9 @@
     "Settings_Controller_GenericGamepadSupport": "为通用控制器启用蒸汽平台输入",
     "Settings_Controller_SCPairing": "与新的蒸汽平台控制器（2015 版）配对",
     "Settings_Controller_NoController": "未检测到控制器。连接控制器以在蒸汽平台中管理其设置。",
+    "Settings_Controller_Frame_Pairing_Desc": "按住蒸汽平台键和菜单键，直到 LED 指示灯闪烁白色，进入配对模式。",
     "Settings_ControllerCalibration_CalibrateJoystick_Description": "调整摇杆死区以修复无法准确回中的摇杆的“漂移”问题。若想针对每款游戏单独覆盖此死区偏好设置，请在对应游戏的蒸汽平台输入配置摇杆设置中，更改“死区来源”下拉菜单中的设置。",
+    "Settings_ControllerCalibration_IbexSWFilter_Desc": "启用此设置后将使用蒸汽平台输入陀螺仪校准系统，而不是硬件校准系统。开启后，点击“校准”即可获取最新的校准读数。",
     "Settings_ControllerCalibration_HapticsEnable": "蒸汽平台触感",
     "Settings_ControllerCalibration_Grip_Sensor_Desc": "Steam Controller 的握持传感器可检测手与控制器握把之间的范围。您可以在蒸汽平台输入中将其用作普通按键，或用作陀螺仪激活按键。请使用下方设置调整手部检测的灵敏度。",
     "Settings_Customization_StartupVideo_Desc": "选择启动蒸汽平台时要播放的自定义影片，个性化您的蒸汽平台体验。此设置按设备生效，而非按用户生效。",
@@ -424,8 +426,6 @@
     "Menu_SRSI_Diagnostics": "蒸汽平台运行时诊断",
     "Menu_About": "关于蒸汽平台",
     "Menu_YearInReview": "蒸汽平台回顾",
-    "ChangeUser_Description": "此举可以让您选择另一个蒸汽平台帐户。您当前的帐户会保存在这台计算机上，以便您将来可以切换回该帐户。",
-    "ChangeUser_Description_NoCachedCredentials": "此举可以让您选择另一个蒸汽平台帐户。如果您想切换回此帐户，需要提供密码或手机验证码。",
     "ChangeUser_ShouldShowUserChooser": "每次启动蒸汽平台时均询问使用哪个帐户",
     "SignOut_Description": "这会使您退出蒸汽平台。您需要重新输入帐户名称、密码和蒸汽平台令牌详情才能再次使用蒸汽平台。",
     "BottomBar_AddNonSteam": "添加非蒸汽平台游戏…",
@@ -510,7 +510,5 @@
     "HardwareDeviceName_Generic": "蒸汽平台设备",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
-    "Settings_Display_GameResolution_Explain_Body": "控制游戏可使用的模拟屏幕宽度和高度。蒸汽平台会使用快捷访问菜单“性能”选项卡中的“缩放模式”和“缩放滤波器”设置，将所有游戏输出按设备原生分辨率进行缩放。",
-    "Settings_ControllerCalibration_IbexSWFilter_Desc": "启用此设置后将使用蒸汽平台输入陀螺仪校准系统，而不是硬件校准系统。开启后，点击“校准”即可获取最新的校准读数。"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"
 }

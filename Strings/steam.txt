@@ -1043,9 +1043,8 @@ $ffn
 (%p) Disconnecting HTTP connection due to !BAsyncSendPartialBody\n
 (%p) Disconnecting HTTP connection due to SSL failure: %s(%d)\n
 (%p) Fatal HTTP2 error in nghttp2_session_mem_recv (%s)\n
+(%p) Fatal HTTP2 error in nghttp2_session_send (%s)\n
 (%p) Fatal HTTP2 error in nghttp2_session_send after init (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send after recv (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send during initial request submit (%s)\n
 (%p) HTTP request connecting to %s\n
 (%p) HTTP request resolved %s to %s. Now checking proxy.\n
 (%p) HTTP request resolving %s\n
@@ -1060,7 +1059,7 @@ $ffn
 (%p) Sending request for http%s://%s%s - Stale Timeout %u\n
 (%p) State to %s is now k_EHTTPClientConnectionState_WAITING_RESPONSELINE_VERSION\n
 (%p) TLS handshake was not valid for SNI hostname '%s', disconnecting\n
-(%p) no more requests allowed on HTTP session (%s)\n
+(%p) no more requests allowed on HTTP session\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 ((idx) < (context)->hd_table.len + 61)
@@ -1361,8 +1360,6 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;g|
-++CCUNG`o|
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1990,17 +1987,15 @@ $ffn
 0 Umv
 00000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 01/01/00
 0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-03:27:44
-03:27:48
 08bX
 0?0L
 0A/8
@@ -2391,7 +2386,6 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
-172.16
 1536
 15000
 155.133.240.0/23
@@ -2422,6 +2416,7 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
+172.16
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2552,6 +2547,8 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:11:09
+22:11:13
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2763,11 +2760,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
+64CK\vH
 65536
 60000000
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
-64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -5515,7 +5512,6 @@ EC_POINT_set_to_infinity
 EC_POINTs_make_affine
 EC_POINTs_mul
 EC_PRIVATEKEY
-EChildProcessQueryCommand
 EClanAccountType
 EClanAction
 EClanEventType
@@ -6299,6 +6295,8 @@ GetRepeatedStringReference
 GetRepeatedUInt32
 GetRepeatedUInt64
 GetSendToClientSessions
+GetStartupClientBeta
+GetStartupClientBeta: %p\n
 GetString
 GetStringReference
 GetUInt32
@@ -6320,7 +6318,6 @@ Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got completed conditional request dispatched to client cache, but no data for it in our map?
 Got frame type %d for stream %d\n
-GpuTopology
 GrabPay
 Gray color space not permitted on RGB PNG
 Greek
@@ -6842,7 +6839,7 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul 23 2026
+Jul 24 2026
 July
 June
 K'iche'
@@ -7611,7 +7608,7 @@ No space in chunk cache for sPLT
 No subscription
 No tracked allocs currently in use. Total %d\n
 No verified phone number
-No waiting requests for %s\n
+No waiting requests (or no free capacity) for %s\n
 NoInternet
 NoLAN
 NoRenegotiation
@@ -8234,8 +8231,6 @@ Poly1305
 Polynomial:
 Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
-PosixFileOpen: failed to compute relative path for: %s - %s\n
-PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostRecv
 PostTime
@@ -9013,9 +9008,9 @@ Send Proxied Router
 Send Router
 SenderAddress
 SenderName
-Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
+Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
 Sentiment
 September
@@ -9280,7 +9275,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 23 2026 03:27:48
+Startup - updater built Jul 24 2026 22:11:13
 State
 StaticFileWriterThread()
 Steam
@@ -13680,7 +13675,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(H:
 givenName
 glBegin
 glBindTexture
@@ -16376,6 +16371,7 @@ m_mapStatsBucket[iBucket]
 m_memNodes
 m_memPSK
 m_nAllocationCount >= 0
+m_nHTTP2CallbackDepth > 0
 m_nPollFd >= 0
 m_nPostFd >= 0
 m_nRecursions > 0

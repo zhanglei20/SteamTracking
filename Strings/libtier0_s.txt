@@ -111,10 +111,10 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789
 0123456789ABCDEF
-03:27:46
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
+22:11:11
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -318,7 +318,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jul 23 2026
+Jul 24 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -910,6 +910,7 @@ double
 dprintf
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
+environ
 exec
 execv
 execvp

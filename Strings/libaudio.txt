@@ -62,7 +62,6 @@ $ORIGIN
 *ZL19RunCommandGetOutput10StringViewR10CUtlStringbbEUlS_E_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGm\t
 ++CCUNGstd::exception
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -308,14 +307,12 @@ DBG_STAT
 DLOPEN Error:%s\n
 Don't know how to check filesystem type on POSIX!
 Element( i )
-Empty response on setting
 Error
 Error State on string being set.
 Execute: %s\n
 Expected %lld but got %lld!
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
-Failed to change setting
 Failed to load "%s"
 Failed to load optional module %s\n
 Failed to move pulse sink input
@@ -376,7 +373,6 @@ InternalPlaySound: Failed to create playback stream
 InternalPlaySound: Playback stream failed (%s)
 Invalid FileWriterItem_t
 Invalid index %u
-Invalid response: %s
 IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
@@ -404,7 +400,6 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt3_V214error_categoryE
-N}N$5
 PS3 Unattributed
 PULSE_0
 Plat_CommandLineParamExists
@@ -417,8 +412,6 @@ Plat_OutputDebugString
 Plat_VirtualAccessFlags
 Plat_localtime
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
-PosixFileOpen: failed to compute relative path for: %s - %s\n
-PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 PulseCardInfoCallback
 PulseClientCallback
@@ -520,7 +513,6 @@ V_FixSlashes
 V_FormatAndAppend
 V_IsAbsolutePath
 V_MakeAbsolutePath
-V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_StrTrim
@@ -748,12 +740,8 @@ existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
 faccessat
 failed to load miles library
-failed to send volume command
-failed to set bluetooth autoswitch
-failed to set mono audio
 failed to set sink input mute
 failed to set sink input volume
-failed to toggle mute
 fallocate64
 false
 fclose
@@ -816,6 +804,7 @@ headphones
 headset
 hidden alias for
 hifi
+iB{0N
 iec958.codecs.detected
 info.m_pReplacementString == 0
 initializer for module
@@ -823,6 +812,7 @@ ioctl
 isspace
 java Class for
 java resource
+latency
 lchown
 ld-linux-x86-64.so.2
 len > 0 || HasError()
@@ -979,7 +969,9 @@ pa_ext_device_restore_save_formats
 pa_ext_device_restore_set_subscribe_cb
 pa_ext_device_restore_subscribe
 pa_format_info_new
+pa_gettimeofday
 pa_operation_cancel
+pa_operation_get_state
 pa_operation_unref
 pa_proplist_free
 pa_proplist_gets
@@ -1000,12 +992,16 @@ pa_threaded_mainloop_get_api
 pa_threaded_mainloop_in_thread
 pa_threaded_mainloop_lock
 pa_threaded_mainloop_new
+pa_threaded_mainloop_signal
 pa_threaded_mainloop_start
 pa_threaded_mainloop_stop
 pa_threaded_mainloop_unlock
+pa_threaded_mainloop_wait
+pa_timeval_add
 pclose
 phone
 pipewire-pulse:bluetooth-headset-autoswitch
+pipewire-pulse:bluetooth-profile-preference
 pipewire-pulse:force-mono-output
 playback
 popen
@@ -1024,6 +1020,7 @@ pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pwrite64
+quality
 radio
 random_device could not be read
 random_device: getentropy failed
@@ -1121,6 +1118,7 @@ symlink
 syntax error at line %d near:
 syscall
 system
+t?Hm
 template
 template parameter object for
 terminate called after throwing an instance of '

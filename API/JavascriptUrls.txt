@@ -3161,7 +3161,6 @@ steam://
 steam://${path}
 steam://broadcast/watch/${steamid64}
 steam://cdkeys/${appid}
-steam://changeuser
 steam://checkforupdates
 steam://checkout_return/paypal_cancel/
 steam://checkout_return/paypal_success/
@@ -3253,7 +3252,6 @@ steam://settings/account${}
 steam://settings/broadcast
 steam://settings/downloads
 steam://settings/ingame
-steam://signout
 steam://stopstreaming
 steam://store
 steam://store/${appid}
