@@ -3950,11 +3950,11 @@
           children: n,
         });
       }
-      var Q = n(28491),
-        J = n(53965),
-        X = n(83392),
-        $ = n(90534),
-        ee = n(20187),
+      var Q = n(53965),
+        J = n(83392),
+        X = n(90534),
+        $ = n(20187),
+        ee = n(28491),
         te = n(13904),
         ne = n(12229),
         ie = n(93332),
@@ -4233,13 +4233,13 @@
           });
         return s.length < 1
           ? null
-          : (0, i.jsx)($.az, {
+          : (0, i.jsx)(X.az, {
               flexGrow: "0",
               children: (0, i.jsxs)(ye.l6.Root, {
                 state: a,
                 children: [
                   (0, i.jsx)(ye.l6.Trigger, {
-                    children: (0, i.jsx)(ee.EY, {
+                    children: (0, i.jsx)($.EY, {
                       children: (0, w.we)("#Cart_Gifting_CopyGiftOptionsFrom"),
                     }),
                   }),
@@ -4272,7 +4272,7 @@
               persona: r,
             })
           : (0, i.jsx)(i.Fragment, {});
-        return (0, i.jsxs)(X.s, {
+        return (0, i.jsxs)(J.s, {
           minWidth: "0",
           align: "center",
           justify: "between",
@@ -4280,7 +4280,7 @@
           maxWidth: "600px",
           children: [
             (0, i.jsx)("div", { children: s.GetName() }),
-            (0, i.jsxs)(X.s, { gap: "1", align: "center", children: [c, o] }),
+            (0, i.jsxs)(J.s, { gap: "1", align: "center", children: [c, o] }),
           ],
         });
       }
@@ -4586,10 +4586,10 @@
           ? null
           : (0, i.jsx)("div", {
               className: _e().SignInLink,
-              children: (0, w.oW)(
-                "#Cart_Gifting_SignInToSelectFriends",
-                (0, i.jsx)(Q.W, { onClick: () => (0, j.vg)() }),
-              ),
+              children: (0, i.jsx)(Q.$, {
+                onClick: () => (0, j.vg)(),
+                children: (0, w.we)("#Cart_Gifting_SignInForFriends"),
+              }),
             });
       }
       function Ke(e) {
@@ -4608,7 +4608,7 @@
         return (0, i.jsxs)(i.Fragment, {
           children: [
             S.iA.logged_in &&
-              (0, i.jsx)(J.$, {
+              (0, i.jsx)(Q.$, {
                 onClick: () => r(!0),
                 children: (0, w.we)("#Cart_SelectRecipient"),
               }),
@@ -4634,7 +4634,7 @@
             }),
               n();
           }, [s, t, n]);
-        return (0, i.jsx)(J.$, {
+        return (0, i.jsx)(Q.$, {
           color: "dull",
           onClick: r,
           children: (0, w.we)("#Cart_EnterRecipientEmail"),
@@ -4644,7 +4644,7 @@
         const { lineItem: t } = e,
           n = (0, ce.$)(t);
         return n
-          ? (0, i.jsxs)(X.s, {
+          ? (0, i.jsxs)(J.s, {
               align: "center",
               children: [
                 (0, i.jsx)("a", {
@@ -4736,7 +4736,7 @@
         return (0, i.jsxs)(ot, {
           children: [
             (0, i.jsx)("div", { className: _e().GiftFormDivider }),
-            (0, i.jsxs)(X.s, {
+            (0, i.jsxs)(J.s, {
               justify: "between",
               gap: "3",
               direction: { initial: "column-reverse", md: "row" },
@@ -4779,7 +4779,7 @@
       }
       function $e(e) {
         const { onEmailRecipient: t, ...n } = e;
-        return (0, i.jsxs)(X.s, {
+        return (0, i.jsxs)(J.s, {
           align: "center",
           gap: "2",
           marginStart: "2",
@@ -4802,17 +4802,17 @@
         return n
           ? r
             ? null
-            : (0, i.jsx)($.az, {
+            : (0, i.jsx)(X.az, {
                 marginTop: "3",
                 className: _e().GiftNonFriendWarning,
-                children: (0, i.jsxs)(ee.EY, {
+                children: (0, i.jsxs)($.EY, {
                   size: "3",
                   color: "amber-9",
                   children: [
                     S.iA.logged_in &&
                       (0, w.PP)(
                         "#Cart_Warning_GiftToNonFriend_Named",
-                        (0, i.jsx)(Q.Y, {
+                        (0, i.jsx)(ee.Y, {
                           target: "_blank",
                           href: n.GetCommunityProfileURL(),
                           children: n.m_strPlayerName,
@@ -4821,7 +4821,7 @@
                     !S.iA.logged_in &&
                       (0, w.oW)(
                         "#Cart_Warning_GiftToAccount_LoggedOut_Actionable",
-                        (0, i.jsx)(Q.W, {
+                        (0, i.jsx)(ee.W, {
                           color: "text-light",
                           contrast: "title",
                           onClick: () => (0, j.vg)(),
