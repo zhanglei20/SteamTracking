@@ -281,7 +281,7 @@ div.gPCB6myPBsc- {
 ._8MgL3GQMdss- {
   align-items: flex-start;
   gap: 10px;
-  margin: 5px 0 15px;
+  margin: 5px 0 10px;
   display: flex;
 }
 ._8MgL3GQMdss- ._3TPQhhYp6Ss- {
@@ -293,7 +293,7 @@ div.gPCB6myPBsc- {
   }
 }
 .BkLwnStWSSw- {
-  margin: 5px 0 15px;
+  margin: 5px 0 10px;
   display: none;
 }
 @media screen and (width <= 500px) {
@@ -405,7 +405,7 @@ html.responsive.GamepadMode .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
 @media screen and (width <= 500px) {
   html.responsive.responsive .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
     height: unset;
-    grid-template: "dragger tags tags remove" 30px "dragger capsule capsule capsule" "dragger title title title" 28px "dragger mid mid mid" 25px "dragger lower lower lower" 28px "dragger purchase purchase purchase" 40px / fit-content(
+    grid-template: "dragger tags tags remove" 30px "dragger capsule capsule capsule" "dragger title title title" 28px "dragger mid mid mid" 25px "dragger lower lower lower" 42px "dragger purchase purchase purchase" 40px / fit-content(
         0
       ) fit-content(100px) 1fr auto;
     width: 100%;
@@ -515,6 +515,11 @@ html.responsive.GamepadMode .PE-3oq-yIvg-:not(.-SAg8UMCWZ4-) {
 .PE-3oq-yIvg-.-SAg8UMCWZ4- .I8vuMMV-osE- {
   font-size: 18px;
 }
+@media screen and (width <= 500px) {
+  html.responsive.responsive .PE-3oq-yIvg-.-SAg8UMCWZ4- .I8vuMMV-osE- {
+    font-size: 16px;
+  }
+}
 ._0UzrbG3z3ug- {
   grid-area: dragger;
 }
@@ -596,6 +601,18 @@ html.responsive.GamepadMode .eX2oOjw5sGc- {
   html.responsive .uQ8Li0MwEhQ- {
     gap: 8px;
   }
+}
+@media screen and (width <= 500px) {
+  html.responsive.responsive .uQ8Li0MwEhQ- {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+@media screen and (width <= 910px) {
+  .GamepadMode .uQ8Li0MwEhQ- {
+    flex-direction: column;
+    gap: 5px !important;
+  }
   html.responsive .-SAg8UMCWZ4- .uQ8Li0MwEhQ- {
     flex-direction: row;
     justify-self: flex-start;
@@ -603,8 +620,7 @@ html.responsive.GamepadMode .eX2oOjw5sGc- {
   }
 }
 @media screen and (width <= 500px) {
-  html.responsive.responsive .-SAg8UMCWZ4- .uQ8Li0MwEhQ-,
-  html.responsive.responsive .uQ8Li0MwEhQ-.NY-NYU5x6-s- .TU39sK7r2pU- {
+  html.responsive.responsive .-SAg8UMCWZ4- .uQ8Li0MwEhQ- {
     display: none;
   }
 }
@@ -612,6 +628,9 @@ html.responsive.GamepadMode .eX2oOjw5sGc- {
   html.responsive .uQ8Li0MwEhQ- .TU39sK7r2pU- {
     display: none;
   }
+}
+.GamepadMode .uQ8Li0MwEhQ- .TU39sK7r2pU- {
+  display: block !important;
 }
 @media screen and (width <= 500px) {
   html.responsive.responsive .uQ8Li0MwEhQ- .TU39sK7r2pU- {
@@ -2966,7 +2985,7 @@ body.in_global_drag .title-area {
 }
 @media screen and (width <= 500px) {
   html.responsive.responsive .PLkUpk974nY-:not(.pcLljC6uYLs-) {
-    --item-height: 316px;
+    --item-height: 330px;
     --item-gap: 10px;
   }
 }
