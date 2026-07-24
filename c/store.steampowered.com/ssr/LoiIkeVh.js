@@ -9052,104 +9052,6 @@ function _(_) {
     ],
   });
 }
-function _(_) {
-  let { itemid: _ } = _,
-    { bIsOwned: _, unAppID: _ } = _(_);
-  return _.logged_in
-    ? _
-      ? (0, _.jsx)(_, {
-          appid: _,
-        })
-      : (0, _.jsx)(_, {
-          itemid: _,
-        })
-    : (0, _.jsx)(_, {
-        strToolTip: _.Localize(`#SignInToAddToLibrary_Tooltip`),
-      });
-}
-function _(_) {
-  let { mutate: _ } = _(_.itemid);
-  return (0, _.jsx)(_, {
-    onClick: () => _(),
-    children: _.Localize(`#AddToLibraryButton`),
-  });
-}
-var _ = _.lazy(() =>
-  _(
-    () => import(`./Df27La_9.js`),
-    __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]),
-    import.meta.url,
-  ),
-);
-function _(_) {
-  let { purchaseOption: _, nAccountIDGiftee: _ } = _;
-  if (!_) return null;
-  if (_.is_free_to_keep)
-    return (0, _.jsx)(_, {
-      itemid: {
-        packageid: _.packageid,
-      },
-    });
-  if (_.packageid)
-    return (0, _.jsx)(_, {
-      packageid: _.packageid,
-      nAccountIDGiftee: _,
-    });
-  if (_.bundleid)
-    return (0, _.jsx)(_, {
-      bundleid: _.bundleid,
-      nAccountIDGiftee: _,
-    });
-  throw `Purchase option does not have package or bundle associated`;
-}
-var _ = _.memo(function (_) {
-    return _(_.packageid, void 0, _.nAccountIDGiftee);
-  }),
-  _ = _.memo(function (_) {
-    return _(void 0, _.bundleid, _.nAccountIDGiftee);
-  });
-function _(_, _, _) {
-  let { data: _ } = _(),
-    [_, _] = _.useState(void 0),
-    _ = _.useMemo(() => _(_, _, _), [_, _, _]),
-    { mutate: _ } = _(_, _, _ || !!_, _);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      _ &&
-        (0, _.jsx)(_.Suspense, {
-          children: (0, _.jsx)(_, {
-            lineItemIDs: _,
-            closeCart: () => _(void 0),
-          }),
-        }),
-      _
-        ? (0, _.jsx)(_, {})
-        : (0, _.jsx)(_, {
-            bIsGift: !!_,
-            addToCart: () => {
-              _(void 0, {
-                onSuccess: (_) => _(_),
-              });
-            },
-          }),
-    ],
-  });
-}
-function _() {
-  return (0, _.jsx)(_, {
-    href: `${_.STORE_BASE_URL}cart/`,
-    children: _.Localize(`#AddToCartButton_InCart`),
-  });
-}
-function _(_) {
-  let { addToCart: _, bIsGift: _ } = _;
-  return (0, _.jsx)(_, {
-    onClick: _,
-    children: _
-      ? _.Localize(`#AddToCartButton_PurchaseAsGift`)
-      : _.Localize(`#AddToCartButton_AddToCart`),
-  });
-}
 var _ = `TM-A57RBJnw-`,
   _ = `sNExYpOoTBo-`,
   _ = `_8h5ZLkHNIx8-`,
@@ -9266,6 +9168,113 @@ function _(_) {
       _: `M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 29C17.4067 29 16.8266 28.8241 16.3333 28.4944C15.8399 28.1648 15.4554 27.6962 15.2284 27.1481C15.0013 26.5999 14.9419 25.9967 15.0577 25.4147C15.1734 24.8328 15.4591 24.2982 15.8787 23.8787C16.2982 23.4591 16.8328 23.1734 17.4147 23.0576C17.9967 22.9419 18.5999 23.0013 19.1481 23.2284C19.6962 23.4554 20.1648 23.8399 20.4944 24.3333C20.8241 24.8266 21 25.4067 21 26C21 26.7956 20.6839 27.5587 20.1213 28.1213C19.5587 28.6839 18.7957 29 18 29ZM21.08 18.15C20.8072 18.2992 20.5779 18.517 20.4149 18.7817C20.2518 19.0465 20.1605 19.3492 20.15 19.66V21H15.85V19.66C15.8546 18.6058 16.1336 17.571 16.6597 16.6575C17.1857 15.744 17.9406 14.9832 18.85 14.45C19.159 14.2565 19.3975 13.9689 19.5306 13.6294C19.6636 13.29 19.6839 12.9169 19.5887 12.565C19.4934 12.2131 19.2876 11.9012 19.0015 11.6752C18.7155 11.4492 18.3644 11.3212 18 11.31C17.7781 11.31 17.5583 11.3537 17.3533 11.4386C17.1482 11.5236 16.9619 11.6481 16.805 11.805C16.6481 11.9619 16.5236 12.1482 16.4387 12.3533C16.3537 12.5583 16.31 12.7781 16.31 13H12C12.0002 11.9508 12.2755 10.9199 12.7984 10.0103C13.3214 9.10064 14.0738 8.34406 14.9805 7.81602C15.8872 7.28799 16.9165 7.00695 17.9657 7.00096C19.015 6.99497 20.0474 7.26423 20.9601 7.78188C21.8728 8.29953 22.6337 9.04747 23.1671 9.95106C23.7004 10.8547 23.9875 11.8823 23.9996 12.9315C24.0117 13.9807 23.7485 15.0147 23.2362 15.9304C22.7239 16.8461 21.9805 17.6114 21.08 18.15Z`,
       fill: `currentColor`,
     }),
+  });
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _(_);
+  return _
+    ? _ === _.k_EDiscountAdditionalInfo_None
+      ? _?.type !== 10
+      : !_ && !_.IN_GAMEPADUI
+    : !1;
+}
+function _(_) {
+  let { itemid: _ } = _,
+    { bIsOwned: _, unAppID: _ } = _(_);
+  return _.logged_in
+    ? _
+      ? (0, _.jsx)(_, {
+          appid: _,
+        })
+      : (0, _.jsx)(_, {
+          itemid: _,
+        })
+    : (0, _.jsx)(_, {
+        strToolTip: _.Localize(`#SignInToAddToLibrary_Tooltip`),
+      });
+}
+function _(_) {
+  let { mutate: _ } = _(_.itemid);
+  return (0, _.jsx)(_, {
+    onClick: () => _(),
+    children: _.Localize(`#AddToLibraryButton`),
+  });
+}
+var _ = _.lazy(() =>
+  _(
+    () => import(`./BcqzyCzo.js`),
+    __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]),
+    import.meta.url,
+  ),
+);
+function _(_) {
+  let { purchaseOption: _, nAccountIDGiftee: _ } = _;
+  if (!_) return null;
+  if (_.is_free_to_keep)
+    return (0, _.jsx)(_, {
+      itemid: {
+        packageid: _.packageid,
+      },
+    });
+  if (_.packageid)
+    return (0, _.jsx)(_, {
+      packageid: _.packageid,
+      nAccountIDGiftee: _,
+    });
+  if (_.bundleid)
+    return (0, _.jsx)(_, {
+      bundleid: _.bundleid,
+      nAccountIDGiftee: _,
+    });
+  throw `Purchase option does not have package or bundle associated`;
+}
+var _ = _.memo(function (_) {
+    return _(_.packageid, void 0, _.nAccountIDGiftee);
+  }),
+  _ = _.memo(function (_) {
+    return _(void 0, _.bundleid, _.nAccountIDGiftee);
+  });
+function _(_, _, _) {
+  let { data: _ } = _(),
+    [_, _] = _.useState(void 0),
+    _ = _.useMemo(() => _(_, _, _), [_, _, _]),
+    { mutate: _ } = _(_, _, _ || !!_, _);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      _ &&
+        (0, _.jsx)(_.Suspense, {
+          children: (0, _.jsx)(_, {
+            lineItemIDs: _,
+            closeCart: () => _(void 0),
+          }),
+        }),
+      _
+        ? (0, _.jsx)(_, {})
+        : (0, _.jsx)(_, {
+            bIsGift: !!_,
+            addToCart: () => {
+              _(void 0, {
+                onSuccess: (_) => _(_),
+              });
+            },
+          }),
+    ],
+  });
+}
+function _() {
+  return (0, _.jsx)(_, {
+    href: `${_.STORE_BASE_URL}cart/`,
+    children: _.Localize(`#AddToCartButton_InCart`),
+  });
+}
+function _(_) {
+  let { addToCart: _, bIsGift: _ } = _;
+  return (0, _.jsx)(_, {
+    onClick: _,
+    children: _
+      ? _.Localize(`#AddToCartButton_PurchaseAsGift`)
+      : _.Localize(`#AddToCartButton_AddToCart`),
   });
 }
 var _ = `tPinc5p8M44-`,
@@ -9742,7 +9751,7 @@ function _(_) {
     }),
     _ = !_?.is_coming_soon;
   return (0, _.jsxs)(`div`, {
-    className: (0, _.default)(_, _ && `NY-NYU5x6-s-`),
+    className: _,
     children: [
       (0, _.jsx)(_, {
         appid: _,
@@ -9952,15 +9961,6 @@ function _(_) {
           children: _,
         }),
       });
-}
-function _(_, _) {
-  let _ = _(),
-    _ = _(_);
-  return _
-    ? _ === _.k_EDiscountAdditionalInfo_None
-      ? _?.type !== 10
-      : !_ && !_.IN_GAMEPADUI
-    : !1;
 }
 var _ = parseInt(_),
   _ = _.memo(function (_) {
