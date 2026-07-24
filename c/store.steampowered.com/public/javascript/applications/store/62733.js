@@ -5056,12 +5056,10 @@
           ? null
           : (0, _.jsx)("div", {
               className: _().SignInLink,
-              children: (0, _._)(
-                "#Cart_Gifting_SignInToSelectFriends",
-                (0, _.jsx)(_._, {
-                  onClick: () => (0, _._)(),
-                }),
-              ),
+              children: (0, _.jsx)(_._, {
+                onClick: () => (0, _._)(),
+                children: (0, _._)("#Cart_Gifting_SignInForFriends"),
+              }),
             });
       }
       function _(_) {
