@@ -2382,11 +2382,13 @@ ${FILENAME}
 '\n"k_EStreamControlSetQualityOverride
 '\n#k_EBanContentCheckResult_NotScanned
 '\n#k_EBanContentCheckResult_VeryLikely
+'\n#k_EBluetoothAudioPreference_Latency
+'\n#k_EBluetoothAudioPreference_Quality
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
-'\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
 '\n#k_EControllerElementTypeButtonStart
@@ -2883,7 +2885,9 @@ ${FILENAME}
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
 )\n%k_EContentDescriptor_AnyMatureContent
+)\n%k_EContentModerationSanction_Escalate
 )\n%k_EContentReportReason_Discrimination
+)\n%k_EContentReportReason_Miscategorized
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Sanctioned
@@ -3179,8 +3183,6 @@ ${FILENAME}
 +(VKV
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;
-++CCUNG`
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -3233,7 +3235,6 @@ ${FILENAME}
 +\n#packets_recv_out_of_order_corrected
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
-+\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
@@ -3521,9 +3522,11 @@ ${FILENAME}
 --display_index
 --enable
 --enable-audio
+--enable-av1
 --enable-hevc
 --enable-input
 --enable-microphone
+--enable-pyrowave
 --enable-video
 --env-fd=%d
 --forward-fd=%d
@@ -3555,6 +3558,8 @@ ${FILENAME}
 --transport
 --universe
 --vsync
+--vulkan
+--wayland
 --windowed
 -.jJJ
 -0123456789
@@ -4455,17 +4460,17 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
-0/bu^U
-0000000000000000000000000000000000000000
 0.06
+0/bu^U
 0/gge
-0123456789.
-0123456789
+0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00\fo
 01%3
 01%6
 01%66754&#"
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -4475,8 +4480,6 @@ ${FILENAME}
 0123456789abcdefghijklmnopqrstuvwxyz
 01E)
 0365<?:9(+.-$'"!`cfelojix{~}twrqPSVU\_ZYHKNMDGBA
-03:27:44
-03:27:47
 04!j
 04:3
 057FW
@@ -4799,6 +4802,7 @@ ${FILENAME}
 12CStreamQueueIP18CAVCodecVideoFrameE
 12CStreamQueueIP7CLogMsgE
 12CVideoFormat
+12CVulkanAccel
 12d:
 12i{ia(
 12t)$
@@ -4844,6 +4848,8 @@ ${FILENAME}
 14CMessageObject
 14CMsgAuthTicket
 14COverlayDialog
+14CPyrowaveAccel
+14CPyrowaveFrame
 14CRecordedInput
 14CServerManager
 14CShowCursorMsg
@@ -5060,6 +5066,7 @@ ${FILENAME}
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentHubDiscountFilterType_DiscountsOnly
 1\n-k_EContentModerationSanction_HarassmentBanned
+1\n-k_EContentModerationSanction_HarassmentStrike
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -5235,6 +5242,8 @@ ${FILENAME}
 21StoreItem_Screenshots
 21UserSystemInformation
 21\oi
+22:11:09
+22:11:12
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -5861,6 +5870,7 @@ ${FILENAME}
 3[6U#
 3\fsg
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EStreamControllerConfigMsg_ActiveConfigChange
@@ -5960,6 +5970,7 @@ ${FILENAME}
 4/Ji
 4/Kv#b
 40#Au
+4096
 40CHIDMessageFromRemote_DeviceInputReports
 40CMsgSteamDatagramCachedCredentialsForApp
 40CMsgSteamDatagramClientPingSampleRequest
@@ -6016,7 +6027,6 @@ ${FILENAME}
 46$a
 467&&54632
 467.
-4096
 4632
 46632
 4676654&#"
@@ -6242,7 +6252,6 @@ ${FILENAME}
 52{M
 52|{k
 531lo
-532654.
 532>
 536654#!5!
 53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
@@ -6257,6 +6266,7 @@ ${FILENAME}
 5467
 54632
 54663
+532654.
 546632
 5467!
 5467#".
@@ -6479,10 +6489,10 @@ ${FILENAME}
 6654#"
 6654&#"
 6675
+67!5!
 675!
 6753
 666666666666666666666666666666666666666666666666
-67!5!
 6754&#"
 67547&55&'7
 6786
@@ -6675,12 +6685,12 @@ ${FILENAME}
 74&'3
 754.
 7524
+7623.
 74632
 75#5!
 75pRD
 75th
 76&'3
-7623.
 7664&#"
 76653
 76654&#"
@@ -6798,7 +6808,6 @@ ${FILENAME}
 7\n\faudio_config
 7\n\nactionsets
 7\n\ninput_mode
-7\n\tStoreItem
 7\n\tenum_type
 7\tKuMs1
 7\trF
@@ -6989,6 +6998,7 @@ ${FILENAME}
 8\n\ndevelopers
 8\n\nfranchises
 8\n\npublishers
+8\n\tStoreItem
 8\n\textension
 8\n\vp2p_routing
 8\n\vquality_e2e
@@ -10110,6 +10120,11 @@ CPU_MHZ
 CPackageReservationStatus
 CPathString
 CPauseControllerInputMsg"
+CPyrowaveAccel: Couldn't unpack frame header\n
+CPyrowaveAccel: pyrowave_create_default_device() failed: %d\n
+CPyrowaveAccel: pyrowave_decoder_create() failed: %d
+CPyrowaveAccel: pyrowave_decoder_decode_cpu_buffer_synchronous() failed: %d
+CPyrowaveAccel: pyrowave_decoder_push_packet() failed: %d
 CQ)s
 CQ*(h
 CQ/u{
@@ -10327,6 +10342,12 @@ CVirtualHereReadyMsg
 CVirtualHereRequestMsg
 CVirtualHereShareDeviceMsg
 CVixs;g
+CVulkanAccel: Couldn't create texture: %s\n
+CVulkanAccel: Not using a Vulkan renderer
+CVulkanAccel: Unknown frame format: %d\n
+CVulkanAccel: av_hwdevice_ctx_create() failed: %d\n
+CVulkanAccel: av_hwdevice_ctx_init() failed: %d\n
+CVulkanAccel: av_hwframe_map() failed: %d\n
 CW6\
 CWN{+
 CWWCBVV
@@ -10552,6 +10573,8 @@ Clavier
 Clavier :
 Clavier virtuel
 CleanRoutesForServerSelection
+CleanupVulkanImage
+CleanupVulkanImageMemory
 Clear auth, redirects scheme from %s to %s
 Clear auth, redirects to port from %u to %u
 ClearField
@@ -10850,6 +10873,7 @@ Couldn't create CURL multi handle\n
 Couldn't create DRM frame\n
 Couldn't create Opus decoder for %d Hz, %d channels: %d\n
 Couldn't create Opus encoder: %d
+Couldn't create a Vulkan video context: %s\n
 Couldn't create curl handle
 Couldn't create directories in path %s\n
 Couldn't create discovery network socket\n
@@ -10857,12 +10881,14 @@ Couldn't create renderer: %s
 Couldn't create socket: %s\n
 Couldn't create window: %s\n
 Couldn't download font, falling back to en_US\n
+Couldn't duplicate file descriptor
 Couldn't extract internal font %d\n
 Couldn't find DRM function %s, DRM support disabled\n
 Couldn't find a streaming game for your account on the local network.
 Couldn't find avatar_url in profile\n
 Couldn't find host %s in the %s file; using defaults
 Couldn't find image %s\n
+Couldn't find memory index for type %u
 Couldn't find persona_name in profile\n
 Couldn't find plane property '%s'\n
 Couldn't find string '%s'\n
@@ -11219,6 +11245,8 @@ DPh]
 DQKKG
 DRCHV
 DRDaY
+DRM Vulkan hardware decoding
+DRM frames with %d objects are not currently supported
 DRMFrameDesc: Expected 1 layer, found %d\n
 DRT\r,
 DRZi
@@ -11709,6 +11737,7 @@ EAsyncGameSessionUserVisibility
 EAu;
 EBCI
 EBanContentCheckResult
+EBluetoothAudioPreference
 EBluetoothDeviceType
 EBroadcastEncoderSetting
 EBroadcastPermission
@@ -11843,7 +11872,6 @@ EC_POINTs_make_affine
 EC_POINTs_mul
 EC_PRIVATEKEY
 ECaptureFailedReason
-EChildProcessQueryCommand
 EChildProcessQueryExitCode
 ECloudGamingPlatform
 ECloudStoragePersistState
@@ -13823,6 +13851,7 @@ IVALIDATE001
 IW/S
 IW^i
 IXIFt\n
+IYUVYUY2
 IYYIHYY
 IYeD
 IYxc\t
@@ -14430,7 +14459,7 @@ Jt("S
 Jtttttt
 Jtwf
 Jugando con %s
-Jul 23 2026
+Jul 24 2026
 July
 June
 Juntar/desliz. 2 dedos
@@ -16130,6 +16159,7 @@ NUMERIC
 NUMERICSTRING
 NUbD
 NUxc
+NV12NV21
 NVSN
 NW@)c
 NW\vSWo
@@ -16841,6 +16871,7 @@ P.I7
 P.smcp
 P/O0
 P00`
+P010
 P1E$>
 P1\t98"
 P1\zM
@@ -17452,8 +17483,6 @@ Port failure on %s was %.1fs ago.  Discarding record of failure on that port, mi
 Port number was not a decimal number between 0 and 65535
 Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
-PosixFileOpen: failed to compute relative path for: %s - %s\n
-PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostTime
 PosterID
@@ -17733,11 +17762,11 @@ PwT"
 Pw`q
 Pwpxp&^
 Px05>
-Px`p
 Py6y
 Py9R,
 PyRd
 Pyrowave
+Pyrowave YUV decoding
 Pys[
 Pyyhk
 Py}Ux
@@ -18664,6 +18693,7 @@ SCT_set_version
 SChK
 SCsc
 SDL Mapping for %x/%x: %s\n
+SDL.display.HDR_enabled
 SDL.joystick.cap.mono_led
 SDL.joystick.cap.player_led
 SDL.joystick.cap.rgb_led
@@ -18671,11 +18701,21 @@ SDL.joystick.cap.rumble
 SDL.renderer.create.name
 SDL.renderer.create.output_colorspace
 SDL.renderer.create.present_vsync
+SDL.renderer.create.vulkan.device
+SDL.renderer.create.vulkan.graphics_queue_family_index
+SDL.renderer.create.vulkan.instance
+SDL.renderer.create.vulkan.physical_device
+SDL.renderer.create.vulkan.present_queue_family_index
+SDL.renderer.create.vulkan.surface
 SDL.renderer.create.window
+SDL.renderer.vulkan.swapchain_image_count
+SDL.texture.create.HDR_headroom
+SDL.texture.create.SDR_white_point
 SDL.texture.create.access
 SDL.texture.create.colorspace
 SDL.texture.create.format
 SDL.texture.create.height
+SDL.texture.create.vulkan.texture
 SDL.texture.create.width
 SDL.texture.opengles2.texture
 SDL.texture.opengles2.texture_u
@@ -18750,6 +18790,7 @@ SDL_GetCurrentVideoDriver
 SDL_GetDesktopDisplayMode
 SDL_GetDisplayBounds
 SDL_GetDisplayName
+SDL_GetDisplayProperties
 SDL_GetDisplays
 SDL_GetError
 SDL_GetGamepadButtonFromString
@@ -18770,6 +18811,7 @@ SDL_GetGamepadType
 SDL_GetGamepadTypeForID
 SDL_GetGamepadVendor
 SDL_GetGamepads
+SDL_GetHint
 SDL_GetHintBoolean
 SDL_GetIOSize
 SDL_GetJoystickGUID
@@ -18800,6 +18842,7 @@ SDL_GetRGB
 SDL_GetRectIntersection
 SDL_GetRectUnion
 SDL_GetRendererName
+SDL_GetRendererProperties
 SDL_GetSensorData
 SDL_GetSensorTypeForID
 SDL_GetSensors
@@ -18839,6 +18882,7 @@ SDL_LoadFunction
 SDL_LoadObject
 SDL_LoadWAV_IO
 SDL_LockJoysticks
+SDL_LogError
 SDL_MOUSE_NORMAL_SPEED_SCALE
 SDL_MOUSE_RELATIVE_SPEED_SCALE
 SDL_MOUSE_TOUCH_EVENTS
@@ -18867,6 +18911,7 @@ SDL_PushEvent
 SDL_PutAudioStreamData
 SDL_Quit
 SDL_QuitSubSystem
+SDL_RENDER_DRIVER
 SDL_RENDER_OPENGL_NV12_RG_SHADER
 SDL_RaiseWindow
 SDL_ReadIO
@@ -18898,6 +18943,7 @@ SDL_SetCurrentThreadPriority
 SDL_SetCursor
 SDL_SetError
 SDL_SetEventEnabled
+SDL_SetFloatProperty
 SDL_SetGamepadLED
 SDL_SetGamepadPlayerIndex
 SDL_SetGamepadSensorEnabled
@@ -18905,6 +18951,7 @@ SDL_SetHint
 SDL_SetLogOutputFunction
 SDL_SetNumberProperty
 SDL_SetPointerProperty
+SDL_SetPointerPropertyWithCleanup
 SDL_SetRenderClipRect
 SDL_SetRenderDrawBlendMode
 SDL_SetRenderDrawColor
@@ -18942,9 +18989,13 @@ SDL_UpdateYUVTexture
 SDL_VIDEO_DRIVER
 SDL_VIDEO_FORCE_EGL
 SDL_VIDEO_X11_WINDOW_VISUALID
+SDL_Vulkan_CreateSurface
+SDL_Vulkan_GetInstanceExtensions
+SDL_Vulkan_GetVkGetInstanceProcAddr
 SDL_WarpMouseInWindow
 SDL_WasInit
 SDL_WriteIO
+SDL_calloc
 SDL_free
 SDL_hid_close
 SDL_hid_device_change_count
@@ -18962,6 +19013,8 @@ SDL_hid_send_feature_report
 SDL_hid_set_nonblocking
 SDL_hid_write
 SDL_iconv_string
+SDL_malloc
+SDL_realloc
 SDL_roundf
 SDL_strcmp
 SDL_strlen
@@ -21196,6 +21249,7 @@ UUUUUUUUUUUUUU<o(
 UUUUUUUUUUUa\f\v
 UW$\r9
 UY,Ta
+UYVY
 UZ\X
 UZb`
 U[`2w
@@ -21330,6 +21384,7 @@ Unknown error %d
 Unknown extra field type %d
 Unknown feature report: %d\n
 Unknown framebuffer format %c%c%c%c\n
+Unknown hardware frame format
 Unknown network config availability %d
 Unknown option
 Unknown orientation %s\n
@@ -21368,6 +21423,7 @@ Unsigned certs are not allowed
 Unspecified
 Unsupported
 Unsupported DH key type %d
+Unsupported DRM format %d
 Unsupported HTTP version (%u.%d) in response
 Unsupported HTTP version in response
 Unsupported HTTP/1 subversion in response
@@ -21503,6 +21559,7 @@ V?wm\v
 V@fO<
 VA43
 VAAPI DRM hardware decoding
+VAAPI Vulkan hardware decoding
 VAAPI X11 hardware decoding
 VAAPI tiled hardware decoding
 VALVE_CRYPTO_dbg_free
@@ -21537,6 +21594,46 @@ VISTA
 VIt
 VKUJ\n\t
 VKZ!Pi
+VK_<Unknown>
+VK_ERROR_<Unknown>
+VK_ERROR_DEVICE_LOST
+VK_ERROR_EXTENSION_NOT_PRESENT
+VK_ERROR_FEATURE_NOT_PRESENT
+VK_ERROR_FORMAT_NOT_SUPPORTED
+VK_ERROR_FRAGMENTED_POOL
+VK_ERROR_INCOMPATIBLE_DISPLAY_KHR
+VK_ERROR_INCOMPATIBLE_DRIVER
+VK_ERROR_INITIALIZATION_FAILED
+VK_ERROR_INVALID_SHADER_NV
+VK_ERROR_LAYER_NOT_PRESENT
+VK_ERROR_MEMORY_MAP_FAILED
+VK_ERROR_NATIVE_WINDOW_IN_USE_KHR
+VK_ERROR_OUT_OF_DATE_KHR
+VK_ERROR_OUT_OF_DEVICE_MEMORY
+VK_ERROR_OUT_OF_HOST_MEMORY
+VK_ERROR_OUT_OF_POOL_MEMORY_KHR
+VK_ERROR_SURFACE_LOST_KHR
+VK_ERROR_TOO_MANY_OBJECTS
+VK_ERROR_VALIDATION_FAILED_EXT
+VK_EVENT_RESET
+VK_EVENT_SET
+VK_EXT_swapchain_colorspace
+VK_INCOMPLETE
+VK_KHR_bind_memory2
+VK_KHR_get_memory_requirements2
+VK_KHR_get_physical_device_properties2
+VK_KHR_maintenance1
+VK_KHR_sampler_ycbcr_conversion
+VK_KHR_swapchain
+VK_KHR_video_decode_av1
+VK_KHR_video_decode_h264
+VK_KHR_video_decode_h265
+VK_KHR_video_decode_queue
+VK_KHR_video_maintenance1
+VK_KHR_video_queue
+VK_NOT_READY
+VK_SUBOPTIMAL_KHR
+VK_TIMEOUT
 VL6=[
 VM*0
 VNqL-\n
@@ -21800,6 +21897,9 @@ VtN0W
 Vu6%
 Vu?N\t?8Ws?vGr?
 Vui l
+Vulkan hardware decoding
+Vulkan: no viable physical devices found
+VulkanVideoContext
 Vuo(
 VvR9)
 Vvu^hE
@@ -22672,6 +22772,7 @@ YS(2qW^j0
 YT]QF;bdqJ>QB30;+
 YU=E
 YUC@
+YUY2UYVYIYUVNV12
 YV<B~Ay
 YV<u
 YW 1
@@ -27621,6 +27722,7 @@ dl_unload
 dladdr
 dlc_data
 dlc_for_unowned_game
+dlc_parent_appids
 dlclose
 dlerror
 dlfcn_bind_func
@@ -28224,6 +28326,7 @@ enums.proto
 enums_productinfo.proto
 enums_productinfo.proto*
 enveloped-data
+environ
 eob@
 eogonek
 eph fakeport #%d
@@ -31201,7 +31304,6 @@ k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
 k_ECaptureFailedReasonNone
 k_ECaptureFailedReasonUnknown
-k_EChildProcessQueryCommand_Max
 k_EChooseModeElementAudioButton
 k_EChooseModeElementAudioVolumeSlider
 k_EChooseModeElementAutoFadeToggleButton
@@ -31326,6 +31428,7 @@ k_EContentReportReason_Gambling
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_None
+k_EContentReportReason_Piracy
 k_EContentReportReason_Raffles
 k_EContentReportReason_Spam
 k_EContentReportReason_Stalking
@@ -32312,7 +32415,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Jul 23 2026 03:27:47
+lib Jul 24 2026 22:11:12
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -32337,6 +32440,7 @@ libm.so.6
 libopenvr_api.so
 libopus 1.1.4
 libpthread.so.0
+libpyrowave-shared.so.0
 library bug
 library has no ciphers
 library_capsule
@@ -35542,6 +35646,12 @@ py08
 py8\f
 pyZp
 py_generic_services
+pyrowave_create_default_device
+pyrowave_decoder_create
+pyrowave_decoder_decode_cpu_buffer_synchronous
+pyrowave_decoder_destroy
+pyrowave_decoder_push_packet
+pyrowave_device_destroy
 pyrs
 pz0S=##=Q.p
 pz1kW
@@ -36113,6 +36223,7 @@ required cipher missing
 required compression algorithm missing
 requires_reservation
 requires_shipping
+requires_signature
 res binder
 res master
 reseed error
@@ -39579,6 +39690,85 @@ visualizaci
 vj#6
 vjNO
 vjkX
+vkAllocateCommandBuffers
+vkAllocateCommandBuffers(): %s
+vkAllocateMemory
+vkAllocateMemory(): %s
+vkBeginCommandBuffer
+vkBindImageMemory
+vkBindImageMemory(): %s
+vkCmdPipelineBarrier2
+vkCreateCommandPool
+vkCreateCommandPool(): %s
+vkCreateDevice
+vkCreateDevice(): %s
+vkCreateImage
+vkCreateImage(): %s
+vkCreateInstance
+vkCreateInstance(): %s
+vkCreateSemaphore
+vkDestroyCommandPool
+vkDestroyDevice
+vkDestroyImage
+vkDestroyInstance
+vkDestroySemaphore
+vkDestroySurfaceKHR
+vkDeviceWaitIdle
+vkEndCommandBuffer
+vkEnumerateDeviceExtensionProperties
+vkEnumerateDeviceExtensionProperties(): %s
+vkEnumerateInstanceExtensionProperties
+vkEnumerateInstanceLayerProperties
+vkEnumeratePhysicalDevices
+vkEnumeratePhysicalDevices(): %s
+vkEnumeratePhysicalDevices(): no physical devices
+vkFreeCommandBuffers
+vkFreeMemory
+vkGetDeviceProcAddr
+vkGetDeviceProcAddr(device, "vkAllocateCommandBuffers") failed
+vkGetDeviceProcAddr(device, "vkAllocateMemory") failed
+vkGetDeviceProcAddr(device, "vkBeginCommandBuffer") failed
+vkGetDeviceProcAddr(device, "vkBindImageMemory") failed
+vkGetDeviceProcAddr(device, "vkCmdPipelineBarrier2") failed
+vkGetDeviceProcAddr(device, "vkCreateCommandPool") failed
+vkGetDeviceProcAddr(device, "vkCreateImage") failed
+vkGetDeviceProcAddr(device, "vkCreateSemaphore") failed
+vkGetDeviceProcAddr(device, "vkDestroyCommandPool") failed
+vkGetDeviceProcAddr(device, "vkDestroyDevice") failed
+vkGetDeviceProcAddr(device, "vkDestroyImage") failed
+vkGetDeviceProcAddr(device, "vkDestroySemaphore") failed
+vkGetDeviceProcAddr(device, "vkDeviceWaitIdle") failed
+vkGetDeviceProcAddr(device, "vkEndCommandBuffer") failed
+vkGetDeviceProcAddr(device, "vkFreeCommandBuffers") failed
+vkGetDeviceProcAddr(device, "vkFreeMemory") failed
+vkGetDeviceProcAddr(device, "vkGetDeviceQueue") failed
+vkGetDeviceProcAddr(device, "vkGetImageMemoryRequirements") failed
+vkGetDeviceProcAddr(device, "vkQueueSubmit") failed
+vkGetDeviceQueue
+vkGetImageMemoryRequirements
+vkGetInstanceProcAddr(VK_NULL_HANDLE, "vkCreateInstance") failed
+vkGetInstanceProcAddr(VK_NULL_HANDLE, "vkEnumerateInstanceExtensionProperties") failed
+vkGetInstanceProcAddr(VK_NULL_HANDLE, "vkEnumerateInstanceLayerProperties") failed
+vkGetInstanceProcAddr(instance, "vkCreateDevice") failed
+vkGetInstanceProcAddr(instance, "vkDestroyInstance") failed
+vkGetInstanceProcAddr(instance, "vkDestroySurfaceKHR") failed
+vkGetInstanceProcAddr(instance, "vkEnumerateDeviceExtensionProperties") failed
+vkGetInstanceProcAddr(instance, "vkEnumeratePhysicalDevices") failed
+vkGetInstanceProcAddr(instance, "vkGetDeviceProcAddr") failed
+vkGetInstanceProcAddr(instance, "vkGetPhysicalDeviceFeatures2") failed
+vkGetInstanceProcAddr(instance, "vkGetPhysicalDeviceMemoryProperties") failed
+vkGetInstanceProcAddr(instance, "vkGetPhysicalDeviceQueueFamilyProperties") failed
+vkGetInstanceProcAddr(instance, "vkGetPhysicalDeviceSurfaceSupportKHR") failed
+vkGetInstanceProcAddr(instance, "vkGetPhysicalDeviceVideoFormatPropertiesKHR") failed
+vkGetInstanceProcAddr(instance, "vkQueueWaitIdle") failed
+vkGetPhysicalDeviceFeatures2
+vkGetPhysicalDeviceMemoryProperties
+vkGetPhysicalDeviceQueueFamilyProperties
+vkGetPhysicalDeviceSurfaceSupportKHR
+vkGetPhysicalDeviceVideoFormatPropertiesKHR
+vkQueueSubmit
+vkQueueSubmit(): %s
+vkQueueWaitIdle
 vkXG
 vkfU
 vlUPG
@@ -39626,10 +39816,13 @@ vstdlib_wcstoui64
 vswprintf
 vt9:G?g
 vtable for
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 vtls/openssl.c
 vty9D
 vuG'
 vuW6
+vulkan
 vvm$a
 vw45~
 vw73
@@ -39765,6 +39958,7 @@ warning_icon
 warning_missing_input
 warning_warring_input
 wayland
+wayland,x11
 wbEq)$
 wbW_0O#
 wchar_t

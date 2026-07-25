@@ -1205,8 +1205,6 @@ message CMsgClientServerTimestampResponse {
 
 message CMsgClientSettings {
 	optional bool no_save_personal_info = 1;
-	optional bool in_client_beta = 3;
-	optional bool is_steam_sideloaded = 4;
 	optional string preferred_monitor = 5;
 	optional bool steam_cef_gpu_blocklist_disabled = 6;
 	optional bool bigpicture_windowed = 7;
@@ -1407,6 +1405,7 @@ message CMsgClientSettings {
 	optional bool steamos_cec_suspend_device = 22021;
 	optional bool steamos_cec_wake_tv = 22022;
 	optional bool steamos_cec_wake_device = 22023;
+	optional bool steamos_ec_logging_enabled = 22024;
 	optional bool setting_validation_bool = 23001;
 	optional int32 setting_validation_enum = 23002 [(.description) = "enum"];
 	optional int32 setting_validation_int32 = 23003;
@@ -2527,6 +2526,107 @@ message CSteamVR_AudioSettings_SettingsChanged_Notification {
 	optional .CSteamVR_AudioSettings_Settings settings = 1;
 }
 
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Controller {
+	optional string serial_number = 1;
+	optional int32 role = 2 [(.description) = "enum"];
+}
+
+message CSteamVR_ControllerPairing_Request {
+	optional .CSteamVR_ControllerPairing_Request_Update update = 1;
+	optional .CSteamVR_ControllerPairing_Request_StartPairing start_pairing = 2;
+	optional .CSteamVR_ControllerPairing_Request_StopPairing stop_pairing = 3;
+	optional .CSteamVR_ControllerPairing_Request_IdentifyController identify_controller = 4;
+	optional .CSteamVR_ControllerPairing_Request_DisconnectController disconnect_controller = 5;
+	optional .CSteamVR_ControllerPairing_Request_DisconnectAllControllers disconnect_all_controllers = 6;
+	optional .CSteamVR_ControllerPairing_Request_UnpairController unpair_controller = 7;
+	optional .CSteamVR_ControllerPairing_Request_UnpairAllControllers unpair_all_controllers = 8;
+	optional .CSteamVR_ControllerPairing_Request_UnpairDisconnectedControllers unpair_disconnected_controllers = 9;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_DisconnectAllControllers {
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_DisconnectController {
+	optional string serial_number = 1;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_IdentifyController {
+	optional string serial_number = 1;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_StartPairing {
+	optional uint32 timeout_seconds = 1;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_StopPairing {
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_UnpairAllControllers {
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_UnpairController {
+	optional string serial_number = 1;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_UnpairDisconnectedControllers {
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerPairing_Request_Update {
+}
+
+message CSteamVR_ControllerPairing_State_Message {
+	optional uint32 total_connection_slots = 1;
+	optional bool is_pairing = 2;
+	repeated .CSteamVR_ControllerPairing_Controller connected_controller = 3;
+	repeated .CSteamVR_ControllerPairing_Controller paired_controller = 4;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerUpdate_Controller {
+	optional string serial_number = 1;
+	optional int32 role = 2 [(.description) = "enum"];
+	optional float progress_pct = 3;
+	optional bool has_started = 4;
+	optional int32 phase = 5 [(.description) = "enum"];
+}
+
+message CSteamVR_ControllerUpdate_Request {
+	optional .CSteamVR_ControllerUpdate_Request_UpdateState update_state = 1;
+	optional .CSteamVR_ControllerUpdate_Request_StartUpdate start_update = 2;
+	optional .CSteamVR_ControllerUpdate_Request_IdentifyController identify_controller = 3;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerUpdate_Request_IdentifyController {
+	optional string serial_number = 1;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerUpdate_Request_StartUpdate {
+	optional string serial_number = 1;
+}
+
+// Used by: common.proto
+message CSteamVR_ControllerUpdate_Request_UpdateState {
+}
+
+message CSteamVR_ControllerUpdate_State_Message {
+	repeated .CSteamVR_ControllerUpdate_Controller controller = 3;
+}
+
+message CSteamVR_GuidedTour_StartPlayspaceSetup {
+}
+
 message CSteamVR_Header {
 	optional int32 type = 1 [(.description) = "enum"];
 	optional uint32 id = 2;
@@ -2547,6 +2647,7 @@ message CSteamVR_MultiLinkStatusUpdate_Message {
 message CSteamVR_OverlayInputFocusChanged_Message {
 	optional string overlay_key = 1;
 	optional uint32 flags = 2;
+	optional uint32 system_panel_interaction_mode = 3;
 }
 
 message CSteamVR_PushOverlayInputFocus_Message {
@@ -2560,13 +2661,6 @@ message CSteamVR_Settings_SetValue_Request {
 	optional int32 int = 4;
 	optional float float = 5;
 	optional string string = 6;
-}
-
-// Used by: common.proto
-message CSteamVR_Vector3 {
-	optional float x = 1;
-	optional float y = 2;
-	optional float z = 3;
 }
 
 message CSteamVR_VoiceChat_Active_Notification {
@@ -2662,17 +2756,6 @@ message CSteamVR_VoiceChat_SetPerUserVideo_Request {
 }
 
 message CSteamVR_VoiceChat_SetPerUserVideo_Response {
-}
-
-message CSteamVR_VoiceChat_SetSpatialAudioListener_Notification {
-	optional .CSteamVR_Vector3 position = 1;
-	optional .CSteamVR_Vector3 forward = 2;
-	optional .CSteamVR_Vector3 up = 3;
-}
-
-message CSteamVR_VoiceChat_SetSpatialAudioSource_Notification {
-	optional fixed64 steamid = 1;
-	optional .CSteamVR_Vector3 position = 2;
 }
 
 message CSteamVR_VRGamepadUI_Message {
@@ -3398,6 +3481,7 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	repeated uint32 supersample_effective_resolution = 15;
 	optional uint32 frames_to_throttle_value = 20;
 	optional bool motion_smoothing_value = 21;
+	optional uint32 gamescope_framerate_limit = 22;
 	optional bool env_theater_active = 30;
 	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_theater = 31;
 	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_nominal = 32;
@@ -3405,6 +3489,8 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	optional bool perf_graph_in_hmd_value = 51;
 	optional bool record_vr_stats_value = 52;
 	optional bool record_tracking_value = 53;
+	optional string performance_profile_name = 54;
+	optional string playtime_profile_name = 55;
 }
 
 message CVRGamepadUIShared_PathProperty_PowerOptions {

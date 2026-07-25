@@ -1864,6 +1864,7 @@ long long
 lower
 lpHP
 lseek
+m\S6D8`;
 malloc
 map keys are not unique
 map<$0, $1>

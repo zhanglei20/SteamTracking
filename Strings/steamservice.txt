@@ -171,7 +171,6 @@
 !V_isempty( prefix )
 !V_isempty( suffix )
 !V_isempty( svHostname )
-!Wpd
 !\fmHs8
 !bAsDatagram
 !g_VProfile
@@ -909,9 +908,8 @@ $ffn
 (%p) Disconnecting HTTP connection due to !BAsyncSendPartialBody\n
 (%p) Disconnecting HTTP connection due to SSL failure: %s(%d)\n
 (%p) Fatal HTTP2 error in nghttp2_session_mem_recv (%s)\n
+(%p) Fatal HTTP2 error in nghttp2_session_send (%s)\n
 (%p) Fatal HTTP2 error in nghttp2_session_send after init (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send after recv (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send during initial request submit (%s)\n
 (%p) HTTP request connecting to %s\n
 (%p) HTTP request resolved %s to %s. Now checking proxy.\n
 (%p) HTTP request resolving %s\n
@@ -926,7 +924,7 @@ $ffn
 (%p) Sending request for http%s://%s%s - Stale Timeout %u\n
 (%p) State to %s is now k_EHTTPClientConnectionState_WAITING_RESPONSELINE_VERSION\n
 (%p) TLS handshake was not valid for SNI hostname '%s', disconnecting\n
-(%p) no more requests allowed on HTTP session (%s)\n
+(%p) no more requests allowed on HTTP session\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 ((idx) < (context)->hd_table.len + 61)
@@ -940,6 +938,7 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
+(1@K5
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1210,9 +1209,8 @@ $ffn
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG rm
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;pm
-++CCUNG`xm
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1679,16 +1677,18 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00000000
-00:00:00
-01/01/00
+1000
+1024
+10000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-03:27:44
 08bX
 0?0L
 0A/8
@@ -1732,9 +1732,6 @@ $ffn
 1.5M
 10.0.0.0/8
 100 127.0.0.1 stale
-1000
-1024
-10000
 10CIPCServer
 10CNetFilter
 10CPipeEvent
@@ -2231,6 +2228,7 @@ $ffn
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
 21UserSystemInformation
+22:11:09
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2423,11 +2421,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2540,6 +2538,7 @@ $ffn
 :':+:1:K:Q:[:c:g:m:y:
 :.JlN
 :5ptI.T(
+:7A0
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -2559,7 +2558,6 @@ $ffn
 :scheme
 :statu
 :status
-:wA0
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -4976,7 +4974,6 @@ EC_POINT_set_to_infinity
 EC_POINTs_make_affine
 EC_POINTs_mul
 EC_PRIVATEKEY
-EChildProcessQueryCommand
 EClanAccountType
 EClanAction
 EClanEventType
@@ -5678,7 +5675,6 @@ Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got completed conditional request dispatched to client cache, but no data for it in our map?
 Got frame type %d for stream %d\n
-GpuTopology
 GrabPay
 Greek
 Greenlight Items
@@ -6179,7 +6175,7 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul 23 2026
+Jul 24 2026
 July
 June
 K'iche'
@@ -6913,7 +6909,7 @@ No site licenses found
 No subscription
 No tracked allocs currently in use. Total %d\n
 No verified phone number
-No waiting requests for %s\n
+No waiting requests (or no free capacity) for %s\n
 NoInternet
 NoLAN
 NoRenegotiation
@@ -7501,8 +7497,6 @@ Poly1305
 Polynomial:
 Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
-PosixFileOpen: failed to compute relative path for: %s - %s\n
-PosixFileOpen: failed to get path fd for: %s - %s\n
 PostRecv
 PostedAnnouncement
 Pragma
@@ -8197,9 +8191,9 @@ Send Proxied Owner
 Send Proxied Router
 Send Router
 SendSAS
-Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
+Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
 September
 Serbian
@@ -9811,6 +9805,7 @@ Zulu
 \x%02x
 ]JldN
 ]gy73
+]uw9\r
 ^1kW3
 ^4MZ
 ^CuY
@@ -12125,6 +12120,7 @@ enum
 enums_clientserver.proto
 enums_clientserver.proto*
 enveloped-data
+environ
 epoch
 epoll_create
 epoll_ctl
@@ -15064,6 +15060,7 @@ m_memPSK
 m_nAllocationCount >= 0
 m_nEpollSet >= 0
 m_nEventCount == 0
+m_nHTTP2CallbackDepth > 0
 m_nPollFd >= 0
 m_nPostFd >= 0
 m_nRecursions > 0

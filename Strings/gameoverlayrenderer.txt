@@ -47,6 +47,8 @@ $ORIGIN
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG1
+++CCUNGV
 ++CCUNGstd::exception
 ----------------------------\n
 /ValveIPCSHM_%d
@@ -645,6 +647,7 @@ eglGetPlatformDisplayEXT
 eglGetProcAddress
 en_US.UTF-8
 enable
+environ
 exec
 execv
 execvp

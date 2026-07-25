@@ -195,7 +195,6 @@ $\nY8O
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGstd::exception
-++CCUNGu
 +ulsX
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
@@ -273,8 +272,6 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-03:27:44
-03:27:45
 0F`8
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -287,6 +284,8 @@ $\nY8O
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
+22:11:09
+22:11:10
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
@@ -426,7 +425,7 @@ IsSpewActive
 IsValidIndex( elem )
 JArray
 JZJ{.
-Jul 23 2026
+Jul 24 2026
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
@@ -848,6 +847,7 @@ double
 dprintf
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
+environ
 exec
 execv
 execvp

@@ -16,7 +16,7 @@
         u = s(67808),
         d = s(73259),
         c = s(45264),
-        l = s(38134),
+        l = s(44829),
         h = s(64608),
         m = s(10606),
         x = s(46108),
@@ -165,4 +165,4 @@
       }
     },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/gamenotes.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/gamenotes.js.map

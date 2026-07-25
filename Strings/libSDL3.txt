@@ -1214,6 +1214,7 @@ Four-way Interleaved
 Frequency ratio is too high
 Frequency ratio is too low
 Full\n
+GAMESCOPE_DISPLAY_EDID_PATH
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GDK_SCALE
 GET_ATTRIBUTES_VALUES failed for controller %p\n
@@ -1655,6 +1656,8 @@ Malformed SDL_DateTime: nanosecond out of range [0-999999999], current: %i
 Malformed SDL_DateTime: second out of range [0-60], current: %i
 Manufacturer Code: %s\n
 Mapping not available
+Max frame average luminance %f\n
+Max luminance: %f\n
 MaxRealtimePriority
 MediaFastForward
 MediaPause
@@ -1675,6 +1678,7 @@ Metal is not supported.
 Microsoft.Xbox.Input.ArcadeStick
 Microsoft.Xbox.Input.FlightStick
 Microsoft.Xbox.Input.Wheel
+Min luminance: %f\n
 MinNiceLevel
 Missing APP_ID
 Missing data chunk in WAVE file
@@ -2123,7 +2127,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1163-g2d7f30078
+SDL-release-3.4.0-1196-g0d21a1aa7
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -4026,6 +4030,7 @@ SDL_WriteU64BE
 SDL_WriteU64LE
 SDL_WriteU8
 SDL_X11_FORCE_OVERRIDE_REDIRECT
+SDL_X11_SDR_WHITE_LEVEL
 SDL_X11_WINDOW_TYPE
 SDL_X11_XCB_LIBRARY
 SDL_abs
@@ -4292,6 +4297,7 @@ SteamAPI_ISteamRemoteStorage_GetQuota
 SteamAPI_ISteamRemoteStorage_IsCloudEnabledForAccount
 SteamAPI_ISteamRemoteStorage_IsCloudEnabledForApp
 SteamAPI_SteamRemoteStorage_v016
+SteamDeck
 SteamRemoteStorage only supports INT32_MAX read size
 SteamRemoteStorage only supports INT32_MAX write size
 SteamRemoteStorage unavailable
