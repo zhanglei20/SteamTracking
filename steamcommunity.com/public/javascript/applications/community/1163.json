@@ -240,6 +240,7 @@
     "Filter_ViewResults": "Ver resultados",
     "Results_GridView_Tooltip": "Exibir em grade",
     "Results_ListView_Tooltip": "Exibir em lista",
+    "Results_InitialLoadError": "Houve um problema ao carregar os resultados. Tente novamente mais tarde.",
     "Results_PageLoadError": "Houve um problema ao carregar resultados adicionais. Tente novamente mais tarde.",
     "Market_AppUnplayedAndUnvetted": "Você está tentando acessar um item de um jogo novo no Steam que você nunca jogou. Tenha cautela.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Clique para exibir o item mesmo assim",
@@ -285,5 +286,16 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Ative o Steam Guard na sua conta. Confirme que o seu endereço de e-mail foi verificado e você já tenha iniciado a sessão com a sua conta após a ativação do Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "A sua conta precisa estar protegida pelo Steam Guard por pelo menos %1$s dias.",
     "Economy_Market_HeaderTip_TimeCanUse": "Caso não haja mais nada que restrinja o seu acesso, você poderá usar o Mercado da Comunidade em %1$s",
-    "Economy_Market_TopLevelReason_TradeCooldown": "A sua conta está suspensa temporariamente de trocar e usar o Mercado."
+    "Economy_Market_TopLevelReason_TradeCooldown": "A sua conta está suspensa temporariamente de trocar e usar o Mercado.",
+    "MyHistory_Title_ItemNameBlock": "Nome",
+    "MyHistory_Title_ListedAtTime": "Data do anúncio",
+    "MyHistory_Title_ActedOnTime": "Data da ação",
+    "MyHistory_Title_TransactedPrice": "Preço",
+    "MyHistory_Title_Action": "Ação",
+    "MyHistory_NoResults": "Nenhum resultado encontrado",
+    "MyHistory_Action_Sold": "Vendido",
+    "MyHistory_Action_Purchased": "Comprado",
+    "Breadcrumbs_Label_History": "Meu histórico",
+    "Breadcrumbs_Label_Listings": "Meus anúncios",
+    "Breadcrumbs_Label_BuyOrders": "Minhas encomendas"
 }

@@ -240,6 +240,7 @@
     "Filter_ViewResults": "Sonuçları Görüntüle",
     "Results_GridView_Tooltip": "Izgara düzeninde göster",
     "Results_ListView_Tooltip": "Liste olarak göster",
+    "Results_InitialLoadError": "Sonuçlar yüklenirken bir sorun oluştu. Lütfen daha sonra tekrar deneyin.",
     "Results_PageLoadError": "Ek sonuçlar yüklenirken bir sorun oluştu. Lütfen daha sonra tekrar deneyin.",
     "Market_AppUnplayedAndUnvetted": "Steam'de daha önce hiç oynamadığınız yeni bir oyunun bir öğesini görüntülemeye çalışıyorsunuz. Bu öğeye şüpheyle yaklaşın.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Yine de bu öğeyi görüntülemek istiyorsanız buraya tıklayın.",
@@ -285,5 +286,16 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Hesabınızda Steam Guard'ı etkinleştirmeniz gerekmektedir. Lütfen e-posta adresinizin doğrulanmış olduğundan ve Steam Guard'ı etkinleştirdikten sonra hesabınıza iki defa giriş yaptığınızdan emin olun.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Hesabınız, en az %1$s gün boyunca Steam Guard ile korunmuş olmalıdır.",
     "Economy_Market_HeaderTip_TimeCanUse": "Erişiminizi engelleyecek başka bir durum oluşmazsa, Topluluk Pazarı'nı %1$s tarihinde kullanabileceksiniz.",
-    "Economy_Market_TopLevelReason_TradeCooldown": "Hesabınıza takas ve Topluluk Pazarı kullanımına yönelik geçici bir bekleme süresi uygulanmıştır."
+    "Economy_Market_TopLevelReason_TradeCooldown": "Hesabınıza takas ve Topluluk Pazarı kullanımına yönelik geçici bir bekleme süresi uygulanmıştır.",
+    "MyHistory_Title_ItemNameBlock": "Ad",
+    "MyHistory_Title_ListedAtTime": "Listelenme zamanı:",
+    "MyHistory_Title_ActedOnTime": "İşlem tarihi:",
+    "MyHistory_Title_TransactedPrice": "Fiyat",
+    "MyHistory_Title_Action": "İşlem",
+    "MyHistory_NoResults": "Sonuç bulunamadı",
+    "MyHistory_Action_Sold": "Satıldı",
+    "MyHistory_Action_Purchased": "Satın Alındı",
+    "Breadcrumbs_Label_History": "Geçmişim",
+    "Breadcrumbs_Label_Listings": "İlanlarım",
+    "Breadcrumbs_Label_BuyOrders": "Satın Alma Talimatlarım"
 }

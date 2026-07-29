@@ -16,6 +16,8 @@
     "VerifiedProgram_DeckDisclaimer": "Este posibil ca trailerul să nu conțină secvențe de joc reale de pe Steam Deck",
     "StoreItemFound": "%1$s găsit (%2$s)",
     "StoreItemNotFound": "Niciun rezultat (%1$s)",
+    "SteamReviewSection_AppID": "Reviews From App",
+    "SteamReviewSection_AppID_ttip": "The app whose Steam reviews are shown in this section, and the app a customer's review is written against.",
     "SteamURLAccepted": "URL-ul %1$s este acceptat",
     "SteamURLInvalid": "Eroare: URL-ul nu este o proprietate Steam (magazin/comunitate)",
     "AnchorHashInputInvalid": "Input nevalid",

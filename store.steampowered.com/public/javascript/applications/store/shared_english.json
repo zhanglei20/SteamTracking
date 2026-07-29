@@ -2961,6 +2961,8 @@
     "MediaConvert_AnimatedWebP_NoSupport": "Do not support animated WebP file as input file",
     "MediaConvert_InputError_DimensionsDontMatchRequirements": "Input media doesn't match require dimensions",
     "MediaConvert_InputError_GifParsingError": "Failed to Parse GIF. Please re-encode or change format type and try again.",
+    "MediaConvert_InputError_ImageTooSmall": "The image is too small. Please upload an image at least 16x16 pixels.",
+    "MediaConvert_InputError_AnimationTooSmall": "The animation or video is too small. Please upload an animation or video at least 64x64 pixels.",
     "MediaConvert_InternalError_FailedToConvert": "Failed to convert this file. Please re-encode file before trying again.",
     "MediaConvert_CloudUpload_ErrorFileType": "Invalid or missing file extension; unable to determine file type (mimetype). Please upload a file with a valid extension.",
     "MediaConvert_CloudUpload_UploadError": "Something went wrong while uploading your file. Please try again in a few minutes.",

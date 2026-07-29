@@ -240,6 +240,7 @@
     "Filter_ViewResults": "Eredmények megnézése",
     "Results_GridView_Tooltip": "Rácsnézet",
     "Results_ListView_Tooltip": "Listanézet",
+    "Results_InitialLoadError": "Probléma adódott a találatok betöltésekor. Próbáld újra később.",
     "Results_PageLoadError": "Probléma adódott a további találatok betöltésekor. Próbáld újra később.",
     "Market_AppUnplayedAndUnvetted": "Egy olyan új Steames játék tárgyát próbálod megnézni, amivel még sosem játszottál. Légy óvatos ezzel a tárggyal.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Kattints ide, hogy mégis megnézd e tárgyat.",
@@ -285,5 +286,16 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Be kell kapcsolnod a Steam Guardot a fiókodon. Kérjük, gondoskodj e-mail-címed hitelesítéséről, és a Steam Guard bekapcsolása után lépj be kétszer a fiókodba.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Fiókodnak legalább %1$s napja Steam Guard védelem alatt kell állnia.",
     "Economy_Market_HeaderTip_TimeCanUse": "Ha nem történik a hozzáférésedet korlátozó egyéb esemény, %1$s időponttól használhatod újra a Közösségi Piacot.",
-    "Economy_Market_TopLevelReason_TradeCooldown": "A fiókod ideiglenesen el van tiltva a Csere és Piac funkcióktól."
+    "Economy_Market_TopLevelReason_TradeCooldown": "A fiókod ideiglenesen el van tiltva a Csere és Piac funkcióktól.",
+    "MyHistory_Title_ItemNameBlock": "Név",
+    "MyHistory_Title_ListedAtTime": "Közzététel",
+    "MyHistory_Title_ActedOnTime": "Acted on",
+    "MyHistory_Title_TransactedPrice": "Ár",
+    "MyHistory_Title_Action": "Művelet",
+    "MyHistory_NoResults": "Nincs találat",
+    "MyHistory_Action_Sold": "Eladás",
+    "MyHistory_Action_Purchased": "Vásárlás",
+    "Breadcrumbs_Label_History": "Előzményeim",
+    "Breadcrumbs_Label_Listings": "Ajánlataim",
+    "Breadcrumbs_Label_BuyOrders": "Vételi ajánlataim"
 }

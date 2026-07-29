@@ -1901,7 +1901,7 @@
                       }),
                       (0, _.jsx)("textarea", {
                         className: (0, _._)(_().OneColumn, _().MessageTextArea),
-                        placeholder: "Message to send",
+                        placeholder: "Message to send (required)",
                         value: _,
                         onChange: (_) => _(_.target.value),
                       }),
@@ -1977,7 +1977,8 @@
                                   }),
                                   _.onSanction();
                               },
-                              disabled: null === _ || !_,
+                              disabled:
+                                null === _ || !_ || 0 === _.trim().length,
                               children: "Sanction",
                             }),
                           ],
@@ -2429,12 +2430,20 @@
       const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function _(_, _) {
         let _ = "0000000000000000000000000000000000000000";
-        var _;
         "string" == typeof _
           ? (_ = _)
           : _ &&
-            ((_ = _),
-            (_ = [..._].map((_) => _.toString(16).padStart(2, "0")).join("")));
+            (_ =
+              (function (_) {
+                if (!_) return "";
+                return (
+                  "function" == typeof _[Symbol.iterator]
+                    ? Array.from(_)
+                    : Object.values(_).filter((_) => "number" == typeof _)
+                )
+                  .map((_) => _.toString(16).padStart(2, "0"))
+                  .join("");
+              })(_) || _);
         let _ = ".jpg";
         "0000000000000000000000000000000000000000" === _ && (_ = _),
           44 == _.length &&

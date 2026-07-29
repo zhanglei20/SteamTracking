@@ -23,6 +23,7 @@
         Takeover: "_9JFhB-CMLoXAyliexUHye",
         TakeoverBody: "_3MCO1BiXD95WdYgL9UTlSJ",
         Instructions: "s_iKU1jabRu1BJhz_7kb7",
+        BulkEdit: "fkI7RYiO0vj6PTFql_JPy",
         BulkEditHeader: "_2BivQamb3LEiQtwiyru4SU",
         BulkEditInstructions: "_196W2uTFyW8D5dFhidIkKr",
         FileTypesList: "_34PNksp_-K8y5qELr6Dz5U",
@@ -1240,14 +1241,14 @@
                 achievements: (0, g.K1)(a),
                 unmodified: a.map((e) => e.name),
               },
-              [h, m] = u.useState(),
-              [x, j] = u.useState(),
-              [y, E] = u.useState(),
-              [b, C] = u.useState(),
-              [S, I] = u.useState(),
-              [T, D] = (0, u.useState)(!1),
-              [k, B] = (0, u.useState)(!0),
-              G = [
+              [h, x] = u.useState(),
+              [j, y] = u.useState(),
+              [E, b] = u.useState(),
+              [C, S] = u.useState(),
+              [I, T] = u.useState(),
+              [D, k] = (0, u.useState)(!1),
+              [B, G] = (0, u.useState)(!0),
+              L = [
                 {
                   key: "data",
                   handles: (e) => (0, g.Yc)(e),
@@ -1257,7 +1258,7 @@
                         (t.errors?.length ?? !1) ||
                         (t?.achievementErrors?.length ?? !1);
                     return (
-                      n || j(t),
+                      n || y(t),
                       {
                         success: !n,
                         errors: t.errors,
@@ -1275,7 +1276,7 @@
                         (t.errors?.length ?? !1) ||
                         (t?.achievementErrors?.length ?? !1);
                     return (
-                      n || E(t),
+                      n || b(t),
                       {
                         success: !n,
                         errors: t.errors,
@@ -1285,7 +1286,7 @@
                   },
                 },
               ],
-              L = [
+              V = [
                 {
                   key: "csv",
                   accept: ["text/csv"],
@@ -1297,7 +1298,7 @@
                         filename: e.name,
                         errors: t.errors,
                       };
-                    const n = G.find((e) => e.handles(t));
+                    const n = L.find((e) => e.handles(t));
                     if (!n)
                       return {
                         success: !1,
@@ -1335,14 +1336,14 @@
                         : (r = s.endsWith(n)
                             ? s.substring(0, s.indexOf(n))
                             : s),
-                      C((e) => ({
+                      S((e) => ({
                         ...e,
                         [r]: { ...e?.[r], [a ? "achieved" : "unachieved"]: t },
                       })),
                       a && t?.success)
                     ) {
                       const e = await (0, w.I7)(t.image?.image);
-                      I((t) => ({
+                      T((t) => ({
                         ...t,
                         [r]: {
                           image: e,
@@ -1355,27 +1356,27 @@
                   },
                 },
               ],
-              V = Array.from(
-                L.reduce(
+              M = Array.from(
+                V.reduce(
                   (e, t) => (t.accept.forEach((t) => e.add(t)), e),
                   new Set(),
                 ),
               );
-            let M = h
+            let O = h
               ? Object.keys(h).reduce(
                   (e, t) => (e.push(...h[t].filter((e) => !e.success)), e),
                   [],
                 )
               : [];
-            M.push(
-              ...Object.keys(b ?? {})
+            O.push(
+              ...Object.keys(C ?? {})
                 .filter(
                   (e) =>
                     !a?.some((t) => t.name == e) &&
-                    !Object.keys(x?.csv ?? {}).includes(e),
+                    !Object.keys(j?.csv ?? {}).includes(e),
                 )
                 .reduce((e, t) => {
-                  const n = b[t];
+                  const n = C[t];
                   return (
                     n.achieved &&
                       e.push({
@@ -1410,54 +1411,54 @@
                   );
                 }, []),
             );
-            const O = !!x || !!y || !!b,
-              F = k
-                ? Object.keys(b ?? {}).reduce(
+            const F = !!j || !!E || !!C,
+              z = B
+                ? Object.keys(C ?? {}).reduce(
                     (e, t) => (
                       (e[t] = {
-                        achieved: b[t].achieved,
-                        unachieved: b[t].unachieved ?? {
+                        achieved: C[t].achieved,
+                        unachieved: C[t].unachieved ?? {
                           success: !0,
                           filename: "GENERATED",
-                          image: S[t],
+                          image: I[t],
                         },
                       }),
                       e
                     ),
                     {},
                   )
-                : b,
-              z = (0, d.SN)(i),
-              [U, H] = (0, u.useState)(!1);
+                : C,
+              U = (0, d.SN)(i),
+              [H, W] = (0, u.useState)(!1);
             return (0, s.jsxs)("div", {
-              className: _.Takeover,
+              className: (0, m.A)(_.Takeover, _.BulkEdit),
               children: [
-                U &&
+                H &&
                   (0, s.jsx)(f.TM, {
                     hideCancelButton: !0,
                     onOk: t,
                     children: (0, v.we)("#AchievementEditor_Bulk_Save_Confirm"),
                   }),
                 (0, s.jsx)(N, {
-                  generateUnachievedImages: k,
-                  setGenerateUnachievedImages: B,
+                  generateUnachievedImages: B,
+                  setGenerateUnachievedImages: G,
                 }),
                 (0, s.jsxs)("div", {
                   className: _.TakeoverBody,
                   children: [
                     (0, s.jsx)(A.z, {
                       className: _.BulkUploadFileDropBox,
-                      accept: V,
+                      accept: M,
                       multiple: !0,
                       fileInputRef: l,
                       onUpload: async (e) => {
                         let t = {};
                         for (const n of e) {
-                          const e = L.find((e) => e.accept.includes(n.type));
+                          const e = V.find((e) => e.accept.includes(n.type));
                           e.key in t || (t[e.key] = []),
                             t[e.key].push(await e.process(n));
                         }
-                        m(t),
+                        x(t),
                           Object.values(t).some((e) =>
                             e.some((e) => e.success),
                           ) && n(!0),
@@ -1480,62 +1481,62 @@
                         ),
                       }),
                     }),
-                    M?.length > 0 && (0, s.jsx)(P, { results: M }),
-                    O &&
+                    O?.length > 0 && (0, s.jsx)(P, { results: O }),
+                    F &&
                       (0, s.jsx)(R, {
-                        data: x ?? p,
-                        localization: y,
-                        images: F ?? {},
-                        confirmDelete: T,
-                        setConfirmDelete: D,
+                        data: j ?? p,
+                        localization: E,
+                        images: z ?? {},
+                        confirmDelete: D,
+                        setConfirmDelete: k,
                       }),
                   ],
                 }),
-                O &&
+                F &&
                   (0, s.jsx)(f.Aj, {
-                    pending: z.isPending,
+                    pending: U.isPending,
                     hideCancel: !0,
                     onSave: async () => {
                       const e =
-                        x?.added?.map((e) => ({
+                        j?.added?.map((e) => ({
                           achievement: (0, g.f4)(
-                            x.csv[e],
-                            y?.localization?.[e],
+                            j.csv[e],
+                            E?.localization?.[e],
                           ),
-                          icon: F?.[e]?.achieved?.image?.image,
-                          icon_gray: F?.[e]?.unachieved?.image?.image,
+                          icon: z?.[e]?.achieved?.image?.image,
+                          icon_gray: z?.[e]?.unachieved?.image?.image,
                         })) ?? [];
                       let t =
                         Array.from(
                           new Set([
-                            ...(x?.modified ?? []),
-                            ...Object.keys(y?.localization ?? {}).filter(
+                            ...(j?.modified ?? []),
+                            ...Object.keys(E?.localization ?? {}).filter(
                               (e) =>
-                                !x?.added?.includes(e) &&
-                                e in (x ?? p).achievements,
+                                !j?.added?.includes(e) &&
+                                e in (j ?? p).achievements,
                             ),
                           ]),
                         ).map((e) => {
-                          const t = (x ?? p).achievements[e],
-                            n = y?.localization?.[e];
+                          const t = (j ?? p).achievements[e],
+                            n = E?.localization?.[e];
                           return {
                             statID: t.statID,
                             bitID: t.bitID,
                             achievement: (0, g.f4)(
-                              x?.csv[e] ?? (0, g.oK)(t),
+                              j?.csv[e] ?? (0, g.oK)(t),
                               n,
                               t,
                             ),
-                            icon: F?.[e]?.achieved?.image?.image,
-                            icon_gray: F?.[e]?.unachieved?.image?.image,
+                            icon: z?.[e]?.achieved?.image?.image,
+                            icon_gray: z?.[e]?.unachieved?.image?.image,
                           };
                         }) ?? [];
-                      const n = x?.deleted?.map((e) => {
-                          const t = x.achievements[e];
+                      const n = j?.deleted?.map((e) => {
+                          const t = j.achievements[e];
                           return { statID: t.statID, bitID: t.bitID };
                         }),
-                        i = (x ?? p).unmodified;
-                      Object.keys(F)
+                        i = (j ?? p).unmodified;
+                      Object.keys(z)
                         .filter((e) => i?.includes(e))
                         .forEach((e) => {
                           const n = a.find((t) => t.name == e);
@@ -1543,15 +1544,15 @@
                             statID: n.statID,
                             bitID: n.bitID,
                             achievement: void 0,
-                            icon: F?.[e]?.achieved?.image?.image,
-                            icon_gray: F?.[e]?.unachieved?.image?.image,
+                            icon: z?.[e]?.achieved?.image?.image,
+                            icon_gray: z?.[e]?.unachieved?.image?.image,
                           });
                         }),
-                        await z.mutateAsync({
+                        await U.mutateAsync({
                           addOrUpdate: [...e, ...t],
                           delete: n,
                         }),
-                        H(!0);
+                        W(!0);
                     },
                   }),
               ],

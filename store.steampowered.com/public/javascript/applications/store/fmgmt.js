@@ -1195,31 +1195,32 @@
             measureElement: m,
             className: d,
             forceVirtualizeType: u,
-            initialOffset: p,
-            onOffsetChange: _,
-            ...h
+            hintVirtualizeType: p,
+            initialOffset: _,
+            onOffsetChange: h,
+            ...g
           } = e,
-          [g, y] = (0, i.useState)(u),
-          [x, f] = i.useState(),
-          [j, w] = i.useState(),
-          C = i.useRef(null),
-          v = i.useCallback(
+          [y, x] = (0, i.useState)(u ?? p),
+          [f, j] = i.useState(),
+          [w, C] = i.useState(),
+          v = i.useRef(null),
+          S = i.useCallback(
             (e) => {
               if (!e) return;
               const t = (0, L._f)(e, "y");
               (0, i.startTransition)(() => {
-                "window" != u && f(t || void 0),
-                  w(e.offsetTop),
-                  u || y(t ? "element" : "window");
+                "window" != u && j(t || void 0),
+                  C(e.offsetTop),
+                  u || x(t ? "element" : "window");
               });
             },
             [u],
           ),
-          S =
-            ((b = (e) => {
-              C.current &&
+          b =
+            ((N = (e) => {
+              v.current &&
                 (0, i.startTransition)(() => {
-                  C.current && w(C.current?.offsetTop);
+                  v.current && C(v.current?.offsetTop);
                 });
             }),
             (0, B.QS)(
@@ -1227,7 +1228,7 @@
                 if (!e) return;
                 const t = new e.ownerDocument.defaultView.ResizeObserver(
                   (e) => {
-                    b(e[0]);
+                    N(e[0]);
                   },
                 );
                 let a = [],
@@ -1238,11 +1239,11 @@
                   a.forEach((e) => t.unobserve(e));
                 };
               },
-              [b],
+              [N],
             ));
-        var b;
-        const N = (0, B.Ue)(v, C, S, t),
-          I = {
+        var N;
+        const I = (0, B.Ue)(S, v, b, t),
+          P = {
             nRows: a,
             nItemHeight: s,
             nRowGap: r,
@@ -1251,18 +1252,19 @@
             bDynamic: c,
             measureElement: m,
             forceVirtualizeType: u,
-            initialOffset: p,
-            onOffsetChange: _,
+            hintVirtualizeType: p,
+            initialOffset: _,
+            onOffsetChange: h,
           };
         return (0, n.jsx)(F.Z, {
           className: d,
-          ref: N,
-          ...h,
+          ref: I,
+          ...g,
           children: (0, n.jsxs)(i.Suspense, {
             children: [
-              "element" === g &&
-                (0, n.jsx)(U, { ...I, nScrollMargin: j || 0, elScrollable: x }),
-              "window" === g && (0, n.jsx)(W, { ...I, nScrollMargin: j }),
+              "element" === y &&
+                (0, n.jsx)(U, { ...P, nScrollMargin: w || 0, elScrollable: f }),
+              "window" === y && (0, n.jsx)(W, { ...P, nScrollMargin: w }),
             ],
           }),
         });
@@ -5088,7 +5090,7 @@
       }
       var Ta,
         Ga = a(75279),
-        Ea = a(48210);
+        Ea = a(76119);
       function Ba(e) {
         const { item: t, closeModal: a } = e,
           s = (0, be.EB)(t),

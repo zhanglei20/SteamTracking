@@ -16,6 +16,8 @@
     "VerifiedProgram_DeckDisclaimer": "予告編は実際のSteam Deckでのゲームプレイを反映していない場合があります",
     "StoreItemFound": "%1$s 見つかりました（%2$s）",
     "StoreItemNotFound": "見つかりませんでした（%1$s）",
+    "SteamReviewSection_AppID": "Reviews From App",
+    "SteamReviewSection_AppID_ttip": "The app whose Steam reviews are shown in this section, and the app a customer's review is written against.",
     "SteamURLAccepted": "%1$s URLが承認されました",
     "SteamURLInvalid": "エラー：Steamプロパティ（ストア／コミュニティ）へのURLではありません",
     "AnchorHashInputInvalid": "無効な入力",

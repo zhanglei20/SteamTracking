@@ -74,6 +74,7 @@
         DateWidth: "_2P2kw0vHZogg7Ny7cAjQBo",
         PacificTimeHint: "_18FxDrpsfO5Tt8EFui49hV",
         TimeZone: "-x3Rw6W2fJfWRMs7vKr1I",
+        ClearButton: "TzhaDn0jN2ILks403xqXQ",
         InputBorder: "_1_H1sN2GVTzxSaz55gv03s",
         TimeBlock: "_2xLBsAMYVDoygyWbl2YIzI",
         TimeRowContainer: "BWmgg29ZeDbO6oj7Z1U7T",
@@ -409,8 +410,8 @@
         V = a(5065),
         U = a(82227),
         W = a(738),
-        K = a(56283),
-        z = a(51272),
+        z = a(56283),
+        K = a(51272),
         q = a(6379),
         Y = a(99637),
         Q = a(74568),
@@ -447,9 +448,10 @@
             document.removeChild(a);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t) {
-          const a = Z().unparse(e, { header: !0 });
-          $.WriteFile(new Blob([a], { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, a) {
+          const s = Z().unparse(e, { header: !0 }),
+            n = 1 == a ? ["\ufeff" + s] : [s];
+          $.WriteFile(new Blob(n, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {
@@ -565,7 +567,7 @@
                   (0, n.jsxs)("div", {
                     className: "_DialogInputContainer _DialogLayout",
                     children: [
-                      (0, n.jsx)(K.Yh, {
+                      (0, n.jsx)(z.Yh, {
                         label: (0, M.we)("#EventDashboard_Stats_Oldest"),
                         onChange: o,
                         checked: r,
@@ -594,7 +596,7 @@
                   (0, n.jsxs)("div", {
                     className: "_DialogInputContainer _DialogLayout",
                     children: [
-                      (0, n.jsx)(K.Yh, {
+                      (0, n.jsx)(z.Yh, {
                         label: (0, M.we)("#EventDashboard_Stats_Newest"),
                         onChange: c,
                         checked: d,
@@ -665,9 +667,9 @@
                       (0, n.jsxs)("div", {
                         className: V.StatsActionRow,
                         children: [
-                          (0, n.jsx)(K.$n, {
+                          (0, n.jsx)(z.$n, {
                             onClick: (e) =>
-                              (0, z.EP)(
+                              (0, K.EP)(
                                 e,
                                 `${v.TS.PARTNER_BASE_URL}/doc/marketing/event_tools/stats`,
                               ),
@@ -675,7 +677,7 @@
                               "#EventDashBoard_SummaryStats_AboutStats",
                             ),
                           }),
-                          (0, n.jsx)(K.$n, {
+                          (0, n.jsx)(z.$n, {
                             onClick: (e) =>
                               (0, W.pg)(
                                 (0, n.jsx)(ie, { clanInfo: m }),
@@ -689,7 +691,7 @@
                       }),
                       (0, n.jsx)("div", {
                         className: V.StatsActionRow,
-                        children: (0, n.jsx)(K.$n, {
+                        children: (0, n.jsx)(z.$n, {
                           onClick: () => c(!d),
                           children: (0, M.we)(
                             "#EventDashBoard_SummaryStats_Details",
@@ -1053,7 +1055,7 @@
                   be().ValveOnlyBackground,
                 ),
                 children: [
-                  (0, n.jsx)(K.JU, { children: "(VO) Meet Steam URLs" }),
+                  (0, n.jsx)(z.JU, { children: "(VO) Meet Steam URLs" }),
                   Array.from(o.keys()).map((e) => {
                     const a = o.get(e);
                     return (0, n.jsx)(
@@ -1280,7 +1282,7 @@
                         Boolean(t.jsondata.read_more_link) &&
                           (0, n.jsx)("div", {
                             className: (0, O.A)(G().ReadMoreCnt),
-                            children: (0, n.jsx)(z.uU, {
+                            children: (0, n.jsx)(K.uU, {
                               className: (0, O.A)(F().Button),
                               href: t.jsondata.read_more_link,
                               children: (0, M.we)(
@@ -1762,19 +1764,21 @@
           bWeekdaysOnly: I,
           fnSetTimeToUpdate: B,
           bForce24HourFormat: f,
+          bAllowClear: P,
         } = e;
-        let P =
+        let G =
           (function () {
             const e = g()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
           })() || f
             ? x
             : S;
-        const G = i(),
-          [L, k] = n.useState(G > 0 ? g()(1e3 * G) : null),
-          [H, R] = n.useState(),
-          [F, O] = n.useState(),
-          M = (function (e, t, a, s, i) {
+        const L = i(),
+          [k, H] = n.useState(L > 0 ? g()(1e3 * L) : null),
+          [R, F] = n.useState(0),
+          [O, M] = n.useState(),
+          [V, U] = n.useState(),
+          W = (function (e, t, a, s, i) {
             const r = s && s(),
               o = t && !D(t).isValid(),
               l = e && !E(e).isValid();
@@ -1794,51 +1798,51 @@
               }, [d, i]),
               d
             );
-          })(H, F, C, N, d),
-          V = !d && M;
-        let U, W;
+          })(O, V, C, N, d),
+          z = !d && W;
+        let K, q;
         if (t && a && t == a && a > l.HD.GetTimeNowWithOverride()) {
           const e = g().unix(a);
-          (U = {
+          (K = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (P = x);
+            (G = x);
         }
-        G || !a || w || (W = g().unix(a));
-        const K = g().tz.guess(),
-          z = g().unix(G).tz(K),
-          q = !!p && K != p && g().unix(G).tz(p),
+        L || !a || w || (q = g().unix(a));
+        const Y = g().tz.guess(),
+          Q = g().unix(L).tz(Y),
+          X = !!p && Y != p && g().unix(L).tz(p),
           {
-            fnOnInput: Y,
-            fnOnInputBlur: Q,
-            fnOnChange: X,
+            fnOnInput: J,
+            fnOnInputBlur: Z,
+            fnOnChange: $,
           } = j(
             D,
             (e) => {
               if (v) return;
-              O(null);
+              U(null);
               const t = i(),
                 a = g().unix(t || l.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(a.hour()),
                 e.minute(a.minute()),
                 e.second(0),
                 B(e.unix()),
-                k(e);
+                H(e);
             },
-            O,
+            U,
           ),
           {
-            fnOnInput: J,
-            fnOnInputBlur: Z,
-            fnOnChange: $,
+            fnOnInput: ee,
+            fnOnInputBlur: te,
+            fnOnChange: ae,
           } = j(
             E,
             (e) => {
               if (v) return;
-              R(null);
+              M(null);
               let t = i(),
                 s = 0;
               if (t) {
@@ -1853,10 +1857,11 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              B(s), k(g().unix(s));
+              B(s), H(g().unix(s));
             },
-            R,
-          );
+            M,
+          ),
+          se = P && !v && L > 0;
         return (0, s.jsxs)("div", {
           className: (0, _.A)(u().EventTimeSection, b),
           children: [
@@ -1868,10 +1873,10 @@
                   direction: "top",
                   children: Boolean(T) && (0, s.jsx)("span", { children: T }),
                 }),
-                V &&
+                z &&
                   (0, s.jsxs)("span", {
                     className: u().DateErrorCtn,
-                    children: [(0, s.jsx)("img", { src: o.A }), V],
+                    children: [(0, s.jsx)("img", { src: o.A }), z],
                   }),
               ],
             }),
@@ -1881,74 +1886,82 @@
                 (0, s.jsxs)("div", {
                   className: (0, _.A)(c().InputBorder, u().TimeBlock),
                   children: [
-                    (0, s.jsx)(r(), {
-                      onChange: X,
-                      timeFormat: !1,
-                      value: null != F ? F : L,
-                      isValidDate: (e) =>
-                        !v &&
-                        (function (e, t, a, s) {
-                          const n = g().unix(e).hour(0).seconds(0).minute(0);
-                          let i = s.unix() >= n.unix();
-                          if (i && t && t >= e) {
-                            const e = g()
-                              .unix(t)
-                              .hour(23)
-                              .minute(59)
-                              .seconds(59);
-                            i = s.unix() <= e.unix();
-                          }
-                          i &&
-                            a &&
-                            ((0 != s.weekday() && 6 != s.weekday()) ||
-                              (i = !1));
-                          return i;
-                        })(a, t, I, e),
-                      initialValue: W,
-                      inputProps: {
-                        placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
-                        className: (0, _.A)(
-                          u().DateWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: v,
-                        onChange: (e) => Y(e.currentTarget.value),
-                        onBlur: (e) => Q(e.currentTarget.value),
+                    (0, s.jsx)(
+                      r(),
+                      {
+                        onChange: $,
+                        timeFormat: !1,
+                        value: null != V ? V : k,
+                        isValidDate: (e) =>
+                          !v &&
+                          (function (e, t, a, s) {
+                            const n = g().unix(e).hour(0).seconds(0).minute(0);
+                            let i = s.unix() >= n.unix();
+                            if (i && t && t >= e) {
+                              const e = g()
+                                .unix(t)
+                                .hour(23)
+                                .minute(59)
+                                .seconds(59);
+                              i = s.unix() <= e.unix();
+                            }
+                            i &&
+                              a &&
+                              ((0 != s.weekday() && 6 != s.weekday()) ||
+                                (i = !1));
+                            return i;
+                          })(a, t, I, e),
+                        initialValue: q,
+                        inputProps: {
+                          placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
+                          className: (0, _.A)(
+                            u().DateWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: v,
+                          onChange: (e) => J(e.currentTarget.value),
+                          onBlur: (e) => Z(e.currentTarget.value),
+                        },
                       },
-                    }),
-                    !!q &&
+                      "date" + R,
+                    ),
+                    !!X &&
                       (0, s.jsx)("div", {
                         className: u().PacificTimeHint,
-                        children: q.format("L"),
+                        children: X.format("L"),
                       }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
                   className: (0, _.A)(c().InputBorder, u().TimeBlock),
                   children: [
-                    (0, s.jsx)(r(), {
-                      onChange: $,
-                      dateFormat: !1,
-                      timeFormat: P,
-                      timeConstraints: U,
-                      value: null != H ? H : L,
-                      inputProps: {
-                        placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
-                        className: (0, _.A)(
-                          u().TimeWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: v,
-                        onChange: (e) => J(e.currentTarget.value),
-                        onBlur: (e) => Z(e.currentTarget.value),
+                    (0, s.jsx)(
+                      r(),
+                      {
+                        onChange: ae,
+                        dateFormat: !1,
+                        timeFormat: G,
+                        timeConstraints: K,
+                        value: null != O ? O : k,
+                        inputProps: {
+                          placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
+                          className: (0, _.A)(
+                            u().TimeWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: v,
+                          onChange: (e) => ee(e.currentTarget.value),
+                          onBlur: (e) => te(e.currentTarget.value),
+                        },
                       },
-                    }),
-                    !!q &&
+                      "time" + R,
+                    ),
+                    !!X &&
                       (0, s.jsx)("div", {
                         className: u().PacificTimeHint,
-                        children: q.format("LT"),
+                        children: X.format("LT"),
                       }),
                   ],
                 }),
@@ -1957,18 +1970,27 @@
                     children: [
                       (0, s.jsx)("div", {
                         className: u().TimeZone,
-                        children: z.zoneAbbr(),
+                        children: Q.zoneAbbr(),
                       }),
-                      !!q &&
+                      !!X &&
                         (0, s.jsx)("div", {
                           className: u().TimeZone,
-                          children: q.zoneAbbr(),
+                          children: X.zoneAbbr(),
                         }),
                     ],
                   }),
+                se &&
+                  (0, s.jsx)("button", {
+                    type: "button",
+                    className: u().ClearButton,
+                    onClick: () => {
+                      v || (B(0), H(null), U(null), M(null), F((e) => e + 1));
+                    },
+                    children: (0, m.we)("#Button_Clear"),
+                  }),
               ],
             }),
-            Boolean(U) &&
+            Boolean(K) &&
               (0, s.jsx)("div", {
                 children: (0, m.we)("#DateTimePicker_DateTime_Fixed"),
               }),

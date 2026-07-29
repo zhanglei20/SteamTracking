@@ -295,6 +295,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
+${COMMUNITY_BASE_URL}miniprofile/${}/json/
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
 ${COMMUNITY_BASE_URL}moderation/subject/${type}-${group_id}
 ${COMMUNITY_BASE_URL}my
@@ -1392,6 +1393,7 @@ ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${completed_appid}
 ${STORE_BASE_URL}app/${id}
 ${STORE_BASE_URL}app/${m_strAppId}
+${STORE_BASE_URL}app/${nID}
 ${STORE_BASE_URL}app/${takeoverAppID}
 ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/
@@ -1404,7 +1406,7 @@ ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpreview
 ${STORE_BASE_URL}broadcast/ajaxgetuserbroadcastpreferences
 ${STORE_BASE_URL}bundle/${bundleid}
 ${STORE_BASE_URL}bundle/${id}
-${STORE_BASE_URL}bundle/${}
+${STORE_BASE_URL}bundle/${nID}
 ${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
@@ -1458,6 +1460,7 @@ ${STORE_BASE_URL}developer/${vanity}/
 ${STORE_BASE_URL}digitalgiftcards/
 ${STORE_BASE_URL}digitalgiftcards/selectgiftcard
 ${STORE_BASE_URL}digitalgiftcards/selectgiftcard/
+${STORE_BASE_URL}dlc/${associated_item_appid}
 ${STORE_BASE_URL}dlc/${}
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
@@ -1616,7 +1619,6 @@ ${STORE_BASE_URL}sale/${strSalePage}
 ${STORE_BASE_URL}sale/${strVanity}
 ${STORE_BASE_URL}sale/${vanity}
 ${STORE_BASE_URL}sale/${}
-${STORE_BASE_URL}sale/clorthax_quest
 ${STORE_BASE_URL}sale/nextfest/
 ${STORE_BASE_URL}sale/steamawards/
 ${STORE_BASE_URL}saleaction/
@@ -1639,7 +1641,6 @@ ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts
 ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatlist
 ${STORE_BASE_URL}saleaction/ajaxgetusergiveawayregistration
 ${STORE_BASE_URL}saleaction/ajaxgetwishlistonsale
-${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search
@@ -1673,8 +1674,8 @@ ${STORE_BASE_URL}steamawards/nominations/
 ${STORE_BASE_URL}steamawards/nominations/${}/${steamid}?k=${code}
 ${STORE_BASE_URL}steamdeck?utm_source=verifiedpage
 ${STORE_BASE_URL}sub/${id}
+${STORE_BASE_URL}sub/${nID}
 ${STORE_BASE_URL}sub/${packageid}
-${STORE_BASE_URL}sub/${}
 ${STORE_BASE_URL}subscriber_agreement
 ${STORE_BASE_URL}subscriber_agreement/
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}
@@ -3277,6 +3278,7 @@ steam://url/SteamIDMyProfile
 steam://url/SteamPreferences
 steam://url/StoreAccount
 steam://url/StoreAddFundsPage
+url( "${BASE_URL_SHARED_CDN}community/${}" )
 url( ${CDN_URL}apps/dota2/images/leagues/${league_id}/images/image_8.png
 url( ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png )
 url( ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png ), linear-gradient( to right, ${} 49%, ${} 51% )

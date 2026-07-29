@@ -180,16 +180,16 @@
           var n = S || e.location,
             r = d(u(b, n), n),
             l = r.pathname,
-            j = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-            x = j
+            x = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+            j = x
               ? (0, a.B6)(n.pathname, {
-                  path: j,
+                  path: x,
                   exact: v,
                   sensitive: w,
                   strict: A,
                 })
               : null,
-            L = !!(I ? I(x, n) : x),
+            L = !!(I ? I(j, n) : j),
             B = "function" == typeof p ? p(L) : p,
             D = "function" == typeof y ? y(L) : y;
           L &&
@@ -343,8 +343,8 @@
         ME: () => G,
         QV: () => S,
         RA: () => b,
-        cc: () => j,
-        fq: () => x,
+        cc: () => x,
+        fq: () => j,
         m1: () => C,
       });
       var a = n(34629),
@@ -598,16 +598,16 @@
           t
         );
       }
-      function j(e) {
+      function x(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
-      function x(e) {
+      function j(e) {
         const t = (0, v.CH)(),
-          n = j(e) ? e.sale_clan_event_gid : null,
+          n = x(e) ? e.sale_clan_event_gid : null,
           a = n && _.O3.GetClanEventModel(n);
         return (
           (0, o.useEffect)(() => {
-            if (a || !j(e)) return;
+            if (a || !x(e)) return;
             const i = s().CancelToken.source();
             return (
               (async () => {
@@ -645,7 +645,7 @@
         i = n.n(a),
         s = n(90626),
         r = n(37085),
-        o = n(48210),
+        o = n(76119),
         l = n(84933),
         c = n(16021);
       const u = 1,
@@ -668,12 +668,13 @@
             include_tag_count: b,
             include_reviews: G,
             include_basic_info: C,
-            include_supported_languages: j,
-            include_full_description: x,
+            include_supported_languages: x,
+            include_full_description: j,
             include_included_items: L,
             include_assets_without_overrides: B,
             apply_user_filters: D,
             include_links: R,
+            include_extra_details: T,
           } = n;
         if (
           ((0, s.useEffect)(() => {
@@ -688,12 +689,13 @@
               include_tag_count: b,
               include_reviews: G,
               include_basic_info: C,
-              include_supported_languages: j,
-              include_full_description: x,
+              include_supported_languages: x,
+              include_full_description: j,
               include_included_items: L,
               include_assets_without_overrides: B,
               apply_user_filters: D,
               include_links: R,
+              include_extra_details: T,
             };
             let s = null;
             return (
@@ -710,15 +712,38 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, a, f, g, v, I, S, w, A, y, b, G, C, j, x, L, B, D, R, p]),
+          }, [
+            e,
+            t,
+            a,
+            f,
+            g,
+            v,
+            I,
+            S,
+            w,
+            A,
+            y,
+            b,
+            G,
+            C,
+            x,
+            j,
+            L,
+            B,
+            D,
+            R,
+            T,
+            p,
+          ]),
           !e)
         )
           return [null, d];
         if (!1 === f) return [void 0, d];
         if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, d];
         if (!c.A.Get().BHasStoreItem(e, t, n)) return [void 0, u];
-        const T = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return T ? [T, m] : [null, d];
+        const E = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return E ? [E, m] : [null, d];
       }
       function p(e, t, n) {
         return _(e, o.c6.qI, t, n);
@@ -757,7 +782,8 @@
             include_included_items: b,
             include_assets_without_overrides: G,
             apply_user_filters: C,
-            include_links: j,
+            include_links: x,
+            include_extra_details: j,
           } = n;
         if (
           ((0, s.useEffect)(() => {
@@ -778,7 +804,8 @@
                 include_included_items: b,
                 include_assets_without_overrides: G,
                 apply_user_filters: C,
-                include_links: j,
+                include_links: x,
+                include_extra_details: j,
               },
               a = e.filter(
                 (e) =>
@@ -796,7 +823,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, a, r, o, _, p, f, h, g, v, I, S, w, A, y, b, G, C, j]),
+          }, [e, t, a, r, o, _, p, f, h, g, v, I, S, w, A, y, b, G, C, x, j]),
           !e)
         )
           return d;
@@ -844,7 +871,7 @@
         i = n(62792),
         s = n(81886),
         r = n(22837),
-        o = n(48210),
+        o = n(76119),
         l = n(30894),
         c = n(16021),
         u = n(78327),
@@ -1178,9 +1205,9 @@
         b = n(62792),
         G = n(55263),
         C = n(39020),
-        j = n(39777),
-        x = n(33380),
-        L = n.n(x),
+        x = n(39777),
+        j = n(33380),
+        L = n.n(j),
         B = n(12155),
         D = n(52038),
         R = n(70758);
@@ -1575,8 +1602,8 @@
           A = p && (0, u.XU)(p),
           y = p && E(p),
           C = f != w.F6 && f,
-          j = l.BHasDemo(),
-          x = S?.img_url,
+          x = l.BHasDemo(),
+          j = S?.img_url,
           L = `curator_clanid=${o.clanAccountID}&curator_listid=${n.listid}`,
           B = l.GetStorePageURL() + "/?curator_clanid=" + o.clanAccountID;
         return (0, a.jsxs)(c.Z, {
@@ -1590,15 +1617,15 @@
                     strVideoID: A?.strVideoID || y,
                     nStartSeconds: A?.nStartSeconds,
                     id: m,
-                    strImgOverrideUrl: x,
-                    bShowDemoButton: j,
+                    strImgOverrideUrl: j,
+                    bShowDemoButton: x,
                     strExtraParams: L,
                     bTwitchVideo: Boolean(y),
                   })
                 : (0, a.jsx)(V.W, {
                     imageType: "header",
                     capsule: d,
-                    bShowDemoButton: j,
+                    bShowDemoButton: x,
                     strExtraParams: L,
                     bPreferAssetWithoutOverride: !1,
                   }),
@@ -1648,7 +1675,7 @@
             strExtraParams: o,
             bTwitchVideo: l,
           } = e,
-          { data: c } = (0, j.lv)(i);
+          { data: c } = (0, x.lv)(i);
         return (0, a.jsxs)("div", {
           className: z().YouTubeCapsule,
           children: [
