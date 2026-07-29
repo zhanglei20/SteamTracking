@@ -3409,6 +3409,22 @@ message CVRGamepadUIShared_PathProperty_ClientUserInfo {
 	optional bool developer_mode_enabled = 3;
 }
 
+message CVRGamepadUIShared_PathProperty_Controllers {
+	repeated .CVRGamepadUIShared_PathProperty_Controllers_Controller controllers = 1;
+	optional uint32 current_controller_index = 2;
+}
+
+// Used by: common.proto
+message CVRGamepadUIShared_PathProperty_Controllers_Controller {
+	optional uint32 controller_index = 1;
+	optional string name = 2;
+	optional int32 controller_type = 3;
+	optional int32 xinput_index = 4;
+	optional string serial_number = 5;
+	optional uint32 vendor_id = 6;
+	optional uint32 product_id = 7;
+}
+
 message CVRGamepadUIShared_PathProperty_DashboardBarActions {
 	repeated .CVRGamepadUIShared_DEPRECATED_DashboardBarAction deprecated_actions = 1;
 	repeated .CVRGamepadUIShared_Action defined_actions = 2;

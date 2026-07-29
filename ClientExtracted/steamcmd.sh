@@ -20,7 +20,11 @@ STEAMCMD=$(basename "$0" .sh)
 
 UNAME=$(uname)
 if [ "$UNAME" == "Linux" ]; then
-  : "${STEAM_PLATFORM:=linux32}"
+  if [ "$(uname -m)" == "aarch64" ]; then
+    : "${STEAM_PLATFORM:=linuxarm64}"
+  else
+    : "${STEAM_PLATFORM:=linux32}"
+  fi
   export LD_LIBRARY_PATH="$STEAMROOT/$STEAM_PLATFORM:${LD_LIBRARY_PATH-}"
 
   STEAMEXE="${STEAMROOT}/$STEAM_PLATFORM/${STEAMCMD}"

@@ -2612,6 +2612,7 @@ ${LANGUAGE}
 &\n"k_EWatchResponseSystemNotSupported
 &\n"k_EWatchResponseWaitingForApproval
 &\n"k_SystemAudioPortDirection_Invalid
+&\n\ncolorspace
 &\n\ngpu_status
 &\n\talgorithm
 &\n\tdata_type
@@ -3322,7 +3323,6 @@ ${LANGUAGE}
 (\r"K\n0CClientNotificationFamilySharingLibraryAvailable
 (\r"L\n CPlayer_SetFavoriteBadge_Request
 (\r"L\n,CBroadcast_WebRTCNeedTURNServer_Notification
-(\r"L\n\fCVideoFormat
 (\r"M\n%CCloudGaming_GetTimeRemaining_Request
 (\r"M\n'CFamilyGroups_ClearCooldownSkip_Request
 (\r"M\n)CPlayer_GetCommunityBadgeProgress_Request
@@ -4535,7 +4535,6 @@ ${LANGUAGE}
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *Software\Valve\Steam\ShowScreenshotManager
-*W\n\fEVideoFormat
 *Xv\v%Wy
 *Z16InitializeChromeP21IHTMLChromeController7EUIModeEUlRK10StringViewE_
 *Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
@@ -5146,8 +5145,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGS
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNGx
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -6957,6 +6958,7 @@ ${LANGUAGE}
 .EStreamActivity
 .EStreamAudioCodec
 .EStreamColorspace
+.EStreamColorspace"
 .EStreamControlMessage
 .EStreamControllerConfigMsg
 .EStreamDeviceFormFactor
@@ -7559,7 +7561,6 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
-0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7604,12 +7605,13 @@ ${LANGUAGE}
 0000
 00000000
 0000000000000000000000000000000000000000
+0.15
 00003333
-00:00:00
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8728,7 +8730,6 @@ ${LANGUAGE}
 12CUtlDelegateIFvPKcS1_EE
 12CUtlDelegateIFvPN11IHTMLWindow14ErrorStrings_tEEE
 12CUtlDelegateIFvRKN11IHTMLWindow21BrowserResizedEvent_tEEE
-12CVideoFormat
 12CWebUIMsgJob
 12FamilyGroups
 12IProcessPipe
@@ -9236,6 +9237,7 @@ ${LANGUAGE}
 17CUtlPriorityQueueIN21CScheduledFunctionMgr15ScheduledItem_tEPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CUtlPriorityQueueIN7CJobMgr12JobTimeout_tEPFbRKS1_S3_ENS0_15TimeoutSetIndexEE
 17CUtlPriorityQueueIN7CJobMgr13JobSleeping_tEPFbRKS1_S3_ENS0_16SleepingSetIndexEE
+17CVideoFrameHeader
 17CWorkItemPipeline
 17CommentModeration
 17ControllerVector2
@@ -10818,7 +10820,6 @@ ${LANGUAGE}
 2\r.ELogFileType
 2\r.EUpdaterType
 2\r.EUpdaterType"
-2\r.EVideoFormat
 2\t.EGRAudioB0
 2\v.EInputMode:
 2\v.EMouseMode:
@@ -18079,7 +18080,7 @@ CSteamURLController::ExecuteSteamURL %s : not allowed yet
 CSteamURLController::ExecuteSteamURL : Wrong universe
 CSteamURLController::OnLaunchGameMsgReceived
 CSteamVRPathRecord
-CStopAudioDataMsg"{\n
+CStopAudioDataMsg"
 CStopVideoDataMsg"
 CStorageDeviceManagerDrive
 CStorageDeviceManagerState
@@ -18406,6 +18407,7 @@ CValveControllerManager::OnStreamClientControllerMessage
 CVariableBitStringBase
 CVideoDecoderInfoMsg
 CVideoEncoderInfoMsg
+CVideoFrameHeader
 CVideoManagerClipID
 CVideo_GameRecordingSegmentInfo
 CVirtualControllerColor
@@ -24407,7 +24409,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 24 2026 22:11:17
+Jul 29 2026 17:20:45
 July
 JumpList
 Jumplist
@@ -28871,7 +28873,7 @@ RetailInstall
 Retention interval for background recording game %s is %u seconds
 Retired
 RetrieveSecret
-Retro-bit Controller
+Retro Controller
 Retry later
 Reusing HTTP connection (%p) for %s\n
 Reviews
@@ -32587,6 +32589,7 @@ User.ForgetPassword
 User.GetIPCountry
 User.GetLoginProgress
 User.GetLoginUsers
+User.GetStartupUserChooserState
 User.GoOffline
 User.GoOnline
 User.OnCloseSaveHardwareDialog
@@ -32619,7 +32622,6 @@ User.SendSurvey
 User.SetAsyncNotificationEnabled
 User.SetCheckForUpdatesOnRestart
 User.SetLoginCredentials
-User.ShouldUserChooserForceLoginScreen
 User.ShowSaveHardwareDialog
 User.SignOutAndRestart
 User.StartLogin
@@ -32629,6 +32631,7 @@ User.StartRestart
 User.StartShutdown
 User/Controller Activity
 UserAddTimelineEntry
+UserChooserState
 UserCreateSession
 UserDeleteSession
 UserNew
@@ -34785,6 +34788,7 @@ Zulu
 \n\nchunk_size
 \n\nclient_ids
 \n\ncodec_data
+\n\ncolorspace
 \n\ncommand_id
 \n\ncommercial
 \n\ncompressed
@@ -34885,6 +34889,7 @@ Zulu
 \n\npatch_size
 \n\npercentage
 \n\npermission
+\n\npixel_bits
 \n\nplayer_max
 \n\nplayer_min
 \n\nproduct_id
@@ -35117,9 +35122,11 @@ Zulu
 \n\rmachine_names
 \n\rmanage_cdkeys
 \n\rmanifest_size
+\n\rmax_luminance
 \n\rmax_num_bytes
 \n\rmax_num_files
 \n\rmax_use_count
+\n\rmin_luminance
 \n\rmoderator_set
 \n\rmouse_enabled
 \n\rnativeKeyCode
@@ -35171,6 +35178,7 @@ Zulu
 \n\rscreen_height
 \n\rscreen_locked
 \n\rscreenshot_id
+\n\rsdr_luminance
 \n\rseconds_delay
 \n\rseconds_today
 \n\rseconds_valid
@@ -48251,8 +48259,6 @@ k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
 k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
-k_EStreamVideoCodecVP8
-k_EStreamVideoCodecVP9
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingVideoData
@@ -48335,9 +48341,6 @@ k_EVRLinkCapsUnimplemented
 k_EVRLinkCapsUnknown
 k_EValveIndexComponentHMD
 k_EValveIndexComponentUnknown
-k_EVideoFormatAccel
-k_EVideoFormatNone
-k_EVideoFormatYV12
 k_EViewerNeedsApproval
 k_EViewerWatching
 k_EWatchResponseClientOutOfDate
@@ -58022,6 +58025,8 @@ ypos
 yslf`ZTMGA;5.
 ytcnM@WZ
 yu]4if
+yuv420
+yuv444
 yyX\f
 y{uwqsmoikegac
 z3T\vC

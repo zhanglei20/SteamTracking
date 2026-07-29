@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -3061,6 +3060,7 @@ $steammessages_parental_objects.proto"
 &\n"k_EWatchResponseWaitingForApproval
 &\n"k_SystemAudioPortDirection_Invalid
 &\n\flobby_status
+&\n\ncolorspace
 &\n\ngpu_status
 &\n\talgorithm
 &\n\tdata_type
@@ -3795,7 +3795,6 @@ $steammessages_parental_objects.proto"
 (\r"K\n0CAccountHardware_GetPersonalizationFile_Response
 (\r"L\n CPlayer_SetFavoriteBadge_Request
 (\r"L\n,CBroadcast_WebRTCNeedTURNServer_Notification
-(\r"L\n\fCVideoFormat
 (\r"M\n%CCloudGaming_GetTimeRemaining_Request
 (\r"M\n'CFamilyGroups_ClearCooldownSkip_Request
 (\r"M\n)CPlayer_GetCommunityBadgeProgress_Request
@@ -5043,7 +5042,6 @@ $steammessages_parental_objects.proto"
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*W\n\fEVideoFormat
 *Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
 *Z20BDeleteRegistryValue11ERegKeyRoot10StringViewS0_EUlS_E_
 *Z20BSetRegistryValueBin11ERegKeyRoot10StringViewS0_PKhjEUlS_E_
@@ -5384,6 +5382,7 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -7465,6 +7464,7 @@ $steammessages_parental_objects.proto"
 .EStreamActivity
 .EStreamAudioCodec
 .EStreamColorspace
+.EStreamColorspace"
 .EStreamControlMessage
 .EStreamControllerConfigMsg
 .EStreamDeviceFormFactor
@@ -8160,9 +8160,13 @@ $steammessages_parental_objects.proto"
 00000000
 0000000000000000000000000000000000000000
 00000001
+00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEF0
@@ -8330,14 +8334,10 @@ $steammessages_parental_objects.proto"
 100.64.0.0/10
 1000
 1024
-00003333
 10000
 1000000
 1048576
 10000000
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -10324,7 +10324,6 @@ $steammessages_parental_objects.proto"
 12CUdevContext
 12CUserAppInfo
 12CUserFriends
-12CVideoFormat
 12CVoiceClient
 12CWebUIMsgJob
 12ClChatRoom_t
@@ -11178,6 +11177,7 @@ $steammessages_parental_objects.proto"
 17CUtlPriorityQueueIN7CJobMgr12JobTimeout_tEPFbRKS1_S3_ENS0_15TimeoutSetIndexEE
 17CUtlPriorityQueueIN7CJobMgr13JobSleeping_tEPFbRKS1_S3_ENS0_16SleepingSetIndexEE
 17CUtlPriorityQueueIPN25SteamNetworkingSocketsLib8IThinkerENS0_11ThinkerLessENS0_15ThinkerSetIndexEE
+17CVideoFrameHeader
 17CWorkItemPipeline
 17ChatRoomBanning_t
 17ChatRoomClosing_t
@@ -11725,10 +11725,10 @@ $steammessages_parental_objects.proto"
 200 Mbps
 2000
 2019
-2048
 20000
 2000000
 200M
+2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12367,7 +12367,6 @@ $steammessages_parental_objects.proto"
 23StoreItem_IncludedItems
 23UserAchievementStored_t
 24 Mbps
-24000
 24CAPIJobAuthorizeMicroTxn
 24CAPIJobCancelReservation
 24CAPIJobCreatePartyBeacon
@@ -12482,6 +12481,7 @@ $steammessages_parental_objects.proto"
 25.CMsgRemoteDeviceAuthorizationRequest.EKeyEscrowUsage
 25.CMsgSteamDatagramRouterPingReply.AltAddress.Protocol:
 2500
+24000
 256 Kbps
 256K
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
@@ -13318,7 +13318,6 @@ $steammessages_parental_objects.proto"
 2\r.ELogFileType
 2\r.EUpdaterType
 2\r.EUpdaterType"
-2\r.EVideoFormat
 2\v.EInputMode:
 2\v.EMouseMode:
 2\v.ESLSHelper
@@ -21699,7 +21698,7 @@ CSteamTV_JoinChat_Response
 CSteamTV_Search_Request
 CSteamTV_Search_Response
 CSteamVRPathRecord
-CStopAudioDataMsg"{\n
+CStopAudioDataMsg"
 CStopVideoDataMsg"
 CStorageDeviceManagerDrive
 CStorageDeviceManagerState
@@ -22045,6 +22044,7 @@ CValidator::Push(char const*, void*, char const*)
 CVariableBitStringBase
 CVideoDecoderInfoMsg
 CVideoEncoderInfoMsg
+CVideoFrameHeader
 CVideoManagerClipID
 CVideo_GameRecordingSegmentInfo
 CVirtualControllerColor
@@ -34005,7 +34005,7 @@ RetrieveDataFromSocket( #%d ) %d bytes buffer too small, %d bytes in message - m
 RetrieveMessage
 RetrieveSecret
 Retro
-Retro-bit Controller
+Retro Controller
 Retry later
 Retrying
 Retrying cert request
@@ -41464,6 +41464,7 @@ Zulu
 \n\nclient_ids
 \n\nclose_time
 \n\ncodec_data
+\n\ncolorspace
 \n\ncommand_id
 \n\ncommercial
 \n\ncompressed
@@ -41585,6 +41586,7 @@ Zulu
 \n\npatch_size
 \n\npercentage
 \n\npermission
+\n\npixel_bits
 \n\nplayer_max
 \n\nplayer_min
 \n\nprocess_id
@@ -41855,9 +41857,11 @@ Zulu
 \n\rmachine_names
 \n\rmanage_cdkeys
 \n\rmanifest_size
+\n\rmax_luminance
 \n\rmax_num_bytes
 \n\rmax_num_files
 \n\rmax_use_count
+\n\rmin_luminance
 \n\rmissing_token
 \n\rmoderator_set
 \n\rmouse_enabled
@@ -41917,6 +41921,7 @@ Zulu
 \n\rscreen_height
 \n\rscreen_locked
 \n\rscreenshot_id
+\n\rsdr_luminance
 \n\rsdrpop_remote
 \n\rseconds_delay
 \n\rseconds_today
@@ -48795,7 +48800,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -52869,8 +52874,6 @@ k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
 k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
-k_EStreamVideoCodecVP8
-k_EStreamVideoCodecVP9
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingVideoData
@@ -52954,9 +52957,6 @@ k_EVRLinkCapsUnimplemented
 k_EVRLinkCapsUnknown
 k_EValveIndexComponentHMD
 k_EValveIndexComponentUnknown
-k_EVideoFormatAccel
-k_EVideoFormatNone
-k_EVideoFormatYV12
 k_EViewerNeedsApproval
 k_EViewerWatching
 k_EWatchResponseClientOutOfDate
@@ -61390,7 +61390,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 24 2026 22:11:13
+steam Jul 29 2026 17:20:09
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -64475,6 +64475,8 @@ youtube_videoid
 youtubevideoid
 yslf`ZTMGA;5.
 yu]4if
+yuv420
+yuv444
 yyX\f
 yyyo
 z3T\vC
