@@ -462,6 +462,7 @@ ClientManifest/steamchina_publicbeta_osx        @ https://client-update.fastly.s
 // SteamCMD Manifests
 //
 ClientManifest/steam_cmd_linux                  @ https://client-update.fastly.steamstatic.com/steam_cmd_linux?__TIME__
+ClientManifest/steam_cmd_linuxarm64             @ https://client-update.fastly.steamstatic.com/steam_cmd_linuxarm64?__TIME__
 ClientManifest/steam_cmd_win64                  @ https://client-update.fastly.steamstatic.com/steam_cmd_win64?__TIME__
 ClientManifest/steam_cmd_osx                    @ https://client-update.fastly.steamstatic.com/steam_cmd_osx?__TIME__
 
@@ -469,6 +470,7 @@ ClientManifest/steam_cmd_osx                    @ https://client-update.fastly.s
 // Beta SteamCMD Manifests
 //
 ClientManifest/steam_cmd_publicbeta_linux       @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_linux?__TIME__
+ClientManifest/steam_cmd_publicbeta_linuxarm64  @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_linuxarm64?__TIME__
 ClientManifest/steam_cmd_publicbeta_win64       @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_win64?__TIME__
 ClientManifest/steam_cmd_publicbeta_osx         @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_osx?__TIME__
 
