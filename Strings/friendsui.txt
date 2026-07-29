@@ -472,6 +472,7 @@ $\nY8O
 &\n"k_EStreamControlStopMicrophoneData
 &\n"k_EStreamControlVirtualHereRequest
 &\n"k_SystemAudioPortDirection_Invalid
+&\n\ncolorspace
 &\n\ngpu_status
 &\n\tdata_type
 &bzi
@@ -565,7 +566,6 @@ $\nY8O
 (\r"<\n\rCMsgScreenDPI
 (\r"F\n\vCFrameEvent
 (\r"K\n0CClientNotificationFamilySharingLibraryAvailable
-(\r"L\n\fCVideoFormat
 (\r"P\n\rCMsgMouseDown
 (\r"P\n\rCMsgMouseMove
 (\r"R\n\fCAudioFormat
@@ -716,7 +716,6 @@ $\nY8O
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*W\n\fEVideoFormat
 *Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
 *Z20BDeleteRegistryValue11ERegKeyRoot10StringViewS0_EUlS_E_
 *Z20BSetRegistryValueBin11ERegKeyRoot10StringViewS0_PKhjEUlS_E_
@@ -778,6 +777,8 @@ $\nY8O
 *|\n\fECPUGovernor
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGC0F
+++CCUNGh8F
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
@@ -1058,6 +1059,7 @@ $\nY8O
 .EStreamActivity
 .EStreamAudioCodec
 .EStreamColorspace
+.EStreamColorspace"
 .EStreamControlMessage
 .EStreamControllerConfigMsg
 .EStreamFrameEvent
@@ -1180,11 +1182,12 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
+0123456789ABCDEFP~#
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -1456,7 +1459,6 @@ $\nY8O
 12CQuitRequest
 12CSetTitleMsg
 12CStopRequest
-12CVideoFormat
 13CBoolProperty
 13CCallbackBase
 13CCallbackImplILi1032EE
@@ -1641,6 +1643,7 @@ $\nY8O
 17CStreamReaderBase
 17CStreamVideoLimit
 17CSystemSuspendMsg
+17CVideoFrameHeader
 17DirectoryTreeView
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -1920,7 +1923,6 @@ $\nY8O
 2\n.k_PublishedFileQueryType_RankedByTotalVotesAsc
 2\r.EAudioFormat
 2\r.ELogFileType
-2\r.EVideoFormat
 2ju:
 3 Mbps
 30!]^JV
@@ -2904,7 +2906,7 @@ CSteamParentalController::OnParentalPlaytimeExhausted
 CSteamParentalController::OnParentalPlaytimeWarning
 CSteamParentalController::OnParentalWebTokenChanged
 CSteamUIMessagingController::OnClientPostMessage
-CStopAudioDataMsg"{\n
+CStopAudioDataMsg"
 CStopVideoDataMsg"
 CStreamDataLostMsg
 CStreamVideoLimit
@@ -2954,6 +2956,7 @@ CValidator::Push(char const*, void*, char const*)
 CVariableBitStringBase
 CVideoDecoderInfoMsg
 CVideoEncoderInfoMsg
+CVideoFrameHeader
 CVirtualHereReadyMsg
 CVirtualHereRequestMsg
 CVirtualHereShareDeviceMsg
@@ -5488,6 +5491,7 @@ Zulu
 [libprotobuf %s %s:%d] %s\n
 [packed = true] can only be specified for repeated primitive fields.
 \%03o
+\Qg\tu
 \U%08x
 \n    Actual    :
 \n    Field type:
@@ -5577,6 +5581,7 @@ Zulu
 \n\ncache_miss
 \n\ncertExpiry
 \n\ncodec_data
+\n\ncolorspace
 \n\ncommand_id
 \n\ndependency
 \n\ndeprecated
@@ -5595,6 +5600,7 @@ Zulu
 \n\nmax_height
 \n\nmin_height
 \n\npageserial
+\n\npixel_bits
 \n\nrequest_id
 \n\nscreenshot
 \n\nscroll_max
@@ -5628,6 +5634,8 @@ Zulu
 \n\rk_EAppTypeDLC
 \n\rlast_frame_id
 \n\rlong_frame_ms
+\n\rmax_luminance
+\n\rmin_luminance
 \n\rmouse_enabled
 \n\rnativeKeyCode
 \n\rpct_remaining
@@ -5638,6 +5646,7 @@ Zulu
 \n\rreplace_entry
 \n\rreserved_name
 \n\rrtime_expires
+\n\rsdr_luminance
 \n\rshift_keycode
 \n\rsource_handle
 \n\rvroverlay_key
@@ -6421,6 +6430,7 @@ false"
 false"&\n\fCMsgStopFind
 false"M\n
 family_groupid
+fcK2|
 fclose
 fcntl
 fdatasync
@@ -7332,8 +7342,6 @@ k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
 k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
-k_EStreamVideoCodecVP8
-k_EStreamVideoCodecVP9
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingVideoData
@@ -7367,9 +7375,6 @@ k_EUpdaterType_Invalid
 k_EUpdaterType_OS
 k_EUpdaterType_Test1
 k_EUpdaterType_Test2
-k_EVideoFormatAccel
-k_EVideoFormatNone
-k_EVideoFormatYV12
 k_EWindowStackingOrder_Bottom
 k_EWindowStackingOrder_Invalid
 k_EWindowStackingOrder_Top
@@ -8847,6 +8852,8 @@ yhotspot
 yoruba
 youtube.com
 ypos
+yuv420
+yuv444
 zC`G;
 zTXt
 zTXt: invalid compression type

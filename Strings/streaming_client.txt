@@ -2191,6 +2191,7 @@ ${FILENAME}
 &\n"k_EStreamControlVirtualHereRequest
 &\n"k_EStreamDeviceFormFactorVRHeadset
 &\n"k_SystemAudioPortDirection_Invalid
+&\n\ncolorspace
 &\n\tdata_type
 &\n\tplaytests
 &\tqaK
@@ -2609,7 +2610,6 @@ ${FILENAME}
 (\r"F\n\vCFrameEvent
 (\r"I\n!CMsgRemoteDeviceStreamingProgress
 (\r"I\n"CMsgRemoteClientBroadcastDiscovery
-(\r"L\n\fCVideoFormat
 (\r"R\n\fCAudioFormat
 (\r"Y\n!CMsgSteamSockets_UDP_NoConnection
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
@@ -3041,7 +3041,6 @@ ${FILENAME}
 *RzQ
 *R{UQqJ(\t
 *Uff@
-*W\n\fEVideoFormat
 *Xv\v%Wy
 *Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
 *Z20BDeleteRegistryValue11ERegKeyRoot10StringViewS0_EUlS_E_
@@ -3183,6 +3182,8 @@ ${FILENAME}
 +(VKV
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;
+++CCUNG`
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -3561,6 +3562,7 @@ ${FILENAME}
 --vulkan
 --wayland
 --windowed
+--x11
 -.jJJ
 -0123456789
 -0ZFM
@@ -3837,7 +3839,6 @@ ${FILENAME}
 ../streaming/client/../../external/picojson/picojson.h
 ../streaming/client/../common/streamframe.h
 ../streaming/client/../common/streamnetwork.h
-../streaming/client/avcodecaccel.h
 ../streaming/client/avcodecaccel_vaapi_x11.cpp
 ../streaming/client/controlleroverlay.cpp
 ../streaming/client/csteamnetworkingsockets_streamingclient.cpp
@@ -3853,8 +3854,6 @@ ${FILENAME}
 ../streaming/client/servermanager.cpp
 ../streaming/client/servermanager.h
 ../streaming/client/streamclient.cpp
-../streaming/client/streamdecoderh264.cpp
-../streaming/client/streamdecoderh264avcodec.cpp
 ../streaming/client/streamdecoderopus.cpp
 ../streaming/client/streamdecodervideo.h
 ../streaming/client/streamplayer.cpp
@@ -4024,6 +4023,7 @@ ${FILENAME}
 .EStreamActivity
 .EStreamAudioCodec
 .EStreamColorspace
+.EStreamColorspace"
 .EStreamControlMessage
 .EStreamControllerConfigMsg
 .EStreamDeviceFormFactor
@@ -4464,13 +4464,13 @@ ${FILENAME}
 0/bu^U
 0/gge
 0000000000000000000000000000000000000000
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00\fo
 01%3
 01%6
 01%66754&#"
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -4760,7 +4760,6 @@ ${FILENAME}
 11CAudioChunk
 11CAudioFrame
 11CDirWatcher
-11CDummyFrame
 11CFileWriter
 11CFrameEvent
 11CFrameStats
@@ -4776,11 +4775,9 @@ ${FILENAME}
 11CUtlHashMapIjP31CVirtualControllerLayoutPackage10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIySt10unique_ptrIN25SteamNetworkingSocketsLib9PublicKeyESt14default_deleteIS2_EESt8equal_toIyESt4hashIyEyE
-11CVideoFrame
 11CWebRequest
 11IAudioFrame
 11IVideoAccel
-11IVideoFrame
 11IWebRequest
 11M|
 11StoreBrowse
@@ -4799,9 +4796,7 @@ ${FILENAME}
 12CStopRequest
 12CStreamFrame
 12CStreamQueueIP13CStreamPacketE
-12CStreamQueueIP18CAVCodecVideoFrameE
 12CStreamQueueIP7CLogMsgE
-12CVideoFormat
 12CVulkanAccel
 12d:
 12i{ia(
@@ -4849,14 +4844,15 @@ ${FILENAME}
 14CMsgAuthTicket
 14COverlayDialog
 14CPyrowaveAccel
-14CPyrowaveFrame
 14CRecordedInput
 14CServerManager
 14CShowCursorMsg
+14CSoftwareAccel
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
 14CUtlLinkedListIN19CStreamDecoderVideo14PartialFrame_tEiE
 14CUtlLinkedListIN25SteamNetworkingSocketsLib24SNPSendReliableSegment_tEtE
+14CUtlLinkedListIP20CPyrowaveVulkanImageiE
 14CUtlLinkedListIttE
 14CVAAPIAccelDRM
 14CVAAPIAccelX11
@@ -4905,6 +4901,8 @@ ${FILENAME}
 16StoreBrowse_Stub
 16StoreItem_Assets
 16[X
+17:19:57
+17:20:07
 17@b
 17CCaptureFailedMsg
 17CClientWalletInfo
@@ -4918,15 +4916,15 @@ ${FILENAME}
 17CSetFlashStateMsg
 17CStopAudioDataMsg
 17CStopVideoDataMsg
-17CStreamFrameQueueI11IVideoFrameE
+17CStreamFrameQueueI11CVideoFrameE
 17CStreamFrameQueueI22CReleasableStreamFrameE
 17CStreamReaderBase
 17CStreamVideoLimit
 17CSystemSuspendMsg
 17CUtlPriorityQueueIPN25SteamNetworkingSocketsLib8IThinkerENS0_11ThinkerLessENS0_15ThinkerSetIndexEE
+17CVideoFrameHeader
 17StoreItem_Reviews
 18446744073709551615
-18CAVCodecVideoFrame
 18CControllerOverlay
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -4941,7 +4939,6 @@ ${FILENAME}
 18CStartAudioDataMsg
 18CStartVideoDataMsg
 18CStreamDataLostMsg
-18CStreamDecoderH264
 18CStreamDecoderOpus
 18CStreamPlayerToast
 18CStreamSampleQueueIN13CStreamClient17VideoBitrateStatsENS1_22VideoBandwidthSample_tELi3ELb1EE
@@ -5204,6 +5201,8 @@ ${FILENAME}
 20CInputLatencyTestMsg
 20CInputMouseMotionMsg
 20CPurchaseReceiptInfo
+20CPyrowaveVulkanAccel
+20CPyrowaveVulkanImage
 20CRecordedInputStream
 20CRefCountServiceBaseILb1E6CRefMTE
 20CSetSpectatorModeMsg
@@ -5242,8 +5241,6 @@ ${FILENAME}
 21StoreItem_Screenshots
 21UserSystemInformation
 21\oi
-22:11:09
-22:11:12
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -5261,7 +5258,6 @@ ${FILENAME}
 22CSetTargetFramerateMsg
 22CSetTouchConfigDataMsg
 22CStreamDecoderRawAudio
-22CStreamDecoderRawVideo
 22CStreamTransportClient
 22CStreamingClientConfig
 22CStreamingServerConfig
@@ -5322,7 +5318,6 @@ ${FILENAME}
 25CResumeControllerInputMsg
 25CSaveTouchConfigLayoutMsg
 25CSetStreamingClientConfig
-25CStreamDecoderH264AVCodec
 25CStreamPlayerMenubarToast
 25CStreamPlayerOverlayToast
 25CVirtualControllerElement
@@ -5344,6 +5339,7 @@ ${FILENAME}
 26CMsgSteamDatagramConnectOK
 26CMsgSteamDatagramP2PRoutes
 26CMsgSteamSockets_UDP_Stats
+26CStreamDecoderVideoAVCodec
 26CVirtualHereShareDeviceMsg
 26IVirtualHereDeviceDelegate
 26StoreBrowseItemDataRequest
@@ -5363,7 +5359,6 @@ ${FILENAME}
 28CMsgSteamNetworkingIPAddress
 28CStorePageFilter_StoreFilter
 28CStreamDataBuffersVideoFrame
-28CStreamDecoderH264Standalone
 28CStreamPlayerControllerToast
 28CStreamTransportSDRSignaling
 28CTouchActionSetLayerAddedMsg
@@ -5376,6 +5371,7 @@ ${FILENAME}
 29CMsgRemoteDeviceProofResponse
 29CMsgSteamDatagramNoConnection
 29CStoreBrowse_GetItems_Request
+29CStreamDecoderVideoStandalone
 29CStreamingClientHandshakeInfo
 29CStreamingServerHandshakeInfo
 29NAaI[
@@ -5472,7 +5468,6 @@ ${FILENAME}
 2\n\nvr_support
 2\r.EAudioFormat
 2\r.ELogFileType
-2\r.EVideoFormat
 2\tKh
 2\v.EInputMode:
 2\v.EMouseMode:
@@ -5633,7 +5628,6 @@ ${FILENAME}
 3267!5!&&#"
 3267&'^7l
 3267.
-32675
 32675#5!
 32675&&#"
 326754&
@@ -5641,7 +5635,6 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
-32677
 326=
 326B|
 327&
@@ -5650,6 +5643,8 @@ ${FILENAME}
 3275!5!
 3275#5!
 3276
+32675
+32677
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -6025,10 +6020,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-467&&54632
-467.
 4632
 46632
+467&&54632
+467.
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6252,6 +6247,7 @@ ${FILENAME}
 52{M
 52|{k
 531lo
+532654.
 532>
 536654#!5!
 53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
@@ -6266,7 +6262,6 @@ ${FILENAME}
 5467
 54632
 54663
-532654.
 546632
 5467!
 5467#".
@@ -6490,9 +6485,9 @@ ${FILENAME}
 6654&#"
 6675
 67!5!
-675!
 6753
 666666666666666666666666666666666666666666666666
+675!
 6754&#"
 67547&55&'7
 6786
@@ -6683,14 +6678,14 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
+75#5!
 754.
 7524
-7623.
 74632
-75#5!
 75pRD
 75th
 76&'3
+7623.
 7664&#"
 76653
 76654&#"
@@ -7162,7 +7157,6 @@ ${FILENAME}
 9CUtlQueueIN18CStreamSampleQueueIN17CStreamConnection15TimeOffsetStatsENS2_18TimeOffsetSample_tELi10ELb0EE8Sample_tEE
 9CUtlQueueIN18CStreamSampleQueueIN17CStreamConnection9PingStatsENS2_12PingSample_tELi3ELb0EE8Sample_tEE
 9CUtlQueueIP13CStreamPacketE
-9CUtlQueueIP18CAVCodecVideoFrameE
 9CUtlQueueIP28HIDDeviceSDLGamepadStateV2_tE
 9CUtlQueueIP7CLogMsgE
 9C]8
@@ -10125,6 +10119,15 @@ CPyrowaveAccel: pyrowave_create_default_device() failed: %d\n
 CPyrowaveAccel: pyrowave_decoder_create() failed: %d
 CPyrowaveAccel: pyrowave_decoder_decode_cpu_buffer_synchronous() failed: %d
 CPyrowaveAccel: pyrowave_decoder_push_packet() failed: %d
+CPyrowaveVulkanAccel: Couldn't unpack frame header\n
+CPyrowaveVulkanAccel: Not using a Vulkan renderer\n
+CPyrowaveVulkanAccel: pyrowave_create_device() failed: %d\n
+CPyrowaveVulkanAccel: pyrowave_decoder_create() failed: %d\n
+CPyrowaveVulkanAccel: pyrowave_decoder_decode_gpu_buffer() failed: %d\n
+CPyrowaveVulkanAccel: pyrowave_decoder_push_packet() failed: %d\n
+CPyrowaveVulkanFrame couldn't create SDL texture: %s\n
+CPyrowaveVulkanFrame couldn't create command buffer: %s\n
+CPyrowaveVulkanFrame couldn't get Vulkan image\n
 CQ)s
 CQ*(h
 CQ/u{
@@ -10217,17 +10220,16 @@ CSteamPlayer::OnSteamShutdownGame
 CSteamPlayer::OnSteamUIModeChanged
 CSteamPlayer::OnStreamClientConfigUpdated
 CSteamPlayer::OnStreamClientControllerMessage
-CStopAudioDataMsg"{\n
+CStopAudioDataMsg"
 CStopVideoDataMsg"
 CStoreBrowse_GetItems_Request
 CStoreBrowse_GetItems_Response
 CStorePageFilter
 CStreamDataLostMsg
-CStreamDecoderH264AVCodec
-CStreamDecoderH264Standalone
 CStreamDecoderOpus
 CStreamDecoderRawAudio
-CStreamDecoderRawVideo
+CStreamDecoderVideoAVCodec
+CStreamDecoderVideoStandalone
 CStreamPlayerConfig
 CStreamTransportClient starting Remote Client service connection\n
 CStreamTransportClient stopping Remote Client service connection\n
@@ -10331,6 +10333,7 @@ CValidator::Push
 CVariableBitStringBase
 CVideoDecoderInfoMsg
 CVideoEncoderInfoMsg
+CVideoFrameHeader
 CVirtualControllerColor
 CVirtualControllerConfig
 CVirtualControllerElement
@@ -10343,7 +10346,7 @@ CVirtualHereRequestMsg
 CVirtualHereShareDeviceMsg
 CVixs;g
 CVulkanAccel: Couldn't create texture: %s\n
-CVulkanAccel: Not using a Vulkan renderer
+CVulkanAccel: Not using a Vulkan renderer\n
 CVulkanAccel: Unknown frame format: %d\n
 CVulkanAccel: av_hwdevice_ctx_create() failed: %d\n
 CVulkanAccel: av_hwdevice_ctx_init() failed: %d\n
@@ -10913,7 +10916,6 @@ Couldn't parse CURLOPT_RESOLVE entry '%s'
 Couldn't parse IP address '%s'\n
 Couldn't parse XML document: %s\n
 Couldn't parse color '%s'\n
-Couldn't parse colorspace %s\n
 Couldn't parse default value "
 Couldn't parse internal font %d\n
 Couldn't parse internal fonts\n
@@ -10964,7 +10966,7 @@ CreateSocketPair
 CreateSteamNetworkingUtils
 CreateWebRTCICESession
 Created
-Created %s renderer on %s\n
+Created %s renderer on %s using the %s colorspace\n
 Created with GIMPW
 Created with GIMPd.e
 CreatorHomeLink
@@ -12969,7 +12971,6 @@ GAMESCOPE_INTERNAL_DISPLAY_BRIGHTNESS
 GAMESCOPE_MODE_SAVE_FILE
 GAMESCOPE_NEW_SCALING_FILTER
 GAMESCOPE_NEW_SCALING_SCALER
-GAMESCOPE_NV12_COLORSPACE
 GAMESCOPE_SDR_INPUT_GAIN
 GAMESCOPE_SDR_ON_HDR_CONTENT_BRIGHTNESS
 GAMESCOPE_VRR_CAPABLE
@@ -13393,6 +13394,7 @@ HCAo\vO
 HCW3
 HCcd3
 HDC?_
+HDR10
 HDZ<0
 HEAD
 HENNEpENNE
@@ -14459,7 +14461,7 @@ Jt("S
 Jtttttt
 Jtwf
 Jugando con %s
-Jul 24 2026
+Jul 29 2026
 July
 June
 Juntar/desliz. 2 dedos
@@ -17766,6 +17768,7 @@ Py6y
 Py9R,
 PyRd
 Pyrowave
+Pyrowave Vulkan decoding
 Pyrowave YUV decoding
 Pys[
 Pyyhk
@@ -18515,7 +18518,7 @@ Retransmisi
 Retransmitiendo %s
 Retransmitiendo Steam
 Retransmitiendo m
-Retro-bit Controller
+Retro Controller
 Retry-After:
 Retrying
 Retrying ping measurements
@@ -18708,6 +18711,7 @@ SDL.renderer.create.vulkan.physical_device
 SDL.renderer.create.vulkan.present_queue_family_index
 SDL.renderer.create.vulkan.surface
 SDL.renderer.create.window
+SDL.renderer.output_colorspace
 SDL.renderer.vulkan.swapchain_image_count
 SDL.texture.create.HDR_headroom
 SDL.texture.create.SDR_white_point
@@ -18721,6 +18725,7 @@ SDL.texture.opengles2.texture
 SDL.texture.opengles2.texture_u
 SDL.texture.opengles2.texture_uv
 SDL.texture.opengles2.texture_v
+SDL.texture.vulkan.texture
 SDL.window.create.flags
 SDL.window.create.height
 SDL.window.create.title
@@ -18841,6 +18846,7 @@ SDL_GetPrimaryDisplay
 SDL_GetRGB
 SDL_GetRectIntersection
 SDL_GetRectUnion
+SDL_GetRenderWindow
 SDL_GetRendererName
 SDL_GetRendererProperties
 SDL_GetSensorData
@@ -20802,7 +20808,6 @@ This is an S/MIME signed message%s%s
 This program requires version
 This program was compiled against version
 This should be implemented for server connections
-This should never be called
 This shouldn't be called if all the sizes are equal.
 Thread cannot be joined with self
 Thread did nothing but sleep during profile period.\n
@@ -23841,6 +23846,7 @@ Z~5pW3Y
 \n\nclient_ids
 \n\nclose_time
 \n\ncodec_data
+\n\ncolorspace
 \n\ncontent_id
 \n\ncpu_vendor
 \n\ndemo_appid
@@ -23867,6 +23873,7 @@ Z~5pW3Y
 \n\nl4s_detect
 \n\nmanage_ceg
 \n\noptin_only
+\n\npixel_bits
 \n\nproduct_id
 \n\nrequest_id
 \n\nrestricted
@@ -23935,6 +23942,8 @@ Z~5pW3Y
 \n\rlong_press_ms
 \n\rmac_addresses
 \n\rmanage_cdkeys
+\n\rmax_luminance
+\n\rmin_luminance
 \n\rmouse_enabled
 \n\rnews_post_gid
 \n\rpackage_group
@@ -23951,6 +23960,7 @@ Z~5pW3Y
 \n\rscore_penalty
 \n\rscreen_height
 \n\rscreen_locked
+\n\rsdr_luminance
 \n\rsdrpop_remote
 \n\rserial_number
 \n\rserver_secret
@@ -31853,8 +31863,6 @@ k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
 k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
-k_EStreamVideoCodecVP8
-k_EStreamVideoCodecVP9
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingVideoData
@@ -31931,9 +31939,6 @@ k_EUserReviewScore_VeryPositive
 k_EVRLinkCapsAvailable
 k_EVRLinkCapsUnimplemented
 k_EVRLinkCapsUnknown
-k_EVideoFormatAccel
-k_EVideoFormatNone
-k_EVideoFormatYV12
 k_EWindowStackingOrder_Bottom
 k_EWindowStackingOrder_Invalid
 k_EWindowStackingOrder_Top
@@ -32415,7 +32420,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Jul 24 2026 22:11:12
+lib Jul 29 2026 17:20:01
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -32459,6 +32464,7 @@ liga
 liittym
 limited_launch_active
 line
+linear
 linearGradient
 linebuffer_ctrl
 linebuffer_new
@@ -32864,7 +32870,6 @@ m_eConnectionState == k_ESteamNetworkingConnectionState_Dead
 m_eConnectionWireState == eOldState
 m_eConnectionWireState == k_ESteamNetworkingConnectionState_Dead
 m_eDataAudioFormat != k_EAudioFormatNone
-m_eDataVideoFormat != k_EVideoFormatNone
 m_eKeyType == x.m_eKeyType
 m_eNegotiatedCipher != k_ESteamNetworkingSocketsCipher_INVALID
 m_eNegotiatedCipher == k_ESteamNetworkingSocketsCipher_INVALID
@@ -32967,7 +32972,6 @@ m_pFirst != pMsg
 m_pFirst == pInsertAfter
 m_pFirst == pInsertBefore
 m_pFirstTask
-m_pFrame
 m_pICESession == nullptr
 m_pKeyValues
 m_pLaggerOwner->m_pFirst == this
@@ -33795,7 +33799,6 @@ nScore >= 0 || m_vecAvailableTransports.size() == 1
 nSegBegin < nSegEnd
 nSize != 0
 nSize >= 0
-nSize >= k_VideoNALHeaderSize
 nStf,a
 nSw}Z\tu
 nTY[
@@ -35039,7 +35042,6 @@ pU\ve
 pV3P
 pVal->m_pInherit
 pViaRelayData->m_nAvail > 0
-pVideoAccel
 pVp\t
 pW-c
 pWatcher != NULL
@@ -35647,11 +35649,15 @@ py8\f
 pyZp
 py_generic_services
 pyrowave_create_default_device
+pyrowave_create_device
 pyrowave_decoder_create
 pyrowave_decoder_decode_cpu_buffer_synchronous
+pyrowave_decoder_decode_gpu_buffer
 pyrowave_decoder_destroy
+pyrowave_decoder_device_prefers_fragment_path
 pyrowave_decoder_push_packet
 pyrowave_device_destroy
+pyrowave_device_set_command_buffer
 pyrs
 pz0S=##=Q.p
 pz1kW
@@ -36616,6 +36622,7 @@ sOO"
 sQ.9
 sQ4R
 sQ?6
+sRGB
 sSm\nL
 sSuHgu
 sTWt
@@ -39707,6 +39714,7 @@ vkCreateImage(): %s
 vkCreateInstance
 vkCreateInstance(): %s
 vkCreateSemaphore
+vkCreateSemaphore(): %s
 vkDestroyCommandPool
 vkDestroyDevice
 vkDestroyImage
@@ -39958,7 +39966,6 @@ warning_icon
 warning_missing_input
 warning_warring_input
 wayland
-wayland,x11
 wbEq)$
 wbW_0O#
 wchar_t
@@ -40548,6 +40555,8 @@ yuF>
 yuL3
 yu[w
 yu]4if
+yuv420
+yuv444
 yv(T"k!
 ywIl+/\n
 ywX{
