@@ -403,13 +403,6 @@ enum ECurator
 	k_ECuratorUnignore = 4;
 }
 
-enum EDiscoveryAction
-{
-	k_EDiscoveryAction_Invalid = 0;
-	k_EDiscoveryAction_OpenStorePage = 1;
-	k_EDiscoveryAction_OpenDoor = 2;
-}
-
 enum EDown
 {
 	k_EDownoadInvalid = 0;

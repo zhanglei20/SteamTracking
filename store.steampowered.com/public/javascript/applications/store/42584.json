@@ -16,6 +16,8 @@
     "VerifiedProgram_DeckDisclaimer": "Trailer mungkin tidak mewakili pengalaman bermain yang sebenarnya di Steam Deck",
     "StoreItemFound": "%1$s Ditemukan (%2$s)",
     "StoreItemNotFound": "Tidak Ditemukan (%1$s)",
+    "SteamReviewSection_AppID": "Reviews From App",
+    "SteamReviewSection_AppID_ttip": "The app whose Steam reviews are shown in this section, and the app a customer's review is written against.",
     "SteamURLAccepted": "%1$s URL Diterima",
     "SteamURLInvalid": "Eror: URL tidak mengarahkan ke halaman Steam (Toko/Komunitas)",
     "AnchorHashInputInvalid": "Input Tidak Valid",

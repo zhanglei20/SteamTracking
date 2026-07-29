@@ -240,6 +240,7 @@
     "Filter_ViewResults": "Προβολή αποτελεσμάτων",
     "Results_GridView_Tooltip": "Προβολή ως πλέγμα",
     "Results_ListView_Tooltip": "Προβολή ως λίστα",
+    "Results_InitialLoadError": "Παρουσιάστηκε πρόβλημα κατά τη φόρτωση των αποτελεσμάτων. Δοκιμάστε ξανά αργότερα.",
     "Results_PageLoadError": "Παρουσιάστηκε πρόβλημα κατά τη φόρτωση επιπλέον αποτελεσμάτων. Δοκιμάστε ξανά αργότερα.",
     "Market_AppUnplayedAndUnvetted": "Προσπαθείτε να δείτε ένα αντικείμενο για ένα νέο παιχνίδι στο Steam που δεν έχετε παίξει ποτέ. Να είστε προσεκτικοί με αυτό το αντικείμενο.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Κάντε κλικ εδώ για να δείτε το αντικείμενο",
@@ -285,5 +286,16 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Πρέπει να ενεργοποιήσετε το Steam Guard στον λογαριασμό σας. Σιγουρευτείτε ότι το email σας είναι επιβεβαιωμένο και ότι έχετε συνδεθεί στον λογαριασμό σας τουλάχιστον δυο φορές μετά την ενεργοποίηση του Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Ο λογαριασμός σας πρέπει να προστατεύεται από το Steam Guard για τουλάχιστον %1$s ημέρες.",
     "Economy_Market_HeaderTip_TimeCanUse": "Αν δεν προκύψουν περαιτέρω προβλήματα που να περιορίζουν την πρόσβασή σας, θα μπορείτε να χρησιμοποιήσετε την Αγορά Κοινότητας %1$s.",
-    "Economy_Market_TopLevelReason_TradeCooldown": "Ο λογαριασμός σας έχει τεθεί προσωρινά σε περίοδο αδράνειας για τα χαρακτηριστικά ανταλλαγών και Αγοράς."
+    "Economy_Market_TopLevelReason_TradeCooldown": "Ο λογαριασμός σας έχει τεθεί προσωρινά σε περίοδο αδράνειας για τα χαρακτηριστικά ανταλλαγών και Αγοράς.",
+    "MyHistory_Title_ItemNameBlock": "Όνομα",
+    "MyHistory_Title_ListedAtTime": "Έγινε καταχώριση",
+    "MyHistory_Title_ActedOnTime": "Πραγματοποιήθηκε ενέργεια",
+    "MyHistory_Title_TransactedPrice": "Τιμή",
+    "MyHistory_Title_Action": "Δράση",
+    "MyHistory_NoResults": "Δεν βρέθηκαν αποτελέσματα",
+    "MyHistory_Action_Sold": "Πωλήθηκε",
+    "MyHistory_Action_Purchased": "Αγοράστηκε",
+    "Breadcrumbs_Label_History": "Ιστορικό",
+    "Breadcrumbs_Label_Listings": "My Listings",
+    "Breadcrumbs_Label_BuyOrders": "My Buy Orders"
 }

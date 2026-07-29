@@ -492,17 +492,20 @@
             _._.Get().BOwnsApp(_.appid) &&
               (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
           const _ = (0, _.jsx)(_._, {
-            initialEvent: _,
-            appid: _,
-            clanSteamID: _,
-            partnerEventStore: _,
-            emoticonStore: _._,
-            closeModal: !_ && _,
-            showAppHeader: _,
-            bShowOnlyInitialEvent: _,
-            additionalParams: _,
-            eventClassName: _,
-            onAppIconClick: _,
+            children: (_) =>
+              (0, _.jsx)(_._, {
+                initialEvent: _,
+                appid: _,
+                clanSteamID: _,
+                partnerEventStore: _,
+                emoticonStore: _,
+                closeModal: !_ && _,
+                showAppHeader: _,
+                bShowOnlyInitialEvent: _,
+                additionalParams: _,
+                eventClassName: _,
+                onAppIconClick: _,
+              }),
           });
           return _
             ? _

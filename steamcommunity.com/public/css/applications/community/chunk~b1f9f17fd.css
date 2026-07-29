@@ -1334,70 +1334,6 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
 .kZK7zztw_FnA745bJS0yL:hover {
   opacity: 1;
 }
-._1cKuIWVnzQyoBqcjbmQej8 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1em;
-}
-.ur8Kb4QFgfep75jIe6Cdz {
-  font-weight: 600;
-  margin-top: 10px;
-  color: #e6c32c;
-}
-._1sTpucKBB_H5jsSx1uDFGS {
-  font-size: 18px;
-  font-weight: 300;
-  padding-bottom: 0.8em;
-  color: #e6c32c;
-}
-._15_aOIWD_1U_J_zwCK1U1Q {
-  font-size: 18px;
-  font-weight: 300;
-  padding-top: 0.8em;
-  color: #e6c32c;
-}
-._1ZBOVc-VGXMnDpiwyh7ju4 {
-  width: 80px;
-  height: 80px;
-}
-.SummerSale2022 .ModalPosition_TopBar {
-  height: 4px;
-  background: #fb5034;
-}
-.SummerSale2022 .DialogContent {
-  background: #2d3194;
-  box-shadow: 4px 4px 0px #2be742;
-}
-.SummerSale2022 .DialogContent .DialogHeader {
-  background: #fb5034;
-  color: #e7c42b;
-  box-shadow: 4px 4px 0px #e7c42b;
-  padding-left: 6px;
-  padding-bottom: 2px;
-  font-weight: 500;
-}
-.SummerSale2022 .DialogContent ._DialogColLayout {
-  padding-bottom: 4px;
-}
-.SummerSale2022 .DialogContent button.DialogButton {
-  background: #4247b4;
-  color: #dadee5;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.SummerSale2022 .DialogContent button.DialogButton.Primary {
-  background: #2be742;
-  color: #2d3194;
-  box-shadow: 4px 2px 0px #0097c9;
-  border-radius: 0px;
-}
-.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:hover,
-.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:active {
-  background: #2be742;
-  box-shadow: 4px 4px 0px #0097c9;
-  color: #0097c9;
-}
 @keyframes _2NvCWp6KWza717c2q7D6ko {
   from {
     background-position: 0 100%;
@@ -3682,11 +3618,11 @@ html.responsive.touch
   font-size: clamp(16px, 1rem + 1.35vw, 28px);
   font-weight: 400;
 }
-._39_l0k1tIEgCNXIQ5AcbFN {
+._2i9W9vMPyF-hF1wf5HCLxE {
   padding: 0px 18px;
   font-size: 1.1em;
 }
-._39_l0k1tIEgCNXIQ5AcbFN ul {
+._2i9W9vMPyF-hF1wf5HCLxE ul {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -3868,11 +3804,11 @@ html.responsive.touch ._3wnfYKWMVy4IzwkuD-ZTnX {
     max-width: 600px;
   }
 }
-._2GCyETuEDO1wYJirDK5xzd {
+._3e9HuimWWVFAai6O2krwKA {
   padding: 0px 18px;
   font-size: 1.1em;
 }
-._2GCyETuEDO1wYJirDK5xzd ul {
+._3e9HuimWWVFAai6O2krwKA ul {
   display: flex;
   flex-direction: column;
   gap: 6px;

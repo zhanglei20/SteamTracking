@@ -351,7 +351,7 @@
         i = n(75844),
         l = n(90626),
         c = n(82429),
-        d = n(68033),
+        d = n(65606),
         u = n(41550),
         p = n(74568),
         h = n(88843),
@@ -470,18 +470,21 @@
             x.Fm.Get().BOwnsApp(n.appid) &&
               (C = (e) =>
                 (0, f.EP)(e, "steam://nav/games/details/" + n.appid)));
-          const E = (0, a.jsx)(u.AD, {
-            initialEvent: n,
-            appid: r,
-            clanSteamID: o,
-            partnerEventStore: l,
-            emoticonStore: d.A,
-            closeModal: !h && s,
-            showAppHeader: c,
-            bShowOnlyInitialEvent: e,
-            additionalParams: m,
-            eventClassName: _,
-            onAppIconClick: C,
+          const E = (0, a.jsx)(d.sU, {
+            children: (t) =>
+              (0, a.jsx)(u.AD, {
+                initialEvent: n,
+                appid: r,
+                clanSteamID: o,
+                partnerEventStore: l,
+                emoticonStore: t,
+                closeModal: !h && s,
+                showAppHeader: c,
+                bShowOnlyInitialEvent: e,
+                additionalParams: m,
+                eventClassName: _,
+                onAppIconClick: C,
+              }),
           });
           return h
             ? E

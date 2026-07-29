@@ -1791,7 +1791,7 @@
                           G().OneColumn,
                           G().MessageTextArea,
                         ),
-                        placeholder: "Message to send",
+                        placeholder: "Message to send (required)",
                         value: M,
                         onChange: (e) => k(e.target.value),
                       }),
@@ -1840,7 +1840,8 @@
                                   }),
                                   e.onSanction();
                               },
-                              disabled: null === t || !C,
+                              disabled:
+                                null === t || !C || 0 === M.trim().length,
                               children: "Sanction",
                             }),
                           ],
@@ -2267,21 +2268,29 @@
       const s = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function i(e, t) {
         let r = "0000000000000000000000000000000000000000";
-        var i;
         "string" == typeof e
           ? (r = e)
           : e &&
-            ((i = e),
-            (r = [...i].map((e) => e.toString(16).padStart(2, "0")).join("")));
-        let a = ".jpg";
+            (r =
+              (function (e) {
+                if (!e) return "";
+                return (
+                  "function" == typeof e[Symbol.iterator]
+                    ? Array.from(e)
+                    : Object.values(e).filter((e) => "number" == typeof e)
+                )
+                  .map((e) => e.toString(16).padStart(2, "0"))
+                  .join("");
+              })(e) || r);
+        let i = ".jpg";
         "0000000000000000000000000000000000000000" === r && (r = s),
-          44 == r.length && ((a = r.slice(-4)), (r = r.slice(0, 40)));
-        let o = n.TS.AVATAR_BASE_URL;
+          44 == r.length && ((i = r.slice(-4)), (r = r.slice(0, 40)));
+        let a = n.TS.AVATAR_BASE_URL;
         switch (
-          (o ||
-            ((o = n.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (o += r.slice(0, 2) + "/")),
-          (o += r),
+          (a ||
+            ((a = n.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (a += r.slice(0, 2) + "/")),
+          (a += r),
           t)
         ) {
           case "X-Small":
@@ -2289,14 +2298,14 @@
             break;
           case "Medium":
           case "MediumLarge":
-            o += "_medium";
+            a += "_medium";
             break;
           case "Large":
           case "X-Large":
           case "FillArea":
-            o += "_full";
+            a += "_full";
         }
-        return (o += a), o;
+        return (a += i), a;
       }
     },
     20187: (e, t, r) => {

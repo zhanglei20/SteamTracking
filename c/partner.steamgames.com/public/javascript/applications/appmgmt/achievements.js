@@ -21,6 +21,7 @@
         Takeover: "_9JFhB-CMLoXAyliexUHye",
         TakeoverBody: "_3MCO1BiXD95WdYgL9UTlSJ",
         Instructions: "s_iKU1jabRu1BJhz_7kb7",
+        BulkEdit: "fkI7RYiO0vj6PTFql_JPy",
         BulkEditHeader: "_2BivQamb3LEiQtwiyru4SU",
         BulkEditInstructions: "_196W2uTFyW8D5dFhidIkKr",
         FileTypesList: "_34PNksp_-K8y5qELr6Dz5U",
@@ -1516,7 +1517,7 @@
               _ = (0, _._)(_),
               [_, _] = (0, _.useState)(!1);
             return (0, _.jsxs)("div", {
-              className: _.Takeover,
+              className: (0, _._)(_.Takeover, _.BulkEdit),
               children: [
                 _ &&
                   (0, _.jsx)(_._, {

@@ -316,40 +316,6 @@ var CLSTAMP = "steamdb";
           return !!window.document;
         }
         const _ = "webui_config";
-        function _(_ = _) {
-          const _ = {},
-            _ = _("config", _);
-          _ && (Object.assign(_, _), (_.config = !0));
-          const _ = _("userinfo", _);
-          _ &&
-            (Object.assign(_, _),
-            (_.userConfig = !0),
-            _.is_support &&
-              (function () {
-                let _ = null;
-                _() &&
-                  (_ = (function (_) {
-                    if (!_() || !window.document.cookie) return null;
-                    const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
-                    return _ && _[2] ? decodeURIComponent(_[2]) : null;
-                  })(_));
-                return Boolean(_ && 1 === Number.parseInt(_));
-              })() &&
-              (_.is_support = !1));
-          const _ = _("broadcast", _);
-          _ && (Object.assign(_, _), (_.broadcastConfig = !0));
-          const _ = _("community", _);
-          _ && (Object.assign(_, _), (_.communityConfig = !0));
-          const _ = _("event", _);
-          return (
-            _ && (Object.assign(_, _), (_.eventConfig = !0)),
-            (_ = !0),
-            _.forEach((_) => _()),
-            _
-          );
-        }
-        let _ = new Set(),
-          _ = !1;
         function _(_, _ = _) {
           return _(_, _, !0);
         }
@@ -385,6 +351,40 @@ var CLSTAMP = "steamdb";
             }
           else _ && console.error("Missing config element #", _);
         }
+        function _(_ = _) {
+          const _ = {},
+            _ = _("config", _);
+          _ && (Object.assign(_, _), (_.config = !0));
+          const _ = _("userinfo", _);
+          _ &&
+            (Object.assign(_, _),
+            (_.userConfig = !0),
+            _.is_support &&
+              (function () {
+                let _ = null;
+                _() &&
+                  (_ = (function (_) {
+                    if (!_() || !window.document.cookie) return null;
+                    const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
+                    return _ && _[2] ? decodeURIComponent(_[2]) : null;
+                  })(_));
+                return Boolean(_ && 1 === Number.parseInt(_));
+              })() &&
+              (_.is_support = !1));
+          const _ = _("broadcast", _);
+          _ && (Object.assign(_, _), (_.broadcastConfig = !0));
+          const _ = _("community", _);
+          _ && (Object.assign(_, _), (_.communityConfig = !0));
+          const _ = _("event", _);
+          return (
+            _ && (Object.assign(_, _), (_.eventConfig = !0)),
+            (_ = !0),
+            _.forEach((_) => _()),
+            _
+          );
+        }
+        let _ = new Set(),
+          _ = !1;
         const _ = "presentation_mode";
         _.createContext({});
         __webpack_require__("chunkid"), __webpack_require__("chunkid");
@@ -2646,19 +2646,19 @@ var CLSTAMP = "steamdb";
       {
         43: "8170f2c895e19202cd65",
         762: "da846d9434cb0fa053d0",
-        976: "4a39c771e67346bcf019",
-        1225: "d7ade100d36776b8eb45",
-        1449: "0293ebeed5d0f5f41967",
+        976: "4a9239f69bb779f9fef3",
+        1225: "ec8afa83eabe9ae92d0a",
+        1449: "0db9a38bbe2536fe1f62",
         1499: "fac3c5fdc04308b95497",
-        1973: "fbe88770fad97249bc47",
-        2256: "d0ba593d4eca9691bbc7",
-        2320: "d644746aabeabf942946",
-        2435: "1408401c5e74c109830b",
+        1973: "dc9c2e6f8745f4ed715e",
+        2256: "65356325fccb3ceeb2e5",
+        2320: "427d5328d49347270aad",
+        2435: "f6b7d137f86c8df45dc6",
         2532: "726fc960ed3131ab0865",
-        2632: "27cc62f69a5220f7f568",
-        2749: "e4bf9beb839b70a63684",
+        2632: "8b71d2971e73b6a79dd7",
+        2749: "e894f632b642be8ef44f",
         2945: "e07e4818e2a0d4fcc6a4",
-        2954: "7ae924883f6e9b2e5de1",
+        2954: "dc0327a03c047b853556",
         3e3: "9d84323971dec0188c80",
         3016: "f6185aecd134f08375bc",
         3232: "7e18a3c2d3045e97050e",
@@ -2666,46 +2666,46 @@ var CLSTAMP = "steamdb";
         3485: "203f1d427376e06cd2e9",
         3710: "7c8bb8eefaf2ac5d7bdf",
         3789: "68550c6cfd59330c3e48",
-        3912: "f46d7804b75366cc0414",
+        3912: "00e7e05afb74e3d70639",
         4154: "94ca8cb2d2aa1f47d22a",
         4302: "435019249c6f51b79b4f",
         4434: "b76bcd1bc89404745cc8",
         4488: "9b7902a9dcd57e5a8ac3",
         4776: "6133207eac020e1ab36e",
         4787: "63f48bbabd6e52adb440",
-        5018: "72f97466aa80cea64864",
-        5110: "81e44f6a46d5f04a7423",
-        5241: "0218196705e973a7e8e2",
+        5018: "f59bb70dbbe1343d41fa",
+        5110: "24687cb3c9a8182c5135",
+        5241: "351135034277f9bcc265",
         5341: "ce5400f709b5d26948e2",
         5480: "fe1e2469122f1c0d37d0",
-        6031: "47f2eea679d921950e51",
+        6031: "472a546a646d274e4c2e",
         6127: "bcb2b356d29892b7ef52",
-        6149: "8f4e9840adc6baeba66d",
-        6165: "7956e5f9bcfb619550fd",
-        6208: "2ce23f126d32170f6864",
-        6239: "eb420446709f37d81caa",
-        6332: "90c94a8577a9071a1219",
+        6149: "543b4aa9e9e3e12dfb72",
+        6165: "a3a2002003aab2c6918e",
+        6208: "0a4310d596b298b6e397",
+        6239: "d22a663e3c74cf090815",
+        6332: "5a8e17fda116a713235d",
         6385: "633241ebfdb81845e960",
-        6518: "857261cae6462f001643",
-        6523: "dd56145bc7c9cf8ab31b",
-        6562: "f613f1bdf3fa42969cf9",
+        6518: "dc5f6ae58364d09cceda",
+        6523: "8fd05b6cdc60fcf89b56",
+        6562: "dafc1ec6ee6981904382",
         6609: "06b39a5f1c8a9fa61b56",
         6888: "5e713d851c095e455c3b",
         6971: "39f358e2496a3d2a55c3",
         7487: "c0d8195dd6dab3975615",
-        7539: "d14386437ea79cfa72ce",
-        7591: "2a9de374abbee8cb6b1a",
-        7786: "5d61f419cae384f41efb",
+        7539: "104191112b77b34b5111",
+        7591: "64c4a6924e87e3000209",
+        7786: "9bb5faf26b198c787094",
         7861: "63671b2acc79688f22e9",
-        8025: "811bf629d8708c021fbf",
+        8025: "0f6d0bc178820df7087c",
         8194: "a3c2c82981967a0bb30a",
-        8306: "354165012af14a53d5f2",
+        8306: "4c09e8a1a38f03ae82bd",
         8759: "64839c1cf1d65d068251",
         8766: "568c79e84ce11aed47a9",
-        8967: "45cc9aa52f3f55ad92f8",
+        8967: "9c80671f181fafb22c63",
         9027: "99a11776d1c5b10911cd",
-        9152: "b70dbdc48bc859e2141f",
-        9712: "3e246a0ff8776640110c",
+        9152: "50a4ea1fcbf9a17d5f47",
+        9712: "3eeeb5ae8447bed29535",
         9746: "53570359ca81bb16a3cc",
         9808: "942f6e1ad27af2af89a2",
       }[_]),
@@ -2853,6 +2853,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(7496));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(73059));
   _ = _._(_);
 })();

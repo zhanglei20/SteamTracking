@@ -3052,6 +3052,7 @@ message CVRGamepadUI_Frame {
 	repeated string steamui_page_overlay_keys = 7;
 	optional bool is_streaming_client = 8;
 	optional int32 dock_location = 9 [(.description) = "enum"];
+	optional uint32 game_app_id = 10;
 }
 
 // Used by: common.proto
@@ -3708,6 +3709,17 @@ message SiteServerUI_Status_Response {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message SteamAward {
+	optional int32 voteid = 1;
+	optional .SteamAward_Localization localization = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message SteamAward_Localization {
+	optional string title = 1;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreBrowseContext {
 	optional string language = 1;
 	optional int32 elanguage = 2;
@@ -3753,6 +3765,7 @@ message StoreBrowseItemDataRequest {
 	optional bool include_assets_without_overrides = 15;
 	optional bool apply_user_filters = 16;
 	optional bool include_links = 17;
+	optional bool include_extra_details = 18;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3815,6 +3828,7 @@ message StoreItem {
 	repeated .StoreItem_Link links = 71;
 	optional string purchase_description_bbcode = 72;
 	repeated .StoreItem_PackageGroup package_groups = 74;
+	optional .StoreItem_ExtraDetails extra_details = 75;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3868,6 +3882,11 @@ message StoreItem_Demo {
 	optional uint32 appid = 1;
 	optional string label = 2;
 	optional bool show_above_purchase = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails {
+	repeated .SteamAward steam_award = 1;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

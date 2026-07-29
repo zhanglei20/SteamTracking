@@ -2703,6 +2703,7 @@ var CLSTAMP = "steamdb";
           SteamMachineCompatLogo:
             "shared_svg_library_SteamMachineCompatLogo_x5w70",
           SteamDeckCompatLogo: "shared_svg_library_SteamDeckCompatLogo_1dzQL",
+          SteamFrameCompatLogo: "shared_svg_library_SteamFrameCompatLogo_33PLF",
           SteamDeckCompatIcon: "shared_svg_library_SteamDeckCompatIcon_3hAj0",
           SteamDeckCompatVerified:
             "shared_svg_library_SteamDeckCompatVerified_kEODD",
@@ -3198,12 +3199,12 @@ var CLSTAMP = "steamdb";
           "./cy.js": 92366,
           "./da": 82453,
           "./da.js": 82453,
-          "./de": 98982,
+          "./de": 76601,
           "./de-at": 25027,
           "./de-at.js": 25027,
           "./de-ch": 8101,
           "./de-ch.js": 8101,
-          "./de.js": 98982,
+          "./de.js": 76601,
           "./dv": 96080,
           "./dv.js": 96080,
           "./el": 12655,
@@ -3406,8 +3407,8 @@ var CLSTAMP = "steamdb";
           "./ug-cn.js": 40818,
           "./uk": 48478,
           "./uk.js": 48478,
-          "./ur": 274,
-          "./ur.js": 274,
+          "./ur": 77893,
+          "./ur.js": 77893,
           "./uz": 89133,
           "./uz-latn": 20311,
           "./uz-latn.js": 20311,
@@ -38471,7 +38472,7 @@ var CLSTAMP = "steamdb";
               return "";
           }
         }
-        _._, _._, _._, _._;
+        _._, _._, _._, _._, _._;
         var _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -80924,7 +80925,7 @@ var CLSTAMP = "steamdb";
             _ = _ && "packageid" in _ && !!_.packageid;
           let _;
           if (_) {
-            const _ = _.getQueryData(_(_, "default_info"));
+            const _ = _.getQueryData(_(_, "default_info", _.cacheScope));
             _ &&
               1 == _.included_appids?.length &&
               (_ = {
@@ -80946,7 +80947,7 @@ var CLSTAMP = "steamdb";
         function _(_, _, _) {
           const _ = _ && "appid" in _ && !!_.appid;
           return {
-            queryKey: _(_, "include_included_items"),
+            queryKey: _(_, "include_included_items", _.cacheScope),
             queryFn: async () => {
               _ && _(_, _, _);
               return (
@@ -81066,18 +81067,18 @@ var CLSTAMP = "steamdb";
         }
         function _(_, _, _, _) {
           return {
-            queryKey: _(_, _),
+            queryKey: _(_, _, _.cacheScope),
             queryFn: async () => (await _(_, _, _))[_] || null,
             staleTime: 216e5,
             enabled: _(_),
           };
         }
-        function _(_, _, _, _, _) {
-          _.setQueryData(_(_, _), _[_] ?? null);
+        function _(_, _, _, _, _, _) {
+          _.setQueryData(_(_, _, _), _[_] ?? null);
         }
         function _(_, _) {
           return {
-            queryKey: _(_, "default_info"),
+            queryKey: _(_, "default_info", _.cacheScope),
             queryFn: async () => _(await _(_, _, "default_info")),
             staleTime: 216e5,
             enabled: _(_),
@@ -81093,7 +81094,7 @@ var CLSTAMP = "steamdb";
         function _(_, _) {
           const _ = "include_all_purchase_options";
           return {
-            queryKey: _(_, _),
+            queryKey: _(_, _, _.cacheScope),
             queryFn: async () => {
               const _ = await _(_, _, _);
               return {
@@ -81105,99 +81106,103 @@ var CLSTAMP = "steamdb";
             enabled: _(_),
           };
         }
-        function _(_, _) {
-          return ["StoreItem", _ && (0, _._)(_), _];
-        }
         function _(_, _, _) {
+          const _ = ["StoreItem", _ && (0, _._)(_), _];
+          return _ && _.push(_), _;
+        }
+        function _(_, _, _, _) {
           const _ = (0, _._)(_);
           _ &&
-            (!(function (_, _, _) {
-              _.setQueryData(_(_, "default_info"), _(_));
-            })(_, _, _),
+            (!(function (_, _, _, _) {
+              _.setQueryData(_(_, "default_info", _), _(_));
+            })(_, _, _, _),
             _.include_basic_info &&
-              (function (_, _, _) {
-                _(_, _, _, "include_basic_info", "basic_info");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "include_basic_info", "basic_info", _);
+              })(_, _, _, _),
             _.include_assets &&
-              (function (_, _, _) {
-                _(_, _, _, "include_assets", "assets");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "include_assets", "assets", _);
+              })(_, _, _, _),
             _.include_screenshots &&
-              (function (_, _, _) {
-                _(_, _, _, "include_screenshots", "screenshots");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "include_screenshots", "screenshots", _);
+              })(_, _, _, _),
             _.include_trailers &&
-              (function (_, _, _) {
-                _(_, _, _, "include_trailers", "trailers");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "include_trailers", "trailers", _);
+              })(_, _, _, _),
             _.include_assets_without_overrides &&
-              (function (_, _, _) {
+              (function (_, _, _, _) {
                 _(
                   _,
                   _,
                   _,
                   "include_assets_without_overrides",
                   "assets_without_overrides",
+                  _,
                 );
-              })(_, _, _),
+              })(_, _, _, _),
             _.include_reviews &&
-              (function (_, _, _) {
-                _(_, _, _, "include_reviews", "reviews");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "include_reviews", "reviews", _);
+              })(_, _, _, _),
             _.include_release &&
-              (function (_, _, _) {
-                _(_, _, _, "include_release", "release");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "include_release", "release", _);
+              })(_, _, _, _),
             _.include_tag_count &&
               _.include_tag_count > 0 &&
-              (function (_, _, _) {
-                _(_, _, _, "top_tags", "tags");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "top_tags", "tags", _);
+              })(_, _, _, _),
             _.include_platforms &&
-              (function (_, _, _) {
-                _(_, _, _, "include_platforms", "platforms");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "include_platforms", "platforms", _);
+              })(_, _, _, _),
             _.apply_user_filters &&
-              (function (_, _, _) {
-                _(_, _, _, "apply_user_filters", "user_filter_failure");
-              })(_, _, _),
+              (function (_, _, _, _) {
+                _(_, _, _, "apply_user_filters", "user_filter_failure", _);
+              })(_, _, _, _),
             _.include_all_purchase_options &&
-              (function (_, _, _) {
-                _.setQueryData(_(_, "include_all_purchase_options"), {
+              (function (_, _, _, _) {
+                _.setQueryData(_(_, "include_all_purchase_options", _), {
                   purchase_options: _.purchase_options,
                   package_groups: _.package_groups,
                 });
-              })(_, _, _),
+              })(_, _, _, _),
             _.include_full_description &&
-              (function (_, _, _) {
+              (function (_, _, _, _) {
                 _(
                   _,
                   _,
                   _,
                   "include_full_description",
                   "full_description_bbcode",
+                  _,
                 );
-              })(_, _, _),
+              })(_, _, _, _),
             _.include_supported_languages &&
-              (function (_, _, _) {
+              (function (_, _, _, _) {
                 _(
                   _,
                   _,
                   _,
                   "include_supported_languages",
                   "supported_languages",
+                  _,
                 );
-              })(_, _, _),
+              })(_, _, _, _),
             _.include_included_items &&
               _.included_item_data_request &&
               (_.included_items?.included_apps?.forEach((_) =>
-                _(_, _, _.included_item_data_request),
+                _(_, _, _.included_item_data_request, _),
               ),
               _.included_items?.included_packages?.forEach((_) =>
-                _(_, _, _.included_item_data_request),
+                _(_, _, _.included_item_data_request, _),
               ),
               _.included_items?.included_bundles?.forEach((_) =>
-                _(_, _, _.included_item_data_request),
+                _(_, _, _.included_item_data_request, _),
               )));
         }
         const _ = [
@@ -81242,6 +81247,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = _.createContext({});
         function _() {
@@ -81260,22 +81266,29 @@ var CLSTAMP = "steamdb";
             } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = _.useCallback(
-              (_, _) => {
-                (0, _._)(_, _.toObject(), _), _ && _(_, _);
-              },
-              [_, _],
-            ),
-            _ = _ || _,
-            { country: _, language: _, bUsePartnerAPI: _ } = _,
+            {
+              country: _,
+              language: _,
+              bUsePartnerAPI: _,
+              bIncludeUnpublished: _,
+            } = _,
             _ = _.useMemo(
               () => ({
                 country: _,
                 language: _,
                 bUsePartnerAPI: _,
+                bIncludeUnpublished: _,
               }),
+              [_, _, _, _],
+            ),
+            _ = (0, _._)(_),
+            _ = _.useCallback(
+              (_, _) => {
+                (0, _._)(_, _.toObject(), _, _), _ && _(_, _);
+              },
               [_, _, _],
             ),
+            _ = _ || _,
             _ = _.useMemo(() => {
               const _ = _
                 ? (function (_) {
@@ -81476,21 +81489,20 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        function _(_, _) {
-          return _.split(_);
-        }
         __webpack_require__._(_, {
           _: () => _,
+          _: () => _,
+          _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         __webpack_require__("chunkid");
+        function _(_) {
+          return _.bIncludeUnpublished
+            ? "partner-unpublished"
+            : _.bUsePartnerAPI
+              ? "partner"
+              : void 0;
+        }
         function _(_, _) {
           _.Body().set_context(
             (function (_) {
@@ -81500,8 +81512,33 @@ var CLSTAMP = "steamdb";
             })(_),
           );
         }
+        function _(_, _) {
+          _.Body().set_data_request(_._.fromObject(_));
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        function _(_, _) {
+          return _.split(_);
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_, _, _, _) {
-          return new (_())(
+          (0, _._)(
+            !_.bIncludeUnpublished || !!_.bUsePartnerAPI,
+            "bIncludeUnpublished requires bUsePartnerAPI",
+          );
+          const _ = new (_())(
             async (_) => {
               const _ = new Set(),
                 _ = new Map(),
@@ -81528,10 +81565,8 @@ var CLSTAMP = "steamdb";
               const _ = _._.Init(_._);
               let _;
               if (
-                (_(_, _),
-                (function (_, _) {
-                  _.Body().set_data_request(_._.fromObject(_));
-                })(_, _),
+                ((0, _._)(_, _),
+                (0, _._)(_, _),
                 _.forEach((_) => {
                   const _ = (0, _._)(_);
                   _ && _.Body().add_ids(_._.fromObject(_));
@@ -81539,7 +81574,10 @@ var CLSTAMP = "steamdb";
                 _.bUsePartnerAPI)
               ) {
                 const _ = _._.Init(_._);
-                _.Body().set_getitems_request(_.Body()),
+                __webpack_require__.Body().set_getitems_request(_.Body()),
+                  __webpack_require__
+                    .Body()
+                    .set_include_unpublished(!!_.bIncludeUnpublished),
                   (_ = await _._.GetItems(_, _));
               } else _ = await _._.GetItems(_, _);
               const _ = new Map();
@@ -81585,6 +81623,7 @@ var CLSTAMP = "steamdb";
               ..._,
             },
           );
+          return (_.cacheScope = (0, _._)(_)), _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -99531,56 +99570,6 @@ var CLSTAMP = "steamdb";
           (0, _._)([_._], _.prototype, "LazyInit", null);
         const _ = new _();
         window.g_CreatorHomeStore = _;
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_mapListInfo = new Map();
-          m_bLoadedFromConfig = !1;
-          LazyInit() {
-            if (!this.m_bLoadedFromConfig) {
-              const _ = (0, _._)(
-                "creator_home_list_info",
-                "application_config",
-              );
-              if (this.ValidateCreatorHomeTitles(_))
-                for (const [
-                  _,
-                  { title: _, description: _, listtileimage: _ },
-                ] of Object.entries(_ ?? {}))
-                  _ &&
-                    this.m_mapListInfo.set(_, {
-                      title: _ ?? "",
-                      description: _?.length ? _ : void 0,
-                      imageUrl: _?.length ? _ : void 0,
-                    });
-              this.m_bLoadedFromConfig = !0;
-            }
-          }
-          ValidateCreatorHomeTitles(_) {
-            return null != _ && "object" == typeof _ && !Array.isArray(_);
-          }
-          GetListTitle(_) {
-            return (
-              this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.title : void 0
-            );
-          }
-          GetListSubtitle(_) {
-            return (
-              this.LazyInit(),
-              _ ? this.m_mapListInfo.get(_)?.description : void 0
-            );
-          }
-          GetListtileImage(_) {
-            return (
-              this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.imageUrl : void 0
-            );
-          }
-        }
-        (0, _._)([_._], _.prototype, "m_mapListInfo", void 0),
-          (0, _._)([_._], _.prototype, "LazyInit", null);
-        const _ = new _();
-        window.g_CreatorHomeListInfoStore = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -104623,6 +104612,8 @@ var CLSTAMP = "steamdb";
               _.include_assets_without_overrides,
             apply_user_filters: _.apply_user_filters || _.apply_user_filters,
             include_links: _.include_links || _.include_links,
+            include_extra_details:
+              _.include_extra_details || _.include_extra_details,
           };
         }
         async function _(_, _) {
@@ -105581,6 +105572,7 @@ var CLSTAMP = "steamdb";
               include_assets_without_overrides: _,
               apply_user_filters: _,
               include_links: _,
+              include_extra_details: _,
             } = _;
           if (
             ((0, _.useEffect)(() => {
@@ -105601,6 +105593,7 @@ var CLSTAMP = "steamdb";
                 include_assets_without_overrides: _,
                 apply_user_filters: _,
                 include_links: _,
+                include_extra_details: _,
               };
               let _ = null;
               return (
@@ -105617,7 +105610,30 @@ var CLSTAMP = "steamdb";
                     })),
                 () => _?.cancel("useStoreItemCache: unmounting")
               );
-            }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+            }, [
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+            ]),
             !_)
           )
             return [null, _];
@@ -111339,11 +111355,11 @@ var CLSTAMP = "steamdb";
             (_[(_._ = 3)] = "Up"),
             (_[(_.Down = 4)] = "Down");
         })(_ || (_ = {}));
-        var _ = __webpack_require__("chunkid");
         __webpack_require__("chunkid");
         _.createContext(null);
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -124984,6 +125000,7 @@ var CLSTAMP = "steamdb";
           apU: () => _,
           bPr: () => _,
           bcZ: () => _,
+          _: () => _,
           c_I: () => _,
           eSy: () => _,
           eTF: () => _,
@@ -128423,6 +128440,42 @@ var CLSTAMP = "steamdb";
                 clipPath: _,
                 children: [
                   (0, _.jsx)("path", {
+                    fill: "#199FFF",
+                    _: "M35.9982 12.4814C23.0097 12.4814 12.4805 23.0107 12.4805 35.9991H35.9982V12.4814Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    fill: "currentColor",
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    _: "M0 0.776571C0 0.34768 0.347683 0 0.776571 0H35.9984V7.76572H7.76571V35.9984H0V0.776571Z",
+                  }),
+                ],
+              }),
+              (0, _.jsx)("defs", {
+                children: (0, _.jsx)("clipPath", {
+                  _: _,
+                  children: (0, _.jsx)("rect", {
+                    fill: "currentColor",
+                    width: "36",
+                    height: "36",
+                  }),
+                }),
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const [_, _] = (0, _._)();
+          return (0, _.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: [
+              (0, _.jsxs)("g", {
+                clipPath: _,
+                children: [
+                  (0, _.jsx)("path", {
                     fill: "currentColor",
                     _: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
                   }),
@@ -131524,6 +131577,7 @@ var CLSTAMP = "steamdb";
           async LoadSettings() {
             const _ = (_, _) => {
               try {
+                0;
                 const _ = localStorage.getItem(_);
                 return _ ? JSON.parse(_) : _;
               } catch {
@@ -133690,58 +133744,9 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         const _ = "webui_config";
-        let _;
-        function _() {
-          if (!(0, _._)()) return _ || (_ = _()), _;
-          let _ = (0, _._)("sessionid");
-          return _ || (_ = _()), _;
-        }
-        function _() {
-          const _ = (function () {
-            let _ = "";
-            for (let _ = 0; _ < 24; _++) _ += (0, _._)(0, 35).toString(36);
-            return _;
-          })();
-          return (0, _._)("sessionid", _, 0), _;
-        }
-        function _(_ = _) {
-          const _ = {},
-            _ = _("config", _);
-          _ && (Object.assign(_._, _), (_.config = !0));
-          const _ = _("userinfo", _);
-          _ &&
-            (Object.assign(_._, _),
-            (_.userConfig = !0),
-            _._.is_support && _() && (_._.is_support = !1));
-          const _ = _("broadcast", _);
-          _ && (Object.assign(_._, _), (_.broadcastConfig = !0));
-          const _ = _("community", _);
-          _ && (Object.assign(_._, _), (_.communityConfig = !0));
-          const _ = _("event", _);
-          return (
-            _ && (Object.assign(_._, _), (_.eventConfig = !0)),
-            (_ = !0),
-            _.forEach((_) => _()),
-            _
-          );
-        }
-        let _ = new Set(),
-          _ = !1;
-        function _() {
-          return _
-            ? Promise.resolve()
-            : new Promise((_) => {
-                _.add(_);
-              });
-        }
         function _(_, _ = _) {
           return _(_, _, !0);
         }
@@ -133779,6 +133784,65 @@ var CLSTAMP = "steamdb";
               );
             }
           else _ && console.error("Missing config element #", _);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _._,
+          _: () => _,
+          _: () => _._,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        let _;
+        function _() {
+          if (!(0, _._)()) return _ || (_ = _()), _;
+          let _ = (0, _._)("sessionid");
+          return _ || (_ = _()), _;
+        }
+        function _() {
+          const _ = (function () {
+            let _ = "";
+            for (let _ = 0; _ < 24; _++) _ += (0, _._)(0, 35).toString(36);
+            return _;
+          })();
+          return (0, _._)("sessionid", _, 0), _;
+        }
+        function _(_ = _._) {
+          const _ = {},
+            _ = (0, _._)("config", _);
+          _ && (Object.assign(_._, _), (_.config = !0));
+          const _ = (0, _._)("userinfo", _);
+          _ &&
+            (Object.assign(_._, _),
+            (_.userConfig = !0),
+            _._.is_support && _() && (_._.is_support = !1));
+          const _ = (0, _._)("broadcast", _);
+          _ && (Object.assign(_._, _), (_.broadcastConfig = !0));
+          const _ = (0, _._)("community", _);
+          _ && (Object.assign(_._, _), (_.communityConfig = !0));
+          const _ = (0, _._)("event", _);
+          return (
+            _ && (Object.assign(_._, _), (_.eventConfig = !0)),
+            (_ = !0),
+            _.forEach((_) => _()),
+            _
+          );
+        }
+        let _ = new Set(),
+          _ = !1;
+        function _() {
+          return _
+            ? Promise.resolve()
+            : new Promise((_) => {
+                _.add(_);
+              });
         }
         const _ = "presentation_mode";
         function _() {
@@ -135110,67 +135174,68 @@ var CLSTAMP = "steamdb";
         277: "a5843aa6d5b4f2aac940",
         316: "b4a4125ab8550ef83a0b",
         382: "416dc2c22c72ab0b0084",
+        394: "5980b9bf6996c4d87525",
         474: "6a9d0b4e2892dded462e",
-        496: "595f430612988c9a05f0",
+        496: "3e7172af50555d29fb12",
         684: "93eb01f9afd9f045929e",
         762: "da846d9434cb0fa053d0",
-        898: "1e553f9fc42bdcfe0858",
+        898: "b6a64c82dc169d24fab2",
         902: "c7d1b9914bd76ba5e8e5",
         947: "77123a0d43c051462d19",
-        975: "8171ac3cfdab8374d5a7",
-        976: "4a39c771e67346bcf019",
+        975: "7fab4955325e86d3a790",
+        976: "4a9239f69bb779f9fef3",
         1087: "1b1e874fa0b17e33bd93",
-        1144: "1709997f7927e2ba5c76",
-        1158: "af3640924b6d16741dc8",
+        1144: "ee1250d0a8e9a1c887c5",
+        1158: "c761102aeecd385a5687",
         1224: "8cf7b28930c7b7c56321",
-        1225: "d7ade100d36776b8eb45",
+        1225: "ec8afa83eabe9ae92d0a",
         1316: "36be20268a253397b95d",
         1330: "d8ab1ac01d7f47e93aca",
-        1449: "0293ebeed5d0f5f41967",
+        1449: "0db9a38bbe2536fe1f62",
         1499: "fac3c5fdc04308b95497",
         1571: "301c37a370bcf304422d",
-        1639: "b03b46ec68dd538a3ae7",
-        1849: "6720a58fa2d8bd0c9bef",
+        1639: "b0edb3be27dc30d2e702",
+        1849: "b26adb09355cb6454e9a",
         1954: "0e55356fd7b14be54c0b",
-        1973: "fbe88770fad97249bc47",
-        1990: "ffd04c14e2f5bfaefb4d",
-        2116: "7cb996e3c3aa322218ea",
-        2177: "06513d56fd0526b25492",
-        2256: "d0ba593d4eca9691bbc7",
-        2281: "e8a793ff022550d2e0d6",
+        1973: "dc9c2e6f8745f4ed715e",
+        1990: "f85ce9a0d9c8bd0dcdf2",
+        2116: "822d97aecdffee66c6c4",
+        2177: "0b64e59bc46ab6f92629",
+        2256: "65356325fccb3ceeb2e5",
+        2281: "dd026b12e0dbe30835ee",
         2292: "2648171bbf7a4e541935",
-        2320: "d644746aabeabf942946",
-        2435: "1408401c5e74c109830b",
-        2506: "768c0a1522aefc5f0c4f",
+        2320: "427d5328d49347270aad",
+        2435: "f6b7d137f86c8df45dc6",
+        2506: "1ee993fc697c461c53bb",
         2520: "1f392503c94a20f48720",
         2532: "726fc960ed3131ab0865",
-        2632: "27cc62f69a5220f7f568",
+        2632: "8b71d2971e73b6a79dd7",
         2687: "fe042a69cfd5cbb58cc1",
-        2749: "e4bf9beb839b70a63684",
+        2749: "e894f632b642be8ef44f",
         2945: "e07e4818e2a0d4fcc6a4",
-        2954: "7ae924883f6e9b2e5de1",
+        2954: "dc0327a03c047b853556",
         2993: "e6827764a5e82e106259",
         3e3: "9d84323971dec0188c80",
         3016: "f6185aecd134f08375bc",
         3159: "200991dd6114e56702ed",
-        3199: "d9d36e9a7dbfe1d6f430",
-        3202: "04838fc7c5df73dbeaa1",
+        3199: "69940e010894be4152fe",
+        3202: "982a5f3617b8096d7330",
         3232: "7e18a3c2d3045e97050e",
-        3307: "44600c292cf326d6bd31",
-        3382: "9be3549f78c8582d8979",
+        3307: "08215a99918f3d7c68ed",
+        3382: "67041520e9cc8d9774d2",
         3415: "f91b674a80d33488244d",
         3485: "203f1d427376e06cd2e9",
-        3577: "6b9c663415fb4be6742a",
+        3577: "f25e13a70e0bb87050f3",
         3710: "7c8bb8eefaf2ac5d7bdf",
-        3778: "b84bd8a8ffcba8d6fdcb",
+        3778: "167dead89774a69d53cc",
         3789: "68550c6cfd59330c3e48",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
-        3898: "5f975b480132fa3c0d38",
-        3912: "f46d7804b75366cc0414",
+        3898: "ea6e9005aa9884a6a997",
+        3912: "00e7e05afb74e3d70639",
         4006: "6603ebe760f65431a358",
         4154: "94ca8cb2d2aa1f47d22a",
-        4227: "d479cf0263c4870990bc",
+        4227: "8a597fecaf824b351181",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "435019249c6f51b79b4f",
         4352: "de92a58e851fd1f40a2a",
@@ -135179,16 +135244,16 @@ var CLSTAMP = "steamdb";
         4473: "4f453826b91d887757e2",
         4488: "9b7902a9dcd57e5a8ac3",
         4776: "6133207eac020e1ab36e",
-        4777: "20daf64ab066acf41d56",
+        4777: "29ca3208d107a536b6e1",
         4779: "909f21776039059914ce",
         4787: "63f48bbabd6e52adb440",
         4844: "9b0a060abc338b33c9ea",
         4976: "11dc50e1825c3ea78b66",
-        5018: "72f97466aa80cea64864",
-        5094: "04333b7425f3e8f25058",
-        5110: "81e44f6a46d5f04a7423",
-        5136: "8a39599563a94ac61bec",
-        5241: "0218196705e973a7e8e2",
+        5018: "f59bb70dbbe1343d41fa",
+        5094: "a922f4ecb779d119b3b5",
+        5110: "24687cb3c9a8182c5135",
+        5136: "52f052f126cd92fec1a6",
+        5241: "351135034277f9bcc265",
         5341: "ce5400f709b5d26948e2",
         5358: "46677bfee5caf20bc8de",
         5480: "fe1e2469122f1c0d37d0",
@@ -135197,24 +135262,23 @@ var CLSTAMP = "steamdb";
         5617: "6d58f25bd9f169dac32a",
         5725: "188fd09b6944f1d69b65",
         5893: "91f5b813d41dc544101d",
-        6031: "47f2eea679d921950e51",
-        6059: "173d496b6a1ff27b3288",
+        6031: "472a546a646d274e4c2e",
+        6059: "e0d80564c1174fd84376",
         6127: "bcb2b356d29892b7ef52",
-        6149: "8f4e9840adc6baeba66d",
-        6165: "7956e5f9bcfb619550fd",
+        6149: "543b4aa9e9e3e12dfb72",
+        6165: "a3a2002003aab2c6918e",
         6196: "19444056df361c8ef94a",
-        6208: "2ce23f126d32170f6864",
-        6239: "eb420446709f37d81caa",
-        6305: "9d8b2cef5f2d947b4be1",
-        6332: "90c94a8577a9071a1219",
+        6208: "0a4310d596b298b6e397",
+        6239: "d22a663e3c74cf090815",
+        6305: "b75867859e28edb623d8",
+        6332: "5a8e17fda116a713235d",
         6385: "633241ebfdb81845e960",
         6447: "6571327308708b9cb4a5",
-        6518: "857261cae6462f001643",
-        6523: "dd56145bc7c9cf8ab31b",
-        6562: "f613f1bdf3fa42969cf9",
+        6518: "dc5f6ae58364d09cceda",
+        6523: "8fd05b6cdc60fcf89b56",
+        6562: "dafc1ec6ee6981904382",
         6609: "06b39a5f1c8a9fa61b56",
         6637: "bee05b6c76a9dd2fe06d",
-        6699: "96873c107b0a92dd722d",
         6888: "5e713d851c095e455c3b",
         6905: "d9316fc5a220e6b4c416",
         6920: "073d861c6b381e481b8f",
@@ -135224,49 +135288,49 @@ var CLSTAMP = "steamdb";
         7279: "4fa8dad9d6bcde1d380b",
         7365: "bb74e03060db6e6f780a",
         7418: "7680875bb68efceaf698",
-        7462: "8628e1acb12796945949",
+        7462: "6c21d62f44bb02f1fa19",
         7464: "d527671518fba684fd01",
         7468: "53e0875c52dff3de164a",
         7487: "c0d8195dd6dab3975615",
-        7539: "d14386437ea79cfa72ce",
-        7591: "2a9de374abbee8cb6b1a",
-        7637: "600fa8faba43aca51589",
-        7653: "a14155237923edbee264",
+        7539: "104191112b77b34b5111",
+        7591: "64c4a6924e87e3000209",
+        7637: "442a8284f83a2456f85c",
+        7653: "76f311e9307f4c789f0e",
         7673: "065a311d75b3213d4f15",
-        7786: "5d61f419cae384f41efb",
+        7724: "3ebcfeb67814aba1f1cb",
+        7786: "9bb5faf26b198c787094",
         7788: "d010383f4ccc1c1b6efb",
         7861: "63671b2acc79688f22e9",
         7904: "116aefb93e005baea38e",
-        8016: "83c0b2a652d20826a114",
-        8025: "811bf629d8708c021fbf",
+        8016: "c0e05625206f9b393aa4",
+        8025: "0f6d0bc178820df7087c",
         8106: "9e5de4171728b3824d1d",
         8191: "7c71b0175a3b35434ec8",
         8194: "a3c2c82981967a0bb30a",
         8246: "d8dd4a47668b5bf225ab",
-        8306: "354165012af14a53d5f2",
-        8311: "fb68ddf634b6c92202e7",
+        8306: "4c09e8a1a38f03ae82bd",
+        8311: "3eeeeb9f696e6db2acbc",
         8366: "fbd35ad496eb7892a424",
         8566: "cd93e0bf03daf5972185",
         8703: "644cfd9a31d1c4890881",
         8759: "64839c1cf1d65d068251",
         8766: "568c79e84ce11aed47a9",
-        8822: "54c91af7cdd6db04c7c7",
+        8822: "757ff8d5daf96ec90e49",
         8833: "0db29dc3b45b31acb4a4",
         8855: "f6463721cab65712879d",
         8871: "db91511bbe45c67ef042",
         8930: "25153545da6040645366",
-        8967: "45cc9aa52f3f55ad92f8",
+        8967: "9c80671f181fafb22c63",
         9027: "99a11776d1c5b10911cd",
-        9152: "b70dbdc48bc859e2141f",
-        9246: "5451dd66efde5c1d9a93",
+        9152: "50a4ea1fcbf9a17d5f47",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
         9457: "03ff4c6f7ee37e164af2",
-        9712: "3e246a0ff8776640110c",
+        9712: "3eeeb5ae8447bed29535",
         9746: "53570359ca81bb16a3cc",
         9808: "942f6e1ad27af2af89a2",
-        9925: "688071059ba6d087c0e3",
-        9930: "b8bfbd2ee8112b754e18",
+        9925: "f44bd84f71b821f95c56",
+        9930: "4bbed5d2be374e02dfc0",
         9947: "eceb2e5cbfafd46602ed",
       }[_]),
     (_.miniCssF = (_) =>
@@ -135279,7 +135343,7 @@ var CLSTAMP = "steamdb";
       {
         3159: "75a6e9ff11215c0f2a0b",
         7462: "72980633e3cf3969529a",
-        7653: "bfe5bb9ebb1faa40af83",
+        7653: "fe8e8bb145f728df7bdd",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -135514,6 +135578,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(64986));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(16807));
   _ = _._(_);
 })();

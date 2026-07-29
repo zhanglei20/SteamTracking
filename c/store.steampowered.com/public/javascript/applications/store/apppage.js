@@ -1612,17 +1612,20 @@
             _._.Get().BOwnsApp(_.appid) &&
               (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
           const _ = (0, _.jsx)(_._, {
-            initialEvent: _,
-            appid: _,
-            clanSteamID: _,
-            partnerEventStore: _,
-            emoticonStore: _._,
-            closeModal: !_ && _,
-            showAppHeader: _,
-            bShowOnlyInitialEvent: _,
-            additionalParams: _,
-            eventClassName: _,
-            onAppIconClick: _,
+            children: (_) =>
+              (0, _.jsx)(_._, {
+                initialEvent: _,
+                appid: _,
+                clanSteamID: _,
+                partnerEventStore: _,
+                emoticonStore: _,
+                closeModal: !_ && _,
+                showAppHeader: _,
+                bShowOnlyInitialEvent: _,
+                additionalParams: _,
+                eventClassName: _,
+                onAppIconClick: _,
+              }),
           });
           return _
             ? _
@@ -3089,6 +3092,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _.useRef)(null),
+          _ = (0, _._)(),
           _ = Number(_.appID),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -3198,7 +3202,7 @@
                     initialEvent: _,
                     bShowOnlyInitialEvent: !1,
                     partnerEventStore: _._,
-                    emoticonStore: _._,
+                    emoticonStore: _,
                     showAppHeader: !0,
                     closeModal: _,
                   }),
@@ -6911,12 +6915,19 @@
                 (_ = (0, _.jsx)(_, {
                   category: _.machine_resolved_category,
                 })))
-              : ((_ = (0, _.jsx)(_._, {
-                  category: _.resolved_category,
-                })),
-                (_ = (0, _.jsx)(_, {
-                  category: _.resolved_category,
-                }))),
+              : _ == _._
+                ? ((_ = (0, _.jsx)(_._, {
+                    category: _.frame_resolved_category,
+                  })),
+                  (_ = (0, _.jsx)(_, {
+                    category: _.frame_resolved_category,
+                  })))
+                : ((_ = (0, _.jsx)(_._, {
+                    category: _.resolved_category,
+                  })),
+                  (_ = (0, _.jsx)(_, {
+                    category: _.resolved_category,
+                  }))),
           !_)
         )
           return (
@@ -6926,7 +6937,7 @@
               ),
             null
           );
-        const _ = _?.steam_deck_blog_url;
+        const _ = _?.steam_deck_blog_url && _ != _._;
         return (0, _.jsxs)("div", {
           className: (0, _._)(
             _ ? _().BannerContent : _().BannerContentDesktop,
@@ -7030,13 +7041,17 @@
               ? (0, _._)(
                   "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
                 )
-              : _
+              : _ == _._
                 ? (0, _._)(
-                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                    "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
                   )
-                : (0, _._)(
-                    "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
-                  );
+                : _
+                  ? (0, _._)(
+                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                    )
+                  : (0, _._)(
+                      "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+                    );
         const _ = _.useId();
         return _
           ? (0, _.jsxs)("div", {
@@ -8461,9 +8476,9 @@
         m_activeScrollTo = null;
         StartScrollAnimation(_, _, _, _, _) {
           let _ = this.m_refGrid;
-          if (_)
-            if (_) {
-              const _ = this.m_refGridElement;
+          if (_) {
+            const _ = this.m_refGridElement;
+            if (_ && _) {
               _("StartScrollAnimation", _, _, _);
               let _ = {
                 msDuration: _,
@@ -8485,6 +8500,7 @@
                 scrollTop: 0,
               }),
                 this.OnAnimationScrollComplete(_, _, _, _);
+          }
         }
         RestoreScrollPosition(_) {
           this.StartScrollAnimation(
@@ -8525,7 +8541,12 @@
           this.m_nTouchStartClientX = void 0;
         }
         OnTouchMove(_) {
-          if (!this.m_refGrid || 0 == _.touches.length) return;
+          if (
+            !this.m_refGrid ||
+            0 == _.touches.length ||
+            void 0 === this.m_nTouchStartClientX
+          )
+            return;
           const _ = this.m_nTouchStartClientX - _.touches[0].clientX;
           this.BlockMovementLeftPastFirstElement(_, _);
         }
@@ -8537,9 +8558,10 @@
           this.m_bMouseDown = !1;
         }
         BlockMovementLeftPastFirstElement(_, _) {
+          if (!this.m_refGrid || !this.m_refGridElement) return;
           const _ = this.m_refGrid.getOffsetForCell({
             alignment: this.props.scrollToAlignment,
-            columnIndex: this.props.nIndexLeftmost,
+            columnIndex: this.nIndexLeftmost,
           });
           this.m_refGridElement.scrollLeft - _.scrollLeft + _ < 0 &&
             _.cancelable &&
@@ -8553,10 +8575,11 @@
         OnScroll(_) {
           const _ = this.m_refGrid?.getOffsetForCell({
             alignment: this.props.scrollToAlignment,
-            columnIndex: this.props.nIndexLeftmost,
+            columnIndex: this.nIndexLeftmost,
           });
           this.SendScrollNotification(_.scrollLeft),
-            _.scrollLeft < Math.floor(_?.scrollLeft) &&
+            _ &&
+              _.scrollLeft < Math.floor(_.scrollLeft) &&
               this.SnapBackToFirstElement(_.scrollLeft),
             this.UpdateScrollArrows();
         }
@@ -8589,7 +8612,7 @@
             } = this.props,
             { key: _, columnIndex: _, style: _ } = _,
             _ = _(_),
-            _ = parseInt(_.left.toString()),
+            _ = parseInt(_.left?.toString() ?? "0"),
             _ = __webpack_require__(_),
             _ = !this.m_mapRefs.has(_),
             _ = this.m_mapRefs.get(_) || (0, _._)();
@@ -8625,34 +8648,37 @@
         get alignment() {
           return this.props.scrollToAlignment || "start";
         }
+        get nIndexLeftmost() {
+          return this.props.nIndexLeftmost ?? 0;
+        }
+        get scrollDuration() {
+          return this.props.scrollDuration ?? 100;
+        }
         GetLastFocusableColumn() {
           let _ = this.props.nNumItems - 1;
           if (this.props.fnDoesItemTakeFocus)
             for (
               ;
-              !this.props.fnDoesItemTakeFocus(_) &&
-              _ > this.props.nIndexLeftmost;
+              !this.props.fnDoesItemTakeFocus(_) && _ > this.nIndexLeftmost;
             )
               _--;
           return _("LastFocusableColumn: ", _), _;
         }
         UpdateScrollArrows() {
           if (this.props.fnUpdateArrows) {
-            const _ = this.m_refGrid?.getOffsetForCell({
-                alignment: this.props.scrollToAlignment,
-                columnIndex: this.props.nIndexLeftmost,
-              }),
-              _ = this.m_refGrid?.getOffsetForCell({
-                alignment: this.props.scrollToAlignment,
-                columnIndex: this.GetLastFocusableColumn(),
-              }),
-              _ = Math.round(this.m_refGridElement?.scrollLeft),
+            const _ =
+                this.m_refGrid?.getOffsetForCell({
+                  alignment: this.props.scrollToAlignment,
+                  columnIndex: this.nIndexLeftmost,
+                })?.scrollLeft ?? NaN,
               _ =
-                _ != Math.floor(_?.scrollLeft) &&
-                _ != Math.round(_?.scrollLeft),
-              _ =
-                _ != Math.floor(_?.scrollLeft) &&
-                _ != Math.round(_?.scrollLeft);
+                this.m_refGrid?.getOffsetForCell({
+                  alignment: this.props.scrollToAlignment,
+                  columnIndex: this.GetLastFocusableColumn(),
+                })?.scrollLeft ?? NaN,
+              _ = Math.round(this.m_refGridElement?.scrollLeft ?? NaN),
+              _ = _ != Math.floor(_) && _ != Math.round(_),
+              _ = _ != Math.floor(_) && _ != Math.round(_);
             _(
               "ShowLeftArrow: ",
               _,
@@ -8724,7 +8750,7 @@
                   nRightPadding: _,
                 },
                 () => {
-                  this.m_refGrid.recomputeGridSize({
+                  this.m_refGrid?.recomputeGridSize({
                     columnIndex: this.props.nNumItems - 1,
                   });
                 },
@@ -8756,12 +8782,9 @@
           this.m_resizeObserver?.disconnect();
         }
         OnResize() {
-          const _ = this.m_refContainer.current.clientWidth;
+          const _ = this.m_refContainer.current?.clientWidth ?? 0;
           _ != this.state.nContainerWidth &&
-            (_(
-              "OnResize Setting width to",
-              this.m_refContainer.current.clientWidth,
-            ),
+            (_("OnResize Setting width to", _),
             this.setState({
               nContainerWidth: _,
             })),
@@ -8771,7 +8794,7 @@
           const _ = this.m_iEnd - this.m_iStart,
             _ = (0, _._)(
               this.props.focusedColumn - _,
-              this.props.nIndexLeftmost,
+              this.nIndexLeftmost,
               this.props.nNumItems - 1,
             ),
             _ = this.alignment;
@@ -8781,30 +8804,26 @@
           const _ = this.m_iEnd - this.m_iStart,
             _ = (0, _._)(
               this.props.focusedColumn + _,
-              this.props.nIndexLeftmost,
+              this.nIndexLeftmost,
               this.props.nNumItems - 1,
             ),
             _ = this.alignment;
           return this.ScrollToItem(_._.INVALID, _, _, _);
         }
         ScrollToFirstChild() {
-          return this.ScrollToItem(
-            _._.INVALID,
-            this.props.nIndexLeftmost,
-            "auto",
-          );
+          return this.ScrollToItem(_._.INVALID, this.nIndexLeftmost, "auto");
         }
         MoveLeft(_) {
           _("MoveLeft from", this.props.focusedColumn);
           let _ = this.props.focusedColumn - 1;
           for (
             ;
-            _ != this.props.nIndexLeftmost - 1 &&
+            _ != this.nIndexLeftmost - 1 &&
             this.props.fnDoesItemTakeFocus &&
             !this.props.fnDoesItemTakeFocus(_);
           )
             _--;
-          return _ == this.props.nIndexLeftmost - 1
+          return _ == this.nIndexLeftmost - 1
             ? (_("At left edge, not handling left gamepad"), !1)
             : (_("MoveLeft to", _),
               this.ScrollToItem(
@@ -8867,7 +8886,7 @@
                 _,
                 _,
                 _.scrollLeft,
-                _ ?? this.props.scrollDuration,
+                _ ?? this.scrollDuration,
               ),
               _?.stopPropagation(),
               _?.preventDefault(),
@@ -8898,7 +8917,6 @@
           const {
               className: _,
               nNumItems: _,
-              nIndexLeftmost: _,
               nHeight: _,
               nItemHeight: _,
               overscan: _ = 3,
@@ -8910,7 +8928,14 @@
             } = this.props,
             _ = this.state.nContainerWidth;
           return (
-            _("Inner render", this.props.name, this.props.nNumItems, _, _, _),
+            _(
+              "Inner render",
+              this.props.name,
+              this.props.nNumItems,
+              _,
+              this.nIndexLeftmost,
+              _,
+            ),
             (0, _.jsx)(_._, {
               ref: this.m_refContainer,
               "flow-children": "row",
@@ -9510,10 +9535,10 @@
           _ = _ instanceof _ ? _.eResult : void 0;
         return (0, _.jsx)("div", {
           className: _().LoadingError,
-          children: _.Localize(
-            void 0 !== _ ? "#Review_LoadError" : "#Review_LoadErrorUnknown",
-            _,
-          ),
+          children:
+            void 0 !== _
+              ? _.Localize("#Review_LoadError", _)
+              : _.Localize("#Review_LoadErrorUnknown"),
         });
       }
       function _(_) {
@@ -9875,6 +9900,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "0",
+        _ = "-1",
         _ = "wishlistcategories";
       function _(_, _, _) {
         return [_, _, _, _];
@@ -10211,6 +10237,7 @@
                   children: _.name,
                 }),
                 _ &&
+                  _.cItems > 0 &&
                   (0, _.jsxs)("span", {
                     children: ["(", _.cItems, ")"],
                   }),
@@ -12590,18 +12617,25 @@
       function _(_) {
         const { appid: _ } = _,
           _ = _.useMemo(
-            () => (0, _._)("deckcompatibility", "application_config"),
+            () => (0, _._)("hardwarecompatibility", "application_config"),
             [],
           ),
-          { bSteamDeck: _, bSteamOS: _, bSteamMachine: _ } = (0, _._)(),
+          {
+            bSteamDeck: _,
+            bSteamOS: _,
+            bSteamMachine: _,
+            bSteamFrame: _,
+          } = (0, _._)(),
           [_, _] = _.useMemo(
             () =>
               _
                 ? [_._, _.Localize("#AppPage_SummaryBar_SteamMachineCompat")]
-                : _ && !_
-                  ? [_._, _.Localize("#AppPage_SummaryBar_SteamOSCompat")]
-                  : [_._, _.Localize("#AppPage_SummaryBar_SteamDeckCompat")],
-            [_, _, _],
+                : _
+                  ? [_._, _.Localize("#AppPage_SummaryBar_SteamFrameCompat")]
+                  : _ && !_
+                    ? [_._, _.Localize("#AppPage_SummaryBar_SteamOSCompat")]
+                    : [_._, _.Localize("#AppPage_SummaryBar_SteamDeckCompat")],
+            [_, _, _, _],
           );
         return _
           ? (0, _.jsxs)(_._, {
@@ -14416,7 +14450,7 @@
                     (0, _.jsx)(_, {
                       appID: _,
                       results: (0, _._)(
-                        "deckcompatibility",
+                        "hardwarecompatibility",
                         "application_config",
                       ),
                       appName: (0, _._)("appname", "application_config"),

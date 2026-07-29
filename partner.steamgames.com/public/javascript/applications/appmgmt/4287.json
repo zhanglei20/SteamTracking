@@ -16,6 +16,8 @@
     "VerifiedProgram_DeckDisclaimer": "El avance podría no representar la jugabilidad real en Steam Deck",
     "StoreItemFound": "%1$s encontrados (%2$s)",
     "StoreItemNotFound": "No se encontró (%1$s)",
+    "SteamReviewSection_AppID": "Reviews From App",
+    "SteamReviewSection_AppID_ttip": "The app whose Steam reviews are shown in this section, and the app a customer's review is written against.",
     "SteamURLAccepted": "URL %1$s aceptado",
     "SteamURLInvalid": "Error: el URL no corresponde a una propiedad de Steam (la tienda o la Comunidad).",
     "AnchorHashInputInvalid": "Entrada no válida",

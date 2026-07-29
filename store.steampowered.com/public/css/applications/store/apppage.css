@@ -966,17 +966,17 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   flex-direction: row;
   margin-top: 2px;
   margin-bottom: 2px;
-  height: 32px;
+  padding-bottom: 6px;
 }
 ._3UK9OHyZ3r9rA55mgsnZPD {
   width: 20px;
   height: 20px;
-  margin-left: 10px;
-  margin-right: 12px;
+  margin-left: 14px;
+  margin-right: 14px;
   margin-top: 2px;
 }
 ._2IS5rvIlv3ARam8O7b_-po {
-  margin-top: 14px;
+  margin-top: 6px;
   margin-bottom: 2px;
 }
 ._3YEJ5NoOg1YObev3TXdMi {
@@ -4820,15 +4820,18 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   overflow: hidden;
   flex-grow: 1;
   flex-shrink: 1;
+  margin-top: 3px;
 }
 ._3WieBjkVb28rpePKxyn3gl li {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   padding-left: 6px;
+  line-height: 18px;
 }
-._3WieBjkVb28rpePKxyn3gl li :before {
+._3WieBjkVb28rpePKxyn3gl li:before {
   content: "•";
+  line-height: 18px;
   flex-shrink: 0;
   margin-right: 4px;
 }

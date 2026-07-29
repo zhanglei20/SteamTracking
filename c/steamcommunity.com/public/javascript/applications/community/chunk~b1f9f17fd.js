@@ -151,7 +151,7 @@
         Capsule: "_1YmWtGQx7RPg34mzRPqMd-",
         CapsuleCtnOverride: "_2YNmsOz2phP8ss67xqftMV",
         Info: "_3wnfYKWMVy4IzwkuD-ZTnX",
-        description: "_2GCyETuEDO1wYJirDK5xzd",
+        Description: "_3e9HuimWWVFAai6O2krwKA",
         BackgroundAnimation: "_1PMJYtmG-0LXiCIzsf7hHH",
         "ItemFocusAnim-darkerGrey-nocolor": "_1fYjwZXV0mHTRHEYcE_jQ8",
         "ItemFocusAnim-darkerGrey": "_1LEV1gSZkd--onnkOFZYRV",
@@ -178,7 +178,7 @@
         Ctn: "_245e39IWkOSCG4y_xIE0CG",
         Title: "_2BhcS1KAkFef-tf0ECF0S",
         PriceFormatted: "Y2Qy5QpQjJLjG4RYUG6go",
-        description: "_39_l0k1tIEgCNXIQ5AcbFN",
+        Description: "_2i9W9vMPyF-hF1wf5HCLxE",
         BackgroundAnimation: "_3--8dqRLvQdQpxNt3iZ2Ci",
         "ItemFocusAnim-darkerGrey-nocolor": "fZuuzaBtgr14k-PQsJpWW",
         "ItemFocusAnim-darkerGrey": "_2aV5_tetZEzX88CDjEbCdk",
@@ -768,15 +768,6 @@
         "ItemFocusAnim-green": "_2gPiB59s9zUxgTuQhxMcRs",
         focusAnimation: "_2D5OVrkn1a2er_--T93q2v",
         hoverAnimation: "Li7-iOahGthCZ2U4IkUs-",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Ctn: "_1cKuIWVnzQyoBqcjbmQej8",
-        DetailText: "ur8Kb4QFgfep75jIe6Cdz",
-        RewardText: "_1sTpucKBB_H5jsSx1uDFGS",
-        PostText: "_15_aOIWD_1U_J_zwCK1U1Q",
-        ImgFullBagde: "_1ZBOVc-VGXMnDpiwyh7ju4",
       };
     },
     chunkid: (module) => {
@@ -4674,21 +4665,24 @@
             });
           let _ = _._.GetEditModel().GetEventModel();
           return (0, _.jsx)(_._, {
-            event: _,
-            lang: (0, _.sfN)(_._.LANGUAGE),
-            partnerEventStore: _._,
-            emoticonStore: _._,
-            adminPanel: (0, _.jsx)(_._, {
-              eventModel: _,
-              partnerEventStore: _._,
-            }),
-            otherEventRow: (0, _.jsx)(_._, {
-              clanAccountID: _.clanSteamID.GetAccountID(),
-              gidAnnouncement: _.GetAnnouncementGID(),
-              trackingLocation: _._._,
-              partnerEventStore: _._,
-              bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
-            }),
+            children: (_) =>
+              (0, _.jsx)(_._, {
+                event: _,
+                lang: (0, _.sfN)(_._.LANGUAGE),
+                partnerEventStore: _._,
+                emoticonStore: _,
+                adminPanel: (0, _.jsx)(_._, {
+                  eventModel: _,
+                  partnerEventStore: _._,
+                }),
+                otherEventRow: (0, _.jsx)(_._, {
+                  clanAccountID: _.clanSteamID.GetAccountID(),
+                  gidAnnouncement: _.GetAnnouncementGID(),
+                  trackingLocation: _._._,
+                  partnerEventStore: _._,
+                  bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
+                }),
+              }),
           });
         }
       };
@@ -5202,6 +5196,7 @@
         let _ = _.editModel,
           _ = _.ComputeEditingModelTimeOverrides();
         const _ = (0, _._)(),
+          _ = (0, _._)(),
           { appid_or_vanity_str: _, editModel: _ } = _;
         let _ = _.GetEventModel();
         const [_, _] = (0, _.useState)(_.GetContentHubType() || "games"),
@@ -5275,7 +5270,7 @@
                     nOverrideStartTime: _.nOverrideStartTime,
                     nOverrideEndTime: _.nOverrideEndTime,
                     partnerEventStore: _._,
-                    emoticonStore: _._,
+                    emoticonStore: _,
                     adminPanel: (0, _.jsx)(_._, {
                       eventModel: _,
                       partnerEventStore: _._,
@@ -8432,7 +8427,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = -1;
       class _ {
@@ -8576,7 +8570,6 @@
               return (
                 (this.m_userData[_].opened = _),
                 (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
-                _.data.capsuleinsert && (0, _._)([_.data.capsuleinsert]),
                 this.GetDoorStateChangeCallback(_).Dispatch(_),
                 this.RecomputeState(),
                 _.data
@@ -8750,37 +8743,26 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      const _ = new (class {
-        constructor() {
-          (this.m_saleExp = {}), (this.m_bLoadedFromConfig = !1);
-        }
-        LazyInit() {
-          if (!this.m_bLoadedFromConfig) {
-            let _ = document.getElementById("application_config");
-            _ && (this.m_saleExp = (0, _._)("xprmnt", _)),
-              (this.m_bLoadedFromConfig = !0);
-          }
-        }
-        GetHideWishlist() {
-          return (
-            this.LazyInit(),
-            Boolean(this.m_saleExp && this.m_saleExp.bHideWishlist)
-          );
-        }
-        GetHideIRList() {
-          return (
-            this.LazyInit(),
-            Boolean(this.m_saleExp && this.m_saleExp.bHideIRList)
-          );
-        }
-        GetHideDLC() {
-          return (
-            this.LazyInit(), Boolean(this.m_saleExp && this.m_saleExp.bHideDLC)
-          );
-        }
-      })();
+      function _() {
+        var _;
+        return null !== (_ = (0, _._)("xprmnt", "application_config")) &&
+          void 0 !== _
+          ? _
+          : {};
+      }
+      function _() {
+        return Boolean(_().bHideWishlist);
+      }
+      function _() {
+        return Boolean(_().bHideIRList);
+      }
+      function _() {
+        return Boolean(_().bHideDLC);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -9117,265 +9099,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EDiscoveryAction_Invalid = 0)] = "k_EDiscoveryAction_Invalid"),
-          (_[(_.k_EDiscoveryAction_OpenStorePage = 1)] =
-            "k_EDiscoveryAction_OpenStorePage"),
-          (_[(_.k_EDiscoveryAction_OpenDoor = 2)] =
-            "k_EDiscoveryAction_OpenDoor");
-      })(_ || (_ = {}));
-      class _ {
-        GetMatchingInsertion(_, _) {
-          return this.m_mapMaterializedInsertion.get(this.GetKeyFromID(_, _));
-        }
-        GetChangeCallback(_, _) {
-          const _ = this.GetKey({
-            sectionID: _,
-            tabID: _,
-          });
-          return this.GetChangeCallbackByKey(_);
-        }
-        GetChangeCallbackByKey(_) {
-          return (
-            this.m_mapInsertCallback.has(_) ||
-              this.m_mapInsertCallback.set(_, new _._()),
-            this.m_mapInsertCallback.get(_)
-          );
-        }
-        GetKey(_) {
-          return _ ? _.sectionID + "_" + (_.tabID || "-1") : null;
-        }
-        GetKeyFromID(_, _) {
-          return _ + "_" + (_ || "-1");
-        }
-        ReplaceInsertion(_) {
-          _.forEach((_) => {
-            const _ = this.GetKey(_);
-            this.m_mapMaterializedInsertion.forEach((_) => {
-              const _ = this.GetKey(_);
-              _ && _ != _ && this.DispatchInsertion(_, !0);
-            }),
-              this.m_mapMaterializedInsertion.clear(),
-              (this.m_rgFutureInsertions = Array()),
-              this.AppendInsertion(_);
-          });
-        }
-        AppendInsertion(_) {
-          (null == _ ? void 0 : _.sectionID)
-            ? (this.m_mapMaterializedInsertion.set(this.GetKey(_), _),
-              this.DispatchInsertion(_))
-            : this.m_rgFutureInsertions.push(_);
-        }
-        DispatchInsertion(_, _) {
-          _.sectionID &&
-            this.GetChangeCallback(_.sectionID, _.tabID).Dispatch(_ ? null : _);
-        }
-        AppCapsuleFound(_) {
-          this.m_rgFutureInsertions = this.m_rgFutureInsertions.filter(
-            (_) => !(!_.sectionID && _.insertion_requirement && _.appid == _),
-          );
-        }
-        GetAnyNonMaterializedInsertionRequest() {
-          const _ = this.m_rgFutureInsertions.length;
-          return _ > 0
-            ? this.m_rgFutureInsertions[Math.floor(_ * Math.random())]
-            : null;
-        }
-        SaleInteractionCallback(_, _) {
-          if (this.m_rgFutureInsertions.length > 0)
-            for (let _ = 0; _ < this.m_rgFutureInsertions.length; ++_)
-              if (this.AreWeAllowedToDeploy(this.m_rgFutureInsertions[_], _)) {
-                const _ = this.DeployCapsuleIfPossible(
-                  _,
-                  this.m_rgFutureInsertions[_],
-                );
-                _ &&
-                  ((0, _._)(
-                    Boolean(_.sectionID),
-                    "Expected to have a materialized insertion at this poiunt: " +
-                      _.sectionID,
-                  ),
-                  this.AppendInsertion(_));
-              }
-        }
-        AreWeAllowedToDeploy(_, _) {
-          if (
-            !_.sectionID &&
-            _.insertion_requirement &&
-            _.size >= _.insertion_requirement.min_interactions
-          ) {
-            if (_.size >= _.insertion_requirement.max_interactions) return !0;
-            const _ =
-              _.insertion_requirement.max_interactions -
-              _.insertion_requirement.min_interactions;
-            return 0 == Math.floor(_ * Math.random());
-          }
-          return !1;
-        }
-        BIsInsertableSectionType(_) {
-          if (_) {
-            if ("sale_item_browser" == _.section_type) return !0;
-            if ((0, _._)(_.section_type))
-              return (
-                !(0, _._)(_) ||
-                ("wishlist" != (0, _._)(_) && "wishlist_onsale" != (0, _._)(_))
-              );
-          }
-          return !1;
-        }
-        BHasExistingInsertion(_) {
-          return Boolean(this.GetMatchingInsertion(_.sectionid, _.tabid));
-        }
-        DeployCapsuleIfPossible(_, _) {
-          if (this.BHasExistingInsertion(_)) return null;
-          if (_._.ANNOUNCEMENT_GID) {
-            const _ = _._.GetClanEventFromAnnouncementGID(_._.ANNOUNCEMENT_GID),
-              _ =
-                null == _
-                  ? void 0
-                  : __webpack_require__.GetSaleSectionByID(_.sectionid);
-            if (this.BIsInsertableSectionType(_)) {
-              if (
-                _.insertion_requirement.additional_adds > 0 &&
-                _.insertion_requirement.delta_interactions > 0
-              ) {
-                const _ = {
-                  ..._,
-                };
-                (_.insertion_requirement = {
-                  ..._.insertion_requirement,
-                }),
-                  (_.insertion_requirement.additional_adds -= 1),
-                  (_.insertion_requirement.max_interactions +=
-                    _.insertion_requirement.delta_interactions),
-                  (_.insertion_requirement.min_interactions +=
-                    _.insertion_requirement.delta_interactions),
-                  this.AppendInsertion(_);
-              }
-              return (
-                (_.sectionID = _.sectionid),
-                (_.tabID = _.tabid),
-                (_.insertionIndex = _.elementIndex),
-                _
-              );
-            }
-          }
-          return null;
-        }
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_DynamicCapsuleInsertStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_mapMaterializedInsertion = new Map()),
-            (this.m_mapInsertCallback = new Map()),
-            (this.m_rgFutureInsertions = new Array()),
-            (0, _._)(this);
-        }
-        Init() {
-          const _ = (0, _._)("capsuleinsert", "application_config");
-          _.ValidateData(_) &&
-            (_.sectionID
-              ? this.m_mapMaterializedInsertion.set(this.GetKey(_), _)
-              : _.insertion_requirement
-                ? (this.m_rgFutureInsertions.push(_),
-                  (null == _ ? void 0 : _.appid) &&
-                    _._.Get()
-                      .QueueAppRequest(_.appid, {
-                        include_assets: !0,
-                        include_release: !0,
-                        include_trailers: !0,
-                      })
-                      .then(() => {
-                        var _, _;
-                        const _ = _._.Get().GetApp(_.appid);
-                        !_ ||
-                          (null ===
-                            (_ =
-                              null === (_ = _.GetBestPurchaseOption()) ||
-                              void 0 === _
-                                ? void 0
-                                : _.formatted_final_price) || void 0 === _
-                            ? void 0
-                            : _.length) > 0 ||
-                          _.ReplaceBestPurchaseOption({
-                            packageid: 0,
-                            bundleid: 0,
-                            formatted_original_price: "CL.0R",
-                            formatted_final_price: "TH.4X",
-                            discount_pct: 50,
-                          });
-                      }))
-                : "dev" == _._.WEB_UNIVERSE &&
-                  console.error(
-                    "CDynamicCapsuleInsertStore: Payload not material and missing instructions.",
-                    _,
-                  ),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log("CDynamicCapsuleInsertStore loaded ", _)),
-            _._.Get()
-              .GetNewInteractionCallback()
-              .Register(this.SaleInteractionCallback);
-        }
-        static ValidateData(_) {
-          const _ = _;
-          return (
-            _ &&
-            ("number" == typeof _.sectionID ||
-              "object" == typeof _.insertion_requirement) &&
-            "number" == typeof _.appid &&
-            "number" == typeof _.action
-          );
-        }
-      }
-      function _(_) {
-        _.Get().ReplaceInsertion(_);
-      }
-      function _(_, _) {
-        return _.Get().GetMatchingInsertion(_, _);
-      }
-      function _(_, _) {
-        return _.Get().GetChangeCallback(_, _);
-      }
-      function _(_) {
-        _.Get().AppCapsuleFound(_);
-      }
-      function _() {
-        return _.Get().GetAnyNonMaterializedInsertionRequest();
-      }
-      function _(_) {
-        return _.Get().BIsInsertableSectionType(_);
-      }
-      (0, _._)([_._], _.prototype, "SaleInteractionCallback", null),
-        (0, _._)([_._], _.prototype, "DeployCapsuleIfPossible", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9610,10 +9333,6 @@
         _,
         _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15256,7 +14975,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { eventModel: _ } = _,
@@ -15453,7 +15171,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15696,10 +15413,6 @@
                       (0, _.jsx)(_, {
                         eventModel: _,
                       }),
-                      Boolean(_._.is_support) &&
-                        (0, _.jsx)(_, {
-                          eventModel: _,
-                        }),
                       _ &&
                         (0, _.jsx)("div", {
                           className: _.DisplayAdminPanelClose,
@@ -15737,94 +15450,6 @@
           });
         }
         return (0, _.jsx)("span", {});
-      }
-      function _(_) {
-        var _, _, _;
-        const { eventModel: _ } = _,
-          _ = (0, _._)(),
-          [_] = (0, _._)(_._, void 0);
-        return Boolean(
-          _ &&
-            (null === (_ = _.jsondata) || void 0 === _
-              ? void 0
-              : _.bSaleEnabled) &&
-            (null ===
-              (_ =
-                null === (_ = _.jsondata) || void 0 === _
-                  ? void 0
-                  : _.sale_sections) || void 0 === _
-              ? void 0
-              : _.length) > 0,
-        )
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("a", {
-                  className: (0, _._)(
-                    _.Button,
-                    _.AdminButton,
-                    _.ValveOnlyBackground,
-                  ),
-                  onClick: () => {
-                    var _;
-                    const _ = _.jsondata.sale_sections.find(
-                        (_) => "tabs" == _.section_type,
-                      ),
-                      _ =
-                        _ ||
-                        ((null === (_ = null == _ ? void 0 : _.tabs) ||
-                        void 0 === _
-                          ? void 0
-                          : _.length) > 0 &&
-                          _.tabs[0].unique_id) ||
-                        null,
-                      _ = new Array();
-                    _.jsondata.sale_sections.forEach((_) => {
-                      (0, _._)(_) &&
-                        _.push({
-                          ..._,
-                          insertion_requirement: null,
-                          sectionID: _.unique_id,
-                          tabID: _,
-                          insertionIndex: 0,
-                          force_preview_mode: !0,
-                        });
-                    }),
-                      (0, _._)(_);
-                  },
-                  children: "(VO) Inject Capsule",
-                }),
-                (0, _.jsx)("a", {
-                  className: (0, _._)(
-                    _.Button,
-                    _.AdminButton,
-                    _.ValveOnlyBackground,
-                  ),
-                  onClick: (_) =>
-                    (0, _._)(
-                      (0, _.jsx)(_._, {
-                        strTitle: "Clear Rewards for Summer 2022",
-                        onOK: async () => {
-                          const _ = new FormData();
-                          _.append("sessionid", (0, _._)()),
-                            _.append("clan_accountid", "" + _._.CLANACCOUNTID),
-                            _.append("event_id", "" + _._._);
-                          const _ = await _().post(
-                            `${_._.STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards`,
-                            _,
-                            {
-                              withCredentials: !0,
-                            },
-                          );
-                          console.log("ajaxgresetopendoorrewards", _);
-                        },
-                      }),
-                      (0, _._)(_),
-                    ),
-                  children: "( VO ) Clear Summer 2022 Rewards",
-                }),
-              ],
-            })
-          : null;
       }
       function _(_) {
         var _, _;
@@ -18224,7 +17849,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -18238,6 +17862,7 @@
             fnUpdateImageGroup: _,
             eventModel: _,
           } = _,
+          { openColorPicker: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() => _),
           [_, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.repeat_setting,
@@ -18361,22 +17986,15 @@
                           style: {
                             backgroundColor: _,
                           },
-                          onClick: (_) => {
-                            var _;
-                            (0, _._)(
-                              (0, _.jsx)(_, {
-                                color: null != _ ? _ : "",
-                                setColor: (_) =>
-                                  _({
-                                    ..._,
-                                    background_color1: _,
-                                  }),
-                              }),
-                              null !== (_ = (0, _._)(_)) && void 0 !== _
-                                ? _
-                                : window,
-                            );
-                          },
+                          onClick: (_) =>
+                            _(_, {
+                              color: null != _ ? _ : "",
+                              onChange: (_) =>
+                                _({
+                                  ..._,
+                                  background_color1: _,
+                                }),
+                            }),
                           children: (0, _._)(
                             void 0 === _
                               ? "#BackgroundGroups_ColorNum_unset"
@@ -18415,22 +18033,15 @@
                             style: {
                               backgroundColor: _,
                             },
-                            onClick: (_) => {
-                              var _;
-                              (0, _._)(
-                                (0, _.jsx)(_, {
-                                  color: null != _ ? _ : "",
-                                  setColor: (_) =>
-                                    _({
-                                      ..._,
-                                      background_color2: _,
-                                    }),
-                                }),
-                                null !== (_ = (0, _._)(_)) && void 0 !== _
-                                  ? _
-                                  : window,
-                              );
-                            },
+                            onClick: (_) =>
+                              _(_, {
+                                color: null != _ ? _ : "",
+                                onChange: (_) =>
+                                  _({
+                                    ..._,
+                                    background_color2: _,
+                                  }),
+                              }),
                             children: (0, _._)(
                               void 0 === _
                                 ? "#BackgroundGroups_ColorNum_unset"
@@ -18472,19 +18083,6 @@
               }),
             }),
           ],
-        });
-      }
-      function _(_) {
-        const { closeModal: _, color: _, setColor: _ } = _,
-          [_, _] = (0, _.useState)(_);
-        return (0, _.jsx)(_._, {
-          strTitle: (0, _._)("#Button_Color"),
-          closeModal: _,
-          onOK: () => _(_),
-          children: (0, _.jsx)(_._, {
-            onChange: (_) => _(_),
-            color: _,
-          }),
         });
       }
       function _(_) {
@@ -20569,10 +20167,9 @@
                 "dlc_music_onsale" == _ ||
                 "ir_subscription" == _ ||
                 "deck_compatibility" == _ ||
-                ("wishlist_onsale" == _ && !_._.GetHideWishlist()) ||
-                ("dlc_onsale" == _ && !_._.GetHideDLC()) ||
-                ("interactive_recommender_onsale" == _ &&
-                  !_._.GetHideIRList()))),
+                ("wishlist_onsale" == _ && !(0, _._)()) ||
+                ("dlc_onsale" == _ && !(0, _._)()) ||
+                ("interactive_recommender_onsale" == _ && !(0, _._)()))),
         );
       }
       function _(_) {
@@ -20614,6 +20211,20 @@
       function _(_) {
         return "sub" !== _.type && "bundle" !== _.type;
       }
+      async function _(_) {
+        var _;
+        const _ = _.clanSteamID.GetAccountID(),
+          _ = _.jsondata.sale_creator_home_filter_listid;
+        if (_) {
+          const _ = await _._.fetchQuery((0, _._)(_, _));
+          return null != _ ? _ : [];
+        }
+        const _ = await _._.fetchQuery((0, _._)(_));
+        return null !== (_ = null == _ ? void 0 : _.GetAppIDList()) &&
+          void 0 !== _
+          ? _
+          : [];
+      }
       async function _(_, _, _) {
         const _ = new Set(_.GetTabAppIDs());
         _.GetSaleSections()
@@ -20636,16 +20247,14 @@
         const _ = _.clanSteamID.GetAccountID(),
           _ = _._.GetClanInfoByClanAccountID(_);
         if ((0, _._)(_, _)) {
-          const _ = await _._.fetchQuery((0, _._)(_));
-          null == _ ||
-            _.GetAppIDList().forEach((_) => {
-              (_.BIsTabFilteringEnabled() &&
-                !_.ShouldShowCapsule({
-                  type: "game",
-                  _: _,
-                })) ||
-                _.add(_);
-            });
+          (await _(_)).forEach((_) => {
+            (_.BIsTabFilteringEnabled() &&
+              !_.ShouldShowCapsule({
+                type: "game",
+                _: _,
+              })) ||
+              _.add(_);
+          });
         }
         return _;
       }
@@ -20709,9 +20318,7 @@
         const _ = _.clanSteamID.GetAccountID(),
           _ = _._.GetClanInfoByClanAccountID(_);
         if ((0, _._)(_, _)) {
-          const _ = await _._.fetchQuery((0, _._)(_));
-          if (!_) return [];
-          const _ = new Set(_.GetAppIDList());
+          const _ = new Set(await _(_));
           _ = __webpack_require__.filter((_) => {
             if (_) {
               if ("sub" == _.type || "bundle" == _.type) {
@@ -20720,12 +20327,8 @@
                 return (
                   !!_ &&
                   (_
-                    ? __webpack_require__
-                        .GetIncludedAppIDs()
-                        .every((_) => _.has(_))
-                    : __webpack_require__
-                        .GetIncludedAppIDs()
-                        .some((_) => _.has(_)))
+                    ? _.GetIncludedAppIDs().every((_) => _.has(_))
+                    : _.GetIncludedAppIDs().some((_) => _.has(_)))
                 );
               }
               return _.has(_._);
@@ -26812,146 +26415,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        if (_.some((_) => _._ == _.appid && "game" == _.type)) return;
-        const _ = {
-          _: _.appid,
-          type: "game",
-          overrideNavigation: (_) => {
-            (0, _._)(_.appid),
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  iDoorIndex: _.payload,
-                  datarecord: _.datarecord,
-                  bPreviewMode: Boolean(_ || _.force_preview_mode),
-                }),
-                window,
-              );
-          },
-        };
-        _.insertionIndex
-          ? _.splice(_.insertionIndex, 0, _)
-          : "dev" == _._.WEB_UNIVERSE
-            ? _.unshift(_)
-            : _.splice(Math.floor(Math.random() * _.length), 0, _);
-      }
-      function _(_) {
-        const {
-            closeModal: _,
-            iDoorIndex: _,
-            datarecord: _,
-            bPreviewMode: _,
-          } = _,
-          _ = (0, _._)(_),
-          { fnOpenDoor: _ } = (0, _._)(),
-          [_, _] = (0, _.useState)(!_),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(!1);
-        (0, _.useEffect)(() => {
-          const _ = _().CancelToken.source();
-          return (
-            _(_, !0, _, _).then((_) => {
-              _.token.reason || (_(_), _(null == _), _(!1));
-            }),
-            () => _.cancel("unmounting SummerSale2022FoundItem")
-          );
-        }, [_, _, _, _]);
-        const _ = Math.floor(5 * Math.random()) + 1;
-        return (0, _.jsx)(_._, {
-          strTitle: (0, _._)(`#Sale_Minigame_FoundIt_${_}`),
-          bDisableBackgroundDismiss: !0,
-          closeModal: _,
-          strOKButtonText: (0, _._)("#Sale_Minigame_ContineQuest"),
-          bOKDisabled: _,
-          strCancelButtonText: (0, _._)("#Sale_Minigame_ContineShopping"),
-          modalClassName: "SummerSale2022",
-          onOK: () => {
-            window.location.href = `${_._.STORE_BASE_URL}sale/clorthax_quest`;
-          },
-          children: (0, _.jsx)("div", {
-            className: _.Ctn,
-            children: (0, _.jsx)("div", {
-              children: Boolean(_)
-                ? (0, _.jsx)(_.Fragment, {
-                    children: (0, _._)("#GrantAwardError_Busy"),
-                  })
-                : (0, _.jsx)(_.Fragment, {
-                    children: Boolean(_)
-                      ? (0, _.jsxs)("div", {
-                          children: [
-                            (0, _.jsx)(_._, {
-                              size: "small",
-                              position: "center",
-                            }),
-                            (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#Sale_Minigame_LoadingReward",
-                              ),
-                            }),
-                          ],
-                        })
-                      : (0, _.jsxs)("div", {
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.DetailText,
-                              children: (0, _._)("#Sale_Minigame_FoundIt_Earn"),
-                            }),
-                            Boolean(
-                              null == _ ? void 0 : _.sale_pg_context_token,
-                            ) &&
-                              (0, _.jsx)("div", {
-                                className: _.RewardText,
-                                children: (0, _._)(_.sale_pg_context_token),
-                              }),
-                            Boolean(
-                              (null == _ ? void 0 : _.sale_pg_background_mp4) &&
-                                (null == _
-                                  ? void 0
-                                  : _.sale_pg_background_webm),
-                            ) &&
-                              (0, _.jsx)(_._, {
-                                bAutoPlay: !0,
-                                bMuted: !0,
-                                bLoop: !0,
-                                bControls: !1,
-                                video: {
-                                  sPoster: (0, _._)(
-                                    _.sale_pg_background_override,
-                                  ),
-                                  rgVideoSources: [
-                                    {
-                                      sURL: (0, _._)(_.sale_pg_background_webm),
-                                      sFormat: "video/webm",
-                                    },
-                                    {
-                                      sURL: (0, _._)(_.sale_pg_background_mp4),
-                                      sFormat: "video/mp4",
-                                    },
-                                  ],
-                                },
-                              }),
-                            (0, _.jsx)("div", {
-                              className: _.PostText,
-                              children: (0, _._)(
-                                _ < 10
-                                  ? "#Summer2022_hunt_quest_return_clue"
-                                  : "#Summer2022_hunt_quest_return_gift",
-                              ),
-                            }),
-                          ],
-                        }),
-                  }),
-            }),
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
@@ -27061,6 +26524,8 @@
           queryFn: async () => {
             const _ = {
                 tag: _,
+                days_backward: _,
+                days_forward: _,
               },
               _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
                 params: _,
@@ -27077,22 +26542,6 @@
       }
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
-      }
-      function _(_, _, _, _, _) {
-        const _ = (0, _._)(
-          _.unique_id,
-          null == _ ? void 0 : _.GetActiveTabUniqueID(),
-        ).Register((_) => {
-          if (
-            _ &&
-            _.sectionID == _.unique_id &&
-            (null == _ ? void 0 : _.GetActiveTabUniqueID()) == _.tabID
-          ) {
-            const _ = _ ? [..._] : [];
-            _(_, _, _), _(_);
-          }
-        }).Unregister;
-        return () => _();
       }
       async function _(_, _, _, _, _, _, _, _, _, _, _ = 0, _, _, _, _) {
         const _ = _(_, _, _, _);
@@ -27690,12 +27139,12 @@
                   _ = [];
                 switch (_) {
                   case "wishlist_onsale":
-                    _._.GetHideWishlist() ||
+                    (0, _._)() ||
                       ((_ = await _.Get().GetWishlistOnSale()), (_ = "game"));
                     break;
                   case "dlc_onsale":
                     (_ = "dlc"),
-                      _._.GetHideDLC() ||
+                      (0, _._)() ||
                         (_ = await _.Get().GetDLCForGamesInMyLibraryOnSale());
                     break;
                   case "dlc_music_onsale":
@@ -27705,7 +27154,7 @@
                     break;
                   case "interactive_recommender_onsale":
                     (_ = "game"),
-                      _._.GetHideIRList() ||
+                      (0, _._)() ||
                         (_ =
                           await _.Get().GetInteractiveRecommendationsOnSale());
                     break;
@@ -27949,11 +27398,6 @@
             _.enable_faceted_browsing ||
             (_ = _.filter((_) => _ && _.ShouldShowCapsule(_))),
           (_ = _._ ? (0, _._)(_, _) : _);
-        const _ = (0, _._)(
-          _.unique_id,
-          null == _ ? void 0 : _.GetActiveTabUniqueID(),
-        );
-        _ && _(_, _, _);
         let _ = !1;
         {
           let _ = _.length;
@@ -29346,7 +28790,7 @@
                   strPriceFormattedClassName: _().PriceFormatted,
                 }),
                 (0, _.jsx)("div", {
-                  className: _().description,
+                  className: _().Description,
                   children: (0, _.jsx)(_._, {
                     text: _,
                   }),
@@ -29404,7 +28848,7 @@
                       ],
                     }),
                     (0, _.jsx)("div", {
-                      className: _().description,
+                      className: _().Description,
                       children: (0, _.jsx)(_._, {
                         text: _,
                       }),
@@ -30710,6 +30154,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -31051,7 +30496,8 @@
               position: "center",
             });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _._)()
           ? (0, _.jsx)(_, {
@@ -31230,6 +30676,9 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -32059,7 +31508,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -32715,9 +32163,8 @@
             _.section.section_type,
           ),
           _ = (0, _._)(),
-          _ = (0, _._)();
-        (0, _.useEffect)(() => _(_.section, _, _, _, _), [_, _, _, _.section]);
-        const [_] = (0, _._)(_._, void 0),
+          _ = (0, _._)(),
+          [_] = (0, _._)(_._, void 0),
           [_, _] = _.useState(void 0),
           { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
         (0, _.useEffect)(() => {
@@ -32795,16 +32242,8 @@
             _ || (_(!0), _());
           },
           _ = async () => {
-            const _ = Math.max(_(_, 0), 4),
-              _ = _ + _,
-              _ =
-                Math.max(
-                  (null == _ ? void 0 : _.length) || 0,
-                  (null == _ ? void 0 : _.length) || 0,
-                  (null == _ ? void 0 : _.length) || 0,
-                  (null == _ ? void 0 : _.length) || 0,
-                ) + 1;
-            _._.Get().AddInteraction(_.unique_id, _), _(_);
+            const _ = Math.max(_(_, 0), 4);
+            _(_ + _);
           },
           _ = (function (_, _, _) {
             const [_] = (0, _._)(_._, void 0);
@@ -33036,7 +32475,6 @@
                 [_().Blur]: "coverBlur" == _.background_repeat,
               }),
               rootMargin: _._,
-              onRender: () => _._.Get().AddInteraction(_.unique_id, 0),
               holdGamepadFocus: _,
               ..._,
               children: [
@@ -33129,10 +32567,6 @@
           _ = (0, _._)(),
           _ = (0, _._)();
         return (
-          (0, _.useEffect)(
-            () => _(_.section, _, _, _, _),
-            [_, _, _, _.section],
-          ),
           (0, _.useEffect)(() => {
             const _ = new AbortController();
             return (
@@ -33923,7 +33357,6 @@
               strSearchQuery: "",
               strRawSearch: "",
               bIsNarrowScreen: (0, _._)(),
-              fnUnregisterCallback: null,
               results: null,
             }),
             (this.m_timerForChange = new _._()),
@@ -33932,24 +33365,18 @@
         }
         componentDidMount() {
           window.addEventListener("resize", this.OnResize), this.LoadCapsules();
-          const { section: _, activeTab: _, displayStyle: _ } = this.props;
+          const { displayStyle: _ } = this.props;
           this.setState({
-            fnUnregisterCallback: (0, _._)(
-              _.unique_id,
-              null == _ ? void 0 : _.GetActiveTabUniqueID(),
-            ).Register(this.OnDynamicCapsuleInsert).Unregister,
             bCompactViewMode: this.BDisplayStyleIsCompact(_),
           });
         }
         componentWillUnmount() {
           this.m_timerForChange.Cancel(),
-            this.state.fnUnregisterCallback &&
-              this.state.fnUnregisterCallback(),
             this.m_cancelSignal.cancel("SaleItemBrowser component unmounted"),
             _.Debug("componentWillUnmount: Cancelled");
         }
         componentDidUpdate(_, _) {
-          var _, _, _, _, _, _;
+          var _, _, _, _, _;
           const _ = this.props.section
             ? (0, _._)(
                 this.props.history,
@@ -33968,89 +33395,51 @@
                 : _.includes(_)) &&
               (_ = _);
           }
-          if (
-            !_()(this.props.browseInfo, _.browseInfo) ||
-            this.props.event != _.event ||
-            !_()(this.props.section, _.section) ||
+          (_()(this.props.browseInfo, _.browseInfo) &&
+            this.props.event == _.event &&
+            _()(this.props.section, _.section) &&
             (null === (_ = this.props.activeTab) || void 0 === _
               ? void 0
-              : _.GetActiveTabUniqueID()) !=
+              : _.GetActiveTabUniqueID()) ==
               (null === (_ = _.activeTab) || void 0 === _
                 ? void 0
-                : _.GetActiveTabUniqueID()) ||
-            this.state.strFacetUrlParam !== _ ||
-            this.state.currentFlavor !== _ ||
-            this.props.controllerCategory !== _.controllerCategory ||
-            this.state.facetFilterState !== _.facetFilterState
-          ) {
-            (null === (_ = this.props.section) || void 0 === _
+                : _.GetActiveTabUniqueID()) &&
+            this.state.strFacetUrlParam === _ &&
+            this.state.currentFlavor === _ &&
+            this.props.controllerCategory === _.controllerCategory &&
+            this.state.facetFilterState === _.facetFilterState) ||
+            ((null === (_ = this.props.section) || void 0 === _
               ? void 0
               : _.enable_faceted_browsing) &&
               this.state.facetFilterState &&
               this.state.strFacetUrlParam !== _ &&
-              this.state.facetFilterState.SetFromURLParam(_);
-            const { section: _, activeTab: _ } = this.props;
-            let _ = this.state.fnUnregisterCallback;
-            (_.unique_id == _.section.unique_id &&
-              (null == _
-                ? void 0
-                : __webpack_require__.GetActiveTabUniqueID()) ==
-                (null === (_ = _.activeTab) || void 0 === _
-                  ? void 0
-                  : _.GetActiveTabUniqueID())) ||
-              (_ && _(),
-              (_ = (0, _._)(
-                _.unique_id,
-                null == _ ? void 0 : __webpack_require__.GetActiveTabUniqueID(),
-              ).Register(this.OnDynamicCapsuleInsert).Unregister)),
-              this.setState(
-                {
-                  bInitialLoadComplete: !1,
-                  rgCapsules: [],
-                  nOriginalStartIndex: -1,
-                  results: null,
-                  nNumRequestedLastTime: 0,
-                  bIsMoreAvailable: !0,
-                  bAwaitingMoreRowsLoading: !0,
-                  strFacetUrlParam: _,
-                  currentFlavor: _,
-                  fnUnregisterCallback: _,
-                },
-                () => this.LoadCapsules(),
-              );
-          }
-          this.props.displayStyle != _.displayStyle &&
-            this.setState({
-              bCompactViewMode: this.BDisplayStyleIsCompact(
-                this.props.displayStyle,
-              ),
-            });
-        }
-        OnDynamicCapsuleInsert(_) {
-          const { activeTab: _, section: _ } = this.props;
-          if (
-            _ &&
-            _.sectionID == _.unique_id &&
-            (null == _ ? void 0 : _.GetActiveTabUniqueID()) == _.tabID
-          ) {
-            const _ = this.state.rgCapsules ? [...this.state.rgCapsules] : [];
-            _(_, _, this.context.eLocation == _._),
+              this.state.facetFilterState.SetFromURLParam(_),
+            this.setState(
+              {
+                bInitialLoadComplete: !1,
+                rgCapsules: [],
+                nOriginalStartIndex: -1,
+                results: null,
+                nNumRequestedLastTime: 0,
+                bIsMoreAvailable: !0,
+                bAwaitingMoreRowsLoading: !0,
+                strFacetUrlParam: _,
+                currentFlavor: _,
+              },
+              () => this.LoadCapsules(),
+            )),
+            this.props.displayStyle != _.displayStyle &&
               this.setState({
-                rgCapsules: _,
+                bCompactViewMode: this.BDisplayStyleIsCompact(
+                  this.props.displayStyle,
+                ),
               });
-          }
         }
         ShowMoreRows() {
-          var _, _, _;
+          var _, _;
           this.m_timerForChange.Cancel(),
             this.m_cancelSignal.token.reason ||
-              (_._.Get().AddInteraction(
-                this.props.section.unique_id,
-                null === (_ = this.state.results) || void 0 === _
-                  ? void 0
-                  : _.nNextSolrIndex,
-              ),
-              (0, _._)(
+              ((0, _._)(
                 this.props.history,
                 "offset",
                 null ==
@@ -34189,30 +33578,23 @@
               }))
             );
           }
-          if (_.token.reason)
-            return void _.Debug(
-              `LoadCapsules[${_}]: Cancellation flipped after GetItems`,
-            );
-          const _ = (0, _._)(
-            _.unique_id,
-            null == _ ? void 0 : _.GetActiveTabUniqueID(),
-          );
-          _ && _(_, _, this.context.eLocation == _._),
-            this.setState({
-              bInitialLoadComplete: !0,
-              rgCapsules: _,
-              nOriginalStartIndex:
-                this.state.nOriginalStartIndex >= 0
-                  ? this.state.nOriginalStartIndex
-                  : _,
-              bIsMoreAvailable: _,
-              bAwaitingMoreRowsLoading: !1,
-              nHiddenCapsules: _,
-              results: _,
-            }),
-            _.Debug(
-              `LoadCapsules[${_}]: complete with rgCapsules.length=${null == _ ? void 0 : _.length}, resulst.length=${null === (_ = null == _ ? void 0 : _.rgItems) || void 0 === _ ? void 0 : _.length}`,
-            );
+          _.token.reason
+            ? _.Debug(`LoadCapsules[${_}]: Cancellation flipped after GetItems`)
+            : (this.setState({
+                bInitialLoadComplete: !0,
+                rgCapsules: _,
+                nOriginalStartIndex:
+                  this.state.nOriginalStartIndex >= 0
+                    ? this.state.nOriginalStartIndex
+                    : _,
+                bIsMoreAvailable: _,
+                bAwaitingMoreRowsLoading: !1,
+                nHiddenCapsules: _,
+                results: _,
+              }),
+              _.Debug(
+                `LoadCapsules[${_}]: complete with rgCapsules.length=${null == _ ? void 0 : _.length}, resulst.length=${null === (_ = null == _ ? void 0 : _.rgItems) || void 0 === _ ? void 0 : _.length}`,
+              ));
         }
         OnFlavorLabelClick(_) {
           this.m_timerForChange.Cancel(),
@@ -34822,7 +34204,6 @@
         });
       }
       (_.contextType = _._),
-        (0, _._)([_._], _.prototype, "OnDynamicCapsuleInsert", null),
         (0, _._)([_._], _.prototype, "ShowMoreRows", null),
         (0, _._)([_._], _.prototype, "SetViewMode", null),
         (0, _._)([_._], _.prototype, "FilterItems", null),
@@ -34850,7 +34231,6 @@
             "SaleSectionForCustomCSS",
           ),
           style: (0, _._)(_, _, _),
-          onRender: () => _._.Get().AddInteraction(_.unique_id, 0),
           children: (0, _.jsx)(
             _,
             {
@@ -35057,10 +34437,7 @@
               _ = _.offsetLeft + _.clientWidth;
             _ > window.innerWidth && _.scrollBy(_ - window.innerWidth, 0);
           }
-        }, [null == _ ? void 0 : _.current]),
-          _.useEffect(() => {
-            _ && _._.Get().SetActiveTab(_.unique_id);
-          }, [_]);
+        }, [null == _ ? void 0 : _.current]);
         const _ = _.useRef(null),
           [_, _] = _.useState(!1);
         if (
@@ -35560,6 +34937,7 @@
       }
       function _(_) {
         const { eventModel: _, titleOverride: _ } = _,
+          _ = (0, _._)(),
           [_, _, _] = (0, _._)(() => [
             _.GID,
             _.jsondata.sale_social_media_items,
@@ -35619,7 +34997,7 @@
                         eventLink: _,
                         sharePageUrls: _,
                         appid: _.appid,
-                        emoticonStore: _._,
+                        emoticonStore: _,
                         partnerEventStore: _._,
                       }),
                     }),
@@ -40099,8 +39477,20 @@
           })
         );
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _;
+        const _ =
+          null === (_ = _.reviewSection) || void 0 === _
+            ? void 0
+            : _.review_appid;
+        return _
+          ? (0, _.jsx)("div", {
+              children: "SteamReviewSection appid: " + _,
+            })
+          : null;
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -42262,6 +41652,10 @@
             return (0, _.jsx)(_, {
               ..._,
             });
+          case "steam_review_section":
+            return (0, _.jsx)(_, {
+              reviewSection: _.steam_review_section_data,
+            });
           case "unselected_empty":
             break;
           case "template_faq":
@@ -42367,12 +41761,13 @@
             document.removeChild(_);
           } catch (_) {}
         }
-        static WriteCSVToFile(_, _) {
+        static WriteCSVToFile(_, _, _) {
           const _ = _().unparse(_, {
-            header: !0,
-          });
+              header: !0,
+            }),
+            _ = 1 == _ ? ["\ufeff" + _] : [_];
           _.WriteFile(
-            new Blob([_], {
+            new Blob(_, {
               type: "text/csv:charset=utf-8;",
             }),
             _,

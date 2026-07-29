@@ -16,6 +16,8 @@
     "VerifiedProgram_DeckDisclaimer": "Az előzetes nem feltétlenül tükrözi a tényleges Steam Deck játékmenetet.",
     "StoreItemFound": "%1$s Megtalálva (%2$s)",
     "StoreItemNotFound": "Nem található (%1$s)",
+    "SteamReviewSection_AppID": "Reviews From App",
+    "SteamReviewSection_AppID_ttip": "The app whose Steam reviews are shown in this section, and the app a customer's review is written against.",
     "SteamURLAccepted": "%1$s URL elfogadva",
     "SteamURLInvalid": "Hiba: az URL nem egy Steam oldalhoz (áruházi/közösségi) tartozik",
     "AnchorHashInputInvalid": "Érvénytelen bemenet",

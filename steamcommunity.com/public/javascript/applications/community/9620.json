@@ -240,6 +240,7 @@
     "Filter_ViewResults": "Преглед на резултатите",
     "Results_GridView_Tooltip": "Преглед като решетка",
     "Results_ListView_Tooltip": "Преглед като списък",
+    "Results_InitialLoadError": "Имаше проблем при зареждането на резултатите. Моля, опитайте отново по-късно.",
     "Results_PageLoadError": "Имаше проблем при зареждането на допълнителни резултати. Моля, опитайте отново по-късно.",
     "Market_AppUnplayedAndUnvetted": "Опитвате се да прегледате даден артикул за нова игра в Steam, която никога не сте пускали. Бъдете предпазливи с този артикул.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Кликнете тук, така че да прегледате този артикул въпреки това",
@@ -285,5 +286,16 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Трябва да включите Steam Guard за акаунта си. Моля, уверете се, че е-пощата Ви е потвърдена и сте влизали поне два пъти в акаунта си след включването на Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Акаунтът Ви трябва да бъде защитен със Steam Guard за поне %1$s дни.",
     "Economy_Market_HeaderTip_TimeCanUse": "Ако не възникне нищо друго, което да ограничи достъпа Ви, ще сте способни да ползвате обществения пазар на %1$s",
-    "Economy_Market_TopLevelReason_TradeCooldown": "Акаунтът Ви е във временен период на изчакване от характеристиките за търговия и пазара."
+    "Economy_Market_TopLevelReason_TradeCooldown": "Акаунтът Ви е във временен период на изчакване от характеристиките за търговия и пазара.",
+    "MyHistory_Title_ItemNameBlock": "Име",
+    "MyHistory_Title_ListedAtTime": "Обявено на",
+    "MyHistory_Title_ActedOnTime": "Действано на",
+    "MyHistory_Title_TransactedPrice": "Цена",
+    "MyHistory_Title_Action": "Действие",
+    "MyHistory_NoResults": "Няма намерени резултати",
+    "MyHistory_Action_Sold": "Продадени",
+    "MyHistory_Action_Purchased": "Закупени",
+    "Breadcrumbs_Label_History": "Историята ми",
+    "Breadcrumbs_Label_Listings": "Обявите ми",
+    "Breadcrumbs_Label_BuyOrders": "Заявките ми за покупки"
 }

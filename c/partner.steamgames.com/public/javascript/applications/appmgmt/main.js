@@ -276,6 +276,46 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        BasicContextMenuModal: "uWT-cMCXkxiyxcSs9UA-0",
+        BasicContextMenuHeader: "_2pq9my4HQChCImf0dPb9Kd",
+        BasicContextMenuHeaderShrinkableSpacing: "_3D_kEgaEhVPqwbR9URAyjh",
+        BasicContextMenuContainer: "_3ctisZH6WXgLVlYQqADdfR",
+        slideInAnimation: "v7EaRj39PKF9LFyybctSi",
+        contextMenu: "_2LigNhjmULtkRCXW5237ai",
+        contextMenuContents: "oZw50c4oJ6-r0HP8UWv25",
+        hasSubMenu: "_2QWbNWxBWYiC5pTqgB0oYZ",
+        contextMenuFade: "_272iDm3ZOWIxFB41ShVTwr",
+        contextMenuItem: "_34o03-8cUc3fQX1u650c0L",
+        Destructive: "_1HXm3O7vOzyuTFDaKPNUxy",
+        Positive: "_213PVSQTmHdo8SK-jkU-m_",
+        Emphasis: "_2awU7ejQ3Qs_g0XnuSmgOP",
+        active: "OQmT6NKuekm5HuXQnkl2a",
+        Selected: "_3fVa8M_7D9Vjz28uYnahhd",
+        Focused: "_2XVTVAadkIvrBujZYN5jbL",
+        Capitalized: "_1yXLMcA7JS4dtqgQ9Citj5",
+        MenuSectionHeader: "_3dVceiVJPerBKElpqfmSRS",
+        UpperCase: "_2D03hlOq-HwgleuMEvDObC",
+        SubMenu: "_3-IFyrv9R_fZqALBsjlUS5",
+        ContextMenuSeparator: "ixiWPQKqTMxnq43WgT3vj",
+        Label: "_18C7xpEWME7W-bxMsvyXdi",
+        Arrow: "_2T7n7sepVsm6k4PqM9hZ_U",
+        BackgroundAnimation: "_39R4lbKGgs6tgliKRKaOGu",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3-ckPZrQQ4AcL8Jk8U_Jks",
+        "ItemFocusAnim-darkerGrey": "_1oxeJwH0ZuJGWZzFpl0Hna",
+        "ItemFocusAnim-darkGreySettings": "_9s04vs5aAvePxj8LGCHP4",
+        "ItemFocusAnim-darkGrey": "_2pGKXMC5Yvn04wv6_5ayhi",
+        "ItemFocusAnim-grey": "_97AO_Lq9HLtpPQgpBcZeI",
+        "ItemFocusAnim-translucent-white-10": "_2huw7WWVJBokivVlIjoa92",
+        "ItemFocusAnim-translucent-white-20": "NsTryIHdHWU8LOl4XCrhk",
+        "ItemFocusAnimBorder-darkGrey": "_1sLQsQ-IbGQ7xqKTw3uc-M",
+        "ItemFocusAnim-green": "QGN9mnAcP2r3B9mKyCmrp",
+        focusAnimation: "_3R-0H7Rl4MTvs97q_ecWuK",
+        hoverAnimation: "_115JS_717vFpl6zVBnieg5",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DialogDropDownMenu_Item: "_2oAiZidGyUxL-hfupFDQ2m",
         DialogDropDownMenu_Separator: "_1Sa12sphmVOOs0on58tDn7",
         DialogDropDownMenu: "_30wJO3MC4x-I1OWpy1TAeE",
@@ -669,6 +709,7 @@
         SteamDeckCompatInfo: "_3VPnvw_CDKU-PQKK1pSDlN",
         SteamMachineCompatLogo: "x5w70NwN-m7OmBy1DFogf",
         SteamDeckCompatLogo: "_1dzQL1mVR8GTmmSi_kpDgr",
+        SteamFrameCompatLogo: "_33PLF0uIKrs-fwlQiOEf_",
         SteamDeckCompatIcon: "_3hAj0iMJsfhKwnm2mfE098",
         SteamDeckCompatVerified: "kEODDe6M5cuHWuPlcQexX",
         SteamDeckCompatPlayable: "mPD42Bwx3VAs0qw9wubf2",
@@ -1344,8 +1385,214 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { managerOverride: _ } = _,
+          _ = (0, _._)(),
+          _ = _ ?? _,
+          _ = (0, _._)();
+        return (
+          (0, _._)(_.OnMenusChanged, _),
+          (0, _.jsx)(_._, {
+            active: !!_.ActiveMenu,
+            children: (0, _.jsx)(_, {
+              ActiveMenu: _.ActiveMenu,
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { ActiveMenu: _ } = _,
+          _ = _.useCallback(() => {
+            _?.OnCancel();
+          }, [_]);
+        _.useEffect(() => () => _?.Hide(), [_]);
+        let _ = [],
+          _ = null;
+        (0, _._)(() => {
+          for (let _ = _; _ && _.visible; _ = _.submenu)
+            _.push(
+              (0, _.jsx)(
+                _,
+                {
+                  instance: _,
+                },
+                _.key,
+              ),
+            ),
+              (_ = _.label);
+        });
+        const _ = _.useCallback(
+          (_) => {
+            _.currentTarget == _.target && __webpack_require__();
+          },
+          [_],
+        );
+        return (0, _.jsx)(_._, {
+          padding: "none",
+          children: (0, _.jsxs)("div", {
+            onClick: _,
+            className: (0, _._)(
+              "BasicUIContextMenu",
+              _().BasicContextMenuModal,
+            ),
+            children: [
+              _ &&
+                (0, _.jsx)(_.Fragment, {
+                  children: (0, _.jsx)("div", {
+                    className: _().BasicContextMenuHeader,
+                    children: _,
+                  }),
+                }),
+              (0, _.jsx)(_._, {
+                className: _().BasicContextMenuContainer,
+                onCancelButton: _,
+                onClick: _,
+                children: _,
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { instance: _ } = _,
+          _ = (0, _._)(),
+          _ = _.useCallback(() => {
+            _ && _._.PlayNavSound(_._.FailedNav);
+          }, [_]);
+        let _ = _.useMemo(
+          () => ({
+            instance: _,
+            styles: _(),
+            presentation: _._,
+            callbacks: {
+              onDisabledItemSelected: _,
+            },
+          }),
+          [_, _],
+        );
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_._.Provider, {
+            value: _,
+            children: _.ReactElement,
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _() {
+        return _.useMemo(
+          () =>
+            function (_) {
+              const {
+                  refNavTree: _,
+                  className: _,
+                  active: _,
+                  children: _,
+                  modalKey: _,
+                } = _,
+                _ = _.useRef(void 0);
+              (0, _._)(_, _, !0);
+              const _ = (0, _._)(_, _);
+              return (0, _.jsx)(_._, {
+                className: _,
+                navTreeRef: _,
+                modal: !0,
+                enabled: _,
+                navID: `ModalDialogOverlay_${_}`,
+                children: _,
+              });
+            },
+          [],
+        );
+      }
+      function _(_) {
+        const {
+            className: _,
+            onEscKeypress: _,
+            padding: _ = "standard",
+            bGamepadUIScrollWithin: _,
+            children: _,
+          } = _,
+          _ = (0, _._)(
+            _().ModalPosition,
+            "standard" == _ && _().WithStandardPadding,
+            _ && _().ScrollWithin,
+            _,
+          );
+        return (0, _.jsx)(_._, {
+          className: _,
+          onCancelButton: _,
+          focusableIfEmpty: !0,
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              children: _,
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const _ = _.useMemo(
+          () => ({
+            ModalPosition: _,
+          }),
+          [],
+        );
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: _.children,
+        });
+      }
+      function _(_) {
+        const _ = _(),
+          _ = _.useMemo(
+            () => ({
+              DropDownMenu: _._,
+              Content: _._,
+            }),
+            [],
+          );
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
+              ..._,
+              bUseDialogElement: !1,
+              DialogWrapper: _,
+              ContextMenuComponent: _,
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const _ = {
+          bRenderOverlayAtRoot: !0,
+          bUsePopups: !1,
+          ..._,
+        };
+        return (0, _._)()
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_._, {
+              ..._,
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1495,7 +1742,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1831,6 +2077,7 @@
           children: _.children,
         });
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -2395,8 +2642,10 @@
                   children: (0, _.jsx)(_._, {
                     context: _,
                     children: (0, _.jsx)(_, {
-                      children: (0, _.jsx)(_._, {
-                        children: _.children,
+                      children: (0, _.jsx)(_, {
+                        children: (0, _.jsx)(_._, {
+                          children: _.children,
+                        }),
                       }),
                     }),
                   }),
@@ -24831,8 +25080,132 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.title || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  title: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "SteamAward_Localization";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.voteid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  voteid: {
+                    _: 1,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  localization: {
+                    _: 2,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "SteamAward";
+        }
+      }
+      var _ = __webpack_require__("chunkid");
       const _ = -1,
         _ = 0,
         _ = 1,
@@ -25240,6 +25613,10 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  extra_details: {
+                    _: 75,
+                    _: _,
                   },
                 },
               }),
@@ -27675,6 +28052,67 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.steam_award || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steam_award: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.include_assets || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -27767,6 +28205,11 @@
                   },
                   include_links: {
                     _: 17,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_extra_details: {
+                    _: 18,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -32792,7 +33235,7 @@
           _ = _ && "packageid" in _ && !!_.packageid;
         let _;
         if (_) {
-          const _ = _.getQueryData(_(_, "default_info"));
+          const _ = _.getQueryData(_(_, "default_info", _.cacheScope));
           _ &&
             1 == _.included_appids?.length &&
             (_ = {
@@ -32814,7 +33257,7 @@
       function _(_, _, _) {
         const _ = _ && "appid" in _ && !!_.appid;
         return {
-          queryKey: _(_, "include_included_items"),
+          queryKey: _(_, "include_included_items", _.cacheScope),
           queryFn: async () => {
             _ && _(_, _, _);
             return (
@@ -32929,18 +33372,18 @@
       }
       function _(_, _, _, _) {
         return {
-          queryKey: _(_, _),
+          queryKey: _(_, _, _.cacheScope),
           queryFn: async () => (await _(_, _, _))[_] || null,
           staleTime: 216e5,
           enabled: _(_),
         };
       }
-      function _(_, _, _, _, _) {
-        _.setQueryData(_(_, _), _[_] ?? null);
+      function _(_, _, _, _, _, _) {
+        _.setQueryData(_(_, _, _), _[_] ?? null);
       }
       function _(_, _) {
         return {
-          queryKey: _(_, "default_info"),
+          queryKey: _(_, "default_info", _.cacheScope),
           queryFn: async () => _(await _(_, _, "default_info")),
           staleTime: 216e5,
           enabled: _(_),
@@ -32956,7 +33399,7 @@
       function _(_, _) {
         const _ = "include_all_purchase_options";
         return {
-          queryKey: _(_, _),
+          queryKey: _(_, _, _.cacheScope),
           queryFn: async () => {
             const _ = await _(_, _, _);
             return {
@@ -32968,87 +33411,103 @@
           enabled: _(_),
         };
       }
-      function _(_, _) {
-        return ["StoreItem", _ && (0, _._)(_), _];
-      }
       function _(_, _, _) {
+        const _ = ["StoreItem", _ && (0, _._)(_), _];
+        return _ && _.push(_), _;
+      }
+      function _(_, _, _, _) {
         const _ = (0, _._)(_);
         _ &&
-          (!(function (_, _, _) {
-            _.setQueryData(_(_, "default_info"), _(_));
-          })(_, _, _),
+          (!(function (_, _, _, _) {
+            _.setQueryData(_(_, "default_info", _), _(_));
+          })(_, _, _, _),
           _.include_basic_info &&
-            (function (_, _, _) {
-              _(_, _, _, "include_basic_info", "basic_info");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "include_basic_info", "basic_info", _);
+            })(_, _, _, _),
           _.include_assets &&
-            (function (_, _, _) {
-              _(_, _, _, "include_assets", "assets");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "include_assets", "assets", _);
+            })(_, _, _, _),
           _.include_screenshots &&
-            (function (_, _, _) {
-              _(_, _, _, "include_screenshots", "screenshots");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "include_screenshots", "screenshots", _);
+            })(_, _, _, _),
           _.include_trailers &&
-            (function (_, _, _) {
-              _(_, _, _, "include_trailers", "trailers");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "include_trailers", "trailers", _);
+            })(_, _, _, _),
           _.include_assets_without_overrides &&
-            (function (_, _, _) {
+            (function (_, _, _, _) {
               _(
                 _,
                 _,
                 _,
                 "include_assets_without_overrides",
                 "assets_without_overrides",
+                _,
               );
-            })(_, _, _),
+            })(_, _, _, _),
           _.include_reviews &&
-            (function (_, _, _) {
-              _(_, _, _, "include_reviews", "reviews");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "include_reviews", "reviews", _);
+            })(_, _, _, _),
           _.include_release &&
-            (function (_, _, _) {
-              _(_, _, _, "include_release", "release");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "include_release", "release", _);
+            })(_, _, _, _),
           _.include_tag_count &&
             _.include_tag_count > 0 &&
-            (function (_, _, _) {
-              _(_, _, _, "top_tags", "tags");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "top_tags", "tags", _);
+            })(_, _, _, _),
           _.include_platforms &&
-            (function (_, _, _) {
-              _(_, _, _, "include_platforms", "platforms");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "include_platforms", "platforms", _);
+            })(_, _, _, _),
           _.apply_user_filters &&
-            (function (_, _, _) {
-              _(_, _, _, "apply_user_filters", "user_filter_failure");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(_, _, _, "apply_user_filters", "user_filter_failure", _);
+            })(_, _, _, _),
           _.include_all_purchase_options &&
-            (function (_, _, _) {
-              _.setQueryData(_(_, "include_all_purchase_options"), {
+            (function (_, _, _, _) {
+              _.setQueryData(_(_, "include_all_purchase_options", _), {
                 purchase_options: _.purchase_options,
                 package_groups: _.package_groups,
               });
-            })(_, _, _),
+            })(_, _, _, _),
           _.include_full_description &&
-            (function (_, _, _) {
-              _(_, _, _, "include_full_description", "full_description_bbcode");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(
+                _,
+                _,
+                _,
+                "include_full_description",
+                "full_description_bbcode",
+                _,
+              );
+            })(_, _, _, _),
           _.include_supported_languages &&
-            (function (_, _, _) {
-              _(_, _, _, "include_supported_languages", "supported_languages");
-            })(_, _, _),
+            (function (_, _, _, _) {
+              _(
+                _,
+                _,
+                _,
+                "include_supported_languages",
+                "supported_languages",
+                _,
+              );
+            })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (_.included_items?.included_apps?.forEach((_) =>
-              _(_, _, _.included_item_data_request),
+              _(_, _, _.included_item_data_request, _),
             ),
             _.included_items?.included_packages?.forEach((_) =>
-              _(_, _, _.included_item_data_request),
+              _(_, _, _.included_item_data_request, _),
             ),
             _.included_items?.included_bundles?.forEach((_) =>
-              _(_, _, _.included_item_data_request),
+              _(_, _, _.included_item_data_request, _),
             )));
       }
       const _ = [
@@ -33092,16 +33551,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
+      function _(_) {
+        return _.bIncludeUnpublished
+          ? "partner-unpublished"
+          : _.bUsePartnerAPI
+            ? "partner"
+            : void 0;
+      }
       function _(_, _) {
         _.Body().set_context(
           (function (_) {
@@ -33111,8 +33569,20 @@
           })(_),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
-        return new (_())(
+        (0, _._)(
+          !_.bIncludeUnpublished || !!_.bUsePartnerAPI,
+          "bIncludeUnpublished requires bUsePartnerAPI",
+        );
+        const _ = new (_())(
           async (_) => {
             const _ = new Set(),
               _ = new Map(),
@@ -33150,7 +33620,10 @@
               _.bUsePartnerAPI)
             ) {
               const _ = _._.Init(_._);
-              _.Body().set_getitems_request(_.Body()),
+              __webpack_require__.Body().set_getitems_request(_.Body()),
+                __webpack_require__
+                  .Body()
+                  .set_include_unpublished(!!_.bIncludeUnpublished),
                 (_ = await _._.GetItems(_, _));
             } else _ = await _._.GetItems(_, _);
             const _ = new Map();
@@ -33196,6 +33669,7 @@
             ..._,
           },
         );
+        return (_.cacheScope = _(_)), _;
       }
       var _ = __webpack_require__("chunkid");
       const _ = _.createContext({});
@@ -33215,22 +33689,29 @@
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _.useCallback(
-            (_, _) => {
-              (0, _._)(_, _.toObject(), _), _ && _(_, _);
-            },
-            [_, _],
-          ),
-          _ = _ || _,
-          { country: _, language: _, bUsePartnerAPI: _ } = _,
+          {
+            country: _,
+            language: _,
+            bUsePartnerAPI: _,
+            bIncludeUnpublished: _,
+          } = _,
           _ = _.useMemo(
             () => ({
               country: _,
               language: _,
               bUsePartnerAPI: _,
+              bIncludeUnpublished: _,
             }),
+            [_, _, _, _],
+          ),
+          _ = _(_),
+          _ = _.useCallback(
+            (_, _) => {
+              (0, _._)(_, _.toObject(), _, _), _ && _(_, _);
+            },
             [_, _, _],
           ),
+          _ = _ || _,
           _ = _.useMemo(() => {
             const _ = _
               ? (function (_) {
@@ -35843,6 +36324,357 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = "ː",
+        _ = 604800;
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        m_bEmoticonListRequested = !1;
+        m_bInitialized = !1;
+        m_rtMostRecentEmoticon = void 0;
+        static sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g");
+        static sm_UnvalidatedEmoticonRegex = new RegExp(
+          `(?:${_}|:)([a-zA-Z0-9_\\-]+)(?:${_}|:)`,
+          "g",
+        );
+        m_rgEmoticons = [];
+        m_setEmoticonOwned = new Set();
+        m_rgFlairs = [];
+        m_rgRecentEmoticons;
+        m_rgStickers = [];
+        m_rgRecentStickers;
+        m_rgEffects = [];
+        m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER;
+        m_emoticonTrackerCallback = null;
+        m_stickerTrackerCallback = null;
+        static GetEmoticonURL(_, _) {
+          return _
+            ? _._.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + _
+            : _._.COMMUNITY_CDN_URL + "economy/emoticon/" + _;
+        }
+        static GetEmoticonReplaceRegex() {
+          return _.sm_EmoticonRegex;
+        }
+        static GetUnvalidatedEmoticonReplaceRegex() {
+          return _.sm_UnvalidatedEmoticonRegex;
+        }
+        static BEmoticonFilterMatch(_, _) {
+          return (
+            -1 !== `:${_.name_normalized || _.name}:`.indexOf(_.toLowerCase())
+          );
+        }
+        static FilterEmoticons(_, _) {
+          return _ && ":" !== _
+            ? _.filter((_) => _.BEmoticonFilterMatch(_, _))
+            : _;
+        }
+        static BStickerFilterMatch(_, _) {
+          return _.name.toLowerCase().indexOf(_.toLowerCase()) > -1;
+        }
+        static FilterStickers(_, _) {
+          return _ ? _.filter((_) => _.BStickerFilterMatch(_, _)) : _;
+        }
+        SearchEmoticons(_, _ = 25, _ = !0) {
+          function _(_) {
+            return _.name_normalized || _.name;
+          }
+          this.UpdateEmoticonList(), (_ = _.toLocaleLowerCase());
+          let _ = this.recent_emoticons.filter((_) => !_ || _(_).startsWith(_)),
+            _ = this.recent_emoticons.filter(
+              (_) => !_ && -1 !== _(_).indexOf(_),
+            ),
+            _ = this.m_rgEmoticons.filter((_) => !_ || _(_).startsWith(_)),
+            _ = this.m_rgEmoticons.filter((_) => !_ && -1 !== _(_).indexOf(_)),
+            _ = new Set(),
+            _ = [];
+          function _(_, _, _) {
+            return (
+              !(_.length >= _) &&
+              (_.has(_) ||
+                (_.add(_),
+                _.push({
+                  name: _(_),
+                  recent: _,
+                  new: _,
+                })),
+              !0)
+            );
+          }
+          function _(_, _, _) {
+            for (let _ of _) if (!_(_, _, __webpack_require__(_))) break;
+          }
+          return (
+            _(_, !0, (_) => !(_.last_used || !_.time_received)),
+            _(_, !1, () => !1),
+            _(_, !0, (_) => !(_.last_used || !_.time_received)),
+            _(_, !1, () => !1),
+            _
+          );
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        async BAwaitInitialized() {
+          return (
+            this.m_bInitialized ||
+              (this.UpdateEmoticonList(),
+              await (0, _._)(() => this.m_bInitialized)),
+            this.m_bInitialized
+          );
+        }
+        GetTimeReceivedNewestEmoticon() {
+          return this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon;
+        }
+        GetTimeReceivedForStickerOrEffect() {
+          return this.m_rtLastStickerOrEffect;
+        }
+        UpdateEmoticonList() {
+          this.m_bInitialized || this.RequestEmoticonList();
+        }
+        get emoticon_list() {
+          return this.UpdateEmoticonList(), this.m_rgEmoticons;
+        }
+        BHasEmoticon(_) {
+          return this.m_setEmoticonOwned.has(_);
+        }
+        get flair_list() {
+          return this.UpdateEmoticonList(), this.m_rgFlairs;
+        }
+        GetStickerList() {
+          return this.m_rgStickers;
+        }
+        GetEffectList() {
+          return this.m_rgEffects;
+        }
+        GetFlairListByGroupID(_) {
+          return this.m_rgFlairs.filter((_) => _.flairGroupID === _);
+        }
+        get recent_emoticons() {
+          return (
+            this.m_rgRecentEmoticons || this.BuildRecentEmoticonList(),
+            this.m_rgRecentEmoticons
+          );
+        }
+        get recent_stickers() {
+          return (
+            this.m_rgRecentStickers || this.BuildRecentStickerList(),
+            this.m_rgRecentStickers
+          );
+        }
+        SetEmoticonTrackerCallback(_) {
+          this.m_emoticonTrackerCallback = _;
+        }
+        SetStickerTrackerCallback(_) {
+          this.m_stickerTrackerCallback = _;
+        }
+        TrackEmoticonUsage(_, _) {
+          if (!this.m_bInitialized) return;
+          this.m_emoticonTrackerCallback &&
+            this.m_emoticonTrackerCallback(_, _);
+          let _,
+            _ = new Map(),
+            _ = /\[emoticon\]([^[]*)/g;
+          for (; (_ = _.exec(_)); ) {
+            let _ = _.get(_[1]) || 0;
+            _.set(_[1], _ + 1);
+          }
+          let _ = !1;
+          if (_.size) {
+            if (void 0 !== this.m_rgRecentEmoticons)
+              for (let _ of this.m_rgRecentEmoticons)
+                _.has(_.name) &&
+                  ((_.last_used = _),
+                  (_.use_count += _.get(_.name)),
+                  _.delete(_.name),
+                  _.time_received && ((_ = !0), delete _.time_received));
+            if (_.size)
+              for (let _ of this.m_rgEmoticons)
+                _.has(_.name) &&
+                  ((_.last_used = _),
+                  (_.use_count += _.get(_.name)),
+                  delete _.time_received,
+                  void 0 !== this.m_rgRecentEmoticons &&
+                    this.m_rgRecentEmoticons.push(_));
+            if (
+              void 0 !== this.m_rgRecentEmoticons &&
+              (this.BuildRecentEmoticonList(), _)
+            ) {
+              this.m_rtMostRecentEmoticon = void 0;
+              for (let _ of this.m_rgRecentEmoticons)
+                !_.last_used &&
+                  _.time_received &&
+                  (!this.m_rtMostRecentEmoticon ||
+                    _.time_received > this.m_rtMostRecentEmoticon) &&
+                  (this.m_rtMostRecentEmoticon = _.time_received);
+            }
+          }
+        }
+        TrackStickerUsage(_, _) {
+          if (!this.m_bInitialized) return;
+          this.m_stickerTrackerCallback && this.m_stickerTrackerCallback(_, _);
+          const _ = this.m_rgStickers.find(({ name: _ }) => _ === _);
+          (_.last_used = _),
+            (_.use_count += 1),
+            delete _.time_received,
+            this.BuildRecentStickerList();
+        }
+        RequestEmoticonList() {
+          !this.m_bEmoticonListRequested &&
+            this.BTransportReady() &&
+            ((this.m_bEmoticonListRequested = !0),
+            this.RequestEmoticonListInternal());
+        }
+        BuildRecentEmoticonList() {
+          this.m_rgRecentEmoticons = this.BuildRecentList(this.m_rgEmoticons);
+        }
+        BuildRecentStickerList() {
+          this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
+        }
+        BuildRecentList(_) {
+          const _ = this.GetServerTime() - _,
+            _ = _.filter(
+              ({ last_used: _, time_received: _ }) => _ || (_ && _ > _),
+            );
+          return (
+            __webpack_require__.sort(
+              (_, _) =>
+                (_.last_used || _.time_received) -
+                (_.last_used || _.time_received),
+            ),
+            __webpack_require__.slice(0, 50)
+          );
+        }
+        OnEmoticonListReceived(_) {
+          (this.m_rgFlairs = []),
+            (this.m_rgEmoticons = []),
+            (this.m_rgRecentEmoticons = void 0),
+            (this.m_rtMostRecentEmoticon = void 0);
+          let _ = this.GetServerTime() - _;
+          for (let _ of _) {
+            let _ = _.name;
+            _.startsWith("^")
+              ? this.m_rgFlairs.push({
+                  name: _.match(new RegExp(/:(.*):/))[1],
+                  flairGroupID: _.match(new RegExp(/\^(.*)\^/))[1],
+                })
+              : (!_.last_used && _.time_received > _
+                  ? (!this.m_rtMostRecentEmoticon ||
+                      _.time_received > this.m_rtMostRecentEmoticon) &&
+                    (this.m_rtMostRecentEmoticon = _.time_received)
+                  : delete _.time_received,
+                this.m_rgEmoticons.push(_));
+          }
+          (this.m_setEmoticonOwned = new Set(
+            this.m_rgEmoticons.map((_) => _.name_normalized || _.name),
+          )),
+            (this.m_bInitialized = !0),
+            (this.m_bEmoticonListRequested = !1);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
+        (0, _._)([_._], _.prototype, "m_rtMostRecentEmoticon", void 0),
+        (0, _._)([_._], _.prototype, "m_rtLastStickerOrEffect", void 0),
+        (0, _._)([_._], _.prototype, "TrackEmoticonUsage", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ extends _._ {
+        constructor() {
+          super();
+        }
+        BTransportReady() {
+          return !0;
+        }
+        GetServerTime() {
+          return _._.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
+        }
+        async RequestEmoticonListInternal() {
+          let _ = [];
+          try {
+            let _ = await _().get(_._.CHAT_BASE_URL + "actions/EmoticonData", {
+              withCredentials: !0,
+            });
+            if (_.data.emoticons)
+              for (let _ of _.data.emoticons) {
+                let _ = _.name;
+                if (_.startsWith("^"))
+                  _.push({
+                    name: _,
+                  });
+                else {
+                  let _ = {
+                      name: _.substr(1, _.length - 2),
+                    },
+                    _ = _.name.toLowerCase();
+                  _ != _.name && (_.name_normalized = _),
+                    _.time_last_used && (_.last_used = _.time_last_used),
+                    _.use_count && (_.use_count = _.use_count),
+                    _.time_received && (_.time_received = _.time_received),
+                    _.appid && (_.appid = _.appid),
+                    _.push(_);
+                }
+              }
+          } catch (_) {
+            console.error("error loading emoticon list", _);
+          }
+          this.OnEmoticonListReceived(_);
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(null);
+      let _ = null;
+      function _(_) {
+        const [_] = _.useState(() => new _._()),
+          _ = _.store ?? _;
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _.children,
+        });
+      }
+      function _() {
+        return (
+          _.useContext(_) ??
+          (_ ||
+            (console.warn(
+              "Missing context, this is not ssr safe, using s_FallbackEmoticonStore",
+            ),
+            (_ = new _._())),
+          _)
+        );
+      }
+      function _(_) {
+        return (0, _.jsx)(_.Fragment, {
+          children: _.children(_()),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -36327,6 +37159,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -36601,6 +37435,13 @@
           role: "separator",
         });
       }
+      const _ = (_) => {
+        const _ = (0, _._)();
+        return (0, _.jsx)(_, {
+          ..._,
+          bInGamepadUI: _,
+        });
+      };
       class _ extends _.PureComponent {
         static contextType = _;
         m_refItem = _.createRef();
@@ -37183,6 +38024,51 @@
         return (
           "true" === (window.localStorage && window.localStorage.getItem(_))
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(null);
+      function _(_) {
+        const {
+            refContextMenuManager: _,
+            bRegisterMenuManager: _ = !0,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _?.ownerWindow || window,
+          _ = _.useRef(void 0);
+        return (
+          _.current || (_.current = new _._()),
+          _.useLayoutEffect(() => {
+            if (_)
+              return (
+                _._.SetMenuManager(_, _.current),
+                () => _._.SetMenuManager(_, void 0)
+              );
+          }, [_, _]),
+          _.useLayoutEffect(
+            () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
+            [_],
+          ),
+          (0, _.jsx)(_.Provider, {
+            value: _.current,
+            children: _,
+          })
+        );
+      }
+      function _() {
+        return _.useContext(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -37835,14 +38721,19 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _,
-        _: () => _,
-        _: () => _._,
-        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _._,
@@ -40466,11 +41357,56 @@
           (_[(_._ = 3)] = "Up"),
           (_[(_.Down = 4)] = "Down");
       })(_ || (_ = {}));
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       _.createContext(null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_, _) {
+        for (const _ of _.options) {
+          if (_(_) && _.data === _) return !0;
+          if (_(_) && _(_, _)) return !0;
+        }
+        return !1;
+      }
+      function _(_) {
+        const _ = (_) =>
+          __webpack_require__?.map((_, _) =>
+            _(_)
+              ? (0, _.jsx)(_._, {}, _)
+              : _(_)
+                ? (0, _.jsx)(
+                    _._,
+                    {
+                      role: "option",
+                      onSelected: (_) =>
+                        _.onValueSelected && _.onValueSelected(_, _),
+                      selected: _.selectedValue === _.data,
+                      children: (0, _.jsx)(_.Fragment, {
+                        children: _.label,
+                      }),
+                    },
+                    _,
+                  )
+                : _(_)
+                  ? (0, _.jsx)(
+                      _._,
+                      {
+                        label: _.label,
+                        selectedWithin: _(_, _.selectedValue),
+                        children: _(_.options),
+                      },
+                      _,
+                    )
+                  : null,
+          );
+        return (0, _.jsx)(_._, {
+          onCancel: _.onCancel,
+          role: "listbox",
+          children: _(_.rgOptions),
+        });
+      }
       _.forwardRef(function (_, _) {
         const {
             className: _,
@@ -42011,6 +42947,31 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnToggleChange", null);
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, bCenterVertically: _, refElem: _, ..._ } = _,
+          _ = (0, _._)(
+            _().GamepadDialogContent,
+            "DialogContent _DialogLayout",
+            _.className,
+            _ && " _DialogCenterVertically",
+          ),
+          { ref: _, navRef: _ } = (0, _._)(),
+          _ = (0, _._)(_, _);
+        return (0, _.jsx)(_._, {
+          ..._,
+          className: _,
+          ref: _,
+          navRef: _,
+          children: (0, _.jsx)(_._, {
+            className: (0, _._)(
+              _().GamepadDialogContent_InnerWidth,
+              "DialogContent_InnerWidth",
+            ),
+            children: _,
+          }),
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -45217,37 +46178,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext(null);
-      function _(_) {
-        const {
-            refContextMenuManager: _,
-            bRegisterMenuManager: _ = !0,
-            children: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = _?.ownerWindow || window,
-          _ = _.useRef(void 0);
-        return (
-          _.current || (_.current = new _._()),
-          _.useLayoutEffect(() => {
-            if (_)
-              return (
-                _._.SetMenuManager(_, _.current),
-                () => _._.SetMenuManager(_, void 0)
-              );
-          }, [_, _]),
-          _.useLayoutEffect(
-            () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
-            [_],
-          ),
-          (0, _.jsx)(_.Provider, {
-            value: _.current,
-            children: _,
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -45255,12 +46185,13 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { managerOverride: _, bSuppressMouseOverlay: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _.useContext(_),
+          _ = (0, _._)(),
           _ = _ ?? _;
         (0, _._)(_.OnMenusChanged, _);
         const _ = !_ && _.BShouldRenderMouseOverlay(),
@@ -45464,7 +46395,7 @@
           );
           return (0, _.jsx)(_.Provider, {
             value: _,
-            children: (0, _.jsxs)(_, {
+            children: (0, _.jsxs)(_._, {
               refContextMenuManager: _,
               bRegisterMenuManager: _,
               children: [
@@ -45736,6 +46667,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -46237,6 +47169,7 @@
         bPr: () => _,
         bcZ: () => _,
         bfp: () => _,
+        _: () => _,
         c_I: () => _,
         ccb: () => _,
         dJT: () => _,
@@ -49087,6 +50020,42 @@
             fill: "currentColor",
             _: "M1 14V15H2V16H0V14H1ZM5 14V16H3V14H5ZM9 14V16H7V14H9ZM13 14V16H11V14H13ZM16 14V16H14V15H15V14H16ZM2 11V13H0V11H2ZM16 11V13H14V11H16ZM2 7V9H0V7H2ZM16 7V9H14V7H16ZM2 3V5H0V3H2ZM16 3V5H14V3H16ZM2 0V1H1V2H0V0H2ZM5 0V2H3V0H5ZM9 0V2H7V0H9ZM13 0V2H11V0H13ZM16 0V2H15V1H14V0H16Z",
           }),
+        });
+      }
+      function _(_) {
+        const [_, _] = (0, _._)();
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsxs)("g", {
+              clipPath: _,
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "#199FFF",
+                  _: "M35.9982 12.4814C23.0097 12.4814 12.4805 23.0107 12.4805 35.9991H35.9982V12.4814Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M0 0.776571C0 0.34768 0.347683 0 0.776571 0H35.9984V7.76572H7.76571V35.9984H0V0.776571Z",
+                }),
+              ],
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("rect", {
+                  fill: "currentColor",
+                  width: "36",
+                  height: "36",
+                }),
+              }),
+            }),
+          ],
         });
       }
       function _(_) {
@@ -52018,6 +52987,7 @@
         async LoadSettings() {
           const _ = (_, _) => {
             try {
+              0;
               const _ = localStorage.getItem(_);
               return _ ? JSON.parse(_) : _;
             } catch {
@@ -52682,7 +53652,6 @@
         _: () => _,
         _: () => _._,
         _: () => _,
-        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _._,
@@ -52913,58 +53882,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = "webui_config";
-      let _;
-      function _() {
-        if (!(0, _._)()) return _ || (_ = _()), _;
-        let _ = (0, _._)("sessionid");
-        return _ || (_ = _()), _;
-      }
-      function _() {
-        const _ = (function () {
-          let _ = "";
-          for (let _ = 0; _ < 24; _++) _ += (0, _._)(0, 35).toString(36);
-          return _;
-        })();
-        return (0, _._)("sessionid", _, 0), _;
-      }
-      function _(_ = _) {
-        const _ = {},
-          _ = _("config", _);
-        _ && (Object.assign(_._, _), (_.config = !0));
-        const _ = _("userinfo", _);
-        _ &&
-          (Object.assign(_._, _),
-          (_.userConfig = !0),
-          _._.is_support && _() && (_._.is_support = !1));
-        const _ = _("broadcast", _);
-        _ && (Object.assign(_._, _), (_.broadcastConfig = !0));
-        const _ = _("community", _);
-        _ && (Object.assign(_._, _), (_.communityConfig = !0));
-        const _ = _("event", _);
-        return (
-          _ && (Object.assign(_._, _), (_.eventConfig = !0)),
-          (_ = !0),
-          _.forEach((_) => _()),
-          _
-        );
-      }
-      let _ = new Set(),
-        _ = !1;
-      function _() {
-        return _
-          ? Promise.resolve()
-          : new Promise((_) => {
-              _.add(_);
-            });
-      }
       function _(_, _ = _) {
         return _(_, _, !0);
       }
@@ -53001,6 +53921,65 @@
             );
           }
         else _ && console.error("Missing config element #", _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _;
+      function _() {
+        if (!(0, _._)()) return _ || (_ = _()), _;
+        let _ = (0, _._)("sessionid");
+        return _ || (_ = _()), _;
+      }
+      function _() {
+        const _ = (function () {
+          let _ = "";
+          for (let _ = 0; _ < 24; _++) _ += (0, _._)(0, 35).toString(36);
+          return _;
+        })();
+        return (0, _._)("sessionid", _, 0), _;
+      }
+      function _(_ = _._) {
+        const _ = {},
+          _ = (0, _._)("config", _);
+        _ && (Object.assign(_._, _), (_.config = !0));
+        const _ = (0, _._)("userinfo", _);
+        _ &&
+          (Object.assign(_._, _),
+          (_.userConfig = !0),
+          _._.is_support && _() && (_._.is_support = !1));
+        const _ = (0, _._)("broadcast", _);
+        _ && (Object.assign(_._, _), (_.broadcastConfig = !0));
+        const _ = (0, _._)("community", _);
+        _ && (Object.assign(_._, _), (_.communityConfig = !0));
+        const _ = (0, _._)("event", _);
+        return (
+          _ && (Object.assign(_._, _), (_.eventConfig = !0)),
+          (_ = !0),
+          _.forEach((_) => _()),
+          _
+        );
+      }
+      let _ = new Set(),
+        _ = !1;
+      function _() {
+        return _
+          ? Promise.resolve()
+          : new Promise((_) => {
+              _.add(_);
+            });
       }
       const _ = "presentation_mode";
       function _() {
@@ -53080,7 +54059,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 77124), _((_._ = _));
+      return (_ = 43137), _((_._ = _));
       var _;
     });
     _._();

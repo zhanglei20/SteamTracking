@@ -240,6 +240,7 @@
     "Filter_ViewResults": "Wyświetl wyniki",
     "Results_GridView_Tooltip": "Zobacz jako siatkę",
     "Results_ListView_Tooltip": "Zobacz jako listę",
+    "Results_InitialLoadError": "Wystąpił problem podczas wczytywania rezultatów. Spróbuj ponownie później.",
     "Results_PageLoadError": "Wystąpił problem podczas wczytywania dodatkowych wyników. Spróbuj ponownie później.",
     "Market_AppUnplayedAndUnvetted": "Próbujesz obejrzeć przedmiot do nowej gry na Steam, w którą jeszcze nie grałeś. Zachowaj ostrożność.",
     "Market_AppUnplayedAndUnvetted_Dismiss": "Kliknij tutaj, by obejrzeć ten przedmiot mimo to",
@@ -285,5 +286,16 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "Musisz włączyć Steam Guard na swoim koncie. Upewnij się, że e-mail jest zweryfikowany i zalogowano się na koncie dwa razy po aktywacji Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Twoje konto musi być chronione przez Steam Guard przez co najmniej %1$s dni.",
     "Economy_Market_HeaderTip_TimeCanUse": "Jeżeli nie pojawią się dodatkowe ograniczenia, będziesz w stanie korzystać z Rynku Społeczności od %1$s.",
-    "Economy_Market_TopLevelReason_TradeCooldown": "Na twoje konto nałożono tymczasową blokadę na korzystanie z systemu wymian i Rynku Społeczności Steam."
+    "Economy_Market_TopLevelReason_TradeCooldown": "Na twoje konto nałożono tymczasową blokadę na korzystanie z systemu wymian i Rynku Społeczności Steam.",
+    "MyHistory_Title_ItemNameBlock": "Nazwa",
+    "MyHistory_Title_ListedAtTime": "Wystawiono: ",
+    "MyHistory_Title_ActedOnTime": "Podjęto działanie:",
+    "MyHistory_Title_TransactedPrice": "Cena",
+    "MyHistory_Title_Action": "Działanie",
+    "MyHistory_NoResults": "Nie znaleziono wyników",
+    "MyHistory_Action_Sold": "Sprzedano",
+    "MyHistory_Action_Purchased": "Kupiono",
+    "Breadcrumbs_Label_History": "Moja historia",
+    "Breadcrumbs_Label_Listings": "Moje oferty",
+    "Breadcrumbs_Label_BuyOrders": "Moje zlecenia kupna"
 }
