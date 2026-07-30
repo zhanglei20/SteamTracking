@@ -38,7 +38,7 @@ async function _() {
   if (window.SSR?.reactRoot) return;
   _().Init(
     `community SSR`,
-    `10865331`,
+    `10870469`,
     new _(_.WEBAPI_BASE_URL).GetServiceTransport(),
     {
       fnGetReportTags: _,

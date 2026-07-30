@@ -21232,10 +21232,6 @@ var _ = _({
         `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
         `GetPublishedFileDetails`,
       ),
-      GetModeratorMessageCount: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetModeratorMessageCount`,
-      ),
       GetClanInfo: _(
         `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
         `GetClanInfo`,
@@ -21809,8 +21805,9 @@ function _(_) {
   return {
     queryKey: _(_),
     queryFn: async () => {
-      let _ = await _.Actions.GetModeratorMessageCount(_);
-      if (_ === null) throw Error(``);
+      let _ = await _(`/moderation/actions`, `GetModeratorMessageCount`, _);
+      if (_ === null)
+        throw Error(`GetModeratorMessageCount failed for steamid ${_}`);
       return _;
     },
   };
@@ -23528,7 +23525,7 @@ function _(_) {
     _ = 0,
     _ = 0,
     _ = [];
-  for (let _ of _.data.count_by_type)
+  for (let _ of _.data?.count_by_type ?? [])
     _.type === 5 ||
       _.type === 6 ||
       _.type === 4 ||
