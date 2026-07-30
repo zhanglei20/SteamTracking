@@ -1841,7 +1841,7 @@
                 api_name: a,
                 groupid: o,
                 archived: c,
-                hidden: l,
+                spoiler: l,
                 permission: u,
                 progress_stat_name: p,
                 progress_stat_min: h,
@@ -2336,7 +2336,7 @@
               permission: a
                 .k5n(Object.keys(o.yu).filter((e) => "string" == typeof e))
                 .transform((e) => o.yu[e]),
-              hidden: a.uEf(),
+              spoiler: a.uEf(),
               archived: a.uEf(),
               progress_stat_name: a.YjP(),
               progress_stat_min: a.auy.number(),
@@ -2498,7 +2498,7 @@
               api_name: e.name,
               groupid: e.groupid ?? "",
               permission: e.permission ?? o.yu.Client,
-              hidden: "1" == e.display?.hidden,
+              spoiler: "1" == e.display?.hidden,
               archived: "1" == e.archived,
               progress_stat_name: e.progress?.value?.operand1 ?? "",
               progress_stat_min: parseFloat(e.progress?.min_val ?? "0"),
@@ -2585,7 +2585,7 @@
               permission: e.permission,
               archived: e.archived ? "1" : "0",
               display: {
-                hidden: e.hidden ? "1" : "0",
+                hidden: e.spoiler ? "1" : "0",
                 name: void 0,
                 desc: void 0,
                 icon: void 0,
