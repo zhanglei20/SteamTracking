@@ -944,10 +944,12 @@
             document.removeChild(n);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t, n) {
-          const o = r().unparse(e, { header: !0 }),
-            s = 1 == n ? ["\ufeff" + o] : [o];
-          i.WriteFile(new Blob(s, { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, n, o) {
+          const s = o
+              ? r().unparse({ fields: o, data: e }, { header: !0 })
+              : r().unparse(e, { header: !0 }),
+            l = 1 == n ? ["\ufeff" + s] : [s];
+          i.WriteFile(new Blob(l, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {

@@ -2092,10 +2092,12 @@ License: MIT
             document.removeChild(r);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t, r) {
-          const n = i().unparse(e, { header: !0 }),
-            a = 1 == r ? ["\ufeff" + n] : [n];
-          s.WriteFile(new Blob(a, { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, r, n) {
+          const a = n
+              ? i().unparse({ fields: n, data: e }, { header: !0 })
+              : i().unparse(e, { header: !0 }),
+            o = 1 == r ? ["\ufeff" + a] : [a];
+          s.WriteFile(new Blob(o, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {

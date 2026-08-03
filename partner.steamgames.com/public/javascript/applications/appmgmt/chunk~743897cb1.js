@@ -52619,10 +52619,12 @@
             document.removeChild(r);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t, r) {
-          const i = a().unparse(e, { header: !0 }),
-            n = 1 == r ? ["\ufeff" + i] : [i];
-          s.WriteFile(new Blob(n, { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, r, i) {
+          const n = i
+              ? a().unparse({ fields: i, data: e }, { header: !0 })
+              : a().unparse(e, { header: !0 }),
+            o = 1 == r ? ["\ufeff" + n] : [n];
+          s.WriteFile(new Blob(o, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {

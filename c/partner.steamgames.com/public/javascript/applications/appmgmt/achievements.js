@@ -50,10 +50,14 @@
         ApiColumn: "_1tteA0CuHUJMKITKjbveBL",
         VisibilityColumn: "GlevOmet6O5-XYWcl9KHj",
         ProgressColumn: "_2woZ5CfAS4IuiI13yjBHeo",
+        ResultsSection: "_3BY0cyaNahGJISKkPcBei0",
+        ResultsSectionHeader: "_2S3eJxNKMFeGae4Xt7aY1j",
+        CollapsibleResultsSectionHeader: "JhQowPYpM0hwJNlXGUOgC",
+        ResultsSectionBody: "_1j-e5L24aKdIk0A-K4lL9v",
+        FileSuccessRow: "_3yDR_m8Cyv6_3PCJlNJlnH",
+        FileImage: "_3Dige9dJ-b_rIXDViZ_Lll",
         FileErrorList: "_2taJcQaC6hSr1mlv2Mh46K",
         FileError: "_1ZSVlHQLDXbW7IhdEUp8eZ",
-        ErrorTable: "_3OYTVyXniwxHjaai4IUQdC",
-        ErrorImage: "_1S6i3PzQewefdL1xf6Azdu",
         WarningGlobeIcon: "F-0UNlG8kZ7QyEHZjAAI9",
         LegendContainer: "_1rNyRSz-GRGqRSKgm_hwu1",
         LegendChangeIcon: "Wr-XyB_FGwAFKOZRpMUIm",
@@ -1080,15 +1084,15 @@
             _ = __webpack_require__._(_),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
-            _ = _([_, _, _, _, _]);
+            _ = _([_, _, _, _, _, _]);
           function _(_, _, _, _, _) {
             return (_ && _ in _) || (_ && _ in _ && _(_[_], _[_], _));
           }
-          function _(_) {
+          function _() {
             const {
                 generateUnachievedImages: _,
                 setGenerateUnachievedImages: _,
-              } = _,
+              } = (0, _._)(),
               { appID: _ } = (0, _._)(),
               _ = (0, _._)(_),
               _ = (0, _._)(_),
@@ -1280,7 +1284,7 @@
                       marginBottom: "2",
                       children: (0, _.jsx)(_._, {
                         checked: _,
-                        onChange: (_) => __webpack_require__(_),
+                        onChange: (_) => _(_),
                         children: (0, _.jsxs)(_.Fragment, {
                           children: [
                             (0, _._)(
@@ -1305,217 +1309,25 @@
             });
           }
           function _(_) {
-            const { onClose: _, setHasChanges: _ } = _,
-              { appID: _ } = (0, _._)(),
-              _ = (0, _._)(_),
-              _ = (0, _._)(_),
-              _ = (0, _._)(_),
-              _ = ((0, _._)(_), (0, _.useRef)(void 0)),
-              _ = {
-                achievements: (0, _._)(_),
-                unmodified: _.map((_) => _.name),
-              },
-              [_, _] = _.useState(),
-              [_, _] = _.useState(),
-              [_, _] = _.useState(),
-              [_, _] = _.useState(),
-              [_, _] = _.useState(),
-              [_, _] = (0, _.useState)(!1),
-              [_, _] = (0, _.useState)(!0),
-              _ = [
-                {
-                  key: "data",
-                  handles: (_) => (0, _._)(_),
-                  process: (_) => {
-                    const _ = (0, _._)(_, _, _, _),
-                      _ =
-                        (_.errors?.length ?? !1) ||
-                        (_?.achievementErrors?.length ?? !1);
-                    return (
-                      _ || _(_),
-                      {
-                        success: !_,
-                        errors: _.errors,
-                        csvErrors: _.achievementErrors,
-                      }
-                    );
-                  },
-                },
-                {
-                  key: "localization",
-                  handles: (_) => (0, _._)(_),
-                  process: (_) => {
-                    const _ = (0, _._)(_),
-                      _ =
-                        (_.errors?.length ?? !1) ||
-                        (_?.achievementErrors?.length ?? !1);
-                    return (
-                      _ || _(_),
-                      {
-                        success: !_,
-                        errors: _.errors,
-                        csvErrors: _.achievementErrors,
-                      }
-                    );
-                  },
-                },
-              ],
-              _ = [
-                {
-                  key: "csv",
-                  accept: ["text/csv"],
-                  process: async (_) => {
-                    const _ = await (0, _._)(_);
-                    if (_.errors)
-                      return {
-                        success: !1,
-                        filename: _.name,
-                        errors: _.errors,
-                      };
-                    const _ = _.find((_) => _.handles(_));
-                    if (!_)
-                      return {
-                        success: !1,
-                        filename: _.name,
-                        errors: [
-                          (0, _._)(
-                            "#AchievementEditor_Bulk_CsvHandlerNotFound",
-                          ),
-                        ],
-                      };
-                    return {
-                      ...__webpack_require__.process(_),
-                      filename: _.name,
-                    };
-                  },
-                },
-                {
-                  key: "images",
-                  accept: ["image/png", "image/jpeg"],
-                  process: async (_) => {
-                    const _ = (
-                      await (0, _._)({
-                        files: [_],
-                        forceSquare: !0,
-                      })
-                    )[0];
-                    if (!_.success)
-                      return {
-                        success: !1,
-                        filename: _.name,
-                        imageErrors: [_],
-                      };
-                    const _ = "_ACHIEVED",
-                      _ = "_UNACHIEVED",
-                      _ = _.image.filenameWithoutExtension.toUpperCase();
-                    let _ = _,
-                      _ = !0;
-                    if (
-                      (_.endsWith(_)
-                        ? ((_ = !1), (_ = _.substring(0, _.indexOf(_))))
-                        : (_ = _.endsWith(_)
-                            ? _.substring(0, _.indexOf(_))
-                            : _),
-                      _((_) => ({
-                        ..._,
-                        [_]: {
-                          ..._?.[_],
-                          [_ ? "achieved" : "unachieved"]: _,
-                        },
-                      })),
-                      _ && _?.success)
-                    ) {
-                      const _ = await (0, _._)(_.image?.image);
-                      _((_) => ({
-                        ..._,
-                        [_]: {
-                          image: _,
-                          imageType: _._,
-                          filenameWithoutExtension: "GENERATED",
-                        },
-                      }));
-                    }
-                    return {
-                      success: !0,
-                      filename: _.name,
-                    };
-                  },
-                },
-              ],
-              _ = Array.from(
-                _.reduce(
-                  (_, _) => (_.accept.forEach((_) => _.add(_)), _),
-                  new Set(),
-                ),
-              );
-            let _ = _
-              ? Object.keys(_).reduce(
-                  (_, _) => (_.push(..._[_].filter((_) => !_.success)), _),
-                  [],
-                )
-              : [];
-            _.push(
-              ...Object.keys(_ ?? {})
-                .filter(
-                  (_) =>
-                    !_?.some((_) => _.name == _) &&
-                    !Object.keys(_?.csv ?? {}).includes(_),
-                )
-                .reduce((_, _) => {
-                  const _ = _[_];
-                  return (
-                    _.achieved &&
-                      _.push({
-                        success: !1,
-                        filename: _.achieved.filename,
-                        imageErrors: [
-                          {
-                            ..._.achieved,
-                            success: !1,
-                            error: (0, _._)(
-                              "#AchievementEditor_Image_Error_NoAchievement",
-                              _.achieved.filename,
-                            ),
-                          },
-                        ],
-                      }),
-                    _.unachieved &&
-                      _.push({
-                        success: !1,
-                        filename: _.unachieved.filename,
-                        imageErrors: [
-                          {
-                            ..._.unachieved,
-                            success: !1,
-                            error: (0, _._)(
-                              "#AchievementEditor_Image_Error_NoAchievement",
-                            ),
-                          },
-                        ],
-                      }),
-                    _
-                  );
-                }, []),
-            );
-            const _ = !!_ || !!_ || !!_,
-              _ = _
-                ? Object.keys(_ ?? {}).reduce(
-                    (_, _) => (
-                      (_[_] = {
-                        achieved: _[_].achieved,
-                        unachieved: _[_].unachieved ?? {
-                          success: !0,
-                          filename: "GENERATED",
-                          image: _[_],
-                        },
-                      }),
-                      _
-                    ),
-                    {},
-                  )
-                : _,
-              _ = (0, _._)(_),
-              [_, _] = (0, _.useState)(!1);
+            const { onClose: _, setHasChanges: _ } = _;
+            return (0, _.jsx)(_._, {
+              onClose: _,
+              setHasChanges: _,
+              children: (0, _.jsx)(_, {}),
+            });
+          }
+          function _() {
+            const {
+              hasData: _,
+              acceptedTypes: _,
+              fileInputRef: _,
+              uploadFiles: _,
+              openFilePicker: _,
+              save: _,
+              isSaving: _,
+              saveSucceeded: _,
+              onClose: _,
+            } = (0, _._)();
             return (0, _.jsxs)("div", {
               className: (0, _._)(_.Takeover, _.BulkEdit),
               children: [
@@ -1525,10 +1337,7 @@
                     onOk: _,
                     children: (0, _._)("#AchievementEditor_Bulk_Save_Confirm"),
                   }),
-                (0, _.jsx)(_, {
-                  generateUnachievedImages: _,
-                  setGenerateUnachievedImages: _,
-                }),
+                (0, _.jsx)(_, {}),
                 (0, _.jsxs)("div", {
                   className: _.TakeoverBody,
                   children: [
@@ -1537,19 +1346,7 @@
                       accept: _,
                       multiple: !0,
                       fileInputRef: _,
-                      onUpload: async (_) => {
-                        let _ = {};
-                        for (const _ of _) {
-                          const _ = _.find((_) => _.accept.includes(_.type));
-                          _.key in _ || (_[_.key] = []),
-                            _[_.key].push(await _.process(_));
-                        }
-                        _(_),
-                          Object.values(_).some((_) =>
-                            _.some((_) => _.success),
-                          ) && __webpack_require__(!0),
-                          _.current && (_.current.value = "");
-                      },
+                      onUpload: _,
                       children: (0, _.jsx)("div", {
                         className: _.UploadPlaceholder,
                         children: (0, _._)("#AchievementEditor_Bulk_UploadBox"),
@@ -1559,88 +1356,21 @@
                       className: _.ButtonContainer,
                       children: (0, _.jsx)(_._, {
                         color: "dull",
-                        onClick: () => _.current.click(),
+                        onClick: _,
                         children: (0, _._)(
                           "#AchievementEditor_Bulk_Upload_SelectFiles",
                         ),
                       }),
                     }),
-                    _?.length > 0 &&
-                      (0, _.jsx)(_, {
-                        results: _,
-                      }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        data: _ ?? _,
-                        localization: _,
-                        images: _ ?? {},
-                        confirmDelete: _,
-                        setConfirmDelete: _,
-                      }),
+                    (0, _.jsx)(_, {}),
+                    _ && (0, _.jsx)(_, {}),
                   ],
                 }),
                 _ &&
                   (0, _.jsx)(_._, {
-                    pending: _.isPending,
+                    pending: _,
                     hideCancel: !0,
-                    onSave: async () => {
-                      const _ =
-                        _?.added?.map((_) => ({
-                          achievement: (0, _._)(_.csv[_], _?.localization?.[_]),
-                          icon: _?.[_]?.achieved?.image?.image,
-                          icon_gray: _?.[_]?.unachieved?.image?.image,
-                        })) ?? [];
-                      let _ =
-                        Array.from(
-                          new Set([
-                            ...(_?.modified ?? []),
-                            ...Object.keys(_?.localization ?? {}).filter(
-                              (_) =>
-                                !_?.added?.includes(_) &&
-                                _ in (_ ?? _).achievements,
-                            ),
-                          ]),
-                        ).map((_) => {
-                          const _ = (_ ?? _).achievements[_],
-                            _ = _?.localization?.[_];
-                          return {
-                            statID: _.statID,
-                            bitID: _.bitID,
-                            achievement: (0, _._)(
-                              _?.csv[_] ?? (0, _._)(_),
-                              _,
-                              _,
-                            ),
-                            icon: _?.[_]?.achieved?.image?.image,
-                            icon_gray: _?.[_]?.unachieved?.image?.image,
-                          };
-                        }) ?? [];
-                      const _ = _?.deleted?.map((_) => {
-                          const _ = _.achievements[_];
-                          return {
-                            statID: _.statID,
-                            bitID: _.bitID,
-                          };
-                        }),
-                        _ = (_ ?? _).unmodified;
-                      Object.keys(_)
-                        .filter((_) => _?.includes(_))
-                        .forEach((_) => {
-                          const _ = _.find((_) => _.name == _);
-                          _.push({
-                            statID: _.statID,
-                            bitID: _.bitID,
-                            achievement: void 0,
-                            icon: _?.[_]?.achieved?.image?.image,
-                            icon_gray: _?.[_]?.unachieved?.image?.image,
-                          });
-                        }),
-                        await _.mutateAsync({
-                          addOrUpdate: [..._, ..._],
-                          delete: _,
-                        }),
-                        _(!0);
-                    },
+                    onSave: _,
                   }),
               ],
             });
@@ -1659,20 +1389,20 @@
               ..._,
             }));
           }
-          function _(_) {
+          function _() {
             const {
-                data: _,
+                definitions: _,
                 localization: _,
                 images: _,
                 confirmDelete: _,
                 setConfirmDelete: _,
-              } = _,
+              } = (0, _._)(),
               {
                 csv: _,
                 achievements: _,
                 added: _,
-                modified: _ = [],
-                unmodified: _ = [],
+                modified: _,
+                unmodified: _,
                 deleted: _,
               } = _,
               { localization: _ } = _ ?? {},
@@ -1892,7 +1622,7 @@
                         className: _.ExpandButton,
                         onClick: () => _(!_),
                         children: (0, _.jsx)(_.DK4, {
-                          angle: _ ? 0 : 180,
+                          angle: _ ? 90 : 0,
                         }),
                       }),
                     }),
@@ -2185,163 +1915,229 @@
                 });
           }
           function _(_) {
-            const { results: _ } = _,
-              _ = _.filter((_) => !_.success);
+            const {
+                title: _,
+                description: _,
+                icon: _,
+                collapsible: _ = !1,
+                children: _,
+              } = _,
+              [_, _] = (0, _.useState)(_);
             return (0, _.jsxs)("div", {
-              className: _.ResultsContainer,
+              className: _.ResultsSection,
               children: [
-                (0, _.jsxs)("h2", {
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.ResultsSectionHeader,
+                    _ && _.CollapsibleResultsSectionHeader,
+                  ),
                   children: [
-                    " ",
-                    (0, _.jsx)(_, {}),
-                    " ",
-                    (0, _._)(
-                      "#AchievementEditor_Bulk_Errors_Count_Title",
-                      _.length,
-                    ),
+                    (0, _.jsxs)("div", {
+                      children: [
+                        (0, _.jsxs)(_._, {
+                          direction: "row",
+                          gap: "1",
+                          align: "center",
+                          children: [
+                            _,
+                            (0, _.jsx)(_._, {
+                              size: "4",
+                              contrast: "title",
+                              children: _,
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: _,
+                        }),
+                      ],
+                    }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        children: (0, _.jsx)("div", {
+                          className: _.ExpandButton,
+                          onClick: () => _(!_),
+                          children: (0, _.jsx)(_.DK4, {
+                            angle: _ ? 90 : 0,
+                          }),
+                        }),
+                      }),
                   ],
                 }),
-                (0, _.jsx)("p", {
-                  children: (0, _._)(
-                    "#AchievementEditor_Bulk_Errors_Description",
-                  ),
-                }),
                 (0, _.jsx)("div", {
-                  className: _.ErrorTable,
-                  children: __webpack_require__.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        result: _,
-                      },
-                      _.filename,
-                    ),
-                  ),
+                  className: (0, _._)(_.ResultsSectionBody, _ && _.Collapsed),
+                  children: _,
                 }),
               ],
             });
+          }
+          function _() {
+            const { errors: _, successes: _ } = (0, _._)();
+            return 0 == _.length && 0 == _.length
+              ? null
+              : (0, _.jsxs)(_._, {
+                  direction: "column",
+                  gap: "2",
+                  marginTop: "4",
+                  children: [
+                    _.length > 0 &&
+                      (0, _.jsx)(_, {
+                        icon: (0, _.jsx)(_, {}),
+                        title: (0, _._)(
+                          "#AchievementEditor_Bulk_Errors_Count_Title",
+                          _.length,
+                        ),
+                        description: (0, _._)(
+                          "#AchievementEditor_Bulk_Errors_Description",
+                        ),
+                        children: _.map((_) =>
+                          (0, _.jsx)(
+                            _,
+                            {
+                              result: _,
+                            },
+                            _.filename,
+                          ),
+                        ),
+                      }),
+                    _.length > 0 &&
+                      (0, _.jsx)(_, {
+                        collapsible: !0,
+                        title: (0, _._)(
+                          "#AchievementEditor_Bulk_Successes_Count_Title",
+                          _.length,
+                        ),
+                        description: (0, _._)(
+                          "#AchievementEditor_Bulk_Successes_Description",
+                        ),
+                        children: _.map((_) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              className: _.FileSuccessRow,
+                              children: (0, _.jsx)(_, {
+                                result: _,
+                              }),
+                            },
+                            _.filename,
+                          ),
+                        ),
+                      }),
+                  ],
+                });
           }
           function _(_) {
             const { result: _ } = _,
-              { filename: _, errors: _, csvErrors: _, imageErrors: _ } = _;
-            return (0, _.jsxs)("div", {
-              className: _.FileErrorList,
+              { filename: _, imageErrors: _ } = _,
+              { removeFile: _ } = (0, _._)(),
+              _ = _.image?.result?.image ?? _?.[0]?.image,
+              _ = _
+                ? (0, _.jsx)("div", {
+                    className: _.FileImage,
+                    children: (0, _.jsx)("img", {
+                      src: _.image,
+                      alt: _.filenameWithoutExtension,
+                    }),
+                  })
+                : (0, _.jsx)(_._, {
+                    height: "24px",
+                    aspectRatio: "1/1",
+                    children: (0, _.jsx)(_.ZHH, {}),
+                  });
+            return (0, _.jsxs)(_._, {
+              direction: "row",
+              gap: "1",
+              padding: "1",
+              justify: "between",
+              align: "center",
+              background: "dull-8",
               children: [
-                (0, _.jsx)("div", {
-                  children: _
-                    ? (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          " ",
-                          !!_[0]?.image?.image &&
-                            (0, _.jsx)("div", {
-                              className: _.ErrorImage,
-                              children: (0, _.jsx)("img", {
-                                src: _[0].image.image,
-                                alt: _[0].image.filenameWithoutExtension,
-                              }),
-                            }),
-                          " ",
-                          (0, _.jsx)(_._, {
-                            weight: "regular",
-                            size: "4",
-                            contrast: "title",
-                            children: _,
-                          }),
-                        ],
-                      })
-                    : (0, _.jsx)(_._, {
-                        weight: "regular",
-                        size: "4",
-                        contrast: "title",
-                        children: _,
-                      }),
+                (0, _.jsxs)(_._, {
+                  direction: "row",
+                  gap: "2",
+                  justify: "start",
+                  align: "center",
+                  children: [
+                    _,
+                    (0, _.jsx)(_._, {
+                      weight: "heavy",
+                      size: "4",
+                      contrast: "title",
+                      whiteSpace: "pre-wrap",
+                      children: _,
+                    }),
+                  ],
                 }),
-                _
-                  ? (0, _.jsxs)(_, {
-                      children: [
-                        _ &&
-                          _.map((_, _) =>
-                            (0, _.jsx)(
-                              "div",
-                              {
-                                className: _.FileError,
-                                children: _,
-                              },
-                              _,
-                            ),
-                          ),
-                        _.sort(_).map((_, _) =>
-                          (0, _.jsxs)(
-                            "div",
-                            {
-                              children: [
-                                (0, _.jsx)("div", {
-                                  children: _.line,
-                                }),
-                                (0, _.jsx)("div", {
-                                  children: _.apiName,
-                                }),
-                                (0, _.jsx)("div", {
-                                  children: _.field,
-                                }),
-                                (0, _.jsx)("div", {
-                                  children: _.input,
-                                }),
-                                (0, _.jsx)("div", {
-                                  children: _.message,
-                                }),
-                              ],
-                            },
-                            `${_.apiName}.${_.field}.${_}`,
-                          ),
-                        ),
-                      ],
-                    })
-                  : _
-                    ? (0, _.jsxs)("div", {
-                        children: [
-                          _ &&
-                            _.map((_, _) =>
-                              (0, _.jsx)(
-                                "div",
-                                {
-                                  className: _.FileError,
-                                  children: _,
-                                },
-                                _,
-                              ),
-                            ),
-                          _.map((_, _) =>
-                            (0, _.jsx)(
-                              "div",
-                              {
-                                className: _.FileError,
-                                children: _.error,
-                              },
-                              _,
-                            ),
-                          ),
-                        ],
-                      })
-                    : (0, _.jsx)("div", {
-                        children:
-                          _ &&
-                          _.map((_, _) =>
-                            (0, _.jsx)(
-                              "div",
-                              {
-                                className: _.FileError,
-                                children: _,
-                              },
-                              _,
-                            ),
-                          ),
-                      }),
+                (0, _.jsx)(_._, {
+                  onClick: () => _(_),
+                }),
               ],
             });
           }
           function _(_) {
-            const { children: _ } = _;
+            const { errors: _, csvErrors: _, imageErrors: _ } = _.result;
+            return _
+              ? (0, _.jsx)(_, {
+                  errorStrings: _,
+                  csvErrors: _,
+                })
+              : _
+                ? (0, _.jsxs)("div", {
+                    children: [
+                      _ &&
+                        _.map((_, _) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              className: _.FileError,
+                              children: _,
+                            },
+                            _,
+                          ),
+                        ),
+                      _.map((_, _) =>
+                        (0, _.jsx)(
+                          "div",
+                          {
+                            className: _.FileError,
+                            children: _.error,
+                          },
+                          _,
+                        ),
+                      ),
+                    ],
+                  })
+                : (0, _.jsx)("div", {
+                    children:
+                      _ &&
+                      _.map((_, _) =>
+                        (0, _.jsx)(
+                          "div",
+                          {
+                            className: _.FileError,
+                            children: _,
+                          },
+                          _,
+                        ),
+                      ),
+                  });
+          }
+          function _(_) {
+            const { result: _ } = _;
+            return (0, _.jsxs)("div", {
+              className: _.FileErrorList,
+              children: [
+                (0, _.jsx)(_, {
+                  result: _,
+                }),
+                (0, _.jsx)(_, {
+                  result: _,
+                }),
+              ],
+            });
+          }
+          function _(_) {
+            const { errorStrings: _, csvErrors: _ } = _;
             return (0, _.jsxs)("div", {
               className: _.CsvErrorsTable,
               children: [
@@ -2375,7 +2171,42 @@
                     }),
                   ],
                 }),
-                _,
+                _ &&
+                  _.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _.FileError,
+                        children: _,
+                      },
+                      _,
+                    ),
+                  ),
+                __webpack_require__.sort(_).map((_, _) =>
+                  (0, _.jsxs)(
+                    "div",
+                    {
+                      children: [
+                        (0, _.jsx)("div", {
+                          children: _.line,
+                        }),
+                        (0, _.jsx)("div", {
+                          children: _.apiName,
+                        }),
+                        (0, _.jsx)("div", {
+                          children: _.field,
+                        }),
+                        (0, _.jsx)("div", {
+                          children: _.input,
+                        }),
+                        (0, _.jsx)("div", {
+                          children: _.message,
+                        }),
+                      ],
+                    },
+                    `${_.apiName}.${_.field}.${_}`,
+                  ),
+                ),
               ],
             });
           }
@@ -2447,7 +2278,357 @@
                 0 != _ || (_ = _.field.localeCompare(_.field)),
                 _);
           }
-          ([_, _, _, _, _] = _.then ? (await _)() : _), _();
+          ([_, _, _, _, _, _] = _.then ? (await _)() : _), _();
+        } catch (_) {
+          _(_);
+        }
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module, async (_, _) => {
+        try {
+          __webpack_require__._(_, {
+            _: () => _,
+            _: () => _,
+          });
+          var _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
+            _ = _([_, _]);
+          function _(_) {
+            return _.errors?.length > 0 || _.achievementErrors?.length > 0;
+          }
+          async function _(_, _) {
+            const _ = await (0, _._)(_);
+            if (_.errors)
+              return {
+                filename: _.name,
+                success: !1,
+                errors: _.errors,
+              };
+            if ((0, _._)(_)) {
+              const { groups: _, stats: _, achievements: _ } = _,
+                _ = (0, _._)(_, _, _, _),
+                _ = _(_);
+              return {
+                filename: _.name,
+                kind: "definitions",
+                success: !_,
+                errors: _.errors,
+                csvErrors: _.achievementErrors,
+                definitions: _ ? void 0 : _,
+              };
+            }
+            if ((0, _._)(_)) {
+              const _ = (0, _._)(_),
+                _ = _(_);
+              return {
+                filename: _.name,
+                kind: "localization",
+                success: !_,
+                errors: _.errors,
+                csvErrors: _.achievementErrors,
+                localization: _ ? void 0 : _,
+              };
+            }
+            return {
+              filename: _.name,
+              success: !1,
+              errors: [(0, _._)("#AchievementEditor_Bulk_CsvHandlerNotFound")],
+            };
+          }
+          [_, _] = _.then ? (await _)() : _;
+          const _ = "_ACHIEVED",
+            _ = "_UNACHIEVED";
+          function _(_) {
+            const _ = _.toUpperCase(),
+              _ = [_, _].find((_) => _.endsWith(_));
+            return {
+              apiName: _ ? _.substring(0, _.length - _.length) : _,
+              isAchieved: _ != _,
+            };
+          }
+          async function _(_) {
+            const _ = (
+              await (0, _._)({
+                files: [_],
+                forceSquare: !0,
+              })
+            )[0];
+            if (!_.success)
+              return {
+                filename: _.name,
+                kind: "image",
+                success: !1,
+                imageErrors: [_],
+              };
+            const { apiName: _, isAchieved: _ } = _(
+                _.image.filenameWithoutExtension,
+              ),
+              _ = _
+                ? {
+                    image: await (0, _._)(_.image.image),
+                    imageType: _._,
+                    filenameWithoutExtension: "GENERATED",
+                  }
+                : void 0;
+            return {
+              filename: _.name,
+              kind: "image",
+              success: !0,
+              image: {
+                apiName: _,
+                isAchieved: _,
+                result: _,
+                generatedUnachieved: _,
+              },
+            };
+          }
+          const _ = [
+              {
+                accept: ["text/csv"],
+                process: _,
+              },
+              {
+                accept: ["image/png", "image/jpeg"],
+                process: _,
+              },
+            ],
+            _ = Array.from(new Set(_.flatMap((_) => _.accept)));
+          function _(_, _) {
+            return _.reduce((_, _) => {
+              const _ = "definitions" == _.kind || "localization" == _.kind;
+              return [
+                ..._.filter(
+                  (_) => _.filename != _.filename && !(_ && _.kind == _.kind),
+                ),
+                _,
+              ];
+            }, _);
+          }
+          function _(_) {
+            return {
+              csv: {},
+              achievements: (0, _._)(_),
+              added: [],
+              modified: [],
+              deleted: [],
+              unmodified: _.map((_) => _.name),
+            };
+          }
+          function _(_, _) {
+            const _ = _.find((_) => _.success && _.definitions)?.definitions;
+            return _
+              ? {
+                  csv: _.csv ?? {},
+                  achievements: _.achievements ?? (0, _._)(_),
+                  added: _.added ?? [],
+                  modified: _.modified ?? [],
+                  deleted: _.deleted ?? [],
+                  unmodified: _.unmodified ?? [],
+                }
+              : _(_);
+          }
+          function _(_) {
+            return _.find((_) => _.success && _.localization)?.localization;
+          }
+          function _(_, _) {
+            if (_ in _.achievements || _ in _.csv) return _;
+            const _ = _.toUpperCase();
+            return (
+              [...Object.keys(_.achievements), ...Object.keys(_.csv)].find(
+                (_) => _.toUpperCase() == _,
+              ) ?? _
+            );
+          }
+          function _(_, _, _) {
+            const _ = _.filter((_) => _.success && _.image).map((_) => ({
+                ..._.image,
+                apiName: _(_.image.apiName, _),
+              })),
+              _ = new Set(_.map((_) => _.apiName));
+            return Array.from(_).reduce((_, _) => {
+              const _ = _.filter((_) => _.apiName == _),
+                _ = _.filter((_) => _.isAchieved).pop(),
+                _ = _.filter((_) => !_.isAchieved).pop(),
+                _ = _ ? _?.generatedUnachieved : void 0;
+              return (
+                (_[_] = {
+                  achieved: _?.result,
+                  unachieved:
+                    _?.result ??
+                    (_
+                      ? {
+                          success: !0,
+                          filename: "GENERATED",
+                          image: _,
+                        }
+                      : void 0),
+                }),
+                _
+              );
+            }, {});
+          }
+          function _(_, _) {
+            if (!_.success || !_.image) return !1;
+            const _ = _(_.image.apiName, _);
+            return !(_ in _.achievements) && !(_ in _.csv);
+          }
+          function _(_, _) {
+            const _ = (_) => _(_, _);
+            return {
+              errors: [
+                ..._.filter((_) => !_.success),
+                ..._.filter(_).map((_) => ({
+                  ..._,
+                  success: !1,
+                  imageErrors: [
+                    {
+                      ..._.image.result,
+                      success: !1,
+                      error: (0, _._)(
+                        "#AchievementEditor_Image_Error_NoAchievement",
+                        _.image.apiName,
+                      ),
+                    },
+                  ],
+                })),
+              ],
+              successes: _.filter((_) => _.success && !__webpack_require__(_)),
+            };
+          }
+          function _(_, _, _) {
+            const _ = (_) => ({
+                icon: _[_]?.achieved?.image?.image,
+                icon_gray: _[_]?.unachieved?.image?.image,
+              }),
+              _ = (_) => {
+                const { statID: _, bitID: _ } = _.achievements[_];
+                return {
+                  statID: _,
+                  bitID: _,
+                };
+              };
+            return {
+              addOrUpdate: [
+                ..._.added.map((_) => ({
+                  achievement: (0, _._)(_.csv[_], _?.localization?.[_]),
+                  ..._(_),
+                })),
+                ...Array.from(
+                  new Set([
+                    ..._.modified,
+                    ...Object.keys(_?.localization ?? {}).filter(
+                      (_) => !_.added.includes(_) && _ in _.achievements,
+                    ),
+                  ]),
+                ).map((_) => {
+                  const _ = _.achievements[_];
+                  return {
+                    ..._(_),
+                    achievement: (0, _._)(
+                      _.csv[_] ?? (0, _._)(_),
+                      _?.localization?.[_],
+                      _,
+                    ),
+                    ..._(_),
+                  };
+                }),
+                ...Object.keys(_)
+                  .filter((_) => _.unmodified.includes(_))
+                  .map((_) => ({
+                    ..._(_),
+                    ..._(_),
+                  })),
+              ],
+              delete: _.deleted.map(_),
+            };
+          }
+          const _ = (0, _.createContext)(null);
+          function _() {
+            return (0, _.useContext)(_);
+          }
+          function _(_) {
+            const { onClose: _, setHasChanges: _, children: _ } = _,
+              { appID: _ } = (0, _._)(),
+              _ = (0, _._)(_),
+              _ = (0, _.useMemo)(() => _ ?? [], [_]),
+              _ = (0, _._)(_),
+              _ = (0, _._)(_),
+              _ = (0, _._)(_),
+              [_, _] = (0, _.useState)([]),
+              [_, _] = (0, _.useState)(!0),
+              [_, _] = (0, _.useState)(!1),
+              [_, _] = (0, _.useState)(!1),
+              _ = (0, _.useRef)(void 0),
+              _ = (0, _.useMemo)(() => _(_, _), [_, _]),
+              _ = (0, _.useMemo)(() => _(_), [_]),
+              _ = (0, _.useMemo)(() => _(_, _, _), [_, _, _]),
+              { errors: _, successes: _ } = (0, _.useMemo)(
+                () => _(_, _),
+                [_, _],
+              ),
+              _ = _.some((_) => _.success);
+            (0, _.useEffect)(() => {
+              __webpack_require__(_);
+            }, [_, _]);
+            const _ = {
+              files: _,
+              definitions: _,
+              localization: _,
+              images: _,
+              errors: _,
+              successes: _,
+              hasData: _,
+              generateUnachievedImages: _,
+              setGenerateUnachievedImages: _,
+              confirmDelete: _,
+              setConfirmDelete: _,
+              uploadFiles: async (_) => {
+                const _ = [];
+                for (const _ of _) {
+                  const _ = _.find((_) => _.accept.includes(_.type));
+                  _
+                    ? _.push(
+                        await _.process(_, {
+                          groups: _,
+                          stats: _,
+                          achievements: _,
+                        }),
+                      )
+                    : _.push({
+                        filename: _.name,
+                        success: !1,
+                        errors: [
+                          (0, _._)(
+                            "#AchievementEditor_Image_Error_UnknownContentType",
+                          ),
+                        ],
+                      });
+                }
+                _((_) => _(_, _)), _.current && (_.current.value = "");
+              },
+              removeFile: (_) => _((_) => _.filter((_) => _.filename != _)),
+              openFilePicker: () => _.current?.click(),
+              fileInputRef: _,
+              acceptedTypes: _,
+              save: async () => {
+                await _.mutateAsync(_(_, _, _)), _(!0);
+              },
+              isSaving: _.isPending,
+              saveSucceeded: _,
+              onClose: _,
+            };
+            return (0, _.jsx)(_, {
+              value: _,
+              children: _,
+            });
+          }
+          _();
         } catch (_) {
           _(_);
         }
@@ -2713,14 +2894,16 @@
               })),
               "achievements-definitions.csv",
               !0,
+              Object.keys(_.shape),
             );
           }
           function _(_, _) {
             const _ = _.map((_) => _(_, _)).reduce(
-              (_, _) => (_.push(..._), _),
-              [],
-            );
-            _._.WriteCSVToFile(_, "achievements-localization.csv", !0);
+                (_, _) => (_.push(..._), _),
+                [],
+              ),
+              _ = [...Object.keys(_.shape), ..._];
+            _._.WriteCSVToFile(_, "achievements-localization.csv", !0, _);
           }
           function _(_, _, _) {
             if (!_) return {};
