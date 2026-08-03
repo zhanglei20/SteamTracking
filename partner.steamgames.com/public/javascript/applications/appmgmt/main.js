@@ -43071,37 +43071,37 @@
         $$j: () => he,
         $4X: () => Te,
         $VH: () => F,
-        $vK: () => Xe,
+        $vK: () => Ye,
         Aj0: () => V,
-        BQz: () => Qe,
-        Bki: () => Ve,
+        BQz: () => Xe,
+        Bki: () => Ze,
         CeX: () => O,
         DK4: () => g,
-        DQe: () => St,
+        DQe: () => vt,
         Dp6: () => ee,
-        Emg: () => gt,
+        Emg: () => ht,
         F2T: () => A,
         FEq: () => de,
         GB9: () => p,
         Gkr: () => ze,
         GrD: () => we,
-        IGf: () => ft,
+        IGf: () => bt,
         IrQ: () => D,
         Jlk: () => R,
-        Jru: () => pt,
+        Jru: () => gt,
         KKS: () => ae,
-        KQV: () => Ue,
-        KVe: () => wt,
+        KQV: () => qe,
+        KVe: () => Mt,
         L0X: () => E,
-        LO_: () => Bt,
+        LO_: () => Ct,
         MUh: () => ne,
-        MbF: () => ut,
+        MbF: () => dt,
         MvQ: () => G,
         MwB: () => Be,
         N8C: () => ce,
         NCC: () => je,
         NtH: () => Ie,
-        OSJ: () => nt,
+        OSJ: () => st,
         P7r: () => le,
         Q38: () => d,
         Qte: () => K,
@@ -43111,47 +43111,48 @@
         T4m: () => Re,
         V5W: () => H,
         VR: () => ie,
-        VSd: () => tt,
-        Vgk: () => Ke,
+        VSd: () => rt,
+        Vgk: () => Qe,
         VnB: () => q,
-        Vt2: () => Ye,
+        Vt2: () => $e,
         VvS: () => I,
         WX$: () => Ne,
         X: () => M,
         X4B: () => T,
-        XH_: () => qe,
+        XH_: () => Ge,
         XTb: () => f,
         Xjb: () => P,
         Xz0: () => fe,
         YNO: () => w,
-        Yoo: () => mt,
+        Yoo: () => pt,
+        ZHH: () => Pe,
         ZPc: () => ve,
         ZWw: () => U,
         ZjT: () => Le,
-        ZnA: () => Ze,
+        ZnA: () => Ke,
         _VW: () => Me,
         aVR: () => Ae,
-        agV: () => ot,
+        agV: () => lt,
         apU: () => J,
-        az8: () => _t,
-        b8_: () => Ge,
-        bKN: () => lt,
+        az8: () => ft,
+        b8_: () => He,
+        bKN: () => ct,
         bPr: () => te,
         bcZ: () => Ee,
         bfp: () => Ce,
-        bk: () => Mt,
+        bk: () => Bt,
         c_I: () => z,
-        ccb: () => Je,
+        ccb: () => et,
         dJT: () => pe,
         eSy: () => h,
         eTF: () => j,
-        emH: () => dt,
+        emH: () => mt,
         f5X: () => me,
-        f9b: () => ht,
+        f9b: () => _t,
         fSs: () => S,
         faJ: () => be,
         ffu: () => ge,
-        g$j: () => $e,
+        g$j: () => Je,
         hz4: () => N,
         i3G: () => L,
         i6V: () => $,
@@ -43159,33 +43160,33 @@
         jIP: () => We,
         jZW: () => Se,
         jZl: () => ue,
-        jdP: () => st,
+        jdP: () => at,
         kPc: () => _e,
-        koA: () => bt,
+        koA: () => wt,
         l8x: () => W,
-        lRD: () => yt,
-        nm_: () => He,
+        lRD: () => St,
+        nm_: () => Ve,
         o5Q: () => ke,
-        ofN: () => rt,
-        oy: () => it,
+        ofN: () => it,
+        oy: () => nt,
         qcc: () => oe,
         qnF: () => xe,
         qzq: () => Y,
-        rNt: () => et,
+        rNt: () => tt,
         rfv: () => re,
-        sDU: () => ct,
+        sDU: () => ut,
         sED: () => B,
         tID: () => Z,
-        tIO: () => at,
+        tIO: () => ot,
         tmm: () => C,
         uMb: () => k,
         vCk: () => b,
         vRz: () => x,
         wB_: () => m,
         wVV: () => ye,
-        xoK: () => Ct,
+        xoK: () => yt,
         xv8: () => y,
-        yCC: () => Pe,
+        yCC: () => Ue,
         y_e: () => Q,
         zD7: () => _,
       });
@@ -45347,6 +45348,20 @@
       }
       function Pe(e) {
         const { className: t, ...r } = e;
+        return (0, i.jsx)("svg", {
+          width: "23",
+          height: "25",
+          viewBox: "0 0 23 25",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, i.jsx)("path", {
+            d: "M22.0115 5.65L17.5448 0.763889C17.325 0.523608 17.0577 0.331628 16.7598 0.200128C16.4619 0.0686279 16.1399 0.000477439 15.8143 0H3.18649C2.56493 0.000735139 1.96903 0.247974 1.52952 0.687484C1.09002 1.12699 0.842776 1.72288 0.842041 2.34444V22.6556C0.842776 23.2771 1.09002 23.873 1.52952 24.3125C1.96903 24.752 2.56493 24.9993 3.18649 25H20.2809C20.9025 24.9993 21.4984 24.752 21.9379 24.3125C22.3774 23.873 22.6246 23.2771 22.6254 22.6556V7.22222C22.6236 6.64001 22.4047 6.0794 22.0115 5.65ZM20.5309 6.34722H17.6532C17.5498 6.34686 17.4476 6.32606 17.3523 6.28601C17.257 6.24596 17.1706 6.18745 17.0981 6.11387C17.0255 6.04028 16.9683 5.95306 16.9296 5.85724C16.8909 5.76142 16.8715 5.65889 16.8726 5.55556V2.34444L20.5309 6.34722ZM20.2809 23.4389H3.18649C2.97873 23.4389 2.77949 23.3564 2.63259 23.2095C2.48568 23.0626 2.40315 22.8633 2.40315 22.6556V2.34444C2.40315 2.13669 2.48568 1.93745 2.63259 1.79054C2.77949 1.64364 2.97873 1.56111 3.18649 1.56111H15.3087V5.55556C15.3094 6.17712 15.5567 6.77301 15.9962 7.21252C16.4357 7.65203 17.0316 7.89926 17.6532 7.9H21.0643V22.6556C21.0635 22.8631 20.9808 23.0619 20.834 23.2086C20.6873 23.3554 20.4885 23.4382 20.2809 23.4389Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      function Ue(e) {
+        const { className: t, ...r } = e;
         return (0, i.jsxs)("svg", {
           width: "23",
           height: "25",
@@ -45373,7 +45388,7 @@
           ],
         });
       }
-      function Ue(e) {
+      function qe(e) {
         const { className: t, ...r } = e;
         return (0, i.jsxs)("svg", {
           width: "24",
@@ -45405,7 +45420,7 @@
           ],
         });
       }
-      function qe(e) {
+      function Ge(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 26 26",
@@ -45419,7 +45434,7 @@
           }),
         });
       }
-      function Ge(e) {
+      function He(e) {
         const { direction: t, ...r } = e;
         switch (t) {
           case "up":
@@ -45468,7 +45483,7 @@
             });
         }
       }
-      function He(e) {
+      function Ve(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45479,7 +45494,7 @@
           }),
         });
       }
-      function Ve(e) {
+      function Ze(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45490,7 +45505,7 @@
           }),
         });
       }
-      function Ze(e) {
+      function Ke(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45501,7 +45516,7 @@
           }),
         });
       }
-      function Ke(e) {
+      function Qe(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45512,7 +45527,7 @@
           }),
         });
       }
-      function Qe(e) {
+      function Xe(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45523,7 +45538,7 @@
           }),
         });
       }
-      function Xe(e) {
+      function Ye(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45534,7 +45549,7 @@
           }),
         });
       }
-      function Ye(e) {
+      function $e(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45545,7 +45560,7 @@
           }),
         });
       }
-      function $e(e) {
+      function Je(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45556,7 +45571,7 @@
           }),
         });
       }
-      function Je(e) {
+      function et(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45575,7 +45590,7 @@
           ],
         });
       }
-      function et(e) {
+      function tt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45586,7 +45601,7 @@
           }),
         });
       }
-      function tt(e) {
+      function rt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45597,7 +45612,7 @@
           }),
         });
       }
-      function rt(e) {
+      function it(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45622,7 +45637,7 @@
           ],
         });
       }
-      function it(e) {
+      function nt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45633,7 +45648,7 @@
           }),
         });
       }
-      function nt(e) {
+      function st(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45644,7 +45659,7 @@
           }),
         });
       }
-      function st(e) {
+      function at(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45660,7 +45675,7 @@
           ],
         });
       }
-      function at(e) {
+      function ot(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45671,7 +45686,7 @@
           }),
         });
       }
-      function ot(e) {
+      function lt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45682,7 +45697,7 @@
           }),
         });
       }
-      function lt(e) {
+      function ct(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45693,7 +45708,7 @@
           }),
         });
       }
-      function ct(e) {
+      function ut(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45704,7 +45719,7 @@
           }),
         });
       }
-      function ut(e) {
+      function dt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45715,7 +45730,7 @@
           }),
         });
       }
-      function dt(e) {
+      function mt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45726,7 +45741,7 @@
           }),
         });
       }
-      function mt(e) {
+      function pt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -45767,7 +45782,7 @@
           }),
         });
       }
-      function pt(e) {
+      function gt(e) {
         return (0, i.jsxs)("svg", {
           viewBox: "4 1 24 30",
           fill: "none",
@@ -45789,66 +45804,6 @@
           ],
         });
       }
-      function gt(e) {
-        return (0, i.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 26 19",
-          fill: "none",
-          ...e,
-          children: [
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              x: "10",
-              width: "16",
-              height: "4",
-            }),
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              x: "10",
-              y: "5",
-              width: "16",
-              height: "4",
-            }),
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              x: "10",
-              y: "10",
-              width: "16",
-              height: "4",
-            }),
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              x: "10",
-              y: "15",
-              width: "16",
-              height: "4",
-            }),
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              width: "9",
-              height: "4",
-            }),
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              y: "5",
-              width: "9",
-              height: "4",
-            }),
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              y: "10",
-              width: "9",
-              height: "4",
-            }),
-            (0, i.jsx)("rect", {
-              fill: "currentColor",
-              y: "15",
-              width: "9",
-              height: "4",
-            }),
-          ],
-        });
-      }
       function ht(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -45860,6 +45815,66 @@
               fill: "currentColor",
               x: "10",
               width: "16",
+              height: "4",
+            }),
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              x: "10",
+              y: "5",
+              width: "16",
+              height: "4",
+            }),
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              x: "10",
+              y: "10",
+              width: "16",
+              height: "4",
+            }),
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              x: "10",
+              y: "15",
+              width: "16",
+              height: "4",
+            }),
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              width: "9",
+              height: "4",
+            }),
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              y: "5",
+              width: "9",
+              height: "4",
+            }),
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              y: "10",
+              width: "9",
+              height: "4",
+            }),
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              y: "15",
+              width: "9",
+              height: "4",
+            }),
+          ],
+        });
+      }
+      function _t(e) {
+        return (0, i.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 26 19",
+          fill: "none",
+          ...e,
+          children: [
+            (0, i.jsx)("rect", {
+              fill: "currentColor",
+              x: "10",
+              width: "16",
               height: "9",
             }),
             (0, i.jsx)("rect", {
@@ -45883,7 +45898,7 @@
           ],
         });
       }
-      function _t(e) {
+      function ft(e) {
         const { fill: t, ...r } = e;
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -45900,7 +45915,7 @@
           }),
         });
       }
-      function ft(e) {
+      function bt(e) {
         const { fill: t, ...r } = e;
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -45919,7 +45934,7 @@
           }),
         });
       }
-      function bt(e) {
+      function wt(e) {
         const { fill: t, ...r } = e;
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -45937,7 +45952,7 @@
           }),
         });
       }
-      function wt(e) {
+      function Mt(e) {
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 16 16",
@@ -45949,7 +45964,7 @@
           }),
         });
       }
-      function Mt(e) {
+      function Bt(e) {
         const [t, r] = (0, c.l)();
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -45985,7 +46000,7 @@
           ],
         });
       }
-      function Bt(e) {
+      function Ct(e) {
         const [t, r] = (0, c.l)();
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -46019,7 +46034,7 @@
           ],
         });
       }
-      function Ct(e) {
+      function yt(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -46042,7 +46057,7 @@
           ],
         });
       }
-      function yt(e) {
+      function St(e) {
         const { className: t, ...r } = e;
         return (0, i.jsx)("svg", {
           className: (0, s.A)(o().SteamDeckCompatLogo, t),
@@ -46059,7 +46074,7 @@
           }),
         });
       }
-      function St(e) {
+      function vt(e) {
         const { className: t } = e;
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
