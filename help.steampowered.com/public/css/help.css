@@ -32,8 +32,7 @@ b {
 	font-weight: bold;
 }
 
-textarea
-{
+textarea {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -45,6 +44,9 @@ textarea
 	padding: 4px;
 }
 
+textarea.reportOutcomeCustom {
+	field-sizing: content;
+} 
 
 html {
 	height: 100%;

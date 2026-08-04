@@ -22,6 +22,7 @@
         TakeoverBody: "_3MCO1BiXD95WdYgL9UTlSJ",
         Instructions: "s_iKU1jabRu1BJhz_7kb7",
         BulkEdit: "fkI7RYiO0vj6PTFql_JPy",
+        BulkEditSection: "_3KKYVr6HVCNs5nzc_l522O",
         BulkEditHeader: "_2BivQamb3LEiQtwiyru4SU",
         BulkEditInstructions: "_196W2uTFyW8D5dFhidIkKr",
         FileTypesList: "_34PNksp_-K8y5qELr6Dz5U",
@@ -50,6 +51,7 @@
         ApiColumn: "_1tteA0CuHUJMKITKjbveBL",
         VisibilityColumn: "GlevOmet6O5-XYWcl9KHj",
         ProgressColumn: "_2woZ5CfAS4IuiI13yjBHeo",
+        ImportedGroups: "_2z7MVqbC7xWxdhcBzYoVW8",
         ResultsSection: "_3BY0cyaNahGJISKkPcBei0",
         ResultsSectionHeader: "_2S3eJxNKMFeGae4Xt7aY1j",
         CollapsibleResultsSectionHeader: "JhQowPYpM0hwJNlXGUOgC",
@@ -530,6 +532,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
           var _,
             _ = __webpack_require__("chunkid"),
@@ -777,6 +780,22 @@
               mutationFn: async (_) => await _(_, _, _),
               onSuccess: async () => {
                 await __webpack_require__.invalidateQueries({
+                  queryKey: [_, _, _, !1],
+                });
+              },
+            });
+          }
+          function _(_) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                for (const _ of _) {
+                  if (void 0 === (await _(_, _.groupid, _.group))) return !1;
+                }
+                return !0;
+              },
+              onSuccess: async () => {
+                await _.invalidateQueries({
                   queryKey: [_, _, _, !1],
                 });
               },
@@ -1096,6 +1115,7 @@
               { appID: _ } = (0, _._)(),
               _ = (0, _._)(_),
               _ = (0, _._)(_),
+              _ = (0, _._)(_),
               [_, _] = (0, _.useState)(!1),
               _ = "dull-7",
               _ = "blue-8";
@@ -1133,7 +1153,7 @@
                         (0, _.jsxs)(_._, {
                           color: "dull",
                           onClick: () => {
-                            (0, _._)(_);
+                            (0, _._)(_, _);
                           },
                           children: [
                             (0, _.jsx)(_, {}),
@@ -1223,7 +1243,7 @@
                             (0, _.jsxs)(_._, {
                               color: "dull",
                               onClick: () => {
-                                (0, _._)(_, _);
+                                (0, _._)(_, _, _);
                               },
                               children: [
                                 (0, _.jsx)(_, {}),
@@ -1256,6 +1276,60 @@
                           contrast: "subtitle",
                         }),
                       ),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
+                  direction: "column",
+                  gap: "1",
+                  padding: "3",
+                  background: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      contrast: "title",
+                      weight: "heavy",
+                      children: (0, _._)(
+                        "#AchievementEditor_Bulk_GroupLocalization_Title",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      contrast: "description",
+                      children: (0, _._)(
+                        "#AchievementEditor_Bulk_GroupLocalization_Description",
+                      ),
+                    }),
+                    (0, _.jsxs)(_._, {
+                      direction: "row",
+                      align: "center",
+                      gap: "2",
+                      marginTop: "2",
+                      marginBottom: "2",
+                      children: [
+                        (0, _.jsxs)(_._, {
+                          color: "dull",
+                          onClick: () => {
+                            (0, _._)(_, _, _);
+                          },
+                          children: [
+                            (0, _.jsx)(_, {}),
+                            " ",
+                            (0, _._)(
+                              "#AchievementEditor_Bulk_Export_GroupLocalization",
+                            ),
+                          ],
+                        }),
+                        (0, _.jsxs)(_._, {
+                          color: _,
+                          children: [
+                            "(",
+                            (0, _._)(
+                              "#AchievementEditor_Bulk_N_Groups",
+                              _.length,
+                            ),
+                            ")",
+                          ],
+                        }),
+                      ],
                     }),
                   ],
                 }),
@@ -1316,8 +1390,24 @@
               children: (0, _.jsx)(_, {}),
             });
           }
+          function _(_) {
+            const { title: _, description: _, children: _ } = _;
+            return (0, _.jsxs)("div", {
+              className: _.BulkEditSection,
+              children: [
+                (0, _.jsx)("h2", {
+                  children: _,
+                }),
+                (0, _.jsx)("p", {
+                  children: _,
+                }),
+                _,
+              ],
+            });
+          }
           function _() {
             const {
+              files: _,
               hasData: _,
               acceptedTypes: _,
               fileInputRef: _,
@@ -1362,8 +1452,33 @@
                         ),
                       }),
                     }),
-                    (0, _.jsx)(_, {}),
-                    _ && (0, _.jsx)(_, {}),
+                    _.length > 0 &&
+                      (0, _.jsx)(_, {
+                        title: (0, _._)("#AchievementEditor_Bulk_Files_Title"),
+                        description: (0, _._)(
+                          "#AchievementEditor_Bulk_Files_Description",
+                        ),
+                        children: (0, _.jsx)(_, {}),
+                      }),
+                    _ &&
+                      (0, _.jsxs)(_, {
+                        title: (0, _._)(
+                          "#AchievementEditor_Bulk_Pending_Title",
+                        ),
+                        description: (0, _._)(
+                          "#AchievementEditor_Bulk_Pending_Description",
+                        ),
+                        children: [
+                          (0, _.jsx)(_._, {
+                            className: _.LanguageSelect,
+                            background: "dull-7",
+                            padding: "2",
+                            children: (0, _.jsx)(_._, {}),
+                          }),
+                          (0, _.jsx)(_, {}),
+                          (0, _.jsx)(_, {}),
+                        ],
+                      }),
                   ],
                 }),
                 _ &&
@@ -1414,35 +1529,12 @@
             return (0, _.jsxs)("div", {
               className: _.ResultsContainer,
               children: [
-                (0, _.jsx)("h2", {
+                (0, _.jsx)("h3", {
                   children: (0, _._)(
-                    "#AchievementEditor_AchievementCsvImport_Pending_Title",
+                    "#AchievementEditor_Bulk_Pending_Achievements",
                   ),
                 }),
-                (0, _.jsx)("p", {
-                  children: (0, _._)(
-                    "#AchievementEditor_AchievementCsvImport_Pending_Description",
-                  ),
-                }),
-                (0, _.jsx)(_._, {
-                  className: _.LanguageSelect,
-                  background: "dull-7",
-                  padding: "2",
-                  children: (0, _.jsx)(_._, {}),
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.LegendContainer,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.LegendChangeIcon,
-                    }),
-                    (0, _.jsx)("p", {
-                      children: (0, _._)(
-                        "#AchievementEditor_AchievementCsvImport_Pending_Legend",
-                      ),
-                    }),
-                  ],
-                }),
+                (0, _.jsx)(_, {}),
                 (0, _.jsxs)("div", {
                   className: _.ImportedAchievements,
                   children: [
@@ -1553,6 +1645,108 @@
                             _,
                           ),
                         ),
+                      }),
+                  ],
+                }),
+              ],
+            });
+          }
+          function _() {
+            return (0, _.jsxs)("div", {
+              className: _.LegendContainer,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.LegendChangeIcon,
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#AchievementEditor_AchievementCsvImport_Pending_Legend",
+                  ),
+                }),
+              ],
+            });
+          }
+          function _() {
+            const { groupLocalization: _ } = (0, _._)(),
+              { currentLanguage: _ } = (0, _._)().localization,
+              { csv: _, groups: _, modified: _, unmodified: _ } = _ ?? {};
+            if (!_) return null;
+            const _ = (_) =>
+              (0, _.jsxs)("div", {
+                className: _.ImportedGroups,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.TableHeader,
+                    children: [
+                      (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#AchievementEditor_GroupCsvImport_Header_GroupID",
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#AchievementEditor_Group_Field_Name",
+                        ),
+                      }),
+                    ],
+                  }),
+                  _.map((_) => {
+                    const _ = (0, _._)(_[_], _[_]),
+                      _ = (0, _._)(_[_]?.name, _) != (0, _._)(_, _);
+                    return (0, _.jsxs)(
+                      "div",
+                      {
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: _,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(_ && _.ModifiedField),
+                            children: (0, _.jsx)(_._, {
+                              text: _,
+                            }),
+                          }),
+                        ],
+                      },
+                      _,
+                    );
+                  }),
+                ],
+              });
+            return (0, _.jsxs)("div", {
+              className: _.ResultsContainer,
+              children: [
+                (0, _.jsx)("h3", {
+                  children: (0, _._)("#AchievementEditor_Bulk_Pending_Groups"),
+                }),
+                (0, _.jsx)(_, {}),
+                (0, _.jsxs)(_._, {
+                  direction: "column",
+                  gap: "2",
+                  children: [
+                    !!_?.length &&
+                      (0, _.jsx)(_, {
+                        className: (0, _._)(_.ChangeBorder, _.Modified),
+                        title: (0, _._)(
+                          "#AchievementEditor_AchievementCsvImport_Modified_Title",
+                          _.length,
+                        ),
+                        description: (0, _._)(
+                          "#AchievementEditor_GroupCsvImport_Modified_Description",
+                        ),
+                        children: _(_),
+                      }),
+                    !!_?.length &&
+                      (0, _.jsx)(_, {
+                        collapsible: !0,
+                        title: (0, _._)(
+                          "#AchievementEditor_AchievementCsvImport_Unmodified_Title",
+                          _.length,
+                        ),
+                        description: (0, _._)(
+                          "#AchievementEditor_GroupCsvImport_Unmodified_Description",
+                        ),
+                        children: _(_),
                       }),
                   ],
                 }),
@@ -1920,11 +2114,12 @@
                 description: _,
                 icon: _,
                 collapsible: _ = !1,
+                className: _,
                 children: _,
               } = _,
               [_, _] = (0, _.useState)(_);
             return (0, _.jsxs)("div", {
-              className: _.ResultsSection,
+              className: (0, _._)(_.ResultsSection, _),
               children: [
                 (0, _.jsxs)("div", {
                   className: (0, _._)(
@@ -1978,7 +2173,6 @@
               : (0, _.jsxs)(_._, {
                   direction: "column",
                   gap: "2",
-                  marginTop: "4",
                   children: [
                     _.length > 0 &&
                       (0, _.jsx)(_, {
@@ -2075,42 +2269,28 @@
             });
           }
           function _(_) {
-            const { errors: _, csvErrors: _, imageErrors: _ } = _.result;
+            const {
+              kind: _,
+              errors: _,
+              csvErrors: _,
+              imageErrors: _,
+            } = _.result;
+            if (_) {
+              const _ =
+                "grouplocalization" == _
+                  ? (0, _._)("#AchievementEditor_GroupCsvImport_Header_GroupID")
+                  : (0, _._)("#AchievementEditor_Achievement_Edit_ApiName");
+              return (0, _.jsx)(_, {
+                keyHeader: _,
+                errorStrings: _,
+                csvErrors: _,
+              });
+            }
             return _
-              ? (0, _.jsx)(_, {
-                  errorStrings: _,
-                  csvErrors: _,
-                })
-              : _
-                ? (0, _.jsxs)("div", {
-                    children: [
-                      _ &&
-                        _.map((_, _) =>
-                          (0, _.jsx)(
-                            "div",
-                            {
-                              className: _.FileError,
-                              children: _,
-                            },
-                            _,
-                          ),
-                        ),
-                      _.map((_, _) =>
-                        (0, _.jsx)(
-                          "div",
-                          {
-                            className: _.FileError,
-                            children: _.error,
-                          },
-                          _,
-                        ),
-                      ),
-                    ],
-                  })
-                : (0, _.jsx)("div", {
-                    children:
-                      _ &&
-                      _.map((_, _) =>
+              ? (0, _.jsxs)("div", {
+                  children: [
+                    _ &&
+                      __webpack_require__.map((_, _) =>
                         (0, _.jsx)(
                           "div",
                           {
@@ -2120,7 +2300,32 @@
                           _,
                         ),
                       ),
-                  });
+                    _.map((_, _) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _.FileError,
+                          children: _.error,
+                        },
+                        _,
+                      ),
+                    ),
+                  ],
+                })
+              : (0, _.jsx)("div", {
+                  children:
+                    _ &&
+                    __webpack_require__.map((_, _) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _.FileError,
+                          children: _,
+                        },
+                        _,
+                      ),
+                    ),
+                });
           }
           function _(_) {
             const { result: _ } = _;
@@ -2137,7 +2342,7 @@
             });
           }
           function _(_) {
-            const { errorStrings: _, csvErrors: _ } = _;
+            const { keyHeader: _, errorStrings: _, csvErrors: _ } = _;
             return (0, _.jsxs)("div", {
               className: _.CsvErrorsTable,
               children: [
@@ -2150,9 +2355,7 @@
                       ),
                     }),
                     (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#AchievementEditor_Achievement_Edit_ApiName",
-                      ),
+                      children: _,
                     }),
                     (0, _.jsx)("div", {
                       children: (0, _._)(
@@ -2172,7 +2375,7 @@
                   ],
                 }),
                 _ &&
-                  _.map((_, _) =>
+                  __webpack_require__.map((_, _) =>
                     (0, _.jsx)(
                       "div",
                       {
@@ -2182,7 +2385,7 @@
                       _,
                     ),
                   ),
-                __webpack_require__.sort(_).map((_, _) =>
+                _.sort(_).map((_, _) =>
                   (0, _.jsxs)(
                     "div",
                     {
@@ -2191,7 +2394,7 @@
                           children: _.line,
                         }),
                         (0, _.jsx)("div", {
-                          children: _.apiName,
+                          children: _.key,
                         }),
                         (0, _.jsx)("div", {
                           children: _.field,
@@ -2204,7 +2407,7 @@
                         }),
                       ],
                     },
-                    `${_.apiName}.${_.field}.${_}`,
+                    `${_.key}.${_.field}.${_}`,
                   ),
                 ),
               ],
@@ -2274,7 +2477,7 @@
             let _ = (_.line ?? 0) - (_.line ?? 0);
             return 0 != _
               ? _
-              : ((_ = _.apiName.localeCompare(_.apiName)),
+              : ((_ = _.key.localeCompare(_.key)),
                 0 != _ || (_ = _.field.localeCompare(_.field)),
                 _);
           }
@@ -2300,7 +2503,7 @@
             _ = __webpack_require__("chunkid"),
             _ = _([_, _]);
           function _(_) {
-            return _.errors?.length > 0 || _.achievementErrors?.length > 0;
+            return _.errors?.length > 0 || _.fieldErrors?.length > 0;
           }
           async function _(_, _) {
             const _ = await (0, _._)(_);
@@ -2319,7 +2522,7 @@
                 kind: "definitions",
                 success: !_,
                 errors: _.errors,
-                csvErrors: _.achievementErrors,
+                csvErrors: _.fieldErrors,
                 definitions: _ ? void 0 : _,
               };
             }
@@ -2331,8 +2534,21 @@
                 kind: "localization",
                 success: !_,
                 errors: _.errors,
-                csvErrors: _.achievementErrors,
+                csvErrors: _.fieldErrors,
                 localization: _ ? void 0 : _,
+              };
+            }
+            if ((0, _._)(_)) {
+              const { groups: _, validLanguages: _ } = _,
+                _ = (0, _._)(_, _, _),
+                _ = _(_);
+              return {
+                filename: _.name,
+                kind: "grouplocalization",
+                success: !_,
+                errors: _.errors,
+                csvErrors: _.fieldErrors,
+                groupLocalization: _ ? void 0 : _,
               };
             }
             return {
@@ -2398,10 +2614,11 @@
                 process: _,
               },
             ],
-            _ = Array.from(new Set(_.flatMap((_) => _.accept)));
+            _ = Array.from(new Set(_.flatMap((_) => _.accept))),
+            _ = ["definitions", "localization", "grouplocalization"];
           function _(_, _) {
             return _.reduce((_, _) => {
-              const _ = "definitions" == _.kind || "localization" == _.kind;
+              const _ = _.includes(_.kind);
               return [
                 ..._.filter(
                   (_) => _.filename != _.filename && !(_ && _.kind == _.kind),
@@ -2435,6 +2652,10 @@
           }
           function _(_) {
             return _.find((_) => _.success && _.localization)?.localization;
+          }
+          function _(_) {
+            return _.find((_) => _.success && _.groupLocalization)
+              ?.groupLocalization;
           }
           function _(_, _) {
             if (_ in _.achievements || _ in _.csv) return _;
@@ -2548,6 +2769,18 @@
               delete: _.deleted.map(_),
             };
           }
+          function _(_) {
+            return (_?.modified ?? []).map((_) => {
+              const _ = _.groups[_];
+              return {
+                groupid: _,
+                group: {
+                  ..._,
+                  name: (0, _._)(_.csv[_], _),
+                },
+              };
+            });
+          }
           const _ = (0, _.createContext)(null);
           function _() {
             return (0, _.useContext)(_);
@@ -2560,12 +2793,15 @@
               _ = (0, _._)(_),
               _ = (0, _._)(_),
               _ = (0, _._)(_),
+              _ = (0, _._)(_),
+              _ = (0, _._)(_),
               [_, _] = (0, _.useState)([]),
               [_, _] = (0, _.useState)(!0),
               [_, _] = (0, _.useState)(!1),
               [_, _] = (0, _.useState)(!1),
               _ = (0, _.useRef)(void 0),
               _ = (0, _.useMemo)(() => _(_, _), [_, _]),
+              _ = (0, _.useMemo)(() => _(_), [_]),
               _ = (0, _.useMemo)(() => _(_), [_]),
               _ = (0, _.useMemo)(() => _(_, _, _), [_, _, _]),
               { errors: _, successes: _ } = (0, _.useMemo)(
@@ -2580,6 +2816,7 @@
               files: _,
               definitions: _,
               localization: _,
+              groupLocalization: _,
               images: _,
               errors: _,
               successes: _,
@@ -2598,6 +2835,7 @@
                           groups: _,
                           stats: _,
                           achievements: _,
+                          validLanguages: _,
                         }),
                       )
                     : _.push({
@@ -2617,9 +2855,11 @@
               fileInputRef: _,
               acceptedTypes: _,
               save: async () => {
-                await _.mutateAsync(_(_, _, _)), _(!0);
+                await _.mutateAsync(_(_)),
+                  await _.mutateAsync(_(_, _, _)),
+                  _(!0);
               },
-              isSaving: _.isPending,
+              isSaving: _.isPending || _.isPending,
               saveSucceeded: _,
               onClose: _,
             };
@@ -2639,6 +2879,10 @@
       __webpack_require__._(module, async (_, _) => {
         try {
           __webpack_require__._(_, {
+            _: () => _,
+            _: () => _,
+            _: () => _,
+            _: () => _,
             _: () => _,
             _: () => _,
             _: () => _,
@@ -2773,34 +3017,34 @@
                 );
             });
           }
+          function _(_, _, _, _) {
+            const _ = _.reduce((_, _) => {
+              const _ = String(_[_]);
+              return (_[_] = (_[_] ?? 0) + 1), _;
+            }, {});
+            _.forEach((_, _) => {
+              _[String(_[_])] > 1 &&
+                _.addIssue({
+                  code: "custom",
+                  path: [_, _],
+                  input: _[_],
+                  message: _,
+                });
+            });
+          }
           function _(_) {
             const { stats: _, achievements: _ } = _;
             return _.YOg(_(_))
-              .superRefine((_, _) => {
-                _.value;
-                if (new Set(_.map((_) => _.api_name)).size == _.length) return;
-                const _ = _.reduce(
-                    (_, _) => (
-                      _.api_name in _
-                        ? (_[_.api_name] = _[_.api_name] + 1)
-                        : (_[_.api_name] = 1),
-                      _
-                    ),
-                    {},
+              .superRefine((_, _) =>
+                _(
+                  _,
+                  _,
+                  "api_name",
+                  (0, _._)(
+                    "#AchievementEditor_AchievementCsvImport_Error_DuplicateApiName",
                   ),
-                  _ = Object.keys(_).filter((_) => _[_] > 1);
-                _.forEach((_, _) => {
-                  _.includes(_.api_name) &&
-                    _.addIssue({
-                      code: "custom",
-                      path: [_, "api_name"],
-                      input: _.api_name,
-                      message: (0, _._)(
-                        "#AchievementEditor_AchievementCsvImport_Error_DuplicateApiName",
-                      ),
-                    });
-                });
-              })
+                ),
+              )
               .transform((_) => {
                 const _ = _.map((_) => _.api_name),
                   _ = _.reduce((_, _) => ((_[_.api_name] = _), _), {}),
@@ -2855,8 +3099,11 @@
               ..._,
             };
           }
+          function _(_) {
+            return _.reduce((_, _) => ((_[_] = ""), _), {});
+          }
           function _(_, _) {
-            const _ = _.reduce((_, _) => ((_[_] = ""), _), {});
+            const _ = _(_);
             return [
               {
                 api_name: _.name,
@@ -2886,24 +3133,23 @@
                   errors: void 0,
                 };
           }
-          function _(_) {
+          function _(_, _) {
+            const _ = `${_}-achievements-definitions.csv`;
             _._.WriteCSVToFile(
               _.map(_).map((_) => ({
                 ..._,
                 permission: _._[_.permission ?? _._.Client],
               })),
-              "achievements-definitions.csv",
+              _,
               !0,
               Object.keys(_.shape),
             );
           }
-          function _(_, _) {
-            const _ = _.map((_) => _(_, _)).reduce(
-                (_, _) => (_.push(..._), _),
-                [],
-              ),
+          function _(_, _, _) {
+            const _ = `${_}-achievements-localization.csv`,
+              _ = _.map((_) => _(_, _)).reduce((_, _) => (_.push(..._), _), []),
               _ = [...Object.keys(_.shape), ..._];
-            _._.WriteCSVToFile(_, "achievements-localization.csv", !0, _);
+            _._.WriteCSVToFile(_, _, !0, _);
           }
           function _(_, _, _) {
             if (!_) return {};
@@ -2952,17 +3198,27 @@
                 : void 0,
             };
           }
-          function _(_, _) {
+          function _(_, _, _) {
             const _ = _.auy.number().safeParse(_.path[0])?.data,
               _ = void 0 !== _ && _.data.length > _,
-              _ = _ ? _.data[_].api_name : void 0,
-              _ = _.path.length > 1 ? _.path[1] : "api_name";
+              _ = _ ? _.data[_][_] : void 0,
+              _ = _.path.length > 1 ? _.path[1] : _;
             return {
               line: void 0 === _ ? void 0 : _ + 2,
-              apiName: _,
+              key: _,
               field: _,
               input: _ && _ in _.data[_] ? _.data[_][_] : "",
               message: _.message,
+            };
+          }
+          function _(_, _, _) {
+            return {
+              errors: _?.filter((_) => _.path.length <= 1).map(
+                (_) => _.message,
+              ),
+              fieldErrors: _?.filter((_) => _.path.length > 1).map((_) =>
+                _(_, _, _),
+              ),
             };
           }
           function _(_) {
@@ -2971,20 +3227,13 @@
           }
           function _(_, _, _, _) {
             const _ = _({
-                groups: _,
-                stats: _,
-                achievements: _,
-              }).safeParse(_.data),
-              _ = _.error?.issues
-                .filter((_) => _.path.length <= 1)
-                .map((_) => _.message),
-              _ = _.error?.issues
-                .filter((_) => _.path.length > 1)
-                .map((_) => _(_, _));
+              groups: _,
+              stats: _,
+              achievements: _,
+            }).safeParse(_.data);
             return {
               ..._.data,
-              errors: _,
-              achievementErrors: _,
+              ..._(_, _.error?.issues, "api_name"),
             };
           }
           function _(_) {
@@ -2992,13 +3241,7 @@
             return Object.keys(_.shape).every((_) => _.has(_));
           }
           function _(_) {
-            const _ = _.YOg(_).safeParse(_.data),
-              _ = _.error?.issues
-                .filter((_) => _.path.length <= 1)
-                .map((_) => _.message),
-              _ = _.error?.issues
-                .filter((_) => _.path.length > 1)
-                .map((_) => _(_, _));
+            const _ = _.YOg(_).safeParse(_.data);
             return {
               localization:
                 _.data?.reduce(
@@ -3009,9 +3252,149 @@
                   ),
                   {},
                 ) ?? {},
-              errors: _,
-              achievementErrors: _,
+              ..._(_, _.error?.issues, "api_name"),
             };
+          }
+          const _ = _.Ikc({
+              groupid: _.YjP().min(1),
+            }),
+            _ = _.catchall(_.YjP());
+          function _(_) {
+            return _.reduce((_, _) => ((_[_.groupid] = _), _), {});
+          }
+          function _(_) {
+            const _ = _?.name;
+            return "string" == typeof _
+              ? {
+                  english: _,
+                }
+              : (_ ?? {});
+          }
+          function _(_) {
+            return Object.keys(_)
+              .filter((_) => "token" == _ || !!_[_])
+              .reduce((_, _) => ((_[_] = _[_]), _), {});
+          }
+          function _(_, _) {
+            return {
+              groupid: _.groupid,
+              ..._(_),
+              ..._(_.name, _),
+            };
+          }
+          function _(_, _) {
+            const { groupid: _, ..._ } = _;
+            return _({
+              ..._(_),
+              ..._,
+            });
+          }
+          function _(_) {
+            const { groups: _, validLanguages: _ } = _,
+              _ = new Set(_.map((_) => _.groupid));
+            return _.superRefine((_, _) => {
+              function _(_, _) {
+                _.addIssue({
+                  code: "custom",
+                  path: [_],
+                  input: _[_],
+                  message: _,
+                });
+              }
+              _.groupid == _._
+                ? _(
+                    "groupid",
+                    (0, _._)(
+                      "#AchievementEditor_GroupCsvImport_Error_DefaultGroup",
+                    ),
+                  )
+                : _.has(_.groupid) ||
+                  _(
+                    "groupid",
+                    (0, _._)(
+                      "#AchievementEditor_Validator_Error_GroupDoesNotExist",
+                    ),
+                  ),
+                Object.keys(_)
+                  .filter(
+                    (_) => "groupid" != _ && !__webpack_require__.includes(_),
+                  )
+                  .forEach((_) =>
+                    _(
+                      _,
+                      (0, _._)(
+                        "#AchievementEditor_GroupCsvImport_Error_UnknownLanguage",
+                        _,
+                      ),
+                    ),
+                  ),
+                _.english ||
+                  _(
+                    "english",
+                    (0, _._)(
+                      "#AchievementEditor_GroupCsvImport_Error_NameRequired",
+                    ),
+                  );
+            });
+          }
+          function _(_) {
+            const { groups: _ } = _;
+            return _.YOg(_(_))
+              .superRefine((_, _) =>
+                _(
+                  _,
+                  _,
+                  "groupid",
+                  (0, _._)(
+                    "#AchievementEditor_GroupCsvImport_Error_DuplicateGroupID",
+                  ),
+                ),
+              )
+              .transform((_) => {
+                const _ = _.reduce((_, _) => ((_[_.groupid] = _), _), {}),
+                  _ = _(_);
+                return Object.keys(_).reduce(
+                  (_, _) => {
+                    var _, _;
+                    return (
+                      (_ = _[_]),
+                      (_ = _[_]),
+                      _()(_(_, _), _(_(_)))
+                        ? _.unmodified.push(_)
+                        : _.modified.push(_),
+                      _
+                    );
+                  },
+                  {
+                    csv: _,
+                    groups: _,
+                    modified: [],
+                    unmodified: [],
+                  },
+                );
+              });
+          }
+          function _(_) {
+            const _ = new Set(_.fields);
+            return (
+              Object.keys(_.shape).every((_) => _.has(_)) && !_.has("api_name")
+            );
+          }
+          function _(_, _, _) {
+            const _ = _({
+              groups: _,
+              validLanguages: _,
+            }).safeParse(_.data);
+            return {
+              ..._.data,
+              ..._(_, _.error?.issues, "groupid"),
+            };
+          }
+          function _(_, _, _) {
+            const _ = `${_}-achievement-groups-localization.csv`,
+              _ = _.map((_) => _(_, _)),
+              _ = [...Object.keys(_.shape), ..._];
+            _._.WriteCSVToFile(_, _, !0, _);
           }
           _();
         } catch (_) {
