@@ -1526,6 +1526,7 @@ var CLSTAMP = "steamdb";
           richPresenceContainer:
             "personanameandstatus_richPresenceContainer_3sxE7",
           gameName: "personanameandstatus_gameName_1cB0q",
+          dropPadding: "personanameandstatus_dropPadding_3tEPY",
           NoMask: "personanameandstatus_NoMask_2dAj6",
           twoLine: "personanameandstatus_twoLine_1BbOe",
           DNDContainer: "personanameandstatus_DNDContainer_3IswZ",
@@ -3447,104 +3448,6 @@ var CLSTAMP = "steamdb";
           (_._ = 61738);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
-        var _ = {
-          "./shared_arabic.json": [8476, 3710],
-          "./shared_brazilian.json": [99574, 6562],
-          "./shared_bulgarian.json": [43789, 1449],
-          "./shared_czech.json": [815, 7591],
-          "./shared_danish.json": [4289, 6523],
-          "./shared_dutch.json": [54978, 5110],
-          "./shared_english.json": [33800, 2256],
-          "./shared_finnish.json": [3907, 6031],
-          "./shared_french.json": [45040, 5018],
-          "./shared_german.json": [94750, 6208],
-          "./shared_greek.json": [69668, 9712],
-          "./shared_hungarian.json": [45233, 6165],
-          "./shared_indonesian.json": [90200, 8306],
-          "./shared_italian.json": [31864, 3912],
-          "./shared_japanese.json": [7263, 1973],
-          "./shared_koreana.json": [30295, 7539],
-          "./shared_latam.json": [50559, 2435],
-          "./shared_malay.json": [61136, 6332],
-          "./shared_norwegian.json": [86512, 2320],
-          "./shared_polish.json": [52889, 8967],
-          "./shared_portuguese.json": [72269, 6239],
-          "./shared_romanian.json": [34419, 2749],
-          "./shared_russian.json": [75777, 8025],
-          "./shared_sc_schinese.json": [23723, 9027],
-          "./shared_schinese.json": [85436, 7786],
-          "./shared_spanish.json": [76736, 2632],
-          "./shared_swedish.json": [94625, 1225],
-          "./shared_tchinese.json": [15191, 5241],
-          "./shared_thai.json": [4230, 976],
-          "./shared_turkish.json": [34792, 9152],
-          "./shared_ukrainian.json": [27246, 2954],
-          "./shared_vietnamese.json": [59863, 6149],
-        };
-        function _(_) {
-          if (!__webpack_require__._(_, _))
-            return Promise.resolve().then(() => {
-              var _ = new Error("Cannot find module '" + _ + "'");
-              throw ((_.code = "MODULE_NOT_FOUND"), _);
-            });
-          var _ = _[_],
-            _ = _[0];
-          return __webpack_require__
-            ._(_[1])
-            .then(() => __webpack_require__._(_, 19));
-        }
-        (_.keys = () => Object.keys(_)), (_._ = 14919), (_.exports = _);
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        var _ = {
-          "./shared_arabic.json": [8476, 3710],
-          "./shared_brazilian.json": [99574, 6562],
-          "./shared_bulgarian.json": [43789, 1449],
-          "./shared_czech.json": [815, 7591],
-          "./shared_danish.json": [4289, 6523],
-          "./shared_dutch.json": [54978, 5110],
-          "./shared_english.json": [33800, 2256],
-          "./shared_finnish.json": [3907, 6031],
-          "./shared_french.json": [45040, 5018],
-          "./shared_german.json": [94750, 6208],
-          "./shared_greek.json": [69668, 9712],
-          "./shared_hungarian.json": [45233, 6165],
-          "./shared_indonesian.json": [90200, 8306],
-          "./shared_italian.json": [31864, 3912],
-          "./shared_japanese.json": [7263, 1973],
-          "./shared_koreana.json": [30295, 7539],
-          "./shared_latam.json": [50559, 2435],
-          "./shared_malay.json": [61136, 6332],
-          "./shared_norwegian.json": [86512, 2320],
-          "./shared_polish.json": [52889, 8967],
-          "./shared_portuguese.json": [72269, 6239],
-          "./shared_romanian.json": [34419, 2749],
-          "./shared_russian.json": [75777, 8025],
-          "./shared_sc_schinese.json": [23723, 9027],
-          "./shared_schinese.json": [85436, 7786],
-          "./shared_spanish.json": [76736, 2632],
-          "./shared_swedish.json": [94625, 1225],
-          "./shared_tchinese.json": [15191, 5241],
-          "./shared_thai.json": [4230, 976],
-          "./shared_turkish.json": [34792, 9152],
-          "./shared_ukrainian.json": [27246, 2954],
-          "./shared_vietnamese.json": [59863, 6149],
-        };
-        function _(_) {
-          if (!__webpack_require__._(_, _))
-            return Promise.resolve().then(() => {
-              var _ = new Error("Cannot find module '" + _ + "'");
-              throw ((_.code = "MODULE_NOT_FOUND"), _);
-            });
-          var _ = _[_],
-            _ = _[0];
-          return __webpack_require__
-            ._(_[1])
-            .then(() => __webpack_require__._(_, 19));
-        }
-        (_.keys = () => Object.keys(_)), (_._ = 68042), (_.exports = _);
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
           _: () => _._,
@@ -4677,6 +4580,7 @@ var CLSTAMP = "steamdb";
         __webpack_require__("chunkid"), __webpack_require__("chunkid");
         new Map();
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ =
             (__webpack_require__("chunkid"),
             __webpack_require__("chunkid"),
@@ -4688,33 +4592,17 @@ var CLSTAMP = "steamdb";
           document.addEventListener("DOMContentLoaded", async function () {
             (0, _._)(),
               (0, _._)(),
-              _._.IN_GAMEPADUI ||
-                (await __webpack_require__
-                  ._("chunkid")
-                  .then(_._.bind(_, 43159, 23))),
               await (async function (_) {
                 const _ = _._.GetLanguageFallback(_),
                   _ = _ === _,
-                  [_, _, _, _] = await Promise.all([
-                    __webpack_require__("chunkid")(`./shared_${_}.json`),
+                  [_, _] = await Promise.all([
                     __webpack_require__("chunkid")(`./friendsui_${_}.json`),
                     _
                       ? {}
-                      : __webpack_require__("chunkid")(`./shared_${_}.json`),
-                    _
-                      ? {}
                       : __webpack_require__("chunkid")(`./friendsui_${_}.json`),
+                    _._.Ready(),
                   ]);
-                _._.AddTokens(
-                  {
-                    ..._,
-                    ..._,
-                  },
-                  {
-                    ..._,
-                    ..._,
-                  },
-                );
+                _._.AddTokens(_, _);
               })(_._.LANGUAGE);
             let _ = !0;
             _._.steamid && (0, _._)(_._.steamid),
@@ -4746,13 +4634,12 @@ var CLSTAMP = "steamdb";
               _ &&
                 (function () {
                   let _,
-                    _ = _._.IN_GAMEPADUI,
-                    _ = new _._(_),
+                    _ = new _._(!1),
                     _ = null;
                   const _ = (_ = new _(_.Storage));
                   (_ = new _._(_, _._.EREALM)),
-                    _.PerformInitialLogon(_._),
-                    __webpack_require__.Init(_, !1, _),
+                    __webpack_require__.PerformInitialLogon(_._),
+                    _.Init(_, !1, _),
                     (0, _._)(
                       _.FriendStore,
                       _.ChatStore,
@@ -29913,6 +29800,23 @@ var CLSTAMP = "steamdb";
               console.error("Exception deserializing protobuf", _);
             }
           }
+          async GetWebSocketURL() {
+            let _ = "localhost",
+              _ = 27062;
+            try {
+              let _ = await SteamClient.OpenVR?.GetWebServerAddress?.();
+              _?.strHost && _.unPort && ((_ = _.strHost), (_ = _.unPort));
+            } catch (_) {
+              _.Warning(
+                "Couldn't get the SteamVR web server address; falling back to the default.",
+                _,
+              );
+            }
+            return (
+              _.Debug(`Connecting to vrserver at ${_}:${_}`),
+              `ws://${_}:${_}?secret=${await SteamClient.OpenVR.GetWebSecret()}`
+            );
+          }
           Connect() {
             return "SteamClient" in window && null != SteamClient
               ? this.IsConnected()
@@ -29922,7 +29826,7 @@ var CLSTAMP = "steamdb";
                     (this.m_promiseConnect = new Promise(async (_, _) => {
                       try {
                         this.m_socket = new WebSocket(
-                          `ws://localhost:27062?secret=${await SteamClient.OpenVR.GetWebSecret()}`,
+                          await this.GetWebSocketURL(),
                         );
                       } catch (_) {
                         return (
@@ -50806,8 +50710,14 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          return Number.isFinite(_) && _ >= 0 && _ < _._;
+        }
+        function _(_) {
+          return _(_) ? _ : Number.MAX_SAFE_INTEGER;
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -53032,6 +52942,7 @@ var CLSTAMP = "steamdb";
               );
             })();
           for (const _ of _) {
+            if (!_(_.nXInputIndex)) continue;
             const _ = _.nXInputIndex;
             _.has(_) ||
               _.set(_, {
@@ -53099,7 +53010,7 @@ var CLSTAMP = "steamdb";
                 disabled: !0,
               }));
           for (const _ of _) {
-            const _ = _.nSlot >= _._,
+            const _ = !_(_.nSlot) || _.nSlot >= _._,
               _ = _.player?.friend
                 ? _.player?.friend?.persona.avatar_url_full
                 : (0, _._)(_.player?.strAvatarHash, "full"),
@@ -53138,7 +53049,9 @@ var CLSTAMP = "steamdb";
                 }),
                 key: _.details.nControllerIndex.toString(),
                 index: _.nSlot,
-                displayedIndex: _.details.nXInputIndex + 1,
+                displayedIndex: _(_.details.nXInputIndex)
+                  ? _.details.nXInputIndex + 1
+                  : null,
                 indexColor: _ ? void 0 : _(_.details.nXInputIndex),
                 sectionName: _ ? "inactive" : void 0,
                 onOptionsButton: _
@@ -53151,7 +53064,7 @@ var CLSTAMP = "steamdb";
                 onSecondaryActionDescription: _,
               });
           }
-          _.sort((_, _) => _.index - _.index);
+          _.sort((_, _) => _(_.index) - _(_.index));
           return (0, _.jsx)(_, {
             title: (0, _._)("#RemotePlay_ControllerOrder"),
             items: _,
@@ -69560,7 +69473,7 @@ var CLSTAMP = "steamdb";
           _ = 4,
           _ = 5,
           _ = 16;
-        var _;
+        var _, _, _;
         !(function (_) {
           (_[(_.kPFIFlag_MicroTransactionFile = 1)] =
             "kPFIFlag_MicroTransactionFile"),
@@ -69610,7 +69523,76 @@ var CLSTAMP = "steamdb";
               "kPFIFlag_ManagedContentDescriptors"),
             (_[(_.kPFIFlag_HasAuthorSnapshots = 268435456)] =
               "kPFIFlag_HasAuthorSnapshots");
-        })(_ || (_ = {}));
+        })(_ || (_ = {})),
+          (function (_) {
+            (_[(_.k_EPFSplitType_MicrotransactionItem = 0)] =
+              "k_EPFSplitType_MicrotransactionItem"),
+              (_[(_.k_EPFSplitType_WorkshopItem = 1)] =
+                "k_EPFSplitType_WorkshopItem"),
+              (_[(_.k_EPFSplitType_GreenlightItem = 2)] =
+                "k_EPFSplitType_GreenlightItem"),
+              (_[(_.k_EPFSplitType_SharedFile = 3)] =
+                "k_EPFSplitType_SharedFile");
+          })(_ || (_ = {})),
+          (function (_) {
+            (_[(_.k_EPFAuditAction_Banned = 1)] = "k_EPFAuditAction_Banned"),
+              (_[(_.k_EPFAuditAction_UnBanned = 2)] =
+                "k_EPFAuditAction_UnBanned"),
+              (_[(_.k_EPFAuditAction_AddedIncompatibleFlag = 3)] =
+                "k_EPFAuditAction_AddedIncompatibleFlag"),
+              (_[(_.k_EPFAuditAction_RemovedIncompatibleFlag = 4)] =
+                "k_EPFAuditAction_RemovedIncompatibleFlag"),
+              (_[(_.k_EPFAuditAction_AddedForceInappropriateFlag = 5)] =
+                "k_EPFAuditAction_AddedForceInappropriateFlag"),
+              (_[(_.k_EPFAuditAction_RemovedForceInappropriateFlag = 6)] =
+                "k_EPFAuditAction_RemovedForceInappropriateFlag"),
+              (_[(_.k_EPFAuditAction_AddedForceAppropriateFlag = 7)] =
+                "k_EPFAuditAction_AddedForceAppropriateFlag"),
+              (_[(_.k_EPFAuditAction_RemovedForceAppropriateFlag = 8)] =
+                "k_EPFAuditAction_RemovedForceAppropriateFlag"),
+              (_[(_.k_EPFAuditAction_AddedAcceptedForUseFlag = 9)] =
+                "k_EPFAuditAction_AddedAcceptedForUseFlag"),
+              (_[(_.k_EPFAuditAction_RemovedAcceptedForUseFlag = 10)] =
+                "k_EPFAuditAction_RemovedAcceptedForUseFlag"),
+              (_[(_.k_EPFAuditAction_ClearedReports = 11)] =
+                "k_EPFAuditAction_ClearedReports"),
+              (_[(_.k_EPFAuditAction_RequireVerification = 12)] =
+                "k_EPFAuditAction_RequireVerification"),
+              (_[(_.k_EPFAuditAction_ResendVerificationEmail = 13)] =
+                "k_EPFAuditAction_ResendVerificationEmail"),
+              (_[(_.k_EPFAuditAction_SubmissionVerified = 14)] =
+                "k_EPFAuditAction_SubmissionVerified"),
+              (_[(_.k_EPFAuditAction_ApprovedByModerator = 15)] =
+                "k_EPFAuditAction_ApprovedByModerator"),
+              (_[(_.k_EPFAuditAction_RejectedByModerator = 16)] =
+                "k_EPFAuditAction_RejectedByModerator"),
+              (_[(_.k_EPFAuditAction_ApprovedForSteamChina = 17)] =
+                "k_EPFAuditAction_ApprovedForSteamChina"),
+              (_[(_.k_EPFAuditAction_RejectedForSteamChina = 18)] =
+                "k_EPFAuditAction_RejectedForSteamChina"),
+              (_[(_.k_EPFAuditAction_AddedIgnoreTextContentCheckFlag = 19)] =
+                "k_EPFAuditAction_AddedIgnoreTextContentCheckFlag"),
+              (_[(_.k_EPFAuditAction_RemovedIgnoreTextContentCheckFlag = 20)] =
+                "k_EPFAuditAction_RemovedIgnoreTextContentCheckFlag"),
+              (_[(_.k_EPFAuditAction_VoteBannedUsers = 21)] =
+                "k_EPFAuditAction_VoteBannedUsers"),
+              (_[(_.k_EPFAuditAction_ClearedVoteBannedUsers = 22)] =
+                "k_EPFAuditAction_ClearedVoteBannedUsers"),
+              (_[(_.k_EPFAuditAction_Deleted = 23)] =
+                "k_EPFAuditAction_Deleted"),
+              (_[(_.k_EPFAuditAction_PermanentlyDeleted = 24)] =
+                "k_EPFAuditAction_PermanentlyDeleted"),
+              (_[(_.k_EPFAuditAction_AddedContentDescriptor = 25)] =
+                "k_EPFAuditAction_AddedContentDescriptor"),
+              (_[(_.k_EPFAuditAction_RemovedContentDescriptor = 26)] =
+                "k_EPFAuditAction_RemovedContentDescriptor"),
+              (_[(_.k_EPFAuditAction_AddedRestrictedCountry = 27)] =
+                "k_EPFAuditAction_AddedRestrictedCountry"),
+              (_[(_.k_EPFAuditAction_RemovedRestrictedCountry = 28)] =
+                "k_EPFAuditAction_RemovedRestrictedCountry"),
+              (_[(_.k_EPFAuditAction_TransferredOwnership = 29)] =
+                "k_EPFAuditAction_TransferredOwnership");
+          })(_ || (_ = {}));
         const _ = 0,
           _ = 1,
           _ = 2,
@@ -70226,6 +70208,15 @@ var CLSTAMP = "steamdb";
               (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS");
           })(_ || (_ = {}));
+        var _;
+        !(function (_) {
+          (_[(_.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
+            "k_ETwoFactorTokenSteamguardScheme_None"),
+            (_[(_.k_ETwoFactorTokenSteamguardScheme_Email = 1)] =
+              "k_ETwoFactorTokenSteamguardScheme_Email"),
+            (_[(_.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
+              "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
+        })(_ || (_ = {}));
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -70306,6 +70297,7 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -70474,7 +70466,7 @@ var CLSTAMP = "steamdb";
             strName: _.name ?? "",
             eControllerType: _.controller_type ?? _,
             eControllerStyle: _.controller_style ?? _._,
-            nXInputIndex: _.xinput_index ?? 0,
+            nXInputIndex: _.xinput_index ?? _,
             nControllerIndex: _.controller_index ?? 16,
             eRumblePreference: _.rumble_setting ?? _,
             bWireless: _.is_wireless_steam_dongle ?? !1,
@@ -70587,6 +70579,8 @@ var CLSTAMP = "steamdb";
               "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
             (_[(_.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
         })(_ || (_ = {}));
+        const _ = 20,
+          _ = -1;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -79276,26 +79270,22 @@ var CLSTAMP = "steamdb";
         "use strict";
         __webpack_require__._(_, {
           _: () => _,
+        });
+        const _ = 5;
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = 5;
-        function _(_, ..._) {
-          return 0 == _.length
-            ? _
-            : (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
-                if (_ <= _.length && _ >= 1) {
-                  const _ = _[_ - 1];
-                  return String(null == _ ? "" : _);
-                }
-                return _;
-              }));
-        }
-        let _;
-        _ ??= new Set();
-        let _ = null;
         function _(_) {
           const _ = new Map();
           const _ = (async function () {
@@ -79319,7 +79309,6 @@ var CLSTAMP = "steamdb";
             );
           })();
           let _ = !1;
-          var _;
           function _(_, _) {
             const [_, ..._] = _,
               _ =
@@ -79332,14 +79321,12 @@ var CLSTAMP = "steamdb";
                 : _(_, _);
           }
           function _(_, ..._) {
-            return _(_(_, _().languages), ..._);
+            const _ = _(_, _().languages);
+            return (0, _._)(_, ..._);
           }
           return (
             __webpack_require__.then(() => (_ = !0)),
-            (_ = _),
-            (_ ??= new Set()),
-            _.add(_),
-            (_ = Promise.all(_)),
+            (0, _._)(_),
             {
               Localize: (_, ..._) => _(_, ..._),
               LocalizeReact(_, ..._) {
@@ -79363,9 +79350,37 @@ var CLSTAMP = "steamdb";
                 1 === _ || "1" === _
                   ? _(_, _, ..._)
                   : _(_ + "_Plural", _, ..._),
-              LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
+              GetAppTypeLocKey(_, _) {
+                switch (_) {
+                  case _._._:
+                    return _ + "_Software";
+                  case _._._:
+                    return _ + "_Video";
+                  default:
+                    return _;
+                }
+              },
+              GetAppTypePluralLocKey(_, _) {
+                switch (_) {
+                  case _._._:
+                    return _ + "_Software";
+                  case _._._:
+                    return _ + "_Video";
+                  default:
+                    return _;
+                }
+              },
+              LocalizeInSpecificLang(_, _, ..._) {
+                const _ = _(_, [_]);
+                return (0, _._)(_, ..._);
+              },
               Ready: () => _,
               IsReady: () => _,
+              HasKey: (_) =>
+                _().languages.some((_) => {
+                  const _ = _.get(_.strLanguage);
+                  return !!_ && _.has(_);
+                }),
             }
           );
         }
@@ -79376,11 +79391,40 @@ var CLSTAMP = "steamdb";
               {
                 strLanguage: _._.LANGUAGE,
                 strISOCode: _._.get(_._.LANGUAGE),
-                eSource: _,
+                eSource: _._,
               },
             ],
           };
         }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        let _;
+        __webpack_require__._(_, {
+          _: () => _,
+        }),
+          (_ ??= new Set());
+        let _ = null;
+        function _(_) {
+          (_ ??= new Set()), _.add(_), (_ = Promise.all(_));
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        function _(_, ..._) {
+          return 0 == _.length
+            ? _
+            : (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
+                if (_ <= _.length && _ >= 1) {
+                  const _ = _[_ - 1];
+                  return String(null == _ ? "" : _);
+                }
+                return _;
+              }));
+        }
+        __webpack_require__._(_, {
+          _: () => _,
+        });
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -80518,75 +80562,9 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid");
-        const _ = {};
-        (_.arabic = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 8476, 19))),
-          (_.brazilian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 99574, 19))),
-          (_.bulgarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 43789, 19))),
-          (_.czech = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 815, 19))),
-          (_.danish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 4289, 19))),
-          (_.dutch = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 54978, 19))),
-          (_.english = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 33800, 19))),
-          (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 3907, 19))),
-          (_.french = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 45040, 19))),
-          (_.german = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 94750, 19))),
-          (_.greek = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 69668, 19))),
-          (_.hungarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 45233, 19))),
-          (_.indonesian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 90200, 19))),
-          (_.italian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 31864, 19))),
-          (_.japanese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 7263, 19))),
-          (_.koreana = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 30295, 19))),
-          (_.latam = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 50559, 19))),
-          (_.malay = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 61136, 19))),
-          (_.norwegian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 86512, 19))),
-          (_.polish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 52889, 19))),
-          (_.portuguese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 72269, 19))),
-          (_.romanian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 34419, 19))),
-          (_.russian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 75777, 19))),
-          (_.sc_schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 23723, 19))),
-          (_.schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 85436, 19))),
-          (_.spanish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 76736, 19))),
-          (_.swedish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 94625, 19))),
-          (_.tchinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 15191, 19))),
-          (_.thai = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 4230, 19))),
-          (_.turkish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 34792, 19))),
-          (_.ukrainian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 27246, 19))),
-          (_.vietnamese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 59863, 19)));
-        const _ = (0, _._)(async function (_) {
-          if (_[_]) return _[_]();
-        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (0, _._)(_._);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -95332,6 +95310,7 @@ var CLSTAMP = "steamdb";
               bHasGamePrivacy: _,
               bNoMask: _,
               bEllipsisName: _,
+              bDropPadding: _,
               ..._
             } = this.props;
             let _ = null,
@@ -95451,6 +95430,7 @@ var CLSTAMP = "steamdb";
                             _().gameName,
                             _ ? _().threeLines : void 0,
                             _().richPresenceLabel,
+                            _ && _().dropPadding,
                             "no-drag",
                           ),
                           children: [
@@ -95465,7 +95445,11 @@ var CLSTAMP = "steamdb";
                         }),
                       _ &&
                         (0, _.jsxs)("div", {
-                          className: (0, _._)(_().richPresenceLabel, "no-drag"),
+                          className: (0, _._)(
+                            _().richPresenceLabel,
+                            _ && _().dropPadding,
+                            "no-drag",
+                          ),
                           children: [_, " "],
                         }),
                     ],
@@ -108402,6 +108386,7 @@ var CLSTAMP = "steamdb";
               (0, _.jsxs)(_, {
                 onClick: _.onOK,
                 disabled: _.bOKDisabled,
+                autoFocus: "primary" == _.focusButton,
                 children: [_.strOKText || (0, _._)("#Button_Confirm"), " "],
               }),
               (0, _.jsxs)(_, {
@@ -108412,6 +108397,7 @@ var CLSTAMP = "steamdb";
               (0, _.jsx)(_, {
                 onClick: _.onCancel,
                 disabled: _.bCancelDisabled,
+                autoFocus: "secondary" == _.focusButton,
                 children: _.strCancelText || (0, _._)("#Button_Cancel"),
               }),
             ],
@@ -122761,7 +122747,7 @@ var CLSTAMP = "steamdb";
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -122808,6 +122794,7 @@ var CLSTAMP = "steamdb";
               strOKButtonText: _,
               strCancelButtonText: _,
               onGamepadCancel: _,
+              strGamepadCancelDescription: _,
               strMiddleButtonText: _,
               onMiddleButton: _,
               bAlertDialog: _,
@@ -122838,6 +122825,7 @@ var CLSTAMP = "steamdb";
                   strOKText: _,
                   onCancel: _(_.onCancel),
                   strCancelText: _,
+                  focusButton: _,
                   onUpdate: () => {
                     _(), _.closeModal && _.closeModal();
                   },
@@ -122855,6 +122843,7 @@ var CLSTAMP = "steamdb";
             "aria-describedby": _,
             children: (0, _.jsxs)(_._, {
               onCancelButton: _(_ || _.onCancel),
+              onCancelActionDescription: _,
               children: [
                 (0, _.jsxs)(_._, {
                   children: [
@@ -130602,6 +130591,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_mapTokens = new Map();
@@ -130631,18 +130621,11 @@ var CLSTAMP = "steamdb";
                 }
             return _;
           }
-          InitFromObjects(_, _, _, _, _, _) {
+          InitFromObjects(_, _, _, _) {
             _ && (this.m_bReportIndividualMissingTokens = !1),
-              _ || this.m_mapTokens.clear();
-            const _ = {
-                ...(_ || {}),
-                ..._,
-              },
-              _ = {
-                ...(_ || {}),
-                ...(_ || {}),
-              };
-            this.AddTokens(_, _), this.m_cbkTokensChanged.Dispatch();
+              _ || this.m_mapTokens.clear(),
+              this.AddTokens(_, _ || {}),
+              this.m_cbkTokensChanged.Dispatch();
           }
           InitDirect(_, _) {
             this.m_mapTokens.clear(),
@@ -130695,28 +130678,27 @@ var CLSTAMP = "steamdb";
             return this.BLooksLikeToken(_) ? this.LocalizeString(_, _) : _;
           }
           LocalizeString(_, _) {
-            const _ = 0 == this.m_mapTokens.size;
-            if (
-              ((0, _._)(
-                !_,
-                `Attempting to localize token '${_}' with no tokens in our map.`,
-              ),
-              !this.BLooksLikeToken(_))
-            )
-              return;
+            if (!this.BLooksLikeToken(_)) return;
             let _ = this.m_mapTokens.get(_.substring(1));
-            if (void 0 !== _) return _;
-            _ ||
-              _ ||
-              !this.m_bReportIndividualMissingTokens ||
-              (0, _._)().ReportError(
-                new Error(
-                  `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
-                ),
-                {
-                  bIncludeMessageInIdentifier: !0,
-                },
-              );
+            return void 0 === _
+              ? _._.HasKey(_)
+                ? _._.Localize(_)
+                : void (0 === this.m_mapTokens.size
+                    ? (0, _._)(
+                        !1,
+                        `Attempting to localize token '${_}' with no tokens in our map.`,
+                      )
+                    : !_ &&
+                      this.m_bReportIndividualMissingTokens &&
+                      (0, _._)().ReportError(
+                        new Error(
+                          `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                        ),
+                        {
+                          bIncludeMessageInIdentifier: !0,
+                        },
+                      ))
+              : _;
           }
           LocalizeStringFromFallback(_) {
             if (!_ || 0 == _.length || "#" != _.charAt(0)) return;
@@ -133546,10 +133528,14 @@ var CLSTAMP = "steamdb";
             _ = _({
               bSuppressAssert: !0,
             }),
-            _ = (0, _._)()?.startsWith("Gamepad VR"),
+            _ = (0, _._)()?.startsWith("Gamepad VR") ?? !1,
             _ = _.useMemo(
               () => ({
-                IN_GAMEPADUI: _ ?? _?.IN_GAMEPADUI ?? _._.IN_GAMEPADUI,
+                IN_GAMEPADUI:
+                  _ ??
+                  _?.IN_GAMEPADUI ??
+                  (0, _._)()?.startsWith("Gamepad") ??
+                  !1,
                 IN_DESKTOPUI: _ ?? _?.IN_DESKTOPUI ?? !1,
                 IN_VR: _ ?? _?.IN_VR ?? _,
               }),
@@ -133685,7 +133671,6 @@ var CLSTAMP = "steamdb";
             FROM_WEB: !1,
             WEBSITE_ID: "Unknown",
             IN_STEAMUI: !1,
-            IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
             ON_FRAME: !1,
             IS_STEAMOS: !1,
@@ -133922,6 +133907,80 @@ var CLSTAMP = "steamdb";
         });
         const _ =
           "data:image/png;base64,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";
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+        const _ = {};
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 8476, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 99574, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 43789, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 815, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 4289, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 54978, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 33800, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 3907, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 45040, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94750, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 69668, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 45233, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 90200, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 31864, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 7263, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 30295, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 50559, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 61136, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 86512, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 52889, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 72269, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 34419, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 75777, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 23723, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 85436, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 76736, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94625, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15191, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 4230, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 34792, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 27246, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 59863, 19)));
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -135101,68 +135160,36 @@ var CLSTAMP = "steamdb";
       ({
         43: "friendsui_sc_schinese-json",
         762: "friendsui_indonesian-json",
-        976: "shared_thai-json",
-        1225: "shared_swedish-json",
-        1449: "shared_bulgarian-json",
         1499: "friendsui_latam-json",
-        1973: "shared_japanese-json",
-        2256: "shared_english-json",
-        2320: "shared_norwegian-json",
-        2435: "shared_latam-json",
         2532: "friendsui_malay-json",
-        2632: "shared_spanish-json",
-        2749: "shared_romanian-json",
         2945: "friendsui_russian-json",
-        2954: "shared_ukrainian-json",
         3e3: "friendsui_turkish-json",
         3016: "friendsui_english-json",
         3232: "friendsui_italian-json",
         3415: "friendsui_portuguese-json",
         3485: "friendsui_japanese-json",
-        3710: "shared_arabic-json",
         3789: "friendsui_vietnamese-json",
-        3912: "shared_italian-json",
         4154: "friendsui_brazilian-json",
         4302: "friendsui_dutch-json",
         4434: "friendsui_ukrainian-json",
         4488: "friendsui_greek-json",
         4776: "friendsui_norwegian-json",
         4787: "friendsui_danish-json",
-        5018: "shared_french-json",
-        5110: "shared_dutch-json",
-        5241: "shared_tchinese-json",
         5341: "friendsui_hungarian-json",
         5480: "friendsui_german-json",
-        6031: "shared_finnish-json",
         6127: "friendsui_polish-json",
-        6149: "shared_vietnamese-json",
-        6165: "shared_hungarian-json",
-        6208: "shared_german-json",
-        6239: "shared_portuguese-json",
-        6332: "shared_malay-json",
         6385: "friendsui_bulgarian-json",
         6518: "friendsui_arabic-json",
-        6523: "shared_danish-json",
-        6562: "shared_brazilian-json",
         6609: "friendsui_swedish-json",
         6888: "friendsui_thai-json",
         6971: "friendsui_koreana-json",
         7462: "gamerecording",
         7487: "friendsui_czech-json",
-        7539: "shared_koreana-json",
-        7591: "shared_czech-json",
         7653: "broadcastapp",
-        7786: "shared_schinese-json",
         7861: "friendsui_romanian-json",
-        8025: "shared_russian-json",
         8194: "friendsui_french-json",
-        8306: "shared_indonesian-json",
         8759: "friendsui_finnish-json",
         8766: "friendsui_tchinese-json",
-        8967: "shared_polish-json",
-        9027: "shared_sc_schinese-json",
-        9152: "shared_turkish-json",
-        9712: "shared_greek-json",
         9746: "friendsui_schinese-json",
         9808: "friendsui_spanish-json",
       }[_] || _) +
@@ -135171,177 +135198,175 @@ var CLSTAMP = "steamdb";
         43: "8170f2c895e19202cd65",
         133: "82545716ea1a8b82e4d9",
         191: "2f44a701276dca278b19",
+        200: "d19c4846c06154d67855",
         277: "a5843aa6d5b4f2aac940",
+        295: "336a9b135aa763f6c3c3",
         316: "b4a4125ab8550ef83a0b",
         382: "416dc2c22c72ab0b0084",
-        394: "5980b9bf6996c4d87525",
         474: "6a9d0b4e2892dded462e",
-        496: "3e7172af50555d29fb12",
+        486: "dd72e8dc5bcbca1a7b04",
+        496: "fb606fd9941402c4c9fd",
+        559: "34c52b90fa8b26a1c635",
         684: "93eb01f9afd9f045929e",
-        762: "da846d9434cb0fa053d0",
+        762: "989dc3b4eff679fe5ec9",
+        815: "6888140329d7bd556c13",
         898: "b6a64c82dc169d24fab2",
         902: "c7d1b9914bd76ba5e8e5",
         947: "77123a0d43c051462d19",
-        975: "7fab4955325e86d3a790",
-        976: "4a9239f69bb779f9fef3",
+        975: "3a1c568c77dec2962779",
         1087: "1b1e874fa0b17e33bd93",
-        1144: "ee1250d0a8e9a1c887c5",
-        1158: "c761102aeecd385a5687",
+        1136: "836cff48f9e730cd72bd",
+        1144: "896ffa5dbc529d9c48a5",
+        1158: "20c08adf29ac06b096f3",
         1224: "8cf7b28930c7b7c56321",
-        1225: "ec8afa83eabe9ae92d0a",
         1316: "36be20268a253397b95d",
         1330: "d8ab1ac01d7f47e93aca",
-        1449: "0db9a38bbe2536fe1f62",
-        1499: "fac3c5fdc04308b95497",
+        1499: "63ac62860d966e5978a9",
         1571: "301c37a370bcf304422d",
-        1639: "b0edb3be27dc30d2e702",
-        1849: "b26adb09355cb6454e9a",
+        1639: "48a7008667f0f9b1d559",
+        1849: "c211a47bad2b684320fd",
+        1864: "e350ed7cbba674d7b6da",
         1954: "0e55356fd7b14be54c0b",
-        1973: "dc9c2e6f8745f4ed715e",
         1990: "f85ce9a0d9c8bd0dcdf2",
-        2116: "822d97aecdffee66c6c4",
-        2177: "0b64e59bc46ab6f92629",
-        2256: "65356325fccb3ceeb2e5",
-        2281: "dd026b12e0dbe30835ee",
+        2116: "9caf93966dc0a0c7202f",
+        2177: "77c78758e314a85bc85e",
+        2269: "d397976ea72a0d451d39",
+        2281: "6496f3d7e4ce6308483c",
         2292: "2648171bbf7a4e541935",
-        2320: "427d5328d49347270aad",
-        2435: "f6b7d137f86c8df45dc6",
-        2506: "1ee993fc697c461c53bb",
+        2506: "3995fb6cb9c524d2af74",
         2520: "1f392503c94a20f48720",
-        2532: "726fc960ed3131ab0865",
-        2632: "8b71d2971e73b6a79dd7",
+        2532: "81f6c1f1d6e42e913450",
         2687: "fe042a69cfd5cbb58cc1",
-        2749: "e894f632b642be8ef44f",
-        2945: "e07e4818e2a0d4fcc6a4",
-        2954: "dc0327a03c047b853556",
+        2889: "bcecf4256e68449a01d0",
+        2945: "f36eb722d1197b9ccc69",
         2993: "e6827764a5e82e106259",
-        3e3: "9d84323971dec0188c80",
-        3016: "f6185aecd134f08375bc",
-        3159: "200991dd6114e56702ed",
-        3199: "69940e010894be4152fe",
-        3202: "982a5f3617b8096d7330",
-        3232: "7e18a3c2d3045e97050e",
-        3307: "08215a99918f3d7c68ed",
-        3382: "67041520e9cc8d9774d2",
-        3415: "f91b674a80d33488244d",
-        3485: "203f1d427376e06cd2e9",
-        3577: "f25e13a70e0bb87050f3",
-        3710: "7c8bb8eefaf2ac5d7bdf",
+        3e3: "a020a8a0239eaddd4347",
+        3016: "1e84930d3e0b90c7a6b5",
+        3199: "0172f6eaeb8d488a5d78",
+        3202: "7ed472ccdbd3ccd9db03",
+        3232: "74edce7d52daf7c1e927",
+        3307: "52f9b1de1367f6212ec9",
+        3382: "f4dd3d6e1a89705b7fa7",
+        3415: "bdd3dd7cc431e75b2dd9",
+        3485: "d45be7f2f2c9a5c0f02d",
+        3577: "2337465c4bd74edf3412",
+        3723: "325ca6fc0ceca5503b85",
         3778: "167dead89774a69d53cc",
-        3789: "68550c6cfd59330c3e48",
+        3789: "8c81812abc11a5169e5b",
+        3800: "abf0e9792c15c6580951",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
-        3898: "ea6e9005aa9884a6a997",
-        3912: "00e7e05afb74e3d70639",
+        3898: "90846a9e84c0e34eca45",
+        3907: "517c2dead846273d00e6",
         4006: "6603ebe760f65431a358",
-        4154: "94ca8cb2d2aa1f47d22a",
-        4227: "8a597fecaf824b351181",
+        4154: "da950d2a24eca80bf91a",
+        4227: "b9f7e2337d2bec4eff82",
+        4230: "e1190919e0888bf21125",
+        4289: "68b7a9f0b64962e564ce",
         4295: "e2c54df00cd7fc6e55c9",
-        4302: "435019249c6f51b79b4f",
+        4302: "6777319b6735c96a6a98",
         4352: "de92a58e851fd1f40a2a",
+        4419: "d5832b2e23944965b86c",
         4421: "58fab8f46777762af7e8",
-        4434: "b76bcd1bc89404745cc8",
+        4434: "06de5f0d3ba8406dd2d0",
         4473: "4f453826b91d887757e2",
-        4488: "9b7902a9dcd57e5a8ac3",
-        4776: "6133207eac020e1ab36e",
-        4777: "29ca3208d107a536b6e1",
+        4488: "8dd091f616bb836b799e",
+        4625: "12d71f03cdffd77e1cc7",
+        4750: "b3436560d9c0c0f0dc70",
+        4776: "0ff0003552979744c3ee",
+        4777: "040c37a660c26d77931d",
         4779: "909f21776039059914ce",
-        4787: "63f48bbabd6e52adb440",
+        4787: "ab118cafd413ef8db5d3",
+        4792: "7ea03c2167ad8c04a97e",
         4844: "9b0a060abc338b33c9ea",
         4976: "11dc50e1825c3ea78b66",
-        5018: "f59bb70dbbe1343d41fa",
-        5094: "a922f4ecb779d119b3b5",
-        5110: "24687cb3c9a8182c5135",
-        5136: "52f052f126cd92fec1a6",
-        5241: "351135034277f9bcc265",
-        5341: "ce5400f709b5d26948e2",
+        4978: "be080baf55ab1c8a8bf9",
+        5040: "28c2c65b91467c8d8051",
+        5094: "d15c06f400812c0725f0",
+        5136: "d873a49dcff7475852a5",
+        5191: "4752709558f32548377e",
+        5233: "fddfcb86ab26564014c4",
+        5341: "0050d1d3444cdf99610b",
         5358: "46677bfee5caf20bc8de",
-        5480: "fe1e2469122f1c0d37d0",
+        5436: "275b440c57715c534d2b",
+        5480: "819bcdfa36698211a731",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
         5725: "188fd09b6944f1d69b65",
+        5777: "8689d3419c07185245a4",
         5893: "91f5b813d41dc544101d",
-        6031: "472a546a646d274e4c2e",
         6059: "e0d80564c1174fd84376",
-        6127: "bcb2b356d29892b7ef52",
-        6149: "543b4aa9e9e3e12dfb72",
-        6165: "a3a2002003aab2c6918e",
+        6127: "658afba6cdc2a25013d4",
+        6170: "2a530f2478d5a36a3276",
         6196: "19444056df361c8ef94a",
-        6208: "0a4310d596b298b6e397",
-        6239: "d22a663e3c74cf090815",
-        6305: "b75867859e28edb623d8",
-        6332: "5a8e17fda116a713235d",
-        6385: "633241ebfdb81845e960",
+        6305: "10b03bb6a5af6137fa3d",
+        6385: "641291b44bff14d6f0d7",
         6447: "6571327308708b9cb4a5",
+        6512: "7a7968b059aa2615c129",
         6518: "dc5f6ae58364d09cceda",
-        6523: "8fd05b6cdc60fcf89b56",
-        6562: "dafc1ec6ee6981904382",
-        6609: "06b39a5f1c8a9fa61b56",
+        6609: "58380bc6920b369df4a7",
         6637: "bee05b6c76a9dd2fe06d",
-        6888: "5e713d851c095e455c3b",
+        6736: "f4347c70c77ccd97063f",
+        6888: "b1d82792ec48c0c9f838",
         6905: "d9316fc5a220e6b4c416",
         6920: "073d861c6b381e481b8f",
         6950: "ec0c8b0d665699ce915b",
-        6971: "39f358e2496a3d2a55c3",
+        6971: "8bfca381100e06a3c16d",
+        7246: "a438c51a87936df01ffe",
         7247: "7021b7a5aaf6d7ee9806",
+        7251: "fbb0f742afe3145abea3",
+        7263: "27dd6217cfff48a12f94",
         7279: "4fa8dad9d6bcde1d380b",
         7365: "bb74e03060db6e6f780a",
         7418: "7680875bb68efceaf698",
-        7462: "6c21d62f44bb02f1fa19",
+        7462: "0d1def1621a4adfa9ff0",
         7464: "d527671518fba684fd01",
         7468: "53e0875c52dff3de164a",
-        7487: "c0d8195dd6dab3975615",
-        7539: "104191112b77b34b5111",
-        7591: "64c4a6924e87e3000209",
-        7637: "442a8284f83a2456f85c",
-        7653: "76f311e9307f4c789f0e",
+        7487: "49d81d8d15ad6c6cb411",
+        7637: "4d32b59b329ef468b7d5",
+        7653: "c508275c1b329d95d973",
         7673: "065a311d75b3213d4f15",
-        7724: "3ebcfeb67814aba1f1cb",
-        7786: "9bb5faf26b198c787094",
         7788: "d010383f4ccc1c1b6efb",
-        7861: "63671b2acc79688f22e9",
+        7861: "7b73403c160be056831f",
         7904: "116aefb93e005baea38e",
-        8016: "c0e05625206f9b393aa4",
-        8025: "0f6d0bc178820df7087c",
+        8016: "f51fbdb9a370ce988f71",
         8106: "9e5de4171728b3824d1d",
         8191: "7c71b0175a3b35434ec8",
-        8194: "a3c2c82981967a0bb30a",
+        8194: "cee76cc3439b0428bedd",
         8246: "d8dd4a47668b5bf225ab",
-        8306: "4c09e8a1a38f03ae82bd",
-        8311: "3eeeeb9f696e6db2acbc",
+        8311: "410eff68de4d1e8b26d0",
         8366: "fbd35ad496eb7892a424",
+        8476: "2a1a5a0621ee33cce652",
         8566: "cd93e0bf03daf5972185",
         8703: "644cfd9a31d1c4890881",
-        8759: "64839c1cf1d65d068251",
-        8766: "568c79e84ce11aed47a9",
-        8822: "757ff8d5daf96ec90e49",
+        8759: "c5da3a31f5e1a781a6b1",
+        8766: "99861106e88eb68fe3ec",
+        8822: "f6e77bc2564a0557665b",
         8833: "0db29dc3b45b31acb4a4",
         8855: "f6463721cab65712879d",
         8871: "db91511bbe45c67ef042",
         8930: "25153545da6040645366",
-        8967: "9c80671f181fafb22c63",
-        9027: "99a11776d1c5b10911cd",
-        9152: "50a4ea1fcbf9a17d5f47",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
         9457: "03ff4c6f7ee37e164af2",
-        9712: "3eeeb5ae8447bed29535",
-        9746: "53570359ca81bb16a3cc",
-        9808: "942f6e1ad27af2af89a2",
-        9925: "f44bd84f71b821f95c56",
-        9930: "4bbed5d2be374e02dfc0",
-        9947: "eceb2e5cbfafd46602ed",
+        9574: "ee1efd14ab96fa8cae92",
+        9668: "6dd0a225f937e6af2d71",
+        9746: "2cfaacb3359ab5b9bd3c",
+        9808: "21bf92301f1b8edb7b62",
+        9863: "9c5c03a5b7c37fd2753a",
+        9925: "77586f22def2595b9c64",
+        9930: "f92544de12d0462e95d3",
+        9947: "46317ab7a7ca29c36168",
       }[_]),
     (_.miniCssF = (_) =>
       "css/webui/" +
-      ({
+      {
         7462: "gamerecording",
         7653: "broadcastapp",
-      }[_] || _) +
+      }[_] +
       ".css?contenthash=" +
       {
-        3159: "75a6e9ff11215c0f2a0b",
         7462: "72980633e3cf3969529a",
         7653: "fe8e8bb145f728df7bdd",
       }[_]),
@@ -135510,7 +135535,6 @@ var CLSTAMP = "steamdb";
             ? _.push(_[_])
             : 0 !== _[_] &&
               {
-                3159: 1,
                 7462: 1,
                 7653: 1,
               }[_] &&
@@ -135578,6 +135602,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(16807));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(17526));
   _ = _._(_);
 })();
