@@ -47197,31 +47197,32 @@
             [_, _] = (0, _.useState)(0 == _.nAccountID),
             _ = _(),
             _ = _._.Get().GetEventInfo(_);
-          if (!_ || !_.event) return null;
+          if (
+            ((0, _.useEffect)(() => {
+              __webpack_require__(!1);
+            }, [_.nAccountID]),
+            !_ || !_.event)
+          )
+            return null;
           let _ = "";
           _.event == _._.INTERNATIONAL_2025
             ? (_ = "international2025")
             : _.event == _._.INTERNATIONAL_2026 && (_ = "international2026");
           const _ = `${_._.IMG_URL}${_}/players/${_.nAccountID}.png`,
             _ = `${_._.IMG_URL}player_unknown.png`;
-          return (
-            (0, _.useEffect)(() => {
-              __webpack_require__(!1);
-            }, [_.nAccountID]),
-            (0, _.jsx)("img", {
-              src: _ ? _ : _,
-              className: (0, _._)(_().TeamLogo, _.className),
-              style: {
-                width: _.nSize,
-                height: _.nSize,
-                minWidth: _.nSize,
-                minHeight: _.nSize,
-                opacity: _ ? 1 : 0,
-              },
-              onError: () => _(!0),
-              onLoad: () => __webpack_require__(!0),
-            })
-          );
+          return (0, _.jsx)("img", {
+            src: _ ? _ : _,
+            className: (0, _._)(_().TeamLogo, _.className),
+            style: {
+              width: _.nSize,
+              height: _.nSize,
+              minWidth: _.nSize,
+              minHeight: _.nSize,
+              opacity: _ ? 1 : 0,
+            },
+            onError: () => _(!0),
+            onLoad: () => __webpack_require__(!0),
+          });
         }),
         _ = (0, _._)(({ nTeamID: _ }) => {
           const _ = _._.Get().GetTeamInfo(_),
@@ -67799,7 +67800,6 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -67811,7 +67811,6 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -67835,12 +67834,6 @@
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -67856,10 +67849,14 @@
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           __webpack_require__
@@ -86971,7 +86968,7 @@
                   _ = _ ? _._ : _.hero_id,
                   _ = _?.heroes.find((_) => _._ == _),
                   _ = _?.heroes.find((_) => _._ == _);
-                return _._ == _._ && _._ == _._
+                return _ && _ && _._ == _._ && _._ == _._
                   ? _
                     ? 1
                     : _

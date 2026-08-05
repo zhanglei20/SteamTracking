@@ -3,14 +3,14 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
+      "./assets/w5BdYCZo.css",
+      "./assets/OgU23B6e.css",
       "./assets/3xv8kPpp.css",
       "./assets/DkFNAC8M.css",
       "./assets/B_X-Qmwj.css",
       "./assets/Dx1Ttx0j.css",
       "./assets/CdZgXrNi.css",
-      "./assets/w5BdYCZo.css",
       "./assets/BcZZxqzU.css",
-      "./assets/OgU23B6e.css",
       "./assets/rWtaY80N.css",
       "./assets/Cil0najV.css",
       "./assets/CBgaPm1z.css",
@@ -299,16 +299,35 @@ function _(_) {
     })
   );
 }
+function _(_, _) {
+  let _ = _.priority || 2 ** 53 - 1,
+    _ = _.priority || 2 ** 53 - 1;
+  return _ == _
+    ? _.date_added == _.date_added
+      ? (_.appid ?? 0) - (_.appid ?? 0)
+      : (_.date_added ?? 0) - (_.date_added ?? 0)
+    : _ - _;
+}
 function _(_, _, _) {
   _(_ >= 0 && _ < _.length, `Invalid source index: ${_} items: ${_.length}`),
     _(_ >= 0 && _ < _.length, `Invalid target index: ${_} items: ${_.length}`);
   let _ = _.slice(),
     _ = _.splice(_, 1);
   _.splice(_, 0, ..._);
+  let _ = _;
+  for (let _ = _.length - 1; _ > _; _--)
+    if (_[_].priority > 0) {
+      _ = _;
+      break;
+    }
   let _ = [],
     _ = [];
   return (
     _.forEach((_, _) => {
+      if (_ > _) {
+        _.push(_);
+        return;
+      }
       let _ = _ + 1;
       _.priority == _
         ? _.push(_)
@@ -356,7 +375,7 @@ function _(_, _, _) {
             priority: _,
           };
     });
-  return _ && _.sort((_, _) => _.priority - _.priority), _;
+  return _ && _.sort(_), _;
 }
 var _ = _.createContext(void 0);
 function _(_) {
@@ -9087,7 +9106,7 @@ function _(_) {
       dragHandleProps: _,
       bAllowDrag: _,
       appid: _,
-      nPriority: _,
+      nRank: _,
       setWishlistItemPriority: _,
     } = _,
     [_, _] = _.useState(void 0),
@@ -9101,7 +9120,7 @@ function _(_) {
       },
       [_, _, _],
     ),
-    _ = _ === void 0 ? _ : _;
+    _ = _ ?? _ ?? ``;
   return (0, _.jsxs)(`div`, {
     className: (0, _.default)(_, _),
     children: [
@@ -9281,7 +9300,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./BCrWG5A9.js`),
+    () => import(`./C-qL9R_J.js`),
     __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]),
     import.meta.url,
   ),
@@ -10562,6 +10581,7 @@ function _(_) {
     {
       moveWishlistItem: _,
       setWishlistItemPriority: _,
+      getWishlistItemRank: _,
       wishlist: _,
     } = _(!_, _.wishlist),
     _ = _(),
@@ -10588,7 +10608,7 @@ function _(_) {
             dragHandleProps: _.dragHandleProps,
             bAllowDrag: _,
             appid: _.appid,
-            nPriority: _.priority,
+            nRank: _(_),
             setWishlistItemPriority: _,
           }),
           _ = _
@@ -10607,7 +10627,7 @@ function _(_) {
           ..._,
         });
       },
-      [_, _, _, _, _],
+      [_, _, _, _, _, _],
     ),
     _ = _.useCallback(
       (_) => {
@@ -10666,10 +10686,7 @@ function _(_, _) {
   let _ = _(),
     _ = _() == `order`,
     { data: _ } = _(_.steamid),
-    _ = _.useMemo(
-      () => _?.items.slice().sort((_, _) => _.priority - _.priority) ?? [],
-      [_],
-    ),
+    _ = _.useMemo(() => _?.items.slice().sort(_) ?? [], [_]),
     [_, _] = _.useState(void 0),
     _ = _.useMemo(
       () =>
@@ -10682,14 +10699,20 @@ function _(_, _) {
       [_, _],
     ),
     _ = _?.rgRankOrderedItems ?? _,
+    _ = _.useMemo(() => new Map(_.map((_, _) => [_.appid, _ + 1])), [_]),
+    _ = _.useCallback((_) => _.get(_.appid) ?? (_.priority || void 0), [_]),
     { mutate: _ } = _({
       async mutationFn(_) {
         let _ = await _(`/wishlist/action`, `Reorder`, _);
         if (_?.result != 1) throw `Error updating wishlist data: ${_?.result}`;
         return !0;
       },
-      onMutate(_) {
-        _(_, _.steamid, _);
+      async onMutate(_) {
+        await _.cancelQueries({
+          queryKey: [`WishlistSortedFiltered`, _.steamid],
+          exact: !1,
+        }),
+          _(_, _.steamid, _);
       },
       onError() {
         _(_, _.steamid);
@@ -10731,6 +10754,7 @@ function _(_, _) {
       },
       [_, _],
     ),
+    getWishlistItemRank: _,
     wishlist: _,
   };
 }
