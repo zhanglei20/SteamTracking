@@ -2650,8 +2650,40 @@
                 }
               : _(_);
           }
-          function _(_) {
-            return _.find((_) => _.success && _.localization)?.localization;
+          function _(_, _) {
+            const _ = _.find((_) => _.success && _.localization)?.localization;
+            if (!_) return;
+            const _ = Object.keys(_.localization ?? {})
+              .filter((_) => !_(_, _))
+              .reduce((_, _) => ((_[_] = _.localization[_]), _), {});
+            return {
+              ..._,
+              localization: _,
+            };
+          }
+          function _(_, _) {
+            return _ in _.achievements || _ in _.csv
+              ? _.deleted.includes(_)
+                ? (0, _._)(
+                    "#AchievementEditor_Localization_Error_MissingFromDefinitions",
+                  )
+                : void 0
+              : (0, _._)("#AchievementEditor_Localization_Error_NoAchievement");
+          }
+          function _(_, _) {
+            return _.success && _.localization
+              ? Object.keys(_.localization.localization ?? {})
+                  .map((_) => ({
+                    apiName: _,
+                    message: _(_, _),
+                  }))
+                  .filter((_) => !!_.message)
+                  .map((_) => ({
+                    key: _.apiName,
+                    field: "api_name",
+                    message: _.message,
+                  }))
+              : [];
           }
           function _(_) {
             return _.find((_) => _.success && _.groupLocalization)
@@ -2666,11 +2698,28 @@
               ) ?? _
             );
           }
+          function _(_, _) {
+            if (!_.success || !_.image) return;
+            const _ = _(_.image.apiName, _);
+            return _ in _.achievements || _ in _.csv
+              ? _.deleted.includes(_)
+                ? (0, _._)(
+                    "#AchievementEditor_Image_Error_AchievementMissingFromCsv",
+                    _,
+                  )
+                : void 0
+              : (0, _._)(
+                  "#AchievementEditor_Image_Error_NoAchievement",
+                  _.image.apiName,
+                );
+          }
           function _(_, _, _) {
-            const _ = _.filter((_) => _.success && _.image).map((_) => ({
-                ..._.image,
-                apiName: _(_.image.apiName, _),
-              })),
+            const _ = _.filter((_) => _.success && _.image && !_(_, _)).map(
+                (_) => ({
+                  ..._.image,
+                  apiName: _(_.image.apiName, _),
+                }),
+              ),
               _ = new Set(_.map((_) => _.apiName));
             return Array.from(_).reduce((_, _) => {
               const _ = _.filter((_) => _.apiName == _),
@@ -2695,34 +2744,34 @@
             }, {});
           }
           function _(_, _) {
-            if (!_.success || !_.image) return !1;
-            const _ = _(_.image.apiName, _);
-            return !(_ in _.achievements) && !(_ in _.csv);
-          }
-          function _(_, _) {
-            const _ = (_) => _(_, _);
+            const _ = (_) => _(_, _),
+              _ = (_) => _(_, _),
+              _ = (_) => !!__webpack_require__(_) || _(_).length > 0;
             return {
               errors: [
                 ..._.filter((_) => !_.success),
-                ..._.filter(_).map((_) => ({
-                  ..._,
-                  success: !1,
-                  imageErrors: [
-                    {
-                      ..._.image.result,
-                      success: !1,
-                      error: (0, _._)(
-                        "#AchievementEditor_Image_Error_NoAchievement",
-                        _.image.apiName,
-                      ),
-                    },
-                  ],
-                })),
+                ..._.filter(_).map((_) => {
+                  const _ = __webpack_require__(_);
+                  return {
+                    ..._,
+                    success: !1,
+                    imageErrors: _
+                      ? [
+                          {
+                            ..._.image.result,
+                            success: !1,
+                            error: _,
+                          },
+                        ]
+                      : void 0,
+                    csvErrors: _ ? void 0 : _(_),
+                  };
+                }),
               ],
-              successes: _.filter((_) => _.success && !__webpack_require__(_)),
+              successes: _.filter((_) => _.success && !_(_)),
             };
           }
-          function _(_, _, _) {
+          function _(_, _, _, _) {
             const _ = (_) => ({
                 icon: _[_]?.achieved?.image?.image,
                 icon_gray: _[_]?.unachieved?.image?.image,
@@ -2766,7 +2815,7 @@
                     ..._(_),
                   })),
               ],
-              delete: _.deleted.map(_),
+              delete: _ ? _.deleted.map(_) : [],
             };
           }
           function _(_) {
@@ -2801,7 +2850,7 @@
               [_, _] = (0, _.useState)(!1),
               _ = (0, _.useRef)(void 0),
               _ = (0, _.useMemo)(() => _(_, _), [_, _]),
-              _ = (0, _.useMemo)(() => _(_), [_]),
+              _ = (0, _.useMemo)(() => _(_, _), [_, _]),
               _ = (0, _.useMemo)(() => _(_), [_]),
               _ = (0, _.useMemo)(() => _(_, _, _), [_, _, _]),
               { errors: _, successes: _ } = (0, _.useMemo)(
@@ -2856,7 +2905,7 @@
               acceptedTypes: _,
               save: async () => {
                 await _.mutateAsync(_(_)),
-                  await _.mutateAsync(_(_, _, _)),
+                  await _.mutateAsync(_(_, _, _, _)),
                   _(!0);
               },
               isSaving: _.isPending || _.isPending,
