@@ -8697,7 +8697,9 @@
             (this.m_rgAnswerChosen = Array());
         }
         BHasTerminalAnswerChosen() {
-          return this.m_rgAnswerChosen.some((_) => _.reveal_question_id == _._);
+          return this.m_rgAnswerChosen.some(
+            (_) => (null == _ ? void 0 : _.reveal_question_id) == _._,
+          );
         }
         static Get() {
           return (
@@ -30999,6 +31001,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        var _;
+        return (
+          ((null === (_ = null == _ ? void 0 : _.answers) || void 0 === _
+            ? void 0
+            : _.length) || 0) > 0
+        );
+      }
+      function _(_) {
         var _, _, _, _, _, _, _, _, _, _, _;
         const { event: _, section: _, language: _ } = _,
           _ = (0, _._)(),
@@ -31032,7 +31042,10 @@
         const _ = (0, _.useCallback)(
           (_, _) => {
             var _;
-            _ && _._.Get().OpenDoor(_ - 1),
+            _ &&
+              _ > 0 &&
+              (null == _ ? void 0 : _.correct) &&
+              _._.Get().OpenDoor(_ - 1),
               _(_),
               0 == _
                 ? (_(_ + 1),
@@ -31096,7 +31109,7 @@
                   .forEach((_) =>
                     _.push(_.find((_) => _.reveal_question_id == _.unique_id)),
                   ),
-                _
+                _.filter(Boolean)
               );
             }
             return _ ? _.slice(0, _ + 1) : _;
@@ -31106,6 +31119,13 @@
             _,
             null === (_ = _.quiz) || void 0 === _ ? void 0 : _.questions,
           ]),
+          _ = (0, _._)(() =>
+            Boolean(
+              "branching" == _ &&
+                _._.Get().GetLargestAnswerQuestion() > 0 &&
+                (_._.Get().BHasTerminalAnswerChosen() || !_(_[_.length - 1])),
+            ),
+          ),
           _ =
             _ &&
             Boolean(
@@ -31147,7 +31167,7 @@
             ],
           ),
           _ =
-            _ &&
+            Boolean(_) &&
             (_ >=
               (null ===
                 (_ =
@@ -31156,7 +31176,8 @@
                     : _.questions) || void 0 === _
                 ? void 0
                 : _.length) ||
-              ("branching" == _ && _._.Get().BHasTerminalAnswerChosen()));
+              _),
+          _ = _ || _;
         return (0, _.jsx)(_._, {
           feature: "salequiz",
           children: (0, _.jsxs)(_._, {
@@ -31221,26 +31242,23 @@
                   src: _,
                 }),
               Boolean(_) &&
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.description2,
-                      children: (0, _.jsx)(_._, {
-                        text: _,
-                        partnerEventStore: _._,
-                        showErrorInfo: _,
-                        event: _,
-                        languageOverride: _,
-                      }),
-                    }),
-                    (0, _.jsx)(_, {
-                      quiz_section: _.quiz,
-                      bPreviewMode: _,
-                      event: _,
-                      language: _,
-                      fnCorrectlyAnswered: _,
-                    }),
-                  ],
+                (0, _.jsx)("div", {
+                  className: _.description2,
+                  children: (0, _.jsx)(_._, {
+                    text: _,
+                    partnerEventStore: _._,
+                    showErrorInfo: _,
+                    event: _,
+                    languageOverride: _,
+                  }),
+                }),
+              Boolean(_) &&
+                (0, _.jsx)(_, {
+                  quiz_section: _.quiz,
+                  bPreviewMode: _,
+                  event: _,
+                  language: _,
+                  fnCorrectlyAnswered: _,
                 }),
             ],
           }),
@@ -31268,14 +31286,15 @@
             _.background_gradient_bottom,
             _.background_gradient_top,
           ]),
-          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`,
+          _ = "branching" == _ && !_(_);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.questionCtn, "questionCtn"),
           style: {
             background: _,
           },
           children: [
-            Boolean(!_) &&
+            Boolean(!_ && !_) &&
               (0, _.jsx)(_._, {
                 children: (0, _._)(
                   "scenario" == _
@@ -31335,14 +31354,16 @@
           } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useMemo)(() => {
-            const _ = [..._.answers];
+            const _ = [...(_.answers || [])];
             return _ && (0, _._)(_), _;
           }, [_.answers, _]),
-          [_, _] = (0, _.useState)(
-            _ && _._.Get().BIsDoorOpened(_)
-              ? _.indexOf(_.find((_) => _.correct))
-              : void 0,
-          ),
+          _ = "question_answer" == _,
+          [_, _] = (0, _.useState)(() => {
+            if (_ && _._.Get().BIsDoorOpened(_)) {
+              const _ = _.findIndex((_) => _.correct);
+              return _ >= 0 ? _ : void 0;
+            }
+          }),
           [_, _] = (0, _.useState)(_ && _._.Get().BIsDoorOpened(_) && _ >= 0),
           _ = _.map((_, _) =>
             (0, _.jsxs)(
@@ -31390,96 +31411,98 @@
               _ >= 0 && (void 0 === _ || _ != _) && (_(_), _(!0));
             }
           }, [_, _, _, _, _, _]),
-          _
-            ? _[_].correct
-              ? (0, _.jsxs)("div", {
-                  className: _.CorrectCtn,
+          0 == _.length
+            ? null
+            : _
+              ? !_ || _[_].correct
+                ? (0, _.jsxs)("div", {
+                    className: _.CorrectCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        children: (0, _._)(
+                          "scenario" == _ || "branching" == _
+                            ? "#SalePage_Quiz_Response"
+                            : "#SalePage_Correct",
+                        ),
+                      }),
+                      _[_],
+                      (0, _.jsx)(_, {
+                        videoDef: _[_].associated_video,
+                        bAutoPlay: _,
+                        language: _,
+                      }),
+                    ],
+                  })
+                : (0, _.jsxs)("div", {
+                    className: _.WrongCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        children: (0, _._)("#SalePage_Wrong"),
+                      }),
+                      _[_],
+                      (0, _.jsx)(_, {
+                        videoDef:
+                          (null ===
+                            (_ =
+                              null ===
+                                (_ =
+                                  null === (_ = _[_].associated_video) ||
+                                  void 0 === _
+                                    ? void 0
+                                    : _.video_info) || void 0 === _
+                                ? void 0
+                                : _.mp4_url) || void 0 === _
+                            ? void 0
+                            : _.trim().length) > 0 &&
+                          (null ===
+                            (_ =
+                              null ===
+                                (_ =
+                                  null === (_ = _[_].associated_video) ||
+                                  void 0 === _
+                                    ? void 0
+                                    : _.video_info) || void 0 === _
+                                ? void 0
+                                : _.webm_url) || void 0 === _
+                            ? void 0
+                            : _.trim().length) > 0
+                            ? _[_].associated_video
+                            : _,
+                        bAutoPlay: _,
+                        language: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: () => {
+                          _(!1), _(null);
+                        },
+                        children: (0, _._)("#SalePage_TryAgain"),
+                      }),
+                    ],
+                  })
+              : (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsx)(_._, {
                       children: (0, _._)(
                         "scenario" == _ || "branching" == _
                           ? "#SalePage_Quiz_Response"
-                          : "#SalePage_Correct",
+                          : "#SalePage_Answers",
                       ),
                     }),
-                    _[_],
-                    (0, _.jsx)(_, {
-                      videoDef: _[_].associated_video,
-                      bAutoPlay: _,
-                      language: _,
-                    }),
-                  ],
-                })
-              : (0, _.jsxs)("div", {
-                  className: _.WrongCtn,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _._)("#SalePage_Wrong"),
-                    }),
-                    _[_],
-                    (0, _.jsx)(_, {
-                      videoDef:
-                        (null ===
-                          (_ =
-                            null ===
-                              (_ =
-                                null === (_ = _[_].associated_video) ||
-                                void 0 === _
-                                  ? void 0
-                                  : _.video_info) || void 0 === _
-                              ? void 0
-                              : _.mp4_url) || void 0 === _
-                          ? void 0
-                          : _.trim().length) > 0 &&
-                        (null ===
-                          (_ =
-                            null ===
-                              (_ =
-                                null === (_ = _[_].associated_video) ||
-                                void 0 === _
-                                  ? void 0
-                                  : _.video_info) || void 0 === _
-                              ? void 0
-                              : _.webm_url) || void 0 === _
-                          ? void 0
-                          : _.trim().length) > 0
-                          ? _[_].associated_video
-                          : _,
-                      bAutoPlay: _,
-                      language: _,
+                    (0, _.jsx)("div", {
+                      className: _.answerBox,
+                      children: _,
                     }),
                     (0, _.jsx)(_._, {
+                      disabled: null == _,
                       onClick: () => {
-                        _(!1), _(null);
+                        _(!0), _(!0), (_ && !_[_].correct) || _(_ + 1, _[_]);
                       },
-                      children: (0, _._)("#SalePage_TryAgain"),
+                      children: (0, _._)(
+                        "scenario" == _ ? "#Button_Confirm" : "#Button_Submit",
+                      ),
                     }),
                   ],
                 })
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)(
-                      "scenario" == _ || "branching" == _
-                        ? "#SalePage_Quiz_Response"
-                        : "#SalePage_Answers",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.answerBox,
-                    children: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    disabled: null == _,
-                    onClick: () => {
-                      _(!0), _(!0), _[_].correct && _(_ + 1, _[_]);
-                    },
-                    children: (0, _._)(
-                      "scenario" == _ ? "#Button_Confirm" : "#Button_Submit",
-                    ),
-                  }),
-                ],
-              })
         );
       }
       function _(_) {
@@ -31566,26 +31589,28 @@
               className: _.ErrorStylesWithIcon,
               children: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
             })
-          : ("scenario" == _ || "branching" == _) &&
-              (null === (_ = _.answer_categories) || void 0 === _
-                ? void 0
-                : _.length) > 0
+          : "scenario" == _ || "branching" == _
             ? (0, _.jsxs)("div", {
                 className: (0, _._)("QuizScenarioSubmitCtn"),
                 children: [
-                  (0, _.jsx)(_._, {
-                    disabled: _,
-                    onClick: (_) =>
-                      (0, _._)(
-                        (0, _.jsx)(_, {
-                          quiz_section: _,
-                          bPreviewMode: _,
-                          fnSetError: _,
-                        }),
-                        (0, _._)(_),
-                      ),
-                    children: (0, _._)("#SalePage_Quiz_SubmitResponse"),
-                  }),
+                  Boolean(
+                    (null === (_ = _.answer_categories) || void 0 === _
+                      ? void 0
+                      : _.length) > 0,
+                  ) &&
+                    (0, _.jsx)(_._, {
+                      disabled: _,
+                      onClick: (_) =>
+                        (0, _._)(
+                          (0, _.jsx)(_, {
+                            quiz_section: _,
+                            bPreviewMode: _,
+                            fnSetError: _,
+                          }),
+                          (0, _._)(_),
+                        ),
+                      children: (0, _._)("#SalePage_Quiz_SubmitResponse"),
+                    }),
                   (0, _.jsx)(_._, {
                     disabled: _,
                     onClick: () => _(0, null),
@@ -31643,36 +31668,46 @@
                   _ < _ && ((_ = _), (_ = _));
                 });
                 const _ = _.answer_categories.find((_) => _.category_id == _);
-                "dev" == _._.WEB_UNIVERSE &&
-                  console.log(
-                    "Winning Category: " +
-                      (null == _ ? void 0 : _.category_name),
-                    (0, _._)(_),
-                    _.door_index,
-                  ),
-                  _._.Get()
-                    .OpenDoor(_.door_index, !0, "", _)
-                    .then((_) => {
-                      var _;
-                      _
-                        ? ((0, _._)(0, !0), _.token.reason || _())
-                        : (null === (_ = null == _ ? void 0 : _.token) ||
-                          void 0 === _
-                            ? void 0
-                            : _.reason) ||
-                          (console.error(
-                            "ScenarioQuizResetOrSubmit: Failed to save",
-                          ),
-                          _.token.reason || _.fnSetError(!0),
-                          _(!0));
-                    })
-                    .catch((_) => {
-                      console.error(
-                        "ScenarioQuizResetOrSubmit: Failed to save with exception",
-                      ),
+                if (
+                  ("dev" == _._.WEB_UNIVERSE &&
+                    console.log(
+                      "Winning Category: " +
+                        (null == _ ? void 0 : _.category_name),
+                      (0, _._)(_),
+                      null == _ ? void 0 : _.door_index,
+                    ),
+                  !_)
+                )
+                  return (
+                    console.error(
+                      "ScenarioQuizResetOrSubmit: No category matched the answers given",
+                    ),
+                    _.fnSetError(!0),
+                    void _(!0)
+                  );
+                _._.Get()
+                  .OpenDoor(_.door_index, !0, "", _)
+                  .then((_) => {
+                    var _;
+                    _
+                      ? ((0, _._)(0, !0), _.token.reason || _())
+                      : (null === (_ = null == _ ? void 0 : _.token) ||
+                        void 0 === _
+                          ? void 0
+                          : _.reason) ||
+                        (console.error(
+                          "ScenarioQuizResetOrSubmit: Failed to save",
+                        ),
                         _.token.reason || _.fnSetError(!0),
-                        _(!0);
-                    });
+                        _(!0));
+                  })
+                  .catch((_) => {
+                    console.error(
+                      "ScenarioQuizResetOrSubmit: Failed to save with exception",
+                    ),
+                      _.token.reason || _.fnSetError(!0),
+                      _(!0);
+                  });
               },
             });
       }
