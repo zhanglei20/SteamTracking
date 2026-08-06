@@ -340,6 +340,7 @@ $ORIGIN
 /tmp/dumps
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
+00:22:51
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
@@ -363,7 +364,6 @@ $ORIGIN
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
-17:19:57
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
@@ -391,6 +391,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
+Aug  6 2026
 Average %.2f fps, %.2f ms per frame\n
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
@@ -550,7 +551,6 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
-Jul 29 2026
 LOCK_EX
 LOCK_SH
 Leaked mem: %s %s\n
