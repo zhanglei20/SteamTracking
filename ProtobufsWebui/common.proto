@@ -1512,6 +1512,7 @@ message CMsgControllerConfiguration {
 	optional string action_block_path = 11;
 	optional .CMsgControllerActionSetMiscSettings misc_action_set_settings = 12;
 	optional string url = 13;
+	optional int32 selection_type = 14;
 }
 
 // Used by: common.proto
@@ -3419,6 +3420,10 @@ message CVRGamepadUIShared_Icon {
 	optional uint32 appid = 2;
 	optional string overlay = 3;
 	optional uint32 hwnd = 4;
+}
+
+message CVRGamepadUIShared_PathProperty_ClientSettings {
+	optional bool enable_ui_sounds = 1;
 }
 
 message CVRGamepadUIShared_PathProperty_ClientUserInfo {

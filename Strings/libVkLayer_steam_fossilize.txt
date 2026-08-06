@@ -49,7 +49,6 @@ $ORIGIN
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN9Fossilize13StateRecorder21init_recording_threadEPNS3_17DatabaseInterfaceEEUlvE_EEEEEE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG*
 ++CCUNGstd::exception
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
@@ -229,6 +228,7 @@ Fossilize ERROR: Failed to serialize application info.\n
 Fossilize ERROR: Failed to set FD flags.\n
 Fossilize ERROR: Failed to set IO priority for external replayer!\n
 Fossilize ERROR: Failed to set PGID in child.\n
+Fossilize ERROR: Failed to set PR_SET_PDEATHSIG, aborting child startup.\n
 Fossilize ERROR: Failed to set nice value for external replayer!\n
 Fossilize ERROR: Failed to set scheduling policy for external replayer!\n
 Fossilize ERROR: Failed to shallow copy pNext chain.
@@ -614,6 +614,7 @@ __wcsxfrm_l
 __wctype_l
 __xstat
 __xstat64
+_exit
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -754,6 +755,7 @@ correlationMasks
 covariant return thunk to
 cullMode
 customBorderColor
+customResolve
 d6\f6
 data
 data error
@@ -884,6 +886,7 @@ getentropy
 getenv
 getpgrp
 getpid
+getppid
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
@@ -1047,6 +1050,7 @@ pipelineFragmentShadingRate
 pipelineLayouts
 polygonMode
 posix_fadvise
+prctl
 preserveAttachments
 primitiveFragmentShadingRate
 primitiveFragmentShadingRateMeshShader

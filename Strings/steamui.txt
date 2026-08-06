@@ -2040,9 +2040,6 @@ ${LANGUAGE}
 %d:00
 %d\CDDialog
 %d\OverlayAppEnable
-%d\SteamControllerRumble
-%d\SteamControllerRumbleIntensity
-%d\UseSteamControllerConfig
 %daE<<0\f6
 %dx%d@%.2f target@%.2f, duration: G%.1f/C%.1f/C%.1f/E%.1f/N%.1f/D%.1f, network: RTT%.1f/S%dKb/C%dKb/L%dKb/Loss%d%%, latency: RTT%.1f/I%.1f/G%.1f/D%.1f
 %f %f %f %f
@@ -2367,6 +2364,9 @@ ${LANGUAGE}
 %u/config/%s/
 %u/config/%s/%s.vdf
 %u:sdl://%d
+%u\SteamControllerRumble
+%u\SteamControllerRumbleIntensity
+%u\UseSteamControllerConfig
 %x:%x.%x "%x" "%x" "%x"
 &&Lj66lZ??~A
 &'&)&5&;&?&K&S&Y&e&i&o&{&
@@ -5145,10 +5145,9 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGS
+++CCUNG8
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNGx
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -5554,6 +5553,7 @@ ${LANGUAGE}
 ,\n\vescalate_to
 ,\n\vpreferences
 ,bX3\tG}
+,local://controller_base/desktop_%s.vdf
 ,name:
 ,section=
 ,steammessages_unified_base.steamclient.proto
@@ -7561,6 +7561,7 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
+0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7605,15 +7606,15 @@ ${LANGUAGE}
 0000
 00000000
 0000000000000000000000000000000000000000
-0.15
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF03S
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
@@ -9877,8 +9878,10 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjPKc9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI23CSteamUIInputControllerJjjPKcbbEE
+20CJSMethodCallHandlerI23CSteamUIInputControllerJjjPKcbiEE
+20CJSMethodCallHandlerI23CSteamUIInputControllerJjjb9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjbEE
+20CJSMethodCallHandlerI23CSteamUIInputControllerJjjiEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjPKcS2_S2_9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjiiEE
@@ -13042,6 +13045,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -13054,7 +13058,6 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13600,6 +13603,7 @@ ${LANGUAGE}
 :EXTERNAL TYPE %s\n
 :LBN
 :L\n\rsetting_store
+:WE3
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
@@ -15070,6 +15074,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
+Aug  6 2026 00:23:29
 August
 Aura
 Australia/Adelaide
@@ -23968,7 +23973,6 @@ Input.SetSteamControllerDonglePairingMode
 Input.SetVirtualMenuKeySelected
 Input.SetWebBrowserActionset
 Input.SetXboxDriverInstallState
-Input.ShowControllerSettings
 Input.StandaloneKeyboardDismissed
 Input.StartControllerDeviceSupportFlow
 Input.StartEditingControllerConfigurationForAppIDAndControllerIndex
@@ -24409,7 +24413,6 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 29 2026 17:20:45
 July
 JumpList
 Jumplist
@@ -30603,7 +30606,6 @@ Steam - DirWatcher
 Steam App %u
 Steam Beta Update
 Steam Big Picture
-Steam Controller %u Identity is Guest - Forcing Guest Save.\n
 Steam Controller Setting Saved Binding Selection Failed - No Identity
 Steam Controller Setting Saved Binding Selection for AppID: %s, URL: %s, Controller: %s.\n
 Steam ID does not pass strict parsing: '%s'
@@ -40315,6 +40317,7 @@ eResult
 eRet != k_ESteamRealmUnknown
 eRumblePreference
 eSOUax
+eSelectionType
 eSessionState < k_ENumSessionStates
 eStage
 eState
@@ -41780,7 +41783,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -48846,6 +48849,7 @@ local://controller_base/basicui_neptune.vdf
 local://controller_base/chord%s
 local://controller_base/chord_controller_neptune.vdf
 local://controller_base/chord_triton.vdf
+local://controller_base/chord_xboxone.vdf
 local://controller_base/desktop_neptune.vdf
 local://controller_base/desktop_steamcontroller_gordon.vdf
 local://controller_base/empty.vdf

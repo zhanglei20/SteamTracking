@@ -106,6 +106,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123M
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -2269,7 +2270,6 @@ $steammessages_parental_objects.proto"
 %d\CDN\%s\expires
 %d\CDN\%s\token
 %d\OverlayAppEnable
-%d\UseSteamControllerConfig
 %d_%llu.manifest
 %d_*.manifest
 %daE<<0\f6
@@ -2820,6 +2820,7 @@ $steammessages_parental_objects.proto"
 %u/depotfromapp
 %u/manifests/public/gid
 %u/sharedinstall
+%u\UseSteamControllerConfig
 %u_depotcache_*.csd
 %verb%
 %x:%x.%x "%x" "%x" "%x"
@@ -5382,10 +5383,10 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -6444,13 +6445,13 @@ $steammessages_parental_objects.proto"
 ../clientdll/shadercachemanager/../depotreconstruct.h
 ../clientdll/shadercachemanager/../raterecorder.h
 ../clientdll/shadercachemanager/shadercachemanager.cpp
-../clientdll/shadercachemanager/shadercachemanager.cpp:2016
-../clientdll/shadercachemanager/shadercachemanager.cpp:2114
-../clientdll/shadercachemanager/shadercachemanager.cpp:2184
-../clientdll/shadercachemanager/shadercachemanager.cpp:2238
-../clientdll/shadercachemanager/shadercachemanager.cpp:3840
-../clientdll/shadercachemanager/shadercachemanager.cpp:3968
-../clientdll/shadercachemanager/shadercachemanager.cpp:4251
+../clientdll/shadercachemanager/shadercachemanager.cpp:2021
+../clientdll/shadercachemanager/shadercachemanager.cpp:2119
+../clientdll/shadercachemanager/shadercachemanager.cpp:2189
+../clientdll/shadercachemanager/shadercachemanager.cpp:2243
+../clientdll/shadercachemanager/shadercachemanager.cpp:3845
+../clientdll/shadercachemanager/shadercachemanager.cpp:3973
+../clientdll/shadercachemanager/shadercachemanager.cpp:4256
 ../clientdll/shadercachemanager/shadercontentupdatejob.cpp
 ../clientdll/sitelicenseclient.cpp
 ../clientdll/steamclient.cpp
@@ -8161,15 +8162,14 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -11724,11 +11724,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
+2048
 20000
 2000000
-200M
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12367,6 +12367,7 @@ $steammessages_parental_objects.proto"
 23StoreItem_IncludedItems
 23UserAchievementStored_t
 24 Mbps
+24000
 24CAPIJobAuthorizeMicroTxn
 24CAPIJobCancelReservation
 24CAPIJobCreatePartyBeacon
@@ -12481,7 +12482,6 @@ $steammessages_parental_objects.proto"
 25.CMsgRemoteDeviceAuthorizationRequest.EKeyEscrowUsage
 25.CMsgSteamDatagramRouterPingReply.AltAddress.Protocol:
 2500
-24000
 256 Kbps
 256K
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
@@ -17220,6 +17220,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -18183,7 +18184,6 @@ BConnectToPipe - couldn't set TCP_NODELAY
 BConnected
 BConnected()
 BConnectionState_Connecting failed creating loopback pipe socket pair.  %s
-BControllerHasUniqueConfigForAppID
 BConvertMsgClientAuthList - deprecated 1
 BConvertMsgClientAuthList - deprecated 2
 BConvertMsgClientAuthList - pb
@@ -18680,7 +18680,7 @@ Bad cert.  %s.  Dropping.
 Bad cert: %s
 Bad chat member info received in chat info update
 Bad client_identity_string '%s'\n
-Bad controller index in BControllerHasUniqueConfigForAppID
+Bad controller index in ControllerHasUniqueConfigForAppID
 Bad data received in chat info update
 Bad data received in chat room info update
 Bad data received in chat room state change
@@ -23100,6 +23100,7 @@ ControllerBindings
 ControllerConfigResponse
 ControllerConfigUsage
 ControllerGyroEulerAngles
+ControllerHasUniqueConfigForAppID
 ControllerPersonalization
 ControllerQuaternion
 ControllerSettingsChanged
@@ -23962,6 +23963,7 @@ Disable the glcomposer workaround applied to some video drivers
 Disable the shader manager
 Disable the usage of the safe browser shutdown workaround for Linux+NV
 Disable touch input browser focus workaround
+DisableClientShaderManagement
 DisableDownloads
 DisableLinuxLocaleOverride
 DisableMoveApp
@@ -26178,6 +26180,7 @@ Fossilize ERROR: Failed to mmap shared block.\n
 Fossilize ERROR: Failed to set FD flags.\n
 Fossilize ERROR: Failed to set IO priority for external replayer!\n
 Fossilize ERROR: Failed to set PGID in child.\n
+Fossilize ERROR: Failed to set PR_SET_PDEATHSIG, aborting child startup.\n
 Fossilize ERROR: Failed to set nice value for external replayer!\n
 Fossilize ERROR: Failed to set scheduling policy for external replayer!\n
 Fossilize ERROR: Failed to start external process %s with execv.\n
@@ -35113,6 +35116,7 @@ Server sent us encrypted file even though we said we couldn't handle it
 ServerAddress
 ServerBrowser:Active Queries %d skipped same IP %d started %d visited %d Ping %d Remaining %d Failed %d UniqueIPs %d\n
 ServerBrowser:AddNewServer: Adding %s estimated ping %d\n
+ServerBrowser:AddNewServer: Duplicate server IP %s {%d} SteamID %lld \n
 ServerBrowser:GMS search returned %d servers \n
 ServerBrowser:GMS search started %d \n
 ServerBrowser:PingServer: server: %s\n
@@ -40205,7 +40209,7 @@ Zulu
 [AppID %u] Skipping download of file %s to our platform, failed to resolve path
 [AppID %u] Skipping invalid upload entry with offset/size (%lu/%u) that exceeds shaderBuffer size (%lu) in file %s\n
 [AppID %u] Skipping invalid upload entry with offset/size (%lu/%u) that has negative shaderBuffer size (%d) in file %s\n
-[AppID %u] Skipping subscription list update (not needed).
+[AppID %u] Skipping subscription list update. Last updated less than a day ago ( %u < %u ).
 [AppID %u] Source manifest %llu of size %llu.
 [AppID %u] Starting PublishFile
 [AppID %u] Starting Shader Swarm download job.
@@ -40214,7 +40218,8 @@ Zulu
 [AppID %u] Starting Workshop download job (%s %s %s)
 [AppID %u] Starting Workshop download job (requested item %llu )
 [AppID %u] Starting sync (%s)
-[AppID %u] Subscribed items changed
+[AppID %u] Subscribed items changed. Number of items: %d (update time: %u)
+[AppID %u] Subscribed items did not change. Number of items: %d (cache update time: %u)
 [AppID %u] Subscribed to item %llu @ %s
 [AppID %u] Successfully synced to ChangeNumber %llu
 [AppID %u] Sync Failed, no user set
@@ -46971,7 +46976,6 @@ disconnect callback: %s
 disconnectMethod
 disconnect_scheduled
 disconnected
-disconnected_this_frame
 disconnecting all
 discount
 discount_amount
@@ -48785,6 +48789,7 @@ getnameinfo
 getpeername
 getpgrp
 getpid
+getppid
 getpwuid
 getrlimit
 getservbyname
@@ -56482,7 +56487,6 @@ n?SZn?
 nAckEnd <= nLastPktToAck
 nAckEnd == nLastPktToAck+1
 nAckEnd > 0
-nActionArrayIndex < STEAM_CONTROLLER_MAX_ANALOG_ACTIONS
 nActiveIndex == INT_MAX
 nAddressFamilies & k_nAddressFamily_IPv4
 nAmount
@@ -58923,6 +58927,7 @@ pq->q[item->index] == item
 pqualid
 pqueue_new
 pragma
+prctl
 pread64
 precise_frame_rate
 prediction resistance not supported
@@ -61390,7 +61395,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 29 2026 17:20:09
+steam Aug  6 2026 00:22:56
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
