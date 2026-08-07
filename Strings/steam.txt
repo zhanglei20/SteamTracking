@@ -1988,9 +1988,6 @@ $ffn
 00000000
 00003333
 00:00:00
-00:22:51
-00:22:55
-00:22:56
 01/01/00
 0123456789.
 0123456789
@@ -2522,6 +2519,8 @@ $ffn
 2048
 208.64.200.0/22
 208.78.164.0/22
+20:15:03
+20:15:08
 20CCDDBAppDetailCommon
 20CECSigningPrivateKey
 20CNetFilterEncryption
@@ -2761,10 +2760,10 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 65536
 60000000
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
@@ -3419,7 +3418,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug  6 2026
+Aug  7 2026
 August
 Aura
 AuthANY
@@ -9276,7 +9275,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug  6 2026 00:22:56
+Startup - updater built Aug  7 2026 20:15:08
 State
 StaticFileWriterThread()
 Steam

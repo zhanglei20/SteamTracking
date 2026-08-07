@@ -269,8 +269,6 @@ $\nY8O
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:22:51
-00:22:52
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -285,6 +283,8 @@ $\nY8O
 16IKeyValuesSystem
 18CUtlCharConversion
 19CUtlNoEscConversion
+20:15:03
+20:15:05
 21CUtlCStringConversion
 30!]^JV
 31CAdHocValidation_SimpleCallback
@@ -318,7 +318,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug  6 2026
+Aug  7 2026
 Average %.2f fps, %.2f ms per frame\n
 Bad expression token: %c %c\n
 Bad expression token: %c at %d in %s\n

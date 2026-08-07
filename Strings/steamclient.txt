@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123M
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -5383,10 +5382,10 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -8108,10 +8107,14 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+0000000000000000000000000000000000000000
 0.0333
+0.13.15.106
+00000
+000000
+00000000
 0.050
 0.125
-0.13.15.106
 0.15
 0.65
 0.75
@@ -8156,21 +8159,18 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-00000
-000000
-00000000
-0000000000000000000000000000000000000000
 00000001
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -11724,11 +11724,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-200M
-2019
 2048
 20000
 2000000
+200M
+2019
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16093,8 +16093,9 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-65536
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
+7200
+65536
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
 66CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults
@@ -16172,7 +16173,6 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
-7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -16654,6 +16654,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hh;
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17220,7 +17221,6 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -24862,6 +24862,7 @@ E\r\f52
 E\tONW;_
 E]sv
 Each IPC call is being logged to %s.\n
+Eapn
 Easy Listening
 EcLogging
 Econ
@@ -37631,6 +37632,7 @@ TimeCreated
 TimeDetected
 TimeExpiration
 TimeLastAppRan
+TimeLastFullCheck
 TimeLastUpdated
 TimeMediaDetected
 TimeNextProcess
@@ -40136,6 +40138,7 @@ Zulu
 [AppID %u] FileWriteAsync Failed to write file '%s' to temp disk location '%s'
 [AppID %u] Finished Shader Swarm download job: %s
 [AppID %u] Finished Workshop download job : %s
+[AppID %u] Full item info check updated %d item(s)
 [AppID %u] Get details for item %llu failed : %s
 [AppID %u] GetAppQuotaUsage - Success
 [AppID %u] GetAppQuotaUsage Failed: '%s' (%d)
@@ -40185,6 +40188,7 @@ Zulu
 [AppID %u] Preview file %s is too small, could not be an image.
 [AppID %u] PublishFile complete, result %s
 [AppID %u] QueryFiles failed: %s (%s)
+[AppID %u] Reconciling full workshop item list
 [AppID %u] Removing installed item %llu, manifest %llu
 [AppID %u] Requested playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for %u items
@@ -48805,7 +48809,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -53637,7 +53641,7 @@ low-pri yield - ../clientdll/clientjob.cpp:456
 low-pri yield - ../clientdll/clientjob.cpp:487
 low-pri yield - ../clientdll/clientjob.cpp:796
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:6966
+low-pri yield - ../clientdll/clientugc.cpp:6990
 low-pri yield - ../clientdll/compatmanager.cpp:2081
 low-pri yield - ../clientdll/compatmanager.cpp:2337
 low-pri yield - ../clientdll/compatmanager.cpp:2604
@@ -53650,8 +53654,8 @@ low-pri yield - ../clientdll/csinterface.cpp:223
 low-pri yield - ../clientdll/depotbuilder.cpp:107
 low-pri yield - ../clientdll/depotreconstruct.cpp:3066
 low-pri yield - ../clientdll/peercontentserver.cpp:712
-low-pri yield - ../clientdll/subscribedfilelistcache.cpp:372
-low-pri yield - ../clientdll/subscribedfilelistcache.cpp:389
+low-pri yield - ../clientdll/subscribedfilelistcache.cpp:397
+low-pri yield - ../clientdll/subscribedfilelistcache.cpp:414
 low-pri yield - ../clientdll/userscreenshots.cpp:2681
 low-pri yield - ../clientdll/userscreenshots.cpp:2700
 lower
@@ -61395,7 +61399,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug  6 2026 00:22:56
+steam Aug  7 2026 20:15:08
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -64318,6 +64322,7 @@ workshop_accepted
 workshop_itemid
 workshop_items
 workshop_items_cache_days
+workshop_items_full_check_interval
 workshop_items_update_interval
 workshop_log
 workshop_status
