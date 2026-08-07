@@ -267,6 +267,8 @@
         EligibleGamesTable: "_3sBXwILYFyzoFqxMG_Q5yE",
         DialogErrorText: "_3u50nUTSryVrDLFl57rnyA",
         OptInEditorTOCPlacement: "_1YPyflvb4EvPJV9IKbG3CI",
+        MissingDeadlineWarning: "_3QCPp5tB0gqImVkvsNBONz",
+        MissingDeadlineWarningLink: "_1aJucl2-IjQwXAk6lR1n05",
       };
     },
     chunkid: (module) => {
@@ -23474,270 +23476,319 @@
           })
         );
       }
+      var _ = __webpack_require__("chunkid");
+      const _ = "OptInEdit_Requirements";
       const _ = (0, _._)((_) => {
-        const _ = _._.Get(),
-          _ = _.BIsReleaseGamesEligible() || _.BIsUnreleaseGamesEligible();
-        return (0, _.jsxs)(_._, {
-          title: "Registration Requirements",
-          bStartMinimized: !1,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _().Section,
-              children: [
-                (0, _.jsx)("h3", {
-                  children: "Registration Deadline",
-                }),
-                (0, _.jsx)(_._, {
-                  strDescription: void 0,
-                  nEarliestTime: 0,
-                  fnGetTimeToUpdate: () => _.GetOptInDeadlineTime(),
-                  fnSetTimeToUpdate: _.SetOptInDeadlineTime,
-                  fnIsValidDateTime: () => !0,
-                  bShowTimeZone: !0,
-                }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: _().Section,
-              children: [
-                (0, _.jsx)("h3", {
-                  children: "Visibility",
-                }),
-                (0, _.jsx)("div", {
-                  className: _().SectionDesc,
-                  children:
-                    "By default, optins are visible to partners if it's enabled. If set to be visible only to invited partners, the partner must also own the app to see the optin.",
-                }),
-                (0, _.jsx)(_._, {
-                  onChange: (_) =>
-                    _.SetVisibility(
-                      _
-                        ? _._.k_EOptInVisibility_InviteOnly
-                        : _._.k_EOptInVisibility_Public,
-                    ),
-                  label: "Visible only to invited partners",
-                  checked: _.EVisibility() == _._.k_EOptInVisibility_InviteOnly,
-                }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: _().Section,
-              children: [
-                (0, _.jsx)("h3", {
-                  children: "ELIGIBILITY SETTING",
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().SectionDesc,
-                  children: [
-                    "Enable this to limit participation to only invitied games or partners.",
-                    (0, _.jsx)("br", {}),
-                    "Disable to use criteria to determine participation eligibility.",
-                  ],
-                }),
-                (0, _.jsx)(_._, {
-                  onChange: (_) => {
-                    _.SetInvititationOnly(_);
-                  },
-                  label: "Make participation invite-only",
-                  checked: _.BIsInvitationOnly(),
-                }),
-                !!_.BIsInvitationOnly() &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: (0, _.jsx)("div", {
-                      className: _().Section,
-                      children: (0, _.jsx)(_, {}),
-                    }),
+          const _ = _._.Get(),
+            _ = (0, _._)();
+          return _.GetOptInDeadlineTime()
+            ? null
+            : (0, _.jsxs)("div", {
+                className: _.className
+                  ? _.className
+                  : _().MissingDeadlineWarning,
+                children: [
+                  "No Registration Deadline is set on this opt-in, so the event start date (",
+                  (0, _._)(_.GetEventStartTime() || 0),
+                  ") is being shown in its place.",
+                  " ",
+                  _
+                    ? (0, _.jsx)("button", {
+                        type: "button",
+                        className: _().MissingDeadlineWarningLink,
+                        onClick: () =>
+                          (function (_) {
+                            (0, _._)(_, "tab", "editor"),
+                              window.sessionStorage.setItem(
+                                "editorCurrentTab",
+                                "?tab=editor",
+                              );
+                            let _ = 10;
+                            const _ = () => {
+                              const _ = document.getElementById(_);
+                              _
+                                ? (_.scrollIntoView(!0),
+                                  window.scrollBy(0, -75))
+                                : _-- > 0 && window.requestAnimationFrame(_);
+                            };
+                            window.requestAnimationFrame(_);
+                          })(_),
+                        children:
+                          "Set it in Editor → Registration Requirements",
+                      })
+                    : (0, _.jsx)("span", {
+                        children:
+                          "Set it in Editor → Registration Requirements.",
+                      }),
+                ],
+              });
+        }),
+        _ = (0, _._)((_) => {
+          const _ = _._.Get(),
+            _ = _.BIsReleaseGamesEligible() || _.BIsUnreleaseGamesEligible();
+          return (0, _.jsxs)(_._, {
+            title: "Registration Requirements",
+            bStartMinimized: !1,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().Section,
+                children: [
+                  (0, _.jsx)("h3", {
+                    children: "Registration Deadline",
                   }),
-                !_.BIsInvitationOnly() &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: (0, _.jsxs)("div", {
-                      className: _().Section,
-                      children: [
-                        (0, _.jsx)("h3", {
-                          children: "ELIGIBILITY CRITERIA SETTINGS",
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _().IndentedSubSection,
-                          children: [
-                            (0, _.jsxs)("div", {
-                              className: _().SectionDesc,
-                              children: [
-                                "Use the settings below to define one or more criteria that determines which games can participate.",
-                                (0, _.jsx)("br", {}),
-                                (0, _.jsx)("br", {}),
-                              ],
-                            }),
-                            (0, _.jsx)("h3", {
-                              children: "LIMIT BY RELEASE DATE",
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _().Section,
-                              children: [
-                                !Boolean(_) &&
-                                  (0, _.jsx)("div", {
-                                    className: _().WarningStylesWithIcon,
-                                    children: "Required Setting for OptIn",
+                  (0, _.jsx)(_._, {
+                    strDescription: void 0,
+                    nEarliestTime: 0,
+                    fnGetTimeToUpdate: () => _.GetOptInDeadlineTime(),
+                    fnSetTimeToUpdate: _.SetOptInDeadlineTime,
+                    fnIsValidDateTime: () => !0,
+                    bShowTimeZone: !0,
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().Section,
+                children: [
+                  (0, _.jsx)("h3", {
+                    children: "Visibility",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionDesc,
+                    children:
+                      "By default, optins are visible to partners if it's enabled. If set to be visible only to invited partners, the partner must also own the app to see the optin.",
+                  }),
+                  (0, _.jsx)(_._, {
+                    onChange: (_) =>
+                      _.SetVisibility(
+                        _
+                          ? _._.k_EOptInVisibility_InviteOnly
+                          : _._.k_EOptInVisibility_Public,
+                      ),
+                    label: "Visible only to invited partners",
+                    checked:
+                      _.EVisibility() == _._.k_EOptInVisibility_InviteOnly,
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().Section,
+                children: [
+                  (0, _.jsx)("h3", {
+                    children: "ELIGIBILITY SETTING",
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().SectionDesc,
+                    children: [
+                      "Enable this to limit participation to only invitied games or partners.",
+                      (0, _.jsx)("br", {}),
+                      "Disable to use criteria to determine participation eligibility.",
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    onChange: (_) => {
+                      _.SetInvititationOnly(_);
+                    },
+                    label: "Make participation invite-only",
+                    checked: _.BIsInvitationOnly(),
+                  }),
+                  !!_.BIsInvitationOnly() &&
+                    (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsx)("div", {
+                        className: _().Section,
+                        children: (0, _.jsx)(_, {}),
+                      }),
+                    }),
+                  !_.BIsInvitationOnly() &&
+                    (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsxs)("div", {
+                        className: _().Section,
+                        children: [
+                          (0, _.jsx)("h3", {
+                            children: "ELIGIBILITY CRITERIA SETTINGS",
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().IndentedSubSection,
+                            children: [
+                              (0, _.jsxs)("div", {
+                                className: _().SectionDesc,
+                                children: [
+                                  "Use the settings below to define one or more criteria that determines which games can participate.",
+                                  (0, _.jsx)("br", {}),
+                                  (0, _.jsx)("br", {}),
+                                ],
+                              }),
+                              (0, _.jsx)("h3", {
+                                children: "LIMIT BY RELEASE DATE",
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _().Section,
+                                children: [
+                                  !Boolean(_) &&
+                                    (0, _.jsx)("div", {
+                                      className: _().WarningStylesWithIcon,
+                                      children: "Required Setting for OptIn",
+                                    }),
+                                  (0, _.jsx)(_._, {
+                                    label: "Released games are eligible",
+                                    checked: _.BIsReleaseGamesEligible(),
+                                    onChange: _.SetReleaseGameEligible,
                                   }),
-                                (0, _.jsx)(_._, {
-                                  label: "Released games are eligible",
-                                  checked: _.BIsReleaseGamesEligible(),
-                                  onChange: _.SetReleaseGameEligible,
-                                }),
-                                (0, _.jsx)(_._, {
-                                  label: "Unreleased games are eligible",
-                                  checked: _.BIsUnreleaseGamesEligible(),
-                                  onChange: _.SetUnreleaseGameEligible,
-                                }),
-                                Boolean(_.BIsUnreleaseGamesEligible()) &&
-                                  (0, _.jsxs)(_.Fragment, {
+                                  (0, _.jsx)(_._, {
+                                    label: "Unreleased games are eligible",
+                                    checked: _.BIsUnreleaseGamesEligible(),
+                                    onChange: _.SetUnreleaseGameEligible,
+                                  }),
+                                  Boolean(_.BIsUnreleaseGamesEligible()) &&
+                                    (0, _.jsxs)(_.Fragment, {
+                                      children: [
+                                        (0, _.jsx)(_._, {
+                                          strDescription: "Must release AFTER",
+                                          nEarliestTime: 0,
+                                          fnGetTimeToUpdate: () =>
+                                            _.GetEligibleReleaseAfterDate(),
+                                          fnSetTimeToUpdate:
+                                            _.SetEligibleReleaseAfterDate,
+                                          fnIsValidDateTime: () => !0,
+                                          bAllowClear: !0,
+                                          bShowTimeZone: !0,
+                                        }),
+                                        (0, _.jsx)(_._, {
+                                          strDescription: "Must release BEFORE",
+                                          nEarliestTime: 0,
+                                          fnGetTimeToUpdate: () =>
+                                            _.GetEligibleReleaseBeforeDate(),
+                                          fnSetTimeToUpdate:
+                                            _.SetEligibleReleaseBeforeDate,
+                                          fnIsValidDateTime: () => !0,
+                                          bAllowClear: !0,
+                                          bShowTimeZone: !0,
+                                        }),
+                                      ],
+                                    }),
+                                ],
+                              }),
+                              (0, _.jsx)("h3", {
+                                children: "LIMIT BY COOLDOWN GROUP",
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _().Section,
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    label:
+                                      "Games are ineligible to optin to this event if already opted in to an event of the same type",
+                                    checked: _.GetCooldownRequired(),
+                                    onChange: _.SetCooldownRequired,
+                                  }),
+                                  (0, _.jsxs)("div", {
+                                    className: _().InviteButtonRow,
                                     children: [
                                       (0, _.jsx)(_._, {
-                                        strDescription: "Must release AFTER",
-                                        nEarliestTime: 0,
-                                        fnGetTimeToUpdate: () =>
-                                          _.GetEligibleReleaseAfterDate(),
-                                        fnSetTimeToUpdate:
-                                          _.SetEligibleReleaseAfterDate,
-                                        fnIsValidDateTime: () => !0,
-                                        bAllowClear: !0,
-                                        bShowTimeZone: !0,
+                                        label: "Cooldown Group",
+                                        rgOptions: _.GetCooldownGroupOptions(),
+                                        selectedOption:
+                                          _.GetCooldownGroupType(),
+                                        onChange: (_) =>
+                                          _.SetCooldownGroupType(_.data),
+                                        contextMenuPositionOptions: {
+                                          bDisableMouseOverlay: !0,
+                                        },
                                       }),
-                                      (0, _.jsx)(_._, {
-                                        strDescription: "Must release BEFORE",
-                                        nEarliestTime: 0,
-                                        fnGetTimeToUpdate: () =>
-                                          _.GetEligibleReleaseBeforeDate(),
-                                        fnSetTimeToUpdate:
-                                          _.SetEligibleReleaseBeforeDate,
-                                        fnIsValidDateTime: () => !0,
-                                        bAllowClear: !0,
-                                        bShowTimeZone: !0,
+                                      (0, _.jsx)("div", {
+                                        className: _().NarrowInputField,
+                                        children: (0, _.jsx)(_._, {
+                                          label:
+                                            "Cooldown Window (in number of days)",
+                                          type: "number",
+                                          value: _.GetCooldownDays(),
+                                          maxLength: 4,
+                                          onChange: (_) =>
+                                            _.SetCooldownDays(
+                                              parseInt(_.target.value),
+                                            ),
+                                        }),
                                       }),
                                     ],
                                   }),
-                              ],
-                            }),
-                            (0, _.jsx)("h3", {
-                              children: "LIMIT BY COOLDOWN GROUP",
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _().Section,
-                              children: [
-                                (0, _.jsx)(_._, {
-                                  label:
-                                    "Games are ineligible to optin to this event if already opted in to an event of the same type",
-                                  checked: _.GetCooldownRequired(),
-                                  onChange: _.SetCooldownRequired,
-                                }),
-                                (0, _.jsxs)("div", {
-                                  className: _().InviteButtonRow,
-                                  children: [
-                                    (0, _.jsx)(_._, {
-                                      label: "Cooldown Group",
-                                      rgOptions: _.GetCooldownGroupOptions(),
-                                      selectedOption: _.GetCooldownGroupType(),
-                                      onChange: (_) =>
-                                        _.SetCooldownGroupType(_.data),
-                                      contextMenuPositionOptions: {
-                                        bDisableMouseOverlay: !0,
+                                ],
+                              }),
+                              (0, _.jsx)("h3", {
+                                children: "LIMIT BY TAG",
+                              }),
+                              (0, _.jsx)("div", {
+                                className: _().SectionDesc,
+                                children:
+                                  "Games must have one of these tags to participate",
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _().Section,
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    isSearchable: !0,
+                                    isMulti: !0,
+                                    onChange: _.OnChangeRequiredTags,
+                                    value: _.GetRequiredTags(),
+                                    options: _.GetGameTagOptions(),
+                                  }),
+                                  (0, _.jsx)("br", {}),
+                                  (0, _.jsx)("br", {}),
+                                  (0, _.jsx)("div", {
+                                    className: _().NarrowInputField,
+                                    children: (0, _.jsx)(_._, {
+                                      type: "number",
+                                      min: "1",
+                                      max: "40",
+                                      label:
+                                        "Max Rank for the Apps Weighted Official Tag to Include",
+                                      tooltip:
+                                        "When comparing against the app list of official weighted tags; this is the largest rank to include. Default is 20 if not specified on the server.  Make sure 1) set field, 2) save opt in, 3) publish opt in, 4) refresh stats 5) ??? 6) Profit",
+                                      value:
+                                        _.GetAppOfficialWeightedTagRankToInclude(),
+                                      onChange: (_) => {
+                                        const _ =
+                                          Number.parseInt(
+                                            _.currentTarget.value,
+                                          ) || 20;
+                                        _.SetAppOfficialWeightedTagRankToInclude(
+                                          _,
+                                        );
                                       },
                                     }),
-                                    (0, _.jsx)("div", {
-                                      className: _().NarrowInputField,
-                                      children: (0, _.jsx)(_._, {
-                                        label:
-                                          "Cooldown Window (in number of days)",
-                                        type: "number",
-                                        value: _.GetCooldownDays(),
-                                        maxLength: 4,
-                                        onChange: (_) =>
-                                          _.SetCooldownDays(
-                                            parseInt(_.target.value),
-                                          ),
-                                      }),
-                                    }),
-                                  ],
-                                }),
-                              ],
-                            }),
-                            (0, _.jsx)("h3", {
-                              children: "LIMIT BY TAG",
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _().SectionDesc,
-                              children:
-                                "Games must have one of these tags to participate",
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _().Section,
-                              children: [
-                                (0, _.jsx)(_._, {
-                                  isSearchable: !0,
-                                  isMulti: !0,
-                                  onChange: _.OnChangeRequiredTags,
-                                  value: _.GetRequiredTags(),
-                                  options: _.GetGameTagOptions(),
-                                }),
-                                (0, _.jsx)("br", {}),
-                                (0, _.jsx)("br", {}),
-                                (0, _.jsx)("div", {
-                                  className: _().NarrowInputField,
-                                  children: (0, _.jsx)(_._, {
-                                    type: "number",
-                                    min: "1",
-                                    max: "40",
-                                    label:
-                                      "Max Rank for the Apps Weighted Official Tag to Include",
-                                    tooltip:
-                                      "When comparing against the app list of official weighted tags; this is the largest rank to include. Default is 20 if not specified on the server.  Make sure 1) set field, 2) save opt in, 3) publish opt in, 4) refresh stats 5) ??? 6) Profit",
-                                    value:
-                                      _.GetAppOfficialWeightedTagRankToInclude(),
-                                    onChange: (_) => {
-                                      const _ =
-                                        Number.parseInt(
-                                          _.currentTarget.value,
-                                        ) || 20;
-                                      _.SetAppOfficialWeightedTagRankToInclude(
-                                        _,
-                                      );
-                                    },
                                   }),
-                                }),
-                              ],
-                            }),
-                            (0, _.jsx)("h3", {
-                              children: "LIMIT BY APP FEATURES",
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _().SectionDesc,
-                              children:
-                                "Games must have one of these features to participate",
-                            }),
-                            (0, _.jsxs)("div", {
-                              className: _().Section,
-                              children: [
-                                (0, _.jsx)(_._, {
-                                  label: "Remote Play Together",
-                                  checked: _.BRequiresRemotePlayTogether(),
-                                  onChange: _.SetRequiresRemotePlayTogether,
-                                }),
-                                (0, _.jsx)(_._, {
-                                  label: "VR",
-                                  checked: _.BRequiresVR(),
-                                  onChange: _.SetRequiresVR,
-                                }),
-                              ],
-                            }),
-                          ],
-                        }),
-                      ],
+                                ],
+                              }),
+                              (0, _.jsx)("h3", {
+                                children: "LIMIT BY APP FEATURES",
+                              }),
+                              (0, _.jsx)("div", {
+                                className: _().SectionDesc,
+                                children:
+                                  "Games must have one of these features to participate",
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _().Section,
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    label: "Remote Play Together",
+                                    checked: _.BRequiresRemotePlayTogether(),
+                                    onChange: _.SetRequiresRemotePlayTogether,
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    label: "VR",
+                                    checked: _.BRequiresVR(),
+                                    onChange: _.SetRequiresVR,
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
                     }),
-                  }),
-              ],
-            }),
-          ],
+                ],
+              }),
+            ],
+          });
         });
-      });
       var _ = __webpack_require__("chunkid");
       function _(_) {
         return _
@@ -24225,7 +24276,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -24464,7 +24514,7 @@
               _: (0, _.jsx)(_, {}),
             },
             {
-              _: "OptInEdit_Requirements",
+              _: _,
               label: "Registration Requirements",
               _: (0, _.jsx)(_, {}),
             },
@@ -28622,9 +28672,9 @@
               "ogg/" +
               _.GetAppID() +
               "/partnerevents/create/",
-            _ = _._.Get().GetOptInDeadlineTime(),
             _ = _._.Get().GetCurEventTitle(),
-            _ = _._.Get().GetEventStartTime();
+            _ = _._.Get().GetEventStartTime(),
+            _ = _._.Get().GetOptInDeadlineTime() || _;
           switch (__webpack_require__.GetType()) {
             case _._.k_AssetKit:
               (_ = (0, _._)("#OptIn_EmailSection_Asset_Title")),
@@ -29239,6 +29289,7 @@
               (_ = (0, _._)("#OptIn_EmailSection_Register_Title")),
                 (_ = (0, _.jsxs)(_.Fragment, {
                   children: [
+                    (0, _.jsx)(_, {}),
                     (0, _.jsx)("div", {
                       className: _().SectionBody,
                       children: (0, _._)(
@@ -29863,6 +29914,7 @@
               (_ = (0, _._)("#OptIn_EmailSection_SeasonalFeaturing_Title")),
                 (_ = (0, _.jsxs)(_.Fragment, {
                   children: [
+                    (0, _.jsx)(_, {}),
                     (0, _.jsx)("div", {
                       className: _().SectionBody,
                       children: (0, _._)(
@@ -31145,6 +31197,25 @@
                   (0, _.jsx)(_, {
                     emailDef: _,
                   }),
+                _.bNeedOptInRegistrationDeadline &&
+                  (0, _.jsxs)("div", {
+                    className: _().MetaDataRow,
+                    children: [
+                      (0, _.jsx)(_, {}),
+                      (0, _.jsx)(_._, {
+                        strDescription: "Registration Deadline",
+                        strDescToolTip:
+                          "Shared by the whole opt-in - this is the same value as Editor -> Registration Requirements -> Registration Deadline. Leave it unset and the email quotes the event start date instead.",
+                        disabled: _.BIsReadOnly(),
+                        nEarliestTime: 0,
+                        fnGetTimeToUpdate: () =>
+                          _._.Get().GetOptInDeadlineTime() || 0,
+                        fnSetTimeToUpdate: _._.Get().SetOptInDeadlineTime,
+                        fnIsValidDateTime: () => !0,
+                        bShowTimeZone: !0,
+                      }),
+                    ],
+                  }),
               ],
             });
       });
@@ -31175,7 +31246,9 @@
                 (_.bNeedPreviewDate = !0), (_.bNeedWikiDocumentation = !0);
                 break;
               case _._.k_SurveyButton:
+                break;
               case _._.k_CallForRegistration:
+                _.bNeedOptInRegistrationDeadline = !0;
                 break;
               case _._.k_LearnMore:
                 _.bNeedWikiDocumentation = !0;
@@ -31226,6 +31299,8 @@
                 _.bNeedSteamAwardsAdvertisingApp = !0;
                 break;
               case _._.k_SeasonalFeatureRequest:
+                _.bNeedOptInRegistrationDeadline = !0;
+                break;
               case _._.k_SeasonalFeatureDiscount:
                 break;
               case _._.k_ImageBoxSection:
@@ -32711,6 +32786,9 @@
                                       (0, _.jsx)("th", {
                                         children: "Stage",
                                       }),
+                                      (0, _.jsx)("th", {
+                                        children: "Preview",
+                                      }),
                                     ],
                                   }),
                                 }),
@@ -32860,6 +32938,12 @@
                       (0, _._)(_),
                     ),
                   children: "Stage Email For Sending",
+                }),
+              }),
+              (0, _.jsx)("td", {
+                className: _.NoWrap,
+                children: (0, _.jsx)(_, {
+                  emailEditModel: _,
                 }),
               }),
             ],
@@ -33079,49 +33163,75 @@
         }
         return null;
       }
-      function _(_) {
-        const { emailEditModel: _ } = _,
-          _ = _(_);
-        let _ = _._.STORE_BASE_URL + "email/PartnerAppOptIn/?";
-        return (
-          _.GetType() == _._.k_Invite
-            ? (_ += "partner_name=Valve%20Games&")
-            : (_ += "appid=220&"),
-          (_ += "optouttoken=aa&settingflag=0"),
-          (_ += "&optinname=" + _._.Get().GetFullName()),
-          (_ += "&emailtemplateid=" + _.GetUniqueID()),
-          (_ += "&force_text_view=0"),
-          _?.length > 0 &&
-            (_ +=
-              "&steamawardcategories=" +
-              encodeURIComponent(__webpack_require__.join(","))),
-          (0, _.jsx)(_._, {
-            toolTipContent:
-              "You can update the URL using ?l=<language> to test the variousl localization",
-            children: Boolean(void 0 === _)
-              ? (0, _.jsx)(_._, {
-                  size: "small",
-                  string: "Loading Steam Award Categories",
-                })
-              : (0, _.jsx)(_._, {
-                  className: _().BasicButtonSize,
-                  onClick: (_) => (0, _._)(_, _),
-                  children: "Web Preview",
-                }),
-          })
-        );
-      }
       const _ = (0, _._)((_) => {
-        const { emailEditModel: _, bSelected: _, serverDef: _ } = _;
-        return (0, _.jsx)("tr", {
-          onClick: () => _.Get().SetSelection(_, _, _.history),
-          className: (0, _._)({
-            [_.TileContainer]: !0,
-            [_.Selected]: _,
-          }),
-          children: _.children,
+          const { emailEditModel: _ } = _,
+            [_, _] = (0, _.useState)(""),
+            _ = _(_),
+            _ = (function (_, _) {
+              let _ = _._.STORE_BASE_URL + "email/PartnerAppOptIn/?";
+              return (
+                _.GetType() == _._.k_Invite
+                  ? (_ += "partner_name=Valve%20Games&")
+                  : (_ += "appid=220&"),
+                (_ += "optouttoken=aa&settingflag=0"),
+                (_ += "&optinname=" + _._.Get().GetFullName()),
+                (_ += "&emailtemplateid=" + _.GetUniqueID()),
+                (_ += "&force_text_view=0"),
+                _?.length > 0 &&
+                  (_ +=
+                    "&steamawardcategories=" + encodeURIComponent(_.join(","))),
+                _
+              );
+            })(_, _),
+            _ = _._.Get().BIsDirty(),
+            _ = _
+              ? "Save the opt-in first - the store renders the email out of the saved opt-in, so it cannot see unsaved edits."
+              : "Opens " +
+                _ +
+                " - append &l=<language> to check a different localization.";
+          return void 0 === _
+            ? (0, _.jsx)(_._, {
+                size: "small",
+                string: "Loading Steam Award Categories",
+              })
+            : (0, _.jsxs)(_._, {
+                toolTipContent: _,
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _().BasicButtonSize,
+                    disabled: _,
+                    onClick: (_) => (0, _._)(_, _),
+                    children: "Web Preview",
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _().BasicButtonSize,
+                    onClick: (_) =>
+                      ((0, _._)(_) ?? window).navigator.clipboard
+                        .writeText(_)
+                        .then(() => _("Copied"))
+                        .catch((_) => {
+                          _("Copy failed"),
+                            console.error(
+                              "Failed to copy the email preview URL to the clipboard:",
+                              _,
+                            );
+                        }),
+                    children: _ || "Copy URL",
+                  }),
+                ],
+              });
+        }),
+        _ = (0, _._)((_) => {
+          const { emailEditModel: _, bSelected: _, serverDef: _ } = _;
+          return (0, _.jsx)("tr", {
+            onClick: () => _.Get().SetSelection(_, _, _.history),
+            className: (0, _._)({
+              [_.TileContainer]: !0,
+              [_.Selected]: _,
+            }),
+            children: _.children,
+          });
         });
-      });
       function _() {
         const _ = _._.Get();
         let _ = Math.floor(1 + 1e5 * Math.random());
@@ -35261,6 +35371,12 @@
                       (_.BHasImageUploaded()
                         ? (_ += 1)
                         : _.push("Missing Image Upload")),
+                    _.bNeedOptInRegistrationDeadline &&
+                      (_._.Get().GetOptInDeadlineTime()
+                        ? (_ += 1)
+                        : _.push(
+                            "Missing Registration Deadline ( Editor -> Registration Requirements ); the email falls back to the event start date",
+                          )),
                     {
                       cNeeded: _,
                       cCompleted: _,
