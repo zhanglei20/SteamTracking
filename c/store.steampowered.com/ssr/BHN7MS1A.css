@@ -3106,6 +3106,10 @@ html.responsive.touch .YdfMraqn-X8-._1R0ZVF6dgIU- {
 ::-webkit-scrollbar-corner {
   background: #202020;
 }
-html {
-  scrollbar-color: #434953 transparent;
+@supports ((-moz-appearance: none)) {
+  html {
+    scrollbar-color: #434953 transparent;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
 }
