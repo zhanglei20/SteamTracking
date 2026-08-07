@@ -29485,11 +29485,14 @@
           }, [b]),
           (0, r.useEffect)(() => {
             if (I && _ && M) {
-              const e = ns.N.Get().GetAnswerCategoryForQuestion(c),
-                t = w.findIndex((t) => t.category_ids === e);
-              t >= 0 && (void 0 === B || t != B) && (x(t), E(!0));
+              const e = w.findIndex(
+                (e) =>
+                  e === M ||
+                  (Boolean(e.unique_id) && e.unique_id == M.unique_id),
+              );
+              e >= 0 && (void 0 === B || e != B) && (x(e), E(!0));
             }
-          }, [I, _, B, c, w, M]),
+          }, [I, _, B, w, M]),
           0 == w.length
             ? null
             : j

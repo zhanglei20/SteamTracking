@@ -248,7 +248,9 @@
             (this.m_rgAnswerChosen = Array());
         }
         BHasTerminalAnswerChosen() {
-          return this.m_rgAnswerChosen.some((_) => _.reveal_question_id == _._);
+          return this.m_rgAnswerChosen.some(
+            (_) => _?.reveal_question_id == _._,
+          );
         }
         static s_Singleton;
         static Get() {
