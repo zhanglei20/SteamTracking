@@ -31406,11 +31406,14 @@
           }, [_]),
           (0, _.useEffect)(() => {
             if (_ && _ && _) {
-              const _ = _._.Get().GetAnswerCategoryForQuestion(_),
-                _ = _.findIndex((_) => _.category_ids === _);
+              const _ = _.findIndex(
+                (_) =>
+                  _ === _ ||
+                  (Boolean(_.unique_id) && _.unique_id == _.unique_id),
+              );
               _ >= 0 && (void 0 === _ || _ != _) && (_(_), _(!0));
             }
-          }, [_, _, _, _, _, _]),
+          }, [_, _, _, _, _]),
           0 == _.length
             ? null
             : _

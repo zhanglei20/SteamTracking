@@ -229,7 +229,7 @@
         }
         BHasTerminalAnswerChosen() {
           return this.m_rgAnswerChosen.some(
-            (e) => e.reveal_question_id == a.b2,
+            (e) => e?.reveal_question_id == a.b2,
           );
         }
         static s_Singleton;
