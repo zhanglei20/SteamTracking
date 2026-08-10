@@ -867,6 +867,7 @@ ${IMG_URL}international2023/ti_logo_full_color.png
 ${IMG_URL}international2024/esports_site/footer_bg01.png
 ${IMG_URL}international2024/esports_site/logo_ti_gold.png
 ${IMG_URL}international2025/ti2025_logo.png
+${IMG_URL}international2026/teamlogos/${nTeamID}.png
 ${IMG_URL}international2026/ti2026_logo.png
 ${IMG_URL}items/${}.png
 ${IMG_URL}locked.png

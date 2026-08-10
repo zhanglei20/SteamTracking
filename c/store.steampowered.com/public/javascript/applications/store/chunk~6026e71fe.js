@@ -24706,6 +24706,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 0;
       function _(_) {
         return (_?.answers?.length || 0) > 0;
       }
@@ -24714,10 +24715,11 @@
           _ = (0, _._)(),
           _ = _._.GetELanguageFallback(_),
           _ = (0, _._)(),
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             Boolean(_.quiz?.track_with_cozy_cottage_doors),
             _.quiz?.quiz_type,
             _.quiz?.hide_question_type_label,
+            Boolean(_.quiz?.grant_reward_on_branch_result),
           ]),
           [_, _] = (0, _.useState)(
             _ && _._.Get().BIsAnyDoorOpened()
@@ -24746,15 +24748,16 @@
           [_, _],
         );
         (0, _.useEffect)(() => {
-          _ &&
-            !_._.Get().BIsInitialized() &&
+          (!_ && !_) ||
+            _._.Get().BIsInitialized() ||
             _._.Get()
               .LoadDoorData()
               .then(() => {
-                _._.Get().BIsAnyDoorOpened() &&
+                _ &&
+                  _._.Get().BIsAnyDoorOpened() &&
                   _(_._.Get().GetLargestDoorOpenIndex() + 1);
               });
-        }, [_]);
+        }, [_, _]);
         const _ =
             _.localized_description?.length > 0
               ? _.localized_description[_] || _.localized_description[_] || ""
@@ -24791,8 +24794,15 @@
                 _._.Get().GetLargestAnswerQuestion() > 0 &&
                 (_._.Get().BHasTerminalAnswerChosen() || !_(_[_.length - 1])),
             ),
-          ),
-          _ =
+          );
+        (0, _.useEffect)(() => {
+          _ &&
+            _ &&
+            _._.Get()
+              .LoadDoorData()
+              .then(() => _._.Get().OpenDoor(_, !0, "", _));
+        }, [_, _, _]);
+        const _ =
             _ &&
             Boolean(_.quiz?.last_revealed_footer_img_url) &&
             (Boolean(_)
@@ -24995,11 +25005,7 @@
                   (0, _.jsx)(_._, {
                     checked: _ === _,
                     onChange: (_) => {
-                      _.category_ids &&
-                        _._.Get().SetAnswerCategory(
-                          _,
-                          _ ? _.category_ids : null,
-                        ),
+                      _._.Get().SetAnswerCategory(_, _ ? _.category_ids : null),
                         _(_ ? _ : null);
                     },
                     disabled: _ === _,
@@ -25178,7 +25184,10 @@
       }
       function _(_) {
         const { quiz_section: _, bPreviewMode: _, fnCorrectlyAnswered: _ } = _,
-          [_] = (0, _._)(() => [_?.quiz_type]),
+          [_, _] = (0, _._)(() => [
+            _?.quiz_type,
+            Boolean(_?.grant_reward_on_branch_result),
+          ]),
           [_, _] = (0, _.useState)(!1);
         return _
           ? (0, _.jsx)("div", {
@@ -25189,7 +25198,7 @@
             ? (0, _.jsxs)("div", {
                 className: (0, _._)("QuizScenarioSubmitCtn"),
                 children: [
-                  Boolean(_.answer_categories?.length > 0) &&
+                  Boolean(!_ && _.answer_categories?.length > 0) &&
                     (0, _.jsx)(_._, {
                       disabled: _,
                       onClick: (_) =>

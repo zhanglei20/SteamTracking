@@ -47320,9 +47320,11 @@
               }),
         ),
         _ = _.memo((_) => {
-          const [_, _] = (0, _.useState)(0),
+          const _ = _() == _._.INTERNATIONAL_2026 ? 0 : 1,
+            [_, _] = (0, _.useState)(_),
             [_, _] = (0, _.useState)(0 == _.nTeamID),
             _ = [
+              `${_._.IMG_URL}international2026/teamlogos/${_.nTeamID}.png`,
               `${_._.CDN_URL}apps/dota2/teamlogos/${_.nTeamID}.png`,
               `${_._.IMG_URL}teams_fallback/${_.nTeamID}.png`,
               `${_._.IMG_URL}teams_override/team_unknown_web.png`,
@@ -47330,8 +47332,8 @@
             ];
           return (
             (0, _.useEffect)(() => {
-              __webpack_require__("chunkid"), _(0 == _.nTeamID);
-            }, [_.nTeamID]),
+              _(_), _(0 == _.nTeamID);
+            }, [_.nTeamID, _]),
             (0, _.jsx)(_, {
               bEnabled: _.bTooltip,
               nTeamID: _.nTeamID,
@@ -47345,7 +47347,7 @@
                   minHeight: _.nSize,
                   opacity: _ ? 1 : 0,
                 },
-                onError: () => __webpack_require__(_ + 1),
+                onError: () => _(_ + 1),
                 onLoad: () => _(!0),
               }),
             })
@@ -49511,7 +49513,7 @@
                     }
                     _ = !0;
                   }
-                  24 == _?.event && ((_ = !1), (_ = !0));
+                  (24 != _?.event && 25 != _?.event) || ((_ = !1), (_ = !0));
                   break;
                 }
                 23 == _?.event &&
@@ -49872,6 +49874,7 @@
             _ = _?.actual_time ? _?.actual_time : _.scheduled_time,
             _ = _?.eNodeGroupType == _._.ROUND_ROBIN,
             _ = _?.eNodeGroupType == _._.SWISS && _ == _._.INTERNATIONAL_2025,
+            _ = _?.eNodeGroupType == _._.SWISS && _ == _._.INTERNATIONAL_2026,
             _ = _._.Get().GetNodeLabelStrings(
               _,
               _.nLeagueID,
@@ -49985,7 +49988,7 @@
                               className: _().Record,
                               children: _,
                             }),
-                          _ &&
+                          (_ || _) &&
                             !_ &&
                             !_ &&
                             (0, _.jsx)("div", {
@@ -50053,7 +50056,7 @@
                               className: _().Record,
                               children: _,
                             }),
-                          _ &&
+                          (_ || _) &&
                             !_ &&
                             !_ &&
                             (0, _.jsx)("div", {
@@ -51196,7 +51199,8 @@
           let _ =
             Math.max(_?.results.length, _?.points.length, _?.dollars.length) ||
             0;
-          _ == _._.INTERNATIONAL_2025 && (_ = 16);
+          (_ != _._.INTERNATIONAL_2025 && _ != _._.INTERNATIONAL_2026) ||
+            (_ = 16);
           const _ = _ && _.results.length > 0 ? _?.results[0].standing : _ + 1;
           let _ = 0;
           return (0, _.jsx)("div", {
@@ -52681,9 +52685,20 @@
             _ = (0, _._)(_.strPhase);
           if (_._.Get().GetEventType(_) != _._.INTERNATIONAL) return null;
           if (!_._[_] || _ == _._.INVALID)
-            return (0, _.jsx)(_._, {
-              _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.PLAYOFF)),
-            });
+            return new Date().getTime() < 17868024e5
+              ? (0, _.jsx)(_._, {
+                  _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.GROUP_STAGE)),
+                })
+              : new Date().getTime() < 17868888e5
+                ? (0, _.jsx)(_._, {
+                    _: _._.dpc_standings(
+                      (0, _._)(_),
+                      (0, _._)(_._.ELIMINATION),
+                    ),
+                  })
+                : (0, _.jsx)(_._, {
+                    _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.PLAYOFF)),
+                  });
           const _ = [
             {
               nMin: 1,
@@ -81929,7 +81944,7 @@
           return _;
         }
         GetEventType(_) {
-          if (_ > _._.INTERNATIONAL_2025) return _._.EXTERNAL;
+          if (_ > _._.INTERNATIONAL_2026) return _._.EXTERNAL;
           const _ = this.GetEventInfo(_);
           return _ ? _.event_type : _._.UNKNOWN;
         }
