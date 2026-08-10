@@ -19021,7 +19021,7 @@
       function S(e) {
         var t, a;
         const { editModel: _ } = e,
-          [S, x] = i.useState(h.FH6),
+          [S, x] = i.useState(h.xPp),
           [j, b] = i.useState(!1),
           [w, C] = i.useState(null),
           f = _.GetClanSteamID(),

@@ -9,28 +9,6 @@ function _(_, _) {
 function _(_) {
   return _(window, _);
 }
-function _(_, _ = !0) {
-  return function (_, _, _) {
-    let _ = _.value;
-    _.value = function (..._) {
-      let _ = this[_ + `_DebounceProperties`];
-      _ === void 0 &&
-        (_ = this[_ + `_DebounceProperties`] =
-          {
-            hTimer: void 0,
-            nPending: 0,
-          }),
-        _.hTimer === void 0
-          ? (_ ? _.apply(this, _) : (_.nPending += 1),
-            (_.hTimer = window.setInterval(() => {
-              _.nPending > 0
-                ? (_.apply(this, _), (_.nPending = 0))
-                : (window.clearInterval(_.hTimer), (_.hTimer = void 0));
-            }, _)))
-          : (_.nPending += 1);
-    };
-  };
-}
 var _ = _(_());
 function _(_, _) {
   return _(
@@ -202,6 +180,28 @@ var _ = _({
     });
   });
 _.displayName = `MenuItem`;
+function _(_, _ = !0) {
+  return function (_, _, _) {
+    let _ = _.value;
+    _.value = function (..._) {
+      let _ = this[_ + `_DebounceProperties`];
+      _ === void 0 &&
+        (_ = this[_ + `_DebounceProperties`] =
+          {
+            hTimer: void 0,
+            nPending: 0,
+          }),
+        _.hTimer === void 0
+          ? (_ ? _.apply(this, _) : (_.nPending += 1),
+            (_.hTimer = window.setInterval(() => {
+              _.nPending > 0
+                ? (_.apply(this, _), (_.nPending = 0))
+                : (window.clearInterval(_.hTimer), (_.hTimer = void 0));
+            }, _)))
+          : (_.nPending += 1);
+    };
+  };
+}
 var _ = _.createContext(null),
   _ = class extends _.Component {
     static contextType = _;

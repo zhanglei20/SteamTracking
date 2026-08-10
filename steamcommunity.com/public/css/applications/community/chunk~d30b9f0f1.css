@@ -3260,10 +3260,47 @@ html.responsive.touch .O2jA-VCFl9bmblncfI4k2 {
   padding-left: 8px;
   padding-right: 8px;
 }
+._2dV3OoJU7qVT0M5K0-i64c {
+  position: relative;
+  overflow: visible;
+}
 ._1BnzxIM9tpJgUM7fdF0cbA {
   position: absolute;
-  bottom: 22px;
-  left: 0;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: _2wMWnt_URzicnZRo01_FcW 1500ms ease-out forwards;
+}
+@keyframes _2wMWnt_URzicnZRo01_FcW {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -4px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
 }
 ._1VQyIvfDyqsuGfQ2dK-hws svg {
   width: 16px;
