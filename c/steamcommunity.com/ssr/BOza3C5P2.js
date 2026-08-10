@@ -66,140 +66,8 @@ var _ = class extends _ {
 function _(_, _) {
   return _(_, _, _);
 }
-function _(_) {
-  return _(_(_(), _, _.LANGUAGE));
-}
-function _(_, _ = _.LANGUAGE) {
-  let _ = _();
-  return _({
-    ..._(_(), _, _, _),
-    enabled: !!_,
-  });
-}
-function _(_, _, _, _) {
-  return {
-    queryKey: [`AssetPropertySchemaMap`, _, _],
-    queryFn: async () => {
-      let _ = await _.fetchQuery(_(_, _, _)),
-        _ = new Map();
-      return _.property_schemas.forEach((_) => _.set(_._, _)), _;
-    },
-  };
-}
-function _(_, _, _) {
-  return {
-    queryKey: [`AssetPropertySchema`, _, _],
-    queryFn: async () => {
-      let _ = await _.GetAssetPropertySchema(_, {
-        appid: _,
-        language: _,
-      });
-      if (!_.BSuccess() && _.GetEResult() != 42)
-        throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
-      return {
-        property_schemas: _.Body().toObject().property_schemas ?? [],
-      };
-    },
-  };
-}
-var _ = {};
-(_.arabic = () => _(() => import(`./BpzPFIgu.js`), [], import.meta.url)),
-  (_.brazilian = () => _(() => import(`./BnIw7EYQ.js`), [], import.meta.url)),
-  (_.bulgarian = () => _(() => import(`./BLnjZWm2.js`), [], import.meta.url)),
-  (_.czech = () => _(() => import(`./CnUgLyxJ.js`), [], import.meta.url)),
-  (_.danish = () => _(() => import(`./BjYYy76J.js`), [], import.meta.url)),
-  (_.dutch = () => _(() => import(`./BFCibLhZ.js`), [], import.meta.url)),
-  (_.english = () => _(() => import(`./llq_5aOJ.js`), [], import.meta.url)),
-  (_.finnish = () => _(() => import(`./rRkzNERb.js`), [], import.meta.url)),
-  (_.french = () => _(() => import(`./B6mp-Sbp.js`), [], import.meta.url)),
-  (_.german = () => _(() => import(`./BP1SHjDW.js`), [], import.meta.url)),
-  (_.greek = () => _(() => import(`./BuS3Shms.js`), [], import.meta.url)),
-  (_.hungarian = () => _(() => import(`./Cqu372zS.js`), [], import.meta.url)),
-  (_.indonesian = () => _(() => import(`./Cq0QCWgt.js`), [], import.meta.url)),
-  (_.italian = () => _(() => import(`./CJ3pW3d5.js`), [], import.meta.url)),
-  (_.japanese = () => _(() => import(`./Bzxs73dJ.js`), [], import.meta.url)),
-  (_.koreana = () => _(() => import(`./CSjISZll.js`), [], import.meta.url)),
-  (_.latam = () => _(() => import(`./DREsO53s.js`), [], import.meta.url)),
-  (_.malay = () => _(() => import(`./ZQTRrFSi.js`), [], import.meta.url)),
-  (_.norwegian = () => _(() => import(`./BZHkgTYY.js`), [], import.meta.url)),
-  (_.polish = () => _(() => import(`./Dq1nK3FB.js`), [], import.meta.url)),
-  (_.portuguese = () => _(() => import(`./DVIQCxna.js`), [], import.meta.url)),
-  (_.romanian = () => _(() => import(`./imqP6pQN.js`), [], import.meta.url)),
-  (_.russian = () => _(() => import(`./Dp-qZ4wI.js`), [], import.meta.url)),
-  (_.sc_schinese = () => _(() => import(`./B5_7-iFs.js`), [], import.meta.url)),
-  (_.schinese = () => _(() => import(`./BGzs6kj9.js`), [], import.meta.url)),
-  (_.spanish = () => _(() => import(`./BbQH-dBe.js`), [], import.meta.url)),
-  (_.swedish = () => _(() => import(`./DDRH7vep.js`), [], import.meta.url)),
-  (_.tchinese = () => _(() => import(`./DkpQ016O.js`), [], import.meta.url)),
-  (_.thai = () => _(() => import(`./YsxXBpmW.js`), [], import.meta.url)),
-  (_.turkish = () => _(() => import(`./q89L-1eW2.js`), [], import.meta.url)),
-  (_.ukrainian = () => _(() => import(`./CmpCYDaI2.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./VZreZ3i72.js`), [], import.meta.url));
-async function _(_) {
-  if (_[_]) return await _[_]();
-}
-var _ = _(_),
-  _ = _.Localize,
-  _ = _(_(), 1),
-  _ = _(),
-  _ = {
-    Label: _,
-    Value: _,
-  };
-function _(_) {
-  let { appid: _, property: _, ..._ } = _,
-    { data: _ } = _(_),
-    _ = _?.get(_.propertyid);
-  return !_ || _.hide_from_description
-    ? null
-    : (0, _.jsx)(_, {
-        _: `div`,
-        ..._,
-        children: _.LocalizeReact(
-          `#ItemDescription_AssetPropertyLabelColonValue`,
-          _.localized_label,
-          (0, _.jsx)(_, {
-            whiteSpace: `pre-wrap`,
-            children: (0, _.jsx)(_, {
-              property: _,
-            }),
-          }),
-        ),
-      });
-}
-var _ = Object.assign(_, _);
-function _(_) {
-  let { appid: _, property: _ } = _,
-    { data: _ } = _(_),
-    _ = _?.get(_.propertyid);
-  return _ ? _.localized_label : null;
-}
-function _(_) {
-  let { property: _ } = _;
-  if (_.float_value !== void 0) {
-    let _ =
-        typeof _.float_value == `string`
-          ? parseFloat(_.float_value)
-          : _.float_value,
-      _ = 9;
-    return (
-      _ > 0 &&
-        (_ < 1e-28
-          ? (_ = 47)
-          : _ < 1e-18
-            ? (_ = 35)
-            : _ < 1e-12
-              ? (_ = 21)
-              : _ < 1e-5 && (_ = 15)),
-      _.toLocaleString(_(), {
-        maximumFractionDigits: _,
-      })
-    );
-  } else if (_.int_value !== void 0)
-    return Number(_.int_value).toLocaleString(_());
-  else if (_.string_value !== void 0) return _.string_value;
-  else return null;
-}
+var _ = _(_(), 1),
+  _ = _();
 function _(_) {
   let { appid: _, accessory: _ } = _,
     { data: _ } = _(_, {
@@ -277,6 +145,138 @@ function _(_) {
     },
     contrast: `note`,
   });
+}
+function _(_) {
+  return _(_(_(), _, _.LANGUAGE));
+}
+function _(_, _ = _.LANGUAGE) {
+  let _ = _();
+  return _({
+    ..._(_(), _, _, _),
+    enabled: !!_,
+  });
+}
+function _(_, _, _, _) {
+  return {
+    queryKey: [`AssetPropertySchemaMap`, _, _],
+    queryFn: async () => {
+      let _ = await _.fetchQuery(_(_, _, _)),
+        _ = new Map();
+      return _.property_schemas.forEach((_) => _.set(_._, _)), _;
+    },
+  };
+}
+function _(_, _, _) {
+  return {
+    queryKey: [`AssetPropertySchema`, _, _],
+    queryFn: async () => {
+      let _ = await _.GetAssetPropertySchema(_, {
+        appid: _,
+        language: _,
+      });
+      if (!_.BSuccess() && _.GetEResult() != 42)
+        throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
+      return {
+        property_schemas: _.Body().toObject().property_schemas ?? [],
+      };
+    },
+  };
+}
+var _ = {};
+(_.arabic = () => _(() => import(`./BpzPFIgu.js`), [], import.meta.url)),
+  (_.brazilian = () => _(() => import(`./BnIw7EYQ.js`), [], import.meta.url)),
+  (_.bulgarian = () => _(() => import(`./BLnjZWm2.js`), [], import.meta.url)),
+  (_.czech = () => _(() => import(`./CnUgLyxJ.js`), [], import.meta.url)),
+  (_.danish = () => _(() => import(`./BjYYy76J.js`), [], import.meta.url)),
+  (_.dutch = () => _(() => import(`./BFCibLhZ.js`), [], import.meta.url)),
+  (_.english = () => _(() => import(`./llq_5aOJ.js`), [], import.meta.url)),
+  (_.finnish = () => _(() => import(`./rRkzNERb.js`), [], import.meta.url)),
+  (_.french = () => _(() => import(`./B6mp-Sbp.js`), [], import.meta.url)),
+  (_.german = () => _(() => import(`./BP1SHjDW.js`), [], import.meta.url)),
+  (_.greek = () => _(() => import(`./BuS3Shms.js`), [], import.meta.url)),
+  (_.hungarian = () => _(() => import(`./Cqu372zS.js`), [], import.meta.url)),
+  (_.indonesian = () => _(() => import(`./Cq0QCWgt.js`), [], import.meta.url)),
+  (_.italian = () => _(() => import(`./CJ3pW3d5.js`), [], import.meta.url)),
+  (_.japanese = () => _(() => import(`./Bzxs73dJ.js`), [], import.meta.url)),
+  (_.koreana = () => _(() => import(`./CSjISZll.js`), [], import.meta.url)),
+  (_.latam = () => _(() => import(`./DREsO53s.js`), [], import.meta.url)),
+  (_.malay = () => _(() => import(`./ZQTRrFSi.js`), [], import.meta.url)),
+  (_.norwegian = () => _(() => import(`./BZHkgTYY.js`), [], import.meta.url)),
+  (_.polish = () => _(() => import(`./Dq1nK3FB.js`), [], import.meta.url)),
+  (_.portuguese = () => _(() => import(`./DVIQCxna.js`), [], import.meta.url)),
+  (_.romanian = () => _(() => import(`./imqP6pQN.js`), [], import.meta.url)),
+  (_.russian = () => _(() => import(`./Dp-qZ4wI.js`), [], import.meta.url)),
+  (_.sc_schinese = () => _(() => import(`./B5_7-iFs.js`), [], import.meta.url)),
+  (_.schinese = () => _(() => import(`./BGzs6kj9.js`), [], import.meta.url)),
+  (_.spanish = () => _(() => import(`./BbQH-dBe.js`), [], import.meta.url)),
+  (_.swedish = () => _(() => import(`./DDRH7vep.js`), [], import.meta.url)),
+  (_.tchinese = () => _(() => import(`./DkpQ016O.js`), [], import.meta.url)),
+  (_.thai = () => _(() => import(`./YsxXBpmW.js`), [], import.meta.url)),
+  (_.turkish = () => _(() => import(`./q89L-1eW2.js`), [], import.meta.url)),
+  (_.ukrainian = () => _(() => import(`./CmpCYDaI2.js`), [], import.meta.url)),
+  (_.vietnamese = () => _(() => import(`./VZreZ3i72.js`), [], import.meta.url));
+async function _(_) {
+  if (_[_]) return await _[_]();
+}
+var _ = _(_),
+  _ = _.Localize,
+  _ = {
+    Label: _,
+    Value: _,
+  };
+function _(_) {
+  let { appid: _, property: _, ..._ } = _,
+    { data: _ } = _(_),
+    _ = _?.get(_.propertyid);
+  return !_ || _.hide_from_description
+    ? null
+    : (0, _.jsx)(_, {
+        _: `div`,
+        ..._,
+        children: _.LocalizeReact(
+          `#ItemDescription_AssetPropertyLabelColonValue`,
+          _.localized_label,
+          (0, _.jsx)(_, {
+            whiteSpace: `pre-wrap`,
+            children: (0, _.jsx)(_, {
+              property: _,
+            }),
+          }),
+        ),
+      });
+}
+var _ = Object.assign(_, _);
+function _(_) {
+  let { appid: _, property: _ } = _,
+    { data: _ } = _(_),
+    _ = _?.get(_.propertyid);
+  return _ ? _.localized_label : null;
+}
+function _(_) {
+  let { property: _ } = _;
+  if (_.float_value !== void 0) {
+    let _ =
+        typeof _.float_value == `string`
+          ? parseFloat(_.float_value)
+          : _.float_value,
+      _ = 9;
+    return (
+      _ > 0 &&
+        (_ < 1e-28
+          ? (_ = 47)
+          : _ < 1e-18
+            ? (_ = 35)
+            : _ < 1e-12
+              ? (_ = 21)
+              : _ < 1e-5 && (_ = 15)),
+      _.toLocaleString(_(), {
+        maximumFractionDigits: _,
+      })
+    );
+  } else if (_.int_value !== void 0)
+    return Number(_.int_value).toLocaleString(_());
+  else if (_.string_value !== void 0) return _.string_value;
+  else return null;
 }
 var _ = _.createContext(void 0);
 function _(_) {
@@ -658,6 +658,25 @@ function _(_) {
     children: _(_, _, _),
   });
 }
+var _ = `DgpqGnHLncQ-`,
+  _ = `Xd4rgP1GhRY-`;
+function _() {
+  return (0, _.jsxs)(_, {
+    position: `relative`,
+    title: _(`#ItemDescription_ListedItemTooltip`),
+    children: [
+      (0, _.jsx)(_, {
+        className: _,
+        children: _(`#ItemDescription_ListedItem`),
+      }),
+      (0, _.jsx)(_, {
+        className: _,
+        alt: _(`#ItemDescription_ListedItem`),
+        src: `${_.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
+      }),
+    ],
+  });
+}
 function _() {
   let _ = _(),
     _ = _(),
@@ -793,25 +812,6 @@ function _() {
         className: _,
         alt: _(`#ItemDescription_TradeProtected`),
         src: `${_.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
-      }),
-    ],
-  });
-}
-var _ = `DgpqGnHLncQ-`,
-  _ = `Xd4rgP1GhRY-`;
-function _() {
-  return (0, _.jsxs)(_, {
-    position: `relative`,
-    title: _(`#ItemDescription_ListedItemTooltip`),
-    children: [
-      (0, _.jsx)(_, {
-        className: _,
-        children: _(`#ItemDescription_ListedItem`),
-      }),
-      (0, _.jsx)(_, {
-        className: _,
-        alt: _(`#ItemDescription_ListedItem`),
-        src: `${_.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
       }),
     ],
   });

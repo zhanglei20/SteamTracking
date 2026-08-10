@@ -33,34 +33,7 @@ var _ = (function (_) {
       _
     );
   })({}),
-  _ = _(_(), 1);
-function _(_) {
-  let [_, _] = (0, _.useState)(!1);
-  return (
-    (0, _.useEffect)(() => {
-      (0, _.startTransition)(() => {
-        _(!0);
-      });
-    }, []),
-    _ ? _.children : (_.fallback ?? null)
-  );
-}
-function _(_, _) {
-  return (
-    (_ = Object.setPrototypeOf
-      ? Object.setPrototypeOf.bind()
-      : function (_, _) {
-          return (_.__proto__ = _), _;
-        }),
-    _(_, _)
-  );
-}
-function _(_, _) {
-  (_.prototype = Object.create(_.prototype)),
-    (_.prototype.constructor = _),
-    _(_, _);
-}
-var _ = _((_, _) => {
+  _ = _((_, _) => {
     _.exports = `SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED`;
   }),
   _ = _((_, _) => {
@@ -107,1147 +80,11 @@ var _ = _((_, _) => {
         return (_.PropTypes = _), _;
       });
   }),
-  _ = _(
-    _((_, _) => {
-      _.exports = _()();
-    })(),
-  );
-typeof window < `u` && window.document && window.document.createElement;
-var _ = _((_, _) => {
-    _.exports =
-      Array.isArray ||
-      function (_) {
-        return Object.prototype.toString.call(_) == `[object Array]`;
-      };
-  }),
   _ = _((_, _) => {
-    var _ = _();
-    (_.exports = _),
-      (_.exports.parse = _),
-      (_.exports.compile = _),
-      (_.exports.tokensToFunction = _),
-      (_.exports.tokensToRegExp = _);
-    var _ = new RegExp(
-      [
-        `(\\\\.)`,
-        `([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))`,
-      ].join(`|`),
-      `g`,
-    );
-    function _(_, _) {
-      for (
-        var _ = [], _ = 0, _ = 0, _ = ``, _ = (_ && _.delimiter) || `/`, _;
-        (_ = _.exec(_)) != null;
-      ) {
-        var _ = _[0],
-          _ = _[1],
-          _ = _.index;
-        if (((_ += _.slice(_, _)), (_ = _ + _.length), _)) {
-          _ += _[1];
-          continue;
-        }
-        var _ = _[_],
-          _ = _[2],
-          _ = _[3],
-          _ = _[4],
-          _ = _[5],
-          _ = _[6],
-          _ = _[7];
-        _ &&= (_.push(_), ``);
-        var _ = _ != null && _ != null && _ !== _,
-          _ = _ === `+` || _ === `*`,
-          _ = _ === `?` || _ === `*`,
-          _ = _ || _,
-          _ = _ || _,
-          _ = _ || (typeof _[_.length - 1] == `string` ? _[_.length - 1] : ``);
-        _.push({
-          name: _ || _++,
-          prefix: _ || ``,
-          delimiter: _,
-          optional: _,
-          repeat: _,
-          partial: _,
-          asterisk: !!_,
-          pattern: _ ? _(_) : _ ? `.*` : _(_, _),
-        });
-      }
-      return _ < _.length && (_ += _.substr(_)), _ && _.push(_), _;
-    }
-    function _(_, _) {
-      return !_ || _.indexOf(_) > -1
-        ? `[^` + _(_) + `]+?`
-        : _(_) + `|(?:(?!` + _(_) + `)[^` + _(_) + `])+?`;
-    }
-    function _(_, _) {
-      return _(_(_, _), _);
-    }
-    function _(_) {
-      return encodeURI(_).replace(/[\/?#]/g, function (_) {
-        return `%` + _.charCodeAt(0).toString(16).toUpperCase();
-      });
-    }
-    function _(_) {
-      return encodeURI(_).replace(/[?#]/g, function (_) {
-        return `%` + _.charCodeAt(0).toString(16).toUpperCase();
-      });
-    }
-    function _(_, _) {
-      for (var _ = Array(_.length), _ = 0; _ < _.length; _++)
-        typeof _[_] == `object` &&
-          (_[_] = RegExp(`^(?:` + _[_].pattern + `)$`, _(_)));
-      return function (_, _) {
-        for (
-          var _ = ``,
-            _ = _ || {},
-            _ = (_ || {}).pretty ? _ : encodeURIComponent,
-            _ = 0;
-          _ < _.length;
-          _++
-        ) {
-          var _ = _[_];
-          if (typeof _ == `string`) {
-            _ += _;
-            continue;
-          }
-          var _ = _[_.name],
-            _;
-          if (_ == null)
-            if (_.optional) {
-              _.partial && (_ += _.prefix);
-              continue;
-            } else throw TypeError(`Expected "` + _.name + `" to be defined`);
-          if (_(_)) {
-            if (!_.repeat)
-              throw TypeError(
-                `Expected "` +
-                  _.name +
-                  '" to not repeat, but received `' +
-                  JSON.stringify(_) +
-                  "`",
-              );
-            if (_.length === 0) {
-              if (_.optional) continue;
-              throw TypeError(`Expected "` + _.name + `" to not be empty`);
-            }
-            for (var _ = 0; _ < _.length; _++) {
-              if (((_ = _(_[_])), !_[_].test(_)))
-                throw TypeError(
-                  `Expected all "` +
-                    _.name +
-                    `" to match "` +
-                    _.pattern +
-                    '", but received `' +
-                    JSON.stringify(_) +
-                    "`",
-                );
-              _ += (_ === 0 ? _.prefix : _.delimiter) + _;
-            }
-            continue;
-          }
-          if (((_ = _.asterisk ? _(_) : _(_)), !_[_].test(_)))
-            throw TypeError(
-              `Expected "` +
-                _.name +
-                `" to match "` +
-                _.pattern +
-                `", but received "` +
-                _ +
-                `"`,
-            );
-          _ += _.prefix + _;
-        }
-        return _;
-      };
-    }
-    function _(_) {
-      return _.replace(/([.+*?=^!:${}()[\]|\/\\])/g, `\\$1`);
-    }
-    function _(_) {
-      return _.replace(/([=!:$\/()])/g, `\\$1`);
-    }
-    function _(_, _) {
-      return (_.keys = _), _;
-    }
-    function _(_) {
-      return _ && _.sensitive ? `` : `i`;
-    }
-    function _(_, _) {
-      var _ = _.source.match(/\((?!\?)/g);
-      if (_)
-        for (var _ = 0; _ < _.length; _++)
-          _.push({
-            name: _,
-            prefix: null,
-            delimiter: null,
-            optional: !1,
-            repeat: !1,
-            partial: !1,
-            asterisk: !1,
-            pattern: null,
-          });
-      return _(_, _);
-    }
-    function _(_, _, _) {
-      for (var _ = [], _ = 0; _ < _.length; _++) _.push(_(_[_], _, _).source);
-      return _(RegExp(`(?:` + _.join(`|`) + `)`, _(_)), _);
-    }
-    function _(_, _, _) {
-      return _(_(_, _), _, _);
-    }
-    function _(_, _, _) {
-      _(_) || ((_ = _ || _), (_ = [])), (_ ||= {});
-      for (
-        var _ = _.strict, _ = _.end !== !1, _ = ``, _ = 0;
-        _ < _.length;
-        _++
-      ) {
-        var _ = _[_];
-        if (typeof _ == `string`) _ += _(_);
-        else {
-          var _ = _(_.prefix),
-            _ = `(?:` + _.pattern + `)`;
-          _.push(_),
-            _.repeat && (_ += `(?:` + _ + _ + `)*`),
-            (_ = _.optional
-              ? _.partial
-                ? _ + `(` + _ + `)?`
-                : `(?:` + _ + `(` + _ + `))?`
-              : _ + `(` + _ + `)`),
-            (_ += _);
-        }
-      }
-      var _ = _(_.delimiter || `/`),
-        _ = _.slice(-_.length) === _;
-      return (
-        _ || (_ = (_ ? _.slice(0, -_.length) : _) + `(?:` + _ + `(?=$))?`),
-        _ ? (_ += `$`) : (_ += _ && _ ? `` : `(?=` + _ + `|$)`),
-        _(RegExp(`^` + _, _(_)), _)
-      );
-    }
-    function _(_, _, _) {
-      return (
-        _(_) || ((_ = _ || _), (_ = [])),
-        (_ ||= {}),
-        _ instanceof RegExp ? _(_, _) : _(_) ? _(_, _, _) : _(_, _, _)
-      );
-    }
+    _.exports = _()();
   }),
-  _ = _((_) => {
-    typeof Symbol == `function` && Symbol.for;
-  }),
-  _ = _((_, _) => {
-    _.exports = _();
-  });
-_(), _(), _();
-var _ = 1073741823,
-  _ =
-    typeof globalThis < `u`
-      ? globalThis
-      : typeof window < `u`
-        ? window
-        : typeof global < `u`
-          ? global
-          : {};
-function _() {
-  var _ = `__global_unique_id__`;
-  return (_[_] = (_[_] || 0) + 1);
-}
-function _(_, _) {
-  return _ === _ ? _ !== 0 || 1 / _ == 1 / _ : _ !== _ && _ !== _;
-}
-function _(_) {
-  var _ = [];
-  return {
-    _: function (_) {
-      _.push(_);
-    },
-    off: function (_) {
-      _ = _.filter(function (_) {
-        return _ !== _;
-      });
-    },
-    get: function () {
-      return _;
-    },
-    set: function (_, _) {
-      (_ = _),
-        _.forEach(function (_) {
-          return _(_, _);
-        });
-    },
-  };
-}
-function _(_) {
-  return Array.isArray(_) ? _[0] : _;
-}
-function _(_, _) {
-  var _,
-    _,
-    _ = `__create-react-context-` + _() + `__`,
-    _ = (function (_) {
-      _(_, _);
-      function _() {
-        var _,
-          _ = [...arguments];
-        return (
-          (_ = _.call.apply(_, [this].concat(_)) || this),
-          (_.emitter = _(_.props.value)),
-          _
-        );
-      }
-      var _ = _.prototype;
-      return (
-        (_.getChildContext = function () {
-          var _;
-          return (_ = {}), (_[_] = this.emitter), _;
-        }),
-        (_.componentWillReceiveProps = function (_) {
-          if (this.props.value !== _.value) {
-            var _ = this.props.value,
-              _ = _.value,
-              _;
-            _(_, _)
-              ? (_ = 0)
-              : ((_ = typeof _ == `function` ? _(_, _) : _),
-                (_ |= 0),
-                _ !== 0 && this.emitter.set(_.value, _));
-          }
-        }),
-        (_.render = function () {
-          return this.props.children;
-        }),
-        _
-      );
-    })(_.Component);
-  _.childContextTypes = ((_ = {}), (_[_] = _.default.object.isRequired), _);
-  var _ = (function (_) {
-    _(_, _);
-    function _() {
-      var _,
-        _ = [...arguments];
-      return (
-        (_ = _.call.apply(_, [this].concat(_)) || this),
-        (_.observedBits = void 0),
-        (_.state = {
-          value: _.getValue(),
-        }),
-        (_.onUpdate = function (_, _) {
-          (_.observedBits | 0) & _ &&
-            _.setState({
-              value: _.getValue(),
-            });
-        }),
-        _
-      );
-    }
-    var _ = _.prototype;
-    return (
-      (_.componentWillReceiveProps = function (_) {
-        var _ = _.observedBits;
-        this.observedBits = _ ?? _;
-      }),
-      (_.componentDidMount = function () {
-        this.context[_] && this.context[_]._(this.onUpdate);
-        var _ = this.props.observedBits;
-        this.observedBits = _ ?? _;
-      }),
-      (_.componentWillUnmount = function () {
-        this.context[_] && this.context[_].off(this.onUpdate);
-      }),
-      (_.getValue = function () {
-        return this.context[_] ? this.context[_].get() : _;
-      }),
-      (_.render = function () {
-        return _(this.props.children)(this.state.value);
-      }),
-      _
-    );
-  })(_.Component);
-  return (
-    (_.contextTypes = ((_ = {}), (_[_] = _.default.object), _)),
-    {
-      Provider: _,
-      Consumer: _,
-    }
-  );
-}
-var _ = _.createContext || _,
-  _ = function (_) {
-    var _ = _();
-    return (_.displayName = _), _;
-  },
-  _ = _(`Router-History`),
-  _ = _(`Router`);
-_.Component, _.Component, _.Component, _.Component, _.Component, _.Component;
-var _ = _.useContext;
-function _() {
-  return _(_);
-}
-function _() {
-  return _(_).location;
-}
-var _ = {
-    m_unPID: 0,
-    m_nBrowserID: -1,
-  },
-  _ = class {
-    m_fnRender;
-    m_rgLoadingLinks = [];
-    constructor(_, _, _) {
-      if (((this.m_rgLoadingLinks = []), _))
-        for (let _ = 0; _ < _.length; _++) this.AddLink(_[_], !0);
-      else if (_) {
-        let _ = _.getElementsByTagName(`link`);
-        for (let _ = 0; _ < _.length; _++) {
-          let _ = _[_];
-          this.AddLink(_, !1);
-        }
-      }
-    }
-    AddLink(_, _) {
-      if (_) {
-        let _ = !1;
-        try {
-          (!_.sheet || !_.sheet.cssRules || _.sheet.cssRules.length == 0) &&
-            (_ = !0);
-        } catch {}
-        _ &&
-          (_.addEventListener(`load`, this.OnLinkLoad),
-          this.m_rgLoadingLinks.push(_));
-      } else
-        _.addEventListener(`load`, this.OnLinkLoad),
-          this.m_rgLoadingLinks.push(_);
-    }
-    SetTarget(_) {
-      (this.m_fnRender = _),
-        this.m_rgLoadingLinks.length == 0 &&
-          (this.m_fnRender(), (this.m_fnRender = void 0));
-    }
-    OnLinkLoad(_) {
-      _.currentTarget.removeEventListener(`load`, this.OnLinkLoad),
-        _(this.m_rgLoadingLinks, _.currentTarget),
-        this.m_rgLoadingLinks.length == 0 &&
-          (this.m_fnRender?.(), (this.m_fnRender = void 0));
-    }
-  };
-_([_], _.prototype, `OnLinkLoad`, null);
-var _ = (function (_) {
-    return (
-      (_[(_.None = 0)] = `None`),
-      (_[(_.Minimized = 1)] = `Minimized`),
-      (_[(_.Hidden = 2)] = `Hidden`),
-      (_[(_.TooltipHint = 4)] = `TooltipHint`),
-      (_[(_.NoTaskbarIcon = 8)] = `NoTaskbarIcon`),
-      (_[(_.Resizable = 16)] = `Resizable`),
-      (_[(_.NoScalePosition = 32)] = `NoScalePosition`),
-      (_[(_.NoScaleSize = 64)] = `NoScaleSize`),
-      (_[(_.Maximized = 128)] = `Maximized`),
-      (_[(_.Composited = 256)] = `Composited`),
-      (_[(_.NotFocusable = 512)] = `NotFocusable`),
-      (_[(_.FullScreen = 1024)] = `FullScreen`),
-      (_[(_.Fullscreen_Exclusive = 2048)] = `Fullscreen_Exclusive`),
-      (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-        `ApplyBrowserScaleToDimensions`),
-      (_[(_.AlwaysOnTop = 8192)] = `AlwaysOnTop`),
-      (_[(_.NoWindowShadow = 16384)] = `NoWindowShadow`),
-      (_[(_.NoMinimize = 32768)] = `NoMinimize`),
-      (_[(_.PopUpMenuHint = 65536)] = `PopUpMenuHint`),
-      (_[(_.IgnoreSavedSize = 131072)] = `IgnoreSavedSize`),
-      (_[(_.NoRoundedCorners = 262144)] = `NoRoundedCorners`),
-      (_[(_.ForceRoundedCorners = 524288)] = `ForceRoundedCorners`),
-      (_[(_.OverrideRedirect = 1048576)] = `OverrideRedirect`),
-      (_[(_.IgnoreSteamDisplayScale = 2097152)] = `IgnoreSteamDisplayScale`),
-      (_[(_.TransparentParentWindow = 4194304)] = `TransparentParentWindow`),
-      (_[(_.DisableDPIScale = 8388608)] = `DisableDPIScale`),
-      (_[(_.ForceBrowserVisible = 16777216)] = `ForceBrowserVisible`),
-      _
-    );
-  })({}),
-  _ = (function (_) {
-    return (
-      (_[(_.Overlay = 0)] = `Overlay`),
-      (_[(_.Notification = 1)] = `Notification`),
-      (_[(_.Tooltip = 2)] = `Tooltip`),
-      (_[(_.PopupContextMenu = 3)] = `PopupContextMenu`),
-      (_[(_.StandaloneContextMenu = 4)] = `StandaloneContextMenu`),
-      _
-    );
-  })({});
-function _() {
-  return _() ? 256 : 0;
-}
-function _(_) {
-  let _ = 0;
-  switch (_) {
-    case 0:
-      return (_ |= 8192), (_ |= 8), (_ |= 512), (_ |= 4194304), _;
-    case 1:
-      return (
-        (_ |= _(0)),
-        (_ |= 16384),
-        (_ |= 262144),
-        (_ |= 1048576),
-        (_ |= 16777216),
-        _
-      );
-    case 2:
-      return (_ |= _(0)), (_ |= 262144), (_ |= 16384), (_ |= 4), (_ |= _()), _;
-    case 3:
-      return (
-        (_ |= 8),
-        (_ |= 262144),
-        (_ |= 16384),
-        (_ |= 65536),
-        (_ |= 4194304),
-        (_ |= _()),
-        _
-      );
-    case 4:
-      return (
-        (_ = 8),
-        (_ |= 262144),
-        (_ |= 16384),
-        (_ |= 1048576),
-        (_ |= 4194304),
-        (_ |= _()),
-        _
-      );
-  }
-}
-function _() {
-  let { ownerWindow: _ } = _();
-  return _.GetPopupForWindow(_)?.browser_info || _;
-}
-var _ = _.createContext({
-    ownerWindow: window,
-  }),
-  _ = () => _.useContext(_);
-function _(_) {
-  let { ownerWindow: _, children: _ } = _,
-    _ = _.useMemo(
-      () => ({
-        ownerWindow: _,
-      }),
-      [_],
-    );
-  return _.createElement(
-    _.Provider,
-    {
-      value: _,
-    },
-    _,
-  );
-}
-var _ = class {
-  m_strName;
-  m_strTitle;
-  m_rgParams;
-  m_popup;
-  m_element;
-  m_renderWhenReady;
-  m_bCreateHidden;
-  m_bCreated = !1;
-  m_onCreateRender = null;
-  m_bFocused = !1;
-  constructor(_, _) {
-    _(this),
-      _(
-        _,
-        `Name is required.  This is an internal name, different from title.`,
-      ),
-      (this.m_strName = _);
-    let { title: _, eCreationFlags: _, ..._ } = _;
-    (this.m_rgParams = {
-      ..._,
-      eCreationFlags: _ ?? 0,
-    }),
-      this.m_rgParams.target_browser &&
-        (this.m_strName += `_uid` + this.m_rgParams.target_browser.m_unPID),
-      (this.m_bCreateHidden = !!(this.m_rgParams.eCreationFlags & 2)),
-      (this.m_strTitle = _);
-  }
-  UpdateParamsBeforeShow(_) {
-    return _;
-  }
-  OnDrop(_) {
-    console.log(`Ignoring drop onto toplevel window`, _),
-      _.preventDefault(),
-      _.stopPropagation();
-  }
-  OnDragOver(_) {
-    _.preventDefault(),
-      (_.dataTransfer.dropEffect = `none`),
-      _.stopPropagation();
-  }
-  OnMessage(_) {
-    _.data === `window_moved` && this.OnMove(),
-      _.data === `window_resized` && this.OnResize(),
-      _.data === `popup-created` && this.OnCreateInternal();
-  }
-  Show(_ = _.k_EWindowBringToFrontAndForceOS) {
-    let _;
-    (_ =
-      typeof _ == `boolean`
-        ? _
-          ? _.k_EWindowBringToFrontAndForceOS
-          : _.k_EWindowBringToFrontInvalid
-        : _),
-      window.SteamClient && (this.m_rgParams.eCreationFlags |= 2),
-      this.m_rgParams.eCreationFlags & 512 &&
-        (_ = _.k_EWindowBringToFrontInvalid),
-      this.BIsValid() &&
-        (this.BIsClosed()
-          ? ((this.m_popup = void 0), (this.m_element = void 0))
-          : _ != _.k_EWindowBringToFrontInvalid && this.Focus(_));
-    let _ = _.GetExistingPopup(this.m_strName);
-    if (_ && !this.m_rgParams.replace_existing_popup) return;
-    this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
-    let _, _, _;
-    _
-      ? ((_ = _.m_element),
-        (_ = _.m_popup),
-        (_ = _.m_renderWhenReady),
-        _.RemoveTrackedPopup(_),
-        _.ReleasePopup(),
-        _?.removeEventListener(`beforeunload`, _.OnBeforeUnloadEvent),
-        _?.removeEventListener(`unload`, _.OnUnload),
-        _?.removeEventListener(`resize`, _.OnResizeEvent),
-        _?.removeEventListener(`focus`, this.OnFocusInternal),
-        _?.removeEventListener(`blur`, this.OnBlurInternal),
-        _?.removeEventListener(`drop`, _.OnDrop),
-        _?.removeEventListener(`dragover`, _.OnDragOver),
-        _?.removeEventListener(`message`, this.OnMessage))
-      : (({ popup: _, element: _ } = _.CreatePopup(this.m_strName, {
-          ...this.m_rgParams,
-          title: this.m_strTitle,
-        })),
-        (_ = new _(_?.document, _))),
-      _ &&
-        _ &&
-        ((_.document.title = this.m_strTitle),
-        _.addEventListener(`beforeunload`, this.OnBeforeUnloadEvent),
-        _.addEventListener(`unload`, this.OnUnload),
-        _.addEventListener(`resize`, this.OnResizeEvent),
-        _.addEventListener(`focus`, this.OnFocusInternal),
-        _.addEventListener(`blur`, this.OnBlurInternal),
-        _.addEventListener(`drop`, this.OnDrop),
-        _.addEventListener(`dragover`, this.OnDragOver),
-        _.addEventListener(`message`, this.OnMessage),
-        _.LANGUAGE &&
-          (_.document.documentElement.setAttribute(`lang`, _() ?? ``),
-          _(_.LANGUAGE) &&
-            _.document.documentElement.setAttribute(`dir`, `rtl`)),
-        (this.m_popup = _),
-        (this.m_element = _),
-        (this.m_renderWhenReady = _),
-        this.m_renderWhenReady?.SetTarget(() => {
-          this.m_popup &&
-            this.m_element &&
-            this.RenderInternal(this.m_popup, this.m_element, _);
-        })),
-      _.AddTrackedPopup(this),
-      _ &&
-        (this.OnCreateInternal(),
-        _ != _.k_EWindowBringToFrontInvalid && this.Focus(_));
-  }
-  RemoveEventListeners() {
-    this.window?.removeEventListener(`beforeunload`, this.OnBeforeUnloadEvent),
-      this.window?.removeEventListener(`unload`, this.OnUnload),
-      this.window?.removeEventListener(`resize`, this.OnResizeEvent),
-      this.window?.removeEventListener(`focus`, this.OnFocusInternal),
-      this.window?.removeEventListener(`blur`, this.OnBlurInternal),
-      this.window?.removeEventListener(`drop`, this.OnDrop),
-      this.window?.removeEventListener(`dragover`, this.OnDragOver),
-      this.window?.removeEventListener(`message`, this.OnMessage);
-  }
-  RenderInternal(_, _, _) {
-    if (!this.m_bCreated) {
-      this.m_onCreateRender = () => this.RenderInternal(_, _, _);
-      return;
-    }
-    this.browser_info &&
-      _(this.browser_info.m_eBrowserType) &&
-      (_.ownerDocument.body.className += ` VR`),
-      this.Render(_, _),
-      this.OnLoad(),
-      _?.SteamClient &&
-        !this.m_bCreateHidden &&
-        (_ == _.k_EWindowBringToFrontInvalid
-          ? _.SteamClient.Window.ShowWindow()
-          : _.SteamClient.Window.BringToFront(_));
-  }
-  OnCreateInternal() {
-    this.m_bCreated ||
-      ((this.m_bCreated = !0),
-      this.OnCreate(),
-      (this.m_onCreateRender &&= (this.m_onCreateRender(), null)));
-  }
-  OnCreate() {}
-  OnResizeEvent() {
-    this.OnResize();
-  }
-  OnBeforeUnloadEvent() {
-    this.OnBeforeUnload();
-  }
-  OnUnload(_) {
-    this.RemoveEventListeners(),
-      _.RemoveTrackedPopup(this),
-      this.OnClose(),
-      (this.m_popup = void 0);
-  }
-  get browser_info() {
-    return this.m_rgParams.target_browser;
-  }
-  get window() {
-    return this.m_popup;
-  }
-  get root_element() {
-    return this.m_element;
-  }
-  get title() {
-    return this.m_strTitle;
-  }
-  set title(_) {
-    (this.m_strTitle = _),
-      this.m_popup && (this.m_popup.document.title = this.m_strTitle);
-  }
-  get params() {
-    return this.m_rgParams;
-  }
-  Focus(_ = _.k_EWindowBringToFrontAndForceOS) {
-    !this.m_popup ||
-      _ == _.k_EWindowBringToFrontInvalid ||
-      (_(this.m_popup, `Window.BringToFront`)
-        ? this.m_popup.SteamClient.Window.BringToFront(_)
-        : this.m_popup.focus());
-  }
-  Close() {
-    this.m_popup &&
-      (_(this.m_popup, `Window.Close`)
-        ? this.m_popup.SteamClient.Window.Close()
-        : this.m_popup.close());
-  }
-  GetName() {
-    return this.m_strName;
-  }
-  BIsValid() {
-    return !!this.m_popup;
-  }
-  BIsClosed() {
-    return !this.m_popup || this.m_popup.closed;
-  }
-  BIsVisible() {
-    return !!(
-      this.m_popup &&
-      !this.m_popup.closed &&
-      this.m_popup.document.visibilityState == `visible`
-    );
-  }
-  BIsFocused() {
-    return this.BIsVisible() && !!this.m_popup?.document.hasFocus();
-  }
-  OnFocusInternal() {
-    this.m_popup && this.m_popup.document.body.classList.add(`WindowFocus`),
-      (this.m_bFocused = !0),
-      this.OnFocus();
-  }
-  OnBlurInternal() {
-    this.m_popup && this.m_popup.document.body.classList.remove(`WindowFocus`),
-      (this.m_bFocused = !1),
-      this.OnBlur();
-  }
-  get focused() {
-    return this.m_bFocused;
-  }
-  GetWindowRestoreDetails() {
-    return _(this.m_popup, `Window.GetWindowRestoreDetails`) &&
-      !this.m_popup.closed
-      ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
-      : Promise.resolve(``);
-  }
-  IsMinimized() {
-    return _(this.m_popup, `Window.IsWindowMinimized`) && !this.m_popup.closed
-      ? this.m_popup.SteamClient.Window.IsWindowMinimized()
-      : Promise.resolve(!1);
-  }
-  IsMaximized() {
-    return _(this.m_popup, `Window.IsWindowMaximized`) && !this.m_popup.closed
-      ? this.m_popup.SteamClient.Window.IsWindowMaximized()
-      : Promise.resolve(!1);
-  }
-  ReleasePopup() {
-    this.OnClose(), (this.m_popup = null);
-  }
-  OnMove() {}
-  OnResize() {
-    this.IsMaximized().then((_) => {
-      _
-        ? this.m_popup?.document.body.classList.add(`Maximized`)
-        : this.m_popup?.document.body.classList.remove(`Maximized`);
-    });
-  }
-  OnBeforeUnload() {}
-  OnFocus() {}
-  OnBlur() {}
-  m_rgChildBrowserViews = [];
-  get childBrowserViews() {
-    return this.m_rgChildBrowserViews;
-  }
-  RegisterChildBrowserView(_) {
-    return (
-      this.m_rgChildBrowserViews.push(_),
-      {
-        Unregister: () =>
-          (this.m_rgChildBrowserViews = this.m_rgChildBrowserViews.filter(
-            (_) => _ != _,
-          )),
-      }
-    );
-  }
-};
-_([_], _.prototype, `m_bFocused`, void 0),
-  _([_], _.prototype, `OnMessage`, null),
-  _([_], _.prototype, `RenderInternal`, null),
-  _([_], _.prototype, `OnCreateInternal`, null),
-  _([_], _.prototype, `OnResizeEvent`, null),
-  _([_], _.prototype, `OnBeforeUnloadEvent`, null),
-  _([_], _.prototype, `OnUnload`, null),
-  _([_], _.prototype, `OnFocusInternal`, null),
-  _([_], _.prototype, `OnBlurInternal`, null),
-  _(
-    [_],
-    class extends _ {
-      m_strSavedDimensionsKey;
-      m_strInitialSavedDimensionsKey;
-      m_strInitialRestoreDetails;
-      m_bExpires;
-      constructor(_, _, _, _) {
-        super(_, _), this.SetSavedDimensionsKey(_), (this.m_bExpires = _);
-      }
-      BIsInOverlay() {
-        return (
-          this.browser_info &&
-          this.browser_info.m_unPID != 0 &&
-          this.browser_info.m_nBrowserID != -1
-        );
-      }
-      SetSavedDimensionsKey(_) {
-        this.m_strSavedDimensionsKey = _;
-      }
-      UpdateParamsBeforeShow(_) {
-        return (
-          this.m_strSavedDimensionsKey &&
-          !_.bIgnoreSavedDimensions &&
-          !_.strRestoreDetails
-            ? ((this.m_strInitialSavedDimensionsKey =
-                this.GetSavedDimensionsKey()),
-              (_.strRestoreDetails = _.GetRestoreDetails(
-                this.m_strInitialSavedDimensionsKey,
-              )))
-            : _.strRestoreDetails &&
-              ((this.m_strInitialSavedDimensionsKey =
-                this.GetSavedDimensionsKey()),
-              _.SetRestoreDetails(
-                this.m_strInitialSavedDimensionsKey,
-                _.strRestoreDetails,
-                this.m_bExpires,
-              )),
-          _
-        );
-      }
-      OnLoad() {
-        this.GetWindowRestoreDetails().then((_) => {
-          (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
-        });
-      }
-      OnMove() {
-        super.OnMove(), this.QueryAndStoreWindowPosition();
-      }
-      OnResize() {
-        super.OnResize(), this.QueryAndStoreWindowPosition();
-      }
-      OnResizeComplete(_) {}
-      QueryAndStoreWindowPosition() {
-        if (this.m_strInitialRestoreDetails) {
-          let _ = this.GetSavedDimensionsKey();
-          this.m_popup?.setTimeout(() => {
-            this.GetWindowRestoreDetails().then((_) => {
-              let _ =
-                this.m_rgParams.strRestoreDetails == _ &&
-                _ == this.m_strInitialSavedDimensionsKey;
-              this.m_popup &&
-                this.m_strSavedDimensionsKey &&
-                _ &&
-                !_ &&
-                (_.SetRestoreDetails(_, _, this.m_bExpires),
-                (this.m_rgParams.strRestoreDetails = _),
-                (this.m_strInitialSavedDimensionsKey = _),
-                this.OnResizeComplete(_));
-            });
-          }, 30);
-        }
-      }
-      OnBeforeUnload() {
-        this.QueryAndStoreWindowPosition(), super.OnBeforeUnload();
-      }
-      OnClose() {}
-      SaveWindowPosition(_) {
-        _.SetRestoreDetails(this.GetSavedDimensionsKey(), _, !1),
-          (this.m_rgParams.strRestoreDetails = _);
-      }
-    }.prototype,
-    `QueryAndStoreWindowPosition`,
-    null,
-  );
-var _ = class {
-  m_bShuttingDown = !1;
-  m_mapPopups = _.map([], {
-    deep: !1,
-  });
-  m_rgShutdownCallbacks = [];
-  m_rgPopupCreatedCallbacks = new _();
-  m_rgPopupDestroyedCallbacks = new _();
-  m_unCurrentAccountID = 0;
-  m_mapRestoreDetails = new Map();
-  m_bSaveRequired = !1;
-  m_DynamicCSSObserver;
-  constructor() {
-    if (`addEventListener` in window) {
-      window.addEventListener(`beforeunload`, (_) => {
-        this.m_bShuttingDown = !0;
-        for (let _ of this.m_rgShutdownCallbacks) _();
-        let _ = [];
-        this.m_mapPopups.forEach((_) => {
-          _.BIsValid() && !_.BIsClosed() && _.push(_);
-        });
-        for (let _ of _)
-          _(_.window, `Browser.SetShouldExitSteamOnBrowserClosed`) &&
-            _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(!1),
-            _(_.window, `Window.SetHideOnClose`) &&
-              _.window.SteamClient.Window.SetHideOnClose(!1),
-            _.Close();
-        this.m_bSaveRequired && this.SaveSavedDimensionStore(),
-          this.m_mapPopups.clear();
-      });
-      let _ = document.querySelector(`head`);
-      _(_, `Couldn't find head element`),
-        _ &&
-          ((this.m_DynamicCSSObserver = new MutationObserver(() => {
-            let _ = _();
-            this.m_mapPopups.forEach((_) => {
-              _(_.window.document, _, !1);
-            });
-          })),
-          this.m_DynamicCSSObserver.observe(_, {
-            childList: !0,
-          }));
-    }
-  }
-  BAnyPopupHasFocus() {
-    for (let _ of this.m_mapPopups.values()) if (_.focused) return !0;
-    return !1;
-  }
-  BAnyMenuHasFocus() {
-    for (let _ of this.m_mapPopups.values())
-      if (_.focused && (_.params.eCreationFlags ?? 0) & 8) return !0;
-    return !1;
-  }
-  SetCurrentLoggedInAccountID(_) {
-    this.m_unCurrentAccountID != _ &&
-      ((this.m_unCurrentAccountID = _),
-      _ ? this.LoadSavedDimensionStore() : this.ClearSavedDimensionStore());
-  }
-  AddShutdownCallback(_) {
-    this.m_rgShutdownCallbacks.push(_);
-  }
-  AddPopupCreatedCallback(_) {
-    return this.m_rgPopupCreatedCallbacks.Register(_);
-  }
-  AddPopupDestroyedCallback(_) {
-    return this.m_rgPopupDestroyedCallbacks.Register(_);
-  }
-  AddTrackedPopup(_) {
-    this.m_mapPopups.set(_.GetName(), _),
-      _.BIsValid() && this.m_rgPopupCreatedCallbacks.Dispatch(_);
-  }
-  RemoveTrackedPopup(_) {
-    this.m_rgPopupDestroyedCallbacks.Dispatch(_),
-      this.m_mapPopups.delete(_.GetName());
-  }
-  GetExistingPopup(_) {
-    return this.m_mapPopups.get(_);
-  }
-  GetPopups() {
-    return this.m_mapPopups.values();
-  }
-  GetPopupForWindow(_) {
-    for (let _ of this.m_mapPopups.values()) if (_.window === _) return _;
-  }
-  GetPopupForVROverlayKey(_) {
-    if (_)
-      return Array.from(this.m_mapPopups.values()).find(
-        (_) => _.params.strVROverlayKey == _,
-      );
-  }
-  ClosePopupsOwnedByBrowser(_) {
-    this.m_mapPopups.forEach((_) => {
-      _.browser_info &&
-        _.browser_info.m_nBrowserID == _.m_nBrowserID &&
-        _.browser_info.m_unPID == _.m_unPID &&
-        _.Close();
-    });
-  }
-  static CreatePopup(_, _) {
-    let _ = _.dimensions || {},
-      _ = _.width || 300,
-      _ = _.height || 300,
-      _ = _.title,
-      _ = `width=` + _ + `,height=` + _;
-    _.left !== void 0 && (_ += `,left=` + _.left),
-      _.top !== void 0 && (_ += `,top=` + _.top),
-      (_ += `,resizeable,status=0,toolbar=0,menubar=0,location=0`);
-    let _ = `about:blank`,
-      _ = [];
-    _.push(`createflags=` + _.eCreationFlags),
-      _.minWidth && _.push(`minwidth=` + _.minWidth),
-      _.minHeight && _.push(`minheight=` + _.minHeight),
-      _.maxWidth && _.maxWidth != 1 / 0 && _.push(`maxwidth=` + _.maxWidth),
-      _.maxHeight && _.maxHeight != 1 / 0 && _.push(`maxheight=` + _.maxHeight),
-      _.target_browser
-        ? (_.push(`pid=` + _.target_browser.m_unPID),
-          _.push(`browser=` + _.target_browser.m_nBrowserID),
-          _.target_browser.m_eBrowserType
-            ? _.push(`browserType=` + _.target_browser.m_eBrowserType)
-            : _.browserType && _.push(`browserType=` + _.browserType),
-          _.availscreenwidth &&
-            _.availscreenheight &&
-            (_.push(`screenavailwidth=` + _.availscreenwidth),
-            _.push(`screenavailheight=` + _.availscreenheight)))
-        : _.browserType && _.push(`browserType=` + _.browserType),
-      _.strVROverlayKey && _.push(`vrOverlayKey=` + _.strVROverlayKey),
-      _.strRestoreDetails && _.push(`restoredetails=` + _.strRestoreDetails),
-      _.window_opener_id && _.push(`openerid=` + _.window_opener_id),
-      _.parent_container_popup_id &&
-        _.push(`parentcontainerpopupid=` + _.parent_container_popup_id),
-      _.center_on_window &&
-        _.left === void 0 &&
-        _.top === void 0 &&
-        _.push(
-          `centerOnBrowserID=` +
-            _.center_on_window.SteamClient.Browser.GetBrowserID(),
-        ),
-      _.strUserAgent && _.push(`useragent=` + _.strUserAgent),
-      _.hwndParent && _.push(`hwndParent=` + _.hwndParent),
-      _.bPinned && _.push(`pinned=true`),
-      _.bModal && _.push(`modal=true`),
-      _ && (_ += `?` + _.join(`&`));
-    let _ = (_.owner_window || window).open(_, _, _);
-    if (!_)
-      return (
-        console.error(
-          `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`,
-        ),
-        {}
-      );
-    let _ = ``;
-    _.html_class && (_ = `class="${_.html_class}"`);
-    let _ = ``;
-    _.body_class && (_ = `class="${_.body_class}"`);
-    let _ = ``;
-    _.body_role && (_ = `role="${_.body_role}"`);
-    let _ = ``;
-    _.popup_class && (_ = `class="${_.popup_class}"`);
-    let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_} ${_}><div id="popup_target" ${_}></div></body></html>`;
-    return (
-      _.document.write(_),
-      (_.document.title = _),
-      _.document.close(),
-      _(_, _()),
-      {
-        popup: _,
-        element: _.document.getElementById(`popup_target`),
-      }
-    );
-  }
-  BShuttingDown() {
-    return this.m_bShuttingDown;
-  }
-  GetLocalStorageKey() {
-    return `PopupSavedDimensions_` + this.m_unCurrentAccountID;
-  }
-  LoadSavedDimensionStore() {
-    if (!this.m_unCurrentAccountID) return;
-    let _ = this.GetLocalStorageKey();
-    this.m_mapRestoreDetails.clear();
-    let _ = window.localStorage.getItem(_);
-    if (_)
-      try {
-        let _ = JSON.parse(_);
-        this.m_mapRestoreDetails = new Map(_);
-      } catch {}
-  }
-  SaveSavedDimensionStore() {
-    if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
-    let _ = this.GetLocalStorageKey(),
-      _ = JSON.stringify(Array.from(this.m_mapRestoreDetails));
-    try {
-      window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
-    } catch (_) {
-      if (`name` in _ && _.name == `QuotaExceededError`) {
-        console.log(`Quota exceeded`);
-        for (let _ of Object.keys(window.localStorage))
-          _.startsWith(`PopupSavedDimensions_`) &&
-            _ != _ &&
-            window.localStorage.removeItem(_);
-        window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
-      }
-    }
-  }
-  DebouncedSaveSavedDimensionStore() {
-    this.SaveSavedDimensionStore();
-  }
-  ClearSavedDimensionStore() {
-    this.m_mapRestoreDetails?.clear(), (this.m_bSaveRequired = !1);
-  }
-  GetRestoreDetails(_) {
-    if (!this.m_mapRestoreDetails?.has(_)) return ``;
-    let _ = this.m_mapRestoreDetails.get(_);
-    return (
-      (_.last_used = Date.now()),
-      (this.m_bSaveRequired = !0),
-      _.strRestoreDetails
-    );
-  }
-  SetRestoreDetails(_, _, _) {
-    if (_) {
-      if (_) {
-        if (this.m_mapRestoreDetails.size > 50) {
-          let _ = null,
-            _ = Date.now();
-          for (let _ of Array.from(this.m_mapRestoreDetails.keys())) {
-            let _ = this.m_mapRestoreDetails.get(_);
-            _.last_used < _ && _.bExpires && ((_ = _.last_used), (_ = _));
-          }
-          _ && this.m_mapRestoreDetails.delete(_);
-        }
-        let _ = {
-          strRestoreDetails: _,
-          last_used: Date.now(),
-          bExpires: _,
-        };
-        this.m_mapRestoreDetails.set(_, _);
-      } else this.m_mapRestoreDetails.delete(_);
-      (this.m_bSaveRequired = !0),
-        this.m_bShuttingDown
-          ? this.SaveSavedDimensionStore()
-          : this.DebouncedSaveSavedDimensionStore();
-    }
-  }
-};
-_([_, _(100)], _.prototype, `DebouncedSaveSavedDimensionStore`, null);
-var _ = new _();
-window.g_PopupManager = _;
-var _ = _();
+  _ = _(_()),
+  _ = _();
 function _(_, _) {
   let _;
   (_ = `currentTarget` in _ ? _.currentTarget.ownerDocument.defaultView : _),
@@ -4165,7 +3002,768 @@ var _ = `lm8av4GjoRI-`,
   _ = `oiWlzYXUFPI-`,
   _ = `UAr4bw1ZaFc-`,
   _ = `mirgvJ338Rs-`,
-  _ = class _ {
+  _ = {
+    m_unPID: 0,
+    m_nBrowserID: -1,
+  },
+  _ = class {
+    m_fnRender;
+    m_rgLoadingLinks = [];
+    constructor(_, _, _) {
+      if (((this.m_rgLoadingLinks = []), _))
+        for (let _ = 0; _ < _.length; _++) this.AddLink(_[_], !0);
+      else if (_) {
+        let _ = _.getElementsByTagName(`link`);
+        for (let _ = 0; _ < _.length; _++) {
+          let _ = _[_];
+          this.AddLink(_, !1);
+        }
+      }
+    }
+    AddLink(_, _) {
+      if (_) {
+        let _ = !1;
+        try {
+          (!_.sheet || !_.sheet.cssRules || _.sheet.cssRules.length == 0) &&
+            (_ = !0);
+        } catch {}
+        _ &&
+          (_.addEventListener(`load`, this.OnLinkLoad),
+          this.m_rgLoadingLinks.push(_));
+      } else
+        _.addEventListener(`load`, this.OnLinkLoad),
+          this.m_rgLoadingLinks.push(_);
+    }
+    SetTarget(_) {
+      (this.m_fnRender = _),
+        this.m_rgLoadingLinks.length == 0 &&
+          (this.m_fnRender(), (this.m_fnRender = void 0));
+    }
+    OnLinkLoad(_) {
+      _.currentTarget.removeEventListener(`load`, this.OnLinkLoad),
+        _(this.m_rgLoadingLinks, _.currentTarget),
+        this.m_rgLoadingLinks.length == 0 &&
+          (this.m_fnRender?.(), (this.m_fnRender = void 0));
+    }
+  };
+_([_], _.prototype, `OnLinkLoad`, null);
+var _ = (function (_) {
+    return (
+      (_[(_.None = 0)] = `None`),
+      (_[(_.Minimized = 1)] = `Minimized`),
+      (_[(_.Hidden = 2)] = `Hidden`),
+      (_[(_.TooltipHint = 4)] = `TooltipHint`),
+      (_[(_.NoTaskbarIcon = 8)] = `NoTaskbarIcon`),
+      (_[(_.Resizable = 16)] = `Resizable`),
+      (_[(_.NoScalePosition = 32)] = `NoScalePosition`),
+      (_[(_.NoScaleSize = 64)] = `NoScaleSize`),
+      (_[(_.Maximized = 128)] = `Maximized`),
+      (_[(_.Composited = 256)] = `Composited`),
+      (_[(_.NotFocusable = 512)] = `NotFocusable`),
+      (_[(_.FullScreen = 1024)] = `FullScreen`),
+      (_[(_.Fullscreen_Exclusive = 2048)] = `Fullscreen_Exclusive`),
+      (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+        `ApplyBrowserScaleToDimensions`),
+      (_[(_.AlwaysOnTop = 8192)] = `AlwaysOnTop`),
+      (_[(_.NoWindowShadow = 16384)] = `NoWindowShadow`),
+      (_[(_.NoMinimize = 32768)] = `NoMinimize`),
+      (_[(_.PopUpMenuHint = 65536)] = `PopUpMenuHint`),
+      (_[(_.IgnoreSavedSize = 131072)] = `IgnoreSavedSize`),
+      (_[(_.NoRoundedCorners = 262144)] = `NoRoundedCorners`),
+      (_[(_.ForceRoundedCorners = 524288)] = `ForceRoundedCorners`),
+      (_[(_.OverrideRedirect = 1048576)] = `OverrideRedirect`),
+      (_[(_.IgnoreSteamDisplayScale = 2097152)] = `IgnoreSteamDisplayScale`),
+      (_[(_.TransparentParentWindow = 4194304)] = `TransparentParentWindow`),
+      (_[(_.DisableDPIScale = 8388608)] = `DisableDPIScale`),
+      (_[(_.ForceBrowserVisible = 16777216)] = `ForceBrowserVisible`),
+      _
+    );
+  })({}),
+  _ = (function (_) {
+    return (
+      (_[(_.Overlay = 0)] = `Overlay`),
+      (_[(_.Notification = 1)] = `Notification`),
+      (_[(_.Tooltip = 2)] = `Tooltip`),
+      (_[(_.PopupContextMenu = 3)] = `PopupContextMenu`),
+      (_[(_.StandaloneContextMenu = 4)] = `StandaloneContextMenu`),
+      _
+    );
+  })({});
+function _() {
+  return _() ? 256 : 0;
+}
+function _(_) {
+  let _ = 0;
+  switch (_) {
+    case 0:
+      return (_ |= 8192), (_ |= 8), (_ |= 512), (_ |= 4194304), _;
+    case 1:
+      return (
+        (_ |= _(0)),
+        (_ |= 16384),
+        (_ |= 262144),
+        (_ |= 1048576),
+        (_ |= 16777216),
+        _
+      );
+    case 2:
+      return (_ |= _(0)), (_ |= 262144), (_ |= 16384), (_ |= 4), (_ |= _()), _;
+    case 3:
+      return (
+        (_ |= 8),
+        (_ |= 262144),
+        (_ |= 16384),
+        (_ |= 65536),
+        (_ |= 4194304),
+        (_ |= _()),
+        _
+      );
+    case 4:
+      return (
+        (_ = 8),
+        (_ |= 262144),
+        (_ |= 16384),
+        (_ |= 1048576),
+        (_ |= 4194304),
+        (_ |= _()),
+        _
+      );
+  }
+}
+function _() {
+  let { ownerWindow: _ } = _();
+  return _.GetPopupForWindow(_)?.browser_info || _;
+}
+var _ = _.createContext({
+    ownerWindow: window,
+  }),
+  _ = () => _.useContext(_);
+function _(_) {
+  let { ownerWindow: _, children: _ } = _,
+    _ = _.useMemo(
+      () => ({
+        ownerWindow: _,
+      }),
+      [_],
+    );
+  return _.createElement(
+    _.Provider,
+    {
+      value: _,
+    },
+    _,
+  );
+}
+var _ = class {
+  m_strName;
+  m_strTitle;
+  m_rgParams;
+  m_popup;
+  m_element;
+  m_renderWhenReady;
+  m_bCreateHidden;
+  m_bCreated = !1;
+  m_onCreateRender = null;
+  m_bFocused = !1;
+  constructor(_, _) {
+    _(this),
+      _(
+        _,
+        `Name is required.  This is an internal name, different from title.`,
+      ),
+      (this.m_strName = _);
+    let { title: _, eCreationFlags: _, ..._ } = _;
+    (this.m_rgParams = {
+      ..._,
+      eCreationFlags: _ ?? 0,
+    }),
+      this.m_rgParams.target_browser &&
+        (this.m_strName += `_uid` + this.m_rgParams.target_browser.m_unPID),
+      (this.m_bCreateHidden = !!(this.m_rgParams.eCreationFlags & 2)),
+      (this.m_strTitle = _);
+  }
+  UpdateParamsBeforeShow(_) {
+    return _;
+  }
+  OnDrop(_) {
+    console.log(`Ignoring drop onto toplevel window`, _),
+      _.preventDefault(),
+      _.stopPropagation();
+  }
+  OnDragOver(_) {
+    _.preventDefault(),
+      (_.dataTransfer.dropEffect = `none`),
+      _.stopPropagation();
+  }
+  OnMessage(_) {
+    _.data === `window_moved` && this.OnMove(),
+      _.data === `window_resized` && this.OnResize(),
+      _.data === `popup-created` && this.OnCreateInternal();
+  }
+  Show(_ = _.k_EWindowBringToFrontAndForceOS) {
+    let _;
+    (_ =
+      typeof _ == `boolean`
+        ? _
+          ? _.k_EWindowBringToFrontAndForceOS
+          : _.k_EWindowBringToFrontInvalid
+        : _),
+      window.SteamClient && (this.m_rgParams.eCreationFlags |= 2),
+      this.m_rgParams.eCreationFlags & 512 &&
+        (_ = _.k_EWindowBringToFrontInvalid),
+      this.BIsValid() &&
+        (this.BIsClosed()
+          ? ((this.m_popup = void 0), (this.m_element = void 0))
+          : _ != _.k_EWindowBringToFrontInvalid && this.Focus(_));
+    let _ = _.GetExistingPopup(this.m_strName);
+    if (_ && !this.m_rgParams.replace_existing_popup) return;
+    this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
+    let _, _, _;
+    _
+      ? ((_ = _.m_element),
+        (_ = _.m_popup),
+        (_ = _.m_renderWhenReady),
+        _.RemoveTrackedPopup(_),
+        _.ReleasePopup(),
+        _?.removeEventListener(`beforeunload`, _.OnBeforeUnloadEvent),
+        _?.removeEventListener(`unload`, _.OnUnload),
+        _?.removeEventListener(`resize`, _.OnResizeEvent),
+        _?.removeEventListener(`focus`, this.OnFocusInternal),
+        _?.removeEventListener(`blur`, this.OnBlurInternal),
+        _?.removeEventListener(`drop`, _.OnDrop),
+        _?.removeEventListener(`dragover`, _.OnDragOver),
+        _?.removeEventListener(`message`, this.OnMessage))
+      : (({ popup: _, element: _ } = _.CreatePopup(this.m_strName, {
+          ...this.m_rgParams,
+          title: this.m_strTitle,
+        })),
+        (_ = new _(_?.document, _))),
+      _ &&
+        _ &&
+        ((_.document.title = this.m_strTitle),
+        _.addEventListener(`beforeunload`, this.OnBeforeUnloadEvent),
+        _.addEventListener(`unload`, this.OnUnload),
+        _.addEventListener(`resize`, this.OnResizeEvent),
+        _.addEventListener(`focus`, this.OnFocusInternal),
+        _.addEventListener(`blur`, this.OnBlurInternal),
+        _.addEventListener(`drop`, this.OnDrop),
+        _.addEventListener(`dragover`, this.OnDragOver),
+        _.addEventListener(`message`, this.OnMessage),
+        _.LANGUAGE &&
+          (_.document.documentElement.setAttribute(`lang`, _() ?? ``),
+          _(_.LANGUAGE) &&
+            _.document.documentElement.setAttribute(`dir`, `rtl`)),
+        (this.m_popup = _),
+        (this.m_element = _),
+        (this.m_renderWhenReady = _),
+        this.m_renderWhenReady?.SetTarget(() => {
+          this.m_popup &&
+            this.m_element &&
+            this.RenderInternal(this.m_popup, this.m_element, _);
+        })),
+      _.AddTrackedPopup(this),
+      _ &&
+        (this.OnCreateInternal(),
+        _ != _.k_EWindowBringToFrontInvalid && this.Focus(_));
+  }
+  RemoveEventListeners() {
+    this.window?.removeEventListener(`beforeunload`, this.OnBeforeUnloadEvent),
+      this.window?.removeEventListener(`unload`, this.OnUnload),
+      this.window?.removeEventListener(`resize`, this.OnResizeEvent),
+      this.window?.removeEventListener(`focus`, this.OnFocusInternal),
+      this.window?.removeEventListener(`blur`, this.OnBlurInternal),
+      this.window?.removeEventListener(`drop`, this.OnDrop),
+      this.window?.removeEventListener(`dragover`, this.OnDragOver),
+      this.window?.removeEventListener(`message`, this.OnMessage);
+  }
+  RenderInternal(_, _, _) {
+    if (!this.m_bCreated) {
+      this.m_onCreateRender = () => this.RenderInternal(_, _, _);
+      return;
+    }
+    this.browser_info &&
+      _(this.browser_info.m_eBrowserType) &&
+      (_.ownerDocument.body.className += ` VR`),
+      this.Render(_, _),
+      this.OnLoad(),
+      _?.SteamClient &&
+        !this.m_bCreateHidden &&
+        (_ == _.k_EWindowBringToFrontInvalid
+          ? _.SteamClient.Window.ShowWindow()
+          : _.SteamClient.Window.BringToFront(_));
+  }
+  OnCreateInternal() {
+    this.m_bCreated ||
+      ((this.m_bCreated = !0),
+      this.OnCreate(),
+      (this.m_onCreateRender &&= (this.m_onCreateRender(), null)));
+  }
+  OnCreate() {}
+  OnResizeEvent() {
+    this.OnResize();
+  }
+  OnBeforeUnloadEvent() {
+    this.OnBeforeUnload();
+  }
+  OnUnload(_) {
+    this.RemoveEventListeners(),
+      _.RemoveTrackedPopup(this),
+      this.OnClose(),
+      (this.m_popup = void 0);
+  }
+  get browser_info() {
+    return this.m_rgParams.target_browser;
+  }
+  get window() {
+    return this.m_popup;
+  }
+  get root_element() {
+    return this.m_element;
+  }
+  get title() {
+    return this.m_strTitle;
+  }
+  set title(_) {
+    (this.m_strTitle = _),
+      this.m_popup && (this.m_popup.document.title = this.m_strTitle);
+  }
+  get params() {
+    return this.m_rgParams;
+  }
+  Focus(_ = _.k_EWindowBringToFrontAndForceOS) {
+    !this.m_popup ||
+      _ == _.k_EWindowBringToFrontInvalid ||
+      (_(this.m_popup, `Window.BringToFront`)
+        ? this.m_popup.SteamClient.Window.BringToFront(_)
+        : this.m_popup.focus());
+  }
+  Close() {
+    this.m_popup &&
+      (_(this.m_popup, `Window.Close`)
+        ? this.m_popup.SteamClient.Window.Close()
+        : this.m_popup.close());
+  }
+  GetName() {
+    return this.m_strName;
+  }
+  BIsValid() {
+    return !!this.m_popup;
+  }
+  BIsClosed() {
+    return !this.m_popup || this.m_popup.closed;
+  }
+  BIsVisible() {
+    return !!(
+      this.m_popup &&
+      !this.m_popup.closed &&
+      this.m_popup.document.visibilityState == `visible`
+    );
+  }
+  BIsFocused() {
+    return this.BIsVisible() && !!this.m_popup?.document.hasFocus();
+  }
+  OnFocusInternal() {
+    this.m_popup && this.m_popup.document.body.classList.add(`WindowFocus`),
+      (this.m_bFocused = !0),
+      this.OnFocus();
+  }
+  OnBlurInternal() {
+    this.m_popup && this.m_popup.document.body.classList.remove(`WindowFocus`),
+      (this.m_bFocused = !1),
+      this.OnBlur();
+  }
+  get focused() {
+    return this.m_bFocused;
+  }
+  GetWindowRestoreDetails() {
+    return _(this.m_popup, `Window.GetWindowRestoreDetails`) &&
+      !this.m_popup.closed
+      ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
+      : Promise.resolve(``);
+  }
+  IsMinimized() {
+    return _(this.m_popup, `Window.IsWindowMinimized`) && !this.m_popup.closed
+      ? this.m_popup.SteamClient.Window.IsWindowMinimized()
+      : Promise.resolve(!1);
+  }
+  IsMaximized() {
+    return _(this.m_popup, `Window.IsWindowMaximized`) && !this.m_popup.closed
+      ? this.m_popup.SteamClient.Window.IsWindowMaximized()
+      : Promise.resolve(!1);
+  }
+  ReleasePopup() {
+    this.OnClose(), (this.m_popup = null);
+  }
+  OnMove() {}
+  OnResize() {
+    this.IsMaximized().then((_) => {
+      _
+        ? this.m_popup?.document.body.classList.add(`Maximized`)
+        : this.m_popup?.document.body.classList.remove(`Maximized`);
+    });
+  }
+  OnBeforeUnload() {}
+  OnFocus() {}
+  OnBlur() {}
+  m_rgChildBrowserViews = [];
+  get childBrowserViews() {
+    return this.m_rgChildBrowserViews;
+  }
+  RegisterChildBrowserView(_) {
+    return (
+      this.m_rgChildBrowserViews.push(_),
+      {
+        Unregister: () =>
+          (this.m_rgChildBrowserViews = this.m_rgChildBrowserViews.filter(
+            (_) => _ != _,
+          )),
+      }
+    );
+  }
+};
+_([_], _.prototype, `m_bFocused`, void 0),
+  _([_], _.prototype, `OnMessage`, null),
+  _([_], _.prototype, `RenderInternal`, null),
+  _([_], _.prototype, `OnCreateInternal`, null),
+  _([_], _.prototype, `OnResizeEvent`, null),
+  _([_], _.prototype, `OnBeforeUnloadEvent`, null),
+  _([_], _.prototype, `OnUnload`, null),
+  _([_], _.prototype, `OnFocusInternal`, null),
+  _([_], _.prototype, `OnBlurInternal`, null),
+  _(
+    [_],
+    class extends _ {
+      m_strSavedDimensionsKey;
+      m_strInitialSavedDimensionsKey;
+      m_strInitialRestoreDetails;
+      m_bExpires;
+      constructor(_, _, _, _) {
+        super(_, _), this.SetSavedDimensionsKey(_), (this.m_bExpires = _);
+      }
+      BIsInOverlay() {
+        return (
+          this.browser_info &&
+          this.browser_info.m_unPID != 0 &&
+          this.browser_info.m_nBrowserID != -1
+        );
+      }
+      SetSavedDimensionsKey(_) {
+        this.m_strSavedDimensionsKey = _;
+      }
+      UpdateParamsBeforeShow(_) {
+        return (
+          this.m_strSavedDimensionsKey &&
+          !_.bIgnoreSavedDimensions &&
+          !_.strRestoreDetails
+            ? ((this.m_strInitialSavedDimensionsKey =
+                this.GetSavedDimensionsKey()),
+              (_.strRestoreDetails = _.GetRestoreDetails(
+                this.m_strInitialSavedDimensionsKey,
+              )))
+            : _.strRestoreDetails &&
+              ((this.m_strInitialSavedDimensionsKey =
+                this.GetSavedDimensionsKey()),
+              _.SetRestoreDetails(
+                this.m_strInitialSavedDimensionsKey,
+                _.strRestoreDetails,
+                this.m_bExpires,
+              )),
+          _
+        );
+      }
+      OnLoad() {
+        this.GetWindowRestoreDetails().then((_) => {
+          (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
+        });
+      }
+      OnMove() {
+        super.OnMove(), this.QueryAndStoreWindowPosition();
+      }
+      OnResize() {
+        super.OnResize(), this.QueryAndStoreWindowPosition();
+      }
+      OnResizeComplete(_) {}
+      QueryAndStoreWindowPosition() {
+        if (this.m_strInitialRestoreDetails) {
+          let _ = this.GetSavedDimensionsKey();
+          this.m_popup?.setTimeout(() => {
+            this.GetWindowRestoreDetails().then((_) => {
+              let _ =
+                this.m_rgParams.strRestoreDetails == _ &&
+                _ == this.m_strInitialSavedDimensionsKey;
+              this.m_popup &&
+                this.m_strSavedDimensionsKey &&
+                _ &&
+                !_ &&
+                (_.SetRestoreDetails(_, _, this.m_bExpires),
+                (this.m_rgParams.strRestoreDetails = _),
+                (this.m_strInitialSavedDimensionsKey = _),
+                this.OnResizeComplete(_));
+            });
+          }, 30);
+        }
+      }
+      OnBeforeUnload() {
+        this.QueryAndStoreWindowPosition(), super.OnBeforeUnload();
+      }
+      OnClose() {}
+      SaveWindowPosition(_) {
+        _.SetRestoreDetails(this.GetSavedDimensionsKey(), _, !1),
+          (this.m_rgParams.strRestoreDetails = _);
+      }
+    }.prototype,
+    `QueryAndStoreWindowPosition`,
+    null,
+  );
+var _ = class {
+  m_bShuttingDown = !1;
+  m_mapPopups = _.map([], {
+    deep: !1,
+  });
+  m_rgShutdownCallbacks = [];
+  m_rgPopupCreatedCallbacks = new _();
+  m_rgPopupDestroyedCallbacks = new _();
+  m_unCurrentAccountID = 0;
+  m_mapRestoreDetails = new Map();
+  m_bSaveRequired = !1;
+  m_DynamicCSSObserver;
+  constructor() {
+    if (`addEventListener` in window) {
+      window.addEventListener(`beforeunload`, (_) => {
+        this.m_bShuttingDown = !0;
+        for (let _ of this.m_rgShutdownCallbacks) _();
+        let _ = [];
+        this.m_mapPopups.forEach((_) => {
+          _.BIsValid() && !_.BIsClosed() && _.push(_);
+        });
+        for (let _ of _)
+          _(_.window, `Browser.SetShouldExitSteamOnBrowserClosed`) &&
+            _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(!1),
+            _(_.window, `Window.SetHideOnClose`) &&
+              _.window.SteamClient.Window.SetHideOnClose(!1),
+            _.Close();
+        this.m_bSaveRequired && this.SaveSavedDimensionStore(),
+          this.m_mapPopups.clear();
+      });
+      let _ = document.querySelector(`head`);
+      _(_, `Couldn't find head element`),
+        _ &&
+          ((this.m_DynamicCSSObserver = new MutationObserver(() => {
+            let _ = _();
+            this.m_mapPopups.forEach((_) => {
+              _(_.window.document, _, !1);
+            });
+          })),
+          this.m_DynamicCSSObserver.observe(_, {
+            childList: !0,
+          }));
+    }
+  }
+  BAnyPopupHasFocus() {
+    for (let _ of this.m_mapPopups.values()) if (_.focused) return !0;
+    return !1;
+  }
+  BAnyMenuHasFocus() {
+    for (let _ of this.m_mapPopups.values())
+      if (_.focused && (_.params.eCreationFlags ?? 0) & 8) return !0;
+    return !1;
+  }
+  SetCurrentLoggedInAccountID(_) {
+    this.m_unCurrentAccountID != _ &&
+      ((this.m_unCurrentAccountID = _),
+      _ ? this.LoadSavedDimensionStore() : this.ClearSavedDimensionStore());
+  }
+  AddShutdownCallback(_) {
+    this.m_rgShutdownCallbacks.push(_);
+  }
+  AddPopupCreatedCallback(_) {
+    return this.m_rgPopupCreatedCallbacks.Register(_);
+  }
+  AddPopupDestroyedCallback(_) {
+    return this.m_rgPopupDestroyedCallbacks.Register(_);
+  }
+  AddTrackedPopup(_) {
+    this.m_mapPopups.set(_.GetName(), _),
+      _.BIsValid() && this.m_rgPopupCreatedCallbacks.Dispatch(_);
+  }
+  RemoveTrackedPopup(_) {
+    this.m_rgPopupDestroyedCallbacks.Dispatch(_),
+      this.m_mapPopups.delete(_.GetName());
+  }
+  GetExistingPopup(_) {
+    return this.m_mapPopups.get(_);
+  }
+  GetPopups() {
+    return this.m_mapPopups.values();
+  }
+  GetPopupForWindow(_) {
+    for (let _ of this.m_mapPopups.values()) if (_.window === _) return _;
+  }
+  GetPopupForVROverlayKey(_) {
+    if (_)
+      return Array.from(this.m_mapPopups.values()).find(
+        (_) => _.params.strVROverlayKey == _,
+      );
+  }
+  ClosePopupsOwnedByBrowser(_) {
+    this.m_mapPopups.forEach((_) => {
+      _.browser_info &&
+        _.browser_info.m_nBrowserID == _.m_nBrowserID &&
+        _.browser_info.m_unPID == _.m_unPID &&
+        _.Close();
+    });
+  }
+  static CreatePopup(_, _) {
+    let _ = _.dimensions || {},
+      _ = _.width || 300,
+      _ = _.height || 300,
+      _ = _.title,
+      _ = `width=` + _ + `,height=` + _;
+    _.left !== void 0 && (_ += `,left=` + _.left),
+      _.top !== void 0 && (_ += `,top=` + _.top),
+      (_ += `,resizeable,status=0,toolbar=0,menubar=0,location=0`);
+    let _ = `about:blank`,
+      _ = [];
+    _.push(`createflags=` + _.eCreationFlags),
+      _.minWidth && _.push(`minwidth=` + _.minWidth),
+      _.minHeight && _.push(`minheight=` + _.minHeight),
+      _.maxWidth && _.maxWidth != 1 / 0 && _.push(`maxwidth=` + _.maxWidth),
+      _.maxHeight && _.maxHeight != 1 / 0 && _.push(`maxheight=` + _.maxHeight),
+      _.target_browser
+        ? (_.push(`pid=` + _.target_browser.m_unPID),
+          _.push(`browser=` + _.target_browser.m_nBrowserID),
+          _.target_browser.m_eBrowserType
+            ? _.push(`browserType=` + _.target_browser.m_eBrowserType)
+            : _.browserType && _.push(`browserType=` + _.browserType),
+          _.availscreenwidth &&
+            _.availscreenheight &&
+            (_.push(`screenavailwidth=` + _.availscreenwidth),
+            _.push(`screenavailheight=` + _.availscreenheight)))
+        : _.browserType && _.push(`browserType=` + _.browserType),
+      _.strVROverlayKey && _.push(`vrOverlayKey=` + _.strVROverlayKey),
+      _.strRestoreDetails && _.push(`restoredetails=` + _.strRestoreDetails),
+      _.window_opener_id && _.push(`openerid=` + _.window_opener_id),
+      _.parent_container_popup_id &&
+        _.push(`parentcontainerpopupid=` + _.parent_container_popup_id),
+      _.center_on_window &&
+        _.left === void 0 &&
+        _.top === void 0 &&
+        _.push(
+          `centerOnBrowserID=` +
+            _.center_on_window.SteamClient.Browser.GetBrowserID(),
+        ),
+      _.strUserAgent && _.push(`useragent=` + _.strUserAgent),
+      _.hwndParent && _.push(`hwndParent=` + _.hwndParent),
+      _.bPinned && _.push(`pinned=true`),
+      _.bModal && _.push(`modal=true`),
+      _ && (_ += `?` + _.join(`&`));
+    let _ = (_.owner_window || window).open(_, _, _);
+    if (!_)
+      return (
+        console.error(
+          `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`,
+        ),
+        {}
+      );
+    let _ = ``;
+    _.html_class && (_ = `class="${_.html_class}"`);
+    let _ = ``;
+    _.body_class && (_ = `class="${_.body_class}"`);
+    let _ = ``;
+    _.body_role && (_ = `role="${_.body_role}"`);
+    let _ = ``;
+    _.popup_class && (_ = `class="${_.popup_class}"`);
+    let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_} ${_}><div id="popup_target" ${_}></div></body></html>`;
+    return (
+      _.document.write(_),
+      (_.document.title = _),
+      _.document.close(),
+      _(_, _()),
+      {
+        popup: _,
+        element: _.document.getElementById(`popup_target`),
+      }
+    );
+  }
+  BShuttingDown() {
+    return this.m_bShuttingDown;
+  }
+  GetLocalStorageKey() {
+    return `PopupSavedDimensions_` + this.m_unCurrentAccountID;
+  }
+  LoadSavedDimensionStore() {
+    if (!this.m_unCurrentAccountID) return;
+    let _ = this.GetLocalStorageKey();
+    this.m_mapRestoreDetails.clear();
+    let _ = window.localStorage.getItem(_);
+    if (_)
+      try {
+        let _ = JSON.parse(_);
+        this.m_mapRestoreDetails = new Map(_);
+      } catch {}
+  }
+  SaveSavedDimensionStore() {
+    if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
+    let _ = this.GetLocalStorageKey(),
+      _ = JSON.stringify(Array.from(this.m_mapRestoreDetails));
+    try {
+      window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
+    } catch (_) {
+      if (`name` in _ && _.name == `QuotaExceededError`) {
+        console.log(`Quota exceeded`);
+        for (let _ of Object.keys(window.localStorage))
+          _.startsWith(`PopupSavedDimensions_`) &&
+            _ != _ &&
+            window.localStorage.removeItem(_);
+        window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
+      }
+    }
+  }
+  DebouncedSaveSavedDimensionStore() {
+    this.SaveSavedDimensionStore();
+  }
+  ClearSavedDimensionStore() {
+    this.m_mapRestoreDetails?.clear(), (this.m_bSaveRequired = !1);
+  }
+  GetRestoreDetails(_) {
+    if (!this.m_mapRestoreDetails?.has(_)) return ``;
+    let _ = this.m_mapRestoreDetails.get(_);
+    return (
+      (_.last_used = Date.now()),
+      (this.m_bSaveRequired = !0),
+      _.strRestoreDetails
+    );
+  }
+  SetRestoreDetails(_, _, _) {
+    if (_) {
+      if (_) {
+        if (this.m_mapRestoreDetails.size > 50) {
+          let _ = null,
+            _ = Date.now();
+          for (let _ of Array.from(this.m_mapRestoreDetails.keys())) {
+            let _ = this.m_mapRestoreDetails.get(_);
+            _.last_used < _ && _.bExpires && ((_ = _.last_used), (_ = _));
+          }
+          _ && this.m_mapRestoreDetails.delete(_);
+        }
+        let _ = {
+          strRestoreDetails: _,
+          last_used: Date.now(),
+          bExpires: _,
+        };
+        this.m_mapRestoreDetails.set(_, _);
+      } else this.m_mapRestoreDetails.delete(_);
+      (this.m_bSaveRequired = !0),
+        this.m_bShuttingDown
+          ? this.SaveSavedDimensionStore()
+          : this.DebouncedSaveSavedDimensionStore();
+    }
+  }
+};
+_([_, _(100)], _.prototype, `DebouncedSaveSavedDimensionStore`, null);
+var _ = new _();
+window.g_PopupManager = _;
+var _ = class _ {
     key;
     static sm_lastKey = 0;
     ModalClosedCallback = new _();
@@ -4487,6 +4085,17 @@ function _(_) {
           _,
         )
       : null
+  );
+}
+function _(_) {
+  let [_, _] = (0, _.useState)(!1);
+  return (
+    (0, _.useEffect)(() => {
+      (0, _.startTransition)(() => {
+        _(!0);
+      });
+    }, []),
+    _ ? _.children : (_.fallback ?? null)
   );
 }
 function _(_) {
@@ -5964,6 +5573,21 @@ var _ = _.forwardRef(function (_, _) {
   _ = `ftyouIyMw5w-`,
   _ = `cjIhmxfkKDI-`;
 function _(_, _) {
+  return (
+    (_ = Object.setPrototypeOf
+      ? Object.setPrototypeOf.bind()
+      : function (_, _) {
+          return (_.__proto__ = _), _;
+        }),
+    _(_, _)
+  );
+}
+function _(_, _) {
+  (_.prototype = Object.create(_.prototype)),
+    (_.prototype.constructor = _),
+    _(_, _);
+}
+function _(_, _) {
   return _.classList
     ? !!_ && _.classList.contains(_)
     : (` ` + (_.className.baseVal || _.className) + ` `).indexOf(
@@ -7280,6 +6904,381 @@ var _ = `500ms`,
   _ = `TG-Awm31gCo-`,
   _ = `btdF5x9Gn34-`,
   _ = `SmHVd15ptbM-`;
+typeof window < `u` && window.document && window.document.createElement;
+var _ = _((_, _) => {
+    _.exports =
+      Array.isArray ||
+      function (_) {
+        return Object.prototype.toString.call(_) == `[object Array]`;
+      };
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    (_.exports = _),
+      (_.exports.parse = _),
+      (_.exports.compile = _),
+      (_.exports.tokensToFunction = _),
+      (_.exports.tokensToRegExp = _);
+    var _ = new RegExp(
+      [
+        `(\\\\.)`,
+        `([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))`,
+      ].join(`|`),
+      `g`,
+    );
+    function _(_, _) {
+      for (
+        var _ = [], _ = 0, _ = 0, _ = ``, _ = (_ && _.delimiter) || `/`, _;
+        (_ = _.exec(_)) != null;
+      ) {
+        var _ = _[0],
+          _ = _[1],
+          _ = _.index;
+        if (((_ += _.slice(_, _)), (_ = _ + _.length), _)) {
+          _ += _[1];
+          continue;
+        }
+        var _ = _[_],
+          _ = _[2],
+          _ = _[3],
+          _ = _[4],
+          _ = _[5],
+          _ = _[6],
+          _ = _[7];
+        _ &&= (_.push(_), ``);
+        var _ = _ != null && _ != null && _ !== _,
+          _ = _ === `+` || _ === `*`,
+          _ = _ === `?` || _ === `*`,
+          _ = _ || _,
+          _ = _ || _,
+          _ = _ || (typeof _[_.length - 1] == `string` ? _[_.length - 1] : ``);
+        _.push({
+          name: _ || _++,
+          prefix: _ || ``,
+          delimiter: _,
+          optional: _,
+          repeat: _,
+          partial: _,
+          asterisk: !!_,
+          pattern: _ ? _(_) : _ ? `.*` : _(_, _),
+        });
+      }
+      return _ < _.length && (_ += _.substr(_)), _ && _.push(_), _;
+    }
+    function _(_, _) {
+      return !_ || _.indexOf(_) > -1
+        ? `[^` + _(_) + `]+?`
+        : _(_) + `|(?:(?!` + _(_) + `)[^` + _(_) + `])+?`;
+    }
+    function _(_, _) {
+      return _(_(_, _), _);
+    }
+    function _(_) {
+      return encodeURI(_).replace(/[\/?#]/g, function (_) {
+        return `%` + _.charCodeAt(0).toString(16).toUpperCase();
+      });
+    }
+    function _(_) {
+      return encodeURI(_).replace(/[?#]/g, function (_) {
+        return `%` + _.charCodeAt(0).toString(16).toUpperCase();
+      });
+    }
+    function _(_, _) {
+      for (var _ = Array(_.length), _ = 0; _ < _.length; _++)
+        typeof _[_] == `object` &&
+          (_[_] = RegExp(`^(?:` + _[_].pattern + `)$`, _(_)));
+      return function (_, _) {
+        for (
+          var _ = ``,
+            _ = _ || {},
+            _ = (_ || {}).pretty ? _ : encodeURIComponent,
+            _ = 0;
+          _ < _.length;
+          _++
+        ) {
+          var _ = _[_];
+          if (typeof _ == `string`) {
+            _ += _;
+            continue;
+          }
+          var _ = _[_.name],
+            _;
+          if (_ == null)
+            if (_.optional) {
+              _.partial && (_ += _.prefix);
+              continue;
+            } else throw TypeError(`Expected "` + _.name + `" to be defined`);
+          if (_(_)) {
+            if (!_.repeat)
+              throw TypeError(
+                `Expected "` +
+                  _.name +
+                  '" to not repeat, but received `' +
+                  JSON.stringify(_) +
+                  "`",
+              );
+            if (_.length === 0) {
+              if (_.optional) continue;
+              throw TypeError(`Expected "` + _.name + `" to not be empty`);
+            }
+            for (var _ = 0; _ < _.length; _++) {
+              if (((_ = _(_[_])), !_[_].test(_)))
+                throw TypeError(
+                  `Expected all "` +
+                    _.name +
+                    `" to match "` +
+                    _.pattern +
+                    '", but received `' +
+                    JSON.stringify(_) +
+                    "`",
+                );
+              _ += (_ === 0 ? _.prefix : _.delimiter) + _;
+            }
+            continue;
+          }
+          if (((_ = _.asterisk ? _(_) : _(_)), !_[_].test(_)))
+            throw TypeError(
+              `Expected "` +
+                _.name +
+                `" to match "` +
+                _.pattern +
+                `", but received "` +
+                _ +
+                `"`,
+            );
+          _ += _.prefix + _;
+        }
+        return _;
+      };
+    }
+    function _(_) {
+      return _.replace(/([.+*?=^!:${}()[\]|\/\\])/g, `\\$1`);
+    }
+    function _(_) {
+      return _.replace(/([=!:$\/()])/g, `\\$1`);
+    }
+    function _(_, _) {
+      return (_.keys = _), _;
+    }
+    function _(_) {
+      return _ && _.sensitive ? `` : `i`;
+    }
+    function _(_, _) {
+      var _ = _.source.match(/\((?!\?)/g);
+      if (_)
+        for (var _ = 0; _ < _.length; _++)
+          _.push({
+            name: _,
+            prefix: null,
+            delimiter: null,
+            optional: !1,
+            repeat: !1,
+            partial: !1,
+            asterisk: !1,
+            pattern: null,
+          });
+      return _(_, _);
+    }
+    function _(_, _, _) {
+      for (var _ = [], _ = 0; _ < _.length; _++) _.push(_(_[_], _, _).source);
+      return _(RegExp(`(?:` + _.join(`|`) + `)`, _(_)), _);
+    }
+    function _(_, _, _) {
+      return _(_(_, _), _, _);
+    }
+    function _(_, _, _) {
+      _(_) || ((_ = _ || _), (_ = [])), (_ ||= {});
+      for (
+        var _ = _.strict, _ = _.end !== !1, _ = ``, _ = 0;
+        _ < _.length;
+        _++
+      ) {
+        var _ = _[_];
+        if (typeof _ == `string`) _ += _(_);
+        else {
+          var _ = _(_.prefix),
+            _ = `(?:` + _.pattern + `)`;
+          _.push(_),
+            _.repeat && (_ += `(?:` + _ + _ + `)*`),
+            (_ = _.optional
+              ? _.partial
+                ? _ + `(` + _ + `)?`
+                : `(?:` + _ + `(` + _ + `))?`
+              : _ + `(` + _ + `)`),
+            (_ += _);
+        }
+      }
+      var _ = _(_.delimiter || `/`),
+        _ = _.slice(-_.length) === _;
+      return (
+        _ || (_ = (_ ? _.slice(0, -_.length) : _) + `(?:` + _ + `(?=$))?`),
+        _ ? (_ += `$`) : (_ += _ && _ ? `` : `(?=` + _ + `|$)`),
+        _(RegExp(`^` + _, _(_)), _)
+      );
+    }
+    function _(_, _, _) {
+      return (
+        _(_) || ((_ = _ || _), (_ = [])),
+        (_ ||= {}),
+        _ instanceof RegExp ? _(_, _) : _(_) ? _(_, _, _) : _(_, _, _)
+      );
+    }
+  }),
+  _ = _((_) => {
+    typeof Symbol == `function` && Symbol.for;
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _(_());
+_(), _(), _();
+var _ = 1073741823,
+  _ =
+    typeof globalThis < `u`
+      ? globalThis
+      : typeof window < `u`
+        ? window
+        : typeof global < `u`
+          ? global
+          : {};
+function _() {
+  var _ = `__global_unique_id__`;
+  return (_[_] = (_[_] || 0) + 1);
+}
+function _(_, _) {
+  return _ === _ ? _ !== 0 || 1 / _ == 1 / _ : _ !== _ && _ !== _;
+}
+function _(_) {
+  var _ = [];
+  return {
+    _: function (_) {
+      _.push(_);
+    },
+    off: function (_) {
+      _ = _.filter(function (_) {
+        return _ !== _;
+      });
+    },
+    get: function () {
+      return _;
+    },
+    set: function (_, _) {
+      (_ = _),
+        _.forEach(function (_) {
+          return _(_, _);
+        });
+    },
+  };
+}
+function _(_) {
+  return Array.isArray(_) ? _[0] : _;
+}
+function _(_, _) {
+  var _,
+    _,
+    _ = `__create-react-context-` + _() + `__`,
+    _ = (function (_) {
+      _(_, _);
+      function _() {
+        var _,
+          _ = [...arguments];
+        return (
+          (_ = _.call.apply(_, [this].concat(_)) || this),
+          (_.emitter = _(_.props.value)),
+          _
+        );
+      }
+      var _ = _.prototype;
+      return (
+        (_.getChildContext = function () {
+          var _;
+          return (_ = {}), (_[_] = this.emitter), _;
+        }),
+        (_.componentWillReceiveProps = function (_) {
+          if (this.props.value !== _.value) {
+            var _ = this.props.value,
+              _ = _.value,
+              _;
+            _(_, _)
+              ? (_ = 0)
+              : ((_ = typeof _ == `function` ? _(_, _) : _),
+                (_ |= 0),
+                _ !== 0 && this.emitter.set(_.value, _));
+          }
+        }),
+        (_.render = function () {
+          return this.props.children;
+        }),
+        _
+      );
+    })(_.Component);
+  _.childContextTypes = ((_ = {}), (_[_] = _.default.object.isRequired), _);
+  var _ = (function (_) {
+    _(_, _);
+    function _() {
+      var _,
+        _ = [...arguments];
+      return (
+        (_ = _.call.apply(_, [this].concat(_)) || this),
+        (_.observedBits = void 0),
+        (_.state = {
+          value: _.getValue(),
+        }),
+        (_.onUpdate = function (_, _) {
+          (_.observedBits | 0) & _ &&
+            _.setState({
+              value: _.getValue(),
+            });
+        }),
+        _
+      );
+    }
+    var _ = _.prototype;
+    return (
+      (_.componentWillReceiveProps = function (_) {
+        var _ = _.observedBits;
+        this.observedBits = _ ?? _;
+      }),
+      (_.componentDidMount = function () {
+        this.context[_] && this.context[_]._(this.onUpdate);
+        var _ = this.props.observedBits;
+        this.observedBits = _ ?? _;
+      }),
+      (_.componentWillUnmount = function () {
+        this.context[_] && this.context[_].off(this.onUpdate);
+      }),
+      (_.getValue = function () {
+        return this.context[_] ? this.context[_].get() : _;
+      }),
+      (_.render = function () {
+        return _(this.props.children)(this.state.value);
+      }),
+      _
+    );
+  })(_.Component);
+  return (
+    (_.contextTypes = ((_ = {}), (_[_] = _.default.object), _)),
+    {
+      Provider: _,
+      Consumer: _,
+    }
+  );
+}
+var _ = _.createContext || _,
+  _ = function (_) {
+    var _ = _();
+    return (_.displayName = _), _;
+  },
+  _ = _(`Router-History`),
+  _ = _(`Router`);
+_.Component, _.Component, _.Component, _.Component, _.Component, _.Component;
+var _ = _.useContext;
+function _() {
+  return _(_);
+}
+function _() {
+  return _(_).location;
+}
 function _(_, _, _) {
   let _ = `${_}_HistoryValue`,
     _ = _(),

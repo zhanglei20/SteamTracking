@@ -8743,6 +8743,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = -1;
+      function _() {
+        return "dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE;
+      }
       class _ {
         GetLastDoorOpen() {
           return this.m_strLastDoorOpenKey;
@@ -8834,34 +8837,58 @@
         }
         async OpenDoor(_, _ = !0, _ = "", _ = !1) {
           var _;
-          return !_._.logged_in ||
+          return (
+            _() &&
+              console.log(
+                "CDoorStore.OpenDoor: attempting door " + _,
+                "open:",
+                _,
+                "preview:",
+                _,
+              ),
+            !_._.logged_in ||
             !this.m_userData ||
             _ > this.m_userData.length ||
             _ < 0
-            ? ("dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CDoorStore.OpenDoor Early fail settings:",
-                  _._.logged_in,
-                  this.m_userData,
-                  _,
-                  null === (_ = this.m_userData) || void 0 === _
-                    ? void 0
-                    : _.length,
-                ),
-              null)
-            : this.m_mapDoorOpenPromise.has(_)
-              ? this.m_mapDoorOpenPromise.get(_)
-              : this.m_userData[_].opened == _
-                ? {}
-                : (this.m_mapDoorOpenPromise.has(_) ||
-                    this.m_mapDoorOpenPromise.set(
-                      _,
-                      this.InternalOpenDoor(_, _, _, _),
+              ? (_() &&
+                  console.log(
+                    "CDoorStore.OpenDoor Early fail settings:",
+                    _._.logged_in,
+                    this.m_userData,
+                    _,
+                    null === (_ = this.m_userData) || void 0 === _
+                      ? void 0
+                      : _.length,
+                  ),
+                null)
+              : this.m_mapDoorOpenPromise.has(_)
+                ? (_() &&
+                    console.log(
+                      "CDoorStore.OpenDoor: door " +
+                        _ +
+                        " was already requested this session; reusing that result",
                     ),
-                  this.m_mapDoorOpenPromise.get(_));
+                  this.m_mapDoorOpenPromise.get(_))
+                : this.m_userData[_].opened == _
+                  ? (_() &&
+                      console.log(
+                        "CDoorStore.OpenDoor: door " +
+                          _ +
+                          " is already " +
+                          (_ ? "open" : "closed") +
+                          "; nothing sent to the server",
+                      ),
+                    {})
+                  : (this.m_mapDoorOpenPromise.has(_) ||
+                      this.m_mapDoorOpenPromise.set(
+                        _,
+                        this.InternalOpenDoor(_, _, _, _),
+                      ),
+                    this.m_mapDoorOpenPromise.get(_))
+          );
         }
         async InternalOpenDoor(_, _ = !0, _, _ = !1) {
-          var _;
+          var _, _, _;
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const _ = new FormData();
           _.append("sessionid", (0, _._)()),
@@ -8883,6 +8910,20 @@
             )
               return (
                 (this.m_userData[_].opened = _),
+                _() &&
+                  console.log(
+                    "CDoorStore.OpenDoor: door " +
+                      _ +
+                      (_ ? " opened" : " closed"),
+                    "rewards returned:",
+                    (null ===
+                      (_ =
+                        null === (_ = _.data) || void 0 === _
+                          ? void 0
+                          : _.rewards) || void 0 === _
+                      ? void 0
+                      : _.length) || 0,
+                  ),
                 (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
                 this.GetDoorStateChangeCallback(_).Dispatch(_),
                 this.RecomputeState(),
@@ -31000,6 +31041,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 0;
       function _(_) {
         var _;
         return (
@@ -31014,8 +31056,8 @@
           _ = (0, _._)(),
           _ = _._.GetELanguageFallback(_),
           _ = (0, _._)(),
-          [_, _, _] = (0, _._)(() => {
-            var _, _, _;
+          [_, _, _, _] = (0, _._)(() => {
+            var _, _, _, _;
             return [
               Boolean(
                 null === (_ = _.quiz) || void 0 === _
@@ -31026,6 +31068,11 @@
               null === (_ = _.quiz) || void 0 === _
                 ? void 0
                 : _.hide_question_type_label,
+              Boolean(
+                null === (_ = _.quiz) || void 0 === _
+                  ? void 0
+                  : _.grant_reward_on_branch_result,
+              ),
             ];
           }),
           [_, _] = (0, _.useState)(
@@ -31061,15 +31108,16 @@
           [_, _],
         );
         (0, _.useEffect)(() => {
-          _ &&
-            !_._.Get().BIsInitialized() &&
+          (!_ && !_) ||
+            _._.Get().BIsInitialized() ||
             _._.Get()
               .LoadDoorData()
               .then(() => {
-                _._.Get().BIsAnyDoorOpened() &&
+                _ &&
+                  _._.Get().BIsAnyDoorOpened() &&
                   _(_._.Get().GetLargestDoorOpenIndex() + 1);
               });
-        }, [_]);
+        }, [_, _]);
         const _ =
             (null === (_ = _.localized_description) || void 0 === _
               ? void 0
@@ -31125,8 +31173,15 @@
                 _._.Get().GetLargestAnswerQuestion() > 0 &&
                 (_._.Get().BHasTerminalAnswerChosen() || !_(_[_.length - 1])),
             ),
-          ),
-          _ =
+          );
+        (0, _.useEffect)(() => {
+          _ &&
+            _ &&
+            _._.Get()
+              .LoadDoorData()
+              .then(() => _._.Get().OpenDoor(_, !0, "", _));
+        }, [_, _, _]);
+        const _ =
             _ &&
             Boolean(
               null === (_ = _.quiz) || void 0 === _
@@ -31373,11 +31428,7 @@
                   (0, _.jsx)(_._, {
                     checked: _ === _,
                     onChange: (_) => {
-                      _.category_ids &&
-                        _._.Get().SetAnswerCategory(
-                          _,
-                          _ ? _.category_ids : null,
-                        ),
+                      _._.Get().SetAnswerCategory(_, _ ? _.category_ids : null),
                         _(_ ? _ : null);
                     },
                     disabled: _ === _,
@@ -31585,7 +31636,10 @@
       function _(_) {
         var _;
         const { quiz_section: _, bPreviewMode: _, fnCorrectlyAnswered: _ } = _,
-          [_] = (0, _._)(() => [null == _ ? void 0 : _.quiz_type]),
+          [_, _] = (0, _._)(() => [
+            null == _ ? void 0 : _.quiz_type,
+            Boolean(null == _ ? void 0 : _.grant_reward_on_branch_result),
+          ]),
           [_, _] = (0, _.useState)(!1);
         return _
           ? (0, _.jsx)("div", {
@@ -31597,9 +31651,10 @@
                 className: (0, _._)("QuizScenarioSubmitCtn"),
                 children: [
                   Boolean(
-                    (null === (_ = _.answer_categories) || void 0 === _
-                      ? void 0
-                      : _.length) > 0,
+                    !_ &&
+                      (null === (_ = _.answer_categories) || void 0 === _
+                        ? void 0
+                        : _.length) > 0,
                   ) &&
                     (0, _.jsx)(_._, {
                       disabled: _,
