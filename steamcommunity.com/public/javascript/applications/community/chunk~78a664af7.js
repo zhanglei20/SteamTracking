@@ -2630,7 +2630,8 @@
             await s.fL.SustainModeration(e, r);
           },
           onSuccess: async (e, r) => {
-            await m(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
+            await t.invalidateQueries({ queryKey: ["get_claimed"] }),
+              await m(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
           },
         });
       }

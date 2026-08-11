@@ -15271,11 +15271,19 @@
             LocalizeInSpecificLang: (e, t, ...r) => o(u(t, [e]), ...r),
             Ready: () => r,
             IsReady: () => a,
-            HasKey: (e) =>
-              m().languages.some((r) => {
-                const i = t.get(r.strLanguage);
-                return !!i && i.has(e);
-              }),
+            HasKey(e) {
+              const r = m().languages,
+                i = [
+                  ...r.map((e) => e.strLanguage),
+                  (0, s.mR)(r[0].strLanguage),
+                ];
+              for (const r of i) {
+                if (!r) continue;
+                const i = t.get(r);
+                if (i && i.has(e)) return !0;
+              }
+              return !1;
+            },
           }
         );
       }
