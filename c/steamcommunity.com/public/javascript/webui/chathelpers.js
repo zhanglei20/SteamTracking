@@ -1183,11 +1183,19 @@ var CLSTAMP = "steamdb";
               LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
               Ready: () => _,
               IsReady: () => _,
-              HasKey: (_) =>
-                _().languages.some((_) => {
-                  const _ = _.get(_.strLanguage);
-                  return !!_ && _.has(_);
-                }),
+              HasKey(_) {
+                const _ = _().languages,
+                  _ = [
+                    ...__webpack_require__.map((_) => _.strLanguage),
+                    _(_[0].strLanguage),
+                  ];
+                for (const _ of _) {
+                  if (!_) continue;
+                  const _ = _.get(_);
+                  if (_ && _.has(_)) return !0;
+                }
+                return !1;
+              },
             }
           );
         })(async function (_) {
@@ -3065,6 +3073,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(3227));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(26416));
   _ = _._(_);
 })();

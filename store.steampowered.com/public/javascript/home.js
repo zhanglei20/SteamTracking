@@ -2269,6 +2269,8 @@ GHomepage = {
 		// rebuild pages one at a time
 		$Pages.empty();
 
+		let nMaxSpotlightColumns = 2;
+		
 		for ( var iPage = 0; iPage < $Pages.length; iPage++ )
 		{
 			var cColumnsUsed = 0;
@@ -2283,8 +2285,8 @@ GHomepage = {
 				return rgParts.join('_');
 			};
 
-			// put in one or two spotlights
-			while ( rgSpotlights.length && cColumnsUsed < 2 )
+			// put in spotlights
+			while ( rgSpotlights.length && cColumnsUsed < nMaxSpotlightColumns )
 			{
 				// a high priority indicates we wanted to filter it (eg, already owned).  Show at most 1 on first page.
 				if ( cColumnsUsed >= 1 && rgSpotlights[0].priority >= 3 )

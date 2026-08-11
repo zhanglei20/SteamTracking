@@ -3,7 +3,7 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    402: (e) => {
+    21: (e) => {
       e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3FIjY",
         FocusRing: "focusring_FocusRing_1wPpl",
@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    280: (e, t, r) => {
+    803: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => sn });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(90),
+        a = r(483),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -93,10 +93,10 @@
         );
       }
       var b = r(629),
-        f = r(25),
-        p = r(674),
-        B = r(109),
-        w = r(4);
+        f = r(399),
+        p = r(760),
+        B = r(595),
+        w = r(402);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -375,8 +375,8 @@
         (0, b.Cg)([f.o], C.prototype, "OnKeyUp", null),
         (0, b.Cg)([f.o], C.prototype, "Reset", null);
       var R,
-        T = r(440),
-        I = r(248);
+        T = r(734),
+        I = r(294);
       class F {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -12494,7 +12494,7 @@
         "OnMessage",
         null,
       );
-      var xi = r(402),
+      var xi = r(21),
         Li = r.n(xi);
       function ki(e) {
         let t = 0;
@@ -13083,7 +13083,7 @@
         },
       };
     },
-    674: (e, t, r) => {
+    760: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13096,12 +13096,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    4: (e, t, r) => {
+    402: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(25),
-        s = r(674);
+        n = r(399),
+        s = r(760);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}
