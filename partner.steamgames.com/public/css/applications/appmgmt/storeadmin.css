@@ -295,6 +295,9 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   padding-right: 2px;
   transition: none;
 }
+.GamepadMode .dxuI55RF56-dzbuXjj2W0 {
+  padding: 0px 6px 0px 0px;
+}
 ._13bOrUeolqp9EyK3or-cLt {
   padding: 5%;
   background: linear-gradient(90deg, #15202d 0%, #0e141c 100%);
@@ -1782,6 +1785,7 @@ th._3rLIt0O8F7iG6B2RmC3cYa:first-of-type {
   align-items: center;
   width: fit-content;
   background-color: hsla(0, 0%, 100%, 0.11);
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   cursor: pointer;
@@ -3728,10 +3732,13 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
   --background-color: var(--bg-default);
 }
-._3a3fNdwhCItYEc1SsUNP:hover:not([aria-checked="true"]) {
+._3a3fNdwhCItYEc1SsUNP:hover:not([aria-checked="true"]):not(
+    ._21NiFCkZFlTZ8WrrrxX0BX
+  ) {
   --background-color: var(--bg-focus);
 }
-._3a3fNdwhCItYEc1SsUNP:disabled {
+._3a3fNdwhCItYEc1SsUNP:disabled,
+._3a3fNdwhCItYEc1SsUNP._21NiFCkZFlTZ8WrrrxX0BX {
   --background-color: var(--bg-disabled);
 }
 ._3a3fNdwhCItYEc1SsUNP:focus-visible,
@@ -4679,6 +4686,9 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   color: #fff;
   background: #101822;
   align-items: center;
+}
+.GamepadMode ._29jQMo9DGCmcSKyDIC3V7M {
+  padding: 0px 6px 0px 0px;
 }
 a._2xmH7agKi37v9kwFHi093S {
   color: #fff;

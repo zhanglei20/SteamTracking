@@ -4131,6 +4131,13 @@ enum UnnamedEnumb4c56acde5c1c2a0
 	CRLF = 2;
 }
 
+enum UnnamedEnumb4d6addf724df0d6
+{
+	Info = 0;
+	Positive = 1;
+	Negative = 2;
+}
+
 enum UnnamedEnumb58cf35b311fefd7
 {
 	AVOID = 0;

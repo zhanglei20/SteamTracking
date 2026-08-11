@@ -1036,7 +1036,7 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    43137: (e, t, r) => {
+    35507: (e, t, r) => {
       "use strict";
       r(23808);
       var i = r(90626),
@@ -1779,80 +1779,123 @@
       function Oe() {
         return (0, i.useContext)(je);
       }
-      var De = r(66922);
-      function Ee(e) {
+      const De = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+      ];
+      const Ee = ["title", "subtitle", "body", "description", "note"];
+      var Le = r(66922);
+      function ke(e) {
         const {
             accentColor: t,
             dullColor: r,
             bodyTextColor: i,
-            children: s,
-            breakpoints: a,
-            variants: o,
+            successColor: s,
+            warningColor: a,
+            errorColor: o,
+            successTextColor: l,
+            warningTextColor: c,
+            errorTextColor: u,
+            children: d,
+            breakpoints: m,
+            variants: p,
           } = e,
-          l = { display: "contents" };
-        let c, u, d;
-        "string" == typeof t ? (c = t) : t && Le(l, "accent", t),
-          "string" == typeof r ? (u = r) : r && Le(l, "dull", r),
-          "string" == typeof i
-            ? (d = i)
-            : i &&
-              (function (e, t) {
-                for (const [r, i] of Object.entries(t))
-                  e[`--color-text-body-${r}`] = i;
-              })(l, i);
-        const m = (0, n.jsx)(De.D, {
-          variants: o,
+          g = { display: "contents" };
+        let h, _, f;
+        "string" == typeof t ? (h = t) : t && Ae(g, "accent", t),
+          "string" == typeof r ? (_ = r) : r && Ae(g, "dull", r),
+          "string" == typeof i ? (f = i) : i && Pe(g, "body", i),
+          s && Ae(g, "success", s),
+          a && Ae(g, "warning", a),
+          o && Ae(g, "error", o),
+          l && Pe(g, "success", l),
+          c && Pe(g, "warning", c),
+          u && Pe(g, "error", u);
+        const b = (0, n.jsx)(Le.D, {
+          variants: p,
           children: (0, n.jsx)("div", {
-            "data-accent-color": c,
-            "data-dull-color": u,
-            "data-body-text-color": d,
-            style: l,
+            "data-accent-color": h,
+            "data-dull-color": _,
+            "data-body-text-color": f,
+            style: g,
             children: (0, n.jsx)("div", {
               style: {
                 display: "contents",
                 color: "var(--color-text-body-body)",
               },
-              children: s,
+              children: d,
             }),
           }),
         });
-        return a ? (0, n.jsx)(Te.cW, { breakpoints: a, children: m }) : m;
+        return m ? (0, n.jsx)(Te.cW, { breakpoints: m, children: b }) : b;
       }
-      function Le(e, t, r) {
-        for (const [i, n] of Object.entries(r)) e[`--color-${t}-${i}`] = n;
+      function Ae(e, t, r) {
+        if ("string" == typeof r)
+          for (const i of De) e[`--color-${t}-${i}`] = `var(--color-${r}-${i})`;
+        else for (const [i, n] of Object.entries(r)) e[`--color-${t}-${i}`] = n;
       }
-      const ke = i.memo(function (e) {
+      function Pe(e, t, r) {
+        if ("string" == typeof r)
+          for (const i of Ee)
+            e[`--color-text-${t}-${i}`] = `var(--color-${r}-${i})`;
+        else
+          for (const [i, n] of Object.entries(r))
+            e[`--color-text-${t}-${i}`] = n;
+      }
+      const We = i.memo(function (e) {
         const {
           defaultTextSize: t,
           accentColor: r = "blue",
           dullColor: i = "greyneutral",
-          bodyTextColor: s = "text-light",
-          breakpoints: a,
-          variants: l,
-          children: c,
-          zoo: u,
+          successColor: s = "green",
+          warningColor: a = "yellow",
+          errorColor: l = "red",
+          bodyTextColor: c = "text-light",
+          successTextColor: u = "text-green",
+          warningTextColor: d = "text-red",
+          errorTextColor: m = "text-red",
+          breakpoints: p,
+          variants: g,
+          children: h,
+          zoo: _,
         } = e;
-        let d;
+        let f;
         return (
           t &&
-            (d = {
+            (f = {
               "--default-font-size": `var(--text-size-${t})`,
               "--default-line-height": `var(--line-height-${t})`,
               "--default-letter-spacing": `var(--letter-spacing-${t})`,
             }),
           (0, n.jsx)(Fe, {
             children: (0, n.jsx)(Te.cW, {
-              breakpoints: a,
-              children: (0, n.jsx)(Ae, {
+              breakpoints: p,
+              children: (0, n.jsx)(Ne, {
                 children: (0, n.jsx)("div", {
                   className: o()(Ie.Root, "noOpinionatedGlobalStyles"),
-                  style: d,
-                  children: (0, n.jsxs)(Ee, {
+                  style: f,
+                  children: (0, n.jsxs)(ke, {
                     accentColor: r,
                     dullColor: i,
-                    bodyTextColor: s,
-                    variants: l,
-                    children: [c, !1],
+                    successColor: s,
+                    warningColor: a,
+                    errorColor: l,
+                    bodyTextColor: c,
+                    successTextColor: u,
+                    warningTextColor: d,
+                    errorTextColor: m,
+                    variants: g,
+                    children: [h, !1],
                   }),
                 }),
               }),
@@ -1860,29 +1903,29 @@
           })
         );
       });
-      function Ae(e) {
+      function Ne(e) {
         const { children: t } = e,
           { formFactorOverride: r } = Oe();
         return (0, n.jsx)(Te.cr, { formFactor: r, children: t });
       }
-      var Pe = r(33688);
-      const We = i.createContext(void 0);
-      function Ne(e) {
-        const [t] = i.useState(() => new Pe.e());
-        return (0, n.jsx)(We.Provider, { value: t, children: e.children });
+      var Ue = r(33688);
+      const qe = i.createContext(void 0);
+      function Ge(e) {
+        const [t] = i.useState(() => new Ue.e());
+        return (0, n.jsx)(qe.Provider, { value: t, children: e.children });
       }
-      var Ue = r(65606);
-      const qe = i.lazy(() =>
+      var He = r(65606);
+      const Ve = i.lazy(() =>
           Promise.all([r.e(8102), r.e(6966)]).then(r.bind(r, 90023)),
         ),
-        Ge = i.lazy(() => r.e(4262).then(r.bind(r, 30899))),
-        He = i.lazy(() =>
+        Ze = i.lazy(() => r.e(4262).then(r.bind(r, 30899))),
+        Ke = i.lazy(() =>
           Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 39891)),
         ),
-        Ve = i.lazy(() =>
+        Qe = i.lazy(() =>
           Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 34044)),
         ),
-        Ze = i.lazy(() =>
+        Xe = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(5186),
@@ -1900,132 +1943,6 @@
             r.e(3912),
             r.e(1101),
           ]).then(r.bind(r, 42664)),
-        ),
-        Ke = i.lazy(() =>
-          Promise.all([
-            r.e(2256),
-            r.e(4134),
-            r.e(616),
-            r.e(5557),
-            r.e(5186),
-            r.e(7935),
-            r.e(5841),
-            r.e(4568),
-            r.e(3874),
-            r.e(2924),
-            r.e(1997),
-            r.e(8102),
-            r.e(3667),
-            r.e(1084),
-            r.e(5659),
-            r.e(4781),
-            r.e(6129),
-            r.e(7671),
-            r.e(3388),
-            r.e(8920),
-            r.e(3556),
-            r.e(1158),
-            r.e(4298),
-            r.e(7368),
-            r.e(6672),
-            r.e(6627),
-            r.e(9150),
-            r.e(2012),
-            r.e(9246),
-            r.e(761),
-            r.e(7022),
-            r.e(1853),
-            r.e(4440),
-            r.e(3506),
-            r.e(9352),
-            r.e(7352),
-            r.e(8350),
-            r.e(4268),
-          ]).then(r.bind(r, 76483)),
-        ),
-        Qe = i.lazy(() =>
-          Promise.all([
-            r.e(2256),
-            r.e(4134),
-            r.e(616),
-            r.e(5557),
-            r.e(5186),
-            r.e(7935),
-            r.e(5841),
-            r.e(4568),
-            r.e(3874),
-            r.e(2924),
-            r.e(1997),
-            r.e(8102),
-            r.e(3667),
-            r.e(1084),
-            r.e(5659),
-            r.e(4781),
-            r.e(6129),
-            r.e(7671),
-            r.e(3388),
-            r.e(8920),
-            r.e(3556),
-            r.e(1158),
-            r.e(4298),
-            r.e(7368),
-            r.e(6672),
-            r.e(6627),
-            r.e(9150),
-            r.e(2012),
-            r.e(9246),
-            r.e(761),
-            r.e(7022),
-            r.e(1853),
-            r.e(4440),
-            r.e(3506),
-            r.e(9352),
-            r.e(7352),
-            r.e(8350),
-            r.e(4268),
-          ]).then(r.bind(r, 17788)),
-        ),
-        Xe = i.lazy(() =>
-          Promise.all([
-            r.e(2256),
-            r.e(4134),
-            r.e(616),
-            r.e(5557),
-            r.e(5186),
-            r.e(7935),
-            r.e(5841),
-            r.e(4568),
-            r.e(3874),
-            r.e(2924),
-            r.e(1997),
-            r.e(8102),
-            r.e(3667),
-            r.e(1084),
-            r.e(5659),
-            r.e(4781),
-            r.e(6129),
-            r.e(7671),
-            r.e(3388),
-            r.e(8920),
-            r.e(3556),
-            r.e(1158),
-            r.e(4298),
-            r.e(7368),
-            r.e(6672),
-            r.e(6627),
-            r.e(9150),
-            r.e(2012),
-            r.e(9246),
-            r.e(761),
-            r.e(7022),
-            r.e(1853),
-            r.e(4440),
-            r.e(3506),
-            r.e(9352),
-            r.e(7352),
-            r.e(8350),
-            r.e(4268),
-          ]).then(r.bind(r, 90197)),
         ),
         Ye = i.lazy(() =>
           Promise.all([
@@ -2067,9 +1984,135 @@
             r.e(7352),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 84940)),
+          ]).then(r.bind(r, 76483)),
         ),
         $e = i.lazy(() =>
+          Promise.all([
+            r.e(2256),
+            r.e(4134),
+            r.e(616),
+            r.e(5557),
+            r.e(5186),
+            r.e(7935),
+            r.e(5841),
+            r.e(4568),
+            r.e(3874),
+            r.e(2924),
+            r.e(1997),
+            r.e(8102),
+            r.e(3667),
+            r.e(1084),
+            r.e(5659),
+            r.e(4781),
+            r.e(6129),
+            r.e(7671),
+            r.e(3388),
+            r.e(8920),
+            r.e(3556),
+            r.e(1158),
+            r.e(4298),
+            r.e(7368),
+            r.e(6672),
+            r.e(6627),
+            r.e(9150),
+            r.e(2012),
+            r.e(9246),
+            r.e(761),
+            r.e(7022),
+            r.e(1853),
+            r.e(4440),
+            r.e(3506),
+            r.e(9352),
+            r.e(7352),
+            r.e(8350),
+            r.e(4268),
+          ]).then(r.bind(r, 17788)),
+        ),
+        Je = i.lazy(() =>
+          Promise.all([
+            r.e(2256),
+            r.e(4134),
+            r.e(616),
+            r.e(5557),
+            r.e(5186),
+            r.e(7935),
+            r.e(5841),
+            r.e(4568),
+            r.e(3874),
+            r.e(2924),
+            r.e(1997),
+            r.e(8102),
+            r.e(3667),
+            r.e(1084),
+            r.e(5659),
+            r.e(4781),
+            r.e(6129),
+            r.e(7671),
+            r.e(3388),
+            r.e(8920),
+            r.e(3556),
+            r.e(1158),
+            r.e(4298),
+            r.e(7368),
+            r.e(6672),
+            r.e(6627),
+            r.e(9150),
+            r.e(2012),
+            r.e(9246),
+            r.e(761),
+            r.e(7022),
+            r.e(1853),
+            r.e(4440),
+            r.e(3506),
+            r.e(9352),
+            r.e(7352),
+            r.e(8350),
+            r.e(4268),
+          ]).then(r.bind(r, 90197)),
+        ),
+        et = i.lazy(() =>
+          Promise.all([
+            r.e(2256),
+            r.e(4134),
+            r.e(616),
+            r.e(5557),
+            r.e(5186),
+            r.e(7935),
+            r.e(5841),
+            r.e(4568),
+            r.e(3874),
+            r.e(2924),
+            r.e(1997),
+            r.e(8102),
+            r.e(3667),
+            r.e(1084),
+            r.e(5659),
+            r.e(4781),
+            r.e(6129),
+            r.e(7671),
+            r.e(3388),
+            r.e(8920),
+            r.e(3556),
+            r.e(1158),
+            r.e(4298),
+            r.e(7368),
+            r.e(6672),
+            r.e(6627),
+            r.e(9150),
+            r.e(2012),
+            r.e(9246),
+            r.e(761),
+            r.e(7022),
+            r.e(1853),
+            r.e(4440),
+            r.e(3506),
+            r.e(9352),
+            r.e(7352),
+            r.e(8350),
+            r.e(4268),
+          ]).then(r.bind(r, 65025)),
+        ),
+        tt = i.lazy(() =>
           Promise.all([
             r.e(4134),
             r.e(7935),
@@ -2078,7 +2121,7 @@
             r.e(5933),
           ]).then(r.bind(r, 65131)),
         ),
-        Je = i.lazy(() =>
+        rt = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(4134),
@@ -2095,7 +2138,7 @@
             r.e(9433),
           ]).then(r.bind(r, 43653)),
         ),
-        et = i.lazy(() =>
+        it = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(4134),
@@ -2127,7 +2170,7 @@
             r.e(2455),
           ]).then(r.bind(r, 43622)),
         ),
-        tt = i.lazy(() =>
+        nt = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(5186),
@@ -2146,8 +2189,8 @@
             r.e(8590),
           ]).then(r.bind(r, 65680)),
         ),
-        rt = i.lazy(() => r.e(5027).then(r.bind(r, 26193))),
-        it = i.lazy(() =>
+        st = i.lazy(() => r.e(5027).then(r.bind(r, 26193))),
+        at = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(4134),
@@ -2190,7 +2233,7 @@
             r.e(8523),
           ]).then(r.bind(r, 30200)),
         ),
-        nt = i.lazy(() =>
+        ot = i.lazy(() =>
           Promise.all([
             r.e(6853),
             r.e(1784),
@@ -2201,7 +2244,7 @@
             r.e(6343),
           ]).then(r.bind(r, 41957)),
         ),
-        st = i.lazy(() =>
+        lt = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(4134),
@@ -2243,7 +2286,7 @@
             r.e(7383),
           ]).then(r.bind(r, 38603)),
         ),
-        at = i.lazy(() =>
+        ct = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(616),
@@ -2256,7 +2299,7 @@
             r.e(4985),
           ]).then(r.bind(r, 86960)),
         ),
-        ot = i.lazy(() =>
+        ut = i.lazy(() =>
           Promise.all([
             r.e(616),
             r.e(5557),
@@ -2278,7 +2321,7 @@
             r.e(3025),
           ]).then(r.bind(r, 70740)),
         ),
-        lt = i.lazy(() =>
+        dt = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(4134),
@@ -2320,7 +2363,7 @@
             r.e(5136),
           ]).then(r.bind(r, 16340)),
         ),
-        ct = i.lazy(() =>
+        mt = i.lazy(() =>
           Promise.all([
             r.e(5659),
             r.e(4781),
@@ -2329,7 +2372,7 @@
             r.e(3350),
           ]).then(r.bind(r, 92513)),
         ),
-        ut = i.lazy(() =>
+        pt = i.lazy(() =>
           Promise.all([
             r.e(5659),
             r.e(4781),
@@ -2338,7 +2381,7 @@
             r.e(3350),
           ]).then(r.bind(r, 2203)),
         ),
-        dt = i.lazy(() =>
+        gt = i.lazy(() =>
           Promise.all([
             r.e(2256),
             r.e(5557),
@@ -2365,7 +2408,7 @@
             r.e(6762),
           ]).then(r.bind(r, 20153)),
         ),
-        mt = i.lazy(() =>
+        ht = i.lazy(() =>
           Promise.all([
             r.e(616),
             r.e(5186),
@@ -2381,7 +2424,7 @@
             r.e(9539),
           ]).then(r.bind(r, 15793)),
         ),
-        pt = i.lazy(() =>
+        _t = i.lazy(() =>
           Promise.all([
             r.e(4134),
             r.e(7935),
@@ -2392,10 +2435,10 @@
             r.e(906),
           ]).then(r.bind(r, 42103)),
         ),
-        gt = i.lazy(() =>
+        ft = i.lazy(() =>
           Promise.all([r.e(7368), r.e(7108)]).then(r.bind(r, 3191)),
         );
-      function ht(e) {
+      function bt(e) {
         const t = (0, _.Tc)("publisherid", "application_config"),
           r = i.useMemo(
             () => ({ country: _.TS.COUNTRY, language: _.TS.LANGUAGE }),
@@ -2407,14 +2450,14 @@
           IN_VR: !1,
           children: (0, n.jsx)(c.O.Provider, {
             value: parseInt(t),
-            children: (0, n.jsx)(Ne, {
+            children: (0, n.jsx)(Ge, {
               children: (0, n.jsx)(ie.s, {
-                children: (0, n.jsx)(wt, {
+                children: (0, n.jsx)(Ct, {
                   children: (0, n.jsx)(s.V3, {
                     context: r,
-                    children: (0, n.jsx)(ke, {
+                    children: (0, n.jsx)(We, {
                       children: (0, n.jsx)(ee, {
-                        children: (0, n.jsx)(Ue.rq, { children: e.children }),
+                        children: (0, n.jsx)(He.rq, { children: e.children }),
                       }),
                     }),
                   }),
@@ -2424,7 +2467,7 @@
           }),
         });
       }
-      function _t(e) {
+      function wt(e) {
         let { children: t } = e,
           r = (0, ne.OU)([l.B.PricingTools(), l.B.PromotionTools()]);
         return (0, n.jsx)("div", {
@@ -2432,7 +2475,7 @@
           children: t,
         });
       }
-      function ft(e) {
+      function Mt(e) {
         const [t, r] = i.useState(!1);
         return (
           i.useEffect(() => {
@@ -2445,8 +2488,8 @@
           t
             ? (0, n.jsx)(C.Kd, {
                 basename: (0, l.C)(),
-                children: (0, n.jsx)(ht, {
-                  children: (0, n.jsx)(_t, {
+                children: (0, n.jsx)(bt, {
+                  children: (0, n.jsx)(wt, {
                     children: (0, n.jsx)(i.Suspense, {
                       fallback: null,
                       children: (0, n.jsxs)(y.dO, {
@@ -2454,7 +2497,7 @@
                           (0, n.jsx)(y.qh, {
                             exact: !0,
                             path: "/",
-                            component: qe,
+                            component: Ve,
                           }),
                           (0, n.jsx)(y.qh, {
                             exact: !0,
@@ -2468,50 +2511,50 @@
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.SalePages(),
-                            component: Xe,
+                            component: Je,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.OptInPages(),
-                            component: Ye,
+                            component: et,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.ContentHubPages(),
-                            component: ot,
+                            component: ut,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.RecapPages(),
-                            component: lt,
+                            component: dt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.DeadlinesAdmin(),
-                            component: ct,
+                            component: mt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.StoreGameAdminRoot(),
-                            component: et,
+                            component: it,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.StoreAdminReviewPriceProposals(),
-                            component: et,
+                            component: it,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.PackageLanding(),
-                            component: et,
+                            component: it,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.StoreAdminRoot(),
-                            component: et,
+                            component: it,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.BundlesEditor(),
-                            component: et,
+                            component: it,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.CreatorHomeAdminPage(),
                             children: (0, n.jsx)(te.X, {
                               config: {
                                 "admin-creatorhome": (e) =>
-                                  (0, n.jsx)(gt, {
+                                  (0, n.jsx)(ft, {
                                     creatorHomes: e.creator_homes,
                                   }),
                               },
@@ -2519,36 +2562,36 @@
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.AppCommunityItem(),
-                            component: Je,
+                            component: rt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.AppLandingPage(),
-                            component: Je,
+                            component: rt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.AppInstallerPage(),
-                            component: Je,
+                            component: rt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.AppEconomyPage(),
-                            component: Je,
+                            component: rt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.PackageAdminRoot(),
-                            component: tt,
+                            component: nt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.SteamML(),
-                            render: () => (0, n.jsx)(Ge, {}),
+                            render: () => (0, n.jsx)(Ze, {}),
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.SteamLearn(),
-                            render: () => (0, n.jsx)($e, {}),
+                            render: () => (0, n.jsx)(tt, {}),
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.BuildPatchNotes(),
                             render: (e) =>
-                              (0, n.jsx)(Ke, { appId: e.match.params.appid }),
+                              (0, n.jsx)(Ye, { appId: e.match.params.appid }),
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.SteamworksEvents(),
@@ -2556,11 +2599,11 @@
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.PromotionTools(),
-                            component: Qe,
+                            component: $e,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.PricingTools(),
-                            component: Ze,
+                            component: Xe,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.DeckVerifiedAdmin(),
@@ -2568,7 +2611,7 @@
                               (0, n.jsx)(te.X, {
                                 config: {
                                   "deck-verified-results": (e) =>
-                                    (0, n.jsx)(Ve, {
+                                    (0, n.jsx)(Qe, {
                                       dataprops: e,
                                       results: (0, _.Tc)(
                                         "deckcompatibility",
@@ -2584,7 +2627,7 @@
                               (0, n.jsx)(te.X, {
                                 config: {
                                   "deck-verified-results-inflight": (e) =>
-                                    (0, n.jsx)(Ve, {
+                                    (0, n.jsx)(Qe, {
                                       dataprops: e,
                                       results: (0, _.Tc)(
                                         "deckcompatibility_inflight",
@@ -2592,7 +2635,7 @@
                                       ),
                                     }),
                                   "deck-verified-results-submitted": (e) =>
-                                    (0, n.jsx)(Ve, {
+                                    (0, n.jsx)(Qe, {
                                       dataprops: e,
                                       results: (0, _.Tc)(
                                         "deckcompatibility_submitted",
@@ -2600,7 +2643,7 @@
                                       ),
                                     }),
                                   "deck-verified-results-published": (e) =>
-                                    (0, n.jsx)(Ve, {
+                                    (0, n.jsx)(Qe, {
                                       dataprops: e,
                                       results: (0, _.Tc)(
                                         "deckcompatibility_published",
@@ -2616,7 +2659,7 @@
                               (0, n.jsx)(te.X, {
                                 config: {
                                   "deck-verified-results-reports": (e) =>
-                                    (0, n.jsx)(Ve, {
+                                    (0, n.jsx)(Qe, {
                                       dataprops: e,
                                       results: (0, _.Tc)(
                                         "deckcompatibility_reports",
@@ -2632,14 +2675,14 @@
                               (0, n.jsx)(te.X, {
                                 config: {
                                   "deck-verified-results": () =>
-                                    (0, n.jsx)(He, {
+                                    (0, n.jsx)(Ke, {
                                       results: (0, _.Tc)(
                                         "deckcompatibility",
                                         "application_config",
                                       ),
                                     }),
                                   "deck-performance-stats": (t) =>
-                                    (0, n.jsx)(pt, {
+                                    (0, n.jsx)(_t, {
                                       appId: e.match.params.appid,
                                       dataprops: t,
                                     }),
@@ -2649,7 +2692,7 @@
                           (0, n.jsx)(y.qh, {
                             path: l.B.SDRConnections(),
                             render: (e) =>
-                              (0, n.jsx)(rt, { appId: e.match.params.appid }),
+                              (0, n.jsx)(st, { appId: e.match.params.appid }),
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.PublisherDashboard(),
@@ -2657,9 +2700,9 @@
                               (0, n.jsx)(te.X, {
                                 config: {
                                   "publisher-dashboard": () =>
-                                    (0, n.jsx)(it, {}),
+                                    (0, n.jsx)(at, {}),
                                   "promotion-review-dashboard": () =>
-                                    (0, n.jsx)(st, {}),
+                                    (0, n.jsx)(lt, {}),
                                 },
                               }),
                           }),
@@ -2669,7 +2712,7 @@
                               (0, n.jsx)(te.X, {
                                 config: {
                                   "timeline-marker-editor": () =>
-                                    (0, n.jsx)(nt, {
+                                    (0, n.jsx)(ot, {
                                       appId: e.match.params.appid,
                                     }),
                                 },
@@ -2681,7 +2724,7 @@
                               (0, n.jsx)(te.X, {
                                 config: {
                                   "achievements-editor": () =>
-                                    (0, n.jsx)(mt, {
+                                    (0, n.jsx)(ht, {
                                       appId: e.match.params.appid,
                                     }),
                                 },
@@ -2689,7 +2732,7 @@
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.HardwareReservationQueueMessaging(),
-                            component: at,
+                            component: ct,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.KeyWizardPackagePage(),
@@ -2709,11 +2752,11 @@
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.TaxRequirement(),
-                            component: ut,
+                            component: pt,
                           }),
                           (0, n.jsx)(y.qh, {
                             path: l.B.MeetSteam(),
-                            component: dt,
+                            component: gt,
                           }),
                           (0, n.jsx)(y.qh, { children: (0, n.jsx)(re.a, {}) }),
                         ],
@@ -2725,12 +2768,12 @@
             : null
         );
       }
-      function bt() {
+      function Bt() {
         const e = (0, _.Fd)("loyalty_webapi_token", "application_config");
         return new x.D(_.TS.WEBAPI_BASE_URL, e);
       }
-      function wt(e) {
-        const t = (0, k.bs)(bt),
+      function Ct(e) {
+        const t = (0, k.bs)(Bt),
           r = (0, k.bs)(i.useCallback(() => new v.A(), []));
         return (0, n.jsx)(S.VQ, {
           useActiveSteamInterface: t,
@@ -2738,34 +2781,34 @@
           children: e.children,
         });
       }
-      var Mt = r(14947),
-        Bt = r(44844),
-        Ct = r(45754),
-        yt = r(81393),
-        St = (r(5977), r(66418));
-      function vt() {
+      var yt = r(14947),
+        St = r(44844),
+        vt = r(45754),
+        xt = r(81393),
+        Rt = (r(5977), r(66418));
+      function It() {
         const e = [];
         return (
-          St.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          St.TS.IN_CLIENT && e.push("in_client"),
+          Rt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          Rt.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      var xt = r(92724),
-        Rt = r(78686);
-      (0, Mt.jK)({ enforceActions: "never" }),
+      var Tt = r(92724),
+        jt = r(78686);
+      (0, yt.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           const e = document.getElementById("application_root"),
             t = e ? "application_config" : void 0;
           (0, _.XJ)(t);
           const n = new x.D(_.TS.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, Ct.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: vt }),
+          (0, vt.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: It }),
             await (async function (e) {
               const [t, i, n] = await Promise.all([
                   r(6527)(`./marketing_${e}.json`),
                   r(16791)(`./sales_${e}.json`).then((e) => e.default),
                   r(3075)(`./main_${e}.json`),
-                  (0, xt.u)(),
+                  (0, Tt.u)(),
                 ]),
                 s = { ...n.default },
                 a = h.A0.GetLanguageFallback(e);
@@ -2774,7 +2817,7 @@
                     r(13122)(`./marketing_${a}.json`),
                     r(95386)(`./sales_${a}.json`),
                     r(68982)(`./main_${a}.json`),
-                    Rt.Z.Ready(),
+                    jt.Z.Ready(),
                   ]),
                   l = { ...o.default };
                 h.pf.InitFromObjects(s, l),
@@ -2786,7 +2829,7 @@
                   h.pf.AddTokens(i, null);
             })(_.TS.LANGUAGE),
             e
-              ? Bt.createRoot(e).render(i.createElement(ft, {}))
+              ? St.createRoot(e).render(i.createElement(Mt, {}))
               : (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2802,13 +2845,13 @@
                           );
                         break;
                       default:
-                        (0, yt.wT)(!1, `unknown component: "${n}"`);
+                        (0, xt.wT)(!1, `unknown component: "${n}"`);
                     }
                   }
                 })();
         }),
         (window.LocalizationManifestReady = function (e, t, r) {
-          (0, yt.wT)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, xt.wT)("manifest" === t, `Expected manifest not "${t}"`),
             h.pf.InitDirect(r);
         });
     },
@@ -8915,15 +8958,15 @@
         l = r(90626),
         c = r(11002),
         u = r(56011),
-        d = r(21109),
-        m = r(74882),
-        p = r(45730),
-        g = r(43899),
-        h = r(7745),
-        _ = r(73170);
-      var f = r(85585);
+        d = r(74882),
+        m = r(45730),
+        p = r(43899),
+        g = r(7745),
+        h = r(73170);
+      var _ = r(85585),
+        f = r(21109);
       const b = l.createContext(null),
-        w = l.createContext(g.CZ);
+        w = l.createContext(p.CZ);
       function M(e) {
         const { navRef: t, ...r } = e,
           i = l.useRef(null),
@@ -8972,7 +9015,7 @@
               r.current?.(),
               (r.current = null),
               i &&
-                (r.current = (0, p.aM)(
+                (r.current = (0, m.aM)(
                   i,
                   (t) =>
                     !(!e || "none" == e.GetFocusable()) &&
@@ -8995,7 +9038,7 @@
             onGamepadBlur: c,
             onMenuButton: u,
             onOKActionDescription: d,
-            onCancelActionDescription: m,
+            onCancelActionDescription: p,
             onSecondaryActionDescription: g,
             onOptionsActionDescription: h,
             onMenuActionDescription: _,
@@ -9015,9 +9058,9 @@
           void 0 !== c && (w.onGamepadBlur = c);
         return {
           gamepadEvents: w,
-          actionDescriptions: (0, p.Y3)({
+          actionDescriptions: (0, m.Y3)({
             onOKActionDescription: d,
-            onCancelActionDescription: m,
+            onCancelActionDescription: p,
             onSecondaryActionDescription: g,
             onOptionsActionDescription: h,
             onMenuActionDescription: _,
@@ -9093,30 +9136,30 @@
               className: a,
               divRef: c,
               node: u,
-              tabIndex: m,
-              children: p,
-              ...g
+              tabIndex: d,
+              children: m,
+              ...p
             } = t,
-            h = (0, d.bJ)(),
-            _ = (0, n.gc)(u.SubscribableHasFocus) && h,
-            b = (0, n.gc)(u.SubscribableFocusWithin) && h,
+            g = (0, f.bJ)(),
+            h = (0, n.gc)(u.SubscribableHasFocus) && g,
+            b = (0, n.gc)(u.SubscribableFocusWithin) && g,
             {
               bActiveTree: w,
               bActiveTreeWithinContext: M,
               bDisableFocusClasses: B,
               bIsMounted: C,
-            } = (0, f.qR)(),
+            } = (0, _.qR)(),
             y = w && !B,
-            S = C && !M && (void 0 !== m || s);
+            S = C && !M && (void 0 !== d || s);
           return l.createElement(
             e,
             {
-              ...g,
-              className: o()(a, _ && y && r, b && y && i),
-              tabIndex: S ? -1 : m,
+              ...p,
+              className: o()(a, h && y && r, b && y && i),
+              tabIndex: S ? -1 : d,
               ref: c,
             },
-            p,
+            m,
           );
         };
       }
@@ -9135,10 +9178,10 @@
             elemProps: {
               focusClassName: c,
               children: u,
-              "flow-children": d,
+              "flow-children": m,
               ...p
             },
-            navOptions: g,
+            navOptions: h,
             gamepadEvents: _,
           } = y(r),
           {
@@ -9146,16 +9189,16 @@
             bActivateByDefault: w = !1,
             bDOMElementFocusByDefault: C = f,
           } = a || {};
-        void 0 === g.focusable && !p.disabled && f && (g.focusable = !0);
-        const S = (0, h.O)(d),
-          { ref: v, node: I } = M({ layout: S, ...g });
+        void 0 === h.focusable && !p.disabled && f && (h.focusable = !0);
+        const S = (0, g.O)(m),
+          { ref: v, node: I } = M({ layout: S, ...h });
         _.onOKButton ||
           ((("onClick" in p && p.onClick) || (w && (!0 === w || w(p)))) &&
             (_.onOKButton = x)),
-          g.focusable && !C
+          h.focusable && !C
             ? (p.tabIndex = p.tabIndex || 0)
-            : !g.focusable && C && (p.tabIndex = p.tabIndex ?? -1),
-          (0, m.Ui)(_, v);
+            : !h.focusable && C && (p.tabIndex = p.tabIndex ?? -1),
+          (0, d.Ui)(_, v);
         const T = B(I),
           j = (0, s.Ue)(n, v, T),
           z = (0, l.useContext)(R)?.Component;
@@ -9221,7 +9264,7 @@
                 props: l,
               };
             })(r),
-            l = (0, _.Cz)(n, a),
+            l = (0, h.Cz)(n, a),
             c = (0, s.Ue)(i, l);
           return I(e, t, o, c);
         });
@@ -12899,11 +12942,19 @@
             LocalizeInSpecificLang: (e, t, ...r) => o(u(t, [e]), ...r),
             Ready: () => r,
             IsReady: () => a,
-            HasKey: (e) =>
-              d().languages.some((r) => {
-                const i = t.get(r.strLanguage);
-                return !!i && i.has(e);
-              }),
+            HasKey(e) {
+              const r = d().languages,
+                i = [
+                  ...r.map((e) => e.strLanguage),
+                  (0, s.mR)(r[0].strLanguage),
+                ];
+              for (const r of i) {
+                if (!r) continue;
+                const i = t.get(r);
+                if (i && i.has(e)) return !0;
+              }
+              return !1;
+            },
           }
         );
       }
@@ -23069,6 +23120,7 @@
                 fields: {
                   voteid: { n: 1, br: d.qM.readInt32, bw: d.gp.writeInt32 },
                   localization: { n: 2, c: p },
+                  award_year: { n: 3, br: d.qM.readInt32, bw: d.gp.writeInt32 },
                 },
               }),
             g.sm_m
@@ -25950,6 +26002,12 @@
                   },
                   include_extra_details: {
                     n: 18,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  include_best_purchase_option: {
+                    n: 19,
+                    d: !0,
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
@@ -30304,8 +30362,14 @@
         static InitFromClanID(e, t) {
           return new a(Number(e), t, n.P3F, 0);
         }
+        static ToAccountID(e) {
+          return a.ExtractAccountID(s.A.fromString(e, !0));
+        }
+        static ExtractAccountID(e) {
+          return e.getLowBitsUnsigned();
+        }
         GetAccountID() {
-          return this.m_ulSteamID.getLowBitsUnsigned();
+          return a.ExtractAccountID(this.m_ulSteamID);
         }
         GetInstance() {
           return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
@@ -30758,6 +30822,10 @@
                 "supported_languages",
                 i,
               );
+            })(e, n, t, i),
+          r.include_extra_details &&
+            (function (e, t, r, i) {
+              z(e, t, r, "include_extra_details", "extra_details", i);
             })(e, n, t, i),
           r.include_included_items &&
             r.included_item_data_request &&
@@ -41885,23 +41953,25 @@
             onDismiss: r,
             className: n,
             modalClassName: c,
-            children: u,
-            ...d
+            bGamepadUIScrollWithin: u,
+            children: d,
+            ...m
           } = e,
-          { headerId: m, context: p } = l({ labelledBy: e["aria-labelledby"] });
+          { headerId: p, context: g } = l({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(s.t6.Provider, {
-          value: p,
+          value: g,
           children: (0, i.jsx)(a.E, {
             active: t,
             children: (0, i.jsx)(o.x_, {
               onEscKeypress: r,
               className: c,
+              bGamepadUIScrollWithin: u,
               children: (0, i.jsx)(s.UC, {
                 role: "dialog",
-                "aria-labelledby": m,
+                "aria-labelledby": p,
                 className: n,
-                ...d,
-                children: u,
+                ...m,
+                children: d,
               }),
             }),
           }),
@@ -43386,7 +43456,7 @@
         Bki: () => Ze,
         CeX: () => O,
         DK4: () => g,
-        DQe: () => vt,
+        DQe: () => St,
         Dp6: () => ee,
         Emg: () => ht,
         F2T: () => A,
@@ -43402,7 +43472,6 @@
         KQV: () => qe,
         KVe: () => Mt,
         L0X: () => L,
-        LO_: () => Ct,
         MUh: () => ne,
         MbF: () => dt,
         MvQ: () => G,
@@ -43421,6 +43490,7 @@
         V5W: () => H,
         VR: () => ie,
         VSd: () => rt,
+        Ves: () => Bt,
         Vgk: () => Qe,
         VnB: () => q,
         Vt2: () => $e,
@@ -43449,7 +43519,6 @@
         bPr: () => te,
         bcZ: () => Le,
         bfp: () => Ce,
-        bk: () => Bt,
         c_I: () => z,
         ccb: () => et,
         dJT: () => pe,
@@ -43461,6 +43530,7 @@
         fSs: () => S,
         faJ: () => be,
         ffu: () => ge,
+        fhy: () => Ct,
         g$j: () => Je,
         hz4: () => W,
         i3G: () => E,
@@ -43473,7 +43543,7 @@
         kPc: () => _e,
         koA: () => wt,
         l8x: () => P,
-        lRD: () => St,
+        lRD: () => yt,
         nm_: () => Ve,
         o5Q: () => ke,
         ofN: () => it,
@@ -43493,7 +43563,6 @@
         vRz: () => x,
         wB_: () => m,
         wVV: () => ye,
-        xoK: () => yt,
         xv8: () => y,
         yCC: () => Ue,
         y_e: () => Q,
@@ -46274,99 +46343,56 @@
         });
       }
       function Bt(e) {
-        const [t, r] = (0, c.l)();
+        const { className: t, ...r } = e;
         return (0, i.jsxs)("svg", {
+          className: (0, s.A)(o().SteamFrameCompatLogo, t),
+          ...r,
           xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
+          viewBox: "0 0 20 20",
           fill: "none",
-          ...e,
           children: [
-            (0, i.jsxs)("g", {
-              clipPath: r,
-              children: [
-                (0, i.jsx)("path", {
-                  fill: "#199FFF",
-                  d: "M35.9982 12.4814C23.0097 12.4814 12.4805 23.0107 12.4805 35.9991H35.9982V12.4814Z",
-                }),
-                (0, i.jsx)("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M0 0.776571C0 0.34768 0.347683 0 0.776571 0H35.9984V7.76572H7.76571V35.9984H0V0.776571Z",
-                }),
-              ],
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fill: "currentColor",
+              d: "M18.0001 7.54712C12.2272 7.54712 7.54736 12.227 7.54736 17.9998H18.0001V7.54712Z",
             }),
-            (0, i.jsx)("defs", {
-              children: (0, i.jsx)("clipPath", {
-                id: t,
-                children: (0, i.jsx)("rect", {
-                  fill: "currentColor",
-                  width: "36",
-                  height: "36",
-                }),
-              }),
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M2 2.34516C2 2.15453 2.15453 2 2.34516 2H17.9999V5.45157H5.45157V17.9999H2V2.34516Z",
             }),
           ],
         });
       }
       function Ct(e) {
-        const [t, r] = (0, c.l)();
+        const { className: t, ...r } = e;
         return (0, i.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
+          className: (0, s.A)(o().SteamMachineCompatLogo, t),
+          ...r,
+          viewBox: "0 0 20 20",
           fill: "none",
-          ...e,
+          xmlns: "http://www.w3.org/2000/svg",
           children: [
-            (0, i.jsxs)("g", {
-              clipPath: r,
-              children: [
-                (0, i.jsx)("path", {
-                  fill: "currentColor",
-                  d: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
-                }),
-                (0, i.jsx)("path", {
-                  fill: "#199FFF",
-                  d: "M26.2788 18.2288C26.2787 13.7823 22.6734 10.1777 18.2268 10.1777C13.7804 10.1778 10.176 13.7824 10.1758 18.2288C10.1758 22.5363 13.5586 26.0544 17.8127 26.2701L18.2268 26.2807C22.5347 26.2807 26.0527 22.8973 26.2681 18.643L26.2788 18.2288Z",
-                }),
-              ],
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
+              fill: "currentColor",
             }),
-            (0, i.jsx)("defs", {
-              children: (0, i.jsx)("clipPath", {
-                id: t,
-                children: (0, i.jsx)("rect", {
-                  fill: "currentColor",
-                  width: "36",
-                  height: "36",
-                }),
-              }),
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
+              fill: "currentColor",
             }),
           ],
         });
       }
       function yt(e) {
-        return (0, i.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ...e,
-          children: [
-            (0, i.jsx)("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M24.5384 18C24.5384 11.6275 19.3725 6.46154 13 6.46154V0C22.9411 0 30.9999 8.05887 30.9999 18C30.9999 27.9411 22.9411 36 13 36V29.5385C19.3725 29.5385 24.5384 24.3725 24.5384 18Z",
-            }),
-            (0, i.jsx)("ellipse", {
-              fill: "#1A9FFF",
-              cx: "13",
-              cy: "18.0195",
-              rx: "8.99996",
-              ry: "9",
-            }),
-          ],
-        });
-      }
-      function St(e) {
         const { className: t, ...r } = e;
         return (0, i.jsx)("svg", {
           className: (0, s.A)(o().SteamDeckCompatLogo, t),
@@ -46379,11 +46405,11 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
-            fill: "white",
+            fill: "currentColor",
           }),
         });
       }
-      function vt(e) {
+      function St(e) {
         const { className: t } = e;
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -50059,7 +50085,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 43137), e((e.s = t));
+      return (t = 35507), e((e.s = t));
       var t;
     });
     e.O();

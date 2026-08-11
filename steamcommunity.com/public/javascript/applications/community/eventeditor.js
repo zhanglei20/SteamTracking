@@ -18384,7 +18384,7 @@
         Td = a(99487),
         Id = a(38677),
         Gd = a(39199),
-        Ad = a(30211),
+        Ad = a(28241),
         Nd = a(40353);
       function Md(e) {
         const { eventModel: t, nEventBadgeID: a } = e,

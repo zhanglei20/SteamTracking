@@ -5009,7 +5009,7 @@
           _ = _.length > 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           popoverMaxHeight: 500,
@@ -6344,7 +6344,7 @@
         }
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6441,7 +6441,7 @@
             : void 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6567,7 +6567,7 @@
         }
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6859,7 +6859,7 @@
           _ = _.length > 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6916,7 +6916,7 @@
           _ = _.length > 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
