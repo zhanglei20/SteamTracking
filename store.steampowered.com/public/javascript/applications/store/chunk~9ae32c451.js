@@ -254,11 +254,11 @@
         DV: () => S,
         OC: () => D,
         OM: () => C,
-        Sp: () => w,
+        Sp: () => b,
         Tn: () => I,
         W3: () => v,
         hH: () => _,
-        my: () => b,
+        my: () => w,
       });
       var o = n(34629),
         s = n(41735),
@@ -287,6 +287,7 @@
         m_doorInitializedChangedCallback = new c.lu();
         m_largestDoorChangeCallback = new c.lu();
         m_bIsAnyDoorOpenChangeCallback = new c.lu();
+        m_doorOpenedCallback = new c.lu();
         GetLastDoorOpen() {
           return this.m_strLastDoorOpenKey;
         }
@@ -335,6 +336,9 @@
         }
         GetDoorStateInitializedChangeCallback() {
           return this.m_doorInitializedChangedCallback;
+        }
+        GetDoorOpenedCallback() {
+          return this.m_doorOpenedCallback;
         }
         BIsInitialized() {
           return this.m_bLoadedDuringInit;
@@ -447,6 +451,7 @@
                 (this.m_strLastDoorOpenKey = "door_" + (t ? e : e - 1)),
                 this.GetDoorStateChangeCallback(e).Dispatch(t),
                 this.RecomputeState(),
+                t && !o && this.GetDoorOpenedCallback().Dispatch(e),
                 n.data
               );
             i = (0, d.H)(n);
@@ -578,10 +583,10 @@
           [t, n] = (0, i.useState)(!!e && _.Get().BIsAnyDoorOpened());
         return (0, u.hL)(_.Get().GetIsAnyDoorOpenChange(), n), t;
       }
-      function w(e) {
+      function b(e) {
         _.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
-      function b(e, t) {
+      function w(e, t) {
         _.Get().SetInMemorySpecificDoorState(e, t);
       }
       (0, o.Cg)([r.sH], _.prototype, "m_bIsAnyDoorOpened", void 0),
@@ -615,12 +620,12 @@
             bHideCreatorType: i,
             bSmallFormat: I,
             bHideFollowButton: v,
-            bAddLinkToMemberList: w,
-            bMinimalDisplay: b,
+            bAddLinkToMemberList: b,
+            bMinimalDisplay: w,
           } = e,
           { creatorHome: f } = (0, a.FV)(t.clan_account_id),
-          [A] = (0, r.L2)();
-        if (A || !f)
+          [O] = (0, r.L2)();
+        if (O || !f)
           return (0, o.jsx)("div", {
             className: D.DevSummaryWidgetCtn,
             children: (0, o.jsx)(_.t, {
@@ -629,14 +634,14 @@
               position: "center",
             }),
           });
-        const y = t.type,
-          O =
+        const A = t.type,
+          y =
             "developer" == t.type
               ? (0, c.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, c.we)("#CreatorHome_PublishedBy")
                 : (0, c.we)("#CreatorHome_InFranchise"),
-          G = f.GetCreatorHomeURL(y),
+          G = f.GetCreatorHomeURL(A),
           E = f.GetNumFollowers();
         return (0, o.jsx)(g.tH, {
           children: (0, o.jsx)(p.Ay, {
@@ -645,11 +650,11 @@
               className: (0, d.A)(
                 D.DevSummaryCtn,
                 I ? D.SmallFormat : D.LargeFormat,
-                b ? D.MinimalDisplay : "",
+                w ? D.MinimalDisplay : "",
               ),
               "flow-children": "row",
               children: [
-                !i && (0, o.jsx)("span", { className: D.Title, children: O }),
+                !i && (0, o.jsx)("span", { className: D.Title, children: y }),
                 (0, o.jsxs)("div", {
                   className: D.DevSummaryWidgetCtn,
                   children: [
@@ -738,7 +743,7 @@
                             }),
                           ],
                         }),
-                        Boolean(w) &&
+                        Boolean(b) &&
                           (0, o.jsx)("a", {
                             href:
                               h.TS.COMMUNITY_BASE_URL +

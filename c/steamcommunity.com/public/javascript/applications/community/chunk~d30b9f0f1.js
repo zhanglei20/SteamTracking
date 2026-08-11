@@ -617,6 +617,7 @@
     chunkid: (module) => {
       module.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
+        Disabled: "_21NiFCkZFlTZ8WrrrxX0BX",
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
       };
     },
@@ -35577,15 +35578,17 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ..._ } = _;
+        const { children: _, className: _, bDisabled: _, ..._ } = _;
         return (0, _.jsxs)(_._, {
           cursor: "default",
           gap: "2",
-          className: _.Option,
+          className: _()(_.Option, _ && _.Disabled),
           ..._,
           children: [
             (0, _.jsx)("div", {
@@ -35604,11 +35607,13 @@
               onValueChange: _,
               options: _,
               getOptionLabel: _,
+              disabled: _,
               ..._
             } = _;
             return (0, _.jsx)(_.Root, {
               value: _,
               onValueChange: _,
+              disabled: _,
               ..._,
               children: _.map((_) => {
                 const _ = _ ? _(_) : _;
@@ -35625,7 +35630,13 @@
           },
           {
             Root: function (_) {
-              const { value: _, onValueChange: _, render: _, ..._ } = _,
+              const {
+                  value: _,
+                  onValueChange: _,
+                  disabled: _,
+                  render: _,
+                  ..._
+                } = _,
                 _ = (0, _.useRef)(null),
                 _ = (0, _.useCallback)((_, _) => {
                   if (!_.current) return;
@@ -35646,13 +35657,15 @@
                   () => ({
                     value: _,
                     onValueChange: _,
+                    bDisabled: _,
                     onSelectNext: _,
                     onSelectPrev: _,
                   }),
-                  [_, _, _, _],
+                  [_, _, _, _, _],
                 ),
                 _ = {
                   role: "radiogroup",
+                  "aria-disabled": _,
                   ref: _,
                   ..._,
                 },
@@ -35660,6 +35673,7 @@
                   direction: "column",
                   gap: "2",
                   role: "radiogroup",
+                  "aria-disabled": _,
                   ..._,
                 }),
                 _ = (0, _._)(_, _, _);
@@ -35682,39 +35696,45 @@
               const {
                   value: _,
                   onValueChange: _,
+                  bDisabled: _,
                   onSelectNext: _,
                   onSelectPrev: _,
                 } = _,
                 _ = _ === _,
                 _ = () => {
-                  _ || _(_);
+                  _ || _ || _(_);
                 },
                 _ = {
                   role: "radio",
                   "aria-checked": _,
+                  "aria-disabled": _,
                   "data-radio-id": _,
                   onClick: _,
                   onKeyDown: (_) => {
-                    switch (_.key) {
-                      case " ":
-                        _(), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowRight":
-                      case "ArrowDown":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowLeft":
-                      case "ArrowUp":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                    }
+                    if (!_)
+                      switch (_.key) {
+                        case " ":
+                          _(), _.preventDefault(), _.stopPropagation();
+                          break;
+                        case "ArrowRight":
+                        case "ArrowDown":
+                          _(_), _.preventDefault(), _.stopPropagation();
+                          break;
+                        case "ArrowLeft":
+                        case "ArrowUp":
+                          _(_), _.preventDefault(), _.stopPropagation();
+                      }
                   },
                   tabIndex: _ ? 0 : -1,
                   ref: _,
                   children: _,
                 },
-                _ = (0, _.jsx)(_, {});
+                _ = (0, _.jsx)(_, {
+                  bDisabled: _,
+                });
               return (0, _._)(_, _, _, {
                 bSelected: _,
+                bDisabled: _,
               });
             },
           },

@@ -307,6 +307,7 @@
         m_doorInitializedChangedCallback = new _._();
         m_largestDoorChangeCallback = new _._();
         m_bIsAnyDoorOpenChangeCallback = new _._();
+        m_doorOpenedCallback = new _._();
         GetLastDoorOpen() {
           return this.m_strLastDoorOpenKey;
         }
@@ -355,6 +356,9 @@
         }
         GetDoorStateInitializedChangeCallback() {
           return this.m_doorInitializedChangedCallback;
+        }
+        GetDoorOpenedCallback() {
+          return this.m_doorOpenedCallback;
         }
         BIsInitialized() {
           return this.m_bLoadedDuringInit;
@@ -469,6 +473,7 @@
                 (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
                 this.GetDoorStateChangeCallback(_).Dispatch(_),
                 this.RecomputeState(),
+                _ && !_ && this.GetDoorOpenedCallback().Dispatch(_),
                 _.data
               );
             _ = (0, _._)(_);
