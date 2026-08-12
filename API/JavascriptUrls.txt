@@ -306,6 +306,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/
+${COMMUNITY_BASE_URL}miniprofile/${}/json/?appid=${}
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
 ${COMMUNITY_BASE_URL}moderation/subject/${type}-${group_id}
 ${COMMUNITY_BASE_URL}my

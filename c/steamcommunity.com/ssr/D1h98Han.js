@@ -957,11 +957,25 @@ function _(_) {
 function _(_, _) {
   return [`MiniProfilePlaytime`, _, _];
 }
+var _ = 120 * 1e3,
+  _ = 3e3;
 function _(_, _) {
   return _({
     queryKey: _(_, _),
-    queryFn: () => null,
-    enabled: !1,
+    async queryFn() {
+      let _ = new _(_).GetAccountID(),
+        _ = await fetch(
+          `${_.COMMUNITY_BASE_URL}miniprofile/${_}/json/?appid=${_}`,
+          {
+            signal: AbortSignal.timeout(_),
+          },
+        );
+      return _._
+        ? ((await _.json().catch(() => null))?.playtime ?? null)
+        : null;
+    },
+    enabled: !!_ && !!_,
+    staleTime: _,
   });
 }
 function _(_) {
