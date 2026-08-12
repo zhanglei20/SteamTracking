@@ -5382,8 +5382,9 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -6135,7 +6136,6 @@ $steammessages_parental_objects.proto"
 -allowbrowserviewunderlays
 -allowremotediscovery
 -arch
--arm64
 -batterytestmode
 -bootreserve
 -bootreservesizemb
@@ -8107,14 +8107,10 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
-0000000000000000000000000000000000000000
 0.0333
-0.13.15.106
-00000
-000000
-00000000
 0.050
 0.125
+0.13.15.106
 0.15
 0.65
 0.75
@@ -8159,14 +8155,18 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+00000
+000000
+00000000
+0000000000000000000000000000000000000000
 00000001
 00003333
+01/01/00
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
-01/01/00
 0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11724,11 +11724,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+2019
 2048
 20000
 2000000
 200M
-2019
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16093,9 +16093,8 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
-7200
 65536
+65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
 66CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults
@@ -16173,6 +16172,7 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
+7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -16654,7 +16654,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hh;
+9HhD
 9IClientVR
 9IGv
 9ISteamUGC
@@ -23393,7 +23393,15 @@ DD5z
 DDDDUUUU
 DDli
 DEADLINE_EXCEEDED
-DEBUG: adding FEX dependency to %s %u
+DEBUG: Dongle BG RSSI: Chans: %2zu RSSI: %s
+DEBUG: Dongle BG RSSI: Chans: %2zu RSSI: %s\n
+DEBUG: Dongle PER:      Chans: %2zu PER: %s
+DEBUG: Dongle PER: Chans: %2zu PER:      %s\n
+DEBUG: Dongle PK RSSI: Chans: %2zu RSSI: %s
+DEBUG: Dongle PK RSSI: Chans: %2zu RSSI: %s\n
+DEBUG: Dongle unable to provide BGRSSI Info
+DEBUG: Dongle unable to provide PER Info
+DEBUG: Dongle unable to provide PKRSSI Info
 DEFAULT
 DEFAULT_FOR_TYPE
 DEFINE
@@ -24236,6 +24244,7 @@ EAppUpdateState
 EAssetPropertyType
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
+EAtn
 EAuthSessionGuardType
 EAuthSessionSecurityHistory
 EAuthTokenAppType
@@ -24862,7 +24871,6 @@ E\r\f52
 E\tONW;_
 E]sv
 Each IPC call is being logged to %s.\n
-Eapn
 Easy Listening
 EcLogging
 Econ
@@ -25732,6 +25740,7 @@ Failed to issue HTTP request for depot %u
 Failed to join own broadcast chat (BroadcastID %llu)
 Failed to kick controller %u out of bluetooth mode after pairing for slot %u: %u
 Failed to launch executable %s\n
+Failed to launch free license request for tool AppID %u.
 Failed to load
 Failed to load "%s"
 Failed to load binary buffer for app %u
@@ -26218,6 +26227,7 @@ Fraud Check Failed
 Free
 Free Weekend
 Free disk space for %s would overflow
+Free license request for tool AppID %u did not grant a license (call %s, EResult %d, %u granted).
 FreeAudioDevice
 FreeBindingInstance
 FreeDeletedPackets
@@ -27598,6 +27608,7 @@ Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got SDR config revision %d from %s\n
 Got SDR network config.  %s
+Got a free license for tool AppID %u.
 Got a heartbeat
 Got a single shader of size %u; uploading in single message.
 Got an invalid bond when recording triton pair bond last used\n
@@ -31053,7 +31064,6 @@ N9talk_base8HttpDataE
 N9talk_base8SignalerE
 N9talk_base9AsyncFileE
 N9talk_base9StreamTapE
-N@fff?
 NACK
 NAME_CONSTRAINTS
 NAMING_AUTHORITY
@@ -31330,6 +31340,7 @@ No UDP connectivity
 No WebSockets CMs, defaulting to UDP
 No account or email was specified to send the gift
 No active license found for appID %u.\n
+No app state for tool AppID %u, can't tell if a license is needed.
 No backup folder specified
 No beta branch specified
 No billing agreement exists for recurring option
@@ -33908,6 +33919,7 @@ Requesting activate from AddToCache %d\n
 Requesting cert
 Requesting cert for %s from Steam\n
 Requesting download URL\n
+Requesting free license for tool AppID %u.
 Requesting mapping AppID %u from appinfo to tool "%s"
 Requesting server side CEG wrap\n
 Requesting server side DRM wrap\n
@@ -34077,7 +34089,6 @@ RuPay
 Rule
 Rules query back from steam, without rules_data\n
 RulesQuery
-Rumble: intensity %d, leftspeed %d, rightSpeed %d, leftgain %d, rightgain %d
 Run installation completion over HTTP by default
 RunAsAppID
 RunAutoCloudOnAppExit
@@ -36425,7 +36436,6 @@ SteamInputManager.WaitInitialControllerStateEnumerated#1
 SteamInstallPath
 SteamLibrary
 SteamLinuxRuntime
-SteamLinuxRuntime_
 SteamLinuxRuntime_sniper
 SteamLinuxRuntime_soldier
 SteamMachine
@@ -37655,6 +37665,7 @@ Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
 Timed out waiting for mutex in GetInternal()\n
 Timed out waiting for mutex in PutInternal()\n
 Timed out waiting for progress after '%d' seconds, closing
+Timed out waiting on the free license request for tool AppID %u.
 TimedOut
 TimedTrial.GetTimeRemaining#1
 TimedTrial.RecordPlaytime#1
@@ -38680,7 +38691,6 @@ V_strcat
 V_strcmp( strEntryName.String(), "_bucketmanifest" ) == 0
 V_strcmp_prefix
 V_stricmp( m_Presets[0], s_pszDefaultPresetName ) == 0
-V_stricmp_prefix
 V_stristr( STEAMNETWORKINGSOCKETS_HARDCODED_ROOT_CA_KEY, checkID ) != NULL
 V_stristr( cacheIn.Key( 0 ).szDriverDescription, "Audio" ) != nullptr
 V_stristr(char const*, char const*)
@@ -48809,7 +48819,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggenh
 ghjkl
 gidlist
 gidparentcomment
@@ -53642,14 +53652,14 @@ low-pri yield - ../clientdll/clientjob.cpp:487
 low-pri yield - ../clientdll/clientjob.cpp:796
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - ../clientdll/clientugc.cpp:6990
-low-pri yield - ../clientdll/compatmanager.cpp:2081
-low-pri yield - ../clientdll/compatmanager.cpp:2337
-low-pri yield - ../clientdll/compatmanager.cpp:2604
-low-pri yield - ../clientdll/compatmanager.cpp:3275
-low-pri yield - ../clientdll/compatmanager.cpp:3332
-low-pri yield - ../clientdll/compatmanager.cpp:3345
-low-pri yield - ../clientdll/compatmanager.cpp:3397
-low-pri yield - ../clientdll/compatmanager.cpp:3998
+low-pri yield - ../clientdll/compatmanager.cpp:2084
+low-pri yield - ../clientdll/compatmanager.cpp:2340
+low-pri yield - ../clientdll/compatmanager.cpp:2607
+low-pri yield - ../clientdll/compatmanager.cpp:3377
+low-pri yield - ../clientdll/compatmanager.cpp:3434
+low-pri yield - ../clientdll/compatmanager.cpp:3447
+low-pri yield - ../clientdll/compatmanager.cpp:3499
+low-pri yield - ../clientdll/compatmanager.cpp:4100
 low-pri yield - ../clientdll/csinterface.cpp:223
 low-pri yield - ../clientdll/depotbuilder.cpp:107
 low-pri yield - ../clientdll/depotreconstruct.cpp:3066
@@ -55121,7 +55131,7 @@ m_rgAppsUpdated
 m_rgClientPlatformTypeCounts[ ePlatformType ] >= 0
 m_rgConnectedControllers
 m_rgControllerIDs
-m_rgControllerIDs[unControllerIndex].rgchSerialNumber[0]
+m_rgControllerIDs[ unControllerIndex ].rgchSerialNumber[ 0 ]
 m_rgFds[ unXinputIdx ] != -1
 m_rgFds[ unXinputIdx ] == -1
 m_rgPaths
@@ -61399,7 +61409,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug  7 2026 20:15:08
+steam Aug 11 2026 21:58:25
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
