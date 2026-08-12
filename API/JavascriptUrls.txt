@@ -424,6 +424,7 @@ ${COMMUNITY_BASE_URL}sharedfiles/markassuspicious
 ${COMMUNITY_BASE_URL}sharedfiles/moderationqueueview/?appid=${appid}
 ${COMMUNITY_BASE_URL}sharedfiles/reportitem
 ${COMMUNITY_BASE_URL}sharedfiles/updaterestrictedcountries
+${COMMUNITY_BASE_URL}sharedfiles/uploadartwork/?appid=${}
 ${COMMUNITY_BASE_URL}sharedfiles/votingqueue/?appid=${appid}&matchingFileType=17
 ${COMMUNITY_BASE_URL}tempcloud/beginfileupload/
 ${COMMUNITY_BASE_URL}tempcloud/commitfileupload/
@@ -3008,6 +3009,7 @@ https://store.steampowered.com/curators/ajaxfollow
 https://store.steampowered.com/curators/ajaxgetcurators/
 https://store.steampowered.com/curators/ajaxignore
 https://store.steampowered.com/default/home_additional/
+https://store.steampowered.com/default/home_spotlight_recommendations/
 https://store.steampowered.com/default/usabilitytracking/
 https://store.steampowered.com/dev/${vanity_url}
 https://store.steampowered.com/developer/${vanity_url}
