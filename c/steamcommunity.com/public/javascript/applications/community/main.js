@@ -16880,8 +16880,10 @@
               : _._.Localize("#moderation_sanction_tradebanned", _._);
           case _._:
             return _._.Localize("#moderation_sanction_kickedfromgroup");
+          case _._:
+            return _._.Localize("#moderation_sanction_escalated");
           default:
-            return _._.Localize("#moderation_sanction_unknown");
+            return _._.Localize("#moderation_sanction_unknown", _._);
         }
       }
       function _(_) {

@@ -1426,6 +1426,9 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(_._),
           [_, _] = (0, _.useState)(""),
+          _ =
+            void 0 !== _.rtContentCreatedAt &&
+            (Date.now() / 1e3 - _.rtContentCreatedAt) / 2592e3,
           _ = _ || _ || _ || _ || _ || _ || _,
           _ =
             ((_ = _.authorSteamID),
@@ -1566,6 +1569,15 @@
                           " Issue Warning",
                         ],
                       }),
+                      _ &&
+                        !!_ &&
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(_().OneColumn, _().ErrorMessage),
+                          children: [
+                            (0, _.jsx)(_.Q9b, {}),
+                            " Content is older than 30 days. Are you sure you want to ban?",
+                          ],
+                        }),
                       _.clanSteamID &&
                         (0, _.jsxs)(_.Fragment, {
                           children: [
@@ -1622,6 +1634,15 @@
                               ],
                             }),
                             _,
+                          ],
+                        }),
+                      _ &&
+                        !!_ &&
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(_().OneColumn, _().ErrorMessage),
+                          children: [
+                            (0, _.jsx)(_.Q9b, {}),
+                            " Content is older than 30 days. Are you sure you want to ban?",
                           ],
                         }),
                       (0, _.jsx)("label", {
