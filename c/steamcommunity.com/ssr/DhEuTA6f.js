@@ -799,7 +799,7 @@ function _(_) {
         _ = _[1];
       if (_ && !_.startsWith(`node_modules`)) {
         let _ = _.match(/(.*?):(\d+:(\d+)?)/);
-        return _ ? `${_}${_[1]}?v=@10907652#L${_[2]}` : `${_}${_}?v=@10907652`;
+        return _ ? `${_}${_[1]}?v=@10908306#L${_[2]}` : `${_}${_}?v=@10908306`;
       }
     }
   }
@@ -1073,7 +1073,10 @@ function _(_) {
   }
 }
 function _(_) {
-  let _ = _().metrics,
+  let _ = _(),
+    [_, _] = (0, _.useState)(0),
+    _ = _[_]?.metrics,
+    _ = _[_]?.logLines ?? [],
     [_, _] = (0, _.useState)(!1),
     _ = (0, _.useRef)(null);
   if (
@@ -1121,6 +1124,28 @@ function _(_) {
               onClick: () => _(!_),
               children: `x`,
             }),
+            _.length > 1 &&
+              (0, _.jsx)(`select`, {
+                className: `eevC9CkVgxg-`,
+                onChange: (_) => _(parseInt(_.target.value)),
+                children: _.map((_, _) =>
+                  _.metrics
+                    ? (0, _.jsxs)(
+                        `option`,
+                        {
+                          value: _,
+                          children: [
+                            _.metrics.categories.General.dimensions.route,
+                            _.metrics.categories.General.dimensions.action
+                              ? ` - ${_.metrics.categories.General.dimensions.action}`
+                              : ``,
+                          ],
+                        },
+                        _,
+                      )
+                    : null,
+                ),
+              }),
             (0, _.jsx)(`table`, {
               className: `AguQewhSY4Q-`,
               children: (0, _.jsxs)(`tbody`, {
@@ -1154,8 +1179,8 @@ function _(_) {
                         children: (0, _.jsx)(`a`, {
                           target: `_blank`,
                           rel: `noreferrer`,
-                          href: `https://swarm.valve.org/changes/10907652`,
-                          children: `10907652`,
+                          href: `https://swarm.valve.org/changes/10908306`,
+                          children: `10908306`,
                         }),
                       }),
                     ],
@@ -1178,6 +1203,17 @@ function _(_) {
                 ],
               }),
             }),
+            _.length > 0 &&
+              (0, _.jsxs)(`details`, {
+                children: [
+                  (0, _.jsx)(`summary`, {
+                    children: `Logs`,
+                  }),
+                  (0, _.jsx)(`pre`, {
+                    children: _.join(``),
+                  }),
+                ],
+              }),
             Object.entries(_.categories).map(([_, _]) =>
               _ === `WG`
                 ? (0, _.jsx)(

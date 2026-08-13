@@ -37646,6 +37646,7 @@
           super(t ? `EResult ${e}: ${t}` : `EResult ${e}`), (this.eResult = e);
         }
       }
+      Error;
       var ld = n(30724),
         cd = n(61739);
       function dd() {
