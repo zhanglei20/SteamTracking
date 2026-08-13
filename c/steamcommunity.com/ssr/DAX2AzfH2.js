@@ -165,7 +165,7 @@ function _(_) {
 function _() {
   let { app: _ } = _.useLoaderData(),
     _ = _(),
-    _ = _(_.appid, (_) => _(`/workshop/actions`, `SavedWebQueries`, _));
+    _ = _(_.appid);
   return !_.data || _.data.length == 0
     ? null
     : (0, _.jsxs)(_, {
@@ -345,9 +345,7 @@ function _() {
 }
 function _() {
   let { app: _, workshopConfig: _ } = _.useLoaderData(),
-    _ = _(_.appid, (_) =>
-      _(`/workshop/actions`, `GetUserWorkshopAppDetails`, _),
-    ),
+    _ = _(_.appid),
     _ = (0, _.useCallback)((_) => {
       window.location.href = _;
     }, []);

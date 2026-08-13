@@ -7823,8 +7823,8 @@ function _(_) {
       forcedWidth: _,
       bShowTitle: _,
     } = _,
-    _ = _(_, (_) => _(`/sharedfiles/actions`, `GetUGCSummary`, _)),
-    _ = _(_, (..._) => _(`/sharedfiles/actions`, `GetUserVoteSummary`, ..._)),
+    _ = _(_),
+    _ = _(_),
     _ = (0, _.useMemo)(
       () =>
         _.data
@@ -7920,7 +7920,7 @@ function _(_) {
       forcedWidth: _,
       bShowDetails: _,
     } = _,
-    _ = _(_, (_) => _(`/workshop/actions`, `GetUGCCollectionSummary`, _)),
+    _ = _(_),
     _ = (0, _.useMemo)(
       () =>
         _.data
@@ -7998,7 +7998,7 @@ function _(_) {
 }
 function _(_) {
   let { publishedfileid: _, className: _ } = _,
-    _ = _(_, (_) => _(`/sharedfiles/actions`, `GetUGCSummary`, _));
+    _ = _(_);
   return _.data
     ? (0, _.jsx)(_, {
         details: _.data,
@@ -8010,9 +8010,7 @@ function _(_) {
 }
 function _(_) {
   let { details: _, className: _ } = _,
-    _ = _(_.publishedfileid, (..._) =>
-      _(`/sharedfiles/actions`, `GetUserVoteSummary`, ..._),
-    ),
+    _ = _(_.publishedfileid),
     _ = _(_.creator),
     _ = (0, _.useMemo)(
       () =>
@@ -8118,11 +8116,6 @@ var _ = `CjYXupratSE-`,
   _ = `DpTRucSz4GM-`,
   _ = `L4HeIBwT4P4-`,
   _ = `_47WVf1GTq30-`;
-function _(_, _, _, _) {
-  return _(_, _, _, _, (..._) =>
-    _(`/sharedfiles/actions`, `GetUserListStatus`, ..._),
-  );
-}
 function _(_, _) {
   let [_, _] = (0, _.useState)(!1),
     _ = (0, _.useCallback)(() => _(!0), [_]),
@@ -8282,12 +8275,8 @@ function _(_) {
 }
 function _(_) {
   let { details: _, size: _ } = _,
-    _ = _(_.publishedfileid, (..._) =>
-      _(`/sharedfiles/actions`, `GetUserVoteSummary`, ..._),
-    ),
-    _ = _(_.publishedfileid, (..._) =>
-      _(`/sharedfiles/actions`, `UpdateUserVote`, ..._),
-    ),
+    _ = _(_.publishedfileid),
+    _ = _(_.publishedfileid),
     _ = !!_.data?.vote_for,
     _ = !!_.data?.vote_against,
     { errorDialog: _, HandleMutationError: _ } = _();
@@ -8713,9 +8702,7 @@ function _(_) {
 }
 function _(_) {
   let { details: _, size: _ } = _,
-    _ = _(_.publishedfileid, (..._) =>
-      _(`/sharedfiles/actions`, `GetUserVoteSummary`, ..._),
-    ),
+    _ = _(_.publishedfileid),
     [_, _] = (0, _.useState)(!1),
     [_, _] = (0, _.useState)(``),
     [_, _] = (0, _.useState)(0),
@@ -9381,7 +9368,6 @@ function _(_) {
   });
 }
 export {
-  _,
   _,
   _,
   _,

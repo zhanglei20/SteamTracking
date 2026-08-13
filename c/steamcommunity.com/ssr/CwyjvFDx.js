@@ -1,3 +1,25 @@
+function _(_, _) {
+  switch (_) {
+    case 1:
+      return _.mtx_tags ?? [];
+    case 0:
+      return _.readytouse_tags ?? [];
+    case 2:
+      return _.collection_tags ?? [];
+    case 4:
+      return _.video_tags ?? [];
+    case 11:
+      return _.merch_tags ?? [];
+    case 3:
+      return _.image_tags ?? [];
+    case 9:
+    case 10:
+      return _.guide_tags ?? [];
+    case 5:
+      return _.screenshot_tags ?? [];
+  }
+  return _.declared_tags ?? [];
+}
 var _ = _(_(), 1),
   _ = _(_(), 1),
   _ = [
@@ -337,28 +359,6 @@ function _(_, _ = {}) {
   }
   return _;
 }
-function _(_, _) {
-  switch (_) {
-    case 1:
-      return _.mtx_tags ?? [];
-    case 0:
-      return _.readytouse_tags ?? [];
-    case 2:
-      return _.collection_tags ?? [];
-    case 4:
-      return _.video_tags ?? [];
-    case 11:
-      return _.merch_tags ?? [];
-    case 3:
-      return _.image_tags ?? [];
-    case 9:
-    case 10:
-      return _.guide_tags ?? [];
-    case 5:
-      return _.screenshot_tags ?? [];
-  }
-  return _.declared_tags ?? [];
-}
 function _(_) {
   switch (_) {
     case 5:
@@ -426,32 +426,33 @@ function _(_) {
 function _(_) {
   return [`user_workshop_details`, _];
 }
-function _(_, _) {
+function _(_) {
   return {
     queryKey: _(_),
-    queryFn: async () => await _(_),
+    queryFn: async () => _(`/workshop/actions`, `GetUserWorkshopAppDetails`, _),
     placeholderData: (_) => _,
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _) {
-  return _(_(_, _));
+function _(_) {
+  return _(_(_));
 }
-function _(_, _) {
+function _(_) {
   return {
     queryKey: [`saved_web_queries`, _],
-    queryFn: async () => await _(_),
+    queryFn: async () => _(`/workshop/actions`, `SavedWebQueries`, _),
     placeholderData: (_) => _,
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _) {
-  return _(_(_, _));
+function _(_) {
+  return _(_(_));
 }
-function _(_, _) {
+function _(_) {
   let _ = _();
   return _({
-    mutationFn: async (_) => await _(_, _),
+    mutationFn: async (_) =>
+      await _(`/workshop/actions`, `UpdateWebQuery`, _, _),
     onSuccess: (_) => {
       _ &&
         _.removeQueries({
@@ -460,10 +461,11 @@ function _(_, _) {
     },
   });
 }
-function _(_, _) {
+function _(_) {
   let _ = _();
   return _({
-    mutationFn: async (_) => await _(_, _),
+    mutationFn: async (_) =>
+      await _(`/workshop/actions`, `DeleteWebQuery`, _, _),
     onSuccess: (_) => {
       _ &&
         _.removeQueries({
@@ -499,22 +501,22 @@ function _(_, _) {
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _) {
+function _(_) {
   let _ = _();
   return _({
     queryKey: _(_),
     queryFn: async () => {
-      let _ = await _(_);
+      let _ = await _(`/sharedfiles/actions`, `BrowseUserFiles`, _);
       return _(_, _?.creator_player_link_details ?? []), _;
     },
     placeholderData: (_) => _,
     staleTime: 3600 * 1e3,
   });
 }
-function _(_, _) {
+function _(_) {
   return _({
     queryKey: _(_),
-    queryFn: () => _(_),
+    queryFn: () => _(`/sharedfiles/actions`, `BrowseUserMedia`, _),
     placeholderData: (_) => _,
     staleTime: 3600 * 1e3,
   });
@@ -559,7 +561,7 @@ function _(_) {
 function _(_, _, _, _) {
   return [`ugcliststatus`, _, _, _, _];
 }
-function _(_, _, _, _, _) {
+function _(_, _, _, _) {
   return new _.default(
     async (_) => {
       let _ = [..._];
@@ -568,7 +570,7 @@ function _(_, _, _, _, _) {
             publishedfileid: _,
             inlist: !1,
           }))
-        : await _(_, _, _, _);
+        : await _(`/sharedfiles/actions`, `GetUserListStatus`, _, _, _, _);
     },
     {
       cache: !1,
@@ -577,8 +579,8 @@ function _(_, _, _, _, _) {
     },
   );
 }
-function _(_, _, _, _) {
-  return _([`UserListStatus`, _, _, _], () => _(_, _, _, _));
+function _(_, _, _) {
+  return _([`UserListStatus`, _, _, _], () => _(_, _, _));
 }
 function _(_, _, _, _, _) {
   return {
@@ -588,8 +590,8 @@ function _(_, _, _, _, _) {
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _, _, _, _) {
-  return _(_(_(_, _, _, _), _, _, _, _));
+function _(_, _, _, _) {
+  return _(_(_(_, _, _), _, _, _, _));
 }
 function _(_, _, _, _) {
   let _ = _(),
@@ -650,15 +652,19 @@ function _(_, _, _, _) {
     },
   });
 }
-function _(_, _) {
-  return new _.default(async (_) => (await _([..._])) ?? [], {
-    cache: !0,
-    maxBatchSize: 100,
-    ..._,
-  });
-}
 function _(_) {
-  return _(`UGCSummaryLoader`, () => _(_));
+  return new _.default(
+    async (_) =>
+      (await _(`/sharedfiles/actions`, `GetUGCSummary`, [..._])) ?? [],
+    {
+      cache: !0,
+      maxBatchSize: 100,
+      ..._,
+    },
+  );
+}
+function _() {
+  return _(`UGCSummaryLoader`, () => _());
 }
 function _(_, _) {
   return {
@@ -667,14 +673,18 @@ function _(_, _) {
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _) {
-  return _(_(_(_), _));
-}
 function _(_) {
-  return new _.default(async (_) => _([..._]), {
-    cache: !0,
-    maxBatchSize: 100,
-  });
+  return _(_(_(), _));
+}
+function _() {
+  return new _.default(
+    async (_) =>
+      await _(`/sharedfiles/actions`, `GetUGCDynamicLinkCards`, [..._]),
+    {
+      cache: !0,
+      maxBatchSize: 100,
+    },
+  );
 }
 function _(_, _) {
   return {
@@ -683,23 +693,27 @@ function _(_, _) {
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _) {
+function _(_) {
   return _(
     _(
-      _(`UGCDynamicLinkCardLoader`, () => _(_)),
+      _(`UGCDynamicLinkCardLoader`, () => _()),
       _,
     ),
   );
 }
-function _(_, _) {
-  return new _.default(async (_) => (await _([..._])) ?? [], {
-    cache: !0,
-    maxBatchSize: 100,
-    ..._,
-  });
-}
 function _(_) {
-  return _(`UGCCollectionSummaryLoader`, () => _(_));
+  return new _.default(
+    async (_) =>
+      (await _(`/workshop/actions`, `GetUGCCollectionSummary`, [..._])) ?? [],
+    {
+      cache: !0,
+      maxBatchSize: 100,
+      ..._,
+    },
+  );
+}
+function _() {
+  return _(`UGCCollectionSummaryLoader`, () => _());
 }
 function _(_, _) {
   return {
@@ -708,21 +722,24 @@ function _(_, _) {
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _) {
-  return _(_(_(_), _));
+function _(_) {
+  return _(_(_(), _));
 }
 function _(_) {
   return [`ugcvote`, _];
 }
-function _(_, _) {
-  return new _.default(async (_) => await _([..._]), {
-    cache: !1,
-    maxBatchSize: 100,
-    ..._,
-  });
-}
 function _(_) {
-  return _([`UserVoteSummary`], () => _(_));
+  return new _.default(
+    async (_) => await _(`/sharedfiles/actions`, `GetUserVoteSummary`, [..._]),
+    {
+      cache: !1,
+      maxBatchSize: 100,
+      ..._,
+    },
+  );
+}
+function _() {
+  return _([`UserVoteSummary`], () => _());
 }
 function _(_, _) {
   return {
@@ -740,13 +757,14 @@ function _(_, _) {
     staleTime: 3600 * 1e3,
   };
 }
-function _(_, _) {
-  return _(_(_(_), _));
+function _(_) {
+  return _(_(_(), _));
 }
-function _(_, _) {
+function _(_) {
   let _ = _();
   return _({
-    mutationFn: async (_) => await _(_, _),
+    mutationFn: async (_) =>
+      await _(`/sharedfiles/actions`, `UpdateUserVote`, _, _),
     onSuccess: (_) => {
       _ &&
         _.invalidateQueries({
@@ -755,11 +773,11 @@ function _(_, _) {
     },
   });
 }
-function _(_) {
+function _() {
   return {
     queryKey: _(_.steamid),
     queryFn: async () => {
-      let _ = await _();
+      let _ = await _(`/workshop/actions`, `GetCurrentUserFriendsList`);
       return {
         friends: new Set(_.friends),
         ignored: new Set(_.ignored),
@@ -768,8 +786,8 @@ function _(_) {
     staleTime: 3600 * 1e3,
   };
 }
-function _(_) {
-  return _(_(_));
+function _() {
+  return _(_());
 }
 function _(_) {
   return [`workshop_user_friends_list`, _];
@@ -901,7 +919,7 @@ var _ = _(),
   _ = (_) => {
     let { app: _, strExistingSearchText: _ } = _,
       [_, _] = (0, _.useState)({}),
-      _ = _(_.appid, (..._) => _(`/workshop/actions`, `DeleteWebQuery`, ..._)),
+      _ = _(_.appid),
       [_, _] = (0, _.useState)(!1),
       _ = async () => {
         await _.mutateAsync(_.queryid ?? ``), _(!1);

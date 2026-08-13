@@ -49897,9 +49897,39 @@
             _ = _ ? `${_.wins} - ${_.losses}` : "",
             _ = _?.name?.match(/(\d)/g),
             _ = "" == _?.name,
-            _ = _.nNodeID >= 58 && _.nNodeID <= 62,
-            _ = _ ? "0 - 0" : _ && 2 == _.length ? `${_[0]} - ${_[1]}` : "",
-            _ = _._.Get().GetTeamStanding(
+            _ = _ && _.nNodeID >= 58 && _.nNodeID <= 62;
+          let _ = _ ? "0 - 0" : _ && 2 == _.length ? `${_[0]} - ${_[1]}` : "";
+          var _;
+          _ &&
+            (_ =
+              (_ = _.nNodeID) <= 8
+                ? "0 - 0"
+                : [28, 29, 32, 33].includes(_)
+                  ? "1 - 0"
+                  : [30, 31, 34, 35].includes(_)
+                    ? "0 - 1"
+                    : [36, 40].includes(_)
+                      ? "2 - 0"
+                      : [37, 38, 41, 42].includes(_)
+                        ? "1 - 1"
+                        : [39, 43].includes(_)
+                          ? "0 - 2"
+                          : [44].includes(_)
+                            ? "0 - 3"
+                            : [45, 46, 47].includes(_)
+                              ? "1 - 2"
+                              : [48].includes(_)
+                                ? "3 - 0"
+                                : [49, 50, 51].includes(_)
+                                  ? "2 - 1"
+                                  : [52, 53].includes(_)
+                                    ? "1 - 3"
+                                    : [54, 55, 58].includes(_)
+                                      ? "2 - 2"
+                                      : [56, 57].includes(_)
+                                        ? "3 - 1"
+                                        : "");
+          const _ = _._.Get().GetTeamStanding(
               _?.nLeagueID,
               _.nNodeGroupID,
               _?.team_id_2,
@@ -49988,8 +50018,7 @@
                               className: _().Record,
                               children: _,
                             }),
-                          (_ || _) &&
-                            !_ &&
+                          ((_ && !_) || _) &&
                             !_ &&
                             (0, _.jsx)("div", {
                               className: _().Record,
@@ -50056,8 +50085,7 @@
                               className: _().Record,
                               children: _,
                             }),
-                          (_ || _) &&
-                            !_ &&
+                          ((_ && !_) || _) &&
                             !_ &&
                             (0, _.jsx)("div", {
                               className: _().Record,
@@ -51635,8 +51663,9 @@
               .GetLeagueNodeGroupTeams(_.nLeagueID, _?.node_group_id)
               ?.filter(
                 (_) =>
+                  0 != _ &&
                   null !=
-                  _._.Get().GetTeamStanding(_.nLeagueID, _?.node_group_id, _),
+                    _._.Get().GetTeamStanding(_.nLeagueID, _?.node_group_id, _),
               );
           let _ = _.sort((_, _) => {
             const _ = _._.Get().GetTeamStanding(
@@ -51648,23 +51677,27 @@
             return _?.standing < _?.standing
               ? -1
               : _?.standing > _?.standing ||
-                  _?.tiebreak_game_win_pct < _?.tiebreak_game_win_pct
+                  _?.tiebreak_opponent_match_wins <
+                    _?.tiebreak_opponent_match_wins
                 ? 1
-                : _?.tiebreak_game_win_pct > _?.tiebreak_game_win_pct
+                : _?.tiebreak_opponent_match_wins >
+                    _?.tiebreak_opponent_match_wins
                   ? -1
-                  : _?.tiebreak_opponent_match_wins <
-                      _?.tiebreak_opponent_match_wins
+                  : _?.tiebreak_game_win_pct < _?.tiebreak_game_win_pct
                     ? 1
-                    : _?.tiebreak_opponent_match_wins >
-                        _?.tiebreak_opponent_match_wins
+                    : _?.tiebreak_game_win_pct > _?.tiebreak_game_win_pct
                       ? -1
                       : _?.tiebreak_opponent_game_win_pct <
                           _?.tiebreak_opponent_game_win_pct
                         ? 1
                         : _?.tiebreak_opponent_game_win_pct >
-                            _?.tiebreak_opponent_game_win_pct
+                              _?.tiebreak_opponent_game_win_pct ||
+                            _?.tiebereak_average_game_length <
+                              _?.tiebereak_average_game_length
                           ? -1
-                          : _?.tiebreak_coinflip < _?.tiebreak_coinflip
+                          : _?.tiebereak_average_game_length >
+                                _?.tiebereak_average_game_length ||
+                              _?.tiebreak_coinflip < _?.tiebreak_coinflip
                             ? 1
                             : _?.tiebreak_coinflip > _?.tiebreak_coinflip
                               ? -1
