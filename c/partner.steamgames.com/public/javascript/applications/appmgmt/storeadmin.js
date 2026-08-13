@@ -346,6 +346,30 @@
     },
     chunkid: (module) => {
       module.exports = {
+        PriceChangeSummary: "_378al6U3fz_xo26XB9TSaC",
+        Pending: "_9BqgpQmpdILuSOBqbvGmK",
+        LoadFailed: "_34U8ZCDShWlVmzkBSW2w1J",
+        LastChange: "_2l-Xyo8VbJ2d3XET3FSMDA",
+        RecentChange: "_396joK-7sdGrUxSlkMFOSC",
+        ChangeCount: "oj-LqimPIvXVMzu4i_Srk",
+        PriceChangeToolTip: "_1ju10cCVVFddbi9j4GydW7",
+        ToolTipTitle: "_3xk6dJPcAPoyNGwRBsSLYI",
+        ToolTipFooter: "_2lvPhgL4d8BhTp9kzGmqJ9",
+        ChangeTable: "_1KVZXL9V7gdtPB4judbmZT",
+        ChangeHeader: "Tgry6kDtqoo8oLIhLwRlk",
+        ChangeRow: "_1OZc-hjI5dkOl7-5ULCXgQ",
+        TimeSince: "_1kFp7JsD4NPIjtLyWXzHd_",
+        Price: "pCW6qPXp-OAuvel2qwIcT",
+        Currencies: "_3xGwebW9ut7kgLyLjTcBpx",
+        Notes: "_3SUWUxCuHwN3dYEIbtAbja",
+        Increase: "_3hxpTm3SvfgEuBOwXHA3lD",
+        Decrease: "wU80squkMRYFMGxr9CTrZ",
+        NoChange: "yUgWUJgZHovMaAGLLtLA_",
+        FirstPrice: "_24W_O9CqcOeCKh_efWoYl9",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         RadioButtons: "_1o8PeYV1JEHw28jdq0-cZs",
         ActionsCtn: "_3tmYmIJendBOkxYfR5pMSJ",
         NotesField: "hmIKAOq3IUq5OZJGCGodY",
@@ -9468,6 +9492,81 @@
         );
         return _;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 9e5,
+        _ = "PackagePriceChanges",
+        _ = new Map();
+      const _ = new (_())(
+        (_) =>
+          (async function (_) {
+            const _ = {
+                packageids: _.join(","),
+              },
+              _ = await _().get(
+                `${_._.PARTNER_BASE_URL}pricing/admin/packagepricechanges`,
+                {
+                  params: _,
+                  withCredentials: !0,
+                },
+              );
+            if (!_ || 200 != _.status || _.data?.success != _._)
+              throw `Load package price changes failed ${((0, _._))(_).strErrorMsg}`;
+            const _ = new Map();
+            return (
+              _.data.packages?.forEach((_) => _.set(_.packageid, _)),
+              _.map(
+                (_) =>
+                  _.get(_) || {
+                    packageid: _,
+                    total_changes: 0,
+                    changes: [],
+                  },
+              )
+            );
+          })(_),
+        {
+          cache: !1,
+          maxBatchSize: 20,
+        },
+      );
+      function _(_) {
+        const _ = (0, _.useMemo)(
+            () => Array.from(new Set(_)).filter(Boolean),
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) =>
+              (function (_, _) {
+                const _ = new Map();
+                return (
+                  _.forEach((_, _) => {
+                    _.data
+                      ? __webpack_require__.set(_.data.packageid, _.data)
+                      : _.isError &&
+                        __webpack_require__.set(_[_], {
+                          packageid: _[_],
+                          bLoadFailed: !0,
+                        });
+                  }),
+                  _.size > 0 ? _ : _
+                );
+              })(_, _),
+            [_],
+          );
+        return (0, _._)({
+          queries: _.map((_) => ({
+            queryKey: [_, _],
+            queryFn: () => _.load(_),
+            staleTime: _,
+            retry: 1,
+          })),
+          combine: _,
+        });
+      }
       class _ {
         m_mapPackageToPartners = new Map();
         GetMap() {
@@ -9496,8 +9595,6 @@
         return _;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -9723,6 +9820,239 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 2592e3;
+      function _(_) {
+        const { packageID: _, priceChanges: _ } = _,
+          _ = _?.changes?.[0];
+        return (0, _.jsxs)("div", {
+          className: _.PriceChangeSummary,
+          children: [
+            (0, _.jsx)(_, {
+              priceChanges: _,
+            }),
+            (0, _.jsx)("a", {
+              href: `${_._.PARTNER_BASE_URL}packages/pricehistory/${_}`,
+              target: "_blank",
+              rel: "noreferrer",
+              children: "Show Package Price History",
+            }),
+            Boolean(_) &&
+              (0, _.jsx)(_, {
+                priceChanges: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { priceChanges: _ } = _;
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _.Pending,
+            children: "Looking up published price changes...",
+          });
+        if (_.bLoadFailed)
+          return (0, _.jsx)("div", {
+            className: _.LoadFailed,
+            children: "Could not load published price changes",
+          });
+        const _ = _.changes?.[0];
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _.Pending,
+            children: "No previously published price change",
+          });
+        const _ = Date.now() / 1e3 - _.time < _;
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _.jsx)(_, {
+            priceChanges: _,
+          }),
+          direction: "right",
+          nDelayShowMS: 150,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_.LastChange, _ && _.RecentChange),
+            children: [
+              "Price last published ",
+              (0, _._)(_.time),
+              " (",
+              (0, _._)(_.time),
+              ")",
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { priceChanges: _ } = _,
+          _ = _.total_changes || 0;
+        return (0, _.jsxs)("div", {
+          className: _.ChangeCount,
+          children: [
+            _,
+            " published price ",
+            1 == _ ? "change" : "changes",
+            " total",
+          ],
+        });
+      }
+      function _(_) {
+        const { priceChanges: _ } = _,
+          _ = _.changes || [];
+        return (0, _.jsxs)("div", {
+          className: _.PriceChangeToolTip,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.ToolTipTitle,
+              children: "Recent published price changes",
+            }),
+            (0, _.jsxs)("table", {
+              className: _.ChangeTable,
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    className: _.ChangeHeader,
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Published",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "USD",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Change",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Currencies",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "By",
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("tbody", {
+                  children: __webpack_require__.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        change: _,
+                      },
+                      `${_.time}_${_}`,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+            Boolean(_.total_changes > _.length) &&
+              (0, _.jsxs)("div", {
+                className: _.ToolTipFooter,
+                children: [
+                  "Showing the last ",
+                  _.length,
+                  " of ",
+                  _.total_changes,
+                  " published changes",
+                ],
+              }),
+            (0, _.jsx)("div", {
+              className: _.ToolTipFooter,
+              children:
+                "Open the package price history for the full per-currency detail.",
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { change: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("tr", {
+              className: _.ChangeRow,
+              children: [
+                (0, _.jsxs)("td", {
+                  children: [
+                    (0, _._)(_.time),
+                    (0, _.jsx)("div", {
+                      className: _.TimeSince,
+                      children: (0, _._)(_.time),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("td", {
+                  className: _.Price,
+                  children: _.usd_amount ? (0, _._)(_.usd_amount, _._) : "--",
+                }),
+                (0, _.jsx)("td", {
+                  children: (0, _.jsx)(_, {
+                    change: _,
+                  }),
+                }),
+                (0, _.jsxs)("td", {
+                  className: _.Currencies,
+                  children: [
+                    _.currency_count || 0,
+                    Boolean(_.country_count) &&
+                      (0, _.jsxs)("span", {
+                        children: [" +", _.country_count, " country"],
+                      }),
+                  ],
+                }),
+                (0, _.jsx)("td", {
+                  children: (0, _.jsx)(_._, {
+                    accountID: _.account,
+                  }),
+                }),
+              ],
+            }),
+            Boolean(_.notes) &&
+              (0, _.jsx)("tr", {
+                className: _.ChangeRow,
+                children: (0, _.jsx)("td", {
+                  className: _.Notes,
+                  colSpan: 5,
+                  children: _.notes,
+                }),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { change: _ } = _;
+        if (!_.usd_amount)
+          return (0, _.jsx)("span", {
+            className: _.NoChange,
+            children: "no USD price",
+          });
+        if (_.first_published)
+          return (0, _.jsx)("span", {
+            className: _.FirstPrice,
+            children: "first published price",
+          });
+        if (!_.usd_previous)
+          return (0, _.jsx)("span", {
+            className: _.NoChange,
+            children: "previous USD price unknown",
+          });
+        if (_.usd_amount == _.usd_previous)
+          return (0, _.jsx)("span", {
+            className: _.NoChange,
+            children: "USD unchanged",
+          });
+        const _ = _.usd_amount > _.usd_previous,
+          _ = Math.round(
+            ((_.usd_amount - _.usd_previous) / _.usd_previous) * 100,
+          );
+        return (0, _.jsxs)("span", {
+          className: _ ? _.Increase : _.Decrease,
+          children: [
+            _ ? "▲" : "▼",
+            " ",
+            Math.abs(_),
+            "% from ",
+            (0, _._)(_.usd_previous, _._),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { proposal: _, mapCurrentPrices: _, oGuideline: _ } = _,
@@ -10764,7 +11094,11 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { proposal: _, mapPartnerPaidByPackage: _ } = _,
+        const {
+            proposal: _,
+            mapPartnerPaidByPackage: _,
+            mapPriceChanges: _,
+          } = _,
           [_] = (0, _._)(_.packageid, _),
           [_] = (0, _._)(_?.GetIncludedAppIDsOrSelf()?.[0], _),
           _ = `${_._.PARTNER_BASE_URL}store/packagelanding/${_.packageid}`;
@@ -10812,9 +11146,9 @@
                     : " No Release date")
                 : "Store Visibility: Hidden",
             }),
-            (0, _.jsx)("a", {
-              href: `${_._.PARTNER_BASE_URL}packages/pricehistory/${_.packageid}`,
-              children: "Show Package Price History",
+            (0, _.jsx)(_, {
+              packageID: _.packageid,
+              priceChanges: _.get(_.packageid),
             }),
             (0, _.jsx)("div", {
               className: _.SubmissionBy,
@@ -11025,6 +11359,7 @@
             oGuideline: _,
             mapCurrentPrices: _,
             mapPartnerPaidByPackage: _,
+            mapPriceChanges: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!0);
@@ -11118,6 +11453,7 @@
                     proposal: _,
                     mapCurrentPrices: _,
                     mapPartnerPaidByPackage: _,
+                    mapPriceChanges: _,
                     bForceShowComparisonRows: _,
                     bShowWithOpenTickets: _,
                   }),
@@ -11503,6 +11839,7 @@
           oGuideline: _,
           mapCurrentPrices: _,
           mapPartnerPaidByPackage: _,
+          mapPriceChanges: _,
         } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -11523,6 +11860,7 @@
                       proposal: _,
                       mapCurrentPrices: _,
                       mapPartnerPaidByPackage: _,
+                      mapPriceChanges: _,
                     }),
                   ],
                 },
@@ -11638,6 +11976,12 @@
           _ = (0, _._)(),
           _ = _(),
           _ = _(),
+          _ = _(
+            (0, _.useMemo)(
+              () => __webpack_require__.map((_) => _.packageid),
+              [_],
+            ),
+          ),
           [_, _] = (0, _._)("tab", "delta");
         if (!_)
           return (0, _.jsx)(_._, {
@@ -11654,6 +11998,7 @@
                   oGuideline: _,
                   mapCurrentPrices: _,
                   mapPartnerPaidByPackage: _,
+                  mapPriceChanges: _,
                 }),
               }),
               onClick: _,
@@ -11667,6 +12012,7 @@
                   oGuideline: _,
                   mapCurrentPrices: _,
                   mapPartnerPaidByPackage: _,
+                  mapPriceChanges: _,
                 }),
               }),
               onClick: _,

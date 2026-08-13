@@ -1184,7 +1184,7 @@ ${PARTNER_BASE_URL}packages/approvepricing
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${}
-${PARTNER_BASE_URL}packages/pricehistory/${packageid}
+${PARTNER_BASE_URL}packages/pricehistory/${}
 ${PARTNER_BASE_URL}packages/rejectpricing
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxcreatemarketingmessagemajorevent
@@ -1194,6 +1194,7 @@ ${PARTNER_BASE_URL}partnerevents/ajaxgetprivatedata
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
 ${PARTNER_BASE_URL}partnerevents/ajaxremovemarketingmessagemajorevent
 ${PARTNER_BASE_URL}partnerevents/ajaxsetprivatedata
+${PARTNER_BASE_URL}pricing/admin/packagepricechanges
 ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
