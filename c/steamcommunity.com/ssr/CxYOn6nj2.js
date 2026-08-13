@@ -1002,11 +1002,17 @@ async function _(_, _, _, _) {
   return (await _(_, [_], _, _))[0];
 }
 async function _(_, _) {
+  let _,
+    _ = !1,
+    _;
   for await (let _ of _(_, {
     ..._,
     requestType: `routeAction`,
   }))
-    return _(_);
+    _
+      ? ((_ = JSON.parse(_)), window.SSR?.saveMetricsMetadata?.(_))
+      : ((_ = _(_)), (_ = !0));
+  return _;
 }
 var _ = _(
   _((_, _) => {
@@ -1701,9 +1707,22 @@ function _() {
           children: _.title,
         }),
       _?.description &&
-        (0, _.jsx)(`meta`, {
-          property: `description`,
-          content: _.description,
+        (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(`meta`, {
+              name: `description`,
+              content: _.description,
+            }),
+            (0, _.jsx)(`meta`, {
+              property: `og:description`,
+              content: _.description,
+            }),
+          ],
+        }),
+      _?.canonicalURL &&
+        (0, _.jsx)(`link`, {
+          rel: `canonical`,
+          href: _.canonicalURL,
         }),
       (0, _.jsx)(_, {
         metadata: _,
@@ -1728,7 +1747,17 @@ function _() {
 function _(_) {
   let { metadata: _ } = _;
   if (!_) return null;
-  let { shareImage: _, shareTitle: _ } = _;
+  let {
+      shareImage: _,
+      shareTitle: _,
+      shareImageAlt: _,
+      canonicalURL: _,
+      shareCardFormat: _,
+      articlePublishedTime: _,
+      articleModifiedTime: _,
+    } = _,
+    _ = (Array.isArray(_) ? _ : [_]).filter(Boolean),
+    _ = !!(_ || _);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       _ &&
@@ -1736,7 +1765,7 @@ function _(_) {
           property: `og:title`,
           content: _,
         }),
-      (Array.isArray(_) ? _ : [_]).map((_, _) =>
+      _.map((_, _) =>
         (0, _.jsx)(
           `meta`,
           {
@@ -1746,8 +1775,42 @@ function _(_) {
           _,
         ),
       ),
+      !!_.length &&
+        _ &&
+        (0, _.jsx)(`meta`, {
+          name: `twitter:image:alt`,
+          content: _,
+        }),
+      _ &&
+        (0, _.jsx)(`meta`, {
+          property: `og:url`,
+          content: _,
+        }),
+      _ &&
+        (0, _.jsx)(`meta`, {
+          name: `twitter:card`,
+          content: _,
+        }),
+      _ &&
+        (0, _.jsx)(`meta`, {
+          property: `og:type`,
+          content: `article`,
+        }),
+      !!_ &&
+        (0, _.jsx)(`meta`, {
+          property: `article:published_time`,
+          content: _(_),
+        }),
+      !!_ &&
+        (0, _.jsx)(`meta`, {
+          property: `article:modified_time`,
+          content: _(_),
+        }),
     ],
   });
+}
+function _(_) {
+  return new Date(_ * 1e3).toISOString();
 }
 function _(_) {
   let {
@@ -1771,28 +1834,30 @@ function _(_) {
       children: (0, _.jsx)(_, {
         renderContext: _,
         children: (0, _.jsx)(_, {
-          queryClient: _.queryClient,
           children: (0, _.jsx)(_, {
-            state:
-              typeof _.queryData == `string` ? _(_.queryData) : _.queryData,
+            queryClient: _.queryClient,
             children: (0, _.jsx)(_, {
+              state:
+                typeof _.queryData == `string` ? _(_.queryData) : _.queryData,
               children: (0, _.jsx)(_, {
                 children: (0, _.jsx)(_, {
                   children: (0, _.jsx)(_, {
-                    metadata: _,
-                    clientAssets: _,
-                    nonce: _,
-                    snr: _,
                     children: (0, _.jsx)(_, {
-                      ..._,
-                      children: (0, _.jsxs)(_.Suspense, {
-                        children: [
-                          !1,
-                          (0, _.jsx)(_, {
-                            pageRoutes: _,
-                            loaderData: _,
-                          }),
-                        ],
+                      metadata: _,
+                      clientAssets: _,
+                      nonce: _,
+                      snr: _,
+                      children: (0, _.jsx)(_, {
+                        ..._,
+                        children: (0, _.jsxs)(_.Suspense, {
+                          children: [
+                            !1,
+                            (0, _.jsx)(_, {
+                              pageRoutes: _,
+                              loaderData: _,
+                            }),
+                          ],
+                        }),
                       }),
                     }),
                   }),

@@ -13022,3284 +13022,7 @@ var _ = class {
   _ = `UHLvxyXvkz4-`,
   _ = `XqbMeuPjnHU-`,
   _ = `mPgHpaEtiYc-`,
-  _ = _(_(), 1),
-  _ = (_, _, _) => [`topic_details`, _, _, _],
-  _ = (_, _, _, _) => [`comment_thread`, _, _, _, _],
-  _ = (_) => [`comment_thread_by_id`, _],
-  _ = (_, _) => [`hub_ban_status`, _, _];
-function _(_, _, _, _) {
-  return {
-    queryKey: _(_, _, _),
-    queryFn: async () => {
-      let _ = _.Init(_);
-      return (
-        _.Body().set_steamid(_),
-        _.Body().set_gidforum(_),
-        _.Body().add_gidtopics(_),
-        _.Body().set_include_full_text(!0),
-        (await _.GetTopicDetails(_, _)).Body().toObject()
-      );
-    },
-  };
-}
-function _(_, _, _) {
-  return _(_(_(), _, _, _));
-}
-function _(_, _, _, _, _) {
-  return {
-    queryKey: _(_, _, _, _),
-    queryFn: async () => {
-      let _ = _.Init(_);
-      return (
-        _.Body().set_steamid(_),
-        _.Body().set_comment_thread_type(_),
-        _.Body().set_gidfeature(_),
-        _.Body().set_gidfeature2(_),
-        _.Body().set_include_deleted(!0),
-        _.Body().set_oldest_first(!0),
-        (await _.GetCommentThread(_, _)).Body().toObject()
-      );
-    },
-  };
-}
-function _(_, _, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => {
-      let _ = _.Init(_);
-      return (
-        _.Body().set_steamid(_),
-        _.Body().set_commentthreadid(_),
-        (await _.GetCommentThread(_, _)).Body().toObject()
-      );
-    },
-  };
-}
-function _(_, _) {
-  return _(_(_(), _, _));
-}
-function _(_, _, _, _) {
-  return _(_(_(), _, _, _, _));
-}
-function _(_, _, _) {
-  return _(_, 7, _, _);
-}
-function _(_, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async (_) => {
-      let _ = _.Init(_);
-      _.Body().set_steamid(_),
-        _.Body().set_gidforum(_),
-        _.Body().set_gidtopic(_),
-        _.Body().set_gidpost(_);
-      let _ = await _.ResolveReportedPost(_, _);
-      if (!_.BSuccess())
-        throw Error(`Failed to acquit forum comment: ` + _.GetEMsg());
-      return _.Body();
-    },
-    onSuccess: async (_, _) => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, 7, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _, _),
-        }),
-      ]);
-    },
-  });
-}
-function _(_, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async (_) => {
-      let _ = _.Init(_);
-      _.Body().set_steamid(_),
-        _.Body().set_comment_thread_type(7),
-        _.Body().set_gidfeature(_),
-        _.Body().set_gidfeature2(_),
-        _.Body().set_gidcomment(_.gidComment),
-        _.Body().set_reason(_.eReason),
-        _.Body().set_resolution(_.eResolution);
-      let _ = await _.DeleteModeratedComment(_, _);
-      if (!_.BSuccess())
-        throw Error(`Failed to delete forum comment: ` + _.GetEMsg());
-      return _.Body();
-    },
-    onSuccess: async () => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, 7, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _, `0`),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _, `0`),
-        }),
-      ]);
-    },
-  });
-}
-function _(_, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async (_) => {
-      let _ = _.Init(_);
-      return (
-        _.Body().set_steamid(_),
-        _.Body().set_comment_thread_type(7),
-        _.Body().set_gidfeature(_),
-        _.Body().set_gidfeature2(_),
-        _.Body().set_reason(_.eReason),
-        _.Body().set_resolution(_.eResolution),
-        (await _.DeleteModeratedTopic(_, _)).Body()
-      );
-    },
-    onSuccess: async () => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, 7, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _, `0`),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _, `0`),
-        }),
-      ]);
-    },
-  });
-}
-function _(_, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async (_) => {
-      let _ = _.Init(_);
-      return (
-        _.Body().set_steamid(_),
-        _.Body().set_gidforum(_),
-        _.Body().set_gidtopic(_),
-        _.Body().set_locked(_.bLocked),
-        _.strAuditNote && _.Body().set_audit_note(_.strAuditNote),
-        (await _.SetTopicLocked(_, _)).Body()
-      );
-    },
-    onSuccess: async () => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _(_, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(1, _, `0`),
-        }),
-      ]);
-    },
-  });
-}
-function _(_, _, _, _, _, _) {
-  let _ = _(),
-    _ = new _(_).GetAccountID();
-  return _({
-    mutationFn: async (_) => {
-      let _ = await _.Actions.SendCommunityMessage(
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _.strCustomText,
-        _.eMessageType,
-        _.eWarningReason,
-      );
-      if (_ !== 1 && _ !== 29)
-        throw Error(`Failed to second community message (EResult ${_})`);
-    },
-    onSuccess: async () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      });
-    },
-  });
-}
-function _(_, _, _, _, _, _) {
-  let _ = _(),
-    _ = new _(_).GetAccountID(),
-    _ = new _(_).GetAccountID();
-  return _({
-    mutationFn: async (_) => {
-      let _ = await _.Actions.HubBanUser(
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _.strReason,
-        _.rtime32BanEnds,
-      );
-      if (!_) throw Error(`Failed to hub ban user (Request failed).`);
-      if (_.success !== 1 && _.success !== 29)
-        throw Error(`Failed to hub ban user (EResult ` + _ + `)`);
-      return null;
-    },
-    onSuccess: async () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      }),
-        _.invalidateQueries({
-          queryKey: _(_, _),
-        });
-    },
-  });
-}
-function _(_) {
-  return _(
-    [`GetHubBanStatus`, _],
-    () =>
-      new _.default(
-        async (_) => {
-          let _ = await _.Actions.GetHubBanStatus(_, _),
-            _ = new Map();
-          if (_ && _.success === 1)
-            for (let _ of _.bans) _.set(_.accountid_ban, _);
-          return _.map((_) => _.get(_) ?? null);
-        },
-        {
-          maxBatchSize: 100,
-          cache: !1,
-        },
-      ),
-  );
-}
-function _(_, _) {
-  let _ = new _(_).GetAccountID(),
-    _ = new _(_).GetAccountID(),
-    _ = _(_);
-  return {
-    queryKey: _(_, _),
-    queryFn: async () => {
-      let _ = await _.load(_);
-      return _ === null
-        ? null
-        : {
-            steamid: _.InitFromAccountID(
-              _.accountid_ban,
-              _.EUNIVERSE,
-            ).ConvertTo64BitString(),
-            bannedBySteamid: _.InitFromAccountID(
-              _.accountid_ban_actor,
-              _.EUNIVERSE,
-            ).ConvertTo64BitString(),
-            rtBannedUntil: _.time_ban_end,
-          };
-    },
-  };
-}
-function _(_, _) {
-  return _(_(_, _));
-}
-function _(_, _, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async (_) => {
-      let _ = await _.PostCommentToThread(_, {
-        steamid: _,
-        comment_thread_type: _,
-        gidfeature: _,
-        gidfeature2: _,
-        text: _.strMessage,
-      });
-      if (_.GetEResult() !== 1)
-        throw Error(
-          `Failed to post comment to thread: EResult ` + _.GetEResult(),
-        );
-      return _.Body().toObject();
-    },
-    onSuccess: async (_, _) => {
-      _.invalidateQueries({
-        queryKey: _(_, _, _, _),
-      });
-    },
-  });
-}
-function _(_) {
-  let { clanSteamId: _, gidForum: _, gidTopic: _ } = _,
-    _ = _(_, _, _);
-  if (!_.isSuccess) return null;
-  _(_.data && _.data.topics && _.data.topics[0], `Missing topic data on query`),
-    _(
-      _.data && _.data.forum_details && _.data.forum_details.gidfeature,
-      `Missing gidfeature`,
-    ),
-    _.data.forum_details.gidfeature,
-    `${_}`,
-    _.data.forum_details.appid && `${_.data.forum_details.appid}`;
-  let _ = new _(_).GetAccountID(),
-    _ = `${_.COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${_}&gidForum=${_}&gidTopic=${_}`;
-  return (
-    _.gidComment && (_ += `#c` + _.gidComment),
-    (0, _.jsx)(`a`, {
-      href: _,
-      children: _.children,
-    })
-  );
-}
-function _(_, _, _, _) {
-  return _({
-    mutationFn: async (_) => {
-      let _ = await _.Actions.ClearContentCheckResult(_, _, _, _, _);
-      if (_.eResult !== 1)
-        throw Error(`ClearContentCheckResult EResult: ` + _.eResult);
-    },
-  });
-}
-function _(_, _) {
-  return {
-    queryKey: [`get_clan_metadata`, _],
-    queryFn: async () => {
-      let _ = _.Init(_);
-      _.Body().set_steamid(_);
-      let _ = await _.GetClanMetadata(_, _);
-      if (!_.BSuccess())
-        throw Error(`Failed to get clan metadata, eresult: ${_.GetEResult()}`);
-      return _.Body().toObject();
-    },
-  };
-}
-function _(_) {
-  return _(_(_(), _));
-}
-function _(_) {
-  let _ = ``,
-    _ = ``;
-  if (!_.additional_subject_data) return null;
-  for (let _ of _.additional_subject_data?.data ?? [])
-    _.key === `clanSteamId`
-      ? (_ = _.value)
-      : _.key === `forumId`
-        ? (_ = _.value)
-        : console.error(`Unknown additional data key ${_.key} in forum post.`);
-  return _ == ``
-    ? (console.error(`Missing clanSteamId in additional data.`), null)
-    : _ == ``
-      ? (console.error(`Missing forumId in additional data.`), null)
-      : {
-          clanSteamId: _,
-          forumId: _,
-        };
-}
-var _ = `_98ZFK1MKUZE-`,
-  _ = `BAXovb3PE78-`,
-  _ = `atjhU8wyIbU-`,
-  _ = `_2bX38Mll-jM-`,
-  _ = `GhLGKQMBTZ8-`,
-  _ = `D6C58ph-uec-`,
-  _ = `GJz0i21pUJU-`,
   _ = _(_(), 1);
-function _(_) {
-  let _ = _(_.clanSteamId, _.commentThreadType, _.gidFeature, _.gidFeature2);
-  if (!_.isSuccess || !_.data) return null;
-  let [_, _, _] = _(_.data.comments);
-  _(_.data.comments, `Missing comments on comment thread`),
-    _(_.data.deleted_comments, `Missing deletedcomments on comment thread`);
-  let _ = [...(_.data.comments ?? [])];
-  _.push(...(_.data.deleted_comments ?? [])),
-    _.sort((_, _) => _.timestamp - _.timestamp);
-  let _ = (0, _.useMemo)(
-    () => (_) =>
-      (0, _.jsx)(_, {
-        ..._,
-        comment: _.item,
-        subject: _.mapCommentGidToSubjects.get(_.item.gidcomment),
-        bSelected: _.selected,
-        idx: _.idx,
-        visible: _.visible,
-        setFilter: _,
-        getPublicURL: _.getPublicURL,
-      }),
-    [
-      _.clanSteamId,
-      _.commentThreadType,
-      _.gidFeature,
-      _.gidFeature2,
-      _.mapCommentGidToSubjects,
-      _.setSelected,
-    ],
-  );
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsx)(_, {
-        setFilter: _,
-        filter: _,
-        setSelected: _.setSelected,
-        clanSteamId: _.clanSteamId,
-      }),
-      (0, _.jsx)(_, {
-        items: _,
-        component: _,
-        fnKey: (_) => _.gidcomment,
-        selected: _.selected,
-        setSelected: _.setSelected,
-        fnIsVisible: _,
-      }),
-    ],
-  });
-}
-function _(_) {
-  return _.filter === null
-    ? null
-    : (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          _.filter.kind === `quotes` &&
-            (0, _.jsxs)(`div`, {
-              children: [
-                `Showing only children of `,
-                (0, _.jsx)(`a`, {
-                  style: {
-                    cursor: `pointer`,
-                  },
-                  onClick: () => {
-                    _.filter &&
-                      _.filter.kind === `quotes` &&
-                      _.setSelected(_.filter.gidcomment);
-                  },
-                  children: `this comment`,
-                }),
-              ],
-            }),
-          _.filter.kind === `user` &&
-            (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(`div`, {
-                  children: `Showing only comments by`,
-                }),
-                (0, _.jsx)(_, {
-                  clanSteamId: _.clanSteamId,
-                  steamid: _.filter.steamid,
-                }),
-              ],
-            }),
-          _.filter !== null &&
-            (0, _.jsx)(`div`, {
-              children: (0, _.jsx)(_, {
-                onClick: () => {
-                  _.setFilter(null);
-                },
-                children: `Clear filter`,
-              }),
-            }),
-        ],
-      });
-}
-function _(_, _, _) {
-  let _ = _.get(_);
-  if (_) for (let _ of _) _.add(_), _(_, _, _);
-}
-function _(_) {
-  let [_, _] = (0, _.useState)(null),
-    _ = (0, _.useMemo)(() => {
-      let _ = new Map();
-      for (let _ of _) {
-        let _ = 0;
-        for (;;) {
-          let _ = _.text.indexOf(`[quote=`, _);
-          if (_ === -1) break;
-          let _ = _.text.indexOf(`;`, _);
-          if (_ === -1) break;
-          let _ = _.text.indexOf(`]`, _);
-          if (_ === -1) break;
-          if (_ > _) {
-            let _ = _.text.slice(_ + 1, _);
-            if (!_.has(_)) _.set(_, [_.gidcomment]);
-            else {
-              let _ = _.get(_);
-              _(
-                Array.isArray(_),
-                `Got ${_} for key of ${_}, expected string[]`,
-              ),
-                _.push(_.gidcomment);
-            }
-          }
-          _ = _;
-        }
-      }
-      return _;
-    }, [_]),
-    _ = (0, _.useMemo)(() => {
-      let _ = new Set();
-      return (
-        _ !== null &&
-          _.kind === `quotes` &&
-          (_.add(_.gidcomment), _(_, _, _.gidcomment)),
-        _
-      );
-    }, [_, _]);
-  return [
-    _,
-    _,
-    (0, _.useCallback)(
-      (_) => {
-        if (_ === null) return !0;
-        if (_.kind === `quotes`) return _.has(_.gidcomment);
-        if (_.kind === `user`) return _.steamid === _.steamid;
-        throw Error(`Unreachable`);
-      },
-      [_, _],
-    ),
-  ];
-}
-function _(_) {
-  switch (_) {
-    case 3:
-      return `by moderator`;
-    case 4:
-    case 6:
-    case 5:
-      return `by Valve`;
-    case 1:
-      return `by author`;
-    case 2:
-      return `by comment thread owner`;
-    case 0:
-      return `by unknown`;
-    default:
-      return;
-  }
-}
-function _(_) {
-  let _ = !1,
-    _ = !1;
-  _.subject &&
-    ((_ =
-      _.subject.unresolved_report_count > 0 ||
-      _.subject.unresolved_dispute_count > 0),
-    (_ = !_ && _.subject.reports.length != 0));
-  let _ = (0, _.useCallback)(
-      (_) => {
-        _.bSelected &&
-          _ &&
-          _.scrollIntoView({
-            block: `center`,
-          });
-      },
-      [_.bSelected],
-    ),
-    [_, _] = (0, _.useState)(!1),
-    _ = _(_.comment.steamid),
-    _ = _;
-  _ ? (_ = _) : _ && (_ = _);
-  let _ = _.comment.deleted,
-    _ = _ ? _ : ``,
-    _ = _(_.comment.delete_reason) ?? ``,
-    _ = _(
-      _.clanSteamId,
-      _.commentThreadType,
-      _.gidForumFeature,
-      _.gidFeature2,
-      _.getPublicURL(_.comment),
-      _.comment.steamid,
-      _.comment.gidcomment,
-    ),
-    _ = async () => await _.mutateAsync();
-  if (!_.isSuccess) return null;
-  _(_.data, `Missing data on personaQuery despite success.`);
-  let _ = {
-      kind: `single`,
-      type: _.subjectGroupKey.type,
-      group_id: _.subjectGroupKey.group_id,
-      _: _.comment.gidcomment,
-    },
-    _ = () => {
-      _.setFilter({
-        kind: `user`,
-        steamid: _.comment.steamid,
-      });
-    },
-    _ = () => {
-      _.setFilter({
-        kind: `quotes`,
-        gidcomment: _.comment.gidcomment,
-      });
-    };
-  return (0, _.jsx)(_.Fragment, {
-    children:
-      _.visible &&
-      (0, _.jsxs)(_.Fragment, {
-        children: [
-          _ &&
-            (0, _.jsx)(_, {
-              gidComment: _.comment.gidcomment,
-              bSubjectDeleted: !!_.comment.deleted,
-              ..._,
-              onClose: () => _(!1),
-              authorSteamId: _.comment.steamid,
-              commentURL: _.getPublicURL(_.comment),
-              fnMarkAsSuspicious: _,
-            }),
-          (0, _.jsxs)(`div`, {
-            ref: _,
-            className: (0, _.default)(`xvsOwOBGJDY-`, _, _),
-            _: `${_.comment.gidcomment}`,
-            children: [
-              (0, _.jsxs)(`div`, {
-                className: `j6up3u2-0SU-`,
-                children: [
-                  (0, _.jsxs)(`div`, {
-                    children: [
-                      (0, _.jsxs)(`div`, {
-                        className: `Gx2g4Tz2eY0-`,
-                        children: [
-                          (0, _.jsx)(_, {
-                            clanSteamId: _.clanSteamId,
-                            steamid: _.comment.steamid,
-                            fnFilterToThisUser: _,
-                          }),
-                          (0, _.jsx)(_, {
-                            toolTipContent: (0, _.jsx)(`p`, {
-                              children: `Filter thread to only posts quoting this one.`,
-                            }),
-                            children: (0, _.jsx)(`button`, {
-                              className: `zs6dKi6UL4o-`,
-                              onClick: _,
-                              children: (0, _.jsx)(_, {}),
-                            }),
-                          }),
-                          (0, _.jsx)(_, {
-                            status: _.subject?.terrorism_status ?? 0,
-                          }),
-                          (0, _.jsx)(_, {
-                            status: _.subject?.csam_status ?? 0,
-                          }),
-                          (0, _.jsx)(_, {
-                            status:
-                              _.subject?.credible_threat_of_violence_status ??
-                              0,
-                          }),
-                          _ &&
-                            (0, _.jsxs)(`div`, {
-                              className: `K4U353xsSTI-`,
-                              children: [(0, _.jsx)(_, {}), ` `, _],
-                            }),
-                        ],
-                      }),
-                      (0, _.jsxs)(`div`, {
-                        className: `Gx2g4Tz2eY0-`,
-                        children: [
-                          _(_.comment.timestamp),
-                          ` `,
-                          _(_.comment.timestamp),
-                        ],
-                      }),
-                      (0, _.jsx)(`div`, {
-                        className: `IqxBpsiKtEI-`,
-                        children: (0, _.jsx)(_, {
-                          bbcode: _.comment.text,
-                          bSimpleTagsOnly: _(_.commentThreadType),
-                          fnOnQuoteClick: _.setSelected,
-                        }),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)(`div`, {
-                    className: `RoTQLwdb-f4-`,
-                    children: [
-                      (0, _.jsxs)(_, {
-                        subjectKey: _,
-                        hash: _.comment.gidcomment,
-                        children: [`Item #`, _.idx + 1, ` `, (0, _.jsx)(_, {})],
-                      }),
-                      (0, _.jsxs)(`span`, {
-                        children: [`Comment ID `, _.comment.gidcomment],
-                      }),
-                      (0, _.jsx)(`span`, {
-                        children: (0, _.jsx)(`a`, {
-                          href: _.getPublicURL(_.comment),
-                          target: `_blank`,
-                          rel: `noreferrer`,
-                          children: `See on public`,
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsx)(`div`, {
-                className: `IPr6RAXWQcc-`,
-                children: (0, _.jsx)(_, {
-                  subject: _.subject,
-                  fnAcquit: _.subject
-                    ? () =>
-                        _.fnAcquit(
-                          _.comment.gidcomment,
-                          !!_.comment.deleted,
-                          _.subject,
-                        )
-                    : void 0,
-                  fnSanction: () => _(!0),
-                }),
-              }),
-            ],
-          }),
-        ],
-      }),
-  });
-}
-function _(_, _, _, _, _, _, _) {
-  let _ = _(_, _, _, _);
-  if (!_.isSuccess || !_.data) return [];
-  let _ = _();
-  _(_.data.comments, `Missing comments on comment thread`),
-    _(_.data.deleted_comments, `Missing deletedcomments on comment thread`);
-  let _ = [...(_.data.comments ?? [])];
-  _.push(...(_.data.deleted_comments ?? [])),
-    _.sort((_, _) => _.timestamp - _.timestamp);
-  let _ = [];
-  for (let _ = 0; _ < _.length; _++) {
-    let _ = _[_];
-    if (!_.has(_.gidcomment)) continue;
-    let _ = _.get(_.gidcomment);
-    (_?.unresolved_report_count === 0 && _.unresolved_dispute_count === 0) ||
-      (_?.required_moderator_level && _.required_moderator_level > _) ||
-      _.push({
-        children: _.text,
-        _: _.gidcomment,
-        idx: _ + 1,
-        cUnresolvedReports: _
-          ? _.unresolved_report_count + _.unresolved_dispute_count
-          : 0,
-        onClick: () => {
-          _(_.gidcomment);
-        },
-        claimed: _?.assigned_moderator_steamid === _,
-      });
-  }
-  return _;
-}
-function _(_) {
-  let [_, _, _] = (0, _.useMemo)(() => {
-      let _ = -1,
-        _ = 0,
-        _ = !1,
-        _ = [],
-        _ = new Map();
-      for (let _ = 0; _ < _.items.length; _++) {
-        let _ = _.items[_],
-          _ = !_.fnIsVisible || _.fnIsVisible(_),
-          _ = _.fnKey(_);
-        _ && _ == -1 && _ && (_ = _),
-          _.selected && _ === _.selected && ((_ = !0), _ && (_ = _)),
-          _ && (_.push(_.items[_]), _.set(_, _), _++);
-      }
-      return _ > _.length && (_ = 0), [_, _, _];
-    }, [_.fnIsVisible, _.items, _.selected, _.fnKey]),
-    _ = Math.floor((_ === -1 ? 0 : _) / 30),
-    _ = _ * 30,
-    _ = (_ + 1) * 30,
-    _ = Math.ceil(_.length / 30),
-    _ = (_) => _.fnKey(_[_ * 30]),
-    _ = (0, _.useMemo)(() => {
-      let _ = [
-        ...new Set([0, 1, 2, _ - 1, _, _ + 1, _ - 3, _ - 2, _ - 1]),
-      ].filter((_) => _ >= 0 && _ < _);
-      return (
-        _.sort((_, _) => _ - _),
-        _.length > 6 &&
-          _._(-4) !== _._(-3) - 1 &&
-          _.splice(_.length - 3, 0, `...`),
-        _.length > 4 && _._(3) !== _._(2) + 1 && _.splice(3, 0, `...`),
-        (0, _.jsxs)(`div`, {
-          className: _,
-          children: [
-            _ > 0 &&
-              (0, _.jsx)(`a`, {
-                onClick: () => _.setSelected(_(_ - 1)),
-                children: `«`,
-              }),
-            _.map((_, _) =>
-              _ === `...`
-                ? (0, _.jsx)(
-                    `span`,
-                    {
-                      children: `...`,
-                    },
-                    _,
-                  )
-                : _ === _
-                  ? (0, _.jsxs)(
-                      `span`,
-                      {
-                        className: _,
-                        children: [`›`, _ + 1, `‹`],
-                      },
-                      _,
-                    )
-                  : (0, _.jsx)(
-                      `a`,
-                      {
-                        onClick: () => _.setSelected(_(_)),
-                        children: _ + 1,
-                      },
-                      _,
-                    ),
-            ),
-            _ < _ - 1 &&
-              (0, _.jsx)(`a`, {
-                onClick: () => _.setSelected(_(_ + 1)),
-                children: `»`,
-              }),
-          ],
-        })
-      );
-    }, [_, _]);
-  return (0, _.jsxs)(`div`, {
-    children: [
-      _ > 1 && _,
-      (0, _.jsx)(`div`, {
-        children: _.slice(_, _).map((_, _) =>
-          (0, _.jsx)(
-            _,
-            {
-              anchor: `#` + _.fnKey(_),
-              item: _,
-              component: _.component,
-              visible: !_.fnIsVisible || _.fnIsVisible(_),
-              selected: _.fnKey(_) === _.selected,
-              idx: _.get(_.fnKey(_)),
-            },
-            _.fnKey(_),
-          ),
-        ),
-      }),
-      _ > 1 && _,
-    ],
-  });
-}
-function _(_) {
-  return (0, _.jsx)(`div`, {
-    _: _.anchor,
-    children: (0, _.jsx)(_.component, {
-      item: _.item,
-      visible: _.visible,
-      selected: _.selected,
-      idx: _.idx,
-    }),
-  });
-}
-function _(_) {
-  let [_, _] = (0, _.useState)(null);
-  return (
-    (0, _.useEffect)(() => {
-      let _ = window.location.hash.replace(`#`, ``);
-      _ === `` ? _ === `` && _ !== null && _ === null && _(_) : _(_);
-    }, []),
-    [_, _]
-  );
-}
-function _(_) {
-  let {
-      clanSteamId: _,
-      strForumType: _,
-      gidForumFeature: _,
-      gidFeature2: _,
-      authorSteamId: _,
-      bSubjectDeleted: _,
-      gidComment: _,
-    } = _,
-    _ = (0, _.useContext)(_),
-    [_, _] = (0, _.useState)(`main`),
-    [_, _] = (0, _.useState)({
-      eReason: null,
-      bDelete: !1,
-      bWarning: !1,
-      eWarnReason: -1,
-      daysToBanFromHub: 0,
-      daysToBanFromCommunity: 0,
-      nDaysBackToDeleteComments: -1,
-      strMessage: ``,
-      bPermanentTradeBan: !1,
-      bMarkAsSuspicious: !1,
-    }),
-    _ = _(_, _),
-    _ = _.isSuccess && _.data !== null,
-    [_, _] = (0, _.useState)(void 0),
-    _ = _(_, _, _, _, _ === `0` ? _ : _, _),
-    _ = _(),
-    _ = _(_, _, _, _, _ === `0` ? _ : _, _),
-    _ = _(),
-    _ = _(_),
-    _ = _(_),
-    _ = _(_),
-    _ = _(_, 9),
-    _ = _(_.subjectGroupKey.type, _.subjectGroupKey.group_id, _.gidComment),
-    _ = _(_),
-    _ = _(_(_.eReason), _.data);
-  (0, _.useEffect)(() => {
-    let _ = {
-      ..._,
-    };
-    (_.strMessage =
-      _.data?.quicktext?.content?.content ??
-      _.data?.english_reference?.content ??
-      ``),
-      _(_);
-  }, [_.data]);
-  let [_, _] = (0, _.useMemo)(() => {
-      let _ = !1,
-        _ = !1;
-      if (_.isSuccess && _.data !== null)
-        for (let _ of _.data.support_messages)
-          _.is_active &&
-            (_.support_message_type === 2 || _.support_message_type === 32) &&
-            (_ = !0),
-            _.is_active && _.support_message_type === 1 && (_ = !0);
-      return [_, _];
-    }, [_.data, _.isSuccess]),
-    _ =
-      _.eReason !== null &&
-      (_.bDelete ||
-        _.bWarning ||
-        (_.eWarnReason ?? 0) >= 0 ||
-        _.bMarkAsSuspicious ||
-        _.bPermanentTradeBan ||
-        _.daysToBanFromCommunity > 0 ||
-        _.daysToBanFromHub > 0 ||
-        _.nDaysBackToDeleteComments >= 0),
-    _ = _;
-  return (0, _.jsxs)(_, {
-    onClose: (_) => _ !== `backdropclick` && _.onClose(),
-    strTitle:
-      _ === `select_reason` ? `Select moderation reason` : `Moderate subject`,
-    children: [
-      _ === `select_reason` &&
-        (0, _.jsx)(_, {
-          reasons: _,
-          onSelect: (_) => {
-            if (_ !== null) {
-              let _ = {
-                ..._,
-              };
-              (_.eReason = _), _(_);
-            }
-            _(`main`);
-          },
-        }),
-      _ === `main` &&
-        (0, _.jsxs)(`div`, {
-          className: `qcMRE-7sgs0-`,
-          children: [
-            _ &&
-              (0, _.jsxs)(`div`, {
-                className: _(`OJkRbQGJnUA-`, `pSzwfaj9L7M-`),
-                children: [
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsx)(`span`, {
-                    children: _,
-                  }),
-                ],
-              }),
-            (0, _.jsx)(`label`, {
-              children: `Reason:`,
-            }),
-            (0, _.jsx)(`button`, {
-              className: `SG7ITS8nG98-`,
-              onClick: () => _(`select_reason`),
-              children:
-                _.eReason === null ? `Click to select...` : _(_.eReason),
-            }),
-            (0, _.jsxs)(`label`, {
-              className: `OJkRbQGJnUA-`,
-              children: [
-                (0, _.jsx)(`input`, {
-                  type: `checkbox`,
-                  disabled: _.bMarkAsSuspicious,
-                  checked: _.bDelete,
-                  onChange: (_) => {
-                    let _ = {
-                      ..._,
-                    };
-                    (_.bDelete = _.bMarkAsSuspicious ? !0 : _.target.checked),
-                      _(_);
-                  },
-                }),
-                ` Delete`,
-              ],
-            }),
-            (0, _.jsxs)(`label`, {
-              className: `OJkRbQGJnUA-`,
-              children: [
-                (0, _.jsx)(`input`, {
-                  type: `checkbox`,
-                  checked: _.bWarning,
-                  onChange: (_) => {
-                    let _ = {
-                      ..._,
-                    };
-                    (_.bWarning = _.target.checked), _(_);
-                  },
-                }),
-                `Issue Warning`,
-              ],
-            }),
-            (0, _.jsx)(`label`, {
-              children: `Ban from hub:`,
-            }),
-            !_ &&
-              (0, _.jsxs)(`select`, {
-                onChange: (_) => {
-                  let _ = parseInt(_.target.value),
-                    _ = {
-                      ..._,
-                    };
-                  (_.daysToBanFromHub = _), _(_);
-                },
-                value: _.daysToBanFromHub,
-                children: [
-                  (0, _.jsx)(`option`, {
-                    value: `0`,
-                    children: `Do not ban`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `1`,
-                    children: `1 day`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `3`,
-                    children: `3 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `7`,
-                    children: `7 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `14`,
-                    children: `14 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `30`,
-                    children: `30 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `90`,
-                    children: `3 months`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `365`,
-                    children: `1 year`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `-1`,
-                    children: `Permanent`,
-                  }),
-                ],
-              }),
-            _ &&
-              (0, _.jsx)(`div`, {
-                children: `Already banned from hub`,
-              }),
-            (0, _.jsx)(`label`, {
-              children: `Ban from community:`,
-            }),
-            !_ &&
-              (0, _.jsxs)(`select`, {
-                onChange: (_) => {
-                  let _ = parseInt(_.target.value),
-                    _ = {
-                      ..._,
-                    };
-                  (_.daysToBanFromCommunity = _.bMarkAsSuspicious ? -1 : _),
-                    _(_);
-                },
-                value: _.daysToBanFromCommunity,
-                children: [
-                  (0, _.jsx)(`option`, {
-                    value: `0`,
-                    children: `Do not ban`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `1`,
-                    children: `1 day`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `3`,
-                    children: `3 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `7`,
-                    children: `7 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `14`,
-                    children: `14 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `30`,
-                    children: `30 days`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `90`,
-                    children: `3 months`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `365`,
-                    children: `1 year`,
-                  }),
-                  (0, _.jsx)(`option`, {
-                    value: `-1`,
-                    children: `Permanent`,
-                  }),
-                ],
-              }),
-            _ &&
-              (0, _.jsx)(`div`, {
-                children: `Already community banned.`,
-              }),
-            (0, _.jsx)(`label`, {
-              children: `Delete comments since:`,
-            }),
-            (0, _.jsxs)(`select`, {
-              disabled: _.bMarkAsSuspicious,
-              onChange: (_) => {
-                let _ = parseInt(_.target.value),
-                  _ = {
-                    ..._,
-                  };
-                (_.nDaysBackToDeleteComments = _.bMarkAsSuspicious ? 0 : _),
-                  _(_);
-              },
-              value: _.nDaysBackToDeleteComments,
-              children: [
-                (0, _.jsx)(`option`, {
-                  value: `-1`,
-                  children: `Do not delete`,
-                }),
-                (0, _.jsx)(`option`, {
-                  value: `1`,
-                  children: `1 day`,
-                }),
-                (0, _.jsx)(`option`, {
-                  value: `7`,
-                  children: `7 days`,
-                }),
-                (0, _.jsx)(`option`, {
-                  value: `14`,
-                  children: `14 days`,
-                }),
-                (0, _.jsx)(`option`, {
-                  value: `30`,
-                  children: `30 days`,
-                }),
-                (0, _.jsx)(`option`, {
-                  value: `0`,
-                  children: `All comments`,
-                }),
-              ],
-            }),
-            !_ &&
-              (0, _.jsxs)(`span`, {
-                className: `OJkRbQGJnUA-`,
-                children: [
-                  (0, _.jsx)(`input`, {
-                    type: `checkbox`,
-                    checked: _.bPermanentTradeBan,
-                    onChange: (_) => {
-                      let _ = {
-                        ..._,
-                      };
-                      (_.bPermanentTradeBan = _.target.checked), _(_);
-                    },
-                  }),
-                  `\xA0Permanent trade ban`,
-                ],
-              }),
-            _ &&
-              (0, _.jsx)(`div`, {
-                children: `Already trade banned.`,
-              }),
-            (0, _.jsxs)(`span`, {
-              className: `OJkRbQGJnUA-`,
-              children: [
-                (0, _.jsx)(`input`, {
-                  type: `checkbox`,
-                  checked: _.bMarkAsSuspicious,
-                  onChange: (_) => {
-                    let _ = {
-                      ..._,
-                    };
-                    (_.bMarkAsSuspicious = _.target.checked),
-                      _.target.checked
-                        ? ((_.bDelete = !0), (_.nDaysBackToDeleteComments = 7))
-                        : ((_.bDelete = !1),
-                          (_.nDaysBackToDeleteComments = -1)),
-                      _(_);
-                  },
-                }),
-                `\xA0Mark as suspicious`,
-              ],
-            }),
-            (0, _.jsx)(`textarea`, {
-              className: _(`OJkRbQGJnUA-`, `-ZGnT-Wj2cQ-`),
-              placeholder: `Message to send`,
-              value: _.strMessage,
-              onChange: (_) => {
-                let _ = {
-                  ..._,
-                };
-                (_.strMessage = _.target.value), _(_);
-              },
-            }),
-            (0, _.jsxs)(`div`, {
-              className: `H8ED4xKNAg0-`,
-              children: [
-                (0, _.jsx)(_, {
-                  onClick: _.onClose,
-                  children: `Cancel`,
-                }),
-                (0, _.jsx)(_, {
-                  onClick: async () => {
-                    let _ = [];
-                    if (_.eReason !== null) {
-                      try {
-                        if (
-                          (_.subject ||
-                            (await _.fnReport(
-                              _,
-                              _.eReason,
-                              ``,
-                              _.authorSteamId,
-                            )),
-                          _.bWarning &&
-                            _.push({
-                              sanction: 8,
-                            }),
-                          _.eWarnReason !== -1 &&
-                            (await _.mutateAsync({
-                              strCustomText: _.strMessage,
-                              eMessageType: 2,
-                              eWarningReason: _.eWarnReason,
-                            }),
-                            await _.mutateAsync({
-                              eAction: 12,
-                              additionalData: {
-                                message: _.strMessage,
-                                reason: _.eWarnReason,
-                              },
-                            }),
-                            _.push({
-                              sanction: 8,
-                            })),
-                          _.daysToBanFromHub !== 0)
-                        ) {
-                          _.push({
-                            sanction: 3,
-                            days: _.daysToBanFromHub,
-                          });
-                          let _ = 0;
-                          _.daysToBanFromHub > 0 &&
-                            (_ = Date.now() / 1e3 + _.daysToBanFromHub * 86400),
-                            await _.mutateAsync({
-                              rtime32BanEnds: _,
-                              strReason: _.strMessage,
-                            });
-                        }
-                        _.daysToBanFromCommunity !== 0 &&
-                          (_.push({
-                            sanction: 2,
-                            days: _.daysToBanFromCommunity,
-                          }),
-                          await _.mutateAsync({
-                            nDays: _.daysToBanFromCommunity,
-                            strNote: _.strMessage,
-                          })),
-                          _.bPermanentTradeBan &&
-                            (_.push({
-                              sanction: 4,
-                              days: 0,
-                            }),
-                            await _.mutateAsync({
-                              rtBannedUntil: _,
-                              rtProbationUntil: _,
-                              strNote: _.strMessage,
-                            })),
-                          _.bMarkAsSuspicious &&
-                            (_.push({
-                              sanction: 7,
-                            }),
-                            await _.fnMarkAsSuspicious()),
-                          _.nDaysBackToDeleteComments >= 0 &&
-                            (_.push({
-                              sanction: 5,
-                              days: _.nDaysBackToDeleteComments,
-                            }),
-                            await _.mutateAsync({
-                              nDaysToDelete: _.nDaysBackToDeleteComments,
-                            })),
-                          _.bDelete &&
-                            (_.push({
-                              sanction: 1,
-                            }),
-                            _.subject ||
-                              (await _.fnReport(
-                                _.gidComment,
-                                _.eReason,
-                                ``,
-                                _.authorSteamId,
-                              )),
-                            _ ||
-                              (await _.fnDelete(
-                                _.eReason,
-                                14,
-                                _,
-                                _.bSubjectDeleted,
-                                _.subject,
-                              ))),
-                          await _.mutateAsync({
-                            eSubjectType: _.subjectGroupKey.type,
-                            subjectGroupId: _.subjectGroupKey.group_id,
-                            subjectId: _.gidComment,
-                            eReason: _.eReason,
-                            eResolution: 14,
-                            note: _.strMessage,
-                            rgSanctions: _,
-                          }),
-                          (_.indexOf(_.eReason) !== -1 ||
-                            _.indexOf(_.eReason) !== -1 ||
-                            _.eReason === 63) &&
-                            _.eModeratorLevel !== 10 &&
-                            (await _.mutateAsync({
-                              subjectType: _.subjectGroupKey.type,
-                              subjectGroupId: _.subjectGroupKey.group_id,
-                              subjectId: _.gidComment,
-                              eNewLevel: 10,
-                              eReason: _.eReason,
-                            }),
-                            await _.fnReport(
-                              _.gidComment,
-                              _.eReason,
-                              `Escalated to Valve by moderation for CSAM.`,
-                              _.authorSteamId,
-                            ),
-                            _.indexOf(_.eReason) === -1
-                              ? _.indexOf(_.eReason) !== -1 &&
-                                (await _.mutateAsync({
-                                  eAction: 19,
-                                }))
-                              : await _.mutateAsync({
-                                  eAction: 18,
-                                }));
-                      } catch (_) {
-                        typeof _ == `string`
-                          ? _(_)
-                          : _ instanceof Error && _(_.message);
-                        return;
-                      }
-                      _.onClose();
-                    }
-                  },
-                  disabled: !_,
-                  children: `Sanction`,
-                }),
-              ],
-            }),
-          ],
-        }),
-    ],
-  });
-}
-var _ = `Mu0RQZoN5z8-`,
-  _ = `sYrvcEPDLSw-`,
-  _ = `qg47AJzxKU8-`,
-  _ = `drEx-mnfbRw-`,
-  _ = `TRtBkjLVxyk-`,
-  _ = `H-fR3KFonOM-`,
-  _ = `vGuNUCnWWGA-`,
-  _ = `WzOU7-dMdXM-`,
-  _ = `flZsnrtedy0-`,
-  _ = `MsBIsH3D-sA-`,
-  _ = `-I0-InYUCzc-`,
-  _ = `mCo-7aE-APc-`,
-  _ = `vSeaF59r988-`,
-  _ = `OOiCBGptC2M-`,
-  _ = `nIRXFEH4Jq4-`,
-  _ = `ZXuLQr8jGdo-`,
-  _ = `Xwh88v1ZkJc-`,
-  _ = `_9tYd-oKdufo-`;
-function _(_) {
-  let { subjectKey: _ } = _,
-    _ = _(_.type, _.group_id);
-  return _.isSuccess
-    ? (0, _.jsx)(_, {
-        subjectKey: _,
-        subjects: _.data.subjects,
-      })
-    : null;
-}
-function _(_) {
-  let { subjectKey: _, subjects: _ } = _,
-    [_, _] = _(_.kind === `single` ? _._ : null),
-    _ = _(_[0]);
-  _(_, `Missing additionalData`),
-    _(_?.clanSteamId, `Missing clanSteamId for forum post`),
-    _(_?.forumId, `Missing forum id for forum post`);
-  let _ = _.clanSteamId,
-    _ = _.forumId,
-    _ = _.group_id,
-    _ = _(_, _, _),
-    _ = _(_, _, _),
-    _ = _.data?.forum_details,
-    _ = _.data?.topics?.length ? _.data.topics[0] : void 0,
-    _ = new Map();
-  for (let _ of _) _.set(_.subject_id, _);
-  let _ = (0, _.useMemo)(
-      () => ({
-        kind: `single`,
-        type: _.type,
-        group_id: _.group_id,
-        _: `0`,
-      }),
-      [_],
-    ),
-    _ = _.get(_._);
-  if (!_.isSuccess || !_.isSuccess || !_ || !_) return null;
-  _(_.data.forum_details, `Missing forum_details`),
-    _(_.data.topics && _.data.topics[0], `Missing topic details`);
-  let _ = [];
-  _.push(..._(_, _, _)),
-    _.push(..._(_, 7, _, _, _, _, _.useLoaderData().maxModeratorLevel));
-  let _ = _.useLoaderData().maxModeratorLevel;
-  return (0, _.jsx)(_, {
-    value: {
-      clanSteamId: _,
-      rgForum: _,
-      rgTopic: _,
-      eModeratorLevel: _,
-    },
-    children: (0, _.jsxs)(`div`, {
-      className: _,
-      children: [
-        (0, _.jsxs)(`div`, {
-          className: _,
-          children: [
-            (0, _.jsx)(_, {
-              clanSteamId: _,
-              gidForum: _,
-              gidTopic: _,
-            }),
-            (0, _.jsx)(_, {
-              subjectKey: _,
-              topicSubject: _,
-              clanSteamId: _,
-              forumId: _,
-              topicId: _,
-              bSelected: _ === `0`,
-            }),
-            (0, _.jsx)(_, {
-              clanSteamId: _,
-              forumId: _,
-              topicId: _,
-              selected: _,
-              setSelected: _,
-              subjects: _,
-            }),
-          ],
-        }),
-        (0, _.jsx)(`div`, {
-          className: _,
-          children: (0, _.jsx)(_, {
-            rgLinks: _,
-            subjectGroupKey: {
-              kind: `group`,
-              type: _.subjectKey.type,
-              group_id: _.subjectKey.group_id,
-            },
-          }),
-        }),
-      ],
-    }),
-  });
-}
-function _(_, _, _) {
-  if (!(_ && (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0)))
-    return [];
-  let _ = _();
-  return [
-    {
-      children: _.title,
-      idx: 0,
-      _: `0`,
-      onClick: () => _(`0`),
-      cUnresolvedReports:
-        _.unresolved_report_count + _.unresolved_dispute_count,
-      claimed: _.assigned_moderator_steamid === _,
-    },
-  ];
-}
-function _(_) {
-  let {
-      bSelected: _,
-      topicSubject: _,
-      clanSteamId: _,
-      forumId: _,
-      topicId: _,
-      subjectKey: _,
-    } = _,
-    [_, _] = (0, _.useState)(!1),
-    _ = (0, _.useRef)(null),
-    _ = _(_, _, _),
-    _ = _(_, _, _),
-    _ = _(),
-    _ = _(_, _, _),
-    _ = _(_, _, _),
-    _ = _.data?.forum_details,
-    _ = _.data?.topics?.length ? _.data.topics[0] : void 0,
-    _ = _.data,
-    _ = _.InitFromAccountID(_?.originalpost_accountid, _.EUNIVERSE),
-    _ =
-      _(
-        _.COMMUNITY_BASE_URL,
-        _.InitFromClanID(_?.clanidowner, _.EUNIVERSE).ConvertTo64BitString(),
-        _?.forumtype,
-        _?.gidfeature,
-        _?.appid,
-      ) +
-      _ +
-      `/`,
-    _ = _(
-      _,
-      _,
-      _,
-      _?.title,
-      _,
-      _.comment_thread_type,
-      _.ConvertTo64BitString(),
-    );
-  if (!_.isSuccess || !_.isSuccess || !_ || !_) return null;
-  _(_.data.forum_details, `Missing forum_details`),
-    _(_.data.topics && _.data.topics[0], `Missing topic details`);
-  let _ =
-      _ && (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0),
-    _ =
-      _ &&
-      _.unresolved_dispute_count == 0 &&
-      _.unresolved_report_count == 0 &&
-      _.reports.length != 0,
-    _ = _;
-  _ ? (_ = _) : _ && (_ = _);
-  let _ = _?.deleted ? _ : ``;
-  (0, _.useEffect)(() => {
-    _.current &&
-      setTimeout(() => {
-        _.current &&
-          _.current.scrollIntoView({
-            block: `center`,
-          });
-      }, 0);
-  }, [_]);
-  let _ = async () => {
-      _ && (await _.mutateAsync(`0`));
-    },
-    _ = async () => {
-      await _.mutateAsync();
-    },
-    _ = async (_, _, _, _, _) => {
-      await _.mutateAsync({
-        eReason: _,
-        eResolution: _,
-      });
-    },
-    _ = _.InitFromAccountID(
-      _.originalpost_accountid,
-      _.EUNIVERSE,
-    ).ConvertTo64BitString(),
-    _ = async (_, _, _) => {
-      await _.mutateAsync({
-        subjectType: 1,
-        subjectGroupId: _,
-        subjectId: `0`,
-        additionalSubjectData: new Map([
-          [`clanSteamId`, _],
-          [`forumId`, _],
-        ]),
-        eReason: _,
-        strReportText: _,
-        ownerSteamID: _,
-      });
-    },
-    _ = {
-      kind: `group`,
-      type: _.type,
-      group_id: _.group_id,
-    },
-    _ = `${_(_.COMMUNITY_BASE_URL, _.clanSteamId, _.forumtype, _.gidfeature, _.appid)}${_.topicId}`;
-  return (0, _.jsxs)(`div`, {
-    ref: _ ? _ : void 0,
-    _: `0`,
-    className: (0, _.default)(_, _, _),
-    children: [
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          (0, _.jsxs)(`div`, {
-            children: [
-              (0, _.jsxs)(`div`, {
-                className: _,
-                children: [
-                  (0, _.jsxs)(`div`, {
-                    className: _,
-                    children: [
-                      (0, _.jsx)(`h2`, {
-                        className: _,
-                        children: _.title,
-                      }),
-                      _.deleted &&
-                        (0, _.jsxs)(`div`, {
-                          className: `-W3dqZTz8Bk-`,
-                          children: [
-                            (0, _.jsx)(_, {}),
-                            ` `,
-                            _(_.delete_reason),
-                          ],
-                        }),
-                      _.locked && (0, _.jsx)(_, {}),
-                    ],
-                  }),
-                  (0, _.jsx)(`div`, {
-                    children: (0, _.jsx)(_, {
-                      clanSteamId: _.clanSteamId,
-                      gidforum: _.gidforum,
-                      gidtopic: _.gidforumtopic,
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsx)(`div`, {
-                className: _,
-                children: (0, _.jsxs)(`span`, {
-                  children: [
-                    `Posted `,
-                    _(_.originalpost_date),
-                    ` `,
-                    _(_.originalpost_date),
-                  ],
-                }),
-              }),
-              (0, _.jsx)(`div`, {
-                className: _,
-                children: (0, _.jsx)(_, {
-                  clanSteamId: _,
-                  steamid: _.ConvertTo64BitString(),
-                }),
-              }),
-              (0, _.jsxs)(`div`, {
-                className: _(_, _),
-                children: [
-                  _.forumtype === `Trading` &&
-                    (0, _.jsxs)(`div`, {
-                      className: `KVckz7JvtIY-`,
-                      children: [
-                        (0, _.jsx)(_, {}),
-                        ` `,
-                        _.Localize(`#has_trade_offer`),
-                      ],
-                    }),
-                  (0, _.jsx)(_, {
-                    bbcode: _.full_text,
-                  }),
-                ],
-              }),
-            ],
-          }),
-          (0, _.jsxs)(`div`, {
-            className: _,
-            children: [
-              (0, _.jsxs)(_, {
-                subjectKey: _,
-                children: [`Item #0 `, (0, _.jsx)(_, {})],
-              }),
-              (0, _.jsxs)(`span`, {
-                children: [`Topic ID `, _.gidforumtopic],
-              }),
-              (0, _.jsx)(`span`, {
-                children: (0, _.jsx)(`a`, {
-                  href: _,
-                  target: `_blank`,
-                  rel: `noreferrer`,
-                  children: `See on public`,
-                }),
-              }),
-            ],
-          }),
-        ],
-      }),
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          _ &&
-            (0, _.jsx)(_, {
-              onClose: () => _(!1),
-              authorSteamId: _.InitFromAccountID(
-                _.originalpost_accountid,
-                _.EUNIVERSE,
-              ).ConvertTo64BitString(),
-              gidComment: `0`,
-              bSubjectDeleted: !!_.deleted,
-              fnMarkAsSuspicious: _,
-              fnReport: _,
-              fnDelete: _,
-              clanSteamId: _,
-              strForumType: _.forumtype,
-              commentThreadType: _.comment_thread_type,
-              gidForumFeature: _.gidfeature,
-              gidFeature: _,
-              gidFeature2: _,
-              subjectGroupKey: _,
-              fnAcquit: _,
-              commentURL: _,
-            }),
-          (0, _.jsx)(_, {
-            subject: _,
-            fnAcquit: _,
-            fnSanction: () => _(!0),
-          }),
-        ],
-      }),
-    ],
-  });
-}
-function _(_) {
-  let _ = _(_.clanSteamId, _.gidforum, _.gidtopic),
-    _ = _(_.clanSteamId, _.gidforum, _.gidtopic),
-    _ = _(_.clanSteamId, 7, _.gidforum, _.gidtopic),
-    [_, _] = (0, _.useState)(null),
-    [_, _] = (0, _.useState)(``),
-    _ = !!(_.data?.topics?.length ? _.data.topics[0] : void 0)?.locked;
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      _ === `message` &&
-        (0, _.jsx)(_, {
-          strTitle: `Lock thread`,
-          strOKLabel: `Post and lock`,
-          strCancelLabel: `Cancel`,
-          onClose: () => _(null),
-          onOK: async () => {
-            _(`busy`),
-              await _.mutateAsync({
-                strMessage: _,
-              }),
-              await _.mutateAsync({
-                bLocked: !0,
-                strAuditNote: _,
-              }),
-              _(null);
-          },
-          children: (0, _.jsxs)(`div`, {
-            className: `SpkrhCvXaPk-`,
-            children: [
-              (0, _.jsx)(`div`, {
-                children: `Lock message:`,
-              }),
-              (0, _.jsx)(`div`, {
-                children: (0, _.jsx)(`textarea`, {
-                  value: _,
-                  onChange: (_) => _(_.target.value),
-                }),
-              }),
-            ],
-          }),
-        }),
-      _ === `busy` &&
-        (0, _.jsx)(_, {
-          onClose: () => {},
-          children: (0, _.jsxs)(`div`, {
-            style: {
-              padding: `12px`,
-            },
-            children: [
-              `Locking thread...`,
-              ` `,
-              (0, _.jsx)(`span`, {
-                children: (0, _.jsx)(_, {
-                  size: `small`,
-                }),
-              }),
-            ],
-          }),
-        }),
-      (0, _.jsx)(`button`, {
-        className: _,
-        onClick: async () => {
-          _
-            ? await _.mutateAsync({
-                bLocked: !1,
-              })
-            : _(`message`);
-        },
-        children: _ ? `Unlock thread` : `Lock thread`,
-      }),
-    ],
-  });
-}
-function _(_) {
-  let _ = _(_.clanSteamId, _.forumId, _.topicId),
-    _ = _(),
-    _ = _(_.clanSteamId, _.forumId, _.topicId),
-    _ = _(_.clanSteamId, _.forumId, _.topicId),
-    _ = _(_.clanSteamId, _.forumId, _.topicId),
-    _ = _(_.clanSteamId, _(7), _.forumId, _.topicId),
-    _ = _.data?.forum_details,
-    _ = _.data?.topics?.length ? _.data.topics[0] : void 0;
-  if (!_.isSuccess || !_.isSuccess || !_ || !_) return null;
-  _(_.data.forum_details, `Missing forum_details`),
-    _(_.data.topics && _.data.topics[0], `Missing topic details`);
-  let _ = new Map();
-  for (let _ of _.subjects) _.set(_.subject_id, _);
-  return (0, _.jsx)(_, {
-    clanSteamId: _.clanSteamId,
-    commentThreadType: 7,
-    gidForumFeature: _.gidfeature,
-    gidFeature: _.forumId,
-    gidFeature2: _.topicId,
-    selected: _.selected,
-    setSelected: _.setSelected,
-    mapCommentGidToSubjects: _,
-    fnAcquit: async (_, _, _) => {
-      await _.mutateAsync(_), await _.mutateAsync(_);
-    },
-    fnDelete: async (_, _, _, _, _) => {
-      await _.mutateAsync({
-        gidComment: _,
-        eReason: _,
-        eResolution: 2,
-      });
-    },
-    strForumType: _.forumtype,
-    subjectGroupKey: {
-      kind: `group`,
-      type: 1,
-      group_id: _.topicId,
-    },
-    fnReport: async (_, _, _, _) => {
-      await _.mutateAsync({
-        subjectType: 1,
-        subjectGroupId: _.topicId,
-        subjectId: _,
-        additionalSubjectData: new Map([
-          [`clanSteamId`, _.clanSteamId],
-          [`forumId`, _.forumId],
-        ]),
-        eReason: _,
-        strReportText: _,
-        ownerSteamID: _,
-      });
-    },
-    getPublicURL: (_) =>
-      `${_(_.COMMUNITY_BASE_URL, _.clanSteamId, _.forumtype, _.gidfeature, _.appid)}${_.topicId}#c${_.gidcomment}`,
-  });
-}
-var _ = (0, _.createContext)(void 0);
-function _(_) {
-  let _ = _(_.clanSteamId),
-    _ = _(_.clanSteamId, _.gidForum, _.gidTopic);
-  if (!_.isSuccess || !_.isSuccess) return null;
-  let _ = _.data.forum_details.name;
-  _ === `#Discussions_ForumName_General`
-    ? (_ = _.Localize(`#Discussions_ForumName_General`))
-    : _ === `#Discussions_ForumName_ReportedPosts`
-      ? (_ = _.Localize(`#Discussions_ForumName_ReportedPosts`))
-      : _ === `#Discussions_ForumName_Workshop`
-        ? (_ = _.Localize(`#Discussions_ForumName_Workshop`))
-        : _ === `#Discussions_ForumName_Trading`
-          ? (_ = _.Localize(`#Discussions_ForumName_Trading`))
-          : _ === `#Discussions_ForumName_Events` &&
-            (_ = _.Localize(`#Discussions_ForumName_Events`));
-  let _ = _.data.forum_details.appid,
-    _ = ``;
-  _ = _
-    ? `${_.COMMUNITY_BASE_URL}app/${_}`
-    : `${_.COMMUNITY_BASE_URL}gid/${_.clanSteamId}`;
-  let _ = _.data.forum_details,
-    _ = _(
-      _.COMMUNITY_BASE_URL,
-      _.clanSteamId,
-      _.forumtype,
-      _.gidfeature,
-      _.appid,
-    );
-  return (0, _.jsxs)(`div`, {
-    className: _,
-    children: [
-      (0, _.jsxs)(`div`, {
-        children: [
-          _(1),
-          ` in `,
-          _.data.name ?? _.data.summary,
-          ` `,
-          _.data.official &&
-            (0, _.jsx)(_.Fragment, {
-              children: `(OGG)`,
-            }),
-        ],
-      }),
-      (0, _.jsxs)(`div`, {
-        children: [
-          (0, _.jsx)(`a`, {
-            href: _,
-            children: _.data.name,
-          }),
-          ` » `,
-          (0, _.jsx)(`a`, {
-            href: _,
-            children: _,
-          }),
-          ` »`,
-          ` `,
-          (0, _.jsx)(`a`, {
-            href: `${_}/${_.gidTopic}/`,
-            children: _.data.topics[0].title,
-          }),
-        ],
-      }),
-    ],
-  });
-}
-var _ = `tfnDbSb60A8-`,
-  _ = `_8GKbgJXsBaU-`,
-  _ = `XQ5t2XVGKbA-`,
-  _ = `Kjo7zcXsMLE-`,
-  _ = `_7tJhElGv2tA-`,
-  _ = `vyBlwmlDSa8-`,
-  _ = `fZSwY-0wqqc-`,
-  _ = `NEJ8xjPhwHo-`,
-  _ = `_3w5nrIbo-m0-`,
-  _ = `TQ1m-utc1o8-`,
-  _ = `VjkSpfK149U-`,
-  _ = `_8elMk6342g4-`,
-  _ = `BgtRpvlzfDI-`,
-  _ = `LAWWJTpZXP4-`,
-  _ = `D7BTLD3mhlE-`,
-  _ = `_7FdhnIDBscM-`,
-  _ = `_1ZWHJ1DFfJ4-`,
-  _ = `tJ8jl3Bv1QY-`,
-  _ = `atvKlrjG3OA-`,
-  _ = `scj-8d-BRkA-`,
-  _ = `w54CFn-vsEs-`,
-  _ = `SU7Puo-4wjo-`,
-  _ = `_9LM-lN8dN3w-`,
-  _ = `N9UyRk1Pud8-`,
-  _ = `wgHDdQoRzjQ-`,
-  _ = `yFkYvjXZZh4-`,
-  _ = `If9-Zuzc-9I-`,
-  _ = `FM0DB3-KN-M-`,
-  _ = `y-T1iuhVWlg-`,
-  _ = `gw4m92srck0-`,
-  _ = `LR-3TcvISxU-`,
-  _ = (0, _.createContext)({
-    eModeratorLevel: 0,
-    eMaxModeratorLevel: 0,
-    bBlurImages: !0,
-    setModeratorLevel: (_) => {},
-    setBlurImages: (_) => {},
-  });
-function _(_) {
-  let { subject: _ } = _,
-    [_, _] = (0, _.useState)(!1),
-    _ = _(_.subject?.assigned_moderator_steamid),
-    _ = 0;
-  _ &&
-    (_(
-      _.unresolved_dispute_count !== void 0,
-      `Missing unresolved_dispute_count`,
-    ),
-    _(_.unresolved_report_count !== void 0, `Missing unresolved_report_count`),
-    (_ =
-      _.reports.length -
-      _.unresolved_dispute_count -
-      _.unresolved_report_count));
-  let _ = new Map();
-  if (_?.reports)
-    for (let _ of _.reports) {
-      let _ = _.report_reason;
-      if (_.has(_)) {
-        let _ = _.get(_);
-        _.set(_, _ + 1);
-      } else _.set(_, 1);
-    }
-  let _ = [..._.entries()];
-  _.sort((_, _) => _[1] - _[1]);
-  let _ = _.map(([_, _]) => `${_(_)}: ${_}`).join(`, `),
-    _ = _?.reports?.length ?? 0,
-    _ = _.steamid,
-    _ = _ && _.assigned_moderator_steamid !== `0`,
-    _ = _ && _.assigned_moderator_steamid === _,
-    _ = _ && (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0),
-    _ = _ && _.unresolved_dispute_count > 0,
-    _ = _ && _.resolved === 1,
-    _ = _ && _.resolved === 14 && _.owner_dispute_time === 0;
-  return (0, _.jsxs)(`div`, {
-    className: _,
-    children: [
-      _ &&
-        (0, _.jsx)(_, {
-          strTitle: `Reports`,
-          onClose: () => _(!1),
-          children: (0, _.jsx)(_, {
-            subject: _,
-          }),
-        }),
-      _ &&
-        (0, _.jsxs)(`div`, {
-          className: `K3XbeLpR7aA-`,
-          children: [
-            _ &&
-              (0, _.jsx)(`div`, {
-                className: `fuR3XztJCNk-`,
-                children: `Claimed by you.`,
-              }),
-            _ &&
-              !_ &&
-              (0, _.jsxs)(`div`, {
-                className: `fuR3XztJCNk-`,
-                children: [
-                  `Claimed by `,
-                  (0, _.jsx)(`a`, {
-                    href: _.data?.public_data?.profile_url,
-                    children: _.data?.public_data?.persona_name,
-                  }),
-                ],
-              }),
-            _ > 0 &&
-              (0, _.jsxs)(`div`, {
-                className: `fuR3XztJCNk-`,
-                children: [
-                  `Reports `,
-                  _ &&
-                    (0, _.jsx)(_, {
-                      eRequiredLevel: _.required_moderator_level,
-                    }),
-                  `:`,
-                ],
-              }),
-            _ > 0 &&
-              (0, _.jsxs)(`div`, {
-                className: `arXU0CaQ8eA-`,
-                children: [
-                  _ && (0, _.jsx)(_, {}),
-                  ` `,
-                  _?.unresolved_report_count ?? 0,
-                  ` unresolved / `,
-                  _?.unresolved_dispute_count ?? 0,
-                  ` disputed /`,
-                  ` `,
-                  _,
-                  ` resolved`,
-                ],
-              }),
-            _ > 0 &&
-              (0, _.jsx)(`div`, {
-                className: `arXU0CaQ8eA-`,
-                children: _,
-              }),
-            _ &&
-              (0, _.jsx)(`div`, {
-                className: `arXU0CaQ8eA-`,
-                children: _.Localize(
-                  _
-                    ? `#originalresolution_acquitted`
-                    : `#originalresolution_sanctioned`,
-                ),
-              }),
-            (0, _.jsxs)(`div`, {
-              className: `B38KZMDJkRA-`,
-              children: [
-                _ > 0 &&
-                  (0, _.jsx)(`div`, {
-                    className: `gw4m92srck0-`,
-                    onClick: (_) => (_(!0), _.stopPropagation(), !1),
-                    children: `Show reports`,
-                  }),
-                (0, _.jsx)(_, {
-                  subject: _,
-                }),
-              ],
-            }),
-          ],
-        }),
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          _.fnSanction &&
-            (0, _.jsx)(`div`, {
-              className: `gw4m92srck0-`,
-              onClick: _.fnSanction,
-              children: `Sanction`,
-            }),
-          _.fnAcquit &&
-            _ &&
-            (0, _.jsx)(_, {
-              fnAcquit: _.fnAcquit,
-              subject: _,
-            }),
-          _ &&
-            (0, _.jsxs)(_.Fragment, {
-              children: [
-                _ &&
-                  (0, _.jsx)(_, {
-                    subject: _,
-                    label: `Release`,
-                  }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    subject: _,
-                  }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    subject: _,
-                  }),
-              ],
-            }),
-        ],
-      }),
-    ],
-  });
-}
-function _(_) {
-  let { subject: _ } = _,
-    [_, _] = (0, _.useState)(!1),
-    [_, _] = (0, _.useState)(``),
-    _ = _(
-      _.owner_steam_id,
-      _.subject_type,
-      _.subject_group_id,
-      _.subject_id,
-      _,
-    );
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      _ &&
-        (0, _.jsx)(_, {
-          onClose: () => _(!1),
-          strTitle: `Open dispute on behalf of owner`,
-          strOKLabel: `Dispute`,
-          onOK: async () => {
-            _(!1), await _.mutateAsync();
-          },
-          children: (0, _.jsxs)(`label`, {
-            children: [
-              `Ticket code: `,
-              (0, _.jsx)(_, {
-                value: _,
-                onChange: (_) => _(_.target.value.trim()),
-              }),
-            ],
-          }),
-        }),
-      (0, _.jsx)(`div`, {
-        className: _,
-        onClick: () => _(!0),
-        children: `Dispute for owner`,
-      }),
-    ],
-  });
-}
-function _(_) {
-  let [_, _] = (0, _.useState)(!1);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      _ &&
-        (0, _.jsx)(_, {
-          strTitle: `Subject acquitted`,
-          onClose: () => _(!1),
-          children: (0, _.jsx)(`div`, {
-            className: `optnGqUJHTQ-`,
-            children: (0, _.jsx)(`p`, {
-              children: `Any deletions, bans, or other sanctions must be reversed manually.`,
-            }),
-          }),
-        }),
-      (0, _.jsx)(`div`, {
-        className: _,
-        onClick: () => {
-          _.subject.resolved !== 0 && _(!0), _.fnAcquit();
-        },
-        children: `Acquit`,
-      }),
-    ],
-  });
-}
-function _(_) {
-  let [_, _] = (0, _.useState)(!1),
-    [_, _] = (0, _.useState)(_.subject.required_moderator_level),
-    [_, _] = (0, _.useState)(!0),
-    _ = _(),
-    _ = _([_.subject]);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      _ &&
-        (0, _.jsxs)(_, {
-          strTitle: `Escalate to`,
-          strOKLabel: `Escalate`,
-          strCancelLabel: `Cancel`,
-          onClose: () => _(!1),
-          onOK: async () => {
-            await _.mutateAsync({
-              subjectType: _.subject.subject_type,
-              subjectGroupId: _.subject.subject_group_id,
-              subjectId: _.subject.subject_id,
-              eNewLevel: _,
-              eReason: 2,
-            }),
-              _ && (await _.mutateAsync()),
-              _(!1);
-          },
-          children: [
-            (0, _.jsx)(`select`, {
-              value: _,
-              onChange: (_) => _(parseInt(_.target.value)),
-              children: [0, 1, 10].map((_) =>
-                (0, _.jsx)(
-                  `option`,
-                  {
-                    value: _,
-                    children: _(_),
-                  },
-                  _,
-                ),
-              ),
-            }),
-            (0, _.jsxs)(`label`, {
-              children: [
-                (0, _.jsx)(`input`, {
-                  type: `checkbox`,
-                  checked: _,
-                  onChange: (_) => _(_.target.checked),
-                }),
-                ` Release subject after escalating`,
-              ],
-            }),
-          ],
-        }),
-      (0, _.jsx)(`div`, {
-        className: _,
-        onClick: () => _(!0),
-        children: `Escalate`,
-      }),
-    ],
-  });
-}
-function _(_) {
-  let _ = _([_.subject]);
-  return (0, _.jsx)(`div`, {
-    className: _,
-    onClick: () => _.mutate(),
-    children: `Release`,
-  });
-}
-function _(_) {
-  let { subject: _, size: _ } = _;
-  return (0, _.jsxs)(`div`, {
-    className: _,
-    children: [
-      _ &&
-        _.reports?.map((_) =>
-          (0, _.jsx)(
-            _,
-            {
-              report: _,
-              size: _,
-            },
-            _.report_id,
-          ),
-        ),
-      (!_ || !_.reports || _.reports.length === 0) &&
-        (0, _.jsx)(`div`, {
-          className: _(`fZSwY-0wqqc-`),
-          children: `(No reports)`,
-        }),
-    ],
-  });
-}
-function _(_) {
-  let { subject: _ } = _,
-    _ = _(_.subject_type, _.subject_group_id, _.subject_id);
-  if (!_.isSuccess || !_.data) return null;
-  let _ = _.data?.entries?.length ?? 0;
-  return (0, _.jsx)(_, {
-    strTitle: `Activity`,
-    onClose: _.onClose,
-    children: (0, _.jsxs)(`div`, {
-      className: _,
-      children: [
-        _ === 0 &&
-          (0, _.jsx)(`div`, {
-            children: `(No activity)`,
-          }),
-        _ > 0 &&
-          (0, _.jsxs)(`table`, {
-            children: [
-              (0, _.jsx)(`thead`, {
-                children: (0, _.jsxs)(`tr`, {
-                  children: [
-                    (0, _.jsx)(`th`, {
-                      children: `Date`,
-                    }),
-                    (0, _.jsx)(`th`, {
-                      children: `Actor`,
-                    }),
-                    (0, _.jsx)(`th`, {
-                      children: `Action`,
-                    }),
-                    (0, _.jsx)(`th`, {
-                      children: `Details`,
-                    }),
-                  ],
-                }),
-              }),
-              (0, _.jsx)(`tbody`, {
-                children: _.data.entries?.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      subject: _,
-                      entry: _,
-                    },
-                    _.timestamp,
-                  ),
-                ),
-              }),
-            ],
-          }),
-      ],
-    }),
-  });
-}
-function _(_) {
-  let { subject: _ } = _,
-    [_, _] = (0, _.useState)(!1),
-    _ = _(_.subject_type, _.subject_group_id, _.subject_id);
-  return !_.isSuccess || !_.data
-    ? null
-    : (0, _.jsxs)(_.Fragment, {
-        children: [
-          _ &&
-            (0, _.jsx)(_, {
-              subject: _,
-              onClose: () => _(!1),
-            }),
-          (0, _.jsx)(`div`, {
-            className: _,
-            onClick: (_) => {
-              _.stopPropagation(), _.preventDefault(), _(!0);
-            },
-            children: `Show history`,
-          }),
-        ],
-      });
-}
-function _(_) {
-  switch (_) {
-    case 0:
-      return _.Localize(`#moderation_moderatorlevel_any`);
-    case 1:
-      return _.Localize(`#moderation_moderatorlevel_supervisor`);
-    case 10:
-      return _.Localize(`#moderation_moderatorlevel_valveadmin`);
-    default:
-      return `Unknown`;
-  }
-}
-function _(_) {
-  let { subject: _, entry: _ } = _,
-    _ = _(_.actor_steamid);
-  return !_.isSuccess || !_.data
-    ? null
-    : (0, _.jsxs)(`tr`, {
-        children: [
-          (0, _.jsx)(`td`, {
-            children: _(_.timestamp, !1, ``),
-          }),
-          (0, _.jsxs)(`td`, {
-            children: [
-              (0, _.jsx)(`a`, {
-                href: `${_.COMMUNITY_BASE_URL}profiles/${_.actor_steamid}`,
-                children: (0, _.jsx)(`span`, {
-                  children: _.data?.public_data?.persona_name,
-                }),
-              }),
-              ` `,
-              `(`,
-              (0, _.jsx)(`a`, {
-                href: `/moderation/activity/${_.actor_steamid}`,
-                children: `activity`,
-              }),
-              `)`,
-            ],
-          }),
-          (0, _.jsxs)(`td`, {
-            children: [
-              _(_.action),
-              _.automated_action &&
-                (0, _.jsx)(_.Fragment, {
-                  children: `\xA0(Automated)`,
-                }),
-            ],
-          }),
-          (0, _.jsx)(`td`, {
-            children: (0, _.jsx)(_, {
-              eAction: _.action,
-              jsonData: _.additional_json_data,
-            }),
-          }),
-        ],
-      });
-}
-function _(_) {
-  let { eAction: _, jsonData: _ } = _,
-    _ = {};
-  switch ((_ && (_ = JSON.parse(_)), _)) {
-    case 1:
-      return (0, _.jsxs)(_.Fragment, {
-        children: [`Report ID: `, _.report_id],
-      });
-    case 2:
-      return (0, _.jsxs)(_.Fragment, {
-        children: [
-          `Reason: `,
-          _(_.reason),
-          _.resolution !== 1 &&
-            _.resolution !== 14 &&
-            (0, _.jsxs)(_.Fragment, {
-              children: [(0, _.jsx)(`br`, {}), `Resolution: `, _(_.resolution)],
-            }),
-          _.sanctions &&
-            (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(`br`, {}),
-                `Sanctions: `,
-                _.sanctions.map(_).join(`, `),
-              ],
-            }),
-        ],
-      });
-    case 4:
-      return (0, _.jsxs)(_.Fragment, {
-        children: [`Report ID: `, _.report_id],
-      });
-    case 5:
-      return (0, _.jsxs)(_.Fragment, {
-        children: [
-          `is_csam` in _ &&
-            (0, _.jsxs)(_.Fragment, {
-              children: [`Set CSAM to `, _.is_csam],
-            }),
-          `is_terrorism` in _ &&
-            (0, _.jsxs)(_.Fragment, {
-              children: [`Set terrorist content to `, _.is_terrorism],
-            }),
-        ],
-      });
-    case 6:
-      return (0, _.jsxs)(_.Fragment, {
-        children: [`New level: `, _(_.level)],
-      });
-    case 7:
-      return (0, _.jsxs)(_.Fragment, {
-        children: [`Report ID: `, _.report_id],
-      });
-  }
-}
-function _(_) {
-  let [_, _] = (0, _.useState)(10),
-    [_, _] = (0, _.useState)(null),
-    _ = _();
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      !_ &&
-        (0, _.jsx)(_, {
-          title: _.Localize(`#moderation_escalation_reason_select`),
-          reasons: _,
-          onSelect: (_) => {
-            if (_ == null) {
-              _.onClose();
-              return;
-            }
-            _(_);
-          },
-        }),
-      !!_ &&
-        (0, _.jsxs)(_, {
-          className: `rnFppAkBA6E-`,
-          onClose: _.onClose,
-          strOKLabel: _.Localize(`#moderation_escalation_escalate`),
-          strTitle: _.LocalizePlural(
-            `#moderation_escalation_title`,
-            _.rgSubjectKeys.length,
-          ),
-          onOK: async () => {
-            let _ = [];
-            for (let _ of _.rgSubjectKeys)
-              _.push(
-                _.mutateAsync({
-                  subjectType: _.type,
-                  subjectGroupId: _.group_id,
-                  subjectId: _._,
-                  eNewLevel: _,
-                  eReason: _,
-                }),
-              );
-            await Promise.all(_), _.onClose();
-          },
-          strCancelLabel: _.Localize(`#moderation_cancel`),
-          children: [
-            (0, _.jsxs)(`div`, {
-              children: [
-                (0, _.jsx)(`span`, {
-                  children: _.Localize(`#moderation_escalation_reason_label`),
-                }),
-                ` `,
-                (0, _.jsx)(`span`, {
-                  children: _(_),
-                }),
-              ],
-            }),
-            (0, _.jsxs)(`select`, {
-              className: `GSUH8AaRclw-`,
-              value: _,
-              onChange: (_) => _(parseInt(_.target.value)),
-              children: [
-                (0, _.jsx)(`option`, {
-                  value: 0,
-                  children: _.Localize(`#moderation_escalationlevel_any`),
-                }),
-                (0, _.jsx)(`option`, {
-                  value: 1,
-                  children: _.Localize(
-                    `#moderation_escalationlevel_supervisor`,
-                  ),
-                }),
-                (0, _.jsx)(`option`, {
-                  value: 10,
-                  children: _.Localize(`#moderation_escalationlevel_valve`),
-                }),
-              ],
-            }),
-          ],
-        }),
-    ],
-  });
-}
-function _(_) {
-  let { report: _, size: _ } = _,
-    _ = _(_.reporter_steamid);
-  if (
-    !_.isSuccess ||
-    (_(_.data, `Missing data on personaQuery despite success.`),
-    _(_.data?.public_data, `Missing public data for user`),
-    !_.data?.public_data)
-  )
-    return null;
-  let _ = !!_.time_disputed && _.dispute_resolved === 0,
-    _ = _.resolved !== 0 && (!_.time_disputed || _.dispute_resolved !== 0),
-    _ = _.time_dispute_resolved !== 0,
-    _ = _.resolved === 1;
-  return (0, _.jsxs)(`div`, {
-    className: _(_, _ && `CaWvyfSg68E-`, _ === `compact` && `drzGPif0FKk-`),
-    children: [
-      (0, _.jsx)(`div`, {
-        className: _,
-        children: (0, _.jsx)(`span`, {
-          children: _(_.time_reported, !1, ``),
-        }),
-      }),
-      (0, _.jsx)(`div`, {
-        className: _,
-        children: (0, _.jsxs)(`div`, {
-          children: [
-            (0, _.jsx)(_, {
-              openInNewWindow: !0,
-              _: `${_.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
-              children: (0, _.jsx)(_, {
-                playerLinkDetails: _.data,
-                size: `X-Small`,
-                alt: `Reporter`,
-              }),
-            }),
-            `\xA0`,
-            (0, _.jsx)(_, {
-              openInNewWindow: !0,
-              _: `${_.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
-              children: (0, _.jsx)(`span`, {
-                children: _.data.public_data?.persona_name,
-              }),
-            }),
-          ],
-        }),
-      }),
-      (0, _.jsx)(`div`, {
-        className: _,
-        children:
-          _.report_reason !== 2 &&
-          (0, _.jsx)(`span`, {
-            className: `-v-7t6w5Jog-`,
-            children: _(_.report_reason),
-          }),
-      }),
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          _ &&
-            !_ &&
-            !_ &&
-            (0, _.jsxs)(`span`, {
-              className: _(`tfnDbSb60A8-`, `xYsBZPmp018-`),
-              children: [`Acquitted `, _(_.time_resolved, !1, ``)],
-            }),
-          _ &&
-            !_ &&
-            !_ &&
-            !_ &&
-            (0, _.jsxs)(`span`, {
-              className: _(`tfnDbSb60A8-`, `WCPkT7UwU5E-`),
-              children: [`Resolved `, _(_.time_resolved, !1, ``)],
-            }),
-          _ &&
-            !_ &&
-            (0, _.jsxs)(`span`, {
-              className: _(`tfnDbSb60A8-`, `kCrtFhfU9xo-`),
-              children: [`Disputed `, _(_.time_disputed, !1, ``)],
-            }),
-          _ &&
-            (0, _.jsxs)(`span`, {
-              className: _(`tfnDbSb60A8-`, `-Yo2ky9HoLQ-`),
-              children: [
-                `Dispute Resolved `,
-                _(_.time_dispute_resolved, !1, ``),
-              ],
-            }),
-          !_ &&
-            (0, _.jsx)(`span`, {
-              children: _.report_text,
-            }),
-          _ &&
-            (0, _.jsxs)(`span`, {
-              children: [
-                (0, _.jsx)(`br`, {}),
-                `Original: `,
-                _.report_text,
-                (0, _.jsx)(`br`, {}),
-                `Dispute: `,
-                _.dispute_details,
-              ],
-            }),
-        ],
-      }),
-    ],
-  });
-}
-function _(_) {
-  return (0, _.jsx)(`span`, {
-    className: _(_, _.className),
-    children: _.children,
-  });
-}
-function _(_) {
-  return _.status === 3 || _.status === 0
-    ? null
-    : (0, _.jsxs)(`span`, {
-        className: _(_, _),
-        children: [`Terrorism`, _.status === 1 && `?`],
-      });
-}
-function _(_) {
-  return _.status === 3 || _.status === 0
-    ? null
-    : (0, _.jsxs)(`span`, {
-        className: _(_, _),
-        children: [`CSAM`, _.status === 1 && `?`],
-      });
-}
-function _(_) {
-  return _.status === 3 || _.status === 0
-    ? null
-    : (0, _.jsxs)(`span`, {
-        className: _(_, _),
-        children: [`Violent threat`, _.status === 1 && `?`],
-      });
-}
-function _(_) {
-  let { eRequiredLevel: _, eReason: _ } = _;
-  return _ === 1
-    ? (0, _.jsxs)(`span`, {
-        className: _(_, _),
-        children: [
-          _.Localize(`#moderation_escalationlevel_supervisor_desc`),
-          ` `,
-          !!_ &&
-            (0, _.jsxs)(`span`, {
-              children: [`(`, _(_), `)`],
-            }),
-        ],
-      })
-    : _ === 10
-      ? (0, _.jsxs)(`span`, {
-          className: _(_, _),
-          children: [
-            _.Localize(`#moderation_escalationlevel_valve_desc`),
-            ` `,
-            !!_ &&
-              (0, _.jsxs)(`span`, {
-                children: [`(`, _(_), `)`],
-              }),
-          ],
-        })
-      : null;
-}
-function _(_) {
-  let _ = _();
-  return (0, _.jsxs)(`div`, {
-    className: _,
-    children: [
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          (0, _.jsxs)(`h2`, {
-            children: [_.rgLinks.length, ` Unresolved`],
-          }),
-          _.subjectGroupKey &&
-            (0, _.jsx)(`a`, {
-              className: `x0poUrP1UJk-`,
-              onClick: async () => {
-                await _.mutateAsync();
-              },
-              children: `Release all`,
-            }),
-        ],
-      }),
-      _.rgLinks.map((_) =>
-        (0, _.jsx)(
-          _,
-          {
-            ..._,
-            children: _.children,
-          },
-          _.idx,
-        ),
-      ),
-    ],
-  });
-}
-function _(_) {
-  return (0, _.jsxs)(`div`, {
-    className: _(_, _.claimed ? _ : ``),
-    onClick: _.onClick,
-    children: [
-      (0, _.jsx)(`div`, {
-        className: _,
-        children: _.children,
-      }),
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [`Item #`, _.idx, `, `, _.cUnresolvedReports, ` reports`],
-      }),
-    ],
-  });
-}
-function _(_) {
-  let _ = _(_.steamid),
-    _ = _(_.steamid);
-  if (!_.isSuccess || !_.data || !_.isSuccess || !_.data) return null;
-  let _ = 0,
-    _ = 0,
-    _ = 0,
-    _ = [];
-  for (let _ of _.data?.count_by_type ?? [])
-    _.type === 5 ||
-      _.type === 6 ||
-      _.type === 4 ||
-      (_.type === 2 && (_ += 1),
-      _.type === 3 && (_ += 1),
-      (_ += _.count),
-      _.length > 0 && _.push((0, _.jsx)(`br`, {})),
-      _.type === 1
-        ? _.push(_.Localize(`#moderatormessage_count_note`, _.count))
-        : _.type === 2
-          ? _.push(_.Localize(`#moderatormessage_count_warning`, _.count))
-          : _.type === 3 &&
-            _.push(_.Localize(`#moderatormessage_count_bannotice`, _.count)));
-  return _ === 0
-    ? null
-    : (0, _.jsx)(_, {
-        toolTipContent: (0, _.jsx)(_.Fragment, {
-          children: [..._],
-        }),
-        nDelayShowMS: 0,
-        children: (0, _.jsxs)(`a`, {
-          className: _(_, _ === 0 ? `` : _, _ === 0 ? `` : _),
-          target: `_blank`,
-          href: `${_.COMMUNITY_BASE_URL}/profiles/${_.steamid}/moderatormessages`,
-          rel: `noreferrer`,
-          children: [
-            _,
-            `\xA0`,
-            (0, _.jsx)(`img`, {
-              src: `${_.COMMUNITY_CDN_URL}public/shared/images/header/inbox_moderator_message.png`,
-            }),
-          ],
-        }),
-      });
-}
-function _(_) {
-  let _ = _(_.steamid),
-    [_, _] = (0, _.useState)(!1),
-    _ = (0, _.useRef)(null);
-  return !_.isSuccess || !_.data
-    ? null
-    : (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          (0, _.jsxs)(`div`, {
-            className: _,
-            ref: _,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-            children: [
-              (0, _.jsx)(`span`, {
-                children: (0, _.jsx)(_, {
-                  playerLinkDetails: _.data,
-                  size: `Small`,
-                  alt: `Comment owner`,
-                }),
-              }),
-              (0, _.jsx)(`span`, {
-                children: _.data.public_data?.persona_name,
-              }),
-              _ &&
-                _.current &&
-                (0, _.jsx)(_, {
-                  target: _.current,
-                  direction: `bottom`,
-                  bEnablePointerEvents: !0,
-                  nBodyDistance: 0,
-                  nBodyAlignment: 0,
-                  children: (0, _.jsxs)(`div`, {
-                    className: `YemoAJrP9PI-`,
-                    children: [
-                      (0, _.jsx)(`div`, {
-                        children: (0, _.jsx)(`a`, {
-                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}`,
-                          target: `_blank`,
-                          rel: `noreferrer`,
-                          children: `Profile`,
-                        }),
-                      }),
-                      (0, _.jsx)(`div`, {
-                        children: (0, _.jsx)(`a`, {
-                          href: `${_.SUPPORT_BASE_URL}account/community/${_.steamid}`,
-                          target: `_blank`,
-                          rel: `noreferrer`,
-                          children: `Support site`,
-                        }),
-                      }),
-                      (0, _.jsx)(`div`, {
-                        children: (0, _.jsx)(`a`, {
-                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}/posthistory`,
-                          target: `_blank`,
-                          rel: `noreferrer`,
-                          children: `Post history`,
-                        }),
-                      }),
-                      (0, _.jsx)(`div`, {
-                        children: (0, _.jsx)(`a`, {
-                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}/commenthistory`,
-                          target: `_blank`,
-                          rel: `noreferrer`,
-                          children: `Comment history`,
-                        }),
-                      }),
-                      (0, _.jsx)(`div`, {
-                        children: (0, _.jsx)(`a`, {
-                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}/moderatormessages`,
-                          target: `_blank`,
-                          rel: `noreferrer`,
-                          children: `Community messages`,
-                        }),
-                      }),
-                      _.fnFilterToThisUser &&
-                        (0, _.jsx)(`div`, {
-                          children: (0, _.jsx)(`a`, {
-                            style: {
-                              cursor: `pointer`,
-                            },
-                            onClick: () =>
-                              _.fnFilterToThisUser && _.fnFilterToThisUser(),
-                            children: `Filter to this user's content`,
-                          }),
-                        }),
-                    ],
-                  }),
-                }),
-            ],
-          }),
-          _.clanSteamId &&
-            (0, _.jsx)(_, {
-              clanSteamId: _.clanSteamId,
-              steamid: _.steamid,
-            }),
-          (0, _.jsx)(_, {
-            steamid: _.steamid,
-          }),
-          _.clanSteamId &&
-            (0, _.jsx)(_, {
-              clanSteamId: _.clanSteamId,
-              steamid: _.steamid,
-            }),
-        ],
-      });
-}
-function _(_) {
-  let _ = (0, _.useContext)(_),
-    _ = _(_.clanSteamId, _.steamid),
-    _ = _(_.steamid),
-    _ = _(_.steamid),
-    _ = _(_.steamid, _?.rgForum?.appid),
-    _ = !!(_.data?.issupervisor || _.data?.isadmin),
-    _ = _.data?.rank;
-  if (_)
-    return (0, _.jsx)(`img`, {
-      src: `${_.COMMUNITY_CDN_URL}public/images/skin_1/valve_comment.png`,
-      className: _,
-    });
-  let _ = _.data?.isappeditor ?? !1,
-    _ = !!_.data?.app_rights?.edit_info;
-  if ((_ && _) || _ === 1)
-    return (0, _.jsx)(`span`, {
-      className: _,
-      children: `Developer`,
-    });
-  if ((_ && !_) || _ === 2)
-    return (0, _.jsx)(`img`, {
-      className: _,
-      src: `${_.COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_officer.png`,
-    });
-  let _ = _.data?.isglobalmod ?? !1,
-    _ = _.data?.issupport ?? !1,
-    _ = _.data?.realms?.indexOf(_.EREALM) !== -1,
-    _ = _.data?.permissions?.indexOf(19) !== -1;
-  return _ || (_ && _ && _) || _ === 4
-    ? (0, _.jsx)(`img`, {
-        className: _,
-        src: `${_.COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_moderator.png`,
-      })
-    : null;
-}
-function _(_) {
-  let _ = _(_.clanSteamId, _.steamid),
-    _ = _(_.steamid),
-    [_, _] = (0, _.useMemo)(() => {
-      if (!_.data || !_.data.support_messages) return [!1, !1];
-      let _ = !1,
-        _ = !1;
-      for (let _ of _.data.support_messages)
-        _.is_active &&
-        (_.support_message_type === 2 || _.support_message_type === 32)
-          ? (_ = !0)
-          : _.is_active && _.support_message_type === 1 && (_ = !0);
-      return [_, _];
-    }, [_.data]);
-  if (!_.isSuccess || !_.isSuccess) return null;
-  let _ = _.data !== null,
-    _ = [];
-  return (
-    _ && _.push(`Community banned`),
-    _ && _.push(`Hub banned`),
-    _ && _.push(`Trade banned`),
-    (0, _.jsx)(_.Fragment, {
-      children: _.map((_) =>
-        (0, _.jsx)(
-          `div`,
-          {
-            className: _,
-            children: _,
-          },
-          _,
-        ),
-      ),
-    })
-  );
-}
-function _(_) {
-  let [_, _] = (0, _.useState)(!1),
-    _ = (0, _.useRef)(null);
-  return (0, _.jsxs)(`button`, {
-    onClick: (_) => {
-      _(!0), _.stopPropagation();
-      let _ = `${_.COMMUNITY_BASE_URL}moderation/subject/${_.subjectKey.type}-${_.subjectKey.group_id}`;
-      return (
-        _.subjectKey.kind === `single` && (_ += `-${_.subjectKey._}`),
-        _.hash && (_ += `#${_.hash}`),
-        navigator.clipboard.writeText(_),
-        setTimeout(() => _(!1), 1e3),
-        !1
-      );
-    },
-    className: _,
-    ref: _,
-    children: [
-      _ &&
-        _.current &&
-        (0, _.jsx)(_, {
-          target: _.current,
-          direction: `bottom`,
-          children: (0, _.jsx)(`div`, {
-            className: `_39Upy4ScppI-`,
-            children: `Copied.`,
-          }),
-        }),
-      _.children,
-    ],
-  });
-}
-function _(_) {
-  switch (_) {
-    case 11:
-      return _;
-    case 12:
-    case 13:
-      return _;
-    default:
-      return;
-  }
-}
-function _(_) {
-  switch (_.eSanction) {
-    case 11: {
-      let _ = _.data;
-      return (0, _.jsxs)(`ul`, {
-        children: [
-          (0, _.jsxs)(`li`, {
-            children: [`Warning reason: `, _(_.eWarningReason)],
-          }),
-          (0, _.jsxs)(`li`, {
-            children: [`Custom text: `, _.strCustomText],
-          }),
-        ],
-      });
-    }
-    case 12:
-    case 13: {
-      let _ = _.data;
-      return (0, _.jsxs)(`ul`, {
-        children: [
-          _.eSanction === 12 &&
-            (0, _.jsxs)(`li`, {
-              children: [`Ban reason: `, _.strReason],
-            }),
-          _.rtime32BanEnds === 0 &&
-            (0, _.jsx)(`li`, {
-              children: `Ban permanently.`,
-            }),
-          _.rtime32BanEnds !== 0 &&
-            (0, _.jsxs)(`li`, {
-              children: [
-                `Ban until `,
-                _(_.rtime32BanEnds) + ` ` + _(_.rtime32BanEnds),
-              ],
-            }),
-        ],
-      });
-    }
-    default:
-      return null;
-  }
-}
-function _(_) {
-  let { setData: _, data: _, eResolution: _ } = _,
-    _ = (_) => _(_),
-    _ = 7,
-    _ = Date.now() / 1e3;
-  return (
-    _?.rtime32BanEnds &&
-      _.rtime32BanEnds > _ &&
-      (_ = Math.ceil((_.rtime32BanEnds - _) / 86400)),
-    (0, _.jsxs)(`div`, {
-      className: _,
-      children: [
-        _ == 12 &&
-          (0, _.jsxs)(`div`, {
-            children: [
-              `Ban reason: `,
-              (0, _.jsx)(`input`, {
-                type: `text`,
-                value: _?.strReason ?? ``,
-                onChange: (_) => {
-                  let _ = _.target.value;
-                  _({
-                    strReason: _,
-                    rtime32BanEnds:
-                      _?.rtime32BanEnds ??
-                      Math.floor(Date.now() / 1e3) + 7 * 86400,
-                  });
-                },
-              }),
-            ],
-          }),
-        (0, _.jsx)(`div`, {
-          children: (0, _.jsxs)(`label`, {
-            children: [
-              (0, _.jsx)(`input`, {
-                type: `checkbox`,
-                checked: _?.rtime32BanEnds === 0,
-                onChange: (_) => {
-                  let _ = _.target.checked;
-                  _({
-                    strReason: _?.strReason ?? ``,
-                    rtime32BanEnds: _
-                      ? 0
-                      : Math.floor(Date.now() / 1e3) + 7 * 86400,
-                  });
-                },
-              }),
-              ` Ban permanently`,
-            ],
-          }),
-        }),
-        (0, _.jsxs)(`div`, {
-          children: [
-            `Ban for: `,
-            (0, _.jsx)(`input`, {
-              disabled: _?.rtime32BanEnds === 0,
-              type: `number`,
-              value: _,
-              onChange: (_) => {
-                let _ = parseInt(_.target.value) ?? 1;
-                _ = Math.max(1, _);
-                let _ = Math.floor(Date.now() / 1e3) + _ * 86400;
-                _({
-                  strReason: _?.strReason ?? ``,
-                  rtime32BanEnds: _,
-                });
-              },
-            }),
-            ` days.`,
-          ],
-        }),
-      ],
-    })
-  );
-}
-function _(_) {
-  let { setData: _, data: _ } = _,
-    _ = (_) => _(_),
-    _ = (_) => {
-      let _ = parseInt(_.target.value);
-      if (_ === -1) {
-        _(void 0);
-        return;
-      }
-      _({
-        eWarningReason: _,
-        strCustomText: _?.strCustomText ?? ``,
-      });
-    },
-    _ = (_) => {
-      let _ = _.target.value;
-      _(
-        _ === void 0
-          ? void 0
-          : {
-              strCustomText: _,
-              eWarningReason: _?.eWarningReason ?? 0,
-            },
-      );
-    },
-    _ = (0, _.useMemo)(() => {
-      let _ = [];
-      for (let _ = 0; _ < 8; _++)
-        _.push({
-          value: _,
-          text: _(_),
-        });
-      return _.sort((_, _) => _.text.localeCompare(_.text)), _;
-    }, []);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsx)(`div`, {
-        children: (0, _.jsx)(`input`, {
-          type: `text`,
-          value: _?.strCustomText ?? ``,
-          onChange: _,
-        }),
-      }),
-      (0, _.jsx)(`div`, {
-        children: (0, _.jsxs)(`select`, {
-          onChange: _,
-          children: [
-            (0, _.jsx)(`option`, {
-              value: `-1`,
-              children: `Choose reason for warning...`,
-            }),
-            _.map((_) =>
-              (0, _.jsx)(
-                `option`,
-                {
-                  value: _.value,
-                  children: _.text,
-                },
-                _.value,
-              ),
-            ),
-          ],
-        }),
-      }),
-    ],
-  });
-}
 function _(_) {
   let { rgSupportedSanctions: _, onClose: _, eDefaultReason: _ } = _,
     [_, _] = (0, _.useState)(
@@ -17966,6 +14689,1598 @@ function _(_) {
       `#moderation_chatmetadataerror`,
       _.error?.name ?? `unknown`,
     ),
+  });
+}
+function _(_) {
+  let _ = ``,
+    _ = ``;
+  if (!_.additional_subject_data) return null;
+  for (let _ of _.additional_subject_data?.data ?? [])
+    _.key === `clanSteamId`
+      ? (_ = _.value)
+      : _.key === `forumId`
+        ? (_ = _.value)
+        : console.error(`Unknown additional data key ${_.key} in forum post.`);
+  return _ == ``
+    ? (console.error(`Missing clanSteamId in additional data.`), null)
+    : _ == ``
+      ? (console.error(`Missing forumId in additional data.`), null)
+      : {
+          clanSteamId: _,
+          forumId: _,
+        };
+}
+var _ = `_98ZFK1MKUZE-`,
+  _ = `BAXovb3PE78-`,
+  _ = `atjhU8wyIbU-`,
+  _ = `_2bX38Mll-jM-`,
+  _ = `GhLGKQMBTZ8-`,
+  _ = `D6C58ph-uec-`,
+  _ = `GJz0i21pUJU-`;
+function _(_) {
+  let _ = _(_.clanSteamId, _.commentThreadType, _.gidFeature, _.gidFeature2);
+  if (!_.isSuccess || !_.data) return null;
+  let [_, _, _] = _(_.data.comments);
+  _(_.data.comments, `Missing comments on comment thread`),
+    _(_.data.deleted_comments, `Missing deletedcomments on comment thread`);
+  let _ = [...(_.data.comments ?? [])];
+  _.push(...(_.data.deleted_comments ?? [])),
+    _.sort((_, _) => _.timestamp - _.timestamp);
+  let _ = (0, _.useMemo)(
+    () => (_) =>
+      (0, _.jsx)(_, {
+        ..._,
+        comment: _.item,
+        subject: _.mapCommentGidToSubjects.get(_.item.gidcomment),
+        bSelected: _.selected,
+        idx: _.idx,
+        visible: _.visible,
+        setFilter: _,
+        getPublicURL: _.getPublicURL,
+      }),
+    [
+      _.clanSteamId,
+      _.commentThreadType,
+      _.gidFeature,
+      _.gidFeature2,
+      _.mapCommentGidToSubjects,
+      _.setSelected,
+    ],
+  );
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        setFilter: _,
+        filter: _,
+        setSelected: _.setSelected,
+        clanSteamId: _.clanSteamId,
+      }),
+      (0, _.jsx)(_, {
+        items: _,
+        component: _,
+        fnKey: (_) => _.gidcomment,
+        selected: _.selected,
+        setSelected: _.setSelected,
+        fnIsVisible: _,
+      }),
+    ],
+  });
+}
+function _(_) {
+  return _.filter === null
+    ? null
+    : (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _.filter.kind === `quotes` &&
+            (0, _.jsxs)(`div`, {
+              children: [
+                `Showing only children of `,
+                (0, _.jsx)(`a`, {
+                  style: {
+                    cursor: `pointer`,
+                  },
+                  onClick: () => {
+                    _.filter &&
+                      _.filter.kind === `quotes` &&
+                      _.setSelected(_.filter.gidcomment);
+                  },
+                  children: `this comment`,
+                }),
+              ],
+            }),
+          _.filter.kind === `user` &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(`div`, {
+                  children: `Showing only comments by`,
+                }),
+                (0, _.jsx)(_, {
+                  clanSteamId: _.clanSteamId,
+                  steamid: _.filter.steamid,
+                }),
+              ],
+            }),
+          _.filter !== null &&
+            (0, _.jsx)(`div`, {
+              children: (0, _.jsx)(_, {
+                onClick: () => {
+                  _.setFilter(null);
+                },
+                children: `Clear filter`,
+              }),
+            }),
+        ],
+      });
+}
+function _(_, _, _) {
+  let _ = _.get(_);
+  if (_) for (let _ of _) _.add(_), _(_, _, _);
+}
+function _(_) {
+  let [_, _] = (0, _.useState)(null),
+    _ = (0, _.useMemo)(() => {
+      let _ = new Map();
+      for (let _ of _) {
+        let _ = 0;
+        for (;;) {
+          let _ = _.text.indexOf(`[quote=`, _);
+          if (_ === -1) break;
+          let _ = _.text.indexOf(`;`, _);
+          if (_ === -1) break;
+          let _ = _.text.indexOf(`]`, _);
+          if (_ === -1) break;
+          if (_ > _) {
+            let _ = _.text.slice(_ + 1, _);
+            if (!_.has(_)) _.set(_, [_.gidcomment]);
+            else {
+              let _ = _.get(_);
+              _(
+                Array.isArray(_),
+                `Got ${_} for key of ${_}, expected string[]`,
+              ),
+                _.push(_.gidcomment);
+            }
+          }
+          _ = _;
+        }
+      }
+      return _;
+    }, [_]),
+    _ = (0, _.useMemo)(() => {
+      let _ = new Set();
+      return (
+        _ !== null &&
+          _.kind === `quotes` &&
+          (_.add(_.gidcomment), _(_, _, _.gidcomment)),
+        _
+      );
+    }, [_, _]);
+  return [
+    _,
+    _,
+    (0, _.useCallback)(
+      (_) => {
+        if (_ === null) return !0;
+        if (_.kind === `quotes`) return _.has(_.gidcomment);
+        if (_.kind === `user`) return _.steamid === _.steamid;
+        throw Error(`Unreachable`);
+      },
+      [_, _],
+    ),
+  ];
+}
+function _(_) {
+  switch (_) {
+    case 3:
+      return `by moderator`;
+    case 4:
+    case 6:
+    case 5:
+      return `by Valve`;
+    case 1:
+      return `by author`;
+    case 2:
+      return `by comment thread owner`;
+    case 0:
+      return `by unknown`;
+    default:
+      return;
+  }
+}
+function _(_) {
+  let _ = !1,
+    _ = !1;
+  _.subject &&
+    ((_ =
+      _.subject.unresolved_report_count > 0 ||
+      _.subject.unresolved_dispute_count > 0),
+    (_ = !_ && _.subject.reports.length != 0));
+  let _ = (0, _.useCallback)(
+      (_) => {
+        _.bSelected &&
+          _ &&
+          _.scrollIntoView({
+            block: `center`,
+          });
+      },
+      [_.bSelected],
+    ),
+    [_, _] = (0, _.useState)(!1),
+    _ = _(_.comment.steamid),
+    _ = _;
+  _ ? (_ = _) : _ && (_ = _);
+  let _ = _.comment.deleted,
+    _ = _ ? _ : ``,
+    _ = _(_.comment.delete_reason) ?? ``,
+    _ = _(
+      _.clanSteamId,
+      _.commentThreadType,
+      _.gidForumFeature,
+      _.gidFeature2,
+      _.getPublicURL(_.comment),
+      _.comment.steamid,
+      _.comment.gidcomment,
+    ),
+    _ = async () => await _.mutateAsync();
+  if (!_.isSuccess) return null;
+  _(_.data, `Missing data on personaQuery despite success.`);
+  let _ = {
+      kind: `single`,
+      type: _.subjectGroupKey.type,
+      group_id: _.subjectGroupKey.group_id,
+      _: _.comment.gidcomment,
+    },
+    _ = () => {
+      _.setFilter({
+        kind: `user`,
+        steamid: _.comment.steamid,
+      });
+    },
+    _ = () => {
+      _.setFilter({
+        kind: `quotes`,
+        gidcomment: _.comment.gidcomment,
+      });
+    };
+  return (0, _.jsx)(_.Fragment, {
+    children:
+      _.visible &&
+      (0, _.jsxs)(_.Fragment, {
+        children: [
+          _ &&
+            (0, _.jsx)(_, {
+              gidComment: _.comment.gidcomment,
+              bSubjectDeleted: !!_.comment.deleted,
+              ..._,
+              onClose: () => _(!1),
+              authorSteamId: _.comment.steamid,
+              commentURL: _.getPublicURL(_.comment),
+              fnMarkAsSuspicious: _,
+            }),
+          (0, _.jsxs)(`div`, {
+            ref: _,
+            className: (0, _.default)(`xvsOwOBGJDY-`, _, _),
+            _: `${_.comment.gidcomment}`,
+            children: [
+              (0, _.jsxs)(`div`, {
+                className: `j6up3u2-0SU-`,
+                children: [
+                  (0, _.jsxs)(`div`, {
+                    children: [
+                      (0, _.jsxs)(`div`, {
+                        className: `Gx2g4Tz2eY0-`,
+                        children: [
+                          (0, _.jsx)(_, {
+                            clanSteamId: _.clanSteamId,
+                            steamid: _.comment.steamid,
+                            fnFilterToThisUser: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            toolTipContent: (0, _.jsx)(`p`, {
+                              children: `Filter thread to only posts quoting this one.`,
+                            }),
+                            children: (0, _.jsx)(`button`, {
+                              className: `zs6dKi6UL4o-`,
+                              onClick: _,
+                              children: (0, _.jsx)(_, {}),
+                            }),
+                          }),
+                          (0, _.jsx)(_, {
+                            status: _.subject?.terrorism_status ?? 0,
+                          }),
+                          (0, _.jsx)(_, {
+                            status: _.subject?.csam_status ?? 0,
+                          }),
+                          (0, _.jsx)(_, {
+                            status:
+                              _.subject?.credible_threat_of_violence_status ??
+                              0,
+                          }),
+                          _ &&
+                            (0, _.jsxs)(`div`, {
+                              className: `K4U353xsSTI-`,
+                              children: [(0, _.jsx)(_, {}), ` `, _],
+                            }),
+                        ],
+                      }),
+                      (0, _.jsxs)(`div`, {
+                        className: `Gx2g4Tz2eY0-`,
+                        children: [
+                          _(_.comment.timestamp),
+                          ` `,
+                          _(_.comment.timestamp),
+                        ],
+                      }),
+                      (0, _.jsx)(`div`, {
+                        className: `IqxBpsiKtEI-`,
+                        children: (0, _.jsx)(_, {
+                          bbcode: _.comment.text,
+                          bSimpleTagsOnly: _(_.commentThreadType),
+                          fnOnQuoteClick: _.setSelected,
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)(`div`, {
+                    className: `RoTQLwdb-f4-`,
+                    children: [
+                      (0, _.jsxs)(_, {
+                        subjectKey: _,
+                        hash: _.comment.gidcomment,
+                        children: [`Item #`, _.idx + 1, ` `, (0, _.jsx)(_, {})],
+                      }),
+                      (0, _.jsxs)(`span`, {
+                        children: [`Comment ID `, _.comment.gidcomment],
+                      }),
+                      (0, _.jsx)(`span`, {
+                        children: (0, _.jsx)(`a`, {
+                          href: _.getPublicURL(_.comment),
+                          target: `_blank`,
+                          rel: `noreferrer`,
+                          children: `See on public`,
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)(`div`, {
+                className: `IPr6RAXWQcc-`,
+                children: (0, _.jsx)(_, {
+                  subject: _.subject,
+                  fnAcquit: _.subject
+                    ? () =>
+                        _.fnAcquit(
+                          _.comment.gidcomment,
+                          !!_.comment.deleted,
+                          _.subject,
+                        )
+                    : void 0,
+                  fnSanction: () => _(!0),
+                }),
+              }),
+            ],
+          }),
+        ],
+      }),
+  });
+}
+function _(_, _, _, _, _, _, _) {
+  let _ = _(_, _, _, _);
+  if (!_.isSuccess || !_.data) return [];
+  let _ = _();
+  _(_.data.comments, `Missing comments on comment thread`),
+    _(_.data.deleted_comments, `Missing deletedcomments on comment thread`);
+  let _ = [...(_.data.comments ?? [])];
+  _.push(...(_.data.deleted_comments ?? [])),
+    _.sort((_, _) => _.timestamp - _.timestamp);
+  let _ = [];
+  for (let _ = 0; _ < _.length; _++) {
+    let _ = _[_];
+    if (!_.has(_.gidcomment)) continue;
+    let _ = _.get(_.gidcomment);
+    (_?.unresolved_report_count === 0 && _.unresolved_dispute_count === 0) ||
+      (_?.required_moderator_level && _.required_moderator_level > _) ||
+      _.push({
+        children: _.text,
+        _: _.gidcomment,
+        idx: _ + 1,
+        cUnresolvedReports: _
+          ? _.unresolved_report_count + _.unresolved_dispute_count
+          : 0,
+        onClick: () => {
+          _(_.gidcomment);
+        },
+        claimed: _?.assigned_moderator_steamid === _,
+      });
+  }
+  return _;
+}
+function _(_) {
+  let [_, _, _] = (0, _.useMemo)(() => {
+      let _ = -1,
+        _ = 0,
+        _ = !1,
+        _ = [],
+        _ = new Map();
+      for (let _ = 0; _ < _.items.length; _++) {
+        let _ = _.items[_],
+          _ = !_.fnIsVisible || _.fnIsVisible(_),
+          _ = _.fnKey(_);
+        _ && _ == -1 && _ && (_ = _),
+          _.selected && _ === _.selected && ((_ = !0), _ && (_ = _)),
+          _ && (_.push(_.items[_]), _.set(_, _), _++);
+      }
+      return _ > _.length && (_ = 0), [_, _, _];
+    }, [_.fnIsVisible, _.items, _.selected, _.fnKey]),
+    _ = Math.floor((_ === -1 ? 0 : _) / 30),
+    _ = _ * 30,
+    _ = (_ + 1) * 30,
+    _ = Math.ceil(_.length / 30),
+    _ = (_) => _.fnKey(_[_ * 30]),
+    _ = (0, _.useMemo)(() => {
+      let _ = [
+        ...new Set([0, 1, 2, _ - 1, _, _ + 1, _ - 3, _ - 2, _ - 1]),
+      ].filter((_) => _ >= 0 && _ < _);
+      return (
+        _.sort((_, _) => _ - _),
+        _.length > 6 &&
+          _._(-4) !== _._(-3) - 1 &&
+          _.splice(_.length - 3, 0, `...`),
+        _.length > 4 && _._(3) !== _._(2) + 1 && _.splice(3, 0, `...`),
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            _ > 0 &&
+              (0, _.jsx)(`a`, {
+                onClick: () => _.setSelected(_(_ - 1)),
+                children: `«`,
+              }),
+            _.map((_, _) =>
+              _ === `...`
+                ? (0, _.jsx)(
+                    `span`,
+                    {
+                      children: `...`,
+                    },
+                    _,
+                  )
+                : _ === _
+                  ? (0, _.jsxs)(
+                      `span`,
+                      {
+                        className: _,
+                        children: [`›`, _ + 1, `‹`],
+                      },
+                      _,
+                    )
+                  : (0, _.jsx)(
+                      `a`,
+                      {
+                        onClick: () => _.setSelected(_(_)),
+                        children: _ + 1,
+                      },
+                      _,
+                    ),
+            ),
+            _ < _ - 1 &&
+              (0, _.jsx)(`a`, {
+                onClick: () => _.setSelected(_(_ + 1)),
+                children: `»`,
+              }),
+          ],
+        })
+      );
+    }, [_, _]);
+  return (0, _.jsxs)(`div`, {
+    children: [
+      _ > 1 && _,
+      (0, _.jsx)(`div`, {
+        children: _.slice(_, _).map((_, _) =>
+          (0, _.jsx)(
+            _,
+            {
+              anchor: `#` + _.fnKey(_),
+              item: _,
+              component: _.component,
+              visible: !_.fnIsVisible || _.fnIsVisible(_),
+              selected: _.fnKey(_) === _.selected,
+              idx: _.get(_.fnKey(_)),
+            },
+            _.fnKey(_),
+          ),
+        ),
+      }),
+      _ > 1 && _,
+    ],
+  });
+}
+function _(_) {
+  return (0, _.jsx)(`div`, {
+    _: _.anchor,
+    children: (0, _.jsx)(_.component, {
+      item: _.item,
+      visible: _.visible,
+      selected: _.selected,
+      idx: _.idx,
+    }),
+  });
+}
+function _(_) {
+  let [_, _] = (0, _.useState)(null);
+  return (
+    (0, _.useEffect)(() => {
+      let _ = window.location.hash.replace(`#`, ``);
+      _ === `` ? _ === `` && _ !== null && _ === null && _(_) : _(_);
+    }, []),
+    [_, _]
+  );
+}
+function _(_) {
+  let {
+      clanSteamId: _,
+      strForumType: _,
+      gidForumFeature: _,
+      gidFeature2: _,
+      authorSteamId: _,
+      bSubjectDeleted: _,
+      gidComment: _,
+    } = _,
+    _ = (0, _.useContext)(_),
+    [_, _] = (0, _.useState)(`main`),
+    [_, _] = (0, _.useState)({
+      eReason: null,
+      bDelete: !1,
+      bWarning: !1,
+      eWarnReason: -1,
+      daysToBanFromHub: 0,
+      daysToBanFromCommunity: 0,
+      nDaysBackToDeleteComments: -1,
+      strMessage: ``,
+      bPermanentTradeBan: !1,
+      bMarkAsSuspicious: !1,
+    }),
+    _ = _(_, _),
+    _ = _.isSuccess && _.data !== null,
+    [_, _] = (0, _.useState)(void 0),
+    _ = _(_, _, _, _, _ === `0` ? _ : _, _),
+    _ = _(),
+    _ = _(_, _, _, _, _ === `0` ? _ : _, _),
+    _ = _(),
+    _ = _(_),
+    _ = _(_),
+    _ = _(_),
+    _ = _(_, 9),
+    _ = _(_.subjectGroupKey.type, _.subjectGroupKey.group_id, _.gidComment),
+    _ = _(_),
+    _ = _(_(_.eReason), _.data);
+  (0, _.useEffect)(() => {
+    let _ = {
+      ..._,
+    };
+    (_.strMessage =
+      _.data?.quicktext?.content?.content ??
+      _.data?.english_reference?.content ??
+      ``),
+      _(_);
+  }, [_.data]);
+  let [_, _] = (0, _.useMemo)(() => {
+      let _ = !1,
+        _ = !1;
+      if (_.isSuccess && _.data !== null)
+        for (let _ of _.data.support_messages)
+          _.is_active &&
+            (_.support_message_type === 2 || _.support_message_type === 32) &&
+            (_ = !0),
+            _.is_active && _.support_message_type === 1 && (_ = !0);
+      return [_, _];
+    }, [_.data, _.isSuccess]),
+    _ =
+      _.eReason !== null &&
+      (_.bDelete ||
+        _.bWarning ||
+        (_.eWarnReason ?? 0) >= 0 ||
+        _.bMarkAsSuspicious ||
+        _.bPermanentTradeBan ||
+        _.daysToBanFromCommunity > 0 ||
+        _.daysToBanFromHub > 0 ||
+        _.nDaysBackToDeleteComments >= 0),
+    _ = _;
+  return (0, _.jsxs)(_, {
+    onClose: (_) => _ !== `backdropclick` && _.onClose(),
+    strTitle:
+      _ === `select_reason` ? `Select moderation reason` : `Moderate subject`,
+    children: [
+      _ === `select_reason` &&
+        (0, _.jsx)(_, {
+          reasons: _,
+          onSelect: (_) => {
+            if (_ !== null) {
+              let _ = {
+                ..._,
+              };
+              (_.eReason = _), _(_);
+            }
+            _(`main`);
+          },
+        }),
+      _ === `main` &&
+        (0, _.jsxs)(`div`, {
+          className: `qcMRE-7sgs0-`,
+          children: [
+            _ &&
+              (0, _.jsxs)(`div`, {
+                className: _(`OJkRbQGJnUA-`, `pSzwfaj9L7M-`),
+                children: [
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(`span`, {
+                    children: _,
+                  }),
+                ],
+              }),
+            (0, _.jsx)(`label`, {
+              children: `Reason:`,
+            }),
+            (0, _.jsx)(`button`, {
+              className: `SG7ITS8nG98-`,
+              onClick: () => _(`select_reason`),
+              children:
+                _.eReason === null ? `Click to select...` : _(_.eReason),
+            }),
+            (0, _.jsxs)(`label`, {
+              className: `OJkRbQGJnUA-`,
+              children: [
+                (0, _.jsx)(`input`, {
+                  type: `checkbox`,
+                  disabled: _.bMarkAsSuspicious,
+                  checked: _.bDelete,
+                  onChange: (_) => {
+                    let _ = {
+                      ..._,
+                    };
+                    (_.bDelete = _.bMarkAsSuspicious ? !0 : _.target.checked),
+                      _(_);
+                  },
+                }),
+                ` Delete`,
+              ],
+            }),
+            (0, _.jsxs)(`label`, {
+              className: `OJkRbQGJnUA-`,
+              children: [
+                (0, _.jsx)(`input`, {
+                  type: `checkbox`,
+                  checked: _.bWarning,
+                  onChange: (_) => {
+                    let _ = {
+                      ..._,
+                    };
+                    (_.bWarning = _.target.checked), _(_);
+                  },
+                }),
+                `Issue Warning`,
+              ],
+            }),
+            (0, _.jsx)(`label`, {
+              children: `Ban from hub:`,
+            }),
+            !_ &&
+              (0, _.jsxs)(`select`, {
+                onChange: (_) => {
+                  let _ = parseInt(_.target.value),
+                    _ = {
+                      ..._,
+                    };
+                  (_.daysToBanFromHub = _), _(_);
+                },
+                value: _.daysToBanFromHub,
+                children: [
+                  (0, _.jsx)(`option`, {
+                    value: `0`,
+                    children: `Do not ban`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `1`,
+                    children: `1 day`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `3`,
+                    children: `3 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `7`,
+                    children: `7 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `14`,
+                    children: `14 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `30`,
+                    children: `30 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `90`,
+                    children: `3 months`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `365`,
+                    children: `1 year`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `-1`,
+                    children: `Permanent`,
+                  }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(`div`, {
+                children: `Already banned from hub`,
+              }),
+            (0, _.jsx)(`label`, {
+              children: `Ban from community:`,
+            }),
+            !_ &&
+              (0, _.jsxs)(`select`, {
+                onChange: (_) => {
+                  let _ = parseInt(_.target.value),
+                    _ = {
+                      ..._,
+                    };
+                  (_.daysToBanFromCommunity = _.bMarkAsSuspicious ? -1 : _),
+                    _(_);
+                },
+                value: _.daysToBanFromCommunity,
+                children: [
+                  (0, _.jsx)(`option`, {
+                    value: `0`,
+                    children: `Do not ban`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `1`,
+                    children: `1 day`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `3`,
+                    children: `3 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `7`,
+                    children: `7 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `14`,
+                    children: `14 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `30`,
+                    children: `30 days`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `90`,
+                    children: `3 months`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `365`,
+                    children: `1 year`,
+                  }),
+                  (0, _.jsx)(`option`, {
+                    value: `-1`,
+                    children: `Permanent`,
+                  }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(`div`, {
+                children: `Already community banned.`,
+              }),
+            (0, _.jsx)(`label`, {
+              children: `Delete comments since:`,
+            }),
+            (0, _.jsxs)(`select`, {
+              disabled: _.bMarkAsSuspicious,
+              onChange: (_) => {
+                let _ = parseInt(_.target.value),
+                  _ = {
+                    ..._,
+                  };
+                (_.nDaysBackToDeleteComments = _.bMarkAsSuspicious ? 0 : _),
+                  _(_);
+              },
+              value: _.nDaysBackToDeleteComments,
+              children: [
+                (0, _.jsx)(`option`, {
+                  value: `-1`,
+                  children: `Do not delete`,
+                }),
+                (0, _.jsx)(`option`, {
+                  value: `1`,
+                  children: `1 day`,
+                }),
+                (0, _.jsx)(`option`, {
+                  value: `7`,
+                  children: `7 days`,
+                }),
+                (0, _.jsx)(`option`, {
+                  value: `14`,
+                  children: `14 days`,
+                }),
+                (0, _.jsx)(`option`, {
+                  value: `30`,
+                  children: `30 days`,
+                }),
+                (0, _.jsx)(`option`, {
+                  value: `0`,
+                  children: `All comments`,
+                }),
+              ],
+            }),
+            !_ &&
+              (0, _.jsxs)(`span`, {
+                className: `OJkRbQGJnUA-`,
+                children: [
+                  (0, _.jsx)(`input`, {
+                    type: `checkbox`,
+                    checked: _.bPermanentTradeBan,
+                    onChange: (_) => {
+                      let _ = {
+                        ..._,
+                      };
+                      (_.bPermanentTradeBan = _.target.checked), _(_);
+                    },
+                  }),
+                  `\xA0Permanent trade ban`,
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(`div`, {
+                children: `Already trade banned.`,
+              }),
+            (0, _.jsxs)(`span`, {
+              className: `OJkRbQGJnUA-`,
+              children: [
+                (0, _.jsx)(`input`, {
+                  type: `checkbox`,
+                  checked: _.bMarkAsSuspicious,
+                  onChange: (_) => {
+                    let _ = {
+                      ..._,
+                    };
+                    (_.bMarkAsSuspicious = _.target.checked),
+                      _.target.checked
+                        ? ((_.bDelete = !0), (_.nDaysBackToDeleteComments = 7))
+                        : ((_.bDelete = !1),
+                          (_.nDaysBackToDeleteComments = -1)),
+                      _(_);
+                  },
+                }),
+                `\xA0Mark as suspicious`,
+              ],
+            }),
+            (0, _.jsx)(`textarea`, {
+              className: _(`OJkRbQGJnUA-`, `-ZGnT-Wj2cQ-`),
+              placeholder: `Message to send`,
+              value: _.strMessage,
+              onChange: (_) => {
+                let _ = {
+                  ..._,
+                };
+                (_.strMessage = _.target.value), _(_);
+              },
+            }),
+            (0, _.jsxs)(`div`, {
+              className: `H8ED4xKNAg0-`,
+              children: [
+                (0, _.jsx)(_, {
+                  onClick: _.onClose,
+                  children: `Cancel`,
+                }),
+                (0, _.jsx)(_, {
+                  onClick: async () => {
+                    let _ = [];
+                    if (_.eReason !== null) {
+                      try {
+                        if (
+                          (_.subject ||
+                            (await _.fnReport(
+                              _,
+                              _.eReason,
+                              ``,
+                              _.authorSteamId,
+                            )),
+                          _.bWarning &&
+                            _.push({
+                              sanction: 8,
+                            }),
+                          _.eWarnReason !== -1 &&
+                            (await _.mutateAsync({
+                              strCustomText: _.strMessage,
+                              eMessageType: 2,
+                              eWarningReason: _.eWarnReason,
+                            }),
+                            await _.mutateAsync({
+                              eAction: 12,
+                              additionalData: {
+                                message: _.strMessage,
+                                reason: _.eWarnReason,
+                              },
+                            }),
+                            _.push({
+                              sanction: 8,
+                            })),
+                          _.daysToBanFromHub !== 0)
+                        ) {
+                          _.push({
+                            sanction: 3,
+                            days: _.daysToBanFromHub,
+                          });
+                          let _ = 0;
+                          _.daysToBanFromHub > 0 &&
+                            (_ = Date.now() / 1e3 + _.daysToBanFromHub * 86400),
+                            await _.mutateAsync({
+                              rtime32BanEnds: _,
+                              strReason: _.strMessage,
+                            });
+                        }
+                        _.daysToBanFromCommunity !== 0 &&
+                          (_.push({
+                            sanction: 2,
+                            days: _.daysToBanFromCommunity,
+                          }),
+                          await _.mutateAsync({
+                            nDays: _.daysToBanFromCommunity,
+                            strNote: _.strMessage,
+                          })),
+                          _.bPermanentTradeBan &&
+                            (_.push({
+                              sanction: 4,
+                              days: 0,
+                            }),
+                            await _.mutateAsync({
+                              rtBannedUntil: _,
+                              rtProbationUntil: _,
+                              strNote: _.strMessage,
+                            })),
+                          _.bMarkAsSuspicious &&
+                            (_.push({
+                              sanction: 7,
+                            }),
+                            await _.fnMarkAsSuspicious()),
+                          _.nDaysBackToDeleteComments >= 0 &&
+                            (_.push({
+                              sanction: 5,
+                              days: _.nDaysBackToDeleteComments,
+                            }),
+                            await _.mutateAsync({
+                              nDaysToDelete: _.nDaysBackToDeleteComments,
+                            })),
+                          _.bDelete &&
+                            (_.push({
+                              sanction: 1,
+                            }),
+                            _.subject ||
+                              (await _.fnReport(
+                                _.gidComment,
+                                _.eReason,
+                                ``,
+                                _.authorSteamId,
+                              )),
+                            _ ||
+                              (await _.fnDelete(
+                                _.eReason,
+                                14,
+                                _,
+                                _.bSubjectDeleted,
+                                _.subject,
+                              ))),
+                          await _.mutateAsync({
+                            eSubjectType: _.subjectGroupKey.type,
+                            subjectGroupId: _.subjectGroupKey.group_id,
+                            subjectId: _.gidComment,
+                            eReason: _.eReason,
+                            eResolution: 14,
+                            note: _.strMessage,
+                            rgSanctions: _,
+                          }),
+                          (_.indexOf(_.eReason) !== -1 ||
+                            _.indexOf(_.eReason) !== -1 ||
+                            _.eReason === 63) &&
+                            _.eModeratorLevel !== 10 &&
+                            (await _.mutateAsync({
+                              subjectType: _.subjectGroupKey.type,
+                              subjectGroupId: _.subjectGroupKey.group_id,
+                              subjectId: _.gidComment,
+                              eNewLevel: 10,
+                              eReason: _.eReason,
+                            }),
+                            await _.fnReport(
+                              _.gidComment,
+                              _.eReason,
+                              `Escalated to Valve by moderation for CSAM.`,
+                              _.authorSteamId,
+                            ),
+                            _.indexOf(_.eReason) === -1
+                              ? _.indexOf(_.eReason) !== -1 &&
+                                (await _.mutateAsync({
+                                  eAction: 19,
+                                }))
+                              : await _.mutateAsync({
+                                  eAction: 18,
+                                }));
+                      } catch (_) {
+                        typeof _ == `string`
+                          ? _(_)
+                          : _ instanceof Error && _(_.message);
+                        return;
+                      }
+                      _.onClose();
+                    }
+                  },
+                  disabled: !_,
+                  children: `Sanction`,
+                }),
+              ],
+            }),
+          ],
+        }),
+    ],
+  });
+}
+var _ = `Mu0RQZoN5z8-`,
+  _ = `sYrvcEPDLSw-`,
+  _ = `qg47AJzxKU8-`,
+  _ = `drEx-mnfbRw-`,
+  _ = `TRtBkjLVxyk-`,
+  _ = `H-fR3KFonOM-`,
+  _ = `vGuNUCnWWGA-`,
+  _ = `WzOU7-dMdXM-`,
+  _ = `flZsnrtedy0-`,
+  _ = `MsBIsH3D-sA-`,
+  _ = `-I0-InYUCzc-`,
+  _ = `mCo-7aE-APc-`,
+  _ = `vSeaF59r988-`,
+  _ = `OOiCBGptC2M-`,
+  _ = `nIRXFEH4Jq4-`,
+  _ = `ZXuLQr8jGdo-`,
+  _ = `Xwh88v1ZkJc-`,
+  _ = `_9tYd-oKdufo-`;
+function _(_) {
+  let { subjectKey: _ } = _,
+    _ = _(_.type, _.group_id);
+  return _.isSuccess
+    ? (0, _.jsx)(_, {
+        subjectKey: _,
+        subjects: _.data.subjects,
+      })
+    : null;
+}
+function _(_) {
+  let { subjectKey: _, subjects: _ } = _,
+    [_, _] = _(_.kind === `single` ? _._ : null),
+    _ = _(_[0]);
+  _(_, `Missing additionalData`),
+    _(_?.clanSteamId, `Missing clanSteamId for forum post`),
+    _(_?.forumId, `Missing forum id for forum post`);
+  let _ = _.clanSteamId,
+    _ = _.forumId,
+    _ = _.group_id,
+    _ = _(_, _, _),
+    _ = _(_, _, _),
+    _ = _.data?.forum_details,
+    _ = _.data?.topics?.length ? _.data.topics[0] : void 0,
+    _ = new Map();
+  for (let _ of _) _.set(_.subject_id, _);
+  let _ = (0, _.useMemo)(
+      () => ({
+        kind: `single`,
+        type: _.type,
+        group_id: _.group_id,
+        _: `0`,
+      }),
+      [_],
+    ),
+    _ = _.get(_._);
+  if (!_.isSuccess || !_.isSuccess || !_ || !_) return null;
+  _(_.data.forum_details, `Missing forum_details`),
+    _(_.data.topics && _.data.topics[0], `Missing topic details`);
+  let _ = [];
+  _.push(..._(_, _, _)),
+    _.push(..._(_, 7, _, _, _, _, _.useLoaderData().maxModeratorLevel));
+  let _ = _.useLoaderData().maxModeratorLevel;
+  return (0, _.jsx)(_, {
+    value: {
+      clanSteamId: _,
+      rgForum: _,
+      rgTopic: _,
+      eModeratorLevel: _,
+    },
+    children: (0, _.jsxs)(`div`, {
+      className: _,
+      children: [
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(_, {
+              clanSteamId: _,
+              gidForum: _,
+              gidTopic: _,
+            }),
+            (0, _.jsx)(_, {
+              subjectKey: _,
+              topicSubject: _,
+              clanSteamId: _,
+              forumId: _,
+              topicId: _,
+              bSelected: _ === `0`,
+            }),
+            (0, _.jsx)(_, {
+              clanSteamId: _,
+              forumId: _,
+              topicId: _,
+              selected: _,
+              setSelected: _,
+              subjects: _,
+            }),
+          ],
+        }),
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(_, {
+            rgLinks: _,
+            subjectGroupKey: {
+              kind: `group`,
+              type: _.subjectKey.type,
+              group_id: _.subjectKey.group_id,
+            },
+          }),
+        }),
+      ],
+    }),
+  });
+}
+function _(_, _, _) {
+  if (!(_ && (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0)))
+    return [];
+  let _ = _();
+  return [
+    {
+      children: _.title,
+      idx: 0,
+      _: `0`,
+      onClick: () => _(`0`),
+      cUnresolvedReports:
+        _.unresolved_report_count + _.unresolved_dispute_count,
+      claimed: _.assigned_moderator_steamid === _,
+    },
+  ];
+}
+function _(_) {
+  let {
+      bSelected: _,
+      topicSubject: _,
+      clanSteamId: _,
+      forumId: _,
+      topicId: _,
+      subjectKey: _,
+    } = _,
+    [_, _] = (0, _.useState)(!1),
+    _ = (0, _.useRef)(null),
+    _ = _(_, _, _),
+    _ = _(_, _, _),
+    _ = _(),
+    _ = _(_, _, _),
+    _ = _(_, _, _),
+    _ = _.data?.forum_details,
+    _ = _.data?.topics?.length ? _.data.topics[0] : void 0,
+    _ = _.data,
+    _ = _.InitFromAccountID(_?.originalpost_accountid, _.EUNIVERSE),
+    _ =
+      _(
+        _.COMMUNITY_BASE_URL,
+        _.InitFromClanID(_?.clanidowner, _.EUNIVERSE).ConvertTo64BitString(),
+        _?.forumtype,
+        _?.gidfeature,
+        _?.appid,
+      ) +
+      _ +
+      `/`,
+    _ = _(
+      _,
+      _,
+      _,
+      _?.title,
+      _,
+      _.comment_thread_type,
+      _.ConvertTo64BitString(),
+    );
+  if (!_.isSuccess || !_.isSuccess || !_ || !_) return null;
+  _(_.data.forum_details, `Missing forum_details`),
+    _(_.data.topics && _.data.topics[0], `Missing topic details`);
+  let _ =
+      _ && (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0),
+    _ =
+      _ &&
+      _.unresolved_dispute_count == 0 &&
+      _.unresolved_report_count == 0 &&
+      _.reports.length != 0,
+    _ = _;
+  _ ? (_ = _) : _ && (_ = _);
+  let _ = _?.deleted ? _ : ``;
+  (0, _.useEffect)(() => {
+    _.current &&
+      setTimeout(() => {
+        _.current &&
+          _.current.scrollIntoView({
+            block: `center`,
+          });
+      }, 0);
+  }, [_]);
+  let _ = async () => {
+      _ && (await _.mutateAsync(`0`));
+    },
+    _ = async () => {
+      await _.mutateAsync();
+    },
+    _ = async (_, _, _, _, _) => {
+      await _.mutateAsync({
+        eReason: _,
+        eResolution: _,
+      });
+    },
+    _ = _.InitFromAccountID(
+      _.originalpost_accountid,
+      _.EUNIVERSE,
+    ).ConvertTo64BitString(),
+    _ = async (_, _, _) => {
+      await _.mutateAsync({
+        subjectType: 1,
+        subjectGroupId: _,
+        subjectId: `0`,
+        additionalSubjectData: new Map([
+          [`clanSteamId`, _],
+          [`forumId`, _],
+        ]),
+        eReason: _,
+        strReportText: _,
+        ownerSteamID: _,
+      });
+    },
+    _ = {
+      kind: `group`,
+      type: _.type,
+      group_id: _.group_id,
+    },
+    _ = `${_(_.COMMUNITY_BASE_URL, _.clanSteamId, _.forumtype, _.gidfeature, _.appid)}${_.topicId}`;
+  return (0, _.jsxs)(`div`, {
+    ref: _ ? _ : void 0,
+    _: `0`,
+    className: (0, _.default)(_, _, _),
+    children: [
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsxs)(`div`, {
+                className: _,
+                children: [
+                  (0, _.jsxs)(`div`, {
+                    className: _,
+                    children: [
+                      (0, _.jsx)(`h2`, {
+                        className: _,
+                        children: _.title,
+                      }),
+                      _.deleted &&
+                        (0, _.jsxs)(`div`, {
+                          className: `-W3dqZTz8Bk-`,
+                          children: [
+                            (0, _.jsx)(_, {}),
+                            ` `,
+                            _(_.delete_reason),
+                          ],
+                        }),
+                      _.locked && (0, _.jsx)(_, {}),
+                    ],
+                  }),
+                  (0, _.jsx)(`div`, {
+                    children: (0, _.jsx)(_, {
+                      clanSteamId: _.clanSteamId,
+                      gidforum: _.gidforum,
+                      gidtopic: _.gidforumtopic,
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(`div`, {
+                className: _,
+                children: (0, _.jsxs)(`span`, {
+                  children: [
+                    `Posted `,
+                    _(_.originalpost_date),
+                    ` `,
+                    _(_.originalpost_date),
+                  ],
+                }),
+              }),
+              (0, _.jsx)(`div`, {
+                className: _,
+                children: (0, _.jsx)(_, {
+                  clanSteamId: _,
+                  steamid: _.ConvertTo64BitString(),
+                }),
+              }),
+              (0, _.jsxs)(`div`, {
+                className: _(_, _),
+                children: [
+                  _.forumtype === `Trading` &&
+                    (0, _.jsxs)(`div`, {
+                      className: `KVckz7JvtIY-`,
+                      children: [
+                        (0, _.jsx)(_, {}),
+                        ` `,
+                        _.Localize(`#has_trade_offer`),
+                      ],
+                    }),
+                  (0, _.jsx)(_, {
+                    bbcode: _.full_text,
+                  }),
+                ],
+              }),
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              (0, _.jsxs)(_, {
+                subjectKey: _,
+                children: [`Item #0 `, (0, _.jsx)(_, {})],
+              }),
+              (0, _.jsxs)(`span`, {
+                children: [`Topic ID `, _.gidforumtopic],
+              }),
+              (0, _.jsx)(`span`, {
+                children: (0, _.jsx)(`a`, {
+                  href: _,
+                  target: `_blank`,
+                  rel: `noreferrer`,
+                  children: `See on public`,
+                }),
+              }),
+            ],
+          }),
+        ],
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _ &&
+            (0, _.jsx)(_, {
+              onClose: () => _(!1),
+              authorSteamId: _.InitFromAccountID(
+                _.originalpost_accountid,
+                _.EUNIVERSE,
+              ).ConvertTo64BitString(),
+              gidComment: `0`,
+              bSubjectDeleted: !!_.deleted,
+              fnMarkAsSuspicious: _,
+              fnReport: _,
+              fnDelete: _,
+              clanSteamId: _,
+              strForumType: _.forumtype,
+              commentThreadType: _.comment_thread_type,
+              gidForumFeature: _.gidfeature,
+              gidFeature: _,
+              gidFeature2: _,
+              subjectGroupKey: _,
+              fnAcquit: _,
+              commentURL: _,
+            }),
+          (0, _.jsx)(_, {
+            subject: _,
+            fnAcquit: _,
+            fnSanction: () => _(!0),
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let _ = _(_.clanSteamId, _.gidforum, _.gidtopic),
+    _ = _(_.clanSteamId, _.gidforum, _.gidtopic),
+    _ = _(_.clanSteamId, 7, _.gidforum, _.gidtopic),
+    [_, _] = (0, _.useState)(null),
+    [_, _] = (0, _.useState)(``),
+    _ = !!(_.data?.topics?.length ? _.data.topics[0] : void 0)?.locked;
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      _ === `message` &&
+        (0, _.jsx)(_, {
+          strTitle: `Lock thread`,
+          strOKLabel: `Post and lock`,
+          strCancelLabel: `Cancel`,
+          onClose: () => _(null),
+          onOK: async () => {
+            _(`busy`),
+              await _.mutateAsync({
+                strMessage: _,
+              }),
+              await _.mutateAsync({
+                bLocked: !0,
+                strAuditNote: _,
+              }),
+              _(null);
+          },
+          children: (0, _.jsxs)(`div`, {
+            className: `SpkrhCvXaPk-`,
+            children: [
+              (0, _.jsx)(`div`, {
+                children: `Lock message:`,
+              }),
+              (0, _.jsx)(`div`, {
+                children: (0, _.jsx)(`textarea`, {
+                  value: _,
+                  onChange: (_) => _(_.target.value),
+                }),
+              }),
+            ],
+          }),
+        }),
+      _ === `busy` &&
+        (0, _.jsx)(_, {
+          onClose: () => {},
+          children: (0, _.jsxs)(`div`, {
+            style: {
+              padding: `12px`,
+            },
+            children: [
+              `Locking thread...`,
+              ` `,
+              (0, _.jsx)(`span`, {
+                children: (0, _.jsx)(_, {
+                  size: `small`,
+                }),
+              }),
+            ],
+          }),
+        }),
+      (0, _.jsx)(`button`, {
+        className: _,
+        onClick: async () => {
+          _
+            ? await _.mutateAsync({
+                bLocked: !1,
+              })
+            : _(`message`);
+        },
+        children: _ ? `Unlock thread` : `Lock thread`,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let _ = _(_.clanSteamId, _.forumId, _.topicId),
+    _ = _(),
+    _ = _(_.clanSteamId, _.forumId, _.topicId),
+    _ = _(_.clanSteamId, _.forumId, _.topicId),
+    _ = _(_.clanSteamId, _.forumId, _.topicId),
+    _ = _(_.clanSteamId, _(7), _.forumId, _.topicId),
+    _ = _.data?.forum_details,
+    _ = _.data?.topics?.length ? _.data.topics[0] : void 0;
+  if (!_.isSuccess || !_.isSuccess || !_ || !_) return null;
+  _(_.data.forum_details, `Missing forum_details`),
+    _(_.data.topics && _.data.topics[0], `Missing topic details`);
+  let _ = new Map();
+  for (let _ of _.subjects) _.set(_.subject_id, _);
+  return (0, _.jsx)(_, {
+    clanSteamId: _.clanSteamId,
+    commentThreadType: 7,
+    gidForumFeature: _.gidfeature,
+    gidFeature: _.forumId,
+    gidFeature2: _.topicId,
+    selected: _.selected,
+    setSelected: _.setSelected,
+    mapCommentGidToSubjects: _,
+    fnAcquit: async (_, _, _) => {
+      await _.mutateAsync(_), await _.mutateAsync(_);
+    },
+    fnDelete: async (_, _, _, _, _) => {
+      await _.mutateAsync({
+        gidComment: _,
+        eReason: _,
+        eResolution: 2,
+      });
+    },
+    strForumType: _.forumtype,
+    subjectGroupKey: {
+      kind: `group`,
+      type: 1,
+      group_id: _.topicId,
+    },
+    fnReport: async (_, _, _, _) => {
+      await _.mutateAsync({
+        subjectType: 1,
+        subjectGroupId: _.topicId,
+        subjectId: _,
+        additionalSubjectData: new Map([
+          [`clanSteamId`, _.clanSteamId],
+          [`forumId`, _.forumId],
+        ]),
+        eReason: _,
+        strReportText: _,
+        ownerSteamID: _,
+      });
+    },
+    getPublicURL: (_) =>
+      `${_(_.COMMUNITY_BASE_URL, _.clanSteamId, _.forumtype, _.gidfeature, _.appid)}${_.topicId}#c${_.gidcomment}`,
+  });
+}
+var _ = (0, _.createContext)(void 0);
+function _(_) {
+  let _ = _(_.clanSteamId),
+    _ = _(_.clanSteamId, _.gidForum, _.gidTopic);
+  if (!_.isSuccess || !_.isSuccess) return null;
+  let _ = _.data.forum_details.name;
+  _ === `#Discussions_ForumName_General`
+    ? (_ = _.Localize(`#Discussions_ForumName_General`))
+    : _ === `#Discussions_ForumName_ReportedPosts`
+      ? (_ = _.Localize(`#Discussions_ForumName_ReportedPosts`))
+      : _ === `#Discussions_ForumName_Workshop`
+        ? (_ = _.Localize(`#Discussions_ForumName_Workshop`))
+        : _ === `#Discussions_ForumName_Trading`
+          ? (_ = _.Localize(`#Discussions_ForumName_Trading`))
+          : _ === `#Discussions_ForumName_Events` &&
+            (_ = _.Localize(`#Discussions_ForumName_Events`));
+  let _ = _.data.forum_details.appid,
+    _ = ``;
+  _ = _
+    ? `${_.COMMUNITY_BASE_URL}app/${_}`
+    : `${_.COMMUNITY_BASE_URL}gid/${_.clanSteamId}`;
+  let _ = _.data.forum_details,
+    _ = _(
+      _.COMMUNITY_BASE_URL,
+      _.clanSteamId,
+      _.forumtype,
+      _.gidfeature,
+      _.appid,
+    );
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      (0, _.jsxs)(`div`, {
+        children: [
+          _(1),
+          ` in `,
+          _.data.name ?? _.data.summary,
+          ` `,
+          _.data.official &&
+            (0, _.jsx)(_.Fragment, {
+              children: `(OGG)`,
+            }),
+        ],
+      }),
+      (0, _.jsxs)(`div`, {
+        children: [
+          (0, _.jsx)(`a`, {
+            href: _,
+            children: _.data.name,
+          }),
+          ` » `,
+          (0, _.jsx)(`a`, {
+            href: _,
+            children: _,
+          }),
+          ` »`,
+          ` `,
+          (0, _.jsx)(`a`, {
+            href: `${_}/${_.gidTopic}/`,
+            children: _.data.topics[0].title,
+          }),
+        ],
+      }),
+    ],
   });
 }
 var _ = `boFn38nWkPs-`,
@@ -20440,6 +18755,1691 @@ function _(_, _, _, _, _) {
         }),
       ]);
     },
+  });
+}
+var _ = _(_(), 1),
+  _ = (_, _, _) => [`topic_details`, _, _, _],
+  _ = (_, _, _, _) => [`comment_thread`, _, _, _, _],
+  _ = (_) => [`comment_thread_by_id`, _],
+  _ = (_, _) => [`hub_ban_status`, _, _];
+function _(_, _, _, _) {
+  return {
+    queryKey: _(_, _, _),
+    queryFn: async () => {
+      let _ = _.Init(_);
+      return (
+        _.Body().set_steamid(_),
+        _.Body().set_gidforum(_),
+        _.Body().add_gidtopics(_),
+        _.Body().set_include_full_text(!0),
+        (await _.GetTopicDetails(_, _)).Body().toObject()
+      );
+    },
+  };
+}
+function _(_, _, _) {
+  return _(_(_(), _, _, _));
+}
+function _(_, _, _, _, _) {
+  return {
+    queryKey: _(_, _, _, _),
+    queryFn: async () => {
+      let _ = _.Init(_);
+      return (
+        _.Body().set_steamid(_),
+        _.Body().set_comment_thread_type(_),
+        _.Body().set_gidfeature(_),
+        _.Body().set_gidfeature2(_),
+        _.Body().set_include_deleted(!0),
+        _.Body().set_oldest_first(!0),
+        (await _.GetCommentThread(_, _)).Body().toObject()
+      );
+    },
+  };
+}
+function _(_, _, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => {
+      let _ = _.Init(_);
+      return (
+        _.Body().set_steamid(_),
+        _.Body().set_commentthreadid(_),
+        (await _.GetCommentThread(_, _)).Body().toObject()
+      );
+    },
+  };
+}
+function _(_, _) {
+  return _(_(_(), _, _));
+}
+function _(_, _, _, _) {
+  return _(_(_(), _, _, _, _));
+}
+function _(_, _, _) {
+  return _(_, 7, _, _);
+}
+function _(_, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async (_) => {
+      let _ = _.Init(_);
+      _.Body().set_steamid(_),
+        _.Body().set_gidforum(_),
+        _.Body().set_gidtopic(_),
+        _.Body().set_gidpost(_);
+      let _ = await _.ResolveReportedPost(_, _);
+      if (!_.BSuccess())
+        throw Error(`Failed to acquit forum comment: ` + _.GetEMsg());
+      return _.Body();
+    },
+    onSuccess: async (_, _) => {
+      await Promise.all([
+        _.invalidateQueries({
+          queryKey: _,
+        }),
+        _.invalidateQueries({
+          queryKey: _,
+        }),
+        _.invalidateQueries({
+          queryKey: _(_, 7, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(_, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _, _),
+        }),
+      ]);
+    },
+  });
+}
+function _(_, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async (_) => {
+      let _ = _.Init(_);
+      _.Body().set_steamid(_),
+        _.Body().set_comment_thread_type(7),
+        _.Body().set_gidfeature(_),
+        _.Body().set_gidfeature2(_),
+        _.Body().set_gidcomment(_.gidComment),
+        _.Body().set_reason(_.eReason),
+        _.Body().set_resolution(_.eResolution);
+      let _ = await _.DeleteModeratedComment(_, _);
+      if (!_.BSuccess())
+        throw Error(`Failed to delete forum comment: ` + _.GetEMsg());
+      return _.Body();
+    },
+    onSuccess: async () => {
+      await Promise.all([
+        _.invalidateQueries({
+          queryKey: _,
+        }),
+        _.invalidateQueries({
+          queryKey: _,
+        }),
+        _.invalidateQueries({
+          queryKey: _(_, 7, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(_, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _, `0`),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _, `0`),
+        }),
+      ]);
+    },
+  });
+}
+function _(_, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async (_) => {
+      let _ = _.Init(_);
+      return (
+        _.Body().set_steamid(_),
+        _.Body().set_comment_thread_type(7),
+        _.Body().set_gidfeature(_),
+        _.Body().set_gidfeature2(_),
+        _.Body().set_reason(_.eReason),
+        _.Body().set_resolution(_.eResolution),
+        (await _.DeleteModeratedTopic(_, _)).Body()
+      );
+    },
+    onSuccess: async () => {
+      await Promise.all([
+        _.invalidateQueries({
+          queryKey: _,
+        }),
+        _.invalidateQueries({
+          queryKey: _,
+        }),
+        _.invalidateQueries({
+          queryKey: _(_, 7, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(_, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _, `0`),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _, `0`),
+        }),
+      ]);
+    },
+  });
+}
+function _(_, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async (_) => {
+      let _ = _.Init(_);
+      return (
+        _.Body().set_steamid(_),
+        _.Body().set_gidforum(_),
+        _.Body().set_gidtopic(_),
+        _.Body().set_locked(_.bLocked),
+        _.strAuditNote && _.Body().set_audit_note(_.strAuditNote),
+        (await _.SetTopicLocked(_, _)).Body()
+      );
+    },
+    onSuccess: async () => {
+      await Promise.all([
+        _.invalidateQueries({
+          queryKey: _(_, _, _),
+        }),
+        _.invalidateQueries({
+          queryKey: _(1, _, `0`),
+        }),
+      ]);
+    },
+  });
+}
+function _(_, _, _, _, _, _) {
+  let _ = _(),
+    _ = new _(_).GetAccountID();
+  return _({
+    mutationFn: async (_) => {
+      let _ = await _.Actions.SendCommunityMessage(
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _.strCustomText,
+        _.eMessageType,
+        _.eWarningReason,
+      );
+      if (_ !== 1 && _ !== 29)
+        throw Error(`Failed to second community message (EResult ${_})`);
+    },
+    onSuccess: async () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      });
+    },
+  });
+}
+function _(_, _, _, _, _, _) {
+  let _ = _(),
+    _ = new _(_).GetAccountID(),
+    _ = new _(_).GetAccountID();
+  return _({
+    mutationFn: async (_) => {
+      let _ = await _.Actions.HubBanUser(
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _.strReason,
+        _.rtime32BanEnds,
+      );
+      if (!_) throw Error(`Failed to hub ban user (Request failed).`);
+      if (_.success !== 1 && _.success !== 29)
+        throw Error(`Failed to hub ban user (EResult ` + _ + `)`);
+      return null;
+    },
+    onSuccess: async () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      }),
+        _.invalidateQueries({
+          queryKey: _(_, _),
+        });
+    },
+  });
+}
+function _(_) {
+  return _(
+    [`GetHubBanStatus`, _],
+    () =>
+      new _.default(
+        async (_) => {
+          let _ = await _.Actions.GetHubBanStatus(_, _),
+            _ = new Map();
+          if (_ && _.success === 1)
+            for (let _ of _.bans) _.set(_.accountid_ban, _);
+          return _.map((_) => _.get(_) ?? null);
+        },
+        {
+          maxBatchSize: 100,
+          cache: !1,
+        },
+      ),
+  );
+}
+function _(_, _) {
+  let _ = new _(_).GetAccountID(),
+    _ = new _(_).GetAccountID(),
+    _ = _(_);
+  return {
+    queryKey: _(_, _),
+    queryFn: async () => {
+      let _ = await _.load(_);
+      return _ === null
+        ? null
+        : {
+            steamid: _.InitFromAccountID(
+              _.accountid_ban,
+              _.EUNIVERSE,
+            ).ConvertTo64BitString(),
+            bannedBySteamid: _.InitFromAccountID(
+              _.accountid_ban_actor,
+              _.EUNIVERSE,
+            ).ConvertTo64BitString(),
+            rtBannedUntil: _.time_ban_end,
+          };
+    },
+  };
+}
+function _(_, _) {
+  return _(_(_, _));
+}
+function _(_, _, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async (_) => {
+      let _ = await _.PostCommentToThread(_, {
+        steamid: _,
+        comment_thread_type: _,
+        gidfeature: _,
+        gidfeature2: _,
+        text: _.strMessage,
+      });
+      if (_.GetEResult() !== 1)
+        throw Error(
+          `Failed to post comment to thread: EResult ` + _.GetEResult(),
+        );
+      return _.Body().toObject();
+    },
+    onSuccess: async (_, _) => {
+      _.invalidateQueries({
+        queryKey: _(_, _, _, _),
+      });
+    },
+  });
+}
+function _(_) {
+  let { clanSteamId: _, gidForum: _, gidTopic: _ } = _,
+    _ = _(_, _, _);
+  if (!_.isSuccess) return null;
+  _(_.data && _.data.topics && _.data.topics[0], `Missing topic data on query`),
+    _(
+      _.data && _.data.forum_details && _.data.forum_details.gidfeature,
+      `Missing gidfeature`,
+    ),
+    _.data.forum_details.gidfeature,
+    `${_}`,
+    _.data.forum_details.appid && `${_.data.forum_details.appid}`;
+  let _ = new _(_).GetAccountID(),
+    _ = `${_.COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${_}&gidForum=${_}&gidTopic=${_}`;
+  return (
+    _.gidComment && (_ += `#c` + _.gidComment),
+    (0, _.jsx)(`a`, {
+      href: _,
+      children: _.children,
+    })
+  );
+}
+function _(_, _, _, _) {
+  return _({
+    mutationFn: async (_) => {
+      let _ = await _.Actions.ClearContentCheckResult(_, _, _, _, _);
+      if (_.eResult !== 1)
+        throw Error(`ClearContentCheckResult EResult: ` + _.eResult);
+    },
+  });
+}
+function _(_, _) {
+  return {
+    queryKey: [`get_clan_metadata`, _],
+    queryFn: async () => {
+      let _ = _.Init(_);
+      _.Body().set_steamid(_);
+      let _ = await _.GetClanMetadata(_, _);
+      if (!_.BSuccess())
+        throw Error(`Failed to get clan metadata, eresult: ${_.GetEResult()}`);
+      return _.Body().toObject();
+    },
+  };
+}
+function _(_) {
+  return _(_(_(), _));
+}
+var _ = `tfnDbSb60A8-`,
+  _ = `_8GKbgJXsBaU-`,
+  _ = `XQ5t2XVGKbA-`,
+  _ = `Kjo7zcXsMLE-`,
+  _ = `_7tJhElGv2tA-`,
+  _ = `vyBlwmlDSa8-`,
+  _ = `fZSwY-0wqqc-`,
+  _ = `NEJ8xjPhwHo-`,
+  _ = `_3w5nrIbo-m0-`,
+  _ = `TQ1m-utc1o8-`,
+  _ = `VjkSpfK149U-`,
+  _ = `_8elMk6342g4-`,
+  _ = `BgtRpvlzfDI-`,
+  _ = `LAWWJTpZXP4-`,
+  _ = `D7BTLD3mhlE-`,
+  _ = `_7FdhnIDBscM-`,
+  _ = `_1ZWHJ1DFfJ4-`,
+  _ = `tJ8jl3Bv1QY-`,
+  _ = `atvKlrjG3OA-`,
+  _ = `scj-8d-BRkA-`,
+  _ = `w54CFn-vsEs-`,
+  _ = `SU7Puo-4wjo-`,
+  _ = `_9LM-lN8dN3w-`,
+  _ = `N9UyRk1Pud8-`,
+  _ = `wgHDdQoRzjQ-`,
+  _ = `yFkYvjXZZh4-`,
+  _ = `If9-Zuzc-9I-`,
+  _ = `FM0DB3-KN-M-`,
+  _ = `y-T1iuhVWlg-`,
+  _ = `gw4m92srck0-`,
+  _ = `LR-3TcvISxU-`,
+  _ = (0, _.createContext)({
+    eModeratorLevel: 0,
+    eMaxModeratorLevel: 0,
+    bBlurImages: !0,
+    setModeratorLevel: (_) => {},
+    setBlurImages: (_) => {},
+  });
+function _(_) {
+  let { subject: _ } = _,
+    [_, _] = (0, _.useState)(!1),
+    _ = _(_.subject?.assigned_moderator_steamid),
+    _ = 0;
+  _ &&
+    (_(
+      _.unresolved_dispute_count !== void 0,
+      `Missing unresolved_dispute_count`,
+    ),
+    _(_.unresolved_report_count !== void 0, `Missing unresolved_report_count`),
+    (_ =
+      _.reports.length -
+      _.unresolved_dispute_count -
+      _.unresolved_report_count));
+  let _ = new Map();
+  if (_?.reports)
+    for (let _ of _.reports) {
+      let _ = _.report_reason;
+      if (_.has(_)) {
+        let _ = _.get(_);
+        _.set(_, _ + 1);
+      } else _.set(_, 1);
+    }
+  let _ = [..._.entries()];
+  _.sort((_, _) => _[1] - _[1]);
+  let _ = _.map(([_, _]) => `${_(_)}: ${_}`).join(`, `),
+    _ = _?.reports?.length ?? 0,
+    _ = _.steamid,
+    _ = _ && _.assigned_moderator_steamid !== `0`,
+    _ = _ && _.assigned_moderator_steamid === _,
+    _ = _ && (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0),
+    _ = _ && _.unresolved_dispute_count > 0,
+    _ = _ && _.resolved === 1,
+    _ = _ && _.resolved === 14 && _.owner_dispute_time === 0;
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      _ &&
+        (0, _.jsx)(_, {
+          strTitle: `Reports`,
+          onClose: () => _(!1),
+          children: (0, _.jsx)(_, {
+            subject: _,
+          }),
+        }),
+      _ &&
+        (0, _.jsxs)(`div`, {
+          className: `K3XbeLpR7aA-`,
+          children: [
+            _ &&
+              (0, _.jsx)(`div`, {
+                className: `fuR3XztJCNk-`,
+                children: `Claimed by you.`,
+              }),
+            _ &&
+              !_ &&
+              (0, _.jsxs)(`div`, {
+                className: `fuR3XztJCNk-`,
+                children: [
+                  `Claimed by `,
+                  (0, _.jsx)(`a`, {
+                    href: _.data?.public_data?.profile_url,
+                    children: _.data?.public_data?.persona_name,
+                  }),
+                ],
+              }),
+            _ > 0 &&
+              (0, _.jsxs)(`div`, {
+                className: `fuR3XztJCNk-`,
+                children: [
+                  `Reports `,
+                  _ &&
+                    (0, _.jsx)(_, {
+                      eRequiredLevel: _.required_moderator_level,
+                    }),
+                  `:`,
+                ],
+              }),
+            _ > 0 &&
+              (0, _.jsxs)(`div`, {
+                className: `arXU0CaQ8eA-`,
+                children: [
+                  _ && (0, _.jsx)(_, {}),
+                  ` `,
+                  _?.unresolved_report_count ?? 0,
+                  ` unresolved / `,
+                  _?.unresolved_dispute_count ?? 0,
+                  ` disputed /`,
+                  ` `,
+                  _,
+                  ` resolved`,
+                ],
+              }),
+            _ > 0 &&
+              (0, _.jsx)(`div`, {
+                className: `arXU0CaQ8eA-`,
+                children: _,
+              }),
+            _ &&
+              (0, _.jsx)(`div`, {
+                className: `arXU0CaQ8eA-`,
+                children: _.Localize(
+                  _
+                    ? `#originalresolution_acquitted`
+                    : `#originalresolution_sanctioned`,
+                ),
+              }),
+            (0, _.jsxs)(`div`, {
+              className: `B38KZMDJkRA-`,
+              children: [
+                _ > 0 &&
+                  (0, _.jsx)(`div`, {
+                    className: `gw4m92srck0-`,
+                    onClick: (_) => (_(!0), _.stopPropagation(), !1),
+                    children: `Show reports`,
+                  }),
+                (0, _.jsx)(_, {
+                  subject: _,
+                }),
+              ],
+            }),
+          ],
+        }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _.fnSanction &&
+            (0, _.jsx)(`div`, {
+              className: `gw4m92srck0-`,
+              onClick: _.fnSanction,
+              children: `Sanction`,
+            }),
+          _.fnAcquit &&
+            _ &&
+            (0, _.jsx)(_, {
+              fnAcquit: _.fnAcquit,
+              subject: _,
+            }),
+          _ &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                _ &&
+                  (0, _.jsx)(_, {
+                    subject: _,
+                    label: `Release`,
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    subject: _,
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    subject: _,
+                  }),
+              ],
+            }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { subject: _ } = _,
+    [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)(``),
+    _ = _(
+      _.owner_steam_id,
+      _.subject_type,
+      _.subject_group_id,
+      _.subject_id,
+      _,
+    );
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      _ &&
+        (0, _.jsx)(_, {
+          onClose: () => _(!1),
+          strTitle: `Open dispute on behalf of owner`,
+          strOKLabel: `Dispute`,
+          onOK: async () => {
+            _(!1), await _.mutateAsync();
+          },
+          children: (0, _.jsxs)(`label`, {
+            children: [
+              `Ticket code: `,
+              (0, _.jsx)(_, {
+                value: _,
+                onChange: (_) => _(_.target.value.trim()),
+              }),
+            ],
+          }),
+        }),
+      (0, _.jsx)(`div`, {
+        className: _,
+        onClick: () => _(!0),
+        children: `Dispute for owner`,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let [_, _] = (0, _.useState)(!1);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      _ &&
+        (0, _.jsx)(_, {
+          strTitle: `Subject acquitted`,
+          onClose: () => _(!1),
+          children: (0, _.jsx)(`div`, {
+            className: `optnGqUJHTQ-`,
+            children: (0, _.jsx)(`p`, {
+              children: `Any deletions, bans, or other sanctions must be reversed manually.`,
+            }),
+          }),
+        }),
+      (0, _.jsx)(`div`, {
+        className: _,
+        onClick: () => {
+          _.subject.resolved !== 0 && _(!0), _.fnAcquit();
+        },
+        children: `Acquit`,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)(_.subject.required_moderator_level),
+    [_, _] = (0, _.useState)(!0),
+    _ = _(),
+    _ = _([_.subject]);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      _ &&
+        (0, _.jsxs)(_, {
+          strTitle: `Escalate to`,
+          strOKLabel: `Escalate`,
+          strCancelLabel: `Cancel`,
+          onClose: () => _(!1),
+          onOK: async () => {
+            await _.mutateAsync({
+              subjectType: _.subject.subject_type,
+              subjectGroupId: _.subject.subject_group_id,
+              subjectId: _.subject.subject_id,
+              eNewLevel: _,
+              eReason: 2,
+            }),
+              _ && (await _.mutateAsync()),
+              _(!1);
+          },
+          children: [
+            (0, _.jsx)(`select`, {
+              value: _,
+              onChange: (_) => _(parseInt(_.target.value)),
+              children: [0, 1, 10].map((_) =>
+                (0, _.jsx)(
+                  `option`,
+                  {
+                    value: _,
+                    children: _(_),
+                  },
+                  _,
+                ),
+              ),
+            }),
+            (0, _.jsxs)(`label`, {
+              children: [
+                (0, _.jsx)(`input`, {
+                  type: `checkbox`,
+                  checked: _,
+                  onChange: (_) => _(_.target.checked),
+                }),
+                ` Release subject after escalating`,
+              ],
+            }),
+          ],
+        }),
+      (0, _.jsx)(`div`, {
+        className: _,
+        onClick: () => _(!0),
+        children: `Escalate`,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let _ = _([_.subject]);
+  return (0, _.jsx)(`div`, {
+    className: _,
+    onClick: () => _.mutate(),
+    children: `Release`,
+  });
+}
+function _(_) {
+  let { subject: _, size: _ } = _;
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      _ &&
+        _.reports?.map((_) =>
+          (0, _.jsx)(
+            _,
+            {
+              report: _,
+              size: _,
+            },
+            _.report_id,
+          ),
+        ),
+      (!_ || !_.reports || _.reports.length === 0) &&
+        (0, _.jsx)(`div`, {
+          className: _(`fZSwY-0wqqc-`),
+          children: `(No reports)`,
+        }),
+    ],
+  });
+}
+function _(_) {
+  let { subject: _ } = _,
+    _ = _(_.subject_type, _.subject_group_id, _.subject_id);
+  if (!_.isSuccess || !_.data) return null;
+  let _ = _.data?.entries?.length ?? 0;
+  return (0, _.jsx)(_, {
+    strTitle: `Activity`,
+    onClose: _.onClose,
+    children: (0, _.jsxs)(`div`, {
+      className: _,
+      children: [
+        _ === 0 &&
+          (0, _.jsx)(`div`, {
+            children: `(No activity)`,
+          }),
+        _ > 0 &&
+          (0, _.jsxs)(`table`, {
+            children: [
+              (0, _.jsx)(`thead`, {
+                children: (0, _.jsxs)(`tr`, {
+                  children: [
+                    (0, _.jsx)(`th`, {
+                      children: `Date`,
+                    }),
+                    (0, _.jsx)(`th`, {
+                      children: `Actor`,
+                    }),
+                    (0, _.jsx)(`th`, {
+                      children: `Action`,
+                    }),
+                    (0, _.jsx)(`th`, {
+                      children: `Details`,
+                    }),
+                  ],
+                }),
+              }),
+              (0, _.jsx)(`tbody`, {
+                children: _.data.entries?.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      subject: _,
+                      entry: _,
+                    },
+                    _.timestamp,
+                  ),
+                ),
+              }),
+            ],
+          }),
+      ],
+    }),
+  });
+}
+function _(_) {
+  let { subject: _ } = _,
+    [_, _] = (0, _.useState)(!1),
+    _ = _(_.subject_type, _.subject_group_id, _.subject_id);
+  return !_.isSuccess || !_.data
+    ? null
+    : (0, _.jsxs)(_.Fragment, {
+        children: [
+          _ &&
+            (0, _.jsx)(_, {
+              subject: _,
+              onClose: () => _(!1),
+            }),
+          (0, _.jsx)(`div`, {
+            className: _,
+            onClick: (_) => {
+              _.stopPropagation(), _.preventDefault(), _(!0);
+            },
+            children: `Show history`,
+          }),
+        ],
+      });
+}
+function _(_) {
+  switch (_) {
+    case 0:
+      return _.Localize(`#moderation_moderatorlevel_any`);
+    case 1:
+      return _.Localize(`#moderation_moderatorlevel_supervisor`);
+    case 10:
+      return _.Localize(`#moderation_moderatorlevel_valveadmin`);
+    default:
+      return `Unknown`;
+  }
+}
+function _(_) {
+  let { subject: _, entry: _ } = _,
+    _ = _(_.actor_steamid);
+  return !_.isSuccess || !_.data
+    ? null
+    : (0, _.jsxs)(`tr`, {
+        children: [
+          (0, _.jsx)(`td`, {
+            children: _(_.timestamp, !1, ``),
+          }),
+          (0, _.jsxs)(`td`, {
+            children: [
+              (0, _.jsx)(`a`, {
+                href: `${_.COMMUNITY_BASE_URL}profiles/${_.actor_steamid}`,
+                children: (0, _.jsx)(`span`, {
+                  children: _.data?.public_data?.persona_name,
+                }),
+              }),
+              ` `,
+              `(`,
+              (0, _.jsx)(`a`, {
+                href: `/moderation/activity/${_.actor_steamid}`,
+                children: `activity`,
+              }),
+              `)`,
+            ],
+          }),
+          (0, _.jsxs)(`td`, {
+            children: [
+              _(_.action),
+              _.automated_action &&
+                (0, _.jsx)(_.Fragment, {
+                  children: `\xA0(Automated)`,
+                }),
+            ],
+          }),
+          (0, _.jsx)(`td`, {
+            children: (0, _.jsx)(_, {
+              eAction: _.action,
+              jsonData: _.additional_json_data,
+            }),
+          }),
+        ],
+      });
+}
+function _(_) {
+  let { eAction: _, jsonData: _ } = _,
+    _ = {};
+  switch ((_ && (_ = JSON.parse(_)), _)) {
+    case 1:
+      return (0, _.jsxs)(_.Fragment, {
+        children: [`Report ID: `, _.report_id],
+      });
+    case 2:
+      return (0, _.jsxs)(_.Fragment, {
+        children: [
+          `Reason: `,
+          _(_.reason),
+          _.resolution !== 1 &&
+            _.resolution !== 14 &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [(0, _.jsx)(`br`, {}), `Resolution: `, _(_.resolution)],
+            }),
+          _.sanctions &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(`br`, {}),
+                `Sanctions: `,
+                _.sanctions.map(_).join(`, `),
+              ],
+            }),
+        ],
+      });
+    case 4:
+      return (0, _.jsxs)(_.Fragment, {
+        children: [`Report ID: `, _.report_id],
+      });
+    case 5:
+      return (0, _.jsxs)(_.Fragment, {
+        children: [
+          `is_csam` in _ &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [`Set CSAM to `, _.is_csam],
+            }),
+          `is_terrorism` in _ &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [`Set terrorist content to `, _.is_terrorism],
+            }),
+        ],
+      });
+    case 6:
+      return (0, _.jsxs)(_.Fragment, {
+        children: [`New level: `, _(_.level)],
+      });
+    case 7:
+      return (0, _.jsxs)(_.Fragment, {
+        children: [`Report ID: `, _.report_id],
+      });
+  }
+}
+function _(_) {
+  let [_, _] = (0, _.useState)(10),
+    [_, _] = (0, _.useState)(null),
+    _ = _();
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      !_ &&
+        (0, _.jsx)(_, {
+          title: _.Localize(`#moderation_escalation_reason_select`),
+          reasons: _,
+          onSelect: (_) => {
+            if (_ == null) {
+              _.onClose();
+              return;
+            }
+            _(_);
+          },
+        }),
+      !!_ &&
+        (0, _.jsxs)(_, {
+          className: `rnFppAkBA6E-`,
+          onClose: _.onClose,
+          strOKLabel: _.Localize(`#moderation_escalation_escalate`),
+          strTitle: _.LocalizePlural(
+            `#moderation_escalation_title`,
+            _.rgSubjectKeys.length,
+          ),
+          onOK: async () => {
+            let _ = [];
+            for (let _ of _.rgSubjectKeys)
+              _.push(
+                _.mutateAsync({
+                  subjectType: _.type,
+                  subjectGroupId: _.group_id,
+                  subjectId: _._,
+                  eNewLevel: _,
+                  eReason: _,
+                }),
+              );
+            await Promise.all(_), _.onClose();
+          },
+          strCancelLabel: _.Localize(`#moderation_cancel`),
+          children: [
+            (0, _.jsxs)(`div`, {
+              children: [
+                (0, _.jsx)(`span`, {
+                  children: _.Localize(`#moderation_escalation_reason_label`),
+                }),
+                ` `,
+                (0, _.jsx)(`span`, {
+                  children: _(_),
+                }),
+              ],
+            }),
+            (0, _.jsxs)(`select`, {
+              className: `GSUH8AaRclw-`,
+              value: _,
+              onChange: (_) => _(parseInt(_.target.value)),
+              children: [
+                (0, _.jsx)(`option`, {
+                  value: 0,
+                  children: _.Localize(`#moderation_escalationlevel_any`),
+                }),
+                (0, _.jsx)(`option`, {
+                  value: 1,
+                  children: _.Localize(
+                    `#moderation_escalationlevel_supervisor`,
+                  ),
+                }),
+                (0, _.jsx)(`option`, {
+                  value: 10,
+                  children: _.Localize(`#moderation_escalationlevel_valve`),
+                }),
+              ],
+            }),
+          ],
+        }),
+    ],
+  });
+}
+function _(_) {
+  let { report: _, size: _ } = _,
+    _ = _(_.reporter_steamid);
+  if (
+    !_.isSuccess ||
+    (_(_.data, `Missing data on personaQuery despite success.`),
+    _(_.data?.public_data, `Missing public data for user`),
+    !_.data?.public_data)
+  )
+    return null;
+  let _ = !!_.time_disputed && _.dispute_resolved === 0,
+    _ = _.resolved !== 0 && (!_.time_disputed || _.dispute_resolved !== 0),
+    _ = _.time_dispute_resolved !== 0,
+    _ = _.resolved === 1;
+  return (0, _.jsxs)(`div`, {
+    className: _(_, _ && `CaWvyfSg68E-`, _ === `compact` && `drzGPif0FKk-`),
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: (0, _.jsx)(`span`, {
+          children: _(_.time_reported, !1, ``),
+        }),
+      }),
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: (0, _.jsxs)(`div`, {
+          children: [
+            (0, _.jsx)(_, {
+              openInNewWindow: !0,
+              _: `${_.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
+              children: (0, _.jsx)(_, {
+                playerLinkDetails: _.data,
+                size: `X-Small`,
+                alt: `Reporter`,
+              }),
+            }),
+            `\xA0`,
+            (0, _.jsx)(_, {
+              openInNewWindow: !0,
+              _: `${_.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
+              children: (0, _.jsx)(`span`, {
+                children: _.data.public_data?.persona_name,
+              }),
+            }),
+          ],
+        }),
+      }),
+      (0, _.jsx)(`div`, {
+        className: _,
+        children:
+          _.report_reason !== 2 &&
+          (0, _.jsx)(`span`, {
+            className: `-v-7t6w5Jog-`,
+            children: _(_.report_reason),
+          }),
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _ &&
+            !_ &&
+            !_ &&
+            (0, _.jsxs)(`span`, {
+              className: _(`tfnDbSb60A8-`, `xYsBZPmp018-`),
+              children: [`Acquitted `, _(_.time_resolved, !1, ``)],
+            }),
+          _ &&
+            !_ &&
+            !_ &&
+            !_ &&
+            (0, _.jsxs)(`span`, {
+              className: _(`tfnDbSb60A8-`, `WCPkT7UwU5E-`),
+              children: [`Resolved `, _(_.time_resolved, !1, ``)],
+            }),
+          _ &&
+            !_ &&
+            (0, _.jsxs)(`span`, {
+              className: _(`tfnDbSb60A8-`, `kCrtFhfU9xo-`),
+              children: [`Disputed `, _(_.time_disputed, !1, ``)],
+            }),
+          _ &&
+            (0, _.jsxs)(`span`, {
+              className: _(`tfnDbSb60A8-`, `-Yo2ky9HoLQ-`),
+              children: [
+                `Dispute Resolved `,
+                _(_.time_dispute_resolved, !1, ``),
+              ],
+            }),
+          !_ &&
+            (0, _.jsx)(`span`, {
+              children: _.report_text,
+            }),
+          _ &&
+            (0, _.jsxs)(`span`, {
+              children: [
+                (0, _.jsx)(`br`, {}),
+                `Original: `,
+                _.report_text,
+                (0, _.jsx)(`br`, {}),
+                `Dispute: `,
+                _.dispute_details,
+              ],
+            }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  return (0, _.jsx)(`span`, {
+    className: _(_, _.className),
+    children: _.children,
+  });
+}
+function _(_) {
+  return _.status === 3 || _.status === 0
+    ? null
+    : (0, _.jsxs)(`span`, {
+        className: _(_, _),
+        children: [`Terrorism`, _.status === 1 && `?`],
+      });
+}
+function _(_) {
+  return _.status === 3 || _.status === 0
+    ? null
+    : (0, _.jsxs)(`span`, {
+        className: _(_, _),
+        children: [`CSAM`, _.status === 1 && `?`],
+      });
+}
+function _(_) {
+  return _.status === 3 || _.status === 0
+    ? null
+    : (0, _.jsxs)(`span`, {
+        className: _(_, _),
+        children: [`Violent threat`, _.status === 1 && `?`],
+      });
+}
+function _(_) {
+  let { eRequiredLevel: _, eReason: _ } = _;
+  return _ === 1
+    ? (0, _.jsxs)(`span`, {
+        className: _(_, _),
+        children: [
+          _.Localize(`#moderation_escalationlevel_supervisor_desc`),
+          ` `,
+          !!_ &&
+            (0, _.jsxs)(`span`, {
+              children: [`(`, _(_), `)`],
+            }),
+        ],
+      })
+    : _ === 10
+      ? (0, _.jsxs)(`span`, {
+          className: _(_, _),
+          children: [
+            _.Localize(`#moderation_escalationlevel_valve_desc`),
+            ` `,
+            !!_ &&
+              (0, _.jsxs)(`span`, {
+                children: [`(`, _(_), `)`],
+              }),
+          ],
+        })
+      : null;
+}
+function _(_) {
+  let _ = _();
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsxs)(`h2`, {
+            children: [_.rgLinks.length, ` Unresolved`],
+          }),
+          _.subjectGroupKey &&
+            (0, _.jsx)(`a`, {
+              className: `x0poUrP1UJk-`,
+              onClick: async () => {
+                await _.mutateAsync();
+              },
+              children: `Release all`,
+            }),
+        ],
+      }),
+      _.rgLinks.map((_) =>
+        (0, _.jsx)(
+          _,
+          {
+            ..._,
+            children: _.children,
+          },
+          _.idx,
+        ),
+      ),
+    ],
+  });
+}
+function _(_) {
+  return (0, _.jsxs)(`div`, {
+    className: _(_, _.claimed ? _ : ``),
+    onClick: _.onClick,
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: _.children,
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [`Item #`, _.idx, `, `, _.cUnresolvedReports, ` reports`],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let _ = _(_.steamid),
+    _ = _(_.steamid);
+  if (!_.isSuccess || !_.data || !_.isSuccess || !_.data) return null;
+  let _ = 0,
+    _ = 0,
+    _ = 0,
+    _ = [];
+  for (let _ of _.data?.count_by_type ?? [])
+    _.type === 5 ||
+      _.type === 6 ||
+      _.type === 4 ||
+      (_.type === 2 && (_ += 1),
+      _.type === 3 && (_ += 1),
+      (_ += _.count),
+      _.length > 0 && _.push((0, _.jsx)(`br`, {})),
+      _.type === 1
+        ? _.push(_.Localize(`#moderatormessage_count_note`, _.count))
+        : _.type === 2
+          ? _.push(_.Localize(`#moderatormessage_count_warning`, _.count))
+          : _.type === 3 &&
+            _.push(_.Localize(`#moderatormessage_count_bannotice`, _.count)));
+  return _ === 0
+    ? null
+    : (0, _.jsx)(_, {
+        toolTipContent: (0, _.jsx)(_.Fragment, {
+          children: [..._],
+        }),
+        nDelayShowMS: 0,
+        children: (0, _.jsxs)(`a`, {
+          className: _(_, _ === 0 ? `` : _, _ === 0 ? `` : _),
+          target: `_blank`,
+          href: `${_.COMMUNITY_BASE_URL}/profiles/${_.steamid}/moderatormessages`,
+          rel: `noreferrer`,
+          children: [
+            _,
+            `\xA0`,
+            (0, _.jsx)(`img`, {
+              src: `${_.COMMUNITY_CDN_URL}public/shared/images/header/inbox_moderator_message.png`,
+            }),
+          ],
+        }),
+      });
+}
+function _(_) {
+  let _ = _(_.steamid),
+    [_, _] = (0, _.useState)(!1),
+    _ = (0, _.useRef)(null);
+  return !_.isSuccess || !_.data
+    ? null
+    : (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsxs)(`div`, {
+            className: _,
+            ref: _,
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+            children: [
+              (0, _.jsx)(`span`, {
+                children: (0, _.jsx)(_, {
+                  playerLinkDetails: _.data,
+                  size: `Small`,
+                  alt: `Comment owner`,
+                }),
+              }),
+              (0, _.jsx)(`span`, {
+                children: _.data.public_data?.persona_name,
+              }),
+              _ &&
+                _.current &&
+                (0, _.jsx)(_, {
+                  target: _.current,
+                  direction: `bottom`,
+                  bEnablePointerEvents: !0,
+                  nBodyDistance: 0,
+                  nBodyAlignment: 0,
+                  children: (0, _.jsxs)(`div`, {
+                    className: `YemoAJrP9PI-`,
+                    children: [
+                      (0, _.jsx)(`div`, {
+                        children: (0, _.jsx)(`a`, {
+                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}`,
+                          target: `_blank`,
+                          rel: `noreferrer`,
+                          children: `Profile`,
+                        }),
+                      }),
+                      (0, _.jsx)(`div`, {
+                        children: (0, _.jsx)(`a`, {
+                          href: `${_.SUPPORT_BASE_URL}account/community/${_.steamid}`,
+                          target: `_blank`,
+                          rel: `noreferrer`,
+                          children: `Support site`,
+                        }),
+                      }),
+                      (0, _.jsx)(`div`, {
+                        children: (0, _.jsx)(`a`, {
+                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}/posthistory`,
+                          target: `_blank`,
+                          rel: `noreferrer`,
+                          children: `Post history`,
+                        }),
+                      }),
+                      (0, _.jsx)(`div`, {
+                        children: (0, _.jsx)(`a`, {
+                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}/commenthistory`,
+                          target: `_blank`,
+                          rel: `noreferrer`,
+                          children: `Comment history`,
+                        }),
+                      }),
+                      (0, _.jsx)(`div`, {
+                        children: (0, _.jsx)(`a`, {
+                          href: `${_.COMMUNITY_BASE_URL}profiles/${_.steamid}/moderatormessages`,
+                          target: `_blank`,
+                          rel: `noreferrer`,
+                          children: `Community messages`,
+                        }),
+                      }),
+                      _.fnFilterToThisUser &&
+                        (0, _.jsx)(`div`, {
+                          children: (0, _.jsx)(`a`, {
+                            style: {
+                              cursor: `pointer`,
+                            },
+                            onClick: () =>
+                              _.fnFilterToThisUser && _.fnFilterToThisUser(),
+                            children: `Filter to this user's content`,
+                          }),
+                        }),
+                    ],
+                  }),
+                }),
+            ],
+          }),
+          _.clanSteamId &&
+            (0, _.jsx)(_, {
+              clanSteamId: _.clanSteamId,
+              steamid: _.steamid,
+            }),
+          (0, _.jsx)(_, {
+            steamid: _.steamid,
+          }),
+          _.clanSteamId &&
+            (0, _.jsx)(_, {
+              clanSteamId: _.clanSteamId,
+              steamid: _.steamid,
+            }),
+        ],
+      });
+}
+function _(_) {
+  let _ = (0, _.useContext)(_),
+    _ = _(_.clanSteamId, _.steamid),
+    _ = _(_.steamid),
+    _ = _(_.steamid),
+    _ = _(_.steamid, _?.rgForum?.appid),
+    _ = !!(_.data?.issupervisor || _.data?.isadmin),
+    _ = _.data?.rank;
+  if (_)
+    return (0, _.jsx)(`img`, {
+      src: `${_.COMMUNITY_CDN_URL}public/images/skin_1/valve_comment.png`,
+      className: _,
+    });
+  let _ = _.data?.isappeditor ?? !1,
+    _ = !!_.data?.app_rights?.edit_info;
+  if ((_ && _) || _ === 1)
+    return (0, _.jsx)(`span`, {
+      className: _,
+      children: `Developer`,
+    });
+  if ((_ && !_) || _ === 2)
+    return (0, _.jsx)(`img`, {
+      className: _,
+      src: `${_.COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_officer.png`,
+    });
+  let _ = _.data?.isglobalmod ?? !1,
+    _ = _.data?.issupport ?? !1,
+    _ = _.data?.realms?.indexOf(_.EREALM) !== -1,
+    _ = _.data?.permissions?.indexOf(19) !== -1;
+  return _ || (_ && _ && _) || _ === 4
+    ? (0, _.jsx)(`img`, {
+        className: _,
+        src: `${_.COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_moderator.png`,
+      })
+    : null;
+}
+function _(_) {
+  let _ = _(_.clanSteamId, _.steamid),
+    _ = _(_.steamid),
+    [_, _] = (0, _.useMemo)(() => {
+      if (!_.data || !_.data.support_messages) return [!1, !1];
+      let _ = !1,
+        _ = !1;
+      for (let _ of _.data.support_messages)
+        _.is_active &&
+        (_.support_message_type === 2 || _.support_message_type === 32)
+          ? (_ = !0)
+          : _.is_active && _.support_message_type === 1 && (_ = !0);
+      return [_, _];
+    }, [_.data]);
+  if (!_.isSuccess || !_.isSuccess) return null;
+  let _ = _.data !== null,
+    _ = [];
+  return (
+    _ && _.push(`Community banned`),
+    _ && _.push(`Hub banned`),
+    _ && _.push(`Trade banned`),
+    (0, _.jsx)(_.Fragment, {
+      children: _.map((_) =>
+        (0, _.jsx)(
+          `div`,
+          {
+            className: _,
+            children: _,
+          },
+          _,
+        ),
+      ),
+    })
+  );
+}
+function _(_) {
+  let [_, _] = (0, _.useState)(!1),
+    _ = (0, _.useRef)(null);
+  return (0, _.jsxs)(`button`, {
+    onClick: (_) => {
+      _(!0), _.stopPropagation();
+      let _ = `${_.COMMUNITY_BASE_URL}moderation/subject/${_.subjectKey.type}-${_.subjectKey.group_id}`;
+      return (
+        _.subjectKey.kind === `single` && (_ += `-${_.subjectKey._}`),
+        _.hash && (_ += `#${_.hash}`),
+        navigator.clipboard.writeText(_),
+        setTimeout(() => _(!1), 1e3),
+        !1
+      );
+    },
+    className: _,
+    ref: _,
+    children: [
+      _ &&
+        _.current &&
+        (0, _.jsx)(_, {
+          target: _.current,
+          direction: `bottom`,
+          children: (0, _.jsx)(`div`, {
+            className: `_39Upy4ScppI-`,
+            children: `Copied.`,
+          }),
+        }),
+      _.children,
+    ],
+  });
+}
+function _(_) {
+  switch (_) {
+    case 11:
+      return _;
+    case 12:
+    case 13:
+      return _;
+    default:
+      return;
+  }
+}
+function _(_) {
+  switch (_.eSanction) {
+    case 11: {
+      let _ = _.data;
+      return (0, _.jsxs)(`ul`, {
+        children: [
+          (0, _.jsxs)(`li`, {
+            children: [`Warning reason: `, _(_.eWarningReason)],
+          }),
+          (0, _.jsxs)(`li`, {
+            children: [`Custom text: `, _.strCustomText],
+          }),
+        ],
+      });
+    }
+    case 12:
+    case 13: {
+      let _ = _.data;
+      return (0, _.jsxs)(`ul`, {
+        children: [
+          _.eSanction === 12 &&
+            (0, _.jsxs)(`li`, {
+              children: [`Ban reason: `, _.strReason],
+            }),
+          _.rtime32BanEnds === 0 &&
+            (0, _.jsx)(`li`, {
+              children: `Ban permanently.`,
+            }),
+          _.rtime32BanEnds !== 0 &&
+            (0, _.jsxs)(`li`, {
+              children: [
+                `Ban until `,
+                _(_.rtime32BanEnds) + ` ` + _(_.rtime32BanEnds),
+              ],
+            }),
+        ],
+      });
+    }
+    default:
+      return null;
+  }
+}
+function _(_) {
+  let { setData: _, data: _, eResolution: _ } = _,
+    _ = (_) => _(_),
+    _ = 7,
+    _ = Date.now() / 1e3;
+  return (
+    _?.rtime32BanEnds &&
+      _.rtime32BanEnds > _ &&
+      (_ = Math.ceil((_.rtime32BanEnds - _) / 86400)),
+    (0, _.jsxs)(`div`, {
+      className: _,
+      children: [
+        _ == 12 &&
+          (0, _.jsxs)(`div`, {
+            children: [
+              `Ban reason: `,
+              (0, _.jsx)(`input`, {
+                type: `text`,
+                value: _?.strReason ?? ``,
+                onChange: (_) => {
+                  let _ = _.target.value;
+                  _({
+                    strReason: _,
+                    rtime32BanEnds:
+                      _?.rtime32BanEnds ??
+                      Math.floor(Date.now() / 1e3) + 7 * 86400,
+                  });
+                },
+              }),
+            ],
+          }),
+        (0, _.jsx)(`div`, {
+          children: (0, _.jsxs)(`label`, {
+            children: [
+              (0, _.jsx)(`input`, {
+                type: `checkbox`,
+                checked: _?.rtime32BanEnds === 0,
+                onChange: (_) => {
+                  let _ = _.target.checked;
+                  _({
+                    strReason: _?.strReason ?? ``,
+                    rtime32BanEnds: _
+                      ? 0
+                      : Math.floor(Date.now() / 1e3) + 7 * 86400,
+                  });
+                },
+              }),
+              ` Ban permanently`,
+            ],
+          }),
+        }),
+        (0, _.jsxs)(`div`, {
+          children: [
+            `Ban for: `,
+            (0, _.jsx)(`input`, {
+              disabled: _?.rtime32BanEnds === 0,
+              type: `number`,
+              value: _,
+              onChange: (_) => {
+                let _ = parseInt(_.target.value) ?? 1;
+                _ = Math.max(1, _);
+                let _ = Math.floor(Date.now() / 1e3) + _ * 86400;
+                _({
+                  strReason: _?.strReason ?? ``,
+                  rtime32BanEnds: _,
+                });
+              },
+            }),
+            ` days.`,
+          ],
+        }),
+      ],
+    })
+  );
+}
+function _(_) {
+  let { setData: _, data: _ } = _,
+    _ = (_) => _(_),
+    _ = (_) => {
+      let _ = parseInt(_.target.value);
+      if (_ === -1) {
+        _(void 0);
+        return;
+      }
+      _({
+        eWarningReason: _,
+        strCustomText: _?.strCustomText ?? ``,
+      });
+    },
+    _ = (_) => {
+      let _ = _.target.value;
+      _(
+        _ === void 0
+          ? void 0
+          : {
+              strCustomText: _,
+              eWarningReason: _?.eWarningReason ?? 0,
+            },
+      );
+    },
+    _ = (0, _.useMemo)(() => {
+      let _ = [];
+      for (let _ = 0; _ < 8; _++)
+        _.push({
+          value: _,
+          text: _(_),
+        });
+      return _.sort((_, _) => _.text.localeCompare(_.text)), _;
+    }, []);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(`div`, {
+        children: (0, _.jsx)(`input`, {
+          type: `text`,
+          value: _?.strCustomText ?? ``,
+          onChange: _,
+        }),
+      }),
+      (0, _.jsx)(`div`, {
+        children: (0, _.jsxs)(`select`, {
+          onChange: _,
+          children: [
+            (0, _.jsx)(`option`, {
+              value: `-1`,
+              children: `Choose reason for warning...`,
+            }),
+            _.map((_) =>
+              (0, _.jsx)(
+                `option`,
+                {
+                  value: _.value,
+                  children: _.text,
+                },
+                _.value,
+              ),
+            ),
+          ],
+        }),
+      }),
+    ],
   });
 }
 export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

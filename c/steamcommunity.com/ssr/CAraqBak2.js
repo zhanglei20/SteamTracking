@@ -1,31 +1,42 @@
 async function _(_, _, ..._) {
   let _ = await fetch(_, {
-    method: `POST`,
-    body: JSON.stringify({
-      _: _,
-      _: _,
+      method: `POST`,
+      body: JSON.stringify({
+        _: _,
+        _: _,
+      }),
+      headers: {
+        [_]: `mutationAction`,
+        "Content-Type": `application/json; charset=utf-8`,
+      },
     }),
-    headers: {
-      [_]: `mutationAction`,
-      "Content-Type": `application/json; charset=utf-8`,
-    },
-  });
-  if (!_._) throw await _.json();
-  return _.json();
+    { data: _, metrics: _ } = await _.json();
+  if (_)
+    try {
+      window.SSR?.saveMetricsMetadata?.(_);
+    } catch (_) {
+      console.error(_);
+    }
+  if (!_._) throw _;
+  return _;
 }
 async function _(_, _, ..._) {
   let _ = new URL(_, window.location.href);
-  return (
-    _.searchParams.set(`q`, _),
-    _.searchParams.set(`qp`, JSON.stringify(_)),
-    (
-      await fetch(_, {
-        headers: {
-          [_]: `queryAction`,
-        },
-      })
-    ).json()
-  );
+  _.searchParams.set(`q`, _), _.searchParams.set(`qp`, JSON.stringify(_));
+  let _ = await fetch(_, {
+    headers: {
+      [_]: `queryAction`,
+    },
+  });
+  if (!_._) throw new _(_, _.status);
+  let { data: _, metrics: _ } = await _.json();
+  if (_)
+    try {
+      window.SSR?.saveMetricsMetadata?.(_);
+    } catch (_) {
+      console.error(_);
+    }
+  return _;
 }
 function _(_, ..._) {
   let _ = _.match(/(?:^|\/)(:[^/]+)/g);

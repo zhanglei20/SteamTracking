@@ -24,11 +24,8 @@ function _(_) {
 }
 function _(_, _) {
   return _({
-    queryKey: _(_.publishedfileid),
-    queryFn: async () =>
-      _(`/sharedfiles/actions`, `GetUGCItemOwnerInfo`, _.publishedfileid),
+    ..._(_.publishedfileid),
     enabled: _(_, _),
-    staleTime: _,
   });
 }
 function _(_, _) {

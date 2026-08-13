@@ -8,7 +8,20 @@ function _() {
       ?.content,
     shareImage: document.querySelector(`head meta[property='og:image']`)
       ?.content,
+    shareImageAlt: document.querySelector(`head meta[name='twitter:image:alt']`)
+      ?.content,
+    canonicalURL: document.querySelector(`head link[rel='canonical']`)?.href,
+    shareCardFormat: document.querySelector(`head meta[name='twitter:card']`)
+      ?.content,
+    articlePublishedTime: _(`article:published_time`),
+    articleModifiedTime: _(`article:modified_time`),
   };
+}
+function _(_) {
+  let _ = document.querySelector(`head meta[property='${_}']`)?.content;
+  if (!_) return;
+  let _ = Date.parse(_);
+  return Number.isNaN(_) ? void 0 : Math.floor(_ / 1e3);
 }
 function _() {
   let _ = document.querySelector(`head meta[property='valve:snr']`)?.content;
@@ -39,7 +52,7 @@ async function _() {
   if (window.SSR?.reactRoot) return;
   _().Init(
     `community SSR`,
-    `10907652`,
+    `10908306`,
     new _(_.WEBAPI_BASE_URL).GetServiceTransport(),
     {
       fnGetReportTags: _,
