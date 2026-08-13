@@ -15433,8 +15433,10 @@
               : d.T.Localize("#moderation_sanction_tradebanned", e.d);
           case c.zw:
             return d.T.Localize("#moderation_sanction_kickedfromgroup");
+          case c.nw:
+            return d.T.Localize("#moderation_sanction_escalated");
           default:
-            return d.T.Localize("#moderation_sanction_unknown");
+            return d.T.Localize("#moderation_sanction_unknown", e.s);
         }
       }
       function R(e) {

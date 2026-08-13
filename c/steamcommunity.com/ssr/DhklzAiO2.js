@@ -42,7 +42,7 @@ var _ = _(_),
   (_.czech = () => _(() => import(`./C-aksKGp.js`), [], import.meta.url)),
   (_.danish = () => _(() => import(`./BSTdg2CL.js`), [], import.meta.url)),
   (_.dutch = () => _(() => import(`./DA-s-TIV.js`), [], import.meta.url)),
-  (_.english = () => _(() => import(`./DivcLTK-.js`), [], import.meta.url)),
+  (_.english = () => _(() => import(`./CERDytio.js`), [], import.meta.url)),
   (_.finnish = () => _(() => import(`./CB2N2KlP.js`), [], import.meta.url)),
   (_.french = () => _(() => import(`./Bj3BB9Rp.js`), [], import.meta.url)),
   (_.german = () => _(() => import(`./BAUg8bwZ.js`), [], import.meta.url)),
@@ -2841,8 +2841,10 @@ function _(_) {
         : _.Localize(`#moderation_sanction_tradebanned`, _._);
     case 9:
       return _.Localize(`#moderation_sanction_kickedfromgroup`);
+    case 12:
+      return _.Localize(`#moderation_sanction_escalated`);
     default:
-      return _.Localize(`#moderation_sanction_unknown`);
+      return _.Localize(`#moderation_sanction_unknown`, _._);
   }
 }
 function _(_) {
