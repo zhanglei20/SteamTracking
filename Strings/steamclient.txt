@@ -104,6 +104,7 @@
   what():
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123-#w
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -3781,6 +3782,7 @@ $steammessages_parental_objects.proto"
 (\r"F\n,CFileVerification_SteamServiceCheck_Response
 (\r"F\n\vCFrameEvent
 (\r"G\n)CContentBuilder_StartDepotUpload_Response
+(\r"G\n,CPublishedFile_GetContentDescriptors_Request
 (\r"H\n!CVideo_ClientGetVideoURL_Response
 (\r"H\n(CPartnerApps_FinishUploadKVSign_Response
 (\r"H\n-CSiteLicense_ClientGetAvailableSeats_Response
@@ -5383,10 +5385,9 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG=
-++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7424,7 +7425,6 @@ $steammessages_parental_objects.proto"
 .EProvideDeckFeedbackPreference
 .EPublishedFileForSaleStatus
 .EPublishedFileRevision
-.EPublishedFileRevision"
 .EPublishedFileRevision: k_EPublishedFileRevision_Default
 .EPublishedFileRevision: k_EPublishedFileRevision_Default"
 .EPublishedFileRevision: k_EPublishedFileRevision_Default",\n*CPublishedFile_RefreshVotingQueue_Response"
@@ -7545,7 +7545,6 @@ $steammessages_parental_objects.proto"
 .ProfilePreferences"(\n&CPlayer_SetProfilePreferences_Response"I\n#CPlayer_PostStatusToFriends_Request
 .PublishedFileAuthorSnapshot
 .PublishedFileAuthorSnapshot"
-.PublishedFileAuthorSnapshot"G\n,CPublishedFile_GetContentDescriptors_Request
 .PublishedFileDetails
 .PublishedFileDetails"
 .PublishedFileDetails.Child
@@ -8161,16 +8160,16 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-01/01/00
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
+01/01/00
 0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -11724,11 +11723,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13549,6 +13548,7 @@ $steammessages_parental_objects.proto"
 30TransportValidationClient_Stub
 30VanityURLChangedNotification_t
 31500
+32500
 3145728
 31AppProofOfPurchaseKeyResponse_t
 31CAPIJobRequestFriendProfileInfo
@@ -13677,7 +13677,6 @@ $steammessages_parental_objects.proto"
 31VoiceMutingHotKeyStateChanged_t
 32 bit float RGBA video
 32 bit float mono audio
-32500
 32:B\n
 32CAPIGameRecordingClientQueryBaseIbE
 32CAPIGameRecordingClientQueryBaseIyE
@@ -16654,7 +16653,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9HhD
+9H(C
 9IClientVR
 9IGv
 9ISteamUGC
@@ -19757,6 +19756,7 @@ CCompatManager::OnPostLogonState
 CCompatManager::RunCacheOffJob
 CCompatManager::RunCacheOffJob - start job
 CCompatManager::SetAppPlatformOverride
+CCompatManager::SpecifyCompatExperiment
 CCompatManager::UpdateInvalidPlatformTracking
 CCompatManager::YldCheckIfAppNeedsPlatformCompatibility
 CCompatManager::YldCheckIfAppNeedsPlatformCompatibility - k_nAppIdAll
@@ -24196,6 +24196,7 @@ Dynamic FPS limiter: %d
 Dynamic refresh in steam support: %d
 Dyp~B\n1
 DzNGXcgyoN
+E!un
 E+E1EAEIESEUEaEwE}E
 E,v\nX
 E-mail Protection
@@ -24244,7 +24245,6 @@ EAppUpdateState
 EAssetPropertyType
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
-EAtn
 EAuthSessionGuardType
 EAuthSessionSecurityHistory
 EAuthTokenAppType
@@ -29417,6 +29417,7 @@ L SoZU`
 L*NBQJ]zr
 L+5d
 L8-\rHO
+L>0,F
 L?333?
 LABEL
 LABEL_OPTIONAL
@@ -34456,7 +34457,6 @@ SRTP_AEAD_AES_256_GCM
 SRTP_AES128_CM_SHA1_32
 SRTP_AES128_CM_SHA1_32:SRTP_AES128_CM_SHA1_80
 SRTP_AES128_CM_SHA1_80
-SRT_LAUNCHER_SERVICE_ALONGSIDE_STEAM
 SRVR
 SSE is required.
 SSE2
@@ -40077,7 +40077,7 @@ Zulu
 [AppID %u] Could not set stats for user %s. User was not verified as playing on the server
 [AppID %u] Create new workshop item of type %s for AppID %u : %llu (%s)
 [AppID %u] Currently already synced to global change number '%llu', should be nothing to download
-[AppID %u] Delaying next workshop updated 5 minutes
+[AppID %u] Delaying next workshop updated 5 minutes (%s)
 [AppID %u] DeleteItem request for %llu => %s
 [AppID %u] DeletePublishedFile request for %llu => %s
 [AppID %u] Detected app platform change sinc last sync - from '%s' to '%s'
@@ -40174,6 +40174,7 @@ Zulu
 [AppID %u] Ignoring flagged conflict for file '%s', setting to 'forgotten'
 [AppID %u] Inhibiting sync requests for pending platform change
 [AppID %u] Invalid content folder or file "%s" for item
+[AppID %u] Item %llu was cached as Steampipe manifest %llu, correcting to legacy content
 [AppID %u] Item file details not available for %llu
 [AppID %u] Job Canceled
 [AppID %u] Loaded schema from disk.
@@ -40189,6 +40190,7 @@ Zulu
 [AppID %u] Need to %s file %s
 [AppID %u] Need to sync from local change number '%llu' to global change number '%llu' (%s), but not attempting now
 [AppID %u] No content change detected for item %llu
+[AppID %u] No workshop depot defined, re-fetching info for supposed non-legacy item %llu
 [AppID %u] No workshop depot defined, skipping non-legacy item %llu
 [AppID %u] Not running AutoCloud on launch because another instance is already running
 [AppID %u] Not running AutoCloud. No config data found
@@ -45532,7 +45534,6 @@ color_green
 color_red
 color_saturation
 com.google.protobufB
-com.steampowered.PressureVessel.LaunchAlongsideSteam
 com.steampowered.SteamOSLogSubmitter.Helper
 com.steampowered.SteamOSLogSubmitter.Manager
 com.steampowered.SteamOSManager1.AmbientLightSensor1
@@ -48819,7 +48820,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -50305,6 +50306,7 @@ include_free_sub
 include_full_description
 include_inactive_customizations
 include_included_items
+include_legacy_items
 include_non_games
 include_only_game_updates
 include_platforms
@@ -53209,6 +53211,7 @@ language_preference
 large
 large_time_jink
 last octet invalid
+last update installed nothing
 last-modifie
 last-modified
 last.MicrosecondsAge( usecNow ) < k_nMillion*10
@@ -53651,15 +53654,15 @@ low-pri yield - ../clientdll/clientjob.cpp:456
 low-pri yield - ../clientdll/clientjob.cpp:487
 low-pri yield - ../clientdll/clientjob.cpp:796
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:6990
-low-pri yield - ../clientdll/compatmanager.cpp:2084
-low-pri yield - ../clientdll/compatmanager.cpp:2340
-low-pri yield - ../clientdll/compatmanager.cpp:2607
-low-pri yield - ../clientdll/compatmanager.cpp:3377
-low-pri yield - ../clientdll/compatmanager.cpp:3434
-low-pri yield - ../clientdll/compatmanager.cpp:3447
-low-pri yield - ../clientdll/compatmanager.cpp:3499
-low-pri yield - ../clientdll/compatmanager.cpp:4100
+low-pri yield - ../clientdll/clientugc.cpp:7059
+low-pri yield - ../clientdll/compatmanager.cpp:2086
+low-pri yield - ../clientdll/compatmanager.cpp:2342
+low-pri yield - ../clientdll/compatmanager.cpp:2609
+low-pri yield - ../clientdll/compatmanager.cpp:3379
+low-pri yield - ../clientdll/compatmanager.cpp:3436
+low-pri yield - ../clientdll/compatmanager.cpp:3449
+low-pri yield - ../clientdll/compatmanager.cpp:3501
+low-pri yield - ../clientdll/compatmanager.cpp:4102
 low-pri yield - ../clientdll/csinterface.cpp:223
 low-pri yield - ../clientdll/depotbuilder.cpp:107
 low-pri yield - ../clientdll/depotreconstruct.cpp:3066
@@ -57487,6 +57490,7 @@ online_collapsed
 online_in_friendsui
 online_session_instances
 only download matching files, eg *.exe;*.dll
+only failures last time
 only found %s while loading config store\n
 only oneshot supported
 only-if-cached
@@ -57981,7 +57985,6 @@ pItem->CurrentBarrierID() < m_vecBarriers.Count()
 pItem->CurrentBarrierID() == -1
 pItem->CurrentBarrierID() >= 0
 pItem->GetJobID() == GetJobID()
-pItem->m_ItemState.m_unManifestID == k_uManifestIdInvalid || pItem->m_ItemState.m_unManifestID == k_uManifestIdLegacyItem
 pJob
 pJob != nullptr
 pJob == m_pJobToNotifyOnLockRelease
@@ -61409,7 +61412,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 11 2026 21:58:25
+steam Aug 13 2026 22:41:29
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

@@ -3308,6 +3308,7 @@ ${LANGUAGE}
 (\r"F\n,CFileVerification_SteamServiceCheck_Response
 (\r"F\n\vCFrameEvent
 (\r"G\n)CContentBuilder_StartDepotUpload_Response
+(\r"G\n,CPublishedFile_GetContentDescriptors_Request
 (\r"H\n!CVideo_ClientGetVideoURL_Response
 (\r"H\n(CPartnerApps_FinishUploadKVSign_Response
 (\r"H\n-CSiteLicense_ClientGetAvailableSeats_Response
@@ -5145,7 +5146,7 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
+++CCUNG8\t
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -6202,9 +6203,9 @@ ${LANGUAGE}
 ../steamUI/serverbrowsercontroller.cpp
 ../steamUI/settinghandler.cpp
 ../steamUI/settingscontroller.cpp
-../steamUI/settingscontroller.cpp:1595
-../steamUI/settingscontroller.cpp:1616
-../steamUI/settingscontroller.cpp:2658
+../steamUI/settingscontroller.cpp:1611
+../steamUI/settingscontroller.cpp:1632
+../steamUI/settingscontroller.cpp:2674
 ../steamUI/settingscontroller.h
 ../steamUI/settingsprofilemanager.cpp
 ../steamUI/sharedconnectioncontroller.cpp
@@ -6918,7 +6919,6 @@ ${LANGUAGE}
 .EProvideDeckFeedbackPreference
 .EPublishedFileForSaleStatus
 .EPublishedFileRevision
-.EPublishedFileRevision"
 .EPublishedFileRevision: k_EPublishedFileRevision_Default
 .EPublishedFileRevision: k_EPublishedFileRevision_Default"
 .EPublishedFileRevision: k_EPublishedFileRevision_Default",\n*CPublishedFile_RefreshVotingQueue_Response"
@@ -7039,7 +7039,6 @@ ${LANGUAGE}
 .ProfilePreferences"(\n&CPlayer_SetProfilePreferences_Response"I\n#CPlayer_PostStatusToFriends_Request
 .PublishedFileAuthorSnapshot
 .PublishedFileAuthorSnapshot"
-.PublishedFileAuthorSnapshot"G\n,CPublishedFile_GetContentDescriptors_Request
 .PublishedFileDetails
 .PublishedFileDetails"
 .PublishedFileDetails.Child
@@ -7614,7 +7613,6 @@ ${LANGUAGE}
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF03S
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
@@ -13531,6 +13529,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9Hh0F
 9IGv
 9Inventory
 9PE,$
@@ -13603,7 +13602,6 @@ ${LANGUAGE}
 :EXTERNAL TYPE %s\n
 :LBN
 :L\n\rsetting_store
-:WE3
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
@@ -15074,7 +15072,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 11 2026 21:58:28
+Aug 13 2026 22:41:31
 August
 Aura
 Australia/Adelaide
@@ -41783,7 +41781,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 ghost_
 gidlist
 gidparentcomment
@@ -45721,6 +45719,7 @@ include_free_sub
 include_full_description
 include_inactive_customizations
 include_included_items
+include_legacy_items
 include_non_games
 include_only_game_updates
 include_platforms
