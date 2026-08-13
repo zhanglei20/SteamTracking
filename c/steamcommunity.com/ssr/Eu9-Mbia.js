@@ -430,7 +430,7 @@ function _(_) {
 function _(_) {
   let { onBrowseHandler: _ } = _(),
     { childpublishedfileid: _, section: _ } = _,
-    _ = _(_, (_) => _(`/sharedfiles/actions`, `GetUGCSummary`, _));
+    _ = _(_);
   return (0, _.jsx)(_, {
     onClear: (0, _.useCallback)(() => {
       _({
@@ -596,8 +596,8 @@ function _(_) {
     },
     [_, _] = (0, _.useState)(_),
     [_, _] = (0, _.useState)(``),
-    _ = _(_, (_) => _(`/workshop/actions`, `SavedWebQueries`, _)),
-    _ = _(_, (_, _) => _(`/workshop/actions`, `UpdateWebQuery`, _, _)),
+    _ = _(_),
+    _ = _(_),
     _ = async () => {
       let _ = _(_);
       (_.query_name = _),

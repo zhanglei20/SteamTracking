@@ -1882,19 +1882,23 @@ function _(_) {
         {
           dataTitle: _.name?.startsWith(`#`) ? _.Localize(_.name) : _.name,
           dataValue: _.tags.map((_, _) =>
-            (0, _.jsxs)(_.Fragment, {
-              children: [
-                _ != 0 && `, `,
-                (0, _.jsx)(
-                  _,
-                  {
-                    href: `${_}&requiredtags%5B%5D=${encodeURIComponent(_.name ?? ``)}`,
-                    children: _.display_name ?? _.name,
-                  },
-                  _._,
-                ),
-              ],
-            }),
+            (0, _.jsxs)(
+              _.Fragment,
+              {
+                children: [
+                  _ != 0 && `, `,
+                  (0, _.jsx)(
+                    _,
+                    {
+                      href: `${_}&requiredtags%5B%5D=${encodeURIComponent(_.name ?? ``)}`,
+                      children: _.display_name ?? _.name,
+                    },
+                    _._,
+                  ),
+                ],
+              },
+              _,
+            ),
           ),
         },
         _,

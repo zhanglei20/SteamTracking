@@ -45,10 +45,8 @@ function _(_) {
 function _(_) {
   let { details: _, bEnlarged: _ } = _,
     _ = (0, _.useContext)(_),
-    _ = _(_.publishedfileid, (..._) =>
-      _(`/sharedfiles/actions`, `GetUserVoteSummary`, ..._),
-    ),
-    _ = _((..._) => _(`/workshop/actions`, `GetCurrentUserFriendsList`, ..._)),
+    _ = _(_.publishedfileid),
+    _ = _(),
     _ = _.logged_in && _(_.file_type),
     _ = _(_.consumer_appid, 1, _.file_type, _.publishedfileid),
     _ = _ && _.cansubscribefrombrowseview,
@@ -195,10 +193,8 @@ var _ = (function (_) {
 function _(_) {
   let { details: _, rgAdditionalInfo: _ } = _,
     _ = (0, _.useContext)(_),
-    _ = _(_.publishedfileid, (..._) =>
-      _(`/sharedfiles/actions`, `GetUserVoteSummary`, ..._),
-    ),
-    _ = _((..._) => _(`/workshop/actions`, `GetCurrentUserFriendsList`, ..._)),
+    _ = _(_.publishedfileid),
+    _ = _(),
     _ = _.logged_in && _(_.file_type),
     _ = _(_.consumer_appid, 1, _.file_type, _.publishedfileid),
     _ = _ && _.cansubscribefrombrowseview,
