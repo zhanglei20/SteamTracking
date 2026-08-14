@@ -742,7 +742,6 @@ $ffn
 %s: failed to read child stdout\n
 %s: failed to run command: %s\n
 %s: failed to start srt-logger service\n
-%s: failed to start steamrt launcher service - games may fail to start\n
 %s: failed to wait for child process: %d\n
 %s: failed with an unexpected nonzero exit status. Trying to continue\n
 %s: fork failed: %d\n
@@ -1359,6 +1358,7 @@ $ffn
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
+++CCUNG j|
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -1482,7 +1482,6 @@ $ffn
 --forward-fd=%d
 --terminate-when-signaled
 --title
---verbose
 --warning
 -0123456789
 -480p
@@ -1987,11 +1986,11 @@ $ffn
 0 Umv
 00000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2535,8 +2534,6 @@ $ffn
 20CWorkItemWithTimeout
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:58:20
-21:58:25
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -2549,6 +2546,8 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:41:20
+22:41:25
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3418,7 +3417,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 11 2026
+Aug 13 2026
 August
 Aura
 AuthANY
@@ -9269,13 +9268,12 @@ Start Of Scan: %d components
 Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
-StartSteamLauncherService
 StartSteamRTAuxillaryProcesses
 StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 11 2026 21:58:25
+Startup - updater built Aug 13 2026 22:41:25
 State
 StaticFileWriterThread()
 Steam
@@ -13675,7 +13673,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(H:
+ggen
 givenName
 glBegin
 glBindTexture
@@ -19064,7 +19062,6 @@ steam-runtime-check-requirements
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
-steam-runtime-launcher-service
 steam-runtime-supervisor
 steam-steamrt.sh
 steam.cfg
