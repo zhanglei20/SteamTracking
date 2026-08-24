@@ -81,6 +81,7 @@ GHomepage = {
 	cSpotlightPanelsPlaced: 0,
 	rgSpotlightPanelsKept: [],
 	rgSpotlightPanelDailyDeals: [],
+	cSpotlightPanelsDuplicate: 0,
 
 	// Daily deals the leading pages had no room for once the panels went in.  FillSpotlightSpecials() places
 	// these on the pages it rebuilds, ahead of any spotlight specials.
@@ -2504,8 +2505,29 @@ GHomepage = {
 
 		var cPages = Math.min( $Pages.length, GHomepage.k_nSpotlightPanelPages );
 
+		// Everything the carousel is going to keep, so a recommendation is never placed as a panel while the same
+		// game is also sitting in a capsule somewhere.  RenderSpotlightSection() chose the capsules on the leading
+		// pages before the recommendations existed, so they were never filtered against them, and it attributes
+		// them as spotlight specials - a game in both places reports under both features.
+		// The capsules past k_iFirstPersonalizedSpotlightPage are left out on purpose: FillSpotlightSpecials()
+		// throws those away and picks again, deduping against our panels as it goes.
+		var $Kept = $J( '.home_area_spotlight, .store_capsule.daily_deal', $Pages )
+			.add( $J( '.store_capsule, .sale_capsule', $Pages.slice( 0, GHomepage.k_iFirstPersonalizedSpotlightPage ) ) );
+
+		var oShownAppIDs = {};
+		$Kept.each( function() {
+			// A package or bundle capsule lists every app it holds, which is what catches a game we would
+			// otherwise duplicate inside one
+			var strAppIDs = $J( this ).data( 'ds-appid' );
+			if ( !strAppIDs )
+				return;
+
+			String( strAppIDs ).split( ',' ).forEach( function( strAppID ) { oShownAppIDs[ strAppID ] = true; } );
+		} );
+
 		var iPanel = 0;
 		GHomepage.cSpotlightPanelsPlaced = 0;
+		GHomepage.cSpotlightPanelsDuplicate = 0;
 		GHomepage.rgSpotlightPanelsKept = [];
 		GHomepage.rgSpotlightPanelDailyDeals = [];
 
@@ -2540,9 +2562,19 @@ GHomepage = {
 			var rgBuilt = [];
 			while ( rgBuilt.length < GHomepage.k_nMaxSpotlightColumns - $Existing.length && iPanel < rgPanels.length )
 			{
-				var $Panel = GHomepage.BuildSpotlightPanel( rgPanels[ iPanel++ ], iPage + 1 );
-				if ( $Panel )
-					rgBuilt.push( $Panel );
+				var oRec = rgPanels[ iPanel++ ];
+				if ( oShownAppIDs[ oRec.appid ] )
+				{
+					GHomepage.cSpotlightPanelsDuplicate++;
+					continue;
+				}
+
+				var $Panel = GHomepage.BuildSpotlightPanel( oRec, iPage + 1 );
+				if ( !$Panel )
+					continue;
+
+				rgBuilt.push( $Panel );
+				oShownAppIDs[ oRec.appid ] = true;
 			}
 
 			// FillSpotlightSpecials() lays the pages from k_iFirstPersonalizedSpotlightPage on out again below and
@@ -2820,6 +2852,7 @@ GHomepage = {
 				skipped_no_cap_params: cNoCapParams,
 				panels_sent: GHomepage.rgSpotlightPanels ? GHomepage.rgSpotlightPanels.length : 0,
 				panels_placed: GHomepage.cSpotlightPanelsPlaced,
+				panels_skipped_duplicate: GHomepage.cSpotlightPanelsDuplicate,
 				panels_kept: GHomepage.rgSpotlightPanelsKept,
 				daily_deals_by_page: GHomepage.rgSpotlightPanelDailyDeals
 			} ) );
