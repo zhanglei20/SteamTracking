@@ -3585,29 +3585,14 @@ function _() {
       },
       $mobx: _,
     });
-var _ = _(_()),
-  _ = _(_()),
-  _ = Object.seal({
-    onMoveUp: _,
-    onMoveDown: _,
-  });
-Object.seal({
-  onMoveRight: _,
-  onMoveLeft: _,
-});
-function _(_, _) {
-  if (_.is_repeat) return !1;
-  let _ = _.GetRelativeDirection(_.button);
-  return _ == _.FORWARD
-    ? _.BFocusFirstChild(_.GAMEPAD)
-    : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
-}
+var _ = _(_());
 if (!_.useState)
   throw Error(`mobx-react-lite requires React with Hooks support`);
 if (!_)
   throw Error(
     `mobx-react-lite@3 requires mobx at least version 6 to be available`,
   );
+var _ = _(_());
 function _(_) {
   _();
 }
@@ -4101,6 +4086,21 @@ function _(_) {
 if (((_.displayName = `MobXProvider`), `19.1.1`.split(`.`)[0], !_.Component))
   throw Error(`mobx-react requires React to be available`);
 if (!_) throw Error(`mobx-react requires mobx to be available`);
+var _ = Object.seal({
+  onMoveUp: _,
+  onMoveDown: _,
+});
+Object.seal({
+  onMoveRight: _,
+  onMoveLeft: _,
+});
+function _(_, _) {
+  if (_.is_repeat) return !1;
+  let _ = _.GetRelativeDirection(_.button);
+  return _ == _.FORWARD
+    ? _.BFocusFirstChild(_.GAMEPAD)
+    : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
+}
 var _ = _({
     Arrow: () => _,
     BackgroundAnimation: () => _,

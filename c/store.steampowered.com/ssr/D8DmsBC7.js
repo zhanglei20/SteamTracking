@@ -795,11 +795,11 @@ function _(_) {
   {
     let _ = _.match(_);
     if (_) {
-      let _ = `https://swarm.valve.org/files/Steam/rel/community/web_src/`,
+      let _ = `https://swarm.valve.org/files/Steam/rel/storefront/web_src/`,
         _ = _[1];
       if (_ && !_.startsWith(`node_modules`)) {
         let _ = _.match(/(.*?):(\d+:(\d+)?)/);
-        return _ ? `${_}${_[1]}?v=@10939746#L${_[2]}` : `${_}${_}?v=@10939746`;
+        return _ ? `${_}${_[1]}?v=@10940579#L${_[2]}` : `${_}${_}?v=@10940579`;
       }
     }
   }
@@ -1179,8 +1179,8 @@ function _(_) {
                         children: (0, _.jsx)(`a`, {
                           target: `_blank`,
                           rel: `noreferrer`,
-                          href: `https://swarm.valve.org/changes/10939746`,
-                          children: `10939746`,
+                          href: `https://swarm.valve.org/changes/10940579`,
+                          children: `10940579`,
                         }),
                       }),
                     ],

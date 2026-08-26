@@ -51,8 +51,8 @@ function _() {
 async function _() {
   if (window.SSR?.reactRoot) return;
   _().Init(
-    `store SSR`,
-    `10939745`,
+    `partner SSR`,
+    `10940581`,
     new _(_.WEBAPI_BASE_URL).GetServiceTransport(),
     {
       fnGetReportTags: _,

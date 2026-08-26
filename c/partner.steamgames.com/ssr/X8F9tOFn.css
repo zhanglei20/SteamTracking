@@ -1,21 +1,3 @@
-body.i6CXUeEZVqY-,
-body.qfuScMc3DDw- {
-  height: 100vh;
-  overflow-y: hidden;
-}
-.Ngyjr2u7VwI- {
-  z-index: 1500;
-  background-color: #000c;
-  position: fixed;
-  inset: 0;
-}
-dialog.DK6ZM4ZPGig- {
-  outline: none;
-  padding: 0;
-}
-dialog.DK6ZM4ZPGig-::backdrop {
-  background: 0 0;
-}
 .wMekKa89a3I- {
   cursor: pointer;
   width: 40px;
@@ -1689,6 +1671,24 @@ button.N-Eqy7AbP-c-.DialogButton:enabled:active:hover:before {
 }
 .fzBY2Qm1hkQ- {
   resize: none;
+}
+body.i6CXUeEZVqY-,
+body.qfuScMc3DDw- {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.Ngyjr2u7VwI- {
+  z-index: 1500;
+  background-color: #000c;
+  position: fixed;
+  inset: 0;
+}
+dialog.DK6ZM4ZPGig- {
+  outline: none;
+  padding: 0;
+}
+dialog.DK6ZM4ZPGig-::backdrop {
+  background: 0 0;
 }
 @keyframes _4ty5H1Z2OIo- {
   0% {
