@@ -53,7 +53,7 @@ var CLSTAMP = "steamdb";
             ._(_[1])
             .then(() => __webpack_require__._(_, 19));
         }
-        (_.keys = () => Object.keys(_)), (_._ = 31818), (_.exports = _);
+        (_.keys = () => Object.keys(_)), (_._ = 9437), (_.exports = _);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         var _ = {
@@ -3083,6 +3083,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(21380));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(2901));
   _ = _._(_);
 })();

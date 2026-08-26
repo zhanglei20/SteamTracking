@@ -53,7 +53,7 @@ var CLSTAMP = "steamdb";
             ._(_[1])
             .then(() => __webpack_require__._(_, 19));
         }
-        (_.keys = () => Object.keys(_)), (_._ = 31818), (_.exports = _);
+        (_.keys = () => Object.keys(_)), (_._ = 9437), (_.exports = _);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         var _ = {
@@ -3156,8 +3156,8 @@ var CLSTAMP = "steamdb";
           "./sk.js": 26404,
           "./sl": 7057,
           "./sl.js": 7057,
-          "./sq": 3337,
-          "./sq.js": 3337,
+          "./sq": 25718,
+          "./sq.js": 25718,
           "./sr": 45363,
           "./sr-cyrl": 20478,
           "./sr-cyrl.js": 20478,
@@ -37541,7 +37541,7 @@ var CLSTAMP = "steamdb";
           (_.dutch = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 4473, 19))),
           (_.english = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 99660, 19))),
+            __webpack_require__._("chunkid").then(_._.bind(_, 77279, 19))),
           (_.finnish = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 54976, 19))),
           (_.french = () =>
@@ -131974,7 +131974,6 @@ var CLSTAMP = "steamdb";
         295: "64a5aae7cba430984eff",
         316: "b4a4125ab8550ef83a0b",
         382: "416dc2c22c72ab0b0084",
-        435: "53f700b8ba058beca5d4",
         474: "6a9d0b4e2892dded462e",
         496: "fb606fd9941402c4c9fd",
         559: "953f1cf690b4e5511a43",
@@ -132087,15 +132086,15 @@ var CLSTAMP = "steamdb";
         7246: "734ad76f5986901f4de5",
         7247: "7021b7a5aaf6d7ee9806",
         7263: "8bee25587608c97b575c",
-        7279: "517986a1a60b51aa9eb8",
+        7279: "4fa8dad9d6bcde1d380b",
         7365: "bb74e03060db6e6f780a",
         7418: "7680875bb68efceaf698",
-        7462: "e32c6d024a6a0fcdc679",
+        7462: "cda717020b69d3faa1a2",
         7464: "d527671518fba684fd01",
         7468: "53e0875c52dff3de164a",
         7487: "49d81d8d15ad6c6cb411",
         7637: "4d32b59b329ef468b7d5",
-        7653: "8fd18207a9547ebb4a1a",
+        7653: "48362d097308af8a0530",
         7673: "065a311d75b3213d4f15",
         7788: "d010383f4ccc1c1b6efb",
         7861: "7b73403c160be056831f",
@@ -132117,9 +132116,10 @@ var CLSTAMP = "steamdb";
         8855: "f6463721cab65712879d",
         8871: "db91511bbe45c67ef042",
         8930: "25153545da6040645366",
+        8943: "af93bf694b32feed7244",
         9273: "702b2119e94a4b56417e",
-        9382: "df937e7ca0a29469dbb2",
         9401: "0c0cd9c24baf6ebde222",
+        9419: "6d3010aafad4fa52c252",
         9457: "29fc2a26fae6d38d2a96",
         9574: "545cb7f78522f0b92438",
         9668: "a4cfb18de81aad6185bf",
@@ -132373,6 +132373,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(78196));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(72336));
   _ = _._(_);
 })();
