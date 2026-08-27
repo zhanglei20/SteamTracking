@@ -1,4 +1,4 @@
-var CLSTAMP = "10921138";
+var CLSTAMP = "10938119";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -16265,9 +16265,9 @@ var CLSTAMP = "10921138";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 18 2026 : 15:32:45",
-                BUILD_TIME_UTC: "Aug 18 2026 : 22:32:45",
-                BUILD_RTIME_UTC: 1787092365,
+                BUILD_TIME_LOCAL: "Aug 25 2026 : 11:39:00",
+                BUILD_TIME_UTC: "Aug 25 2026 : 18:39:00",
+                BUILD_RTIME_UTC: 1787683140,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -17116,21 +17116,32 @@ var CLSTAMP = "10921138";
       },
       736: (e, t, r) => {
         "use strict";
-        function n(e, t) {
-          return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
+        function n(e) {
+          return (function (e, t) {
+            return null !== o(e, t);
+          })(window, e);
         }
-        function i(e) {
-          return n(window, e);
+        function i(e, t) {
+          const r = t.lastIndexOf(".");
+          if (-1 == r) return !1;
+          const n = t.substring(0, r),
+            i = t.substring(r + 1),
+            s = o(e, n);
+          return null !== s && "function" == typeof s[i];
         }
-        function s(e, t) {
-          if (!e) return !1;
-          const [r, i] = t.split(".", 2);
-          return r && i && n(e, r) && i in e.SteamClient[r];
+        function s(e) {
+          return i(window, e);
         }
-        function o(e) {
-          return s(window, e);
+        function o(e, t) {
+          const r = (e) => e && "object" == typeof e;
+          let n = e?.SteamClient;
+          for (const e of t.split(".")) {
+            if (!r(n) || !(e in n)) return null;
+            n = n[e];
+          }
+          return r(n) ? n : null;
         }
-        r.d(t, { Dp: () => o, Fj: () => s, L: () => i });
+        r.d(t, { Dp: () => s, Fj: () => i, L: () => n });
       },
       73788: (e, t, r) => {
         "use strict";
@@ -29282,9 +29293,9 @@ var CLSTAMP = "10921138";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 18 2026 : 15:32:45",
-                    BUILD_TIME_UTC: "Aug 18 2026 : 22:32:45",
-                    BUILD_RTIME_UTC: 1787092365,
+                    BUILD_TIME_LOCAL: "Aug 25 2026 : 11:39:00",
+                    BUILD_TIME_UTC: "Aug 25 2026 : 18:39:00",
+                    BUILD_RTIME_UTC: 1787683140,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -30164,7 +30175,7 @@ var CLSTAMP = "10921138";
         9779: "59ef76674166d4b9e52e",
         9845: "67d8ccf06f062089fbdd",
         9853: "7be45ac954716a4a58c1",
-        9858: "cb625fc9721aa250087a",
+        9858: "a340534037e7d2507659",
         9861: "28739986a6f0de57d87c",
         9862: "f7642c72003ad4fab6eb",
         9869: "d3b3dea779721d721088",

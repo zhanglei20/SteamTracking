@@ -104,6 +104,7 @@
   what():
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123-sw
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -2053,6 +2054,7 @@ $steammessages_parental_objects.proto"
 %02X
 %02X%02X
 %02X:
+%02X:%02X:%02X:%02X:%02X:%02X
 %02d%02d%02d%02d%02d%02dZ
 %02d/%02d/%02d
 %02d:%02d:%02d
@@ -5394,6 +5396,7 @@ $steammessages_parental_objects.proto"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7884,6 +7887,7 @@ $steammessages_parental_objects.proto"
 /depot/%d/manifest/%llu/%d/%llu%s
 /depot/%d/patch/%llu/%llu
 /depot/%d/patch/%llu/%llu%s
+/depot/%s
 /depot_index
 /depotcache
 /dev
@@ -8119,6 +8123,10 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+00000
+000000
+00000000
+0000000000000000000000000000000000000000
 0.0333
 0.050
 0.125
@@ -8167,20 +8175,17 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-00000
-000000
-00000000
-0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -11735,11 +11740,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+20000
+2000000
 200M
 2019
 2048
-20000
-2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13826,9 +13831,8 @@ $steammessages_parental_objects.proto"
 32UserSubscribedItemsListChanged_t
 32f5h290g53047gv5034nbvt923b
 3333
-3333UUUU
-360.0
 333333
+3333UUUU
 333?333?
 33554432
 33AvailableBeaconLocationsUpdated_t
@@ -14252,6 +14256,7 @@ $steammessages_parental_objects.proto"
 35ParentalLockChangeAttemptComplete_t
 35RemoteStoragePublishedFileDeleted_t
 35StoreItem_BasicInfo_CreatorHomeLink
+360.0
 36CAPIJobMatchmakingRequestLobbyStatus
 36CAudio_GetMonoDownmixEnabled_Request
 36CAudio_GetSupportedFeatures_Response
@@ -16060,6 +16065,7 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16074,7 +16080,6 @@ $steammessages_parental_objects.proto"
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16104,6 +16109,7 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
+7200
 65536
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
@@ -16183,7 +16189,6 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
-7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -17231,6 +17236,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/``
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -21418,7 +21424,6 @@ CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIProcessStreamStart
 CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIProcessStreamStop
 CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIStreamingAudioPrepared
 CRemoteClientJobStartStream timed out k_ERemoteClientWaitVRConnectionReady
-CRemoteClientManager - only IPv4 currently supported
 CRemoteClientManager::AutoConnectToRemoteIfNecessary
 CRemoteClientManager::BCheckConnectionAndExpiration
 CRemoteClientManager::CheckClientConnections
@@ -23159,6 +23164,7 @@ Corrupt update files
 Corrupted Stats block from Client: MsgClientStoreUserStats_Deprecated_t
 Corrupted or unrecoverable data error
 Corruption detected in '%s', clean bytes tally reset to 0
+Could not bind socket to %s: %d (ipv4 = %s ipv6 = %s, using = %s)
 Could not create an instance of
 Could not find job for received '%s' (%d).  Will attempt to spawn a new job.\n
 Could not find shader cache directory for AppID %u!
@@ -24149,6 +24155,7 @@ Drive removed: %s
 DriverDate
 DriverVersion
 DroppedVideoFrames
+Dropping XInput event, frame buffer full for controller %u
 Dropping connect request from %s.  Existing connection on virtual port %d, now they are asking for virtual port %d!?
 Dropping packet: entry not locked
 Dropping.
@@ -29435,8 +29442,8 @@ L SoZU`
 L*NBQJ]zr
 L+5d
 L8-\rHO
+L>0|F
 L?333?
-L?Lr
 LABEL
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -29828,7 +29835,6 @@ M5my
 M8MF
 M;;va
 M@WQf
-M@Wp
 MAC
 MANGOHUD_CONFIGFILE
 MARK
@@ -42741,6 +42747,7 @@ Zulu
 ^/cachestatus(.*)$
 ^/cancellogin(.*)$
 ^/clientstatus(.*)$
+^/depot/(.*)$
 ^/language(.*)$
 ^/login(.*)$
 ^/loginstatus(.*)$
@@ -48854,7 +48861,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenh)
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -61447,7 +61454,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 18 2026 23:29:55
+steam Aug 26 2026 19:04:12
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

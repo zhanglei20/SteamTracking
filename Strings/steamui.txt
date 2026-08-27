@@ -5146,7 +5146,6 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -7606,11 +7605,11 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -9188,9 +9187,6 @@ ${LANGUAGE}
 16StoreItem_Assets
 16UserAccount_Stub
 16VideoClient_Stub
-2000
-2019
-2048
 1724792014
 17Achievements_Stub
 17CCaptureFailedMsg
@@ -9633,7 +9629,10 @@ ${LANGUAGE}
 20.GamePerformanceSettings.EGamePerformanceSetting
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
+2000
 200M
+2019
+2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13044,6 +13043,7 @@ ${LANGUAGE}
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
 6144
+65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -13084,7 +13084,6 @@ ${LANGUAGE}
 64CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-65536
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 666666666666666666666666666666666666666666666666
@@ -13529,7 +13528,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hh<F
+9Hh;F
 9IGv
 9Inventory
 9PE,$
@@ -13602,7 +13601,6 @@ ${LANGUAGE}
 :EXTERNAL TYPE %s\n
 :LBN
 :L\n\rsetting_store
-:Wc3
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
@@ -13637,6 +13635,7 @@ ${LANGUAGE}
 :scheme
 :statu
 :status
+:wb3
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -15073,7 +15072,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 18 2026 23:29:58
+Aug 26 2026 19:04:16
 August
 Aura
 Australia/Adelaide

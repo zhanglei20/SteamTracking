@@ -17990,9 +17990,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 18 2026 : 15:32:45",
-                BUILD_TIME_UTC: "Aug 18 2026 : 22:32:45",
-                BUILD_RTIME_UTC: 1787092365,
+                BUILD_TIME_LOCAL: "Aug 25 2026 : 11:39:00",
+                BUILD_TIME_UTC: "Aug 25 2026 : 18:39:00",
+                BUILD_RTIME_UTC: 1787683140,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -18884,19 +18884,30 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
+        function _(_) {
+          return (function (_, _) {
+            return null !== _(_, _);
+          })(window, _);
+        }
         function _(_, _) {
-          return !!_ && "object" == typeof _.SteamClient && _ in _.SteamClient;
+          const _ = _.lastIndexOf(".");
+          if (-1 == _) return !1;
+          const _ = _.substring(0, _),
+            _ = _.substring(_ + 1),
+            _ = _(_, _);
+          return null !== _ && "function" == typeof _[_];
         }
         function _(_) {
           return _(window, _);
         }
         function _(_, _) {
-          if (!_) return !1;
-          const [_, _] = _.split(".", 2);
-          return _ && _ && _(_, _) && _ in _.SteamClient[_];
-        }
-        function _(_) {
-          return _(window, _);
+          const _ = (_) => _ && "object" == typeof _;
+          let _ = _?.SteamClient;
+          for (const _ of _.split(".")) {
+            if (!__webpack_require__(_) || !(_ in _)) return null;
+            _ = _[_];
+          }
+          return __webpack_require__(_) ? _ : null;
         }
         __webpack_require__._(_, {
           _: () => _,
@@ -31527,9 +31538,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 18 2026 : 15:32:45",
-                    BUILD_TIME_UTC: "Aug 18 2026 : 22:32:45",
-                    BUILD_RTIME_UTC: 1787092365,
+                    BUILD_TIME_LOCAL: "Aug 25 2026 : 11:39:00",
+                    BUILD_TIME_UTC: "Aug 25 2026 : 18:39:00",
+                    BUILD_RTIME_UTC: 1787683140,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -32477,7 +32488,7 @@ var CLSTAMP = "steamdb";
         9779: "59ef76674166d4b9e52e",
         9845: "67d8ccf06f062089fbdd",
         9853: "7be45ac954716a4a58c1",
-        9858: "cb625fc9721aa250087a",
+        9858: "a340534037e7d2507659",
         9861: "28739986a6f0de57d87c",
         9862: "f7642c72003ad4fab6eb",
         9869: "d3b3dea779721d721088",
