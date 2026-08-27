@@ -4956,6 +4956,8 @@ ${FILENAME}
 18StoreItem_Trailers
 196?
 198
+19:04:07
+19:04:11
 19CActivationCodeInfo
 19CClientHandshakeMsg
 19CClientMicroTxnInfo
@@ -5265,8 +5267,6 @@ ${FILENAME}
 22StoreItem_PackageGroup
 22StoreItem_RelatedItems
 232>
-23:29:50
-23:29:53
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CECKeyExchangePublicKey
@@ -5586,7 +5586,6 @@ ${FILENAME}
 3265&
 3265''6654#72
 3265'3
-32654
 32654##
 32654##5
 32654#'
@@ -5611,8 +5610,6 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
-32654.
-32655
 32655&
 32655&&
 326554&"
@@ -5627,6 +5624,9 @@ ${FILENAME}
 3267!5!&&#"
 3267&'^7l
 3267.
+32654
+32654.
+32655
 32675
 32675#5!
 32675&&#"
@@ -6019,10 +6019,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
+467.
 4632
 46632
 467&&54632
-467.
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6246,9 +6246,6 @@ ${FILENAME}
 52{M
 52|{k
 531lo
-5467
-54632
-54663
 532654.
 532>
 536654#!5!
@@ -6260,6 +6257,9 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
+5467
+54632
+54663
 546632
 5467!
 5467#".
@@ -6486,10 +6486,10 @@ ${FILENAME}
 67!5!
 675!
 6753
-6754&#"
-67547&55&'7
 6786
 666666666666666666666666666666666666666666666666
+6754&#"
+67547&55&'7
 67Zc
 68Jy
 699[
@@ -8860,7 +8860,7 @@ Aufgenommen Eingabe abspielen
 Aufnahme
 Aufnahme %d
 Aufnahme fehlgeschlagen
-Aug 18 2026
+Aug 26 2026
 Augmenter la vitesse du contr
 August
 Auktorisering
@@ -13786,6 +13786,8 @@ ILHv
 IMG_FreeAnimation
 IMG_LoadAnimation_IO
 IMG_Load_IO
+IMG_isJPG
+IMG_isPNG
 IMG_isSVG
 IMPLICIT
 IMS/
@@ -22106,6 +22108,7 @@ Warning: Couldn't find actionset %d in config for app %d, defaulting to the firs
 Warning: Couldn't initialize TTF font loading\n
 Warning: Couldn't load font %s: %s\n
 Warning: Couldn't load image: %s\n
+Warning: Couldn't load image: Unknown image format\n
 Warning: Couldn't open %s\n
 Warning: Couldn't parse SVG image
 Warning: Couldn't reset the USB device %s\n
@@ -32420,7 +32423,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Aug 18 2026 23:29:53
+lib Aug 26 2026 19:04:10
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -33725,7 +33728,6 @@ nDO7
 nDataCenterPing >= 0 && nDataCenterPing < 5000
 nDataSize <= m_nCapacity
 nDecoded == k_nOpusPacketSamples
-nDecoded >= 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
 nDestSize == 0 || pDest != NULL
 nDiff > 0 && nDiff < 0x4000
@@ -36723,6 +36725,7 @@ scoring_penalty_relay_cluster
 scots
 screenshot_full
 screenshot_medium
+script
 scrypt
 scsv received when renegotiating
 sct future timestamp

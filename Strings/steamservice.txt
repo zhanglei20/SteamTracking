@@ -938,7 +938,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1@K5
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1212,7 +1211,6 @@ $ffn
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{jm
 +2Hp
 +HpXhE
 +QQ 3K%
@@ -1677,10 +1675,10 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00000000
+0123456789.
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
@@ -2142,6 +2140,7 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
+19:04:07
 19CClientInstallUtils
 19CCuratorPreferences
 19CDirContentsWatcher
@@ -2236,7 +2235,6 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:29:50
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23CECKeyExchangePublicKey
@@ -2538,7 +2536,6 @@ $ffn
 :':+:1:K:Q:[:c:g:m:y:
 :.JlN
 :5ptI.T(
-:7A0
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -3052,7 +3049,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 18 2026
+Aug 26 2026
 August
 Aura
 AuthANY
@@ -12511,7 +12508,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -17093,6 +17090,7 @@ scheduledItem.m_ulTime
 scheme=
 schinese
 scots
+script
 scrypt
 scsv received when renegotiating
 sct future timestamp

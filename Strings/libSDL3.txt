@@ -759,6 +759,7 @@ Activate
 ActivationToken
 Active
 Active Off: %s\n
+Activision.Xbox.Input.GH7
 AddNotification
 Added HIDAPI device '%s' VID 0x%.4x, PID 0x%.4x, bluetooth %d, version %d, serial %s, interface %d, interface_class %d, interface_subclass %d, interface_protocol %d, usage page 0x%.4x, usage 0x%.4x, path = %s, driver = %s (%s)
 Again
@@ -1044,6 +1045,7 @@ Current locale not supported by X server, cannot continue.
 Cursor hot spot doesn't lie within cursor
 Cursor not associated with the current mouse
 D-Bus not available
+D3!Q\f
 DEBUG
 DEBUG_INVOCATION
 DESKTOP
@@ -1335,7 +1337,8 @@ GamePad-%d
 GameSir
 GameSir Controller
 GameSir-G7 Pro 8K
-GameSir: Device detected - G7 Pro 8K mode (PID 0x%04X)
+GameSir-Tarantula 8K
+GameSir: Device detected - %s (PID 0x%04X)
 GameSir: failed to send SDL mode switch command (0xA2, 0x01)
 Gamepad %u not found
 Gamesir Xbox Controller
@@ -1650,6 +1653,8 @@ MUSIC
 MVK_CONFIG_FULL_IMAGE_VIEW_SWIZZLE
 Mad Catz
 Mad Catz Inc.
+MadCatz.Xbox.Drums.Glam
+MadCatz.Xbox.Guitar.Stratocaster
 MakeThreadHighPriorityWithPID
 MakeThreadRealtimeWithPID
 Malformed APP_ID
@@ -1858,6 +1863,8 @@ PDP Xbox One Specter Violet
 PDP Xbox One Verdant Green
 PDP Xbox Series X Afterglow
 PDP Xbox Series X Midnight Blue
+PDP.Xbox.Drums.Tablah
+PDP.Xbox.Guitar.Jaguar
 PICTURES
 PLTE
 PNG not supported: 1/2/4/8/16-bit only
@@ -2132,7 +2139,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1219-g63bf4c1c7
+SDL-release-3.4.0-1339-g6648b7966
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -4951,6 +4958,7 @@ You probably don't have a working Vulkan driver installed. %s %s %s(%d)
 Ypitch
 Yplane
 ZUIKI EVOTOP
+ZUIKI EVOTOP AXIS
 ZUIKI MASCON PRO
 Zero buffer/length
 [General]\n
@@ -5717,9 +5725,10 @@ misc1:b11,misc2:b12
 misc1:b11,misc2:b12,
 misc1:b11,paddle1:b12,paddle2:b13,paddle3:b14,paddle4:b15,
 misc1:b11,paddle1:b12,paddle2:b13,paddle3:b14,paddle4:b15,touchpad:b17,misc2:b16
-misc1:b11,paddle1:b13,paddle2:b12,misc2:b14,misc3:b15,
+misc1:b11,paddle1:b13,paddle2:b12,paddle3:b15,paddle4:b14,
 misc2
 misc2:b15,misc3:b16,
+misc2:b16,misc3:b17,misc4:b18,misc5:b19,misc6:b20,
 misc3
 misc4
 misc4:b17,misc5:b18,misc6:b19
@@ -5905,6 +5914,7 @@ pointer
 points
 poll
 posix_fallocate
+posix_spawn() failed: %d
 posix_spawn() failed: %s
 posix_spawn_file_actions_addchdir failed: %s
 posix_spawn_file_actions_addchdir_np
@@ -6422,6 +6432,7 @@ verystrict
 vfork
 video
 video4linux
+video_output
 view
 viewport
 viewport != ((void *)0)
