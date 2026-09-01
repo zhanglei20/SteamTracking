@@ -2008,6 +2008,7 @@ ${LANGUAGE}
 %\n\rGameRecording
 %\n\vbeta_status
 %\n\vgame_rating
+%\n\vnotice_type
 %\n\vtoken_state
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %d %H:%M:%S %Y UTC
@@ -2387,6 +2388,7 @@ ${LANGUAGE}
 &.CBroadcast_SessionClosed_Notification
 &.CBroadcast_WebRTCStartResult_Response"
 &.CChatRoom_AckChatMessage_Notification
+&.CChatRoom_ChatRoomNotice_Notification
 &.CChatRoom_CreateChatRoomGroup_Request
 &.CChatRoom_DeleteChatMessages_Response"
 &.CChatRoom_DeleteRoleFromUser_Response"
@@ -5146,8 +5148,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGSY
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG~a
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -5628,6 +5632,7 @@ ${LANGUAGE}
 -.CBroadcast_WebRTCAddViewerCandidate_Response"
 -.CBroadcast_WebRTCHaveTURNServer_Notification
 -.CBroadcast_WebRTCNeedTURNServer_Notification
+-.CChatRoom_DismissChatRoomNotice_Notification
 -.CChatRoom_GetMessageReactionReactors_Request
 -.CClientMetrics_EndGameRecording_Notification
 -.CClientMetrics_IPv6Connectivity_Notification
@@ -6424,11 +6429,13 @@ ${LANGUAGE}
 .CChatRoomGroupHeaderState
 .CChatRoomGroupHeaderState"
 .CChatRoomGroupInvite"P\n"CChatRoom_DeleteInviteLink_Request
+.CChatRoomGroupMemberNotices"
 .CChatRoomGroupState
 .CChatRoomGroupState"d\n0CChatRoom_SetAppChatRoomGroupForceActive_Request
 .CChatRoomMember
 .CChatRoomMember"
 .CChatRoomMemberListView
+.CChatRoomMemberNotice"
 .CChatRoomMemberSummaryCounts
 .CChatRoomState
 .CChatRoomState"J\n CChatRoom_DeleteChatRoom_Request
@@ -6826,6 +6833,9 @@ ${LANGUAGE}
 .EChatRoomMemberStateChange"N\n4ChatRoomClient_NotifyChatRoomDisconnect_Notification
 .EChatRoomMemberStateChange"^\n*CChatRoom_ChatRoomHeaderState_Notification
 .EChatRoomMessageReactionType
+.EChatRoomNotice
+.EChatRoomNotice"
+.EChatRoomNotice"d\n
 .EChatRoomNotificationLevel
 .EChatRoomNotificationLevel:$k_EChatroomNotificationLevel_Invalid
 .EChatRoomServerMessage
@@ -7559,7 +7569,6 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
-0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7604,12 +7613,13 @@ ${LANGUAGE}
 0000
 00000000
 0000000000000000000000000000000000000000
+0.15
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10099,6 +10109,7 @@ ${LANGUAGE}
 21CAPICallYieldInternalI24SubmitItemUpdateResult_tE
 21CAPICallYieldInternalI37RemoteStorageFileWriteAsyncComplete_tE
 21CAPICallYieldInternalI39ControllerSystemReportPreparedChanged_tE
+21CChatRoomMemberNotice
 21CClanAnnouncementInfo
 21CCloud_Delete_Request
 21CDiscoveryPingRequest
@@ -10532,6 +10543,7 @@ ${LANGUAGE}
 27;C
 27CAudio_ResetConfig_Response
 27CBroadcast_WebRTC_Candidate
+27CChatRoomGroupMemberNotices
 27CChatRoom_GetRoles_Response
 27CChatRoom_KickUser_Response
 27CChatRoom_MuteUser_Response
@@ -11539,6 +11551,7 @@ ${LANGUAGE}
 37CBroadcast_SessionClosed_Notification
 37CBroadcast_WebRTCStartResult_Response
 37CChatRoom_AckChatMessage_Notification
+37CChatRoom_ChatRoomNotice_Notification
 37CChatRoom_CreateChatRoomGroup_Request
 37CChatRoom_DeleteChatMessages_Response
 37CChatRoom_DeleteRoleFromUser_Response
@@ -12274,6 +12287,7 @@ ${LANGUAGE}
 44CBroadcast_WebRTCHaveTURNServer_Notification
 44CBroadcast_WebRTCNeedTURNServer_Notification
 44CChatRoom_DeleteChatMessages_Request_Message
+44CChatRoom_DismissChatRoomNotice_Notification
 44CChatRoom_GetMessageReactionReactors_Request
 44CChatRoom_SearchMembers_Response_MemberMatch
 44CClientMetrics_ContentDownloadResponse_Hosts
@@ -13042,8 +13056,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-6144
-65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -13056,6 +13068,7 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13084,6 +13097,7 @@ ${LANGUAGE}
 64CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
+65536
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 666666666666666666666666666666666666666666666666
@@ -13528,7 +13542,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hh;F
 9IGv
 9Inventory
 9PE,$
@@ -13635,7 +13648,6 @@ ${LANGUAGE}
 :scheme
 :statu
 :status
-:wb3
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -15072,7 +15084,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 26 2026 19:04:16
+Aug 28 2026 22:09:05
 August
 Aura
 Australia/Adelaide
@@ -15919,9 +15931,11 @@ CChatPartyBeacon
 CChatRoleActions
 CChatRoomGroupHeaderState
 CChatRoomGroupInvite
+CChatRoomGroupMemberNotices
 CChatRoomGroupState
 CChatRoomMember
 CChatRoomMemberListView
+CChatRoomMemberNotice
 CChatRoomMemberSummaryCounts
 CChatRoomState
 CChatRoomSummaryPair
@@ -16246,6 +16260,7 @@ CDesktopCapturePipeWire: PipeWire core error: %s\n
 CDesktopCapturePipeWire: PipeWire stream format changed (size: %dx%d, format %d, stride %d, size %d, dmabuf: %d)\n
 CDesktopCapturePipeWire: PipeWire stream state changed to %s\n
 CDesktopCapturePipeWire: PipeWire stream state error: %s\n
+CDesktopCapturePipeWire: Start request was rejected. Deleting our session token to allow a clean run next time; try rebooting and see if the permissions dialog shows up.\n
 CDesktopCapturePipeWire: Start signal received.\n
 CDesktopCapturePipeWire: Stopping capture session
 CDesktopCapturePipeWire: Unknown buffer type: %d\n
@@ -19912,6 +19927,7 @@ Disk write failure
 DiskSerialHash
 Disk_
 Disk_%u
+DismissChatRoomNotice
 DismissJSDialog
 DismissSessionNotice
 DispatchCompletedItem
@@ -20212,6 +20228,7 @@ EChatRoomGroupRank
 EChatRoomJoinState
 EChatRoomMemberStateChange
 EChatRoomMessageReactionType
+EChatRoomNotice
 EChatRoomNotificationLevel
 EChatRoomServerMessage
 EChatSessionNotice
@@ -26828,6 +26845,7 @@ NotifyChatMessageModified
 NotifyChatRoomDisconnect
 NotifyChatRoomGroupRoomsChange
 NotifyChatRoomHeaderStateChange
+NotifyChatRoomNotice
 NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
@@ -34086,6 +34104,7 @@ Zulu
 \n%*sZone: %s, User:
 \n%12s%s
 \n%CAccountHardware_SaveHardware_Request
+\n%CChatRoom_ChatRoomNotice_Notification
 \n%CChatRoom_CreateChatRoomGroup_Request
 \n%CClientMetrics_ClipRange_Notification
 \n%CClientMetrics_ClipShare_Notification
@@ -34277,6 +34296,7 @@ Zulu
 \n,CBroadcast_BroadcastChannelLive_Notification
 \n,CBroadcast_BroadcastViewerState_Notification
 \n,CBroadcast_SendThumbnailToRelay_Notification
+\n,CChatRoom_DismissChatRoomNotice_Notification
 \n,CChatRoom_GetMessageReactionReactors_Request
 \n,CClientMetrics_EndGameRecording_Notification
 \n,CClientMetrics_IPv6Connectivity_Notification
@@ -38363,6 +38383,7 @@ chat_font_size
 chat_group_avatar_sha
 chat_group_ids
 chat_group_name
+chat_group_notices
 chat_group_preferences
 chat_group_summary
 chat_group_tagline
@@ -46522,6 +46543,8 @@ k_EChatRoomGroupRank_Viewer
 k_EChatRoomJoinState_Default
 k_EChatRoomJoinState_Joined
 k_EChatRoomJoinState_None
+k_EChatRoomNotice_Invalid
+k_EChatRoomNotice_Suspicious
 k_EChatRoomServerMsg_AppCustom
 k_EChatRoomServerMsg_Invalid
 k_EChatRoomServerMsg_Invited
@@ -50420,6 +50443,7 @@ mem_walk
 mem_write
 member
 member-body
+member_notices
 member_steamid
 member_summary
 members
@@ -58091,6 +58115,7 @@ z~rvjnbfZ^RVJNBF
 {A7Dd
 {GCOKWS_[
 {OYK
+{P5C
 {\n"version": %u,\n"gameids" : [\n
 {\n\t"file_format_version" : "1.0.0",\n\t"layer" : {\n\t\t"name": "%s",\n\t\t"type": "GLOBAL",\n\t\t"library_path": "%s/%s",\n\t\t"api_version": "1.3.207",\n\t\t"implementation_version": "1",\n\t\t"description": "%s",\n\t\t"disable_environment": { "DISABLE_%s": "1" },\n\t\t"enable_environment": { "ENABLE_%s": "1" }%s\n\t}\n}\n
 {cKS

@@ -246,7 +246,7 @@ $ORIGIN
 %s: %ld (%lx)
 %s: %s (%d): %s %s
 %s: %s (%d): %s %s (0x%X)
-%sCARD=%s
+%sCARD=%s,DEV=%d
 %sa%u%s
 %shint:SDL_GAMECONTROLLER_USE_GAMECUBE_LABELS:=1,
 %u bpp BMP files not supported
@@ -1045,7 +1045,6 @@ Current locale not supported by X server, cannot continue.
 Cursor hot spot doesn't lie within cursor
 Cursor not associated with the current mouse
 D-Bus not available
-D3!Q\f
 DEBUG
 DEBUG_INVOCATION
 DESKTOP
@@ -1763,6 +1762,7 @@ No plane supports the selected resolution
 No safe area within viewport
 No shader body src
 No such device
+No such sensor on this device
 No supported HIDAPI haptic driver found for joystick
 No supported SDL_GPU backend found!
 No usable displays found or requested display out of range
@@ -2139,7 +2139,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1339-g6648b7966
+SDL-release-3.4.0-1359-g70e9cc86d
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -3057,6 +3057,8 @@ SDL_GetJoystickProductForID
 SDL_GetJoystickProductVersion
 SDL_GetJoystickProductVersionForID
 SDL_GetJoystickProperties
+SDL_GetJoystickSensorData
+SDL_GetJoystickSensorDataRate
 SDL_GetJoystickSerial
 SDL_GetJoystickType
 SDL_GetJoystickTypeForID
@@ -3401,6 +3403,8 @@ SDL_JOYSTICK_ZERO_CENTERED_DEVICES
 SDL_Joystick
 SDL_JoystickConnected
 SDL_JoystickEventsEnabled
+SDL_JoystickHasSensor
+SDL_JoystickSensorEnabled
 SDL_KEYCODE_OPTIONS
 SDL_KillProcess
 SDL_LOGGING
@@ -3788,6 +3792,7 @@ SDL_SetInitialized
 SDL_SetJoystickEventsEnabled
 SDL_SetJoystickLED
 SDL_SetJoystickPlayerIndex
+SDL_SetJoystickSensorEnabled
 SDL_SetJoystickVirtualAxis
 SDL_SetJoystickVirtualBall
 SDL_SetJoystickVirtualButton
@@ -4620,7 +4625,6 @@ WM_DELETE_WINDOW
 WM_NAME
 WM_PROTOCOLS
 WM_STATE
-WM_TAKE_FOCUS
 WM_TRANSIENT_FOR
 Wacom Serial IDs
 Wacom Tool Type
