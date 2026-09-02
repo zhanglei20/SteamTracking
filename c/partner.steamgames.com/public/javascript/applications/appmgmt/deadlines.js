@@ -2087,7 +2087,7 @@
                   (0, _.jsx)("span", {
                     className: _().DocumentProcessingNotice,
                     children:
-                      "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process typically takes 2 to 7 days.",
+                      "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process takes up to 10 days.",
                   }),
                 ],
               }),
