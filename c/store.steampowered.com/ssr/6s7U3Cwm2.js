@@ -1064,6 +1064,7 @@ var _ = _(_()),
     m_cbkTokensChanged = new _();
     m_rgLocalesToUse;
     m_bReportIndividualMissingTokens = !0;
+    m_bReady = !1;
     static GetLanguageFallback(_) {
       return _ === `sc_schinese` ? `schinese` : `english`;
     }
@@ -1094,6 +1095,9 @@ var _ = _(_()),
         this.m_mapFallbackTokens.clear(),
         this.AddTokens(_, _),
         this.m_cbkTokensChanged.Dispatch();
+    }
+    SetReady(_) {
+      this.m_bReady = _;
     }
     AddTokens(_, _) {
       Object.keys(_).forEach((_) => {
@@ -1146,13 +1150,13 @@ var _ = _(_()),
         this.m_mapTokens.size === 0
           ? _(
               !1,
-              `Attempting to localize token '${_}' with no tokens in our map.`,
+              `Attempting to localize token '${_}' with no tokens in our map for language '${_.LANGUAGE}'. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
             )
           : !_ &&
             this.m_bReportIndividualMissingTokens &&
             _().ReportError(
               Error(
-                `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
               ),
               {
                 bIncludeMessageInIdentifier: !0,

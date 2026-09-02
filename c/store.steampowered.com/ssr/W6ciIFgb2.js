@@ -79,7 +79,10 @@ function _(_) {
     return Promise.all(
       Array.from(_).map((_) =>
         _(_).then((_) => {
-          if (!_) return;
+          if (!_) {
+            console.error(`Project loc failed to load language ${_}, got ${_}`);
+            return;
+          }
           let _ = new Map();
           for (let [_, _] of Object.entries(_)) _.set(`#` + _, _);
           _.set(_, _);
@@ -88,8 +91,12 @@ function _(_) {
     );
   }
   let _ = _(),
+    _ = !1,
     _ = !1;
-  _.then(() => (_ = !0)), _(_);
+  _.then(() => (_ = !0)).catch((_) => {
+    console.error(`LoadStrings error`, _), (_ = !0);
+  }),
+    _(_);
   function _(_, _) {
     let [_, ..._] = _,
       _ =
@@ -97,6 +104,13 @@ function _(_) {
         _.get(_(_.strLanguage) ?? `english`)?.get(_);
     if (_ !== void 0) return _;
     if (_.length === 0) {
+      if (_)
+        return (
+          console.warn(
+            `Couldn't find localization key ${_} after erroring loading strings`,
+          ),
+          _
+        );
       if (!_) throw _;
       return (
         _().ReportError(Error(`Couldn't find localization key ${_}`), {

@@ -1674,12 +1674,22 @@
                 _.capsules.some((_) => !_) &&
                 (_.capsules = _.capsules.filter((_) => !!_));
           }
+          BTagsNeedResync() {
+            var _;
+            return !!(
+              (_ = this.m_curModel.jsondata) != null &&
+              _.bResyncableTagsStripped
+            );
+          }
+          OnStrippedTagsResynced() {
+            this.m_curModel.jsondata.bResyncableTagsStripped = void 0;
+          }
           OnPreSave() {
             this.RemoveNullCapsules(),
               this.PreSaveEventTimeAssignment(),
               this.FixupTabVisibilitySettings(),
               this.FixupMediaRowUniqueID(),
-              (0, _._)(this);
+              this.BTagsNeedResync() || (0, _._)(this);
           }
           FixupMediaRowUniqueID() {
             for (const _ of this.GetSaleSections())
@@ -1800,7 +1810,7 @@
           }
           ConstructJSONData() {
             return this.m_curModel.jsondata
-              ? JSON.stringify(this.m_curModel.jsondata)
+              ? JSON.stringify((0, _._)(this.m_curModel.jsondata))
               : "";
           }
           SetImageURL(_, _, _ = _.Bhc) {
@@ -2759,6 +2769,8 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -3011,6 +3023,50 @@
             }),
             _
           );
+        }
+        const _ = [_._.Store, _._.Feature, _._.OptIn, _._.AppType, _._.Auto];
+        function _(_) {
+          const _ = (0, _._)(_);
+          return !!_ && _.includes(_);
+        }
+        const _ = 2e3;
+        function _(_) {
+          return !_.tagged_items || _.tagged_items.length <= _
+            ? _
+            : {
+                ..._,
+                bResyncableTagsStripped: !0,
+                tagged_items: _.tagged_items.map((_) => {
+                  var _;
+                  return {
+                    ..._,
+                    tags: ((_ = _.tags) != null ? _ : []).filter(
+                      (_) =>
+                        !_(_) ||
+                        _(_.toLocaleLowerCase(), _.manually_added_tags),
+                    ),
+                  };
+                }),
+              };
+        }
+        async function _(_, _) {
+          const _ = _.GetEventModel().GetTaggedItems();
+          await _(_, _, {
+            bUpdateStore: !0,
+            bUpdateFeatures: !0,
+            bUpdateAppTypes: !0,
+            bUpdateOptIn: !0,
+            bSyncTop20StoreTags: !0,
+          }),
+            _.OnStrippedTagsResynced();
+          const _ = (_) => {
+            const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
+            return (
+              !_ ||
+              _.GetIncludedAppIDsOrSelf().some((_) => !_._.Get().GetApp(_))
+            );
+          };
+          return _.map((_) => _.capsule).filter(_);
         }
         function _(_) {
           var _;
@@ -4510,6 +4566,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -4909,6 +4966,15 @@
                 ),
               );
             });
+          const _ = (0, _._)(_.GetEventModel().jsondata),
+            _ = (_) => (JSON.stringify(_) || "").length,
+            _ = new Map(
+              Object.entries(_.GetEventModel().jsondata).map(([_, _]) => [
+                _,
+                _(_),
+              ]),
+            ),
+            _ = new Map(Object.entries(_).map(([_, _]) => [_, _(_)]));
           let _ = _.GetEventModel().jsondata;
           _ && (_ = _(_)),
             _
@@ -5247,6 +5313,12 @@
                       JSON.stringify(_.GetEventModel().jsondata).length,
                     ],
                   }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Json size (stored): ",
+                      JSON.stringify(_).length,
+                    ],
+                  }),
                   (0, _.jsx)(_._, {
                     data: _,
                   }),
@@ -5270,16 +5342,22 @@
                           (0, _.jsx)("h1", {
                             children: "Json size: event json properties",
                           }),
-                          Object.entries(_.GetEventModel().jsondata).map(
-                            ([_, _]) =>
-                              (0, _.jsx)(
+                          Array.from(_.entries())
+                            .sort((_, _) => _[1] - _[1])
+                            .map(([_, _]) => {
+                              var _;
+                              const _ = (_ = _.get(_)) != null ? _ : _;
+                              return (0, _.jsx)(
                                 "div",
                                 {
-                                  children: `${_.toString()}: ${JSON.stringify(_).length}`,
+                                  children:
+                                    _ === _
+                                      ? `${_}: ${_}`
+                                      : `${_}: ${_} (stored ${_})`,
                                 },
-                                _.toString(),
-                              ),
-                          ),
+                                _,
+                              );
+                            }),
                         ],
                       })
                     : (0, _.jsx)(_._, {

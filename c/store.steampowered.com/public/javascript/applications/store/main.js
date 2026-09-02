@@ -17993,7 +17993,12 @@
             return Promise.all(
               Array.from(_).map((_) =>
                 _(_).then((_) => {
-                  if (!_) return;
+                  if (!_) {
+                    console.error(
+                      `Project loc failed to load language ${_}, got ${_}`,
+                    );
+                    return;
+                  }
                   const _ = new Map();
                   for (const [_, _] of Object.entries(_)) _.set("#" + _, _);
                   _.set(_, _);
@@ -18002,8 +18007,12 @@
             );
           }
           const _ = _();
-          let _ = !1;
-          _.then(() => (_ = !0)), (0, _._)(_);
+          let _ = !1,
+            _ = !1;
+          _.then(() => (_ = !0)).catch((_) => {
+            console.error("LoadStrings error", _), (_ = !0);
+          }),
+            (0, _._)(_);
           function _(_, _) {
             const [_, ..._] = _,
               _ =
@@ -18011,6 +18020,13 @@
                 _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
             if (_ !== void 0) return _;
             if (_.length === 0) {
+              if (_)
+                return (
+                  console.warn(
+                    `Couldn't find localization key ${_} after erroring loading strings`,
+                  ),
+                  _
+                );
               if (!_) throw _;
               return (
                 (0, _._)().ReportError(
@@ -128243,6 +128259,7 @@ Status Code:` +
           _: () => _._,
           _: () => _._,
           _: () => _,
+          _: () => _,
           _: () => _._,
           _: () => _,
           _: () => _,
@@ -128277,6 +128294,7 @@ Status Code:` +
           m_cbkTokensChanged = new _._();
           m_rgLocalesToUse;
           m_bReportIndividualMissingTokens = !0;
+          m_bReady = !1;
           static GetLanguageFallback(_) {
             return _ === "sc_schinese" ? "schinese" : "english";
           }
@@ -128309,6 +128327,9 @@ Status Code:` +
               this.m_mapFallbackTokens.clear(),
               this.AddTokens(_, _),
               this.m_cbkTokensChanged.Dispatch();
+          }
+          SetReady(_) {
+            this.m_bReady = _;
           }
           AddTokens(_, _) {
             Object.keys(_).forEach((_) => {
@@ -128361,13 +128382,13 @@ Status Code:` +
               this.m_mapTokens.size === 0
                 ? (0, _._)(
                     !1,
-                    `Attempting to localize token '${_}' with no tokens in our map.`,
+                    `Attempting to localize token '${_}' with no tokens in our map for language '${_._.LANGUAGE}'. SharedLoc ready: ${_._.IsReady()}. site has inited: ${this.m_bReady}`,
                   )
                 : !_ &&
                   this.m_bReportIndividualMissingTokens &&
                   (0, _._)().ReportError(
                     new Error(
-                      `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                      `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${_._.IsReady()}. site has inited: ${this.m_bReady}`,
                     ),
                     {
                       bIncludeMessageInIdentifier: !0,
@@ -128634,6 +128655,15 @@ Status Code:` +
         }
         function _(_) {
           return _[_];
+        }
+        async function _(_, _) {
+          let _ = await _;
+          if (
+            (_?.default && Object.keys(_).length === 1 && (_ = _.default),
+            !_ || Object.keys(_).length === 0)
+          )
+            throw new Error(`Empty localization file for ${_}`);
+          return _;
         }
         function _(_) {
           let _,
@@ -141397,33 +141427,59 @@ Status Code:` +
           _ || (_ = _(_._.LANGUAGE)), await _;
         }
         _(), _._(_);
+        function _() {}
         async function _(_) {
           const _ = _._.GetLanguageFallback(_),
             _ = _ === _,
             [_, _, _, _, _, _] = await (0, _._)([
-              __webpack_require__("chunkid")(`./sales_${_}.json`),
-              __webpack_require__("chunkid")(`./main_${_}.json`),
-              __webpack_require__("chunkid")(`./marketing_${_}.json`),
-              _ ? {} : __webpack_require__("chunkid")(`./sales_${_}.json`),
-              _ ? {} : __webpack_require__("chunkid")(`./main_${_}.json`),
-              _ ? {} : __webpack_require__("chunkid")(`./marketing_${_}.json`),
+              (0, _._)(
+                __webpack_require__("chunkid")(`./sales_${_}.json`),
+                `sales_${_}`,
+              ),
+              (0, _._)(
+                __webpack_require__("chunkid")(`./main_${_}.json`),
+                `main_${_}`,
+              ),
+              (0, _._)(
+                __webpack_require__("chunkid")(`./marketing_${_}.json`),
+                `marketing_${_}`,
+              ),
+              _
+                ? {}
+                : (0, _._)(
+                    __webpack_require__("chunkid")(`./sales_${_}.json`),
+                    `sales_${_}`,
+                  ),
+              _
+                ? {}
+                : (0, _._)(
+                    __webpack_require__("chunkid")(`./main_${_}.json`),
+                    `main_${_}`,
+                  ),
+              _
+                ? {}
+                : (0, _._)(
+                    __webpack_require__("chunkid")(`./marketing_${_}.json`),
+                    `marketing_${_}`,
+                  ),
               _._.Ready(),
               _.Ready(),
               _._.Ready(),
               (0, _._)(),
             ]);
-          _._.AddTokens(
-            {
-              ..._,
-              ..._,
-              ..._,
-            },
-            {
-              ..._,
-              ..._,
-              ..._,
-            },
-          );
+          _._.SetReady(!0),
+            _._.AddTokens(
+              {
+                ..._,
+                ..._,
+                ..._,
+              },
+              {
+                ..._,
+                ..._,
+                ..._,
+              },
+            );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
