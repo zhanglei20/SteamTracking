@@ -10536,7 +10536,7 @@ function _(_) {
       });
 }
 function _(_) {
-  let { loading: _, nRows: _, fnRender: _, ref: _, ..._ } = _,
+  let { loading: _, nRows: _, fnRender: _, bDragging: _, ref: _, ..._ } = _,
     _ = _(),
     _ = _ ? 30 : 10,
     [_, _] = _.useState(174),
@@ -10562,7 +10562,12 @@ function _(_) {
     }, []);
   return (0, _.jsx)(_, {
     navKey: `VirtualizedWishlistInner`,
-    className: (0, _.default)(_, _ && `_1ihIbWlnK8c-`, _ && `pcLljC6uYLs-`),
+    className: (0, _.default)(
+      _,
+      _ && `_1ihIbWlnK8c-`,
+      _ && `pcLljC6uYLs-`,
+      _ && `YCdP1u-0174-`,
+    ),
     nRows: _,
     nItemHeight: _,
     nRowGap: 0,
@@ -10675,6 +10680,7 @@ function _(_) {
       children: (_, _) =>
         (0, _.jsx)(_, {
           onButtonDown: _,
+          bDragging: !!_.draggingFromThisWith,
           loading: _,
           fnRender: _,
           nRows: _.items.length || 0,
