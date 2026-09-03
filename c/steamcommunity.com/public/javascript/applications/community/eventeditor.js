@@ -3948,9 +3948,14 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -6536,7 +6541,6 @@
               });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -12928,8 +12932,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { editModel: _, broadcastEditModel: _ } = _,
@@ -17744,7 +17746,6 @@
           );
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = 100;
         function _(_) {
@@ -18777,17 +18778,6 @@
             ],
           });
         }
-        var _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
         function _(_) {
           var _;
           const { bInitiatePublishDialog: _, clanSteamID: _ } = _,
@@ -19157,23 +19147,75 @@
             ],
           });
         }
-        let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.m_clanSteamID = new _._(_._.CLANSTEAMID));
-          }
-          render() {
-            return (0, _.jsx)(_, {
-              appid_or_vanity_str: this.props.match.params.appid_or_vanity_str,
-              appid: _._.APPID,
-              gid: this.props.match.params.gid,
-              clanSteamID: this.m_clanSteamID,
-              bInitiatePublishDialog: this.props.bInitiatePublishDialog,
-            });
-          }
-        };
-        _ = _([_._], _);
-        const _ = (0, _._)(_);
+        function _() {
+          const _ = (0, _._)(),
+            _ = _._.GetEditModel(),
+            [_, _] = (0, _.useState)(!1);
+          return (
+            (0, _.useEffect)(() => {
+              if (!(_ != null && _.BTagsNeedResync())) return;
+              let _ = !1;
+              return (
+                (0, _._)(_, _)
+                  .then((_) => {
+                    !_ &&
+                      _.length > 0 &&
+                      (0, _._)(
+                        (0, _._)(
+                          "#EventEditor_TagResyncIncomplete",
+                          _.length,
+                          _.slice(0, 10)
+                            .map((_) => _.type + " " + _._)
+                            .join(", "),
+                        ),
+                        window,
+                      );
+                  })
+                  .catch((_) => {
+                    console.error(
+                      "Failed to rebuild the stripped tags for this event",
+                      _,
+                    ),
+                      _ || _(!0);
+                  }),
+                () => {
+                  _ = !0;
+                }
+              );
+            }, [_, _]),
+            {
+              bResyncing: !!(_ != null && _.BTagsNeedResync()) && !_,
+              bFailed: _,
+            }
+          );
+        }
+        const _ = (0, _._)(function (_) {
+            const _ = (0, _.useMemo)(() => new _._(_._.CLANSTEAMID), []),
+              { bResyncing: _, bFailed: _ } = _();
+            return _
+              ? (0, _.jsxs)("div", {
+                  className: _().FlexCenter,
+                  children: [
+                    (0, _.jsx)(_._, {}),
+                    (0, _.jsx)("div", {
+                      children: (0, _._)("#EventEditor_TagResyncProgress"),
+                    }),
+                  ],
+                })
+              : _
+                ? (0, _.jsx)(_._, {
+                    strErrorMsg: (0, _._)("#EventEditor_TagResyncFailed"),
+                    appid_or_vanity_str: _.match.params.appid_or_vanity_str,
+                  })
+                : (0, _.jsx)(_, {
+                    appid_or_vanity_str: _.match.params.appid_or_vanity_str,
+                    appid: _._.APPID,
+                    gid: _.match.params.gid,
+                    clanSteamID: _,
+                    bInitiatePublishDialog: _.bInitiatePublishDialog,
+                  });
+          }),
+          _ = (0, _._)(_);
         class _ extends _.Component {
           constructor(_) {
             super(_),
