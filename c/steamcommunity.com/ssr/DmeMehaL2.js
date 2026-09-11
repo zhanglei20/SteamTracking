@@ -1016,44 +1016,6 @@ function _(_) {
     children: _,
   });
 }
-var _ = 60 * 1e3;
-function _(_) {
-  return [`ugc_contributor_data`, _];
-}
-function _(_) {
-  return [`ugc_friends_who_favorited`, _];
-}
-function _(_) {
-  return [`workshop_item_owner_info`, _];
-}
-function _(_) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => _(`/sharedfiles/actions`, `GetUGCItemOwnerInfo`, _),
-    staleTime: _,
-  };
-}
-function _(_) {
-  return _({
-    queryKey: _(_),
-    queryFn: async () => _(`/sharedfiles/actions`, `GetUGCContributorData`, _),
-    staleTime: _,
-  });
-}
-var _ = 3600 * 1e3;
-function _(_) {
-  return _({
-    queryKey: _(_.publishedfileid),
-    queryFn: async () =>
-      _(
-        `/sharedfiles/actions`,
-        `GetFriendsWhoFavoritedItem`,
-        _.consumer_appid,
-        _.publishedfileid,
-      ),
-    staleTime: _,
-  });
-}
 function _(_) {
   return (
     _.EREALM !== _.k_ESteamRealmChina &&
@@ -1127,6 +1089,44 @@ function _(_, _) {
         }
       : {}),
   };
+}
+var _ = 60 * 1e3;
+function _(_) {
+  return [`ugc_contributor_data`, _];
+}
+function _(_) {
+  return [`ugc_friends_who_favorited`, _];
+}
+function _(_) {
+  return [`workshop_item_owner_info`, _];
+}
+function _(_) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => _(`/sharedfiles/actions`, `GetUGCItemOwnerInfo`, _),
+    staleTime: _,
+  };
+}
+function _(_) {
+  return _({
+    queryKey: _(_),
+    queryFn: async () => _(`/sharedfiles/actions`, `GetUGCContributorData`, _),
+    staleTime: _,
+  });
+}
+var _ = 3600 * 1e3;
+function _(_) {
+  return _({
+    queryKey: _(_.publishedfileid),
+    queryFn: async () =>
+      _(
+        `/sharedfiles/actions`,
+        `GetFriendsWhoFavoritedItem`,
+        _.consumer_appid,
+        _.publishedfileid,
+      ),
+    staleTime: _,
+  });
 }
 var _ = `E1JKtrpIMGI-`,
   _ = `_5v-1QFzpE-U-`,

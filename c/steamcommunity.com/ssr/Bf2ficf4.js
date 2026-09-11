@@ -24,26 +24,6 @@ function _(_) {
     ],
   });
 }
-function _(_, _, _ = NaN) {
-  let { strSymbol: _, strDecimalSymbol: _, strThousandsSeparator: _ } = _(_);
-  (_ = _.replace(_, ``)
-    .replace(`.--`, `.00`)
-    .replace(/ /g, ``)
-    .replace(_(_), ``)),
-    _ !== `.` && (_ = _.replace(_(_), `.`));
-  let _ = _.indexOf(`.`),
-    _ = _.lastIndexOf(`.`);
-  if (_ !== -1 && _ !== _) {
-    let _ = _.split(`.`);
-    _[_.length - 1].length > 0 &&
-      (_ = `${_.slice(0, -1).join(``)}.${_[_.length - 1]}`);
-  }
-  let _ = parseFloat(_) * 100;
-  return isNaN(_) ? _ : Math.floor(_ + 1e-6);
-}
-function _(_) {
-  return _ === `.` ? /\./g : new RegExp(_, `g`);
-}
 function _(_, _) {
   var _ = Object.keys(_);
   if (Object.getOwnPropertySymbols) {
@@ -255,6 +235,26 @@ _(_, `displayName`, `ReferenceArea`),
     stroke: `none`,
     strokeWidth: 1,
   });
+function _(_, _, _ = NaN) {
+  let { strSymbol: _, strDecimalSymbol: _, strThousandsSeparator: _ } = _(_);
+  (_ = _.replace(_, ``)
+    .replace(`.--`, `.00`)
+    .replace(/ /g, ``)
+    .replace(_(_), ``)),
+    _ !== `.` && (_ = _.replace(_(_), `.`));
+  let _ = _.indexOf(`.`),
+    _ = _.lastIndexOf(`.`);
+  if (_ !== -1 && _ !== _) {
+    let _ = _.split(`.`);
+    _[_.length - 1].length > 0 &&
+      (_ = `${_.slice(0, -1).join(``)}.${_[_.length - 1]}`);
+  }
+  let _ = parseFloat(_) * 100;
+  return isNaN(_) ? _ : Math.floor(_ + 1e-6);
+}
+function _(_) {
+  return _ === `.` ? /\./g : new RegExp(_, `g`);
+}
 function _(_) {
   let { children: _ } = _;
   return (0, _.jsx)(_, {
