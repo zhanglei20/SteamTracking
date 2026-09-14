@@ -3105,6 +3105,8 @@
     "AppLanding_CreatorLocked": "This name cannot be changed while linked to a creator home.  If edit required, first unlink.",
     "AppLanding_Creator_UnlinkDesc": "Unlink '%1$s' from '%2$s' for this game. This will be applied immediately.",
     "AppLanding_Creator_SaveRequires": "* Requires Saving",
+    "AppLanding_Creator_FranchiseSameAsDevPub": "Your franchise page cannot be the same as your developer or publisher page.",
+    "AppLanding_Creator_DeveloperNameMismatch": "This group is already linked to a publisher with a different name. See instructions to the right.",
     "AppLanding_Creator_Choice": "Pick a creator homepage",
     "AppLAnding_Creator_LinkingTitle": "Link '%1$s' to a homepage",
     "AppLAnding_Creator_LinkingDesc": "Select an existing creator homepage or community group to be linked to '%1$s' for this game.",

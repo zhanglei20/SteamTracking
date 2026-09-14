@@ -146,6 +146,7 @@ message CContentModeration_GetModeratorActivity_Response_ModerationActivity {
 	optional uint32 timestamp = 4;
 	optional int32 action = 5 [(.description) = "enum"];
 	optional string json_data = 6;
+	optional uint64 reported_content_id = 7;
 }
 
 message CContentModeration_GetModeratorPreferences_Request {
@@ -170,6 +171,7 @@ message CContentModeration_GetOldestUnresolvedSubjects_Response_Subject {
 	optional int32 subject_type = 1 [(.description) = "enum"];
 	optional uint64 subject_group_id = 2;
 	optional uint64 subject_id = 3;
+	optional uint64 reported_content_id = 4;
 }
 
 message CContentModeration_GetOneReportSubmittedByUser_Request {
@@ -245,6 +247,14 @@ message CContentModeration_GetSubjectOverview_Response_Bucket {
 	optional uint32 oldest_unresolved_for_any_moderator = 11;
 	optional uint32 oldest_unresolved_for_supervisor = 12;
 	optional uint32 oldest_unresolved_for_valve = 13;
+}
+
+message CContentModeration_OwnerDisputeModeration_Request {
+	optional uint64 reported_content_id = 1;
+	optional string details = 2;
+}
+
+message CContentModeration_OwnerDisputeModeration_Response {
 }
 
 message CContentModeration_ReleaseSubjects_Request {
@@ -384,6 +394,7 @@ message ContentReport {
 	optional int32 dispute_resolved_reason = 22 [(.description) = "enum"];
 	repeated .ContentReportSubjectSanction sanctions_applied = 23;
 	repeated .ContentReportSubjectSanction sanctions_applied_on_dispute = 24;
+	optional uint64 reported_content_id = 25;
 }
 
 message ContentReportSubject {
@@ -487,6 +498,8 @@ service ContentModeration {
 	rpc GetReportsSubmittedByUser (.CContentModeration_GetReportsSubmittedByUser_Request) returns (.CContentModeration_GetReportsSubmittedByUser_Response);
 	// ePrivilege=5
 	rpc GetSubjectOverview (.CContentModeration_GetSubjectOverview_Request) returns (.CContentModeration_GetSubjectOverview_Response);
+	// ePrivilege=1
+	rpc OwnerDisputeModeration (.CContentModeration_OwnerDisputeModeration_Request) returns (.CContentModeration_OwnerDisputeModeration_Response);
 	// ePrivilege=5
 	rpc ReleaseSubjects (.CContentModeration_ReleaseSubjects_Request) returns (.CContentModeration_ReleaseSubjects_Response);
 	// ePrivilege=1

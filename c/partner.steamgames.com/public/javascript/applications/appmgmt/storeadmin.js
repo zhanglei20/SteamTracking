@@ -162,8 +162,12 @@
         Ctn: "_1ZAQLoxm9d3f6xrGzbfNqv",
         CreatorCtn: "_3E1g0g32lII6LOwFavs-pL",
         CreatorNameCtn: "_19ddIB98Eino8bn5wXuKtY",
+        CreatorStatusCtn: "O-Pu4bjH4MigfkfagtPeP",
         HoverCtn: "_2BgPwOwyt6_vzsU2JpcvFM",
         Avatar: "_2aKMBhqBnmiLCGD_hcZSx3",
+        CreatorCtnError: "tN8iKI_k1ulzwyVVkMZ_d",
+        ErrorIcon: "ZVfEgEjtH7tAsGX1IaM2j",
+        ErrorText: "_1nZjxaUnIUZlozbCYgBdi_",
       };
     },
     chunkid: (module) => {
@@ -16192,6 +16196,9 @@
             nPrimaryPartnerID: _,
             strName: _,
             strKvTargetName: _,
+            rgConflictClanAccountIDs: _,
+            rgNameMustMatchLinks: _,
+            strMatchKey: _,
           } = _,
           [_, _] = (0, _.useState)(() => _),
           _ = (function (_, _) {
@@ -16209,7 +16216,17 @@
             (_) =>
               _.linkname.trim().toLocaleLowerCase() ==
               _.trim().toLocaleLowerCase(),
-          );
+          ),
+          _ = (0, _.useMemo)(() => {
+            if (!_) return null;
+            const _ = new _._(_.clan_steamid).GetAccountID();
+            if (_?.includes(_))
+              return (0, _._)("#AppLanding_Creator_FranchiseSameAsDevPub");
+            const _ = _?.filter((_) => _.clanAccountID === _);
+            return _?.length && !_.some((_) => _.strMatchKey === _)
+              ? (0, _._)("#AppLanding_Creator_DeveloperNameMismatch")
+              : null;
+          }, [_, _, _, _]);
         return (0, _.jsxs)("div", {
           className: _().Ctn,
           children: [
@@ -16234,6 +16251,7 @@
               (0, _.jsx)(_, {
                 pageLink: _,
                 strKvTargetName: _,
+                strLinkIssue: _,
               }),
             Boolean(!_ && _?.trim().length > 0) &&
               (0, _.jsx)(_, {
@@ -16282,21 +16300,38 @@
         };
       }
       function _(_) {
-        const { pageLink: _, strKvTargetName: _ } = _,
+        const { pageLink: _, strKvTargetName: _, strLinkIssue: _ } = _,
           { clanAccountID: _, clanInfo: _, strURL: _ } = _(_, _);
         return (0, _.jsxs)("div", {
           className: _().CreatorNameCtn,
           children: [
-            (0, _.jsx)("div", {
-              className: _().CreatorCtn,
-              children: (0, _._)(
-                "#AppLanding_CreatorLinked",
-                (0, _.jsx)(_, {
-                  clanAccountID: _,
-                  strURL: _,
-                  clanInfo: _,
+            (0, _.jsxs)("div", {
+              className: _().CreatorStatusCtn,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().CreatorCtn, _ && _().CreatorCtnError),
+                  children: [
+                    Boolean(_) &&
+                      (0, _.jsx)("span", {
+                        className: _().ErrorIcon,
+                        children: "✖",
+                      }),
+                    (0, _._)(
+                      "#AppLanding_CreatorLinked",
+                      (0, _.jsx)(_, {
+                        clanAccountID: _,
+                        strURL: _,
+                        clanInfo: _,
+                      }),
+                    ),
+                  ],
                 }),
-              ),
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _().ErrorText,
+                    children: _,
+                  }),
+              ],
             }),
             (0, _.jsx)(_, {
               pageLink: _,

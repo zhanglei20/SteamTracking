@@ -355,6 +355,7 @@ ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestmarketingmessagemajorupdaterevi
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestsalepagereview
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxsetprivatedata
 ${COMMUNITY_BASE_URL}partnerevents/${}/userpoll/${}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${}
+${COMMUNITY_BASE_URL}partnerevents/${}/userpoll/${}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=store
 ${COMMUNITY_BASE_URL}profiles/${STEAM_ID}/wishlist
 ${COMMUNITY_BASE_URL}profiles/${actor_steamid}
 ${COMMUNITY_BASE_URL}profiles/${reporter_steamid}
@@ -422,6 +423,7 @@ ${COMMUNITY_BASE_URL}sharedfiles/edititem/${appid}/11/
 ${COMMUNITY_BASE_URL}sharedfiles/edititem/${appid}/9/
 ${COMMUNITY_BASE_URL}sharedfiles/edititem/${}/${}/${}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/${}/${publishedfileid}/
+${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${published_file_id}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
@@ -432,6 +434,7 @@ ${COMMUNITY_BASE_URL}sharedfiles/reportitem
 ${COMMUNITY_BASE_URL}sharedfiles/updaterestrictedcountries
 ${COMMUNITY_BASE_URL}sharedfiles/uploadartwork/?appid=${}
 ${COMMUNITY_BASE_URL}sharedfiles/votingqueue/?appid=${appid}&matchingFileType=17
+${COMMUNITY_BASE_URL}stats/${}/achievements
 ${COMMUNITY_BASE_URL}tempcloud/beginfileupload/
 ${COMMUNITY_BASE_URL}tempcloud/commitfileupload/
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetcommunitypreferences
@@ -1371,6 +1374,7 @@ ${STORE_BASE_URL}${}/${}?${}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
+${STORE_BASE_URL}${}?${}
 ${STORE_BASE_URL}${}?name=${}
 ${STORE_BASE_URL}/curator/${}/
 ${STORE_BASE_URL}/curator/${}/admin/ajaxdeletecreatorhomeevent
@@ -1422,6 +1426,7 @@ ${STORE_BASE_URL}ajaxappreviews/${}?${}
 ${STORE_BASE_URL}ajaxmanagereviewanomalies/${}/
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
+${STORE_BASE_URL}api/${_ ? `addtowishlist` : `removefromwishlist`}
 ${STORE_BASE_URL}api/addtowishlist
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=${}&client=${IN_CLIENT}&origin=${}
 ${STORE_BASE_URL}api/removefromwishlist
@@ -1493,6 +1498,7 @@ ${STORE_BASE_URL}curator/${}/sale/${}
 ${STORE_BASE_URL}curator/0/ajaxsearchcurators
 ${STORE_BASE_URL}curators/
 ${STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}
+${STORE_BASE_URL}curators/${_ ? `ajaxfollow/` : `ajaxignore/`}
 ${STORE_BASE_URL}curators/ajaxfindcuratorlists
 ${STORE_BASE_URL}curators/ajaxgetmycuratorsalelists
 ${STORE_BASE_URL}curators/mycuratorsreviewing/?appid=${}
@@ -1670,6 +1676,7 @@ ${STORE_BASE_URL}sale/${}
 ${STORE_BASE_URL}sale/nextfest/
 ${STORE_BASE_URL}sale/steamawards/
 ${STORE_BASE_URL}saleaction/
+${STORE_BASE_URL}saleaction/${}
 ${STORE_BASE_URL}saleaction/ajaxbeginfileupload
 ${STORE_BASE_URL}saleaction/ajaxclosealldoor
 ${STORE_BASE_URL}saleaction/ajaxcommitfileupload
@@ -1705,6 +1712,7 @@ ${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=${listingid}&returnurl=${}
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=1&returnurl=${}
 ${STORE_BASE_URL}steamawards/${_ ? "nominations/" : ""}
+${STORE_BASE_URL}steamawards/${}/
 ${STORE_BASE_URL}steamawards/archive
 ${STORE_BASE_URL}steamawards/nominations
 ${STORE_BASE_URL}steamawards/nominations/${}/${steamid}?k=${code}
