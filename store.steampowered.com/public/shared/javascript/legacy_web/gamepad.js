@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    580: (e, t, r) => {
+    465: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => sn });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(411),
+        a = r(569),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -95,10 +95,10 @@
         );
       }
       var b = r(629),
-        f = r(203),
-        p = r(508),
-        B = r(639),
-        w = r(958);
+        f = r(236),
+        p = r(7),
+        B = r(972),
+        w = r(771);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -377,8 +377,8 @@
         (0, b.Cg)([f.o], C.prototype, "OnKeyUp", null),
         (0, b.Cg)([f.o], C.prototype, "Reset", null);
       var R,
-        T = r(530),
-        I = r(394);
+        T = r(181),
+        I = r(579);
       class F {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -6676,6 +6676,7 @@
           "Millennium internal",
           "millenium",
           "millennium",
+          "decky://",
           "Refused unauthorized RPC command",
         ];
       function cr() {
@@ -10087,6 +10088,11 @@
                     br: nt.readBool,
                     bw: st.writeBool,
                   },
+                  rumble_intensity: {
+                    n: 50,
+                    br: nt.readInt32,
+                    bw: st.writeInt32,
+                  },
                 },
               }),
             pi.sm_m
@@ -13126,7 +13132,7 @@
         },
       };
     },
-    508: (e, t, r) => {
+    7: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13139,12 +13145,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    958: (e, t, r) => {
+    771: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(203),
-        s = r(508);
+        n = r(236),
+        s = r(7);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

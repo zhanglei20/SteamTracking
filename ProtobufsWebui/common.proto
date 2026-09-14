@@ -7516,6 +7516,7 @@ message StoreGameRating {
 	repeated int32 survey_interactive_elements = 9 [(.description) = "enum"];
 	optional int32 required_age = 10;
 	optional bool use_age_gate = 11;
+	repeated int32 descriptor_images = 12 [(.description) = "enum"];
 	optional string image_url = 20;
 	optional string image_target = 21;
 }
