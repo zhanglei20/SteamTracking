@@ -1141,25 +1141,25 @@ function _(_) {
     } = _,
     { data: _ } = _(_),
     { data: _ } = _(_);
-  return !_ || !_
-    ? null
-    : (0, _.jsxs)(`div`, {
-        className: _(_, _),
-        style: _,
-        children: [
-          (0, _.jsx)(`a`, {
-            href: _(_, `developer`),
-            children: (0, _.jsx)(`img`, {
-              src: _ == null ? _(void 0, `medium`) : _?.avatar_medium_url,
-              alt: _?.group_name,
-            }),
-          }),
-          (0, _.jsx)(_, {
-            clanAccountID: _,
-            followType: _,
-          }),
-        ],
-      });
+  if (!_ || !_) return null;
+  let _ = _.avatar_medium_url || _.avatar_full_url || _(void 0, `medium`);
+  return (0, _.jsxs)(`div`, {
+    className: _(_, _),
+    style: _,
+    children: [
+      (0, _.jsx)(`a`, {
+        href: _(_, `developer`),
+        children: (0, _.jsx)(`img`, {
+          src: _,
+          alt: _.group_name,
+        }),
+      }),
+      (0, _.jsx)(_, {
+        clanAccountID: _,
+        followType: _,
+      }),
+    ],
+  });
 }
 var _ = 5500,
   _ = 2e3,

@@ -2889,28 +2889,28 @@
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        return _ && _
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
-              style: _,
-              children: [
-                (0, _.jsx)("a", {
-                  href: (0, _._)(_, "developer"),
-                  children: (0, _.jsx)("img", {
-                    src:
-                      null == _
-                        ? (0, _._)(void 0, "medium")
-                        : _?.avatar_medium_url,
-                    alt: _?.group_name,
-                  }),
-                }),
-                (0, _.jsx)(_._, {
-                  clanAccountID: _,
-                  followType: _,
-                }),
-              ],
-            })
-          : null;
+        if (!_ || !_) return null;
+        const _ =
+          _.avatar_medium_url ||
+          _.avatar_full_url ||
+          (0, _._)(void 0, "medium");
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
+          style: _,
+          children: [
+            (0, _.jsx)("a", {
+              href: (0, _._)(_, "developer"),
+              children: (0, _.jsx)("img", {
+                src: _,
+                alt: _.group_name,
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              clanAccountID: _,
+              followType: _,
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -5319,7 +5319,7 @@ html.responsive.touch ._3wnfYKWMVy4IzwkuD-ZTnX {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: center;
+  align-items: stretch;
   text-align: start;
 }
 ._2BhcS1KAkFef-tf0ECF0S {
