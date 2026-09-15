@@ -2601,25 +2601,22 @@
           } = e,
           { data: m } = (0, a.TB)(t),
           { data: p } = (0, o.A5)(t);
-        return m && p
-          ? (0, r.jsxs)("div", {
-              className: (0, u.A)(c().GameHoverCreatorFollowButtonCtn, n),
-              style: l,
-              children: [
-                (0, r.jsx)("a", {
-                  href: (0, o.LO)(p, "developer"),
-                  children: (0, r.jsx)("img", {
-                    src:
-                      null == m
-                        ? (0, i.t)(void 0, "medium")
-                        : m?.avatar_medium_url,
-                    alt: m?.group_name,
-                  }),
-                }),
-                (0, r.jsx)(s.of, { clanAccountID: t, followType: d }),
-              ],
-            })
-          : null;
+        if (!m || !p) return null;
+        const C =
+          m.avatar_medium_url ||
+          m.avatar_full_url ||
+          (0, i.t)(void 0, "medium");
+        return (0, r.jsxs)("div", {
+          className: (0, u.A)(c().GameHoverCreatorFollowButtonCtn, n),
+          style: l,
+          children: [
+            (0, r.jsx)("a", {
+              href: (0, o.LO)(p, "developer"),
+              children: (0, r.jsx)("img", { src: C, alt: m.group_name }),
+            }),
+            (0, r.jsx)(s.of, { clanAccountID: t, followType: d }),
+          ],
+        });
       }
     },
     24267: (e, t, n) => {
