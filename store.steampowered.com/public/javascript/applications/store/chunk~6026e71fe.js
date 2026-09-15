@@ -11352,19 +11352,15 @@
     },
     89841: (e, t, a) => {
       "use strict";
-      a.d(t, { CJ: () => d, sF: () => i, wy: () => s });
+      a.d(t, { CJ: () => u, aM: () => i, sF: () => o, wy: () => s });
       var n = a(22837),
         r = a(66418);
       const s = r.TS.EUNIVERSE == n.Rv ? 404860 : 1675200,
-        i =
-          (r.TS.EUNIVERSE,
-          n.Rv,
-          r.TS.EUNIVERSE,
-          n.Rv,
-          r.TS.EUNIVERSE == n.Rv ? 409860 : 4165910),
-        o = ["HK", "JP", "KR", "TW"],
-        l = ["HK", "JP", "TW"],
-        c =
+        i = (r.TS.EUNIVERSE, n.Rv, r.TS.EUNIVERSE == n.Rv ? 409570 : 4165890),
+        o = r.TS.EUNIVERSE == n.Rv ? 409860 : 4165910,
+        l = ["HK", "JP", "KR", "TW"],
+        c = ["HK", "JP", "TW"],
+        d =
           r.TS.EUNIVERSE == n.Rv
             ? [
                 501556, 501557, 501558, 502103, 502106, 502996, 502998, 503e3,
@@ -11374,10 +11370,10 @@
                 595603, 595604, 595605, 946113, 946114, 1558609, 1629447,
                 1629446, 1629458, 1629460, 1629484, 1629486,
               ];
-      function d(e, t) {
+      function u(e, t) {
         return (
-          e.some((e) => c.includes(e)) &&
-          (t == i ? l : o).includes(r.iA.country_code)
+          e.some((e) => d.includes(e)) &&
+          (t == o ? c : l).includes(r.iA.country_code)
         );
       }
     },
@@ -12035,7 +12031,7 @@
                         href: "https://steamdeck.komodo.jp",
                       }),
                     )
-                  : e == m.sF
+                  : e == m.sF || e == m.aM
                     ? (0, u.PP)(
                         "#Sale_Reservation_Komodo_Generic_NoSk",
                         t ?? i.Z.Localize("#AppTypeLabel_hardware"),

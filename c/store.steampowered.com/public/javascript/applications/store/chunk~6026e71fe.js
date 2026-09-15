@@ -12559,16 +12559,13 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _._.EUNIVERSE == _._ ? 404860 : 1675200,
-        _ =
-          (_._.EUNIVERSE,
-          _._,
-          _._.EUNIVERSE,
-          _._,
-          _._.EUNIVERSE == _._ ? 409860 : 4165910),
+        _ = (_._.EUNIVERSE, _._, _._.EUNIVERSE == _._ ? 409570 : 4165890),
+        _ = _._.EUNIVERSE == _._ ? 409860 : 4165910,
         _ = ["HK", "JP", "KR", "TW"],
         _ = ["HK", "JP", "TW"],
         _ =
@@ -13291,7 +13288,7 @@
                         href: "https://steamdeck.komodo.jp",
                       }),
                     )
-                  : _ == _._
+                  : _ == _._ || _ == _._
                     ? (0, _._)(
                         "#Sale_Reservation_Komodo_Generic_NoSk",
                         _ ?? _._.Localize("#AppTypeLabel_hardware"),

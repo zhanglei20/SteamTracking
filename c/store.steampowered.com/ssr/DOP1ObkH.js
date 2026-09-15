@@ -44,9 +44,75 @@ function _(_, _) {
   }
   return `${_.STORE_BASE_URL}curator/${_.creator_clan_id}/`;
 }
-var _ = _(_()),
-  _ = _(_(), 1),
+var _ = _(_(), 1),
   _ = _(),
+  _ = _.createContext({
+    bForceShowCompatInfo: !1,
+    bSteamOS: !1,
+    bSteamDeck: !1,
+    bSteamMachine: !1,
+    bSteamFrame: !1,
+  }),
+  _ = () => _.useContext(_);
+function _() {
+  let {
+    bForceShowCompatInfo: _,
+    bSteamDeck: _,
+    bSteamOS: _,
+    bSteamMachine: _,
+    bSteamFrame: _,
+  } = _();
+  return (_ && _) || _ || _.FORCED_DISPLAY_MODE == `steamdeck`
+    ? [!0, 1]
+    : (_ && _) || _.FORCED_DISPLAY_MODE == `steammachine`
+      ? [!0, 3]
+      : (_ && _) || _.FORCED_DISPLAY_MODE == `steamframe`
+        ? [!0, 4]
+        : _
+          ? [!0, 2]
+          : [!1, 0];
+}
+function _(_) {
+  let { _: _, className: _ } = _,
+    { data: _ } = _(_);
+  return _
+    ? (0, _.jsx)(_, {
+        category: _?.steam_deck_compat_category,
+        className: _,
+      })
+    : null;
+}
+var _ = (_) => {
+    let { category: _ = 0, className: _ } = _,
+      _ = _(_);
+    return (0, _.jsxs)(`div`, {
+      className: _(_, _),
+      children: [
+        (0, _.jsx)(_, {}),
+        (0, _.jsx)(_, {
+          className: _,
+        }),
+      ],
+    });
+  },
+  _ = {
+    1: _,
+    2: _,
+    3: _,
+    0: _,
+  },
+  _ = {
+    0: _,
+    1: _,
+    2: _,
+  };
+function _(_) {
+  return _[_] || _;
+}
+function _(_) {
+  return _[_] || _;
+}
+var _ = _(_(), 1),
   _ = _(_()),
   _ = `700px`,
   _ = `1080px`;
@@ -1458,72 +1524,6 @@ function _(_) {
           })
         : _,
   });
-}
-var _ = _.createContext({
-    bForceShowCompatInfo: !1,
-    bSteamOS: !1,
-    bSteamDeck: !1,
-    bSteamMachine: !1,
-    bSteamFrame: !1,
-  }),
-  _ = () => _.useContext(_);
-function _() {
-  let {
-    bForceShowCompatInfo: _,
-    bSteamDeck: _,
-    bSteamOS: _,
-    bSteamMachine: _,
-    bSteamFrame: _,
-  } = _();
-  return (_ && _) || _ || _.FORCED_DISPLAY_MODE == `steamdeck`
-    ? [!0, 1]
-    : (_ && _) || _.FORCED_DISPLAY_MODE == `steammachine`
-      ? [!0, 3]
-      : (_ && _) || _.FORCED_DISPLAY_MODE == `steamframe`
-        ? [!0, 4]
-        : _
-          ? [!0, 2]
-          : [!1, 0];
-}
-function _(_) {
-  let { _: _, className: _ } = _,
-    { data: _ } = _(_);
-  return _
-    ? (0, _.jsx)(_, {
-        category: _?.steam_deck_compat_category,
-        className: _,
-      })
-    : null;
-}
-var _ = (_) => {
-    let { category: _ = 0, className: _ } = _,
-      _ = _(_);
-    return (0, _.jsxs)(`div`, {
-      className: _(_, _),
-      children: [
-        (0, _.jsx)(_, {}),
-        (0, _.jsx)(_, {
-          className: _,
-        }),
-      ],
-    });
-  },
-  _ = {
-    1: _,
-    2: _,
-    3: _,
-    0: _,
-  },
-  _ = {
-    0: _,
-    1: _,
-    2: _,
-  };
-function _(_) {
-  return _[_] || _;
-}
-function _(_) {
-  return _[_] || _;
 }
 var _ = class _ {
   m_mapAppResults = new Map();
