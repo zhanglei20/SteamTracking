@@ -132,7 +132,7 @@ var _ = `Moderator`,
   _ = `Reported subjects`,
   _ = `Already disputed`,
   _ = `All subject types`,
-  _ = `%1$s unresolved, %1$s disputed`,
+  _ = `%1$s unresolved, %2$s disputed`,
   _ = ``,
   _ = {
     moderation_moderatorlevel_any: _,

@@ -14,9 +14,6 @@ function _(_) {
 var _ = [`get_subject_overview`],
   _ = [`get_claimed`],
   _ = [`get_reported_subjects_owned_by_current_user`],
-  _ = (_, _) => [`get_content_report_subject_group`, _, _],
-  _ = (_, _, _) => [`get_content_report_subject`, _, _, _],
-  _ = (_, _, _) => [`get_audit_log`, _, _, _],
   _ = (_) => [`get_moderator_message_count`, _],
   _ = (_) => [`get_clan_info`, _],
   _ = (_) => [`get_support_messages`, _],
@@ -40,33 +37,21 @@ function _() {
 function _(_) {
   let _ = new Map(),
     _ = [];
-  for (let _ of _)
-    if (
-      (_(_.subject_type, `Missing subject_type`),
-      _(_.subject_group_id, `Missing subject_group_id`),
-      _(_.subject_type))
-    ) {
-      let _ = `${_.subject_type}-${_.subject_group_id}`,
-        _;
-      _.has(_)
-        ? (_ = _.get(_))
-        : ((_ = _.length),
-          _.set(_, _),
-          _.push({
-            kind: `group`,
-            subjects: [],
-            type: _.subject_type,
-            group_id: _.subject_group_id,
-            key: _,
-          })),
-        _[_].subjects.push(_);
-    } else
-      _.push({
-        kind: `single`,
-        key: `${_.subject_type}-${_.subject_group_id}-${_.subject_id}`,
-        type: _.subject_type,
-        subject: _,
-      });
+  for (let _ of _) {
+    _(_.subject_type, `Missing subject_type`),
+      _(_.reported_content_id, `Missing reported_content_id`);
+    let _ = _(_),
+      _ = _ ? _(_) : _.reported_content_id,
+      _ = _.get(_);
+    _ ||
+      ((_ = {
+        coordinates: _,
+        subjects: [],
+      }),
+      _.set(_, _),
+      _.push(_)),
+      _.subjects.push(_);
+  }
   return _;
 }
 function _() {
@@ -142,9 +127,7 @@ function _() {
     mutationFn: async (_) => {
       let _ = _.Init(_);
       if (
-        (_.Body().set_subject_type(_.eSubjectType),
-        _.Body().set_subject_group_id(_.subjectGroupId),
-        _.Body().set_subject_id(_.subjectId),
+        (_.Body().set_reported_content_id(_.reportedContentID),
         _.Body().set_resolution(_.eResolution),
         _.Body().set_reason(_.eReason),
         _.Body().set_note(_.note),
@@ -156,114 +139,64 @@ function _() {
             _.days && _.set_days(_.days),
             _.Body().add_sanctions_applied(_);
         }
-      let _ = await _.ResolveSubject(_, _);
+      let _ = await _.ResolveByID(_, _);
       if (!_.BSuccess())
         throw Error(`Failed to resolve subject (` + _.GetEMsg() + `)`);
     },
     onSuccess: async (_, _) => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(_.eSubjectType, _.subjectGroupId),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_.eSubjectType, _.subjectGroupId, _.subjectId),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_.eSubjectType, _.subjectGroupId, _.subjectId),
-        }),
-      ]);
+      await _(_, _.reportedContentID);
     },
   });
 }
 function _() {
   let _ = _(),
+    _ = _(),
     _ = _();
   return _({
     mutationFn: async (_) => {
-      let _ = _.Init(_);
-      if (
-        (_.Body().set_subject_type(_.eSubjectType),
-        _.Body().set_subject_group_id(_.subjectGroupId),
-        _.Body().set_resolution(_.eResolution),
-        _.Body().set_reason(_.eReason),
-        _.Body().set_note(_.note),
-        _.rgSanctions)
-      )
-        for (let _ of _.rgSanctions) {
-          let _ = new _();
-          _.set_sanction(_.sanction),
-            _.days && _.set_days(_.days),
-            _.Body().add_sanctions_applied(_);
-        }
-      let _ = await _.ResolveSubjectGroup(_, _);
-      if (!_.BSuccess())
-        throw Error(`Failed to resolve subject (` + _.GetEMsg() + `)`);
-    },
-    onSuccess: async (_, _) => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(_.eSubjectType, _.subjectGroupId),
-        }),
-        _.invalidateQueries({
-          queryKey: [
-            `get_content_report_subject`,
-            _.eSubjectType,
-            _.subjectGroupId,
-          ],
-        }),
-        _.invalidateQueries({
-          queryKey: [`get_audit_log`, _.eSubjectType, _.subjectGroupId],
-        }),
-      ]);
-    },
-  });
-}
-function _(_, _, _) {
-  return {
-    queryKey: _(_, _),
-    queryFn: async () => {
-      let _ = _.Init(_);
-      _.Body().set_subject_type(_), _.Body().set_subject_group_id(_);
-      let _ = await _.GetContentReportSubjectGroup(_, _);
-      if (!_.BSuccess())
-        throw Error(
-          `Failed in GetContentReportSubjectGroup, EResult: ` + _.GetEResult(),
-        );
-      return _.Body().toObject();
-    },
-  };
-}
-function _(_, _) {
-  return _(_(_(), _, _));
-}
-function _(_, _, _, _) {
-  return {
-    queryKey: _(_, _, _),
-    queryFn: async () => {
-      let _ = _.Init(_);
-      return (
-        _.Body().set_subject_type(_),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
-        (await _.GetContentReportSubject(_, _)).Body().toObject()
+      let _ = (
+        (
+          await _.fetchQuery({
+            ..._(_, _.coordinates),
+            staleTime: 0,
+          })
+        ).subjects ?? []
+      ).filter((_) => _.resolved === 0 || !!_.unresolved_dispute_count);
+      await Promise.all(
+        _.map((_) =>
+          _.mutateAsync({
+            reportedContentID: _.reported_content_id,
+            eResolution: _.eResolution,
+            eReason: _.eReason,
+            rgSanctions: _.rgSanctions,
+            note: _.note,
+          }),
+        ),
       );
     },
-  };
+    onSuccess: async () => {
+      await _(_);
+    },
+  });
 }
-function _(_, _, _) {
-  return _(_(_(), _, _, _));
+async function _(_, _) {
+  await Promise.all([
+    _.invalidateQueries({
+      queryKey: _,
+    }),
+    _.invalidateQueries({
+      queryKey: _,
+    }),
+    _.invalidateQueries({
+      queryKey: [_],
+    }),
+    _.invalidateQueries({
+      queryKey: _(_),
+    }),
+    _.invalidateQueries({
+      queryKey: _(_),
+    }),
+  ]);
 }
 function _() {
   let _ = _(),
@@ -271,55 +204,38 @@ function _() {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_subject_type(_.subjectType),
-        _.Body().set_subject_group_id(_.subjectGroupId),
-        _.Body().set_subject_id(_.subjectId),
-        _.Body().set_required_level(_.eNewLevel),
+      _.Body().set_reported_content_id(_.reportedContentID),
+        _.Body().set_new_level(_.eNewLevel),
         _.Body().set_reason(_.eReason);
-      let _ = await _.EscalateSubject(_, _);
+      let _ = await _.EscalateSubjectByID(_, _);
       if (_.GetEResult() !== 1)
         throw Error(`Failed to escalate subject: ${_.GetEMsg()}`);
     },
     onSuccess: async (_, _) => {
       await Promise.all([
+        _(_, _.reportedContentID),
         _.invalidateQueries({
           queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(_.subjectType, _.subjectGroupId),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_.subjectType, _.subjectGroupId, _.subjectId),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_.subjectType, _.subjectGroupId, _.subjectId),
         }),
       ]);
     },
   });
 }
-function _(_, _, _, _) {
+function _(_, _) {
   return {
-    queryKey: _(_, _, _),
-    queryFn: async () => {
-      let _ = _.Init(_);
-      return (
-        _.Body().set_subject_type(_),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
-        (await _.GetAuditLog(_, _)).Body().toObject()
-      );
-    },
+    queryKey: _(_),
+    queryFn: async () =>
+      (
+        await _.GetAuditLogByID(_, {
+          reported_content_id: _,
+        })
+      )
+        .Body()
+        .toObject(),
   };
 }
-function _(_, _, _) {
-  return _(_(_(), _, _, _));
+function _(_) {
+  return _(_(_(), _));
 }
 function _(_) {
   return {
@@ -350,37 +266,26 @@ function _(_) {
 }
 function _(_) {
   let _ = _(),
-    _ = _(),
-    _ = _.length > 0 ? _[0].subject_type : 0,
-    _ = _.length > 0 ? _[0].subject_group_id : ``;
+    _ = _();
   return _({
-    mutationKey: [`release_subject`, _, _],
+    mutationKey: [`release_subject`, ..._],
     mutationFn: async () => {
       let _ = _.Init(_);
       for (let _ of _) {
         let _ = new _();
-        _.set_subject_type(_.subject_type),
-          _.set_subject_group_id(_.subject_group_id),
-          _.set_subject_id(_.subject_id),
-          _.Body().add_subjects_to_release(_);
+        _.set_reported_content_id(_), _.Body().add_subjects_to_release(_);
       }
       let _ = await _.ReleaseSubjects(_, _);
       if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
     },
     onSuccess: async () => {
       await Promise.all([
-        _.invalidateQueries({
-          queryKey: _(_, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
+        _(_),
+        ..._.map((_) =>
+          _.invalidateQueries({
+            queryKey: _(_),
+          }),
+        ),
       ]);
     },
   });
@@ -445,14 +350,10 @@ function _(_, _) {
   return _(_(_, _));
 }
 function _(_) {
-  return _.kind === `single`
-    ? `/moderation/subject/${_.type}-${_.subject.subject_group_id}-${_.subject.subject_id}`
-    : `/moderation/subject/${_.type}-${_.group_id}`;
+  return _.subjects.length < 1 ? `/moderation/` : _(_.subjects[0]);
 }
 function _(_) {
-  return _(_.subject_type)
-    ? `/moderation/subject/${_.subject_type}-${_.subject_group_id}`
-    : `/moderation/subject/${_.subject_type}-${_.subject_group_id}-${_.subject_id}`;
+  return `/moderation/subject/${_.reported_content_id}`;
 }
 function _(_) {
   return {
@@ -508,18 +409,14 @@ function _(_) {
 function _(_) {
   return _(_(_));
 }
-function _(_, _, _, _, _) {
+function _(_, _) {
   let _ = _(),
     _ = _();
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_),
-        _.Body().set_subject_type(_),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
-        _.Body().set_details(_);
-      let _ = await _.DisputeModerationForSubject(_, _);
+      _.Body().set_reported_content_id(_), _.Body().set_details(_);
+      let _ = await _.OwnerDisputeModeration(_, _);
       if (!_.BSuccess())
         throw Error(
           `Failed to dispute subject in content moderation system: ` +
@@ -527,14 +424,7 @@ function _(_, _, _, _, _) {
         );
     },
     onSuccess: async () => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _(_, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _),
-        }),
-      ]);
+      await _(_, _);
     },
   });
 }
@@ -13305,7 +13195,7 @@ var _ = `friendschatreportmetadata`,
   _ = `chatgroupsummary`;
 function _(_, _, _) {
   return {
-    queryKey: [_, _, _],
+    queryKey: [_, _],
     queryFn: async () => await _(_, _),
     staleTime: 1 / 0,
   };
@@ -13313,7 +13203,7 @@ function _(_, _, _) {
 function _(_, _, _) {
   return _(_(_, _, _));
 }
-function _(_, _, _, _) {
+function _(_, _, _) {
   let _ = _(),
     _ = _();
   return _({
@@ -13321,8 +13211,7 @@ function _(_, _, _, _) {
       let _ = _.Init(_);
       _.Body().set_steamid_from(_),
         _.Body().set_steamid_to(_ ?? _),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
+        _.Body().set_reported_content_id(_),
         _.Body().set_resolution(_.eResolution),
         _.Body().set_reason(_.eReason);
       let _ = await _.ResolveReport(_, _);
@@ -13332,47 +13221,30 @@ function _(_, _, _, _) {
         );
     },
     onSuccess: async () => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(4, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(4, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(4, _, _),
-        }),
-      ]);
+      await _(_, _);
     },
   });
 }
 function _(_, _, _) {
   return {
-    queryKey: [_, _, _],
+    queryKey: [_, _],
     queryFn: async () => await _(_, _),
     staleTime: 1 / 0,
   };
 }
 function _(_, _, _) {
-  return _(), _(_(_, _, _));
+  return _(_(_, _, _));
 }
-function _(_, _, _, _) {
+function _(_, _) {
   let _ = _(),
     _ = _();
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
+      _.Body().set_reported_content_id(_),
         _.Body().set_resolution(_.eResolution),
         _.Body().set_reason(_.eReason),
-        _.Body().set_subject_type(_),
+        _.Body().set_subject_type(5),
         _.Body().set_chat_group_id(_),
         _.rtKickExpiration &&
           _.Body().set_kick_expiration_time(_.rtKickExpiration);
@@ -13383,23 +13255,7 @@ function _(_, _, _, _) {
         );
     },
     onSuccess: async () => {
-      await Promise.all([
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _,
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _, _),
-        }),
-        _.invalidateQueries({
-          queryKey: _(_, _, _),
-        }),
-      ]);
+      await _(_, _);
     },
   });
 }
@@ -13550,7 +13406,7 @@ function _(_) {
     : _;
 }
 function _(_, _, _, _) {
-  let _ = _(_, _, _.subject_group_id, _.subject_id);
+  let _ = _(_, _, _.reported_content_id);
   return (0, _.useMemo)(() => {
     let _ = new Map();
     _.set(4, async (_) => {
@@ -13600,40 +13456,39 @@ function _(_, _, _, _) {
   }, [_, _, _]);
 }
 function _(_, _) {
-  let _ = _(_.subject_type, _.subject_group_id, _.subject_id, _.strChatGroupID);
+  let _ = _(_.reported_content_id, _.strChatGroupID);
   return (0, _.useMemo)(() => {
     let _ = new Map(),
       _ = new Map();
     return (
       _.strChatGroupID?.length > 0 &&
-        (_.subject_type !== 6 &&
-          (_.set(4, async (_) => {
+        (_.set(4, async (_) => {
+          await _.mutateAsync({
+            eResolution: 4,
+            eReason: _,
+          });
+        }),
+        _.set(5, async (_) => {
+          await _.mutateAsync({
+            eResolution: 5,
+            eReason: _,
+          });
+        }),
+        _.bIsPublicGroup &&
+          (_.set(13, async (_, _) => {
+            let _ = _.rtime32BanEnds === 0 ? 2 ** 32 - 1 : _.rtime32BanEnds;
             await _.mutateAsync({
-              eResolution: 4,
+              eResolution: 13,
               eReason: _,
+              rtKickExpiration: _,
             });
           }),
-          _.set(5, async (_) => {
+          _.set(2, async (_) => {
             await _.mutateAsync({
-              eResolution: 5,
+              eResolution: 2,
               eReason: _,
             });
-          }),
-          _.bIsPublicGroup &&
-            (_.set(13, async (_, _) => {
-              let _ = _.rtime32BanEnds === 0 ? 2 ** 32 - 1 : _.rtime32BanEnds;
-              await _.mutateAsync({
-                eResolution: 13,
-                eReason: _,
-                rtKickExpiration: _,
-              });
-            }),
-            _.set(2, async (_) => {
-              await _.mutateAsync({
-                eResolution: 2,
-                eReason: _,
-              });
-            }))),
+          })),
         _.set(1, async () => {
           await _.mutateAsync({
             eResolution: 1,
@@ -14190,13 +14045,7 @@ function _(_) {
   let { subject: _ } = _,
     [_, _] = (0, _.useState)(!1),
     [_, _] = (0, _.useState)(``),
-    _ = _(
-      _.owner_steam_id,
-      _.subject_type,
-      _.subject_group_id,
-      _.subject_id,
-      _,
-    );
+    _ = _(_.reported_content_id, _);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       _ &&
@@ -14255,7 +14104,7 @@ function _(_) {
     [_, _] = (0, _.useState)(_.subject.required_moderator_level),
     [_, _] = (0, _.useState)(!0),
     _ = _(),
-    _ = _([_.subject]);
+    _ = _([_.subject.reported_content_id]);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       _ &&
@@ -14266,9 +14115,7 @@ function _(_) {
           onClose: () => _(!1),
           onOK: async () => {
             await _.mutateAsync({
-              subjectType: _.subject.subject_type,
-              subjectGroupId: _.subject.subject_group_id,
-              subjectId: _.subject.subject_id,
+              reportedContentID: _.subject.reported_content_id,
               eNewLevel: _,
               eReason: 2,
             }),
@@ -14311,7 +14158,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let _ = _([_.subject]);
+  let _ = _([_.subject.reported_content_id]);
   return (0, _.jsx)(`div`, {
     className: _,
     onClick: () => _.mutate(),
@@ -14344,7 +14191,7 @@ function _(_) {
 }
 function _(_) {
   let { subject: _ } = _,
-    _ = _(_.subject_type, _.subject_group_id, _.subject_id);
+    _ = _(_.reported_content_id);
   if (!_.isSuccess || !_.data) return null;
   let _ = _.data?.entries?.length ?? 0;
   return (0, _.jsx)(_, {
@@ -14399,7 +14246,7 @@ function _(_) {
 function _(_) {
   let { subject: _ } = _,
     [_, _] = (0, _.useState)(!1),
-    _ = _(_.subject_type, _.subject_group_id, _.subject_id);
+    _ = _(_.reported_content_id);
   return !_.isSuccess || !_.data
     ? null
     : (0, _.jsxs)(_.Fragment, {
@@ -14556,16 +14403,14 @@ function _(_) {
           strOKLabel: _.Localize(`#moderation_escalation_escalate`),
           strTitle: _.LocalizePlural(
             `#moderation_escalation_title`,
-            _.rgSubjectKeys.length,
+            _.rgReportedContentIDs.length,
           ),
           onOK: async () => {
             let _ = [];
-            for (let _ of _.rgSubjectKeys)
+            for (let _ of _.rgReportedContentIDs)
               _.push(
                 _.mutateAsync({
-                  subjectType: _.type,
-                  subjectGroupId: _.group_id,
-                  subjectId: _._,
+                  reportedContentID: _,
                   eNewLevel: _,
                   eReason: _,
                 }),
@@ -14778,25 +14623,14 @@ function _(_) {
       : null;
 }
 function _(_) {
-  let _ = _();
   return (0, _.jsxs)(`div`, {
     className: _,
     children: [
-      (0, _.jsxs)(`div`, {
+      (0, _.jsx)(`div`, {
         className: _,
-        children: [
-          (0, _.jsxs)(`h2`, {
-            children: [_.rgLinks.length, ` Unresolved`],
-          }),
-          _.subjectGroupKey &&
-            (0, _.jsx)(`a`, {
-              className: `x0poUrP1UJk-`,
-              onClick: async () => {
-                await _.mutateAsync();
-              },
-              children: `Release all`,
-            }),
-        ],
+        children: (0, _.jsxs)(`h2`, {
+          children: [_.rgLinks.length, ` Unresolved`],
+        }),
       }),
       _.rgLinks.map((_) =>
         (0, _.jsx)(
@@ -15777,8 +15611,7 @@ function _(_) {
     _ = (0, _.useRef)(new Map()),
     _ = (0, _.useCallback)(
       (_) => {
-        let _ = _(_),
-          _ = _.current.get(_);
+        let _ = _.current.get(_);
         _ &&
           _((_) => {
             let _ = new Map(_);
@@ -15804,7 +15637,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { subjectKey: _, actions: _, children: _ } = _,
+  let { reportedContentID: _, actions: _, children: _ } = _,
     {
       mapSelectedSubjects: _,
       fnToggleSelection: _,
@@ -15813,19 +15646,17 @@ function _(_) {
     } = (0, _.useContext)(_);
   if (
     (_.useEffect(() => {
-      let _ = _(_ ?? null);
-      return _(_, _), () => _(_);
+      if (_) return _(_, _), () => _(_);
     }, [_, _, _, _]),
     !_)
   )
     return null;
-  let _ = _(_),
-    _ = _.has(_),
+  let _ = _.has(_),
     _ = _.bUnresolved || _.bDisputed;
   return (0, _.jsxs)(`label`, {
     className: (0, _.default)(_, _ && `_4QV3K-Q63ZA-`),
     "data-selectable-id": _ ? _ : void 0,
-    _: `reported-subject-quicklink-target` + _._,
+    _: `reported-subject-quicklink-target` + _,
     children: [
       (0, _.jsx)(`input`, {
         className: _,
@@ -15846,11 +15677,11 @@ function _(_) {
       let _ = Array.from(_.current.querySelectorAll(`[data-selectable-id]`));
       for (let _ of _) {
         let _ = _.getAttribute(`data-selectable-id`);
-        _ && !_.has(_) && _(_(_));
+        _ && !_.has(_) && _(_);
       }
     },
     _ = () => {
-      for (let _ of _.keys()) _(_(_));
+      for (let _ of _.keys()) _(_);
     };
   return (0, _.jsxs)(`div`, {
     className: _,
@@ -15928,18 +15759,13 @@ function _(_) {
     _ = _(),
     _ = async () => {
       let _ = [];
-      for (let [_, _] of _) {
-        let _ = _(_);
-        _ &&
-          _.bDisputed &&
+      for (let [_, _] of _)
+        _.bDisputed &&
           _.push(
             _.mutateAsync({
-              eSubjectType: _.type,
-              ulSubjectGroupID: _.group_id,
-              ulSubjectID: _._,
+              reportedContentID: _,
             }),
           );
-      }
       try {
         await Promise.all(_);
       } catch (_) {
@@ -15954,8 +15780,6 @@ function _(_) {
     _ = new Set(),
     _ = new Map();
   for (let [_, _] of _) {
-    let _ = _(_);
-    if (!_) continue;
     _ !== _.eReason && (_ = void 0), _.push(_), _.bDisputed && _++;
     for (let _ of _.mapAdditionalActions?.keys() ?? [])
       _.set(_, (_.get(_) ?? 0) + 1);
@@ -15999,7 +15823,7 @@ function _(_) {
         }),
       _ === `escalate` &&
         (0, _.jsx)(_, {
-          rgSubjectKeys: _,
+          rgReportedContentIDs: _,
           onClose: () => _(null),
         }),
       (0, _.jsx)(_, {
@@ -16042,174 +15866,29 @@ function _(_, _) {
 }
 var _ = /https?:\/\/[^/]*(?:steam)[^/]*\/ugc\/[^\s]+/i;
 function _(_) {
-  let { subjectKey: _, eAccountTrustScore: _ } = _,
+  let { coordinates: _, eAccountTrustScore: _ } = _,
     _ = (0, _.useContext)(_),
-    _ = _(_.type, _.group_id);
+    _ = _(_);
   if (!_.isSuccess) return null;
   let _ = _.data.subjects?.length ?? 0,
     _ = 0;
-  (_.data.subjects ?? []).forEach((_) => {
-    (_.unresolved_dispute_count || _.unresolved_report_count) && _++;
-  });
-  let _ = _(_.data.subjects ?? [], _.eModeratorLevel);
-  return _.type === 6
-    ? (0, _.jsx)(_, {
-        subjectKey: _,
-        subjects: _,
-      })
-    : (0, _.jsx)(_, {
-        subjectKey: _,
-        subjects: _,
-        eAccountTrustScore: _,
-        cTotalSubjects: _,
-        cUnresolved: _,
-      });
-}
-function _(_) {
-  let { subjectKey: _, subjects: _ } = _,
-    _ = (0, _.useRef)(new _()),
-    _ = _.group_id,
-    _ = _(_),
-    _ = _(_.data?.accountid_owner),
-    _ = _.data ? _(_.data) : null,
-    _ = _.InitFromClanID(
-      _.data?.clanid ?? 0,
-      _.EUNIVERSE,
-    ).ConvertTo64BitString(),
-    _ = _(_),
-    _,
-    _ = ``;
   return (
-    _.data?.appid
-      ? (_ = _.Localize(`#moderation_chatgroup_type_app`, _.data.appid))
-      : _.data?.clanid
-        ? ((_ = `${_.COMMUNITY_BASE_URL}gid/${_}`),
-          _.data?.official
-            ? (_ = _.Localize(
-                `#moderation_chatgroup_type_clanapp`,
-                _.data.clanid,
-              ))
-            : _.data?.invite_only
-              ? (_ = _.Localize(
-                  `#moderation_chatgroup_type_clanprivate`,
-                  _.data.name ?? `-`,
-                  _.data.clanid,
-                ))
-              : _.data &&
-                (_ = _.Localize(
-                  `#moderation_chatgroup_type_clanpublic`,
-                  _.data.name ?? `-`,
-                  _.data.clanid,
-                )))
-        : (_ = _.Localize(`#moderation_chatgroup_type_privateadhoc`, _)),
-    (0, _.jsxs)(`div`, {
-      className: _,
-      children: [
-        (0, _.jsx)(`h2`, {
-          className: _,
-          children: _.Localize(
-            `#moderation_chatgroup_reports`,
-            _?.data?.chat_group_name ?? ``,
-          ),
-        }),
-        (0, _.jsxs)(`div`, {
-          className: _,
-          children: [
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _.Localize(`#moderation_chatgroup_type`),
-            }),
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _
-                ? (0, _.jsx)(_, {
-                    openInNewWindow: !0,
-                    _: _,
-                    children: _,
-                  })
-                : _,
-            }),
-            !!_ &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(`div`, {
-                    className: `vtk1Xwb8-ys-`,
-                    children: _.Localize(`#moderation_chatgroup_owner`),
-                  }),
-                  (0, _.jsx)(`div`, {
-                    className: `_8w-7Cg2b2YA-`,
-                    children: (0, _.jsx)(_, {
-                      openInNewWindow: !0,
-                      _: _,
-                      children: _.data?.public_data?.persona_name,
-                    }),
-                  }),
-                ],
-              }),
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _.Localize(`#moderation_chatgroup_membercount`),
-            }),
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _.data?.active_member_count,
-            }),
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _.Localize(`#moderation_chatgroup_chatrooms`),
-            }),
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _.data?.chat_rooms
-                ?.map((_) =>
-                  _.chat_name?.length ? `'${_.chat_name}'` : `'Default'`,
-                )
-                .join(`, `),
-            }),
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _.Localize(`#moderation_chatgroup_tagline`),
-            }),
-            (0, _.jsx)(`div`, {
-              className: _,
-              children: _.data?.chat_group_tagline?.length
-                ? _.data.chat_group_tagline
-                : _.Localize(`#moderation_select_none`),
-            }),
-            _.data?.disabled &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(`div`, {
-                    className: `vtk1Xwb8-ys-`,
-                    children: _.Localize(`#moderation_chatgroup_disabled`),
-                  }),
-                  (0, _.jsx)(`div`, {
-                    className: `_8w-7Cg2b2YA-`,
-                  }),
-                ],
-              }),
-          ],
-        }),
-        (0, _.jsx)(`div`, {
-          className: _,
-          children: _.map((_) =>
-            (0, _.jsx)(
-              _,
-              {
-                subject: _,
-                bbCodeParser: _.current,
-              },
-              _.subject_id,
-            ),
-          ),
-        }),
-      ],
+    (_.data.subjects ?? []).forEach((_) => {
+      (_.unresolved_dispute_count || _.unresolved_report_count) && _++;
+    }),
+    (0, _.jsx)(_, {
+      coordinates: _,
+      subjects: _(_.data.subjects ?? [], _.eModeratorLevel),
+      eAccountTrustScore: _,
+      cTotalSubjects: _,
+      cUnresolved: _,
     })
   );
 }
 function _(_) {
-  let { subjectKey: _, subjects: _, eAccountTrustScore: _ } = _,
-    _ = _.InitFromAccountID(Number(_.group_id), _.EUNIVERSE),
+  let { coordinates: _, subjects: _, eAccountTrustScore: _ } = _,
+    _ = String(_.sender_account_id),
+    _ = _.InitFromAccountID(_.sender_account_id, _.EUNIVERSE),
     _ = _(_.ConvertTo64BitString()),
     _ = _.data ? _(_.data) : ``,
     _ = (0, _.useRef)(new _()),
@@ -16250,7 +15929,7 @@ function _(_) {
           (0, _.jsx)(`h2`, {
             className: _,
             children: _.LocalizeReact(
-              _.type === 5
+              _.subject_type === 5
                 ? `#moderation_chatgroup_reportedmessagesfrom`
                 : `#moderation_chat_reportedmessagesfrom`,
               _,
@@ -16258,7 +15937,7 @@ function _(_) {
           }),
           (0, _.jsx)(_, {
             steamID: _.ConvertTo64BitString(),
-            subjectKey: _,
+            coordinates: _,
             eAccountTrustScore: _,
           }),
         ],
@@ -16270,9 +15949,10 @@ function _(_) {
             _,
             {
               subject: _,
+              senderAccountID: _,
               bbCodeParser: _.current,
             },
-            _.subject_id,
+            _.reported_content_id,
           ),
         ),
       }),
@@ -16280,7 +15960,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { steamID: _, subjectKey: _, eAccountTrustScore: _ } = _,
+  let { steamID: _, coordinates: _, eAccountTrustScore: _ } = _,
     _ = (0, _.useContext)(_),
     _ = _(_);
   if (!_.data) return;
@@ -16363,7 +16043,7 @@ function _(_) {
         (0, _.jsx)(`div`, {
           className: (0, _.default)(`_8w-7Cg2b2YA-`, `HfWISO5-CNQ-`),
           children: (0, _.jsx)(_, {
-            _: `${_.SUPPORT_BASE_URL}account/chatsessions/${_}?refID=moderation_${_.type}-${_.group_id}`,
+            _: `${_.SUPPORT_BASE_URL}account/chatsessions/${_}?refID=moderation_${_.subject_type}-${_.sender_account_id}`,
             openInNewWindow: !0,
             children: `View full chat logs (in extreme cases)`,
           }),
@@ -16372,42 +16052,26 @@ function _(_) {
   });
 }
 function _(_) {
-  let { subject: _, bbCodeParser: _ } = _,
-    _ = (0, _.useMemo)(
-      () => ({
-        kind: `single`,
-        type: _.subject_type,
-        group_id: _.subject_group_id,
-        _: _.subject_id,
-      }),
-      [_],
-    );
-  return _.subject_type == 5 || _.subject_type == 6
+  return _.subject.subject_type == 5
     ? (0, _.jsx)(_, {
-        subject: _,
-        subjectKey: _,
-        bbCodeParser: _,
+        ..._,
       })
     : (0, _.jsx)(_, {
-        subject: _,
-        subjectKey: _,
-        bbCodeParser: _,
+        ..._,
       });
 }
 function _(_) {
-  let { subject: _, subjectKey: _, bbCodeParser: _ } = _,
+  let { subject: _, senderAccountID: _, bbCodeParser: _ } = _,
     _ = _.owner_steam_id ?? ``;
   (_.length < 1 || _ === `0`) &&
-    (_ = _.InitFromAccountID(
-      Number(_.group_id),
-      _.EUNIVERSE,
-    ).ConvertTo64BitString());
-  let _ = _(_.group_id, _._, _.Actions.GetFriendChatReportMetadata),
+    (_ = _.InitFromAccountID(Number(_), _.EUNIVERSE).ConvertTo64BitString());
+  let _ = _(_.reported_content_id, _, _.Actions.GetFriendChatReportMetadata),
     _ = !!_.data?.reported_msg?.msg?.match(_)?.length,
-    _ = _.reports?.length ? _.reports[0] : void 0;
+    _ = _.reports?.length ? _.reports[0] : void 0,
+    _ = _(_, _?.reporter_steamid, _, _);
   return (0, _.jsx)(_, {
-    subjectKey: _,
-    actions: _(_, _?.reporter_steamid, _, _),
+    reportedContentID: _.reported_content_id,
+    actions: _,
     children: (0, _.jsxs)(`div`, {
       className: _,
       children: [
@@ -16476,15 +16140,15 @@ function _(_) {
       });
 }
 function _(_) {
-  let { subject: _, subjectKey: _, bbCodeParser: _ } = _,
-    _ = _(_.group_id, _._, _.Actions.GetChatGroupReportMetadata),
+  let { subject: _, senderAccountID: _, bbCodeParser: _ } = _,
+    _ = _(_.reported_content_id, _, _.Actions.GetChatGroupReportMetadata),
     _ = _(_(_)?.strChatGroupID ?? ``),
     _ = _(_, _),
     _ = _.reports?.length ? _.reports[0] : void 0,
     _ = _.unresolved_report_count ?? 0,
     _ = _.unresolved_dispute_count ?? 0;
   return (0, _.jsx)(_, {
-    subjectKey: _,
+    reportedContentID: _.reported_content_id,
     actions: _,
     children: (0, _.jsxs)(`div`, {
       className: _,
@@ -16516,8 +16180,8 @@ function _(_) {
         (0, _.jsxs)(`div`, {
           className: _,
           children: [
-            `(SubjectID `,
-            _.subjectKey._,
+            `(ID `,
+            _.reported_content_id,
             `) `,
             (0, _.jsx)(_, {
               eRequiredLevel: _.required_moderator_level,
@@ -16936,6 +16600,156 @@ function _(_) {
           forumId: _,
         };
 }
+var _ = (_) => [`get_published_file_details`, _],
+  _ = (_) => [`set_shared_file_visibility`, _],
+  _ = (_) => [`ban_published_file`, _],
+  _ = (_) => [`update_file_content_descriptors`, _],
+  _ = (_) => [`mark_as_supicious`, _],
+  _ = (_) => [`ban_upvoters`, _],
+  _ = (_) => [`update_restricted_countries`, _];
+function _(_) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => {
+      let _ = await _.Actions.GetPublishedFileDetails(_);
+      if (_ === null) throw Error(``);
+      return _;
+    },
+  };
+}
+function _(_) {
+  return _(_(_));
+}
+function _(_) {
+  let _ = _();
+  return _({
+    mutationKey: _(_),
+    mutationFn: async (_) => {
+      let _ = new FormData();
+      return (
+        _.append(`sessionid`, _()),
+        _.append(`id`, _),
+        _.append(`visibility`, _.visibility.toString()),
+        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/itemsetvisibility`, {
+          method: `POST`,
+          body: _,
+        })
+      );
+    },
+    onSuccess: () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      });
+    },
+  });
+}
+function _(_) {
+  let _ = _();
+  return _({
+    mutationKey: _(_),
+    mutationFn: async (_) => {
+      let _ = new FormData();
+      _.set(`sessionid`, _()),
+        _.set(`id`, _),
+        _.set(`suspicious`, _.suspicious ? `1` : `0`),
+        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/markassuspicious`, {
+          method: `POST`,
+          body: _,
+        });
+    },
+    onSuccess: () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      });
+    },
+  });
+}
+function _(_) {
+  let _ = _();
+  return _({
+    mutationKey: _(_),
+    mutationFn: async () => {
+      let _ = new FormData();
+      _.set(`sessionid`, _()),
+        _.set(`id`, _),
+        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/banupvoters`, {
+          method: `POST`,
+          body: _,
+        });
+    },
+    onSuccess: () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      });
+    },
+  });
+}
+function _(_) {
+  let _ = _();
+  return _({
+    mutationKey: _(_),
+    mutationFn: async (_) => {
+      let _ = Object.keys(_.restrictedCountries).filter(
+          (_) => _.restrictedCountries[_],
+        ),
+        _ = new FormData();
+      _.set(`sessionid`, _()), _.set(`id`, _);
+      for (let _ of _) _.append(`countries[]`, _);
+      await fetch(
+        `${_.COMMUNITY_BASE_URL}sharedfiles/updaterestrictedcountries`,
+        {
+          method: `POST`,
+          body: _,
+        },
+      );
+    },
+    onSuccess: () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      });
+    },
+  });
+}
+function _(_, _) {
+  let _ = _();
+  return _({
+    mutationKey: _(_),
+    mutationFn: async (_) => {
+      let _ = new FormData();
+      _.set(`sessionid`, _()),
+        _.set(`id`, _),
+        _.set(`appid`, _.toString()),
+        _.set(`IsBanned`, _.banned ? `1` : `0`),
+        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/ban`, {
+          method: `POST`,
+          body: _,
+        });
+    },
+    onSuccess: () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      });
+    },
+  });
+}
+function _(_) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationKey: _(_),
+    mutationFn: async (_) =>
+      await _.UpdateContentDescriptors(_, {
+        publishedfileid: _,
+        descriptors_to_add: _.rgDescriptorsToAdd,
+        descriptors_to_remove: _.rgDescriptorsToRemove,
+      }),
+    onSuccess: () => {
+      _.invalidateQueries({
+        queryKey: _(_),
+      });
+    },
+  });
+}
 var _ = `J3X90Xts7cw-`,
   _ = `VPYXqY9DG-M-`,
   _ = `PPNrnBIr90Q-`,
@@ -17229,7 +17043,9 @@ function _(_) {
                 {
                   group: _,
                 },
-                _.key,
+                _.coordinates
+                  ? _(_.coordinates)
+                  : _.subjects[0].reported_content_id,
               ),
             ),
           }),
@@ -17238,31 +17054,32 @@ function _(_) {
     : null;
 }
 function _(_) {
-  let _ = _(_.group.kind === `single` ? [_.group.subject] : _.group.subjects),
+  let _ = _(_.group.subjects.map((_) => _.reported_content_id)),
     _ = async () => {
       await _.mutateAsync();
     },
-    _ = _.group.type,
-    _ =
-      _.group.kind === `group`
-        ? _.group.group_id
-        : _.group.subject.subject_group_id,
-    _ = _(_, _),
+    _ = _(),
     _ = _(),
     _ = async () => {
-      await _.mutateAsync({
-        eSubjectType: _.group.type,
-        subjectGroupId: _,
+      let _ = {
         eResolution: 16,
         eReason: 2,
-      });
+      };
+      _.group.coordinates
+        ? await _.mutateAsync({
+            coordinates: _.group.coordinates,
+            ..._,
+          })
+        : await _.mutateAsync({
+            reportedContentID: _.group.subjects[0].reported_content_id,
+            ..._,
+          });
     },
     [_, _, _] = (0, _.useMemo)(() => {
-      if (!_.isSuccess) return [0, 0];
       let _ = 0,
         _ = 0,
         _;
-      for (let _ of _.data.subjects ?? [])
+      for (let _ of _.subjects)
         _.unresolved_dispute_count + _.unresolved_report_count > 0 &&
           ((_ += _.unresolved_report_count + _.unresolved_dispute_count),
           _++,
@@ -17273,146 +17090,150 @@ function _(_) {
             (!_ || _.oldest_unresolved_report_time < _) &&
             (_ = _.oldest_unresolved_report_time));
       return [_, _, _];
-    }, [_.data]);
-  if (!_.data) return null;
-  let _ = ``;
-  return (
-    (_ =
-      _.group.kind === `single`
-        ? `(Notify Valve of ${_.group.subject.reported_content_id})`
-        : `(Notify Valve of ${_.group.subjects.map((_) => _.reported_content_id).join(`, `)})`),
-    (0, _.jsxs)(`div`, {
-      className: _,
-      children: [
-        !_.broken &&
-          (0, _.jsxs)(_, {
-            _: _.href,
-            className: `O8QZvXjZ1aY-`,
-            openInNewWindow: !0,
-            children: [
-              (0, _.jsx)(`div`, {
-                children: _.summary,
-              }),
-              _.group.kind === `group` &&
-                (0, _.jsxs)(`div`, {
-                  children: [
-                    _,
-                    ` reports on `,
-                    _,
-                    ` subjects `,
-                    _ !== void 0 &&
-                      (0, _.jsxs)(`span`, {
-                        children: [`, oldest from `, _(_, !1, ``)],
-                      }),
-                  ],
-                }),
-            ],
-          }),
-        _.broken &&
-          (0, _.jsxs)(`div`, {
-            children: [
-              _(_.group.type),
-              `: Broken `,
-              (0, _.jsx)(`button`, {
-                className: `vdU-JbAF24k-`,
-                onClick: _,
-                children: (0, _.jsx)(_, {}),
-              }),
-              ` `,
-              _,
-            ],
-          }),
-        _.rgExtraButtons?.map((_) =>
-          (0, _.jsx)(_, {
-            onClick: _.fnOnClick,
-            children: _.strLabel,
-          }),
-        ),
-        (0, _.jsx)(`div`, {
-          className: _,
-          children: (0, _.jsx)(_, {
-            onClick: _,
-            children: `Release`,
-          }),
+    }, [_.subjects]),
+    _ = _.group.subjects[0].subject_type,
+    _ = `(Notify Valve of ${_.group.subjects.map((_) => _.reported_content_id).join(`, `)})`;
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      !_.broken &&
+        (0, _.jsxs)(_, {
+          _: _.href,
+          className: `O8QZvXjZ1aY-`,
+          openInNewWindow: !0,
+          children: [
+            (0, _.jsx)(`div`, {
+              children: _.summary,
+            }),
+            (0, _.jsxs)(`div`, {
+              children: [
+                _,
+                ` reports on `,
+                _,
+                ` subjects `,
+                _ !== void 0 &&
+                  (0, _.jsxs)(`span`, {
+                    children: [`, oldest from `, _(_, !1, ``)],
+                  }),
+              ],
+            }),
+          ],
         }),
-      ],
-    })
-  );
+      _.broken &&
+        (0, _.jsxs)(`div`, {
+          children: [
+            _(_),
+            `: Broken `,
+            (0, _.jsx)(`button`, {
+              className: `vdU-JbAF24k-`,
+              onClick: _,
+              children: (0, _.jsx)(_, {}),
+            }),
+            ` `,
+            _,
+          ],
+        }),
+      _.rgExtraButtons?.map((_) =>
+        (0, _.jsx)(_, {
+          onClick: _.fnOnClick,
+          children: _.strLabel,
+        }),
+      ),
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: (0, _.jsx)(_, {
+          onClick: _,
+          children: `Release`,
+        }),
+      }),
+    ],
+  });
 }
 function _(_) {
-  switch (_.group.kind) {
-    case `group`:
-      return (0, _.jsx)(_, {
+  return _.group.coordinates
+    ? (0, _.jsx)(_, {
+        group: _.group,
+        coordinates: _.group.coordinates,
+      })
+    : (0, _.jsx)(_, {
         group: _.group,
       });
-    case `single`:
-      return (0, _.jsx)(_, {
-        subject: _.group,
-      });
-  }
 }
 function _(_) {
-  let _ = _(_.group.type, _.group.group_id);
-  if (!_.isSuccess) return null;
-  let _ = _.data.subjects;
-  switch (_.group.type) {
+  let { group: _, coordinates: _ } = _;
+  switch (_.subject_type) {
     case 1:
       return (0, _.jsx)(_, {
-        group: _.group,
-        subjects: _,
+        group: _,
+        coordinates: _,
+        subjects: _.subjects,
       });
     case 5:
     case 4:
       return (0, _.jsx)(_, {
-        group: _.group,
-        subjects: _,
+        group: _,
+        coordinates: _,
+        subjects: _.subjects,
       });
-    case 6:
+    case 3:
       return (0, _.jsx)(_, {
-        group: _.group,
-        subjects: _,
+        group: _,
+        coordinates: _,
+        subjects: _.subjects,
       });
   }
-}
-function _(_) {
   return null;
 }
 function _(_) {
-  let { group: _, subjects: _ } = _,
+  if (_.group.subjects.length < 1) return null;
+  let _ = _.group.subjects[0],
+    _ = `${_(_.subject_type)} #${_.reported_content_id}`;
+  return (0, _.jsx)(_, {
+    group: _.group,
+    subjects: [_],
+    broken: !1,
+    summary: _,
+    href: _(_.group),
+  });
+}
+function _(_) {
+  let { group: _, coordinates: _, subjects: _ } = _,
     _ = _(_[0]);
   if (!_) return null;
-  let _ = _(_.clanSteamId, _.forumId, _[0].subject_group_id);
+  let _ = _(_.clanSteamId, _.forumId, _.topic);
   if (!_.isSuccess) return null;
   let _ = _.data.topics?.length == 0,
     _ = `Forum posts on topic '${_.data.topics?.length == 0 ? `` : _.data.topics[0].title}'`,
     _ = new _(_.clanSteamId).GetAccountID();
   return (0, _.jsx)(_, {
     group: _,
+    subjects: _,
     broken: _,
     summary: _,
-    href: `${_.COMMUNITY_BASE_URL}actions/redirecttoforumtopic/?accountIDOwner=${_}&gidForum=${_.forumId}&gidTopic=${_.group_id}`,
+    href: `${_.COMMUNITY_BASE_URL}actions/redirecttoforumtopic/?accountIDOwner=${_}&gidForum=${_.forumId}&gidTopic=${_.topic}`,
   });
 }
 function _(_) {
-  let _ = _(Number(_.group.group_id)),
+  let _ = _(_.coordinates.sender_account_id),
     _ = _.isError,
-    _ = `Chat messages from '${_.data?.public_data?.persona_name ?? _.group.group_id}'`,
+    _ = `Chat messages from '${_.data?.public_data?.persona_name ?? String(_.coordinates.sender_account_id)}'`,
     _ = _(_.group);
   return (0, _.jsx)(_, {
     group: _.group,
+    subjects: _.subjects,
     broken: _,
     summary: _,
     href: _,
   });
 }
 function _(_) {
-  let _ = _(_.group.group_id),
-    _ = _.isError,
-    _ = `Messages in chat group '${_.data?.chat_group_name ?? _.group.group_id}'`,
+  let _ = _(_.coordinates.published_file_id),
+    _ = `Workshop file '${_.data?.title ?? _.coordinates.published_file_id}'`,
     _ = _(_.group);
   return (0, _.jsx)(_, {
     group: _.group,
-    broken: _,
+    subjects: _.subjects,
+    broken: _.isError,
     summary: _,
     href: _,
   });
@@ -17530,156 +17351,6 @@ function _(_) {
     ],
   });
 }
-var _ = (_) => [`get_published_file_details`, _],
-  _ = (_) => [`set_shared_file_visibility`, _],
-  _ = (_) => [`ban_published_file`, _],
-  _ = (_) => [`update_file_content_descriptors`, _],
-  _ = (_) => [`mark_as_supicious`, _],
-  _ = (_) => [`ban_upvoters`, _],
-  _ = (_) => [`update_restricted_countries`, _];
-function _(_) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => {
-      let _ = await _.Actions.GetPublishedFileDetails(_);
-      if (_ === null) throw Error(``);
-      return _;
-    },
-  };
-}
-function _(_) {
-  return _(_(_));
-}
-function _(_) {
-  let _ = _();
-  return _({
-    mutationKey: _(_),
-    mutationFn: async (_) => {
-      let _ = new FormData();
-      return (
-        _.append(`sessionid`, _()),
-        _.append(`id`, _),
-        _.append(`visibility`, _.visibility.toString()),
-        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/itemsetvisibility`, {
-          method: `POST`,
-          body: _,
-        })
-      );
-    },
-    onSuccess: () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      });
-    },
-  });
-}
-function _(_) {
-  let _ = _();
-  return _({
-    mutationKey: _(_),
-    mutationFn: async (_) => {
-      let _ = new FormData();
-      _.set(`sessionid`, _()),
-        _.set(`id`, _),
-        _.set(`suspicious`, _.suspicious ? `1` : `0`),
-        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/markassuspicious`, {
-          method: `POST`,
-          body: _,
-        });
-    },
-    onSuccess: () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      });
-    },
-  });
-}
-function _(_) {
-  let _ = _();
-  return _({
-    mutationKey: _(_),
-    mutationFn: async () => {
-      let _ = new FormData();
-      _.set(`sessionid`, _()),
-        _.set(`id`, _),
-        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/banupvoters`, {
-          method: `POST`,
-          body: _,
-        });
-    },
-    onSuccess: () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      });
-    },
-  });
-}
-function _(_) {
-  let _ = _();
-  return _({
-    mutationKey: _(_),
-    mutationFn: async (_) => {
-      let _ = Object.keys(_.restrictedCountries).filter(
-          (_) => _.restrictedCountries[_],
-        ),
-        _ = new FormData();
-      _.set(`sessionid`, _()), _.set(`id`, _);
-      for (let _ of _) _.append(`countries[]`, _);
-      await fetch(
-        `${_.COMMUNITY_BASE_URL}sharedfiles/updaterestrictedcountries`,
-        {
-          method: `POST`,
-          body: _,
-        },
-      );
-    },
-    onSuccess: () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      });
-    },
-  });
-}
-function _(_, _) {
-  let _ = _();
-  return _({
-    mutationKey: _(_),
-    mutationFn: async (_) => {
-      let _ = new FormData();
-      _.set(`sessionid`, _()),
-        _.set(`id`, _),
-        _.set(`appid`, _.toString()),
-        _.set(`IsBanned`, _.banned ? `1` : `0`),
-        await fetch(`${_.COMMUNITY_BASE_URL}sharedfiles/ban`, {
-          method: `POST`,
-          body: _,
-        });
-    },
-    onSuccess: () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      });
-    },
-  });
-}
-function _(_) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationKey: _(_),
-    mutationFn: async (_) =>
-      await _.UpdateContentDescriptors(_, {
-        publishedfileid: _,
-        descriptors_to_add: _.rgDescriptorsToAdd,
-        descriptors_to_remove: _.rgDescriptorsToRemove,
-      }),
-    onSuccess: () => {
-      _.invalidateQueries({
-        queryKey: _(_),
-      });
-    },
-  });
-}
 var _ = `jSm06D4z3Bg-`,
   _ = `_80NNPFZpY5M-`,
   _ = `GXfSb2N-ypE-`,
@@ -17736,10 +17407,9 @@ function _(_) {
   );
 }
 function _(_) {
-  let {
-      subjectKey: { group_id: _ },
-    } = _,
-    _ = _(3, _),
+  let { coordinates: _ } = _,
+    _ = _.published_file_id,
+    _ = _(_),
     _ = _(_),
     [_, _] = _(null);
   if (!_.isSuccess || !_.isSuccess) return (0, _.jsx)(_, {});
@@ -17975,12 +17645,10 @@ function _(_) {
           (_ = 2)),
         _ !== void 0 && (_.push(_.mutateAsync()), (_ = 2)),
         await Promise.all(_),
-        _.subject)
+        _.subject?.reported_content_id)
       ) {
         let _ = {
-          eSubjectType: 3,
-          subjectGroupId: _.publishedFileId,
-          subjectId: `0`,
+          reportedContentID: _.subject.reported_content_id,
           eReason: _,
           eResolution: _,
         };
@@ -18389,63 +18057,69 @@ function _(_) {
       });
 }
 var _ = _({
-    Component: _,
-    Actions: {
-      GetChatGroupSummary: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetChatGroupSummary`,
-      ),
-      GetPublishedFileDetails: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetPublishedFileDetails`,
-      ),
-      GetClanInfo: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetClanInfo`,
-      ),
-      GetHubBanStatus: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetHubBanStatus`,
-      ),
-      GetSupportMessages: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetSupportMessages`,
-      ),
-      GetClanRanks: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetClanRanks`,
-      ),
-      GetSupportPermissions: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetSupportPermissions`,
-      ),
-      GetAppRights: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetAppRights`,
-      ),
-      GetAccountData: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetAccountData`,
-      ),
-      GetLanguageForUser: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetLanguageForUser`,
-      ),
-      GetQuickText: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetQuickText`,
-      ),
-      GetFriendChatReportMetadata: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetFriendChatReportMetadata`,
-      ),
-      GetChatGroupReportMetadata: _(
-        `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
-        `GetChatGroupReportMetadata`,
-      ),
-    },
-  }),
-  _ = `moderation_blur_images`;
+  Component: _,
+  Actions: {
+    GetChatGroupSummary: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetChatGroupSummary`,
+    ),
+    GetPublishedFileDetails: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetPublishedFileDetails`,
+    ),
+    GetClanInfo: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetClanInfo`,
+    ),
+    GetHubBanStatus: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetHubBanStatus`,
+    ),
+    GetSupportMessages: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetSupportMessages`,
+    ),
+    GetClanRanks: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetClanRanks`,
+    ),
+    GetSupportPermissions: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetSupportPermissions`,
+    ),
+    GetAppRights: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetAppRights`,
+    ),
+    GetAccountData: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetAccountData`,
+    ),
+    GetLanguageForUser: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetLanguageForUser`,
+    ),
+    GetQuickText: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetQuickText`,
+    ),
+    GetFriendChatReportMetadata: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetFriendChatReportMetadata`,
+    ),
+    GetChatGroupReportMetadata: _(
+      `-pSGEpw3p8dPIafFDVxNLQ-lKnjpyFM_Diug6aRb-rw`,
+      `GetChatGroupReportMetadata`,
+    ),
+  },
+});
+function _(_, _) {
+  return _.coordinates
+    ? !!_.groupCoordinates && _(_.coordinates) === _(_.groupCoordinates)
+    : _.subjects.length > 0 &&
+        _.subjects[0].reported_content_id === _.reportedContentID;
+}
+var _ = `moderation_blur_images`;
 function _() {
   let { maxModeratorLevel: _, subjectKey: _ } = _.useLoaderData(),
     [_, _] = (0, _.useState)(_().data?.preferred_level ?? 0),
@@ -18494,14 +18168,7 @@ function _(_) {
     { subjectKey: _, idxCurrentSubject: _ } = _.useLoaderData(),
     { eModeratorLevel: _ } = (0, _.useContext)(_);
   if (!_.data) return null;
-  let _ =
-      _.data.findIndex((_) =>
-        _.kind !== _?.kind || _.type !== _?.type
-          ? !1
-          : _.kind === `group`
-            ? _.group_id === _.group_id
-            : _.kind === `single` && _.subject.subject_id === _._,
-      ) != -1,
+  let _ = !!_ && _.data.findIndex((_) => _(_, _)) != -1,
     _ = _ > 0 ? _.data[_ - 1] : null,
     _ = null;
   return (
@@ -18550,7 +18217,9 @@ function _(_) {
     _ = !!_.data?.length,
     _ = _.data?._(_ + 1);
   !_ && _ > 0 && (_ = _.data?._(0));
-  let _ = _.type === 6 || _.type === 4 || _.type === 5;
+  let _ = _.groupCoordinates;
+  if (!_?.subject_type) return null;
+  let _ = _.subject_type === 4 || _.subject_type === 5;
   return (0, _.jsxs)(
     _,
     {
@@ -18558,7 +18227,7 @@ function _(_) {
         _ &&
           !_ &&
           (0, _.jsx)(_, {
-            eSubjectType: _.type,
+            eSubjectType: _.subject_type,
             onClose: () => _(!1),
           }),
         (0, _.jsx)(_, {
@@ -18570,18 +18239,18 @@ function _(_) {
           children: [
             _ &&
               (0, _.jsx)(_, {
-                subjectKey: _,
+                coordinates: _,
                 eAccountTrustScore: _,
               }),
-            _.type === 3 &&
+            _.subject_type === 3 &&
               (0, _.jsx)(_, {
-                subjectKey: _,
+                coordinates: _,
               }),
           ],
         }),
       ],
     },
-    `${_.type}_${_.group_id}`,
+    _(_),
   );
 }
 function _(_) {

@@ -43,7 +43,7 @@ var _ = _(_),
   (_.czech = () => _(() => import(`./H3Tj1NcP2.js`), [], import.meta.url)),
   (_.danish = () => _(() => import(`./B8TAioh22.js`), [], import.meta.url)),
   (_.dutch = () => _(() => import(`./DT7ECcyU2.js`), [], import.meta.url)),
-  (_.english = () => _(() => import(`./CERDytio2.js`), [], import.meta.url)),
+  (_.english = () => _(() => import(`./BjvPtIT62.js`), [], import.meta.url)),
   (_.finnish = () => _(() => import(`./Dci__TOQ2.js`), [], import.meta.url)),
   (_.french = () => _(() => import(`./Ct-a7iHC2.js`), [], import.meta.url)),
   (_.german = () => _(() => import(`./ChgEMjDG2.js`), [], import.meta.url)),
@@ -1891,63 +1891,45 @@ var _ = (function (_) {
   );
 })({});
 function _(_) {
-  if (!_) return null;
-  let _ = _.split(`-`, 3);
-  if (_.length === 3) {
-    let _ = parseInt(_[0]);
-    return isNaN(_) || !/^\d+$/.test(_[1]) || !/^\d+$/.test(_[2])
-      ? null
-      : {
-          kind: `single`,
-          type: _,
-          group_id: _[1],
-          _: _[2],
-        };
-  } else if (_.length === 2) {
-    let _ = parseInt(_[0]);
-    return isNaN(_) || !/^\d+$/.test(_[1])
-      ? null
-      : {
-          kind: `group`,
-          type: _,
-          group_id: _[1],
-        };
-  } else return null;
-}
-function _(_) {
-  return _
-    ? _.kind === `single`
-      ? `${_.type}-${_.group_id}-${_._}`
-      : `${_.type}-${_.group_id}`
-    : ``;
-}
-function _(_, _, _) {
-  if (_(_))
-    return (
-      _({
-        kind: `group`,
-        type: _,
-        group_id: _,
-      }) + (_ ? `#${_}` : ``)
-    );
-  if (_ === void 0) throw Error(`Single subjects must have a subject id.`);
-  return _({
-    kind: `single`,
-    type: _,
-    group_id: _,
-    _: _,
-  });
-}
-function _(_) {
   switch (_) {
     case 1:
-    case 6:
     case 5:
     case 4:
     case 3:
       return !0;
   }
   return !1;
+}
+function _(_) {
+  let _ = _.coordinates;
+  switch (_.subject_type) {
+    case 1:
+      return _?.topic
+        ? {
+            subject_type: _.subject_type,
+            topic: _.topic,
+          }
+        : null;
+    case 3:
+      return _?.published_file_id
+        ? {
+            subject_type: _.subject_type,
+            published_file_id: _.published_file_id,
+          }
+        : null;
+    case 5:
+    case 4:
+      return _?.sender_account_id
+        ? {
+            subject_type: _.subject_type,
+            sender_account_id: _.sender_account_id,
+          }
+        : null;
+  }
+  return null;
+}
+function _(_) {
+  return `${_.subject_type}:${_.topic ?? _.published_file_id ?? _.sender_account_id}`;
 }
 function _(_) {
   return !!_ && `children` in _;
@@ -2670,73 +2652,93 @@ function _(_) {
         steamid: _,
       };
 }
-var _ = `get_content_report_subject_group`,
-  _ = `get_content_report_subject_audit_log`;
-async function _(_, _, _, _) {
+var _ = `get_reported_content`,
+  _ = `get_reported_content_by_id`,
+  _ = `get_reported_content_audit_log`,
+  _ = (_) => [_, JSON.stringify(_)],
+  _ = (_) => [_, _],
+  _ = (_) => [_, _];
+async function _(_, _) {
   return Promise.all([
     _.invalidateQueries({
-      queryKey: [_, _, _],
+      queryKey: [_],
+      exact: !1,
     }),
     _.invalidateQueries({
-      queryKey: [_, _, _, _],
+      queryKey: _(_),
+    }),
+    _.invalidateQueries({
+      queryKey: _(_),
     }),
   ]);
 }
-function _(_, _, _) {
+function _(_, _) {
   return {
-    queryKey: [_, _, _],
+    queryKey: _(_),
     queryFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_subject_type(_), _.Body().set_subject_group_id(_);
-      let _ = await _.GetContentReportSubjectGroup(_, _);
+      _.Body().set_coordinates(_.fromObject(_));
+      let _ = await _.GetReportedContent(_, _);
+      if (!_.BSuccess())
+        throw Error(`Failed in GetReportedContent, EResult: ` + _.GetEResult());
+      return _.Body().toObject();
+    },
+  };
+}
+function _(_) {
+  return _(_(_(), _));
+}
+function _(_, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => {
+      let _ = _.Init(_);
+      _.Body().set_reported_content_id(_);
+      let _ = await _.GetReportedContentByID(_, _);
       if (!_.BSuccess())
         throw Error(
-          `Failed in GetContentReportSubjectGroup, EResult: ` + _.GetEResult(),
+          `Failed in GetReportedContentByID, EResult: ` + _.GetEResult(),
         );
       return _.Body().toObject();
     },
   };
 }
-function _(_, _) {
-  return _(_(_(), _, _));
+function _(_) {
+  return _(_(_(), _));
 }
-function _(_, _, _, _) {
+function _(_, _) {
   return {
-    queryKey: [_, _, _, _],
+    queryKey: _(_),
     queryFn: async () => {
-      if (_ === void 0 || _ === void 0 || _ === void 0) return;
+      if (!_) return;
       let _ = _.Init(_);
       return (
-        _.Body().set_subject_type(_),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
-        (await _.GetAuditLog(_, _)).Body().toObject()
+        _.Body().set_reported_content_id(_),
+        (await _.GetAuditLogByID(_, _)).Body().toObject()
       );
     },
   };
 }
-function _(_, _, _) {
-  return _(_(_(), _, _, _));
+function _(_) {
+  return _(_(_(), _));
 }
-function _(_, _, _) {
+function _(_) {
   let _ = _(),
     _ = _();
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_subject_type(_),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
-        _.Body().set_required_level(_.eNewLevel),
+      _.Body().set_reported_content_id(_),
+        _.Body().set_new_level(_.eNewLevel),
         _.eReason && _.Body().set_reason(_.eReason),
         _.strNote && _.Body().set_note(_.strNote);
-      let _ = await _.EscalateSubject(_, _);
+      let _ = await _.EscalateSubjectByID(_, _);
       if (_.GetEResult() !== 1)
         throw Error(`Failed to escalate subject: ${_.GetEMsg()}`);
     },
-    onSuccess: async (_, _) => {
+    onSuccess: async () => {
       await Promise.all([
-        _(_, _, _, _),
+        _(_, _),
         _.invalidateQueries({
           queryKey: [`get_claimed`],
         }),
@@ -2753,52 +2755,46 @@ function _() {
   return _({
     mutationFn: async (_) => {
       let _ = _.Init(_);
-      _.Body().set_subject_type(_.eSubjectType),
-        _.Body().set_subject_group_id(_.ulSubjectGroupID),
-        _.Body().set_subject_id(_.ulSubjectID),
-        await _.SustainModeration(_, _);
+      _.Body().set_reported_content_id(_.reportedContentID);
+      let _ = await _.SustainModerationByID(_, _);
+      if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
     },
     onSuccess: async (_, _) => {
-      await _.invalidateQueries({
-        queryKey: [`get_claimed`],
-      }),
-        await _(_, _.eSubjectType, _.ulSubjectGroupID, _.ulSubjectID);
+      await _(_, _.reportedContentID),
+        await _.invalidateQueries({
+          queryKey: [`get_claimed`],
+        });
     },
   });
 }
-function _(_, _, _, _, _) {
+function _(_, _) {
   let _ = _(),
     _ = _();
   return _({
     mutationFn: async () => {
       let _ = _.Init(_);
-      _.Body().set_steamid(_),
-        _.Body().set_subject_type(_),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
-        _.Body().set_details(_),
-        await _.DisputeModerationForSubject(_, _);
-    },
-    onSuccess: async () => {
-      await _(_, _, _, _);
-    },
-  });
-}
-function _(_, _, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async () => {
-      let _ = _.Init(_);
-      _.Body().set_subject_type(_),
-        _.Body().set_subject_group_id(_),
-        _.Body().set_subject_id(_),
-        _.Body().set_owner_dispute_details(_);
-      let _ = await _.UpdateSubject(_, _);
+      _.Body().set_reported_content_id(_), _.Body().set_details(_);
+      let _ = await _.OwnerDisputeModeration(_, _);
       if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
     },
     onSuccess: async () => {
-      await _(_, _, _, _);
+      await _(_, _);
+    },
+  });
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async () => {
+      let _ = _.Init(_);
+      _.Body().set_reported_content_id(_),
+        _.Body().set_owner_dispute_details(_);
+      let _ = await _.UpdateSubjectByID(_, _);
+      if (!_.BSuccess()) throw Error(`EResult ` + _.GetEResult());
+    },
+    onSuccess: async () => {
+      await _(_, _);
     },
   });
 }
@@ -2868,6 +2864,10 @@ function _(_, _, _) {
   });
 }
 export {
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,

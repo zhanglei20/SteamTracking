@@ -9099,6 +9099,12 @@ var _;
 function _(_, _) {
   return `${_.STORE_BASE_URL}cart/purchaserequest/${_}/${_}`;
 }
+function _(_) {
+  let _ = _?.reported_content_id
+    ? _.reported_content_id
+    : `${_?.subject_type}-${_?.subject_group_id}-${_?.subject_id}`;
+  return `${_.COMMUNITY_BASE_URL}my/reportedcontent/${_}`;
+}
 var _ = {
   11: {
     displayNameLoc: `#SteamNotification_HelpRequest_Author`,
@@ -9166,8 +9172,7 @@ var _ = {
           return `#Notification_ReportedContentAction_Unknown`;
       }
     },
-    link: (_) =>
-      `${_.COMMUNITY_BASE_URL}my/reportedcontent/${_.subject_type}-${_.subject_group_id}-${_.subject_id}`,
+    link: (_) => _(_),
   },
 };
 function _(_) {
@@ -9589,9 +9594,7 @@ var _ = new _(`SteamNotificationStore`),
         case 30:
           let _ = _(_),
             _ = _?.report_id,
-            _ = _?.subject_type,
-            _ = _?.subject_group_id,
-            _ = _?.subject_id,
+            _ = _(_),
             _ = `contentreport_${_}`,
             _ = _.findIndex((_) => _.rollup_key == _);
           if (_ == -1)
@@ -9604,12 +9607,12 @@ var _ = new _(`SteamNotificationStore`),
               rgunread: _.read ? [] : [_.notification_id],
               rgread: _.read ? [_.notification_id] : [],
               bSendToCallbackAsNew: _,
-              url: `${_.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`,
+              url: _,
             });
           else {
             let _ = _[_];
             this.BReplaceRollupItem(_, _.item) &&
-              ((_.url = `${_.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`),
+              ((_.url = _),
               (_.item = _),
               (_.timestamp = _.timestamp),
               (_.bSendToCallbackAsNew = _)),
@@ -9860,6 +9863,7 @@ function _(_, _) {
     case 30:
       return {
         report_id: _.report_id ?? ``,
+        reported_content_id: _.reported_content_id ?? ``,
         subject_type: _.subject_type ?? 0,
         subject_group_id: _.subject_group_id ?? `0`,
         subject_id: _.subject_id ?? `0`,
