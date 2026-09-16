@@ -133,6 +133,6 @@
     "reportedsubjectlist_header": "Reported subjects",
     "moderation_already_owner_disputed": "Already disputed",
     "moderationstats_alltypes": "All subject types",
-    "forumsubjectlist_subjectreportsummary": "%1$s unresolved, %1$s disputed",
+    "forumsubjectlist_subjectreportsummary": "%1$s unresolved, %2$s disputed",
     "empty_no_trailing_comma": ""
 }

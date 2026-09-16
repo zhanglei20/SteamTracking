@@ -17,7 +17,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_english.json": [20723, 3016],
           "./friendsui_finnish.json": [80444, 8759],
           "./friendsui_french.json": [79337, 8194],
-          "./friendsui_german.json": [74032, 5480],
+          "./friendsui_german.json": [51651, 5480],
           "./friendsui_greek.json": [74483, 4488],
           "./friendsui_hungarian.json": [35798, 5341],
           "./friendsui_indonesian.json": [88097, 762],
@@ -66,7 +66,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_english.json": [20723, 3016],
           "./friendsui_finnish.json": [80444, 8759],
           "./friendsui_french.json": [79337, 8194],
-          "./friendsui_german.json": [74032, 5480],
+          "./friendsui_german.json": [51651, 5480],
           "./friendsui_greek.json": [74483, 4488],
           "./friendsui_hungarian.json": [35798, 5341],
           "./friendsui_indonesian.json": [88097, 762],
@@ -2941,7 +2941,7 @@ var CLSTAMP = "steamdb";
         5233: "7d9920f1d3e86bf6e146",
         5341: "d01dc36adbf1ed0dc168",
         5436: "1fd82a7ac8c5340ccd72",
-        5480: "1b95c668c7ef41788b3c",
+        5480: "aa8842d2e7d72dad67c5",
         5777: "25795b0debcb4806f5f4",
         6127: "4882c58af191aaf74128",
         6170: "5fb9650a13022ed3fb07",
@@ -3110,6 +3110,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(84876));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(18850));
   _ = _._(_);
 })();
