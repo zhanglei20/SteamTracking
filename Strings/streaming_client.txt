@@ -3183,8 +3183,6 @@ ${FILENAME}
 +(VKV
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;
-++CCUNG`
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -4366,7 +4364,6 @@ ${FILENAME}
 /nollaa
 /p5]/ZQ
 /proc/%d/environ
-/proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/mounts
@@ -4374,6 +4371,7 @@ ${FILENAME}
 /proc/self/fd
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/status
 /proc/version
 /przesu
 /qUn
@@ -4382,7 +4380,7 @@ ${FILENAME}
 /ra kh
 /reset
 /run/host/etc/os-release
-/run/host/root/%s
+/run/host/root
 /s&WU
 /sZ*e
 /sbin/lsof
@@ -4479,19 +4477,19 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
+0.06
 0/bu^U
 0/gge
 0000000000000000000000000000000000000000
-0.06
-00:05:40
-00:05:43
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:23:23
+00:23:27
 00\fo
 01%3
 01%6
 01%66754&#"
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -5656,6 +5654,7 @@ ${FILENAME}
 3267!5!&&#"
 3267&'^7l
 3267.
+32675
 32675#5!
 32675&&#"
 326754&
@@ -5663,6 +5662,7 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
+32677
 326=
 326B|
 327&
@@ -5671,8 +5671,6 @@ ${FILENAME}
 3275!5!
 3275#5!
 3276
-32675
-32677
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -5738,6 +5736,7 @@ ${FILENAME}
 35StoreItem_BasicInfo_CreatorHomeLink
 35pI
 36$32
+36632
 36676'!
 3691S-
 36CHIDMessageToRemote_DeviceDisconnect
@@ -6048,13 +6047,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-467.
-663
-754.
-4632
-36632
-46632
 467&&54632
+467.
+4632
+46632
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6279,7 +6275,6 @@ ${FILENAME}
 52{M
 52|{k
 531lo
-532654.
 532>
 536654#!5!
 53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
@@ -6290,9 +6285,11 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
+5467.
 5467
 54632
 54663
+532654.
 546632
 5467!
 5467#".
@@ -6301,7 +6298,6 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
-5467.
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6509,23 +6505,20 @@ ${FILENAME}
 65R=
 65c\r
 66(YP_
+663
 6632
 6636
 6653
 6654#"
 6654&#"
 6675
-6753
-6786
-7524
-7623.
-74632
-76653
-666666666666666666666666666666666666666666666666
 67!5!
 675!
-6754&#"
+6753
 67547&55&'7
+6786
+666666666666666666666666666666666666666666666666
+6754&#"
 67Zc
 68Jy
 699[
@@ -6714,10 +6707,15 @@ ${FILENAME}
 73nL4\v
 74&'3
 75#5!
+754.
+7524
+74632
 75pRD
 75th
 76&'3
+7623.
 7664&#"
+76653
 76654&#"
 77!5
 77\nGJ
@@ -19595,7 +19593,7 @@ Sending NoConnection to %s: { %s }\n
 Sending authorization request with pin %s\n
 Sent ack %u not pending.  %d: %u %u %u %u %u
 Sentiment
-Sep 11 2026
+Sep 17 2026
 September
 Serbian
 Seret
@@ -21000,7 +20998,7 @@ TqE\n
 Tr"e
 TrB-Z
 Traag
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Trackpad
 Trackpad (midden)
@@ -26716,6 +26714,7 @@ connected
 connected_paired_network_hash
 connected_seconds
 connecting
+connecting_paired_network_hash
 connection
 connection expectedly closed?
 connection is not setup for websocket
@@ -32478,7 +32477,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Sep 11 2026 00:05:43
+lib Sep 17 2026 00:23:26
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -36328,7 +36327,6 @@ revocationReason
 revocationTime
 revoked
 revoked_keys
-rewind
 rfZN"6\n
 rf\ts
 rfc822Mailbox
@@ -39898,8 +39896,6 @@ vstdlib_wcstoui64
 vswprintf
 vt9:G?g
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__si_class_type_info
 vtls/openssl.c
 vty9D
 vuG'

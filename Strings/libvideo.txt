@@ -1233,6 +1233,7 @@ $ffn
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG{
 +2Hp
 +HpXhE
 +QQ 3K%
@@ -1640,7 +1641,6 @@ $ffn
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
 /index.html
-/proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/mounts
@@ -1649,8 +1649,9 @@ $ffn
 /proc/self/fd
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/status
 /run/host/etc/os-release
-/run/host/root/%s
+/run/host/root
 /steamrt64
 /steamsysinfo
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
@@ -1689,14 +1690,14 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+0.15
 0.8.3
 00000000
-0.15
+0123456789.
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:05:40
+00:23:23
 01/01/00
-0123456789.
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
@@ -2467,9 +2468,9 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 60000000
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
 65536
 666666666666666666666666666666666666666666666666
@@ -2562,7 +2563,7 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9H(uF
+9HhfF
 9IGv
 9IMemAlloc
 9PE,$
@@ -5466,7 +5467,6 @@ EPurchaseResultDetail
 EPurchaseStatus
 ERROR
 ERROR: selector [%d] invalid\n
-ERR_getErrorString
 ERegKeyRoot
 ERemoteStorageFileRoot
 ERemoteStoragePlatform
@@ -5723,52 +5723,6 @@ FORM
 FORMAT
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
-FSE_NCountWriteBound
-FSE_buildCTable_rle
-FSE_buildCTable_wksp
-FSE_buildDTable_wksp
-FSE_compressBound
-FSE_compress_usingCTable
-FSE_decompress_wksp_bmi2
-FSE_getErrorName
-FSE_isError
-FSE_normalizeCount
-FSE_optimalTableLog
-FSE_optimalTableLog_internal
-FSE_readNCount
-FSE_readNCount_bmi2
-FSE_versionNumber
-FSE_writeNCount
-FSEv05_buildDTable
-FSEv05_buildDTable_raw
-FSEv05_buildDTable_rle
-FSEv05_createDTable
-FSEv05_decompress
-FSEv05_decompress_usingDTable
-FSEv05_freeDTable
-FSEv05_getErrorName
-FSEv05_isError
-FSEv05_readNCount
-FSEv06_buildDTable
-FSEv06_buildDTable_raw
-FSEv06_buildDTable_rle
-FSEv06_createDTable
-FSEv06_decompress
-FSEv06_decompress_usingDTable
-FSEv06_freeDTable
-FSEv06_getErrorName
-FSEv06_isError
-FSEv06_readNCount
-FSEv07_buildDTable
-FSEv07_buildDTable_raw
-FSEv07_buildDTable_rle
-FSEv07_createDTable
-FSEv07_decompress
-FSEv07_decompress_usingDTable
-FSEv07_freeDTable
-FSEv07_getErrorName
-FSEv07_isError
-FSEv07_readNCount
 FV|FgUV
 F\nAk_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
 F\n\foptimize_for
@@ -6151,12 +6105,6 @@ HEADERS: no HEADERS allowed from client in reserved state
 HEADERS: stream closed
 HEADERS: stream_id == 0
 HIGH
-HIST_count
-HIST_countFast
-HIST_countFast_wksp
-HIST_count_simple
-HIST_count_wksp
-HIST_isError
 HKDF
 HKEY_CLASSES_ROOT
 HKEY_CLASSES_ROOT (force 32Bit)
@@ -6201,82 +6149,6 @@ HTTPS Tunnel established, proceeding to send actual HTTP request through OpenSSL
 HTTPS_PROXY
 HTTP_1_1_REQUIRED
 HTTP_PROXY
-HUF_buildCTable_wksp
-HUF_cardinality
-HUF_compress1X_repeat
-HUF_compress1X_usingCTable
-HUF_compress4X_repeat
-HUF_compress4X_usingCTable
-HUF_compressBound
-HUF_decompress1X1_DCtx_wksp
-HUF_decompress1X2_DCtx_wksp
-HUF_decompress1X_DCtx_wksp
-HUF_decompress1X_usingDTable
-HUF_decompress4X_hufOnly_wksp
-HUF_decompress4X_usingDTable
-HUF_estimateCompressedSize
-HUF_getErrorName
-HUF_getNbBitsFromCTable
-HUF_isError
-HUF_minTableLog
-HUF_optimalTableLog
-HUF_readCTable
-HUF_readCTableHeader
-HUF_readDTableX1_wksp
-HUF_readDTableX2_wksp
-HUF_readStats
-HUF_readStats_wksp
-HUF_selectDecoder
-HUF_validateCTable
-HUF_writeCTable_wksp
-HUFv05_decompress
-HUFv05_decompress1X2
-HUFv05_decompress1X2_usingDTable
-HUFv05_decompress1X4
-HUFv05_decompress1X4_usingDTable
-HUFv05_decompress4X2
-HUFv05_decompress4X2_usingDTable
-HUFv05_decompress4X4
-HUFv05_decompress4X4_usingDTable
-HUFv05_getErrorName
-HUFv05_isError
-HUFv05_readDTableX2
-HUFv05_readDTableX4
-HUFv06_decompress
-HUFv06_decompress1X2
-HUFv06_decompress1X2_usingDTable
-HUFv06_decompress1X4
-HUFv06_decompress1X4_usingDTable
-HUFv06_decompress4X2
-HUFv06_decompress4X2_usingDTable
-HUFv06_decompress4X4
-HUFv06_decompress4X4_usingDTable
-HUFv06_readDTableX2
-HUFv06_readDTableX4
-HUFv07_decompress
-HUFv07_decompress1X2
-HUFv07_decompress1X2_DCtx
-HUFv07_decompress1X2_usingDTable
-HUFv07_decompress1X4
-HUFv07_decompress1X4_DCtx
-HUFv07_decompress1X4_usingDTable
-HUFv07_decompress1X_DCtx
-HUFv07_decompress1X_usingDTable
-HUFv07_decompress4X2
-HUFv07_decompress4X2_DCtx
-HUFv07_decompress4X2_usingDTable
-HUFv07_decompress4X4
-HUFv07_decompress4X4_DCtx
-HUFv07_decompress4X4_usingDTable
-HUFv07_decompress4X_DCtx
-HUFv07_decompress4X_hufOnly
-HUFv07_decompress4X_usingDTable
-HUFv07_getErrorName
-HUFv07_isError
-HUFv07_readDTableX2
-HUFv07_readDTableX4
-HUFv07_readStats
-HUFv07_selectDecoder
 HWID Set
 HWyn
 H\fJxE\v
@@ -9259,7 +9131,7 @@ Sending msg of type '%s' with timeout=0.  Receiver won't have any time to servic
 Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
-Sep 11 2026
+Sep 17 2026
 September
 Serbian
 Server
@@ -9999,7 +9871,7 @@ Total bytes allocated counted: %s\n
 Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
 Touch'n Go
-TracerPid:
+TracerPid:\t
 Track a histogram of protobuf message body sizes as they are parsed.  See the protobuf_parse_stats console command.
 Tracked allocs currently in use. %d Total %d\n
 Trade
@@ -10676,34 +10548,6 @@ YsRX
 Z-google.golang.org/protobuf/types/descriptorpb
 Z0000
 Z:hluv
-ZBUFFv05_createDCtx
-ZBUFFv05_decompressContinue
-ZBUFFv05_decompressInit
-ZBUFFv05_decompressInitDictionary
-ZBUFFv05_freeDCtx
-ZBUFFv05_getErrorName
-ZBUFFv05_isError
-ZBUFFv05_recommendedDInSize
-ZBUFFv05_recommendedDOutSize
-ZBUFFv06_createDCtx
-ZBUFFv06_decompressContinue
-ZBUFFv06_decompressInit
-ZBUFFv06_decompressInitDictionary
-ZBUFFv06_freeDCtx
-ZBUFFv06_getErrorName
-ZBUFFv06_isError
-ZBUFFv06_recommendedDInSize
-ZBUFFv06_recommendedDOutSize
-ZBUFFv07_createDCtx
-ZBUFFv07_createDCtx_advanced
-ZBUFFv07_decompressContinue
-ZBUFFv07_decompressInit
-ZBUFFv07_decompressInitDictionary
-ZBUFFv07_freeDCtx
-ZBUFFv07_getErrorName
-ZBUFFv07_isError
-ZBUFFv07_recommendedDInSize
-ZBUFFv07_recommendedDOutSize
 ZF]:Ba?
 ZINT32
 ZINT64
@@ -11106,13 +10950,6 @@ _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 _TbF~
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
-_ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
-_ZSt10__exchangeIPKcDnET_RS3_OT0_
-_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
-_ZSt10__exchangeIPcDnET_RS2_OT0_
-_ZSt10__exchangeIPwDnET_RS2_OT0_
 __assert_fail
 __ctype_b_loc
 __ctype_get_mb_cur_max
@@ -11156,7 +10993,6 @@ __strftime_l
 __strtod_l
 __strtof_l
 __strxfrm_l
-__test_and_acquire(long*)
 __tls_get_addr
 __towlower_l
 __towupper_l
@@ -11216,13 +11052,6 @@ _jbF~T
 _longjmp
 _rDd
 _setjmp
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 _xU`u
 `3QbE
 `3SbE
@@ -11940,11 +11769,6 @@ body
 body pre-parses discarded by a second wrapper
 body size
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
-bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
-bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
-bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 boolean
 boolean is wrong length
@@ -13946,7 +13770,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -17106,9 +16930,6 @@ nexon_dota2
 nextUpdate
 nextupdate before thisupdate
 ngaa
-nghttp2_check_authority
-nghttp2_check_header_name
-nghttp2_check_header_value
 nghttp2_frame.c
 nghttp2_frame_add_pad
 nghttp2_frame_pack_altsvc
@@ -17122,37 +16943,13 @@ nghttp2_frame_pack_rst_stream
 nghttp2_frame_pack_settings
 nghttp2_frame_pack_window_update
 nghttp2_hd.c
-nghttp2_hd_deflate_bound
-nghttp2_hd_deflate_change_table_size
-nghttp2_hd_deflate_del
-nghttp2_hd_deflate_get_dynamic_table_size
-nghttp2_hd_deflate_get_max_dynamic_table_size
-nghttp2_hd_deflate_get_num_table_entries
-nghttp2_hd_deflate_get_table_entry
-nghttp2_hd_deflate_hd
-nghttp2_hd_deflate_hd_vec
-nghttp2_hd_deflate_new
-nghttp2_hd_deflate_new2
-nghttp2_hd_inflate_change_table_size
-nghttp2_hd_inflate_del
-nghttp2_hd_inflate_end_headers
-nghttp2_hd_inflate_get_dynamic_table_size
-nghttp2_hd_inflate_get_max_dynamic_table_size
-nghttp2_hd_inflate_get_num_table_entries
-nghttp2_hd_inflate_get_table_entry
-nghttp2_hd_inflate_hd
-nghttp2_hd_inflate_hd2
 nghttp2_hd_inflate_hd_nv
-nghttp2_hd_inflate_new
-nghttp2_hd_inflate_new2
 nghttp2_hd_table_get
 nghttp2_hd_table_get2
 nghttp2_helper.c
 nghttp2_http.c
-nghttp2_http2_strerror
 nghttp2_http_on_header
 nghttp2_increase_local_window_size
-nghttp2_is_fatal
 nghttp2_is_fatal(rv)
 nghttp2_ksl.c
 nghttp2_ksl_it_get
@@ -17162,83 +16959,20 @@ nghttp2_ksl_update_key
 nghttp2_map.c
 nghttp2_map_each
 nghttp2_map_each_free
-nghttp2_nv_compare_name
 nghttp2_nv_equal
 nghttp2_outbound_item.c
 nghttp2_outbound_item_free
-nghttp2_pack_settings_payload
 nghttp2_pq.c
 nghttp2_pq_remove
-nghttp2_priority_spec_check_default
-nghttp2_priority_spec_default_init
-nghttp2_priority_spec_init
 nghttp2_rcbuf.c
 nghttp2_rcbuf_decref
-nghttp2_rcbuf_get_buf
-nghttp2_rcbuf_incref
-nghttp2_rcbuf_is_static
-nghttp2_select_next_protocol
 nghttp2_session.c
 nghttp2_session_add_rst_stream
 nghttp2_session_add_settings
 nghttp2_session_adjust_closed_stream
 nghttp2_session_adjust_idle_stream
-nghttp2_session_callbacks_del
-nghttp2_session_callbacks_new
-nghttp2_session_callbacks_set_before_frame_send_callback
-nghttp2_session_callbacks_set_data_source_read_length_callback
-nghttp2_session_callbacks_set_error_callback
-nghttp2_session_callbacks_set_error_callback2
-nghttp2_session_callbacks_set_on_begin_frame_callback
-nghttp2_session_callbacks_set_on_begin_headers_callback
-nghttp2_session_callbacks_set_on_data_chunk_recv_callback
-nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
-nghttp2_session_callbacks_set_on_frame_not_send_callback
-nghttp2_session_callbacks_set_on_frame_recv_callback
-nghttp2_session_callbacks_set_on_frame_send_callback
-nghttp2_session_callbacks_set_on_header_callback
-nghttp2_session_callbacks_set_on_header_callback2
-nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback2
-nghttp2_session_callbacks_set_on_stream_close_callback
-nghttp2_session_callbacks_set_pack_extension_callback
-nghttp2_session_callbacks_set_recv_callback
-nghttp2_session_callbacks_set_select_padding_callback
-nghttp2_session_callbacks_set_send_callback
-nghttp2_session_callbacks_set_send_data_callback
-nghttp2_session_callbacks_set_unpack_extension_callback
-nghttp2_session_change_stream_priority
-nghttp2_session_check_request_allowed
-nghttp2_session_check_server_session
-nghttp2_session_client_new
-nghttp2_session_client_new2
-nghttp2_session_client_new3
-nghttp2_session_consume
-nghttp2_session_consume_connection
-nghttp2_session_consume_stream
-nghttp2_session_create_idle_stream
-nghttp2_session_del
-nghttp2_session_find_stream
-nghttp2_session_get_effective_local_window_size
-nghttp2_session_get_effective_recv_data_length
-nghttp2_session_get_hd_deflate_dynamic_table_size
-nghttp2_session_get_hd_inflate_dynamic_table_size
-nghttp2_session_get_last_proc_stream_id
 nghttp2_session_get_local_settings
-nghttp2_session_get_local_window_size
-nghttp2_session_get_next_stream_id
-nghttp2_session_get_outbound_queue_size
 nghttp2_session_get_remote_settings
-nghttp2_session_get_remote_window_size
-nghttp2_session_get_root_stream
-nghttp2_session_get_stream_effective_local_window_size
-nghttp2_session_get_stream_effective_recv_data_length
-nghttp2_session_get_stream_local_close
-nghttp2_session_get_stream_local_window_size
-nghttp2_session_get_stream_remote_close
-nghttp2_session_get_stream_remote_window_size
-nghttp2_session_get_stream_user_data
 nghttp2_session_mem_recv
 nghttp2_session_mem_send
 nghttp2_session_mem_send_internal
@@ -17250,55 +16984,19 @@ nghttp2_session_pack_data
 nghttp2_session_predicate_data_send
 nghttp2_session_recv
 nghttp2_session_reprioritize_stream
-nghttp2_session_resume_data
-nghttp2_session_send
-nghttp2_session_server_new
-nghttp2_session_server_new2
-nghttp2_session_server_new3
-nghttp2_session_set_local_window_size
-nghttp2_session_set_next_stream_id
 nghttp2_session_set_stream_user_data
-nghttp2_session_set_user_data
-nghttp2_session_terminate_session
-nghttp2_session_terminate_session2
 nghttp2_session_upgrade
 nghttp2_session_upgrade2
-nghttp2_session_want_read
-nghttp2_session_want_write
 nghttp2_stream.c
 nghttp2_stream_attach_item
 nghttp2_stream_defer_item
 nghttp2_stream_dep_remove
 nghttp2_stream_dep_remove_subtree
-nghttp2_stream_get_first_child
-nghttp2_stream_get_next_sibling
-nghttp2_stream_get_parent
-nghttp2_stream_get_previous_sibling
-nghttp2_stream_get_state
-nghttp2_stream_get_stream_id
-nghttp2_stream_get_sum_dependency_weight
-nghttp2_stream_get_weight
 nghttp2_stream_in_dep_tree(stream)
 nghttp2_stream_reschedule
 nghttp2_stream_resume_deferred_item
-nghttp2_strerror
 nghttp2_submit.c
-nghttp2_submit_altsvc
-nghttp2_submit_data
-nghttp2_submit_extension
-nghttp2_submit_goaway
-nghttp2_submit_headers
 nghttp2_submit_origin
-nghttp2_submit_ping
-nghttp2_submit_priority
-nghttp2_submit_push_promise
-nghttp2_submit_request
-nghttp2_submit_response
-nghttp2_submit_rst_stream
-nghttp2_submit_settings
-nghttp2_submit_shutdown_notice
-nghttp2_submit_trailer
-nghttp2_submit_window_update
 nistp224_pre_comp_new
 nistp256_pre_comp_new
 nistp521_pre_comp_new
@@ -18478,7 +18176,6 @@ revocationDate
 revocationReason
 revocationTime
 revoked
-rewind
 rfc822Mailbox
 ringbuf->len > 0
 ripemd
@@ -19277,8 +18974,6 @@ statvfs64 output would overflow: %s
 statvfs64 reports success but zero free space\n
 stbl_module_init
 stbl_section
-std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
-std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
@@ -20046,97 +19741,6 @@ type:
 type_id
 typeinfo fn for
 typeinfo for
-typeinfo for _Float128
-typeinfo for _Float128 const*
-typeinfo for _Float128*
-typeinfo for _Float16
-typeinfo for _Float16 const*
-typeinfo for _Float16*
-typeinfo for _Float32
-typeinfo for _Float32 const*
-typeinfo for _Float32*
-typeinfo for _Float32x
-typeinfo for _Float32x const*
-typeinfo for _Float32x*
-typeinfo for _Float64
-typeinfo for _Float64 const*
-typeinfo for _Float64*
-typeinfo for _Float64x
-typeinfo for _Float64x const*
-typeinfo for _Float64x*
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__function_type_info
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__pbase_type_info
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __float128
-typeinfo for __float128 const*
-typeinfo for __float128*
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for __int128
-typeinfo for __int128 const*
-typeinfo for __int128*
-typeinfo for bool
-typeinfo for bool const*
-typeinfo for bool*
-typeinfo for char
-typeinfo for char const*
-typeinfo for char*
-typeinfo for char16_t
-typeinfo for char16_t const*
-typeinfo for char16_t*
-typeinfo for char32_t
-typeinfo for char32_t const*
-typeinfo for char32_t*
-typeinfo for char8_t
-typeinfo for char8_t const*
-typeinfo for char8_t*
-typeinfo for decimal128
-typeinfo for decimal128 const*
-typeinfo for decimal128*
-typeinfo for decimal32
-typeinfo for decimal32 const*
-typeinfo for decimal32*
-typeinfo for decimal64
-typeinfo for decimal64 const*
-typeinfo for decimal64*
-typeinfo for double
-typeinfo for double const*
-typeinfo for double*
-typeinfo for float
-typeinfo for float const*
-typeinfo for float*
-typeinfo for int
-typeinfo for int const*
-typeinfo for int*
-typeinfo for long
-typeinfo for long const*
-typeinfo for long double
-typeinfo for long double const*
-typeinfo for long double*
-typeinfo for long long
-typeinfo for long long const*
-typeinfo for long long*
-typeinfo for long*
-typeinfo for short
-typeinfo for short const*
-typeinfo for short*
-typeinfo for signed char
-typeinfo for signed char const*
-typeinfo for signed char*
-typeinfo for std::bfloat16_t
-typeinfo for std::bfloat16_t const*
-typeinfo for std::bfloat16_t*
-typeinfo for std::nullptr_t
-typeinfo for std::nullptr_t const*
-typeinfo for std::nullptr_t*
 typeinfo for tinyxml2::XMLAttribute
 typeinfo for tinyxml2::XMLComment
 typeinfo for tinyxml2::XMLDeclaration
@@ -20147,122 +19751,7 @@ typeinfo for tinyxml2::XMLPrinter
 typeinfo for tinyxml2::XMLText
 typeinfo for tinyxml2::XMLUnknown
 typeinfo for tinyxml2::XMLVisitor
-typeinfo for unsigned __int128
-typeinfo for unsigned __int128 const*
-typeinfo for unsigned __int128*
-typeinfo for unsigned char
-typeinfo for unsigned char const*
-typeinfo for unsigned char*
-typeinfo for unsigned int
-typeinfo for unsigned int const*
-typeinfo for unsigned int*
-typeinfo for unsigned long
-typeinfo for unsigned long const*
-typeinfo for unsigned long long
-typeinfo for unsigned long long const*
-typeinfo for unsigned long long*
-typeinfo for unsigned long*
-typeinfo for unsigned short
-typeinfo for unsigned short const*
-typeinfo for unsigned short*
-typeinfo for void
-typeinfo for void const*
-typeinfo for void*
-typeinfo for wchar_t
-typeinfo for wchar_t const*
-typeinfo for wchar_t*
 typeinfo name for
-typeinfo name for _Float128
-typeinfo name for _Float128 const*
-typeinfo name for _Float128*
-typeinfo name for _Float16
-typeinfo name for _Float16 const*
-typeinfo name for _Float16*
-typeinfo name for _Float32
-typeinfo name for _Float32 const*
-typeinfo name for _Float32*
-typeinfo name for _Float32x
-typeinfo name for _Float32x const*
-typeinfo name for _Float32x*
-typeinfo name for _Float64
-typeinfo name for _Float64 const*
-typeinfo name for _Float64*
-typeinfo name for _Float64x
-typeinfo name for _Float64x const*
-typeinfo name for _Float64x*
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__function_type_info
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__pbase_type_info
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pointer_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __float128
-typeinfo name for __float128 const*
-typeinfo name for __float128*
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __int128
-typeinfo name for __int128 const*
-typeinfo name for __int128*
-typeinfo name for bool
-typeinfo name for bool const*
-typeinfo name for bool*
-typeinfo name for char
-typeinfo name for char const*
-typeinfo name for char*
-typeinfo name for char16_t
-typeinfo name for char16_t const*
-typeinfo name for char16_t*
-typeinfo name for char32_t
-typeinfo name for char32_t const*
-typeinfo name for char32_t*
-typeinfo name for char8_t
-typeinfo name for char8_t const*
-typeinfo name for char8_t*
-typeinfo name for decimal128
-typeinfo name for decimal128 const*
-typeinfo name for decimal128*
-typeinfo name for decimal32
-typeinfo name for decimal32 const*
-typeinfo name for decimal32*
-typeinfo name for decimal64
-typeinfo name for decimal64 const*
-typeinfo name for decimal64*
-typeinfo name for double
-typeinfo name for double const*
-typeinfo name for double*
-typeinfo name for float
-typeinfo name for float const*
-typeinfo name for float*
-typeinfo name for int
-typeinfo name for int const*
-typeinfo name for int*
-typeinfo name for long
-typeinfo name for long const*
-typeinfo name for long double
-typeinfo name for long double const*
-typeinfo name for long double*
-typeinfo name for long long
-typeinfo name for long long const*
-typeinfo name for long long*
-typeinfo name for long*
-typeinfo name for short
-typeinfo name for short const*
-typeinfo name for short*
-typeinfo name for signed char
-typeinfo name for signed char const*
-typeinfo name for signed char*
-typeinfo name for std::bfloat16_t
-typeinfo name for std::bfloat16_t const*
-typeinfo name for std::bfloat16_t*
-typeinfo name for std::nullptr_t
-typeinfo name for std::nullptr_t const*
-typeinfo name for std::nullptr_t*
 typeinfo name for tinyxml2::XMLAttribute
 typeinfo name for tinyxml2::XMLComment
 typeinfo name for tinyxml2::XMLDeclaration
@@ -20273,30 +19762,6 @@ typeinfo name for tinyxml2::XMLPrinter
 typeinfo name for tinyxml2::XMLText
 typeinfo name for tinyxml2::XMLUnknown
 typeinfo name for tinyxml2::XMLVisitor
-typeinfo name for unsigned __int128
-typeinfo name for unsigned __int128 const*
-typeinfo name for unsigned __int128*
-typeinfo name for unsigned char
-typeinfo name for unsigned char const*
-typeinfo name for unsigned char*
-typeinfo name for unsigned int
-typeinfo name for unsigned int const*
-typeinfo name for unsigned int*
-typeinfo name for unsigned long
-typeinfo name for unsigned long const*
-typeinfo name for unsigned long long
-typeinfo name for unsigned long long const*
-typeinfo name for unsigned long long*
-typeinfo name for unsigned long*
-typeinfo name for unsigned short
-typeinfo name for unsigned short const*
-typeinfo name for unsigned short*
-typeinfo name for void
-typeinfo name for void const*
-typeinfo name for void*
-typeinfo name for wchar_t
-typeinfo name for wchar_t const*
-typeinfo name for wchar_t*
 typename
 u!!Bc
 u.addressPrefix
@@ -20745,19 +20210,6 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__function_type_info
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__pbase_type_info
-vtable for __cxxabiv1::__pointer_to_member_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtable for tinyxml2::XMLAttribute
 vtable for tinyxml2::XMLComment
 vtable for tinyxml2::XMLDeclaration

@@ -250,16 +250,16 @@ $\nY8O
 /dev/urandom
 /etc/os-release
 /etc/steamos-oobe-image
-/proc/%d/status
 /proc/meminfo
 /proc/self/exe
 /proc/self/fd
+/proc/self/status
 /run/host/etc/os-release
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:05:40
-00:05:41
+00:23:23
+00:23:25
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -523,7 +523,7 @@ SKyu
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 11 2026
+Sep 17 2026
 Size
 Sm"\vg
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -568,7 +568,7 @@ Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
 Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 USER
@@ -1018,7 +1018,6 @@ realpath
 reference temporary #
 reinterpret_cast
 rename
-rewind
 rmdir
 ru&o
 s1 != NULL
