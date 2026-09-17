@@ -371,6 +371,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "get_reported_content",
         _ = (_) => [_, JSON.stringify(_)],
@@ -396,6 +397,7 @@
           (function (_, _) {
             return {
               queryKey: _(_),
+              enabled: (0, _._)(_),
               queryFn: async () => {
                 const _ = _._.Init(_._);
                 __webpack_require__.Body().set_coordinates(_._.fromObject(_));

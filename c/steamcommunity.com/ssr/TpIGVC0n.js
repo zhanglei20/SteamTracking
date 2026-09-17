@@ -1932,6 +1932,20 @@ function _(_) {
   return `${_.subject_type}:${_.topic ?? _.published_file_id ?? _.sender_account_id}`;
 }
 function _(_) {
+  switch (_.subject_type) {
+    case 1:
+      return !!_.topic;
+    case 2:
+      return !!_.comment_thread_id;
+    case 3:
+      return !!_.published_file_id;
+    case 5:
+    case 4:
+      return !!_.sender_account_id;
+  }
+  return !1;
+}
+function _(_) {
   return !!_ && `children` in _;
 }
 function _(_) {
@@ -2675,6 +2689,7 @@ async function _(_, _) {
 function _(_, _) {
   return {
     queryKey: _(_),
+    enabled: _(_),
     queryFn: async () => {
       let _ = _.Init(_);
       _.Body().set_coordinates(_.fromObject(_));

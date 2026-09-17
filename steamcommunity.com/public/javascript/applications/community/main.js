@@ -14961,32 +14961,47 @@
     63987: (e, t, r) => {
       "use strict";
       r.d(t, {
-        AH: () => j,
-        DU: () => w,
-        GA: () => y,
+        AH: () => I,
+        DU: () => M,
+        GA: () => v,
         Ie: () => d,
-        Jt: () => v,
-        Ju: () => h,
-        SB: () => f,
-        UL: () => b,
-        Ur: () => _,
-        V$: () => M,
-        X$: () => B,
-        ar: () => R,
-        cB: () => z,
-        fg: () => C,
-        l: () => S,
+        Jt: () => S,
+        Ju: () => _,
+        NX: () => g,
+        SB: () => w,
+        UL: () => f,
+        Ur: () => B,
+        V$: () => y,
+        X$: () => b,
+        ar: () => z,
+        cB: () => j,
+        fg: () => R,
+        l: () => C,
       });
-      var i = r(4340),
-        n = r(90314),
-        s = r(55184),
-        a = r(34410),
+      var i = r(34410),
+        n = r(4340),
+        s = r(90314),
+        a = r(55184),
         o = r(15993),
         l = r(64115),
         c = r(65843),
         u = (r(60690), r(43224));
       const d = "0";
       var m;
+      function g(e) {
+        switch (e.subject_type) {
+          case i.lN:
+            return !!e.topic;
+          case i.NC:
+            return !!e.comment_thread_id;
+          case i.z8:
+            return !!e.published_file_id;
+          case i.Uw:
+          case i.hP:
+            return !!e.sender_account_id;
+        }
+        return !1;
+      }
       !(function (e) {
         (e[(e.k_EContentModerationAction_None = 0)] =
           "k_EContentModerationAction_None"),
@@ -14995,186 +15010,186 @@
           (e[(e.k_EContentModerationAction_MarkSuspicious = 2)] =
             "k_EContentModerationAction_MarkSuspicious");
       })(m || (m = {}));
-      const g = {
+      const p = {
           url: "https://steamcommunity.com/dmca/create",
           strLocToken: "#ReportContent_CopyrightInfringement",
           strWarningBeforeNav: "#WarnBeforeNavigatingToCopyrightReportForm",
         },
-        p = {
+        h = {
           url: "https://steamcommunity.com/trademark/createtrademarkcomplaint/",
           strLocToken: "#ReportContent_TrademarkComplaint",
           strWarningBeforeNav: "#WarnBeforeNavigatingToTrademarkReportForm",
         };
-      function h(e) {
+      function _(e) {
         return !!e && "children" in e;
       }
-      function _(e) {
+      function B(e) {
         return !!e && "url" in e;
       }
-      function B(e) {
+      function b(e) {
         return !!e && "value" in e;
       }
-      const b = [
+      const f = [
         {
           strLocToken: "#ContentReportReasonCategory_ScamsAndTheft",
           children: [
-            { value: i.pt },
-            { value: i.bq },
-            { value: i.Qz },
-            { value: i.I0 },
-            { value: i.rU },
+            { value: n.pt },
+            { value: n.bq },
+            { value: n.Qz },
+            { value: n.I0 },
+            { value: n.rU },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Harassment",
           children: [
-            { value: i.M6 },
-            { value: i.qS },
-            { value: i.Lo },
-            { value: i.nt },
-            { value: i.gb },
+            { value: n.M6 },
+            { value: n.qS },
+            { value: n.Lo },
+            { value: n.nt },
+            { value: n.gb },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_ViolenceAndSelfHarm",
           children: [
-            { value: i.XR },
-            { value: i._Q },
-            { value: i.i2 },
-            { value: i.q6 },
-            { value: i.W5 },
+            { value: n.XR },
+            { value: n._Q },
+            { value: n.i2 },
+            { value: n.q6 },
+            { value: n.W5 },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Terrorism",
-          children: [{ value: i.nr }, { value: i.hi }, { value: i.DZ }],
+          children: [{ value: n.nr }, { value: n.hi }, { value: n.DZ }],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Abusive",
           children: [
-            { value: i.WA },
-            { value: i.o8 },
-            { value: i.Nd },
-            { value: i.FJ },
-            { value: i.eH },
+            { value: n.WA },
+            { value: n.o8 },
+            { value: n.Nd },
+            { value: n.FJ },
+            { value: n.eH },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Disruptive",
           children: [
-            { value: i.Zl },
-            { value: i.u1 },
-            { value: i.VJ },
-            { value: i.qo },
-            { value: i.oj },
-            { value: i.Z0 },
+            { value: n.Zl },
+            { value: n.u1 },
+            { value: n.VJ },
+            { value: n.qo },
+            { value: n.oj },
+            { value: n.Z0 },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Offtopic",
           children: [
-            { value: i.XG },
-            { value: i.Vb },
-            { value: i.dP },
-            { value: i.OC },
+            { value: n.XG },
+            { value: n.Vb },
+            { value: n.dP },
+            { value: n.OC },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_CSAM",
-          children: [{ value: i.NC }, { value: i.n3 }, { value: i.C4 }],
+          children: [{ value: n.NC }, { value: n.n3 }, { value: n.C4 }],
         },
         {
           strLocToken: "#ContentReportReasonCategory_NudityOrSexualContent",
-          children: [{ value: i.rf }],
+          children: [{ value: n.rf }],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Nonconsensual",
-          children: [{ value: i.r }],
+          children: [{ value: n.r }],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Commercial",
           children: [
-            { value: i.a },
-            { value: i.x2 },
-            { value: i.hw },
-            { value: i.FG },
-            { value: i.EF },
-            { value: i.N7 },
+            { value: n.a },
+            { value: n.x2 },
+            { value: n.hw },
+            { value: n.FG },
+            { value: n.EF },
+            { value: n.N7 },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Privacy",
-          children: [{ value: i.Pd }, { value: i.JO }, { value: i.zi }],
+          children: [{ value: n.Pd }, { value: n.JO }, { value: n.zi }],
         },
         {
           strLocToken: "#ContentReportReasonCategory_ReviewManipulation",
-          children: [{ value: i.Mf }],
+          children: [{ value: n.Mf }],
         },
         {
           strLocToken: "#ContentReportReasonCategory_ConsumerInformation",
           children: [
-            { value: i.cb },
-            { value: i.Zu },
-            { value: i.Rg },
-            { value: i.Xr },
+            { value: n.cb },
+            { value: n.Zu },
+            { value: n.Rg },
+            { value: n.Xr },
           ],
         },
         {
           strLocToken: "#ContentReportReason_QuotesModeratedContent",
-          children: [{ value: i.lV }],
+          children: [{ value: n.lV }],
         },
       ];
-      i.rU,
-        i.M6,
-        i.qS,
-        i.Lo,
-        i.nt,
-        i.gb,
-        i.XR,
-        i._Q,
-        i.i2,
-        i.q6,
-        i.W5,
-        i.nr,
-        i.hi,
-        i.DZ,
-        i.WA,
-        i.o8,
-        i.Nd,
-        i.eH,
-        i.NC,
-        i.n3,
-        i.C4,
-        i.rf,
-        i.r,
-        i.a,
-        i.x2,
-        i.hw,
-        i.FG,
-        i.N7;
-      function f() {
+      n.rU,
+        n.M6,
+        n.qS,
+        n.Lo,
+        n.nt,
+        n.gb,
+        n.XR,
+        n._Q,
+        n.i2,
+        n.q6,
+        n.W5,
+        n.nr,
+        n.hi,
+        n.DZ,
+        n.WA,
+        n.o8,
+        n.Nd,
+        n.eH,
+        n.NC,
+        n.n3,
+        n.C4,
+        n.rf,
+        n.r,
+        n.a,
+        n.x2,
+        n.hw,
+        n.FG,
+        n.N7;
+      function w() {
         return [
           {
-            value: i.Z0,
+            value: n.Z0,
             strOverrideReasonNameLocToken: "#reportforumpost_reason_disruptive",
             strDescriptionLocToken: "#reportforumpost_description_disruptive",
             bShowRightArrow: !0,
           },
           {
-            value: i.rU,
+            value: n.rU,
             strOverrideReasonNameLocToken: "#reportforumpost_reason_scams",
             strDescriptionLocToken: "#reportforumpost_description_scams",
             bShowRightArrow: !0,
           },
           {
-            value: i.N7,
+            value: n.N7,
             strOverrideReasonNameLocToken:
               "#reportforumpost_reason_advertising",
             strDescriptionLocToken: "#reportforumpost_description_advertising",
             bShowRightArrow: !0,
           },
           {
-            value: i.rf,
+            value: n.rf,
             strOverrideReasonNameLocToken:
               "#reportforumpost_reason_sensitiveordisturbing",
             strDescriptionLocToken:
@@ -15182,13 +15197,13 @@
             bShowRightArrow: !0,
           },
           {
-            value: i.r,
+            value: n.r,
             strOverrideReasonNameLocToken: "#reportforumpost_reason_privacy",
             strDescriptionLocToken: "#reportforumpost_description_privacy",
             bShowRightArrow: !0,
           },
           {
-            value: i.q6,
+            value: n.q6,
             strOverrideReasonNameLocToken:
               "#reportforumpost_reason_promotingviolence",
             strDescriptionLocToken:
@@ -15196,7 +15211,7 @@
             bShowRightArrow: !0,
           },
           {
-            value: i.C4,
+            value: n.C4,
             strOverrideReasonNameLocToken:
               "#reportforumpost_reason_childsafety",
             strDescriptionLocToken: "#reportforumpost_description_childsafety",
@@ -15208,230 +15223,230 @@
               "#reportforumpost_description_intellectualproperty",
             children: [
               {
-                value: i.eH,
+                value: n.eH,
                 strOverrideReasonNameLocToken:
                   "#reportforumpost_reason_cheating",
               },
-              g,
               p,
+              h,
             ],
             bShowRightArrow: !0,
           },
           {
-            value: i.OQ,
+            value: n.OQ,
             strOverrideReasonNameLocToken: "#reportforumpost_reason_notfound",
             bShowRightArrow: !0,
           },
         ];
       }
-      function w(e, t) {
+      function M(e, t) {
         if (!t || 0 === t.size) return !1;
-        if (_(e)) return !1;
-        if (B(e)) return t.has(e.value);
-        for (const r of e.children) if (!w(r, t)) return !1;
+        if (B(e)) return !1;
+        if (b(e)) return t.has(e.value);
+        for (const r of e.children) if (!M(r, t)) return !1;
         return !0;
-      }
-      function M(e) {
-        switch (e) {
-          case i.M6:
-            return i.Uw;
-          case i.qS:
-            return i.Qn;
-          case i.Lo:
-            return i.H8;
-          case i.nt:
-            return i.vF;
-          case i.gb:
-            return i.cF;
-          case i.WA:
-            return i.oL;
-          case i.r:
-            return i.no;
-          default:
-            return null;
-        }
       }
       function y(e) {
         switch (e) {
-          case i.r:
-            return i.ky;
-          case i.no:
-            return i.Wz;
-          case i.NC:
-            return i.q;
+          case n.M6:
+            return n.Uw;
+          case n.qS:
+            return n.Qn;
+          case n.Lo:
+            return n.H8;
+          case n.nt:
+            return n.vF;
+          case n.gb:
+            return n.cF;
+          case n.WA:
+            return n.oL;
+          case n.r:
+            return n.no;
           default:
             return null;
         }
       }
       function v(e) {
         switch (e) {
-          case i.dk:
+          case n.r:
+            return n.ky;
+          case n.no:
+            return n.Wz;
+          case n.NC:
+            return n.q;
+          default:
+            return null;
+        }
+      }
+      function S(e) {
+        switch (e) {
+          case n.dk:
             return c.u.Localize("#ContentReportReason_Invalid");
-          case i.IZ:
+          case n.IZ:
             return c.u.Localize("#ContentReportReason_None");
-          case i.OQ:
+          case n.OQ:
             return c.u.Localize("#ContentReportReason_Unknown");
-          case i.M6:
+          case n.M6:
             return c.u.Localize("#ContentReportReason_Harassment");
-          case i.qS:
+          case n.qS:
             return c.u.Localize("#ContentReportReason_BullyingAndIntimidation");
-          case i.Lo:
+          case n.Lo:
             return c.u.Localize("#ContentReportReason_Stalking");
-          case i.nt:
+          case n.nt:
             return c.u.Localize("#ContentReportReason_Doxxing");
-          case i.gb:
+          case n.gb:
             return c.u.Localize("#ContentReportReason_OtherHarassment");
-          case i.XR:
+          case n.XR:
             return c.u.Localize("#ContentReportReason_EncouragingViolence");
-          case i._Q:
+          case n._Q:
             return c.u.Localize("#ContentReportReason_EncouragingSelfHarm");
-          case i.i2:
+          case n.i2:
             return c.u.Localize("#ContentReportReason_EncouragingSuicide");
-          case i.q6:
+          case n.q6:
             return c.u.Localize("#ContentReportReason_OtherViolenceOrSelfHarm");
-          case i.W5:
+          case n.W5:
             return c.u.Localize(
               "#ContentReportReason_CredibleThreatOfViolence",
             );
-          case i.pt:
+          case n.pt:
             return c.u.Localize("#ContentReportReason_PhishingOrAccountTheft");
-          case i.bq:
+          case n.bq:
             return c.u.Localize("#ContentReportReason_AttemptedScamming");
-          case i.Qz:
+          case n.Qz:
             return c.u.Localize(
               "#ContentReportReason_LinkingToMaliciousContent",
             );
-          case i.I0:
+          case n.I0:
             return c.u.Localize("#ContentReportReason_Impersonation");
-          case i.rU:
+          case n.rU:
             return c.u.Localize("#ContentReportReason_OtherScamsAndTheft");
-          case i.nr:
+          case n.nr:
             return c.u.Localize("#ContentReportReason_EncouragingTerrorism");
-          case i.hi:
+          case n.hi:
             return c.u.Localize("#ContentReportReason_OrganizingTerrorism");
-          case i.DZ:
+          case n.DZ:
             return c.u.Localize("#ContentReportReason_OtherTerrorism");
-          case i.WA:
+          case n.WA:
             return c.u.Localize("#ContentReportReason_TargetedAbuse");
-          case i.o8:
+          case n.o8:
             return c.u.Localize("#ContentReportReason_NamingAndShaming");
-          case i.Nd:
+          case n.Nd:
             return c.u.Localize("#ContentReportReason_Discrimination");
-          case i.eH:
+          case n.eH:
             return c.u.Localize("#ContentReportReason_OtherAbuse");
-          case i.Zl:
+          case n.Zl:
             return c.u.Localize("#ContentReportReason_Trolling");
-          case i.u1:
+          case n.u1:
             return c.u.Localize("#ContentReportReason_Baiting");
-          case i.VJ:
+          case n.VJ:
             return c.u.Localize("#ContentReportReason_Derailing");
-          case i.Z0:
+          case n.Z0:
             return c.u.Localize("#ContentReportReason_OtherDisruptive");
-          case i.XG:
+          case n.XG:
             return c.u.Localize("#ContentReportReason_Spam");
-          case i.Vb:
+          case n.Vb:
             return c.u.Localize("#ContentReportReason_Begging");
-          case i.dP:
+          case n.dP:
             return c.u.Localize("#ContentReportReason_Reposting");
-          case i.OC:
+          case n.OC:
             return c.u.Localize("#ContentReportReason_OtherOffTopic");
-          case i.NC:
+          case n.NC:
             return c.u.Localize("#ContentReportReason_CSAMSexualContent");
-          case i.n3:
+          case n.n3:
             return c.u.Localize(
               "#ContentReportReason_CSAMGroomingOrEnticement",
             );
-          case i.C4:
+          case n.C4:
             return c.u.Localize("#ContentReportReason_CSAMOther");
-          case i.rf:
+          case n.rf:
             return c.u.Localize("#ContentReportReason_NudityOrSexualContent");
-          case i.r:
+          case n.r:
             return c.u.Localize("#ContentReportReason_NonConsensualMaterial");
-          case i.a:
+          case n.a:
             return c.u.Localize("#ContentReportReason_Advertising");
-          case i.x2:
+          case n.x2:
             return c.u.Localize("#ContentReportReason_ReferralLinks");
-          case i.hw:
+          case n.hw:
             return c.u.Localize("#ContentReportReason_Gambling");
-          case i.FG:
+          case n.FG:
             return c.u.Localize("#ContentReportReason_Raffles");
-          case i.N7:
+          case n.N7:
             return c.u.Localize("#ContentReportReason_OtherCommercialActivity");
-          case i.Mf:
+          case n.Mf:
             return c.u.Localize("#ContentReportReason_InauthenticReview");
-          case i.cb:
+          case n.cb:
             return c.u.Localize(
               "#ContentReportReason_HiddenAdvertisementOrCommercialCommunication",
             );
-          case i.Zu:
+          case n.Zu:
             return c.u.Localize(
               "#ContentReportReason_MisleadingInformationAboutGoodsOrServices",
             );
-          case i.Rg:
+          case n.Rg:
             return c.u.Localize(
               "#ContentReportReason_MisleadingInformationAboutConsumerRights",
             );
-          case i.Xr:
+          case n.Xr:
             return c.u.Localize(
               "#ContentReportReason_NoncomplianceWithPricingRegulations",
             );
-          case i.Pd:
+          case n.Pd:
             return c.u.Localize(
               "#ContentReportReason_RightToBeForgottenViolation",
             );
-          case i.JO:
+          case n.JO:
             return c.u.Localize(
               "#ContentReportReason_MissingProcessingGroundForData",
             );
-          case i.zi:
+          case n.zi:
             return c.u.Localize(
               "#ContentReportReason_OtherDataProtectionAndPrivacyViolation",
             );
-          case i.Uw:
+          case n.Uw:
             return c.u.Localize("#ContentReportReason_GenderedHarassment");
-          case i.Qn:
+          case n.Qn:
             return c.u.Localize(
               "#ContentReportReason_GenderedBullyingAndIntimidation",
             );
-          case i.H8:
+          case n.H8:
             return c.u.Localize("#ContentReportReason_GenderedStalking");
-          case i.vF:
+          case n.vF:
             return c.u.Localize("#ContentReportReason_GenderedDoxxing");
-          case i.cF:
+          case n.cF:
             return c.u.Localize("#ContentReportReason_GenderedOtherHarassment");
-          case i.lC:
+          case n.lC:
             return c.u.Localize(
               "#ContentReportReason_GenderedEncouragingViolence",
             );
-          case i.oL:
+          case n.oL:
             return c.u.Localize("#ContentReportReason_GenderedTargetedAbuse");
-          case i.q:
+          case n.q:
             return c.u.Localize("#ContentReportReason_CSAMFakedSexualContent");
-          case i.no:
+          case n.no:
             return c.u.Localize(
               "#ContentReportReason_GenderedNonConsensualMaterial",
             );
-          case i.Wz:
+          case n.Wz:
             return c.u.Localize(
               "#ContentReportReason_FakedGenderedNonConsensualMaterial",
             );
-          case i.ky:
+          case n.ky:
             return c.u.Localize(
               "#ContentReportReason_FakedNonConsensualMaterial",
             );
-          case i.lV:
+          case n.lV:
             return c.u.Localize("#ContentReportReason_QuotesModeratedContent");
-          case i.L$:
+          case n.L$:
             return c.u.Localize(
               "#ContentReportReason_NegativeEffectonDiscourseOrElections",
             );
-          case i.EF:
+          case n.EF:
             return c.u.Localize("#ContentReportReason_Piracy");
-          case i.FJ:
+          case n.FJ:
             return c.u.Localize("#ContentReportReason_ToSViolation");
-          case i.oj:
+          case n.oj:
             return c.u.Localize("#ContentReportReason_Miscategorized");
-          case i.qo:
+          case n.qo:
             return c.u.Localize(
               "#ContentReportReason_BypassingProfanityFilter",
             );
@@ -15439,90 +15454,90 @@
             return "";
         }
       }
-      function S(e) {
+      function C(e) {
         switch (e) {
-          case n.z_:
+          case s.z_:
             return c.u.Localize("#moderation_resolutionstatus_pending");
-          case n.CC:
+          case s.CC:
             return c.u.Localize("#moderation_resolutionstatus_acquitted");
-          case n.S6:
+          case s.S6:
             return c.u.Localize("#moderation_resolutionstatus_sanctioned");
-          case n.wx:
+          case s.wx:
             return c.u.Localize("#moderation_resolutionstatus_removed");
-          case n.et:
+          case s.et:
             return c.u.Localize("#moderation_resolutionstatus_relabelled");
-          case n.$K:
+          case s.$K:
             return c.u.Localize("#moderation_resolutionstatus_suspicious");
-          case n.Kz:
+          case s.Kz:
             return c.u.Localize(
               "#moderation_resolutionstatus_harassmentstrike",
             );
-          case n.Xv:
+          case s.Xv:
             return c.u.Localize("#moderation_resolutionstatus_purged");
-          case n.FE:
+          case s.FE:
             return c.u.Localize("#moderation_resolutionstatus_removeandwarn");
-          case n.C5:
+          case s.C5:
             return c.u.Localize("#moderation_resolutionstatus_removeandban");
-          case n.vm:
+          case s.vm:
             return c.u.Localize("#moderation_resolutionstatus_removeandkick");
           default:
             return c.u.Localize("#moderation_resolutionstatus_unknown");
         }
       }
-      function C(e) {
+      function R(e) {
         switch (e) {
-          case s.eJ:
+          case a.eJ:
             return c.u.Localize("#moderationaction_acquitted");
-          case s.Nu:
+          case a.Nu:
             return c.u.Localize("#moderationaction_cancelled");
-          case s._7:
+          case a._7:
             return c.u.Localize("#moderationaction_disputed");
-          case s.YI:
+          case a.YI:
             return c.u.Localize("#moderationaction_escalated");
-          case s._F:
+          case a._F:
             return c.u.Localize("#moderationaction_sanctioned");
-          case s.ks:
+          case a.ks:
             return c.u.Localize("#moderationaction_sustained");
-          case s.Hd:
+          case a.Hd:
             return c.u.Localize("#moderationaction_unresolved");
-          case s.XP:
+          case a.XP:
             return c.u.Localize("#moderationaction_updated");
-          case s.Ih:
+          case a.Ih:
             return c.u.Localize("#moderationaction_locked");
-          case s.zM:
+          case a.zM:
             return c.u.Localize("#moderationaction_unlocked");
-          case s.bq:
+          case a.bq:
             return c.u.Localize("#moderationaction_deleted");
-          case s.l1:
+          case a.l1:
             return c.u.Localize("#moderationaction_warned");
-          case s.Dd:
+          case a.Dd:
             return c.u.Localize("#moderationaction_banned_from_hub");
-          case s.dT:
+          case a.dT:
             return c.u.Localize("#moderationaction_banned_from_community");
-          case s.ET:
+          case a.ET:
             return c.u.Localize("#moderationaction_trade_banned");
-          case s.nF:
+          case a.nF:
             return c.u.Localize("#moderationaction_marked_as_suspicious");
-          case s.EK:
+          case a.EK:
             return c.u.Localize("#moderationaction_reset_content");
-          case s.d_:
+          case a.d_:
             return c.u.Localize("#moderationaction_escalated_for_csam");
-          case s.Ac:
+          case a.Ac:
             return c.u.Localize("#moderationaction_escalated_for_terrorism");
-          case s.T4:
+          case a.T4:
             return c.u.Localize("#moderationaction_claimed");
-          case s.eS:
+          case a.eS:
             return c.u.Localize("#moderationaction_released");
-          case s.WI:
+          case a.WI:
             return c.u.Localize("#moderationaction_privatemessaged");
-          case s.LF:
+          case a.LF:
             return c.u.Localize("#moderationaction_ownerdisputed");
           default:
             return `${c.u.Localize("#moderationaction_unknown")}: ${e}`;
         }
       }
-      a.lN, a.Uw, a.hP, a.z8, a.NC;
-      function R(e) {
+      i.lN, i.Uw, i.hP, i.z8, i.NC;
+      function z(e) {
         switch (e) {
           case o.HH:
             return u.T.Localize("#moderation_moderatorlevel_any");
@@ -15534,7 +15549,7 @@
             return u.T.Localize("#moderation_moderatorlevel_unknown");
         }
       }
-      function z(e) {
+      function j(e) {
         const t = void 0 === e.d || 0 === e.d;
         switch (e.s) {
           case l.bX:
@@ -15570,109 +15585,109 @@
             return u.T.Localize("#moderation_sanction_unknown", e.s);
         }
       }
-      function j(e) {
+      function I(e) {
         if (null === e) return null;
         switch (
           (function (e) {
             switch (e) {
-              case i.ky:
-              case i.Wz:
-              case i.no:
-                return i.r;
-              case i.q:
-                return i.NC;
-              case i.Uw:
-                return i.M6;
-              case i.Qn:
-                return i.qS;
-              case i.H8:
-                return i.Lo;
-              case i.vF:
-                return i.nt;
-              case i.cF:
-                return i.gb;
-              case i.oL:
-                return i.WA;
+              case n.ky:
+              case n.Wz:
+              case n.no:
+                return n.r;
+              case n.q:
+                return n.NC;
+              case n.Uw:
+                return n.M6;
+              case n.Qn:
+                return n.qS;
+              case n.H8:
+                return n.Lo;
+              case n.vF:
+                return n.nt;
+              case n.cF:
+                return n.gb;
+              case n.oL:
+                return n.WA;
               default:
                 return e;
             }
           })(e)
         ) {
-          case i.pt:
+          case n.pt:
             return 4664;
-          case i.bq:
+          case n.bq:
             return 4665;
-          case i.Qz:
+          case n.Qz:
             return 4666;
-          case i.I0:
+          case n.I0:
             return 4667;
-          case i.rU:
+          case n.rU:
             return 4668;
-          case i.M6:
+          case n.M6:
             return 4669;
-          case i.qS:
+          case n.qS:
             return 4670;
-          case i.Lo:
+          case n.Lo:
             return 4671;
-          case i.nt:
+          case n.nt:
             return 4672;
-          case i.XR:
+          case n.XR:
             return 4673;
-          case i._Q:
+          case n._Q:
             return 4674;
-          case i.i2:
+          case n.i2:
             return 4675;
-          case i.q6:
+          case n.q6:
             return 4676;
-          case i.W5:
+          case n.W5:
             return 4677;
-          case i.nr:
+          case n.nr:
             return 4678;
-          case i.hi:
+          case n.hi:
             return 4679;
-          case i.WA:
+          case n.WA:
             return 4680;
-          case i.o8:
+          case n.o8:
             return 4681;
-          case i.Zl:
+          case n.Zl:
             return 4682;
-          case i.u1:
+          case n.u1:
             return 4683;
-          case i.VJ:
+          case n.VJ:
             return 4684;
-          case i.XG:
+          case n.XG:
             return 4685;
-          case i.Vb:
+          case n.Vb:
             return 4686;
-          case i.dP:
+          case n.dP:
             return 4687;
-          case i.NC:
+          case n.NC:
             return 4689;
-          case i.n3:
+          case n.n3:
             return 4690;
-          case i.rf:
+          case n.rf:
             return 4691;
-          case i.r:
+          case n.r:
             return 4692;
-          case i.a:
+          case n.a:
             return 4693;
-          case i.x2:
+          case n.x2:
             return 4694;
-          case i.hw:
+          case n.hw:
             return 4695;
-          case i.FG:
+          case n.FG:
             return 4696;
-          case i.lV:
+          case n.lV:
             return 4697;
-          case i.Nd:
+          case n.Nd:
             return 5467;
-          case i.EF:
+          case n.EF:
             return 5533;
-          case i.FJ:
+          case n.FJ:
             return 5534;
-          case i.oj:
+          case n.oj:
             return 5535;
-          case i.qo:
+          case n.qo:
             return 5536;
           default:
             return null;
