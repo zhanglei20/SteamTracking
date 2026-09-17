@@ -94,7 +94,7 @@ $ORIGIN
 /proc/mounts
 /proc/self/fd/%d
 /proc/self/maps
-/run/host/root/%s
+/run/host/root
 /sink/%s/volume-control
 /steamrt64
 /steamsysinfo
@@ -386,7 +386,9 @@ MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 MilesLoader
 N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
 N17CFileWriterThread19CFileWriterWorkItemE
@@ -448,6 +450,7 @@ St20bad_array_new_length
 St8bad_cast
 St9bad_alloc
 St9exception
+St9type_info
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -575,7 +578,6 @@ __lxstat
 __lxstat64
 __pthread_key_create
 __stack_chk_fail
-__test_and_acquire(long*)
 __tls_get_addr
 __wrap___lxstat
 __wrap___lxstat64
@@ -620,13 +622,6 @@ __xstat
 __xstat64
 _exit
 _strlwr
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 abort
 access
 alcCloseDevice
@@ -677,8 +672,6 @@ basic_string_view::substr
 bin64
 bluetooth
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
 boolean
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 byte
@@ -1132,17 +1125,7 @@ true
 typeinfo fn for
 typeinfo for
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 typename
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
@@ -1167,13 +1150,6 @@ volume-down
 volume-up
 vsnprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 wchar_t
 wpctl reset --all --yes
 wpctl reset --all --yes --dry-run

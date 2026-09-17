@@ -518,7 +518,6 @@
 != and not NULL
 !AxU
 !BIsSingleFileUpdateMode()
-!BIsValidDirectory( sTempDir )
 !BLoggedOn()
 !BRunningAsSiteLicenseProvider()
 !BUseIOCP()
@@ -2374,17 +2373,12 @@ $steammessages_parental_objects.proto"
 %s (%1.2fms)
 %s (%llu kB)
 %s (emsg=%d)
-%s - failed to collect system logs
 %s - failed to send manifest request
 %s - failed to send patch request
 %s - locked by 0x%p
 %s - manifest request received %d (%s) HTTP response
 %s - received %d (%s) HTTP response
 %s - received 200 OK but empty response - converting to 404
-%s - skipping directory: %s
-%s - skipping large file: %s
-%s - system log collector has no logs
-%s - system log collector is not available
 %s --add-section %s=%s %s
 %s --device %s
 %s --remove-section=%s %s
@@ -2510,7 +2504,6 @@ $steammessages_parental_objects.proto"
 %s/%llu_legacy.bin
 %s/%s.cachedmsg
 %s/%s.tmp
-%s/%s/%llX/system
 %s/%s/%s.previous.txt
 %s/%s/%s.txt
 %s/%s/%s/%u/%s.vdf
@@ -2685,7 +2678,6 @@ $steammessages_parental_objects.proto"
 %s: failed to retrieve device list from NetworkManager
 %s: failed to retrieve system version details\n
 %s: failed to run command: %s\n
-%s: failed to save output file: %s
 %s: forcing matching mode: %d
 %s: found matching mode: %d
 %s: gamescope event external: %d modes: %d
@@ -3982,7 +3974,7 @@ $steammessages_parental_objects.proto"
 (\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
-(\t"0\n.CAccountHardware_RegisterSteamMachine_Response"e\n:CAccountHardwarePromotions_RedeemFramePromoPackage_Request
+(\t"0\n.CAccountHardware_RegisterSteamMachine_Response"f\n:CAccountHardwarePromotions_RedeemFramePromoPackage_Request
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -5472,9 +5464,10 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -6534,7 +6527,7 @@ $steammessages_parental_objects.proto"
 ../clientdll/networkdevicemanager_linux.cpp:3017
 ../clientdll/p2pnetworkingsession.cpp
 ../clientdll/peercontentserver.cpp
-../clientdll/perfreportingmanager.cpp:388
+../clientdll/perfreportingmanager.cpp:391
 ../clientdll/pipewirecontext.cpp
 ../clientdll/pipewireutils.cpp
 ../clientdll/remoteclientjobs.cpp
@@ -6567,7 +6560,6 @@ $steammessages_parental_objects.proto"
 ../clientdll/systemdockmanager_linux.cpp
 ../clientdll/systemdockmanager_linux.cpp:337
 ../clientdll/systemdockmanager_linux.cpp:562
-../clientdll/systemlogcollector.cpp
 ../clientdll/systemmanager.cpp
 ../clientdll/systemmanager.cpp:2554
 ../clientdll/systemmanager.cpp:2886
@@ -8070,7 +8062,7 @@ $steammessages_parental_objects.proto"
 /proc/self/fd/%d
 /proc/self/maps
 /proc/sys/kernel/sched_autogroup_enabled
-/run/host/root/%s
+/run/host/root
 /run/vpower/%s
 /sbin/lsof
 /server-status
@@ -8300,12 +8292,12 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00:00:00
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 00|000
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11899,11 +11891,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12773,7 +12765,6 @@ $steammessages_parental_objects.proto"
 25CScheduleCallbackWorkItemI28ControllerWirelessPresence_tE
 25CScheduleCallbackWorkItemI30ControllerDongleUpdateStatus_tE
 25CScheduledFunctionUserJobI12CCMInterface9CBaseUserE
-25CScopedSystemLogCollector
 25CSetStreamingClientConfig
 25CSimpleHapticTickWorkItem
 25CSimpleParallelWorkThread
@@ -13134,7 +13125,6 @@ $steammessages_parental_objects.proto"
 27CSteamTV_HomePageContentRow
 27CTritonDockedToPuckWorkItem
 27CWorkItemApplySteamOSUpdate
-27CWorkItemGetAvailableDrives
 27CWorkItemLoadFileIntoBuffer
 27CWorkItemReadFromChunkStore
 27CWorkshopCleanupUGCCacheJob
@@ -13427,6 +13417,7 @@ $steammessages_parental_objects.proto"
 29CStreamingClientHandshakeInfo
 29CStreamingServerHandshakeInfo
 29CVideoClient_UnlockedH264_Job
+29CWorkItemFindDriveNameForPath
 29ClientSteamNewsClientUpdate_t
 29CompatManagerToolRegistered_t
 29ContentDeltaChunks_DeltaChunk
@@ -13711,6 +13702,7 @@ $steammessages_parental_objects.proto"
 30CUser_SaveHardwareInfo_Request
 30CVirtualControllerGlobalConfig
 30CWebUITransportServerStatusJob
+30CWorkItemGetAvailableDriveList
 30CWorkItemGetFileSystemStableId
 30CWorkItemNetFilterOnDisconnect
 30CWorkItemProcessChunkForUpload
@@ -14915,6 +14907,7 @@ $steammessages_parental_objects.proto"
 39CTransportValidation_AddNumbers_Request
 39CTwoFactor_RemoveAuthenticator_Response
 39CUserAccount_RegisterCompatTool_Request
+39CWorkItemGetFileSystemPosixDeviceNumber
 39ClientNetworking_RequestSDRPingLocation
 39SiteServerUI_ContentCacheConfig_Request
 39SiteServerUI_ContentCacheStatus_Request
@@ -16273,6 +16266,9 @@ $steammessages_parental_objects.proto"
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
+6144
+7200
+65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -16288,7 +16284,6 @@ $steammessages_parental_objects.proto"
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16318,7 +16313,6 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-65536
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
@@ -16397,7 +16391,6 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
-7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -17416,6 +17409,7 @@ $steammessages_parental_objects.proto"
 @sSiteLicenseProxyCacheDirectory
 @sSiteLicenseProxyExplicitIP
 @sSteamCmdForcePlatformBitness
+@sSteamCmdForcePlatformCPU
 @sSteamCmdForcePlatformType
 @sTrustedLocalContentCacheName
 @strCSNoCacheHeader
@@ -17463,7 +17457,6 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -18751,6 +18744,7 @@ BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BRemoteClientCanPairViaWifiAP
 BRemoteClientCanStreamSteamVR
 BRemoteClientConnectedToWifiAP
+BRemoteClientConnectingToWifiAP
 BRemoteClientDownloadManagementEnabled
 BRemoteClientHasLocalConnection
 BRemoteClientHasStreamingEnabled
@@ -18845,7 +18839,6 @@ BWritingMiniDump
 BYield()
 BYieldingBuildManifest
 BYieldingCanReadDiskCache( strBasePath.String() ) == true
-BYieldingCollectLogs
 BYieldingCompleteSteamControllerRegistration - Error committing registration completion of controller & account pair - controller disconnected: %s\n
 BYieldingCompleteSteamControllerRegistration - Error committing registration completion of controller & account pair: %s %s %s\n
 BYieldingCompleteSteamControllerRegistration - controller changed before completing registration.\n
@@ -20716,8 +20709,6 @@ CJobSendLogs - Uploading logs for request ID %llu
 CJobSendLogs - error uploading file: %d - %s
 CJobSendLogs - skipping directory: %s
 CJobSendLogs - skipping large file: %s
-CJobSendLogs: failed to collect system logs
-CJobSendLogs: system log collector is not available
 CJobSetAsyncNotificationsEnabled
 CJobSteamRuntimeSystemInfo
 CJobSteamRuntimeSystemInfo: container s-r-t yield failed\n
@@ -22383,10 +22374,14 @@ CWorkItemBufferSigner
 CWorkItemBufferSigner::ThreadProcess
 CWorkItemBufferedPacket
 CWorkItemBufferedPacket::ThreadProcess
+CWorkItemFindDriveNameForPath
+CWorkItemFindDriveNameForPath::ThreadProcess
 CWorkItemFormatSDCard
 CWorkItemFormatSDCard::ThreadProcess
-CWorkItemGetAvailableDrives
-CWorkItemGetAvailableDrives::ThreadProcess
+CWorkItemGetAvailableDriveList
+CWorkItemGetAvailableDriveList::ThreadProcess
+CWorkItemGetFileSystemPosixDeviceNumber
+CWorkItemGetFileSystemPosixDeviceNumber::ThreadProcess
 CWorkItemGetFileSystemStableId
 CWorkItemGetFileSystemStableId::ThreadProcess
 CWorkItemGetFreeDiskSpace
@@ -23374,6 +23369,7 @@ ControlPoint2X
 ControlPoint2Y
 Controller
 Controller %d mapping uses xinput : false\n
+Controller %d uses xinput : true (warmed config for app %u)\n
 Controller %d uses xinput : true\n
 Controller %u is already paired to target dongle %u\n
 Controller Actions
@@ -23772,6 +23768,13 @@ DESKTOP_IS_PORTAL_TRASH (interface)
 DESX
 DESX-CBC
 DEVTYPE
+DF128_
+DF16_
+DF16b
+DF32_
+DF32x
+DF64_
+DF64x
 DH PARAMETERS
 DH Parameters
 DH Private-Key
@@ -24953,7 +24956,6 @@ ERROR: JSON parse failed fetching SDR network config from %s\n
 ERROR: Response did not have success=true accessing %s. message=%s\n
 ERROR: aborting devkit game launch\n
 ERROR: selector [%d] invalid\n
-ERR_getErrorString
 ERegKeyRoot
 ERemoteClientBroadcastMsg
 ERemoteClientLaunchResult
@@ -25511,7 +25513,6 @@ Error: %s: failed to add filter match: %s
 Error: %s: failed to bind object: %d - %s
 Error: %s: failed to check for update
 Error: %s: failed to check for update during apply
-Error: %s: failed to collect output for: %s
 Error: %s: failed to connect to login1: %s\n
 Error: %s: failed to connect to pw context
 Error: %s: failed to create a glib context\n
@@ -25527,7 +25528,6 @@ Error: %s: failed to get screen resources
 Error: %s: failed to initialize XInput2, some features may be missing
 Error: %s: failed to initialize XRandR, some features may be missing
 Error: %s: failed to initialize battery state manager, battery state will be unavailable
-Error: %s: failed to initialize output directory
 Error: %s: failed to initialize pipewire context
 Error: %s: failed to initialize udev
 Error: %s: failed to initialize udev connection
@@ -25754,52 +25754,6 @@ FOZ underflow, file truncated?
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
 FRESH Antidrift detected before saving: ( %f,  %f,  %f ).\n
-FSE_NCountWriteBound
-FSE_buildCTable_rle
-FSE_buildCTable_wksp
-FSE_buildDTable_wksp
-FSE_compressBound
-FSE_compress_usingCTable
-FSE_decompress_wksp_bmi2
-FSE_getErrorName
-FSE_isError
-FSE_normalizeCount
-FSE_optimalTableLog
-FSE_optimalTableLog_internal
-FSE_readNCount
-FSE_readNCount_bmi2
-FSE_versionNumber
-FSE_writeNCount
-FSEv05_buildDTable
-FSEv05_buildDTable_raw
-FSEv05_buildDTable_rle
-FSEv05_createDTable
-FSEv05_decompress
-FSEv05_decompress_usingDTable
-FSEv05_freeDTable
-FSEv05_getErrorName
-FSEv05_isError
-FSEv05_readNCount
-FSEv06_buildDTable
-FSEv06_buildDTable_raw
-FSEv06_buildDTable_rle
-FSEv06_createDTable
-FSEv06_decompress
-FSEv06_decompress_usingDTable
-FSEv06_freeDTable
-FSEv06_getErrorName
-FSEv06_isError
-FSEv06_readNCount
-FSEv07_buildDTable
-FSEv07_buildDTable_raw
-FSEv07_buildDTable_rle
-FSEv07_createDTable
-FSEv07_decompress
-FSEv07_decompress_usingDTable
-FSEv07_freeDTable
-FSEv07_getErrorName
-FSEv07_isError
-FSEv07_readNCount
 FV|FgUV
 FW Available:
 FW Current:
@@ -27160,6 +27114,7 @@ GetConnectedUniverse
 GetConnectedUniverse() == pfnBootstrapperEUniverse()
 GetConnectedUniverse() > k_EUniverseInvalid && GetConnectedUniverse() < k_EUniverseMax
 GetConnectedWifiAPClientID
+GetConnectingWifiAPClientID
 GetConnectionInfo
 GetConnectionName
 GetConnectionRealTimeStatus
@@ -27612,6 +27567,7 @@ GetPerGameSettings
 GetPerUserInputSettings
 GetPersonaName
 GetPersonaState
+GetPlatformCPUName
 GetPlatformCapabilities
 GetPlatformFromOS
 GetPlatformName
@@ -28011,12 +27967,6 @@ HID: Add to Config Cache - modify active mapping in-place %u %u\n
 HID: Add to Config Cache - modify disconnected mapping in-place %u %u\n
 HIDKeyboardKeys
 HIGH
-HIST_count
-HIST_countFast
-HIST_countFast_wksp
-HIST_count_simple
-HIST_count_wksp
-HIST_isError
 HKCR
 HKCU
 HKDF
@@ -28094,82 +28044,6 @@ HTTPS_PROXY
 HTTPServer sequence ack out-of-order, trying to ack %llu, currently acked %llu\n
 HTTP_1_1_REQUIRED
 HTTP_PROXY
-HUF_buildCTable_wksp
-HUF_cardinality
-HUF_compress1X_repeat
-HUF_compress1X_usingCTable
-HUF_compress4X_repeat
-HUF_compress4X_usingCTable
-HUF_compressBound
-HUF_decompress1X1_DCtx_wksp
-HUF_decompress1X2_DCtx_wksp
-HUF_decompress1X_DCtx_wksp
-HUF_decompress1X_usingDTable
-HUF_decompress4X_hufOnly_wksp
-HUF_decompress4X_usingDTable
-HUF_estimateCompressedSize
-HUF_getErrorName
-HUF_getNbBitsFromCTable
-HUF_isError
-HUF_minTableLog
-HUF_optimalTableLog
-HUF_readCTable
-HUF_readCTableHeader
-HUF_readDTableX1_wksp
-HUF_readDTableX2_wksp
-HUF_readStats
-HUF_readStats_wksp
-HUF_selectDecoder
-HUF_validateCTable
-HUF_writeCTable_wksp
-HUFv05_decompress
-HUFv05_decompress1X2
-HUFv05_decompress1X2_usingDTable
-HUFv05_decompress1X4
-HUFv05_decompress1X4_usingDTable
-HUFv05_decompress4X2
-HUFv05_decompress4X2_usingDTable
-HUFv05_decompress4X4
-HUFv05_decompress4X4_usingDTable
-HUFv05_getErrorName
-HUFv05_isError
-HUFv05_readDTableX2
-HUFv05_readDTableX4
-HUFv06_decompress
-HUFv06_decompress1X2
-HUFv06_decompress1X2_usingDTable
-HUFv06_decompress1X4
-HUFv06_decompress1X4_usingDTable
-HUFv06_decompress4X2
-HUFv06_decompress4X2_usingDTable
-HUFv06_decompress4X4
-HUFv06_decompress4X4_usingDTable
-HUFv06_readDTableX2
-HUFv06_readDTableX4
-HUFv07_decompress
-HUFv07_decompress1X2
-HUFv07_decompress1X2_DCtx
-HUFv07_decompress1X2_usingDTable
-HUFv07_decompress1X4
-HUFv07_decompress1X4_DCtx
-HUFv07_decompress1X4_usingDTable
-HUFv07_decompress1X_DCtx
-HUFv07_decompress1X_usingDTable
-HUFv07_decompress4X2
-HUFv07_decompress4X2_DCtx
-HUFv07_decompress4X2_usingDTable
-HUFv07_decompress4X4
-HUFv07_decompress4X4_DCtx
-HUFv07_decompress4X4_usingDTable
-HUFv07_decompress4X_DCtx
-HUFv07_decompress4X_hufOnly
-HUFv07_decompress4X_usingDTable
-HUFv07_getErrorName
-HUFv07_isError
-HUFv07_readDTableX2
-HUFv07_readDTableX4
-HUFv07_readStats
-HUFv07_selectDecoder
 HWID Set
 HWyn
 H\fJxE\v
@@ -30630,6 +30504,7 @@ Must allocate at least 2 FakeIP ports to enable advertising the spectator port.\
 Must be called through a gameserver ISteamSocketNetworking
 Must be one of: [32 | 64]
 Must be one of: [windows | macos | linux | android]
+Must be one of: [x86 | arm64]
 Must be set by user
 Must initialize with CWebSocketConnection::GlobalInit before accepting connections
 Must pass a INetSSLConnectionCallback if using SSL
@@ -30649,10 +30524,14 @@ N10CIPCServer13CThreadClientE
 N10ClFriend_t21AppRichPresenceInfo_tE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
+N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__function_type_infoE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
+N10__cxxabiv123__fundamental_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
 N11CHTTPClient12HostLookup_tE
 N11CHTTPClient18SSLContextLookup_tE
 N11CHTTPClient20AddrConnectionInfo_tE
@@ -31782,6 +31661,7 @@ No signed data
 No site licenses found
 No space in chunk cache for sPLT
 No speex decoder available, abandoning voice\n
+No staging folder specified
 No subscription
 No target folder
 No target sources connected
@@ -32562,6 +32442,13 @@ PCDATA
 PCNT
 PCRE does not support \L, \l, \N{name}, \U, or \u
 PCS illuminant is not D50
+PDF128_
+PDF16_
+PDF16b
+PDF32_
+PDF32x
+PDF64_
+PDF64x
 PDP Battlefield 1 Controller
 PDP Battlefield 4 Controller
 PDP Deliverer of Truth
@@ -32743,6 +32630,20 @@ PKCS8Encrypted
 PKCS8_PRIV_KEY_INFO
 PKCS8_encrypt
 PKCS8_set0_pbe
+PKDF128_
+PKDF16_
+PKDF16b
+PKDF32_
+PKDF32x
+PKDF64_
+PKDF64x
+PKDd
+PKDe
+PKDf
+PKDi
+PKDn
+PKDs
+PKDu
 PKEY_USAGE_PERIOD
 PKINIT Client Auth
 PKIX
@@ -34491,6 +34392,7 @@ RunOnce
 RunTime
 RunUntilCompleted
 RunUntilCompletedLowPri
+RunVRPathReg: Can't find SteamVR install!
 Runic
 Running %sinstall script evaluator for AppID %u, %d step(s) %s
 Running Script
@@ -37988,7 +37890,6 @@ ThreadedGenerateEncodedHashForDownloadedFile
 ThreadedGetBIOSUpdateAutoMessage
 ThreadedMangoAppAtomWorkaround: bHideMango: %d
 ThreadedMoveDownloadToReferenced
-ThreadedPackageSystemLogsIfAvailable
 ThreadedParsePacketToProtoBufMsg
 ThreadedPerformInitialHandshake SSL_do_handshake
 ThreadedReadFromDisk
@@ -39951,13 +39852,13 @@ YieldingCheckForUpdateBIOS
 YieldingCheckForUpdateDummy
 YieldingCheckForUpdateOS
 YieldingCheckForUpdateSteamClient
-YieldingCollectCommandOutput
-YieldingCollectSystemLogsIfAvailable
 YieldingConnect
 YieldingEnableGraphicsProfiling
 YieldingEnablePerfOverlay
+YieldingFindDriveNameForPath
 YieldingGenerateSystemInformation
 YieldingGetAvailableDrives
+YieldingGetFileSystemPosixDeviceNumber
 YieldingGetFileSystemStableId
 YieldingPostProgress
 YieldingPrintInstalledFiles
@@ -40050,34 +39951,6 @@ Z0000
 Z48wN39
 Z:hluv
 Z?SHX?
-ZBUFFv05_createDCtx
-ZBUFFv05_decompressContinue
-ZBUFFv05_decompressInit
-ZBUFFv05_decompressInitDictionary
-ZBUFFv05_freeDCtx
-ZBUFFv05_getErrorName
-ZBUFFv05_isError
-ZBUFFv05_recommendedDInSize
-ZBUFFv05_recommendedDOutSize
-ZBUFFv06_createDCtx
-ZBUFFv06_decompressContinue
-ZBUFFv06_decompressInit
-ZBUFFv06_decompressInitDictionary
-ZBUFFv06_freeDCtx
-ZBUFFv06_getErrorName
-ZBUFFv06_isError
-ZBUFFv06_recommendedDInSize
-ZBUFFv06_recommendedDOutSize
-ZBUFFv07_createDCtx
-ZBUFFv07_createDCtx_advanced
-ZBUFFv07_decompressContinue
-ZBUFFv07_decompressInit
-ZBUFFv07_decompressInitDictionary
-ZBUFFv07_freeDCtx
-ZBUFFv07_getErrorName
-ZBUFFv07_isError
-ZBUFFv07_recommendedDInSize
-ZBUFFv07_recommendedDOutSize
 ZF]:Ba?
 ZINT32
 ZINT64
@@ -42763,6 +42636,7 @@ Zulu
 \n\vadmin_query
 \n\vallow_alias
 \n\vallow_voice
+\n\vapp_running
 \n\vappidorname
 \n\vauth_key_id
 \n\vauto_update
@@ -43228,13 +43102,6 @@ _XRead
 _XReply
 _XSend
 _XSetLastRequestRead
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
-_ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
-_ZSt10__exchangeIPKcDnET_RS3_OT0_
-_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
-_ZSt10__exchangeIPcDnET_RS2_OT0_
-_ZSt10__exchangeIPwDnET_RS2_OT0_
 _\kku
 _\n\vpublic_data
 __GL_SHADER_DISK_CACHE_APP_NAME
@@ -43291,7 +43158,6 @@ __strftime_l
 __strtod_l
 __strtof_l
 __strxfrm_l
-__test_and_acquire(long*)
 __tls_get_addr
 __towlower_l
 __towupper_l
@@ -43641,13 +43507,6 @@ _steam_osmanager_legacy__skeleton_handle_get_property
 _steam_osmanager_legacy__skeleton_handle_method_call
 _steam_osmanager_legacy__skeleton_handle_set_property
 _strlwr
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 _type == kArray
 _type == kObject
 _type == kString
@@ -44980,11 +44839,6 @@ bond
 bonded
 bonds
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
-bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
-bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
-bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 bool pcrecpp::RE::DoMatch(const pcrecpp::StringPiece&, pcrecpp::RE::Anchor, int*, const pcrecpp::Arg* const*, int) const
 bool pcrecpp::RE::DoMatchImpl(const pcrecpp::StringPiece&, pcrecpp::RE::Anchor, int*, const pcrecpp::Arg* const*, int, int*, int) const
@@ -46081,6 +45935,7 @@ completed_achievements
 completion_achievements
 component_code
 component_name
+component_serial
 component_type
 composing
 compressed
@@ -46107,7 +45962,6 @@ computed/NumVRLaunchOptions
 computed/SupportsOpenVROverlay
 computed/SupportsOpenVRScene
 computed/SupportsOpenXR
-computed_serial
 computer activity: %s
 conditional group contains more than two branches
 config
@@ -46120,6 +45974,7 @@ config/SteamTraceExit
 config/SteamTraceModule
 config/coplay_%llu.vdf
 config/mangohud.conf
+config/oscpu
 config/oslist
 config/proxyconfig.vdf
 config/serverbrowser.vdf
@@ -46158,6 +46013,7 @@ connected_paired_network_hash
 connected_seconds
 connecting
 connecting/sending request
+connecting_paired_network_hash
 connectio
 connection
 connection type not set
@@ -46300,6 +46156,7 @@ controller_config\autosave
 controller_config_usage
 controller_configuration.vdf
 controller_connection_type
+controller_debug_triton_wireless
 controller_edge_cutoff
 controller_enabled
 controller_front_panel_board
@@ -48736,6 +48593,7 @@ frame_controller
 frame_display_delta
 frame_id
 frame_loss_percentage
+frame_rate_limit
 frame_rate_string
 frame_start_delta
 frame_time
@@ -49311,7 +49169,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -54174,19 +54032,19 @@ low-pri yield - ../clientdll/autocloud.cpp:591
 low-pri yield - ../clientdll/autocloud.cpp:670
 low-pri yield - ../clientdll/autocloud.cpp:845
 low-pri yield - ../clientdll/autocloud.cpp:936
-low-pri yield - ../clientdll/clientjob.cpp:456
-low-pri yield - ../clientdll/clientjob.cpp:487
-low-pri yield - ../clientdll/clientjob.cpp:796
+low-pri yield - ../clientdll/clientjob.cpp:431
+low-pri yield - ../clientdll/clientjob.cpp:462
+low-pri yield - ../clientdll/clientjob.cpp:771
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - ../clientdll/clientugc.cpp:7078
-low-pri yield - ../clientdll/compatmanager.cpp:2233
-low-pri yield - ../clientdll/compatmanager.cpp:2491
-low-pri yield - ../clientdll/compatmanager.cpp:2794
-low-pri yield - ../clientdll/compatmanager.cpp:3577
-low-pri yield - ../clientdll/compatmanager.cpp:3634
-low-pri yield - ../clientdll/compatmanager.cpp:3647
-low-pri yield - ../clientdll/compatmanager.cpp:3699
-low-pri yield - ../clientdll/compatmanager.cpp:4306
+low-pri yield - ../clientdll/compatmanager.cpp:2243
+low-pri yield - ../clientdll/compatmanager.cpp:2501
+low-pri yield - ../clientdll/compatmanager.cpp:2804
+low-pri yield - ../clientdll/compatmanager.cpp:3587
+low-pri yield - ../clientdll/compatmanager.cpp:3644
+low-pri yield - ../clientdll/compatmanager.cpp:3657
+low-pri yield - ../clientdll/compatmanager.cpp:3709
+low-pri yield - ../clientdll/compatmanager.cpp:4316
 low-pri yield - ../clientdll/csinterface.cpp:223
 low-pri yield - ../clientdll/depotbuilder.cpp:107
 low-pri yield - ../clientdll/depotreconstruct.cpp:3066
@@ -55282,7 +55140,6 @@ m_pAppInfoHTTPClient
 m_pAppLifetimeNotification
 m_pBannedDictionary
 m_pBannedWordsProcessor
-m_pBaseJob != nullptr
 m_pBaseUser
 m_pBaseUser->GetPUser() || m_pBaseUser->GetPGameServer()
 m_pBatteryStateManager
@@ -55403,7 +55260,6 @@ m_pLocalIPCServer != NULL
 m_pLock != m_pPartner->m_pLock
 m_pLock == &FakeUDPPortOwner().m_sharedConnectionLock
 m_pLock == pConn->m_pLock
-m_pLog != nullptr
 m_pLogInstance
 m_pLogonStateChanged
 m_pManifest
@@ -55573,7 +55429,6 @@ m_pSystemPerfManager
 m_pTCP == NULL
 m_pTarget
 m_pTarget == nullptr
-m_pThreadPool != nullptr
 m_pThreadedSendSink
 m_pTicketKeyMgr
 m_pTicketKeyMgr == NULL
@@ -55750,7 +55605,6 @@ m_sMasterEventName
 m_sMasterSharedMemoryName
 m_sNVStreamingLauncher
 m_sName
-m_sOutuptDir
 m_sPath
 m_sPersonaName
 m_sPersonaNameSentToServer
@@ -55931,6 +55785,7 @@ m_strDirectory
 m_strDisplayName
 m_strDisplayString
 m_strDomain
+m_strDriveName
 m_strErrorFile
 m_strErrorLocation
 m_strErrorMsg
@@ -56253,6 +56108,8 @@ m_vecDepotsAvailable
 m_vecDeviceInfo
 m_vecDisabledInputs
 m_vecDownloadSources
+m_vecDriveList
+m_vecDrives
 m_vecErrorMessages
 m_vecEventListeners.Count() < 2
 m_vecEventQueue
@@ -57339,9 +57196,6 @@ next_request
 nextupdate before thisupdate
 ngaa
 nghttp2 server error %d - %s\n
-nghttp2_check_authority
-nghttp2_check_header_name
-nghttp2_check_header_value
 nghttp2_frame.c
 nghttp2_frame_add_pad
 nghttp2_frame_pack_altsvc
@@ -57355,37 +57209,13 @@ nghttp2_frame_pack_rst_stream
 nghttp2_frame_pack_settings
 nghttp2_frame_pack_window_update
 nghttp2_hd.c
-nghttp2_hd_deflate_bound
-nghttp2_hd_deflate_change_table_size
-nghttp2_hd_deflate_del
-nghttp2_hd_deflate_get_dynamic_table_size
-nghttp2_hd_deflate_get_max_dynamic_table_size
-nghttp2_hd_deflate_get_num_table_entries
-nghttp2_hd_deflate_get_table_entry
-nghttp2_hd_deflate_hd
-nghttp2_hd_deflate_hd_vec
-nghttp2_hd_deflate_new
-nghttp2_hd_deflate_new2
-nghttp2_hd_inflate_change_table_size
-nghttp2_hd_inflate_del
-nghttp2_hd_inflate_end_headers
-nghttp2_hd_inflate_get_dynamic_table_size
-nghttp2_hd_inflate_get_max_dynamic_table_size
-nghttp2_hd_inflate_get_num_table_entries
-nghttp2_hd_inflate_get_table_entry
-nghttp2_hd_inflate_hd
-nghttp2_hd_inflate_hd2
 nghttp2_hd_inflate_hd_nv
-nghttp2_hd_inflate_new
-nghttp2_hd_inflate_new2
 nghttp2_hd_table_get
 nghttp2_hd_table_get2
 nghttp2_helper.c
 nghttp2_http.c
-nghttp2_http2_strerror
 nghttp2_http_on_header
 nghttp2_increase_local_window_size
-nghttp2_is_fatal
 nghttp2_is_fatal(rv)
 nghttp2_ksl.c
 nghttp2_ksl_it_get
@@ -57395,83 +57225,20 @@ nghttp2_ksl_update_key
 nghttp2_map.c
 nghttp2_map_each
 nghttp2_map_each_free
-nghttp2_nv_compare_name
 nghttp2_nv_equal
 nghttp2_outbound_item.c
 nghttp2_outbound_item_free
-nghttp2_pack_settings_payload
 nghttp2_pq.c
 nghttp2_pq_remove
-nghttp2_priority_spec_check_default
-nghttp2_priority_spec_default_init
-nghttp2_priority_spec_init
 nghttp2_rcbuf.c
 nghttp2_rcbuf_decref
-nghttp2_rcbuf_get_buf
-nghttp2_rcbuf_incref
-nghttp2_rcbuf_is_static
-nghttp2_select_next_protocol
 nghttp2_session.c
 nghttp2_session_add_rst_stream
 nghttp2_session_add_settings
 nghttp2_session_adjust_closed_stream
 nghttp2_session_adjust_idle_stream
-nghttp2_session_callbacks_del
-nghttp2_session_callbacks_new
-nghttp2_session_callbacks_set_before_frame_send_callback
-nghttp2_session_callbacks_set_data_source_read_length_callback
-nghttp2_session_callbacks_set_error_callback
-nghttp2_session_callbacks_set_error_callback2
-nghttp2_session_callbacks_set_on_begin_frame_callback
-nghttp2_session_callbacks_set_on_begin_headers_callback
-nghttp2_session_callbacks_set_on_data_chunk_recv_callback
-nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
-nghttp2_session_callbacks_set_on_frame_not_send_callback
-nghttp2_session_callbacks_set_on_frame_recv_callback
-nghttp2_session_callbacks_set_on_frame_send_callback
-nghttp2_session_callbacks_set_on_header_callback
-nghttp2_session_callbacks_set_on_header_callback2
-nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback
-nghttp2_session_callbacks_set_on_invalid_header_callback2
-nghttp2_session_callbacks_set_on_stream_close_callback
-nghttp2_session_callbacks_set_pack_extension_callback
-nghttp2_session_callbacks_set_recv_callback
-nghttp2_session_callbacks_set_select_padding_callback
-nghttp2_session_callbacks_set_send_callback
-nghttp2_session_callbacks_set_send_data_callback
-nghttp2_session_callbacks_set_unpack_extension_callback
-nghttp2_session_change_stream_priority
-nghttp2_session_check_request_allowed
-nghttp2_session_check_server_session
-nghttp2_session_client_new
-nghttp2_session_client_new2
-nghttp2_session_client_new3
-nghttp2_session_consume
-nghttp2_session_consume_connection
-nghttp2_session_consume_stream
-nghttp2_session_create_idle_stream
-nghttp2_session_del
-nghttp2_session_find_stream
-nghttp2_session_get_effective_local_window_size
-nghttp2_session_get_effective_recv_data_length
-nghttp2_session_get_hd_deflate_dynamic_table_size
-nghttp2_session_get_hd_inflate_dynamic_table_size
-nghttp2_session_get_last_proc_stream_id
 nghttp2_session_get_local_settings
-nghttp2_session_get_local_window_size
-nghttp2_session_get_next_stream_id
-nghttp2_session_get_outbound_queue_size
 nghttp2_session_get_remote_settings
-nghttp2_session_get_remote_window_size
-nghttp2_session_get_root_stream
-nghttp2_session_get_stream_effective_local_window_size
-nghttp2_session_get_stream_effective_recv_data_length
-nghttp2_session_get_stream_local_close
-nghttp2_session_get_stream_local_window_size
-nghttp2_session_get_stream_remote_close
-nghttp2_session_get_stream_remote_window_size
-nghttp2_session_get_stream_user_data
 nghttp2_session_mem_recv
 nghttp2_session_mem_send
 nghttp2_session_mem_send_internal
@@ -57483,55 +57250,19 @@ nghttp2_session_pack_data
 nghttp2_session_predicate_data_send
 nghttp2_session_recv
 nghttp2_session_reprioritize_stream
-nghttp2_session_resume_data
-nghttp2_session_send
-nghttp2_session_server_new
-nghttp2_session_server_new2
-nghttp2_session_server_new3
-nghttp2_session_set_local_window_size
-nghttp2_session_set_next_stream_id
 nghttp2_session_set_stream_user_data
-nghttp2_session_set_user_data
-nghttp2_session_terminate_session
-nghttp2_session_terminate_session2
 nghttp2_session_upgrade
 nghttp2_session_upgrade2
-nghttp2_session_want_read
-nghttp2_session_want_write
 nghttp2_stream.c
 nghttp2_stream_attach_item
 nghttp2_stream_defer_item
 nghttp2_stream_dep_remove
 nghttp2_stream_dep_remove_subtree
-nghttp2_stream_get_first_child
-nghttp2_stream_get_next_sibling
-nghttp2_stream_get_parent
-nghttp2_stream_get_previous_sibling
-nghttp2_stream_get_state
-nghttp2_stream_get_stream_id
-nghttp2_stream_get_sum_dependency_weight
-nghttp2_stream_get_weight
 nghttp2_stream_in_dep_tree(stream)
 nghttp2_stream_reschedule
 nghttp2_stream_resume_deferred_item
-nghttp2_strerror
 nghttp2_submit.c
-nghttp2_submit_altsvc
-nghttp2_submit_data
-nghttp2_submit_extension
-nghttp2_submit_goaway
-nghttp2_submit_headers
 nghttp2_submit_origin
-nghttp2_submit_ping
-nghttp2_submit_priority
-nghttp2_submit_push_promise
-nghttp2_submit_request
-nghttp2_submit_response
-nghttp2_submit_rst_stream
-nghttp2_submit_settings
-nghttp2_submit_shutdown_notice
-nghttp2_submit_trailer
-nghttp2_submit_window_update
 nice
 nick
 nickname
@@ -58251,6 +57982,7 @@ os_win
 osarch
 oscca
 oscompare
+oscpu
 osextended
 oslist
 ossl_ecdh_compute_key
@@ -58982,103 +58714,8 @@ pchVar && pchValue
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcmag.com
-pcre32_callout
-pcre32_compile
-pcre32_compile2
-pcre32_exec
-pcre32_free
-pcre32_free_study
-pcre32_fullinfo
-pcre32_malloc
-pcre32_stack_free
-pcre32_stack_guard
-pcre32_stack_malloc
-pcre32_study
-pcre_callout
-pcre_compile
-pcre_compile2
-pcre_config
-pcre_copy_named_substring
-pcre_copy_substring
-pcre_dfa_exec
-pcre_exec
-pcre_free
-pcre_free_study
-pcre_free_substring
-pcre_free_substring_list
-pcre_fullinfo
-pcre_get_named_substring
-pcre_get_stringnumber
-pcre_get_stringtable_entries
-pcre_get_substring
-pcre_get_substring_list
-pcre_malloc
 pcre_retval == 0
-pcre_stack_free
-pcre_stack_guard
-pcre_stack_malloc
-pcre_study
 pcrecpp.cc
-pcrecpp::Arg::parse_char(char const*, int, void*)
-pcrecpp::Arg::parse_double(char const*, int, void*)
-pcrecpp::Arg::parse_float(char const*, int, void*)
-pcrecpp::Arg::parse_int(char const*, int, void*)
-pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_int_hex(char const*, int, void*)
-pcrecpp::Arg::parse_int_octal(char const*, int, void*)
-pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_long(char const*, int, void*)
-pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_long_hex(char const*, int, void*)
-pcrecpp::Arg::parse_long_octal(char const*, int, void*)
-pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_longlong(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_null(char const*, int, void*)
-pcrecpp::Arg::parse_short(char const*, int, void*)
-pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_short_hex(char const*, int, void*)
-pcrecpp::Arg::parse_short_octal(char const*, int, void*)
-pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_string(char const*, int, void*)
-pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
-pcrecpp::Arg::parse_uchar(char const*, int, void*)
-pcrecpp::Arg::parse_uint(char const*, int, void*)
-pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
-pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
-pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ulong(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
-pcrecpp::Arg::parse_ushort(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
-pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
-pcrecpp::RE::Cleanup()
-pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
-pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
-pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
-pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::NumberOfCapturingGroups() const
-pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
-pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
-pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
-pcrecpp::RE::no_arg
-pcrecpp::RE::~RE()
 pcst
 pcubDecodedData
 pcubEncryptedData
@@ -59473,6 +59110,7 @@ position_is_waitlist
 position_x
 position_y
 positive_int_value
+posix_device_number
 posix_fadvise
 possible_takeover
 post
@@ -60181,10 +59819,6 @@ refresh_rate_numerator
 refresh_tokens
 refund_checks_ea_playtime
 regarding
-regcomp
-regerror
-regexec
-regfree
 region
 regions
 register_status_update
@@ -61972,8 +61606,6 @@ stbl
 stbl_module_init
 stbl_section
 stco
-std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
-std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
@@ -61997,7 +61629,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 11 2026 00:05:45
+steam Sep 17 2026 00:23:28
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -62674,7 +62306,6 @@ sysreqs
 system
 system lib
 system library
-system%c%s
 system-shutdown
 system_can_suspend
 system_default
@@ -63704,15 +63335,6 @@ typeinfo for
 typeinfo for EWatchdogStallResult (*)(unsigned int)
 typeinfo for EWatchdogStallResult (unsigned int)
 typeinfo for SteamThreadTools::CThread
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__function_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
 typeinfo for tinyxml2::XMLAttribute
 typeinfo for tinyxml2::XMLComment
 typeinfo for tinyxml2::XMLDeclaration
@@ -63728,15 +63350,6 @@ typeinfo for void (*)()
 typeinfo name for
 typeinfo name for EWatchdogStallResult (*)(unsigned int)
 typeinfo name for EWatchdogStallResult (unsigned int)
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__function_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
 typeinfo name for tinyxml2::XMLAttribute
 typeinfo name for tinyxml2::XMLComment
 typeinfo name for tinyxml2::XMLDeclaration
@@ -64627,16 +64240,6 @@ vsAd
 vsnprintf
 vtable for
 vtable for CAdHocValidation_SimpleCallback
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__function_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 vtable for tinyxml2::XMLAttribute
 vtable for tinyxml2::XMLComment
 vtable for tinyxml2::XMLDeclaration

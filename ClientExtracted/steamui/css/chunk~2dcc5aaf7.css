@@ -1837,6 +1837,7 @@
   letter-spacing: initial;
   text-align: initial;
   font-weight: initial;
+  white-space: initial;
   position: fixed;
   inset: 0;
   width: 100%;
@@ -87385,7 +87386,7 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover {
   top: 0;
   bottom: 0;
   z-index: 0;
-  background: #23262e;
+  background: #3d4450;
   opacity: 0;
   transform: scale(0.9);
   border-radius: 9001px;
@@ -87396,6 +87397,11 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover {
 }
 .XlWw9erk4MU5NVejdrd_7 ._359ci7I4O_8aSv_LmfFlSf > * {
   z-index: 1;
+}
+._1q39G0tw2g-AtK2IWIu19n
+  .XlWw9erk4MU5NVejdrd_7:not(._2s3ctUGG3Gu9mgJM5KIi_7)
+  ._359ci7I4O_8aSv_LmfFlSf::before {
+  background: #23262e;
 }
 ._2fYGNgaXjqzpq_EyiiFDTw ._359ci7I4O_8aSv_LmfFlSf {
   transform: scale(0.7);
@@ -87475,7 +87481,7 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover {
 }
 .XlWw9erk4MU5NVejdrd_7.bMtzoBRiT4I2mYF1RWsZO:not(._2s3ctUGG3Gu9mgJM5KIi_7):hover
   ._359ci7I4O_8aSv_LmfFlSf::before {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 .XlWw9erk4MU5NVejdrd_7.bMtzoBRiT4I2mYF1RWsZO:not(._2s3ctUGG3Gu9mgJM5KIi_7):hover
   ._359ci7I4O_8aSv_LmfFlSf,
@@ -87937,8 +87943,14 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover {
 ._1OdOFMpy7aHHxuCMugXDJq._2VMPXXql5oP3XDeGTVd9Lk,
 ._1OdOFMpy7aHHxuCMugXDJq:hover,
 ._1OdOFMpy7aHHxuCMugXDJq.gpfocus {
-  background: initial;
-  color: #dcdedf;
+  color: #fff;
+}
+._1OdOFMpy7aHHxuCMugXDJq._2VMPXXql5oP3XDeGTVd9Lk
+  ._1B9Kfc0uR6Y8CNJD5LkNw_::before,
+._1OdOFMpy7aHHxuCMugXDJq:hover ._1B9Kfc0uR6Y8CNJD5LkNw_::before,
+._1OdOFMpy7aHHxuCMugXDJq.gpfocus ._1B9Kfc0uR6Y8CNJD5LkNw_::before {
+  background: #23262e;
+  opacity: 0.75;
 }
 ._1OdOFMpy7aHHxuCMugXDJq ._1B9Kfc0uR6Y8CNJD5LkNw_ {
   height: 46px;
@@ -87948,12 +87960,25 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover {
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  padding-right: 20px;
+  position: relative;
+  isolation: isolate;
 }
 ._3nkwN7FnNLLppYbvNVJToy._3bss8jp3eK76I7YLJq4x-f
   ._1OdOFMpy7aHHxuCMugXDJq
   ._1B9Kfc0uR6Y8CNJD5LkNw_ {
   padding-right: 10px;
+}
+._1OdOFMpy7aHHxuCMugXDJq ._1B9Kfc0uR6Y8CNJD5LkNw_::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -8px 6px;
+  border-radius: 8px;
+}
+._3nkwN7FnNLLppYbvNVJToy._3bss8jp3eK76I7YLJq4x-f
+  ._1OdOFMpy7aHHxuCMugXDJq
+  ._1B9Kfc0uR6Y8CNJD5LkNw_::before {
+  right: 0;
 }
 ._3nkwN7FnNLLppYbvNVJToy._3bss8jp3eK76I7YLJq4x-f
   ._1OdOFMpy7aHHxuCMugXDJq
@@ -93731,34 +93756,6 @@ div.NarrowWindow .HruWVPwIDh2FFOOH7OiSs .gioyPMOZttYFcnmgLnsWf {
 ._1L-VDdK-L39u1v2bK3OvH8.DialogContent {
   width: fit-content;
   height: fit-content;
-}
-._1L-VDdK-L39u1v2bK3OvH8.DialogContent ._1p9CMRm4GZeE1VuWJzq-RS {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-._1L-VDdK-L39u1v2bK3OvH8.DialogContent ._1p9CMRm4GZeE1VuWJzq-RS svg {
-  width: 64px;
-  height: 64px;
-}
-._1L-VDdK-L39u1v2bK3OvH8.DialogContent
-  ._1p9CMRm4GZeE1VuWJzq-RS
-  .gsl0PJw_KAEsJZ9zqUcyV {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-._1L-VDdK-L39u1v2bK3OvH8.DialogContent
-  ._1p9CMRm4GZeE1VuWJzq-RS
-  .gsl0PJw_KAEsJZ9zqUcyV
-  .DialogHeader {
-  margin-bottom: 5px;
-}
-._1L-VDdK-L39u1v2bK3OvH8.DialogContent
-  ._1p9CMRm4GZeE1VuWJzq-RS
-  .gsl0PJw_KAEsJZ9zqUcyV
-  .DialogBodyText {
-  margin-bottom: 0;
 }
 ._3tjBxaXzqfex3hw01AL5mP {
   white-space: pre-wrap;
@@ -122357,6 +122354,15 @@ svg._2Hphxk564S5yQHog-MFXfN .Outline {
   height: 36px;
   padding: 2px;
   transform: translateX(4px);
+}
+._15qevINAH2SkL_Twny509J {
+  width: 36px;
+  height: 36px;
+  padding-left: 8px;
+  color: #fff;
+}
+._15qevINAH2SkL_Twny509J .SteamFrameDumpling {
+  fill: #f74843;
 }
 ._20p16OCYcJ0EWInis-dZhe {
   padding: 4px 0px 4px 8px;
@@ -224151,7 +224157,7 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
     background-position: 50% 0%;
   }
 }
-@property --percent {
+@property --quickaccesspercent {
   syntax: "<number>";
   inherits: false;
   initial-value: 0;
@@ -224380,7 +224386,7 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
 }
 ._1zQgf4oesrAtd0gCD-0G-e._2K8ZLbaTj__bCK5g2aLUAR {
   --status-color: #1a9fff;
-  --_pct: calc(clamp(0, var(--percent), 100) * 1%);
+  --_pct: calc(clamp(0, var(--quickaccesspercent), 100) * 1%);
   min-inline-size: 0;
   align-self: stretch;
   height: 10px;
@@ -224390,7 +224396,7 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
     var(--status-color) 0 var(--_pct),
     #000 var(--_pct) 100%
   );
-  transition: --percent 200ms linear;
+  transition: --quickaccesspercent 200ms linear;
   border-radius: 9999px;
 }
 ._3S7eOmv2YlAXSuBVEcKDDF {

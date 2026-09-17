@@ -612,9 +612,9 @@ $\nY8O
 *|\n\fECPUGovernor
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG@
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG{
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
 +\n'k_EChildProcessQueryCommand_GpuTopology
@@ -859,15 +859,15 @@ $\nY8O
 /etc/mtab
 /etc/os-release
 /etc/steamos-oobe-image
-/proc/%d/status
 /proc/meminfo
 /proc/mounts
 /proc/self/exe
 /proc/self/fd
 /proc/self/fd/%d
 /proc/self/maps
+/proc/self/status
 /run/host/etc/os-release
-/run/host/root/%s
+/run/host/root
 /steamrt64
 /steamsysinfo
 /tmp
@@ -879,7 +879,7 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:05:40
+00:23:23
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -2393,7 +2393,7 @@ Second argument to SwapFields() (of type "
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 11 2026
+Sep 17 2026
 September
 ServiceDescriptorProto
 ServiceOptions
@@ -2601,7 +2601,7 @@ Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
 Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 Tried to merge messages of different types
@@ -3967,7 +3967,6 @@ required
 reserved_range
 resizeNumBits >= 0
 response"
-rewind
 rmdir
 ru&o
 s1 != NULL

@@ -133,6 +133,7 @@
           IN_CHROMEOS: !1,
           TESLA: !1,
           LOCAL_HOSTNAME: "",
+          PACKAGE_CL: "",
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           BUILD_TIMESTAMP: 0,
@@ -4188,6 +4189,16 @@
                     _: 5,
                     _: _,
                   },
+                  seconds_since_active: {
+                    _: 6,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
+                  frame_rate_limit: {
+                    _: 7,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -4460,6 +4471,16 @@
                     _: _.readString,
                     _: _.writeString,
                   },
+                  kernel_version_major: {
+                    _: 7,
+                    _: _.readInt32,
+                    _: _.writeInt32,
+                  },
+                  kernel_version_minor: {
+                    _: 8,
+                    _: _.readInt32,
+                    _: _.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -4716,6 +4737,7 @@
           "Millennium internal",
           "millenium",
           "millennium",
+          "decky://",
           "Refused unauthorized RPC command",
         ];
       function _() {
@@ -13755,6 +13777,7 @@
       }
       async function _(_) {
         try {
+          _ || ((_ = !0), _.forEach((_) => _()));
           const [_] = await Promise.all([
               __webpack_require__("chunkid")(`./siteserverui_${_}.json`),
               _.Ready(),

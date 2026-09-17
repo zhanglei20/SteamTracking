@@ -4052,6 +4052,7 @@ message CMsgRemoteClientBroadcastStatus {
 	optional bool wifi_dongle_present = 29;
 	optional bool is_low_spec_hardware = 30;
 	optional uint32 gaming_device_type = 31;
+	optional fixed64 connecting_paired_network_hash = 32;
 }
 
 // Used by: common.proto

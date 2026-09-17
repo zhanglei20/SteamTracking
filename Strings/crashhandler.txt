@@ -233,8 +233,10 @@ $ORIGIN
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGU
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNGz
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -314,7 +316,6 @@ $ORIGIN
 /etc/mtab
 /etc/os-release
 /etc/steamos-oobe-image
-/proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/mounts
@@ -322,15 +323,16 @@ $ORIGIN
 /proc/self/exe
 /proc/self/fd
 /proc/self/fd/%d
+/proc/self/status
 /run/host/etc/os-release
-/run/host/root/%s
+/run/host/root
 /steamerrorreporter
 /steamsysinfo
 /tmp
 /tmp/.steam-sem-names
 /tmp/dumps
 /usr/bin/crosdisk %s
-00:05:40
+00:23:23
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
@@ -631,7 +633,7 @@ Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 SendCrashReport
 SendExistingMinidump
-Sep 11 2026
+Sep 17 2026
 SetAppID
 SetComment
 SetSteamID
@@ -685,7 +687,7 @@ Thread(0x%p/0x%p/0x%x)
 ThreadGetProcessExitCode
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
-TracerPid:
+TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 USER
@@ -765,7 +767,6 @@ __memcpy_chk
 __pthread_key_create
 __snprintf_chk
 __stack_chk_fail
-__test_and_acquire(long*)
 __tls_get_addr
 __wrap___lxstat
 __wrap___lxstat64
@@ -809,13 +810,6 @@ __xmknod
 __xstat
 __xstat64
 _exit
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_txnal_cow_string_D1(void*)
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_c_str(void const*)
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-_txnal_sso_string_c_str(void const*)
 aarch64
 abort
 access
@@ -860,9 +854,6 @@ basic_string::resize
 basic_string::substr
 basic_string_view::substr
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
-bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool google_breakpad::DirectoryReader::GetNextEntry(const char**)
 bool google_breakpad::FindElfSection(const void*, const char*, uint32_t, const void**, size_t*, int*)
 bool google_breakpad::FindElfSegment(const void*, uint32_t, const void**, size_t*, int*)
@@ -1323,7 +1314,6 @@ release_space %llu
 rename
 request_space %llu
 response:  %s\n
-rewind
 rmdir
 s1 != NULL
 s2 != NULL
@@ -1476,233 +1466,7 @@ transaction clone for operator new[](unsigned long)
 true
 typeinfo fn for
 typeinfo for
-typeinfo for _Float128
-typeinfo for _Float128 const*
-typeinfo for _Float128*
-typeinfo for _Float16
-typeinfo for _Float16 const*
-typeinfo for _Float16*
-typeinfo for _Float32
-typeinfo for _Float32 const*
-typeinfo for _Float32*
-typeinfo for _Float32x
-typeinfo for _Float32x const*
-typeinfo for _Float32x*
-typeinfo for _Float64
-typeinfo for _Float64 const*
-typeinfo for _Float64*
-typeinfo for _Float64x
-typeinfo for _Float64x const*
-typeinfo for _Float64x*
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__pbase_type_info
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __float128
-typeinfo for __float128 const*
-typeinfo for __float128*
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for __int128
-typeinfo for __int128 const*
-typeinfo for __int128*
-typeinfo for bool
-typeinfo for bool const*
-typeinfo for bool*
-typeinfo for char
-typeinfo for char const*
-typeinfo for char*
-typeinfo for char16_t
-typeinfo for char16_t const*
-typeinfo for char16_t*
-typeinfo for char32_t
-typeinfo for char32_t const*
-typeinfo for char32_t*
-typeinfo for char8_t
-typeinfo for char8_t const*
-typeinfo for char8_t*
-typeinfo for decimal128
-typeinfo for decimal128 const*
-typeinfo for decimal128*
-typeinfo for decimal32
-typeinfo for decimal32 const*
-typeinfo for decimal32*
-typeinfo for decimal64
-typeinfo for decimal64 const*
-typeinfo for decimal64*
-typeinfo for double
-typeinfo for double const*
-typeinfo for double*
-typeinfo for float
-typeinfo for float const*
-typeinfo for float*
-typeinfo for int
-typeinfo for int const*
-typeinfo for int*
-typeinfo for long
-typeinfo for long const*
-typeinfo for long double
-typeinfo for long double const*
-typeinfo for long double*
-typeinfo for long long
-typeinfo for long long const*
-typeinfo for long long*
-typeinfo for long*
-typeinfo for short
-typeinfo for short const*
-typeinfo for short*
-typeinfo for signed char
-typeinfo for signed char const*
-typeinfo for signed char*
-typeinfo for std::bfloat16_t
-typeinfo for std::bfloat16_t const*
-typeinfo for std::bfloat16_t*
-typeinfo for std::nullptr_t
-typeinfo for std::nullptr_t const*
-typeinfo for std::nullptr_t*
-typeinfo for unsigned __int128
-typeinfo for unsigned __int128 const*
-typeinfo for unsigned __int128*
-typeinfo for unsigned char
-typeinfo for unsigned char const*
-typeinfo for unsigned char*
-typeinfo for unsigned int
-typeinfo for unsigned int const*
-typeinfo for unsigned int*
-typeinfo for unsigned long
-typeinfo for unsigned long const*
-typeinfo for unsigned long long
-typeinfo for unsigned long long const*
-typeinfo for unsigned long long*
-typeinfo for unsigned long*
-typeinfo for unsigned short
-typeinfo for unsigned short const*
-typeinfo for unsigned short*
-typeinfo for void
-typeinfo for void const*
-typeinfo for void*
-typeinfo for wchar_t
-typeinfo for wchar_t const*
-typeinfo for wchar_t*
 typeinfo name for
-typeinfo name for _Float128
-typeinfo name for _Float128 const*
-typeinfo name for _Float128*
-typeinfo name for _Float16
-typeinfo name for _Float16 const*
-typeinfo name for _Float16*
-typeinfo name for _Float32
-typeinfo name for _Float32 const*
-typeinfo name for _Float32*
-typeinfo name for _Float32x
-typeinfo name for _Float32x const*
-typeinfo name for _Float32x*
-typeinfo name for _Float64
-typeinfo name for _Float64 const*
-typeinfo name for _Float64*
-typeinfo name for _Float64x
-typeinfo name for _Float64x const*
-typeinfo name for _Float64x*
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__pbase_type_info
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pointer_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __float128
-typeinfo name for __float128 const*
-typeinfo name for __float128*
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __int128
-typeinfo name for __int128 const*
-typeinfo name for __int128*
-typeinfo name for bool
-typeinfo name for bool const*
-typeinfo name for bool*
-typeinfo name for char
-typeinfo name for char const*
-typeinfo name for char*
-typeinfo name for char16_t
-typeinfo name for char16_t const*
-typeinfo name for char16_t*
-typeinfo name for char32_t
-typeinfo name for char32_t const*
-typeinfo name for char32_t*
-typeinfo name for char8_t
-typeinfo name for char8_t const*
-typeinfo name for char8_t*
-typeinfo name for decimal128
-typeinfo name for decimal128 const*
-typeinfo name for decimal128*
-typeinfo name for decimal32
-typeinfo name for decimal32 const*
-typeinfo name for decimal32*
-typeinfo name for decimal64
-typeinfo name for decimal64 const*
-typeinfo name for decimal64*
-typeinfo name for double
-typeinfo name for double const*
-typeinfo name for double*
-typeinfo name for float
-typeinfo name for float const*
-typeinfo name for float*
-typeinfo name for int
-typeinfo name for int const*
-typeinfo name for int*
-typeinfo name for long
-typeinfo name for long const*
-typeinfo name for long double
-typeinfo name for long double const*
-typeinfo name for long double*
-typeinfo name for long long
-typeinfo name for long long const*
-typeinfo name for long long*
-typeinfo name for long*
-typeinfo name for short
-typeinfo name for short const*
-typeinfo name for short*
-typeinfo name for signed char
-typeinfo name for signed char const*
-typeinfo name for signed char*
-typeinfo name for std::bfloat16_t
-typeinfo name for std::bfloat16_t const*
-typeinfo name for std::bfloat16_t*
-typeinfo name for std::nullptr_t
-typeinfo name for std::nullptr_t const*
-typeinfo name for std::nullptr_t*
-typeinfo name for unsigned __int128
-typeinfo name for unsigned __int128 const*
-typeinfo name for unsigned __int128*
-typeinfo name for unsigned char
-typeinfo name for unsigned char const*
-typeinfo name for unsigned char*
-typeinfo name for unsigned int
-typeinfo name for unsigned int const*
-typeinfo name for unsigned int*
-typeinfo name for unsigned long
-typeinfo name for unsigned long const*
-typeinfo name for unsigned long long
-typeinfo name for unsigned long long const*
-typeinfo name for unsigned long long*
-typeinfo name for unsigned long*
-typeinfo name for unsigned short
-typeinfo name for unsigned short const*
-typeinfo name for unsigned short*
-typeinfo name for void
-typeinfo name for void const*
-typeinfo name for void*
-typeinfo name for wchar_t
-typeinfo name for wchar_t const*
-typeinfo name for wchar_t*
 typename
 ucontext_
 unReadAheadChunkSize < INT32_MAX/2
@@ -1753,17 +1517,6 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__fundamental_type_info
-vtable for __cxxabiv1::__pbase_type_info
-vtable for __cxxabiv1::__pointer_to_member_type_info
-vtable for __cxxabiv1::__pointer_type_info
-vtable for __cxxabiv1::__si_class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-vtable for __gnu_cxx::recursive_init_error
 waitid
 waitpid
 wchar_t
