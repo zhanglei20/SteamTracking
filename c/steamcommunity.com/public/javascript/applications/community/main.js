@@ -16301,6 +16301,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16312,6 +16313,20 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       const _ = "0";
       var _;
+      function _(_) {
+        switch (_.subject_type) {
+          case _._:
+            return !!_.topic;
+          case _._:
+            return !!_.comment_thread_id;
+          case _._:
+            return !!_.published_file_id;
+          case _._:
+          case _._:
+            return !!_.sender_account_id;
+        }
+        return !1;
+      }
       !(function (_) {
         (_[(_.k_EContentModerationAction_None = 0)] =
           "k_EContentModerationAction_None"),

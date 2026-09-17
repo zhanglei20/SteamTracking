@@ -2382,16 +2382,16 @@
     90182: (e, t, n) => {
       "use strict";
       n.d(t, {
-        EC: () => f,
-        KQ: () => A,
-        Kt: () => j,
-        Ky: () => g,
-        N8: () => y,
-        c3: () => b,
-        lY: () => v,
-        w3: () => _,
-        wy: () => x,
-        y4: () => B,
+        EC: () => b,
+        KQ: () => f,
+        Kt: () => v,
+        Ky: () => _,
+        N8: () => B,
+        c3: () => w,
+        lY: () => y,
+        w3: () => j,
+        wy: () => A,
+        y4: () => x,
       });
       var r = n(37085),
         i = n(56545),
@@ -2400,24 +2400,26 @@
         o = n(23809),
         l = n(88942),
         c = n(29385),
-        d = n(61739);
-      const u = "get_reported_content",
-        p = (e) => [u, JSON.stringify(e)],
-        m = (e) => ["get_reported_content_by_id", e],
-        h = (e) => ["get_reported_content_audit_log", e];
-      async function g(e, t) {
+        d = n(61739),
+        u = n(63987);
+      const p = "get_reported_content",
+        m = (e) => [p, JSON.stringify(e)],
+        h = (e) => ["get_reported_content_by_id", e],
+        g = (e) => ["get_reported_content_audit_log", e];
+      async function _(e, t) {
         return Promise.all([
-          e.invalidateQueries({ queryKey: [u], exact: !1 }),
-          e.invalidateQueries({ queryKey: m(t) }),
+          e.invalidateQueries({ queryKey: [p], exact: !1 }),
           e.invalidateQueries({ queryKey: h(t) }),
+          e.invalidateQueries({ queryKey: g(t) }),
         ]);
       }
-      function _(e) {
+      function j(e) {
         const t = (0, o.KV)();
         return (0, l.I)(
           (function (e, t) {
             return {
-              queryKey: p(t),
+              queryKey: m(t),
+              enabled: (0, u.NX)(t),
               queryFn: async () => {
                 const n = i.w.Init(a.Mw);
                 n.Body().set_coordinates(a.UC.fromObject(t));
@@ -2432,12 +2434,12 @@
           })(t, e),
         );
       }
-      function j(e) {
+      function v(e) {
         const t = (0, o.KV)();
         return (0, l.I)(
           (function (e, t) {
             return {
-              queryKey: h(t),
+              queryKey: g(t),
               queryFn: async () => {
                 if (!t) return;
                 const n = i.w.Init(a.v5);
@@ -2450,7 +2452,7 @@
           })(t, e),
         );
       }
-      function v(e) {
+      function y(e) {
         const t = (0, o.KV)(),
           n = (0, c.jE)();
         return (0, d.n)({
@@ -2466,14 +2468,14 @@
           },
           onSuccess: async () => {
             await Promise.all([
-              g(n, e),
+              _(n, e),
               n.invalidateQueries({ queryKey: ["get_claimed"] }),
               n.invalidateQueries({ queryKey: ["get_subject_overview"] }),
             ]);
           },
         });
       }
-      function y() {
+      function B() {
         const e = (0, o.KV)(),
           t = (0, c.jE)();
         return (0, d.n)({
@@ -2484,12 +2486,12 @@
             if (!r.BSuccess()) throw new Error("EResult " + r.GetEResult());
           },
           onSuccess: async (e, n) => {
-            await g(t, n.reportedContentID),
+            await _(t, n.reportedContentID),
               await t.invalidateQueries({ queryKey: ["get_claimed"] });
           },
         });
       }
-      function B(e, t) {
+      function x(e, t) {
         const n = (0, o.KV)(),
           r = (0, c.jE)();
         return (0, d.n)({
@@ -2500,11 +2502,11 @@
             if (!s.BSuccess()) throw new Error("EResult " + s.GetEResult());
           },
           onSuccess: async () => {
-            await g(r, e);
+            await _(r, e);
           },
         });
       }
-      function x(e, t) {
+      function A(e, t) {
         const n = (0, c.jE)(),
           r = (0, o.KV)();
         return (0, d.n)({
@@ -2516,11 +2518,11 @@
             if (!s.BSuccess()) throw new Error("EResult " + s.GetEResult());
           },
           onSuccess: async () => {
-            await g(n, e);
+            await _(n, e);
           },
         });
       }
-      function A(e) {
+      function f(e) {
         const t = (0, o.KV)();
         return (0, l.I)(
           (function (e, t) {
@@ -2537,7 +2539,7 @@
           })(t, e),
         );
       }
-      function f(e, t, n) {
+      function b(e, t, n) {
         const r = (0, o.KV)(),
           a = (0, c.jE)();
         return (0, d.n)({
@@ -2565,7 +2567,7 @@
           },
         });
       }
-      function b(e, t, n) {
+      function w(e, t, n) {
         const r = (0, o.KV)(),
           a = (0, c.jE)();
         return (0, d.n)({
