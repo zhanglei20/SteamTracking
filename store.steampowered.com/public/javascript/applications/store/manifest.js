@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "11001820";
+var CLSTAMP = "11009408";
 (() => {
   "use strict";
   var e,
@@ -374,7 +374,7 @@ var CLSTAMP = "11001820";
         13205: "6e8efcb0ef5a40c34aca",
         13327: "654fd0c4dba2be0c5839",
         13366: "054baabc8001e8cb19d1",
-        13524: "1088e5d3840a5e663259",
+        13524: "346e6e1474723a274ecf",
         13679: "9a9c9c2c42abda3e466b",
         13744: "421d2bfe46a02648ccf8",
         13749: "8b54bc24caeee9de4fb5",
@@ -385,7 +385,7 @@ var CLSTAMP = "11001820";
         15068: "d0682d31cdded60ba192",
         15269: "dfdb173a8f11bca383a7",
         15791: "743580b326ec8a00e755",
-        16015: "b558da2c5b1cb911b2c0",
+        16015: "3bfb597137589be99093",
         16159: "70ac1386af17b35b4d28",
         17038: "cdc17fe51b8b4554ce2f",
         17439: "a9cd0519f942a5a62710",
@@ -396,7 +396,7 @@ var CLSTAMP = "11001820";
         18680: "d90c368747d8ec9df1e2",
         18896: "b415c4b5229e1d459d8e",
         19326: "a6cde4465f46b13176d0",
-        19388: "fecaf71118deb406b39e",
+        19388: "e7950489b0d776a317f4",
         19605: "facd7d7e4e605e77018a",
         19812: "eb51118cb324c6535614",
         19935: "66bad0f9dda343e6e9d4",
@@ -443,7 +443,7 @@ var CLSTAMP = "11001820";
         27701: "198d9cc007a0c7e4828a",
         28183: "8f0e4383cdf2428b6a7f",
         28310: "d8b0be4c36465c56f1ec",
-        29008: "54bb590d6d13ee715643",
+        29008: "3994df192c69e011957d",
         29197: "9c05aa4fc9e8ece3958e",
         29431: "e9b816ce16030619608e",
         29456: "930f63491b21977737d3",
@@ -682,7 +682,7 @@ var CLSTAMP = "11001820";
         70576: "16eb623f0fdb6d9b2f3c",
         70630: "f3f611b118d849dd5cc6",
         70667: "640203593f57728ce5a0",
-        70677: "db4112ce31ce57bb6b48",
+        70677: "17ceeffc95a1e7e7efd9",
         71391: "17f5a91c65bf0aa45413",
         71886: "0ede6d0c6f79a592c871",
         72095: "66ae5514c24e18628cf4",

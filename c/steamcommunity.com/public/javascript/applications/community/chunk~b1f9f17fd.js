@@ -25970,6 +25970,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 4,
         _ = 6,
@@ -26099,7 +26100,7 @@
         return (0, _.jsxs)(_._, {
           _: _,
           bHidePrice: !0,
-          bShowDeckCompatibilityDialog: !0,
+          eHardwareCompatibilityDisplay: _._,
           hoverProps: {
             direction: "overlay",
             style: {
@@ -35693,6 +35694,11 @@
                       bShowDemoButton:
                         _.show_as_demos ||
                         (null == _ ? void 0 : _.BFilterRequiresFeatureDemo()),
+                      eHardwareCompatibilityDisplay:
+                        _.display_hw_compatibility_details ||
+                        (null == _
+                          ? void 0
+                          : _.EFilterRequiresHWVerifiedOrPlayable()),
                       bShowDeckCompatibilityDialog:
                         _.show_deck_compability_details ||
                         (null == _
@@ -40623,6 +40629,8 @@
                       bHidePrice: _.hide_prices,
                       bShowDeckCompatibilityDialog:
                         _.show_deck_compability_details,
+                      eHardwareCompatibilityDisplay:
+                        _.display_hw_compatibility_details,
                       bPreferAssetWithoutOverride:
                         !!_.prefer_assets_without_overrides,
                     })

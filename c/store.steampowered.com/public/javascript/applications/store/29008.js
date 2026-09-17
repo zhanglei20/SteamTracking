@@ -2584,6 +2584,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
@@ -2621,6 +2623,7 @@
             bHideBottomHalf: _,
             bHidePrice: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             onShowDeckCompatibilityDialog: _,
             bUseSubscriptionLayout: _,
             nCreatorAccountID: _,
@@ -2638,7 +2641,8 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = !_ && !_ && !_,
-          _ = _ && _.item_type == _._._;
+          _ = _ && _.item_type == _._._,
+          [_, _] = (0, _._)(_, _);
         return (0, _.jsxs)("div", {
           className: _().BottomShelf,
           style: {
@@ -2731,6 +2735,7 @@
                   Boolean(_ && _) &&
                     (0, _.jsx)(_._, {
                       _: _,
+                      compatibility: _,
                       onShowDialog: _,
                     }),
                   Boolean(_) && _,
@@ -2780,12 +2785,14 @@
             strStoreUrl: _,
             bHideBottomHalf: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bShowWishlistButton: _ = !0,
             bShowIgnoreButton: _ = !1,
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          _ = void 0 === _ && void 0 === _;
+          _ = void 0 === _ && void 0 === _,
+          [_] = (0, _._)(Boolean(_), _);
         return (0, _.jsxs)("div", {
           className: (0, _._)(
             _().GameHoverCapsuleCtn,
@@ -2835,6 +2842,7 @@
             nCreatorAccountID: _,
             nWidthMultiplier: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bShowWishlistButton: _ = !0,
             bShowIgnoreButton: _ = !1,
             bShowDescription: _ = !1,
@@ -2855,8 +2863,12 @@
           (_ = {
             appid: _.included_appids[0],
           });
-        const _ = _ || !_ ? void 0 : _,
-          _ = {
+        const _ = "hiding" == _(),
+          _ = _ || !_ ? void 0 : _,
+          [, _] = (0, _._)(_, _);
+        let _;
+        _ != _._ && Boolean(_?.appid) && _?.item_type == _._._ && (_ = _.appid);
+        const _ = {
             _: _,
             displayID: _,
             name: _,
@@ -2865,7 +2877,8 @@
             elElementToAppend: _,
             bShowDemoButton: _,
             bShowDeckCompatibilityDialog: _,
-            bHideBottomHalf: "hiding" == _(),
+            eHardwareCompatibilityDisplay: _,
+            bHideBottomHalf: _,
             bHidePrice: _,
             bUseSubscriptionLayout: _,
             strSNR: _,
@@ -2873,9 +2886,8 @@
             bShowWishlistButton: _,
             bShowIgnoreButton: _,
             bShowDescription: _,
-            onShowDeckCompatibilityDialog: _ ? _ : void 0,
+            onShowDeckCompatibilityDialog: Boolean(_) ? _ : void 0,
           },
-          _ = _ && _?.item_type == _._._ ? _.appid : void 0,
           _ = (0, _.jsx)(_, {
             ..._,
           }),
@@ -2897,6 +2909,7 @@
               (0, _.jsx)(_._, {
                 nAppID: _,
                 appName: _?.name || _,
+                startingTab: _,
                 active: _,
                 closeModal: _,
               }),
@@ -5657,29 +5670,52 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, onShowDialog: _ } = _,
+        const { _: _, compatibility: _, onShowDialog: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           [_, _, _] = (0, _._)();
         if (!_ || !_ || _.item_type !== _._._) return null;
-        const _ = _.steam_deck_compat_category || _._;
+        let _ = null,
+          _ = null;
+        if (_ == _._) {
+          const _ = _.steam_frame_compat_category || _._;
+          (_ = (0, _.jsx)(_._, {
+            category: _,
+          })),
+            (_ = _._.Localize(
+              "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+            ));
+        } else if (_ == _._) {
+          const _ = _.steam_machine_compat_category || _._;
+          (_ = (0, _.jsx)(_._, {
+            category: _,
+          })),
+            (_ = _._.Localize(
+              "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+            ));
+        } else {
+          const _ = _.steam_deck_compat_category || _._;
+          (_ = (0, _.jsx)(_._, {
+            category: _,
+          })),
+            (_ = _._.Localize(
+              "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+            ));
+        }
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().LearnMoreCtn, "LearnMoreCtn"),
           children: [
-            (0, _.jsx)(_._, {
-              category: _,
-            }),
+            _,
             (0, _.jsx)(_._, {
               onClick: (_) => {
                 _.preventDefault(), (_ ?? _)();
               },
               children: (0, _.jsx)("span", {
                 className: _().LearnMorePC,
-                children: _._.Localize(
-                  "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
-                ),
+                children: _,
               }),
             }),
             !_ &&
@@ -5687,18 +5723,26 @@
                 nAppID: _.appid,
                 appName: _.name,
                 active: _,
+                startingTab: _,
                 closeModal: _,
               }),
           ],
         });
       }
       function _(_) {
-        const { nAppID: _, active: _, appName: _, closeModal: _ } = _;
+        const {
+          nAppID: _,
+          active: _,
+          appName: _,
+          startingTab: _,
+          closeModal: _,
+        } = _;
         return (0, _.jsx)(_._, {
           active: _,
           children: (0, _.jsx)(_, {
             nAppID: _,
             appName: _,
+            startingTab: _,
             closeModal: _,
           }),
         });
@@ -5732,7 +5776,7 @@
         });
       }
       function _(_) {
-        const { nAppID: _, appName: _, closeModal: _ } = _,
+        const { nAppID: _, appName: _, startingTab: _, closeModal: _ } = _,
           _ = (function (_) {
             const [_, _] = _.useState(_.Get().GetCompatabilityResultForApp(_));
             return (
@@ -5765,6 +5809,7 @@
                     titleId: _,
                     appName: _,
                     results: _,
+                    eStartingTab: _,
                   })
                 : (0, _.jsx)(_._, {
                     size: "medium",
@@ -6702,6 +6747,38 @@
             ),
           }),
         });
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
+      }
+      function _(_, _) {
+        const _ = _ || (Boolean(_) ? _._ : _._);
+        return [Boolean(_), _];
+      }
+      const _ = (_) => {
+        const { appid: _ } = _,
+          _ = (0, _.jsx)("div", {
+            className: "ImpressionTrackedElement",
+            children: _.children,
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              appID: _,
+              children: _,
+            })
+          : _;
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

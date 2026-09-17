@@ -70,25 +70,25 @@
             bPreferAssetWithoutOverride: o,
             strAdditionalClassName: u,
           } = e,
-          { storeItemAsset: p, storeItemDefaultInfo: m } = (0, s.q)(t, a, o);
+          { storeItemAsset: m, storeItemDefaultInfo: p } = (0, s.q)(t, a, o);
         if ("library" === a || "vertical" == a)
           return (0, r.jsx)(n.G, { id: t, bPreferAssetWithoutOverride: o });
         let C = "";
         if ("main" === a) C = d().MainCapsuleImageContainer;
         else C = d().HeaderCapsuleImageContainer;
-        if (void 0 === p || !m)
+        if (void 0 === m || !p)
           return (0, r.jsx)("div", {
             className: (0, c.A)(C, "CapsuleImageCtn", u),
           });
-        if (null == p) return null;
-        let h = (0, i.N)(p, "header" === a);
+        if (null == m) return null;
+        let h = (0, i.N)(m, "header" === a);
         return (0, r.jsx)("div", {
           className: (0, c.A)(C, "CapsuleImageCtn", u),
           children: (0, r.jsx)(l.o, {
             lazyLoad: !0,
             srcs: h,
             className: (0, c.A)(d().CapsuleImage),
-            alt: m.name,
+            alt: p.name,
           }),
         });
       }
@@ -130,24 +130,24 @@
         o = a(26296),
         d = a(52038),
         u = a(78327),
-        p = a(90717),
-        m = a(83164),
-        C = a.n(m);
+        m = a(90717),
+        p = a(83164),
+        C = a.n(p);
       function h(e) {
         const { id: t, bPreferLibrary: a, bPreferAssetWithoutOverride: l } = e,
-          { storeItemDefaultInfo: m, storeItemAsset: h } = (0, n.q)(
+          { storeItemDefaultInfo: p, storeItemAsset: h } = (0, n.q)(
             t,
             "vertical",
             l,
           ),
           [f, g] = i.useState(0);
-        if (!m || !h)
+        if (!p || !h)
           return (0, r.jsx)("div", {
             className: c().HeroCapsuleImageContainer,
           });
-        const { strStoreVerticalURL: x, strLibraryVerticalURL: _ } = (0, p.M)(
+        const { strStoreVerticalURL: x, strLibraryVerticalURL: _ } = (0, m.M)(
           h,
-          m,
+          p,
         );
         if (x && (!a || !_))
           return (0, r.jsxs)("div", {
@@ -159,9 +159,9 @@
               (0, r.jsx)("img", {
                 src: x,
                 className: c().CapsuleImage,
-                alt: m.name,
+                alt: p.name,
               }),
-              Boolean(m.type == s.uE._i) &&
+              Boolean(p.type == s.uE._i) &&
                 (0, r.jsx)("img", {
                   className: C().CornerSash,
                   src: `${u.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
@@ -184,11 +184,11 @@
               (0, r.jsx)("img", {
                 src: _,
                 className: c().CapsuleImage,
-                alt: m.name,
+                alt: p.name,
               }),
             ],
           });
-        const v = (0, p.N)(h, !0),
+        const v = (0, m.N)(h, !0),
           w = v.length - 1,
           j = (e) => {
             const t = v.indexOf(e);
@@ -207,7 +207,7 @@
                 lazyLoad: !0,
                 srcs: v,
                 className: c().CapsuleImage,
-                alt: m.name,
+                alt: p.name,
                 onImageError: j,
               }),
             ],
@@ -281,8 +281,8 @@
         o = a(75515);
       var d = a(9006),
         u = a(39777),
-        p = a(90626);
-      function m() {
+        m = a(90626);
+      function p() {
         return (0, i.I)({
           queryKey: ["BroadcastApps"],
           queryFn: async () => {
@@ -322,12 +322,12 @@
           g = t.length > 0 && t.every((e) => c && c.has(e)),
           j = t.length > 0 && t.every((e) => o && o.has(e)),
           b = (function (e) {
-            const { data: t } = m(),
-              [a, r] = (0, p.useState)(!1),
+            const { data: t } = p(),
+              [a, r] = (0, m.useState)(!1),
               s = (0, l.jE)(),
               n = (0, d.eG)();
             return (
-              (0, p.useEffect)(() => {
+              (0, m.useEffect)(() => {
                 if (!e || 0 == e.length || !t) return r(!1);
                 (async () => {
                   const a = await Promise.all(
@@ -382,11 +382,11 @@
       function y(e) {
         const { appids: t } = e,
           a = (function (e) {
-            const [t, a] = (0, p.useState)(!1),
+            const [t, a] = (0, m.useState)(!1),
               r = (0, l.jE)(),
               s = (0, d.eG)();
             return (
-              (0, p.useEffect)(() => {
+              (0, m.useEffect)(() => {
                 if (!e || 0 == e.length) return a(!1);
                 (async () => {
                   const t = await Promise.all(
@@ -523,8 +523,8 @@
         o = a(34713),
         d = a.n(o),
         u = a(72737),
-        p = a(34104),
-        m = a(81393),
+        m = a(34104),
+        p = a(81393),
         C = a(53305);
       function h(e) {
         const { data: t } = (0, n.qI)(e.id);
@@ -554,7 +554,7 @@
           let n;
           if (a == C.iA)
             return (
-              (0, m.wT)(
+              (0, p.wT)(
                 !1,
                 "SteamHWCompatIndicator called for k_ESteamHWCompatibility_None",
               ),
@@ -574,7 +574,7 @@
                 n = D;
                 break;
               default:
-                return (0, m.z_)(e, `Unhandled steam os category: ${e}`), null;
+                return (0, p.z_)(e, `Unhandled steam os category: ${e}`), null;
             }
           } else {
             let e;
@@ -589,21 +589,21 @@
             )
               return null;
             switch (e) {
-              case p.I2:
+              case m.I2:
                 n = N;
                 break;
-              case p.sd:
+              case m.sd:
                 n = M;
                 break;
-              case p.V8:
+              case m.V8:
                 n = Z;
                 break;
-              case p.YX:
+              case m.YX:
                 n = D;
                 break;
               default:
                 return (
-                  (0, m.z_)(e, `Unhandled deck compat category: ${e}`), null
+                  (0, p.z_)(e, `Unhandled deck compat category: ${e}`), null
                 );
             }
           }
@@ -942,50 +942,28 @@
         l = a(81393),
         c = a(56011),
         o = a(61336);
-      function d(e, t, a, d, u, p) {
+      function d(e, t, a, d, u, m) {
         if (!a) return;
         if (!(0, i.nz)(e.item_type))
           return void (0, l.wT)(
             !1,
             "StoreItemWidgetSalePageAction: unexpected type: " + e.item_type,
           );
-        const m = (0, n.wJ)(`${(0, s._)(e, d)}${u ? `?${u}` : ""}`, t);
+        const p = (0, n.wJ)(`${(0, s._)(e, d)}${u ? `?${u}` : ""}`, t);
         return {
           onClick: (e) => {
             let t = (0, c.uX)(e) || window;
-            p
-              ? p(e)
-              : m.startsWith("steam://") || (t.location.href = (0, o.NT)(m));
+            m
+              ? m(e)
+              : p.startsWith("steam://") || (t.location.href = (0, o.NT)(p));
           },
           onOKActionDescription: r.Z.Localize("#Sale_Gamepad_Action_Select"),
         };
       }
     },
-    70300: (e, t, a) => {
-      "use strict";
-      a.d(t, { nz: () => i, oj: () => l });
-      var r = a(7850),
-        s = a(95578),
-        n = a(84518);
-      function i(e) {
-        return e == s.c6.xO
-          ? "bundle"
-          : e == s.c6.RD
-            ? "sub"
-            : (s.c6.qI, "app");
-      }
-      const l = (e) => {
-        const { appid: t } = e,
-          a = (0, r.jsx)("div", {
-            className: "ImpressionTrackedElement",
-            children: e.children,
-          });
-        return t ? (0, r.jsx)(n.A, { appID: t, children: a }) : a;
-      };
-    },
     1078: (e, t, a) => {
       "use strict";
-      a.d(t, { XC: () => p, _G: () => C });
+      a.d(t, { XC: () => m, _G: () => C });
       var r = a(7850),
         s = a(90626),
         n = a(12155),
@@ -995,23 +973,23 @@
         o = a(39449),
         d = a.n(o),
         u = a(61859);
-      function p() {
+      function m() {
         const [e, t] = s.useState(void 0),
           a = s.useCallback(() => t(void 0), []),
           n = (0, r.jsx)(c.EN, {
             active: void 0 !== e,
-            children: (0, r.jsx)(m, { closeModal: a, rgImageURL: e }),
+            children: (0, r.jsx)(p, { closeModal: a, rgImageURL: e }),
           });
         return [t, n];
       }
-      function m(e) {
+      function p(e) {
         const { closeModal: t, rgImageURL: a } = e,
           [n, i] = s.useState(0),
           l = a?.length ?? 0,
           o = s.useCallback(() => {
             i(0 == n ? l - 1 : n - 1);
           }, [n, l]),
-          p = s.useCallback(() => {
+          m = s.useCallback(() => {
             i(a && n + 1 >= l ? 0 : n + 1);
           }, [n, a, l]);
         return (0, r.jsxs)(c.eV, {
@@ -1025,7 +1003,7 @@
             (0, r.jsx)(C, {
               index: n,
               numElements: a?.length || 0,
-              fnForward: p,
+              fnForward: m,
               fnBackwards: o,
               fnClose: t,
               bCircular: !0,
@@ -1055,11 +1033,11 @@
           (0, l.E)("Right", () => s?.(), !0, !0),
           (0, l.E)("Escape", () => o && o(), !0, !0),
           (0, l.E)("Esc", () => o && o(), !0, !0);
-        let p = a > 1;
+        let m = a > 1;
         return (0, r.jsxs)("div", {
           className: d().ButtonCtn,
           children: [
-            p &&
+            m &&
               (0, r.jsxs)(r.Fragment, {
                 children: [
                   (0, r.jsx)("div", {
@@ -1107,14 +1085,14 @@
         const { className: t, id: a } = e,
           [i, d] = (0, s.FD)();
         let u,
-          p = d;
+          m = d;
         return (
-          d == o.iA && (p = o.ZJ),
+          d == o.iA && (m = o.ZJ),
           a
             ? (d == o.bY && (u = l.CompatIconFrame),
               (0, r.jsx)("div", {
                 className: (0, n.A)(l.CompatIcon, u, t),
-                children: (0, r.jsx)(c.SC, { id: a, eHWCompat: p }),
+                children: (0, r.jsx)(c.SC, { id: a, eHWCompat: m }),
               }))
             : null
         );
@@ -1139,19 +1117,19 @@
             crossOrigin: o,
           } = e,
           [d, u] = s.useState(a.length),
-          [p, m] = s.useState(0);
+          [m, p] = s.useState(0);
         s.useEffect(() => {
-          d != a.length && (u(a.length), m(0));
+          d != a.length && (u(a.length), p(0));
         }, [d, a.length]);
         const C = s.useCallback(() => {
-          e.onImageError && e.onImageError(e.srcs[p]),
-            p + 1 < e.srcs.length && m(p + 1);
-        }, [p, e]);
+          e.onImageError && e.onImageError(e.srcs[m]),
+            m + 1 < e.srcs.length && p(m + 1);
+        }, [m, e]);
         return 0 == a.length
           ? null
           : (0, r.jsx)("img", {
               className: t,
-              src: a[p],
+              src: a[m],
               crossOrigin: o,
               onError: C,
               loading: n ? "lazy" : void 0,
@@ -1167,8 +1145,8 @@
             src: o,
             lazyLoad: d,
             width: u,
-            height: p,
-            alt: m,
+            height: m,
+            alt: p,
             crossOrigin: C,
           } = e;
         return t
@@ -1195,14 +1173,14 @@
               crossOrigin: C,
               loading: d ? "lazy" : void 0,
               width: u,
-              height: p,
-              alt: m,
+              height: m,
+              alt: p,
             });
       }
     },
     41951: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => m });
+      a.d(t, { o: () => p });
       var r = a(7850),
         s = a(90626),
         n = a(12155),
@@ -1212,10 +1190,10 @@
         o = a(21038);
       const d = 1.3,
         u = 3,
-        p = 256;
-      function m(e) {
+        m = 256;
+      function p(e) {
         const [t, a] = (0, s.useState)(!1),
-          [m, C] = (0, s.useState)({
+          [p, C] = (0, s.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
             displayWidth: 0,
@@ -1226,13 +1204,13 @@
         return (
           (0, s.useEffect)(() => {
             if (
-              m.naturalWidth > m.displayWidth * d &&
-              m.naturalHeight > m.displayHeight * d &&
-              m.naturalWidth > p
+              p.naturalWidth > p.displayWidth * d &&
+              p.naturalHeight > p.displayHeight * d &&
+              p.naturalWidth > m
             ) {
-              m.naturalWidth / m.naturalHeight < u && a(!0);
+              p.naturalWidth / p.naturalHeight < u && a(!0);
             }
-          }, [m]),
+          }, [p]),
           t
             ? (0, r.jsxs)("span", {
                 className: o.PreviewCtn,

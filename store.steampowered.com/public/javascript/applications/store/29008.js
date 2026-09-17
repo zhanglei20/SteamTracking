@@ -732,15 +732,15 @@
       "use strict";
       n.d(t, {
         yT: () => C,
-        MR: () => k,
-        AB: () => H,
+        MR: () => H,
+        AB: () => k,
         Rc: () => I,
         Gt: () => A,
         ko: () => D,
         fy: () => B,
-        ec: () => y,
+        ec: () => w,
         aA: () => b,
-        TB: () => w,
+        TB: () => y,
         W$: () => j,
       });
       var r = n(22837),
@@ -829,11 +829,11 @@
       function b(e, t) {
         for (const n of t) S(e, n);
       }
-      function w(e) {
+      function y(e) {
         const t = (0, o.jE)();
-        return (0, i.I)(y(e, t));
+        return (0, i.I)(w(e, t));
       }
-      function y(e, t) {
+      function w(e, t) {
         return (
           h(t),
           {
@@ -907,7 +907,7 @@
       function j(e, t = "group") {
         const n = (0, o.jE)(),
           r = (0, i.I)(v(e, n, t));
-        return w(e ? L(r) : void 0);
+        return y(e ? L(r) : void 0);
       }
       function A(e, t) {
         if (e) return f(t.getQueryData(d(e))) ?? void 0;
@@ -923,14 +923,14 @@
           if (r) return r;
         }
       }
-      async function k(e, t) {
-        return e ? f(await t.fetchQuery(y(e, t))) : null;
-      }
       async function H(e, t) {
-        return e ? k(await t.fetchQuery(x(e, t)), t) : null;
+        return e ? f(await t.fetchQuery(w(e, t))) : null;
+      }
+      async function k(e, t) {
+        return e ? H(await t.fetchQuery(x(e, t)), t) : null;
       }
       async function I(e, t, n = "group") {
-        return e ? k(await t.fetchQuery(v(e, t, n)), t) : null;
+        return e ? H(await t.fetchQuery(v(e, t, n)), t) : null;
       }
     },
     49802: (e, t, n) => {
@@ -1487,7 +1487,7 @@
         DP: () => p,
         En: () => _,
         Fq: () => l,
-        G1: () => k,
+        G1: () => H,
         G7: () => V,
         Gx: () => P,
         HQ: () => q,
@@ -1497,7 +1497,7 @@
         KE: () => m,
         OD: () => K,
         S1: () => J,
-        SJ: () => w,
+        SJ: () => y,
         T_: () => A,
         WS: () => L,
         X0: () => Z,
@@ -1508,8 +1508,8 @@
         bj: () => b,
         cX: () => x,
         cm: () => g,
-        de: () => H,
-        ds: () => y,
+        de: () => k,
+        ds: () => w,
         dz: () => o,
         iU: () => u,
         jT: () => E,
@@ -1520,8 +1520,8 @@
         rg: () => r,
         sY: () => c,
         tn: () => Q,
-        uZ: () => z,
-        w7: () => O,
+        uZ: () => O,
+        w7: () => z,
         wA: () => h,
         xm: () => d,
         xt: () => W,
@@ -1545,8 +1545,8 @@
         f = 15,
         S = 16,
         b = 17,
-        w = 18,
-        y = 19,
+        y = 18,
+        w = 19,
         x = 20,
         v = 21,
         L = 22,
@@ -1554,8 +1554,8 @@
         A = 24,
         D = 25,
         B = 26,
-        k = 27,
-        H = 28,
+        H = 27,
+        k = 28,
         I = 29,
         N = 30,
         R = 31,
@@ -1566,8 +1566,8 @@
         E = 36,
         Z = 37,
         P = 38,
-        O = 39,
-        z = 40,
+        z = 39,
+        O = 40,
         G = 41,
         W = 42,
         U = 43,
@@ -1942,7 +1942,7 @@
     },
     29008: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => Ae });
+      n.d(t, { Q: () => Be });
       var r = n(7850),
         a = n(64753),
         o = n(95578),
@@ -1961,8 +1961,8 @@
         f = n(10350),
         S = n.n(f);
       const b = 150,
-        w = s.createContext(void 0);
-      function y(e) {
+        y = s.createContext(void 0);
+      function w(e) {
         const {
             hoverContent: t,
             hoverProps: n,
@@ -1975,7 +1975,7 @@
           C = (0, m.zI)(),
           h = !u && !C,
           [g, f] = s.useState(!1),
-          [b, y] = s.useState(void 0),
+          [b, w] = s.useState(void 0),
           v = s.useCallback(() => f(!1), []);
         return (0, r.jsxs)("div", {
           "data-key": "hover div",
@@ -1983,7 +1983,7 @@
           tabIndex: 0,
           className: (0, p.A)(S().ItemHoverSource, c),
           onMouseEnter: (e) => {
-            f(!0), y(e.currentTarget);
+            f(!0), w(e.currentTarget);
           },
           onMouseLeave: () => f(!1),
           onTouchStart: () => f(!1),
@@ -1994,7 +1994,7 @@
           children: [
             h &&
               b &&
-              (0, r.jsx)(w.Provider, {
+              (0, r.jsx)(y.Provider, {
                 value: v,
                 children: (0, r.jsx)(x, {
                   visible: g,
@@ -2101,8 +2101,8 @@
       var A = n(3740),
         D = n(24267),
         B = n(55509),
-        k = n(12424),
-        H = n(10705),
+        H = n(12424),
+        k = n(10705),
         I = n(94636),
         N = n(30894),
         R = n(12155),
@@ -2113,15 +2113,15 @@
         E = n(84547),
         Z = n(76217),
         P = n(42024),
-        O = n(54687);
-      function z(e) {
+        z = n(54687);
+      function O(e) {
         const { id: t, snr: n, classOverride: a } = e,
           [o, i] = (0, s.useState)(!1),
           l = (0, T.m)("GameHoverIgnoreButton"),
           { elDialogElement: c, fnShowLogonDialog: u } = (0, E.l)(),
           d = t && "appid" in t ? t.appid : void 0,
           m = (0, P.BD)(d),
-          { mutateAsync: C } = (0, O.Q)(d, !m, n),
+          { mutateAsync: C } = (0, z.Q)(d, !m, n),
           h = t && "appid" in t && N.Fm.Get().BIsGameIgnored(t.appid);
         return (0, r.jsxs)(Z.Z, {
           className: (0, p.A)(V().IgnoreButton, a),
@@ -2354,8 +2354,10 @@
         fe = n(18654),
         Se = n.n(fe),
         be = n(96006),
-        we = n(90421);
-      function ye(e) {
+        ye = n(90421),
+        we = n(53305),
+        xe = n(70300);
+      function ve(e) {
         const { id: t } = e,
           { data: n } = (0, q.xz)(t);
         return n
@@ -2368,7 +2370,7 @@
                   .filter((e) => e.tagid)
                   .map((e) =>
                     (0, r.jsx)(
-                      we.p,
+                      ye.p,
                       { tagid: e.tagid, className: g().Tag },
                       "tag_" + e.tagid,
                     ),
@@ -2377,7 +2379,7 @@
             })
           : null;
       }
-      function xe(e) {
+      function Le(e) {
         const {
             id: t,
             displayID: n,
@@ -2388,41 +2390,43 @@
             bHideBottomHalf: u,
             bHidePrice: d,
             bShowDeckCompatibilityDialog: m,
-            onShowDeckCompatibilityDialog: C,
-            bUseSubscriptionLayout: _,
-            nCreatorAccountID: h,
-            bPreventNavigation: f,
-            bShowDescription: S,
+            eHardwareCompatibilityDisplay: C,
+            onShowDeckCompatibilityDialog: _,
+            bUseSubscriptionLayout: h,
+            nCreatorAccountID: f,
+            bPreventNavigation: S,
+            bShowDescription: b,
           } = e,
-          b = s.useContext(w),
-          y =
-            C &&
+          w = s.useContext(y),
+          x =
+            _ &&
             (() => {
-              b?.(), C();
+              w?.(), _();
             }),
-          [x, v] = (0, s.useState)(!1),
-          [L, j] = (0, s.useState)(""),
-          { data: I } = (0, q.J$)(t),
-          { data: N } = (0, q.lv)(n),
-          R = !_ && !c && !l,
-          T = I && I.item_type == o.c6.qI;
+          [v, L] = (0, s.useState)(!1),
+          [j, I] = (0, s.useState)(""),
+          { data: N } = (0, q.J$)(t),
+          { data: R } = (0, q.lv)(n),
+          T = !h && !c && !l,
+          M = N && N.item_type == o.c6.qI,
+          [F, V] = (0, xe.zG)(m, C);
         return (0, r.jsxs)("div", {
           className: g().BottomShelf,
-          style: { transform: u && x ? L : "" },
-          onMouseEnter: () => v(!0),
-          onFocus: () => v(!0),
-          onMouseLeave: () => v(!1),
-          onBlur: () => v(!1),
+          style: { transform: u && v ? j : "" },
+          onMouseEnter: () => L(!0),
+          onFocus: () => L(!0),
+          onMouseLeave: () => L(!1),
+          onBlur: () => L(!1),
           children: [
             (0, r.jsxs)("a", {
               href: i,
               className: g().Midline,
               onClick: (e) => {
-                f && e.preventDefault();
+                S && e.preventDefault();
               },
-              "aria-disabled": f,
+              "aria-disabled": S,
               children: [
-                N &&
+                R &&
                   (0, r.jsx)("div", {
                     className: g().CapsuleImageAnchorPoint,
                     children: (0, r.jsx)("div", {
@@ -2432,12 +2436,12 @@
                       ),
                       children: (0, r.jsx)("img", {
                         loading: "lazy",
-                        src: (0, W.b0)(N, "header"),
-                        alt: I?.name,
+                        src: (0, W.b0)(R, "header"),
+                        alt: N?.name,
                       }),
                     }),
                   }),
-                Boolean(!d && !_) &&
+                Boolean(!d && !h) &&
                   (0, r.jsx)("div", {
                     className: g().Price,
                     children: (0, r.jsx)(A.NF, {
@@ -2449,25 +2453,25 @@
             }),
             (0, r.jsx)("div", {
               className: g().BottomShelfOffScreen,
-              ref: (e) => j(`translateY( -${e?.clientHeight || 0}px )`),
+              ref: (e) => I(`translateY( -${e?.clientHeight || 0}px )`),
               children: (0, r.jsxs)("div", {
                 className: g().TextContent,
                 children: [
                   (0, r.jsx)("a", {
                     href: i,
                     onClick: (e) => {
-                      f && e.preventDefault();
+                      S && e.preventDefault();
                     },
-                    "aria-disabled": f,
+                    "aria-disabled": S,
                     children: (0, r.jsx)("div", {
                       className: g().GameTitle,
-                      children: I?.name || a,
+                      children: N?.name || a,
                     }),
                   }),
-                  S && (0, r.jsx)(Le, { id: t }),
-                  (0, r.jsx)(ye, { id: t }),
-                  Boolean(!m) && (0, r.jsx)(D.J, { id: t }),
-                  Boolean(!m && R) &&
+                  b && (0, r.jsx)(Ae, { id: t }),
+                  (0, r.jsx)(ve, { id: t }),
+                  Boolean(!F) && (0, r.jsx)(D.J, { id: t }),
+                  Boolean(!F && T) &&
                     (0, r.jsxs)("div", {
                       className: g().ReviewsAndRelease,
                       children: [
@@ -2475,34 +2479,38 @@
                           id: t,
                           strClassName: g().PlatformDisplay,
                         }),
-                        (0, r.jsx)(ve, { id: t }),
+                        (0, r.jsx)(je, { id: t }),
                       ],
                     }),
                   c && (0, r.jsx)(B.j, { id: t, className: g().DemoButton }),
-                  Boolean(m && T) &&
-                    (0, r.jsx)(ge.Q8, { id: t, onShowDialog: y }),
+                  Boolean(F && M) &&
+                    (0, r.jsx)(ge.Pj, {
+                      id: t,
+                      compatibility: V,
+                      onShowDialog: x,
+                    }),
                   Boolean(l) && l,
-                  _ &&
-                    T &&
+                  h &&
+                    M &&
                     t &&
                     "appid" in t &&
                     t.appid &&
-                    (0, r.jsx)(k.E, { appid: t.appid, bIsMuted: !1 }),
-                  h && (0, r.jsx)(H.Q, { nCreatorAccountID: h }),
+                    (0, r.jsx)(H.E, { appid: t.appid, bIsMuted: !1 }),
+                  f && (0, r.jsx)(k.Q, { nCreatorAccountID: f }),
                 ],
               }),
             }),
           ],
         });
       }
-      function ve(e) {
+      function je(e) {
         const { id: t } = e,
           { data: n } = (0, q.by)(t);
         if (!n) return null;
         const a = (0, he.CC)(n);
         return (0, r.jsx)("div", { className: g().ReleaseDate, children: a });
       }
-      function Le(e) {
+      function Ae(e) {
         const { id: t } = e,
           { data: n } = (0, q.wl)(t);
         return n
@@ -2512,23 +2520,25 @@
             })
           : null;
       }
-      function je(e) {
+      function De(e) {
         const {
             id: t,
             displayID: n,
             strStoreUrl: a,
             bHideBottomHalf: o,
             bShowDeckCompatibilityDialog: i,
-            bShowWishlistButton: s = !0,
-            bShowIgnoreButton: l = !1,
+            eHardwareCompatibilityDisplay: s,
+            bShowWishlistButton: l = !0,
+            bShowIgnoreButton: c = !1,
           } = e,
-          { data: c } = (0, q.Yo)(t),
-          { data: u } = (0, q.j4)(t),
-          d = void 0 === c && void 0 === u;
+          { data: u } = (0, q.Yo)(t),
+          { data: d } = (0, q.j4)(t),
+          m = void 0 === u && void 0 === d,
+          [C] = (0, xe.zG)(Boolean(i), s);
         return (0, r.jsxs)("div", {
           className: (0, p.A)(
             g().GameHoverCapsuleCtn,
-            d && g().Loading,
+            m && g().Loading,
             Se().InGameHover,
             o && g().UseHidingBottomHalf,
           ),
@@ -2537,16 +2547,16 @@
               href: a,
               className: g().TrailerAnchorStoreLink,
               children: [
-                Boolean(s && !i) && (0, r.jsx)(I.E, { id: n, snr: e.strSNR }),
-                Boolean(l && !i) && (0, r.jsx)(z, { id: n, snr: e.strSNR }),
+                Boolean(l && !C) && (0, r.jsx)(I.E, { id: n, snr: e.strSNR }),
+                Boolean(c && !C) && (0, r.jsx)(O, { id: n, snr: e.strSNR }),
                 t && (0, r.jsx)(ce, { id: t }),
               ],
             }),
-            (0, r.jsx)(xe, { ...e }),
+            (0, r.jsx)(Le, { ...e }),
           ],
         });
       }
-      function Ae(e) {
+      function Be(e) {
         const {
             id: t,
             name: n,
@@ -2561,58 +2571,67 @@
             nCreatorAccountID: C,
             nWidthMultiplier: h,
             bShowDeckCompatibilityDialog: g,
-            bShowWishlistButton: f = !0,
-            bShowIgnoreButton: S = !1,
-            bShowDescription: b = !1,
-            ...w
+            eHardwareCompatibilityDisplay: f,
+            bShowWishlistButton: S = !0,
+            bShowIgnoreButton: b = !1,
+            bShowDescription: y = !1,
+            ...x
           } = e,
-          { data: x } = (0, q.J$)(t),
-          v = (0, _.Qn)(),
-          [j, A, D] = (0, a.uD)(),
-          { strStoreURL: B, snr: k } = (0, _e.x)(x, c);
-        if ((!x && !n) || v) return (0, r.jsx)(r.Fragment, { children: p });
-        let H = t;
-        x &&
-          x.item_type == o.c6.RD &&
-          1 == x.included_appids?.length &&
-          (H = { appid: x.included_appids[0] });
-        const I = i || !x ? void 0 : B,
-          N = {
+          { data: v } = (0, q.J$)(t),
+          j = (0, _.Qn)(),
+          [A, D, B] = (0, a.uD)(),
+          { strStoreURL: H, snr: k } = (0, _e.x)(v, c);
+        if ((!v && !n) || j) return (0, r.jsx)(r.Fragment, { children: p });
+        let I = t;
+        v &&
+          v.item_type == o.c6.RD &&
+          1 == v.included_appids?.length &&
+          (I = { appid: v.included_appids[0] });
+        const N = "hiding" == L(),
+          R = i || !v ? void 0 : H,
+          [, T] = (0, xe.zG)(g, f);
+        let M;
+        T != we.iA &&
+          Boolean(v?.appid) &&
+          v?.item_type == o.c6.qI &&
+          (M = v.appid);
+        const F = {
             id: t,
-            displayID: H,
+            displayID: I,
             name: n,
             bPreventNavigation: i,
-            strStoreUrl: I,
+            strStoreUrl: R,
             elElementToAppend: s,
             bShowDemoButton: l,
             bShowDeckCompatibilityDialog: g,
-            bHideBottomHalf: "hiding" == L(),
+            eHardwareCompatibilityDisplay: f,
+            bHideBottomHalf: N,
             bHidePrice: u,
             bUseSubscriptionLayout: d,
             strSNR: k,
             nCreatorAccountID: C,
-            bShowWishlistButton: f,
-            bShowIgnoreButton: S,
-            bShowDescription: b,
-            onShowDeckCompatibilityDialog: g ? A : void 0,
+            bShowWishlistButton: S,
+            bShowIgnoreButton: b,
+            bShowDescription: y,
+            onShowDeckCompatibilityDialog: Boolean(M) ? D : void 0,
           },
-          R = g && x?.item_type == o.c6.qI ? x.appid : void 0,
-          T = (0, r.jsx)(je, { ...N }),
-          M = I ? (0, r.jsx)("a", { href: I, children: p }) : p;
+          V = (0, r.jsx)(De, { ...F }),
+          E = R ? (0, r.jsx)("a", { href: R, children: p }) : p;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(y, {
-              hoverContent: T,
+            (0, r.jsx)(w, {
+              hoverContent: V,
               nWidthMultiplier: h,
-              ...w,
-              children: M,
+              ...x,
+              children: E,
             }),
-            R &&
+            M &&
               (0, r.jsx)(ge.cO, {
-                nAppID: R,
-                appName: x?.name || n,
-                active: j,
-                closeModal: D,
+                nAppID: M,
+                appName: v?.name || n,
+                startingTab: T,
+                active: A,
+                closeModal: B,
               }),
           ],
         });
@@ -2681,25 +2700,25 @@
           { data: b } = (0, s.J$)(S);
         if (!g || !f) return null;
         if (f.type == o.uE.ue && !(0, i.J)(b)) return null;
-        let w = g.summary_unfiltered || g.summary_filtered,
-          y = "#ReviewScore_UserReviewScoreAria",
+        let y = g.summary_unfiltered || g.summary_filtered,
+          w = "#ReviewScore_UserReviewScoreAria",
           x = !1;
         const v = _.Z.Localize("#Language_" + h.TS.LANGUAGE);
         if (
           (c.Fm.Get().BShowFilteredUserReviewScores() &&
             (g.summary_language_specific
               ? ((x = !0),
-                (y = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
-                (w = g.summary_language_specific))
-              : (w = g.summary_filtered)),
-          !w || !w.review_score)
+                (w = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
+                (y = g.summary_language_specific))
+              : (y = g.summary_filtered)),
+          !y || !y.review_score)
         )
           return null;
         let L = C().ReviewScoreNone;
         L =
-          w.review_score > 0 && w.review_score < o.j6.hc
+          y.review_score > 0 && y.review_score < o.j6.hc
             ? C().ReviewScoreLow
-            : w.review_score == o.j6.hc
+            : y.review_score == o.j6.hc
               ? C().ReviewScoreMixed
               : C().ReviewScoreHigh;
         const j = `${h.TS.STORE_BASE_URL}app/${f.appid}/#app_reviews_hash`,
@@ -2708,28 +2727,28 @@
             children: [
               (0, r.jsx)("div", {
                 className: C().ReviewScoreLabel,
-                "aria-label": _.Z.Localize(y, w.review_score_label, v),
-                children: w.review_score_label,
+                "aria-label": _.Z.Localize(w, y.review_score_label, v),
+                children: y.review_score_label,
               }),
               (0, r.jsxs)("div", {
                 className: C().ReviewScoreCount,
                 "aria-label": _.Z.Localize(
                   "#GameHover_UserReviewCount",
-                  w.review_count.toLocaleString((0, a.J)()),
+                  y.review_count.toLocaleString((0, a.J)()),
                 ),
                 children: [
                   "(",
                   n
-                    ? "(" + w.review_count.toLocaleString((0, a.J)()) + ")"
+                    ? "(" + y.review_count.toLocaleString((0, a.J)()) + ")"
                     : x
                       ? _.Z.Localize(
                           "#GameHover_UserReviewCount_Lang",
-                          w.review_count.toLocaleString((0, a.J)()),
+                          y.review_count.toLocaleString((0, a.J)()),
                           v,
                         )
                       : _.Z.Localize(
                           "#GameHover_UserReviewCount",
-                          w.review_count.toLocaleString((0, a.J)()),
+                          y.review_count.toLocaleString((0, a.J)()),
                         ),
                   ")",
                 ],
@@ -2762,15 +2781,15 @@
           className: (0, m.A)(C().ReviewScore, "ReviewScore"),
           children:
             p &&
-            null != w.percent_positive &&
-            null != w.review_count &&
+            null != y.percent_positive &&
+            null != y.review_count &&
             Boolean(D)
               ? (0, r.jsx)(d.he, {
                   bTopmost: !0,
                   toolTipContent: _.Z.Localize(
                     D,
-                    w.percent_positive,
-                    w.review_count,
+                    y.percent_positive,
+                    y.review_count,
                   ),
                   children: A,
                 })
@@ -2804,15 +2823,15 @@
             snr: n,
             classOverride: g,
             styleOverride: b,
-            bShowInGamepadUI: w,
+            bShowInGamepadUI: y,
           } = e,
-          { data: y } = (0, s.J$)(t),
+          { data: w } = (0, s.J$)(t),
           { elDialogElement: x, fnShowLogonDialog: v } = (0, i.l)(),
           [L, j] = (0, m.useState)(() =>
-            y &&
-            (y.type == o.uE.ue || y.type == o.uE.Vi) &&
-            y.related_items?.parent_appid
-              ? y.related_items?.parent_appid
+            w &&
+            (w.type == o.uE.ue || w.type == o.uE.Vi) &&
+            w.related_items?.parent_appid
+              ? w.related_items?.parent_appid
               : t && "appid" in t
                 ? t.appid
                 : void 0,
@@ -2820,33 +2839,33 @@
           A = (0, l.$5)(L),
           D = (0, u.bB)(L),
           { bIsOwned: B } = (0, c.ZJ)(A),
-          [k, H] = (0, m.useState)(!1),
+          [H, k] = (0, m.useState)(!1),
           I = (0, C.m)("GameHoverWishlistButton"),
           { mutateAsync: N } = (0, d.s)(L, !D, n);
         (0, m.useEffect)(() => {
           t &&
             "appid" in t &&
-            (y?.type == o.uE.ue || y?.type == o.uE.Vi) &&
-            j(y.related_items?.parent_appid || t.appid);
-        }, [y, t]);
+            (w?.type == o.uE.ue || w?.type == o.uE.Vi) &&
+            j(w.related_items?.parent_appid || t.appid);
+        }, [w, t]);
         const R = (0, m.useCallback)(
           async (e) => {
             h.iA.logged_in
               ? (e.preventDefault(),
                 e.stopPropagation(),
-                H(!0),
+                k(!0),
                 await N(),
-                I.token.reason || H(!1))
+                I.token.reason || k(!1))
               : v();
           },
           [I.token.reason, v, N],
         );
-        return B && y?.type != o.uE.Hk
+        return B && w?.type != o.uE.Hk
           ? null
           : (0, r.jsxs)(a.Z, {
               className: (0, _.A)(
                 f().WishlistButton,
-                w && f().ShowInGamepadUI,
+                y && f().ShowInGamepadUI,
                 g,
               ),
               onActivate: R,
@@ -2856,7 +2875,7 @@
                 (0, r.jsx)("div", {
                   className: (0, _.A)(
                     f().WishlistButtonText,
-                    k && f().WishlistLoadingText,
+                    H && f().WishlistLoadingText,
                     "WishlistButtonText",
                   ),
                   children: S.Z.Localize(
@@ -2930,8 +2949,8 @@
         f = n(58918),
         S = n(99838),
         b = n(90626),
-        w = n(31258),
-        y = n(96873),
+        y = n(31258),
+        w = n(96873),
         x = n(84811),
         v = n(88997),
         L = n(61859),
@@ -2945,13 +2964,13 @@
         bShiftToFitWindow: !0,
         bDisablePopTop: !0,
       };
-      function k(e) {
+      function H(e) {
         const { setRemoteClientID: t, rgSessions: n } = e,
           a = (0, b.useCallback)(
             (e) => {
               n?.length &&
                 (0, v.lX)(
-                  (0, r.jsx)(H, { sessions: n, setRemoteDownloadClientId: t }),
+                  (0, r.jsx)(k, { sessions: n, setRemoteDownloadClientId: t }),
                   e,
                   B,
                 );
@@ -2966,7 +2985,7 @@
             })
           : null;
       }
-      function H({ sessions: e, setRemoteDownloadClientId: t }) {
+      function k({ sessions: e, setRemoteDownloadClientId: t }) {
         return (0, r.jsx)("ul", {
           className: D().ClientListDropdownMenu,
           children: e.map((e) =>
@@ -3073,7 +3092,7 @@
       }
       function P(e) {
         const { id: t } = e,
-          n = (0, y.Vc)(),
+          n = (0, w.Vc)(),
           [a, i] = (0, b.useState)(0),
           [s, l] = (0, b.useState)(!1),
           { data: c } = (0, o.qI)(t);
@@ -3085,7 +3104,7 @@
             case C.g0U:
               {
                 if (!e.os_type) return !1;
-                const t = (0, w.gU)(e.os_type);
+                const t = (0, y.gU)(e.os_type);
                 if (c.windows && t.includes("Windows")) return !0;
                 if (c.mac && t.includes("Mac")) return !0;
                 if (c.steamos_linux && t.includes("Linux")) return !0;
@@ -3101,10 +3120,10 @@
           return (0, r.jsx)("div", {
             className: E().RemoteOptions,
             children: Boolean(s)
-              ? (0, r.jsx)(z, { session: e })
+              ? (0, r.jsx)(O, { session: e })
               : (0, r.jsxs)(r.Fragment, {
                   children: [
-                    (0, r.jsx)(O, {
+                    (0, r.jsx)(z, {
                       rgAcceptableSession: u,
                       session: e,
                       setSessionIndex: i,
@@ -3123,7 +3142,7 @@
         }
         return null;
       }
-      function O(e) {
+      function z(e) {
         const { rgAcceptableSession: t, session: n, setSessionIndex: a } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
@@ -3137,7 +3156,7 @@
                   className: E().ClientName,
                   children: n.machine_name,
                 }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(H, {
                   rgSessions: t,
                   setRemoteClientID: (e) => {
                     const n = t.findIndex((t) => t.client_instanceid === e);
@@ -3149,7 +3168,7 @@
           ],
         });
       }
-      function z(e) {
+      function O(e) {
         const { session: t } = e;
         return (0, r.jsxs)("div", {
           className: E().DownloadStartedCtn,
@@ -3165,7 +3184,7 @@
       }
       function G(e) {
         const { appid: t, session: n, setRemoteDownloadRequested: a } = e,
-          o = (0, y.we)(t, n.client_instanceid);
+          o = (0, w.we)(t, n.client_instanceid);
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsxs)(h.sP, {
@@ -3362,7 +3381,7 @@
             bHidePrePurchase: m,
             bHideReleaseDate: S,
             bHideIfDemo: b,
-            bPurchaseOptionDisplay: y,
+            bPurchaseOptionDisplay: w,
             strContainerClassName: x,
             strDiscountAndPriceClassName: v,
             strPriceFormattedClassName: L,
@@ -3371,17 +3390,17 @@
             bHideNewTag: D,
           } = e,
           B = _.TS.NOW,
-          { data: k } = (0, s.by)(c),
-          { data: H } = (0, s.J$)(c);
-        if (!H) return null;
+          { data: H } = (0, s.by)(c),
+          { data: k } = (0, s.J$)(c);
+        if (!k) return null;
         const I = d,
-          N = !D && (0, i.fk)(k, B),
+          N = !D && (0, i.fk)(H, B),
           R = (0, p.A)({
             [u().StoreSalePriceWidgetContainer]: !0,
             [u().SingleLineMode]: t,
             StoreSalePriceWidgetContainer: !0,
             [u().NewItem]: N,
-            [u().PurchaseOption]: y,
+            [u().PurchaseOption]: w,
             [x ?? ""]: !!x,
           });
         if (e.bShowInLibrary)
@@ -3392,15 +3411,15 @@
               children: C.Z.Localize("#EventDisplay_CallToAction_InLibrary"),
             }),
           });
-        if (k && k.is_coming_soon && (!I || !I.packageid)) {
+        if (H && H.is_coming_soon && (!I || !I.packageid)) {
           if (S) return null;
           const e =
-            k.coming_soon_display &&
-            ["text_comingsoon", "text_tba"].includes(k.coming_soon_display)
-              ? (0, l.d)(k)
+            H.coming_soon_display &&
+            ["text_comingsoon", "text_tba"].includes(H.coming_soon_display)
+              ? (0, l.d)(H)
               : C.Z.Localize(
                   "#EventDisplay_CallToAction_ComingSoon_Date",
-                  (0, o.CC)(k),
+                  (0, o.CC)(H),
                 );
           return (0, r.jsx)("div", {
             className: R,
@@ -3410,9 +3429,9 @@
             }),
           });
         }
-        if (H.is_free) {
-          if (!H.is_free_temporarily)
-            return H.item_type == a.c6.qI && H.type == a.uE.ue
+        if (k.is_free) {
+          if (!k.is_free_temporarily)
+            return k.item_type == a.c6.qI && k.type == a.uE.ue
               ? b
                 ? null
                 : (0, r.jsxs)("div", {
@@ -3458,15 +3477,15 @@
         }
         if (!I || !I.formatted_final_price) return null;
         let T = I.discount_pct || 0,
-          M = n || H.item_type != a.c6.xO ? 0 : I.bundle_discount_pct || 0,
+          M = n || k.item_type != a.c6.xO ? 0 : I.bundle_discount_pct || 0,
           F = I.formatted_final_price;
         if (j) {
           const e = (0, h.rt)(_.iA.country_code.toUpperCase()),
             t = { ...(0, g.J)(e), bWholeUnitsOnly: !0 };
           F = (0, f.d)(Number.parseInt(I.final_price_in_cents || "0"), t);
         }
-        const V = (0, i.Nq)(k, I);
-        return (0, r.jsx)(w, {
+        const V = (0, i.Nq)(H, I);
+        return (0, r.jsx)(y, {
           bSingleLineMode: Boolean(t),
           nBaseDiscountPercentage: M,
           nDiscountPercentage: T,
@@ -3481,10 +3500,10 @@
           bHidePrePurchase: Boolean(m),
           strDiscountAndPriceClassName: v,
           strPriceFormattedClassName: L,
-          bPurchaseOptionDisplay: y,
+          bPurchaseOptionDisplay: w,
         });
       }
-      function w(e) {
+      function y(e) {
         const {
             bSingleLineMode: t,
             nDiscountPercentage: n,
@@ -3876,17 +3895,17 @@
                 id: { appid: h.related_items.parent_appid },
               })
             : null;
-        let w;
+        let y;
         switch (m) {
           case r.k_ETrailerGrowAmount_Implicit:
-            w = p().GrowOnHoverImplicit;
+            y = p().GrowOnHoverImplicit;
             break;
           case r.k_ETrailerGrowAmount_Medium:
-            w = p().GrowOnHoverMedium;
+            y = p().GrowOnHoverMedium;
         }
-        const y = b[0];
+        const w = b[0];
         return (0, a.jsx)("video", {
-          className: c()(p().CapsuleMicroTrailer, w),
+          className: c()(p().CapsuleMicroTrailer, y),
           loop: !0,
           muted: !0,
           controls: !1,
@@ -3896,7 +3915,7 @@
           onTimeUpdate: (e) => {
             g.current = e.currentTarget.currentTime;
           },
-          children: (0, a.jsx)(_, { trailer: y }),
+          children: (0, a.jsx)(_, { trailer: w }),
         });
       }
       function _(e) {
@@ -5049,17 +5068,17 @@
     54906: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ez: () => M,
+        Ez: () => F,
         Dy: () => O,
-        wW: () => z,
-        UN: () => V,
-        Q8: () => I,
-        Tz: () => R,
-        cO: () => N,
-        Pu: () => P,
-        Nt: () => Z,
-        aw: () => F,
-        cP: () => E,
+        wW: () => G,
+        UN: () => E,
+        Tz: () => T,
+        cO: () => R,
+        Pu: () => z,
+        Pj: () => N,
+        Nt: () => P,
+        aw: () => V,
+        cP: () => Z,
       });
       var r = n(7850),
         a = n(45699),
@@ -5079,7 +5098,7 @@
         f = n(6144),
         S = n(84933),
         b = n(78327);
-      class w {
+      class y {
         m_mapAppResults = new Map();
         m_mapAppCallbackList = new Map();
         m_mapAppResultsPromises = new Map();
@@ -5137,12 +5156,12 @@
         }
         static s_Singleton;
         static Get() {
-          return w.s_Singleton || (w.s_Singleton = new w()), w.s_Singleton;
+          return y.s_Singleton || (y.s_Singleton = new y()), y.s_Singleton;
         }
         constructor() {
           if (document.getElementById("application_config")) {
             let e = (0, b.Tc)("hardwarecompatibility", "application_config");
-            w.ValidateCompatabilityResult(e) && this.AddCompatabilityResult(e);
+            y.ValidateCompatabilityResult(e) && this.AddCompatabilityResult(e);
           }
         }
         static ValidateCompatabilityResult(e) {
@@ -5155,8 +5174,8 @@
           );
         }
       }
-      (0, p.Cg)([S.oI], w.prototype, "LoadAppCompabitilityResult", null);
-      var y = n(56283),
+      (0, p.Cg)([S.oI], y.prototype, "LoadAppCompabitilityResult", null);
+      var w = n(56283),
         x = n(74568),
         v = n(12155),
         L = n(12529),
@@ -5164,48 +5183,79 @@
         A = n(52038),
         D = n(78686),
         B = n(41338),
-        k = n(35111),
-        H = n.n(k);
-      function I(e) {
-        const { id: t, onShowDialog: n } = e,
-          { data: o } = (0, u.J$)(t),
-          { data: s } = (0, u.qI)(t),
-          [d, p, C] = (0, c.uD)();
-        if (!o || !s || o.item_type !== l.c6.qI) return null;
-        const _ = s.steam_deck_compat_category || i.YX;
+        H = n(35111),
+        k = n.n(H),
+        I = n(53305);
+      function N(e) {
+        const { id: t, compatibility: n, onShowDialog: o } = e,
+          { data: s } = (0, u.J$)(t),
+          { data: d } = (0, u.qI)(t),
+          [p, C, _] = (0, c.uD)();
+        if (!s || !d || s.item_type !== l.c6.qI) return null;
+        let h = null,
+          g = null;
+        if (n == I.bY) {
+          const e = d.steam_frame_compat_category || i.YX;
+          (h = (0, r.jsx)(m.bh, { category: e })),
+            (g = D.Z.Localize(
+              "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+            ));
+        } else if (n == I.JR) {
+          const e = d.steam_machine_compat_category || i.YX;
+          (h = (0, r.jsx)(m.Ns, { category: e })),
+            (g = D.Z.Localize(
+              "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+            ));
+        } else {
+          const e = d.steam_deck_compat_category || i.YX;
+          (h = (0, r.jsx)(m.$o, { category: e })),
+            (g = D.Z.Localize(
+              "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+            ));
+        }
         return (0, r.jsxs)("div", {
-          className: (0, A.A)(H().LearnMoreCtn, "LearnMoreCtn"),
+          className: (0, A.A)(k().LearnMoreCtn, "LearnMoreCtn"),
           children: [
-            (0, r.jsx)(m.$o, { category: _ }),
+            h,
             (0, r.jsx)(a.Ii, {
               onClick: (e) => {
-                e.preventDefault(), (n ?? p)();
+                e.preventDefault(), (o ?? C)();
               },
               children: (0, r.jsx)("span", {
-                className: H().LearnMorePC,
-                children: D.Z.Localize(
-                  "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
-                ),
+                className: k().LearnMorePC,
+                children: g,
               }),
             }),
-            !n &&
-              (0, r.jsx)(N, {
-                nAppID: o.appid,
-                appName: o.name,
-                active: d,
-                closeModal: C,
+            !o &&
+              (0, r.jsx)(R, {
+                nAppID: s.appid,
+                appName: s.name,
+                active: p,
+                startingTab: n,
+                closeModal: _,
               }),
           ],
         });
       }
-      function N(e) {
-        const { nAppID: t, active: n, appName: a, closeModal: o } = e;
+      function R(e) {
+        const {
+          nAppID: t,
+          active: n,
+          appName: a,
+          startingTab: o,
+          closeModal: i,
+        } = e;
         return (0, r.jsx)(x.EN, {
           active: n,
-          children: (0, r.jsx)(T, { nAppID: t, appName: a, closeModal: o }),
+          children: (0, r.jsx)(M, {
+            nAppID: t,
+            appName: a,
+            startingTab: o,
+            closeModal: i,
+          }),
         });
       }
-      function R(e) {
+      function T(e) {
         const {
           url: t,
           containerClass: n,
@@ -5218,11 +5268,11 @@
             i ? i() : t && (window.location.href = t);
           },
           children: [
-            o && (0, r.jsx)("div", { className: H().DeveloperComments_Icon }),
+            o && (0, r.jsx)("div", { className: k().DeveloperComments_Icon }),
             (0, r.jsx)("div", {
               className: o
-                ? H().DeveloperComments_LinkIcon
-                : H().DeveloperComments_LinkNoIcon,
+                ? k().DeveloperComments_LinkIcon
+                : k().DeveloperComments_LinkNoIcon,
               children: D.Z.Localize(
                 "#SteamDeckVerified_Store_CompatSection_DeveloperComments",
               ),
@@ -5230,34 +5280,39 @@
           ],
         });
       }
-      function T(e) {
-        const { nAppID: t, appName: n, closeModal: a } = e,
-          i = (function (e) {
-            const [t, n] = d.useState(w.Get().GetCompatabilityResultForApp(e));
+      function M(e) {
+        const { nAppID: t, appName: n, startingTab: a, closeModal: i } = e,
+          s = (function (e) {
+            const [t, n] = d.useState(y.Get().GetCompatabilityResultForApp(e));
             return (
-              (0, S.hL)(w.Get().GetCallbackForAppList(e), n),
+              (0, S.hL)(y.Get().GetCallbackForAppList(e), n),
               d.useEffect(() => {
-                w.Get().BHasCompatabilityResultForApp(e) ||
-                  w
+                y.Get().BHasCompatabilityResultForApp(e) ||
+                  y
                     .Get()
                     .LoadAppCompabitilityResult(e)
-                    .then(() => n(w.Get().GetCompatabilityResultForApp(e)));
+                    .then(() => n(y.Get().GetCompatabilityResultForApp(e)));
               }, [e]),
               t
             );
           })(t),
-          s = d.useId();
+          l = d.useId();
         return (0, r.jsx)(x.eV, {
-          "aria-labelledby": s,
+          "aria-labelledby": l,
           modalClassName: "DeckVerifiedModalDialog",
-          closeModal: a,
-          onCancel: a,
-          children: (0, r.jsx)(y.nB, {
+          closeModal: i,
+          onCancel: i,
+          children: (0, r.jsx)(w.nB, {
             children: (0, r.jsx)(o.Z, {
               focusable: !1,
               "flow-children": "column",
-              children: i
-                ? (0, r.jsx)(L.Ay, { titleId: s, appName: n, results: i })
+              children: s
+                ? (0, r.jsx)(L.Ay, {
+                    titleId: l,
+                    appName: n,
+                    results: s,
+                    eStartingTab: a,
+                  })
                 : (0, r.jsx)(j.t, {
                     size: "medium",
                     position: "center",
@@ -5267,57 +5322,57 @@
           }),
         });
       }
-      function M(e) {
+      function F(e) {
         const { category: t } = e;
         switch (t) {
           case i.I2:
             return (0, r.jsx)(v.o5Q, {
-              className: H().CategoryIcon,
+              className: k().CategoryIcon,
               role: "presentation",
             });
           case i.sd:
             return (0, r.jsx)(v.aVR, {
-              className: H().CategoryIcon,
+              className: k().CategoryIcon,
               role: "presentation",
             });
           case i.V8:
             return (0, r.jsx)(v.jIP, {
-              className: H().CategoryIcon,
+              className: k().CategoryIcon,
               role: "presentation",
             });
           case i.YX:
             return (0, r.jsx)(v.WX$, {
-              className: H().CategoryIcon,
-              role: "presentation",
-            });
-        }
-      }
-      function F(e) {
-        const { category: t } = e;
-        switch (t) {
-          case s.Hi:
-            return (0, r.jsx)(v.ZjT, {
-              className: H().CategoryIcon,
-              role: "presentation",
-            });
-          case s.u_:
-            return (0, r.jsx)(v.jIP, {
-              className: H().CategoryIcon,
-              role: "presentation",
-            });
-          case s.xs:
-            return (0, r.jsx)(v.WX$, {
-              className: H().CategoryIcon,
+              className: k().CategoryIcon,
               role: "presentation",
             });
         }
       }
       function V(e) {
+        const { category: t } = e;
+        switch (t) {
+          case s.Hi:
+            return (0, r.jsx)(v.ZjT, {
+              className: k().CategoryIcon,
+              role: "presentation",
+            });
+          case s.u_:
+            return (0, r.jsx)(v.jIP, {
+              className: k().CategoryIcon,
+              role: "presentation",
+            });
+          case s.xs:
+            return (0, r.jsx)(v.WX$, {
+              className: k().CategoryIcon,
+              role: "presentation",
+            });
+        }
+      }
+      function E(e) {
         const { id: t, category: n, appName: a, descriptionToken: o } = e;
         if (n == i.YX)
           return (0, r.jsx)("div", {
             id: t,
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: a
               ? D.Z.LocalizeReact(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
@@ -5330,22 +5385,22 @@
         switch (n) {
           case i.I2:
             (s = "#SteamDeckVerified_DescriptionHeader_Verified"),
-              (l = H().Verified);
+              (l = k().Verified);
             break;
           case i.sd:
             (s = "#SteamDeckVerified_DescriptionHeader_Playable"),
-              (l = H().Playable);
+              (l = k().Playable);
             break;
           case i.V8:
             (s = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
-              (l = H().Unsupported);
+              (l = k().Unsupported);
         }
         const c = (0, r.jsx)("span", {
             className: l,
             children: D.Z.Localize(O(n)),
           }),
           u = (0, r.jsx)("span", {
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: D.Z.Localize(o || s),
           }),
           d = a
@@ -5358,15 +5413,15 @@
             : D.Z.LocalizeReact("#SteamDeckVerified_DescriptionHeader", c, u);
         return (0, r.jsx)("div", {
           id: t,
-          className: H().CompatibilityDetailRatingSummary,
+          className: k().CompatibilityDetailRatingSummary,
           children: d,
         });
       }
-      function E(e) {
+      function Z(e) {
         const { id: t, category: n, appName: a, descriptionToken: o } = e;
         if (n == s.xs)
           return (0, r.jsx)("div", {
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: a
               ? D.Z.LocalizeReact(
                   "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
@@ -5379,18 +5434,18 @@
         switch (n) {
           case s.Hi:
             (i = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
-              (l = H().Compatible);
+              (l = k().Compatible);
             break;
           case s.u_:
             (i = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
-              (l = H().Unsupported);
+              (l = k().Unsupported);
         }
         const c = (0, r.jsx)("span", {
             className: l,
-            children: D.Z.Localize(z(n)),
+            children: D.Z.Localize(G(n)),
           }),
           u = (0, r.jsx)("span", {
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: D.Z.Localize(o || i),
           }),
           d = a
@@ -5407,15 +5462,15 @@
               );
         return (0, r.jsx)("div", {
           id: t,
-          className: H().CompatibilityDetailRatingSummary,
+          className: k().CompatibilityDetailRatingSummary,
           children: d,
         });
       }
-      function Z(e) {
+      function P(e) {
         const { id: t, category: n, appName: a, descriptionToken: o } = e;
         if (n == i.YX)
           return (0, r.jsx)("div", {
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: a
               ? D.Z.LocalizeReact(
                   "#SteamMachineVerified_DescriptionHeader_Unknown_WithAppName",
@@ -5428,22 +5483,22 @@
         switch (n) {
           case i.I2:
             (s = "#SteamMachineVerified_DescriptionHeader_Verified"),
-              (l = H().Verified);
+              (l = k().Verified);
             break;
           case i.sd:
             (s = "#SteamMachineVerified_DescriptionHeader_Playable"),
-              (l = H().Playable);
+              (l = k().Playable);
             break;
           case i.V8:
             (s = "#SteamMachineVerified_DescriptionHeader_Unsupported"),
-              (l = H().Unsupported);
+              (l = k().Unsupported);
         }
         const c = (0, r.jsx)("span", {
             className: l,
             children: D.Z.Localize(O(n)),
           }),
           u = (0, r.jsx)("span", {
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: D.Z.Localize(o || s),
           }),
           d = a
@@ -5460,15 +5515,15 @@
               );
         return (0, r.jsx)("div", {
           id: t,
-          className: H().CompatibilityDetailRatingSummary,
+          className: k().CompatibilityDetailRatingSummary,
           children: d,
         });
       }
-      function P(e) {
+      function z(e) {
         const { id: t, category: n, appName: a, descriptionToken: o } = e;
         if (n == i.YX)
           return (0, r.jsx)("div", {
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: a
               ? D.Z.LocalizeReact(
                   "#SteamFrameVerified_DescriptionHeader_Unknown_WithAppName",
@@ -5481,22 +5536,22 @@
         switch (n) {
           case i.I2:
             (s = "#SteamFrameVerified_DescriptionHeader_Verified"),
-              (l = H().Verified);
+              (l = k().Verified);
             break;
           case i.sd:
             (s = "#SteamFrameVerified_DescriptionHeader_Playable"),
-              (l = H().Playable);
+              (l = k().Playable);
             break;
           case i.V8:
             (s = "#SteamFrameVerified_DescriptionHeader_Unsupported"),
-              (l = H().Unsupported);
+              (l = k().Unsupported);
         }
         const c = (0, r.jsx)("span", {
             className: l,
             children: D.Z.Localize(O(n)),
           }),
           u = (0, r.jsx)("span", {
-            className: H().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: D.Z.Localize(o || s),
           }),
           d = a
@@ -5509,7 +5564,7 @@
             : D.Z.LocalizeReact("#SteamFrameVerified_DescriptionHeader", c, u);
         return (0, r.jsx)("div", {
           id: t,
-          className: H().CompatibilityDetailRatingSummary,
+          className: k().CompatibilityDetailRatingSummary,
           children: d,
         });
       }
@@ -5525,7 +5580,7 @@
             return "#SteamDeckVerified_Category_Unknown";
         }
       }
-      function z(e) {
+      function G(e) {
         switch (e) {
           case s.Hi:
             return "#SteamOSCompatibility_Category_Compatible";
@@ -5691,16 +5746,16 @@
         };
       })(r || (r = {}));
       var b = n(80902),
-        w = n(23809),
-        y = n(17690),
+        y = n(23809),
+        w = n(17690),
         x = n(30470);
       const v = { high_pending_orders: !1, inventory_available: !0 };
       function L(e) {
-        const t = (0, w.rW)(),
+        const t = (0, y.rW)(),
           { data: n } = (0, l.J$)(e),
           a = (0, b.I)({
             queryKey: [
-              n?.id || y.sc,
+              n?.id || w.sc,
               n?.type || "invalid",
               n?.item_type || "invalid",
             ],
@@ -5732,8 +5787,8 @@
         A = n(52038),
         D = n(78327),
         B = n(22797),
-        k = n(82080),
-        H = n.n(k),
+        H = n(82080),
+        k = n.n(H),
         I = n(78686);
       function N(e) {
         const { id: t, className: n } = e,
@@ -5764,7 +5819,7 @@
               return (0, a.jsx)(B.t, { size: "small", position: "center" });
             if (!_.inventory_available)
               return (0, a.jsx)("div", {
-                className: (0, A.A)(H().ActionOutOfStock, n),
+                className: (0, A.A)(k().ActionOutOfStock, n),
                 children: (0, a.jsxs)("span", {
                   children: [" ", I.Z.Localize("#Sale_ReserveExhausted")],
                 }),
@@ -5779,7 +5834,7 @@
               const e = `${D.TS.IN_CLIENT ? "steam://openurl/" : ""}${g}`;
               return (0, a.jsx)("div", {
                 onClick: (t) => (0, j.Id)(t, e),
-                className: (0, A.A)(H().Action, n),
+                className: (0, A.A)(k().Action, n),
                 children: (0, a.jsx)("span", {
                   children: I.Z.Localize(
                     "#EventDisplay_CallToAction_VisitStore",
@@ -5807,7 +5862,7 @@
                     value: (0, D.KC)(),
                   }),
                   (0, a.jsx)("button", {
-                    className: (0, A.A)(H().Action, n),
+                    className: (0, A.A)(k().Action, n),
                     type: "submit",
                     children: I.Z.Localize(
                       "#EventDisplay_CallToAction_AddToAccount",
@@ -5825,7 +5880,7 @@
                 : o.is_free_temporarily &&
                   (e = I.Z.Localize("#EventDisplay_CallToAction_AddToAccount")),
               (0, a.jsx)("div", {
-                className: (0, A.A)(H().Action, n),
+                className: (0, A.A)(k().Action, n),
                 onClick: f,
                 children: (0, a.jsx)("span", { children: e }),
               })
@@ -5834,7 +5889,7 @@
           if ("" == C.formatted_final_price)
             return (0, a.jsx)("a", {
               href: g,
-              className: (0, A.A)(H().Action, n),
+              className: (0, A.A)(k().Action, n),
               children: I.Z.Localize("#EventDisplay_CallToAction_VisitStore"),
             });
         }
@@ -5859,7 +5914,7 @@
             i.feature,
           );
         return (0, a.jsx)("div", {
-          className: (0, A.A)(H().Action, t),
+          className: (0, A.A)(k().Action, t),
           onClick: () => s(),
           children: (0, a.jsx)("span", {
             children: I.Z.Localize("#Store_AddToCart"),
@@ -5869,7 +5924,7 @@
     },
     28372: (e, t, n) => {
       "use strict";
-      n.d(t, { do: () => I, of: () => H });
+      n.d(t, { do: () => I, of: () => k });
       var r,
         a = n(7850),
         o = n(33951),
@@ -5894,8 +5949,8 @@
           (e[(e.k_ECuratorUnignore = 4)] = "k_ECuratorUnignore");
       })(r || (r = {}));
       var b = n(90626),
-        w = n(39700),
-        y = n(12155),
+        y = n(39700),
+        w = n(12155),
         x = n(52038),
         v = n(61859),
         L = n(74568),
@@ -5903,7 +5958,7 @@
         A = n(56524),
         D = n(86090),
         B = n(95695);
-      const k = (e) => {
+      const H = (e) => {
         const {
             className: t,
             bIgnored: n,
@@ -5945,8 +6000,8 @@
                       l.iA.logged_in ? s() : m();
                     },
                     children: [
-                      r && (0, a.jsx)(w.k, { size: 15 }),
-                      !r && (o || n) && (0, a.jsx)(y.Jlk, {}),
+                      r && (0, a.jsx)(y.k, { size: 15 }),
+                      !r && (o || n) && (0, a.jsx)(w.Jlk, {}),
                       (0, a.jsx)("div", {
                         className: (0, x.A)(A.FollowBtnText, "FollowBtnText"),
                         children:
@@ -5965,7 +6020,7 @@
             })
           : (console.error("CommonFollowButton unexpected type", u), null);
       };
-      function H(e) {
+      function k(e) {
         const {
             followType: t,
             fnSuccessCallback: n,
@@ -5976,7 +6031,7 @@
           { data: m } = (0, o.TB)(t ? void 0 : i),
           p = (0, _.eT)(i),
           C = (0, _.mQ)(i),
-          { mutateAsync: w } = (function (e, t) {
+          { mutateAsync: y } = (function (e, t) {
             const n = (0, _.BU)(),
               a = f.iA.accountid;
             return (0, g.n)({
@@ -6034,13 +6089,13 @@
               },
             });
           })(i, p ? r.k_ECuratorUnfollow : r.k_ECuratorFollow),
-          [y, x, v] = (0, s.uD)(),
+          [w, x, v] = (0, s.uD)(),
           j = b.useCallback(async () => {
-            null != p && (d(!0), await w(), d(!1), n && n(p));
-          }, [p, n, w]);
+            null != p && (d(!0), await y(), d(!1), n && n(p));
+          }, [p, n, y]);
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(k, {
+            (0, a.jsx)(H, {
               className: c,
               bIgnored: Boolean(C),
               bFollowing: Boolean(p),
@@ -6052,7 +6107,7 @@
                 t ?? (m?.is_creator_home ? "creatorhome" : "steamcurator"),
             }),
             (0, a.jsx)(L.EN, {
-              active: y,
+              active: w,
               children: (0, a.jsx)(D.g, { closeModal: v }),
             }),
           ],
@@ -6070,7 +6125,7 @@
             const { appid: t } = e;
             o(!0), await _(), o(!1);
           }, [e, _]);
-        return (0, a.jsx)(k, {
+        return (0, a.jsx)(H, {
           className: n,
           bIgnored: Boolean(s),
           bFollowing: Boolean(i),
@@ -6105,6 +6160,33 @@
             ),
           }),
         });
+      };
+    },
+    70300: (e, t, n) => {
+      "use strict";
+      n.d(t, { nz: () => s, oj: () => c, zG: () => l });
+      var r = n(7850),
+        a = n(95578),
+        o = n(84518),
+        i = n(53305);
+      function s(e) {
+        return e == a.c6.xO
+          ? "bundle"
+          : e == a.c6.RD
+            ? "sub"
+            : (a.c6.qI, "app");
+      }
+      function l(e, t) {
+        const n = t || (Boolean(e) ? i.ZJ : i.iA);
+        return [Boolean(n), n];
+      }
+      const c = (e) => {
+        const { appid: t } = e,
+          n = (0, r.jsx)("div", {
+            className: "ImpressionTrackedElement",
+            children: e.children,
+          });
+        return t ? (0, r.jsx)(o.A, { appID: t, children: n }) : n;
       };
     },
     44986: (e, t, n) => {
@@ -6181,7 +6263,7 @@
               "aria-label": (0, u.we)("#ControllerButton_DpadLeft"),
             });
           case i.g4.Right:
-            return (0, o.jsx)(w, {
+            return (0, o.jsx)(y, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_DpadRight"),
@@ -6199,7 +6281,7 @@
               "aria-label": (0, u.we)("#ControllerButton_DpadDown"),
             });
           case i.g4.HomeMenu:
-            return (0, o.jsx)(y, {
+            return (0, o.jsx)(w, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_Steam"),
@@ -6259,13 +6341,13 @@
               "aria-label": (0, u.we)("#ControllerButton_RS"),
             });
           case i.g4.LeftStickClick:
-            return (0, o.jsx)(k, {
+            return (0, o.jsx)(H, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_L3"),
             });
           case i.g4.RightStickClick:
-            return (0, o.jsx)(H, {
+            return (0, o.jsx)(k, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_R3"),
@@ -6319,7 +6401,7 @@
               "aria-label": (0, u.we)("#ControllerButton_R5"),
             });
           default:
-            return (0, o.jsx)(O, {
+            return (0, o.jsx)(z, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_Default"),
@@ -6571,7 +6653,7 @@
               ],
             });
       }
-      function w({ bIsKnockout: e, ...t }) {
+      function y({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -6606,7 +6688,7 @@
               ],
             });
       }
-      function y({ bIsKnockout: e, ...t }) {
+      function w({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -6954,7 +7036,7 @@
               ],
             });
       }
-      function k({ bIsKnockout: e, ...t }) {
+      function H({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -7015,7 +7097,7 @@
               ],
             });
       }
-      function H({ bIsKnockout: e, ...t }) {
+      function k({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -7476,7 +7558,7 @@
               ],
             });
       }
-      function O({ bIsKnockout: e, ...t }) {
+      function z({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -7571,8 +7653,8 @@
         f = n(20713),
         S = n(54906),
         b = n(35111),
-        w = n.n(b),
-        y = n(44986),
+        y = n.n(b),
+        w = n(44986),
         x = n(12155),
         v = n(78686),
         L = n(78327),
@@ -7580,13 +7662,13 @@
         A = n(38135),
         D = n(56545),
         B = n(80613),
-        k = n.n(B),
-        H = n(89068);
+        H = n.n(B),
+        k = n(89068);
       class I extends B.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            I.prototype.appid || H.Sg(I.M()),
+            I.prototype.appid || k.Sg(I.M()),
             B.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -7597,41 +7679,41 @@
               (I.sm_m = {
                 proto: I,
                 fields: {
-                  appid: { n: 1, br: H.qM.readUint32, bw: H.gp.writeUint32 },
+                  appid: { n: 1, br: k.qM.readUint32, bw: k.gp.writeUint32 },
                 },
               }),
             I.sm_m
           );
         }
         static MBF() {
-          return I.sm_mbf || (I.sm_mbf = H.w0(I.M())), I.sm_mbf;
+          return I.sm_mbf || (I.sm_mbf = k.w0(I.M())), I.sm_mbf;
         }
         toObject(e = !1) {
           return I.toObject(e, this);
         }
         static toObject(e, t) {
-          return H.BT(I.M(), e, t);
+          return k.BT(I.M(), e, t);
         }
         static fromObject(e) {
-          return H.Uq(I.M(), e);
+          return k.Uq(I.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new (k().BinaryReader)(e),
+          let t = new (H().BinaryReader)(e),
             n = new I();
           return I.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return H.zj(I.MBF(), e, t);
+          return k.zj(I.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new (k().BinaryWriter)();
+          var e = new (H().BinaryWriter)();
           return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          H.i0(I.M(), e, t);
+          k.i0(I.M(), e, t);
         }
         serializeBase64String() {
-          var e = new (k().BinaryWriter)();
+          var e = new (H().BinaryWriter)();
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -7642,7 +7724,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            N.prototype.frame_rates || H.Sg(N.M()),
+            N.prototype.frame_rates || k.Sg(N.M()),
             B.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
@@ -7658,34 +7740,34 @@
           );
         }
         static MBF() {
-          return N.sm_mbf || (N.sm_mbf = H.w0(N.M())), N.sm_mbf;
+          return N.sm_mbf || (N.sm_mbf = k.w0(N.M())), N.sm_mbf;
         }
         toObject(e = !1) {
           return N.toObject(e, this);
         }
         static toObject(e, t) {
-          return H.BT(N.M(), e, t);
+          return k.BT(N.M(), e, t);
         }
         static fromObject(e) {
-          return H.Uq(N.M(), e);
+          return k.Uq(N.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new (k().BinaryReader)(e),
+          let t = new (H().BinaryReader)(e),
             n = new N();
           return N.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return H.zj(N.MBF(), e, t);
+          return k.zj(N.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new (k().BinaryWriter)();
+          var e = new (H().BinaryWriter)();
           return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          H.i0(N.M(), e, t);
+          k.i0(N.M(), e, t);
         }
         serializeBase64String() {
-          var e = new (k().BinaryWriter)();
+          var e = new (H().BinaryWriter)();
           return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -7696,7 +7778,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            R.prototype.clusterid || H.Sg(R.M()),
+            R.prototype.clusterid || k.Sg(R.M()),
             B.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -7709,28 +7791,28 @@
                 fields: {
                   clusterid: {
                     n: 1,
-                    br: H.qM.readUint64String,
-                    bw: H.gp.writeUint64String,
+                    br: k.qM.readUint64String,
+                    bw: k.gp.writeUint64String,
                   },
                   report_days: {
                     n: 4,
-                    br: H.qM.readUint32,
-                    bw: H.gp.writeUint32,
+                    br: k.qM.readUint32,
+                    bw: k.gp.writeUint32,
                   },
                   report_count: {
                     n: 5,
-                    br: H.qM.readUint64String,
-                    bw: H.gp.writeUint64String,
+                    br: k.qM.readUint64String,
+                    bw: k.gp.writeUint64String,
                   },
                   mean_frame_rate: {
                     n: 6,
-                    br: H.qM.readDouble,
-                    bw: H.gp.writeDouble,
+                    br: k.qM.readDouble,
+                    bw: k.gp.writeDouble,
                   },
                   mean_frame_rate_stddev: {
                     n: 7,
-                    br: H.qM.readDouble,
-                    bw: H.gp.writeDouble,
+                    br: k.qM.readDouble,
+                    bw: k.gp.writeDouble,
                   },
                 },
               }),
@@ -7738,34 +7820,34 @@
           );
         }
         static MBF() {
-          return R.sm_mbf || (R.sm_mbf = H.w0(R.M())), R.sm_mbf;
+          return R.sm_mbf || (R.sm_mbf = k.w0(R.M())), R.sm_mbf;
         }
         toObject(e = !1) {
           return R.toObject(e, this);
         }
         static toObject(e, t) {
-          return H.BT(R.M(), e, t);
+          return k.BT(R.M(), e, t);
         }
         static fromObject(e) {
-          return H.Uq(R.M(), e);
+          return k.Uq(R.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new (k().BinaryReader)(e),
+          let t = new (H().BinaryReader)(e),
             n = new R();
           return R.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return H.zj(R.MBF(), e, t);
+          return k.zj(R.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new (k().BinaryWriter)();
+          var e = new (H().BinaryWriter)();
           return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          H.i0(R.M(), e, t);
+          k.i0(R.M(), e, t);
         }
         serializeBase64String() {
-          var e = new (k().BinaryWriter)();
+          var e = new (H().BinaryWriter)();
           return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -7810,11 +7892,11 @@
               "#SteamDeckVerified_ViewDeveloperPost",
             )),
             (p.onOptionsButton = m),
-            (C = (0, r.jsx)(O, {
+            (C = (0, r.jsx)(z, {
               blogURL: t.steam_deck_blog_url,
               eHWCompatibiltyDisplay: T.ZJ,
             })),
-            (_ = (0, r.jsx)(O, {
+            (_ = (0, r.jsx)(z, {
               blogURL: t.steam_deck_blog_url,
               eHWCompatibiltyDisplay: T.c9,
             }))),
@@ -7864,19 +7946,19 @@
               autoFocus: c,
               focusableIfEmpty: c,
               noFocusRing: !0,
-              className: w().CompatibilityDetailsContainer,
+              className: y().CompatibilityDetailsContainer,
               ...p,
               children: [
                 (0, r.jsxs)("div", {
                   id: n,
-                  className: w().DialogHeader,
+                  className: y().DialogHeader,
                   children: [
                     (0, r.jsx)("div", {
-                      className: w().DialogTitle,
+                      className: y().DialogTitle,
                       children: e,
                     }),
                     (0, r.jsx)("div", {
-                      className: w().AppTitleCategory,
+                      className: y().AppTitleCategory,
                       children: (0, r.jsx)(S.Ez, {
                         category: t.resolved_category,
                       }),
@@ -7893,7 +7975,7 @@
         const h = (0, g.z5)(t.resolved_category),
           f = (0, g._R)(t.steamos_resolved_category),
           b = (0, g.z5)(t.machine_resolved_category),
-          y = (0, g.z5)(t.frame_resolved_category || i.YX),
+          w = (0, g.z5)(t.frame_resolved_category || i.YX),
           L = (e) =>
             window.sessionStorage.setItem(
               "steamdeckcompatibility",
@@ -7902,10 +7984,10 @@
           D = [
             {
               name: (0, r.jsxs)("div", {
-                className: w().pillContent,
+                className: y().pillContent,
                 children: [
-                  (0, r.jsx)(x.lRD, { className: w().SteamDeckDeviceIcon }),
-                  (0, r.jsx)(h, { className: w().RatingIcon }),
+                  (0, r.jsx)(x.lRD, { className: y().SteamDeckDeviceIcon }),
+                  (0, r.jsx)(h, { className: y().RatingIcon }),
                 ],
               }),
               key: T.ZJ.toString(),
@@ -7916,10 +7998,10 @@
             },
             {
               name: (0, r.jsxs)("div", {
-                className: w().pillContent,
+                className: y().pillContent,
                 children: [
-                  (0, r.jsx)(x.fhy, { className: w().SteamMachineDeviceIcon }),
-                  (0, r.jsx)(b, { className: w().RatingIcon }),
+                  (0, r.jsx)(x.fhy, { className: y().SteamMachineDeviceIcon }),
+                  (0, r.jsx)(b, { className: y().RatingIcon }),
                 ],
               }),
               key: T.JR.toString(),
@@ -7928,10 +8010,10 @@
             },
             {
               name: (0, r.jsxs)("div", {
-                className: w().pillContent,
+                className: y().pillContent,
                 children: [
                   "steamos",
-                  (0, r.jsx)(f, { className: w().RatingIcon }),
+                  (0, r.jsx)(f, { className: y().RatingIcon }),
                 ],
               }),
               key: T.c9.toString(),
@@ -7942,10 +8024,10 @@
             },
             {
               name: (0, r.jsxs)("div", {
-                className: w().pillContent,
+                className: y().pillContent,
                 children: [
-                  (0, r.jsx)(x.Ves, { className: w().SteamFrameDeviceIcon }),
-                  (0, r.jsx)(y, { className: w().RatingIcon }),
+                  (0, r.jsx)(x.Ves, { className: y().SteamFrameDeviceIcon }),
+                  (0, r.jsx)(w, { className: y().RatingIcon }),
                 ],
               }),
               key: T.bY.toString(),
@@ -7955,8 +8037,8 @@
           ];
         return (0, r.jsx)(A.V, {
           tabs: D,
-          classNameCtn: w().CompatibilityTabs,
-          classNameTabContent: w().CompatibilityTabContent,
+          classNameCtn: y().CompatibilityTabs,
+          classNameTabContent: y().CompatibilityTabContent,
           startingTab: d.toString(),
           preferredFocus: !0,
           bDisableRouting: !0,
@@ -7985,21 +8067,21 @@
               p(_?.current?.scrollHeight > _?.current?.clientHeight);
           }, []),
           (0, r.jsxs)(a.Z, {
-            className: w().CompatibilityDetailsContainer,
+            className: y().CompatibilityDetailsContainer,
             ...g,
             children: [
               (0, r.jsxs)("div", {
                 children: [
                   (0, r.jsxs)("div", {
                     id: t,
-                    className: w().DialogHeader,
+                    className: y().DialogHeader,
                     children: [
                       (0, r.jsx)("div", {
-                        className: w().DialogTitle,
+                        className: y().DialogTitle,
                         children: n,
                       }),
                       (0, r.jsx)("div", {
-                        className: w().AppTitleCategory,
+                        className: y().AppTitleCategory,
                         children: l,
                       }),
                     ],
@@ -8011,8 +8093,8 @@
               (0, r.jsx)(o.Qg, {
                 ref: _,
                 className: C()
-                  ? w().CompatibilityDetailsInterior_Scroll
-                  : w().CompatibilityDetailsInterior_NoScroll,
+                  ? y().CompatibilityDetailsInterior_Scroll
+                  : y().CompatibilityDetailsInterior_NoScroll,
                 children: (0, r.jsx)(a.Z, {
                   autoFocus: i,
                   focusableIfEmpty: i || C(),
@@ -8051,7 +8133,7 @@
             children: [
               d &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityDetailsSeparator,
+                  className: y().CompatibilityDetailsSeparator,
                 }),
               a.steamos_resolved_items &&
                 a.steamos_resolved_items
@@ -8060,7 +8142,7 @@
                     (0, r.jsxs)(
                       "div",
                       {
-                        className: w().CompatibilityDetailsRow,
+                        className: y().CompatibilityDetailsRow,
                         children: [
                           (0, r.jsx)(G, { displaytype: e.display_type }),
                           (0, r.jsx)("span", {
@@ -8073,14 +8155,14 @@
                   ),
               i &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityNotes,
+                  className: y().CompatibilityNotes,
                   children: a.steamos_resolved_items
                     ?.filter((e) => e.display_type == s)
                     .map((e) =>
                       (0, r.jsxs)(
                         "div",
                         {
-                          className: w().CompatibilityDetailsRow,
+                          className: y().CompatibilityDetailsRow,
                           children: [
                             (0, r.jsx)(G, { displaytype: e.display_type }),
                             (0, r.jsx)("span", {
@@ -8118,7 +8200,7 @@
             children: [
               c &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityDetailsSeparator,
+                  className: y().CompatibilityDetailsSeparator,
                 }),
               a.resolved_items &&
                 a.resolved_items
@@ -8127,9 +8209,9 @@
                     (0, r.jsxs)(
                       "div",
                       {
-                        className: w().CompatibilityDetailsRow,
+                        className: y().CompatibilityDetailsRow,
                         children: [
-                          (0, r.jsx)(z, { displaytype: e.display_type }),
+                          (0, r.jsx)(O, { displaytype: e.display_type }),
                           (0, r.jsx)("span", {
                             children:
                               "#" != e.loc_token.charAt(0)
@@ -8144,14 +8226,14 @@
               i &&
                 a.resolved_items &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityNotes,
+                  className: y().CompatibilityNotes,
                   children: a.resolved_items
                     .filter((e) => e.display_type == d)
                     .map((e) =>
                       (0, r.jsx)(
                         "div",
                         {
-                          className: w().CompatibilityDetailsNoteRow,
+                          className: y().CompatibilityDetailsNoteRow,
                           children: (0, r.jsx)("span", {
                             children: v.Z.Localize(e.loc_token),
                           }),
@@ -8189,7 +8271,7 @@
             children: [
               c &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityDetailsSeparator,
+                  className: y().CompatibilityDetailsSeparator,
                 }),
               a.machine_resolved_items &&
                 a.machine_resolved_items
@@ -8198,9 +8280,9 @@
                     (0, r.jsxs)(
                       "div",
                       {
-                        className: w().CompatibilityDetailsRow,
+                        className: y().CompatibilityDetailsRow,
                         children: [
-                          (0, r.jsx)(z, { displaytype: e.display_type }),
+                          (0, r.jsx)(O, { displaytype: e.display_type }),
                           (0, r.jsx)("span", {
                             children: v.Z.Localize(e.loc_token),
                           }),
@@ -8212,14 +8294,14 @@
               i &&
                 a.machine_resolved_items &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityNotes,
+                  className: y().CompatibilityNotes,
                   children: a.machine_resolved_items
                     .filter((e) => e.display_type == d)
                     .map((e) =>
                       (0, r.jsx)(
                         "div",
                         {
-                          className: w().CompatibilityDetailsNoteRow,
+                          className: y().CompatibilityDetailsNoteRow,
                           children: (0, r.jsx)("span", {
                             children: v.Z.Localize(e.loc_token),
                           }),
@@ -8256,7 +8338,7 @@
             children: [
               u &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityDetailsSeparator,
+                  className: y().CompatibilityDetailsSeparator,
                 }),
               a.frame_resolved_items &&
                 a.frame_resolved_items
@@ -8265,9 +8347,9 @@
                     (0, r.jsxs)(
                       "div",
                       {
-                        className: w().CompatibilityDetailsRow,
+                        className: y().CompatibilityDetailsRow,
                         children: [
-                          (0, r.jsx)(z, { displaytype: e.display_type }),
+                          (0, r.jsx)(O, { displaytype: e.display_type }),
                           (0, r.jsx)("span", {
                             children: v.Z.Localize(e.loc_token),
                           }),
@@ -8279,14 +8361,14 @@
               s &&
                 a.frame_resolved_items &&
                 (0, r.jsx)("div", {
-                  className: w().CompatibilityNotes,
+                  className: y().CompatibilityNotes,
                   children: a.frame_resolved_items
                     .filter((e) => e.display_type == d)
                     .map((e) =>
                       (0, r.jsx)(
                         "div",
                         {
-                          className: w().CompatibilityDetailsNoteRow,
+                          className: y().CompatibilityDetailsNoteRow,
                           children: (0, r.jsx)("span", {
                             children: v.Z.Localize(e.loc_token),
                           }),
@@ -8299,7 +8381,7 @@
           }),
         });
       }
-      function O(e) {
+      function z(e) {
         const { blogURL: t, eHWCompatibiltyDisplay: n } = e,
           a = (0, L.Qn)();
         if (!t) return null;
@@ -8311,14 +8393,14 @@
                   "#SteamDeckVerified_DescriptionHeader_DeveloperBlog",
                 );
           return (0, r.jsxs)("div", {
-            className: w().CompatibilityDetailRatingSummary,
+            className: y().CompatibilityDetailRatingSummary,
             children: [
               e,
               (0, r.jsx)("div", {
-                className: w().DeveloperBlogYButton,
-                children: (0, r.jsx)(y.$m, {
+                className: y().DeveloperBlogYButton,
+                children: (0, r.jsx)(w.$m, {
                   button: f.g4.Y,
-                  type: y.wt.Knockout,
+                  type: w.wt.Knockout,
                 }),
               }),
             ],
@@ -8331,35 +8413,35 @@
                 "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
               );
         return (0, r.jsxs)("div", {
-          className: w().CompatibilityDetailRatingSummary,
+          className: y().CompatibilityDetailRatingSummary,
           children: [
             o,
             (0, r.jsx)("a", {
               href: t,
-              className: w().DeveloperBlockLinkDesktop,
+              className: y().DeveloperBlockLinkDesktop,
               children: v.Z.Localize("#SteamDeckVerified_ViewDeveloperPost"),
             }),
           ],
         });
       }
-      function z(e) {
+      function O(e) {
         const { displaytype: t } = e;
         switch (t) {
           case C:
             return (0, r.jsx)(x.o5Q, {
-              className: w().CompatibilityDetailsResultIcon,
+              className: y().CompatibilityDetailsResultIcon,
             });
           case p:
             return (0, r.jsx)(x.aVR, {
-              className: w().CompatibilityDetailsResultIcon,
+              className: y().CompatibilityDetailsResultIcon,
             });
           case m:
             return (0, r.jsx)(x.jIP, {
-              className: w().CompatibilityDetailsResultIcon,
+              className: y().CompatibilityDetailsResultIcon,
             });
           case u:
             return (0, r.jsx)(x.WX$, {
-              className: w().CompatibilityDetailsResultIcon,
+              className: y().CompatibilityDetailsResultIcon,
             });
           case d:
             return null;
@@ -8370,11 +8452,11 @@
         switch (t) {
           case l:
             return (0, r.jsx)(x.ZjT, {
-              className: w().CompatibilityDetailsResultIcon,
+              className: y().CompatibilityDetailsResultIcon,
             });
           case s:
             return (0, r.jsx)(x.bcZ, {
-              className: w().CompatibilityDetailsResultIcon,
+              className: y().CompatibilityDetailsResultIcon,
             });
           default:
             return null;
@@ -8409,21 +8491,21 @@
             preferredFocus: f,
             bVerticalTabs: S,
             bSticky: b,
-            bChecklistMode: w,
+            bChecklistMode: y,
           } = e,
-          y = (0, C.zy)(),
+          w = (0, C.zy)(),
           x = (0, C.W6)(),
           [v, L] = (0, a.useState)(
             () =>
               i ||
-              (!n && (0, s.f3)(y, "tab") ? ((0, s.f3)(y, "tab") ?? "") : ""),
+              (!n && (0, s.f3)(w, "tab") ? ((0, s.f3)(w, "tab") ?? "") : ""),
           );
         (0, a.useEffect)(() => {
-          if (!e.bDisableRouting && y) {
-            const e = (0, s.f3)(y, "tab");
+          if (!e.bDisableRouting && w) {
+            const e = (0, s.f3)(w, "tab");
             e && L(e);
           }
-        }, [y, y.key, e.bDisableRouting, L]);
+        }, [w, w.key, e.bDisableRouting, L]);
         const j = a.useCallback(
             (e) => {
               L(e.key),
@@ -8437,14 +8519,14 @@
         if (!A.length) return null;
         const D = l ?? v,
           B = A.find((e) => e.key === D) || A[0],
-          k = f ? (i ?? A[0].key) : void 0,
-          H = (0, r.jsxs)(r.Fragment, {
+          H = f ? (i ?? A[0].key) : void 0,
+          k = (0, r.jsxs)(r.Fragment, {
             children: [
               (0, r.jsx)(m.Z, {
                 className: (0, o.A)(
                   c().GraphicalAssetsTabs,
                   S && c().GraphicalAssetsTabsVertical,
-                  w && c().ChecklistMode,
+                  y && c().ChecklistMode,
                   b && c().Sticky,
                   d,
                 ),
@@ -8457,7 +8539,7 @@
                       OnTabClick: j,
                       classNameTab: _,
                       active: e.key === B.key,
-                      preferredFocus: k === e.key,
+                      preferredFocus: H === e.key,
                     },
                     e.key,
                   ),
@@ -8469,9 +8551,9 @@
         return S
           ? (0, r.jsx)(m.Z, {
               className: (0, o.A)(c().GraphicalAssetsTabsLayoutVertical),
-              children: H,
+              children: k,
             })
-          : H;
+          : k;
       }
       function h(e) {
         const {

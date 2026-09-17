@@ -395,6 +395,8 @@
                       bPreferDemoStorePage: _.bPreferDemoStorePage,
                       bShowDeckCompatibilityDialog:
                         _.bShowDeckCompatibilityDialog,
+                      eHardwareCompatibilityDisplay:
+                        _.eHardwareCompatibilityDisplay,
                       bHidePrice: _.bHidePrice,
                       bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                       strExtraParams: _.strExtraParams,

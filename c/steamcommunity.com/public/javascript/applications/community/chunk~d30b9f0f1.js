@@ -12386,20 +12386,25 @@
                   className: _.InfoStylesBackground,
                   children: (0, _._)("#Sale_Tabs_Editor_Frame"),
                 })
-              : _._.BFilterRequiresFeatureDemoStatic(_)
+              : _._.BFilterRequiresSteamMachineVerifiedOrPlayableStatic(_)
                 ? (0, _.jsx)("div", {
                     className: _.InfoStylesBackground,
-                    children: (0, _._)("#Sale_Tabs_Editor_Demo"),
+                    children: (0, _._)("#Sale_Tabs_Editor_Machine"),
                   })
-                : _._.BFilterRequiresUpcomingStatic(_) &&
-                    __webpack_require__.GetSaleSectionCount(
-                      "sale_item_browser",
-                    ) > 0
+                : _._.BFilterRequiresFeatureDemoStatic(_)
                   ? (0, _.jsx)("div", {
                       className: _.InfoStylesBackground,
-                      children: (0, _._)("#Sale_Tabs_Editor_Upcoming"),
+                      children: (0, _._)("#Sale_Tabs_Editor_Demo"),
                     })
-                  : null;
+                  : _._.BFilterRequiresUpcomingStatic(_) &&
+                      __webpack_require__.GetSaleSectionCount(
+                        "sale_item_browser",
+                      ) > 0
+                    ? (0, _.jsx)("div", {
+                        className: _.InfoStylesBackground,
+                        children: (0, _._)("#Sale_Tabs_Editor_Upcoming"),
+                      })
+                    : null;
       }
       function _(_) {
         const { tab: _, editModel: _ } = _,
@@ -15058,6 +15063,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
@@ -15067,11 +15073,30 @@
             },
             _.cap_item_count || 0,
           ]),
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.master_subscription,
             _.show_deck_compability_details,
+            _.display_hw_compatibility_details,
             _.tabs || [],
           ]),
+          _ = [
+            {
+              data: _._,
+              label: "",
+            },
+            {
+              data: _._,
+              label: (0, _._)("#Library_DeviceType_SteamDeck"),
+            },
+            {
+              data: _._,
+              label: (0, _._)("#Library_DeviceType_SteamFrame"),
+            },
+            {
+              data: _._,
+              label: (0, _._)("#Library_DeviceType_SteamMachine"),
+            },
+          ],
           _ = _(_, _),
           _ =
             __webpack_require__.GetEventModel().jsondata.item_source_type ===
@@ -15147,17 +15172,18 @@
               },
               checked: _.prefer_demo_store_page,
             }),
-            (0, _.jsx)(_._, {
-              label: (0, _._)("#Sale_Section_ShowDeckCompatibility"),
-              tooltip: (0, _._)("#Sale_Section_ShowDeckCompatibility_ttip"),
-              onChange: (_) => {
-                _(),
-                  (_.item_browse_section_data.show_deck_compability_details =
-                    _),
-                  __webpack_require__.SetDirty(_._.jsondata_sales);
-              },
-              checked: _,
-            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#Sale_Section_ShowDeckCompatibility"),
+                tooltip: (0, _._)("#Sale_Section_ShowDeckCompatibility_ttip"),
+                onChange: (_) => {
+                  _(),
+                    (_.item_browse_section_data.show_deck_compability_details =
+                      _),
+                    __webpack_require__.SetDirty(_._.jsondata_sales);
+                },
+                checked: _,
+              }),
             (0, _.jsx)(_._, {
               type: "text",
               label: (0, _._)("#Sale_BrowseSection_SubscriptionID"),
@@ -15169,6 +15195,19 @@
                   __webpack_require__.SetDirty(_._.jsondata_sales);
               },
               value: _,
+            }),
+            (0, _.jsx)(_._, {
+              layout: "inline",
+              label: (0, _._)("#Sale_Section_ShowHardwareCompatibility"),
+              tooltip: (0, _._)("#Sale_Section_ShowHardwareCompatibility_ttip"),
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                _(),
+                  (_.item_browse_section_data.display_hw_compatibility_details =
+                    _.data),
+                  __webpack_require__.SetDirty(_._.jsondata_sales);
+              },
             }),
             (0, _.jsx)(_._, {
               type: "number",
@@ -15358,7 +15397,7 @@
         const { saleSection: _, bSmartSection: _, editModel: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)((0, _._)(_).toString()),
-          [_, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             var _;
             return [
               _.section_type,
@@ -15375,6 +15414,7 @@
                 ? void 0
                 : _.mobile_carousel_style) || _._.k_MobileCarousel_Disable,
               _(_),
+              _.show_deck_compability_details,
             ];
           }),
           _ = "trailercarousel" === _,
@@ -15384,6 +15424,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)(_) || "events" === _ || "sale_events" === _,
           _ = (0, _._)(_),
+          _ = _ && _,
           _ = "library" === _,
           _ =
             (0, _._)(_) &&
@@ -15578,6 +15619,16 @@
                       ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
                     },
                     "show_deck_compability_details",
+                  ),
+                _ &&
+                  (0, _.jsx)(
+                    _,
+                    {
+                      valveOnly: !0,
+                      saleSection: _,
+                      editModel: _,
+                    },
+                    "hardware_compat",
                   ),
               ],
               rightChildren: [
@@ -15782,6 +15833,54 @@
             }),
           ],
         });
+      }
+      function _(_) {
+        const { saleSection: _, editModel: _, valveOnly: _ } = _,
+          [_] = (0, _._)(() => [_.display_hw_compatibility_details || _._]),
+          _ = (0, _.useMemo)(
+            () => [
+              {
+                data: _._,
+                label: "",
+              },
+              {
+                data: _._,
+                label: (0, _._)("#Library_DeviceType_SteamDeck"),
+              },
+              {
+                data: _._,
+                label: (0, _._)("#Library_DeviceType_SteamFrame"),
+              },
+              {
+                data: _._,
+                label: (0, _._)("#Library_DeviceType_SteamMachine"),
+              },
+            ],
+            [],
+          ),
+          _ = (0, _.jsx)(_._, {
+            label:
+              (_ ? "(VO) " : "") +
+              (0, _._)("#Sale_Section_ShowHardwareCompatibility"),
+            tooltip: (0, _._)("#Sale_Section_ShowHardwareCompatibility_ttip"),
+            strDropDownClassName: _.DropDownScroll,
+            rgOptions: _,
+            selectedOption: _,
+            onChange: (_) => {
+              _.display_hw_compatibility_details != _.data &&
+                ((_.display_hw_compatibility_details = _.data),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+            },
+            contextMenuPositionOptions: {
+              bDisablePopTop: !0,
+            },
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              clanSteamID: __webpack_require__.GetClanSteamID(),
+              children: _,
+            })
+          : _;
       }
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
@@ -37586,6 +37685,13 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
           null == _ ||
@@ -37615,11 +37721,23 @@
               : []
           : (null == _ ? void 0 : _.map((_) => _.unique_id)) || [];
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
+      function _(_, _) {
+        return _.show_deck_compability_details ||
+          _.display_hw_compatibility_details == _._ ||
+          (null == _ ? void 0 : _.BFilterRequiresSteamDeckVerifiedOrPlayable())
+          ? _._
+          : _.display_hw_compatibility_details == _._ ||
+              (null == _
+                ? void 0
+                : _.BFilterRequiresSteamFrameVerifiedOrPlayable())
+            ? _._
+            : _.display_hw_compatibility_details == _._ ||
+                (null == _
+                  ? void 0
+                  : _.BFilterRequiresSteamMachineVerifiedOrPlayable())
+              ? _._
+              : _._;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -43177,6 +43295,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 240;
       function _(_) {
@@ -43279,7 +43398,7 @@
                 ? _.filter((_) => !(0, _._)(_)).map((_) => ({
                     Render: (_) =>
                       (function (_, _) {
-                        var _, _, _, _;
+                        var _, _;
                         const {
                           capsuleStyle: _,
                           index: _,
@@ -43289,10 +43408,10 @@
                         } = _;
                         if ((0, _._)(_)) return null;
                         const _ = _(_),
-                          _ = _.BUseSubscriptionLayout();
-                        let _ = (0, _._)(_) && !_.bIsSingleCapsule;
-                        const _ =
-                          _.unique_id + "_" + _ + "_" + _.type + "_" + _._;
+                          _ = _.BUseSubscriptionLayout(),
+                          _ = (0, _._)(_) && !_.bIsSingleCapsule,
+                          _ = (0, _._)(_, _.activeTab),
+                          _ = _.unique_id + "_" + _ + "_" + _.type + "_" + _._;
                         if ("fullrow" !== _) {
                           let _ = (0, _._)(_ && _().CarouselSalePageCapsule);
                           const _ = "tall" === _ ? "library" : "header";
@@ -43320,11 +43439,7 @@
                                   index: _,
                                   bPreferAssetWithoutOverride:
                                     !!_.prefer_assets_without_overrides,
-                                  bShowDeckCompatibilityDialog:
-                                    _.show_deck_compability_details ||
-                                    (null === (_ = _.activeTab) || void 0 === _
-                                      ? void 0
-                                      : _.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                                  eHardwareCompatibilityDisplay: _,
                                 },
                                 _,
                               ),
@@ -43368,11 +43483,7 @@
                                     : _.BFilterRequiresFeatureDemo()),
                                 bPreferDemoStorePage: _.prefer_demo_store_page,
                                 bHidePrice: _.hide_prices,
-                                bShowDeckCompatibilityDialog:
-                                  _.show_deck_compability_details ||
-                                  (null === (_ = _.activeTab) || void 0 === _
-                                    ? void 0
-                                    : _.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                                eHardwareCompatibilityDisplay: _,
                                 fnOnClickOverride: _,
                                 bPreferAssetWithoutOverride:
                                   !!_.prefer_assets_without_overrides,
@@ -45166,6 +45277,7 @@
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bAutoFocus: _,
           } = _,
           _ = (0, _._)({
@@ -45174,6 +45286,7 @@
           }),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _),
           _ = (null == _ ? void 0 : _.item_type) == _._._;
         return (0, _.jsx)(_._, {
           appid: _ ? _._ : void 0,
@@ -45210,11 +45323,9 @@
                                 _,
                             ) &&
                               (0, _.jsx)(_._, {
+                                eDisplay: _,
+                                storeItemPlatform: _,
                                 className: _.DeckCompatIcon,
-                                category:
-                                  null == _
-                                    ? void 0
-                                    : _.steam_deck_compat_category,
                               }),
                           ],
                         }),
@@ -45226,6 +45337,7 @@
                         bHidePrice: _,
                         bHideWishlistButton: !0,
                         bShowDeckCompatibilityDialog: _,
+                        eHardwareCompatibilityDisplay: _,
                       }),
                     ],
                   }),
@@ -45794,6 +45906,8 @@
                       bPreferDemoStorePage: _.bPreferDemoStorePage,
                       bShowDeckCompatibilityDialog:
                         _.bShowDeckCompatibilityDialog,
+                      eHardwareCompatibilityDisplay:
+                        _.eHardwareCompatibilityDisplay,
                       bHidePrice: _.bHidePrice,
                       bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                       strExtraParams: _.strExtraParams,
@@ -46012,6 +46126,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _.filter(
@@ -46133,6 +46248,15 @@
           }
           return !1;
         }
+        EFilterRequiresHWVerifiedOrPlayable() {
+          return this.BFilterRequiresSteamDeckVerifiedOrPlayable()
+            ? _._
+            : this.BFilterRequiresSteamFrameVerifiedOrPlayable()
+              ? _._
+              : this.BFilterRequiresSteamMachineVerifiedOrPlayable()
+                ? _._
+                : _._;
+        }
         BFilterRequiresSteamDeckVerifiedOrPlayable() {
           return (
             !!this.m_activeTab &&
@@ -46200,6 +46324,43 @@
                 (_) =>
                   "[Feature] Steam Frame Playable" == _ ||
                   "[Feature] Steam Frame Verified" == _,
+              )
+            );
+          }
+          return !1;
+        }
+        BFilterRequiresSteamMachineVerifiedOrPlayable() {
+          return (
+            !!this.m_activeTab &&
+            _.BFilterRequiresSteamMachineVerifiedOrPlayableStatic(
+              this.m_activeTab,
+            )
+          );
+        }
+        static BFilterRequiresSteamMachineVerifiedOrPlayableStatic(_) {
+          var _, _, _;
+          if (
+            1 ==
+            (null ===
+              (_ =
+                null === (_ = null == _ ? void 0 : _.sale_tag_filter) ||
+                void 0 === _
+                  ? void 0
+                  : _.clauses) || void 0 === _
+              ? void 0
+              : _.length)
+          ) {
+            const _ =
+              null === (_ = null == _ ? void 0 : _.sale_tag_filter) ||
+              void 0 === _
+                ? void 0
+                : _.clauses[0];
+            return (
+              "Must have" === _.type &&
+              _.or_tags.some(
+                (_) =>
+                  "[Feature] Steam Machine Playable" == _ ||
+                  "[Feature] Steam Machine Verified" == _,
               )
             );
           }
