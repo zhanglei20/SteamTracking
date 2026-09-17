@@ -16026,6 +16026,11 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
           null == _ ||
@@ -16043,9 +16048,19 @@
             !_.diable_tab_id_filtering,
         );
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
+      function _(_, _) {
+        return _.show_deck_compability_details ||
+          _.display_hw_compatibility_details == _._ ||
+          _?.BFilterRequiresSteamDeckVerifiedOrPlayable()
+          ? _._
+          : _.display_hw_compatibility_details == _._ ||
+              _?.BFilterRequiresSteamFrameVerifiedOrPlayable()
+            ? _._
+            : _.display_hw_compatibility_details == _._ ||
+                _?.BFilterRequiresSteamMachineVerifiedOrPlayable()
+              ? _._
+              : _._;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -26938,6 +26953,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 240;
       function _(_) {
@@ -27045,10 +27061,10 @@
                         } = _;
                         if ((0, _._)(_)) return null;
                         const _ = _(_),
-                          _ = _.BUseSubscriptionLayout();
-                        let _ = (0, _._)(_) && !_.bIsSingleCapsule;
-                        const _ =
-                          _.unique_id + "_" + _ + "_" + _.type + "_" + _._;
+                          _ = _.BUseSubscriptionLayout(),
+                          _ = (0, _._)(_) && !_.bIsSingleCapsule,
+                          _ = (0, _._)(_, _.activeTab),
+                          _ = _.unique_id + "_" + _ + "_" + _.type + "_" + _._;
                         if ("fullrow" !== _) {
                           let _ = (0, _._)(_ && _().CarouselSalePageCapsule);
                           const _ = "tall" === _ ? "library" : "header";
@@ -27074,9 +27090,7 @@
                                   index: _,
                                   bPreferAssetWithoutOverride:
                                     !!_.prefer_assets_without_overrides,
-                                  bShowDeckCompatibilityDialog:
-                                    _.show_deck_compability_details ||
-                                    _.activeTab?.BFilterRequiresSteamDeckVerifiedOrPlayable(),
+                                  eHardwareCompatibilityDisplay: _,
                                 },
                                 _,
                               ),
@@ -27118,9 +27132,7 @@
                                   _.activeTab?.BFilterRequiresFeatureDemo(),
                                 bPreferDemoStorePage: _.prefer_demo_store_page,
                                 bHidePrice: _.hide_prices,
-                                bShowDeckCompatibilityDialog:
-                                  _.show_deck_compability_details ||
-                                  _.activeTab?.BFilterRequiresSteamDeckVerifiedOrPlayable(),
+                                eHardwareCompatibilityDisplay: _,
                                 fnOnClickOverride: _,
                                 bPreferAssetWithoutOverride:
                                   !!_.prefer_assets_without_overrides,
@@ -28531,6 +28543,7 @@
             bHidePrice: _,
             bHidePlatforms: _,
             bShowDeckCompatibilityDialog: _,
+            eHardwareCompatibilityDisplay: _,
             bAutoFocus: _,
           } = _,
           _ = (0, _._)({
@@ -28539,6 +28552,7 @@
           }),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _),
           _ = _?.item_type == _._._;
         return (0, _.jsx)(_._, {
           appid: _ ? _._ : void 0,
@@ -28571,8 +28585,9 @@
                             }),
                             Boolean(_ && _?.item_type == _._._ && _) &&
                               (0, _.jsx)(_._, {
+                                eDisplay: _,
+                                storeItemPlatform: _,
                                 className: _.DeckCompatIcon,
-                                category: _?.steam_deck_compat_category,
                               }),
                           ],
                         }),
@@ -28584,6 +28599,7 @@
                         bHidePrice: _,
                         bHideWishlistButton: !0,
                         bShowDeckCompatibilityDialog: _,
+                        eHardwareCompatibilityDisplay: _,
                       }),
                     ],
                   }),
@@ -31515,6 +31531,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 4,
         _ = 6,
@@ -31644,7 +31661,7 @@
         return (0, _.jsxs)(_._, {
           _: _,
           bHidePrice: !0,
-          bShowDeckCompatibilityDialog: !0,
+          eHardwareCompatibilityDisplay: _._,
           hoverProps: {
             direction: "overlay",
             style: {
@@ -39834,6 +39851,9 @@
                     {
                       bShowDemoButton:
                         _.show_as_demos || _?.BFilterRequiresFeatureDemo(),
+                      eHardwareCompatibilityDisplay:
+                        _.display_hw_compatibility_details ||
+                        _?.EFilterRequiresHWVerifiedOrPlayable(),
                       bShowDeckCompatibilityDialog:
                         _.show_deck_compability_details ||
                         _?.BFilterRequiresSteamDeckVerifiedOrPlayable(),
@@ -44199,6 +44219,8 @@
                       bHidePrice: _.hide_prices,
                       bShowDeckCompatibilityDialog:
                         _.show_deck_compability_details,
+                      eHardwareCompatibilityDisplay:
+                        _.display_hw_compatibility_details,
                       bPreferAssetWithoutOverride:
                         !!_.prefer_assets_without_overrides,
                     })
@@ -46565,6 +46587,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _.filter(
@@ -46656,6 +46679,15 @@
           }
           return !1;
         }
+        EFilterRequiresHWVerifiedOrPlayable() {
+          return this.BFilterRequiresSteamDeckVerifiedOrPlayable()
+            ? _._
+            : this.BFilterRequiresSteamFrameVerifiedOrPlayable()
+              ? _._
+              : this.BFilterRequiresSteamMachineVerifiedOrPlayable()
+                ? _._
+                : _._;
+        }
         BFilterRequiresSteamDeckVerifiedOrPlayable() {
           return (
             !!this.m_activeTab &&
@@ -46693,6 +46725,28 @@
                 (_) =>
                   "[Feature] Steam Frame Playable" == _ ||
                   "[Feature] Steam Frame Verified" == _,
+              )
+            );
+          }
+          return !1;
+        }
+        BFilterRequiresSteamMachineVerifiedOrPlayable() {
+          return (
+            !!this.m_activeTab &&
+            _.BFilterRequiresSteamMachineVerifiedOrPlayableStatic(
+              this.m_activeTab,
+            )
+          );
+        }
+        static BFilterRequiresSteamMachineVerifiedOrPlayableStatic(_) {
+          if (1 == _?.sale_tag_filter?.clauses?.length) {
+            const _ = _?.sale_tag_filter?.clauses[0];
+            return (
+              "Must have" === _.type &&
+              _.or_tags.some(
+                (_) =>
+                  "[Feature] Steam Machine Playable" == _ ||
+                  "[Feature] Steam Machine Verified" == _,
               )
             );
           }

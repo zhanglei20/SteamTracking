@@ -11722,8 +11722,10 @@
         Ec: () => p,
         FD: () => h,
         Ff: () => M,
+        Ns: () => B,
         _R: () => R,
-        kk: () => b,
+        bh: () => w,
+        oc: () => b,
         sG: () => _,
         z5: () => v,
       });
@@ -11784,14 +11786,33 @@
                 : [!1, d.iA];
       }
       function b(e) {
-        const { id: t, className: r } = e,
-          { data: n } = (0, a.qI)(t);
-        return n
-          ? (0, i.jsx)(f, {
-              category: n?.steam_deck_compat_category,
-              className: r,
-            })
-          : null;
+        const { id: t, eHWCompat: r, className: n } = e,
+          { data: s } = (0, a.qI)(t);
+        if (!s) return null;
+        switch (r) {
+          case d.ZJ:
+            return (0, i.jsx)(f, {
+              category: s.steam_deck_compat_category,
+              className: n,
+            });
+          case d.bY:
+            return (0, i.jsx)(w, {
+              category: s.steam_frame_compat_category,
+              className: n,
+            });
+          case d.JR:
+            return (0, i.jsx)(B, {
+              category: s.steam_machine_compat_category,
+              className: n,
+            });
+          case d.c9:
+            return (0, i.jsx)(y, {
+              category: s.steam_os_compat_category,
+              className: n,
+            });
+          default:
+            return null;
+        }
       }
       const f = (e) => {
           const { category: t = n.YX, className: r } = e,
@@ -11827,7 +11848,7 @@
           });
         },
         y = (e) => {
-          const { category: t, elControllerSupport: r } = e,
+          const { category: t = s.xs, elControllerSupport: r } = e,
             n = R(t);
           return (0, i.jsxs)("div", {
             className: (0, u.A)(c.SteamDeckCompatInfo, e.className),

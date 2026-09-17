@@ -12775,6 +12775,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12839,14 +12841,33 @@
                 : [!1, _._];
       }
       function _(_) {
-        const { _: _, className: _ } = _,
+        const { _: _, eHWCompat: _, className: _ } = _,
           { data: _ } = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_, {
-              category: _?.steam_deck_compat_category,
+        if (!_) return null;
+        switch (_) {
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_deck_compat_category,
               className: _,
-            })
-          : null;
+            });
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_frame_compat_category,
+              className: _,
+            });
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_machine_compat_category,
+              className: _,
+            });
+          case _._:
+            return (0, _.jsx)(_, {
+              category: _.steam_os_compat_category,
+              className: _,
+            });
+          default:
+            return null;
+        }
       }
       const _ = (_) => {
           const { category: _ = _._, className: _ } = _,
@@ -12888,7 +12909,7 @@
           });
         },
         _ = (_) => {
-          const { category: _, elControllerSupport: _ } = _,
+          const { category: _ = _._, elControllerSupport: _ } = _,
             _ = _(_);
           return (0, _.jsxs)("div", {
             className: (0, _._)(_.SteamDeckCompatInfo, _.className),
