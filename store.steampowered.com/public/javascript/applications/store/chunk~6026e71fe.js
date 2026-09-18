@@ -32018,11 +32018,12 @@
             language: i,
             reservationLayout: s,
             rgHardwareDetails: o,
+            reservedHardwareDetail: l,
           } = e,
           {
-            rgProductConfigs: l,
-            rgPackageTuples: c,
-            rgReservationOptions: d,
+            rgProductConfigs: c,
+            rgPackageTuples: d,
+            rgReservationOptions: u,
           } = (0, Xa.q3)(() => ({
             rgProductConfigs:
               t.internal_section_data?.reservation_layout?.product_configs,
@@ -32031,15 +32032,31 @@
                 ?.package_to_config_tuple,
             rgReservationOptions: t.internal_section_data?.reservation_options,
           })),
-          [u, m] = (0, r.useState)(() => {
-            if (c && c.length > 0)
-              return c.find((e) => e.tuple_id == s.default_tuple_id) ?? c[0];
-          }),
-          p = (0, Xa.q3)(
-            () =>
-              !!t.internal_section_data?.reservation_advanced
-                ?.collection_time_allow_multiple_models,
+          m = l?.packageid,
+          [p, _] = (0, r.useState)(() =>
+            (function (e, t, a) {
+              if (!e || 0 == e.length) return;
+              if (t) {
+                const a = e.find((e) => e.package_id == t);
+                if (a) return a;
+              }
+              if (a) {
+                const t = e.find((e) => e.tuple_id == a);
+                if (t) return t;
+              }
+              return e[0];
+            })(d, m, s.default_tuple_id),
           );
+        (0, r.useEffect)(() => {
+          if (!m) return;
+          const e = d?.find((e) => e.package_id == m);
+          e && _(e);
+        }, [m, d]);
+        const h = (0, Xa.q3)(
+          () =>
+            !!t.internal_section_data?.reservation_advanced
+              ?.collection_time_allow_multiple_models,
+        );
         if (
           ((function (e) {
             const t = (0, St.jE)(),
@@ -32061,11 +32078,11 @@
                 }
               }
             }, [a, t, e]);
-          })(d),
-          !l || !c || !u)
+          })(u),
+          !c || !d || !p)
         )
           return null;
-        const _ = d?.find((e) => e.reservation_package == u.package_id);
+        const g = u?.find((e) => e.reservation_package == p.package_id);
         return (0, n.jsx)(nr, {
           reservationLayout: s,
           children: (0, n.jsxs)("div", {
@@ -32076,16 +32093,16 @@
                 children: [
                   (0, n.jsx)("div", {
                     className: Zn().OptionsImgCtn,
-                    children: _ && (0, n.jsx)(sr, { reservationDef: _ }),
+                    children: g && (0, n.jsx)(sr, { reservationDef: g }),
                   }),
                   (0, n.jsx)("div", {
                     className: Zn().Info,
                     children:
-                      _ &&
+                      g &&
                       (0, n.jsxs)(n.Fragment, {
                         children: [
-                          (0, n.jsx)(rr, { reservationDef: _ }),
-                          (0, n.jsx)(ir, { reservationDef: _ }),
+                          (0, n.jsx)(rr, { reservationDef: g }),
+                          (0, n.jsx)(ir, { reservationDef: g }),
                         ],
                       }),
                   }),
@@ -32095,23 +32112,23 @@
                 className: Zn().OptionsCtn,
                 children: [
                   (0, n.jsx)(er, {
-                    rgPackageTuples: c,
+                    rgPackageTuples: d,
                     rgHardwareDetails: o,
-                    bAllowMultipleModels: p,
-                    selectedProduct: _,
+                    bAllowMultipleModels: h,
+                    selectedProduct: g,
                   }),
                   (0, n.jsx)(or, {
-                    rgPackageTuples: c,
-                    rgProductConfigs: l,
+                    rgPackageTuples: d,
+                    rgProductConfigs: c,
                     language: i,
-                    selected: u,
-                    setSelected: m,
+                    selected: p,
+                    setSelected: _,
                   }),
                 ],
               }),
               (0, n.jsx)("div", {
                 className: Zn().PurchaseBtnCtn,
-                children: _ && (0, n.jsx)(jn, { ...e, reservationDef: _ }),
+                children: g && (0, n.jsx)(jn, { ...e, reservationDef: g }),
               }),
             ],
           }),
