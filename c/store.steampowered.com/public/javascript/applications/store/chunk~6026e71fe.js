@@ -35069,6 +35069,7 @@
             language: _,
             reservationLayout: _,
             rgHardwareDetails: _,
+            reservedHardwareDetail: _,
           } = _,
           {
             rgProductConfigs: _,
@@ -35082,15 +35083,31 @@
                 ?.package_to_config_tuple,
             rgReservationOptions: _.internal_section_data?.reservation_options,
           })),
-          [_, _] = (0, _.useState)(() => {
-            if (_ && _.length > 0)
-              return _.find((_) => _.tuple_id == _.default_tuple_id) ?? _[0];
-          }),
-          _ = (0, _._)(
-            () =>
-              !!_.internal_section_data?.reservation_advanced
-                ?.collection_time_allow_multiple_models,
+          _ = _?.packageid,
+          [_, _] = (0, _.useState)(() =>
+            (function (_, _, _) {
+              if (!_ || 0 == _.length) return;
+              if (_) {
+                const _ = _.find((_) => _.package_id == _);
+                if (_) return _;
+              }
+              if (_) {
+                const _ = _.find((_) => _.tuple_id == _);
+                if (_) return _;
+              }
+              return _[0];
+            })(_, _, _.default_tuple_id),
           );
+        (0, _.useEffect)(() => {
+          if (!_) return;
+          const _ = _?.find((_) => _.package_id == _);
+          _ && _(_);
+        }, [_, _]);
+        const _ = (0, _._)(
+          () =>
+            !!_.internal_section_data?.reservation_advanced
+              ?.collection_time_allow_multiple_models,
+        );
         if (
           ((function (_) {
             const _ = (0, _._)(),
