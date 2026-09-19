@@ -2007,8 +2007,6 @@ $ffn
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:23:23
-00:23:28
 01/01/00
 0123456789.
 0123456789
@@ -2589,6 +2587,8 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:56:27
+22:56:32
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2803,11 +2803,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
-64CK\vH
+6144
 65536
+60000000
+64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2925,6 +2925,7 @@ $ffn
 :':+:1:K:Q:[:c:g:m:y:
 :.JlN
 :5ptI.T(
+:7G7
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -9122,7 +9123,7 @@ Sending of an email failed
 Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
 Sentiment
-Sep 17 2026
+Sep 18 2026
 September
 Serbian
 SerialNumber
@@ -9386,7 +9387,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Sep 17 2026 00:23:28
+Startup - updater built Sep 18 2026 22:56:32
 State
 StaticFileWriterThread()
 Steam
@@ -13813,7 +13814,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 givenName
 glBegin
 glBindTexture
@@ -19237,6 +19238,7 @@ std::istream
 std::ostream
 std::string
 stderr
+stderr: %s
 stdin
 stdout
 steam
@@ -20407,7 +20409,7 @@ zC`G;
 zTXt
 zTXt: invalid compression type
 zTXt: invalid keyword
-zenity --error --text='%s' --width=450
+zenity --error --no-markup --text='%s' --width=450
 zenpower
 zh-cn
 zh-tw

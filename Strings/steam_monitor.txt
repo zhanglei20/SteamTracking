@@ -258,8 +258,6 @@ $\nY8O
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:23:23
-00:23:25
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -275,6 +273,8 @@ $\nY8O
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
+22:56:27
+22:56:29
 30!]^JV
 31CAdHocValidation_SimpleCallback
 49fN
@@ -523,7 +523,7 @@ SKyu
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 17 2026
+Sep 18 2026
 Size
 Sm"\vg
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -601,6 +601,7 @@ Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
 X360
+Y#Y|z
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Zjz\v
 [ func+child   func ]     Count\n
