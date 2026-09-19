@@ -108,6 +108,7 @@
   worker thread: %14s parses (%6.2f%%)  %16s bytes (%6.2f%%)\n
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123-
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -1273,7 +1274,6 @@
 "l\n(CGameRecording_UploadClipToSteam_Request
 "l\n-CChatRoom_EndMiniGameForChatRoomGroup_Request
 "lbN.
-"legacy_set"\t\t"1"
 "m\n(CMsgRemoteClientPeerContentServerChanged
 "m\n8CDepotContentDetection_GetAllDetectedAppContent_Response
 "n\n"CMsgClientDeauthorizeDeviceRequest
@@ -8292,12 +8292,12 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8624,7 +8624,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorIyS_IyEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES5_IS4_ES7_IS4_EEi8CDefLessE6Node_tEiNSE_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7GroupId23InputAnalogActionData_ti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8CSteamID6CSTimei8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
@@ -9201,7 +9200,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorIy10CUtlMemoryIyEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES4_IS3_ES6_IS3_EEi8CDefLessE6Node_tEiNSD_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
-10CUtlRBTreeIN7CUtlMapI7GroupId23InputAnalogActionData_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI8CSteamID6CSTimei8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
@@ -11815,6 +11813,7 @@ $steammessages_parental_objects.proto"
 1nds
 1steammessages_remoteclient_service_messages.proto2
 1wsHp
+1xc9
 2 + encoded_len_bytes + encoded_len <= buflen
 2 .ESteamDeckCompatibilityCategory
 2 .ESteamDeckCompatibilityFeedback
@@ -11891,11 +11890,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+20000
+2000000
 200M
 2019
 2048
-20000
-2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16267,7 +16266,6 @@ $steammessages_parental_objects.proto"
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
 6144
-7200
 65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
@@ -16391,6 +16389,7 @@ $steammessages_parental_objects.proto"
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
+7200
 72CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction
 72CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
@@ -16444,7 +16443,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapI7CGameIDP10CUtlVectorIy10CUtlMemoryIyEEi8CDefLessE
 7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES3_IS2_ES5_IS2_EEi8CDefLessE
 7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE
-7CUtlMapI7GroupId23InputAnalogActionData_ti8CDefLessE
 7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE
 7CUtlMapI8CSteamID6CSTimei8CDefLessE
 7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE
@@ -16874,6 +16872,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hh2
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17457,6 +17456,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -18121,7 +18121,6 @@ AppID %u canceled moving : %s at %llu/%llu bytes, %u files moved (%s)
 AppID %u depends on AppID %u - installing.
 AppID %u does not advertise android as a supported platform, but a android specific depot is present.\n
 AppID %u does not advertise linux as a supported platform, but a linux specific depot is present.\n
-AppID %u exceeding analog action limits
 AppID %u exited.
 AppID %u failed to downloading manifest %llu (%s)
 AppID %u failed to update ownership ticket (%s)
@@ -20539,6 +20538,7 @@ CHIDDevicePipeSteamSide: Got unexpected request ID %u, expected %u\n
 CHIDDevicePipeSteamSide: Unexpected command case
 CHIDDeviceRemote::ProcessInputReport(): Received unknown report type\n
 CHIDIOThread
+CHIDIOThread::PrepareAPIData
 CHIDMessageFromRemote
 CHIDMessageToRemote
 CHROMEOS
@@ -49169,7 +49169,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -54102,7 +54102,6 @@ m\n NotifyOpenOverlayToTimelineEvent
 m\n!NotifyTextFilterDictionaryChanged
 m\n\nAddNumbers
 m\n\tActionSet
-m_AccumulatedAnalogActions
 m_ActionList
 m_ActionList[i]
 m_ActiveCollection
@@ -58104,7 +58103,6 @@ p8w{
 p@0pqE5tsO?|1
 pAckEnd <= helper.m_pPayloadEnd
 pAction->m_nActionAPIHandle > 0
-pAction->m_nBindingType != k_EGameActionBindingType_Button
 pAction->m_nBindingType == k_EGameActionBindingType_StickPadGyro || pAction->m_nBindingType == k_EGameActionBindingType_AnalogTrigger
 pAction->m_nOriginCount >= 0
 pAltTransport->AltAddressPenalty() == k_nSDRAltAddressPenalty_PingOnly
@@ -58341,7 +58339,6 @@ pOldConn->m_identityRemote == identityRemote
 pOut - pBuf == nTotalHeaderSize
 pOut == (uint8 *)pPlaintextData + cbEncryptedDataWithoutTag
 pOut == pExpectedOutEnd
-pOutAction->eMode == (EInputSourceMode)eMode
 pOutDigest
 pOutFakeIP->IsFakeIP()
 pOuter->m_dictActions.IsValidIndex( iSetIndex )
@@ -61629,7 +61626,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 17 2026 00:23:28
+steam Sep 18 2026 22:56:32
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

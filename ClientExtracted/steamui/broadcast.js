@@ -104,7 +104,7 @@
           ct = s(73936),
           Y = s(46886),
           mt = s(70913),
-          Jt = "11006468";
+          Jt = "11016093";
         const ht = (0, L.PA)((a) => {
           const { appid: e } = a,
             r = (0, it.n9)(),
@@ -180,7 +180,7 @@
           });
         });
         var _ = s(94601),
-          Qt = "11006468";
+          Qt = "11016093";
         function f() {
           let a = window.GetUsabilityTracker;
           if (a) return a();
@@ -204,7 +204,7 @@
           X = s(27130),
           bt = s(52966),
           o = s.n(bt),
-          Xt = "11006468";
+          Xt = "11016093";
         const It = (0, L.PA)((a) => {
           const { event: e } = a,
             r = e.clanSteamID.GetAccountID(),
@@ -280,7 +280,7 @@
           V = s(28644),
           Dt = s(49946),
           N = s.n(Dt),
-          Kt = "11006468";
+          Kt = "11016093";
         function Mt(a) {
           const { steamid: e, closeModal: r } = a;
           return (0, t.jsxs)(Bt.o0, {
@@ -417,7 +417,7 @@
           Lt = s(27484),
           Pt = s(41182),
           Gt = s(21015),
-          qt = "11006468",
+          qt = "11016093",
           Ut = Object.defineProperty,
           Ot = Object.getOwnPropertyDescriptor,
           I = (a, e, r, d) => {

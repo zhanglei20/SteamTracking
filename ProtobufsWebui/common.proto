@@ -3646,6 +3646,7 @@ message CMsgGameActionSet {
 	repeated .CMsgGameActionSet layers = 4;
 	repeated .CMsgGameActionBindingType action_binding_types = 5;
 	repeated .CMsgControllerSources source_bindings = 6;
+	optional bool has_inactive_mouse_mode = 7;
 }
 
 message CMsgGameServerPolicyUpdate {

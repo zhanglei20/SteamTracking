@@ -28,7 +28,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = "11006468";
+          _ = "11016093";
         function _(_) {
           const { popup: _ } = _,
             [_, _] = _.useState();
@@ -131,7 +131,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = "11006468";
+          _ = "11016093";
         function _() {
           const { data: _, isLoading: _ } = (0, _._)(),
             _ = _.useMemo(
@@ -187,7 +187,7 @@
           const { appid: _ } = _;
           return (0, _._)(_)?.name;
         }
-        var _ = "11006468";
+        var _ = "11016093";
         function _(_) {
           return (0, _.jsxs)(_._, {
             children: [
