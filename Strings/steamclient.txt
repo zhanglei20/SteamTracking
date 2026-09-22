@@ -108,7 +108,6 @@
   worker thread: %14s parses (%6.2f%%)  %16s bytes (%6.2f%%)\n
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./0123-
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -229,6 +228,7 @@
  .CStore_GetGamesFollowed_Request
  .CUser_SaveHardwareInfo_Response
  .CWorkshop_GetEULAStatus_Request
+ /bin/sh -c
  /extractguids
  3CQ`p
  7Me}
@@ -5464,8 +5464,6 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG=
-++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -8301,6 +8299,7 @@ $steammessages_parental_objects.proto"
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFP
 0123456789abcdef
 08bX
 0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
@@ -11813,7 +11812,6 @@ $steammessages_parental_objects.proto"
 1nds
 1steammessages_remoteclient_service_messages.proto2
 1wsHp
-1xc9
 2 + encoded_len_bytes + encoded_len <= buflen
 2 .ESteamDeckCompatibilityCategory
 2 .ESteamDeckCompatibilityFeedback
@@ -11890,10 +11888,10 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+2019
 20000
 2000000
 200M
-2019
 2048
 208.64.200.0/22
 208.78.164.0/22
@@ -16265,8 +16263,6 @@ $steammessages_parental_objects.proto"
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
-6144
-65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -16282,6 +16278,7 @@ $steammessages_parental_objects.proto"
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16311,6 +16308,7 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
+65536
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
@@ -16872,7 +16870,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hh2
+9H(2
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17456,7 +17454,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/@
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -34517,6 +34515,7 @@ SDL_IsGamepad
 SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS
 SDL_JOYSTICK_ENHANCED_REPORTS
 SDL_JOYSTICK_GAMEINPUT
+SDL_JOYSTICK_GAMEINPUT_RAW
 SDL_JOYSTICK_HIDAPI_GIP
 SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED
 SDL_JOYSTICK_HIDAPI_STEAM
@@ -59542,6 +59541,7 @@ py_generic_services
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_quality_modifier
+pyrowave_yuv444
 pzKD)
 p}?fff?
 q not prime
@@ -61626,7 +61626,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 18 2026 22:56:32
+steam Sep 21 2026 23:56:36
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

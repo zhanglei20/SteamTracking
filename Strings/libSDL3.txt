@@ -148,7 +148,7 @@
 !"For depth textures: usage cannot contain any flags except for DEPTH_STENCIL_TARGET and SAMPLER"
 !"For multisample states, enable_mask must be false!"
 !"For multisample states, sample_mask must be 0!"
-!"For multisample textures: usage cannot contain SAMPLER or STORAGE flags"
+!"For multisample textures: usage cannot contain COMPUTE_STORAGE_WRITE flag"
 !"Format is not compatible with alpha-to-coverage!"
 !"Format is not supported for color targets on this device!"
 !"Format is not supported for depth targets on this device!"
@@ -176,6 +176,7 @@
 !"Missing vertex sampler binding!"
 !"Missing vertex storage buffer binding!"
 !"Missing vertex storage texture binding!"
+!"Multisample textures cannot be bound as samplers!"
 !"RESOLVE store ops are not supported for depth-stencil targets!"
 !"Rasterizer state enable_depth_clip must be set to true (FEATURE_DEPTH_CLAMPING disabled)"
 !"Render pass not in progress!"
@@ -183,6 +184,7 @@
 !"Resolve texture must have the same format as its corresponding color target!"
 !"Resolve texture must not be of TEXTURETYPE_3D!"
 !"Resolve texture usage must include COLOR_TARGET!"
+!"Scissor rectangle size exceeds current render target dimensions"
 !"Shader format cannot be INVALID!"
 !"Shader sampler count cannot be higher than 16!"
 !"Shader storage buffer count cannot be higher than 8!"
@@ -203,6 +205,7 @@
 !"Vertex attributes array pointer cannot be NULL!"
 !"Vertex buffer descriptions array pointer cannot be NULL!"
 !"Vertex shader cannot be NULL!"
+!"Viewport size exceeds current render target dimensions"
 !"allowed_frames_in_flight value must be between 1 and 3!"
 !"enable_anisotropy must be set to false (FEATURE_ANISOTROPY disabled)"
 !)19BJRZcks{
@@ -233,9 +236,9 @@ $ORIGIN
 %s is not supported!
 %s not available
 %s support is either not configured in SDL or not available in current SDL video driver (%s) or platform
+%s textures can't be render targets
 %s%s%s%.4x,%s
 %s() failed: %s
-%s, An unsupported SDL pixel format (0x%x) was specified
 %s.tray%d
 %s/.config
 %s/.local/share/applications/%s.desktop
@@ -475,6 +478,7 @@ $ORIGIN
 03000000790000003018000011010000,Arcade Fightstick F300,a:b1,b:b2,back:b8,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b12,leftshoulder:b4,lefttrigger:b6,leftx:a0,lefty:a1,rightshoulder:b5,righttrigger:b7,start:b9,x:b0,y:b3,
 03000000790000004318000010010000,Nintendo GameCube Controller,a:b1,b:b2,dpdown:b14,dpleft:b15,dpright:b13,dpup:b12,lefttrigger:a3,leftx:a0,lefty:a1,rightshoulder:b7,righttrigger:a4,rightx:a5,righty:a2,start:b9,x:b0,y:b3,
 03000000790000004418000010010000,Nintendo GameCube Controller,a:b1,b:b2,dpdown:b14,dpleft:b15,dpright:b13,dpup:b12,lefttrigger:a3,leftx:a0,lefty:a1,rightshoulder:b7,righttrigger:a4,rightx:a5,righty:a2,start:b9,x:b0,y:b3,
+03000000790000004618000010010000,Nintendo GameCube Controller,a:b1,b:b2,dpdown:b14,dpleft:b15,dpright:b13,dpup:b12,lefttrigger:a3,leftx:a0,lefty:a1,rightshoulder:b7,righttrigger:a4,rightx:a5,righty:a2,start:b9,x:b0,y:b3,
 030000007e0500000920000011810000,Nintendo Switch Pro Controller,a:b0,b:b1,back:b9,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b11,leftshoulder:b5,leftstick:b12,lefttrigger:b7,leftx:a0,lefty:a1,misc1:b4,rightshoulder:b6,rightstick:b13,righttrigger:b8,rightx:a2,righty:a3,start:b10,x:b3,y:b2,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
 030000007e0500001720000011810000,Nintendo SNES Controller,crc:f648,a:b0,b:b1,back:b8,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,lefttrigger:b6,rightshoulder:b5,righttrigger:b7,start:b9,x:b3,y:b2,hint:!SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
 030000007e0500001920000011810000,Nintendo N64 Controller,crc:d670,a:b0,b:b1,back:b2,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b12,leftshoulder:b6,leftstick:b9,lefttrigger:b8,leftx:a0,lefty:a1,misc1:b5,rightshoulder:b7,righttrigger:b3,start:b11,x:b4,y:b10,
@@ -739,6 +743,7 @@ APEX2
 APEX3
 APEX4
 APEX5
+APEX6
 APP_ID
 ASSERT
 ASTRO
@@ -796,10 +801,10 @@ AuthenticAMD
 BMP file with bad dimensions (%dx%d)
 Backbone One
 Backspace
-Bad GET_ATTRIBUTES_VALUES response for controller %p\n
+Bad GET_ATTRIBUTES_VALUES response for controller %p
 Bad effect id
 Bad effect parameters
-Bad segment size! %d\n
+Bad segment size! %d
 Battery\n
 Bcoeff
 Bensussen Deutsch & Associates,Inc.(BDA)
@@ -814,7 +819,7 @@ Bonziri FireBird
 Break
 Buffer has no default usage mode!
 Button name too large: %s
-CLEAR_DIGITAL_MAPPINGS failed for controller %p\n
+CLEAR_DIGITAL_MAPPINGS failed for controller %p
 CLICKABLE_DESKTOP_MODE
 CLIPBOARD
 CONNECTED
@@ -903,7 +908,7 @@ Could not find RIFF or WAVE identifiers (not a Waveform file)
 Could not find a valid EGL device to initialize
 Could not find display info
 Could not get EGL display
-Could not get a full ble packet after %d retries\n
+Could not get a full ble packet after %d retries
 Could not get any window title response from Xorg, returning empty string!
 Could not initialize EGL
 Could not initialize OpenGL / GLES library
@@ -1045,6 +1050,7 @@ Current locale not supported by X server, cannot continue.
 Cursor hot spot doesn't lie within cursor
 Cursor not associated with the current mouse
 D-Bus not available
+D3NE\f
 DEBUG
 DEBUG_INVOCATION
 DESKTOP
@@ -1204,6 +1210,7 @@ Flydigi Apex 2
 Flydigi Apex 3
 Flydigi Apex 4
 Flydigi Apex 5
+Flydigi Apex 6
 Flydigi Vader 2
 Flydigi Vader 2 Pro
 Flydigi Vader 3
@@ -1223,7 +1230,7 @@ GAMESCOPE_DISPLAY_IS_EXTERNAL
 GAMESCOPE_SDR_ON_HDR_CONTENT_BRIGHTNESS
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GDK_SCALE
-GET_ATTRIBUTES_VALUES failed for controller %p\n
+GET_ATTRIBUTES_VALUES failed for controller %p
 GIP: Controller was missing expected GUID. This controller probably won't work on an actual Xbox.
 GIP: Device hello from %lx (%04x:%04x)
 GIP: Device reported too many events, %d > 5
@@ -2139,7 +2146,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1359-g70e9cc86d
+SDL-release-3.4.0-1465-g09b86eb7d
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -2147,6 +2154,7 @@ SDL.app.metadata.name
 SDL.app.metadata.type
 SDL.app.metadata.url
 SDL.app.metadata.version
+SDL.audio.device.unique_id
 SDL.audiostream.auto_cleanup
 SDL.display.HDR_enabled
 SDL.filedialog.filters
@@ -2302,6 +2310,9 @@ SDL.texture.create.opengles2.texture_v
 SDL.texture.create.palette
 SDL.texture.create.vulkan.layout
 SDL.texture.create.vulkan.texture
+SDL.texture.create.vulkan.texture_u
+SDL.texture.create.vulkan.texture_v
+SDL.texture.create.vulkan.usage
 SDL.texture.create.width
 SDL.texture.format
 SDL.texture.gpu.texture
@@ -2322,6 +2333,8 @@ SDL.texture.opengles2.texture_u
 SDL.texture.opengles2.texture_uv
 SDL.texture.opengles2.texture_v
 SDL.texture.vulkan.texture
+SDL.texture.vulkan.texture_u
+SDL.texture.vulkan.texture_v
 SDL.texture.width
 SDL.thread.create.entry_function
 SDL.thread.create.name
@@ -2890,6 +2903,7 @@ SDL_GetAudioDeviceChannelMap
 SDL_GetAudioDeviceFormat
 SDL_GetAudioDeviceGain
 SDL_GetAudioDeviceName
+SDL_GetAudioDeviceProperties
 SDL_GetAudioDriver
 SDL_GetAudioFormatName
 SDL_GetAudioPlaybackDevices
@@ -3100,6 +3114,8 @@ SDL_GetNumProperties
 SDL_GetNumRenderDrivers
 SDL_GetNumVideoDrivers
 SDL_GetNumberProperty
+SDL_GetOpenHarmonyInternalStoragePath
+SDL_GetOpenHarmonySDKVersion
 SDL_GetOriginalMemoryFunctions
 SDL_GetPathInfo
 SDL_GetPenDeviceType
@@ -3134,6 +3150,7 @@ SDL_GetRectUnion
 SDL_GetRectUnionFloat
 SDL_GetRelativeMouseState
 SDL_GetRenderClipRect
+SDL_GetRenderClipRectFloat
 SDL_GetRenderColorScale
 SDL_GetRenderDrawBlendMode
 SDL_GetRenderDrawColor
@@ -3150,6 +3167,7 @@ SDL_GetRenderTarget
 SDL_GetRenderTextureAddressMode
 SDL_GetRenderVSync
 SDL_GetRenderViewport
+SDL_GetRenderViewportFloat
 SDL_GetRenderWindow
 SDL_GetRenderer
 SDL_GetRendererFromTexture
@@ -3383,6 +3401,7 @@ SDL_JOYSTICK_HIDAPI_WII
 SDL_JOYSTICK_HIDAPI_WII_PLAYER_LED
 SDL_JOYSTICK_HIDAPI_XBOX
 SDL_JOYSTICK_HIDAPI_XBOX_360
+SDL_JOYSTICK_HIDAPI_XBOX_360_BIGBUTTON
 SDL_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED
 SDL_JOYSTICK_HIDAPI_XBOX_360_WIRELESS
 SDL_JOYSTICK_HIDAPI_XBOX_ONE
@@ -3536,6 +3555,9 @@ SDL_PIXELFORMAT_BGRA64_FLOAT
 SDL_PIXELFORMAT_BGRA8888
 SDL_PIXELFORMAT_BGRX8888
 SDL_PIXELFORMAT_EXTERNAL_OES
+SDL_PIXELFORMAT_I0FL
+SDL_PIXELFORMAT_I444
+SDL_PIXELFORMAT_I4FL
 SDL_PIXELFORMAT_INDEX1LSB
 SDL_PIXELFORMAT_INDEX1MSB
 SDL_PIXELFORMAT_INDEX2LSB
@@ -3548,8 +3570,6 @@ SDL_PIXELFORMAT_MJPG
 SDL_PIXELFORMAT_NV12
 SDL_PIXELFORMAT_NV21
 SDL_PIXELFORMAT_P010
-SDL_PIXELFORMAT_P408
-SDL_PIXELFORMAT_P416
 SDL_PIXELFORMAT_RGB24
 SDL_PIXELFORMAT_RGB332
 SDL_PIXELFORMAT_RGB48
@@ -3694,6 +3714,7 @@ SDL_Renderer
 SDL_ReportAssertion
 SDL_RequestAndroidPermission
 SDL_RequestNotificationPermission
+SDL_RequestOpenHarmonyPermission
 SDL_ResetAssertionReport
 SDL_ResetHint
 SDL_ResetHints
@@ -3814,6 +3835,7 @@ SDL_SetPointerPropertyWithCleanup
 SDL_SetPrimarySelectionText
 SDL_SetRelativeMouseTransform
 SDL_SetRenderClipRect
+SDL_SetRenderClipRectFloat
 SDL_SetRenderColorScale
 SDL_SetRenderDrawBlendMode
 SDL_SetRenderDrawColor
@@ -3824,6 +3846,7 @@ SDL_SetRenderTarget
 SDL_SetRenderTextureAddressMode
 SDL_SetRenderVSync
 SDL_SetRenderViewport
+SDL_SetRenderViewportFloat
 SDL_SetScancodeName
 SDL_SetStringProperty
 SDL_SetSurfaceAlphaMod
@@ -4238,7 +4261,7 @@ SDL_wcstoul
 SDL_wcstoull
 SDL_window%u-%8.8d.bmp
 SDLasyncio%d
-SET_SETTINGS failed for controller %p\n
+SET_SETTINGS failed for controller %p
 SInput device SDL Features GET command could not read
 SInput device SDL Features GET command could not write
 SInput device joystick rgb command could not write
@@ -4357,7 +4380,7 @@ Texture doesn't have a palette
 Texture format %s not supported by OpenGL
 Texture format %s not supported by SDL_GPU
 Texture format must be NV12, NV21, or P010
-Texture format must be YV12, IYUV, P408, or P416
+Texture format must be YV12, IYUV, I444, I0FL, or I4FL
 Texture format not supported
 Texture framebuffer was incomplete
 Texture has no default usage mode!
@@ -4476,7 +4499,6 @@ Unsupported YUV colorspace
 Unsupported YUV conversion
 Unsupported YUV destination format: %s
 Unsupported YUV format
-Unsupported Ycbcr colorspace: %d
 Unsupported backbuffer format
 Unsupported block alignment
 Unsupported effect
@@ -4548,6 +4570,7 @@ VK_INCOMPLETE
 VK_KHR_bind_memory2
 VK_KHR_display extension is not enabled in the Vulkan instance.
 VK_KHR_driver_properties
+VK_KHR_external_memory_capabilities
 VK_KHR_get_memory_requirements2
 VK_KHR_get_physical_device_properties2
 VK_KHR_maintenance1
@@ -4573,9 +4596,9 @@ VK_THREAD_DONE_KHR
 VK_THREAD_IDLE_KHR
 VK_TIMEOUT
 VULKAN_AllocateImage()
+VULKAN_AllocateImageView()
 VULKAN_CreateFramebuffersAndRenderPasses()
 VULKAN_CreateGraphicsPipeline
-VULKAN_CreateTexture
 VULKAN_INTERNAL_AddOptInVulkanOptions: Additional options property was set, but value was null. This may be a bug.
 Vader 5
 Validation layers enabled, expect debug level performance!
@@ -4657,6 +4680,7 @@ Writing to
 Wrong format
 Wrong number of channels
 Wrong preset coefficients in MS ADPCM format header
+X failed request: %hhu (%s), major opcode: %hhu
 X server refused mouse capture
 X-Box
 X11_XRRSetCrtcConfig failed
@@ -4815,6 +4839,7 @@ XRRSetScreenConfigAndRate
 XRRSetScreenSize
 XRaiseWindow
 XRefreshKeyboardMapping
+XRegisterIMInstantiateCallback
 XReparentWindow
 XResetScreenSaver
 XResizeWindow
@@ -4830,6 +4855,7 @@ XSetFont
 XSetForeground
 XSetICFocus
 XSetICValues
+XSetIMValues
 XSetIOErrorHandler
 XSetInputFocus
 XSetLocaleModifiers
@@ -4875,6 +4901,7 @@ XUngrabServer
 XUninstallColormap
 XUnionRectWithRegion
 XUnloadFont
+XUnregisterIMInstantiateCallback
 XUnsetICFocus
 XVaCreateNestedList
 XVisualIDFromVisual
@@ -4883,6 +4910,7 @@ XWarpPointer
 XWindowEvent
 XWithdrawWindow
 Xbox
+Xbox 360 Big Button Controller
 Xbox 360 Controller
 Xbox 360 Wireless Controller
 Xbox 360 Wireless Racing Wheel
@@ -4953,8 +4981,8 @@ Y + U would overflow
 YCrCb 4:2:2: %s\n
 YCrCb 4:4:4: %s\n
 YTILT
-YUV textures require a Vulkan device that supports VK_KHR_sampler_ycbcr_conversion
-YV12, IYUV, P408, P416, NV12, NV21 textures only support full surface locks
+YV12, IYUV, I444, I4FL, NV12, NV21 textures only support full surface locks
+YV12IYUVI444NV12NV21P010I0FLI4FL
 Yoffset
 You are using the SDL disk i/o audio driver!
 You can't present on a render target
@@ -5275,6 +5303,7 @@ dpleft
 dpright
 dpup
 dpup:h0.1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,
+dpup:h0.1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,a:b0,b:b1,x:b2,y:b3,back:b4,guide:b5,start:b6,misc1:b7
 dropblock
 dropframe
 dsound
@@ -6198,7 +6227,6 @@ span
 spec
 specified texture is not a render target
 spotLocation
-sprintf
 sqrt
 sqrtf
 src does not have a palette set
@@ -6225,7 +6253,6 @@ storage_buffer_bindings
 storage_buffers
 storage_texture_bindings
 storage_textures
-stpcpy
 strchr
 strcmp
 strdup
@@ -6520,7 +6547,6 @@ vkCreateRenderPass()
 vkCreateSampler
 vkCreateSampler()
 vkCreateSamplerYcbcrConversionKHR
-vkCreateSamplerYcbcrConversionKHR()
 vkCreateSemaphore
 vkCreateSemaphore()
 vkCreateShaderModule
@@ -6672,7 +6698,6 @@ vkGetPhysicalDeviceFeatures
 vkGetPhysicalDeviceFeatures2
 vkGetPhysicalDeviceFeatures2KHR
 vkGetPhysicalDeviceFormatProperties
-vkGetPhysicalDeviceFormatProperties2KHR
 vkGetPhysicalDeviceImageFormatProperties
 vkGetPhysicalDeviceMemoryProperties
 vkGetPhysicalDeviceMemoryProperties2KHR

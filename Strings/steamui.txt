@@ -85,7 +85,10 @@
  (Unicast/Multicast)
  (Unknown SAFI %u)
  (VPLS)
+ (capture)
+ (convert)
  (decode)
+ (display)
  (dropped)
  (encode)
  (network)
@@ -5256,7 +5259,7 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
+++CCUNG8H
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -7778,7 +7781,6 @@ ${LANGUAGE}
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP1a
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -7882,6 +7884,7 @@ ${LANGUAGE}
 0fl:
 0pp@5tqE?|sO541
 0x%llx
+0x%lx
 0x%x
 0|t?L
 0|t?uj
@@ -8215,12 +8218,12 @@ ${LANGUAGE}
 10CUtlMemoryIN11CUtlHashMapImP23GameStreamWindowState_t10CDefEqualsImE11HashFunctorImEmE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS2_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS2_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
-10CUtlMemoryIN11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
@@ -8542,9 +8545,9 @@ ${LANGUAGE}
 10CUtlVectorIN11CUtlHashMapImS_IPN25CVRPropertyChangeListener13ListenerSet_tE10CUtlMemoryIS3_EE10CDefEqualsImE11HashFunctorImEmE12HashBucket_tES4_ISC_EE
 10CUtlVectorIN11CUtlHashMapImS_IPN29CVRDeviceConnectivityListener13ListenerSet_tE10CUtlMemoryIS3_EE10CDefEqualsImE11HashFunctorImEmE12HashBucket_tES4_ISC_EE
 10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS2_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryISA_EE
-10CUtlVectorIN11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
@@ -8780,9 +8783,9 @@ ${LANGUAGE}
 11CUtlHashMapIm10CUtlVectorIPN29CVRDeviceConnectivityListener13ListenerSet_tE10CUtlMemoryIS3_EE10CDefEqualsImE11HashFunctorImEmE
 11CUtlHashMapImP23GameStreamWindowState_t10CDefEqualsImE11HashFunctorImEmE
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
+11CUtlHashMapIyN18CSharedCaptureSync13SharedFence_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyN19CSharedSurfaceCacheIN3amf17AMFInterfacePtr_TINS1_10AMFSurfaceEEEE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyN19CSharedSurfaceCacheIPvE7Entry_tE10CDefEqualsIyE11HashFunctorIyEyE
-11CUtlHashMapIyP11ID3D12Fence10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE
 11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
@@ -13333,7 +13336,6 @@ ${LANGUAGE}
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -13347,6 +13349,7 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13823,6 +13826,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9HhYT
 9IGv
 9Inventory
 9PE,$
@@ -14469,6 +14473,7 @@ AMF_VIDEO_ENCODER_HEVC_MIN_QP_P
 AMF_VIDEO_ENCODER_HEVC_NUM_GOPS_PER_IDR
 AMF_VIDEO_ENCODER_HEVC_OUTPUT_COLOR_PRIMARIES
 AMF_VIDEO_ENCODER_HEVC_OUTPUT_COLOR_PROFILE
+AMF_VIDEO_ENCODER_HEVC_OUTPUT_FULL_RANGE_COLOR
 AMF_VIDEO_ENCODER_HEVC_OUTPUT_TRANSFER_CHARACTERISTIC
 AMF_VIDEO_ENCODER_HEVC_PEAK_BITRATE
 AMF_VIDEO_ENCODER_HEVC_PROFILE
@@ -16882,10 +16887,12 @@ CGameStreamVideoStageOutput
 CGameStreamVideoStageOutput::ProcessData
 CGameStreamVideoStagePyrowave
 CGameStreamVideoStagePyrowave: pyrowave_create_default_device() failed: %d
+CGameStreamVideoStagePyrowave: pyrowave_encoder_compute_num_critical_packets() failed: %d
+CGameStreamVideoStagePyrowave: pyrowave_encoder_compute_num_packets() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_create() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_encode_cpu_synchronous() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_encoder_packetize() failed: %d
-CGameStreamVideoStagePyrowave: pyrowave_image_create() failed: %d
+CGameStreamVideoStagePyrowave: pyrowave_image_create() failed: %d (format 0x%x, plane %d, %ux%u)
 CGameStreamVideoStagePyrowave: pyrowave_image_get_image_view() failed: %d
 CGameStreamVideoStagePyrowave: pyrowave_sync_object_create() failed: %d
 CGameStreamVideoStageQueueThread
@@ -28927,6 +28934,7 @@ Rate
 Rate Limit Exceeded
 RateClanAnnouncement
 RateCommentThread
+Raw send failed: %d, packet %d, %d bytes, %d queued\n
 Raw stream mode only supported for TCP connections
 Rbg.E
 ReArmMuraCalibration
@@ -30318,7 +30326,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 18 2026 22:56:36
+Sep 21 2026 23:56:39
 September
 Serbian
 Serial
@@ -30741,6 +30749,7 @@ SkipDiscoveryQueueItem
 SkipOfflineModeWarning
 Skipped at least 1 frame while encoding video\n
 Skipping adding audio track to segment writer
+Skipping frame with old epoch (was %u, now %u)\n
 Skipping in-progress or failed download for %u, asset type %s
 Skipping js method registration, already exists: %s
 Skipping usage report for controller: %s\n
@@ -32928,6 +32937,7 @@ Unknown filter method in IHDR
 Unknown frame descriptor
 Unknown framebuffer format %c%c%c%c\n
 Unknown freer parameter in png_data_freer
+Unknown image format
 Unknown interlace method in IHDR
 Unknown message type %s in field "%s"
 Unknown method: %s
@@ -32991,6 +33001,7 @@ UnreliableFEC
 UnreliableMessage
 UnreliableMessageFragment
 UnreliableNack
+UnreliableRaw
 UnsafeLegacyRenegotiation
 Unspecified
 Unspecified Error
@@ -42382,7 +42393,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -45853,6 +45864,7 @@ iInstallFolder
 iLastRequestedClipSegment <= iLastAvailableSegment
 iNewReadIndex != 3
 iNode == iIndex
+iPacket == nDataPackets
 iPhoneOS
 iSE'1\v
 iSection < 32
@@ -50791,6 +50803,7 @@ m_vecProcesses
 m_vecPromiseAwaitingConnect
 m_vecPromiseResolutions
 m_vecProxyOverrideExcludedHosts
+m_vecPyrowaveParityOrder.Count() == nTotalParity
 m_vecQueued
 m_vecQueuedMessages
 m_vecQueuedNotifications
@@ -53515,6 +53528,8 @@ pyrowave_create_device_by_compat
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_device_destroy
+pyrowave_encoder_compute_num_critical_packets
+pyrowave_encoder_compute_num_packets_with_padding
 pyrowave_encoder_create
 pyrowave_encoder_destroy
 pyrowave_encoder_encode_cpu_synchronous
@@ -53525,6 +53540,7 @@ pyrowave_image_get_image_view
 pyrowave_quality_modifier
 pyrowave_sync_object_create
 pyrowave_sync_object_destroy
+pyrowave_yuv444
 python3 "%s/devkit-utils/steamos-set-steam-client" --client %s
 pzKD)
 q not prime
