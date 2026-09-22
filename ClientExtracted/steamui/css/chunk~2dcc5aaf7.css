@@ -63104,7 +63104,7 @@ button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled:active:hover:before {
 }
 @media (min-width: 1500px) {
   ._2_BofBWqcJxvOP-TNbRZ3r._1mcLD4s4kDlfThoqSYEYKm {
-    max-width: 300px;
+    max-width: max(95%, 300px);
   }
 }
 ._2_BofBWqcJxvOP-TNbRZ3r._1mcLD4s4kDlfThoqSYEYKm > :first-child {
@@ -68886,7 +68886,7 @@ button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled:active:hover:before {
 }
 @media (min-width: 1500px) {
   ._1KcixoBsudzVaC7ETFiVGX._2I0iGdN09czwt9F2JwPdIs {
-    max-width: 300px;
+    max-width: max(95%, 300px);
   }
 }
 ._1KcixoBsudzVaC7ETFiVGX._2I0iGdN09czwt9F2JwPdIs > :first-child {
@@ -71068,7 +71068,7 @@ button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled:active:hover:before {
 }
 @media (min-width: 1500px) {
   ._1COyQmnM6tviErgv_ZLBdl._1nlt2bSBlpY1TmpuExD6lD {
-    max-width: 300px;
+    max-width: max(95%, 300px);
   }
 }
 ._1COyQmnM6tviErgv_ZLBdl._1nlt2bSBlpY1TmpuExD6lD > :first-child {
