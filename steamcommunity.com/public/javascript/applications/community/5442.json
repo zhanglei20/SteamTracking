@@ -105,6 +105,7 @@
     "moderation_sanction_hubbanned": "Banned from hub for %1$s days",
     "moderation_sanction_markassuspicious": "Marked as suspicious",
     "moderation_sanction_relabelled": "Relabelled",
+    "moderation_sanction_markedincompatible": "Marked as incompatible",
     "moderation_sanction_tradebanned_forever": "Permanently trade banned",
     "moderation_sanction_tradebanned": "Trade banned for %1$s days",
     "moderation_sanction_kickedfromgroup": "Kicked from group",

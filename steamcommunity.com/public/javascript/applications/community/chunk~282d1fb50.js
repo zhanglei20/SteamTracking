@@ -157,18 +157,8 @@
                 n.isSuccess &&
                   (0, o.jsx)("div", {
                     style: { maxHeight: "20em", overflowY: "scroll" },
-                    children: n.data.subjects.map((t) => {
-                      var r, s;
-                      return (
-                        null ===
-                          (s =
-                            null === (r = t.additional_subject_data) ||
-                            void 0 === r
-                              ? void 0
-                              : r.data) || void 0 === s
-                          ? void 0
-                          : s.length
-                      )
+                    children: n.data.subjects.map((t) =>
+                      t.coordinates
                         ? (0, o.jsx)(
                             S,
                             {
@@ -187,8 +177,8 @@
                               children: "Bug - inform Valve",
                             },
                             "bad-" + d++,
-                          );
-                    }),
+                          ),
+                    ),
                   }),
               ],
             }),

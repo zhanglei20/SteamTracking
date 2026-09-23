@@ -69,26 +69,31 @@
             imageType: a,
             bPreferAssetWithoutOverride: o,
             strAdditionalClassName: u,
+            bNoShadow: m,
           } = e,
-          { storeItemAsset: m, storeItemDefaultInfo: p } = (0, s.q)(t, a, o);
+          { storeItemAsset: p, storeItemDefaultInfo: C } = (0, s.q)(t, a, o);
         if ("library" === a || "vertical" == a)
-          return (0, r.jsx)(n.G, { id: t, bPreferAssetWithoutOverride: o });
-        let C = "";
-        if ("main" === a) C = d().MainCapsuleImageContainer;
-        else C = d().HeaderCapsuleImageContainer;
-        if (void 0 === m || !p)
-          return (0, r.jsx)("div", {
-            className: (0, c.A)(C, "CapsuleImageCtn", u),
+          return (0, r.jsx)(n.G, {
+            id: t,
+            bPreferAssetWithoutOverride: o,
+            bNoShadow: m,
           });
-        if (null == m) return null;
-        let h = (0, i.N)(m, "header" === a);
+        let h = "";
+        if ("main" === a) h = d().MainCapsuleImageContainer;
+        else h = d().HeaderCapsuleImageContainer;
+        if (void 0 === p || !C)
+          return (0, r.jsx)("div", {
+            className: (0, c.A)(h, "CapsuleImageCtn", u),
+          });
+        if (null == p) return null;
+        let f = (0, i.N)(p, "header" === a);
         return (0, r.jsx)("div", {
-          className: (0, c.A)(C, "CapsuleImageCtn", u),
+          className: (0, c.A)(h, "CapsuleImageCtn", u),
           children: (0, r.jsx)(l.o, {
             lazyLoad: !0,
-            srcs: h,
+            srcs: f,
             className: (0, c.A)(d().CapsuleImage),
-            alt: p.name,
+            alt: C.name,
           }),
         });
       }
@@ -134,22 +139,28 @@
         p = a(83164),
         C = a.n(p);
       function h(e) {
-        const { id: t, bPreferLibrary: a, bPreferAssetWithoutOverride: l } = e,
-          { storeItemDefaultInfo: p, storeItemAsset: h } = (0, n.q)(
+        const {
+            id: t,
+            bPreferLibrary: a,
+            bPreferAssetWithoutOverride: l,
+            bNoShadow: p,
+          } = e,
+          h = p ? c().NoShadow : "",
+          { storeItemDefaultInfo: f, storeItemAsset: g } = (0, n.q)(
             t,
             "vertical",
             l,
           ),
-          [f, g] = i.useState(0);
-        if (!p || !h)
+          [x, _] = i.useState(0);
+        if (!f || !g)
           return (0, r.jsx)("div", {
             className: c().HeroCapsuleImageContainer,
           });
-        const { strStoreVerticalURL: x, strLibraryVerticalURL: _ } = (0, m.M)(
-          h,
-          p,
+        const { strStoreVerticalURL: v, strLibraryVerticalURL: w } = (0, m.M)(
+          g,
+          f,
         );
-        if (x && (!a || !_))
+        if (v && (!a || !w))
           return (0, r.jsxs)("div", {
             className: (0, d.A)(
               c().HeroCapsuleImageContainer,
@@ -157,11 +168,11 @@
             ),
             children: [
               (0, r.jsx)("img", {
-                src: x,
+                src: v,
                 className: c().CapsuleImage,
-                alt: p.name,
+                alt: f.name,
               }),
-              Boolean(p.type == s.uE._i) &&
+              Boolean(f.type == s.uE._i) &&
                 (0, r.jsx)("img", {
                   className: C().CornerSash,
                   src: `${u.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
@@ -169,35 +180,36 @@
                 }),
             ],
           });
-        if (_)
+        if (w)
           return (0, r.jsxs)("div", {
             className: (0, d.A)(
               c().LibraryFallbackAssetImageContainer,
               c().VerticalCapsule,
               a ? c().ForceLibrarySizing : "",
+              h,
             ),
             children: [
               (0, r.jsx)("div", {
                 className: c().FallbackBackground,
-                style: { backgroundImage: `url(${_})` },
+                style: { backgroundImage: `url(${w})` },
               }),
               (0, r.jsx)("img", {
-                src: _,
+                src: w,
                 className: c().CapsuleImage,
-                alt: p.name,
+                alt: f.name,
               }),
             ],
           });
-        const v = (0, m.N)(h, !0),
-          w = v.length - 1,
-          j = (e) => {
-            const t = v.indexOf(e);
-            t >= w && t < v.length - 1 && g(t + 1);
+        const j = (0, m.N)(g, !0),
+          y = j.length - 1,
+          b = (e) => {
+            const t = j.indexOf(e);
+            t >= y && t < j.length - 1 && _(t + 1);
           };
-        if (f < v.length) {
-          const e = v[f];
+        if (x < j.length) {
+          const e = j[x];
           return (0, r.jsxs)("div", {
-            className: c().LibraryFallbackAssetImageContainer,
+            className: (0, d.A)(c().LibraryFallbackAssetImageContainer, h),
             children: [
               (0, r.jsx)("div", {
                 className: c().FallbackBackground,
@@ -205,10 +217,10 @@
               }),
               (0, r.jsx)(o.o, {
                 lazyLoad: !0,
-                srcs: v,
+                srcs: j,
                 className: c().CapsuleImage,
-                alt: p.name,
-                onImageError: j,
+                alt: f.name,
+                onImageError: b,
               }),
             ],
           });
@@ -590,7 +602,7 @@
               return null;
             switch (e) {
               case m.I2:
-                n = N;
+                n = k;
                 break;
               case m.sd:
                 n = M;
@@ -615,8 +627,8 @@
             ),
             children: [
               Boolean(a == C.ZJ) && (0, r.jsx)(I, {}),
-              Boolean(a == C.JR) && (0, r.jsx)(A, {}),
-              Boolean(a == C.bY) && (0, r.jsx)(k, {}),
+              Boolean(a == C.JR) && (0, r.jsx)(N, {}),
+              Boolean(a == C.bY) && (0, r.jsx)(A, {}),
               (0, r.jsx)(n, {}),
             ],
           });
@@ -772,7 +784,7 @@
           }),
         });
       }
-      function A() {
+      function N() {
         return (0, r.jsx)("span", {
           title: s.Z.Localize(
             "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
@@ -801,7 +813,7 @@
           }),
         });
       }
-      function k() {
+      function A() {
         return (0, r.jsx)("span", {
           title: s.Z.Localize(
             "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
@@ -828,7 +840,7 @@
           }),
         });
       }
-      function N() {
+      function k() {
         return (0, r.jsx)("span", {
           title: s.Z.Localize("#SteamDeckVerified_Category_Verified"),
           className: d().SteamDeckCompatIcon,
