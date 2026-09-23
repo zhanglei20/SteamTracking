@@ -161,18 +161,8 @@
                       maxHeight: "20em",
                       overflowY: "scroll",
                     },
-                    children: _.data.subjects.map((_) => {
-                      var _, _;
-                      return (
-                        null ===
-                          (_ =
-                            null === (_ = _.additional_subject_data) ||
-                            void 0 === _
-                              ? void 0
-                              : _.data) || void 0 === _
-                          ? void 0
-                          : _.length
-                      )
+                    children: _.data.subjects.map((_) =>
+                      _.coordinates
                         ? (0, _.jsx)(
                             _,
                             {
@@ -191,8 +181,8 @@
                               children: "Bug - inform Valve",
                             },
                             "bad-" + _++,
-                          );
-                    }),
+                          ),
+                    ),
                   }),
               ],
             }),

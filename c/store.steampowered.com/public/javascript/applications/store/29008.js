@@ -521,6 +521,7 @@
         InGameHover: "axjdi0dhiB17GHjL5FRCr",
         StoreSalePrepurchaseLabel: "_1Fru-E7WQMr8G_aR2sMg5F",
         SingleLineOriginalPrice: "t7Gt8aeopD7JPlhcNTqGV",
+        YourPriceLabel: "_1stCJEQuG2FqlQr_q9AgR2",
         BaseDiscount: "_3mInDnGL3LlUC7uPs1CfOP",
         StoreSalePriceButton: "_1BejQFnnmkHMi9stswiJzf",
         OuterCapsuleContainer: "_1dKR2IPNQSHs1MAIXBvt_R",
@@ -537,6 +538,7 @@
         MainCapsuleImageContainer: "_1vpxH37o7mJotC0IoqWbqy",
         HeroCapsuleImageContainer: "vnhlb8EFU45PU6qG2GBDW",
         DiscoveryQueueCtn: "_2uX2GFSEk3nkWxRsaBXaeG",
+        NoShadow: "lxQeFs3wUE9dLxZkpEWtt",
         VerticalCapsule: "_3sy8XcvOMnFJv1_Edwpzqv",
         ForceLibrarySizing: "_25KI3ndwISqbgBdtNxpujP",
         CapsuleImage: "_2eQ4mkpf4IzUp1e9NnM2Wr",
@@ -3713,6 +3715,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, bSelfPurchaseOption: _ } = _,
@@ -3876,111 +3879,115 @@
           } = _,
           _ = _;
         let _;
-        return (
-          _ &&
-            (_ = _
-              ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
-              : _._.Localize("#Discount_ARIA_Label", _, _, _)),
-          (0, _.jsxs)("div", {
-            className: (0, _._)({
-              [_().StoreSalePriceWidgetContainer]: !0,
-              [_().SingleLineMode]: _,
-              StoreSalePriceWidgetContainer: !0,
-              [_().Discounted]: Boolean(_),
-              Discounted: Boolean(_),
-              [_().PrePurchase]: Boolean(_),
-              [_().NewItem]: Boolean(_),
-              [_().PurchaseOption]: _,
-              [_ ?? ""]: !!_,
-            }),
-            "aria-label": _,
-            children: [
-              Boolean(_ && !_) &&
-                (0, _.jsx)("div", {
-                  className: (0, _._)(_().StoreSalePrepurchaseLabel),
-                  children: (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#EventDisplay_CallToAction_Prepurchase_Short",
-                    ),
+        _ &&
+          (_ = _
+            ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
+            : _._.Localize("#Discount_ARIA_Label", _, _, _));
+        const _ = Boolean((_ || _) && !_),
+          _ = _ && Boolean(_),
+          _ = _ && !_ && _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)({
+            [_().StoreSalePriceWidgetContainer]: !0,
+            [_().SingleLineMode]: _,
+            StoreSalePriceWidgetContainer: !0,
+            [_().Discounted]: Boolean(_),
+            Discounted: Boolean(_),
+            [_().PrePurchase]: Boolean(_),
+            [_().NewItem]: Boolean(_),
+            [_().PurchaseOption]: _,
+            [_ ?? ""]: !!_,
+          }),
+          "aria-label": _,
+          children: [
+            Boolean(_ && !_) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().StoreSalePrepurchaseLabel),
+                children: (0, _.jsx)("span", {
+                  children: _._.Localize(
+                    "#EventDisplay_CallToAction_Prepurchase_Short",
+                  ),
+                }),
+              }),
+            Boolean(!_ && _) &&
+              (0, _.jsx)("div", {
+                className: _().StoreSaleNewItem,
+                children: _._.Localize("#Flag_New"),
+              }),
+            Boolean(_ && !_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    toolTipContent: _._.Localize("#Sale_Bundle_Discount_ttip"),
+                    children: (0, _.jsx)("span", {
+                      className: (0, _._)(_().BaseDiscount),
+                      children: `-${_}%`,
+                    }),
                   }),
-                }),
-              Boolean(!_ && _) &&
-                (0, _.jsx)("div", {
-                  className: _().StoreSaleNewItem,
-                  children: _._.Localize("#Flag_New"),
-                }),
-              Boolean(_ && !_) &&
-                (0, _.jsxs)(_.Fragment, {
+                  Boolean(_) &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: " ",
+                        }),
+                        (0, _.jsx)(_._, {
+                          toolTipContent: _._.Localize(
+                            "#Sale_Bundle_Discount_Limited_ttip",
+                          ),
+                          children: (0, _.jsx)("span", {
+                            className: (0, _._)(_().StoreSaleDiscountBox),
+                            children: `-${_}%`,
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            Boolean(!_ && _ && !_) &&
+              (0, _.jsx)("div", {
+                className: _().StoreSaleDiscountBox,
+                children: `-${_}%`,
+              }),
+            Boolean(_ && _) &&
+              (0, _.jsx)("div", {
+                className: _().DiscountIconCtn,
+                children: (0, _.jsx)(_.XH_, {}),
+              }),
+            _ || _
+              ? (0, _.jsxs)("div", {
+                  className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
                   children: [
-                    (0, _.jsx)(_._, {
-                      toolTipContent: _._.Localize(
-                        "#Sale_Bundle_Discount_ttip",
-                      ),
-                      children: (0, _.jsx)("span", {
-                        className: (0, _._)(_().BaseDiscount),
-                        children: `-${_}%`,
+                    _
+                      ? (0, _.jsx)("div", {
+                          className: (0, _._)({
+                            [_().SingleLineOriginalPrice]: _,
+                            [_().StoreOriginalPrice]: !_,
+                          }),
+                          children: _,
+                        })
+                      : (0, _.jsx)("div", {
+                          className: _().YourPriceLabel,
+                          children: _._.Localize("#PriceDisplay_YourPrice"),
+                        }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)({
+                        [_().StoreSalePriceBox]: !0,
+                        [_().SingleLineMode]: _,
+                        [_ ?? ""]: !!_,
                       }),
+                      children: _,
                     }),
-                    Boolean(_) &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: " ",
-                          }),
-                          (0, _.jsx)(_._, {
-                            toolTipContent: _._.Localize(
-                              "#Sale_Bundle_Discount_Limited_ttip",
-                            ),
-                            children: (0, _.jsx)("span", {
-                              className: (0, _._)(_().StoreSaleDiscountBox),
-                              children: `-${_}%`,
-                            }),
-                          }),
-                        ],
-                      }),
                   ],
-                }),
-              Boolean(!_ && _ && !_) &&
-                (0, _.jsx)("div", {
-                  className: _().StoreSaleDiscountBox,
-                  children: `-${_}%`,
-                }),
-              Boolean(_ && _) &&
-                (0, _.jsx)("div", {
-                  className: _().DiscountIconCtn,
-                  children: (0, _.jsx)(_.XH_, {}),
-                }),
-              Boolean((_ || _) && _ && !_)
-                ? (0, _.jsxs)("div", {
-                    className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: (0, _._)({
-                          [_().SingleLineOriginalPrice]: _,
-                          [_().StoreOriginalPrice]: !_,
-                        }),
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: (0, _._)({
-                          [_().StoreSalePriceBox]: !0,
-                          [_().SingleLineMode]: _,
-                          [_ ?? ""]: !!_,
-                        }),
-                        children: _,
-                      }),
-                    ],
-                  })
-                : (0, _.jsx)("div", {
-                    className: (0, _._)({
-                      [_().StoreSalePriceBox]: !0,
-                      [_ ?? ""]: !!_,
-                    }),
-                    children: _,
+                })
+              : (0, _.jsx)("div", {
+                  className: (0, _._)({
+                    [_().StoreSalePriceBox]: !0,
+                    [_ ?? ""]: !!_,
                   }),
-            ],
-          })
-        );
+                  children: _,
+                }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -171,7 +171,7 @@ ${COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo
 ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
-${COMMUNITY_BASE_URL}actions/redirecttoforumtopic/?accountIDOwner=${}&gidForum=${forumId}&gidTopic=${topic}
+${COMMUNITY_BASE_URL}actions/redirecttoforumtopic/?accountIDOwner=${}&gidForum=${}&gidTopic=${topic}
 ${COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${}&gidForum=${gidForum}&gidTopic=${gidTopic}
 ${COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${}&gidForum=${}&gidTopic=${}
 ${COMMUNITY_BASE_URL}actions/selectPreviousAvatar
@@ -469,10 +469,12 @@ ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/image/${icon_url}
 ${COMMUNITY_CDN_URL}economy/image/${}
-${COMMUNITY_CDN_URL}economy/image/${}/330x192
+${COMMUNITY_CDN_URL}economy/image/${}/${}
+${COMMUNITY_CDN_URL}economy/image/${}/${}fx${}f
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
+${COMMUNITY_CDN_URL}economy/profilebackground/items/${}/${image_large}?size=320x200
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
 ${COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png
@@ -1033,7 +1035,7 @@ ${PARTNER_BASE_URL}admin/store/contenthub/ajaxsavecontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/categories
 ${PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${}
 ${PARTNER_BASE_URL}admin/store/dailydeal/${gid}
-${PARTNER_BASE_URL}admin/store/package/${_ ? _ : 0}?activetab=tab_description
+${PARTNER_BASE_URL}admin/store/package/${}?activetab=tab_description
 ${PARTNER_BASE_URL}admin/store/packagepublish/${}
 ${PARTNER_BASE_URL}admin/store/page/${}
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${cluster_name}/${id}?activetab=tab_capsules
@@ -1054,6 +1056,8 @@ ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
 ${PARTNER_BASE_URL}apps/ajaxgetdlc
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
+${PARTNER_BASE_URL}apps/creatorhomelinkhistory?appid=${}
+${PARTNER_BASE_URL}apps/creatorhomelinkroles?clanids=${}
 ${PARTNER_BASE_URL}apps/demo/${store_item_id}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${appid}
@@ -2147,6 +2151,7 @@ ${strRedirectURL}/info
 ${strRssURL}${}
 ${strSearchBaseURL}${strQuery}
 ${strSearchBaseURL}Home
+${strSteamOpsBaseUrl}${}
 ${strURL}${_ ? '&' : '?'}insideModal=1
 ${strURL}&l=${key}
 ${strURL}&l=english
