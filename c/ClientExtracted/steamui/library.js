@@ -2449,6 +2449,7 @@
             m_fnGetReportingInterval = _;
             m_fnGetReportTags = () => [];
             m_fnGetURL = () => location.href;
+            strDisplayVersion;
             m_bEnabled = !0;
             m_bInitialized = !1;
             constructor(_ = !0) {
@@ -2488,6 +2489,8 @@
                 _.fnGetReportTags &&
                   (this.m_fnGetReportTags = _.fnGetReportTags),
                 _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+                _.strDisplayVersion &&
+                  (this.strDisplayVersion = _.strDisplayVersion),
                 this.m_bEnabled ||
                   (console.error(
                     "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -2521,6 +2524,7 @@
                     _.strComponentStack &&
                       (_.strComponentStack = _.strComponentStack),
                     (_.strUrl = this.m_fnGetURL()),
+                    (_.strDisplayVersion = this.strDisplayVersion),
                     this.SendErrorReport(_),
                     _)
                   : null;
@@ -2600,7 +2604,9 @@
                   let _;
                   return (
                     _.strComponentStack &&
-                      ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                      ((_ ??= {}),
+                      (_.componentStack = _.strComponentStack),
+                      (_.strDisplayVersion = _.strDisplayVersion)),
                     _ && _.set_context(JSON.stringify(_)),
                     _.strUrl && _.set_url(_.strUrl),
                     _
@@ -32249,10 +32255,10 @@
           1005: "98e28afc2db5993f4962",
           1012: "c3a236d78c5dedff82f8",
           1093: "345b42d4294c7c49a295",
-          1129: "a3df45203897932ec47b",
+          1129: "906f54d93ae3285846ff",
           1133: "d89ddca0a5767ca842c2",
           1139: "1e5dc97c3cf66f83b334",
-          1220: "ee1357688f70600ce734",
+          1220: "261e68d824348bc673f0",
           1242: "c2b6d48c4a04cdb8a477",
           1275: "c43e67d0340511fc04e4",
           1325: "b547eaa65761c29b64a1",
@@ -32342,7 +32348,7 @@
           3356: "afcd1189413004edef84",
           3366: "1ec9b62b64c486f35f8b",
           3473: "94ad56127886b2b0e7dc",
-          3569: "fb778aaae6afce6da88b",
+          3569: "9d79d0094fbf582bc964",
           3583: "e43edc0ea1d97c2fbc71",
           3585: "65cd2386404e99a7fdb0",
           3589: "a731c3c599a53f5cd3a0",
@@ -32351,9 +32357,9 @@
           3675: "a1c7bc52f5058ba5ba05",
           3695: "a960106da5dfe25daade",
           3706: "2981a5b26c56041f9fde",
-          3714: "491fdc96377c797f4486",
+          3714: "4b40367a25e36a5e94bf",
           3744: "55f6de16858471640eef",
-          3834: "771700c7ad1ced6d9eda",
+          3834: "fa160ed077bbbe59d768",
           3869: "e1d6d5dccf5de0fad5dc",
           3876: "9dfd09b2c570bab56e1a",
           3899: "ebdc2584dce2a6b71514",
@@ -32453,13 +32459,13 @@
           7376: "c791f71e47a5d6202720",
           7386: "fd69132e1e127e9c94c9",
           7442: "dedfb635c8696a5a8041",
-          7462: "c3fcbd405b647f4fb33c",
+          7462: "bec15ec84c291ef2af5c",
           7503: "daa9b22f32c67068a3cf",
           7533: "da594422fa33693bb84c",
           7554: "606581027d06f59a75f5",
           7569: "ac27ae8f525ea46d28a3",
           7627: "aaacbde436dff08a1fae",
-          7653: "9857c4027c3b44da95f7",
+          7653: "35a4a85ef56feb6a1e1f",
           7656: "1fd35ecff3f759635bfc",
           7696: "b054594061efe54879fc",
           7770: "c3ece28180ca8300458f",
@@ -32485,7 +32491,7 @@
           8330: "8258c260fdc929389bce",
           8346: "2a822e156b71646dd690",
           8391: "acaf9dd4a4dd5f9f6058",
-          8396: "1d2fa3fcfb7bdd81505c",
+          8396: "d9e6f7ade50815c78ee7",
           8405: "8ca27ad6585dea861a79",
           8443: "701ea90b425ffed773bb",
           8445: "467520e1f7030933fed4",
@@ -32518,7 +32524,7 @@
           9063: "9a1c83f6430002bc834c",
           9108: "b59da46df8fe1ee0fdd4",
           9120: "230d59ee4a99c1fd0767",
-          9129: "8ee1d3dc0467b9923060",
+          9129: "cf8e311c8da1f7076592",
           9134: "c1af76f97d2d64be2eb8",
           9171: "d60c3602aef9675eed4c",
           9183: "c51e2acedd52d19b4627",
@@ -32535,14 +32541,14 @@
           9536: "d536cb9c41c87028c4be",
           9558: "090cfff1220fd9d6b3c8",
           9637: "add7222c524fa2f61d7f",
-          9672: "dd984fa75fc87f167a0b",
+          9672: "db2af21d2748654a5a07",
           9711: "a2038e4475447c2e7fe4",
           9737: "26dfe37c0ed905ec631e",
           9740: "482d50af4698816e67a8",
           9779: "85f53fcf9d3cdaca9526",
           9845: "f940ada275e531985e05",
           9853: "bef5043a96ecf6f198bb",
-          9858: "0fbdc22214f10d774805",
+          9858: "de1be3cb15335c7ea837",
           9861: "f4520f3619ee1fc26465",
           9862: "8b857e11db69fb1b4103",
           9869: "dae3e307f836aaf1c03a",

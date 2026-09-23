@@ -5259,7 +5259,6 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8H
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -7781,6 +7780,7 @@ ${LANGUAGE}
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFPka
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -8819,6 +8819,8 @@ ${LANGUAGE}
 11VideoClient
 12 Mbps
 120min
+1536
+15000
 123456789
 127.0.0.1
 127.0.0.1:57343
@@ -9185,8 +9187,6 @@ ${LANGUAGE}
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
-1536
-15000
 155.133.240.0/23
 1558-AFCM-4577
 15AccountHardware
@@ -13826,7 +13826,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9HhYT
+9H(YT
 9IGv
 9Inventory
 9PE,$
@@ -27080,6 +27080,7 @@ Netscape SSL Server Name
 Netscape SSL server
 Netscape Server Gated Crypto
 Network Authentication Required
+Network path
 Network problem detected: skipping wait
 Network send exceeded
 NetworkTest
@@ -29361,7 +29362,6 @@ Resume
 ResumeAppSession
 ResumeProcess
 Retail
-RetailInstall
 Retention interval for background recording game %s is %u seconds
 Retired
 RetrieveSecret
@@ -30326,7 +30326,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 21 2026 23:56:39
+Sep 22 2026 23:38:10
 September
 Serbian
 Serial
@@ -42393,7 +42393,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 ghost_
 gidlist
 gidparentcomment
@@ -53528,6 +53528,7 @@ pyrowave_create_device_by_compat
 pyrowave_custom_bitrate
 pyrowave_custom_bitrate_kbps
 pyrowave_device_destroy
+pyrowave_device_set_queue_type
 pyrowave_encoder_compute_num_critical_packets
 pyrowave_encoder_compute_num_packets_with_padding
 pyrowave_encoder_create
@@ -53992,6 +53993,7 @@ restore_token
 restrict_auto_updates
 restrict_auto_updates_end
 restrict_auto_updates_start
+restricted_countries
 restrictions_approved
 result
 result too large
@@ -54238,7 +54240,6 @@ rungame/
 rungameid
 rungameid/
 running
-runparam
 runtime
 runtime-directory-inodes-max
 runtime-directory-size

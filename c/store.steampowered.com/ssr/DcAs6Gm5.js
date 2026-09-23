@@ -1034,6 +1034,222 @@ function _(_) {
   let _ = _.tagName;
   return _(_, _(_) ? _.type : void 0);
 }
+function _() {
+  return _(_(_(), _()));
+}
+function _(_, _) {
+  return {
+    queryKey: [`FollowedGamesCount`, _],
+    queryFn: () => _(_, _),
+    staleTime: 600 * 1e3,
+    enabled: !!_ && _ != `0`,
+  };
+}
+async function _(_, _) {
+  let _ = _.Init(_);
+  _.Body().set_steamid(_);
+  let _ = await _.GetGamesFollowedCount(_, _);
+  if (!_.BSuccess())
+    throw `Error loading followed games count: ${_.GetErrorMessage()}`;
+  return _.Body().toObject().followed_game_count ?? 0;
+}
+var _ = _(_(), 1),
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _
+        ? {
+            $jspbMessageInstance: _,
+          }
+        : {};
+    }
+    static fromObject(_) {
+      return new _();
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _;
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {}
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CBilling_GetRecurringSubscriptionsCount_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.active_subscriptions_count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            active_subscriptions_count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            inactive_subscriptions_count: {
+              _: 2,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CBilling_GetRecurringSubscriptionsCount_Response`;
+    }
+  },
+  _;
+(function (_) {
+  function _(_, _, _) {
+    return _.SendMsg(
+      `Billing.GetRecurringSubscriptionsCount#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+      },
+    );
+  }
+  _.GetRecurringSubscriptionsCount = _;
+})((_ ||= {}));
+function _() {
+  let { data: _ } = _();
+  return _.logged_in
+    ? _ === void 0
+      ? void 0
+      : _.active_subscriptions_count > 0 || _.inactive_subscriptions_count > 0
+    : !1;
+}
+function _() {
+  return _(_(_()));
+}
+function _(_) {
+  return {
+    queryKey: [`RecurringSubscriptionCount`],
+    queryFn: () => _(_),
+    staleTime: 1 / 0,
+    enabled: _.logged_in,
+  };
+}
+async function _(_) {
+  let _ = _.Init(_),
+    _ = await _.GetRecurringSubscriptionsCount(_, _);
+  if (!_.BSuccess())
+    throw `Error loading recurring subscription count: ${_.GetErrorMessage()}`;
+  return {
+    active_subscriptions_count: _.Body().active_subscriptions_count() ?? 0,
+    inactive_subscriptions_count: _.Body().inactive_subscriptions_count() ?? 0,
+  };
+}
+function _() {
+  let _ = _(),
+    { storeBrowseContext: _ } = _({
+      include_assets: !0,
+    });
+  return _({
+    ..._(_, _),
+    select: (_) => _.total_items_on_sale,
+  });
+}
+async function _(_, _, _) {
+  let _ = _.Init(_);
+  _.Body().set_steamid(_.steamid),
+    _(_, _),
+    _ &&
+      (_(_, _.data_request),
+      _.Body().set_sort_order(5),
+      _.Body().set_page_size(_.item_count)),
+    _.Body().filters(!0).set_min_discount_percent(10);
+  let _ = await _.GetWishlistSortedFiltered(_, _);
+  if (!_.BSuccess())
+    throw `Error from WishlistService.GetWishlistSortedFiltered: ${_.GetErrorMessage()}`;
+  return (
+    _ &&
+      _.Body()
+        .items()
+        .forEach((_) => {
+          let _ = _.store_item(!1);
+          _ && _.cacheStoreItemData(_, _.data_request);
+        }),
+    {
+      appids: _
+        ? _.Body()
+            .items()
+            .slice(0, _.item_count)
+            .map((_) => _.appid())
+        : [],
+      total_items_on_sale: _.Body().items().length,
+    }
+  );
+}
+function _(_, _, _) {
+  return {
+    queryKey: [`GetWishlistItemsOnSale`],
+    queryFn: () => _(_, _, _),
+    staleTime: 900 * 1e3,
+    enabled: _.logged_in,
+  };
+}
 var _ = `qnZg-WlNYp0-`,
   _ = `NtlIACbluDs-`,
   _ = `kHLroHJHwyA-`;
@@ -2049,222 +2265,6 @@ var _ = `SZDk3YnqgsA-`,
   _ = `QWXMPVkRhGI-`,
   _ = `mza1BulfSrM-`,
   _ = `hQKLMdLvxDY-`;
-function _() {
-  return _(_(_(), _()));
-}
-function _(_, _) {
-  return {
-    queryKey: [`FollowedGamesCount`, _],
-    queryFn: () => _(_, _),
-    staleTime: 600 * 1e3,
-    enabled: !!_ && _ != `0`,
-  };
-}
-async function _(_, _) {
-  let _ = _.Init(_);
-  _.Body().set_steamid(_);
-  let _ = await _.GetGamesFollowedCount(_, _);
-  if (!_.BSuccess())
-    throw `Error loading followed games count: ${_.GetErrorMessage()}`;
-  return _.Body().toObject().followed_game_count ?? 0;
-}
-var _ = _(_(), 1),
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _
-        ? {
-            $jspbMessageInstance: _,
-          }
-        : {};
-    }
-    static fromObject(_) {
-      return new _();
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _;
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {}
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CBilling_GetRecurringSubscriptionsCount_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(),
-        _.prototype.active_subscriptions_count || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            active_subscriptions_count: {
-              _: 1,
-              _: _.readInt32,
-              _: _.writeInt32,
-            },
-            inactive_subscriptions_count: {
-              _: 2,
-              _: _.readInt32,
-              _: _.writeInt32,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CBilling_GetRecurringSubscriptionsCount_Response`;
-    }
-  },
-  _;
-(function (_) {
-  function _(_, _, _) {
-    return _.SendMsg(
-      `Billing.GetRecurringSubscriptionsCount#1`,
-      _(_, _, _),
-      _,
-      {
-        bConstMethod: !0,
-        ePrivilege: 1,
-      },
-    );
-  }
-  _.GetRecurringSubscriptionsCount = _;
-})((_ ||= {}));
-function _() {
-  let { data: _ } = _();
-  return _.logged_in
-    ? _ === void 0
-      ? void 0
-      : _.active_subscriptions_count > 0 || _.inactive_subscriptions_count > 0
-    : !1;
-}
-function _() {
-  return _(_(_()));
-}
-function _(_) {
-  return {
-    queryKey: [`RecurringSubscriptionCount`],
-    queryFn: () => _(_),
-    staleTime: 1 / 0,
-    enabled: _.logged_in,
-  };
-}
-async function _(_) {
-  let _ = _.Init(_),
-    _ = await _.GetRecurringSubscriptionsCount(_, _);
-  if (!_.BSuccess())
-    throw `Error loading recurring subscription count: ${_.GetErrorMessage()}`;
-  return {
-    active_subscriptions_count: _.Body().active_subscriptions_count() ?? 0,
-    inactive_subscriptions_count: _.Body().inactive_subscriptions_count() ?? 0,
-  };
-}
-function _() {
-  let _ = _(),
-    { storeBrowseContext: _ } = _({
-      include_assets: !0,
-    });
-  return _({
-    ..._(_, _),
-    select: (_) => _.total_items_on_sale,
-  });
-}
-async function _(_, _, _) {
-  let _ = _.Init(_);
-  _.Body().set_steamid(_.steamid),
-    _(_, _),
-    _ &&
-      (_(_, _.data_request),
-      _.Body().set_sort_order(5),
-      _.Body().set_page_size(_.item_count)),
-    _.Body().filters(!0).set_min_discount_percent(10);
-  let _ = await _.GetWishlistSortedFiltered(_, _);
-  if (!_.BSuccess())
-    throw `Error from WishlistService.GetWishlistSortedFiltered: ${_.GetErrorMessage()}`;
-  return (
-    _ &&
-      _.Body()
-        .items()
-        .forEach((_) => {
-          let _ = _.store_item(!1);
-          _ && _.cacheStoreItemData(_, _.data_request);
-        }),
-    {
-      appids: _
-        ? _.Body()
-            .items()
-            .slice(0, _.item_count)
-            .map((_) => _.appid())
-        : [],
-      total_items_on_sale: _.Body().items().length,
-    }
-  );
-}
-function _(_, _, _) {
-  return {
-    queryKey: [`GetWishlistItemsOnSale`],
-    queryFn: () => _(_, _, _),
-    staleTime: 900 * 1e3,
-    enabled: _.logged_in,
-  };
-}
 function _(_) {
   let {
       children: _,
