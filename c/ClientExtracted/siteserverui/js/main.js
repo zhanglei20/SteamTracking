@@ -4765,6 +4765,7 @@
         m_fnGetReportingInterval = _;
         m_fnGetReportTags = () => [];
         m_fnGetURL = () => location.href;
+        strDisplayVersion;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(_ = !0) {
@@ -4798,6 +4799,8 @@
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
             _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
+            _.strDisplayVersion &&
+              (this.strDisplayVersion = _.strDisplayVersion),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -4934,6 +4937,7 @@
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 (_.strUrl = this.m_fnGetURL()),
+                (_.strDisplayVersion = this.strDisplayVersion),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -5010,7 +5014,9 @@
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  ((_ ??= {}),
+                  (_.componentStack = _.strComponentStack),
+                  (_.strDisplayVersion = _.strDisplayVersion)),
                 _ && _.set_context(JSON.stringify(_)),
                 _.strUrl && _.set_url(_.strUrl),
                 _

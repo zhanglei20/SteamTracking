@@ -9908,7 +9908,7 @@
     "HardwarePromo_FrameHLAlyx_Btn_GoToAlyx": "Go To Half-Life: Alyx",
     "HardwarePromo_FrameHLAlyx_Redeem_Confirm": "Are you sure you want to redeem your free copy of Half-Life: Alyx on the current account \"%1$s\"?",
     "HardwarePromo_FrameHLAlyx_Redeem_Success": "Success! You have redeemed your free copy of Half-Life: Alyx.",
-    "HardwarePromo_FrameHLAlyx_Redeem_InvalidParam": "Invalid serial number provided. If this issue persists, please contact Steam Support with device serial numer: %1$s",
+    "HardwarePromo_FrameHLAlyx_Redeem_InvalidParam": "Invalid serial number provided. If this issue persists, please contact Steam Support with device serial number: %1$s",
     "HardwarePromo_FrameHLAlyx_Redeem_AlreadyOwn": "You already have Half-Life: Alyx on this account.",
     "HardwarePromo_FrameHLAlyx_Redeem_InvalidVersion": "You must update to the latest SteamOS and Steam Client version before you can redeem your free copy of Half-Life: Alyx.",
     "HardwarePromo_FrameHLAlyx_Redeem_Duplicate": "It appears this Frame's free copy of Half-Life: Alyx has already been redeemed. If this is in error, please contact Steam Support with your device's serial number: %1$s",
