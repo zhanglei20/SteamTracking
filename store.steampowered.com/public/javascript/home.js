@@ -75,6 +75,9 @@ GHomepage = {
 	// is the sibling token to move to if these run over a weekend instead.
 	k_strSpotlightPanelBanner: 'MIDWEEK DEAL',
 
+	// Banner across a generated daily deal, the same one the scheduled deals carry
+	k_strSpotlightDailyDealBanner: 'TODAY\'S DEAL',
+
 	bSpotlightSectionRendered: false,
 	rgSpotlightRecommendations: null,
 	rgSpotlightPanels: null,
@@ -82,6 +85,14 @@ GHomepage = {
 	rgSpotlightPanelsKept: [],
 	rgSpotlightPanelDailyDeals: [],
 	cSpotlightPanelsDuplicate: 0,
+
+	// Recommendations topping the carousel's daily deals up to nSpotlightDailyDealSlots, where the scheduled
+	// ones leave room.
+	rgSpotlightDailyDeals: null,
+	nSpotlightDailyDealSlots: 0,
+	bSpotlightDailyDealsReplaceScheduled: false,
+	cSpotlightDailyDealsScheduled: 0,
+	cSpotlightDailyDealsPlaced: 0,
 
 	// Daily deals the leading pages had no room for once the panels went in.  FillSpotlightSpecials() places
 	// these on the pages it rebuilds, ahead of any spotlight specials.
@@ -2452,7 +2463,7 @@ GHomepage = {
 			$J.ajax( {
 				url: "https:\/\/store.steampowered.com\/default\/home_spotlight_recommendations\/",
 				data: {
-					v: 2,						u: g_AccountID,
+					v: 3,						u: g_AccountID,
 				},
 				dataType: 'json',
 				type: 'GET'
@@ -2462,6 +2473,9 @@ GHomepage = {
 
 				GHomepage.rgSpotlightRecommendations = data.spotlight_recommendations;
 				GHomepage.rgSpotlightPanels = data.spotlight_panels;
+				GHomepage.rgSpotlightDailyDeals = data.spotlight_daily_deals;
+				GHomepage.nSpotlightDailyDealSlots = data.daily_deal_slots || 0;
+				GHomepage.bSpotlightDailyDealsReplaceScheduled = !!data.daily_deals_replace_scheduled;
 				GHomepage.oSpotlightRecsDebug = data._debug_spotlight_recs;
 				GHomepage.ApplySpotlightRecommendations();
 
@@ -2474,6 +2488,12 @@ GHomepage = {
 		// we rebuild pages this section already rendered, so there's nothing to do until it has
 		if ( !GHomepage.bSpotlightSectionRendered )
 			return;
+
+		// The daily deals go in before anything is laid out again, so the panels and FillSpotlightSpecials() both
+		// treat them as the daily deals they stand in for: kept, carried forward, and deduped against.
+		var rgDailyDeals = GHomepage.rgSpotlightDailyDeals;
+		if ( rgDailyDeals && rgDailyDeals.length )
+			GHomepage.ApplySpotlightDailyDeals( rgDailyDeals, GHomepage.nSpotlightDailyDealSlots, GHomepage.bSpotlightDailyDealsReplaceScheduled );
 
 		// The panels come first: FillSpotlightSpecials() dedupes against the pages it is leaving alone, which is
 		// where the panels are, so it has to see them in place before it picks its capsules.
@@ -2489,6 +2509,99 @@ GHomepage = {
 
 		// the specials we're replacing are the fallback for when we don't have enough recommendations
 		GHomepage.FillSpotlightSpecials( GHomepage.k_iFirstPersonalizedSpotlightPage, rgRecs, GHomepage.oDisplayListsRaw.specials );
+	},
+
+	// Purpose: top the carousel's daily deals up to cSlots with recommendations, keeping the scheduled ones unless
+	// bReplaceScheduled is set, in which case the recommendations take the scheduled deals' slots first and any
+	// scheduled deals they don't reach stay where they are.
+	// Past the scheduled deals, each recommendation takes the place of the first spotlight special after the last
+	// daily deal, which is the slot the next scheduled deal would have been given, so nothing else in the carousel
+	// has to move.
+	ApplySpotlightDailyDeals: function( rgRecs, cSlots, bReplaceScheduled )
+	{
+		var $Pages = $J( '#spotlight_carousel > .carousel_items .home_special_offers_group' );
+		if ( !$Pages.length )
+			return;
+
+		GHomepage.cSpotlightDailyDealsScheduled = $J( '.store_capsule.daily_deal', $Pages ).length;
+		GHomepage.cSpotlightDailyDealsPlaced = 0;
+
+		var cNeeded = bReplaceScheduled ? cSlots : cSlots - GHomepage.cSpotlightDailyDealsScheduled;
+		if ( cNeeded <= 0 )
+			return;
+
+		var Settings = {
+			games_already_in_library: false,
+			localized: true,
+			displayed_elsewhere: false,
+			only_current_platform: true,
+			dlc_for_you: true,
+			include_priority: true
+		};
+
+		// Dedupe against the same things the panels do: everything that stays where it is once the trailing pages
+		// have been laid out again, less the scheduled deals when we're here to replace them.  This only reads the
+		// capsules, it doesn't move them.
+		var strKeptSelector = bReplaceScheduled ? '.home_area_spotlight' : '.home_area_spotlight, .store_capsule.daily_deal';
+		var $Leading = $J( '.store_capsule, .sale_capsule', $Pages.slice( 0, GHomepage.k_iFirstPersonalizedSpotlightPage ) );
+		if ( bReplaceScheduled )
+		{
+			$Leading = $Leading.not( '.daily_deal' );
+		}
+
+		var oShownItems = {};
+		GDynamicStorePage.FilterAndPrioritizeCapsules(
+			$J( strKeptSelector, $Pages ).get().concat( $Leading.get() ), 'spotlights', 'home', Settings, oShownItems, 0 );
+
+		var rgDeals = GDynamicStorePage.FilterAndPrioritizeItems( rgRecs, 'spotlights', 'home', Settings, oShownItems, cNeeded );
+
+		// Server rendered capsules are .store_capsule and the ones built client side are .sale_capsule, a daily
+		// deal being both, so this is every capsule in carousel order.  Everything after the last deal is a special.
+		var $Capsules = $J( '.store_capsule, .sale_capsule', $Pages );
+		var iLastDeal = $Capsules.index( $Capsules.filter( '.daily_deal' ).last() );
+		var rgSlots = $Capsules.slice( iLastDeal + 1 ).get();
+		if ( bReplaceScheduled )
+		{
+			rgSlots = $Capsules.filter( '.daily_deal' ).get().concat( rgSlots );
+		}
+
+		for ( var iDeal = 0; iDeal < rgDeals.length && GHomepage.cSpotlightDailyDealsPlaced < cNeeded && rgSlots.length; iDeal++ )
+		{
+			// never show ignored items
+			if ( rgDeals[ iDeal ].priority >= 4 )
+				continue;
+
+			var $Slot = $J( rgSlots[0] );
+			var $Deal = GHomepage.BuildSpotlightDailyDeal( rgDeals[ iDeal ], $Pages.index( $Slot.closest( '.home_special_offers_group' ) ) + 1 );
+			if ( !$Deal )
+				continue;
+
+			$Slot.replaceWith( $Deal );
+			rgSlots.shift();
+			GHomepage.cSpotlightDailyDealsPlaced++;
+		}
+
+		GDynamicStore.DecorateDynamicItems( $J( '#spotlight_carousel' ) );
+	},
+
+	// Purpose: build a daily deal capsule for an app, matching what the server renders for a scheduled one.
+	BuildSpotlightDailyDeal: function( item, nDepth )
+	{
+		// The feature is what lands these in the same 'daily-deal' bucket as the scheduled deals they stand in for
+		var $Deal = GHomepage.BuildHomePageCapsule( item, 'daily-deal', {
+			'class': 'store_capsule daily_deal sale_capsule',
+			'discount_class': 'daily_deal_discount discount_block_large',
+			'capsule_size': 'header',
+			'disable_autosizer': true,
+		}, nDepth );
+
+		if ( !$Deal )
+			return null;
+
+		$Deal.children( '.capsule_image_ctn' ).after(
+			$J( '<div/>', { 'class': 'home_capsule_banner' } ).text( GHomepage.k_strSpotlightDailyDealBanner ) );
+
+		return $Deal;
 	},
 
 	// Purpose: top the carousel's large panel slots up with recommendations, alongside whatever spotlights are
@@ -2852,7 +2965,10 @@ GHomepage = {
 				panels_placed: GHomepage.cSpotlightPanelsPlaced,
 				panels_skipped_duplicate: GHomepage.cSpotlightPanelsDuplicate,
 				panels_kept: GHomepage.rgSpotlightPanelsKept,
-				daily_deals_by_page: GHomepage.rgSpotlightPanelDailyDeals
+				daily_deals_by_page: GHomepage.rgSpotlightPanelDailyDeals,
+				daily_deals_sent: GHomepage.rgSpotlightDailyDeals ? GHomepage.rgSpotlightDailyDeals.length : 0,
+				daily_deals_scheduled: GHomepage.cSpotlightDailyDealsScheduled,
+				daily_deals_placed: GHomepage.cSpotlightDailyDealsPlaced
 			} ) );
 		}
 
