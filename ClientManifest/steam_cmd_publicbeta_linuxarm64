@@ -1,6 +1,6 @@
 "linuxarm64"
 {
-	"version"		"1790382184"
+	"version"		"1790534781"
 	"steamcmd_public_all"
 	{
 		"file"		"steamcmd_public_all.zip.5a294ec531ae00e2fd9f94c280007cd605076692"
@@ -9,11 +9,11 @@
 	}
 	"steamcmd_bins_linuxarm64"
 	{
-		"file"		"steamcmd_bins_linuxarm64.zip.1305b7367ecc421a531b7347591d4028d31537c8"
-		"size"		"17123215"
-		"sha2"		"3de6d31e4e6a44e93be61b41b518d65b75b54efbcb58564541730898c315c713"
-		"zipvz"		"steamcmd_bins_linuxarm64.zip.vz.85f22e73a692d5c61cf73c72ddd39b1c2724dbf8_10430973"
-		"sha2vz"		"667ca78dac5326c2b5c18298d9f8220bf7273869e259d3e3a15b0dbbab660b0d"
+		"file"		"steamcmd_bins_linuxarm64.zip.d1a6f39c3ee62a2f1e17f477024439ad9038456d"
+		"size"		"17124585"
+		"sha2"		"456bd627f37e214c3ab55565feb5805e526e5adbf5ebb2b0c3753787013209bc"
+		"zipvz"		"steamcmd_bins_linuxarm64.zip.vz.9c4111c768ee0f000b372ee1897b20e8cac04d68_10433205"
+		"sha2vz"		"319fdb8c1fa337a22c139044c858e8ee07189467a02b915342e4838b5d400af7"
 	}
 	"steamcmd_siteserverui_linuxarm64"
 	{
@@ -25,19 +25,19 @@
 	}
 	"steamcmd_linuxarm64"
 	{
-		"file"		"steamcmd_linuxarm64.zip.01546fd480b0347f4cd7a3f8e1584304d30f3cac"
-		"size"		"3689744"
-		"sha2"		"2cb2995eff642eac257d2782cf5f77e427e2cbf5fd0b53c0116eea237e8956d7"
-		"zipvz"		"steamcmd_linuxarm64.zip.vz.689fb5958aecb6f98c36a01d2163930781bf4430_2673956"
-		"sha2vz"		"20c1bf031af1b57d978f6763d7c7f7510218f7c4c9671f85cdb4ae16d3c4605f"
+		"file"		"steamcmd_linuxarm64.zip.d30bd67f4322038087ec8c0ffcffff1bdfa21f2e"
+		"size"		"3689741"
+		"sha2"		"39b10b1b889ac5df3c820fc0e9c85815d4f317169b043d2be4ae43077acc2b15"
+		"zipvz"		"steamcmd_linuxarm64.zip.vz.8f2aa56b1a9a517cecb406814023d231e9075ec0_2674938"
+		"sha2vz"		"f9977ad5d91f141a4cb6501223bccab4b443e182e6a37579b7cf3e7028ecf903"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsign2"
 {
-	"linuxarm64"		"b277bbd166328375377678ef0c5264abc5016759cabe09e78f9ae77f04d359215a20cd09053a4ab62c592b60245f3998b508b41b1e13b027d86688a427d05003"
+	"linuxarm64"		"7406f0c6d5fc001a375debab3633c594815bcfec297f962759206d248a6312c341b880d9bc735fe1be35fd10bf264f356c9137173c0919ceb2290ea00d2e1b00"
 }
 "kvsignatures"
 {
-	"linuxarm64"		"09ef10de070c7a5c8b5025422f67355df8cd54b7dc20c361d332c0fb832fbcd8d0d934b01f651dcd8b3420a631f43dca754d4e1c01668ed6a9f8dac3b06251956d9f3f7ba53fb348e8f97cf144da3ece17185b19150f9a7a5e1b9cfa72febc91fd0b930c29c90c4ebeed4956e9d32ceaf9a0d9c14aad2891fc6c24bb55b17747"
+	"linuxarm64"		"11fb16534679b391fe04ed02cb19818d175acb4edef4d5e61e690ebc4f9e7774a952283e5545c07ecbfaef3dc1b62167a6e45b839041f46503726cccc1e60c01c11c36fa3849fedc64566117e69a5ed63b74931a6fa7ee823e999bf4114ac9748c58ae3c0074b22bf9f394779cbe0cc4f5148804685283fba5559eec7074651d"
 }
