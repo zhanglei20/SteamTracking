@@ -289,6 +289,32 @@ function _() {
               }),
           ],
         }),
+      _.bIsValveAdmin &&
+        (0, _.jsxs)(_, {
+          direction: `column`,
+          gap: `2`,
+          children: [
+            (0, _.jsx)(`div`, {
+              className: `tvRMtdP6--U-`,
+              children: _.Localize(`#Workshop_Section_GameManaged`),
+            }),
+            (0, _.jsx)(_, {
+              className: (0, _.default)(`EEj7KkET8kk-`, `SLYW0mdzEK4-`),
+              onActivate: () => _(`gamemanageditems`, `trend`),
+              children: _.Localize(`#Workshop_BrowseSort_MostPopular`),
+            }),
+            (0, _.jsx)(_, {
+              className: (0, _.default)(`EEj7KkET8kk-`, `SLYW0mdzEK4-`),
+              onActivate: () => _(`gamemanageditems`, `toprated`),
+              children: _.Localize(`#Workshop_BrowseSort_TopRated`),
+            }),
+            (0, _.jsx)(_, {
+              className: (0, _.default)(`EEj7KkET8kk-`, `SLYW0mdzEK4-`),
+              onActivate: () => _(`gamemanageditems`, `mostrecent`),
+              children: _.Localize(`#Workshop_BrowseSort_MostRecent`),
+            }),
+          ],
+        }),
       _.feature_item_merch &&
         (0, _.jsxs)(_, {
           direction: `column`,
