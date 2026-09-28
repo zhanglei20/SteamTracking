@@ -2581,7 +2581,39 @@ GHomepage = {
 			GHomepage.cSpotlightDailyDealsPlaced++;
 		}
 
+		if ( GHomepage.cSpotlightDailyDealsPlaced )
+		{
+			GHomepage.ShuffleSpotlightDailyDeals( $Pages );
+		}
+
 		GDynamicStore.DecorateDynamicItems( $J( '#spotlight_carousel' ) );
+	},
+
+	// Purpose: mix the recommended daily deals in among the scheduled ones, rather than leaving them trailing.  The
+	// deals trade places with each other, so the slots they fill stay where they are, and each one's links are given
+	// the depth of the page it lands on.
+	ShuffleSpotlightDailyDeals: function( $Pages )
+	{
+		var rgDeals = $J( '.store_capsule.daily_deal', $Pages ).get();
+
+		// Mark every slot before moving anything, so a deal can go into a slot another deal hasn't left yet
+		var rgMarkers = rgDeals.map( function( elDeal ) { return $J( '<span/>' ).insertBefore( elDeal ); } );
+
+		var rgShuffled = v_shuffle( rgDeals.slice() );
+		for ( var iSlot = 0; iSlot < rgMarkers.length; iSlot++ )
+		{
+			var $Deal = $J( rgShuffled[ iSlot ] );
+			rgMarkers[ iSlot ].replaceWith( $Deal );
+
+			var nDepth = $Pages.index( $Deal.closest( '.home_special_offers_group' ) ) + 1;
+			$Deal.find( 'a' ).addBack( 'a' ).each( function() {
+				ModifyLinkSNR( $J( this ), function( snr ) {
+					var rgParts = snr.split( '_' );
+					rgParts[5] = nDepth;
+					return rgParts.join( '_' );
+				} );
+			} );
+		}
 	},
 
 	// Purpose: build a daily deal capsule for an app, matching what the server renders for a scheduled one.
