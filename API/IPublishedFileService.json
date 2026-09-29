@@ -421,6 +421,11 @@
                     "name": "reason",
                     "type": "string",
                     "optional": false
+                },
+                {
+                    "name": "content_report_reason",
+                    "type": "{enum}",
+                    "optional": false
                 }
             ]
         },
