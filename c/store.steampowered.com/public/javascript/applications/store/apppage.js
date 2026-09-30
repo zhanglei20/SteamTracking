@@ -571,6 +571,10 @@
         ShopLink: "lqD2vDqW515szC9Dt3o8c",
         Items: "pge6cRE3xuT4D-kvcijJs",
         ActivateLabel: "Ywd6FXH3HxWEfSO_4XhD",
+        Link: "_2773Feh3LQ2SD5dtpRj6hJ",
+        AllText: "IfnLtAVfojeH3V-6ObQjr",
+        Narrow: "_1ElroLhDfZVa0RFIGapb2J",
+        Wide: "_3wGfw-n0Vvme1W7TMRVn1I",
         ShowLink: "_1VS2woF-3sJBcdv8ku8V7m",
         FooterLink: "_149N2e_DXzh0C1cZl4mai1",
         ResponsiveLink: "V1oPnW4SHTQZyfLtIOACA",
@@ -19857,7 +19861,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             title: _,
@@ -19865,6 +19870,9 @@
             url: _,
             linkType: _ = "overlay",
             children: _,
+            total_count: _,
+            link_footer: _,
+            block_footer: _,
           } = _,
           _ = (0, _._)()
             ? (0, _.jsx)(_._, {
@@ -19882,49 +19890,106 @@
                 weight: "regular",
                 children: _,
               }),
-          _ = "footer" == _ && _().FooterLink;
+          _ = "footer" == _ ? _().FooterLink : void 0,
+          _ =
+            null == _
+              ? _.Localize("#ShopLink_ViewAllNoCount")
+              : _.Localize("#ShopLink_ViewAll", _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsxs)(_._, {
-              className: (0, _._)(_().ShopLink, _),
-              "flow-children": "column",
-              focusClassName: _().ShowLink,
-              focusable: !0,
-              href: _,
-              children: [
-                _,
-                (0, _.jsx)(_._, {
-                  direction: "row",
-                  gap: "1",
-                  className: _().Items,
-                  children: _,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().ActivateLabel,
-                  children: (0, _.jsx)(_._, {
-                    background: "blue-8",
-                    padding: "2",
-                    radius: "sm",
-                    children: (0, _.jsx)(_._, {
-                      size: "2",
-                      contrast: "title",
-                      children: _,
-                    }),
-                  }),
-                }),
-              ],
-            }),
             (0, _.jsx)(_, {
               title: _,
-              link_text: _,
+              link_text: _ ?? _,
               url: _,
+            }),
+            (0, _.jsx)("div", {
+              className: "noOpinionatedGlobalStyles",
+              children: (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "2",
+                className: _().ShopLink,
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: (0, _._)(_, _().Link),
+                    "flow-children": "column",
+                    focusClassName: _().ShowLink,
+                    focusable: !0,
+                    href: _,
+                    "aria-label": _,
+                    children: [
+                      _,
+                      (0, _.jsxs)(_._, {
+                        autoFlow: "column",
+                        autoColumns: "1fr",
+                        gap: "2",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        className: _().Items,
+                        children: [
+                          _,
+                          (0, _.jsx)(_, {
+                            total_count: _,
+                          }),
+                        ],
+                      }),
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: _().ActivateLabel,
+                          children: (0, _.jsx)(_._, {
+                            background: "blue-8",
+                            padding: "2",
+                            radius: "sm",
+                            children: (0, _.jsx)(_._, {
+                              size: "2",
+                              contrast: "title",
+                              children: _,
+                            }),
+                          }),
+                        }),
+                      _,
+                    ],
+                  }),
+                  _,
+                ],
+              }),
             }),
           ],
         });
       }
       function _(_) {
-        const { title: _, link_text: _, url: _ } = _;
+        const { total_count: _ } = _,
+          _ = null == _ ? _.Localize("#ShopLink_ViewAllEllipsis") : (0, _._)(_);
         return (0, _.jsx)(_._, {
+          className: _().AllText,
+          height: "100%",
+          background: "greyneutral-5",
+          children: (0, _.jsxs)(_._, {
+            alignSelf: "center",
+            textAlign: "center",
+            justifySelf: "center",
+            children: [
+              (0, _.jsx)(_._, {
+                contrast: "description",
+                className: _().Wide,
+                children: _.Localize("#ShopLink_ViewAllNoCount"),
+              }),
+              (0, _.jsx)(_._, {
+                contrast: "description",
+                className: _().Narrow,
+                children: _.Localize("#ShopLink_ViewAllPlus"),
+              }),
+              (0, _.jsx)(_._, {
+                contrast: "description",
+                className: _().Number,
+                children: _,
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { title: _, link_text: _, url: _ } = _;
+        return (0, _.jsx)("a", {
           href: _,
           className: _().ResponsiveLink,
           children: (0, _.jsxs)(_._, {
@@ -19961,32 +20026,34 @@
       }
       function _(_) {
         const { appid: _, items: _, total_count: _, shop_url: _ } = _;
-        if ((_.use(_.Ready()), !_?.length)) return null;
-        const _ = 90 / _.length + "%";
-        return (0, _.jsx)(_, {
-          title: _.Localize("#AppPage_PointsShop_Header"),
-          link_text: _.Localize("#AppPage_PointsShop_ViewAll", (0, _._)(_)),
-          url: _,
-          linkType: "footer",
-          children: __webpack_require__.map((_) =>
-            (0, _.jsx)(
-              _._,
-              {
-                maxWidth: _,
-                alignSelf: "center",
-                children: (0, _.jsx)(_, {
-                  className: (0, _._)(
-                    _().ItemImage,
-                    _.item_class == _._ && _().ProfileBackground,
+        return (
+          _.use(_.Ready()),
+          _?.length
+            ? (0, _.jsx)(_, {
+                title: _.Localize("#AppPage_PointsShop_Header"),
+                url: _,
+                linkType: "footer",
+                total_count: _,
+                children: __webpack_require__.map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      alignSelf: "center",
+                      children: (0, _.jsx)(_, {
+                        className: (0, _._)(
+                          _().ItemImage,
+                          _.item_class == _._ && _().ProfileBackground,
+                        ),
+                        src: _(_, _),
+                        alt: _.title,
+                      }),
+                    },
+                    _.defid,
                   ),
-                  src: _(_, _),
-                  alt: _.title,
-                }),
-              },
-              _.defid,
-            ),
-          ),
-        });
+                ),
+              })
+            : null
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -20009,9 +20076,10 @@
                 url: _,
                 children: _.map((_) =>
                   (0, _.jsxs)(
-                    "div",
+                    _._,
                     {
                       className: _().Item,
+                      textAlign: "center",
                       children: [
                         (0, _.jsx)(_, {
                           className: _().ItemImage,
@@ -20261,21 +20329,72 @@
         });
       }
       function _(_) {
-        const { appid: _, iconCount: _ = 5 } = _;
+        const { appid: _, iconCount: _ = 4 } = _;
         _.use(_.Ready());
         const _ = (function (_) {
             const { data: _ } = _(_);
             if (!_) return;
-            const _ = _.groups
-              .flatMap((_) => _.achievements)
-              .filter((_) => !_.archived);
-            return _?.length ? _ : void 0;
+            const _ = new Set(),
+              _ = [];
+            for (const _ of _.groups) {
+              const _ = _.achievements.filter((_) => !_.archived);
+              _ &&
+                _?.length &&
+                !_.archived &&
+                (_.dlcappid
+                  ? __webpack_require__.add(_.dlcappid)
+                  : _.push(..._));
+            }
+            return _?.length
+              ? {
+                  achievements: _,
+                  nDLCCount: 0,
+                  nGroupCount: 1,
+                }
+              : void 0;
           })(_),
           _ = (0, _._)();
         if (!_) return null;
-        const _ = _.filter((_) => !_.hidden).slice(0, _),
+        const { achievements: _, nDLCCount: _, nGroupCount: _ } = _,
+          _ = _.filter((_) => !_.hidden).slice(0, _),
           _ = Array(_ - _.length).fill(void 0),
-          _ = `${_._.COMMUNITY_BASE_URL}stats/${_}/achievements`;
+          _ = `${_._.COMMUNITY_BASE_URL}stats/${_}/achievements`,
+          _ = `${_._.COMMUNITY_BASE_URL}stats/${_}/achievements`,
+          _ =
+            0 != _ && _
+              ? (0, _.jsx)(_._, {
+                  color: "plum-8",
+                  size: "2",
+                  children: _.Localize("#AppPage_Achievements_DLCCount", _),
+                })
+              : null,
+          _ =
+            0 == _ || _
+              ? null
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    _ > 1 &&
+                      (0, _.jsx)(_._, {
+                        size: "2",
+                        contrast: "title",
+                        href: _,
+                        children: _.Localize(
+                          "#AppPage_Achievements_GroupCount",
+                          _,
+                        ),
+                      }),
+                    (0, _.jsx)(_._, {
+                      size: "2",
+                      color: "plum-8",
+                      href: _,
+                      children: _.Localize("#AppPage_Achievements_DLCCount", _),
+                    }),
+                  ],
+                }),
+          _ =
+            _ <= 1 || !_
+              ? void 0
+              : _.Localize("#AppPage_Achievements_GroupCount", _);
         return (0, _.jsxs)(_, {
           title: _.Localize(
             _
@@ -20283,8 +20402,11 @@
               : "#AppPage_Achievements_Header_Desktop",
           ),
           linkType: "footer",
-          link_text: _.Localize("#AppPage_Achievements_ViewAll", _.length),
+          link_text: _,
+          total_count: _?.length,
           url: _,
+          link_footer: _,
+          block_footer: _,
           children: [
             _.map((_, _) => (0, _.jsx)(_._, {}, _)),
             _.map((_, _) =>

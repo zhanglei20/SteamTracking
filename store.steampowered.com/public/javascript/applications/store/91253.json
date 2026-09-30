@@ -541,8 +541,11 @@
     "AppPage_MatureContent_Descriptors_Guide": "This Guide may contain content not appropriate for all ages, or may not be appropriate for viewing at work: %1$s",
     "AppPage_MatureContent_Descriptors_Hardware": "This Hardware may contain content not appropriate for all ages, or may not be appropriate for viewing at work: %1$s",
     "AppPage_MatureContent_Descriptors_Music": "This Soundtrack may contain content not appropriate for all ages, or may not be appropriate for viewing at work: %1$s",
+    "ShopLink_ViewAllNoCount": "View All",
+    "ShopLink_ViewAll": "View All %1$s",
+    "ShopLink_ViewAllPlus": "+",
+    "ShopLink_ViewAllEllipsis": "...",
     "AppPage_PointsShop_Header": "POINTS SHOP ITEMS",
-    "AppPage_PointsShop_ViewAll": "View all %1$s items",
     "AppPage_ItemShop_Header": "ITEMS AVAILABLE FOR THIS GAME",
     "AppPage_ItemShop_ShopAll": "View available items",
     "AppPage_LinksAndInfo_Header": "LINKS & INFO",
@@ -568,6 +571,7 @@
     "DeckTopPlayedAppBanner_GameText_LongTest": "%1$s is one of the top 100 games played on Steam Deck! Extra for a super long language!",
     "AppPage_Achievements_Header": "STEAM ACHIEVEMENTS",
     "AppPage_Achievements_Header_Desktop": "Steam Achievements",
-    "AppPage_Achievements_ViewAll": "View all %1$s achievements",
+    "AppPage_Achievements_GroupCount": "Includes %1$s Achievement Groups",
+    "AppPage_Achievements_DLCCount": "%1$s DLC available with additional Achievements",
     "AppPage_Achievements_Banner": "View Steam Achievements <1>(%1$s)</1>"
 }

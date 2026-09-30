@@ -559,6 +559,10 @@
         ShopLink: "lqD2vDqW515szC9Dt3o8c",
         Items: "pge6cRE3xuT4D-kvcijJs",
         ActivateLabel: "Ywd6FXH3HxWEfSO_4XhD",
+        Link: "_2773Feh3LQ2SD5dtpRj6hJ",
+        AllText: "IfnLtAVfojeH3V-6ObQjr",
+        Narrow: "_1ElroLhDfZVa0RFIGapb2J",
+        Wide: "_3wGfw-n0Vvme1W7TMRVn1I",
         ShowLink: "_1VS2woF-3sJBcdv8ku8V7m",
         FooterLink: "_149N2e_DXzh0C1cZl4mai1",
         ResponsiveLink: "V1oPnW4SHTQZyfLtIOACA",
@@ -2739,9 +2743,9 @@
       "use strict";
       r.r(t),
         r.d(t, {
-          AppGameInterestCacheInit: () => Dm,
-          AppStoreBrowseCacheInit: () => Wm,
-          default: () => Om,
+          AppGameInterestCacheInit: () => Um,
+          AppStoreBrowseCacheInit: () => qm,
+          default: () => Wm,
         });
       var n = r(7850),
         i = r(90626),
@@ -17600,16 +17604,20 @@
         Up = r(30452),
         qp = r.n(Up),
         Gp = r(94255),
-        Hp = r.n(Gp);
-      function Yp(e) {
+        Hp = r.n(Gp),
+        Yp = r(82227);
+      function Vp(e) {
         const {
             title: t,
             link_text: r,
             url: i,
             linkType: a = "overlay",
             children: s,
+            total_count: o,
+            link_footer: l,
+            block_footer: c,
           } = e,
-          o = (0, B.Qn)()
+          d = (0, B.Qn)()
             ? (0, n.jsx)(yt.EY, {
                 contrast: "title",
                 size: "2",
@@ -17623,45 +17631,100 @@
                 weight: "regular",
                 children: t,
               }),
-          l = "footer" == a && Hp().FooterLink;
+          p = "footer" == a ? Hp().FooterLink : void 0,
+          m =
+            null == o
+              ? $e.Localize("#ShopLink_ViewAllNoCount")
+              : $e.Localize("#ShopLink_ViewAll", o);
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsxs)(u.Ii, {
-              className: (0, J.A)(Hp().ShopLink, l),
-              "flow-children": "column",
-              focusClassName: Hp().ShowLink,
-              focusable: !0,
-              href: i,
-              children: [
-                o,
-                (0, n.jsx)(ft.s, {
-                  direction: "row",
-                  gap: "1",
-                  className: Hp().Items,
-                  children: s,
-                }),
-                (0, n.jsx)("div", {
-                  className: Hp().ActivateLabel,
-                  children: (0, n.jsx)(bt.az, {
-                    background: "blue-8",
-                    padding: "2",
-                    radius: "sm",
-                    children: (0, n.jsx)(yt.EY, {
-                      size: "2",
-                      contrast: "title",
-                      children: r,
-                    }),
+            (0, n.jsx)($p, { title: t, link_text: r ?? m, url: i }),
+            (0, n.jsx)("div", {
+              className: "noOpinionatedGlobalStyles",
+              children: (0, n.jsxs)(ft.s, {
+                direction: "column",
+                gap: "2",
+                className: Hp().ShopLink,
+                children: [
+                  (0, n.jsxs)(u.Ii, {
+                    className: (0, J.A)(p, Hp().Link),
+                    "flow-children": "column",
+                    focusClassName: Hp().ShowLink,
+                    focusable: !0,
+                    href: i,
+                    "aria-label": m,
+                    children: [
+                      d,
+                      (0, n.jsxs)(as.x, {
+                        autoFlow: "column",
+                        autoColumns: "1fr",
+                        gap: "2",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        className: Hp().Items,
+                        children: [s, (0, n.jsx)(Kp, { total_count: o })],
+                      }),
+                      r &&
+                        (0, n.jsx)("div", {
+                          className: Hp().ActivateLabel,
+                          children: (0, n.jsx)(bt.az, {
+                            background: "blue-8",
+                            padding: "2",
+                            radius: "sm",
+                            children: (0, n.jsx)(yt.EY, {
+                              size: "2",
+                              contrast: "title",
+                              children: r,
+                            }),
+                          }),
+                        }),
+                      l,
+                    ],
                   }),
-                }),
-              ],
+                  c,
+                ],
+              }),
             }),
-            (0, n.jsx)(Vp, { title: t, link_text: r, url: i }),
           ],
         });
       }
-      function Vp(e) {
+      function Kp(e) {
+        const { total_count: t } = e,
+          r =
+            null == t
+              ? $e.Localize("#ShopLink_ViewAllEllipsis")
+              : (0, Yp.NO)(t);
+        return (0, n.jsx)(as.x, {
+          className: Hp().AllText,
+          height: "100%",
+          background: "greyneutral-5",
+          children: (0, n.jsxs)(bt.az, {
+            alignSelf: "center",
+            textAlign: "center",
+            justifySelf: "center",
+            children: [
+              (0, n.jsx)(yt.EY, {
+                contrast: "description",
+                className: Hp().Wide,
+                children: $e.Localize("#ShopLink_ViewAllNoCount"),
+              }),
+              (0, n.jsx)(yt.EY, {
+                contrast: "description",
+                className: Hp().Narrow,
+                children: $e.Localize("#ShopLink_ViewAllPlus"),
+              }),
+              (0, n.jsx)(yt.EY, {
+                contrast: "description",
+                className: Hp().Number,
+                children: r,
+              }),
+            ],
+          }),
+        });
+      }
+      function $p(e) {
         const { title: t, link_text: r, url: i } = e;
-        return (0, n.jsx)(u.Ii, {
+        return (0, n.jsx)("a", {
           href: i,
           className: Hp().ResponsiveLink,
           children: (0, n.jsxs)(ft.s, {
@@ -17683,7 +17746,7 @@
           }),
         });
       }
-      function Kp(e, t) {
+      function Zp(e, t) {
         switch (t.item_class) {
           case Dp.sU:
           case Dp.zs:
@@ -17694,66 +17757,69 @@
             return (0, Wp.k)(e, t.image_large);
         }
       }
-      function $p(e) {
+      function Jp(e) {
         const { appid: t, items: r, total_count: a, shop_url: s } = e;
-        if ((i.use($e.Ready()), !r?.length)) return null;
-        const o = 90 / r.length + "%";
-        return (0, n.jsx)(Yp, {
-          title: $e.Localize("#AppPage_PointsShop_Header"),
-          link_text: $e.Localize("#AppPage_PointsShop_ViewAll", (0, Va.D)(a)),
-          url: s,
-          linkType: "footer",
-          children: r.map((e) =>
-            (0, n.jsx)(
-              bt.az,
-              {
-                maxWidth: o,
-                alignSelf: "center",
-                children: (0, n.jsx)($i, {
-                  className: (0, J.A)(
-                    qp().ItemImage,
-                    e.item_class == Dp.sU && qp().ProfileBackground,
+        return (
+          i.use($e.Ready()),
+          r?.length
+            ? (0, n.jsx)(Vp, {
+                title: $e.Localize("#AppPage_PointsShop_Header"),
+                url: s,
+                linkType: "footer",
+                total_count: a,
+                children: r.map((e) =>
+                  (0, n.jsx)(
+                    bt.az,
+                    {
+                      alignSelf: "center",
+                      children: (0, n.jsx)($i, {
+                        className: (0, J.A)(
+                          qp().ItemImage,
+                          e.item_class == Dp.sU && qp().ProfileBackground,
+                        ),
+                        src: Zp(t, e),
+                        alt: e.title,
+                      }),
+                    },
+                    e.defid,
                   ),
-                  src: Kp(t, e),
-                  alt: e.title,
-                }),
-              },
-              e.defid,
-            ),
-          ),
-        });
+                ),
+              })
+            : null
+        );
       }
-      var Zp = r(30820),
-        Jp = r.n(Zp);
-      const Qp = 256;
-      function Xp(e) {
-        const t = `${Ge.TS.COMMUNITY_CDN_URL}economy/image/${e}/${Qp}fx${Qp}f`;
+      var Qp = r(30820),
+        Xp = r.n(Qp);
+      const em = 256;
+      function tm(e) {
+        const t = `${Ge.TS.COMMUNITY_CDN_URL}economy/image/${e}/${em}fx${em}f`;
         return { src: t, srcSet: `${t} 1x, ${t}dpx2x 2x` };
       }
-      function em(e) {
+      function rm(e) {
         const { items: t, shop_url: r } = e;
         return (
           i.use($e.Ready()),
           t?.length
-            ? (0, n.jsx)(Yp, {
+            ? (0, n.jsx)(Vp, {
                 title: $e.Localize("#AppPage_ItemShop_Header"),
                 link_text: $e.Localize("#AppPage_ItemShop_ShopAll"),
                 url: r,
                 children: t.map((e) =>
                   (0, n.jsxs)(
-                    "div",
+                    bt.az,
                     {
-                      className: Jp().Item,
+                      className: Xp().Item,
+                      textAlign: "center",
                       children: [
                         (0, n.jsx)($i, {
-                          className: Jp().ItemImage,
-                          ...Xp(e.icon_url),
+                          className: Xp().ItemImage,
+                          ...tm(e.icon_url),
                           alt: e.name,
                         }),
                         (0, n.jsx)(yt.EY, {
                           size: "2",
                           weight: "heavy",
-                          className: Jp().Price,
+                          className: Xp().Price,
                           children: e.price,
                         }),
                       ],
@@ -17765,38 +17831,38 @@
             : null
         );
       }
-      const tm = "steamQueryPersist";
-      const rm = i.createContext(void 0);
-      rm.Provider;
-      function nm(e, t, r) {
-        return { ...e, [tm]: { area: t, maxAgeSeconds: r } };
+      const nm = "steamQueryPersist";
+      const im = i.createContext(void 0);
+      im.Provider;
+      function am(e, t, r) {
+        return { ...e, [nm]: { area: t, maxAgeSeconds: r } };
       }
       Date.now();
-      var im = r(42457);
-      const am = 0;
-      function sm(e, ...t) {
+      var sm = r(42457);
+      const om = 0;
+      function lm(e, ...t) {
         return ["achievements", e, ...t];
       }
-      const om = (e) => sm(e, "schema");
-      function lm(e, t) {
+      const cm = (e) => lm(e, "schema");
+      function dm(e, t) {
         if (void 0 !== t && "" !== t)
           return `${ht.TS.BASE_URL_SHARED_CDN}community_assets/images/apps/${e}/${t}`;
       }
-      function cm(e) {
+      function um(e) {
         return {
           ...e,
           groups: e.groups.map((e) =>
-            e.id === am ? { ...e, name: "Base game" } : e,
+            e.id === om ? { ...e, name: "Base game" } : e,
           ),
         };
       }
-      function dm(e, t) {
+      function pm(e, t) {
         return {
-          queryKey: om(t),
+          queryKey: cm(t),
           queryFn: async () => {
             const r = ht.TS.LANGUAGE,
               n = (async function (e, t, r) {
-                const n = await im.xtC.GetGameAchievements(e, {
+                const n = await sm.xtC.GetGameAchievements(e, {
                   appid: t,
                   language: r,
                 });
@@ -17819,8 +17885,8 @@
                     ))
                   );
                 const i = {};
-                (i[am] = {
-                  id: am,
+                (i[om] = {
+                  id: om,
                   archived: !1,
                   developeronly: !1,
                   ispublic: !0,
@@ -17849,7 +17915,7 @@
                     .Body()
                     .toObject()
                     ?.achievements?.forEach((e) => {
-                      const r = e.groupid ?? am;
+                      const r = e.groupid ?? om;
                       i[r].achievements.push({
                         internal_key: e.internal_key ?? 0,
                         api_name: e.internal_name ?? "",
@@ -17857,9 +17923,9 @@
                         description: e.localized_desc,
                         hidden: e.hidden ?? !1,
                         archived: e.archived ?? !1,
-                        icon_achieved: lm(t, e.icon),
-                        icon_unachieved: lm(t, e.icon_gray),
-                        groupid: e.groupid ?? am,
+                        icon_achieved: dm(t, e.icon),
+                        icon_unachieved: dm(t, e.icon_gray),
+                        groupid: e.groupid ?? om,
                         min_progress:
                           e.min_progress_int ?? e.min_progress_float,
                         max_progress:
@@ -17879,23 +17945,23 @@
               })(e, t, r);
             return n;
           },
-          select: cm,
+          select: um,
           staleTime: 864e5,
           area: "achievements",
         };
       }
-      function um(e) {
+      function mm(e) {
         return (function (e) {
           const { area: t, maxAgeSeconds: r, meta: n, ...a } = e,
-            s = i.useContext(rm),
-            o = i.useMemo(() => nm(n, t, r), [n, t, r]);
+            s = i.useContext(im),
+            o = i.useMemo(() => am(n, t, r), [n, t, r]);
           return (0, vt.I)({ ...a, meta: o, persister: s?.GetPersister(t) });
-        })(dm((0, Hr.KV)(), e));
+        })(pm((0, Hr.KV)(), e));
       }
-      var pm = r(93237),
-        mm = r.n(pm);
-      const _m = 10;
-      function gm(e) {
+      var _m = r(93237),
+        gm = r.n(_m);
+      const hm = 10;
+      function fm(e) {
         const {
             imgURL: t,
             glow: r,
@@ -17922,31 +17988,31 @@
           })(c);
         return (0, n.jsxs)("div", {
           className: (0, J.A)(
-            mm().AchievementIconWrapper,
+            gm().AchievementIconWrapper,
             l,
-            a && mm().RareAchievementNoAnimation,
+            a && gm().RareAchievementNoAnimation,
           ),
           style: g,
           ...d,
           children: [
             _ &&
               (0, n.jsx)("div", {
-                className: mm().RareAchievementIconGlowContainerRoot,
+                className: gm().RareAchievementIconGlowContainerRoot,
                 children: (0, n.jsx)("div", {
-                  className: mm().RareAchievementIconGlowContainer,
+                  className: gm().RareAchievementIconGlowContainer,
                   children: (0, n.jsx)("div", {
-                    className: mm().RareAchievementIconGlow,
+                    className: gm().RareAchievementIconGlow,
                   }),
                 }),
               }),
             s
               ? (0, n.jsx)("div", {
-                  className: (0, J.A)(mm().HiddenLabel, _ && mm().IconGlow),
+                  className: (0, J.A)(gm().HiddenLabel, _ && gm().IconGlow),
                   children: "?",
                 })
               : (0, n.jsx)("img", {
                   ref: m,
-                  className: (0, J.A)(mm().Icon, _ && mm().IconGlow),
+                  className: (0, J.A)(gm().Icon, _ && gm().IconGlow),
                   src: "" == t ? void 0 : t,
                   loading: "lazy",
                   alt: o,
@@ -17955,7 +18021,7 @@
           ],
         });
       }
-      function hm(e) {
+      function ym(e) {
         const {
             achievement: t,
             globalUnlockPercentage: r,
@@ -17966,41 +18032,92 @@
           } = e,
           l = s ?? (!i && !a && t.hidden),
           c = (i ? t.icon_achieved : t.icon_unachieved) ?? "",
-          d = i && void 0 !== (u = r) && u <= _m;
+          d = i && void 0 !== (u = r) && u <= hm;
         var u;
         const p = l ? "Hidden Achievement" : (t.name ?? " ");
-        return (0, n.jsx)(gm, { hidden: l, imgURL: c, glow: d, alt: p, ...o });
+        return (0, n.jsx)(fm, { hidden: l, imgURL: c, glow: d, alt: p, ...o });
       }
-      function fm(e) {
-        const { appid: t, iconCount: r = 5 } = e;
+      function bm(e) {
+        const { appid: t, iconCount: r = 4 } = e;
         i.use($e.Ready());
         const a = (function (e) {
-            const { data: t } = um(e);
+            const { data: t } = mm(e);
             if (!t) return;
-            const r = t.groups
-              .flatMap((e) => e.achievements)
-              .filter((e) => !e.archived);
-            return r?.length ? r : void 0;
+            const r = new Set(),
+              n = [];
+            for (const e of t.groups) {
+              const t = e.achievements.filter((e) => !e.archived);
+              t &&
+                t?.length &&
+                !e.archived &&
+                (e.dlcappid ? r.add(e.dlcappid) : n.push(...t));
+            }
+            return n?.length
+              ? { achievements: n, nDLCCount: 0, nGroupCount: 1 }
+              : void 0;
           })(t),
           s = (0, B.Qn)();
         if (!a) return null;
-        const o = a.filter((e) => !e.hidden).slice(0, r),
-          l = Array(r - o.length).fill(void 0),
-          c = `${Ge.TS.COMMUNITY_BASE_URL}stats/${t}/achievements`;
-        return (0, n.jsxs)(Yp, {
+        const { achievements: o, nDLCCount: l, nGroupCount: c } = a,
+          d = o.filter((e) => !e.hidden).slice(0, r),
+          u = Array(r - d.length).fill(void 0),
+          p = `${Ge.TS.COMMUNITY_BASE_URL}stats/${t}/achievements`,
+          m = `${Ge.TS.COMMUNITY_BASE_URL}stats/${t}/achievements`,
+          _ =
+            0 != l && s
+              ? (0, n.jsx)(yt.EY, {
+                  color: "plum-8",
+                  size: "2",
+                  children: $e.Localize("#AppPage_Achievements_DLCCount", l),
+                })
+              : null,
+          g =
+            0 == l || s
+              ? null
+              : (0, n.jsxs)(n.Fragment, {
+                  children: [
+                    c > 1 &&
+                      (0, n.jsx)(ua.Y, {
+                        size: "2",
+                        contrast: "title",
+                        href: p,
+                        children: $e.Localize(
+                          "#AppPage_Achievements_GroupCount",
+                          c,
+                        ),
+                      }),
+                    (0, n.jsx)(ua.Y, {
+                      size: "2",
+                      color: "plum-8",
+                      href: m,
+                      children: $e.Localize(
+                        "#AppPage_Achievements_DLCCount",
+                        l,
+                      ),
+                    }),
+                  ],
+                }),
+          h =
+            c <= 1 || !s
+              ? void 0
+              : $e.Localize("#AppPage_Achievements_GroupCount", c);
+        return (0, n.jsxs)(Vp, {
           title: $e.Localize(
             s
               ? "#AppPage_Achievements_Header"
               : "#AppPage_Achievements_Header_Desktop",
           ),
           linkType: "footer",
-          link_text: $e.Localize("#AppPage_Achievements_ViewAll", a.length),
-          url: c,
+          link_text: h,
+          total_count: o?.length,
+          url: p,
+          link_footer: _,
+          block_footer: g,
           children: [
-            l.map((e, t) => (0, n.jsx)(bt.az, {}, t)),
-            o.map((e, t) =>
+            u.map((e, t) => (0, n.jsx)(bt.az, {}, t)),
+            d.map((e, t) =>
               (0, n.jsx)(
-                hm,
+                ym,
                 { achievement: e, unlocked: !0, size: "fill" },
                 e.api_name,
               ),
@@ -18008,12 +18125,12 @@
           ],
         });
       }
-      var ym = r(64259),
-        bm = r(99382),
-        xm = r(35177),
-        jm = r.n(xm);
-      const wm = 30,
-        vm = [
+      var xm = r(64259),
+        jm = r(99382),
+        wm = r(35177),
+        vm = r.n(wm);
+      const Sm = 30,
+        Am = [
           {
             eType: wn.xY.kT,
             strPath: "quickref",
@@ -18030,7 +18147,7 @@
             strLabel: "#AppPage_LinksAndInfo_Warranty",
           },
         ];
-      function Sm(e) {
+      function Bm(e) {
         const { appid: t } = e,
           { data: r } = (0, H.J$)({ appid: t }),
           { data: a } = (0, H._F)({ appid: t }),
@@ -18040,18 +18157,18 @@
         if ((i.use($e.Ready()), !r)) return null;
         const c = ht.TS.EREALM === jo.TU.k_ESteamRealmChina;
         return (0, n.jsxs)(Ya.YZ, {
-          className: jm().LinksAndInfo,
+          className: vm().LinksAndInfo,
           children: [
             (0, n.jsx)(Uo, {
               text: $e.Localize("#AppPage_LinksAndInfo_Header"),
             }),
-            (0, n.jsx)(zm, {
+            (0, n.jsx)(Tm, {
               url: `${ht.TS.COMMUNITY_BASE_URL}app/${t}`,
               label: "#AppPage_LinksAndInfo_CommunityHub",
             }),
-            (!c || Bm(r)) &&
-              (0, n.jsx)(Am, {
-                children: (0, n.jsx)(Cm, {
+            (!c || zm(r)) &&
+              (0, n.jsx)(Cm, {
+                children: (0, n.jsx)(Rm, {
                   appid: t,
                   steamworksAppID: l,
                   app: r,
@@ -18066,7 +18183,7 @@
           ],
         });
       }
-      function Am(e) {
+      function Cm(e) {
         const [t, r] = i.useState(!1),
           a = i.useCallback(() => r((e) => !e), []);
         return (0, n.jsxs)(n.Fragment, {
@@ -18087,16 +18204,16 @@
             }),
             t &&
               (0, n.jsx)("div", {
-                className: jm().MoreLinks,
+                className: vm().MoreLinks,
                 children: e.children,
               }),
           ],
         });
       }
-      function Bm(e) {
+      function zm(e) {
         return e.type != wn.uE.RA && e.type != wn.uE.ue && e.type != wn.uE.FS;
       }
-      function Cm(e) {
+      function Rm(e) {
         const {
             appid: t,
             steamworksAppID: r,
@@ -18106,68 +18223,68 @@
             rgSocialLinks: o,
             bRequiresShipping: l,
           } = e,
-          c = !!i.categories?.feature_categoryids?.includes(wm);
+          c = !!i.categories?.feature_categoryids?.includes(Sm);
         return (0, n.jsxs)(n.Fragment, {
           children: [
             !a &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
                   l &&
-                    (0, n.jsx)(zm, {
+                    (0, n.jsx)(Tm, {
                       url: `${ht.TS.STORE_BASE_URL}hardware_order_terms`,
                       label: "#AppPage_LinksAndInfo_HardwareOrderTerms",
                       bStoreNav: !0,
                     }),
-                  (0, n.jsx)(Tm, {
+                  (0, n.jsx)(Im, {
                     url: s?.website,
                     label: $e.Localize("#AppPage_LinksAndInfo_Website"),
                   }),
                   o?.map((e) =>
                     (0, n.jsx)(
-                      Pm,
+                      Mm,
                       { social: e },
                       `${e.link_type}_${e.url ?? e.text}`,
                     ),
                   ),
-                  vm
-                    .filter((e) => s?.available_documents?.includes(e.eType))
-                    .map((e) =>
-                      (0, n.jsx)(
-                        Rm,
-                        {
-                          url: `${ht.TS.STORE_BASE_URL}${e.strPath}/${t}`,
-                          label: e.strLabel,
-                        },
-                        e.eType,
-                      ),
+                  Am.filter((e) =>
+                    s?.available_documents?.includes(e.eType),
+                  ).map((e) =>
+                    (0, n.jsx)(
+                      Pm,
+                      {
+                        url: `${ht.TS.STORE_BASE_URL}${e.strPath}/${t}`,
+                        label: e.strLabel,
+                      },
+                      e.eType,
                     ),
-                  (0, n.jsx)(Tm, {
+                  ),
+                  (0, n.jsx)(Im, {
                     url: s?.online_manual_url,
                     label: $e.Localize("#AppPage_LinksAndInfo_Manual"),
                   }),
-                  (0, n.jsx)(Tm, {
+                  (0, n.jsx)(Im, {
                     url: s?.health_warning_url,
                     label: $e.Localize("#AppPage_LinksAndInfo_HealthWarning"),
                   }),
-                  (0, n.jsx)(Tm, {
+                  (0, n.jsx)(Im, {
                     url: s?.privacy_policy_url,
                     label: $e.Localize("#AppPage_LinksAndInfo_PrivacyPolicy"),
                   }),
-                  (0, n.jsx)(Tm, {
+                  (0, n.jsx)(Im, {
                     url: s?.stats_url,
                     label: $e.Localize("#AppPage_LinksAndInfo_Stats"),
                   }),
                 ],
               }),
-            Bm(i) &&
+            zm(i) &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
-                  (0, n.jsx)(zm, {
+                  (0, n.jsx)(Tm, {
                     url: `${ht.TS.STORE_BASE_URL}newshub/?appids=${t}`,
                     label: "#AppPage_LinksAndInfo_UpdateHistory",
                     bStoreNav: !0,
                   }),
-                  (0, n.jsx)(zm, {
+                  (0, n.jsx)(Tm, {
                     url: `${ht.TS.STORE_BASE_URL}newshub/app/${t}`,
                     label: "#AppPage_LinksAndInfo_News",
                     bStoreNav: !0,
@@ -18178,12 +18295,12 @@
               (0, n.jsxs)(n.Fragment, {
                 children: [
                   c &&
-                    (0, n.jsx)(zm, {
+                    (0, n.jsx)(Tm, {
                       url: `${ht.TS.COMMUNITY_BASE_URL}app/${r}/workshop/`,
                       label: "#AppPage_LinksAndInfo_Workshop",
                     }),
                   i.name &&
-                    (0, n.jsx)(zm, {
+                    (0, n.jsx)(Tm, {
                       url: `${ht.TS.COMMUNITY_BASE_URL}actions/Search?T=ClanAccount&K=${encodeURIComponent(i.name)}`,
                       label: "#AppPage_LinksAndInfo_CommunityGroups",
                     }),
@@ -18192,11 +18309,11 @@
           ],
         });
       }
-      function zm(e) {
+      function Tm(e) {
         const { url: t, label: r, bStoreNav: i } = e,
           a = (0, Ye.aL)(i ? t : void 0);
         return (0, n.jsx)(u.Ii, {
-          className: jm().LinkRow,
+          className: vm().LinkRow,
           href: a || t,
           children: (0, n.jsx)(yt.EY, {
             color: "blue-8",
@@ -18204,46 +18321,46 @@
           }),
         });
       }
-      function Rm(e) {
+      function Pm(e) {
         const { url: t, label: r } = e;
         return (0, n.jsxs)(u.Ii, {
-          className: jm().LinkRow,
+          className: vm().LinkRow,
           href: ht.TS.IN_CLIENT ? `steam://openurl_external/${t}` : t,
           target: ht.TS.IN_CLIENT ? void 0 : "_blank",
           children: [
             (0, n.jsx)(yt.EY, { color: "blue-8", children: $e.Localize(r) }),
-            (0, n.jsx)(Im, {}),
+            (0, n.jsx)(Nm, {}),
           ],
         });
       }
-      function Tm(e) {
+      function Im(e) {
         const { url: t, label: r, children: i } = e,
           a = sd(t);
         return a
           ? (0, n.jsxs)(u.Ii, {
-              className: jm().LinkRow,
+              className: vm().LinkRow,
               href: a,
               target: ht.TS.IN_CLIENT ? void 0 : "_blank",
               rel: "noopener noreferrer",
               children: [
                 i,
                 (0, n.jsx)(yt.EY, { color: "blue-8", children: r }),
-                (0, n.jsx)(Im, {}),
+                (0, n.jsx)(Nm, {}),
               ],
             })
           : null;
       }
-      function Pm(e) {
+      function Mm(e) {
         const { social: t } = e,
           r = t.link_type ?? wn.jL.I0,
-          i = (0, bm.X)(r);
+          i = (0, jm.X)(r);
         if (!i) return null;
         const a = (0, b.we)(`#StoreAdmin_SocialMedia_Type_${i}`),
-          s = (0, n.jsx)(ym.k6, { linkType: r, className: jm().SocialIcon });
+          s = (0, n.jsx)(xm.k6, { linkType: r, className: vm().SocialIcon });
         return t.url
-          ? (0, n.jsx)(Tm, { url: t.url, label: a, children: s })
+          ? (0, n.jsx)(Im, { url: t.url, label: a, children: s })
           : (0, n.jsxs)("div", {
-              className: jm().LinkRow,
+              className: vm().LinkRow,
               children: [
                 s,
                 (0, n.jsx)(yt.EY, {
@@ -18253,18 +18370,18 @@
               ],
             });
       }
-      function Im() {
+      function Nm() {
         return (0, n.jsx)("span", {
-          className: jm().ExternalIcon,
+          className: vm().ExternalIcon,
           children: (0, n.jsx)(y.GrD, {}),
         });
       }
-      const Mm = i.lazy(() => r.e(85139).then(r.bind(r, 84929))),
-        Nm = i.lazy(async () => ({
+      const Lm = i.lazy(() => r.e(85139).then(r.bind(r, 84929))),
+        km = i.lazy(async () => ({
           default: (await r.e(85139).then(r.bind(r, 84929)))
             .SeasonPassDisplayFromStoreBrowse,
         })),
-        Lm = i.lazy(() =>
+        Em = i.lazy(() =>
           Promise.all([
             r.e(36597),
             r.e(87937),
@@ -18299,7 +18416,7 @@
             r.e(23027),
           ]).then(r.bind(r, 77727)),
         ),
-        km = i.lazy(() =>
+        Fm = i.lazy(() =>
           Promise.all([
             r.e(70514),
             r.e(29197),
@@ -18321,7 +18438,7 @@
             r.e(89672),
           ]).then(r.bind(r, 7734)),
         ),
-        Em = i.lazy(() =>
+        Om = i.lazy(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -18349,17 +18466,17 @@
             r.e(68396),
           ]).then(r.bind(r, 49850)),
         ),
-        Fm = i.lazy(async () => ({
+        Dm = i.lazy(async () => ({
           default: (await Promise.resolve().then(r.bind(r, 13229)))
             .AccessibilityFeatureDisplay,
         }));
-      function Om(e) {
+      function Wm(e) {
         const { appid: t } = e,
           r = (0, Te.Fd)("store_page_asset_url", "application_config");
         return (0, n.jsx)(Pp.W4, {
           store_page_asset_url: r,
-          children: (0, n.jsx)(Wm, {
-            children: (0, n.jsx)(Dm, {
+          children: (0, n.jsx)(qm, {
+            children: (0, n.jsx)(Um, {
               children: (0, n.jsxs)(tt.QA, {
                 eAdultOnlyMediaBehavior: "allowed",
                 children: [
@@ -18371,7 +18488,7 @@
                         }),
                       "deck-topplayed-banner": (e) => (0, n.jsx)(Qe, { ...e }),
                       "steamawardsvote-embed": () =>
-                        (0, n.jsx)(Lm, { appID: t }),
+                        (0, n.jsx)(Em, { appID: t }),
                       "demo-and-quick-pitch": () =>
                         (0, n.jsx)(et.d, {
                           children: (0, n.jsx)(K, { appID: t }),
@@ -18392,7 +18509,7 @@
                       "gamehighlight-desktopcarousel": (e) =>
                         (0, n.jsx)(pr, { ...e }),
                       "discovery-queue-app-widget": () =>
-                        (0, n.jsx)(km, { appID: t }),
+                        (0, n.jsx)(Fm, { appID: t }),
                       "game-notice-controller-required": () =>
                         (0, n.jsx)(se, {
                           appid: t,
@@ -18406,9 +18523,9 @@
                         (0, n.jsx)(se, {
                           type: re.EPurchaseNoticeType_VRSupported,
                         }),
-                      "season-pass-display": (e) => (0, n.jsx)(Mm, { ...e }),
+                      "season-pass-display": (e) => (0, n.jsx)(Lm, { ...e }),
                       "season-pass-display-gamepad": () =>
-                        (0, n.jsx)(Nm, { appid: t }),
+                        (0, n.jsx)(km, { appid: t }),
                       "storeitems-carousel": (e) =>
                         (0, n.jsx)(Pe.Ay, {
                           feature: "recommended",
@@ -18465,7 +18582,7 @@
                       "referring-curator-review": (e) =>
                         (0, n.jsx)(od, { ...e }),
                       "game-rating": () => (0, n.jsx)(Nd, { appid: t }),
-                      achievements: () => (0, n.jsx)(fm, { appid: t }),
+                      achievements: () => (0, n.jsx)(bm, { appid: t }),
                       "early-access": (e) => (0, n.jsx)(ao, { ...e, appid: t }),
                       "ownership-banner": (e) =>
                         (0, n.jsx)(Pe.Ay, {
@@ -18473,9 +18590,9 @@
                           children: (0, n.jsx)(Fd, { ...e, appid: t }),
                         }),
                       "store-awards": () => (0, n.jsx)(Op, { appid: t }),
-                      "points-shop-items": (e) => (0, n.jsx)($p, { ...e }),
-                      "item-shop-items": (e) => (0, n.jsx)(em, { ...e }),
-                      "links-and-info": () => (0, n.jsx)(Sm, { appid: t }),
+                      "points-shop-items": (e) => (0, n.jsx)(Jp, { ...e }),
+                      "item-shop-items": (e) => (0, n.jsx)(rm, { ...e }),
+                      "links-and-info": () => (0, n.jsx)(Bm, { appid: t }),
                       "write-review": (e) =>
                         (0, n.jsx)(Pe.Ay, {
                           feature: "owned-game",
@@ -18488,9 +18605,9 @@
                     config: {
                       "review-award": () => (0, n.jsx)(We.Ay, {}),
                       "broadcast-embed": (t) =>
-                        (0, n.jsx)(Em, { ...e, appid: t.appid }),
+                        (0, n.jsx)(Om, { ...e, appid: t.appid }),
                       "store-sidebar-accessibility-info": (e) =>
-                        (0, n.jsx)(Fm, { features: e }),
+                        (0, n.jsx)(Dm, { features: e }),
                       "store-sidebar-controller-support-info": (e) =>
                         (0, n.jsx)(Oe, { ...e }),
                     },
@@ -18501,7 +18618,7 @@
           }),
         });
       }
-      function Dm(e) {
+      function Um(e) {
         const { children: t } = e,
           [r, a] = i.useState(!1);
         return r
@@ -18514,7 +18631,7 @@
               },
             });
       }
-      function Wm(e) {
+      function qm(e) {
         const { children: t } = e,
           [r, a] = i.useState(!1);
         return r
