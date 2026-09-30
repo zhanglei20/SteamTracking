@@ -43472,6 +43472,11 @@
                     br: l.qM.readBool,
                     bw: l.gp.writeBool,
                   },
+                  include_family_licenses: {
+                    n: 9,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
                 },
               }),
             x.sm_m
@@ -43661,6 +43666,11 @@
                     n: 19,
                     br: l.qM.readInt32,
                     bw: l.gp.writeInt32,
+                  },
+                  family_shared: {
+                    n: 21,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
                   },
                 },
               }),

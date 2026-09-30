@@ -47253,6 +47253,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  include_family_licenses: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -47467,6 +47472,11 @@
                     _: 19,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  family_shared: {
+                    _: 21,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
