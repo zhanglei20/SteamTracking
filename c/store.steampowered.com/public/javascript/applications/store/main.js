@@ -104210,6 +104210,7 @@
       function _() {
         const _ = _.useCallback((_) => {
           const _ = (function (_, _) {
+            if (!_) return null;
             let _ = _;
             for (; (_ = _.parentElement); )
               if (_.classList.contains(_)) return _;
