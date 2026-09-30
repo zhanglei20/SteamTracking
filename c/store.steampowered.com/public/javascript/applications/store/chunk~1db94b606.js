@@ -13836,7 +13836,7 @@
                 children: _.Children.map(_.children, (_, _) => {
                   const _ = _.bLazyRenderChildren
                     ? (0, _.jsx)(_._, {
-                        rootMargin: "0px -5px 0px 100%",
+                        rootMargin: "0px 100% 0px 100%",
                         horizontal: !0,
                         placeholderWidth: _.lazyRenderPlaceholderWidth ?? 1,
                         placeholderHeight: _.lazyRenderPlaceholderHeight ?? 1,

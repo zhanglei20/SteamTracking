@@ -94318,6 +94318,7 @@
       function va() {
         const e = n.useCallback((e) => {
           const t = (function (e, t) {
+            if (!e) return null;
             let r = e;
             for (; (r = r.parentElement); )
               if (r.classList.contains(t)) return r;

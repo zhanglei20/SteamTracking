@@ -1481,7 +1481,7 @@
                 children: i.Children.map(e.children, (t, s) => {
                   const l = e.bLazyRenderChildren
                     ? (0, n.jsx)(p.K, {
-                        rootMargin: "0px -5px 0px 100%",
+                        rootMargin: "0px 100% 0px 100%",
                         horizontal: !0,
                         placeholderWidth: e.lazyRenderPlaceholderWidth ?? 1,
                         placeholderHeight: e.lazyRenderPlaceholderHeight ?? 1,
