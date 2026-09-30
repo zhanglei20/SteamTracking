@@ -361,6 +361,7 @@ message CPlayer_GetOwnedGames_Request {
 	optional bool skip_unvetted_apps = 6 [default = true];
 	optional string language = 7;
 	optional bool include_extended_appinfo = 8;
+	optional bool include_family_licenses = 9;
 }
 
 message CPlayer_GetOwnedGames_Response {
@@ -388,6 +389,7 @@ message CPlayer_GetOwnedGames_Response_Game {
 	repeated uint32 content_descriptorids = 18;
 	optional int32 playtime_disconnected = 19;
 	optional int32 playtime_deck_forever = 20;
+	optional bool family_shared = 21;
 }
 
 message CPlayer_GetPerFriendPreferences_Request {

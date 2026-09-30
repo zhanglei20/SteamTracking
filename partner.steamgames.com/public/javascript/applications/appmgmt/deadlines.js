@@ -899,7 +899,7 @@
                 (0, n.jsx)("span", {
                   className: l().DocumentProcessingNotice,
                   children:
-                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process takes up to 10 business days.",
+                    "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process takes 10 to 15 business days.",
                 }),
               ],
             }),
