@@ -9,7 +9,7 @@ img {
 }
 
 
-a {
+a:where(:not(.noOpinionatedGlobalStyles a)) {
 	text-decoration: none;
 	color: #ffffff;
 }
@@ -19,7 +19,7 @@ a {
 	outline: 0px none;
 }
 
-a:hover {
+a:hover:where(:not(.noOpinionatedGlobalStyles a)) {
 	text-decoration: none;
     color: #66c0f4;
 }

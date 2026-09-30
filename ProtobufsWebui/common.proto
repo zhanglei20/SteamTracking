@@ -3948,6 +3948,7 @@ message CMsgProtoBufHeader {
 	optional fixed64 wg_msg_trace_steamid = 50;
 	optional string wg_msg_trace_status = 51;
 	optional uint32 trace_flags = 52;
+	optional string browserapi_site = 53;
 }
 
 message CMsgProtobufWrapped {
@@ -7694,7 +7695,8 @@ message StoreItem_ExtraDetails {
 	optional .StoreItem_ExtraDetails_LinksAndInfo links_and_info = 22;
 	optional bool item_store_eligible = 23;
 	optional bool points_shop_eligible = 24;
-	optional string specs_bbcode = 25;
+	optional .StoreItem_ExtraDetails_Metacritic metacritic = 26;
+	optional .StoreItem_ExtraDetails_CastAndCrew cast_and_crew = 27;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7711,6 +7713,15 @@ message StoreItem_ExtraDetails_Anticheat {
 	optional string boot_protection_name = 4;
 	optional string name = 5;
 	optional string name_loc = 6;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_CastAndCrew {
+	repeated string directors = 1;
+	repeated string producers = 2;
+	repeated string writers = 3;
+	repeated string music = 4;
+	repeated string actors = 5;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7745,6 +7756,13 @@ message StoreItem_ExtraDetails_LinksAndInfo {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_Metacritic {
+	optional uint32 score = 1;
+	optional string url = 2;
+	optional bool always_show = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_PageSection {
 	optional string label = 1;
 	optional string content_bbcode = 2;
@@ -7772,6 +7790,7 @@ message StoreItem_IncludedItems {
 	repeated .StoreItem included_apps = 1;
 	repeated .StoreItem included_packages = 2;
 	repeated .StoreItem included_bundles = 3;
+	repeated .StoreItem included_creators = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
