@@ -7108,7 +7108,7 @@
               },
             ],
             v = [];
-          v.push(i(4761370)), v.push(i(4374420));
+          v.push(i(5308810)), v.push(i(4761370));
           const S = [],
             b = [v, j];
           for (let e = 0; e < Math.max(b[0].length, b[1].length); e++)
@@ -9112,20 +9112,19 @@
         Kd: () => o,
         Nu: () => b,
         R2: () => j,
-        RE: () => N,
+        RE: () => B,
         VO: () => p,
         W_: () => f,
         Wr: () => M,
         X$: () => x,
         XR: () => c,
         Z1: () => v,
-        Zl: () => A,
         eu: () => l,
         j2: () => a,
         jm: () => S,
         jw: () => w,
         kh: () => y,
-        qY: () => B,
+        qY: () => A,
         sC: () => I,
         wK: () => n,
         xh: () => g,
@@ -9726,24 +9725,6 @@
         });
       }
       function A(e) {
-        const { className: t, ...i } = e;
-        return (0, s.jsxs)("svg", {
-          className: t,
-          height: 100,
-          width: 100,
-          fill: "currentColor",
-          stroke: "currentColor",
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 69 69",
-          children: [
-            (0, s.jsx)("path", {
-              d: "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
-            }),
-            "  ",
-          ],
-        });
-      }
-      function B(e) {
         return (0, s.jsx)("svg", {
           version: "1.1",
           x: "0px",
@@ -9758,7 +9739,7 @@
           }),
         });
       }
-      function N(e) {
+      function B(e) {
         const { className: t, ...i } = e;
         return (0, s.jsxs)("svg", {
           className: t,
@@ -10125,7 +10106,6 @@
                 props: {
                   iconComponent: j.Exy,
                   children: (0, b.we)("#ShopNav_SeasonalBadgeLink"),
-                  iconCallout: v.Zl,
                   to: x.B.LoyaltySteamBadge(),
                 },
               }),
