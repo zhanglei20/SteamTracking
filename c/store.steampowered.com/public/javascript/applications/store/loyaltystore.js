@@ -10064,7 +10064,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -10672,24 +10671,6 @@
         });
       }
       function _(_) {
-        const { className: _, ..._ } = _;
-        return (0, _.jsxs)("svg", {
-          className: _,
-          height: 100,
-          width: 100,
-          fill: "currentColor",
-          stroke: "currentColor",
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 69 69",
-          children: [
-            (0, _.jsx)("path", {
-              _: "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
-            }),
-            "  ",
-          ],
-        });
-      }
-      function _(_) {
         return (0, _.jsx)("svg", {
           version: "1.1",
           _: "0px",
@@ -11102,7 +11083,6 @@
                 props: {
                   iconComponent: _.Exy,
                   children: (0, _._)("#ShopNav_SeasonalBadgeLink"),
-                  iconCallout: _._,
                   _: _._.LoyaltySteamBadge(),
                 },
               }),
