@@ -110,6 +110,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123M
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -167,13 +168,14 @@
  - bytes  : %s read from disk at %s/sec, %s sent via network at %s/sec\n
  - chunks : %u pending, %u total sent, %u total requested\n
  - user %i : %s\n
+ --cert
  --controller-overlay-hotkey none
  --enable-duplicate-detection
  --force
  --label '%s'
  --openvr
- --relay %s
- --sdr_config "%s"
+ --relay
+ --sdr_config
  --settingsdata
  --vulkan
  -d3d12
@@ -1885,6 +1887,7 @@ $\n k_EKeyEscrowUsageStreamingDevice
 $\n k_EMarketingMessageLookupInvalid
 $\n k_EMarketingMessageNoAssociation
 $\n k_EMarketingMessageVisiblePublic
+$\n k_EMigrateRequest_ChoseDifferent
 $\n k_EPressOutletAction_ExitStaging
 $\n k_EProtoExecutionSiteSteamClient
 $\n k_EProtoServiceTypeSteamMessages
@@ -3574,6 +3577,7 @@ $steammessages_parental_objects.proto"
 (\n multipath_packets_recv_sequenced
 (\n nonpreferred_product_prepurchase
 (\n offset_detection_min_clean_chunk
+(\n pyrowave_custom_bitrate_OBSOLETE
 (\n remove_from_download_list_app_id
 (\n#k_EMsgAMCheckClanInviteRateLimiting
 (\n#k_EMsgAMCheckClanMembershipResponse
@@ -4412,7 +4416,6 @@ $steammessages_parental_objects.proto"
 (\v26.CClientMetrics_GamePerformance_Notification.FrameRate
 (\v26.CContentBuilder_GetMissingDepotChunks_Response.Chunks
 (\v26.CFamilyGroups_GetSharedLibraryApps_Response.SharedApp
-(\v26.CMsgSteamDatagramClientPingSampleReply.POP.AltAddress
 (\v26.CSteamInputService_GetTritonPairingInfo_Response.Slot
 (\v26.CSteamTV_SetBroadcastChannelLinkRegions_Request.Links
 (\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
@@ -4433,7 +4436,6 @@ $steammessages_parental_objects.proto"
 (\v28.CFamilyGroups_GetPreferredLenders_Response.FamilyMember
 (\v28.CMsgClientGetAuthorizedDevicesResponse.AuthorizedDevice
 (\v28.CMsgRemoteClientDownloadsManagement.ChangeDownloadIndex
-(\v28.CMsgSteamDatagramClientPingSampleReply.LegacyDataCenter
 (\v28.CPlayer_GetFriendsGameplayInfo_Response.OwnGameplayInfo
 (\v28.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails
 (\v28.CPlayer_GetTopAchievementsForGames_Response.Achievement"{\n'CPlayer_GetAchievementsProgress_Request
@@ -5464,8 +5466,6 @@ $steammessages_parental_objects.proto"
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG=
-++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -6136,6 +6136,7 @@ $steammessages_parental_objects.proto"
 -\n%e2e_quality_remote_instantaneous_time
 -\n%is_display_state_management_supported
 -\n%is_extended_cec_wake_device_supported
+-\n%pyrowave_custom_bitrate_kbps_OBSOLETE
 -\n(k_EMsgAMClientCreateFriendsGroupResponse
 -\n(k_EMsgAMClientDeleteFriendsGroupResponse
 -\n(k_EMsgAMClientManageFriendsGroupResponse
@@ -8296,14 +8297,15 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF@
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -9106,9 +9108,11 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIP12ClChatRoom_tE
 10CUtlMemoryIP12ILogListenerE
 10CUtlMemoryIP13CRemoteClientE
+10CUtlMemoryIP14CGameActionSetE
 10CUtlMemoryIP14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiEE
 10CUtlMemoryIP15CChunkDataStoreE
 10CUtlMemoryIP15CP2PVoiceSystemE
+10CUtlMemoryIP15IControllerModeE
 10CUtlMemoryIP15IP2PVoiceSystemE
 10CUtlMemoryIP15ISystemNotifierE
 10CUtlMemoryIP16CFileTransferMgrE
@@ -9622,9 +9626,11 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIP12ClChatRoom_t10CUtlMemoryIS1_EE
 10CUtlVectorIP12ILogListener10CUtlMemoryIS1_EE
 10CUtlVectorIP13CRemoteClient10CUtlMemoryIS1_EE
+10CUtlVectorIP14CGameActionSet10CUtlMemoryIS1_EE
 10CUtlVectorIP14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiE10CUtlMemoryIS4_EE
 10CUtlVectorIP15CChunkDataStore10CUtlMemoryIS1_EE
 10CUtlVectorIP15CP2PVoiceSystem10CUtlMemoryIS1_EE
+10CUtlVectorIP15IControllerMode10CUtlMemoryIS1_EE
 10CUtlVectorIP15IP2PVoiceSystem10CUtlMemoryIS1_EE
 10CUtlVectorIP15ISystemNotifier10CUtlMemoryIS1_EE
 10CUtlVectorIP16CFileTransferMgr10CUtlMemoryIS1_EE
@@ -12989,6 +12995,7 @@ $steammessages_parental_objects.proto"
 26TestExternalPrivilege_Stub
 26UserRequestingFriendship_t
 26VoiceEnabledStateChanged_t
+27.CMsgSteamDatagramClientSwitchedPrimary.EMigrateRequest
 270.0
 2700
 27038
@@ -16036,7 +16043,6 @@ $steammessages_parental_objects.proto"
 53CMarketingMessages_GetActiveMarketingMessages_Request
 53CMarketingMessages_GetDisplayMarketingMessage_Request
 53CMsgControllerInputControllerActionCameraHorizonReset
-53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
 53CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
 53CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 53CSteamEngine_TextFilterDictionaryChanged_Notification
@@ -16102,7 +16108,6 @@ $steammessages_parental_objects.proto"
 55CMsgClientGetAuthorizedDevicesResponse_AuthorizedDevice
 55CMsgControllerInputControllerActionGameActionSetBinding
 55CMsgRemoteClientDownloadsManagement_ChangeDownloadIndex
-55CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter
 55CPlayer_GetFriendsGameplayInfo_Response_OwnGameplayInfo
 55CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails
 55CPlayer_GetTopAchievementsForGames_Response_Achievement
@@ -16270,6 +16275,7 @@ $steammessages_parental_objects.proto"
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16285,7 +16291,6 @@ $steammessages_parental_objects.proto"
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16877,6 +16882,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9H(G
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17154,6 +17160,7 @@ $steammessages_parental_objects.proto"
 ? * + invalid
 ?$EaORVx\
 ?.CSteamInputService_FirstSteamControllerConnection_Notification
+?01a
 ?0DS=
 ?10IP2PSocket
 ?11CGyroSource
@@ -17232,7 +17239,6 @@ $steammessages_parental_objects.proto"
 @\n\fNotifyClient
 @\n\fNotifyServer
 @\n\funlock_times
-@\n\nAltAddress
 @\n\nDeviceRead
 @\n\noperations
 @\n\rnotifications
@@ -21637,12 +21643,12 @@ CRemoteClientBroadcastHandler - discovery
 CRemoteClientBroadcastHandler - status
 CRemoteClientBroadcastHandler::Process
 CRemoteClientDongle: Dongle app depot finished installing/updating. Starting driver update check.
-CRemoteClientDongle: Dongle detected for the first time this run.
 CRemoteClientDongle: Failed to set low latency mode %s: %s (%d)
 CRemoteClientDongle: NMDeviceAdded detected dongle.
 CRemoteClientDongle: No holo-realtek-firmware-toggles helper script found, low latency mode unavailable
 CRemoteClientDongle: Running post-application driver update check.
 CRemoteClientDongle: Successfully set low latency mode %s
+CRemoteClientDongle: Wifi dongle detected for the first time this run. VID %04x PID %04x
 CRemoteClientDongle::OnRemoteClientUSBTriggerHotplug() valid
 CRemoteClientDongle::m_pWorkThreadPool
 CRemoteClientJobGetControllerConfig
@@ -23495,6 +23501,7 @@ Couldn't join game, invalid auth token: '%s'\n
 Couldn't join game, invalid relay server: '%s'\n
 Couldn't join game, it is blocked by parental settings\n
 Couldn't join game, it is not available in your country\n
+Couldn't launch stream client, invalid relay server: '%s'\n
 Couldn't open SDL controller %u: %s\n
 Couldn't open to sending socket for %s
 Couldn't open toc/bin, skipping %s.
@@ -24889,6 +24896,7 @@ EMarketingMessageType
 EMarketingMessageVisibility
 EMessageReactionType
 EMicroTxnAuthResponse
+EMigrateRequest
 EMsg
 EMsg %d registered multiple times.
 EMsgClanAccountFlags
@@ -27870,6 +27878,7 @@ GetVolume
 GetWatchBroadcastMPD
 GetWebSecret
 GetWebUITransportInfo
+GetWifiAPChannelListJSONString
 GetWifiAPStateJSONString
 GetWifiDongleProblemFlags
 GetWildcardMapping: Invalid unAppID k_nAppIdAll
@@ -28223,6 +28232,7 @@ ICE: Dropping Data Indication from %s: not our TURN server (%s).\n
 ICE: Dropping Data Indication from TURN: missing peer-address or data attribute.\n
 ICE: Dropping STUN message 0x%x from %s.\n
 ICE: Dropping STUN response 0x%x from %s: attribute parse or integrity failure.\n
+ICE: Dropping binding request: USERNAME length %u exceeds max %u.
 ICE: Dropping binding request: attribute parse or integrity failure.\n
 ICE: Dropping peer candidate with invalid address %s\n
 ICE: Host candidate has invalid address %s - gathering bug
@@ -28591,7 +28601,7 @@ Ignoring P2P CMsgSteamDatagramConnectRequest from %s; we're listening on %s, but
 Ignoring P2P CMsgSteamDatagramConnectRequest from %s; we're not listening on %s\n
 Ignoring P2P CMsgSteamDatagramConnectRequest.from_fakeip from %s, not sending to a FakeIP!
 Ignoring P2P connect request signal from '%s', no local identity?\n
-Ignoring P2P connection request from %s.  We cannot accept it since we don't have a cert yet!\n
+Ignoring P2P connection request from %s.  Auth not ready.  %s\n
 Ignoring P2P signal from %s.  For our cxn #%u, they first used remote cxn #%u, now using #%u
 Ignoring P2P signal from '%s', unknown remote connection #%u\n
 Ignoring P2PFailure notification about unknown ConnectionID %u from %s\n
@@ -29638,7 +29648,6 @@ L SoZU`
 L*NBQJ]zr
 L+5d
 L8-\rHO
-L>p\nJ
 L?333?
 LABEL
 LABEL_OPTIONAL
@@ -29788,7 +29797,6 @@ Left Gyro Rate switched from: %u us to: %u us.\n
 Left Gyro Sensor value: (%u us) fell outside of margin of error: (%u%%). Falling back on estimated polling value (%u us). \n
 Legacy Free Sub
 Legacy deadzoning for gyro signal. Only affects "As Mouse" and its derivative modes.
-LegacyDataCenter
 LegacyKey
 LegacyKeyDiskLocation
 LegacyKeyProofOfPurchaseTicket
@@ -30130,7 +30138,6 @@ M\n\nDeleteRole
 M\n\nGetBanList
 M\n\nNotifyText
 M\n\nRenameRole
-M\n\ralt_addresses
 M\n\vReviewLabel
 M\rLAI)haL<|p\t\t
 MaU(a[i
@@ -30525,6 +30532,7 @@ MutableRawRepeatedField
 MutableRepeatedMessage
 MuteBroadcastChatUser
 MuteUserInGroup
+Mxaw
 Myanmar
 N#_4o9
 N*WVe
@@ -32888,6 +32896,7 @@ Peer (%s,%s) - %s
 Peer - %s (%s): %s
 Peer Server
 Peer connection %d disconnected
+Peer connectivity-check pair already has a request in flight
 Peer content server not running\n
 Peer content server status (%u connections):\n
 Peer haven't sent GOST certificate, required for selected ciphersuite
@@ -35140,6 +35149,7 @@ STORE routines
 STREAM_CLOSED
 STRENGTH
 STRING
+STUN USERNAME exceeds RFC limit
 SUBTITLE
 SUCCESS %s%s, last-modified: %s
 SUCCESS %s%s, up to date
@@ -37158,7 +37168,7 @@ StoreGameRating
 StoreReviewSummary
 StoreStats
 StoreUserStats
-Stray data packet from host with no connection.  Ignoring.
+Stray data packet from host with no connection.
 Stream ID is invalid
 Stream is closing
 Stream was already closed or invalid
@@ -41823,6 +41833,7 @@ Zulu
 \n\ncurrent_bw
 \n\ncurrent_ts
 \n\ncustom_url
+\n\ndc_ping_ms
 \n\ndemo_appid
 \n\ndependency
 \n\ndeprecated
@@ -42055,7 +42066,6 @@ Zulu
 \n\rbatch_eresult
 \n\rbattery_level
 \n\rbbcode_format
-\n\rbest_dc_score
 \n\rbrowser_scale
 \n\rbytes_scanned
 \n\rcache_enabled
@@ -42310,7 +42320,6 @@ Zulu
 \n\rtdp_limit_min
 \n\rtemplate_type
 \n\rtemplate_vars
-\n\rtest_dc_score
 \n\rthumbnail_url
 \n\rtime_last_ack
 \n\rtime_received
@@ -42426,6 +42435,7 @@ Zulu
 \n\tdpi_scale
 \n\tdraggable
 \n\tdummy_pad
+\n\te2e_score
 \n\tearly_out
 \n\tecurrency
 \n\tedit_info
@@ -42707,6 +42717,7 @@ Zulu
 \n\vduration_ms
 \n\vdx_deviceid
 \n\vdx_vendorid
+\n\ve2e_ping_ms
 \n\vecallresult
 \n\venums.proto*
 \n\venvironment
@@ -43966,7 +43977,6 @@ als-calibration-gain
 als_lux_alternate
 als_lux_median
 als_lux_primary
-alt.m_nPenalty == k_nSDRAltAddressPenalty_PingOnly
 alt_address_dropped
 alt_address_protocol_change
 alt_ping_complete
@@ -44698,8 +44708,6 @@ beginning write of microphone data to file %s (close Steam before using)\n
 beginning write of voice output data to file %s (close Steam before using)\n
 belarusian
 bellcanada
-best_dc_ping_ms
-best_dc_via_relay_pop_id
 best_ping_front_local
 best_ping_front_remote
 best_pop_local
@@ -46900,6 +46908,8 @@ dbus-introspectable
 dbus-peer
 dbus-properties
 dcObject
+dc_score
+dc_via_relay_pop_id
 dcobject
 ddeeeeee
 de_DE
@@ -46945,12 +46955,6 @@ default-login-mode
 default.talk.google.com
 default_bindings
 default_chat_id
-default_dc_ping_ms
-default_dc_score
-default_dc_via_relay_pop_id
-default_e2e_ping_ms
-default_e2e_score
-default_front_ping_ms
 default_local_path
 default_mouse_mode
 default_role_id
@@ -47626,6 +47630,7 @@ e%qy
 e+ZQT
 e.nLockCount < 0xFFFF
 e.nLockCount == 0
+e2e_p2p_peer_relay_pop_id
 e2e_quality_local
 e2e_quality_remote
 e8p%
@@ -48676,6 +48681,7 @@ from_dropped_reason
 from_identity_string
 from_ip
 from_limited_account
+from_migrate_request
 from_oslist
 from_quality_now
 from_quality_then
@@ -49142,6 +49148,7 @@ german
 gesture
 gestures
 get raw key failed
+get-channels
 get-proxy-type-func
 get_Count failed
 get_RebootRequired failed
@@ -49197,7 +49204,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen(
 ghjkl
 gidlist
 gidparentcomment
@@ -49549,7 +49556,6 @@ hQueue != -1
 hR}S
 hSteamPipe == m_hSteamPipeCurrent
 hU&qx
-hWza
 h\44Q
 h\f90
 h\n\tTokenList
@@ -51887,6 +51893,9 @@ k_EMarketingMessageWeekendDeal
 k_EMessageReactionType_Emoticon
 k_EMessageReactionType_Invalid
 k_EMessageReactionType_Sticker
+k_EMigrateRequest_None
+k_EMigrateRequest_ObeyedTarget
+k_EMigrateRequest_Unknown
 k_EMouseControl_Button_Backk_EMouseControl_Button_Forwardk_EMouseControl_Button_Leftk_EMouseControl_Button_Middlek_EMouseControl_Button_Rightk_EMouseControl_Countk_EMouseControl_Scroll_Downk_EMouseControl_Scroll_Up
 k_EMouseModeAbsoluteCursor
 k_EMouseModeRelative
@@ -53171,7 +53180,7 @@ k_EStreamAudioCodecNone
 k_EStreamAudioCodecOpus
 k_EStreamAudioCodecRaw
 k_EStreamAudioCodecVorbis
-k_EStreamBitrateAutodetect
+k_EStreamBitrateAutomatic
 k_EStreamBitrateUnlimited
 k_EStreamChannelControl
 k_EStreamChannelDiscovery
@@ -53758,7 +53767,6 @@ legacy_authorized_steam_id
 legacy_challenge
 legacy_client_steam_id
 legacy_connection_id_src
-legacy_data_centers
 legacy_endpoint
 legacy_from_identity_binary
 legacy_from_steam_id
@@ -54462,7 +54470,6 @@ m_bShutdownSystem
 m_bStreamingError || cTotalBytesReceived == (uint32)m_buffer.TellPut()
 m_bThreadActive != m_ThreadClient.IsAlive()
 m_bTrackCorruptChunks
-m_bUsedRelayOverride
 m_bWirelessDongle == GetSteamController()->BIsControllerWirelessDongle( GetControllerIndex() )
 m_bWriteOutstanding
 m_bitsMigratedBuckets
@@ -56229,6 +56236,7 @@ m_vecPendingAppConfigChanged
 m_vecPendingCommands
 m_vecPendingLicenses
 m_vecPendingPaintData
+m_vecPendingPeerRequests.empty()
 m_vecPendingRemoveBrowser
 m_vecPendingRemoves
 m_vecPendingToolRegistered
@@ -56263,6 +56271,8 @@ m_vecRequestsToSend.Count()
 m_vecRequestsToSend.Count() == 1
 m_vecResendStatus
 m_vecReservedStreamingControllers
+m_vecRetiredActionSets
+m_vecRetiredModes
 m_vecRichPresenceAppIDsToUpload
 m_vecRoutes.empty()
 m_vecSSLHostnames
@@ -56852,7 +56862,6 @@ msgBuffer.GetCurSize() >= sizeof(SNetMsgHeader_t) + sizeof(int)
 msgCommitResponse.file_committed()
 msgConnectionClosed.relay_mode() == CMsgSteamDatagramConnectionClosed_ERelayMode_None
 msgMulti.Body().message_body().size() < UINT_MAX
-msgPOP.default_dc_score() >= msgPOP.best_dc_score()
 msgResponse.Body().response_pending() == 0
 msgResponse.Body().token().size() == sizeof( callback.m_Token )
 msgResponse.fake_ip()
@@ -58123,7 +58132,6 @@ p2p_info
 p2p_routing_summary
 p2p_share_ip
 p2p_unusedtimeout
-p2p_via_peer_relay_pop_id
 p2ptransport.cc
 p2ptransportchannel.cc
 p2pvoice002
@@ -59570,8 +59578,7 @@ pwrd_telecom
 pwrd_unicom
 pwrite64
 py_generic_services
-pyrowave_custom_bitrate
-pyrowave_custom_bitrate_kbps
+pyrowave_bitrate_kbps
 pyrowave_quality_modifier
 pyrowave_yuv444
 pzKD)
@@ -61621,6 +61628,7 @@ status
 status expired
 status not yet valid
 status too old
+status.text = %s
 status_loc_token
 status_request
 status_request_v2
@@ -61659,7 +61667,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 29 2026 22:18:11
+steam Oct  2 2026 01:15:37
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -62456,8 +62464,6 @@ test
 test a voice encode
 test an opus voice encode
 test_concurrent_textfilter_change
-test_dc_ping_ms
-test_dc_via_relay_pop_id
 test_dropcon
 test_failnextconnect
 test_opus_voice_encode

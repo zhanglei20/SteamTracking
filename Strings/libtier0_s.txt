@@ -112,10 +112,10 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789
 0123456789ABCDEF
+01:15:34
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-22:18:08
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -351,6 +351,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
+Oct  2 2026
 Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput
@@ -446,7 +447,6 @@ SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 29 2026
 ServerMain
 SetAssertDialogsShown
 SetAssertDumpStack
