@@ -1221,7 +1221,7 @@
       }
       (n.keys = () => Object.keys(i)), (n.id = 95386), (e.exports = n);
     },
-    88894: (e, t, r) => {
+    91600: (e, t, r) => {
       "use strict";
       r(23808), r(83977);
       var i = r(90626),
@@ -16585,9 +16585,207 @@
       var Es = r(44844),
         Gs = r(14947);
       r(5977);
-      var Hs = r(96059),
-        Vs = r(45754);
-      function Zs() {
+      var Hs = r(34557),
+        Vs = r(25269),
+        Zs = r(44654),
+        Ks = r(71944);
+      function $s(e) {
+        return (
+          (t = e.rgBrowserAPISites),
+          (r = "community"),
+          !!t && (t.includes("all") || t.includes(r))
+        );
+        var t, r;
+      }
+      class Qs {
+        constructor(e) {
+          (this.m_fallbackInterface = e),
+            (this.m_ServiceTransport = {
+              SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                bSendAuth: !0,
+              }),
+              SendNotification: this.SendNotification.bind(this, {
+                bSendAuth: !0,
+              }),
+              MakeReady: this.MakeReady.bind(this),
+            }),
+            (this.m_AnonymousServiceTransport = {
+              SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                bSendAuth: !1,
+              }),
+              SendNotification: this.SendNotification.bind(this, {
+                bSendAuth: !1,
+              }),
+              MakeReady: this.MakeReady.bind(this),
+            });
+        }
+        async SendMsgAndAwaitResponse(e, t, r, i, n) {
+          var s, a;
+          if (!$s(n)) {
+            if (this.m_fallbackInterface)
+              return e.bSendAuth
+                ? null === (s = this.m_fallbackInterface) || void 0 === s
+                  ? void 0
+                  : s.GetServiceTransport().SendMsg(t, r, i, n)
+                : null === (a = this.m_fallbackInterface) || void 0 === a
+                  ? void 0
+                  : a.GetAnonymousServiceTransport().SendMsg(t, r, i, n);
+            console.error("No browserapi version of", t, "and no fallback");
+          }
+          const o = await this.SendMsgOnce(e, t, r, i, n);
+          return 401 === o.status &&
+            e.bSendAuth &&
+            (await this.BEnsureLoginCookieRefreshed())
+            ? (await this.SendMsgOnce(e, t, r, i, n)).msgResult
+            : o.msgResult;
+        }
+        BEnsureLoginCookieRefreshed() {
+          var e;
+          return (
+            (null !== (e = this.m_refreshLoginCookiePromise) && void 0 !== e) ||
+              (this.m_refreshLoginCookiePromise = (async function () {
+                try {
+                  const e = await fetch(
+                    `${rt.TS.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+                    {
+                      method: "POST",
+                      credentials: "include",
+                      body: new URLSearchParams({
+                        redir: window.location.href,
+                      }),
+                    },
+                  );
+                  if (!e.ok) return !1;
+                  const t = await e.json();
+                  if (!t.success || !t.login_url) return !1;
+                  const r = new URLSearchParams();
+                  for (const [e, i] of Object.entries(t))
+                    "string" == typeof i && r.append(e, i);
+                  return (
+                    await fetch(t.login_url, {
+                      method: "POST",
+                      credentials: "include",
+                      body: r,
+                    })
+                  ).ok;
+                } catch {
+                  return !1;
+                }
+              })().finally(() => {
+                this.m_refreshLoginCookiePromise = void 0;
+              })),
+            this.m_refreshLoginCookiePromise
+          );
+        }
+        async SendMsgOnce(e, t, r, i, n) {
+          let s,
+            a = 0;
+          try {
+            const o = await this.Send(e, t, r, n);
+            if (((a = o.status), 200 == a)) {
+              (s = Bt.w.Init(i, Hs.kHd)),
+                o.headers &&
+                  (o.headers.get("x-eresult") &&
+                    s.Hdr().set_eresult(parseInt(o.headers.get("x-eresult"))),
+                  o.headers.get("x-error_message") &&
+                    s
+                      .Hdr()
+                      .set_error_message(o.headers.get("x-error_message")));
+              const e = new Zs.pV(await o.arrayBuffer());
+              s.ReadBodyFromBuffer(i, e);
+            }
+            0;
+          } catch (e) {}
+          if (!s) {
+            const e = 401 === a ? "Unauthorized" : void 0;
+            s = this.CreateFailedMsgProtobuf(i, Je.VrD, e);
+          }
+          return { msgResult: s, status: a };
+        }
+        SendNotification(e, t, r, i) {
+          var n, s;
+          if (!$s(i)) {
+            if (this.m_fallbackInterface)
+              return e.bSendAuth
+                ? null === (n = this.m_fallbackInterface) || void 0 === n
+                  ? void 0
+                  : n.GetServiceTransport().SendNotification(t, r, i)
+                : null === (s = this.m_fallbackInterface) || void 0 === s
+                  ? void 0
+                  : s.GetAnonymousServiceTransport().SendNotification(t, r, i);
+            console.error("No browserapi version of", t, "and no fallback");
+          }
+          return this.Send(e, t, r, i), !0;
+        }
+        Send(e, t, r, i) {
+          const n = this.CreateBrowserAPIURL(t),
+            s = r.SerializeBody(),
+            a = i.eWebAPIKeyRequirement,
+            o = i.ePrivilege == Vs.Xh.tX && a == Vs.EG.lv,
+            l = {
+              credentials: "omit",
+              headers: { Accept: "application/octet-stream" },
+            },
+            c = new URLSearchParams();
+          e.bSendAuth ||
+            a == Vs.EG.lv ||
+            console.error(
+              `Attempting to invoke service ${t} without auth, but auth is required.`,
+            ),
+            e.bSendAuth && !o && (l.credentials = "same-origin");
+          if (i.bConstMethod)
+            return (
+              c.append("input_protobuf_encoded", Ks.fromByteArray(s)),
+              fetch(`${n}?${c.toString()}`, l)
+            );
+          {
+            const e = new Uint8Array(s.buffer, s.byteOffset, s.byteLength);
+            return fetch(n, {
+              ...l,
+              method: "POST",
+              headers: {
+                ...l.headers,
+                "Content-Type": "application/octet-stream",
+              },
+              body: e,
+            });
+          }
+        }
+        CreateBrowserAPIURL(e) {
+          const t = e.match(/([^.]+)\.(.+)#(\d+)/);
+          if (!t || 4 != t.length) throw `Invalid service name: ${e}`;
+          return `/um/${t[1]}/${t[2]}/`;
+        }
+        CreateFailedMsgProtobuf(e, t, r) {
+          const i = Bt.w.Init(e);
+          return (
+            i.Hdr().set_eresult(Z.zi),
+            i.Hdr().set_transport_error(t),
+            r && i.Hdr().set_error_message(r),
+            i
+          );
+        }
+        MakeReady() {
+          return Promise.resolve({ result: Z.R, message: "ready" });
+        }
+        GetServiceTransport() {
+          return this.m_ServiceTransport;
+        }
+        GetAnonymousServiceTransport() {
+          return this.m_AnonymousServiceTransport;
+        }
+        WaitUntilLoggedOn() {
+          return Promise.resolve();
+        }
+        GetServerRTime32() {
+          return Number(new Date());
+        }
+        RTime32ToDate(e) {
+          return new Date(1e3 * e);
+        }
+      }
+      var Xs = r(45754);
+      function Ys() {
         const e = [];
         return (
           rt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
@@ -16596,18 +16794,18 @@
         );
       }
       r(738), r(41775);
-      var Ks = r(92724),
-        $s = (r(64641), r(78686));
+      var Js = r(92724),
+        ea = (r(64641), r(78686));
       (0, Gs.jK)({ enforceActions: "never" }),
         (0, _e.oQ)(async () => {
-          Ys(),
-            (0, Vs.aj)().Init(
+          ia(),
+            (0, Xs.aj)().Init(
               "Community",
               CLSTAMP,
-              new Hs.D(z.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-              { fnGetReportTags: Zs },
+              new Qs().GetServiceTransport(),
+              { fnGetReportTags: Ys },
             ),
-            await Js();
+            await na();
           const e =
             document.getElementById("react_root") ||
             document.getElementById("application_root");
@@ -16618,18 +16816,18 @@
               (t.g_bCommunityReactInitialized = !0);
           }
         });
-      let Qs,
-        Xs = !1;
-      function Ys() {
-        if (!Xs) {
+      let ta,
+        ra = !1;
+      function ia() {
+        if (!ra) {
           (0, z.XJ)("application_config").config
-            ? (Js(), (Xs = !0))
+            ? (na(), (ra = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function Js() {
-        Qs ||
-          (Qs = (async function (e) {
+      async function na() {
+        ta ||
+          (ta = (async function (e) {
             {
               const t = $.A0.GetLanguageFallback(e),
                 i = e === t,
@@ -16638,27 +16836,27 @@
                   r(4271)(`./main_${e}.json`).then((e) => e.default),
                   i ? {} : r(95386)(`./sales_${t}.json`).then((e) => e.default),
                   i ? {} : r(68982)(`./main_${t}.json`).then((e) => e.default),
-                  (0, Ks.u)(),
-                  $s.Z.Ready(),
+                  (0, Js.u)(),
+                  ea.Z.Ready(),
                 ]);
               $.pf.AddTokens({ ...n, ...s }, { ...a, ...o });
             }
-            for (const e of ea) $.pf.AddTokens(e);
-            ea = void 0;
+            for (const e of sa) $.pf.AddTokens(e);
+            sa = void 0;
           })(z.TS.LANGUAGE)),
-          await Qs;
+          await ta;
       }
-      let ea = [];
-      function ta(e, t, r) {
+      let sa = [];
+      function aa(e, t, r) {
         (0, We.wT)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== ea ? ea.push(r) : $.pf.AddTokens(r);
+          void 0 !== sa ? sa.push(r) : $.pf.AddTokens(r);
       }
-      Ys(),
+      ia(),
         (function () {
           const e = window;
           e.g_rgPendingLocManifests &&
-            e.g_rgPendingLocManifests.forEach((e) => ta(...e)),
-            (e.LocalizationManifestReady = ta),
+            e.g_rgPendingLocManifests.forEach((e) => aa(...e)),
+            (e.LocalizationManifestReady = aa),
             (e.g_rgPendingLocManifests = void 0);
         })();
     },
@@ -91782,7 +91980,7 @@
   },
   (e) => {
     e.O(0, [78997], () => {
-      return (t = 88894), e((e.s = t));
+      return (t = 91600), e((e.s = t));
       var t;
     });
     e.O();

@@ -76,7 +76,14 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ContentReportsTable: "vOw0zIvYhKvicImwO2-XL",
+        ModerationTable: "B_CTlZJTCpB51h5D3KWu_",
+        DateCol: "aLI0z0IY1ZCOHVZ6SLNx7",
+        ReporterCol: "d_bWuY3Uyq1mDx69WuZxS",
+        StatusCol: "_3Obdj5melGcGBcTf3eRBE3",
+        ActorCol: "mznx-al2cLLnbFgi_8eth",
+        ActionCol: "_pcwGAPcwJyBzTt8ykeKF",
+        ReporterCell: "_1eEXuIiBlAL6-KQEr8s7iq",
+        ReporterName: "_3gF45ikEXjHH4wFKEIGFSB",
       };
     },
     chunkid: (module) => {
@@ -870,6 +877,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { reportedContentID: _ } = _;
@@ -882,35 +890,80 @@
       function _(_) {
         return (0, _.jsx)("div", {
           children: (0, _.jsxs)("table", {
+            className: _().ModerationTable,
             children: [
-              (0, _.jsx)("thead", {
-                children: (0, _.jsxs)("tr", {
-                  children: [
-                    (0, _.jsx)("th", {
-                      children: "Date",
-                    }),
-                    (0, _.jsx)("th", {
-                      children: "Actor",
-                    }),
-                    (0, _.jsx)("th", {
-                      children: "Action",
-                    }),
-                    (0, _.jsx)("th", {
-                      children: "Details",
-                    }),
-                  ],
-                }),
-              }),
+              (0, _.jsx)(_, {}),
               (0, _.jsx)("tbody", {
                 children: (0, _.jsx)("tr", {
                   children: (0, _.jsx)("td", {
                     colSpan: 4,
-                    children: _._.Localize("#subjectauditlog_noentries"),
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      children: _._.Localize("#subjectauditlog_noentries"),
+                    }),
                   }),
                 }),
               }),
             ],
           }),
+        });
+      }
+      function _() {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("colgroup", {
+              children: [
+                (0, _.jsx)("col", {
+                  className: _().DateCol,
+                }),
+                (0, _.jsx)("col", {
+                  className: _().ActorCol,
+                }),
+                (0, _.jsx)("col", {
+                  className: _().ActionCol,
+                }),
+                (0, _.jsx)("col", {}),
+              ],
+            }),
+            (0, _.jsx)("thead", {
+              children: (0, _.jsxs)("tr", {
+                children: [
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Date",
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Actor",
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Action",
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Details",
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          ],
         });
       }
       function _(_) {
@@ -941,34 +994,21 @@
             children:
               _ > 0 &&
               (0, _.jsxs)("table", {
+                className: _().ModerationTable,
                 children: [
-                  (0, _.jsx)("thead", {
-                    children: (0, _.jsxs)("tr", {
-                      children: [
-                        (0, _.jsx)("th", {
-                          children: "Date",
-                        }),
-                        (0, _.jsx)("th", {
-                          children: "Actor",
-                        }),
-                        (0, _.jsx)("th", {
-                          children: "Action",
-                        }),
-                        (0, _.jsx)("th", {
-                          children: "Details",
-                        }),
-                      ],
-                    }),
-                  }),
+                  (0, _.jsx)(_, {}),
                   (0, _.jsxs)("tbody", {
                     children: [
                       void 0 === _ &&
                         (0, _.jsx)("tr", {
                           children: (0, _.jsx)("td", {
                             colSpan: 4,
-                            children: _._.Localize(
-                              "#subjectauditlog_noentries",
-                            ),
+                            children: (0, _.jsx)(_._, {
+                              size: "2",
+                              children: _._.Localize(
+                                "#subjectauditlog_noentries",
+                              ),
+                            }),
                           }),
                         }),
                       _ &&
@@ -985,9 +1025,12 @@
                               (0, _.jsx)("tr", {
                                 children: (0, _.jsx)("td", {
                                   colSpan: 4,
-                                  children: _._.Localize(
-                                    "#subjectauditlog_error",
-                                  ),
+                                  children: (0, _.jsx)(_._, {
+                                    size: "2",
+                                    children: _._.Localize(
+                                      "#subjectauditlog_error",
+                                    ),
+                                  }),
                                 }),
                               }),
                             _.isSuccess &&
@@ -995,9 +1038,12 @@
                               (0, _.jsx)("tr", {
                                 children: (0, _.jsx)("td", {
                                   colSpan: 4,
-                                  children: _._.Localize(
-                                    "#subjectauditlog_noentries",
-                                  ),
+                                  children: (0, _.jsx)(_._, {
+                                    size: "2",
+                                    children: _._.Localize(
+                                      "#subjectauditlog_noentries",
+                                    ),
+                                  }),
                                 }),
                               }),
                             _.isSuccess &&
@@ -1021,66 +1067,87 @@
         );
       }
       function _(_) {
-        var _, _;
+        var _;
         const { entry: _ } = _,
           _ = (0, _._)(_.actor_steamid);
-        return _.isSuccess && _.data
-          ? (0, _.jsxs)("tr", {
-              children: [
-                (0, _.jsx)("td", {
-                  children: (0, _._)(_.timestamp, !1, ""),
-                }),
-                (0, _.jsxs)("td", {
-                  children: [
-                    (0, _.jsx)("a", {
-                      href: `${_._.COMMUNITY_BASE_URL}profiles/${_.actor_steamid}`,
-                      children: (0, _.jsx)("span", {
-                        children:
-                          null ===
-                            (_ =
-                              null === (_ = _.data) || void 0 === _
-                                ? void 0
-                                : _.public_data) || void 0 === _
-                            ? void 0
-                            : _.persona_name,
-                      }),
+        if (!_.isSuccess || !_.data) return null;
+        const _ =
+          null === (_ = _.data.public_data) || void 0 === _
+            ? void 0
+            : _.persona_name;
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsx)("td", {
+              children: (0, _.jsx)(_._, {
+                size: "2",
+                children: (0, _._)(_.timestamp, !1, ""),
+              }),
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _.jsxs)("div", {
+                className: _().ReporterCell,
+                children: [
+                  (0, _.jsx)("a", {
+                    href: `${_._.COMMUNITY_BASE_URL}profiles/${_.actor_steamid}`,
+                    className: _().ReporterName,
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      truncate: !0,
+                      title: _,
+                      children: _,
                     }),
-                    " ",
-                    "(",
-                    (0, _.jsx)("a", {
-                      href: `/moderation/activity/${_.actor_steamid}`,
-                      children: "activity",
-                    }),
-                    ")",
-                  ],
-                }),
-                (0, _.jsxs)("td", {
-                  children: [
-                    (0, _._)(_.action),
-                    _.automated_action &&
-                      (0, _.jsx)(_.Fragment, {
-                        children: " (Automated)",
-                      }),
-                  ],
-                }),
-                (0, _.jsx)("td", {
-                  children: (0, _.jsx)(_, {
-                    eAction: _.action,
-                    jsonData: _.additional_json_data,
                   }),
+                  (0, _.jsxs)(_._, {
+                    size: "2",
+                    children: [
+                      "(",
+                      (0, _.jsx)("a", {
+                        href: `/moderation/activity/${_.actor_steamid}`,
+                        children: "activity",
+                      }),
+                      ")",
+                    ],
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _.jsxs)(_._, {
+                size: "2",
+                children: [
+                  (0, _._)(_.action),
+                  _.automated_action &&
+                    (0, _.jsx)(_.Fragment, {
+                      children: " (Automated)",
+                    }),
+                ],
+              }),
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _.jsx)(_._, {
+                _: "div",
+                size: "2",
+                children: (0, _.jsx)(_, {
+                  eAction: _.action,
+                  jsonData: _.additional_json_data,
                 }),
-              ],
-            })
-          : null;
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { eAction: _, jsonData: _ } = _;
         let _ = {};
-        switch ((_ && (_ = JSON.parse(_)), _)) {
-          case _._:
-            return (0, _.jsxs)(_.Fragment, {
+        _ && (_ = JSON.parse(_));
+        const _ = _.report_id
+          ? (0, _.jsxs)("span", {
               children: ["Report ID: ", _.report_id],
-            });
+            })
+          : null;
+        switch (_) {
+          case _._:
+            return _;
           case _._:
             return (0, _.jsxs)(_.Fragment, {
               children: [
@@ -1106,9 +1173,7 @@
               ],
             });
           case _._:
-            return (0, _.jsxs)(_.Fragment, {
-              children: ["Report ID: ", _.report_id],
-            });
+            return _;
           case _._:
             return (0, _.jsx)(_.Fragment, {
               children: JSON.stringify(_, null, "\t"),
@@ -1118,9 +1183,7 @@
               children: ["New level: ", (0, _._)(_.level)],
             });
           case _._:
-            return (0, _.jsxs)(_.Fragment, {
-              children: ["Report ID: ", _.report_id],
-            });
+            return _;
           default:
             return null;
         }
@@ -1128,36 +1191,102 @@
       function _(_) {
         var _;
         const { subject: _ } = _,
-          _ = _ && _.reports && _.reports.length > 0;
-        return (0, _.jsx)("table", {
-          className: _().ContentReportsTable,
-          children: (0, _.jsxs)("tbody", {
-            children: [
-              !_ &&
-                (0, _.jsx)("tr", {
-                  children: (0, _.jsx)("td", {
-                    colSpan: 4,
-                    children: _._.Localize("#contentreportslist_noreports"),
-                  }),
+          _ = _ && _.reports && _.reports.length > 0,
+          _ = [
+            ...(null !== (_ = null == _ ? void 0 : _.reports) && void 0 !== _
+              ? _
+              : []),
+          ].sort((_, _) => {
+            var _, _;
+            return (
+              (null !== (_ = _.time_reported) && void 0 !== _ ? _ : 0) -
+              (null !== (_ = _.time_reported) && void 0 !== _ ? _ : 0)
+            );
+          });
+        return (0, _.jsxs)("table", {
+          className: _().ModerationTable,
+          children: [
+            (0, _.jsxs)("colgroup", {
+              children: [
+                (0, _.jsx)("col", {
+                  className: _().DateCol,
                 }),
-              _ &&
-                (null === (_ = _.reports) || void 0 === _
-                  ? void 0
-                  : _.map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          report: _,
-                        },
-                        _.report_id,
-                      ),
-                    )),
-            ],
-          }),
+                (0, _.jsx)("col", {
+                  className: _().ReporterCol,
+                }),
+                (0, _.jsx)("col", {
+                  className: _().StatusCol,
+                }),
+                (0, _.jsx)("col", {}),
+              ],
+            }),
+            (0, _.jsx)("thead", {
+              children: (0, _.jsxs)("tr", {
+                children: [
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Date",
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Reporter",
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Status",
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      weight: "heavy",
+                      contrast: "description",
+                      children: "Reason",
+                    }),
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsxs)("tbody", {
+              children: [
+                !_ &&
+                  (0, _.jsx)("tr", {
+                    children: (0, _.jsx)("td", {
+                      colSpan: 4,
+                      children: (0, _.jsx)(_._, {
+                        size: "2",
+                        children: _._.Localize("#contentreportslist_noreports"),
+                      }),
+                    }),
+                  }),
+                _ &&
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        report: _,
+                      },
+                      _.report_id,
+                    ),
+                  ),
+              ],
+            }),
+          ],
         });
       }
       function _(_) {
-        var _, _;
+        var _;
         const { report: _ } = _,
           _ = (0, _._)(_.reporter_steamid);
         if (!_.isSuccess) return null;
@@ -1168,89 +1297,119 @@
             _.resolved !== _._ &&
             (!_.time_disputed || _.dispute_resolved !== _._),
           _ = 0 !== _.time_dispute_resolved,
-          _ = _.resolved === _._;
+          _ = _.resolved === _._,
+          _ = _.data.public_data.persona_name;
         return (0, _.jsxs)("tr", {
           children: [
             (0, _.jsx)("td", {
-              children: (0, _._)(_.time_reported, !1, ""),
-            }),
-            (0, _.jsxs)("td", {
-              children: [
-                (0, _.jsx)("a", {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
-                  children: (0, _.jsx)(_._, {
-                    playerLinkDetails: _.data,
-                    size: "X-Small",
-                    alt: "Reporter",
-                  }),
-                }),
-                " ",
-                (0, _.jsx)("a", {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
-                  children: (0, _.jsx)("span", {
-                    children:
-                      null === (_ = _.data.public_data) || void 0 === _
-                        ? void 0
-                        : _.persona_name,
-                  }),
-                }),
-              ],
+              children: (0, _.jsx)(_._, {
+                size: "2",
+                children: (0, _._)(_.time_reported, !1, ""),
+              }),
             }),
             (0, _.jsx)("td", {
-              children:
-                _.report_reason !== _._ &&
-                (0, _.jsx)("span", {
-                  children: (0, _._)(_.report_reason),
-                }),
+              children: (0, _.jsxs)("div", {
+                className: _().ReporterCell,
+                children: [
+                  (0, _.jsx)("a", {
+                    href: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
+                    children: (0, _.jsx)(_._, {
+                      playerLinkDetails: _.data,
+                      size: "X-Small",
+                      alt: "Reporter",
+                    }),
+                  }),
+                  (0, _.jsx)("a", {
+                    href: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
+                    className: _().ReporterName,
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      truncate: !0,
+                      title: _,
+                      children: _,
+                    }),
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _.jsxs)(_._, {
+                _: "div",
+                size: "2",
+                children: [
+                  _ &&
+                    !_ &&
+                    !_ &&
+                    (0, _.jsx)("span", {
+                      children: _._.Localize(
+                        "#contentreportslist_acquitted_at",
+                        (0, _._)(_.time_resolved, !1, ""),
+                      ),
+                    }),
+                  _ &&
+                    !_ &&
+                    !_ &&
+                    !_ &&
+                    (0, _.jsx)("span", {
+                      children: _._.Localize(
+                        "#contentreportslist_resolved_at",
+                        (0, _._)(_.time_resolved, !1, ""),
+                      ),
+                    }),
+                  _ &&
+                    !_ &&
+                    (0, _.jsx)("span", {
+                      children: _._.Localize(
+                        "#contentreportslist_disputed_at",
+                        (0, _._)(_.time_disputed, !1, ""),
+                      ),
+                    }),
+                  _ &&
+                    (0, _.jsx)("span", {
+                      children: _._.Localize(
+                        "#contentreportslist_dispute_resolved_at",
+                        (0, _._)(_.time_dispute_resolved, !1, ""),
+                      ),
+                    }),
+                ],
+              }),
             }),
             (0, _.jsxs)("td", {
               children: [
-                _ &&
-                  !_ &&
-                  !_ &&
-                  (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#contentreportslist_acquitted_at",
-                      (0, _._)(_.time_resolved, !1, ""),
-                    ),
+                _.report_reason !== _._ &&
+                  (0, _.jsx)(_._, {
+                    _: "div",
+                    size: "2",
+                    children: (0, _._)(_.report_reason),
                   }),
-                _ &&
-                  !_ &&
-                  !_ &&
-                  !_ &&
-                  (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#contentreportslist_resolved_at",
-                      (0, _._)(_.time_resolved, !1, ""),
-                    ),
-                  }),
-                _ &&
-                  !_ &&
-                  (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#contentreportslist_disputed_at",
-                      (0, _._)(_.time_disputed, !1, ""),
-                    ),
-                  }),
-                _ &&
-                  (0, _.jsx)("span", {
-                    children: _._.Localize(
-                      "#contentreportslist_dispute_resolved_at",
-                      (0, _._)(_.time_dispute_resolved, !1, ""),
-                    ),
-                  }),
-                !_ &&
-                  (0, _.jsx)("span", {
-                    children: _.report_text,
-                  }),
-                _ &&
-                  (0, _.jsxs)("span", {
+                !!_.report_text &&
+                  (0, _.jsxs)(_._, {
+                    _: "div",
+                    size: "2",
+                    marginTop: "1",
                     children: [
-                      (0, _.jsx)("br", {}),
-                      "Original: ",
+                      (0, _.jsx)(_._, {
+                        size: "1",
+                        weight: "heavy",
+                        contrast: "description",
+                        children: "Report: ",
+                      }),
                       _.report_text,
-                      (0, _.jsx)("br", {}),
-                      "Dispute: ",
+                    ],
+                  }),
+                !!_.time_disputed &&
+                  !!_.dispute_details &&
+                  (0, _.jsxs)(_._, {
+                    _: "div",
+                    size: "2",
+                    marginTop: "1",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        size: "1",
+                        weight: "heavy",
+                        contrast: "description",
+                        children: "Dispute: ",
+                      }),
                       _.dispute_details,
                     ],
                   }),
