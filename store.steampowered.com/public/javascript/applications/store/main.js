@@ -87592,7 +87592,7 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    30357: (e, t, r) => {
+    4315: (e, t, r) => {
       "use strict";
       r(23808), r(83977);
       var i = r(44844),
@@ -95932,13 +95932,210 @@
             ],
           });
         });
-      var vo = r(72034),
-        Ro = r(49419);
+      var vo = r(72034);
+      var Ro = r(34557),
+        zo = r(25269),
+        Io = r(44654),
+        jo = r(71944);
+      function To(e) {
+        return (
+          (t = e.rgBrowserAPISites),
+          (r = "store"),
+          !!t && (t.includes("all") || t.includes(r))
+        );
+        var t, r;
+      }
+      class xo {
+        m_ServiceTransport;
+        m_AnonymousServiceTransport;
+        m_fallbackInterface;
+        m_refreshLoginCookiePromise;
+        constructor(e) {
+          (this.m_fallbackInterface = e),
+            (this.m_ServiceTransport = {
+              SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                bSendAuth: !0,
+              }),
+              SendNotification: this.SendNotification.bind(this, {
+                bSendAuth: !0,
+              }),
+              MakeReady: this.MakeReady.bind(this),
+            }),
+            (this.m_AnonymousServiceTransport = {
+              SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                bSendAuth: !1,
+              }),
+              SendNotification: this.SendNotification.bind(this, {
+                bSendAuth: !1,
+              }),
+              MakeReady: this.MakeReady.bind(this),
+            });
+        }
+        async SendMsgAndAwaitResponse(e, t, r, i, n) {
+          if (!To(n)) {
+            if (this.m_fallbackInterface)
+              return e.bSendAuth
+                ? this.m_fallbackInterface
+                    ?.GetServiceTransport()
+                    .SendMsg(t, r, i, n)
+                : this.m_fallbackInterface
+                    ?.GetAnonymousServiceTransport()
+                    .SendMsg(t, r, i, n);
+            console.error("No browserapi version of", t, "and no fallback");
+          }
+          const s = await this.SendMsgOnce(e, t, r, i, n);
+          return 401 === s.status &&
+            e.bSendAuth &&
+            (await this.BEnsureLoginCookieRefreshed())
+            ? (await this.SendMsgOnce(e, t, r, i, n)).msgResult
+            : s.msgResult;
+        }
+        BEnsureLoginCookieRefreshed() {
+          return (
+            (this.m_refreshLoginCookiePromise ??= (async function () {
+              try {
+                const e = await fetch(
+                  `${Ct.TS.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+                  {
+                    method: "POST",
+                    credentials: "include",
+                    body: new URLSearchParams({ redir: window.location.href }),
+                  },
+                );
+                if (!e.ok) return !1;
+                const t = await e.json();
+                if (!t.success || !t.login_url) return !1;
+                const r = new URLSearchParams();
+                for (const [e, i] of Object.entries(t))
+                  "string" == typeof i && r.append(e, i);
+                return (
+                  await fetch(t.login_url, {
+                    method: "POST",
+                    credentials: "include",
+                    body: r,
+                  })
+                ).ok;
+              } catch {
+                return !1;
+              }
+            })().finally(() => {
+              this.m_refreshLoginCookiePromise = void 0;
+            })),
+            this.m_refreshLoginCookiePromise
+          );
+        }
+        async SendMsgOnce(e, t, r, i, n) {
+          let s,
+            a = 0;
+          try {
+            const o = await this.Send(e, t, r, n);
+            if (((a = o.status), 200 == a)) {
+              (s = Xt.w.Init(i, Ro.kHd)),
+                o.headers &&
+                  (o.headers.get("x-eresult") &&
+                    s.Hdr().set_eresult(parseInt(o.headers.get("x-eresult"))),
+                  o.headers.get("x-error_message") &&
+                    s
+                      .Hdr()
+                      .set_error_message(o.headers.get("x-error_message")));
+              const e = new Io.pV(await o.arrayBuffer());
+              s.ReadBodyFromBuffer(i, e);
+            }
+            0;
+          } catch (e) {}
+          if (!s) {
+            const e = 401 === a ? "Unauthorized" : void 0;
+            s = this.CreateFailedMsgProtobuf(i, l.VrD, e);
+          }
+          return { msgResult: s, status: a };
+        }
+        SendNotification(e, t, r, i) {
+          if (!To(i)) {
+            if (this.m_fallbackInterface)
+              return e.bSendAuth
+                ? this.m_fallbackInterface
+                    ?.GetServiceTransport()
+                    .SendNotification(t, r, i)
+                : this.m_fallbackInterface
+                    ?.GetAnonymousServiceTransport()
+                    .SendNotification(t, r, i);
+            console.error("No browserapi version of", t, "and no fallback");
+          }
+          return this.Send(e, t, r, i), !0;
+        }
+        Send(e, t, r, i) {
+          const n = this.CreateBrowserAPIURL(t),
+            s = r.SerializeBody(),
+            a = i.eWebAPIKeyRequirement,
+            o = i.ePrivilege == zo.Xh.tX && a == zo.EG.lv,
+            l = {
+              credentials: "omit",
+              headers: { Accept: "application/octet-stream" },
+            },
+            c = new URLSearchParams();
+          e.bSendAuth ||
+            a == zo.EG.lv ||
+            console.error(
+              `Attempting to invoke service ${t} without auth, but auth is required.`,
+            ),
+            e.bSendAuth && !o && (l.credentials = "same-origin");
+          if (i.bConstMethod)
+            return (
+              c.append("input_protobuf_encoded", jo.iI(s)),
+              fetch(`${n}?${c.toString()}`, l)
+            );
+          {
+            const e = new Uint8Array(s.buffer, s.byteOffset, s.byteLength);
+            return fetch(n, {
+              ...l,
+              method: "POST",
+              headers: {
+                ...l.headers,
+                "Content-Type": "application/octet-stream",
+              },
+              body: e,
+            });
+          }
+        }
+        CreateBrowserAPIURL(e) {
+          const t = e.match(/([^.]+)\.(.+)#(\d+)/);
+          if (!t || 4 != t.length) throw `Invalid service name: ${e}`;
+          return `/um/${t[1]}/${t[2]}/`;
+        }
+        CreateFailedMsgProtobuf(e, t, r) {
+          const i = Xt.w.Init(e);
+          return (
+            i.Hdr().set_eresult(le.zi),
+            i.Hdr().set_transport_error(t),
+            r && i.Hdr().set_error_message(r),
+            i
+          );
+        }
+        MakeReady() {
+          return Promise.resolve({ result: le.R, message: "ready" });
+        }
+        GetServiceTransport() {
+          return this.m_ServiceTransport;
+        }
+        GetAnonymousServiceTransport() {
+          return this.m_AnonymousServiceTransport;
+        }
+        WaitUntilLoggedOn() {
+          return Promise.resolve();
+        }
+        GetServerRTime32() {
+          return Number(new Date());
+        }
+        RTime32ToDate(e) {
+          return new Date(1e3 * e);
+        }
+      }
+      var Fo = r(49419);
       r(52244);
       new Map();
-      var zo = r(14947),
-        Io = r(29248);
-      function jo() {
+      var Oo = r(14947),
+        Wo = r(29248);
+      function qo() {
         const e = [];
         return (
           Ct.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
@@ -95946,10 +96143,10 @@
           e
         );
       }
-      var To = r(92724),
-        xo = (r(64641), r(37523)),
-        Fo = r(78686);
-      (0, zo.jK)({ enforceActions: "never" }),
+      var Lo = r(92724),
+        Ao = (r(64641), r(37523)),
+        Uo = r(78686);
+      (0, Oo.jK)({ enforceActions: "never" }),
         performance.mark("storeReactStartup");
       new PerformanceObserver((e) => {
         const t = e.getEntriesByType("navigation")[0];
@@ -95960,7 +96157,7 @@
           t.responseEnd &&
           (0, Ia.D)()
         ) {
-          const e = Oo - t.responseEnd;
+          const e = Po - t.responseEnd;
           (0, Ia.D)().IncrementStat("storeReactStartup", e),
             performance.measure("storeReactStartup", {
               start: t.responseEnd,
@@ -95968,19 +96165,19 @@
             });
         }
       }).observe({ type: "navigation", buffered: !0 });
-      let Oo = performance.now();
-      let Wo,
-        qo = !1;
-      function Lo() {
-        if (!qo) {
+      let Po = performance.now();
+      let ko,
+        Do = !1;
+      function Eo() {
+        if (!Do) {
           (0, s.XJ)("application_config").config
-            ? (Ao(), (qo = !0))
+            ? (No(), (Do = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function Ao() {
-        Wo ||
-          (Wo = (async function (e) {
+      async function No() {
+        ko ||
+          (ko = (async function (e) {
             0;
             const t = a.A0.GetLanguageFallback(e),
               i = e === t,
@@ -95996,27 +96193,28 @@
                       r(13122)(`./marketing_${t}.json`),
                       `marketing_${t}`,
                     ),
-                xo.n.Ready(),
+                Ao.n.Ready(),
                 bi.Ready(),
-                Fo.Z.Ready(),
-                (0, To.u)(),
+                Uo.Z.Ready(),
+                (0, Lo.u)(),
               ]);
             a.pf.SetReady(!0),
               a.pf.AddTokens({ ...n, ...s, ...o }, { ...l, ...c, ...u });
           })(s.TS.LANGUAGE)),
-          await Wo;
+          await ko;
       }
-      Lo(),
+      Eo(),
         je.oQ(async function () {
-          Lo();
-          const e = (0, Io.zR)({ basename: (0, p.C)() });
-          (0, Ro.aj)().Init(
-            "Store",
-            CLSTAMP,
-            new vo.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-            { fnGetReportTags: jo },
-          ),
-            await Ao(),
+          Eo();
+          const e = (0, Wo.zR)({ basename: (0, p.C)() }),
+            t =
+              (0, s.xv)() === s.TS.STORE_BASE_URL
+                ? new xo()
+                : new vo.D(s.TS.WEBAPI_BASE_URL);
+          (0, Fo.aj)().Init("Store", CLSTAMP, t.GetServiceTransport(), {
+            fnGetReportTags: qo,
+          }),
+            await No(),
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
@@ -96025,7 +96223,7 @@
             (0, Ia.D)() &&
               (0, Ia.D)().IncrementStat(
                 "storeReactLocalizationReady",
-                performance.now() - Oo,
+                performance.now() - Po,
               ),
             performance.measure("storeReactLocalizationReady", {
               start: "storeReactStartup",
@@ -96146,7 +96344,7 @@
   },
   (e) => {
     e.O(0, [78997], () => {
-      return (t = 30357), e((e.s = t));
+      return (t = 4315), e((e.s = t));
       var t;
     });
     e.O();

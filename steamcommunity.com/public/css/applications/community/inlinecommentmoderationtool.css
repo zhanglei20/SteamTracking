@@ -163,6 +163,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   flex-direction: column;
   justify-content: flex-start;
   gap: 36px;
+  flex-shrink: 0;
 }
 ._3o0wdHIoLEIVk2tOl2OyB1 {
   display: flex;

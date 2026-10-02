@@ -82,6 +82,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -1387,7 +1388,10 @@
                           (0, _.jsxs)("div", {
                             className: _().ModerationData,
                             children: [
-                              (0, _.jsxs)("div", {
+                              (0, _.jsxs)(_._, {
+                                _: "div",
+                                size: "3",
+                                contrast: "description",
                                 children: [
                                   null !==
                                     (_ =
@@ -1415,6 +1419,7 @@
                               }),
                               (0, _.jsx)(_._, {
                                 tabs: _,
+                                bDisableRouting: !0,
                               }),
                             ],
                           }),
@@ -1462,9 +1467,12 @@
                                   children: [
                                     (0, _.jsx)("a", {
                                       href: `${_._.HELP_BASE_URL}tickermaster/ticket/${_.owner_dispute_details}`,
-                                      children: _._.Localize(
-                                        "#moderation_already_owner_disputed",
-                                      ),
+                                      children: (0, _.jsx)(_._, {
+                                        size: "2",
+                                        children: _._.Localize(
+                                          "#moderation_already_owner_disputed",
+                                        ),
+                                      }),
                                     }),
                                     (0, _.jsx)("button", {
                                       disabled: !_,
@@ -1539,7 +1547,12 @@
           children: [
             (0, _.jsxs)("label", {
               children: [
-                _._.Localize("#moderation_editownerdisputedetails_label"),
+                (0, _.jsx)(_._, {
+                  size: "2",
+                  children: _._.Localize(
+                    "#moderation_editownerdisputedetails_label",
+                  ),
+                }),
                 (0, _.jsx)("input", {
                   type: "text",
                   value: _,
@@ -1576,12 +1589,19 @@
         return (0, _.jsxs)(_._, {
           className: _().OwnerDisputeCtn,
           children: [
-            (0, _.jsx)("div", {
+            (0, _.jsx)(_._, {
+              _: "div",
+              size: "2",
               children: _._.Localize("#moderation_ownerdispute_description"),
             }),
             (0, _.jsxs)("label", {
               children: [
-                _._.Localize("#moderation_ownerdispute_ticketmastercode"),
+                (0, _.jsx)(_._, {
+                  size: "2",
+                  children: _._.Localize(
+                    "#moderation_ownerdispute_ticketmastercode",
+                  ),
+                }),
                 " ",
                 (0, _.jsx)("input", {
                   type: "text",

@@ -2908,10 +2908,218 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (
+          (_ = _.rgBrowserAPISites),
+          (_ = "partnerweb"),
+          !!_ && (_.includes("all") || _.includes(_))
+        );
+        var _, _;
+      }
+      class _ {
+        m_ServiceTransport;
+        m_AnonymousServiceTransport;
+        m_fallbackInterface;
+        m_refreshLoginCookiePromise;
+        constructor(_) {
+          (this.m_fallbackInterface = _),
+            (this.m_ServiceTransport = {
+              SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                bSendAuth: !0,
+              }),
+              SendNotification: this.SendNotification.bind(this, {
+                bSendAuth: !0,
+              }),
+              MakeReady: this.MakeReady.bind(this),
+            }),
+            (this.m_AnonymousServiceTransport = {
+              SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                bSendAuth: !1,
+              }),
+              SendNotification: this.SendNotification.bind(this, {
+                bSendAuth: !1,
+              }),
+              MakeReady: this.MakeReady.bind(this),
+            });
+        }
+        async SendMsgAndAwaitResponse(_, _, _, _, _) {
+          if (!_(_)) {
+            if (this.m_fallbackInterface)
+              return _.bSendAuth
+                ? this.m_fallbackInterface
+                    ?.GetServiceTransport()
+                    .SendMsg(_, _, _, _)
+                : this.m_fallbackInterface
+                    ?.GetAnonymousServiceTransport()
+                    .SendMsg(_, _, _, _);
+            console.error("No browserapi version of", _, "and no fallback");
+          }
+          const _ = await this.SendMsgOnce(_, _, _, _, _);
+          return 401 === _.status &&
+            _.bSendAuth &&
+            (await this.BEnsureLoginCookieRefreshed())
+            ? (await this.SendMsgOnce(_, _, _, _, _)).msgResult
+            : _.msgResult;
+        }
+        BEnsureLoginCookieRefreshed() {
+          return (
+            (this.m_refreshLoginCookiePromise ??= (async function () {
+              try {
+                const _ = await fetch(`${_._.LOGIN_BASE_URL}jwt/ajaxrefresh`, {
+                  method: "POST",
+                  credentials: "include",
+                  body: new URLSearchParams({
+                    redir: window.location.href,
+                  }),
+                });
+                if (!_._) return !1;
+                const _ = await _.json();
+                if (!_.success || !_.login_url) return !1;
+                const _ = new URLSearchParams();
+                for (const [_, _] of Object.entries(_))
+                  "string" == typeof _ && __webpack_require__.append(_, _);
+                return (
+                  await fetch(_.login_url, {
+                    method: "POST",
+                    credentials: "include",
+                    body: _,
+                  })
+                )._;
+              } catch {
+                return !1;
+              }
+            })().finally(() => {
+              this.m_refreshLoginCookiePromise = void 0;
+            })),
+            this.m_refreshLoginCookiePromise
+          );
+        }
+        async SendMsgOnce(_, _, _, _, _) {
+          let _,
+            _ = 0;
+          try {
+            const _ = await this.Send(_, _, _, _);
+            if (((_ = _.status), 200 == _)) {
+              (_ = _._.Init(_, _.kHd)),
+                _.headers &&
+                  (_.headers.get("x-eresult") &&
+                    _.Hdr().set_eresult(parseInt(_.headers.get("x-eresult"))),
+                  _.headers.get("x-error_message") &&
+                    _.Hdr().set_error_message(
+                      _.headers.get("x-error_message"),
+                    ));
+              const _ = new _._(await _.arrayBuffer());
+              _.ReadBodyFromBuffer(_, _);
+            }
+            0;
+          } catch (_) {}
+          if (!_) {
+            const _ = 401 === _ ? "Unauthorized" : void 0;
+            _ = this.CreateFailedMsgProtobuf(_, _.VrD, _);
+          }
+          return {
+            msgResult: _,
+            status: _,
+          };
+        }
+        SendNotification(_, _, _, _) {
+          if (!_(_)) {
+            if (this.m_fallbackInterface)
+              return _.bSendAuth
+                ? this.m_fallbackInterface
+                    ?.GetServiceTransport()
+                    .SendNotification(_, _, _)
+                : this.m_fallbackInterface
+                    ?.GetAnonymousServiceTransport()
+                    .SendNotification(_, _, _);
+            console.error("No browserapi version of", _, "and no fallback");
+          }
+          return this.Send(_, _, _, _), !0;
+        }
+        Send(_, _, _, _) {
+          const _ = this.CreateBrowserAPIURL(_),
+            _ = __webpack_require__.SerializeBody(),
+            _ = _.eWebAPIKeyRequirement,
+            _ = _.ePrivilege == _._._ && _ == _._._,
+            _ = {
+              credentials: "omit",
+              headers: {
+                Accept: "application/octet-stream",
+              },
+            },
+            _ = new URLSearchParams();
+          _.bSendAuth ||
+            _ == _._._ ||
+            console.error(
+              `Attempting to invoke service ${_} without auth, but auth is required.`,
+            ),
+            _.bSendAuth && !_ && (_.credentials = "same-origin");
+          if (_.bConstMethod)
+            return (
+              _.append("input_protobuf_encoded", _.fromByteArray(_)),
+              fetch(`${_}?${_.toString()}`, _)
+            );
+          {
+            const _ = new Uint8Array(_.buffer, _.byteOffset, _.byteLength);
+            return fetch(_, {
+              ..._,
+              method: "POST",
+              headers: {
+                ..._.headers,
+                "Content-Type": "application/octet-stream",
+              },
+              body: _,
+            });
+          }
+        }
+        CreateBrowserAPIURL(_) {
+          const _ = _.match(/([^.]+)\.(.+)#(\d+)/);
+          if (!_ || 4 != _.length) throw `Invalid service name: ${_}`;
+          return `/um/${_[1]}/${_[2]}/`;
+        }
+        CreateFailedMsgProtobuf(_, _, _) {
+          const _ = _._.Init(_);
+          return (
+            _.Hdr().set_eresult(_._),
+            _.Hdr().set_transport_error(_),
+            _ && _.Hdr().set_error_message(_),
+            _
+          );
+        }
+        MakeReady() {
+          return Promise.resolve({
+            result: _._,
+            message: "ready",
+          });
+        }
+        GetServiceTransport() {
+          return this.m_ServiceTransport;
+        }
+        GetAnonymousServiceTransport() {
+          return this.m_AnonymousServiceTransport;
+        }
+        WaitUntilLoggedOn() {
+          return Promise.resolve();
+        }
+        GetServerRTime32() {
+          return Number(new Date());
+        }
+        RTime32ToDate(_) {
+          return new Date(1e3 * _);
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _() {
         const _ = [];
         return (
@@ -2928,11 +3136,10 @@
         document.addEventListener("DOMContentLoaded", async function () {
           const _ = document.getElementById("application_root"),
             _ = _ ? "application_config" : void 0;
-          (0, _._)(_);
-          const _ = new _._(_._.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, _._)().Init("Partner", CLSTAMP, _, {
-            fnGetReportTags: _,
-          }),
+          (0, _._)(_),
+            (0, _._)().Init("Partner", CLSTAMP, new _().GetServiceTransport(), {
+              fnGetReportTags: _,
+            }),
             await (async function (_) {
               const [_, _, _] = await Promise.all([
                   __webpack_require__("chunkid")(`./marketing_${_}.json`),
@@ -55912,7 +56119,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 45112), _((_._ = _));
+      return (_ = 88174), _((_._ = _));
       var _;
     });
     _._();
