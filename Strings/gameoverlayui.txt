@@ -1085,6 +1085,7 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+01:15:40
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAppTestType_SteamFrameCompatibilityReview
@@ -1584,7 +1585,6 @@ $\nY8O
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:18:18
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -5138,6 +5138,7 @@ OZw3(?
 O\n\nAnnotation
 Obtained EMS handle %u
 Obtained XMS handle %u
+Oct  2 2026
 October
 Odia
 Offensive Avatar
@@ -5700,7 +5701,6 @@ Sending of an email failed
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 29 2026
 Seperator
 SeperatorBack
 SeperatorFront

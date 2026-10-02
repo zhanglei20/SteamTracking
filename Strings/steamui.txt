@@ -88,7 +88,6 @@
  (capture)
  (convert)
  (decode)
- (display)
  (dropped)
  (encode)
  (network)
@@ -186,6 +185,8 @@
  HTTP/1.1\r\n
  Header - %s: %s\n
  IN: %.1fkbit %.1f pkt/s qual %s
+ Kwc
+ LNOBL{@
  Not currently held by a job?
  OUT: %.1fkbit %.1f pkt/s qual %s
  Outdent() without matching Indent().
@@ -259,6 +260,7 @@
  raw
  requires
  restrict
+ s@tX56
  size is
  smime-type=%s;
  stack frames not accounted for stack unwind.
@@ -397,6 +399,7 @@
 !GameRecording\InstantClipDuration
 !H88p
 !HasMessageLengthHeader()
+!IUg
 !IsAlive()
 !IsClosed()
 !IsRetailInstall()
@@ -410,6 +413,7 @@
 !UI/Display/Current/MaxScaleFactor
 !UI/Display/Current/MinScaleFactor
 !V_isempty( svHostname )
+!Xuy
 !\fmHs8
 !\n\finitial_left
 !\n\rincluded_apps
@@ -520,6 +524,7 @@
 !tX)i
 !ulHandle
 !vecEntryFields.IsEmpty()
+!w7x
 " \n\rCMsgSetUIMode
 " because it is missing required fields:
 " conflicts with field "
@@ -1049,6 +1054,7 @@
 "legacy_set"\t\t"1"
 "m\n(CMsgRemoteClientPeerContentServerChanged
 "m\n8CDepotContentDetection_GetAllDetectedAppContent_Response
+"mdat@(
 "p\n+CClientNotificationFamilySharingStopPlaying
 "q\n5CAuthenticationSupport_QueryRefreshTokenByID_Response
 "q\n5CCommunity_GetUserPartnerEventsAppPriorities_Response
@@ -1442,6 +1448,7 @@
 #debug_containerfile
 #debug_noselection
 #debug_selection
+#fr@8
 #friends_away
 #friends_invisible
 #friends_offline
@@ -2495,13 +2502,13 @@ ${LANGUAGE}
 &.CTimedTrial_GetTimeRemaining_Response"
 &.CTwoFactor_UpdateTokenVersion_Request
 &1j@U
+&3Ws
 &5L_jy
 &6EUdt
 &6FVfv
 &8Yv
 &ARCH=%s
 &CLOUD_GAMING_PLATFORM=%u
-&FORCED_DISPLAY_MODE=steammachine
 &GameRecording\BackgroundTimeResolution
 &IY6
 &Lj&6lZ6?~A?
@@ -2671,6 +2678,7 @@ ${LANGUAGE}
 &b != &result
 &bufIn != &bufOut
 &bzi
+&elt
 &kP4
 &output != &d1
 &output != &d2
@@ -2692,6 +2700,7 @@ ${LANGUAGE}
 ' is already set.
 ' is already set. Cannot set '
 ' map to the same camel case name '
+''IW@Pa5\r
 ') within a map.
 '. Cannot find matching '(' for all ')'.
 '. Cannot find matching ')' for all '('.
@@ -3084,6 +3093,8 @@ ${LANGUAGE}
 (KeyValues*)m_ReplacedKVs.Element(idx)
 (KeyValues*)m_ResourceCache.Element(idx)
 (NONE)
+(PXr@b
+(Rov]
 (U1h
 (Validated)
 (ZdOt\n&
@@ -3119,6 +3130,7 @@ ${LANGUAGE}
 (\n is_available_on_current_platform
 (\n nonpreferred_product_prepurchase
 (\n offset_detection_min_clean_chunk
+(\n pyrowave_custom_bitrate_OBSOLETE
 (\n remove_from_download_list_app_id
 (\n#k_EMsgAMCheckClanInviteRateLimiting
 (\n#k_EMsgAMCheckClanMembershipResponse
@@ -4060,6 +4072,7 @@ ${LANGUAGE}
 (stream->flags & NGHTTP2_STREAM_FLAG_DEFERRED_ALL) == 0
 (susss^as@a{sv}i)
 (system\InGameOverlayScreenshotEnableAVIF
+(tX@Z
 (tti)
 (ttss@a{sv})
 (ttu)
@@ -4596,6 +4609,7 @@ ${LANGUAGE}
 *BYr
 *DQW%
 *GY4
+*G\5Rh
 *N12_GLOBAL__N_115ScrollBarButtonE
 *N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
@@ -4628,6 +4642,7 @@ ${LANGUAGE}
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *Software\Valve\Steam\ShowScreenshotManager
+*VI@G
 *Xv\v%Wy
 *Z16InitializeChromeP21IHTMLChromeController7EUIModeEUlRK10StringViewE_
 *Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
@@ -5229,6 +5244,7 @@ ${LANGUAGE}
 *^\n\fELogFileType
 *d\n\fEAudioFormat
 *hbJ1
+*hl5u@
 *kT\f3rM
 *laM-\SO
 *m_pQueuedNetMsgs
@@ -5251,6 +5267,7 @@ ${LANGUAGE}
 *steammessages_remoteclient_discovery.proto"r\n
 *system\InGameOverlayScreenshotNotification
 *vBsG
+*yH,E
 *|\n\fECPUGovernor
 *|\n\nEInputMode
 +$5:o`q~S\MB
@@ -5258,10 +5275,10 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGSp
+++CCUNGS
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNGxx
+++CCUNGx
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -5345,10 +5362,13 @@ ${LANGUAGE}
 +.CUserAccount_ViewFriendInviteToken_Request
 +2Hp
 +5FSgr
++987
 +:JYix
++FSY
 +HpXhE
 +QQ 3K%
 +U2L
++UM:Pr@c
 +\n#accessibility_screen_reader_enabled
 +\n#content_descriptorids_including_dlc
 +\n#display_adaptive_brightness_enabled
@@ -5449,6 +5469,7 @@ ${LANGUAGE}
 +automatic
 +connect_lobby %llu
 +en+eo+
++kjU@
 +steammessages_storebrowse.steamclient.proto
 +steammessages_storebrowse.steamclient.proto"`\n5CMarketingMessages_GetActiveMarketingMessages_Request
 +ulsX
@@ -5562,14 +5583,18 @@ ${LANGUAGE}
 ,.CUserAccount_SetOptOutEmailOptions_Response"
 ,.CUserAccount_ViewFriendInviteToken_Response"
 ,9JYiy
+,9a7
 ,:XNtb
 ,CBKE
 ,Customization/Screensaver/CurrentScreensaver
 ,EZr
+,IJm@
 ,Logitech G29 Racing Wheel,
 ,R5K
 ,Reason=
 ,S3L
+,Z@Pd
+,ZFq@
 ,\n$display_nightmode_schedule_starttime
 ,\n$is_display_colormanagement_available
 ,\n$is_refresh_rate_switching_restricted
@@ -5676,6 +5701,7 @@ ${LANGUAGE}
 ,\n\vescalate_to
 ,\n\vpreferences
 ,bX3\tG}
+,jLG
 ,local://controller_base/desktop_%s.vdf
 ,name:
 ,section=
@@ -5703,6 +5729,7 @@ ${LANGUAGE}
 ,steammessages_unified_base.steamclient.proto"y\n
 ,system\ControllerLowBatteryNotificationSound
 ,system\ControllerLowBatteryNotificationToast
+,uFMM
 ,value:
 - Timing for jumping packet: [present=%llu][capture=%llu][pipe=%llu][convert=%llu][encode=%llu]
 -"ke6
@@ -5818,12 +5845,14 @@ ${LANGUAGE}
 -DBF
 -Gamescope/EnableSteamNativeExternalResolution
 -Infinity
+-JR@P
 -LY8
 -RN1
 -SteamViveSetup
 -\n%adjusted_time_probe_frequency_seconds
 -\n%is_display_state_management_supported
 -\n%is_extended_cec_wake_device_supported
+-\n%pyrowave_custom_bitrate_kbps_OBSOLETE
 -\n(k_EMsgAMClientCreateFriendsGroupResponse
 -\n(k_EMsgAMClientDeleteFriendsGroupResponse
 -\n(k_EMsgAMClientManageFriendsGroupResponse
@@ -6522,6 +6551,7 @@ ${LANGUAGE}
 ./google/protobuf/stubs/stringpiece.h
 ./google/protobuf/unknown_field_set.h
 ./google/protobuf/util/internal/datapiece.h
+.2FN@b
 .5F]pk*1
 .5P<e
 .7xaJS
@@ -7445,8 +7475,10 @@ ${LANGUAGE}
 /=LZjw
 />IXkz
 />Oas
+/Mt@j
 /OTN
 /P8i
+/Q9p@
 /R?jjU?
 /Steam3PosixRegistryManager
 /SteamApps
@@ -7596,6 +7628,7 @@ ${LANGUAGE}
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
 /index.html
 /name
+/ng@2
 /org/bluez
 /org/freedeskop/DBus
 /org/freedesktop/ScreenSaver
@@ -7776,11 +7809,11 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7793,13 +7826,17 @@ ${LANGUAGE}
 0972-74BD-D8DE-662E
 0<($`lxtP\HD
 0?0L
+0@L5
 0A/8
 0B_u
 0F`8
+0H@J
 0HKEY_CURRENT_USER\Software\Valve\Steam\ForceOOBE
+0Ho\r
 0Ntl
 0SX;
 0Software\Valve\Steam\System\IdleSuspendACSeconds
+0X&r
 0Z@q
 0ZQ;
 0\n!download_throttle_while_streaming
@@ -7885,7 +7922,11 @@ ${LANGUAGE}
 0\tzc
 0`P0
 0fl:
+0p@B=
 0pp@5tqE?|sO541
+0q@=q
+0sd@X
+0v: p
 0x%llx
 0x%lx
 0x%x
@@ -9706,6 +9747,7 @@ ${LANGUAGE}
 1>/ uzkdIFWX
 1>O\kw
 1?Uo
+1@Dv
 1A26b
 1ANYckrx~
 1ASdu
@@ -9716,6 +9758,7 @@ ${LANGUAGE}
 1Kay
 1Ql\f
 1S9[
+1[Pe
 1\n)notifications_show_chat_room_notification
 1\n,k_EMsgAISUpdateSubordinateContentDescription
 1\n,k_EMsgAMGetAccountFlagsForWGSpoofingResponse
@@ -9783,6 +9826,7 @@ ${LANGUAGE}
 1\n\vserver_data
 1bS1
 1dWrA
+1k"e@
 1nds
 1steammessages_remoteclient_service_messages.proto2
 1uS9
@@ -10295,6 +10339,7 @@ ${LANGUAGE}
 20TabCatchingTextEntry
 20TestServerFromClient
 20TestSteamClient_Stub
+20]6r@'
 21AssociativeListElem_tIjiE
 21AuthenticationSupport
 21BluetoothManager_Stub
@@ -10926,6 +10971,7 @@ ${LANGUAGE}
 28SiteServerUI_Logout_Response
 28SiteServerUI_Status_Response
 28SteamNotificationClient_Stub
+28T@B
 29CAchievements_GetInfo_Request
 29CAuthentication_DeviceDetails
 29CCMRemoteClient_ClientMessage
@@ -11080,19 +11126,24 @@ ${LANGUAGE}
 2bT~
 2dV2:tN:\n
 2gz/
+2iF`
 2ju:
 2k\vR
+2kn"
+2m-N@
 2o\n\vStoreClient
 2prB
 2s\n\rChatUsability
 2sssua
 2system\SteamFrameWirelessAdapterAirplaneDialogSkip
+2ulr
 2{\n\rValveHWSurvey
 2}\n\nFovasVideo
 3 Mbps
 3$EE\f
 3$ae
 3%3+3/353A3G3[3_3g3k3s3y3
+3&@RdW
 3'K_cw
 3,IE),W
 3--Jg
@@ -11422,6 +11473,7 @@ ${LANGUAGE}
 32SiteServerUI_SetLanguage_Request
 32StoreItem_Screenshots_Screenshot
 32UserContentDescriptorPreferences
+32qef
 3333
 3333UUUU
 333?
@@ -11597,6 +11649,7 @@ ${LANGUAGE}
 34PublishedFileDetails_PlaytimeStats
 34SiteServerUI_ClientStatus_Response
 34StoreItem_Trailers_AdaptiveTrailer
+35@h
 35CAchievements_GetInfo_Response_Info
 35CAudio_GetSpatializeEnabled_Request
 35CAudio_GetSupportedFeatures_Request
@@ -12080,13 +12133,16 @@ ${LANGUAGE}
 3Cn(
 3DES
 3DES(168)
+3E@LY\v
 3HLhx
 3I2H
+3JX&@ZE
 3M*T
 3Nw\n
 3Rh\t
 3Software\Valve\Steam\System\EnableLowPowerDownloads
 3UC%
+3W6d
 3Wk1^
 3Y%O
 3YH_!
@@ -12116,13 +12172,16 @@ ${LANGUAGE}
 3\n\temoticons
 3\n\vuser_status
 3\v;8BJ\nH
+3`@XN
 3ej\n
 3g\f8
+3k@0
 3pay
 3psC'dcG,
 3rUZ
 3suu
 3x&>Z
+3yFW@#
 3|rN>
 4 Mbps
 4 uH
@@ -12698,6 +12757,7 @@ ${LANGUAGE}
 45CUserAccount_RedeemFriendInviteToken_Response
 45CUserAccount_RevokeFriendInviteToken_Response
 45ClientCloudFileUploadBlockDetails_HTTPHeaders
+45H@
 45LobbyMatchmakingLegacy_GetLobbyStatus_Request
 45SiteServerUI_ClientStatus_Response_ClientInfo
 46$a
@@ -12813,6 +12873,7 @@ ${LANGUAGE}
 47CTransportValidation_TriggerDataRequest_Request
 47CTransportValidation_TriggerSyntheticEvents_Job
 47CVideo_BeginGameRecordingSegmentsUpload_Request
+47fc@!
 48CAccountHardware_GetPersonalizationFile_Response
 48CAccountHardware_GetSteamDeckComponents_Response
 48CAccountHardware_RegisterSteamController_Request
@@ -12916,17 +12977,21 @@ ${LANGUAGE}
 49CVideo_GameRecordingSegmentUploadInfo_HTTPHeaders
 49fN
 4@AA
+4CHv
 4CJWT
 4CJob
 4Chat
 4DXgu~
 4Econ
 4F]t
+4Fy@
 4J-S
 4K+T
+4S@x
 4Software\Valve\Steam\System\IdleScreensaverACSeconds
 4T9\n
 4User
+4[SQ
 4\fZQ
 4\n%price_cannot_be_displayed_as_discount
 4\n'k_EChildProcessQueryExitCode_ErrorOther
@@ -12968,10 +13033,15 @@ ${LANGUAGE}
 4\vJu-
 4]0Y
 4_S8
+4a@C
 4f$H
 4fff>fff>fff>fff>
 4h\4
 4i5U6B738%9
+4j@p
+4qB8"B>
+4skC@
+4t@>v
 4tpD
 5$SBq`
 5,czQH
@@ -13069,6 +13139,7 @@ ${LANGUAGE}
 51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
+524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -13255,9 +13326,11 @@ ${LANGUAGE}
 59CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response
 59CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response
 59ChatRoomClient_NotifyChatGroupUserStateChanged_Notification
+5@rH@
 5Audio
 5Cloud
 5EPX_f
+5EV@(
 5Itc
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 5O Z
@@ -13265,6 +13338,7 @@ ${LANGUAGE}
 5Store
 5T&w&
 5Video
+5ZBZ@'
 5\n-not_allowed_to_reserved_because_already_owned
 5\n0k_EMsgAMIsPackageRestrictedInUserCountryResponse
 5\n0k_EMsgCREGetUserPublishedItemVoteDetailsResponse
@@ -13313,7 +13387,10 @@ ${LANGUAGE}
 5mmQ
 5nsfZ
 5q\teH
+5r&T
 5y?4
+5|@pU
+5~t%l@1
 6 Mbps
 6 PQ
 6#6165676;6M6O6S6Y6a6k6m6
@@ -13342,6 +13419,9 @@ ${LANGUAGE}
 6.CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+6144
+65536
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -13354,7 +13434,6 @@ ${LANGUAGE}
 60CPlayer_GetGlobalAchievementPercentages_Response_Achievement
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13385,6 +13464,7 @@ ${LANGUAGE}
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
+666666666666666666666666666666666666666666666666
 66CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults
 66CChatRoom_SetUserChatGroupPreferences_Request_ChatGroupPreferences
 66CPlayer_GetRecentPlaytimeSessionsForChild_Response_PlaytimeSession
@@ -13428,7 +13508,10 @@ ${LANGUAGE}
 6\n\vdevice_open
 6\n\vdevice_read
 6cot
+6h@x
+6i0@
 6qo~
+6r@7{
 6s?fBbEcJYG[I[NYVP\B]@f;g<h<u4{,
 6tpD4
 6uu?>
@@ -13457,6 +13540,7 @@ ${LANGUAGE}
 7.CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 7.CTransportValidation_NotifySyntheticEvent_Notification
 7.CTransportValidation_RequestLargeNotification_Response
+7/fr@
 70CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry
 71CAuthentication_RefreshToken_Enumerate_Response_RefreshTokenDescription
 71CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession
@@ -13472,6 +13556,7 @@ ${LANGUAGE}
 77\nGJ
 79CMarketingMessages_GetMarketingMessagesForUser_Response_MarketingMessageForUser
 79CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationship
+7:qgh@|
 7?7E7I7O7]7a7u7
 7A$W
 7CCookie
@@ -13577,11 +13662,13 @@ ${LANGUAGE}
 7\n\vcardinality
 7\tKuMs1
 7\vOs
+7]@r8
 7h*u
 7nY7m
 7~8A
 8 Mbps
 8$plHT
+8-k@Q
 8.CAuthentication_BeginAuthSessionViaCredentials_Response"
 8.CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 8.CClientMetrics_ReportAccessibilitySettings_Notification
@@ -13597,15 +13684,12 @@ ${LANGUAGE}
 8.CSteamInputService_UnpairedTritonPluggedIn_Notification
 8.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request
 8.K%G
+8.Y[Z
 8/A0
 80 Mbps
 8000
 80CChatUsability_ClientUsabilityMetrics_Notification_UIState_CategoryCollapseState
 8192
-65536
-524288
-60000000
-666666666666666666666666666666666666666666666666
 82\n:XPH
 83CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization
 83L3
@@ -13696,6 +13780,7 @@ ${LANGUAGE}
 8\v8!83858A8G8K8S8W8_8e8o8q8}8
 8\vWzK
 8]Vc2
+8_Ld
 8b  16-May-2010
 8pH8
 8qM\t5
@@ -13829,6 +13914,7 @@ ${LANGUAGE}
 9ConParams
 9Econ_Stub
 9F&Y
+9GW@
 9GameNotes
 9Gamescope
 9GmlF8
@@ -13858,8 +13944,10 @@ ${LANGUAGE}
 9\n\fFamilyMember
 9\n\fgpu_topology
 9\n\noneof_decl
+9\rfn
 9^W0
 9a&g
+9ak>k@)
 9bj1
 9c,Y0x
 9eH?
@@ -13929,6 +14017,7 @@ ${LANGUAGE}
 :authorit
 :authority
 :eaI
+:hTI
 :metho
 :method
 :oc\ve
@@ -13960,6 +14049,7 @@ ${LANGUAGE}
 ;HKEY_CURRENT_USER\Software\Valve\Steam\OSVersionUnsupported
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 ;K+PW
+;[b1p
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
 ;\n7k_EClientNotificationType_FamilyPurchaseRequestResponse
@@ -14037,6 +14127,7 @@ ${LANGUAGE}
 <appid> Manually triggers background cloud sync of app.
 <appid> Manually triggers on-launch cloud sync for the given app.
 <appid> [bExternalAPI=1]
+<dbE
 <delay> Enable/disable suspend inhibit after specified delay
 <dump|leaks> <threshold> : validates memory
 <eState> Force the display to a specific state.
@@ -14076,7 +14167,9 @@ ${LANGUAGE}
 =====================================================================================================================================\n
 ==zGdd
 =?9;5713-/)+%'!#]_Y[UWQSMOIKEGAC}
+=Ez@E.Q
 =G8B
+=Hw@b
 =Tie
 =Uec
 =VX7
@@ -14150,12 +14243,14 @@ ${LANGUAGE}
 >\n\tThumbnail
 >\n\ttaggroups
 >\v?\r?7?;?=?A?Y?_?e?g?y?}?
+>ey@2
 >qxs
 >qxs?
 >qxs?z7
 >w^23
 >wcv
 >wcv?uj
+>xQY
 ? * + invalid
 ?(MZct
 ?.CSteamInputService_FirstSteamControllerConnection_Notification
@@ -14165,6 +14260,7 @@ ${LANGUAGE}
 ???\f???????\n???\r?\t?\v
 ?F4M
 ?HAI\t81\t9dcG'
+?NM0
 ?QfZ
 ?\fYjvE
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
@@ -14178,27 +14274,45 @@ ${LANGUAGE}
 ?fuP=
 ?iA9
 ?jOb
+?kn@q@jz|X^
 ?password=
 ?rJRTS\Rg>`H`CeIkHq7v4}4v4u7
 ?tr#6
 ?w8'g
 @!@%@+@1@?@C@E@]@a@g@m@
+@,Y/4HEr
 @.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
 @.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 @.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 @.CSteamInputService_WaitInitialControllerStateEnumerated_Request
+@0aD
 @0pp
+@4IZ
+@66q,
+@7AXE
 @@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@/home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_uv.cc
 @AppMRUSize
+@DRO
+@DwXi
 @EnableUDPHistory
+@GaT
 @HKEY_CURRENT_USER\Software\Valve\Steam\EnableGamescopeComposerVR
+@Hlc
+@JK2
+@LC3
 @MaxOutstandingSendThreadItemFatalAssert
 @MaxOutstandingSendThreadItemFatalAssertSecondsAtLimit
 @MaxOutstandingSendThreadItemSleep
+@Mwa*
+@NM8
 @OSJumpListMRUSize
+@PyrowaveHeightFactor
+@PyrowavePSNR
 @StreamTransportICEPenalty
 @StreamTransportSDRPenalty
+@V0U
+@V6s
 @Wny
 @Ztn
 @\n!ControllerPersonalizationResponse
@@ -14210,6 +14324,8 @@ ${LANGUAGE}
 @\n\ttaggroups
 @\n\vBroadcaster
 @\n\vcontrollers
+@`8hnI
+@a31
 @bAssertOnProtoBufBodyMismatch
 @bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 @bEnableFrameFuncOverageWarnings
@@ -14243,10 +14359,12 @@ ${LANGUAGE}
 @csecAudioSignalLevelInterval
 @eAlgorithmForCachedCredentialsPin
 @import
+@lL>E
 @metricsDisabledCatalogs
 @metricsDisabledOperations
 @metricsEnabledOperations
 @n2w
+@n=\BBr5
 @nCallerDeadlineHopLatencyMS
 @nClientCMUDPPingTimeGoodEnoughThresholdMS
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
@@ -14283,15 +14401,18 @@ ${LANGUAGE}
 @net_backlog_bytes_allowed
 @net_backlog_time_allowed_sec
 @net_loopback
+@pWt
 @sBroadcastPreset
 @sBroadcastTune
 @sHardwareUpdateForceRequiredPriorityTS
 @type
 @unMinimumShaderDownloadSizeInUI
+@v5{p3
 @valvesoftware.com
 @voice_minabs
 @voice_minavg
 @voice_spew_activity_check
+@xNrf
 A broadcast session running; can't start %s
 A file with this name is already in the pool.
 A game recording session running; can't start %s
@@ -14308,6 +14429,8 @@ A2VPD
 A9ue_
 A:3,]VOHyrkd[[
 A;DC04
+A<yk
+A@FV
 A@qVc"
 AA Compromise
 AACompromise
@@ -15351,6 +15474,7 @@ ArmItem
 Armenian
 Artwork
 ArtworkPublished
+As@0
 Ascending
 Asia/Baku
 Asia/Bangkok
@@ -15538,6 +15662,7 @@ Azerbaijani
 A~Se
 B#B)B/BCBSBUB[BaBsB}B
 B#C0D?EQFeG|H
+B%vT
 B*k@5
 B-163
 B-233
@@ -15576,6 +15701,7 @@ BF-CFB
 BF-ECB
 BF-OFB
 BFUa.X
+BFf@
 BFileExists Yielding IO Job
 BFilesystemAllowsExecution Yielding IO Job
 BFilesystemAllowsExecution: couldn't read %s\n
@@ -15801,6 +15927,7 @@ B\n\nquery_type
 B\n\rgroup_summary
 B\n\tQueryTime
 B\n\tShareFile
+B\tZD
 B_xe
 BackButton
 BackUp() can only be called after a successful Next().
@@ -16090,16 +16217,20 @@ ByteSource::CopyTo() overran input.
 ByteToFloat
 ByteToFloatRow_C
 Bytes
+BzTS4
 C U6
 C q'O
+C$s@X7
 C%C'C3C7C9COCWCiC
 C-Yn
 C3ps
 C6pH[
 C77nYmm
+C7p\tP@
 C=Kx
 C>YPH>z
 C@gw
+C@r|S
 CA Compromise
 CA Issuers
 CA Repository
@@ -18809,6 +18940,7 @@ CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
 CUtlSymbolTable
+CV.f
 CVAAPIConvertRGBToNV12: Could not convert DRM format 0x%x to VA_FOURCC\n
 CVAAPIConvertRGBToNV12: Couldn't load VA-API functions\n
 CVAAPIConvertRGBToNV12: Create config failed: %s\n
@@ -19030,6 +19162,7 @@ Caching cursor image for %s, size %dx%d, serial %ld, cache size = %lld\n
 Cafe Funded
 CalcConnectionWithMostOutstandingSendBytes
 CalculateSegmentCount
+Calculated %.2f Mbit/s base bitrate for Pyrowave %ux%u %s at 60 FPS (scaled by quality and framerate)
 Call Mismatch
 Call set methods to initialize MapKey.
 Call to NULL read function
@@ -19423,6 +19556,7 @@ CloudClient.NotifyAppStateChange#1
 CloudManager
 CloudManager\HintAppsToPreload
 CloudStorage.WriteKey
+Co@j
 Code Signing
 Code=
 CodeSignature
@@ -19866,6 +20000,7 @@ Customization.GenerateLocalStartupMoviesThumbnails
 Customization.GetDownloadedStartupMovies
 Customization.GetLocalStartupMovies
 Cw!K
+CxipBp
 Cyber cafe accounts can't purchase
 Cypriot
 Cyrillic
@@ -19874,8 +20009,10 @@ D#D)D;D?DEDKDQDSDYDeDoD
 D)7Z
 D4tp
 D4y\t
+D7uX
 D96K
 D:9G
+D<@bpU
 D>B<HuUZv
 D?28D?/
 D?AdB?
@@ -20116,7 +20253,6 @@ DTLSv1.2
 DTLSv1_listen
 DVCS
 DWCHV
-DW` F
 DXDeviceID
 DXVendorID
 DXVideoCardVersion
@@ -20445,6 +20581,8 @@ DivideRow_16_C
 Divider
 Divider2
 Division or mod by zero: dividend.hi=
+DjZ@\n
+Dl]g
 Do Not Revive
 DoConversionModeChanged
 DoCopyAllText
@@ -20538,11 +20676,13 @@ E,v\nX
 E-mail Protection
 E/Co
 E0123456789ABCDEF
+E1ye@,
 E5\v\n6
 E5tq
 E<N7
 E=FZGrH
 E>70aZSL}voh
+E@{GW5"
 EACCES
 EACState
 EADDRINUSE
@@ -20860,6 +21000,8 @@ EINVAL
 EISCONN
 EInteractiveElement
 EJSRegisterMethodType
+EK)D
+EKFH
 EKeyEscrowUsage
 EKeyType
 ELEDManagerMode
@@ -21172,6 +21314,7 @@ E\wn!8
 E]sv
 E_qk-7
 Each IPC call is being logged to %s.\n
+EbaH
 EcLogging
 Econ
 EcxmV4
@@ -21638,6 +21781,7 @@ Extra compressed data
 Extra text starting with character 0x%02x='%c'
 ExtractSubrange() when arena is non-NULL is only supported when
 Eyefinity
+F-zs
 F16C
 F20EWatchdogStallResultjE
 F32LE
@@ -21663,11 +21807,13 @@ FIPS routines
 FIPS_mode_set
 FLOAT
 FLOW_CONTROL_ERROR
+FNj@H
 FOC+
 FORM
 FORMAT
 FP19_GDBusObjectManager8GBusType29GDBusObjectManagerClientFlagsPKcS4_P13_GCancellablePP7_GErrorE
 FR19CNullMetricsFactoryvE
+FR@a
 FRAME_SIZE_ERROR
 FRnz
 FSsN6google8protobuf11StringPieceEE
@@ -22151,8 +22297,10 @@ F{e6
 F}0\voT
 F~Tb
 G(8W
+G1F0d@
 G3oML
 G7z\n
+G>a@X
 G@IN[\UR
 GAKM_YSUwq{}oice
 GAMESCOPECTRL_REQUEST_SCREENSHOT
@@ -23537,6 +23685,7 @@ GpuInfo
 GpuPerformanceLevel
 GpuPowerProfile
 GpuTopology
+GrU \f
 GrabPay
 GraphPanel
 Gray color space not permitted on RGB PNG
@@ -23598,7 +23747,9 @@ H6Q/
 H7W(
 H7_Ya
 H8xp
+H@A1
 H@H9xqI
+H@eu'
 HBJ\nTRF
 HDDCount
 HDDSizes
@@ -23613,6 +23764,7 @@ HEADERS: stream closed
 HEADERS: stream_id == 0
 HEVC
 HFont
+HGm@
 HIGH
 HKCR
 HKCU
@@ -23640,10 +23792,13 @@ HMAC routines
 HMAC-MD5
 HMAC-SHA1
 HMD Not Known (201)
+HNP@J
 HOME
 HOMETEST_DESKTOP_SESSION
 HOMETEST_DESKTOP_USER
 HORI Slime Controller
+HQN@
+HT4T
 HTML
 HTML.SearchAnimationTime
 HTML.SearchInsetX
@@ -23780,6 +23935,8 @@ Hero
 Hero Blur
 Hex and octal numbers must be integers.
 Hf-2
+Hi@U
+HiBp
 Hibernate
 HibernateWithFlags
 HideAndReportComment
@@ -23802,6 +23959,9 @@ Hiragana
 HistoryGames
 Hit absolute maximum emit event queue size -- NOT adding this event
 Hit destructor inside a HTTP2 callback from nghttp2 - not safe
+Hkp@
+Hkv\t
+Hl@z
 Hmd Not Found (108)
 HmdSystemFactory
 Hold Instruction Call Issuer
@@ -23824,6 +23984,7 @@ HotkeyEntryClearButton
 Hour
 Hours
 Hp!v
+Hq@1
 HqI9x
 Ht0\fEy=
 HtmlPopup
@@ -23833,6 +23994,7 @@ Huffman table 0x%02x was not defined
 Hung transaction cancelled
 Hungarian
 Hw~J
+Hx/O
 HybridSleep
 HybridSleepWithFlags
 HyperThreading
@@ -24021,6 +24183,8 @@ I444ToARGBRow_SSSE3
 I5=T
 I9xq
 I<OXb<^
+I<aE@
+I=Xc
 IA5STRING
 IANA
 IB;4e^WP
@@ -24083,6 +24247,7 @@ IP Address:%d.%d.%d.%d
 IP Address:<invalid>
 IP Login Restriction Failed
 IP address mismatch
+IP3U
 IPAddrBlocks
 IPAddrToHostName
 IPAddressChoice
@@ -24163,6 +24328,7 @@ IVRSteamPrivate_029
 IVRSteamPrivate_030
 IVRSteamPrivate_031
 IVRSystem_022
+I\G9y@
 I\cv
 I\n\finvite_links
 I\n\nSendShader
@@ -24170,6 +24336,7 @@ I\n\rSessionNotice
 I\n\vChatMessage
 I\nlQ
 I\tHA\t981G'dc
+IbMto/
 Icelandic
 Icon
 IdLabel
@@ -24696,6 +24863,7 @@ InviteOnly
 InviteToBroadcast
 InviteToFamilyGroup
 Invited
+Ip@`k
 Irish
 Is Bank
 Is64BitOS
@@ -24755,6 +24923,7 @@ Items
 ItemsChecked
 Items_Mtx
 Items_ReadyToUse
+Iu4Bl@(
 Iw5\v\b
 J0X|
 J400ToARGB
@@ -24772,6 +24941,10 @@ J444ToABGR
 J444ToARGB
 J8Y+
 J:xrG
+J=b@h
+J@Dr
+J@fM
+J@n5(
 JA\Wfmp{
 JArray
 JFIF APP0 marker: version %d.%02d, density %dx%d  %d
@@ -24815,6 +24988,8 @@ J\rS%H
 January
 Japanese
 Javanese
+Jddw
+Jk@>f
 Job %llu (%s) aborting.  %s\n
 Job %llu (%s) caller deadline reached, but not aborting because '%s'\n
 Job %s being started by message %s, but prototype is not the same as the previously-registered one %s?
@@ -24849,6 +25024,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
+Jt@PXp
 July
 JumpList
 Jumplist
@@ -24865,6 +25041,7 @@ K-571
 K2@9
 K3F>
 K4K
+K5hyY@
 K;xs
 KDF routines
 KEEP_CURRENT_VALUE
@@ -25019,7 +25196,9 @@ KNx[
 KRB8+
 KRy`/6
 KUwi3-
+KV@P
 KVTag
+KYZf@
 KZix
 K\n\nAddChatBan
 K\n\nAddWordBan
@@ -25144,10 +25323,13 @@ KxRSA
 KxRSA_PSK
 KxSRP
 Kyrgyz
+Kz@h
 K|\k2
 L+5d
+L4\ruy
 L5G>
 L8-\rHO
+L@zXL
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
@@ -25213,6 +25395,7 @@ LPth
 LRpn
 LU~g(1
 LV=%zu n=%zu\n
+LX@z
 L\n\tSetEffect
 L\n\vGetPlayNext
 Label
@@ -25267,6 +25450,7 @@ LegionGoS
 Length Required
 Lepcha
 Level
+Lf2we
 Libpng jmp_buf still allocated
 Library
 Library cache conversion completed in %llums for %i apps
@@ -25455,7 +25639,9 @@ Low FPS
 Low Violence
 LowMemoryWarning
 Lowered '%s' -> '%s'\n
+Lq@SfR|
 Luxembourgish
+Lv@X
 LwH'
 Lycian
 Lydian
@@ -25922,6 +26108,7 @@ MuteUserInGroup
 Mutual capabilities haven't been loaded.
 Myanmar
 N$X2
+N%ir
 N.lb
 N10SteamVProf24IVProfileCallbackHandlerE
 N10__cxxabiv115__forced_unwindE
@@ -26099,6 +26286,7 @@ N19CSettingsController37CCallbackInternal_OnRoamingConfigInitE
 N19CSettingsController47CCallbackInternal_OnAppAutoUpdateBehaviorChangeE
 N19CShutdownController41CCallbackInternal_OnInvalidateCredentialsE
 N19CSteamURLController33CCallback_OnLaunchGameMsgReceivedE
+N1T@
 N1e\n*
 N20CBroadcastController34CCallbackInternal_OnPostLogonStateE
 N20CBroadcastController35CCallbackInternal_OnBroadcastStatusE
@@ -26492,7 +26680,6 @@ N30CStreamingClientGameController30CCallback_OnStreamClientResultE
 N30CStreamingClientGameController41CCallback_OnRemoteClientStartStreamResultE
 N30CStreamingClientGameController43CCallback_OnRemoteClientStartStreamProgressE
 N31CHardwareRegistrationController34CCallbackInternal_OnPostLogonStateE
-N32CGameStreamVideoStageQueueThread18CProcessDataThreadE
 N33CRemoteClientInstallAppController38CCallback_OnRemoteClientAcceptAllEULAsE
 N33CRemoteClientInstallAppController40CCallback_OnRemoteClientInstallAppResultE
 N36CLoadControllerPersonalizationWorker46CCallbackInternal_OnReceivedDownloadItemResultE
@@ -26899,6 +27086,7 @@ NIST/SECG/WTLS curve over a 163 bit binary field
 NIST/SECG/WTLS curve over a 233 bit binary field
 NIST/X9.62/SECG curve over a 192 bit prime field
 NJ2"v
+NM@j
 NO ACTION
 NO X509_NAME
 NONE
@@ -26912,6 +27100,7 @@ NO_ERROR
 NO_PROXY
 NO_SIDE_EFFECTS
 NO_START_OPT)
+NPC$
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
@@ -27072,6 +27261,7 @@ N\n\vGetChatBans
 N\n\vGetRequests
 N\n\vGetWordBans
 N\r\nyd
+N\tCuTm@
 NaCl
 Name
 NameEntry
@@ -27116,6 +27306,7 @@ Network Authentication Required
 Network path
 Network problem detected: skipping wait
 Network send exceeded
+Network slow, flushing %d packets
 NetworkTest
 New Configurator Clear Selected Config for controller %d - AppID: %d.\n
 New Configurator Delete Personal Config %s.\n
@@ -27389,6 +27580,7 @@ NotifyWebRTCSetAnswer
 NotifyWebRTCStart
 November
 NrZl
+NsEm@
 NullMetrics()
 Num Lock
 Num Lock Toggle
@@ -27410,16 +27602,21 @@ Numeric
 NumericInputOnly
 NumericalCompare
 NvEncodeAPICreateInstance
+Nw]Z
 Nwh\v
 N}aR
 O!YNO
 O*9y]
 O-p?A6
 O/lc\r=<1\r-,!@
+O0ARij
 O1V(
 O44h\
 O:t\vg
+O@'ov
+O@0`24
 O@RJ
+O@an@
 OBJ lib
 OBJECT
 OBJECT DESCRIPTOR
@@ -27564,6 +27761,7 @@ O\n\nhubconfigs
 O\n\vNotifyCount
 O\n\vNotifyLarge
 O\r\nP2
+Oa@j
 Oakley-EC2N-3
 Oakley-EC2N-4
 Object Signer
@@ -27572,9 +27770,11 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
+Oct  2 2026 01:15:40
 Octal/hex numbers are not valid JSON values.
 October
 Odia
+Of@7
 Offensive Avatar
 Offensive Persona Name
 Offensive Profile
@@ -27787,6 +27987,7 @@ Option1
 Option2
 Option3
 Options
+Oq@T1
 Order:
 OrderID
 Origin
@@ -27838,6 +28039,7 @@ P-384
 P-521
 P-521:P-384:P-256
 P.I7
+P.dn
 P/O0
 P00`
 P010ToAR30Matrix
@@ -27869,6 +28071,7 @@ P410ToARGBRow_SSSE3
 P48\
 P7>Y
 P<xD<
+P@ap
 PARAMETERS
 PASS
 PATCH
@@ -27949,6 +28152,7 @@ PDP Xbox One Specter Violet
 PDP Xbox One Verdant Green
 PDP Xbox Series X Afterglow
 PDP Xbox Series X Midnight Blue
+PE-8V
 PEM lib
 PEM routines
 PEM type is '
@@ -28015,6 +28219,7 @@ PFvP39SystemPerfManagerUpdateSettingsResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP41SystemAudioManagerUpdateSomethingResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvPKc27ERecordingSegmenterLogLevelE
 PFvvE
+PG@Hd
 PICTURES
 PING: stream_id != 0
 PINIT
@@ -28139,6 +28344,7 @@ PNG load warning %s\n
 PNG unsigned integer out of range
 PNG\r\n
 PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
+PO?p@
 POLICYINFO
 POLICYQUALINFO
 POLICY_CONSTRAINTS
@@ -28220,6 +28426,7 @@ P\n\vFreeWeekend
 P\n\vReorderRole
 P\n\vUploadImage
 P\ti0
+Pa@gd
 Pacific/Auckland
 Pacific/Fiji
 Pacific/Guadalcanal
@@ -28335,6 +28542,7 @@ Payshop
 Pb1m
 Pd8\f
 Pe6^
+PeAM@s
 Pe[n1
 Peer
 Peer Server
@@ -28660,12 +28868,16 @@ Q/xtJ2
 Q0\nk
 Q37U
 Q9<T
+Q9cs@"
 Q9gZ
 Q>0P7>
+Q@BD
+Q@\nvLL
 Q@sb
 QAMKeyboardHotkey
 QC,A
 QIWI
+QL^b
 QList<QPair<QString,QVariantMap>>
 QLkv
 QOms)7
@@ -28688,6 +28900,8 @@ QkkXa
 Qkkbal
 Qm_:R
 Qmm5
+Qqkhr
+Qri;
 Qs(8%
 Qualcomm
 Quantization table 0x%02x was not defined
@@ -28839,6 +29053,7 @@ RNjv">
 ROMod.ini
 ROhu
 RPOEnable
+RPf@
 RRvM;;
 RSA Data Security, Inc.
 RSA Data Security, Inc. PKCS
@@ -28970,8 +29185,9 @@ Rate
 Rate Limit Exceeded
 RateClanAnnouncement
 RateCommentThread
-Raw send failed: %d, packet %d, %d bytes, %d queued\n
+Raw send failed: %d, packet %d, %d bytes, %d packets queued\n
 Raw stream mode only supported for TCP connections
+Rb@0o
 Rbg.E
 ReArmMuraCalibration
 ReOpenFd: failed to reopen: %s: %s\n
@@ -29412,6 +29628,7 @@ RevokeRefreshToken
 Revoked
 Rewind
 RgD/X
+Rg|i
 RichText
 RichText.InsetX
 RichText.InsetY
@@ -29449,6 +29666,7 @@ Root element should not be named.
 RotationRate
 Routing Domain Identifiers
 Row has too many bytes to allocate in memory
+Rq@X
 Rs$c~B
 RuPay
 Rule
@@ -29480,6 +29698,7 @@ Russian
 S#FI
 S(H3
 S+Re
+S-AP@D
 S/MIME
 S/MIME CA
 S/MIME Capabilities
@@ -29676,6 +29895,7 @@ SETTINGS: too many setting entries
 SETTINGS: unexpected ACK
 SETTINGS_TIMEOUT
 SETWRAP
+SGUq@?DL
 SHA1
 SHA1_Init( &c )
 SHA224
@@ -30362,7 +30582,6 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 29 2026 22:18:14
 September
 Serbian
 Serial
@@ -30622,11 +30841,12 @@ SetWifiDebug
 SetWifiDebugMode
 SetWifiPowerManagement
 Sets
+Setting %s bitrate to %d Kbit/s
+Setting %s bitrate to %d Kbit/s, burst bitrate is %d Kbit/s
 Setting %s needs to have both min and max set
 Setting LED brightness to: %d
 Setting capture only gameID to %llu\n
 Setting display state: %d
-Setting target bitrate to %d Kbit/s, burst bitrate is %d Kbit/s
 Setting target framerate: %.2f [timing: game %.2f, capture %.2f, convert %.2f, encode %.2f, network %.2f, decode %.2f, display %.2f%s]
 Setting target property: type: '%s' name: '%s'
 SettingChanged
@@ -30835,6 +31055,7 @@ SmartUpdate
 SmartUpdated
 SmoothScrollWebViews
 Smoothing not supported with nonstandard sampling ratios
+Sn4|@
 SnapRange
 Snooze
 SobelRow_Any_SSE2
@@ -30883,6 +31104,7 @@ Source stopped sending encoded bitstream
 SourceCodeInfo
 SourceContextProtoP
 SourceModInstallPath
+SpV@4
 Spa:String:JSON
 Space
 Spamming
@@ -31988,6 +32210,7 @@ TCP connection request
 TCP disconnect\n
 TCP send queue for send thread was above fatal limit %d for more than %d seconds, killing process.
 TELETEXSTRING
+TG,o
 THEN
 TKju(7
 TLS 1.3, client CertificateVerify
@@ -32190,6 +32413,7 @@ TOTAL RECV
 TOTAL SENT
 TPD2
 TPEDE
+TQV@
 TQ\v;83
 TRCC
 TRCCS
@@ -32273,6 +32497,7 @@ TWEE
 TWEOED
 TWFIN
 TWHR
+TWI3 ;9@
 TWNP
 TWSC
 TWSD
@@ -32292,6 +32517,7 @@ T\n\rDestroyBeacon
 T\n\rValidateToken
 T\n\tSubscribe
 T\n\treactions
+T_mq
 Ta?jib?
 TabCatchingTextEntry
 TabCloseButton
@@ -32633,6 +32859,7 @@ Type mismatch trying to get setting %s
 Type: %s\n
 Type=
 Type=nil
+TzS@
 U$qk.
 U(Px(
 U)l:T^8rv\n
@@ -32651,8 +32878,14 @@ U422ToABGR
 U422ToARGB
 U444ToABGR
 U444ToARGB
+U7Z1
 U9 L
 U?:CU?K
+U@"8H.nGn
+U@0q
+U@Dp
+U@p1
+UBS&
 UCP)
 UDISKS2_IS_BLOCK (interface)
 UDISKS2_IS_DRIVE (interface)
@@ -32779,6 +33012,7 @@ UNKNOWN
 UNKNOWN_ENUM_VALUE_%s_%d
 UNKWN
 UNVERIFIED
+UQ@d
 URI:
 URL Regex matched different number of params than job is registered for, URL is: %s
 URL.ExecuteSteamURL
@@ -32848,9 +33082,11 @@ U\n\vcontrollers
 U`2d
 UehX
 Ugaritic
+UgdQ
 UiCL
 Uj&>U
 Uj2\rLs
+Uj@1
 Ukrainian
 UnInhibit
 UnThrottle
@@ -33228,11 +33464,13 @@ UtlThreadSafeQueue
 Uyghur
 Uzbek
 U|Ei
+V'am8
 V22dN::t
 V4L2
 V7\rl
 V8zc5\e
 V?wm\v
+V@dj
 VAAPI
 VAC beta
 VALVE
@@ -33313,8 +33551,10 @@ VSZd
 VTC Pay Cards
 VTC Pay Online Banking
 VTC Pay Wallet
+VTP@
 VTT for
 VYHGjet{
+VZQKr@
 V\n accessibility_high_contrast_mode
 V\n remote_play_wifi_ap_channel_5ghz
 V\n remote_play_wifi_ap_channel_6ghz
@@ -33476,6 +33716,7 @@ ValveOfficial
 Variants Also Negotiates
 Vary
 Vc0a
+VeYS
 Vendor
 VerboseCheckbox
 Verify error:
@@ -33534,6 +33775,7 @@ Visa Electron (BoaCompra)
 VisibleOnlyOnAvailablePlatforms
 VisibleOnlyWhenInstalled
 Vm\t2
+Vn@F
 Voice
 VoiceLocale
 VoiceLocales
@@ -33545,9 +33787,12 @@ VolumeUp
 Vote
 VoteData
 Vql4
+Vr@v\fB
 Vu?N\t?8Ws?vGr?
+Vu@AH2
 W%0Qv4AV
 W)N0
+W*44
 WARNING
 WARNING : Steam Controller tried Setting Saved Binding Selection for AppID: %s, WITH NO CONFIG URL Controller: %s.\n
 WARNING- Multiple Autosaves Returned From Query!  Removing Old Configurations.\n
@@ -33562,6 +33807,7 @@ WARNING: using plain factory reset\n
 WARNING: using plain reboot other\n
 WAVE
 WAYLAND_DISPLAY
+WHm@F
 WIN32
 WIN64
 WIN7
@@ -34100,6 +34346,7 @@ XTestFakeKeyEvent
 XTestFakeMotionEvent
 XTestFakeRelativeMotionEvent
 XTestQueryExtension
+XU,R
 XVisualIDFromVisual
 XWarpPointer
 XWindowManagerName
@@ -34130,6 +34377,7 @@ Xhosa
 XkbGetNamedIndicator
 XkbKeycodeToKeysym
 Xr?9
+Xs@M
 XsBI
 Xw:vP
 X|IQ
@@ -34139,6 +34387,8 @@ Y1qh
 Y2A*
 Y77n
 Y9#C
+Y>@J3
+Y@9Ql
 YK}o
 YOU GOT A TROPHY!
 YOuc
@@ -34146,6 +34396,8 @@ YPKB}tof
 YPosition
 YRODu~ch
 YU=E
+YUV 4:2:0
+YUV 4:4:4
 YUVToARGBScaleClip
 YUY2ToARGB
 YUY2ToARGBRow_AVX2
@@ -34180,6 +34432,7 @@ Y\n\fFriendsQuery
 Y\n\fRequestSleep
 Y\n\rOtherGameData
 Y\trH5
+Y]"ml
 Yandex
 Yapi Kredi
 Yb6N4
@@ -34265,6 +34518,7 @@ YldUpdateDownloadSourceList
 YldUpdateRegistration
 YldUpdateUsageReportIfNecessary
 YldZipClip
+Yn@L
 YnFpW
 YooMoney
 Yoruba
@@ -34274,6 +34528,7 @@ You must refund this transaction to wallet
 You must type in
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 YsRX
+Yv:Y@F
 Z,google.golang.org/protobuf/types/known/anypb
 Z-google.golang.org/protobuf/types/descriptorpb
 Z-google.golang.org/protobuf/types/known/typepb
@@ -34286,7 +34541,10 @@ Z6google.golang.org/protobuf/types/known/sourcecontextpb
 Z9L/
 Z:hluv
 Z?SHX?
+Z@Qa7'
+Z@S8
 ZF]:Ba?
+ZGt@
 ZINT32
 ZINT64
 ZI|o
@@ -34324,7 +34582,9 @@ Z\n\vRemoveChild
 Z\n\vUnsubscribe
 Z_OK on Z_FINISH with output space
 Zd3\rOq
+Zdp@*
 Ze2Zh@
+Zeu@4
 ZiKw
 ZipClip
 ZipToBuffer
@@ -34334,6 +34594,7 @@ Zong
 ZooDialog
 ZooPropertyPage
 Zulu
+Z~@rg
 [ %f, %f, %f ] %f - %f
 [%04d] %07.2f %07.2f
 [%06.2f] %06.3f %06.3f
@@ -34354,6 +34615,7 @@ Zulu
 [Egy.0
 [HEX DUMP]:
 [Invalid]
+[Ku@FIv
 [M:%u:%u:%u]
 [Mwa
 [S2k
@@ -34419,7 +34681,9 @@ Zulu
 \%03o
 \(a8Bk
 \44h
+\@FC4
 \C not allowed in lookbehind assertion
+\K@\fQgk3V
 \N is not supported in a class
 \N\O\NZOt)s(r(
 \Nbl
@@ -34460,6 +34724,7 @@ Zulu
 \fVHjt
 \f\n!CPublishedFile_QueryFiles_Request
 \f\n\vUserAccount
+\fo#7r
 \g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number
 \k is not followed by a braced, angle-bracketed, or quoted name
 \n            Not After :
@@ -36408,6 +36673,7 @@ Zulu
 \tMax asset:\t\t%u\n
 \tOkI
 \tOzG\r
+\tSI8E
 \t\n%CPlayer_GetPlayerLinkDetails_Response
 \t\n\vPartnerApps
 \t\tCJAAQ
@@ -36548,8 +36814,10 @@ Zulu
 ]^[XQRWTEFC@IJOLmnkhabgduvspyz
 ]gy73
 ]neV
+]rMt
 ^/serverstatus/$
 ^/transportsocket/$
+^0hj
 ^1kW3
 ^4MZ
 ^CuY
@@ -36570,6 +36838,7 @@ Zulu
 ^hmpsv
 ^j[o3
 ^oEZ_
+^ogaS
 _55j
 _DIR
 _DMsg
@@ -36869,6 +37138,7 @@ _login1_org_freedesktop_dbus_properties_skeleton_handle_method_call
 _login1_org_freedesktop_dbus_properties_skeleton_handle_set_property
 _logo
 _longjmp
+_lvM@
 _new
 _notifications__skeleton_handle_get_property
 _notifications__skeleton_handle_method_call
@@ -37059,6 +37329,7 @@ _xU`u
 `\n#NotifyPrivacyPrivacySettingsChanged
 `\n\rPrepForUpdate
 `\n\vVoteSummary
+`a3<p@8
 `fPw.\vM
 `sFU
 `tun%
@@ -37087,10 +37358,13 @@ a2i_ASN1_INTEGER
 a2i_ASN1_STRING
 a2i_GENERAL_NAME
 a3:h
+a3M;
 a5<p
+a5eF
 a5j_5W
 a8Bk
 a?wSa?\
+a@rc`
 aDSS
 aECDSA
 aGOST
@@ -37103,6 +37377,7 @@ aRSA
 aRe.
 aRecord
 aSRP
+aT@g{7
 aT\v>wB
 a\IB
 a\n$logged_in_as_user_notification_sound
@@ -37876,6 +38151,7 @@ b2i_rsa
 b64_new
 b64_read_asn1
 b?qq
+b@3Am
 bAV1DecodeAvailable
 bAchieved
 bAdded
@@ -38029,6 +38305,7 @@ bMisc7
 bMisc8
 bMouseEnabled
 bN.l
+bNC@@
 bNeedsGameInstall
 bNewNavigation
 bNonSteamServer
@@ -38055,6 +38332,7 @@ bPromptToChangePassword
 bPublic == false
 bPyrowaveDecodeAvailable
 bQuickAccessButton
+bR@Pj
 bRPOEnable
 bReceivedSomething
 bRecommended
@@ -38581,6 +38859,7 @@ button_quick_access
 button_start_options
 button_state_bits
 bvVd
+bw@DL
 bwiO'
 bwrap
 by_file_ctrl
@@ -38607,6 +38886,7 @@ bytes_total
 bytes_uploaded
 c ap traffic
 c e traffic
+c gp^@i3@
 c hs traffic
 c!!B0
 c18j
@@ -38635,6 +38915,8 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
+c7(w
+c@JP
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -40044,6 +40326,7 @@ customizations
 czech
 czero
 d e not congruent to 1
+d'0I
 d.allOrFirstTier
 d.authenticatedData
 d.certificate
@@ -40097,9 +40380,13 @@ d2i_PrivateKey
 d2i_PublicKey
 d2i_SSL_SESSION
 d2i_ocsp_nonce
+d7`@b
+d;j(hp
 d=%-2d hl=%ld l=%4ld
 d=%-2d hl=%ld l=inf
 d?qq
+d@/ZJ
+d@7b
 dFDFBB"
 dITRedirect
 dNSDomain
@@ -40108,11 +40395,13 @@ dPq\n
 dQy/
 dSAQuality
 dV22tN::
+dYEe
 dZ!2.
 dZK<),F8
 d\n$controllerconnect_notification_sound
 d\n$controllerconnect_notification_toast
 d\n%overlay_fps_counter_saturation_factor
+d`1!M
 da_DK
 daisywheel
 damaged LZ stream
@@ -40891,6 +41180,7 @@ e+ZQT
 e60c
 e?W.e?w
 e?qq
+e@C-x
 eACState
 eAction
 eAppError
@@ -40968,6 +41258,7 @@ eXIf
 e\Gg77
 e\n(gamescope_include_steamui_in_screenshots
 e\roL
+e\vwg
 e_launch_result
 eaFO
 eadditionallanguage
@@ -41321,6 +41612,7 @@ error_tab
 error_text
 errors
 es-419
+esS@M
 es_419
 es_ES
 esecurity_supported
@@ -41487,13 +41779,16 @@ f&dy
 f.N%H
 f3a13e7b077f0f631a651dc554b2a377fe87fdc7
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
+f8gq@
 f;\fu8
 f?3Jf?6
 fC\tc
+fCuq
 fD""B
 fDD"AUDT$t
 fG;P^
 fNt7
+fP+d@7
 fP[J@8OLz
 fP~V
 f\n\rFilterOptions
@@ -41916,8 +42211,10 @@ futex robust_list not initialized by pthreads
 futex robust_list not pthreads-compatible
 futimes
 fvFV
+fw*a
 fwrite
 fzjf
+f{rg
 g-bus-type
 g-connection
 g-flags
@@ -41925,11 +42222,13 @@ g-interface-name
 g-name
 g-object-path
 g-properties-changed
+g.Y@j
 g>M-a>Y
 gAMA
 gAY:
 gB>d
 gK99r
+gQq@;ZN&
 gR\r8^k4
 gSB5*!
 gZFySTa(
@@ -42430,7 +42729,8 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(1F
+gh@2
 ghost_
 gidlist
 gidparentcomment
@@ -45234,6 +45534,7 @@ groupid
 groups
 groups_list
 groups_tab
+gtVA@+
 gtk-cancel
 gtk-ok
 gtk_check_menu_item_get_type
@@ -45276,6 +45577,7 @@ gujarati
 gurmukhi
 gvET
 gwGW
+gwP`@
 gyro_filtered_quaternion
 gyro_filtered_speed
 gyro_one_euro_filter_enabled
@@ -45291,7 +45593,10 @@ gzip, deflate
 gzip,identity,*;q=0
 h264_vaapi
 h2Wl
+h7H;
 h8,4$
+h@I9
+h@m"\tIW
 hConnection == m_hConnection
 hHandle
 hHpX
@@ -45302,12 +45607,14 @@ hPU3
 hPipe
 hQueue != -1
 hR}S
+hS7D
 hScreenshot
 hU&qx
 h\44Q
 h\f90
 h\n\tTokenList
 h`TM
+h`l@X
 had_remote_interaction
 half
 half-life2.com
@@ -45855,12 +46162,14 @@ hwnd
 hwndParent
 hxHX(8
 hxi(j
+hy9A|@|<O
 h~0Q.
 i + 1 < blk->n
 i < blk->n - 1
 i < iframe->niv
 i < length_
 i < size_
+i0v=
 i2a_ASN1_OBJECT
 i2b_PVK
 i2b_PVK_bio
@@ -45886,7 +46195,11 @@ i2s_ASN1_INTEGER
 i2v_AUTHORITY_INFO_ACCESS
 i6t+
 i91k
+i:3s
 i?fKV>
+i@68
+i@Jz
+i@zq
 iA5StringSyntax
 iCCP
 iCCP: invalid keyword
@@ -45902,6 +46215,7 @@ iNewReadIndex != 3
 iNode == iIndex
 iPacket == nDataPackets
 iPhoneOS
+iR#S@
 iSE'1\v
 iSection < 32
 iSection >= 0
@@ -46318,6 +46632,7 @@ illegal scrypt parameters
 illegal tagged any
 illegal time value
 illegal zero content
+im@DZ\v
 image
 image row stride too large
 image-height-only
@@ -46760,6 +47075,7 @@ is-contained
 is-container
 is-stream-active
 is64bit
+is@T
 is_abridged_release_date
 is_add
 is_adopt_supported
@@ -46912,6 +47228,7 @@ iswctype
 iswspace
 isxdigit
 it->i < it->blk->n
+it4Q@
 it_IT
 italian
 item
@@ -46937,6 +47254,8 @@ j3S\n
 j6e9
 j7k6
 j?2*j?5
+j@H$a
+j@^iu
 jL?1]
 jZ=F
 j\n\rThreadedCount
@@ -46953,6 +47272,9 @@ java_generic_services
 java_multiple_files
 java_outer_classname
 java_string_check_utf8
+jb.o@
+jiV@G
+jihv6@
 job pool
 job-manager1
 job-started
@@ -47000,6 +47322,7 @@ jwK\v\n
 jxN\
 j{HY
 j|Ym
+k&sa
 k10temp
 k2U\v
 k53i
@@ -48810,7 +49133,7 @@ k_EStreamAudioCodecNone
 k_EStreamAudioCodecOpus
 k_EStreamAudioCodecRaw
 k_EStreamAudioCodecVorbis
-k_EStreamBitrateAutodetect
+k_EStreamBitrateAutomatic
 k_EStreamBitrateUnlimited
 k_EStreamChannelControl
 k_EStreamChannelDiscovery
@@ -49096,10 +49419,12 @@ k_nSymmetricKeyLen256 == cubKey || k_nSymmetricKeyLen128 == cubKey
 k_uAppIdInvalid != uBestApp
 kannada
 kazakh
+kbP@
 kbPanel
 kbPanel->GetName()
 kbPanel->GetName()[ 0 ]
 kbypOF]T
+kcU@P\f
 kdf parameter error
 kdf1
 kdf2
@@ -49194,6 +49519,7 @@ ksl_shift_right
 ksl_split_blk
 ktUJ
 kv_stats
+kvfJ@
 kvtags
 kx-any
 kx-dhe
@@ -49213,6 +49539,7 @@ l <= uRequiredBytes
 l4d.com
 l6qnk
 l97\v
+l@bS
 lDa>
 lDiskSpaceRequiredBytes
 lDiskUsageBytes
@@ -49228,6 +49555,7 @@ l\n)controller_low_battery_notification_sound
 l\n)controller_low_battery_notification_toast
 l\n\npromotions
 l\vDZ2\fs
+l]nC#lh
 l`UROM=;98310-*)(&$"
 label
 labelText
@@ -49300,6 +49628,7 @@ lblk->n + rblk->n < (2 * 16 - 1)
 lcO/<1\r=,!\r-@@@
 lchown
 ld-linux-x86-64.so.2
+le@k
 leading_comments
 leading_detached_comments
 leadvertisement1
@@ -51063,6 +51392,7 @@ max-forward
 max-forwards
 max-realtime-priority
 max-stale
+max@h
 maxHeight
 maxPlayers
 maxSegmentDuration
@@ -51285,6 +51615,7 @@ missing_assets
 missing_chunks
 misspelled_word
 mixed handshake and non handshake data
+mkGb
 mkdir
 mkfifo
 mkstemp
@@ -51357,6 +51688,7 @@ mp4-single
 mpd;mp4;m4s;json;svg;png;jpg
 mpd_url
 mprotect
+mrk@(
 ms-MY
 msCTLSign
 msCodeCom
@@ -51406,6 +51738,7 @@ must_update
 mustownapp
 muted
 mutual_friend_account_ids
+mw@P
 mwYC
 mwa!
 my_paired_network_hash
@@ -51418,12 +51751,15 @@ n <= (size_t)INT_MAX
 n does not equal p q
 n does not equal product of primes
 n)M5
+n6F^
 n6j/
 n:2C[
 n<!TH+9
 n>sak><
 n?A6
 n?SZn?
+n@2w
+n@FW
 nAchieved
 nActiveController
 nActiveTrack
@@ -51595,6 +51931,7 @@ n\nNKF
 n\tMr
 n\vDsv
 n`r|VXJD
+na4j
 name
 name =
 name constraints minimum and maximum not supported
@@ -51747,6 +52084,7 @@ nickname
 nistp224_pre_comp_new
 nistp256_pre_comp_new
 nistp521_pre_comp_new
+nk@G@
 nl_NL
 no H264 video stages available
 no accept addr or service specified
@@ -51996,6 +52334,7 @@ nsSGC
 nsSslServerName
 nss_keylog_int
 nssslserver
+ntD@
 ntohl
 ntohs
 null
@@ -52045,6 +52384,7 @@ numbers out of order in {} quantifier
 nv->name->len > 0
 nvid
 nxBT6
+nyY:
 nytimes.com
 o&1m&
 o-\vBs
@@ -52052,10 +52392,17 @@ o2i_ECPublicKey
 o2i_SCT
 o2i_SCT_LIST
 o2i_SCT_signature
+o9r@+V
 o=*oh
+oB\vq@t
 oE"z
 oFFs
+oJ\n3p@
 oMinghuaQu
+oT+q
+oU5m
+oULe
+oZq@/
 o\n"SetAppChatRoomGroupStopForceActive
 o\n#NotifyShouldRejoinChatRoomVoiceChat
 o\n'NotifyFriendEquippedProfileItemsChanged
@@ -52079,6 +52426,7 @@ objectid
 objects
 objpath_interfaces_and_properties
 objsign
+obp!
 oc_proxy_detected
 ocsp_check_delegated
 ocsp_check_ids
@@ -52218,6 +52566,7 @@ optional
 optionalSignature
 optional_parent_app_id
 options
+opz@&
 orUH
 oracle
 order
@@ -52325,6 +52674,7 @@ original_steam_release_date
 originator
 originatorInfo
 originatorSignatureValue
+orks@
 orkut.com
 osWK
 os_linux
@@ -52333,6 +52683,7 @@ os_type
 os_version_unsupported
 os_win
 oscca
+osi@!g\
 oslist
 ossl_ecdh_compute_key
 ossl_ecdsa_sign_sig
@@ -52428,6 +52779,7 @@ p.ppBasis
 p.prime
 p.second
 p.tpBasis
+p0e@Q
 p5Z3
 p@0pqE5tsO?|1
 pApp
@@ -52927,6 +53279,7 @@ pipewire-main-loop
 pitch
 pitem_new
 pixelsindent
+pjbS
 pkInitClientAuth
 pkInitKDC
 pkcs
@@ -53191,6 +53544,7 @@ ppBasis
 pp\rk
 pp|B>>q
 pq->q[item->index] == item
+pq@ts
 pqualid
 pqueue_new
 pragma
@@ -53558,10 +53912,10 @@ pwrd.com
 pwrd_telecom
 pwrd_unicom
 pwrite64
+py@0
 py_generic_services
+pyrowave_bitrate_kbps
 pyrowave_create_device_by_compat2
-pyrowave_custom_bitrate
-pyrowave_custom_bitrate_kbps
 pyrowave_device_confirm_interop_support
 pyrowave_device_destroy
 pyrowave_device_get_global_priority
@@ -53589,6 +53943,7 @@ q$9l
 q,&2ke!
 q.IsValid()
 qCJ.
+qISo+N`@8
 qR5FE%
 qR6.
 qUN1
@@ -53633,14 +53988,19 @@ qwest
 qwilt
 qxs?L
 qxs?z7
+r#M@pR
 r$0I
 r/2O
 r2i_certpol
 r2i_pci
 r3A~
 r?dar?\n
+r@06
+r@9E
+r@^YAX
 rA?7
 rB2pBB
+rBgq
 rD B
 rF6t
 rFC822localPart
@@ -53648,6 +54008,7 @@ rFilePatterns
 rK99
 rKE\t
 rOOBE test mode is enabled either by passing -testoobe on the command line or setting the force_oobe client setting
+rP3pUl@
 rT+6ZNw
 rUUT
 rY|T
@@ -54288,11 +54649,14 @@ russian
 rv > 0 && rv <= nSendLen
 rx_bytes_per_sec
 rx_bytes_total
+ry@N32CGameStreamVideoStageQueueThread18CProcessDataThreadE
 s ap traffic
 s hs traffic
 s(Fdi
+s)4o
 s-maxage
 s.team
+s1(Of
 s11bS
 s2i_ASN1_IA5STRING
 s2i_ASN1_INTEGER
@@ -54300,6 +54664,8 @@ s2i_ASN1_OCTET_STRING
 s2i_skey_id
 s390x_aes_gcm_ctrl
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
+s@9D
+s@Npk\v
 sAmTb
 sBIOSVersion
 sBIT
@@ -54312,6 +54678,7 @@ sCPUVendor
 sControllerName
 sDescription
 sHostname
+sI1@]
 sK;xPL
 sKernelVersion
 sName
@@ -54460,6 +54827,7 @@ sdr_location_string
 sdr_ping_location
 sdr_to_hdr_brightness
 sdsiCertificate
+sdv@
 sealed
 search only supported for directories
 searchGuide
@@ -54957,6 +55325,8 @@ shortname
 should retry
 should_hide_hint
 should_suppress_discount_pct
+show-controller-configurator-window
+show-main-window
 showDownArrow
 show_above_purchase
 show_advanced_update_channels
@@ -55220,6 +55590,7 @@ split_scaling_scaler
 split_scaling_scalers_available
 splitconfig
 sprintf
+sq@Xe
 sqrt
 sqrtf
 srand
@@ -56057,6 +56428,7 @@ strURL != "%store%"
 strUrl
 strUserCountry
 strUserLabel
+strWifiAPChannelListJSON
 strWifiAPStateJSON
 str_copy
 strcasecmp
@@ -56311,19 +56683,23 @@ systemreport-*.txt
 systemreports/
 s}D2[
 t#2e
+t41<
 t?;tt?74t?
 t?Dlt?e
+t@z7sj(
 tCR;\HdY\
 tDwg
 tEXt
 tEXt: invalid keyword
 tEXt: text too long
+tHK@f
 tIME
 tL75}
 tRNS chunk has out-of-range samples for bit_depth
 tRNS must be after
 t\lHBW
 t\n#system_idle_screensaver_battery_sec
+ta@v
 tabMenuMenu
 tabPosition
 table
@@ -57256,11 +57632,16 @@ u0Az
 u1\m
 u72p
 u;{Gk
+u@2yK6'
+uFiL@(
 uSoundtrackAppId
 uT_Rm#
+uUI@
+uUez
 uV<c
 u\fcc
 u\n\tChunkData
+u\tX@NKc*
 ua-pki
 uacurve0
 uacurve1
@@ -57277,6 +57658,7 @@ ubuntu12_32/libVkLayer_steam_fossilize.so
 ubuntu12_32/steamoverlayvulkanlayer.so
 ubuntu12_64/libVkLayer_steam_fossilize.so
 ubuntu12_64/steamoverlayvulkanlayer.so
+ud@Vr
 udev-events1
 udisks2_block_proxy_get_property
 udisks2_block_proxy_set_property
@@ -57344,6 +57726,7 @@ uint64_new
 uioverride-%s
 uioverrides
 uioverrides/
+uiq@
 uj?I
 ujR\f
 uk_UA
@@ -57812,11 +58195,16 @@ v2i_issuer_alt
 v2i_subject_alt
 v3_generic_extension
 v>XB
+v@JMsfB
+v@hpx
 vFromAxis.LengthSqr() == 1
+vI"Pg@&
 vQO+t
 vRQ>
 vToAxis.LengthSqr() == 1
+vW3Wd@
 vWewe
+vYk@j]$
 vZA:
 v\fdn
 v\v]mE
@@ -57946,6 +58334,7 @@ veryfast
 vetted
 vfat
 vfprintf
+vg@G*
 vgui editor - "%s"
 vgui layout debugger
 vgui2_s
@@ -58171,11 +58560,15 @@ vulkan
 w"ZXb
 w+OQvr
 w+bx
+w1KW
 w3Xc
+w4~C
 w8i_q
 w>mMS
 w?6r
+w@F5
 wAXu
+wIp@\F
 wU9%
 wXR\r
 w\n\nRunningApp
@@ -58228,6 +58621,7 @@ wayland: shut down complete
 wayland: shutting down
 wayland: skipping init because GAMESCOPE_WAYLAND_DISPLAY is not set\n
 wbW_0O#
+wc@S
 wchar_t
 wcrtomb
 wcscasecmp
@@ -58245,6 +58639,7 @@ wctype
 wcv?
 wcv?>
 wdQB;(
+we@M
 weak
 weak_dependency
 web deploy
@@ -58531,14 +58926,22 @@ x509_name_encode
 x509_name_ex_d2i
 x509_name_ex_new
 x509_pubkey_decode
+x5sy
 x931
 x=9v
 x?M\fo
 x?sMx?
+x@`IG
+x@n/M
+x@xG
+xA@@q
+xIxV
+xQ-S
 xQqX#\n
 xUN'
 xWB;
 x\n\vAchievement
+x\t@H
 x_local
 x_scale
 x`tm6
@@ -58551,9 +58954,11 @@ xcb_res_query_client_ids_ids_iterator
 xcb_res_query_client_ids_reply
 xdg-user-dir %s
 xdigit
+xe!1j@
 xe\Y]fv
 xfire.com
 xgRL
+xg\v7y@
 xhosa
 xhotspot
 xinput
@@ -58580,6 +58985,8 @@ y9*O
 y?Zzy?
 yC\r7
 yM+7
+yQX~X
+yRje
 yS{Q/
 yU\n2`
 y\n$NotifyFirstSteamControllerConnection
@@ -58593,6 +59000,7 @@ yhotspot
 yielding
 yjWR
 ylSF{nQD/:
+ylW@
 yoruba
 youtube.com
 youtube_username
@@ -58604,13 +59012,17 @@ ytcnM@WZ
 yu]4if
 yuv420
 yuv444
+yxr@
 yyX\f
+y{n!o
 y{uwqsmoikegac
 y}ni
+z)Z78
 z3T\vC
 z4BP
 z4Hg
 z?Mbz?H5z?
+z@6d
 zB\n2
 zC\nsZ
 zC`G;
@@ -58645,6 +59057,7 @@ zstd_valve
 zstream unclaimed
 ztfhBL^P\n
 zulu
+zv@H
 zvbnJFR^
 zx?L
 zy:HO
@@ -58654,12 +59067,15 @@ z~rvjnbfZ^RVJNBF
 { "typ": "JWT", "alg": "EdDSA" }
 { pos: %4d,%4d size: %4d,%4d }
 {"name":"%s"}
+{0oI>t
+{1k9;
 {A7Dd
 {GCOKWS_[
 {OYK
-{PUP
+{PEQ
 {\n"version": %u,\n"gameids" : [\n
 {\n\t"file_format_version" : "1.0.0",\n\t"layer" : {\n\t\t"name": "%s",\n\t\t"type": "GLOBAL",\n\t\t"library_path": "%s/%s",\n\t\t"api_version": "1.3.207",\n\t\t"implementation_version": "1",\n\t\t"description": "%s",\n\t\t"disable_environment": { "DISABLE_%s": "1" },\n\t\t"enable_environment": { "ENABLE_%s": "1" }%s\n\t}\n}\n
+{aey
 {cKS
 {default arg#
 {kHw
@@ -58682,6 +59098,7 @@ z~rvjnbfZ^RVJNBF
 |sG2
 |wjaP[FM
 }5bIqLk
+}@Xvp
 }J;Ea
 }UjB:
 }hWB
