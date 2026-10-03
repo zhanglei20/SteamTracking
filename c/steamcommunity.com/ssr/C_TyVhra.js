@@ -92,86 +92,29 @@ function _(_) {
   return ((_.flags ?? 0) & _.kPFIFlag_MicroTransactionFile) != 0;
 }
 var _ = _(_(), 1);
-function _(_) {
-  return (
-    _.EREALM !== _.k_ESteamRealmChina &&
-    ((_.flags ?? 0) & _.kPFIFlag_DisableComments) == 0
-  );
-}
-var _ = (function (_) {
-  return (
-    (_[(_.None = 0)] = `None`),
-    (_[(_.NotLoggedIn = 1)] = `NotLoggedIn`),
-    (_[(_.LimitedAccountPlaytime = 2)] = `LimitedAccountPlaytime`),
-    (_[(_.MustOwnApp = 3)] = `MustOwnApp`),
-    (_[(_.Backend = 4)] = `Backend`),
-    _
-  );
-})({});
 function _(_, _) {
-  let { steamidOwner: _, eThreadType: _, gidFeature: _ } = _;
-  return {
-    FetchPage: async (_, _) =>
-      await _(`/sharedfiles/actions`, `GetCommentThreadPage`, _, _, _, _, _),
-    PostComment: (_) =>
-      _(`/sharedfiles/actions`, `PostCommentToPublishedFile`, _, _, _, _),
-    DeleteComment: (_) =>
-      _(`/sharedfiles/actions`, `DeletePublishedFileComment`, _, _, _, _),
-    HideAndReportComment: async (_, _, _) => {
-      let _ = await _(
-        `/sharedfiles/actions`,
-        `HideAndReportPublishedFileComment`,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-      );
-      if (_ !== 1 && _ !== 29)
-        throw {
-          eResult: _,
-        };
+  return [`MiniProfilePlaytime`, _, _];
+}
+var _ = 120 * 1e3,
+  _ = 3e3;
+function _(_, _) {
+  return _({
+    queryKey: _(_, _),
+    async queryFn() {
+      let _ = new _(_).GetAccountID(),
+        _ = await fetch(
+          `${_.COMMUNITY_BASE_URL}miniprofile/${_}/json/?appid=${_}`,
+          {
+            signal: AbortSignal.timeout(_),
+          },
+        );
+      return _._
+        ? ((await _.json().catch(() => null))?.playtime ?? null)
+        : null;
     },
-    SetSubscribed: (_) =>
-      _(
-        `/sharedfiles/actions`,
-        `SetPublishedFileCommentSubscription`,
-        _,
-        _,
-        _,
-        _,
-      ),
-    ...(_.steamid
-      ? {
-          GetOwnedEmoticons: () => _(`/shared/actions`, `GetOwnedEmoticons`),
-        }
-      : {}),
-    ...(_
-      ? {
-          ClearContentCheckResult: (_) =>
-            _(
-              `/sharedfiles/actions`,
-              `ClearPublishedFileCommentContentCheck`,
-              _,
-              _,
-              _,
-              _,
-            ),
-          MarkSuspicious: (_, _, _) =>
-            _(
-              `/sharedfiles/actions`,
-              `MarkPublishedFileCommentSuspicious`,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-            ),
-        }
-      : {}),
-  };
+    enabled: !!_ && !!_,
+    staleTime: _,
+  });
 }
 var _ = 60 * 1e3;
 function _(_) {
@@ -189,27 +132,6 @@ function _(_) {
     queryFn: async () => _(`/sharedfiles/actions`, `GetUGCItemOwnerInfo`, _),
     staleTime: _,
   };
-}
-function _(_) {
-  return _({
-    queryKey: _(_),
-    queryFn: async () => _(`/sharedfiles/actions`, `GetUGCContributorData`, _),
-    staleTime: _,
-  });
-}
-var _ = 3600 * 1e3;
-function _(_) {
-  return _({
-    queryKey: _(_.publishedfileid),
-    queryFn: async () =>
-      _(
-        `/sharedfiles/actions`,
-        `GetFriendsWhoFavoritedItem`,
-        _.consumer_appid,
-        _.publishedfileid,
-      ),
-    staleTime: _,
-  });
 }
 var _ = `_5Ptptd5xUBc-`,
   _ = `wg0VyL8FYlU-`,
@@ -1075,30 +997,6 @@ function _(_) {
 function _(_) {
   return _(_(_));
 }
-function _(_, _) {
-  return [`MiniProfilePlaytime`, _, _];
-}
-var _ = 120 * 1e3,
-  _ = 3e3;
-function _(_, _) {
-  return _({
-    queryKey: _(_, _),
-    async queryFn() {
-      let _ = new _(_).GetAccountID(),
-        _ = await fetch(
-          `${_.COMMUNITY_BASE_URL}miniprofile/${_}/json/?appid=${_}`,
-          {
-            signal: AbortSignal.timeout(_),
-          },
-        );
-      return _._
-        ? ((await _.json().catch(() => null))?.playtime ?? null)
-        : null;
-    },
-    enabled: !!_ && !!_,
-    staleTime: _,
-  });
-}
 function _(_) {
   let { steamid: _, appid: _ } = _,
     { data: _ } = _(_),
@@ -1137,26 +1035,7 @@ function _(_) {
     children: _,
   });
 }
-var _ = `E1JKtrpIMGI-`,
-  _ = `_5v-1QFzpE-U-`,
-  _ = `DEnIQTbM2LE-`,
-  _ = `YdcnExQdSfo-`,
-  _ = `Z4oAnn5XGR0-`,
-  _ = `-AknB-61VBk-`,
-  _ = `_9qd-6VYxzRk-`,
-  _ = `_5UOfXLiv4pU-`,
-  _ = `zU3bA3J97Ic-`,
-  _ = `_5l5COaZGP6o-`,
-  _ = `UaupDcY0JMM-`,
-  _ = `K3kYIkETVog-`,
-  _ = `xhL9xoThJdI-`,
-  _ = `n-NCo42aDkk-`,
-  _ = `yy93g0l2mMc-`,
-  _ = `iYm-r7byTvA-`,
-  _ = `pIJwqTE0ctw-`,
-  _ = `xPXsKaeEi9A-`,
-  _ = `QiWU6kiloPU-`,
-  _ = _({
+var _ = _({
     IsLoaded: () => _,
     ItemHeight: () => _,
     ItemWidth: () => _,
@@ -1287,7 +1166,128 @@ function _(_) {
     }),
   });
 }
-var _ = (0, _.createContext)(void 0),
+function _(_) {
+  return _({
+    queryKey: _(_),
+    queryFn: async () => _(`/sharedfiles/actions`, `GetUGCContributorData`, _),
+    staleTime: _,
+  });
+}
+var _ = 3600 * 1e3;
+function _(_) {
+  return _({
+    queryKey: _(_.publishedfileid),
+    queryFn: async () =>
+      _(
+        `/sharedfiles/actions`,
+        `GetFriendsWhoFavoritedItem`,
+        _.consumer_appid,
+        _.publishedfileid,
+      ),
+    staleTime: _,
+  });
+}
+function _(_) {
+  return (
+    _.EREALM !== _.k_ESteamRealmChina &&
+    ((_.flags ?? 0) & _.kPFIFlag_DisableComments) == 0
+  );
+}
+var _ = (function (_) {
+  return (
+    (_[(_.None = 0)] = `None`),
+    (_[(_.NotLoggedIn = 1)] = `NotLoggedIn`),
+    (_[(_.LimitedAccountPlaytime = 2)] = `LimitedAccountPlaytime`),
+    (_[(_.MustOwnApp = 3)] = `MustOwnApp`),
+    (_[(_.Backend = 4)] = `Backend`),
+    _
+  );
+})({});
+function _(_, _) {
+  let { steamidOwner: _, eThreadType: _, gidFeature: _ } = _;
+  return {
+    FetchPage: async (_, _) =>
+      await _(`/sharedfiles/actions`, `GetCommentThreadPage`, _, _, _, _, _),
+    PostComment: (_) =>
+      _(`/sharedfiles/actions`, `PostCommentToPublishedFile`, _, _, _, _),
+    DeleteComment: (_) =>
+      _(`/sharedfiles/actions`, `DeletePublishedFileComment`, _, _, _, _),
+    HideAndReportComment: async (_, _, _) => {
+      let _ = await _(
+        `/sharedfiles/actions`,
+        `HideAndReportPublishedFileComment`,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+      );
+      if (_ !== 1 && _ !== 29)
+        throw {
+          eResult: _,
+        };
+    },
+    SetSubscribed: (_) =>
+      _(
+        `/sharedfiles/actions`,
+        `SetPublishedFileCommentSubscription`,
+        _,
+        _,
+        _,
+        _,
+      ),
+    ...(_.steamid
+      ? {
+          GetOwnedEmoticons: () => _(`/shared/actions`, `GetOwnedEmoticons`),
+        }
+      : {}),
+    ...(_
+      ? {
+          ClearContentCheckResult: (_) =>
+            _(
+              `/sharedfiles/actions`,
+              `ClearPublishedFileCommentContentCheck`,
+              _,
+              _,
+              _,
+              _,
+            ),
+          MarkSuspicious: (_, _, _) =>
+            _(
+              `/sharedfiles/actions`,
+              `MarkPublishedFileCommentSuspicious`,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+            ),
+        }
+      : {}),
+  };
+}
+var _ = `E1JKtrpIMGI-`,
+  _ = `_5v-1QFzpE-U-`,
+  _ = `DEnIQTbM2LE-`,
+  _ = `YdcnExQdSfo-`,
+  _ = `Z4oAnn5XGR0-`,
+  _ = `-AknB-61VBk-`,
+  _ = `_9qd-6VYxzRk-`,
+  _ = `_5UOfXLiv4pU-`,
+  _ = `zU3bA3J97Ic-`,
+  _ = `_5l5COaZGP6o-`,
+  _ = `UaupDcY0JMM-`,
+  _ = `K3kYIkETVog-`,
+  _ = `xhL9xoThJdI-`,
+  _ = `n-NCo42aDkk-`,
+  _ = `yy93g0l2mMc-`,
+  _ = `iYm-r7byTvA-`,
+  _ = `pIJwqTE0ctw-`,
+  _ = `xPXsKaeEi9A-`,
+  _ = `QiWU6kiloPU-`,
+  _ = (0, _.createContext)(void 0),
   _ = () => (0, _.useContext)(_);
 function _(_) {
   let { shell: _, activeTab: _ = `workshop`, children: _ } = _,
