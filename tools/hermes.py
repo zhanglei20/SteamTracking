@@ -6,15 +6,15 @@ import os
 from argparse import ArgumentParser
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-parsers_dir = os.path.join(script_dir, 'hermes-dec', 'src', 'parsers')
-sys.path.insert(0, parsers_dir)
+src_dir = os.path.join(script_dir, 'hermes-dec', 'src')
+sys.path.insert(0, src_dir)
 
 try:
-    from hbc_file_parser import HBCReader
+    from hermes_dec.parsers.hbc_file_parser import HBCReader
 except ImportError as e:
-    print(f"Failed to import HBCReader from {parsers_dir}")
+    print(f"Failed to import HBCReader from {src_dir}")
     print(f"Error: {e}")
-    print(f"Files in directory: {os.listdir(parsers_dir) if os.path.exists(parsers_dir) else 'Directory does not exist'}")
+    print(f"Files in directory: {os.listdir(src_dir) if os.path.exists(src_dir) else 'Directory does not exist'}")
     sys.exit(1)
 
 def main():
