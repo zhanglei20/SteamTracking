@@ -477,7 +477,7 @@ message ContentReport {
 	optional int32 dispute_resolved = 17 [(.description) = "enum"];
 	optional uint32 time_dispute_resolved = 18;
 	optional bool detected_by_automation = 19 [default = false];
-	optional int32 resolved_by_automation = 20 [default = Identifier, (.description) = "enum"];
+	optional int32 resolved_by_automation = 20 [default = 0, (.description) = "enum"];
 	optional int32 content_moderated_reason = 21 [(.description) = "enum"];
 	optional int32 dispute_resolved_reason = 22 [(.description) = "enum"];
 	repeated .ContentReportSubjectSanction sanctions_applied = 23;
@@ -510,7 +510,7 @@ message ContentReportSubject {
 	optional uint32 owner_dispute_resolved_time = 25;
 	optional string owner_dispute_details = 26;
 	optional int32 required_moderator_level = 27 [(.description) = "enum"];
-	optional int32 resolved_by_automation = 28 [default = Identifier, (.description) = "enum"];
+	optional int32 resolved_by_automation = 28 [default = 0, (.description) = "enum"];
 	optional bool detected_by_automation = 29 [default = false];
 	optional int32 credible_threat_of_violence_status = 30 [(.description) = "enum"];
 	repeated .ContentReportSubjectSanction sanctions_applied = 31;

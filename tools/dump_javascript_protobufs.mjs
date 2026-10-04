@@ -3,7 +3,7 @@ import { createWriteStream } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { basename as pathBasename, join as pathJoin, resolve as pathResolve } from "node:path";
 import { latestEcmaVersion, parse } from "espree";
-import { Syntax, traverse } from "estraverse";
+import { replace, Syntax, traverse } from "estraverse";
 import { GetFilesToParse } from "./dump_javascript_paths.mjs";
 
 const __dirname = import.meta.dirname;
@@ -126,6 +126,9 @@ for (const file of files) {
 				loc: true,
 			});
 		}
+
+		ReplaceStaticTemplateLiterals(ast);
+
 		const crossModuleExportedMessages = new Map();
 		const services = [];
 		const messages = [];
@@ -706,6 +709,19 @@ function MergeMessages(allMessages) {
 	for (const [className, messages] of keyedMessages) {
 		const message = messages[0];
 
+		// Files can have different versions of a message, so when fields conflict,
+		// the one that is in most copies is written and the others are commented out
+		const fieldCopies = new Map();
+
+		for (const { fields } of messages) {
+			for (const field of fields) {
+				const key = `${field.id}|${field.type}|${field.name}`;
+				fieldCopies.set(key, (fieldCopies.get(key) ?? 0) + 1);
+			}
+		}
+
+		const GetFieldCopies = (field) => fieldCopies.get(`${field.id}|${field.type}|${field.name}`);
+
 		for (let i = 1; i < messages.length; i++) {
 			for (const field of messages[i].fields) {
 				const existingFields = message.fields.filter((f) => f.id === field.id);
@@ -726,6 +742,12 @@ function MergeMessages(allMessages) {
 
 		message.fields.sort((a, b) => {
 			if (a.id === b.id) {
+				const copiesCompare = GetFieldCopies(b) - GetFieldCopies(a);
+
+				if (copiesCompare !== 0) {
+					return copiesCompare;
+				}
+
 				const typeCompare = a.type.localeCompare(b.type);
 
 				if (typeCompare === 0) {
@@ -766,24 +788,59 @@ function MergeEnums(allEnums) {
 	const cleanEnums = new Map();
 
 	for (const [name, variants] of keyedEnums) {
-		const merged = new Map(variants[0]);
+		// Different enums can get the same name, e.g. from a common prefix of their keys,
+		// so only copies that share a key and agree on all shared values are merged
+		/** @type {Map<string, number|string>[]} */
+		const groups = [];
 
-		for (let i = 1; i < variants.length; i++) {
-			for (const [key, value] of variants[i]) {
-				const existing = merged.get(key);
+		for (const variant of variants) {
+			const merged = groups.find((group) => IsSameEnum(group, variant));
 
-				if (existing === undefined) {
+			if (!merged) {
+				groups.push(new Map(variant));
+				continue;
+			}
+
+			for (const [key, value] of variant) {
+				if (!merged.has(key)) {
 					merged.set(key, value);
-				} else if (existing !== value) {
-					console.warn(`Enum ${name} has conflicting value for ${key}: ${existing} vs ${value} (keeping ${existing})`);
 				}
 			}
 		}
 
-		cleanEnums.set(name, merged);
+		cleanEnums.set(name, groups[0]);
+
+		for (let i = 1; i < groups.length; i++) {
+			const hash = createHash("sha256");
+			hash.update([...groups[i]].map(([key, value]) => `${key}=${value}`).join(","));
+
+			cleanEnums.set(`${name}_${hash.digest("hex").substring(0, 8)}`, groups[i]);
+		}
 	}
 
 	return SortMapByKey(cleanEnums);
+}
+
+/**
+ * @param {Map<string, number|string>} a
+ * @param {Map<string, number|string>} b
+ */
+function IsSameEnum(a, b) {
+	let sharesKey = false;
+
+	for (const [key, value] of b) {
+		if (!a.has(key)) {
+			continue;
+		}
+
+		if (a.get(key) !== value) {
+			return false;
+		}
+
+		sharesKey = true;
+	}
+
+	return sharesKey;
 }
 
 /**
@@ -888,11 +945,8 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 			service.response = className;
 			service.responseToLookup = null;
 
-			if (service.request === NotImplemented) {
-				if (service.requestToLookup) {
-					throw new Error("There is already request to lookup");
-				}
-
+			// The request may already be known from the message passed to SendMsg
+			if (service.request === NotImplemented && !service.requestToLookup) {
 				service.requestToLookup = {
 					//module: null, // all modules
 					names: GenerateRequestNames(service.name, className),
@@ -943,6 +997,7 @@ function TraverseModule(ast, fileName) {
 	const exportedIds = new Map();
 	const exportedIdsFlipped = new Map();
 	const webpackRequireName = ast.params[2].name;
+	const constants = CollectConstants(ast.body.type === Syntax.BlockStatement ? ast.body.body : []);
 	let messageIdentifier = null;
 
 	traverse(ast, {
@@ -1106,7 +1161,7 @@ function TraverseModule(ast, fileName) {
 				}
 
 				if (parseClass) {
-					const message = TraverseClass(node.body, importedIds);
+					const message = TraverseClass(node.body, importedIds, constants);
 					message.id = node.id.name;
 					messages.push(message);
 
@@ -1150,7 +1205,7 @@ function TraverseModule(ast, fileName) {
 							expr.arguments[0].type === Syntax.Identifier &&
 							expr.arguments[0].name === messageIdentifier
 						) {
-							const message = TraverseTranspiledClass(expr.callee.body, importedIds);
+							const message = TraverseTranspiledClass(expr.callee.body, importedIds, constants);
 
 							if (i === node.expressions.length - 1) {
 								message.id = parent.id.name;
@@ -1177,7 +1232,7 @@ function TraverseModule(ast, fileName) {
 					node.arguments[0].type === Syntax.Identifier &&
 					node.arguments[0].name === messageIdentifier
 				) {
-					const message = TraverseTranspiledClass(node.callee.body, importedIds);
+					const message = TraverseTranspiledClass(node.callee.body, importedIds, constants);
 					message.id = parent.id.name;
 					messages.push(message);
 
@@ -1226,6 +1281,7 @@ function TraverseModule(ast, fileName) {
 				}
 
 				if (msg !== null) {
+					SetRequestFromArgument(msg, parent.arguments[1], messages);
 					services.push(msg);
 					this.skip();
 					return;
@@ -1280,6 +1336,7 @@ function TraverseEsmModule(ast) {
 	const esmImports = new Map();
 	const exportedIds = new Map();
 	const exportLocalToExported = new Map();
+	const constants = CollectConstants(ast.body);
 
 	// Pass 1: collect ESM import specifiers so we know which identifiers are
 	// cross-file references and their exported name in the source chunk.
@@ -1321,7 +1378,7 @@ function TraverseEsmModule(ast) {
 				node.init.superClass.property.type === Syntax.Identifier &&
 				node.init.superClass.property.name === "Message"
 			) {
-				const message = TraverseClass(node.init.body, importedIds);
+				const message = TraverseClass(node.init.body, importedIds, constants);
 				message.id = node.id.name;
 				messages.push(message);
 				this.skip();
@@ -1362,6 +1419,7 @@ function TraverseEsmModule(ast) {
 				}
 
 				if (msg !== null) {
+					SetRequestFromArgument(msg, parent.arguments[1], messages, esmImports);
 					services.push(msg);
 					this.skip();
 					return;
@@ -1433,11 +1491,53 @@ function TraverseEsmModule(ast) {
 }
 
 /**
+ * Collect the numeric constants of a module's top-level scope, e.g. `const n = 0, o = 1;`,
+ * which is how enum values get inlined. Names that are declared more than once are left out.
+ *
+ * @param {Node[]} body
+ * @returns {Map<string, number>}
+ */
+function CollectConstants(body) {
+	const constants = new Map();
+	const declared = new Set();
+
+	for (const node of body) {
+		if (node.type !== Syntax.VariableDeclaration) {
+			continue;
+		}
+
+		for (const declarator of node.declarations) {
+			if (declarator.id.type !== Syntax.Identifier) {
+				continue;
+			}
+
+			const name = declarator.id.name;
+
+			if (declared.has(name)) {
+				constants.delete(name);
+				continue;
+			}
+
+			declared.add(name);
+
+			const value = declarator.init ? EvaluateConstant(declarator.init) : null;
+
+			if (node.kind === "const" && typeof value === "number" && !Number.isNaN(value)) {
+				constants.set(name, value);
+			}
+		}
+	}
+
+	return constants;
+}
+
+/**
  * @param {Node} ast
  * @param {Map<string, string>} importedIds
+ * @param {Map<string, number>} constants
  * @returns {Message}
  */
-function TraverseTranspiledClass(ast, importedIds) {
+function TraverseTranspiledClass(ast, importedIds, constants) {
 	const message = {
 		className: null,
 		dependants: new Set(),
@@ -1458,7 +1558,7 @@ function TraverseTranspiledClass(ast, importedIds) {
 			this.skip();
 
 			if (node.left.property.name === "M") {
-				message.fields = TraverseFields(node.right.body, importedIds);
+				message.fields = TraverseFields(node.right.body, importedIds, constants);
 			} else if (node.left.property.name === "getClassName") {
 				message.className = GetClassNameLiteral(node.right.body);
 			}
@@ -1475,9 +1575,10 @@ function TraverseTranspiledClass(ast, importedIds) {
 /**
  * @param {Node} body
  * @param {Map<string, string>} importedIds
+ * @param {Map<string, number>} constants
  * @returns {Message}
  */
-function TraverseClass(ast, importedIds) {
+function TraverseClass(ast, importedIds, constants) {
 	const message = {
 		className: null,
 		dependants: new Set(),
@@ -1487,7 +1588,7 @@ function TraverseClass(ast, importedIds) {
 	traverse(ast, {
 		enter: function (node) {
 			if (node.type === Syntax.MethodDefinition && node.key.type === Syntax.Identifier && node.key.name === "M") {
-				message.fields = TraverseFields(node.value, importedIds);
+				message.fields = TraverseFields(node.value, importedIds, constants);
 				this.skip();
 				return;
 			}
@@ -1513,8 +1614,9 @@ function TraverseClass(ast, importedIds) {
 /**
  * @param {Object} ast
  * @param {Map<string, string>} importedIds
+ * @param {Map<string, number>} constants
  */
-function TraverseFields(ast, importedIds) {
+function TraverseFields(ast, importedIds, constants) {
 	/** @type {Field[]} */
 	const fields = [];
 	let selfProtoIdentifier = null;
@@ -1558,8 +1660,14 @@ function TraverseFields(ast, importedIds) {
 							}
 						} else if (fieldProp.key.name === "d") {
 							// d?: any //[d]efault value
-							if (fieldProp.value.type === Syntax.MemberExpression) {
-								// TODO: Support default fields expressions
+							if (fieldProp.value.type === Syntax.Identifier && constants.has(fieldProp.value.name)) {
+								// Enum values are inlined as module constants, e.g. `const n = 0`
+								field.default = constants.get(fieldProp.value.name);
+							} else if (
+								fieldProp.value.type === Syntax.MemberExpression ||
+								fieldProp.value.type === Syntax.Identifier
+							) {
+								// TODO: Support default fields expressions and variables
 							} else {
 								field.default = EvaluateConstant(fieldProp.value);
 							}
@@ -1644,6 +1752,32 @@ function TraverseFields(ast, importedIds) {
 	});
 
 	return fields;
+}
+
+/**
+ * Some bundles write strings as template literals without expressions, such as class names and
+ * method names, so they are turned into the string literals that the rest of the parsing expects.
+ * @param {Node} ast
+ */
+function ReplaceStaticTemplateLiterals(ast) {
+	replace(ast, {
+		enter: (node, parent) => {
+			if (
+				node.type === Syntax.TemplateLiteral &&
+				node.expressions.length === 0 &&
+				parent?.type !== Syntax.TaggedTemplateExpression
+			) {
+				const value = node.quasis[0].value.cooked;
+
+				return {
+					type: Syntax.Literal,
+					value,
+					raw: JSON.stringify(value),
+					loc: node.loc,
+				};
+			}
+		},
+	});
 }
 
 /**
@@ -1879,6 +2013,41 @@ function GetSendNotification(node) {
 		},
 		serviceMethodParams: GetServiceMethodParams(node.arguments[2].properties),
 	};
+}
+
+/**
+ * The request is passed as a message made from its class, e.g. `(0, o.I8)(B, e)`,
+ * so take its class instead of guessing it from the method name
+ *
+ * @param {Service} service
+ * @param {Object} node
+ * @param {Message[]} messages
+ * @param {Map<string, {module: string, name: string}>|null} [esmImports]
+ */
+function SetRequestFromArgument(service, node, messages, esmImports = null) {
+	if (
+		node.type !== Syntax.CallExpression ||
+		node.arguments.length < 2 ||
+		node.arguments[0].type !== Syntax.Identifier
+	) {
+		return;
+	}
+
+	const requestToLookup = node.arguments[0].name;
+	const message = messages.find((m) => m.id === requestToLookup);
+
+	if (message) {
+		service.request = message.className;
+		service.requestToLookup = null;
+	} else if (esmImports?.has(requestToLookup)) {
+		// ESM: request may reference a symbol imported from another chunk
+		const imp = esmImports.get(requestToLookup);
+
+		service.requestToLookup = {
+			module: imp.module,
+			name: imp.name,
+		};
+	}
 }
 
 /**
