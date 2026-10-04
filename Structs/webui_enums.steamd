@@ -47,10 +47,22 @@ enum Display
 	k_DisplayBetaPastStart = 4;
 	k_DisplayGift = 5;
 	k_DisplayAprrovedForPublishing = 6;
+}
+
+enum Display_02bf6396
+{
 	k_DisplayActiveAndUpcoming = 0;
 	k_DisplayActive = 1;
 	k_DisplayUpcoming = 2;
 	k_DisplayExpired = 3;
+	k_DisplayAll = 4;
+}
+
+enum Display_a0df83a6
+{
+	k_DisplayAll = 0;
+	k_DisplayPublic = 1;
+	k_DisplayBeta = 2;
 }
 
 enum DOTA_ACCESS_TOURNAMENT
@@ -1440,6 +1452,12 @@ enum UnnamedEnum1510db2060f520be
 {
 	LF = 1;
 	CRLF = 2;
+}
+
+enum UnnamedEnum1510db2060f520be_f837788c
+{
+	LF = 0;
+	CRLF = 1;
 }
 
 enum UnnamedEnum15675cb60f1450a5
