@@ -1558,8 +1558,8 @@ function TraverseFields(ast, importedIds) {
 							}
 						} else if (fieldProp.key.name === "d") {
 							// d?: any //[d]efault value
-							if (fieldProp.value.type === Syntax.MemberExpression) {
-								// TODO: Support default fields expressions
+							if (fieldProp.value.type === Syntax.MemberExpression || fieldProp.value.type === Syntax.Identifier) {
+								// TODO: Support default fields expressions and variables
 							} else {
 								field.default = EvaluateConstant(fieldProp.value);
 							}
