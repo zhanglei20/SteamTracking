@@ -18774,7 +18774,7 @@ var CLSTAMP = "steamdb";
           (_.polish = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 41330, 19))),
           (_.portuguese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 93141, 19))),
+            __webpack_require__._("chunkid").then(_._.bind(_, 15522, 19))),
           (_.romanian = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 20316, 19))),
           (_.russian = () =>
@@ -38148,7 +38148,7 @@ var CLSTAMP = "steamdb";
           (_.russian = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 54006, 19))),
           (_.sc_schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 70684, 19))),
+            __webpack_require__._("chunkid").then(_._.bind(_, 48303, 19))),
           (_.schinese = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 84421, 19))),
           (_.spanish = () =>
@@ -133656,7 +133656,7 @@ var CLSTAMP = "steamdb";
         496: "9a94d6c6cfcb3bc3368a",
         559: "c8344ea4b6c25b8b632b",
         580: "49454acae38c3546dca6",
-        684: "7b7abc722226e7196944",
+        684: "867a164f73984acc09eb",
         716: "594148f5c00309b02094",
         762: "6381bf741535ad65d4e3",
         815: "3d813a2cbea67ea28f34",
@@ -133699,9 +133699,9 @@ var CLSTAMP = "steamdb";
         2993: "7531c479e06a950e1ed0",
         3e3: "1b03996604202ef27322",
         3016: "f89712012c8d6eb6aa18",
-        3137: "8992f616d471167633ff",
         3199: "7b3d3178075de7dfd783",
         3202: "e765b9f27941fbe9ae8e",
+        3204: "17eba6e43331cbfaf460",
         3232: "1a94beba451ca9e76187",
         3307: "44f8930bc3553cbdf25a",
         3382: "65d75525c47e0d8fec4f",
@@ -133758,13 +133758,12 @@ var CLSTAMP = "steamdb";
         5358: "99f23fc098c9e0bd68ef",
         5436: "001c806234158e12fb23",
         5480: "aa8842d2e7d72dad67c5",
-        5522: "6bb84d870ec7d301f76f",
+        5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
         5725: "77765543932a0b28e1ce",
         5777: "322bf4f911865c3bc47b",
         5893: "3e3123deb6b55346f4c3",
-        6018: "7bab127971f918c27532",
         6059: "2b6e131f7948199622cb",
         6127: "4882c58af191aaf74128",
         6170: "46661dff8ad6ee73a3fa",
@@ -133793,13 +133792,13 @@ var CLSTAMP = "steamdb";
         7306: "5b3b8b9c7d88951f6a1e",
         7365: "ea7bc203892b1f7f7880",
         7418: "7680875bb68efceaf698",
-        7462: "75caf431365e76403966",
+        7462: "e203909858066311bdd5",
         7464: "f6e76d21d7b305bec292",
         7468: "53e0875c52dff3de164a",
         7487: "b3bc1a3055196336a2c5",
         7503: "362e655b8858b8f9df76",
         7637: "aaf49c28fc90f264dc3a",
-        7653: "fb5fcb3a57bbebfcc05d",
+        7653: "beac758538591b15357d",
         7673: "065a311d75b3213d4f15",
         7788: "c825998973f7a761c0e1",
         7861: "5edde2f8fc8a9ec95168",
@@ -133827,6 +133826,7 @@ var CLSTAMP = "steamdb";
         8948: "16c209d2cb6b1bd4dbde",
         8970: "387d122ea41a96b81947",
         9273: "702b2119e94a4b56417e",
+        9399: "540187c6ae7c24204243",
         9401: "0c0cd9c24baf6ebde222",
         9457: "9f960778db395b066f46",
         9574: "55dab2172eb507e52587",
@@ -134083,6 +134083,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(77539));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(15291));
   _ = _._(_);
 })();
