@@ -1735,7 +1735,6 @@ $ffn
 ../public/tier1/utlvector.h
 ../steamexe/bootstraputils.cpp
 ../steamexe/main.cpp
-../steamexe/platforminit.cpp
 ../steamexe/steamglobalinstance.cpp
 ../steamexe/steamupdater.cpp
 ../steamexe/updateui.h
@@ -2007,6 +2006,8 @@ $ffn
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:21:09
+00:21:16
 01/01/00
 0123456789.
 0123456789
@@ -2015,9 +2016,6 @@ $ffn
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789ABCDEF`yS
 0123456789abcdef
-01:15:32
-01:15:36
-01:15:37
 08bX
 0?0L
 0A/8
@@ -2946,6 +2944,7 @@ $ffn
 :scheme
 :statu
 :status
+:wO7
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -4826,7 +4825,6 @@ Call set methods to initialize MapKey.
 Call to NULL read function
 Call to NULL write function
 Callback was paused by the application
-Called BIsOptedIntoBeta without CSteamUpdater
 Caller deadline reached
 Caller should provide us with *buffer_ when buffer is non-empty
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
@@ -7885,7 +7883,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  2 2026
+Oct  6 2026
 October
 Odia
 Offensive Avatar
@@ -8643,11 +8641,9 @@ Red Pagos
 RedCompra
 ReexecInSteamRuntime failed\n
 ReexecSteamLinux
-ReexecToLauncher: Running steamrt64 client but opted out of beta. Re-starting the scout environment\n
+ReexecToLauncher: Running steamrt64 client but not opted in. Re-starting the scout environment\n
 ReexecToLauncher: don't have a valid steamrt64/steam executable\n
-ReexecToLauncher: not opted into beta\n
 ReexecToLauncher: not opted into steamrt3 client\n
-ReexecToLauncher: opted into beta\n
 ReexecToLauncher: opted into steamrt3 client\n
 ReexecToLauncher: proceeding in current environment\n
 Refundable
@@ -9386,7 +9382,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct  2 2026 01:15:37
+Startup - updater built Oct  6 2026 00:21:16
 State
 StaticFileWriterThread()
 Steam
@@ -13814,7 +13810,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 givenName
 glBegin
 glBindTexture

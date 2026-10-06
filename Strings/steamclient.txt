@@ -110,7 +110,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123M
+ !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -8297,15 +8297,14 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-00:00:00
-00|000
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+00|000
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF@
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -8564,7 +8563,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryI22WebSocketCMListEntry_tE
 10CUtlMemoryI22WorkshopItemSnapshot_sE
 10CUtlMemoryI23AchievementLookupInfo_tE
-10CUtlMemoryI23ControllerAccountPair_tE
 10CUtlMemoryI23NetConnectPingResults_tE
 10CUtlMemoryI23VRHMDHardwareDetected_tE
 10CUtlMemoryI24ClientServiceMethodReg_tE
@@ -8667,7 +8665,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAP13CLocationInfoi15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAP17ChunkRequestKey_ti15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAPK11CDeltaChunki15CShaPtrLessThanE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPK4CSHAPK20CManifestFileMappingi15CShaPtrLessThanE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiES4_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS3_EE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -9245,7 +9242,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapIPK4CSHAP13CLocationInfoi15CShaPtrLessThanE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
 10CUtlRBTreeIN7CUtlMapIPK4CSHAP17ChunkRequestKey_ti15CShaPtrLessThanE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
 10CUtlRBTreeIN7CUtlMapIPK4CSHAPK11CDeltaChunki15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
-10CUtlRBTreeIN7CUtlMapIPK4CSHAPK20CManifestFileMappingi15CShaPtrLessThanE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E
 10CUtlRBTreeIN7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS2_EE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -9437,7 +9433,6 @@ $steammessages_parental_objects.proto"
 10CUtlVectorI22WebSocketCMListEntry_t10CUtlMemoryIS0_EE
 10CUtlVectorI22WorkshopItemSnapshot_s10CUtlMemoryIS0_EE
 10CUtlVectorI23AchievementLookupInfo_t10CUtlMemoryIS0_EE
-10CUtlVectorI23ControllerAccountPair_t10CUtlMemoryIS0_EE
 10CUtlVectorI23NetConnectPingResults_t10CUtlMemoryIS0_EE
 10CUtlVectorI23VRHMDHardwareDetected_t10CUtlMemoryIS0_EE
 10CUtlVectorI24ClientServiceMethodReg_t10CUtlMemoryIS0_EE
@@ -11437,7 +11432,6 @@ $steammessages_parental_objects.proto"
 18CGameActionBinding
 18CGameRecordingClip
 18CGameRecordingFile
-18CGetChipIDWorkItem
 18CGetCursorImageMsg
 18CGetStaleBucketJob
 18CHTTPClientRequest
@@ -16490,7 +16484,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapIPK4CSHAP13CLocationInfoi15CShaPtrLessThanE
 7CUtlMapIPK4CSHAP17ChunkRequestKey_ti15CShaPtrLessThanE
 7CUtlMapIPK4CSHAPK11CDeltaChunki15CShaPtrLessThanE
-7CUtlMapIPK4CSHAPK20CManifestFileMappingi15CShaPtrLessThanE
 7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE
 7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE
 7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS1_EE
@@ -16882,7 +16875,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H(G
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17160,7 +17152,6 @@ $steammessages_parental_objects.proto"
 ? * + invalid
 ?$EaORVx\
 ?.CSteamInputService_FirstSteamControllerConnection_Notification
-?01a
 ?0DS=
 ?10IP2PSocket
 ?11CGyroSource
@@ -18346,13 +18337,13 @@ AuthorizedDevice
 AuthorizedLender/%u
 Auto Grant
 Auto Moderation
+Auto-Registering controller %u\n
 Auto-detected proxy settings: auto-detect(%s), proxy(%s), proxy-https(%s), exclude:\n
 Auto-filling the buffer (your application is buggy and/or got xruns)
 Auto-update blackout time
 Auto-verify game updates ever N days
 AutoCloud failed to write session info
 AutoDeny
-AutoRegisterControllerRegistrationToAccount
 AutoSignIntoFriends
 AutoUpdateBehavior
 AutoUpdateWindowEnabled
@@ -23471,6 +23462,7 @@ Could not open file
 Could not read existing registry file.
 Could not read microtransaction info from message
 Could not read wallet info from message
+Could not unlock H264: %s\n
 Couldn't access HTTP response\n
 Couldn't bind TCP port
 Couldn't bind to broadcast port %d, RemoteClientManager disabled
@@ -23596,7 +23588,6 @@ CreatePublishedFileUpdateRequest
 CreateQueryAllUGCRequest
 CreateQueryUGCDetailsRequest
 CreateQueryUserUGCRequest
-CreateReconstructionContexts
 CreateRemotePlayTogetherMouseCursor
 CreateServerDataForCluster
 CreateSession
@@ -30532,7 +30523,6 @@ MutableRawRepeatedField
 MutableRepeatedMessage
 MuteBroadcastChatUser
 MuteUserInGroup
-Mxaw
 Myanmar
 N#_4o9
 N*WVe
@@ -34026,7 +34016,6 @@ RemoveAuthenticator
 RemoveClient
 RemoveConfigurationItem
 RemoveContentDescriptor
-RemoveControllerRegisteredAccount - Trying to remove account on an unconnected or unpaired controller.\n
 RemoveDependency
 RemoveDevice
 RemoveFavoriteGame
@@ -39875,6 +39864,7 @@ YieldingCheckForUpdateDummy
 YieldingCheckForUpdateOS
 YieldingCheckForUpdateSteamClient
 YieldingConnect
+YieldingCreateReconstructionContexts
 YieldingEnableGraphicsProfiling
 YieldingEnablePerfOverlay
 YieldingFindDriveNameForPath
@@ -49204,7 +49194,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -54084,9 +54074,11 @@ low-pri yield - ../clientdll/compatmanager.cpp:3644
 low-pri yield - ../clientdll/compatmanager.cpp:3657
 low-pri yield - ../clientdll/compatmanager.cpp:3709
 low-pri yield - ../clientdll/compatmanager.cpp:4316
+low-pri yield - ../clientdll/contentupdatecontext.cpp:1369
+low-pri yield - ../clientdll/contentupdatecontext.cpp:1405
 low-pri yield - ../clientdll/csinterface.cpp:223
 low-pri yield - ../clientdll/depotbuilder.cpp:107
-low-pri yield - ../clientdll/depotreconstruct.cpp:3066
+low-pri yield - ../clientdll/depotreconstruct.cpp:3098
 low-pri yield - ../clientdll/peercontentserver.cpp:712
 low-pri yield - ../clientdll/subscribedfilelistcache.cpp:397
 low-pri yield - ../clientdll/subscribedfilelistcache.cpp:414
@@ -54890,7 +54882,6 @@ m_mapFileMappings
 m_mapFileMappings[i]
 m_mapFileReadAsyncContexts
 m_mapFileRootOverrides
-m_mapFileSHAs
 m_mapFileTimes
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
@@ -58325,7 +58316,8 @@ pKey->m_eTrust == k_ETrust_Revoked
 pKeyCallback
 pKeyValuesTextParser
 pKp\nZ
-pLocationEntry->pChangedFile != pChangedFile || pLocationEntry->ulOffset < ulOffset
+pLastLocation->pChangedFile != pChangedFile || pLastLocation->ulOffset < ulOffset
+pLastLocation->pNext == nullptr
 pLock
 pLock->BIsLocked()
 pLock->GetJobLocking() == this
@@ -58548,6 +58540,7 @@ pWorkItem->m_bDeferCompletion
 pWorkItem->m_bRunning
 pWorkThread != NULL
 pWorkThread->m_bFinished is false but thread is not running
+pWriteCtx->pLocationEntry->pChangedFile == pChangedFile && pWriteCtx->pLocationEntry->ulOffset == ulOffset
 pXhH
 pZlNr
 p\lHtW
@@ -61667,7 +61660,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct  2 2026 01:15:37
+steam Oct  6 2026 00:21:18
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -64118,7 +64111,6 @@ vars
 vary
 vasprintf
 vcard-temp:x:update
-vecAccounts
 vecActiveActionSetLayerId
 vecBuckets.Count() > 0
 vecChunksByOffset.Count() == 0
