@@ -23,7 +23,7 @@
           x = t(7727),
           c = t(39889),
           A = t.n(c),
-          g = "11070472";
+          g = "11085805";
         function a(r) {
           const { popup: o } = r,
             [i, n] = m.useState();
@@ -109,7 +109,7 @@
           v = t(12684),
           D = t(7354),
           f = t(7727),
-          _ = "11070472";
+          _ = "11085805";
         function h() {
           const { data: a, isLoading: e } = (0, M.Yh)(),
             E = m.useMemo(
@@ -149,7 +149,7 @@
           const { appid: e } = a;
           return (0, v.X)(e)?.name;
         }
-        var A = "11070472";
+        var A = "11085805";
         function g(a) {
           return (0, s.jsxs)(d.dO, {
             children: [
