@@ -15305,6 +15305,7 @@
               {
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
               },
             );
           }
@@ -44897,6 +44898,7 @@ Error generating stack: ` +
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
               },
             );
           }
@@ -44914,6 +44916,7 @@ Error generating stack: ` +
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
               },
             );
           }
@@ -44965,6 +44968,7 @@ Error generating stack: ` +
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
               },
             );
           }
@@ -45758,6 +45762,7 @@ Error generating stack: ` +
         {
           bConstMethod: !0,
           ePrivilege: 1,
+          rgBrowserAPISites: [`partner`],
         },
       );
     }

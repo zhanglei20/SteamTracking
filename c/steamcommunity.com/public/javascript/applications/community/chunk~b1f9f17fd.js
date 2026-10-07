@@ -6157,17 +6157,23 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid");
+        const _ = new Set();
+        function _() {
+          for (const _ of _) _(location.search);
+        }
         function _() {
           const [_, _] = (0, _.useState)(location.search);
           return (
             (0, _.useEffect)(() => {
-              function _(_) {
-                _.data === "urlchange" && _(location.search);
+              function _() {
+                _(location.search);
               }
               return (
-                window.addEventListener("message", _),
+                _.add(_),
+                window.addEventListener("popstate", _),
+                _(location.search),
                 () => {
-                  window.removeEventListener("message", _);
+                  _.delete(_), window.removeEventListener("popstate", _);
                 }
               );
             }, []),
@@ -6186,10 +6192,9 @@
                   : _
                 : _;
             }, [_, _, _]),
-            [_, _] = (0, _.useState)(_),
             _ = _.useCallback(
               (_, _ = !1) => {
-                const _ = new URLSearchParams(_.substring(1));
+                const _ = new URLSearchParams(location.search.substring(1));
                 if (_ != null) {
                   if (_.get(_) == _) return;
                   _.set(_, String(_));
@@ -6208,11 +6213,9 @@
                       "",
                       decodeURIComponent(`${window.location.pathname}?${_}`),
                     ),
-                  (0, _.startTransition)(() => {
-                    _(_), window.postMessage("urlchange");
-                  });
+                  (0, _.startTransition)(_);
               },
-              [_, _],
+              [_],
             );
           return [_, _];
         }

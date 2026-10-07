@@ -9238,7 +9238,8 @@
           );
           return (
             (0, _.useEffect)(() => {
-              _ &&
+              _._.is_support &&
+                _ &&
                 (!_ || _.gid != _) &&
                 _.Get().LoadMarketingMessage(_).then(_);
             }, [_, _]),
@@ -118674,6 +118675,7 @@ ${_}`;
           return atob(_.replace(/-/g, "+").replace(/_/g, "/"));
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_ServiceTransport;
@@ -118807,7 +118809,16 @@ ${_}`;
                 console.error(
                   `Attempting to invoke service ${_} without auth, but auth is required.`,
                 ),
-              this.m_webApiAccessToken &&
+              _.bSendAuth && !_)
+            ) {
+              const _ = `${_} was called over WebAPI with auth`;
+              console.warn(_),
+                (0, _._)().ReportError(new Error(_), {
+                  bIncludeMessageInIdentifier: !0,
+                });
+            }
+            if (
+              (this.m_webApiAccessToken &&
                 _.bSendAuth &&
                 !_ &&
                 (_.append("access_token", this.m_webApiAccessToken),
@@ -142814,6 +142825,7 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(
           _ = EStoreDiscoveryQueueType.k_EStoreDiscoveryQueueTypeNew,
@@ -143809,7 +143821,7 @@ ${_}`;
           constructor() {
             (0, _._)(this);
             const _ = (0, _._)("loyalty_webapi_token", "application_config"),
-              _ = new _._(_._.WEBAPI_BASE_URL, _ || void 0);
+              _ = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _ || void 0));
             this.m_serviceTransport = _.GetServiceTransport();
           }
           static GetRelevantSections(_) {

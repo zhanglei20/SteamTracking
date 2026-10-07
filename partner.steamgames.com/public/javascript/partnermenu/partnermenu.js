@@ -15188,7 +15188,11 @@
                 CClientMetrics_ReportReactUsage_Notification,
                 n,
               ),
-              { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.ReportReactUsage = o;
@@ -43700,7 +43704,12 @@ Error generating stack: ` +
                 r,
               ),
               CStoreBrowse_GetContentHubConfig_Response,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.GetContentHubConfig = i;
@@ -43713,7 +43722,12 @@ Error generating stack: ` +
                 r,
               ),
               CStoreBrowse_GetPriceStops_Response,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.GetPriceStops = o;
@@ -43757,7 +43771,12 @@ Error generating stack: ` +
                 r,
               ),
               CStoreBrowse_GetHardwareItems_Response,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [`partner`],
+              },
             );
           }
           t.GetHardwareItems = u;
@@ -44529,7 +44548,7 @@ Error generating stack: ` +
           r,
         ),
         CAccountPrivacy_GetCookiePreferences_Response,
-        { bConstMethod: !0, ePrivilege: 1 },
+        { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`partner`] },
       );
     }
     t.GetCookiePreferences = n;
