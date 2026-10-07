@@ -17,6 +17,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _() {
           return (
@@ -45,7 +46,7 @@
         function _(_) {
           const { redirectUrl: _ = _._.PARTNER_BASE_URL, closeModal: _ } = _,
             _ = (0, _.useRef)(
-              new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
+              (0, _._)(new _._(_._.WEBAPI_BASE_URL)).GetServiceTransport(),
             ).current,
             [_, _] = (0, _.useState)(!1),
             _ = (_) => {
@@ -3670,6 +3671,14 @@
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -3682,6 +3691,14 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -3694,6 +3711,14 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -3706,6 +3731,14 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -3761,6 +3794,14 @@
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }

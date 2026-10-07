@@ -27730,7 +27730,11 @@
               "PartnerStoreBrowse.GetItems#1",
               (0, n.I8)(v, M, L),
               s.yE,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           B.GetItems = w;
@@ -27739,7 +27743,11 @@
               "PartnerStoreBrowse.GetCountryRestrictions#1",
               (0, n.I8)(f, M, L),
               g,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           B.GetCountryRestrictions = b;

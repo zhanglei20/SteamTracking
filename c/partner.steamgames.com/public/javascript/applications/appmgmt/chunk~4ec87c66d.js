@@ -97055,6 +97055,14 @@ ${_}`;
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -97067,6 +97075,14 @@ ${_}`;
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -97079,6 +97095,14 @@ ${_}`;
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -97091,6 +97115,14 @@ ${_}`;
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }
@@ -97146,6 +97178,14 @@ ${_}`;
               {
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
               },
             );
           }

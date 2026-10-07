@@ -91062,7 +91062,19 @@ ${lt}`;
               "Authentication.GetPasswordRSAPublicKey#1",
               (0, I.I8)(ve, ds, Gt),
               be,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
+              },
             );
           }
           Qe.GetPasswordRSAPublicKey = v;
@@ -91071,7 +91083,18 @@ ${lt}`;
               "Authentication.BeginAuthSessionViaQR#1",
               (0, I.I8)(Te, ds, Gt),
               He,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
+              },
             );
           }
           Qe.BeginAuthSessionViaQR = fe;
@@ -91080,7 +91103,18 @@ ${lt}`;
               "Authentication.BeginAuthSessionViaCredentials#1",
               (0, I.I8)(tt, ds, Gt),
               ze,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
+              },
             );
           }
           Qe.BeginAuthSessionViaCredentials = yt;
@@ -91089,7 +91123,18 @@ ${lt}`;
               "Authentication.PollAuthSessionStatus#1",
               (0, I.I8)(Ie, ds, Gt),
               ie,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
+              },
             );
           }
           Qe.PollAuthSessionStatus = ur;
@@ -91133,7 +91178,18 @@ ${lt}`;
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               (0, I.I8)(g, ds, Gt),
               O,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: [
+                  "store",
+                  "community",
+                  "support",
+                  "partner",
+                  "steamops",
+                  "stats",
+                ],
+              },
             );
           }
           Qe.UpdateAuthSessionWithSteamGuardCode = Ts;
