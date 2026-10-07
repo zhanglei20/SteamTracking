@@ -2619,7 +2619,12 @@
               "Econ.GetInventoryItemsWithDescriptions#1",
               (0, e.I8)(ar, n, x),
               tr,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           m.GetInventoryItemsWithDescriptions = r;
@@ -2655,7 +2660,12 @@
               "Econ.GetAssetPropertySchema#1",
               (0, e.I8)(rr, n, x),
               ir,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           m.GetAssetPropertySchema = w;
@@ -10187,7 +10197,12 @@
               "Econ.GetInventoryItemsWithDescriptions#1",
               (0, e.I8)(ar, M, z),
               tr,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           m.GetInventoryItemsWithDescriptions = nl;
@@ -10451,7 +10466,12 @@
               "Econ.GetAssetPropertySchema#1",
               (0, e.I8)(rr, M, z),
               ir,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           m.GetAssetPropertySchema = kB;

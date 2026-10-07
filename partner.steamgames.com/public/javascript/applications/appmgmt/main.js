@@ -22090,7 +22090,11 @@
             return R1.SendNotification(
               "ClientMetrics.ReportReactUsage#1",
               (0, s.I8)(K, l2),
-              { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           z1.ReportReactUsage = L1;
@@ -27191,6 +27195,7 @@
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           C2.GetApps = o;
@@ -27352,7 +27357,7 @@
               "Community.HideAndReportComment#1",
               (0, v.I8)(X2, r2, o2),
               M3,
-              { ePrivilege: 3 },
+              { ePrivilege: 3, rgBrowserAPISites: ["partner"] },
             );
           }
           C2.HideAndReportComment = F4;
@@ -33875,7 +33880,12 @@
               "StoreBrowse.GetContentHubConfig#1",
               (0, p.I8)(r2, A1, O1),
               o2,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           w3.GetContentHubConfig = X1;
@@ -33884,7 +33894,12 @@
               "StoreBrowse.GetPriceStops#1",
               (0, p.I8)(G2, A1, O1),
               j3,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           w3.GetPriceStops = g5;
@@ -33916,7 +33931,12 @@
               "StoreBrowse.GetHardwareItems#1",
               (0, p.I8)(M4, A1, O1),
               Z3,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           w3.GetHardwareItems = a5;
@@ -35673,6 +35693,7 @@
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["partner"],
             });
           }
           z1.Query = c;
@@ -35681,7 +35702,12 @@
               "StoreQuery.SearchSuggestions#1",
               (0, s.I8)(f1, D1, g1),
               x1,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           z1.SearchSuggestions = V;
@@ -35699,7 +35725,11 @@
               "StoreQuery.GetItemsByUserRecommendedTags#1",
               (0, s.I8)(m1, D1, g1),
               S,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           z1.GetItemsByUserRecommendedTags = L1;

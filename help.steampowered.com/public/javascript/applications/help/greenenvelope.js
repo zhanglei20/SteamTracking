@@ -22412,7 +22412,7 @@
           dc([W.sH], Da.prototype, "m_nFollowers", 2),
           dc([W.sH], Da.prototype, "m_clanAccountFlags", 2);
         var mu = T(6246),
-          fu = T(629),
+          fu = T(298),
           ql = T(7291),
           uu = Object.defineProperty,
           du = Object.getOwnPropertyDescriptor,

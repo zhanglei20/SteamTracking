@@ -1,18 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (() => {
-  globalThis.CLSTAMP = "11096350";
+  globalThis.CLSTAMP = "11098622";
   (() => {
     "use strict";
     var k = {},
       v = {};
-    function d(e) {
+    function b(e) {
       var i = v[e];
       if (i !== void 0) return i.exports;
       var c = (v[e] = { id: e, loaded: !1, exports: {} });
-      return k[e].call(c.exports, c, c.exports, d), (c.loaded = !0), c.exports;
+      return k[e].call(c.exports, c, c.exports, b), (c.loaded = !0), c.exports;
     }
-    (d.m = k),
+    (b.m = k),
       (() => {
         var e =
             typeof Symbol == "function"
@@ -42,22 +42,22 @@
                   (t.d = 0),
                     a.then(
                       (o) => {
-                        (b[i] = o), s(t);
+                        (d[i] = o), s(t);
                       },
                       (o) => {
-                        (b[c] = o), s(t);
+                        (d[c] = o), s(t);
                       },
                     );
-                  var b = {};
-                  return (b[e] = (o) => o(t)), b;
+                  var d = {};
+                  return (d[e] = (o) => o(t)), d;
                 }
               }
               var r = {};
               return (r[e] = (o) => {}), (r[i] = a), r;
             });
-        d.a = (f, a, t) => {
-          var b;
-          t && ((b = []).d = -1);
+        b.a = (f, a, t) => {
+          var d;
+          t && ((d = []).d = -1);
           var r = new Set(),
             o = f.exports,
             l,
@@ -67,7 +67,7 @@
               (p = u), (h = _);
             });
           (m[i] = o),
-            (m[e] = (_) => (b && _(b), r.forEach(_), m.catch((u) => {}))),
+            (m[e] = (_) => (d && _(d), r.forEach(_), m.catch((u) => {}))),
             (f.exports = m),
             a(
               (_) => {
@@ -81,21 +81,21 @@
                   w = new Promise((j) => {
                     (u = () => j(y)), (u.r = 0);
                     var C = (g) =>
-                      g !== b &&
+                      g !== d &&
                       !r.has(g) &&
                       (r.add(g), g && !g.d && (u.r++, g.push(u)));
                     l.map((g) => g[e](C));
                   });
                 return u.r ? w : y();
               },
-              (_) => (_ ? p((m[c] = _)) : h(o), s(b)),
+              (_) => (_ ? p((m[c] = _)) : h(o), s(d)),
             ),
-            b && b.d < 0 && (b.d = 0);
+            d && d.d < 0 && (d.d = 0);
         };
       })(),
       (() => {
         var e = [];
-        d.O = (i, c, s, n) => {
+        b.O = (i, c, s, n) => {
           if (c) {
             n = n || 0;
             for (var f = e.length; f > 0 && e[f - 1][2] > n; f--)
@@ -104,9 +104,9 @@
             return;
           }
           for (var a = 1 / 0, f = 0; f < e.length; f++) {
-            for (var [c, s, n] = e[f], t = !0, b = 0; b < c.length; b++)
-              (n & !1 || a >= n) && Object.keys(d.O).every((m) => d.O[m](c[b]))
-                ? c.splice(b--, 1)
+            for (var [c, s, n] = e[f], t = !0, d = 0; d < c.length; d++)
+              (n & !1 || a >= n) && Object.keys(b.O).every((m) => b.O[m](c[d]))
+                ? c.splice(d--, 1)
                 : ((t = !1), n < a && (a = n));
             if (t) {
               e.splice(f--, 1);
@@ -117,16 +117,16 @@
           return i;
         };
       })(),
-      (d.n = (e) => {
+      (b.n = (e) => {
         var i = e && e.__esModule ? () => e.default : () => e;
-        return d.d(i, { a: i }), i;
+        return b.d(i, { a: i }), i;
       }),
       (() => {
         var e = Object.getPrototypeOf
             ? (c) => Object.getPrototypeOf(c)
             : (c) => c.__proto__,
           i;
-        d.t = function (c, s) {
+        b.t = function (c, s) {
           if (
             (s & 1 && (c = this(c)),
             s & 8 ||
@@ -137,7 +137,7 @@
           )
             return c;
           var n = Object.create(null);
-          d.r(n);
+          b.r(n);
           var f = {};
           i = i || [null, e({}), e([]), e(e)];
           for (
@@ -146,19 +146,19 @@
             a = e(a)
           )
             Object.getOwnPropertyNames(a).forEach((t) => (f[t] = () => c[t]));
-          return (f.default = () => c), d.d(n, f), n;
+          return (f.default = () => c), b.d(n, f), n;
         };
       })(),
-      (d.d = (e, i) => {
+      (b.d = (e, i) => {
         for (var c in i)
-          d.o(i, c) &&
-            !d.o(e, c) &&
+          b.o(i, c) &&
+            !b.o(e, c) &&
             Object.defineProperty(e, c, { enumerable: !0, get: i[c] });
       }),
-      (d.f = {}),
-      (d.e = (e) =>
-        Promise.all(Object.keys(d.f).reduce((i, c) => (d.f[c](e, i), i), []))),
-      (d.u = (e) =>
+      (b.f = {}),
+      (b.e = (e) =>
+        Promise.all(Object.keys(b.f).reduce((i, c) => (b.f[c](e, i), i), []))),
+      (b.u = (e) =>
         "javascript/applications/appmgmt/" +
         ({
           478: "marketing_danish-json",
@@ -427,7 +427,7 @@
           18523: "2df2112ca7bdafc4324d",
           18861: "0805fd4f5c72c9f40451",
           18896: "31d49cdd7d6af8a8ab25",
-          19433: "149c65f9266d2f601d53",
+          19433: "9307b68b43e8e61e9b03",
           19661: "ee3a7abe3118038034eb",
           19812: "5da09cf89a29cbdb15d6",
           19894: "0ff71f0b2665da31a90a",
@@ -492,7 +492,7 @@
           32568: "eb07af426948df0d2f61",
           32992: "9d7b07ad4c5c80e0deea",
           33347: "46070acc37ee108c56a2",
-          33388: "bda019e9743882826b5e",
+          33388: "a77d72e1ce8c317b052a",
           33389: "9d6490cdc5962f400d5e",
           33648: "c379e70650d8d4f5167d",
           33864: "251b3e291c65576d5e50",
@@ -522,15 +522,15 @@
           37140: "aed6d5b010537e7554af",
           37224: "1476e681e6ccbbf65b58",
           37336: "a67bab09334940c77bf3",
-          37368: "fcb22601472db6bce281",
+          37368: "b0cf72e9852c99bdfe3f",
           37631: "b0d58cddcfa9cb21a7dd",
-          37671: "8329163a88b8fd25c4e9",
+          37671: "e20faba596ab032bf25d",
           37681: "81a91d023a06e677a822",
           38052: "701bf1ea189cf3ea631b",
           38060: "89dd9d95f940a181cae0",
           38206: "7beee5aa82ecd3144673",
           38323: "65c1d9bfba96741e67f9",
-          38350: "a57bce35ba726473f780",
+          38350: "2412d3f37b46a6f5bfe8",
           38356: "0f0224b5e932435ed779",
           38380: "7aee68e54284ffec4da5",
           38493: "1c8f7e6094344370bb33",
@@ -553,7 +553,7 @@
           41359: "9f050e78788c9fba1a0f",
           41790: "c500f23cc567190935bf",
           41839: "c3e6cf5ae94b803b8612",
-          42012: "39d212edaa9db3140fe6",
+          42012: "4e75a741f85ac88f85fb",
           42185: "0fd4012e7a27fd2c7fb9",
           42218: "8d2707e2c2e2aa64a5f2",
           42282: "947f5113161f4151e33a",
@@ -571,7 +571,7 @@
           43874: "2b74493439738c29e9da",
           43998: "a59384996146273a52e0",
           44287: "cabd6d30601779777dd7",
-          44298: "089605a063a34234435e",
+          44298: "6eef26d5714e8c502974",
           44373: "74a4e2d6f15446d6943f",
           44400: "14a5368ac221ebe0df47",
           44768: "5de8ef32233468404373",
@@ -634,7 +634,7 @@
           54763: "c89984d20223515231a6",
           54925: "380cb556b282e5838d9d",
           55136: "855a42de69d792e4ef14",
-          55295: "2046f11fad25ec6be2c3",
+          55295: "2a76305d62ad48958112",
           55344: "d3894fa7b5f465311720",
           55400: "07f6bf88f585df17f27c",
           55484: "c8e5c15be1f5e475eb09",
@@ -853,7 +853,7 @@
           99916: "54e942f613e3e0b17ebb",
           99965: "af77d469cabba8f86d3e",
         }[e]),
-      (d.miniCssF = (e) =>
+      (b.miniCssF = (e) =>
         "css/applications/appmgmt/" +
         ({
           8590: "packageadmin",
@@ -914,7 +914,7 @@
           98656: "4f28f7392ec852892ae3",
           99539: "8f4a33b6ce12a33b598b",
         }[e]),
-      (d.g = (function () {
+      (b.g = (function () {
         if (typeof globalThis == "object") return globalThis;
         try {
           return this || new Function("return this")();
@@ -922,11 +922,11 @@
           if (typeof window == "object") return window;
         }
       })()),
-      (d.o = (e, i) => Object.prototype.hasOwnProperty.call(e, i)),
+      (b.o = (e, i) => Object.prototype.hasOwnProperty.call(e, i)),
       (() => {
         var e = {},
           i = "appmgmt-storeadmin:";
-        d.l = (c, s, n, f) => {
+        b.l = (c, s, n, f) => {
           if (e[c]) {
             e[c].push(s);
             return;
@@ -934,11 +934,11 @@
           var a, t;
           if (n !== void 0)
             for (
-              var b = document.getElementsByTagName("script"), r = 0;
-              r < b.length;
+              var d = document.getElementsByTagName("script"), r = 0;
+              r < d.length;
               r++
             ) {
-              var o = b[r];
+              var o = d[r];
               if (
                 o.getAttribute("src") == c ||
                 o.getAttribute("data-webpack") == i + n
@@ -952,7 +952,7 @@
             (a = document.createElement("script")),
             (a.charset = "utf-8"),
             (a.timeout = 120),
-            d.nc && a.setAttribute("nonce", d.nc),
+            b.nc && a.setAttribute("nonce", b.nc),
             a.setAttribute("data-webpack", i + n),
             (a.src = c)),
             (e[c] = [s]);
@@ -976,17 +976,17 @@
             t && document.head.appendChild(a);
         };
       })(),
-      (d.r = (e) => {
+      (b.r = (e) => {
         typeof Symbol < "u" &&
           Symbol.toStringTag &&
           Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
           Object.defineProperty(e, "__esModule", { value: !0 });
       }),
-      (d.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
-      (d.p = ""),
+      (b.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
+      (b.p = ""),
       (() => {
         if (!(typeof document > "u")) {
-          var e = (n, f, a, t, b) => {
+          var e = (n, f, a, t, d) => {
               var r = document.createElement("link");
               (r.rel = "stylesheet"), (r.type = "text/css");
               var o = (l) => {
@@ -1009,7 +1009,7 @@
                     (m.type = h),
                     (m.request = p),
                     r.parentNode && r.parentNode.removeChild(r),
-                    b(m);
+                    d(m);
                 }
               };
               return (
@@ -1027,29 +1027,29 @@
                 t < a.length;
                 t++
               ) {
-                var b = a[t],
-                  r = b.getAttribute("data-href") || b.getAttribute("href");
-                if (b.rel === "stylesheet" && (r === n || r === f)) return b;
+                var d = a[t],
+                  r = d.getAttribute("data-href") || d.getAttribute("href");
+                if (d.rel === "stylesheet" && (r === n || r === f)) return d;
               }
               for (
                 var o = document.getElementsByTagName("style"), t = 0;
                 t < o.length;
                 t++
               ) {
-                var b = o[t],
-                  r = b.getAttribute("data-href");
-                if (r === n || r === f) return b;
+                var d = o[t],
+                  r = d.getAttribute("data-href");
+                if (r === n || r === f) return d;
               }
             },
             c = (n) =>
               new Promise((f, a) => {
-                var t = d.miniCssF(n),
-                  b = d.p + t;
-                if (i(t, b)) return f();
-                e(n, b, null, f, a);
+                var t = b.miniCssF(n),
+                  d = b.p + t;
+                if (i(t, d)) return f();
+                e(n, d, null, f, a);
               }),
             s = { 14556: 0 };
-          d.f.miniCss = (n, f) => {
+          b.f.miniCss = (n, f) => {
             var a = {
               8590: 1,
               13350: 1,
@@ -1099,24 +1099,24 @@
       })(),
       (() => {
         var e = { 14556: 0 };
-        (d.f.j = (s, n) => {
-          var f = d.o(e, s) ? e[s] : void 0;
+        (b.f.j = (s, n) => {
+          var f = b.o(e, s) ? e[s] : void 0;
           if (f !== 0)
             if (f) n.push(f[2]);
             else if (/^(14556|59063|94781)$/.test(s)) e[s] = 0;
             else {
               var a = new Promise((o, l) => (f = e[s] = [o, l]));
               n.push((f[2] = a));
-              var t = d.p + d.u(s),
-                b = new Error(),
+              var t = b.p + b.u(s),
+                d = new Error(),
                 r = (o) => {
                   if (
-                    d.o(e, s) &&
+                    b.o(e, s) &&
                     ((f = e[s]), f !== 0 && (e[s] = void 0), f)
                   ) {
                     var l = o && (o.type === "load" ? "missing" : o.type),
                       h = o && o.target && o.target.src;
-                    (b.message =
+                    (d.message =
                       "Loading chunk " +
                       s +
                       ` failed.
@@ -1125,28 +1125,28 @@
                       ": " +
                       h +
                       ")"),
-                      (b.name = "ChunkLoadError"),
-                      (b.type = l),
-                      (b.request = h),
-                      f[1](b);
+                      (d.name = "ChunkLoadError"),
+                      (d.type = l),
+                      (d.request = h),
+                      f[1](d);
                   }
                 };
-              d.l(t, r, "chunk-" + s, s);
+              b.l(t, r, "chunk-" + s, s);
             }
         }),
-          (d.O.j = (s) => e[s] === 0);
+          (b.O.j = (s) => e[s] === 0);
         var i = (s, n) => {
             var [f, a, t] = n,
-              b,
+              d,
               r,
               o = 0;
             if (f.some((h) => e[h] !== 0)) {
-              for (b in a) d.o(a, b) && (d.m[b] = a[b]);
-              if (t) var l = t(d);
+              for (d in a) b.o(a, d) && (b.m[d] = a[d]);
+              if (t) var l = t(b);
             }
             for (s && s(n); o < f.length; o++)
-              (r = f[o]), d.o(e, r) && e[r] && e[r][0](), (e[r] = 0);
-            return d.O(l);
+              (r = f[o]), b.o(e, r) && e[r] && e[r][0](), (e[r] = 0);
+            return b.O(l);
           },
           c = (self.webpackChunkappmgmt_storeadmin =
             self.webpackChunkappmgmt_storeadmin || []);

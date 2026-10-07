@@ -25,57 +25,57 @@
           m = t(76559),
           s = t(75233),
           x = t(20194),
-          z = t(72604),
+          S = t(72604),
           U = t(72609);
-        async function w(S) {
-          const D = `${U.TS.COMMUNITY_BASE_URL}ogg/${S}/ajaxgetvanityandclanid/?origin=${location.origin}`;
+        async function w(z) {
+          const D = `${U.TS.COMMUNITY_BASE_URL}ogg/${z}/ajaxgetvanityandclanid/?origin=${location.origin}`;
           return T(D);
         }
-        async function O(S) {
-          const D = m.b.InitFromClanID(S),
+        async function O(z) {
+          const D = m.b.InitFromClanID(z),
             b = `${U.TS.COMMUNITY_BASE_URL}gid/${D.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${location.origin}`;
           return T(b);
         }
-        async function I(S) {
-          const D = `${U.TS.COMMUNITY_BASE_URL}groups/${S}/ajaxgetvanityandclanid/?origin=${location.origin}`;
+        async function I(z) {
+          const D = `${U.TS.COMMUNITY_BASE_URL}groups/${z}/ajaxgetvanityandclanid/?origin=${location.origin}`;
           return T(D);
         }
-        async function g(S) {
-          const D = `${U.TS.COMMUNITY_BASE_URL}games/${S}/ajaxgetvanityandclanid/?origin=${location.origin}`;
+        async function f(z) {
+          const D = `${U.TS.COMMUNITY_BASE_URL}games/${z}/ajaxgetvanityandclanid/?origin=${location.origin}`;
           return T(D);
         }
-        async function T(S) {
-          const D = await fetch(S, { method: "GET" });
+        async function T(z) {
+          const D = await fetch(z, { method: "GET" });
           if (D.status == 404) return null;
           if (!D.ok) throw new Error(`Server returned ${D.status}`);
           const b = await D.json();
-          return b.success != z.R ? null : b;
+          return b.success != S.R ? null : b;
         }
-        function d(S) {
-          return ["clantoclaninfo", S];
+        function d(z) {
+          return ["clantoclaninfo", z];
         }
-        function M(S) {
-          return ["apptoclanid", S];
+        function M(z) {
+          return ["apptoclanid", z];
         }
-        function B(S, D = "group") {
-          return ["vanitytoclanid", D, S?.toLocaleLowerCase()];
+        function B(z, D = "group") {
+          return ["vanitytoclanid", D, z?.toLocaleLowerCase()];
         }
-        function P(S) {
-          const D = S?.[0];
+        function P(z) {
+          const D = z?.[0];
           return (
             D == "clantoclaninfo" || D == "apptoclanid" || D == "vanitytoclanid"
           );
         }
         const F = new WeakSet();
-        function v(S) {
-          if (!F.has(S)) {
-            F.add(S);
+        function v(z) {
+          if (!F.has(z)) {
+            F.add(z);
             for (const D of [
               ["clantoclaninfo"],
               ["apptoclanid"],
               ["vanitytoclanid"],
             ])
-              S.setQueryDefaults(D, {
+              z.setQueryDefaults(D, {
                 staleTime: 1 / 0,
                 gcTime: 1 / 0,
                 retry: !1,
@@ -83,156 +83,156 @@
           }
         }
         const c = new WeakMap();
-        function l(S) {
-          if (!S) return null;
-          let D = c.get(S);
+        function l(z) {
+          if (!z) return null;
+          let D = c.get(z);
           return (
             D ||
               ((D = {
-                ...S,
-                clanSteamID: S.clanSteamIDString
-                  ? new m.b(S.clanSteamIDString)
-                  : m.b.InitFromClanID(S.clanAccountID),
+                ...z,
+                clanSteamID: z.clanSteamIDString
+                  ? new m.b(z.clanSteamIDString)
+                  : m.b.InitFromClanID(z.clanAccountID),
               }),
-              c.set(S, D)),
+              c.set(z, D)),
             D
           );
         }
-        function e(S) {
-          const { msg: D, success: b, ...W } = S;
+        function e(z) {
+          const { msg: D, success: b, ...W } = z;
           return {
             ...W,
-            rss_language: S.rss_language ? S.rss_language : n.Bhc,
+            rss_language: z.rss_language ? z.rss_language : n.Bhc,
           };
         }
-        function H(S, D) {
+        function H(z, D) {
           if (!D) return null;
-          v(S);
+          v(z);
           const b = e(D);
           return (
-            S.setQueryData(d(b.clanAccountID), b),
-            b.appid && S.setQueryData(M(b.appid), b.clanAccountID),
+            z.setQueryData(d(b.clanAccountID), b),
+            b.appid && z.setQueryData(M(b.appid), b.clanAccountID),
             b.vanity_url &&
-              S.setQueryData(B(b.vanity_url, "group"), b.clanAccountID),
+              z.setQueryData(B(b.vanity_url, "group"), b.clanAccountID),
             b
           );
         }
-        function o(S, D) {
-          for (const b of D) H(S, b);
+        function o(z, D) {
+          for (const b of D) H(z, b);
         }
-        function y(S) {
+        function y(z) {
           const D = (0, s.jE)();
-          return (0, x.I)(G(S, D));
+          return (0, x.I)(G(z, D));
         }
-        function G(S, D) {
+        function G(z, D) {
           return (
             v(D),
             {
-              queryKey: d(S ?? null),
-              queryFn: async () => (S ? H(D, await O(S)) : null),
-              enabled: S !== void 0,
+              queryKey: d(z ?? null),
+              queryFn: async () => (z ? H(D, await O(z)) : null),
+              enabled: z !== void 0,
               select: l,
             }
           );
         }
-        function C(S, D) {
+        function C(z, D) {
           return (
             v(D),
             {
-              queryKey: M(S),
-              queryFn: async () => H(D, await w(S))?.clanAccountID ?? null,
-              enabled: !!S,
+              queryKey: M(z),
+              queryFn: async () => H(D, await w(z))?.clanAccountID ?? null,
+              enabled: !!z,
             }
           );
         }
-        function j(S, D, b = "group") {
+        function j(z, D, b = "group") {
           return (
             v(D),
             {
-              queryKey: B(S, b),
+              queryKey: B(z, b),
               queryFn: async () => {
                 if (b == "store") {
-                  const N = D.getQueryData(B(S, "group"));
+                  const N = D.getQueryData(B(z, "group"));
                   if (N) return N;
                 }
-                const W = b == "store" ? await g(S) : await I(S);
+                const W = b == "store" ? await f(z) : await I(z);
                 return H(D, W)?.clanAccountID ?? null;
               },
-              enabled: !!S,
+              enabled: !!z,
             }
           );
         }
-        function L(S) {
-          return S.isPending ? void 0 : (S.data ?? null);
+        function L(z) {
+          return z.isPending ? void 0 : (z.data ?? null);
         }
-        function dr(S) {
-          return y(S.BIsClanAccount() ? S.GetAccountID() : void 0);
+        function dr(z) {
+          return y(z.BIsClanAccount() ? z.GetAccountID() : void 0);
         }
-        function xr(S) {
+        function xr(z) {
           const D = (0, s.jE)(),
-            b = (0, x.I)(C(S, D));
-          return y(S ? L(b) : void 0);
+            b = (0, x.I)(C(z, D));
+          return y(z ? L(b) : void 0);
         }
-        function kr(S, D = "group") {
+        function kr(z, D = "group") {
           const b = (0, s.jE)(),
-            W = (0, x.I)(j(S, b, D));
-          return y(S ? L(W) : void 0);
+            W = (0, x.I)(j(z, b, D));
+          return y(z ? L(W) : void 0);
         }
-        function Lr(S, D) {
-          if (S) return l(D.getQueryData(d(S))) ?? void 0;
+        function Lr(z, D) {
+          if (z) return l(D.getQueryData(d(z))) ?? void 0;
         }
-        function Vr(S, D) {
-          if (S) return Lr(D.getQueryData(M(S)), D);
+        function Vr(z, D) {
+          if (z) return Lr(D.getQueryData(M(z)), D);
         }
-        function Mr(S, D, b) {
-          if (!S) return;
+        function Mr(z, D, b) {
+          if (!z) return;
           const W = b ? [b] : ["store", "group"];
           for (const N of W) {
-            const A = Lr(D.getQueryData(B(S, N)), D);
+            const A = Lr(D.getQueryData(B(z, N)), D);
             if (A) return A;
           }
         }
-        async function E(S, D) {
-          return S ? l(await D.fetchQuery(G(S, D))) : null;
+        async function E(z, D) {
+          return z ? l(await D.fetchQuery(G(z, D))) : null;
         }
-        async function $(S, D) {
-          return S ? E(await D.fetchQuery(C(S, D)), D) : null;
+        async function $(z, D) {
+          return z ? E(await D.fetchQuery(C(z, D)), D) : null;
         }
-        async function K(S, D, b = "group") {
-          return S ? E(await D.fetchQuery(j(S, D, b)), D) : null;
+        async function K(z, D, b = "group") {
+          return z ? E(await D.fetchQuery(j(z, D, b)), D) : null;
         }
       },
       29696: (V, Y, t) => {
         "use strict";
-        t.d(Y, { LO: () => O, A5: () => z });
+        t.d(Y, { LO: () => O, A5: () => S });
         var n = t(20194),
           m = t(72604),
           s = t(72609);
         async function x(I) {
-          let g = { get_appids: !0, l: s.TS.LANGUAGE };
-          const T = new URLSearchParams(g).toString(),
+          let f = { get_appids: !0, l: s.TS.LANGUAGE };
+          const T = new URLSearchParams(f).toString(),
             d = `${s.TS.STORE_BASE_URL}curator/${I}/ajaxgetcreatorhomeinfo/?${T}`,
             M = await fetch(d, { method: "GET" });
           if (!M.ok) throw new Error(`Server returned ${M.status}`);
           const B = await M.json();
           return B.success != m.R ? null : B;
         }
-        function z(I) {
+        function S(I) {
           return (0, n.I)(U(I));
         }
         function U(I) {
           return {
             queryKey: w(I),
             queryFn: async () => {
-              const g = await x(I);
-              if (g) {
+              const f = await x(I);
+              if (f) {
                 const {
                   success: T,
                   err_msg: d,
                   warning: M,
                   warning_msg: B,
                   ...P
-                } = g;
+                } = f;
                 return P;
               }
               return null;
@@ -243,9 +243,9 @@
         function w(I) {
           return ["creatorhomebyaccount", I];
         }
-        function O(I, g) {
+        function O(I, f) {
           if (I.vanity) {
-            switch (g) {
+            switch (f) {
               case "publisher":
                 return `${s.TS.STORE_BASE_URL}publisher/${I.vanity}/`;
               case "franchise":
@@ -293,7 +293,7 @@
             options: { secure: !0, httpOnly: !0, path: "/", sameSite: "none" },
             preferenceControls: { isTechnicallyNecessary: !0 },
           },
-          z = {
+          S = {
             name: "steamDidLoginRefresh",
             options: {
               secure: !0,
@@ -322,7 +322,7 @@
             name: "presentation_mode",
             preferenceControls: { isTechnicallyNecessary: !0 },
           },
-          g = {
+          f = {
             name: "Steam_Language",
             options: { secure: !0, path: "/", sameSite: "none" },
             preferenceControls: { isTechnicallyNecessary: !0 },
@@ -396,7 +396,7 @@
         "use strict";
         t.d(Y, {
           sq: () => C,
-          TW: () => g,
+          TW: () => f,
           KC: () => c,
           $z: () => M,
           R2: () => L,
@@ -439,7 +439,7 @@
           if (m[E]) return m[E]();
         }
         var x = t(37901);
-        const z = (0, x.l)(s);
+        const S = (0, x.l)(s);
         var U = t(44983),
           w = ((E) => (
             (E[(E.None = 0)] = "None"),
@@ -452,26 +452,26 @@
           return I(K, $);
         }
         function I(E, $, K) {
-          let S;
+          let z;
           typeof $ == "boolean"
-            ? (S = {
+            ? (z = {
                 eSuffix: $ ? 0 : 1,
                 bForceSingleUnits: K,
                 bHighGranularity: !1,
               })
-            : (S = {
+            : (z = {
                 eSuffix: 1,
                 bForceSingleUnits: !1,
                 bHighGranularity: !1,
                 ...$,
               });
           let D = "TimeInterval_";
-          S.eSuffix == 1
+          z.eSuffix == 1
             ? (D = "TimeSince_")
-            : S.eSuffix == 2 && (D = "TimeRemaining_");
+            : z.eSuffix == 2 && (D = "TimeRemaining_");
           let b = (W) => Math.floor(W);
           if (
-            (S.bAllowDecimal && (b = (W) => Math.round(W * 10) / 10),
+            (z.bAllowDecimal && (b = (W) => Math.round(W * 10) / 10),
             E >= Seconds.PerYear * 2)
           )
             return PkgLocalization.Localize(
@@ -481,7 +481,7 @@
           if (E >= Seconds.PerYear)
             return (
               (E -= Seconds.PerYear),
-              E >= Seconds.PerMonth * 2 && !S.bForceSingleUnits
+              E >= Seconds.PerMonth * 2 && !z.bForceSingleUnits
                 ? PkgLocalization.Localize(
                     `#${D}1YearXMonths`,
                     b(E / Seconds.PerMonth),
@@ -511,7 +511,7 @@
           if (E >= Seconds.PerDay)
             return (
               (E -= Seconds.PerDay),
-              E >= Seconds.PerHour * 2 && !S.bForceSingleUnits
+              E >= Seconds.PerHour * 2 && !z.bForceSingleUnits
                 ? PkgLocalization.Localize(
                     `#${D}1DayXHours`,
                     b(E / Seconds.PerHour),
@@ -526,7 +526,7 @@
           if (E >= Seconds.PerHour)
             return (
               (E -= Seconds.PerHour),
-              E >= Seconds.PerMinute * 2 && !S.bForceSingleUnits
+              E >= Seconds.PerMinute * 2 && !z.bForceSingleUnits
                 ? PkgLocalization.Localize(
                     `#${D}1HourXMinutes`,
                     b(E / Seconds.PerMinute),
@@ -536,7 +536,7 @@
           if (E >= Seconds.PerMinute * 2) {
             const W = Math.floor(E / Seconds.PerMinute),
               N = E % Seconds.PerMinute;
-            return !S.bHighGranularity || N == 0
+            return !z.bHighGranularity || N == 0
               ? PkgLocalization.Localize(
                   `#${D}XMinutes`,
                   b(E / Seconds.PerMinute),
@@ -546,70 +546,70 @@
                 : PkgLocalization.Localize(`#${D}XMinutesXSeconds`, W, N);
           } else if (E >= Seconds.PerMinute) {
             const W = E % Seconds.PerMinute;
-            return !S.bHighGranularity || W == 0
+            return !z.bHighGranularity || W == 0
               ? PkgLocalization.Localize(`#${D}1Minute`)
               : W == 1
                 ? PkgLocalization.Localize(`#${D}1Minute1Second`)
                 : PkgLocalization.Localize(`#${D}1MinuteXSeconds`, W);
           } else
-            return S.bHighGranularity
+            return z.bHighGranularity
               ? E == 1
                 ? PkgLocalization.Localize(`#${D}1Second`)
                 : PkgLocalization.Localize(`#${D}XSeconds`, E)
               : PkgLocalization.Localize(`#${D}LessThanAMinute`);
         }
-        function g(E, $, K) {
-          let S;
+        function f(E, $, K) {
+          let z;
           $ === void 0 || $ === !0 || $ === !1
-            ? (S = {
+            ? (z = {
                 weekday: K ? "long" : "short",
                 year: $ ? void 0 : "numeric",
               })
-            : (S = $);
+            : (z = $);
           let D = new Date(E * 1e3);
           const b = {
             weekday: "short",
             month: "long",
             day: "numeric",
             year: "numeric",
-            ...S,
+            ...z,
           };
           return D.toLocaleDateString((0, n.J)(), b);
         }
         function T(E, $) {
           let K = new Date(E * 1e3),
-            S = new Date($ * 1e3);
-          return K.getFullYear() != S.getFullYear() ||
-            K.getMonth() != S.getMonth() ||
-            K.getDate() != S.getDate()
+            z = new Date($ * 1e3);
+          return K.getFullYear() != z.getFullYear() ||
+            K.getMonth() != z.getMonth() ||
+            K.getDate() != z.getDate()
             ? d(E, $)
             : c(E) + " - " + c($);
         }
         function d(E, $) {
           let K = new Date(E * 1e3),
-            S = new Date($ * 1e3);
+            z = new Date($ * 1e3);
           const D = new Date();
           if (
-            K.getFullYear() != S.getFullYear() ||
+            K.getFullYear() != z.getFullYear() ||
             D.getFullYear() == K.getFullYear()
           )
             return `${M(E)} - ${M($)}`;
           const b = { month: "short", day: "numeric" },
             W = K.toLocaleDateString(GetPreferredLocales(), b) + " - ";
-          if (K.getMonth() == S.getMonth()) {
+          if (K.getMonth() == z.getMonth()) {
             const N = { day: "numeric" };
-            return W + S.toLocaleDateString(GetPreferredLocales(), N);
-          } else return W + S.toLocaleDateString(GetPreferredLocales(), b);
+            return W + z.toLocaleDateString(GetPreferredLocales(), N);
+          } else return W + z.toLocaleDateString(GetPreferredLocales(), b);
         }
         function M(E, $) {
           let K = new Date(E * 1e3);
-          const S = { year: "numeric", month: "short", day: "numeric", ...$ };
-          return K.toLocaleDateString((0, n.J)(), S);
+          const z = { year: "numeric", month: "short", day: "numeric", ...$ };
+          return K.toLocaleDateString((0, n.J)(), z);
         }
         function B(E, $) {
           const {
               fullmonthname: K = !1,
-              bUseRelativeNames: S = !0,
+              bUseRelativeNames: z = !0,
               bIncludeDayName: D = !1,
             } = $ ?? {},
             b = new Date(),
@@ -617,7 +617,7 @@
           if (W.getFullYear() != b.getFullYear())
             return M(E, { month: K ? "long" : "short" });
           const N = new Date();
-          if ((N.setHours(0, 0, 0, 0), S)) {
+          if ((N.setHours(0, 0, 0, 0), z)) {
             if (W >= N) {
               if ((N.setDate(N.getDate() + 1), W < N))
                 return PkgLocalization.Localize("#Time_Today");
@@ -644,28 +644,28 @@
           const $ = new Date();
           $.setHours(15);
           const K = $.toLocaleTimeString(E, { hour: "numeric" }),
-            S = $.toLocaleTimeString(E, { hour: "numeric", hour12: !1 });
-          return K == S;
+            z = $.toLocaleTimeString(E, { hour: "numeric", hour12: !1 });
+          return K == z;
         }
         function c(E, $, K) {
-          const S = new Date(E * 1e3),
+          const z = new Date(E * 1e3),
             D = { hour: "numeric", minute: "2-digit", hourCycle: "h23" },
             b = { hour: "numeric", minute: "2-digit" },
             W = (0, n.J)(),
             A = { ...($?.bForce24HourClock || v(W[0]) ? D : b), ...K };
-          return S.toLocaleTimeString(W, A);
+          return z.toLocaleTimeString(W, A);
         }
         function l(E, $, K) {
-          const S = new Date(E * 1e3);
-          return e(S, !1, !1) + " " + c(E, { bForce24HourClock: $ }) + " " + K;
+          const z = new Date(E * 1e3);
+          return e(z, !1, !1) + " " + c(E, { bForce24HourClock: $ }) + " " + K;
         }
         function e(E, $ = !1, K = !0) {
-          const S = {
+          const z = {
             weekday: K ? "long" : "short",
             day: "numeric",
             month: $ ? "long" : "short",
           };
-          return E.toLocaleDateString(GetPreferredLocales(), S);
+          return E.toLocaleDateString(GetPreferredLocales(), z);
         }
         function H(E) {
           return E.toLocaleDateString(GetPreferredLocales(), {
@@ -732,30 +732,30 @@
         function L(E) {
           const $ = Math.floor(E / U.Kp.PerYear),
             K = Math.floor(E / U.Kp.PerMonth),
-            S = Math.floor((E % U.Kp.PerMonth) / U.Kp.PerDay),
+            z = Math.floor((E % U.Kp.PerMonth) / U.Kp.PerDay),
             D = Math.floor((E % U.Kp.PerDay) / U.Kp.PerHour),
             b = Math.floor((E % U.Kp.PerHour) / U.Kp.PerMinute);
           return (
             (E = E % U.Kp.PerMinute),
             $ > 0
-              ? z.Localize("#TimeRemaining_MoreThanOneYear")
+              ? S.Localize("#TimeRemaining_MoreThanOneYear")
               : K > 0
-                ? z.Localize("#TimeRemaining_MonthsDays", K, S)
-                : S > 0
-                  ? z.Localize(
+                ? S.Localize("#TimeRemaining_MonthsDays", K, z)
+                : z > 0
+                  ? S.Localize(
                       "#TimeRemaining_DaysHoursMinutes",
-                      S,
+                      z,
                       D.toString().padStart(2, "0"),
                       b.toString().padStart(2, "0"),
                     )
                   : D > 0
-                    ? z.Localize(
+                    ? S.Localize(
                         "#TimeRemaining_HoursMinutesSeconds",
                         D.toString().padStart(2, "0"),
                         b.toString().padStart(2, "0"),
                         E.toString().padStart(2, "0"),
                       )
-                    : z.Localize(
+                    : S.Localize(
                         "#TimeRemaining_MinutesSeconds",
                         b.toString().padStart(2, "0"),
                         E.toString().padStart(2, "0"),
@@ -778,18 +778,18 @@
           );
         }
         function kr(E, $, K) {
-          let S = E < 0;
-          E = S ? 0 - E : E;
+          let z = E < 0;
+          E = z ? 0 - E : E;
           const D = xr(E),
             b = D.fraction.toFixed(2).split(".")[1],
             W = $ ?? !0;
           let N = !W || b == "00";
-          S &&
+          z &&
             D.hours == 0 &&
             D.minutes == 0 &&
             D.seconds == 0 &&
             N &&
-            (S = !1);
+            (z = !1);
           let A = "";
           if (D.hours) {
             const tr = D.hours.toString(),
@@ -814,7 +814,7 @@
             A = PkgLocalization.Localize(ir, tr, b);
           }
           return (
-            S &&
+            z &&
               (K
                 ? (A = PkgLocalization.Localize("#Duration_WrittenNegation", A))
                 : (A = "-" + A)),
@@ -822,19 +822,19 @@
           );
         }
         function Lr(E, $, K) {
-          let S = E < 0;
-          E = S ? 0 - E : E;
+          let z = E < 0;
+          E = z ? 0 - E : E;
           const D = xr(E),
             b = dr(D.seconds.toString(), 2, "0"),
             W = D.fraction.toFixed(2).split(".")[1],
             N = $ ?? !0;
           let A = !N || W == "00";
-          S &&
+          z &&
             D.hours == 0 &&
             D.minutes == 0 &&
             D.seconds == 0 &&
             A &&
-            (S = !1);
+            (z = !1);
           let tr = "";
           if (D.hours) {
             const ir = dr(D.minutes.toString(), 2, "0"),
@@ -850,7 +850,7 @@
             tr = PkgLocalization.Localize(cr, ir, b, W);
           }
           return (
-            S &&
+            z &&
               (K
                 ? (tr = PkgLocalization.Localize(
                     "#Duration_WrittenNegation",
@@ -863,7 +863,7 @@
         function Vr(E) {
           const $ = xr(E),
             K = $.hours * 60 + $.minutes,
-            S = $.hours,
+            z = $.hours,
             D = Math.floor($.hours / 24),
             b = Math.floor(D / 30);
           return b > 1
@@ -872,8 +872,8 @@
               ? PkgLocalization.Localize("#ReadableDuration_OneMonth")
               : D > 1
                 ? PkgLocalization.Localize("#ReadableDuration_Days", D)
-                : S > 2
-                  ? PkgLocalization.Localize("#ReadableDuration_Hours", S)
+                : z > 2
+                  ? PkgLocalization.Localize("#ReadableDuration_Hours", z)
                   : K > 2
                     ? PkgLocalization.Localize("#ReadableDuration_Minutes", K)
                     : K > 1
@@ -921,7 +921,7 @@
         function x(d, M) {
           return d.getFullYear() == M.getFullYear();
         }
-        function z(d) {
+        function S(d) {
           return new Date(
             d.getFullYear(),
             d.getMonth(),
@@ -952,7 +952,7 @@
         function I() {
           return Math.floor(Date.now() / 1e3);
         }
-        function g(d) {
+        function f(d) {
           return Math.floor(d.getTime() / 1e3);
         }
         function T(d) {
@@ -977,12 +977,12 @@
           m = t(55483),
           s = t(24660),
           x = t(64868),
-          z = t(72609),
+          S = t(72609),
           U = t(89926),
           w = t(72865),
           O = t(25294),
           I = t(20194),
-          g = t(75233),
+          f = t(75233),
           T = t(68312),
           d = t(98609),
           M = t(20125);
@@ -1011,13 +1011,13 @@
           return R === void 0 || X == null ? void 0 : R.has(X);
         }
         function c() {
-          const X = (0, g.jE)(),
+          const X = (0, f.jE)(),
             R = d.iA.accountid;
-          return (er, gr) => {
+          return (er, fr) => {
             X.setQueryData(l(R), (rr) => {
               if (!rr) return;
               const Br = new Set(rr);
-              if (gr) for (const mr of gr) Br.delete(mr);
+              if (fr) for (const mr of fr) Br.delete(mr);
               if (er) for (const mr of er) Br.add(mr);
               return Br;
             });
@@ -1029,7 +1029,7 @@
         var e = t(51614),
           H = t(67705);
         function o(X, R, er) {
-          const gr = c(),
+          const fr = c(),
             rr = d.iA.accountid;
           return (0, e.n)({
             mutationKey: ["useUpdateAppFollow", X, rr, R],
@@ -1052,10 +1052,10 @@
                 );
             },
             onMutate: () => {
-              X != null && gr(R ? [X] : void 0, R ? void 0 : [X]);
+              X != null && fr(R ? [X] : void 0, R ? void 0 : [X]);
             },
             onError: () => {
-              X != null && gr(R ? void 0 : [X], R ? [X] : void 0);
+              X != null && fr(R ? void 0 : [X], R ? [X] : void 0);
             },
             onSuccess: () => {
               (0, M.WZ)();
@@ -1091,7 +1091,7 @@
         }
         function j() {
           const X = (0, T.KV)(),
-            R = z.iA.accountid;
+            R = S.iA.accountid;
           return (0, I.I)(L(X, R));
         }
         function L(X, R) {
@@ -1102,8 +1102,8 @@
               if (R)
                 try {
                   (await C(X, R)).forEach((rr) => er.set(rr.clanid, rr));
-                } catch (gr) {
-                  console.error("GetCuratorAffinityQuery", gr);
+                } catch (fr) {
+                  console.error("GetCuratorAffinityQuery", fr);
                 }
               return er;
             },
@@ -1131,15 +1131,15 @@
           return !!(er.ignored && er.is_creator);
         }
         function Vr() {
-          return z.TS.EREALM != G.TU.k_ESteamRealmChina;
+          return S.TS.EREALM != G.TU.k_ESteamRealmChina;
         }
         function Mr() {
           return Config.EREALM != ESteamRealm.k_ESteamRealmChina;
         }
         function E() {
-          const X = (0, g.jE)(),
-            R = z.iA.accountid;
-          return (er, gr, rr, Br) => {
+          const X = (0, f.jE)(),
+            R = S.iA.accountid;
+          return (er, fr, rr, Br) => {
             X.setQueryData($(R), (mr) => {
               if (!mr) return;
               const yr = new Map(mr);
@@ -1154,7 +1154,7 @@
                         is_creator: !1,
                       });
                 }),
-                gr?.forEach((sr) => {
+                fr?.forEach((sr) => {
                   yr.has(sr.clanAccountID)
                     ? (yr.get(sr.clanAccountID).ignored = !0)
                     : yr.set(sr.clanAccountID, {
@@ -1184,11 +1184,11 @@
           (X[(X.k_ECuratorUnignore = 4)] = "k_ECuratorUnignore"),
           X
         ))(K || {});
-        function S(X, R) {
+        function z(X, R) {
           const er = E(),
-            gr = d.iA.accountid;
+            fr = d.iA.accountid;
           return (0, e.n)({
-            mutationKey: ["useUpdateCuratorAffinity", X, gr, R],
+            mutationKey: ["useUpdateCuratorAffinity", X, fr, R],
             mutationFn: async () => {
               if (X == null) return !1;
               const rr = R == K.k_ECuratorFollow || R == K.k_ECuratorUnfollow,
@@ -1258,7 +1258,7 @@
           const {
               className: R,
               bIgnored: er,
-              bApplyingFollowing: gr,
+              bApplyingFollowing: fr,
               bFollowing: rr,
               onFollowClick: Br,
               followType: mr,
@@ -1293,18 +1293,18 @@
                         rr ? "Followed" : "",
                       ),
                       onClick: () => {
-                        z.iA.logged_in ? Br() : sr();
+                        S.iA.logged_in ? Br() : sr();
                       },
                       children: [
-                        gr && (0, n.jsx)(b.k, { size: 15 }),
-                        !gr && (rr || er) && (0, n.jsx)(W.Jlk, {}),
+                        fr && (0, n.jsx)(b.k, { size: 15 }),
+                        !fr && (rr || er) && (0, n.jsx)(W.Jlk, {}),
                         (0, n.jsx)("div", {
                           className: (0, N.A)(
                             wr().FollowBtnText,
                             "FollowBtnText",
                           ),
                           children:
-                            !gr &&
+                            !fr &&
                             (rr
                               ? (0, A.we)("#Button_Followed")
                               : er
@@ -1323,15 +1323,15 @@
           const {
               followType: R,
               fnSuccessCallback: er,
-              clanAccountID: gr,
+              clanAccountID: fr,
               className: rr,
             } = X,
             [Br, mr] = D.useState(!1),
-            { data: yr } = (0, m.TB)(R ? void 0 : gr),
-            sr = dr(gr),
-            nr = xr(gr),
-            { mutateAsync: Ur } = S(
-              gr,
+            { data: yr } = (0, m.TB)(R ? void 0 : fr),
+            sr = dr(fr),
+            nr = xr(fr),
+            { mutateAsync: Ur } = z(
+              fr,
               sr ? K.k_ECuratorUnfollow : K.k_ECuratorFollow,
             ),
             [$r, Gr, Jr] = (0, x.uD)(),
@@ -1346,7 +1346,7 @@
                 bFollowing: !!sr,
                 bApplyingFollowing: Br,
                 onFollowClick: () => {
-                  z.iA.is_limited ? Gr() : qr();
+                  S.iA.is_limited ? Gr() : qr();
                 },
                 followType:
                   R ?? (yr?.is_creator_home ? "creatorhome" : "steamcurator"),
@@ -1360,7 +1360,7 @@
         }
         function Yr(X) {
           const { appid: R, className: er } = X,
-            [gr, rr] = D.useState(!1),
+            [fr, rr] = D.useState(!1),
             Br = v(R),
             mr = (0, y.BD)(R),
             yr = (0, w.n9)(),
@@ -1373,7 +1373,7 @@
             className: er,
             bIgnored: !!mr,
             bFollowing: !!Br,
-            bApplyingFollowing: gr,
+            bApplyingFollowing: fr,
             onFollowClick: Ur,
             followType: "app",
           });
@@ -1381,12 +1381,12 @@
       },
       85385: (V, Y, t) => {
         "use strict";
-        t.d(Y, { g: () => z });
+        t.d(Y, { g: () => S });
         var n = t(7850),
           m = t(2801),
           s = t(18210),
           x = t(72609);
-        const z = (U) => {
+        const S = (U) => {
           let w = x.TS.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
           return (0, n.jsx)(m.o0, {
             strTitle: (0, s.we)("#Informational_Message"),
@@ -1423,7 +1423,7 @@
           G1H: () => rr,
           Gkz: () => m,
           Gxx: () => ei,
-          HuG: () => ft,
+          HuG: () => gt,
           IEJ: () => s,
           IbE: () => sr,
           Izv: () => Nt,
@@ -1468,7 +1468,7 @@
           cNr: () => ee,
           cTj: () => yt,
           ceg: () => K,
-          dBS: () => fe,
+          dBS: () => ge,
           dWZ: () => U,
           dm2: () => ea,
           dpF: () => D,
@@ -1493,7 +1493,7 @@
           nNq: () => qi,
           nPW: () => Qi,
           ng1: () => h,
-          nuP: () => z,
+          nuP: () => S,
           qhO: () => kt,
           rAU: () => Gi,
           rNe: () => pi,
@@ -1513,12 +1513,12 @@
           m = 19,
           s = 21,
           x = 597,
-          z = 9,
+          S = 9,
           U = 599,
           w = 122,
           O = 493,
           I = 113,
-          g = 4182,
+          f = 4182,
           T = 4667,
           d = 701,
           M = 128,
@@ -1545,7 +1545,7 @@
           E = 7208,
           $ = 3839,
           K = 1625,
-          S = 87,
+          z = 87,
           D = 1685,
           b = 5350,
           W = 4004,
@@ -1564,7 +1564,7 @@
           X = 1693,
           R = 1654,
           er = 1698,
-          gr = 7481,
+          fr = 7481,
           rr = 1721,
           Br = 1723,
           mr = 1697,
@@ -1613,12 +1613,12 @@
           me = 1687,
           pt = 1646,
           oe = 4094,
-          fe = 4604,
+          ge = 4604,
           Yt = 4434,
           Jt = 1743,
           Xt = 9551,
           kt = 3835,
-          Se = 5125,
+          ze = 5125,
           Lt = 3916,
           Oe = 3814,
           ye = 1645,
@@ -1635,7 +1635,7 @@
           Ne = 4195,
           je = 7332,
           le = 4325,
-          ge = 1710,
+          fe = 1710,
           Le = 8945,
           Ze = 4057,
           ce = 4637,
@@ -1651,8 +1651,8 @@
           Fr = 5752,
           lt = 5711,
           jr = 1644,
-          zr = 4695,
-          fr = 4158,
+          Sr = 4695,
+          gr = 4158,
           Ar = 13782,
           xt = 1628,
           It = 14139,
@@ -1673,7 +1673,7 @@
           Qt = 31275,
           We = 4191,
           Ii = 4036,
-          Sr = 6378,
+          zr = 6378,
           _ = 5363,
           u = 15045,
           Mt = 4562,
@@ -1683,13 +1683,13 @@
           ut = 44868,
           vt = 5547,
           dt = 8122,
-          zt = 5186,
-          St = 4161,
+          St = 5186,
+          zt = 4161,
           mt = 4400,
-          ft = 6730,
+          gt = 6730,
           Ot = 4975,
           Tt = 4364,
-          gt = 7743,
+          ft = 7743,
           qt = 5030,
           Bt = 6129,
           _t = 9541,
@@ -1714,12 +1714,12 @@
           Be = 3813,
           xe = 5794,
           Fi = 4684,
-          fi = 25085,
+          gi = 25085,
           ki = 1670,
           Ni = 5348,
           Li = 5708,
           Ki = 1714,
-          gi = 4821,
+          fi = 4821,
           Bi = 176981,
           Ht = 3854,
           yi = 13276,
@@ -1728,8 +1728,8 @@
           wi = 1681,
           bi = 1688,
           vi = 1732,
-          zi = 4508,
-          Si = 12057,
+          Si = 4508,
+          zi = 12057,
           ri = 5160,
           Oi = 29482,
           Ti = 8666,
@@ -1741,11 +1741,11 @@
           Di = 1671,
           Wi = 1751,
           hi = 5502,
-          ze = 3955,
+          Se = 3955,
           xi = 9271,
           Z = 10808,
           i = 5608,
-          f = 1717,
+          g = 1717,
           p = 6052,
           ar = 5300,
           lr = 1647,
@@ -1765,16 +1765,16 @@
           ua = 150626,
           da = 9564,
           ma = 11333,
-          fa = 3952,
-          ga = 30358,
+          ga = 3952,
+          fa = 30358,
           Ba = 16094,
           ya = 8093,
           Ma = 5796,
           wa = 10679,
           ba = 5390,
           va = 1254552,
-          za = 15277,
-          Sa = 17894,
+          Sa = 15277,
+          za = 17894,
           Oa = 1680,
           Ta = 1637,
           Ea = 507423,
@@ -1821,8 +1821,8 @@
           us = 9204,
           ds = 6948,
           ms = 17015,
-          fs = 21006,
-          gs = 1730,
+          gs = 21006,
+          fs = 1730,
           $i = 7038,
           Bs = 5407,
           pi = 1746,
@@ -1831,8 +1831,8 @@
           ws = 603297,
           bs = 13070,
           vs = 123332,
-          zs = 198913,
-          Ss = 22955,
+          Ss = 198913,
+          zs = 22955,
           Os = 19780,
           Ts = 47827,
           Yi = 5727,
@@ -1891,8 +1891,8 @@
           un = 1023537,
           dn = 33572,
           mn = 158638,
-          fn = 6054,
-          gn = 4535,
+          gn = 6054,
+          fn = 4535,
           sa = 91114,
           na = 7178,
           Bn = 11634,
@@ -1904,8 +1904,8 @@
           wn = 25959,
           bn = 760247,
           vn = 37376,
-          zn = 1776,
-          Sn = 10617,
+          Sn = 1776,
+          zn = 10617,
           On = 46348,
           Tn = 20486,
           En = 1352486,
@@ -1951,7 +1951,7 @@
         t.r(n),
           t.d(n, {
             PK: () => O,
-            UI: () => g,
+            UI: () => f,
             __: () => w,
             _H: () => T,
             rE: () => I,
@@ -1960,12 +1960,12 @@
         t.r(m), t.d(m, { CL: () => d, mO: () => B });
         var s = t(80613),
           x = t.n(s),
-          z = t(75245),
+          S = t(75245),
           U = t(35038);
         const w = 0,
           O = 1,
           I = 2,
-          g = 3,
+          f = 3,
           T = 4,
           d = 0,
           M = 1,
@@ -1980,7 +1980,7 @@
           static ImplementsStaticInterface() {}
           constructor(j = null) {
             super(),
-              v.prototype.version || z.Sg(v.M()),
+              v.prototype.version || S.Sg(v.M()),
               s.Message.initialize(this, j, 0, -1, void 0, null);
           }
           static sm_m;
@@ -1991,11 +1991,11 @@
                 (v.sm_m = {
                   proto: v,
                   fields: {
-                    version: { n: 1, br: z.qM.readEnum, bw: z.gp.writeEnum },
+                    version: { n: 1, br: S.qM.readEnum, bw: S.gp.writeEnum },
                     preference_state: {
                       n: 2,
-                      br: z.qM.readEnum,
-                      bw: z.gp.writeEnum,
+                      br: S.qM.readEnum,
+                      bw: S.gp.writeEnum,
                     },
                     content_customization: { n: 3, c },
                     valve_analytics: { n: 4, c: l },
@@ -2004,8 +2004,8 @@
                     utm_enabled: {
                       n: 7,
                       d: !0,
-                      br: z.qM.readBool,
-                      bw: z.gp.writeBool,
+                      br: S.qM.readBool,
+                      bw: S.gp.writeBool,
                     },
                   },
                 }),
@@ -2013,16 +2013,16 @@
             );
           }
           static MBF() {
-            return v.sm_mbf || (v.sm_mbf = z.w0(v.M())), v.sm_mbf;
+            return v.sm_mbf || (v.sm_mbf = S.w0(v.M())), v.sm_mbf;
           }
           toObject(j = !1) {
             return v.toObject(j, this);
           }
           static toObject(j, L) {
-            return z.BT(v.M(), j, L);
+            return S.BT(v.M(), j, L);
           }
           static fromObject(j) {
-            return z.Uq(v.M(), j);
+            return S.Uq(v.M(), j);
           }
           static deserializeBinary(j) {
             let L = new (x().BinaryReader)(j),
@@ -2030,14 +2030,14 @@
             return v.deserializeBinaryFromReader(dr, L);
           }
           static deserializeBinaryFromReader(j, L) {
-            return z.zj(v.MBF(), j, L);
+            return S.zj(v.MBF(), j, L);
           }
           serializeBinary() {
             var j = new (x().BinaryWriter)();
             return v.serializeBinaryToWriter(this, j), j.getResultBuffer();
           }
           static serializeBinaryToWriter(j, L) {
-            z.i0(v.M(), j, L);
+            S.i0(v.M(), j, L);
           }
           serializeBase64String() {
             var j = new (x().BinaryWriter)();
@@ -2053,7 +2053,7 @@
           static ImplementsStaticInterface() {}
           constructor(j = null) {
             super(),
-              c.prototype.recentapps || z.Sg(c.M()),
+              c.prototype.recentapps || S.Sg(c.M()),
               s.Message.initialize(this, j, 0, -1, void 0, null);
           }
           static sm_m;
@@ -2064,23 +2064,23 @@
                 (c.sm_m = {
                   proto: c,
                   fields: {
-                    recentapps: { n: 1, br: z.qM.readBool, bw: z.gp.writeBool },
+                    recentapps: { n: 1, br: S.qM.readBool, bw: S.gp.writeBool },
                   },
                 }),
               c.sm_m
             );
           }
           static MBF() {
-            return c.sm_mbf || (c.sm_mbf = z.w0(c.M())), c.sm_mbf;
+            return c.sm_mbf || (c.sm_mbf = S.w0(c.M())), c.sm_mbf;
           }
           toObject(j = !1) {
             return c.toObject(j, this);
           }
           static toObject(j, L) {
-            return z.BT(c.M(), j, L);
+            return S.BT(c.M(), j, L);
           }
           static fromObject(j) {
-            return z.Uq(c.M(), j);
+            return S.Uq(c.M(), j);
           }
           static deserializeBinary(j) {
             let L = new (x().BinaryReader)(j),
@@ -2088,14 +2088,14 @@
             return c.deserializeBinaryFromReader(dr, L);
           }
           static deserializeBinaryFromReader(j, L) {
-            return z.zj(c.MBF(), j, L);
+            return S.zj(c.MBF(), j, L);
           }
           serializeBinary() {
             var j = new (x().BinaryWriter)();
             return c.serializeBinaryToWriter(this, j), j.getResultBuffer();
           }
           static serializeBinaryToWriter(j, L) {
-            z.i0(c.M(), j, L);
+            S.i0(c.M(), j, L);
           }
           serializeBase64String() {
             var j = new (x().BinaryWriter)();
@@ -2111,7 +2111,7 @@
           static ImplementsStaticInterface() {}
           constructor(j = null) {
             super(),
-              l.prototype.product_impressions_tracking || z.Sg(l.M()),
+              l.prototype.product_impressions_tracking || S.Sg(l.M()),
               s.Message.initialize(this, j, 0, -1, void 0, null);
           }
           static sm_m;
@@ -2124,8 +2124,8 @@
                   fields: {
                     product_impressions_tracking: {
                       n: 1,
-                      br: z.qM.readBool,
-                      bw: z.gp.writeBool,
+                      br: S.qM.readBool,
+                      bw: S.gp.writeBool,
                     },
                   },
                 }),
@@ -2133,16 +2133,16 @@
             );
           }
           static MBF() {
-            return l.sm_mbf || (l.sm_mbf = z.w0(l.M())), l.sm_mbf;
+            return l.sm_mbf || (l.sm_mbf = S.w0(l.M())), l.sm_mbf;
           }
           toObject(j = !1) {
             return l.toObject(j, this);
           }
           static toObject(j, L) {
-            return z.BT(l.M(), j, L);
+            return S.BT(l.M(), j, L);
           }
           static fromObject(j) {
-            return z.Uq(l.M(), j);
+            return S.Uq(l.M(), j);
           }
           static deserializeBinary(j) {
             let L = new (x().BinaryReader)(j),
@@ -2150,14 +2150,14 @@
             return l.deserializeBinaryFromReader(dr, L);
           }
           static deserializeBinaryFromReader(j, L) {
-            return z.zj(l.MBF(), j, L);
+            return S.zj(l.MBF(), j, L);
           }
           serializeBinary() {
             var j = new (x().BinaryWriter)();
             return l.serializeBinaryToWriter(this, j), j.getResultBuffer();
           }
           static serializeBinaryToWriter(j, L) {
-            z.i0(l.M(), j, L);
+            S.i0(l.M(), j, L);
           }
           serializeBase64String() {
             var j = new (x().BinaryWriter)();
@@ -2173,7 +2173,7 @@
           static ImplementsStaticInterface() {}
           constructor(j = null) {
             super(),
-              e.prototype.google_analytics || z.Sg(e.M()),
+              e.prototype.google_analytics || S.Sg(e.M()),
               s.Message.initialize(this, j, 0, -1, void 0, null);
           }
           static sm_m;
@@ -2186,8 +2186,8 @@
                   fields: {
                     google_analytics: {
                       n: 1,
-                      br: z.qM.readBool,
-                      bw: z.gp.writeBool,
+                      br: S.qM.readBool,
+                      bw: S.gp.writeBool,
                     },
                   },
                 }),
@@ -2195,16 +2195,16 @@
             );
           }
           static MBF() {
-            return e.sm_mbf || (e.sm_mbf = z.w0(e.M())), e.sm_mbf;
+            return e.sm_mbf || (e.sm_mbf = S.w0(e.M())), e.sm_mbf;
           }
           toObject(j = !1) {
             return e.toObject(j, this);
           }
           static toObject(j, L) {
-            return z.BT(e.M(), j, L);
+            return S.BT(e.M(), j, L);
           }
           static fromObject(j) {
-            return z.Uq(e.M(), j);
+            return S.Uq(e.M(), j);
           }
           static deserializeBinary(j) {
             let L = new (x().BinaryReader)(j),
@@ -2212,14 +2212,14 @@
             return e.deserializeBinaryFromReader(dr, L);
           }
           static deserializeBinaryFromReader(j, L) {
-            return z.zj(e.MBF(), j, L);
+            return S.zj(e.MBF(), j, L);
           }
           serializeBinary() {
             var j = new (x().BinaryWriter)();
             return e.serializeBinaryToWriter(this, j), j.getResultBuffer();
           }
           static serializeBinaryToWriter(j, L) {
-            z.i0(e.M(), j, L);
+            S.i0(e.M(), j, L);
           }
           serializeBase64String() {
             var j = new (x().BinaryWriter)();
@@ -2235,7 +2235,7 @@
           static ImplementsStaticInterface() {}
           constructor(j = null) {
             super(),
-              H.prototype.youtube || z.Sg(H.M()),
+              H.prototype.youtube || S.Sg(H.M()),
               s.Message.initialize(this, j, 0, -1, void 0, null);
           }
           static sm_m;
@@ -2246,26 +2246,26 @@
                 (H.sm_m = {
                   proto: H,
                   fields: {
-                    youtube: { n: 1, br: z.qM.readBool, bw: z.gp.writeBool },
-                    vimeo: { n: 2, br: z.qM.readBool, bw: z.gp.writeBool },
-                    sketchfab: { n: 3, br: z.qM.readBool, bw: z.gp.writeBool },
-                    twitter: { n: 4, br: z.qM.readBool, bw: z.gp.writeBool },
+                    youtube: { n: 1, br: S.qM.readBool, bw: S.gp.writeBool },
+                    vimeo: { n: 2, br: S.qM.readBool, bw: S.gp.writeBool },
+                    sketchfab: { n: 3, br: S.qM.readBool, bw: S.gp.writeBool },
+                    twitter: { n: 4, br: S.qM.readBool, bw: S.gp.writeBool },
                   },
                 }),
               H.sm_m
             );
           }
           static MBF() {
-            return H.sm_mbf || (H.sm_mbf = z.w0(H.M())), H.sm_mbf;
+            return H.sm_mbf || (H.sm_mbf = S.w0(H.M())), H.sm_mbf;
           }
           toObject(j = !1) {
             return H.toObject(j, this);
           }
           static toObject(j, L) {
-            return z.BT(H.M(), j, L);
+            return S.BT(H.M(), j, L);
           }
           static fromObject(j) {
-            return z.Uq(H.M(), j);
+            return S.Uq(H.M(), j);
           }
           static deserializeBinary(j) {
             let L = new (x().BinaryReader)(j),
@@ -2273,14 +2273,14 @@
             return H.deserializeBinaryFromReader(dr, L);
           }
           static deserializeBinaryFromReader(j, L) {
-            return z.zj(H.MBF(), j, L);
+            return S.zj(H.MBF(), j, L);
           }
           serializeBinary() {
             var j = new (x().BinaryWriter)();
             return H.serializeBinaryToWriter(this, j), j.getResultBuffer();
           }
           static serializeBinaryToWriter(j, L) {
-            z.i0(H.M(), j, L);
+            S.i0(H.M(), j, L);
           }
           serializeBase64String() {
             var j = new (x().BinaryWriter)();
@@ -2333,7 +2333,7 @@
           static ImplementsStaticInterface() {}
           constructor(j = null) {
             super(),
-              y.prototype.preferences || z.Sg(y.M()),
+              y.prototype.preferences || S.Sg(y.M()),
               s.Message.initialize(this, j, 0, -1, void 0, null);
           }
           static sm_m;
@@ -2349,16 +2349,16 @@
             );
           }
           static MBF() {
-            return y.sm_mbf || (y.sm_mbf = z.w0(y.M())), y.sm_mbf;
+            return y.sm_mbf || (y.sm_mbf = S.w0(y.M())), y.sm_mbf;
           }
           toObject(j = !1) {
             return y.toObject(j, this);
           }
           static toObject(j, L) {
-            return z.BT(y.M(), j, L);
+            return S.BT(y.M(), j, L);
           }
           static fromObject(j) {
-            return z.Uq(y.M(), j);
+            return S.Uq(y.M(), j);
           }
           static deserializeBinary(j) {
             let L = new (x().BinaryReader)(j),
@@ -2366,14 +2366,14 @@
             return y.deserializeBinaryFromReader(dr, L);
           }
           static deserializeBinaryFromReader(j, L) {
-            return z.zj(y.MBF(), j, L);
+            return S.zj(y.MBF(), j, L);
           }
           serializeBinary() {
             var j = new (x().BinaryWriter)();
             return y.serializeBinaryToWriter(this, j), j.getResultBuffer();
           }
           static serializeBinaryToWriter(j, L) {
-            z.i0(y.M(), j, L);
+            S.i0(y.M(), j, L);
           }
           serializeBase64String() {
             var j = new (x().BinaryWriter)();
@@ -2392,7 +2392,11 @@
               "AccountPrivacy.GetCookiePreferences#1",
               (0, U.I8)(o, dr, xr),
               y,
-              { bConstMethod: !0, ePrivilege: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           C.GetCookiePreferences = j;
@@ -2405,7 +2409,7 @@
           m = t.n(n),
           s = t(75245),
           x = t(35038),
-          z = t(3367),
+          S = t(3367),
           U = t(18025);
         class w extends n.Message {
           static ImplementsStaticInterface() {}
@@ -2422,8 +2426,8 @@
                 (w.sm_m = {
                   proto: w,
                   fields: {
-                    context: { n: 2, c: z.TS },
-                    data_request: { n: 3, c: z.gn },
+                    context: { n: 2, c: S.TS },
+                    data_request: { n: 3, c: S.gn },
                     gift_info: { n: 4, c: U.$z },
                     gidshoppingcart: {
                       n: 1,
@@ -2561,10 +2565,10 @@
                       br: s.qM.readUint64String,
                       bw: s.gp.writeUint64String,
                     },
-                    item_id: { n: 2, c: z.O4 },
-                    store_item: { n: 3, c: z.vB },
+                    item_id: { n: 2, c: S.O4 },
+                    store_item: { n: 3, c: S.vB },
                     gift_info: { n: 4, c: U.$z },
-                    errors: { n: 5, c: g },
+                    errors: { n: 5, c: f },
                     warnings: { n: 6, c: T },
                     subtotal: { n: 7, c: U.Hi },
                     price_when_added: { n: 8, c: U.Hi },
@@ -2636,20 +2640,20 @@
             return "CCheckout_ValidateCart_Response_CartItem";
           }
         }
-        class g extends n.Message {
+        class f extends n.Message {
           static ImplementsStaticInterface() {}
           constructor(o = null) {
             super(),
-              g.prototype.owned_appids || s.Sg(g.M()),
+              f.prototype.owned_appids || s.Sg(f.M()),
               n.Message.initialize(this, o, 0, -1, [1, 2, 11], null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              g.sm_m ||
-                (g.sm_m = {
-                  proto: g,
+              f.sm_m ||
+                (f.sm_m = {
+                  proto: f,
                   fields: {
                     owned_appids: {
                       n: 1,
@@ -2732,40 +2736,40 @@
                     },
                   },
                 }),
-              g.sm_m
+              f.sm_m
             );
           }
           static MBF() {
-            return g.sm_mbf || (g.sm_mbf = s.w0(g.M())), g.sm_mbf;
+            return f.sm_mbf || (f.sm_mbf = s.w0(f.M())), f.sm_mbf;
           }
           toObject(o = !1) {
-            return g.toObject(o, this);
+            return f.toObject(o, this);
           }
           static toObject(o, y) {
-            return s.BT(g.M(), o, y);
+            return s.BT(f.M(), o, y);
           }
           static fromObject(o) {
-            return s.Uq(g.M(), o);
+            return s.Uq(f.M(), o);
           }
           static deserializeBinary(o) {
             let y = new (m().BinaryReader)(o),
-              G = new g();
-            return g.deserializeBinaryFromReader(G, y);
+              G = new f();
+            return f.deserializeBinaryFromReader(G, y);
           }
           static deserializeBinaryFromReader(o, y) {
-            return s.zj(g.MBF(), o, y);
+            return s.zj(f.MBF(), o, y);
           }
           serializeBinary() {
             var o = new (m().BinaryWriter)();
-            return g.serializeBinaryToWriter(this, o), o.getResultBuffer();
+            return f.serializeBinaryToWriter(this, o), o.getResultBuffer();
           }
           static serializeBinaryToWriter(o, y) {
-            s.i0(g.M(), o, y);
+            s.i0(f.M(), o, y);
           }
           serializeBase64String() {
             var o = new (m().BinaryWriter)();
             return (
-              g.serializeBinaryToWriter(this, o), o.getResultBase64String()
+              f.serializeBinaryToWriter(this, o), o.getResultBase64String()
             );
           }
           getClassName() {
@@ -3003,7 +3007,7 @@
               B.sm_m ||
                 (B.sm_m = {
                   proto: B,
-                  fields: { item_ids: { n: 1, c: z.O4, r: !0, q: !0 } },
+                  fields: { item_ids: { n: 1, c: S.O4, r: !0, q: !0 } },
                 }),
               B.sm_m
             );
@@ -3200,7 +3204,7 @@
                 (v.sm_m = {
                   proto: v,
                   fields: {
-                    item_id: { n: 1, c: z.O4 },
+                    item_id: { n: 1, c: S.O4 },
                     friend_ownership: { n: 2, c: F, r: !0, q: !0 },
                   },
                 }),
@@ -3256,7 +3260,7 @@
           static M() {
             return (
               c.sm_m ||
-                (c.sm_m = { proto: c, fields: { item_id: { n: 1, c: z.O4 } } }),
+                (c.sm_m = { proto: c, fields: { item_id: { n: 1, c: S.O4 } } }),
               c.sm_m
             );
           }
@@ -3407,27 +3411,27 @@
       },
       18025: (V, Y, t) => {
         "use strict";
-        t.d(Y, { $z: () => z, HX: () => O, Hi: () => w });
+        t.d(Y, { $z: () => S, HX: () => O, Hi: () => w });
         var n = t(80613),
           m = t.n(n),
           s = t(75245);
         function x(I) {
           return "unknown ELineItemPurchaseNotice ( " + I + " )";
         }
-        class z extends n.Message {
+        class S extends n.Message {
           static ImplementsStaticInterface() {}
-          constructor(g = null) {
+          constructor(f = null) {
             super(),
-              z.prototype.accountid_giftee || s.Sg(z.M()),
-              n.Message.initialize(this, g, 0, -1, void 0, null);
+              S.prototype.accountid_giftee || s.Sg(S.M()),
+              n.Message.initialize(this, f, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              z.sm_m ||
-                (z.sm_m = {
-                  proto: z,
+              S.sm_m ||
+                (S.sm_m = {
+                  proto: S,
                   fields: {
                     accountid_giftee: {
                       n: 1,
@@ -3447,40 +3451,40 @@
                     },
                   },
                 }),
-              z.sm_m
+              S.sm_m
             );
           }
           static MBF() {
-            return z.sm_mbf || (z.sm_mbf = s.w0(z.M())), z.sm_mbf;
+            return S.sm_mbf || (S.sm_mbf = s.w0(S.M())), S.sm_mbf;
           }
-          toObject(g = !1) {
-            return z.toObject(g, this);
+          toObject(f = !1) {
+            return S.toObject(f, this);
           }
-          static toObject(g, T) {
-            return s.BT(z.M(), g, T);
+          static toObject(f, T) {
+            return s.BT(S.M(), f, T);
           }
-          static fromObject(g) {
-            return s.Uq(z.M(), g);
+          static fromObject(f) {
+            return s.Uq(S.M(), f);
           }
-          static deserializeBinary(g) {
-            let T = new (m().BinaryReader)(g),
-              d = new z();
-            return z.deserializeBinaryFromReader(d, T);
+          static deserializeBinary(f) {
+            let T = new (m().BinaryReader)(f),
+              d = new S();
+            return S.deserializeBinaryFromReader(d, T);
           }
-          static deserializeBinaryFromReader(g, T) {
-            return s.zj(z.MBF(), g, T);
+          static deserializeBinaryFromReader(f, T) {
+            return s.zj(S.MBF(), f, T);
           }
           serializeBinary() {
-            var g = new (m().BinaryWriter)();
-            return z.serializeBinaryToWriter(this, g), g.getResultBuffer();
+            var f = new (m().BinaryWriter)();
+            return S.serializeBinaryToWriter(this, f), f.getResultBuffer();
           }
-          static serializeBinaryToWriter(g, T) {
-            s.i0(z.M(), g, T);
+          static serializeBinaryToWriter(f, T) {
+            s.i0(S.M(), f, T);
           }
           serializeBase64String() {
-            var g = new (m().BinaryWriter)();
+            var f = new (m().BinaryWriter)();
             return (
-              z.serializeBinaryToWriter(this, g), g.getResultBase64String()
+              S.serializeBinaryToWriter(this, f), f.getResultBase64String()
             );
           }
           getClassName() {
@@ -3489,10 +3493,10 @@
         }
         class U extends n.Message {
           static ImplementsStaticInterface() {}
-          constructor(g = null) {
+          constructor(f = null) {
             super(),
               U.prototype.gifteename || s.Sg(U.M()),
-              n.Message.initialize(this, g, 0, -1, void 0, null);
+              n.Message.initialize(this, f, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -3530,34 +3534,34 @@
           static MBF() {
             return U.sm_mbf || (U.sm_mbf = s.w0(U.M())), U.sm_mbf;
           }
-          toObject(g = !1) {
-            return U.toObject(g, this);
+          toObject(f = !1) {
+            return U.toObject(f, this);
           }
-          static toObject(g, T) {
-            return s.BT(U.M(), g, T);
+          static toObject(f, T) {
+            return s.BT(U.M(), f, T);
           }
-          static fromObject(g) {
-            return s.Uq(U.M(), g);
+          static fromObject(f) {
+            return s.Uq(U.M(), f);
           }
-          static deserializeBinary(g) {
-            let T = new (m().BinaryReader)(g),
+          static deserializeBinary(f) {
+            let T = new (m().BinaryReader)(f),
               d = new U();
             return U.deserializeBinaryFromReader(d, T);
           }
-          static deserializeBinaryFromReader(g, T) {
-            return s.zj(U.MBF(), g, T);
+          static deserializeBinaryFromReader(f, T) {
+            return s.zj(U.MBF(), f, T);
           }
           serializeBinary() {
-            var g = new (m().BinaryWriter)();
-            return U.serializeBinaryToWriter(this, g), g.getResultBuffer();
+            var f = new (m().BinaryWriter)();
+            return U.serializeBinaryToWriter(this, f), f.getResultBuffer();
           }
-          static serializeBinaryToWriter(g, T) {
-            s.i0(U.M(), g, T);
+          static serializeBinaryToWriter(f, T) {
+            s.i0(U.M(), f, T);
           }
           serializeBase64String() {
-            var g = new (m().BinaryWriter)();
+            var f = new (m().BinaryWriter)();
             return (
-              U.serializeBinaryToWriter(this, g), g.getResultBase64String()
+              U.serializeBinaryToWriter(this, f), f.getResultBase64String()
             );
           }
           getClassName() {
@@ -3566,10 +3570,10 @@
         }
         class w extends n.Message {
           static ImplementsStaticInterface() {}
-          constructor(g = null) {
+          constructor(f = null) {
             super(),
               w.prototype.amount_in_cents || s.Sg(w.M()),
-              n.Message.initialize(this, g, 0, -1, void 0, null);
+              n.Message.initialize(this, f, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -3602,34 +3606,34 @@
           static MBF() {
             return w.sm_mbf || (w.sm_mbf = s.w0(w.M())), w.sm_mbf;
           }
-          toObject(g = !1) {
-            return w.toObject(g, this);
+          toObject(f = !1) {
+            return w.toObject(f, this);
           }
-          static toObject(g, T) {
-            return s.BT(w.M(), g, T);
+          static toObject(f, T) {
+            return s.BT(w.M(), f, T);
           }
-          static fromObject(g) {
-            return s.Uq(w.M(), g);
+          static fromObject(f) {
+            return s.Uq(w.M(), f);
           }
-          static deserializeBinary(g) {
-            let T = new (m().BinaryReader)(g),
+          static deserializeBinary(f) {
+            let T = new (m().BinaryReader)(f),
               d = new w();
             return w.deserializeBinaryFromReader(d, T);
           }
-          static deserializeBinaryFromReader(g, T) {
-            return s.zj(w.MBF(), g, T);
+          static deserializeBinaryFromReader(f, T) {
+            return s.zj(w.MBF(), f, T);
           }
           serializeBinary() {
-            var g = new (m().BinaryWriter)();
-            return w.serializeBinaryToWriter(this, g), g.getResultBuffer();
+            var f = new (m().BinaryWriter)();
+            return w.serializeBinaryToWriter(this, f), f.getResultBuffer();
           }
-          static serializeBinaryToWriter(g, T) {
-            s.i0(w.M(), g, T);
+          static serializeBinaryToWriter(f, T) {
+            s.i0(w.M(), f, T);
           }
           serializeBase64String() {
-            var g = new (m().BinaryWriter)();
+            var f = new (m().BinaryWriter)();
             return (
-              w.serializeBinaryToWriter(this, g), g.getResultBase64String()
+              w.serializeBinaryToWriter(this, f), f.getResultBase64String()
             );
           }
           getClassName() {
@@ -3638,10 +3642,10 @@
         }
         class O extends n.Message {
           static ImplementsStaticInterface() {}
-          constructor(g = null) {
+          constructor(f = null) {
             super(),
               O.prototype.couponid || s.Sg(O.M()),
-              n.Message.initialize(this, g, 0, -1, void 0, null);
+              n.Message.initialize(this, f, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -3685,34 +3689,34 @@
           static MBF() {
             return O.sm_mbf || (O.sm_mbf = s.w0(O.M())), O.sm_mbf;
           }
-          toObject(g = !1) {
-            return O.toObject(g, this);
+          toObject(f = !1) {
+            return O.toObject(f, this);
           }
-          static toObject(g, T) {
-            return s.BT(O.M(), g, T);
+          static toObject(f, T) {
+            return s.BT(O.M(), f, T);
           }
-          static fromObject(g) {
-            return s.Uq(O.M(), g);
+          static fromObject(f) {
+            return s.Uq(O.M(), f);
           }
-          static deserializeBinary(g) {
-            let T = new (m().BinaryReader)(g),
+          static deserializeBinary(f) {
+            let T = new (m().BinaryReader)(f),
               d = new O();
             return O.deserializeBinaryFromReader(d, T);
           }
-          static deserializeBinaryFromReader(g, T) {
-            return s.zj(O.MBF(), g, T);
+          static deserializeBinaryFromReader(f, T) {
+            return s.zj(O.MBF(), f, T);
           }
           serializeBinary() {
-            var g = new (m().BinaryWriter)();
-            return O.serializeBinaryToWriter(this, g), g.getResultBuffer();
+            var f = new (m().BinaryWriter)();
+            return O.serializeBinaryToWriter(this, f), f.getResultBuffer();
           }
-          static serializeBinaryToWriter(g, T) {
-            s.i0(O.M(), g, T);
+          static serializeBinaryToWriter(f, T) {
+            s.i0(O.M(), f, T);
           }
           serializeBase64String() {
-            var g = new (m().BinaryWriter)();
+            var f = new (m().BinaryWriter)();
             return (
-              O.serializeBinaryToWriter(this, g), g.getResultBase64String()
+              O.serializeBinaryToWriter(this, f), f.getResultBase64String()
             );
           }
           getClassName() {
@@ -3728,12 +3732,12 @@
         var m = t(80613),
           s = t.n(m),
           x = t(75245),
-          z = t(35038);
+          S = t(35038);
         const U = 0,
           w = 1,
           O = 2,
           I = 3,
-          g = 4;
+          f = 4;
         function T(F) {
           return "unknown ERecommendationIgnoreReason ( " + F + " )";
         }
@@ -3899,7 +3903,7 @@
           function v(c, l, e) {
             return c.SendMsg(
               "StorePreferences.GetIgnoreList#1",
-              (0, z.I8)(d, l, e),
+              (0, S.I8)(d, l, e),
               M,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -3914,24 +3918,24 @@
           m = t(3367),
           s = t(72865),
           x = t(90626);
-        const z = x.createContext({
+        const S = x.createContext({
           AddImpression: () => {
             console.log("Impression Tracking not enabled");
           },
           BIsValid: () => !1,
         });
         function U() {
-          return x.useContext(z);
+          return x.useContext(S);
         }
         function w(F) {
-          return jsx(z.Provider, {
+          return jsx(S.Provider, {
             value: F.ImpressionTracker,
             children: F.children,
           });
         }
         var O = t(40365),
           I = t(18938);
-        function g(F) {
+        function f(F) {
           const { appID: v, feature: c, depth: l, children: e } = F,
             H = (0, s.ru)(c, l),
             o = U(),
@@ -3978,7 +3982,7 @@
               className: "ImpressionTrackedElement",
               children: F.children,
             });
-          return v ? (0, n.jsx)(g, { appID: v, children: c }) : c;
+          return v ? (0, n.jsx)(f, { appID: v, children: c }) : c;
         };
       },
       89926: (V, Y, t) => {
@@ -3988,7 +3992,7 @@
           m = t(64868),
           s = t(39905),
           x = t(1880),
-          z = t(69168),
+          S = t(69168),
           U = t(74107),
           w = t(47875);
         function O(T) {
@@ -4007,14 +4011,14 @@
         function I(T) {
           const [d, M, B] = (0, m.uD)();
           return {
-            elDialogElement: (0, n.jsx)(z.E, {
+            elDialogElement: (0, n.jsx)(S.E, {
               active: d,
               children: (0, n.jsx)(O, { closeModal: B, strDescOverride: T }),
             }),
             fnShowLogonDialog: M,
           };
         }
-        function g(T) {
+        function f(T) {
           const { label: d, strDialogDesc: M } = T,
             { elDialogElement: B, fnShowLogonDialog: P } = I(M);
           return jsxs(Fragment, {
@@ -4035,12 +4039,12 @@
           m = t(64868),
           s = t(3367),
           x = t(62178),
-          z = t(48357),
+          S = t(48357),
           U = t(80104),
           w = t(68260),
           O = t(77459),
           I = t(55483),
-          g = t(29696),
+          f = t(29696),
           T = t(35413),
           d = t(1e3),
           M = t(64769),
@@ -4054,7 +4058,7 @@
               followType: br,
             } = J,
             { data: Tr } = (0, I.TB)(Q),
-            { data: vr } = (0, g.A5)(Q);
+            { data: vr } = (0, f.A5)(Q);
           if (!Tr || !vr) return null;
           const Nr =
             Tr.avatar_medium_url ||
@@ -4065,7 +4069,7 @@
             style: or,
             children: [
               (0, n.jsx)("a", {
-                href: (0, g.LO)(vr, "developer"),
+                href: (0, f.LO)(vr, "developer"),
                 children: (0, n.jsx)("img", { src: Nr, alt: Tr.group_name }),
               }),
               (0, n.jsx)(d.of, { clanAccountID: Q, followType: br }),
@@ -4162,7 +4166,7 @@
           });
         }
         var K = t(72609),
-          S = t(21721),
+          z = t(21721),
           D = t(25046),
           b = t(87249),
           W = t(68094),
@@ -4188,7 +4192,7 @@
                   {
                     className: B().FullDivImage,
                     loading: "lazy",
-                    src: (0, S.b0)(Q, "main_capsule"),
+                    src: (0, z.b0)(Q, "main_capsule"),
                     alt: J.name,
                   },
                   "fallback",
@@ -4206,7 +4210,7 @@
         }
         function R(J, Q, q, or) {
           return q.slice(0, or).map((br, Tr) => {
-            const vr = (0, S.bu)(br, "1920x1080");
+            const vr = (0, z.bu)(br, "1920x1080");
             return {
               stringifyID: `screen${Tr}_${(0, W.ER)(J)}`,
               rctImage: (0, n.jsx)(
@@ -4235,7 +4239,7 @@
           }
           return J && Tr.length == 0, Tr;
         }
-        function gr(J, Q, q, or, br, Tr) {
+        function fr(J, Q, q, or, br, Tr) {
           const vr = [];
           Tr && vr.push(X(Q, Tr)),
             or && or.length > 0 && vr.push(...R(J, q.name, or, Kr));
@@ -4280,7 +4284,7 @@
             q = (0, wr.QO)(Q),
             or = (0, D.TH)(q),
             { data: br } = (0, N.lv)(q),
-            Tr = (0, S.DT)(q),
+            Tr = (0, z.DT)(q),
             vr = (0, c.useMemo)(() => er(q, Q, br, Tr, or), [q, Tr, or, br, Q]);
           return (0, n.jsx)(Ur, { rgTrailerAndImages: vr });
         }
@@ -4298,11 +4302,11 @@
         function sr(J) {
           const { parentAppID: Q, demoID: q, demoItemDefaultInfo: or } = J,
             br = (0, A.$5)(Q),
-            Tr = (0, S.DT)(q),
-            vr = (0, S.DT)(br),
+            Tr = (0, z.DT)(q),
+            vr = (0, z.DT)(br),
             Nr = (0, D.TH)(br),
             ht = (0, c.useMemo)(
-              () => gr(q, br, or, Tr, vr, Nr),
+              () => fr(q, br, or, Tr, vr, Nr),
               [q, br, or, Nr, Tr, vr],
             );
           return (0, n.jsx)(Ur, { rgTrailerAndImages: ht });
@@ -4431,7 +4435,7 @@
             me = (kt) => ne(`translateY( -${kt?.clientHeight || 0}px )`),
             { data: pt } = (0, N.J$)(Q),
             { data: oe } = (0, N.lv)(q),
-            fe = !Ut && !vr && !Tr,
+            ge = !Ut && !vr && !Tr,
             Yt = pt && pt.item_type == s.c6.qI,
             [Jt, Xt] = (0, Xr.zG)(Nt, Ft);
           return (0, n.jsxs)("div", {
@@ -4460,7 +4464,7 @@
                         ),
                         children: (0, n.jsx)("img", {
                           loading: "lazy",
-                          src: (0, S.b0)(oe, "header"),
+                          src: (0, z.b0)(oe, "header"),
                           alt: pt?.name,
                         }),
                       }),
@@ -4469,7 +4473,7 @@
                     !Ut &&
                     (0, n.jsx)("div", {
                       className: B().Price,
-                      children: (0, n.jsx)(z.NF, {
+                      children: (0, n.jsx)(S.NF, {
                         id: Q,
                         onlyOneDiscountPct: !0,
                       }),
@@ -4496,7 +4500,7 @@
                     ie && (0, n.jsx)(at, { id: Q }),
                     (0, n.jsx)(et, { id: Q }),
                     !Jt && (0, n.jsx)(U.J, { id: Q }),
-                    !!(!Jt && fe) &&
+                    !!(!Jt && ge) &&
                       (0, n.jsxs)("div", {
                         className: B().ReviewsAndRelease,
                         children: [
@@ -4611,11 +4615,11 @@
             { strStoreURL: pt, snr: oe } = (0, $r.x)(yt, vr);
           if ((!yt && !q) || Gt)
             return (0, n.jsx)(n.Fragment, { children: Ft });
-          let fe = Q;
+          let ge = Q;
           yt &&
             yt.item_type == s.c6.RD &&
             yt.included_appids?.length == 1 &&
-            (fe = { appid: yt.included_appids[0] });
+            (ge = { appid: yt.included_appids[0] });
           const Yt = (0, x.nq)() == "hiding",
             Jt = or || !yt ? void 0 : pt,
             [, Xt] = (0, Xr.zG)($t, Pt);
@@ -4624,9 +4628,9 @@
             yt?.appid &&
             yt?.item_type == s.c6.qI &&
             (kt = yt.appid);
-          const Se = {
+          const ze = {
               id: Q,
-              displayID: fe,
+              displayID: ge,
               name: q,
               bPreventNavigation: or,
               strStoreUrl: Jt,
@@ -4644,7 +4648,7 @@
               bShowDescription: de,
               onShowDeckCompatibilityDialog: kt ? ne : void 0,
             },
-            Lt = (0, n.jsx)(_r, { ...Se }),
+            Lt = (0, n.jsx)(_r, { ...ze }),
             Oe = Jt ? (0, n.jsx)("a", { href: Jt, children: Ft }) : Ft;
           return (0, n.jsxs)(n.Fragment, {
             children: [
@@ -4673,12 +4677,12 @@
           m = t(84346),
           s = t(32288),
           x = t(3367),
-          z = t(83784),
+          S = t(83784),
           U = t(40358),
           w = t(29522),
           O = t(12818),
           I = t(71421),
-          g = t(36707),
+          f = t(36707),
           T = t(64769),
           d = t.n(T),
           M = t(39905),
@@ -4691,7 +4695,7 @@
             G = (0, w.h0)(l),
             { data: C } = (0, U.J$)(G),
             { data: j } = (0, P.lI)();
-          if (!o || !y || (y.type == x.uE.ue && !(0, z.J)(C))) return null;
+          if (!o || !y || (y.type == x.uE.ue && !(0, S.J)(C))) return null;
           let L = o.summary_unfiltered || o.summary_filtered,
             dr = "#ReviewScore_UserReviewScoreAria",
             xr = !1;
@@ -4714,7 +4718,7 @@
               : (Lr = d().ReviewScoreHigh);
           const Vr = `${B.TS.STORE_BASE_URL}app/${y.appid}/#app_reviews_hash`,
             Mr = (0, n.jsxs)("div", {
-              className: (0, g.A)(d().ReviewScoreValue, Lr),
+              className: (0, f.A)(d().ReviewScoreValue, Lr),
               children: [
                 (0, n.jsx)("div", {
                   className: d().ReviewScoreLabel,
@@ -4774,7 +4778,7 @@
             }
           return (0, n.jsx)(O.q, {
             url: Vr,
-            className: (0, g.A)(d().ReviewScore, "ReviewScore"),
+            className: (0, f.A)(d().ReviewScore, "ReviewScore"),
             children:
               H && L.percent_positive != null && L.review_count != null && E
                 ? (0, n.jsx)(I.he, {
@@ -4800,12 +4804,12 @@
           m = t(19298),
           s = t(3367),
           x = t(89926),
-          z = t(40358),
+          S = t(40358),
           U = t(29522),
           w = t(24179),
           O = t(54528),
           I = t(96362),
-          g = t(90626),
+          f = t(90626),
           T = t(36118),
           d = t(47689),
           M = t(36707),
@@ -4821,9 +4825,9 @@
               styleOverride: y,
               bShowInGamepadUI: G,
             } = l,
-            { data: C } = (0, z.J$)(e),
+            { data: C } = (0, S.J$)(e),
             { elDialogElement: j, fnShowLogonDialog: L } = (0, x.l)(),
-            [dr, xr] = (0, g.useState)(() => {
+            [dr, xr] = (0, f.useState)(() => {
               if (
                 C &&
                 (C.type == s.uE.ue || C.type == s.uE.Vi) &&
@@ -4835,16 +4839,16 @@
             kr = (0, U.$5)(dr),
             Lr = (0, O.bB)(dr),
             { bIsOwned: Vr } = (0, w.ZJ)(kr),
-            [Mr, E] = (0, g.useState)(!1),
+            [Mr, E] = (0, f.useState)(!1),
             $ = (0, d.m)("GameHoverWishlistButton"),
             { mutateAsync: K } = (0, I.s)(dr, !Lr, H);
-          (0, g.useEffect)(() => {
+          (0, f.useEffect)(() => {
             e &&
               "appid" in e &&
               (C?.type == s.uE.ue || C?.type == s.uE.Vi) &&
               xr(C.related_items?.parent_appid || e.appid);
           }, [C, e]);
-          const S = (0, g.useCallback)(
+          const z = (0, f.useCallback)(
             async (D) => {
               B.iA.logged_in
                 ? (D.preventDefault(),
@@ -4864,7 +4868,7 @@
                   G && F().ShowInGamepadUI,
                   o,
                 ),
-                onActivate: S,
+                onActivate: z,
                 style: y,
                 children: [
                   Lr ? (0, n.jsx)(T.qnF, {}) : (0, n.jsx)(T.T4m, {}),
@@ -4890,12 +4894,12 @@
           m = t(67344),
           s = t(90626),
           x = t(41301),
-          z = t(561),
+          S = t(561),
           U = t(76867),
           w = t(25792),
           O = t(21659),
           I = t(36707),
-          g = t(54963),
+          f = t(54963),
           T = t(3166),
           d = t(64769),
           M = t.n(d),
@@ -4919,7 +4923,7 @@
             Mr = (0, O.zI)(),
             E = !Vr && !Mr,
             [$, K] = s.useState(!1),
-            [S, D] = s.useState(void 0),
+            [z, D] = s.useState(void 0),
             b = (ir) => {
               K(!0), D(ir.currentTarget);
             },
@@ -4941,12 +4945,12 @@
             onKeyDown: A,
             children: [
               E &&
-                S &&
+                z &&
                 (0, n.jsx)(v.Provider, {
                   value: N,
                   children: (0, n.jsx)(e, {
                     visible: $,
-                    target: S,
+                    target: z,
                     nDelayShowMs: dr,
                     nWidthMultiplier: xr,
                     hoverProps: L,
@@ -4986,11 +4990,11 @@
             s.useEffect(() => {
               if (!Vr) return;
               const K = 50,
-                S = xr.ownerDocument.defaultView;
-              if (S) {
-                const D = S.scrollY,
+                z = xr.ownerDocument.defaultView;
+              if (z) {
+                const D = z.scrollY,
                   b = () => {
-                    Math.abs(S.scrollY - D) > K && Mr(!1);
+                    Math.abs(z.scrollY - D) > K && Mr(!1);
                   };
                 return (
                   window.addEventListener("scroll", b),
@@ -5028,7 +5032,7 @@
         function H(C) {
           const { hoverProps: j, children: L } = C,
             dr = s.useCallback((kr) => kr?.focus(), []);
-          return (0, n.jsx)(z.g, {
+          return (0, n.jsx)(S.g, {
             ...j,
             children: (0, n.jsx)(U.M, {
               timeout: 500,
@@ -5040,7 +5044,7 @@
               },
               children: (kr) =>
                 (0, n.jsx)("div", {
-                  ref: (0, g.XB)(kr, dr),
+                  ref: (0, f.XB)(kr, dr),
                   className: P().HoverContentTransition,
                   tabIndex: -1,
                   children: L,
@@ -5066,12 +5070,12 @@
           return !!k;
         }
         var x = t(68312),
-          z = t(14616),
+          S = t(14616),
           U = t(40358),
           w = t(72865),
           O = t(75233),
           I = t(51614);
-        function g(k) {
+        function f(k) {
           return k.type === "account";
         }
         function T(k) {
@@ -5540,20 +5544,20 @@
             return "AccountCartContents";
           }
         }
-        class S extends c.Message {
+        class z extends c.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
-              S.prototype.user_country || e.Sg(S.M()),
+              z.prototype.user_country || e.Sg(z.M()),
               c.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              S.sm_m ||
-                (S.sm_m = {
-                  proto: S,
+              z.sm_m ||
+                (z.sm_m = {
+                  proto: z,
                   fields: {
                     user_country: {
                       n: 1,
@@ -5562,40 +5566,40 @@
                     },
                   },
                 }),
-              S.sm_m
+              z.sm_m
             );
           }
           static MBF() {
-            return S.sm_mbf || (S.sm_mbf = e.w0(S.M())), S.sm_mbf;
+            return z.sm_mbf || (z.sm_mbf = e.w0(z.M())), z.sm_mbf;
           }
           toObject(r = !1) {
-            return S.toObject(r, this);
+            return z.toObject(r, this);
           }
           static toObject(r, a) {
-            return e.BT(S.M(), r, a);
+            return e.BT(z.M(), r, a);
           }
           static fromObject(r) {
-            return e.Uq(S.M(), r);
+            return e.Uq(z.M(), r);
           }
           static deserializeBinary(r) {
             let a = new (l().BinaryReader)(r),
-              h = new S();
-            return S.deserializeBinaryFromReader(h, a);
+              h = new z();
+            return z.deserializeBinaryFromReader(h, a);
           }
           static deserializeBinaryFromReader(r, a) {
-            return e.zj(S.MBF(), r, a);
+            return e.zj(z.MBF(), r, a);
           }
           serializeBinary() {
             var r = new (l().BinaryWriter)();
-            return S.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return z.serializeBinaryToWriter(this, r), r.getResultBuffer();
           }
           static serializeBinaryToWriter(r, a) {
-            e.i0(S.M(), r, a);
+            e.i0(z.M(), r, a);
           }
           serializeBase64String() {
             var r = new (l().BinaryWriter)();
             return (
-              S.serializeBinaryToWriter(this, r), r.getResultBase64String()
+              z.serializeBinaryToWriter(this, r), r.getResultBase64String()
             );
           }
           getClassName() {
@@ -6496,64 +6500,64 @@
         }
         var X;
         ((k) => {
-          function r(jr, zr, fr) {
+          function r(jr, Sr, gr) {
             return jr.SendMsg(
               "AccountCart.GetCart#1",
-              (0, v.I8)(S, zr, fr),
+              (0, v.I8)(z, Sr, gr),
               D,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
           k.GetCart = r;
-          function a(jr, zr, fr) {
+          function a(jr, Sr, gr) {
             return jr.SendMsg(
               "AccountCart.AddItemsToCart#1",
-              (0, v.I8)(b, zr, fr),
+              (0, v.I8)(b, Sr, gr),
               N,
               { ePrivilege: 1 },
             );
           }
           k.AddItemsToCart = a;
-          function h(jr, zr, fr) {
+          function h(jr, Sr, gr) {
             return jr.SendMsg(
               "AccountCart.ModifyLineItem#1",
-              (0, v.I8)(A, zr, fr),
+              (0, v.I8)(A, Sr, gr),
               tr,
               { ePrivilege: 1 },
             );
           }
           k.ModifyLineItem = h;
-          function ur(jr, zr, fr) {
+          function ur(jr, Sr, gr) {
             return jr.SendMsg(
               "AccountCart.RemoveItemFromCart#1",
-              (0, v.I8)(ir, zr, fr),
+              (0, v.I8)(ir, Sr, gr),
               cr,
               { ePrivilege: 1 },
             );
           }
           k.RemoveItemFromCart = ur;
-          function pr(jr, zr, fr) {
+          function pr(jr, Sr, gr) {
             return jr.SendMsg(
               "AccountCart.MergeShoppingCartContents#1",
-              (0, v.I8)(wr, zr, fr),
+              (0, v.I8)(wr, Sr, gr),
               Or,
               { ePrivilege: 1 },
             );
           }
           k.MergeShoppingCartContents = pr;
-          function Fr(jr, zr, fr) {
+          function Fr(jr, Sr, gr) {
             return jr.SendMsg(
               "AccountCart.DeleteCart#1",
-              (0, v.I8)(Rr, zr, fr),
+              (0, v.I8)(Rr, Sr, gr),
               Wt,
               { ePrivilege: 1 },
             );
           }
           k.DeleteCart = Fr;
-          function lt(jr, zr, fr) {
+          function lt(jr, Sr, gr) {
             return jr.SendMsg(
               "AccountCart.GetRelevantCoupons#1",
-              (0, v.I8)(Zr, zr, fr),
+              (0, v.I8)(Zr, Sr, gr),
               Kr,
               { ePrivilege: 1 },
             );
@@ -6628,20 +6632,20 @@
             return "CShoppingCart_CreateNew_Request";
           }
         }
-        class gr extends c.Message {
+        class fr extends c.Message {
           static ImplementsStaticInterface() {}
           constructor(r = null) {
             super(),
-              gr.prototype.gidshoppingcart || e.Sg(gr.M()),
+              fr.prototype.gidshoppingcart || e.Sg(fr.M()),
               c.Message.initialize(this, r, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              gr.sm_m ||
-                (gr.sm_m = {
-                  proto: gr,
+              fr.sm_m ||
+                (fr.sm_m = {
+                  proto: fr,
                   fields: {
                     gidshoppingcart: {
                       n: 1,
@@ -6650,40 +6654,40 @@
                     },
                   },
                 }),
-              gr.sm_m
+              fr.sm_m
             );
           }
           static MBF() {
-            return gr.sm_mbf || (gr.sm_mbf = e.w0(gr.M())), gr.sm_mbf;
+            return fr.sm_mbf || (fr.sm_mbf = e.w0(fr.M())), fr.sm_mbf;
           }
           toObject(r = !1) {
-            return gr.toObject(r, this);
+            return fr.toObject(r, this);
           }
           static toObject(r, a) {
-            return e.BT(gr.M(), r, a);
+            return e.BT(fr.M(), r, a);
           }
           static fromObject(r) {
-            return e.Uq(gr.M(), r);
+            return e.Uq(fr.M(), r);
           }
           static deserializeBinary(r) {
             let a = new (l().BinaryReader)(r),
-              h = new gr();
-            return gr.deserializeBinaryFromReader(h, a);
+              h = new fr();
+            return fr.deserializeBinaryFromReader(h, a);
           }
           static deserializeBinaryFromReader(r, a) {
-            return e.zj(gr.MBF(), r, a);
+            return e.zj(fr.MBF(), r, a);
           }
           serializeBinary() {
             var r = new (l().BinaryWriter)();
-            return gr.serializeBinaryToWriter(this, r), r.getResultBuffer();
+            return fr.serializeBinaryToWriter(this, r), r.getResultBuffer();
           }
           static serializeBinaryToWriter(r, a) {
-            e.i0(gr.M(), r, a);
+            e.i0(fr.M(), r, a);
           }
           serializeBase64String() {
             var r = new (l().BinaryWriter)();
             return (
-              gr.serializeBinaryToWriter(this, r), r.getResultBase64String()
+              fr.serializeBinaryToWriter(this, r), r.getResultBase64String()
             );
           }
           getClassName() {
@@ -8342,66 +8346,75 @@
         }
         var q;
         ((k) => {
-          function r(jr, zr, fr) {
+          function r(jr, Sr, gr) {
             return jr.SendMsg(
               "ShoppingCart.CreateNewShoppingCart#1",
-              (0, v.I8)(er, zr, fr),
-              gr,
+              (0, v.I8)(er, Sr, gr),
+              fr,
               { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }
           k.CreateNewShoppingCart = r;
-          function a(jr, zr, fr) {
+          function a(jr, Sr, gr) {
             return jr.SendMsg(
               "ShoppingCart.GetShoppingCartContents#1",
-              (0, v.I8)(Cr, zr, fr),
+              (0, v.I8)(Cr, Sr, gr),
               rt,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           k.GetShoppingCartContents = a;
-          function h(jr, zr, fr) {
+          function h(jr, Sr, gr) {
             return jr.SendMsg(
               "ShoppingCart.AddPackages#1",
-              (0, v.I8)(tt, zr, fr),
+              (0, v.I8)(tt, Sr, gr),
               Xr,
               { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }
           k.AddPackages = h;
-          function ur(jr, zr, fr) {
+          function ur(jr, Sr, gr) {
             return jr.SendMsg(
               "ShoppingCart.UpdatePackageQuantity#1",
-              (0, v.I8)(et, zr, fr),
+              (0, v.I8)(et, Sr, gr),
               nt,
               { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }
           k.UpdatePackageQuantity = ur;
-          function pr(jr, zr, fr) {
+          function pr(jr, Sr, gr) {
             return jr.SendMsg(
               "ShoppingCart.AddBundle#1",
-              (0, v.I8)(it, zr, fr),
+              (0, v.I8)(it, Sr, gr),
               at,
               { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }
           k.AddBundle = pr;
-          function Fr(jr, zr, fr) {
+          function Fr(jr, Sr, gr) {
             return jr.SendMsg(
               "ShoppingCart.ModifyLineItem#1",
-              (0, v.I8)(_r, zr, fr),
+              (0, v.I8)(_r, Sr, gr),
               st,
               { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }
           k.ModifyLineItem = Fr;
-          function lt(jr, zr, fr) {
+          function lt(jr, Sr, gr) {
             return jr.SendMsg(
               "ShoppingCart.RemoveLineItems#1",
-              (0, v.I8)(J, zr, fr),
+              (0, v.I8)(J, Sr, gr),
               Q,
-              { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           k.RemoveLineItems = lt;
@@ -8449,50 +8462,50 @@
             bIsGift: jr = !1,
           } = pr ?? {};
           if (BIsAccountCart(a)) {
-            const zr = (h || []).map((fr) => ({
-              packageid: fr,
+            const Sr = (h || []).map((gr) => ({
+              packageid: gr,
               bIsGift: jr,
               nAccountIDGiftee: lt,
             }));
             return (
               ur &&
-                zr.push({ bundleid: ur, bIsGift: jr, nAccountIDGiftee: lt }),
-              Ut(k, UserConfig.country_code, zr, Fr).then(
-                ([fr, Ar]) => (
+                Sr.push({ bundleid: ur, bIsGift: jr, nAccountIDGiftee: lt }),
+              Ut(k, UserConfig.country_code, Sr, Fr).then(
+                ([gr, Ar]) => (
                   InvalidateDynamicStoreVersion(),
-                  fr == k_EResultOK
+                  gr == k_EResultOK
                     ? (ReplaceShoppingCart(r, a, Ar.cart),
                       {
                         success: !0,
                         items: Ar.line_item_ids,
                         replaced_packageids: Ar.replaced_packages,
                       })
-                    : fr === k_EResultAlreadyOwned
+                    : gr === k_EResultAlreadyOwned
                       ? {
                           success: !1,
-                          result: fr,
+                          result: gr,
                           existing_billing_agreementid:
                             Ar.existing_billing_agreementid,
                           new_billing_agreement_recurring_packageid:
                             Ar.new_billing_agreement_recurring_packageid,
                         }
-                      : { success: !1, result: fr }
+                      : { success: !1, result: gr }
                 ),
               )
             );
           } else
-            return Ft(k, h, ur, jr, lt).then(([zr, fr]) => {
-              if ((InvalidateDynamicStoreVersion(), zr)) {
-                ReplaceShoppingCart(r, a, Pt(fr));
+            return Ft(k, h, ur, jr, lt).then(([Sr, gr]) => {
+              if ((InvalidateDynamicStoreVersion(), Sr)) {
+                ReplaceShoppingCart(r, a, Pt(gr));
                 const Ar = (h || []).map((It) =>
-                  fr?.lineitems?.find(
+                  gr?.lineitems?.find(
                     (Kt) => Kt.package_item?.packageid === It,
                   ),
                 );
                 return (
                   ur &&
                     Ar.push(
-                      fr?.lineitems?.find(
+                      gr?.lineitems?.find(
                         (It) => It.bundle_item?.bundleid === ur,
                       ),
                     ),
@@ -8670,12 +8683,12 @@
           return jsx(se.Provider, { value: h, children: a });
         }
         function pt(k) {
-          return g(k) ? k.type : k.gid;
+          return f(k) ? k.type : k.gid;
         }
         function oe(k) {
           return ["shopping_cart", pt(k), or.iA.accountid];
         }
-        function fe(k, r) {
+        function ge(k, r) {
           return BIsAccountCart(k)
             ? ["validate_checkout", pt(k), UserConfig.accountid]
             : ["validate_checkout", pt(k), r?.accountid_giftee];
@@ -8690,46 +8703,46 @@
           k.setQueryData(oe(r), a), Yt(k, r);
         }
         function kt(k, r, a, h, ur) {
-          return Se(
+          return ze(
             [{ packageid: k, bundleid: r, bIsGift: a, nAccountIDGiftee: h }],
             ur,
           );
         }
-        function Se(k, r) {
+        function ze(k, r) {
           const a = ne(),
             h = (0, x.KV)(),
             ur = (0, O.jE)(),
-            { storeBrowseContext: pr, dataLoader: Fr } = (0, z.yn)(),
+            { storeBrowseContext: pr, dataLoader: Fr } = (0, S.yn)(),
             { country: lt } = pr,
             jr = (0, w.Gd)(r);
           return (0, I.n)({
             mutationFn: async () => {
               if (
                 k.length == 0 ||
-                !k.every((fr) => fr.packageid || fr.bundleid)
+                !k.every((gr) => gr.packageid || gr.bundleid)
               )
                 throw "Every item must have a valid package or bundle id";
-              let zr;
-              if (g(a)) {
-                const [fr, Ar] = await Ut(h, lt, k, jr);
-                if (fr == m.R) (zr = Ar.line_item_ids), Xt(ur, a, Ar.cart);
-                else throw `AddItemsToAccountCart failed with ${fr}`;
+              let Sr;
+              if (f(a)) {
+                const [gr, Ar] = await Ut(h, lt, k, jr);
+                if (gr == m.R) (Sr = Ar.line_item_ids), Xt(ur, a, Ar.cart);
+                else throw `AddItemsToAccountCart failed with ${gr}`;
               } else if (T(a)) {
-                const fr = k.map((Kt) => Kt.packageid).filter(s),
+                const gr = k.map((Kt) => Kt.packageid).filter(s),
                   Ar = k.map((Kt) => Kt.bundleid).filter(s);
                 if (Ar.length > 1)
                   throw "The anonymous cart can only take one bundle per call";
                 const [xt, It] = await Ft(
                   h,
-                  fr.length > 0 ? fr : void 0,
+                  gr.length > 0 ? gr : void 0,
                   Ar[0],
                   k.some((Kt) => Kt.bIsGift),
                   k.find((Kt) => Kt.nAccountIDGiftee)?.nAccountIDGiftee,
                 );
                 if (xt == m.R && It) {
-                  const Kt = new Set(fr),
+                  const Kt = new Set(gr),
                     He = new Set(Ar);
-                  (zr =
+                  (Sr =
                     It.lineitems
                       ?.filter(
                         (Vt) =>
@@ -8742,24 +8755,24 @@
                     Xt(ur, a, Pt(It));
                 } else throw `AddItemsToAnonymousCart failed with ${xt}`;
               } else throw "Invalid cart type";
-              return zr;
+              return Sr;
             },
             onMutate: () => {
               (async () => {
-                const zr = k.map((Ar) =>
+                const Sr = k.map((Ar) =>
                   Ar.packageid
                     ? { packageid: Ar.packageid }
                     : { bundleid: Ar.bundleid },
                 );
                 (
                   await Promise.all(
-                    zr.map((Ar) => ur.fetchQuery((0, U.us)(Fr, Ar))),
+                    Sr.map((Ar) => ur.fetchQuery((0, U.us)(Fr, Ar))),
                   )
                 ).forEach((Ar, xt) => {
                   const It =
                     Ar?.included_appids?.length == 1
                       ? { appid: Ar.included_appids[0] }
-                      : zr[xt];
+                      : Sr[xt];
                   ur.prefetchQuery((0, U.AQ)(Fr, It)),
                     ur.prefetchQuery((0, U.rK)(Fr, It));
                 });
@@ -8780,15 +8793,15 @@
             lt = r?.appid,
             jr = ye(r);
           if (!r) return ur;
-          const zr = jsx(FocusableAnchor, { ...Fr, href: jr, children: ur });
+          const Sr = jsx(FocusableAnchor, { ...Fr, href: jr, children: ur });
           return lt && !pr
             ? jsx(ImpressionTrackedElement, {
                 appID: lt,
                 feature: a,
                 depth: h,
-                children: zr,
+                children: Sr,
               })
-            : zr;
+            : Sr;
         }
         function ye(k, r, a) {
           return (0, w.aL)(
@@ -8983,7 +8996,7 @@
         }
         var je = t(53107),
           le = t(36707),
-          ge = t(3166),
+          fe = t(3166),
           Le = t(85599),
           Ze = t(95706),
           ce = t.n(Ze),
@@ -8996,8 +9009,8 @@
             { data: Fr } = (0, U.EO)(r),
             lt = ke(r),
             { bIsOwned: jr } = (0, Te.ZJ)(r),
-            zr = ye(ur),
-            fr = (0, yt.useCallback)(() => {
+            Sr = ye(ur),
+            gr = (0, yt.useCallback)(() => {
               if (ur) {
                 let xt = ur.appid;
                 ur.related_items?.parent_appid &&
@@ -9034,8 +9047,8 @@
             )
               return null;
             if (!jr && Fr.is_free_to_keep)
-              if (ge.TS.IN_CLIENT || (0, ge.yK)() != "store") {
-                const xt = `${ge.TS.IN_CLIENT ? "steam://openurl/" : ""}${zr}`;
+              if (fe.TS.IN_CLIENT || (0, fe.yK)() != "store") {
+                const xt = `${fe.TS.IN_CLIENT ? "steam://openurl/" : ""}${Sr}`;
                 return (0, n.jsx)("div", {
                   onClick: (It) => (0, je.Id)(It, xt),
                   className: (0, le.A)(ce().Action, a),
@@ -9047,7 +9060,7 @@
                 });
               } else {
                 const xt = (0, Ue.wJ)(
-                  `${ge.TS.STORE_BASE_URL}freelicense/addfreelicense`,
+                  `${fe.TS.STORE_BASE_URL}freelicense/addfreelicense`,
                   h,
                 );
                 return (0, n.jsxs)("form", {
@@ -9062,7 +9075,7 @@
                     (0, n.jsx)("input", {
                       type: "hidden",
                       name: "sessionid",
-                      value: (0, ge.KC)(),
+                      value: (0, fe.KC)(),
                     }),
                     (0, n.jsx)("button", {
                       className: (0, le.A)(ce().Action, a),
@@ -9087,14 +9100,14 @@
                     )),
                 (0, n.jsx)("div", {
                   className: (0, le.A)(ce().Action, a),
-                  onClick: fr,
+                  onClick: gr,
                   children: (0, n.jsx)("span", { children: xt }),
                 })
               );
             }
             if (Fr.formatted_final_price == "")
               return (0, n.jsx)("a", {
-                href: zr,
+                href: Sr,
                 className: (0, le.A)(ce().Action, a),
                 children: At.Z.Localize(
                   "#EventDisplay_CallToAction_VisitStore",
@@ -9137,12 +9150,12 @@
           m = t(72609),
           s = t(3367),
           x = t(40358),
-          z = t(13977),
+          S = t(13977),
           U = t(71421),
           w = t(36707),
           O = t(26591),
           I = t(72365),
-          g = t.n(I),
+          f = t.n(I),
           T = t(13620),
           d = t(99412),
           M = t(64868),
@@ -9169,7 +9182,7 @@
           E = null,
           $ = null,
           K = null,
-          S = -600,
+          z = -600,
           D = -599,
           b = -598,
           W = -597,
@@ -9188,7 +9201,7 @@
           X = -584,
           R = -583,
           er = -582,
-          gr = -581,
+          fr = -581,
           rr = -580,
           Br = -579,
           mr = -578,
@@ -9237,12 +9250,12 @@
           me = -99,
           pt = null,
           oe = null,
-          fe = null,
+          ge = null,
           Yt = -95,
           Jt = -94,
           Xt = -93,
           kt = -92,
-          Se = null,
+          ze = null,
           Lt = -90,
           Oe = -89,
           ye = -88,
@@ -9259,7 +9272,7 @@
           Ne = -74,
           je = -70,
           le = -69,
-          ge = -68,
+          fe = -68,
           Le = -67,
           Ze = null,
           ce = -1,
@@ -9275,8 +9288,8 @@
           Fr = 9,
           lt = 10,
           jr = 11,
-          zr = 12,
-          fr = 13,
+          Sr = 12,
+          gr = 13,
           Ar = 14,
           xt = 15,
           It = 16,
@@ -9312,11 +9325,11 @@
               return "Windows 7";
             case jr:
               return "Windows 2008";
-            case zr:
+            case Sr:
               return "Windows 2012";
             case xt:
               return "Windows 2012 R2";
-            case fr:
+            case gr:
               return "Windows 8";
             case Ar:
               return "Windows 8.1";
@@ -9378,7 +9391,7 @@
               return "MacOS 12";
             case le:
               return "MacOS 13";
-            case ge:
+            case fe:
               return "MacOS 14";
             case Le:
               return "MacOS 15";
@@ -9440,7 +9453,7 @@
               return "Android 8.x";
             case Xr:
               return "Android 9.x";
-            case S:
+            case z:
               return "iOS";
             case D:
               return "iOS 1";
@@ -9478,7 +9491,7 @@
               return "iOS 9.2";
             case er:
               return "iOS 9_.3";
-            case gr:
+            case fr:
               return "iOS 10";
             case rr:
               return "iOS 10.1";
@@ -9533,15 +9546,15 @@
           Qt = t(35038),
           We = t(68312),
           Ii = t(33512),
-          Sr = t(80613),
-          _ = t.n(Sr),
+          zr = t(80613),
+          _ = t.n(zr),
           u = t(75245);
-        class Mt extends Sr.Message {
+        class Mt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               Mt.prototype.client_instanceid || u.Sg(Mt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -9567,26 +9580,26 @@
           toObject(i = !1) {
             return Mt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(Mt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(Mt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(Mt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Mt();
-            return Mt.deserializeBinaryFromReader(p, f);
+            return Mt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(Mt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(Mt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Mt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(Mt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(Mt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -9598,12 +9611,12 @@
             return "CClientComm_GetClientLogonInfo_Request";
           }
         }
-        class wt extends Sr.Message {
+        class wt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               wt.prototype.protocol_version || u.Sg(wt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -9635,26 +9648,26 @@
           toObject(i = !1) {
             return wt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(wt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(wt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(wt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new wt();
-            return wt.deserializeBinaryFromReader(p, f);
+            return wt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(wt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(wt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return wt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(wt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(wt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -9666,33 +9679,33 @@
             return "CClientComm_GetClientLogonInfo_Response";
           }
         }
-        class Rt extends Sr.Message {
+        class Rt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
-            super(), Sr.Message.initialize(this, i, 0, -1, void 0, null);
+            super(), zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           toObject(i = !1) {
             return Rt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return i ? { $jspbMessageInstance: f } : {};
+          static toObject(i, g) {
+            return i ? { $jspbMessageInstance: g } : {};
           }
           static fromObject(i) {
             return new Rt();
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Rt();
-            return Rt.deserializeBinaryFromReader(p, f);
+            return Rt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
+          static deserializeBinaryFromReader(i, g) {
             return i;
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Rt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {}
+          static serializeBinaryToWriter(i, g) {}
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
@@ -9703,12 +9716,12 @@
             return "CClientComm_GetAllClientLogonInfo_Request";
           }
         }
-        class bt extends Sr.Message {
+        class bt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               bt.prototype.sessions || u.Sg(bt.M()),
-              Sr.Message.initialize(this, i, 0, -1, [1], null);
+              zr.Message.initialize(this, i, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -9735,26 +9748,26 @@
           toObject(i = !1) {
             return bt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(bt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(bt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(bt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new bt();
-            return bt.deserializeBinaryFromReader(p, f);
+            return bt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(bt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(bt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return bt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(bt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(bt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -9766,12 +9779,12 @@
             return "CClientComm_GetAllClientLogonInfo_Response";
           }
         }
-        class ut extends Sr.Message {
+        class ut extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               ut.prototype.client_instanceid || u.Sg(ut.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -9819,26 +9832,26 @@
           toObject(i = !1) {
             return ut.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(ut.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(ut.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(ut.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new ut();
-            return ut.deserializeBinaryFromReader(p, f);
+            return ut.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(ut.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(ut.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return ut.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(ut.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(ut.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -9850,12 +9863,12 @@
             return "CClientComm_GetAllClientLogonInfo_Response_Session";
           }
         }
-        class vt extends Sr.Message {
+        class vt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               vt.prototype.client_instanceid || u.Sg(vt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -9881,26 +9894,26 @@
           toObject(i = !1) {
             return vt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(vt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(vt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(vt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new vt();
-            return vt.deserializeBinaryFromReader(p, f);
+            return vt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(vt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(vt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return vt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(vt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(vt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -9912,12 +9925,12 @@
             return "CClientComm_GetClientInfo_Request";
           }
         }
-        class dt extends Sr.Message {
+        class dt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               dt.prototype.package_version || u.Sg(dt.M()),
-              Sr.Message.initialize(this, i, 0, -1, [7, 10], null);
+              zr.Message.initialize(this, i, 0, -1, [7, 10], null);
           }
           static sm_m;
           static sm_mbf;
@@ -9953,7 +9966,7 @@
                       br: u.qM.readUint64String,
                       bw: u.gp.writeUint64String,
                     },
-                    running_games: { n: 7, c: zt, r: !0, q: !0 },
+                    running_games: { n: 7, c: St, r: !0, q: !0 },
                     protocol_version: {
                       n: 8,
                       br: u.qM.readUint32,
@@ -9983,26 +9996,26 @@
           toObject(i = !1) {
             return dt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(dt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(dt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(dt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new dt();
-            return dt.deserializeBinaryFromReader(p, f);
+            return dt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(dt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(dt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return dt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(dt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(dt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10014,20 +10027,20 @@
             return "CClientComm_ClientData";
           }
         }
-        class zt extends Sr.Message {
+        class St extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
-              zt.prototype.appid || u.Sg(zt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              St.prototype.appid || u.Sg(St.M()),
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              zt.sm_m ||
-                (zt.sm_m = {
-                  proto: zt,
+              St.sm_m ||
+                (St.sm_m = {
+                  proto: St,
                   fields: {
                     appid: { n: 1, br: u.qM.readUint32, bw: u.gp.writeUint32 },
                     extra_info: {
@@ -10042,62 +10055,6 @@
                     },
                   },
                 }),
-              zt.sm_m
-            );
-          }
-          static MBF() {
-            return zt.sm_mbf || (zt.sm_mbf = u.w0(zt.M())), zt.sm_mbf;
-          }
-          toObject(i = !1) {
-            return zt.toObject(i, this);
-          }
-          static toObject(i, f) {
-            return u.BT(zt.M(), i, f);
-          }
-          static fromObject(i) {
-            return u.Uq(zt.M(), i);
-          }
-          static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
-              p = new zt();
-            return zt.deserializeBinaryFromReader(p, f);
-          }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(zt.MBF(), i, f);
-          }
-          serializeBinary() {
-            var i = new (_().BinaryWriter)();
-            return zt.serializeBinaryToWriter(this, i), i.getResultBuffer();
-          }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(zt.M(), i, f);
-          }
-          serializeBase64String() {
-            var i = new (_().BinaryWriter)();
-            return (
-              zt.serializeBinaryToWriter(this, i), i.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CClientComm_ClientData_RunningGames";
-          }
-        }
-        class St extends Sr.Message {
-          static ImplementsStaticInterface() {}
-          constructor(i = null) {
-            super(),
-              St.prototype.client_info || u.Sg(St.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              St.sm_m ||
-                (St.sm_m = {
-                  proto: St,
-                  fields: { client_info: { n: 1, c: dt } },
-                }),
               St.sm_m
             );
           }
@@ -10107,26 +10064,26 @@
           toObject(i = !1) {
             return St.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(St.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(St.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(St.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new St();
-            return St.deserializeBinaryFromReader(p, f);
+            return St.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(St.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(St.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return St.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(St.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(St.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10135,15 +10092,71 @@
             );
           }
           getClassName() {
+            return "CClientComm_ClientData_RunningGames";
+          }
+        }
+        class zt extends zr.Message {
+          static ImplementsStaticInterface() {}
+          constructor(i = null) {
+            super(),
+              zt.prototype.client_info || u.Sg(zt.M()),
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              zt.sm_m ||
+                (zt.sm_m = {
+                  proto: zt,
+                  fields: { client_info: { n: 1, c: dt } },
+                }),
+              zt.sm_m
+            );
+          }
+          static MBF() {
+            return zt.sm_mbf || (zt.sm_mbf = u.w0(zt.M())), zt.sm_mbf;
+          }
+          toObject(i = !1) {
+            return zt.toObject(i, this);
+          }
+          static toObject(i, g) {
+            return u.BT(zt.M(), i, g);
+          }
+          static fromObject(i) {
+            return u.Uq(zt.M(), i);
+          }
+          static deserializeBinary(i) {
+            let g = new (_().BinaryReader)(i),
+              p = new zt();
+            return zt.deserializeBinaryFromReader(p, g);
+          }
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(zt.MBF(), i, g);
+          }
+          serializeBinary() {
+            var i = new (_().BinaryWriter)();
+            return zt.serializeBinaryToWriter(this, i), i.getResultBuffer();
+          }
+          static serializeBinaryToWriter(i, g) {
+            u.i0(zt.M(), i, g);
+          }
+          serializeBase64String() {
+            var i = new (_().BinaryWriter)();
+            return (
+              zt.serializeBinaryToWriter(this, i), i.getResultBase64String()
+            );
+          }
+          getClassName() {
             return "CClientComm_GetClientInfo_Response";
           }
         }
-        class mt extends Sr.Message {
+        class mt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               mt.prototype.fields || u.Sg(mt.M()),
-              Sr.Message.initialize(this, i, 0, -1, [6], null);
+              zr.Message.initialize(this, i, 0, -1, [6], null);
           }
           static sm_m;
           static sm_mbf;
@@ -10193,26 +10206,26 @@
           toObject(i = !1) {
             return mt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(mt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(mt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(mt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new mt();
-            return mt.deserializeBinaryFromReader(p, f);
+            return mt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(mt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(mt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return mt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(mt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(mt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10224,20 +10237,20 @@
             return "CClientComm_GetClientAppList_Request";
           }
         }
-        class ft extends Sr.Message {
+        class gt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
-              ft.prototype.bytes_available || u.Sg(ft.M()),
-              Sr.Message.initialize(this, i, 0, -1, [2], null);
+              gt.prototype.bytes_available || u.Sg(gt.M()),
+              zr.Message.initialize(this, i, 0, -1, [2], null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              ft.sm_m ||
-                (ft.sm_m = {
-                  proto: ft,
+              gt.sm_m ||
+                (gt.sm_m = {
+                  proto: gt,
                   fields: {
                     bytes_available: {
                       n: 1,
@@ -10263,52 +10276,52 @@
                     },
                   },
                 }),
-              ft.sm_m
+              gt.sm_m
             );
           }
           static MBF() {
-            return ft.sm_mbf || (ft.sm_mbf = u.w0(ft.M())), ft.sm_mbf;
+            return gt.sm_mbf || (gt.sm_mbf = u.w0(gt.M())), gt.sm_mbf;
           }
           toObject(i = !1) {
-            return ft.toObject(i, this);
+            return gt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(ft.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(gt.M(), i, g);
           }
           static fromObject(i) {
-            return u.Uq(ft.M(), i);
+            return u.Uq(gt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
-              p = new ft();
-            return ft.deserializeBinaryFromReader(p, f);
+            let g = new (_().BinaryReader)(i),
+              p = new gt();
+            return gt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(ft.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(gt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
-            return ft.serializeBinaryToWriter(this, i), i.getResultBuffer();
+            return gt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(ft.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(gt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
-              ft.serializeBinaryToWriter(this, i), i.getResultBase64String()
+              gt.serializeBinaryToWriter(this, i), i.getResultBase64String()
             );
           }
           getClassName() {
             return "CClientComm_GetClientAppList_Response";
           }
         }
-        class Ot extends Sr.Message {
+        class Ot extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               Ot.prototype.appid || u.Sg(Ot.M()),
-              Sr.Message.initialize(this, i, 0, -1, [17], null);
+              zr.Message.initialize(this, i, 0, -1, [17], null);
           }
           static sm_m;
           static sm_mbf;
@@ -10432,26 +10445,26 @@
           toObject(i = !1) {
             return Ot.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(Ot.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(Ot.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(Ot.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Ot();
-            return Ot.deserializeBinaryFromReader(p, f);
+            return Ot.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(Ot.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(Ot.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Ot.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(Ot.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(Ot.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10463,12 +10476,12 @@
             return "CClientComm_GetClientAppList_Response_AppData";
           }
         }
-        class Tt extends Sr.Message {
+        class Tt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               Tt.prototype.appid || u.Sg(Tt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -10496,26 +10509,26 @@
           toObject(i = !1) {
             return Tt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(Tt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(Tt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(Tt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Tt();
-            return Tt.deserializeBinaryFromReader(p, f);
+            return Tt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(Tt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(Tt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Tt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(Tt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(Tt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10527,20 +10540,20 @@
             return "CClientComm_GetClientAppList_Response_AppData_DLCData";
           }
         }
-        class gt extends Sr.Message {
+        class ft extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
-              gt.prototype.appid || u.Sg(gt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              ft.prototype.appid || u.Sg(ft.M()),
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              gt.sm_m ||
-                (gt.sm_m = {
-                  proto: gt,
+              ft.sm_m ||
+                (ft.sm_m = {
+                  proto: ft,
                   fields: {
                     appid: {
                       n: 1,
@@ -10555,73 +10568,73 @@
                     },
                   },
                 }),
-              gt.sm_m
+              ft.sm_m
             );
           }
           static MBF() {
-            return gt.sm_mbf || (gt.sm_mbf = u.w0(gt.M())), gt.sm_mbf;
+            return ft.sm_mbf || (ft.sm_mbf = u.w0(ft.M())), ft.sm_mbf;
           }
           toObject(i = !1) {
-            return gt.toObject(i, this);
+            return ft.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(gt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(ft.M(), i, g);
           }
           static fromObject(i) {
-            return u.Uq(gt.M(), i);
+            return u.Uq(ft.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
-              p = new gt();
-            return gt.deserializeBinaryFromReader(p, f);
+            let g = new (_().BinaryReader)(i),
+              p = new ft();
+            return ft.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(gt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(ft.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
-            return gt.serializeBinaryToWriter(this, i), i.getResultBuffer();
+            return ft.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(gt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(ft.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
-              gt.serializeBinaryToWriter(this, i), i.getResultBase64String()
+              ft.serializeBinaryToWriter(this, i), i.getResultBase64String()
             );
           }
           getClassName() {
             return "CClientComm_InstallClientApp_Request";
           }
         }
-        class qt extends Sr.Message {
+        class qt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
-            super(), Sr.Message.initialize(this, i, 0, -1, void 0, null);
+            super(), zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           toObject(i = !1) {
             return qt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return i ? { $jspbMessageInstance: f } : {};
+          static toObject(i, g) {
+            return i ? { $jspbMessageInstance: g } : {};
           }
           static fromObject(i) {
             return new qt();
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new qt();
-            return qt.deserializeBinaryFromReader(p, f);
+            return qt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
+          static deserializeBinaryFromReader(i, g) {
             return i;
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return qt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {}
+          static serializeBinaryToWriter(i, g) {}
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
@@ -10632,12 +10645,12 @@
             return "CClientComm_InstallClientApp_Response";
           }
         }
-        class Bt extends Sr.Message {
+        class Bt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               Bt.prototype.appid || u.Sg(Bt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -10669,26 +10682,26 @@
           toObject(i = !1) {
             return Bt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(Bt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(Bt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(Bt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Bt();
-            return Bt.deserializeBinaryFromReader(p, f);
+            return Bt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(Bt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(Bt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Bt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(Bt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(Bt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10700,33 +10713,33 @@
             return "CClientComm_UninstallClientApp_Request";
           }
         }
-        class _t extends Sr.Message {
+        class _t extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
-            super(), Sr.Message.initialize(this, i, 0, -1, void 0, null);
+            super(), zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           toObject(i = !1) {
             return _t.toObject(i, this);
           }
-          static toObject(i, f) {
-            return i ? { $jspbMessageInstance: f } : {};
+          static toObject(i, g) {
+            return i ? { $jspbMessageInstance: g } : {};
           }
           static fromObject(i) {
             return new _t();
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new _t();
-            return _t.deserializeBinaryFromReader(p, f);
+            return _t.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
+          static deserializeBinaryFromReader(i, g) {
             return i;
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return _t.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {}
+          static serializeBinaryToWriter(i, g) {}
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
@@ -10737,12 +10750,12 @@
             return "CClientComm_UninstallClientApp_Response";
           }
         }
-        class Et extends Sr.Message {
+        class Et extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               Et.prototype.appid || u.Sg(Et.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -10780,26 +10793,26 @@
           toObject(i = !1) {
             return Et.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(Et.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(Et.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(Et.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Et();
-            return Et.deserializeBinaryFromReader(p, f);
+            return Et.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(Et.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(Et.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Et.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(Et.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(Et.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10811,12 +10824,12 @@
             return "CClientComm_SetClientAppUpdateState_Request";
           }
         }
-        class jt extends Sr.Message {
+        class jt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               jt.prototype.client_instanceid || u.Sg(jt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -10853,26 +10866,26 @@
           toObject(i = !1) {
             return jt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(jt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(jt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(jt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new jt();
-            return jt.deserializeBinaryFromReader(p, f);
+            return jt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(jt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(jt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return jt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(jt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(jt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -10884,33 +10897,33 @@
             return "CClientComm_LaunchClientApp_Request";
           }
         }
-        class Ct extends Sr.Message {
+        class Ct extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
-            super(), Sr.Message.initialize(this, i, 0, -1, void 0, null);
+            super(), zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           toObject(i = !1) {
             return Ct.toObject(i, this);
           }
-          static toObject(i, f) {
-            return i ? { $jspbMessageInstance: f } : {};
+          static toObject(i, g) {
+            return i ? { $jspbMessageInstance: g } : {};
           }
           static fromObject(i) {
             return new Ct();
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Ct();
-            return Ct.deserializeBinaryFromReader(p, f);
+            return Ct.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
+          static deserializeBinaryFromReader(i, g) {
             return i;
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Ct.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {}
+          static serializeBinaryToWriter(i, g) {}
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
@@ -10921,33 +10934,33 @@
             return "CClientComm_LaunchClientApp_Response";
           }
         }
-        class re extends Sr.Message {
+        class re extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
-            super(), Sr.Message.initialize(this, i, 0, -1, void 0, null);
+            super(), zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           toObject(i = !1) {
             return re.toObject(i, this);
           }
-          static toObject(i, f) {
-            return i ? { $jspbMessageInstance: f } : {};
+          static toObject(i, g) {
+            return i ? { $jspbMessageInstance: g } : {};
           }
           static fromObject(i) {
             return new re();
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new re();
-            return re.deserializeBinaryFromReader(p, f);
+            return re.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
+          static deserializeBinaryFromReader(i, g) {
             return i;
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return re.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {}
+          static serializeBinaryToWriter(i, g) {}
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
@@ -10958,12 +10971,12 @@
             return "CClientComm_SetClientAppUpdateState_Response";
           }
         }
-        class Dt extends Sr.Message {
+        class Dt extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
             super(),
               Dt.prototype.client_instanceid || u.Sg(Dt.M()),
-              Sr.Message.initialize(this, i, 0, -1, void 0, null);
+              zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -10990,26 +11003,26 @@
           toObject(i = !1) {
             return Dt.toObject(i, this);
           }
-          static toObject(i, f) {
-            return u.BT(Dt.M(), i, f);
+          static toObject(i, g) {
+            return u.BT(Dt.M(), i, g);
           }
           static fromObject(i) {
             return u.Uq(Dt.M(), i);
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new Dt();
-            return Dt.deserializeBinaryFromReader(p, f);
+            return Dt.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
-            return u.zj(Dt.MBF(), i, f);
+          static deserializeBinaryFromReader(i, g) {
+            return u.zj(Dt.MBF(), i, g);
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return Dt.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {
-            u.i0(Dt.M(), i, f);
+          static serializeBinaryToWriter(i, g) {
+            u.i0(Dt.M(), i, g);
           }
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
@@ -11021,33 +11034,33 @@
             return "CClientComm_EnableOrDisableDownloads_Request";
           }
         }
-        class te extends Sr.Message {
+        class te extends zr.Message {
           static ImplementsStaticInterface() {}
           constructor(i = null) {
-            super(), Sr.Message.initialize(this, i, 0, -1, void 0, null);
+            super(), zr.Message.initialize(this, i, 0, -1, void 0, null);
           }
           toObject(i = !1) {
             return te.toObject(i, this);
           }
-          static toObject(i, f) {
-            return i ? { $jspbMessageInstance: f } : {};
+          static toObject(i, g) {
+            return i ? { $jspbMessageInstance: g } : {};
           }
           static fromObject(i) {
             return new te();
           }
           static deserializeBinary(i) {
-            let f = new (_().BinaryReader)(i),
+            let g = new (_().BinaryReader)(i),
               p = new te();
-            return te.deserializeBinaryFromReader(p, f);
+            return te.deserializeBinaryFromReader(p, g);
           }
-          static deserializeBinaryFromReader(i, f) {
+          static deserializeBinaryFromReader(i, g) {
             return i;
           }
           serializeBinary() {
             var i = new (_().BinaryWriter)();
             return te.serializeBinaryToWriter(this, i), i.getResultBuffer();
           }
-          static serializeBinaryToWriter(i, f) {}
+          static serializeBinaryToWriter(i, g) {}
           serializeBase64String() {
             var i = new (_().BinaryWriter)();
             return (
@@ -11069,7 +11082,7 @@
             );
           }
           Z.GetClientLogonInfo = i;
-          function f(hr, Er, Qr) {
+          function g(hr, Er, Qr) {
             return hr.SendMsg(
               "ClientComm.GetAllClientLogonInfo#1",
               (0, Qt.I8)(Rt, Er, Qr),
@@ -11077,12 +11090,12 @@
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
-          Z.GetAllClientLogonInfo = f;
+          Z.GetAllClientLogonInfo = g;
           function p(hr, Er, Qr) {
             return hr.SendMsg(
               "ClientComm.GetClientInfo#1",
               (0, Qt.I8)(vt, Er, Qr),
-              St,
+              zt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
@@ -11091,7 +11104,7 @@
             return hr.SendMsg(
               "ClientComm.GetClientAppList#1",
               (0, Qt.I8)(mt, Er, Qr),
-              ft,
+              gt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
@@ -11099,7 +11112,7 @@
           function lr(hr, Er, Qr) {
             return hr.SendMsg(
               "ClientComm.InstallClientApp#1",
-              (0, Qt.I8)(gt, Er, Qr),
+              (0, Qt.I8)(ft, Er, Qr),
               qt,
               { ePrivilege: 1 },
             );
@@ -11147,8 +11160,8 @@
           Ve = "RemoteDownload_ClientAppData",
           ui = "RemoteDownload_PatchNotes";
         class Re extends Error {
-          constructor(i, f) {
-            super(i), (this.result = f);
+          constructor(i, g) {
+            super(i), (this.result = g);
           }
           result;
         }
@@ -11255,11 +11268,11 @@
                 : 0;
           }
         }
-        async function qe(Z, i, f) {
+        async function qe(Z, i, g) {
           const p = i.client_instanceid,
             ar = Qt.w.Init(mt);
           ar.Body().set_fields("games"),
-            ar.Body().set_filters(f),
+            ar.Body().set_filters(g),
             ar.Body().set_client_instanceid(p),
             ar.Body().set_include_client_info(!0);
           const lr = await ve.GetClientAppList(Z, ar);
@@ -11291,30 +11304,30 @@
             },
           };
         }
-        async function mi(Z, i, f, p) {
+        async function mi(Z, i, g, p) {
           if (!p) return;
-          const ar = await qe(Z, i, f);
+          const ar = await qe(Z, i, g);
           for (const [lr, Dr] of ar.mapApps) p.mapApps.set(lr, Dr);
           return { ...ar, mapApps: p.mapApps };
         }
-        function he(Z, i, f) {
-          return [ci, Z, i, f];
+        function he(Z, i, g) {
+          return [ci, Z, i, g];
         }
         function _e(Z, i = !0) {
-          const f = Ge(),
+          const g = Ge(),
             p = (0, We.KV)(),
             ar = (0, be.LH)(),
             lr = (Er) => {
-              i && (Er.result == we.Dy || Er.result == we._3) && f.refetch();
+              i && (Er.result == we.Dy || Er.result == we._3) && g.refetch();
             },
             Dr = (0, Je.E)({
-              queries: (f.data?.sessions || []).map((Er) => ({
+              queries: (g.data?.sessions || []).map((Er) => ({
                 queryKey: he(ar, Er.client_instanceid, "none"),
                 queryFn: async () => qe(p, Er, "none"),
                 staletime: 3600 * 1e3,
                 refetchInterval: (Qr) =>
                   (Qr.state.data?.refetchIntervals.full || 3600) * 1e3,
-                enabled: f.isSuccess && !f.isFetching,
+                enabled: g.isSuccess && !g.isFetching,
                 onError: lr,
                 retry: i,
               })),
@@ -11331,7 +11344,7 @@
             ),
             Wr = (0, Xe.jE)(),
             Ir = (0, Je.E)({
-              queries: (f.data?.sessions || []).map((Er, Qr) => ({
+              queries: (g.data?.sessions || []).map((Er, Qr) => ({
                 queryKey: he(ar, Er.client_instanceid, "changing"),
                 queryFn: async () => mi(p, Er, "changing", Dr[Qr].data),
                 enabled: Dr[Qr].isSuccess && !Dr[Qr].isFetching,
@@ -11354,7 +11367,7 @@
               })),
             }),
             hr = () => {
-              for (const Er of f.data?.sessions || []) {
+              for (const Er of g.data?.sessions || []) {
                 const Qr = he(ar, Er.client_instanceid, "changing");
                 Wr.removeQueries({ queryKey: Qr });
               }
@@ -11371,10 +11384,10 @@
           return [Ve, Z, i];
         }
         function xe(Z, i = !0) {
-          const f = (0, be.LH)(),
+          const g = (0, be.LH)(),
             { rgQueries: p } = _e(void 0, i);
           return (0, Ye.I)({
-            queryKey: Be(f, Z),
+            queryKey: Be(g, Z),
             queryFn: () => {
               const ar = new Map();
               for (const lr of p)
@@ -11398,13 +11411,13 @@
             gcTime: 0,
           });
         }
-        function Fi(Z, i, f) {
+        function Fi(Z, i, g) {
           const p = useActiveAccount(),
             ar = useActiveServiceTransport();
           return useQuery({
-            queryKey: [ui, p, Z, i, f],
+            queryKey: [ui, p, Z, i, g],
             queryFn: async () => {
-              if (!i || !f || i == f) return {};
+              if (!i || !g || i == g) return {};
               const Dr = CProtoBufMsg.Init(
                   CClan_GetPartnerEventsByBuildIDRange_Request,
                 ),
@@ -11429,7 +11442,7 @@
               return {
                 appid: Z,
                 source_buildid: i,
-                target_buildid: f,
+                target_buildid: g,
                 patch_notes: Wr.Body()
                   .toObject()
                   .matches?.sort((Ir, hr) => hr.build_id - Ir.build_id),
@@ -11437,14 +11450,14 @@
             },
           });
         }
-        function fi(Z, i, f) {
+        function gi(Z, i, g) {
           const p = (0, We.KV)(),
             ar = xe(Z),
             lr = (0, be.LH)(),
             Dr = (0, Xe.jE)();
           return (0, li.n)({
             mutationFn: async () => {
-              const Pr = Qt.w.Init(gt);
+              const Pr = Qt.w.Init(ft);
               Pr.Body().set_appid(Z), Pr.Body().set_client_instanceid(i);
               const Wr = await ve.InstallClientApp(p, Pr);
               if (Wr.GetEResult() != we.R)
@@ -11460,10 +11473,10 @@
                 Dr.setQueryData(Be(lr, Z), Ir),
                 ar.refetch();
             },
-            onSuccess: f,
+            onSuccess: g,
           });
         }
-        function ki(Z, i, f) {
+        function ki(Z, i, g) {
           const p = useActiveServiceTransport(),
             ar = xe(Z),
             lr = useActiveAccount(),
@@ -11490,10 +11503,10 @@
                 Dr.setQueryData(Be(lr, Z), Ir),
                 ar.refetch();
             },
-            onSuccess: f,
+            onSuccess: g,
           });
         }
-        function Ni(Z, i, f) {
+        function Ni(Z, i, g) {
           const p = useActiveServiceTransport(),
             ar = xe(Z),
             lr = useActiveAccount(),
@@ -11523,10 +11536,10 @@
                 Dr.setQueryData(Be(lr, Z), Pr),
                 ar.refetch();
             },
-            onSuccess: f,
+            onSuccess: g,
           });
         }
-        function Li(Z, i, f, p) {
+        function Li(Z, i, g, p) {
           const ar = useActiveServiceTransport(),
             lr = xe(Z),
             Dr = useActiveAccount(),
@@ -11542,7 +11555,7 @@
                 const hr = CProtoBufMsg.Init(
                   CClientComm_EnableOrDisableDownloads_Request,
                 );
-                hr.Body().set_client_instanceid(i), hr.Body().set_enable(!f);
+                hr.Body().set_client_instanceid(i), hr.Body().set_enable(!g);
                 const Er = await ClientCommService.EnableOrDisableDownloads(
                   ar,
                   hr,
@@ -11563,7 +11576,7 @@
                 );
                 hr.Body().set_appid(Z),
                   hr.Body().set_client_instanceid(i),
-                  hr.Body().set_action(f ? 0 : 1);
+                  hr.Body().set_action(g ? 0 : 1);
                 const Er = await ClientCommService.SetClientAppUpdateState(
                   ar,
                   hr,
@@ -11579,16 +11592,16 @@
                     ))
                   );
               }
-              Ir && Wr.get(i)?.app.SetPaused(f),
+              Ir && Wr.get(i)?.app.SetPaused(g),
                 Pr.setQueryData(Be(Dr, Z), Wr),
                 lr.refetch();
             },
             onSuccess: p,
           });
         }
-        async function Ki(Z, i, f, p) {
+        async function Ki(Z, i, g, p) {
           const ar = CProtoBufMsg.Init(CClientComm_LaunchClientApp_Request);
-          ar.Body().set_appid(f),
+          ar.Body().set_appid(g),
             ar.Body().set_client_instanceid(i),
             ar.Body().set_query_params(p);
           const lr = await ClientCommService.LaunchClientApp(Z, ar);
@@ -11602,7 +11615,7 @@
               new Error(`Error from LaunchClientApp: ${lr.GetEResult()}`))
             );
         }
-        var gi = t(25792),
+        var fi = t(25792),
           Bi = t(16346),
           Ht = t(18210),
           yi = t(99047),
@@ -11616,51 +11629,51 @@
           bDisablePopTop: !0,
         };
         function bi(Z) {
-          const { setRemoteClientID: i, rgSessions: f } = Z,
+          const { setRemoteClientID: i, rgSessions: g } = Z,
             p = (0, c.useCallback)(
               (ar) => {
-                f?.length &&
+                g?.length &&
                   (0, Bi.lX)(
                     (0, n.jsx)(vi, {
-                      sessions: f,
+                      sessions: g,
                       setRemoteDownloadClientId: i,
                     }),
                     ar,
                     wi,
                   );
               },
-              [i, f],
+              [i, g],
             );
-          return f?.length
+          return g?.length
             ? (0, n.jsx)("button", {
                 onClick: p,
                 className: Ce().ClientSelectDropdown,
-                children: (0, n.jsx)(Si, {}),
+                children: (0, n.jsx)(zi, {}),
               })
             : null;
         }
         function vi({ sessions: Z, setRemoteDownloadClientId: i }) {
           return (0, n.jsx)("ul", {
             className: Ce().ClientListDropdownMenu,
-            children: Z.map((f) =>
+            children: Z.map((g) =>
               (0, n.jsx)(
                 yi.kt,
                 {
                   onSelected: () => {
-                    i(f.client_instanceid);
+                    i(g.client_instanceid);
                   },
                   children: (0, Ht.we)(
                     "#GamesList_Client_Indicator",
-                    zi(f.device_type) ?? "",
-                    f.machine_name,
+                    Si(g.device_type) ?? "",
+                    g.machine_name,
                   ),
                 },
-                f.client_instanceid,
+                g.client_instanceid,
               ),
             ),
           });
         }
-        function zi(Z) {
+        function Si(Z) {
           switch (Z) {
             case d.g0U:
               return (0, Ht.we)("#Library_DeviceType_PC");
@@ -11674,7 +11687,7 @@
               return;
           }
         }
-        function Si(Z) {
+        function zi(Z) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 13 8",
@@ -11694,8 +11707,8 @@
           ee = t.n(Ei);
         function ji(Z) {
           const { appid: i } = Z,
-            f = (0, P.$5)(i),
-            { data: p } = (0, x.J$)(f),
+            g = (0, P.$5)(i),
+            { data: p } = (0, x.J$)(g),
             [ar, lr, Dr] = (0, M.uD)(!1),
             { mutateAsync: Pr } = (0, T.S)({ appid: i }),
             [Wr, Ir] = (0, c.useState)(!1),
@@ -11721,7 +11734,7 @@
                       (0, Ht.we)("#Sale_AddToLibrary_NoPlus"),
                     ],
                   }),
-                  (0, n.jsx)(gi.tH, {
+                  (0, n.jsx)(fi.tH, {
                     children: (0, n.jsx)(ri.EN, {
                       active: ar,
                       children: (0, n.jsx)(ri.o0, {
@@ -11735,7 +11748,7 @@
                         ),
                         closeModal: Dr,
                         bAlertDialog: !0,
-                        children: (0, n.jsx)(ei, { id: f }),
+                        children: (0, n.jsx)(ei, { id: g }),
                       }),
                     }),
                   }),
@@ -11744,12 +11757,12 @@
         }
         function ei(Z) {
           const { id: i } = Z,
-            f = Ge(),
+            g = Ge(),
             [p, ar] = (0, c.useState)(0),
             [lr, Dr] = (0, c.useState)(!1),
             { data: Pr } = (0, x.qI)(i);
           if (!i || !("appid" in i) || ti.TS.IN_CLIENT || !Pr) return null;
-          const Wr = f.data?.sessions?.filter((Ir) => {
+          const Wr = g.data?.sessions?.filter((Ir) => {
             switch (Ir.device_type) {
               default:
               case d.g0U:
@@ -11794,7 +11807,7 @@
           return null;
         }
         function Di(Z) {
-          const { rgAcceptableSession: i, session: f, setSessionIndex: p } = Z;
+          const { rgAcceptableSession: i, session: g, setSessionIndex: p } = Z;
           return (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)("div", {
@@ -11805,7 +11818,7 @@
                 children: [
                   (0, n.jsx)("span", {
                     className: ee().ClientName,
-                    children: f.machine_name,
+                    children: g.machine_name,
                   }),
                   (0, n.jsx)(bi, {
                     rgSessions: i,
@@ -11836,8 +11849,8 @@
           });
         }
         function hi(Z) {
-          const { appid: i, session: f, setRemoteDownloadRequested: p } = Z,
-            ar = fi(i, f.client_instanceid);
+          const { appid: i, session: g, setRemoteDownloadRequested: p } = Z,
+            ar = gi(i, g.client_instanceid);
           return (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsxs)(B.sP, {
@@ -11860,9 +11873,9 @@
             ],
           });
         }
-        var ze = t(39905);
+        var Se = t(39905);
         function xi(Z) {
-          const { id: i, className: f } = Z,
+          const { id: i, className: g } = Z,
             { data: p } = (0, x.J$)(i);
           if (!p) return null;
           const ar =
@@ -11872,38 +11885,38 @@
             lr = ar.length > 0,
             Dr = lr || p.type === s.uE.ue,
             Pr = Dr
-              ? ze.Z.Localize("#Sale_InstallDemo_ttip", p.name || "")
+              ? Se.Z.Localize("#Sale_InstallDemo_ttip", p.name || "")
               : lr
-                ? ze.Z.Localize("#Sale_CannotInstallDemo_ttip", p.name || "")
-                : ze.Z.Localize("#Loading");
+                ? Se.Z.Localize("#Sale_CannotInstallDemo_ttip", p.name || "")
+                : Se.Z.Localize("#Loading");
           if (m.TS.IN_MOBILE_WEBVIEW) {
             if (Dr && lr) {
               const Wr = p.type === s.uE.ue ? p.appid : ar[0];
               return (0, n.jsx)("div", {
-                className: f,
+                className: g,
                 children: (0, n.jsx)(ji, { appid: Wr }),
               });
             }
             return null;
           }
           return !Dr && lr && p.is_free
-            ? (0, n.jsx)(O.h, { id: i, className: f })
+            ? (0, n.jsx)(O.h, { id: i, className: g })
             : (0, n.jsx)(U.he, {
                 toolTipContent: Pr,
                 onClick: (Wr) => {
                   Wr.preventDefault(),
                     Wr.stopPropagation(),
                     Dr &&
-                      (0, z.o)(p.type === s.uE.ue ? p.appid : ar[0], p.name);
+                      (0, S.o)(p.type === s.uE.ue ? p.appid : ar[0], p.name);
                 },
                 className: (0, w.A)(
-                  f,
-                  g().DemoButton,
-                  !Dr && g().DisabledButton,
+                  g,
+                  f().DemoButton,
+                  !Dr && f().DisabledButton,
                 ),
                 children: Dr
-                  ? ze.Z.Localize("#Sale_InstallDemo")
-                  : ze.Z.Localize("#Sale_DemoNotFound"),
+                  ? Se.Z.Localize("#Sale_InstallDemo")
+                  : Se.Z.Localize("#Sale_DemoNotFound"),
               });
         }
       },
@@ -11914,17 +11927,17 @@
           m = t(39905),
           s = t(40358),
           x = t(76532),
-          z = t.n(x),
+          S = t.n(x),
           U = t(36118),
           w = t(36707),
           O = t(72609);
-        function I(g) {
+        function I(f) {
           const {
               id: T,
               strClassName: d,
               bMinimizePlatforms: M,
               bHideWindows: B,
-            } = g,
+            } = f,
             { data: P } = (0, s.qI)(T);
           if (!P) return null;
           if (M) {
@@ -11961,14 +11974,14 @@
                     })),
               F
                 ? (0, n.jsx)("span", {
-                    className: (0, w.A)(z().CapsulePlatform, d),
+                    className: (0, w.A)(S().CapsulePlatform, d),
                     children: F,
                   })
                 : null
             );
           }
           return (0, n.jsxs)("span", {
-            className: (0, w.A)(z().CapsulePlatform, d),
+            className: (0, w.A)(S().CapsulePlatform, d),
             children: [
               !B &&
                 P.windows &&
@@ -12010,12 +12023,12 @@
           m = t(3367),
           s = t(3348),
           x = t(81055),
-          z = t(40358),
+          S = t(40358),
           U = t(11512),
           w = t(76532),
           O = t.n(w),
           I = t(36118),
-          g = t(71421),
+          f = t(71421),
           T = t(36707),
           d = t(39905),
           M = t(74107),
@@ -12025,8 +12038,8 @@
           v = t(1706);
         function c(H) {
           const { id: o, bSelfPurchaseOption: y } = H,
-            { data: G } = (0, z.Q_)(o),
-            { data: C } = (0, z.J$)(o);
+            { data: G } = (0, S.Q_)(o),
+            { data: C } = (0, S.J$)(o);
           if (!C) return null;
           const j = y && C.item_type == m.c6.RD ? C.self_purchase_option : G;
           return (0, n.jsx)(l, { purchaseOption: j, ...H });
@@ -12049,11 +12062,11 @@
               bHideNewTag: $,
             } = H,
             K = B.TS.NOW,
-            { data: S } = (0, z.by)(G),
-            { data: D } = (0, z.J$)(G);
+            { data: z } = (0, S.by)(G),
+            { data: D } = (0, S.J$)(G);
           if (!D) return null;
           const b = C,
-            W = !$ && (0, x.fk)(S, K),
+            W = !$ && (0, x.fk)(z, K),
             N = (0, T.A)({
               [O().StoreSalePriceWidgetContainer]: !0,
               [O().SingleLineMode]: o,
@@ -12070,15 +12083,15 @@
                 children: d.Z.Localize("#EventDisplay_CallToAction_InLibrary"),
               }),
             });
-          if (S && S.is_coming_soon && (!b || !b.packageid)) {
+          if (z && z.is_coming_soon && (!b || !b.packageid)) {
             if (L) return null;
             const wr =
-              S.coming_soon_display &&
-              ["text_comingsoon", "text_tba"].includes(S.coming_soon_display)
-                ? (0, U.d)(S)
+              z.coming_soon_display &&
+              ["text_comingsoon", "text_tba"].includes(z.coming_soon_display)
+                ? (0, U.d)(z)
                 : d.Z.Localize(
                     "#EventDisplay_CallToAction_ComingSoon_Date",
-                    (0, s.CC)(S),
+                    (0, s.CC)(z),
                   );
             return (0, n.jsx)("div", {
               className: N,
@@ -12143,7 +12156,7 @@
               Or = { ...(0, F.J)(wr), bWholeUnitsOnly: !0 };
             ir = (0, v.d)(Number.parseInt(b.final_price_in_cents || "0"), Or);
           }
-          const cr = (0, x.Nq)(S, b);
+          const cr = (0, x.Nq)(z, b);
           return (0, n.jsx)(e, {
             bSingleLineMode: !!o,
             nBaseDiscountPercentage: tr,
@@ -12183,8 +12196,8 @@
               ? ($ = d.Z.Localize("#Discount_ARIA_Label_SpecialPrice", j))
               : ($ = d.Z.Localize("#Discount_ARIA_Label", y, j, L)));
           const K = !!((y || C) && !E),
-            S = K && !!j,
-            D = K && !S && Mr;
+            z = K && !!j,
+            D = K && !z && Mr;
           return (0, n.jsxs)("div", {
             className: (0, T.A)({
               [O().StoreSalePriceWidgetContainer]: !0,
@@ -12216,7 +12229,7 @@
               !!(C && !E) &&
                 (0, n.jsxs)(n.Fragment, {
                   children: [
-                    (0, n.jsx)(g.Gq, {
+                    (0, n.jsx)(f.Gq, {
                       toolTipContent: d.Z.Localize(
                         "#Sale_Bundle_Discount_ttip",
                       ),
@@ -12229,7 +12242,7 @@
                       (0, n.jsxs)(n.Fragment, {
                         children: [
                           (0, n.jsx)("span", { children: "\xA0" }),
-                          (0, n.jsx)(g.Gq, {
+                          (0, n.jsx)(f.Gq, {
                             toolTipContent: d.Z.Localize(
                               "#Sale_Bundle_Discount_Limited_ttip",
                             ),
@@ -12252,11 +12265,11 @@
                   className: O().DiscountIconCtn,
                   children: (0, n.jsx)(I.XH_, {}),
                 }),
-              S || D
+              z || D
                 ? (0, n.jsxs)("div", {
                     className: (0, T.A)(O().StoreSaleDiscountedPriceCtn),
                     children: [
-                      S
+                      z
                         ? (0, n.jsx)("div", {
                             className: (0, T.A)({
                               [O().SingleLineOriginalPrice]: o,
@@ -12291,17 +12304,17 @@
       },
       41188: (V, Y, t) => {
         "use strict";
-        t.d(Y, { n: () => g, p: () => T });
+        t.d(Y, { n: () => f, p: () => T });
         var n = t(7850),
           m = t(99412),
           s = t(39567),
           x = t(76532),
-          z = t.n(x),
+          S = t.n(x),
           U = t(12818),
           w = t(36707),
           O = t(39905),
           I = t(72609);
-        function g(M) {
+        function f(M) {
           const {
             rgTagIDs: B,
             bShowEvenIfNoTags: P,
@@ -12312,19 +12325,19 @@
           return B?.length > 0 || P
             ? (0, n.jsxs)("div", {
                 className: (0, w.A)(
-                  z().SaleTagBlockCtn,
-                  v ? z().LargeText : "",
+                  S().SaleTagBlockCtn,
+                  v ? S().LargeText : "",
                   "SaleTagBlockCtn",
                 ),
                 children: [
                   !F &&
                     (0, n.jsx)("div", {
-                      className: (0, w.A)(z().TagTitle, "WidgetTagTitle"),
+                      className: (0, w.A)(S().TagTitle, "WidgetTagTitle"),
                       children: O.Z.Localize("#GameHover_Tags"),
                     }),
                   B?.length > 0
                     ? (0, n.jsx)("div", {
-                        className: (0, w.A)(z().TagBox, "TagBox"),
+                        className: (0, w.A)(S().TagBox, "TagBox"),
                         children: B.map((l) =>
                           (0, n.jsx)(d, { tagid: l, bNoStoreLinks: c }, l),
                         ),
@@ -12344,7 +12357,7 @@
             c = `${I.TS.STORE_BASE_URL}tags/${v}/${F}`;
           return (0, n.jsx)(U.q, {
             url: c,
-            className: (0, w.A)(z().Tag, "WidgetTag", P),
+            className: (0, w.A)(S().Tag, "WidgetTag", P),
             children: F,
           });
         }
@@ -12356,12 +12369,12 @@
           return c
             ? F
               ? (0, n.jsx)("div", {
-                  className: (0, w.A)(z().Tag, "WidgetTag", P),
+                  className: (0, w.A)(S().Tag, "WidgetTag", P),
                   children: c,
                 })
               : (0, n.jsx)(U.q, {
                   url: l,
-                  className: (0, w.A)(z().Tag, "WidgetTag", P),
+                  className: (0, w.A)(S().Tag, "WidgetTag", P),
                   children: c,
                 })
             : null;
@@ -12374,16 +12387,16 @@
           m = t(13620),
           s = t(29522),
           x = t(40358),
-          z = t(24179),
+          S = t(24179),
           U = t(13977),
           w = t(76532),
           O = t.n(w),
           I = t(36707),
-          g = t(18210);
+          f = t(18210);
         function T(d) {
           const { appid: M, bIsMuted: B } = d,
             P = (0, s.$5)(M),
-            F = (0, z.S6)(M),
+            F = (0, S.S6)(M),
             { data: v } = (0, x.J$)(P),
             { mutate: c } = (0, m.S)(P),
             l = (H) => {
@@ -12403,7 +12416,7 @@
               (H.key === "Enter" || H.key === " ") &&
                 (H.preventDefault(), l(H));
             },
-            children: (0, g.we)(F ? "#Sale_PlayNow" : "#Sale_AddToLibrary"),
+            children: (0, f.we)(F ? "#Sale_PlayNow" : "#Sale_AddToLibrary"),
           });
         }
       },
@@ -12414,12 +12427,12 @@
           m = t(72865),
           s = t(86722),
           x = t(83482),
-          z = t(77200);
+          S = t(77200);
         function U(w, O) {
           const I = (0, m.n9)(),
-            g = (0, z.w)(),
+            f = (0, S.w)(),
             T = (0, s.tB)((0, n._)(w, O));
-          return { snr: (0, x.L3)(I), strStoreURL: (0, x.It)(T, I, g) };
+          return { snr: (0, x.L3)(I), strStoreURL: (0, x.It)(T, I, f) };
         }
       },
       12818: (V, Y, t) => {
@@ -12429,9 +12442,9 @@
           m = t(24660),
           s = t(72865),
           x = t(52393),
-          z = t.n(x),
+          S = t.n(x),
           U = t(72609);
-        function w(g) {
+        function w(f) {
           const {
               className: T,
               url: d,
@@ -12440,7 +12453,7 @@
               bSkipForcingStoreLink: P,
               bOpenInline: F,
               bFocusable: v = !0,
-            } = g,
+            } = f,
             c = P ? d : d ? O(d, U.TS.STORE_BASE_URL) : void 0,
             l = (0, s.aL)(c);
           return l
@@ -12455,17 +12468,17 @@
               })
             : (0, n.jsx)("span", { style: M, className: T, children: B });
         }
-        function O(g, T) {
+        function O(f, T) {
           try {
             const d = new URL(T),
-              M = new URL(g);
+              M = new URL(f);
             return d.href.replace(/\/$/, "") + M.pathname + M.search + M.hash;
           } catch {
             return "";
           }
         }
-        function I(g) {
-          const { section: T } = g;
+        function I(f) {
+          const { section: T } = f;
           return T.label_link && !T.label_link_style
             ? jsx("div", {
                 className: styles.SaleViewAll,
@@ -12481,7 +12494,7 @@
       },
       42993: (V, Y, t) => {
         "use strict";
-        t.d(Y, { LH: () => z });
+        t.d(Y, { LH: () => S });
         var n = t(90626);
         const m = (0, n.createContext)(void 0),
           s = m.Provider;
@@ -12493,7 +12506,7 @@
             );
           return createElement(s, { value: I }, O);
         }
-        function z() {
+        function S() {
           const U = (0, n.useContext)(m);
           if (!U)
             throw new Error(
@@ -12504,12 +12517,12 @@
       },
       66243: (V, Y, t) => {
         "use strict";
-        t.d(Y, { Oh: () => g, n9: () => O, sP: () => z });
+        t.d(Y, { Oh: () => f, n9: () => O, sP: () => S });
         var n = t(7850),
           m = t(24660),
           s = t(44375),
           x = t.n(s);
-        function z(d) {
+        function S(d) {
           const { children: M, ...B } = d;
           return (0, n.jsx)(m.fu, {
             className: s.GreenButton,
@@ -12552,7 +12565,7 @@
             children: jsx("span", { children: M }),
           });
         }
-        function g(d) {
+        function f(d) {
           const { children: M, ...B } = d;
           return (0, n.jsx)(m.fu, {
             className: s.GreyButton,
@@ -12572,26 +12585,26 @@
       },
       21721: (V, Y, t) => {
         "use strict";
-        t.d(Y, { DT: () => w, b0: () => z, bu: () => U });
+        t.d(Y, { DT: () => w, b0: () => S, bu: () => U });
         var n = t(72609),
           m = t(40358),
           s = t(71742),
           x = t(41032);
-        function z(g, T) {
-          if (g[T]) {
+        function S(f, T) {
+          if (f[T]) {
             if (T == "community_icon") {
-              const d = g.asset_url_format
+              const d = f.asset_url_format
                 .replace(/^steam\//, "images/")
-                .replace("${FILENAME}", `${g[T]}.jpg`)
+                .replace("${FILENAME}", `${f[T]}.jpg`)
                 .replace(/\?.*$/, "");
               return `${n.TS.MEDIA_CDN_COMMUNITY_URL}${d}`;
-            } else if (typeof g[T] == "string") {
-              const d = g.asset_url_format.replace("${FILENAME}", g[T]);
+            } else if (typeof f[T] == "string") {
+              const d = f.asset_url_format.replace("${FILENAME}", f[T]);
               return `${n.TS.STORE_ITEM_BASE_URL}${d}`;
             }
           }
         }
-        function U(g, T = "full") {
+        function U(f, T = "full") {
           let d = "";
           switch (T) {
             case "thumb":
@@ -12612,11 +12625,11 @@
           }
           return (
             n.TS.STORE_ITEM_BASE_URL +
-            g.filename.replace(/\.([^.]+)(\?.*)?$/, `${d}.$1$2`)
+            f.filename.replace(/\.([^.]+)(\?.*)?$/, `${d}.$1$2`)
           );
         }
-        function w(g) {
-          const { data: T } = (0, m.j4)(g),
+        function w(f) {
+          const { data: T } = (0, m.j4)(f),
             d = (0, x.dy)();
           if (T)
             return [
@@ -12626,25 +12639,25 @@
                 : []),
             ].sort((M, B) => M.ordinal - B.ordinal);
         }
-        function O(g, T = !1) {
-          const { data: d } = useStoreItemAssets({ appid: g });
+        function O(f, T = !1) {
+          const { data: d } = useStoreItemAssets({ appid: f });
           if (d !== void 0)
             return d === null
               ? null
               : T && d.library_capsule_2x
-                ? z(d, "library_capsule_2x")
+                ? S(d, "library_capsule_2x")
                 : d.library_capsule
-                  ? z(d, "library_capsule")
-                  : `${Config.STORE_ITEM_BASE_URL}steam/apps/${g}/portrait.png`;
+                  ? S(d, "library_capsule")
+                  : `${Config.STORE_ITEM_BASE_URL}steam/apps/${f}/portrait.png`;
         }
-        function I(g, ...T) {
-          const { data: d } = useStoreItemAssets(g);
+        function I(f, ...T) {
+          const { data: d } = useStoreItemAssets(f);
           if (!d?.asset_url_format) return;
           const M = T.find((B) => {
             const P = d[B];
             return typeof P == "string" && P.trim() !== "";
           });
-          return M && z(d, M);
+          return M && S(d, M);
         }
       },
       87249: (V, Y, t) => {
@@ -12654,12 +12667,12 @@
           m = t(3367),
           s = t(72609),
           x = t(40358),
-          z = t(64238),
-          U = t.n(z),
+          S = t(64238),
+          U = t.n(S),
           w = t(90626),
           O = t(25046),
           I = t(73187),
-          g = t.n(I),
+          f = t.n(I),
           T = ((B) => (
             (B[(B.k_ETrailerGrowAmount_None = 0)] =
               "k_ETrailerGrowAmount_None"),
@@ -12698,15 +12711,15 @@
           let C;
           switch (c) {
             case 1:
-              C = g().GrowOnHoverImplicit;
+              C = f().GrowOnHoverImplicit;
               break;
             case 2:
-              C = g().GrowOnHoverMedium;
+              C = f().GrowOnHoverMedium;
               break;
           }
           const j = G[0];
           return (0, n.jsx)("video", {
-            className: U()(g().CapsuleMicroTrailer, C),
+            className: U()(f().CapsuleMicroTrailer, C),
             loop: !0,
             muted: !0,
             controls: !1,
@@ -12760,7 +12773,7 @@
           m = t(11512);
         function s(w) {
           return w?.is_coming_soon
-            ? z(
+            ? S(
                 w.coming_soon_display,
                 w.steam_release_date,
                 w.custom_release_date_message,
@@ -12772,7 +12785,7 @@
         function x(w) {
           return s(w.releaseInfo);
         }
-        function z(w, O, I) {
+        function S(w, O, I) {
           switch (w) {
             case "date_full":
               return LocalizeRtime32ToShortDate(O);
@@ -12811,7 +12824,7 @@
       },
       81055: (V, Y, t) => {
         "use strict";
-        t.d(Y, { Nq: () => U, fk: () => z });
+        t.d(Y, { Nq: () => U, fk: () => S });
         var n = t(44983);
         function m(w, O = !1) {
           if (w.is_coming_soon && !O) return 0;
@@ -12823,7 +12836,7 @@
           return O || (O = m(w)), O;
         }
         const x = 7;
-        function z(w, O) {
+        function S(w, O) {
           if (!w) return !1;
           const I = m(w);
           return I ? !w.is_coming_soon && I + x * n.Kp.PerDay > O : !1;
@@ -12837,11 +12850,11 @@
         t.d(Y, { _: () => s, l: () => x });
         var n = t(72609),
           m = t(83784);
-        function s(z, U = !1) {
-          if (z)
-            return U && (0, m.J)(z)
-              ? `${n.TS.STORE_BASE_URL}app/${((0, m.S))(z)[0]}`
-              : `${n.TS.STORE_BASE_URL}${z.store_url_path}`;
+        function s(S, U = !1) {
+          if (S)
+            return U && (0, m.J)(S)
+              ? `${n.TS.STORE_BASE_URL}app/${((0, m.S))(S)[0]}`
+              : `${n.TS.STORE_BASE_URL}${S.store_url_path}`;
         }
         function x() {
           window.location.href = `${n.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
@@ -12849,16 +12862,16 @@
       },
       39567: (V, Y, t) => {
         "use strict";
-        t.d(Y, { Fv: () => w, MB: () => g });
+        t.d(Y, { Fv: () => w, MB: () => f });
         var n = t(72604),
           m = t(35038),
           s = t(83764),
           x = t(32288),
-          z = t(68312),
+          S = t(68312),
           U = t(20194);
         function w(M) {
-          const B = (0, z.TR)(),
-            P = (0, z.rX)();
+          const B = (0, S.TR)(),
+            P = (0, S.rX)();
           return (0, U.I)(O(B.GetAnonymousServiceTransport(), P, M));
         }
         function O(M, B, P) {
@@ -12896,7 +12909,7 @@
             O(M.GetAnonymousServiceTransport(), B, P),
           );
         }
-        function g(M, B) {
+        function f(M, B) {
           const { data: P } = w(B);
           return P && P[M];
         }
@@ -12924,7 +12937,7 @@
             [d],
           );
         }
-        function z(T) {
+        function S(T) {
           if (!T?.length) return [];
           const d = T.map((M) => M.creator_clan_account_id).filter((M) => !!M);
           return Array.from(new Set(d));
@@ -12946,20 +12959,20 @@
         function I(T) {
           return (0, s.useMemo)(() => (T ? { packageid: T } : void 0), [T]);
         }
-        function g(T) {
+        function f(T) {
           return useMemo(() => (T ? { bundleid: T } : void 0), [T]);
         }
       },
       10134: (V, Y, t) => {
         "use strict";
-        t.d(Y, { BD: () => I, h3: () => g });
+        t.d(Y, { BD: () => I, h3: () => f });
         var n = t(20194),
           m = t(75233),
           s = t(68312),
           x = t(98609),
-          z = t(20125);
+          S = t(20125);
         async function U(d, M) {
-          const B = (0, z.Am)(x.TS.STORE_BASE_URL, M, x.iA.country_code),
+          const B = (0, S.Am)(x.TS.STORE_BASE_URL, M, x.iA.country_code),
             F = await (await fetch(B)).json();
           return Object.keys(F.rgIgnoredApps).map(Number) || [];
         }
@@ -12983,7 +12996,7 @@
           const { data: M } = w();
           return M === void 0 || d == null ? void 0 : M.has(d);
         }
-        function g() {
+        function f() {
           const d = (0, m.jE)(),
             M = x.iA.accountid;
           return (B, P) => {
@@ -13007,13 +13020,13 @@
           m = t(41944),
           s = t(3367),
           x = t(68312),
-          z = t(51614),
+          S = t(51614),
           U = t(24179);
         function w(I) {
-          const g = (0, x.KV)(),
+          const f = (0, x.KV)(),
             T = (0, U._7)();
-          return (0, z.n)({
-            mutationFn: () => O(g, I),
+          return (0, S.n)({
+            mutationFn: () => O(f, I),
             onSuccess(d) {
               const [
                 M,
@@ -13027,9 +13040,9 @@
             },
           });
         }
-        async function O(I, g) {
+        async function O(I, f) {
           const T = n.w.Init(m.lO);
-          T.Body().set_item_id(s.O4.fromObject(g));
+          T.Body().set_item_id(s.O4.fromObject(f));
           const d = await m._o.AddFreeLicense(I, T);
           return [d.GetEResult(), d.Body().toObject()];
         }
@@ -13041,20 +13054,20 @@
           m = t(20194),
           s = t(75233),
           x = t(68312),
-          z = t(20125),
+          S = t(20125),
           U = t(98609);
         async function w(c, l) {
-          const e = (0, z.Am)(U.TS.STORE_BASE_URL, l, U.iA.country_code);
+          const e = (0, S.Am)(U.TS.STORE_BASE_URL, l, U.iA.country_code);
           return (await (await fetch(e)).json()).rgOwnedApps || [];
         }
         async function O(c, l, e) {
           return (await w(c, l)).includes(e);
         }
         var I = t(40358),
-          g = t(72609);
+          f = t(72609);
         function T() {
           const c = (0, x.KV)(),
-            l = g.iA.accountid;
+            l = f.iA.accountid;
           return (0, m.I)(d(c, l));
         }
         function d(c, l) {
@@ -13077,13 +13090,13 @@
         }
         function B(c) {
           const l = (0, x.KV)(),
-            e = g.iA.accountid,
+            e = f.iA.accountid,
             { data: H } = (0, m.I)(M(l, e, c));
           return H === void 0 ? void 0 : H;
         }
         function P(c) {
           const l = (0, s.jE)(),
-            e = g.iA.accountid;
+            e = f.iA.accountid;
           return n.useCallback(
             (H) => {
               l.setQueryData(F(e), (o) =>
@@ -13115,9 +13128,9 @@
         function m() {
           return Number.parseInt(window.localStorage.getItem(n) || "0");
         }
-        function s(z, U, w) {
+        function s(S, U, w) {
           const O = m();
-          let I = `${z}dynamicstore/userdata/?id=${U}&cc=${w}&origin=${self.origin}`;
+          let I = `${S}dynamicstore/userdata/?id=${U}&cc=${w}&origin=${self.origin}`;
           return O && (I += `&v=${O}`), I;
         }
         function x() {
@@ -13136,13 +13149,13 @@
           m = t(35038),
           s = t(18735),
           x = t(32288),
-          z = t(72609),
+          S = t(72609),
           U = t(20194),
           w = t(68312);
         function O() {
           const c = (0, w.KV)(),
-            l = z.iA.accountid,
-            e = z.iA.country_code;
+            l = S.iA.accountid,
+            e = S.iA.country_code;
           return (0, U.I)(I(c, l, e));
         }
         function I(c, l, e) {
@@ -13160,7 +13173,7 @@
             staleTime: 3600 * 1e3,
           };
         }
-        function g() {
+        function f() {
           const c = useActiveServiceTransport(),
             l = UserConfig.accountid;
           return useQuery(M(c, l));
@@ -13207,7 +13220,7 @@
         }
         function F() {
           return {
-            preferences: { primary_language: (0, n.sfN)(z.TS.LANGUAGE) },
+            preferences: { primary_language: (0, n.sfN)(S.TS.LANGUAGE) },
             content_descriptor_preferences: {
               content_descriptors_to_exclude: d.map((c) => ({
                 content_descriptorid: c,
@@ -13226,16 +13239,16 @@
           m = t(67705),
           s = t(54528),
           x = t(20125),
-          z = t(98609);
+          S = t(98609);
         function U(w, O, I) {
-          const g = (0, s.$3)(),
-            T = z.iA.accountid;
+          const f = (0, s.$3)(),
+            T = S.iA.accountid;
           return (0, n.n)({
             mutationKey: ["useUpdateWishlist", w, T, O],
             mutationFn: async () => {
               if (w == null) return;
               const d =
-                  z.TS.STORE_BASE_URL +
+                  S.TS.STORE_BASE_URL +
                   "api/" +
                   (O ? "addtowishlist" : "removefromwishlist"),
                 M = new FormData();
@@ -13253,10 +13266,10 @@
                 );
             },
             onMutate: () => {
-              w != null && g(O ? [w] : void 0, O ? void 0 : [w]);
+              w != null && f(O ? [w] : void 0, O ? void 0 : [w]);
             },
             onError: () => {
-              w != null && g(O ? void 0 : [w], O ? [w] : void 0);
+              w != null && f(O ? void 0 : [w], O ? [w] : void 0);
             },
             onSuccess: () => {
               (0, x.WZ)();
@@ -13266,15 +13279,15 @@
       },
       54528: (V, Y, t) => {
         "use strict";
-        t.d(Y, { bB: () => g, $3: () => T, F0: () => O });
+        t.d(Y, { bB: () => f, $3: () => T, F0: () => O });
         var n = t(20194),
           m = t(75233),
           s = t(68312),
           x = t(72609),
-          z = t(20125),
+          S = t(20125),
           U = t(98609);
         async function w(M, B) {
-          const P = (0, z.Am)(U.TS.STORE_BASE_URL, B, U.iA.country_code);
+          const P = (0, S.Am)(U.TS.STORE_BASE_URL, B, U.iA.country_code);
           return (await (await fetch(P)).json()).rgWishlist || [];
         }
         function O() {
@@ -13293,7 +13306,7 @@
             staleTime: 600 * 1e3,
           };
         }
-        function g(M) {
+        function f(M) {
           const { data: B } = O();
           return B === void 0 || M == null ? void 0 : B.has(M);
         }
@@ -13321,12 +13334,12 @@
           m = t(58534),
           s = t(2801),
           x = t(88003),
-          z = t(36118),
+          S = t(36118),
           U = t(36707),
           w = t(18210),
           O = t(3166),
           I = t(54599),
-          g = t.n(I);
+          f = t.n(I);
         async function T(P, F) {
           const v = "steam://run/" + P;
           O.TS.IN_CLIENT
@@ -13358,7 +13371,7 @@
           const F = () => P.closeModal && P.closeModal();
           return (0, n.jsx)(s.x_, {
             onEscKeypress: F,
-            className: g().GotSteamDialog,
+            className: f().GotSteamDialog,
             children: (0, n.jsxs)(m.UC, {
               children: [
                 (0, n.jsxs)(m.Y9, {
@@ -13371,29 +13384,29 @@
                         "#GotSteam_PromptWithDownloadLink",
                         (0, n.jsx)("a", {
                           href: P.strDownloadSteamUrl,
-                          className: g().DownloadSteamUrl,
+                          className: f().DownloadSteamUrl,
                           children: (0, w.we)("#GotSteam_DownloadLinkText"),
                         }),
                         (0, n.jsx)("span", {
-                          className: g().GameName,
+                          className: f().GameName,
                           children: P.strGameName,
                         }),
                       ),
                     }),
                     (0, n.jsxs)("div", {
-                      className: g().Buttons,
+                      className: f().Buttons,
                       children: [
                         (0, n.jsxs)("a", {
                           href: P.strOnOKUrl,
                           onClick: F,
-                          className: (0, U.A)(g().Button, g().LeftButton),
+                          className: (0, U.A)(f().Button, f().LeftButton),
                           children: [
                             (0, n.jsxs)("div", {
-                              className: g().AnswerText,
+                              className: f().AnswerText,
                               children: [" ", (0, w.we)("#GotSteam_Yes"), " "],
                             }),
                             (0, n.jsxs)("div", {
-                              className: g().ActionText,
+                              className: f().ActionText,
                               children: [
                                 " ",
                                 (0, w.we)("#GotSteam_Yes_Play"),
@@ -13405,14 +13418,14 @@
                         (0, n.jsxs)("a", {
                           href: P.strDownloadSteamUrl,
                           onClick: F,
-                          className: g().Button,
+                          className: f().Button,
                           children: [
                             (0, n.jsxs)("div", {
-                              className: g().AnswerText,
+                              className: f().AnswerText,
                               children: [" ", (0, w.we)("#GotSteam_No"), " "],
                             }),
                             (0, n.jsxs)("div", {
-                              className: g().ActionText,
+                              className: f().ActionText,
                               children: [
                                 " ",
                                 (0, w.we)("#GotSteam_No_Download"),
@@ -13424,9 +13437,9 @@
                       ],
                     }),
                     (0, n.jsxs)("div", {
-                      className: g().Footer,
+                      className: f().Footer,
                       children: [
-                        (0, n.jsx)(z.Qte, { className: g().Logo }),
+                        (0, n.jsx)(S.Qte, { className: f().Logo }),
                         (0, w.we)("#GotSteam_Blurb"),
                       ],
                     }),
@@ -13444,12 +13457,12 @@
           m = t.n(n),
           s = t(14947),
           x = t(99412),
-          z = t(72604),
+          S = t(72604),
           U = t(34592),
           w = t(3166),
           O = t(82734),
           I = t(25294),
-          g = t(40497),
+          f = t(40497),
           T = t(3367),
           d = t(43462),
           M = t(20125),
@@ -13647,7 +13660,7 @@
           });
         }
         class K {
-          m_queryClient = g.L;
+          m_queryClient = f.L;
           m_boxCacheVersion = s.sH.box(0);
           m_bInitialized = !1;
           m_boxAjaxInFlight = s.sH.box(!1);
@@ -13689,10 +13702,10 @@
             return this.ReadData().rgCuratorsFollowed;
           }
           BIsFollowingCurator(W) {
-            return this.ReadData().setCuratorsFollowed.has(S(W));
+            return this.ReadData().setCuratorsFollowed.has(z(W));
           }
           BIsIgnoringCurator(W) {
-            return this.ReadData().setCuratorsIgnored.has(S(W));
+            return this.ReadData().setCuratorsIgnored.has(z(W));
           }
           get ExcludedContentDescriptor() {
             return this.ReadData().rgExcludedContentDescriptors;
@@ -13853,7 +13866,7 @@
             } finally {
               (0, s.h5)(() => this.m_boxAjaxInFlight.set(!1));
             }
-            return { success: z.zi };
+            return { success: S.zi };
           }
           async AddToCart(W, N, A, tr, ir, cr, wr) {
             if (
@@ -13902,7 +13915,7 @@
           }
           constructor() {}
         }
-        function S(b) {
+        function z(b) {
           return typeof b == "object" && "GetAccountID" in b
             ? b.GetAccountID()
             : Number(b);
@@ -13918,29 +13931,29 @@
         var n = t(7850),
           m = t(90626),
           s = t(80724);
-        function x(z) {
-          const { children: U, ...w } = z,
+        function x(S) {
+          const { children: U, ...w } = S,
             O = m.useRef(null);
-          return (0, n.jsx)(s.A, { nodeRef: O, ...w, children: z.children(O) });
+          return (0, n.jsx)(s.A, { nodeRef: O, ...w, children: S.children(O) });
         }
       },
       85705: (V, Y, t) => {
         "use strict";
-        t.d(Y, { k: () => z });
+        t.d(Y, { k: () => S });
         var n = t(7850),
           m = t(36707),
           s = t(37999),
           x = t.n(s);
-        function z(U) {
+        function S(U) {
           const { size: w, color: O, trackColor: I } = U,
-            g = { borderColor: I, borderLeftColor: O };
+            f = { borderColor: I, borderLeftColor: O };
           if (typeof w == "number") {
             const T = `${w}px`;
-            (g.width = T),
-              (g.height = T),
-              (g.minHeight = T),
-              (g.minWidth = T),
-              (g.borderWidth = `${w / 10}px`);
+            (f.width = T),
+              (f.height = T),
+              (f.minHeight = T),
+              (f.minWidth = T),
+              (f.borderWidth = `${w / 10}px`);
           }
           return (0, n.jsx)("div", {
             className: (0, m.A)(
@@ -13949,13 +13962,13 @@
               (w == "medium" || !w) && s.Medium,
               w == "large" && s.Large,
             ),
-            style: g,
+            style: f,
           });
         }
       },
       77200: (V, Y, t) => {
         "use strict";
-        t.d(Y, { w: () => z });
+        t.d(Y, { w: () => S });
         var n = t(7850),
           m = t(90626);
         const s = m.createContext({});
@@ -13963,18 +13976,18 @@
           const { children: w, ...O } = U;
           return jsx(s.Provider, { value: O, children: w });
         }
-        function z() {
+        function S() {
           return m.useContext(s);
         }
       },
       21659: (V, Y, t) => {
         "use strict";
-        t.d(Y, { c5: () => z, zI: () => U });
+        t.d(Y, { c5: () => S, zI: () => U });
         var n = t(90626),
           m = t(45387),
           s = t.n(m),
           x = t(54963);
-        function z() {
+        function S() {
           return window.innerWidth < parseInt(s().strMaxMobileWidth);
         }
         function U() {

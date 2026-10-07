@@ -2839,7 +2839,12 @@
               "GamePerformanceStats.GetGameFrameRateStats#1",
               (0, n2.I8)(Z, s, x),
               I,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+                rgBrowserAPISites: ["partner"],
+              },
             );
           }
           i.GetGameFrameRateStats = t;
