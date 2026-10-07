@@ -10,7 +10,7 @@
         g.r(ve),
           g.d(ve, {
             BroadcastEmbeddablePopoutHeader: () => Oi,
-            default: () => Mn,
+            default: () => Bn,
           });
         var n = g(7850),
           Wt = g(41735),
@@ -5421,22 +5421,22 @@
             });
           }
           d.GetChannels = ke;
-          function On(K, Y, J) {
+          function Dn(K, Y, J) {
             return K.SendMsg("SteamTV.AddChatBan#1", (0, v.I8)(bt, Y, J), Le, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }
-          d.AddChatBan = On;
-          function Dn(K, Y, J) {
+          d.AddChatBan = Dn;
+          function Wn(K, Y, J) {
             return K.SendMsg("SteamTV.GetChatBans#1", (0, v.I8)(ne, Y, J), qt, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }
-          d.GetChatBans = Dn;
-          function Wn(K, Y, J) {
+          d.GetChatBans = Wn;
+          function Fn(K, Y, J) {
             return K.SendMsg(
               "SteamTV.AddChatModerator#1",
               (0, v.I8)(E, Y, J),
@@ -5444,8 +5444,8 @@
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }
-          d.AddChatModerator = Wn;
-          function Fn(K, Y, J) {
+          d.AddChatModerator = Fn;
+          function An(K, Y, J) {
             return K.SendMsg(
               "SteamTV.GetChatModerators#1",
               (0, v.I8)(at, Y, J),
@@ -5453,37 +5453,37 @@
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }
-          d.GetChatModerators = Fn;
-          function An(K, Y, J) {
+          d.GetChatModerators = An;
+          function Sn(K, Y, J) {
             return K.SendMsg("SteamTV.AddWordBan#1", (0, v.I8)(o, Y, J), p, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }
-          d.AddWordBan = An;
-          function Sn(K, Y, J) {
+          d.AddWordBan = Sn;
+          function Nn(K, Y, J) {
             return K.SendMsg("SteamTV.GetWordBans#1", (0, v.I8)(B, Y, J), z, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }
-          d.GetWordBans = Sn;
-          function Nn(K, Y, J) {
+          d.GetWordBans = Nn;
+          function Un(K, Y, J) {
             return K.SendMsg("SteamTV.JoinChat#1", (0, v.I8)(F, Y, J), U, {
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }
-          d.JoinChat = Nn;
-          function Un(K, Y, J) {
+          d.JoinChat = Un;
+          function Pn(K, Y, J) {
             return K.SendMsg("SteamTV.Search#1", (0, v.I8)(tt, Y, J), ht, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }
-          d.Search = Un;
-          function Pn(K, Y, J) {
+          d.Search = Pn;
+          function En(K, Y, J) {
             return K.SendMsg(
               "SteamTV.GetSteamTVUserSettings#1",
               (0, v.I8)(yt, Y, J),
@@ -5491,8 +5491,8 @@
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }
-          d.GetSteamTVUserSettings = Pn;
-          function En(K, Y, J) {
+          d.GetSteamTVUserSettings = En;
+          function Ln(K, Y, J) {
             return K.SendMsg(
               "SteamTV.SetSteamTVUserSettings#1",
               (0, v.I8)(Ot, Y, J),
@@ -5500,8 +5500,8 @@
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }
-          d.SetSteamTVUserSettings = En;
-          function Ln(K, Y, J) {
+          d.SetSteamTVUserSettings = Ln;
+          function Hn(K, Y, J) {
             return K.SendMsg(
               "SteamTV.GetMyBroadcastChannels#1",
               (0, v.I8)(l, Y, J),
@@ -5509,8 +5509,8 @@
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }
-          d.GetMyBroadcastChannels = Ln;
-          function Hn(K, Y, J) {
+          d.GetMyBroadcastChannels = Hn;
+          function kn(K, Y, J) {
             return K.SendMsg(
               "SteamTV.GetHomePageContents#1",
               (0, v.I8)(Ne, Y, J),
@@ -5518,14 +5518,14 @@
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }
-          d.GetHomePageContents = Hn;
-          function kn(K, Y, J) {
+          d.GetHomePageContents = kn;
+          function Xn(K, Y, J) {
             return K.SendMsg("SteamTV.AppCheer#1", (0, v.I8)(me, Y, J), fe, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }
-          d.AppCheer = kn;
+          d.AppCheer = Xn;
         })(cr || (cr = {}));
         var We = g(27066),
           dr = g(8323),
@@ -6411,8 +6411,8 @@
         const ci = 0,
           Fi = 1,
           Ai = 2,
-          Xn = 3;
-        function Kn(d) {
+          Kn = 3;
+        function Yn(d) {
           return "unknown EClientExecutionSite ( " + d + " )";
         }
         class ar extends f.Message {
@@ -8769,26 +8769,27 @@
           Vr = g(88003),
           Cr = g(1317),
           ns = g(94276),
-          as = g(8059),
-          os = g(2801);
+          as = g(62179),
+          os = g(8059),
+          ls = g(2801);
         function _r(d) {
           return (0, n.jsx)(Vr.x_, {
             onEscKeypress: d.closeModal,
             bDisableBackgroundDismiss: !0,
-            children: (0, n.jsx)(cs, {
+            children: (0, n.jsx)(ds, {
               redirectURL: d.redirectURL,
               guestOption: d.guestOption,
             }),
           });
         }
-        function Yn(d) {
+        function Jn(d) {
           const { redirectURL: t = window.location.href } = d;
           return jsx(SimpleModal, {
             active: !0,
             children: jsx(_r, { redirectURL: t }),
           });
         }
-        function ls() {
+        function cs() {
           (0, Vr.pg)(
             (0, n.jsx)(_r, {
               ownerWin: window,
@@ -8798,21 +8799,23 @@
             { strTitle: (0, P.we)("#Login_SignInTitle") },
           );
         }
-        function Jn(d, t) {
+        function $n(d, t) {
           ShowModalDialog(
             jsx(_r, { ownerWin: window, redirectURL: d, guestOption: t }),
             window,
             { strTitle: Localize("#Login_SignInTitle") },
           );
         }
-        function cs(d) {
+        function ds(d) {
           const { redirectURL: t, guestOption: e } = d,
             [s] = (0, lt.useState)(
-              new Oe.D(N.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+              new as.x(
+                new Oe.D(N.TS.WEBAPI_BASE_URL),
+              ).GetAnonymousServiceTransport(),
             ),
             [a, u] = (0, lt.useState)(!1),
             h = (I) => {
-              I == as.wI.k_PrimaryDomainFail
+              I == os.wI.k_PrimaryDomainFail
                 ? u(!0)
                 : window.location.assign(t);
             };
@@ -8830,17 +8833,17 @@
                 }),
           });
         }
-        var ds = g(44814),
-          us = g(33543),
-          kr = g.n(us);
-        const ms = () =>
+        var us = g(44814),
+          ms = g(33543),
+          kr = g.n(ms);
+        const fs = () =>
             (0, n.jsx)("div", {
               className: kr().FriendsListInsetShadowCtn,
               children: (0, n.jsx)("div", {
                 className: kr().FriendListInsetShadowTop,
               }),
             }),
-          fs = () =>
+          hs = () =>
             (0, n.jsx)("div", {
               className: kr().FriendsListInsetShadowCtn,
               children: (0, n.jsx)("div", {
@@ -8849,20 +8852,20 @@
             });
         var Ke = g(36118),
           Dt = g(36707),
-          hs = g(63508),
-          jt = g.n(hs),
+          gs = g(63508),
+          jt = g.n(gs),
           je = g(22950),
           bi = g(29630),
-          gs = Object.defineProperty,
-          ps = Object.getOwnPropertyDescriptor,
+          ps = Object.defineProperty,
+          bs = Object.getOwnPropertyDescriptor,
           Ye = (d, t, e, s) => {
             for (
-              var a = s > 1 ? void 0 : s ? ps(t, e) : t, u = d.length - 1, h;
+              var a = s > 1 ? void 0 : s ? bs(t, e) : t, u = d.length - 1, h;
               u >= 0;
               u--
             )
               (h = d[u]) && (a = (s ? h(t, e, a) : h(a)) || a);
-            return s && a && gs(t, e, a), a;
+            return s && a && ps(t, e, a), a;
           };
         const mr = class Di {
           constructor() {
@@ -9028,13 +9031,13 @@
           Ye([We.o], Sr.prototype, "ClearCountDown", 1),
           Ye([We.o], Sr.prototype, "SetupRefreshDataInterval", 1),
           Ye([We.o], Sr.prototype, "SetupCountDown", 1);
-        let bs = Sr;
+        let ys = Sr;
         function yi(d, t) {
           const e = Ar.Get().GetInfoByInstance(d, t.m_myInstanceNumber);
           (e.seconds_until_drawing -= 1),
             e.seconds_until_drawing == 0 && t.ClearCountDown();
         }
-        function ys(d, t) {
+        function ws(d, t) {
           const e = Ar.Get().GetInfoByInstance(d, t.m_myInstanceNumber);
           e &&
             e.BIsValid() &&
@@ -9047,15 +9050,15 @@
                 t.SetupCountDown(s.seconds_until_drawing, () => yi(d, t));
               }));
         }
-        function ws(d) {
-          const [t] = (0, lt.useState)(new bs()),
+        function Ms(d) {
+          const [t] = (0, lt.useState)(new ys()),
             e = (0, ze.CH)();
           (0, lt.useEffect)(
             () => (
               Ar.Get()
                 .ReloadGiveaway(d, t.m_myInstanceNumber)
                 .then((I) => {
-                  t.SetupRefreshDataInterval(I, () => ys(d, t)),
+                  t.SetupRefreshDataInterval(I, () => ws(d, t)),
                     t.SetupCountDown(I.seconds_until_drawing, () => yi(d, t)),
                     e();
                 }),
@@ -9079,12 +9082,12 @@
             seconds_until_drawing: h,
           };
         }
-        var Ms = g(11587),
+        var Bs = g(11587),
           Xr = g(53107),
           wi = g(53113),
-          Bs = g(8287),
-          He = g.n(Bs);
-        function vs(d) {
+          vs = g(8287),
+          He = g.n(vs);
+        function Is(d) {
           const { latestAnnouncement: t } = d;
           return t?.type == "giveaway_draw"
             ? (0, n.jsx)(Mi, { latestWinner: t })
@@ -9107,7 +9110,7 @@
             Be = (0, wi.L$)(
               `${bi.zU.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
             ),
-            Fe = ws(t.giveaway_gid);
+            Fe = Ms(t.giveaway_gid);
           let Ae =
             Fe.bLoadingGiveawayInfo || Fe.closed
               ? null
@@ -9181,7 +9184,7 @@
             }),
           });
         }
-        function Is(d, t) {
+        function zs(d, t) {
           const [e, s] = (0, kt.q3)(() => [
               t?.steamid,
               je.es.GetBroadcast(t?.steamid)?.m_ulBroadcastID,
@@ -9206,10 +9209,10 @@
           }
           return null;
         }
-        function zs(d) {
+        function js(d) {
           const { gidGiveaway: t, stream: e } = d,
-            s = Is(t, e),
-            a = (0, Ms.h3)("GameAwardDrop2022");
+            s = zs(t, e),
+            a = (0, Bs.h3)("GameAwardDrop2022");
           let u = null,
             h = He().GiveawayRegisterButton;
           return (
@@ -9230,24 +9233,24 @@
           );
         }
         var Je = g(71421),
-          js = Object.defineProperty,
-          xs = Object.getOwnPropertyDescriptor,
+          xs = Object.defineProperty,
+          Os = Object.getOwnPropertyDescriptor,
           Mr = (d, t, e, s) => {
             for (
-              var a = s > 1 ? void 0 : s ? xs(t, e) : t, u = d.length - 1, h;
+              var a = s > 1 ? void 0 : s ? Os(t, e) : t, u = d.length - 1, h;
               u >= 0;
               u--
             )
               (h = d[u]) && (a = (s ? h(t, e, a) : h(a)) || a);
-            return s && a && js(t, e, a), a;
+            return s && a && xs(t, e, a), a;
           };
         const Bi = new RegExp("\u02D0([^\u02D0]*)\u02D0", "g"),
-          $n = null,
-          Os = new RegExp(
+          Zn = null,
+          Ds = new RegExp(
             "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
             "i",
           );
-        function Ds(d, t, e) {
+        function Ws(d, t, e) {
           return e
             ? "presenter"
             : t.GetBroadcastSteamID() === d
@@ -9256,11 +9259,11 @@
                 ? "moderator"
                 : "";
         }
-        const Ws = (d) => {
+        const Fs = (d) => {
             const { userType: t, msg: e, presenterInfo: s } = d;
             if (t === "presenter")
               return (0, n.jsx)("span", {
-                children: (0, n.jsx)(ds.fI, {
+                children: (0, n.jsx)(us.fI, {
                   name: s.name,
                   title: s.title,
                   photo: s.photo,
@@ -9297,7 +9300,7 @@
               );
             }
           },
-          Fs = (d) => {
+          As = (d) => {
             switch (d.userType) {
               case "presenter":
                 return (0, n.jsx)(Je.Gq, {
@@ -9377,7 +9380,7 @@
             }
           }
           IsTrustedDomain(d) {
-            return !!d.match(Os);
+            return !!d.match(Ds);
           }
           AddLinksEmoticons(d, t) {
             let e = Bi;
@@ -9607,21 +9610,21 @@
           }
           RenderUserChatLine(d, t, e) {
             let s = e ? e.get(d.steamid) : void 0;
-            const a = d.type === _.X8.Chat ? Ds(d.steamid, this.m_chat, s) : "";
+            const a = d.type === _.X8.Chat ? Ws(d.steamid, this.m_chat, s) : "";
             return (0, n.jsxs)(
               "div",
               {
                 className: this.GetTypeClassName(d),
                 onContextMenu: (u) => this.OnContextMenu(u, d),
                 children: [
-                  d.type === _.X8.Chat && (0, n.jsx)(Fs, { userType: a }),
+                  d.type === _.X8.Chat && (0, n.jsx)(As, { userType: a }),
                   d.flair &&
                     (0, n.jsx)("span", {
                       className: jt().FlairContainer,
                       children: this.AddLinksEmoticons(d.flair, !1),
                     }),
                   d.type === _.X8.Chat &&
-                    (0, n.jsx)(Ws, { userType: a, msg: d, presenterInfo: s }),
+                    (0, n.jsx)(Fs, { userType: a, msg: d, presenterInfo: s }),
                   d.type === _.X8.Chat &&
                     this.m_chat.GetBroadcastSteamID() === d.steamid &&
                     (0, n.jsx)("span", {
@@ -9664,7 +9667,7 @@
               className: (0, Dt.A)(jt().ChatPanel, "ChatPanel"),
               style: d ? { display: "none" } : void 0,
               children: [
-                (0, n.jsx)(vs, { latestAnnouncement: h }),
+                (0, n.jsx)(Is, { latestAnnouncement: h }),
                 e &&
                   !!this.m_chat &&
                   (0, n.jsx)(vi, {
@@ -9672,7 +9675,7 @@
                     emoticonStore: this.props.emoticonStore,
                     bPartnerMemberOnlyChat: t,
                   }),
-                (0, n.jsx)(ms, {}),
+                (0, n.jsx)(fs, {}),
                 (0, n.jsx)("div", {
                   className: (0, Dt.A)(
                     `${jt().ChatMessages} ${ur().minHeightZero}`,
@@ -9682,7 +9685,7 @@
                   ref: this.messagesContainer,
                   children: a.map((I, S) => this.RenderUserChatLine(I, S, u)),
                 }),
-                (0, n.jsx)(fs, {}),
+                (0, n.jsx)(hs, {}),
                 !e &&
                   !!this.m_chat &&
                   (0, n.jsx)(vi, {
@@ -9703,12 +9706,12 @@
         function vi(d) {
           const { oChat: t, emoticonStore: e, bPartnerMemberOnlyChat: s } = d;
           return s && (!N.iA?.logged_in || !N.iA?.is_partner_member)
-            ? (0, n.jsx)(Us, {})
+            ? (0, n.jsx)(Ps, {})
             : N.iA?.logged_in
-              ? (0, n.jsx)(As, { oChat: t, emoticonStore: e })
+              ? (0, n.jsx)(Ss, { oChat: t, emoticonStore: e })
               : null;
         }
-        function As(d) {
+        function Ss(d) {
           const { oChat: t, emoticonStore: e } = d,
             [s, a] = lt.useState(""),
             u = lt.useRef(void 0),
@@ -9753,7 +9756,7 @@
                       ref: u,
                     }),
                     h &&
-                      (0, n.jsx)(Ns, {
+                      (0, n.jsx)(Us, {
                         nSeconds: t.m_nRateLimitSeconds,
                         bRateLimited: t.m_bRateLimited,
                       }),
@@ -9778,7 +9781,7 @@
                         rtLastAckedNewEmoticons: Number.MAX_VALUE,
                         emoticonStore: e,
                       }),
-                      (0, n.jsx)(Ss, { ...d, textInputRef: u }),
+                      (0, n.jsx)(Ns, { ...d, textInputRef: u }),
                     ],
                   }),
                 }),
@@ -9786,7 +9789,7 @@
             }),
           });
         }
-        function Ss(d) {
+        function Ns(d) {
           const { oChat: t, emoticonStore: e, textInputRef: s } = d;
           return t.m_strFlairGroupID &&
             e.flair_list &&
@@ -9804,7 +9807,7 @@
               })
             : null;
         }
-        class Ns extends lt.Component {
+        class Us extends lt.Component {
           render() {
             return (0, n.jsx)("div", {
               className: jt().TimedProgressBarContainer,
@@ -9834,7 +9837,7 @@
             });
           }
         }
-        function Us(d) {
+        function Ps(d) {
           return (0, n.jsxs)("div", {
             className: jt().Description,
             children: [
@@ -9844,38 +9847,38 @@
               }),
               !N.iA.logged_in &&
                 (0, n.jsx)(is.$n, {
-                  onClick: ls,
+                  onClick: cs,
                   className: (0, Dt.A)(jt().SignInButton),
                   children: (0, P.we)("#Login_SignIn"),
                 }),
             ],
           });
         }
-        var Ps = g(73110),
-          Es = g(83482),
-          Ls = g(3367),
-          Hs = g(84676),
+        var Es = g(73110),
+          Ls = g(83482),
+          Hs = g(3367),
+          ks = g(84676),
           Kr = g(76532),
           Yr = g(95414),
-          ks = g(4705),
-          Xs = g(72865),
-          Ks = g(85599),
-          Ys = g(43087),
-          ri = g.n(Ys),
+          Xs = g(4705),
+          Ks = g(72865),
+          Ys = g(85599),
+          Js = g(43087),
+          ri = g.n(Js),
           ii = g(29522),
           Br = g(40358),
-          Js = g(47875),
+          $s = g(47875),
           Ii = g(21721),
-          $s = g(3348);
-        const Zs = (0, H.PA)((d) => {
+          Zs = g(3348);
+        const Qs = (0, H.PA)((d) => {
           const { appid: t } = d,
-            e = (0, Xs.n9)(),
+            e = (0, Ks.n9)(),
             s = (0, lt.useRef)({ include_assets: !0, include_release: !0 }),
             a = (0, ii.$5)(t),
             { data: u } = (0, Br.J$)(a),
             { data: h } = (0, Br.lv)(a),
             { data: I } = (0, Br.by)(a),
-            [S, G] = (0, Hs.t7)(t, s.current);
+            [S, G] = (0, ks.t7)(t, s.current);
           let Be = (0, Dt.A)(
               ri().StoreSaleWidgetContainer_mini,
               "StoreSaleWidgetContainer_mini",
@@ -9885,14 +9888,14 @@
           if (u == null)
             return (0, n.jsx)("div", {
               className: Be,
-              children: (0, n.jsx)(Ks.t, { size: "medium" }),
+              children: (0, n.jsx)(Ys.t, { size: "medium" }),
             });
           if (u == null || !u.name)
             return (0, n.jsx)("div", {
               className: Kr.StoreSaleWidgetEmptyContainer,
             });
-          const Se = u.type != Ls.uE.gQ,
-            Ve = (0, Es.wJ)((0, Js._)(u), e);
+          const Se = u.type != Hs.uE.gQ,
+            Ve = (0, Ls.wJ)((0, $s._)(u), e);
           return (0, n.jsxs)("div", {
             className: Be,
             children: [
@@ -9933,9 +9936,9 @@
                   I &&
                     (0, n.jsx)("div", {
                       className: Kr.StoreSaleWidgetRelease,
-                      children: (0, $s.CC)(I),
+                      children: (0, Zs.CC)(I),
                     }),
-                  !!Se && (0, n.jsx)(ks.w, { id: a, bShowDemoButton: !0 }),
+                  !!Se && (0, n.jsx)(Xs.w, { id: a, bShowDemoButton: !0 }),
                 ],
               }),
             ],
@@ -9948,25 +9951,25 @@
         var fr = g(61639),
           si = g(32288),
           Jr = g(10142),
-          Qs = g(28462),
+          Rs = g(28462),
           $r = g(34592),
           ir = g(34032),
-          Rs = Object.defineProperty,
-          Ts = Object.getOwnPropertyDescriptor,
+          Ts = Object.defineProperty,
+          Gs = Object.getOwnPropertyDescriptor,
           sr = (d, t, e, s) => {
             for (
-              var a = s > 1 ? void 0 : s ? Ts(t, e) : t, u = d.length - 1, h;
+              var a = s > 1 ? void 0 : s ? Gs(t, e) : t, u = d.length - 1, h;
               u >= 0;
               u--
             )
               (h = d[u]) && (a = (s ? h(t, e, a) : h(a)) || a);
-            return s && a && Rs(t, e, a), a;
+            return s && a && Ts(t, e, a), a;
           };
-        let Gs = !1;
+        let qs = !1;
         function ni(d) {
           return !!(d && d.thumbnail_http_address);
         }
-        function Zn(d, t) {
+        function Qn(d, t) {
           if (t || d) {
             const e = t || d;
             return !!(e && xe.Get().BIsAppStreaming(e));
@@ -10373,7 +10376,7 @@
                 t.bIsPreview && t.accountIDs
                   ? t.accountIDs.slice().sort().join(",")
                   : void 0,
-              test: Gs,
+              test: qs,
               cc: N.TS.COUNTRY,
               l: N.TS.LANGUAGE,
               hubtype: t.event?.GetContentHubType(),
@@ -10421,7 +10424,7 @@
         function Ir(d) {
           return d.current_selection_priority || ir.mY.k_eGeneral;
         }
-        function qs(d) {
+        function Vs(d) {
           d.sort((t, e) =>
             Ir(t) != Ir(e)
               ? Ir(e) - Ir(t)
@@ -10441,15 +10444,15 @@
               );
           }
         }
-        const Vs = new Qs.T();
-        var Cs = g(23627),
-          _s = g(39239),
-          tn = g(90405),
+        const Cs = new Rs.T();
+        var _s = g(23627),
+          tn = g(39239),
+          en = g(90405),
           zi = g(19730),
           ji = g(16512),
-          en = g(53120),
-          Z = g.n(en);
-        const rn = (0, H.PA)((d) => {
+          rn = g(53120),
+          Z = g.n(rn);
+        const sn = (0, H.PA)((d) => {
           const { event: t } = d,
             e = t.clanSteamID.GetAccountID(),
             s = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
@@ -10514,17 +10517,17 @@
             }),
           });
         });
-        var sn = g(95695),
-          hr = g.n(sn),
-          nn = g(96715),
-          an = g(10886),
-          on = g(19654),
-          ln = g(3209),
-          cn = g(14256),
-          rr = g.n(cn);
-        function dn(d) {
+        var nn = g(95695),
+          hr = g.n(nn),
+          an = g(96715),
+          on = g(10886),
+          ln = g(19654),
+          cn = g(3209),
+          dn = g(14256),
+          rr = g.n(dn);
+        function un(d) {
           const { steamid: t, closeModal: e } = d;
-          return (0, n.jsxs)(os.o0, {
+          return (0, n.jsxs)(ls.o0, {
             strDescription: "",
             strTitle: (0, P.we)("#Button_Share"),
             onCancel: e,
@@ -10532,14 +10535,14 @@
             bAlertDialog: !0,
             modalClassName: "EventDisplay_Share_Dialog",
             children: [
-              (0, n.jsx)(un, { steamid: t }),
               (0, n.jsx)(mn, { steamid: t }),
+              (0, n.jsx)(fn, { steamid: t }),
             ],
           });
         }
-        function un(d) {
+        function mn(d) {
           const { steamid: t } = d,
-            e = fn(t);
+            e = hn(t);
           return (0, n.jsxs)("div", {
             className: (0, Dt.A)(
               hr().FlexRowContainer,
@@ -10553,7 +10556,7 @@
                   className: rr().ShareBtn,
                   children: (0, n.jsx)("img", {
                     className: (0, Dt.A)(hr().Button),
-                    src: an.A,
+                    src: on.A,
                   }),
                 }),
               }),
@@ -10564,7 +10567,7 @@
                   className: rr().ShareBtn,
                   children: (0, n.jsx)("img", {
                     className: (0, Dt.A)(hr().Button),
-                    src: ln.A,
+                    src: cn.A,
                   }),
                 }),
               }),
@@ -10575,14 +10578,14 @@
                   className: rr().ShareBtn,
                   children: (0, n.jsx)("img", {
                     className: (0, Dt.A)(hr().Button),
-                    src: on.A,
+                    src: ln.A,
                   }),
                 }),
               }),
             ],
           });
         }
-        function mn(d) {
+        function fn(d) {
           const { steamid: t } = d,
             e = lt.createRef(),
             [s, a] = lt.useState(""),
@@ -10634,7 +10637,7 @@
                         ),
                         children: (0, n.jsx)("img", {
                           className: rr().ClipboardIcon,
-                          src: nn.A,
+                          src: an.A,
                         }),
                       }),
                     }),
@@ -10648,7 +10651,7 @@
             ],
           });
         }
-        function fn(d) {
+        function hn(d) {
           const t = N.TS.COMMUNITY_BASE_URL + "broadcast/share/" + d;
           return {
             strFacebookUrl: t + "?site=facebook&t=" + Math.random(),
@@ -10656,20 +10659,20 @@
             strRedditUrl: t + "?site=reddit",
           };
         }
-        var hn = g(82734),
-          gn = g(37589),
-          pn = Object.defineProperty,
-          bn = Object.getOwnPropertyDescriptor,
+        var gn = g(82734),
+          pn = g(37589),
+          bn = Object.defineProperty,
+          yn = Object.getOwnPropertyDescriptor,
           qe = (d, t, e, s) => {
             for (
-              var a = s > 1 ? void 0 : s ? bn(t, e) : t, u = d.length - 1, h;
+              var a = s > 1 ? void 0 : s ? yn(t, e) : t, u = d.length - 1, h;
               u >= 0;
               u--
             )
               (h = d[u]) && (a = (s ? h(t, e, a) : h(a)) || a);
-            return s && a && pn(t, e, a), a;
+            return s && a && bn(t, e, a), a;
           };
-        const yn = {
+        const wn = {
           list: [
             { appid: 444090, url: "https://steam.tv/paladins" },
             { appid: 386360, url: "https://steam.tv/smite" },
@@ -10696,12 +10699,12 @@
             },
           ],
         };
-        function wn() {
+        function Mn() {
           const d = (0, N.Qn)();
           return !(0, N.Y2)() && !d;
         }
-        function Mn(d) {
-          return wn() ? (0, n.jsx)(gr, { ...d }) : null;
+        function Bn(d) {
+          return Mn() ? (0, n.jsx)(gr, { ...d }) : null;
         }
         let gr = class extends lt.Component {
           m_cancelSignal = O().CancelToken.source();
@@ -10828,11 +10831,11 @@
                 a >= I &&
                 (!this.props.event ||
                   !this.props.event.jsondata.broadcast_force_banner) &&
-                ((u = (0, n.jsx)(Zs, { appid: a }, "mini" + d.accountid)),
+                ((u = (0, n.jsx)(Qs, { appid: a }, "mini" + d.accountid)),
                 (e.bRightPanelArtworkOrEmpty = !1)),
               s && !t
                 ? ((e.leftPanel = (0, n.jsx)(
-                    In,
+                    zn,
                     {
                       broadcastEmbedContext: this.props,
                       curStream: d,
@@ -10845,7 +10848,7 @@
                   (e.rightPanel = u))
                 : t
                   ? ((e.leftPanel = (0, n.jsx)("div", {})),
-                    (e.rightPanel = (0, n.jsx)(xn, {
+                    (e.rightPanel = (0, n.jsx)(On, {
                       stream: d,
                       orientation: "rightside",
                     })),
@@ -10911,7 +10914,7 @@
                             "bordered_title_trgt",
                           ),
                           children: [
-                            (0, n.jsx)(Cs.K, {}),
+                            (0, n.jsx)(_s.K, {}),
                             (0, n.jsx)("div", {
                               className: Z().streamTitle,
                               children: h,
@@ -10996,7 +10999,7 @@
                       e &&
                       e.jsondata &&
                       e.jsondata.broadcast_item_drops_enabled
-                    ) && (0, n.jsx)(rn, { event: e }),
+                    ) && (0, n.jsx)(sn, { event: e }),
                     (0, n.jsx)("div", { className: Z().clear_div }),
                   ],
                 }),
@@ -11040,7 +11043,7 @@
           render() {
             return (0, n.jsx)("div", {
               className: Z().wrapper,
-              children: (0, n.jsx)(gn.j, {
+              children: (0, n.jsx)(pn.j, {
                 onEnter: this.OnEnter,
                 onLeave: this.OnLeave,
                 onIntersectionChange: (t) => {
@@ -11064,7 +11067,7 @@
                       }),
                     (0, n.jsx)("div", {
                       className: Z().BroadcastPlayerContainer,
-                      children: (0, n.jsx)(Ps.default, {
+                      children: (0, n.jsx)(Es.default, {
                         steamIDBroadcast: this.props.stream.steamid,
                         watchLocation: ct.nn.fe,
                         bStartMuted: this.props.bStartMuted,
@@ -11083,11 +11086,11 @@
         qe([ze.oI], Zr.prototype, "CloseBroadcastPopup", 1),
           qe([ze.oI], Zr.prototype, "OnEnter", 1),
           qe([ze.oI], Zr.prototype, "OnLeave", 1);
-        function Bn(d) {
+        function vn(d) {
           const { stream: t } = d,
             [e] = (0, kt.q3)(() => [t.steamid]),
             s = je.es.GetOrCreateBroadcastInfo(e).m_nAppID,
-            a = yn.list.find(
+            a = wn.list.find(
               (u) =>
                 u.appid == s &&
                 (!u.broadcasterAccountID ||
@@ -11198,10 +11201,10 @@
                             className: Z().ChatToggle,
                             onClick: (u) =>
                               (0, Vr.pg)(
-                                (0, n.jsx)(dn, {
+                                (0, n.jsx)(un, {
                                   steamid: this.props.stream.steamid,
                                 }),
-                                (0, hn.uX)(u),
+                                (0, gn.uX)(u),
                               ),
                             children: (0, P.we)("#Broadcast_ShareBroadcast"),
                           }),
@@ -11220,11 +11223,11 @@
                         children: (0, n.jsx)(Ke.wB_, {}),
                       }),
                     }),
-                    e && (0, n.jsx)(Bn, { ...this.props }),
+                    e && (0, n.jsx)(vn, { ...this.props }),
                   ],
                 }),
                 !!this.props.chatAnnouncementGivewayGID &&
-                  (0, n.jsx)(zs, {
+                  (0, n.jsx)(js, {
                     gidGiveaway: this.props.chatAnnouncementGivewayGID,
                     stream: this.props.stream,
                   }),
@@ -11283,7 +11286,7 @@
             ],
           });
         });
-        function vn(d, t) {
+        function In(d, t) {
           const e = je.es.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
             s = Jr.A.Get().GetApp(e),
             a = d && s?.GetAssets()?.GetHeaderURL();
@@ -11293,7 +11296,7 @@
               : Z().strStreamIconScreenshotArtHeight,
           );
         }
-        function In(d) {
+        function zn(d) {
           const {
               curStream: t,
               onStreamSelect: e,
@@ -11307,7 +11310,7 @@
                 .Get()
                 .GetStreams(u)
                 .filter((G) => !s || s(G));
-              return qs(S), S;
+              return Vs(S), S;
             }, [u, s]);
           return (
             (0, lt.useEffect)(() => {
@@ -11322,7 +11325,7 @@
                       let G = 0;
                       for (const Be of I) {
                         if (t.accountid == Be.accountid) break;
-                        G += vn(a, Be);
+                        G += In(a, Be);
                       }
                       h.current.scrollTop = G;
                     }
@@ -11341,7 +11344,7 @@
                 className: Z().MultiStreamCtn,
                 children: I.map((S) =>
                   (0, n.jsx)(
-                    zn,
+                    jn,
                     {
                       stream: S,
                       bSelected: t.accountid == S.accountid,
@@ -11355,7 +11358,7 @@
             })
           );
         }
-        function zn(d) {
+        function jn(d) {
           const {
             onStreamSelect: t,
             bSelected: e,
@@ -11385,14 +11388,14 @@
               (0, n.jsx)(Yr.j, {
                 id: h,
                 hoverClassName: Z().StreamCapsule,
-                children: (0, n.jsx)(tn.K, {
+                children: (0, n.jsx)(en.K, {
                   className: (0, Dt.A)(
                     Z().stream_icon_container,
                     e && Z().stream_selected,
                   ),
                   onClick: () => t && t(s),
                   rootMargin: "100px 0px 100px 0px",
-                  children: (0, n.jsx)(jn, {
+                  children: (0, n.jsx)(xn, {
                     strThumbnail: s.thumbnail_http_address,
                     bSelected: e,
                     strCapsuleArtURL: G,
@@ -11416,7 +11419,7 @@
             ],
           });
         }
-        function jn(d) {
+        function xn(d) {
           const { strCapsuleArtURL: t, strThumbnail: e, bSelected: s } = d,
             a = s ? Z().stream_icon_selected : Z().stream_icon;
           if (t) {
@@ -11427,7 +11430,7 @@
                   className: (0, Dt.A)(a, Z().stream_icon_hide_on_hover),
                   src: t,
                 }),
-                (0, n.jsx)(_s.o, {
+                (0, n.jsx)(tn.o, {
                   className: (0, Dt.A)(a, Z().stream_icon_show_on_hover),
                   srcs: u,
                 }),
@@ -11435,7 +11438,7 @@
             });
           } else return (0, n.jsx)("img", { className: a, src: e });
         }
-        function xn(d) {
+        function On(d) {
           const { stream: t, orientation: e } = d,
             s = e == "below",
             [a, u] = (0, kt.q3)(() => [
@@ -11453,7 +11456,7 @@
                 children: (0, n.jsx)("div", {
                   className: Z().ChatContainer,
                   children: (0, n.jsx)(or, {
-                    emoticonStore: Vs,
+                    emoticonStore: Cs,
                     watchLocation: ct.nn.fe,
                     steamID: h,
                     broadcastID: u,
