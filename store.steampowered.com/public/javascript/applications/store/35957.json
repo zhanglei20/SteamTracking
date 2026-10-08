@@ -1,5 +1,7 @@
 {
     "AchievementSpoilerName": "Pencapaian tersembunyi",
+    "AchievementSpoilerDescription": "Butiran untuk pencapaian ini akan didedahkan selepas anda telah membukanya",
+    "AchievementRareTooltip": "Kurang daripada 10% pemain yang berjaya membuka pencapaian unik",
     "Achievements_RareCount": "%1$s unik",
     "Achievements_RareCount_Plural": "%1$s unik",
     "Achievements_Header_FriendsAchievements": "Pencapaian %1$s",

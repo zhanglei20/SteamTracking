@@ -61,7 +61,6 @@
     "Reservation_Waitlist_NotSignedIn_Desc": "Liity jonotuslistalle kirjautumalla sisään Steamiin. Voit siirtyä kirjautumissivulle valitsemalla OK.",
     "Reservation_OnRegularReserveForModel": "Sinut on lisätty %1$s -varausjonoon",
     "Reservation_PostShuffle_TAndC": "Varauksia koskevat tietyt <1>varausehdot</1>.",
-    "machine_dummy": "testiteksti",
     "PriceDisplay_YourPrice": "Hinta:",
     "PriceGrid_NormalPrice": "NORMAALIHINTA",
     "PriceGrid_RecentPrice": "30 PÄIVÄN ALIN",

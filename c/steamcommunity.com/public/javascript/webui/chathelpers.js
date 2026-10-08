@@ -1096,7 +1096,7 @@ var CLSTAMP = "steamdb";
           (_.thai = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 4230, 19))),
           (_.turkish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 34792, 19))),
+            __webpack_require__._("chunkid").then(_._.bind(_, 12411, 19))),
           (_.ukrainian = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 27246, 19))),
           (_.vietnamese = () =>
@@ -2940,7 +2940,7 @@ var CLSTAMP = "steamdb";
         4750: "24e4ca1f254467d588cf",
         4776: "f38dfa6ffa46b34d7cf8",
         4787: "a239a31ed2a0881c02a4",
-        4792: "211e5410eb00e87b57c6",
+        4792: "6c43bfe3ae333c2e2976",
         4978: "e12551352d72b620632d",
         5040: "504695afe4a67b66e55d",
         5191: "3ac5a82179c46922513a",
@@ -3116,6 +3116,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(82102));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(86906));
   _ = _._(_);
 })();

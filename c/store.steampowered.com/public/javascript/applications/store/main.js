@@ -9302,6 +9302,30 @@
             preferenceControls: {
               isTechnicallyNecessary: !0,
             },
+          },
+          _ = {
+            name: "steamparental",
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "clientsessionid",
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
+          },
+          _ = {
+            name: "steambrowserredirect",
+            options: {
+              secure: !0,
+              httpOnly: !0,
+              path: "/",
+              sameSite: "lax",
+            },
+            preferenceControls: {
+              isTechnicallyNecessary: !0,
+            },
           };
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -66000,6 +66024,9 @@
         function _(_) {
           return "unknown EStoreQueryReleaseDateFilter ( " + _ + " )";
         }
+        function _(_) {
+          return "unknown EStoreQueryCompatDevice ( " + _ + " )";
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -66072,6 +66099,10 @@
                     },
                     discounted_dates_filter: {
                       _: 17,
+                      _: _,
+                    },
+                    compatibility_filter: {
+                      _: 18,
                       _: _,
                     },
                     content_descriptors_must_match: {
@@ -66635,6 +66666,76 @@
           }
           getClassName() {
             return "CStoreQueryFilters_DiscountedDatesFilter";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.device || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [2], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    device: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    categories: {
+                      _: 2,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CStoreQueryFilters_CompatibilityFilter";
           }
         }
         class _ extends _.Message {
@@ -77358,219 +77459,6 @@
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = ((_) => (
-            (_[(_.AnyController = 0)] = "AnyController"),
-            (_[(_.XboxController = 1)] = "XboxController"),
-            (_[(_.Ps3Controller = 2)] = "Ps3Controller"),
-            (_[(_.Ps4Controller = 3)] = "Ps4Controller"),
-            (_[(_.Ps5Controller = 4)] = "Ps5Controller"),
-            (_[(_.SwitchController = 5)] = "SwitchController"),
-            (_[(_.SteamController = 6)] = "SteamController"),
-            (_[(_.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
-            (_[(_.SteamDeckGalileo = 8)] = "SteamDeckGalileo"),
-            (_[(_.Switch2Controller = 9)] = "Switch2Controller"),
-            (_[(_.SteamControllerTriton = 10)] = "SteamControllerTriton"),
-            _
-          ))(_ || {});
-        const _ = {
-          any_controller: 0,
-          xbox_controller: 1,
-          ps3_controller: 2,
-          ps4_controller: 3,
-          ps5_controller: 4,
-          switch_controller: 5,
-          steam_controller: 6,
-          steam_deck_neptune: 7,
-          steam_deck_galileo: 8,
-          switch2_controller: 9,
-          steam_controller_triton: 10,
-        };
-        function _() {
-          const _ = [..._._.excluded_content_descriptors];
-          return {
-            bLoaded: !1,
-            setWishlist: new Set(),
-            rgWishlistInOrder: [],
-            setOwnedApps: new Set(),
-            setOwnedPackages: new Set(),
-            setExcludedTagIDs: new Set(),
-            rgExcludedTagIDsSorted: [],
-            setExcludedContentDescriptors: new Set(_),
-            rgExcludedContentDescriptors: _,
-            setRecommendedApps: new Set(),
-            rgRecommendedAppsInOrder: [],
-            mapIgnoredApps: new Map(),
-            mapIgnoredPackages: new Map(),
-            setCuratorsFollowed: new Set(),
-            rgCuratorsFollowed: [],
-            setCuratorsIgnored: new Set(),
-            mapRecommendingCuratorsForApp: new Map(),
-            setPreferredPlatforms: new Set(),
-            setHardwareUsed: new Set(),
-            rgRecommendedTags: [],
-            ePrimaryLanguage: _.xPp,
-            setSecondaryLanguages: new Set(),
-            bShowFilteredUserReviewScores: !0,
-            bAllowAppImpressions: !1,
-          };
-        }
-        let _;
-        function _() {
-          return (_ ??= _());
-        }
-        function _() {
-          return !!(0, _._)("wants_mature_content");
-        }
-        function _(_) {
-          const _ = _();
-          if (
-            ((_.bLoaded = !0),
-            _.rgCurators &&
-              ((_.rgCuratorsFollowed = Object.keys(_.rgCurators).map(Number)),
-              (_.setCuratorsFollowed = new Set(_.rgCuratorsFollowed))),
-            _.rgCuratorsIgnored &&
-              (_.setCuratorsIgnored = new Set(_.rgCuratorsIgnored.map(Number))),
-            _.rgWishlist &&
-              ((_.rgWishlistInOrder = _.rgWishlist.map(Number)),
-              (_.setWishlist = new Set(_.rgWishlistInOrder))),
-            _.rgOwnedApps &&
-              (_.setOwnedApps = new Set(_.rgOwnedApps.map(Number))),
-            _.rgOwnedPackages &&
-              (_.setOwnedPackages = new Set(_.rgOwnedPackages.map(Number))),
-            _.rgIgnoredApps && (_.mapIgnoredApps = _(_.rgIgnoredApps)),
-            _.rgIgnoredPackages &&
-              (_.mapIgnoredPackages = _(_.rgIgnoredPackages)),
-            _.rgExcludedTags &&
-              ((_.setExcludedTagIDs = new Set(
-                _.rgExcludedTags.map((_) => Number(_.tagid)),
-              )),
-              (_.rgExcludedTagIDsSorted = Array.from(
-                _.setExcludedTagIDs,
-              ).sort())),
-            _()
-              ? ((_.setExcludedContentDescriptors = new Set()),
-                (_.rgExcludedContentDescriptors = []))
-              : _.rgExcludedContentDescriptorIDs &&
-                ((_.rgExcludedContentDescriptors =
-                  _.rgExcludedContentDescriptorIDs.map((_) => Number(_))),
-                (_.setExcludedContentDescriptors = new Set(
-                  _.rgExcludedContentDescriptors,
-                ))),
-            _.rgRecommendedApps &&
-              ((_.rgRecommendedAppsInOrder = _.rgRecommendedApps.map(Number)),
-              (_.setRecommendedApps = new Set(_.rgRecommendedAppsInOrder))),
-            _.rgPreferredPlatforms &&
-              (_.setPreferredPlatforms = new Set(_.rgPreferredPlatforms)),
-            _.bAllowAppImpressions &&
-              (_.bAllowAppImpressions = _.bAllowAppImpressions),
-            (_.bShowFilteredUserReviewScores =
-              !!_.bShowFilteredUserReviewScores),
-            _.rgPrimaryLanguage !== void 0 &&
-              (_.ePrimaryLanguage = _.rgPrimaryLanguage),
-            _.rgSecondaryLanguages &&
-              (_.setSecondaryLanguages = new Set(_.rgSecondaryLanguages)),
-            _.rgRecommendedTags &&
-              (_.rgRecommendedTags = _.rgRecommendedTags.map((_) => _.tagid)),
-            _.rgCurations)
-          )
-            for (const _ of Object.keys(_.rgCurations)) {
-              const _ = [];
-              for (const _ of Object.keys(_.rgCurations[_]))
-                _.rgCurations[_][_] === _._._ && _.push(Number(_));
-              _.mapRecommendingCuratorsForApp.set(Number(_), _);
-            }
-          if (_.rgHardwareUsed)
-            for (const _ of _.rgHardwareUsed) {
-              const _ = _[_];
-              _ !== void 0 && _.setHardwareUsed.add(_);
-            }
-          return _;
-        }
-        function _(_) {
-          const _ = new Map();
-          for (const [_, _] of Object.entries(_)) {
-            const _ = Number(_);
-            _ && _.set(_, Number(_));
-          }
-          return _;
-        }
-        const _ = "dynamicuserdata";
-        function _(_) {
-          return [_, _];
-        }
-        function _(_) {
-          return _?.[0] == _;
-        }
-        async function _(_) {
-          try {
-            const _ = await fetch(
-              (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-              {
-                credentials: "include",
-              },
-            );
-            if (!_._) throw new Error(`Server returned ${_.status}`);
-            return _(await _.json());
-          } catch (_) {
-            return (
-              console.warn("LoadDynamicUserData", _),
-              (0, _._)().ReportError(new Error(`LoadDynamicUserData ${_}`), {
-                bIncludeMessageInIdentifier: !0,
-              }),
-              _()
-            );
-          }
-        }
-        function _() {
-          const _ = _._.accountid;
-          return {
-            queryKey: _(_),
-            queryFn: () => _(_),
-            staleTime: 1 / 0,
-            gcTime: 1 / 0,
-            retry: !1,
-            enabled: !0,
-          };
-        }
-        function _() {
-          return (0, _._)(_());
-        }
-        function _(_) {
-          return _.getQueryData(_(_._.accountid)) ?? _();
-        }
-        async function _(_) {
-          return _.fetchQuery(_());
-        }
-        function _(_, _) {
-          _.setQueryData(_(_._.accountid), (_) => {
-            if (!_) return;
-            const _ = _(_);
-            return _
-              ? {
-                  ..._,
-                  ..._,
-                }
-              : _;
-          });
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -83526,7 +83414,206 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = ((_) => (
+            (_[(_.AnyController = 0)] = "AnyController"),
+            (_[(_.XboxController = 1)] = "XboxController"),
+            (_[(_.Ps3Controller = 2)] = "Ps3Controller"),
+            (_[(_.Ps4Controller = 3)] = "Ps4Controller"),
+            (_[(_.Ps5Controller = 4)] = "Ps5Controller"),
+            (_[(_.SwitchController = 5)] = "SwitchController"),
+            (_[(_.SteamController = 6)] = "SteamController"),
+            (_[(_.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
+            (_[(_.SteamDeckGalileo = 8)] = "SteamDeckGalileo"),
+            (_[(_.Switch2Controller = 9)] = "Switch2Controller"),
+            (_[(_.SteamControllerTriton = 10)] = "SteamControllerTriton"),
+            _
+          ))(_ || {});
+        const _ = {
+          any_controller: 0,
+          xbox_controller: 1,
+          ps3_controller: 2,
+          ps4_controller: 3,
+          ps5_controller: 4,
+          switch_controller: 5,
+          steam_controller: 6,
+          steam_deck_neptune: 7,
+          steam_deck_galileo: 8,
+          switch2_controller: 9,
+          steam_controller_triton: 10,
+        };
+        function _() {
+          const _ = [..._._.excluded_content_descriptors];
+          return {
+            bLoaded: !1,
+            setWishlist: new Set(),
+            rgWishlistInOrder: [],
+            setOwnedApps: new Set(),
+            setOwnedPackages: new Set(),
+            setExcludedTagIDs: new Set(),
+            rgExcludedTagIDsSorted: [],
+            setExcludedContentDescriptors: new Set(_),
+            rgExcludedContentDescriptors: _,
+            setRecommendedApps: new Set(),
+            rgRecommendedAppsInOrder: [],
+            mapIgnoredApps: new Map(),
+            mapIgnoredPackages: new Map(),
+            setCuratorsFollowed: new Set(),
+            rgCuratorsFollowed: [],
+            setCuratorsIgnored: new Set(),
+            mapRecommendingCuratorsForApp: new Map(),
+            setPreferredPlatforms: new Set(),
+            setHardwareUsed: new Set(),
+            rgRecommendedTags: [],
+            ePrimaryLanguage: _.xPp,
+            setSecondaryLanguages: new Set(),
+            bShowFilteredUserReviewScores: !0,
+            bAllowAppImpressions: !1,
+          };
+        }
+        let _;
+        function _() {
+          return (_ ??= _());
+        }
+        function _() {
+          return !!(0, _._)("wants_mature_content");
+        }
+        function _(_) {
+          const _ = _();
+          if (
+            ((_.bLoaded = !0),
+            _.rgCurators &&
+              ((_.rgCuratorsFollowed = Object.keys(_.rgCurators).map(Number)),
+              (_.setCuratorsFollowed = new Set(_.rgCuratorsFollowed))),
+            _.rgCuratorsIgnored &&
+              (_.setCuratorsIgnored = new Set(_.rgCuratorsIgnored.map(Number))),
+            _.rgWishlist &&
+              ((_.rgWishlistInOrder = _.rgWishlist.map(Number)),
+              (_.setWishlist = new Set(_.rgWishlistInOrder))),
+            _.rgOwnedApps &&
+              (_.setOwnedApps = new Set(_.rgOwnedApps.map(Number))),
+            _.rgOwnedPackages &&
+              (_.setOwnedPackages = new Set(_.rgOwnedPackages.map(Number))),
+            _.rgIgnoredApps && (_.mapIgnoredApps = _(_.rgIgnoredApps)),
+            _.rgIgnoredPackages &&
+              (_.mapIgnoredPackages = _(_.rgIgnoredPackages)),
+            _.rgExcludedTags &&
+              ((_.setExcludedTagIDs = new Set(
+                _.rgExcludedTags.map((_) => Number(_.tagid)),
+              )),
+              (_.rgExcludedTagIDsSorted = Array.from(
+                _.setExcludedTagIDs,
+              ).sort())),
+            _()
+              ? ((_.setExcludedContentDescriptors = new Set()),
+                (_.rgExcludedContentDescriptors = []))
+              : _.rgExcludedContentDescriptorIDs &&
+                ((_.rgExcludedContentDescriptors =
+                  _.rgExcludedContentDescriptorIDs.map((_) => Number(_))),
+                (_.setExcludedContentDescriptors = new Set(
+                  _.rgExcludedContentDescriptors,
+                ))),
+            _.rgRecommendedApps &&
+              ((_.rgRecommendedAppsInOrder = _.rgRecommendedApps.map(Number)),
+              (_.setRecommendedApps = new Set(_.rgRecommendedAppsInOrder))),
+            _.rgPreferredPlatforms &&
+              (_.setPreferredPlatforms = new Set(_.rgPreferredPlatforms)),
+            _.bAllowAppImpressions &&
+              (_.bAllowAppImpressions = _.bAllowAppImpressions),
+            (_.bShowFilteredUserReviewScores =
+              !!_.bShowFilteredUserReviewScores),
+            _.rgPrimaryLanguage !== void 0 &&
+              (_.ePrimaryLanguage = _.rgPrimaryLanguage),
+            _.rgSecondaryLanguages &&
+              (_.setSecondaryLanguages = new Set(_.rgSecondaryLanguages)),
+            _.rgRecommendedTags &&
+              (_.rgRecommendedTags = _.rgRecommendedTags.map((_) => _.tagid)),
+            _.rgCurations)
+          )
+            for (const _ of Object.keys(_.rgCurations)) {
+              const _ = [];
+              for (const _ of Object.keys(_.rgCurations[_]))
+                _.rgCurations[_][_] === _._._ && _.push(Number(_));
+              _.mapRecommendingCuratorsForApp.set(Number(_), _);
+            }
+          if (_.rgHardwareUsed)
+            for (const _ of _.rgHardwareUsed) {
+              const _ = _[_];
+              _ !== void 0 && _.setHardwareUsed.add(_);
+            }
+          return _;
+        }
+        function _(_) {
+          const _ = new Map();
+          for (const [_, _] of Object.entries(_)) {
+            const _ = Number(_);
+            _ && _.set(_, Number(_));
+          }
+          return _;
+        }
+        const _ = "dynamicuserdata";
+        function _(_) {
+          return [_, _];
+        }
+        function _(_) {
+          return _?.[0] == _;
+        }
+        async function _(_) {
+          try {
+            const _ = await fetch(
+              (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+              {
+                credentials: "include",
+              },
+            );
+            if (!_._) throw new Error(`Server returned ${_.status}`);
+            return _(await _.json());
+          } catch (_) {
+            return (
+              console.warn("LoadDynamicUserData", _),
+              (0, _._)().ReportError(new Error(`LoadDynamicUserData ${_}`), {
+                bIncludeMessageInIdentifier: !0,
+              }),
+              _()
+            );
+          }
+        }
+        function _() {
+          const _ = _._.accountid;
+          return {
+            queryKey: _(_),
+            queryFn: () => _(_),
+            staleTime: 1 / 0,
+            gcTime: 1 / 0,
+            retry: !1,
+            enabled: !0,
+          };
+        }
+        function _() {
+          return (0, _._)(_());
+        }
+        function _(_) {
+          return _.getQueryData(_(_._.accountid)) ?? _();
+        }
+        async function _(_) {
+          return _.fetchQuery(_());
+        }
+        function _(_, _) {
+          _.setQueryData(_(_._.accountid), (_) => {
+            if (!_) return;
+            const _ = _(_);
+            return _
+              ? {
+                  ..._,
+                  ..._,
+                }
+              : _;
+          });
+        }
         class _ {
           m_queryClient = _._;
           m_boxCacheVersion = _._.box(0);
@@ -83539,7 +83626,7 @@
                 (_?.type != "added" &&
                   _?.type != "updated" &&
                   _?.type != "removed") ||
-                  ((0, _._)(_.query?.queryKey) &&
+                  (_(_.query?.queryKey) &&
                     (0, _._)(() =>
                       this.m_boxCacheVersion.set(
                         this.m_boxCacheVersion.get() + 1,
@@ -83551,7 +83638,7 @@
             return (
               this.LazyInit(),
               this.m_boxCacheVersion.get(),
-              (0, _._)(this.m_queryClient)
+              _(this.m_queryClient)
             );
           }
           BIsLoaded() {
@@ -83668,7 +83755,7 @@
             return this.ReadData().setPreferredPlatforms.has(_);
           }
           async HintLoad() {
-            return this.LazyInit(), await (0, _._)(this.m_queryClient), this;
+            return this.LazyInit(), await _(this.m_queryClient), this;
           }
           async UpdateFollowOrIgnoreCurator(_, _, _) {
             this.LazyInit();
@@ -83688,7 +83775,7 @@
               _ &&
                 _.status == 200 &&
                 (this.InvalidateCache(),
-                (0, _._)(this.m_queryClient, (_) => {
+                _(this.m_queryClient, (_) => {
                   const _ = new Set(
                     _ ? _.setCuratorsFollowed : _.setCuratorsIgnored,
                   );
@@ -83725,7 +83812,7 @@
                 _ &&
                   _.status == 200 &&
                   (this.InvalidateCache(),
-                  (0, _._)(this.m_queryClient, (_) => {
+                  _(this.m_queryClient, (_) => {
                     const _ = new Map(_.mapIgnoredApps);
                     return (
                       _ ? _.set(Number(_), _) : _.delete(Number(_)),
@@ -83789,7 +83876,7 @@
             );
           }
           static BConfirmedAdultContentAgeGate() {
-            return (0, _._)();
+            return _();
           }
           constructor() {}
         }
@@ -83799,7 +83886,7 @@
             : Number(_);
         }
         function _() {
-          const { isPending: _ } = (0, _._)();
+          const { isPending: _ } = _();
           return [_, _.Get()];
         }
       },
@@ -134929,7 +135016,9 @@ Status Code:` +
                       withCredentials: !0,
                     },
                   ),
-                  _ = await Promise.all([_, _, _, _]);
+                  _ = (await Promise.allSettled([_, _, _, _])).flatMap((_) =>
+                    _.status === "fulfilled" ? [_.value] : [],
+                  );
                 for (let _ of _)
                   if (!_.data.success && _.data.eresult != _._) {
                     _(""),
@@ -134943,6 +135032,12 @@ Status Code:` +
                       _.current.focus();
                     return;
                   }
+                if (!_.some((_) => _.data.success)) {
+                  _(""),
+                    _((0, _._)("#FamilyView_Unlock_ErrorUnknown", _._)),
+                    _.current.focus();
+                  return;
+                }
                 if (_) {
                   const _ = _.current.ownerDocument.getElementById(_);
                   _

@@ -4,35 +4,35 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [50970],
     {
-      71698: (ne, Se, s) => {
+      71698: (ne, fe, s) => {
         "use strict";
-        s.d(Se, { H: () => i, s: () => j });
+        s.d(fe, { H: () => i, s: () => j });
         var e = s(90626),
           P = s(41623);
         let f = 0;
-        function i(oe, L) {
+        function i(de, L) {
           (0, e.useEffect)(() => {
-            if (!(oe || L))
+            if (!(de || L))
               return (
                 f++,
                 () => {
                   --f == 0 && (0, P.s)();
                 }
               );
-          }, [oe, L]);
+          }, [de, L]);
         }
-        function j(oe) {
+        function j(de) {
           const [L, Q] = (0, e.useState)(!1);
           (0, e.useEffect)(() => {
-            const N = window.setTimeout(() => Q(!0), oe);
+            const N = window.setTimeout(() => Q(!0), de);
             return () => window.clearTimeout(N);
-          }, [oe]),
+          }, [de]),
             i(L);
         }
       },
-      94699: (ne, Se, s) => {
+      94699: (ne, fe, s) => {
         "use strict";
-        s.d(Se, {
+        s.d(fe, {
           w2: () => I,
           wN: () => w,
           Dw: () => G,
@@ -41,16 +41,16 @@
           bH: () => x,
         });
         var e = {};
-        s.r(e), s.d(e, { w4: () => oe });
+        s.r(e), s.d(e, { w4: () => de });
         var P = s(80613),
           f = s.n(P),
           i = s(75245),
           j = s(35038);
-        const oe = 0,
+        const de = 0,
           L = 1,
           Q = 2,
           N = 3;
-        function me(c) {
+        function ue(c) {
           return "unknown ENewsRecommendationState ( " + c + " )";
         }
         class U extends P.Message {
@@ -637,20 +637,20 @@
             return "CNews_PreviewPartnerEvents_Response";
           }
         }
-        class E extends P.Message {
+        class b extends P.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              E.prototype.clan_account_id || i.Sg(E.M()),
+              b.prototype.clan_account_id || i.Sg(b.M()),
               P.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              E.sm_m ||
-                (E.sm_m = {
-                  proto: E,
+              b.sm_m ||
+                (b.sm_m = {
+                  proto: b,
                   fields: {
                     clan_account_id: {
                       n: 1,
@@ -659,40 +659,40 @@
                     },
                   },
                 }),
-              E.sm_m
+              b.sm_m
             );
           }
           static MBF() {
-            return E.sm_mbf || (E.sm_mbf = i.w0(E.M())), E.sm_mbf;
+            return b.sm_mbf || (b.sm_mbf = i.w0(b.M())), b.sm_mbf;
           }
           toObject(t = !1) {
-            return E.toObject(t, this);
+            return b.toObject(t, this);
           }
           static toObject(t, l) {
-            return i.BT(E.M(), t, l);
+            return i.BT(b.M(), t, l);
           }
           static fromObject(t) {
-            return i.Uq(E.M(), t);
+            return i.Uq(b.M(), t);
           }
           static deserializeBinary(t) {
             let l = new (f().BinaryReader)(t),
-              h = new E();
-            return E.deserializeBinaryFromReader(h, l);
+              h = new b();
+            return b.deserializeBinaryFromReader(h, l);
           }
           static deserializeBinaryFromReader(t, l) {
-            return i.zj(E.MBF(), t, l);
+            return i.zj(b.MBF(), t, l);
           }
           serializeBinary() {
             var t = new (f().BinaryWriter)();
-            return E.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return b.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, l) {
-            i.i0(E.M(), t, l);
+            i.i0(b.M(), t, l);
           }
           serializeBase64String() {
             var t = new (f().BinaryWriter)();
             return (
-              E.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              b.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
@@ -1047,46 +1047,46 @@
         }
         var x;
         ((c) => {
-          function t(q, ue, ve) {
+          function t(q, ge, pe) {
             return q.SendMsg(
               "News.ConvertHTMLToBBCode#1",
-              (0, j.I8)(W, ue, ve),
+              (0, j.I8)(W, ge, pe),
               H,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }
           c.ConvertHTMLToBBCode = t;
-          function l(q, ue, ve) {
+          function l(q, ge, pe) {
             return q.SendMsg(
               "News.PreviewPartnerEvents#1",
-              (0, j.I8)(G, ue, ve),
+              (0, j.I8)(G, ge, pe),
               K,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
           c.PreviewPartnerEvents = l;
-          function h(q, ue, ve) {
+          function h(q, ge, pe) {
             return q.SendMsg(
               "News.GetNewsFeedByRepublishClan#1",
-              (0, j.I8)(E, ue, ve),
+              (0, j.I8)(b, ge, pe),
               X,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
           c.GetNewsFeedByRepublishClan = h;
-          function y(q, ue, ve) {
+          function y(q, ge, pe) {
             return q.SendMsg(
               "News.PublishPartnerEvent#1",
-              (0, j.I8)(z, ue, ve),
+              (0, j.I8)(z, ge, pe),
               M,
               { ePrivilege: 1 },
             );
           }
           c.PublishPartnerEvent = y;
-          function ee(q, ue, ve) {
+          function ee(q, ge, pe) {
             return q.SendMsg(
               "News.GetBatchPublishedPartnerEvent#1",
-              (0, j.I8)(w, ue, ve),
+              (0, j.I8)(w, ge, pe),
               u,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -1094,19 +1094,19 @@
           c.GetBatchPublishedPartnerEvent = ee;
         })(x || (x = {}));
       },
-      37656: (ne, Se, s) => {
+      37656: (ne, fe, s) => {
         "use strict";
-        s.d(Se, { w: () => M });
+        s.d(fe, { w: () => M });
         var e = s(41735),
           P = s.n(e),
           f = s(14947),
           i = s(65946),
           j = s(90626),
-          oe = s(27066),
+          de = s(27066),
           L = s(8323),
           Q = s(30096),
           N = s(3166),
-          me = Object.defineProperty,
+          ue = Object.defineProperty,
           U = Object.getOwnPropertyDescriptor,
           I = (w, u, x, c) => {
             for (
@@ -1115,9 +1115,9 @@
               l--
             )
               (h = w[l]) && (t = (c ? h(u, x, t) : h(t)) || t);
-            return c && t && me(u, x, t), t;
+            return c && t && ue(u, x, t), t;
           };
-        const W = class Xt {
+        const W = class Yt {
           constructor() {
             (0, f.Gn)(this);
           }
@@ -1137,7 +1137,7 @@
             );
           }
           clone() {
-            const u = new Xt();
+            const u = new Yt();
             return (
               (u.giveaway_id = this.giveaway_id),
               (u.seconds_until_drawing = this.seconds_until_drawing),
@@ -1156,7 +1156,7 @@
           I([f.sH], W.prototype, "closed", 2),
           I([f.sH], W.prototype, "winner_count", 2);
         let H = W;
-        const T = class qe {
+        const T = class tt {
           constructor() {
             (0, f.Gn)(this);
           }
@@ -1227,9 +1227,9 @@
           static s_Singleton;
           static Get() {
             return (
-              qe.s_Singleton ||
-                ((qe.s_Singleton = new qe()), qe.s_Singleton.Init()),
-              qe.s_Singleton
+              tt.s_Singleton ||
+                ((tt.s_Singleton = new tt()), tt.s_Singleton.Init()),
+              tt.s_Singleton
             );
           }
           Init() {
@@ -1247,14 +1247,14 @@
         I([f.sH], T.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
           I([f.XI], T.prototype, "CopyToGiveaway", 1);
         let G = T;
-        const K = class kt {
+        const K = class Wt {
           m_intervalID;
           m_intervalCountDownID;
           static s_GlobalInstance = 0;
           m_myInstanceNumber = 0;
           constructor() {
-            (this.m_myInstanceNumber = kt.s_GlobalInstance),
-              (kt.s_GlobalInstance += 1);
+            (this.m_myInstanceNumber = Wt.s_GlobalInstance),
+              (Wt.s_GlobalInstance += 1);
           }
           ClearRefreshInterval() {
             this.m_intervalID &&
@@ -1277,11 +1277,11 @@
             u > 0 && (this.m_intervalCountDownID = window.setInterval(x, 1e3));
           }
         };
-        I([oe.o], K.prototype, "ClearRefreshInterval", 1),
-          I([oe.o], K.prototype, "ClearCountDown", 1),
-          I([oe.o], K.prototype, "SetupRefreshDataInterval", 1),
-          I([oe.o], K.prototype, "SetupCountDown", 1);
-        let E = K;
+        I([de.o], K.prototype, "ClearRefreshInterval", 1),
+          I([de.o], K.prototype, "ClearCountDown", 1),
+          I([de.o], K.prototype, "SetupRefreshDataInterval", 1),
+          I([de.o], K.prototype, "SetupCountDown", 1);
+        let b = K;
         function X(w, u) {
           const x = G.Get().GetInfoByInstance(w, u.m_myInstanceNumber);
           (x.seconds_until_drawing -= 1),
@@ -1301,7 +1301,7 @@
               }));
         }
         function M(w) {
-          const [u] = (0, j.useState)(new E()),
+          const [u] = (0, j.useState)(new b()),
             x = (0, Q.CH)();
           (0, j.useEffect)(
             () => (
@@ -1333,26 +1333,26 @@
           };
         }
       },
-      35098: (ne, Se, s) => {
+      35098: (ne, fe, s) => {
         "use strict";
-        s.d(Se, { DW: () => I, js: () => me, mK: () => K, tb: () => G });
+        s.d(fe, { DW: () => I, js: () => ue, mK: () => K, tb: () => G });
         var e = s(90626),
           P = s(80902),
           f = s(54806),
           i = s(99412),
           j = s(68312),
-          oe = s(15369),
+          de = s(15369),
           L = s(5858),
           Q = s(76559),
           N = s(15860);
-        function me(M) {
+        function ue(M) {
           const w = (0, j.KV)(),
             u = e.useContext(T);
           return (0, P.I)(K(u, w, M));
         }
         function U(M) {
           const w = React.useRef(void 0),
-            u = me(M);
+            u = ue(M);
           return u.data
             ? u
             : (w.current ||
@@ -1396,9 +1396,9 @@
             enabled: !!x,
           };
         }
-        let E;
+        let b;
         function X(M) {
-          return (E ??= (0, N.c)(M));
+          return (b ??= (0, N.c)(M));
         }
         function z(M, w) {
           let u = new L.Z(M);
@@ -1408,7 +1408,7 @@
             (u.m_bInitialized = !!w),
             (u.m_ePersonaState = c?.persona_state ?? i.cU3),
             (u.m_strAvatarHash = x?.sha_digest_avatar
-              ? (0, oe.Kx)(x.sha_digest_avatar)
+              ? (0, de.Kx)(x.sha_digest_avatar)
               : L.dV),
             (u.m_strPlayerName = x?.persona_name ?? M.ConvertTo64BitString()),
             (u.m_strAccountName = c?.account_name),
@@ -1424,19 +1424,19 @@
           );
         }
       },
-      57223: (ne, Se, s) => {
+      57223: (ne, fe, s) => {
         "use strict";
-        s.d(Se, { A: () => c });
+        s.d(fe, { A: () => c });
         var e = s(41735),
           P = s.n(e),
           f = s(14947),
           i = s(3166),
           j = s(3685),
-          oe = s(35038),
+          de = s(35038),
           L = s(94699),
           Q = s(99412),
           N = s(72604),
-          me = s(76559),
+          ue = s(76559),
           U = s(77495);
         function I(t) {
           return "unknown EMsg ( " + t + " )";
@@ -1456,17 +1456,17 @@
         function K(t) {
           return "unknown ECodecUsageReason ( " + t + " )";
         }
-        var E = s(71742),
+        var b = s(71742),
           X = s(34592),
           z = Object.defineProperty,
           M = Object.getOwnPropertyDescriptor,
           w = (t, l, h, y) => {
             for (
-              var ee = y > 1 ? void 0 : y ? M(l, h) : l, q = t.length - 1, ue;
+              var ee = y > 1 ? void 0 : y ? M(l, h) : l, q = t.length - 1, ge;
               q >= 0;
               q--
             )
-              (ue = t[q]) && (ee = (y ? ue(l, h, ee) : ue(ee)) || ee);
+              (ge = t[q]) && (ee = (y ? ge(l, h, ee) : ge(ee)) || ee);
             return y && ee && z(l, h, ee), ee;
           };
         class u {
@@ -1482,7 +1482,7 @@
           constructor(l) {
             (0, f.Gn)(this),
               (this.m_clanAccountID = l.clanid),
-              (this.m_clanSteamID = me.b.InitFromClanID(this.m_clanAccountID)),
+              (this.m_clanSteamID = ue.b.InitFromClanID(this.m_clanAccountID)),
               (this.m_strRSSFeedURL = l.rss_feed_url),
               (this.m_strRSSGID = l.rss_feed_gid),
               (this.m_eRSSFeedLanguage = l.rss_feed_language),
@@ -1534,7 +1534,7 @@
                 ),
                 null
               );
-            const h = oe.w.Init(L.Dw);
+            const h = de.w.Init(L.Dw);
             h.Body().set_rss_url(l),
               h.Body().set_lang(this.GetFeedLanguageHandleUnset()),
               h.Body().set_clan_account_id(this.GetClanAccountID());
@@ -1565,7 +1565,7 @@
                 ),
                 null
               );
-            const h = oe.w.Init(L.wN);
+            const h = de.w.Init(L.wN);
             h.Body().set_news_feed_gid(this.m_strRSSGID),
               h.Body().set_amount(l);
             let y = await L.bH.GetBatchPublishedPartnerEvent(
@@ -1679,7 +1679,7 @@
               y.set_received_for_free(l.post.received_for_free),
               y.set_received_compensation(l.post.received_compensation),
               y.set_blurb(l.post.blurb);
-            const ee = oe.w.Init(L.vB);
+            const ee = de.w.Init(L.vB);
             ee.Body().set_post(y), ee.Body().set_draft(h);
             let q = await L.bH.PublishPartnerEvent(
               c.Get().GetCuratorTransport(),
@@ -1691,12 +1691,12 @@
                     "CreatePost error: " + q.GetEMsg() + " " + q.GetEResult(),
                   )
                 : ((0, f.h5)(() => {
-                    let ue = {
+                    let ge = {
                       url: l.post.url,
                       clan_event_gid: q.Body().clan_event_gid(),
                       news_post_gid: q.Body().news_post_gid(),
                     };
-                    this.m_mapURLToPosted.set(l.post.url, ue);
+                    this.m_mapURLToPosted.set(l.post.url, ge);
                   }),
                   U.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                     this.m_clanSteamID,
@@ -1714,7 +1714,7 @@
           w([f.sH], u.prototype, "m_eRSSFeedLanguage", 2),
           w([f.sH], u.prototype, "m_eCuratorLanguage", 2),
           w([f.sH], u.prototype, "m_mapURLToPosted", 2);
-        const x = class et {
+        const x = class nt {
           constructor() {
             (0, f.Gn)(this);
           }
@@ -1729,7 +1729,7 @@
           m_cClanInfoRequestsInFlight = 0;
           GetCuratorTransport() {
             return (
-              (0, E.wT)(
+              (0, b.wT)(
                 this.m_transport,
                 "Expects Transpoate to be initialized but it is now",
               ),
@@ -1744,10 +1744,10 @@
           }
           static Get() {
             return (
-              et.s_CuratorAdminStore ||
-                ((et.s_CuratorAdminStore = new et()),
-                et.s_CuratorAdminStore.Init()),
-              et.s_CuratorAdminStore
+              nt.s_CuratorAdminStore ||
+                ((nt.s_CuratorAdminStore = new nt()),
+                nt.s_CuratorAdminStore.Init()),
+              nt.s_CuratorAdminStore
             );
           }
           Init() {
@@ -1798,7 +1798,7 @@
                     window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
                   this.m_setPendingClanInfo.add(l),
                   this.m_PendingClanInfoPromise)
-              : ((0, E.wT)(!l, "unexpected clanid of zero or undefined: " + l),
+              : ((0, b.wT)(!l, "unexpected clanid of zero or undefined: " + l),
                 Promise.resolve());
           }
           async FlushPendingClanInfo() {
@@ -1832,40 +1832,40 @@
                 q = h.slice(0, ee);
               h = h.slice(ee);
               try {
-                const ue =
+                const ge =
                     i.TS.STORE_BASE_URL + "events_admin/ajaxgetrssadmininfo",
-                  ve = { clanids: l },
-                  Ie = await P().get(ue, { params: ve, withCredentials: !0 });
+                  pe = { clanids: l },
+                  xe = await P().get(ge, { params: pe, withCredentials: !0 });
                 if (
-                  Ie &&
-                  Ie.data &&
-                  Ie.data.success == N.R &&
-                  Ie.data.rss_admin_infos &&
-                  Array.isArray(Ie.data.rss_admin_infos)
+                  xe &&
+                  xe.data &&
+                  xe.data.success == N.R &&
+                  xe.data.rss_admin_infos &&
+                  Array.isArray(xe.data.rss_admin_infos)
                 )
                   (0, f.h5)(() => {
-                    Ie.data.rss_admin_infos.forEach((we) => {
-                      this.m_mapClanAccountToAdmin.set(we.clanid, new u(we));
+                    xe.data.rss_admin_infos.forEach((Ie) => {
+                      this.m_mapClanAccountToAdmin.set(Ie.clanid, new u(Ie));
                     }),
-                      Ie.data.rss_event_stats.forEach((we) => {
+                      xe.data.rss_event_stats.forEach((Ie) => {
                         this.m_mapClanToEventRSSStats.set(
-                          we.clan_account_id,
-                          we,
+                          Ie.clan_account_id,
+                          Ie,
                         );
                       });
                   });
                 else {
-                  const we = (0, X.H)(Ie.data || {});
+                  const Ie = (0, X.H)(xe.data || {});
                   console.error(
-                    "LoadBatchedClanRSSAdminInfo error:" + we.strErrorMsg,
-                    we,
+                    "LoadBatchedClanRSSAdminInfo error:" + Ie.strErrorMsg,
+                    Ie,
                   );
                 }
-              } catch (ue) {
-                const ve = (0, X.H)(ue);
+              } catch (ge) {
+                const pe = (0, X.H)(ge);
                 console.error(
-                  "LoadBatchedClanRSSAdminInfo catched error:" + ve.strErrorMsg,
-                  ve,
+                  "LoadBatchedClanRSSAdminInfo catched error:" + pe.strErrorMsg,
+                  pe,
                 );
               }
             }
@@ -1876,15 +1876,15 @@
           w([f.sH.shallow], x.prototype, "m_mapClanToEventRSSStats", 2);
         let c = x;
       },
-      82559: (ne, Se, s) => {
+      82559: (ne, fe, s) => {
         "use strict";
-        s.d(Se, { q: () => le, A: () => Le });
+        s.d(fe, { q: () => ce, A: () => Re });
         var e = s(7850),
           P = s(41735),
           f = s.n(P),
           i = s(57223),
           j = s(3166),
-          oe = s(76559);
+          de = s(76559);
         class L {
           static s_CuratorStore;
           m_mapClanToRecommendation = new Map();
@@ -1908,7 +1908,7 @@
             return !!this.GetReviewForApp(S, F);
           }
           BHasReviewForAppByClanAccount(S, F) {
-            let C = oe.b.InitFromClanID(S);
+            let C = de.b.InitFromClanID(S);
             return !!this.GetReviewForApp(C, F);
           }
           async LoadAppRecommendation(S, F) {
@@ -1917,35 +1917,35 @@
             let C = this.m_mapClanToRecommendation.get(S.GetAccountID());
             const $ = [];
             if (
-              (F.forEach((de) => {
-                C.has(de) || $.push(de);
+              (F.forEach((me) => {
+                C.has(me) || $.push(me);
               }),
               $.length > 0)
             ) {
-              const de =
+              const me =
                   j.TS.STORE_BASE_URL +
                   "curator/" +
                   S.GetAccountID() +
                   "/admin/ajaxgetrecbyapps",
-                ye = await f().get(de, {
+                Se = await f().get(me, {
                   params: {
                     appids: $,
                     cc: j.TS.COUNTRY || "US",
                     l: j.TS.LANGUAGE,
                   },
                 }),
-                ge = ye && ye.data;
-              ge &&
-                ge.rec_app &&
-                ge.rec_app.forEach((he) => {
-                  C.set(Number(he.appid), he);
+                he = Se && Se.data;
+              he &&
+                he.rec_app &&
+                he.rec_app.forEach((ve) => {
+                  C.set(Number(ve.appid), ve);
                 });
             }
           }
         }
         var Q = s(75844),
           N = s(90626),
-          me = s(99412),
+          ue = s(99412),
           U = s(72604),
           I = s(73259),
           W = s(94699),
@@ -1953,7 +1953,7 @@
           T = s(16412),
           G = s(91424),
           K = s(95695),
-          E = s.n(K),
+          b = s.n(K),
           X = s(12037),
           z = s(96538),
           M = s(88003),
@@ -1967,47 +1967,47 @@
           y = s(71909),
           ee = s(41635),
           q = s(48473),
-          ue = s(56330),
-          ve = s.n(ue),
-          Ie = s(53113),
-          we = s(92264),
-          Ke = Object.defineProperty,
-          _e = Object.getOwnPropertyDescriptor,
-          J = (D, S, F, C) => {
+          ge = s(56330),
+          pe = s.n(ge),
+          xe = s(53113),
+          Ie = s(92264),
+          Ne = Object.defineProperty,
+          Ue = Object.getOwnPropertyDescriptor,
+          J = (E, S, F, C) => {
             for (
-              var $ = C > 1 ? void 0 : C ? _e(S, F) : S, de = D.length - 1, ye;
-              de >= 0;
-              de--
+              var $ = C > 1 ? void 0 : C ? Ue(S, F) : S, me = E.length - 1, Se;
+              me >= 0;
+              me--
             )
-              (ye = D[de]) && ($ = (C ? ye(S, F, $) : ye($)) || $);
-            return C && $ && Ke(S, F, $), $;
+              (Se = E[me]) && ($ = (C ? Se(S, F, $) : Se($)) || $);
+            return C && $ && Ne(S, F, $), $;
           };
-        let Le = class extends N.Component {
+        let Re = class extends N.Component {
           state = { strRssURL: i.A.Get().GetDefaultAdmin().GetRSSUrl() };
           m_Admin = i.A.Get().GetDefaultAdmin();
-          OnChangeActualRSSURL(D) {
-            this.setState({ strRssURL: D.target.value });
+          OnChangeActualRSSURL(E) {
+            this.setState({ strRssURL: E.target.value });
           }
-          OnCreateOrSaveFeed(D) {
-            D.preventDefault(),
+          OnCreateOrSaveFeed(E) {
+            E.preventDefault(),
               (0, M.pg)(
-                (0, e.jsx)(Oe, {
+                (0, e.jsx)(Le, {
                   strRSSUrl: this.state.strRssURL,
                   admin: this.m_Admin,
                 }),
-                (0, c.uX)(D),
+                (0, c.uX)(E),
               );
           }
-          OnRevert(D) {
-            D.preventDefault(),
+          OnRevert(E) {
+            E.preventDefault(),
               this.setState({ strRssURL: this.m_Admin.GetRSSUrl() });
           }
           render() {
-            let D = this.state.strRssURL === this.m_Admin.GetRSSUrl();
+            let E = this.state.strRssURL === this.m_Admin.GetRSSUrl();
             if (window.Prototype !== void 0)
               return window.location.reload(), null;
-            const S = (0, me.x6o)(
-                (0, me.LgB)(this.m_Admin.GetFeedLanguageHandleUnset()),
+            const S = (0, ue.x6o)(
+                (0, ue.LgB)(this.m_Admin.GetFeedLanguageHandleUnset()),
               ),
               F = i.A.Get().GetDefaultAdmin();
             return (0, e.jsxs)("div", {
@@ -2043,7 +2043,7 @@
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/partnerevents/",
-                        className: (0, x.A)(E().Button, E().Primary),
+                        className: (0, x.A)(b().Button, b().Primary),
                         children: (0, t.we)("#RSSManager_EventDashBoard"),
                       }),
                     }),
@@ -2074,7 +2074,7 @@
                               .ConvertTo64BitString() +
                             "/edit ",
                           target: "_blank",
-                          className: (0, x.A)(E().Button, y.PreviewBtn),
+                          className: (0, x.A)(b().Button, y.PreviewBtn),
                           children: (0, t.we)(
                             "#CuratorAdmin_RSSFeed_edit_language",
                           ),
@@ -2086,7 +2086,7 @@
                       (0, e.jsx)("div", {
                         className: (0, x.A)(
                           y.LanguageRow,
-                          ve().WarningIconLayout,
+                          pe().WarningIconLayout,
                         ),
                         children: (0, e.jsx)("span", {
                           className: y.LanguageTitle,
@@ -2094,7 +2094,7 @@
                             "#CuratorAdmin_Curator_lang_only",
                             (0, t.we)(
                               "#Language_" +
-                                (0, me.LgB)(this.m_Admin.GetCuratorLanguage()),
+                                (0, ue.LgB)(this.m_Admin.GetCuratorLanguage()),
                             ),
                             S,
                           ),
@@ -2102,7 +2102,7 @@
                       }),
                     (0, e.jsxs)("div", {
                       className: (0, x.A)(
-                        E().FlexRowContainer,
+                        b().FlexRowContainer,
                         y.UrlSettingCtn,
                       ),
                       children: [
@@ -2124,11 +2124,11 @@
                           onClick: this.OnCreateOrSaveFeed,
                           children: (0, e.jsx)("span", {
                             children: (0, t.we)(
-                              D ? "#Button_Saved" : "#Button_Save",
+                              E ? "#Button_Saved" : "#Button_Save",
                             ),
                           }),
                         }),
-                        !D &&
+                        !E &&
                           (0, e.jsx)("a", {
                             onClick: this.OnRevert,
                             className: "btn_grey_white_innerfade btn_medium",
@@ -2138,7 +2138,7 @@
                     }),
                     (0, e.jsx)(ae, { admin: F }),
                     (0, e.jsx)("br", {}),
-                    (0, e.jsx)(le, {
+                    (0, e.jsx)(ce, {
                       strRssURL: this.state.strRssURL,
                       admin: F,
                     }),
@@ -2148,18 +2148,18 @@
             });
           }
         };
-        J([h.oI], Le.prototype, "OnChangeActualRSSURL", 1),
-          J([h.oI], Le.prototype, "OnCreateOrSaveFeed", 1),
-          J([h.oI], Le.prototype, "OnRevert", 1),
-          (Le = J([Q.PA], Le));
-        let le = class extends N.Component {
+        J([h.oI], Re.prototype, "OnChangeActualRSSURL", 1),
+          J([h.oI], Re.prototype, "OnCreateOrSaveFeed", 1),
+          J([h.oI], Re.prototype, "OnRevert", 1),
+          (Re = J([Q.PA], Re));
+        let ce = class extends N.Component {
           state = { strParseRssURL: this.props.strRssURL, bLoadingPreview: !1 };
           m_cancelSignal = f().CancelToken.source();
           componentDidMount() {
-            const { admin: D } = this.props;
-            D.BHasFeedGID() &&
-              D.BHasSavedRSSURL() &&
-              D.GetRSSUrl() == this.props.strRssURL &&
+            const { admin: E } = this.props;
+            E.BHasFeedGID() &&
+              E.BHasSavedRSSURL() &&
+              E.GetRSSUrl() == this.props.strRssURL &&
               this.OnLoadPreview();
           }
           componentWillUnmount() {
@@ -2168,20 +2168,20 @@
             );
           }
           RenderPreviews() {
-            let D = this.props.admin,
+            let E = this.props.admin,
               S = new Array();
             if (this.state.previews) {
               let F = this.state.previews;
               (F = F.sort((C, $) => {
-                let de = D.MapArticleURLToClanEventGID(C.post.url),
-                  ye = D.MapArticleURLToClanEventGID($.post.url),
-                  ge = de ? H.O3.GetClanEventModel(de) : null,
-                  he = ye ? H.O3.GetClanEventModel(ye) : null;
-                return ge && he
-                  ? he.postTime - ge.postTime
-                  : ge
+                let me = E.MapArticleURLToClanEventGID(C.post.url),
+                  Se = E.MapArticleURLToClanEventGID($.post.url),
+                  he = me ? H.O3.GetClanEventModel(me) : null,
+                  ve = Se ? H.O3.GetClanEventModel(Se) : null;
+                return he && ve
+                  ? ve.postTime - he.postTime
+                  : he
                     ? -1
-                    : he
+                    : ve
                       ? 1
                       : $.post.rtime_date - C.post.rtime_date;
               })),
@@ -2191,8 +2191,8 @@
                       Y,
                       {
                         newsData: C,
-                        admin: D,
-                        clanSteamID: D.GetClanSteamID(),
+                        admin: E,
+                        clanSteamID: E.GetClanSteamID(),
                         fnGetRSSUrl: this.GetRSSPreviewURL,
                       },
                       "id: " + C.unique_id,
@@ -2217,24 +2217,24 @@
             );
           }
           async DoLoadPreview() {
-            let D = this.props.admin,
-              S = await D.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
+            let E = this.props.admin,
+              S = await E.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
             if (S && S.GetEResult() == U.R) {
               let F = S.Body().toObject();
               this.setState(
                 { strParseRssURL: F.rss_url, bLoadingPreview: !0 },
                 async () => {
-                  await D.FetchPublishedEvents(Math.max(100, F.results.length));
+                  await E.FetchPublishedEvents(Math.max(100, F.results.length));
                   let C = new Array(),
                     $ = new Array();
                   if (
-                    (F.results.forEach((de) => {
-                      let ye = D.MapArticleURLToClanEventGID(de.post.url);
-                      ye && C.push(ye),
-                        de.post.appids &&
-                          de.post.appids.length === 1 &&
-                          de.post.recommendation_state !== W.D$.w4 &&
-                          $.push(de.post.appids[0]);
+                    (F.results.forEach((me) => {
+                      let Se = E.MapArticleURLToClanEventGID(me.post.url);
+                      Se && C.push(Se),
+                        me.post.appids &&
+                          me.post.appids.length === 1 &&
+                          me.post.recommendation_state !== W.D$.w4 &&
+                          $.push(me.post.appids[0]);
                     }),
                     C.length > 0 &&
                       (await H.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
@@ -2244,8 +2244,8 @@
                       )),
                     $.length > 0)
                   ) {
-                    const de = D.GetClanSteamID();
-                    await L.Get().LoadAppRecommendation(de, $);
+                    const me = E.GetClanSteamID();
+                    await L.Get().LoadAppRecommendation(me, $);
                   }
                   this.setState({
                     previews: F.results,
@@ -2264,7 +2264,7 @@
               });
           }
           render() {
-            const D = this.RenderPreviews();
+            const E = this.RenderPreviews();
             let S = this.props.admin;
             return (0, e.jsxs)("div", {
               children: [
@@ -2286,10 +2286,10 @@
                   }),
                 this.state.strPreviewErrorMsg &&
                   (0, e.jsx)("div", {
-                    className: E().ErrorMsg,
+                    className: b().ErrorMsg,
                     children: this.state.strPreviewErrorMsg,
                   }),
-                D.length > 0 &&
+                E.length > 0 &&
                   (0, e.jsxs)("div", {
                     children: [
                       (0, e.jsx)("p", {
@@ -2300,7 +2300,7 @@
                       }),
                       (0, e.jsx)("div", {
                         className: y.PreviewListCtn,
-                        children: D,
+                        children: E,
                       }),
                       (0, e.jsx)("p", {
                         className: y.DashboardBtn,
@@ -2310,7 +2310,7 @@
                             "gid/" +
                             S.GetClanSteamID().ConvertTo64BitString() +
                             "/partnerevents/",
-                          className: (0, x.A)(E().Button, E().Primary),
+                          className: (0, x.A)(b().Button, b().Primary),
                           children: (0, t.we)("#RSSManager_EventDashBoard"),
                         }),
                       }),
@@ -2320,16 +2320,16 @@
             });
           }
         };
-        J([h.oI], le.prototype, "GetRSSPreviewURL", 1),
-          J([h.oI], le.prototype, "OnLoadPreview", 1),
-          (le = J([Q.PA], le));
+        J([h.oI], ce.prototype, "GetRSSPreviewURL", 1),
+          J([h.oI], ce.prototype, "OnLoadPreview", 1),
+          (ce = J([Q.PA], ce));
         let ae = class extends N.Component {
           state = {};
-          OnToggleChannelAutomation(D) {
-            D
+          OnToggleChannelAutomation(E) {
+            E
               ? (this.setState({ strErrorMessage: void 0 }),
                 (0, M.pg)(
-                  (0, e.jsx)(Oe, {
+                  (0, e.jsx)(Le, {
                     strRSSUrl: this.props.admin.GetRSSUrl(),
                     admin: this.props.admin,
                     bActivatePooling: !0,
@@ -2356,7 +2356,7 @@
               )
               .finally(() => this.setState({ strReasonWaiting: void 0 }));
           }
-          async OnQueueScan(D) {
+          async OnQueueScan(E) {
             this.setState({
               strReasonWaiting: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
             }),
@@ -2368,7 +2368,7 @@
                       strTitle: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
                       strDescription: (0, t.we)("#CuratorAdmin_RSSFeed_queued"),
                     }),
-                    (0, c.uX)(D),
+                    (0, c.uX)(E),
                   ),
                 )
                 .catch((S) =>
@@ -2377,7 +2377,7 @@
                       strTitle: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
                       strDescription: (0, l.H)(S).strErrorMsg,
                     }),
-                    (0, c.uX)(D),
+                    (0, c.uX)(E),
                   ),
                 )
                 .finally(() => this.setState({ strReasonWaiting: void 0 }));
@@ -2412,7 +2412,7 @@
                             !1,
                           ),
                           "\xA0 @ ",
-                          (0, we.KC)(
+                          (0, Ie.KC)(
                             this.props.admin.GetRSSLastRtimeChecked(),
                             { bForce24HourClock: !1 },
                           ),
@@ -2450,11 +2450,11 @@
           }
           async DoPartnerEventLoad() {
             if (this.state.clan_event_gid) {
-              let D = this.props.admin.GetClanSteamID(),
+              let E = this.props.admin.GetClanSteamID(),
                 S = H.O3.GetClanEventModel(this.state.clan_event_gid);
               S ||
                 (S = await H.O3.LoadHiddenPartnerEvent(
-                  D,
+                  E,
                   this.state.clan_event_gid,
                 )),
                 this.setState({
@@ -2463,19 +2463,19 @@
                 });
             }
           }
-          OnOpenPreviewAsPartnerEvent(D) {
+          OnOpenPreviewAsPartnerEvent(E) {
             const { newsData: S, clanSteamID: F } = this.props;
             let C = new I.lh();
             (C.GID = "PreviewPartnerEventRow_0"),
               (C.clanSteamID = F),
               (C.postTime = Date.now() / 1e3),
               (C.startTime = Date.now() / 1e3),
-              (C.type = me.uYK),
+              (C.type = ue.uYK),
               C.vecTags.push("auto_rssfeed"),
               C.vecTags.push("curator"),
               C.vecTags.push("curator_public"),
-              C.name.set(me.Bhc, S.title),
-              C.description.set(me.Bhc, S.desc),
+              C.name.set(ue.Bhc, S.title),
+              C.description.set(ue.Bhc, S.desc),
               this.ValidateJSONDefault(S.jsondata) && (C.jsondata = S.jsondata),
               C.jsondata.read_more_link ||
                 (C.jsondata.read_more_link = S.unique_id);
@@ -2484,21 +2484,21 @@
               S.post.event_summary &&
               ((C.jsondata.localized_summary = (0, ee.$Y)(
                 C.jsondata.localized_summary,
-                me.bP9,
+                ue.bP9,
                 null,
               )),
-              (C.jsondata.localized_summary[me.Bhc] = S.post.event_summary),
-              $ != me.Bhc &&
+              (C.jsondata.localized_summary[ue.Bhc] = S.post.event_summary),
+              $ != ue.Bhc &&
                 (C.jsondata.localized_summary[$] = S.post.event_summary)),
               !C.jsondata.localized_subtitle &&
                 S.post.event_subtitle &&
                 ((C.jsondata.localized_subtitle = (0, ee.$Y)(
                   C.jsondata.localized_subtitle,
-                  me.bP9,
+                  ue.bP9,
                   null,
                 )),
-                (C.jsondata.localized_subtitle[me.Bhc] = S.post.event_subtitle),
-                $ != me.Bhc &&
+                (C.jsondata.localized_subtitle[ue.Bhc] = S.post.event_subtitle),
+                $ != ue.Bhc &&
                   (C.jsondata.localized_subtitle[$] = S.post.event_subtitle)),
               this.ShowModalEvent(C);
           }
@@ -2507,53 +2507,53 @@
               H.O3.GetClanEventModel(this.state.clan_event_gid),
             );
           }
-          ShowModalEvent(D) {
+          ShowModalEvent(E) {
             let S = document.getElementById("curator_header_area_ctn_id");
             S &&
-              (D
+              (E
                 ? S.classList.add("curator_header_area_ctn_hideme")
                 : S.classList.remove("curator_header_area_ctn_hideme")),
-              this.setState({ eventModelForPreviewNow: D });
+              this.setState({ eventModelForPreviewNow: E });
           }
-          ValidateJSONDefault(D) {
-            const S = D;
+          ValidateJSONDefault(E) {
+            const S = E;
             return !!(S && !Array.isArray(S) && typeof S == "object");
           }
-          OnPostNewsEvent(D) {
+          OnPostNewsEvent(E) {
             const { newsData: S, fnGetRSSUrl: F } = this.props;
             (0, M.pg)(
-              (0, e.jsx)(Oe, {
+              (0, e.jsx)(Le, {
                 newsData: S,
                 admin: this.props.admin,
                 strRSSUrl: F(),
                 fnClanEventGID: this.OnClanEventCreateSuccess,
               }),
-              (0, c.uX)(D),
+              (0, c.uX)(E),
             );
           }
-          OnUpdateNewsEvent(D) {
+          OnUpdateNewsEvent(E) {
             const { newsData: S, fnGetRSSUrl: F } = this.props;
             (0, M.pg)(
-              (0, e.jsx)(Oe, {
+              (0, e.jsx)(Le, {
                 newsData: S,
                 strRSSUrl: F(),
                 admin: this.props.admin,
                 fnClanEventGID: this.OnClanEventCreateSuccess,
                 bUpdatePost: !0,
               }),
-              (0, c.uX)(D),
+              (0, c.uX)(E),
             );
           }
           HideModalEvent() {
             this.state.eventModelForPreviewNow && this.ShowModalEvent(void 0);
           }
-          OnClanEventCreateSuccess(D) {
+          OnClanEventCreateSuccess(E) {
             this.setState(
-              { clan_event_gid: D, bLoadingPartnerEvent: !0 },
+              { clan_event_gid: E, bLoadingPartnerEvent: !0 },
               this.DoPartnerEventLoad,
             );
           }
-          OnShowRawRSS(D) {
+          OnShowRawRSS(E) {
             const S = this.props.newsData.rss_message,
               F = (() => {
                 const C = S.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
@@ -2571,45 +2571,45 @@
                   disabled: !0,
                 }),
               }),
-              (0, c.uX)(D),
+              (0, c.uX)(E),
             );
           }
           render() {
-            const { newsData: D } = this.props,
+            const { newsData: E } = this.props,
               {
                 clan_event_gid: S,
                 existingEventModel: F,
                 bLoadingPartnerEvent: C,
               } = this.state;
             let $ = this.props.admin,
-              de = $.GetClanSteamID(),
-              ye = F && F.BIsStagedEvent(),
-              ge =
-                D.post.appids && D.post.appids.length == 1 && D.post.appids[0],
+              me = $.GetClanSteamID(),
+              Se = F && F.BIsStagedEvent(),
               he =
-                D.post.recommendation_state !== W.D$.w4 &&
-                ge &&
-                L.Get().BHasReviewForApp(de, ge),
-              re = "";
+                E.post.appids && E.post.appids.length == 1 && E.post.appids[0],
+              ve =
+                E.post.recommendation_state !== W.D$.w4 &&
+                he &&
+                L.Get().BHasReviewForApp(me, he),
+              ie = "";
             if (F) {
-              const Ye =
+              const Je =
                 F.GetVisibilityStartTimeAndDateUnixSeconds() ||
                 F.GetPostTimeAndDateUnixSeconds();
-              re =
-                (0, t.$z)(Ye) +
+              ie =
+                (0, t.$z)(Je) +
                 " @ " +
-                (0, we.KC)(Ye, { bForce24HourClock: !1 });
+                (0, Ie.KC)(Je, { bForce24HourClock: !1 });
             }
             return (0, e.jsxs)("div", {
               className: (0, x.A)(
                 y.PostCtn,
                 S ? y.ActivePost : "",
-                D.valid_post ? "" : y.ErrorPost,
+                E.valid_post ? "" : y.ErrorPost,
               ),
               children: [
                 (0, e.jsx)("span", {
                   className: y.PostTitle,
-                  children: D.title,
+                  children: E.title,
                 }),
                 (0, e.jsx)("br", {}),
                 !!F &&
@@ -2620,31 +2620,31 @@
                           className: y.PostDate,
                           children: (0, t.we)(
                             "#RSSManager_PostEvent_PostedDate",
-                            re,
+                            ie,
                           ),
                         }),
                       !F.BIsVisibleEvent() &&
                         (0, e.jsx)("span", {
                           className: (0, x.A)(
                             y.PostDraft,
-                            ye ? y.PostStaged : "",
+                            Se ? y.PostStaged : "",
                           ),
                           children: (0, t.we)(
-                            ye
+                            Se
                               ? "#RSSManager_PostEvent_Staged"
                               : "#RSSManager_PostEvent_Draft",
-                            re,
+                            ie,
                           ),
                         }),
                     ],
                   }),
-                !!(!D.valid_post && D.post_error_msg) &&
+                !!(!E.valid_post && E.post_error_msg) &&
                   (0, e.jsxs)("div", {
-                    className: ve().ErrorStylesBackground,
+                    className: pe().ErrorStylesBackground,
                     children: [
                       (0, t.we)("#Error_Generic_Label"),
                       " ",
-                      (0, t.we)(D.post_error_msg),
+                      (0, t.we)(E.post_error_msg),
                     ],
                   }),
                 (0, e.jsxs)("div", {
@@ -2661,13 +2661,13 @@
                                 })
                               : (0, e.jsx)("div", {
                                   onClick: this.OnViewEvent,
-                                  className: (0, x.A)(E().Button, y.PreviewBtn),
+                                  className: (0, x.A)(b().Button, y.PreviewBtn),
                                   children: (0, t.we)(
                                     "#RSSManager_PostEvent_ViewEvent",
                                   ),
                                 }),
                             (0, e.jsx)("a", {
-                              className: (0, x.A)(E().Button, y.PreviewBtn),
+                              className: (0, x.A)(b().Button, y.PreviewBtn),
                               href:
                                 j.TS.COMMUNITY_BASE_URL +
                                 "gid/" +
@@ -2680,20 +2680,20 @@
                             }),
                             (0, e.jsx)("div", {
                               onClick: this.OnUpdateNewsEvent,
-                              className: (0, x.A)(E().Button, y.PreviewBtn),
+                              className: (0, x.A)(b().Button, y.PreviewBtn),
                               children: (0, t.we)(
                                 "#RSSManager_PostEvent_UpdateEvent",
                               ),
                             }),
-                            he &&
+                            ve &&
                               (0, e.jsx)("a", {
-                                className: (0, x.A)(E().Button, y.PreviewBtn),
-                                href: (0, Ie.k2)(
+                                className: (0, x.A)(b().Button, y.PreviewBtn),
+                                href: (0, xe.k2)(
                                   j.TS.STORE_BASE_URL +
                                     "app/" +
-                                    D.post.appids[0] +
+                                    E.post.appids[0] +
                                     "/?curator_clanid=" +
-                                    de.GetAccountID(),
+                                    me.GetAccountID(),
                                 ),
                                 children: (0, t.we)("#RSSManager_SeeReview"),
                               }),
@@ -2703,21 +2703,21 @@
                           children: [
                             (0, e.jsx)("div", {
                               onClick: this.OnOpenPreviewAsPartnerEvent,
-                              className: (0, x.A)(E().Button, y.PreviewBtn),
+                              className: (0, x.A)(b().Button, y.PreviewBtn),
                               children: (0, t.we)(
                                 "#CuratorAdmin_RSSFeed_col_preview_event",
                               ),
                             }),
                             (0, e.jsx)("div", {
                               onClick: this.OnPostNewsEvent,
-                              className: (0, x.A)(E().Button, y.PreviewBtn),
+                              className: (0, x.A)(b().Button, y.PreviewBtn),
                               children: (0, t.we)(
                                 "#CuratorAdmin_RSSFeed_col_create_event",
                               ),
                             }),
                           ],
                         }),
-                    !!(D.rss_message && D.rss_message.length > 0) &&
+                    !!(E.rss_message && E.rss_message.length > 0) &&
                       (0, e.jsx)("div", {
                         onClick: this.OnShowRawRSS,
                         className: y.ViewRaw,
@@ -2748,10 +2748,10 @@
           J([h.oI], Y.prototype, "OnClanEventCreateSuccess", 1),
           J([h.oI], Y.prototype, "OnShowRawRSS", 1),
           (Y = J([Q.PA], Y));
-        const k = class Vt extends N.Component {
+        const k = class kt extends N.Component {
           state = {
-            initialState: Vt.DetermineStartState(this.props),
-            step: Vt.DetermineStartState(this.props),
+            initialState: kt.DetermineStartState(this.props),
+            step: kt.DetermineStartState(this.props),
             bDraftMode: !0,
           };
           static DetermineStartState(S) {
@@ -3027,21 +3027,21 @@
           J([h.oI], k.prototype, "OnChangePermissionsCreateFeed", 1),
           J([h.oI], k.prototype, "OnChangeConductCreateFeed", 1),
           J([h.oI], k.prototype, "GetStrTitle", 1);
-        let Oe = k;
+        let Le = k;
       },
-      17809: (ne, Se, s) => {
+      17809: (ne, fe, s) => {
         "use strict";
-        s.d(Se, { d: () => _t });
+        s.d(fe, { d: () => Ut });
         var e = s(7850),
           P = s(19367),
           f = s(90626),
           i = s(3685),
           j = s(85528),
-          oe = s(77495),
+          de = s(77495),
           L = s(18210),
           Q = s(3166),
           N = s(75779),
-          me = s(80902),
+          ue = s(80902),
           U = s(30454);
         async function I() {
           const v = await (0, U.d)(
@@ -3062,7 +3062,7 @@
           return { queryKey: H(), queryFn: () => I(), staleTime: W, retry: !1 };
         }
         function G() {
-          const { data: v } = (0, me.I)(T());
+          const { data: v } = (0, ue.I)(T());
           return v;
         }
         function K(v, A) {
@@ -3075,8 +3075,8 @@
               return v?.verified;
           }
         }
-        var E = s(70187),
-          X = s(45251),
+        var b = s(70187),
+          X = s(36549),
           z = s(39153),
           M = s(6878),
           w = s(99412),
@@ -3092,16 +3092,16 @@
           const {
               reservationPackageID: A,
               depositPackageID: B,
-              bIsPreview: b,
-              psuLessPackageID: V,
+              bIsPreview: V,
+              psuLessPackageID: D,
               strOutOfStockOverride: Z,
-              strDeliveryOverride: ce,
-              bDeliveryOverrideOnlyIfOutOfStock: be,
-              section: fe,
+              strDeliveryOverride: le,
+              bDeliveryOverrideOnlyIfOutOfStock: Me,
+              section: je,
             } = v,
-            { data: pe } = (0, x.DR)(A),
-            { data: Te } = (0, x.DR)(V),
-            Pe = (0, f.useMemo)(
+            { data: re } = (0, x.DR)(A),
+            { data: Te } = (0, x.DR)(D),
+            Fe = (0, f.useMemo)(
               () => [
                 {
                   unique_id: "reservation_bbcode_" + A,
@@ -3114,57 +3114,57 @@
                     null,
                   ),
                   localized_delivery_override_desc: (0, t.$Y)(
-                    [ce || null],
+                    [le || null],
                     w.bP9,
                     null,
                   ),
-                  override_delivery_only_out_of_stock: !!be,
-                  psu_less_package: V,
+                  override_delivery_only_out_of_stock: !!Me,
+                  psu_less_package: D,
                 },
               ],
-              [A, B, Z, ce, be, V],
+              [A, B, Z, le, Me, D],
             );
-          if (!pe || (V && !Te))
+          if (!re || (D && !Te))
             return (0, e.jsx)(h.t, {
               string: (0, L.we)("#Loading"),
               size: "small",
               position: "center",
             });
-          const Ve = !u.iA.logged_in || !pe.account_restricted_from_purchasing,
-            St =
-              pe.reservation_state == c.G.k_EPurchaseReservationState_Reserved
-                ? pe
+          const Ke = !u.iA.logged_in || !re.account_restricted_from_purchasing,
+            pt =
+              re.reservation_state == c.G.k_EPurchaseReservationState_Reserved
+                ? re
                 : void 0;
           return (0, e.jsxs)(l.tH, {
             children: [
               (0, e.jsx)(f.Suspense, {
                 fallback: null,
                 children: (0, e.jsx)(ee, {
-                  bIsPreview: !!b,
-                  rgReservationDef: Pe,
+                  bIsPreview: !!V,
+                  rgReservationDef: Fe,
                 }),
               }),
-              !!pe.allow_purchase_in_country &&
+              !!re.allow_purchase_in_country &&
                 (0, e.jsxs)("div", {
-                  className: Pe[0].unique_id,
+                  className: Fe[0].unique_id,
                   children: [
                     (0, e.jsx)(y.b, {
-                      reservationDef: Pe[0],
-                      hardwareDetail: pe,
+                      reservationDef: Fe[0],
+                      hardwareDetail: re,
                       bPSULessModel: !1,
-                      reservedHardwareDetail: St,
+                      reservedHardwareDetail: pt,
                     }),
-                    Ve &&
+                    Ke &&
                       (0, e.jsx)(y.p, {
-                        section: fe,
-                        reservationDef: Pe[0],
-                        hardwareDetail: pe,
-                        reservedHardwareDetail: St,
+                        section: je,
+                        reservationDef: Fe[0],
+                        hardwareDetail: re,
+                        reservedHardwareDetail: pt,
                       }),
                     Te &&
                       Te?.allow_purchase_in_country &&
                       (0, e.jsx)(y.b, {
-                        reservationDef: Pe[0],
+                        reservationDef: Fe[0],
                         hardwareDetail: Te,
                         bPSULessModel: !0,
                         reservedHardwareDetail: void 0,
@@ -3174,7 +3174,7 @@
             ],
           });
         }
-        function ue(v) {
+        function ge(v) {
           if (v?.bDepositRequired) {
             if (
               v.rgDepositPackageInfo &&
@@ -3193,180 +3193,178 @@
             return !1;
           return !0;
         }
-        var ve = s(21035),
-          Ie = s(72865),
-          we = s(38081),
-          Ke = s.n(we),
-          _e = s(36707),
+        var pe = s(21035),
+          xe = s(72865),
+          Ie = s(38081),
+          Ne = s.n(Ie),
+          Ue = s(36707),
           J = s(69596),
-          Le = s(10026),
-          le = s.n(Le),
+          Re = s(10026),
+          ce = s.n(Re),
           ae = s(19298),
           Y = s(11996),
           k = s(19047),
-          Oe = s(36118),
-          D = s(47689),
+          Le = s(36118),
+          E = s(47689),
           S = s(89926),
           F = s(32545),
           C = s.n(F);
         function $(v) {
-          const { appID: A, classOverride: B, styleOverride: b } = v,
-            [V, Z] = (0, f.useState)(!1),
-            ce = (0, D.m)("GameHoverFollowButton"),
-            { elDialogElement: be, fnShowLogonDialog: fe } = (0, S.l)(),
-            pe = (0, Y.Fh)(A),
-            { mutateAsync: Te } = (0, k.L)(A, !pe, void 0),
-            Pe = async (Ve) => {
-              Ve.preventDefault(),
-                Ve.stopPropagation(),
+          const { appID: A, classOverride: B, styleOverride: V } = v,
+            [D, Z] = (0, f.useState)(!1),
+            le = (0, E.m)("GameHoverFollowButton"),
+            { elDialogElement: Me, fnShowLogonDialog: je } = (0, S.l)(),
+            re = (0, Y.Fh)(A),
+            { mutateAsync: Te } = (0, k.L)(A, !re, void 0),
+            Fe = async (Ke) => {
+              Ke.preventDefault(),
+                Ke.stopPropagation(),
                 Q.iA.logged_in
-                  ? (Z(!0), await Te(), ce.token.reason || Z(!1))
-                  : fe();
+                  ? (Z(!0), await Te(), le.token.reason || Z(!1))
+                  : je();
             };
           return (0, e.jsxs)(ae.Z, {
-            className: (0, _e.A)(C().FollowButton, B),
-            onClick: Pe,
-            style: b,
+            className: (0, Ue.A)(C().FollowButton, B),
+            onClick: Fe,
+            style: V,
             children: [
-              pe ? (0, e.jsx)(Oe.pPV, {}) : (0, e.jsx)(Oe.c9e, {}),
+              re ? (0, e.jsx)(Le.pPV, {}) : (0, e.jsx)(Le.c9e, {}),
               (0, e.jsx)("div", {
-                className: (0, _e.A)(
+                className: (0, Ue.A)(
                   C().FollowButtonText,
-                  V && C().FollowLoadingText,
+                  D && C().FollowLoadingText,
                   "FollowGameButton",
                 ),
                 children: (0, L.we)(
-                  pe ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
+                  re ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
                 ),
               }),
-              be,
+              Me,
             ],
           });
         }
-        function de(v) {
-          const { appid: A, color: B, bgcolor: b } = v,
-            V = (0, Ie.n9)();
+        function me(v) {
+          const { appid: A, color: B, bgcolor: V } = v,
+            D = (0, xe.n9)();
           return (0, e.jsx)($, {
             appID: A,
-            classOverride: (0, _e.A)(
-              Ke().FollowGameButtonNotTop,
-              le().BBCodeFollowButton,
+            classOverride: (0, Ue.A)(
+              Ne().FollowGameButtonNotTop,
+              ce().BBCodeFollowButton,
             ),
-            styleOverride: { color: B, backgroundColor: b },
+            styleOverride: { color: B, backgroundColor: V },
           });
         }
-        function ye(v) {
+        function Se(v) {
           const A = Number(v.args.appid);
           if (!A) return null;
           const B = (0, J.O)(v.args.color, "black"),
-            b = (0, J.O)(v.args.bgcolor, "white");
-          return (0, e.jsx)(de, { appid: A, color: B, bgcolor: b });
+            V = (0, J.O)(v.args.bgcolor, "white");
+          return (0, e.jsx)(me, { appid: A, color: B, bgcolor: V });
         }
-        var ge = s(20681),
-          he = s(18657),
-          re = s.n(he),
-          Ye = s(63026);
-        function yt(v) {
-          const { clanAccountID: A, color: B, bgcolor: b } = v;
-          (0, ge.mx)();
-          const [V, Z] = f.useState(!1);
+        var he = s(18657),
+          ve = s.n(he),
+          ie = s(63026);
+        function Je(v) {
+          const { clanAccountID: A, color: B, bgcolor: V } = v,
+            [D, Z] = f.useState(!1);
           return (0, e.jsx)("div", {
-            className: (0, _e.A)(re().BBCodeFollowButton, V && re().isHovered),
+            className: (0, Ue.A)(ve().BBCodeFollowButton, D && ve().isHovered),
             onMouseEnter: () => Z(!0),
             onMouseLeave: () => Z(!1),
-            children: (0, e.jsx)(Ye.Q, {
+            children: (0, e.jsx)(ie.Q, {
               nCreatorAccountID: A,
-              classOverride: Ke().FollowGameButtonNotTop,
-              styleOverride: { color: B, backgroundColor: b },
+              classOverride: Ne().FollowGameButtonNotTop,
+              styleOverride: { color: B, backgroundColor: V },
               followType: "group",
             }),
           });
         }
-        function gt(v) {
+        function ft(v) {
           const { event: A } = v.context,
             B = Number(v.args.groupid) || A?.clanSteamID.GetAccountID();
           if (!B) return null;
-          const b = (0, J.O)(v.args.color, "black"),
-            V = (0, J.O)(v.args.bgcolor, "white");
-          return (0, e.jsx)(yt, { clanAccountID: B, color: b, bgcolor: V });
+          const V = (0, J.O)(v.args.color, "black"),
+            D = (0, J.O)(v.args.bgcolor, "white");
+          return (0, e.jsx)(Je, { clanAccountID: B, color: V, bgcolor: D });
         }
-        var At = s(83482),
-          xt = s(44267),
-          Xe = s(9202),
-          tt = s.n(Xe),
-          It = s(29522);
-        function wt(v) {
-          const { appid: A, color: B, bgcolor: b } = v,
-            V = (0, Ie.n9)(),
-            Z = (0, It.$5)(A),
-            ce = (0, At.L3)(V);
+        var mt = s(83482),
+          St = s(44267),
+          yt = s(9202),
+          Qe = s.n(yt),
+          ut = s(29522);
+        function At(v) {
+          const { appid: A, color: B, bgcolor: V } = v,
+            D = (0, xe.n9)(),
+            Z = (0, ut.$5)(A),
+            le = (0, mt.L3)(D);
           return (0, e.jsx)("div", {
-            className: tt().WishlistHoverCtn,
-            children: (0, e.jsx)(xt.E, {
-              snr: ce,
+            className: Qe().WishlistHoverCtn,
+            children: (0, e.jsx)(St.E, {
+              snr: le,
               id: Z,
-              classOverride: (0, _e.A)(
-                Ke().WishlistButtonNotTop,
-                tt().BBCodeWishlistButton,
+              classOverride: (0, Ue.A)(
+                Ne().WishlistButtonNotTop,
+                Qe().BBCodeWishlistButton,
                 "WishlistButton",
               ),
-              styleOverride: { color: B, backgroundColor: b },
+              styleOverride: { color: B, backgroundColor: V },
               bShowInGamepadUI: !0,
             }),
           });
         }
-        function nt(v) {
+        function xt(v) {
           const A = Number(v.args.appid);
           if (!A) return null;
           const B = (0, J.O)(v.args.color, "black"),
-            b = (0, J.O)(v.args.bgcolor, "white");
-          return (0, e.jsx)(wt, { appid: A, color: B, bgcolor: b });
+            V = (0, J.O)(v.args.bgcolor, "white");
+          return (0, e.jsx)(At, { appid: A, color: B, bgcolor: V });
         }
-        let at = null;
-        function Mt() {
+        let Ye = null;
+        function It() {
           return (
-            at == null &&
-              (at = new Map([
-                ["wishlist", { Constructor: nt, autocloses: !1 }],
-                ["followgroup", { Constructor: gt, autocloses: !1 }],
+            Ye == null &&
+              (Ye = new Map([
+                ["wishlist", { Constructor: xt, autocloses: !1 }],
+                ["followgroup", { Constructor: ft, autocloses: !1 }],
               ])),
-            at
+            Ye
           );
         }
-        var Ne = s(37656),
-          Be = s(29868),
+        var wt = s(37656),
+          we = s(29868),
           We = s(24642);
-        function ht(v) {
+        function gt(v) {
           return v < 10 ? "0" + v : v;
         }
-        function Je(v) {
+        function Mt(v) {
           const { giveawayid: A } = v,
-            B = (0, Ne.w)(A),
+            B = (0, wt.w)(A),
             {
-              bLoadingGiveawayInfo: b,
-              winner_count: V,
+              bLoadingGiveawayInfo: V,
+              winner_count: D,
               closed: Z,
-              seconds_until_drawing: ce,
+              seconds_until_drawing: le,
             } = B;
-          return b
+          return V
             ? null
             : (0, e.jsxs)("div", {
-                className: Be.countdownCtn,
+                className: we.countdownCtn,
                 children: [
                   !!Z &&
                     (0, e.jsx)("div", {
-                      className: Be.Closed,
+                      className: we.Closed,
                       children:
-                        V > 0
-                          ? (0, L.we)("#Giveaway_Closed", (0, We.D)(V))
+                        D > 0
+                          ? (0, L.we)("#Giveaway_Closed", (0, We.D)(D))
                           : (0, L.we)("#Giveaway_Closed_NoWinnerInfo"),
                     }),
                   !Z &&
                     (0, e.jsxs)(f.Fragment, {
                       children: [
-                        ce <= 0
+                        le <= 0
                           ? (0, e.jsxs)("div", {
-                              className: Be.Throbber,
+                              className: we.Throbber,
                               children: [
                                 (0, e.jsx)(h.t, { size: "small" }),
                                 (0, e.jsx)("div", {
@@ -3375,15 +3373,15 @@
                               ],
                             })
                           : (0, e.jsxs)("div", {
-                              className: Be.CountDownCtn,
+                              className: we.CountDownCtn,
                               children: [
                                 (0, e.jsx)("div", {
-                                  className: Be.CountDownTime,
+                                  className: we.CountDownTime,
                                   children:
-                                    ht(Math.floor(ce / 60)) + ":" + ht(ce % 60),
+                                    gt(Math.floor(le / 60)) + ":" + gt(le % 60),
                                 }),
                                 (0, e.jsxs)("div", {
-                                  className: Be.CountDownText,
+                                  className: we.CountDownText,
                                   children: [
                                     (0, L.we)("#Giveaway_CountDown2"),
                                     " ",
@@ -3392,16 +3390,16 @@
                                 }),
                               ],
                             }),
-                        V > 0 &&
+                        D > 0 &&
                           (0, e.jsxs)("div", {
-                            className: Be.WinnerInfo,
+                            className: we.WinnerInfo,
                             children: [
                               (0, e.jsx)("div", {
-                                className: Be.WinnerCount,
-                                children: (0, We.D)(V),
+                                className: we.WinnerCount,
+                                children: (0, We.D)(D),
                               }),
                               (0, e.jsx)("div", {
-                                className: Be.WinnerText,
+                                className: we.WinnerText,
                                 children: (0, L.we)("#Giveaway_Congratulation"),
                               }),
                             ],
@@ -3411,276 +3409,276 @@
                 ],
               });
         }
-        var Ce = s(57646);
-        function Qe(v) {
+        var ke = s(57646);
+        function _e(v) {
           const A = Number(v.args.packageid);
           return A
-            ? (0, e.jsx)(Ce.eF, {
+            ? (0, e.jsx)(ke.eF, {
                 packageID: A,
-                display_style: (0, Ce._w)(v.args.display),
+                display_style: (0, ke._w)(v.args.display),
               })
             : null;
         }
-        function bt(v) {
+        function Xe(v) {
           const A = Number(v.args.packageid),
             B = Number(v.args.compareid);
           return !A || !B
             ? null
-            : (0, e.jsx)(Ce.hJ, { packageID: A, compareID: B });
+            : (0, e.jsx)(ke.hJ, { packageID: A, compareID: B });
         }
-        var Et = s(88245),
-          Ge = s(35702),
-          Dt = s(16412),
-          jt = s(92757),
-          Tt = s(39256),
-          Re = s(4720),
-          ze = s(75110),
-          Bt = s(57810),
-          rt = s(36631),
-          st = s(55817),
-          je = s(81416);
-        function it(v) {
+        var bt = s(88245),
+          Et = s(35702),
+          Oe = s(16412),
+          Dt = s(92757),
+          jt = s(39256),
+          Tt = s(4720),
+          Be = s(75110),
+          ze = s(57810),
+          at = s(36631),
+          Bt = s(79519),
+          Ze = s(81416);
+        function Ce(v) {
           const { eventModel: A, nEventBadgeID: B } = v,
-            b = (0, Ge.fy)(B);
-          if (b?.level > 0) {
-            let V = b.level;
+            V = (0, Et.fy)(B);
+          if (V?.level > 0) {
+            let D = V.level;
             if (A?.BHasSaleEnabled()) {
               const Z = A.GetSaleSectionsByType("badge_progress");
               if (Z?.length == 1) {
-                const ce = Z[0].badge_progress;
-                if (ce?.event_badgeid == B && ce?.granted_by_discovery_queue) {
-                  const be = ce.levels[ce.levels.length - 1].level;
-                  return (0, e.jsx)(Fe, {
+                const le = Z[0].badge_progress;
+                if (le?.event_badgeid == B && le?.granted_by_discovery_queue) {
+                  const Me = le.levels[le.levels.length - 1].level;
+                  return (0, e.jsx)(rt, {
                     eventModel: A,
-                    nBadgeLevel: V,
-                    nMaxLevel: be,
+                    nBadgeLevel: D,
+                    nMaxLevel: Me,
                   });
                 }
               }
             }
             return (0, e.jsx)("span", {
               className: "DisplayBadgeProgress",
-              children: (0, We.D)(V),
+              children: (0, We.D)(D),
             });
           }
           return null;
         }
-        function Fe(v) {
-          const { eventModel: A, nBadgeLevel: B, nMaxLevel: b } = v,
-            V = f.useMemo(() => {
-              const pe = A.GetSaleSections().filter(
+        function rt(v) {
+          const { eventModel: A, nBadgeLevel: B, nMaxLevel: V } = v,
+            D = f.useMemo(() => {
+              const re = A.GetSaleSections().filter(
                 (Te) => Te.section_type == "discoveryqueue",
               );
-              return pe?.length > 0 ? pe[0] : null;
+              return re?.length > 0 ? re[0] : null;
             }, [A]),
-            { storePageFilter: Z, eStoreDiscoveryQueueType: ce } = f.useMemo(
-              () => (0, ze.lx)(A, V),
-              [A, V],
+            { storePageFilter: Z, eStoreDiscoveryQueueType: le } = f.useMemo(
+              () => (0, Be.lx)(A, D),
+              [A, D],
             ),
-            be = (0, Bt.Uf)(ce, Z),
-            fe = Math.min(B + be, b);
+            Me = (0, ze.Uf)(le, Z),
+            je = Math.min(B + Me, V);
           return (0, e.jsx)("span", {
             className: "DisplayBadgeProgress",
-            children: (0, We.D)(fe),
+            children: (0, We.D)(je),
           });
         }
-        function Ze(v) {
+        function Ge(v) {
           const { event: A } = v.context,
-            B = Number.parseInt((0, E.j$)(v.args, "eventid"));
+            B = Number.parseInt((0, b.j$)(v.args, "eventid"));
           return Q.iA.logged_in && B
-            ? (0, e.jsx)(it, { nEventBadgeID: B, eventModel: A })
+            ? (0, e.jsx)(Ce, { nEventBadgeID: B, eventModel: A })
             : null;
         }
-        function He(v) {
+        function $e(v) {
           const { nDoorIndex: A, children: B } = v,
-            b = (0, z.OM)(A),
-            V = (0, z.gP)(),
-            [Z, ce] = f.useState(!1),
-            [be, fe] = f.useState(!1),
-            { elDialogElement: pe, fnShowLogonDialog: Te } = (0, S.l)();
+            V = (0, z.OM)(A),
+            D = (0, z.gP)(),
+            [Z, le] = f.useState(!1),
+            [Me, je] = f.useState(!1),
+            { elDialogElement: re, fnShowLogonDialog: Te } = (0, S.l)();
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              (0, e.jsx)(Dt.$n, {
-                disabled: b,
-                onClick: (Pe) => {
+              (0, e.jsx)(Oe.$n, {
+                disabled: V,
+                onClick: (Fe) => {
                   Z ||
                     (Q.iA.logged_in
-                      ? (ce(!0),
-                        V({ iDoorIndex: A })
-                          .then((Ve) => {
-                            Ve || fe(!0), ce(!1);
+                      ? (le(!0),
+                        D({ iDoorIndex: A })
+                          .then((Ke) => {
+                            Ke || je(!0), le(!1);
                           })
                           .catch(() => {
-                            fe(!0), ce(!1);
+                            je(!0), le(!1);
                           }))
                       : Te());
                 },
-                children: be
+                children: Me
                   ? (0, e.jsx)("div", {
                       children: (0, L.we)("#GrantAwardError_Busy"),
                     })
                   : (0, e.jsxs)(e.Fragment, {
                       children: [
                         !!Z && (0, e.jsx)(h.t, { size: "small" }),
-                        !!b && (0, e.jsx)(Oe.Jlk, {}),
+                        !!V && (0, e.jsx)(Le.Jlk, {}),
                         B,
                       ],
                     }),
               }),
-              pe,
+              re,
             ],
           });
         }
-        function Ae(v) {
-          const A = Number.parseInt((0, E.j$)(v.args)) || 0;
+        function He(v) {
+          const A = Number.parseInt((0, b.j$)(v.args)) || 0;
           return A >= 0 && A < 32
-            ? (0, e.jsx)(He, { nDoorIndex: A, children: v.children })
+            ? (0, e.jsx)($e, { nDoorIndex: A, children: v.children })
             : null;
         }
-        const Ct = (0, jt.y)(st.H);
-        function vt(v) {
-          const A = Number.parseInt((0, E.j$)(v.args)),
-            { event: B, showErrorInfo: b } = v.context;
+        const ye = (0, Dt.y)(Bt.H);
+        function Ct(v) {
+          const A = Number.parseInt((0, b.j$)(v.args)),
+            { event: B, showErrorInfo: V } = v.context;
           if (A) {
-            const V = B?.jsondata?.sale_sections?.findIndex(
+            const D = B?.jsondata?.sale_sections?.findIndex(
               (Z) => Z.unique_id == A,
             );
-            if (V >= 0) {
+            if (D >= 0) {
               const Z = B.GetDayIndexFromEventStart();
-              return (0, e.jsx)(rt.Cs, {
-                location: b ? rt.HY : rt.bs,
-                children: (0, e.jsx)(Ct, {
+              return (0, e.jsx)(at.Cs, {
+                location: V ? at.HY : at.bs,
+                children: (0, e.jsx)(ye, {
                   event: B,
-                  section: B.jsondata.sale_sections[V],
-                  activeTab: new Re.y(null, Z),
+                  section: B.jsondata.sale_sections[D],
+                  activeTab: new Tt.y(null, Z),
                   language: v.language,
                   nSaleDayIndex: Z,
                   promotionName: "",
                   appVisibilityTracker: null,
-                  ePreviewMode: b
-                    ? je.S.EPreviewMode_Enabled
-                    : je.S.EPreviewMode_Disabled,
+                  ePreviewMode: V
+                    ? Ze.S.EPreviewMode_Enabled
+                    : Ze.S.EPreviewMode_Disabled,
                 }),
               });
-            } else if (b)
+            } else if (V)
               return (0, e.jsxs)("div", {
-                className: Tt.ErrorDiv,
+                className: jt.ErrorDiv,
                 children: ["Error could not find sale section ", A],
               });
           }
           return null;
         }
-        let Me = null;
-        function Rt() {
+        let qe = null;
+        function Ee() {
           return (
-            Me == null &&
-              (Me = new Map([
-                ...Array.from(Mt().entries()),
+            qe == null &&
+              (qe = new Map([
+                ...Array.from(It().entries()),
                 [
                   "itemdef",
                   {
-                    Constructor: Lt,
+                    Constructor: Rt,
                     autocloses: !1,
                     skipInternalNewline: !0,
                     allowWrapTextForCopying: !0,
                   },
                 ],
-                ["followgame", { Constructor: ye, autocloses: !1 }],
-                ["deckcompatcount", { Constructor: Ot, autocloses: !1 }],
+                ["followgame", { Constructor: Se, autocloses: !1 }],
+                ["deckcompatcount", { Constructor: Lt, autocloses: !1 }],
                 [
                   "deckcompatuserlibrarycount",
-                  { Constructor: Gt, autocloses: !1 },
+                  { Constructor: Ot, autocloses: !1 },
                 ],
-                ["giveawayinfo", { Constructor: $e, autocloses: !1 }],
-                ["price", { Constructor: Qe, autocloses: !1 }],
-                ["pricesavings", { Constructor: bt, autocloses: !1 }],
-                ["eventdoorvisibility", { Constructor: Ft, autocloses: !1 }],
-                ["chooseaccount", { Constructor: pt, autocloses: !1 }],
-                ["badgecurrentlevel", { Constructor: Ze, autocloses: !1 }],
-                ["optindoorquest", { Constructor: Ae, autocloses: !1 }],
-                ["classname", { Constructor: Pt, autocloses: !1 }],
-                ["localize", { Constructor: ot, autocloses: !1 }],
-                ["salesection", { Constructor: vt, autocloses: !1 }],
-                ["reservationbutton", { Constructor: O, autocloses: !1 }],
+                ["giveawayinfo", { Constructor: st, autocloses: !1 }],
+                ["price", { Constructor: _e, autocloses: !1 }],
+                ["pricesavings", { Constructor: Xe, autocloses: !1 }],
+                ["eventdoorvisibility", { Constructor: Gt, autocloses: !1 }],
+                ["chooseaccount", { Constructor: Ve, autocloses: !1 }],
+                ["badgecurrentlevel", { Constructor: Ge, autocloses: !1 }],
+                ["optindoorquest", { Constructor: He, autocloses: !1 }],
+                ["classname", { Constructor: ht, autocloses: !1 }],
+                ["localize", { Constructor: Pt, autocloses: !1 }],
+                ["salesection", { Constructor: Ct, autocloses: !1 }],
+                ["reservationbutton", { Constructor: et, autocloses: !1 }],
               ])),
-            Me
+            qe
           );
         }
-        function Lt(v) {
+        function Rt(v) {
           const { event: A } = v.context,
-            B = Number.parseInt((0, E.j$)(v.args, "appid")),
-            b = Number.parseInt((0, E.j$)(v.args, "itemdefid")),
-            V = Number.parseInt((0, E.j$)(v.args, "maxquantity")),
-            Z = (0, E.j$)(v.args, "calltoaction");
-          return !(0, Et.gS)(B, b, !1) || !A
+            B = Number.parseInt((0, b.j$)(v.args, "appid")),
+            V = Number.parseInt((0, b.j$)(v.args, "itemdefid")),
+            D = Number.parseInt((0, b.j$)(v.args, "maxquantity")),
+            Z = (0, b.j$)(v.args, "calltoaction");
+          return !(0, bt.gS)(B, V, !1) || !A
             ? (0, e.jsx)(h.t, {
                 size: "small",
                 position: "center",
                 string: (0, L.we)("#Loading"),
               })
-            : (0, e.jsx)(ve.f, {
+            : (0, e.jsx)(pe.f, {
                 language: v.language,
                 clanAccountID: A.clanSteamID.GetAccountID(),
-                itemDefSetting: { nAppID: B, nItemDefID: b, max_quantity: V },
+                itemDefSetting: { nAppID: B, nItemDefID: V, max_quantity: D },
                 strCallToAction: Z,
               });
         }
-        function Ot(v) {
+        function Lt(v) {
           const A = G();
           if (!A) return (0, e.jsx)(h.t, { size: "small" });
-          const B = Number.parseInt((0, E.j$)(v.args));
+          const B = Number.parseInt((0, b.j$)(v.args));
           return (0, e.jsx)("span", { children: (0, We.D)(Number(K(A, B))) });
         }
-        function Gt(v) {
+        function Ot(v) {
           const A = (0, X.jR)(Q.iA.accountid, "library");
           if (!A) return (0, e.jsx)(h.t, { size: "small" });
-          const B = Number.parseInt((0, E.j$)(v.args));
-          let b = A.verifiedList?.length || 0;
+          const B = Number.parseInt((0, b.j$)(v.args));
+          let V = A.verifiedList?.length || 0;
           switch (B) {
             case N.sd:
-              b = A.playableList?.length || 0;
+              V = A.playableList?.length || 0;
               break;
             case N.V8:
-              b = A.unsupportedList?.length || 0;
+              V = A.unsupportedList?.length || 0;
               break;
             case N.YX:
-              b = A.unknownList?.length || 0;
+              V = A.unknownList?.length || 0;
               break;
           }
-          return (0, e.jsx)("span", { children: (0, We.D)(Number(b)) });
+          return (0, e.jsx)("span", { children: (0, We.D)(Number(V)) });
         }
-        function Ft(v) {
-          const A = Number.parseInt((0, E.j$)(v.args)),
+        function Gt(v) {
+          const A = Number.parseInt((0, b.j$)(v.args)),
             B =
-              "hide" in v.args && !!Number.parseInt((0, E.j$)(v.args, "hide"));
+              "hide" in v.args && !!Number.parseInt((0, b.j$)(v.args, "hide"));
           return A >= 0
-            ? (0, e.jsx)(ke, { nDoorIndex: A, bHide: B, children: v.children })
+            ? (0, e.jsx)(Ft, { nDoorIndex: A, bHide: B, children: v.children })
             : null;
         }
-        function ke(v) {
-          const { nDoorIndex: A, bHide: B, children: b } = v,
-            V = (0, z.OM)(A);
-          return V == null
+        function Ft(v) {
+          const { nDoorIndex: A, bHide: B, children: V } = v,
+            D = (0, z.OM)(A);
+          return D == null
             ? null
-            : (V && !B) || (!V && B)
+            : (D && !B) || (!D && B)
               ? (0, e.jsx)(e.Fragment, { children: v.children })
               : null;
         }
-        function pt(v) {
+        function Ve(v) {
           if (Q.iA.logged_in) {
-            const A = Number.parseInt((0, E.j$)(v.args)),
-              B = Number.parseInt((0, E.j$)(v.args, "mod"));
+            const A = Number.parseInt((0, b.j$)(v.args)),
+              B = Number.parseInt((0, b.j$)(v.args, "mod"));
             if (B > 0 && A < B && Q.iA.accountid % B == A) return v.children;
           }
           return null;
         }
-        function Pt(v) {
-          const A = (0, E.j$)(v.args);
+        function ht(v) {
+          const A = (0, b.j$)(v.args);
           return A?.trim().length > 0
             ? (0, e.jsx)("div", { className: A.trim(), children: v.children })
             : (0, e.jsx)(e.Fragment, { children: v.children });
         }
-        function ot(v) {
+        function Pt(v) {
           return (0, e.jsx)("span", {
             className: M.LocalizeBlock,
             children: (0, L.oW)(
@@ -3692,16 +3690,16 @@
             ),
           });
         }
-        function $e(v) {
-          let A = (0, E.j$)(v.args);
+        function st(v) {
+          let A = (0, b.j$)(v.args);
           return A
-            ? (0, e.jsx)(Je, { giveawayid: A })
+            ? (0, e.jsx)(Mt, { giveawayid: A })
             : (0, e.jsx)(f.Fragment, {});
         }
-        function O(v) {
+        function et(v) {
           const { showErrorInfo: A, event: B } = v.context,
-            b = Number.parseInt((0, E.j$)(v.args)),
-            V = f.useMemo(() => {
+            V = Number.parseInt((0, b.j$)(v.args)),
+            D = f.useMemo(() => {
               if (B)
                 return B.jsondata.sale_sections?.find(
                   (Z) =>
@@ -3712,55 +3710,55 @@
                         "while_supplies_last"),
                 );
             }, [B]);
-          if (b && V) {
-            const Z = Number.parseInt((0, E.j$)(v.args, "depositpackageid")),
-              ce = Number.parseInt((0, E.j$)(v.args, "psulesspackageid")),
-              be = (0, E.j$)(v.args, "out_of_stock_override"),
-              fe = (0, E.j$)(v.args, "delivery_override"),
-              pe = (0, E.j$)(v.args, "delivery_override_out_of_stock");
+          if (V && D) {
+            const Z = Number.parseInt((0, b.j$)(v.args, "depositpackageid")),
+              le = Number.parseInt((0, b.j$)(v.args, "psulesspackageid")),
+              Me = (0, b.j$)(v.args, "out_of_stock_override"),
+              je = (0, b.j$)(v.args, "delivery_override"),
+              re = (0, b.j$)(v.args, "delivery_override_out_of_stock");
             return (0, e.jsx)(q, {
-              section: V,
-              reservationPackageID: b,
+              section: D,
+              reservationPackageID: V,
               depositPackageID: Z,
-              psuLessPackageID: ce,
-              strOutOfStockOverride: be,
-              strDeliveryOverride: pe || fe,
-              bDeliveryOverrideOnlyIfOutOfStock: !!pe,
+              psuLessPackageID: le,
+              strOutOfStockOverride: Me,
+              strDeliveryOverride: re || je,
+              bDeliveryOverrideOnlyIfOutOfStock: !!re,
             });
           }
           return (0, e.jsx)(e.Fragment, {});
         }
-        var ft = s(71698),
-          Ut = s(94520);
-        function _t(v) {
+        var O = s(71698),
+          vt = s(94520);
+        function Ut(v) {
           const { bSalePage: A } = v,
-            [B, b] = f.useState(!1);
+            [B, V] = f.useState(!1);
           return (
-            (0, ft.H)(B, A),
+            (0, O.H)(B, A),
             f.useEffect(() => {
-              j.Vw.Init(new i.D(Q.TS.WEBAPI_BASE_URL)), oe.O3.Init(), b(!0);
+              j.Vw.Init(new i.D(Q.TS.WEBAPI_BASE_URL)), de.O3.Init(), V(!0);
             }, []),
             f.useEffect(() => {
-              const V = (0, L.l4)();
-              V && P.locale(V);
+              const D = (0, L.l4)();
+              D && P.locale(D);
             }, []),
             B
               ? A
-                ? (0, e.jsx)(Ut.d3, { dictionary: Rt(), children: v.children })
+                ? (0, e.jsx)(vt.d3, { dictionary: Ee(), children: v.children })
                 : v.children
               : null
           );
         }
       },
-      52671: (ne, Se, s) => {
+      52671: (ne, fe, s) => {
         "use strict";
-        s.r(Se), s.d(Se, { default: () => L });
+        s.r(fe), s.d(fe, { default: () => L });
         var e = s(7850),
           P = s(90626),
           f = s(92757),
           i = s(82559),
           j = s(57223),
-          oe = s(25792);
+          de = s(25792);
         class L extends P.Component {
           state = { bIsLoading: !0 };
           componentDidMount() {
@@ -3769,7 +3767,7 @@
           render() {
             return this.state.bIsLoading
               ? null
-              : (0, e.jsx)(oe.tH, {
+              : (0, e.jsx)(de.tH, {
                   children: (0, e.jsxs)(f.dO, {
                     children: [
                       (0, e.jsx)(f.qh, {
@@ -3784,16 +3782,16 @@
           }
         }
       },
-      87278: (ne, Se, s) => {
+      87278: (ne, fe, s) => {
         "use strict";
-        s.r(Se), s.d(Se, { default: () => dn });
+        s.r(fe), s.d(fe, { default: () => dn });
         var e = s(7850),
           P = s(58732),
           f = s(57223),
           i = s(72604),
           j = s(3166),
-          oe = s(41735),
-          L = s.n(oe),
+          de = s(41735),
+          L = s.n(de),
           Q = s(34592);
         class N {
           static s_Singleton;
@@ -3869,7 +3867,7 @@
             return !1;
           }
         }
-        var me = s(82559),
+        var ue = s(82559),
           U = s(75844),
           I = s(90626),
           W = s(92757),
@@ -3877,7 +3875,7 @@
           T = s(813),
           G = s(16412),
           K = s(25792),
-          E = s(13784),
+          b = s(13784),
           X = s(88003),
           z = s(36118),
           M = s(85599),
@@ -3912,17 +3910,17 @@
                   (0, e.jsx)("h1", {
                     children: (0, c.we)("#RSSModeration_Title"),
                   }),
-                  (0, e.jsx)(ve, {}),
+                  (0, e.jsx)(pe, {}),
                   (0, e.jsx)(J, {
                     rgClanIDs: N.Get()
                       .GetAllRSSEnabledClans()
                       .map((m) => m.clan_accoundid),
                   }),
-                  (0, e.jsx)(Ie, {
+                  (0, e.jsx)(xe, {
                     rgClanIDs: o,
                     strTitle: (0, c.we)("#RSSModeration_TrustTitle"),
                   }),
-                  (0, e.jsx)(Ie, {
+                  (0, e.jsx)(xe, {
                     rgClanIDs: d,
                     strTitle: (0, c.we)("#RSSModeration_RestTitle"),
                   }),
@@ -3930,8 +3928,8 @@
               }),
             });
           },
-          ue = (0, W.y)(q),
-          ve = (0, U.PA)((a) => {
+          ge = (0, W.y)(q),
+          pe = (0, U.PA)((a) => {
             const [n, r] = (0, I.useState)(!1),
               [o, d] = (0, I.useState)(void 0);
             return n
@@ -3941,7 +3939,7 @@
                 })
               : o !== void 0
                 ? o.length > 0
-                  ? (0, e.jsx)(Ie, {
+                  ? (0, e.jsx)(xe, {
                       rgClanIDs: o,
                       strTitle: (0, c.we)("#RSSModeration_InactiveAutomation"),
                     })
@@ -3960,12 +3958,12 @@
                     children: [(0, c.we)("#RSSModeration_FindInActive"), " "],
                   });
           }),
-          Ie = (a) => {
+          xe = (a) => {
             const { rgClanIDs: n, strTitle: r } = a,
               [o, d] = (0, I.useState)(!1);
             let m = null;
             return (
-              o || (m = n.map((g) => (0, e.jsx)(we, { clanAccountID: g }, g))),
+              o || (m = n.map((g) => (0, e.jsx)(Ie, { clanAccountID: g }, g))),
               (0, e.jsxs)("div", {
                 className: (0, u.A)(l().SectionContainer),
                 children: [
@@ -3994,17 +3992,17 @@
               })
             );
           },
-          we = (0, U.PA)((a) => {
+          Ie = (0, U.PA)((a) => {
             const { clanAccountID: n } = a;
             return T.ac.BHasClanInfoLoadedByAccountID(n) &&
               f.A.Get().BHasClanIDLoaded(n)
-              ? (0, e.jsx)(_e, {
+              ? (0, e.jsx)(Ue, {
                   clanInfo: T.ac.GetClanInfoByClanAccountID(n),
                   rssAdminInfo: f.A.Get().GetRSSAdminForClanAccountID(n),
                 })
-              : (0, e.jsx)(Ke, { clanAccountID: n });
+              : (0, e.jsx)(Ne, { clanAccountID: n });
           }),
-          Ke = (a) => {
+          Ne = (a) => {
             const { clanAccountID: n } = a,
               r = "500px",
               o = async () => {
@@ -4026,7 +4024,7 @@
               }),
             });
           },
-          _e = (a) => {
+          Ue = (a) => {
             const { clanInfo: n, rssAdminInfo: r } = a,
               [o, d] = (0, I.useState)(!1),
               m = j.TS.STORE_BASE_URL + "newshub/group/" + n.clanAccountID,
@@ -4133,7 +4131,7 @@
                     }),
                     (0, e.jsx)("div", {
                       className: l().CreatorCtn,
-                      children: (0, e.jsx)(E.hA, {
+                      children: (0, e.jsx)(b.hA, {
                         bHideCreatorType: !0,
                         creatorID: {
                           name: null,
@@ -4148,7 +4146,7 @@
                 !!o &&
                   (0, e.jsx)(e.Fragment, {
                     children: r.BHasSavedRSSURL()
-                      ? (0, e.jsx)(me.q, { strRssURL: r.GetRSSUrl(), admin: r })
+                      ? (0, e.jsx)(ue.q, { strRssURL: r.GetRSSUrl(), admin: r })
                       : (0, e.jsx)("div", {
                           children: (0, c.we)("#RSSModeration_NoRSSFeed"),
                         }),
@@ -4158,7 +4156,7 @@
           },
           J = (a) => {
             const n = (r) => {
-              (0, X.pg)((0, e.jsx)(Le, { ...a }), (0, x.uX)(r));
+              (0, X.pg)((0, e.jsx)(Re, { ...a }), (0, x.uX)(r));
             };
             return (0, e.jsx)(w.he, {
               toolTipContent: (0, c.we)("#RSSModeration_ReindexAndReload_ttip"),
@@ -4168,7 +4166,7 @@
               }),
             });
           },
-          Le = (a) => {
+          Re = (a) => {
             const [n, r] = (0, I.useState)(void 0),
               [o, d] = (0, I.useState)(!1),
               [m, g] = (0, I.useState)(void 0),
@@ -4255,22 +4253,22 @@
               }),
             });
           };
-        var le = s(77495),
+        var ce = s(77495),
           ae = s(30096),
           Y = s(99412),
           k = s(14947),
-          Oe = Object.defineProperty,
-          D = Object.getOwnPropertyDescriptor,
+          Le = Object.defineProperty,
+          E = Object.getOwnPropertyDescriptor,
           S = (a, n, r, o) => {
             for (
-              var d = o > 1 ? void 0 : o ? D(n, r) : n, m = a.length - 1, g;
+              var d = o > 1 ? void 0 : o ? E(n, r) : n, m = a.length - 1, g;
               m >= 0;
               m--
             )
               (g = a[m]) && (d = (o ? g(n, r, d) : g(d)) || d);
-            return o && d && Oe(n, r, d), d;
+            return o && d && Le(n, r, d), d;
           };
-        const F = class ct {
+        const F = class lt {
           static s_Singleton;
           m_mapEventGIDToSolrData = new Map();
           m_listEvents = new Array();
@@ -4282,7 +4280,7 @@
           }
           static Get() {
             return (
-              ct.s_Singleton || (ct.s_Singleton = new ct()), ct.s_Singleton
+              lt.s_Singleton || (lt.s_Singleton = new lt()), lt.s_Singleton
             );
           }
           constructor() {
@@ -4317,11 +4315,11 @@
             let te = new Array();
             return (
               (0, k.h5)(() => {
-                se.forEach((xe) => {
-                  this.m_mapEventGIDToSolrData.has(xe.unique_id) ||
-                    (te.push(xe),
-                    this.m_mapEventGIDToSolrData.set(xe.unique_id, xe),
-                    this.m_listEvents.push(xe));
+                se.forEach((Ae) => {
+                  this.m_mapEventGIDToSolrData.has(Ae.unique_id) ||
+                    (te.push(Ae),
+                    this.m_mapEventGIDToSolrData.set(Ae.unique_id, Ae),
+                    this.m_listEvents.push(Ae));
                 });
               }),
               te
@@ -4339,10 +4337,10 @@
             _,
             se,
             te,
-            xe,
-            ie,
+            Ae,
+            oe,
           ) {
-            const Ee =
+            const be =
                 j.TS.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
               De = {
                 page: r,
@@ -4354,16 +4352,16 @@
                 eventtypefilter: R === void 0 ? void 0 : R.join(","),
                 orderByVisibility: _ || void 0,
                 creator_home_clan_id: se === void 0 ? void 0 : se.join(","),
-                showUnpublished: xe === void 0 ? void 0 : xe,
-                sale_only: ie === void 0 ? void 0 : ie,
+                showUnpublished: Ae === void 0 ? void 0 : Ae,
+                sale_only: oe === void 0 ? void 0 : oe,
                 term: te === void 0 ? void 0 : te,
               },
-              Wt = await L().get(Ee, {
+              Ht = await L().get(be, {
                 params: De,
                 withCredentials: !0,
                 cancelToken: n ? n.token : void 0,
               });
-            return Wt.data ? Wt.data.docs : [];
+            return Ht.data ? Ht.data.docs : [];
           }
         };
         S([k.sH], F.prototype, "m_mapEventGIDToSolrData", 2),
@@ -4371,18 +4369,18 @@
           S([k.XI], F.prototype, "ClearAllSolrEvents", 1);
         let C = F;
         var $ = s(9046),
-          de = Object.defineProperty,
-          ye = Object.getOwnPropertyDescriptor,
-          ge = (a, n, r, o) => {
+          me = Object.defineProperty,
+          Se = Object.getOwnPropertyDescriptor,
+          he = (a, n, r, o) => {
             for (
-              var d = o > 1 ? void 0 : o ? ye(n, r) : n, m = a.length - 1, g;
+              var d = o > 1 ? void 0 : o ? Se(n, r) : n, m = a.length - 1, g;
               m >= 0;
               m--
             )
               (g = a[m]) && (d = (o ? g(n, r, d) : g(d)) || d);
-            return o && d && de(n, r, d), d;
+            return o && d && me(n, r, d), d;
           };
-        class he {
+        class ve {
           constructor() {
             (0, k.Gn)(this);
           }
@@ -4438,39 +4436,39 @@
               this.m_mapEventGIDProcessed.set(n, r);
           }
         }
-        ge([k.sH], he.prototype, "m_backfill", 2),
-          ge([k.sH], he.prototype, "m_mapEventGIDProcessed", 2),
-          ge([k.sH], he.prototype, "m_bBackfillInProgress", 2),
-          ge([k.sH], he.prototype, "m_nProcessed", 2),
-          ge([k.sH], he.prototype, "m_nSuccesses", 2),
-          ge([k.sH], he.prototype, "m_nFailures", 2),
-          ge([k.sH], he.prototype, "m_nWarning", 2),
-          ge([k.sH], he.prototype, "m_nSkipped", 2),
-          ge([k.XI], he.prototype, "StartBackfill", 1),
-          ge([k.XI], he.prototype, "CompleteBackfill", 1),
-          ge([k.XI], he.prototype, "CloseProgress", 1);
-        const re = new he();
-        var Ye = s(45559),
-          yt = s(25279),
-          gt = s(56492),
-          At = s(75909),
-          xt = s(64),
-          Xe = s(29630),
-          tt = s(6658),
-          It = Object.defineProperty,
-          wt = Object.getOwnPropertyDescriptor,
-          nt = (a, n, r, o) => {
+        he([k.sH], ve.prototype, "m_backfill", 2),
+          he([k.sH], ve.prototype, "m_mapEventGIDProcessed", 2),
+          he([k.sH], ve.prototype, "m_bBackfillInProgress", 2),
+          he([k.sH], ve.prototype, "m_nProcessed", 2),
+          he([k.sH], ve.prototype, "m_nSuccesses", 2),
+          he([k.sH], ve.prototype, "m_nFailures", 2),
+          he([k.sH], ve.prototype, "m_nWarning", 2),
+          he([k.sH], ve.prototype, "m_nSkipped", 2),
+          he([k.XI], ve.prototype, "StartBackfill", 1),
+          he([k.XI], ve.prototype, "CompleteBackfill", 1),
+          he([k.XI], ve.prototype, "CloseProgress", 1);
+        const ie = new ve();
+        var Je = s(45559),
+          ft = s(25279),
+          mt = s(56492),
+          St = s(75909),
+          yt = s(64),
+          Qe = s(29630),
+          ut = s(6658),
+          At = Object.defineProperty,
+          xt = Object.getOwnPropertyDescriptor,
+          Ye = (a, n, r, o) => {
             for (
-              var d = o > 1 ? void 0 : o ? wt(n, r) : n, m = a.length - 1, g;
+              var d = o > 1 ? void 0 : o ? xt(n, r) : n, m = a.length - 1, g;
               m >= 0;
               m--
             )
               (g = a[m]) && (d = (o ? g(n, r, d) : g(d)) || d);
-            return o && d && It(n, r, d), d;
+            return o && d && At(n, r, d), d;
           };
-        const at = 25,
-          Mt = 5e3;
-        let Ne = class extends I.Component {
+        const It = 25,
+          wt = 5e3;
+        let we = class extends I.Component {
           m_cancelSignal = L().CancelToken.source();
           m_nImageID = 0;
           m_mapArtworkResizeSuccess = new Map();
@@ -4503,9 +4501,9 @@
                 });
           }
           async GetImageInfo(a, n, r = "") {
-            const o = (0, tt.yh)(n),
-              d = Xe.zU.GetHashFromHashAndExt(n) + r;
-            return Xe.zU.AsyncGetImageResolution(
+            const o = (0, ut.yh)(n),
+              d = Qe.zU.GetHashFromHashAndExt(n) + r;
+            return Qe.zU.AsyncGetImageResolution(
               a,
               d,
               o,
@@ -4524,14 +4522,14 @@
                 d.strErrorMsg;
             console.error(m, d),
               o
-                ? ((o.bFailed = !0), (o.strMessage = m), re.CloseProgress(a, o))
-                : re.CompleteBackfill("resize_image");
+                ? ((o.bFailed = !0), (o.strMessage = m), ie.CloseProgress(a, o))
+                : ie.CompleteBackfill("resize_image");
           }
           async HandleResizeForImageType(a, n, r, o, d) {
             for (let m = Y.Bhc; m < a.length && m < Y.bP9; ++m)
               if (a[m] && a[m].length > 0) {
                 let g = a[m],
-                  p = (0, tt.yh)(g);
+                  p = (0, ut.yh)(g);
                 const R = new H.b(n.clan_steamid);
                 if (p) {
                   let _ = await this.GetImageInfo(R, g).catch(
@@ -4545,7 +4543,7 @@
                       { height: 0, width: 0, success: i.zi }
                     ),
                   );
-                  if (_.success == i.R && (0, yt.yu)(_.width, _.height, o, !0))
+                  if (_.success == i.R && (0, ft.yu)(_.width, _.height, o, !0))
                     if (
                       (
                         await this.GetImageInfo(R, g, d).catch(
@@ -4564,20 +4562,20 @@
                       r.bAlreadyProcessed = !0;
                     else {
                       r.bProcessing = !0;
-                      let te = Xe.zU.GetHashFromHashAndExt(g),
-                        xe = Xe.zU.GetExtStringFromHashAndExt(g),
-                        ie = (0, xt.K_)(o);
-                      if (ie)
+                      let te = Qe.zU.GetHashFromHashAndExt(g),
+                        Ae = Qe.zU.GetExtStringFromHashAndExt(g),
+                        oe = (0, yt.K_)(o);
+                      if (oe)
                         try {
-                          const Ee = await (0, At.bT)(
+                          const be = await (0, St.bT)(
                             this.m_cancelSignal.token,
                             R,
                             te,
-                            xe,
-                            ie,
+                            Ae,
+                            oe,
                           );
                           console.log("success on the resize request"),
-                            Ee == ie.length
+                            be == oe.length
                               ? ((r.bSucceeded = !0),
                                 this.m_mapArtworkResizeSuccess.set(
                                   o,
@@ -4588,12 +4586,12 @@
                                   "Did not resize all: " +
                                   o +
                                   " " +
-                                  Ee +
+                                  be +
                                   " / " +
-                                  ie.length));
-                        } catch (Ee) {
+                                  oe.length));
+                        } catch (be) {
                           r.bFailed = !0;
-                          let De = (0, Q.H)(Ee);
+                          let De = (0, Q.H)(be);
                           (r.strMessage = De.strErrorMsg),
                             console.error("Resize: " + De.strErrorMsg, De);
                         }
@@ -4608,11 +4606,11 @@
               }
           }
           async RunArtworkResizeBackfill() {
-            re.StartBackfill("resize_image");
+            ie.StartBackfill("resize_image");
             let a = 0;
-            for (; re.BIsBackkFillInProgress(); ) {
+            for (; ie.BIsBackkFillInProgress(); ) {
               let n = await C.Get()
-                .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, a, at)
+                .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, a, It)
                 .catch((r) =>
                   this.HandleErrorFatal(
                     null,
@@ -4621,22 +4619,22 @@
                   ),
                 );
               if (!n || n.length == 0) {
-                re.CompleteBackfill("resize_image"),
+                ie.CompleteBackfill("resize_image"),
                   console.log("Compelted the backfill");
                 break;
               }
               a += n.length;
               for (let r = 0; r < n.length; ++r) {
                 let o = n[r],
-                  d = re.CreateOrGetBackfillProgess(o.unique_id);
+                  d = ie.CreateOrGetBackfillProgess(o.unique_id);
                 if (!o.announcement_gid || o.announcement_gid.length == 0) {
                   (d.bSkipped = !0),
                     (d.bWarning = !0),
-                    re.CloseProgress(o.unique_id, d);
+                    ie.CloseProgress(o.unique_id, d);
                   continue;
                 }
                 if (
-                  (await le.O3.LoadPartnerEventFromAnnoucementGID(
+                  (await ce.O3.LoadPartnerEventFromAnnoucementGID(
                     Number(o.appid),
                     o.announcement_gid,
                     100,
@@ -4651,17 +4649,17 @@
                   d.bFailed)
                 )
                   continue;
-                let m = le.O3.GetClanEventFromAnnouncementGID(
+                let m = ce.O3.GetClanEventFromAnnouncementGID(
                   o.announcement_gid,
                 );
                 if (!m) {
                   (d.bFailed = !0),
                     (d.strMessage = "Failed to load the event: " + o.unique_id),
-                    re.CloseProgress(o.unique_id, d);
+                    ie.CloseProgress(o.unique_id, d);
                   continue;
                 }
                 if (d.bSucceeded || d.bFailed || d.bAlreadyProcessed) {
-                  (d.bAlreadyProcessed = !0), re.CloseProgress(o.unique_id, d);
+                  (d.bAlreadyProcessed = !0), ie.CloseProgress(o.unique_id, d);
                   continue;
                 }
                 if (
@@ -4669,7 +4667,7 @@
                   this.setState({
                     strInfo:
                       "Processing " +
-                      re.GetBackfillGIDs().length +
+                      ie.GetBackfillGIDs().length +
                       " Appid: " +
                       m.appid +
                       " Event " +
@@ -4730,12 +4728,12 @@
                   );
                 }
                 if (
-                  (re.CloseProgress(o.unique_id, d),
-                  !re.BIsBackkFillInProgress())
+                  (ie.CloseProgress(o.unique_id, d),
+                  !ie.BIsBackkFillInProgress())
                 )
                   break;
               }
-              if (re.m_nFailures > Mt) {
+              if (ie.m_nFailures > wt) {
                 console.log("Hit too many errors, stoppinng the backfill");
                 break;
               }
@@ -4744,24 +4742,24 @@
           RenderFailure() {
             let a = new Array();
             return (
-              re.m_nFailures > 0 &&
-                re.GetBackfillGIDs().forEach((n) => {
-                  let r = re.GetEventBackfillProgress().get(n);
+              ie.m_nFailures > 0 &&
+                ie.GetBackfillGIDs().forEach((n) => {
+                  let r = ie.GetEventBackfillProgress().get(n);
                   if (r && r.bFailed) {
-                    let o = le.O3.GetClanEventModel(n);
+                    let o = ce.O3.GetClanEventModel(n);
                     o &&
                       a.push(
                         (0, e.jsxs)(
                           "div",
                           {
                             children: [
-                              (0, e.jsx)(gt.tj, {
+                              (0, e.jsx)(mt.tj, {
                                 eventModel: o,
-                                route: gt.PH.k_eView,
+                                route: mt.PH.k_eView,
                                 children: o.GetNameWithFallback(Y.Bhc),
                               }),
                               (0, e.jsx)("div", {
-                                className: Ye.Error,
+                                className: Je.Error,
                                 children: r.strMessage,
                               }),
                             ],
@@ -4838,7 +4836,7 @@
                   }),
                 (0, e.jsx)("div", {
                   children: (0, e.jsx)("button", {
-                    onClick: () => re.CompleteBackfill("resize_image"),
+                    onClick: () => ie.CompleteBackfill("resize_image"),
                     children: "Stop Backfill",
                   }),
                 }),
@@ -4847,19 +4845,19 @@
                     children: ["Processing: ", this.state.strInfo],
                   }),
                 (0, e.jsxs)("div", {
-                  children: ["Events Processed: ", re.m_nProcessed],
+                  children: ["Events Processed: ", ie.m_nProcessed],
                 }),
                 (0, e.jsxs)("div", {
-                  children: ["Events Succeeded: ", re.m_nSuccesses],
+                  children: ["Events Succeeded: ", ie.m_nSuccesses],
                 }),
                 (0, e.jsxs)("div", {
-                  children: ["Events Warning: ", re.m_nWarning],
+                  children: ["Events Warning: ", ie.m_nWarning],
                 }),
                 (0, e.jsxs)("div", {
-                  children: ["Events Failed: ", re.m_nFailures],
+                  children: ["Events Failed: ", ie.m_nFailures],
                 }),
                 (0, e.jsxs)("div", {
-                  children: ["Events Skipped: ", re.m_nSkipped],
+                  children: ["Events Skipped: ", ie.m_nSkipped],
                 }),
                 a.length > 0 &&
                   (0, e.jsxs)(I.Fragment, {
@@ -4885,18 +4883,18 @@
             });
           }
         };
-        nt([ae.oI], Ne.prototype, "OnArtworkResizeBackfill", 1),
-          nt([ae.oI], Ne.prototype, "BeginArtworkResize", 1),
-          (Ne = nt([U.PA], Ne));
-        var Be = s(65946),
-          We = s(92298),
-          ht = s.n(We),
-          Je = s(5634),
-          Ce = s(73259),
-          Qe = s(71684),
+        Ye([ae.oI], we.prototype, "OnArtworkResizeBackfill", 1),
+          Ye([ae.oI], we.prototype, "BeginArtworkResize", 1),
+          (we = Ye([U.PA], we));
+        var We = s(65946),
+          gt = s(92298),
+          Mt = s.n(gt),
+          ke = s(5634),
+          _e = s(73259),
+          Xe = s(71684),
           bt = Object.defineProperty,
           Et = Object.getOwnPropertyDescriptor,
-          Ge = (a, n, r, o) => {
+          Oe = (a, n, r, o) => {
             for (
               var d = o > 1 ? void 0 : o ? Et(n, r) : n, m = a.length - 1, g;
               m >= 0;
@@ -4908,7 +4906,7 @@
         const Dt = s(87937),
           jt = ["mod_reviewed", "auto_migrated"],
           Tt = 20,
-          Re = class mt {
+          Be = class dt {
             static s_Singleton;
             selectedTags = void 0;
             excludedTags = void 0;
@@ -4920,7 +4918,7 @@
             bUseCustomQuery = !1;
             static Get() {
               return (
-                mt.s_Singleton || (mt.s_Singleton = new mt()), mt.s_Singleton
+                dt.s_Singleton || (dt.s_Singleton = new dt()), dt.s_Singleton
               );
             }
             constructor() {
@@ -4949,7 +4947,7 @@
                   .filter(Boolean)
                   .map((_) => {
                     const se = Number.parseInt(r.get("eventtype"));
-                    return { label: (0, Qe.rG)(se), value: se };
+                    return { label: (0, Xe.rG)(se), value: se };
                   }));
               let p;
               r.has("filterDate") &&
@@ -4970,27 +4968,27 @@
                 });
             }
           };
-        Ge([k.sH], Re.prototype, "selectedTags", 2),
-          Ge([k.sH], Re.prototype, "excludedTags", 2),
-          Ge([k.sH], Re.prototype, "filterDate", 2),
-          Ge([k.sH], Re.prototype, "filterDateAsString", 2),
-          Ge([k.sH], Re.prototype, "eventsToLoadPerPaging", 2),
-          Ge([k.sH], Re.prototype, "filterEventTypes", 2),
-          Ge([k.sH], Re.prototype, "bOrderByVisibilityStartTime", 2),
-          Ge([k.sH], Re.prototype, "bUseCustomQuery", 2);
-        let ze = Re;
-        var Bt = Object.defineProperty,
-          rt = Object.getOwnPropertyDescriptor,
-          st = (a, n, r, o) => {
+        Oe([k.sH], Be.prototype, "selectedTags", 2),
+          Oe([k.sH], Be.prototype, "excludedTags", 2),
+          Oe([k.sH], Be.prototype, "filterDate", 2),
+          Oe([k.sH], Be.prototype, "filterDateAsString", 2),
+          Oe([k.sH], Be.prototype, "eventsToLoadPerPaging", 2),
+          Oe([k.sH], Be.prototype, "filterEventTypes", 2),
+          Oe([k.sH], Be.prototype, "bOrderByVisibilityStartTime", 2),
+          Oe([k.sH], Be.prototype, "bUseCustomQuery", 2);
+        let ze = Be;
+        var at = Object.defineProperty,
+          Bt = Object.getOwnPropertyDescriptor,
+          Ze = (a, n, r, o) => {
             for (
-              var d = o > 1 ? void 0 : o ? rt(n, r) : n, m = a.length - 1, g;
+              var d = o > 1 ? void 0 : o ? Bt(n, r) : n, m = a.length - 1, g;
               m >= 0;
               m--
             )
               (g = a[m]) && (d = (o ? g(n, r, d) : g(d)) || d);
-            return o && d && Bt(n, r, d), d;
+            return o && d && at(n, r, d), d;
           },
-          je = ((a) => (
+          Ce = ((a) => (
             (a[(a.k_ModReviewed = 0)] = "k_ModReviewed"),
             (a[(a.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
             (a[(a.k_ChangeEventType = 2)] = "k_ChangeEventType"),
@@ -5006,9 +5004,9 @@
             (a[(a.k_ModRemoveHalloweenEvent = 9)] =
               "k_ModRemoveHalloweenEvent"),
             a
-          ))(je || {});
-        const it = "ModAct";
-        class Fe {
+          ))(Ce || {});
+        const rt = "ModAct";
+        class Ge {
           m_moderator;
           m_rtWhen;
           m_action;
@@ -5016,7 +5014,7 @@
           m_newTagAdded;
           ToModString() {
             let n =
-              it +
+              rt +
               "_" +
               this.m_moderator +
               "_" +
@@ -5035,7 +5033,7 @@
           }
           FromString(n) {
             let r = n.split("_");
-            if (!r || r[0] !== it) return !1;
+            if (!r || r[0] !== rt) return !1;
             switch (
               ((this.m_moderator = Number(r[1])),
               (this.m_rtWhen = Number(r[2])),
@@ -5093,7 +5091,7 @@
             );
           }
           static IsAuditAction(n) {
-            return n.startsWith(it);
+            return n.startsWith(rt);
           }
           SetUpdateSeasonalTags(n) {
             return (
@@ -5105,7 +5103,7 @@
             );
           }
         }
-        const Ze = class ut {
+        const $e = class ct {
           static s_Singleton;
           m_mapEventGIDToSolrData = new Map();
           m_listEvents = new Array();
@@ -5117,7 +5115,7 @@
           }
           static Get() {
             return (
-              ut.s_Singleton || (ut.s_Singleton = new ut()), ut.s_Singleton
+              ct.s_Singleton || (ct.s_Singleton = new ct()), ct.s_Singleton
             );
           }
           constructor() {
@@ -5207,14 +5205,14 @@
               });
           }
         };
-        st([k.sH], Ze.prototype, "m_mapEventGIDToSolrData", 2),
-          st([k.sH], Ze.prototype, "m_listEvents", 2),
-          st([k.XI], Ze.prototype, "ClearAllSolrEvents", 1);
-        let He = Ze;
-        var Ae = s(10142),
+        Ze([k.sH], $e.prototype, "m_mapEventGIDToSolrData", 2),
+          Ze([k.sH], $e.prototype, "m_listEvents", 2),
+          Ze([k.XI], $e.prototype, "ClearAllSolrEvents", 1);
+        let He = $e;
+        var ye = s(10142),
           Ct = s(91424),
-          vt = s(92264),
-          Me = s(61311),
+          qe = s(92264),
+          Ee = s(61311),
           Rt = s(35098);
         function Lt(a) {
           const { accountID: n, locToken: r } = a,
@@ -5243,43 +5241,43 @@
             r =
               (0, c.TW)(n.m_rtWhen) +
               " @ " +
-              (0, vt.KC)(n.m_rtWhen, { bForce24HourClock: !1 }),
+              (0, qe.KC)(n.m_rtWhen, { bForce24HourClock: !1 }),
             o = (0, e.jsx)(Lt, {
               locToken: "#EventModTile_Moderator",
               accountID: n.m_moderator,
             });
           switch (n.m_action) {
-            case je.k_ModReviewed:
+            case Ce.k_ModReviewed:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_Reviewed",
                   (0, e.jsx)("span", { children: r }),
                   o,
                 ),
               });
-            case je.k_ModUnreviewed:
+            case Ce.k_ModUnreviewed:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_UnReviewed",
                   (0, e.jsx)("span", { children: r }),
                   o,
                 ),
               });
-            case je.k_ChangeEventType:
+            case Ce.k_ChangeEventType:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_NewEventType",
                   (0, e.jsx)("span", { children: r }),
                   o,
-                  (0, Qe.rG)(n.m_newEventType),
+                  (0, Xe.rG)(n.m_newEventType),
                 ),
               });
-            case je.k_UpdateSeasonTags:
+            case Ce.k_UpdateSeasonTags:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_SeasonTagUpdate",
                   (0, e.jsx)("span", { children: r }),
@@ -5287,36 +5285,36 @@
                   n.m_newTagAdded,
                 ),
               });
-            case je.k_ModReReviewed:
+            case Ce.k_ModReReviewed:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_ReReviewed",
                   (0, e.jsx)("span", { children: r }),
                   o,
                 ),
               });
-            case je.k_ModRemovedFromSteamChina:
+            case Ce.k_ModRemovedFromSteamChina:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_RemoveFromSC",
                   (0, e.jsx)("span", { children: r }),
                   o,
                 ),
               });
-            case je.k_ModFlagAdultOnlyContent:
+            case Ce.k_ModFlagAdultOnlyContent:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_FlagAdultContent",
                   (0, e.jsx)("span", { children: r }),
                   o,
                 ),
               });
-            case je.k_ModRemoveAdultOnlyContent:
+            case Ce.k_ModRemoveAdultOnlyContent:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: (0, c.PP)(
                   "#EventModTile_Action_RemoveAdultContent",
                   (0, e.jsx)("span", { children: r }),
@@ -5325,7 +5323,7 @@
               });
             default:
               return (0, e.jsx)("div", {
-                className: Me.ModeratorAuditActionCtn,
+                className: Ee.ModeratorAuditActionCtn,
                 children: n.ToModString(),
               });
           }
@@ -5336,17 +5334,17 @@
             d = (_) => {
               const { eventModel: se } = a;
               return _.map((te) => {
-                const xe = new Fe();
+                const Ae = new Ge();
                 return (
-                  xe.FromString(te),
-                  (0, e.jsx)(Ot, { modAction: xe }, se.GID + te)
+                  Ae.FromString(te),
+                  (0, e.jsx)(Ot, { modAction: Ae }, se.GID + te)
                 );
               });
             },
             { eventModel: m } = a;
           let g = m
             .GetAllTags()
-            .filter((_) => Fe.IsAuditAction(_))
+            .filter((_) => Ge.IsAuditAction(_))
             .reverse();
           const p = g.length,
             R = g.length > o && n;
@@ -5362,50 +5360,50 @@
                   R &&
                     (0, e.jsx)("a", {
                       onClick: () => r(!1),
-                      className: Me.ExpandModActions,
+                      className: Ee.ExpandModActions,
                       children: (0, c.we)("#EventModTile_Action_More", p - o),
                     }),
                   !R &&
                     p > o &&
                     (0, e.jsx)("a", {
                       onClick: () => r(!0),
-                      className: Me.ExpandModActions,
+                      className: Ee.ExpandModActions,
                       children: (0, c.we)("#EventModTile_Action_Hide"),
                     }),
                 ],
               }));
         }
         var Ft = s(95695),
-          ke = s.n(Ft),
-          pt = s(95414),
+          Ve = s.n(Ft),
+          ht = s(95414),
           Pt = s(13465),
-          ot = s(53107),
-          $e = s(53113),
+          st = s(53107),
+          et = s(53113),
           O = s(961),
-          ft = s(7582),
+          vt = s(7582),
           Ut = s(29522),
-          _t = s(88812),
-          v = s(32606),
-          A = Object.defineProperty,
-          B = Object.getOwnPropertyDescriptor,
-          b = (a, n, r, o) => {
+          v = s(88812),
+          A = s(32606),
+          B = Object.defineProperty,
+          V = Object.getOwnPropertyDescriptor,
+          D = (a, n, r, o) => {
             for (
-              var d = o > 1 ? void 0 : o ? B(n, r) : n, m = a.length - 1, g;
+              var d = o > 1 ? void 0 : o ? V(n, r) : n, m = a.length - 1, g;
               m >= 0;
               m--
             )
               (g = a[m]) && (d = (o ? g(n, r, d) : g(d)) || d);
-            return o && d && A(n, r, d), d;
+            return o && d && B(n, r, d), d;
           };
-        const V = s(87937),
-          Z = 500,
-          ce = 50,
-          be = {
+        const Z = s(87937),
+          le = 500,
+          Me = 50,
+          je = {
             bExhaustedEventList: !1,
             bInfiniteScrollLoading: !0,
             nLastFetchCompletedMS: 0,
           };
-        let fe = class extends I.Component {
+        let re = class extends I.Component {
           m_cancelSignal = L().CancelToken.source();
           m_refScroll = I.createRef();
           m_IntervalTimer = void 0;
@@ -5468,7 +5466,7 @@
           async LoadMorePublicEventWithDelay() {
             this.m_IntervalTimer = window.setInterval(
               this.LoadMoreModerationEvents,
-              Z,
+              le,
             );
           }
           LoadMoreModerationEvents() {
@@ -5521,7 +5519,7 @@
                 ? C.Get().GetAllSolrEvents()
                 : He.Get().GetAllSolrEvents()
               ).forEach((o) => {
-                a.push((0, e.jsx)(Ue, { solrData: o }, o.unique_id));
+                a.push((0, e.jsx)(Pe, { solrData: o }, o.unique_id));
               }),
               a
             );
@@ -5532,8 +5530,8 @@
             a &&
               (this.state.bExhaustedEventList ||
                 this.state.bInfiniteScrollLoading ||
-                (a.getBoundingClientRect().bottom <= window.innerHeight + ce &&
-                  (this.state.nLastFetchCompletedMS + Z < Date.now()
+                (a.getBoundingClientRect().bottom <= window.innerHeight + Me &&
+                  (this.state.nLastFetchCompletedMS + le < Date.now()
                     ? this.setState(
                         { bInfiniteScrollLoading: !0 },
                         this.LoadMorePublicEventWithDelay,
@@ -5548,7 +5546,7 @@
               He.Get().ClearAllSolrEvents(),
               C.Get().ClearAllSolrEvents(),
               this.setState(
-                { ...be },
+                { ...je },
                 this.UpdateQueryParametersAndLoadMoreEvents,
               );
           }
@@ -5566,13 +5564,13 @@
                     }),
                     (0, e.jsx)(K.tH, {
                       children: (0, e.jsxs)("div", {
-                        className: (0, u.A)(ke().FlexRowContainer),
+                        className: (0, u.A)(Ve().FlexRowContainer),
                         children: [
-                          (0, e.jsx)(Te, {
+                          (0, e.jsx)(Fe, {
                             fnRequireRefetchEvents: this.RefetchAllEventTiles,
                           }),
                           !!n.bUseCustomQuery &&
-                            (0, e.jsx)(Pe, {
+                            (0, e.jsx)(Ke, {
                               fnRequireRefetchEvents: this.RefetchAllEventTiles,
                             }),
                         ],
@@ -5591,15 +5589,15 @@
             });
           }
         };
-        b([ae.oI], fe.prototype, "HandleError", 1),
-          b([ae.oI], fe.prototype, "LoadMorePublicEventWithDelay", 1),
-          b([ae.oI], fe.prototype, "LoadMoreModerationEvents", 1),
-          b([ae.oI], fe.prototype, "UpdateQueryParametersAndLoadMoreEvents", 1),
-          b([ae.oI], fe.prototype, "OnScroll", 1),
-          b([ae.oI], fe.prototype, "RefetchAllEventTiles", 1),
-          (fe = b([U.PA], fe));
-        const pe = (0, W.y)(fe),
-          Te = (0, U.PA)((a) => {
+        D([ae.oI], re.prototype, "HandleError", 1),
+          D([ae.oI], re.prototype, "LoadMorePublicEventWithDelay", 1),
+          D([ae.oI], re.prototype, "LoadMoreModerationEvents", 1),
+          D([ae.oI], re.prototype, "UpdateQueryParametersAndLoadMoreEvents", 1),
+          D([ae.oI], re.prototype, "OnScroll", 1),
+          D([ae.oI], re.prototype, "RefetchAllEventTiles", 1),
+          (re = D([U.PA], re));
+        const Te = (0, W.y)(re),
+          Fe = (0, U.PA)((a) => {
             const n = ze.Get(),
               { fnRequireRefetchEvents: r } = a;
             return (0, e.jsxs)(e.Fragment, {
@@ -5647,13 +5645,13 @@
               ],
             });
           }),
-          Pe = (0, U.PA)((a) => {
+          Ke = (0, U.PA)((a) => {
             const n = ze.Get(),
               { fnRequireRefetchEvents: r } = a,
-              o = Y.Zi8.map((p) => ({ value: p, label: (0, Qe.rG)(p) })).sort(
+              o = Y.Zi8.map((p) => ({ value: p, label: (0, Xe.rG)(p) })).sort(
                 (p, R) => p.label.localeCompare(R.label),
               ),
-              d = Ce.FZ.map((p) => ({ value: p, label: p })).sort((p, R) =>
+              d = _e.FZ.map((p) => ({ value: p, label: p })).sort((p, R) =>
                 p.label.localeCompare(R.label),
               ),
               m = { option: (p) => ({ ...p, color: "#444444" }) },
@@ -5661,7 +5659,7 @@
                 let R = new Date();
                 return (
                   p.unix() <
-                  V.unix(R.getTime() / 1e3 + 3600 * 24)
+                  Z.unix(R.getTime() / 1e3 + 3600 * 24)
                     .hour(0)
                     .seconds(0)
                     .minute(0)
@@ -5676,7 +5674,7 @@
                     (0, e.jsx)("span", {
                       children: (0, c.we)("#EventModeration_FilterByTag"),
                     }),
-                    (0, e.jsx)(Je.Ay, {
+                    (0, e.jsx)(ke.Ay, {
                       isSearchable: !0,
                       isMulti: !0,
                       onChange: (p) => {
@@ -5696,7 +5694,7 @@
                         "#EventModeration_FilterExcludeByTag",
                       ),
                     }),
-                    (0, e.jsx)(Je.Ay, {
+                    (0, e.jsx)(ke.Ay, {
                       isSearchable: !0,
                       isMulti: !0,
                       onChange: (p) => {
@@ -5714,7 +5712,7 @@
                     (0, e.jsx)("span", {
                       children: (0, c.we)("#EventModeration_FilterToType"),
                     }),
-                    (0, e.jsx)(Je.Ay, {
+                    (0, e.jsx)(ke.Ay, {
                       isSearchable: !0,
                       isMulti: !0,
                       onChange: (p) => {
@@ -5732,11 +5730,11 @@
                     (0, e.jsx)("span", {
                       children: (0, c.we)("#EventModeration_FilterToDate"),
                     }),
-                    (0, e.jsx)(ht(), {
+                    (0, e.jsx)(Mt(), {
                       timeFormat: !1,
                       onChange: (p) => {
                         if (typeof p == "string") {
-                          let R = V(p, "M/D/YYYY", !0);
+                          let R = Z(p, "M/D/YYYY", !0);
                           if (!R.isValid()) {
                             n.filterDateAsString = p;
                             return;
@@ -5781,13 +5779,13 @@
               ],
             });
           }),
-          Ve = (0, U.PA)((a) => {
+          pt = (0, U.PA)((a) => {
             const { onClick: n, event: r, bSaving: o } = a;
             let d = (0, c.we)("#EventModTile_Moderate_ClearReviewed"),
               m = O.EventModerateClearReview,
               g = !1;
             return (
-              (0, Ce.Xx)(r) ||
+              (0, _e.Xx)(r) ||
                 ((d = (0, c.we)("#EventModTile_Moderate_MarkReviewed")),
                 (m = O.EventModerateMarkReview),
                 (g = !0)),
@@ -5795,14 +5793,14 @@
                 ((d = (0, c.we)("#EventModTile_Moderate_Saving")),
                 (m = O.EventModerateSaving)),
               (0, e.jsxs)("button", {
-                className: (0, u.A)(ke().Button, O.Button, m),
+                className: (0, u.A)(Ve().Button, O.Button, m),
                 onClick: () => n(g),
                 disabled: o,
                 children: [o && (0, e.jsx)(M.t, { size: "small" }), d],
               })
             );
           }),
-          St = (0, U.PA)((a) => {
+          Vt = (0, U.PA)((a) => {
             const { onClick: n, event: r, bSaving: o } = a,
               d = r.BHasTag("adult_only_content");
             let m = (0, c.we)(
@@ -5813,35 +5811,35 @@
             return (
               o && (m = (0, c.we)("#EventModTile_Moderate_Saving")),
               (0, e.jsxs)("button", {
-                className: (0, u.A)(ke().Button, O.Button),
+                className: (0, u.A)(Ve().Button, O.Button),
                 onClick: () => n(!d),
                 disabled: o,
                 children: [o && (0, e.jsx)(M.t, { size: "small" }), m],
               })
             );
           });
-        function Kt(a) {
+        function Xt(a) {
           const { onClick: n, event: r, bSaving: o } = a,
-            d = (0, Be.q3)(() => r.BHasTag("halloween"));
+            d = (0, We.q3)(() => r.BHasTag("halloween"));
           let m = (0, c.we)(
             d
               ? "#EventModTile_Moderate_RemoveHalloweenFlag"
               : "#EventModTile_Moderate_FlagHalloween",
           );
           o && (m = (0, c.we)("#EventModTile_Moderate_Saving"));
-          const g = ft.HD.GetTimeNowWithOverrideAsDate();
+          const g = vt.HD.GetTimeNowWithOverrideAsDate();
           return g.getMonth() >= 8 && g.getMonth() <= 10
             ? (0, e.jsxs)("button", {
-                className: (0, u.A)(ke().Button, O.Button),
+                className: (0, u.A)(Ve().Button, O.Button),
                 onClick: () => n(!d),
                 disabled: o,
                 children: [o && (0, e.jsx)(M.t, { size: "small" }), m],
               })
             : null;
         }
-        let Ue = class extends I.Component {
+        let Pe = class extends I.Component {
           state = {
-            bLoadingEvent: !le.O3.BHasClanEventModel(
+            bLoadingEvent: !ce.O3.BHasClanEventModel(
               this.props.solrData.unique_id,
             ),
             bShowAsModal: !1,
@@ -5851,8 +5849,8 @@
           componentDidMount() {
             const { solrData: a } = this.props,
               n = a.unique_id;
-            le.O3.BHasClanEventModel(n) ||
-              le.O3.LoadHiddenPartnerEvent(new H.b(a.clan_steamid), n)
+            ce.O3.BHasClanEventModel(n) ||
+              ce.O3.LoadHiddenPartnerEvent(new H.b(a.clan_steamid), n)
                 .then(() => this.setState({ bLoadingEvent: !1 }))
                 .catch((r) => {
                   const o = (0, Q.H)(r);
@@ -5872,7 +5870,7 @@
             const { solrData: n } = this.props,
               r = n.unique_id;
             !this.state.bLoadingEvent &&
-              le.O3.BHasClanEventModel(r) &&
+              ce.O3.BHasClanEventModel(r) &&
               this.setState({ bShowAsModal: !0 }),
               a.preventDefault(),
               a.stopPropagation();
@@ -5884,13 +5882,13 @@
             if (this.state.bSavingModeration) return;
             const { solrData: n } = this.props,
               r = n.unique_id,
-              o = le.O3.GetClanEventModel(r);
+              o = ce.O3.GetClanEventModel(r);
             if (!o) return;
             const d = o.BHasTag("adult_only_content");
             if (a === d) return;
             const m = new Array(),
               g = new Array();
-            let p = new Fe().SetAdultOnlyContentAction(a);
+            let p = new Ge().SetAdultOnlyContentAction(a);
             a ? m.push("adult_only_content") : g.push("adult_only_content"),
               this.UpdateTagsOnEvent(r, m, g, p);
           }
@@ -5898,13 +5896,13 @@
             if (this.state.bSavingModeration) return;
             const { solrData: n } = this.props,
               r = n.unique_id,
-              o = le.O3.GetClanEventModel(r);
+              o = ce.O3.GetClanEventModel(r);
             if (!o) return;
             const d = o.BHasTag("halloween");
             if (a === d) return;
             const m = new Array(),
               g = new Array();
-            let p = new Fe().SetHalloweenEventTypeAction(a);
+            let p = new Ge().SetHalloweenEventTypeAction(a);
             a ? m.push("halloween") : g.push("halloween"),
               this.UpdateTagsOnEvent(r, m, g, p);
           }
@@ -5912,13 +5910,13 @@
             if (this.state.bSavingModeration) return;
             const { solrData: n } = this.props,
               r = n.unique_id,
-              o = le.O3.GetClanEventModel(r);
+              o = ce.O3.GetClanEventModel(r);
             if (!o) return;
-            const d = (0, Ce.Xx)(o);
+            const d = (0, _e.Xx)(o);
             if (a === d) return;
             const m = new Array(),
               g = new Array();
-            let p = new Fe().SetReviewAction(a);
+            let p = new Ge().SetReviewAction(a);
             a
               ? (m.push("mod_reviewed"),
                 g.push("mod_require_rereview"),
@@ -5928,7 +5926,7 @@
           }
           UpdateTagsOnEvent(a, n, r, o) {
             const d = async () => {
-              let m = le.O3.GetClanEventModel(a);
+              let m = ce.O3.GetClanEventModel(a);
               try {
                 let g = await He.Get().UpdateTagsOnPartnerEvent(
                   this.m_cancelSignal,
@@ -5950,13 +5948,13 @@
           }
           OnChangeCategory(a) {
             const { solrData: n } = this.props;
-            let r = le.O3.GetClanEventModel(n.unique_id);
-            (0, X.pg)((0, e.jsx)(lt, { eventModel: r }), (0, x.uX)(a));
+            let r = ce.O3.GetClanEventModel(n.unique_id);
+            (0, X.pg)((0, e.jsx)(it, { eventModel: r }), (0, x.uX)(a));
           }
           OnUpdateSeasonalTag(a) {
             const { solrData: n } = this.props;
-            let r = le.O3.GetClanEventModel(n.unique_id);
-            (0, X.pg)((0, e.jsx)(dt, { eventModel: r }), (0, x.uX)(a));
+            let r = ce.O3.GetClanEventModel(n.unique_id);
+            (0, X.pg)((0, e.jsx)(ot, { eventModel: r }), (0, x.uX)(a));
           }
           render() {
             const { solrData: a } = this.props,
@@ -5964,7 +5962,7 @@
               r = Number(a.appid);
             let o,
               d = (0, Y.sfN)(j.TS.LANGUAGE),
-              m = le.O3.GetClanEventModel(n),
+              m = ce.O3.GetClanEventModel(n),
               g = null;
             m
               ? (this.state.bShowAsModal &&
@@ -5986,13 +5984,13 @@
               _ = new H.b(a.clan_steamid),
               se = r ? `app/${r}` : `group/${_.GetAccountID()}`,
               te = `${j.TS.STORE_BASE_URL}news/${se}/view/${a.announcement_gid}`,
-              xe = !!(m && m.BHasTag("adult_only_content")),
-              ie = !!(m && m.BHasTag("halloween"));
+              Ae = !!(m && m.BHasTag("adult_only_content")),
+              oe = !!(m && m.BHasTag("halloween"));
             return (0, e.jsxs)(K.tH, {
               children: [
                 g,
                 (0, e.jsxs)("div", {
-                  className: (0, u.A)({ [O.Tile]: !0, [O.HalloweenEvent]: ie }),
+                  className: (0, u.A)({ [O.Tile]: !0, [O.HalloweenEvent]: oe }),
                   children: [
                     (0, e.jsx)("a", {
                       href: te,
@@ -6021,7 +6019,7 @@
                                 ? m.GetCategoryAsString()
                                 : a.event_type,
                             }),
-                            xe &&
+                            Ae &&
                               (0, e.jsx)("div", {
                                 className: O.HasAdultContent,
                                 children: (0, c.we)(
@@ -6048,31 +6046,31 @@
                             m &&
                             (0, e.jsxs)(I.Fragment, {
                               children: [
-                                (0, e.jsx)(Ve, {
+                                (0, e.jsx)(pt, {
                                   onClick: this.SetModeratedState,
                                   bSaving: this.state.bSavingModeration,
                                   event: m,
                                 }),
                                 (0, e.jsx)("button", {
-                                  className: (0, u.A)(ke().Button, O.Button),
+                                  className: (0, u.A)(Ve().Button, O.Button),
                                   onClick: this.OnChangeCategory,
                                   children: (0, c.we)(
                                     "#EventModTile_ChangeEventType",
                                   ),
                                 }),
-                                (0, e.jsx)(St, {
+                                (0, e.jsx)(Vt, {
                                   onClick: this.SetAdultContentState,
                                   bSaving: this.state.bSavingModeration,
                                   event: m,
                                 }),
-                                (0, e.jsx)(Kt, {
+                                (0, e.jsx)(Xt, {
                                   onClick: this.SetHalloweenEventState,
                                   bSaving: this.state.bSavingModeration,
                                   event: m,
                                 }),
                                 !!m.BHasTag("halloween2019candidate") &&
                                   (0, e.jsx)("button", {
-                                    className: (0, u.A)(ke().Button),
+                                    className: (0, u.A)(Ve().Button),
                                     onClick: this.OnUpdateSeasonalTag,
                                     children: (0, c.we)(
                                       "#EventModTile_SeasonalTag",
@@ -6095,13 +6093,13 @@
                                       "#EventModTile_LastModified",
                                       (0, c.TW)(p) +
                                         "@" +
-                                        (0, vt.KC)(p, {
+                                        (0, qe.KC)(p, {
                                           bForce24HourClock: !1,
                                         }),
                                     ),
                                   }),
                                 m &&
-                                  (0, e.jsx)(v.j, {
+                                  (0, e.jsx)(A.j, {
                                     event: m,
                                     stylesmodule: O,
                                     nOverrideEndTime:
@@ -6112,7 +6110,7 @@
                               ],
                             }),
                             m &&
-                              (0, e.jsx)(zt, {
+                              (0, e.jsx)(_t, {
                                 event: m,
                                 hidden: a.hidden,
                                 published: a.published,
@@ -6127,17 +6125,17 @@
             });
           }
         };
-        b([ae.oI], Ue.prototype, "ShowModalEvent", 1),
-          b([ae.oI], Ue.prototype, "HideModalEvent", 1),
-          b([ae.oI], Ue.prototype, "SetAdultContentState", 1),
-          b([ae.oI], Ue.prototype, "SetHalloweenEventState", 1),
-          b([ae.oI], Ue.prototype, "SetModeratedState", 1),
-          b([ae.oI], Ue.prototype, "OnChangeCategory", 1),
-          b([ae.oI], Ue.prototype, "OnUpdateSeasonalTag", 1),
-          (Ue = b([U.PA], Ue));
+        D([ae.oI], Pe.prototype, "ShowModalEvent", 1),
+          D([ae.oI], Pe.prototype, "HideModalEvent", 1),
+          D([ae.oI], Pe.prototype, "SetAdultContentState", 1),
+          D([ae.oI], Pe.prototype, "SetHalloweenEventState", 1),
+          D([ae.oI], Pe.prototype, "SetModeratedState", 1),
+          D([ae.oI], Pe.prototype, "OnChangeCategory", 1),
+          D([ae.oI], Pe.prototype, "OnUpdateSeasonalTag", 1),
+          (Pe = D([U.PA], Pe));
         function Jt(a) {
           const { eventModel: n, lang: r } = a,
-            o = (0, _t.WC)(n, "capsule", r, $.wI.capsule_main),
+            o = (0, v.WC)(n, "capsule", r, $.wI.capsule_main),
             d = n.BImageNeedScreenshotFallback("capsule", r);
           return o && o.length > 0
             ? (0, e.jsxs)(e.Fragment, {
@@ -6155,7 +6153,7 @@
                 children: (0, c.we)("#EventModTile_NoCapsule"),
               });
         }
-        let Nt = class extends I.Component {
+        let Kt = class extends I.Component {
           state = { bDownloadingImages: !1, nLocLanguages: 0 };
           m_cancelSignal = L().CancelToken.source();
           componentWillUnmount() {
@@ -6172,7 +6170,7 @@
           }
           componentDidMount() {
             const { event: a } = this.props;
-            le.O3.LoadClanEventLocalizationFromAnnouncementGID(
+            ce.O3.LoadClanEventLocalizationFromAnnouncementGID(
               a.clanSteamID,
               a.AnnouncementGID,
             )
@@ -6292,11 +6290,11 @@
             });
           }
         };
-        Nt = b([U.PA], Nt);
+        Kt = D([U.PA], Kt);
         const Zt = (0, U.PA)((a) => {
           const { appid: n, clanSteamID: r } = a,
             o = (0, Ut.$5)(n),
-            [d, m] = (0, I.useState)(!Ae.A.Get().BHasApp(a.appid)),
+            [d, m] = (0, I.useState)(!ye.A.Get().BHasApp(a.appid)),
             g = I.useRef(L().CancelToken.source());
           if (
             ((0, I.useEffect)(
@@ -6308,12 +6306,12 @@
             ),
             (0, I.useEffect)(() => {
               const { appid: p, clanSteamID: R } = a;
-              ((p && !Ae.A.Get().BHasApp(p)) ||
+              ((p && !ye.A.Get().BHasApp(p)) ||
                 (R && !T.ac.BHasClanInfoLoaded(R))) &&
                 (async () => {
                   try {
                     await Promise.all([
-                      Ae.A.Get().QueueAppRequest(p, {
+                      ye.A.Get().QueueAppRequest(p, {
                         include_assets: !0,
                         include_release: !0,
                         include_screenshots: !0,
@@ -6338,27 +6336,27 @@
               string: (0, c.we)("#EventModTile_AppInfoLoading"),
             });
           if (n) {
-            const p = Ae.A.Get().GetApp(n);
+            const p = ye.A.Get().GetApp(n);
             return p
               ? (0, e.jsx)("div", {
                   className: O.TileAppInfo,
                   children: (0, e.jsxs)("div", {
                     className: O.TileAppInfoTitle,
                     children: [
-                      (0, e.jsx)(pt.j, {
+                      (0, e.jsx)(ht.j, {
                         id: o,
-                        children: (0, e.jsx)(ot.uU, {
-                          href: (0, $e.k2)(p.GetStorePageURL()),
+                        children: (0, e.jsx)(st.uU, {
+                          href: (0, et.k2)(p.GetStorePageURL()),
                           children: (0, e.jsx)("img", {
                             className: O.TileAppInfoImage,
                             src: p.GetAssets().GetMainCapsuleURL(),
                           }),
                         }),
                       }),
-                      (0, e.jsx)(pt.j, {
+                      (0, e.jsx)(ht.j, {
                         id: o,
-                        children: (0, e.jsx)(ot.uU, {
-                          href: (0, $e.k2)(p.GetStorePageURL()),
+                        children: (0, e.jsx)(st.uU, {
+                          href: (0, et.k2)(p.GetStorePageURL()),
                           children: (0, e.jsx)("div", {
                             children: p.GetName(),
                           }),
@@ -6376,8 +6374,8 @@
                 className: O.TileAppInfo,
                 children: (0, e.jsx)("div", {
                   className: O.TileAppInfoTitle,
-                  children: (0, e.jsxs)(ot.uU, {
-                    href: (0, $e.k2)(
+                  children: (0, e.jsxs)(st.uU, {
+                    href: (0, et.k2)(
                       j.TS.STORE_BASE_URL + "/curator/" + p + "/",
                     ),
                     children: [
@@ -6398,7 +6396,7 @@
           }
           return null;
         });
-        let zt = class extends I.Component {
+        let _t = class extends I.Component {
           render() {
             const { event: a, hidden: n, published: r } = this.props,
               o = n
@@ -6406,9 +6404,9 @@
                   ? (0, c.we)("#EVentModTile_State_Staged")
                   : (0, c.we)("#EVentModTile_State_Draft")
                 : (0, c.we)("#EVentModTile_State_Published"),
-              d = (0, Ce.iy)(a),
-              m = (0, Ce.A4)(a),
-              g = (0, Ce.ZA)(a);
+              d = (0, _e.iy)(a),
+              m = (0, _e.A4)(a),
+              g = (0, _e.ZA)(a);
             let p =
                 g && !a.BHasTag("hide_store") && !a.BHasTag("mod_hide_store"),
               R =
@@ -6489,12 +6487,12 @@
             });
           }
         };
-        zt = b([U.PA], zt);
-        let lt = class extends I.Component {
+        _t = D([U.PA], _t);
+        let it = class extends I.Component {
           state = {
             bUpdating: !1,
             newCategoryOption: {
-              label: (0, Qe.rG)(Y.HFK),
+              label: (0, Xe.rG)(Y.HFK),
               value: { eventType: Y.HFK },
             },
           };
@@ -6515,12 +6513,12 @@
                 a.GID,
                 o,
               );
-              const d = Ce.Ac,
+              const d = _e.Ac,
                 m = [];
               r.value.tags &&
                 r.value.tags.forEach((p) => {
                   m.push(p);
-                  const R = new Fe().SetUpdateSeasonalTags(p).ToModString();
+                  const R = new Ge().SetUpdateSeasonalTags(p).ToModString();
                   m.push(R);
                 });
               const g = await He.Get().UpdateTagsOnPartnerEvent(
@@ -6529,7 +6527,7 @@
                 a.GetAnnouncementGID(),
                 m,
                 d,
-                new Fe().SetActionChangeEvent(o),
+                new Ge().SetActionChangeEvent(o),
               );
               (0, k.h5)(() => {
                 (a.type = o), (a.vecTags = g);
@@ -6552,7 +6550,7 @@
                 const g = { eventType: m };
                 return (
                   m == Y.Fwr && (g.tags = ["patchnotes"]),
-                  { label: (0, Qe.rG)(m), value: g }
+                  { label: (0, Xe.rG)(m), value: g }
                 );
               });
             r.push({
@@ -6611,7 +6609,7 @@
                   label: "Halloween: " + (0, c.we)("#PartnerEvent_35"),
                 },
               ],
-              d = ft.HD.GetTimeNowWithOverrideAsDate();
+              d = vt.HD.GetTimeNowWithOverrideAsDate();
             return (
               d.getMonth() == 8 || d.getMonth() == 9
                 ? r.unshift(...o)
@@ -6640,7 +6638,7 @@
                             this.state.strErrorMsg,
                           ],
                         }),
-                      (0, e.jsx)(Je.Ay, {
+                      (0, e.jsx)(ke.Ay, {
                         isSearchable: !0,
                         onChange: this.OnChangeSelection,
                         value: this.state.newCategoryOption,
@@ -6653,10 +6651,10 @@
             );
           }
         };
-        b([ae.oI], lt.prototype, "ChangeCategoryForEvent", 1),
-          b([ae.oI], lt.prototype, "OnChangeSelection", 1),
-          (lt = b([U.PA], lt));
-        class dt extends I.Component {
+        D([ae.oI], it.prototype, "ChangeCategoryForEvent", 1),
+          D([ae.oI], it.prototype, "OnChangeSelection", 1),
+          (it = D([U.PA], it));
+        class ot extends I.Component {
           state = {
             bUpdating: !1,
             bAccept: this.props.eventModel.BHasTag("halloween2019"),
@@ -6694,7 +6692,7 @@
                 o.AnnouncementGID,
                 n,
                 r,
-                new Fe().SetUpdateSeasonalTags(
+                new Ge().SetUpdateSeasonalTags(
                   this.state.bAccept
                     ? "halloween2019"
                     : "halloween2019reviewed",
@@ -6767,11 +6765,11 @@
             });
           }
         }
-        b([ae.oI], dt.prototype, "ChangeAcceptance", 1),
-          b([ae.oI], dt.prototype, "ChangeHorror", 1),
-          b([ae.oI], dt.prototype, "ChangeCute", 1),
-          b([ae.oI], dt.prototype, "ApplyAction", 1);
-        var Qt = s(78192),
+        D([ae.oI], ot.prototype, "ChangeAcceptance", 1),
+          D([ae.oI], ot.prototype, "ChangeHorror", 1),
+          D([ae.oI], ot.prototype, "ChangeCute", 1),
+          D([ae.oI], ot.prototype, "ApplyAction", 1);
+        var Nt = s(78192),
           $t = Object.defineProperty,
           qt = Object.getOwnPropertyDescriptor,
           en = (a, n, r, o) => {
@@ -6783,7 +6781,7 @@
               (g = a[m]) && (d = (o ? g(n, r, d) : g(d)) || d);
             return o && d && $t(n, r, d), d;
           };
-        let Ht = class extends I.Component {
+        let zt = class extends I.Component {
           state = { bLoadingEvent: !0 };
           m_cancelSignal = L().CancelToken.source();
           componentWillUnmount() {
@@ -6795,10 +6793,10 @@
             const { clanEventGID: a, clanAccountID: n } = this.props;
             if (
               (console.log(a, n, typeof a, typeof n),
-              a && !le.O3.BHasClanEventModel(a))
+              a && !ce.O3.BHasClanEventModel(a))
             ) {
               let r = H.b.InitFromClanID(Number.parseInt(n)),
-                o = await le.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                o = await ce.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   r,
                   a,
                   0,
@@ -6831,18 +6829,18 @@
                   include_screenshots: !0,
                   include_release: !0,
                 };
-                await Ae.A.Get().QueueMultipleAppRequests(d, p),
+                await ye.A.Get().QueueMultipleAppRequests(d, p),
                   this.setState({
                     rgAppIDs: d,
                     rgUnknownTypeAppIDs: m,
                     bLoadingApps: !1,
                   }),
-                  await Ae.A.Get().QueueMultipleAppRequests(d, p),
+                  await ye.A.Get().QueueMultipleAppRequests(d, p),
                   this.setState({ bLoadingAssociatedDemoInfo: !1 });
                 const R = d.flatMap(
-                  (_) => Ae.A.Get().GetApp(_)?.GetDemoAppIDs() ?? [],
+                  (_) => ye.A.Get().GetApp(_)?.GetDemoAppIDs() ?? [],
                 );
-                await Ae.A.Get().QueueMultipleAppRequests(R, p),
+                await ye.A.Get().QueueMultipleAppRequests(R, p),
                   this.setState({ bLoadingDemos: !1 });
               } else this.setState({ bLoadingEvent: !1, rgAppIDs: d });
             } else this.setState({ bLoadingEvent: !1 });
@@ -6876,60 +6874,60 @@
             let n = new Array(),
               r = new Array();
             this.state.rgAppIDs
-              .filter((ie) => !Ae.A.Get().GetApp(ie))
-              .forEach((ie) => {
+              .filter((oe) => !ye.A.Get().GetApp(oe))
+              .forEach((oe) => {
                 n.push(
                   (0, e.jsx)(
                     "div",
                     {
                       children: (0, e.jsx)("a", {
-                        href: j.TS.STORE_BASE_URL + "app/" + ie + "/?beta=1",
+                        href: j.TS.STORE_BASE_URL + "app/" + oe + "/?beta=1",
                         target: "_blank",
-                        children: ie,
+                        children: oe,
                       }),
                     },
-                    "missing: " + ie,
+                    "missing: " + oe,
                   ),
                 ),
-                  r.push(ie);
+                  r.push(oe);
               });
             const o = this.state.rgAppIDs.reduce(
-                (ie, Ee) => ie + (Ae.A.Get().GetApp(Ee)?.BHasDemo() ? 1 : 0),
+                (oe, be) => oe + (ye.A.Get().GetApp(be)?.BHasDemo() ? 1 : 0),
                 0,
               ),
               d = new Array();
-            this.state.rgAppIDs.forEach((ie) => {
-              const Ee = Ae.A.Get().GetApp(ie);
-              if (Ee && !Ee.BHasDemo()) {
-                let De = Ae.A.Get().GetApp(ie);
+            this.state.rgAppIDs.forEach((oe) => {
+              const be = ye.A.Get().GetApp(oe);
+              if (be && !be.BHasDemo()) {
+                let De = ye.A.Get().GetApp(oe);
                 d.push(
                   (0, e.jsxs)(
                     "div",
                     {
                       children: [
-                        De?.GetAppType() == Qt.uE.ue &&
+                        De?.GetAppType() == Nt.uE.ue &&
                           (0, e.jsx)("b", {
                             children:
                               "--Error: Sale Page has Demo AppID, based game --\xA0",
                           }),
                         De?.GetName(),
                         " (",
-                        ie,
+                        oe,
                         ")",
                         (0, e.jsx)("a", {
-                          href: (0, $e.k2)(De.GetStorePageURL() + "?beta=0"),
+                          href: (0, et.k2)(De.GetStorePageURL() + "?beta=0"),
                           target: "_blank",
                           children: "Store Page",
                         }),
                         "\xA0",
                         (0, e.jsx)("a", {
-                          href: j.TS.PARTNER_BASE_URL + "apps/landing/" + ie,
+                          href: j.TS.PARTNER_BASE_URL + "apps/landing/" + oe,
                           target: "_blank",
                           children: "App Landing Page",
                         }),
                       ],
                     },
-                    "missingdemo_" + ie,
+                    "missingdemo_" + oe,
                   ),
                 );
               }
@@ -6940,20 +6938,20 @@
               R = 0,
               _ = 0,
               se = 0;
-            this.state.rgAppIDs.forEach((ie) => {
-              let Ee = !1;
-              const De = Ae.A.Get().GetApp(ie);
+            this.state.rgAppIDs.forEach((oe) => {
+              let be = !1;
+              const De = ye.A.Get().GetApp(oe);
               De &&
                 De.BHasDemo() &&
-                (Ae.A.Get().GetApp(De.GetDemoAppIDs()[0]).BIsComingSoon()
-                  ? ((p += 1), (Ee = !0))
+                (ye.A.Get().GetApp(De.GetDemoAppIDs()[0]).BIsComingSoon()
+                  ? ((p += 1), (be = !0))
                   : (R += 1));
             });
             let te = new Array(),
-              xe = 0;
+              Ae = 0;
             return (
-              this.state.rgAppIDs.forEach((ie) => {
-                Ae.A.Get().GetApp(ie)?.GetAppType() != Qt.uE.ue && (xe += 1);
+              this.state.rgAppIDs.forEach((oe) => {
+                ye.A.Get().GetApp(oe)?.GetAppType() != Nt.uE.ue && (Ae += 1);
               }),
               (0, e.jsxs)(K.tH, {
                 children: [
@@ -6974,7 +6972,7 @@
                         children: ["Visible Apps in ", j.TS.COUNTRY, ":"],
                       }),
                       " ",
-                      xe,
+                      Ae,
                     ],
                   }),
                   (0, e.jsxs)("div", {
@@ -7093,14 +7091,14 @@
             );
           }
         };
-        Ht = en([U.PA], Ht);
+        zt = en([U.PA], zt);
         var tn = s(3685),
           nn = s(60298),
           an = s(71742),
           rn = s(5827);
         function sn(a) {
           const [n, r] = (0, I.useState)(!1),
-            [o] = (0, I.useState)(() => Yt()),
+            [o] = (0, I.useState)(() => Qt()),
             d = (0, I.useMemo)(
               () => ({
                 country: j.TS.COUNTRY,
@@ -7121,7 +7119,7 @@
           );
         }
         function cn(a) {
-          const [n] = useState(() => Yt()),
+          const [n] = useState(() => Qt()),
             r = useMemo(
               () => ({
                 country: Config.COUNTRY,
@@ -7137,7 +7135,7 @@
             children: a.children,
           });
         }
-        function Yt() {
+        function Qt() {
           const a = (0, j.Tc)(
             "partnerbrowse_webapi_token",
             "application_config",
@@ -7148,7 +7146,7 @@
           );
         }
         function on(a) {
-          return Ae.A.Initialize(
+          return ye.A.Initialize(
             a.GetServiceTransport(),
             j.iA.is_partner_member,
           );
@@ -7162,7 +7160,7 @@
                   (0, e.jsx)(W.qh, {
                     path: P.B.EventGameFestivalDebug(),
                     render: (a) =>
-                      (0, e.jsx)(Ht, {
+                      (0, e.jsx)(zt, {
                         ...a,
                         clanAccountID: a.match.params.clanacountid,
                         clanEventGID: a.match.params.claneventgid,
@@ -7171,16 +7169,16 @@
                   (0, e.jsx)(W.qh, {
                     exact: !0,
                     path: P.B.EventBackfill(),
-                    render: (a) => (0, e.jsx)(Ne, { ...a }),
+                    render: (a) => (0, e.jsx)(we, { ...a }),
                   }),
                   (0, e.jsx)(W.qh, {
                     path: P.B.EventRSSModeration(),
-                    render: (a) => (0, e.jsx)(ue, { ...a }),
+                    render: (a) => (0, e.jsx)(ge, { ...a }),
                   }),
                   (0, e.jsx)(W.qh, {
                     path: P.B.EventModeration(),
                     render: (a) =>
-                      (0, e.jsx)(pe, {
+                      (0, e.jsx)(Te, {
                         ...a,
                         appid:
                           a.match.params.appid &&

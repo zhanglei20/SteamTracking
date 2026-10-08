@@ -2,588 +2,721 @@
  ****/
 (() => {
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [9524],
+    [8248],
     {
-      86946: (E, C, e) => {
+      94381: (g, C, e) => {
         "use strict";
-        e.d(C, { j: () => f, w: () => D });
+        e.d(C, { S: () => d });
+        var t = e(7850),
+          u = e(68031),
+          m = e(31857);
+        function i(s) {
+          return (0, t.jsx)(m.I, {
+            ...s,
+            viewBox: 16,
+            children: (0, t.jsx)("path", {
+              d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+              fill: "currentColor",
+            }),
+          });
+        }
+        var v = e(21895),
+          o = e(64238),
+          f = e.n(o),
+          j = e(80549);
+        function d(s) {
+          const {
+              checked: c,
+              onChange: n,
+              disabled: r,
+              children: p,
+              ref: D,
+              variant: _,
+              color: E,
+              align: y = "center",
+              icon: O,
+              ...I
+            } = s,
+            B = c === "indeterminate",
+            R = O ?? (B ? l : i),
+            P = () => {
+              r || (n && n(B ? !0 : !c));
+            },
+            a = (L) => {
+              r ||
+                (L.key === " " &&
+                  (P(), L.preventDefault(), L.stopPropagation()));
+            },
+            T = (0, j.f)("Checkbox", _);
+          return (0, t.jsxs)(u.s, {
+            align: y,
+            ref: D,
+            role: "checkbox",
+            "aria-checked": B ? "mixed" : c,
+            "data-state": h(c),
+            className: f()(v.Root, v[`Variant-${T}`], r && v.Disabled),
+            onClick: P,
+            tabIndex: 0,
+            onKeyDown: a,
+            cursor: "default",
+            "aria-disabled": r,
+            "data-accent-color": E,
+            ...I,
+            children: [
+              (0, t.jsx)("div", {
+                className: v.Checkbox,
+                children: c && (0, t.jsx)(R, { className: v.Icon }),
+              }),
+              p,
+            ],
+          });
+        }
+        function h(s) {
+          return s === "indeterminate" ? s : s ? "checked" : "unchecked";
+        }
+        function l(s) {
+          return (0, t.jsx)("svg", {
+            viewBox: "0 0 16 16",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, t.jsx)("path", {
+              d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+              fill: "currentColor",
+            }),
+          });
+        }
+      },
+      86946: (g, C, e) => {
+        "use strict";
+        e.d(C, { j: () => h, w: () => l });
         var t = e(7850),
           u = e(64238),
           m = e.n(u),
           i = e(38878),
-          p = e.n(i),
+          v = e.n(i),
           o = e(60351),
-          _ = e(68031),
-          g = e(8928),
-          l = e(69289);
-        function f(a) {
+          f = e(68031),
+          j = e(8928),
+          d = e(69289);
+        function h(s) {
           const {
               children: c,
-              beforeContent: s,
+              beforeContent: n,
               afterContent: r,
-              hasValue: j,
-              ...v
-            } = a,
-            d = D(v);
-          return (0, t.jsxs)(_.s, {
-            ...d,
+              hasValue: p,
+              ...D
+            } = s,
+            _ = l(D);
+          return (0, t.jsxs)(f.s, {
+            ..._,
             align: "center",
-            "data-has-value": !!j,
+            "data-has-value": !!p,
             minWidth: "0",
             children: [
-              s && (0, t.jsx)(_.s, { paddingRight: "2", children: s }),
+              n && (0, t.jsx)(f.s, { paddingRight: "2", children: n }),
               (0, t.jsx)(o.az, { flexGrow: "1", minWidth: "0", children: c }),
-              r && (0, t.jsx)(_.s, { paddingLeft: "2", children: r }),
+              r && (0, t.jsx)(f.s, { paddingLeft: "2", children: r }),
             ],
           });
         }
-        function D(a) {
+        function l(s) {
           const {
               variant: c = "basic",
-              size: s = "2",
+              size: n = "2",
               radius: r,
-              focusable: j = !0,
-              hoverable: v = !0,
-              clickable: d = !0,
-              disabled: x,
-              className: S,
-              status: M,
-              ...T
-            } = a,
-            b = c === "underline" ? "none" : r;
-          return (0, l.mz)(
+              focusable: p = !0,
+              hoverable: D = !0,
+              clickable: _ = !0,
+              disabled: E,
+              className: y,
+              status: O,
+              ...I
+            } = s,
+            B = c === "underline" ? "none" : r;
+          return (0, d.mz)(
             {
-              ...T,
-              radius: b,
-              "data-status": M,
+              ...I,
+              radius: B,
+              "data-status": O,
               className: m()(
                 i.ControlBox,
-                j && !x && i.Focusable,
-                v && !x && i.Hoverable,
-                d && !x && i.Clickable,
-                x && i.Disabled,
+                p && !E && i.Focusable,
+                D && !E && i.Hoverable,
+                _ && !E && i.Clickable,
+                E && i.Disabled,
                 i[`Variant-${c}`],
-                i[`Size-${s}`],
-                S,
+                i[`Size-${n}`],
+                y,
               ),
             },
-            g.h,
+            j.h,
           );
         }
       },
-      76854: (E, C, e) => {
+      31857: (g, C, e) => {
+        "use strict";
+        e.d(C, { I: () => o });
+        var t = e(7850),
+          u = e(69289),
+          m = e(8928),
+          i = e(16619),
+          v = e.n(i);
+        function o(l) {
+          return (0, t.jsx)("svg", { ...d(l) });
+        }
+        const f = [
+          ...m.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (l) => i[`IconSize-${l}`],
+          },
+          {
+            prop: "color",
+            className: i.Color,
+            cssProperty: (l) => ["--icon-color", j(l)],
+          },
+          {
+            prop: "hitSlop",
+            className: i.HitSlop,
+            cssProperty: (l) => [
+              "--hit-slop-custom",
+              typeof l == "string" ? l : "",
+            ],
+          },
+          m.h.find(({ prop: l }) => l === "cursor"),
+        ];
+        function j(l) {
+          return !l || l[0] === "#" ? l : (0, u.w7)(l);
+        }
+        function d(l) {
+          const { viewBox: s, ...c } = l,
+            r = { className: c.size ? void 0 : i.IconSizeDefault, ...c };
+          return s && (r.viewBox = h(s)), (0, u.mz)(r, f);
+        }
+        function h(l) {
+          if (l)
+            return typeof l == "number"
+              ? `0 0 ${l} ${l}`
+              : typeof l == "string"
+                ? l
+                : `0 0 ${l.width} ${l.height}`;
+        }
+      },
+      76854: (g, C, e) => {
         "use strict";
         e.d(C, { Q: () => m });
         var t = e(90626);
-        function u(i, p, o) {
-          return typeof i == "function" ? i(p, o) : t.cloneElement(i, p);
+        function u(i, v, o) {
+          return typeof i == "function" ? i(v, o) : t.cloneElement(i, v);
         }
-        function m(i, p, o, _) {
-          return u(i || p, o, _);
+        function m(i, v, o, f) {
+          return u(i || v, o, f);
         }
       },
-      15252: (E, C, e) => {
+      15252: (g, C, e) => {
         "use strict";
-        e.d(C, { Ae: () => D, EY: () => l, U6: () => f });
+        e.d(C, { Ae: () => l, EY: () => d, U6: () => h });
         var t = e(7850),
           u = e(1039),
           m = e(69289),
           i = e(8928),
-          p = e(64238),
-          o = e.n(p),
-          _ = e(65274),
-          g = e.n(_);
-        function l(a) {
-          const { as: c = "span", ref: s, className: r, ...j } = a,
-            v = c;
-          return (0, t.jsx)(v, {
-            ref: s,
-            ...(0, m.mz)({ ...j, className: o()(_.Text, r) }, D),
+          v = e(64238),
+          o = e.n(v),
+          f = e(65274),
+          j = e.n(f);
+        function d(s) {
+          const { as: c = "span", ref: n, className: r, ...p } = s,
+            D = c;
+          return (0, t.jsx)(D, {
+            ref: n,
+            ...(0, m.mz)({ ...p, className: o()(f.Text, r) }, l),
           });
         }
-        const f = [
+        const h = [
             {
               prop: "weight",
               responsive: !0,
-              className: _.TextWeight,
-              cssProperty: (a) => ["--text-weight", `var(--font-weight-${a})`],
+              className: f.TextWeight,
+              cssProperty: (s) => ["--text-weight", `var(--font-weight-${s})`],
             },
             {
               prop: "align",
               responsive: !0,
-              className: _.TextAlign,
+              className: f.TextAlign,
               cssProperty: "--text-align",
             },
             {
               prop: "color",
               responsive: !0,
-              cssProperty: (a, c, s) => [
+              cssProperty: (s, c, n) => [
                 "--text-color",
-                (0, m.To)(a, (0, u.I)(c.contrast, s) ?? "body"),
+                (0, m.To)(s, (0, u.I)(c.contrast, n) ?? "body"),
               ],
             },
             {
               prop: "contrast",
               responsive: !0,
-              cssProperty: (a, c, s) => [
+              cssProperty: (s, c, n) => [
                 "--text-color",
-                (0, m.To)((0, u.I)(c.color, s) ?? "text-body", a),
+                (0, m.To)((0, u.I)(c.color, n) ?? "text-body", s),
               ],
             },
-            { prop: "truncate", className: _.Truncate },
+            { prop: "truncate", className: f.Truncate },
             {
               prop: "lineClamp",
               responsive: !0,
-              className: _.LineClamp,
+              className: f.LineClamp,
               cssProperty: "--line-clamp",
             },
             {
               prop: "whiteSpace",
-              className: _.WhiteSpace,
+              className: f.WhiteSpace,
               cssProperty: "--white-space",
             },
           ],
-          D = [
-            ...f,
+          l = [
+            ...h,
             ...i.L,
             {
               prop: "size",
               responsive: !0,
-              className: (a) => _[`TextSize-${a}`],
+              className: (s) => f[`TextSize-${s}`],
             },
           ];
       },
-      86336: (E, C, e) => {
+      86336: (g, C, e) => {
         "use strict";
-        e.d(C, { W: () => D, Y: () => l });
+        e.d(C, { W: () => l, Y: () => d });
         var t = e(7850),
           u = e(50122),
           m = e.n(u),
           i = e(15252),
-          p = e(69289),
+          v = e(69289),
           o = e(24660),
-          _ = e(70182),
-          g = e(3166);
-        function l(a) {
-          const { underline: c = "auto", focusable: s, navProps: r, ...j } = a,
-            v = (0, g.Qn)(),
-            d = s ?? r?.focusable ?? !!j.href,
-            x = (0, p.mz)({ ...j, underline: c, className: u.TextLink }, f);
-          return v && (d || r)
-            ? (0, t.jsx)(o.Ii, { ...x, ...(r || {}), focusable: d })
-            : (0, t.jsx)("a", { ...x });
+          f = e(70182),
+          j = e(3166);
+        function d(s) {
+          const { underline: c = "auto", focusable: n, navProps: r, ...p } = s,
+            D = (0, j.Qn)(),
+            _ = n ?? r?.focusable ?? !!p.href,
+            E = (0, v.mz)({ ...p, underline: c, className: u.TextLink }, h);
+          return D && (_ || r)
+            ? (0, t.jsx)(o.Ii, { ...E, ...(r || {}), focusable: _ })
+            : (0, t.jsx)("a", { ...E });
         }
-        const f = [
+        const h = [
           ...i.Ae,
-          { prop: "underline", className: (a) => u[`Underline-${a}`] },
+          { prop: "underline", className: (s) => u[`Underline-${s}`] },
         ];
-        function D(a) {
-          const { underline: c = "auto", focusable: s, navProps: r, ...j } = a,
-            v = (0, g.Qn)(),
-            d = s ?? r?.focusable ?? !!j.onClick,
-            x = (0, t.jsx)("span", {
+        function l(s) {
+          const { underline: c = "auto", focusable: n, navProps: r, ...p } = s,
+            D = (0, j.Qn)(),
+            _ = n ?? r?.focusable ?? !!p.onClick,
+            E = (0, t.jsx)("span", {
               role: "button",
-              ...(0, p.mz)(
-                { ...j, underline: c, className: u.TextLinkButton },
-                f,
+              ...(0, v.mz)(
+                { ...p, underline: c, className: u.TextLinkButton },
+                h,
               ),
             });
-          return v && (d || r)
-            ? (0, t.jsx)(_.J, { ...(r || {}), focusable: d, children: x })
-            : x;
+          return D && (_ || r)
+            ? (0, t.jsx)(f.J, { ...(r || {}), focusable: _, children: E })
+            : E;
         }
       },
-      15860: (E, C, e) => {
+      15860: (g, C, e) => {
         "use strict";
-        e.d(C, { L: () => o, c: () => p });
+        e.d(C, { L: () => o, c: () => v });
         var t = e(27386),
           u = e(76617),
           m = e(58632),
           i = e.n(m);
-        function p(_, g) {
+        function v(f, j) {
           return new (i())(
-            async (l) => {
-              const f = [...l],
-                D = await t.xtC.GetPlayerLinkDetails(_, { steamids: f }),
-                a = new Map();
+            async (d) => {
+              const h = [...d],
+                l = await t.xtC.GetPlayerLinkDetails(f, { steamids: h }),
+                s = new Map();
               return (
-                D.Body()
+                l
+                  .Body()
                   .accounts()
                   .forEach((c) => {
-                    const s = c.toObject();
-                    a.set(s.public_data.steamid, s);
+                    const n = c.toObject();
+                    s.set(n.public_data.steamid, n);
                   }),
-                f.map((c) => a.get(c) ?? null)
+                h.map((c) => s.get(c) ?? null)
               );
             },
-            { maxBatchSize: 100, cache: !1, ...g },
+            { maxBatchSize: 100, cache: !1, ...j },
           );
         }
-        function o(_) {
-          return (0, u.V)("PlayerLinkDetails", () => p(_));
+        function o(f) {
+          return (0, u.V)("PlayerLinkDetails", () => v(f));
         }
       },
-      85978: (E, C, e) => {
+      85978: (g, C, e) => {
         "use strict";
-        e.d(C, { jn: () => f });
+        e.d(C, { jn: () => h });
         var t = e(72609),
           u = e(68312),
           m = e(20117),
           i = e(80902),
-          p = e(15860);
+          v = e(15860);
         const o = 1;
-        function _(a) {
+        function f(s) {
           return (
-            delete a?.private_data?.account_name,
-            delete a?.public_data?.account_flags,
-            delete a?.public_data?.ban_expires_time,
-            delete a?.public_data?.privacy_state,
-            a?.public_data?.profile_state !== o && delete a?.private_data,
-            a
+            delete s?.private_data?.account_name,
+            delete s?.public_data?.account_flags,
+            delete s?.public_data?.ban_expires_time,
+            delete s?.public_data?.privacy_state,
+            s?.public_data?.profile_state !== o && delete s?.private_data,
+            s
           );
         }
-        function g(a) {
-          return ["PlayerLinkDetails", a];
+        function j(s) {
+          return ["PlayerLinkDetails", s];
         }
-        function l(a, c) {
-          const s =
+        function d(s, c) {
+          const n =
             typeof c == "number"
               ? m.b2.InitFromAccountID(c, t.TS.EUNIVERSE).ConvertTo64BitString()
               : c;
           return {
-            queryKey: g(s),
+            queryKey: j(n),
             queryFn: async () => {
-              if (s) {
-                const r = await a.load(s);
-                return _(r);
+              if (n) {
+                const r = await s.load(n);
+                return f(r);
               }
               return null;
             },
-            enabled: !!s,
+            enabled: !!n,
           };
         }
-        function f(a) {
+        function h(s) {
           const c = (0, u.KV)(),
-            s = (0, p.L)(c);
-          return (0, i.I)(l(s, a));
+            n = (0, v.L)(c);
+          return (0, i.I)(d(n, s));
         }
-        function D(a, c) {
-          c.forEach((s) => {
-            s?.public_data?.steamid &&
-              a.setQueryData(g(s.public_data.steamid), s);
+        function l(s, c) {
+          c.forEach((n) => {
+            n?.public_data?.steamid &&
+              s.setQueryData(j(n.public_data.steamid), n);
           });
         }
       },
-      45826: (E, C, e) => {
+      45826: (g, C, e) => {
         "use strict";
-        e.d(C, { m: () => p });
+        e.d(C, { m: () => v });
         var t = e(7850),
           u = e(24660),
           m = e(72609),
           i = e(32093);
-        function p(o) {
-          const { href: _, children: g, bAllowFocuseableAnchor: l, ...f } = o;
+        function v(o) {
+          const { href: f, children: j, bAllowFocuseableAnchor: d, ...h } = o;
           return m.TS.EREALM === i.TU.k_ESteamRealmChina
-            ? (0, t.jsx)("div", { ...f, children: g })
-            : l
-              ? (0, t.jsx)(u.Ii, { href: _, ...f, children: g })
-              : (0, t.jsx)("a", { href: _, ...f, children: g });
+            ? (0, t.jsx)("div", { ...h, children: j })
+            : d
+              ? (0, t.jsx)(u.Ii, { href: f, ...h, children: j })
+              : (0, t.jsx)("a", { href: f, ...h, children: j });
         }
       },
-      47610: (E, C, e) => {
+      47610: (g, C, e) => {
         "use strict";
-        e.d(C, { oo: () => a, Zi: () => r, DR: () => D, Mk: () => c });
+        e.d(C, { oo: () => s, Zi: () => r, DR: () => l, Mk: () => c });
         var t = e(68312),
           u = e(76617),
           m = e(80902),
           i = e(54806),
-          p = e(58632),
-          o = e.n(p),
-          _ = e(35038),
-          g = e(78192),
-          l = e(84192);
-        async function f(d, x) {
-          const S = _.w.Init(g.eW);
-          S.Body().set_context((0, l.hS)(!1)),
-            x.forEach((T) => S.Body().add_packageid(T));
-          const M = await g.$4.GetHardwareItems(d, S);
-          return M.BSuccess()
-            ? M.Body()
+          v = e(58632),
+          o = e.n(v),
+          f = e(35038),
+          j = e(78192),
+          d = e(84192);
+        async function h(_, E) {
+          const y = f.w.Init(j.eW);
+          y.Body().set_context((0, d.hS)(!1)),
+            E.forEach((I) => y.Body().add_packageid(I));
+          const O = await j.$4.GetHardwareItems(_, y);
+          return O.BSuccess()
+            ? O.Body()
                 .details()
-                .map((T) => T.toObject())
+                .map((I) => I.toObject())
             : (console.error(
-                `GetHardareDetails failed on packages: ${x.join(",")}`,
+                `GetHardareDetails failed on packages: ${E.join(",")}`,
               ),
               null);
         }
-        function D(d) {
-          const x = (0, t.KV)(),
-            S = j(x);
-          return (0, m.I)(s(S, d));
+        function l(_) {
+          const E = (0, t.KV)(),
+            y = p(E);
+          return (0, m.I)(n(y, _));
         }
-        var a = ((d) => (
-          (d[(d.k_Loading = 0)] = "k_Loading"),
-          (d[(d.k_LoadSuccess = 1)] = "k_LoadSuccess"),
-          (d[(d.k_LoadFailure = 2)] = "k_LoadFailure"),
-          d
-        ))(a || {});
-        function c(d) {
-          const x = (0, t.KV)(),
-            S = j(x),
-            M = (0, i.E)({
-              queries: d.map((n) => ({ ...s(S, n), enabled: d.length > 0 })),
+        var s = ((_) => (
+          (_[(_.k_Loading = 0)] = "k_Loading"),
+          (_[(_.k_LoadSuccess = 1)] = "k_LoadSuccess"),
+          (_[(_.k_LoadFailure = 2)] = "k_LoadFailure"),
+          _
+        ))(s || {});
+        function c(_) {
+          const E = (0, t.KV)(),
+            y = p(E),
+            O = (0, i.E)({
+              queries: _.map((a) => ({ ...n(y, a), enabled: _.length > 0 })),
             }),
-            T = M.some((n) => n.isLoading),
-            b = M.some((n) => n.isError || n.data === null);
+            I = O.some((a) => a.isLoading),
+            B = O.some((a) => a.isError || a.data === null);
           let R,
             P = 0;
           return (
-            b
+            B
               ? ((R = null), (P = 2))
-              : T
+              : I
                 ? ((R = void 0), (P = 0))
-                : ((R = M.map((n) => n.data)), (P = 1)),
+                : ((R = O.map((a) => a.data)), (P = 1)),
             { rgHardwareDetails: R, eHardwareLoadingState: P }
           );
         }
-        function s(d, x) {
+        function n(_, E) {
           return {
-            queryKey: r(x),
-            queryFn: async () => d.load(x),
-            enabled: !!x,
+            queryKey: r(E),
+            queryFn: async () => _.load(E),
+            enabled: !!E,
           };
         }
-        function r(d) {
-          return ["hardwaredetail", d];
+        function r(_) {
+          return ["hardwaredetail", _];
         }
-        function j(d) {
-          return (0, u.V)("HardwareDetailLoader", () => v(d));
+        function p(_) {
+          return (0, u.V)("HardwareDetailLoader", () => D(_));
         }
-        function v(d) {
-          return new (o())(async (x) => {
-            const S = await f(d, x),
-              M = new Map();
+        function D(_) {
+          return new (o())(async (E) => {
+            const y = await h(_, E),
+              O = new Map();
             return (
-              S &&
-                S.forEach((T) => {
-                  T.packageid && M.set(T.packageid, T);
+              y &&
+                y.forEach((I) => {
+                  I.packageid && O.set(I.packageid, I);
                 }),
-              x.map((T) => M.get(T) || null)
+              E.map((I) => O.get(I) || null)
             );
           });
         }
       },
-      57646: (E, C, e) => {
+      57646: (g, C, e) => {
         "use strict";
-        e.d(C, { _w: () => l, eF: () => D, hJ: () => c, kb: () => f });
+        e.d(C, { _w: () => d, eF: () => l, hJ: () => c, kb: () => h });
         var t = e(7850),
           u = e(40358),
           m = e(36118),
           i = e(36707),
-          p = e(18126),
-          o = e.n(p),
-          _ = ((s) => (
-            (s.k_eBlock = "block"),
-            (s.k_eFinal = "final"),
-            (s.k_eOriginal = "original"),
-            (s.k_eReservation = "reservation"),
-            s
-          ))(_ || {});
-        const g = Object.values(_);
-        function l(s) {
-          return g.find((r) => r === s);
+          v = e(18126),
+          o = e.n(v),
+          f = ((n) => (
+            (n.k_eBlock = "block"),
+            (n.k_eFinal = "final"),
+            (n.k_eOriginal = "original"),
+            (n.k_eReservation = "reservation"),
+            n
+          ))(f || {});
+        const j = Object.values(f);
+        function d(n) {
+          return j.find((r) => r === n);
         }
-        function f(s) {
-          switch (s.display_style) {
+        function h(n) {
+          switch (n.display_style) {
             case "final":
-              return s.formatted_final_price
-                ? (0, t.jsx)("span", { children: s.formatted_final_price })
+              return n.formatted_final_price
+                ? (0, t.jsx)("span", { children: n.formatted_final_price })
                 : null;
             case "original": {
-              const d = s.formatted_orig_price || s.formatted_final_price;
-              return d ? (0, t.jsx)("span", { children: d }) : null;
+              const _ = n.formatted_orig_price || n.formatted_final_price;
+              return _ ? (0, t.jsx)("span", { children: _ }) : null;
             }
             default:
           }
-          const r = s.display_style == "reservation",
-            j = s.bHideDiscountPercentForCompliance,
-            v = s.className == "bbcode_price";
+          const r = n.display_style == "reservation",
+            p = n.bHideDiscountPercentForCompliance,
+            D = n.className == "bbcode_price";
           return (0, t.jsxs)("span", {
             className: (0, i.A)({
               [o().StoreSalePriceWidget]: !0,
-              [s.className ?? ""]: !!s.className,
+              [n.className ?? ""]: !!n.className,
               [o().StoreSaleReservationPrice]: r,
             }),
             children: [
-              !!(s.discount_percent && !j) &&
+              !!(n.discount_percent && !p) &&
                 (0, t.jsx)("span", {
                   className: (0, i.A)(
                     o().StoreSaleDiscountBox,
                     "StoreSaleDiscountBox",
-                    s.bDiscountFromCoupon && o().FromCoupon,
+                    n.bDiscountFromCoupon && o().FromCoupon,
                   ),
-                  children: `-${s.discount_percent}%`,
+                  children: `-${n.discount_percent}%`,
                 }),
-              !!(s.discount_percent && j) &&
+              !!(n.discount_percent && p) &&
                 (0, t.jsx)("div", {
                   className: (0, i.A)({
                     [o().DiscountIconCtn]: !0,
-                    bbcode_price_discount: v,
+                    bbcode_price_discount: D,
                   }),
                   children: (0, t.jsx)(m.XH_, {}),
                 }),
-              !!s.formatted_final_price &&
-                (s.discount_percent && s.formatted_orig_price
+              !!n.formatted_final_price &&
+                (n.discount_percent && n.formatted_orig_price
                   ? (0, t.jsxs)("div", {
                       className: (0, i.A)({
                         [o().StoreSaleDiscountedPriceCtn]: !0,
-                        bbcode_price_ctn: v,
+                        bbcode_price_ctn: D,
                       }),
                       children: [
                         (0, t.jsx)("div", {
                           className: (0, i.A)({
                             [o().StoreOriginalPrice]: !0,
                             StoreOriginalPrice: !0,
-                            bbcode_price_orig: v,
+                            bbcode_price_orig: D,
                           }),
-                          children: s.formatted_orig_price,
+                          children: n.formatted_orig_price,
                         }),
                         (0, t.jsx)("div", {
                           className: (0, i.A)({
                             [o().StoreSalePriceBox]: !0,
-                            bbcode_price_box: v,
+                            bbcode_price_box: D,
                             [o().StoreSaleReservationPriceBox]: r,
-                            bbcode_price_final: v,
+                            bbcode_price_final: D,
                           }),
-                          children: s.formatted_final_price,
+                          children: n.formatted_final_price,
                         }),
                       ],
                     })
                   : (0, t.jsx)("div", {
                       className: (0, i.A)({
                         [o().StoreSalePriceBox]: !0,
-                        bbcode_price_box: v,
+                        bbcode_price_box: D,
                         [o().StoreSaleReservationPriceBox]: r,
-                        bbcode_price_final: v,
+                        bbcode_price_final: D,
                       }),
-                      children: s.formatted_final_price,
+                      children: n.formatted_final_price,
                     })),
             ],
           });
         }
-        function D(s) {
-          const { data: r } = (0, u.Q_)({ packageid: s.packageID });
+        function l(n) {
+          const { data: r } = (0, u.Q_)({ packageid: n.packageID });
           return r
-            ? (0, t.jsx)(f, {
+            ? (0, t.jsx)(h, {
                 formatted_final_price: r.formatted_final_price,
                 formatted_orig_price: r.formatted_original_price,
                 discount_percent: r.discount_pct,
                 bHideDiscountPercentForCompliance:
                   r.hide_discount_pct_for_compliance,
-                display_style: s.display_style,
+                display_style: n.display_style,
                 className: "bbcode_price",
               })
             : null;
         }
-        function a(s, r) {
-          return !s?.final_price_in_cents || !r?.final_price_in_cents
+        function s(n, r) {
+          return !n?.final_price_in_cents || !r?.final_price_in_cents
             ? void 0
             : (
                 100 *
                 (1 -
-                  Number.parseInt(s.final_price_in_cents) /
+                  Number.parseInt(n.final_price_in_cents) /
                     Number.parseInt(r.final_price_in_cents))
               ).toFixed(0) + "%";
         }
-        function c(s) {
-          const { data: r } = (0, u.Q_)({ packageid: s.packageID }),
-            { data: j } = (0, u.Q_)({ packageid: s.compareID }),
-            v = a(r, j);
-          return v === void 0
+        function c(n) {
+          const { data: r } = (0, u.Q_)({ packageid: n.packageID }),
+            { data: p } = (0, u.Q_)({ packageid: n.compareID }),
+            D = s(r, p);
+          return D === void 0
             ? null
             : (0, t.jsx)("span", {
                 className: o().StorePriceSavings,
-                children: v,
+                children: D,
               });
         }
       },
-      76617: (E, C, e) => {
+      76617: (g, C, e) => {
         "use strict";
-        e.d(C, { V: () => g });
-        function t(l) {
-          return Object.prototype.toString.call(l) === "[object Object]";
+        e.d(C, { V: () => j });
+        function t(d) {
+          return Object.prototype.toString.call(d) === "[object Object]";
         }
-        function u(l) {
-          if (!t(l)) return !1;
-          const f = l.constructor;
-          if (typeof f > "u") return !0;
-          const D = f.prototype;
+        function u(d) {
+          if (!t(d)) return !1;
+          const h = d.constructor;
+          if (typeof h > "u") return !0;
+          const l = h.prototype;
           return !(
-            !t(D) || !Object.prototype.hasOwnProperty.call(D, "isPrototypeOf")
+            !t(l) || !Object.prototype.hasOwnProperty.call(l, "isPrototypeOf")
           );
         }
-        function m(...l) {
-          return JSON.stringify(l, (f, D) => {
-            if (u(D)) {
-              const a = {};
+        function m(...d) {
+          return JSON.stringify(d, (h, l) => {
+            if (u(l)) {
+              const s = {};
               return (
-                Object.keys(D)
+                Object.keys(l)
                   .sort()
                   .forEach((c) => {
-                    a[c] = D[c];
+                    s[c] = l[c];
                   }),
-                a
+                s
               );
             }
-            return D;
+            return l;
           });
         }
         var i = e(90626),
-          p = e(7850);
+          v = e(7850);
         const o = (0, i.createContext)({ instances: {}, factories: {} });
-        function _(l) {
-          const { name: f, fnFactory: D, children: a } = l,
+        function f(d) {
+          const { name: h, fnFactory: l, children: s } = d,
             c = React.useContext(o),
-            [s] = useState({}),
+            [n] = useState({}),
             r = useMemo(
               () => ({
-                instances: s,
-                factories: { ...c.factories, [f]: D },
+                instances: n,
+                factories: { ...c.factories, [h]: l },
                 parent: c,
               }),
-              [s, f, c],
+              [n, h, c],
             );
-          return jsx(o.Provider, { value: r, children: a });
+          return jsx(o.Provider, { value: r, children: s });
         }
-        function g(l, f) {
-          const D = (0, i.useContext)(o),
-            a = typeof l == "string" ? l : m(...l);
-          let c = D;
+        function j(d, h) {
+          const l = (0, i.useContext)(o),
+            s = typeof d == "string" ? d : m(...d);
+          let c = l;
           for (; c; ) {
-            if (a in c.instances) return c.instances[a];
-            if (a in c.factories) break;
+            if (s in c.instances) return c.instances[s];
+            if (s in c.factories) break;
             c = c.parent;
           }
-          const r = (c?.factories[a] ?? f)();
-          return ((c ?? D).instances[a] = r), r;
+          const r = (c?.factories[s] ?? h)();
+          return ((c ?? l).instances[s] = r), r;
         }
       },
-      7582: (E, C, e) => {
+      7582: (g, C, e) => {
         "use strict";
-        e.d(C, { HD: () => g, f1: () => s, s4: () => r, sB: () => c });
+        e.d(C, { HD: () => j, f1: () => n, s4: () => r, sB: () => c });
         var t = e(19367),
           u = e.n(t),
           m = e(90626),
           i = e(59432),
-          p = e(47689),
+          v = e(47689),
           o = e(77291);
-        class _ {
+        class f {
           bIncludeFeaturedAsGameSource = !0;
           get nOverrideDateNow() {
             return (0, i.mm)();
           }
-          set nOverrideDateNow(v) {
-            (0, i.ai)(v);
+          set nOverrideDateNow(D) {
+            (0, i.ai)(D);
           }
           get bRequireAllEventsLoadedInTimeBlock() {
             return !1;
@@ -600,48 +733,48 @@
           BHasTimeOverride() {
             return !!(0, i.mm)();
           }
-          ParseDevOverrides(v) {
-            if (!v || v.length == 0) return;
-            new URLSearchParams(v[0] == "?" ? v.substring(1) : v).has("t");
+          ParseDevOverrides(D) {
+            if (!D || D.length == 0) return;
+            new URLSearchParams(D[0] == "?" ? D.substring(1) : D).has("t");
           }
         }
-        const g = new _();
-        (0, o.V)("g_EventCalendarDevFeatures", g);
-        function l(j = 1) {
-          const [v, d] = React.useState(() => a()),
-            x = useCancelTokenSource("useTimeNowWithOverride"),
-            S = React.useCallback(() => {
-              x.token.reason || d(a());
+        const j = new f();
+        (0, o.V)("g_EventCalendarDevFeatures", j);
+        function d(p = 1) {
+          const [D, _] = React.useState(() => s()),
+            E = useCancelTokenSource("useTimeNowWithOverride"),
+            y = React.useCallback(() => {
+              E.token.reason || _(s());
             }, []);
           return (
             React.useEffect(() => {
-              const M = 1e3 * j,
-                T = Date.now() % M,
-                b = M - T,
-                R = window.setTimeout(S, b);
+              const O = 1e3 * p,
+                I = Date.now() % O,
+                B = O - I,
+                R = window.setTimeout(y, B);
               return () => {
                 window.clearTimeout(R);
               };
-            }, [v, j, S]),
-            v
+            }, [D, p, y]),
+            D
           );
         }
-        const D = Math.floor(new Date().getTime() / 1e3);
-        function a() {
-          const j = Math.floor(Date.now() / 1e3);
-          return g.nOverrideDateNow ? g.nOverrideDateNow + (j - D) : j;
+        const l = Math.floor(new Date().getTime() / 1e3);
+        function s() {
+          const p = Math.floor(Date.now() / 1e3);
+          return j.nOverrideDateNow ? j.nOverrideDateNow + (p - l) : p;
         }
         function c() {
-          return g.nOverrideDateNow ?? D;
+          return j.nOverrideDateNow ?? l;
         }
-        function s() {
+        function n() {
           return m.useMemo(() => c(), []);
         }
         function r() {
-          return m.useMemo(() => g.GetTimeNowWithOverrideAsDate(), []);
+          return m.useMemo(() => j.GetTimeNowWithOverrideAsDate(), []);
         }
       },
-      19681: (E, C, e) => {
+      19681: (g, C, e) => {
         "use strict";
         e.d(C, { l: () => u });
         var t = e(98609);
@@ -654,62 +787,62 @@
             );
         }
       },
-      2668: (E, C, e) => {
+      2668: (g, C, e) => {
         "use strict";
-        e.d(C, { Li: () => x, ue: () => M });
+        e.d(C, { Li: () => E, ue: () => O });
         var t = e(7850),
           u = e(19298),
           m = e(10349),
           i = e(19681),
-          p = e(76532),
-          o = e.n(p),
-          _ = e(23627),
-          g = e(95995),
-          l = e(36118),
-          f = e(72865),
-          D = e(53107),
-          a = e(36707),
+          v = e(76532),
+          o = e.n(v),
+          f = e(23627),
+          j = e(95995),
+          d = e(36118),
+          h = e(72865),
+          l = e(53107),
+          s = e(36707),
           c = e(18210),
-          s = e(98609),
+          n = e(98609),
           r = e(18714),
-          j = e.n(r),
-          v = e(40358),
-          d = e(68094);
-        function x(P) {
-          const { spotlight: n } = P,
-            A = (0, f.aL)(n.url, "spotlight");
-          return (0, t.jsx)(g.A, {
-            appID: n.item?.type == "app" ? n.item.id : void 0,
+          p = e.n(r),
+          D = e(40358),
+          _ = e(68094);
+        function E(P) {
+          const { spotlight: a } = P,
+            T = (0, h.aL)(a.url, "spotlight");
+          return (0, t.jsx)(j.A, {
+            appID: a.item?.type == "app" ? a.item.id : void 0,
             feature: "spotlight",
             children: (0, t.jsxs)(u.Z, {
               className: r.SpotlightCtn,
               onOKButton: () => {
-                window.location.href = A;
+                window.location.href = T;
               },
               children: [
                 (0, t.jsxs)("div", {
                   className: r.SpotlightImageCtn,
                   children: [
                     (0, t.jsx)("div", {
-                      className: (0, a.A)(
-                        p.CapsuleDecorators,
+                      className: (0, s.A)(
+                        v.CapsuleDecorators,
                         r.CapsuleDecorators,
                       ),
-                      children: n.has_live_broadcast && (0, t.jsx)(_.K, {}),
+                      children: a.has_live_broadcast && (0, t.jsx)(f.K, {}),
                     }),
-                    n.open_in_new_window
-                      ? (0, t.jsx)(D.uU, {
-                          href: A,
+                    a.open_in_new_window
+                      ? (0, t.jsx)(l.uU, {
+                          href: T,
                           children: (0, t.jsx)("img", {
-                            src: n.image_url,
-                            alt: n.title,
+                            src: a.image_url,
+                            alt: a.title,
                           }),
                         })
                       : (0, t.jsx)("a", {
-                          href: A,
+                          href: T,
                           children: (0, t.jsx)("img", {
-                            src: n.image_url,
-                            alt: n.title,
+                            src: a.image_url,
+                            alt: a.title,
                           }),
                         }),
                   ],
@@ -719,17 +852,17 @@
                   children: [
                     (0, t.jsx)("div", {
                       className: r.SpotlightTitle,
-                      children: n.title,
+                      children: a.title,
                     }),
                     (0, t.jsx)("div", {
                       className: r.SpotlightBody,
-                      children: n.body,
+                      children: a.body,
                     }),
                     (0, t.jsx)("div", {
                       className: r.BottomBarPriceInfo,
-                      children: (0, t.jsx)(b, {
-                        discountBlock: n.discount_block,
-                        bIsSalePage: n.is_sale_page,
+                      children: (0, t.jsx)(B, {
+                        discountBlock: a.discount_block,
+                        bIsSalePage: a.is_sale_page,
                       }),
                     }),
                   ],
@@ -738,32 +871,32 @@
             }),
           });
         }
-        function S(P) {
-          const { spotlight: n } = P,
-            A = n.associated_item,
-            I = {
-              is_weeklong_deals: n.spotlight_template == "weeklong_deals",
-              url: n.spotlight_link_url,
-              image_url: Config.MEDIA_CDN_URL + n.asset_url,
-              title: n.spotlight_title,
-              body: n.spotlight_body,
-              ...R(A),
+        function y(P) {
+          const { spotlight: a } = P,
+            T = a.associated_item,
+            L = {
+              is_weeklong_deals: a.spotlight_template == "weeklong_deals",
+              url: a.spotlight_link_url,
+              image_url: Config.MEDIA_CDN_URL + a.asset_url,
+              title: a.spotlight_title,
+              body: a.spotlight_body,
+              ...R(T),
             };
           if (
-            (!I.url && A && (I.url = Config.STORE_BASE_URL + A.store_url_path),
-            n.spotlight_body?.indexOf("%1$s") !== -1)
+            (!L.url && T && (L.url = Config.STORE_BASE_URL + T.store_url_path),
+            a.spotlight_body?.indexOf("%1$s") !== -1)
           ) {
-            let F;
-            A?.best_purchase_option?.active_discounts?.length
-              ? (F = new Date(
-                  A.best_purchase_option.active_discounts[0].discount_end_date *
+            let z;
+            T?.best_purchase_option?.active_discounts?.length
+              ? (z = new Date(
+                  T.best_purchase_option.active_discounts[0].discount_end_date *
                     1e3,
                 ))
-              : n.end_date && (F = new Date(n.end_date * 1e3)),
-              F &&
-                (I.body = n.spotlight_body?.replace(
+              : a.end_date && (z = new Date(a.end_date * 1e3)),
+              z &&
+                (L.body = a.spotlight_body?.replace(
                   "%1$s",
-                  F.toLocaleTimeString(
+                  z.toLocaleTimeString(
                     LocalizationManager.GetPreferredLocales(),
                     {
                       hour: "numeric",
@@ -774,29 +907,29 @@
                   ),
                 ));
           }
-          return jsx(x, { spotlight: I });
+          return jsx(E, { spotlight: L });
         }
-        function M(P) {
-          const { dailyDeal: n } = P,
-            A = (0, f.aL)(n.target, "daily-deal"),
-            I = (0, m.SW)(n.item?.type ?? "application"),
-            F = (0, v.J$)((0, d.Jz)({ item_type: I, id: n.item?.id }));
-          return (0, t.jsx)(g.A, {
-            appID: n.item?.type == "app" ? n.item.id : void 0,
+        function O(P) {
+          const { dailyDeal: a } = P,
+            T = (0, h.aL)(a.target, "daily-deal"),
+            L = (0, m.SW)(a.item?.type ?? "application"),
+            z = (0, D.J$)((0, _.Jz)({ item_type: L, id: a.item?.id }));
+          return (0, t.jsx)(j.A, {
+            appID: a.item?.type == "app" ? a.item.id : void 0,
             feature: "daily-deal",
             children: (0, t.jsxs)(u.Z, {
               className: r.DailyDealCtn,
               onOKButton: () => {
-                window.location.href = A;
+                window.location.href = T;
               },
               children: [
                 (0, t.jsx)("div", {
                   className: r.DailyDealImageCtn,
                   children: (0, t.jsx)("a", {
-                    href: A,
+                    href: T,
                     children: (0, t.jsx)("img", {
-                      src: n.image,
-                      alt: F.data?.name,
+                      src: a.image,
+                      alt: z.data?.name,
                     }),
                   }),
                 }),
@@ -805,11 +938,11 @@
                   children: [
                     (0, t.jsx)("div", {
                       className: r.DailyDealDesc,
-                      children: n.desc,
+                      children: a.desc,
                     }),
-                    (0, t.jsx)(b, {
-                      discountBlock: n.discount_block,
-                      bIsSalePage: n.is_sale_page,
+                    (0, t.jsx)(B, {
+                      discountBlock: a.discount_block,
+                      bIsSalePage: a.is_sale_page,
                     }),
                   ],
                 }),
@@ -817,127 +950,127 @@
             }),
           });
         }
-        function T(P) {
+        function I(P) {
           const {
-              dailyDeal: { item: n },
+              dailyDeal: { item: a },
             } = P,
-            A = {
+            T = {
               end_date:
-                n?.best_purchase_option?.active_discounts?.[0]
+                a?.best_purchase_option?.active_discounts?.[0]
                   ?.discount_end_date,
-              target: Config.STORE_BASE_URL + n?.store_url_path,
-              image: BuildStoreAssetURL(n?.assets, "header"),
-              ...R(n),
+              target: Config.STORE_BASE_URL + a?.store_url_path,
+              image: BuildStoreAssetURL(a?.assets, "header"),
+              ...R(a),
             };
-          return jsx(M, { dailyDeal: A });
+          return jsx(O, { dailyDeal: T });
         }
-        const b = (P) => {
-          const { discountBlock: n, bIsSalePage: A } = P;
-          if (!n) return null;
-          const I = n.hide_discount_percent_for_compliance;
-          return A
-            ? n.discount_max == null || n.discount_max <= 0
+        const B = (P) => {
+          const { discountBlock: a, bIsSalePage: T } = P;
+          if (!a) return null;
+          const L = a.hide_discount_percent_for_compliance;
+          return T
+            ? a.discount_max == null || a.discount_max <= 0
               ? null
-              : n.discount_min == null || n.discount_min <= 0
+              : a.discount_min == null || a.discount_min <= 0
                 ? (0, t.jsx)("div", {
-                    className: (0, a.A)(
+                    className: (0, s.A)(
                       o().StoreSalePriceWidgetContainer,
                       o().Discounted,
                     ),
                     children: (0, t.jsxs)("div", {
                       className: o().StoreSaleDiscountBox,
-                      children: ["Up to -", n.discount_max, "%"],
+                      children: ["Up to -", a.discount_max, "%"],
                     }),
                   })
-                : I
+                : L
                   ? (0, t.jsx)("div", {
                       className: o().DiscountIconCtn,
-                      children: (0, t.jsx)(l.XH_, {}),
+                      children: (0, t.jsx)(d.XH_, {}),
                     })
                   : (0, t.jsx)("div", {
-                      className: (0, a.A)(
+                      className: (0, s.A)(
                         o().StoreSalePriceWidgetContainer,
                         o().Discounted,
                       ),
                       children:
-                        n.discount_min === n.discount_max
+                        a.discount_min === a.discount_max
                           ? (0, t.jsxs)("div", {
                               className: o().StoreSaleDiscountBox,
-                              children: [n.discount_min, "%"],
+                              children: [a.discount_min, "%"],
                             })
                           : (0, t.jsxs)("div", {
                               className: o().StoreSaleDiscountBox,
                               children: [
-                                n.discount_min,
+                                a.discount_min,
                                 " - ",
-                                n.discount_max,
+                                a.discount_max,
                                 "%",
                               ],
                             }),
                     })
-            : n.final_price == null || n.final_price === ""
+            : a.final_price == null || a.final_price === ""
               ? null
-              : n.bundle_discount != null && n.bundle_discount > 0 && !I
+              : a.bundle_discount != null && a.bundle_discount > 0 && !L
                 ? (0, t.jsx)("div", {
                     className: r.DiscountBlock,
                     children: (0, t.jsxs)("div", {
                       className: r.DiscountPercent,
-                      children: ["-", n.bundle_discount, "%"],
+                      children: ["-", a.bundle_discount, "%"],
                     }),
                   })
-                : n.discount_percent != null && n.discount_percent > 0
-                  ? I
+                : a.discount_percent != null && a.discount_percent > 0
+                  ? L
                     ? (0, t.jsxs)("div", {
-                        className: (0, a.A)(
+                        className: (0, s.A)(
                           o().StoreSalePriceWidgetContainer,
                           o().Discounted,
                         ),
                         children: [
                           (0, t.jsx)("div", {
                             className: o().DiscountIconCtn,
-                            children: (0, t.jsx)(l.XH_, {}),
+                            children: (0, t.jsx)(d.XH_, {}),
                           }),
                           (0, t.jsx)("div", {
                             className: o().StoreSaleDiscountedPriceCtn,
                             children: (0, t.jsx)("div", {
                               className: o().StoreSalePriceBox,
-                              children: n.final_price,
+                              children: a.final_price,
                             }),
                           }),
                         ],
                       })
                     : (0, t.jsxs)("div", {
-                        className: (0, a.A)(
+                        className: (0, s.A)(
                           o().StoreSalePriceWidgetContainer,
                           o().Discounted,
                         ),
                         children: [
                           (0, t.jsxs)("div", {
                             className: o().StoreSaleDiscountBox,
-                            children: [n.discount_percent, "%"],
+                            children: [a.discount_percent, "%"],
                           }),
                           (0, t.jsxs)("div", {
                             className: o().StoreSaleDiscountedPriceCtn,
                             children: [
                               (0, t.jsx)("div", {
                                 className: o().StoreOriginalPrice,
-                                children: n.orig_price,
+                                children: a.orig_price,
                               }),
                               (0, t.jsx)("div", {
                                 className: o().StoreSalePriceBox,
-                                children: n.final_price,
+                                children: a.final_price,
                               }),
                             ],
                           }),
                         ],
                       })
                   : (0, t.jsx)("div", {
-                      className: (0, a.A)(o().StoreSalePriceWidgetContainer),
+                      className: (0, s.A)(o().StoreSalePriceWidgetContainer),
                       children: (0, t.jsx)("div", {
                         className: o().StoreSaleDiscountedPriceCtn,
                         children: (0, t.jsx)("div", {
                           className: o().StoreSalePriceBox,
-                          children: n.final_price,
+                          children: a.final_price,
                         }),
                       }),
                     });
@@ -960,97 +1093,97 @@
             : {};
         }
       },
-      13784: (E, C, e) => {
+      13784: (g, C, e) => {
         "use strict";
-        e.d(C, { hA: () => H, LG: () => Z });
+        e.d(C, { hA: () => H, LG: () => Y });
         var t = e(7850),
-          u = e(29696),
+          u = e(10985),
           m = e(24660),
           i = e(79083),
-          p = e(40358),
+          v = e(40358),
           o = e(29522),
-          _ = e(90626),
-          g = e(99371),
-          l = e.n(g),
-          f = e(19298),
-          D = e(95695),
-          a = e.n(D),
+          f = e(90626),
+          j = e(99371),
+          d = e.n(j),
+          h = e(19298),
+          l = e(95695),
+          s = e.n(l),
           c = e(51079),
-          s = e(45826),
+          n = e(45826),
           r = e(36707),
-          j = e(18210),
-          v = e(19730),
-          d = e(53113);
-        function x(O) {
+          p = e(18210),
+          D = e(19730),
+          _ = e(53113);
+        function E(M) {
           const {
-            strURL: h,
-            strName: L,
-            strAvatarURL: y,
+            strURL: x,
+            strName: A,
+            strAvatarURL: S,
             nFollowers: N,
             strCreatorType: U,
             strTagLine: W,
             strMemberListURL: K,
-            followButton: B,
-            bSmallFormat: z,
+            followButton: b,
+            bSmallFormat: F,
             bMinimalDisplay: k,
-          } = O;
+          } = M;
           return (0, t.jsx)(c.Ay, {
             feature: "salecreatorhome",
-            children: (0, t.jsxs)(f.Z, {
+            children: (0, t.jsxs)(h.Z, {
               className: (0, r.A)(
-                l().DevSummaryCtn,
-                z ? l().SmallFormat : l().LargeFormat,
-                k ? l().MinimalDisplay : "",
+                d().DevSummaryCtn,
+                F ? d().SmallFormat : d().LargeFormat,
+                k ? d().MinimalDisplay : "",
               ),
               "flow-children": "row",
               children: [
                 !!U &&
-                  (0, t.jsx)("span", { className: l().Title, children: U }),
+                  (0, t.jsx)("span", { className: d().Title, children: U }),
                 (0, t.jsxs)("div", {
-                  className: l().DevSummaryWidgetCtn,
+                  className: d().DevSummaryWidgetCtn,
                   children: [
                     (0, t.jsx)("div", {
-                      className: l().DevSummaryBackground,
-                      style: { backgroundImage: `url(${y} )` },
+                      className: d().DevSummaryBackground,
+                      style: { backgroundImage: `url(${S} )` },
                     }),
                     (0, t.jsxs)("div", {
-                      className: (0, r.A)(l().DevSummaryContent),
+                      className: (0, r.A)(d().DevSummaryContent),
                       children: [
                         (0, t.jsxs)("div", {
-                          className: a().FlexRowContainer,
+                          className: s().FlexRowContainer,
                           children: [
-                            (0, t.jsx)(s.m, {
-                              href: (0, d.k2)(h),
-                              className: l().AvatarLink,
+                            (0, t.jsx)(n.m, {
+                              href: (0, _.k2)(x),
+                              className: d().AvatarLink,
                               bAllowFocuseableAnchor: !0,
                               children: (0, t.jsx)("img", {
-                                className: (0, r.A)(l().Avatar, "Avatar_Trgt"),
-                                src: y,
+                                className: (0, r.A)(d().Avatar, "Avatar_Trgt"),
+                                src: S,
                                 alt: "",
                               }),
                             }),
                             (0, t.jsxs)("div", {
                               className: (0, r.A)(
-                                a().FlexColumnContainer,
-                                l().CreatorDescCtn,
+                                s().FlexColumnContainer,
+                                d().CreatorDescCtn,
                               ),
                               children: [
                                 (0, t.jsxs)("div", {
                                   className: (0, r.A)(
-                                    l().CreatorTitleCtn,
-                                    a().FlexColumnContainer,
+                                    d().CreatorTitleCtn,
+                                    s().FlexColumnContainer,
                                   ),
                                   children: [
-                                    (0, t.jsx)(s.m, {
-                                      href: (0, d.k2)(h),
-                                      className: l().CreatorNameName,
-                                      children: L,
+                                    (0, t.jsx)(n.m, {
+                                      href: (0, _.k2)(x),
+                                      className: d().CreatorNameName,
+                                      children: A,
                                     }),
                                     !!W &&
                                       (0, t.jsx)("div", {
                                         className: (0, r.A)(
-                                          a().FlexColumnContainer,
-                                          l().CreatorTagline,
+                                          s().FlexColumnContainer,
+                                          d().CreatorTagline,
                                         ),
                                         children: W,
                                       }),
@@ -1058,27 +1191,27 @@
                                 }),
                                 (0, t.jsx)("div", {
                                   className: (0, r.A)({
-                                    [a().FlexColumnContainer]: z,
-                                    [a().FlexRowContainer]: !z,
-                                    [l().SocialFollowersCtn]: !0,
+                                    [s().FlexColumnContainer]: F,
+                                    [s().FlexRowContainer]: !F,
+                                    [d().SocialFollowersCtn]: !0,
                                   }),
                                   children: (0, t.jsxs)("div", {
-                                    className: (0, r.A)(l().FollowBtnCtn),
+                                    className: (0, r.A)(d().FollowBtnCtn),
                                     children: [
-                                      B,
+                                      b,
                                       (0, t.jsxs)("div", {
                                         className: (0, r.A)({
-                                          [l().Followers]: !0,
+                                          [d().Followers]: !0,
                                         }),
                                         children: [
                                           (0, t.jsx)("span", {
-                                            children: (0, j.we)(
+                                            children: (0, p.we)(
                                               "#CreatorHome_JustFollowers",
                                             ),
                                           }),
                                           (0, t.jsx)("span", {
-                                            className: l().FollowerCount,
-                                            children: (0, v.Dq)(N),
+                                            className: d().FollowerCount,
+                                            children: (0, D.Dq)(N),
                                           }),
                                         ],
                                       }),
@@ -1094,8 +1227,8 @@
                             href: K,
                             target: "_blank",
                             rel: "noopener noreferrer",
-                            className: l().MembersListLink,
-                            children: (0, j.we)("#ClanMembershipList"),
+                            className: d().MembersListLink,
+                            children: (0, p.we)("#ClanMembershipList"),
                           }),
                       ],
                     }),
@@ -1105,52 +1238,52 @@
             }),
           });
         }
-        var S = e(72147),
-          M = e(85599),
-          T = e(29780),
-          b = e.n(T);
-        function R(O) {
-          const { data: h, isPending: L } = (0, p.wl)(
-            O ? { appid: O } : void 0,
+        var y = e(72147),
+          O = e(85599),
+          I = e(29780),
+          B = e.n(I);
+        function R(M) {
+          const { data: x, isPending: A } = (0, v.wl)(
+            M ? { appid: M } : void 0,
           );
-          return _.useMemo(() => {
-            if (!O) return [];
-            if (!h) return L ? void 0 : [];
-            const y = [],
+          return f.useMemo(() => {
+            if (!M) return [];
+            if (!x) return A ? void 0 : [];
+            const S = [],
               N = new Set(),
               U = [
-                ["developer", (0, o.Qm)(h.developers)],
-                ["publisher", (0, o.Qm)(h.publishers)],
-                ["franchise", (0, o.Qm)(h.franchises)],
+                ["developer", (0, o.Qm)(x.developers)],
+                ["publisher", (0, o.Qm)(x.publishers)],
+                ["franchise", (0, o.Qm)(x.franchises)],
               ];
             for (const [W, K] of U)
-              for (const B of K)
-                N.has(B) ||
-                  (N.add(B),
-                  y.push({ appid: O, name: "", clan_account_id: B, type: W }));
-            return y;
-          }, [O, h, L]);
+              for (const b of K)
+                N.has(b) ||
+                  (N.add(b),
+                  S.push({ appid: M, name: "", clan_account_id: b, type: W }));
+            return S;
+          }, [M, x, A]);
         }
-        function P(O) {
-          const { rgCreators: h, renderCreator: L } = O,
-            [y, N] = _.useState(0);
-          if (!h.length) return null;
-          if (h.length == 1)
-            return (0, t.jsx)(t.Fragment, { children: L(h[0]) });
-          const U = y % h.length;
+        function P(M) {
+          const { rgCreators: x, renderCreator: A } = M,
+            [S, N] = f.useState(0);
+          if (!x.length) return null;
+          if (x.length == 1)
+            return (0, t.jsx)(t.Fragment, { children: A(x[0]) });
+          const U = S % x.length;
           return (0, t.jsxs)("div", {
-            className: b().CreatorCarouselCtn,
+            className: B().CreatorCarouselCtn,
             children: [
-              L(h[U]),
+              A(x[U]),
               (0, t.jsx)("div", {
-                className: b().CreatorCarouselCrumbs,
-                children: h.map((W, K) =>
+                className: B().CreatorCarouselCrumbs,
+                children: x.map((W, K) =>
                   (0, t.jsx)(
                     m.ml,
                     {
-                      className: b().CreatorCarouselCrumb,
+                      className: B().CreatorCarouselCrumb,
                       onClick: () => N(K),
-                      "aria-label": I(W.type),
+                      "aria-label": L(W.type),
                       children: (0, t.jsx)(i.U, { bIsActive: K == U }),
                     },
                     W.clan_account_id,
@@ -1160,93 +1293,93 @@
             ],
           });
         }
-        function n(O) {
-          const { creatorID: h, bSmallFormat: L } = O,
-            { data: y } = (0, u.A5)(h.clan_account_id);
-          return y
-            ? (0, t.jsx)(x, {
-                strURL: (0, u.LO)(y, h.type),
-                strName: y.name ?? "",
-                strAvatarURL: y.avatar_url_full_size ?? "",
-                nFollowers: y.followers ?? 0,
-                strCreatorType: I(h.type),
-                followButton: (0, t.jsx)(S.of, {
-                  clanAccountID: h.clan_account_id,
+        function a(M) {
+          const { creatorID: x, bSmallFormat: A } = M,
+            { data: S } = (0, u.A5)(x.clan_account_id);
+          return S
+            ? (0, t.jsx)(E, {
+                strURL: (0, u.LO)(S, x.type),
+                strName: S.name ?? "",
+                strAvatarURL: S.avatar_url_full_size ?? "",
+                nFollowers: S.followers ?? 0,
+                strCreatorType: L(x.type),
+                followButton: (0, t.jsx)(y.of, {
+                  clanAccountID: x.clan_account_id,
                   followType: "creatorhome",
                 }),
-                bSmallFormat: L,
+                bSmallFormat: A,
               })
             : null;
         }
-        function A(O) {
-          const { appid: h, bSmallFormat: L, renderCreator: y } = O,
-            N = R(h);
+        function T(M) {
+          const { appid: x, bSmallFormat: A, renderCreator: S } = M,
+            N = R(x);
           return N
             ? (0, t.jsx)(P, {
                 rgCreators: N,
                 renderCreator:
-                  y ??
-                  ((U) => (0, t.jsx)(n, { creatorID: U, bSmallFormat: L })),
+                  S ??
+                  ((U) => (0, t.jsx)(a, { creatorID: U, bSmallFormat: A })),
               })
             : (0, t.jsx)("div", {
-                className: l().DevSummaryWidgetCtn,
-                children: (0, t.jsx)(M.t, {}),
+                className: d().DevSummaryWidgetCtn,
+                children: (0, t.jsx)(O.t, {}),
               });
         }
-        function I(O) {
-          switch (O) {
+        function L(M) {
+          switch (M) {
             case "publisher":
-              return (0, j.we)("#CreatorHome_PublishedBy");
+              return (0, p.we)("#CreatorHome_PublishedBy");
             case "franchise":
-              return (0, j.we)("#CreatorHome_InFranchise");
+              return (0, p.we)("#CreatorHome_InFranchise");
           }
-          return (0, j.we)("#CreatorHome_DevelopedBy");
+          return (0, p.we)("#CreatorHome_DevelopedBy");
         }
-        var F = e(60480),
-          G = e(6469),
+        var z = e(60480),
+          G = e(19619),
           V = e(3166),
           w = e(25792);
-        function H(O) {
+        function H(M) {
           const {
-              creatorID: h,
-              bShowTagline: L,
-              bHideCreatorType: y,
+              creatorID: x,
+              bShowTagline: A,
+              bHideCreatorType: S,
               bSmallFormat: N,
               bHideFollowButton: U,
               bAddLinkToMemberList: W,
               bMinimalDisplay: K,
-            } = O,
-            { creatorHome: B, isFetching: z } = (0, F.FV)(h.clan_account_id),
+            } = M,
+            { creatorHome: b, isFetching: F } = (0, z.FV)(x.clan_account_id),
             [k] = (0, G.L2)();
-          return k || (!B && z)
+          return k || (!b && F)
             ? (0, t.jsx)("div", {
-                className: l().DevSummaryWidgetCtn,
-                children: (0, t.jsx)(M.t, {
-                  string: (0, j.we)("#Loading"),
+                className: d().DevSummaryWidgetCtn,
+                children: (0, t.jsx)(O.t, {
+                  string: (0, p.we)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
               })
-            : B
+            : b
               ? (0, t.jsx)(w.tH, {
-                  children: (0, t.jsx)(x, {
-                    strURL: B.GetCreatorHomeURL(h.type),
-                    strName: B.GetName(),
-                    strAvatarURL: B.GetAvatarURLFullSize(),
-                    nFollowers: B.GetNumFollowers(),
-                    strCreatorType: y ? void 0 : I(h.type),
-                    strTagLine: L ? B.GetTagLine() : void 0,
+                  children: (0, t.jsx)(E, {
+                    strURL: b.GetCreatorHomeURL(x.type),
+                    strName: b.GetName(),
+                    strAvatarURL: b.GetAvatarURLFullSize(),
+                    nFollowers: b.GetNumFollowers(),
+                    strCreatorType: S ? void 0 : L(x.type),
+                    strTagLine: A ? b.GetTagLine() : void 0,
                     strMemberListURL: W
                       ? V.TS.COMMUNITY_BASE_URL +
                         "gid/" +
-                        B.GetClanSteamID().ConvertTo64BitString() +
+                        b.GetClanSteamID().ConvertTo64BitString() +
                         "/members/"
                       : void 0,
                     followButton: U
                       ? void 0
-                      : (0, t.jsx)(S.of, {
-                          clanAccountID: h.clan_account_id,
-                          creatorID: h,
+                      : (0, t.jsx)(y.of, {
+                          clanAccountID: x.clan_account_id,
+                          creatorID: x,
                         }),
                     bSmallFormat: N,
                     bMinimalDisplay: K,
@@ -1254,45 +1387,45 @@
                 })
               : null;
         }
-        function Z(O) {
-          const { appid: h, bSmallFormat: L } = O;
+        function Y(M) {
+          const { appid: x, bSmallFormat: A } = M;
           return (0, t.jsx)(w.tH, {
-            children: (0, t.jsx)(A, {
-              appid: h,
-              bSmallFormat: L,
-              renderCreator: (y) =>
-                (0, t.jsx)(H, { creatorID: y, bSmallFormat: L }),
+            children: (0, t.jsx)(T, {
+              appid: x,
+              bSmallFormat: A,
+              renderCreator: (S) =>
+                (0, t.jsx)(H, { creatorID: S, bSmallFormat: A }),
             }),
           });
         }
-        function Y(O) {
-          const { clanInfo: h, bAddLinkToMemberList: L } = O;
+        function Z(M) {
+          const { clanInfo: x, bAddLinkToMemberList: A } = M;
           if (
             (AssertMsg(
-              h && h.clanAccountID,
+              x && x.clanAccountID,
               "CuratorHoverContent expect clanInfo, not supplied",
             ),
-            !h)
+            !x)
           )
             return null;
-          const y = {
-            clan_account_id: h.clanAccountID,
-            name: h.group_name,
+          const S = {
+            clan_account_id: x.clanAccountID,
+            name: x.group_name,
             type: "developer",
           };
           return jsx("div", {
             className: creatorstyle.CuratorHoverCtn,
             children: jsx(H, {
-              creatorID: y,
+              creatorID: S,
               bSmallFormat: !0,
               bShowTagline: !0,
               bHideCreatorType: !0,
-              bAddLinkToMemberList: L,
+              bAddLinkToMemberList: A,
             }),
           });
         }
       },
-      69736: (E, C, e) => {
+      69736: (g, C, e) => {
         "use strict";
         e.d(C, { x: () => u });
         var t = e(18210);
@@ -1304,8 +1437,19 @@
           );
         }
       },
-      38878: (E) => {
-        E.exports = {
+      21895: (g) => {
+        g.exports = {
+          Root: "_1kIuUssJvopWbHik1IKMG6",
+          "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+          "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+          "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
+          Disabled: "kLcGKsNxkoEqxgok6YzML",
+          Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+          Icon: "cngAYeP7ZvFo2pT_v3-xO",
+        };
+      },
+      38878: (g) => {
+        g.exports = {
           "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
           "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
           "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -1324,8 +1468,24 @@
           "Size-2": "B7HtDxiiORArIRcBR9kVB",
         };
       },
-      65274: (E) => {
-        E.exports = {
+      16619: (g) => {
+        g.exports = {
+          Color: "_2Vc3a-PM4tOhJcD72NEq1U",
+          IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
+          "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
+          "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
+          "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
+          "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
+          "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
+          "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
+          "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
+          "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
+          "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
+          HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
+        };
+      },
+      65274: (g) => {
+        g.exports = {
           Text: "f6hU22EA7Z8peFWZVBJU",
           Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
           "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
@@ -1343,8 +1503,8 @@
           WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
         };
       },
-      50122: (E) => {
-        E.exports = {
+      50122: (g) => {
+        g.exports = {
           TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
           TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
           Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
@@ -1354,15 +1514,15 @@
           "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
         };
       },
-      29780: (E) => {
-        E.exports = {
+      29780: (g) => {
+        g.exports = {
           CreatorCarouselCtn: "_1qnKWf93kKH8YgFapmbXoG",
           CreatorCarouselCrumbs: "_2AiKsp4m6yMqM2eYITyM9P",
           CreatorCarouselCrumb: "_3YJS96Hy8atWoeFJxFOkKu",
         };
       },
-      18126: (E) => {
-        E.exports = {
+      18126: (g) => {
+        g.exports = {
           StoreSalePriceWidget: "_2-McVXIMf_N62bUl92jzfB",
           StoreSaleDiscountedPriceCtn: "_1_P7Dmzd6trtJ9KdCsm-Nk",
           StoreSalePriceBox: "_2Ddt9rJYO847UxQG9pUQiI",
@@ -1372,8 +1532,8 @@
           StoreOriginalPrice: "_2z2Ba4q2zi5jWk2QF17G2c",
         };
       },
-      18714: (E) => {
-        E.exports = {
+      18714: (g) => {
+        g.exports = {
           narrowWidth: "500px",
           "duration-app-launch": "800ms",
           MainCarousel: "_3SWsMT4_EVVsmPbanjlEy4",
@@ -1423,7 +1583,7 @@
           hoverAnimation: "ib5aU4OmCxpvW7mx1Gkl7",
         };
       },
-      61738: (E, C, e) => {
+      61738: (g, C, e) => {
         var t = {
           "./af": 30911,
           "./af.js": 30911,
@@ -1701,13 +1861,13 @@
           "./zh-tw.js": 34518,
         };
         function u(i) {
-          var p = m(i);
-          return e(p);
+          var v = m(i);
+          return e(v);
         }
         function m(i) {
           if (!e.o(t, i)) {
-            var p = new Error("Cannot find module '" + i + "'");
-            throw ((p.code = "MODULE_NOT_FOUND"), p);
+            var v = new Error("Cannot find module '" + i + "'");
+            throw ((v.code = "MODULE_NOT_FOUND"), v);
           }
           return t[i];
         }
@@ -1715,7 +1875,7 @@
           return Object.keys(t);
         }),
           (u.resolve = m),
-          (E.exports = u),
+          (g.exports = u),
           (u.id = 61738);
       },
     },

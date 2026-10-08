@@ -712,13 +712,11 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          const { clanAccountID: _, color: _, bgcolor: _ } = _;
-          (0, _._)();
-          const [_, _] = _.useState(!1);
+          const { clanAccountID: _, color: _, bgcolor: _ } = _,
+            [_, _] = _.useState(!1);
           return (0, _.jsx)("div", {
             className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
             onMouseEnter: () => _(!0),

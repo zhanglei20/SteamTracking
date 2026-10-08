@@ -12774,23 +12774,6 @@
         __webpack_require__._(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid");
-        function _(_, _) {
-          const _ = _ && (0, _._)(_.reservation_state);
-          return !!(
-            (_ &&
-              _.reservation_state ===
-                _._.k_EPurchaseReservationState_Reserved &&
-              _?.position_is_waitlist) ||
-            (!_ && _?.queue_in_waitlist)
-          );
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -26339,43 +26322,294 @@
             ],
           });
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
-          return null;
+          const { rtime: _ } = _;
+          return _
+            ? (0, _.jsx)(_._, {
+                dateAndTime: _,
+                bSingleLine: !0,
+              })
+            : null;
         }
-        const _ = _.lazy(() =>
-            __webpack_require__
-              ._("chunkid")
-              .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _
-            ? function (_) {
-                return (0, _.jsx)(_.Suspense, {
-                  fallback: null,
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                });
-              }
-            : _;
         function _(_) {
-          return null;
+          const { rtime: _, onValueChange: _, label: _, tooltip: _ } = _;
+          let _;
+          return (
+            _ > 0 &&
+              (_ = jsx(_, {
+                rtime: _,
+              })),
+            jsxs(Fragment, {
+              children: [
+                jsxs(Text, {
+                  children: [
+                    _,
+                    _ &&
+                      jsx(QuestionTooltip, {
+                        tooltip: _,
+                      }),
+                  ],
+                }),
+                jsx(CoercingTextInput, {
+                  value: _,
+                  valueToString: (_) => _.toString(),
+                  valueFromString: (_) => Number.parseInt(_),
+                  clearable: !1,
+                  onValueChange: (_) => {
+                    _(Number(_));
+                  },
+                  afterContent: _,
+                }),
+              ],
+            })
+          );
         }
-        const _ = _.lazy(() =>
-            __webpack_require__
-              ._("chunkid")
-              .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _
-            ? function (_) {
-                return (0, _.jsx)(_.Suspense, {
-                  fallback: null,
-                  children: (0, _.jsx)(_, {
-                    ..._,
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_) {
+          const {
+              hardwareDetail: _,
+              reservationAdvancedSettings: _,
+              bShuffleInProgress: _,
+              bHasSomeReservation: _,
+              reservedHardwareDetail: _,
+            } = _,
+            [_, _, _] = (0, _._)(() => [
+              _?.collection_rtime_end,
+              _?.collection_time_learn_more_url,
+              !!_?.collection_time_allow_multiple_models,
+            ]),
+            [_, _] = (0, _.useState)({}),
+            _ = (0, _.useCallback)(
+              (_) => {
+                _((_) => ({
+                  ..._,
+                  [_.packageid]: _,
+                }));
+              },
+              [_],
+            );
+          if (_)
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(_.expecteddate_str),
+              children: [
+                _._.Localize(
+                  _
+                    ? "#Reservation_Pool_InProgress_Joined"
+                    : "#Reservation_Pool_InProgress_NotJoined",
+                ),
+                _ &&
+                  (0, _.jsx)("a", {
+                    className: _().LearnMoreLink,
+                    href: _,
+                    children: _._.Localize("#Button_Learn"),
                   }),
-                });
-              }
-            : _;
-        var _ = __webpack_require__("chunkid");
+              ],
+            });
+          const _ = (0, _._)(_.reservation_state),
+            _ = !!_ && !!_.collection_time_term_and_conditions_url,
+            _ = _[_.packageid] ?? !_;
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_.expecteddate_str),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().PoolMessage,
+                    children: _._.LocalizeReact(
+                      "#Reservation_InPool_Message_Date",
+                      (0, _.jsx)(_, {
+                        rtime: _ || _.collection_time_active,
+                      }),
+                    ),
+                  }),
+                  _ &&
+                    (0, _.jsx)("a", {
+                      className: _().LearnMoreLink,
+                      href: _,
+                      children: _._.Localize("#Button_Learn"),
+                    }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)(
+                  _._,
+                  {
+                    checked: _ || _,
+                    onChange: _,
+                    "data-checkbox": "",
+                    disabled: _,
+                    children: (0, _.jsxs)("div", {
+                      className: _().Terms,
+                      children: [
+                        " ",
+                        (0, _._)(
+                          _._.Localize("#Reservation_JoinPool_Terms"),
+                          (0, _.jsx)("a", {
+                            href: _.collection_time_term_and_conditions_url,
+                            className: _().TOCLink,
+                            onClick: (_) => _.stopPropagation(),
+                          }),
+                        ),
+                      ],
+                    }),
+                  },
+                  _.packageid,
+                ),
+              _._.logged_in
+                ? (0, _.jsx)(_, {
+                    hardwareDetail: _,
+                    reservedHardwareDetail: _ ? void 0 : _,
+                    bUserAcceptedTerms: !_ || _,
+                    onLeaveShuffleList: () => _(!1),
+                  })
+                : (0, _.jsx)("div", {
+                    className: (0, _._)(_.reserverow),
+                    children: (0, _.jsx)(_._, {
+                      label: _._.Localize("#Reservation_Pool_NotSignedIn"),
+                      strDialogDesc: _._.Localize(
+                        "#Reservation_Pool_NotSignedIn_Desc",
+                      ),
+                    }),
+                  }),
+            ],
+          });
+        }
+        function _(_) {
+          const {
+            hardwareDetail: _,
+            reservedHardwareDetail: _,
+            bUserAcceptedTerms: _,
+            onLeaveShuffleList: _,
+          } = _;
+          switch (_.reservation_state) {
+            case _._.k_EPurchaseReservationState_NotReserved:
+            case _._.k_EPurchaseReservationState_Consumed:
+            case _._.k_EPurchaseReservationState_Cancelled:
+              return _ && _.packageid !== _.packageid
+                ? (0, _.jsx)(_._, {
+                    toolTipContent: _
+                      ? void 0
+                      : _._.Localize("#Reservation_JoinPool_ClickTerms"),
+                    children: (0, _.jsx)(_._, {
+                      hardwareDetail: _,
+                      reservedHardwareDetail: _,
+                      bInputDisabled: !_,
+                      bShufflePool: !0,
+                    }),
+                  })
+                : (0, _.jsx)(_._, {
+                    toolTipContent: _
+                      ? void 0
+                      : _._.Localize("#Reservation_JoinPool_ClickTerms"),
+                    children: (0, _.jsx)(_._, {
+                      bInputDisabled: !_,
+                      packageid: _.packageid,
+                      label: _._.Localize("#Reservation_JoinPool"),
+                    }),
+                  });
+            case _._.k_EPurchaseReservationState_Reserved:
+            case _._.k_EPurchaseReservationState_Allocated:
+            default:
+              return (0, _.jsx)(_._, {
+                packageid: _.packageid,
+                strAction: _._.Localize("#Reservation_Cancel_Pool"),
+                strDesc: _._.Localize("#Reservation_Cancel_Pool_Desc"),
+                onCancelSucceeded: _,
+              });
+            case _._.k_EPurchaseReservationState_UnavailableRegion:
+              return (0, _.jsx)(_._, {});
+          }
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_) {
+          const {
+              hardwareDetail: _,
+              reservationAdvancedSettings: _,
+              reservedHardwareDetail: _,
+            } = _,
+            [_] = (0, _._)(() => [_?.waiting_learn_more_url]);
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              _._.logged_in
+                ? (0, _.jsx)(_, {
+                    hardwareDetail: _,
+                    reservedHardwareDetail: _,
+                  })
+                : (0, _.jsx)("div", {
+                    className: (0, _._)(_.reserverow),
+                    children: (0, _.jsx)(_._, {
+                      label: _._.Localize("#Reservation_Waitlist_NotSignedIn"),
+                      strDialogDesc: _._.Localize(
+                        "#Reservation_Waitlist_NotSignedIn_Desc",
+                      ),
+                    }),
+                  }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.expecteddate_str),
+                children: (0, _._)(_.reservation_state)
+                  ? _._.LocalizeReact("#Reservation_In_Waitlist_Message")
+                  : _._.LocalizeReact(
+                      "#Reservation_In_Waitlist_Message_NotJoin",
+                    ),
+              }),
+              _ &&
+                (0, _.jsx)("a", {
+                  className: _().LearnMoreLink,
+                  href: _,
+                  children: _._.Localize("#Button_Learn"),
+                }),
+            ],
+          });
+        }
+        function _(_) {
+          const { hardwareDetail: _, reservedHardwareDetail: _ } = _;
+          switch (_.reservation_state) {
+            case _._.k_EPurchaseReservationState_NotReserved:
+            case _._.k_EPurchaseReservationState_Consumed:
+            case _._.k_EPurchaseReservationState_Cancelled:
+              return _
+                ? (0, _.jsx)(_._, {
+                    hardwareDetail: _,
+                    reservedHardwareDetail: _,
+                  })
+                : (0, _.jsx)(_._, {
+                    packageid: _.packageid,
+                    label: _._.Localize("#Reservation_JoinWaitList"),
+                  });
+            case _._.k_EPurchaseReservationState_Reserved:
+            case _._.k_EPurchaseReservationState_Allocated:
+            default:
+              return (0, _.jsx)(_._, {
+                packageid: _.packageid,
+                strAction: _._.Localize("#Reservation_Cancel_Waitlist"),
+                strDesc: _._.Localize("#Reservation_Cancel_Waitlist_Desc"),
+              });
+            case _._.k_EPurchaseReservationState_UnavailableRegion:
+              return (0, _.jsx)(_._, {});
+          }
+        }
+        function _(_, _) {
+          const _ = _ && (0, _._)(_.reservation_state);
+          return !!(
+            (_ &&
+              _.reservation_state ===
+                _._.k_EPurchaseReservationState_Reserved &&
+              _?.position_is_waitlist) ||
+            (!_ && _?.queue_in_waitlist)
+          );
+        }
         function _(_) {
           const { disabled: _ } = _;
           return _
@@ -26414,7 +26648,7 @@
               _.collection_time_active != null &&
               _.collection_time_active > 0 &&
               _.collection_time_active < _._.NOW,
-            _ = (0, _._)(_, _);
+            _ = _(_, _);
           return _.requires_reservation &&
             !_.reservation_not_allowed &&
             _.collection_time_active &&
@@ -26754,24 +26988,87 @@
           const _ = _(_).filter((_) => _ != _);
           return _.push(_), _(_);
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
         function _(_) {
-          return null;
-        }
-        const _ = _.lazy(() =>
-            __webpack_require__
-              ._("chunkid")
-              .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _
-            ? function (_) {
-                return (0, _.jsx)(_.Suspense, {
-                  fallback: null,
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                  }),
+          const {
+              rgPackageTuples: _,
+              rgHardwareDetails: _,
+              selectedProduct: _,
+              bAllowMultipleModels: _,
+            } = _,
+            [_, _, _, _, _] = (0, _._)(() => [
+              _?.some((_) => _.collection_time_active),
+              _?.some(
+                (_) =>
+                  _.collection_time_active &&
+                  _.collection_time_active < _._.NOW,
+              ),
+              _.length,
+              _?.find((_) => (0, _._)(_.reservation_state)),
+              _?.find(
+                (_) => !!_.packageid && _.packageid === _?.reservation_package,
+              ),
+            ]),
+            _ = (0, _._)(_?.packageid),
+            { data: _ } = (0, _._)(_);
+          if (!_) return null;
+          const _ = _ && (0, _._)(_.reservation_state);
+          if (_)
+            if (_) {
+              if (_ && _)
+                return (0, _.jsx)("div", {
+                  className: _().Message,
+                  children: _._.Localize("#Reservation_InPool"),
                 });
-              }
-            : _;
+              if (!_)
+                return (0, _.jsx)("div", {
+                  className: _().Message,
+                  children: _
+                    ? _._.Localize("#Reservation_InPool_NoDate", _)
+                    : _._.Localize("#Reserationn_NoListJoined", _),
+                });
+            } else {
+              if (_)
+                return (0, _.jsx)("div", {
+                  className: _().Message,
+                  children: _?.name
+                    ? _._.Localize("#Reservation_InPool_WithName", _.name)
+                    : _._.Localize("#Reservation_InPool_NoName"),
+                });
+              if (!_)
+                return (0, _.jsx)("div", {
+                  className: _().Message,
+                  children: _._.Localize("#Reservation_NoListJoined_OneModel"),
+                });
+            }
+          const _ = _(_, _),
+            _ = _?.name;
+          if (_) {
+            if (_ && _)
+              return (0, _.jsx)("div", {
+                className: _().Message,
+                children: _._.Localize(
+                  "#Reservation_In_Waitlist_WithName_NoDate",
+                  _,
+                ),
+              });
+            if (!_)
+              return (0, _.jsx)("div", {
+                className: _().Message,
+                children: _._.Localize("#Reservation_Pool_Closed"),
+              });
+          }
+          return _ && _
+            ? (0, _.jsx)("div", {
+                className: _().Message,
+                children: _._.Localize(
+                  "#Reservation_OnRegularReserveForModel",
+                  _,
+                ),
+              })
+            : null;
+        }
         var _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -27922,7 +28219,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { section: _, event: _ } = _,
@@ -28197,7 +28493,6 @@
           );
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -43810,6 +44105,24 @@
       chunkid: (module) => {
         module.exports = {
           Ctn: "_25TX3VPP7fvosVbV8Tk9BY",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          Message: "_3HjyI3Ki1r4_VdBwvJgaQb",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          TOCLink: "_2bD720Zjxza1mHMOZ6URrU",
+          LearnMoreLink: "_2njnWu1if_8cDnjWtpuBMQ",
+          Terms: "_2oU42aqXAKCuhoH2GmPkWD",
+          PoolMessage: "_3-_nsU7fX4Uep5Nr-eATPw",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          LearnMoreLink: "_39Z_xV6srt_o-RoCqEbes3",
         };
       },
       chunkid: (module) => {
