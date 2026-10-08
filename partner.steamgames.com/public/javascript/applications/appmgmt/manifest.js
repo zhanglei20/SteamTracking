@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (() => {
-  globalThis.CLSTAMP = "11098622";
+  globalThis.CLSTAMP = "11101427";
   (() => {
     "use strict";
     var k = {},
@@ -427,7 +427,7 @@
           18523: "2df2112ca7bdafc4324d",
           18861: "0805fd4f5c72c9f40451",
           18896: "31d49cdd7d6af8a8ab25",
-          19433: "9307b68b43e8e61e9b03",
+          19433: "f32e465f120e43c685dc",
           19661: "ee3a7abe3118038034eb",
           19812: "5da09cf89a29cbdb15d6",
           19894: "0ff71f0b2665da31a90a",
@@ -456,7 +456,7 @@
           23216: "a3451d23ba339c47e1b6",
           23296: "ce14b070bc84679fdedd",
           23465: "db486fe0dcd6482de88c",
-          23506: "268c329f321ce8289d74",
+          23506: "b9dc8d1ce2aad4304906",
           23629: "fb5fa849533527d0f8e7",
           24017: "c37d823849c52a5cac0f",
           24253: "18583c08fee3b3926054",
@@ -487,7 +487,7 @@
           31101: "034616ac4deaf5742bbe",
           31411: "401609c2f5c298882ab3",
           32313: "167559d5b4dd012bd32f",
-          32455: "a3aa87e761260802d4be",
+          32455: "1d213d9ff6a1f1b183c9",
           32561: "d9270a72847c5d0e5ccf",
           32568: "eb07af426948df0d2f61",
           32992: "9d7b07ad4c5c80e0deea",
@@ -659,7 +659,7 @@
           59063: "825500cfd46e0e68f293",
           59240: "c58987a8a7bda6d258a8",
           59307: "a85ea69093deb74a5842",
-          59352: "b071a8dbcfd3ece4a0ff",
+          59352: "ca1901e8c6ef8b120a3b",
           59365: "c3cf4f9139a49e0027cc",
           59427: "31b89e0d0817c2f633f6",
           59469: "83ee53651603d7901e21",
@@ -778,7 +778,7 @@
           85841: "e625f6c742f0756ab3d8",
           86383: "826ed9a8285a3c78c505",
           86498: "3afee41763fa2a061042",
-          86762: "40582f30bf76af235619",
+          86762: "41570cb6b20ffa2366d4",
           86829: "c1dce681d4015bd36d2d",
           86881: "ca4627c5c21fa5e23501",
           87064: "d5e992893e4f05ed541e",

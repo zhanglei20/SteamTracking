@@ -1920,6 +1920,7 @@ $ffn
 /logs
 /name
 /proc/%u/comm
+/proc/%u/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/mounts
@@ -1952,6 +1953,7 @@ $ffn
 /tmp/cmd-stdout.XXXXXX
 /usr/bin/crosdisk %s
 /usr/bin/lsof
+/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -2006,15 +2008,12 @@ $ffn
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:21:09
-00:21:16
 01/01/00
 0123456789.
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEF`yS
 0123456789abcdef
 08bX
 0?0L
@@ -2588,6 +2587,8 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:45:18
+22:45:30
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2802,11 +2803,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
+60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2904,6 +2905,7 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
+9Hh3J
 9IGv
 9IMemAlloc
 9IValidate
@@ -2923,6 +2925,7 @@ $ffn
 :':+:1:K:Q:[:c:g:m:y:
 :.JlN
 :5ptI.T(
+:7Q7
 :BAD BOOLEAN
 :BAD ENUMERATED
 :BAD INTEGER
@@ -2944,7 +2947,6 @@ $ffn
 :scheme
 :statu
 :status
-:wO7
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -7628,6 +7630,7 @@ NUMERICSTRING
 NVIDIA
 N\r\nyd
 Name
+Name:\t
 NamePart
 Nanaco
 Naranja
@@ -7883,7 +7886,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  6 2026
+Oct  7 2026
 October
 Odia
 Offensive Avatar
@@ -9382,7 +9385,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct  6 2026 00:21:16
+Startup - updater built Oct  7 2026 22:45:30
 State
 StaticFileWriterThread()
 Steam
@@ -10810,6 +10813,7 @@ Zulu
 \n:82H
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nO1Ie
+\nPPid:\t
 \nParsing attempt:
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
 \nW2a
@@ -18181,6 +18185,7 @@ putc
 putenv
 puts
 putwc
+pv-adverb
 pv-run.sh
 pv-runtime/steam-runtime-steamrt
 pvCallback != NULL
@@ -19243,7 +19248,6 @@ steam
 steam-runtime-check-requirements
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 steam-runtime-supervisor
 steam-steamrt.sh
 steam.cfg

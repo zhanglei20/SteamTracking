@@ -217571,7 +217571,7 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
   --vrlink-gradient-left: rgb(104, 177.5, 91);
   --vrlink-gradient-right: rgb(104, 177.5, 91);
 }
-.VRDashboardBarSmallButtonActive:not(:hover)
+.VRDashboardBarSmallButtonActive
   ._3zQKWT_DiR3kjPQxLlXNl-.UquwqiPd6gKuGondMYmkf._2y9S-ZLTEyW_GkOuOzdPE0 {
   --vrlink-gradient-left: rgb(40.25, 79.85, 39.95);
   --vrlink-gradient-right: rgb(40.25, 79.85, 39.95);
@@ -217580,7 +217580,7 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
   --vrlink-gradient-left: rgb(97, 92.8, 206.5);
   --vrlink-gradient-right: rgb(159.3, 103.3, 219.1);
 }
-.VRDashboardBarSmallButtonActive:not(:hover)
+.VRDashboardBarSmallButtonActive
   ._3zQKWT_DiR3kjPQxLlXNl-.UquwqiPd6gKuGondMYmkf._1uD5vLxCkFfthG8-duScHY {
   --vrlink-gradient-left: rgb(40, 40, 107.8);
   --vrlink-gradient-right: rgb(75.6, 46, 115);
@@ -217662,6 +217662,33 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
   gap: 6px;
   margin-top: 8px;
 }
+._2-QHMb59tivSzop_uv15J5._3490wtGBw11117kR6aAjGc {
+  flex-direction: row;
+  align-items: stretch;
+}
+._2-QHMb59tivSzop_uv15J5._3490wtGBw11117kR6aAjGc
+  button._2r7L4wDIwbalj9MeEMGnvz._2r7L4wDIwbalj9MeEMGnvz.DialogButton {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+}
+._2-QHMb59tivSzop_uv15J5._3490wtGBw11117kR6aAjGc
+  button._3u8SeT-y-ogOEIoEp8HsN8._3u8SeT-y-ogOEIoEp8HsN8.DialogButton {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 0;
+  aspect-ratio: 1;
+  padding: 0 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._2-QHMb59tivSzop_uv15J5._3490wtGBw11117kR6aAjGc
+  button._3u8SeT-y-ogOEIoEp8HsN8._3u8SeT-y-ogOEIoEp8HsN8.DialogButton
+  svg {
+  width: 24px;
+  height: 24px;
+}
 ._1zQgf4oesrAtd0gCD-0G-e {
   display: flex;
   align-items: center;
@@ -217709,6 +217736,13 @@ button._1I26U52L7lJKgLprxrKKp4 svg {
   );
   transition: --quickaccesspercent 200ms linear;
   border-radius: 9999px;
+}
+._2u-uxHR8YG7v9RTcF4l927 > :last-child {
+  margin-bottom: 0;
+}
+._3Wv91htY-mAQYHUHVUjwq {
+  font-size: 0.88em;
+  color: #fff;
 }
 ._3S7eOmv2YlAXSuBVEcKDDF {
   display: flex;

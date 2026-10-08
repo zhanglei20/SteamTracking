@@ -110,7 +110,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -5052,6 +5051,7 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN19CRemoteClientDongle17YldRunDongleCheckEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN19CRemoteClientSoftAP21YieldingSendSoftAPCmdERK10CUtlStringEUlvE_S1_E
 *23CInternalLambdaWorkItemIZN20CBatteryStateManager21BYldQueryBatteryStateEP27SystemBatteryStateChanged_tEUlvE_bE
+*23CInternalLambdaWorkItemIZN20CDepotReconstructCtx30BYieldingInitializeChunkStoresEPKcEUlvE_vE
 *23CInternalLambdaWorkItemIZN20CDepotReconstructCtx30BYieldingInitializeDeltaChunksEPKcEUlvE_vE
 *23CInternalLambdaWorkItemIZN21CContentUpdateContext25YieldingCommitStagedFilesEvEUlvE0_vE
 *23CInternalLambdaWorkItemIZN21CContentUpdateContext25YieldingCommitStagedFilesEvEUlvE1_vE
@@ -5468,6 +5468,7 @@ $steammessages_parental_objects.proto"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -6563,10 +6564,10 @@ $steammessages_parental_objects.proto"
 ../clientdll/systemdockmanager_linux.cpp:337
 ../clientdll/systemdockmanager_linux.cpp:562
 ../clientdll/systemmanager.cpp
-../clientdll/systemmanager.cpp:2554
-../clientdll/systemmanager.cpp:2887
-../clientdll/systemmanager.cpp:4431
-../clientdll/systemmanager.cpp:5026
+../clientdll/systemmanager.cpp:2552
+../clientdll/systemmanager.cpp:2885
+../clientdll/systemmanager.cpp:4429
+../clientdll/systemmanager.cpp:5024
 ../clientdll/systemperfmanager.cpp
 ../clientdll/systemperfmanager_linux.cpp
 ../clientdll/systemperfmanager_linux.cpp:1185
@@ -8057,6 +8058,7 @@ $steammessages_parental_objects.proto"
 /proc/%d/environ
 /proc/%u/cmdline
 /proc/%u/stat
+/proc/%u/status
 /proc/mounts
 /proc/net/dev
 /proc/net/route
@@ -8171,6 +8173,7 @@ $steammessages_parental_objects.proto"
 /usr/bin/crosdisk %s
 /usr/bin/holo-polkit-helpers/holo-realtek-firmware-toggles
 /usr/bin/lsof
+/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -8180,6 +8183,7 @@ $steammessages_parental_objects.proto"
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
+/usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
@@ -8297,12 +8301,12 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000001
 00003333
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10270,7 +10274,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI34CMsgClientGetClientDetailsResponseE
 12CProtoBufMsgI34CMsgClientInstallClientAppResponseE
 12CProtoBufMsgI34CMsgClientPICSChangesSinceResponseE
-12CProtoBufMsgI34CMsgClientRegisterAuthTicketWithCME
 12CProtoBufMsgI34CMsgClientRequestItemAnnouncementsE
 12CProtoBufMsgI34CMsgClientSharedLibraryStopPlayingE
 12CProtoBufMsgI34CMsgClientUCMAddScreenshotResponseE
@@ -11168,7 +11171,6 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI11CInGameChat13ChatRoomMsg_tE
 17CInternalCallbackI11CInGameChat23ChatMemberStateChange_tE
 17CInternalCallbackI12CCMInterface19ControllerDetails_tE
-17CInternalCallbackI12CCMInterface22AppConfigInitialized_tE
 17CInternalCallbackI12CCMInterface24ConnectivityTestResult_tE
 17CInternalCallbackI12CCMInterface24SystemGoingIntoSuspend_tE
 17CInternalCallbackI12CCMInterface26NetworkDeviceStateChange_tE
@@ -11282,7 +11284,9 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI5CUser23SteamServersConnected_tE
 17CInternalCallbackI5CUser23VRHMDHardwareDetected_tE
 17CInternalCallbackI5CUser24RequestAccountLinkInfo_tE
+17CInternalCallbackI5CUser24SystemGoingIntoSuspend_tE
 17CInternalCallbackI5CUser26SteamServersDisconnected_tE
+17CInternalCallbackI5CUser27SystemResumingFromSuspend_tE
 17CInternalCallbackI5CUser30RemoteStorageAppSyncedClient_tE
 17CInternalCallbackI5CUser30RemoteStorageAppSyncedServer_tE
 17CInternalCallbackI5CUser33RemoteStorageAppSyncStatusCheck_tE
@@ -11893,11 +11897,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-20000
-2000000
 200M
 2019
 2048
+20000
+2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -17457,6 +17461,7 @@ AA Compromise
 AACompromise
 ABADF
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/`
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
 ABSENT
@@ -18100,6 +18105,7 @@ AppDisableUpdate
 AppEvents
 AppID
 AppID %d enabled filtering for language %s\n
+AppID %s PID %u was launched outside Steam, using container PID %u as root\n
 AppID %s adding PID %d as a tracked process
 AppID %s adding PID %d as a tracked process "%s"
 AppID %s no longer tracking PID %d, exit code %d
@@ -18123,6 +18129,7 @@ AppID %u does not advertise android as a supported platform, but a android speci
 AppID %u does not advertise linux as a supported platform, but a linux specific depot is present.\n
 AppID %u exited.
 AppID %u failed to downloading manifest %llu (%s)
+AppID %u failed to reload app state in place, staying uninstalled
 AppID %u failed to update ownership ticket (%s)
 AppID %u finished uninstall (%s)
 AppID %u finished update, %u mounted depots (BuildID %u) :
@@ -20143,6 +20150,7 @@ CDepotHTTPDownloadInterface::CChunkRequestRedirectHandler - blocking attempted r
 CDepotReconstruct::YieldingPushAsyncPump() - BDispatchCompletedWorkItems CPU
 CDepotReconstruct::YieldingPushAsyncPump() - BDispatchCompletedWorkItems IO
 CDepotReconstructCtx::BInitializeDeltaChunks
+CDepotReconstructCtx::BYieldingInitializeChunkStores
 CDepotReconstructCtx::ThreadedClosePatchFile
 CDepotReconstructCtx::ThreadedFlushPatchFile
 CDisableHighResCaptureMsg"
@@ -23613,7 +23621,9 @@ Created ipv4-only http client
 Created mapping %s when set to fail if created\n
 Created peer download interface to host %s (%s)
 Created shared memory when not owner %s\n
+Created virtual controller at slot %d for swap\n
 Created virtual controller at slot %u for controller %u\n
+Created virtual controller at slot %u to seat controller %u\n
 Created virtual controller controller %u\n
 CreatedByFollowedUsersRankedByPublicationDate
 CreatedByFriendsRankedByPublicationDate
@@ -25921,6 +25931,8 @@ Failed to create socket for shared fd id: 0x%lx\n
 Failed to create socket for shared fd: %d\n
 Failed to create source type %d\n
 Failed to create temporary file %s
+Failed to create virtual controller at slot %d for swap\n
+Failed to create virtual controller at slot %u to seat controller %u\n
 Failed to de-serialize global system perf settings
 Failed to de-serialize legacy system perf settings
 Failed to de-serialize per-app system perf settings
@@ -26097,6 +26109,7 @@ Failed to reboot controller %u into wireless after successful pairing %d
 Failed to receive shared FD\n
 Failed to receive shared fd from server\n
 Failed to receive shared fd id: 0x%lx\n
+Failed to recreate virtual controller at slot %u during reset\n
 Failed to release screensaver inhibit lock: %s\n
 Failed to remove app dependency between %llu => %u! Error: %s (%s)
 Failed to remove dependency between %llu => %llu! Error: %s (%s)
@@ -30122,6 +30135,7 @@ MUSICBRAINZ_TRACKID
 MUSICBRAINZ_WORKID
 MUSICIP_PUID
 MUTE
+MXqw
 M\n\fscreensavers
 M\n\fsession_data
 M\n\nCreateRole
@@ -31457,6 +31471,7 @@ Nack range underflow, end=%lld, num=%lld
 NagleTime
 Name
 Name lookup for "%s" failed - %s\n
+Name:\t
 NameHistory\%d
 NameHistory\0
 NameInfo
@@ -36075,6 +36090,7 @@ Simplified_Chinese
 Simulate a trackpad swipe on the right trackpad when the left pad is touched
 Simulate having already played this many seconds of playtime today, but not recently.
 Simulate having already played this many seconds of playtime.
+Simulate the OS telling us it is suspending
 SimulateUserActivity
 Sindhi
 Single Purchase
@@ -41408,6 +41424,7 @@ Zulu
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nLAN Peer sources:\n
 \nO1Ie
+\nPPid:\t
 \nParsing attempt:
 \nRunning as site license provider\n
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
@@ -54066,19 +54083,19 @@ low-pri yield - ../clientdll/clientjob.cpp:462
 low-pri yield - ../clientdll/clientjob.cpp:771
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - ../clientdll/clientugc.cpp:7078
-low-pri yield - ../clientdll/compatmanager.cpp:2243
-low-pri yield - ../clientdll/compatmanager.cpp:2501
-low-pri yield - ../clientdll/compatmanager.cpp:2804
-low-pri yield - ../clientdll/compatmanager.cpp:3587
-low-pri yield - ../clientdll/compatmanager.cpp:3644
-low-pri yield - ../clientdll/compatmanager.cpp:3657
-low-pri yield - ../clientdll/compatmanager.cpp:3709
-low-pri yield - ../clientdll/compatmanager.cpp:4316
-low-pri yield - ../clientdll/contentupdatecontext.cpp:1369
-low-pri yield - ../clientdll/contentupdatecontext.cpp:1405
+low-pri yield - ../clientdll/compatmanager.cpp:2235
+low-pri yield - ../clientdll/compatmanager.cpp:2493
+low-pri yield - ../clientdll/compatmanager.cpp:2796
+low-pri yield - ../clientdll/compatmanager.cpp:3579
+low-pri yield - ../clientdll/compatmanager.cpp:3636
+low-pri yield - ../clientdll/compatmanager.cpp:3649
+low-pri yield - ../clientdll/compatmanager.cpp:3701
+low-pri yield - ../clientdll/compatmanager.cpp:4333
+low-pri yield - ../clientdll/contentupdatecontext.cpp:1376
+low-pri yield - ../clientdll/contentupdatecontext.cpp:1412
 low-pri yield - ../clientdll/csinterface.cpp:223
 low-pri yield - ../clientdll/depotbuilder.cpp:107
-low-pri yield - ../clientdll/depotreconstruct.cpp:3098
+low-pri yield - ../clientdll/depotreconstruct.cpp:3113
 low-pri yield - ../clientdll/peercontentserver.cpp:712
 low-pri yield - ../clientdll/subscribedfilelistcache.cpp:397
 low-pri yield - ../clientdll/subscribedfilelistcache.cpp:414
@@ -56099,6 +56116,7 @@ m_vecChats
 m_vecChildren
 m_vecChinaBlockMinorsAppID
 m_vecChunkStores
+m_vecChunkStores not empty at start of BYieldingInitializeChunkStores
 m_vecChunks
 m_vecChunksByOffset
 m_vecChunks[i]
@@ -59530,6 +59548,7 @@ putc
 puts
 putwc
 puubdfgklmnprssvxzaadeeeei
+pv-adverb
 pv-runtime/steam-runtime-steamrt
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
@@ -61660,19 +61679,15 @@ stderr
 stdin
 stdout
 steam
-steam Oct  6 2026 00:21:18
+steam Oct  7 2026 22:45:36
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
-steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
 steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
 steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
 steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
 steam-runtime-launch-client --alongside-steam -- lsb_release -d -s
 steam-runtime-launch-client --alongside-steam -- lspci -mm -n
-steam-runtime-launch-client --alongside-steam -- steamos-select-branch -c
-steam-runtime-launch-client --alongside-steam -- steamos-select-branch -l
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -62035,6 +62050,8 @@ steamnetworkingsockets.log
 steamnetworkingsockets_messages.proto
 steamnetworkingsockets_messages_certs.proto
 steamnetworkingsockets_messages_udp.proto
+steamos-select-branch -c
+steamos-select-branch -l
 steamos-update returned: %d
 steamos-update-rauc: %s
 steamos-update: %s
@@ -62460,6 +62477,7 @@ test_concurrent_textfilter_change
 test_dropcon
 test_failnextconnect
 test_opus_voice_encode
+test_os_suspend
 test_param_0
 test_param_1
 test_param_2
