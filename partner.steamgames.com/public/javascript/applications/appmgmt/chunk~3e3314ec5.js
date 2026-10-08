@@ -24,7 +24,7 @@
           l = c(54963),
           r = c(3166);
         const h = "pn";
-        class E {
+        class _ {
           m_rgPackageIDs;
           m_rgPackageData;
           m_mapPackageData;
@@ -33,9 +33,9 @@
           static s_Singleton;
           static Get() {
             return (
-              E.s_Singleton ||
-                ((E.s_Singleton = new E()), E.s_Singleton.Init()),
-              E.s_Singleton
+              _.s_Singleton ||
+                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+              _.s_Singleton
             );
           }
           constructor() {}
@@ -55,7 +55,7 @@
           }
           UpdatePackageNameSearchState(O) {
             const b = O.getState().columnFilters.find(
-                (_) => _.id === "packageName",
+                (v) => v.id === "packageName",
               )?.value,
               y = new URL(window.location.href);
             b != decodeURIComponent(y.searchParams.get(h)) &&
@@ -83,31 +83,31 @@
           }
         }
         function F() {
-          return E.Get().m_rgPackageIDs;
+          return _.Get().m_rgPackageIDs;
         }
         function G() {
-          return E.Get().m_rgPackageIDs;
+          return _.Get().m_rgPackageIDs;
         }
         function p() {
-          return E.Get().m_rgPackageData;
+          return _.Get().m_rgPackageData;
         }
         function m(M) {
-          let O = E.Get().m_mapPackageData.get(M);
+          let O = _.Get().m_mapPackageData.get(M);
           return O ? O.package_name : M.toString();
         }
         function re(M) {
-          let O = E.Get().m_mapPackageData.get(M);
+          let O = _.Get().m_mapPackageData.get(M);
           return O ? !!O.released : !0;
         }
         function f() {
-          return B.useCallback((M) => E.Get().UpdateVisiblePackageList(M), []);
+          return B.useCallback((M) => _.Get().UpdateVisiblePackageList(M), []);
         }
         function g(M) {
-          E.Get().SetVisiblePackageList(M);
+          _.Get().SetVisiblePackageList(M);
         }
         function w() {
-          const [M, O] = B.useState(E.Get().m_rgVisiblePackageIDs);
-          return (0, l.hL)(E.Get().m_visiblePackageIDsCallbackList, O), M;
+          const [M, O] = B.useState(_.Get().m_rgVisiblePackageIDs);
+          return (0, l.hL)(_.Get().m_visiblePackageIDsCallbackList, O), M;
         }
         function j() {
           return B.useMemo(
@@ -122,7 +122,7 @@
           $i: () => Ue,
           Ao: () => T,
           Bt: () => Ke,
-          Ci: () => ve,
+          Ci: () => Se,
           Dl: () => D,
           FR: () => ne,
           FX: () => be,
@@ -146,9 +146,9 @@
           fr: () => we,
           h4: () => ke,
           hm: () => de,
-          iy: () => Se,
+          iy: () => ve,
           mP: () => ye,
-          mv: () => v,
+          mv: () => S,
           nT: () => e,
           oL: () => I,
           oj: () => N,
@@ -162,7 +162,7 @@
           l = c(90626),
           r = c(14947),
           h = c(72604),
-          E = c(34592),
+          _ = c(34592),
           F = c(8323),
           G = c(54963),
           p = c(48473),
@@ -176,16 +176,16 @@
           O = c(13401),
           b = c(33220),
           y = c(3301),
-          _ = Object.defineProperty,
-          S = Object.getOwnPropertyDescriptor,
+          v = Object.defineProperty,
+          E = Object.getOwnPropertyDescriptor,
           U = (a, t, i, n) => {
             for (
-              var u = n > 1 ? void 0 : n ? S(t, i) : t, P = a.length - 1, k;
+              var u = n > 1 ? void 0 : n ? E(t, i) : t, P = a.length - 1, k;
               P >= 0;
               P--
             )
               (k = a[P]) && (u = (n ? k(t, i, u) : k(u)) || u);
-            return n && u && _(t, i, u), u;
+            return n && u && v(t, i, u), u;
           };
         const W = class ue {
           m_mapPackagePrice = new Map();
@@ -537,7 +537,7 @@
             } catch ($) {
               ee = $;
             }
-            const ie = (0, E.H)(ee);
+            const ie = (0, _.H)(ee);
             return (
               console.error(
                 "CPackagePricingStore.SubmitProposalToServer: failed",
@@ -583,7 +583,7 @@
             } catch (ie) {
               C = ie;
             }
-            const ee = (0, E.H)(C);
+            const ee = (0, _.H)(C);
             return (
               console.error(
                 "CPackagePricingStore.PublishApprovedProposal: failed",
@@ -627,7 +627,7 @@
             } catch (ee) {
               z = ee;
             }
-            const C = (0, E.H)(z);
+            const C = (0, _.H)(z);
             return (
               console.error(
                 "CPackagePricingStore.CancelProposal: failed",
@@ -712,7 +712,7 @@
         function I(a, t) {
           return o.Get().GetPublishedPriceCountryOverride(a, t);
         }
-        function v(a, t) {
+        function S(a, t) {
           return o.Get().GetPublishedPrice(a, t);
         }
         function R(a, t) {
@@ -932,10 +932,10 @@
             o.Get().BHasLocalPriceOverrides(a)
           );
         }
-        function Se(a) {
+        function ve(a) {
           return o.Get().BHasLocalPriceOverrides(a);
         }
-        function ve() {
+        function Se() {
           const [a, t] = l.useState(() => o.Get().GetAllLocalPriceOverrides());
           return (0, G.hL)(o.Get().m_allPriceOverridesCallbackList, t), a;
         }
@@ -1000,13 +1000,13 @@
             O = g.original.appName,
             b = M == w,
             y = M == j,
-            _ = !b && !y,
-            S = O == w,
+            v = !b && !y,
+            E = O == w,
             U = O == j,
-            W = !S && !U;
-          if (_ && W) return M.localeCompare(O);
-          if (!_ && !W)
-            if (b == S && y == U) {
+            W = !E && !U;
+          if (v && W) return M.localeCompare(O);
+          if (!v && !W)
+            if (b == E && y == U) {
               const o = f.original.packageName,
                 K = g.original.packageName;
               return o && K
@@ -1017,10 +1017,10 @@
                     ? -1
                     : 1;
             } else return b ? -1 : 1;
-          else return _ ? -1 : 1;
+          else return v ? -1 : 1;
         }
         const h = (f) => f.nextElementSibling,
-          E = (f) => f.previousElementSibling,
+          _ = (f) => f.previousElementSibling,
           F = (f, g) => {
             const w = f.getAttribute("data-table-column-id"),
               j = f.parentElement;
@@ -1033,10 +1033,10 @@
             return null;
           },
           G = new Map([
-            [B.Oy, (f) => F(f, E)],
+            [B.Oy, (f) => F(f, _)],
             [B.JI, h],
             [B.BH, (f) => F(f, h)],
-            [B.ek, E],
+            [B.ek, _],
             [B.$R, (f) => F(f, h)],
             [B.wd, (f) => F(f, h)],
           ]);
@@ -1057,7 +1057,7 @@
         }
         function re(f) {
           let g = G.get(f.keyCode);
-          if ((f.keyCode === B.$R && f.shiftKey && (g = (M) => F(M, E)), !g))
+          if ((f.keyCode === B.$R && f.shiftKey && (g = (M) => F(M, _)), !g))
             return;
           const w = p(f.currentTarget);
           let j = g(w);
@@ -1094,7 +1094,7 @@
           l = c.n(d),
           r = c(69041),
           h = c(8928),
-          E = c(69289),
+          _ = c(69289),
           F = c(3877),
           G = c(86668),
           p = c(24660),
@@ -1103,8 +1103,8 @@
         function f(b) {
           const {
               variant: y,
-              size: _ = "2",
-              minWidth: S = "fit-content",
+              size: v = "2",
+              minWidth: E = "fit-content",
               color: U,
               loading: W,
               children: o,
@@ -1117,23 +1117,23 @@
             ne = (0, re.Qn)(),
             ce = W
               ? (0, B.jsx)(G.k, {
-                  size: _,
+                  size: v,
                   color: U,
                   variant: "bright",
                   children: o,
                 })
               : o,
             I = W ? void 0 : K,
-            v = te ?? A?.focusable ?? !!I,
+            S = te ?? A?.focusable ?? !!I,
             R = (0, m.f)("Button", y),
             D = {
               type: "button",
-              ...(0, E.mz)(
+              ...(0, _.mz)(
                 {
                   ...ae,
                   variant: R,
-                  size: _,
-                  minWidth: S,
+                  size: v,
+                  minWidth: E,
                   color: U,
                   className: l()(r.Button, Y && r.Icon),
                   onClick: I,
@@ -1142,15 +1142,15 @@
               ),
               children: ce,
             };
-          return ne && (v || A)
-            ? (0, B.jsx)(p.fu, { ...D, ...(A || {}), focusable: v })
+          return ne && (S || A)
+            ? (0, B.jsx)(p.fu, { ...D, ...(A || {}), focusable: S })
             : (0, B.jsx)("button", { ...D });
         }
         function g(b) {
           const {
               variant: y,
-              size: _ = "2",
-              minWidth: S = "fit-content",
+              size: v = "2",
+              minWidth: E = "fit-content",
               disabled: U,
               icon: W,
               focusable: o,
@@ -1160,14 +1160,14 @@
             te = (0, re.Qn)(),
             A = (0, m.f)("Button", y),
             ae = U ? w : void 0,
-            ne = (0, E.mz)(
+            ne = (0, _.mz)(
               {
                 onClick: ae,
                 "aria-disabled": U,
                 ...Y,
                 variant: A,
-                size: _,
-                minWidth: S,
+                size: v,
+                minWidth: E,
                 className: l()(r.Button, W && r.Icon, (0, F.T)()),
               },
               j,
@@ -1208,8 +1208,8 @@
           l = c.n(d),
           r = c(69289),
           h = c(60351),
-          E = c(64238),
-          F = c.n(E),
+          _ = c(64238),
+          F = c.n(_),
           G = c(68031),
           p = c(8928),
           m = c(80549);
@@ -1220,13 +1220,13 @@
               children: O,
               color: b,
               variant: y,
-              ..._
+              ...v
             } = w,
-            S = (0, m.f)("LoadingSpinner", y);
+            E = (0, m.f)("LoadingSpinner", y);
           return O || !M
             ? (0, B.jsxs)(h.az, {
                 position: "relative",
-                ..._,
+                ...v,
                 width: "fit-content",
                 children: [
                   (0, B.jsx)("div", {
@@ -1243,12 +1243,12 @@
                       children: (0, B.jsx)(f, {
                         size: j,
                         color: b,
-                        variant: S,
+                        variant: E,
                       }),
                     }),
                 ],
               })
-            : (0, B.jsx)(f, { size: j, color: b, variant: S, ..._ });
+            : (0, B.jsx)(f, { size: j, color: b, variant: E, ...v });
         }
         function f(w) {
           const { className: j, color: M, ...O } = (0, r.mz)(w, g);
@@ -1272,7 +1272,7 @@
           l = c(64238),
           r = c.n(l),
           h = c(16180),
-          E = c.n(h),
+          _ = c.n(h),
           F = c(68031),
           G = c(15252),
           p = c(76854);
@@ -1281,17 +1281,17 @@
             value: O,
             onValueChange: b,
             options: y,
-            getOptionLabel: _,
-            disabled: S,
+            getOptionLabel: v,
+            disabled: E,
             ...U
           } = M;
           return (0, B.jsx)(w.Root, {
             value: O,
             onValueChange: b,
-            disabled: S,
+            disabled: E,
             ...U,
             children: y.map((W) => {
-              const o = _ ? _(W) : W;
+              const o = v ? v(W) : W;
               return (0, B.jsx)(w.Option, { value: W, children: o }, o);
             }),
           });
@@ -1301,19 +1301,19 @@
               value: O,
               onValueChange: b,
               disabled: y,
-              render: _,
-              ...S
+              render: v,
+              ...E
             } = M,
             U = (0, d.useRef)(null),
             W = (0, d.useCallback)((ne, ce) => {
               if (!U.current) return;
               const I = [...U.current.querySelectorAll("[data-radio-id]")];
               if (I.length !== 0)
-                for (let v = 0; v < I.length; v++) {
-                  const R = I[v];
+                for (let S = 0; S < I.length; S++) {
+                  const R = I[S];
                   if (!R.dataset.radioId) continue;
                   if (R.dataset.radioId === ne) {
-                    const H = (v + ce + I.length) % I.length,
+                    const H = (S + ce + I.length) % I.length,
                       N = I[H];
                     N.click(), N.focus();
                   }
@@ -1331,22 +1331,22 @@
               }),
               [O, b, y, o, K],
             ),
-            te = { role: "radiogroup", "aria-disabled": y, ref: U, ...S },
+            te = { role: "radiogroup", "aria-disabled": y, ref: U, ...E },
             A = (0, B.jsx)(F.s, {
               direction: "column",
               gap: "2",
               role: "radiogroup",
               "aria-disabled": y,
-              ...S,
+              ...E,
             }),
-            ae = (0, p.Q)(_, A, te);
+            ae = (0, p.Q)(v, A, te);
           return (0, B.jsx)(j, { value: Y, children: ae });
         }
         function f(M) {
-          const { value: O, ref: b, children: y, render: _ } = M,
-            S = (0, d.useContext)(j),
+          const { value: O, ref: b, children: y, render: v } = M,
+            E = (0, d.useContext)(j),
             U = (0, d.useId)();
-          if (!S)
+          if (!E)
             return (
               console.error(
                 "<RadioGroup.Option> must be rendered within a <RadioGroup.Root>",
@@ -1359,7 +1359,7 @@
               bDisabled: K,
               onSelectNext: Y,
               onSelectPrev: te,
-            } = S,
+            } = E,
             A = W === O,
             ae = () => {
               K || A || o(O);
@@ -1370,21 +1370,21 @@
               "aria-disabled": K,
               "data-radio-id": U,
               onClick: ae,
-              onKeyDown: (v) => {
+              onKeyDown: (S) => {
                 if (!K)
-                  switch (v.key) {
+                  switch (S.key) {
                     case " ": {
-                      ae(), v.preventDefault(), v.stopPropagation();
+                      ae(), S.preventDefault(), S.stopPropagation();
                       break;
                     }
                     case "ArrowRight":
                     case "ArrowDown": {
-                      Y(U), v.preventDefault(), v.stopPropagation();
+                      Y(U), S.preventDefault(), S.stopPropagation();
                       break;
                     }
                     case "ArrowLeft":
                     case "ArrowUp": {
-                      te(U), v.preventDefault(), v.stopPropagation();
+                      te(U), S.preventDefault(), S.stopPropagation();
                       break;
                     }
                   }
@@ -1394,15 +1394,15 @@
               children: y,
             },
             I = (0, B.jsx)(g, { bDisabled: K });
-          return (0, p.Q)(_, I, ce, { bSelected: A, bDisabled: K });
+          return (0, p.Q)(v, I, ce, { bSelected: A, bDisabled: K });
         }
         function g(M) {
-          const { children: O, className: b, bDisabled: y, ..._ } = M;
+          const { children: O, className: b, bDisabled: y, ...v } = M;
           return (0, B.jsxs)(F.s, {
             cursor: "default",
             gap: "2",
             className: r()(h.Option, y && h.Disabled),
-            ..._,
+            ...v,
             children: [
               (0, B.jsx)("div", { className: h.RadioCircle }),
               (0, B.jsx)(G.EY, { children: O }),
@@ -1416,7 +1416,7 @@
         "use strict";
         c.d(V, {
           bS: () => l,
-          de: () => E,
+          de: () => _,
           j4: () => G,
           k8: () => r,
           uF: () => F,
@@ -1455,7 +1455,7 @@
               return "Invalid Region";
           }
         }
-        function E(m) {
+        function _(m) {
           switch (m) {
             case d._S:
               return "CIS";
@@ -1514,7 +1514,7 @@
       },
       13401: (se, V, c) => {
         "use strict";
-        c.d(V, { Bb: () => G, MA: () => F, jY: () => E });
+        c.d(V, { Bb: () => G, MA: () => F, jY: () => _ });
         var B = c(7850),
           d = c(55409),
           l = c(90626),
@@ -1524,7 +1524,7 @@
           setConversionMethod: (p) => {},
           rgAvailableConversionMethods: [],
         });
-        function E(p) {
+        function _(p) {
           const { eInitialConversionMethod: m } = p,
             re = (0, r.cT)(),
             [f, g] = l.useState(m || d.Y5.lZ),
@@ -1551,7 +1551,7 @@
         var B = c(90247),
           d = c(34104),
           l = c(71742);
-        function r(h, E, F, G, p) {
+        function r(h, _, F, G, p) {
           if (!h)
             return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
           let m = null;
@@ -1563,14 +1563,14 @@
           const re = p && p < B.Hc;
           if ((G == d.CS && !re) || !m)
             return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
-          const f = h.GetRecommendPrice(m, G, p, E),
-            g = h.GetRecommendPrice(m, d.CS, void 0, E);
+          const f = h.GetRecommendPrice(m, G, p, _),
+            g = h.GetRecommendPrice(m, d.CS, void 0, _);
           if (
             ((0, l.wT)(
               f,
-              `Missing requested currency guide for  ${m}/${G}/${p}/${E}`,
+              `Missing requested currency guide for  ${m}/${G}/${p}/${_}`,
             ),
-            (0, l.wT)(g, `Missing usd guide for  ${m}/${p}/${E}`),
+            (0, l.wT)(g, `Missing usd guide for  ${m}/${p}/${_}`),
             !f || !g)
           )
             return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
@@ -1591,34 +1591,38 @@
           l = c(34104),
           r = c(55409);
         const h = r.Y5.lZ;
-        class E {
+        class _ {
           m_mapUSDPrice = new Map();
           m_mapKeyToGuidePrice = new Map();
           m_rgUSDPricePointInCents = [];
           m_setConversionMethod = new Set();
           m_setSupportedCurrencies = new Set();
           m_setSupportedRegions = new Set();
-          GetKey(y, _, S, U = h) {
-            return `${y}_${_}_${S || d.YS}_${U}`;
+          m_rtNewestConvertStart = 0;
+          GetKey(y, v, E, U = h) {
+            return `${y}_${v}_${E || d.YS}_${U}`;
           }
           GetAvailableConversionMethods() {
             return Array.from(this.m_setConversionMethod).sort();
+          }
+          GetNewestConvertStartTime() {
+            return this.m_rtNewestConvertStart || void 0;
           }
           GetAnyPricePoint() {
             return Array.from(
               this.m_mapUSDPrice.get(r.Y5.lZ)?.values() || [],
             )[0];
           }
-          BIsSupportCurrencyAndOrRegion(y, _) {
-            return _
-              ? y == l.CS && this.m_setSupportedRegions.has(_)
+          BIsSupportCurrencyAndOrRegion(y, v) {
+            return v
+              ? y == l.CS && this.m_setSupportedRegions.has(v)
               : this.m_setSupportedCurrencies.has(y);
           }
-          GetRecommendPrice(y, _, S, U = h) {
-            const W = this.GetKey(y, _, S, U);
+          GetRecommendPrice(y, v, E, U = h) {
+            const W = this.GetKey(y, v, E, U);
             return this.m_mapKeyToGuidePrice.get(W);
           }
-          GetScaledRecommendedPrice(y, _, S, U = h) {
+          GetScaledRecommendedPrice(y, v, E, U = h) {
             let W = -1,
               o = -1;
             for (const A of this.m_mapUSDPrice.get(U).keys()) {
@@ -1626,9 +1630,9 @@
               (W == -1 || ae < o) && ((W = A), (o = ae));
             }
             const K = this.m_mapUSDPrice.get(U).get(W),
-              Y = S
-                ? K.region_prices.find((A) => A.region_code == S)
-                : K.currency_prices.find((A) => A.currency_code == _),
+              Y = E
+                ? K.region_prices.find((A) => A.region_code == E)
+                : K.currency_prices.find((A) => A.currency_code == v),
               te = y / W;
             return {
               currency_code: Y?.currency_code,
@@ -1640,30 +1644,34 @@
             return this.m_rgUSDPricePointInCents;
           }
           constructor(y) {
-            let _ = new Set();
-            y.forEach((S) => {
-              const U = S.convert_method ?? h;
+            let v = new Set();
+            y.forEach((E) => {
+              const U = E.convert_method ?? h;
               this.m_setConversionMethod.add(U),
                 this.m_mapUSDPrice.has(U) ||
                   this.m_mapUSDPrice.set(U, new Map()),
-                this.m_mapUSDPrice.get(U).set(S.usd_price, S),
-                _.add(S.usd_price),
-                S.currency_prices.forEach((o) => {
+                this.m_mapUSDPrice.get(U).set(E.usd_price, E),
+                v.add(E.usd_price),
+                (this.m_rtNewestConvertStart = Math.max(
+                  this.m_rtNewestConvertStart,
+                  E.rtime_convert_start ?? 0,
+                )),
+                E.currency_prices.forEach((o) => {
                   const K = this.GetKey(
-                    S.usd_price,
+                    E.usd_price,
                     o.currency_code,
                     d.YS,
-                    S.convert_method || h,
+                    E.convert_method || h,
                   );
                   this.m_mapKeyToGuidePrice.set(K, o),
                     this.m_setSupportedCurrencies.add(o.currency_code);
                 }),
-                S.region_prices.forEach((o) => {
+                E.region_prices.forEach((o) => {
                   const K = this.GetKey(
-                    S.usd_price,
+                    E.usd_price,
                     o.currency_code,
                     o.region_code,
-                    S.convert_method || h,
+                    E.convert_method || h,
                   );
                   if (
                     (this.m_mapKeyToGuidePrice.set(K, o),
@@ -1672,11 +1680,11 @@
                   ) {
                     const Y = {
                         currency_code: l.CS,
-                        price: S.usd_price,
+                        price: E.usd_price,
                         region_code: o.region_code,
                       },
                       te = this.GetKey(
-                        S.usd_price,
+                        E.usd_price,
                         l.CS,
                         o.region_code,
                         r.Y5.bA,
@@ -1685,7 +1693,7 @@
                   }
                 });
             }),
-              (this.m_rgUSDPricePointInCents = Array.from(_.keys()));
+              (this.m_rgUSDPricePointInCents = Array.from(v.keys()));
           }
         }
         var F = c(40497),
@@ -1705,7 +1713,7 @@
         function w() {
           const b = (0, re.I)(j());
           return (0, B.useMemo)(
-            () => (b.data ? new E(b.data) : null),
+            () => (b.data ? new _(b.data) : null),
             [b.data],
           );
         }
@@ -1717,7 +1725,7 @@
         }
         function O(b) {
           const y = w(),
-            _ = (0, m.Bb)();
+            v = (0, m.Bb)();
           return {
             fnApplyGuidelines: (0, B.useCallback)(
               (U, W, o) => {
@@ -1729,7 +1737,7 @@
                   y)
                 ) {
                   for (let K = l.CS; K < l.mh; ++K) {
-                    const Y = y.GetRecommendPrice(W, K, void 0, o ?? _)?.price;
+                    const Y = y.GetRecommendPrice(W, K, void 0, o ?? v)?.price;
                     if (Y && Y > 0) {
                       const te = (0, g.M1)(K);
                       b(U, te, Y);
@@ -1737,7 +1745,7 @@
                   }
                   for (let K = d._S; K < d.Hc; ++K) {
                     const Y = l.CS,
-                      te = y.GetRecommendPrice(W, Y, K, o ?? _)?.price;
+                      te = y.GetRecommendPrice(W, Y, K, o ?? v)?.price;
                     if (te && te > 0) {
                       const A = (0, g.pd)(Y, K).toUpperCase();
                       b(U, A, te);
@@ -1745,7 +1753,7 @@
                   }
                 }
               },
-              [_, b, y],
+              [v, b, y],
             ),
           };
         }
@@ -1768,7 +1776,7 @@
           l = c.n(d),
           r = c(75245),
           h = c(35038);
-        function E(T) {
+        function _(T) {
           return "unknown ERatingAgency ( " + T + " )";
         }
         function F(T) {
@@ -2103,10 +2111,10 @@
         function y(T) {
           return "unknown EPriceConversionMethod ( " + T + " )";
         }
-        function _(T) {
+        function v(T) {
           return "unknown EProtoBillingType ( " + T + " )";
         }
-        function S(T) {
+        function E(T) {
           return "unknown EProtoActivationCode ( " + T + " )";
         }
         function U(T) {
@@ -2197,20 +2205,20 @@
             return "CProductInfo_ForceEmitPriceConversion";
           }
         }
-        class v extends d.Message {
+        class S extends d.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              v.prototype.survey_section || r.Sg(v.M()),
+              S.prototype.survey_section || r.Sg(S.M()),
               d.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              v.sm_m ||
-                (v.sm_m = {
-                  proto: v,
+              S.sm_m ||
+                (S.sm_m = {
+                  proto: S,
                   fields: {
                     survey_section: {
                       n: 1,
@@ -2229,40 +2237,40 @@
                     },
                   },
                 }),
-              v.sm_m
+              S.sm_m
             );
           }
           static MBF() {
-            return v.sm_mbf || (v.sm_mbf = r.w0(v.M())), v.sm_mbf;
+            return S.sm_mbf || (S.sm_mbf = r.w0(S.M())), S.sm_mbf;
           }
           toObject(e = !1) {
-            return v.toObject(e, this);
+            return S.toObject(e, this);
           }
           static toObject(e, s) {
-            return r.BT(v.M(), e, s);
+            return r.BT(S.M(), e, s);
           }
           static fromObject(e) {
-            return r.Uq(v.M(), e);
+            return r.Uq(S.M(), e);
           }
           static deserializeBinary(e) {
             let s = new (l().BinaryReader)(e),
-              L = new v();
-            return v.deserializeBinaryFromReader(L, s);
+              L = new S();
+            return S.deserializeBinaryFromReader(L, s);
           }
           static deserializeBinaryFromReader(e, s) {
-            return r.zj(v.MBF(), e, s);
+            return r.zj(S.MBF(), e, s);
           }
           serializeBinary() {
             var e = new (l().BinaryWriter)();
-            return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, s) {
-            r.i0(v.M(), e, s);
+            r.i0(S.M(), e, s);
           }
           serializeBase64String() {
             var e = new (l().BinaryWriter)();
             return (
-              v.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              S.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -2768,7 +2776,7 @@
                       bw: r.gp.writeString,
                     },
                     all_ratings: { n: 14, c: m, r: !0, q: !0 },
-                    sections_reviewed: { n: 15, c: v, r: !0, q: !0 },
+                    sections_reviewed: { n: 15, c: S, r: !0, q: !0 },
                     disclosure: { n: 16, c: g },
                     inherited_surveyid: {
                       n: 17,

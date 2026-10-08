@@ -21920,6 +21920,7 @@
               unAppID: _,
               bShowSteamChina: _,
               bHasCompletedContentSurvey: _,
+              strContentSurveyURL: _,
             } = _,
             _ = {
               appid: _,
@@ -21960,7 +21961,7 @@
                       children: (0, _._)(
                         "#AppLanding_RegionRestrictions_ContentSurvey",
                         (0, _.jsx)("a", {
-                          href: `${_._.PARTNER_BASE_URL}/contentdescriptors/editsurvey/${_}`,
+                          href: _,
                         }),
                       ),
                     }),

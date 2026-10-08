@@ -4936,6 +4936,7 @@ body.v6 .broadcast_live_stream_icon {
 	position: absolute;
 	bottom: 4%;
 	right: 1%;
+	max-width: 75px;
 }
 body.v6 .sale_capsule:hover .broadcast_live_stream_icon {
     opacity: 0;

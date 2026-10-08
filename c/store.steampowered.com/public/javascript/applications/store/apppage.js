@@ -26,94 +26,6 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          return (0, _.jsx)(_._, {
-            ..._,
-            viewBox: 16,
-            children: (0, _.jsx)("path", {
-              _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-              fill: "currentColor",
-            }),
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const {
-              checked: _,
-              onChange: _,
-              disabled: _,
-              children: _,
-              ref: _,
-              variant: _,
-              color: _,
-              align: _ = "center",
-              icon: _,
-              ..._
-            } = _,
-            _ = _ === "indeterminate",
-            _ = _ ?? (_ ? _ : _),
-            _ = () => {
-              _ || (_ && _(_ ? !0 : !_));
-            },
-            _ = (_) => {
-              _ ||
-                (_.key === " " &&
-                  (_(), _.preventDefault(), _.stopPropagation()));
-            },
-            _ = (0, _._)("Checkbox", _);
-          return (0, _.jsxs)(_._, {
-            align: _,
-            ref: _,
-            role: "checkbox",
-            "aria-checked": _ ? "mixed" : _,
-            "data-state": _(_),
-            className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
-            onClick: _,
-            tabIndex: 0,
-            onKeyDown: _,
-            cursor: "default",
-            "aria-disabled": _,
-            "data-accent-color": _,
-            ..._,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.Checkbox,
-                children:
-                  _ &&
-                  (0, _.jsx)(_, {
-                    className: _.Icon,
-                  }),
-              }),
-              _,
-            ],
-          });
-        }
-        function _(_) {
-          return _ === "indeterminate" ? _ : _ ? "checked" : "unchecked";
-        }
-        function _(_) {
-          return (0, _.jsx)("svg", {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            children: (0, _.jsx)("path", {
-              _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-              fill: "currentColor",
-            }),
-          });
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
@@ -379,63 +291,6 @@
           Positioner: _,
           FocusManager: _,
         };
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_) {
-          return (0, _.jsx)("svg", {
-            ..._(_),
-          });
-        }
-        const _ = [
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`IconSize-${_}`],
-          },
-          {
-            prop: "color",
-            className: _.Color,
-            cssProperty: (_) => ["--icon-color", _(_)],
-          },
-          {
-            prop: "hitSlop",
-            className: _.HitSlop,
-            cssProperty: (_) => [
-              "--hit-slop-custom",
-              typeof _ == "string" ? _ : "",
-            ],
-          },
-          _._.find(({ prop: _ }) => _ === "cursor"),
-        ];
-        function _(_) {
-          return !_ || _[0] === "#" ? _ : (0, _._)(_);
-        }
-        function _(_) {
-          const { viewBox: _, ..._ } = _,
-            _ = {
-              className: _.size ? void 0 : _.IconSizeDefault,
-              ..._,
-            };
-          return _ && (_.viewBox = _(_)), (0, _._)(_, _);
-        }
-        function _(_) {
-          if (_)
-            return typeof _ == "number"
-              ? `0 0 ${_} ${_}`
-              : typeof _ == "string"
-                ? _
-                : `0 0 ${_.width} ${_.height}`;
-        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -10956,7 +10811,6 @@
                   _: "p",
                   size: "3",
                   marginTop: "3",
-                  marginBottom: "2",
                   children: _,
                 }),
                 (0, _.jsx)(_._, {
@@ -11099,7 +10953,7 @@
           }
           return (0, _.jsx)(_, {
             strHeading: _.Localize("#AppPage_MatureContent_Header"),
-            strIntro: _.Localize("#AppPage_MatureContent_Intro"),
+            strIntro: _.Localize("#AppPage_AgeGate_DescriptorNotes"),
             strBody: _,
           });
         }
@@ -15720,37 +15574,6 @@
             _?.rating
               ? (0, _.jsx)(_, {
                   rating: _(_),
-                })
-              : null
-          );
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_) {
-          return null;
-        }
-        function _(_) {
-          const { data: _ } = (0, _._)({
-            appid: _.appid,
-          });
-          return (
-            _.use(_.Ready()),
-            _.use(_.Ready()),
-            _?.rating
-              ? (0, _.jsxs)("div", {
-                  className: _().ValveOnly,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: _().ValveOnlyTitle,
-                      children: [
-                        _.Localize("#AppPage_GameRating_SectionTitle"),
-                        " (VO)",
-                      ],
-                    }),
-                    (0, _.jsx)(_, {
-                      rating: _(_),
-                    }),
-                  ],
                 })
               : null
           );
@@ -21719,10 +21542,6 @@
                           (0, _.jsx)(_, {
                             ..._,
                           }),
-                        "game-rating": () =>
-                          (0, _.jsx)(_, {
-                            appid: _,
-                          }),
                         "game-rating-section": () =>
                           (0, _.jsx)(_, {
                             appid: _,
@@ -21857,17 +21676,6 @@
       },
       chunkid: (module) => {
         module.exports = {
-          Root: "_1kIuUssJvopWbHik1IKMG6",
-          "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
-          "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
-          "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
-          Disabled: "kLcGKsNxkoEqxgok6YzML",
-          Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
-          Icon: "cngAYeP7ZvFo2pT_v3-xO",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
           ObjectFit: "_NIZ2fYFBu6WSnEE1H6i3",
           ObjectPosition: "_3OZ4rrlKzwAYOKP9HdqUrq",
         };
@@ -21884,22 +21692,6 @@
           "Size-2": "oSgUz2qE-NgHuOm4wt_OC",
           "Size-3": "f9Ra4JmQiBJz_dBLijs_x",
           "Size-4": "_1zkUYDDyfzPgesBbGmMsxP",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Color: "_2Vc3a-PM4tOhJcD72NEq1U",
-          IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
-          "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
-          "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
-          "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
-          "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
-          "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
-          "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
-          "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
-          "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
-          "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
-          HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
         };
       },
       chunkid: (module) => {
@@ -22203,12 +21995,6 @@
           WishlistButton: "_23N7SSBmU_2S4o8Kc8NBEg",
           StarIcon: "_3LKNblFkXFm-hTnW4lMeOQ",
           ButtonIcon: "FP1PcTBe4kKmycVNKGtk3",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          ValveOnly: "i3Trnr-2zDw22nSlGIYhQ",
-          ValveOnlyTitle: "_2C-VGSnf7BOn19tKqciPFV",
         };
       },
       chunkid: (module) => {

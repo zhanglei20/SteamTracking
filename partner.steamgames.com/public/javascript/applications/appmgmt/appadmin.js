@@ -5,9 +5,9 @@
     self.webpackChunkappmgmt_storeadmin || []).push([
     [19433],
     {
-      40648: (St, as, u) => {
+      40648: (St, is, u) => {
         "use strict";
-        u.d(as, { y5: () => os, c2: () => ts });
+        u.d(is, { y5: () => os, c2: () => as });
         var B = u(35038),
           Kr = u(37400),
           Q = u(3367),
@@ -36,63 +36,63 @@
             );
           }
           Init() {
-            const rs = (0, Rs.Tc)(
+            const _t = (0, Rs.Tc)(
               "partnerbrowse_webapi_token",
               "application_config",
             );
-            (0, bs.wT)(!!rs, "require partnerbrowse_webapi_token"),
+            (0, bs.wT)(!!_t, "require partnerbrowse_webapi_token"),
               (this.m_steamInterface = (0, L.p)(
-                new e.D(ss.TS.WEBAPI_BASE_URL, rs),
+                new e.D(ss.TS.WEBAPI_BASE_URL, _t),
               ));
           }
         }
         function ws() {
           return us.Get().GetPromotionTransport().GetServiceTransport();
         }
-        function ts(_t) {
-          const rs = ws(),
+        function as(ts) {
+          const _t = ws(),
             ls = Ct.useContext(Es);
-          return (0, K.I)(rl(ls, rs, _t));
+          return (0, K.I)(rl(ls, _t, ts));
         }
-        function Gs(_t) {
-          const rs = usePartnerBrowseTransport(),
+        function Gs(ts) {
+          const _t = usePartnerBrowseTransport(),
             ls = React.useContext(Es);
-          return useQueries({ queries: _t.map((gs) => rl(ls, rs, gs)) });
+          return useQueries({ queries: ts.map((gs) => rl(ls, _t, gs)) });
         }
-        function os(_t) {
+        function os(ts) {
           return Rt.L.getQueryData([
             "StoreItemCountryRestriction",
-            (0, y.wD)(_t),
+            (0, y.wD)(ts),
           ]);
         }
-        function tl(_t) {
-          const { loadStoreItemCountryRestriction: rs, children: ls } = _t,
+        function tl(ts) {
+          const { loadStoreItemCountryRestriction: _t, children: ls } = ts,
             gs = React.useMemo(
-              () => ({ loadStoreItemCountryRestriction: rs }),
-              [rs],
+              () => ({ loadStoreItemCountryRestriction: _t }),
+              [_t],
             );
           return React.createElement(Es.Provider, { value: gs }, ls);
         }
         const Es = Ct.createContext({
-          loadStoreItemCountryRestriction: async (_t, rs) =>
-            await sl(rs).load(_t),
+          loadStoreItemCountryRestriction: async (ts, _t) =>
+            await sl(_t).load(ts),
         });
-        function rl(_t, rs, ls) {
+        function rl(ts, _t, ls) {
           return {
             queryKey: ["StoreItemCountryRestriction", (0, y.wD)(ls)],
-            queryFn: () => _t.loadStoreItemCountryRestriction(ls, rs),
+            queryFn: () => ts.loadStoreItemCountryRestriction(ls, _t),
             enabled: !!ls,
           };
         }
         let Cs;
-        function sl(_t) {
+        function sl(ts) {
           return (
             Cs ||
               (Cs = new (c())(
-                async (rs) => {
+                async (_t) => {
                   const ls = B.w.Init(Kr.zo);
-                  ls.Body().set_ids(rs.map((_s) => Q.O4.fromObject(_s)));
-                  const gs = await Kr.BT.GetCountryRestrictions(_t, ls);
+                  ls.Body().set_ids(_t.map((_s) => Q.O4.fromObject(_s)));
+                  const gs = await Kr.BT.GetCountryRestrictions(ts, ls);
                   if (!gs.BSuccess())
                     throw `Failed to call store Item Country Restriction with details: ${gs.GetErrorMessage()}`;
                   const bl = new Map();
@@ -104,7 +104,7 @@
                         const wl = _s.toObject();
                         bl.set((0, y.wD)(wl.id), wl);
                       }),
-                    rs.map((_s) => bl.get((0, y.wD)(_s)) ?? null)
+                    _t.map((_s) => bl.get((0, y.wD)(_s)) ?? null)
                   );
                 },
                 { maxBatchSize: 100, cache: !1 },
@@ -113,9 +113,9 @@
           );
         }
       },
-      1300: (St, as, u) => {
+      1300: (St, is, u) => {
         "use strict";
-        u.r(as), u.d(as, { default: () => nB });
+        u.r(is), u.d(is, { default: () => nB });
         var B = u(7850),
           Kr = u(82791),
           Q = u(92757),
@@ -132,7 +132,7 @@
           Rs = u(68312),
           us = u(8323),
           ws = u(2801),
-          ts = u(36174),
+          as = u(36174),
           Gs = u(84676),
           os = u(40648),
           tl = u(41635),
@@ -140,8 +140,8 @@
           rl = u(14616),
           Cs = u(40358),
           sl = u(71742),
-          _t = u(72609);
-        function rs(m, r) {
+          ts = u(72609);
+        function _t(m, r) {
           const a = (0, Es.$5)(r),
             s = (0, rl.ce)();
           (0, sl.wT)(
@@ -171,7 +171,7 @@
                 children: (0, y.oW)(
                   "#App_Landing_DemoWishlist_Demo_NotVisible_Publish",
                   (0, B.jsx)("a", {
-                    href: `${_t.TS.PARTNER_BASE_URL}admin/game/editbyappid/${r}?activetab=tab_specialsettings#associated_demos`,
+                    href: `${ts.TS.PARTNER_BASE_URL}admin/game/editbyappid/${r}?activetab=tab_specialsettings#associated_demos`,
                     target: "_blank",
                   }),
                 ),
@@ -185,7 +185,7 @@
           const { demoAppID: r, parentAppId: a } = m,
             [s, b] = c.useState(!1),
             [w, g] = c.useState(void 0),
-            n = rs(r, a),
+            n = _t(r, a),
             [x, F] = c.useState(void 0),
             [U, I] = c.useState(0),
             $ = c.useCallback(() => I((k) => k + 1), []),
@@ -212,9 +212,9 @@
               return () => Et.Unregister();
             }, [$]);
           const ot = s || x !== void 0,
-            E = w + gs * ts.Kp.PerDay,
-            is = !s && w && new Date(E * 1e3) > new Date();
-          if (ot || is) {
+            E = w + gs * as.Kp.PerDay,
+            rs = !s && w && new Date(E * 1e3) > new Date();
+          if (ot || rs) {
             const k = `${Ct.TS.PARTNER_BASE_URL}doc/marketing/wishlist`;
             return (0, B.jsxs)("div", {
               className: K.DemoWishlistCtn,
@@ -243,8 +243,8 @@
                 ot &&
                   n === !1 &&
                   (0, B.jsx)(ls, { demoAppID: r, parentAppId: a }),
-                ot && is && (0, B.jsx)("hr", { className: K.BothSeparator }),
-                is &&
+                ot && rs && (0, B.jsx)("hr", { className: K.BothSeparator }),
+                rs &&
                   (0, B.jsx)(Sl, {
                     parentAppId: a,
                     timeStaged: w,
@@ -270,8 +270,8 @@
               try {
                 const E = e.w.Init(bs.KP);
                 E.Body().set_demo_appid(r), E.Body().set_appid(a);
-                const is = await bs.nd.QueueWishlistDemoEmailToFire(U, E);
-                w(is.BSuccess());
+                const rs = await bs.nd.QueueWishlistDemoEmailToFire(U, E);
+                w(rs.BSuccess());
               } finally {
                 n(!1);
               }
@@ -439,7 +439,7 @@
             $ = b && b.GetReleaseDateRTime(!0);
           $ &&
             $ > new Date().getTime() / 1e3 &&
-            $ < new Date().getTime() / 1e3 + 14 * ts.Kp.PerDay &&
+            $ < new Date().getTime() / 1e3 + 14 * as.Kp.PerDay &&
             I.push({
               sText: (0, y.we)(
                 "#App_Landing_DemoWishlist_ParentAppWarning",
@@ -453,7 +453,7 @@
                   ? "allow"
                   : "deny",
             E = ot(n, x),
-            is = ot(F, U),
+            rs = ot(F, U),
             k = (Y, Bs) =>
               Y.length == 0 && Bs.length == 0
                 ? (0, y.we)(
@@ -472,7 +472,7 @@
             O = k(F, U);
           return (
             E == "unrestricted" ||
-            is == "unrestricted" ||
+            rs == "unrestricted" ||
             n.length > 0 == F.length > 0
               ? Et != O &&
                 I.push({
@@ -497,7 +497,7 @@
           const { parentAppId: r, timeStaged: a, noticeVisibleToDate: s } = m,
             b = (U) =>
               `${U.getFullYear()}-${String(U.getMonth() + 1).padStart(2, "0")}-${String(U.getDate()).padStart(2, "0")}`,
-            w = b(new Date((a - bl * ts.Kp.PerDay) * 1e3)),
+            w = b(new Date((a - bl * as.Kp.PerDay) * 1e3)),
             g = b(new Date()),
             n = new Intl.DateTimeFormat(navigator.language, {
               year: "numeric",
@@ -10128,7 +10128,7 @@
             );
           }
           m.ConfirmTradeOffer = E;
-          function is(M, d, z) {
+          function rs(M, d, z) {
             return M.SendMsg(
               "Econ.DeclineTradeOffer#1",
               (0, e.I8)(Bi, d, z),
@@ -10136,7 +10136,7 @@
               { ePrivilege: 1 },
             );
           }
-          m.DeclineTradeOffer = is;
+          m.DeclineTradeOffer = rs;
           function k(M, d, z) {
             return M.SendMsg(
               "Econ.CancelTradeOffer#1",
@@ -19149,7 +19149,7 @@
             );
           }
           m.AppBuildUpdated = E;
-          function is(O, f, Y) {
+          function rs(O, f, Y) {
             return O.SendMsg(
               "MDSAdmin.ChunkReceived#1",
               (0, e.I8)(Fa, f, Y),
@@ -19157,7 +19157,7 @@
               { ePrivilege: 1 },
             );
           }
-          m.ChunkReceived = is;
+          m.ChunkReceived = rs;
           function k(O, f, Y) {
             return O.SendMsg(
               "MDSAdmin.ChunkStored#1",
@@ -19309,14 +19309,14 @@
             );
           }
           m.UpdateSteamCacheConfig = E;
-          function is(j, W) {
+          function rs(j, W) {
             return j.SendNotification(
               "ContentServerConfig.SteamCacheConfigUpdateNotification#1",
               (0, e.I8)(Mt, W),
               { ePrivilege: 1 },
             );
           }
-          m.SteamCacheConfigUpdateNotification = is;
+          m.SteamCacheConfigUpdateNotification = rs;
           function k(j, W, h) {
             return j.SendMsg(
               "ContentServerConfig.RevSteamCacheAPIKey#1",
@@ -19602,26 +19602,26 @@
             g = (0, c.useMemo)(() => new Map(a), [a]),
             [n, x] = (0, c.useState)(km(w, g, new Map(s))),
             [F, U] = (0, c.useMemo)(() => {
-              const is = [],
+              const rs = [],
                 k = [];
               return (
                 g.forEach((Et) => {
                   Et.category == "directx"
                     ? Object.entries(Et.components).forEach(([O, f]) => {
-                        is.push(f);
+                        rs.push(f);
                       })
                     : Et.category == "vc" &&
                       Object.entries(Et.components).forEach(([O, f]) => {
                         k.push(f);
                       });
                 }),
-                [is, k]
+                [rs, k]
               );
             }, [g]),
             [I, $] = (0, c.useState)(Nl(n, F, U)),
-            Gt = (is, k) => {
+            Gt = (rs, k) => {
               const Et = new Map(n);
-              Et.set(is, k), x(Et), $(Nl(Et, F, U));
+              Et.set(rs, k), x(Et), $(Nl(Et, F, U));
               const O = {};
               Et.forEach((f, Y) => {
                 O[Y] = f ? 1 : 0;
@@ -20011,7 +20011,7 @@
           const { appID: r, unItemType: a, rgAssetDefinitions: s } = m,
             b = c.useMemo(() => {
               const g =
-                _t.TS.PARTNER_BASE_URL +
+                ts.TS.PARTNER_BASE_URL +
                 `communityitems/ajaxuploadasset/${r}/${a}`;
               return new al(g, !0, s);
             }, [r, a, s]),
@@ -20204,7 +20204,7 @@
           const b = new jl(s),
             w = eB(b.ItemClass, !1, !1);
           if (!w) return null;
-          const g = (!b.BIsActive || _t.iA.is_support) && !b.BIsDeleted;
+          const g = (!b.BIsActive || ts.iA.is_support) && !b.BIsDeleted;
           return (0, B.jsx)(wB, {
             communityItem: b,
             assetDefs: w,
@@ -20344,46 +20344,45 @@
               unAppID: r,
               bShowSteamChina: a,
               bHasCompletedContentSurvey: s,
+              strContentSurveyURL: b,
             } = m,
-            b = { appid: r },
-            w = (0, os.c2)(b),
-            [g, n, x] = c.useMemo(() => {
-              if (!w || w.isLoading || !w.data) return ["", "", !1];
-              let F = [...w.data.restricted_countries];
+            w = { appid: r },
+            g = (0, os.c2)(w),
+            [n, x, F] = c.useMemo(() => {
+              if (!g || g.isLoading || !g.data) return ["", "", !1];
+              let U = [...g.data.restricted_countries];
               return (
-                a || (F = F.filter((U) => U !== "XC")),
-                w.data.no_restrictions
+                a || (U = U.filter((I) => I !== "XC")),
+                g.data.no_restrictions
                   ? ["", "", !1]
-                  : [F?.join(", "), w.data.allowed_countries?.join(", "), !s]
+                  : [U?.join(", "), g.data.allowed_countries?.join(", "), !s]
               );
-            }, [s, a, w]);
-          return !n.length && !g.length
+            }, [s, a, g]);
+          return !x.length && !n.length
             ? (0, B.jsx)("div", {
                 children: (0, y.we)("#AppLanding_RegionRestrictions_None"),
               })
             : (0, B.jsxs)(B.Fragment, {
                 children: [
-                  n.length > 0 &&
+                  x.length > 0 &&
                     (0, B.jsx)("div", {
                       children: (0, y.we)(
                         "#AppLanding_RegionRestrictions_Allowed",
-                        n,
+                        x,
                       ),
                     }),
-                  g.length > 0 &&
+                  n.length > 0 &&
                     (0, B.jsx)("div", {
                       children: (0, y.we)(
                         "#AppLanding_RegionRestrictions_Blocked",
-                        g,
+                        n,
                       ),
                     }),
-                  x &&
+                  F &&
                     (0, B.jsx)("div", {
                       children: (0, y.oW)(
                         "#AppLanding_RegionRestrictions_ContentSurvey",
-                        (0, B.jsx)("a", {
-                          href: `${_t.TS.PARTNER_BASE_URL}/contentdescriptors/editsurvey/${r}`,
-                        }),
+                        (0, B.jsx)("a", { href: b }),
                       ),
                     }),
                 ],
@@ -20455,9 +20454,9 @@
           });
         }
       },
-      58832: (St, as, u) => {
+      58832: (St, is, u) => {
         "use strict";
-        u.d(as, { E8: () => B, Z2: () => Kr, ct: () => Q });
+        u.d(is, { E8: () => B, Z2: () => Kr, ct: () => Q });
         function B(X, c) {
           const Ct = new Date(X * 1e3),
             K = c ? new Date(c * 1e3) : new Date(Ct);
@@ -20489,9 +20488,9 @@
           );
         }
       },
-      28763: (St, as, u) => {
+      28763: (St, is, u) => {
         "use strict";
-        u.d(as, { M: () => Kr, o: () => B });
+        u.d(is, { M: () => Kr, o: () => B });
         const B = "America/Los_Angeles";
         function Kr(Q) {
           const c = u(87937).unix(Q).tz(B);
@@ -20504,9 +20503,9 @@
           );
         }
       },
-      59432: (St, as, u) => {
+      59432: (St, is, u) => {
         "use strict";
-        u.d(as, { Gw: () => c, Lk: () => Ct, ai: () => X, mm: () => Q });
+        u.d(is, { Gw: () => c, Lk: () => Ct, ai: () => X, mm: () => Q });
         var B = u(14947);
         const Kr = B.sH.box(void 0);
         function Q() {
@@ -20524,9 +20523,9 @@
           return K ? new Date(K * 1e3) : new Date();
         }
       },
-      23386: (St, as, u) => {
+      23386: (St, is, u) => {
         "use strict";
-        u.d(as, { Ed: () => L, Tl: () => Gs, jE: () => Rt, xw: () => ws });
+        u.d(is, { Ed: () => L, Tl: () => Gs, jE: () => Rt, xw: () => ws });
         const B = 0,
           Kr = 1,
           Q = 2,
@@ -20543,12 +20542,12 @@
           Rs = 13,
           us = 14,
           ws = 15,
-          ts = 16,
+          as = 16,
           Gs = 17;
       },
-      29522: (St, as, u) => {
+      29522: (St, is, u) => {
         "use strict";
-        u.d(as, { $5: () => y, _Z: () => X, h0: () => K, oc: () => Rt });
+        u.d(is, { $5: () => y, _Z: () => X, h0: () => K, oc: () => Rt });
         var B = u(40358),
           Kr = u(3367),
           Q = u(90626);
@@ -20592,9 +20591,9 @@
           return useMemo(() => (e ? { bundleid: e } : void 0), [e]);
         }
       },
-      7582: (St, as, u) => {
+      7582: (St, is, u) => {
         "use strict";
-        u.d(as, { HD: () => y, P_: () => Rt, f1: () => Rs, sB: () => ss });
+        u.d(is, { HD: () => y, P_: () => Rt, f1: () => Rs, sB: () => ss });
         var B = u(19367),
           Kr = u.n(B),
           Q = u(90626),
@@ -20606,8 +20605,8 @@
           get nOverrideDateNow() {
             return (0, X.mm)();
           }
-          set nOverrideDateNow(ts) {
-            (0, X.ai)(ts);
+          set nOverrideDateNow(as) {
+            (0, X.ai)(as);
           }
           get bRequireAllEventsLoadedInTimeBlock() {
             return !1;
@@ -20624,15 +20623,15 @@
           BHasTimeOverride() {
             return !!(0, X.mm)();
           }
-          ParseDevOverrides(ts) {
-            if (!ts || ts.length == 0) return;
-            new URLSearchParams(ts[0] == "?" ? ts.substring(1) : ts).has("t");
+          ParseDevOverrides(as) {
+            if (!as || as.length == 0) return;
+            new URLSearchParams(as[0] == "?" ? as.substring(1) : as).has("t");
           }
         }
         const y = new K();
         (0, Ct.V)("g_EventCalendarDevFeatures", y);
         function Rt(ws = 1) {
-          const [ts, Gs] = Q.useState(() => L()),
+          const [as, Gs] = Q.useState(() => L()),
             os = (0, c.m)("useTimeNowWithOverride"),
             tl = Q.useCallback(() => {
               os.token.reason || Gs(L());
@@ -20646,8 +20645,8 @@
               return () => {
                 window.clearTimeout(sl);
               };
-            }, [ts, ws, tl]),
-            ts
+            }, [as, ws, tl]),
+            as
           );
         }
         const e = Math.floor(new Date().getTime() / 1e3);
@@ -20748,7 +20747,7 @@
           DXVCNoticeTextUnchecked: "_12HPIcBaY3YHgYnARVwc8M",
         };
       },
-      61738: (St, as, u) => {
+      61738: (St, is, u) => {
         var B = {
           "./af": 30911,
           "./af.js": 30911,

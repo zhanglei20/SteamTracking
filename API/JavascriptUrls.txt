@@ -980,7 +980,6 @@ ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}${}/ajaxstarttaxidentityworkflow/${partnerid}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/appsearch/suggestapps?json=1&apptype=1&term=${}
-${PARTNER_BASE_URL}/contentdescriptors/editsurvey/${}
 ${PARTNER_BASE_URL}/dashboard/?requestedPrimaryPublisher=${}
 ${PARTNER_BASE_URL}/doc/
 ${PARTNER_BASE_URL}/doc/features
@@ -2670,9 +2669,9 @@ https://partner.steamgames.com/bundles/view/${itemID}?activetab=tab_graphicalass
 https://partner.steamgames.com/contentdescriptors/ajaxdiscardchanges/${appid}/
 https://partner.steamgames.com/contentdescriptors/ajaxfinishsurvey/${appid}/
 https://partner.steamgames.com/contentdescriptors/ajaxsavesurvey/${appid}/
-https://partner.steamgames.com/contentdescriptors/editsurvey/${appid}/
-https://partner.steamgames.com/contentdescriptors/editsurvey/${appid}/${surveyid}
-https://partner.steamgames.com/contentdescriptors/listsurveys/${appid}/
+https://partner.steamgames.com/contentdescriptors/editsurvey/${appid}/${surveyid}/${}
+https://partner.steamgames.com/contentdescriptors/editsurvey/${appid}/${}
+https://partner.steamgames.com/contentdescriptors/listsurveys/${appid}/${}
 https://partner.steamgames.com/creatorhome/ajaxprecacheapps
 https://partner.steamgames.com/creatorhome/ajaxsavelinks
 https://partner.steamgames.com/dashboard/?requestedPrimaryPublisher=${}

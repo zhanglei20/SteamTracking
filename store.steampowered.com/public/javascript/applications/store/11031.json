@@ -123,8 +123,6 @@
     "AppHubs_ContentCheck_Cancel": "Cancel",
     "AppHubs_ContentCheck_Header_App": "THIS GAME CONTAINS CONTENT YOU HAVE ASKED NOT TO SEE:",
     "AppHubs_ContentCheck_Header_Item": "THIS ITEM CONTAINS CONTENT YOU HAVE ASKED NOT TO SEE:",
-    "AppHubs_ContentCheck_Dev_Header": "The developers describe the content like this:",
-    "AppHubs_ContentCheck_Affirmation": "By clicking the “View” button below you affirm that you are at least eighteen years old.",
     "AppHubs_ContentCheck_LoggedOut": "You must be logged in to view this Community Hub.",
     "AppHubs_ContentCheck_LoggedOut_Item": "You must be logged in to view this item.",
     "AppHubs_ContentCheck_Invalid": "You have requested to view a Community Hub that does not exist.",

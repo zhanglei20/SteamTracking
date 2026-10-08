@@ -1716,11 +1716,15 @@
           m_setConversionMethod = new Set();
           m_setSupportedCurrencies = new Set();
           m_setSupportedRegions = new Set();
+          m_rtNewestConvertStart = 0;
           GetKey(_, _, _, _ = _) {
             return `${_}_${_}_${_ || _._}_${_}`;
           }
           GetAvailableConversionMethods() {
             return Array.from(this.m_setConversionMethod).sort();
+          }
+          GetNewestConvertStartTime() {
+            return this.m_rtNewestConvertStart || void 0;
           }
           GetAnyPricePoint() {
             return Array.from(this.m_mapUSDPrice.get(_._._)?.values() || [])[0];
@@ -1764,6 +1768,10 @@
                   this.m_mapUSDPrice.set(_, new Map()),
                 this.m_mapUSDPrice.get(_).set(_.usd_price, _),
                 _.add(_.usd_price),
+                (this.m_rtNewestConvertStart = Math.max(
+                  this.m_rtNewestConvertStart,
+                  _.rtime_convert_start ?? 0,
+                )),
                 _.currency_prices.forEach((_) => {
                   const _ = this.GetKey(
                     _.usd_price,

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (() => {
-  globalThis.CLSTAMP = "11101427";
+  globalThis.CLSTAMP = "11105357";
   (() => {
     "use strict";
     var k = {},
@@ -427,7 +427,7 @@
           18523: "2df2112ca7bdafc4324d",
           18861: "0805fd4f5c72c9f40451",
           18896: "31d49cdd7d6af8a8ab25",
-          19433: "f32e465f120e43c685dc",
+          19433: "896950d42a34552db100",
           19661: "ee3a7abe3118038034eb",
           19812: "5da09cf89a29cbdb15d6",
           19894: "0ff71f0b2665da31a90a",
@@ -563,7 +563,7 @@
           42394: "d1b62078c3635c708405",
           42584: "33eef1d70f0850479396",
           42589: "3f3eb3266361e46038da",
-          42692: "37b9a1d12e9dd97dce2c",
+          42692: "34d805c2101ebb0949f2",
           42702: "39cfd8652f36a91d3444",
           42855: "73a7b8871d41c49ce7f6",
           43081: "c9f8d8b5917084388abb",
@@ -750,7 +750,7 @@
           79004: "61baf05bd1a960164a7d",
           79188: "1d05d118914e90e69a4e",
           79200: "8f500d0f4c3a64ac8343",
-          79246: "a2eedf954516e7441997",
+          79246: "fb71885883c8a407ef23",
           79311: "523fc67f4cee5424fad7",
           80216: "83126868b18f2fab7ea8",
           80559: "61d5bd70e4aa6fb473ee",
