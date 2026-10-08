@@ -701,6 +701,7 @@ $\nY8O
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
+++CCUNGs
 ++CCUNGstd::exception
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
@@ -1027,6 +1028,7 @@ $\nY8O
 /dev/urandom
 /etc/mtab
 /name
+/proc/%u/status
 /proc/meminfo
 /proc/mounts
 /proc/self/fd/%d
@@ -1053,6 +1055,7 @@ $\nY8O
 /u%d-ValveIPCSharedObj-Steam
 /usr/bin/crosdisk %s
 /usr/bin/lsof
+/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -1081,7 +1084,6 @@ $\nY8O
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:21:20
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -1585,6 +1587,7 @@ $\nY8O
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
+22:45:54
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -5021,6 +5024,7 @@ NULL output buffer with non-zero size passed to Base64Encode
 NULL row buffer
 NVIDIA
 Name
+Name:\t
 NameEntry
 NamePart
 Nanaco
@@ -5138,7 +5142,7 @@ OZw3(?
 O\n\nAnnotation
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  6 2026
+Oct  7 2026
 October
 Odia
 Offensive Avatar
@@ -6693,6 +6697,7 @@ Zulu
 \n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
+\nPPid:\t
 \nParsing attempt:
 \nYg:a
 \n\fEAppTestType
@@ -9041,6 +9046,7 @@ music
 mustownapp
 mwa!
 myspace.com
+n4C!|
 nAmount
 nAmountDelayed
 nBytes
@@ -9385,6 +9391,7 @@ punct
 purchase
 putc
 putwc
+pv-adverb
 pv-runtime/steam-runtime-steamrt
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pw_csgo
@@ -9725,7 +9732,6 @@ stdout
 steam
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 steam-runtime-supervisor
 steam.pid
 steam/cached/icon_tab_placement_arrow

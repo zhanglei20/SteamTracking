@@ -150,16 +150,24 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
           const _ = (0, _._)(_),
-            { data: _ } = (0, _._)(_);
-          return _ && _.related_items
-            ? (_.related_items.demo_appid &&
-                _.related_items.demo_appid.includes(_)) ||
-                (_.related_items.standalone_demo_appid &&
-                  _.related_items.standalone_demo_appid.includes(_))
-            : !1;
+            _ = (0, _._)();
+          (0, _._)(
+            _?.bUsePartnerAPI,
+            "useIsDemoVisibleOnSomewhere must run under PartnerStoreBrowseUnpublishedRoot, or the answer depends on the viewer's country",
+          );
+          const { data: _, isLoading: _ } = (0, _._)(_);
+          if (!_)
+            return _ && _.related_items
+              ? (_.related_items.demo_appid &&
+                  _.related_items.demo_appid.includes(_)) ||
+                  (_.related_items.standalone_demo_appid &&
+                    _.related_items.standalone_demo_appid.includes(_))
+              : !1;
         }
         function _(_) {
           const { parentAppId: _ } = _;
@@ -243,7 +251,7 @@
                     bIsDemoVisible: _,
                   }),
                 _ &&
-                  !_ &&
+                  _ === !1 &&
                   (0, _.jsx)(_, {
                     demoAppID: _,
                     parentAppId: _,
@@ -1002,6 +1010,7 @@
             ],
           });
         }
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           const { nAppId: _, strAppType: _ } = _,
             _ = (0, _._)();
@@ -1017,9 +1026,11 @@
           const { nAppId: _, nParentAppId: _, strAppType: _ } = _;
           return (
             _ == "Demo" &&
-            (0, _.jsx)(_, {
-              demoAppID: _,
-              parentAppId: _,
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
+                demoAppID: _,
+                parentAppId: _,
+              }),
             })
           );
         }

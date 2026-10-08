@@ -7,32 +7,32 @@
     {
       55298: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { YA: () => R, p: () => E, qh: () => H });
+        i.d(ze, { YA: () => R, p: () => D, qh: () => $ });
         var e = i(72604),
           p = i(20194),
           a = i(41735),
           fe = i.n(a),
           O = i(3166);
-        function H() {
-          const te = (0, p.I)({
+        function $() {
+          const se = (0, p.I)({
             queryKey: ["useValveAccounts"],
             queryFn: async () => {
-              const ce = `${O.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
-                Y = await fe().get(ce);
+              const pe = `${O.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
+                Y = await fe().get(pe);
               return Y?.status == 200 && Y.data?.success == e.R
                 ? Y.data.admins
                 : (console.error("ValveAccounts:", Y?.status), []);
             },
           });
-          return te.isLoading ? null : te.data;
+          return se.isLoading ? null : se.data;
         }
-        function E(te) {
-          return H()?.find((Y) => Y.id == te);
+        function D(se) {
+          return $()?.find((Y) => Y.id == se);
         }
-        function R(te, ce) {
-          return te
+        function R(se, pe) {
+          return se
             .getQueryData(["useValveAccounts"])
-            ?.find((xe) => xe.id === ce);
+            ?.find((Pe) => Pe.id === pe);
         }
       },
       69787: (ee, ze, i) => {
@@ -41,109 +41,109 @@
         var e = i(90626);
         const p = (0, e.createContext)(null),
           a = () => (0, e.useContext)(p);
-        function fe(O, H) {
-          return O ? O + "?t=" + H : null;
+        function fe(O, $) {
+          return O ? O + "?t=" + $ : null;
         }
       },
       91916: (ee, ze, i) => {
         "use strict";
         i.d(ze, {
-          MY: () => xe,
+          MY: () => Pe,
           UA: () => re,
           Yd: () => I,
           qG: () => ae,
           rN: () => me,
-          vh: () => He,
+          vh: () => Ve,
         });
         var e = i(41735),
           p = i.n(e),
           a = i(90626),
           fe = i(99412),
           O = i(72604),
-          H = i(34592),
-          E = i(3166),
+          $ = i(34592),
+          D = i(3166),
           R = i(27066),
-          te = Object.defineProperty,
-          ce = Object.getOwnPropertyDescriptor,
-          Y = (S, D, k, v) => {
+          se = Object.defineProperty,
+          pe = Object.getOwnPropertyDescriptor,
+          Y = (S, E, k, v) => {
             for (
-              var W = v > 1 ? void 0 : v ? ce(D, k) : D, $ = S.length - 1, N;
-              $ >= 0;
-              $--
+              var z = v > 1 ? void 0 : v ? pe(E, k) : E, K = S.length - 1, N;
+              K >= 0;
+              K--
             )
-              (N = S[$]) && (W = (v ? N(D, k, W) : N(W)) || W);
-            return v && W && te(D, k, W), W;
+              (N = S[K]) && (z = (v ? N(E, k, z) : N(z)) || z);
+            return v && z && se(E, k, z), z;
           };
-        function xe() {
-          return E.TS.EUNIVERSE == fe.Rv ? 12 : 1;
+        function Pe() {
+          return D.TS.EUNIVERSE == fe.Rv ? 12 : 1;
         }
         const Se = class xn {
           m_mapOptInToPartners = new Map();
           m_mapPromises = new Map();
-          GetPartnerInfo(D) {
-            return this.m_mapOptInToPartners.get(D);
+          GetPartnerInfo(E) {
+            return this.m_mapOptInToPartners.get(E);
           }
-          BHasPartnerInfoLoad(D) {
-            return this.m_mapOptInToPartners.has(D);
+          BHasPartnerInfoLoad(E) {
+            return this.m_mapOptInToPartners.has(E);
           }
-          async FindPartnerByName(D) {
+          async FindPartnerByName(E) {
             return (
-              this.m_mapPromises.has(D) ||
-                this.m_mapPromises.set(D, this.InternalFindPartnerByName(D)),
-              this.m_mapPromises.get(D)
+              this.m_mapPromises.has(E) ||
+                this.m_mapPromises.set(E, this.InternalFindPartnerByName(E)),
+              this.m_mapPromises.get(E)
             );
           }
-          async InternalFindPartnerByName(D) {
+          async InternalFindPartnerByName(E) {
             const k = new Array();
             try {
-              const v = E.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
-                W = {
-                  sessionid: (0, E.KC)(),
-                  searchtext: D,
+              const v = D.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+                z = {
+                  sessionid: (0, D.KC)(),
+                  searchtext: E,
                   origin: self.origin,
                 },
-                $ = await p().get(v, { params: W });
-              $?.status == 200 && $?.data?.success == O.R
-                ? $.data.publishers.forEach((N) => {
+                K = await p().get(v, { params: z });
+              K?.status == 200 && K?.data?.success == O.R
+                ? K.data.publishers.forEach((N) => {
                     const B = {
                       partnerid: N.publisherid,
                       name: N.publishername,
                       partner_url:
-                        E.TS.PARTNER_BASE_URL +
+                        D.TS.PARTNER_BASE_URL +
                         `pub/publisher/${N.publisherid}/`,
                       contacts: N.contacts,
                     };
                     this.m_mapOptInToPartners.set(N.publisherid, B), k.push(B);
                   })
                 : console.log(
-                    `CPartnerInfoStore.FindPartnerByName failed with status ${$?.status} eresult ${$?.data?.success} and msg ${$?.data?.msg}`,
+                    `CPartnerInfoStore.FindPartnerByName failed with status ${K?.status} eresult ${K?.data?.success} and msg ${K?.data?.msg}`,
                   );
             } catch (v) {
-              const W = (0, H.H)(v);
+              const z = (0, $.H)(v);
               console.error(
                 "CPartnerInfoStore.FindPartnerByName failed add: " +
-                  W.strErrorMsg,
-                W,
+                  z.strErrorMsg,
+                z,
               );
             }
             return k;
           }
-          async LoadPartnerInfo(D) {
-            if (this.m_mapOptInToPartners.has(D))
-              return this.m_mapOptInToPartners.get(D);
-            const k = await this.FindPartnerByName("" + D);
+          async LoadPartnerInfo(E) {
+            if (this.m_mapOptInToPartners.has(E))
+              return this.m_mapOptInToPartners.get(E);
+            const k = await this.FindPartnerByName("" + E);
             return (
-              this.BHasPartnerInfoLoad(D) ||
-                this.m_mapOptInToPartners.set(D, null),
-              this.m_mapOptInToPartners.get(D)
+              this.BHasPartnerInfoLoad(E) ||
+                this.m_mapOptInToPartners.set(E, null),
+              this.m_mapOptInToPartners.get(E)
             );
           }
-          async LoadMultiplePartnerInfo(D) {
-            if (!D || D.length == 0) return [];
-            const k = D.filter((v) => !this.m_mapOptInToPartners.has(v));
+          async LoadMultiplePartnerInfo(E) {
+            if (!E || E.length == 0) return [];
+            const k = E.filter((v) => !this.m_mapOptInToPartners.has(v));
             return (
               k.length > 0 && (await this.FindPartnerByName("" + k.join(","))),
-              D.map((v) => this.m_mapOptInToPartners.get(v)).filter(Boolean)
+              E.map((v) => this.m_mapOptInToPartners.get(v)).filter(Boolean)
             );
           }
           static s_Singleton;
@@ -153,14 +153,14 @@
             );
           }
           constructor() {
-            let D = JSON.parse(
-              JSON.stringify((0, E.Tc)("partner_info", "application_config")),
+            let E = JSON.parse(
+              JSON.stringify((0, D.Tc)("partner_info", "application_config")),
             );
-            this.ValidateStoreDefault(D) &&
-              D.forEach((k) => this.m_mapOptInToPartners.set(k.partnerid, k));
+            this.ValidateStoreDefault(E) &&
+              E.forEach((k) => this.m_mapOptInToPartners.set(k.partnerid, k));
           }
-          ValidateStoreDefault(D) {
-            const k = D;
+          ValidateStoreDefault(E) {
+            const k = E;
             return k &&
               Array.isArray(k) &&
               k.length > 0 &&
@@ -171,116 +171,116 @@
           }
         };
         Y([R.o], Se.prototype, "FindPartnerByName", 1);
-        let Ne = Se;
-        function He(S) {
-          const [D, k] = (0, a.useState)(!1);
+        let He = Se;
+        function Ve(S) {
+          const [E, k] = (0, a.useState)(!1);
           return (
             (0, a.useEffect)(() => {
-              !D &&
+              !E &&
                 S?.length > 0 &&
-                Ne.Get()
+                He.Get()
                   .LoadMultiplePartnerInfo(S)
                   .then(() => k(!0));
-            }, [S, D]),
-            D
+            }, [S, E]),
+            E
           );
         }
         function re(S) {
-          const [D, k] = a.useState(() => Ne.Get().GetPartnerInfo(S));
+          const [E, k] = a.useState(() => He.Get().GetPartnerInfo(S));
           return (
             a.useEffect(() => {
-              !Ne.Get().BHasPartnerInfoLoad(S) && S > 0
-                ? Ne.Get()
+              !He.Get().BHasPartnerInfoLoad(S) && S > 0
+                ? He.Get()
                     .LoadPartnerInfo(S)
                     .then((v) => k(v))
-                : Ne.Get().BHasPartnerInfoLoad(S) &&
-                  D?.partnerid != S &&
-                  k(Ne.Get().GetPartnerInfo(S));
-            }, [S, D]),
-            [D]
+                : He.Get().BHasPartnerInfoLoad(S) &&
+                  E?.partnerid != S &&
+                  k(He.Get().GetPartnerInfo(S));
+            }, [S, E]),
+            [E]
           );
         }
         function me() {
-          return { fnFindPartnerByName: Ne.Get().FindPartnerByName };
+          return { fnFindPartnerByName: He.Get().FindPartnerByName };
         }
         function I(S) {
-          return Ne.Get().GetPartnerInfo(S);
+          return He.Get().GetPartnerInfo(S);
         }
         function ae(S) {
-          return Ne.Get().LoadPartnerInfo(S);
+          return He.Get().LoadPartnerInfo(S);
         }
       },
       2272: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { AS: () => P, KZ: () => de, c$: () => _e });
+        i.d(ze, { AS: () => P, KZ: () => ce, c$: () => _e });
         var e = i(7850),
           p = i(99412),
           a = i(41635),
           fe = i(86048),
           O = i(64868),
-          H = i(51614),
-          E = i(69787),
+          $ = i(51614),
+          D = i(69787),
           R = i(34604),
-          te = i(28410),
-          ce = i(90626),
+          se = i(28410),
+          pe = i(90626),
           Y = i(51746),
-          xe = i(75806),
+          Pe = i(75806),
           Se = i(58534),
-          Ne = i(25792),
-          He = i(48127),
+          He = i(25792),
+          Ve = i(48127),
           re = i(249),
           me = i(1880),
           I = i(69168),
           ae = i(88003),
           S = i(83085),
-          D = i(50660),
+          E = i(50660),
           k = i(36118),
           v = i(85599),
-          W = i(71421),
-          $ = i(36707),
+          z = i(71421),
+          K = i(36707),
           N = i(82734),
           B = i(18210),
           Ee = i(82363),
           L = i(43104),
-          V = i.n(L),
+          G = i.n(L),
           w = i(14295),
-          G = i(17616),
+          W = i(17616),
           b = i(2259),
           A = i(3166);
-        function P(ye) {
+        function P(ve) {
           const {
-              src: ve,
+              src: Ae,
               inLink: we,
-              setAttrs: pe,
-              focusView: Re,
+              setAttrs: ue,
+              focusView: Oe,
               removeNode: Be,
               activeLanguage: ke,
               allowAnimations: Ze,
               mapValues: et,
               fnUpdateDocument: _t,
               selected: nt,
-            } = ye,
+            } = ve,
             [Ke, Qe] = (0, fe.OP)(),
             [tt, rt] = (0, fe.OP)(),
             qe = (0, O.DF)(Ke || tt, 250),
             [kt, mt, Je] = (0, O.uD)(),
-            Gt = (0, te.FD)(),
-            Rt = ce.useCallback(() => {
-              Re(), Je();
-            }, [Re, Je]),
-            Ft = ce.useMemo(
+            Gt = (0, se.FD)(),
+            Rt = pe.useCallback(() => {
+              Oe(), Je();
+            }, [Oe, Je]),
+            Ft = pe.useMemo(
               () =>
                 Gt.find(
-                  (It) => (0, R.q3)(It).toLowerCase() === ve.toLowerCase(),
+                  (It) => (0, R.q3)(It).toLowerCase() === Ae.toLowerCase(),
                 ),
-              [ve, Gt],
+              [Ae, Gt],
             ),
             Qt = Ft ? (0, R.q3)(Ft) : null,
             {
               elLocalizedImageGroupDialog: ft,
               elLocalizedImageGroupControl: fs,
-            } = U(Ft, ke, Re),
-            it = (0, E.Un)(),
+            } = H(Ft, ke, Oe),
+            it = (0, D.Un)(),
             Tt = (It) => {
               const ns = It.currentTarget;
               ns.paused ? ns.play() : ns.pause();
@@ -290,14 +290,14 @@
             const It = (0, R.IP)(Ft, Ze, ke);
             if (It) {
               const ns = (0, R.Bv)(Ft, ke),
-                xs = (0, $.A)(L.ExtraAssetImg, nt && L.Selected);
+                xs = (0, K.A)(L.ExtraAssetImg, nt && L.Selected);
               Ye =
                 It.usage == R.nO
                   ? (0, e.jsx)(
                       "video",
                       {
                         className: xs,
-                        src: (0, E.cn)(It.url, it),
+                        src: (0, D.cn)(It.url, it),
                         title: Qt,
                         muted: !0,
                         loop: !0,
@@ -311,7 +311,7 @@
                       "img",
                       {
                         className: xs,
-                        src: (0, E.cn)(It.url, it),
+                        src: (0, D.cn)(It.url, it),
                         alt: ns,
                         title: Qt,
                       },
@@ -322,7 +322,7 @@
                 className: L.ExtraAssetError,
                 children: (0, B.we)(
                   "#StoreAdmin_GameDescription_MissingImageLanguage",
-                  ve,
+                  Ae,
                 ),
               });
           } else
@@ -330,7 +330,7 @@
               className: L.ExtraAssetError,
               children: (0, B.we)(
                 "#StoreAdmin_GameDescription_MissingImage",
-                ve,
+                Ae,
               ),
             });
           const Vt = (It, ns) => {
@@ -342,11 +342,11 @@
                   xs.set(on, Ls);
                 }
                 _t(xs);
-              } else pe({ src: It });
+              } else ue({ src: It });
             },
-            [Ps, ss] = ce.useState(0),
-            [Ms, rn] = ce.useState(0),
-            Ut = (0, b.wY)((It) =>
+            [Ps, ss] = pe.useState(0),
+            [Ms, rn] = pe.useState(0),
+            Ht = (0, b.wY)((It) =>
               ss(It.target.offsetLeft + It.borderBoxSize[0].inlineSize),
             ),
             Cn = (0, b.wY)((It) => rn(It.borderBoxSize[0].inlineSize)),
@@ -363,8 +363,8 @@
                 }),
               ft,
               (0, e.jsxs)("div", {
-                ref: Ut,
-                className: (0, $.A)({
+                ref: Ht,
+                className: (0, K.A)({
                   [L.ExtraAssetImgTag]: !0,
                   [L.ExtraAssetControlsContainer]: !0,
                   [L.Hovered]: qe,
@@ -376,7 +376,7 @@
                   we && (0, e.jsx)(X, {}),
                   (0, e.jsxs)("div", {
                     ref: Cn,
-                    className: (0, $.A)(
+                    className: (0, K.A)(
                       L.ExtraAssetControls,
                       zs && L.SmallImage,
                     ),
@@ -384,14 +384,14 @@
                     ...rt,
                     children: [
                       fs,
-                      (0, e.jsx)(D.ff, {
+                      (0, e.jsx)(E.ff, {
                         onClick: mt,
                         tooltip: (0, B.we)(
                           "#StoreAdmin_GameDescription_ReplaceImage",
                         ),
                         children: (0, e.jsx)(re.ffu, {}),
                       }),
-                      (0, e.jsx)(D.ff, {
+                      (0, e.jsx)(E.ff, {
                         onClick: Be,
                         tooltip: (0, B.we)(
                           "#StoreAdmin_GameDescription_RemoveImage",
@@ -406,30 +406,30 @@
             ],
           });
         }
-        function U(ye, ve, we) {
-          const [pe, Re, Be] = (0, O.uD)(),
-            ke = ce.useCallback(() => {
+        function H(ve, Ae, we) {
+          const [ue, Oe, Be] = (0, O.uD)(),
+            ke = pe.useCallback(() => {
               we?.(), Be();
             }, [we, Be]);
           let Ze, et;
           return (
-            (0, R.pN)(ye)
+            (0, R.pN)(ve)
               ? ((Ze =
-                  pe &&
+                  ue &&
                   (0, e.jsx)(Me, {
-                    selectedAsset: ye,
+                    selectedAsset: ve,
                     hideModal: ke,
-                    activeLanguage: ve,
+                    activeLanguage: Ae,
                   })),
-                (et = (0, e.jsx)(D.ff, {
-                  onClick: Re,
+                (et = (0, e.jsx)(E.ff, {
+                  onClick: Oe,
                   tooltip: (0, B.we)(
                     "#StoreAdmin_GameDescription_EditImageDetails",
                   ),
                   children: (0, e.jsx)(k.vCk, { className: "SVGIcon_Button" }),
                 })))
-              : (0, R.i$)(ye) &&
-                (et = (0, e.jsx)(D.ff, {
+              : (0, R.i$)(ve) &&
+                (et = (0, e.jsx)(E.ff, {
                   onClick: () => {},
                   tooltip: (0, B.we)(
                     "#StoreAdmin_GameDescription_EditImageDetails_Legacy",
@@ -447,7 +447,7 @@
             className: L.ImageLinkDisabledWarning,
             children: (0, e.jsx)("span", {
               className: L.TopBar,
-              children: (0, e.jsx)(W.Gq, {
+              children: (0, e.jsx)(z.Gq, {
                 toolTipContent: (0, B.we)(
                   "#StoreAdmin_GameDescription_ImageLinkDisabled_Description",
                 ),
@@ -459,61 +459,61 @@
             }),
           });
         }
-        function de(ye) {
-          const { nodeType: ve } = ye,
-            { view: we } = (0, D.wU)(),
-            [pe, Re, Be] = (0, O.uD)(),
-            ke = ce.useCallback(() => {
+        function ce(ve) {
+          const { nodeType: Ae } = ve,
+            { view: we } = (0, E.wU)(),
+            [ue, Oe, Be] = (0, O.uD)(),
+            ke = pe.useCallback(() => {
               Be(), we.focus();
             }, [Be, we]),
-            Ze = ce.useCallback(
+            Ze = pe.useCallback(
               (et) => {
                 we.dispatch(
                   we.state.tr.insert(
                     we.state.selection.to,
-                    ve.createChecked({ src: et }),
+                    Ae.createChecked({ src: et }),
                   ),
                 ),
                   ke();
               },
-              [we, ve, ke],
+              [we, Ae, ke],
             );
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              pe && (0, e.jsx)(De, { onAssetSelected: Ze, hideModal: ke }),
-              (0, e.jsx)(D.ff, {
-                onClick: Re,
-                toggled: pe,
+              ue && (0, e.jsx)(De, { onAssetSelected: Ze, hideModal: ke }),
+              (0, e.jsx)(E.ff, {
+                onClick: Oe,
+                toggled: ue,
                 tooltip: "#StoreAdmin_GameDescription_InsertImage",
                 children: (0, e.jsx)(re._V3, {}),
               }),
             ],
           });
         }
-        function De(ye) {
+        function De(ve) {
           const {
-              editAsset: ve,
+              editAsset: Ae,
               bReplace: we,
-              onAssetSelected: pe,
-              hideModal: Re,
-            } = ye,
-            Be = (0, te.FD)(!0),
-            [ke, Ze] = ce.useState(ve),
-            [et, _t] = (0, S.Y0)(Re, R.SG),
-            [nt, Ke] = ce.useState(!1),
-            [Qe, tt] = ce.useState(""),
-            rt = ce.useCallback(
+              onAssetSelected: ue,
+              hideModal: Oe,
+            } = ve,
+            Be = (0, se.FD)(!0),
+            [ke, Ze] = pe.useState(Ae),
+            [et, _t] = (0, S.Y0)(Oe, R.SG),
+            [nt, Ke] = pe.useState(!1),
+            [Qe, tt] = pe.useState(""),
+            rt = pe.useCallback(
               (qe, kt) => {
-                qe && (pe(qe, kt), Re());
+                qe && (ue(qe, kt), Oe());
               },
-              [pe, Re],
+              [ue, Oe],
             );
           return (0, e.jsxs)(I.E, {
             active: !0,
             children: [
               et,
               (0, e.jsx)(ae.x_, {
-                onEscKeypress: Re,
+                onEscKeypress: Oe,
                 children: (0, e.jsxs)(Se.U9, {
                   classNameContent: L.ExtraAssetDialogContent,
                   children: [
@@ -564,7 +564,7 @@
                     (0, e.jsx)(Se.nB, {
                       className: L.ExtraAssetsGridDialog,
                       children: (0, e.jsx)("div", {
-                        className: (0, $.A)(
+                        className: (0, K.A)(
                           L.ExtraAssetsGrid,
                           L.ExtraAssetsChooser,
                         ),
@@ -572,7 +572,7 @@
                           (0, R.q3)(qe).includes(Qe),
                         ).map((qe) =>
                           (0, e.jsx)(
-                            Ce,
+                            xe,
                             {
                               extraAsset: qe,
                               onSelectAsset: Ze,
@@ -599,7 +599,7 @@
                             ),
                           }),
                         (0, e.jsx)(Se.CB, {
-                          onCancel: Re,
+                          onCancel: Oe,
                           onOK: (qe) => {
                             qe.preventDefault(), rt(ke, nt);
                           },
@@ -616,18 +616,18 @@
             ],
           });
         }
-        function Ce(ye) {
+        function xe(ve) {
           const {
-              extraAsset: ve,
+              extraAsset: Ae,
               onSelectAsset: we,
-              onChooseAsset: pe,
-              selected: Re,
-            } = ye,
-            Be = ce.useRef(null),
-            ke = (0, R.q3)(ve);
+              onChooseAsset: ue,
+              selected: Oe,
+            } = ve,
+            Be = pe.useRef(null),
+            ke = (0, R.q3)(Ae);
           return (
-            ce.useLayoutEffect(() => {
-              Re &&
+            pe.useLayoutEffect(() => {
+              Oe &&
                 Be.current?.scrollIntoView({
                   block: "nearest",
                   inline: "nearest",
@@ -635,21 +635,21 @@
             }, []),
             (0, e.jsx)("div", {
               ref: Be,
-              className: (0, $.A)(L.ExtraAssetChoice, Re && L.Selected),
+              className: (0, K.A)(L.ExtraAssetChoice, Oe && L.Selected),
               title: ke,
               onClick: (Ze) => we(ke),
-              onDoubleClick: (Ze) => pe(ke),
-              children: (0, e.jsx)(Te, { extraAsset: ve, controls: !1 }),
+              onDoubleClick: (Ze) => ue(ke),
+              children: (0, e.jsx)(Te, { extraAsset: Ae, controls: !1 }),
             })
           );
         }
-        function Me(ye) {
-          const { selectedAsset: ve, activeLanguage: we, hideModal: pe } = ye;
-          if ((ie(!ve, pe), !!ve))
+        function Me(ve) {
+          const { selectedAsset: Ae, activeLanguage: we, hideModal: ue } = ve;
+          if ((ie(!Ae, ue), !!Ae))
             return (0, e.jsx)(I.E, {
               active: !0,
               children: (0, e.jsx)(ae.x_, {
-                onEscKeypress: pe,
+                onEscKeypress: ue,
                 children: (0, e.jsxs)(Se.U9, {
                   classNameContent: L.LocalizeAssetDialogContent,
                   children: [
@@ -668,10 +668,10 @@
                     }),
                     (0, e.jsxs)(Se.nB, {
                       children: [
-                        (0, e.jsx)(le, { onlyExtraAsset: ve }),
-                        (0, e.jsx)(Ne.tH, {
+                        (0, e.jsx)(le, { onlyExtraAsset: Ae }),
+                        (0, e.jsx)(He.tH, {
                           children: (0, e.jsx)(F, {
-                            extraAsset: ve,
+                            extraAsset: Ae,
                             activeLanguage: we,
                           }),
                         }),
@@ -679,7 +679,7 @@
                     }),
                     (0, e.jsx)(Se.wi, {
                       children: (0, e.jsx)(Se.jn, {
-                        onClick: pe,
+                        onClick: ue,
                         children: (0, B.we)("#Button_Close"),
                       }),
                     }),
@@ -688,27 +688,27 @@
               }),
             });
         }
-        function F(ye) {
-          const { extraAsset: ve, activeLanguage: we } = ye,
-            pe = (0, R.wN)(ve),
-            Re = (0, E.Un)(),
-            Be = ce.useCallback(
-              (Ke) => (0, E.cn)((0, R.IP)(ve, !0, Ke)?.url, Re),
-              [ve, Re],
+        function F(ve) {
+          const { extraAsset: Ae, activeLanguage: we } = ve,
+            ue = (0, R.wN)(Ae),
+            Oe = (0, D.Un)(),
+            Be = pe.useCallback(
+              (Ke) => (0, D.cn)((0, R.IP)(Ae, !0, Ke)?.url, Oe),
+              [Ae, Oe],
             ),
-            [ke, Ze] = ce.useState(void 0),
+            [ke, Ze] = pe.useState(void 0),
             [et, _t, nt] = (0, O.uD)();
-          return pe
+          return ue
             ? (0, e.jsxs)("div", {
                 children: [
                   et &&
-                    (0, e.jsx)(Ge, {
-                      extraAsset: ve,
+                    (0, e.jsx)(We, {
+                      extraAsset: Ae,
                       deleteLang: ke,
                       hideModal: nt,
                     }),
-                  (0, e.jsx)(xe.z, {
-                    rgAssetLangs: pe,
+                  (0, e.jsx)(Pe.z, {
+                    rgAssetLangs: ue,
                     initialLang: we,
                     showDeleteAll: !1,
                     imageClassname: L.DisplayLocImage,
@@ -724,32 +724,32 @@
               })
             : null;
         }
-        function ie(ye, ve) {
-          ce.useEffect(() => {
-            ye && ve();
-          }, [ye, ve]);
+        function ie(ve, Ae) {
+          pe.useEffect(() => {
+            ve && Ae();
+          }, [ve, Ae]);
         }
-        function _e(ye) {
-          const { asset_mtime: ve, assets_list: we } = ye,
-            pe = new Map(we),
-            Re = (0, te.FD)(!0),
-            Be = ce.useMemo(() => a.WD(Re.filter(R.pN), R.K7), [Re]),
-            ke = ce.useMemo(
+        function _e(ve) {
+          const { asset_mtime: Ae, assets_list: we } = ve,
+            ue = new Map(we),
+            Oe = (0, se.FD)(!0),
+            Be = pe.useMemo(() => a.WD(Oe.filter(R.pN), R.K7), [Oe]),
+            ke = pe.useMemo(
               () =>
-                Re.filter(R.pN).map((rt) => ({
+                Oe.filter(R.pN).map((rt) => ({
                   key: (0, R.K7)(rt),
                   caption: (0, R.K7)(rt),
                   mapAltText: rt.alt_text,
                 })),
-              [Re],
+              [Oe],
             ),
-            Ze = (0, G.gU)(),
+            Ze = (0, W.gU)(),
             [et, _t, nt] = (0, O.uD)(),
             { mutateAsync: Ke, isPending: Qe } = Ie(),
             tt = async (rt, qe) =>
               (await Ke({ strExtraAssetFileName: rt, mapAltText: qe })) !== !1;
-          return (0, e.jsxs)(E.Dx.Provider, {
-            value: ve,
+          return (0, e.jsxs)(D.Dx.Provider, {
+            value: Ae,
             children: [
               et &&
                 (0, e.jsx)(Ee.B, {
@@ -764,10 +764,10 @@
                       caption: !1,
                       controls: !1,
                       primaryLanguage: qe,
-                      mapAssetsList: pe,
+                      mapAssetsList: ue,
                     }),
                 }),
-              Re.some(R.pN) &&
+              Oe.some(R.pN) &&
                 (0, e.jsxs)("div", {
                   className: L.AltTextBtn,
                   children: [
@@ -784,13 +784,13 @@
                 className: L.ExtraAssetsPageList,
                 children: (0, e.jsx)("div", {
                   className: L.ExtraAssetsGrid,
-                  children: [...Re].map((rt) =>
+                  children: [...Oe].map((rt) =>
                     (0, e.jsx)(
                       Te,
                       {
                         extraAsset: rt,
                         primaryLanguage: Ze,
-                        mapAssetsList: pe,
+                        mapAssetsList: ue,
                       },
                       (0, R.q3)(rt),
                     ),
@@ -801,36 +801,36 @@
             ],
           });
         }
-        function le(ye) {
-          const { onlyExtraAsset: ve } = ye,
-            we = (0, te.Y7)(),
-            pe = (0, w.L)(),
-            Re = (Ke) => {
+        function le(ve) {
+          const { onlyExtraAsset: Ae } = ve,
+            we = (0, se.Y7)(),
+            ue = (0, w.L)(),
+            Oe = (Ke) => {
               const Qe = Ke
                 ? [...Ke].reverse().find((tt) => tt.bSuccess)?.uploadResult
                 : null;
               Qe && we(Qe);
             },
-            Be = (0, te.FD)(),
-            ke = ce.useMemo(() => Be.filter(R.pN), [Be]),
-            Ze = Ae(ke);
-          ce.useEffect(() => {
+            Be = (0, se.FD)(),
+            ke = pe.useMemo(() => Be.filter(R.pN), [Be]),
+            Ze = be(ke);
+          pe.useEffect(() => {
             const Ke = (Qe) => ({
               baseFilename: (0, R.K7)(Qe),
               languages: (0, R.i$)(Qe) ? [p.Bhc] : (0, R.wN)(Qe),
             });
-            pe.SetExistingAssetGroups(ke.map(Ke), Ze),
-              pe.SetOnlyAssetGroup(ve ? Ke(ve) : null);
-          }, [pe, ke, ve, Ze]);
-          const et = oe(ve),
-            { rgRealmList: _t } = (0, te.aJ)();
+            ue.SetExistingAssetGroups(ke.map(Ke), Ze),
+              ue.SetOnlyAssetGroup(Ae ? Ke(Ae) : null);
+          }, [ue, ke, Ae, Ze]);
+          const et = oe(Ae),
+            { rgRealmList: _t } = (0, se.aJ)();
           let nt;
           return (
-            ve && !et
+            Ae && !et
               ? (nt = (0, B.we)(
                   "#StoreAdmin_ExtraAssetUpload_Instructions_AdditionalNoSize",
                 ))
-              : ve && et
+              : Ae && et
                 ? (nt = (0, B.we)(
                     "#StoreAdmin_ExtraAssetUpload_Instructions_AdditionalWithSize",
                     et.width,
@@ -840,10 +840,10 @@
                     "#StoreAdmin_ExtraAssetUpload_Instructions_Base",
                   )),
             (0, e.jsx)("div", {
-              children: (0, e.jsx)(He.O9, {
-                imageUploader: pe,
+              children: (0, e.jsx)(Ve.O9, {
+                imageUploader: ue,
                 rgRealmList: _t,
-                fnUploadComplete: Re,
+                fnUploadComplete: Oe,
                 elOverrideDragAndDropText: nt,
                 elAdditonalButtons: (0, e.jsx)(e.Fragment, {
                   children: (0, e.jsx)("div", {
@@ -857,63 +857,63 @@
             })
           );
         }
-        function Ae(ye) {
-          const [ve, we] = ce.useState(void 0),
-            pe = (0, E.Un)();
+        function be(ve) {
+          const [Ae, we] = pe.useState(void 0),
+            ue = (0, D.Un)();
           return (
-            ce.useEffect(() => {
-              const Re = ye.map(async (Be) => {
+            pe.useEffect(() => {
+              const Oe = ve.map(async (Be) => {
                 let ke = (0, R.IP)(Be, !1, p.xPp);
                 return (
                   ke || (ke = (0, R.IP)(Be, !0, p.xPp)),
                   (0, Y.II)(
-                    await (0, Y.S2)((0, E.cn)(ke?.url, pe), ke?.usage == R.nO),
+                    await (0, Y.S2)((0, D.cn)(ke?.url, ue), ke?.usage == R.nO),
                   )
                 );
               });
-              Promise.all(Re).then(we);
-            }, [ye, pe]),
-            ve
+              Promise.all(Oe).then(we);
+            }, [ve, ue]),
+            Ae
           );
         }
-        function oe(ye) {
-          const ve = ce.useMemo(() => (ye ? [ye] : []), [ye]),
-            we = Ae(ve);
+        function oe(ve) {
+          const Ae = pe.useMemo(() => (ve ? [ve] : []), [ve]),
+            we = be(Ae);
           return we?.length > 0 ? we[0] : void 0;
         }
-        function Te(ye) {
+        function Te(ve) {
           const {
-              extraAsset: ve,
+              extraAsset: Ae,
               caption: we = !0,
-              controls: pe = !0,
-              primaryLanguage: Re,
+              controls: ue = !0,
+              primaryLanguage: Oe,
               mapAssetsList: Be,
-            } = ye,
-            ke = ce.useRef(void 0),
+            } = ve,
+            ke = pe.useRef(void 0),
             Ze = (0, fe.BZ)(ke),
             [et, _t, nt] = (0, O.uD)(),
-            Ke = (0, E.Un)(),
-            Qe = (0, R.q3)(ve);
+            Ke = (0, D.Un)(),
+            Qe = (0, R.q3)(Ae);
           let tt;
-          if ((0, R.i$)(ve)) {
-            const it = (0, R.IP)(ve, !1);
+          if ((0, R.i$)(Ae)) {
+            const it = (0, R.IP)(Ae, !1);
             tt = it ? [it] : [];
           } else {
-            const it = Re == p.ZLm ? p.NFp : p.Bhc,
-              Tt = (0, R.wN)(ve).sort((Ye, Vt) => he(Re, it, Ye, Vt));
+            const it = Oe == p.ZLm ? p.NFp : p.Bhc,
+              Tt = (0, R.wN)(Ae).sort((Ye, Vt) => he(Oe, it, Ye, Vt));
             tt = Array.from({ length: Math.min(3, Tt.length) }).map((Ye, Vt) =>
-              (0, R.IP)(ve, Vt == 0, Tt[Vt]),
+              (0, R.IP)(Ae, Vt == 0, Tt[Vt]),
             );
           }
           const rt = () => {
-              window.open((0, E.cn)(tt[0]?.url, Ke));
+              window.open((0, D.cn)(tt[0]?.url, Ke));
             },
             qe = () => (0, N.OG)(Qe),
-            kt = (0, te.TQ)(),
+            kt = (0, se.TQ)(),
             {
               elLocalizedImageGroupDialog: mt,
               elLocalizedImageGroupControl: Je,
-            } = U(ve, null, null),
+            } = H(Ae, null, null),
             Gt = (it) => {
               const Tt = it.currentTarget;
               Tt.paused ? Tt.play() : Tt.pause();
@@ -945,21 +945,21 @@
               mt,
               (0, e.jsxs)("div", {
                 ref: ke,
-                className: (0, $.A)(
+                className: (0, K.A)(
                   L.ExtraAssetStack,
                   L.ExtraAssetControlsContainer,
                   Ze && L.Hovered,
                 ),
                 title: Qe,
                 children: [
-                  et && (0, e.jsx)(Ge, { extraAsset: ve, hideModal: nt }),
-                  pe &&
+                  et && (0, e.jsx)(We, { extraAsset: Ae, hideModal: nt }),
+                  ue &&
                     (0, e.jsxs)("div", {
                       className: L.ExtraAssetControls,
                       title: "",
                       children: [
                         Je,
-                        (0, e.jsx)(D.ff, {
+                        (0, e.jsx)(E.ff, {
                           onClick: rt,
                           tooltip: (0, B.we)(
                             "#StoreAdmin_GameDescription_OpenInNewWindow",
@@ -967,7 +967,7 @@
                           children: (0, e.jsx)(re.glU, {}),
                         }),
                         !kt &&
-                          (0, e.jsx)(D.ff, {
+                          (0, e.jsx)(E.ff, {
                             onClick: qe,
                             tooltip: (0, B.we)(
                               "#StoreAdmin_GameDescription_CopyNameToClipboard",
@@ -975,7 +975,7 @@
                             children: (0, e.jsx)(re.QRo, {}),
                           }),
                         Rt.length == 0 &&
-                          (0, e.jsx)(D.ff, {
+                          (0, e.jsx)(E.ff, {
                             onClick: _t,
                             tooltip: (0, B.we)(
                               "#StoreAdmin_GameDescription_DeleteAsset",
@@ -983,7 +983,7 @@
                             children: (0, e.jsx)(k.X, {}),
                           }),
                         Rt.length > 0 &&
-                          (0, e.jsx)(D.ff, {
+                          (0, e.jsx)(E.ff, {
                             onClick: () => {},
                             tooltip: (0, e.jsxs)(e.Fragment, {
                               children: [
@@ -1009,12 +1009,12 @@
                         ? (0, e.jsx)(
                             "video",
                             {
-                              className: (0, $.A)(
+                              className: (0, K.A)(
                                 L.StackedImage,
                                 L[`Image-${Tt}`],
                               ),
                               src: it.url + "?t=" + Ke,
-                              onDoubleClick: pe ? rt : void 0,
+                              onDoubleClick: ue ? rt : void 0,
                               muted: !0,
                               loop: !0,
                               playsInline: !0,
@@ -1026,12 +1026,12 @@
                         : (0, e.jsx)(
                             "img",
                             {
-                              className: (0, $.A)(
+                              className: (0, K.A)(
                                 L.StackedImage,
                                 L[`Image-${Tt}`],
                               ),
                               src: it.url + "?t=" + Ke,
-                              onDoubleClick: pe ? rt : void 0,
+                              onDoubleClick: ue ? rt : void 0,
                             },
                             it.url + Tt,
                           ),
@@ -1040,34 +1040,34 @@
                   we &&
                     (0, e.jsx)("div", {
                       className: L.ExtraAssetName,
-                      children: (0, R.K7)(ve),
+                      children: (0, R.K7)(Ae),
                     }),
                 ],
               }),
             ],
           });
         }
-        function he(ye, ve, we, pe) {
-          if (ye != null) {
-            if (we == ye && pe != ye) return -1;
-            if (we != ye && pe == ye) return 1;
-            if (we == ve && pe != ve) return -1;
-            if (we != ve && pe == ve) return 1;
+        function he(ve, Ae, we, ue) {
+          if (ve != null) {
+            if (we == ve && ue != ve) return -1;
+            if (we != ve && ue == ve) return 1;
+            if (we == Ae && ue != Ae) return -1;
+            if (we != Ae && ue == Ae) return 1;
           }
-          return we - pe;
+          return we - ue;
         }
-        function Ge(ye) {
-          const { extraAsset: ve, deleteLang: we, hideModal: pe } = ye,
-            { mutate: Re, isPending: Be, isSuccess: ke } = We(),
+        function We(ve) {
+          const { extraAsset: Ae, deleteLang: we, hideModal: ue } = ve,
+            { mutate: Oe, isPending: Be, isSuccess: ke } = Ue(),
             Ze = Be || ke;
           return (
-            ce.useEffect(() => {
-              ke && pe();
-            }, [ke, pe]),
+            pe.useEffect(() => {
+              ke && ue();
+            }, [ke, ue]),
             (0, e.jsx)(I.E, {
               active: !0,
               children: (0, e.jsx)(me.o0, {
-                onOK: () => Re({ extraAsset: ve, eLang: we }),
+                onOK: () => Oe({ extraAsset: Ae, eLang: we }),
                 bOKDisabled: Ze,
                 strOKButtonText: (0, B.we)(
                   "#StoreAdmin_GameDescription_DeleteAsset",
@@ -1078,31 +1078,31 @@
                   : (0, B.we)(
                       "#StoreAdmin_GameDescription_DeleteAsset_Confirm",
                     ),
-                onCancel: pe,
+                onCancel: ue,
               }),
             })
           );
         }
-        function We() {
-          const ye = (0, te.Z3)("ajaxmodifyextraassets"),
-            ve = (0, te.Y7)();
-          return (0, H.n)({
-            mutationFn: async ({ extraAsset: we, eLang: pe }) => {
-              const Re = new FormData();
-              Re.append("sessionid", (0, A.KC)()),
-                Re.append("action", "delete"),
-                Re.append("name", (0, R.K7)(we)),
+        function Ue() {
+          const ve = (0, se.Z3)("ajaxmodifyextraassets"),
+            Ae = (0, se.Y7)();
+          return (0, $.n)({
+            mutationFn: async ({ extraAsset: we, eLang: ue }) => {
+              const Oe = new FormData();
+              Oe.append("sessionid", (0, A.KC)()),
+                Oe.append("action", "delete"),
+                Oe.append("name", (0, R.K7)(we)),
                 (0, R.pN)(we) &&
-                  pe != null &&
-                  pe != p.xPp &&
-                  Re.append("lang", (0, p.LgB)(pe));
-              const Be = await fetch(ye, { method: "post", body: Re }),
+                  ue != null &&
+                  ue != p.xPp &&
+                  Oe.append("lang", (0, p.LgB)(ue));
+              const Be = await fetch(ve, { method: "post", body: Oe }),
                 ke = await Be.json();
               if (!Be.ok) throw ke.errors?.join(" ") || "Error deleting asset";
               return ke;
             },
             onSuccess: (we) => {
-              ve(we.rgExtraAssets);
+              Ae(we.rgExtraAssets);
             },
             onError: (we) => {
               console.error(
@@ -1115,40 +1115,40 @@
           });
         }
         function Ie() {
-          const ye = (0, te.Z3)("ajaxmodifyextraassets"),
-            ve = (0, te.Y7)();
-          return (0, H.n)({
+          const ve = (0, se.Z3)("ajaxmodifyextraassets"),
+            Ae = (0, se.Y7)();
+          return (0, $.n)({
             mutationFn: async ({
-              strExtraAssetFileName: pe,
-              mapAltText: Re,
+              strExtraAssetFileName: ue,
+              mapAltText: Oe,
             }) => {
-              if (!pe || !Re) return !1;
+              if (!ue || !Oe) return !1;
               const Be = new FormData();
               Be.append("sessionid", (0, A.KC)()),
                 Be.append("action", "alt_text"),
-                Be.append("name", pe),
+                Be.append("name", ue),
                 Be.append(
                   "alt_text",
                   JSON.stringify(
-                    Object.entries(Re).map(([et, _t]) => ({
+                    Object.entries(Oe).map(([et, _t]) => ({
                       lang: et,
                       text: _t,
                     })),
                   ),
                 );
-              const ke = await fetch(ye, { method: "post", body: Be }),
+              const ke = await fetch(ve, { method: "post", body: Be }),
                 Ze = await ke.json();
               if (!ke.ok) throw Ze.errors?.join(" ") || "Error deleting asset";
               return Ze;
             },
-            onSuccess: (pe) => {
-              pe !== !1 && ve(pe.rgExtraAssets);
+            onSuccess: (ue) => {
+              ue !== !1 && Ae(ue.rgExtraAssets);
             },
-            onError: (pe) => {
+            onError: (ue) => {
               console.error(
                 (0, B.we)(
                   "#StoreAdmin_UploadError_Generic",
-                  typeof pe == "string" ? pe : pe.message,
+                  typeof ue == "string" ? ue : ue.message,
                 ),
               );
             },
@@ -1163,32 +1163,32 @@
           a = i(14947),
           fe = i(3166),
           O = i(72849),
-          H = i(25279),
-          E = i(9472),
+          $ = i(25279),
+          D = i(9472),
           R = i(51746),
-          te = i(18210),
-          ce = i(38410),
+          se = i(18210),
+          pe = i(38410),
           Y = i(11243),
-          xe = i(19730),
+          Pe = i(19730),
           Se = Object.defineProperty,
-          Ne = Object.getOwnPropertyDescriptor,
-          He = (G, b, A, P) => {
+          He = Object.getOwnPropertyDescriptor,
+          Ve = (W, b, A, P) => {
             for (
-              var U = P > 1 ? void 0 : P ? Ne(b, A) : b, X = G.length - 1, de;
+              var H = P > 1 ? void 0 : P ? He(b, A) : b, X = W.length - 1, ce;
               X >= 0;
               X--
             )
-              (de = G[X]) && (U = (P ? de(b, A, U) : de(U)) || U);
-            return P && U && Se(b, A, U), U;
+              (ce = W[X]) && (H = (P ? ce(b, A, H) : ce(H)) || H);
+            return P && H && Se(b, A, H), H;
           };
-        class re extends E.q {
+        class re extends D.q {
           m_bLockedToSpecificAsset;
           m_fnGetImageOptions;
           m_nMaxFileSize;
           m_rgCurrentImageOptionKey = void 0;
-          constructor(b, A, P, U, X, de, De) {
-            const Ce = (0, R.II)(de);
-            super(P, U, X, de.src, Ce),
+          constructor(b, A, P, H, X, ce, De) {
+            const xe = (0, R.II)(ce);
+            super(P, H, X, ce.src, xe),
               (0, a.Gn)(this),
               (this.m_bLockedToSpecificAsset = b),
               (this.m_fnGetImageOptions = A),
@@ -1196,43 +1196,43 @@
           }
           IsValidAssetType(b, A) {
             const P = this.GetCurrentImageOption(),
-              U = P?.width ?? 0,
+              H = P?.width ?? 0,
               X = P?.height ?? 0,
-              de = A && A != this.fileType,
+              ce = A && A != this.fileType,
               De = this.IsFileTypeSupported(this.fileType),
-              Ce = this.BIsVideo() ? 1 : 0,
+              xe = this.BIsVideo() ? 1 : 0,
               Me =
-                U > 0 && X > 0
-                  ? Math.abs(this.width - U) <= Ce &&
-                    Math.abs(this.height - X) <= Ce
+                H > 0 && X > 0
+                  ? Math.abs(this.width - H) <= xe &&
+                    Math.abs(this.height - X) <= xe
                   : !0,
               F = P?.bMismatchedNewSizes;
             let ie = "";
             De
-              ? de
-                ? (ie = (0, te.we)(
+              ? ce
+                ? (ie = (0, se.we)(
                     "#ImageUpload_InvalidFormat",
                     (0, R.EG)(A) ?? "",
                   ))
                 : P?.groupName.trim().length > 0
                   ? this.file.size > this.m_nMaxFileSize &&
-                    (ie = (0, te.we)(
+                    (ie = (0, se.we)(
                       "#ImageUpload_ExceedsMaxFileSize",
-                      (0, xe.dm)(this.m_nMaxFileSize),
+                      (0, Pe.dm)(this.m_nMaxFileSize),
                     ))
-                  : (ie = (0, te.we)("#ImageUpload_EmptyBaseName"))
-              : (ie = (0, te.we)("#ImageUpload_InvalidFormatSelected"));
+                  : (ie = (0, se.we)("#ImageUpload_EmptyBaseName"))
+              : (ie = (0, se.we)("#ImageUpload_InvalidFormatSelected"));
             const _e = [],
               le = [];
             return (
               !Me && P
                 ? le.push(
-                    (0, te.we)("#ImageUpload_InvalidResolution", P.groupName),
+                    (0, se.we)("#ImageUpload_InvalidResolution", P.groupName),
                   )
                 : F &&
                   P &&
                   le.push(
-                    (0, te.we)(
+                    (0, se.we)(
                       "#ImageUpload_MismatchedResolution",
                       P.groupName,
                     ),
@@ -1241,9 +1241,9 @@
                 this.language &&
                 P?.rgExistingLanguages.includes(this.language) &&
                 _e.push(
-                  (0, te.we)(
+                  (0, se.we)(
                     "#ImageUpload_ReplaceLanguage",
-                    (0, te.we)("#Language_" + (0, p.LgB)(this.language)),
+                    (0, se.we)("#Language_" + (0, p.LgB)(this.language)),
                   ),
                 ),
               {
@@ -1262,7 +1262,7 @@
             return !0;
           }
           BIsVideo() {
-            return H.Ho.includes(this.fileType);
+            return $.Ho.includes(this.fileType);
           }
           BSupportsLanguages() {
             return !0;
@@ -1274,7 +1274,7 @@
               P = this.m_fnGetImageOptions();
             return (
               this.m_bLockedToSpecificAsset ||
-                P.find((U) => U.groupName == A) ||
+                P.find((H) => H.groupName == A) ||
                 P.push({
                   sKey: A,
                   fnGetLabelText: () => A,
@@ -1294,10 +1294,10 @@
           GetCurrentImageOption() {
             const b = this.m_fnGetImageOptions();
             if (this.m_rgCurrentImageOptionKey)
-              return b.find((U) => U.sKey == this.m_rgCurrentImageOptionKey);
+              return b.find((H) => H.sKey == this.m_rgCurrentImageOptionKey);
             const A = b.find(
               (P) =>
-                P.groupName == (0, ce.jj)(this.filename, p.xPp).baseFilename,
+                P.groupName == (0, pe.jj)(this.filename, p.xPp).baseFilename,
             );
             if (A) return A;
             if (b.length == 1) return b[0];
@@ -1309,9 +1309,9 @@
             return e.createElement(
               "span",
               null,
-              (0, te.we)("#ImageUpload_ImageGroup"),
+              (0, se.we)("#ImageUpload_ImageGroup"),
               e.createElement(Y.o, {
-                tooltip: (0, te.we)("#ImageUpload_ImageGroup_ttip"),
+                tooltip: (0, se.we)("#ImageUpload_ImageGroup_ttip"),
               }),
             );
           }
@@ -1329,31 +1329,31 @@
             }
           }
         }
-        He([a.sH], re.prototype, "m_rgCurrentImageOptionKey", 2),
-          He([a.EW], re.prototype, "ImageOptions", 1),
-          He([a.XI], re.prototype, "SetCurrentImageOption", 1);
+        Ve([a.sH], re.prototype, "m_rgCurrentImageOptionKey", 2),
+          Ve([a.EW], re.prototype, "ImageOptions", 1),
+          Ve([a.XI], re.prototype, "SetCurrentImageOption", 1);
         var me = i(41735),
           I = i.n(me),
           ae = i(28410),
           S = i(7742),
-          D = i(72604),
+          E = i(72604),
           k = i(41635),
           v = i(71742),
-          W = i(27066),
-          $ = Object.defineProperty,
+          z = i(27066),
+          K = Object.defineProperty,
           N = Object.getOwnPropertyDescriptor,
-          B = (G, b, A, P) => {
+          B = (W, b, A, P) => {
             for (
-              var U = P > 1 ? void 0 : P ? N(b, A) : b, X = G.length - 1, de;
+              var H = P > 1 ? void 0 : P ? N(b, A) : b, X = W.length - 1, ce;
               X >= 0;
               X--
             )
-              (de = G[X]) && (U = (P ? de(b, A, U) : de(U)) || U);
-            return P && U && $(b, A, U), U;
+              (ce = W[X]) && (H = (P ? ce(b, A, H) : ce(H)) || H);
+            return P && H && K(b, A, H), H;
           };
         const Ee = 100 * 1024 * 1024,
           L = 6 * 1024 * 1024;
-        class V extends ce.ss {
+        class G extends pe.ss {
           m_cancel = void 0;
           m_urls;
           m_regexInvalidFilenameCharacters;
@@ -1373,8 +1373,8 @@
             return (
               P
                 ? (A = [
-                    ...P.map((U, X) =>
-                      e.createElement("span", { key: `error${X}` }, U),
+                    ...P.map((H, X) =>
+                      e.createElement("span", { key: `error${X}` }, H),
                     ),
                     P?.length > 0
                       ? e.createElement("br", { key: "br" })
@@ -1385,7 +1385,7 @@
                         href: "https://partner.steamgames.com/doc/store/page/assets#error",
                         key: "a",
                       },
-                      (0, te.we)(
+                      (0, se.we)(
                         "#StoreAdmin_ExtraAssetUpload_UnknownUploadFailure",
                       ),
                     ),
@@ -1421,14 +1421,14 @@
             if ((0, R.aL)(b.type) || (0, R.Uz)(b.type)) {
               const P = await (0, R.zB)(b, (0, R.Uz)(b.type));
               if (P) {
-                const U = b.name
+                const H = b.name
                     .toLowerCase()
                     .replace(this.m_regexInvalidFilenameCharacters, "_"),
                   X = new re(
                     !this.m_onlyAssetGroup,
                     () => this.GetImageOptions(),
                     b,
-                    U,
+                    H,
                     A,
                     P,
                     Ee,
@@ -1448,20 +1448,20 @@
           async UploadAllImages(b, A) {
             this.m_cancel = I().CancelToken.source();
             const P = 4,
-              U = 300 * 1e3,
-              X = (0, ce.$l)(this.GetUploadImages(), b, A),
-              de = X.map(
-                (Ae) => Ae.GetCurrentImageOption()?.groupName ?? Ae.filename,
+              H = 300 * 1e3,
+              X = (0, pe.$l)(this.GetUploadImages(), b, A),
+              ce = X.map(
+                (be) => be.GetCurrentImageOption()?.groupName ?? be.filename,
               );
             let De = 0;
-            const Ce = new Map(),
+            const xe = new Map(),
               Me = new Map();
             let F = 0;
             const ie = async () => {
               for (; F < X.length; ) {
-                const Ae = F++,
-                  oe = X[Ae],
-                  Te = de[Ae];
+                const be = F++,
+                  oe = X[be],
+                  Te = ce[be];
                 (oe.status = "uploading"), De++;
                 try {
                   const he = await this.StartImageUpload(
@@ -1470,33 +1470,33 @@
                     this.m_cancel.token,
                   );
                   if (he.bSuccess) {
-                    const Ge = (0, S.x0)();
-                    Ce.set(he.nRequestId, (Ie) => Ge.resolve(Ie));
-                    const We = new Promise((Ie, ye) =>
-                      setTimeout(() => ye(), U),
+                    const We = (0, S.x0)();
+                    xe.set(he.nRequestId, (Ie) => We.resolve(Ie));
+                    const Ue = new Promise((Ie, ve) =>
+                      setTimeout(() => ve(), H),
                     );
                     try {
-                      const Ie = await Promise.race([We, Ge.promise]);
+                      const Ie = await Promise.race([Ue, We.promise]);
                       Me.set(he.nRequestId, {
-                        bSuccess: Ie == D.R,
+                        bSuccess: Ie == E.R,
                         uploadImage: oe,
                         strGroupName: Te,
                         elErrorMessage:
-                          Ie == D.R
+                          Ie == E.R
                             ? void 0
-                            : (0, te.we)("#MediaConvert_InternalError"),
+                            : (0, se.we)("#MediaConvert_InternalError"),
                       });
                     } catch {
                       Me.set(he.nRequestId, {
                         bSuccess: !1,
                         uploadImage: oe,
                         strGroupName: Te,
-                        elErrorMessage: (0, te.we)(
+                        elErrorMessage: (0, se.we)(
                           "#StoreAdmin_ExtraAssetUpload_Timeout",
                         ),
                       });
                     } finally {
-                      Ce.delete(he.nRequestId);
+                      xe.delete(he.nRequestId);
                     }
                   } else
                     _e.push({ bSuccess: !1, image: oe, uploadResult: [] }),
@@ -1513,40 +1513,40 @@
             Array.from({ length: Math.floor(P) }, () => ie());
             const _e = [];
             for (;;) {
-              if (Ce.size > 0) {
-                const oe = Array.from(Ce.keys()),
+              if (xe.size > 0) {
+                const oe = Array.from(xe.keys()),
                   { bSuccess: Te, rgStatus: he } = await this.CheckUploadStatus(
                     oe,
                     this.m_cancel.token,
                   );
                 if (Te) {
-                  for (const [Ge, We] of k.qQ(oe, he))
-                    if (We != D._9) {
-                      const Ie = Ce.get(Ge);
-                      Ce.delete(Ge), Ie?.(We);
+                  for (const [We, Ue] of k.qQ(oe, he))
+                    if (Ue != E._9) {
+                      const Ie = xe.get(We);
+                      xe.delete(We), Ie?.(Ue);
                     }
                 }
               }
-              const Ae = new Map(Me);
+              const be = new Map(Me);
               Me.clear();
               for (const [
                 oe,
                 {
                   bSuccess: Te,
                   uploadImage: he,
-                  strGroupName: Ge,
-                  elErrorMessage: We,
+                  strGroupName: We,
+                  elErrorMessage: Ue,
                 },
-              ] of Ae) {
+              ] of be) {
                 if (!Te) {
                   (he.status = "failed"),
-                    (he.message = We),
+                    (he.message = Ue),
                     _e.push({ bSuccess: !1, image: he, uploadResult: [] });
                   continue;
                 }
                 const Ie = await this.CompleteUpload(
                   oe,
-                  Ge,
+                  We,
                   he.language,
                   this.m_cancel.token,
                 );
@@ -1566,41 +1566,41 @@
             );
             return (
               _e
-                .filter((Ae) => Ae.bSuccess)
-                .forEach((Ae) => (Ae.uploadResult = le)),
+                .filter((be) => be.bSuccess)
+                .forEach((be) => (be.uploadResult = le)),
               _e
             );
           }
           async StartImageUpload(b, A, P) {
-            let U;
+            let H;
             if (b.file.size > L) {
               const X = new FormData();
               X.append("sessionid", (0, fe.KC)()),
                 X.append("name", A),
                 X.append("file_size", "" + b.file.size);
-              const de = await this.MakePost(
+              const ce = await this.MakePost(
                 this.m_urls.strGetUploadUrlForAsset,
                 X,
                 { "Content-Type": "multipart/form-data" },
                 "GetUploadUrl",
                 P,
               );
-              if (!de.bSuccess) return de;
-              U = de.data;
+              if (!ce.bSuccess) return ce;
+              H = ce.data;
               const De = (0, R.N1)(
                 { "Content-Type": "application/octet-stream" },
-                U.headers_for_upload,
+                H.headers_for_upload,
               );
               if (
                 !(await I()
-                  .put(U.upload_url, b.file, { headers: De, cancelToken: P })
+                  .put(H.upload_url, b.file, { headers: De, cancelToken: P })
                   .then((Me) => Me.status == 200 || Me.status == 201)
                   .catch(() => !1))
               )
                 return (
                   console.warn(
                     "CExtraAssetsImageUploader put to CDNStorage url failed",
-                    U.upload_url,
+                    H.upload_url,
                   ),
                   { bSuccess: !1 }
                 );
@@ -1610,18 +1610,18 @@
               X.append("sessionid", (0, fe.KC)()),
                 X.append("asset_type", "extra_asset_v2"),
                 X.append("name", A),
-                U
-                  ? X.append("temp_file_id", U.temp_file_id)
+                H
+                  ? X.append("temp_file_id", H.temp_file_id)
                   : X.append("file", b.file);
-              const de = await this.MakePost(
+              const ce = await this.MakePost(
                 this.m_urls.strBeginConvert,
                 X,
                 { "Content-Type": "multipart/form-data" },
                 "BeginUploadUrl",
                 P,
               );
-              if (!de.bSuccess) return de;
-              const De = de.data.request_id;
+              if (!ce.bSuccess) return ce;
+              const De = ce.data.request_id;
               return (
                 (b.status = "processing"), { bSuccess: !0, nRequestId: De }
               );
@@ -1631,36 +1631,36 @@
             const P = new FormData();
             P.append("sessionid", (0, fe.KC)()),
               P.append("request_ids", b.join(","));
-            const U = await this.MakePost(
+            const H = await this.MakePost(
               this.m_urls.strCheckConvertStatus,
               P,
               void 0,
               "CheckUploadStatus",
               A,
             );
-            return U.bSuccess ? { bSuccess: !0, rgStatus: U.data.status } : U;
+            return H.bSuccess ? { bSuccess: !0, rgStatus: H.data.status } : H;
           }
-          async CompleteUpload(b, A, P, U) {
+          async CompleteUpload(b, A, P, H) {
             const X = new FormData();
             X.append("sessionid", (0, fe.KC)()),
               X.append("request_id", b.toString()),
               X.append("name", A),
               X.append("asset_type", "extra_asset_v2"),
               P != p.xPp && X.append("language", (0, p.LgB)(P));
-            const de = await this.MakePost(
+            const ce = await this.MakePost(
               this.m_urls.strCompleteConvert,
               X,
               void 0,
               "CompleteUpload",
-              U,
+              H,
             );
-            return de.bSuccess
+            return ce.bSuccess
               ? ((0, v.wT)(
-                  de.data?.complete,
+                  ce.data?.complete,
                   "CompleteUpload shouldn't be run until all uploads are complete",
                 ),
                 { bSuccess: !0 })
-              : de;
+              : ce;
           }
           async GetExtraAssets(b) {
             const A = new FormData();
@@ -1676,43 +1676,43 @@
               ? { bSuccess: !0, rgExtraAssets: P.data?.rgExtraAssets }
               : P;
           }
-          async MakePost(b, A, P, U, X) {
-            let de;
+          async MakePost(b, A, P, H, X) {
+            let ce;
             try {
               const De = await I().post(b, A, {
                 withCredentials: !0,
                 headers: P,
                 cancelToken: X,
               });
-              if (De.status == 200 && typeof De.data == "object") de = De.data;
+              if (De.status == 200 && typeof De.data == "object") ce = De.data;
               else
                 return (
-                  console.warn(`CExtraAssetsImageUploader ${U} failed`, b),
+                  console.warn(`CExtraAssetsImageUploader ${H} failed`, b),
                   { bSuccess: !1 }
                 );
             } catch (De) {
-              const Ce = this.GetErrorsFromErrorResponse(De);
+              const xe = this.GetErrorsFromErrorResponse(De);
               return (
-                console.warn(`CExtraAssetsImageUploader ${U} failed`, b, Ce),
-                { bSuccess: !1, elErrorMessage: Ce }
+                console.warn(`CExtraAssetsImageUploader ${H} failed`, b, xe),
+                { bSuccess: !1, elErrorMessage: xe }
               );
             }
-            return { bSuccess: !0, data: de };
+            return { bSuccess: !0, data: ce };
           }
           CancelAllUploads() {
-            this.m_cancel?.cancel((0, te.we)("#ImageUpload_CancelRequest"));
+            this.m_cancel?.cancel((0, se.we)("#ImageUpload_CancelRequest"));
           }
           GetImageOptions() {
-            const b = (F, ie, _e, le, Ae, oe) => ({
+            const b = (F, ie, _e, le, be, oe) => ({
                 baseFilename: F,
                 language: ie,
                 bNew: _e,
-                size: { width: le, height: Ae },
+                size: { width: le, height: be },
                 fileSize: oe,
               }),
               A = [];
             for (const F of this.m_filesToUpload.filter(
-              (ie) => ie.status == "pending" || (0, E.o)(ie.status),
+              (ie) => ie.status == "pending" || (0, D.o)(ie.status),
             ))
               if (this.m_onlyAssetGroup)
                 A.push(
@@ -1726,7 +1726,7 @@
                   ),
                 );
               else {
-                const ie = (0, ce.jj)(F.filename).baseFilename,
+                const ie = (0, pe.jj)(F.filename).baseFilename,
                   _e = F.GetCurrentImageOptionKey() ?? ie;
                 A.push(
                   b(
@@ -1745,63 +1745,63 @@
               F.languages.map((_e) =>
                 b(F.baseFilename, _e, !1, ie?.width ?? 0, ie?.height ?? 0, 0),
               );
-            let U = this.m_rgExistingAssetGroups ?? [],
+            let H = this.m_rgExistingAssetGroups ?? [],
               X = this.m_rgImageSizes ?? [];
             if (this.m_onlyAssetGroup) {
-              const F = U.findIndex(
+              const F = H.findIndex(
                 (ie) => ie.baseFilename == this.m_onlyAssetGroup.baseFilename,
               );
               (0, v.wT)(
                 F != -1,
                 "onlyAssetGroup isn't in the existing assets list",
               ),
-                (U = [U[F]]),
+                (H = [H[F]]),
                 (X = [X[F]]);
             }
-            const de = k.qQ(U, X).flatMap(([F, ie]) => P(F, ie)),
-              Ce = A.concat(de).reduce((F, ie) => {
+            const ce = k.qQ(H, X).flatMap(([F, ie]) => P(F, ie)),
+              xe = A.concat(ce).reduce((F, ie) => {
                 const _e = F.get(ie.baseFilename) ?? [];
                 return _e.push(ie), F.set(ie.baseFilename, _e), F;
               }, new Map()),
               Me = [];
-            for (const F of Ce.keys()) {
-              const ie = Ce.get(F).filter((Ie) => Ie.language != p.xPp),
+            for (const F of xe.keys()) {
+              const ie = xe.get(F).filter((Ie) => Ie.language != p.xPp),
                 _e = new Set(ie.map((Ie) => Ie.language)).size,
                 le =
                   _e > 1
-                    ? (0, te.Yp)(
+                    ? (0, se.Yp)(
                         "#StoreAdmin_ExtraAssetUpload_LocalizeGroup",
                         _e,
                         F,
                       )
                     : F,
-                Ae = new Map();
+                be = new Map();
               for (let Ie of ie
-                .filter((ye) => !ye.bNew)
-                .concat(ie.filter((ye) => ye.bNew)))
-                Ae.set(Ie.language, Ie);
-              const oe = Array.from(Ae.values()).filter((Ie) => !Ie.bNew),
+                .filter((ve) => !ve.bNew)
+                .concat(ie.filter((ve) => ve.bNew)))
+                be.set(Ie.language, Ie);
+              const oe = Array.from(be.values()).filter((Ie) => !Ie.bNew),
                 Te = oe.length > 0 ? oe[0].size : void 0,
                 he = ie.filter((Ie) => Ie.bNew).at(0)?.size,
-                Ge = ie
+                We = ie
                   .filter((Ie) => Ie.bNew)
                   .some(
                     (Ie) =>
                       Ie.size.width != he.width || Ie.size.height != he.height,
                   ),
-                We = {
+                Ue = {
                   sKey: F,
                   fnGetLabelText: () => le,
                   width: Te?.width ?? 0,
                   height: Te?.height ?? 0,
                   bEnforceDimensions: !1,
                   groupName: F,
-                  bMismatchedNewSizes: Ge,
+                  bMismatchedNewSizes: We,
                   rgExistingLanguages: ie
                     .filter((Ie) => !Ie.bNew)
                     .map((Ie) => Ie.language),
                 };
-              Me.push(We);
+              Me.push(Ue);
             }
             return (
               Me.sort((F, ie) =>
@@ -1811,34 +1811,34 @@
             );
           }
         }
-        B([a.sH], V.prototype, "m_filesToUpload", 2),
-          B([a.sH], V.prototype, "m_onlyAssetGroup", 2),
-          B([a.sH], V.prototype, "m_rgExistingAssetGroups", 2),
-          B([a.sH], V.prototype, "m_rgImageSizes", 2),
-          B([W.o], V.prototype, "GetUploadImages", 1),
-          B([W.o], V.prototype, "ClearImages", 1),
-          B([W.o], V.prototype, "DeleteUploadImage", 1),
-          B([a.XI], V.prototype, "SetExistingAssetGroups", 1),
-          B([a.XI], V.prototype, "SetOnlyAssetGroup", 1),
-          B([W.o], V.prototype, "AddImageForLanguage", 1);
+        B([a.sH], G.prototype, "m_filesToUpload", 2),
+          B([a.sH], G.prototype, "m_onlyAssetGroup", 2),
+          B([a.sH], G.prototype, "m_rgExistingAssetGroups", 2),
+          B([a.sH], G.prototype, "m_rgImageSizes", 2),
+          B([z.o], G.prototype, "GetUploadImages", 1),
+          B([z.o], G.prototype, "ClearImages", 1),
+          B([z.o], G.prototype, "DeleteUploadImage", 1),
+          B([a.XI], G.prototype, "SetExistingAssetGroups", 1),
+          B([a.XI], G.prototype, "SetOnlyAssetGroup", 1),
+          B([z.o], G.prototype, "AddImageForLanguage", 1);
         function w() {
-          const G = (0, ae.Z3)("ajaxgetextraassets"),
+          const W = (0, ae.Z3)("ajaxgetextraassets"),
             b = (0, ae.Z3)("ajaxgetuploadurlforasset"),
             A = (0, ae.Z3)("ajaxbeginconvertassetasync"),
             P = (0, ae.Z3)("ajaxcheckconvertassetsstatus"),
-            U = (0, ae.Z3)("ajaxtrytocompleteconvertasset"),
+            H = (0, ae.Z3)("ajaxtrytocompleteconvertasset"),
             X = e.useMemo(
               () => ({
-                strGetExtraAssets: G,
+                strGetExtraAssets: W,
                 strGetUploadUrlForAsset: b,
                 strBeginConvert: A,
                 strCheckConvertStatus: P,
-                strCompleteConvert: U,
+                strCompleteConvert: H,
               }),
-              [G, b, A, P, U],
+              [W, b, A, P, H],
             ),
-            { regexInvalidFilenameCharacters: de } = (0, ae.L4)();
-          return e.useMemo(() => new V(X, de), [X, de]);
+            { regexInvalidFilenameCharacters: ce } = (0, ae.L4)();
+          return e.useMemo(() => new G(X, ce), [X, ce]);
         }
       },
       34604: (ee, ze, i) => {
@@ -1846,28 +1846,28 @@
         i.d(ze, {
           Bv: () => Se,
           FZ: () => Y,
-          IP: () => xe,
-          K7: () => He,
+          IP: () => Pe,
+          K7: () => Ve,
           SG: () => me,
           TQ: () => re,
           ar: () => R,
           i$: () => O,
           nO: () => fe,
-          pN: () => H,
-          q3: () => E,
-          wN: () => Ne,
+          pN: () => $,
+          q3: () => D,
+          wN: () => He,
         });
         var e = i(99412),
           p = i(69787);
         const a = 0,
           fe = 1;
         function O(I) {
-          return I && !H(I);
+          return I && !$(I);
         }
-        function H(I) {
+        function $(I) {
           return I && "extra_asset_name" in I;
         }
-        function E(I) {
+        function D(I) {
           if (I) return O(I) ? I.name : I.extra_asset_name;
         }
         function R(I, ae) {
@@ -1888,12 +1888,12 @@
                   )),
               k)
             )
-              return { url: k.url, usage: te(k.extension) };
+              return { url: k.url, usage: se(k.extension) };
           }
-          const D = I.encodings[0];
-          return D ? { url: D.url, usage: te(D.extension) } : null;
+          const E = I.encodings[0];
+          return E ? { url: E.url, usage: se(E.extension) } : null;
         }
-        function te(I) {
+        function se(I) {
           switch (I) {
             case "mp4":
             case "webm":
@@ -1901,34 +1901,34 @@
           }
           return a;
         }
-        function ce(I, ae) {
+        function pe(I, ae) {
           if (!I || Object.keys(I).length == 0) return null;
           if (Object.keys(I).length == 1) return Object.values(I).at(0);
           let S = I[(0, e.LgB)(ae)];
           if (S) return S;
-          const D = ae == e.ZLm ? e.NFp : e.Bhc;
-          return (S = I[(0, e.LgB)(D)]), S || (ae == e.xPp ? I[0] : null);
+          const E = ae == e.ZLm ? e.NFp : e.Bhc;
+          return (S = I[(0, e.LgB)(E)]), S || (ae == e.xPp ? I[0] : null);
         }
         function Y(I, ae = e.Bhc, S = 0) {
-          const D = xe(I, !1, ae);
-          return D ? (0, p.cn)(D.url, S) : null;
+          const E = Pe(I, !1, ae);
+          return E ? (0, p.cn)(E.url, S) : null;
         }
-        function xe(I, ae, S = e.Bhc) {
+        function Pe(I, ae, S = e.Bhc) {
           if (!I) return;
           if (O(I)) return { url: I.url, usage: a };
-          const D = ce(I.images, S);
-          return D ? R(D, ae) : null;
+          const E = pe(I.images, S);
+          return E ? R(E, ae) : null;
         }
         function Se(I, ae = e.Bhc) {
           return I ? (O(I) ? I.name : I.alt_text?.[(0, e.LgB)(ae)]) : void 0;
         }
-        function Ne(I) {
+        function He(I) {
           return (
             (I?.images && Object.keys(I.images).map((ae) => (0, e.sfN)(ae))) ??
             []
           );
         }
-        function He(I) {
+        function Ve(I) {
           return I
             ? (O(I) ? I.name : I.extra_asset_name).replace(
                 /^\{STEAM_APP_IMAGE\}\/extras\//,
@@ -1944,65 +1944,65 @@
       },
       17616: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { KC: () => re, eE: () => v, gU: () => k, jy: () => He });
+        i.d(ze, { KC: () => re, eE: () => v, gU: () => k, jy: () => Ve });
         var e = i(7850),
           p = i(90626),
           a = i(58534),
           fe = i(8323),
           O = i(36707),
-          H = i(86048),
-          E = i(64868),
+          $ = i(86048),
+          D = i(64868),
           R = i(98609),
-          te = i(97982),
-          ce = i.n(te),
+          se = i(97982),
+          pe = i.n(se),
           Y = i(99412),
-          xe = i(50109);
+          Pe = i(50109);
         const Se = "v_StoreAdminLanguageChange",
-          Ne = p.createContext(void 0);
-        function He(W) {
-          const [$, N] = p.useState(),
+          He = p.createContext(void 0);
+        function Ve(z) {
+          const [K, N] = p.useState(),
             B = p.useMemo(
-              () => ({ strActiveLanguage: $, setActiveLanguage: N }),
-              [$],
+              () => ({ strActiveLanguage: K, setActiveLanguage: N }),
+              [K],
             );
           return (
             p.useEffect(() => {
-              $ &&
+              K &&
                 window.LocChangeControlsToLanguage &&
-                window.LocChangeControlsToLanguage($);
-            }, [$]),
-            (0, H.l6)(
+                window.LocChangeControlsToLanguage(K);
+            }, [K]),
+            (0, $.l6)(
               window,
               Se,
               p.useCallback((Ee) => {
                 Ee.detail.strLanguage && N(Ee.detail.strLanguage);
               }, []),
             ),
-            (0, e.jsx)(Ne.Provider, { value: B, children: W.children })
+            (0, e.jsx)(He.Provider, { value: B, children: z.children })
           );
         }
-        function re(W, $, N, B) {
-          const Ee = p.useMemo(() => Array.from(W.keys()), [W]),
+        function re(z, K, N, B) {
+          const Ee = p.useMemo(() => Array.from(z.keys()), [z]),
             [L] = p.useState(() => {
-              const X = new Map($);
-              return new Map(Ee.map((de) => [de, (0, fe.Jc)(X.get(de) || "")]));
+              const X = new Map(K);
+              return new Map(Ee.map((ce) => [ce, (0, fe.Jc)(X.get(ce) || "")]));
             }),
-            V = p.useContext(Ne),
-            [w, G] = p.useState(() => D(L.size ? L : W)),
-            b = V?.strActiveLanguage ?? w,
+            G = p.useContext(He),
+            [w, W] = p.useState(() => E(L.size ? L : z)),
+            b = G?.strActiveLanguage ?? w,
             A = p.useCallback(
               (X) => {
-                V?.setActiveLanguage(X), G(X);
+                G?.setActiveLanguage(X), W(X);
               },
-              [V],
+              [G],
             ),
             P = (0, e.jsx)(me, {
-              mapLanguages: W,
+              mapLanguages: z,
               mapValues: L,
               strActiveLanguage: b,
               setActiveLanguage: A,
             }),
-            U =
+            H =
               !!(N && B) &&
               (0, e.jsx)(ae, {
                 rgLanguages: Ee,
@@ -2015,56 +2015,56 @@
             mapValues: L,
             rctLanguageSelect: P,
             rgLanguages: Ee.map(Y.sfN),
-            rctHiddenInputs: U,
+            rctHiddenInputs: H,
             setActiveLanguage: A,
           };
         }
-        function me(W) {
+        function me(z) {
           const {
-              mapLanguages: $,
+              mapLanguages: K,
               mapValues: N,
               strActiveLanguage: B,
               setActiveLanguage: Ee,
-            } = W,
+            } = z,
             L = p.useMemo(() => {
               let w = [];
               return (
-                $.forEach((G, b) => {
+                K.forEach((W, b) => {
                   w.push({
                     data: b,
                     label: (0, e.jsx)(I, {
-                      strLocLanguage: G,
+                      strLocLanguage: W,
                       value: N.get(b),
                     }),
                   });
                 }),
                 w
               );
-            }, [$, N]),
-            V = p.useCallback((w) => Ee(w.data), [Ee]);
+            }, [K, N]),
+            G = p.useCallback((w) => Ee(w.data), [Ee]);
           return (0, e.jsx)(a.m, {
-            strClassName: te.LanguageSelect,
-            onChange: V,
+            strClassName: se.LanguageSelect,
+            onChange: G,
             selectedOption: B,
             rgOptions: L,
           });
         }
-        function I(W) {
-          const { strLocLanguage: $, value: N } = W,
+        function I(z) {
+          const { strLocLanguage: K, value: N } = z,
             [B, Ee] = p.useState(() => !!N?.Value?.trim()),
-            L = p.useCallback((V) => Ee(!!V.trim()), []);
+            L = p.useCallback((G) => Ee(!!G.trim()), []);
           return (
-            (0, E.x2)(N, L),
+            (0, D.x2)(N, L),
             p.useEffect(() => L(N.Value), [L, N]),
             (0, e.jsx)("span", {
-              className: (0, O.A)(te.LanguageOption, B && te.HasValue),
-              children: $,
+              className: (0, O.A)(se.LanguageOption, B && se.HasValue),
+              children: K,
             })
           );
         }
-        function ae(W) {
-          const { rgLanguages: $, mapValues: N, namePrefix: B, rgPath: Ee } = W;
-          return $.map((L) =>
+        function ae(z) {
+          const { rgLanguages: K, mapValues: N, namePrefix: B, rgPath: Ee } = z;
+          return K.map((L) =>
             (0, e.jsx)(
               S,
               { language: L, value: N.get(L), namePrefix: B, rgPath: Ee },
@@ -2072,38 +2072,38 @@
             ),
           );
         }
-        const S = p.memo(function ($) {
-          const { language: N, value: B, namePrefix: Ee, rgPath: L } = $,
-            V = (0, E.gc)(B) || "",
-            w = Ee + [...L, N].map((G) => `[${G}]`).join("");
-          return (0, e.jsx)("input", { type: "hidden", name: w, value: V });
+        const S = p.memo(function (K) {
+          const { language: N, value: B, namePrefix: Ee, rgPath: L } = K,
+            G = (0, D.gc)(B) || "",
+            w = Ee + [...L, N].map((W) => `[${W}]`).join("");
+          return (0, e.jsx)("input", { type: "hidden", name: w, value: G });
         });
-        function D(W) {
-          return W.has(R.TS.LANGUAGE)
+        function E(z) {
+          return z.has(R.TS.LANGUAGE)
             ? R.TS.LANGUAGE
-            : W.has("english")
+            : z.has("english")
               ? "english"
-              : W.keys().next().value;
+              : z.keys().next().value;
         }
         function k() {
-          const W = p.useContext(Ne);
-          return (0, Y.sfN)(W?.strActiveLanguage, Y.Bhc);
+          const z = p.useContext(He);
+          return (0, Y.sfN)(z?.strActiveLanguage, Y.Bhc);
         }
-        function v(W) {
+        function v(z) {
           const {
-              strActiveLanguage: $,
+              strActiveLanguage: K,
               mapValues: N,
               rctLanguageSelect: B,
               setActiveLanguage: Ee,
-            } = re(W, [], null, null),
-            L = (0, Y.sfN)($, Y.Bhc);
+            } = re(z, [], null, null),
+            L = (0, Y.sfN)(K, Y.Bhc);
           return (
             p.useEffect(() => {
-              xe.O.Get().SetCurEditLanguage(L);
+              Pe.O.Get().SetCurEditLanguage(L);
             }, [L]),
-            (0, E.hL)(xe.O.Get().GetCallback(), (V) => Ee((0, Y.LgB)(V))),
+            (0, D.hL)(Pe.O.Get().GetCallback(), (G) => Ee((0, Y.LgB)(G))),
             {
-              strActiveLanguage: $,
+              strActiveLanguage: K,
               eActiveLang: L,
               rctLanguageSelect: B,
               mapValues: N,
@@ -2119,10 +2119,10 @@
           a = i(64868),
           fe = i(98724),
           O = i(52893),
-          H = i(8145),
-          E = i(57053),
+          $ = i(8145),
+          D = i(57053),
           R = i(71742);
-        class te {
+        class se {
           m_nodes = [];
           m_schema;
           m_bConvertNewlinesToBR;
@@ -2171,7 +2171,7 @@
             return h || [this.m_schema.text(u)];
           }
         }
-        function ce(m) {
+        function pe(m) {
           return m
             .filter((u) => u.isText)
             .map((u) => u.text)
@@ -2186,14 +2186,14 @@
             u
           );
         }
-        class xe extends H.Al {
+        class Pe extends $.Al {
           m_schemaConfig;
           m_mapPMBBNodes = new Map();
           m_bUseBackslashEscapes;
           constructor(u, h) {
             super(u.bbcode_dictionary, (y) => {
               const j = y?.tag && u.bbcode_dictionary.get(y.tag);
-              return new te(
+              return new se(
                 u.pm_schema,
                 h,
                 j && "Constructor" in j ? j.Constructor : void 0,
@@ -2220,41 +2220,41 @@
             );
             return this.m_schemaConfig.pm_schema.topNodeType.createChecked(
               {},
-              this.ConvertLineBreaksToParagraphs(E.FK.fromArray(h)),
+              this.ConvertLineBreaksToParagraphs(D.FK.fromArray(h)),
             );
           }
           TryCreateNode(u, h, y) {
-            let j = E.FK.from(h),
-              K;
+            let j = D.FK.from(h),
+              V;
             if (
               !u.node.validContent(j) &&
               (u.node.isInline ||
-                (j = E.FK.from(
+                (j = D.FK.from(
                   h.filter((M) =>
                     M.isText && M.text.match(/^\s*$/)
                       ? !1
                       : !(
                           M.type == this.schema.nodes.hard_break &&
-                          !u.node.validContent(E.FK.from(M))
+                          !u.node.validContent(D.FK.from(M))
                         ),
                   ),
                 )),
               !u.node.validContent(j))
             ) {
               const M = u.acceptNode;
-              K = [];
+              V = [];
               let J = [],
-                se = !1,
+                te = !1,
                 q = !1;
               for (let ge = 0; ge < j.childCount; ge++) {
-                const Pe = j.child(ge),
-                  ue = E.FK.from(Pe),
-                  be = u.node.validContent(ue);
-                !q && (be || M?.validContent(ue))
-                  ? (be || (se = !0), J.push(Pe))
-                  : ((q = !0), K.push(Pe));
+                const je = j.child(ge),
+                  de = D.FK.from(je),
+                  Ce = u.node.validContent(de);
+                !q && (Ce || M?.validContent(de))
+                  ? (Ce || (te = !0), J.push(je))
+                  : ((q = !0), V.push(je));
               }
-              if ((console.assert(!se || !!M), se && M)) {
+              if ((console.assert(!te || !!M), te && M)) {
                 M.isBlock &&
                   J.length > 1 &&
                   J[J.length - 1].type == this.schema.nodes.hard_break &&
@@ -2264,21 +2264,21 @@
                   ge,
                   `Indicated acceptNode type ${M.name} for ${u.node.name} missing`,
                 );
-                let Pe;
+                let je;
                 try {
                   ge
-                    ? (Pe = this.TryCreateNode(ge, J, void 0))
-                    : (Pe = M.createChecked(void 0, J));
-                } catch (ue) {
-                  console.error(ue), (Pe = []), (K = [...J, ...K]);
+                    ? (je = this.TryCreateNode(ge, J, void 0))
+                    : (je = M.createChecked(void 0, J));
+                } catch (de) {
+                  console.error(de), (je = []), (V = [...J, ...V]);
                 }
-                j = E.FK.from(Pe);
-              } else j = E.FK.from(J);
+                j = D.FK.from(je);
+              } else j = D.FK.from(J);
             }
             try {
               const M =
                 u.node.createAndFill(y, j) || u.node.createChecked(y, j);
-              return K ? [M, ...K] : M;
+              return V ? [M, ...V] : M;
             } catch {
               return (
                 (0, R.wT)(
@@ -2296,18 +2296,18 @@
                 ("convertContentToAttr" in u &&
                   u.convertContentToAttr &&
                   ((!j || !j[u.convertContentToAttr]) &&
-                    (j = { ...(j || {}), [u.convertContentToAttr]: ce(y) }),
+                    (j = { ...(j || {}), [u.convertContentToAttr]: pe(y) }),
                   "node" in u && (y = [])),
                 "node" in u)
               )
                 return this.TryCreateNode(u, y, j);
               {
-                const K = u.mark.create(j);
-                return y.map((M) => this.RecursivelyApplyMark(M, K));
+                const V = u.mark.create(j);
+                return y.map((M) => this.RecursivelyApplyMark(M, V));
               }
-            } catch (K) {
+            } catch (V) {
               return (
-                console.error(`Error parsing [${h.tagname}] tag: ${K}`, K), []
+                console.error(`Error parsing [${h.tagname}] tag: ${V}`, V), []
               );
             }
           }
@@ -2331,7 +2331,7 @@
               M.acceptNode && h.set(M.acceptNode.name, M.node);
             });
             const j = [],
-              K = {
+              V = {
                 nodes: [],
                 nodeType: void 0,
                 reset() {
@@ -2353,34 +2353,34 @@
             return (
               u.forEach((M) => {
                 const J = M.type == y.nodes.hard_break,
-                  se = E.FK.from(M);
-                if (J || y.topNodeType.validContent(se)) {
-                  const q = J && K.nodes.length > 0;
-                  K.emit(),
+                  te = D.FK.from(M);
+                if (J || y.topNodeType.validContent(te)) {
+                  const q = J && V.nodes.length > 0;
+                  V.emit(),
                     J
                       ? q || j.push(y.nodes.paragraph.createChecked())
                       : j.push(M);
                 } else {
                   let q;
                   if (
-                    (y.nodes.paragraph.validContent(se)
+                    (y.nodes.paragraph.validContent(te)
                       ? (q = y.nodes.paragraph)
                       : (q = h.get(M.type.name)),
                     q)
                   )
-                    K.accumulate(q, M);
+                    V.accumulate(q, M);
                   else {
                     (0, R.wT)(
                       !1,
                       `Couldn't accept ${M.type.name} at root of document, converting to paragraph`,
                     );
                     const ge = Y(M);
-                    ge && K.accumulate(y.nodes.paragraph, y.text(ge));
+                    ge && V.accumulate(y.nodes.paragraph, y.text(ge));
                   }
                 }
               }),
-              (K.nodes.length || !j.length) && K.emit(!0),
-              E.FK.from(j)
+              (V.nodes.length || !j.length) && V.emit(!0),
+              D.FK.from(j)
             );
           }
         }
@@ -2390,80 +2390,80 @@
             config: u.pm_to_bbcode_config,
             bUseBackslashEscapes: h?.bUseBackslashEscapes ?? !0,
           };
-          return Ne(y, m, [], !1);
+          return He(y, m, [], !1);
         }
-        function Ne(m, u, h, y) {
-          const { schema: j, config: K } = m;
+        function He(m, u, h, y) {
+          const { schema: j, config: V } = m;
           let M = u.marks,
             J = "";
-          const se = K.mapNodes.get(u.type),
-            { tag: q, args: ge } = I(se, u);
+          const te = V.mapNodes.get(u.type),
+            { tag: q, args: ge } = I(te, u);
           q == "emoticon"
             ? (J += ":")
-            : q && (J += (0, H.CS)(q, ge, se?.bVerbatimArgs));
-          const Pe = y || !!se?.bVerbatimContent;
-          let ue = !1;
+            : q && (J += (0, $.CS)(q, ge, te?.bVerbatimArgs));
+          const je = y || !!te?.bVerbatimContent;
+          let de = !1;
           return (
-            u.content.forEach((be) => {
+            u.content.forEach((Ce) => {
               if (
-                (([J, M] = re(K, M, be.marks, J)),
-                ([J, M] = me(K, M, be.marks, J)),
-                be.type.isText)
+                (([J, M] = re(V, M, Ce.marks, J)),
+                ([J, M] = me(V, M, Ce.marks, J)),
+                Ce.type.isText)
               ) {
-                const Le = be.text || "";
-                J += Pe || !m.bUseBackslashEscapes ? Le : (0, H.vE)(Le);
-              } else if (be.type == j.nodes.hard_break)
+                const Le = Ce.text || "";
+                J += je || !m.bUseBackslashEscapes ? Le : (0, $.vE)(Le);
+              } else if (Ce.type == j.nodes.hard_break)
                 J += `
 `;
               else {
-                const Le = He(K, be);
+                const Le = Ve(V, Ce);
                 Le &&
-                  ue &&
+                  de &&
                   (J += `
 `),
-                  (J += Ne(m, be, M, Pe)),
-                  (ue = Le);
+                  (J += He(m, Ce, M, je)),
+                  (de = Le);
                 return;
               }
-              ue = !1;
+              de = !1;
             }),
-            ([J] = re(K, M, h, J)),
-            q == "emoticon" ? (J += ":") : q && (J += (0, H.op)(q)),
+            ([J] = re(V, M, h, J)),
+            q == "emoticon" ? (J += ":") : q && (J += (0, $.op)(q)),
             J
           );
         }
-        function He(m, u) {
+        function Ve(m, u) {
           return u.type.isBlock && !I(m.mapNodes.get(u.type), u).tag;
         }
         function re(m, u, h, y) {
           const j = [];
           for (const M of u) h.indexOf(M) === -1 && j.push(M);
           if (!j.length) return [y, u];
-          const K = u.slice();
+          const V = u.slice();
           for (
             ;
             j.length &&
-            ((0, R.wT)(K.length, "no marks left to close"), !!K.length);
+            ((0, R.wT)(V.length, "no marks left to close"), !!V.length);
           ) {
-            const M = K.pop(),
+            const M = V.pop(),
               J = m.mapMarks.get(M.type),
-              { tag: se } = ae(J, M);
-            y += (0, H.op)(se);
+              { tag: te } = ae(J, M);
+            y += (0, $.op)(te);
             const q = j.indexOf(M);
             q != -1 && j.splice(q, 1);
           }
-          return [y, K];
+          return [y, V];
         }
         function me(m, u, h, y) {
           let j;
-          for (const K of h)
-            if (u.indexOf(K) === -1) {
+          for (const V of h)
+            if (u.indexOf(V) === -1) {
               j || (j = u.slice());
-              const M = m.mapMarks.get(K.type);
+              const M = m.mapMarks.get(V.type);
               if (((0, R.wT)(M, "mark missing bbtag"), M)) {
-                j.push(K);
-                const { args: J, tag: se } = ae(M, K);
-                y += (0, H.CS)(se, J);
+                j.push(V);
+                const { args: J, tag: te } = ae(M, V);
+                y += (0, $.CS)(te, J);
               }
             }
           return [y, j ?? u];
@@ -2489,7 +2489,7 @@
           return { tag: m?.tag, args: {} };
         }
         const S = new O.hs("CProseMirrorState - OnChange");
-        class D {
+        class E {
           m_bbcode;
           m_currentDoc;
           m_bHasUncomittedChanges = !1;
@@ -2501,11 +2501,11 @@
           m_view;
           m_state;
           constructor(u, h, y, j) {
-            const { parser: K, bUseBackslashEscapes: M = !0 } = j ?? {};
+            const { parser: V, bUseBackslashEscapes: M = !0 } = j ?? {};
             (this.m_schemaConfig = u),
               (this.m_bUseBackslashEscapes = M),
-              (this.m_bbcodeParser = new xe(u, {
-                ...K,
+              (this.m_bbcodeParser = new Pe(u, {
+                ...V,
                 bUseBackslashEscapes: M,
               })),
               (this.m_bbcode = h),
@@ -2551,7 +2551,7 @@
                   console.assert(!this.m_view),
                   (this.m_view = y),
                   {
-                    update: (j, K) => this.OnStateChange(K, j.state),
+                    update: (j, V) => this.OnStateChange(V, j.state),
                     destroy: () => (this.m_view = void 0),
                   }
                 ),
@@ -2607,69 +2607,69 @@
           (0, a.hL)(m?.OnStateChangedCallbacks, u);
         }
         var v = i(90626);
-        function W(m, u) {
+        function z(m, u) {
           const { msAutosaveTimeout: h = 1e3, msMaxInterval: y = h * 10 } =
               u || {},
-            [j, K] = v.useState(!1),
+            [j, V] = v.useState(!1),
             M = v.useRef(0);
           return (
             k(
               m,
               v.useCallback(() => {
-                (M.current = performance.now()), K(!0);
+                (M.current = performance.now()), V(!0);
               }, []),
             ),
             v.useEffect(() => {
               if (!j || !m) return;
               const J = performance.now(),
-                se = (ge = !1) => {
+                te = (ge = !1) => {
                   q = void 0;
-                  const Pe = performance.now(),
-                    ue = Pe - M.current;
-                  ge || ue >= h || Pe - J >= y
+                  const je = performance.now(),
+                    de = je - M.current;
+                  ge || de >= h || je - J >= y
                     ? (console.log("Committing changes"),
                       m.CommitChanges(),
-                      K(!1))
-                    : (q = window.setTimeout(se, h - ue));
+                      V(!1))
+                    : (q = window.setTimeout(te, h - de));
                 };
-              let q = window.setTimeout(se, h);
+              let q = window.setTimeout(te, h);
               return () => {
-                q && (window.clearTimeout(q), se(!0));
+                q && (window.clearTimeout(q), te(!0));
               };
             }, [j, m, h, y]),
             { bDirty: j }
           );
         }
-        var $ = i(72739),
+        var K = i(72739),
           N = i(74685);
         const B = v.memo(function (u) {
           const { specs: h } = u,
             [y, j] = v.useState([]),
-            K = v.useRef(0),
+            V = v.useRef(0),
             M = v.useCallback(
-              (se) => (
-                j((q) => [...q, { id: K.current++, nodeView: se }]),
-                () => j((q) => q.filter((ge) => ge.nodeView != se))
+              (te) => (
+                j((q) => [...q, { id: V.current++, nodeView: te }]),
+                () => j((q) => q.filter((ge) => ge.nodeView != te))
               ),
               [],
             ),
             J = v.useMemo(() => {
-              const se = {};
+              const te = {};
               return (
                 h
                   .filter(Boolean)
                   .forEach(
                     (q) =>
-                      (se[q.type.name] = (ge, Pe, ue) =>
-                        new L(q, ge, Pe, ue, M)),
+                      (te[q.type.name] = (ge, je, de) =>
+                        new L(q, ge, je, de, M)),
                   ),
-                new O.k_({ props: { nodeViews: se } })
+                new O.k_({ props: { nodeViews: te } })
               );
             }, [h, M]);
           return (
             (0, N.c$)(J),
-            y.map(({ id: se, nodeView: q }) =>
-              (0, e.jsx)(Ee, { nodeView: q }, se),
+            y.map(({ id: te, nodeView: q }) =>
+              (0, e.jsx)(Ee, { nodeView: q }, te),
             )
           );
         });
@@ -2679,14 +2679,14 @@
               spec: h,
               getProps: y,
               onPropsChanged: j,
-              actions: K,
+              actions: V,
               isSelected: M,
             } = m.nodeView,
-            [J, se] = v.useReducer((q) => q + 1, 0);
+            [J, te] = v.useReducer((q) => q + 1, 0);
           return (
-            v.useEffect(() => j.Register(se).Unregister, [j, se]),
-            $.createPortal(
-              v.createElement(h.component, { ...y(), selected: M(), ...K }),
+            v.useEffect(() => j.Register(te).Unregister, [j, te]),
+            K.createPortal(
+              v.createElement(h.component, { ...y(), selected: M(), ...V }),
               u,
             )
           );
@@ -2699,47 +2699,47 @@
           selected;
           reactHost;
           destroy;
-          constructor(u, h, y, j, K) {
+          constructor(u, h, y, j, V) {
             this.node = h;
             const M = y.dom.ownerDocument,
               J = M.createElement(u.type.isInline ? "span" : "div");
             this.dom = J;
-            let se = J;
+            let te = J;
             u.bEditableContent &&
-              ((se = this.reactHost =
+              ((te = this.reactHost =
                 M.createElement(u.type.isInline ? "span" : "div")),
-              (se.contentEditable = "false"),
-              J.appendChild(se),
+              (te.contentEditable = "false"),
+              J.appendChild(te),
               (this.contentDOM = M.createElement(
                 u.type.inlineContent ? "span" : "div",
               )),
               J.appendChild(this.contentDOM));
             const { selection: q } = y.state;
             this.selected = j() >= q.from && j() + h.nodeSize <= q.to;
-            const ge = (be) => {
-                const Le = be(y.state.tr, h, j());
+            const ge = (Ce) => {
+                const Le = Ce(y.state.tr, h, j());
                 Le && y.dispatch(Le);
               },
-              Pe = {
+              je = {
                 update: ge,
-                setAttrs: (be, Le) =>
-                  ge((ut, gt, xt) => ut.setNodeMarkup(xt, Le, be)),
+                setAttrs: (Ce, Le) =>
+                  ge((ut, gt, xt) => ut.setNodeMarkup(xt, Le, Ce)),
                 removeNode: () =>
-                  ge((be, Le, ut) => be.delete(ut, ut + Le.nodeSize)),
+                  ge((Ce, Le, ut) => Ce.delete(ut, ut + Le.nodeSize)),
                 focusView: () => {
                   window.setTimeout(() => y.focus(), 1);
                 },
               },
-              ue = new p.l();
-            (this.destroy = K({
-              element: se,
+              de = new p.l();
+            (this.destroy = V({
+              element: te,
               spec: u,
               getProps: () => u.readProps(this.node),
               isSelected: () => this.selected,
-              onPropsChanged: ue,
-              actions: Pe,
+              onPropsChanged: de,
+              actions: je,
             })),
-              (this.onPropsChanged = ue.Dispatch.bind(ue));
+              (this.onPropsChanged = de.Dispatch.bind(de));
           }
           update(u, h, y) {
             return u.type != this.node.type
@@ -2763,25 +2763,25 @@
             (this.selected = !1), this.onPropsChanged();
           }
         }
-        function V(m) {
+        function G(m) {
           return (u, h, y) => u.replaceWith(y, y + h.nodeSize, m);
         }
         var w = i(2272),
-          G = i(34604),
+          W = i(34604),
           b = i(28410),
           A = i(83085),
           P = i(19298),
-          U = i(52951),
+          H = i(52951),
           X = i(74875),
-          de = i(29287),
+          ce = i(29287),
           De = i(74827),
-          Ce = i(25792),
+          xe = i(25792),
           Me = i(33645),
           F = i.n(Me),
           ie = i(38539),
           _e = i(4188),
           le = i(36707),
-          Ae = i(29950);
+          be = i(29950);
         function oe(m, u, h = 0) {
           return () => [m, { class: u }, h];
         }
@@ -2797,7 +2797,7 @@
             ["span", { class: F().Tag }, `[/${m}]`],
           ];
         }
-        function Ge(m) {
+        function We(m) {
           return {
             tag: `h${m}`,
             BBArgsToAttrs: (u) => ({ level: m, align: u.align || "left" }),
@@ -2813,7 +2813,7 @@
             },
           };
         }
-        function We(m) {
+        function Ue(m) {
           return {
             tag: `h${m}`,
             getAttrs(u) {
@@ -2860,7 +2860,7 @@
               content: "inline*",
               group: "block",
               defining: !0,
-              parseDOM: [1, 2, 3, 4, 5].map(We),
+              parseDOM: [1, 2, 3, 4, 5].map(Ue),
               toDOM(m) {
                 const u = {
                   class:
@@ -2874,7 +2874,7 @@
                   ["h" + m.attrs.level, u, 0]
                 );
               },
-              bbCode: [1, 2, 3, 4, 5].map(Ge),
+              bbCode: [1, 2, 3, 4, 5].map(We),
             },
             image: {
               inline: !0,
@@ -2904,7 +2904,7 @@
                 return [
                   "img",
                   {
-                    src: (0, Ae.J)(u),
+                    src: (0, be.J)(u),
                     alt: h,
                     title: y,
                     class: (0, le.A)(F().Image, {
@@ -2964,27 +2964,27 @@
                     mp4: h,
                     poster: y,
                     autoplay: j,
-                    controls: K,
+                    controls: V,
                   } = m.attrs,
                   M = [];
                 return (
                   u &&
                     M.push([
                       "source",
-                      { src: (0, Ae.J)(u), type: "video/webm" },
+                      { src: (0, be.J)(u), type: "video/webm" },
                     ]),
                   h &&
                     M.push([
                       "source",
-                      { src: (0, Ae.J)(h), type: "video/mp4" },
+                      { src: (0, be.J)(h), type: "video/mp4" },
                     ]),
                   [
                     "video",
                     {
-                      poster: (0, Ae.J)(y),
+                      poster: (0, be.J)(y),
                       autoPlay: !!j,
-                      controls: !!K,
-                      loop: !K && !!j,
+                      controls: !!V,
+                      loop: !V && !!j,
                     },
                     ...M,
                   ]
@@ -3047,7 +3047,7 @@
               bbCode: { tag: "code" },
             },
           },
-          ye = {
+          ve = {
             strong: {
               parseDOM: [
                 { tag: "strong" },
@@ -3103,7 +3103,7 @@
                   tag: "a[href]",
                   getAttrs(m) {
                     return {
-                      href: (0, Ae.J)(m.getAttribute("href") ?? ""),
+                      href: (0, be.J)(m.getAttribute("href") ?? ""),
                       title: m.getAttribute("title"),
                     };
                   },
@@ -3113,7 +3113,7 @@
                 const { href: u, title: h } = m.attrs;
                 return [
                   "a",
-                  { href: (0, Ae.J)(u), title: h, class: "BB_Link" },
+                  { href: (0, be.J)(u), title: h, class: "BB_Link" },
                   0,
                 ];
               },
@@ -3125,8 +3125,8 @@
               },
             },
           },
-          ve = { nodes: Ie, marks: ye },
-          Re = {
+          Ae = { nodes: Ie, marks: ve },
+          Oe = {
             node: {},
             marks: {
               color: {
@@ -3243,8 +3243,8 @@
                   const y = u.child(0);
                   if (y) {
                     let j = [];
-                    for (let K = 0; K < y.childCount; K++) {
-                      const M = y.child(K).attrs;
+                    for (let V = 0; V < y.childCount; V++) {
+                      const M = y.child(V).attrs;
                       M.colwidth ? j.push(...M.colwidth) : j.push(void 0);
                     }
                     h.colwidth = j.join(",");
@@ -3290,30 +3290,30 @@
         var Ke = i(18210),
           Qe = i(54963),
           tt = i(73309);
-        const rt = (0, Ce.Nr)(function (u) {
+        const rt = (0, xe.Nr)(function (u) {
           const {
               pmState: h,
               className: y,
               refOnUpdate: j,
-              refView: K,
+              refView: V,
               bSpellcheckEnabled: M = !0,
               bSingleLine: J,
-              panelProps: se,
+              panelProps: te,
               children: q,
             } = u,
-            [ge, Pe] = v.useState(),
-            [ue, be] = v.useState();
+            [ge, je] = v.useState(),
+            [de, Ce] = v.useState();
           v.useEffect(() => {
-            !h || !ge || be(new de.Lz(ge, { state: h.state }));
+            !h || !ge || Ce(new ce.Lz(ge, { state: h.state }));
           }, [h, ge]),
-            v.useEffect(() => () => ue?.destroy(), [ue]),
-            (0, Qe.D5)(K, ue);
-          const { refDiv: Le, onActivate: ut, onGamepadDirection: gt } = qe(ue),
-            xt = (0, Qe.Ue)(Le, Pe);
+            v.useEffect(() => () => de?.destroy(), [de]),
+            (0, Qe.D5)(V, de);
+          const { refDiv: Le, onActivate: ut, onGamepadDirection: gt } = qe(de),
+            xt = (0, Qe.Ue)(Le, je);
           if (!h) return null;
           const { schemaConfig: wt, bbcodeParser: dt } = h;
           return (0, e.jsxs)(N.Ot, {
-            view: ue,
+            view: de,
             pmState: h,
             children: [
               (0, e.jsx)(
@@ -3330,7 +3330,7 @@
                   onActivate: ut,
                   onOKActionDescription: (0, Ke.we)("#UserGameNotes_Edit"),
                   onGamepadDirection: gt,
-                  ...se,
+                  ...te,
                 },
                 `editordiv_${M}`,
               ),
@@ -3353,21 +3353,21 @@
               if (!m.hasFocus()) {
                 m.focus();
                 let J = m.dom.childNodes,
-                  se = u.current?.scrollTop ?? 0;
+                  te = u.current?.scrollTop ?? 0;
                 for (let q = 0; q < J.length; ++q) {
                   let ge = J[q],
-                    Pe = ge.offsetTop;
-                  if (Pe !== void 0 && Pe >= se) {
-                    let ue = ge.getBoundingClientRect();
-                    (0, De.bQ)(m, ue.left, ue.top);
+                    je = ge.offsetTop;
+                  if (je !== void 0 && je >= te) {
+                    let de = ge.getBoundingClientRect();
+                    (0, De.bQ)(m, de.left, de.top);
                     break;
                   }
                 }
               }
             }, [h, m]),
             j = v.useCallback((M) => M.currentTarget == M.target, []),
-            K = (0, U.ak)(u, void 0, void 0, j);
-          return { refDiv: u, onActivate: y, onGamepadDirection: K };
+            V = (0, H.ak)(u, void 0, void 0, j);
+          return { refDiv: u, onActivate: y, onGamepadDirection: V };
         }
         const kt = v.memo(function (u) {
           const { parser: h, schema: y } = u;
@@ -3377,7 +3377,7 @@
                 () =>
                   new O.k_({
                     props: {
-                      transformPasted: (j, K) => mt(h, y.nodes.hard_break, j),
+                      transformPasted: (j, V) => mt(h, y.nodes.hard_break, j),
                     },
                   }),
                 [h, y],
@@ -3389,14 +3389,14 @@
         function mt(m, u, h) {
           let y = !1;
           if (
-            (h.content.forEach((K) => {
-              K.type == u && (y = !0);
+            (h.content.forEach((V) => {
+              V.type == u && (y = !0);
             }),
             !y)
           )
             return h;
           const j = m.ConvertLineBreaksToParagraphs(h.content);
-          return E.Ji.maxOpen(j);
+          return D.Ji.maxOpen(j);
         }
         var Je = i(249),
           Gt = i(58534),
@@ -3408,19 +3408,19 @@
               strTitle: h,
               onOK: y,
               strOKText: j,
-              onCancel: K,
+              onCancel: V,
               strCancelText: M,
               bOKDisabled: J,
-              bCancelDisabled: se,
+              bCancelDisabled: te,
               strClassNameContent: q = "GenericFormDialog",
               children: ge,
             } = m,
-            Pe = v.useCallback(() => {
-              K && K(), u();
-            }, [K, u]),
-            ue = se ? () => {} : Pe;
+            je = v.useCallback(() => {
+              V && V(), u();
+            }, [V, u]),
+            de = te ? () => {} : je;
           return (0, e.jsx)(Ft.x_, {
-            onEscKeypress: ue,
+            onEscKeypress: de,
             children: (0, e.jsxs)(Gt.U9, {
               onSubmit: y,
               classNameContent: q,
@@ -3431,9 +3431,9 @@
                   children: (0, e.jsx)(Gt.CB, {
                     strOKText: j,
                     bOKDisabled: J,
-                    onCancel: ue,
+                    onCancel: de,
                     strCancelText: M,
-                    bCancelDisabled: se,
+                    bCancelDisabled: te,
                   }),
                 }),
               ],
@@ -3443,34 +3443,34 @@
         function ft(m, u) {
           const [h, y] = React.useState(void 0),
             j = React.useCallback(
-              (se) => {
-                const q = se.state.selection;
+              (te) => {
+                const q = te.state.selection;
                 let ge = "",
-                  Pe = "",
-                  { from: ue, to: be } = q;
-                const Le = FindMarkAtPosition(se.state, m.marks.link, q.$from),
+                  je = "",
+                  { from: de, to: Ce } = q;
+                const Le = FindMarkAtPosition(te.state, m.marks.link, q.$from),
                   ut = !!Le;
                 Le
-                  ? ((Pe = Le.mark.attrs.href),
+                  ? ((je = Le.mark.attrs.href),
                     q.empty
                       ? ((ge = Le.slice.content.textBetween(
                           0,
                           Le.slice.content.size,
                         )),
-                        (ue = Le.from),
-                        (be = Le.to))
-                      : ((ue = Math.max(Le.from, q.from)),
-                        (be = Math.min(Le.to, q.to)),
+                        (de = Le.from),
+                        (Ce = Le.to))
+                      : ((de = Math.max(Le.from, q.from)),
+                        (Ce = Math.min(Le.to, q.to)),
                         (ge = Le.slice.content.textBetween(
-                          ue - Le.from,
-                          be - Le.from,
+                          de - Le.from,
+                          Ce - Le.from,
                         ))))
-                  : se.state.selection.empty ||
-                    ((ge = se.state.doc.cut(
-                      se.state.selection.from,
-                      se.state.selection.to,
+                  : te.state.selection.empty ||
+                    ((ge = te.state.doc.cut(
+                      te.state.selection.from,
+                      te.state.selection.to,
                     ).textContent),
-                    ge.match(/^https?:\/\//) && (Pe = ge));
+                    ge.match(/^https?:\/\//) && (je = ge));
                 let gt = {};
                 if (u)
                   for (const xt in u) {
@@ -3479,22 +3479,22 @@
                     gt[xt] = dt;
                   }
                 y({
-                  view: se,
+                  view: te,
                   strLinkText: ge,
-                  strLinkHref: Pe,
+                  strLinkHref: je,
                   bIsUpdate: ut,
                   addtlAttrs: u,
                   addtlAttrsValues: gt,
-                  from: ue,
-                  to: be,
+                  from: de,
+                  to: Ce,
                 });
               },
               [m.marks.link, u],
             ),
-            K = h?.view,
+            V = h?.view,
             M = React.useCallback(() => {
-              window.setTimeout(() => K.focus(), 1), y(void 0);
-            }, [K]),
+              window.setTimeout(() => V.focus(), 1), y(void 0);
+            }, [V]),
             J =
               h &&
               jsx(SimpleModal, {
@@ -3508,27 +3508,27 @@
               schema: h,
               strLinkText: y,
               strLinkHref: j,
-              bIsUpdate: K,
+              bIsUpdate: V,
               addtlAttrs: M,
               addtlAttrsValues: J,
-              closeModal: se,
+              closeModal: te,
               view: q,
               from: ge,
-              to: Pe,
+              to: je,
             } = u,
-            [ue, be] = v.useState(y),
+            [de, Ce] = v.useState(y),
             [Le, ut] = v.useState(j),
             gt = v.useRef(null),
             xt = v.useRef(null),
             [wt, dt] = v.useState(J),
-            Ht = () => {
+            Ut = () => {
               let Lt = q.state.tr;
               const ds = { href: Le };
               for (const Ss in wt) ds[Ss] = wt[Ss];
               const cn = h.marks.link?.create(ds),
-                ms = h.text(ue || Le, [cn]);
+                ms = h.text(de || Le, [cn]);
               try {
-                (Lt = Lt.replaceRangeWith(ge, Pe, ms)),
+                (Lt = Lt.replaceRangeWith(ge, je, ms)),
                   (Lt = Lt.setSelection(
                     O.U3.create(Lt.doc, ge + ms.nodeSize, ge + ms.nodeSize),
                   )),
@@ -3536,7 +3536,7 @@
               } catch (Ss) {
                 console.error("Error during link insertion", Ss);
               }
-              se();
+              te();
             };
           v.useLayoutEffect(() => {
             gt.current?.value?.length
@@ -3545,23 +3545,23 @@
                 : xt.current.Focus()
               : gt.current?.Focus();
           }, []);
-          const Ot = K
+          const Ot = V
               ? (0, Ke.we)("#FormattingToolbar_EditLink")
               : (0, Ke.we)("#FormattingToolbar_InsertLink"),
-            zt = K
+            zt = V
               ? (0, Ke.we)("#Button_Save")
               : (0, Ke.we)("#FormattingToolbar_InsertLink");
           return (0, e.jsxs)(Qt, {
-            onOK: Ht,
-            closeModal: se,
+            onOK: Ut,
+            closeModal: te,
             strTitle: Ot,
             strOKText: zt,
             bOKDisabled: Le.length == 0,
             children: [
               (0, e.jsx)(Gt.pd, {
                 ref: gt,
-                value: ue,
-                onChange: (Lt) => be(Lt.currentTarget.value),
+                value: de,
+                onChange: (Lt) => Ce(Lt.currentTarget.value),
                 label: (0, Ke.we)("#FormattingToolbar_LinkText"),
               }),
               (0, e.jsx)(Gt.pd, {
@@ -3594,26 +3594,26 @@
           });
         }
         const Tt = v.memo(function (u) {
-          const { attrName: h, fnRender: y, value: j, setValues: K } = u,
-            M = v.useCallback((J) => K((se) => ({ ...se, [h]: J })), [h, K]);
+          const { attrName: h, fnRender: y, value: j, setValues: V } = u,
+            M = v.useCallback((J) => V((te) => ({ ...te, [h]: J })), [h, V]);
           return y(j, M);
         });
         var Ye = i(50660);
         function Vt(m) {
           const { schema: u, addtlAttrs: h, children: y } = m,
-            { callbacks: j, view: K } = useToolbarContext(),
-            [M, J] = React.useState(() => IsMarkActive(K.state, u.marks.link)),
-            se = React.useCallback(
-              (Pe) => J(IsMarkActive(Pe.state, u.marks.link)),
+            { callbacks: j, view: V } = useToolbarContext(),
+            [M, J] = React.useState(() => IsMarkActive(V.state, u.marks.link)),
+            te = React.useCallback(
+              (je) => J(IsMarkActive(je.state, u.marks.link)),
               [u],
             );
-          useCallbackList(j, se);
+          useCallbackList(j, te);
           const [q, ge] = useInsertLinkModal(u, h);
           return jsxs(Fragment, {
             children: [
               ge,
               jsx(ToggleButton, {
-                onClick: () => q(K),
+                onClick: () => q(V),
                 toggled: M,
                 tooltip: "#FormattingToolbar_InsertLink",
                 keyboardShortcut: "Mod-k",
@@ -3626,37 +3626,37 @@
           ss = i(47604),
           Ms = i(28922),
           rn = i(61024);
-        function Ut(m, u, h) {
+        function Ht(m, u, h) {
           const [y, j] = v.useState(void 0),
-            K = v.useRef(null),
+            V = v.useRef(null),
             M = v.useCallback(
               (q) => {
-                K.current = q;
+                V.current = q;
                 const { state: ge } = q,
-                  Pe = ge.selection;
-                let { from: ue, to: be, empty: Le } = Pe;
+                  je = ge.selection;
+                let { from: de, to: Ce, empty: Le } = je;
                 const ut = u ? m.marks.color : m.marks.bgcolor;
                 let gt = "",
                   xt = "";
-                const wt = Le ? Pe.$from : ge.doc.resolve(ue),
+                const wt = Le ? je.$from : ge.doc.resolve(de),
                   dt = (0, De.vn)(ge, ut, wt),
-                  Ht = !!dt;
-                Ht
+                  Ut = !!dt;
+                Ut
                   ? ((gt = dt.mark.attrs.color),
                     Le
                       ? ((xt = dt.slice.content.textBetween(
                           0,
                           dt.slice.content.size,
                         )),
-                        (ue = dt.from),
-                        (be = dt.to))
-                      : ((ue = Math.max(dt.from, ue)),
-                        (be = Math.min(dt.to, be)),
+                        (de = dt.from),
+                        (Ce = dt.to))
+                      : ((de = Math.max(dt.from, de)),
+                        (Ce = Math.min(dt.to, Ce)),
                         (xt = dt.slice.content.textBetween(
-                          ue - dt.from,
-                          be - dt.from,
+                          de - dt.from,
+                          Ce - dt.from,
                         ))))
-                  : Le || (xt = ge.doc.cut(ue, be).textContent);
+                  : Le || (xt = ge.doc.cut(de, Ce).textContent);
                 let Ot = {};
                 if (h)
                   for (const zt in h) {
@@ -3665,26 +3665,26 @@
                     Ot[zt] = ds;
                   }
                 j({
-                  viewRef: K,
+                  viewRef: V,
                   strColor: gt,
                   strTargetText: xt,
-                  bIsUpdate: Ht,
+                  bIsUpdate: Ut,
                   addtlAttrs: h,
                   addtlAttrsValues: Ot,
-                  from: ue,
-                  to: be,
+                  from: de,
+                  to: Ce,
                 });
               },
               [h, u, m.marks.bgcolor, m.marks.color],
             ),
             J = v.useCallback(() => {
-              const q = K.current;
+              const q = V.current;
               window.setTimeout(() => {
                 q && !q.isDestroyed && q.focus();
               }, 1),
                 j(void 0);
             }, []),
-            se =
+            te =
               y &&
               (0, e.jsx)(Rt.EN, {
                 active: !0,
@@ -3695,7 +3695,7 @@
                   ...y,
                 }),
               });
-          return [M, se];
+          return [M, te];
         }
         function Cn(m) {
           if (m.startsWith("rgb")) {
@@ -3705,8 +3705,8 @@
             return (
               "#" +
               [h, y, j]
-                .map((K) => {
-                  const M = K.toString(16);
+                .map((V) => {
+                  const M = V.toString(16);
                   return M.length === 1 ? "0" + M : M;
                 })
                 .join("")
@@ -3719,11 +3719,11 @@
             /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
           );
           if (u) {
-            let [, h, y, j, K] = u;
+            let [, h, y, j, V] = u;
             const M = parseInt(h, 10),
               J = parseInt(y, 10),
-              se = parseInt(j, 10);
-            return `#${((1 << 24) + (M << 16) + (J << 8) + se).toString(16).slice(1)}`;
+              te = parseInt(j, 10);
+            return `#${((1 << 24) + (M << 16) + (J << 8) + te).toString(16).slice(1)}`;
           }
           return "#7e3232";
         }
@@ -3732,18 +3732,18 @@
               schema: h,
               strColor: y,
               bIsUpdate: j,
-              strTargetText: K,
+              strTargetText: V,
               bColor: M,
               addtlAttrs: J,
-              addtlAttrsValues: se,
+              addtlAttrsValues: te,
               closeModal: q,
               viewRef: ge,
-              from: Pe,
-              to: ue,
+              from: je,
+              to: de,
             } = u,
-            [be, Le] = v.useState(y),
+            [Ce, Le] = v.useState(y),
             ut = v.useRef(null),
-            [gt, xt] = v.useState(se),
+            [gt, xt] = v.useState(te),
             wt = v.useCallback(() => {
               try {
                 const Ot = ge.current;
@@ -3759,30 +3759,30 @@
                   console.log("debug: no markType");
                   return;
                 }
-                if (!be || !/^#[0-9a-fA-F]{6}$/.test(be)) {
-                  console.log("debug: invalid color text: " + be);
+                if (!Ce || !/^#[0-9a-fA-F]{6}$/.test(Ce)) {
+                  console.log("debug: invalid color text: " + Ce);
                   return;
                 }
-                const cn = Math.max(0, Math.min(Pe, zt.doc.content.size)),
-                  ms = Math.max(0, Math.min(ue, zt.doc.content.size));
+                const cn = Math.max(0, Math.min(je, zt.doc.content.size)),
+                  ms = Math.max(0, Math.min(de, zt.doc.content.size));
                 if (cn > ms) {
-                  console.error("Invalid selection range:", Pe, ue);
+                  console.error("Invalid selection range:", je, de);
                   return;
                 }
-                const Ss = ds.create({ color: be, ...gt });
+                const Ss = ds.create({ color: Ce, ...gt });
                 let rs = zt.tr;
-                Pe === ue
+                je === de
                   ? (rs = rs.addStoredMark(Ss))
-                  : ((rs = rs.removeMark(Pe, ue, ds)),
-                    (rs = rs.addMark(Pe, ue, Ss)),
-                    (rs = rs.setSelection(O.U3.create(rs.doc, ue)))),
+                  : ((rs = rs.removeMark(je, de, ds)),
+                    (rs = rs.addMark(je, de, Ss)),
+                    (rs = rs.setSelection(O.U3.create(rs.doc, de)))),
                   Lt(rs.scrollIntoView());
               } catch (Ot) {
                 console.error(Ot);
               } finally {
                 requestAnimationFrame(() => q());
               }
-            }, [gt, M, q, be, Pe, h.marks.bgcolor, h.marks.color, ue, ge]);
+            }, [gt, M, q, Ce, je, h.marks.bgcolor, h.marks.color, de, ge]);
           v.useLayoutEffect(() => {
             ut.current?.value?.length
               ? ut.current.focus()
@@ -3791,7 +3791,7 @@
           const dt = (0, Ke.we)(
               M ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
             ),
-            Ht = j
+            Ut = j
               ? (0, Ke.we)("#Button_Save")
               : (0, Ke.we)(
                   M ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
@@ -3801,15 +3801,15 @@
             strTitle: dt,
             children: [
               (0, e.jsx)(Ms.s, {
-                color: be,
+                color: Ce,
                 disableAlpha: !0,
                 onChange: (Ot) => Le(zs(Ot)),
               }),
               (0, e.jsx)(rn.M, {
-                strOKLabel: Ht,
+                strOKLabel: Ut,
                 strCancelLabel: (0, Ke.we)("#Button_Cancel"),
                 onOK: () => {
-                  be && be.length > 0 && wt();
+                  Ce && Ce.length > 0 && wt();
                 },
                 onClose: q,
               }),
@@ -3818,20 +3818,20 @@
         });
         function It(m) {
           const { schema: u, bColor: h, addtlAttrs: y, children: j } = m,
-            { callbacks: K, view: M } = (0, Ye.wU)(),
-            [J, se] = v.useState(() =>
+            { callbacks: V, view: M } = (0, Ye.wU)(),
+            [J, te] = v.useState(() =>
               (0, De.Cd)(M.state, h ? u.marks.color : u.marks.bgcolor),
             ),
             q = v.useCallback(
-              (ue) =>
-                se((0, De.Cd)(ue.state, h ? u.marks.color : u.marks.bgcolor)),
+              (de) =>
+                te((0, De.Cd)(de.state, h ? u.marks.color : u.marks.bgcolor)),
               [h, u],
             );
-          (0, Qe.hL)(K, q);
-          const [ge, Pe] = Ut(u, h, y);
+          (0, Qe.hL)(V, q);
+          const [ge, je] = Ht(u, h, y);
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              Pe,
+              je,
               (0, e.jsx)(Ye.ff, {
                 onClick: () => ge(M),
                 toggled: J,
@@ -3924,16 +3924,16 @@
         }
         function ks(m) {
           const { nodeTypes: u, attrs: h, children: y, ...j } = m,
-            { callbacks: K, view: M } = (0, Ye.wU)(),
-            [J, se] = v.useState(() => (0, De.Ce)(M.state, u, h)),
-            q = v.useCallback((ue) => se((0, De.Ce)(ue.state, u, h)), [u, h]);
-          (0, Qe.hL)(K, q);
+            { callbacks: V, view: M } = (0, Ye.wU)(),
+            [J, te] = v.useState(() => (0, De.Ce)(M.state, u, h)),
+            q = v.useCallback((de) => te((0, De.Ce)(de.state, u, h)), [u, h]);
+          (0, Qe.hL)(V, q);
           const ge = v.useMemo(() => (0, De.c4)(u, h ?? {}), [u, h]),
-            Pe = !!J;
+            je = !!J;
           return (0, e.jsx)(Ye.cQ, {
             ...j,
             command: ge,
-            toggled: Pe,
+            toggled: je,
             children: y,
           });
         }
@@ -4023,18 +4023,18 @@
         function Wn(m) {
           const { schema: u, showIndentButtonsAsNeeded: h = !1 } = m,
             { callbacks: y, view: j } = (0, Ye.wU)(),
-            { bullet_list: K, ordered_list: M, list_item: J } = u.nodes,
-            se = v.useMemo(() => _e.T2(J), [J]),
+            { bullet_list: V, ordered_list: M, list_item: J } = u.nodes,
+            te = v.useMemo(() => _e.T2(J), [J]),
             q = v.useMemo(() => _e.$B(J), [J]),
-            [ge, Pe] = v.useState(() => se(j.state) || q(j.state));
+            [ge, je] = v.useState(() => te(j.state) || q(j.state));
           return (
             (0, Qe.hL)(
               y,
               v.useCallback(
-                (ue) => {
-                  Pe(se(ue.state) || q(ue.state));
+                (de) => {
+                  je(te(de.state) || q(de.state));
                 },
-                [se, q],
+                [te, q],
               ),
             ),
             (0, e.jsxs)(e.Fragment, {
@@ -4042,7 +4042,7 @@
                 (0, e.jsx)(ln, {
                   tooltip: "#FormattingToolbar_BulletedList",
                   keyboardShortcut: "Ctrl-Shift-8",
-                  list_type: K,
+                  list_type: V,
                   list_item: J,
                   children: (0, e.jsx)(Je.JPq, {}),
                 }),
@@ -4060,7 +4060,7 @@
                       (0, e.jsx)(Ye.cQ, {
                         tooltip: "#FormattingToolbar_OutdentList",
                         keyboardShortcut: "Mod-[",
-                        command: se,
+                        command: te,
                         children: (0, e.jsx)(Je.LSz, {}),
                       }),
                       (0, e.jsx)(Ye.cQ, {
@@ -4077,25 +4077,25 @@
         }
         function ln(m) {
           const { list_type: u, list_item: h, children: y, ...j } = m,
-            { callbacks: K, view: M } = (0, Ye.wU)(),
-            J = v.useCallback((ue) => (0, De.wt)(ue.state, u) !== void 0, [u]),
-            [se, q] = v.useState(() => J(M)),
+            { callbacks: V, view: M } = (0, Ye.wU)(),
+            J = v.useCallback((de) => (0, De.wt)(de.state, u) !== void 0, [u]),
+            [te, q] = v.useState(() => J(M)),
             ge = v.useMemo(() => _e.Sd(u), [u]),
-            Pe = v.useMemo(() => _e.T2(h), [h]);
+            je = v.useMemo(() => _e.T2(h), [h]);
           return (
             (0, Qe.hL)(
-              K,
+              V,
               v.useCallback(
-                (ue) => {
-                  q(J(ue));
+                (de) => {
+                  q(J(de));
                 },
                 [J],
               ),
             ),
             (0, e.jsx)(Ye.cQ, {
               ...j,
-              toggled: se,
-              command: se ? Pe : ge,
+              toggled: te,
+              command: te ? je : ge,
               children: y,
             })
           );
@@ -4152,33 +4152,33 @@
                 },
               },
               j = new Map(),
-              K = new Map(),
+              V = new Map(),
               M = h ? new Set(h) : void 0;
-            for (const se in u.nodes) {
-              const { bbCode: q, ...ge } = u.nodes[se],
-                Pe = ps(q, M);
-              Pe && ((y[se] = ge), j.set(se, Pe));
+            for (const te in u.nodes) {
+              const { bbCode: q, ...ge } = u.nodes[te],
+                je = ps(q, M);
+              je && ((y[te] = ge), j.set(te, je));
             }
             const J = {};
-            for (const se in u.marks) {
-              const { bbCode: q, ...ge } = u.marks[se];
-              (!M || M.has(q.tag)) && ((J[se] = ge), K.set(se, q));
+            for (const te in u.marks) {
+              const { bbCode: q, ...ge } = u.marks[te];
+              (!M || M.has(q.tag)) && ((J[te] = ge), V.set(te, q));
             }
-            (this.m_ProseMirrorSchema = new E.Sj({ nodes: y, marks: J })),
-              j.forEach((se, q) => {
+            (this.m_ProseMirrorSchema = new D.Sj({ nodes: y, marks: J })),
+              j.forEach((te, q) => {
                 const ge = this.m_ProseMirrorSchema.nodes[q],
-                  Pe = u.nodes[q],
-                  ue = Array.isArray(se) ? se : [se];
-                let be;
-                Pe.content == "list_item+"
-                  ? (be = this.m_ProseMirrorSchema.nodes.list_item)
-                  : Pe.content?.indexOf("paragraph") != -1 &&
-                    (be = this.m_ProseMirrorSchema.nodes.paragraph),
-                  ue.forEach(
+                  je = u.nodes[q],
+                  de = Array.isArray(te) ? te : [te];
+                let Ce;
+                je.content == "list_item+"
+                  ? (Ce = this.m_ProseMirrorSchema.nodes.list_item)
+                  : je.content?.indexOf("paragraph") != -1 &&
+                    (Ce = this.m_ProseMirrorSchema.nodes.paragraph),
+                  de.forEach(
                     ({
                       tag: wt,
                       BBArgsToAttrs: dt,
-                      AttrsToBBArgs: Ht,
+                      AttrsToBBArgs: Ut,
                       convertContentToAttr: Ot,
                       bVerbatimArgs: zt,
                       bVerbatimContent: Lt,
@@ -4189,7 +4189,7 @@
                           node: ge,
                           BBArgsToAttrs: dt,
                           convertContentToAttr: Ot,
-                          acceptNode: be,
+                          acceptNode: Ce,
                         },
                         skipFollowingNewline: !0,
                         ...ds,
@@ -4201,7 +4201,7 @@
                   AttrsToBBArgs: ut,
                   bVerbatimArgs: gt,
                   bVerbatimContent: xt,
-                } = ue[0];
+                } = de[0];
                 this.m_PMToBBCodeConfig.mapNodes.set(ge, {
                   tag: Le,
                   AttrsToBBArgs: ut,
@@ -4209,16 +4209,16 @@
                   bVerbatimContent: xt,
                 });
               }),
-              K.forEach((se, q) => {
+              V.forEach((te, q) => {
                 const ge = this.m_ProseMirrorSchema.marks[q],
-                  { tag: Pe, BBArgsToAttrs: ue, AttrsToBBArgs: be, ...Le } = se;
-                this.m_mapBBCodeDictionary.set(Pe, {
-                  Constructor: { mark: ge, BBArgsToAttrs: ue },
+                  { tag: je, BBArgsToAttrs: de, AttrsToBBArgs: Ce, ...Le } = te;
+                this.m_mapBBCodeDictionary.set(je, {
+                  Constructor: { mark: ge, BBArgsToAttrs: de },
                   ...Le,
                 }),
                   this.m_PMToBBCodeConfig.mapMarks.set(ge, {
-                    tag: Pe,
-                    AttrsToBBArgs: be,
+                    tag: je,
+                    AttrsToBBArgs: Ce,
                   });
               });
           }
@@ -4237,14 +4237,14 @@
             bullet_list: Yt,
             list_item: Vn,
             image: An,
-          } = ve.nodes,
+          } = Ae.nodes,
           {
             strong: vn,
             italic: Kn,
             underline: $n,
             link: yn,
             strike: Yn,
-          } = ve.marks;
+          } = Ae.marks;
         function Xn(m) {
           return new Kt({
             nodes: {
@@ -4267,7 +4267,7 @@
                       },
                     })),
                   ),
-                bbCode: [2].map(Ge),
+                bbCode: [2].map(We),
               },
               bullet_list: Yt,
               list_item: Vn,
@@ -4328,30 +4328,30 @@
               languages: h,
               rctToolbarControls: y,
               mapValues: j,
-              editorType: K,
+              editorType: V,
               rctAboveEditor: M,
             } = m,
             J = j.get(u),
-            [se, q] = v.useState(),
+            [te, q] = v.useState(),
             ge = v.useRef(void 0),
-            Pe = nr((0, Bs.sfN)(u)),
-            [ue] = v.useState(() => new Map()),
-            be = v.useCallback(
-              (Ht) => {
-                ue.has(Ht) ||
-                  ue.set(Ht, new D(Pe, Ht.Value, (Ot) => Ht.Set(Ot), Pr));
+            je = nr((0, Bs.sfN)(u)),
+            [de] = v.useState(() => new Map()),
+            Ce = v.useCallback(
+              (Ut) => {
+                de.has(Ut) ||
+                  de.set(Ut, new E(je, Ut.Value, (Ot) => Ut.Set(Ot), Pr));
               },
-              [Pe, ue],
+              [je, de],
             ),
             [Le, ut] = v.useState();
           v.useEffect(() => {
-            be(J), ut(ue.get(J));
-          }, [Pe, ue, be, J]);
+            Ce(J), ut(de.get(J));
+          }, [je, de, Ce, J]);
           const gt = (0, a.gc)(J);
           v.useEffect(() => {
-            ue.get(J).ReplaceDocument(gt);
-          }, [J, gt, ue]),
-            W(Le, { msAutosaveTimeout: 5e3 }),
+            de.get(J).ReplaceDocument(gt);
+          }, [J, gt, de]),
+            z(Le, { msAutosaveTimeout: 5e3 }),
             v.useEffect(() => {
               window.DisableTooltipMutationObserver &&
                 window.DisableTooltipMutationObserver(),
@@ -4360,20 +4360,20 @@
             (0, a.hL)(Ns, () => Le?.CommitChanges()),
             v.useEffect(() => {
               ge.current && ge.current();
-            }, [se, J]);
+            }, [te, J]);
           const xt = (0, Bs.sfN)(u),
-            wt = K != "awards",
-            dt = v.useCallback((Ht) => qn(Le, j, be, Ht), [be, j, Le]);
+            wt = V != "awards",
+            dt = v.useCallback((Ut) => qn(Le, j, Ce, Ut), [Ce, j, Le]);
           return (0, e.jsx)(er, {
-            imageNodeType: Pe.pm_schema.nodes.image,
+            imageNodeType: je.pm_schema.nodes.image,
             activeLanguage: xt,
             languages: h,
             children: (0, e.jsx)(sr, {
-              editorType: K,
-              view: se,
+              editorType: V,
+              view: te,
               refUpdateToolbar: ge,
               rctToolbarControls: y,
-              schema: Pe.pm_schema,
+              schema: je.pm_schema,
               rctAboveEditor: M,
               children: (0, e.jsx)(rt, {
                 panelProps: {
@@ -4385,7 +4385,7 @@
                 refOnUpdate: ge,
                 refView: q,
                 children: (0, e.jsx)(or, {
-                  schema: Pe,
+                  schema: je,
                   activeLanguage: xt,
                   mapValues: j,
                   allowAnimations: wt,
@@ -4397,9 +4397,9 @@
         }
         function qn(m, u, h, y) {
           m?.CommitChanges();
-          for (const [j, K] of y) {
+          for (const [j, V] of y) {
             const M = u.get(j);
-            M && M.Value != K && (h(M), M.Set(K));
+            M && M.Value != V && (h(M), M.Set(V));
           }
         }
         function er(m) {
@@ -4409,32 +4409,32 @@
               languages: y,
               children: j,
             } = m,
-            K = (0, b.cz)(),
+            V = (0, b.cz)(),
             M = v.useCallback(
-              (se) => {
+              (te) => {
                 let q,
-                  ge = new Promise((ue, be) => {
+                  ge = new Promise((de, Ce) => {
                     q = {
-                      file: se,
+                      file: te,
                       onComplete: (Le) => {
-                        ue(u.createChecked({ src: Le }));
+                        de(u.createChecked({ src: Le }));
                       },
-                      onCancel: () => ue(void 0),
+                      onCancel: () => de(void 0),
                       activeLanguage: h,
                       languages: y,
                     };
                   });
-                const Pe = K(q);
-                return ge.finally(() => Pe()), ge;
+                const je = V(q);
+                return ge.finally(() => je()), ge;
               },
-              [u, K, h, y],
+              [u, V, h, y],
             ),
-            J = v.useCallback(async (se) => {
+            J = v.useCallback(async (te) => {
               const q = new URL(
                 `${Ps.TS.PARTNER_BASE_URL}gfxproxy/externalgfx/`,
               );
               return (
-                q.searchParams.append("url", se),
+                q.searchParams.append("url", te),
                 await (await fetch(q, { method: "GET" })).blob()
               );
             }, []);
@@ -4456,30 +4456,30 @@
               view: h,
               refUpdateToolbar: y,
               rctToolbarControls: j,
-              schema: K,
+              schema: V,
               children: M,
               rctAboveEditor: J,
             } = m,
-            [se, q] = v.useState(!1),
-            [ge, Pe] = v.useState(1),
-            ue = v.useCallback(
+            [te, q] = v.useState(!1),
+            [ge, je] = v.useState(1),
+            de = v.useCallback(
               (ut) =>
                 ut.borderBoxSize.length > 0 &&
                 q(ut.borderBoxSize[0].blockSize > 300),
               [],
             ),
-            be = (0, Jn.wY)(ue),
+            Ce = (0, Jn.wY)(de),
             Le = u === "awards" && ge === 3;
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsx)(rr, {
                 view: h,
                 refUpdateToolbar: y,
-                sticky: se,
+                sticky: te,
                 rctToolbarControls: j,
-                schema: K,
+                schema: V,
                 ePreviewMode: ge,
-                setPreviewMode: Pe,
+                setPreviewMode: je,
               }),
               (0, e.jsxs)("div", {
                 className: (0, le.A)({
@@ -4489,7 +4489,7 @@
                   [st.PreviewGamepad]: ge === 3,
                   [st.Awards]: u === "awards",
                 }),
-                ref: be,
+                ref: Ce,
                 children: [
                   J,
                   Le &&
@@ -4522,11 +4522,11 @@
           y.current = m;
           const j = v.useRef(void 0);
           if (!j.current) {
-            const K = (M) => {
-              const J = h.current.find((q) => (0, G.q3)(q) === M);
-              return (0, G.IP)(J, !0, y.current)?.url;
+            const V = (M) => {
+              const J = h.current.find((q) => (0, W.q3)(q) === M);
+              return (0, W.IP)(J, !0, y.current)?.url;
             };
-            j.current = Xn(K);
+            j.current = Xn(V);
           }
           return j.current;
         }
@@ -4536,7 +4536,7 @@
             refUpdateToolbar: h,
             rctToolbarControls: y,
             schema: j,
-            sticky: K,
+            sticky: V,
             ePreviewMode: M,
             setPreviewMode: J,
           } = m;
@@ -4547,7 +4547,7 @@
               (0, e.jsxs)(Ye.Ez, {
                 className: (0, le.A)(
                   st.GameDescriptionEditorToolbar,
-                  K && st.Sticky,
+                  V && st.Sticky,
                 ),
                 children: [
                   (0, e.jsx)(ns, {}),
@@ -4621,7 +4621,7 @@
               activeLanguage: h,
               mapValues: y,
               allowAnimations: j,
-              updateDocument: K,
+              updateDocument: V,
             } = m,
             M = v.useMemo(
               () => [
@@ -4631,16 +4631,16 @@
                   readProps: (J) => ({
                     src: J.attrs.src,
                     inLink: J.marks.some(
-                      (se) => se.type == u.pm_schema.marks.link,
+                      (te) => te.type == u.pm_schema.marks.link,
                     ),
                     activeLanguage: h,
                     mapValues: y,
                     allowAnimations: j,
-                    fnUpdateDocument: K,
+                    fnUpdateDocument: V,
                   }),
                 },
               ],
-              [u, h, j, y, K],
+              [u, h, j, y, V],
             );
           return (0, e.jsxs)(e.Fragment, {
             children: [
@@ -4658,36 +4658,36 @@
           a = i(58534),
           fe = i(28410),
           O = i(69168),
-          H = i(88003),
-          E = i(85599),
+          $ = i(88003),
+          D = i(85599),
           R = i(36707),
-          te = i(18210),
-          ce = i(64868),
+          se = i(18210),
+          pe = i(64868),
           Y = i(27539),
-          xe = i.n(Y),
+          Pe = i.n(Y),
           Se = i(99412),
-          Ne = i(14947),
-          He = i(17616);
+          He = i(14947),
+          Ve = i(17616);
         function re(S) {
           const {
-              hideModal: D,
+              hideModal: E,
               entries: k,
               isLoading: v,
-              fnRefetch: W,
-              mutateAltTextAsync: $,
+              fnRefetch: z,
+              mutateAltTextAsync: K,
               isMutatePending: N,
               fnGetImage: B,
             } = S,
             { bAppHasSteamChinaToolsEnabled: Ee } = (0, fe.aJ)(),
-            L = p.useMemo(() => (0, te.O9)(Ee), [Ee]),
+            L = p.useMemo(() => (0, se.O9)(Ee), [Ee]),
             {
-              strActiveLanguage: V,
+              strActiveLanguage: G,
               eActiveLang: w,
-              rctLanguageSelect: G,
+              rctLanguageSelect: W,
               mapValues: b,
-            } = (0, He.eE)(L),
+            } = (0, Ve.eE)(L),
             [A, P] = p.useState(new Map()),
-            [U, X] = p.useState(new Map());
+            [H, X] = p.useState(new Map());
           p.useEffect(() => {
             const oe = new Map(),
               Te = new Map();
@@ -4696,7 +4696,7 @@
                 Te.set(he.key, structuredClone(he));
             P(oe), X(Te);
           }, [k]);
-          const de = p.useCallback(() => {
+          const ce = p.useCallback(() => {
             for (const oe of L.keys()) {
               const Te = Array.from(A.values()).some(
                 (he) => he.mapAltText && oe in he.mapAltText,
@@ -4704,50 +4704,50 @@
               b.get(oe).Set(Te ? "yes" : "");
             }
           }, [b, A, L]);
-          p.useEffect(() => de(), [de]);
-          const De = (0, ce.CH)(),
-            Ce = (oe) => A.get(oe)?.mapAltText?.[V] ?? "",
+          p.useEffect(() => ce(), [ce]);
+          const De = (0, pe.CH)(),
+            xe = (oe) => A.get(oe)?.mapAltText?.[G] ?? "",
             Me = (oe, Te) => {
               let he = A.get(oe);
               he || ((he = {}), A.set(oe, he)),
                 he.mapAltText || (he.mapAltText = {}),
                 Te.trim().length > 0
-                  ? (he.mapAltText[V] = Te)
-                  : delete he.mapAltText[V],
-                de(),
+                  ? (he.mapAltText[G] = Te)
+                  : delete he.mapAltText[G],
+                ce(),
                 De();
             },
-            F = Ne.sH.set(),
+            F = He.sH.set(),
             ie = async () => {
               try {
                 F.clear();
                 for (const [oe, Te] of A.entries()) {
-                  if (I(Te.mapAltText, U.get(oe).mapAltText)) continue;
+                  if (I(Te.mapAltText, H.get(oe).mapAltText)) continue;
                   const he = { ...Te.mapAltText };
-                  for (const We of Object.keys(U.get(oe).mapAltText ?? {}))
-                    We in Te.mapAltText || (he[We] = "");
-                  (await $(oe, he)) ? U.set(oe, { ...Te }) : F.add(oe);
+                  for (const Ue of Object.keys(H.get(oe).mapAltText ?? {}))
+                    Ue in Te.mapAltText || (he[Ue] = "");
+                  (await K(oe, he)) ? H.set(oe, { ...Te }) : F.add(oe);
                 }
-                W?.(), F.size == 0 && D();
+                z?.(), F.size == 0 && E();
               } catch (oe) {
                 console.error("Some mutations failed", oe);
               }
             },
             _e = N || v,
             le = () => {
-              _e || D();
+              _e || E();
             },
-            Ae = Array.from(A.values()).some((oe) => oe.caption != null);
+            be = Array.from(A.values()).some((oe) => oe.caption != null);
           return (0, e.jsx)(O.E, {
             active: !0,
-            children: (0, e.jsx)(H.x_, {
+            children: (0, e.jsx)($.x_, {
               onEscKeypress: le,
               bDisableBackgroundDismiss: _e,
               children: (0, e.jsxs)(a.U9, {
                 classNameContent: Y.AltTextDialogContent,
                 children: [
                   (0, e.jsx)(a.Y9, {
-                    children: (0, te.we)("#StoreAdmin_EditAltText_Title"),
+                    children: (0, se.we)("#StoreAdmin_EditAltText_Title"),
                   }),
                   (0, e.jsxs)("div", {
                     className: Y.AltTextDialogDescription,
@@ -4755,18 +4755,18 @@
                       (0, e.jsxs)("div", {
                         children: [
                           (0, e.jsx)("p", {
-                            children: (0, te.we)(
+                            children: (0, se.we)(
                               "#StoreAdmin_EditAltText_Desc",
                             ),
                           }),
                           (0, e.jsx)("p", {
-                            children: (0, te.we)(
+                            children: (0, se.we)(
                               "#StoreAdmin_EditAltText_Desc2",
                             ),
                           }),
                         ],
                       }),
-                      G,
+                      W,
                     ],
                   }),
                   (0, e.jsxs)(a.nB, {
@@ -4781,16 +4781,16 @@
                                 (0, e.jsx)("th", {
                                   className: (0, R.A)(Y.AltTextImage),
                                 }),
-                                Ae &&
+                                be &&
                                   (0, e.jsx)("th", {
                                     className: (0, R.A)(Y.AltTextName),
-                                    children: (0, te.we)(
+                                    children: (0, se.we)(
                                       "#StoreAdmin_EditAltText_ColAssetName",
                                     ),
                                   }),
                                 (0, e.jsx)("th", {
                                   className: (0, R.A)(Y.AltTextInput),
-                                  children: (0, te.we)(
+                                  children: (0, se.we)(
                                     "#StoreAdmin_EditAltText_ColAltText",
                                   ),
                                 }),
@@ -4807,10 +4807,10 @@
                                     lang: w,
                                     caption: oe.caption,
                                     image: B(oe.key, w),
-                                    altText: Ce(oe.key),
+                                    altText: xe(oe.key),
                                     setAltText: (Te) => Me(oe.key, Te),
                                     failedMutate: F.has(oe.key),
-                                    showCaptionColumn: Ae,
+                                    showCaptionColumn: be,
                                   },
                                   `${oe.key}-${w}`,
                                 ),
@@ -4818,7 +4818,7 @@
                           }),
                         ],
                       }),
-                      _e && (0, e.jsx)(E.t, {}),
+                      _e && (0, e.jsx)(D.t, {}),
                     ],
                   }),
                   (0, e.jsxs)(a.wi, {
@@ -4826,7 +4826,7 @@
                       F.size > 0 &&
                         (0, e.jsx)("div", {
                           className: Y.AltTextMutateFailed,
-                          children: (0, te.we)(
+                          children: (0, se.we)(
                             "#StoreAdmin_EditAltText_MutateFailed",
                           ),
                         }),
@@ -4835,9 +4835,9 @@
                         onOK: (oe) => {
                           oe.preventDefault(), ie();
                         },
-                        bOKDisabled: _e || ae(A, U),
+                        bOKDisabled: _e || ae(A, H),
                         bCancelDisabled: _e,
-                        strOKText: (0, te.we)("#StoreAdmin_EditAltText_Save"),
+                        strOKText: (0, se.we)("#StoreAdmin_EditAltText_Save"),
                       }),
                     ],
                   }),
@@ -4848,19 +4848,19 @@
         }
         function me(S) {
           const {
-              lang: D,
+              lang: E,
               image: k,
               caption: v,
-              altText: W,
-              setAltText: $,
+              altText: z,
+              setAltText: K,
               failedMutate: N,
               showCaptionColumn: B,
             } = S,
-            [Ee, L] = p.useState(W),
-            V = Ee === "#decorative-only",
-            [w, G] = p.useState(V ? "" : W),
+            [Ee, L] = p.useState(z),
+            G = Ee === "#decorative-only",
+            [w, W] = p.useState(G ? "" : z),
             b = (A, P) => {
-              L(A), $(A), P || G(A);
+              L(A), K(A), P || W(A);
             };
           return (0, e.jsxs)("tr", {
             className: Y.AltTextRow,
@@ -4874,7 +4874,7 @@
                     N &&
                       (0, e.jsx)("div", {
                         className: Y.AltTextFailed,
-                        children: (0, te.we)(
+                        children: (0, se.we)(
                           "#StoreAdmin_EditAltText_EntryMutateFailed",
                         ),
                       }),
@@ -4885,23 +4885,23 @@
                 children: [
                   (0, e.jsx)(a.pd, {
                     type: "text",
-                    placeholder: V
-                      ? (0, te.we)(
+                    placeholder: G
+                      ? (0, se.we)(
                           "#StoreAdmin_EditAltText_PlaceholderDecorative",
                         )
-                      : (0, te.we)(
+                      : (0, se.we)(
                           "#StoreAdmin_EditAltText_Placeholder",
-                          (0, te.we)(`#Language_${(0, Se.LgB)(D)}`),
+                          (0, se.we)(`#Language_${(0, Se.LgB)(E)}`),
                         ),
-                    value: V ? "" : Ee,
+                    value: G ? "" : Ee,
                     onChange: (A) => b(A.target.value, !1),
-                    disabled: V,
+                    disabled: G,
                   }),
                   (0, e.jsx)(a.Yh, {
-                    checked: V,
+                    checked: G,
                     onChange: (A) => b(A ? "#decorative-only" : w, !0),
-                    label: (0, te.we)("#StoreAdmin_EditAltText_Presentational"),
-                    tooltip: (0, te.we)(
+                    label: (0, se.we)("#StoreAdmin_EditAltText_Presentational"),
+                    tooltip: (0, se.we)(
                       "#StoreAdmin_EditAltText_Presentational_ttip",
                     ),
                   }),
@@ -4910,16 +4910,16 @@
             ],
           });
         }
-        function I(S, D) {
+        function I(S, E) {
           const k = S ? Object.keys(S) : [],
-            v = D ? Object.keys(D) : [];
-          return k.length !== v.length ? !1 : k.every((W) => S[W] === D[W]);
+            v = E ? Object.keys(E) : [];
+          return k.length !== v.length ? !1 : k.every((z) => S[z] === E[z]);
         }
-        function ae(S, D) {
-          if (S.size !== D.size) return !1;
+        function ae(S, E) {
+          if (S.size !== E.size) return !1;
           for (const [k, v] of S) {
-            const W = D.get(k);
-            if (!W || !I(v.mapAltText, W.mapAltText)) return !1;
+            const z = E.get(k);
+            if (!z || !I(v.mapAltText, z.mapAltText)) return !1;
           }
           return !0;
         }
@@ -4933,131 +4933,131 @@
           L4: () => A,
           Z3: () => P,
           cz: () => X,
-          TQ: () => Ce,
+          TQ: () => xe,
           gg: () => Me,
-          Y7: () => de,
+          Y7: () => ce,
         });
         var e = i(7850),
           p = i(32093),
           a = i(71742),
           fe = i(34604),
           O = i(90626),
-          H = i(58534),
-          E = i(22633),
+          $ = i(58534),
+          D = i(22633),
           R = i(1880),
-          te = i(69168),
-          ce = i(85599),
+          se = i(69168),
+          pe = i(85599),
           Y = i(36707),
-          xe = i(18210),
+          Pe = i(18210),
           Se = i(76349),
-          Ne = i(64868),
-          He = i(38410),
+          He = i(64868),
+          Ve = i(38410),
           re = i(99412),
           me = i(48127),
           I = i(69787),
           ae = i(14295);
         function S(le) {
-          const { rgUploads: Ae } = le,
+          const { rgUploads: be } = le,
             oe = O.useMemo(() => new Set(), []),
-            Te = Ae.findIndex(({ id: Ie }) => !oe.has(Ie)),
-            he = (0, Ne.CH)(),
-            Ge = (Ie) => {
+            Te = be.findIndex(({ id: Ie }) => !oe.has(Ie)),
+            he = (0, He.CH)(),
+            We = (Ie) => {
               oe.add(Ie), he();
             },
-            We = (Ie) => {
+            Ue = (Ie) => {
               oe.delete(Ie), he();
             };
-          return Ae.map(({ id: Ie, upload: ye }, ve) =>
+          return be.map(({ id: Ie, upload: ve }, Ae) =>
             (0, e.jsx)(
-              D,
+              E,
               {
-                active: ve == Te,
-                upload: ye,
-                fnUploadPrepared: () => Ge(Ie),
-                fnUploadComplete: () => We(Ie),
+                active: Ae == Te,
+                upload: ve,
+                fnUploadPrepared: () => We(Ie),
+                fnUploadComplete: () => Ue(Ie),
               },
               Ie,
             ),
           );
         }
-        function D(le) {
+        function E(le) {
           const {
-              upload: Ae,
+              upload: be,
               active: oe,
               fnUploadPrepared: Te,
               fnUploadComplete: he,
             } = le,
-            [Ge, We] = O.useState(!1),
-            [Ie, ye] = O.useState(void 0);
+            [We, Ue] = O.useState(!1),
+            [Ie, ve] = O.useState(void 0);
           O.useEffect(() => {
             oe &&
-              (N(Ae.file) ||
-                ye(
-                  (0, xe.we)(
+              (N(be.file) ||
+                ve(
+                  (0, Pe.we)(
                     "#StoreAdmin_UploadError_UnsupportedFileType",
-                    Ae.file.name,
+                    be.file.name,
                   ),
                 )),
-              We(oe);
-          }, [oe, Ae]);
-          const [ve, we] = O.useState(!1),
-            pe = (0, ae.L)(),
-            Re = de(),
+              Ue(oe);
+          }, [oe, be]);
+          const [Ae, we] = O.useState(!1),
+            ue = (0, ae.L)(),
+            Oe = ce(),
             Be = async (ke, Ze) => {
               Te(), we(!0);
               try {
-                if (!(await pe.AddImageForLanguage(Ae.file, Ze))) {
-                  ye((0, xe.we)("#StoreAdmin_UploadError_UnableToGetFileInfo"));
+                if (!(await ue.AddImageForLanguage(be.file, Ze))) {
+                  ve((0, Pe.we)("#StoreAdmin_UploadError_UnableToGetFileInfo"));
                   return;
                 }
-                const nt = (await pe.UploadAllImages())[0];
+                const nt = (await ue.UploadAllImages())[0];
                 if (!nt || !nt.bSuccess) {
-                  ye(
+                  ve(
                     nt?.image?.message
-                      ? (0, xe.PP)(
+                      ? (0, Pe.PP)(
                           "#StoreAdmin_UploadError_Generic",
                           nt.image.message,
                         )
-                      : (0, xe.we)("#StoreAdmin_UploadError_Unknown"),
+                      : (0, Pe.we)("#StoreAdmin_UploadError_Unknown"),
                   );
                   return;
                 }
-                Re(nt.uploadResult), Ae.onComplete((0, fe.TQ)(ke));
+                Oe(nt.uploadResult), be.onComplete((0, fe.TQ)(ke));
               } finally {
                 we(!1), he();
               }
             };
-          return Ge
+          return We
             ? Ie
-              ? (0, e.jsx)(te.E, {
+              ? (0, e.jsx)(se.E, {
                   active: !0,
                   children: (0, e.jsx)(R.o0, {
                     bAlertDialog: !0,
-                    strTitle: (0, xe.we)("#Error_Generic"),
+                    strTitle: (0, Pe.we)("#Error_Generic"),
                     strDescription: Ie,
-                    strOKButtonText: (0, xe.we)("#Button_OK"),
-                    closeModal: () => Ae.onCancel(),
+                    strOKButtonText: (0, Pe.we)("#Button_OK"),
+                    closeModal: () => be.onCancel(),
                   }),
                 })
-              : (0, e.jsx)(k, { upload: Ae, isUploading: ve, doUpload: Be })
+              : (0, e.jsx)(k, { upload: be, isUploading: Ae, doUpload: Be })
             : null;
         }
         function k(le) {
-          const { upload: Ae, isUploading: oe, doUpload: Te } = le,
-            { file: he, onCancel: Ge } = Ae,
-            { rgExtraAssets: We, regexInvalidFilenameCharacters: Ie } = A(),
-            ye = O.useCallback(
+          const { upload: be, isUploading: oe, doUpload: Te } = le,
+            { file: he, onCancel: We } = be,
+            { rgExtraAssets: Ue, regexInvalidFilenameCharacters: Ie } = A(),
+            ve = O.useCallback(
               (mt) => mt?.replace(Ie, "_").toLowerCase() ?? "",
               [Ie],
             ),
-            { baseFilename: ve, language: we } = (0, He.jj)(he.name, re.xPp),
-            [pe, Re] = O.useState(() => ye(ve)),
-            Be = O.useMemo(() => ye(pe), [pe, ye]),
-            ke = (0, me.Gr)(Ae.languages),
+            { baseFilename: Ae, language: we } = (0, Ve.jj)(he.name, re.xPp),
+            [ue, Oe] = O.useState(() => ve(Ae)),
+            Be = O.useMemo(() => ve(ue), [ue, ve]),
+            ke = (0, me.Gr)(be.languages),
             Ze = Ee(
               ke.map((mt) => mt.data),
               we,
-              Ae.activeLanguage,
+              be.activeLanguage,
             ),
             [et, _t] = O.useState(Ze),
             [nt, Ke] = O.useState(void 0),
@@ -5065,38 +5065,38 @@
           O.useEffect(() => {
             Ke(() => {
               if (!Be) return;
-              const { baseFilename: mt } = (0, He.jj)(Be),
-                Je = We.find((Rt) => (0, fe.K7)(Rt) == mt);
+              const { baseFilename: mt } = (0, Ve.jj)(Be),
+                Je = Ue.find((Rt) => (0, fe.K7)(Rt) == mt);
               return Je
                 ? (0, fe.i$)(Je)
                   ? Je
                   : Je.images?.[(0, re.LgB)(et)]
                 : void 0;
             });
-          }, [Qe, Be, We, et]);
-          const tt = $(Be) && !oe ? () => Te(Be, et) : void 0,
+          }, [Qe, Be, Ue, et]);
+          const tt = K(Be) && !oe ? () => Te(Be, et) : void 0,
             rt = (mt) => {
               mt.preventDefault(), tt && tt();
             },
             qe = O.useCallback(() => {
-              Ae.onComplete((0, fe.TQ)(Be));
-            }, [Ae, Be]),
+              be.onComplete((0, fe.TQ)(Be));
+            }, [be, Be]),
             kt = nt
-              ? (0, xe.we)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
-              : (0, xe.we)("#Button_Upload");
-          return (0, e.jsx)(E.mt, {
+              ? (0, Pe.we)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
+              : (0, Pe.we)("#Button_Upload");
+          return (0, e.jsx)(D.mt, {
             active: !0,
-            onDismiss: Ge,
+            onDismiss: We,
             className: Se.UploadModal,
-            children: (0, e.jsxs)(H.U9, {
+            children: (0, e.jsxs)($.U9, {
               onSubmit: rt,
               children: [
-                (0, e.jsx)(H.Y9, {
-                  children: (0, xe.we)(
+                (0, e.jsx)($.Y9, {
+                  children: (0, Pe.we)(
                     "#StoreAdmin_ExtraAssetUpload_UploadNew",
                   ),
                 }),
-                (0, e.jsxs)(H.nB, {
+                (0, e.jsxs)($.nB, {
                   children: [
                     (0, e.jsx)(v, {
                       file: he,
@@ -5105,26 +5105,26 @@
                       bShowThrobber: oe,
                       onUseDuplicate: qe,
                     }),
-                    (0, e.jsx)(W, {
-                      name: pe,
+                    (0, e.jsx)(z, {
+                      name: ue,
                       validatedName: Be,
-                      setName: Re,
+                      setName: Oe,
                       disabled: oe,
                     }),
                     ke.length > 1 &&
-                      (0, e.jsx)(H.m, {
+                      (0, e.jsx)($.m, {
                         rgOptions: ke,
                         selectedOption: et,
                         onChange: (mt) => _t(mt.data),
                       }),
                   ],
                 }),
-                (0, e.jsx)(H.wi, {
-                  children: (0, e.jsx)(H.CB, {
+                (0, e.jsx)($.wi, {
+                  children: (0, e.jsx)($.CB, {
                     onOK: tt,
                     strOKText: kt,
                     bOKDisabled: !tt,
-                    onCancel: Ge,
+                    onCancel: We,
                   }),
                 }),
               ],
@@ -5133,20 +5133,20 @@
         }
         function v(le) {
           const {
-              file: Ae,
+              file: be,
               isVideo: oe,
               duplicate: Te,
               bShowThrobber: he,
-              onUseDuplicate: Ge,
+              onUseDuplicate: We,
             } = le,
-            We = O.useMemo(() => URL.createObjectURL(Ae), [Ae]),
+            Ue = O.useMemo(() => URL.createObjectURL(be), [be]),
             Ie = (0, I.Un)();
           return (0, e.jsxs)(e.Fragment, {
             children: [
               Te &&
                 (0, e.jsx)("div", {
                   className: Se.DuplicateMessage,
-                  children: (0, xe.we)(
+                  children: (0, Pe.we)(
                     "#StoreAdmin_ExtraAssetUpload_FileNameInuse",
                   ),
                 }),
@@ -5156,7 +5156,7 @@
                   he &&
                     (0, e.jsx)("div", {
                       className: Se.ThrobberContainer,
-                      children: (0, e.jsx)(ce.t, {
+                      children: (0, e.jsx)(pe.t, {
                         position: "center",
                         size: "xlarge",
                       }),
@@ -5170,7 +5170,7 @@
                       children: [
                         (0, e.jsx)("div", {
                           className: Se.ImageLabel,
-                          children: (0, xe.we)(
+                          children: (0, Pe.we)(
                             "#StoreAdmin_ExtraAssetUpload_Original",
                           ),
                         }),
@@ -5189,18 +5189,18 @@
                       Te &&
                         (0, e.jsx)("div", {
                           className: Se.ImageLabel,
-                          children: (0, xe.we)(
+                          children: (0, Pe.we)(
                             "#StoreAdmin_ExtraAssetUpload_Replacement",
                           ),
                         }),
                       !oe &&
                         (0, e.jsx)("img", {
-                          src: We,
+                          src: Ue,
                           className: Se.ImgPreview,
                         }),
                       oe &&
                         (0, e.jsx)("video", {
-                          src: We,
+                          src: Ue,
                           className: Se.ImgPreview,
                           muted: !0,
                           loop: !0,
@@ -5214,24 +5214,24 @@
             ],
           });
         }
-        function W(le) {
-          const { name: Ae, setName: oe, validatedName: Te, disabled: he } = le,
-            Ge = O.useCallback((We) => We && We.element.select(), []);
+        function z(le) {
+          const { name: be, setName: oe, validatedName: Te, disabled: he } = le,
+            We = O.useCallback((Ue) => Ue && Ue.element.select(), []);
           return (0, e.jsx)("div", {
-            children: (0, e.jsx)(H.pd, {
-              value: Ae,
-              onChange: (We) => oe(We.currentTarget.value),
-              label: (0, xe.we)("#StoreAdmin_ExtraAssetUpload_EnterAName"),
-              ref: Ge,
+            children: (0, e.jsx)($.pd, {
+              value: be,
+              onChange: (Ue) => oe(Ue.currentTarget.value),
+              label: (0, Pe.we)("#StoreAdmin_ExtraAssetUpload_EnterAName"),
+              ref: We,
               disabled: he,
-              description: (0, xe.PP)(
+              description: (0, Pe.PP)(
                 "#StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename",
                 (0, e.jsx)("b", { children: Te }),
               ),
             }),
           });
         }
-        function $(le) {
+        function K(le) {
           return le && le.length > 0;
         }
         function N(le) {
@@ -5255,43 +5255,43 @@
         function B(le) {
           return le.type.startsWith("video/");
         }
-        function Ee(le, Ae, oe) {
-          return le?.length == 1 ? le[0] : Ae != re.xPp ? Ae : oe;
+        function Ee(le, be, oe) {
+          return le?.length == 1 ? le[0] : be != re.xPp ? be : oe;
         }
         var L = i(17616),
-          V = i(67705);
+          G = i(67705);
         function w(le) {
-          const { children: Ae } = le,
+          const { children: be } = le,
             [oe, Te] = O.useState([]),
             he = O.useRef(0),
-            Ge = O.useCallback(
-              (We) => (
-                Te((Ie) => [...Ie, { upload: We, id: he.current++ }]),
-                () => Te((Ie) => Ie.filter((ye) => ye.upload != We))
+            We = O.useCallback(
+              (Ue) => (
+                Te((Ie) => [...Ie, { upload: Ue, id: he.current++ }]),
+                () => Te((Ie) => Ie.filter((ve) => ve.upload != Ue))
               ),
               [],
             );
-          return (0, e.jsx)(G, {
-            queueExtraAssetUpload: Ge,
+          return (0, e.jsx)(W, {
+            queueExtraAssetUpload: We,
             children: (0, e.jsx)(_e, {
               children: (0, e.jsxs)(L.jy, {
-                children: [(0, e.jsx)(S, { rgUploads: oe }), Ae],
+                children: [(0, e.jsx)(S, { rgUploads: oe }), be],
               }),
             }),
           });
         }
-        function G(le) {
-          const { children: Ae, queueExtraAssetUpload: oe } = le,
+        function W(le) {
+          const { children: be, queueExtraAssetUpload: oe } = le,
             [Te, he] = O.useState(void 0),
-            [Ge, We] = O.useState([]),
-            [Ie, ye] = O.useState(!1);
+            [We, Ue] = O.useState([]),
+            [Ie, ve] = O.useState(!1);
           O.useEffect(() => {
-            let pe = (0, V.Tc)("rgGamePageConfig", "application_config");
-            pe ||
+            let ue = (0, G.Tc)("rgGamePageConfig", "application_config");
+            ue ||
               (console.error(
                 "Missing config data for game edit page - some components may not work",
               ),
-              (pe = {
+              (ue = {
                 rgExtraAssetsData: {
                   rgExtraAssets: [],
                   rgInvalidFilenameCharacters: [],
@@ -5299,22 +5299,22 @@
                 strGameControllerURLFormat: "",
                 bAppHasSteamChinaToolsEnabled: !1,
               })),
-              he(pe),
-              We(pe.rgExtraAssetsData.rgExtraAssets),
-              ye(pe.bAppHasSteamChinaToolsEnabled);
+              he(ue),
+              Ue(ue.rgExtraAssetsData.rgExtraAssets),
+              ve(ue.bAppHasSteamChinaToolsEnabled);
           }, []);
-          const ve = O.useMemo(() => {
+          const Ae = O.useMemo(() => {
               if (Te)
                 return (
                   Te.rgExtraAssetsData.rgInvalidFilenameCharacters.forEach(
-                    (pe) =>
+                    (ue) =>
                       (0, a.wT)(
-                        pe.length == 1,
-                        `Expected single-character replacements, "${pe} is not`,
+                        ue.length == 1,
+                        `Expected single-character replacements, "${ue} is not`,
                       ),
                   ),
                   new RegExp(
-                    `[${Te.rgExtraAssetsData.rgInvalidFilenameCharacters.map((pe) => `\\${pe}`)}]`,
+                    `[${Te.rgExtraAssetsData.rgInvalidFilenameCharacters.map((ue) => `\\${ue}`)}]`,
                     "g",
                   )
                 );
@@ -5322,23 +5322,23 @@
             we = O.useMemo(
               () => ({
                 rgExtraAssetsData: {
-                  rgExtraAssets: Ge,
-                  regexInvalidFilenameCharacters: ve,
+                  rgExtraAssets: We,
+                  regexInvalidFilenameCharacters: Ae,
                 },
                 strGameControllerURLFormat: Te?.strGameControllerURLFormat,
                 queueExtraAssetUpload: oe,
-                onExtraAssetsUpdated: We,
+                onExtraAssetsUpdated: Ue,
                 storeItemID: Te?.nStoreItemID,
                 eStoreItemType: Te?.eStoreItemType,
                 bAppHasSteamChinaToolsEnabled: Ie,
               }),
-              [Te, Ge, ve, oe, Ie],
+              [Te, We, Ae, oe, Ie],
             );
-          return Te ? (0, e.jsx)(F, { value: we, children: Ae }) : null;
+          return Te ? (0, e.jsx)(F, { value: we, children: be }) : null;
         }
         function b(le = !1) {
-          const Ae = O.useContext(F).rgExtraAssetsData.rgExtraAssets;
-          return O.useMemo(() => (le ? [...Ae].reverse() : Ae), [Ae, le]);
+          const be = O.useContext(F).rgExtraAssetsData.rgExtraAssets;
+          return O.useMemo(() => (le ? [...be].reverse() : be), [be, le]);
         }
         function A() {
           return O.useContext(F).rgExtraAssetsData;
@@ -5349,19 +5349,19 @@
             le,
           );
         }
-        function U() {
+        function H() {
           const le = React.useContext(F);
           return { type: le.eStoreItemType, id: le.storeItemID };
         }
         function X() {
           return O.useContext(F).queueExtraAssetUpload;
         }
-        function de() {
+        function ce() {
           return O.useContext(F).onExtraAssetsUpdated;
         }
         function De() {
           const le = O.useContext(F),
-            Ae = O.useMemo(
+            be = O.useMemo(
               () =>
                 le.bAppHasSteamChinaToolsEnabled
                   ? [p.TU.k_ESteamRealmGlobal, p.TU.k_ESteamRealmChina]
@@ -5370,10 +5370,10 @@
             );
           return {
             bAppHasSteamChinaToolsEnabled: le.bAppHasSteamChinaToolsEnabled,
-            rgRealmList: Ae,
+            rgRealmList: be,
           };
         }
-        function Ce() {
+        function xe() {
           return O.useContext(ie).bUseRichEditor;
         }
         function Me() {
@@ -5382,17 +5382,17 @@
         const F = O.createContext(void 0),
           ie = O.createContext(void 0);
         function _e(le) {
-          const Ae = "storeEditorDisableRichEditor",
-            [oe, Te] = O.useState(() => !localStorage.getItem(Ae)),
-            he = O.useCallback((We) => {
-              We ? localStorage.removeItem(Ae) : localStorage.setItem(Ae, "1"),
-                Te(We);
+          const be = "storeEditorDisableRichEditor",
+            [oe, Te] = O.useState(() => !localStorage.getItem(be)),
+            he = O.useCallback((Ue) => {
+              Ue ? localStorage.removeItem(be) : localStorage.setItem(be, "1"),
+                Te(Ue);
             }, []),
-            Ge = O.useMemo(
+            We = O.useMemo(
               () => ({ bUseRichEditor: oe, setUseRichEditor: he }),
               [oe, he],
             );
-          return (0, e.jsx)(ie.Provider, { value: Ge, children: le.children });
+          return (0, e.jsx)(ie.Provider, { value: We, children: le.children });
         }
       },
       39795: (ee, ze, i) => {
@@ -5403,50 +5403,50 @@
           a = i(18210),
           fe = i(93763),
           O = i(36118),
-          H = i(17479),
-          E = i(36707),
+          $ = i(17479),
+          D = i(36707),
           R = i(249),
-          te = i(53906),
-          ce = i(71421),
+          se = i(53906),
+          pe = i(71421),
           Y = i(3166);
-        function xe(s) {
+        function Pe(s) {
           const t = s.strSecondaryCategory
               ? `${Y.TS.STORE_BASE_URL}search/?controllersupport=${s.strCategory}%2C${s.strSecondaryCategory}`
               : `${Y.TS.STORE_BASE_URL}search/?controllersupport=${s.strCategory}`,
             n = (0, e.jsxs)(e.Fragment, {
               children: [
                 (0, e.jsx)("div", {
-                  className: (0, E.A)(
-                    H.ImgSection,
-                    s.bHightlightRow && H.HighlightRow,
-                    s.bHighlightGPRequired && H.GamepadRequired,
+                  className: (0, D.A)(
+                    $.ImgSection,
+                    s.bHightlightRow && $.HighlightRow,
+                    s.bHighlightGPRequired && $.GamepadRequired,
                   ),
                   children: s.tagImage,
                 }),
                 (0, e.jsxs)("div", {
-                  className: (0, E.A)(
-                    H.LocSection,
-                    s.bHighlightText && H.HighlightText,
-                    s.bHightlightRow && H.HighlightRow,
-                    s.bHighlightGPRequired && H.GamepadRequired,
+                  className: (0, D.A)(
+                    $.LocSection,
+                    s.bHighlightText && $.HighlightText,
+                    s.bHightlightRow && $.HighlightRow,
+                    s.bHighlightGPRequired && $.GamepadRequired,
                   ),
                   children: [
                     (0, e.jsx)("div", {
-                      className: (0, E.A)(
-                        H.LocString,
-                        s.bHighlightText && H.HighlightText,
-                        s.bHightlightRow && H.HighlightRow,
-                        s.bHighlightGPRequired && H.GamepadRequired,
-                        s.bPersonalized && H.Personalized,
+                      className: (0, D.A)(
+                        $.LocString,
+                        s.bHighlightText && $.HighlightText,
+                        s.bHightlightRow && $.HighlightRow,
+                        s.bHighlightGPRequired && $.GamepadRequired,
+                        s.bPersonalized && $.Personalized,
                       ),
                       children: (0, a.we)(s.strLocalizationToken),
                     }),
                     s.strTooltipString &&
-                      (0, e.jsx)(ce.he, {
+                      (0, e.jsx)(pe.he, {
                         toolTipContent: (0, a.we)(s.strTooltipString),
-                        className: H.ToolTipContainer,
+                        className: $.ToolTipContainer,
                         children: (0, e.jsx)("span", {
-                          className: H.ToolTipControl,
+                          className: $.ToolTipControl,
                           children: "?",
                         }),
                       }),
@@ -5455,16 +5455,16 @@
               ],
             });
           return s.strCategory
-            ? (0, e.jsx)("a", { href: t, className: H.InfoRow, children: n })
-            : (0, e.jsx)("div", { className: H.InfoRow, children: n });
+            ? (0, e.jsx)("a", { href: t, className: $.InfoRow, children: n })
+            : (0, e.jsx)("div", { className: $.InfoRow, children: n });
         }
         function Se(s) {
           return (0, e.jsx)("div", {
-            className: H.PreviewContainer,
+            className: $.PreviewContainer,
             children: (0, e.jsx)(I, { bPreview: !0, ...s }),
           });
         }
-        function Ne(s) {
+        function He(s) {
           return jsx(Fragment, {
             children:
               (s.bPartialXboxControllerSupport ||
@@ -5475,10 +5475,10 @@
               }),
           });
         }
-        function He() {
-          return (0, e.jsx)(xe, {
+        function Ve() {
+          return (0, e.jsx)(Pe, {
             tagImage: (0, e.jsx)(R.Moo, {
-              className: (0, E.A)(H.Tilt, H.SmallerSVG),
+              className: (0, D.A)($.Tilt, $.SmallerSVG),
               role: "presentation",
             }),
             strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
@@ -5489,14 +5489,14 @@
         }
         function re() {
           return (0, e.jsxs)("div", {
-            className: (0, E.A)(H.PurchaseNoticeContainer),
+            className: (0, D.A)($.PurchaseNoticeContainer),
             children: [
               (0, e.jsx)(R.Kz1, {
-                className: (0, E.A)(H.PurchaseNoticeImage),
+                className: (0, D.A)($.PurchaseNoticeImage),
                 role: "presentation",
               }),
               (0, e.jsx)("div", {
-                className: (0, E.A)(H.PurchaseNoticeLabel),
+                className: (0, D.A)($.PurchaseNoticeLabel),
                 children: (0, a.we)(
                   "#Store_ControllerSupport_GamepadPreferred",
                 ),
@@ -5507,8 +5507,8 @@
         function me(s) {
           const { bNoKeyboardSupport: t, bGamepadPreferred: n } = s;
           return (0, e.jsxs)("div", {
-            className: (0, E.A)(H.NoticeContainer),
-            children: [t && (0, e.jsx)(He, {}), n && !t && (0, e.jsx)(re, {})],
+            className: (0, D.A)($.NoticeContainer),
+            children: [t && (0, e.jsx)(Ve, {}), n && !t && (0, e.jsx)(re, {})],
           });
         }
         function I(s) {
@@ -5527,20 +5527,20 @@
             bHasXbox: C,
             bPreview: T,
           } = s;
-          let z = [];
+          let U = [];
           if (n && r && o && l) {
-            const je = (0, e.jsx)(R.pcV, {
-                className: H.SmallerSVG,
-                controllerType: te._X,
+            const ye = (0, e.jsx)(R.pcV, {
+                className: $.SmallerSVG,
+                controllerType: se._X,
                 partial: !c,
                 role: "presentation",
               }),
               ne = f || _;
-            z.push(
+            U.push(
               (0, e.jsx)(
-                xe,
+                Pe,
                 {
-                  tagImage: je,
+                  tagImage: ye,
                   strLocalizationToken: ne
                     ? "#Store_ControllerSupport_PS_Personalized"
                     : "#Store_ControllerSupport_PS",
@@ -5553,18 +5553,18 @@
             );
           } else {
             if (n) {
-              const je = (0, e.jsx)(R.pcV, {
-                className: H.SmallerSVG,
-                controllerType: te._X,
+              const ye = (0, e.jsx)(R.pcV, {
+                className: $.SmallerSVG,
+                controllerType: se._X,
                 partial: !c,
                 role: "presentation",
               });
               o
-                ? z.push(
+                ? U.push(
                     (0, e.jsx)(
-                      xe,
+                      Pe,
                       {
-                        tagImage: je,
+                        tagImage: ye,
                         strLocalizationToken: f
                           ? "#Store_ControllerSupport_PS4_Personalized"
                           : "#Store_ControllerSupport_PS4",
@@ -5574,11 +5574,11 @@
                       "2",
                     ),
                   )
-                : z.push(
+                : U.push(
                     (0, e.jsx)(
-                      xe,
+                      Pe,
                       {
-                        tagImage: je,
+                        tagImage: ye,
                         strLocalizationToken: f
                           ? "#Store_ControllerSupport_PS4_USB_Personalized"
                           : "#Store_ControllerSupport_PS4_USB",
@@ -5590,18 +5590,18 @@
                   );
             }
             if (r) {
-              const je = (0, e.jsx)(R.pcV, {
-                className: H.SmallerSVG,
-                controllerType: te.HD,
+              const ye = (0, e.jsx)(R.pcV, {
+                className: $.SmallerSVG,
+                controllerType: se.HD,
                 partial: !c,
                 role: "presentation",
               });
               l
-                ? z.push(
+                ? U.push(
                     (0, e.jsx)(
-                      xe,
+                      Pe,
                       {
-                        tagImage: je,
+                        tagImage: ye,
                         strLocalizationToken: _
                           ? "#Store_ControllerSupport_PS5_Personalized"
                           : "#Store_ControllerSupport_PS5",
@@ -5611,11 +5611,11 @@
                       "4",
                     ),
                   )
-                : z.push(
+                : U.push(
                     (0, e.jsx)(
-                      xe,
+                      Pe,
                       {
-                        tagImage: je,
+                        tagImage: ye,
                         strLocalizationToken: _
                           ? "#Store_ControllerSupport_PS5_USB_Personalized"
                           : "#Store_ControllerSupport_PS5_USB",
@@ -5633,17 +5633,17 @@
               (0, e.jsxs)(e.Fragment, {
                 children: [
                   (0, e.jsx)("div", {
-                    className: H.ControllerSupportLevelString,
+                    className: $.ControllerSupportLevelString,
                     children: (0, a.we)(
                       c
                         ? "#Store_ControllerSupport_FullController"
                         : "#Store_ControllerSupport_PartialController",
                     ),
                   }),
-                  (0, e.jsx)(xe, {
+                  (0, e.jsx)(Pe, {
                     tagImage: (0, e.jsx)(R.pcV, {
-                      className: H.SmallerSVG,
-                      controllerType: te.Oh,
+                      className: $.SmallerSVG,
+                      controllerType: se.Oh,
                       partial: !c,
                       role: "presentation",
                     }),
@@ -5653,11 +5653,11 @@
                     bPersonalized: C,
                     strCategory: "18",
                   }),
-                  z,
+                  U,
                   g &&
-                    (0, e.jsx)(xe, {
+                    (0, e.jsx)(Pe, {
                       tagImage: (0, e.jsx)(R.kdM, {
-                        className: H.BiggerSVG,
+                        className: $.BiggerSVG,
                         bGreyOutRightSide: !c,
                         role: "presentation",
                       }),
@@ -5667,9 +5667,9 @@
                       strCategory: "59",
                     }),
                   ((!T && !t) || (!g && x && !C)) &&
-                    (0, e.jsx)(xe, {
+                    (0, e.jsx)(Pe, {
                       tagImage: (0, e.jsx)(R.vet, {
-                        className: H.BiggerSVG,
+                        className: $.BiggerSVG,
                         role: "presentation",
                       }),
                       strLocalizationToken:
@@ -5685,13 +5685,13 @@
         }
         const ae = null;
         var S = i(58534),
-          D = i(2801),
+          E = i(2801),
           k = i(31623);
         function v(s, t) {
           const n = document.getElementById(s);
           n && n.setAttribute("value", t ? "true" : "");
         }
-        async function W(s) {
+        async function z(s) {
           v("gamepadsupport_input_1", s.bPartialXboxControllerSupport),
             v("gamepadsupport_input_2", s.bFullXboxControllerSupport),
             v("controllersupport_input_3", s.bPS4ControllerSupport),
@@ -5706,13 +5706,13 @@
           const t = document.getElementById("submitBtn");
           t && t.click();
         }
-        var $ = ((s) => (
+        var K = ((s) => (
           (s[(s.k_eMouseKBOnly = 0)] = "k_eMouseKBOnly"),
           (s[(s.k_eGamepadAndMouse = 1)] = "k_eGamepadAndMouse"),
           (s[(s.k_eGamepadPreferred = 2)] = "k_eGamepadPreferred"),
           (s[(s.k_eGamepadRequired = 3)] = "k_eGamepadRequired"),
           s
-        ))($ || {});
+        ))(K || {});
         function N(s) {
           const {
               nPageNum: t,
@@ -5797,7 +5797,7 @@
                       value: _.id,
                       children: [
                         (0, e.jsx)("div", {
-                          className: (0, E.A)(
+                          className: (0, D.A)(
                             k.RadioButton,
                             d == _.id && k.Selected,
                           ),
@@ -5895,7 +5895,7 @@
                       value: _.id,
                       children: [
                         (0, e.jsx)("div", {
-                          className: (0, E.A)(
+                          className: (0, D.A)(
                             k.RadioButton,
                             g == _.id && k.Selected,
                           ),
@@ -6060,11 +6060,11 @@
             leftColumnContent: c,
           });
         }
-        var V = ((s) => (
+        var G = ((s) => (
           (s[(s.k_eSteamInputAPISupport = 0)] = "k_eSteamInputAPISupport"),
           (s[(s.k_eNoSteamInputAPISupport = 1)] = "k_eNoSteamInputAPISupport"),
           s
-        ))(V || {});
+        ))(G || {});
         function w(s) {
           const {
               nPageNum: t,
@@ -6105,7 +6105,7 @@
                       value: _.id,
                       children: [
                         (0, e.jsx)("div", {
-                          className: (0, E.A)(
+                          className: (0, D.A)(
                             k.RadioButton,
                             g == _.id && k.Selected,
                           ),
@@ -6162,7 +6162,7 @@
             leftColumnContent: x,
           });
         }
-        function G(s) {
+        function W(s) {
           const { currentValues: t } = s,
             n = (0, e.jsx)("div", {
               children:
@@ -6189,10 +6189,10 @@
             [x, f] = p.useState(!1),
             _ = 5,
             [C, T] = p.useState(0),
-            z = p.useCallback(() => {
-              W(d), r(!1);
+            U = p.useCallback(() => {
+              z(d), r(!1);
             }, [r, d]),
-            je = () => {
+            ye = () => {
               g(l);
               let $e = C - 1;
               x && C == 4 && ($e = 0), T($e);
@@ -6237,22 +6237,22 @@
               });
               break;
             case 4:
-              Q = (0, e.jsx)(G, { currentValues: d });
+              Q = (0, e.jsx)(W, { currentValues: d });
               break;
           }
-          const Ue = (0, e.jsx)(U, {
+          const Fe = (0, e.jsx)(H, {
               nPageIdx: C,
               nPages: _,
               strHeaderText: (0, a.we)("#ControllerSupportModal_Title"),
             }),
-            Fe = C == _ - 1;
+            Re = C == _ - 1;
           return (0, e.jsx)(A.Provider, {
             value: d,
-            children: (0, e.jsx)(de, {
-              fnNext: Fe ? () => z() : ne,
-              fnBack: C > 0 ? je : n,
-              header: Ue,
-              strOkButtonLabel: Fe ? "Save and Exit" : "Next",
+            children: (0, e.jsx)(ce, {
+              fnNext: Re ? () => U() : ne,
+              fnBack: C > 0 ? ye : n,
+              header: Fe,
+              strOkButtonLabel: Re ? "Save and Exit" : "Next",
               children: Q,
             }),
           });
@@ -6261,11 +6261,11 @@
         function P() {
           return React.useContext(A);
         }
-        function U(s) {
+        function H(s) {
           const { nPages: t, nPageIdx: n, strHeaderText: r } = s,
             o = (100 * (n + 1)) / (t + 1);
           return (0, e.jsxs)("div", {
-            className: (0, E.A)(k.ModalHeader),
+            className: (0, D.A)(k.ModalHeader),
             children: [
               !1,
               (0, e.jsx)("div", {
@@ -6273,14 +6273,14 @@
                 children: (0, a.we)(r),
               }),
               (0, e.jsx)("div", {
-                className: (0, E.A)(
+                className: (0, D.A)(
                   k.ProgressBar,
                   n == t - 1 && k.ProgressBarComplete,
                 ),
                 children:
                   n < t - 1 &&
                   (0, e.jsx)("div", {
-                    className: (0, E.A)(k.ProgressBarFillComponent),
+                    className: (0, D.A)(k.ProgressBarFillComponent),
                     style: { width: o + "%" },
                   }),
               }),
@@ -6335,7 +6335,7 @@
             ],
           });
         });
-        function de(s) {
+        function ce(s) {
           const {
             fnNext: t,
             fnBack: n,
@@ -6343,7 +6343,7 @@
             header: o,
             strOkButtonLabel: l,
           } = s;
-          return (0, e.jsxs)(D.mt, {
+          return (0, e.jsxs)(E.mt, {
             active: !0,
             className: k.ControllerWizardModal,
             children: [
@@ -6390,13 +6390,13 @@
                 ],
               }),
               (0, e.jsxs)("div", {
-                className: (0, E.A)(fe.ReleaseDateInfoCtn),
+                className: (0, D.A)(fe.ReleaseDateInfoCtn),
                 children: [
                   (0, e.jsxs)("div", {
                     className: fe.ReleaseDateContent,
                     children: [
                       !s.bControllerSupportWizardComplete &&
-                        (0, e.jsx)(Ce, { onClick: o }),
+                        (0, e.jsx)(xe, { onClick: o }),
                       s.bControllerSupportWizardComplete &&
                         !c &&
                         (0, e.jsx)(Me, { onClick: o }),
@@ -6412,14 +6412,14 @@
                       onClick: o,
                       children: [
                         (0, e.jsx)("div", {
-                          className: (0, E.A)(fe.Spacer, fe.Top),
+                          className: (0, D.A)(fe.Spacer, fe.Top),
                         }),
                         (0, e.jsx)("div", {
                           className: fe.EditButtonIcon,
                           children: (0, e.jsx)(O.ffu, {}),
                         }),
                         (0, e.jsx)("div", {
-                          className: (0, E.A)(fe.Spacer, fe.Bottom),
+                          className: (0, D.A)(fe.Spacer, fe.Bottom),
                         }),
                       ],
                     }),
@@ -6435,7 +6435,7 @@
             ],
           });
         }
-        function Ce(s) {
+        function xe(s) {
           return (0, e.jsx)("div", {
             children: (0, e.jsxs)(S.nB, {
               children: [
@@ -6493,7 +6493,7 @@
           ie = i(50660),
           _e = i(64868),
           le = i(18938),
-          Ae = i(97982);
+          be = i(97982);
         function oe(s) {
           const { language: t, rctToolbarControls: n, mapValues: r } = s,
             o = r.get(t),
@@ -6505,7 +6505,7 @@
                 value: o,
                 rctToolbarControls: n,
               }),
-              (0, e.jsx)(Ge, { language: t, value: o, refTextArea: l }),
+              (0, e.jsx)(We, { language: t, value: o, refTextArea: l }),
             ],
           });
         }
@@ -6513,13 +6513,13 @@
           const { refTextArea: t, value: n, rctToolbarControls: r } = s,
             o = p.useCallback(
               (c, d) => {
-                We(t.current, n, c, d);
+                Ue(t.current, n, c, d);
               },
               [t, n],
             ),
             l = p.useCallback(
               (c, d) => {
-                We(t.current, n, c, d, (g) =>
+                Ue(t.current, n, c, d, (g) =>
                   g.replace(
                     /(\r\n|\n|\r)/gm,
                     `\r
@@ -6601,7 +6601,7 @@
             children: l,
           });
         }
-        function Ge(s) {
+        function We(s) {
           const { language: t, value: n, refTextArea: r } = s,
             o = p.useCallback((d) => n.Set(d.currentTarget.value), [n]),
             l = (0, _e.gc)(n),
@@ -6612,7 +6612,7 @@
               [r],
             );
           return (0, e.jsx)(S.Cl, {
-            className: Ae.TextArea,
+            className: be.TextArea,
             ref: c,
             nMinHeight: 96,
             value: l,
@@ -6620,7 +6620,7 @@
             lang: (0, a.d$)(t),
           });
         }
-        function We(s, t, n, r, o) {
+        function Ue(s, t, n, r, o) {
           if (s.selectionStart || s.selectionStart === 0) {
             const l = s.selectionStart,
               c = s.selectionEnd,
@@ -6641,11 +6641,11 @@
         function Ie(s, t, n) {
           s.Set(t), window.setTimeout(n, 1);
         }
-        var ye = i(28410),
-          ve = i(5859),
+        var ve = i(28410),
+          Ae = i(5859),
           we = i(25792),
-          pe = i(99412),
-          Re = i(69787);
+          ue = i(99412),
+          Oe = i(69787);
         const Be = p.lazy(() => Promise.resolve().then(i.bind(i, 5859)));
         function ke(s) {
           const {
@@ -6657,7 +6657,7 @@
               asset_mtime: c,
             } = s,
             d = p.useMemo(() => new Map(t), [t]),
-            g = p.useMemo(() => Array.from(d.keys()).map(pe.sfN), [d]),
+            g = p.useMemo(() => Array.from(d.keys()).map(ue.sfN), [d]),
             {
               strActiveLanguage: x,
               mapValues: f,
@@ -6665,20 +6665,20 @@
               rctHiddenInputs: C,
             } = (0, F.KC)(d, n, r, o),
             T = Ze(),
-            z = (0, ye.TQ)(),
-            je =
+            U = (0, ve.TQ)(),
+            ye =
               l == "aboutthegame"
-                ? (0, e.jsx)(ve.StoreAppPageHeader, {
+                ? (0, e.jsx)(Ae.StoreAppPageHeader, {
                     children: (0, a.we)(
                       "#StoreAdmin_GameDescription_AboutThisGame",
                     ),
                   })
                 : void 0;
           return (0, e.jsxs)("div", {
-            className: Ae.LocTextAreaContainer,
+            className: be.LocTextAreaContainer,
             children: [
               l == "aboutthegame" && (0, e.jsx)(et, {}),
-              l == "aboutthegame" && !z && (0, e.jsx)(_t, {}),
+              l == "aboutthegame" && !U && (0, e.jsx)(_t, {}),
               (0, e.jsxs)(
                 we.tH,
                 {
@@ -6686,7 +6686,7 @@
                     " ",
                     (0, e.jsx)(p.Suspense, {
                       fallback: null,
-                      children: (0, e.jsx)(Re.Dx.Provider, {
+                      children: (0, e.jsx)(Oe.Dx.Provider, {
                         value: c,
                         children: (0, e.jsx)(T, {
                           language: x,
@@ -6694,24 +6694,24 @@
                           languages: g,
                           rctToolbarControls: _,
                           editorType: l,
-                          rctAboveEditor: je,
+                          rctAboveEditor: ye,
                         }),
                       }),
                     }),
                   ],
                 },
-                z ? "richeditor" : "bbcode",
+                U ? "richeditor" : "bbcode",
               ),
               C,
             ],
           });
         }
         function Ze() {
-          return (0, ye.TQ)() ? Be : oe;
+          return (0, ve.TQ)() ? Be : oe;
         }
         function et() {
-          const s = (0, ye.TQ)(),
-            t = (0, ye.gg)();
+          const s = (0, ve.TQ)(),
+            t = (0, ve.gg)();
           return (0, e.jsx)(S.Yh, {
             style: { width: "fit-content" },
             checked: s,
@@ -6762,7 +6762,7 @@
           ss = i(85599),
           Ms = i(41635),
           rn = i(19042),
-          Ut = i.n(rn);
+          Ht = i.n(rn);
         function Cn(s) {
           const { rgCreatorHomes: t, groupvanityinfo: n } = s,
             [r, o] = (0, p.useState)(!0);
@@ -6798,7 +6798,7 @@
                         (0, e.jsx)("hr", {}),
                         !t || t.length == 0
                           ? (0, e.jsx)("div", {
-                              className: Ut().PageSelect,
+                              className: Ht().PageSelect,
                               children: (0, a.oW)(
                                 "#Create_Home_None",
                                 (0, e.jsx)("a", {
@@ -6925,7 +6925,7 @@
                     }),
               }),
               (0, e.jsxs)("div", {
-                className: Ut().SelectedSource,
+                className: Ht().SelectedSource,
                 children: [
                   !!(
                     l.clan_account_id ||
@@ -7071,7 +7071,7 @@
           return !g || x == ft.Sq
             ? (0, e.jsx)(ss.t, { size: "small", string: (0, a.we)("#Loading") })
             : (0, e.jsxs)("div", {
-                className: Ut().ManualFeatures,
+                className: Ht().ManualFeatures,
                 children: [
                   (0, e.jsx)("div", {
                     className: "DialogLabel",
@@ -7081,7 +7081,7 @@
                     children: (0, a.we)("#Create_Home_Select_App_Desc"),
                   }),
                   (0, e.jsxs)("div", {
-                    className: Ut().FeatureSelectItemCtn,
+                    className: Ht().FeatureSelectItemCtn,
                     children: [
                       (0, e.jsx)(kt.Ay, {
                         className: "react-select-container",
@@ -7115,7 +7115,7 @@
             strFeaturedFirstAppToken: o,
           } = s;
           return (0, e.jsxs)("div", {
-            className: Ut().ManualFeatures,
+            className: Ht().ManualFeatures,
             children: [
               (0, e.jsx)("div", {
                 className: "DialogLabel",
@@ -7204,7 +7204,7 @@
               );
             }, []);
           return (0, e.jsx)("div", {
-            className: Ut().PageSelect,
+            className: Ht().PageSelect,
             children: (0, e.jsx)(S.m, {
               label: (0, a.we)("#Featured_App_Name"),
               tooltip: (0, a.we)("#Featured_App_Tooltip"),
@@ -7222,11 +7222,11 @@
             l = (0, p.useMemo)(() => ({ id: t, type: "game" }), [t]),
             c = (0, p.useMemo)(() => Ls(r), [r]);
           return (0, e.jsxs)("div", {
-            className: Ut().AppRowCtn,
+            className: Ht().AppRowCtn,
             children: [
               o
                 ? (0, e.jsx)("div", {
-                    className: Ut().CapsuleCtn,
+                    className: Ht().CapsuleCtn,
                     children: (0, e.jsx)(Ye.W, {
                       capsule: l,
                       imageType: "header",
@@ -7236,7 +7236,7 @@
                     }),
                   })
                 : (0, e.jsxs)("div", {
-                    className: Ut().MissingCapsuleCtn,
+                    className: Ht().MissingCapsuleCtn,
                     children: [
                       (0, e.jsx)("div", {
                         children: (0, a.we)("#Create_Home_Missing_Capsule"),
@@ -7246,7 +7246,7 @@
                   }),
               !!c &&
                 (0, e.jsxs)("div", {
-                  className: Ut().CreatorHomeCtn,
+                  className: Ht().CreatorHomeCtn,
                   children: [
                     (0, e.jsx)("div", {
                       className: "DialogLabel",
@@ -7301,7 +7301,7 @@
               );
             }, [t]);
           return (0, e.jsx)("div", {
-            className: Ut().PageSelect,
+            className: Ht().PageSelect,
             children: (0, e.jsx)(S.m, {
               rgOptions: o,
               selectedOption: n?.clan_account_id || 0,
@@ -7325,7 +7325,7 @@
               n?.clan_account_id != t && r(Ls(t));
             }, [t, n?.clan_account_id]),
             (0, e.jsxs)("div", {
-              className: Ut().SelectedSource,
+              className: Ht().SelectedSource,
               children: [
                 (0, e.jsx)(fs.hA, {
                   creatorID: n,
@@ -7357,7 +7357,7 @@
                     children: (0, a.we)("#Create_Home_SortBy_Desc"),
                   }),
                   (0, e.jsxs)("div", {
-                    className: Ut().SortOptionsCtn,
+                    className: Ht().SortOptionsCtn,
                     children: [
                       (0, e.jsx)(S.Od, {
                         checked: t.sort_order == "salesrank",
@@ -7684,9 +7684,9 @@
                   (0, e.jsx)(ar, {
                     rgDLCItems: r,
                     parentAppID: n,
-                    onSelected: (C, T, z, je) => {
-                      const ne = { itemid: "" + T, appid: "" + C, name: z },
-                        Q = je ? [ne, ...r] : [...r, ne];
+                    onSelected: (C, T, U, ye) => {
+                      const ne = { itemid: "" + T, appid: "" + C, name: U },
+                        Q = ye ? [ne, ...r] : [...r, ne];
                       o(Q);
                     },
                   }),
@@ -7734,7 +7734,7 @@
               },
               [c, r, x],
             );
-          return (0, e.jsxs)(D.eV, {
+          return (0, e.jsxs)(E.eV, {
             title: (0, a.we)("#StoreAdmin_Add_DLC"),
             closeModal: t,
             className: st.AddDLCDialog,
@@ -7840,7 +7840,7 @@
               (t.highlight_reason = f.data), r(n, t);
             };
           if (!t) return null;
-          const x = (0, E.A)(
+          const x = (0, D.A)(
             st.DLCItem,
             t.bDeleted && st.DLCItemDeleted,
             !o && st.DLCItemNotHighlightEligible,
@@ -7968,7 +7968,7 @@
             className: m.PinnedBundlesEditor,
             children: [
               (0, e.jsx)(j, { unpinnedBundles: n, onChange: c }),
-              (0, e.jsx)(K, { pinnedBundles: t, onDelete: o, onMove: l }),
+              (0, e.jsx)(V, { pinnedBundles: t, onDelete: o, onMove: l }),
             ],
           });
         }
@@ -7987,7 +7987,7 @@
             noOptionsMessage: () => (0, a.we)("#PinnedBundles_NoOptions"),
           });
         }
-        function K(s) {
+        function V(s) {
           const { pinnedBundles: t, onDelete: n, onMove: r } = s;
           if (t.length === 0)
             return (0, e.jsx)("div", {
@@ -8019,15 +8019,15 @@
             s
           );
         }
-        function se() {
+        function te() {
           const [s, t] = (0, p.useState)(() => J());
           return s;
         }
         var q = i(54806),
           ge = i(58632),
-          Pe = i.n(ge),
-          ue = i(34592),
-          be = i(98609);
+          je = i.n(ge),
+          de = i(34592),
+          Ce = i(98609);
         const Le = 20,
           ut = 900 * 1e3,
           gt = "PackagePriceChanges",
@@ -8035,11 +8035,11 @@
         async function wt(s) {
           const t = { packageids: s.join(",") },
             n = await $t().get(
-              `${be.TS.PARTNER_BASE_URL}pricing/admin/packagepricechanges`,
+              `${Ce.TS.PARTNER_BASE_URL}pricing/admin/packagepricechanges`,
               { params: t, withCredentials: !0 },
             );
           if (!n || n.status != 200 || n.data?.success != Kt.R)
-            throw `Load package price changes failed ${((0, ue.H))(n).strErrorMsg}`;
+            throw `Load package price changes failed ${((0, de.H))(n).strErrorMsg}`;
           const r = new Map();
           return (
             n.data.packages?.forEach((o) => r.set(o.packageid, o)),
@@ -8049,8 +8049,8 @@
             )
           );
         }
-        const dt = new (Pe())((s) => wt(s), { cache: !1, maxBatchSize: Le });
-        function Ht(s, t) {
+        const dt = new (je())((s) => wt(s), { cache: !1, maxBatchSize: Le });
+        function Ut(s, t) {
           const n = new Map();
           return (
             t.forEach((r, o) => {
@@ -8067,7 +8067,7 @@
               () => Array.from(new Set(s)).filter(Boolean),
               [s],
             ),
-            n = (0, p.useCallback)((r) => Ht(t, r), [t]);
+            n = (0, p.useCallback)((r) => Ut(t, r), [t]);
           return (0, q.E)({
             queries: t.map((r) => ({
               queryKey: [gt, r],
@@ -8162,7 +8162,7 @@
                 l.append("json", "1"),
                 l.append("reason_code", n.join(",") || ""),
                 l.append("email_message", r);
-              const c = `${be.TS.PARTNER_BASE_URL}packages/rejectpricing`,
+              const c = `${Ce.TS.PARTNER_BASE_URL}packages/rejectpricing`,
                 d = await $t().post(c, l, { withCredentials: !0 });
               if (d.status == 200 && d.data?.success == Kt.R)
                 return (
@@ -8175,9 +8175,9 @@
                   ),
                   !0
                 );
-              o = (0, ue.H)(d);
+              o = (0, de.H)(d);
             } catch (l) {
-              o = (0, ue.H)(l);
+              o = (0, de.H)(l);
             }
             return (
               console.error(
@@ -8197,7 +8197,7 @@
                 l.append("json", "1"),
                 l.append("proposalkey", "" + r),
                 l.append("partner_will_publish", n ? "1" : "0");
-              const c = `${be.TS.PARTNER_BASE_URL}packages/approvepricing`,
+              const c = `${Ce.TS.PARTNER_BASE_URL}packages/approvepricing`,
                 d = await $t().post(c, l, { withCredentials: !0 });
               if (d.status == 200 && d.data?.success == Kt.R)
                 return (
@@ -8211,7 +8211,7 @@
                   ),
                   null
                 );
-              if (((o = (0, ue.H)(d)), d?.data?.output))
+              if (((o = (0, de.H)(d)), d?.data?.output))
                 return (
                   console.log(
                     "CPriceProposalReviewRequiredStore::AcceptProposal message information:",
@@ -8221,7 +8221,7 @@
                   d.data.output
                 );
             } catch (l) {
-              o = (0, ue.H)(l);
+              o = (0, de.H)(l);
             }
             return (
               console.error(
@@ -8404,7 +8404,7 @@
           const t = Math.floor(Date.now() / 1e3);
           return s.BIsReleased() && s.GetReleaseDateRTime() + 720 * 60 * 60 > t;
         }
-        var Ve = i(2897),
+        var Ge = i(2897),
           Nr = i(91916),
           un = i(59490),
           In = i(1706),
@@ -8418,7 +8418,7 @@
             children: [
               (0, e.jsx)(to, { priceChanges: n }),
               (0, e.jsx)("a", {
-                href: `${be.TS.PARTNER_BASE_URL}packages/pricehistory/${t}`,
+                href: `${Ce.TS.PARTNER_BASE_URL}packages/pricehistory/${t}`,
                 target: "_blank",
                 rel: "noreferrer",
                 children: "Show Package Price History",
@@ -8446,12 +8446,12 @@
               children: "No previously published price change",
             });
           const r = Date.now() / 1e3 - n.time < qa;
-          return (0, e.jsx)(ce.m9, {
+          return (0, e.jsx)(pe.m9, {
             toolTipContent: (0, e.jsx)(no, { priceChanges: t }),
             direction: "right",
             nDelayShowMS: 150,
             children: (0, e.jsxs)("div", {
-              className: (0, E.A)(pt.LastChange, r && pt.RecentChange),
+              className: (0, D.A)(pt.LastChange, r && pt.RecentChange),
               children: [
                 "Price last published ",
                 (0, a.TW)(n.time),
@@ -8654,7 +8654,7 @@
                       const _ = new Array();
                       wr(t).length > 0 && _.push("currency_missing");
                       const C = t.proposed_prices.base_amounts.find(
-                          (z) => z.amount.currency_code == Mt.CS,
+                          (U) => U.amount.currency_code == Mt.CS,
                         )?.amount.amount,
                         T = Lr(C, n, r, t);
                       (T.rgAboveThreshold.length > 0 ||
@@ -8685,7 +8685,7 @@
             f = (0, Es.vs)();
           return f.bLoading
             ? (0, e.jsx)(Es.Hh, { state: f, strDialogTitle: x, closeModal: n })
-            : (0, e.jsxs)(D.o0, {
+            : (0, e.jsxs)(E.o0, {
                 strTitle: x,
                 strDescription:
                   "Select the appropriate reasons for rejecting this price proposal. Each will surface to the user in the reject email.",
@@ -8717,7 +8717,7 @@
                       {
                         checked: o.includes(_),
                         onChange: (C) => {
-                          const T = o.filter((z) => z != _);
+                          const T = o.filter((U) => U != _);
                           C && T.push(_), l(T);
                         },
                         label: Rr.get(_),
@@ -8794,8 +8794,8 @@
           Od = 48,
           Rd = 49,
           Fd = 50,
-          Ud = 51,
-          Hd = 52,
+          Hd = 51,
+          Ud = 52,
           zd = 53,
           Wd = 54,
           Fr = 55,
@@ -8849,8 +8849,8 @@
           Ou = 103,
           Ru = 104,
           Fu = 105,
-          Uu = 106,
-          Hu = 107,
+          Hu = 106,
+          Uu = 107,
           zu = 108,
           Wu = 109,
           Gu = 110,
@@ -8903,8 +8903,8 @@
           Op = 209,
           Rp = 210,
           Fp = 211,
-          Up = 212,
-          Hp = 213,
+          Hp = 212,
+          Up = 213,
           zp = 214,
           Wp = 215,
           Gp = 216,
@@ -8957,8 +8957,8 @@
           Om = 414,
           Rm = 415,
           Fm = 416,
-          Um = 417,
-          Hm = 418,
+          Hm = 417,
+          Um = 418,
           zm = 419,
           Wm = 501,
           Gm = 601,
@@ -9008,12 +9008,12 @@
           Lg = 917,
           Bg = 918,
           Ng = 919,
-          Ur = 920,
+          Hr = 920,
           Og = 921,
           Rg = 922,
           Fg = 923,
-          Ug = 924,
-          Hg = 925,
+          Hg = 924,
+          Ug = 925,
           zg = 926,
           Wg = 927,
           Gg = 928,
@@ -9092,10 +9092,10 @@
         function Fh(s) {
           return "unknown ETickerCategoryLanguageRule ( " + s + " )";
         }
-        function Uh(s) {
+        function Hh(s) {
           return "unknown EPreapprovalResolution ( " + s + " )";
         }
-        function Hh(s) {
+        function Uh(s) {
           return "unknown EHelpRequestFeedbackCategory ( " + s + " )";
         }
         function zh(s) {
@@ -9691,7 +9691,7 @@
             return "CHelpRequestLogs_GetApplicationLogDemand_Response";
           }
         }
-        var Hr;
+        var Ur;
         ((s) => {
           function t(n, r, o) {
             return n.SendMsg(
@@ -9702,7 +9702,7 @@
             );
           }
           s.GetQuickText = t;
-        })(Hr || (Hr = {}));
+        })(Ur || (Ur = {}));
         var zr;
         ((s) => {
           function t(r, o, l) {
@@ -9733,7 +9733,7 @@
               const r = { nPublisherId: s, eHelpIssue: t, eHelpRequestType: n };
               return (
                 await $t().get(
-                  `${be.TS.PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner`,
+                  `${Ce.TS.PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner`,
                   { params: r, withCredentials: !0 },
                 )
               ).data.tickets;
@@ -9755,7 +9755,7 @@
                 d.append("steamid", s),
                 d.append("publisherid_selected", "" + t);
               const g = await $t().post(
-                `${be.TS.PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/`,
+                `${Ce.TS.PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/`,
                 d,
               );
               if (g?.data?.success != Kt.R)
@@ -9782,7 +9782,7 @@
           go = i(55298);
         function ho(s) {
           const { partnerID: t, setTicketCount: n } = s,
-            { data: r } = co(t, Ur, Fr),
+            { data: r } = co(t, Hr, Fr),
             [o, l] = (0, p.useState)(2);
           return (
             (0, p.useEffect)(() => {
@@ -9823,7 +9823,7 @@
             ? (0, e.jsxs)("div", {
                 children: [
                   (0, e.jsxs)("div", {
-                    className: (0, E.A)({
+                    className: (0, D.A)({
                       [mo().ValveAccountTicket]:
                         n.findIndex((r) => r.id === t.accountid) >= 0,
                     }),
@@ -9865,7 +9865,7 @@
                     }),
                   (0, e.jsx)("br", {}),
                   (0, e.jsx)("a", {
-                    href: `${be.TS.HELP_BASE_URL}en/ticketmaster/ticket/${_o(t.reference_code)}`,
+                    href: `${Ce.TS.HELP_BASE_URL}en/ticketmaster/ticket/${_o(t.reference_code)}`,
                     target: "_blank",
                     children: "Open Ticket",
                   }),
@@ -9916,19 +9916,19 @@
             [g, x] = (0, p.useState)(() => c?.GetAppID() || 0),
             [f] = (0, ft.t7)(g, Gr),
             [_, C] = (0, p.useState)(`Question about pricing for package ${n}`),
-            [T, z] = (0, p.useState)("");
+            [T, U] = (0, p.useState)("");
           (0, p.useEffect)(() => {
             c && g == 0 && x(c.GetAppID());
           }, [c, g]);
-          const je = (0, Es.vs)(),
-            ne = uo(d, t, Ur, Fr, je);
-          return je.bLoading
+          const ye = (0, Es.vs)(),
+            ne = uo(d, t, Hr, Fr, ye);
+          return ye.bLoading
             ? (0, e.jsx)(Es.Hh, {
-                state: je,
+                state: ye,
                 strDialogTitle: "Create Ticket for Partner",
                 closeModal: r,
               })
-            : (0, e.jsxs)(D.o0, {
+            : (0, e.jsxs)(E.o0, {
                 strTitle: "Create Ticket for Partner",
                 strDescription: `Create a pricing ticket for partner ${l?.name} (${t}) for Package ${n}. App ${f?.GetName() || ""} with ${g}. Please update ticket title and body`,
                 bOKDisabled: !g || _.trim().length == 0 || T.trim().length == 0,
@@ -9952,7 +9952,7 @@
                   (0, e.jsx)(S.JU, { children: "Enter Ticket Body" }),
                   (0, e.jsx)("textarea", {
                     value: T,
-                    onChange: (Q) => z(Q.currentTarget.value),
+                    onChange: (Q) => U(Q.currentTarget.value),
                     cols: 80,
                     rows: 20,
                   }),
@@ -9975,9 +9975,9 @@
             } = s,
             [o] = (0, ft.Gg)(t.packageid, En),
             [l] = (0, ft.Gg)(o?.GetIncludedAppIDsOrSelf()?.[0], En),
-            c = `${be.TS.PARTNER_BASE_URL}store/packagelanding/${t.packageid}`;
+            c = `${Ce.TS.PARTNER_BASE_URL}store/packagelanding/${t.packageid}`;
           return (0, e.jsxs)("div", {
-            className: (0, E.A)(bt.PackageInfoColumn, Ve.PackageInfoColumn),
+            className: (0, D.A)(bt.PackageInfoColumn, Ge.PackageInfoColumn),
             children: [
               (0, e.jsxs)("div", {
                 className: bt.PackageName,
@@ -10049,7 +10049,7 @@
             [n] = (0, Nr.UA)(t);
           return n
             ? (0, e.jsxs)("a", {
-                href: `${be.TS.PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${n.partnerid}`,
+                href: `${Ce.TS.PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${n.partnerid}`,
                 children: [n.name, " (", n.partnerid, ")"],
               })
             : null;
@@ -10076,7 +10076,7 @@
                   (0, e.jsx)(
                     "td",
                     {
-                      children: (0, e.jsx)(ce.he, {
+                      children: (0, e.jsx)(pe.he, {
                         toolTipContent: (0, us.Ug)(t),
                         children: (0, us.M1)(t),
                       }),
@@ -10088,7 +10088,7 @@
                   (0, e.jsx)(
                     "td",
                     {
-                      children: (0, e.jsx)(ce.he, {
+                      children: (0, e.jsx)(pe.he, {
                         toolTipContent: (0, Jt.j4)(t),
                         children: (0, Jt.de)(t),
                       }),
@@ -10191,7 +10191,7 @@
           return (0, e.jsxs)("td", {
             className: bt.FullCurrencyColumn,
             children: [
-              (0, e.jsx)(ce.he, {
+              (0, e.jsx)(pe.he, {
                 toolTipContent: l,
                 children: (0, e.jsx)(Kr, {
                   className: o,
@@ -10216,7 +10216,7 @@
             [c, d] = (0, p.useState)(!1),
             [g, x] = (0, p.useState)(!0);
           return (0, e.jsxs)("div", {
-            className: (0, E.A)(Ve.PriceDeltaCtn),
+            className: (0, D.A)(Ge.PriceDeltaCtn),
             children: [
               (0, e.jsxs)(Dr.qx, {
                 title: "Reasons Auto-Publish is blocked",
@@ -10226,33 +10226,33 @@
                       "This page will surface the reason why the package did not auto-publish and may require work to correct",
                   }),
                   (0, e.jsxs)("ol", {
-                    className: Ve.Legend,
+                    className: Ge.Legend,
                     children: [
                       (0, e.jsx)("li", {
-                        className: Ve.Missing,
+                        className: Ge.Missing,
                         children: "Missing Currencies",
                       }),
                       (0, e.jsx)("li", {
-                        className: Ve.Outside,
+                        className: Ge.Outside,
                         children:
                           "Outside of acceptable threshold (more than 125% above or 50% below the guideline)",
                       }),
                       (0, e.jsx)("li", {
-                        className: Ve.CustomUsd,
+                        className: Ge.CustomUsd,
                         children:
                           "USD Price doesn't match any guideline price point",
                       }),
                       (0, e.jsx)("li", {
-                        className: Ve.AboveAutoPublish,
+                        className: Ge.AboveAutoPublish,
                         children: "USD Price above 200$ USD",
                       }),
                       (0, e.jsx)("li", {
-                        className: Ve.CloseToLaunch,
+                        className: Ge.CloseToLaunch,
                         children:
                           "Raising Price during 30 days during launch window",
                       }),
                       (0, e.jsx)("li", {
-                        className: Ve.CountrySpecific,
+                        className: Ge.CountrySpecific,
                         children: "Has Country specific pricing",
                       }),
                     ],
@@ -10261,7 +10261,7 @@
                     children: [
                       "You can filter the list by choosing ",
                       (0, e.jsx)("a", {
-                        href: `${be.TS.PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1`,
+                        href: `${Ce.TS.PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1`,
                         children: "my partners",
                       }),
                       " view",
@@ -10284,9 +10284,9 @@
                 onChange: x,
               }),
               (0, e.jsx)("div", {
-                className: (0, E.A)(Ve.RowCtn),
+                className: (0, D.A)(Ge.RowCtn),
                 children: (0, e.jsx)("div", {
-                  className: Ve.PackageInfoColumn,
+                  className: Ge.PackageInfoColumn,
                   children: "Package Info",
                 }),
               }),
@@ -10316,10 +10316,10 @@
           return n > 0 && !t
             ? null
             : (0, e.jsxs)("div", {
-                className: Ve.ProposalCtn,
+                className: Ge.ProposalCtn,
                 children: [
                   (0, e.jsxs)("div", {
-                    className: Ve.RowCtn,
+                    className: Ge.RowCtn,
                     children: [
                       (0, e.jsx)(Vr, { ...s }),
                       (0, e.jsx)(Do, { ...s, setOpenTicketCount: r }),
@@ -10334,11 +10334,11 @@
           const { proposal: t, setOpenTicketCount: n } = s,
             r = s.mapPartnerPaidByPackage.get(t.packageid)?.[0] || 0;
           return (0, e.jsxs)("div", {
-            className: Ve.FailuresCtn,
+            className: Ge.FailuresCtn,
             children: [
               (0, e.jsx)(To, { ...s }),
               (0, e.jsx)("div", {
-                className: Ve.SectionHeader,
+                className: Ge.SectionHeader,
                 children: "Web Auto-Approval Checks",
               }),
               (0, e.jsx)(wo, { ...s }),
@@ -10355,16 +10355,16 @@
             n = t.auto_approval_state || Tr.None,
             r = Ja[n] || `Unknown (${n})`;
           return (0, e.jsxs)("div", {
-            className: Ve.AutoApprovalCtn,
+            className: Ge.AutoApprovalCtn,
             children: [
               (0, e.jsx)("div", {
-                className: Ve.SectionHeader,
+                className: Ge.SectionHeader,
                 children: "Server Auto-Approval Checks",
               }),
-              (0, e.jsx)("div", { className: Ve.Title, children: r }),
+              (0, e.jsx)("div", { className: Ge.Title, children: r }),
               !!t.auto_approval_notes &&
                 (0, e.jsxs)("div", {
-                  className: Ve.Notes,
+                  className: Ge.Notes,
                   children: ["- ", t.auto_approval_notes],
                 }),
             ],
@@ -10384,7 +10384,7 @@
             children: [
               r > jo &&
                 (0, e.jsxs)("div", {
-                  className: Ve.AboveAutoPublish,
+                  className: Ge.AboveAutoPublish,
                   children: [
                     "USD Price $",
                     os(r),
@@ -10393,7 +10393,7 @@
                 }),
               !!(o && r > 2 * o) &&
                 (0, e.jsxs)("div", {
-                  className: Ve.AboveAutoPublish,
+                  className: Ge.AboveAutoPublish,
                   children: [
                     "USD price $",
                     os(r),
@@ -10409,10 +10409,10 @@
             n = (0, p.useMemo)(() => wr(t), [t]);
           return n?.length > 0
             ? (0, e.jsxs)("div", {
-                className: Ve.MissingCurrency,
+                className: Ge.MissingCurrency,
                 children: [
                   (0, e.jsxs)("div", {
-                    className: Ve.Title,
+                    className: Ge.Title,
                     children: ["Missing ", n.length, " currencies: "],
                   }),
                   n.map(us.t_).join(", "),
@@ -10425,10 +10425,10 @@
             n = (0, p.useMemo)(() => Za(t), [t]);
           return n?.length > 0
             ? (0, e.jsxs)("div", {
-                className: Ve.MissingCurrency,
+                className: Ge.MissingCurrency,
                 children: [
                   (0, e.jsxs)("div", {
-                    className: Ve.Title,
+                    className: Ge.Title,
                     children: ["Unexpected ", n.length, " currencies: "],
                   }),
                   n.join(", "),
@@ -10446,7 +10446,7 @@
             children: [
               !o &&
                 (0, e.jsxs)("div", {
-                  className: Ve.MatrixGap,
+                  className: Ge.MatrixGap,
                   children: [
                     "$",
                     os(r),
@@ -10461,28 +10461,28 @@
           const { thresholdData: t, strDirection: n } = s;
           let r = null;
           return (
-            t.nOriginalPrice == t.nProposedPrice && (r = Ve.EqualPrices),
+            t.nOriginalPrice == t.nProposedPrice && (r = Ge.EqualPrices),
             (0, e.jsxs)("tr", {
-              className: Ve.ThresholdRow,
+              className: Ge.ThresholdRow,
               children: [
                 (0, e.jsx)("td", {
-                  className: Ve.CurrencyName,
+                  className: Ge.CurrencyName,
                   children: t.strCurrency,
                 }),
                 (0, e.jsx)("td", {
-                  className: (0, E.A)(Ve.OriginalPrice, r),
+                  className: (0, D.A)(Ge.OriginalPrice, r),
                   children: t.nOriginalPrice ? `${os(t.nOriginalPrice)}` : "--",
                 }),
                 (0, e.jsx)("td", {
-                  className: (0, E.A)(Ve.ProposedPrice, r),
+                  className: (0, D.A)(Ge.ProposedPrice, r),
                   children: `${os(t.nProposedPrice)}`,
                 }),
                 (0, e.jsx)("td", {
-                  className: Ve.RecommendedPrice,
+                  className: Ge.RecommendedPrice,
                   children: `${os(t.nGuidancePrice)}`,
                 }),
                 (0, e.jsx)("td", {
-                  className: Ve.PercentDiff,
+                  className: Ge.PercentDiff,
                   children: `${t.nPercent}% ${n}`,
                 }),
               ],
@@ -10496,9 +10496,9 @@
               (0, e.jsx)("tr", {
                 children: (0, e.jsxs)("td", {
                   colSpan: 5,
-                  className: (0, E.A)(
-                    Ve.WarningTitle,
-                    n == "above" ? Ve.WarningAbove : Ve.WarningBelow,
+                  className: (0, D.A)(
+                    Ge.WarningTitle,
+                    n == "above" ? Ge.WarningAbove : Ge.WarningBelow,
                   ),
                   children: [
                     (0, e.jsx)("b", {
@@ -10510,26 +10510,26 @@
                 }),
               }),
               (0, e.jsxs)("tr", {
-                className: (0, E.A)(Ve.ThresholdRow, Ve.ThresholdHeader),
+                className: (0, D.A)(Ge.ThresholdRow, Ge.ThresholdHeader),
                 children: [
                   (0, e.jsx)("td", {
-                    className: Ve.CurrencyName,
+                    className: Ge.CurrencyName,
                     children: "Currency",
                   }),
                   (0, e.jsx)("td", {
-                    className: Ve.OriginalPrice,
+                    className: Ge.OriginalPrice,
                     children: "Current",
                   }),
                   (0, e.jsx)("td", {
-                    className: Ve.ProposedPrice,
+                    className: Ge.ProposedPrice,
                     children: "Proposed",
                   }),
                   (0, e.jsx)("td", {
-                    className: Ve.RecommendedPrice,
+                    className: Ge.RecommendedPrice,
                     children: "Recommended",
                   }),
                   (0, e.jsx)("td", {
-                    className: Ve.PercentDiff,
+                    className: Ge.PercentDiff,
                     children: "% diff",
                   }),
                 ],
@@ -10551,11 +10551,11 @@
           if (l.length > 0 || c.length > 0) {
             const d = os(r);
             return (0, e.jsxs)("div", {
-              className: Ve.CurrencyWarningsCtn,
+              className: Ge.CurrencyWarningsCtn,
               children: [
                 l.length > 0 &&
                   (0, e.jsxs)("table", {
-                    className: Ve.ThresholdMiniTable,
+                    className: Ge.ThresholdMiniTable,
                     children: [
                       (0, e.jsx)(Jr, {
                         strGuidanceMessage: `${l.length} currencies above guidance threshold for USD $ ${d}`,
@@ -10574,7 +10574,7 @@
                   }),
                 c.length > 0 &&
                   (0, e.jsxs)("table", {
-                    className: Ve.ThresholdMiniTable,
+                    className: Ge.ThresholdMiniTable,
                     children: [
                       (0, e.jsx)(Jr, {
                         strGuidanceMessage: `${c.length} currencies below guidance threshold for USD $ ${d}`,
@@ -10614,7 +10614,7 @@
             [n] = (0, ft.Gg)(t.packageid, En);
           return n && Br(n)
             ? (0, e.jsxs)("div", {
-                className: Ve.ReleaseDateCallout,
+                className: Ge.ReleaseDateCallout,
                 children: [
                   "This game released less than 30 days ago, on ",
                   (0, a.TW)(n.GetReleaseDateRTime()),
@@ -10631,7 +10631,7 @@
                 onChange: () => r(!0),
               })
             : (0, e.jsxs)("div", {
-                className: (0, E.A)(bt.FullCurrencyTable),
+                className: (0, D.A)(bt.FullCurrencyTable),
                 children: [(0, e.jsx)($r, {}), (0, e.jsx)(Yr, { ...s })],
               });
         }
@@ -10655,7 +10655,7 @@
                   {
                     children: [
                       (0, e.jsx)("hr", {}),
-                      (0, e.jsx)(Uo, {
+                      (0, e.jsx)(Ho, {
                         oGuideline: n,
                         proposal: c,
                         mapCurrentPrices: r,
@@ -10672,7 +10672,7 @@
         }
         function Fo(s) {
           return (0, e.jsxs)("div", {
-            className: (0, E.A)(bt.RowCtn, bt.CurrencyHeaderRow),
+            className: (0, D.A)(bt.RowCtn, bt.CurrencyHeaderRow),
             children: [
               (0, e.jsx)("div", {
                 className: bt.PackageInfoColumn,
@@ -10682,18 +10682,18 @@
             ],
           });
         }
-        function Uo(s) {
+        function Ho(s) {
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsxs)("div", {
                 className: bt.RowCtn,
                 children: [(0, e.jsx)(Vr, { ...s }), (0, e.jsx)(Yr, { ...s })],
               }),
-              (0, e.jsx)(Ho, { ...s }),
+              (0, e.jsx)(Uo, { ...s }),
             ],
           });
         }
-        function Ho(s) {
+        function Uo(s) {
           const { proposal: t } = s,
             n = t.proposed_prices.country_amounts;
           return n?.length > 0
@@ -10760,7 +10760,7 @@
             ),
             n = Ya(),
             r = (0, M.cT)(),
-            o = se(),
+            o = te(),
             l = Lt(),
             c = (0, p.useMemo)(() => n.map((C) => C.packageid), [n]),
             d = Ot(c),
@@ -10801,7 +10801,7 @@
           return (0, e.jsx)(An.m, {
             children: (0, e.jsx)(we.tH, {
               children: (0, e.jsxs)("div", {
-                className: (0, E.A)(Pn().AdminPageCtn, Pn().WidePageCtn),
+                className: (0, D.A)(Pn().AdminPageCtn, Pn().WidePageCtn),
                 children: [
                   (0, e.jsx)("h1", {
                     children: "Package Prices Submissions Reviews",
@@ -10817,7 +10817,7 @@
         var Mn = i(55409),
           Zt = i(60351),
           Xt = i(68031),
-          Oe = i(15252),
+          Ne = i(15252),
           kn = i(12204),
           Ks = i(95994),
           Go = i(30241),
@@ -10896,48 +10896,48 @@
               ]),
               C = [];
             let T = 0;
-            for (const Fe of [..._].sort(($e, ts) => $e - ts)) {
-              const $e = d?.mapAmounts.get(Fe),
-                ts = g?.mapAmounts.get(Fe);
+            for (const Re of [..._].sort(($e, ts) => $e - ts)) {
+              const $e = d?.mapAmounts.get(Re),
+                ts = g?.mapAmounts.get(Re);
               if ($e === void 0 || ts === void 0 || $e === 0) {
                 T++;
                 continue;
               }
               C.push({
-                nUSDPricepoint: Fe,
+                nUSDPricepoint: Re,
                 nExistingAmount: $e,
                 nStagedAmount: ts,
                 flPercentDiff: ((ts - $e) / $e) * 100,
               });
             }
-            const z = Nn(n, x),
-              je = Nn(r, x),
-              ne = C.map((Fe) => Jo(Fe, z, je)).filter((Fe) => Fe !== null),
-              Q = oa(C, (Fe) => Fe.nExistingAmount, z),
-              Ue = oa(C, (Fe) => Fe.nStagedAmount, je);
+            const U = Nn(n, x),
+              ye = Nn(r, x),
+              ne = C.map((Re) => Jo(Re, U, ye)).filter((Re) => Re !== null),
+              Q = oa(C, (Re) => Re.nExistingAmount, U),
+              Fe = oa(C, (Re) => Re.nStagedAmount, ye);
             o.push({
               eCurrencyCode: x,
               eRegionCode: f,
               rgPricepointDiffs: C,
               nSkippedPricepoints: T,
               flAvgPercentDiff: C.length
-                ? C.reduce((Fe, $e) => Fe + $e.flPercentDiff, 0) / C.length
+                ? C.reduce((Re, $e) => Re + $e.flPercentDiff, 0) / C.length
                 : null,
               flAvgPercentDiffUSD: ne.length
-                ? ne.reduce((Fe, $e) => Fe + $e, 0) / ne.length
+                ? ne.reduce((Re, $e) => Re + $e, 0) / ne.length
                 : null,
               nPricepointsIncreasing: C.filter(
-                (Fe) => Fe.nStagedAmount > Fe.nExistingAmount,
+                (Re) => Re.nStagedAmount > Re.nExistingAmount,
               ).length,
               nPricepointsDecreasing: C.filter(
-                (Fe) => Fe.nStagedAmount < Fe.nExistingAmount,
+                (Re) => Re.nStagedAmount < Re.nExistingAmount,
               ).length,
               nPricepointsUnchanged: C.filter(
-                (Fe) => Fe.nStagedAmount === Fe.nExistingAmount,
+                (Re) => Re.nStagedAmount === Re.nExistingAmount,
               ).length,
               flAvgUSDDiscountExisting: Q,
-              flAvgUSDDiscountStaged: Ue,
-              flAvgUSDDiscountChange: Q === null || Ue === null ? null : Ue - Q,
+              flAvgUSDDiscountStaged: Fe,
+              flAvgUSDDiscountChange: Q === null || Fe === null ? null : Fe - Q,
             });
           }
           return (
@@ -11164,7 +11164,7 @@ Positive is less discount, negative is more discount.`,
               justify: "between",
               height: "100%",
               children: [
-                (0, e.jsxs)(Oe.EY, {
+                (0, e.jsxs)(Ne.EY, {
                   contrast: c ? "title" : "subtitle",
                   whiteSpace: "pre-line",
                   children: [
@@ -11193,7 +11193,7 @@ Positive is less discount, negative is more discount.`,
           if (t === null)
             return (0, e.jsx)(lt, {
               textAlign: "end",
-              children: (0, e.jsx)(Oe.EY, {
+              children: (0, e.jsx)(Ne.EY, {
                 contrast: "note",
                 children: "\u2014",
               }),
@@ -11202,7 +11202,7 @@ Positive is less discount, negative is more discount.`,
             o = t > 0 ? "+" : "";
           return (0, e.jsx)(lt, {
             textAlign: "end",
-            children: (0, e.jsxs)(Oe.EY, {
+            children: (0, e.jsxs)(Ne.EY, {
               color: r,
               style: pn,
               children: [
@@ -11219,7 +11219,7 @@ Positive is less discount, negative is more discount.`,
           return t === "increasing"
             ? (0, e.jsx)(lt, {
                 textAlign: "center",
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   color: "text-success",
                   children: (0, e.jsx)(kn.V, { direction: "up" }),
                 }),
@@ -11227,7 +11227,7 @@ Positive is less discount, negative is more discount.`,
             : t === "decreasing"
               ? (0, e.jsx)(lt, {
                   textAlign: "center",
-                  children: (0, e.jsx)(Oe.EY, {
+                  children: (0, e.jsx)(Ne.EY, {
                     color: "text-error",
                     children: (0, e.jsx)(kn.V, { direction: "down" }),
                   }),
@@ -11235,7 +11235,7 @@ Positive is less discount, negative is more discount.`,
               : t === "unchanged"
                 ? (0, e.jsx)(lt, {
                     textAlign: "center",
-                    children: (0, e.jsx)(Oe.EY, {
+                    children: (0, e.jsx)(Ne.EY, {
                       color: "text-body",
                       children: "\u2013",
                     }),
@@ -11245,7 +11245,7 @@ Positive is less discount, negative is more discount.`,
         function pr(s) {
           return (0, e.jsx)(lt, {
             textAlign: "end",
-            children: (0, e.jsx)(Oe.EY, { style: pn, children: s.nCount }),
+            children: (0, e.jsx)(Ne.EY, { style: pn, children: s.nCount }),
           });
         }
         function $s(s) {
@@ -11253,14 +11253,14 @@ Positive is less discount, negative is more discount.`,
           return t === null
             ? (0, e.jsx)(lt, {
                 textAlign: "end",
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   contrast: "note",
                   children: "\u2014",
                 }),
               })
             : (0, e.jsx)(lt, {
                 textAlign: "end",
-                children: (0, e.jsxs)(Oe.EY, {
+                children: (0, e.jsxs)(Ne.EY, {
                   color: "text-body",
                   contrast: "body",
                   style: pn,
@@ -11278,14 +11278,14 @@ Positive is less discount, negative is more discount.`,
           return t === null
             ? (0, e.jsx)(lt, {
                 textAlign: "end",
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   contrast: "note",
                   children: "\u2014",
                 }),
               })
             : (0, e.jsx)(lt, {
                 textAlign: "end",
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   weight: r ? "heavy" : void 0,
                   style: pn,
                   children: (0, In.x)(t, n),
@@ -11297,7 +11297,7 @@ Positive is less discount, negative is more discount.`,
           if (t === null)
             return (0, e.jsx)(lt, {
               textAlign: "end",
-              children: (0, e.jsx)(Oe.EY, {
+              children: (0, e.jsx)(Ne.EY, {
                 contrast: "note",
                 children: "\u2014",
               }),
@@ -11306,7 +11306,7 @@ Positive is less discount, negative is more discount.`,
             o = t > 0 ? "+" : "";
           return (0, e.jsx)(lt, {
             textAlign: "end",
-            children: (0, e.jsxs)(Oe.EY, {
+            children: (0, e.jsxs)(Ne.EY, {
               color: r,
               style: pn,
               children: [o, (0, In.x)(t, n)],
@@ -11354,7 +11354,7 @@ Positive is less discount, negative is more discount.`,
                   style: { cursor: "pointer" },
                   children: [
                     (0, e.jsx)(lt, {
-                      children: (0, e.jsxs)(Oe.EY, {
+                      children: (0, e.jsxs)(Ne.EY, {
                         whiteSpace: "nowrap",
                         children: [
                           (0, e.jsx)(kn.V, {
@@ -11366,7 +11366,7 @@ Positive is less discount, negative is more discount.`,
                       }),
                     }),
                     (0, e.jsx)(lt, {
-                      children: (0, e.jsx)(Oe.EY, {
+                      children: (0, e.jsx)(Ne.EY, {
                         whiteSpace: "nowrap",
                         children: ca(t),
                       }),
@@ -11405,63 +11405,63 @@ Positive is less discount, negative is more discount.`,
                       children: [
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "USD Pricepoint",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "Existing",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "Staged",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "Difference",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "% Difference",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "Existing (USD)",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "Staged (USD)",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "Difference (USD)",
                           }),
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsxs)(Oe.EY, {
+                          children: (0, e.jsxs)(Ne.EY, {
                             contrast: "subtitle",
                             whiteSpace: "nowrap",
                             children: [
@@ -11476,7 +11476,7 @@ Positive is less discount, negative is more discount.`,
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsxs)(Oe.EY, {
+                          children: (0, e.jsxs)(Ne.EY, {
                             contrast: "subtitle",
                             whiteSpace: "nowrap",
                             children: [
@@ -11491,26 +11491,26 @@ Positive is less discount, negative is more discount.`,
                         }),
                         (0, e.jsx)(lt, {
                           textAlign: "end",
-                          children: (0, e.jsx)(Oe.EY, {
+                          children: (0, e.jsx)(Ne.EY, {
                             contrast: "subtitle",
                             children: "USD Discount Change",
                           }),
                         }),
                         t.rgPricepointDiffs.map((T) => {
-                          const z =
+                          const U =
                               f === null
                                 ? null
                                 : Math.round(T.nExistingAmount * f),
-                            je =
+                            ye =
                               f === null
                                 ? null
                                 : Math.round(T.nStagedAmount * f),
-                            ne = z === null || je === null ? null : je - z,
+                            ne = U === null || ye === null ? null : ye - U,
                             Q =
                               x === null
                                 ? null
                                 : cr(T.nExistingAmount, x, T.nUSDPricepoint),
-                            Ue =
+                            Fe =
                               f === null
                                 ? null
                                 : cr(T.nStagedAmount, f, T.nUSDPricepoint);
@@ -11542,11 +11542,11 @@ Positive is less discount, negative is more discount.`,
                                 }),
                                 (0, e.jsx)(ur, { flPercent: T.flPercentDiff }),
                                 (0, e.jsx)(mn, {
-                                  nAmount: z,
+                                  nAmount: U,
                                   eCurrencyCode: Mt.CS,
                                 }),
                                 (0, e.jsx)(mn, {
-                                  nAmount: je,
+                                  nAmount: ye,
                                   eCurrencyCode: Mt.CS,
                                 }),
                                 (0, e.jsx)(ma, {
@@ -11554,10 +11554,10 @@ Positive is less discount, negative is more discount.`,
                                   eCurrencyCode: Mt.CS,
                                 }),
                                 (0, e.jsx)($s, { flPercent: Q }),
-                                (0, e.jsx)($s, { flPercent: Ue }),
+                                (0, e.jsx)($s, { flPercent: Fe }),
                                 (0, e.jsx)($s, {
                                   flPercent:
-                                    Q === null || Ue === null ? null : Ue - Q,
+                                    Q === null || Fe === null ? null : Fe - Q,
                                 }),
                               ],
                             },
@@ -11607,7 +11607,7 @@ Positive is less discount, negative is more discount.`,
                 p.Fragment,
                 {
                   children: [
-                    (0, e.jsxs)(Oe.EY, {
+                    (0, e.jsxs)(Ne.EY, {
                       children: [
                         "Currencies/Regions ",
                         _.eMovement,
@@ -11673,15 +11673,15 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ]),
             [f, _] = (0, p.useState)("avgPercentDiff"),
             [C, T] = (0, p.useState)(!1),
-            z = (ct) => {
+            U = (ct) => {
               T(ct === f ? !C : !0), _(ct);
             },
-            [je, ne] = (0, p.useState)(null),
-            [Q, Ue] = (0, p.useState)(null),
-            Fe = (ct) => Ue(ct === Q ? null : ct),
+            [ye, ne] = (0, p.useState)(null),
+            [Q, Fe] = (0, p.useState)(null),
+            Re = (ct) => Fe(ct === Q ? null : ct),
             $e = Q === "all" ? n : n.filter((ct) => Bn(ct) === Q),
             ts = n.reduce((ct, Is) => ct + Is.nSkippedPricepoints, 0),
-            Hs = c
+            Us = c
               ? (n.find(
                   (ct) =>
                     ct.eCurrencyCode === Mt.C6 && ct.eRegionCode === as.YS,
@@ -11698,7 +11698,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   (0, e.jsx)(Ln.$, {
                     size: "1",
                     variant: "outline",
-                    onClick: () => Fe("all"),
+                    onClick: () => Re("all"),
                     children: Q === "all" ? "Hide all" : "Show all",
                   }),
                 ],
@@ -11707,7 +11707,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 rgRows: n,
                 flSignificantPercentDiff: l,
                 eTableFilter: Q,
-                OnToggleFilter: Fe,
+                OnToggleFilter: Re,
               }),
               Q !== null &&
                 (0, e.jsxs)(e.Fragment, {
@@ -11715,7 +11715,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     (0, e.jsx)("br", {}),
                     (0, e.jsxs)("ul", {
                       children: [
-                        (0, e.jsxs)(Oe.EY, {
+                        (0, e.jsxs)(Ne.EY, {
                           as: "li",
                           size: "3",
                           style: Rs,
@@ -11729,8 +11729,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                             "% in local currency amounts",
                           ],
                         }),
-                        Hs !== null &&
-                          (0, e.jsxs)(Oe.EY, {
+                        Us !== null &&
+                          (0, e.jsxs)(Ne.EY, {
                             as: "li",
                             size: "3",
                             style: Rs,
@@ -11738,7 +11738,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                               "* - Staged USD Discount is within +/-",
                               na,
                               "% of China's discount (",
-                              Hs.toFixed(1),
+                              Us.toFixed(1),
                               "%)",
                             ],
                           }),
@@ -11757,7 +11757,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                               column: ct,
                               eSortColumn: f,
                               bAscending: C,
-                              OnClick: z,
+                              OnClick: U,
                               strTooltip: x.get(ct.eColumn) ?? ct.strTooltip,
                             },
                             ct.eColumn,
@@ -11766,16 +11766,16 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         ti($e, f, C).map((ct) => {
                           const Is = ra(ct.eCurrencyCode, ct.eRegionCode),
                             _s =
-                              Hs !== null &&
+                              Us !== null &&
                               ct.flAvgUSDDiscountStaged !== null &&
                               ct.eCurrencyCode !== Mt.C6 &&
-                              Math.abs(ct.flAvgUSDDiscountStaged - Hs) <= na;
+                              Math.abs(ct.flAvgUSDDiscountStaged - Us) <= na;
                           return (0, e.jsx)(
                             ri,
                             {
                               row: ct,
-                              bExpanded: Is === je,
-                              OnToggle: () => ne(Is === je ? null : Is),
+                              bExpanded: Is === ye,
+                              OnToggle: () => ne(Is === ye ? null : Is),
                               launchFXRates: r,
                               currentFXRates: o,
                               strLaunchTooltip: d,
@@ -11787,7 +11787,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         }),
                       ],
                     }),
-                    (0, e.jsxs)(Oe.EY, {
+                    (0, e.jsxs)(Ne.EY, {
                       as: "div",
                       contrast: "note",
                       marginTop: "2",
@@ -11836,14 +11836,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 children: "Stage New Pricing",
               }),
               !t &&
-                (0, e.jsx)(Oe.EY, {
+                (0, e.jsx)(Ne.EY, {
                   as: "div",
                   contrast: "note",
                   marginTop: "2",
                   children: "No FX rates are available to stage with",
                 }),
               !n &&
-                (0, e.jsx)(Oe.EY, {
+                (0, e.jsx)(Ne.EY, {
                   as: "div",
                   contrast: "note",
                   marginTop: "2",
@@ -11851,7 +11851,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     "No pricing multiplier set is available to stage with",
                 }),
               g &&
-                (0, e.jsx)(Oe.EY, { as: "div", marginTop: "2", children: g }),
+                (0, e.jsx)(Ne.EY, { as: "div", marginTop: "2", children: g }),
               (0, e.jsx)(Cs.E, {
                 active: r,
                 children: (0, e.jsx)(is.o0, {
@@ -11935,8 +11935,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     C,
                     t,
                   ).filter(
-                    (z) =>
-                      !(z.eCurrencyCode === Mt.CS && z.eRegionCode === as.YS),
+                    (U) =>
+                      !(U.eCurrencyCode === Mt.CS && U.eRegionCode === as.YS),
                   );
                 return {
                   eConvertMethod: _.convert_method,
@@ -11955,14 +11955,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               }),
               (0, e.jsxs)("ul", {
                 children: [
-                  (0, e.jsx)(Oe.EY, {
+                  (0, e.jsx)(Ne.EY, {
                     as: "li",
                     size: "3",
                     style: Rs,
                     children:
                       "This page shows staged package pricing guidelines against the currently live package pricing guidelines, per USD pricepoint.",
                   }),
-                  (0, e.jsxs)(Oe.EY, {
+                  (0, e.jsxs)(Ne.EY, {
                     as: "li",
                     size: "3",
                     style: Rs,
@@ -12113,7 +12113,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       Q.add(ts.package_id);
                     break;
                 }
-              const Ue = o
+              const Fe = o
                   .filter(($e) => !Q.has($e.packageid))
                   .map(($e) => ({
                     value: $e.packageid,
@@ -12123,7 +12123,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       $e.packageid,
                     ),
                   })),
-                Fe = r
+                Re = r
                   .filter(($e) => !ne.has($e.bundleid))
                   .map(($e) => ({
                     value: $e.bundleid,
@@ -12133,7 +12133,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       $e.bundleid,
                     ),
                   }));
-              return [Ue, Fe];
+              return [Fe, Re];
             }, [r, o, g]),
             C = (0, p.useMemo)(
               () =>
@@ -12144,13 +12144,13 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               [l],
             ),
             T = n.length === 0 || di(g, n),
-            z = g.some((ne) => Js(ne) !== null) || !T,
-            je = {
+            U = g.some((ne) => Js(ne) !== null) || !T,
+            ye = {
               appid: t,
               rgUnusedBundles: _,
               rgUnusedPackages: f,
               rgValidLanguages: C,
-              bHasErrors: z,
+              bHasErrors: U,
               rgAllPackages: o,
               rgAllBundles: r,
             };
@@ -12183,7 +12183,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 ],
               }),
               (0, e.jsxs)(Ds.Provider, {
-                value: je,
+                value: ye,
                 children: [
                   c &&
                     (0, e.jsxs)(e.Fragment, {
@@ -12632,8 +12632,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             _ = (ne) => {
               const Q = structuredClone(n);
               Q.dropdown_items || (Q.dropdown_items = []);
-              let Ue = { kind: "package", package_id: ne.value[1] };
-              Q.dropdown_items.push(Ue), r(Q);
+              let Fe = { kind: "package", package_id: ne.value[1] };
+              Q.dropdown_items.push(Fe), r(Q);
             },
             C = t.rgUnusedPackages.map((ne) => ({
               value: ["package", ne.value],
@@ -12642,7 +12642,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             T = (ne) => {
               if (ne.package_id) {
                 const Q = t.rgAllPackages.find(
-                  (Ue) => Ue.packageid === ne.package_id,
+                  (Fe) => Fe.packageid === ne.package_id,
                 );
                 return (0, e.jsx)("div", {
                   className: at.DropdownOptionRow,
@@ -12657,7 +12657,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 });
               } else if (ne.bundle_id) {
                 const Q = t.rgAllBundles.find(
-                  (Ue) => Ue.bundleid === ne.bundle_id,
+                  (Fe) => Fe.bundleid === ne.bundle_id,
                 );
                 return (0, e.jsx)("div", {
                   className: at.DropdownOptionRow,
@@ -12672,17 +12672,17 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 });
               } else return null;
             },
-            z = (ne) => {
+            U = (ne) => {
               const Q = structuredClone(n);
               Q.dropdown_items || (Q.dropdown_items = []),
                 Q.dropdown_items.splice(ne, 1),
                 r(Q);
             },
-            je = (ne, Q) => {
-              const Ue = structuredClone(n);
-              Ue.dropdown_items || (Ue.dropdown_items = []);
-              const [Fe] = Ue.dropdown_items.splice(ne, 1);
-              Ue.dropdown_items.splice(Q, 0, Fe), r(Ue);
+            ye = (ne, Q) => {
+              const Fe = structuredClone(n);
+              Fe.dropdown_items || (Fe.dropdown_items = []);
+              const [Re] = Fe.dropdown_items.splice(ne, 1);
+              Fe.dropdown_items.splice(Q, 0, Re), r(Fe);
             };
           return (0, e.jsxs)("div", {
             className: at.DropdownOption,
@@ -12808,8 +12808,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   }),
                   (0, e.jsx)(Vt.A, {
                     render: T,
-                    onDelete: z,
-                    onMove: je,
+                    onDelete: U,
+                    onMove: ye,
                     items: n.dropdown_items ?? [],
                   }),
                   (n.dropdown_items ?? []).map((ne, Q) =>
@@ -12849,19 +12849,19 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             d = (C) => () => {
               if (C === 0) return;
               let T = [...t];
-              const [z] = T.splice(C, 1);
-              T.splice(C - 1, 0, z), n(T);
+              const [U] = T.splice(C, 1);
+              T.splice(C - 1, 0, U), n(T);
             },
             g = (C) => () => {
               if (C === t.length - 1) return;
               let T = [...t];
-              const [z] = T.splice(C, 1);
-              T.splice(C + 1, 0, z), n(T);
+              const [U] = T.splice(C, 1);
+              T.splice(C + 1, 0, U), n(T);
             },
             x = () => (n(t.concat([o()])), !1),
             f = (C) => (T) => {
-              let z = [...t];
-              (z[C] = T), n(z);
+              let U = [...t];
+              (U[C] = T), n(U);
             },
             _ = (C) => () => {
               let T = [...t];
@@ -12978,7 +12978,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   "input",
                   {
                     type: "hidden",
-                    name: `${r}[${(0, pe.LgB)(C, "english")}]`,
+                    name: `${r}[${(0, ue.LgB)(C, "english")}]`,
                     value: (0, Zs.VX)(t, C),
                   },
                   r + "_" + C,
@@ -13063,7 +13063,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     }),
                   this.m_mapAppIDToSoundTracks.set(t, c);
               } catch (r) {
-                const o = (0, ue.H)(r);
+                const o = (0, de.H)(r);
                 console.error(
                   "LoadDLCAndSoundTracksForAppID for appid: " +
                     t +
@@ -13154,21 +13154,21 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             f = wi(o.parentAppID),
             _ = (0, p.useMemo)(
               () => [
-                ...(x?.filter((z) => !l || !!z.is_released_somewhere) || []),
-                ...(f?.filter((z) => !l || !!z.is_released_somewhere) || []),
+                ...(x?.filter((U) => !l || !!U.is_released_somewhere) || []),
+                ...(f?.filter((U) => !l || !!U.is_released_somewhere) || []),
               ],
               [x, f, l],
             ),
             C = (0, p.useMemo)(
-              () => _?.filter((z) => !r || !r.includes(z.appid)),
+              () => _?.filter((U) => !r || !r.includes(U.appid)),
               [_, r],
             ),
             T = (0, p.useMemo)(
               () =>
                 C
-                  ? C.map((z) => ({
-                      label: (0, e.jsx)(ki, { appInfo: z }),
-                      data: z.appid,
+                  ? C.map((U) => ({
+                      label: (0, e.jsx)(ki, { appInfo: U }),
+                      data: U.appid,
                     }))
                   : [],
               [C],
@@ -13176,7 +13176,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return C
             ? T.length == 0 && l
               ? (0, e.jsx)("div", {
-                  className: (0, E.A)(wn.ErrorStylesWithIcon, "ErrorCtn"),
+                  className: (0, D.A)(wn.ErrorStylesWithIcon, "ErrorCtn"),
                   children: (0, a.we)("#SeasonPass_NoDLC"),
                 })
               : (0, e.jsxs)(e.Fragment, {
@@ -13185,7 +13185,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       label: c || (0, a.we)("#SeasonPass_ShipDLC"),
                       tooltip: d || (0, a.we)("#SeasonPass_ShipDLC_ttip"),
                       selectedOption: t,
-                      onChange: (z) => n(z.data),
+                      onChange: (U) => n(U.data),
                       rgOptions: T,
                     }),
                     !!(t && g) &&
@@ -13242,15 +13242,15 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return (
             (0, p.useEffect)(() => {
               if (c) {
-                const T = (0, pe.sfN)(C.strActiveLanguage, pe.Bhc);
+                const T = (0, ue.sfN)(C.strActiveLanguage, ue.Bhc);
                 On.O.Get().SetCurEditLanguage(T);
               }
             }, [C.strActiveLanguage, c]),
             (0, _e.hL)(On.O.Get().GetCallback(), (T) => {
-              C.setActiveLanguage((0, pe.LgB)(T));
+              C.setActiveLanguage((0, ue.LgB)(T));
             }),
             (0, e.jsxs)("div", {
-              className: (0, E.A)(Ct().EditBtn, en().BtnCtn),
+              className: (0, D.A)(Ct().EditBtn, en().BtnCtn),
               children: [
                 c && (0, e.jsx)(Li, { hideModal: g, bCreate: r, ...s, ...C }),
                 !r && C.rctHiddenInputs,
@@ -13284,16 +13284,16 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               rgShippedMilestoneIDs: C,
             } = s,
             T = (0, mr.f1)(),
-            [z, je] = (0, p.useState)(r?.internal_desc || ""),
+            [U, ye] = (0, p.useState)(r?.internal_desc || ""),
             [ne, Q] = (0, p.useState)(r?.expected_delivery || T + 1440 * 60),
-            [Ue, Fe] = (0, p.useState)(r?.display_format || "date_quarter"),
+            [Fe, Re] = (0, p.useState)(r?.display_format || "date_quarter"),
             [$e, ts] = (0, p.useState)(r?.localized_title || { english: "" }),
-            [Hs] = (0, p.useState)(r?.milestone_desc || {}),
+            [Us] = (0, p.useState)(r?.milestone_desc || {}),
             [ct, Is] = (0, p.useState)(r?.coming_soon_appid),
             [_s, Rc] = (0, p.useState)(!!r?.backfilled_release),
             Ka = (0, p.useRef)(void 0),
-            [Fc, Uc] = (0, p.useState)(!1),
-            Hc = (0, p.useMemo)(
+            [Fc, Hc] = (0, p.useState)(!1),
+            Uc = (0, p.useMemo)(
               () =>
                 f
                   ? [qs.TU.k_ESteamRealmGlobal, qs.TU.k_ESteamRealmChina]
@@ -13320,11 +13320,11 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 }),
                   l({
                     milestone_id: o,
-                    internal_desc: z,
+                    internal_desc: U,
                     expected_delivery: ne,
                     submit_time: T,
                     submit_accountid: qe.iA.accountid,
-                    display_format: Ue,
+                    display_format: Fe,
                     localized_title: $e,
                     milestone_desc: ws,
                     milestone_image: void 0,
@@ -13336,7 +13336,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               },
               onCancel: () => {
                 x.forEach((ws, cs) => {
-                  Hs?.[cs] ? x.get(cs).Set(Hs[cs]) : x.get(cs).Set("");
+                  Us?.[cs] ? x.get(cs).Set(Us[cs]) : x.get(cs).Set("");
                 }),
                   t();
               },
@@ -13362,7 +13362,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       (0, Zs.pV)($e, cs, ws), ts({ ...$e });
                     },
                     kvName: void 0,
-                    rgRealms: Hc,
+                    rgRealms: Uc,
                   }),
                   (0, e.jsxs)("h3", {
                     children: [
@@ -13383,7 +13383,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       "#SeasonPass_CustomerDescription_Images",
                     ),
                   }),
-                  (0, e.jsx)(ve.default, {
+                  (0, e.jsx)(Ae.default, {
                     language: c,
                     languages: d,
                     editorType: "milestone",
@@ -13456,8 +13456,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                                     ),
                                   }),
                                   (0, e.jsx)(xa.Ll, {
-                                    value: Ue,
-                                    onChange: Fe,
+                                    value: Fe,
+                                    onChange: Re,
                                     rgComingSoonOptionOverride: xa.ut,
                                     rtSteamReleaseDate: ne,
                                     bExpandedDisplay: !0,
@@ -13472,7 +13472,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                           tooltip: (0, a.we)("#SeasonPass_Backfill_check_ttip"),
                           onChange: (ws) => {
                             let cs = !(!ws && ne < T);
-                            Uc(!cs),
+                            Hc(!cs),
                               cs ? Rc(ws) : Ka.current.SetChecked(!0, !1);
                           },
                           checked: _s,
@@ -13498,7 +13498,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return !n || n?.includes(t)
             ? null
             : (0, e.jsxs)("div", {
-                className: (0, E.A)(Ct().EditBtn, en().BtnCtn),
+                className: (0, D.A)(Ct().EditBtn, en().BtnCtn),
                 children: [
                   (0, e.jsx)(Cs.E, {
                     active: o,
@@ -13595,7 +13595,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           });
         }
         const Fi = { include_release: !0, include_included_items: !0 };
-        function Ui(s) {
+        function Hi(s) {
           const {
               inputMilestone: t,
               setCurrentMilestone: n,
@@ -13607,12 +13607,12 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             [d] = (0, ft.t7)(t.completed_appid, Fi),
             [g, x, f] = (0, _e.uD)(),
             [_, C, T] = (0, _e.uD)(),
-            z = !!c.includes(t.milestone_id),
-            je = !!(z && (!t.completed_appid || !t.completed_event_gid));
+            U = !!c.includes(t.milestone_id),
+            ye = !!(U && (!t.completed_appid || !t.completed_event_gid));
           return (0, e.jsxs)("div", {
             className: Ct().StatusRow,
             children: [
-              !!z &&
+              !!U &&
                 (0, e.jsx)(e.Fragment, {
                   children: (0, e.jsx)("div", {
                     className: Ct().CheckMark,
@@ -13621,7 +13621,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 }),
               !!t.completed_appid &&
                 (0, e.jsxs)("a", {
-                  href: `${be.TS.STORE_BASE_URL}app/${t.completed_appid}`,
+                  href: `${Ce.TS.STORE_BASE_URL}app/${t.completed_appid}`,
                   target: "_blank",
                   children: [d?.GetName() || "", " (", t.completed_appid, ")"],
                 }),
@@ -13637,15 +13637,15 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               }),
               !!t.completed_event_gid &&
                 (0, e.jsx)("a", {
-                  href: `${be.TS.STORE_BASE_URL}news/app/${r.parentAppID}/view/${t.completed_event_gid}`,
+                  href: `${Ce.TS.STORE_BASE_URL}news/app/${r.parentAppID}/view/${t.completed_event_gid}`,
                   target: "_blank",
                   children: (0, a.we)("#SeasonPass_ViewLaunchEvent"),
                 }),
-              !z &&
+              !U &&
                 (0, e.jsxs)(e.Fragment, {
                   children: [
                     g &&
-                      (0, e.jsx)(Hi, {
+                      (0, e.jsx)(Ui, {
                         inputMilestone: t,
                         setCurrentMilestone: n,
                         rgExcludedAppIDs: ba(o, r, t.milestone_id),
@@ -13664,7 +13664,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     }),
                   ],
                 }),
-              !!je &&
+              !!ye &&
                 (0, e.jsxs)(e.Fragment, {
                   children: [
                     _ &&
@@ -13675,7 +13675,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         rgExcludedAppIDs: ba(o, r, t.milestone_id),
                         seasonPassID: r,
                       }),
-                    (0, e.jsx)(ce.Gq, {
+                    (0, e.jsx)(pe.Gq, {
                       toolTipContent: (0, a.we)(
                         "#SeasonPass_PostShipLink_Button_ttip",
                       ),
@@ -13704,7 +13704,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             r
           );
         }
-        function Hi(s) {
+        function Ui(s) {
           const {
               hideModal: t,
               inputMilestone: n,
@@ -13723,7 +13723,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               bDisableBackgroundDismiss: !0,
               strTitle: (0, a.PP)(
                 "#SeasonPass_UpdateLaunch_title",
-                n.localized_title?.[be.TS.LANGUAGE] ||
+                n.localized_title?.[Ce.TS.LANGUAGE] ||
                   n.localized_title?.english,
               ),
               strDescription: (0, a.we)(
@@ -13737,10 +13737,10 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 r({ ...n, completed_appid: c, completed_event_gid: g });
               },
               children: (0, e.jsxs)("div", {
-                className: (0, E.A)(Ct().ShippingTheMilestone),
+                className: (0, D.A)(Ct().ShippingTheMilestone),
                 children: [
                   (0, e.jsx)("div", {
-                    className: (0, E.A)(Ct().ShippingType),
+                    className: (0, D.A)(Ct().ShippingType),
                     children: (0, e.jsxs)(S.G5, {
                       children: [
                         (0, e.jsx)(S.lr, {
@@ -13750,14 +13750,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         }),
                         (0, e.jsx)(S.Od, {
                           checked: !f,
-                          onChange: (z) => z && _(!1),
+                          onChange: (U) => U && _(!1),
                           label: (0, a.we)(
                             "#SeasonPass_UpdateLaunch_radio_label_1",
                           ),
                         }),
                         (0, e.jsx)(S.Od, {
                           checked: f,
-                          onChange: (z) => z && _(!0),
+                          onChange: (U) => U && _(!0),
                           label: (0, a.we)(
                             "#SeasonPass_UpdateLaunch_radio_label_2",
                           ),
@@ -13785,7 +13785,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         (0, e.jsx)(Ca.q, {
                           appid: o.parentAppID,
                           selectedEventGID: g,
-                          fnSetUpdateEvent: (z, je) => x(je),
+                          fnSetUpdateEvent: (U, ye) => x(ye),
                           bFilterOutDrafts: !0,
                         }),
                         !!qe.iA.is_support &&
@@ -13823,7 +13823,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       children: (0, e.jsx)(S.Yh, {
                         label: (0, a.we)("#SeaosnPass_OptionalEvents"),
                         checked: C,
-                        onChange: (z) => T(z),
+                        onChange: (U) => T(U),
                       }),
                     }),
                 ],
@@ -13959,20 +13959,20 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             _ = (0, mr.sB)(),
             C = !!g.includes(x.milestone_id),
             T = !C && x.expected_delivery < _,
-            z = (0, p.useMemo)(
+            U = (0, p.useMemo)(
               () =>
                 l
                   ? [qs.TU.k_ESteamRealmGlobal, qs.TU.k_ESteamRealmChina]
                   : [qs.TU.k_ESteamRealmGlobal],
               [l],
             ),
-            je = (0, On.E)(),
-            ne = a.A0.GetELanguageFallback(je);
+            ye = (0, On.E)(),
+            ne = a.A0.GetELanguageFallback(ye);
           return (0, e.jsxs)("tr", {
             children: [
               (0, e.jsx)("td", {
                 children: (0, e.jsxs)("div", {
-                  className: (0, E.A)({
+                  className: (0, D.A)({
                     [Ct().TitlePreviewRow]: !0,
                     [Ct().Shipped]: C,
                   }),
@@ -13986,14 +13986,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       bOnlyDisplay: !0,
                       placeholderToken: (0, a.we)(
                         "#SeasonPass_NoLang_Fallback",
-                        (0, a.we)("#Language_" + (0, pe.LgB)(je)),
-                        (0, a.we)("#Language_" + (0, pe.LgB)(ne)),
+                        (0, a.we)("#Language_" + (0, ue.LgB)(ye)),
+                        (0, a.we)("#Language_" + (0, ue.LgB)(ne)),
                       ),
-                      rgRealms: z,
+                      rgRealms: U,
                     }),
                     C
                       ? (0, e.jsx)("div", {
-                          className: (0, E.A)(Ct().Date, Ct().Released),
+                          className: (0, D.A)(Ct().Date, Ct().Released),
                           children: (0, a.we)("#SeasonPass_Released"),
                         })
                       : (0, e.jsx)(e.Fragment, {
@@ -14005,9 +14005,9 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                                 ),
                               })
                             : (0, e.jsxs)("div", {
-                                className: (0, E.A)(Ct().Date),
+                                className: (0, D.A)(Ct().Date),
                                 children: [
-                                  (0, e.jsxs)(ce.he, {
+                                  (0, e.jsxs)(pe.he, {
                                     toolTipContent:
                                       (0, a.we)("#SeasonPass_Delivery") +
                                       ": " +
@@ -14027,7 +14027,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                                   }),
                                   T &&
                                     (0, e.jsx)("div", {
-                                      className: (0, E.A)(
+                                      className: (0, D.A)(
                                         T ? Wr().ErrorStylesWithIcon : void 0,
                                       ),
                                       children: (0, a.we)(
@@ -14044,7 +14044,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 children: (0, e.jsxs)("div", {
                   className: Ct().BtnCtn,
                   children: [
-                    (0, e.jsx)(Ui, {
+                    (0, e.jsx)(Hi, {
                       inputMilestone: x,
                       setCurrentMilestone: f,
                       seasonPassID: r,
@@ -14080,22 +14080,22 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               rgShippedMilestoneIDs: o,
             } = s,
             [l, c] = (0, p.useState)(n || { commitments: [] }),
-            { bAppHasSteamChinaToolsEnabled: d } = (0, ye.aJ)(),
+            { bAppHasSteamChinaToolsEnabled: d } = (0, ve.aJ)(),
             [g, x] = (0, p.useState)(n?.commitments?.length || 0),
             f = (0, p.useMemo)(() => {
               let T = 0;
               do T = Math.floor(Math.random() * 9e4) + 1e4;
               while (
-                l?.commitments?.findIndex((z) => z.milestone_id == T) >= 0
+                l?.commitments?.findIndex((U) => U.milestone_id == T) >= 0
               );
               return T;
             }, [l]),
             _ = (0, p.useCallback)(
               (T) =>
                 !!l.commitments?.some(
-                  (z) =>
-                    (0, Zs.nU)(z.localized_title, T) ||
-                    (0, Zs.nU)(z.milestone_desc, T),
+                  (U) =>
+                    (0, Zs.nU)(U.localized_title, T) ||
+                    (0, Zs.nU)(U.milestone_desc, T),
                 ),
               [l.commitments],
             ),
@@ -14128,11 +14128,11 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 rgPublishedMilestoneIDs: r,
                 rgShippedMilestoneIDs: o,
                 fnDeleteMilestoneByID: (T) => {
-                  const z = l.commitments.findIndex(
-                    (je) => je.milestone_id == T,
+                  const U = l.commitments.findIndex(
+                    (ye) => ye.milestone_id == T,
                   );
-                  z >= 0 &&
-                    (l.commitments.splice(z, 1),
+                  U >= 0 &&
+                    (l.commitments.splice(U, 1),
                     c({ ...l, commitments: [...l.commitments] }));
                 },
               }),
@@ -14170,17 +14170,17 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsxs)("div", {
-                className: (0, E.A)("instructions"),
+                className: (0, D.A)("instructions"),
                 children: [
                   (0, e.jsxs)("div", {
-                    className: (0, E.A)("title2"),
+                    className: (0, D.A)("title2"),
                     children: [
                       (0, a.we)("#SeasonPass_Title"),
                       " ",
                       (0, e.jsx)("span", {
                         className: "small",
                         children: (0, e.jsx)("a", {
-                          href: `${be.TS.PARTNER_BASE_URL}doc/store/seasonpass`,
+                          href: `${Ce.TS.PARTNER_BASE_URL}doc/store/seasonpass`,
                           target: "_blank",
                           children: (0, a.we)("#AssetRequest_General_SeeDocs"),
                         }),
@@ -14238,7 +14238,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                                 (0, a.oW)(
                                   "#SeasonPass_Desc_Releasing",
                                   (0, e.jsx)("a", {
-                                    href: `${be.TS.PARTNER_BASE_URL}doc/store/seasonpass#release`,
+                                    href: `${Ce.TS.PARTNER_BASE_URL}doc/store/seasonpass#release`,
                                     target: "_blank",
                                   }),
                                 ),
@@ -14355,7 +14355,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               (0, Ms.yY)(C, f, _), n(C);
             },
             g = (f, _) => {
-              const C = t.map((T, z) => (z === f ? { ...T, link: _ } : T));
+              const C = t.map((T, U) => (U === f ? { ...T, link: _ } : T));
               n(C);
             },
             x = (f) => {
@@ -14454,7 +14454,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 onChange: (d) => n(d.target.value),
               }),
               c &&
-                (0, e.jsx)(ce.he, {
+                (0, e.jsx)(pe.he, {
                   className: tn.SocialMediaTooltip,
                   toolTipContent: c,
                   children: "(?)",
@@ -14534,7 +14534,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             l = p.useMemo(() => new Map(r), [r]),
             c = (0, p.useMemo)(
               () =>
-                Object.entries(n).map(([Q, Ue]) => ({
+                Object.entries(n).map(([Q, Fe]) => ({
                   label: (0, a.we)(`#StoreAdmin_AntiCheat_Type_${Q}`),
                   data: Q,
                 })),
@@ -14551,7 +14551,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             [g, x] = (0, p.useState)(t.type),
             [f, _] = (0, p.useState)(t.kernel),
             [C, T] = (0, p.useState)(t.uninstall),
-            [z, je] = (0, p.useState)(t.bootprotect),
+            [U, ye] = (0, p.useState)(t.bootprotect),
             ne = g !== "none" && g !== "unspecified";
           return (0, e.jsxs)("div", {
             className: "section",
@@ -14580,12 +14580,12 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               ne && (0, e.jsx)(al, { checked: f, onChange: _ }),
               ne && f && (0, e.jsx)(ol, { checked: C, onChange: T }),
               ne &&
-                (0, e.jsx)(ll, { supported: o, currentValue: z, onChange: je }),
+                (0, e.jsx)(ll, { supported: o, currentValue: U, onChange: ye }),
               (0, e.jsx)(dl, {
                 selectedOption: g !== "unspecified" ? g : "",
                 kernelMode: ne ? f : !1,
                 uninstallsCompletely: ne && f ? C : !1,
-                bootProtection: z != "none" ? z : "",
+                bootProtection: U != "none" ? U : "",
               }),
             ],
           });
@@ -14667,7 +14667,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return (0, e.jsxs)(hn, {
             children: [
               (0, e.jsx)(S.Yh, {
-                className: (0, E.A)(ls.KernelMode, ls.CheckboxLabel),
+                className: (0, D.A)(ls.KernelMode, ls.CheckboxLabel),
                 label: (0, a.we)("#StoreAdmin_AntiCheat_KernelModeLabel"),
                 checked: t,
                 onChange: n,
@@ -14884,7 +14884,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               }),
               (0, e.jsx)("div", {
                 children: (0, e.jsx)("button", {
-                  className: (0, E.A)("btnv6_blue_hoverfade btn_small"),
+                  className: (0, D.A)("btnv6_blue_hoverfade btn_small"),
                   onClick: () => n(!0),
                   children: (0, e.jsx)("span", {
                     children: (0, a.we)("#StoreAdmin_NonAppContent_Edit"),
@@ -14928,11 +14928,11 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         function gl(s) {
           const { originalItems: t, packageid: n, onDismiss: r } = s,
             o = [];
-          for (const je of t)
+          for (const ye of t)
             o.push({
-              localized_title: je.localized_title ?? {},
-              localized_description: je.localized_description ?? {},
-              visible: je.visible,
+              localized_title: ye.localized_title ?? {},
+              localized_description: ye.localized_description ?? {},
+              visible: ye.visible,
             });
           const l = ul(o),
             [c, d] = p.useState("editor"),
@@ -14948,13 +14948,13 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             C = async () => {
               d("throbber"),
                 await _.mutateAsync(l.items)
-                  .then((je) => {
-                    je.success !== 1
-                      ? x(je.errors[0] || "Unknown error")
+                  .then((ye) => {
+                    ye.success !== 1
+                      ? x(ye.errors[0] || "Unknown error")
                       : x(null);
                   })
-                  .catch((je) => {
-                    throw (x(je.message), je);
+                  .catch((ye) => {
+                    throw (x(ye.message), ye);
                   })
                   .finally(() => {
                     d("message");
@@ -14963,7 +14963,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             T = () => {
               d("editor"), r();
             },
-            z = () => {
+            U = () => {
               window.location.reload();
             };
           return c === "editor"
@@ -14983,7 +14983,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                           onMove: l.moveItem,
                           rowClassName: gs.ItemEditorRow,
                           items: l.items,
-                          render: (je, ne) =>
+                          render: (ye, ne) =>
                             (0, e.jsx)(hl, { state: l.getState(ne) }),
                           onDelete: l.deleteItem,
                         }),
@@ -14997,7 +14997,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                           ),
                         }),
                       (0, e.jsx)("button", {
-                        className: (0, E.A)(
+                        className: (0, D.A)(
                           "btn_green_white_innerfade",
                           gs.AddItemButton,
                         ),
@@ -15040,7 +15040,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         ),
                       }),
                       (0, e.jsx)("button", {
-                        onClick: z,
+                        onClick: U,
                         children: (0, a.we)(
                           "#StoreAdmin_NonAppContent_Editor_OK",
                         ),
@@ -15061,7 +15061,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       }),
                       (0, e.jsx)("p", { children: g }),
                       (0, e.jsx)("button", {
-                        onClick: z,
+                        onClick: U,
                         children: (0, a.we)(
                           "#StoreAdmin_NonAppContent_Editor_OK",
                         ),
@@ -15074,17 +15074,17 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             { item: n, setItem: r, deleteItem: o } = t,
             [l, c] = p.useState("english"),
             d = (0, a.O9)(!1),
-            g = (z) => {
-              c(z.target.value);
+            g = (U) => {
+              c(U.target.value);
             },
-            x = (z) => {
-              (n.localized_title[l] = z.target.value), r(n);
+            x = (U) => {
+              (n.localized_title[l] = U.target.value), r(n);
             },
-            f = (z) => {
-              (n.localized_description[l] = z.target.value), r(n);
+            f = (U) => {
+              (n.localized_description[l] = U.target.value), r(n);
             },
-            _ = (z) => {
-              (n.visible = z ? "1" : "0"), r(n);
+            _ = (U) => {
+              (n.visible = U ? "1" : "0"), r(n);
             };
           let C = "";
           n.localized_title &&
@@ -15113,8 +15113,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     }),
                     (0, e.jsx)("select", {
                       onChange: g,
-                      children: (0, a.vR)(d, (z, je) =>
-                        (0, e.jsx)("option", { value: je, children: z }, je),
+                      children: (0, a.vR)(d, (U, ye) =>
+                        (0, e.jsx)("option", { value: ye, children: U }, ye),
                       ),
                     }),
                   ],
@@ -15212,10 +15212,10 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             T = (Q) => {
               l(Q.target.checked);
             },
-            z = () => {
+            U = () => {
               r(s.bShowCapsuleArt), d(null);
             },
-            je = async () => {
+            ye = async () => {
               d("working"),
                 await g
                   .mutateAsync({ bShowCapsuleArt: n, bHideItemPrefix: o })
@@ -15239,7 +15239,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             children: [
               (0, e.jsxs)(xr.mt, {
                 active: c !== null,
-                onDismiss: z,
+                onDismiss: U,
                 children: [
                   c === "edit" &&
                     (0, e.jsxs)(e.Fragment, {
@@ -15299,7 +15299,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                           children: [
                             (0, e.jsx)("button", {
                               className: "btn_green_white_innerfade btn_medium",
-                              onClick: je,
+                              onClick: ye,
                               disabled:
                                 n === s.bShowCapsuleArt &&
                                 o === s.bHideItemPrefixes,
@@ -15309,7 +15309,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                             }),
                             (0, e.jsx)("button", {
                               className: "btnv6_blue_hoverfade btn_medium",
-                              onClick: z,
+                              onClick: U,
                               children: (0, a.we)(
                                 "#StoreAdmin_ShowCapsuleArt_Cancel",
                               ),
@@ -15386,7 +15386,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       checked: n,
                       onChange: _,
                     }),
-                    (0, e.jsx)(ce.Gq, {
+                    (0, e.jsx)(pe.Gq, {
                       toolTipContent: (0, a.we)(
                         "#StoreAdmin_EditPackageDisplay_ShowCapsuleArt_Description",
                       ),
@@ -15414,7 +15414,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       checked: n,
                       disabled: !0,
                     }),
-                    (0, e.jsx)(ce.Gq, {
+                    (0, e.jsx)(pe.Gq, {
                       toolTipContent: (0, a.we)(
                         "#StoreAdmin_EditPackageDisplay_ShowCapsuleArt_Description",
                       ),
@@ -15447,7 +15447,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     checked: o,
                     onChange: _,
                   }),
-                  (0, e.jsx)(ce.Gq, {
+                  (0, e.jsx)(pe.Gq, {
                     toolTipContent: (0, a.we)(
                       "#StoreAdmin_EditPackageDisplay_HidePrefix_Description",
                     ),
@@ -15501,7 +15501,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             },
           });
         }
-        var Us = i(72671),
+        var Hs = i(72671),
           Cl = i(29757),
           bl = i(53107);
         function Sr(s) {
@@ -15585,7 +15585,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             (0, e.jsx)(vl, { image: x, onCheckboxChange: c }, x.image_def.name),
           );
           return (0, e.jsxs)(is.o0, {
-            className: Us.ImageConfirmationDialog,
+            className: Hs.ImageConfirmationDialog,
             strTitle: (0, a.we)(
               "#StoreAdmin_GraphicalAssets_ConfirmDialog_Title",
             ),
@@ -15599,7 +15599,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             bDisableBackgroundDismiss: !0,
             children: [
               (0, e.jsx)("div", {
-                className: Us.ConfirmationDescription,
+                className: Hs.ConfirmationDescription,
                 children: (0, a.oW)(
                   "#StoreAdmin_GraphicalAssets_ConfirmDialog_Desc",
                   (0, e.jsx)(bl.uU, {
@@ -15629,20 +15629,20 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               ),
             );
           return (0, e.jsxs)("div", {
-            className: Us.ImageTypeConfirmationCtn,
+            className: Hs.ImageTypeConfirmationCtn,
             children: [
               (0, e.jsx)("div", {
-                className: Us.ImageTitle,
+                className: Hs.ImageTitle,
                 children: t.image_def.name,
               }),
               (0, e.jsx)("div", {
-                className: Us.ImageCtn,
+                className: Hs.ImageCtn,
                 children: (0, e.jsx)("img", {
-                  className: Us.ImageSrc,
+                  className: Hs.ImageSrc,
                   src: t.image_src,
                 }),
               }),
-              (0, e.jsx)("div", { className: Us.ImageCheckboxes, children: o }),
+              (0, e.jsx)("div", { className: Hs.ImageCheckboxes, children: o }),
             ],
           });
         }
@@ -15713,7 +15713,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return n.isLoading ? null : n.data;
         }
         async function jl(s) {
-          const t = `${be.TS.PARTNER_BASE_URL}apps/creatorhomelinkroles?clanids=${s.join(",")}`,
+          const t = `${Ce.TS.PARTNER_BASE_URL}apps/creatorhomelinkroles?clanids=${s.join(",")}`,
             n = await fetch(t, { credentials: "include" });
           if (!n.ok) throw new Error(`${t} answered ${n.status}`);
           const r = await n.json();
@@ -15864,11 +15864,11 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         ),
                           c.fnSetError(!0),
                           console.error(
-                            `unlinking failed appid ${t.appid} with error ${((0, ue.H))(d).strErrorMsg} `,
+                            `unlinking failed appid ${t.appid} with error ${((0, de.H))(d).strErrorMsg} `,
                           );
                       });
                 },
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   as: "p",
                   size: "2",
                   children: (0, a.we)("#Dialog_AreYouSure"),
@@ -15882,15 +15882,15 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         const Ll = "useClanLinkableForMeViaCreatorHome";
         function Ma() {
           return (0, ya.j)({
-            queryKey: [Ll, be.iA.accountid],
+            queryKey: [Ll, Ce.iA.accountid],
             queryFn: async () => {
-              const s = `${be.TS.PARTNER_BASE_URL}creatorhome/ajaxgetgroupsforuser`,
+              const s = `${Ce.TS.PARTNER_BASE_URL}creatorhome/ajaxgetgroupsforuser`,
                 t = { sessionid: (0, Y.KC)() };
               let n;
               try {
                 n = await $t().get(s, { params: t });
               } catch (r) {
-                const { strErrorMsg: o, errorCode: l } = (0, ue.H)(r);
+                const { strErrorMsg: o, errorCode: l } = (0, de.H)(r);
                 throw (
                   (console.error(
                     `useClanLinkableForMeViaCreatorHome: request failed, EResult ${l}: ${o}`,
@@ -15910,7 +15910,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 ))
               );
             },
-            enabled: be.iA.logged_in,
+            enabled: Ce.iA.logged_in,
           });
         }
         function Xh() {
@@ -15952,19 +15952,19 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               console.warn(
                 `LinkDialog: no partner for app ${t} (got ${n}), offering only the groups the user owns or officers`,
               ),
-              be.iA.logged_in ||
+              Ce.iA.logged_in ||
                 console.warn(
                   "LinkDialog: UserConfig says signed out, so the groups the user owns or officers were not requested",
                 );
           }, [x, t, n]);
-          const { rgClanChoices: z, setExistingLinks: je } = (0,
+          const { rgClanChoices: U, setExistingLinks: ye } = (0,
             p.useMemo)(() => {
-              const Ue = new Set(_.map(($e) => $e.clan_accountid)),
-                Fe = new Set([...T, ...Ue]);
-              return { rgClanChoices: Array.from(Fe), setExistingLinks: Ue };
+              const Fe = new Set(_.map(($e) => $e.clan_accountid)),
+                Re = new Set([...T, ...Fe]);
+              return { rgClanChoices: Array.from(Re), setExistingLinks: Fe };
             }, [_, T]),
             ne = (0, nn.WM)({
-              rgOptions: z,
+              rgOptions: U,
               selectedValue: c,
               onSelectionChange: d,
             }),
@@ -15979,7 +15979,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   gap: "2",
                   children: [
                     (0, e.jsx)(wa.k, { size: "1" }),
-                    (0, e.jsx)(Oe.EY, {
+                    (0, e.jsx)(Ne.EY, {
                       size: "2",
                       contrast: "description",
                       children: (0, a.we)("#Loading"),
@@ -15992,7 +15992,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   strTitle: (0, a.we)("#Button_Link"),
                   bAlertDialog: !0,
                   closeModal: o,
-                  children: (0, e.jsx)(Oe.EY, {
+                  children: (0, e.jsx)(Ne.EY, {
                     as: "p",
                     size: "2",
                     color: "text-error",
@@ -16016,14 +16016,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     bOKDisabled: !c,
                     onOK: async () => {
                       Q.fnSetLoading(!0);
-                      const Ue = {
+                      const Fe = {
                         clanAccountID: c,
-                        bReuseExistingClan: je.has(c),
+                        bReuseExistingClan: ye.has(c),
                       };
                       await l
-                        .mutateAsync(Ue)
-                        .then((Fe) => {
-                          Fe
+                        .mutateAsync(Fe)
+                        .then((Re) => {
+                          Re
                             ? (Q.fnSetStrSuccess(
                                 (0, a.we)("#EventDisplay_Share_Success"),
                               ),
@@ -16035,13 +16035,13 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                               ),
                               Q.fnSetError(!0));
                         })
-                        .catch((Fe) => {
+                        .catch((Re) => {
                           Q.fnSetStrError(
                             (0, a.we)("#Error_ErrorCommunicatingWithNetwork"),
                           ),
                             Q.fnSetError(!0),
                             console.error(
-                              `linking failed appid ${t} with error ${((0, ue.H))(Fe).strErrorMsg} `,
+                              `linking failed appid ${t} with error ${((0, de.H))(Re).strErrorMsg} `,
                             );
                         });
                     },
@@ -16049,7 +16049,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       direction: "column",
                       gap: "3",
                       children: [
-                        (0, e.jsx)(Oe.EY, {
+                        (0, e.jsx)(Ne.EY, {
                           as: "p",
                           size: "2",
                           children: (0, a.we)(
@@ -16057,7 +16057,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                           ),
                         }),
                         !x &&
-                          (0, e.jsx)(Oe.EY, {
+                          (0, e.jsx)(Ne.EY, {
                             as: "p",
                             size: "2",
                             contrast: "description",
@@ -16065,8 +16065,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                               "#AppLanding_Creator_Linking_NoPartner",
                             ),
                           }),
-                        z.length == 0
-                          ? (0, e.jsx)(Oe.EY, {
+                        U.length == 0
+                          ? (0, e.jsx)(Ne.EY, {
                               as: "p",
                               size: "2",
                               contrast: "description",
@@ -16085,7 +16085,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                                     children: c
                                       ? (0, e.jsx)(La, {
                                           clanAccountID: c,
-                                          bExistingLink: je.has(c),
+                                          bExistingLink: ye.has(c),
                                         })
                                       : (0, e.jsx)(nn.l6.Placeholder, {
                                           children: (0, a.we)(
@@ -16094,17 +16094,17 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                                         }),
                                   }),
                                   (0, e.jsx)(nn.l6.Options, {
-                                    children: z.map((Ue) =>
+                                    children: U.map((Fe) =>
                                       (0, e.jsx)(
                                         nn.l6.Option,
                                         {
-                                          value: Ue,
+                                          value: Fe,
                                           children: (0, e.jsx)(La, {
-                                            clanAccountID: Ue,
-                                            bExistingLink: je.has(Ue),
+                                            clanAccountID: Fe,
+                                            bExistingLink: ye.has(Fe),
                                           }),
                                         },
-                                        Ue,
+                                        Fe,
                                       ),
                                     ),
                                   }),
@@ -16119,7 +16119,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           const { clanAccountID: t, bExistingLink: n } = s,
             [r, o] = (0, Je.TB)(t),
             l = o ? o.group_name + `(${t})` : "" + t;
-          return (0, e.jsx)(ce.Gq, {
+          return (0, e.jsx)(pe.Gq, {
             toolTipContent: n
               ? (0, a.we)("#AppLanding_Creator_Existing")
               : void 0,
@@ -16132,7 +16132,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   className: ka().Avatar,
                   src: o?.avatar_full_url,
                 }),
-                (0, e.jsxs)(Oe.EY, {
+                (0, e.jsxs)(Ne.EY, {
                   size: "2",
                   truncate: !0,
                   children: [l, " ", n ? "*" : ""],
@@ -16141,8 +16141,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             }),
           });
         }
-        var Ul = i(62178);
-        function Hl(s) {
+        var Hl = i(62178);
+        function Ul(s) {
           const {
               nAppID: t,
               nPrimaryPartnerID: n,
@@ -16156,47 +16156,47 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             } = s,
             [f, _] = (0, p.useState)(() => r),
             C = Gl(t, n),
-            z = Ea(t)?.find(
-              (Ue) =>
-                Ue.linkname.trim().toLocaleLowerCase() ==
+            U = Ea(t)?.find(
+              (Fe) =>
+                Fe.linkname.trim().toLocaleLowerCase() ==
                 r.trim().toLocaleLowerCase(),
             ),
-            je = (0, p.useMemo)(
-              () => (z ? new mt.b(z.clan_steamid).GetAccountID() : 0),
-              [z],
+            ye = (0, p.useMemo)(
+              () => (U ? new mt.b(U.clan_steamid).GetAccountID() : 0),
+              [U],
             ),
             { data: ne } = El(
-              je,
+              ye,
               !!d,
-              c?.find((Ue) => Ue.clan_account_id === je),
+              c?.find((Fe) => Fe.clan_account_id === ye),
             ),
             Q = (0, p.useMemo)(() => {
-              if (!z) return null;
-              if (l?.includes(je))
+              if (!U) return null;
+              if (l?.includes(ye))
                 return (0, a.we)("#AppLanding_Creator_FranchiseSameAsDevPub");
               if (ne?.franchise_links_suppressed)
                 return (0, a.we)(
                   "#AppLanding_Creator_FranchiseIsDevPubElsewhere",
                 );
-              const Ue = g?.filter((Fe) => Fe.clanAccountID === je);
-              return Ue?.length && !Ue.some((Fe) => Fe.strMatchKey === x)
+              const Fe = g?.filter((Re) => Re.clanAccountID === ye);
+              return Fe?.length && !Fe.some((Re) => Re.strMatchKey === x)
                 ? (0, a.we)("#AppLanding_Creator_DeveloperNameMismatch")
                 : null;
-            }, [z, je, l, ne, g, x]);
+            }, [U, ye, l, ne, g, x]);
           return (0, e.jsxs)(Xt.s, {
             align: "start",
             gap: "2",
             wrap: "nowrap",
             className: _n().Ctn,
             children: [
-              (0, e.jsx)(ce.Gq, {
-                toolTipContent: z && (0, a.we)("#AppLanding_CreatorLocked"),
+              (0, e.jsx)(pe.Gq, {
+                toolTipContent: U && (0, a.we)("#AppLanding_CreatorLocked"),
                 children: (0, e.jsx)("input", {
                   type: "text",
                   size: 30,
                   value: f,
-                  onChange: (Ue) => {
-                    z || _(Ue.currentTarget.value || "");
+                  onChange: (Fe) => {
+                    U || _(Fe.currentTarget.value || "");
                   },
                 }),
               }),
@@ -16206,13 +16206,13 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 value: f,
                 onChange: () => {},
               }),
-              !!(z && r?.toLocaleLowerCase() === f?.toLocaleLowerCase()) &&
+              !!(U && r?.toLocaleLowerCase() === f?.toLocaleLowerCase()) &&
                 (0, e.jsx)(Wl, {
-                  pageLink: z,
+                  pageLink: U,
                   strKvTargetName: o,
                   strLinkIssue: Q,
                 }),
-              !z &&
+              !U &&
                 f?.trim().length > 0 &&
                 (0, e.jsx)(Nl, {
                   nPartnerID: C,
@@ -16220,7 +16220,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   linkname: f.trim(),
                 }),
               f?.toLocaleLowerCase() !== r?.toLocaleLowerCase() &&
-                (0, e.jsx)(Oe.EY, {
+                (0, e.jsx)(Ne.EY, {
                   size: "2",
                   contrast: "description",
                   marginTop: "2",
@@ -16266,13 +16266,13 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     align: "center",
                     gap: "2",
                     wrap: "nowrap",
-                    className: (0, E.A)(
+                    className: (0, D.A)(
                       _n().CreatorCtn,
                       r && _n().CreatorCtnError,
                     ),
                     children: [
                       !!r &&
-                        (0, e.jsx)(Oe.EY, {
+                        (0, e.jsx)(Ne.EY, {
                           color: "text-error",
                           weight: "heavy",
                           children: "\u2716",
@@ -16288,7 +16288,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     ],
                   }),
                   !!r &&
-                    (0, e.jsx)(Oe.EY, {
+                    (0, e.jsx)(Ne.EY, {
                       as: "p",
                       size: "2",
                       color: "text-error",
@@ -16312,7 +16312,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsx)(Da.iN, { href: r, target: "_blank", children: o }),
-              (0, e.jsx)(Ul.JU, {
+              (0, e.jsx)(Hl.JU, {
                 className: _n().HoverCtn,
                 hoverProps: zl,
                 hoverContent: (0, e.jsx)(fs.ux, { clanInfo: n }),
@@ -16356,12 +16356,12 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ),
             f = async (C, T) => (await d({ nIndex: C, mapAltText: T })) !== !1,
             _ = (C, T) => {
-              const z = (0, pe.LgB)(T),
-                je = (0, pe.LgB)(T == pe.ZLm ? pe.NFp : pe.Bhc);
-              return z in o[C].urls
-                ? o[C].urls[z]
-                : je in o[C].urls
-                  ? o[C].urls[je]
+              const U = (0, ue.LgB)(T),
+                ye = (0, ue.LgB)(T == ue.ZLm ? ue.NFp : ue.Bhc);
+              return U in o[C].urls
+                ? o[C].urls[U]
+                : ye in o[C].urls
+                  ? o[C].urls[ye]
                   : null;
             };
           return (0, e.jsxs)("div", {
@@ -16384,7 +16384,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           });
         }
         function $l(s) {
-          const t = (0, ye.Z3)("screenshots"),
+          const t = (0, ve.Z3)("screenshots"),
             {
               data: n,
               refetch: r,
@@ -16406,7 +16406,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           return { rgScreenshots: n, refetch: r, isFetching: o };
         }
         function Yl() {
-          const s = (0, ye.Z3)("quickupdateajax");
+          const s = (0, ve.Z3)("quickupdateajax");
           return (0, Os.n)({
             mutationFn: async ({ nIndex: t, mapAltText: n }) => {
               if (t == null || !n) return !1;
@@ -16498,9 +16498,9 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         }
         var Fn = i(60394);
         function Zl(s) {
-          return (0, e.jsxs)(Un.Root, {
+          return (0, e.jsxs)(Hn.Root, {
             ...s,
-            children: [(0, e.jsx)(Un.Track, {}), (0, e.jsx)(Un.Handle, {})],
+            children: [(0, e.jsx)(Hn.Track, {}), (0, e.jsx)(Hn.Handle, {})],
           });
         }
         function ql(s) {
@@ -16527,7 +16527,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         function tc(s) {
           return (0, e.jsx)("div", { className: Fn.Handle, ...s });
         }
-        const Un = Object.assign(Zl, { Root: ql, Track: ec, Handle: tc }),
+        const Hn = Object.assign(Zl, { Root: ql, Track: ec, Handle: tc }),
           sc = [
             ...qr.L,
             { prop: "size", className: (s) => Fn[`Size-${s}`], responsive: !0 },
@@ -16539,7 +16539,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           }
         }
         async function nc(s) {
-          const t = `${be.TS.PARTNER_BASE_URL}apps/creatorhomelinkhistory?appid=${s}`,
+          const t = `${Ce.TS.PARTNER_BASE_URL}apps/creatorhomelinkhistory?appid=${s}`,
             n = await fetch(t, { credentials: "include" });
           if (!n.ok) throw new Error(`${t} answered ${n.status}`);
           const r = await n.json();
@@ -16603,7 +16603,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               marginTop: "3",
               children: [
                 (0, e.jsx)(wa.k, { size: "1" }),
-                (0, e.jsx)(Oe.EY, {
+                (0, e.jsx)(Ne.EY, {
                   size: "2",
                   contrast: "description",
                   children: (0, a.we)("#AppLanding_Creator_History_Loading"),
@@ -16612,7 +16612,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             });
           if (n.isError) {
             const d = n.error instanceof Na && n.error.eResult == Kt.sW;
-            return (0, e.jsx)(Oe.EY, {
+            return (0, e.jsx)(Ne.EY, {
               as: "p",
               size: "2",
               color: "text-error",
@@ -16625,7 +16625,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             });
           }
           return l.length == 0
-            ? (0, e.jsx)(Oe.EY, {
+            ? (0, e.jsx)(Ne.EY, {
                 as: "p",
                 size: "2",
                 contrast: "description",
@@ -16641,8 +16641,8 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     align: "center",
                     gap: "2",
                     children: [
-                      (0, e.jsx)(Un, { size: "1", value: r, onChange: o }),
-                      (0, e.jsx)(Oe.EY, {
+                      (0, e.jsx)(Hn, { size: "1", value: r, onChange: o }),
+                      (0, e.jsx)(Ne.EY, {
                         size: "2",
                         children: (0, a.we)(
                           "#AppLanding_Creator_History_HideRemoved",
@@ -16651,7 +16651,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     ],
                   }),
                   c.length == 0
-                    ? (0, e.jsx)(Oe.EY, {
+                    ? (0, e.jsx)(Ne.EY, {
                         as: "p",
                         size: "2",
                         contrast: "description",
@@ -16665,16 +16665,16 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                         alignItems: "center",
                         className: js.HistoryGrid,
                         children: [
-                          (0, e.jsx)(Hn, {
+                          (0, e.jsx)(Un, {
                             strToken: "#AppLanding_Creator_History_Name",
                           }),
-                          (0, e.jsx)(Hn, {
+                          (0, e.jsx)(Un, {
                             strToken: "#AppLanding_Creator_History_CreatorHome",
                           }),
-                          (0, e.jsx)(Hn, {
+                          (0, e.jsx)(Un, {
                             strToken: "#AppLanding_Creator_History_Linked",
                           }),
-                          (0, e.jsx)(Hn, {
+                          (0, e.jsx)(Un, {
                             strToken: "#AppLanding_Creator_History_Status",
                           }),
                           c.map((d, g) =>
@@ -16689,11 +16689,11 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 ],
               });
         }
-        function Hn(s) {
+        function Un(s) {
           return (0, e.jsx)(Zt.az, {
             paddingY: "1",
             className: js.HeaderCell,
-            children: (0, e.jsx)(Oe.EY, {
+            children: (0, e.jsx)(Ne.EY, {
               size: "1",
               contrast: "description",
               whiteSpace: "nowrap",
@@ -16718,11 +16718,11 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               (0, e.jsx)(Zt.az, {
                 paddingY: "2",
                 className: js.Cell,
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   size: "2",
                   contrast: g,
                   whiteSpace: "nowrap",
-                  className: (0, E.A)(!d && js.RemovedName),
+                  className: (0, D.A)(!d && js.RemovedName),
                   children: n.linkname,
                 }),
               }),
@@ -16744,7 +16744,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               (0, e.jsx)(Zt.az, {
                 paddingY: "2",
                 className: js.Cell,
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   size: "2",
                   contrast: g,
                   children: (0, a.PP)(
@@ -16757,7 +16757,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               (0, e.jsx)(Zt.az, {
                 paddingY: "2",
                 className: js.Cell,
-                children: (0, e.jsx)(Oe.EY, {
+                children: (0, e.jsx)(Ne.EY, {
                   size: "2",
                   contrast: g,
                   children: d
@@ -17231,7 +17231,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ],
           });
         }
-        function Ua() {
+        function Ha() {
           const { currentValues: s, fnSetValue: t } = Ts(),
             n = p.useId();
           return (0, e.jsxs)("div", {
@@ -17415,7 +17415,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ],
           });
         }
-        function Ha() {
+        function Ua() {
           return (0, e.jsxs)("div", {
             className: Xe.WizardContainer,
             children: [
@@ -17872,7 +17872,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ],
           });
         }
-        const Wa = { 2: [Ua, Ha, za] },
+        const Wa = { 2: [Ha, Ua, za] },
           Ga = 2;
         function yc(s, t, n, r) {
           return (0, p.useMemo)(() => {
@@ -17881,10 +17881,10 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               return [
                 xc,
                 Sc,
-                Ua,
+                Ha,
                 Cc,
                 bc,
-                Ha,
+                Ua,
                 Ac,
                 za,
                 t ? vc : void 0,
@@ -17931,21 +17931,21 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               o,
             ),
             [f, _] = p.useState(n),
-            C = () => g((Fe) => Fe - 1),
-            T = () => g((Fe) => Fe + 1);
-          let z = C;
-          d === 0 && (z = t);
-          let je = T,
+            C = () => g((Re) => Re - 1),
+            T = () => g((Re) => Re + 1);
+          let U = C;
+          d === 0 && (U = t);
+          let ye = T,
             ne = (0, a.we)("#Wizard_NextButton");
           d === x.length - 1 &&
-            ((je = () => {
+            ((ye = () => {
               Dc(f), t();
             }),
             (ne = (0, a.we)("#Wizard_SaveAndExitButton")));
-          const Q = (Fe, $e) => {
-              _((ts) => ({ ...ts, [Fe]: $e }));
+          const Q = (Re, $e) => {
+              _((ts) => ({ ...ts, [Re]: $e }));
             },
-            Ue = x[d];
+            Fe = x[d];
           return (0, e.jsxs)(xr.mt, {
             active: !0,
             className: Xe.WizardModal,
@@ -17959,15 +17959,15 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   (0, e.jsx)(Ec, { nPages: x.length }),
                   (0, e.jsx)(S.nB, {
                     className: Xe.WizardBody,
-                    children: (0, e.jsx)(Ue, {}),
+                    children: (0, e.jsx)(Fe, {}),
                   }),
                 ],
               }),
               (0, e.jsx)(S.CB, {
                 className: Xe.WizardButtons,
-                onCancel: z,
+                onCancel: U,
                 strCancelText: (0, a.we)("#Wizard_BackButton"),
-                onOK: je,
+                onOK: ye,
                 strOKText: ne,
               }),
             ],
@@ -17986,14 +17986,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 ),
               }),
               (0, e.jsx)("div", {
-                className: (0, E.A)(
+                className: (0, D.A)(
                   Xe.ProgressBar,
                   n == t - 1 && Xe.ProgressBarComplete,
                 ),
                 children:
                   n < t - 1 &&
                   (0, e.jsx)("div", {
-                    className: (0, E.A)(Xe.ProgressBarFillComponent),
+                    className: (0, D.A)(Xe.ProgressBarFillComponent),
                     style: { width: r + "%" },
                   }),
               }),
@@ -18028,7 +18028,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     s.tooltip &&
                       (0, e.jsx)(bs.o, {
                         customTooltip: !0,
-                        tooltip: (0, e.jsx)(ce.zQ, {
+                        tooltip: (0, e.jsx)(pe.zQ, {
                           className: Xe.WizardTooltip,
                           children: s.tooltip,
                         }),
@@ -18055,7 +18055,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   value: n.id,
                   children: [
                     (0, e.jsx)("div", {
-                      className: (0, E.A)(
+                      className: (0, D.A)(
                         Xe.RadioButton,
                         t == n.id && Xe.Selected,
                       ),
@@ -18270,14 +18270,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 onClick: s.onEdit,
                 children: [
                   (0, e.jsx)("div", {
-                    className: (0, E.A)(Nt().Spacer, Nt().Top),
+                    className: (0, D.A)(Nt().Spacer, Nt().Top),
                   }),
                   (0, e.jsx)("div", {
                     className: Nt().EditButtonIcon,
                     children: (0, e.jsx)(O.ffu, {}),
                   }),
                   (0, e.jsx)("div", {
-                    className: (0, E.A)(Nt().Spacer, Nt().Bottom),
+                    className: (0, D.A)(Nt().Spacer, Nt().Bottom),
                   }),
                 ],
               }),
@@ -18291,7 +18291,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             children: [
               (0, e.jsx)(tt.qh, {
                 path: Qe.bI.GameEdit(`:action(${Qe.a3.join("|")})`, ":itemid"),
-                children: (0, e.jsx)(ye._M, {
+                children: (0, e.jsx)(ve._M, {
                   children: (0, e.jsx)(rt.X, {
                     config: {
                       "storeadmin-releasedateinfo": (t) =>
@@ -18322,7 +18322,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                       "storeadmin-accessibilityfeatures": (t) =>
                         (0, e.jsx)(wc, { ...t }),
                       "storeadmin-creator-home-edit": (t) =>
-                        (0, e.jsx)(Hl, { ...t }),
+                        (0, e.jsx)(Ul, { ...t }),
                       "storeadmin-app-screenshot-alttext": (t) =>
                         (0, e.jsx)(Kl, { ...t }),
                       "storeadmin-creator-home-fixup": (t) =>
@@ -18409,40 +18409,40 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
       },
       58952: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { WM: () => D, l6: () => N, uh: () => V });
+        i.d(ze, { WM: () => E, l6: () => N, uh: () => G });
         var e = i(7850),
           p = i(90626),
           a = i(92142),
           fe = i(86946),
           O = i(12204),
-          H = i(15252),
-          E = i(63029),
+          $ = i(15252),
+          D = i(63029),
           R = i(76854),
-          te = i(39790),
-          ce = i(85367),
+          se = i(39790),
+          pe = i(85367),
           Y = i(68031),
-          xe = i(80549),
+          Pe = i(80549),
           Se = i(58017),
-          Ne = i(64415);
-        function He(b) {
+          He = i(64415);
+        function Ve(b) {
           const {
               children: A,
               state: P,
-              placement: U = "bottom-end",
+              placement: H = "bottom-end",
               popoverWidth: X = "dropdown",
-              popoverMaxHeight: de,
+              popoverMaxHeight: ce,
               popoverPresentation: De,
-              popoverLabel: Ce,
+              popoverLabel: xe,
               ...Me
             } = b,
             [F, ie] = (0, p.useState)(null),
             [_e, le] = (0, p.useState)(null),
-            Ae = (0, p.useMemo)(
+            be = (0, p.useMemo)(
               () =>
-                P.rgOptions.findIndex((Ge) =>
+                P.rgOptions.findIndex((We) =>
                   P.multiselect
-                    ? P.selectedValue.includes(Ge)
-                    : Ge === P.selectedValue,
+                    ? P.selectedValue.includes(We)
+                    : We === P.selectedValue,
                 ),
               [P.selectedValue, P.rgOptions, P.multiselect],
             ),
@@ -18453,10 +18453,10 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               focusedValue: F,
               onFocusChange: ie,
               refPopover: oe,
-              popoverLabel: Ce,
-              setOpen: (Ge) => {
-                Ge && ie(P.multiselect ? P.selectedValue[0] : P.selectedValue),
-                  P.setOpen(Ge);
+              popoverLabel: xe,
+              setOpen: (We) => {
+                We && ie(P.multiselect ? P.selectedValue[0] : P.selectedValue),
+                  P.setOpen(We);
               },
               focusedIndex: _e,
               onFocusedIndexChange: le,
@@ -18465,12 +18465,12 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               open: P.bOpen,
               onOpenChange: P.setOpen,
               width: X,
-              maxHeight: de,
-              placement: U,
+              maxHeight: ce,
+              placement: H,
               presentation: De,
-              selectedIndex: Ae,
-              setSelectedIndex: (Ge) =>
-                P.onItemSelectionChange(P.rgOptions[Ge]),
+              selectedIndex: be,
+              setSelectedIndex: (We) =>
+                P.onItemSelectionChange(P.rgOptions[We]),
               activeIndex: _e,
               setActiveIndex: le,
               gutter: "4",
@@ -18484,7 +18484,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           });
         }
         function re(b) {
-          const { refPopover: A, popoverLabel: P } = G("<Select.Options>");
+          const { refPopover: A, popoverLabel: P } = W("<Select.Options>");
           return (0, e.jsx)(a.k.Positioner, {
             ref: A,
             label: P,
@@ -18492,24 +18492,24 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           });
         }
         function me(b) {
-          const { value: A, children: P, disabled: U, ...X } = b,
+          const { value: A, children: P, disabled: H, ...X } = b,
             {
-              onItemSelectionChange: de,
+              onItemSelectionChange: ce,
               multiselect: De,
-              selectedValue: Ce,
+              selectedValue: xe,
               maxSelected: Me,
-            } = G("<SelectTrigger>"),
+            } = W("<SelectTrigger>"),
             F = typeof A == "string" ? A : void 0;
           let ie = !1,
             _e = !1;
           De
-            ? ((ie = Array.isArray(Ce) && Ce.includes(A)),
-              (_e = !!Me && Array.isArray(Ce) && Ce.length >= Me))
-            : (ie = A === Ce);
-          const le = U || (_e && !ie);
+            ? ((ie = Array.isArray(xe) && xe.includes(A)),
+              (_e = !!Me && Array.isArray(xe) && xe.length >= Me))
+            : (ie = A === xe);
+          const le = H || (_e && !ie);
           return (0, e.jsxs)(a.k.Item, {
             label: F,
-            onSelect: () => de(A),
+            onSelect: () => ce(A),
             selected: ie,
             disabled: le,
             ...X,
@@ -18519,7 +18519,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   gap: "2",
                   align: "center",
                   children: [
-                    (0, e.jsx)(ce.S, { checked: ie, variant: "dark" }),
+                    (0, e.jsx)(pe.S, { checked: ie, variant: "dark" }),
                     P,
                   ],
                 }),
@@ -18530,66 +18530,66 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         function I(b) {
           const { children: A, render: P } = b,
             {
-              bOpen: U,
+              bOpen: H,
               setOpen: X,
-              selectedValue: de,
+              selectedValue: ce,
               variant: De,
-              size: Ce,
+              size: xe,
               radius: Me,
               status: F,
               rgOptions: ie,
               multiselect: _e,
               onClear: le,
-              focusedValue: Ae,
+              focusedValue: be,
               onFocusChange: oe,
               onSelectionChange: Te,
               clearable: he,
-              focusedIndex: Ge,
-              onItemSelectionChange: We,
+              focusedIndex: We,
+              onItemSelectionChange: Ue,
               onFocusedIndexChange: Ie,
-              refPopover: ye,
-              popoverLabel: ve,
+              refPopover: ve,
+              popoverLabel: Ae,
               placeholder: we,
-              maxSelected: pe,
-              ...Re
-            } = G("<SelectTrigger>"),
+              maxSelected: ue,
+              ...Oe
+            } = W("<SelectTrigger>"),
             Be = {
               tabIndex: 0,
               role: "combobox",
-              onClick: () => X(!U),
+              onClick: () => X(!H),
               children: A,
             },
-            ke = _e ? Array.isArray(de) && de.length > 0 : !!de,
+            ke = _e ? Array.isArray(ce) && ce.length > 0 : !!ce,
             Ze = ke && he,
             et = Ze
-              ? (0, e.jsx)(E.g, { onClick: le, cursor: "pointer", hitSlop: !0 })
+              ? (0, e.jsx)(D.g, { onClick: le, cursor: "pointer", hitSlop: !0 })
               : (0, e.jsx)(O.V, {}),
             _t = Ze
               ? {
                   onSecondaryButton: le,
                   actionDescriptionMap: {
-                    [Ne.pR.SECONDARY]: Se.T.Localize("#Clear"),
+                    [He.pR.SECONDARY]: Se.T.Localize("#Clear"),
                   },
                 }
               : void 0,
-            nt = (0, xe.f)("Select", De),
+            nt = (0, Pe.f)("Select", De),
             Ke = (0, e.jsx)(fe.j, {
               afterContent: et,
               variant: nt,
-              size: Ce,
+              size: xe,
               radius: Me,
               status: F,
               hasValue: ke,
               tabIndex: 0,
               cursor: "pointer",
               navProps: _t,
-              ...Re,
+              ...Oe,
             }),
             Qe = (0, R.Q)(P, Ke, Be, void 0);
           return (0, e.jsx)(a.k.Anchor, { children: Qe });
         }
         function ae(b) {
-          return (0, e.jsx)(H.EY, {
+          return (0, e.jsx)($.EY, {
             weight: "medium",
             truncate: !0,
             contrast: "title",
@@ -18597,19 +18597,19 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           });
         }
         function S(b) {
-          return (0, e.jsx)(H.EY, {
+          return (0, e.jsx)($.EY, {
             contrast: "description",
             truncate: !0,
             children: b.children,
           });
         }
-        function D(b) {
+        function E(b) {
           return k(b, !1);
         }
         function k(b, A) {
-          const { onSelectionChange: P, selectedValue: U, ...X } = b,
-            [de, De] = (0, p.useState)(!1),
-            Ce = (0, p.useCallback)(
+          const { onSelectionChange: P, selectedValue: H, ...X } = b,
+            [ce, De] = (0, p.useState)(!1),
+            xe = (0, p.useCallback)(
               (ie) => {
                 P(ie), A || De(!1);
               },
@@ -18617,42 +18617,42 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ),
             Me = (0, p.useCallback)(
               (ie) => {
-                Ce(A ? [] : null), ie?.stopPropagation(), ie?.preventDefault();
+                xe(A ? [] : null), ie?.stopPropagation(), ie?.preventDefault();
               },
-              [Ce, A],
+              [xe, A],
             ),
             F = (0, p.useCallback)(
               (ie) => {
-                if (!A) Ce(ie);
+                if (!A) xe(ie);
                 else {
-                  const _e = U,
+                  const _e = H,
                     le = _e.indexOf(ie);
-                  if (le === -1) Ce(_e.concat(ie));
-                  else return Ce(_e.slice(0, le).concat(_e.slice(le + 1)));
+                  if (le === -1) xe(_e.concat(ie));
+                  else return xe(_e.slice(0, le).concat(_e.slice(le + 1)));
                 }
               },
-              [Ce, U, A],
+              [xe, H, A],
             );
           return {
-            onSelectionChange: Ce,
+            onSelectionChange: xe,
             onItemSelectionChange: F,
             onClear: Me,
-            bOpen: de,
+            bOpen: ce,
             setOpen: De,
             multiselect: A,
-            selectedValue: U,
+            selectedValue: H,
             ...X,
           };
         }
         const v = {
-          Root: He,
+          Root: Ve,
           Option: me,
           Options: re,
           Trigger: I,
           Value: ae,
           Placeholder: S,
         };
-        function W(b) {
+        function z(b) {
           return typeof b == "string"
             ? b
             : typeof b == "number"
@@ -18663,25 +18663,25 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 ),
                 "");
         }
-        function $(b) {
+        function K(b) {
           const {
               selectedValue: A,
               onSelectionChange: P,
-              options: U,
+              options: H,
               placeholder: X,
-              getOptionLabel: de = W,
+              getOptionLabel: ce = z,
               ...De
             } = b,
-            Ce = D({
+            xe = E({
               onSelectionChange: P,
               selectedValue: A,
-              rgOptions: U,
+              rgOptions: H,
               placeholder: X,
             }),
             Me = A != null,
-            F = Me ? de(A) : "";
+            F = Me ? ce(A) : "";
           return (0, e.jsxs)(N.Root, {
-            state: Ce,
+            state: xe,
             ...De,
             children: [
               (0, e.jsxs)(N.Trigger, {
@@ -18691,14 +18691,14 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 ],
               }),
               (0, e.jsx)(N.Options, {
-                children: Ce.rgOptions.map((ie, _e) =>
-                  (0, e.jsx)(N.Option, { value: ie, children: de(ie) }, _e),
+                children: xe.rgOptions.map((ie, _e) =>
+                  (0, e.jsx)(N.Option, { value: ie, children: ce(ie) }, _e),
                 ),
               }),
             ],
           });
         }
-        const N = Object.assign($, v);
+        const N = Object.assign(K, v);
         function B(b) {
           return k(b, !0);
         }
@@ -18707,176 +18707,176 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           const {
               selectedValue: A,
               onSelectionChange: P,
-              options: U,
+              options: H,
               placeholder: X,
-              getOptionLabel: de = W,
+              getOptionLabel: ce = z,
               maxSelected: De,
-              ...Ce
+              ...xe
             } = b,
             Me = B({
               onSelectionChange: P,
               selectedValue: A,
-              rgOptions: U,
+              rgOptions: H,
               placeholder: X,
               maxSelected: De,
             }),
             F = Array.isArray(A) && A.length > 0;
           let ie = "";
           if (F) {
-            const _e = A.map((le) => de(le));
+            const _e = A.map((le) => ce(le));
             "ListFormat" in Intl
-              ? (ie = new Intl.ListFormat((0, te.ZO)().strISOCode).format(_e))
+              ? (ie = new Intl.ListFormat((0, se.ZO)().strISOCode).format(_e))
               : (ie = _e.join(", "));
           }
-          return (0, e.jsxs)(V.Root, {
+          return (0, e.jsxs)(G.Root, {
             state: Me,
-            ...Ce,
+            ...xe,
             children: [
-              (0, e.jsxs)(V.Trigger, {
+              (0, e.jsxs)(G.Trigger, {
                 children: [
-                  F && (0, e.jsx)(V.Value, { children: ie }),
-                  !F && (0, e.jsx)(V.Placeholder, { children: X }),
+                  F && (0, e.jsx)(G.Value, { children: ie }),
+                  !F && (0, e.jsx)(G.Placeholder, { children: X }),
                 ],
               }),
-              (0, e.jsx)(V.Options, {
+              (0, e.jsx)(G.Options, {
                 children: Me.rgOptions.map((_e, le) =>
-                  (0, e.jsx)(V.Option, { value: _e, children: de(_e) }, le),
+                  (0, e.jsx)(G.Option, { value: _e, children: ce(_e) }, le),
                 ),
               }),
             ],
           });
         }
-        const V = Object.assign(L, Ee),
+        const G = Object.assign(L, Ee),
           w = (0, p.createContext)(null);
-        function G(b) {
+        function W(b) {
           const A = (0, p.useContext)(w);
           return A || console.error(`${b} must be used within a <Select>!`), A;
         }
       },
       95994: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { x: () => ce });
+        i.d(ze, { x: () => pe });
         var e = i(7850),
           p = i(70182),
           a = i(64238),
           fe = i.n(a),
           O = i(8928),
-          H = i(69289),
-          E = i(75180),
-          R = i.n(E),
-          te = i(3166);
-        function ce(xe) {
+          $ = i(69289),
+          D = i(75180),
+          R = i.n(D),
+          se = i(3166);
+        function pe(Pe) {
           const {
               as: Se = "div",
-              ref: Ne,
-              focusable: He,
+              ref: He,
+              focusable: Ve,
               navProps: re,
               ...me
-            } = xe,
-            I = (0, te.Qn)(),
-            ae = (0, H.mz)({ ...me, className: fe()(E.Grid, xe.className) }, Y),
-            S = He ?? re?.focusable ?? !!me.onClick,
-            D = (0, e.jsx)(Se, { ref: Ne, ...ae });
+            } = Pe,
+            I = (0, se.Qn)(),
+            ae = (0, $.mz)({ ...me, className: fe()(D.Grid, Pe.className) }, Y),
+            S = Ve ?? re?.focusable ?? !!me.onClick,
+            E = (0, e.jsx)(Se, { ref: He, ...ae });
           return I
             ? (0, e.jsx)(p.J, {
                 "flow-children": "grid",
                 ...(re || {}),
                 focusable: S,
-                children: D,
+                children: E,
               })
-            : D;
+            : E;
         }
         const Y = [
           ...O.h,
           {
             prop: "display",
             responsive: !0,
-            className: E.Display,
+            className: D.Display,
             cssProperty: "--grid-display",
           },
           {
             prop: "columns",
             responsive: !0,
-            className: E.Columns,
+            className: D.Columns,
             cssProperty: "--grid-columns",
           },
           {
             prop: "rows",
             responsive: !0,
-            className: E.Rows,
+            className: D.Rows,
             cssProperty: "--grid-rows",
           },
           {
             prop: "autoColumns",
             responsive: !0,
-            className: E.AutoColumns,
+            className: D.AutoColumns,
             cssProperty: "--grid-auto-columns",
           },
           {
             prop: "autoRows",
             responsive: !0,
-            className: E.AutoRows,
+            className: D.AutoRows,
             cssProperty: "--grid-auto-rows",
           },
           {
             prop: "autoFlow",
             responsive: !0,
-            className: E.AutoFlow,
+            className: D.AutoFlow,
             cssProperty: "--grid-auto-flow",
           },
           {
             prop: "areas",
             responsive: !0,
-            className: E.Areas,
+            className: D.Areas,
             cssProperty: "--grid-areas",
           },
           {
             prop: "flow",
             responsive: !0,
-            className: E.Flow,
+            className: D.Flow,
             cssProperty: "--grid-flow",
           },
           {
             prop: "alignContent",
             responsive: !0,
-            className: E.AlignContent,
+            className: D.AlignContent,
             cssProperty: "--grid-align-content",
           },
           {
             prop: "justifyContent",
             responsive: !0,
-            className: E.JustifyContent,
+            className: D.JustifyContent,
             cssProperty: "--grid-justify-content",
           },
           {
             prop: "alignItems",
             responsive: !0,
-            className: E.AlignItems,
+            className: D.AlignItems,
             cssProperty: "--grid-align-items",
           },
           {
             prop: "justifyItems",
             responsive: !0,
-            className: E.JustifyItems,
+            className: D.JustifyItems,
             cssProperty: "--grid-justify-items",
           },
           {
             prop: "gap",
             responsive: !0,
-            className: E.Gap,
-            cssProperty: (xe) => ["--grid-gap", `var(--spacing-${xe})`],
+            className: D.Gap,
+            cssProperty: (Pe) => ["--grid-gap", `var(--spacing-${Pe})`],
           },
           {
             prop: "gapX",
             responsive: !0,
-            className: E.Gap,
-            cssProperty: (xe) => ["--grid-gap-x", `var(--spacing-${xe})`],
+            className: D.Gap,
+            cssProperty: (Pe) => ["--grid-gap-x", `var(--spacing-${Pe})`],
           },
           {
             prop: "gapY",
             responsive: !0,
-            className: E.Gap,
-            cssProperty: (xe) => ["--grid-gap-y", `var(--spacing-${xe})`],
+            className: D.Gap,
+            cssProperty: (Pe) => ["--grid-gap-y", `var(--spacing-${Pe})`],
           },
         ];
       },
@@ -18888,33 +18888,33 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           a = i(8928),
           fe = i(15252),
           O = i(69289),
-          H = i(90626);
-        function E(re) {
+          $ = i(90626);
+        function D(re) {
           const { depth: me } = useContext(R);
           return jsx(R.Provider, {
             value: { depth: me + 1 },
             children: jsx(Box, { ...re }),
           });
         }
-        const R = H.createContext({ depth: 0 });
-        function te() {
-          return (0, H.useContext)(R).depth;
+        const R = $.createContext({ depth: 0 });
+        function se() {
+          return (0, $.useContext)(R).depth;
         }
-        var ce = i(3877),
+        var pe = i(3877),
           Y = i(64238),
-          xe = i.n(Y);
+          Pe = i.n(Y);
         function Se(re) {
           const { level: me = "auto", className: I, color: ae } = re,
-            S = te(),
-            D = He(me, S);
-          return (0, e.jsx)(D, {
+            S = se(),
+            E = Ve(me, S);
+          return (0, e.jsx)(E, {
             ...(0, O.mz)(
-              { ...re, className: xe()((0, ce.T)(), p.Heading, I) },
-              Ne,
+              { ...re, className: Pe()((0, pe.T)(), p.Heading, I) },
+              He,
             ),
           });
         }
-        const Ne = [
+        const He = [
           ...fe.U6,
           ...a.L,
           {
@@ -18923,7 +18923,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             className: (re) => p[`HeadingSize-${re}`],
           },
         ];
-        function He(re, me) {
+        function Ve(re, me) {
           if (re === "auto" && me === 0) return "h1";
           const I = re === "auto" ? me.toString() : re;
           return /^[1-6]$/.test(I)
@@ -18941,25 +18941,25 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
       },
       74685: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { KF: () => k, Ot: () => D, c$: () => v, Hd: () => W });
+        i.d(ze, { KF: () => k, Ot: () => E, c$: () => v, Hd: () => z });
         var e = i(7850),
           p = i(12362),
           a = i(15024),
           fe = i(7502),
           O = i(52893),
-          H = i(90626),
-          E = i(98724),
+          $ = i(90626),
+          D = i(98724),
           R = i(79216),
-          te = i(4188),
-          ce = i(74827);
-        function Y($) {
-          const { nodes: N, marks: B } = $,
+          se = i(4188),
+          pe = i(74827);
+        function Y(K) {
+          const { nodes: N, marks: B } = K,
             Ee = (0, p.st)(
               p.I$,
-              (V, w) => (
+              (G, w) => (
                 w &&
                   w(
-                    V.tr
+                    G.tr
                       .replaceSelectionWith(N.hard_break.createChecked())
                       .scrollIntoView(),
                   ),
@@ -18967,9 +18967,9 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               ),
             ),
             L = {
-              "Mod-z": E.tN,
-              "Mod-y": E.ZS,
-              "Shift-Mod-z": E.ZS,
+              "Mod-z": D.tN,
+              "Mod-y": D.ZS,
+              "Shift-Mod-z": D.ZS,
               Backspace: R.dv,
               Escape: p.hy,
               "Mod-Enter": Ee,
@@ -18979,9 +18979,9 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               "Mod-u": (0, p.wh)(B.underline),
               "Mod-Shift-x": (0, p.wh)(B.strike),
               "Ctrl-Shift-s": (0, p.wh)(B.strike),
-              Enter: (0, te.wn)(N.list_item),
-              "Mod-[": (0, te.T2)(N.list_item),
-              "Mod-]": (0, te.$B)(N.list_item),
+              Enter: (0, se.wn)(N.list_item),
+              "Mod-[": (0, se.T2)(N.list_item),
+              "Mod-]": (0, se.$B)(N.list_item),
               "Ctrl-Shift-1": (0, p.y_)(N.heading, { level: 1 }),
               "Ctrl-Shift-2": (0, p.y_)(N.heading, { level: 2 }),
               "Ctrl-Shift-3": (0, p.y_)(N.heading, { level: 3 }),
@@ -18995,10 +18995,10 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             B.code && (L["Ctrl-Shift-c"] = (0, p.wh)(B.code)),
             N.code_block && (L["Alt-Ctrl-Shift-c"] = (0, p.y_)(N.code_block)),
             N.horizontal_rule &&
-              (L["Mod-_"] = (V, w) => (
+              (L["Mod-_"] = (G, w) => (
                 w &&
                   w(
-                    V.tr
+                    G.tr
                       .replaceSelectionWith(N.horizontal_rule.create())
                       .scrollIntoView(),
                   ),
@@ -19007,13 +19007,13 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             (0, fe.w)(L)
           );
         }
-        function xe($, N) {
-          return new R.fV($, (B, Ee, L, V) =>
-            B.tr.replaceWith(L, V, N.create()),
+        function Pe(K, N) {
+          return new R.fV(K, (B, Ee, L, G) =>
+            B.tr.replaceWith(L, G, N.create()),
           );
         }
-        function Se($) {
-          const { nodes: N, marks: B } = $;
+        function Se(K) {
+          const { nodes: N, marks: B } = K;
           return (0, R.sM)({
             rules: [
               (0, R.tG)(
@@ -19023,29 +19023,29 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 (Ee, L) => L.childCount + L.attrs.order == parseInt(Ee[1]),
               ),
               (0, R.tG)(/^\s*([-+*])\s$/, N.bullet_list),
-              (0, ce.OX)(/(?<!\w)\*([^*]+)\*/, B.strong),
-              (0, ce.OX)(/(?<!\w)_([^_]+)_/, B.italic),
-              (0, ce.OX)(/(?<!\w)~([^~]+)~/, B.strike),
-              (0, ce.OX)(/(?<!\w)`([^`]+)`/, B.code),
+              (0, pe.OX)(/(?<!\w)\*([^*]+)\*/, B.strong),
+              (0, pe.OX)(/(?<!\w)_([^_]+)_/, B.italic),
+              (0, pe.OX)(/(?<!\w)~([^~]+)~/, B.strike),
+              (0, pe.OX)(/(?<!\w)`([^`]+)`/, B.code),
               (0, R.JJ)(/^```$/, N.code_block),
               (0, R.JJ)(/^(#{1,5})\s$/, N.heading, (Ee) => ({
                 level: Ee[1].length,
               })),
-              N.horizontal_rule && xe(/^(\*\*\*|---|___)$/, N.horizontal_rule),
+              N.horizontal_rule && Pe(/^(\*\*\*|---|___)$/, N.horizontal_rule),
             ].filter(Boolean),
           });
         }
-        var Ne = i(45772),
-          He = i(74763);
+        var He = i(45772),
+          Ve = i(74763);
         const re = new O.k_({
             props: {
-              handlePaste($, N, B) {
+              handlePaste(K, N, B) {
                 const Ee = N.clipboardData
                   ?.getData("text/plain")
                   .replace(/\n/g, " ");
                 if (Ee) {
-                  const L = $.state.tr.insertText(Ee);
-                  $.dispatch(L);
+                  const L = K.state.tr.insertText(Ee);
+                  K.dispatch(L);
                 }
                 return !0;
               },
@@ -19056,69 +19056,69 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             "Shift-Enter": () => !0,
             "Mod-Enter": () => !0,
           };
-        function I($) {
+        function I(K) {
           return new Plugin({
             filterTransaction(N, B) {
-              return N.doc.textContent.length <= $;
+              return N.doc.textContent.length <= K;
             },
           });
         }
-        function ae($) {
-          const { nMaxChars: N } = $;
+        function ae(K) {
+          const { nMaxChars: N } = K;
           return (
             useInstallPlugin(useMemo(() => I(N), [N])), jsx(React.Fragment, {})
           );
         }
-        const S = H.createContext(void 0);
-        function D($) {
-          const { view: N, pmState: B, children: Ee } = $,
-            L = H.useMemo(() => ({ view: N, pmState: B }), [N, B]);
+        const S = $.createContext(void 0);
+        function E(K) {
+          const { view: N, pmState: B, children: Ee } = K,
+            L = $.useMemo(() => ({ view: N, pmState: B }), [N, B]);
           return (0, e.jsx)(S.Provider, { value: L, children: Ee });
         }
-        const k = H.memo(function (N) {
+        const k = $.memo(function (N) {
           const { schema: B, refOnUpdate: Ee, bSingleLine: L } = N;
           return (
             v(
-              H.useMemo(
+              $.useMemo(
                 () =>
                   Ee &&
                   new O.k_({
-                    view: (V) => ({
+                    view: (G) => ({
                       update: (...w) => Ee.current && Ee.current(...w),
                     }),
                   }),
                 [Ee],
               ),
             ),
-            v(H.useMemo(() => (0, fe.w)(L ? me : {}), [L])),
+            v($.useMemo(() => (0, fe.w)(L ? me : {}), [L])),
             v(L ? re : void 0),
-            v(H.useMemo(() => (0, a.z)(), [])),
-            v(H.useMemo(() => Y(B), [B])),
-            v(H.useMemo(() => (0, fe.w)(p.RV), [])),
-            v(H.useMemo(() => Se(B), [B])),
+            v($.useMemo(() => (0, a.z)(), [])),
+            v($.useMemo(() => Y(B), [B])),
+            v($.useMemo(() => (0, fe.w)(p.RV), [])),
+            v($.useMemo(() => Se(B), [B])),
             null
           );
         });
-        function v($) {
-          const { pmState: N } = H.useContext(S);
-          H.useEffect(() => {
-            if (!(!N || !$)) return N.InstallPlugin($);
-          }, [$, N]);
+        function v(K) {
+          const { pmState: N } = $.useContext(S);
+          $.useEffect(() => {
+            if (!(!N || !K)) return N.InstallPlugin(K);
+          }, [K, N]);
         }
-        function W() {
-          return H.useContext(S)?.view;
+        function z() {
+          return $.useContext(S)?.view;
         }
       },
       74827: (ee, ze, i) => {
         "use strict";
         i.d(ze, {
           Cd: () => O,
-          Ce: () => te,
-          OX: () => Ne,
-          bQ: () => He,
+          Ce: () => se,
+          OX: () => He,
+          bQ: () => Ve,
           c4: () => Se,
           gj: () => R,
-          vn: () => H,
+          vn: () => $,
           wt: () => Y,
         });
         var e = i(79216),
@@ -19138,28 +19138,28 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           }
         }
         function O(re, me) {
-          const { from: I, $from: ae, to: S, empty: D } = re.selection;
-          return D
+          const { from: I, $from: ae, to: S, empty: E } = re.selection;
+          return E
             ? !!me.isInSet(re.storedMarks || ae.marks())
             : re.doc.rangeHasMark(I, S, me);
         }
-        function H(re, me, I) {
+        function $(re, me, I) {
           const { parent: ae } = I,
             S = ae.childAfter(I.parentOffset),
-            D = S.node?.marks.find((B) => B.type == me);
-          if (!D) return;
+            E = S.node?.marks.find((B) => B.type == me);
+          if (!E) return;
           let k = I.index() - 1,
             v = I.start() + S.offset;
-          for (; k >= 0 && D.isInSet(ae.child(k).marks); )
+          for (; k >= 0 && E.isInSet(ae.child(k).marks); )
             (v -= ae.child(k).nodeSize), (k -= 1);
-          let W = I.index() + 1,
-            $ = I.start() + S.offset + S.node.nodeSize;
-          for (; W < ae.childCount && D.isInSet(ae.child(W).marks); )
-            ($ += ae.child(W).nodeSize), (W += 1);
-          const N = re.doc.slice(v, $);
-          return { from: v, to: $, slice: N, mark: D };
+          let z = I.index() + 1,
+            K = I.start() + S.offset + S.node.nodeSize;
+          for (; z < ae.childCount && E.isInSet(ae.child(z).marks); )
+            (K += ae.child(z).nodeSize), (z += 1);
+          const N = re.doc.slice(v, K);
+          return { from: v, to: K, slice: N, mark: E };
         }
-        function E(re, me, I) {
+        function D(re, me, I) {
           if (re.type !== me) return !1;
           if (I === void 0) return !0;
           for (const ae in I) if (I[ae] !== re.attrs[ae]) return !1;
@@ -19167,41 +19167,41 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         }
         function R(re, me, I) {
           let { $from: ae, to: S } = re.selection;
-          for (let D = ae.depth; D > 0; D--) {
-            if (S > ae.end(D)) return !1;
-            const k = ae.node(D);
-            if (E(k, me, I)) return !0;
+          for (let E = ae.depth; E > 0; E--) {
+            if (S > ae.end(E)) return !1;
+            const k = ae.node(E);
+            if (D(k, me, I)) return !0;
           }
           return !1;
         }
-        function te(re, me, I) {
+        function se(re, me, I) {
           for (let ae of me) if (R(re, ae, I)) return ae;
           return null;
         }
-        function ce(re, me, I) {
+        function pe(re, me, I) {
           const { $from: ae, to: S } = re.selection;
-          for (let D = ae.sharedDepth(S); D > 0; D--) {
-            const k = ae.node(D);
+          for (let E = ae.sharedDepth(S); E > 0; E--) {
+            const k = ae.node(E);
             if (k.type === me) return !!k.attrs[I];
           }
           return !1;
         }
         function Y(re, me, I) {
           const { $from: ae, to: S } = re.selection;
-          for (let D = ae.sharedDepth(S); D > 0; D--) {
-            const k = ae.node(D);
+          for (let E = ae.sharedDepth(S); E > 0; E--) {
+            const k = ae.node(E);
             if (I === void 0 ? k.type === me : k.hasMarkup(me, I))
-              return ae.before(D);
+              return ae.before(E);
           }
         }
-        function xe(re, me) {
+        function Pe(re, me) {
           return (I, ae) => {
             const S = Y(I, re);
             if (S === void 0) return !1;
             if (ae) {
-              const D = I.doc.nodeAt(S);
-              if ((console.assert(!!D), !D)) return !1;
-              ae(I.tr.setNodeMarkup(S, re, { ...D.attrs, [me]: !D.attrs[me] }));
+              const E = I.doc.nodeAt(S);
+              if ((console.assert(!!E), !E)) return !1;
+              ae(I.tr.setNodeMarkup(S, re, { ...E.attrs, [me]: !E.attrs[me] }));
             }
             return !0;
           };
@@ -19209,80 +19209,80 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         function Se(re, me) {
           return (I, ae) => {
             const { $from: S } = I.selection;
-            let D = null,
+            let E = null,
               k = 0;
             for (let v = S.depth; v > 0; v--) {
-              const W = S.node(v);
-              if (re.includes(W.type)) {
-                (D = W), (k = S.before(v));
+              const z = S.node(v);
+              if (re.includes(z.type)) {
+                (E = z), (k = S.before(v));
                 break;
               }
             }
-            return D
-              ? (ae && ae(I.tr.setNodeMarkup(k, D.type, { ...D.attrs, ...me })),
+            return E
+              ? (ae && ae(I.tr.setNodeMarkup(k, E.type, { ...E.attrs, ...me })),
                 !0)
               : !1;
           };
         }
-        function Ne(re, me, I = {}) {
-          return new e.fV(re, (ae, S, D, k) => {
+        function He(re, me, I = {}) {
+          return new e.fV(re, (ae, S, E, k) => {
             const v = I instanceof Function ? I(S) : I,
-              W = ae.tr;
+              z = ae.tr;
             if (S[1]) {
-              const $ = D + S[0].indexOf(S[1]),
-                N = $ + S[1].length;
-              N < k && W.delete(N, k),
-                $ > D && W.delete(D, $),
-                (k = D + S[1].length);
+              const K = E + S[0].indexOf(S[1]),
+                N = K + S[1].length;
+              N < k && z.delete(N, k),
+                K > E && z.delete(E, K),
+                (k = E + S[1].length);
             }
-            return W.addMark(D, k, me.create(v)), W.removeStoredMark(me), W;
+            return z.addMark(E, k, me.create(v)), z.removeStoredMark(me), z;
           });
         }
-        function He(re, me, I) {
+        function Ve(re, me, I) {
           const ae = { left: me, top: I },
             S = re.posAtCoords(ae);
           if (S?.pos) {
-            const D = re.state.doc.resolve(S.pos);
-            re.dispatch(re.state.tr.setSelection(p.U3.near(D)));
+            const E = re.state.doc.resolve(S.pos);
+            re.dispatch(re.state.tr.setSelection(p.U3.near(E)));
           }
         }
       },
       47604: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { s: () => te });
+        i.d(ze, { s: () => se });
         var e = i(7850),
           p = i(19298),
           a = i(64238),
           fe = i.n(a),
           O = i(36118),
-          H = i(76962),
-          E = i(83217),
-          R = i.n(E);
-        function te(ce) {
+          $ = i(76962),
+          D = i(83217),
+          R = i.n(D);
+        function se(pe) {
           const {
             onClose: Y,
-            className: xe,
+            className: Pe,
             navID: Se,
-            children: Ne,
-            strTitle: He,
+            children: He,
+            strTitle: Ve,
             wideMode: re,
             ...me
-          } = ce;
-          return (0, e.jsx)(H.y, {
+          } = pe;
+          return (0, e.jsx)($.y, {
             onClose: Y,
             navID: Se ?? "SimpleModalDialog",
             ...me,
             children: (0, e.jsxs)("div", {
-              className: fe()(xe, R().SimpleModalDialog, re && R().WideMode),
+              className: fe()(Pe, R().SimpleModalDialog, re && R().WideMode),
               children: [
                 " ",
                 (0, e.jsxs)(p.Z, {
                   className: R().SimpleModalDialogHeader,
                   children: [
-                    He &&
+                    Ve &&
                       (0, e.jsx)("h2", {
                         className: R().SimpleModalDialogTitle,
-                        children: He,
+                        children: Ve,
                       }),
                     (0, e.jsx)("button", {
                       onClick: (I) => (Y("xclick"), I.preventDefault(), !1),
@@ -19293,7 +19293,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 }),
                 (0, e.jsx)("div", {
                   className: R().SimpleModalContentCtn,
-                  children: Ne,
+                  children: He,
                 }),
               ],
             }),
@@ -19302,13 +19302,13 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
       },
       63854: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { a: () => E, z: () => H });
+        i.d(ze, { a: () => D, z: () => $ });
         var e = i(71742),
           p = i(13018),
           a = i(60298),
           fe = i(98609),
           O = i(67705);
-        class H {
+        class $ {
           m_steamInterface;
           GetPromotionTransport() {
             return this.m_steamInterface;
@@ -19316,142 +19316,76 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           static s_Singleton;
           static Get() {
             return (
-              H.s_Singleton ||
-                ((H.s_Singleton = new H()), H.s_Singleton.Init()),
-              H.s_Singleton
+              $.s_Singleton ||
+                (($.s_Singleton = new $()), $.s_Singleton.Init()),
+              $.s_Singleton
             );
           }
           Init() {
-            const te = (0, O.Tc)(
+            const se = (0, O.Tc)(
               "promotion_operation_token",
               "application_config",
             );
-            (0, e.wT)(!!te, "require promotion_operation_token"),
+            (0, e.wT)(!!se, "require promotion_operation_token"),
               (this.m_steamInterface = (0, a.p)(
-                new p.D(fe.TS.WEBAPI_BASE_URL, te),
+                new p.D(fe.TS.WEBAPI_BASE_URL, se),
               ));
           }
         }
-        function E() {
-          return H.Get().GetPromotionTransport().GetServiceTransport();
-        }
-      },
-      61266: (ee, ze, i) => {
-        "use strict";
-        i.d(ze, { T: () => te, m: () => R });
-        var e = i(90626),
-          p = i(13018),
-          a = i(60298),
-          fe = i(10142),
-          O = i(71742),
-          H = i(3166),
-          E = i(14616);
-        function R(xe) {
-          const [Se, Ne] = (0, e.useState)(!1),
-            [He] = (0, e.useState)(() => ce()),
-            re = (0, e.useMemo)(
-              () => ({
-                country: H.TS.COUNTRY,
-                language: H.TS.LANGUAGE,
-                bUsePartnerAPI: !0,
-              }),
-              [],
-            );
-          return (
-            (0, e.useEffect)(() => (Ne(!0), Y(He)), [He]),
-            Se
-              ? (0, e.createElement)(E.V3, {
-                  context: re,
-                  serviceTransportOverride: He.GetServiceTransport(),
-                  children: xe.children,
-                })
-              : null
-          );
-        }
-        function te(xe) {
-          const [Se] = (0, e.useState)(() => ce()),
-            Ne = (0, e.useMemo)(
-              () => ({
-                country: H.TS.COUNTRY,
-                language: H.TS.LANGUAGE,
-                bUsePartnerAPI: !0,
-                bIncludeUnpublished: xe.bIncludeUnpublished,
-              }),
-              [xe.bIncludeUnpublished],
-            );
-          return (0, e.createElement)(E.V3, {
-            context: Ne,
-            serviceTransportOverride: Se.GetServiceTransport(),
-            children: xe.children,
-          });
-        }
-        function ce() {
-          const xe = (0, H.Tc)(
-            "partnerbrowse_webapi_token",
-            "application_config",
-          );
-          return (
-            (0, O.wT)(!!xe, "require partnerbrowse_webapi_token"),
-            (0, a.p)(new p.D(H.TS.WEBAPI_BASE_URL, xe))
-          );
-        }
-        function Y(xe) {
-          return fe.A.Initialize(
-            xe.GetServiceTransport(),
-            H.iA.is_partner_member,
-          );
+        function D() {
+          return $.Get().GetPromotionTransport().GetServiceTransport();
         }
       },
       54407: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { B3: () => k, CF: () => v, KM: () => me, KT: () => D });
+        i.d(ze, { B3: () => k, CF: () => v, KM: () => me, KT: () => E });
         var e = i(41735),
           p = i.n(e),
           a = i(58632),
           fe = i.n(a),
           O = i(90626),
-          H = i(20194),
-          E = i(75233),
+          $ = i(20194),
+          D = i(75233),
           R = i(72604),
-          te = i(76559),
-          ce = i(34592),
+          se = i(76559),
+          pe = i(34592),
           Y = i(3166),
-          xe = i(35038),
+          Pe = i(35038),
           Se = i(27386),
-          Ne = i(68312),
-          He = i(40497);
+          He = i(68312),
+          Ve = i(40497);
         const re = "nicknames";
-        function me(W) {
-          const $ = (0, Ne.KV)(),
-            { data: N, isLoading: B } = (0, H.I)({
+        function me(z) {
+          const K = (0, He.KV)(),
+            { data: N, isLoading: B } = (0, $.I)({
               queryKey: [re],
               queryFn: async () => {
                 const Ee = new Map();
                 if (Y.iA.logged_in) {
-                  const L = xe.w.Init(Se.w_T),
-                    w = (await Se.xtC.GetNicknameList($, L)).Body().toObject();
+                  const L = Pe.w.Init(Se.w_T),
+                    w = (await Se.xtC.GetNicknameList(K, L)).Body().toObject();
                   w?.nicknames &&
                     w.nicknames.length > 0 &&
-                    w.nicknames.forEach((G) => {
-                      G.accountid &&
-                        G.nickname &&
-                        Ee.set(G.accountid, G.nickname);
+                    w.nicknames.forEach((W) => {
+                      W.accountid &&
+                        W.nickname &&
+                        Ee.set(W.accountid, W.nickname);
                     });
                 }
                 return Ee;
               },
             });
-          return N ? N.get(W) : null;
+          return N ? N.get(z) : null;
         }
-        async function I(W) {
-          if (!W || W.length == 0) return [];
-          const $ =
+        async function I(z) {
+          if (!z || z.length == 0) return [];
+          const K =
             (0, Y.yK)() == "community"
               ? Y.TS.COMMUNITY_BASE_URL
               : Y.TS.STORE_BASE_URL;
-          if (W.length == 1) {
-            const N = { accountid: W[0], origin: self.origin },
-              B = await p().get(`${$}actions/ajaxgetavatarpersona`, {
+          if (z.length == 1) {
+            const N = { accountid: z[0], origin: self.origin },
+              B = await p().get(`${K}actions/ajaxgetavatarpersona`, {
                 params: N,
               });
             if (
@@ -19460,11 +19394,11 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               B.data?.success != R.R ||
               !B.data?.userinfo
             )
-              throw `Load single avatar/persona failed ${((0, ce.H))(B).strErrorMsg}`;
+              throw `Load single avatar/persona failed ${((0, pe.H))(B).strErrorMsg}`;
             return [B.data.userinfo];
           } else {
-            const N = { accountids: W.join(","), origin: self.origin },
-              B = await p().get(`${$}actions/ajaxgetmultiavatarpersona`, {
+            const N = { accountids: z.join(","), origin: self.origin },
+              B = await p().get(`${K}actions/ajaxgetmultiavatarpersona`, {
                 params: N,
               });
             if (
@@ -19473,55 +19407,55 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               B.data?.success != R.R ||
               !B.data?.userinfos
             )
-              throw `Load single avatar/persona failed ${((0, ce.H))(B).strErrorMsg}`;
+              throw `Load single avatar/persona failed ${((0, pe.H))(B).strErrorMsg}`;
             const Ee = new Map();
             return (
               B.data.userinfos.forEach((L) =>
-                Ee.set(new te.b(L.steamid).GetAccountID(), L),
+                Ee.set(new se.b(L.steamid).GetAccountID(), L),
               ),
-              W.map((L) => Ee.get(L))
+              z.map((L) => Ee.get(L))
             );
           }
         }
-        const ae = new (fe())((W) => I(W), { cache: !1 }),
+        const ae = new (fe())((z) => I(z), { cache: !1 }),
           S = "avatarandpersonas";
-        function D(W) {
-          const { data: $, isLoading: N } = (0, H.I)({
-            queryKey: [S, W],
-            queryFn: () => ae.load(W),
+        function E(z) {
+          const { data: K, isLoading: N } = (0, $.I)({
+            queryKey: [S, z],
+            queryFn: () => ae.load(z),
           });
-          return [$, N];
+          return [K, N];
         }
-        function k(W) {
-          const $ = (0, E.jE)(),
-            { data: N, isLoading: B } = (0, H.I)({
-              queryKey: [S, W],
+        function k(z) {
+          const K = (0, D.jE)(),
+            { data: N, isLoading: B } = (0, $.I)({
+              queryKey: [S, z],
               queryFn: async () => {
-                const L = await ae.loadMany(W);
+                const L = await ae.loadMany(z);
                 return (
-                  L.forEach((V) => {
-                    if (V instanceof Error) return;
-                    const w = [S, new te.b(V.steamid).GetAccountID()];
-                    $.setQueryData(w, V);
+                  L.forEach((G) => {
+                    if (G instanceof Error) return;
+                    const w = [S, new se.b(G.steamid).GetAccountID()];
+                    K.setQueryData(w, G);
                   }),
                   L
                 );
               },
-              enabled: W?.length > 0,
+              enabled: z?.length > 0,
             }),
             Ee = (0, O.useMemo)(() => {
               const L = new Array();
               return (
-                N?.forEach((V) => {
-                  V instanceof Error || L.push(V);
+                N?.forEach((G) => {
+                  G instanceof Error || L.push(G);
                 }),
                 L
               );
             }, [N]);
           return B ? null : Ee;
         }
-        function v(W) {
-          return He.L.getQueryData([S, W]);
+        function v(z) {
+          return Ve.L.getQueryData([S, z]);
         }
       },
       24806: (ee, ze, i) => {
@@ -19532,37 +19466,37 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           a = i(65946),
           fe = i(90626),
           O = i(99412),
-          H = i(32093),
-          E = i(50109),
+          $ = i(32093),
+          D = i(50109),
           R = i(95695),
-          te = i.n(R),
-          ce = i(36707),
+          se = i.n(R),
+          pe = i(36707),
           Y = i(18210),
-          xe = i(92264),
+          Pe = i(92264),
           Se = i(54963),
-          Ne = i(71421),
-          He = Object.defineProperty,
+          He = i(71421),
+          Ve = Object.defineProperty,
           re = Object.getOwnPropertyDescriptor,
-          me = (D, k, v, W) => {
+          me = (E, k, v, z) => {
             for (
-              var $ = W > 1 ? void 0 : W ? re(k, v) : k, N = D.length - 1, B;
+              var K = z > 1 ? void 0 : z ? re(k, v) : k, N = E.length - 1, B;
               N >= 0;
               N--
             )
-              (B = D[N]) && ($ = (W ? B(k, v, $) : B($)) || $);
-            return W && $ && He(k, v, $), $;
+              (B = E[N]) && (K = (z ? B(k, v, K) : B(K)) || K);
+            return z && K && Ve(k, v, K), K;
           };
         let I = class extends fe.Component {
           GenerateLanguageOptions() {
-            let D = [];
+            let E = [];
             const {
               fnFilterLanguage: k,
               fnLangHasData: v,
-              fnLastUpdateRTime: W,
-              fnIsLangSupported: $,
+              fnLastUpdateRTime: z,
+              fnIsLangSupported: K,
             } = this.props;
             this.props.bAllowUnsetOption &&
-              D.push(
+              E.push(
                 (0, e.jsx)(
                   "option",
                   {
@@ -19573,29 +19507,29 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 ),
               );
             let N = new Array();
-            const B = this.props.realms || [H.TU.k_ESteamRealmGlobal];
+            const B = this.props.realms || [$.TU.k_ESteamRealmGlobal];
             for (const L of Y.A0.GetLanguageListForRealms(B)) {
               if (k && !k(L)) continue;
-              const V = (0, O.LgB)(L),
-                w = (0, Y.we)("#Language_" + V),
-                G = !!($ && $(L));
-              N.push({ eLang: L, sLocName: w, bSupported: G });
+              const G = (0, O.LgB)(L),
+                w = (0, Y.we)("#Language_" + G),
+                W = !!(K && K(L));
+              N.push({ eLang: L, sLocName: w, bSupported: W });
             }
-            N.sort((L, V) =>
-              L.bSupported != V.bSupported
+            N.sort((L, G) =>
+              L.bSupported != G.bSupported
                 ? L.bSupported
                   ? -1
                   : 1
-                : L.sLocName.localeCompare(V.sLocName),
+                : L.sLocName.localeCompare(G.sLocName),
             );
             let Ee = !1;
             for (const L of N) {
               L.bSupported != Ee &&
-                (D.push(
+                (E.push(
                   (0, e.jsx)(
                     "option",
                     {
-                      className: te().SupportedGroupLabel,
+                      className: se().SupportedGroupLabel,
                       disabled: !0,
                       children: (0, Y.we)(
                         L.bSupported
@@ -19607,88 +19541,88 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   ),
                 ),
                 (Ee = L.bSupported));
-              const V = v && v(L.eLang),
-                w = W && W(L.eLang);
-              let G = L.sLocName;
+              const G = v && v(L.eLang),
+                w = z && z(L.eLang);
+              let W = L.sLocName;
               w &&
                 w !== 0 &&
-                ((G += " "),
-                (G += (0, Y.we)(
+                ((W += " "),
+                (W += (0, Y.we)(
                   "#Language_Last_Update",
                   (0, Y.$z)(w) +
                     " @ " +
-                    (0, xe.KC)(w, { bForce24HourClock: !1 }),
+                    (0, Pe.KC)(w, { bForce24HourClock: !1 }),
                 ))),
-                D.push(
+                E.push(
                   (0, e.jsx)(
                     "option",
                     {
                       value: L.eLang,
-                      className: (0, ce.A)(
-                        { [te().LanguageWithContent]: V },
+                      className: (0, pe.A)(
+                        { [se().LanguageWithContent]: G },
                         L.bSupported
-                          ? te().SupportedLanguage
-                          : te().UnsupportedLanguage,
+                          ? se().SupportedLanguage
+                          : se().UnsupportedLanguage,
                       ),
-                      children: G,
+                      children: W,
                     },
-                    "langpicker" + L.eLang + (V ? "_hasdata" : ""),
+                    "langpicker" + L.eLang + (G ? "_hasdata" : ""),
                   ),
                 );
             }
-            return D;
+            return E;
           }
-          OnLanguageChange(D) {
+          OnLanguageChange(E) {
             const { fnOnLanguageChanged: k, selectedLang: v } = this.props;
-            let W = Number.parseInt(D.currentTarget.value);
-            W != v && k && k(W);
+            let z = Number.parseInt(E.currentTarget.value);
+            z != v && k && k(z);
           }
           render() {
-            const { selectedLang: D, bDisabled: k, strTooltip: v } = this.props;
-            let W = this.GenerateLanguageOptions();
-            return (0, e.jsx)(Ne.he, {
+            const { selectedLang: E, bDisabled: k, strTooltip: v } = this.props;
+            let z = this.GenerateLanguageOptions();
+            return (0, e.jsx)(He.he, {
               toolTipContent: v,
               children: (0, e.jsx)("select", {
-                value: D,
+                value: E,
                 onChange: this.OnLanguageChange,
                 disabled: k,
-                children: W,
+                children: z,
               }),
             });
           }
         };
         me([Se.oI], I.prototype, "OnLanguageChange", 1), (I = me([p.PA], I));
-        function ae(D) {
+        function ae(E) {
           const [k, v] = (0, a.q3)(() => [
-            E.O.Get().GetHasLocalizationContext(),
-            E.O.Get().GetCurEditLanguage(),
+            D.O.Get().GetHasLocalizationContext(),
+            D.O.Get().GetCurEditLanguage(),
           ]);
           return (0, e.jsx)(I, {
             selectedLang: v,
-            fnLangHasData: E.O.Get().BHasLanguageData,
-            fnOnLanguageChanged: E.O.Get().SetCurEditLanguage,
+            fnLangHasData: D.O.Get().BHasLanguageData,
+            fnOnLanguageChanged: D.O.Get().SetCurEditLanguage,
             bDisabled: !k,
             strTooltip: k
               ? void 0
               : (0, Y.we)("#Localization_EditorNotInFocus"),
           });
         }
-        function S(D) {
-          const { fnLangHasData: k } = D;
+        function S(E) {
+          const { fnLangHasData: k } = E;
           fe.useEffect(
             () => (
-              E.O.Get().SetHasLocalizationContext(!0),
-              () => E.O.Get().SetHasLocalizationContext(!1)
+              D.O.Get().SetHasLocalizationContext(!0),
+              () => D.O.Get().SetHasLocalizationContext(!1)
             ),
             [],
           );
           const v = (0, a.q3)(() => {
-            const W = [];
-            for (let $ = O.Bhc; $ < O.bP9; ++$) W[$] = !!(k && k($));
-            return W;
+            const z = [];
+            for (let K = O.Bhc; K < O.bP9; ++K) z[K] = !!(k && k(K));
+            return z;
           });
           return (
-            fe.useEffect(() => E.O.Get().SetHasLanguage(v), [v]),
+            fe.useEffect(() => D.O.Get().SetHasLanguage(v), [v]),
             (0, e.jsx)(e.Fragment, {})
           );
         }
@@ -19701,42 +19635,42 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           a = i(74432),
           fe = i(74685),
           O = i(52893),
-          H = i(29287),
-          E = i(90626);
-        function R(V, w = "PlaceholderPlugin") {
-          const [G, b] = E.useState([]),
-            [A] = E.useState(
+          $ = i(29287),
+          D = i(90626);
+        function R(G, w = "PlaceholderPlugin") {
+          const [W, b] = D.useState([]),
+            [A] = D.useState(
               () =>
                 new O.k_({
                   key: new O.hs(w),
                   state: {
                     init() {
-                      return H.zF.empty;
+                      return $.zF.empty;
                     },
-                    apply(Ce, Me) {
-                      Me = Me.map(Ce.mapping, Ce.doc);
-                      const F = Ce.getMeta(this) || [];
+                    apply(xe, Me) {
+                      Me = Me.map(xe.mapping, xe.doc);
+                      const F = xe.getMeta(this) || [];
                       for (const ie of F)
                         if (ie?.add) {
                           const { id: _e, data: le } = ie.add,
-                            Ae = (he, Ge) => {
-                              const We = document.createElement(V);
+                            be = (he, We) => {
+                              const Ue = document.createElement(G);
                               return (
                                 b((Ie) => [
                                   ...Ie,
-                                  { id: _e, element: We, data: le },
+                                  { id: _e, element: Ue, data: le },
                                 ]),
-                                We
+                                Ue
                               );
                             },
                             oe = (he) => {
-                              b((Ge) => Ge.filter((We) => We.element != he));
+                              b((We) => We.filter((Ue) => Ue.element != he));
                             },
-                            Te = H.NZ.widget(ie.add.pos, Ae, {
+                            Te = $.NZ.widget(ie.add.pos, be, {
                               id: _e,
                               destroy: oe,
                             });
-                          Me = Me.add(Ce.doc, [Te]);
+                          Me = Me.add(xe.doc, [Te]);
                         } else
                           ie?.remove &&
                             (Me = Me.remove(
@@ -19750,18 +19684,18 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     },
                   },
                   props: {
-                    decorations(Ce) {
-                      return this.getState(Ce);
+                    decorations(xe) {
+                      return this.getState(xe);
                     },
                   },
                 }),
             );
           (0, fe.c$)(A);
           const P = (0, fe.Hd)(),
-            U = E.useRef(0),
-            X = E.useCallback(
-              (Ce, Me, F) => {
-                const ie = `${w}_${U.current++}`;
+            H = D.useRef(0),
+            X = D.useCallback(
+              (xe, Me, F) => {
+                const ie = `${w}_${H.current++}`;
                 let _e = F || P.state.tr;
                 Me === void 0 &&
                   (_e.selection.empty || _e.deleteSelection(),
@@ -19770,7 +19704,7 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 return (
                   _e.setMeta(A, [
                     ...le,
-                    { add: { id: ie, pos: Me, data: Ce } },
+                    { add: { id: ie, pos: Me, data: xe } },
                   ]),
                   F || P.dispatch(_e),
                   ie
@@ -19778,113 +19712,113 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               },
               [A, w, P],
             ),
-            de = E.useCallback(
-              (Ce) => {
+            ce = D.useCallback(
+              (xe) => {
                 const F = A.getState(P.state)?.find(
                   void 0,
                   void 0,
-                  (ie) => ie.id == Ce,
+                  (ie) => ie.id == xe,
                 );
                 return F?.length ? F[0].from : void 0;
               },
               [P, A],
             ),
-            De = E.useCallback(
-              (Ce, Me) => {
-                const F = de(Ce);
+            De = D.useCallback(
+              (xe, Me) => {
+                const F = ce(xe);
                 return F
                   ? (Me
                       ? P.dispatch(
                           P.state.tr
                             .replaceWith(F, F, Me)
-                            .setMeta(A, [{ remove: { id: Ce } }]),
+                            .setMeta(A, [{ remove: { id: xe } }]),
                         )
                       : P.dispatch(
-                          P.state.tr.setMeta(A, [{ remove: { id: Ce } }]),
+                          P.state.tr.setMeta(A, [{ remove: { id: xe } }]),
                         ),
                     !0)
                   : !1;
               },
-              [A, de, P],
+              [A, ce, P],
             );
           return {
-            placeholderElements: G,
+            placeholderElements: W,
             createPlaceholder: X,
-            findPlaceholder: de,
+            findPlaceholder: ce,
             replacePlaceholder: De,
           };
         }
-        var te = i(72739),
-          ce = i(1880),
+        var se = i(72739),
+          pe = i(1880),
           Y = i(69168),
-          xe = i(85599),
+          Pe = i(85599),
           Se = i(8323),
-          Ne = i(18210),
-          He = i(95603),
+          He = i(18210),
+          Ve = i(95603),
           re = i(64868),
           me = i(73309);
-        function I(V) {
+        function I(G) {
           const {
               children: w,
-              ProcessFileUpload: G,
+              ProcessFileUpload: W,
               FetchImageURL: b,
               bAllowImageHotLinking: A = !1,
-            } = V,
-            [P] = E.useState(() => ({ manager: new v(G, b, A) })),
-            { manager: U } = P;
+            } = G,
+            [P] = D.useState(() => ({ manager: new v(W, b, A) })),
+            { manager: H } = P;
           return (
-            U.SetProps(G, b, A),
-            (0, e.jsxs)($.Provider, {
+            H.SetProps(W, b, A),
+            (0, e.jsxs)(K.Provider, {
               value: P,
               children: [
-                (0, e.jsx)(B, { manager: U }),
-                (0, e.jsx)(Ee, { manager: U, children: w }),
+                (0, e.jsx)(B, { manager: H }),
+                (0, e.jsx)(Ee, { manager: H, children: w }),
               ],
             })
           );
         }
-        const ae = E.memo(function (w) {
-          const { nodeType: G } = w,
+        const ae = D.memo(function (w) {
+          const { nodeType: W } = w,
             b = N(),
             {
               placeholderElements: A,
               createPlaceholder: P,
-              replacePlaceholder: U,
+              replacePlaceholder: H,
             } = R("span", "FileUploadPlaceholder");
-          L(b, G);
+          L(b, W);
           const X = (0, fe.Hd)();
           return (
-            E.useEffect(() => b.RegisterEditor(X, P, U), [b, X, P, U]),
+            D.useEffect(() => b.RegisterEditor(X, P, H), [b, X, P, H]),
             (0, e.jsx)(e.Fragment, {
-              children: A.map(({ id: de, element: De, data: Ce }) =>
-                (0, e.jsx)(k, { element: De, data: Ce }, de),
+              children: A.map(({ id: ce, element: De, data: xe }) =>
+                (0, e.jsx)(k, { element: De, data: xe }, ce),
               ),
             })
           );
         });
-        function S(V, w) {
-          const G = N(),
-            b = E.useCallback(
+        function S(G, w) {
+          const W = N(),
+            b = D.useCallback(
               (A) => {
-                for (const P of A) G.UploadFile(P);
-                V && V();
+                for (const P of A) W.UploadFile(P);
+                G && G();
               },
-              [G, V],
+              [W, G],
             );
-          return (0, He.Ss)(b, { multiple: !0, accept: w });
+          return (0, Ve.Ss)(b, { multiple: !0, accept: w });
         }
-        class D extends Error {
+        class E extends Error {
           constructor(w) {
             super(w);
           }
         }
-        function k(V) {
-          const { element: w, data: G } = V,
-            b = "file" in G ? G.file : void 0,
-            A = E.useMemo(() => b && URL.createObjectURL(b), [b]),
-            P = "url" in G ? G.url : A,
-            U = b?.type.startsWith("video/");
-          return te.createPortal(
+        function k(G) {
+          const { element: w, data: W } = G,
+            b = "file" in W ? W.file : void 0,
+            A = D.useMemo(() => b && URL.createObjectURL(b), [b]),
+            P = "url" in W ? W.url : A,
+            H = b?.type.startsWith("video/");
+          return se.createPortal(
             (0, e.jsxs)("span", {
               className: me.FileUploadPlaceholder,
               children: [
@@ -19895,17 +19829,17 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                     children: [
                       (0, e.jsx)("div", {
                         className: me.Throbber,
-                        children: (0, e.jsx)(xe.t, {
+                        children: (0, e.jsx)(Pe.t, {
                           size: "medium",
                           position: "center",
                         }),
                       }),
-                      (0, Ne.we)("#Prosemirror_FileUpload_Uploading"),
+                      (0, He.we)("#Prosemirror_FileUpload_Uploading"),
                     ],
                   }),
                 }),
-                !U && (0, e.jsx)("img", { src: P, className: me.PendingImage }),
-                U &&
+                !H && (0, e.jsx)("img", { src: P, className: me.PendingImage }),
+                H &&
                   (0, e.jsx)("video", {
                     src: P,
                     className: me.PendingImage,
@@ -19927,29 +19861,29 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           m_view;
           m_fnCreatePlaceholder;
           m_fnReplacePlaceholder;
-          constructor(w, G, b) {
+          constructor(w, W, b) {
             (this.m_fnProcessFileUpload = w),
-              (this.m_fnFetchImageURL = G),
+              (this.m_fnFetchImageURL = W),
               (this.m_bAllowImageHotLinking = b);
           }
-          SetProps(w, G, b) {
+          SetProps(w, W, b) {
             (this.m_fnProcessFileUpload = w),
-              (this.m_fnFetchImageURL = G),
+              (this.m_fnFetchImageURL = W),
               (this.m_bAllowImageHotLinking = b),
               (0, p.wT)(
                 !this.m_fnFetchImageURL || !this.m_bAllowImageHotLinking,
                 "Not expected to have a URL fetch function and allow hotlinking.  URL fetch function will not be called.",
               );
           }
-          RegisterEditor(w, G, b) {
+          RegisterEditor(w, W, b) {
             return (
               (0, p.wT)(!this.m_view, "Duplicate registration"),
               (this.m_view = w),
-              (this.m_fnCreatePlaceholder = G),
+              (this.m_fnCreatePlaceholder = W),
               (this.m_fnReplacePlaceholder = b),
               () => {
                 this.m_view == w &&
-                  this.m_fnCreatePlaceholder == G &&
+                  this.m_fnCreatePlaceholder == W &&
                   this.m_fnReplacePlaceholder == b &&
                   ((this.m_view = void 0),
                   (this.m_fnCreatePlaceholder = void 0),
@@ -19966,33 +19900,33 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           ClearErrors() {
             this.m_errors.Set([]);
           }
-          GetViewPosition(w, G) {
-            return this.m_view?.posAtCoords({ left: w, top: G })?.pos;
+          GetViewPosition(w, W) {
+            return this.m_view?.posAtCoords({ left: w, top: W })?.pos;
           }
-          async UploadFile(w, G) {
+          async UploadFile(w, W) {
             (!this.m_fnCreatePlaceholder || !this.m_fnReplacePlaceholder) &&
               this.AddError(
                 "Upload File: No editor registered to handle file upload",
               );
-            const b = this.m_fnCreatePlaceholder({ file: w }, G);
+            const b = this.m_fnCreatePlaceholder({ file: w }, W);
             return this.ProcessFile(w, b);
           }
           BAllowImageHotLinking() {
             return this.m_bAllowImageHotLinking;
           }
-          QueueUploadFileByURL(w, G, b) {
+          QueueUploadFileByURL(w, W, b) {
             if (
               ((!this.m_fnCreatePlaceholder || !this.m_fnReplacePlaceholder) &&
                 this.AddError(
                   "QueueUploadFile: No editor registered to handle file upload",
                 ),
-              console.log(`QueueUploadFileByURL: ${w} at pos ${G}`),
+              console.log(`QueueUploadFileByURL: ${w} at pos ${W}`),
               w.startsWith("data:"))
             ) {
-              const A = this.m_fnCreatePlaceholder({ url: w }, G, b);
+              const A = this.m_fnCreatePlaceholder({ url: w }, W, b);
               return this.ProcessDataURL(w, A), !0;
             } else if (this.m_fnFetchImageURL) {
-              const A = this.m_fnCreatePlaceholder({ url: w }, G, b);
+              const A = this.m_fnCreatePlaceholder({ url: w }, W, b);
               return this.FetchURLAndProcess(w, A), !0;
             } else
               return (
@@ -20003,27 +19937,27 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                 !1
               );
           }
-          async ProcessDataURL(w, G) {
+          async ProcessDataURL(w, W) {
             const [b, A] = w.split(","),
               P = b.match(/^data:(?<mimetype>[^;]*);(?<encoding>.*)$/);
             if (!P || P.groups.encoding != "base64") {
               this.AddError(`Unable to data URL, unexpected format: ${b}`);
               return;
             }
-            const U = P?.groups.mimetype,
-              X = W(U);
+            const H = P?.groups.mimetype,
+              X = z(H);
             if (!X) {
-              this.AddError(`Unsupported MIME type for image: ${U}`);
+              this.AddError(`Unsupported MIME type for image: ${H}`);
               return;
             }
-            const de = atob(A),
-              De = new Uint8Array(de.length);
-            for (let F = 0; F < de.length; F++) De[F] = de.charCodeAt(F);
-            const Ce = await a.C(De.buffer),
-              Me = new File([De], `upload_${Ce}.${X}`, { type: U });
-            await this.ProcessFile(Me, G);
+            const ce = atob(A),
+              De = new Uint8Array(ce.length);
+            for (let F = 0; F < ce.length; F++) De[F] = ce.charCodeAt(F);
+            const xe = await a.C(De.buffer),
+              Me = new File([De], `upload_${xe}.${X}`, { type: H });
+            await this.ProcessFile(Me, W);
           }
-          async FetchURLAndProcess(w, G) {
+          async FetchURLAndProcess(w, W) {
             try {
               const b = new URL(w),
                 A = await this.m_fnFetchImageURL(w),
@@ -20034,29 +19968,29 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
                   ),
                   { type: A.type },
                 );
-              await this.ProcessFile(P, G);
+              await this.ProcessFile(P, W);
             } catch {
               this.AddError(`Unable to process URL: ${w}`),
-                this.m_fnReplacePlaceholder(G);
+                this.m_fnReplacePlaceholder(W);
             }
           }
-          async ProcessFile(w, G) {
+          async ProcessFile(w, W) {
             let b;
             try {
               console.log(`Processing file upload: "${w.name}"`),
                 (b = await this.m_fnProcessFileUpload(w));
             } catch (A) {
-              A instanceof D
+              A instanceof E
                 ? this.AddError(A.message)
                 : this.AddError(`Error proccessing file upload: ${A}`);
             }
             b
-              ? this.m_fnReplacePlaceholder(G, b)
-              : this.m_fnReplacePlaceholder(G);
+              ? this.m_fnReplacePlaceholder(W, b)
+              : this.m_fnReplacePlaceholder(W);
           }
         }
-        function W(V) {
-          switch (V) {
+        function z(G) {
+          switch (G) {
             case "image/jpeg":
               return "jpg";
             case "image/png":
@@ -20073,93 +20007,93 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
               return;
           }
         }
-        const $ = E.createContext(void 0);
+        const K = D.createContext(void 0);
         function N() {
-          return E.useContext($).manager;
+          return D.useContext(K).manager;
         }
-        const B = E.memo(function (w) {
-          const { manager: G } = w,
-            b = (0, re.gc)(G.GetErrors());
+        const B = D.memo(function (w) {
+          const { manager: W } = w,
+            b = (0, re.gc)(W.GetErrors());
           return b.length
             ? (0, e.jsx)(Y.E, {
                 active: !0,
-                children: (0, e.jsx)(ce.o0, {
+                children: (0, e.jsx)(pe.o0, {
                   bAlertDialog: !0,
-                  strTitle: (0, Ne.we)("#Error_Generic"),
+                  strTitle: (0, He.we)("#Error_Generic"),
                   strDescription: b.map((A, P) =>
                     (0, e.jsx)("div", { children: A }, P),
                   ),
-                  strOKButtonText: (0, Ne.we)("#Button_OK"),
-                  onOK: () => G.ClearErrors(),
-                  onCancel: () => G.ClearErrors(),
+                  strOKButtonText: (0, He.we)("#Button_OK"),
+                  onOK: () => W.ClearErrors(),
+                  onCancel: () => W.ClearErrors(),
                 }),
               })
             : null;
         });
-        function Ee(V) {
-          const { manager: w, children: G } = V,
-            b = E.useCallback(
-              (U, X) => {
-                for (const de of U)
-                  w.UploadFile(de, w.GetViewPosition(X.clientX, X.clientY));
+        function Ee(G) {
+          const { manager: w, children: W } = G,
+            b = D.useCallback(
+              (H, X) => {
+                for (const ce of H)
+                  w.UploadFile(ce, w.GetViewPosition(X.clientX, X.clientY));
               },
               [w],
             ),
-            [A, P] = (0, He.hk)(b);
-          return E.cloneElement(G, { ...A, ...G.props });
+            [A, P] = (0, Ve.hk)(b);
+          return D.cloneElement(W, { ...A, ...W.props });
         }
-        function L(V, w) {
+        function L(G, w) {
           (0, fe.c$)(
-            E.useMemo(
+            D.useMemo(
               () =>
                 new O.k_({
                   props: {
-                    handlePaste(G, b, A) {
+                    handlePaste(W, b, A) {
                       const P = [];
                       if (
-                        (A.content.descendants((U, X) => {
-                          if (U.type == w) {
-                            const de = U.attrs.src;
-                            (de.startsWith("data:") ||
-                              !V.BAllowImageHotLinking()) &&
-                              P.push({ url: de, pos: X });
+                        (A.content.descendants((H, X) => {
+                          if (H.type == w) {
+                            const ce = H.attrs.src;
+                            (ce.startsWith("data:") ||
+                              !G.BAllowImageHotLinking()) &&
+                              P.push({ url: ce, pos: X });
                           }
                         }),
                         P.length)
                       ) {
-                        let U = G.state.tr;
-                        U.selection.empty || U.deleteSelection();
-                        let X = U.selection.from,
-                          de = 0;
+                        let H = W.state.tr;
+                        H.selection.empty || H.deleteSelection();
+                        let X = H.selection.from,
+                          ce = 0;
                         for (const De of P) {
-                          const Ce = A.content.cut(de, De.pos - 1);
-                          U.insert(X, Ce),
-                            (X += Ce.size),
-                            V.QueueUploadFileByURL(De.url, X, U),
-                            (de = De.pos + 1);
+                          const xe = A.content.cut(ce, De.pos - 1);
+                          H.insert(X, xe),
+                            (X += xe.size),
+                            G.QueueUploadFileByURL(De.url, X, H),
+                            (ce = De.pos + 1);
                         }
                         return (
-                          U.insert(X, A.content.cut(de)),
-                          U.scrollIntoView(),
-                          G.dispatch(U),
+                          H.insert(X, A.content.cut(ce)),
+                          H.scrollIntoView(),
+                          W.dispatch(H),
                           !0
                         );
                       }
                       return !1;
                     },
                     handleDOMEvents: {
-                      paste(G, b) {
+                      paste(W, b) {
                         if (b.clipboardData?.files?.length > 0) {
                           b.preventDefault();
                           for (const A of b.clipboardData.files)
-                            V.UploadFile(A);
+                            G.UploadFile(A);
                           return !0;
                         }
                       },
                     },
                   },
                 }),
-              [w, V],
+              [w, G],
             ),
           );
         }
@@ -20172,39 +20106,39 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
           XQ: () => I,
           bI: () => re,
           cQ: () => v,
-          ff: () => W,
+          ff: () => z,
           hK: () => ae,
-          u3: () => D,
-          wU: () => He,
+          u3: () => E,
+          wU: () => Ve,
         });
         var e = i(7850),
           p = i(19298),
           a = i(74827),
           fe = i(12362),
           O = i(90626),
-          H = i(58534),
-          E = i(71421),
+          $ = i(58534),
+          D = i(71421),
           R = i(8323),
-          te = i(36707),
-          ce = i(18210),
+          se = i(36707),
+          pe = i(18210),
           Y = i(54963),
-          xe = i(98609),
+          Pe = i(98609),
           Se = i(73309),
-          Ne = i.n(Se);
-        const He = () => O.useContext(me);
-        function re(V) {
-          const { view: w, refUpdateToolbar: G, children: b } = V,
+          He = i.n(Se);
+        const Ve = () => O.useContext(me);
+        function re(G) {
+          const { view: w, refUpdateToolbar: W, children: b } = G,
             A = O.useRef(void 0);
           A.current || (A.current = new R.lu());
           const P = A.current;
           O.useEffect(
             () => (
-              (0, Y.cZ)(G, () => P.Dispatch(w)), () => (0, Y.cZ)(G, void 0)
+              (0, Y.cZ)(W, () => P.Dispatch(w)), () => (0, Y.cZ)(W, void 0)
             ),
-            [P, w, G],
+            [P, w, W],
           );
-          const U = O.useMemo(() => ({ callbacks: P, view: w }), [P, w]);
-          return w ? (0, e.jsx)(me.Provider, { value: U, children: b }) : null;
+          const H = O.useMemo(() => ({ callbacks: P, view: w }), [P, w]);
+          return w ? (0, e.jsx)(me.Provider, { value: H, children: b }) : null;
         }
         const me = O.createContext(void 0);
         function I() {
@@ -20213,50 +20147,50 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
         function ae() {
           return (0, e.jsx)("div", { className: Se.Spacer });
         }
-        function S(V) {
+        function S(G) {
           return (0, e.jsx)("div", {
-            className: (0, te.A)(V.className, Se.ToolbarRowOverflowContainer),
+            className: (0, se.A)(G.className, Se.ToolbarRowOverflowContainer),
             children: (0, e.jsx)(p.Z, {
               className: Se.ToolbarRow,
               "flow-children": "row",
-              children: V.children,
+              children: G.children,
             }),
           });
         }
-        function D(V) {
-          const { nodeType: w, attrs: G, children: b, ...A } = V,
-            { callbacks: P, view: U } = He(),
-            [X, de] = O.useState(() => (0, a.gj)(U.state, w, G)),
-            De = O.useCallback((Me) => de((0, a.gj)(Me.state, w, G)), [w, G]);
+        function E(G) {
+          const { nodeType: w, attrs: W, children: b, ...A } = G,
+            { callbacks: P, view: H } = Ve(),
+            [X, ce] = O.useState(() => (0, a.gj)(H.state, w, W)),
+            De = O.useCallback((Me) => ce((0, a.gj)(Me.state, w, W)), [w, W]);
           (0, Y.hL)(P, De);
-          const Ce = O.useMemo(() => fe.y_(w, G), [G, w]);
-          return (0, e.jsx)(v, { ...A, command: Ce, toggled: X, children: b });
+          const xe = O.useMemo(() => fe.y_(w, W), [W, w]);
+          return (0, e.jsx)(v, { ...A, command: xe, toggled: X, children: b });
         }
-        function k(V) {
-          const { mark: w, children: G, ...b } = V,
-            { callbacks: A, view: P } = He(),
-            [U, X] = O.useState(() => (0, a.Cd)(P.state, w)),
-            de = O.useCallback((Ce) => X((0, a.Cd)(Ce.state, w)), [w]);
-          (0, Y.hL)(A, de);
+        function k(G) {
+          const { mark: w, children: W, ...b } = G,
+            { callbacks: A, view: P } = Ve(),
+            [H, X] = O.useState(() => (0, a.Cd)(P.state, w)),
+            ce = O.useCallback((xe) => X((0, a.Cd)(xe.state, w)), [w]);
+          (0, Y.hL)(A, ce);
           const De = O.useMemo(() => fe.wh(w), [w]);
-          return (0, e.jsx)(v, { ...b, command: De, toggled: U, children: G });
+          return (0, e.jsx)(v, { ...b, command: De, toggled: H, children: W });
         }
-        function v(V) {
-          const { command: w, toggled: G, children: b, ...A } = V,
-            { view: P, callbacks: U } = He(),
-            [X, de] = O.useState(() => w(P.state));
+        function v(G) {
+          const { command: w, toggled: W, children: b, ...A } = G,
+            { view: P, callbacks: H } = Ve(),
+            [X, ce] = O.useState(() => w(P.state));
           (0, Y.hL)(
-            U,
-            O.useCallback((Ce) => de(w(Ce.state)), [w]),
+            H,
+            O.useCallback((xe) => ce(w(xe.state)), [w]),
           ),
-            O.useEffect(() => de(w(P.state)), [w, P]);
-          const De = !X && !G;
-          return (0, e.jsx)($, {
+            O.useEffect(() => ce(w(P.state)), [w, P]);
+          const De = !X && !W;
+          return (0, e.jsx)(K, {
             ...A,
-            children: (0, e.jsx)(H.$n, {
-              className: (0, te.A)(Se.CommandButton, G && Se.Toggled),
-              onMouseDown: (Ce) => {
-                Ce.preventDefault(), w(P.state, P.dispatch, P);
+            children: (0, e.jsx)($.$n, {
+              className: (0, se.A)(Se.CommandButton, W && Se.Toggled),
+              onMouseDown: (xe) => {
+                xe.preventDefault(), w(P.state, P.dispatch, P);
               },
               disabled: De,
               focusable: !De,
@@ -20264,19 +20198,19 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             }),
           });
         }
-        function W(V) {
+        function z(G) {
           const {
             onClick: w,
-            toggled: G,
+            toggled: W,
             disabled: b,
             children: A,
             className: P,
-            ...U
-          } = V;
-          return (0, e.jsx)($, {
-            ...U,
-            children: (0, e.jsx)(H.$n, {
-              className: (0, te.A)(Se.CommandButton, G && Se.Toggled, P),
+            ...H
+          } = G;
+          return (0, e.jsx)(K, {
+            ...H,
+            children: (0, e.jsx)($.$n, {
+              className: (0, se.A)(Se.CommandButton, W && Se.Toggled, P),
               onMouseDown: (X) => {
                 X.button === 0 && (X.preventDefault(), w(X));
               },
@@ -20285,37 +20219,37 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             }),
           });
         }
-        function $(V) {
-          const { tooltip: w, keyboardShortcut: G, children: b } = V;
+        function K(G) {
+          const { tooltip: w, keyboardShortcut: W, children: b } = G;
           if (!w) return b;
-          const A = G ? (0, e.jsx)(N, { tooltip: w, keyboardShortcut: G }) : w;
-          return (0, e.jsx)(E.Gq, {
+          const A = W ? (0, e.jsx)(N, { tooltip: w, keyboardShortcut: W }) : w;
+          return (0, e.jsx)(D.Gq, {
             toolTipContent: A,
             direction: "bottom",
             children: b,
           });
         }
-        function N(V) {
-          const { tooltip: w, keyboardShortcut: G } = V;
+        function N(G) {
+          const { tooltip: w, keyboardShortcut: W } = G;
           return (0, e.jsxs)("div", {
             className: Se.TooltipWithShortcut,
             children: [
               (0, e.jsx)("div", {
-                children: typeof w == "string" ? (0, ce.we)(w) : w,
+                children: typeof w == "string" ? (0, pe.we)(w) : w,
               }),
               (0, e.jsx)("div", {
-                children: (0, e.jsx)(B, { keyboardShortcut: G }),
+                children: (0, e.jsx)(B, { keyboardShortcut: W }),
               }),
             ],
           });
         }
-        function B(V) {
-          const { keyboardShortcut: w } = V,
-            G = w.split("-"),
-            b = G.pop() ?? "";
+        function B(G) {
+          const { keyboardShortcut: w } = G,
+            W = w.split("-"),
+            b = W.pop() ?? "";
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              G.map((A, P) =>
+              W.map((A, P) =>
                 (0, e.jsxs)(
                   O.Fragment,
                   {
@@ -20333,87 +20267,87 @@ Eg. 'How did we relate to USD when we shipped this pricing'`
             ],
           });
         }
-        function Ee(V) {
+        function Ee(G) {
           return (0, e.jsx)("span", {
             className: Se.KeyCap,
-            children: V.children,
+            children: G.children,
           });
         }
-        function L(V) {
-          const { modifier: w } = V;
+        function L(G) {
+          const { modifier: w } = G;
           switch (w) {
             case "Mod":
-              return xe.TS.PLATFORM == "macos" ? "\u2318" : "Ctrl";
+              return Pe.TS.PLATFORM == "macos" ? "\u2318" : "Ctrl";
             case "Shift":
-              return xe.TS.PLATFORM == "macos", "Shift";
+              return Pe.TS.PLATFORM == "macos", "Shift";
             case "Ctrl":
-              return xe.TS.PLATFORM == "macos" ? "Control" : "Ctrl";
+              return Pe.TS.PLATFORM == "macos" ? "Control" : "Ctrl";
             case "Alt":
-              return xe.TS.PLATFORM == "macos" ? "Option" : "Alt";
+              return Pe.TS.PLATFORM == "macos" ? "Option" : "Alt";
           }
           return null;
         }
       },
       12932: (ee, ze, i) => {
         "use strict";
-        i.d(ze, { AQ: () => Ne, pn: () => re, qx: () => He });
+        i.d(ze, { AQ: () => He, pn: () => re, qx: () => Ve });
         var e = i(7850),
           p = i(58534),
           a = i(18210),
           fe = i(36118),
           O = i(90626),
-          H = i(36707),
-          E = i(95695),
-          R = i.n(E),
-          te = i(25792),
-          ce = i(64734),
-          Y = i.n(ce),
-          xe = i(65946),
+          $ = i(36707),
+          D = i(95695),
+          R = i.n(D),
+          se = i(25792),
+          pe = i(64734),
+          Y = i.n(pe),
+          Pe = i(65946),
           Se = i(11243);
-        function Ne(me) {
+        function He(me) {
           const {
               title: I,
               tooltip: ae,
               getMinimized: S,
-              toggleMinimized: D,
+              toggleMinimized: E,
               className: k,
               children: v,
-              elAdditionalButtons: W,
+              elAdditionalButtons: z,
             } = me,
-            $ = (0, xe.q3)(() => S());
+            K = (0, Pe.q3)(() => S());
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsxs)("div", {
-                className: (0, H.A)(
+                className: (0, $.A)(
                   k,
-                  ce.SectionTitleHeader,
-                  ce.required_title,
+                  pe.SectionTitleHeader,
+                  pe.required_title,
                   "SectionTitleHeader",
                 ),
                 children: [
                   (0, e.jsxs)("div", {
-                    className: (0, H.A)(
-                      E.CollapsableSectionTitle,
+                    className: (0, $.A)(
+                      D.CollapsableSectionTitle,
                       "EventEditorTextTitle",
                     ),
                     children: [I, !!ae && (0, e.jsx)(Se.o, { tooltip: ae })],
                   }),
                   (0, e.jsxs)("div", {
-                    className: ce.SectionTitleButtons,
+                    className: pe.SectionTitleButtons,
                     children: [
-                      W,
-                      (0, e.jsx)(re, { bIsMinimized: $, fnToggleMinimize: D }),
+                      z,
+                      (0, e.jsx)(re, { bIsMinimized: K, fnToggleMinimize: E }),
                     ],
                   }),
                 ],
               }),
-              !$ && (0, e.jsx)(te.tH, { children: v }),
+              !K && (0, e.jsx)(se.tH, { children: v }),
             ],
           });
         }
-        function He(me) {
+        function Ve(me) {
           const [I, ae] = O.useState(!!me.bStartMinimized);
-          return (0, e.jsx)(Ne, {
+          return (0, e.jsx)(He, {
             ...me,
             getMinimized: () => I,
             toggleMinimized: () => ae(!I),

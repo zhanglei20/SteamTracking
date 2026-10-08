@@ -1252,8 +1252,9 @@ $ffn
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG \np
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;
+++CCUNG`\tp
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +2Hp
@@ -1681,6 +1682,7 @@ $ffn
 /fxLf
 /index.html
 /name
+/proc/%u/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/mounts
@@ -1712,6 +1714,7 @@ $ffn
 /usr/bin/
 /usr/bin/crosdisk %s
 /usr/bin/lsof
+/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -1764,7 +1767,6 @@ $ffn
 0 Umv
 00000000
 00:00:00
-00:21:09
 01/01/00
 0123456789.
 0123456789
@@ -2351,6 +2353,7 @@ $ffn
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
 21UserSystemInformation
+22:45:18
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2524,6 +2527,10 @@ $ffn
 50UserContentDescriptorPreferences_ContentDescriptor
 512 Kbps
 512K
+6144
+8000
+8192
+65536
 524288
 52F*
 55Ly
@@ -2547,11 +2554,9 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
-6144
-64CK\vH
-65536
 60000000
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2606,8 +2611,6 @@ $ffn
 8.K%G
 8/A0
 80 Mbps
-8000
-8192
 82\n:XPH
 83L3
 83N6
@@ -6978,6 +6981,7 @@ NUMERICSTRING
 NVIDIA
 N\r\nyd
 Name
+Name:\t
 NamePart
 Nanaco
 Naranja
@@ -7225,7 +7229,7 @@ Object
 Object Signer
 Object Signing
 Object Signing CA
-Oct  6 2026
+Oct  7 2026
 October
 Odia
 Offensive Avatar
@@ -9798,6 +9802,7 @@ Zulu
 \n:82H
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nO1Ie
+\nPPid:\t
 \nParsing attempt:
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
 \nW2a
@@ -12741,7 +12746,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(27
+ggen(47
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -16888,6 +16893,7 @@ push response HEADERS: max concurrent streams exceeded
 push response HEADERS: stream_id == 0
 putc
 putwc
+pv-adverb
 pv-runtime/steam-runtime-steamrt
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
@@ -17922,7 +17928,6 @@ stdout
 steam
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 steam-runtime-supervisor
 steam://close
 steam://close/

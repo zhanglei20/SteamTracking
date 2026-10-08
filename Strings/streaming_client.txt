@@ -2479,6 +2479,7 @@ ${FILENAME}
 (/f92
 (0'yX
 (0rt
+(104^
 (1NE\n
 (3zg
 (6byOTER
@@ -4365,6 +4366,7 @@ ${FILENAME}
 /nollaa
 /p5]/ZQ
 /proc/%d/environ
+/proc/%u/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/mounts
@@ -4413,6 +4415,7 @@ ${FILENAME}
 /uKB
 /usr/bin/crosdisk %s
 /usr/bin/lsof
+/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -4479,18 +4482,16 @@ ${FILENAME}
 0,PQ
 0-AD
 0/bu^U
-0/gge
 0000000000000000000000000000000000000000
 0.06
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:21:09
-00:21:14
+0/gge
 00\fo
 01%3
 01%6
 01%66754&#"
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -5267,6 +5268,8 @@ ${FILENAME}
 21StoreItem_Screenshots
 21UserSystemInformation
 21\oi
+22:45:18
+22:45:33
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -5642,8 +5645,6 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
-32654.
-32655
 32655&
 32655&&
 326554&"
@@ -5658,7 +5659,6 @@ ${FILENAME}
 3267!5!&&#"
 3267&'^7l
 3267.
-32675
 32675#5!
 32675&&#"
 326754&
@@ -5666,7 +5666,6 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
-32677
 326=
 326B|
 327&
@@ -5675,6 +5674,10 @@ ${FILENAME}
 3275!5!
 3275#5!
 3276
+32654.
+32655
+32675
+32677
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -6517,10 +6520,10 @@ ${FILENAME}
 67!5!
 675!
 6753
-666666666666666666666666666666666666666666666666
 6754&#"
 67547&55&'7
 6786
+666666666666666666666666666666666666666666666666
 67Zc
 68Jy
 699[
@@ -6711,11 +6714,11 @@ ${FILENAME}
 75#5!
 754.
 7524
+74632
 75pRD
 75th
 76&'3
 7623.
-74632
 7664&#"
 76653
 76654&#"
@@ -16248,6 +16251,7 @@ Name
 Name '%s' family %i resolved to '%s' family %i
 Name lookup for "%s" failed - %s\n
 Name too long
+Name:\t
 NamePart
 Napautus (1 sormi)
 Napautus (2 sormea)
@@ -16731,7 +16735,7 @@ Obtained XMS handle %u
 OcYd
 Oca_
 Ocircumflex.smcp\vOtilde.smcp
-Oct  6 2026
+Oct  7 2026
 October
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
@@ -23783,6 +23787,7 @@ Z~5pW3Y
 \nLXLr
 \nO1Ie
 \nOLL
+\nPPid:\t
 \nParsing attempt:
 \nPma
 \nRdf
@@ -28151,7 +28156,6 @@ e\rX]NP
 e\roL
 e\vt]o
 e]8y
-e^p5(
 e_1OT
 e_r1C
 ea@$\tY8
@@ -32510,7 +32514,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Oct  6 2026 00:21:12
+lib Oct  7 2026 22:45:27
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -32535,7 +32539,7 @@ libm.so.6
 libopenvr_api.so
 libopus 1.1.4
 libpthread.so.0
-libpyrowave-shared.so.0
+libpyrowave-shared.so.1
 library bug
 library has no ciphers
 library_capsule
@@ -35716,6 +35720,7 @@ putchar
 puts
 putwc
 pu{k
+pv-adverb
 pv-runtime/steam-runtime-steamrt
 pv]p
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -37646,7 +37651,6 @@ stdout
 ste handlingss
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
 steam-runtime-supervisor
 steam.dev
