@@ -16,7 +16,7 @@
           j = s(26485),
           k = s(31886),
           f = s(37424),
-          Pe = s(40396),
+          Ce = s(40396),
           a = s(90626),
           re = s(62092),
           O = s(58534),
@@ -29,7 +29,7 @@
           _e = s.n(Ie),
           je = s(25792),
           Oe = s(71421),
-          Ce = s(36707),
+          Pe = s(36707),
           ee = s(95146),
           I = s(71764),
           t = s(22886),
@@ -112,7 +112,7 @@
               }),
               !!(w || V) &&
                 (0, r.jsx)("div", {
-                  className: (0, Ce.A)(e().OptionCtn, e().PriceLowOption),
+                  className: (0, Pe.A)(e().OptionCtn, e().PriceLowOption),
                   children: (0, r.jsx)(O.Yh, {
                     checked: V,
                     onChange: K,
@@ -120,7 +120,7 @@
                   }),
                 }),
               (0, r.jsx)("div", {
-                className: (0, Ce.A)(e().OptionCtn, e().CompactOption),
+                className: (0, Pe.A)(e().OptionCtn, e().CompactOption),
                 children: (0, r.jsx)(O.Yh, {
                   checked: P,
                   onChange: b,
@@ -130,11 +130,11 @@
                 }),
               }),
               (0, r.jsx)("div", {
-                className: (0, Ce.A)(e().OptionCtn),
+                className: (0, Pe.A)(e().OptionCtn),
                 children: (0, r.jsx)(y.J, {}),
               }),
               (0, r.jsxs)("div", {
-                className: (0, Ce.A)(e().OptionCtn),
+                className: (0, Pe.A)(e().OptionCtn),
                 children: [
                   (0, r.jsx)(O.jn, {
                     onClick: xe,
@@ -288,7 +288,7 @@
         function F(g) {
           const b = (0, f.Ci)()?.length ?? 0;
           return (0, r.jsx)("div", {
-            className: (0, Ce.A)(e().PricingGridCtn, b > 0 && "PendingVisible"),
+            className: (0, Pe.A)(e().PricingGridCtn, b > 0 && "PendingVisible"),
             children: (0, r.jsx)(S, { ...g }),
           });
         }
@@ -323,7 +323,7 @@
               (0, r.jsx)("div", {
                 className: e().PricingGridWrapper,
                 children: (0, r.jsx)("div", {
-                  className: (0, Ce.A)(e().PricingGrid, E && "CompactMode"),
+                  className: (0, Pe.A)(e().PricingGrid, E && "CompactMode"),
                   children: (0, r.jsxs)(je.tH, {
                     children: [
                       (0, r.jsx)(ee.rK, {
@@ -669,7 +669,7 @@
           });
         }
         function Te(g) {
-          (0, Pe.h)((0, f.Zz)());
+          (0, Ce.h)((0, f.Zz)());
           const P = (0, k.uw)(),
             b = "https://steamcommunity.com/groups/steamworks/discussions/29/",
             E = ye.TS.PARTNER_BASE_URL + "doc/store/pricing",
@@ -762,7 +762,7 @@
       },
       61266: (ne, De, s) => {
         "use strict";
-        s.d(De, { T: () => Pe, m: () => f });
+        s.d(De, { T: () => Ce, m: () => f });
         var r = s(90626),
           le = s(13018),
           fe = s(60298),
@@ -792,7 +792,7 @@
               : null
           );
         }
-        function Pe(O) {
+        function Ce(O) {
           const [oe] = (0, r.useState)(() => a()),
             de = (0, r.useMemo)(
               () => ({
@@ -847,7 +847,7 @@
           static ReadFile(M) {
             return new Promise((j, k) => {
               const f = new FileReader();
-              (f.onload = (Pe) => j(f.result)), f.readAsText(M);
+              (f.onload = () => j(f.result ?? "")), f.readAsText(M);
             });
           }
           static WriteFile(M, j) {
@@ -863,10 +863,10 @@
             } catch {}
           }
           static WriteCSVToFile(M, j, k, f) {
-            const Pe = f
+            const Ce = f
                 ? le().unparse({ fields: f, data: M }, { header: !0 })
                 : le().unparse(M, { header: !0 }),
-              a = k == !0 ? ["\uFEFF" + Pe] : [Pe];
+              a = k == !0 ? ["\uFEFF" + Ce] : [Ce];
             fe.WriteFile(new Blob(a, { type: "text/csv:charset=utf-8;" }), j);
           }
           static m_DummyValueForQuestionHack = 0;
@@ -1004,7 +1004,7 @@ License: MIT
             j = !B.document && !!B.postMessage,
             k = B.IS_PAPA_WORKER || !1,
             f = {},
-            Pe = 0,
+            Ce = 0,
             a = {};
           function re(t) {
             (this._handle = null),
@@ -1020,7 +1020,7 @@ License: MIT
               (this.isFirstChunk = !0),
               (this._completeResults = { data: [], errors: [], meta: {} }),
               function (e) {
-                var n = Ce(e);
+                var n = Pe(e);
                 (n.chunkSize = parseInt(n.chunkSize)),
                   e.step || e.chunk || (n.chunkSize = null),
                   (this._handle = new l(n)),
@@ -1506,7 +1506,7 @@ License: MIT
                           ? (t.delimiter = m.bestDelimiter)
                           : ((o = !0), (t.delimiter = a.DefaultDelimiter)),
                         (c.meta.delimiter = t.delimiter)),
-                    Ce(t));
+                    Pe(t));
                 return (
                   t.preview && t.header && m.preview++,
                   (e = D),
@@ -1822,11 +1822,11 @@ License: MIT
           function Oe() {
             throw new Error("Not implemented.");
           }
-          function Ce(t) {
+          function Pe(t) {
             if (typeof t != "object" || t === null) return t;
             var e,
               n = Array.isArray(t) ? [] : {};
-            for (e in t) n[e] = Ce(t[e]);
+            for (e in t) n[e] = Pe(t[e]);
             return n;
           }
           function ee(t, e) {
@@ -1883,7 +1883,7 @@ License: MIT
                     );
                   })()),
                   ((o = new B.Worker(o)).onmessage = _e),
-                  (o.id = Pe++),
+                  (o.id = Ce++),
                   (f[o.id] = o))
                 );
               })()).userStep = e.step),

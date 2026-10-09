@@ -9703,7 +9703,7 @@
           static ReadFile(m) {
             return new Promise((L, A) => {
               const N = new FileReader();
-              (N.onload = (_) => L(N.result)), N.readAsText(m);
+              (N.onload = () => L(N.result ?? "")), N.readAsText(m);
             });
           }
           static WriteFile(m, L) {

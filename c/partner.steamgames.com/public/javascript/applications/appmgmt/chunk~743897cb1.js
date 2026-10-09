@@ -6790,7 +6790,7 @@
           static ReadFile(_) {
             return new Promise((_, _) => {
               const _ = new FileReader();
-              (_.onload = (_) => _(_.result)), _.readAsText(_);
+              (_.onload = () => _(_.result ?? "")), _.readAsText(_);
             });
           }
           static WriteFile(_, _) {
