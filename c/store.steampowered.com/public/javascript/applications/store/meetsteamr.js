@@ -13,7 +13,8 @@
           const [_, _] = useState(!1);
           return (
             useEffect(() => {
-              startTransition(() => _(!0));
+              window.SSR && (window.SSR.hydrated = !0),
+                startTransition(() => _(!0));
             }, []),
             jsx(_.Provider, {
               value: _,

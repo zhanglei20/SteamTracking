@@ -13,7 +13,8 @@
           const [D, i] = useState(!1);
           return (
             useEffect(() => {
-              startTransition(() => i(!0));
+              window.SSR && (window.SSR.hydrated = !0),
+                startTransition(() => i(!0));
             }, []),
             jsx(a.Provider, { value: D, children: p.children })
           );
