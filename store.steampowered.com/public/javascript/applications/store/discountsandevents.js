@@ -472,7 +472,7 @@
             ? "spotlight"
             : o.banner === "daily_deal"
               ? "daily-deal"
-              : "spotlight_specials";
+              : "spotlight-specials";
         }
         function Ce(o) {
           const { initialData: r, initialDataUpdatedAt: _, previewTime: D } = o,

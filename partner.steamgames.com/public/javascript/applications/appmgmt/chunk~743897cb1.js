@@ -6394,7 +6394,7 @@
           static ReadFile(i) {
             return new Promise((t, v) => {
               const P = new FileReader();
-              (P.onload = (z) => t(P.result)), P.readAsText(i);
+              (P.onload = () => t(P.result ?? "")), P.readAsText(i);
             });
           }
           static WriteFile(i, t) {
