@@ -110,7 +110,7 @@
  + scale
  +0000
  +connect %s
- +password "
+ +password
  - %s [locked by %s - %s / %s (%lums)]
  --bus-name=com.steampowered.App%u %s --
  --current-password
@@ -2350,6 +2350,7 @@ ${LANGUAGE}
 %s: skipping set as steamos-manager is already in the desired state: %d -> %d
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: skipping, current value already matches
+%s: skipping, value already sent
 %s: starting
 %s: starting enumerate devices
 %s: starting update check
@@ -3874,6 +3875,7 @@ ${LANGUAGE}
 (\v21.CStore_GetUserGameInterestState_Response.InQueue
 (\v22.CClientMetrics_ContentDownloadResponse_HostCountsB
 (\v22.CInventory_ModifyItems_Request.ItemPropertyUpdate
+(\v22.CMsgRemoteClientStartStreamResponse.CloudConflict
 (\v22.CRemoteClient_UnregisterStatusUpdate_NotificationH
 (\v22.CStoreBrowse_GetStoreCategories_Response.Category
 (\v22.CVideo_GameRecordingSegmentUploadInfo.HTTPHeaders
@@ -5277,7 +5279,7 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8k
+++CCUNG8
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -6015,6 +6017,7 @@ ${LANGUAGE}
 -perfectworld -fromlauncher %s
 -pipewire
 -pipewire-dmabuf
+-pipewire-fresh-start
 -pipewire-record-deck-ui
 -pretendeol
 -pretendeol32
@@ -6358,7 +6361,7 @@ ${LANGUAGE}
 ../steamUI/hardwareupdatecontroller.cpp:412
 ../steamUI/installfoldercontroller.cpp
 ../steamUI/ledcontroller.cpp
-../steamUI/ledcontroller.cpp:1933
+../steamUI/ledcontroller.cpp:1965
 ../steamUI/ledcontroller.cpp:601
 ../steamUI/libraryassetcache.cpp
 ../steamUI/loginusers.cpp
@@ -7812,11 +7815,11 @@ ${LANGUAGE}
 00000000
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -9051,6 +9054,7 @@ ${LANGUAGE}
 13CCallbackImplILi8476EE
 13CCallbackImplILi84EE
 13CCallbackImplILi8EE
+13CCallbackImplILi96EE
 13CChatMentions
 13CCloudManager
 13CDebugDumpMsg
@@ -9123,6 +9127,7 @@ ${LANGUAGE}
 14CCryptoKeyBase
 14CFloatProperty
 14CFrameFunctionI11CHTTPClientE
+14CFrameFunctionI14CLEDControllerE
 14CFrameFunctionI19CQueuedLambdaRunnerE
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CFrameFunctionI7CJobMgrE
@@ -9762,6 +9767,7 @@ ${LANGUAGE}
 1Ql\f
 1S9[
 1[Pe
+1\n%controller_config_conflict_resolution
 1\n)notifications_show_chat_room_notification
 1\n,k_EMsgAISUpdateSubordinateContentDescription
 1\n,k_EMsgAMGetAccountFlagsForWGSpoofingResponse
@@ -9939,6 +9945,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI12CGameActionsJiEE
 20CJSMethodCallHandlerI12CGameActionsJjPKcEE
 20CJSMethodCallHandlerI12CGameActionsJjPKcjEE
+20CJSMethodCallHandlerI12CGameActionsJjbEE
 20CJSMethodCallHandlerI15CInstallManagerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI15CInstallManagerJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI15CInstallManagerJEE
@@ -12961,6 +12968,7 @@ ${LANGUAGE}
 49CMarketingMessages_PartnerPublishMessage_Response
 49CMarketingMessages_UpdateMarketingMessage_Request
 49CMsgRemoteClientBroadcastClientPairingExclusivity
+49CMsgRemoteClientStartStreamResponse_CloudConflict
 49CPlayer_GetPurchasedProfileCustomizations_Request
 49CPlayer_GetRecentPlaytimeSessionsForChild_Request
 49CPublishedFile_AreFilesInSubscriptionList_Request
@@ -13715,6 +13723,7 @@ ${LANGUAGE}
 8Bitdo Ultimate 2 Wireless Controller
 8CAutoPtrI10ILEDDeviceE
 8CAutoPtrI11CHTTPServerE
+8CAutoPtrI15CWorkThreadPoolE
 8CAutoPtrI15IMetricsFactoryE
 8CAutoPtrI18CJSServerListQueryE
 8CAutoPtrI20IBluetoothControllerE
@@ -13921,7 +13930,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hh|T
 9IGv
 9Inventory
 9PE,$
@@ -17574,6 +17582,8 @@ CJoinGameController::LaunchGame() video app %u
 CKeyEscrow_Request
 CKeyEscrow_Response
 CKeyEscrow_Ticket
+CLEDController
+CLEDController::BFrameFuncDispatchCompletedWorkItems
 CLEDController::OnAppUpdateStateChange
 CLEDController::OnPostLogonState
 CLEDController::OnSystemResumed
@@ -19416,6 +19426,7 @@ Cleanup: Library cache cleanup completed in %llums and deleted %i files
 CleanupBackgroundRecordings
 CleanupSystemReports
 Clear
+Clear all Pipewire capture tokens and re-prompt user for what to capture
 ClearButton
 ClearCooldownSkip
 ClearField
@@ -23088,6 +23099,7 @@ G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 G\n\fachievements
 G\n\nCallClient
 G\n\nGetTagList
+G\n\rCloudConflict
 G\n\rgroup_updated
 G_IS_DBUS_CONNECTION (connection)
 G_VALUE_TYPE (a) == G_VALUE_TYPE (b)
@@ -27776,7 +27788,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  7 2026 22:45:52
+Oct 10 2026 00:12:35
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -31973,10 +31985,12 @@ Streaming.RegisterForStreamingClientLaunchProgress
 Streaming.RegisterForStreamingClientStarted
 Streaming.RegisterForStreamingLaunchComplete
 Streaming.RegisterForStreamingPrelaunchCheck
+Streaming.RegisterForStreamingShowCloudConflict
 Streaming.RegisterForStreamingShowEula
 Streaming.RegisterForStreamingShowLaunchOptions
 Streaming.RegisterForStreamingStillDownloading
 Streaming.StreamingContinueStreamGame
+Streaming.StreamingSetCloudConflictResolution
 Streaming.StreamingSetLaunchOption
 String
 String field
@@ -33587,6 +33601,7 @@ V_CP437CharsToUTF8
 V_ComposeFileName
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
+V_EscapeShellArgumentAndAppend(char*, unsigned long, char const*)
 V_ExtractDomainFromURL
 V_ExtractFileExtension
 V_ExtractFilePath
@@ -35717,6 +35732,7 @@ Z~@rg
 \n\nlink_index
 \n\nlocal_echo
 \n\nlocal_path
+\n\nlocal_time
 \n\nlook_names
 \n\nmachine_id
 \n\nmajor_axis
@@ -36544,6 +36560,7 @@ Z~@rg
 \n\vraw_version
 \n\vrecent_peak
 \n\vregion_code
+\n\vremote_time
 \n\vreplay_year
 \n\vreport_text
 \n\vrequest_ids
@@ -38386,6 +38403,7 @@ bSounds_PlayMessage
 bSounds_PlayOnline
 bSpoilers
 bSteamButton
+bSteamInputVRControllerPreferGamepad
 bStorePagePublished
 bSuccess
 bSuccess || pWorkItem->HasTimedOut()
@@ -39417,6 +39435,8 @@ closeonescape
 closing ) for (?C expected
 closing session
 cloud
+cloud_conflict
+cloud_conflict_resolution
 cloud_enabled
 cloud_file_exists
 cloud_get_file_info
@@ -39612,6 +39632,7 @@ config.vdf
 config/CheckForUpdatesBeforeLaunch
 config/ExternalRegistrationURL/%s
 config/ExternalRegistrationURL/default
+config/IgnoreIdleTimeout
 config/LaunchWithoutWorkshopUpdates
 config/NoUpdatesAfterInstall
 config/UseLaunchCommandLine
@@ -50702,6 +50723,7 @@ m_pWaylandContext
 m_pWebSocketConnectionCallback
 m_pWebUITransportController
 m_pWindow
+m_pWorkThreadPool
 m_pZip
 m_pZip == NULL
 m_pathPropertyListener
@@ -51068,6 +51090,7 @@ m_vecCallbacksStreamingClientShowProgressUI
 m_vecCallbacksStreamingClientStart
 m_vecCallbacksStreamingLaunchComplete
 m_vecCallbacksStreamingPrelaunchCheck
+m_vecCallbacksStreamingShowCloudConflict
 m_vecCallbacksStreamingShowLaunchOptions
 m_vecCallbacksStreamingStillDownloading
 m_vecCallbacksUsersChanged
@@ -58536,6 +58559,7 @@ vr_connection_params
 vr_connection_ready
 vr_devices
 vr_devices_from_usb
+vr_force_steam_input
 vr_last_tracker_devices
 vr_link_invite_client_id
 vr_not_required
@@ -59082,6 +59106,7 @@ z~rvjnbfZ^RVJNBF
 {A7Dd
 {GCOKWS_[
 {OYK
+{PuQ
 {\n"version": %u,\n"gameids" : [\n
 {\n\t"file_format_version" : "1.0.0",\n\t"layer" : {\n\t\t"name": "%s",\n\t\t"type": "GLOBAL",\n\t\t"library_path": "%s/%s",\n\t\t"api_version": "1.3.207",\n\t\t"implementation_version": "1",\n\t\t"description": "%s",\n\t\t"disable_environment": { "DISABLE_%s": "1" },\n\t\t"enable_environment": { "ENABLE_%s": "1" }%s\n\t}\n}\n
 {aey
