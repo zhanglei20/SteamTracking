@@ -749,6 +749,12 @@ ASSERT
 ASTRO
 ASTRO Gaming
 AUDIO
+AUDIO: %s device '%s' is now at spec (%s,%d,%d)
+AUDIO: attempt to open %s device '%s' at spec (%s,%d,%d)
+AUDIO: attempt to open %s device '%s' succeeded! Opened at spec (%s,%d,%d)
+AUDIO: attempt to reopen %s device '%s' at higher spec! (%s,%d,%d => %s,%d,%d)
+AUDIO: closing %s device '%s'
+AUDIO: open of %s device '%s' failed: %s
 Abort
 Abort/Break/Retry/Ignore/AlwaysIgnore? [abriA] :
 AboutToShow
@@ -1050,7 +1056,6 @@ Current locale not supported by X server, cannot continue.
 Cursor hot spot doesn't lie within cursor
 Cursor not associated with the current mouse
 D-Bus not available
-D3NE\f
 DEBUG
 DEBUG_INVOCATION
 DESKTOP
@@ -1224,6 +1229,7 @@ Found no matching display mode
 Four-way Interleaved
 Frequency ratio is too high
 Frequency ratio is too low
+Front
 Full\n
 GAMESCOPE_DISPLAY_EDID_PATH
 GAMESCOPE_DISPLAY_IS_EXTERNAL
@@ -1972,7 +1978,6 @@ RemoveNotification
 Removing HIDAPI device '%s' VID 0x%.4x, PID 0x%.4x, bluetooth %d, version %d, serial %s, interface %d, interface_class %d, interface_subclass %d, interface_protocol %d, usage page 0x%.4x, usage 0x%.4x, path = %s, driver = %s (%s)
 Render target texture is NULL
 Render targets not supported by OpenGL
-Renderer already associated with window
 Renderer couldn't recover from device lost: %s
 Renderer does not support RenderCopyEx
 Renderer isn't a GPU renderer
@@ -2146,7 +2151,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1465-g09b86eb7d
+SDL-release-3.4.0-1547-gda44f6887
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -2311,6 +2316,7 @@ SDL.texture.create.palette
 SDL.texture.create.vulkan.layout
 SDL.texture.create.vulkan.texture
 SDL.texture.create.vulkan.texture_u
+SDL.texture.create.vulkan.texture_uv
 SDL.texture.create.vulkan.texture_v
 SDL.texture.create.vulkan.usage
 SDL.texture.create.width
@@ -2334,6 +2340,7 @@ SDL.texture.opengles2.texture_uv
 SDL.texture.opengles2.texture_v
 SDL.texture.vulkan.texture
 SDL.texture.vulkan.texture_u
+SDL.texture.vulkan.texture_uv
 SDL.texture.vulkan.texture_v
 SDL.texture.width
 SDL.thread.create.entry_function
@@ -3848,6 +3855,8 @@ SDL_SetRenderVSync
 SDL_SetRenderViewport
 SDL_SetRenderViewportFloat
 SDL_SetScancodeName
+SDL_SetSoftwareRendererSurface
+SDL_SetSoftwareRendererWindow
 SDL_SetStringProperty
 SDL_SetSurfaceAlphaMod
 SDL_SetSurfaceBlendMode
@@ -4353,7 +4362,6 @@ Stream has no destination format
 Stream has no source format
 String
 Super
-Surface already associated with window
 Surface doesn't have a colorkey
 Surface doesn't use a palette
 Surfaces must not be locked during blit
@@ -4657,6 +4665,8 @@ White Y: %f\n
 Width: %d mm\n
 Width: undefined
 Window already claimed
+Window already has an associated renderer
+Window already has an associated surface
 Window framebuffer support not available
 Window has no Vulkan surface
 Window must be created with SDL_WINDOW_TRANSPARENT
@@ -5924,6 +5934,7 @@ paddle1
 paddle1:b11,paddle2:b12,
 paddle1:b11,paddle2:b12,paddle3:b13,paddle4:b14,
 paddle1:b11,paddle2:b13,paddle3:b12,paddle4:b14,
+paddle1:b12,paddle2:b11,
 paddle1:b12,paddle2:b11,paddle3:b14,paddle4:b13,
 paddle1:b13,paddle2:b12,paddle3:b15,paddle4:b14,misc1:b11
 paddle1:b14,paddle2:b13,
@@ -5942,6 +5953,7 @@ pitch
 pixels
 plane * 4 would overflow
 platform:
+playback
 point
 pointer
 points
@@ -6078,6 +6090,7 @@ readlink
 realloc
 realpath
 reason
+recording
 rect
 rect has a negative size
 rects
