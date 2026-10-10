@@ -127,7 +127,8 @@
           const [_, U] = useState(!1);
           return (
             useEffect(() => {
-              startTransition(() => U(!0));
+              window.SSR && (window.SSR.hydrated = !0),
+                startTransition(() => U(!0));
             }, []),
             jsx(s.Provider, { value: _, children: T.children })
           );

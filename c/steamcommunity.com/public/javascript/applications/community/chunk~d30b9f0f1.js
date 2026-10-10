@@ -3756,6 +3756,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = 100,
           _ = 100,
@@ -3952,6 +3953,7 @@
             return _;
           }
           async PreSaveActions(_) {
+            var _;
             if (
               (this.m_editModel.GetFirstLanguageWithTitle() == _.bP9 &&
                 this.m_editModel.SetName(
@@ -3999,6 +4001,18 @@
                 }),
               await (0, _._)(this.m_editModel),
               await (0, _._)(this.m_editModel),
+              (_ = this.m_editModel.GetSaleSections()) == null ||
+                _.forEach((_) => {
+                  var _;
+                  return (_ = _.tabs) == null
+                    ? void 0
+                    : _.forEach((_) => {
+                        var _;
+                        return (0, _._)(
+                          (_ = _.tab_tag_filter) == null ? void 0 : _.rgNodes,
+                        );
+                      });
+                }),
               this.m_editModel.BPushUpdatesToCrowdInAutomatically())
             ) {
               const _ = this.m_editModel.GetDescription(_.Bhc);
@@ -38888,6 +38902,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -39435,6 +39450,12 @@
                 : _.strFeature
                   ? "feature:" + _.strFeature
                   : "apptype:" + _.strAppType;
+        }
+        function _(_) {
+          _ == null ||
+            _.forEach((_) => {
+              (_.unique_id = _(_)), _(_.rgChildren);
+            });
         }
         function _(_) {
           if (_.strFeature) return _[_.strFeature];
